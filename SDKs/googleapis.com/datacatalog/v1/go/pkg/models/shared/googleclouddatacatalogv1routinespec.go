@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnumProcedure              GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum = "PROCEDURE"
 )
 
+func (e GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum) ToPointer() *GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROUTINE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCALAR_FUNCTION":
 		fallthrough
 	case "PROCEDURE":
-		*e = GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1RoutineSpecRoutineTypeEnum: %v", v)
 	}
 }
 

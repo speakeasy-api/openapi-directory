@@ -15,19 +15,23 @@ const (
 	ChallengeDataOtpFormatEnumInteger    ChallengeDataOtpFormatEnum = "integer"
 )
 
+func (e ChallengeDataOtpFormatEnum) ToPointer() *ChallengeDataOtpFormatEnum {
+	return &e
+}
+
 func (e *ChallengeDataOtpFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "characters":
 		fallthrough
 	case "integer":
-		*e = ChallengeDataOtpFormatEnum(s)
+		*e = ChallengeDataOtpFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChallengeDataOtpFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ChallengeDataOtpFormatEnum: %v", v)
 	}
 }
 

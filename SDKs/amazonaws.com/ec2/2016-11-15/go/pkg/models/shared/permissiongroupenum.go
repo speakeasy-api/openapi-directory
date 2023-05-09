@@ -13,16 +13,20 @@ const (
 	PermissionGroupEnumAll PermissionGroupEnum = "all"
 )
 
+func (e PermissionGroupEnum) ToPointer() *PermissionGroupEnum {
+	return &e
+}
+
 func (e *PermissionGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = PermissionGroupEnum(s)
+		*e = PermissionGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionGroupEnum: %v", v)
 	}
 }

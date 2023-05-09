@@ -36,7 +36,10 @@ func newMimeEmailPayloads(defaultClient, securityClient HTTPClient, serverURL, l
 // Fetch the MIME content for email.
 func (s *mimeEmailPayloads) GetV2MimeEmailPayloadsIDJSON(ctx context.Context, request operations.GetV2MimeEmailPayloadsIDJSONRequest) (*operations.GetV2MimeEmailPayloadsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/mime_email_payloads/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/mime_email_payloads/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

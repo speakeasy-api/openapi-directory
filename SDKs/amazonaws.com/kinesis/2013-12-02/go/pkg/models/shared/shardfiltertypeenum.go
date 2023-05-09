@@ -18,12 +18,16 @@ const (
 	ShardFilterTypeEnumFromTimestamp   ShardFilterTypeEnum = "FROM_TIMESTAMP"
 )
 
+func (e ShardFilterTypeEnum) ToPointer() *ShardFilterTypeEnum {
+	return &e
+}
+
 func (e *ShardFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AFTER_SHARD_ID":
 		fallthrough
 	case "AT_TRIM_HORIZON":
@@ -35,9 +39,9 @@ func (e *ShardFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AT_TIMESTAMP":
 		fallthrough
 	case "FROM_TIMESTAMP":
-		*e = ShardFilterTypeEnum(s)
+		*e = ShardFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShardFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShardFilterTypeEnum: %v", v)
 	}
 }

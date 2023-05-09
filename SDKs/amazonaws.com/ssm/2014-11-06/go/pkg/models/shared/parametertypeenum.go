@@ -15,20 +15,24 @@ const (
 	ParameterTypeEnumSecureString ParameterTypeEnum = "SecureString"
 )
 
+func (e ParameterTypeEnum) ToPointer() *ParameterTypeEnum {
+	return &e
+}
+
 func (e *ParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "String":
 		fallthrough
 	case "StringList":
 		fallthrough
 	case "SecureString":
-		*e = ParameterTypeEnum(s)
+		*e = ParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParameterTypeEnum: %v", v)
 	}
 }

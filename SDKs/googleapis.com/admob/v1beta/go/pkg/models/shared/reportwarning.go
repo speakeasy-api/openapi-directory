@@ -18,12 +18,16 @@ const (
 	ReportWarningTypeEnumReportCurrencyNotAccountCurrency ReportWarningTypeEnum = "REPORT_CURRENCY_NOT_ACCOUNT_CURRENCY"
 )
 
+func (e ReportWarningTypeEnum) ToPointer() *ReportWarningTypeEnum {
+	return &e
+}
+
 func (e *ReportWarningTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATA_BEFORE_ACCOUNT_TIMEZONE_CHANGE":
@@ -33,10 +37,10 @@ func (e *ReportWarningTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OTHER":
 		fallthrough
 	case "REPORT_CURRENCY_NOT_ACCOUNT_CURRENCY":
-		*e = ReportWarningTypeEnum(s)
+		*e = ReportWarningTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportWarningTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportWarningTypeEnum: %v", v)
 	}
 }
 

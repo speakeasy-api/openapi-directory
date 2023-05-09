@@ -18,12 +18,16 @@ const (
 	GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnumVeryHighLatency                GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum = "VERY_HIGH_LATENCY"
 )
 
+func (e GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum) ToPointer() *GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTPS_LATENCY_PROBLEM_UNSPECIFIED":
 		fallthrough
 	case "FAILED_DNS_RESOLUTIONS":
@@ -33,10 +37,10 @@ func (e *GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum) UnmarshalJS
 	case "HIGH_LATENCY":
 		fallthrough
 	case "VERY_HIGH_LATENCY":
-		*e = GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum(s)
+		*e = GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1HTTPSLatencyRoutineDataProblemEnum: %v", v)
 	}
 }
 

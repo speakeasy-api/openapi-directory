@@ -14,18 +14,22 @@ const (
 	OverwriteModeEnumNever  OverwriteModeEnum = "NEVER"
 )
 
+func (e OverwriteModeEnum) ToPointer() *OverwriteModeEnum {
+	return &e
+}
+
 func (e *OverwriteModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = OverwriteModeEnum(s)
+		*e = OverwriteModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OverwriteModeEnum: %s", s)
+		return fmt.Errorf("invalid value for OverwriteModeEnum: %v", v)
 	}
 }

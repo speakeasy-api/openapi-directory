@@ -33,7 +33,10 @@ func newEncodedUpdates(defaultClient, securityClient HTTPClient, serverURL, lang
 
 func (s *encodedUpdates) SafebrowsingEncodedUpdatesGet(ctx context.Context, request operations.SafebrowsingEncodedUpdatesGetRequest) (*operations.SafebrowsingEncodedUpdatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/encodedUpdates/{encodedRequest}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/encodedUpdates/{encodedRequest}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

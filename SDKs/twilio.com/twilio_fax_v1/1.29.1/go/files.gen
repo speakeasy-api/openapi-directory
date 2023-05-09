@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -19,5 +20,6 @@ pkg/models/operations/listfax.go
 pkg/models/operations/listfaxmedia.go
 pkg/models/shared/faxv1fax.go
 pkg/models/shared/faxv1faxfaxmedia.go
+docs/sdk/README.md
 USAGE.md
 pkg/models/operations/options.go

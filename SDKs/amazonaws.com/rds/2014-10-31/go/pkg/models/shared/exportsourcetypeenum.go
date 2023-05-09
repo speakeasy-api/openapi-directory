@@ -14,18 +14,22 @@ const (
 	ExportSourceTypeEnumCluster  ExportSourceTypeEnum = "CLUSTER"
 )
 
+func (e ExportSourceTypeEnum) ToPointer() *ExportSourceTypeEnum {
+	return &e
+}
+
 func (e *ExportSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNAPSHOT":
 		fallthrough
 	case "CLUSTER":
-		*e = ExportSourceTypeEnum(s)
+		*e = ExportSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportSourceTypeEnum: %v", v)
 	}
 }

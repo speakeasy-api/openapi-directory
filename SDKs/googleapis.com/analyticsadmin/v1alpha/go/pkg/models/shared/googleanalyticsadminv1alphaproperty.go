@@ -40,12 +40,16 @@ const (
 	GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnumShopping                     GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum = "SHOPPING"
 )
 
+func (e GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum) ToPointer() *GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDUSTRY_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "AUTOMOTIVE":
@@ -99,10 +103,10 @@ func (e *GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum) UnmarshalJSON(
 	case "JOBS_AND_EDUCATION":
 		fallthrough
 	case "SHOPPING":
-		*e = GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyIndustryCategoryEnum: %v", v)
 	}
 }
 
@@ -116,12 +120,16 @@ const (
 	GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnumPropertyTypeRollup      GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum = "PROPERTY_TYPE_ROLLUP"
 )
 
+func (e GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROPERTY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROPERTY_TYPE_ORDINARY":
@@ -129,10 +137,10 @@ func (e *GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum) UnmarshalJSON(data
 	case "PROPERTY_TYPE_SUBPROPERTY":
 		fallthrough
 	case "PROPERTY_TYPE_ROLLUP":
-		*e = GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyPropertyTypeEnum: %v", v)
 	}
 }
 
@@ -145,21 +153,25 @@ const (
 	GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnumGoogleAnalytics360      GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum = "GOOGLE_ANALYTICS_360"
 )
 
+func (e GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum) ToPointer() *GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_ANALYTICS_STANDARD":
 		fallthrough
 	case "GOOGLE_ANALYTICS_360":
-		*e = GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaPropertyServiceLevelEnum: %v", v)
 	}
 }
 

@@ -24,12 +24,16 @@ const (
 	AssetResponseAttributesStatusEnumDeleted   AssetResponseAttributesStatusEnum = "deleted"
 )
 
+func (e AssetResponseAttributesStatusEnum) ToPointer() *AssetResponseAttributesStatusEnum {
+	return &e
+}
+
 func (e *AssetResponseAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "importing":
 		fallthrough
 	case "ready":
@@ -37,10 +41,10 @@ func (e *AssetResponseAttributesStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "deleted":
-		*e = AssetResponseAttributesStatusEnum(s)
+		*e = AssetResponseAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetResponseAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetResponseAttributesStatusEnum: %v", v)
 	}
 }
 

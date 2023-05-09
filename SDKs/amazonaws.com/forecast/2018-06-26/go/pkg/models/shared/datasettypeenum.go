@@ -15,20 +15,24 @@ const (
 	DatasetTypeEnumItemMetadata      DatasetTypeEnum = "ITEM_METADATA"
 )
 
+func (e DatasetTypeEnum) ToPointer() *DatasetTypeEnum {
+	return &e
+}
+
 func (e *DatasetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_TIME_SERIES":
 		fallthrough
 	case "RELATED_TIME_SERIES":
 		fallthrough
 	case "ITEM_METADATA":
-		*e = DatasetTypeEnum(s)
+		*e = DatasetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasetTypeEnum: %v", v)
 	}
 }

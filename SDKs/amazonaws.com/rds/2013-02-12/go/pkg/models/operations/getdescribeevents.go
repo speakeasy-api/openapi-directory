@@ -16,17 +16,21 @@ const (
 	GETDescribeEventsActionEnumDescribeEvents GETDescribeEventsActionEnum = "DescribeEvents"
 )
 
+func (e GETDescribeEventsActionEnum) ToPointer() *GETDescribeEventsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEventsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEvents":
-		*e = GETDescribeEventsActionEnum(s)
+		*e = GETDescribeEventsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEventsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEventsActionEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	GETDescribeEventsSourceTypeEnumDbSnapshot       GETDescribeEventsSourceTypeEnum = "db-snapshot"
 )
 
+func (e GETDescribeEventsSourceTypeEnum) ToPointer() *GETDescribeEventsSourceTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeEventsSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "db-instance":
 		fallthrough
 	case "db-parameter-group":
@@ -53,10 +61,10 @@ func (e *GETDescribeEventsSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "db-security-group":
 		fallthrough
 	case "db-snapshot":
-		*e = GETDescribeEventsSourceTypeEnum(s)
+		*e = GETDescribeEventsSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEventsSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEventsSourceTypeEnum: %v", v)
 	}
 }
 
@@ -67,17 +75,21 @@ const (
 	GETDescribeEventsVersionEnumTwoThousandAndThirteen0212 GETDescribeEventsVersionEnum = "2013-02-12"
 )
 
+func (e GETDescribeEventsVersionEnum) ToPointer() *GETDescribeEventsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEventsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETDescribeEventsVersionEnum(s)
+		*e = GETDescribeEventsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEventsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEventsVersionEnum: %v", v)
 	}
 }
 

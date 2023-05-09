@@ -32,12 +32,16 @@ const (
 	DataExecutionStatusErrorCodeEnumObjectSpecInvalid                 DataExecutionStatusErrorCodeEnum = "OBJECT_SPEC_INVALID"
 )
 
+func (e DataExecutionStatusErrorCodeEnum) ToPointer() *DataExecutionStatusErrorCodeEnum {
+	return &e
+}
+
 func (e *DataExecutionStatusErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_EXECUTION_ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "TIMED_OUT":
@@ -75,10 +79,10 @@ func (e *DataExecutionStatusErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "OBJECT_IN_ERROR_STATE":
 		fallthrough
 	case "OBJECT_SPEC_INVALID":
-		*e = DataExecutionStatusErrorCodeEnum(s)
+		*e = DataExecutionStatusErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataExecutionStatusErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataExecutionStatusErrorCodeEnum: %v", v)
 	}
 }
 
@@ -93,12 +97,16 @@ const (
 	DataExecutionStatusStateEnumFailed                        DataExecutionStatusStateEnum = "FAILED"
 )
 
+func (e DataExecutionStatusStateEnum) ToPointer() *DataExecutionStatusStateEnum {
+	return &e
+}
+
 func (e *DataExecutionStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_EXECUTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_STARTED":
@@ -108,10 +116,10 @@ func (e *DataExecutionStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = DataExecutionStatusStateEnum(s)
+		*e = DataExecutionStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataExecutionStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DataExecutionStatusStateEnum: %v", v)
 	}
 }
 

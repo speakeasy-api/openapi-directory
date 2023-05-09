@@ -18,6 +18,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -44,6 +45,7 @@ pkg/models/operations/getenvironments.go
 pkg/models/operations/updateenvironment.go
 pkg/models/operations/getsettingvalue.go
 pkg/models/operations/getsettingvalues.go
+pkg/models/operations/postsettingvalues.go
 pkg/models/operations/replacesettingvalue.go
 pkg/models/operations/updatesettingvalue.go
 pkg/models/operations/getsettingvaluebysdkkey.go
@@ -122,6 +124,8 @@ pkg/models/shared/settingdatamodel.go
 pkg/models/shared/integrationlinkmodel.go
 pkg/models/shared/configsettingvaluesmodel.go
 pkg/models/shared/configsettingvaluemodel.go
+pkg/models/shared/updatesettingvalueswithidmodel.go
+pkg/models/shared/updatesettingvaluewithsettingidmodel.go
 pkg/models/shared/updatesettingvaluemodel.go
 pkg/models/shared/jsonpatch.go
 pkg/models/shared/patchoperation.go
@@ -166,4 +170,21 @@ pkg/models/shared/tagmodelhaljson.go
 pkg/models/shared/createtagmodel.go
 pkg/models/shared/updatetagmodel.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/auditlogs/README.md
+docs/codereferences/README.md
+docs/configs/README.md
+docs/environments/README.md
+docs/featureflagandsettingvalues/README.md
+docs/featureflagandsettingvaluesusingsdkkey/README.md
+docs/featureflagsandsettings/README.md
+docs/integrationlinks/README.md
+docs/me/README.md
+docs/members/README.md
+docs/organizations/README.md
+docs/permissiongroups/README.md
+docs/products/README.md
+docs/sdkkeys/README.md
+docs/segments/README.md
+docs/tags/README.md
 USAGE.md

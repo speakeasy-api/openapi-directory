@@ -28,17 +28,21 @@ const (
 	PodocRequestBodyFormatEnumPdf PodocRequestBodyFormatEnum = "pdf"
 )
 
+func (e PodocRequestBodyFormatEnum) ToPointer() *PodocRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *PodocRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = PodocRequestBodyFormatEnum(s)
+		*e = PodocRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PodocRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PodocRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Podoc504ApplicationJSONErrorEnumGatewayTimeout Podoc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Podoc504ApplicationJSONErrorEnum) ToPointer() *Podoc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Podoc504ApplicationJSONErrorEnum(s)
+		*e = Podoc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Podoc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Podoc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Podoc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Podoc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Podoc503ApplicationJSONErrorEnumServiceUnavailable Podoc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Podoc503ApplicationJSONErrorEnum) ToPointer() *Podoc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Podoc503ApplicationJSONErrorEnum(s)
+		*e = Podoc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Podoc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Podoc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Podoc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Podoc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Podoc502ApplicationJSONErrorEnumBadGatewy Podoc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Podoc502ApplicationJSONErrorEnum) ToPointer() *Podoc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Podoc502ApplicationJSONErrorEnum(s)
+		*e = Podoc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Podoc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Podoc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Podoc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Podoc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Podoc500ApplicationJSONErrorEnumInternalServerError Podoc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Podoc500ApplicationJSONErrorEnum) ToPointer() *Podoc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Podoc500ApplicationJSONErrorEnum(s)
+		*e = Podoc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Podoc500ApplicationJSONErrorDescriptionEnumInternalServerError Podoc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Podoc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Podoc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Podoc404ApplicationJSONErrorEnumURLNotFound    Podoc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Podoc404ApplicationJSONErrorEnum) ToPointer() *Podoc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Podoc404ApplicationJSONErrorEnum(s)
+		*e = Podoc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Podoc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Podoc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Podoc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Podoc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Podoc401ApplicationJSONErrorEnumInvalidAuthorization  Podoc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Podoc401ApplicationJSONErrorEnum) ToPointer() *Podoc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Podoc401ApplicationJSONErrorEnum(s)
+		*e = Podoc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Podoc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Podoc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Podoc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Podoc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Podoc400ApplicationJSONErrorEnumInvalidConsentid Podoc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Podoc400ApplicationJSONErrorEnum) ToPointer() *Podoc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Podoc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Podoc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Podoc400ApplicationJSONErrorEnum(s)
+		*e = Podoc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Podoc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Podoc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Podoc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Podoc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Podoc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Podoc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Podoc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Podoc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Podoc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Podoc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

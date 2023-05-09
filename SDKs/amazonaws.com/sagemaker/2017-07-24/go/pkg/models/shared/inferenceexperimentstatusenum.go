@@ -20,12 +20,16 @@ const (
 	InferenceExperimentStatusEnumCancelled InferenceExperimentStatusEnum = "Cancelled"
 )
 
+func (e InferenceExperimentStatusEnum) ToPointer() *InferenceExperimentStatusEnum {
+	return &e
+}
+
 func (e *InferenceExperimentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Created":
@@ -41,9 +45,9 @@ func (e *InferenceExperimentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Completed":
 		fallthrough
 	case "Cancelled":
-		*e = InferenceExperimentStatusEnum(s)
+		*e = InferenceExperimentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferenceExperimentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InferenceExperimentStatusEnum: %v", v)
 	}
 }

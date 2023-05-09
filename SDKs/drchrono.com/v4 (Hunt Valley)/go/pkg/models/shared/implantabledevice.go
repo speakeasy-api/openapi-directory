@@ -15,19 +15,23 @@ const (
 	ImplantableDeviceStatusEnumInactive ImplantableDeviceStatusEnum = "inactive"
 )
 
+func (e ImplantableDeviceStatusEnum) ToPointer() *ImplantableDeviceStatusEnum {
+	return &e
+}
+
 func (e *ImplantableDeviceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = ImplantableDeviceStatusEnum(s)
+		*e = ImplantableDeviceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImplantableDeviceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ImplantableDeviceStatusEnum: %v", v)
 	}
 }
 

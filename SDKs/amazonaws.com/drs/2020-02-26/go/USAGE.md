@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateExtendedSourceServerRequest{
+    ctx := context.Background()
+    res, err := s.CreateExtendedSourceServer(ctx, operations.CreateExtendedSourceServerRequest{
         RequestBody: operations.CreateExtendedSourceServerRequestBody{
             SourceServerArn: "corrupti",
             Tags: map[string]string{
@@ -26,17 +26,14 @@ func main() {
                 "corrupti": "illum",
             },
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateExtendedSourceServer(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

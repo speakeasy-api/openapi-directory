@@ -42,7 +42,10 @@ func newShowtime(defaultClient, securityClient HTTPClient, serverURL, language, 
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *showtime) ShowtimeSearchallRead(ctx context.Context, request operations.ShowtimeSearchallReadRequest) (*operations.ShowtimeSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/showtime/searchall/{param}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/showtime/searchall/{param}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

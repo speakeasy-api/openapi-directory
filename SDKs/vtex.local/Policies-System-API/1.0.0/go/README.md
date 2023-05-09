@@ -13,186 +13,118 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Policies-Syste
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PolicyCreateOrUpdateRequest{
+    ctx := context.Background()
+    res, err := s.Policy.PolicyCreateOrUpdate(ctx, operations.PolicyCreateOrUpdateRequest{
         Accept: "corrupti",
         ContentType: "provident",
         PolicySaveRequest: &shared.PolicySaveRequest{
             Description: "distinctio",
-            Name: "quibusdam",
+            Name: "Stuart Stiedemann",
             Statements: []shared.StatementGetResponse{
                 shared.StatementGetResponse{
                     Actions: []interface{}{
-                        "corrupti",
-                        "illum",
-                        "vel",
-                        "error",
+                        "deserunt",
+                        "suscipit",
+                        "iure",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "iure",
-                                    "magnam",
-                                },
-                                Key: "debitis",
-                                Operation: "ipsa",
-                                Values: []string{
+                                    "ipsa",
+                                    "delectus",
                                     "tempora",
                                     "suscipit",
-                                    "molestiae",
-                                    "minus",
                                 },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
+                                Key: sdk.String("molestiae"),
+                                Operation: sdk.String("minus"),
+                                Values: []string{
                                     "voluptatum",
                                     "iusto",
                                     "excepturi",
                                     "nisi",
                                 },
-                                Key: "recusandae",
-                                Operation: "temporibus",
-                                Values: []string{
-                                    "quis",
-                                },
                             },
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "deserunt",
+                                    "temporibus",
+                                    "ab",
+                                    "quis",
+                                    "veritatis",
                                 },
-                                Key: "perferendis",
-                                Operation: "ipsam",
+                                Key: sdk.String("deserunt"),
+                                Operation: sdk.String("perferendis"),
                                 Values: []string{
+                                    "repellendus",
                                     "sapiente",
-                                    "quo",
-                                    "odit",
-                                    "at",
                                 },
                             },
                         },
                     },
-                    Effect: "at",
-                    Operation: "maiores",
-                    Resource: "molestiae",
+                    Effect: "quo",
+                    Operation: sdk.String("odit"),
+                    Resource: sdk.String("at"),
                 },
                 shared.StatementGetResponse{
                     Actions: []interface{}{
+                        "maiores",
+                        "molestiae",
                         "quod",
-                        "esse",
-                        "totam",
-                        "porro",
+                        "quod",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "nam",
+                                    "porro",
+                                    "dolorum",
+                                    "dicta",
                                 },
-                                Key: "officia",
-                                Operation: "occaecati",
+                                Key: sdk.String("nam"),
+                                Operation: sdk.String("officia"),
                                 Values: []string{
+                                    "fugit",
                                     "deleniti",
+                                    "hic",
                                 },
                             },
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "optio",
                                     "totam",
                                     "beatae",
                                     "commodi",
+                                    "molestiae",
                                 },
-                                Key: "molestiae",
-                                Operation: "modi",
+                                Key: sdk.String("modi"),
+                                Operation: sdk.String("qui"),
                                 Values: []string{
-                                    "impedit",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
+                                    "cum",
                                     "esse",
                                     "ipsum",
                                     "excepturi",
                                 },
-                                Key: "aspernatur",
-                                Operation: "perferendis",
-                                Values: []string{
-                                    "natus",
-                                    "sed",
-                                },
                             },
                         },
                     },
-                    Effect: "iste",
-                    Operation: "dolor",
-                    Resource: "natus",
-                },
-                shared.StatementGetResponse{
-                    Actions: []interface{}{
-                        "hic",
-                        "saepe",
-                    },
-                    Condition: &shared.StatementGetResponseCondition{
-                        Conditions: []shared.StatementGetResponseConditionConditions{
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "corporis",
-                                    "iste",
-                                },
-                                Key: "iure",
-                                Operation: "saepe",
-                                Values: []string{
-                                    "architecto",
-                                    "ipsa",
-                                    "reiciendis",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "mollitia",
-                                    "laborum",
-                                    "dolores",
-                                },
-                                Key: "dolorem",
-                                Operation: "corporis",
-                                Values: []string{
-                                    "nobis",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "omnis",
-                                    "nemo",
-                                },
-                                Key: "minima",
-                                Operation: "excepturi",
-                                Values: []string{
-                                    "iure",
-                                },
-                            },
-                        },
-                    },
-                    Effect: "culpa",
-                    Operation: "doloribus",
-                    Resource: "sapiente",
+                    Effect: "aspernatur",
+                    Operation: sdk.String("perferendis"),
+                    Resource: sdk.String("ad"),
                 },
             },
         },
-        ID: "architecto",
-    }
-
-    ctx := context.Background()
-    res, err := s.Policy.PolicyCreateOrUpdate(ctx, req)
+        ID: "929396fe-a759-46eb-90fa-aa2352c59559",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -208,14 +140,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Policy
+### [Policy](docs/policy/README.md)
 
-* `PolicyCreateOrUpdate` - Create Policy
-* `PolicyDelete` - Delete Policy by ID
-* `PolicyEvaluate` - Evaluate Policies
-* `PolicyGet` - Get Policy by ID
-* `PolicyList` - Get Policy List
-* `PutAPIPolicyEnginePoliciesID` - Update Policy
+* [PolicyCreateOrUpdate](docs/policy/README.md#policycreateorupdate) - Create Policy
+* [PolicyDelete](docs/policy/README.md#policydelete) - Delete Policy by ID
+* [PolicyEvaluate](docs/policy/README.md#policyevaluate) - Evaluate Policies
+* [PolicyGet](docs/policy/README.md#policyget) - Get Policy by ID
+* [PolicyList](docs/policy/README.md#policylist) - Get Policy List
+* [PutAPIPolicyEnginePoliciesID](docs/policy/README.md#putapipolicyenginepoliciesid) - Update Policy
 <!-- End SDK Available Operations -->
 
 ### Maturity

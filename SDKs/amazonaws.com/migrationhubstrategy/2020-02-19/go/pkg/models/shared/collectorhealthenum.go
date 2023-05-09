@@ -14,18 +14,22 @@ const (
 	CollectorHealthEnumCollectorUnhealthy CollectorHealthEnum = "COLLECTOR_UNHEALTHY"
 )
 
+func (e CollectorHealthEnum) ToPointer() *CollectorHealthEnum {
+	return &e
+}
+
 func (e *CollectorHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLLECTOR_HEALTHY":
 		fallthrough
 	case "COLLECTOR_UNHEALTHY":
-		*e = CollectorHealthEnum(s)
+		*e = CollectorHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CollectorHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for CollectorHealthEnum: %v", v)
 	}
 }

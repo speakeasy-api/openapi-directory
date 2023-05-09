@@ -207,7 +207,10 @@ func (s *offerings) GetOfferingsFuture(ctx context.Context) (*operations.GetOffe
 // Find offerings where info field matches the specified text pattern.
 func (s *offerings) GetOfferingsInfoTextPattern(ctx context.Context, request operations.GetOfferingsInfoTextPatternRequest) (*operations.GetOfferingsInfoTextPatternResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/info/{textPattern}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/info/{textPattern}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +328,10 @@ func (s *offerings) GetOfferingsPast(ctx context.Context) (*operations.GetOfferi
 // Responds with an offering matching the offeringId.
 func (s *offerings) GetOfferingsOfferingID(ctx context.Context, request operations.GetOfferingsOfferingIDRequest) (*operations.GetOfferingsOfferingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +390,10 @@ func (s *offerings) GetOfferingsOfferingID(ctx context.Context, request operatio
 // Updates the offering.
 func (s *offerings) PatchOfferingsOfferingID(ctx context.Context, request operations.PatchOfferingsOfferingIDRequest) (*operations.PatchOfferingsOfferingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Offering", "json")
 	if err != nil {

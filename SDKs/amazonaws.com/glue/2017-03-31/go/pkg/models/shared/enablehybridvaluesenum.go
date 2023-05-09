@@ -14,18 +14,22 @@ const (
 	EnableHybridValuesEnumFalse EnableHybridValuesEnum = "FALSE"
 )
 
+func (e EnableHybridValuesEnum) ToPointer() *EnableHybridValuesEnum {
+	return &e
+}
+
 func (e *EnableHybridValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUE":
 		fallthrough
 	case "FALSE":
-		*e = EnableHybridValuesEnum(s)
+		*e = EnableHybridValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableHybridValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableHybridValuesEnum: %v", v)
 	}
 }

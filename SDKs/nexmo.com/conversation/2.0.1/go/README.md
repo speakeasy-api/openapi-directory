@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/conversation/2.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,17 +28,15 @@ func main() {
         }),
     )
 
-    req := operations.CreateConversationRequestBody{
-        DisplayName: "Customer Chat",
-        ImageURL: "https://example.com/image.png",
-        Name: "customer_chat",
-        Properties: &shared.ConversationProperties{
-            TTL: 60,
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Conversation.CreateConversation(ctx, req)
+    res, err := s.Conversation.CreateConversation(ctx, operations.CreateConversationRequestBody{
+        DisplayName: sdk.String("Customer Chat"),
+        ImageURL: sdk.String("https://example.com/image.png"),
+        Name: sdk.String("customer_chat"),
+        Properties: &shared.ConversationProperties{
+            TTL: sdk.Float64(60),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,43 +52,43 @@ func main() {
 ## Available Resources and Operations
 
 
-### Conversation
+### [Conversation](docs/conversation/README.md)
 
-* `CreateConversation` - Create a conversation
-* `DeleteConversation` - Delete a conversation
-* `ListConversations` - List conversations
-* `RecordConversation` - Record a conversation
-* `ReplaceConversation` - Update a conversation
-* `RetrieveConversation` - Retrieve a conversation
+* [CreateConversation](docs/conversation/README.md#createconversation) - Create a conversation
+* [DeleteConversation](docs/conversation/README.md#deleteconversation) - Delete a conversation
+* [~~ListConversations~~](docs/conversation/README.md#listconversations) - List conversations :warning: **Deprecated**
+* [RecordConversation](docs/conversation/README.md#recordconversation) - Record a conversation
+* [ReplaceConversation](docs/conversation/README.md#replaceconversation) - Update a conversation
+* [RetrieveConversation](docs/conversation/README.md#retrieveconversation) - Retrieve a conversation
 
-### Event
+### [Event](docs/event/README.md)
 
-* `CreateEvent` - Create an event
-* `DeleteEvent` - Delete an event
-* `GetEvent` - Retrieve an event
-* `GetEvents` - List events
+* [CreateEvent](docs/event/README.md#createevent) - Create an event
+* [DeleteEvent](docs/event/README.md#deleteevent) - Delete an event
+* [GetEvent](docs/event/README.md#getevent) - Retrieve an event
+* [~~GetEvents~~](docs/event/README.md#getevents) - List events :warning: **Deprecated**
 
-### Leg
+### [Leg](docs/leg/README.md)
 
-* `DeleteLeg` - Delete a leg
-* `ListLegs` - List legs
+* [DeleteLeg](docs/leg/README.md#deleteleg) - Delete a leg
+* [ListLegs](docs/leg/README.md#listlegs) - List legs
 
-### Member
+### [Member](docs/member/README.md)
 
-* `CreateMember` - Create a member
-* `DeleteMember` - Delete a member
-* `GetMember` - Retrieve a member
-* `GetMembers` - List members
-* `UpdateMember` - Update a member
+* [CreateMember](docs/member/README.md#createmember) - Create a member
+* [DeleteMember](docs/member/README.md#deletemember) - Delete a member
+* [GetMember](docs/member/README.md#getmember) - Retrieve a member
+* [~~GetMembers~~](docs/member/README.md#getmembers) - List members :warning: **Deprecated**
+* [UpdateMember](docs/member/README.md#updatemember) - Update a member
 
-### User
+### [User](docs/user/README.md)
 
-* `CreateUser` - Create a user
-* `DeleteUser` - Delete a user
-* `GetUser` - Retrieve a user
-* `GetUsers` - List users
-* `GetuserConversations` - List user conversations
-* `UpdateUser` - Update a user
+* [CreateUser](docs/user/README.md#createuser) - Create a user
+* [DeleteUser](docs/user/README.md#deleteuser) - Delete a user
+* [GetUser](docs/user/README.md#getuser) - Retrieve a user
+* [~~GetUsers~~](docs/user/README.md#getusers) - List users :warning: **Deprecated**
+* [GetuserConversations](docs/user/README.md#getuserconversations) - List user conversations
+* [UpdateUser](docs/user/README.md#updateuser) - Update a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -45,7 +45,10 @@ func newServerStatistics(defaultClient, securityClient HTTPClient, serverURL, la
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/enterprise-admin#get-github-enterprise-server-statistics - API method documentation
 func (s *serverStatistics) EnterpriseAdminGetServerStatistics(ctx context.Context, request operations.EnterpriseAdminGetServerStatisticsRequest) (*operations.EnterpriseAdminGetServerStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprise-installation/{enterprise_or_org}/server-statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprise-installation/{enterprise_or_org}/server-statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

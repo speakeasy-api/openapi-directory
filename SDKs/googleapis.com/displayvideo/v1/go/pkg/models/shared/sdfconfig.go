@@ -24,12 +24,16 @@ const (
 	SdfConfigVersionEnumSdfVersion55          SdfConfigVersionEnum = "SDF_VERSION_5_5"
 )
 
+func (e SdfConfigVersionEnum) ToPointer() *SdfConfigVersionEnum {
+	return &e
+}
+
 func (e *SdfConfigVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SDF_VERSION_UNSPECIFIED":
 		fallthrough
 	case "SDF_VERSION_3_1":
@@ -51,10 +55,10 @@ func (e *SdfConfigVersionEnum) UnmarshalJSON(data []byte) error {
 	case "SDF_VERSION_5_4":
 		fallthrough
 	case "SDF_VERSION_5_5":
-		*e = SdfConfigVersionEnum(s)
+		*e = SdfConfigVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SdfConfigVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for SdfConfigVersionEnum: %v", v)
 	}
 }
 

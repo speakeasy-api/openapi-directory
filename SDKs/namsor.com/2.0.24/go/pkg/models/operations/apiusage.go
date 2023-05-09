@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type APIUsageSecurity struct {
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
+}
+
 type APIUsageResponse struct {
 	// Print current API usage.
 	APIPeriodUsageOut *shared.APIPeriodUsageOut

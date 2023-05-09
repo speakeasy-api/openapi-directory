@@ -15,17 +15,21 @@ const (
 	POSTCancelResizeActionEnumCancelResize POSTCancelResizeActionEnum = "CancelResize"
 )
 
+func (e POSTCancelResizeActionEnum) ToPointer() *POSTCancelResizeActionEnum {
+	return &e
+}
+
 func (e *POSTCancelResizeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelResize":
-		*e = POSTCancelResizeActionEnum(s)
+		*e = POSTCancelResizeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelResizeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelResizeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCancelResizeVersionEnumTwoThousandAndTwelve1201 POSTCancelResizeVersionEnum = "2012-12-01"
 )
 
+func (e POSTCancelResizeVersionEnum) ToPointer() *POSTCancelResizeVersionEnum {
+	return &e
+}
+
 func (e *POSTCancelResizeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCancelResizeVersionEnum(s)
+		*e = POSTCancelResizeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCancelResizeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCancelResizeVersionEnum: %v", v)
 	}
 }
 

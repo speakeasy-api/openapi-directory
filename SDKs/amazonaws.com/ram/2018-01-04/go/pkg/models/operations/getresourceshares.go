@@ -17,19 +17,23 @@ const (
 	GetResourceSharesRequestBodyResourceOwnerEnumOtherAccounts GetResourceSharesRequestBodyResourceOwnerEnum = "OTHER-ACCOUNTS"
 )
 
+func (e GetResourceSharesRequestBodyResourceOwnerEnum) ToPointer() *GetResourceSharesRequestBodyResourceOwnerEnum {
+	return &e
+}
+
 func (e *GetResourceSharesRequestBodyResourceOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "OTHER-ACCOUNTS":
-		*e = GetResourceSharesRequestBodyResourceOwnerEnum(s)
+		*e = GetResourceSharesRequestBodyResourceOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceSharesRequestBodyResourceOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceSharesRequestBodyResourceOwnerEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GetResourceSharesRequestBodyResourceShareStatusEnumDeleted  GetResourceSharesRequestBodyResourceShareStatusEnum = "DELETED"
 )
 
+func (e GetResourceSharesRequestBodyResourceShareStatusEnum) ToPointer() *GetResourceSharesRequestBodyResourceShareStatusEnum {
+	return &e
+}
+
 func (e *GetResourceSharesRequestBodyResourceShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -59,10 +67,10 @@ func (e *GetResourceSharesRequestBodyResourceShareStatusEnum) UnmarshalJSON(data
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = GetResourceSharesRequestBodyResourceShareStatusEnum(s)
+		*e = GetResourceSharesRequestBodyResourceShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceSharesRequestBodyResourceShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceSharesRequestBodyResourceShareStatusEnum: %v", v)
 	}
 }
 
@@ -73,8 +81,10 @@ type GetResourceSharesRequestBody struct {
 	Name *string `json:"name,omitempty"`
 	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
 	NextToken *string `json:"nextToken,omitempty"`
-	// Specifies that you want to retrieve details of only those resource shares that use the RAM permission with this <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a>.
+	// Specifies that you want to retrieve details of only those resource shares that use the managed permission with this <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a>.
 	PermissionArn *string `json:"permissionArn,omitempty"`
+	// Specifies that you want to retrieve details for only those resource shares that use the specified version of the managed permission.
+	PermissionVersion *int64 `json:"permissionVersion,omitempty"`
 	// <p>Specifies that you want to retrieve details of only those resource shares that match the following:</p> <ul> <li> <p> <b> <code>SELF</code> </b> – resource shares that your account shares with other accounts</p> </li> <li> <p> <b> <code>OTHER-ACCOUNTS</code> </b> – resource shares that other accounts share with your account</p> </li> </ul>
 	ResourceOwner GetResourceSharesRequestBodyResourceOwnerEnum `json:"resourceOwner"`
 	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> of individual resource shares that you want information about.

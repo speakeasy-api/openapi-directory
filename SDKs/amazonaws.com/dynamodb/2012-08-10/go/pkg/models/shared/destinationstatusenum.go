@@ -17,12 +17,16 @@ const (
 	DestinationStatusEnumEnableFailed DestinationStatusEnum = "ENABLE_FAILED"
 )
 
+func (e DestinationStatusEnum) ToPointer() *DestinationStatusEnum {
+	return &e
+}
+
 func (e *DestinationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *DestinationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "ENABLE_FAILED":
-		*e = DestinationStatusEnum(s)
+		*e = DestinationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationStatusEnum: %v", v)
 	}
 }

@@ -24,12 +24,16 @@ const (
 	MatchSimpleCompLevelEnumF  MatchSimpleCompLevelEnum = "f"
 )
 
+func (e MatchSimpleCompLevelEnum) ToPointer() *MatchSimpleCompLevelEnum {
+	return &e
+}
+
 func (e *MatchSimpleCompLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "qm":
 		fallthrough
 	case "ef":
@@ -39,10 +43,10 @@ func (e *MatchSimpleCompLevelEnum) UnmarshalJSON(data []byte) error {
 	case "sf":
 		fallthrough
 	case "f":
-		*e = MatchSimpleCompLevelEnum(s)
+		*e = MatchSimpleCompLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatchSimpleCompLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for MatchSimpleCompLevelEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	MatchSimpleWinningAllianceEnumUnknown MatchSimpleWinningAllianceEnum = ""
 )
 
+func (e MatchSimpleWinningAllianceEnum) ToPointer() *MatchSimpleWinningAllianceEnum {
+	return &e
+}
+
 func (e *MatchSimpleWinningAllianceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "blue":
 		fallthrough
 	case "":
-		*e = MatchSimpleWinningAllianceEnum(s)
+		*e = MatchSimpleWinningAllianceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatchSimpleWinningAllianceEnum: %s", s)
+		return fmt.Errorf("invalid value for MatchSimpleWinningAllianceEnum: %v", v)
 	}
 }
 

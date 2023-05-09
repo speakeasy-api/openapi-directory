@@ -15,17 +15,21 @@ const (
 	GETDeleteLaunchTemplateVersionsActionEnumDeleteLaunchTemplateVersions GETDeleteLaunchTemplateVersionsActionEnum = "DeleteLaunchTemplateVersions"
 )
 
+func (e GETDeleteLaunchTemplateVersionsActionEnum) ToPointer() *GETDeleteLaunchTemplateVersionsActionEnum {
+	return &e
+}
+
 func (e *GETDeleteLaunchTemplateVersionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLaunchTemplateVersions":
-		*e = GETDeleteLaunchTemplateVersionsActionEnum(s)
+		*e = GETDeleteLaunchTemplateVersionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLaunchTemplateVersionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLaunchTemplateVersionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteLaunchTemplateVersionsVersionEnumTwoThousandAndSixteen1115 GETDeleteLaunchTemplateVersionsVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteLaunchTemplateVersionsVersionEnum) ToPointer() *GETDeleteLaunchTemplateVersionsVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteLaunchTemplateVersionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteLaunchTemplateVersionsVersionEnum(s)
+		*e = GETDeleteLaunchTemplateVersionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLaunchTemplateVersionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLaunchTemplateVersionsVersionEnum: %v", v)
 	}
 }
 

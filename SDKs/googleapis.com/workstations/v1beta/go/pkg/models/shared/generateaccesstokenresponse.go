@@ -4,7 +4,7 @@ package shared
 
 // GenerateAccessTokenResponse - Response message for GenerateAccessToken.
 type GenerateAccessTokenResponse struct {
-	// The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname, for example, `Authorization: Bearer `.
+	// The generated bearer access token. To use this token, include it in an Authorization header of an HTTP request sent to the associated workstation's hostname—for example, `Authorization: Bearer `.
 	AccessToken *string `json:"accessToken,omitempty"`
 	// Time at which the generated token will expire.
 	ExpireTime *string `json:"expireTime,omitempty"`

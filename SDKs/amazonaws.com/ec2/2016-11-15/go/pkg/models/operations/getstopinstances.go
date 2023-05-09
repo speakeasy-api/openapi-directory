@@ -15,17 +15,21 @@ const (
 	GETStopInstancesActionEnumStopInstances GETStopInstancesActionEnum = "StopInstances"
 )
 
+func (e GETStopInstancesActionEnum) ToPointer() *GETStopInstancesActionEnum {
+	return &e
+}
+
 func (e *GETStopInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopInstances":
-		*e = GETStopInstancesActionEnum(s)
+		*e = GETStopInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStopInstancesVersionEnumTwoThousandAndSixteen1115 GETStopInstancesVersionEnum = "2016-11-15"
 )
 
+func (e GETStopInstancesVersionEnum) ToPointer() *GETStopInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETStopInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETStopInstancesVersionEnum(s)
+		*e = GETStopInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopInstancesVersionEnum: %v", v)
 	}
 }
 

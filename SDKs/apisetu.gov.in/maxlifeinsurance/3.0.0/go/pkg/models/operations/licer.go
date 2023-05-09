@@ -32,17 +32,21 @@ const (
 	LicerRequestBodyFormatEnumPdf LicerRequestBodyFormatEnum = "pdf"
 )
 
+func (e LicerRequestBodyFormatEnum) ToPointer() *LicerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *LicerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = LicerRequestBodyFormatEnum(s)
+		*e = LicerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LicerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	Licer504ApplicationJSONErrorEnumGatewayTimeout Licer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Licer504ApplicationJSONErrorEnum) ToPointer() *Licer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Licer504ApplicationJSONErrorEnum(s)
+		*e = Licer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -82,17 +90,21 @@ const (
 	Licer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Licer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Licer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Licer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -108,17 +120,21 @@ const (
 	Licer503ApplicationJSONErrorEnumServiceUnavailable Licer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Licer503ApplicationJSONErrorEnum) ToPointer() *Licer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Licer503ApplicationJSONErrorEnum(s)
+		*e = Licer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -128,17 +144,21 @@ const (
 	Licer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Licer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Licer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Licer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -154,17 +174,21 @@ const (
 	Licer502ApplicationJSONErrorEnumBadGatewy Licer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Licer502ApplicationJSONErrorEnum) ToPointer() *Licer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Licer502ApplicationJSONErrorEnum(s)
+		*e = Licer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -174,17 +198,21 @@ const (
 	Licer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Licer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Licer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Licer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -200,17 +228,21 @@ const (
 	Licer500ApplicationJSONErrorEnumInternalServerError Licer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Licer500ApplicationJSONErrorEnum) ToPointer() *Licer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Licer500ApplicationJSONErrorEnum(s)
+		*e = Licer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -220,17 +252,21 @@ const (
 	Licer500ApplicationJSONErrorDescriptionEnumInternalServerError Licer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Licer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Licer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -247,19 +283,23 @@ const (
 	Licer404ApplicationJSONErrorEnumURLNotFound    Licer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Licer404ApplicationJSONErrorEnum) ToPointer() *Licer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Licer404ApplicationJSONErrorEnum(s)
+		*e = Licer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -270,19 +310,23 @@ const (
 	Licer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Licer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Licer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Licer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -299,19 +343,23 @@ const (
 	Licer401ApplicationJSONErrorEnumInvalidAuthorization  Licer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Licer401ApplicationJSONErrorEnum) ToPointer() *Licer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Licer401ApplicationJSONErrorEnum(s)
+		*e = Licer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -322,19 +370,23 @@ const (
 	Licer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Licer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Licer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Licer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -354,12 +406,16 @@ const (
 	Licer400ApplicationJSONErrorEnumInvalidConsentid Licer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Licer400ApplicationJSONErrorEnum) ToPointer() *Licer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Licer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -369,10 +425,10 @@ func (e *Licer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Licer400ApplicationJSONErrorEnum(s)
+		*e = Licer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -386,12 +442,16 @@ const (
 	Licer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Licer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Licer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Licer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Licer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -401,10 +461,10 @@ func (e *Licer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Licer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Licer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Licer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Licer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

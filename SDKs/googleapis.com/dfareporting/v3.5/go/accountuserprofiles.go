@@ -34,7 +34,10 @@ func newAccountUserProfiles(defaultClient, securityClient HTTPClient, serverURL,
 // DfareportingAccountUserProfilesGet - Gets one account user profile by ID.
 func (s *accountUserProfiles) DfareportingAccountUserProfilesGet(ctx context.Context, request operations.DfareportingAccountUserProfilesGetRequest, security operations.DfareportingAccountUserProfilesGetSecurity) (*operations.DfareportingAccountUserProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *accountUserProfiles) DfareportingAccountUserProfilesGet(ctx context.Con
 // DfareportingAccountUserProfilesInsert - Inserts a new account user profile.
 func (s *accountUserProfiles) DfareportingAccountUserProfilesInsert(ctx context.Context, request operations.DfareportingAccountUserProfilesInsertRequest, security operations.DfareportingAccountUserProfilesInsertSecurity) (*operations.DfareportingAccountUserProfilesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountUserProfile", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *accountUserProfiles) DfareportingAccountUserProfilesInsert(ctx context.
 // DfareportingAccountUserProfilesList - Retrieves a list of account user profiles, possibly filtered. This method supports paging.
 func (s *accountUserProfiles) DfareportingAccountUserProfilesList(ctx context.Context, request operations.DfareportingAccountUserProfilesListRequest, security operations.DfareportingAccountUserProfilesListSecurity) (*operations.DfareportingAccountUserProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *accountUserProfiles) DfareportingAccountUserProfilesList(ctx context.Co
 // DfareportingAccountUserProfilesPatch - Updates an existing account user profile. This method supports patch semantics.
 func (s *accountUserProfiles) DfareportingAccountUserProfilesPatch(ctx context.Context, request operations.DfareportingAccountUserProfilesPatchRequest, security operations.DfareportingAccountUserProfilesPatchSecurity) (*operations.DfareportingAccountUserProfilesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountUserProfile", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *accountUserProfiles) DfareportingAccountUserProfilesPatch(ctx context.C
 // DfareportingAccountUserProfilesUpdate - Updates an existing account user profile.
 func (s *accountUserProfiles) DfareportingAccountUserProfilesUpdate(ctx context.Context, request operations.DfareportingAccountUserProfilesUpdateRequest, security operations.DfareportingAccountUserProfilesUpdateSecurity) (*operations.DfareportingAccountUserProfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/accountUserProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountUserProfile", "json")
 	if err != nil {

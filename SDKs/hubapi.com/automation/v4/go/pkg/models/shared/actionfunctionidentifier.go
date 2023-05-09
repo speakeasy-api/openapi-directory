@@ -16,21 +16,25 @@ const (
 	ActionFunctionIdentifierFunctionTypeEnumPostFetchOptions   ActionFunctionIdentifierFunctionTypeEnum = "POST_FETCH_OPTIONS"
 )
 
+func (e ActionFunctionIdentifierFunctionTypeEnum) ToPointer() *ActionFunctionIdentifierFunctionTypeEnum {
+	return &e
+}
+
 func (e *ActionFunctionIdentifierFunctionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRE_ACTION_EXECUTION":
 		fallthrough
 	case "PRE_FETCH_OPTIONS":
 		fallthrough
 	case "POST_FETCH_OPTIONS":
-		*e = ActionFunctionIdentifierFunctionTypeEnum(s)
+		*e = ActionFunctionIdentifierFunctionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionFunctionIdentifierFunctionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionFunctionIdentifierFunctionTypeEnum: %v", v)
 	}
 }
 

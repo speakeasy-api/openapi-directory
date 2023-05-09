@@ -383,12 +383,16 @@ const (
 	GeocodingSummaryFeatureTypeEnumTypeUnknown                               GeocodingSummaryFeatureTypeEnum = "typeUnknown"
 )
 
+func (e GeocodingSummaryFeatureTypeEnum) ToPointer() *GeocodingSummaryFeatureTypeEnum {
+	return &e
+}
+
 func (e *GeocodingSummaryFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "typeAny":
 		fallthrough
 	case "typeTransportation":
@@ -1128,10 +1132,10 @@ func (e *GeocodingSummaryFeatureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "typeDoNotUseReservedToCatchGeneratedFiles":
 		fallthrough
 	case "typeUnknown":
-		*e = GeocodingSummaryFeatureTypeEnum(s)
+		*e = GeocodingSummaryFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeocodingSummaryFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GeocodingSummaryFeatureTypeEnum: %v", v)
 	}
 }
 

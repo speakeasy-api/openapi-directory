@@ -25,12 +25,16 @@ const (
 	OBBalanceType1CodeEnumPreviouslyClosedBooked OBBalanceType1CodeEnum = "PreviouslyClosedBooked"
 )
 
+func (e OBBalanceType1CodeEnum) ToPointer() *OBBalanceType1CodeEnum {
+	return &e
+}
+
 func (e *OBBalanceType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ClosingAvailable":
 		fallthrough
 	case "ClosingBooked":
@@ -56,9 +60,9 @@ func (e *OBBalanceType1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "OpeningCleared":
 		fallthrough
 	case "PreviouslyClosedBooked":
-		*e = OBBalanceType1CodeEnum(s)
+		*e = OBBalanceType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBBalanceType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBBalanceType1CodeEnum: %v", v)
 	}
 }

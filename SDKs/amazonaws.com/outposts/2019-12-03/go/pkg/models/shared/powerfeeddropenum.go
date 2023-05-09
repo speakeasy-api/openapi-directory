@@ -14,18 +14,22 @@ const (
 	PowerFeedDropEnumBelowRack PowerFeedDropEnum = "BELOW_RACK"
 )
 
+func (e PowerFeedDropEnum) ToPointer() *PowerFeedDropEnum {
+	return &e
+}
+
 func (e *PowerFeedDropEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ABOVE_RACK":
 		fallthrough
 	case "BELOW_RACK":
-		*e = PowerFeedDropEnum(s)
+		*e = PowerFeedDropEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PowerFeedDropEnum: %s", s)
+		return fmt.Errorf("invalid value for PowerFeedDropEnum: %v", v)
 	}
 }

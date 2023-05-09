@@ -16,17 +16,21 @@ const (
 	DeleteAccountAssignmentXAmzTargetEnumSwbExternalServiceDeleteAccountAssignment DeleteAccountAssignmentXAmzTargetEnum = "SWBExternalService.DeleteAccountAssignment"
 )
 
+func (e DeleteAccountAssignmentXAmzTargetEnum) ToPointer() *DeleteAccountAssignmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAccountAssignmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DeleteAccountAssignment":
-		*e = DeleteAccountAssignmentXAmzTargetEnum(s)
+		*e = DeleteAccountAssignmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAccountAssignmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAccountAssignmentXAmzTargetEnum: %v", v)
 	}
 }
 

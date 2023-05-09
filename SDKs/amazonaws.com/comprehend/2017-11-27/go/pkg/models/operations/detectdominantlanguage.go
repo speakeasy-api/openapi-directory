@@ -16,17 +16,21 @@ const (
 	DetectDominantLanguageXAmzTargetEnumComprehend20171127DetectDominantLanguage DetectDominantLanguageXAmzTargetEnum = "Comprehend_20171127.DetectDominantLanguage"
 )
 
+func (e DetectDominantLanguageXAmzTargetEnum) ToPointer() *DetectDominantLanguageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectDominantLanguageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DetectDominantLanguage":
-		*e = DetectDominantLanguageXAmzTargetEnum(s)
+		*e = DetectDominantLanguageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectDominantLanguageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectDominantLanguageXAmzTargetEnum: %v", v)
 	}
 }
 

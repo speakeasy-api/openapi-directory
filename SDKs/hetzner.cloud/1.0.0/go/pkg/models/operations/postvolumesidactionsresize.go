@@ -43,21 +43,25 @@ const (
 	PostVolumesIDActionsResizeActionResponseActionStatusEnumError   PostVolumesIDActionsResizeActionResponseActionStatusEnum = "error"
 )
 
+func (e PostVolumesIDActionsResizeActionResponseActionStatusEnum) ToPointer() *PostVolumesIDActionsResizeActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostVolumesIDActionsResizeActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostVolumesIDActionsResizeActionResponseActionStatusEnum(s)
+		*e = PostVolumesIDActionsResizeActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostVolumesIDActionsResizeActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostVolumesIDActionsResizeActionResponseActionStatusEnum: %v", v)
 	}
 }
 

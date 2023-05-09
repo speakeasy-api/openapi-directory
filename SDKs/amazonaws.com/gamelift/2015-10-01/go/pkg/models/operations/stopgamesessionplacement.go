@@ -16,17 +16,21 @@ const (
 	StopGameSessionPlacementXAmzTargetEnumGameLiftStopGameSessionPlacement StopGameSessionPlacementXAmzTargetEnum = "GameLift.StopGameSessionPlacement"
 )
 
+func (e StopGameSessionPlacementXAmzTargetEnum) ToPointer() *StopGameSessionPlacementXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopGameSessionPlacementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.StopGameSessionPlacement":
-		*e = StopGameSessionPlacementXAmzTargetEnum(s)
+		*e = StopGameSessionPlacementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopGameSessionPlacementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopGameSessionPlacementXAmzTargetEnum: %v", v)
 	}
 }
 

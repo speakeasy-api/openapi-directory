@@ -37,7 +37,10 @@ func newChargingLocations(defaultClient, securityClient HTTPClient, serverURL, l
 // Delete a Charging Location
 func (s *chargingLocations) DeleteCharginglocationsCharginglocationid(ctx context.Context, request operations.DeleteCharginglocationsCharginglocationidRequest, security operations.DeleteCharginglocationsCharginglocationidSecurity) (*operations.DeleteCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -71,7 +74,7 @@ func (s *chargingLocations) DeleteCharginglocationsCharginglocationid(ctx contex
 
 // GetCharginglocations - List Charging Locations
 // Returns a list of Charging Locations registered to the User
-func (s *chargingLocations) GetCharginglocations(ctx context.Context) (*operations.GetCharginglocationsResponse, error) {
+func (s *chargingLocations) GetCharginglocations(ctx context.Context, security operations.GetCharginglocationsSecurity) (*operations.GetCharginglocationsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/charging-locations"
 
@@ -80,7 +83,7 @@ func (s *chargingLocations) GetCharginglocations(ctx context.Context) (*operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -117,7 +120,10 @@ func (s *chargingLocations) GetCharginglocations(ctx context.Context) (*operatio
 // GetCharginglocationsCharginglocationid - Get Charging Location
 func (s *chargingLocations) GetCharginglocationsCharginglocationid(ctx context.Context, request operations.GetCharginglocationsCharginglocationidRequest, security operations.GetCharginglocationsCharginglocationidSecurity) (*operations.GetCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +219,10 @@ func (s *chargingLocations) PostCharginglocations(ctx context.Context, request o
 // Updates a charging location with new configuration
 func (s *chargingLocations) PutCharginglocationsCharginglocationid(ctx context.Context, request operations.PutCharginglocationsCharginglocationidRequest, security operations.PutCharginglocationsCharginglocationidSecurity) (*operations.PutCharginglocationsCharginglocationidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/charging-locations/{chargingLocationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OnechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput", "json")
 	if err != nil {

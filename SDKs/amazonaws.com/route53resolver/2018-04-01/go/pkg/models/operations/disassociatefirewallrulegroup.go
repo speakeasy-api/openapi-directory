@@ -16,17 +16,21 @@ const (
 	DisassociateFirewallRuleGroupXAmzTargetEnumRoute53ResolverDisassociateFirewallRuleGroup DisassociateFirewallRuleGroupXAmzTargetEnum = "Route53Resolver.DisassociateFirewallRuleGroup"
 )
 
+func (e DisassociateFirewallRuleGroupXAmzTargetEnum) ToPointer() *DisassociateFirewallRuleGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateFirewallRuleGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DisassociateFirewallRuleGroup":
-		*e = DisassociateFirewallRuleGroupXAmzTargetEnum(s)
+		*e = DisassociateFirewallRuleGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateFirewallRuleGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateFirewallRuleGroupXAmzTargetEnum: %v", v)
 	}
 }
 

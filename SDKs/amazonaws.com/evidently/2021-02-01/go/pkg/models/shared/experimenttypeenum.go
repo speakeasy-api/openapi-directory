@@ -13,16 +13,20 @@ const (
 	ExperimentTypeEnumAwsEvidentlyOnlineab ExperimentTypeEnum = "aws.evidently.onlineab"
 )
 
+func (e ExperimentTypeEnum) ToPointer() *ExperimentTypeEnum {
+	return &e
+}
+
 func (e *ExperimentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aws.evidently.onlineab":
-		*e = ExperimentTypeEnum(s)
+		*e = ExperimentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExperimentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExperimentTypeEnum: %v", v)
 	}
 }

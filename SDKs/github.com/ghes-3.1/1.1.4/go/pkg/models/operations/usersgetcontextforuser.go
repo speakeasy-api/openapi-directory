@@ -19,12 +19,16 @@ const (
 	UsersGetContextForUserSubjectTypeEnumPullRequest  UsersGetContextForUserSubjectTypeEnum = "pull_request"
 )
 
+func (e UsersGetContextForUserSubjectTypeEnum) ToPointer() *UsersGetContextForUserSubjectTypeEnum {
+	return &e
+}
+
 func (e *UsersGetContextForUserSubjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "organization":
 		fallthrough
 	case "repository":
@@ -32,10 +36,10 @@ func (e *UsersGetContextForUserSubjectTypeEnum) UnmarshalJSON(data []byte) error
 	case "issue":
 		fallthrough
 	case "pull_request":
-		*e = UsersGetContextForUserSubjectTypeEnum(s)
+		*e = UsersGetContextForUserSubjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsersGetContextForUserSubjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsersGetContextForUserSubjectTypeEnum: %v", v)
 	}
 }
 

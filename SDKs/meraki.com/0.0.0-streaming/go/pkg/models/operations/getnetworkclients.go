@@ -30,19 +30,23 @@ const (
 	GetNetworkClients200ApplicationJSONStatusEnumOnline  GetNetworkClients200ApplicationJSONStatusEnum = "Online"
 )
 
+func (e GetNetworkClients200ApplicationJSONStatusEnum) ToPointer() *GetNetworkClients200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetNetworkClients200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Offline":
 		fallthrough
 	case "Online":
-		*e = GetNetworkClients200ApplicationJSONStatusEnum(s)
+		*e = GetNetworkClients200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkClients200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkClients200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

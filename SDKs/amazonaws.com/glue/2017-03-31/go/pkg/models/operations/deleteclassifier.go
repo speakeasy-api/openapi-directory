@@ -16,17 +16,21 @@ const (
 	DeleteClassifierXAmzTargetEnumAwsGlueDeleteClassifier DeleteClassifierXAmzTargetEnum = "AWSGlue.DeleteClassifier"
 )
 
+func (e DeleteClassifierXAmzTargetEnum) ToPointer() *DeleteClassifierXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteClassifierXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteClassifier":
-		*e = DeleteClassifierXAmzTargetEnum(s)
+		*e = DeleteClassifierXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteClassifierXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteClassifierXAmzTargetEnum: %v", v)
 	}
 }
 

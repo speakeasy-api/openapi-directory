@@ -138,12 +138,16 @@ const (
 	AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum) ToPointer() *AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -313,10 +317,10 @@ func (e *AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum) U
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum(s)
+		*e = AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizeSecurityGroupEgressRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

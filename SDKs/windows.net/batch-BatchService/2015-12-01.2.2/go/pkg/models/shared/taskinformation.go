@@ -17,12 +17,16 @@ const (
 	TaskInformationTaskStateEnumCompleted TaskInformationTaskStateEnum = "completed"
 )
 
+func (e TaskInformationTaskStateEnum) ToPointer() *TaskInformationTaskStateEnum {
+	return &e
+}
+
 func (e *TaskInformationTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "preparing":
@@ -30,10 +34,10 @@ func (e *TaskInformationTaskStateEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = TaskInformationTaskStateEnum(s)
+		*e = TaskInformationTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskInformationTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskInformationTaskStateEnum: %v", v)
 	}
 }
 

@@ -108,7 +108,10 @@ func (s *classificationInclusion) GetClassificationInclusions(ctx context.Contex
 // GetClassificationInclusionsID - Get a specific classification inclusion
 func (s *classificationInclusion) GetClassificationInclusionsID(ctx context.Context, request operations.GetClassificationInclusionsIDRequest, security operations.GetClassificationInclusionsIDSecurity) (*operations.GetClassificationInclusionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classification_inclusions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/classification_inclusions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

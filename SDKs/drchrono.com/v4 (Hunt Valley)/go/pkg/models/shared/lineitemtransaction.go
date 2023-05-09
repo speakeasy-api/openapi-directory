@@ -18,12 +18,16 @@ const (
 	LineItemTransactionAdjustmentGroupCodeEnumPr      LineItemTransactionAdjustmentGroupCodeEnum = "PR"
 )
 
+func (e LineItemTransactionAdjustmentGroupCodeEnum) ToPointer() *LineItemTransactionAdjustmentGroupCodeEnum {
+	return &e
+}
+
 func (e *LineItemTransactionAdjustmentGroupCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "CO":
@@ -33,10 +37,10 @@ func (e *LineItemTransactionAdjustmentGroupCodeEnum) UnmarshalJSON(data []byte) 
 	case "PI":
 		fallthrough
 	case "PR":
-		*e = LineItemTransactionAdjustmentGroupCodeEnum(s)
+		*e = LineItemTransactionAdjustmentGroupCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemTransactionAdjustmentGroupCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemTransactionAdjustmentGroupCodeEnum: %v", v)
 	}
 }
 
@@ -334,12 +338,16 @@ const (
 	LineItemTransactionAdjustmentReasonEnumY3                        LineItemTransactionAdjustmentReasonEnum = "Y3"
 )
 
+func (e LineItemTransactionAdjustmentReasonEnum) ToPointer() *LineItemTransactionAdjustmentReasonEnum {
+	return &e
+}
+
 func (e *LineItemTransactionAdjustmentReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "-3":
 		fallthrough
 	case "-2":
@@ -915,10 +923,10 @@ func (e *LineItemTransactionAdjustmentReasonEnum) UnmarshalJSON(data []byte) err
 	case "Y2":
 		fallthrough
 	case "Y3":
-		*e = LineItemTransactionAdjustmentReasonEnum(s)
+		*e = LineItemTransactionAdjustmentReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemTransactionAdjustmentReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemTransactionAdjustmentReasonEnum: %v", v)
 	}
 }
 
@@ -947,12 +955,16 @@ const (
 	LineItemTransactionClaimStatusEnumTwentySeven LineItemTransactionClaimStatusEnum = "27"
 )
 
+func (e LineItemTransactionClaimStatusEnum) ToPointer() *LineItemTransactionClaimStatusEnum {
+	return &e
+}
+
 func (e *LineItemTransactionClaimStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "0":
@@ -990,10 +1002,10 @@ func (e *LineItemTransactionClaimStatusEnum) UnmarshalJSON(data []byte) error {
 	case "25":
 		fallthrough
 	case "27":
-		*e = LineItemTransactionClaimStatusEnum(s)
+		*e = LineItemTransactionClaimStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemTransactionClaimStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemTransactionClaimStatusEnum: %v", v)
 	}
 }
 

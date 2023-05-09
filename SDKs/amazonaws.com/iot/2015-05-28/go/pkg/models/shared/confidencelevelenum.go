@@ -15,20 +15,24 @@ const (
 	ConfidenceLevelEnumHigh   ConfidenceLevelEnum = "HIGH"
 )
 
+func (e ConfidenceLevelEnum) ToPointer() *ConfidenceLevelEnum {
+	return &e
+}
+
 func (e *ConfidenceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOW":
 		fallthrough
 	case "MEDIUM":
 		fallthrough
 	case "HIGH":
-		*e = ConfidenceLevelEnum(s)
+		*e = ConfidenceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfidenceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfidenceLevelEnum: %v", v)
 	}
 }

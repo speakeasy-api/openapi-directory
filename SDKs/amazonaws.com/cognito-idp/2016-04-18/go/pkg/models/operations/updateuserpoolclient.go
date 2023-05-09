@@ -16,17 +16,21 @@ const (
 	UpdateUserPoolClientXAmzTargetEnumAwsCognitoIdentityProviderServiceUpdateUserPoolClient UpdateUserPoolClientXAmzTargetEnum = "AWSCognitoIdentityProviderService.UpdateUserPoolClient"
 )
 
+func (e UpdateUserPoolClientXAmzTargetEnum) ToPointer() *UpdateUserPoolClientXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateUserPoolClientXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.UpdateUserPoolClient":
-		*e = UpdateUserPoolClientXAmzTargetEnum(s)
+		*e = UpdateUserPoolClientXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateUserPoolClientXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateUserPoolClientXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -4,19 +4,20 @@ package shared
 
 // FieldInputConfig - Describes the configuration for the default input values to display for a field.
 type FieldInputConfig struct {
-	DefaultChecked     *bool          `json:"defaultChecked,omitempty"`
-	DefaultCountryCode *string        `json:"defaultCountryCode,omitempty"`
-	DefaultValue       *string        `json:"defaultValue,omitempty"`
-	DescriptiveText    *string        `json:"descriptiveText,omitempty"`
-	IsArray            *bool          `json:"isArray,omitempty"`
-	MaxValue           *float32       `json:"maxValue,omitempty"`
-	MinValue           *float32       `json:"minValue,omitempty"`
-	Name               *string        `json:"name,omitempty"`
-	Placeholder        *string        `json:"placeholder,omitempty"`
-	ReadOnly           *bool          `json:"readOnly,omitempty"`
-	Required           *bool          `json:"required,omitempty"`
-	Step               *float32       `json:"step,omitempty"`
-	Type               string         `json:"type"`
-	Value              *string        `json:"value,omitempty"`
-	ValueMappings      *ValueMappings `json:"valueMappings,omitempty"`
+	DefaultChecked     *bool                    `json:"defaultChecked,omitempty"`
+	DefaultCountryCode *string                  `json:"defaultCountryCode,omitempty"`
+	DefaultValue       *string                  `json:"defaultValue,omitempty"`
+	DescriptiveText    *string                  `json:"descriptiveText,omitempty"`
+	FileUploaderConfig *FileUploaderFieldConfig `json:"fileUploaderConfig,omitempty"`
+	IsArray            *bool                    `json:"isArray,omitempty"`
+	MaxValue           *float32                 `json:"maxValue,omitempty"`
+	MinValue           *float32                 `json:"minValue,omitempty"`
+	Name               *string                  `json:"name,omitempty"`
+	Placeholder        *string                  `json:"placeholder,omitempty"`
+	ReadOnly           *bool                    `json:"readOnly,omitempty"`
+	Required           *bool                    `json:"required,omitempty"`
+	Step               *float32                 `json:"step,omitempty"`
+	Type               string                   `json:"type"`
+	Value              *string                  `json:"value,omitempty"`
+	ValueMappings      *ValueMappings           `json:"valueMappings,omitempty"`
 }

@@ -15,17 +15,21 @@ const (
 	GETDescribePlatformVersionActionEnumDescribePlatformVersion GETDescribePlatformVersionActionEnum = "DescribePlatformVersion"
 )
 
+func (e GETDescribePlatformVersionActionEnum) ToPointer() *GETDescribePlatformVersionActionEnum {
+	return &e
+}
+
 func (e *GETDescribePlatformVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribePlatformVersion":
-		*e = GETDescribePlatformVersionActionEnum(s)
+		*e = GETDescribePlatformVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePlatformVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePlatformVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribePlatformVersionVersionEnumTwoThousandAndTen1201 GETDescribePlatformVersionVersionEnum = "2010-12-01"
 )
 
+func (e GETDescribePlatformVersionVersionEnum) ToPointer() *GETDescribePlatformVersionVersionEnum {
+	return &e
+}
+
 func (e *GETDescribePlatformVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDescribePlatformVersionVersionEnum(s)
+		*e = GETDescribePlatformVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePlatformVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePlatformVersionVersionEnum: %v", v)
 	}
 }
 

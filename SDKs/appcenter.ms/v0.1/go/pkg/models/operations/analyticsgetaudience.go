@@ -34,12 +34,16 @@ const (
 	AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnumTooManyRequests     AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsGetAudienceDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnumDateTime AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum = "date_time"
 )
 
+func (e AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum) ToPointer() *AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum {
+	return &e
+}
+
 func (e *AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "number":
@@ -92,10 +100,10 @@ func (e *AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum) UnmarshalJS
 	case "boolean":
 		fallthrough
 	case "date_time":
-		*e = AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum(s)
+		*e = AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsGetAudience200ApplicationJSONCustomPropertiesEnum: %v", v)
 	}
 }
 
@@ -108,21 +116,25 @@ const (
 	AnalyticsGetAudience200ApplicationJSONStateEnumDisabled    AnalyticsGetAudience200ApplicationJSONStateEnum = "Disabled"
 )
 
+func (e AnalyticsGetAudience200ApplicationJSONStateEnum) ToPointer() *AnalyticsGetAudience200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *AnalyticsGetAudience200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Calculating":
 		fallthrough
 	case "Ready":
 		fallthrough
 	case "Disabled":
-		*e = AnalyticsGetAudience200ApplicationJSONStateEnum(s)
+		*e = AnalyticsGetAudience200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsGetAudience200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsGetAudience200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

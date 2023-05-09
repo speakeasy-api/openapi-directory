@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type GetErrorsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type GetErrorsResponse struct {
 	ContentType string
 	StatusCode  int

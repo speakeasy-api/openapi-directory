@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PrivateCategoriesListSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type PrivateCategoriesListResponse struct {
 	// OK. An array of categories
 	Categories  []shared.Category

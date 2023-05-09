@@ -16,17 +16,21 @@ const (
 	GetAuthorizationTokenXAmzTargetEnumAmazonEc2ContainerRegistryV20150921GetAuthorizationToken GetAuthorizationTokenXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.GetAuthorizationToken"
 )
 
+func (e GetAuthorizationTokenXAmzTargetEnum) ToPointer() *GetAuthorizationTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAuthorizationTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.GetAuthorizationToken":
-		*e = GetAuthorizationTokenXAmzTargetEnum(s)
+		*e = GetAuthorizationTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAuthorizationTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAuthorizationTokenXAmzTargetEnum: %v", v)
 	}
 }
 

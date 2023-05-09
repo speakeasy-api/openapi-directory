@@ -16,17 +16,21 @@ const (
 	UpdateACLXAmzTargetEnumAmazonMemoryDbUpdateACL UpdateACLXAmzTargetEnum = "AmazonMemoryDB.UpdateACL"
 )
 
+func (e UpdateACLXAmzTargetEnum) ToPointer() *UpdateACLXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.UpdateACL":
-		*e = UpdateACLXAmzTargetEnum(s)
+		*e = UpdateACLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateACLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateACLXAmzTargetEnum: %v", v)
 	}
 }
 

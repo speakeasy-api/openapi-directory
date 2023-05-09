@@ -14,18 +14,22 @@ const (
 	FileSystemAccessModeEnumRo FileSystemAccessModeEnum = "ro"
 )
 
+func (e FileSystemAccessModeEnum) ToPointer() *FileSystemAccessModeEnum {
+	return &e
+}
+
 func (e *FileSystemAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rw":
 		fallthrough
 	case "ro":
-		*e = FileSystemAccessModeEnum(s)
+		*e = FileSystemAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileSystemAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileSystemAccessModeEnum: %v", v)
 	}
 }

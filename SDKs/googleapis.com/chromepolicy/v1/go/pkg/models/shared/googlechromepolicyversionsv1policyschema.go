@@ -15,21 +15,25 @@ const (
 	GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnumGroup                     GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum = "GROUP"
 )
 
+func (e GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum) ToPointer() *GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum {
+	return &e
+}
+
 func (e *GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_RESOURCE_UNSPECIFIED":
 		fallthrough
 	case "ORG_UNIT":
 		fallthrough
 	case "GROUP":
-		*e = GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum(s)
+		*e = GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum: %v", v)
 	}
 }
 

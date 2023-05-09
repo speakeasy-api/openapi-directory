@@ -30,17 +30,21 @@ const (
 	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnumEach GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum = "EACH"
 )
 
+func (e GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum) ToPointer() *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum {
+	return &e
+}
+
 func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum(s)
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnumData        GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum = "DATA"
 )
 
+func (e GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum) ToPointer() *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum {
+	return &e
+}
+
 func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION":
 		fallthrough
 	case "SYSTEM":
@@ -74,10 +82,10 @@ func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors
 	case "REQUEST":
 		fallthrough
 	case "DATA":
-		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum(s)
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum: %v", v)
 	}
 }
 
@@ -96,21 +104,25 @@ const (
 	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnumError GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum = "ERROR"
 )
 
+func (e GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum) ToPointer() *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum {
+	return &e
+}
+
 func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "ERROR":
-		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum(s)
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsSeverityEnum: %v", v)
 	}
 }
 
@@ -132,17 +144,21 @@ const (
 	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnumEach GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum = "EACH"
 )
 
+func (e GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum) ToPointer() *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum {
+	return &e
+}
+
 func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum(s)
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum: %v", v)
 	}
 }
 
@@ -161,17 +177,21 @@ const (
 	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnumEach GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum = "EACH"
 )
 
+func (e GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum) ToPointer() *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum {
+	return &e
+}
+
 func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EACH":
-		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum(s)
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum: %v", v)
 	}
 }
 

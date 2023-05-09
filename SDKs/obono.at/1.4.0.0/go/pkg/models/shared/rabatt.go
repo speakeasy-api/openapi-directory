@@ -17,12 +17,16 @@ const (
 	RabattSatzEnumNull        RabattSatzEnum = "NULL"
 )
 
+func (e RabattSatzEnum) ToPointer() *RabattSatzEnum {
+	return &e
+}
+
 func (e *RabattSatzEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NORMAL":
 		fallthrough
 	case "ERMAESSIGT1":
@@ -32,10 +36,10 @@ func (e *RabattSatzEnum) UnmarshalJSON(data []byte) error {
 	case "BESONDERS":
 		fallthrough
 	case "NULL":
-		*e = RabattSatzEnum(s)
+		*e = RabattSatzEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RabattSatzEnum: %s", s)
+		return fmt.Errorf("invalid value for RabattSatzEnum: %v", v)
 	}
 }
 

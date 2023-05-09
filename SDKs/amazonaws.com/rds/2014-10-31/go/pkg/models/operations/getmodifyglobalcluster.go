@@ -15,17 +15,21 @@ const (
 	GETModifyGlobalClusterActionEnumModifyGlobalCluster GETModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
 )
 
+func (e GETModifyGlobalClusterActionEnum) ToPointer() *GETModifyGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *GETModifyGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyGlobalCluster":
-		*e = GETModifyGlobalClusterActionEnum(s)
+		*e = GETModifyGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 GETModifyGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyGlobalClusterVersionEnum) ToPointer() *GETModifyGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *GETModifyGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyGlobalClusterVersionEnum(s)
+		*e = GETModifyGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyGlobalClusterVersionEnum: %v", v)
 	}
 }
 
@@ -56,7 +64,7 @@ type GETModifyGlobalClusterRequest struct {
 	AllowMajorVersionUpgrade *bool `queryParam:"style=form,explode=true,name=AllowMajorVersionUpgrade"`
 	// Indicates if the global database cluster has deletion protection enabled. The global database cluster can't be deleted when deletion protection is enabled.
 	DeletionProtection *bool `queryParam:"style=form,explode=true,name=DeletionProtection"`
-	// <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.</p> <p>To list all of the available engine versions for <code>aurora</code> (for MySQL 5.6-compatible Aurora), use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code> </p> <p>To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL 5.7-compatible and MySQL 8.0-compatible Aurora), use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code> </p> <p>To list all of the available engine versions for <code>aurora-postgresql</code>, use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-postgresql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code> </p>
+	// <p>The version number of the database engine to which you want to upgrade. Changing this parameter results in an outage. The change is applied during the next maintenance window unless <code>ApplyImmediately</code> is enabled.</p> <p>To list all of the available engine versions for <code>aurora-mysql</code> (for MySQL-based Aurora global databases), use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-mysql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code> </p> <p>To list all of the available engine versions for <code>aurora-postgresql</code> (for PostgreSQL-based Aurora global databases), use the following command:</p> <p> <code>aws rds describe-db-engine-versions --engine aurora-postgresql --query '*[]|[?SupportsGlobalDatabases == `true`].[EngineVersion]'</code> </p>
 	EngineVersion *string `queryParam:"style=form,explode=true,name=EngineVersion"`
 	// <p>The DB cluster identifier for the global cluster being modified. This parameter isn't case-sensitive.</p> <p>Constraints:</p> <ul> <li> <p>Must match the identifier of an existing global database cluster.</p> </li> </ul>
 	GlobalClusterIdentifier *string `queryParam:"style=form,explode=true,name=GlobalClusterIdentifier"`

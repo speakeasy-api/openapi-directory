@@ -15,21 +15,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnumErrorTask                   EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum = "ERROR_TASK"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL_TASK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL_TASK":
 		fallthrough
 	case "ERROR_TASK":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnumPrePostExecution                EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum = "PRE_POST_EXECUTION"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_JSON_VALIDATION_OPTION":
 		fallthrough
 	case "SKIP":
@@ -59,10 +67,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum) 
 	case "POST_EXECUTION":
 		fallthrough
 	case "PRE_POST_EXECUTION":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigJSONValidationOptionEnum: %v", v)
 	}
 }
 
@@ -75,21 +83,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnumRunFirstMatch EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum = "RUN_FIRST_MATCH"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "RUN_ALL_MATCH":
 		fallthrough
 	case "RUN_FIRST_MATCH":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigNextTasksExecutionPolicyEnum: %v", v)
 	}
 }
 
@@ -102,21 +114,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnumWhenAllTasksAndConditionsSucceed EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum = "WHEN_ALL_TASKS_AND_CONDITIONS_SUCCEED"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WHEN_ALL_SUCCEED":
 		fallthrough
 	case "WHEN_ANY_SUCCEED":
 		fallthrough
 	case "WHEN_ALL_TASKS_AND_CONDITIONS_SUCCEED":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskExecutionStrategyEnum: %v", v)
 	}
 }
 
@@ -129,21 +145,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnumIoTemplate   EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum = "IO_TEMPLATE"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK":
 		fallthrough
 	case "ASIS_TEMPLATE":
 		fallthrough
 	case "IO_TEMPLATE":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskConfigTaskTypeEnum: %v", v)
 	}
 }
 

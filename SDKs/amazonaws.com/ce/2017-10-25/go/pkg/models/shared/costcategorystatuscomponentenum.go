@@ -13,16 +13,20 @@ const (
 	CostCategoryStatusComponentEnumCostExplorer CostCategoryStatusComponentEnum = "COST_EXPLORER"
 )
 
+func (e CostCategoryStatusComponentEnum) ToPointer() *CostCategoryStatusComponentEnum {
+	return &e
+}
+
 func (e *CostCategoryStatusComponentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COST_EXPLORER":
-		*e = CostCategoryStatusComponentEnum(s)
+		*e = CostCategoryStatusComponentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategoryStatusComponentEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategoryStatusComponentEnum: %v", v)
 	}
 }

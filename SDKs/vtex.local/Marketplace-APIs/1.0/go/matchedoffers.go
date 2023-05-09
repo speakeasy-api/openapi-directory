@@ -49,7 +49,10 @@ func newMatchedOffers(defaultClient, securityClient HTTPClient, serverURL, langu
 // - Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) that it is available at.
 func (s *matchedOffers) GetProductoffers(ctx context.Context, request operations.GetProductoffersRequest) (*operations.GetProductoffersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offer-manager/pvt/product/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offer-manager/pvt/product/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,7 +108,10 @@ func (s *matchedOffers) GetProductoffers(ctx context.Context, request operations
 // - Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) that it is available at.
 func (s *matchedOffers) GetSKUoffers(ctx context.Context, request operations.GetSKUoffersRequest) (*operations.GetSKUoffersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offer-manager/pvt/product/{productId}/sku/{skuId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offer-manager/pvt/product/{productId}/sku/{skuId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

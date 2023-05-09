@@ -16,12 +16,16 @@ const (
 	StartTimerFailedCauseEnumOperationNotPermitted     StartTimerFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e StartTimerFailedCauseEnum) ToPointer() *StartTimerFailedCauseEnum {
+	return &e
+}
+
 func (e *StartTimerFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMER_ID_ALREADY_IN_USE":
 		fallthrough
 	case "OPEN_TIMERS_LIMIT_EXCEEDED":
@@ -29,9 +33,9 @@ func (e *StartTimerFailedCauseEnum) UnmarshalJSON(data []byte) error {
 	case "TIMER_CREATION_RATE_EXCEEDED":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = StartTimerFailedCauseEnum(s)
+		*e = StartTimerFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartTimerFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for StartTimerFailedCauseEnum: %v", v)
 	}
 }

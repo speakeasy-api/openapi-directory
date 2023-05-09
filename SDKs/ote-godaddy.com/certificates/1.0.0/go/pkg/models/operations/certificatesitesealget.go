@@ -17,19 +17,23 @@ const (
 	CertificateSitesealGetThemeEnumLight CertificateSitesealGetThemeEnum = "LIGHT"
 )
 
+func (e CertificateSitesealGetThemeEnum) ToPointer() *CertificateSitesealGetThemeEnum {
+	return &e
+}
+
 func (e *CertificateSitesealGetThemeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DARK":
 		fallthrough
 	case "LIGHT":
-		*e = CertificateSitesealGetThemeEnum(s)
+		*e = CertificateSitesealGetThemeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateSitesealGetThemeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateSitesealGetThemeEnum: %v", v)
 	}
 }
 

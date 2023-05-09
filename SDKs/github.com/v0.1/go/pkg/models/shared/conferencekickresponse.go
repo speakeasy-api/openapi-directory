@@ -17,12 +17,16 @@ const (
 	ConferenceKickResponseMessageEnumConferenceKickFailedConferenceNotFound ConferenceKickResponseMessageEnum = "Conference Kick Failed -- Conference not found"
 )
 
+func (e ConferenceKickResponseMessageEnum) ToPointer() *ConferenceKickResponseMessageEnum {
+	return &e
+}
+
 func (e *ConferenceKickResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Conference Kick Executed":
 		fallthrough
 	case "ConferenceName Parameter must be present":
@@ -30,10 +34,10 @@ func (e *ConferenceKickResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "MemberID Parameter must be present":
 		fallthrough
 	case "Conference Kick Failed -- Conference not found":
-		*e = ConferenceKickResponseMessageEnum(s)
+		*e = ConferenceKickResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConferenceKickResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConferenceKickResponseMessageEnum: %v", v)
 	}
 }
 

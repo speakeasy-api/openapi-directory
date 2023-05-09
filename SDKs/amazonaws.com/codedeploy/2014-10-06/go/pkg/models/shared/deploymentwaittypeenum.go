@@ -14,18 +14,22 @@ const (
 	DeploymentWaitTypeEnumTerminationWait DeploymentWaitTypeEnum = "TERMINATION_WAIT"
 )
 
+func (e DeploymentWaitTypeEnum) ToPointer() *DeploymentWaitTypeEnum {
+	return &e
+}
+
 func (e *DeploymentWaitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY_WAIT":
 		fallthrough
 	case "TERMINATION_WAIT":
-		*e = DeploymentWaitTypeEnum(s)
+		*e = DeploymentWaitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentWaitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentWaitTypeEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	RegistryAliasStatusEnumRejected RegistryAliasStatusEnum = "REJECTED"
 )
 
+func (e RegistryAliasStatusEnum) ToPointer() *RegistryAliasStatusEnum {
+	return &e
+}
+
 func (e *RegistryAliasStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "REJECTED":
-		*e = RegistryAliasStatusEnum(s)
+		*e = RegistryAliasStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistryAliasStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistryAliasStatusEnum: %v", v)
 	}
 }

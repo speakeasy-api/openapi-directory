@@ -13,26 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/shoppers/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChangePasswordRequest{
+    ctx := context.Background()
+    res, err := s.V1.ChangePassword(ctx, operations.ChangePasswordRequest{
         Secret: shared.Secret{
-            Secret: "P@55w0rd+",
+            Secret: sdk.String("P@55w0rd+"),
         },
         ShopperID: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.ChangePassword(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,16 +46,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `ChangePassword` - Set subaccount's password
-* `CreateSubaccountJSON` - Create a Subaccount owned by the authenticated Reseller
-* `CreateSubaccountRaw` - Create a Subaccount owned by the authenticated Reseller
-* `Delete` - Request the deletion of a shopper profile
-* `Get` - Get details for the specified Shopper
-* `GetStatus` - Get details for the specified Shopper
-* `UpdateJSON` - Update details for the specified Shopper
-* `UpdateRaw` - Update details for the specified Shopper
+* [ChangePassword](docs/v1/README.md#changepassword) - Set subaccount's password
+* [CreateSubaccountJSON](docs/v1/README.md#createsubaccountjson) - Create a Subaccount owned by the authenticated Reseller
+* [CreateSubaccountRaw](docs/v1/README.md#createsubaccountraw) - Create a Subaccount owned by the authenticated Reseller
+* [Delete](docs/v1/README.md#delete) - Request the deletion of a shopper profile
+* [Get](docs/v1/README.md#get) - Get details for the specified Shopper
+* [GetStatus](docs/v1/README.md#getstatus) - Get details for the specified Shopper
+* [UpdateJSON](docs/v1/README.md#updatejson) - Update details for the specified Shopper
+* [UpdateRaw](docs/v1/README.md#updateraw) - Update details for the specified Shopper
 <!-- End SDK Available Operations -->
 
 ### Maturity

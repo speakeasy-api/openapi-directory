@@ -15,17 +15,21 @@ const (
 	GETGETClusterCredentialsActionEnumGetClusterCredentials GETGETClusterCredentialsActionEnum = "GetClusterCredentials"
 )
 
+func (e GETGETClusterCredentialsActionEnum) ToPointer() *GETGETClusterCredentialsActionEnum {
+	return &e
+}
+
 func (e *GETGETClusterCredentialsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetClusterCredentials":
-		*e = GETGETClusterCredentialsActionEnum(s)
+		*e = GETGETClusterCredentialsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETClusterCredentialsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETClusterCredentialsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETClusterCredentialsVersionEnumTwoThousandAndTwelve1201 GETGETClusterCredentialsVersionEnum = "2012-12-01"
 )
 
+func (e GETGETClusterCredentialsVersionEnum) ToPointer() *GETGETClusterCredentialsVersionEnum {
+	return &e
+}
+
 func (e *GETGETClusterCredentialsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETGETClusterCredentialsVersionEnum(s)
+		*e = GETGETClusterCredentialsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETClusterCredentialsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETClusterCredentialsVersionEnum: %v", v)
 	}
 }
 

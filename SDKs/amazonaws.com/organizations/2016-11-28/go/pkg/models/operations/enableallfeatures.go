@@ -16,17 +16,21 @@ const (
 	EnableAllFeaturesXAmzTargetEnumAwsOrganizationsV20161128EnableAllFeatures EnableAllFeaturesXAmzTargetEnum = "AWSOrganizationsV20161128.EnableAllFeatures"
 )
 
+func (e EnableAllFeaturesXAmzTargetEnum) ToPointer() *EnableAllFeaturesXAmzTargetEnum {
+	return &e
+}
+
 func (e *EnableAllFeaturesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.EnableAllFeatures":
-		*e = EnableAllFeaturesXAmzTargetEnum(s)
+		*e = EnableAllFeaturesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableAllFeaturesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableAllFeaturesXAmzTargetEnum: %v", v)
 	}
 }
 

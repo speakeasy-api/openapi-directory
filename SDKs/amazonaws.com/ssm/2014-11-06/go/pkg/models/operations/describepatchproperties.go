@@ -16,17 +16,21 @@ const (
 	DescribePatchPropertiesXAmzTargetEnumAmazonSsmDescribePatchProperties DescribePatchPropertiesXAmzTargetEnum = "AmazonSSM.DescribePatchProperties"
 )
 
+func (e DescribePatchPropertiesXAmzTargetEnum) ToPointer() *DescribePatchPropertiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePatchPropertiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribePatchProperties":
-		*e = DescribePatchPropertiesXAmzTargetEnum(s)
+		*e = DescribePatchPropertiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePatchPropertiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePatchPropertiesXAmzTargetEnum: %v", v)
 	}
 }
 

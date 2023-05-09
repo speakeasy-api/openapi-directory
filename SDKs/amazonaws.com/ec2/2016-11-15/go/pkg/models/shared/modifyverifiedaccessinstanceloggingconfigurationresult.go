@@ -15,19 +15,23 @@ const (
 	ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnumFailed  ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum = "failed"
 )
 
+func (e ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum) ToPointer() *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum(s)
+		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsCloudWatchLogsDeliveryStatusCodeEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnumFailed  ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum = "failed"
 )
 
+func (e ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum) ToPointer() *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum(s)
+		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsKinesisDataFirehoseDeliveryStatusCodeEnum: %v", v)
 	}
 }
 
@@ -89,19 +97,23 @@ const (
 	ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnumFailed  ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum = "failed"
 )
 
+func (e ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum) ToPointer() *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum {
+	return &e
+}
+
 func (e *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "failed":
-		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum(s)
+		*e = ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3DeliveryStatusCodeEnum: %v", v)
 	}
 }
 
@@ -127,7 +139,7 @@ type ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationA
 	S3                  *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogsS3
 }
 
-// ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for Amazon Web Services Verified Access instance.
+// ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration - The logging configuration for the Verified Access instance.
 type ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfiguration struct {
 	AccessLogs               *ModifyVerifiedAccessInstanceLoggingConfigurationResultLoggingConfigurationAccessLogs
 	VerifiedAccessInstanceID *string

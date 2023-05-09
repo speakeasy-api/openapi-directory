@@ -19,12 +19,16 @@ const (
 	ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnumRole             ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum = "Role"
 )
 
+func (e ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum) ToPointer() *ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum {
+	return &e
+}
+
 func (e *ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Service":
@@ -36,10 +40,10 @@ func (e *ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEn
 	case "User":
 		fallthrough
 	case "Role":
-		*e = ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum(s)
+		*e = ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyVpcEndpointServicePermissionsResultAddedPrincipalsPrincipalTypeEnum: %v", v)
 	}
 }
 

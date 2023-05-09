@@ -20,12 +20,16 @@ const (
 	GetCandidatesCandidateStatusEnumP       GetCandidatesCandidateStatusEnum = "P"
 )
 
+func (e GetCandidatesCandidateStatusEnum) ToPointer() *GetCandidatesCandidateStatusEnum {
+	return &e
+}
+
 func (e *GetCandidatesCandidateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -35,10 +39,10 @@ func (e *GetCandidatesCandidateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "N":
 		fallthrough
 	case "P":
-		*e = GetCandidatesCandidateStatusEnum(s)
+		*e = GetCandidatesCandidateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesCandidateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesCandidateStatusEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GetCandidatesIncumbentChallengeEnumO       GetCandidatesIncumbentChallengeEnum = "O"
 )
 
+func (e GetCandidatesIncumbentChallengeEnum) ToPointer() *GetCandidatesIncumbentChallengeEnum {
+	return &e
+}
+
 func (e *GetCandidatesIncumbentChallengeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "I":
@@ -64,10 +72,10 @@ func (e *GetCandidatesIncumbentChallengeEnum) UnmarshalJSON(data []byte) error {
 	case "C":
 		fallthrough
 	case "O":
-		*e = GetCandidatesIncumbentChallengeEnum(s)
+		*e = GetCandidatesIncumbentChallengeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesIncumbentChallengeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesIncumbentChallengeEnum: %v", v)
 	}
 }
 
@@ -80,12 +88,16 @@ const (
 	GetCandidatesOfficeEnumP       GetCandidatesOfficeEnum = "P"
 )
 
+func (e GetCandidatesOfficeEnum) ToPointer() *GetCandidatesOfficeEnum {
+	return &e
+}
+
 func (e *GetCandidatesOfficeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "H":
@@ -93,10 +105,10 @@ func (e *GetCandidatesOfficeEnum) UnmarshalJSON(data []byte) error {
 	case "S":
 		fallthrough
 	case "P":
-		*e = GetCandidatesOfficeEnum(s)
+		*e = GetCandidatesOfficeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidatesOfficeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidatesOfficeEnum: %v", v)
 	}
 }
 
@@ -106,6 +118,12 @@ type GetCandidatesRequest struct {
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID []string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// One-letter code explaining if the candidate is:

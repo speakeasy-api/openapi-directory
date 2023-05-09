@@ -16,17 +16,21 @@ const (
 	DeleteByteMatchSetXAmzTargetEnumAwswafRegional20161128DeleteByteMatchSet DeleteByteMatchSetXAmzTargetEnum = "AWSWAF_Regional_20161128.DeleteByteMatchSet"
 )
 
+func (e DeleteByteMatchSetXAmzTargetEnum) ToPointer() *DeleteByteMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteByteMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DeleteByteMatchSet":
-		*e = DeleteByteMatchSetXAmzTargetEnum(s)
+		*e = DeleteByteMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteByteMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteByteMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

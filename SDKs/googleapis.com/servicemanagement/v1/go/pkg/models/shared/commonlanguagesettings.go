@@ -15,21 +15,25 @@ const (
 	CommonLanguageSettingsDestinationsEnumPackageManager                      CommonLanguageSettingsDestinationsEnum = "PACKAGE_MANAGER"
 )
 
+func (e CommonLanguageSettingsDestinationsEnum) ToPointer() *CommonLanguageSettingsDestinationsEnum {
+	return &e
+}
+
 func (e *CommonLanguageSettingsDestinationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_LIBRARY_DESTINATION_UNSPECIFIED":
 		fallthrough
 	case "GITHUB":
 		fallthrough
 	case "PACKAGE_MANAGER":
-		*e = CommonLanguageSettingsDestinationsEnum(s)
+		*e = CommonLanguageSettingsDestinationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommonLanguageSettingsDestinationsEnum: %s", s)
+		return fmt.Errorf("invalid value for CommonLanguageSettingsDestinationsEnum: %v", v)
 	}
 }
 

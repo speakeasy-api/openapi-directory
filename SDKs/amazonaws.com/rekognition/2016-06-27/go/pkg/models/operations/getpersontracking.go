@@ -16,17 +16,21 @@ const (
 	GetPersonTrackingXAmzTargetEnumRekognitionServiceGetPersonTracking GetPersonTrackingXAmzTargetEnum = "RekognitionService.GetPersonTracking"
 )
 
+func (e GetPersonTrackingXAmzTargetEnum) ToPointer() *GetPersonTrackingXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPersonTrackingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.GetPersonTracking":
-		*e = GetPersonTrackingXAmzTargetEnum(s)
+		*e = GetPersonTrackingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPersonTrackingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPersonTrackingXAmzTargetEnum: %v", v)
 	}
 }
 

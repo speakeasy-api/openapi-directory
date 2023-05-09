@@ -26,12 +26,16 @@ const (
 	MetricHeaderTypeEnumTypeKilometers        MetricHeaderTypeEnum = "TYPE_KILOMETERS"
 )
 
+func (e MetricHeaderTypeEnum) ToPointer() *MetricHeaderTypeEnum {
+	return &e
+}
+
 func (e *MetricHeaderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TYPE_INTEGER":
@@ -57,10 +61,10 @@ func (e *MetricHeaderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_METERS":
 		fallthrough
 	case "TYPE_KILOMETERS":
-		*e = MetricHeaderTypeEnum(s)
+		*e = MetricHeaderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricHeaderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricHeaderTypeEnum: %v", v)
 	}
 }
 

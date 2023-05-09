@@ -19,12 +19,16 @@ const (
 	VerifyJobRunFailureCauseEnumCloudBuildRequestFailed    VerifyJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
+func (e VerifyJobRunFailureCauseEnum) ToPointer() *VerifyJobRunFailureCauseEnum {
+	return &e
+}
+
 func (e *VerifyJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_BUILD_UNAVAILABLE":
@@ -36,10 +40,10 @@ func (e *VerifyJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
 	case "VERIFICATION_CONFIG_NOT_FOUND":
 		fallthrough
 	case "CLOUD_BUILD_REQUEST_FAILED":
-		*e = VerifyJobRunFailureCauseEnum(s)
+		*e = VerifyJobRunFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyJobRunFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyJobRunFailureCauseEnum: %v", v)
 	}
 }
 

@@ -50,12 +50,16 @@ const (
 	CurrencyEnumZar CurrencyEnum = "ZAR"
 )
 
+func (e CurrencyEnum) ToPointer() *CurrencyEnum {
+	return &e
+}
+
 func (e *CurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUD":
 		fallthrough
 	case "BGN":
@@ -129,9 +133,9 @@ func (e *CurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "USD":
 		fallthrough
 	case "ZAR":
-		*e = CurrencyEnum(s)
+		*e = CurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CurrencyEnum: %v", v)
 	}
 }

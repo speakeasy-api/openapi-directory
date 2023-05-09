@@ -17,12 +17,16 @@ const (
 	InstancePlatformTypeEnumWebApp                  InstancePlatformTypeEnum = "WEB_APP"
 )
 
+func (e InstancePlatformTypeEnum) ToPointer() *InstancePlatformTypeEnum {
+	return &e
+}
+
 func (e *InstancePlatformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANDROID":
@@ -30,10 +34,10 @@ func (e *InstancePlatformTypeEnum) UnmarshalJSON(data []byte) error {
 	case "IOS":
 		fallthrough
 	case "WEB_APP":
-		*e = InstancePlatformTypeEnum(s)
+		*e = InstancePlatformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstancePlatformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstancePlatformTypeEnum: %v", v)
 	}
 }
 

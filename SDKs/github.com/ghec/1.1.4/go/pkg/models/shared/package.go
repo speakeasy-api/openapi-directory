@@ -19,12 +19,16 @@ const (
 	PackagePackageTypeEnumContainer PackagePackageTypeEnum = "container"
 )
 
+func (e PackagePackageTypeEnum) ToPointer() *PackagePackageTypeEnum {
+	return &e
+}
+
 func (e *PackagePackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "npm":
 		fallthrough
 	case "maven":
@@ -36,10 +40,10 @@ func (e *PackagePackageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "nuget":
 		fallthrough
 	case "container":
-		*e = PackagePackageTypeEnum(s)
+		*e = PackagePackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackagePackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PackagePackageTypeEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	PackageVisibilityEnum1Public  PackageVisibilityEnum1 = "public"
 )
 
+func (e PackageVisibilityEnum1) ToPointer() *PackageVisibilityEnum1 {
+	return &e
+}
+
 func (e *PackageVisibilityEnum1) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "public":
-		*e = PackageVisibilityEnum1(s)
+		*e = PackageVisibilityEnum1(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageVisibilityEnum1: %s", s)
+		return fmt.Errorf("invalid value for PackageVisibilityEnum1: %v", v)
 	}
 }
 

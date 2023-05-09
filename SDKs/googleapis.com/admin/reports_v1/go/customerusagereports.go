@@ -34,7 +34,10 @@ func newCustomerUsageReports(defaultClient, securityClient HTTPClient, serverURL
 // ReportsCustomerUsageReportsGet - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides.
 func (s *customerUsageReports) ReportsCustomerUsageReportsGet(ctx context.Context, request operations.ReportsCustomerUsageReportsGetRequest, security operations.ReportsCustomerUsageReportsGetSecurity) (*operations.ReportsCustomerUsageReportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/dates/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/reports/v1/usage/dates/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

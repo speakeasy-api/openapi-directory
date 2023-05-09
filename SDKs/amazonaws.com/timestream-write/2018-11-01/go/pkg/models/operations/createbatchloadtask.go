@@ -16,17 +16,21 @@ const (
 	CreateBatchLoadTaskXAmzTargetEnumTimestream20181101CreateBatchLoadTask CreateBatchLoadTaskXAmzTargetEnum = "Timestream_20181101.CreateBatchLoadTask"
 )
 
+func (e CreateBatchLoadTaskXAmzTargetEnum) ToPointer() *CreateBatchLoadTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBatchLoadTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.CreateBatchLoadTask":
-		*e = CreateBatchLoadTaskXAmzTargetEnum(s)
+		*e = CreateBatchLoadTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBatchLoadTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBatchLoadTaskXAmzTargetEnum: %v", v)
 	}
 }
 

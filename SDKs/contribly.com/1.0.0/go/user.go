@@ -86,7 +86,10 @@ func (s *user) GetUsers(ctx context.Context, request operations.GetUsersRequest)
 // GetUsersID - Retrieve a single user by id
 func (s *user) GetUsersID(ctx context.Context, request operations.GetUsersIDRequest) (*operations.GetUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *user) GetUsersID(ctx context.Context, request operations.GetUsersIDRequ
 // GetUsersIDLinkedType - Retrieve a users linked profile by type
 func (s *user) GetUsersIDLinkedType(ctx context.Context, request operations.GetUsersIDLinkedTypeRequest) (*operations.GetUsersIDLinkedTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/linked/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/linked/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

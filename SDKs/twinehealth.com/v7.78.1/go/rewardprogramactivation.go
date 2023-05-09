@@ -106,7 +106,10 @@ func (s *rewardProgramActivation) CreateRewardProgramActivation(ctx context.Cont
 // Get a reward program activationrecord by id.
 func (s *rewardProgramActivation) FetchRewardProgramActivation(ctx context.Context, request operations.FetchRewardProgramActivationRequest) (*operations.FetchRewardProgramActivationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_program_activation/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reward_program_activation/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

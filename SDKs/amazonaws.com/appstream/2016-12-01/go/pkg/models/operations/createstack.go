@@ -16,17 +16,21 @@ const (
 	CreateStackXAmzTargetEnumPhotonAdminProxyServiceCreateStack CreateStackXAmzTargetEnum = "PhotonAdminProxyService.CreateStack"
 )
 
+func (e CreateStackXAmzTargetEnum) ToPointer() *CreateStackXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateStackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.CreateStack":
-		*e = CreateStackXAmzTargetEnum(s)
+		*e = CreateStackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStackXAmzTargetEnum: %v", v)
 	}
 }
 

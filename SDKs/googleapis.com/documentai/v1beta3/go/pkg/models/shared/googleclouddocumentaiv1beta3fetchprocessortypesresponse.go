@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for fetch processor types.
+// GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse - Response message for the FetchProcessorTypes method.
 type GoogleCloudDocumentaiV1beta3FetchProcessorTypesResponse struct {
 	// The list of processor types.
 	ProcessorTypes []GoogleCloudDocumentaiV1beta3ProcessorType `json:"processorTypes,omitempty"`

@@ -14,18 +14,22 @@ const (
 	ComputeTypeEnumGpuAndCPU ComputeTypeEnum = "GPU_AND_CPU"
 )
 
+func (e ComputeTypeEnum) ToPointer() *ComputeTypeEnum {
+	return &e
+}
+
 func (e *ComputeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPU":
 		fallthrough
 	case "GPU_AND_CPU":
-		*e = ComputeTypeEnum(s)
+		*e = ComputeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeTypeEnum: %v", v)
 	}
 }

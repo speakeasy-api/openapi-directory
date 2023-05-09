@@ -18,21 +18,25 @@ const (
 	ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnumGlobal   ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum = "GLOBAL"
 )
 
+func (e ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum) ToPointer() *ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum {
+	return &e
+}
+
 func (e *ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "REGIONAL":
 		fallthrough
 	case "GLOBAL":
-		*e = ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum(s)
+		*e = ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type ListPendingInvitationResourcesRequestBody struct {
 	NextToken *string `json:"nextToken,omitempty"`
 	// <p>Specifies that you want the results to include only resources that have the specified scope.</p> <ul> <li> <p> <code>ALL</code> – the results include both global and regional resources or resource types.</p> </li> <li> <p> <code>GLOBAL</code> – the results include only global resources or resource types.</p> </li> <li> <p> <code>REGIONAL</code> – the results include only regional resources or resource types.</p> </li> </ul> <p>The default value is <code>ALL</code>.</p>
 	ResourceRegionScope *ListPendingInvitationResourcesRequestBodyResourceRegionScopeEnum `json:"resourceRegionScope,omitempty"`
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the invitation. You can use <a>GetResourceShareInvitations</a> to find the ARN of the invitation.
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the invitation. You can use <a>GetResourceShareInvitations</a> to find the ARN of the invitation.
 	ResourceShareInvitationArn string `json:"resourceShareInvitationArn"`
 }
 

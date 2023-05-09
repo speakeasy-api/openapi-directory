@@ -2,8 +2,8 @@
 
 package shared
 
-// GoogleCloudDialogflowCxV3TextToSpeechSettings - Settings related to speech generating.
+// GoogleCloudDialogflowCxV3TextToSpeechSettings - Settings related to speech synthesizing.
 type GoogleCloudDialogflowCxV3TextToSpeechSettings struct {
-	// Configuration of how speech should be synthesized, mapping from language (https://dialogflow.com/docs/reference/language) to SynthesizeSpeechConfig.
+	// Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/cx/docs/reference/language) to SynthesizeSpeechConfig. These settings affect: - The synthesize configuration used in [phone gateway](https://cloud.google.com/dialogflow/cx/docs/concept/integration/phone-gateway). - You no longer need to specify OutputAudioConfig.synthesize_speech_config when invoking API calls. Your agent will use the pre-configured options for speech synthesizing.
 	SynthesizeSpeechConfigs map[string]GoogleCloudDialogflowCxV3SynthesizeSpeechConfig `json:"synthesizeSpeechConfigs,omitempty"`
 }

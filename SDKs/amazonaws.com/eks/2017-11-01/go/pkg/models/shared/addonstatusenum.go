@@ -20,12 +20,16 @@ const (
 	AddonStatusEnumUpdateFailed AddonStatusEnum = "UPDATE_FAILED"
 )
 
+func (e AddonStatusEnum) ToPointer() *AddonStatusEnum {
+	return &e
+}
+
 func (e *AddonStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -41,9 +45,9 @@ func (e *AddonStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DEGRADED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = AddonStatusEnum(s)
+		*e = AddonStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddonStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AddonStatusEnum: %v", v)
 	}
 }

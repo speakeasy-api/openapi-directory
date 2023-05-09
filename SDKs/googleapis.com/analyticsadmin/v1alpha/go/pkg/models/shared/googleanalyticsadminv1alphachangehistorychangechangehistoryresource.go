@@ -8,8 +8,12 @@ type GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource struct 
 	Account *GoogleAnalyticsAdminV1alphaAccount `json:"account,omitempty"`
 	// The attribution settings used for a given property. This is a singleton resource.
 	AttributionSettings *GoogleAnalyticsAdminV1alphaAttributionSettings `json:"attributionSettings,omitempty"`
+	// A resource message representing a GA4 Audience.
+	Audience *GoogleAnalyticsAdminV1alphaAudience `json:"audience,omitempty"`
 	// A link between a GA4 Property and BigQuery project.
 	BigqueryLink *GoogleAnalyticsAdminV1alphaBigQueryLink `json:"bigqueryLink,omitempty"`
+	// A resource message representing a Channel Group.
+	ChannelGroup *GoogleAnalyticsAdminV1alphaChannelGroup `json:"channelGroup,omitempty"`
 	// A conversion event in a Google Analytics property.
 	ConversionEvent *GoogleAnalyticsAdminV1alphaConversionEvent `json:"conversionEvent,omitempty"`
 	// A definition for a CustomDimension.
@@ -26,6 +30,8 @@ type GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource struct 
 	DisplayVideo360AdvertiserLinkProposal *GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal `json:"displayVideo360AdvertiserLinkProposal,omitempty"`
 	// Singleton resource under a WebDataStream, configuring measurement of additional site interactions and content.
 	EnhancedMeasurementSettings *GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings `json:"enhancedMeasurementSettings,omitempty"`
+	// An Event Create Rule defines conditions that will trigger the creation of an entirely new event based upon matched criteria of a source event. Additional mutations of the parameters from the source event can be defined. Unlike Event Edit rules, Event Creation Rules have no defined order. They will all be run independently. Event Edit and Event Create rules can't be used to modify an event created from an Event Create rule.
+	EventCreateRule *GoogleAnalyticsAdminV1alphaEventCreateRule `json:"eventCreateRule,omitempty"`
 	// A resource message representing a GA4 ExpandedDataSet.
 	ExpandedDataSet *GoogleAnalyticsAdminV1alphaExpandedDataSet `json:"expandedDataSet,omitempty"`
 	// A link between a GA4 property and a Firebase project.

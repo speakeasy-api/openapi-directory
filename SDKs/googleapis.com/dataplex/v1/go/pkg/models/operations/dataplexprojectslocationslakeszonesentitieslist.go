@@ -23,21 +23,25 @@ const (
 	DataplexProjectsLocationsLakesZonesEntitiesListViewEnumFilesets              DataplexProjectsLocationsLakesZonesEntitiesListViewEnum = "FILESETS"
 )
 
+func (e DataplexProjectsLocationsLakesZonesEntitiesListViewEnum) ToPointer() *DataplexProjectsLocationsLakesZonesEntitiesListViewEnum {
+	return &e
+}
+
 func (e *DataplexProjectsLocationsLakesZonesEntitiesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_VIEW_UNSPECIFIED":
 		fallthrough
 	case "TABLES":
 		fallthrough
 	case "FILESETS":
-		*e = DataplexProjectsLocationsLakesZonesEntitiesListViewEnum(s)
+		*e = DataplexProjectsLocationsLakesZonesEntitiesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataplexProjectsLocationsLakesZonesEntitiesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataplexProjectsLocationsLakesZonesEntitiesListViewEnum: %v", v)
 	}
 }
 

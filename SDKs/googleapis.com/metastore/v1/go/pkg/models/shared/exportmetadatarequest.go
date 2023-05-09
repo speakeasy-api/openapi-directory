@@ -16,21 +16,25 @@ const (
 	ExportMetadataRequestDatabaseDumpTypeEnumAvro            ExportMetadataRequestDatabaseDumpTypeEnum = "AVRO"
 )
 
+func (e ExportMetadataRequestDatabaseDumpTypeEnum) ToPointer() *ExportMetadataRequestDatabaseDumpTypeEnum {
+	return &e
+}
+
 func (e *ExportMetadataRequestDatabaseDumpTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
 		fallthrough
 	case "AVRO":
-		*e = ExportMetadataRequestDatabaseDumpTypeEnum(s)
+		*e = ExportMetadataRequestDatabaseDumpTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportMetadataRequestDatabaseDumpTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportMetadataRequestDatabaseDumpTypeEnum: %v", v)
 	}
 }
 

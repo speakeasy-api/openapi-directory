@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - NFL projected stats API.
 type SDK struct {
 
@@ -107,7 +122,10 @@ func New(opts ...SDKOption) *SDK {
 // Slate Ownership Projections for a specific slate. Projections are for GPP format ownership. Will return an empty list if the slate is not yet projected or not a slate we have projections for.
 func (s *SDK) DfsSlateOwnershipProjectionsBySlateid(ctx context.Context, request operations.DfsSlateOwnershipProjectionsBySlateidRequest) (*operations.DfsSlateOwnershipProjectionsBySlateidResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +169,10 @@ func (s *SDK) DfsSlateOwnershipProjectionsBySlateid(ctx context.Context, request
 // DfsSlatesByDate - DFS Slates by Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByDate/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +216,10 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 // DfsSlatesByWeek - DFS Slates by Week
 func (s *SDK) DfsSlatesByWeek(ctx context.Context, request operations.DfsSlatesByWeekRequest) (*operations.DfsSlatesByWeekResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByWeek/{season}/{week}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlatesByWeek/{season}/{week}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +263,10 @@ func (s *SDK) DfsSlatesByWeek(ctx context.Context, request operations.DfsSlatesB
 // IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest) (*operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -283,7 +310,10 @@ func (s *SDK) IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(ctx
 // IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest) (*operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +357,10 @@ func (s *SDK) IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(ctx c
 // IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries - IDP Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest) (*operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByWeek/{season}/{week}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/IdpPlayerGameProjectionStatsByWeek/{season}/{week}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -372,7 +405,10 @@ func (s *SDK) IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx c
 // This endpoint provides all currently injured NFL players, along with injury details.
 func (s *SDK) InjuredPlayers(ctx context.Context, request operations.InjuredPlayersRequest) (*operations.InjuredPlayersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -416,7 +452,10 @@ func (s *SDK) InjuredPlayers(ctx context.Context, request operations.InjuredPlay
 // ProjectedFantasyDefenseGameStatsWDfsSalaries - Projected Fantasy Defense Game Stats (w/ DFS Salaries)
 func (s *SDK) ProjectedFantasyDefenseGameStatsWDfsSalaries(ctx context.Context, request operations.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest) (*operations.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/FantasyDefenseProjectionsByGame/{season}/{week}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/FantasyDefenseProjectionsByGame/{season}/{week}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -460,7 +499,10 @@ func (s *SDK) ProjectedFantasyDefenseGameStatsWDfsSalaries(ctx context.Context, 
 // ProjectedFantasyDefenseSeasonStatsWAdp - Projected Fantasy Defense Season Stats (w/ ADP)
 func (s *SDK) ProjectedFantasyDefenseSeasonStatsWAdp(ctx context.Context, request operations.ProjectedFantasyDefenseSeasonStatsWAdpRequest) (*operations.ProjectedFantasyDefenseSeasonStatsWAdpResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/FantasyDefenseProjectionsBySeason/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/FantasyDefenseProjectionsBySeason/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -504,7 +546,10 @@ func (s *SDK) ProjectedFantasyDefenseSeasonStatsWAdp(ctx context.Context, reques
 // ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Player (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -548,7 +593,10 @@ func (s *SDK) ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(ctx co
 // ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Team (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +640,10 @@ func (s *SDK) ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(ctx cont
 // ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries - Projected Player Game Stats by Week (w/ Injuries, Lineups, DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByWeek/{season}/{week}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerGameProjectionStatsByWeek/{season}/{week}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -636,7 +687,10 @@ func (s *SDK) ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx cont
 // ProjectedPlayerSeasonStatsByPlayerWAdp - Projected Player Season Stats by Player (w/ ADP)
 func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByPlayerWAdpRequest) (*operations.ProjectedPlayerSeasonStatsByPlayerWAdpResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByPlayerID/{season}/{playerid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByPlayerID/{season}/{playerid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -680,7 +734,10 @@ func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWAdp(ctx context.Context, reques
 // ProjectedPlayerSeasonStatsByTeamWAdp - Projected Player Season Stats by Team (w/ ADP)
 func (s *SDK) ProjectedPlayerSeasonStatsByTeamWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByTeamWAdpRequest) (*operations.ProjectedPlayerSeasonStatsByTeamWAdpResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByTeam/{season}/{team}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByTeam/{season}/{team}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -724,7 +781,10 @@ func (s *SDK) ProjectedPlayerSeasonStatsByTeamWAdp(ctx context.Context, request 
 // ProjectedPlayerSeasonStatsWAdp - Projected Player Season Stats (w/ ADP)
 func (s *SDK) ProjectedPlayerSeasonStatsWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsWAdpRequest) (*operations.ProjectedPlayerSeasonStatsWAdpResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStats/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStats/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +829,10 @@ func (s *SDK) ProjectedPlayerSeasonStatsWAdp(ctx context.Context, request operat
 // Grabs DFS Slates which have not yet started for which we have DFS Ownership projections.
 func (s *SDK) UpcomingDfsSlateOwnershipProjections(ctx context.Context, request operations.UpcomingDfsSlateOwnershipProjectionsRequest) (*operations.UpcomingDfsSlateOwnershipProjectionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingDfsSlateOwnershipProjections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingDfsSlateOwnershipProjections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

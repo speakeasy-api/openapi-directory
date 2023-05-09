@@ -51,12 +51,16 @@ const (
 	VatEnumAthk               VatEnum = "ÁTHK"
 )
 
+func (e VatEnum) ToPointer() *VatEnum {
+	return &e
+}
+
 func (e *VatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0%":
 		fallthrough
 	case "1%":
@@ -134,9 +138,9 @@ func (e *VatEnum) UnmarshalJSON(data []byte) error {
 	case "ÁKK":
 		fallthrough
 	case "ÁTHK":
-		*e = VatEnum(s)
+		*e = VatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VatEnum: %s", s)
+		return fmt.Errorf("invalid value for VatEnum: %v", v)
 	}
 }

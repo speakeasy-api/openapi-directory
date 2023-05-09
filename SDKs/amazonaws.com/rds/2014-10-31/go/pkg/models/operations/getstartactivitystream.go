@@ -15,17 +15,21 @@ const (
 	GETStartActivityStreamActionEnumStartActivityStream GETStartActivityStreamActionEnum = "StartActivityStream"
 )
 
+func (e GETStartActivityStreamActionEnum) ToPointer() *GETStartActivityStreamActionEnum {
+	return &e
+}
+
 func (e *GETStartActivityStreamActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartActivityStream":
-		*e = GETStartActivityStreamActionEnum(s)
+		*e = GETStartActivityStreamActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartActivityStreamActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartActivityStreamActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETStartActivityStreamModeEnumAsync GETStartActivityStreamModeEnum = "async"
 )
 
+func (e GETStartActivityStreamModeEnum) ToPointer() *GETStartActivityStreamModeEnum {
+	return &e
+}
+
 func (e *GETStartActivityStreamModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sync":
 		fallthrough
 	case "async":
-		*e = GETStartActivityStreamModeEnum(s)
+		*e = GETStartActivityStreamModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartActivityStreamModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartActivityStreamModeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETStartActivityStreamVersionEnumTwoThousandAndFourteen1031 GETStartActivityStreamVersionEnum = "2014-10-31"
 )
 
+func (e GETStartActivityStreamVersionEnum) ToPointer() *GETStartActivityStreamVersionEnum {
+	return &e
+}
+
 func (e *GETStartActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStartActivityStreamVersionEnum(s)
+		*e = GETStartActivityStreamVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartActivityStreamVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartActivityStreamVersionEnum: %v", v)
 	}
 }
 

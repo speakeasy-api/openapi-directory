@@ -14,18 +14,22 @@ const (
 	AssociatedTranscriptFilterNameEnumSlotTypeID AssociatedTranscriptFilterNameEnum = "SlotTypeId"
 )
 
+func (e AssociatedTranscriptFilterNameEnum) ToPointer() *AssociatedTranscriptFilterNameEnum {
+	return &e
+}
+
 func (e *AssociatedTranscriptFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IntentId":
 		fallthrough
 	case "SlotTypeId":
-		*e = AssociatedTranscriptFilterNameEnum(s)
+		*e = AssociatedTranscriptFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociatedTranscriptFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociatedTranscriptFilterNameEnum: %v", v)
 	}
 }

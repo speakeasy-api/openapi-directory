@@ -20,12 +20,16 @@ const (
 	RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnumGp3      RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -39,10 +43,10 @@ func (e *RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum) Unm
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -715,14 +719,23 @@ const (
 	RequestSpotLaunchSpecificationInstanceTypeEnumR7g12xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.12xlarge"
 	RequestSpotLaunchSpecificationInstanceTypeEnumR7g16xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.16xlarge"
 	RequestSpotLaunchSpecificationInstanceTypeEnumR7gMetal        RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumC6inMetal       RequestSpotLaunchSpecificationInstanceTypeEnum = "c6in.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM6inMetal       RequestSpotLaunchSpecificationInstanceTypeEnum = "m6in.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM6idnMetal      RequestSpotLaunchSpecificationInstanceTypeEnum = "m6idn.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR6inMetal       RequestSpotLaunchSpecificationInstanceTypeEnum = "r6in.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR6idnMetal      RequestSpotLaunchSpecificationInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e RequestSpotLaunchSpecificationInstanceTypeEnum) ToPointer() *RequestSpotLaunchSpecificationInstanceTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1998,10 +2011,20 @@ func (e *RequestSpotLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []by
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = RequestSpotLaunchSpecificationInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = RequestSpotLaunchSpecificationInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2063,21 +2086,25 @@ const (
 	RequestSpotLaunchSpecificationPlacementTenancyEnumHost      RequestSpotLaunchSpecificationPlacementTenancyEnum = "host"
 )
 
+func (e RequestSpotLaunchSpecificationPlacementTenancyEnum) ToPointer() *RequestSpotLaunchSpecificationPlacementTenancyEnum {
+	return &e
+}
+
 func (e *RequestSpotLaunchSpecificationPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = RequestSpotLaunchSpecificationPlacementTenancyEnum(s)
+		*e = RequestSpotLaunchSpecificationPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotLaunchSpecificationPlacementTenancyEnum: %v", v)
 	}
 }
 

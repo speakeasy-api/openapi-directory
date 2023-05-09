@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -17,6 +18,7 @@ pkg/models/operations/metastoreprojectslocationsfederationslist.go
 pkg/models/operations/metastoreprojectslocationslist.go
 pkg/models/operations/metastoreprojectslocationsoperationscancel.go
 pkg/models/operations/metastoreprojectslocationsoperationslist.go
+pkg/models/operations/metastoreprojectslocationsservicesalterlocation.go
 pkg/models/operations/metastoreprojectslocationsservicesbackupscreate.go
 pkg/models/operations/metastoreprojectslocationsservicesbackupsdelete.go
 pkg/models/operations/metastoreprojectslocationsservicesbackupsgetiampolicy.go
@@ -29,6 +31,8 @@ pkg/models/operations/metastoreprojectslocationsservicesmetadataimportscreate.go
 pkg/models/operations/metastoreprojectslocationsservicesmetadataimportsget.go
 pkg/models/operations/metastoreprojectslocationsservicesmetadataimportslist.go
 pkg/models/operations/metastoreprojectslocationsservicesmetadataimportspatch.go
+pkg/models/operations/metastoreprojectslocationsservicesmovetabletodatabase.go
+pkg/models/operations/metastoreprojectslocationsservicesquerymetadata.go
 pkg/models/operations/metastoreprojectslocationsservicesrestore.go
 pkg/models/operations/metastoreprojectslocationsservicestestiampermissions.go
 pkg/models/shared/operation.go
@@ -41,6 +45,7 @@ pkg/models/shared/listfederationsresponse.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/listoperationsresponse.go
+pkg/models/shared/altermetadataresourcelocationrequest.go
 pkg/models/shared/backup.go
 pkg/models/shared/service.go
 pkg/models/shared/telemetryconfig.go
@@ -68,7 +73,11 @@ pkg/models/shared/listservicesresponse.go
 pkg/models/shared/metadataimport.go
 pkg/models/shared/databasedump.go
 pkg/models/shared/listmetadataimportsresponse.go
+pkg/models/shared/movetabletodatabaserequest.go
+pkg/models/shared/querymetadatarequest.go
 pkg/models/shared/restoreservicerequest.go
 pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

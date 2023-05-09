@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,22 +16,20 @@ func main() {
         }),
     )
 
-    req := operations.DeleteSessionRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
+    ctx := context.Background()
+    res, err := s.DeleteSession(ctx, operations.DeleteSessionRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
         BotAliasID: "illum",
         BotID: "vel",
         LocaleID: "error",
         SessionID: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.DeleteSession(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,19 +15,23 @@ const (
 	LunMultiprotocolTypeEnumLinux                        LunMultiprotocolTypeEnum = "LINUX"
 )
 
+func (e LunMultiprotocolTypeEnum) ToPointer() *LunMultiprotocolTypeEnum {
+	return &e
+}
+
 func (e *LunMultiprotocolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MULTIPROTOCOL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINUX":
-		*e = LunMultiprotocolTypeEnum(s)
+		*e = LunMultiprotocolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LunMultiprotocolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LunMultiprotocolTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	LunStateEnumCoolOff          LunStateEnum = "COOL_OFF"
 )
 
+func (e LunStateEnum) ToPointer() *LunStateEnum {
+	return &e
+}
+
 func (e *LunStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -60,10 +68,10 @@ func (e *LunStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "COOL_OFF":
-		*e = LunStateEnum(s)
+		*e = LunStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LunStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LunStateEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	LunStorageTypeEnumHdd                    LunStorageTypeEnum = "HDD"
 )
 
+func (e LunStorageTypeEnum) ToPointer() *LunStorageTypeEnum {
+	return &e
+}
+
 func (e *LunStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SSD":
 		fallthrough
 	case "HDD":
-		*e = LunStorageTypeEnum(s)
+		*e = LunStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LunStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LunStorageTypeEnum: %v", v)
 	}
 }
 

@@ -22,19 +22,23 @@ const (
 	DfareportingFloodlightActivityGroupsListSortFieldEnumName DfareportingFloodlightActivityGroupsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingFloodlightActivityGroupsListSortFieldEnum) ToPointer() *DfareportingFloodlightActivityGroupsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingFloodlightActivityGroupsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingFloodlightActivityGroupsListSortFieldEnum(s)
+		*e = DfareportingFloodlightActivityGroupsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingFloodlightActivityGroupsListSortOrderEnumDescending DfareportingFloodlightActivityGroupsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingFloodlightActivityGroupsListSortOrderEnum) ToPointer() *DfareportingFloodlightActivityGroupsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingFloodlightActivityGroupsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingFloodlightActivityGroupsListSortOrderEnum(s)
+		*e = DfareportingFloodlightActivityGroupsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListSortOrderEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	DfareportingFloodlightActivityGroupsListTypeEnumSale    DfareportingFloodlightActivityGroupsListTypeEnum = "SALE"
 )
 
+func (e DfareportingFloodlightActivityGroupsListTypeEnum) ToPointer() *DfareportingFloodlightActivityGroupsListTypeEnum {
+	return &e
+}
+
 func (e *DfareportingFloodlightActivityGroupsListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COUNTER":
 		fallthrough
 	case "SALE":
-		*e = DfareportingFloodlightActivityGroupsListTypeEnum(s)
+		*e = DfareportingFloodlightActivityGroupsListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingFloodlightActivityGroupsListTypeEnum: %v", v)
 	}
 }
 

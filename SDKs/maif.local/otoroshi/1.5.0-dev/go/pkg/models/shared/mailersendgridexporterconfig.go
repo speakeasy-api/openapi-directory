@@ -14,17 +14,21 @@ const (
 	MailerSendgridExporterConfigTypeEnumSendgrid MailerSendgridExporterConfigTypeEnum = "sendgrid"
 )
 
+func (e MailerSendgridExporterConfigTypeEnum) ToPointer() *MailerSendgridExporterConfigTypeEnum {
+	return &e
+}
+
 func (e *MailerSendgridExporterConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sendgrid":
-		*e = MailerSendgridExporterConfigTypeEnum(s)
+		*e = MailerSendgridExporterConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailerSendgridExporterConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailerSendgridExporterConfigTypeEnum: %v", v)
 	}
 }
 

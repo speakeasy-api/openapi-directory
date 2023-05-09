@@ -16,19 +16,23 @@ const (
 	AuthorizeRealmEnumContributor AuthorizeRealmEnum = "contributor"
 )
 
+func (e AuthorizeRealmEnum) ToPointer() *AuthorizeRealmEnum {
+	return &e
+}
+
 func (e *AuthorizeRealmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "contributor":
-		*e = AuthorizeRealmEnum(s)
+		*e = AuthorizeRealmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizeRealmEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizeRealmEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	AuthorizeResponseTypeEnumCode AuthorizeResponseTypeEnum = "code"
 )
 
+func (e AuthorizeResponseTypeEnum) ToPointer() *AuthorizeResponseTypeEnum {
+	return &e
+}
+
 func (e *AuthorizeResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "code":
-		*e = AuthorizeResponseTypeEnum(s)
+		*e = AuthorizeResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizeResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizeResponseTypeEnum: %v", v)
 	}
 }
 

@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/lufthansa.com/public/1.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest{
+    ctx := context.Background()
+    res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest{
         Accept: "corrupti",
         Destination: "provident",
         FromDate: "distinctio",
         Origin: "quibusdam",
-        ProductCode: "YNB",
-    }
-
-    ctx := context.Background()
-    res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req, operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity{
+        ProductCode: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnumYnb,
+    }, operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity{
         Auth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -51,32 +48,32 @@ func main() {
 ## Available Resources and Operations
 
 
-### Cargo
+### [Cargo](docs/cargo/README.md)
 
-* `CargoGetRouteFromDateProductCodeByOriginAndDestinationGet` - Retrieve all flights
-* `CargoShipmentTrackingByAWBPrefixAndAWBNumberGet` - Shipment Tracking
+* [CargoGetRouteFromDateProductCodeByOriginAndDestinationGet](docs/cargo/README.md#cargogetroutefromdateproductcodebyoriginanddestinationget) - Retrieve all flights
+* [CargoShipmentTrackingByAWBPrefixAndAWBNumberGet](docs/cargo/README.md#cargoshipmenttrackingbyawbprefixandawbnumberget) - Shipment Tracking
 
-### Offers
+### [Offers](docs/offers/README.md)
 
-* `OffersLoungesByLocationGet` - Lounges
-* `OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet` - Seat Maps
+* [OffersLoungesByLocationGet](docs/offers/README.md#offersloungesbylocationget) - Lounges
+* [OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet](docs/offers/README.md#offersseatmapsdestinationdatecabinclassbyflightnumberandoriginget) - Seat Maps
 
-### Operations
+### [Operations](docs/operations/README.md)
 
-* `OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet` - Flight Status at Arrival Airport
-* `OperationsFlightstatusByFlightNumberAndDateGet` - Flight Status
-* `OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet` - Flight Status at Departure Airport
-* `OperationsFlightstatusRouteDateByOriginAndDestinationGet` - Flight Status by Route
-* `OperationsSchedulesFromDateTimeByOriginAndDestinationGet` - Flight Schedules
+* [OperationsFlightstatusArrivalsByAirportCodeAndFromDateTimeGet](docs/operations/README.md#operationsflightstatusarrivalsbyairportcodeandfromdatetimeget) - Flight Status at Arrival Airport
+* [OperationsFlightstatusByFlightNumberAndDateGet](docs/operations/README.md#operationsflightstatusbyflightnumberanddateget) - Flight Status
+* [OperationsFlightstatusDeparturesByAirportCodeAndFromDateTimeGet](docs/operations/README.md#operationsflightstatusdeparturesbyairportcodeandfromdatetimeget) - Flight Status at Departure Airport
+* [OperationsFlightstatusRouteDateByOriginAndDestinationGet](docs/operations/README.md#operationsflightstatusroutedatebyoriginanddestinationget) - Flight Status by Route
+* [OperationsSchedulesFromDateTimeByOriginAndDestinationGet](docs/operations/README.md#operationsschedulesfromdatetimebyoriginanddestinationget) - Flight Schedules
 
-### ReferenceData
+### [ReferenceData](docs/referencedata/README.md)
 
-* `ReferencesAircraftByAircraftCodeGet` - Aircraft
-* `ReferencesAirlinesByAirlineCodeGet` - Airlines
-* `ReferencesAirportsByAirportCodeGet` - Airports
-* `ReferencesAirportsNearestByLatitudeAndLongitudeGet` - Nearest Airports
-* `ReferencesCitiesByCityCodeGet` - Cities
-* `ReferencesCountriesByCountryCodeGet` - Countries
+* [ReferencesAircraftByAircraftCodeGet](docs/referencedata/README.md#referencesaircraftbyaircraftcodeget) - Aircraft
+* [ReferencesAirlinesByAirlineCodeGet](docs/referencedata/README.md#referencesairlinesbyairlinecodeget) - Airlines
+* [ReferencesAirportsByAirportCodeGet](docs/referencedata/README.md#referencesairportsbyairportcodeget) - Airports
+* [ReferencesAirportsNearestByLatitudeAndLongitudeGet](docs/referencedata/README.md#referencesairportsnearestbylatitudeandlongitudeget) - Nearest Airports
+* [ReferencesCitiesByCityCodeGet](docs/referencedata/README.md#referencescitiesbycitycodeget) - Cities
+* [ReferencesCountriesByCountryCodeGet](docs/referencedata/README.md#referencescountriesbycountrycodeget) - Countries
 <!-- End SDK Available Operations -->
 
 ### Maturity

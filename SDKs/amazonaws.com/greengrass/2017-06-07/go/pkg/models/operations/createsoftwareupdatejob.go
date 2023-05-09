@@ -17,19 +17,23 @@ const (
 	CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnumOtaAgent CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum = "ota_agent"
 )
 
+func (e CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum) ToPointer() *CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum {
+	return &e
+}
+
 func (e *CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "core":
 		fallthrough
 	case "ota_agent":
-		*e = CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum(s)
+		*e = CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodySoftwareToUpdateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnumFatal   CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum = "FATAL"
 )
 
+func (e CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum) ToPointer() *CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum {
+	return &e
+}
+
 func (e *CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "TRACE":
@@ -68,10 +76,10 @@ func (e *CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum) UnmarshalJSO
 	case "ERROR":
 		fallthrough
 	case "FATAL":
-		*e = CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum(s)
+		*e = CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateAgentLogLevelEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnumAarch64 CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum = "aarch64"
 )
 
+func (e CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum) ToPointer() *CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum {
+	return &e
+}
+
 func (e *CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "armv6l":
 		fallthrough
 	case "armv7l":
@@ -98,10 +110,10 @@ func (e *CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum) Unmars
 	case "x86_64":
 		fallthrough
 	case "aarch64":
-		*e = CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum(s)
+		*e = CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateTargetsArchitectureEnum: %v", v)
 	}
 }
 
@@ -115,12 +127,16 @@ const (
 	CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnumOpenwrt     CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum = "openwrt"
 )
 
+func (e CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum) ToPointer() *CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum {
+	return &e
+}
+
 func (e *CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "raspbian":
@@ -128,10 +144,10 @@ func (e *CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum) Unm
 	case "amazon_linux":
 		fallthrough
 	case "openwrt":
-		*e = CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum(s)
+		*e = CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSoftwareUpdateJobRequestBodyUpdateTargetsOperatingSystemEnum: %v", v)
 	}
 }
 

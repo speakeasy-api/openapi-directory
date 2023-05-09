@@ -2,50 +2,51 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.AccessPolicies.AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AccessLevel: &shared.AccessLevel{
             Basic: &shared.BasicLevel{
-                CombiningFunction: "OR",
+                CombiningFunction: shared.BasicLevelCombiningFunctionEnumOr.ToPointer(),
                 Conditions: []shared.Condition{
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "BASIC",
-                                "COMPLETE",
-                                "BASIC",
-                                "COMPLETE",
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumBasic,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumComplete,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumBasic,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumComplete,
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "UNENCRYPTED",
-                                "UNENCRYPTED",
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumUnencrypted,
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumUnencrypted,
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "iure",
-                                    OsType: "DESKTOP_WINDOWS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("iure"),
+                                    OsType: shared.OsConstraintOsTypeEnumDesktopWindows.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "debitis",
-                                    OsType: "OS_UNSPECIFIED",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("debitis"),
+                                    OsType: shared.OsConstraintOsTypeEnumOsUnspecified.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                             },
-                            RequireAdminApproval: false,
-                            RequireCorpOwned: false,
-                            RequireScreenlock: false,
+                            RequireAdminApproval: sdk.Bool(false),
+                            RequireCorpOwned: sdk.Bool(false),
+                            RequireScreenlock: sdk.Bool(false),
                         },
                         IPSubnetworks: []string{
                             "tempora",
@@ -59,7 +60,7 @@ func main() {
                             "excepturi",
                             "nisi",
                         },
-                        Negate: false,
+                        Negate: sdk.Bool(false),
                         Regions: []string{
                             "temporibus",
                             "ab",
@@ -75,37 +76,37 @@ func main() {
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "COMPLETE",
-                                "MANAGEMENT_UNSPECIFIED",
-                                "COMPLETE",
-                                "COMPLETE",
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumComplete,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumManagementUnspecified,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumComplete,
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumComplete,
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "ENCRYPTION_UNSUPPORTED",
-                                "ENCRYPTED",
-                                "ENCRYPTED",
-                                "ENCRYPTION_UNSUPPORTED",
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumEncryptionUnsupported,
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumEncrypted,
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumEncrypted,
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumEncryptionUnsupported,
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "porro",
-                                    OsType: "DESKTOP_CHROME_OS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("porro"),
+                                    OsType: shared.OsConstraintOsTypeEnumDesktopChromeOs.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "dicta",
-                                    OsType: "ANDROID",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("dicta"),
+                                    OsType: shared.OsConstraintOsTypeEnumAndroid.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "officia",
-                                    OsType: "DESKTOP_CHROME_OS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("officia"),
+                                    OsType: shared.OsConstraintOsTypeEnumDesktopChromeOs.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                             },
-                            RequireAdminApproval: false,
-                            RequireCorpOwned: false,
-                            RequireScreenlock: false,
+                            RequireAdminApproval: sdk.Bool(false),
+                            RequireCorpOwned: sdk.Bool(false),
+                            RequireScreenlock: sdk.Bool(false),
                         },
                         IPSubnetworks: []string{
                             "deleniti",
@@ -116,7 +117,7 @@ func main() {
                             "beatae",
                             "commodi",
                         },
-                        Negate: false,
+                        Negate: sdk.Bool(false),
                         Regions: []string{
                             "modi",
                             "qui",
@@ -131,32 +132,32 @@ func main() {
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "MANAGEMENT_UNSPECIFIED",
+                                shared.DevicePolicyAllowedDeviceManagementLevelsEnumManagementUnspecified,
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "UNENCRYPTED",
-                                "ENCRYPTION_UNSPECIFIED",
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumUnencrypted,
+                                shared.DevicePolicyAllowedEncryptionStatusesEnumEncryptionUnspecified,
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "dolor",
-                                    OsType: "DESKTOP_CHROME_OS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("dolor"),
+                                    OsType: shared.OsConstraintOsTypeEnumDesktopChromeOs.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "laboriosam",
-                                    OsType: "IOS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("laboriosam"),
+                                    OsType: shared.OsConstraintOsTypeEnumIos.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "saepe",
-                                    OsType: "DESKTOP_CHROME_OS",
-                                    RequireVerifiedChromeOs: false,
+                                    MinimumVersion: sdk.String("saepe"),
+                                    OsType: shared.OsConstraintOsTypeEnumDesktopChromeOs.ToPointer(),
+                                    RequireVerifiedChromeOs: sdk.Bool(false),
                                 },
                             },
-                            RequireAdminApproval: false,
-                            RequireCorpOwned: false,
-                            RequireScreenlock: false,
+                            RequireAdminApproval: sdk.Bool(false),
+                            RequireCorpOwned: sdk.Bool(false),
+                            RequireScreenlock: sdk.Bool(false),
                         },
                         IPSubnetworks: []string{
                             "corporis",
@@ -166,7 +167,7 @@ func main() {
                             "saepe",
                             "quidem",
                         },
-                        Negate: false,
+                        Negate: sdk.Bool(false),
                         Regions: []string{
                             "ipsa",
                         },
@@ -181,31 +182,28 @@ func main() {
             },
             Custom: &shared.CustomLevel{
                 Expr: &shared.Expr{
-                    Description: "dolorem",
-                    Expression: "corporis",
-                    Location: "explicabo",
-                    Title: "Miss",
+                    Description: sdk.String("dolorem"),
+                    Expression: sdk.String("corporis"),
+                    Location: sdk.String("explicabo"),
+                    Title: sdk.String("Miss"),
                 },
             },
-            Description: "enim",
-            Name: "omnis",
-            Title: "Mrs.",
+            Description: sdk.String("enim"),
+            Name: sdk.String("Corey Hane III"),
+            Title: sdk.String("Miss"),
         },
-        AccessToken: "minima",
-        Alt: "media",
-        Callback: "accusantium",
-        Fields: "iure",
-        Key: "culpa",
-        OauthToken: "doloribus",
-        Parent: "sapiente",
-        PrettyPrint: false,
-        QuotaUser: "architecto",
-        UploadType: "mollitia",
-        UploadProtocol: "dolorem",
-    }
-
-    ctx := context.Background()
-    res, err := s.AccessPolicies.AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx, req, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
+        AccessToken: sdk.String("doloribus"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("architecto"),
+        Fields: sdk.String("mollitia"),
+        Key: sdk.String("dolorem"),
+        OauthToken: sdk.String("culpa"),
+        Parent: "consequuntur",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("repellat"),
+        UploadType: sdk.String("mollitia"),
+        UploadProtocol: sdk.String("occaecati"),
+    }, operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// CasePriorityEnum - The priority of this case. If this is set, do not set severity.
+// CasePriorityEnum - The priority of this case.
 type CasePriorityEnum string
 
 const (
@@ -19,12 +19,16 @@ const (
 	CasePriorityEnumP4                  CasePriorityEnum = "P4"
 )
 
+func (e CasePriorityEnum) ToPointer() *CasePriorityEnum {
+	return &e
+}
+
 func (e *CasePriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIORITY_UNSPECIFIED":
 		fallthrough
 	case "P0":
@@ -36,14 +40,14 @@ func (e *CasePriorityEnum) UnmarshalJSON(data []byte) error {
 	case "P3":
 		fallthrough
 	case "P4":
-		*e = CasePriorityEnum(s)
+		*e = CasePriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CasePriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for CasePriorityEnum: %v", v)
 	}
 }
 
-// CaseSeverityEnum - The severity of this case. Deprecated. Use priority instead.
+// CaseSeverityEnum - REMOVED. The severity of this case. Use priority instead.
 type CaseSeverityEnum string
 
 const (
@@ -55,12 +59,16 @@ const (
 	CaseSeverityEnumS4                  CaseSeverityEnum = "S4"
 )
 
+func (e CaseSeverityEnum) ToPointer() *CaseSeverityEnum {
+	return &e
+}
+
 func (e *CaseSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "S0":
@@ -72,39 +80,11 @@ func (e *CaseSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "S3":
 		fallthrough
 	case "S4":
-		*e = CaseSeverityEnum(s)
+		*e = CaseSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaseSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for CaseSeverityEnum: %v", v)
 	}
-}
-
-// CaseInput - A support case.
-type CaseInput struct {
-	// A classification object with a product type and value.
-	Classification *CaseClassification `json:"classification,omitempty"`
-	// An object containing information about the effective user and authenticated principal responsible for an action.
-	Creator *ActorInput `json:"creator,omitempty"`
-	// A broad description of the issue.
-	Description *string `json:"description,omitempty"`
-	// The short summary of the issue reported in this case.
-	DisplayName *string `json:"displayName,omitempty"`
-	// Whether the case is currently escalated.
-	Escalated *bool `json:"escalated,omitempty"`
-	// The language the user has requested to receive support in. This should be a BCP 47 language code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported language is specified, this field defaults to English (en). Language selection during case creation may affect your available support options. For a list of supported languages and their support working hours, see: https://cloud.google.com/support/docs/language-working-hours
-	LanguageCode *string `json:"languageCode,omitempty"`
-	// The resource name for the case.
-	Name *string `json:"name,omitempty"`
-	// The priority of this case. If this is set, do not set severity.
-	Priority *CasePriorityEnum `json:"priority,omitempty"`
-	// The severity of this case. Deprecated. Use priority instead.
-	Severity *CaseSeverityEnum `json:"severity,omitempty"`
-	// The email addresses to receive updates on this case.
-	SubscriberEmailAddresses []string `json:"subscriberEmailAddresses,omitempty"`
-	// Whether this case was created for internal API testing and should not be acted on by the support team.
-	TestCase *bool `json:"testCase,omitempty"`
-	// The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-	TimeZone *string `json:"timeZone,omitempty"`
 }
 
 // CaseStateEnum - Output only. The current status of the support case.
@@ -119,12 +99,16 @@ const (
 	CaseStateEnumClosed                  CaseStateEnum = "CLOSED"
 )
 
+func (e CaseStateEnum) ToPointer() *CaseStateEnum {
+	return &e
+}
+
 func (e *CaseStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "NEW":
@@ -136,10 +120,10 @@ func (e *CaseStateEnum) UnmarshalJSON(data []byte) error {
 	case "SOLUTION_PROVIDED":
 		fallthrough
 	case "CLOSED":
-		*e = CaseStateEnum(s)
+		*e = CaseStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CaseStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CaseStateEnum: %v", v)
 	}
 }
 
@@ -147,6 +131,8 @@ func (e *CaseStateEnum) UnmarshalJSON(data []byte) error {
 type Case struct {
 	// A classification object with a product type and value.
 	Classification *CaseClassification `json:"classification,omitempty"`
+	// A user-supplied email address to send case update notifications for. This should only be used in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+	ContactEmail *string `json:"contactEmail,omitempty"`
 	// Output only. The time this case was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// An object containing information about the effective user and authenticated principal responsible for an action.
@@ -161,9 +147,9 @@ type Case struct {
 	LanguageCode *string `json:"languageCode,omitempty"`
 	// The resource name for the case.
 	Name *string `json:"name,omitempty"`
-	// The priority of this case. If this is set, do not set severity.
+	// The priority of this case.
 	Priority *CasePriorityEnum `json:"priority,omitempty"`
-	// The severity of this case. Deprecated. Use priority instead.
+	// REMOVED. The severity of this case. Use priority instead.
 	Severity *CaseSeverityEnum `json:"severity,omitempty"`
 	// Output only. The current status of the support case.
 	State *CaseStateEnum `json:"state,omitempty"`
@@ -175,4 +161,34 @@ type Case struct {
 	TimeZone *string `json:"timeZone,omitempty"`
 	// Output only. The time this case was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
+}
+
+// CaseInput - A support case.
+type CaseInput struct {
+	// A classification object with a product type and value.
+	Classification *CaseClassification `json:"classification,omitempty"`
+	// A user-supplied email address to send case update notifications for. This should only be used in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+	ContactEmail *string `json:"contactEmail,omitempty"`
+	// An object containing information about the effective user and authenticated principal responsible for an action.
+	Creator *ActorInput `json:"creator,omitempty"`
+	// A broad description of the issue.
+	Description *string `json:"description,omitempty"`
+	// The short summary of the issue reported in this case.
+	DisplayName *string `json:"displayName,omitempty"`
+	// Whether the case is currently escalated.
+	Escalated *bool `json:"escalated,omitempty"`
+	// The language the user has requested to receive support in. This should be a BCP 47 language code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported language is specified, this field defaults to English (en). Language selection during case creation may affect your available support options. For a list of supported languages and their support working hours, see: https://cloud.google.com/support/docs/language-working-hours
+	LanguageCode *string `json:"languageCode,omitempty"`
+	// The resource name for the case.
+	Name *string `json:"name,omitempty"`
+	// The priority of this case.
+	Priority *CasePriorityEnum `json:"priority,omitempty"`
+	// REMOVED. The severity of this case. Use priority instead.
+	Severity *CaseSeverityEnum `json:"severity,omitempty"`
+	// The email addresses to receive updates on this case.
+	SubscriberEmailAddresses []string `json:"subscriberEmailAddresses,omitempty"`
+	// Whether this case was created for internal API testing and should not be acted on by the support team.
+	TestCase *bool `json:"testCase,omitempty"`
+	// The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
+	TimeZone *string `json:"timeZone,omitempty"`
 }

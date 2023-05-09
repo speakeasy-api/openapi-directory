@@ -25,12 +25,16 @@ const (
 	DeviceAttributeEnumAvailability        DeviceAttributeEnum = "AVAILABILITY"
 )
 
+func (e DeviceAttributeEnum) ToPointer() *DeviceAttributeEnum {
+	return &e
+}
+
 func (e *DeviceAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARN":
 		fallthrough
 	case "PLATFORM":
@@ -56,9 +60,9 @@ func (e *DeviceAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "MODEL":
 		fallthrough
 	case "AVAILABILITY":
-		*e = DeviceAttributeEnum(s)
+		*e = DeviceAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceAttributeEnum: %v", v)
 	}
 }

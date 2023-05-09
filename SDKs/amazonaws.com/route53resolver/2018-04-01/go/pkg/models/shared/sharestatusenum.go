@@ -15,20 +15,24 @@ const (
 	ShareStatusEnumSharedByMe   ShareStatusEnum = "SHARED_BY_ME"
 )
 
+func (e ShareStatusEnum) ToPointer() *ShareStatusEnum {
+	return &e
+}
+
 func (e *ShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_SHARED":
 		fallthrough
 	case "SHARED_WITH_ME":
 		fallthrough
 	case "SHARED_BY_ME":
-		*e = ShareStatusEnum(s)
+		*e = ShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareStatusEnum: %v", v)
 	}
 }

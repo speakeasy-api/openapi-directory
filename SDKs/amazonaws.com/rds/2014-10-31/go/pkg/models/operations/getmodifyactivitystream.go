@@ -15,17 +15,21 @@ const (
 	GETModifyActivityStreamActionEnumModifyActivityStream GETModifyActivityStreamActionEnum = "ModifyActivityStream"
 )
 
+func (e GETModifyActivityStreamActionEnum) ToPointer() *GETModifyActivityStreamActionEnum {
+	return &e
+}
+
 func (e *GETModifyActivityStreamActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyActivityStream":
-		*e = GETModifyActivityStreamActionEnum(s)
+		*e = GETModifyActivityStreamActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyActivityStreamActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyActivityStreamActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyActivityStreamAuditPolicyStateEnumUnlocked GETModifyActivityStreamAuditPolicyStateEnum = "unlocked"
 )
 
+func (e GETModifyActivityStreamAuditPolicyStateEnum) ToPointer() *GETModifyActivityStreamAuditPolicyStateEnum {
+	return &e
+}
+
 func (e *GETModifyActivityStreamAuditPolicyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "locked":
 		fallthrough
 	case "unlocked":
-		*e = GETModifyActivityStreamAuditPolicyStateEnum(s)
+		*e = GETModifyActivityStreamAuditPolicyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyActivityStreamAuditPolicyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyActivityStreamAuditPolicyStateEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETModifyActivityStreamVersionEnumTwoThousandAndFourteen1031 GETModifyActivityStreamVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyActivityStreamVersionEnum) ToPointer() *GETModifyActivityStreamVersionEnum {
+	return &e
+}
+
 func (e *GETModifyActivityStreamVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyActivityStreamVersionEnum(s)
+		*e = GETModifyActivityStreamVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyActivityStreamVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyActivityStreamVersionEnum: %v", v)
 	}
 }
 

@@ -14,6 +14,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -126,4 +127,17 @@ pkg/models/shared/getordersresponse.go
 pkg/models/shared/getpublisherprofilesbyaccountidresponse.go
 pkg/models/shared/publisherprofileapiproto.go
 pkg/models/shared/mobileapplication.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/billinginfo/README.md
+docs/budget/README.md
+docs/creatives/README.md
+docs/marketplacedeals/README.md
+docs/marketplacenotes/README.md
+docs/marketplaceprivateauction/README.md
+docs/performancereport/README.md
+docs/pretargetingconfig/README.md
+docs/products/README.md
+docs/proposals/README.md
+docs/pubprofiles/README.md
 USAGE.md

@@ -35,7 +35,10 @@ func newRuns(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // RunsForRoute - View all trip/service runs for a specific route ID
 func (s *runs) RunsForRoute(ctx context.Context, request operations.RunsForRouteRequest) (*operations.RunsForRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/runs/route/{route_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/runs/route/{route_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *runs) RunsForRoute(ctx context.Context, request operations.RunsForRoute
 // RunsForRouteAndRouteType - View all trip/service runs for a specific route ID and route type
 func (s *runs) RunsForRouteAndRouteType(ctx context.Context, request operations.RunsForRouteAndRouteTypeRequest) (*operations.RunsForRouteAndRouteTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/runs/route/{route_id}/route_type/{route_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/runs/route/{route_id}/route_type/{route_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +217,10 @@ func (s *runs) RunsForRouteAndRouteType(ctx context.Context, request operations.
 // RunsForRun - View all trip/service runs for a specific run_ref
 func (s *runs) RunsForRun(ctx context.Context, request operations.RunsForRunRequest) (*operations.RunsForRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/runs/{run_ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/runs/{run_ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -299,7 +308,10 @@ func (s *runs) RunsForRun(ctx context.Context, request operations.RunsForRunRequ
 // RunsForRunAndRouteType - View the trip/service run for a specific run_ref and route type
 func (s *runs) RunsForRunAndRouteType(ctx context.Context, request operations.RunsForRunAndRouteTypeRequest) (*operations.RunsForRunAndRouteTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/runs/{run_ref}/route_type/{route_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/runs/{run_ref}/route_type/{route_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

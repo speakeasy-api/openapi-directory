@@ -25,17 +25,21 @@ const (
 	ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnumGatewayTimeout ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -71,17 +79,21 @@ const (
 	ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnumServiceUnavailable ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -91,17 +103,21 @@ const (
 	ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -117,17 +133,21 @@ const (
 	ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnumBadGateway ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum = "bad gateway"
 )
 
+func (e ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad gateway":
-		*e = ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -137,17 +157,21 @@ const (
 	ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response."
 )
 
+func (e ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response.":
-		*e = ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -163,17 +187,21 @@ const (
 	ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnumInternalServerError ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -183,17 +211,21 @@ const (
 	ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnumInternalServerError ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -210,19 +242,23 @@ const (
 	ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnumURLNotFound    ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum = "Url not found"
 )
 
+func (e ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "Url not found":
-		*e = ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -233,19 +269,23 @@ const (
 	ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect."
 )
 
+func (e ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect.":
-		*e = ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -262,19 +302,23 @@ const (
 	ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnumInvalidAuthorization  ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -285,19 +329,23 @@ const (
 	ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -314,19 +362,23 @@ const (
 	ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnumMissingParameter ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum = "missing parameter"
 )
 
+func (e ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum) ToPointer() *ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid parameter":
 		fallthrough
 	case "missing parameter":
-		*e = ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum(s)
+		*e = ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -337,19 +389,23 @@ const (
 	ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnumPleaseProvideAllMandatoryParameters ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum = "Please provide all mandatory parameters."
 )
 
+func (e ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum) ToPointer() *ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
 		fallthrough
 	case "Please provide all mandatory parameters.":
-		*e = ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum(s)
+		*e = ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ImporterExporterCodeVerificationAPI400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

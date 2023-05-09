@@ -13,23 +13,27 @@ type RetrieveADigitalWalletTokenRequest struct {
 	DigitalWalletTokenID string `pathParam:"style=simple,explode=false,name=digital_wallet_token_id"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON13 struct {
 	Type       RetrieveADigitalWalletTokenDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON12 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON11 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnumFourHundred RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnumFourHundred RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON10 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnumFourHundred RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnumFourHundred RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveADigitalWalletTokenDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                     `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                     `json:"errors"`
 	Status RetrieveADigitalWalletTokenDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                       `json:"title"`
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON8 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON7 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnumFiveHundred RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnumFiveHundred RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnumInternalServerError RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON6 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON5 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON4 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON3 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveADigitalWalletTokenDefaultApplicationJSON2 struct {
 	Type   RetrieveADigitalWalletTokenDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum string
+type RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveADigitalWalletTokenDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

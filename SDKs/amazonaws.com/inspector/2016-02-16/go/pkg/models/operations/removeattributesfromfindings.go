@@ -16,17 +16,21 @@ const (
 	RemoveAttributesFromFindingsXAmzTargetEnumInspectorServiceRemoveAttributesFromFindings RemoveAttributesFromFindingsXAmzTargetEnum = "InspectorService.RemoveAttributesFromFindings"
 )
 
+func (e RemoveAttributesFromFindingsXAmzTargetEnum) ToPointer() *RemoveAttributesFromFindingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveAttributesFromFindingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.RemoveAttributesFromFindings":
-		*e = RemoveAttributesFromFindingsXAmzTargetEnum(s)
+		*e = RemoveAttributesFromFindingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveAttributesFromFindingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveAttributesFromFindingsXAmzTargetEnum: %v", v)
 	}
 }
 

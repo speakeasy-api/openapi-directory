@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -21,4 +22,8 @@ pkg/models/operations/getvcustompricesrulespriceassociationid.go
 pkg/models/operations/postvcustompricesrules.go
 pkg/models/operations/putvcustompricesrulespriceassociationid.go
 pkg/models/operations/postsessions.go
+docs/sdk/README.md
+docs/customprices/README.md
+docs/priceassociation/README.md
+docs/sessionmanagement/README.md
 USAGE.md

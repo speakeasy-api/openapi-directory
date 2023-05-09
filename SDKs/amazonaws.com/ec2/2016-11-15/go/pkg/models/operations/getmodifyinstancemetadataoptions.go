@@ -15,17 +15,21 @@ const (
 	GETModifyInstanceMetadataOptionsActionEnumModifyInstanceMetadataOptions GETModifyInstanceMetadataOptionsActionEnum = "ModifyInstanceMetadataOptions"
 )
 
+func (e GETModifyInstanceMetadataOptionsActionEnum) ToPointer() *GETModifyInstanceMetadataOptionsActionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceMetadataOptions":
-		*e = GETModifyInstanceMetadataOptionsActionEnum(s)
+		*e = GETModifyInstanceMetadataOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyInstanceMetadataOptionsHTTPEndpointEnumEnabled  GETModifyInstanceMetadataOptionsHTTPEndpointEnum = "enabled"
 )
 
+func (e GETModifyInstanceMetadataOptionsHTTPEndpointEnum) ToPointer() *GETModifyInstanceMetadataOptionsHTTPEndpointEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsHTTPEndpointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = GETModifyInstanceMetadataOptionsHTTPEndpointEnum(s)
+		*e = GETModifyInstanceMetadataOptionsHTTPEndpointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPEndpointEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPEndpointEnum: %v", v)
 	}
 }
 
@@ -61,19 +69,23 @@ const (
 	GETModifyInstanceMetadataOptionsHTTPProtocolIpv6EnumEnabled  GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum) ToPointer() *GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum(s)
+		*e = GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPProtocolIpv6Enum: %v", v)
 	}
 }
 
@@ -85,19 +97,23 @@ const (
 	GETModifyInstanceMetadataOptionsHTTPTokensEnumRequired GETModifyInstanceMetadataOptionsHTTPTokensEnum = "required"
 )
 
+func (e GETModifyInstanceMetadataOptionsHTTPTokensEnum) ToPointer() *GETModifyInstanceMetadataOptionsHTTPTokensEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsHTTPTokensEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = GETModifyInstanceMetadataOptionsHTTPTokensEnum(s)
+		*e = GETModifyInstanceMetadataOptionsHTTPTokensEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPTokensEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsHTTPTokensEnum: %v", v)
 	}
 }
 
@@ -109,19 +125,23 @@ const (
 	GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnumEnabled  GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum = "enabled"
 )
 
+func (e GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum) ToPointer() *GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum(s)
+		*e = GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsInstanceMetadataTagsEnum: %v", v)
 	}
 }
 
@@ -132,17 +152,21 @@ const (
 	GETModifyInstanceMetadataOptionsVersionEnumTwoThousandAndSixteen1115 GETModifyInstanceMetadataOptionsVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyInstanceMetadataOptionsVersionEnum) ToPointer() *GETModifyInstanceMetadataOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceMetadataOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyInstanceMetadataOptionsVersionEnum(s)
+		*e = GETModifyInstanceMetadataOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceMetadataOptionsVersionEnum: %v", v)
 	}
 }
 

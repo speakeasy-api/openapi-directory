@@ -16,21 +16,25 @@ const (
 	DayPartTargetingTimeZoneTypeEnumUser                      DayPartTargetingTimeZoneTypeEnum = "USER"
 )
 
+func (e DayPartTargetingTimeZoneTypeEnum) ToPointer() *DayPartTargetingTimeZoneTypeEnum {
+	return &e
+}
+
 func (e *DayPartTargetingTimeZoneTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_ZONE_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHER":
 		fallthrough
 	case "USER":
-		*e = DayPartTargetingTimeZoneTypeEnum(s)
+		*e = DayPartTargetingTimeZoneTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DayPartTargetingTimeZoneTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DayPartTargetingTimeZoneTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	SetMasterAuthRequestActionEnumSetUsername      SetMasterAuthRequestActionEnum = "SET_USERNAME"
 )
 
+func (e SetMasterAuthRequestActionEnum) ToPointer() *SetMasterAuthRequestActionEnum {
+	return &e
+}
+
 func (e *SetMasterAuthRequestActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "SET_PASSWORD":
@@ -30,10 +34,10 @@ func (e *SetMasterAuthRequestActionEnum) UnmarshalJSON(data []byte) error {
 	case "GENERATE_PASSWORD":
 		fallthrough
 	case "SET_USERNAME":
-		*e = SetMasterAuthRequestActionEnum(s)
+		*e = SetMasterAuthRequestActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetMasterAuthRequestActionEnum: %s", s)
+		return fmt.Errorf("invalid value for SetMasterAuthRequestActionEnum: %v", v)
 	}
 }
 

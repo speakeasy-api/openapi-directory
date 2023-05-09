@@ -19,21 +19,25 @@ const (
 	ReposCreateInOrgRequestBodyVisibilityEnumInternal ReposCreateInOrgRequestBodyVisibilityEnum = "internal"
 )
 
+func (e ReposCreateInOrgRequestBodyVisibilityEnum) ToPointer() *ReposCreateInOrgRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *ReposCreateInOrgRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
 		fallthrough
 	case "internal":
-		*e = ReposCreateInOrgRequestBodyVisibilityEnum(s)
+		*e = ReposCreateInOrgRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreateInOrgRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

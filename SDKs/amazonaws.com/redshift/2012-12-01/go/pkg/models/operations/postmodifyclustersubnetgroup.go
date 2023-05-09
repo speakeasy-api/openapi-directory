@@ -15,17 +15,21 @@ const (
 	POSTModifyClusterSubnetGroupActionEnumModifyClusterSubnetGroup POSTModifyClusterSubnetGroupActionEnum = "ModifyClusterSubnetGroup"
 )
 
+func (e POSTModifyClusterSubnetGroupActionEnum) ToPointer() *POSTModifyClusterSubnetGroupActionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterSubnetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyClusterSubnetGroup":
-		*e = POSTModifyClusterSubnetGroupActionEnum(s)
+		*e = POSTModifyClusterSubnetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterSubnetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterSubnetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 POSTModifyClusterSubnetGroupVersionEnum = "2012-12-01"
 )
 
+func (e POSTModifyClusterSubnetGroupVersionEnum) ToPointer() *POSTModifyClusterSubnetGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTModifyClusterSubnetGroupVersionEnum(s)
+		*e = POSTModifyClusterSubnetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyClusterSubnetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyClusterSubnetGroupVersionEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	CustomLabelKeyEnumCustomLabelKey4           CustomLabelKeyEnum = "CUSTOM_LABEL_KEY_4"
 )
 
+func (e CustomLabelKeyEnum) ToPointer() *CustomLabelKeyEnum {
+	return &e
+}
+
 func (e *CustomLabelKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_LABEL_KEY_UNSPECIFIED":
 		fallthrough
 	case "CUSTOM_LABEL_KEY_0":
@@ -36,10 +40,10 @@ func (e *CustomLabelKeyEnum) UnmarshalJSON(data []byte) error {
 	case "CUSTOM_LABEL_KEY_3":
 		fallthrough
 	case "CUSTOM_LABEL_KEY_4":
-		*e = CustomLabelKeyEnum(s)
+		*e = CustomLabelKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomLabelKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomLabelKeyEnum: %v", v)
 	}
 }
 

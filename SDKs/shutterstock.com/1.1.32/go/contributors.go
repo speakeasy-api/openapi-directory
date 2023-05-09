@@ -36,7 +36,10 @@ func newContributors(defaultClient, securityClient HTTPClient, serverURL, langua
 // This endpoint shows information about a single contributor, including contributor type, equipment they use, and other attributes.
 func (s *contributors) GetContributor(ctx context.Context, request operations.GetContributorRequest, security operations.GetContributorSecurity) (*operations.GetContributorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *contributors) GetContributor(ctx context.Context, request operations.Ge
 // This endpoint lists the IDs of items in a contributor's collection and the date that each was added.
 func (s *contributors) GetContributorCollectionItems(ctx context.Context, request operations.GetContributorCollectionItemsRequest, security operations.GetContributorCollectionItemsSecurity) (*operations.GetContributorCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *contributors) GetContributorCollectionItems(ctx context.Context, reques
 // This endpoint gets more detailed information about a contributor's collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
 func (s *contributors) GetContributorCollections(ctx context.Context, request operations.GetContributorCollectionsRequest, security operations.GetContributorCollectionsSecurity) (*operations.GetContributorCollectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +203,10 @@ func (s *contributors) GetContributorCollections(ctx context.Context, request op
 // This endpoint lists collections based on contributor ID.
 func (s *contributors) GetContributorCollectionsList(ctx context.Context, request operations.GetContributorCollectionsListRequest, security operations.GetContributorCollectionsListSecurity) (*operations.GetContributorCollectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/contributors/{contributor_id}/collections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

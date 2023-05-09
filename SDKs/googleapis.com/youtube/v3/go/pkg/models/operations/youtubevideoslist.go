@@ -44,19 +44,23 @@ const (
 	YoutubeVideosListChartEnumMostPopular      YoutubeVideosListChartEnum = "mostPopular"
 )
 
+func (e YoutubeVideosListChartEnum) ToPointer() *YoutubeVideosListChartEnum {
+	return &e
+}
+
 func (e *YoutubeVideosListChartEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "chartUnspecified":
 		fallthrough
 	case "mostPopular":
-		*e = YoutubeVideosListChartEnum(s)
+		*e = YoutubeVideosListChartEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeVideosListChartEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeVideosListChartEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	YoutubeVideosListMyRatingEnumDislike YoutubeVideosListMyRatingEnum = "dislike"
 )
 
+func (e YoutubeVideosListMyRatingEnum) ToPointer() *YoutubeVideosListMyRatingEnum {
+	return &e
+}
+
 func (e *YoutubeVideosListMyRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "like":
 		fallthrough
 	case "dislike":
-		*e = YoutubeVideosListMyRatingEnum(s)
+		*e = YoutubeVideosListMyRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeVideosListMyRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeVideosListMyRatingEnum: %v", v)
 	}
 }
 

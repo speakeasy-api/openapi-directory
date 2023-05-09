@@ -21,12 +21,16 @@ const (
 	ProjectAudienceAgeGroupEnumPlanningAudienceAgeUnknown  ProjectAudienceAgeGroupEnum = "PLANNING_AUDIENCE_AGE_UNKNOWN"
 )
 
+func (e ProjectAudienceAgeGroupEnum) ToPointer() *ProjectAudienceAgeGroupEnum {
+	return &e
+}
+
 func (e *ProjectAudienceAgeGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_AUDIENCE_AGE_18_24":
 		fallthrough
 	case "PLANNING_AUDIENCE_AGE_25_34":
@@ -40,10 +44,10 @@ func (e *ProjectAudienceAgeGroupEnum) UnmarshalJSON(data []byte) error {
 	case "PLANNING_AUDIENCE_AGE_65_OR_MORE":
 		fallthrough
 	case "PLANNING_AUDIENCE_AGE_UNKNOWN":
-		*e = ProjectAudienceAgeGroupEnum(s)
+		*e = ProjectAudienceAgeGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectAudienceAgeGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectAudienceAgeGroupEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	ProjectAudienceGenderEnumPlanningAudienceGenderFemale ProjectAudienceGenderEnum = "PLANNING_AUDIENCE_GENDER_FEMALE"
 )
 
+func (e ProjectAudienceGenderEnum) ToPointer() *ProjectAudienceGenderEnum {
+	return &e
+}
+
 func (e *ProjectAudienceGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_AUDIENCE_GENDER_MALE":
 		fallthrough
 	case "PLANNING_AUDIENCE_GENDER_FEMALE":
-		*e = ProjectAudienceGenderEnum(s)
+		*e = ProjectAudienceGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectAudienceGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectAudienceGenderEnum: %v", v)
 	}
 }
 

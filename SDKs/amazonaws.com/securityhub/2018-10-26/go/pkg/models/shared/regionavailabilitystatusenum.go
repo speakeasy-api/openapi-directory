@@ -14,18 +14,22 @@ const (
 	RegionAvailabilityStatusEnumUnavailable RegionAvailabilityStatusEnum = "UNAVAILABLE"
 )
 
+func (e RegionAvailabilityStatusEnum) ToPointer() *RegionAvailabilityStatusEnum {
+	return &e
+}
+
 func (e *RegionAvailabilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = RegionAvailabilityStatusEnum(s)
+		*e = RegionAvailabilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegionAvailabilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RegionAvailabilityStatusEnum: %v", v)
 	}
 }

@@ -14,17 +14,21 @@ const (
 	ScoreRevisionCreationDataEncodingEnumBase64 ScoreRevisionCreationDataEncodingEnum = "base64"
 )
 
+func (e ScoreRevisionCreationDataEncodingEnum) ToPointer() *ScoreRevisionCreationDataEncodingEnum {
+	return &e
+}
+
 func (e *ScoreRevisionCreationDataEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "base64":
-		*e = ScoreRevisionCreationDataEncodingEnum(s)
+		*e = ScoreRevisionCreationDataEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreRevisionCreationDataEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreRevisionCreationDataEncodingEnum: %v", v)
 	}
 }
 

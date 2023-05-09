@@ -36,7 +36,10 @@ func newInsightsAPI(defaultClient, securityClient HTTPClient, serverURL, languag
 // Fetch audience demographics for a podcast - 1) directly measured on the Listen Notes platform; 2) only supports audience breakdown by regions for now; 3) not every podcast has data.
 func (s *insightsAPI) GetPodcastAudience(ctx context.Context, request operations.GetPodcastAudienceRequest) (*operations.GetPodcastAudienceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/audience", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/audience", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -75,6 +78,70 @@ func (s *insightsAPI) GetPodcastAudience(ctx context.Context, request operations
 			}
 
 			res.PodcastAudienceResponse = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 429:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+	}
+
+	return res, nil
+}
+
+// GetPodcastsByDomainName - Fetch podcasts by a publisher's domain name
+// Fetch podcasts by a publisher's domain name, e.g., nytimes.com, wondery.com, npr.org...
+// Each request will return up to 10 podcasts. You can use the `page` parameter to paginate.
+func (s *insightsAPI) GetPodcastsByDomainName(ctx context.Context, request operations.GetPodcastsByDomainNameRequest) (*operations.GetPodcastsByDomainNameResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/podcasts/domains/{domain_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPodcastsByDomainNameResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PodcastDomainResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PodcastDomainResponse = out
 		}
 	case httpRes.StatusCode == 401:
 		fallthrough

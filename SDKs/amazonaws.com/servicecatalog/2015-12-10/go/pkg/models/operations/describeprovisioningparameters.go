@@ -16,17 +16,21 @@ const (
 	DescribeProvisioningParametersXAmzTargetEnumAws242ServiceCatalogServiceDescribeProvisioningParameters DescribeProvisioningParametersXAmzTargetEnum = "AWS242ServiceCatalogService.DescribeProvisioningParameters"
 )
 
+func (e DescribeProvisioningParametersXAmzTargetEnum) ToPointer() *DescribeProvisioningParametersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeProvisioningParametersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribeProvisioningParameters":
-		*e = DescribeProvisioningParametersXAmzTargetEnum(s)
+		*e = DescribeProvisioningParametersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeProvisioningParametersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeProvisioningParametersXAmzTargetEnum: %v", v)
 	}
 }
 

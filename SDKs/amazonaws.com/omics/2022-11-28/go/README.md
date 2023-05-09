@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/omics/2022-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,7 +27,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchDeleteReadSetRequest{
+    ctx := context.Background()
+    res, err := s.BatchDeleteReadSet(ctx, operations.BatchDeleteReadSetRequest{
         RequestBody: operations.BatchDeleteReadSetRequestBody{
             Ids: []string{
                 "provident",
@@ -36,18 +36,15 @@ func main() {
                 "quibusdam",
             },
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
         SequenceStoreID: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchDeleteReadSet(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -62,74 +59,74 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `BatchDeleteReadSet` - Deletes one or more read sets.
-* `CancelAnnotationImportJob` - Cancels an annotation import job.
-* `CancelRun` - Cancels a run.
-* `CancelVariantImportJob` - Cancels a variant import job.
-* `CreateAnnotationStore` - Creates an annotation store.
-* `CreateReferenceStore` - Creates a reference store.
-* `CreateRunGroup` - Creates a run group.
-* `CreateSequenceStore` - Creates a sequence store.
-* `CreateVariantStore` - Creates a variant store.
-* `CreateWorkflow` - Creates a workflow.
-* `DeleteAnnotationStore` - Deletes an annotation store.
-* `DeleteReference` - Deletes a genome reference.
-* `DeleteReferenceStore` - Deletes a genome reference store.
-* `DeleteRun` - Deletes a workflow run.
-* `DeleteRunGroup` - Deletes a workflow run group.
-* `DeleteSequenceStore` - Deletes a sequence store.
-* `DeleteVariantStore` - Deletes a variant store.
-* `DeleteWorkflow` - Deletes a workflow.
-* `GetAnnotationImportJob` - Gets information about an annotation import job.
-* `GetAnnotationStore` - Gets information about an annotation store.
-* `GetReadSet` - Gets a file from a read set.
-* `GetReadSetActivationJob` - Gets information about a read set activation job.
-* `GetReadSetExportJob` - Gets information about a read set export job.
-* `GetReadSetImportJob` - Gets information about a read set import job.
-* `GetReadSetMetadata` - Gets details about a read set.
-* `GetReference` - Gets a reference file.
-* `GetReferenceImportJob` - Gets information about a reference import job.
-* `GetReferenceMetadata` - Gets information about a genome reference's metadata.
-* `GetReferenceStore` - Gets information about a reference store.
-* `GetRun` - Gets information about a workflow run.
-* `GetRunGroup` - Gets information about a workflow run group.
-* `GetRunTask` - Gets information about a workflow run task.
-* `GetSequenceStore` - Gets information about a sequence store.
-* `GetVariantImportJob` - Gets information about a variant import job.
-* `GetVariantStore` - Gets information about a variant store.
-* `GetWorkflow` - Gets information about a workflow.
-* `ListAnnotationImportJobs` - Retrieves a list of annotation import jobs.
-* `ListAnnotationStores` - Retrieves a list of annotation stores.
-* `ListReadSetActivationJobs` - Retrieves a list of read set activation jobs.
-* `ListReadSetExportJobs` - Retrieves a list of read set export jobs.
-* `ListReadSetImportJobs` - Retrieves a list of read set import jobs.
-* `ListReadSets` - Retrieves a list of read sets.
-* `ListReferenceImportJobs` - Retrieves a list of reference import jobs.
-* `ListReferenceStores` - Retrieves a list of reference stores.
-* `ListReferences` - Retrieves a list of references.
-* `ListRunGroups` - Retrieves a list of run groups.
-* `ListRunTasks` - Retrieves a list of tasks for a run.
-* `ListRuns` - Retrieves a list of runs.
-* `ListSequenceStores` - Retrieves a list of sequence stores.
-* `ListTagsForResource` - Retrieves a list of tags for a resource.
-* `ListVariantImportJobs` - Retrieves a list of variant import jobs.
-* `ListVariantStores` - Retrieves a list of variant stores.
-* `ListWorkflows` - Retrieves a list of workflows.
-* `StartAnnotationImportJob` - Starts an annotation import job.
-* `StartReadSetActivationJob` - Activates an archived read set. To reduce storage charges, Amazon Omics archives unused read sets after 30 days.
-* `StartReadSetExportJob` - Exports a read set to Amazon S3.
-* `StartReadSetImportJob` - Starts a read set import job.
-* `StartReferenceImportJob` - Starts a reference import job.
-* `StartRun` - Starts a run.
-* `StartVariantImportJob` - Starts a variant import job.
-* `TagResource` - Tags a resource.
-* `UntagResource` - Removes tags from a resource.
-* `UpdateAnnotationStore` - Updates an annotation store.
-* `UpdateRunGroup` - Updates a run group.
-* `UpdateVariantStore` - Updates a variant store.
-* `UpdateWorkflow` - Updates a workflow.
+* [BatchDeleteReadSet](docs/sdk/README.md#batchdeletereadset) - Deletes one or more read sets.
+* [CancelAnnotationImportJob](docs/sdk/README.md#cancelannotationimportjob) - Cancels an annotation import job.
+* [CancelRun](docs/sdk/README.md#cancelrun) - Cancels a run.
+* [CancelVariantImportJob](docs/sdk/README.md#cancelvariantimportjob) - Cancels a variant import job.
+* [CreateAnnotationStore](docs/sdk/README.md#createannotationstore) - Creates an annotation store.
+* [CreateReferenceStore](docs/sdk/README.md#createreferencestore) - Creates a reference store.
+* [CreateRunGroup](docs/sdk/README.md#createrungroup) - Creates a run group.
+* [CreateSequenceStore](docs/sdk/README.md#createsequencestore) - Creates a sequence store.
+* [CreateVariantStore](docs/sdk/README.md#createvariantstore) - Creates a variant store.
+* [CreateWorkflow](docs/sdk/README.md#createworkflow) - Creates a workflow.
+* [DeleteAnnotationStore](docs/sdk/README.md#deleteannotationstore) - Deletes an annotation store.
+* [DeleteReference](docs/sdk/README.md#deletereference) - Deletes a genome reference.
+* [DeleteReferenceStore](docs/sdk/README.md#deletereferencestore) - Deletes a genome reference store.
+* [DeleteRun](docs/sdk/README.md#deleterun) - Deletes a workflow run.
+* [DeleteRunGroup](docs/sdk/README.md#deleterungroup) - Deletes a workflow run group.
+* [DeleteSequenceStore](docs/sdk/README.md#deletesequencestore) - Deletes a sequence store.
+* [DeleteVariantStore](docs/sdk/README.md#deletevariantstore) - Deletes a variant store.
+* [DeleteWorkflow](docs/sdk/README.md#deleteworkflow) - Deletes a workflow.
+* [GetAnnotationImportJob](docs/sdk/README.md#getannotationimportjob) - Gets information about an annotation import job.
+* [GetAnnotationStore](docs/sdk/README.md#getannotationstore) - Gets information about an annotation store.
+* [GetReadSet](docs/sdk/README.md#getreadset) - Gets a file from a read set.
+* [GetReadSetActivationJob](docs/sdk/README.md#getreadsetactivationjob) - Gets information about a read set activation job.
+* [GetReadSetExportJob](docs/sdk/README.md#getreadsetexportjob) - Gets information about a read set export job.
+* [GetReadSetImportJob](docs/sdk/README.md#getreadsetimportjob) - Gets information about a read set import job.
+* [GetReadSetMetadata](docs/sdk/README.md#getreadsetmetadata) - Gets details about a read set.
+* [GetReference](docs/sdk/README.md#getreference) - Gets a reference file.
+* [GetReferenceImportJob](docs/sdk/README.md#getreferenceimportjob) - Gets information about a reference import job.
+* [GetReferenceMetadata](docs/sdk/README.md#getreferencemetadata) - Gets information about a genome reference's metadata.
+* [GetReferenceStore](docs/sdk/README.md#getreferencestore) - Gets information about a reference store.
+* [GetRun](docs/sdk/README.md#getrun) - Gets information about a workflow run.
+* [GetRunGroup](docs/sdk/README.md#getrungroup) - Gets information about a workflow run group.
+* [GetRunTask](docs/sdk/README.md#getruntask) - Gets information about a workflow run task.
+* [GetSequenceStore](docs/sdk/README.md#getsequencestore) - Gets information about a sequence store.
+* [GetVariantImportJob](docs/sdk/README.md#getvariantimportjob) - Gets information about a variant import job.
+* [GetVariantStore](docs/sdk/README.md#getvariantstore) - Gets information about a variant store.
+* [GetWorkflow](docs/sdk/README.md#getworkflow) - Gets information about a workflow.
+* [ListAnnotationImportJobs](docs/sdk/README.md#listannotationimportjobs) - Retrieves a list of annotation import jobs.
+* [ListAnnotationStores](docs/sdk/README.md#listannotationstores) - Retrieves a list of annotation stores.
+* [ListReadSetActivationJobs](docs/sdk/README.md#listreadsetactivationjobs) - Retrieves a list of read set activation jobs.
+* [ListReadSetExportJobs](docs/sdk/README.md#listreadsetexportjobs) - Retrieves a list of read set export jobs.
+* [ListReadSetImportJobs](docs/sdk/README.md#listreadsetimportjobs) - Retrieves a list of read set import jobs.
+* [ListReadSets](docs/sdk/README.md#listreadsets) - Retrieves a list of read sets.
+* [ListReferenceImportJobs](docs/sdk/README.md#listreferenceimportjobs) - Retrieves a list of reference import jobs.
+* [ListReferenceStores](docs/sdk/README.md#listreferencestores) - Retrieves a list of reference stores.
+* [ListReferences](docs/sdk/README.md#listreferences) - Retrieves a list of references.
+* [ListRunGroups](docs/sdk/README.md#listrungroups) - Retrieves a list of run groups.
+* [ListRunTasks](docs/sdk/README.md#listruntasks) - Retrieves a list of tasks for a run.
+* [ListRuns](docs/sdk/README.md#listruns) - Retrieves a list of runs.
+* [ListSequenceStores](docs/sdk/README.md#listsequencestores) - Retrieves a list of sequence stores.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Retrieves a list of tags for a resource.
+* [ListVariantImportJobs](docs/sdk/README.md#listvariantimportjobs) - Retrieves a list of variant import jobs.
+* [ListVariantStores](docs/sdk/README.md#listvariantstores) - Retrieves a list of variant stores.
+* [ListWorkflows](docs/sdk/README.md#listworkflows) - Retrieves a list of workflows.
+* [StartAnnotationImportJob](docs/sdk/README.md#startannotationimportjob) - Starts an annotation import job.
+* [StartReadSetActivationJob](docs/sdk/README.md#startreadsetactivationjob) - Activates an archived read set. To reduce storage charges, Amazon Omics archives unused read sets after 30 days.
+* [StartReadSetExportJob](docs/sdk/README.md#startreadsetexportjob) - Exports a read set to Amazon S3.
+* [StartReadSetImportJob](docs/sdk/README.md#startreadsetimportjob) - Starts a read set import job.
+* [StartReferenceImportJob](docs/sdk/README.md#startreferenceimportjob) - Starts a reference import job.
+* [StartRun](docs/sdk/README.md#startrun) - Starts a run.
+* [StartVariantImportJob](docs/sdk/README.md#startvariantimportjob) - Starts a variant import job.
+* [TagResource](docs/sdk/README.md#tagresource) - Tags a resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes tags from a resource.
+* [UpdateAnnotationStore](docs/sdk/README.md#updateannotationstore) - Updates an annotation store.
+* [UpdateRunGroup](docs/sdk/README.md#updaterungroup) - Updates a run group.
+* [UpdateVariantStore](docs/sdk/README.md#updatevariantstore) - Updates a variant store.
+* [UpdateWorkflow](docs/sdk/README.md#updateworkflow) - Updates a workflow.
 <!-- End SDK Available Operations -->
 
 ### Maturity

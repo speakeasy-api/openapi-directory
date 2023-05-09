@@ -17,21 +17,25 @@ const (
 	DisableAddressTransferResultAddressTransferAddressTransferStatusEnumAccepted DisableAddressTransferResultAddressTransferAddressTransferStatusEnum = "accepted"
 )
 
+func (e DisableAddressTransferResultAddressTransferAddressTransferStatusEnum) ToPointer() *DisableAddressTransferResultAddressTransferAddressTransferStatusEnum {
+	return &e
+}
+
 func (e *DisableAddressTransferResultAddressTransferAddressTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "accepted":
-		*e = DisableAddressTransferResultAddressTransferAddressTransferStatusEnum(s)
+		*e = DisableAddressTransferResultAddressTransferAddressTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableAddressTransferResultAddressTransferAddressTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableAddressTransferResultAddressTransferAddressTransferStatusEnum: %v", v)
 	}
 }
 

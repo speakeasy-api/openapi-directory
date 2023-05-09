@@ -13,16 +13,20 @@ const (
 	LocationUpdateStatusEnumPendingUpdate LocationUpdateStatusEnum = "PENDING_UPDATE"
 )
 
+func (e LocationUpdateStatusEnum) ToPointer() *LocationUpdateStatusEnum {
+	return &e
+}
+
 func (e *LocationUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_UPDATE":
-		*e = LocationUpdateStatusEnum(s)
+		*e = LocationUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationUpdateStatusEnum: %v", v)
 	}
 }

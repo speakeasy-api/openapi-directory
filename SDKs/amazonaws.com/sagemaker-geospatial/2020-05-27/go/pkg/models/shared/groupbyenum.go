@@ -14,18 +14,22 @@ const (
 	GroupByEnumYearly GroupByEnum = "YEARLY"
 )
 
+func (e GroupByEnum) ToPointer() *GroupByEnum {
+	return &e
+}
+
 func (e *GroupByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "YEARLY":
-		*e = GroupByEnum(s)
+		*e = GroupByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupByEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupByEnum: %v", v)
 	}
 }

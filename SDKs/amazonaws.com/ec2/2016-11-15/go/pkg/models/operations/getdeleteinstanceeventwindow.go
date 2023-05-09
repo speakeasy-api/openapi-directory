@@ -15,17 +15,21 @@ const (
 	GETDeleteInstanceEventWindowActionEnumDeleteInstanceEventWindow GETDeleteInstanceEventWindowActionEnum = "DeleteInstanceEventWindow"
 )
 
+func (e GETDeleteInstanceEventWindowActionEnum) ToPointer() *GETDeleteInstanceEventWindowActionEnum {
+	return &e
+}
+
 func (e *GETDeleteInstanceEventWindowActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInstanceEventWindow":
-		*e = GETDeleteInstanceEventWindowActionEnum(s)
+		*e = GETDeleteInstanceEventWindowActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInstanceEventWindowActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInstanceEventWindowActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 GETDeleteInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteInstanceEventWindowVersionEnum) ToPointer() *GETDeleteInstanceEventWindowVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteInstanceEventWindowVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteInstanceEventWindowVersionEnum(s)
+		*e = GETDeleteInstanceEventWindowVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInstanceEventWindowVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInstanceEventWindowVersionEnum: %v", v)
 	}
 }
 

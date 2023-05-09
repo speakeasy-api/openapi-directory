@@ -20,12 +20,16 @@ const (
 	ModelStatusEnumTrainedWithWarning ModelStatusEnum = "TRAINED_WITH_WARNING"
 )
 
+func (e ModelStatusEnum) ToPointer() *ModelStatusEnum {
+	return &e
+}
+
 func (e *ModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMITTED":
 		fallthrough
 	case "TRAINING":
@@ -41,9 +45,9 @@ func (e *ModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TRAINED":
 		fallthrough
 	case "TRAINED_WITH_WARNING":
-		*e = ModelStatusEnum(s)
+		*e = ModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelStatusEnum: %v", v)
 	}
 }

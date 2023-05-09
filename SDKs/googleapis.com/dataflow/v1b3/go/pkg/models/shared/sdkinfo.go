@@ -17,12 +17,16 @@ const (
 	SDKInfoLanguageEnumGo      SDKInfoLanguageEnum = "GO"
 )
 
+func (e SDKInfoLanguageEnum) ToPointer() *SDKInfoLanguageEnum {
+	return &e
+}
+
 func (e *SDKInfoLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "JAVA":
@@ -30,10 +34,10 @@ func (e *SDKInfoLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "PYTHON":
 		fallthrough
 	case "GO":
-		*e = SDKInfoLanguageEnum(s)
+		*e = SDKInfoLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SDKInfoLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for SDKInfoLanguageEnum: %v", v)
 	}
 }
 

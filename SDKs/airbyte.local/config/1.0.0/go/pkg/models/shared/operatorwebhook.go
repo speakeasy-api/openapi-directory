@@ -20,17 +20,21 @@ const (
 	OperatorWebhookWebhookTypeEnumDbtCloud OperatorWebhookWebhookTypeEnum = "dbtCloud"
 )
 
+func (e OperatorWebhookWebhookTypeEnum) ToPointer() *OperatorWebhookWebhookTypeEnum {
+	return &e
+}
+
 func (e *OperatorWebhookWebhookTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dbtCloud":
-		*e = OperatorWebhookWebhookTypeEnum(s)
+		*e = OperatorWebhookWebhookTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorWebhookWebhookTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorWebhookWebhookTypeEnum: %v", v)
 	}
 }
 

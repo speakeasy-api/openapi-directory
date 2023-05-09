@@ -15,23 +15,27 @@ const (
 	GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnumUrgent  GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum = "URGENT"
 )
 
+func (e GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum) ToPointer() *GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "URGENT":
-		*e = GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum(s)
+		*e = GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3ReviewDocumentRequestPriorityEnum: %v", v)
 	}
 }
 
-// GoogleCloudDocumentaiV1beta3ReviewDocumentRequest - Request message for review document method.
+// GoogleCloudDocumentaiV1beta3ReviewDocumentRequest - Request message for the ReviewDocument method.
 type GoogleCloudDocumentaiV1beta3ReviewDocumentRequest struct {
 	// Document represents the canonical document resource in Document AI. It is an interchange format that provides insights into documents and allows for collaboration between users and Document AI to iterate and optimize for quality.
 	Document *GoogleCloudDocumentaiV1beta3Document `json:"document,omitempty"`

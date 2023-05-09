@@ -34,12 +34,16 @@ const (
 	ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(da
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupDetailsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnumUnknown      ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum = "Unknown"
 )
 
+func (e ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum) ToPointer() *ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum {
+	return &e
+}
+
 func (e *ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -108,10 +116,10 @@ func (e *ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum) Unmarshal
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum(s)
+		*e = ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupDetails200ApplicationJSONReasonFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -152,21 +160,25 @@ const (
 	ErrorsGroupDetails200ApplicationJSONStateEnumIgnored ErrorsGroupDetails200ApplicationJSONStateEnum = "ignored"
 )
 
+func (e ErrorsGroupDetails200ApplicationJSONStateEnum) ToPointer() *ErrorsGroupDetails200ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *ErrorsGroupDetails200ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = ErrorsGroupDetails200ApplicationJSONStateEnum(s)
+		*e = ErrorsGroupDetails200ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGroupDetails200ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGroupDetails200ApplicationJSONStateEnum: %v", v)
 	}
 }
 

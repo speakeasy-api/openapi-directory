@@ -14,18 +14,22 @@ const (
 	ReportCodeCoverageSortByTypeEnumFilePath               ReportCodeCoverageSortByTypeEnum = "FILE_PATH"
 )
 
+func (e ReportCodeCoverageSortByTypeEnum) ToPointer() *ReportCodeCoverageSortByTypeEnum {
+	return &e
+}
+
 func (e *ReportCodeCoverageSortByTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_COVERAGE_PERCENTAGE":
 		fallthrough
 	case "FILE_PATH":
-		*e = ReportCodeCoverageSortByTypeEnum(s)
+		*e = ReportCodeCoverageSortByTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportCodeCoverageSortByTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportCodeCoverageSortByTypeEnum: %v", v)
 	}
 }

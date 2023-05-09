@@ -34,7 +34,10 @@ func newRepricingrules(defaultClient, securityClient HTTPClient, serverURL, lang
 // ContentRepricingrulesCreate - Creates a repricing rule for your Merchant Center account.
 func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, request operations.ContentRepricingrulesCreateRequest, security operations.ContentRepricingrulesCreateSecurity) (*operations.ContentRepricingrulesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepricingRuleInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *repricingrules) ContentRepricingrulesCreate(ctx context.Context, reques
 // ContentRepricingrulesDelete - Deletes a repricing rule in your Merchant Center account.
 func (s *repricingrules) ContentRepricingrulesDelete(ctx context.Context, request operations.ContentRepricingrulesDeleteRequest, security operations.ContentRepricingrulesDeleteSecurity) (*operations.ContentRepricingrulesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *repricingrules) ContentRepricingrulesDelete(ctx context.Context, reques
 // ContentRepricingrulesGet - Retrieves a repricing rule from your Merchant Center account.
 func (s *repricingrules) ContentRepricingrulesGet(ctx context.Context, request operations.ContentRepricingrulesGetRequest, security operations.ContentRepricingrulesGetSecurity) (*operations.ContentRepricingrulesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *repricingrules) ContentRepricingrulesGet(ctx context.Context, request o
 // ContentRepricingrulesList - Lists the repricing rules in your Merchant Center account.
 func (s *repricingrules) ContentRepricingrulesList(ctx context.Context, request operations.ContentRepricingrulesListRequest, security operations.ContentRepricingrulesListSecurity) (*operations.ContentRepricingrulesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *repricingrules) ContentRepricingrulesList(ctx context.Context, request 
 // ContentRepricingrulesPatch - Updates a repricing rule in your Merchant Center account. All mutable fields will be overwritten in each update request. In each update, you must provide all required mutable fields, or an error will be thrown. If you do not provide an optional field in the update request, if that field currently exists, it will be deleted from the rule.
 func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request operations.ContentRepricingrulesPatchRequest, security operations.ContentRepricingrulesPatchSecurity) (*operations.ContentRepricingrulesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepricingRuleInput", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *repricingrules) ContentRepricingrulesPatch(ctx context.Context, request
 // ContentRepricingrulesRepricingreportsList - Lists the metrics report for a given Repricing rule.
 func (s *repricingrules) ContentRepricingrulesRepricingreportsList(ctx context.Context, request operations.ContentRepricingrulesRepricingreportsListRequest, security operations.ContentRepricingrulesRepricingreportsListSecurity) (*operations.ContentRepricingrulesRepricingreportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/repricingrules/{ruleId}/repricingreports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

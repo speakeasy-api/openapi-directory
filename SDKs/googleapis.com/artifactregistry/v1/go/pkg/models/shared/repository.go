@@ -17,16 +17,21 @@ const (
 	RepositoryFormatEnumNpm               RepositoryFormatEnum = "NPM"
 	RepositoryFormatEnumApt               RepositoryFormatEnum = "APT"
 	RepositoryFormatEnumYum               RepositoryFormatEnum = "YUM"
+	RepositoryFormatEnumGooget            RepositoryFormatEnum = "GOOGET"
 	RepositoryFormatEnumPython            RepositoryFormatEnum = "PYTHON"
 	RepositoryFormatEnumKfp               RepositoryFormatEnum = "KFP"
 )
 
+func (e RepositoryFormatEnum) ToPointer() *RepositoryFormatEnum {
+	return &e
+}
+
 func (e *RepositoryFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "DOCKER":
@@ -39,13 +44,15 @@ func (e *RepositoryFormatEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "YUM":
 		fallthrough
+	case "GOOGET":
+		fallthrough
 	case "PYTHON":
 		fallthrough
 	case "KFP":
-		*e = RepositoryFormatEnum(s)
+		*e = RepositoryFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryFormatEnum: %v", v)
 	}
 }
 
@@ -59,12 +66,16 @@ const (
 	RepositoryModeEnumRemoteRepository   RepositoryModeEnum = "REMOTE_REPOSITORY"
 )
 
+func (e RepositoryModeEnum) ToPointer() *RepositoryModeEnum {
+	return &e
+}
+
 func (e *RepositoryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD_REPOSITORY":
@@ -72,10 +83,10 @@ func (e *RepositoryModeEnum) UnmarshalJSON(data []byte) error {
 	case "VIRTUAL_REPOSITORY":
 		fallthrough
 	case "REMOTE_REPOSITORY":
-		*e = RepositoryModeEnum(s)
+		*e = RepositoryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryModeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateCallAnalyticsCategoryXAmzTargetEnumTranscribeCreateCallAnalyticsCategory CreateCallAnalyticsCategoryXAmzTargetEnum = "Transcribe.CreateCallAnalyticsCategory"
 )
 
+func (e CreateCallAnalyticsCategoryXAmzTargetEnum) ToPointer() *CreateCallAnalyticsCategoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCallAnalyticsCategoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.CreateCallAnalyticsCategory":
-		*e = CreateCallAnalyticsCategoryXAmzTargetEnum(s)
+		*e = CreateCallAnalyticsCategoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCallAnalyticsCategoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCallAnalyticsCategoryXAmzTargetEnum: %v", v)
 	}
 }
 

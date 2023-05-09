@@ -14,18 +14,22 @@ const (
 	PrincipalTypeEnumGroup PrincipalTypeEnum = "GROUP"
 )
 
+func (e PrincipalTypeEnum) ToPointer() *PrincipalTypeEnum {
+	return &e
+}
+
 func (e *PrincipalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "GROUP":
-		*e = PrincipalTypeEnum(s)
+		*e = PrincipalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrincipalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PrincipalTypeEnum: %v", v)
 	}
 }

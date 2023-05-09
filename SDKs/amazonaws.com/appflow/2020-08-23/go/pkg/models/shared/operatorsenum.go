@@ -33,12 +33,16 @@ const (
 	OperatorsEnumNoOp                 OperatorsEnum = "NO_OP"
 )
 
+func (e OperatorsEnum) ToPointer() *OperatorsEnum {
+	return &e
+}
+
 func (e *OperatorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -80,9 +84,9 @@ func (e *OperatorsEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = OperatorsEnum(s)
+		*e = OperatorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorsEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorsEnum: %v", v)
 	}
 }

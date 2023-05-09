@@ -90,7 +90,10 @@ func (s *liens) CloudresourcemanagerLiensCreate(ctx context.Context, request ope
 // CloudresourcemanagerLiensDelete - Delete a Lien by `name`. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.updateLiens`.
 func (s *liens) CloudresourcemanagerLiensDelete(ctx context.Context, request operations.CloudresourcemanagerLiensDeleteRequest, security operations.CloudresourcemanagerLiensDeleteSecurity) (*operations.CloudresourcemanagerLiensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

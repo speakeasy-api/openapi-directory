@@ -25,12 +25,16 @@ const (
 	MiscKeywordTypeEnumOther                     MiscKeywordTypeEnum = "OTHER"
 )
 
+func (e MiscKeywordTypeEnum) ToPointer() *MiscKeywordTypeEnum {
+	return &e
+}
+
 func (e *MiscKeywordTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "OUTLOOK_BILLING_INFORMATION":
@@ -54,10 +58,10 @@ func (e *MiscKeywordTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WORK":
 		fallthrough
 	case "OTHER":
-		*e = MiscKeywordTypeEnum(s)
+		*e = MiscKeywordTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MiscKeywordTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MiscKeywordTypeEnum: %v", v)
 	}
 }
 

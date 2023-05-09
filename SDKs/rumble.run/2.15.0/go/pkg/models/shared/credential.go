@@ -22,12 +22,16 @@ const (
 	CredentialTypeEnumVmwareUsernamePassword CredentialTypeEnum = "vmware_username_password"
 )
 
+func (e CredentialTypeEnum) ToPointer() *CredentialTypeEnum {
+	return &e
+}
+
 func (e *CredentialTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "miradore_api_key_v1":
 		fallthrough
 	case "aws_access_secret":
@@ -45,10 +49,10 @@ func (e *CredentialTypeEnum) UnmarshalJSON(data []byte) error {
 	case "snmpv3_credential":
 		fallthrough
 	case "vmware_username_password":
-		*e = CredentialTypeEnum(s)
+		*e = CredentialTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CredentialTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CredentialTypeEnum: %v", v)
 	}
 }
 

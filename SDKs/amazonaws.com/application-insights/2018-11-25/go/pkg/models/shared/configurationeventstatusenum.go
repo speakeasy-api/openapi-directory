@@ -15,20 +15,24 @@ const (
 	ConfigurationEventStatusEnumError ConfigurationEventStatusEnum = "ERROR"
 )
 
+func (e ConfigurationEventStatusEnum) ToPointer() *ConfigurationEventStatusEnum {
+	return &e
+}
+
 func (e *ConfigurationEventStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFO":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "ERROR":
-		*e = ConfigurationEventStatusEnum(s)
+		*e = ConfigurationEventStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationEventStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationEventStatusEnum: %v", v)
 	}
 }

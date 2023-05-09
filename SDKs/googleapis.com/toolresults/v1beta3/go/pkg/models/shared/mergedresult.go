@@ -17,12 +17,16 @@ const (
 	MergedResultStateEnumComplete     MergedResultStateEnum = "complete"
 )
 
+func (e MergedResultStateEnum) ToPointer() *MergedResultStateEnum {
+	return &e
+}
+
 func (e *MergedResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownState":
 		fallthrough
 	case "pending":
@@ -30,10 +34,10 @@ func (e *MergedResultStateEnum) UnmarshalJSON(data []byte) error {
 	case "inProgress":
 		fallthrough
 	case "complete":
-		*e = MergedResultStateEnum(s)
+		*e = MergedResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergedResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MergedResultStateEnum: %v", v)
 	}
 }
 

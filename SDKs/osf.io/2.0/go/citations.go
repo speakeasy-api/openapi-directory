@@ -100,7 +100,10 @@ func (s *citations) CitationsStylesList(ctx context.Context) (*operations.Citati
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *citations) CitationsStylesRead(ctx context.Context, request operations.CitationsStylesReadRequest) (*operations.CitationsStylesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/citations/styles/{style_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/citations/styles/{style_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

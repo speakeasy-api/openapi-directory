@@ -16,17 +16,21 @@ const (
 	SetIPAddressTypeXAmzTargetEnumLightsail20161128SetIPAddressType SetIPAddressTypeXAmzTargetEnum = "Lightsail_20161128.SetIpAddressType"
 )
 
+func (e SetIPAddressTypeXAmzTargetEnum) ToPointer() *SetIPAddressTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetIPAddressTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.SetIpAddressType":
-		*e = SetIPAddressTypeXAmzTargetEnum(s)
+		*e = SetIPAddressTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetIPAddressTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetIPAddressTypeXAmzTargetEnum: %v", v)
 	}
 }
 

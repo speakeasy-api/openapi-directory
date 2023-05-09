@@ -16,17 +16,21 @@ const (
 	DescribeImportTasksXAmzTargetEnumAwsPoseidonServiceV20151101DescribeImportTasks DescribeImportTasksXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.DescribeImportTasks"
 )
 
+func (e DescribeImportTasksXAmzTargetEnum) ToPointer() *DescribeImportTasksXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeImportTasksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.DescribeImportTasks":
-		*e = DescribeImportTasksXAmzTargetEnum(s)
+		*e = DescribeImportTasksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImportTasksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImportTasksXAmzTargetEnum: %v", v)
 	}
 }
 

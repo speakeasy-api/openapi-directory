@@ -14,18 +14,22 @@ const (
 	WebserverAccessModeEnumPublicOnly  WebserverAccessModeEnum = "PUBLIC_ONLY"
 )
 
+func (e WebserverAccessModeEnum) ToPointer() *WebserverAccessModeEnum {
+	return &e
+}
+
 func (e *WebserverAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_ONLY":
 		fallthrough
 	case "PUBLIC_ONLY":
-		*e = WebserverAccessModeEnum(s)
+		*e = WebserverAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebserverAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for WebserverAccessModeEnum: %v", v)
 	}
 }

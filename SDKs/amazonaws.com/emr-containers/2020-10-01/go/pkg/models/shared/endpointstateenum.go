@@ -17,12 +17,16 @@ const (
 	EndpointStateEnumTerminatedWithErrors EndpointStateEnum = "TERMINATED_WITH_ERRORS"
 )
 
+func (e EndpointStateEnum) ToPointer() *EndpointStateEnum {
+	return &e
+}
+
 func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *EndpointStateEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATED":
 		fallthrough
 	case "TERMINATED_WITH_ERRORS":
-		*e = EndpointStateEnum(s)
+		*e = EndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointStateEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	DataPointsCountStatusEnumSpam    DataPointsCountStatusEnum = "spam"
 )
 
+func (e DataPointsCountStatusEnum) ToPointer() *DataPointsCountStatusEnum {
+	return &e
+}
+
 func (e *DataPointsCountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -32,10 +36,10 @@ func (e *DataPointsCountStatusEnum) UnmarshalJSON(data []byte) error {
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = DataPointsCountStatusEnum(s)
+		*e = DataPointsCountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsCountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsCountStatusEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	DataPointsCountTypeEnumTl DataPointsCountTypeEnum = "tl"
 )
 
+func (e DataPointsCountTypeEnum) ToPointer() *DataPointsCountTypeEnum {
+	return &e
+}
+
 func (e *DataPointsCountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = DataPointsCountTypeEnum(s)
+		*e = DataPointsCountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsCountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsCountTypeEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	SourceAccessTypeEnumServerRootCaCertificate  SourceAccessTypeEnum = "SERVER_ROOT_CA_CERTIFICATE"
 )
 
+func (e SourceAccessTypeEnum) ToPointer() *SourceAccessTypeEnum {
+	return &e
+}
+
 func (e *SourceAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_AUTH":
 		fallthrough
 	case "VPC_SUBNET":
@@ -41,9 +45,9 @@ func (e *SourceAccessTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CLIENT_CERTIFICATE_TLS_AUTH":
 		fallthrough
 	case "SERVER_ROOT_CA_CERTIFICATE":
-		*e = SourceAccessTypeEnum(s)
+		*e = SourceAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceAccessTypeEnum: %v", v)
 	}
 }

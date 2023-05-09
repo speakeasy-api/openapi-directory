@@ -37,7 +37,10 @@ func newTftp(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Agent's TFTP configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *tftp) ProtocolTftpGetArgs(ctx context.Context, request operations.ProtocolTftpGetArgsRequest) (*operations.ProtocolTftpGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *tftp) ProtocolTftpGetArgs(ctx context.Context, request operations.Proto
 // Agent's TFTP configuration
 func (s *tftp) ProtocolTftpGetConfig(ctx context.Context, request operations.ProtocolTftpGetConfigRequest) (*operations.ProtocolTftpGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *tftp) ProtocolTftpGetConfig(ctx context.Context, request operations.Pro
 // Statistics of fields indicated in the headers
 func (s *tftp) ProtocolTftpGetStatistics(ctx context.Context, request operations.ProtocolTftpGetStatisticsRequest) (*operations.ProtocolTftpGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +230,10 @@ func (s *tftp) ProtocolTftpGetStatsHdr(ctx context.Context) (*operations.Protoco
 // Trace 1 means enabled, 0 means not
 func (s *tftp) ProtocolTftpGetTrace(ctx context.Context, request operations.ProtocolTftpGetTraceRequest) (*operations.ProtocolTftpGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *tftp) ProtocolTftpGetTrace(ctx context.Context, request operations.Prot
 // Parameter is server , port , or dstfile
 func (s *tftp) ProtocolTftpSessionGetParameter(ctx context.Context, request operations.ProtocolTftpSessionGetParameterRequest) (*operations.ProtocolTftpSessionGetParameterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/get/{parameter}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/get/{parameter}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *tftp) ProtocolTftpSessionGetParameter(ctx context.Context, request oper
 // Session ID is returned
 func (s *tftp) ProtocolTftpSessionRead(ctx context.Context, request operations.ProtocolTftpSessionReadRequest) (*operations.ProtocolTftpSessionReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/read/server/{srcfile}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/read/server/{srcfile}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -360,7 +378,10 @@ func (s *tftp) ProtocolTftpSessionRead(ctx context.Context, request operations.P
 // Parameter is server , port , or dstfile
 func (s *tftp) ProtocolTftpSessionSetParameter(ctx context.Context, request operations.ProtocolTftpSessionSetParameterRequest) (*operations.ProtocolTftpSessionSetParameterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/set/{parameter}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/set/{parameter}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -407,7 +428,10 @@ func (s *tftp) ProtocolTftpSessionSetParameter(ctx context.Context, request oper
 // Start uploading or downloading the file
 func (s *tftp) ProtocolTftpSessionStart(ctx context.Context, request operations.ProtocolTftpSessionStartRequest) (*operations.ProtocolTftpSessionStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *tftp) ProtocolTftpSessionStart(ctx context.Context, request operations.
 // Status includes running state, bytes transfered, and time elapsed
 func (s *tftp) ProtocolTftpSessionStatus(ctx context.Context, request operations.ProtocolTftpSessionStatusRequest) (*operations.ProtocolTftpSessionStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *tftp) ProtocolTftpSessionStatus(ctx context.Context, request operations
 // Stop uploading or downloading the file
 func (s *tftp) ProtocolTftpSessionStop(ctx context.Context, request operations.ProtocolTftpSessionStopRequest) (*operations.ProtocolTftpSessionStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/{sessionID}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -548,7 +578,10 @@ func (s *tftp) ProtocolTftpSessionStop(ctx context.Context, request operations.P
 // Session ID is returned
 func (s *tftp) ProtocolTftpSessionWrite(ctx context.Context, request operations.ProtocolTftpSessionWriteRequest) (*operations.ProtocolTftpSessionWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/write/server/{srcfile}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/session/write/server/{srcfile}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -594,7 +627,10 @@ func (s *tftp) ProtocolTftpSessionWrite(ctx context.Context, request operations.
 // Agent's TFTP configuration
 func (s *tftp) ProtocolTftpSetConfig(ctx context.Context, request operations.ProtocolTftpSetConfigRequest) (*operations.ProtocolTftpSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -641,7 +677,10 @@ func (s *tftp) ProtocolTftpSetConfig(ctx context.Context, request operations.Pro
 // 1 to enable, 0 to disable
 func (s *tftp) ProtocolTftpSetTrace(ctx context.Context, request operations.ProtocolTftpSetTraceRequest) (*operations.ProtocolTftpSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/tftp/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

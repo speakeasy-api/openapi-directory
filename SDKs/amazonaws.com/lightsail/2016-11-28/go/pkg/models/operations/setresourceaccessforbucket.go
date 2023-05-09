@@ -16,17 +16,21 @@ const (
 	SetResourceAccessForBucketXAmzTargetEnumLightsail20161128SetResourceAccessForBucket SetResourceAccessForBucketXAmzTargetEnum = "Lightsail_20161128.SetResourceAccessForBucket"
 )
 
+func (e SetResourceAccessForBucketXAmzTargetEnum) ToPointer() *SetResourceAccessForBucketXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetResourceAccessForBucketXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.SetResourceAccessForBucket":
-		*e = SetResourceAccessForBucketXAmzTargetEnum(s)
+		*e = SetResourceAccessForBucketXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetResourceAccessForBucketXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetResourceAccessForBucketXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	LinkedSourceDocumentSourceEnumIcloud      LinkedSourceDocumentSourceEnum = "icloud"
 )
 
+func (e LinkedSourceDocumentSourceEnum) ToPointer() *LinkedSourceDocumentSourceEnum {
+	return &e
+}
+
 func (e *LinkedSourceDocumentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dropbox":
 		fallthrough
 	case "googledrive":
 		fallthrough
 	case "icloud":
-		*e = LinkedSourceDocumentSourceEnum(s)
+		*e = LinkedSourceDocumentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinkedSourceDocumentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for LinkedSourceDocumentSourceEnum: %v", v)
 	}
 }
 

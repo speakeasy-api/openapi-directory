@@ -15,17 +15,21 @@ const (
 	POSTDisassociateTransitGatewayMulticastDomainActionEnumDisassociateTransitGatewayMulticastDomain POSTDisassociateTransitGatewayMulticastDomainActionEnum = "DisassociateTransitGatewayMulticastDomain"
 )
 
+func (e POSTDisassociateTransitGatewayMulticastDomainActionEnum) ToPointer() *POSTDisassociateTransitGatewayMulticastDomainActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateTransitGatewayMulticastDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateTransitGatewayMulticastDomain":
-		*e = POSTDisassociateTransitGatewayMulticastDomainActionEnum(s)
+		*e = POSTDisassociateTransitGatewayMulticastDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateTransitGatewayMulticastDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateTransitGatewayMulticastDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 POSTDisassociateTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
+func (e POSTDisassociateTransitGatewayMulticastDomainVersionEnum) ToPointer() *POSTDisassociateTransitGatewayMulticastDomainVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDisassociateTransitGatewayMulticastDomainVersionEnum(s)
+		*e = POSTDisassociateTransitGatewayMulticastDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateTransitGatewayMulticastDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateTransitGatewayMulticastDomainVersionEnum: %v", v)
 	}
 }
 

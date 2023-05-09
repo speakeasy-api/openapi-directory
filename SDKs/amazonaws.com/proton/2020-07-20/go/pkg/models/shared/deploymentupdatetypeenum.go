@@ -16,12 +16,16 @@ const (
 	DeploymentUpdateTypeEnumMajorVersion   DeploymentUpdateTypeEnum = "MAJOR_VERSION"
 )
 
+func (e DeploymentUpdateTypeEnum) ToPointer() *DeploymentUpdateTypeEnum {
+	return &e
+}
+
 func (e *DeploymentUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "CURRENT_VERSION":
@@ -29,9 +33,9 @@ func (e *DeploymentUpdateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MINOR_VERSION":
 		fallthrough
 	case "MAJOR_VERSION":
-		*e = DeploymentUpdateTypeEnum(s)
+		*e = DeploymentUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentUpdateTypeEnum: %v", v)
 	}
 }

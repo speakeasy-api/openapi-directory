@@ -15,20 +15,24 @@ const (
 	QualityEnumUncertain QualityEnum = "UNCERTAIN"
 )
 
+func (e QualityEnum) ToPointer() *QualityEnum {
+	return &e
+}
+
 func (e *QualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOD":
 		fallthrough
 	case "BAD":
 		fallthrough
 	case "UNCERTAIN":
-		*e = QualityEnum(s)
+		*e = QualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QualityEnum: %s", s)
+		return fmt.Errorf("invalid value for QualityEnum: %v", v)
 	}
 }

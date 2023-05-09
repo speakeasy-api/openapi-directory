@@ -17,19 +17,23 @@ const (
 	PlayerSeasonSplitStatsFormatEnumJSON PlayerSeasonSplitStatsFormatEnum = "JSON"
 )
 
+func (e PlayerSeasonSplitStatsFormatEnum) ToPointer() *PlayerSeasonSplitStatsFormatEnum {
+	return &e
+}
+
 func (e *PlayerSeasonSplitStatsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = PlayerSeasonSplitStatsFormatEnum(s)
+		*e = PlayerSeasonSplitStatsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerSeasonSplitStatsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerSeasonSplitStatsFormatEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	PlayerSeasonSplitStatsSplitEnumS PlayerSeasonSplitStatsSplitEnum = "S"
 )
 
+func (e PlayerSeasonSplitStatsSplitEnum) ToPointer() *PlayerSeasonSplitStatsSplitEnum {
+	return &e
+}
+
 func (e *PlayerSeasonSplitStatsSplitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L":
 		fallthrough
 	case "R":
 		fallthrough
 	case "S":
-		*e = PlayerSeasonSplitStatsSplitEnum(s)
+		*e = PlayerSeasonSplitStatsSplitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerSeasonSplitStatsSplitEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerSeasonSplitStatsSplitEnum: %v", v)
 	}
 }
 

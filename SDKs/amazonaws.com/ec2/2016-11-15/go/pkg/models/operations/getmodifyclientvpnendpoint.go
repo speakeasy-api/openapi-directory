@@ -15,17 +15,21 @@ const (
 	GETModifyClientVpnEndpointActionEnumModifyClientVpnEndpoint GETModifyClientVpnEndpointActionEnum = "ModifyClientVpnEndpoint"
 )
 
+func (e GETModifyClientVpnEndpointActionEnum) ToPointer() *GETModifyClientVpnEndpointActionEnum {
+	return &e
+}
+
 func (e *GETModifyClientVpnEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyClientVpnEndpoint":
-		*e = GETModifyClientVpnEndpointActionEnum(s)
+		*e = GETModifyClientVpnEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointActionEnum: %v", v)
 	}
 }
 
@@ -62,19 +66,23 @@ const (
 	GETModifyClientVpnEndpointSelfServicePortalEnumDisabled GETModifyClientVpnEndpointSelfServicePortalEnum = "disabled"
 )
 
+func (e GETModifyClientVpnEndpointSelfServicePortalEnum) ToPointer() *GETModifyClientVpnEndpointSelfServicePortalEnum {
+	return &e
+}
+
 func (e *GETModifyClientVpnEndpointSelfServicePortalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = GETModifyClientVpnEndpointSelfServicePortalEnum(s)
+		*e = GETModifyClientVpnEndpointSelfServicePortalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointSelfServicePortalEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointSelfServicePortalEnum: %v", v)
 	}
 }
 
@@ -85,17 +93,21 @@ const (
 	GETModifyClientVpnEndpointVersionEnumTwoThousandAndSixteen1115 GETModifyClientVpnEndpointVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyClientVpnEndpointVersionEnum) ToPointer() *GETModifyClientVpnEndpointVersionEnum {
+	return &e
+}
+
 func (e *GETModifyClientVpnEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyClientVpnEndpointVersionEnum(s)
+		*e = GETModifyClientVpnEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyClientVpnEndpointVersionEnum: %v", v)
 	}
 }
 

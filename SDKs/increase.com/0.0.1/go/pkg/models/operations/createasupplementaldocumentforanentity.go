@@ -14,23 +14,27 @@ type CreateASupplementalDocumentForAnEntityRequest struct {
 	EntityID                                         string                                                  `pathParam:"style=simple,explode=false,name=entity_id"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum = "429"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -40,17 +44,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnumRateLimitedError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -62,23 +70,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13 struct {
 	Type       CreateASupplementalDocumentForAnEntityDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum = "403"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -88,17 +100,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -109,23 +125,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum = "404"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -135,17 +155,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -156,23 +180,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnumFourHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum = "400"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnumFourHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -182,17 +210,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnumMalformedRequestError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -203,23 +235,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnumFourHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum = "400"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnumFourHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -229,46 +265,54 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnumInvalidParametersError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                                `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                                `json:"errors"`
 	Status CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                                  `json:"title"`
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum = "409"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -278,17 +322,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnumInvalidOperationError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -299,23 +347,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum = "401"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -325,17 +377,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -346,23 +402,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnumFiveHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum = "500"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnumFiveHundred CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -372,17 +432,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnumInternalServerError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -393,23 +457,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum = "403"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -419,17 +487,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -440,23 +512,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum = "422"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -466,17 +542,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -487,23 +567,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum = "409"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -513,17 +597,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -534,23 +622,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum = "403"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -560,17 +652,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -581,23 +677,27 @@ type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2 struct {
 	Type   CreateASupplementalDocumentForAnEntityDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum string
+type CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum = "404"
+	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -607,17 +707,21 @@ const (
 	CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum) ToPointer() *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateASupplementalDocumentForAnEntityDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

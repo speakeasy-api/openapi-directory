@@ -15,18 +15,22 @@ const (
 	RouteRepresentationEnumNone     RouteRepresentationEnum = "none"
 )
 
+func (e RouteRepresentationEnum) ToPointer() *RouteRepresentationEnum {
+	return &e
+}
+
 func (e *RouteRepresentationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "polyline":
 		fallthrough
 	case "none":
-		*e = RouteRepresentationEnum(s)
+		*e = RouteRepresentationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteRepresentationEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteRepresentationEnum: %v", v)
 	}
 }

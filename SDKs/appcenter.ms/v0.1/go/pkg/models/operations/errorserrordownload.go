@@ -20,19 +20,23 @@ const (
 	ErrorsErrorDownloadFormatEnumTxt  ErrorsErrorDownloadFormatEnum = "txt"
 )
 
+func (e ErrorsErrorDownloadFormatEnum) ToPointer() *ErrorsErrorDownloadFormatEnum {
+	return &e
+}
+
 func (e *ErrorsErrorDownloadFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "txt":
-		*e = ErrorsErrorDownloadFormatEnum(s)
+		*e = ErrorsErrorDownloadFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorDownloadFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorDownloadFormatEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -80,10 +88,10 @@ func (e *ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(d
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorDownloadDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

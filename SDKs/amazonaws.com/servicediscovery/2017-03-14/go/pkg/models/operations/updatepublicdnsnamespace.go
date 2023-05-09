@@ -16,17 +16,21 @@ const (
 	UpdatePublicDNSNamespaceXAmzTargetEnumRoute53AutoNamingV20170314UpdatePublicDNSNamespace UpdatePublicDNSNamespaceXAmzTargetEnum = "Route53AutoNaming_v20170314.UpdatePublicDnsNamespace"
 )
 
+func (e UpdatePublicDNSNamespaceXAmzTargetEnum) ToPointer() *UpdatePublicDNSNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePublicDNSNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.UpdatePublicDnsNamespace":
-		*e = UpdatePublicDNSNamespaceXAmzTargetEnum(s)
+		*e = UpdatePublicDNSNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePublicDNSNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePublicDNSNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

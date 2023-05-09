@@ -2,20 +2,20 @@
 
 package shared
 
-// AccessReview - Conveys information about a Kubernetes access review (e.g. kubectl auth can-i ...) that was involved in a finding.
+// AccessReview - Conveys information about a Kubernetes access review (such as one returned by a [`kubectl auth can-i`](https://kubernetes.io/docs/reference/access-authn-authz/authorization/#checking-api-access) command) that was involved in a finding.
 type AccessReview struct {
-	// Group is the API Group of the Resource. "*" means all.
+	// The API group of the resource. "*" means all.
 	Group *string `json:"group,omitempty"`
-	// Name is the name of the resource being requested. Empty means all.
+	// The name of the resource being requested. Empty means all.
 	Name *string `json:"name,omitempty"`
 	// Namespace of the action being requested. Currently, there is no distinction between no namespace and all namespaces. Both are represented by "" (empty).
 	Ns *string `json:"ns,omitempty"`
-	// Resource is the optional resource type requested. "*" means all.
+	// The optional resource type requested. "*" means all.
 	Resource *string `json:"resource,omitempty"`
-	// Subresource is the optional subresource type.
+	// The optional subresource type.
 	Subresource *string `json:"subresource,omitempty"`
-	// Verb is a Kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy. "*" means all.
+	// A Kubernetes resource API verb, like get, list, watch, create, update, delete, proxy. "*" means all.
 	Verb *string `json:"verb,omitempty"`
-	// Version is the API Version of the Resource. "*" means all.
+	// The API version of the resource. "*" means all.
 	Version *string `json:"version,omitempty"`
 }

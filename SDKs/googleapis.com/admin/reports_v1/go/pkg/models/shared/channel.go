@@ -14,7 +14,7 @@ type Channel struct {
 	Kind *string `json:"kind,omitempty"`
 	// Additional parameters controlling delivery channel behavior. Optional.
 	Params map[string]string `json:"params,omitempty"`
-	// A Boolean value to indicate whether payload is wanted. Optional.
+	// A Boolean value to indicate whether payload is wanted. A payload is data that is sent in the body of an HTTP POST, PUT, or PATCH message and contains important information about the request. Optional.
 	Payload *bool `json:"payload,omitempty"`
 	// An opaque ID that identifies the resource being watched on this channel. Stable across different API versions.
 	ResourceID *string `json:"resourceId,omitempty"`

@@ -15,17 +15,21 @@ const (
 	POSTDescribeSpotDatafeedSubscriptionActionEnumDescribeSpotDatafeedSubscription POSTDescribeSpotDatafeedSubscriptionActionEnum = "DescribeSpotDatafeedSubscription"
 )
 
+func (e POSTDescribeSpotDatafeedSubscriptionActionEnum) ToPointer() *POSTDescribeSpotDatafeedSubscriptionActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSpotDatafeedSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSpotDatafeedSubscription":
-		*e = POSTDescribeSpotDatafeedSubscriptionActionEnum(s)
+		*e = POSTDescribeSpotDatafeedSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSpotDatafeedSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSpotDatafeedSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeSpotDatafeedSubscriptionVersionEnumTwoThousandAndSixteen1115 POSTDescribeSpotDatafeedSubscriptionVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeSpotDatafeedSubscriptionVersionEnum) ToPointer() *POSTDescribeSpotDatafeedSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSpotDatafeedSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeSpotDatafeedSubscriptionVersionEnum(s)
+		*e = POSTDescribeSpotDatafeedSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSpotDatafeedSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSpotDatafeedSubscriptionVersionEnum: %v", v)
 	}
 }
 

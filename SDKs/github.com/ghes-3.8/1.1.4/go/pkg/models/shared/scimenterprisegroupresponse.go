@@ -20,19 +20,23 @@ const (
 	ScimEnterpriseGroupResponseSchemasEnumUrnIetfParamsScimAPIMessages20ListResponse ScimEnterpriseGroupResponseSchemasEnum = "urn:ietf:params:scim:api:messages:2.0:ListResponse"
 )
 
+func (e ScimEnterpriseGroupResponseSchemasEnum) ToPointer() *ScimEnterpriseGroupResponseSchemasEnum {
+	return &e
+}
+
 func (e *ScimEnterpriseGroupResponseSchemasEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:scim:schemas:core:2.0:Group":
 		fallthrough
 	case "urn:ietf:params:scim:api:messages:2.0:ListResponse":
-		*e = ScimEnterpriseGroupResponseSchemasEnum(s)
+		*e = ScimEnterpriseGroupResponseSchemasEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScimEnterpriseGroupResponseSchemasEnum: %s", s)
+		return fmt.Errorf("invalid value for ScimEnterpriseGroupResponseSchemasEnum: %v", v)
 	}
 }
 

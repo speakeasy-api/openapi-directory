@@ -17,12 +17,16 @@ const (
 	GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnumBatteryReplaceNow        GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum = "BATTERY_REPLACE_NOW"
 )
 
+func (e GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum) ToPointer() *GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATTERY_HEALTH_UNSPECIFIED":
 		fallthrough
 	case "BATTERY_HEALTH_NORMAL":
@@ -30,14 +34,14 @@ func (e *GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum) Unmarshal
 	case "BATTERY_REPLACE_SOON":
 		fallthrough
 	case "BATTERY_REPLACE_NOW":
-		*e = GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum(s)
+		*e = GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum: %v", v)
 	}
 }
 
-// GoogleChromeManagementV1BatteryStatusReport - Status data for battery. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+// GoogleChromeManagementV1BatteryStatusReport - Status data for battery. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDevicePowerStatus](https://chromeenterprise.google/policies/#ReportDevicePowerStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_BATTERY_REPORT
 type GoogleChromeManagementV1BatteryStatusReport struct {
 	// Output only. Battery health.
 	BatteryHealth *GoogleChromeManagementV1BatteryStatusReportBatteryHealthEnum `json:"batteryHealth,omitempty"`

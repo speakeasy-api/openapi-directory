@@ -118,7 +118,10 @@ func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccoun
 // Get Accounts by Account ID
 func (s *accounts) GetAccountsAccountID(ctx context.Context, request operations.GetAccountsAccountIDRequest, security operations.GetAccountsAccountIDSecurity) (*operations.GetAccountsAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

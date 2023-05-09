@@ -20,12 +20,16 @@ const (
 	GooglePrivacyDlpV2TimePartConfigPartToExtractEnumHourOfDay           GooglePrivacyDlpV2TimePartConfigPartToExtractEnum = "HOUR_OF_DAY"
 )
 
+func (e GooglePrivacyDlpV2TimePartConfigPartToExtractEnum) ToPointer() *GooglePrivacyDlpV2TimePartConfigPartToExtractEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2TimePartConfigPartToExtractEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_PART_UNSPECIFIED":
 		fallthrough
 	case "YEAR":
@@ -39,10 +43,10 @@ func (e *GooglePrivacyDlpV2TimePartConfigPartToExtractEnum) UnmarshalJSON(data [
 	case "WEEK_OF_YEAR":
 		fallthrough
 	case "HOUR_OF_DAY":
-		*e = GooglePrivacyDlpV2TimePartConfigPartToExtractEnum(s)
+		*e = GooglePrivacyDlpV2TimePartConfigPartToExtractEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2TimePartConfigPartToExtractEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2TimePartConfigPartToExtractEnum: %v", v)
 	}
 }
 

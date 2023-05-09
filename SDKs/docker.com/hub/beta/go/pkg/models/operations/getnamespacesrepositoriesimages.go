@@ -21,12 +21,16 @@ const (
 	GetNamespacesRepositoriesImagesOrderingEnumMinusDigest       GetNamespacesRepositoriesImagesOrderingEnum = "-digest"
 )
 
+func (e GetNamespacesRepositoriesImagesOrderingEnum) ToPointer() *GetNamespacesRepositoriesImagesOrderingEnum {
+	return &e
+}
+
 func (e *GetNamespacesRepositoriesImagesOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "last_activity":
 		fallthrough
 	case "-last_activity":
@@ -34,10 +38,10 @@ func (e *GetNamespacesRepositoriesImagesOrderingEnum) UnmarshalJSON(data []byte)
 	case "digest":
 		fallthrough
 	case "-digest":
-		*e = GetNamespacesRepositoriesImagesOrderingEnum(s)
+		*e = GetNamespacesRepositoriesImagesOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamespacesRepositoriesImagesOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamespacesRepositoriesImagesOrderingEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetNamespacesRepositoriesImagesStatusEnumInactive GetNamespacesRepositoriesImagesStatusEnum = "inactive"
 )
 
+func (e GetNamespacesRepositoriesImagesStatusEnum) ToPointer() *GetNamespacesRepositoriesImagesStatusEnum {
+	return &e
+}
+
 func (e *GetNamespacesRepositoriesImagesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = GetNamespacesRepositoriesImagesStatusEnum(s)
+		*e = GetNamespacesRepositoriesImagesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamespacesRepositoriesImagesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamespacesRepositoriesImagesStatusEnum: %v", v)
 	}
 }
 

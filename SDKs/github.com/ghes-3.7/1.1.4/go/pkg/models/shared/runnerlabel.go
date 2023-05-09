@@ -15,19 +15,23 @@ const (
 	RunnerLabelTypeEnumCustom   RunnerLabelTypeEnum = "custom"
 )
 
+func (e RunnerLabelTypeEnum) ToPointer() *RunnerLabelTypeEnum {
+	return &e
+}
+
 func (e *RunnerLabelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read-only":
 		fallthrough
 	case "custom":
-		*e = RunnerLabelTypeEnum(s)
+		*e = RunnerLabelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunnerLabelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RunnerLabelTypeEnum: %v", v)
 	}
 }
 

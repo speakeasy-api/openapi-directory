@@ -27,12 +27,16 @@ const (
 	CloudassetBatchGetAssetsHistoryContentTypeEnumRelationship           CloudassetBatchGetAssetsHistoryContentTypeEnum = "RELATIONSHIP"
 )
 
+func (e CloudassetBatchGetAssetsHistoryContentTypeEnum) ToPointer() *CloudassetBatchGetAssetsHistoryContentTypeEnum {
+	return &e
+}
+
 func (e *CloudassetBatchGetAssetsHistoryContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE":
@@ -46,10 +50,10 @@ func (e *CloudassetBatchGetAssetsHistoryContentTypeEnum) UnmarshalJSON(data []by
 	case "OS_INVENTORY":
 		fallthrough
 	case "RELATIONSHIP":
-		*e = CloudassetBatchGetAssetsHistoryContentTypeEnum(s)
+		*e = CloudassetBatchGetAssetsHistoryContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudassetBatchGetAssetsHistoryContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudassetBatchGetAssetsHistoryContentTypeEnum: %v", v)
 	}
 }
 

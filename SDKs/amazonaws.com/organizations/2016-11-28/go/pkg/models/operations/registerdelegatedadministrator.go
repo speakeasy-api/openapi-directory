@@ -16,17 +16,21 @@ const (
 	RegisterDelegatedAdministratorXAmzTargetEnumAwsOrganizationsV20161128RegisterDelegatedAdministrator RegisterDelegatedAdministratorXAmzTargetEnum = "AWSOrganizationsV20161128.RegisterDelegatedAdministrator"
 )
 
+func (e RegisterDelegatedAdministratorXAmzTargetEnum) ToPointer() *RegisterDelegatedAdministratorXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterDelegatedAdministratorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.RegisterDelegatedAdministrator":
-		*e = RegisterDelegatedAdministratorXAmzTargetEnum(s)
+		*e = RegisterDelegatedAdministratorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDelegatedAdministratorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDelegatedAdministratorXAmzTargetEnum: %v", v)
 	}
 }
 

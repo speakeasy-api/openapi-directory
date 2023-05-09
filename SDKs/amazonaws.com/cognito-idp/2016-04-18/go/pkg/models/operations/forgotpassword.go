@@ -16,17 +16,21 @@ const (
 	ForgotPasswordXAmzTargetEnumAwsCognitoIdentityProviderServiceForgotPassword ForgotPasswordXAmzTargetEnum = "AWSCognitoIdentityProviderService.ForgotPassword"
 )
 
+func (e ForgotPasswordXAmzTargetEnum) ToPointer() *ForgotPasswordXAmzTargetEnum {
+	return &e
+}
+
 func (e *ForgotPasswordXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.ForgotPassword":
-		*e = ForgotPasswordXAmzTargetEnum(s)
+		*e = ForgotPasswordXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ForgotPasswordXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ForgotPasswordXAmzTargetEnum: %v", v)
 	}
 }
 

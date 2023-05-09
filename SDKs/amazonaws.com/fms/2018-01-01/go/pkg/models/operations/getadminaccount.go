@@ -16,17 +16,21 @@ const (
 	GetAdminAccountXAmzTargetEnumAwsfms20180101GetAdminAccount GetAdminAccountXAmzTargetEnum = "AWSFMS_20180101.GetAdminAccount"
 )
 
+func (e GetAdminAccountXAmzTargetEnum) ToPointer() *GetAdminAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAdminAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.GetAdminAccount":
-		*e = GetAdminAccountXAmzTargetEnum(s)
+		*e = GetAdminAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAdminAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAdminAccountXAmzTargetEnum: %v", v)
 	}
 }
 

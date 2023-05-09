@@ -101,6 +101,7 @@ func (s *shipments) ShipmentGetList(ctx context.Context, request operations.Ship
 
 	return res, nil
 }
+
 func (s *shipments) ShipmentGetPing(ctx context.Context) (*operations.ShipmentGetPingResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/shipment/ping"

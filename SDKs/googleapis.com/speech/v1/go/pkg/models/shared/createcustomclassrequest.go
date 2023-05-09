@@ -2,10 +2,10 @@
 
 package shared
 
-// CreateCustomClassRequest - Message sent by the client for the `CreateCustomClass` method.
-type CreateCustomClassRequest struct {
+// CreateCustomClassRequestInput - Message sent by the client for the `CreateCustomClass` method.
+type CreateCustomClassRequestInput struct {
 	// A set of words or phrases that represents a common concept likely to appear in your audio, for example a list of passenger ship names. CustomClass items can be substituted into placeholders that you set in PhraseSet phrases.
-	CustomClass *CustomClass `json:"customClass,omitempty"`
+	CustomClass *CustomClassInput `json:"customClass,omitempty"`
 	// Required. The ID to use for the custom class, which will become the final component of the custom class' resource name. This value should restrict to letters, numbers, and hyphens, with the first character a letter, the last a letter or a number, and be 4-63 characters.
 	CustomClassID *string `json:"customClassId,omitempty"`
 }

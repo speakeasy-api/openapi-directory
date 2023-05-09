@@ -15,20 +15,24 @@ const (
 	CertificateTypeEnumPrivate      CertificateTypeEnum = "PRIVATE"
 )
 
+func (e CertificateTypeEnum) ToPointer() *CertificateTypeEnum {
+	return &e
+}
+
 func (e *CertificateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORTED":
 		fallthrough
 	case "AMAZON_ISSUED":
 		fallthrough
 	case "PRIVATE":
-		*e = CertificateTypeEnum(s)
+		*e = CertificateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateTypeEnum: %v", v)
 	}
 }

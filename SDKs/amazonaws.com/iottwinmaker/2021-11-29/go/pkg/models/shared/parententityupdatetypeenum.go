@@ -14,18 +14,22 @@ const (
 	ParentEntityUpdateTypeEnumDelete ParentEntityUpdateTypeEnum = "DELETE"
 )
 
+func (e ParentEntityUpdateTypeEnum) ToPointer() *ParentEntityUpdateTypeEnum {
+	return &e
+}
+
 func (e *ParentEntityUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = ParentEntityUpdateTypeEnum(s)
+		*e = ParentEntityUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParentEntityUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ParentEntityUpdateTypeEnum: %v", v)
 	}
 }

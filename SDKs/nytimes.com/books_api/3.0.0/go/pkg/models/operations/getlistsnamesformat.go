@@ -20,19 +20,23 @@ const (
 	GETListsNamesFormatFormatEnumJsonp GETListsNamesFormatFormatEnum = "jsonp"
 )
 
+func (e GETListsNamesFormatFormatEnum) ToPointer() *GETListsNamesFormatFormatEnum {
+	return &e
+}
+
 func (e *GETListsNamesFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
-		*e = GETListsNamesFormatFormatEnum(s)
+		*e = GETListsNamesFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListsNamesFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListsNamesFormatFormatEnum: %v", v)
 	}
 }
 

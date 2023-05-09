@@ -35,7 +35,10 @@ func newProduct(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List product listings
 func (s *product) ProductListingsAll(ctx context.Context, request operations.ProductListingsAllRequest) (*operations.ProductListingsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *product) ProductListingsAll(ctx context.Context, request operations.Pro
 // List products
 func (s *product) ProductsAll(ctx context.Context, request operations.ProductsAllRequest) (*operations.ProductsAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *product) ProductsAll(ctx context.Context, request operations.ProductsAl
 // Get product
 func (s *product) ProductsOne(ctx context.Context, request operations.ProductsOneRequest) (*operations.ProductsOneResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ecosystems/{ecosystem_id}/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

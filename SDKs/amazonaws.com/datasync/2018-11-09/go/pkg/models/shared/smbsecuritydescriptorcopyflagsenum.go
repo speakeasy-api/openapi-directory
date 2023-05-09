@@ -15,20 +15,24 @@ const (
 	SmbSecurityDescriptorCopyFlagsEnumOwnerDaclSacl SmbSecurityDescriptorCopyFlagsEnum = "OWNER_DACL_SACL"
 )
 
+func (e SmbSecurityDescriptorCopyFlagsEnum) ToPointer() *SmbSecurityDescriptorCopyFlagsEnum {
+	return &e
+}
+
 func (e *SmbSecurityDescriptorCopyFlagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "OWNER_DACL":
 		fallthrough
 	case "OWNER_DACL_SACL":
-		*e = SmbSecurityDescriptorCopyFlagsEnum(s)
+		*e = SmbSecurityDescriptorCopyFlagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SmbSecurityDescriptorCopyFlagsEnum: %s", s)
+		return fmt.Errorf("invalid value for SmbSecurityDescriptorCopyFlagsEnum: %v", v)
 	}
 }

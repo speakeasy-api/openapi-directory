@@ -13,16 +13,20 @@ const (
 	CopyTagsFromSourceEnumVolume CopyTagsFromSourceEnum = "volume"
 )
 
+func (e CopyTagsFromSourceEnum) ToPointer() *CopyTagsFromSourceEnum {
+	return &e
+}
+
 func (e *CopyTagsFromSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "volume":
-		*e = CopyTagsFromSourceEnum(s)
+		*e = CopyTagsFromSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyTagsFromSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyTagsFromSourceEnum: %v", v)
 	}
 }

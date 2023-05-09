@@ -16,17 +16,21 @@ const (
 	DeleteWorkspaceBundleXAmzTargetEnumWorkspacesServiceDeleteWorkspaceBundle DeleteWorkspaceBundleXAmzTargetEnum = "WorkspacesService.DeleteWorkspaceBundle"
 )
 
+func (e DeleteWorkspaceBundleXAmzTargetEnum) ToPointer() *DeleteWorkspaceBundleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkspaceBundleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DeleteWorkspaceBundle":
-		*e = DeleteWorkspaceBundleXAmzTargetEnum(s)
+		*e = DeleteWorkspaceBundleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkspaceBundleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkspaceBundleXAmzTargetEnum: %v", v)
 	}
 }
 

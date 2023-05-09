@@ -18,12 +18,16 @@ const (
 	ConnectorLaunchStageEnumPrivatePreview         ConnectorLaunchStageEnum = "PRIVATE_PREVIEW"
 )
 
+func (e ConnectorLaunchStageEnum) ToPointer() *ConnectorLaunchStageEnum {
+	return &e
+}
+
 func (e *ConnectorLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "PREVIEW":
@@ -33,10 +37,10 @@ func (e *ConnectorLaunchStageEnum) UnmarshalJSON(data []byte) error {
 	case "DEPRECATED":
 		fallthrough
 	case "PRIVATE_PREVIEW":
-		*e = ConnectorLaunchStageEnum(s)
+		*e = ConnectorLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectorLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectorLaunchStageEnum: %v", v)
 	}
 }
 

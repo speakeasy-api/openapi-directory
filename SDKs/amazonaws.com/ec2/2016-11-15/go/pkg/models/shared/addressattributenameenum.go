@@ -13,16 +13,20 @@ const (
 	AddressAttributeNameEnumDomainName AddressAttributeNameEnum = "domain-name"
 )
 
+func (e AddressAttributeNameEnum) ToPointer() *AddressAttributeNameEnum {
+	return &e
+}
+
 func (e *AddressAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domain-name":
-		*e = AddressAttributeNameEnum(s)
+		*e = AddressAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressAttributeNameEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	OrderContactContactTypeEnumPlanningOrderContactSellerContact       OrderContactContactTypeEnum = "PLANNING_ORDER_CONTACT_SELLER_CONTACT"
 )
 
+func (e OrderContactContactTypeEnum) ToPointer() *OrderContactContactTypeEnum {
+	return &e
+}
+
 func (e *OrderContactContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_ORDER_CONTACT_BUYER_CONTACT":
 		fallthrough
 	case "PLANNING_ORDER_CONTACT_BUYER_BILLING_CONTACT":
 		fallthrough
 	case "PLANNING_ORDER_CONTACT_SELLER_CONTACT":
-		*e = OrderContactContactTypeEnum(s)
+		*e = OrderContactContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderContactContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderContactContactTypeEnum: %v", v)
 	}
 }
 

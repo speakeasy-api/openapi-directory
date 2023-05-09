@@ -99,7 +99,10 @@ func (s *classification) GetClassifications(ctx context.Context, request operati
 // GetClassificationsID - Get a specific classification
 func (s *classification) GetClassificationsID(ctx context.Context, request operations.GetClassificationsIDRequest, security operations.GetClassificationsIDSecurity) (*operations.GetClassificationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/classifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

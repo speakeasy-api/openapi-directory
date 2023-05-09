@@ -79,12 +79,16 @@ const (
 	CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnumDeleting          CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum = "deleting"
 )
 
+func (e CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum) ToPointer() *CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum {
+	return &e
+}
+
 func (e *CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating-request":
 		fallthrough
 	case "pending-acceptance":
@@ -102,10 +106,10 @@ func (e *CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum) Unm
 	case "provisioning":
 		fallthrough
 	case "deleting":
-		*e = CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum(s)
+		*e = CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum: %v", v)
 	}
 }
 

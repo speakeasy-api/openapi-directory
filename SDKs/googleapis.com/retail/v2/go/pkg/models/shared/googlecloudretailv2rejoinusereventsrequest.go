@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnumUnjoinedEvents                  GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum = "UNJOINED_EVENTS"
 )
 
+func (e GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum) ToPointer() *GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_EVENT_REJOIN_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "JOINED_EVENTS":
 		fallthrough
 	case "UNJOINED_EVENTS":
-		*e = GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum(s)
+		*e = GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2RejoinUserEventsRequestUserEventRejoinScopeEnum: %v", v)
 	}
 }
 

@@ -19,19 +19,23 @@ const (
 	SendAnSmsFormatEnumXML  SendAnSmsFormatEnum = "xml"
 )
 
+func (e SendAnSmsFormatEnum) ToPointer() *SendAnSmsFormatEnum {
+	return &e
+}
+
 func (e *SendAnSmsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = SendAnSmsFormatEnum(s)
+		*e = SendAnSmsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendAnSmsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SendAnSmsFormatEnum: %v", v)
 	}
 }
 

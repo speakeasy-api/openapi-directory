@@ -15,20 +15,24 @@ const (
 	ProtectionGroupPatternEnumByResourceType ProtectionGroupPatternEnum = "BY_RESOURCE_TYPE"
 )
 
+func (e ProtectionGroupPatternEnum) ToPointer() *ProtectionGroupPatternEnum {
+	return &e
+}
+
 func (e *ProtectionGroupPatternEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ARBITRARY":
 		fallthrough
 	case "BY_RESOURCE_TYPE":
-		*e = ProtectionGroupPatternEnum(s)
+		*e = ProtectionGroupPatternEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectionGroupPatternEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectionGroupPatternEnum: %v", v)
 	}
 }

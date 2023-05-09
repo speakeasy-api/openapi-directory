@@ -21,12 +21,16 @@ const (
 	ConnectionStatusStateEnumAuthorizationRequired ConnectionStatusStateEnum = "AUTHORIZATION_REQUIRED"
 )
 
+func (e ConnectionStatusStateEnum) ToPointer() *ConnectionStatusStateEnum {
+	return &e
+}
+
 func (e *ConnectionStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -42,10 +46,10 @@ func (e *ConnectionStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "AUTHORIZATION_REQUIRED":
-		*e = ConnectionStatusStateEnum(s)
+		*e = ConnectionStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionStatusStateEnum: %v", v)
 	}
 }
 

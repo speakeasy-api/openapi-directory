@@ -23,21 +23,25 @@ const (
 	GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnumPublic       GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum = "public"
 )
 
+func (e GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum) ToPointer() *GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonIDPortfolios200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 

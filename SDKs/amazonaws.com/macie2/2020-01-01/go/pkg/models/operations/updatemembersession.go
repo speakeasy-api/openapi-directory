@@ -16,19 +16,23 @@ const (
 	UpdateMemberSessionRequestBodyStatusEnumEnabled UpdateMemberSessionRequestBodyStatusEnum = "ENABLED"
 )
 
+func (e UpdateMemberSessionRequestBodyStatusEnum) ToPointer() *UpdateMemberSessionRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateMemberSessionRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAUSED":
 		fallthrough
 	case "ENABLED":
-		*e = UpdateMemberSessionRequestBodyStatusEnum(s)
+		*e = UpdateMemberSessionRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMemberSessionRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMemberSessionRequestBodyStatusEnum: %v", v)
 	}
 }
 

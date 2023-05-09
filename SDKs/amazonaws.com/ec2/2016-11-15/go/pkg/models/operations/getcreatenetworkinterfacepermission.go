@@ -15,17 +15,21 @@ const (
 	GETCreateNetworkInterfacePermissionActionEnumCreateNetworkInterfacePermission GETCreateNetworkInterfacePermissionActionEnum = "CreateNetworkInterfacePermission"
 )
 
+func (e GETCreateNetworkInterfacePermissionActionEnum) ToPointer() *GETCreateNetworkInterfacePermissionActionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkInterfacePermissionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateNetworkInterfacePermission":
-		*e = GETCreateNetworkInterfacePermissionActionEnum(s)
+		*e = GETCreateNetworkInterfacePermissionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETCreateNetworkInterfacePermissionPermissionEnumEipAssociate   GETCreateNetworkInterfacePermissionPermissionEnum = "EIP-ASSOCIATE"
 )
 
+func (e GETCreateNetworkInterfacePermissionPermissionEnum) ToPointer() *GETCreateNetworkInterfacePermissionPermissionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkInterfacePermissionPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE-ATTACH":
 		fallthrough
 	case "EIP-ASSOCIATE":
-		*e = GETCreateNetworkInterfacePermissionPermissionEnum(s)
+		*e = GETCreateNetworkInterfacePermissionPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionPermissionEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETCreateNetworkInterfacePermissionVersionEnumTwoThousandAndSixteen1115 GETCreateNetworkInterfacePermissionVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateNetworkInterfacePermissionVersionEnum) ToPointer() *GETCreateNetworkInterfacePermissionVersionEnum {
+	return &e
+}
+
 func (e *GETCreateNetworkInterfacePermissionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateNetworkInterfacePermissionVersionEnum(s)
+		*e = GETCreateNetworkInterfacePermissionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateNetworkInterfacePermissionVersionEnum: %v", v)
 	}
 }
 

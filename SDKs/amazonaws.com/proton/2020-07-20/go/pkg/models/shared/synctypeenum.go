@@ -11,18 +11,25 @@ type SyncTypeEnum string
 
 const (
 	SyncTypeEnumTemplateSync SyncTypeEnum = "TEMPLATE_SYNC"
+	SyncTypeEnumServiceSync  SyncTypeEnum = "SERVICE_SYNC"
 )
 
+func (e SyncTypeEnum) ToPointer() *SyncTypeEnum {
+	return &e
+}
+
 func (e *SyncTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEMPLATE_SYNC":
-		*e = SyncTypeEnum(s)
+		fallthrough
+	case "SERVICE_SYNC":
+		*e = SyncTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncTypeEnum: %v", v)
 	}
 }

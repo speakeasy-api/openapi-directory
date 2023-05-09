@@ -17,12 +17,16 @@ const (
 	MonitorInstancesResultInstanceMonitoringsMonitoringStateEnumPending   MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum = "pending"
 )
 
+func (e MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum) ToPointer() *MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum {
+	return &e
+}
+
 func (e *MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "disabling":
@@ -30,10 +34,10 @@ func (e *MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum) Unmarshal
 	case "enabled":
 		fallthrough
 	case "pending":
-		*e = MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum(s)
+		*e = MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitorInstancesResultInstanceMonitoringsMonitoringStateEnum: %v", v)
 	}
 }
 

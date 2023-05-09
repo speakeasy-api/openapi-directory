@@ -30,21 +30,25 @@ const (
 	PostNetworksCreateNetworkRequestSubnetsTypeEnumVswitch PostNetworksCreateNetworkRequestSubnetsTypeEnum = "vswitch"
 )
 
+func (e PostNetworksCreateNetworkRequestSubnetsTypeEnum) ToPointer() *PostNetworksCreateNetworkRequestSubnetsTypeEnum {
+	return &e
+}
+
 func (e *PostNetworksCreateNetworkRequestSubnetsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud":
 		fallthrough
 	case "server":
 		fallthrough
 	case "vswitch":
-		*e = PostNetworksCreateNetworkRequestSubnetsTypeEnum(s)
+		*e = PostNetworksCreateNetworkRequestSubnetsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworksCreateNetworkRequestSubnetsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworksCreateNetworkRequestSubnetsTypeEnum: %v", v)
 	}
 }
 
@@ -55,6 +59,8 @@ type PostNetworksCreateNetworkRequestSubnets struct {
 	NetworkZone string `json:"network_zone"`
 	// Type of Subnetwork
 	Type PostNetworksCreateNetworkRequestSubnetsTypeEnum `json:"type"`
+	// ID of the robot vSwitch. Must be supplied if the subnet is of type vswitch.
+	VswitchID *int64 `json:"vswitch_id,omitempty"`
 }
 
 type PostNetworksCreateNetworkRequest struct {
@@ -92,21 +98,25 @@ const (
 	PostNetworks201ApplicationJSONNetworkSubnetsTypeEnumVswitch PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum = "vswitch"
 )
 
+func (e PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum) ToPointer() *PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum {
+	return &e
+}
+
 func (e *PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cloud":
 		fallthrough
 	case "server":
 		fallthrough
 	case "vswitch":
-		*e = PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum(s)
+		*e = PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworks201ApplicationJSONNetworkSubnetsTypeEnum: %v", v)
 	}
 }
 

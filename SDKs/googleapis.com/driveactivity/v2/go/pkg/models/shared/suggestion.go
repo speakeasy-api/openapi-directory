@@ -22,12 +22,16 @@ const (
 	SuggestionSubtypeEnumRejectDeleted      SuggestionSubtypeEnum = "REJECT_DELETED"
 )
 
+func (e SuggestionSubtypeEnum) ToPointer() *SuggestionSubtypeEnum {
+	return &e
+}
+
 func (e *SuggestionSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBTYPE_UNSPECIFIED":
 		fallthrough
 	case "ADDED":
@@ -45,10 +49,10 @@ func (e *SuggestionSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "ACCEPT_DELETED":
 		fallthrough
 	case "REJECT_DELETED":
-		*e = SuggestionSubtypeEnum(s)
+		*e = SuggestionSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuggestionSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SuggestionSubtypeEnum: %v", v)
 	}
 }
 

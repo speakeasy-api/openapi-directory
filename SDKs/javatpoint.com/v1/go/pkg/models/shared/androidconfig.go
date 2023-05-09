@@ -15,19 +15,23 @@ const (
 	AndroidConfigPriorityEnumHigh   AndroidConfigPriorityEnum = "HIGH"
 )
 
+func (e AndroidConfigPriorityEnum) ToPointer() *AndroidConfigPriorityEnum {
+	return &e
+}
+
 func (e *AndroidConfigPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = AndroidConfigPriorityEnum(s)
+		*e = AndroidConfigPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidConfigPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidConfigPriorityEnum: %v", v)
 	}
 }
 

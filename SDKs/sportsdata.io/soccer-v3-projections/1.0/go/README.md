@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/soccer-v3-p
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        Date: "corrupti",
-        Format: "xml",
-    }
-
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DfsSlatesByDate(ctx, operations.DfsSlatesByDateRequest{
+        Date: "corrupti",
+        Format: operations.DfsSlatesByDateFormatEnumXML,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,14 +46,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DfsSlatesByDate` - Dfs Slates By Date
-* `InjuredPlayersByCompetition` - Injured Players By Competition
-* `ProjectedPlayerGameStatsByCompetitionWDfsSalaries` - Projected Player Game Stats by Competition (w/ DFS Salaries)
-* `ProjectedPlayerGameStatsByDateWDfsSalaries` - Projected Player Game Stats by Date (w/ DFS Salaries)
-* `ProjectedPlayerGameStatsByPlayerWDfsSalaries` - Projected Player Game Stats by Player (w/ DFS Salaries)
-* `UpcomingDfsSlatesByCompetition` - Upcoming Dfs Slates By Competition
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [InjuredPlayersByCompetition](docs/sdk/README.md#injuredplayersbycompetition) - Injured Players By Competition
+* [ProjectedPlayerGameStatsByCompetitionWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbycompetitionwdfssalaries) - Projected Player Game Stats by Competition (w/ DFS Salaries)
+* [ProjectedPlayerGameStatsByDateWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewdfssalaries) - Projected Player Game Stats by Date (w/ DFS Salaries)
+* [ProjectedPlayerGameStatsByPlayerWDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwdfssalaries) - Projected Player Game Stats by Player (w/ DFS Salaries)
+* [UpcomingDfsSlatesByCompetition](docs/sdk/README.md#upcomingdfsslatesbycompetition) - Upcoming Dfs Slates By Competition
 <!-- End SDK Available Operations -->
 
 ### Maturity

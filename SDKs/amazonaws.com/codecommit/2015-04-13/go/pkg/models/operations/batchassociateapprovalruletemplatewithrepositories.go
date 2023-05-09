@@ -16,17 +16,21 @@ const (
 	BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnumCodeCommit20150413BatchAssociateApprovalRuleTemplateWithRepositories BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum = "CodeCommit_20150413.BatchAssociateApprovalRuleTemplateWithRepositories"
 )
 
+func (e BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum) ToPointer() *BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.BatchAssociateApprovalRuleTemplateWithRepositories":
-		*e = BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum(s)
+		*e = BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchAssociateApprovalRuleTemplateWithRepositoriesXAmzTargetEnum: %v", v)
 	}
 }
 

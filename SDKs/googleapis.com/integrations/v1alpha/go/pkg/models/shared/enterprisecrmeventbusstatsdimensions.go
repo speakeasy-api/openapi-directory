@@ -15,19 +15,23 @@ const (
 	EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnumExclusive        EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum = "EXCLUSIVE"
 )
 
+func (e EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum) ToPointer() *EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_INCLUSIVE":
 		fallthrough
 	case "EXCLUSIVE":
-		*e = EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum(s)
+		*e = EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusStatsDimensionsEnumFilterTypeEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnumCanceled    EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum = "CANCELED"
 )
 
+func (e EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum) ToPointer() *EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "FINAL":
@@ -53,10 +61,10 @@ func (e *EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum) UnmarshalJSON(dat
 	case "RETRYABLE":
 		fallthrough
 	case "CANCELED":
-		*e = EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum(s)
+		*e = EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusStatsDimensionsRetryAttemptEnum: %v", v)
 	}
 }
 

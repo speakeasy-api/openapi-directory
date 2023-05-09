@@ -18,12 +18,16 @@ const (
 	DialogStateEnumFailed              DialogStateEnum = "Failed"
 )
 
+func (e DialogStateEnum) ToPointer() *DialogStateEnum {
+	return &e
+}
+
 func (e *DialogStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElicitIntent":
 		fallthrough
 	case "ConfirmIntent":
@@ -35,9 +39,9 @@ func (e *DialogStateEnum) UnmarshalJSON(data []byte) error {
 	case "ReadyForFulfillment":
 		fallthrough
 	case "Failed":
-		*e = DialogStateEnum(s)
+		*e = DialogStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DialogStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DialogStateEnum: %v", v)
 	}
 }

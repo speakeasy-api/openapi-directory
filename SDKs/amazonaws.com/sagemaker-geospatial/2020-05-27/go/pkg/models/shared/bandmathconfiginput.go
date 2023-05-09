@@ -2,7 +2,7 @@
 
 package shared
 
-// BandMathConfigInput - <p/>
+// BandMathConfigInput - Input structure for the BandMath operation type. Defines Predefined and CustomIndices to be computed using BandMath.
 type BandMathConfigInput struct {
 	CustomIndices     *CustomIndicesInput `json:"CustomIndices,omitempty"`
 	PredefinedIndices []string            `json:"PredefinedIndices,omitempty"`

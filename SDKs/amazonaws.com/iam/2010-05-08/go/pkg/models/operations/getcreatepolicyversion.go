@@ -15,17 +15,21 @@ const (
 	GETCreatePolicyVersionActionEnumCreatePolicyVersion GETCreatePolicyVersionActionEnum = "CreatePolicyVersion"
 )
 
+func (e GETCreatePolicyVersionActionEnum) ToPointer() *GETCreatePolicyVersionActionEnum {
+	return &e
+}
+
 func (e *GETCreatePolicyVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatePolicyVersion":
-		*e = GETCreatePolicyVersionActionEnum(s)
+		*e = GETCreatePolicyVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreatePolicyVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreatePolicyVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreatePolicyVersionVersionEnumTwoThousandAndTen0508 GETCreatePolicyVersionVersionEnum = "2010-05-08"
 )
 
+func (e GETCreatePolicyVersionVersionEnum) ToPointer() *GETCreatePolicyVersionVersionEnum {
+	return &e
+}
+
 func (e *GETCreatePolicyVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETCreatePolicyVersionVersionEnum(s)
+		*e = GETCreatePolicyVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreatePolicyVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreatePolicyVersionVersionEnum: %v", v)
 	}
 }
 

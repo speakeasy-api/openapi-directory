@@ -21,12 +21,16 @@ const (
 	CloudCdnEgressWorkloadCacheEgressDestinationEnumCacheEgressDestinationOtherDestinations CloudCdnEgressWorkloadCacheEgressDestinationEnum = "CACHE_EGRESS_DESTINATION_OTHER_DESTINATIONS"
 )
 
+func (e CloudCdnEgressWorkloadCacheEgressDestinationEnum) ToPointer() *CloudCdnEgressWorkloadCacheEgressDestinationEnum {
+	return &e
+}
+
 func (e *CloudCdnEgressWorkloadCacheEgressDestinationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CACHE_EGRESS_DESTINATION_UNSPECIFIED":
 		fallthrough
 	case "CACHE_EGRESS_DESTINATION_ASIA_PACIFIC":
@@ -42,10 +46,10 @@ func (e *CloudCdnEgressWorkloadCacheEgressDestinationEnum) UnmarshalJSON(data []
 	case "CACHE_EGRESS_DESTINATION_LATIN_AMERICA":
 		fallthrough
 	case "CACHE_EGRESS_DESTINATION_OTHER_DESTINATIONS":
-		*e = CloudCdnEgressWorkloadCacheEgressDestinationEnum(s)
+		*e = CloudCdnEgressWorkloadCacheEgressDestinationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudCdnEgressWorkloadCacheEgressDestinationEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudCdnEgressWorkloadCacheEgressDestinationEnum: %v", v)
 	}
 }
 

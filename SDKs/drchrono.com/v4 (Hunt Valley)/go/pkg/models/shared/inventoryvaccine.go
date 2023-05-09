@@ -17,12 +17,16 @@ const (
 	InventoryVaccineStatusEnumVoided   InventoryVaccineStatusEnum = "voided"
 )
 
+func (e InventoryVaccineStatusEnum) ToPointer() *InventoryVaccineStatusEnum {
+	return &e
+}
+
 func (e *InventoryVaccineStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
@@ -30,10 +34,10 @@ func (e *InventoryVaccineStatusEnum) UnmarshalJSON(data []byte) error {
 	case "archived":
 		fallthrough
 	case "voided":
-		*e = InventoryVaccineStatusEnum(s)
+		*e = InventoryVaccineStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryVaccineStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryVaccineStatusEnum: %v", v)
 	}
 }
 

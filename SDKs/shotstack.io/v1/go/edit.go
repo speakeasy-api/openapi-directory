@@ -38,7 +38,10 @@ func newEdit(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // **base URL:** https://api.shotstack.io/{version}
 func (s *edit) GetRender(ctx context.Context, request operations.GetRenderRequest, security operations.GetRenderSecurity) (*operations.GetRenderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/render/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/render/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

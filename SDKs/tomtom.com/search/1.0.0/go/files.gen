@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -39,4 +40,10 @@ pkg/models/shared/versionnumberenum.go
 pkg/models/shared/extenum.go
 pkg/models/shared/viewenum.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/additionaldata/README.md
+docs/filters/README.md
+docs/geocoding/README.md
+docs/reversegeocoding/README.md
+docs/search/README.md
 USAGE.md

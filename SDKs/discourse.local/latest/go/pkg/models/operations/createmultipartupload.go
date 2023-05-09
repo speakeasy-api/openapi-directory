@@ -25,12 +25,16 @@ const (
 	CreateMultipartUploadRequestBodyUploadTypeEnumComposer          CreateMultipartUploadRequestBodyUploadTypeEnum = "composer"
 )
 
+func (e CreateMultipartUploadRequestBodyUploadTypeEnum) ToPointer() *CreateMultipartUploadRequestBodyUploadTypeEnum {
+	return &e
+}
+
 func (e *CreateMultipartUploadRequestBodyUploadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "avatar":
 		fallthrough
 	case "profile_background":
@@ -40,10 +44,10 @@ func (e *CreateMultipartUploadRequestBodyUploadTypeEnum) UnmarshalJSON(data []by
 	case "custom_emoji":
 		fallthrough
 	case "composer":
-		*e = CreateMultipartUploadRequestBodyUploadTypeEnum(s)
+		*e = CreateMultipartUploadRequestBodyUploadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMultipartUploadRequestBodyUploadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMultipartUploadRequestBodyUploadTypeEnum: %v", v)
 	}
 }
 

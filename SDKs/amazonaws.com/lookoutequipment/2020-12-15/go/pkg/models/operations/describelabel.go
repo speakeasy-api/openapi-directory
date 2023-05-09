@@ -16,17 +16,21 @@ const (
 	DescribeLabelXAmzTargetEnumAwsLookoutEquipmentFrontendServiceDescribeLabel DescribeLabelXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.DescribeLabel"
 )
 
+func (e DescribeLabelXAmzTargetEnum) ToPointer() *DescribeLabelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLabelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.DescribeLabel":
-		*e = DescribeLabelXAmzTargetEnum(s)
+		*e = DescribeLabelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLabelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLabelXAmzTargetEnum: %v", v)
 	}
 }
 

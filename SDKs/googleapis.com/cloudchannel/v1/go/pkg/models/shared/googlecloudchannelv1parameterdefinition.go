@@ -17,12 +17,16 @@ const (
 	GoogleCloudChannelV1ParameterDefinitionParameterTypeEnumDouble                   GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum = "DOUBLE"
 )
 
+func (e GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum) ToPointer() *GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARAMETER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INT64":
@@ -30,10 +34,10 @@ func (e *GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum) UnmarshalJSON
 	case "STRING":
 		fallthrough
 	case "DOUBLE":
-		*e = GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum(s)
+		*e = GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1ParameterDefinitionParameterTypeEnum: %v", v)
 	}
 }
 

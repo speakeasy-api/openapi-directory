@@ -13,17 +13,21 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnumAmazonDNS ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum = "amazon-dns"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesRequestAddNetworkServicesEnum: %v", v)
 	}
 }
 
@@ -33,17 +37,21 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnumAmazonDNS ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum = "amazon-dns"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesRequestRemoveNetworkServicesEnum: %v", v)
 	}
 }
 

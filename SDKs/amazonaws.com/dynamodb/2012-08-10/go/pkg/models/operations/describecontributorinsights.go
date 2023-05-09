@@ -16,17 +16,21 @@ const (
 	DescribeContributorInsightsXAmzTargetEnumDynamoDb20120810DescribeContributorInsights DescribeContributorInsightsXAmzTargetEnum = "DynamoDB_20120810.DescribeContributorInsights"
 )
 
+func (e DescribeContributorInsightsXAmzTargetEnum) ToPointer() *DescribeContributorInsightsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeContributorInsightsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.DescribeContributorInsights":
-		*e = DescribeContributorInsightsXAmzTargetEnum(s)
+		*e = DescribeContributorInsightsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeContributorInsightsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeContributorInsightsXAmzTargetEnum: %v", v)
 	}
 }
 

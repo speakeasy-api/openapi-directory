@@ -59,12 +59,16 @@ const (
 	DoctorMessageTypeEnumCn DoctorMessageTypeEnum = "CN"
 )
 
+func (e DoctorMessageTypeEnum) ToPointer() *DoctorMessageTypeEnum {
+	return &e
+}
+
 func (e *DoctorMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP":
 		fallthrough
 	case "GC":
@@ -102,10 +106,10 @@ func (e *DoctorMessageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DL":
 		fallthrough
 	case "CN":
-		*e = DoctorMessageTypeEnum(s)
+		*e = DoctorMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoctorMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DoctorMessageTypeEnum: %v", v)
 	}
 }
 

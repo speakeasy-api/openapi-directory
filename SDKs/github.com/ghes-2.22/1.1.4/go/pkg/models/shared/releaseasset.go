@@ -16,19 +16,23 @@ const (
 	ReleaseAssetStateEnumOpen     ReleaseAssetStateEnum = "open"
 )
 
+func (e ReleaseAssetStateEnum) ToPointer() *ReleaseAssetStateEnum {
+	return &e
+}
+
 func (e *ReleaseAssetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "open":
-		*e = ReleaseAssetStateEnum(s)
+		*e = ReleaseAssetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseAssetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseAssetStateEnum: %v", v)
 	}
 }
 

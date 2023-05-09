@@ -14,18 +14,22 @@ const (
 	LocationValuesEnumOutpostLocal LocationValuesEnum = "OUTPOST_LOCAL"
 )
 
+func (e LocationValuesEnum) ToPointer() *LocationValuesEnum {
+	return &e
+}
+
 func (e *LocationValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOUD":
 		fallthrough
 	case "OUTPOST_LOCAL":
-		*e = LocationValuesEnum(s)
+		*e = LocationValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationValuesEnum: %v", v)
 	}
 }

@@ -295,7 +295,7 @@ func (s *call) PostV01GroupCall(ctx context.Context, request shared.GroupCallPar
 
 // PostV01HangupAllCalls - /v0.1/HangupAllCalls/
 // Hangs up all established calls
-func (s *call) PostV01HangupAllCalls(ctx context.Context) (*operations.PostV01HangupAllCallsResponse, error) {
+func (s *call) PostV01HangupAllCalls(ctx context.Context, security operations.PostV01HangupAllCallsSecurity) (*operations.PostV01HangupAllCallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/HangupAllCalls/"
 
@@ -304,7 +304,7 @@ func (s *call) PostV01HangupAllCalls(ctx context.Context) (*operations.PostV01Ha
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

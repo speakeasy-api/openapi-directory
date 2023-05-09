@@ -206,8 +206,6 @@ type PatchSiteRequestBody struct {
 	OfficeIntegrationType *string `multipartForm:"name=office_integration_type"`
 	// Use servers in the USA only?
 	OptOutGlobal *bool `multipartForm:"name=opt_out_global"`
-	// Notify site email of overages?
-	OverageNotify *bool `multipartForm:"name=overage_notify"`
 	// Shortest password length for users
 	PasswordMinLength *int `multipartForm:"name=password_min_length"`
 	// Require a letter in passwords?

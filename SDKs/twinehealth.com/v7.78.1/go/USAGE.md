@@ -2,55 +2,55 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateActionRequestInput{
+    ctx := context.Background()
+    res, err := s.Action.CreateAction(ctx, shared.CreateActionRequestInput{
         Data: shared.ActionResourceInput{
             Attributes: &shared.ActionResourceAttributesInput{
-                Thread: "corrupti",
+                Thread: sdk.String("corrupti"),
                 Details: map[string]interface{}{
                     "distinctio": "quibusdam",
                     "unde": "nulla",
                     "corrupti": "illum",
                 },
                 EffectiveFrom: "vel",
-                EffectiveTo: "error",
+                EffectiveTo: sdk.String("error"),
                 FrequencyGoal: &shared.ActionResourceAttributesFrequencyGoal{
                     Weeks: &shared.ActionResourceAttributesFrequencyGoalWeeks{
                         Days: []shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnum{
-                            "2",
-                            "3",
-                            "2",
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo,
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumThree,
+                            shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnumTwo,
                         },
                     },
                 },
                 Identifiers: []shared.Identifier{
                     shared.Identifier{
-                        Label: "ipsa",
+                        Label: sdk.String("ipsa"),
                         System: "delectus",
                         Value: "tempora",
                     },
                     shared.Identifier{
-                        Label: "suscipit",
+                        Label: sdk.String("suscipit"),
                         System: "molestiae",
                         Value: "minus",
                     },
                     shared.Identifier{
-                        Label: "placeat",
+                        Label: sdk.String("placeat"),
                         System: "voluptatum",
                         Value: "iusto",
                     },
                     shared.Identifier{
-                        Label: "excepturi",
+                        Label: sdk.String("excepturi"),
                         System: "nisi",
                         Value: "recusandae",
                     },
@@ -61,22 +61,22 @@ func main() {
                     "perferendis": "ipsam",
                     "repellendus": "sapiente",
                 },
-                MetricRequired: false,
+                MetricRequired: sdk.Bool(false),
                 Metrics: []shared.ActionMetric{
                     shared.ActionMetric{
                         Goal: map[string]interface{}{
                             "at": "at",
                         },
-                        MetricType: "maiores",
-                        Unit: "molestiae",
+                        MetricType: sdk.String("maiores"),
+                        Unit: sdk.String("molestiae"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "quod",
-                                Value: 8009.11,
+                                Unit: sdk.String("quod"),
+                                Value: sdk.Float64(8009.11),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "esse",
-                                Value: 5204.78,
+                                Unit: sdk.String("esse"),
+                                Value: sdk.Float64(5204.78),
                             },
                         },
                     },
@@ -87,16 +87,16 @@ func main() {
                             "occaecati": "fugit",
                             "deleniti": "hic",
                         },
-                        MetricType: "optio",
-                        Unit: "totam",
+                        MetricType: sdk.String("optio"),
+                        Unit: sdk.String("totam"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "beatae",
-                                Value: 4146.62,
+                                Unit: sdk.String("beatae"),
+                                Value: sdk.Float64(4146.62),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "molestiae",
-                                Value: 2645.55,
+                                Unit: sdk.String("molestiae"),
+                                Value: sdk.Float64(2645.55),
                             },
                         },
                     },
@@ -104,16 +104,16 @@ func main() {
                         Goal: map[string]interface{}{
                             "impedit": "cum",
                         },
-                        MetricType: "esse",
-                        Unit: "ipsum",
+                        MetricType: sdk.String("esse"),
+                        Unit: sdk.String("ipsum"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "excepturi",
-                                Value: 1352.18,
+                                Unit: sdk.String("excepturi"),
+                                Value: sdk.Float64(1352.18),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "perferendis",
-                                Value: 3241.41,
+                                Unit: sdk.String("perferendis"),
+                                Value: sdk.Float64(3241.41),
                             },
                         },
                     },
@@ -123,61 +123,57 @@ func main() {
                             "dolor": "natus",
                             "laboriosam": "hic",
                         },
-                        MetricType: "saepe",
-                        Unit: "fuga",
+                        MetricType: sdk.String("saepe"),
+                        Unit: sdk.String("fuga"),
                         Validations: &shared.ActionMetricValidations{
                             Maximum: &shared.ActionMetricValidationsMaximum{
-                                Unit: "in",
-                                Value: 3595.08,
+                                Unit: sdk.String("in"),
+                                Value: sdk.Float64(3595.08),
                             },
                             Minimum: &shared.ActionMetricValidationsMinimum{
-                                Unit: "iste",
-                                Value: 4370.32,
+                                Unit: sdk.String("iste"),
+                                Value: sdk.Float64(4370.32),
                             },
                         },
                     },
                 },
                 Title: "Dr.",
-                Tracking: false,
-                Type: "other_lifestyle",
+                Tracking: sdk.Bool(false),
+                Type: shared.ActionResourceAttributesTypeEnumOtherLifestyle,
                 Windows: []shared.ActionWindow{
                     shared.ActionWindow{
-                        ID: "architecto",
-                        Title: "Mr.",
-                        Type: "reiciendis",
+                        ID: sdk.String("10faaa23-52c5-4955-907a-ff1a3a2fa946"),
+                        Title: sdk.String("Ms."),
+                        Type: "molestiae",
                     },
                     shared.ActionWindow{
-                        ID: "est",
-                        Title: "Miss",
-                        Type: "laborum",
+                        ID: sdk.String("39251aa5-2c3f-45ad-819d-a1ffe78f097b"),
+                        Title: sdk.String("Mr."),
+                        Type: "doloremque",
                     },
                     shared.ActionWindow{
-                        ID: "dolores",
-                        Title: "Mrs.",
-                        Type: "corporis",
+                        ID: sdk.String("74f15471-b5e6-4e13-b99d-488e1e91e450"),
+                        Title: sdk.String("Miss"),
+                        Type: "quibusdam",
                     },
                 },
             },
-            ID: "explicabo",
+            ID: "2abd4426-9802-4d50-aa94-bb4f63c969e9",
             Relationships: &shared.ActionResourceRelationships{
                 Plan: &shared.ActionResourceRelationshipsPlan{
                     Data: &shared.ActionResourceRelationshipsPlanData{
-                        ID: "nobis",
-                        Type: "enim",
+                        ID: sdk.String("a3efa77d-fb14-4cd6-aae3-95efb9ba88f3"),
+                        Type: sdk.String("deserunt"),
                     },
                     Links: map[string]interface{}{
-                        "nemo": "minima",
-                        "excepturi": "accusantium",
-                        "iure": "culpa",
+                        "vel": "natus",
+                        "omnis": "molestiae",
                     },
                 },
             },
-            Type: "doloribus",
+            Type: "perferendis",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Action.CreateAction(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

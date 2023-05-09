@@ -15,17 +15,21 @@ const (
 	GETDeleteAccessKeyActionEnumDeleteAccessKey GETDeleteAccessKeyActionEnum = "DeleteAccessKey"
 )
 
+func (e GETDeleteAccessKeyActionEnum) ToPointer() *GETDeleteAccessKeyActionEnum {
+	return &e
+}
+
 func (e *GETDeleteAccessKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteAccessKey":
-		*e = GETDeleteAccessKeyActionEnum(s)
+		*e = GETDeleteAccessKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAccessKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAccessKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteAccessKeyVersionEnumTwoThousandAndTen0508 GETDeleteAccessKeyVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteAccessKeyVersionEnum) ToPointer() *GETDeleteAccessKeyVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteAccessKeyVersionEnum(s)
+		*e = GETDeleteAccessKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAccessKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAccessKeyVersionEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	AuthenticateCognitoActionConditionalBehaviorEnumEnumAuthenticate AuthenticateCognitoActionConditionalBehaviorEnumEnum = "authenticate"
 )
 
+func (e AuthenticateCognitoActionConditionalBehaviorEnumEnum) ToPointer() *AuthenticateCognitoActionConditionalBehaviorEnumEnum {
+	return &e
+}
+
 func (e *AuthenticateCognitoActionConditionalBehaviorEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deny":
 		fallthrough
 	case "allow":
 		fallthrough
 	case "authenticate":
-		*e = AuthenticateCognitoActionConditionalBehaviorEnumEnum(s)
+		*e = AuthenticateCognitoActionConditionalBehaviorEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthenticateCognitoActionConditionalBehaviorEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthenticateCognitoActionConditionalBehaviorEnumEnum: %v", v)
 	}
 }

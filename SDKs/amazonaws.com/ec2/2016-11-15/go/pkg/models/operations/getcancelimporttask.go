@@ -15,17 +15,21 @@ const (
 	GETCancelImportTaskActionEnumCancelImportTask GETCancelImportTaskActionEnum = "CancelImportTask"
 )
 
+func (e GETCancelImportTaskActionEnum) ToPointer() *GETCancelImportTaskActionEnum {
+	return &e
+}
+
 func (e *GETCancelImportTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelImportTask":
-		*e = GETCancelImportTaskActionEnum(s)
+		*e = GETCancelImportTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelImportTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelImportTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelImportTaskVersionEnumTwoThousandAndSixteen1115 GETCancelImportTaskVersionEnum = "2016-11-15"
 )
 
+func (e GETCancelImportTaskVersionEnum) ToPointer() *GETCancelImportTaskVersionEnum {
+	return &e
+}
+
 func (e *GETCancelImportTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCancelImportTaskVersionEnum(s)
+		*e = GETCancelImportTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelImportTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelImportTaskVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnumGoalBuilderBased                      CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum = "GOAL_BUILDER_BASED"
 )
 
+func (e CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum) ToPointer() *CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum {
+	return &e
+}
+
 func (e *CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_BIDDING_ALGORITHM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCRIPT_BASED":
@@ -30,10 +34,10 @@ func (e *CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum) UnmarshalJSON(dat
 	case "ADS_DATA_HUB_BASED":
 		fallthrough
 	case "GOAL_BUILDER_BASED":
-		*e = CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum(s)
+		*e = CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingAlgorithmCustomBiddingAlgorithmTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	CustomBiddingAlgorithmEntityStatusEnumEntityStatusScheduledForDeletion CustomBiddingAlgorithmEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e CustomBiddingAlgorithmEntityStatusEnum) ToPointer() *CustomBiddingAlgorithmEntityStatusEnum {
+	return &e
+}
+
 func (e *CustomBiddingAlgorithmEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -66,10 +74,10 @@ func (e *CustomBiddingAlgorithmEntityStatusEnum) UnmarshalJSON(data []byte) erro
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = CustomBiddingAlgorithmEntityStatusEnum(s)
+		*e = CustomBiddingAlgorithmEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingAlgorithmEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingAlgorithmEntityStatusEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newOtherContacts(defaultClient, securityClient HTTPClient, serverURL, langu
 // PeopleOtherContactsCopyOtherContactToMyContactsGroup - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 func (s *otherContacts) PeopleOtherContactsCopyOtherContactToMyContactsGroup(ctx context.Context, request operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupRequest, security operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupSecurity) (*operations.PeopleOtherContactsCopyOtherContactToMyContactsGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:copyOtherContactToMyContactsGroup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resourceName}:copyOtherContactToMyContactsGroup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyOtherContactToMyContactsGroupRequest", "json")
 	if err != nil {

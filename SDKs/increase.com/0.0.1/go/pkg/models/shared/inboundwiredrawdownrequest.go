@@ -14,17 +14,21 @@ const (
 	InboundWireDrawdownRequestTypeEnumInboundWireDrawdownRequest InboundWireDrawdownRequestTypeEnum = "inbound_wire_drawdown_request"
 )
 
+func (e InboundWireDrawdownRequestTypeEnum) ToPointer() *InboundWireDrawdownRequestTypeEnum {
+	return &e
+}
+
 func (e *InboundWireDrawdownRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound_wire_drawdown_request":
-		*e = InboundWireDrawdownRequestTypeEnum(s)
+		*e = InboundWireDrawdownRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundWireDrawdownRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundWireDrawdownRequestTypeEnum: %v", v)
 	}
 }
 

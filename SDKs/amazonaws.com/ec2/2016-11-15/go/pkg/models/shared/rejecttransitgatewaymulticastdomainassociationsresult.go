@@ -19,12 +19,16 @@ const (
 	RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnumTgwPeering           RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum = "tgw-peering"
 )
 
+func (e RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum) ToPointer() *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum {
+	return &e
+}
+
 func (e *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResour
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum(s)
+		*e = RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RejectTransitGatewayMulticastDomainAssociationsResultAssociationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnumFailed            RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum = "failed"
 )
 
+func (e RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum) ToPointer() *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum {
+	return &e
+}
+
 func (e *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pendingAcceptance":
 		fallthrough
 	case "associating":
@@ -75,10 +83,10 @@ func (e *RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnet
 	case "rejected":
 		fallthrough
 	case "failed":
-		*e = RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum(s)
+		*e = RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RejectTransitGatewayMulticastDomainAssociationsResultAssociationsSubnetsStateEnum: %v", v)
 	}
 }
 

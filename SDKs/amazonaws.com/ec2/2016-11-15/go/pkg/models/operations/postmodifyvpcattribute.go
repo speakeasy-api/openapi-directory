@@ -15,17 +15,21 @@ const (
 	POSTModifyVpcAttributeActionEnumModifyVpcAttribute POSTModifyVpcAttributeActionEnum = "ModifyVpcAttribute"
 )
 
+func (e POSTModifyVpcAttributeActionEnum) ToPointer() *POSTModifyVpcAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpcAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcAttribute":
-		*e = POSTModifyVpcAttributeActionEnum(s)
+		*e = POSTModifyVpcAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpcAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpcAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVpcAttributeVersionEnumTwoThousandAndSixteen1115 POSTModifyVpcAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVpcAttributeVersionEnum) ToPointer() *POSTModifyVpcAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpcAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVpcAttributeVersionEnum(s)
+		*e = POSTModifyVpcAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpcAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpcAttributeVersionEnum: %v", v)
 	}
 }
 

@@ -13,23 +13,27 @@ type RetrieveARealTimeDecisionRequest struct {
 	RealTimeDecisionID string `pathParam:"style=simple,explode=false,name=real_time_decision_id"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON13 struct {
 	Type       RetrieveARealTimeDecisionDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON12 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON11 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnumFourHundred RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnumFourHundred RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON10 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnumFourHundred RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnumFourHundred RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveARealTimeDecisionDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                   `json:"errors"`
 	Status RetrieveARealTimeDecisionDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                     `json:"title"`
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON8 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON7 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnumFiveHundred RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnumFiveHundred RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnumInternalServerError RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON6 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON5 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON4 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON3 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveARealTimeDecisionDefaultApplicationJSON2 struct {
 	Type   RetrieveARealTimeDecisionDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum string
+type RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveARealTimeDecisionDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

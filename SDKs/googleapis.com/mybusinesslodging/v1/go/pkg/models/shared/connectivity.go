@@ -17,12 +17,16 @@ const (
 	ConnectivityFreeWifiExceptionEnumDependentOnDayOfWeek ConnectivityFreeWifiExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ConnectivityFreeWifiExceptionEnum) ToPointer() *ConnectivityFreeWifiExceptionEnum {
+	return &e
+}
+
 func (e *ConnectivityFreeWifiExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *ConnectivityFreeWifiExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ConnectivityFreeWifiExceptionEnum(s)
+		*e = ConnectivityFreeWifiExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectivityFreeWifiExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectivityFreeWifiExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ConnectivityPublicAreaWifiAvailableExceptionEnumDependentOnDayOfWeek ConnectivityPublicAreaWifiAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ConnectivityPublicAreaWifiAvailableExceptionEnum) ToPointer() *ConnectivityPublicAreaWifiAvailableExceptionEnum {
+	return &e
+}
+
 func (e *ConnectivityPublicAreaWifiAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *ConnectivityPublicAreaWifiAvailableExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ConnectivityPublicAreaWifiAvailableExceptionEnum(s)
+		*e = ConnectivityPublicAreaWifiAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectivityPublicAreaWifiAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectivityPublicAreaWifiAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ConnectivityPublicInternetTerminalExceptionEnumDependentOnDayOfWeek ConnectivityPublicInternetTerminalExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ConnectivityPublicInternetTerminalExceptionEnum) ToPointer() *ConnectivityPublicInternetTerminalExceptionEnum {
+	return &e
+}
+
 func (e *ConnectivityPublicInternetTerminalExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *ConnectivityPublicInternetTerminalExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ConnectivityPublicInternetTerminalExceptionEnum(s)
+		*e = ConnectivityPublicInternetTerminalExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectivityPublicInternetTerminalExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectivityPublicInternetTerminalExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	ConnectivityWifiAvailableExceptionEnumDependentOnDayOfWeek ConnectivityWifiAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ConnectivityWifiAvailableExceptionEnum) ToPointer() *ConnectivityWifiAvailableExceptionEnum {
+	return &e
+}
+
 func (e *ConnectivityWifiAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *ConnectivityWifiAvailableExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ConnectivityWifiAvailableExceptionEnum(s)
+		*e = ConnectivityWifiAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectivityWifiAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectivityWifiAvailableExceptionEnum: %v", v)
 	}
 }
 

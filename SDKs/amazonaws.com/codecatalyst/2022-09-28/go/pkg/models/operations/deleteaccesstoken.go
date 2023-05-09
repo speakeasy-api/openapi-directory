@@ -7,7 +7,7 @@ import (
 )
 
 type DeleteAccessTokenRequest struct {
-	// The ID of the personal access token to delete. You can find the IDs of all PATs associated with your user account by calling <a>ListAccessTokens</a>.
+	// The ID of the personal access token to delete. You can find the IDs of all PATs associated with your Amazon Web Services Builder ID in a space by calling <a>ListAccessTokens</a>.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 

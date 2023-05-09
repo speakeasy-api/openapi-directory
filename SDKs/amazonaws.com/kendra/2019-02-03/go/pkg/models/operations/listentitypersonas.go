@@ -16,17 +16,21 @@ const (
 	ListEntityPersonasXAmzTargetEnumAwsKendraFrontendServiceListEntityPersonas ListEntityPersonasXAmzTargetEnum = "AWSKendraFrontendService.ListEntityPersonas"
 )
 
+func (e ListEntityPersonasXAmzTargetEnum) ToPointer() *ListEntityPersonasXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEntityPersonasXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListEntityPersonas":
-		*e = ListEntityPersonasXAmzTargetEnum(s)
+		*e = ListEntityPersonasXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEntityPersonasXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEntityPersonasXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -27,12 +27,16 @@ const (
 	NetworkReportSpecDimensionFilterDimensionEnumServingRestriction   NetworkReportSpecDimensionFilterDimensionEnum = "SERVING_RESTRICTION"
 )
 
+func (e NetworkReportSpecDimensionFilterDimensionEnum) ToPointer() *NetworkReportSpecDimensionFilterDimensionEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecDimensionFilterDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -60,10 +64,10 @@ func (e *NetworkReportSpecDimensionFilterDimensionEnum) UnmarshalJSON(data []byt
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = NetworkReportSpecDimensionFilterDimensionEnum(s)
+		*e = NetworkReportSpecDimensionFilterDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecDimensionFilterDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecDimensionFilterDimensionEnum: %v", v)
 	}
 }
 

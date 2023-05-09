@@ -16,12 +16,16 @@ const (
 	WorkerTypeEnumG025X    WorkerTypeEnum = "G.025X"
 )
 
+func (e WorkerTypeEnum) ToPointer() *WorkerTypeEnum {
+	return &e
+}
+
 func (e *WorkerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Standard":
 		fallthrough
 	case "G.1X":
@@ -29,9 +33,9 @@ func (e *WorkerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "G.2X":
 		fallthrough
 	case "G.025X":
-		*e = WorkerTypeEnum(s)
+		*e = WorkerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkerTypeEnum: %v", v)
 	}
 }

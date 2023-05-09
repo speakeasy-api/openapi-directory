@@ -16,12 +16,16 @@ const (
 	DataProtectionStatusEnumDisabled  DataProtectionStatusEnum = "DISABLED"
 )
 
+func (e DataProtectionStatusEnum) ToPointer() *DataProtectionStatusEnum {
+	return &e
+}
+
 func (e *DataProtectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVATED":
 		fallthrough
 	case "DELETED":
@@ -29,9 +33,9 @@ func (e *DataProtectionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHIVED":
 		fallthrough
 	case "DISABLED":
-		*e = DataProtectionStatusEnum(s)
+		*e = DataProtectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataProtectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataProtectionStatusEnum: %v", v)
 	}
 }

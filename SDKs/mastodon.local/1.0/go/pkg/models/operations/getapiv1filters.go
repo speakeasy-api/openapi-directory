@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAPIV1FiltersSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAPIV1FiltersResponse struct {
 	ContentType string
 	// Invalid or missing Authorization header

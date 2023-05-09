@@ -16,17 +16,21 @@ const (
 	BatchUpdateClusterXAmzTargetEnumAmazonMemoryDbBatchUpdateCluster BatchUpdateClusterXAmzTargetEnum = "AmazonMemoryDB.BatchUpdateCluster"
 )
 
+func (e BatchUpdateClusterXAmzTargetEnum) ToPointer() *BatchUpdateClusterXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchUpdateClusterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.BatchUpdateCluster":
-		*e = BatchUpdateClusterXAmzTargetEnum(s)
+		*e = BatchUpdateClusterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateClusterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateClusterXAmzTargetEnum: %v", v)
 	}
 }
 

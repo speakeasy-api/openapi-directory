@@ -20,12 +20,16 @@ const (
 	ConditionValueRelativeDateEnumTomorrow                ConditionValueRelativeDateEnum = "TOMORROW"
 )
 
+func (e ConditionValueRelativeDateEnum) ToPointer() *ConditionValueRelativeDateEnum {
+	return &e
+}
+
 func (e *ConditionValueRelativeDateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIVE_DATE_UNSPECIFIED":
 		fallthrough
 	case "PAST_YEAR":
@@ -39,10 +43,10 @@ func (e *ConditionValueRelativeDateEnum) UnmarshalJSON(data []byte) error {
 	case "TODAY":
 		fallthrough
 	case "TOMORROW":
-		*e = ConditionValueRelativeDateEnum(s)
+		*e = ConditionValueRelativeDateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionValueRelativeDateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionValueRelativeDateEnum: %v", v)
 	}
 }
 

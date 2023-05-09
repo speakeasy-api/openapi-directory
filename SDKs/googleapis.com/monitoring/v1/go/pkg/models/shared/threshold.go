@@ -16,21 +16,25 @@ const (
 	ThresholdColorEnumRed              ThresholdColorEnum = "RED"
 )
 
+func (e ThresholdColorEnum) ToPointer() *ThresholdColorEnum {
+	return &e
+}
+
 func (e *ThresholdColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLOR_UNSPECIFIED":
 		fallthrough
 	case "YELLOW":
 		fallthrough
 	case "RED":
-		*e = ThresholdColorEnum(s)
+		*e = ThresholdColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThresholdColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ThresholdColorEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ThresholdDirectionEnumBelow                ThresholdDirectionEnum = "BELOW"
 )
 
+func (e ThresholdDirectionEnum) ToPointer() *ThresholdDirectionEnum {
+	return &e
+}
+
 func (e *ThresholdDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "ABOVE":
 		fallthrough
 	case "BELOW":
-		*e = ThresholdDirectionEnum(s)
+		*e = ThresholdDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThresholdDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ThresholdDirectionEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	ThresholdTargetAxisEnumY2                    ThresholdTargetAxisEnum = "Y2"
 )
 
+func (e ThresholdTargetAxisEnum) ToPointer() *ThresholdTargetAxisEnum {
+	return &e
+}
+
 func (e *ThresholdTargetAxisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_AXIS_UNSPECIFIED":
 		fallthrough
 	case "Y1":
 		fallthrough
 	case "Y2":
-		*e = ThresholdTargetAxisEnum(s)
+		*e = ThresholdTargetAxisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThresholdTargetAxisEnum: %s", s)
+		return fmt.Errorf("invalid value for ThresholdTargetAxisEnum: %v", v)
 	}
 }
 

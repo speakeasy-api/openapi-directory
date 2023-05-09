@@ -27,7 +27,7 @@ type DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// The maximum number of processor versions to return. If unspecified, at most 10 processor versions will be returned. The maximum value is 20; values above 20 will be coerced to 20.
+	// The maximum number of processor versions to return. If unspecified, at most `10` processor versions will be returned. The maximum value is `20`. Values above `20` will be coerced to `20`.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// We will return the processor versions sorted by creation time. The page token will point to the next processor version.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`

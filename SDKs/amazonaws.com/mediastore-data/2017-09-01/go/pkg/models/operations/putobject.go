@@ -21,17 +21,21 @@ const (
 	PutObjectXAmzStorageClassEnumTemporal PutObjectXAmzStorageClassEnum = "TEMPORAL"
 )
 
+func (e PutObjectXAmzStorageClassEnum) ToPointer() *PutObjectXAmzStorageClassEnum {
+	return &e
+}
+
 func (e *PutObjectXAmzStorageClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEMPORAL":
-		*e = PutObjectXAmzStorageClassEnum(s)
+		*e = PutObjectXAmzStorageClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutObjectXAmzStorageClassEnum: %s", s)
+		return fmt.Errorf("invalid value for PutObjectXAmzStorageClassEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	PutObjectXAmzUploadAvailabilityEnumStreaming PutObjectXAmzUploadAvailabilityEnum = "STREAMING"
 )
 
+func (e PutObjectXAmzUploadAvailabilityEnum) ToPointer() *PutObjectXAmzUploadAvailabilityEnum {
+	return &e
+}
+
 func (e *PutObjectXAmzUploadAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "STREAMING":
-		*e = PutObjectXAmzUploadAvailabilityEnum(s)
+		*e = PutObjectXAmzUploadAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutObjectXAmzUploadAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PutObjectXAmzUploadAvailabilityEnum: %v", v)
 	}
 }
 

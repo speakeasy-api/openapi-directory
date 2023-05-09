@@ -16,17 +16,21 @@ const (
 	DeleteSizeConstraintSetXAmzTargetEnumAwswaf20150824DeleteSizeConstraintSet DeleteSizeConstraintSetXAmzTargetEnum = "AWSWAF_20150824.DeleteSizeConstraintSet"
 )
 
+func (e DeleteSizeConstraintSetXAmzTargetEnum) ToPointer() *DeleteSizeConstraintSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSizeConstraintSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.DeleteSizeConstraintSet":
-		*e = DeleteSizeConstraintSetXAmzTargetEnum(s)
+		*e = DeleteSizeConstraintSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSizeConstraintSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSizeConstraintSetXAmzTargetEnum: %v", v)
 	}
 }
 

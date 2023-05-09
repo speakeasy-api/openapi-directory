@@ -16,17 +16,21 @@ const (
 	ExportServerEngineAttributeXAmzTargetEnumOpsWorksCmV20161101ExportServerEngineAttribute ExportServerEngineAttributeXAmzTargetEnum = "OpsWorksCM_V2016_11_01.ExportServerEngineAttribute"
 )
 
+func (e ExportServerEngineAttributeXAmzTargetEnum) ToPointer() *ExportServerEngineAttributeXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportServerEngineAttributeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorksCM_V2016_11_01.ExportServerEngineAttribute":
-		*e = ExportServerEngineAttributeXAmzTargetEnum(s)
+		*e = ExportServerEngineAttributeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportServerEngineAttributeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportServerEngineAttributeXAmzTargetEnum: %v", v)
 	}
 }
 

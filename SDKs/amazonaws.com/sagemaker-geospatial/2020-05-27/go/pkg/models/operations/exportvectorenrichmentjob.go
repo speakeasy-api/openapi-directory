@@ -15,6 +15,8 @@ type ExportVectorEnrichmentJobRequestBodyOutputConfig struct {
 type ExportVectorEnrichmentJobRequestBody struct {
 	// The Amazon Resource Name (ARN) of the Vector Enrichment job.
 	Arn string `json:"Arn"`
+	// A unique token that guarantees that the call to this API is idempotent.
+	ClientToken *string `json:"ClientToken,omitempty"`
 	// The Amazon Resource Name (ARN) of the IAM rolewith permission to upload to the location in OutputConfig.
 	ExecutionRoleArn string `json:"ExecutionRoleArn"`
 	// An object containing information about the output file.

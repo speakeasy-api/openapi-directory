@@ -15,20 +15,24 @@ const (
 	ResourceTypeEnumEc2Instance     ResourceTypeEnum = "EC2Instance"
 )
 
+func (e ResourceTypeEnum) ToPointer() *ResourceTypeEnum {
+	return &e
+}
+
 func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ManagedInstance":
 		fallthrough
 	case "Document":
 		fallthrough
 	case "EC2Instance":
-		*e = ResourceTypeEnum(s)
+		*e = ResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceTypeEnum: %v", v)
 	}
 }

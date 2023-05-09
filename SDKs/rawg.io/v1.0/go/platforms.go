@@ -132,7 +132,10 @@ func (s *platforms) PlatformsListsParentsList(ctx context.Context, request opera
 // PlatformsRead - Get details of the platform.
 func (s *platforms) PlatformsRead(ctx context.Context, request operations.PlatformsReadRequest) (*operations.PlatformsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platforms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platforms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

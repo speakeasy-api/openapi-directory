@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/tomtom.com/maps/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,14 +27,12 @@ func main() {
         }),
     )
 
-    req := operations.GetMapVersionNumberCopyrightsFormatRequest{
-        Callback: "corrupti",
-        Format: "jsonp",
-        VersionNumber: "1",
-    }
-
     ctx := context.Background()
-    res, err := s.Copyrights.GetMapVersionNumberCopyrightsFormat(ctx, req)
+    res, err := s.Copyrights.GetMapVersionNumberCopyrightsFormat(ctx, operations.GetMapVersionNumberCopyrightsFormatRequest{
+        Callback: sdk.String("corrupti"),
+        Format: operations.GetMapVersionNumberCopyrightsFormatFormatEnumJsonp,
+        VersionNumber: operations.GetMapVersionNumberCopyrightsFormatVersionNumberEnumOne,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,27 +48,27 @@ func main() {
 ## Available Resources and Operations
 
 
-### Copyrights
+### [Copyrights](docs/copyrights/README.md)
 
-* `GetMapVersionNumberCopyrightsFormat` - Copyrights whole world
-* `GetMapVersionNumberCopyrightsCaptionFormat` - Captions
-* `GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat` - Copyrights bounding box
-* `GetMapVersionNumberCopyrightsZoomXYFormat` - Copyrights tile
+* [GetMapVersionNumberCopyrightsFormat](docs/copyrights/README.md#getmapversionnumbercopyrightsformat) - Copyrights whole world
+* [GetMapVersionNumberCopyrightsCaptionFormat](docs/copyrights/README.md#getmapversionnumbercopyrightscaptionformat) - Captions
+* [GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormat](docs/copyrights/README.md#getmapversionnumbercopyrightsminlonminlatmaxlonmaxlatformat) - Copyrights bounding box
+* [GetMapVersionNumberCopyrightsZoomXYFormat](docs/copyrights/README.md#getmapversionnumbercopyrightszoomxyformat) - Copyrights tile
 
-### Raster
+### [Raster](docs/raster/README.md)
 
-* `GetMapVersionNumberStaticimage` - Static Image
-* `GetMapVersionNumberTileLayerStyleZoomXYFormat` - Tile
+* [GetMapVersionNumberStaticimage](docs/raster/README.md#getmapversionnumberstaticimage) - Static Image
+* [GetMapVersionNumberTileLayerStyleZoomXYFormat](docs/raster/README.md#getmapversionnumbertilelayerstylezoomxyformat) - Tile
 
-### Vector
+### [Vector](docs/vector/README.md)
 
-* `GetMapVersionNumberTileLayerStyleZoomXYPbf` - Tile
+* [GetMapVersionNumberTileLayerStyleZoomXYPbf](docs/vector/README.md#getmapversionnumbertilelayerstylezoomxypbf) - Tile
 
-### WmsWmts
+### [WmsWmts](docs/wmswmts/README.md)
 
-* `GetCapabilities` - GetCapabilities
-* `GetMap` - GetMap
-* `GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXML` - WMTS
+* [GetCapabilities](docs/wmswmts/README.md#getcapabilities) - GetCapabilities
+* [GetMap](docs/wmswmts/README.md#getmap) - GetMap
+* [GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXML](docs/wmswmts/README.md#getmapversionnumberwmtskeywmtsversionwmtscapabilitiesxml) - WMTS
 <!-- End SDK Available Operations -->
 
 ### Maturity

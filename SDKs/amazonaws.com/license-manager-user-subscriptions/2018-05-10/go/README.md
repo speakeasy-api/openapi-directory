@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/license-man
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,28 +28,26 @@ func main() {
         }),
     )
 
-    req := operations.AssociateUserRequest{
+    ctx := context.Background()
+    res, err := s.AssociateUser(ctx, operations.AssociateUserRequest{
         RequestBody: operations.AssociateUserRequestBody{
-            Domain: "corrupti",
+            Domain: sdk.String("corrupti"),
             IdentityProvider: operations.AssociateUserRequestBodyIdentityProvider{
                 ActiveDirectoryIdentityProvider: &shared.ActiveDirectoryIdentityProvider{
-                    DirectoryID: "provident",
+                    DirectoryID: sdk.String("provident"),
                 },
             },
             InstanceID: "distinctio",
             Username: "Rosalinda_Mitchell84",
         },
-        XAmzAlgorithm: "vel",
-        XAmzContentSha256: "error",
-        XAmzCredential: "deserunt",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "iure",
-        XAmzSignature: "magnam",
-        XAmzSignedHeaders: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateUser(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -64,19 +62,19 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AssociateUser` - <p>Associates the user to an EC2 instance to utilize user-based subscriptions.</p> <note> <p>Your estimated bill for charges on the number of users and related costs will take 48 hours to appear for billing periods that haven't closed (marked as <b>Pending</b> billing status) in Amazon Web Services Billing. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/invoice.html">Viewing your monthly charges</a> in the <i>Amazon Web Services Billing User Guide</i>.</p> </note>
-* `DeregisterIdentityProvider` - Deregisters the identity provider from providing user-based subscriptions.
-* `DisassociateUser` - Disassociates the user from an EC2 instance providing user-based subscriptions.
-* `ListIdentityProviders` - Lists the identity providers for user-based subscriptions.
-* `ListInstances` - Lists the EC2 instances providing user-based subscriptions.
-* `ListProductSubscriptions` - Lists the user-based subscription products available from an identity provider.
-* `ListUserAssociations` - Lists user associations for an identity provider.
-* `RegisterIdentityProvider` - Registers an identity provider for user-based subscriptions.
-* `StartProductSubscription` - <p>Starts a product subscription for a user with the specified identity provider.</p> <note> <p>Your estimated bill for charges on the number of users and related costs will take 48 hours to appear for billing periods that haven't closed (marked as <b>Pending</b> billing status) in Amazon Web Services Billing. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/invoice.html">Viewing your monthly charges</a> in the <i>Amazon Web Services Billing User Guide</i>.</p> </note>
-* `StopProductSubscription` - Stops a product subscription for a user with the specified identity provider.
-* `UpdateIdentityProviderSettings` - Updates additional product configuration settings for the registered identity provider.
+* [AssociateUser](docs/sdk/README.md#associateuser) - <p>Associates the user to an EC2 instance to utilize user-based subscriptions.</p> <note> <p>Your estimated bill for charges on the number of users and related costs will take 48 hours to appear for billing periods that haven't closed (marked as <b>Pending</b> billing status) in Amazon Web Services Billing. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/invoice.html">Viewing your monthly charges</a> in the <i>Amazon Web Services Billing User Guide</i>.</p> </note>
+* [DeregisterIdentityProvider](docs/sdk/README.md#deregisteridentityprovider) - Deregisters the identity provider from providing user-based subscriptions.
+* [DisassociateUser](docs/sdk/README.md#disassociateuser) - Disassociates the user from an EC2 instance providing user-based subscriptions.
+* [ListIdentityProviders](docs/sdk/README.md#listidentityproviders) - Lists the identity providers for user-based subscriptions.
+* [ListInstances](docs/sdk/README.md#listinstances) - Lists the EC2 instances providing user-based subscriptions.
+* [ListProductSubscriptions](docs/sdk/README.md#listproductsubscriptions) - Lists the user-based subscription products available from an identity provider.
+* [ListUserAssociations](docs/sdk/README.md#listuserassociations) - Lists user associations for an identity provider.
+* [RegisterIdentityProvider](docs/sdk/README.md#registeridentityprovider) - Registers an identity provider for user-based subscriptions.
+* [StartProductSubscription](docs/sdk/README.md#startproductsubscription) - <p>Starts a product subscription for a user with the specified identity provider.</p> <note> <p>Your estimated bill for charges on the number of users and related costs will take 48 hours to appear for billing periods that haven't closed (marked as <b>Pending</b> billing status) in Amazon Web Services Billing. For more information, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/invoice.html">Viewing your monthly charges</a> in the <i>Amazon Web Services Billing User Guide</i>.</p> </note>
+* [StopProductSubscription](docs/sdk/README.md#stopproductsubscription) - Stops a product subscription for a user with the specified identity provider.
+* [UpdateIdentityProviderSettings](docs/sdk/README.md#updateidentityprovidersettings) - Updates additional product configuration settings for the registered identity provider.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	CreateFHIRDatastoreXAmzTargetEnumHealthLakeCreateFhirDatastore CreateFHIRDatastoreXAmzTargetEnum = "HealthLake.CreateFHIRDatastore"
 )
 
+func (e CreateFHIRDatastoreXAmzTargetEnum) ToPointer() *CreateFHIRDatastoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFHIRDatastoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HealthLake.CreateFHIRDatastore":
-		*e = CreateFHIRDatastoreXAmzTargetEnum(s)
+		*e = CreateFHIRDatastoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFHIRDatastoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFHIRDatastoreXAmzTargetEnum: %v", v)
 	}
 }
 

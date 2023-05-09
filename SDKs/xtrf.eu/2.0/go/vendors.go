@@ -37,7 +37,10 @@ func newVendors(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Removes a provider.
 func (s *vendors) Delete10(ctx context.Context, request operations.Delete10Request) (*operations.Delete10Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *vendors) Delete10(ctx context.Context, request operations.Delete10Reque
 // Removes a person.
 func (s *vendors) Delete8(ctx context.Context, request operations.Delete8Request) (*operations.Delete8Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -109,7 +115,10 @@ func (s *vendors) Delete8(ctx context.Context, request operations.Delete8Request
 // Removes a provider price list.
 func (s *vendors) Delete9(ctx context.Context, request operations.Delete9Request) (*operations.Delete9Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/priceLists/{priceListId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/priceLists/{priceListId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -145,7 +154,10 @@ func (s *vendors) Delete9(ctx context.Context, request operations.Delete9Request
 // Returns address of a given provider.
 func (s *vendors) GetAddress1(ctx context.Context, request operations.GetAddress1Request) (*operations.GetAddress1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/address", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/address", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +300,10 @@ func (s *vendors) GetAllIds5(ctx context.Context, request operations.GetAllIds5R
 // Returns person details.
 func (s *vendors) GetByID4(ctx context.Context, request operations.GetByID4Request) (*operations.GetByID4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -333,7 +348,10 @@ func (s *vendors) GetByID4(ctx context.Context, request operations.GetByID4Reque
 // Returns provider details.
 func (s *vendors) GetByID5(ctx context.Context, request operations.GetByID5Request) (*operations.GetByID5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -382,7 +400,10 @@ func (s *vendors) GetByID5(ctx context.Context, request operations.GetByID5Reque
 // Returns competencies of a given provider.
 func (s *vendors) GetCompetencies(ctx context.Context, request operations.GetCompetenciesRequest) (*operations.GetCompetenciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/competencies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/competencies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -427,7 +448,10 @@ func (s *vendors) GetCompetencies(ctx context.Context, request operations.GetCom
 // Returns contact of a given person.
 func (s *vendors) GetContact2(ctx context.Context, request operations.GetContact2Request) (*operations.GetContact2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -472,7 +496,10 @@ func (s *vendors) GetContact2(ctx context.Context, request operations.GetContact
 // Returns contact of a given provider.
 func (s *vendors) GetContact3(ctx context.Context, request operations.GetContact3Request) (*operations.GetContact3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -517,7 +544,10 @@ func (s *vendors) GetContact3(ctx context.Context, request operations.GetContact
 // Returns correspondence address of a given provider.
 func (s *vendors) GetCorrespondenceAddress1(ctx context.Context, request operations.GetCorrespondenceAddress1Request) (*operations.GetCorrespondenceAddress1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/correspondenceAddress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/correspondenceAddress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -562,7 +592,10 @@ func (s *vendors) GetCorrespondenceAddress1(ctx context.Context, request operati
 // Returns custom fields of a given person.
 func (s *vendors) GetCustomFields2(ctx context.Context, request operations.GetCustomFields2Request) (*operations.GetCustomFields2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -607,7 +640,10 @@ func (s *vendors) GetCustomFields2(ctx context.Context, request operations.GetCu
 // Returns custom fields of a given provider.
 func (s *vendors) GetCustomFields3(ctx context.Context, request operations.GetCustomFields3Request) (*operations.GetCustomFields3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *vendors) GetCustomFields3(ctx context.Context, request operations.GetCu
 // Sends invitation to Vendor Portal.
 func (s *vendors) SendInvitations(ctx context.Context, request operations.SendInvitationsRequest) (*operations.SendInvitationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/notification/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/persons/{personId}/notification/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -697,7 +736,10 @@ func (s *vendors) SendInvitations(ctx context.Context, request operations.SendIn
 // Sends invitations to Vendor Portal.
 func (s *vendors) SendInvitations1(ctx context.Context, request operations.SendInvitations1Request) (*operations.SendInvitations1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/notification/invitation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/providers/{providerId}/notification/invitation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	PortProtocolEnumTCP  PortProtocolEnum = "tcp"
 )
 
+func (e PortProtocolEnum) ToPointer() *PortProtocolEnum {
+	return &e
+}
+
 func (e *PortProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "tcp":
-		*e = PortProtocolEnum(s)
+		*e = PortProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PortProtocolEnum: %v", v)
 	}
 }

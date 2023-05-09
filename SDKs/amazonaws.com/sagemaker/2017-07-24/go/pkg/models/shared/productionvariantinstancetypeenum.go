@@ -153,12 +153,16 @@ const (
 	ProductionVariantInstanceTypeEnumMlP4de24xlarge ProductionVariantInstanceTypeEnum = "ml.p4de.24xlarge"
 )
 
+func (e ProductionVariantInstanceTypeEnum) ToPointer() *ProductionVariantInstanceTypeEnum {
+	return &e
+}
+
 func (e *ProductionVariantInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.t2.medium":
 		fallthrough
 	case "ml.t2.large":
@@ -440,9 +444,9 @@ func (e *ProductionVariantInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.r6gd.16xlarge":
 		fallthrough
 	case "ml.p4de.24xlarge":
-		*e = ProductionVariantInstanceTypeEnum(s)
+		*e = ProductionVariantInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductionVariantInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductionVariantInstanceTypeEnum: %v", v)
 	}
 }

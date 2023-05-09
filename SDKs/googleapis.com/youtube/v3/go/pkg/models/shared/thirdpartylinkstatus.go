@@ -16,12 +16,16 @@ const (
 	ThirdPartyLinkStatusLinkStatusEnumLinked  ThirdPartyLinkStatusLinkStatusEnum = "linked"
 )
 
+func (e ThirdPartyLinkStatusLinkStatusEnum) ToPointer() *ThirdPartyLinkStatusLinkStatusEnum {
+	return &e
+}
+
 func (e *ThirdPartyLinkStatusLinkStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "failed":
@@ -29,10 +33,10 @@ func (e *ThirdPartyLinkStatusLinkStatusEnum) UnmarshalJSON(data []byte) error {
 	case "pending":
 		fallthrough
 	case "linked":
-		*e = ThirdPartyLinkStatusLinkStatusEnum(s)
+		*e = ThirdPartyLinkStatusLinkStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyLinkStatusLinkStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyLinkStatusLinkStatusEnum: %v", v)
 	}
 }
 

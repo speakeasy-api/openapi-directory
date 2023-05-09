@@ -28,12 +28,16 @@ const (
 	CallFinalCallResultEnumSkipped          CallFinalCallResultEnum = "SKIPPED"
 )
 
+func (e CallFinalCallResultEnum) ToPointer() *CallFinalCallResultEnum {
+	return &e
+}
+
 func (e *CallFinalCallResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LA":
 		fallthrough
 	case "AM":
@@ -63,10 +67,10 @@ func (e *CallFinalCallResultEnum) UnmarshalJSON(data []byte) error {
 	case "ABANDONED":
 		fallthrough
 	case "SKIPPED":
-		*e = CallFinalCallResultEnum(s)
+		*e = CallFinalCallResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallFinalCallResultEnum: %s", s)
+		return fmt.Errorf("invalid value for CallFinalCallResultEnum: %v", v)
 	}
 }
 
@@ -88,12 +92,16 @@ const (
 	CallStateEnumRestrictedNumber CallStateEnum = "RESTRICTED_NUMBER"
 )
 
+func (e CallStateEnum) ToPointer() *CallStateEnum {
+	return &e
+}
+
 func (e *CallStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "SELECTED":
@@ -117,10 +125,10 @@ func (e *CallStateEnum) UnmarshalJSON(data []byte) error {
 	case "PERIOD_LIMIT":
 		fallthrough
 	case "RESTRICTED_NUMBER":
-		*e = CallStateEnum(s)
+		*e = CallStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CallStateEnum: %v", v)
 	}
 }
 

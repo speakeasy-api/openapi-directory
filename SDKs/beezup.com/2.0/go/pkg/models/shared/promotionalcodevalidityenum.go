@@ -17,12 +17,16 @@ const (
 	PromotionalCodeValidityEnumExpiredOrInactive PromotionalCodeValidityEnum = "ExpiredOrInactive"
 )
 
+func (e PromotionalCodeValidityEnum) ToPointer() *PromotionalCodeValidityEnum {
+	return &e
+}
+
 func (e *PromotionalCodeValidityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Valid":
@@ -30,9 +34,9 @@ func (e *PromotionalCodeValidityEnum) UnmarshalJSON(data []byte) error {
 	case "Invalid":
 		fallthrough
 	case "ExpiredOrInactive":
-		*e = PromotionalCodeValidityEnum(s)
+		*e = PromotionalCodeValidityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PromotionalCodeValidityEnum: %s", s)
+		return fmt.Errorf("invalid value for PromotionalCodeValidityEnum: %v", v)
 	}
 }

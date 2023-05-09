@@ -16,17 +16,21 @@ const (
 	DescribeLogStreamsXAmzTargetEnumLogs20140328DescribeLogStreams DescribeLogStreamsXAmzTargetEnum = "Logs_20140328.DescribeLogStreams"
 )
 
+func (e DescribeLogStreamsXAmzTargetEnum) ToPointer() *DescribeLogStreamsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLogStreamsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DescribeLogStreams":
-		*e = DescribeLogStreamsXAmzTargetEnum(s)
+		*e = DescribeLogStreamsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLogStreamsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLogStreamsXAmzTargetEnum: %v", v)
 	}
 }
 

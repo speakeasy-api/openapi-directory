@@ -15,17 +15,21 @@ const (
 	POSTCreateOptionGroupActionEnumCreateOptionGroup POSTCreateOptionGroupActionEnum = "CreateOptionGroup"
 )
 
+func (e POSTCreateOptionGroupActionEnum) ToPointer() *POSTCreateOptionGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCreateOptionGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateOptionGroup":
-		*e = POSTCreateOptionGroupActionEnum(s)
+		*e = POSTCreateOptionGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateOptionGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateOptionGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateOptionGroupVersionEnumTwoThousandAndFourteen1031 POSTCreateOptionGroupVersionEnum = "2014-10-31"
 )
 
+func (e POSTCreateOptionGroupVersionEnum) ToPointer() *POSTCreateOptionGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCreateOptionGroupVersionEnum(s)
+		*e = POSTCreateOptionGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateOptionGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateOptionGroupVersionEnum: %v", v)
 	}
 }
 

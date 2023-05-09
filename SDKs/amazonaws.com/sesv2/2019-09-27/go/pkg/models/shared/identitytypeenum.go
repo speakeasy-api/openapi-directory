@@ -15,20 +15,24 @@ const (
 	IdentityTypeEnumManagedDomain IdentityTypeEnum = "MANAGED_DOMAIN"
 )
 
+func (e IdentityTypeEnum) ToPointer() *IdentityTypeEnum {
+	return &e
+}
+
 func (e *IdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL_ADDRESS":
 		fallthrough
 	case "DOMAIN":
 		fallthrough
 	case "MANAGED_DOMAIN":
-		*e = IdentityTypeEnum(s)
+		*e = IdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityTypeEnum: %v", v)
 	}
 }

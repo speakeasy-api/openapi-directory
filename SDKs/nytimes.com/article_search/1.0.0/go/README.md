@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/article_searc
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,21 +27,19 @@ func main() {
         }),
     )
 
-    req := operations.GetArticlesearchJSONRequest{
-        BeginDate: "corrupti",
-        EndDate: "provident",
-        FacetField: "distinctio",
-        FacetFilter: false,
-        Fl: "quibusdam",
-        Fq: "unde",
-        Hl: false,
-        Page: 857946,
-        Q: "corrupti",
-        Sort: "oldest",
-    }
-
     ctx := context.Background()
-    res, err := s.Stories.GetArticlesearchJSON(ctx, req)
+    res, err := s.Stories.GetArticlesearchJSON(ctx, operations.GetArticlesearchJSONRequest{
+        BeginDate: sdk.String("corrupti"),
+        EndDate: sdk.String("provident"),
+        FacetField: sdk.String("distinctio"),
+        FacetFilter: sdk.Bool(false),
+        Fl: sdk.String("quibusdam"),
+        Fq: sdk.String("unde"),
+        Hl: sdk.Bool(false),
+        Page: sdk.Int64(857946),
+        Q: sdk.String("corrupti"),
+        Sort: operations.GetArticlesearchJSONSortEnumOldest.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,9 +55,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Stories
+### [Stories](docs/stories/README.md)
 
-* `GetArticlesearchJSON` - Article Search
+* [GetArticlesearchJSON](docs/stories/README.md#getarticlesearchjson) - Article Search
 <!-- End SDK Available Operations -->
 
 ### Maturity

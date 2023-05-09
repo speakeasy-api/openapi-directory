@@ -3,9 +3,79 @@
 package shared
 
 import (
+	"bytes"
 	"encoding/json"
+	"errors"
 	"fmt"
 )
+
+type UpdatePaymentInstrumentBankAccountType string
+
+const (
+	UpdatePaymentInstrumentBankAccountTypeIbanAccountIdentification    UpdatePaymentInstrumentBankAccountType = "IbanAccountIdentification"
+	UpdatePaymentInstrumentBankAccountTypeUSLocalAccountIdentification UpdatePaymentInstrumentBankAccountType = "USLocalAccountIdentification"
+)
+
+type UpdatePaymentInstrumentBankAccount struct {
+	IbanAccountIdentification    *IbanAccountIdentification
+	USLocalAccountIdentification *USLocalAccountIdentification
+
+	Type UpdatePaymentInstrumentBankAccountType
+}
+
+func CreateUpdatePaymentInstrumentBankAccountIbanAccountIdentification(ibanAccountIdentification IbanAccountIdentification) UpdatePaymentInstrumentBankAccount {
+	typ := UpdatePaymentInstrumentBankAccountTypeIbanAccountIdentification
+
+	return UpdatePaymentInstrumentBankAccount{
+		IbanAccountIdentification: &ibanAccountIdentification,
+		Type:                      typ,
+	}
+}
+
+func CreateUpdatePaymentInstrumentBankAccountUSLocalAccountIdentification(usLocalAccountIdentification USLocalAccountIdentification) UpdatePaymentInstrumentBankAccount {
+	typ := UpdatePaymentInstrumentBankAccountTypeUSLocalAccountIdentification
+
+	return UpdatePaymentInstrumentBankAccount{
+		USLocalAccountIdentification: &usLocalAccountIdentification,
+		Type:                         typ,
+	}
+}
+
+func (u *UpdatePaymentInstrumentBankAccount) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	ibanAccountIdentification := new(IbanAccountIdentification)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&ibanAccountIdentification); err == nil {
+		u.IbanAccountIdentification = ibanAccountIdentification
+		u.Type = UpdatePaymentInstrumentBankAccountTypeIbanAccountIdentification
+		return nil
+	}
+
+	usLocalAccountIdentification := new(USLocalAccountIdentification)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&usLocalAccountIdentification); err == nil {
+		u.USLocalAccountIdentification = usLocalAccountIdentification
+		u.Type = UpdatePaymentInstrumentBankAccountTypeUSLocalAccountIdentification
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u UpdatePaymentInstrumentBankAccount) MarshalJSON() ([]byte, error) {
+	if u.IbanAccountIdentification != nil {
+		return json.Marshal(u.IbanAccountIdentification)
+	}
+
+	if u.USLocalAccountIdentification != nil {
+		return json.Marshal(u.USLocalAccountIdentification)
+	}
+
+	return nil, nil
+}
 
 // UpdatePaymentInstrumentStatusEnum - The status of the payment instrument. If a status is not specified when creating a payment instrument, it is set to **Active** by default. However, there can be exceptions for cards based on the `card.formFactor` and the `issuingCountryCode`. For example, when issuing physical cards in the US, the default status is **Requested**.
 //
@@ -38,12 +108,16 @@ const (
 	UpdatePaymentInstrumentStatusEnumDiscarded UpdatePaymentInstrumentStatusEnum = "discarded"
 )
 
+func (e UpdatePaymentInstrumentStatusEnum) ToPointer() *UpdatePaymentInstrumentStatusEnum {
+	return &e
+}
+
 func (e *UpdatePaymentInstrumentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -61,10 +135,10 @@ func (e *UpdatePaymentInstrumentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "blocked":
 		fallthrough
 	case "discarded":
-		*e = UpdatePaymentInstrumentStatusEnum(s)
+		*e = UpdatePaymentInstrumentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePaymentInstrumentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePaymentInstrumentStatusEnum: %v", v)
 	}
 }
 
@@ -78,28 +152,33 @@ const (
 	UpdatePaymentInstrumentTypeEnumCard        UpdatePaymentInstrumentTypeEnum = "card"
 )
 
+func (e UpdatePaymentInstrumentTypeEnum) ToPointer() *UpdatePaymentInstrumentTypeEnum {
+	return &e
+}
+
 func (e *UpdatePaymentInstrumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bankAccount":
 		fallthrough
 	case "card":
-		*e = UpdatePaymentInstrumentTypeEnum(s)
+		*e = UpdatePaymentInstrumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePaymentInstrumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePaymentInstrumentTypeEnum: %v", v)
 	}
 }
 
 // UpdatePaymentInstrument - OK - the request has succeeded.
 type UpdatePaymentInstrument struct {
 	// The unique identifier of the [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/v1/post/balanceAccounts__resParam_id) associated with the payment instrument.
-	BalanceAccountID string       `json:"balanceAccountId"`
-	BankAccount      *BankAccount `json:"bankAccount,omitempty"`
-	Card             *Card        `json:"card,omitempty"`
+	BalanceAccountID string `json:"balanceAccountId"`
+	// Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
+	BankAccount *UpdatePaymentInstrumentBankAccount `json:"bankAccount,omitempty"`
+	Card        *Card                               `json:"card,omitempty"`
 	// Your description for the payment instrument, maximum 300 characters.
 	Description *string `json:"description,omitempty"`
 	// The unique identifier of the payment instrument.

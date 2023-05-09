@@ -16,21 +16,25 @@ const (
 	SmartMeDeviceConfigurationContainerDNSUpdateStateEnumDNSUpdateInternalIP SmartMeDeviceConfigurationContainerDNSUpdateStateEnum = "DnsUpdateInternalIp"
 )
 
+func (e SmartMeDeviceConfigurationContainerDNSUpdateStateEnum) ToPointer() *SmartMeDeviceConfigurationContainerDNSUpdateStateEnum {
+	return &e
+}
+
 func (e *SmartMeDeviceConfigurationContainerDNSUpdateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoUpdate":
 		fallthrough
 	case "DnsUpdatePublicIp":
 		fallthrough
 	case "DnsUpdateInternalIp":
-		*e = SmartMeDeviceConfigurationContainerDNSUpdateStateEnum(s)
+		*e = SmartMeDeviceConfigurationContainerDNSUpdateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SmartMeDeviceConfigurationContainerDNSUpdateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SmartMeDeviceConfigurationContainerDNSUpdateStateEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	SmartMeDeviceConfigurationContainerUploadIntervalEnumUploadInterval24h   SmartMeDeviceConfigurationContainerUploadIntervalEnum = "UploadInterval_24h"
 )
 
+func (e SmartMeDeviceConfigurationContainerUploadIntervalEnum) ToPointer() *SmartMeDeviceConfigurationContainerUploadIntervalEnum {
+	return &e
+}
+
 func (e *SmartMeDeviceConfigurationContainerUploadIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UploadInterval_1s":
 		fallthrough
 	case "UploadInterval_5s":
@@ -81,10 +89,10 @@ func (e *SmartMeDeviceConfigurationContainerUploadIntervalEnum) UnmarshalJSON(da
 	case "UploadInterval_12h":
 		fallthrough
 	case "UploadInterval_24h":
-		*e = SmartMeDeviceConfigurationContainerUploadIntervalEnum(s)
+		*e = SmartMeDeviceConfigurationContainerUploadIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SmartMeDeviceConfigurationContainerUploadIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for SmartMeDeviceConfigurationContainerUploadIntervalEnum: %v", v)
 	}
 }
 

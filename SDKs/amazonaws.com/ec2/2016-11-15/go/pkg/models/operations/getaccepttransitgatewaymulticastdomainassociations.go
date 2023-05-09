@@ -15,17 +15,21 @@ const (
 	GETAcceptTransitGatewayMulticastDomainAssociationsActionEnumAcceptTransitGatewayMulticastDomainAssociations GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum = "AcceptTransitGatewayMulticastDomainAssociations"
 )
 
+func (e GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum) ToPointer() *GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum {
+	return &e
+}
+
 func (e *GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcceptTransitGatewayMulticastDomainAssociations":
-		*e = GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum(s)
+		*e = GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAcceptTransitGatewayMulticastDomainAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnumTwoThousandAndSixteen1115 GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum) ToPointer() *GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum {
+	return &e
+}
+
 func (e *GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum(s)
+		*e = GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAcceptTransitGatewayMulticastDomainAssociationsVersionEnum: %v", v)
 	}
 }
 

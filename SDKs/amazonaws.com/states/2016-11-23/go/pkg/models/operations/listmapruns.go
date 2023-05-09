@@ -16,17 +16,21 @@ const (
 	ListMapRunsXAmzTargetEnumAwsStepFunctionsListMapRuns ListMapRunsXAmzTargetEnum = "AWSStepFunctions.ListMapRuns"
 )
 
+func (e ListMapRunsXAmzTargetEnum) ToPointer() *ListMapRunsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListMapRunsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.ListMapRuns":
-		*e = ListMapRunsXAmzTargetEnum(s)
+		*e = ListMapRunsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMapRunsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMapRunsXAmzTargetEnum: %v", v)
 	}
 }
 

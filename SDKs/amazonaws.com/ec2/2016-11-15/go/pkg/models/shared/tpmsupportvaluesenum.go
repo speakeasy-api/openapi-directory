@@ -13,16 +13,20 @@ const (
 	TpmSupportValuesEnumV20 TpmSupportValuesEnum = "v2.0"
 )
 
+func (e TpmSupportValuesEnum) ToPointer() *TpmSupportValuesEnum {
+	return &e
+}
+
 func (e *TpmSupportValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v2.0":
-		*e = TpmSupportValuesEnum(s)
+		*e = TpmSupportValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TpmSupportValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for TpmSupportValuesEnum: %v", v)
 	}
 }

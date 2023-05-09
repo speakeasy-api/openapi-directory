@@ -36,7 +36,10 @@ func newVariationSet(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteVariantSetItem - Deletes variant set
 func (s *variationSet) DeleteVariantSetItem(ctx context.Context, request operations.DeleteVariantSetItemRequest) (*operations.DeleteVariantSetItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *variationSet) DeleteVariantSetItem(ctx context.Context, request operati
 // GetVariantAnalyze - Returns list of matches
 func (s *variationSet) GetVariantAnalyze(ctx context.Context, request operations.GetVariantAnalyzeRequest) (*operations.GetVariantAnalyzeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variation/set/analyze/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variation/set/analyze/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -117,7 +123,10 @@ func (s *variationSet) GetVariantAnalyze(ctx context.Context, request operations
 // GetVariantSetItem - Returns a variant set
 func (s *variationSet) GetVariantSetItem(ctx context.Context, request operations.GetVariantSetItemRequest) (*operations.GetVariantSetItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +171,10 @@ func (s *variationSet) GetVariantSetItem(ctx context.Context, request operations
 // GetVariantSetsArchiveCollection - Returns list of variant sets from a specified time period
 func (s *variationSet) GetVariantSetsArchiveCollection(ctx context.Context, request operations.GetVariantSetsArchiveCollectionRequest) (*operations.GetVariantSetsArchiveCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variation/set/archive/{year}/{month}/{day}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variation/set/archive/{year}/{month}/{day}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +315,10 @@ func (s *variationSet) PostVariantSetsCollection(ctx context.Context, request sh
 // PutVariantSetItem - Updates a variant set
 func (s *variationSet) PutVariantSetItem(ctx context.Context, request operations.PutVariantSetItemRequest) (*operations.PutVariantSetItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/variation/set/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VariantSet", "json")
 	if err != nil {

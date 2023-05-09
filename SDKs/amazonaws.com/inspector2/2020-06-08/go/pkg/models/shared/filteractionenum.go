@@ -14,18 +14,22 @@ const (
 	FilterActionEnumSuppress FilterActionEnum = "SUPPRESS"
 )
 
+func (e FilterActionEnum) ToPointer() *FilterActionEnum {
+	return &e
+}
+
 func (e *FilterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "SUPPRESS":
-		*e = FilterActionEnum(s)
+		*e = FilterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterActionEnum: %v", v)
 	}
 }

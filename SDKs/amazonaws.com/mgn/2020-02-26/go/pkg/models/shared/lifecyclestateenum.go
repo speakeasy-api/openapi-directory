@@ -22,12 +22,16 @@ const (
 	LifeCycleStateEnumPendingInstallation LifeCycleStateEnum = "PENDING_INSTALLATION"
 )
 
+func (e LifeCycleStateEnum) ToPointer() *LifeCycleStateEnum {
+	return &e
+}
+
 func (e *LifeCycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOPPED":
 		fallthrough
 	case "NOT_READY":
@@ -47,9 +51,9 @@ func (e *LifeCycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "DISCOVERED":
 		fallthrough
 	case "PENDING_INSTALLATION":
-		*e = LifeCycleStateEnum(s)
+		*e = LifeCycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifeCycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LifeCycleStateEnum: %v", v)
 	}
 }

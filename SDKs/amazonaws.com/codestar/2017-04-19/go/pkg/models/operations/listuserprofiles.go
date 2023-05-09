@@ -16,17 +16,21 @@ const (
 	ListUserProfilesXAmzTargetEnumCodeStar20170419ListUserProfiles ListUserProfilesXAmzTargetEnum = "CodeStar_20170419.ListUserProfiles"
 )
 
+func (e ListUserProfilesXAmzTargetEnum) ToPointer() *ListUserProfilesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListUserProfilesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeStar_20170419.ListUserProfiles":
-		*e = ListUserProfilesXAmzTargetEnum(s)
+		*e = ListUserProfilesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListUserProfilesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListUserProfilesXAmzTargetEnum: %v", v)
 	}
 }
 

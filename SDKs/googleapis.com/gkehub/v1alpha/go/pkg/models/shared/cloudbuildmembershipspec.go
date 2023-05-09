@@ -16,21 +16,25 @@ const (
 	CloudBuildMembershipSpecSecurityPolicyEnumPrivileged                CloudBuildMembershipSpecSecurityPolicyEnum = "PRIVILEGED"
 )
 
+func (e CloudBuildMembershipSpecSecurityPolicyEnum) ToPointer() *CloudBuildMembershipSpecSecurityPolicyEnum {
+	return &e
+}
+
 func (e *CloudBuildMembershipSpecSecurityPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURITY_POLICY_UNSPECIFIED":
 		fallthrough
 	case "NON_PRIVILEGED":
 		fallthrough
 	case "PRIVILEGED":
-		*e = CloudBuildMembershipSpecSecurityPolicyEnum(s)
+		*e = CloudBuildMembershipSpecSecurityPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudBuildMembershipSpecSecurityPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudBuildMembershipSpecSecurityPolicyEnum: %v", v)
 	}
 }
 

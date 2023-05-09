@@ -2,163 +2,221 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudfunctionsProjectsLocationsFunctionsCreate(ctx, operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         FunctionInput: &shared.FunctionInput{
             BuildConfig: &shared.BuildConfigInput{
-                BuildpackStack: "provident",
-                DockerRegistry: "ARTIFACT_REGISTRY",
-                DockerRepository: "quibusdam",
-                EntryPoint: "unde",
+                DockerRegistry: shared.BuildConfigDockerRegistryEnumContainerRegistry.ToPointer(),
+                DockerRepository: sdk.String("distinctio"),
+                EntryPoint: sdk.String("quibusdam"),
                 EnvironmentVariables: map[string]string{
-                    "corrupti": "illum",
-                    "vel": "error",
-                    "deserunt": "suscipit",
-                    "iure": "magnam",
+                    "nulla": "corrupti",
+                    "illum": "vel",
+                    "error": "deserunt",
                 },
-                Runtime: "debitis",
+                Runtime: sdk.String("suscipit"),
                 Source: &shared.Source{
                     RepoSource: &shared.RepoSource{
-                        BranchName: "ipsa",
-                        CommitSha: "delectus",
-                        Dir: "tempora",
-                        InvertRegex: false,
-                        ProjectID: "suscipit",
-                        RepoName: "molestiae",
-                        TagName: "minus",
+                        BranchName: sdk.String("iure"),
+                        CommitSha: sdk.String("magnam"),
+                        Dir: sdk.String("debitis"),
+                        InvertRegex: sdk.Bool(false),
+                        ProjectID: sdk.String("ipsa"),
+                        RepoName: sdk.String("delectus"),
+                        TagName: sdk.String("tempora"),
                     },
                     StorageSource: &shared.StorageSource{
-                        Bucket: "placeat",
-                        Generation: "voluptatum",
-                        Object: "iusto",
+                        Bucket: sdk.String("suscipit"),
+                        Generation: sdk.String("molestiae"),
+                        Object: sdk.String("minus"),
                     },
                 },
                 SourceProvenance: &shared.SourceProvenance{
                     ResolvedRepoSource: &shared.RepoSource{
-                        BranchName: "excepturi",
-                        CommitSha: "nisi",
-                        Dir: "recusandae",
-                        InvertRegex: false,
-                        ProjectID: "temporibus",
-                        RepoName: "ab",
-                        TagName: "quis",
+                        BranchName: sdk.String("placeat"),
+                        CommitSha: sdk.String("voluptatum"),
+                        Dir: sdk.String("iusto"),
+                        InvertRegex: sdk.Bool(false),
+                        ProjectID: sdk.String("excepturi"),
+                        RepoName: sdk.String("nisi"),
+                        TagName: sdk.String("recusandae"),
                     },
                     ResolvedStorageSource: &shared.StorageSource{
-                        Bucket: "veritatis",
-                        Generation: "deserunt",
-                        Object: "perferendis",
+                        Bucket: sdk.String("temporibus"),
+                        Generation: sdk.String("ab"),
+                        Object: sdk.String("quis"),
                     },
                 },
-                WorkerPool: "ipsam",
+                WorkerPool: sdk.String("veritatis"),
             },
-            Description: "repellendus",
-            Environment: "GEN_2",
+            Description: sdk.String("deserunt"),
+            Environment: shared.FunctionEnvironmentEnumEnvironmentUnspecified.ToPointer(),
             EventTrigger: &shared.EventTriggerInput{
-                Channel: "quo",
+                Channel: sdk.String("ipsam"),
                 EventFilters: []shared.EventFilter{
                     shared.EventFilter{
-                        Attribute: "at",
-                        Operator: "at",
-                        Value: "maiores",
+                        Attribute: sdk.String("sapiente"),
+                        Operator: sdk.String("quo"),
+                        Value: sdk.String("odit"),
+                    },
+                    shared.EventFilter{
+                        Attribute: sdk.String("at"),
+                        Operator: sdk.String("at"),
+                        Value: sdk.String("maiores"),
+                    },
+                    shared.EventFilter{
+                        Attribute: sdk.String("molestiae"),
+                        Operator: sdk.String("quod"),
+                        Value: sdk.String("quod"),
+                    },
+                    shared.EventFilter{
+                        Attribute: sdk.String("esse"),
+                        Operator: sdk.String("totam"),
+                        Value: sdk.String("porro"),
                     },
                 },
-                EventType: "molestiae",
-                PubsubTopic: "quod",
-                RetryPolicy: "RETRY_POLICY_RETRY",
-                ServiceAccountEmail: "esse",
-                TriggerRegion: "totam",
+                EventType: sdk.String("dolorum"),
+                PubsubTopic: sdk.String("dicta"),
+                RetryPolicy: shared.EventTriggerRetryPolicyEnumRetryPolicyRetry.ToPointer(),
+                ServiceAccountEmail: sdk.String("officia"),
+                TriggerRegion: sdk.String("occaecati"),
             },
-            KmsKeyName: "porro",
+            KmsKeyName: sdk.String("fugit"),
             Labels: map[string]string{
-                "dicta": "nam",
-                "officia": "occaecati",
-                "fugit": "deleniti",
+                "hic": "optio",
+                "totam": "beatae",
+                "commodi": "molestiae",
             },
-            Name: "hic",
+            Name: sdk.String("Norma Ryan"),
             ServiceConfig: &shared.ServiceConfigInput{
-                AllTrafficOnLatestRevision: false,
-                AvailableCPU: "optio",
-                AvailableMemory: "totam",
+                AllTrafficOnLatestRevision: sdk.Bool(false),
+                AvailableCPU: sdk.String("ipsum"),
+                AvailableMemory: sdk.String("excepturi"),
                 EnvironmentVariables: map[string]string{
-                    "commodi": "molestiae",
+                    "perferendis": "ad",
                 },
-                IngressSettings: "ALLOW_ALL",
-                MaxInstanceCount: 186332,
-                MaxInstanceRequestConcurrency: 774234,
-                MinInstanceCount: 736918,
+                IngressSettings: shared.ServiceConfigIngressSettingsEnumAllowInternalOnly.ToPointer(),
+                MaxInstanceCount: sdk.Int(149675),
+                MaxInstanceRequestConcurrency: sdk.Int(612096),
+                MinInstanceCount: sdk.Int(222321),
                 SecretEnvironmentVariables: []shared.SecretEnvVar{
                     shared.SecretEnvVar{
-                        Key: "ipsum",
-                        ProjectID: "excepturi",
-                        Secret: "aspernatur",
-                        Version: "perferendis",
+                        Key: sdk.String("laboriosam"),
+                        ProjectID: sdk.String("hic"),
+                        Secret: sdk.String("saepe"),
+                        Version: sdk.String("fuga"),
                     },
                     shared.SecretEnvVar{
-                        Key: "ad",
-                        ProjectID: "natus",
-                        Secret: "sed",
-                        Version: "iste",
+                        Key: sdk.String("in"),
+                        ProjectID: sdk.String("corporis"),
+                        Secret: sdk.String("iste"),
+                        Version: sdk.String("iure"),
+                    },
+                    shared.SecretEnvVar{
+                        Key: sdk.String("saepe"),
+                        ProjectID: sdk.String("quidem"),
+                        Secret: sdk.String("architecto"),
+                        Version: sdk.String("ipsa"),
                     },
                 },
                 SecretVolumes: []shared.SecretVolume{
                     shared.SecretVolume{
-                        MountPath: "natus",
-                        ProjectID: "laboriosam",
-                        Secret: "hic",
+                        MountPath: sdk.String("est"),
+                        ProjectID: sdk.String("mollitia"),
+                        Secret: sdk.String("laborum"),
                         Versions: []shared.SecretVersion{
                             shared.SecretVersion{
-                                Path: "fuga",
-                                Version: "in",
+                                Path: sdk.String("dolorem"),
+                                Version: sdk.String("corporis"),
+                            },
+                        },
+                    },
+                    shared.SecretVolume{
+                        MountPath: sdk.String("explicabo"),
+                        ProjectID: sdk.String("nobis"),
+                        Secret: sdk.String("enim"),
+                        Versions: []shared.SecretVersion{
+                            shared.SecretVersion{
+                                Path: sdk.String("nemo"),
+                                Version: sdk.String("minima"),
                             },
                             shared.SecretVersion{
-                                Path: "corporis",
-                                Version: "iste",
+                                Path: sdk.String("excepturi"),
+                                Version: sdk.String("accusantium"),
                             },
                             shared.SecretVersion{
-                                Path: "iure",
-                                Version: "saepe",
+                                Path: sdk.String("iure"),
+                                Version: sdk.String("culpa"),
+                            },
+                        },
+                    },
+                    shared.SecretVolume{
+                        MountPath: sdk.String("doloribus"),
+                        ProjectID: sdk.String("sapiente"),
+                        Secret: sdk.String("architecto"),
+                        Versions: []shared.SecretVersion{
+                            shared.SecretVersion{
+                                Path: sdk.String("dolorem"),
+                                Version: sdk.String("culpa"),
                             },
                             shared.SecretVersion{
-                                Path: "quidem",
-                                Version: "architecto",
+                                Path: sdk.String("consequuntur"),
+                                Version: sdk.String("repellat"),
+                            },
+                            shared.SecretVersion{
+                                Path: sdk.String("mollitia"),
+                                Version: sdk.String("occaecati"),
+                            },
+                        },
+                    },
+                    shared.SecretVolume{
+                        MountPath: sdk.String("numquam"),
+                        ProjectID: sdk.String("commodi"),
+                        Secret: sdk.String("quam"),
+                        Versions: []shared.SecretVersion{
+                            shared.SecretVersion{
+                                Path: sdk.String("velit"),
+                                Version: sdk.String("error"),
+                            },
+                            shared.SecretVersion{
+                                Path: sdk.String("quia"),
+                                Version: sdk.String("quis"),
                             },
                         },
                     },
                 },
-                SecurityLevel: "SECURITY_LEVEL_UNSPECIFIED",
-                ServiceAccountEmail: "reiciendis",
-                TimeoutSeconds: 666767,
-                VpcConnector: "mollitia",
-                VpcConnectorEgressSettings: "ALL_TRAFFIC",
+                SecurityLevel: shared.ServiceConfigSecurityLevelEnumSecurityLevelUnspecified.ToPointer(),
+                ServiceAccountEmail: sdk.String("laborum"),
+                TimeoutSeconds: sdk.Int(656330),
+                VpcConnector: sdk.String("enim"),
+                VpcConnectorEgressSettings: shared.ServiceConfigVpcConnectorEgressSettingsEnumVpcConnectorEgressSettingsUnspecified.ToPointer(),
             },
         },
-        AccessToken: "dolores",
-        Alt: "json",
-        Callback: "corporis",
-        Fields: "explicabo",
-        FunctionID: "nobis",
-        Key: "enim",
-        OauthToken: "omnis",
-        Parent: "nemo",
-        PrettyPrint: false,
-        QuotaUser: "minima",
-        UploadType: "excepturi",
-        UploadProtocol: "accusantium",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudfunctionsProjectsLocationsFunctionsCreate(ctx, req, operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity{
+        AccessToken: sdk.String("quo"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("tenetur"),
+        Fields: sdk.String("ipsam"),
+        FunctionID: sdk.String("id"),
+        Key: sdk.String("possimus"),
+        OauthToken: sdk.String("aut"),
+        Parent: "quasi",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("laborum"),
+    }, operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

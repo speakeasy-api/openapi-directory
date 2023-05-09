@@ -18,12 +18,16 @@ const (
 	TaskStateEnumCompleted TaskStateEnum = "completed"
 )
 
+func (e TaskStateEnum) ToPointer() *TaskStateEnum {
+	return &e
+}
+
 func (e *TaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "queued":
@@ -33,10 +37,10 @@ func (e *TaskStateEnum) UnmarshalJSON(data []byte) error {
 	case "timedout":
 		fallthrough
 	case "completed":
-		*e = TaskStateEnum(s)
+		*e = TaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskStateEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	TaskStatusEnumError     TaskStatusEnum = "error"
 )
 
+func (e TaskStatusEnum) ToPointer() *TaskStatusEnum {
+	return &e
+}
+
 func (e *TaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ok":
 		fallthrough
 	case "warn":
@@ -62,10 +70,10 @@ func (e *TaskStatusEnum) UnmarshalJSON(data []byte) error {
 	case "unchanged":
 		fallthrough
 	case "error":
-		*e = TaskStatusEnum(s)
+		*e = TaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ImportModelXAmzTargetEnumComprehend20171127ImportModel ImportModelXAmzTargetEnum = "Comprehend_20171127.ImportModel"
 )
 
+func (e ImportModelXAmzTargetEnum) ToPointer() *ImportModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ImportModel":
-		*e = ImportModelXAmzTargetEnum(s)
+		*e = ImportModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportModelXAmzTargetEnum: %v", v)
 	}
 }
 

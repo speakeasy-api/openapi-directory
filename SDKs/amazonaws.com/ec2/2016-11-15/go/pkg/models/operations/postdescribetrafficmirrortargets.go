@@ -15,17 +15,21 @@ const (
 	POSTDescribeTrafficMirrorTargetsActionEnumDescribeTrafficMirrorTargets POSTDescribeTrafficMirrorTargetsActionEnum = "DescribeTrafficMirrorTargets"
 )
 
+func (e POSTDescribeTrafficMirrorTargetsActionEnum) ToPointer() *POSTDescribeTrafficMirrorTargetsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrafficMirrorTargetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTrafficMirrorTargets":
-		*e = POSTDescribeTrafficMirrorTargetsActionEnum(s)
+		*e = POSTDescribeTrafficMirrorTargetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrafficMirrorTargetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrafficMirrorTargetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeTrafficMirrorTargetsVersionEnumTwoThousandAndSixteen1115 POSTDescribeTrafficMirrorTargetsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeTrafficMirrorTargetsVersionEnum) ToPointer() *POSTDescribeTrafficMirrorTargetsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrafficMirrorTargetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeTrafficMirrorTargetsVersionEnum(s)
+		*e = POSTDescribeTrafficMirrorTargetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrafficMirrorTargetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrafficMirrorTargetsVersionEnum: %v", v)
 	}
 }
 

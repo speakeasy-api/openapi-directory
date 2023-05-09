@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/lambdatest.com/1.0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DevicesRequest{
-        Os: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetDevices.Devices(ctx, req, operations.DevicesSecurity{
+    res, err := s.GetDevices.Devices(ctx, operations.DevicesRequest{
+        Os: sdk.String("corrupti"),
+    }, operations.DevicesSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -48,41 +45,41 @@ func main() {
 ## Available Resources and Operations
 
 
-### GetDevices
+### [GetDevices](docs/getdevices/README.md)
 
-* `Devices` - Fetch all available device combinations.
+* [Devices](docs/getdevices/README.md#devices) - Fetch all available device combinations.
 
-### GetLocations
+### [GetLocations](docs/getlocations/README.md)
 
-* `Locations` - Fetch Locations
+* [Locations](docs/getlocations/README.md#locations) - Fetch Locations
 
-### GetOSBrowsers
+### [GetOSBrowsers](docs/getosbrowsers/README.md)
 
-* `OsBrowsers` - Fetch all available os-browser combinations.
+* [OsBrowsers](docs/getosbrowsers/README.md#osbrowsers) - Fetch all available os-browser combinations.
 
-### GetProfiles
+### [GetProfiles](docs/getprofiles/README.md)
 
-* `Profiles` - Fetch login profiles
+* [Profiles](docs/getprofiles/README.md#profiles) - Fetch login profiles
 
-### GetResolutions
+### [GetResolutions](docs/getresolutions/README.md)
 
-* `Resolutions` - Fetch all available resolution on different OS
+* [Resolutions](docs/getresolutions/README.md#resolutions) - Fetch all available resolution on different OS
 
-### GetScreenshots
+### [GetScreenshots](docs/getscreenshots/README.md)
 
-* `Screenshots` - Fetch specified screenshot details
+* [Screenshots](docs/getscreenshots/README.md#screenshots) - Fetch specified screenshot details
 
-### GetZippedScreenshots
+### [GetZippedScreenshots](docs/getzippedscreenshots/README.md)
 
-* `ZippedScreenshots` - Fetch Zipped Screenshots
+* [ZippedScreenshots](docs/getzippedscreenshots/README.md#zippedscreenshots) - Fetch Zipped Screenshots
 
-### StartScreenshotTest
+### [StartScreenshotTest](docs/startscreenshottest/README.md)
 
-* `StartScreenshotTest` - Start Screenshot Test
+* [StartScreenshotTest](docs/startscreenshottest/README.md#startscreenshottest) - Start Screenshot Test
 
-### StopScreenshotTest
+### [StopScreenshotTest](docs/stopscreenshottest/README.md)
 
-* `StopScreenshotsTest` - Stop specified screenshot test
+* [StopScreenshotsTest](docs/stopscreenshottest/README.md#stopscreenshotstest) - Stop specified screenshot test
 <!-- End SDK Available Operations -->
 
 ### Maturity

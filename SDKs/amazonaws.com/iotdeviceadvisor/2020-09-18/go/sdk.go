@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Web Services IoT Core Device Advisor is a cloud-based, fully managed test capability for validating IoT devices during device software development. Device Advisor provides pre-built tests that you can use to validate IoT devices for reliable and secure connectivity with Amazon Web Services IoT Core before deploying devices to production. By using Device Advisor, you can confirm that your devices can connect to Amazon Web Services IoT Core, follow security best practices and, if applicable, receive software updates from IoT Device Management. You can also download signed qualification reports to submit to the Amazon Web Services Partner Network to get your device qualified for the Amazon Web Services Partner Device Catalog without the need to send your device in and wait for it to be tested.
 // https://docs.aws.amazon.com/iotdeviceadvisor/ - Amazon Web Services documentation
 type SDK struct {
@@ -190,7 +205,10 @@ func (s *SDK) CreateSuiteDefinition(ctx context.Context, request operations.Crea
 // DeleteSuiteDefinition - <p>Deletes a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">DeleteSuiteDefinition</a> action.</p>
 func (s *SDK) DeleteSuiteDefinition(ctx context.Context, request operations.DeleteSuiteDefinitionRequest) (*operations.DeleteSuiteDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *SDK) GetEndpoint(ctx context.Context, request operations.GetEndpointReq
 // GetSuiteDefinition - <p>Gets information about a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteDefinition</a> action.</p>
 func (s *SDK) GetSuiteDefinition(ctx context.Context, request operations.GetSuiteDefinitionRequest) (*operations.GetSuiteDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -416,7 +437,10 @@ func (s *SDK) GetSuiteDefinition(ctx context.Context, request operations.GetSuit
 // GetSuiteRun - <p>Gets information about a Device Advisor test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRun</a> action.</p>
 func (s *SDK) GetSuiteRun(ctx context.Context, request operations.GetSuiteRunRequest) (*operations.GetSuiteRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -492,7 +516,10 @@ func (s *SDK) GetSuiteRun(ctx context.Context, request operations.GetSuiteRunReq
 // GetSuiteRunReport - <p>Gets a report download link for a successful Device Advisor qualifying test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">GetSuiteRunReport</a> action.</p>
 func (s *SDK) GetSuiteRunReport(ctx context.Context, request operations.GetSuiteRunReportRequest) (*operations.GetSuiteRunReportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}/report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}/report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -708,7 +735,10 @@ func (s *SDK) ListSuiteRuns(ctx context.Context, request operations.ListSuiteRun
 // ListTagsForResource - <p>Lists the tags attached to an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">ListTagsForResource</a> action.</p>
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -784,7 +814,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartSuiteRun - <p>Starts a Device Advisor test suite run.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StartSuiteRun</a> action.</p>
 func (s *SDK) StartSuiteRun(ctx context.Context, request operations.StartSuiteRunRequest) (*operations.StartSuiteRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -870,7 +903,10 @@ func (s *SDK) StartSuiteRun(ctx context.Context, request operations.StartSuiteRu
 // StopSuiteRun - <p>Stops a Device Advisor test suite run that is currently running.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">StopSuiteRun</a> action.</p>
 func (s *SDK) StopSuiteRun(ctx context.Context, request operations.StopSuiteRunRequest) (*operations.StopSuiteRunResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}/suiteRuns/{suiteRunId}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -946,7 +982,10 @@ func (s *SDK) StopSuiteRun(ctx context.Context, request operations.StopSuiteRunR
 // TagResource - <p>Adds to and modifies existing tags of an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">TagResource</a> action.</p>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1032,7 +1071,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - <p>Removes tags from an IoT Device Advisor resource.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UntagResource</a> action.</p>
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1112,7 +1154,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateSuiteDefinition - <p>Updates a Device Advisor test suite.</p> <p>Requires permission to access the <a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions">UpdateSuiteDefinition</a> action.</p>
 func (s *SDK) UpdateSuiteDefinition(ctx context.Context, request operations.UpdateSuiteDefinitionRequest) (*operations.UpdateSuiteDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suiteDefinitions/{suiteDefinitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,18 +15,22 @@ const (
 	FilterDirectionEnumBackwards FilterDirectionEnum = "backwards"
 )
 
+func (e FilterDirectionEnum) ToPointer() *FilterDirectionEnum {
+	return &e
+}
+
 func (e *FilterDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "forwards":
 		fallthrough
 	case "backwards":
-		*e = FilterDirectionEnum(s)
+		*e = FilterDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterDirectionEnum: %v", v)
 	}
 }

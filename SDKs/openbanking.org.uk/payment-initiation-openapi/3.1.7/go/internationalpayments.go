@@ -472,7 +472,10 @@ func (s *internationalPayments) CreateInternationalPaymentsRaw(ctx context.Conte
 // GetInternationalPaymentConsentsConsentID - Get International Payment Consents
 func (s *internationalPayments) GetInternationalPaymentConsentsConsentID(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDRequest, security operations.GetInternationalPaymentConsentsConsentIDSecurity) (*operations.GetInternationalPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +572,10 @@ func (s *internationalPayments) GetInternationalPaymentConsentsConsentID(ctx con
 // GetInternationalPaymentConsentsConsentIDFundsConfirmation - Get International Payment Consents Funds Confirmation
 func (s *internationalPayments) GetInternationalPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationRequest, security operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationSecurity) (*operations.GetInternationalPaymentConsentsConsentIDFundsConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +672,10 @@ func (s *internationalPayments) GetInternationalPaymentConsentsConsentIDFundsCon
 // GetInternationalPaymentsInternationalPaymentID - Get International Payments
 func (s *internationalPayments) GetInternationalPaymentsInternationalPaymentID(ctx context.Context, request operations.GetInternationalPaymentsInternationalPaymentIDRequest, security operations.GetInternationalPaymentsInternationalPaymentIDSecurity) (*operations.GetInternationalPaymentsInternationalPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	EventTagSiteFilterTypeEnumBlocklist EventTagSiteFilterTypeEnum = "BLOCKLIST"
 )
 
+func (e EventTagSiteFilterTypeEnum) ToPointer() *EventTagSiteFilterTypeEnum {
+	return &e
+}
+
 func (e *EventTagSiteFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOWLIST":
 		fallthrough
 	case "BLOCKLIST":
-		*e = EventTagSiteFilterTypeEnum(s)
+		*e = EventTagSiteFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTagSiteFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTagSiteFilterTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	EventTagStatusEnumDisabled EventTagStatusEnum = "DISABLED"
 )
 
+func (e EventTagStatusEnum) ToPointer() *EventTagStatusEnum {
+	return &e
+}
+
 func (e *EventTagStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = EventTagStatusEnum(s)
+		*e = EventTagStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTagStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTagStatusEnum: %v", v)
 	}
 }
 
@@ -64,21 +72,25 @@ const (
 	EventTagTypeEnumClickThroughEventTag         EventTagTypeEnum = "CLICK_THROUGH_EVENT_TAG"
 )
 
+func (e EventTagTypeEnum) ToPointer() *EventTagTypeEnum {
+	return &e
+}
+
 func (e *EventTagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPRESSION_IMAGE_EVENT_TAG":
 		fallthrough
 	case "IMPRESSION_JAVASCRIPT_EVENT_TAG":
 		fallthrough
 	case "CLICK_THROUGH_EVENT_TAG":
-		*e = EventTagTypeEnum(s)
+		*e = EventTagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTagTypeEnum: %v", v)
 	}
 }
 

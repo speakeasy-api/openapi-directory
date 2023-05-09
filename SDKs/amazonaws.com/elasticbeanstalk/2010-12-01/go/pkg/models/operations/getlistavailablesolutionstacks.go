@@ -15,17 +15,21 @@ const (
 	GETListAvailableSolutionStacksActionEnumListAvailableSolutionStacks GETListAvailableSolutionStacksActionEnum = "ListAvailableSolutionStacks"
 )
 
+func (e GETListAvailableSolutionStacksActionEnum) ToPointer() *GETListAvailableSolutionStacksActionEnum {
+	return &e
+}
+
 func (e *GETListAvailableSolutionStacksActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListAvailableSolutionStacks":
-		*e = GETListAvailableSolutionStacksActionEnum(s)
+		*e = GETListAvailableSolutionStacksActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAvailableSolutionStacksActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAvailableSolutionStacksActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListAvailableSolutionStacksVersionEnumTwoThousandAndTen1201 GETListAvailableSolutionStacksVersionEnum = "2010-12-01"
 )
 
+func (e GETListAvailableSolutionStacksVersionEnum) ToPointer() *GETListAvailableSolutionStacksVersionEnum {
+	return &e
+}
+
 func (e *GETListAvailableSolutionStacksVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETListAvailableSolutionStacksVersionEnum(s)
+		*e = GETListAvailableSolutionStacksVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAvailableSolutionStacksVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAvailableSolutionStacksVersionEnum: %v", v)
 	}
 }
 

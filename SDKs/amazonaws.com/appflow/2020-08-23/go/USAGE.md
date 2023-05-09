@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,141 +17,143 @@ func main() {
         }),
     )
 
-    req := operations.CreateConnectorProfileRequest{
+    ctx := context.Background()
+    res, err := s.CreateConnectorProfile(ctx, operations.CreateConnectorProfileRequest{
         RequestBody: operations.CreateConnectorProfileRequestBody{
-            ConnectionMode: "Private",
-            ConnectorLabel: "provident",
+            ClientToken: sdk.String("corrupti"),
+            ConnectionMode: operations.CreateConnectorProfileRequestBodyConnectionModeEnumPrivate,
+            ConnectorLabel: sdk.String("distinctio"),
             ConnectorProfileConfig: operations.CreateConnectorProfileRequestBodyConnectorProfileConfig{
                 ConnectorProfileCredentials: &shared.ConnectorProfileCredentials{
                     Amplitude: &shared.AmplitudeConnectorProfileCredentials{
-                        APIKey: "distinctio",
-                        SecretKey: "quibusdam",
+                        APIKey: "quibusdam",
+                        SecretKey: "unde",
                     },
                     CustomConnector: &shared.CustomConnectorProfileCredentials{
                         APIKey: &shared.APIKeyCredentials{
-                            APIKey: "unde",
-                            APISecretKey: "nulla",
+                            APIKey: "nulla",
+                            APISecretKey: sdk.String("corrupti"),
                         },
-                        AuthenticationType: "BASIC",
+                        AuthenticationType: shared.AuthenticationTypeEnumCustom,
                         Basic: &shared.BasicAuthCredentials{
-                            Password: "illum",
-                            Username: "Henry.Mueller",
+                            Password: "vel",
+                            Username: "Linda.Oberbrunner",
                         },
                         Custom: &shared.CustomAuthCredentials{
                             CredentialsMap: map[string]string{
-                                "magnam": "debitis",
-                                "ipsa": "delectus",
+                                "debitis": "ipsa",
+                                "delectus": "tempora",
                             },
-                            CustomAuthenticationType: "tempora",
+                            CustomAuthenticationType: "suscipit",
                         },
                         Oauth2: &shared.OAuth2Credentials{
-                            AccessToken: "suscipit",
-                            ClientID: "molestiae",
-                            ClientSecret: "minus",
+                            AccessToken: sdk.String("molestiae"),
+                            ClientID: sdk.String("minus"),
+                            ClientSecret: sdk.String("placeat"),
                             OAuthRequest: &shared.ConnectorOAuthRequest{
-                                AuthCode: "placeat",
-                                RedirectURI: "voluptatum",
+                                AuthCode: sdk.String("voluptatum"),
+                                RedirectURI: sdk.String("iusto"),
                             },
-                            RefreshToken: "iusto",
+                            RefreshToken: sdk.String("excepturi"),
                         },
                     },
                     Datadog: &shared.DatadogConnectorProfileCredentials{
-                        APIKey: "excepturi",
-                        ApplicationKey: "nisi",
+                        APIKey: "nisi",
+                        ApplicationKey: "recusandae",
                     },
                     Dynatrace: &shared.DynatraceConnectorProfileCredentials{
-                        APIToken: "recusandae",
+                        APIToken: "temporibus",
                     },
                     GoogleAnalytics: &shared.GoogleAnalyticsConnectorProfileCredentials{
-                        AccessToken: "temporibus",
-                        ClientID: "ab",
-                        ClientSecret: "quis",
+                        AccessToken: sdk.String("ab"),
+                        ClientID: "quis",
+                        ClientSecret: "veritatis",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "veritatis",
-                            RedirectURI: "deserunt",
+                            AuthCode: sdk.String("deserunt"),
+                            RedirectURI: sdk.String("perferendis"),
                         },
-                        RefreshToken: "perferendis",
+                        RefreshToken: sdk.String("ipsam"),
                     },
                     Honeycode: &shared.HoneycodeConnectorProfileCredentials{
-                        AccessToken: "ipsam",
+                        AccessToken: sdk.String("repellendus"),
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "repellendus",
-                            RedirectURI: "sapiente",
+                            AuthCode: sdk.String("sapiente"),
+                            RedirectURI: sdk.String("quo"),
                         },
-                        RefreshToken: "quo",
+                        RefreshToken: sdk.String("odit"),
                     },
                     InforNexus: &shared.InforNexusConnectorProfileCredentials{
-                        AccessKeyID: "odit",
+                        AccessKeyID: "at",
                         Datakey: "at",
-                        SecretAccessKey: "at",
-                        UserID: "maiores",
+                        SecretAccessKey: "maiores",
+                        UserID: "molestiae",
                     },
                     Marketo: &shared.MarketoConnectorProfileCredentials{
-                        AccessToken: "molestiae",
+                        AccessToken: sdk.String("quod"),
                         ClientID: "quod",
-                        ClientSecret: "quod",
+                        ClientSecret: "esse",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "esse",
-                            RedirectURI: "totam",
+                            AuthCode: sdk.String("totam"),
+                            RedirectURI: sdk.String("porro"),
                         },
                     },
                     Pardot: &shared.PardotConnectorProfileCredentials{
-                        AccessToken: "porro",
-                        ClientCredentialsArn: "dolorum",
+                        AccessToken: sdk.String("dolorum"),
+                        ClientCredentialsArn: sdk.String("dicta"),
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "dicta",
-                            RedirectURI: "nam",
+                            AuthCode: sdk.String("nam"),
+                            RedirectURI: sdk.String("officia"),
                         },
-                        RefreshToken: "officia",
+                        RefreshToken: sdk.String("occaecati"),
                     },
                     Redshift: &shared.RedshiftConnectorProfileCredentials{
-                        Password: "occaecati",
-                        Username: "Buck_Lind52",
+                        Password: sdk.String("fugit"),
+                        Username: sdk.String("Kale_Welch10"),
                     },
                     SAPOData: &shared.SAPODataConnectorProfileCredentials{
                         BasicAuthCredentials: &shared.BasicAuthCredentials{
-                            Password: "beatae",
-                            Username: "Haskell18",
+                            Password: "commodi",
+                            Username: "Jaren77",
                         },
                         OAuthCredentials: &shared.OAuthCredentials{
-                            AccessToken: "impedit",
-                            ClientID: "cum",
-                            ClientSecret: "esse",
+                            AccessToken: sdk.String("cum"),
+                            ClientID: "esse",
+                            ClientSecret: "ipsum",
                             OAuthRequest: &shared.ConnectorOAuthRequest{
-                                AuthCode: "ipsum",
-                                RedirectURI: "excepturi",
+                                AuthCode: sdk.String("excepturi"),
+                                RedirectURI: sdk.String("aspernatur"),
                             },
-                            RefreshToken: "aspernatur",
+                            RefreshToken: sdk.String("perferendis"),
                         },
                     },
                     Salesforce: &shared.SalesforceConnectorProfileCredentials{
-                        AccessToken: "perferendis",
-                        ClientCredentialsArn: "ad",
+                        AccessToken: sdk.String("ad"),
+                        ClientCredentialsArn: sdk.String("natus"),
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "natus",
-                            RedirectURI: "sed",
+                            AuthCode: sdk.String("sed"),
+                            RedirectURI: sdk.String("iste"),
                         },
-                        RefreshToken: "iste",
+                        RefreshToken: sdk.String("dolor"),
                     },
                     ServiceNow: &shared.ServiceNowConnectorProfileCredentials{
-                        Password: "dolor",
-                        Username: "Lexie_Howe68",
+                        Password: "natus",
+                        Username: "Gertrude_Welch44",
                     },
                     Singular: &shared.SingularConnectorProfileCredentials{
-                        APIKey: "in",
+                        APIKey: "corporis",
                     },
                     Slack: &shared.SlackConnectorProfileCredentials{
-                        AccessToken: "corporis",
-                        ClientID: "iste",
-                        ClientSecret: "iure",
+                        AccessToken: sdk.String("iste"),
+                        ClientID: "iure",
+                        ClientSecret: "saepe",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "saepe",
-                            RedirectURI: "quidem",
+                            AuthCode: sdk.String("quidem"),
+                            RedirectURI: sdk.String("architecto"),
                         },
                     },
                     Snowflake: &shared.SnowflakeConnectorProfileCredentials{
-                        Password: "architecto",
-                        Username: "Andy_Wisozk67",
+                        Password: "ipsa",
+                        Username: "Waino_Orn",
                     },
                     Trendmicro: &shared.TrendmicroConnectorProfileCredentials{
                         APISecretKey: "dolores",
@@ -161,12 +163,12 @@ func main() {
                         Username: "Florian.Champlin60",
                     },
                     Zendesk: &shared.ZendeskConnectorProfileCredentials{
-                        AccessToken: "nemo",
+                        AccessToken: sdk.String("nemo"),
                         ClientID: "minima",
                         ClientSecret: "excepturi",
                         OAuthRequest: &shared.ConnectorOAuthRequest{
-                            AuthCode: "accusantium",
-                            RedirectURI: "iure",
+                            AuthCode: sdk.String("accusantium"),
+                            RedirectURI: sdk.String("iure"),
                         },
                     },
                 },
@@ -178,7 +180,7 @@ func main() {
                     },
                     CustomConnector: &shared.CustomConnectorProfileProperties{
                         OAuth2Properties: &shared.OAuth2Properties{
-                            OAuth2GrantType: "CLIENT_CREDENTIALS",
+                            OAuth2GrantType: shared.OAuth2GrantTypeEnumClientCredentials,
                             TokenURL: "repellat",
                             TokenURLCustomProperties: map[string]string{
                                 "occaecati": "numquam",
@@ -213,26 +215,26 @@ func main() {
                         InstanceURL: "reiciendis",
                     },
                     Pardot: &shared.PardotConnectorProfileProperties{
-                        BusinessUnitID: "voluptatibus",
-                        InstanceURL: "vero",
-                        IsSandboxEnvironment: false,
+                        BusinessUnitID: sdk.String("voluptatibus"),
+                        InstanceURL: sdk.String("vero"),
+                        IsSandboxEnvironment: sdk.Bool(false),
                     },
                     Redshift: &shared.RedshiftConnectorProfileProperties{
                         BucketName: "nihil",
-                        BucketPrefix: "praesentium",
-                        ClusterIdentifier: "voluptatibus",
-                        DataAPIRoleArn: "ipsa",
-                        DatabaseName: "omnis",
-                        DatabaseURL: "voluptate",
-                        IsRedshiftServerless: false,
+                        BucketPrefix: sdk.String("praesentium"),
+                        ClusterIdentifier: sdk.String("voluptatibus"),
+                        DataAPIRoleArn: sdk.String("ipsa"),
+                        DatabaseName: sdk.String("omnis"),
+                        DatabaseURL: sdk.String("voluptate"),
+                        IsRedshiftServerless: sdk.Bool(false),
                         RoleArn: "cum",
-                        WorkgroupName: "perferendis",
+                        WorkgroupName: sdk.String("perferendis"),
                     },
                     SAPOData: &shared.SAPODataConnectorProfileProperties{
                         ApplicationHostURL: "doloremque",
                         ApplicationServicePath: "reprehenderit",
                         ClientNumber: "ut",
-                        LogonLanguage: "maiores",
+                        LogonLanguage: sdk.String("maiores"),
                         OAuthProperties: &shared.OAuthProperties{
                             AuthCodeURL: "dicta",
                             OAuthScopes: []string{
@@ -242,12 +244,12 @@ func main() {
                             TokenURL: "dicta",
                         },
                         PortNumber: 688661,
-                        PrivateLinkServiceName: "enim",
+                        PrivateLinkServiceName: sdk.String("enim"),
                     },
                     Salesforce: &shared.SalesforceConnectorProfileProperties{
-                        InstanceURL: "accusamus",
-                        IsSandboxEnvironment: false,
-                        UsePrivateLinkForMetadataAndAuthorization: false,
+                        InstanceURL: sdk.String("accusamus"),
+                        IsSandboxEnvironment: sdk.Bool(false),
+                        UsePrivateLinkForMetadataAndAuthorization: sdk.Bool(false),
                     },
                     ServiceNow: &shared.ServiceNowConnectorProfileProperties{
                         InstanceURL: "commodi",
@@ -262,11 +264,11 @@ func main() {
                         InstanceURL: "rem",
                     },
                     Snowflake: &shared.SnowflakeConnectorProfileProperties{
-                        AccountName: "voluptates",
+                        AccountName: sdk.String("voluptates"),
                         BucketName: "quasi",
-                        BucketPrefix: "repudiandae",
-                        PrivateLinkServiceName: "sint",
-                        Region: "veritatis",
+                        BucketPrefix: sdk.String("repudiandae"),
+                        PrivateLinkServiceName: sdk.String("sint"),
+                        Region: sdk.String("veritatis"),
                         Stage: "itaque",
                         Warehouse: "incidunt",
                     },
@@ -283,20 +285,17 @@ func main() {
                 },
             },
             ConnectorProfileName: "quibusdam",
-            ConnectorType: "Googleanalytics",
-            KmsArn: "modi",
+            ConnectorType: operations.CreateConnectorProfileRequestBodyConnectorTypeEnumGoogleanalytics,
+            KmsArn: sdk.String("modi"),
         },
-        XAmzAlgorithm: "qui",
-        XAmzContentSha256: "aliquid",
-        XAmzCredential: "cupiditate",
-        XAmzDate: "quos",
-        XAmzSecurityToken: "perferendis",
-        XAmzSignature: "magni",
-        XAmzSignedHeaders: "assumenda",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateConnectorProfile(ctx, req)
+        XAmzAlgorithm: sdk.String("qui"),
+        XAmzContentSha256: sdk.String("aliquid"),
+        XAmzCredential: sdk.String("cupiditate"),
+        XAmzDate: sdk.String("quos"),
+        XAmzSecurityToken: sdk.String("perferendis"),
+        XAmzSignature: sdk.String("magni"),
+        XAmzSignedHeaders: sdk.String("assumenda"),
+    })
     if err != nil {
         log.Fatal(err)
     }

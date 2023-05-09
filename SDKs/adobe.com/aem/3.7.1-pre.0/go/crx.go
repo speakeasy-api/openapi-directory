@@ -87,6 +87,7 @@ func (s *crx) GetCrxdeStatus(ctx context.Context) (*operations.GetCrxdeStatusRes
 
 	return res, nil
 }
+
 func (s *crx) GetInstallStatus(ctx context.Context) (*operations.GetInstallStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crx/packmgr/installstatus.jsp"
@@ -140,6 +141,7 @@ func (s *crx) GetInstallStatus(ctx context.Context) (*operations.GetInstallStatu
 
 	return res, nil
 }
+
 func (s *crx) GetPackageManagerServlet(ctx context.Context) (*operations.GetPackageManagerServletResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crx/packmgr/service/script.html"
@@ -194,6 +196,7 @@ func (s *crx) GetPackageManagerServlet(ctx context.Context) (*operations.GetPack
 
 	return res, nil
 }
+
 func (s *crx) PostPackageService(ctx context.Context, request operations.PostPackageServiceRequest) (*operations.PostPackageServiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crx/packmgr/service.jsp"
@@ -241,9 +244,13 @@ func (s *crx) PostPackageService(ctx context.Context, request operations.PostPac
 
 	return res, nil
 }
+
 func (s *crx) PostPackageServiceJSON(ctx context.Context, request operations.PostPackageServiceJSONRequest) (*operations.PostPackageServiceJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/crx/packmgr/service/.json/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/crx/packmgr/service/.json/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -295,6 +302,7 @@ func (s *crx) PostPackageServiceJSON(ctx context.Context, request operations.Pos
 
 	return res, nil
 }
+
 func (s *crx) PostPackageUpdate(ctx context.Context, request operations.PostPackageUpdateRequest) (*operations.PostPackageUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crx/packmgr/update.jsp"
@@ -342,6 +350,7 @@ func (s *crx) PostPackageUpdate(ctx context.Context, request operations.PostPack
 
 	return res, nil
 }
+
 func (s *crx) PostSetPassword(ctx context.Context, request operations.PostSetPasswordRequest) (*operations.PostSetPasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/crx/explorer/ui/setpassword.jsp"

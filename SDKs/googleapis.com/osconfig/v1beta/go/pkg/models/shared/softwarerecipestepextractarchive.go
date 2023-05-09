@@ -20,12 +20,16 @@ const (
 	SoftwareRecipeStepExtractArchiveTypeEnumZip                    SoftwareRecipeStepExtractArchiveTypeEnum = "ZIP"
 )
 
+func (e SoftwareRecipeStepExtractArchiveTypeEnum) ToPointer() *SoftwareRecipeStepExtractArchiveTypeEnum {
+	return &e
+}
+
 func (e *SoftwareRecipeStepExtractArchiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TAR":
@@ -39,10 +43,10 @@ func (e *SoftwareRecipeStepExtractArchiveTypeEnum) UnmarshalJSON(data []byte) er
 	case "TAR_XZ":
 		fallthrough
 	case "ZIP":
-		*e = SoftwareRecipeStepExtractArchiveTypeEnum(s)
+		*e = SoftwareRecipeStepExtractArchiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoftwareRecipeStepExtractArchiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SoftwareRecipeStepExtractArchiveTypeEnum: %v", v)
 	}
 }
 

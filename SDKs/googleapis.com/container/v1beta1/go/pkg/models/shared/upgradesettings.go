@@ -16,21 +16,25 @@ const (
 	UpgradeSettingsStrategyEnumSurge                             UpgradeSettingsStrategyEnum = "SURGE"
 )
 
+func (e UpgradeSettingsStrategyEnum) ToPointer() *UpgradeSettingsStrategyEnum {
+	return &e
+}
+
 func (e *UpgradeSettingsStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NODE_POOL_UPDATE_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "BLUE_GREEN":
 		fallthrough
 	case "SURGE":
-		*e = UpgradeSettingsStrategyEnum(s)
+		*e = UpgradeSettingsStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpgradeSettingsStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpgradeSettingsStrategyEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	GroupingTypeEnumAccountBased GroupingTypeEnum = "ACCOUNT_BASED"
 )
 
+func (e GroupingTypeEnum) ToPointer() *GroupingTypeEnum {
+	return &e
+}
+
 func (e *GroupingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_BASED":
-		*e = GroupingTypeEnum(s)
+		*e = GroupingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupingTypeEnum: %v", v)
 	}
 }

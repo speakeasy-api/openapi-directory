@@ -17,12 +17,16 @@ const (
 	UpdateAvatarRequestBodyTypeEnumSystem   UpdateAvatarRequestBodyTypeEnum = "system"
 )
 
+func (e UpdateAvatarRequestBodyTypeEnum) ToPointer() *UpdateAvatarRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *UpdateAvatarRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uploaded":
 		fallthrough
 	case "custom":
@@ -30,10 +34,10 @@ func (e *UpdateAvatarRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "gravatar":
 		fallthrough
 	case "system":
-		*e = UpdateAvatarRequestBodyTypeEnum(s)
+		*e = UpdateAvatarRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAvatarRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAvatarRequestBodyTypeEnum: %v", v)
 	}
 }
 

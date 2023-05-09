@@ -18,12 +18,16 @@ const (
 	GdataCompositeMediaReferenceTypeEnumCosmoBinaryReference GdataCompositeMediaReferenceTypeEnum = "COSMO_BINARY_REFERENCE"
 )
 
+func (e GdataCompositeMediaReferenceTypeEnum) ToPointer() *GdataCompositeMediaReferenceTypeEnum {
+	return &e
+}
+
 func (e *GdataCompositeMediaReferenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PATH":
 		fallthrough
 	case "BLOB_REF":
@@ -33,10 +37,10 @@ func (e *GdataCompositeMediaReferenceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "BIGSTORE_REF":
 		fallthrough
 	case "COSMO_BINARY_REFERENCE":
-		*e = GdataCompositeMediaReferenceTypeEnum(s)
+		*e = GdataCompositeMediaReferenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GdataCompositeMediaReferenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GdataCompositeMediaReferenceTypeEnum: %v", v)
 	}
 }
 

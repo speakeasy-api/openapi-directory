@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/c19qrserver.local/1.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.DeleteSigninSigninIDRequest{
-        SigninID: 1,
-    }
-
     ctx := context.Background()
-    res, err := s.AttendeesSignins.DeleteSigninSigninID(ctx, req)
+    res, err := s.AttendeesSignins.DeleteSigninSigninID(ctx, operations.DeleteSigninSigninIDRequest{
+        SigninID: 1,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,31 +46,31 @@ func main() {
 ## Available Resources and Operations
 
 
-### AttendeesSignins
+### [AttendeesSignins](docs/attendeessignins/README.md)
 
-* `DeleteSigninSigninID` - Delete a signin record
-* `GetSigninSigninID` - Retrieve the information associated with a signin record
-* `GetSignins` - Get signin info
-* `PostSignin` - Create a new signin record
-* `PutSigninSigninID` - Update a signin record
+* [DeleteSigninSigninID](docs/attendeessignins/README.md#deletesigninsigninid) - Delete a signin record
+* [GetSigninSigninID](docs/attendeessignins/README.md#getsigninsigninid) - Retrieve the information associated with a signin record
+* [GetSignins](docs/attendeessignins/README.md#getsignins) - Get signin info
+* [PostSignin](docs/attendeessignins/README.md#postsignin) - Create a new signin record
+* [PutSigninSigninID](docs/attendeessignins/README.md#putsigninsigninid) - Update a signin record
 
-### Authentication
+### [Authentication](docs/authentication/README.md)
 
-* `PostLogin` - Log in to get an API token
-* `PostLogout` - Log out
+* [PostLogin](docs/authentication/README.md#postlogin) - Log in to get an API token
+* [PostLogout](docs/authentication/README.md#postlogout) - Log out
 
-### Passwords
+### [Passwords](docs/passwords/README.md)
 
-* `PostChangePassword` - Used for changing your password
-* `PostRequestPasswordReset` - Used for requesting a password reset code
-* `PostVerifyPasswordChange` - Used for resetting your password when you forgot it
+* [PostChangePassword](docs/passwords/README.md#postchangepassword) - Used for changing your password
+* [PostRequestPasswordReset](docs/passwords/README.md#postrequestpasswordreset) - Used for requesting a password reset code
+* [PostVerifyPasswordChange](docs/passwords/README.md#postverifypasswordchange) - Used for resetting your password when you forgot it
 
-### TeamMembers
+### [TeamMembers](docs/teammembers/README.md)
 
-* `DeleteUserUserID` - Delete a team member's user record
-* `GetUserUserID` - Retrieve the information associated with a team member's user record
-* `GetUsers` - Retrieve the information associated with all team members' user records
-* `PostUser` - Create a user
+* [DeleteUserUserID](docs/teammembers/README.md#deleteuseruserid) - Delete a team member's user record
+* [GetUserUserID](docs/teammembers/README.md#getuseruserid) - Retrieve the information associated with a team member's user record
+* [GetUsers](docs/teammembers/README.md#getusers) - Retrieve the information associated with all team members' user records
+* [PostUser](docs/teammembers/README.md#postuser) - Create a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

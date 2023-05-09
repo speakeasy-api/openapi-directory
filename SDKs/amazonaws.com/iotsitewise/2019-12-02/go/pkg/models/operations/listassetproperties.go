@@ -17,19 +17,23 @@ const (
 	ListAssetPropertiesFilterEnumBase ListAssetPropertiesFilterEnum = "BASE"
 )
 
+func (e ListAssetPropertiesFilterEnum) ToPointer() *ListAssetPropertiesFilterEnum {
+	return &e
+}
+
 func (e *ListAssetPropertiesFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "BASE":
-		*e = ListAssetPropertiesFilterEnum(s)
+		*e = ListAssetPropertiesFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssetPropertiesFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssetPropertiesFilterEnum: %v", v)
 	}
 }
 

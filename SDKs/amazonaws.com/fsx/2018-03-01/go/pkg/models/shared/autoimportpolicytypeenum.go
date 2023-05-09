@@ -16,12 +16,16 @@ const (
 	AutoImportPolicyTypeEnumNewChangedDeleted AutoImportPolicyTypeEnum = "NEW_CHANGED_DELETED"
 )
 
+func (e AutoImportPolicyTypeEnum) ToPointer() *AutoImportPolicyTypeEnum {
+	return &e
+}
+
 func (e *AutoImportPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "NEW":
@@ -29,9 +33,9 @@ func (e *AutoImportPolicyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NEW_CHANGED":
 		fallthrough
 	case "NEW_CHANGED_DELETED":
-		*e = AutoImportPolicyTypeEnum(s)
+		*e = AutoImportPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoImportPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoImportPolicyTypeEnum: %v", v)
 	}
 }

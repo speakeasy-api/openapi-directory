@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getzipinfo/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetzipcodeinfoRequest{
+    ctx := context.Background()
+    res, err := s.DetailedZipCodeInformation.Getzipcodeinfo(ctx, operations.GetzipcodeinfoRequest{
         License: "corrupti",
         Zip: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.DetailedZipCodeInformation.Getzipcodeinfo(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### DetailedZipCodeInformation
+### [DetailedZipCodeInformation](docs/detailedzipcodeinformation/README.md)
 
-* `Getzipcodeinfo` - Gets detailed zip code information
+* [Getzipcodeinfo](docs/detailedzipcodeinformation/README.md#getzipcodeinfo) - Gets detailed zip code information
 <!-- End SDK Available Operations -->
 
 ### Maturity

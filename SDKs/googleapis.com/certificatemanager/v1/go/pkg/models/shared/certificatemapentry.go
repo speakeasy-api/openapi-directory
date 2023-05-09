@@ -15,19 +15,23 @@ const (
 	CertificateMapEntryMatcherEnumPrimary            CertificateMapEntryMatcherEnum = "PRIMARY"
 )
 
+func (e CertificateMapEntryMatcherEnum) ToPointer() *CertificateMapEntryMatcherEnum {
+	return &e
+}
+
 func (e *CertificateMapEntryMatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCHER_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY":
-		*e = CertificateMapEntryMatcherEnum(s)
+		*e = CertificateMapEntryMatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateMapEntryMatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateMapEntryMatcherEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	CertificateMapEntryStateEnumPending                 CertificateMapEntryStateEnum = "PENDING"
 )
 
+func (e CertificateMapEntryStateEnum) ToPointer() *CertificateMapEntryStateEnum {
+	return &e
+}
+
 func (e *CertificateMapEntryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVING_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "PENDING":
-		*e = CertificateMapEntryStateEnum(s)
+		*e = CertificateMapEntryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateMapEntryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateMapEntryStateEnum: %v", v)
 	}
 }
 

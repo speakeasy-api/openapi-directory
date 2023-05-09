@@ -38,7 +38,10 @@ func newPersonStages(defaultClient, securityClient HTTPClient, serverURL, langua
 // This operation can be called multiple times successfully.
 func (s *personStages) DeleteV2PersonStagesIDJSON(ctx context.Context, request operations.DeleteV2PersonStagesIDJSONRequest) (*operations.DeleteV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *personStages) GetV2PersonStagesJSON(ctx context.Context, request operat
 // Fetches a person stage, by ID only.
 func (s *personStages) GetV2PersonStagesIDJSON(ctx context.Context, request operations.GetV2PersonStagesIDJSONRequest) (*operations.GetV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *personStages) PostV2PersonStagesJSON(ctx context.Context, request opera
 // Updates a person stage.
 func (s *personStages) PutV2PersonStagesIDJSON(ctx context.Context, request operations.PutV2PersonStagesIDJSONRequest) (*operations.PutV2PersonStagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/person_stages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

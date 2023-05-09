@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetProfileRequest{
-        ID: "{{your-member-id}}",
-        Service: "{{service-identifier}}",
-    }
-
     ctx := context.Background()
-    res, err := s.GetProfile(ctx, req)
+    res, err := s.GetProfile(ctx, operations.GetProfileRequest{
+        ID: sdk.String("{{your-member-id}}"),
+        Service: sdk.String("{{service-identifier}}"),
+    })
     if err != nil {
         log.Fatal(err)
     }

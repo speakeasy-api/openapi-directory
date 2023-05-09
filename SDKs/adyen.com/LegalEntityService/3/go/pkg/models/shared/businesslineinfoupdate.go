@@ -18,21 +18,25 @@ const (
 	BusinessLineInfoUpdateServiceEnumBanking           BusinessLineInfoUpdateServiceEnum = "banking"
 )
 
+func (e BusinessLineInfoUpdateServiceEnum) ToPointer() *BusinessLineInfoUpdateServiceEnum {
+	return &e
+}
+
 func (e *BusinessLineInfoUpdateServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "paymentProcessing":
 		fallthrough
 	case "issuing":
 		fallthrough
 	case "banking":
-		*e = BusinessLineInfoUpdateServiceEnum(s)
+		*e = BusinessLineInfoUpdateServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessLineInfoUpdateServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessLineInfoUpdateServiceEnum: %v", v)
 	}
 }
 

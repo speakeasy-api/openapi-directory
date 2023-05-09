@@ -16,17 +16,21 @@ const (
 	CreateSnapshotXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateSnapshot CreateSnapshotXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateSnapshot"
 )
 
+func (e CreateSnapshotXAmzTargetEnum) ToPointer() *CreateSnapshotXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateSnapshotXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateSnapshot":
-		*e = CreateSnapshotXAmzTargetEnum(s)
+		*e = CreateSnapshotXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSnapshotXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSnapshotXAmzTargetEnum: %v", v)
 	}
 }
 

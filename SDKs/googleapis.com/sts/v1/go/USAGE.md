@@ -2,37 +2,35 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.StsIntrospectRequest{
-        DollarXgafv: "2",
-        GoogleIdentityStsV1IntrospectTokenRequest: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
-            Token: "provident",
-            TokenTypeHint: "distinctio",
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.StsIntrospect(ctx, req)
+    res, err := s.V1.StsIntrospect(ctx, operations.StsIntrospectRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        GoogleIdentityStsV1IntrospectTokenRequest: &shared.GoogleIdentityStsV1IntrospectTokenRequest{
+            Token: sdk.String("provident"),
+            TokenTypeHint: sdk.String("distinctio"),
+        },
+        AccessToken: sdk.String("quibusdam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

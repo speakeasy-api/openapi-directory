@@ -15,18 +15,22 @@ const (
 	RuleExecutionReportingExecutionSourceEnumUser      RuleExecutionReportingExecutionSourceEnum = "User"
 )
 
+func (e RuleExecutionReportingExecutionSourceEnum) ToPointer() *RuleExecutionReportingExecutionSourceEnum {
+	return &e
+}
+
 func (e *RuleExecutionReportingExecutionSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scheduler":
 		fallthrough
 	case "User":
-		*e = RuleExecutionReportingExecutionSourceEnum(s)
+		*e = RuleExecutionReportingExecutionSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleExecutionReportingExecutionSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleExecutionReportingExecutionSourceEnum: %v", v)
 	}
 }

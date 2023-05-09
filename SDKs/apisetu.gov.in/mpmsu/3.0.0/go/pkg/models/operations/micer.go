@@ -32,17 +32,21 @@ const (
 	MicerRequestBodyFormatEnumPdf MicerRequestBodyFormatEnum = "pdf"
 )
 
+func (e MicerRequestBodyFormatEnum) ToPointer() *MicerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *MicerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = MicerRequestBodyFormatEnum(s)
+		*e = MicerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MicerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MicerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	Micer504ApplicationJSONErrorEnumGatewayTimeout Micer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Micer504ApplicationJSONErrorEnum) ToPointer() *Micer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Micer504ApplicationJSONErrorEnum(s)
+		*e = Micer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -82,17 +90,21 @@ const (
 	Micer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Micer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Micer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Micer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -108,17 +120,21 @@ const (
 	Micer503ApplicationJSONErrorEnumServiceUnavailable Micer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Micer503ApplicationJSONErrorEnum) ToPointer() *Micer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Micer503ApplicationJSONErrorEnum(s)
+		*e = Micer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -128,17 +144,21 @@ const (
 	Micer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Micer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Micer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Micer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -154,17 +174,21 @@ const (
 	Micer502ApplicationJSONErrorEnumBadGatewy Micer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Micer502ApplicationJSONErrorEnum) ToPointer() *Micer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Micer502ApplicationJSONErrorEnum(s)
+		*e = Micer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -174,17 +198,21 @@ const (
 	Micer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Micer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Micer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Micer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -200,17 +228,21 @@ const (
 	Micer500ApplicationJSONErrorEnumInternalServerError Micer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Micer500ApplicationJSONErrorEnum) ToPointer() *Micer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Micer500ApplicationJSONErrorEnum(s)
+		*e = Micer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -220,17 +252,21 @@ const (
 	Micer500ApplicationJSONErrorDescriptionEnumInternalServerError Micer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Micer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Micer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -247,19 +283,23 @@ const (
 	Micer404ApplicationJSONErrorEnumURLNotFound    Micer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Micer404ApplicationJSONErrorEnum) ToPointer() *Micer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Micer404ApplicationJSONErrorEnum(s)
+		*e = Micer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -270,19 +310,23 @@ const (
 	Micer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Micer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Micer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Micer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -299,19 +343,23 @@ const (
 	Micer401ApplicationJSONErrorEnumInvalidAuthorization  Micer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Micer401ApplicationJSONErrorEnum) ToPointer() *Micer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Micer401ApplicationJSONErrorEnum(s)
+		*e = Micer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -322,19 +370,23 @@ const (
 	Micer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Micer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Micer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Micer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -354,12 +406,16 @@ const (
 	Micer400ApplicationJSONErrorEnumInvalidConsentid Micer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Micer400ApplicationJSONErrorEnum) ToPointer() *Micer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Micer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -369,10 +425,10 @@ func (e *Micer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Micer400ApplicationJSONErrorEnum(s)
+		*e = Micer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -386,12 +442,16 @@ const (
 	Micer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Micer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Micer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Micer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Micer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -401,10 +461,10 @@ func (e *Micer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Micer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Micer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Micer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Micer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

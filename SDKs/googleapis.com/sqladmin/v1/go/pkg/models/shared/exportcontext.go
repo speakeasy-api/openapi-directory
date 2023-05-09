@@ -39,12 +39,16 @@ const (
 	ExportContextFileTypeEnumBak                    ExportContextFileTypeEnum = "BAK"
 )
 
+func (e ExportContextFileTypeEnum) ToPointer() *ExportContextFileTypeEnum {
+	return &e
+}
+
 func (e *ExportContextFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_FILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SQL":
@@ -52,10 +56,10 @@ func (e *ExportContextFileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CSV":
 		fallthrough
 	case "BAK":
-		*e = ExportContextFileTypeEnum(s)
+		*e = ExportContextFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportContextFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportContextFileTypeEnum: %v", v)
 	}
 }
 

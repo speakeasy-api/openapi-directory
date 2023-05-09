@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudbuild
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudbuildProjectsLocationsOperationsCancelRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudbuildProjectsLocationsOperationsCancel(ctx, operations.CloudbuildProjectsLocationsOperationsCancelRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        Name: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudbuildProjectsLocationsOperationsCancel(ctx, req, operations.CloudbuildProjectsLocationsOperationsCancelSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        Name: "Raquel Bednar",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.CloudbuildProjectsLocationsOperationsCancelSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -64,14 +62,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `CloudbuildProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `CloudbuildProjectsWorkerPoolsCreate` - Creates a `WorkerPool` to run the builds, and returns the new worker pool.
-* `CloudbuildProjectsWorkerPoolsDelete` - Deletes a `WorkerPool`.
-* `CloudbuildProjectsWorkerPoolsGet` - Returns details of a `WorkerPool`.
-* `CloudbuildProjectsWorkerPoolsList` - Lists `WorkerPool`s by project.
-* `CloudbuildProjectsWorkerPoolsPatch` - Updates a `WorkerPool`.
+* [CloudbuildProjectsLocationsOperationsCancel](docs/projects/README.md#cloudbuildprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [CloudbuildProjectsWorkerPoolsCreate](docs/projects/README.md#cloudbuildprojectsworkerpoolscreate) - Creates a `WorkerPool` to run the builds, and returns the new worker pool.
+* [CloudbuildProjectsWorkerPoolsDelete](docs/projects/README.md#cloudbuildprojectsworkerpoolsdelete) - Deletes a `WorkerPool`.
+* [CloudbuildProjectsWorkerPoolsGet](docs/projects/README.md#cloudbuildprojectsworkerpoolsget) - Returns details of a `WorkerPool`.
+* [CloudbuildProjectsWorkerPoolsList](docs/projects/README.md#cloudbuildprojectsworkerpoolslist) - Lists `WorkerPool`s by project.
+* [CloudbuildProjectsWorkerPoolsPatch](docs/projects/README.md#cloudbuildprojectsworkerpoolspatch) - Updates a `WorkerPool`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

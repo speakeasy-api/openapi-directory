@@ -15,20 +15,24 @@ const (
 	AccessPreviewStatusEnumFailed    AccessPreviewStatusEnum = "FAILED"
 )
 
+func (e AccessPreviewStatusEnum) ToPointer() *AccessPreviewStatusEnum {
+	return &e
+}
+
 func (e *AccessPreviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "CREATING":
 		fallthrough
 	case "FAILED":
-		*e = AccessPreviewStatusEnum(s)
+		*e = AccessPreviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessPreviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessPreviewStatusEnum: %v", v)
 	}
 }

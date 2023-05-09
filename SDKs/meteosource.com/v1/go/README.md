@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/meteosource.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindPlacesFindPlacesGetRequest{
-        Key: "corrupti",
-        Language: "fr",
-        Text: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.LocationEndpoints.FindPlacesFindPlacesGet(ctx, req, operations.FindPlacesFindPlacesGetSecurity{
+    res, err := s.LocationEndpoints.FindPlacesFindPlacesGet(ctx, operations.FindPlacesFindPlacesGetRequest{
+        Key: sdk.String("corrupti"),
+        Language: operations.FindPlacesFindPlacesGetLanguageLanguageEnumFr.ToPointer(),
+        Text: "distinctio",
+    }, operations.FindPlacesFindPlacesGetSecurity{
         APIKeyHeader: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -49,24 +46,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### LocationEndpoints
+### [LocationEndpoints](docs/locationendpoints/README.md)
 
-* `FindPlacesFindPlacesGet` - Search for places. Complete words required.
-* `FindPlacesPrefixFindPlacesPrefixGet` - Prefix search for places. Useful for autocomplete forms.
-* `NearestPlaceNearestPlaceGet` - Returns the nearest named location for a given GPS coordinates.
+* [FindPlacesFindPlacesGet](docs/locationendpoints/README.md#findplacesfindplacesget) - Search for places. Complete words required.
+* [FindPlacesPrefixFindPlacesPrefixGet](docs/locationendpoints/README.md#findplacesprefixfindplacesprefixget) - Prefix search for places. Useful for autocomplete forms.
+* [NearestPlaceNearestPlaceGet](docs/locationendpoints/README.md#nearestplacenearestplaceget) - Returns the nearest named location for a given GPS coordinates.
 
-### PointWeather
+### [PointWeather](docs/pointweather/README.md)
 
-* `AirQualityAirQualityGet` - Returns air quality data for a single point (geographic name or GPS)
-* `PointPointGet` - Returns weather data for a single point (geographic name or GPS)
+* [AirQualityAirQualityGet](docs/pointweather/README.md#airqualityairqualityget) - Returns air quality data for a single point (geographic name or GPS)
+* [PointPointGet](docs/pointweather/README.md#pointpointget) - Returns weather data for a single point (geographic name or GPS)
 
-### TimeMachineHistoricalWeather
+### [TimeMachineHistoricalWeather](docs/timemachinehistoricalweather/README.md)
 
-* `TimeMachineTimeMachineGet` - Returns weather data for a single location and given day in the past
+* [TimeMachineTimeMachineGet](docs/timemachinehistoricalweather/README.md#timemachinetimemachineget) - Returns weather data for a single location and given day in the past
 
-### WeatherMaps
+### [WeatherMaps](docs/weathermaps/README.md)
 
-* `MapMapGet` - Returns PNG weather map for given area and variable
+* [MapMapGet](docs/weathermaps/README.md#mapmapget) - Returns PNG weather map for given area and variable
 <!-- End SDK Available Operations -->
 
 ### Maturity

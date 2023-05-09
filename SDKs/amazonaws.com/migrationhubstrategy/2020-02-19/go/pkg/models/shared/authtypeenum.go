@@ -15,20 +15,24 @@ const (
 	AuthTypeEnumCert AuthTypeEnum = "CERT"
 )
 
+func (e AuthTypeEnum) ToPointer() *AuthTypeEnum {
+	return &e
+}
+
 func (e *AuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NTLM":
 		fallthrough
 	case "SSH":
 		fallthrough
 	case "CERT":
-		*e = AuthTypeEnum(s)
+		*e = AuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthTypeEnum: %v", v)
 	}
 }

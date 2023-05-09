@@ -15,17 +15,21 @@ const (
 	GETDisableFastSnapshotRestoresActionEnumDisableFastSnapshotRestores GETDisableFastSnapshotRestoresActionEnum = "DisableFastSnapshotRestores"
 )
 
+func (e GETDisableFastSnapshotRestoresActionEnum) ToPointer() *GETDisableFastSnapshotRestoresActionEnum {
+	return &e
+}
+
 func (e *GETDisableFastSnapshotRestoresActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableFastSnapshotRestores":
-		*e = GETDisableFastSnapshotRestoresActionEnum(s)
+		*e = GETDisableFastSnapshotRestoresActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableFastSnapshotRestoresActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableFastSnapshotRestoresActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableFastSnapshotRestoresVersionEnumTwoThousandAndSixteen1115 GETDisableFastSnapshotRestoresVersionEnum = "2016-11-15"
 )
 
+func (e GETDisableFastSnapshotRestoresVersionEnum) ToPointer() *GETDisableFastSnapshotRestoresVersionEnum {
+	return &e
+}
+
 func (e *GETDisableFastSnapshotRestoresVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisableFastSnapshotRestoresVersionEnum(s)
+		*e = GETDisableFastSnapshotRestoresVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableFastSnapshotRestoresVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableFastSnapshotRestoresVersionEnum: %v", v)
 	}
 }
 

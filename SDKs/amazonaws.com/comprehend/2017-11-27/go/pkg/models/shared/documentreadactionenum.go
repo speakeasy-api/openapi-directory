@@ -14,18 +14,22 @@ const (
 	DocumentReadActionEnumTextractAnalyzeDocument    DocumentReadActionEnum = "TEXTRACT_ANALYZE_DOCUMENT"
 )
 
+func (e DocumentReadActionEnum) ToPointer() *DocumentReadActionEnum {
+	return &e
+}
+
 func (e *DocumentReadActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXTRACT_DETECT_DOCUMENT_TEXT":
 		fallthrough
 	case "TEXTRACT_ANALYZE_DOCUMENT":
-		*e = DocumentReadActionEnum(s)
+		*e = DocumentReadActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentReadActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentReadActionEnum: %v", v)
 	}
 }

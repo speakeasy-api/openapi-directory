@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnumDisabled        GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum = "DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum) ToPointer() *GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "AUTO":
 		fallthrough
 	case "DISABLED":
-		*e = GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum(s)
+		*e = GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum: %v", v)
 	}
 }
 

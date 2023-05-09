@@ -13,6 +13,8 @@ type PutV2MeetingsIDJSONRequestBody struct {
 	ICalUID *string `form:"name=i_cal_uid"`
 	// Whether the meeting is a No Show meeting
 	NoShow *bool `form:"name=no_show"`
+	// Status of the meeting rescheduling progress. Possible values are: pending, booked, failed, retry
+	RescheduleStatus *string `form:"name=reschedule_status"`
 	// Status of the meeting creation progress. Possible values are: pending, booked, failed, retry
 	Status *string `form:"name=status"`
 }

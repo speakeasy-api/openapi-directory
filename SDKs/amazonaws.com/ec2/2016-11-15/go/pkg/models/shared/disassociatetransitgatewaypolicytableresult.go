@@ -19,12 +19,16 @@ const (
 	DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnumTgwPeering           DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum = "tgw-peering"
 )
 
+func (e DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum) ToPointer() *DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum {
+	return &e
+}
+
 func (e *DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum)
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum(s)
+		*e = DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateTransitGatewayPolicyTableResultAssociationResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DisassociateTransitGatewayPolicyTableResultAssociationStateEnumDisassociated  DisassociateTransitGatewayPolicyTableResultAssociationStateEnum = "disassociated"
 )
 
+func (e DisassociateTransitGatewayPolicyTableResultAssociationStateEnum) ToPointer() *DisassociateTransitGatewayPolicyTableResultAssociationStateEnum {
+	return &e
+}
+
 func (e *DisassociateTransitGatewayPolicyTableResultAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -66,10 +74,10 @@ func (e *DisassociateTransitGatewayPolicyTableResultAssociationStateEnum) Unmars
 	case "disassociating":
 		fallthrough
 	case "disassociated":
-		*e = DisassociateTransitGatewayPolicyTableResultAssociationStateEnum(s)
+		*e = DisassociateTransitGatewayPolicyTableResultAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateTransitGatewayPolicyTableResultAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateTransitGatewayPolicyTableResultAssociationStateEnum: %v", v)
 	}
 }
 

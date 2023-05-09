@@ -15,7 +15,7 @@ type PromoteResourceShareCreatedFromPolicyRequest struct {
 	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
 	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share to promote.
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share to promote.
 	ResourceShareArn string `queryParam:"style=form,explode=true,name=resourceShareArn"`
 }
 
@@ -23,6 +23,8 @@ type PromoteResourceShareCreatedFromPolicyResponse struct {
 	ContentType string
 	// InvalidParameterException
 	InvalidParameterException interface{}
+	// InvalidStateTransitionException
+	InvalidStateTransitionException interface{}
 	// MalformedArnException
 	MalformedArnException interface{}
 	// MissingRequiredParameterException
@@ -41,4 +43,6 @@ type PromoteResourceShareCreatedFromPolicyResponse struct {
 	ServiceUnavailableException interface{}
 	// UnknownResourceException
 	UnknownResourceException interface{}
+	// UnmatchedPolicyPermissionException
+	UnmatchedPolicyPermissionException interface{}
 }

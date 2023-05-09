@@ -35,9 +35,14 @@ func newMetaPub(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetAPIV2MetapubProgramInformationBatchBatchID - Get an EPG batch operation.
 // Gets the batch information which can be used to check the status of the operation or retrieve more details if the batch fails.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *metaPub) GetAPIV2MetapubProgramInformationBatchBatchID(ctx context.Context, request operations.GetAPIV2MetapubProgramInformationBatchBatchIDRequest, security operations.GetAPIV2MetapubProgramInformationBatchBatchIDSecurity) (*operations.GetAPIV2MetapubProgramInformationBatchBatchIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/metapub/program-information/batch/{batch-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/metapub/program-information/batch/{batch-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,6 +92,8 @@ func (s *metaPub) GetAPIV2MetapubProgramInformationBatchBatchID(ctx context.Cont
 // A batch operation must be explicitly created rather than the server attempting to detect new metadata in order to allow for all the content to be uploaded including any supporting content like images. A batch operation is accepted and queued for asynchronous processing at a later time. A client can poll the batch periodically to determine when it completes and the resulting state.
 //
 // /api/epg-cd-mapping.html - Find RadioDns to ContentDepot Mapping here
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *metaPub) PostAPIV2MetapubProgramInformationBatch(ctx context.Context, request operations.PostAPIV2MetapubProgramInformationBatchRequestBody, security operations.PostAPIV2MetapubProgramInformationBatchSecurity) (*operations.PostAPIV2MetapubProgramInformationBatchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/metapub/program-information/batch"

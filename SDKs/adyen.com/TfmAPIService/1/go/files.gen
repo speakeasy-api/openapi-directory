@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -31,4 +32,6 @@ pkg/models/shared/getterminaldetailsrequest.go
 pkg/models/shared/getterminalsunderaccountresponse.go
 pkg/models/shared/merchantaccount.go
 pkg/models/shared/getterminalsunderaccountrequest.go
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

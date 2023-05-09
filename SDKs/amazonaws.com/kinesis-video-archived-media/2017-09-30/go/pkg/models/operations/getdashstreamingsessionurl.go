@@ -23,19 +23,23 @@ const (
 	GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnumNever  GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum = "NEVER"
 )
 
+func (e GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum) ToPointer() *GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum {
+	return &e
+}
+
 func (e *GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum(s)
+		*e = GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnumNever  GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum = "NEVER"
 )
 
+func (e GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum) ToPointer() *GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum {
+	return &e
+}
+
 func (e *GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "NEVER":
-		*e = GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum(s)
+		*e = GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum: %v", v)
 	}
 }
 
@@ -72,21 +80,25 @@ const (
 	GetDASHStreamingSessionURLRequestBodyPlaybackModeEnumOnDemand   GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum = "ON_DEMAND"
 )
 
+func (e GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum) ToPointer() *GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum {
+	return &e
+}
+
 func (e *GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "LIVE_REPLAY":
 		fallthrough
 	case "ON_DEMAND":
-		*e = GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum(s)
+		*e = GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum: %v", v)
 	}
 }
 

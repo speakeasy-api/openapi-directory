@@ -24,12 +24,16 @@ const (
 	NonComplianceDetailConditionNonComplianceReasonEnumAppNotUpdated                  NonComplianceDetailConditionNonComplianceReasonEnum = "APP_NOT_UPDATED"
 )
 
+func (e NonComplianceDetailConditionNonComplianceReasonEnum) ToPointer() *NonComplianceDetailConditionNonComplianceReasonEnum {
+	return &e
+}
+
 func (e *NonComplianceDetailConditionNonComplianceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NON_COMPLIANCE_REASON_UNSPECIFIED":
 		fallthrough
 	case "API_LEVEL":
@@ -51,10 +55,10 @@ func (e *NonComplianceDetailConditionNonComplianceReasonEnum) UnmarshalJSON(data
 	case "APP_INCOMPATIBLE":
 		fallthrough
 	case "APP_NOT_UPDATED":
-		*e = NonComplianceDetailConditionNonComplianceReasonEnum(s)
+		*e = NonComplianceDetailConditionNonComplianceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonComplianceDetailConditionNonComplianceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NonComplianceDetailConditionNonComplianceReasonEnum: %v", v)
 	}
 }
 

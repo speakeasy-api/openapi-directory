@@ -16,17 +16,21 @@ const (
 	DisableDomainAutoRenewXAmzTargetEnumRoute53DomainsV20140515DisableDomainAutoRenew DisableDomainAutoRenewXAmzTargetEnum = "Route53Domains_v20140515.DisableDomainAutoRenew"
 )
 
+func (e DisableDomainAutoRenewXAmzTargetEnum) ToPointer() *DisableDomainAutoRenewXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableDomainAutoRenewXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.DisableDomainAutoRenew":
-		*e = DisableDomainAutoRenewXAmzTargetEnum(s)
+		*e = DisableDomainAutoRenewXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableDomainAutoRenewXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableDomainAutoRenewXAmzTargetEnum: %v", v)
 	}
 }
 

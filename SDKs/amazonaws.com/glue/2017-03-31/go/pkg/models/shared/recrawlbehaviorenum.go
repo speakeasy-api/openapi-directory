@@ -15,20 +15,24 @@ const (
 	RecrawlBehaviorEnumCrawlEventMode      RecrawlBehaviorEnum = "CRAWL_EVENT_MODE"
 )
 
+func (e RecrawlBehaviorEnum) ToPointer() *RecrawlBehaviorEnum {
+	return &e
+}
+
 func (e *RecrawlBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRAWL_EVERYTHING":
 		fallthrough
 	case "CRAWL_NEW_FOLDERS_ONLY":
 		fallthrough
 	case "CRAWL_EVENT_MODE":
-		*e = RecrawlBehaviorEnum(s)
+		*e = RecrawlBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecrawlBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for RecrawlBehaviorEnum: %v", v)
 	}
 }

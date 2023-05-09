@@ -48,12 +48,16 @@ const (
 	DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnumJobMessageError             DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum = "JOB_MESSAGE_ERROR"
 )
 
+func (e DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum) ToPointer() *DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum {
+	return &e
+}
+
 func (e *DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_MESSAGE_IMPORTANCE_UNKNOWN":
 		fallthrough
 	case "JOB_MESSAGE_DEBUG":
@@ -65,10 +69,10 @@ func (e *DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum) Unmarsh
 	case "JOB_MESSAGE_WARNING":
 		fallthrough
 	case "JOB_MESSAGE_ERROR":
-		*e = DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum(s)
+		*e = DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsLocationsJobsMessagesListMinimumImportanceEnum: %v", v)
 	}
 }
 

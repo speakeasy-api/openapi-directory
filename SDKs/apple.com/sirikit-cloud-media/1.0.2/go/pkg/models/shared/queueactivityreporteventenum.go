@@ -27,12 +27,16 @@ const (
 	QueueActivityReportEventEnumLocalCommandBookmark                  QueueActivityReportEventEnum = "local.command.bookmark"
 )
 
+func (e QueueActivityReportEventEnum) ToPointer() *QueueActivityReportEventEnum {
+	return &e
+}
+
 func (e *QueueActivityReportEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "local.playing.elapsed":
 		fallthrough
 	case "local.playing.paused":
@@ -62,9 +66,9 @@ func (e *QueueActivityReportEventEnum) UnmarshalJSON(data []byte) error {
 	case "local.command.dislike":
 		fallthrough
 	case "local.command.bookmark":
-		*e = QueueActivityReportEventEnum(s)
+		*e = QueueActivityReportEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueueActivityReportEventEnum: %s", s)
+		return fmt.Errorf("invalid value for QueueActivityReportEventEnum: %v", v)
 	}
 }

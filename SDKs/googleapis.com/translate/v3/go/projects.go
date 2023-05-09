@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TranslateProjectsLocationsBatchTranslateDocument - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
 func (s *projects) TranslateProjectsLocationsBatchTranslateDocument(ctx context.Context, request operations.TranslateProjectsLocationsBatchTranslateDocumentRequest, security operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity) (*operations.TranslateProjectsLocationsBatchTranslateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:batchTranslateDocument", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:batchTranslateDocument", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchTranslateDocumentRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) TranslateProjectsLocationsBatchTranslateDocument(ctx context.
 // TranslateProjectsLocationsBatchTranslateText - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
 func (s *projects) TranslateProjectsLocationsBatchTranslateText(ctx context.Context, request operations.TranslateProjectsLocationsBatchTranslateTextRequest, security operations.TranslateProjectsLocationsBatchTranslateTextSecurity) (*operations.TranslateProjectsLocationsBatchTranslateTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:batchTranslateText", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:batchTranslateText", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchTranslateTextRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) TranslateProjectsLocationsBatchTranslateText(ctx context.Cont
 // TranslateProjectsLocationsDatasetsCreate - Creates a Dataset.
 func (s *projects) TranslateProjectsLocationsDatasetsCreate(ctx context.Context, request operations.TranslateProjectsLocationsDatasetsCreateRequest, security operations.TranslateProjectsLocationsDatasetsCreateSecurity) (*operations.TranslateProjectsLocationsDatasetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/datasets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/datasets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatasetInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) TranslateProjectsLocationsDatasetsCreate(ctx context.Context,
 // TranslateProjectsLocationsDatasetsExamplesList - Lists sentence pairs in the dataset.
 func (s *projects) TranslateProjectsLocationsDatasetsExamplesList(ctx context.Context, request operations.TranslateProjectsLocationsDatasetsExamplesListRequest, security operations.TranslateProjectsLocationsDatasetsExamplesListSecurity) (*operations.TranslateProjectsLocationsDatasetsExamplesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/examples", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/examples", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) TranslateProjectsLocationsDatasetsExamplesList(ctx context.Co
 // TranslateProjectsLocationsDatasetsExportData - Exports dataset's data to the provided output location.
 func (s *projects) TranslateProjectsLocationsDatasetsExportData(ctx context.Context, request operations.TranslateProjectsLocationsDatasetsExportDataRequest, security operations.TranslateProjectsLocationsDatasetsExportDataSecurity) (*operations.TranslateProjectsLocationsDatasetsExportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{dataset}:exportData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{dataset}:exportData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportDataRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) TranslateProjectsLocationsDatasetsExportData(ctx context.Cont
 // TranslateProjectsLocationsDatasetsImportData - Import sentence pairs into translation Dataset.
 func (s *projects) TranslateProjectsLocationsDatasetsImportData(ctx context.Context, request operations.TranslateProjectsLocationsDatasetsImportDataRequest, security operations.TranslateProjectsLocationsDatasetsImportDataSecurity) (*operations.TranslateProjectsLocationsDatasetsImportDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{dataset}:importData", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{dataset}:importData", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportDataRequest", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) TranslateProjectsLocationsDatasetsImportData(ctx context.Cont
 // TranslateProjectsLocationsDatasetsList - Lists datasets.
 func (s *projects) TranslateProjectsLocationsDatasetsList(ctx context.Context, request operations.TranslateProjectsLocationsDatasetsListRequest, security operations.TranslateProjectsLocationsDatasetsListSecurity) (*operations.TranslateProjectsLocationsDatasetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/datasets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/datasets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) TranslateProjectsLocationsDatasetsList(ctx context.Context, r
 // TranslateProjectsLocationsDetectLanguage - Detects the language of text within a request.
 func (s *projects) TranslateProjectsLocationsDetectLanguage(ctx context.Context, request operations.TranslateProjectsLocationsDetectLanguageRequest, security operations.TranslateProjectsLocationsDetectLanguageSecurity) (*operations.TranslateProjectsLocationsDetectLanguageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:detectLanguage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:detectLanguage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DetectLanguageRequest", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) TranslateProjectsLocationsDetectLanguage(ctx context.Context,
 // TranslateProjectsLocationsGetSupportedLanguages - Returns a list of supported languages for translation.
 func (s *projects) TranslateProjectsLocationsGetSupportedLanguages(ctx context.Context, request operations.TranslateProjectsLocationsGetSupportedLanguagesRequest, security operations.TranslateProjectsLocationsGetSupportedLanguagesSecurity) (*operations.TranslateProjectsLocationsGetSupportedLanguagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/supportedLanguages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/supportedLanguages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) TranslateProjectsLocationsGetSupportedLanguages(ctx context.C
 // TranslateProjectsLocationsGlossariesCreate - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
 func (s *projects) TranslateProjectsLocationsGlossariesCreate(ctx context.Context, request operations.TranslateProjectsLocationsGlossariesCreateRequest, security operations.TranslateProjectsLocationsGlossariesCreateSecurity) (*operations.TranslateProjectsLocationsGlossariesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryInput", "json")
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) TranslateProjectsLocationsGlossariesCreate(ctx context.Contex
 // TranslateProjectsLocationsGlossariesGlossaryEntriesCreate - Creates a glossary entry.
 func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesCreate(ctx context.Context, request operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateRequest, security operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateSecurity) (*operations.TranslateProjectsLocationsGlossariesGlossaryEntriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaryEntries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaryEntries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryEntry", "json")
 	if err != nil {
@@ -618,7 +651,10 @@ func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesCreate(ctx
 // TranslateProjectsLocationsGlossariesGlossaryEntriesList - List the entries for the glossary.
 func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesList(ctx context.Context, request operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListRequest, security operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListSecurity) (*operations.TranslateProjectsLocationsGlossariesGlossaryEntriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaryEntries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaryEntries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +702,10 @@ func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesList(ctx c
 // TranslateProjectsLocationsGlossariesGlossaryEntriesPatch - Updates a glossary entry.
 func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesPatch(ctx context.Context, request operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchRequest, security operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchSecurity) (*operations.TranslateProjectsLocationsGlossariesGlossaryEntriesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GlossaryEntry", "json")
 	if err != nil {
@@ -721,7 +760,10 @@ func (s *projects) TranslateProjectsLocationsGlossariesGlossaryEntriesPatch(ctx 
 // TranslateProjectsLocationsGlossariesList - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
 func (s *projects) TranslateProjectsLocationsGlossariesList(ctx context.Context, request operations.TranslateProjectsLocationsGlossariesListRequest, security operations.TranslateProjectsLocationsGlossariesListSecurity) (*operations.TranslateProjectsLocationsGlossariesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/glossaries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) TranslateProjectsLocationsGlossariesList(ctx context.Context,
 // TranslateProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) TranslateProjectsLocationsList(ctx context.Context, request operations.TranslateProjectsLocationsListRequest, security operations.TranslateProjectsLocationsListSecurity) (*operations.TranslateProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -817,7 +862,10 @@ func (s *projects) TranslateProjectsLocationsList(ctx context.Context, request o
 // TranslateProjectsLocationsModelsCreate - Creates a Model.
 func (s *projects) TranslateProjectsLocationsModelsCreate(ctx context.Context, request operations.TranslateProjectsLocationsModelsCreateRequest, security operations.TranslateProjectsLocationsModelsCreateSecurity) (*operations.TranslateProjectsLocationsModelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ModelInput", "json")
 	if err != nil {
@@ -872,7 +920,10 @@ func (s *projects) TranslateProjectsLocationsModelsCreate(ctx context.Context, r
 // TranslateProjectsLocationsModelsList - Lists models.
 func (s *projects) TranslateProjectsLocationsModelsList(ctx context.Context, request operations.TranslateProjectsLocationsModelsListRequest, security operations.TranslateProjectsLocationsModelsListSecurity) (*operations.TranslateProjectsLocationsModelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/models", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/models", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) TranslateProjectsLocationsModelsList(ctx context.Context, req
 // TranslateProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) TranslateProjectsLocationsOperationsCancel(ctx context.Context, request operations.TranslateProjectsLocationsOperationsCancelRequest, security operations.TranslateProjectsLocationsOperationsCancelSecurity) (*operations.TranslateProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -975,7 +1029,10 @@ func (s *projects) TranslateProjectsLocationsOperationsCancel(ctx context.Contex
 // TranslateProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) TranslateProjectsLocationsOperationsDelete(ctx context.Context, request operations.TranslateProjectsLocationsOperationsDeleteRequest, security operations.TranslateProjectsLocationsOperationsDeleteSecurity) (*operations.TranslateProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) TranslateProjectsLocationsOperationsDelete(ctx context.Contex
 // TranslateProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) TranslateProjectsLocationsOperationsGet(ctx context.Context, request operations.TranslateProjectsLocationsOperationsGetRequest, security operations.TranslateProjectsLocationsOperationsGetSecurity) (*operations.TranslateProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) TranslateProjectsLocationsOperationsGet(ctx context.Context, 
 // TranslateProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) TranslateProjectsLocationsOperationsList(ctx context.Context, request operations.TranslateProjectsLocationsOperationsListRequest, security operations.TranslateProjectsLocationsOperationsListSecurity) (*operations.TranslateProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1119,7 +1182,10 @@ func (s *projects) TranslateProjectsLocationsOperationsList(ctx context.Context,
 // TranslateProjectsLocationsOperationsWait - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
 func (s *projects) TranslateProjectsLocationsOperationsWait(ctx context.Context, request operations.TranslateProjectsLocationsOperationsWaitRequest, security operations.TranslateProjectsLocationsOperationsWaitSecurity) (*operations.TranslateProjectsLocationsOperationsWaitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:wait", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:wait", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WaitOperationRequest", "json")
 	if err != nil {
@@ -1174,7 +1240,10 @@ func (s *projects) TranslateProjectsLocationsOperationsWait(ctx context.Context,
 // TranslateProjectsLocationsTranslateDocument - Translates documents in synchronous mode.
 func (s *projects) TranslateProjectsLocationsTranslateDocument(ctx context.Context, request operations.TranslateProjectsLocationsTranslateDocumentRequest, security operations.TranslateProjectsLocationsTranslateDocumentSecurity) (*operations.TranslateProjectsLocationsTranslateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:translateDocument", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:translateDocument", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TranslateDocumentRequest", "json")
 	if err != nil {
@@ -1229,7 +1298,10 @@ func (s *projects) TranslateProjectsLocationsTranslateDocument(ctx context.Conte
 // TranslateProjectsLocationsTranslateText - Translates input text and returns translated text.
 func (s *projects) TranslateProjectsLocationsTranslateText(ctx context.Context, request operations.TranslateProjectsLocationsTranslateTextRequest, security operations.TranslateProjectsLocationsTranslateTextSecurity) (*operations.TranslateProjectsLocationsTranslateTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:translateText", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}:translateText", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TranslateTextRequest", "json")
 	if err != nil {

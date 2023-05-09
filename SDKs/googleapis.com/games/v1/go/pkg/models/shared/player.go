@@ -16,21 +16,25 @@ const (
 	PlayerFriendStatusEnumFriend                  PlayerFriendStatusEnum = "FRIEND"
 )
 
+func (e PlayerFriendStatusEnum) ToPointer() *PlayerFriendStatusEnum {
+	return &e
+}
+
 func (e *PlayerFriendStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FRIEND_STATUS_UNSPECIFIED":
 		fallthrough
 	case "NO_RELATIONSHIP":
 		fallthrough
 	case "FRIEND":
-		*e = PlayerFriendStatusEnum(s)
+		*e = PlayerFriendStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerFriendStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerFriendStatusEnum: %v", v)
 	}
 }
 

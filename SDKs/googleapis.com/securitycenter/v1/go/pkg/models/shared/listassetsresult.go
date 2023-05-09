@@ -17,12 +17,16 @@ const (
 	ListAssetsResultStateChangeEnumActive  ListAssetsResultStateChangeEnum = "ACTIVE"
 )
 
+func (e ListAssetsResultStateChangeEnum) ToPointer() *ListAssetsResultStateChangeEnum {
+	return &e
+}
+
 func (e *ListAssetsResultStateChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNUSED":
 		fallthrough
 	case "ADDED":
@@ -30,10 +34,10 @@ func (e *ListAssetsResultStateChangeEnum) UnmarshalJSON(data []byte) error {
 	case "REMOVED":
 		fallthrough
 	case "ACTIVE":
-		*e = ListAssetsResultStateChangeEnum(s)
+		*e = ListAssetsResultStateChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssetsResultStateChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssetsResultStateChangeEnum: %v", v)
 	}
 }
 

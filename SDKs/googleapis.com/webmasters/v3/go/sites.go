@@ -35,7 +35,10 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // WebmastersSitesAdd - Adds a site to the set of the user's sites in Search Console.
 func (s *sites) WebmastersSitesAdd(ctx context.Context, request operations.WebmastersSitesAddRequest, security operations.WebmastersSitesAddSecurity) (*operations.WebmastersSitesAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *sites) WebmastersSitesAdd(ctx context.Context, request operations.Webma
 // WebmastersSitesDelete - Removes a site from the set of the user's Search Console sites.
 func (s *sites) WebmastersSitesDelete(ctx context.Context, request operations.WebmastersSitesDeleteRequest, security operations.WebmastersSitesDeleteSecurity) (*operations.WebmastersSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -113,7 +119,10 @@ func (s *sites) WebmastersSitesDelete(ctx context.Context, request operations.We
 // WebmastersSitesGet - Retrieves information about specific site.
 func (s *sites) WebmastersSitesGet(ctx context.Context, request operations.WebmastersSitesGetRequest, security operations.WebmastersSitesGetSecurity) (*operations.WebmastersSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sites/{siteUrl}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/safebrowsi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SafebrowsingEncodedFullHashesGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        ClientID: "unde",
-        ClientVersion: "nulla",
-        EncodedRequest: "corrupti",
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.EncodedFullHashes.SafebrowsingEncodedFullHashesGet(ctx, req)
+    res, err := s.EncodedFullHashes.SafebrowsingEncodedFullHashesGet(ctx, operations.SafebrowsingEncodedFullHashesGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        ClientID: sdk.String("unde"),
+        ClientVersion: sdk.String("nulla"),
+        EncodedRequest: "corrupti",
+        Fields: sdk.String("illum"),
+        Key: sdk.String("vel"),
+        OauthToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,33 +56,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### EncodedFullHashes
+### [EncodedFullHashes](docs/encodedfullhashes/README.md)
 
-* `SafebrowsingEncodedFullHashesGet`
+* [SafebrowsingEncodedFullHashesGet](docs/encodedfullhashes/README.md#safebrowsingencodedfullhashesget)
 
-### EncodedUpdates
+### [EncodedUpdates](docs/encodedupdates/README.md)
 
-* `SafebrowsingEncodedUpdatesGet`
+* [SafebrowsingEncodedUpdatesGet](docs/encodedupdates/README.md#safebrowsingencodedupdatesget)
 
-### FullHashes
+### [FullHashes](docs/fullhashes/README.md)
 
-* `SafebrowsingFullHashesFind` - Finds the full hashes that match the requested hash prefixes.
+* [SafebrowsingFullHashesFind](docs/fullhashes/README.md#safebrowsingfullhashesfind) - Finds the full hashes that match the requested hash prefixes.
 
-### ThreatHits
+### [ThreatHits](docs/threathits/README.md)
 
-* `SafebrowsingThreatHitsCreate` - Reports a Safe Browsing threat list hit to Google. Only projects with TRUSTED_REPORTER visibility can use this method.
+* [SafebrowsingThreatHitsCreate](docs/threathits/README.md#safebrowsingthreathitscreate) - Reports a Safe Browsing threat list hit to Google. Only projects with TRUSTED_REPORTER visibility can use this method.
 
-### ThreatListUpdates
+### [ThreatListUpdates](docs/threatlistupdates/README.md)
 
-* `SafebrowsingThreatListUpdatesFetch` - Fetches the most recent threat list updates. A client can request updates for multiple lists at once.
+* [SafebrowsingThreatListUpdatesFetch](docs/threatlistupdates/README.md#safebrowsingthreatlistupdatesfetch) - Fetches the most recent threat list updates. A client can request updates for multiple lists at once.
 
-### ThreatLists
+### [ThreatLists](docs/threatlists/README.md)
 
-* `SafebrowsingThreatListsList` - Lists the Safe Browsing threat lists available for download.
+* [SafebrowsingThreatListsList](docs/threatlists/README.md#safebrowsingthreatlistslist) - Lists the Safe Browsing threat lists available for download.
 
-### ThreatMatches
+### [ThreatMatches](docs/threatmatches/README.md)
 
-* `SafebrowsingThreatMatchesFind` - Finds the threat entries that match the Safe Browsing lists.
+* [SafebrowsingThreatMatchesFind](docs/threatmatches/README.md#safebrowsingthreatmatchesfind) - Finds the threat entries that match the Safe Browsing lists.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	CreateWorkflowTemplateEnumFailover CreateWorkflowTemplateEnum = "failover"
 )
 
+func (e CreateWorkflowTemplateEnum) ToPointer() *CreateWorkflowTemplateEnum {
+	return &e
+}
+
 func (e *CreateWorkflowTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "failover":
-		*e = CreateWorkflowTemplateEnum(s)
+		*e = CreateWorkflowTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkflowTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkflowTemplateEnum: %v", v)
 	}
 }
 

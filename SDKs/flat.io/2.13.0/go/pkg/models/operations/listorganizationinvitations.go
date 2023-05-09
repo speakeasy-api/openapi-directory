@@ -22,21 +22,25 @@ const (
 	ListOrganizationInvitationsRoleEnumAdmin   ListOrganizationInvitationsRoleEnum = "admin"
 )
 
+func (e ListOrganizationInvitationsRoleEnum) ToPointer() *ListOrganizationInvitationsRoleEnum {
+	return &e
+}
+
 func (e *ListOrganizationInvitationsRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "teacher":
 		fallthrough
 	case "admin":
-		*e = ListOrganizationInvitationsRoleEnum(s)
+		*e = ListOrganizationInvitationsRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOrganizationInvitationsRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOrganizationInvitationsRoleEnum: %v", v)
 	}
 }
 

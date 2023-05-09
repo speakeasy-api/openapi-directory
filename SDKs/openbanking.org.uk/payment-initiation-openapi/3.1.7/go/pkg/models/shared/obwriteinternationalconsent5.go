@@ -16,19 +16,23 @@ const (
 	OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnumSingle OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
+func (e OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum) ToPointer() *OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Any":
 		fallthrough
 	case "Single":
-		*e = OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum(s)
+		*e = OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataAuthorisationAuthorisationTypeEnum: %v", v)
 	}
 }
 
@@ -100,21 +104,25 @@ const (
 	OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnumIndicative OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum = "Indicative"
 )
 
+func (e OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum) ToPointer() *OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Actual":
 		fallthrough
 	case "Agreed":
 		fallthrough
 	case "Indicative":
-		*e = OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum(s)
+		*e = OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataInitiationExchangeRateInformationRateTypeEnum: %v", v)
 	}
 }
 
@@ -147,19 +155,23 @@ const (
 	OBWriteInternationalConsent5DataInitiationInstructionPriorityEnumUrgent OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum = "Urgent"
 )
 
+func (e OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum) ToPointer() *OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Normal":
 		fallthrough
 	case "Urgent":
-		*e = OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum(s)
+		*e = OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataInitiationInstructionPriorityEnum: %v", v)
 	}
 }
 
@@ -227,19 +239,23 @@ const (
 	OBWriteInternationalConsent5DataReadRefundAccountEnumYes OBWriteInternationalConsent5DataReadRefundAccountEnum = "Yes"
 )
 
+func (e OBWriteInternationalConsent5DataReadRefundAccountEnum) ToPointer() *OBWriteInternationalConsent5DataReadRefundAccountEnum {
+	return &e
+}
+
 func (e *OBWriteInternationalConsent5DataReadRefundAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No":
 		fallthrough
 	case "Yes":
-		*e = OBWriteInternationalConsent5DataReadRefundAccountEnum(s)
+		*e = OBWriteInternationalConsent5DataReadRefundAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataReadRefundAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteInternationalConsent5DataReadRefundAccountEnum: %v", v)
 	}
 }
 

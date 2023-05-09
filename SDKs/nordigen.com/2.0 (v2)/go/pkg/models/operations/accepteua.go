@@ -15,7 +15,7 @@ type AcceptEUARequest struct {
 
 type AcceptEUAResponse struct {
 	ContentType string
-	// EUA
+	// Accept end user agreement
 	EndUserAgreement *shared.EndUserAgreement
 	StatusCode       int
 	RawResponse      *http.Response
@@ -29,4 +29,6 @@ type AcceptEUAResponse struct {
 	AcceptEUA404ApplicationJSONObject map[string]interface{}
 	// EUA accepted
 	AcceptEUA405ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	AcceptEUA429ApplicationJSONObject map[string]interface{}
 }

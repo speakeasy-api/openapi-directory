@@ -13,16 +13,20 @@ const (
 	PayerResponsibilityEnumServiceOwner PayerResponsibilityEnum = "ServiceOwner"
 )
 
+func (e PayerResponsibilityEnum) ToPointer() *PayerResponsibilityEnum {
+	return &e
+}
+
 func (e *PayerResponsibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceOwner":
-		*e = PayerResponsibilityEnum(s)
+		*e = PayerResponsibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayerResponsibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PayerResponsibilityEnum: %v", v)
 	}
 }

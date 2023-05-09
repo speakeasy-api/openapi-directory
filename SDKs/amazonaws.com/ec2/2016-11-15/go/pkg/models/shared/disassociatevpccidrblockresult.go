@@ -19,12 +19,16 @@ const (
 	DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnumFailed         DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum = "failed"
 )
 
+func (e DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum) ToPointer() *DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -36,10 +40,10 @@ func (e *DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEn
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum(s)
+		*e = DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnumFailed         DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum = "failed"
 )
 
+func (e DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum) ToPointer() *DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum {
+	return &e
+}
+
 func (e *DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -85,10 +93,10 @@ func (e *DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStat
 	case "failing":
 		fallthrough
 	case "failed":
-		*e = DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum(s)
+		*e = DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateVpcCidrBlockResultIpv6CidrBlockAssociationIpv6CidrBlockStateStateEnum: %v", v)
 	}
 }
 

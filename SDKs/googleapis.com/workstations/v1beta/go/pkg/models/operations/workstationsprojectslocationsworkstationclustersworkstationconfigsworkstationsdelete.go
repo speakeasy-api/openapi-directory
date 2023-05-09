@@ -21,7 +21,7 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsWorkstati
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-	// If set, the request will be rejected if the latest version of the workstation on the server does not have this etag.
+	// If set, the request will be rejected if the latest version of the workstation on the server does not have this ETag.
 	Etag *string `queryParam:"style=form,explode=true,name=etag"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`

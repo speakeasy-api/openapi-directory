@@ -21,12 +21,16 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumSuspended   EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "SUSPENDED"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "ON_HOLD":
@@ -42,10 +46,10 @@ func (e *EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionS
 	case "RETRY_ON_HOLD":
 		fallthrough
 	case "SUSPENDED":
-		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum: %v", v)
 	}
 }
 

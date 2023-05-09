@@ -16,21 +16,25 @@ const (
 	ProductFullDetailsAPIModelStatusEnumInactive     ProductFullDetailsAPIModelStatusEnum = "Inactive"
 )
 
+func (e ProductFullDetailsAPIModelStatusEnum) ToPointer() *ProductFullDetailsAPIModelStatusEnum {
+	return &e
+}
+
 func (e *ProductFullDetailsAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "NotAvailable":
 		fallthrough
 	case "Inactive":
-		*e = ProductFullDetailsAPIModelStatusEnum(s)
+		*e = ProductFullDetailsAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductFullDetailsAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductFullDetailsAPIModelStatusEnum: %v", v)
 	}
 }
 

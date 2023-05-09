@@ -104,7 +104,10 @@ func (s *retargeting) RetargetingCount(ctx context.Context) (*operations.Retarge
 // RetargetingDelete - Deletes a retargeting script (and remove associations)
 func (s *retargeting) RetargetingDelete(ctx context.Context, request operations.RetargetingDeleteRequest) (*operations.RetargetingDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +237,10 @@ func (s *retargeting) RetargetingGet(ctx context.Context, request operations.Ret
 // RetargetingGetDatapoints - List of all the datapoints associated to the retargeting script.
 func (s *retargeting) RetargetingGetDatapoints(ctx context.Context, request operations.RetargetingGetDatapointsRequest) (*operations.RetargetingGetDatapointsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}/datapoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}/datapoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -294,7 +300,10 @@ func (s *retargeting) RetargetingGetDatapoints(ctx context.Context, request oper
 // RetargetingGetDatapointsCount - Count the datapoints associated to the retargeting script.
 func (s *retargeting) RetargetingGetDatapointsCount(ctx context.Context, request operations.RetargetingGetDatapointsCountRequest) (*operations.RetargetingGetDatapointsCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}/datapoints/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}/datapoints/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -368,7 +377,10 @@ func (s *retargeting) RetargetingGetDatapointsCount(ctx context.Context, request
 // RetargetingPostForm - Updates a retargeting script
 func (s *retargeting) RetargetingPostForm(ctx context.Context, request operations.RetargetingPostFormRequest) (*operations.RetargetingPostFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoRetargetingRetargetingScript", "form")
 	if err != nil {
@@ -448,7 +460,10 @@ func (s *retargeting) RetargetingPostForm(ctx context.Context, request operation
 // RetargetingPostJSON - Updates a retargeting script
 func (s *retargeting) RetargetingPostJSON(ctx context.Context, request operations.RetargetingPostJSONRequest) (*operations.RetargetingPostJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoRetargetingRetargetingScript", "json")
 	if err != nil {
@@ -528,7 +543,10 @@ func (s *retargeting) RetargetingPostJSON(ctx context.Context, request operation
 // RetargetingPostRaw - Updates a retargeting script
 func (s *retargeting) RetargetingPostRaw(ctx context.Context, request operations.RetargetingPostRawRequest) (*operations.RetargetingPostRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -848,7 +866,10 @@ func (s *retargeting) RetargetingPutRaw(ctx context.Context, request []byte) (*o
 // GetRetargetingID - Get a retargeting script object
 func (s *retargeting) GetRetargetingID(ctx context.Context, request operations.GetRetargetingIDRequest) (*operations.GetRetargetingIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retargeting/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

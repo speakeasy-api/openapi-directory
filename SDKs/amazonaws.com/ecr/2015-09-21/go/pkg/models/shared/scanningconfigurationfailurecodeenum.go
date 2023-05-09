@@ -13,16 +13,20 @@ const (
 	ScanningConfigurationFailureCodeEnumRepositoryNotFound ScanningConfigurationFailureCodeEnum = "REPOSITORY_NOT_FOUND"
 )
 
+func (e ScanningConfigurationFailureCodeEnum) ToPointer() *ScanningConfigurationFailureCodeEnum {
+	return &e
+}
+
 func (e *ScanningConfigurationFailureCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPOSITORY_NOT_FOUND":
-		*e = ScanningConfigurationFailureCodeEnum(s)
+		*e = ScanningConfigurationFailureCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanningConfigurationFailureCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanningConfigurationFailureCodeEnum: %v", v)
 	}
 }

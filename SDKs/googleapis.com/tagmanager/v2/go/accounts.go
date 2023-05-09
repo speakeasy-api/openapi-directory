@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // TagmanagerAccountsContainersCombine - Combines Containers.
 func (s *accounts) TagmanagerAccountsContainersCombine(ctx context.Context, request operations.TagmanagerAccountsContainersCombineRequest, security operations.TagmanagerAccountsContainersCombineSecurity) (*operations.TagmanagerAccountsContainersCombineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:combine", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:combine", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *accounts) TagmanagerAccountsContainersCombine(ctx context.Context, requ
 // TagmanagerAccountsContainersCreate - Creates a Container.
 func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersCreateRequest, security operations.TagmanagerAccountsContainersCreateSecurity) (*operations.TagmanagerAccountsContainersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/containers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/containers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Container", "json")
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *accounts) TagmanagerAccountsContainersCreate(ctx context.Context, reque
 // TagmanagerAccountsContainersDestinationsLink - Adds a Destination to this Container and removes it from the Container to which it is currently linked.
 func (s *accounts) TagmanagerAccountsContainersDestinationsLink(ctx context.Context, request operations.TagmanagerAccountsContainersDestinationsLinkRequest, security operations.TagmanagerAccountsContainersDestinationsLinkSecurity) (*operations.TagmanagerAccountsContainersDestinationsLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/destinations:link", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/destinations:link", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -186,7 +195,10 @@ func (s *accounts) TagmanagerAccountsContainersDestinationsLink(ctx context.Cont
 // TagmanagerAccountsContainersDestinationsList - Lists all Destinations linked to a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersDestinationsList(ctx context.Context, request operations.TagmanagerAccountsContainersDestinationsListRequest, security operations.TagmanagerAccountsContainersDestinationsListSecurity) (*operations.TagmanagerAccountsContainersDestinationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/destinations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/destinations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +246,10 @@ func (s *accounts) TagmanagerAccountsContainersDestinationsList(ctx context.Cont
 // TagmanagerAccountsContainersEnvironmentsCreate - Creates a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsCreateRequest, security operations.TagmanagerAccountsContainersEnvironmentsCreateSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
@@ -289,7 +304,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsCreate(ctx context.Co
 // TagmanagerAccountsContainersEnvironmentsList - Lists all GTM Environments of a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsListRequest, security operations.TagmanagerAccountsContainersEnvironmentsListSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +355,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsList(ctx context.Cont
 // TagmanagerAccountsContainersEnvironmentsReauthorize - Re-generates the authorization code for a GTM Environment.
 func (s *accounts) TagmanagerAccountsContainersEnvironmentsReauthorize(ctx context.Context, request operations.TagmanagerAccountsContainersEnvironmentsReauthorizeRequest, security operations.TagmanagerAccountsContainersEnvironmentsReauthorizeSecurity) (*operations.TagmanagerAccountsContainersEnvironmentsReauthorizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:reauthorize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:reauthorize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Environment", "json")
 	if err != nil {
@@ -392,7 +413,10 @@ func (s *accounts) TagmanagerAccountsContainersEnvironmentsReauthorize(ctx conte
 // TagmanagerAccountsContainersList - Lists all Containers that belongs to a GTM Account.
 func (s *accounts) TagmanagerAccountsContainersList(ctx context.Context, request operations.TagmanagerAccountsContainersListRequest, security operations.TagmanagerAccountsContainersListSecurity) (*operations.TagmanagerAccountsContainersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/containers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/containers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -488,7 +512,10 @@ func (s *accounts) TagmanagerAccountsContainersLookup(ctx context.Context, reque
 // TagmanagerAccountsContainersMoveTagID - Move Tag ID out of a Container.
 func (s *accounts) TagmanagerAccountsContainersMoveTagID(ctx context.Context, request operations.TagmanagerAccountsContainersMoveTagIDRequest, security operations.TagmanagerAccountsContainersMoveTagIDSecurity) (*operations.TagmanagerAccountsContainersMoveTagIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:move_tag_id", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:move_tag_id", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -536,7 +563,10 @@ func (s *accounts) TagmanagerAccountsContainersMoveTagID(ctx context.Context, re
 // TagmanagerAccountsContainersSnippet - Gets the tagging snippet for a Container.
 func (s *accounts) TagmanagerAccountsContainersSnippet(ctx context.Context, request operations.TagmanagerAccountsContainersSnippetRequest, security operations.TagmanagerAccountsContainersSnippetSecurity) (*operations.TagmanagerAccountsContainersSnippetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:snippet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:snippet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,7 +614,10 @@ func (s *accounts) TagmanagerAccountsContainersSnippet(ctx context.Context, requ
 // TagmanagerAccountsContainersVersionHeadersLatest - Gets the latest container version header
 func (s *accounts) TagmanagerAccountsContainersVersionHeadersLatest(ctx context.Context, request operations.TagmanagerAccountsContainersVersionHeadersLatestRequest, security operations.TagmanagerAccountsContainersVersionHeadersLatestSecurity) (*operations.TagmanagerAccountsContainersVersionHeadersLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/version_headers:latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/version_headers:latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -632,7 +665,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionHeadersLatest(ctx context.
 // TagmanagerAccountsContainersVersionHeadersList - Lists all Container Versions of a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersVersionHeadersList(ctx context.Context, request operations.TagmanagerAccountsContainersVersionHeadersListRequest, security operations.TagmanagerAccountsContainersVersionHeadersListSecurity) (*operations.TagmanagerAccountsContainersVersionHeadersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/version_headers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/version_headers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -680,7 +716,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionHeadersList(ctx context.Co
 // TagmanagerAccountsContainersVersionsLive - Gets the live (i.e. published) container version
 func (s *accounts) TagmanagerAccountsContainersVersionsLive(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsLiveRequest, security operations.TagmanagerAccountsContainersVersionsLiveSecurity) (*operations.TagmanagerAccountsContainersVersionsLiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/versions:live", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/versions:live", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -728,7 +767,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsLive(ctx context.Context,
 // TagmanagerAccountsContainersVersionsPublish - Publishes a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsPublishRequest, security operations.TagmanagerAccountsContainersVersionsPublishSecurity) (*operations.TagmanagerAccountsContainersVersionsPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -776,7 +818,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsPublish(ctx context.Conte
 // TagmanagerAccountsContainersVersionsSetLatest - Sets the latest version used for synchronization of workspaces when detecting conflicts and errors.
 func (s *accounts) TagmanagerAccountsContainersVersionsSetLatest(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsSetLatestRequest, security operations.TagmanagerAccountsContainersVersionsSetLatestSecurity) (*operations.TagmanagerAccountsContainersVersionsSetLatestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:set_latest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:set_latest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsSetLatest(ctx context.Con
 // TagmanagerAccountsContainersVersionsUndelete - Undeletes a Container Version.
 func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Context, request operations.TagmanagerAccountsContainersVersionsUndeleteRequest, security operations.TagmanagerAccountsContainersVersionsUndeleteSecurity) (*operations.TagmanagerAccountsContainersVersionsUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -872,7 +920,10 @@ func (s *accounts) TagmanagerAccountsContainersVersionsUndelete(ctx context.Cont
 // TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate - Creates one or more GTM Built-In Variables.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/built_in_variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/built_in_variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreate(
 // TagmanagerAccountsContainersWorkspacesBuiltInVariablesList - Lists all the enabled Built-In Variables of a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListRequest, security operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/built_in_variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/built_in_variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesList(ct
 // TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert - Reverts changes to a GTM Built-In Variables in a GTM Workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertRequest, security operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertSecurity) (*operations.TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}/built_in_variables:revert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}/built_in_variables:revert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1016,7 +1073,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevert(
 // TagmanagerAccountsContainersWorkspacesClientsCreate - Creates a GTM Client.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesClientsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesClientsCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesClientsCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesClientsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/clients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/clients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Client", "json")
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesClientsCreate(ctx conte
 // TagmanagerAccountsContainersWorkspacesClientsList - Lists all GTM Clients of a GTM container workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesClientsList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesClientsListRequest, security operations.TagmanagerAccountsContainersWorkspacesClientsListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesClientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/clients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/clients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1119,7 +1182,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesClientsList(ctx context
 // TagmanagerAccountsContainersWorkspacesCreate - Creates a Workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/workspaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/workspaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Workspace", "json")
 	if err != nil {
@@ -1174,7 +1240,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesCreate(ctx context.Cont
 // TagmanagerAccountsContainersWorkspacesCreateVersion - Creates a Container Version from the entities present in the workspace, deletes the workspace, and sets the base container version to the newly created version.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesCreateVersion(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesCreateVersionRequest, security operations.TagmanagerAccountsContainersWorkspacesCreateVersionSecurity) (*operations.TagmanagerAccountsContainersWorkspacesCreateVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:create_version", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:create_version", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateContainerVersionRequestVersionOptions", "json")
 	if err != nil {
@@ -1229,7 +1298,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesCreateVersion(ctx conte
 // TagmanagerAccountsContainersWorkspacesFoldersCreate - Creates a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesFoldersCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesFoldersCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesFoldersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersCreate(ctx conte
 // TagmanagerAccountsContainersWorkspacesFoldersEntities - List all entities in a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersEntities(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesRequest, security operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesSecurity) (*operations.TagmanagerAccountsContainersWorkspacesFoldersEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1332,7 +1407,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersEntities(ctx con
 // TagmanagerAccountsContainersWorkspacesFoldersList - Lists all GTM Folders of a Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesFoldersListRequest, security operations.TagmanagerAccountsContainersWorkspacesFoldersListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesFoldersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/folders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/folders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1380,7 +1458,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersList(ctx context
 // TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder - Moves entities to a GTM Folder.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolder(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderRequest, security operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderSecurity) (*operations.TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:move_entities_to_folder", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:move_entities_to_folder", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Folder", "json")
 	if err != nil {
@@ -1426,7 +1507,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesFoldersMoveEntitiesToFo
 // TagmanagerAccountsContainersWorkspacesGetStatus - Finds conflicting and modified entities in the workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesGetStatus(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesGetStatusRequest, security operations.TagmanagerAccountsContainersWorkspacesGetStatusSecurity) (*operations.TagmanagerAccountsContainersWorkspacesGetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1474,7 +1558,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesGetStatus(ctx context.C
 // TagmanagerAccountsContainersWorkspacesGtagConfigCreate - Creates a Google tag config.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesGtagConfigCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesGtagConfigCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/gtag_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/gtag_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GtagConfig", "json")
 	if err != nil {
@@ -1529,7 +1616,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesGtagConfigCreate(ctx co
 // TagmanagerAccountsContainersWorkspacesGtagConfigList - Lists all Google tag configs in a Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesGtagConfigList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesGtagConfigListRequest, security operations.TagmanagerAccountsContainersWorkspacesGtagConfigListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesGtagConfigListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/gtag_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/gtag_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1577,7 +1667,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesGtagConfigList(ctx cont
 // TagmanagerAccountsContainersWorkspacesList - Lists all Workspaces that belong to a GTM Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesListRequest, security operations.TagmanagerAccountsContainersWorkspacesListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/workspaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/workspaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1625,7 +1718,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesList(ctx context.Contex
 // TagmanagerAccountsContainersWorkspacesQuickPreview - Quick previews a workspace by creating a fake container version from all entities in the provided workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesQuickPreview(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesQuickPreviewRequest, security operations.TagmanagerAccountsContainersWorkspacesQuickPreviewSecurity) (*operations.TagmanagerAccountsContainersWorkspacesQuickPreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:quick_preview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:quick_preview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1673,7 +1769,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesQuickPreview(ctx contex
 // TagmanagerAccountsContainersWorkspacesResolveConflict - Resolves a merge conflict for a workspace entity by updating it to the resolved entity passed in the request.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesResolveConflict(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesResolveConflictRequest, security operations.TagmanagerAccountsContainersWorkspacesResolveConflictSecurity) (*operations.TagmanagerAccountsContainersWorkspacesResolveConflictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:resolve_conflict", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:resolve_conflict", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Entity", "json")
 	if err != nil {
@@ -1719,7 +1818,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesResolveConflict(ctx con
 // TagmanagerAccountsContainersWorkspacesSync - Syncs a workspace to the latest container version by updating all unmodified workspace entities and displaying conflicts for modified entities.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesSync(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesSyncRequest, security operations.TagmanagerAccountsContainersWorkspacesSyncSecurity) (*operations.TagmanagerAccountsContainersWorkspacesSyncResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:sync", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:sync", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1767,7 +1869,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesSync(ctx context.Contex
 // TagmanagerAccountsContainersWorkspacesTagsCreate - Creates a GTM Tag.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTagsCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTagsCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesTagsCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
@@ -1822,7 +1927,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTagsCreate(ctx context.
 // TagmanagerAccountsContainersWorkspacesTagsList - Lists all GTM Tags of a Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTagsList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTagsListRequest, security operations.TagmanagerAccountsContainersWorkspacesTagsListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1870,7 +1978,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTagsList(ctx context.Co
 // TagmanagerAccountsContainersWorkspacesTemplatesCreate - Creates a GTM Custom Template.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTemplatesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomTemplate", "json")
 	if err != nil {
@@ -1925,7 +2036,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTemplatesCreate(ctx con
 // TagmanagerAccountsContainersWorkspacesTemplatesList - Lists all GTM Templates of a GTM container workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTemplatesList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTemplatesListRequest, security operations.TagmanagerAccountsContainersWorkspacesTemplatesListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTemplatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1973,7 +2087,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTemplatesList(ctx conte
 // TagmanagerAccountsContainersWorkspacesTriggersCreate - Creates a GTM Trigger.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTriggersCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTriggersCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesTriggersCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTriggersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Trigger", "json")
 	if err != nil {
@@ -2028,7 +2145,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTriggersCreate(ctx cont
 // TagmanagerAccountsContainersWorkspacesTriggersList - Lists all GTM Triggers of a Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesTriggersList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesTriggersListRequest, security operations.TagmanagerAccountsContainersWorkspacesTriggersListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesTriggersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/triggers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/triggers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2076,7 +2196,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesTriggersList(ctx contex
 // TagmanagerAccountsContainersWorkspacesVariablesCreate - Creates a GTM Variable.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesVariablesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesVariablesCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesVariablesCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesVariablesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Variable", "json")
 	if err != nil {
@@ -2131,7 +2254,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesVariablesCreate(ctx con
 // TagmanagerAccountsContainersWorkspacesVariablesList - Lists all GTM Variables of a Container.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesVariablesList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesVariablesListRequest, security operations.TagmanagerAccountsContainersWorkspacesVariablesListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesVariablesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2179,7 +2305,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesVariablesList(ctx conte
 // TagmanagerAccountsContainersWorkspacesZonesCreate - Creates a GTM Zone.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesZonesCreate(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesZonesCreateRequest, security operations.TagmanagerAccountsContainersWorkspacesZonesCreateSecurity) (*operations.TagmanagerAccountsContainersWorkspacesZonesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/zones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/zones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Zone", "json")
 	if err != nil {
@@ -2234,7 +2363,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesZonesCreate(ctx context
 // TagmanagerAccountsContainersWorkspacesZonesList - Lists all GTM Zones of a GTM container workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesZonesList(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesZonesListRequest, security operations.TagmanagerAccountsContainersWorkspacesZonesListSecurity) (*operations.TagmanagerAccountsContainersWorkspacesZonesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/zones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/zones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2282,7 +2414,10 @@ func (s *accounts) TagmanagerAccountsContainersWorkspacesZonesList(ctx context.C
 // TagmanagerAccountsContainersWorkspacesZonesRevert - Reverts changes to a GTM Zone in a GTM Workspace.
 func (s *accounts) TagmanagerAccountsContainersWorkspacesZonesRevert(ctx context.Context, request operations.TagmanagerAccountsContainersWorkspacesZonesRevertRequest, security operations.TagmanagerAccountsContainersWorkspacesZonesRevertSecurity) (*operations.TagmanagerAccountsContainersWorkspacesZonesRevertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:revert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}:revert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2378,7 +2513,10 @@ func (s *accounts) TagmanagerAccountsList(ctx context.Context, request operation
 // TagmanagerAccountsUserPermissionsCreate - Creates a user's Account & Container access.
 func (s *accounts) TagmanagerAccountsUserPermissionsCreate(ctx context.Context, request operations.TagmanagerAccountsUserPermissionsCreateRequest, security operations.TagmanagerAccountsUserPermissionsCreateSecurity) (*operations.TagmanagerAccountsUserPermissionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/user_permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/user_permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPermission", "json")
 	if err != nil {
@@ -2433,7 +2571,10 @@ func (s *accounts) TagmanagerAccountsUserPermissionsCreate(ctx context.Context, 
 // TagmanagerAccountsUserPermissionsDelete - Removes a user from the account, revoking access to it and all of its containers.
 func (s *accounts) TagmanagerAccountsUserPermissionsDelete(ctx context.Context, request operations.TagmanagerAccountsUserPermissionsDeleteRequest, security operations.TagmanagerAccountsUserPermissionsDeleteSecurity) (*operations.TagmanagerAccountsUserPermissionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2472,7 +2613,10 @@ func (s *accounts) TagmanagerAccountsUserPermissionsDelete(ctx context.Context, 
 // TagmanagerAccountsUserPermissionsGet - Gets a user's Account & Container access.
 func (s *accounts) TagmanagerAccountsUserPermissionsGet(ctx context.Context, request operations.TagmanagerAccountsUserPermissionsGetRequest, security operations.TagmanagerAccountsUserPermissionsGetSecurity) (*operations.TagmanagerAccountsUserPermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2520,7 +2664,10 @@ func (s *accounts) TagmanagerAccountsUserPermissionsGet(ctx context.Context, req
 // TagmanagerAccountsUserPermissionsList - List all users that have access to the account along with Account and Container user access granted to each of them.
 func (s *accounts) TagmanagerAccountsUserPermissionsList(ctx context.Context, request operations.TagmanagerAccountsUserPermissionsListRequest, security operations.TagmanagerAccountsUserPermissionsListSecurity) (*operations.TagmanagerAccountsUserPermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/user_permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{parent}/user_permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2568,7 +2715,10 @@ func (s *accounts) TagmanagerAccountsUserPermissionsList(ctx context.Context, re
 // TagmanagerAccountsUserPermissionsUpdate - Updates a user's Account & Container access.
 func (s *accounts) TagmanagerAccountsUserPermissionsUpdate(ctx context.Context, request operations.TagmanagerAccountsUserPermissionsUpdateRequest, security operations.TagmanagerAccountsUserPermissionsUpdateSecurity) (*operations.TagmanagerAccountsUserPermissionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tagmanager/v2/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserPermission", "json")
 	if err != nil {

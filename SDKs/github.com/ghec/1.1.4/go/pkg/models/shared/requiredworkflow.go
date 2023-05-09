@@ -16,19 +16,23 @@ const (
 	RequiredWorkflowScopeEnumSelected RequiredWorkflowScopeEnum = "selected"
 )
 
+func (e RequiredWorkflowScopeEnum) ToPointer() *RequiredWorkflowScopeEnum {
+	return &e
+}
+
 func (e *RequiredWorkflowScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "selected":
-		*e = RequiredWorkflowScopeEnum(s)
+		*e = RequiredWorkflowScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequiredWorkflowScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequiredWorkflowScopeEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	RequiredWorkflowStateEnumDeleted RequiredWorkflowStateEnum = "deleted"
 )
 
+func (e RequiredWorkflowStateEnum) ToPointer() *RequiredWorkflowStateEnum {
+	return &e
+}
+
 func (e *RequiredWorkflowStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = RequiredWorkflowStateEnum(s)
+		*e = RequiredWorkflowStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequiredWorkflowStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RequiredWorkflowStateEnum: %v", v)
 	}
 }
 

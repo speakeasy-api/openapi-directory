@@ -16,17 +16,21 @@ const (
 	ListRepositorySyncDefinitionsXAmzTargetEnumAwsProton20200720ListRepositorySyncDefinitions ListRepositorySyncDefinitionsXAmzTargetEnum = "AwsProton20200720.ListRepositorySyncDefinitions"
 )
 
+func (e ListRepositorySyncDefinitionsXAmzTargetEnum) ToPointer() *ListRepositorySyncDefinitionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRepositorySyncDefinitionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.ListRepositorySyncDefinitions":
-		*e = ListRepositorySyncDefinitionsXAmzTargetEnum(s)
+		*e = ListRepositorySyncDefinitionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRepositorySyncDefinitionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRepositorySyncDefinitionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	BackgroundJobLogEntryCompletionStateEnumFailed                        BackgroundJobLogEntryCompletionStateEnum = "FAILED"
 )
 
+func (e BackgroundJobLogEntryCompletionStateEnum) ToPointer() *BackgroundJobLogEntryCompletionStateEnum {
+	return &e
+}
+
 func (e *BackgroundJobLogEntryCompletionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_COMPLETION_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = BackgroundJobLogEntryCompletionStateEnum(s)
+		*e = BackgroundJobLogEntryCompletionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackgroundJobLogEntryCompletionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BackgroundJobLogEntryCompletionStateEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	BackgroundJobLogEntryJobTypeEnumBackgroundJobTypeImportRulesFile  BackgroundJobLogEntryJobTypeEnum = "BACKGROUND_JOB_TYPE_IMPORT_RULES_FILE"
 )
 
+func (e BackgroundJobLogEntryJobTypeEnum) ToPointer() *BackgroundJobLogEntryJobTypeEnum {
+	return &e
+}
+
 func (e *BackgroundJobLogEntryJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKGROUND_JOB_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BACKGROUND_JOB_TYPE_SOURCE_SEED":
@@ -60,10 +68,10 @@ func (e *BackgroundJobLogEntryJobTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BACKGROUND_JOB_TYPE_APPLY_DESTINATION":
 		fallthrough
 	case "BACKGROUND_JOB_TYPE_IMPORT_RULES_FILE":
-		*e = BackgroundJobLogEntryJobTypeEnum(s)
+		*e = BackgroundJobLogEntryJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackgroundJobLogEntryJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackgroundJobLogEntryJobTypeEnum: %v", v)
 	}
 }
 

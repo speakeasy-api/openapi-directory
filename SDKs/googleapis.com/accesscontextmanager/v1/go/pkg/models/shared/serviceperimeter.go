@@ -15,19 +15,23 @@ const (
 	ServicePerimeterPerimeterTypeEnumPerimeterTypeBridge  ServicePerimeterPerimeterTypeEnum = "PERIMETER_TYPE_BRIDGE"
 )
 
+func (e ServicePerimeterPerimeterTypeEnum) ToPointer() *ServicePerimeterPerimeterTypeEnum {
+	return &e
+}
+
 func (e *ServicePerimeterPerimeterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERIMETER_TYPE_REGULAR":
 		fallthrough
 	case "PERIMETER_TYPE_BRIDGE":
-		*e = ServicePerimeterPerimeterTypeEnum(s)
+		*e = ServicePerimeterPerimeterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServicePerimeterPerimeterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServicePerimeterPerimeterTypeEnum: %v", v)
 	}
 }
 

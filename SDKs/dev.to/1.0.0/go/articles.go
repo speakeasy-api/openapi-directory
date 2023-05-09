@@ -85,7 +85,10 @@ func (s *articles) CreateArticle(ctx context.Context, request shared.Article) (*
 // This endpoint allows the client to retrieve a single published article given its `id`.
 func (s *articles) GetArticleByID(ctx context.Context, request operations.GetArticleByIDRequest) (*operations.GetArticleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *articles) GetArticleByID(ctx context.Context, request operations.GetArt
 // This endpoint allows the client to retrieve a single published article given its `path`.
 func (s *articles) GetArticleByPath(ctx context.Context, request operations.GetArticleByPathRequest) (*operations.GetArticleByPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{username}/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/articles/{username}/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *articles) GetLatestArticles(ctx context.Context, request operations.Get
 // It supports pagination, each page will contain `30` users by default.
 func (s *articles) GetOrgArticles(ctx context.Context, request operations.GetOrgArticlesRequest) (*operations.GetOrgArticlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/organizations/{username}/articles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -571,7 +580,10 @@ func (s *articles) GetUserUnpublishedArticles(ctx context.Context, request opera
 // will remain.
 func (s *articles) UnpublishArticle(ctx context.Context, request operations.UnpublishArticleRequest) (*operations.UnpublishArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}/unpublish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}/unpublish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -617,7 +629,10 @@ func (s *articles) UnpublishArticle(ctx context.Context, request operations.Unpu
 // "Articles" are all the posts that users create on DEV that typically show up in the feed. They can be a blog post, a discussion question, a help thread etc. but is referred to as article within the code.
 func (s *articles) UpdateArticle(ctx context.Context, request operations.UpdateArticleRequest) (*operations.UpdateArticleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/articles/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Article", "json")
 	if err != nil {

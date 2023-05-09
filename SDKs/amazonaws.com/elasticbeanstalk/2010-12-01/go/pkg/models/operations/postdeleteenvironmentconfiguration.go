@@ -15,17 +15,21 @@ const (
 	POSTDeleteEnvironmentConfigurationActionEnumDeleteEnvironmentConfiguration POSTDeleteEnvironmentConfigurationActionEnum = "DeleteEnvironmentConfiguration"
 )
 
+func (e POSTDeleteEnvironmentConfigurationActionEnum) ToPointer() *POSTDeleteEnvironmentConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEnvironmentConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEnvironmentConfiguration":
-		*e = POSTDeleteEnvironmentConfigurationActionEnum(s)
+		*e = POSTDeleteEnvironmentConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEnvironmentConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEnvironmentConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteEnvironmentConfigurationVersionEnumTwoThousandAndTen1201 POSTDeleteEnvironmentConfigurationVersionEnum = "2010-12-01"
 )
 
+func (e POSTDeleteEnvironmentConfigurationVersionEnum) ToPointer() *POSTDeleteEnvironmentConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEnvironmentConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDeleteEnvironmentConfigurationVersionEnum(s)
+		*e = POSTDeleteEnvironmentConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEnvironmentConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEnvironmentConfigurationVersionEnum: %v", v)
 	}
 }
 

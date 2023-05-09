@@ -16,17 +16,21 @@ const (
 	PutConformancePackXAmzTargetEnumStarlingDoveServicePutConformancePack PutConformancePackXAmzTargetEnum = "StarlingDoveService.PutConformancePack"
 )
 
+func (e PutConformancePackXAmzTargetEnum) ToPointer() *PutConformancePackXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutConformancePackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutConformancePack":
-		*e = PutConformancePackXAmzTargetEnum(s)
+		*e = PutConformancePackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutConformancePackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutConformancePackXAmzTargetEnum: %v", v)
 	}
 }
 

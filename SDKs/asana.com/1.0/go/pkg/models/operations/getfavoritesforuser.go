@@ -21,12 +21,16 @@ const (
 	GetFavoritesForUserResourceTypeEnumProjectTemplate GetFavoritesForUserResourceTypeEnum = "project_template"
 )
 
+func (e GetFavoritesForUserResourceTypeEnum) ToPointer() *GetFavoritesForUserResourceTypeEnum {
+	return &e
+}
+
 func (e *GetFavoritesForUserResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "portfolio":
 		fallthrough
 	case "project":
@@ -38,10 +42,10 @@ func (e *GetFavoritesForUserResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "user":
 		fallthrough
 	case "project_template":
-		*e = GetFavoritesForUserResourceTypeEnum(s)
+		*e = GetFavoritesForUserResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFavoritesForUserResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFavoritesForUserResourceTypeEnum: %v", v)
 	}
 }
 

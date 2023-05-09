@@ -19,12 +19,16 @@ const (
 	CallResponseMessageEnumUnknownCoreUUID            CallResponseMessageEnum = "Unknown Core UUID"
 )
 
+func (e CallResponseMessageEnum) ToPointer() *CallResponseMessageEnum {
+	return &e
+}
+
 func (e *CallResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Call Request Executed":
 		fallthrough
 	case "Mandatory Parameters Missing":
@@ -36,10 +40,10 @@ func (e *CallResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "RingUrl is not Valid":
 		fallthrough
 	case "Unknown Core UUID":
-		*e = CallResponseMessageEnum(s)
+		*e = CallResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for CallResponseMessageEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	SpotProvisioningTimeoutActionEnumTerminateCluster SpotProvisioningTimeoutActionEnum = "TERMINATE_CLUSTER"
 )
 
+func (e SpotProvisioningTimeoutActionEnum) ToPointer() *SpotProvisioningTimeoutActionEnum {
+	return &e
+}
+
 func (e *SpotProvisioningTimeoutActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWITCH_TO_ON_DEMAND":
 		fallthrough
 	case "TERMINATE_CLUSTER":
-		*e = SpotProvisioningTimeoutActionEnum(s)
+		*e = SpotProvisioningTimeoutActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpotProvisioningTimeoutActionEnum: %s", s)
+		return fmt.Errorf("invalid value for SpotProvisioningTimeoutActionEnum: %v", v)
 	}
 }

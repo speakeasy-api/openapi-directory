@@ -16,17 +16,21 @@ const (
 	DescribeMaintenanceWindowExecutionTasksXAmzTargetEnumAmazonSsmDescribeMaintenanceWindowExecutionTasks DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum = "AmazonSSM.DescribeMaintenanceWindowExecutionTasks"
 )
 
+func (e DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum) ToPointer() *DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribeMaintenanceWindowExecutionTasks":
-		*e = DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum(s)
+		*e = DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMaintenanceWindowExecutionTasksXAmzTargetEnum: %v", v)
 	}
 }
 

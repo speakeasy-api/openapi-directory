@@ -15,17 +15,21 @@ const (
 	POSTGetClusterCredentialsActionEnumGetClusterCredentials POSTGetClusterCredentialsActionEnum = "GetClusterCredentials"
 )
 
+func (e POSTGetClusterCredentialsActionEnum) ToPointer() *POSTGetClusterCredentialsActionEnum {
+	return &e
+}
+
 func (e *POSTGetClusterCredentialsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetClusterCredentials":
-		*e = POSTGetClusterCredentialsActionEnum(s)
+		*e = POSTGetClusterCredentialsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetClusterCredentialsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetClusterCredentialsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetClusterCredentialsVersionEnumTwoThousandAndTwelve1201 POSTGetClusterCredentialsVersionEnum = "2012-12-01"
 )
 
+func (e POSTGetClusterCredentialsVersionEnum) ToPointer() *POSTGetClusterCredentialsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetClusterCredentialsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTGetClusterCredentialsVersionEnum(s)
+		*e = POSTGetClusterCredentialsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetClusterCredentialsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetClusterCredentialsVersionEnum: %v", v)
 	}
 }
 

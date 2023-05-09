@@ -2,29 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AccountListNodeAgentSkusRequest{
-        DollarFilter: "corrupti",
-        APIVersion: "provident",
-        ClientRequestID: "distinctio",
-        Maxresults: 844266,
-        OcpDate: "unde",
-        ReturnClientRequestID: false,
-        Timeout: 857946,
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.AccountListNodeAgentSkus(ctx, req)
+    res, err := s.Accounts.AccountListNodeAgentSkus(ctx, operations.AccountListNodeAgentSkusRequest{
+        DollarFilter: sdk.String("corrupti"),
+        APIVersion: "provident",
+        ClientRequestID: sdk.String("distinctio"),
+        Maxresults: sdk.Int(844266),
+        OcpDate: sdk.String("unde"),
+        ReturnClientRequestID: sdk.Bool(false),
+        Timeout: sdk.Int(857946),
+    })
     if err != nil {
         log.Fatal(err)
     }

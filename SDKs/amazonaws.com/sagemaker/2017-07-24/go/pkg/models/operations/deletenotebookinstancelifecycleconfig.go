@@ -16,17 +16,21 @@ const (
 	DeleteNotebookInstanceLifecycleConfigXAmzTargetEnumSageMakerDeleteNotebookInstanceLifecycleConfig DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum = "SageMaker.DeleteNotebookInstanceLifecycleConfig"
 )
 
+func (e DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum) ToPointer() *DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteNotebookInstanceLifecycleConfig":
-		*e = DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum(s)
+		*e = DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteNotebookInstanceLifecycleConfigXAmzTargetEnum: %v", v)
 	}
 }
 

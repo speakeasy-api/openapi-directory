@@ -14,18 +14,22 @@ const (
 	DuplicateRegistrationActionEnumRegisterAsNew DuplicateRegistrationActionEnum = "REGISTER_AS_NEW"
 )
 
+func (e DuplicateRegistrationActionEnum) ToPointer() *DuplicateRegistrationActionEnum {
+	return &e
+}
+
 func (e *DuplicateRegistrationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKIP":
 		fallthrough
 	case "REGISTER_AS_NEW":
-		*e = DuplicateRegistrationActionEnum(s)
+		*e = DuplicateRegistrationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DuplicateRegistrationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DuplicateRegistrationActionEnum: %v", v)
 	}
 }

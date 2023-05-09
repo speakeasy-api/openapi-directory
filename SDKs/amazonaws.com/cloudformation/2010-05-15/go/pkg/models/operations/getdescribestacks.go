@@ -15,17 +15,21 @@ const (
 	GETDescribeStacksActionEnumDescribeStacks GETDescribeStacksActionEnum = "DescribeStacks"
 )
 
+func (e GETDescribeStacksActionEnum) ToPointer() *GETDescribeStacksActionEnum {
+	return &e
+}
+
 func (e *GETDescribeStacksActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeStacks":
-		*e = GETDescribeStacksActionEnum(s)
+		*e = GETDescribeStacksActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStacksActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStacksActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeStacksVersionEnumTwoThousandAndTen0515 GETDescribeStacksVersionEnum = "2010-05-15"
 )
 
+func (e GETDescribeStacksVersionEnum) ToPointer() *GETDescribeStacksVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeStacksVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDescribeStacksVersionEnum(s)
+		*e = GETDescribeStacksVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeStacksVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeStacksVersionEnum: %v", v)
 	}
 }
 

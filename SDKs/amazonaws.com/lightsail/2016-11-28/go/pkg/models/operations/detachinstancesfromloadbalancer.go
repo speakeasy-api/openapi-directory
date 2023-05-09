@@ -16,17 +16,21 @@ const (
 	DetachInstancesFromLoadBalancerXAmzTargetEnumLightsail20161128DetachInstancesFromLoadBalancer DetachInstancesFromLoadBalancerXAmzTargetEnum = "Lightsail_20161128.DetachInstancesFromLoadBalancer"
 )
 
+func (e DetachInstancesFromLoadBalancerXAmzTargetEnum) ToPointer() *DetachInstancesFromLoadBalancerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachInstancesFromLoadBalancerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DetachInstancesFromLoadBalancer":
-		*e = DetachInstancesFromLoadBalancerXAmzTargetEnum(s)
+		*e = DetachInstancesFromLoadBalancerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachInstancesFromLoadBalancerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachInstancesFromLoadBalancerXAmzTargetEnum: %v", v)
 	}
 }
 

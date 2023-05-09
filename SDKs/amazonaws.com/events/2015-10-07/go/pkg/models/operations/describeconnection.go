@@ -16,17 +16,21 @@ const (
 	DescribeConnectionXAmzTargetEnumAwsEventsDescribeConnection DescribeConnectionXAmzTargetEnum = "AWSEvents.DescribeConnection"
 )
 
+func (e DescribeConnectionXAmzTargetEnum) ToPointer() *DescribeConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DescribeConnection":
-		*e = DescribeConnectionXAmzTargetEnum(s)
+		*e = DescribeConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

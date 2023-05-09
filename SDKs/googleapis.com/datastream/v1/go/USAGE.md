@@ -2,36 +2,37 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ConnectionProfileInput: &shared.ConnectionProfileInput{
             BigqueryProfile: map[string]interface{}{
                 "distinctio": "quibusdam",
                 "unde": "nulla",
                 "corrupti": "illum",
             },
-            DisplayName: "vel",
+            DisplayName: sdk.String("vel"),
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "physical-pegboard.info",
-                Password: "iure",
-                Port: 297534,
-                PrivateKey: "debitis",
-                Username: "Anahi38",
+                Hostname: sdk.String("physical-pegboard.info"),
+                Password: sdk.String("iure"),
+                Port: sdk.Int(297534),
+                PrivateKey: sdk.String("debitis"),
+                Username: sdk.String("Anahi38"),
             },
             GcsProfile: &shared.GcsProfile{
-                Bucket: "molestiae",
-                RootPath: "minus",
+                Bucket: sdk.String("molestiae"),
+                RootPath: sdk.String("minus"),
             },
             Labels: map[string]string{
                 "voluptatum": "iusto",
@@ -40,15 +41,15 @@ func main() {
                 "ab": "quis",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "bountiful-pension.com",
-                Password: "ipsam",
-                Port: 832620,
+                Hostname: sdk.String("bountiful-pension.com"),
+                Password: sdk.String("ipsam"),
+                Port: sdk.Int(832620),
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "sapiente",
-                    ClientCertificate: "quo",
-                    ClientKey: "odit",
+                    CaCertificate: sdk.String("sapiente"),
+                    ClientCertificate: sdk.String("quo"),
+                    ClientKey: sdk.String("odit"),
                 },
-                Username: "Sarah.Strosin79",
+                Username: sdk.String("Sarah.Strosin79"),
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
@@ -57,45 +58,42 @@ func main() {
                     "dicta": "nam",
                     "officia": "occaecati",
                 },
-                DatabaseService: "fugit",
-                Hostname: "miserly-usage.net",
-                Password: "totam",
-                Port: 105907,
-                Username: "Haskell18",
+                DatabaseService: sdk.String("fugit"),
+                Hostname: sdk.String("miserly-usage.net"),
+                Password: sdk.String("totam"),
+                Port: sdk.Int(105907),
+                Username: sdk.String("Haskell18"),
             },
             PostgresqlProfile: &shared.PostgresqlProfile{
-                Database: "impedit",
-                Hostname: "several-increase.biz",
-                Password: "excepturi",
-                Port: 135218,
-                Username: "Aiden.Hane",
+                Database: sdk.String("impedit"),
+                Hostname: sdk.String("several-increase.biz"),
+                Password: sdk.String("excepturi"),
+                Port: sdk.Int(135218),
+                Username: sdk.String("Aiden.Hane"),
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnection: "iste",
+                PrivateConnection: sdk.String("iste"),
             },
             StaticServiceIPConnectivity: map[string]interface{}{
                 "natus": "laboriosam",
             },
         },
-        AccessToken: "hic",
-        Alt: "proto",
-        Callback: "fuga",
-        ConnectionProfileID: "in",
-        Fields: "corporis",
-        Force: false,
-        Key: "iste",
-        OauthToken: "iure",
+        AccessToken: sdk.String("hic"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("fuga"),
+        ConnectionProfileID: sdk.String("in"),
+        Fields: sdk.String("corporis"),
+        Force: sdk.Bool(false),
+        Key: sdk.String("iste"),
+        OauthToken: sdk.String("iure"),
         Parent: "saepe",
-        PrettyPrint: false,
-        QuotaUser: "quidem",
-        RequestID: "architecto",
-        UploadType: "ipsa",
-        UploadProtocol: "reiciendis",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req, operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quidem"),
+        RequestID: sdk.String("architecto"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("reiciendis"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

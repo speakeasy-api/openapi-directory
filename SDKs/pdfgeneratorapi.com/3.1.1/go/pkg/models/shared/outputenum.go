@@ -16,20 +16,24 @@ const (
 	OutputEnumI      OutputEnum = "I"
 )
 
+func (e OutputEnum) ToPointer() *OutputEnum {
+	return &e
+}
+
 func (e *OutputEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "base64":
 		fallthrough
 	case "url":
 		fallthrough
 	case "I":
-		*e = OutputEnum(s)
+		*e = OutputEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputEnum: %v", v)
 	}
 }

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/readme.io/2.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteAPISpecificationRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.APISpecification.DeleteAPISpecification(ctx, req, operations.DeleteAPISpecificationSecurity{
+    res, err := s.APISpecification.DeleteAPISpecification(ctx, operations.DeleteAPISpecificationRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.DeleteAPISpecificationSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -48,63 +45,63 @@ func main() {
 ## Available Resources and Operations
 
 
-### APISpecification
+### [APISpecification](docs/apispecification/README.md)
 
-* `DeleteAPISpecification` - Delete an API specification in ReadMe
-* `GetAPISpecification` - Get API specification metadata
-* `UpdateAPISpecification` - Update an API specification in ReadMe
-* `UploadAPISpecification` - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
+* [DeleteAPISpecification](docs/apispecification/README.md#deleteapispecification) - Delete an API specification in ReadMe
+* [GetAPISpecification](docs/apispecification/README.md#getapispecification) - Get API specification metadata
+* [UpdateAPISpecification](docs/apispecification/README.md#updateapispecification) - Update an API specification in ReadMe
+* [UploadAPISpecification](docs/apispecification/README.md#uploadapispecification) - Upload an API specification to ReadMe. Or, to use a newer solution see https://docs.readme.com/guides/docs/automatically-sync-api-specification-with-github
 
-### Categories
+### [Categories](docs/categories/README.md)
 
-* `GetCategory` - Get category
-* `GetCategoryDocs` - Get docs for category
+* [GetCategory](docs/categories/README.md#getcategory) - Get category
+* [GetCategoryDocs](docs/categories/README.md#getcategorydocs) - Get docs for category
 
-### Changelog
+### [Changelog](docs/changelog/README.md)
 
-* `CreateChangelog` - Create changelog
-* `DeleteChangelog` - Delete changelog
-* `GetChangelog` - Get changelog
-* `GetChangelogs` - Get changelogs
-* `UpdateChangelog` - Update changelog
+* [CreateChangelog](docs/changelog/README.md#createchangelog) - Create changelog
+* [DeleteChangelog](docs/changelog/README.md#deletechangelog) - Delete changelog
+* [GetChangelog](docs/changelog/README.md#getchangelog) - Get changelog
+* [GetChangelogs](docs/changelog/README.md#getchangelogs) - Get changelogs
+* [UpdateChangelog](docs/changelog/README.md#updatechangelog) - Update changelog
 
-### CustomPages
+### [CustomPages](docs/custompages/README.md)
 
-* `CreateCustomPage` - Create custom page
-* `DeleteCustomPage` - Delete custom page
-* `GetCustomPage` - Get custom page
-* `GetCustomPages` - Get custom pages
-* `UpdateCustomPage` - Update custom page
+* [CreateCustomPage](docs/custompages/README.md#createcustompage) - Create custom page
+* [DeleteCustomPage](docs/custompages/README.md#deletecustompage) - Delete custom page
+* [GetCustomPage](docs/custompages/README.md#getcustompage) - Get custom page
+* [GetCustomPages](docs/custompages/README.md#getcustompages) - Get custom pages
+* [UpdateCustomPage](docs/custompages/README.md#updatecustompage) - Update custom page
 
-### Docs
+### [Docs](docs/docs/README.md)
 
-* `CreateDoc` - Create doc
-* `DeleteDoc` - Delete doc
-* `GetDoc` - Get doc
-* `SearchDocs` - Search docs
-* `UpdateDoc` - Update doc
+* [CreateDoc](docs/docs/README.md#createdoc) - Create doc
+* [DeleteDoc](docs/docs/README.md#deletedoc) - Delete doc
+* [GetDoc](docs/docs/README.md#getdoc) - Get doc
+* [SearchDocs](docs/docs/README.md#searchdocs) - Search docs
+* [UpdateDoc](docs/docs/README.md#updatedoc) - Update doc
 
-### Errors
+### [Errors](docs/errors/README.md)
 
-* `GetErrors` - Get errors
+* [GetErrors](docs/errors/README.md#geterrors) - Get errors
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `GetProject` - Get metadata about the current project
+* [GetProject](docs/projects/README.md#getproject) - Get metadata about the current project
 
-### Swagger
+### [Swagger](docs/swagger/README.md)
 
-* `DeleteSwagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe
-* `UpdateSwagger` - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file.
-* `UploadSwagger` - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe
+* [~~DeleteSwagger~~](docs/swagger/README.md#deleteswagger) - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#deleteapispecification to delete a Swagger file in ReadMe :warning: **Deprecated**
+* [~~UpdateSwagger~~](docs/swagger/README.md#updateswagger) - DEPRECATED. Instead, use https://docs.readme.com/developers/reference/api-specification#updateapispecification to update a Swagger file. :warning: **Deprecated**
+* [~~UploadSwagger~~](docs/swagger/README.md#uploadswagger) - DEPRECATED. Instead use https://docs.readme.com/developers/reference/api-specification#uploadapispecification to upload a Swagger file to ReadMe :warning: **Deprecated**
 
-### Version
+### [Version](docs/version/README.md)
 
-* `CreateVersion` - Create version
-* `DeleteVersion` - Delete version
-* `GetVersion` - Get version
-* `GetVersions` - Get versions
-* `UpdateVersion` - Update version
+* [CreateVersion](docs/version/README.md#createversion) - Create version
+* [DeleteVersion](docs/version/README.md#deleteversion) - Delete version
+* [GetVersion](docs/version/README.md#getversion) - Get version
+* [GetVersions](docs/version/README.md#getversions) - Get versions
+* [UpdateVersion](docs/version/README.md#updateversion) - Update version
 <!-- End SDK Available Operations -->
 
 ### Maturity

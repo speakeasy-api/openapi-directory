@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/emr-serverl
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,20 +27,18 @@ func main() {
         }),
     )
 
-    req := operations.CancelJobRunRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
+    ctx := context.Background()
+    res, err := s.CancelJobRun(ctx, operations.CancelJobRunRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
         ApplicationID: "illum",
         JobRunID: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.CancelJobRun(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,23 +53,23 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CancelJobRun` - Cancels a job run.
-* `CreateApplication` - Creates an application.
-* `DeleteApplication` - Deletes an application. An application has to be in a stopped or created state in order to be deleted.
-* `GetApplication` - Displays detailed information about a specified application.
-* `GetDashboardForJobRun` - Returns a URL to access the job run dashboard.
-* `GetJobRun` - Displays detailed information about a job run.
-* `ListApplications` - Lists applications based on a set of parameters.
-* `ListJobRuns` - Lists job runs based on a set of parameters.
-* `ListTagsForResource` - Lists the tags assigned to the resources.
-* `StartApplication` - Starts a specified application and initializes initial capacity if configured.
-* `StartJobRun` - Starts a job run.
-* `StopApplication` - Stops a specified application and releases initial capacity if configured. All scheduled and running jobs must be completed or cancelled before stopping an application.
-* `TagResource` - Assigns tags to resources. A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your AWS resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. 
-* `UntagResource` - Removes tags from resources.
-* `UpdateApplication` - Updates a specified application. An application has to be in a stopped or created state in order to be updated.
+* [CancelJobRun](docs/sdk/README.md#canceljobrun) - Cancels a job run.
+* [CreateApplication](docs/sdk/README.md#createapplication) - Creates an application.
+* [DeleteApplication](docs/sdk/README.md#deleteapplication) - Deletes an application. An application has to be in a stopped or created state in order to be deleted.
+* [GetApplication](docs/sdk/README.md#getapplication) - Displays detailed information about a specified application.
+* [GetDashboardForJobRun](docs/sdk/README.md#getdashboardforjobrun) - Returns a URL to access the job run dashboard. The generated URL is valid for one hour, after which you must invoke the API again to generate a new URL.
+* [GetJobRun](docs/sdk/README.md#getjobrun) - Displays detailed information about a job run.
+* [ListApplications](docs/sdk/README.md#listapplications) - Lists applications based on a set of parameters.
+* [ListJobRuns](docs/sdk/README.md#listjobruns) - Lists job runs based on a set of parameters.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags assigned to the resources.
+* [StartApplication](docs/sdk/README.md#startapplication) - Starts a specified application and initializes initial capacity if configured.
+* [StartJobRun](docs/sdk/README.md#startjobrun) - Starts a job run.
+* [StopApplication](docs/sdk/README.md#stopapplication) - Stops a specified application and releases initial capacity if configured. All scheduled and running jobs must be completed or cancelled before stopping an application.
+* [TagResource](docs/sdk/README.md#tagresource) - Assigns tags to resources. A tag is a label that you assign to an Amazon Web Services resource. Each tag consists of a key and an optional value, both of which you define. Tags enable you to categorize your Amazon Web Services resources by attributes such as purpose, owner, or environment. When you have many resources of the same type, you can quickly identify a specific resource based on the tags you've assigned to it. 
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes tags from resources.
+* [UpdateApplication](docs/sdk/README.md#updateapplication) - Updates a specified application. An application has to be in a stopped or created state in order to be updated.
 <!-- End SDK Available Operations -->
 
 ### Maturity

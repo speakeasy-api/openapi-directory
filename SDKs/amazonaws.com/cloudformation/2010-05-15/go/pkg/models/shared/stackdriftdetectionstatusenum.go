@@ -15,20 +15,24 @@ const (
 	StackDriftDetectionStatusEnumDetectionComplete   StackDriftDetectionStatusEnum = "DETECTION_COMPLETE"
 )
 
+func (e StackDriftDetectionStatusEnum) ToPointer() *StackDriftDetectionStatusEnum {
+	return &e
+}
+
 func (e *StackDriftDetectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DETECTION_IN_PROGRESS":
 		fallthrough
 	case "DETECTION_FAILED":
 		fallthrough
 	case "DETECTION_COMPLETE":
-		*e = StackDriftDetectionStatusEnum(s)
+		*e = StackDriftDetectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackDriftDetectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackDriftDetectionStatusEnum: %v", v)
 	}
 }

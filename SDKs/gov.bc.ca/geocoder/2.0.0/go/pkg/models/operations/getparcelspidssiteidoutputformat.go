@@ -23,12 +23,16 @@ const (
 	GetParcelsPidsSiteIDOutputFormatOutputFormatEnumShpz    GetParcelsPidsSiteIDOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetParcelsPidsSiteIDOutputFormatOutputFormatEnum) ToPointer() *GetParcelsPidsSiteIDOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetParcelsPidsSiteIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -42,10 +46,10 @@ func (e *GetParcelsPidsSiteIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetParcelsPidsSiteIDOutputFormatOutputFormatEnum(s)
+		*e = GetParcelsPidsSiteIDOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetParcelsPidsSiteIDOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetParcelsPidsSiteIDOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 

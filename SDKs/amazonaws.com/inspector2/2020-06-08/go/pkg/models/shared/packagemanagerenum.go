@@ -28,12 +28,16 @@ const (
 	PackageManagerEnumPom       PackageManagerEnum = "POM"
 )
 
+func (e PackageManagerEnum) ToPointer() *PackageManagerEnum {
+	return &e
+}
+
 func (e *PackageManagerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUNDLER":
 		fallthrough
 	case "CARGO":
@@ -65,9 +69,9 @@ func (e *PackageManagerEnum) UnmarshalJSON(data []byte) error {
 	case "NODEPKG":
 		fallthrough
 	case "POM":
-		*e = PackageManagerEnum(s)
+		*e = PackageManagerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageManagerEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageManagerEnum: %v", v)
 	}
 }

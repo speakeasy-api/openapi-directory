@@ -2,33 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatafusionProjectsLocationsInstancesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatafusionProjectsLocationsInstancesCreate(ctx, operations.DatafusionProjectsLocationsInstancesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         InstanceInput: &shared.InstanceInput{
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "provident",
+                KeyReference: sdk.String("provident"),
             },
-            DataprocServiceAccount: "distinctio",
-            Description: "quibusdam",
-            DisplayName: "unde",
-            EnableRbac: false,
-            EnableStackdriverLogging: false,
-            EnableStackdriverMonitoring: false,
-            EnableZoneSeparation: false,
+            DataprocServiceAccount: sdk.String("distinctio"),
+            Description: sdk.String("quibusdam"),
+            DisplayName: sdk.String("unde"),
+            EnableRbac: sdk.Bool(false),
+            EnableStackdriverLogging: sdk.Bool(false),
+            EnableStackdriverMonitoring: sdk.Bool(false),
+            EnableZoneSeparation: sdk.Bool(false),
             EventPublishConfig: &shared.EventPublishConfig{
-                Enabled: false,
-                Topic: "nulla",
+                Enabled: sdk.Bool(false),
+                Topic: sdk.String("nulla"),
             },
             Labels: map[string]string{
                 "illum": "vel",
@@ -36,33 +37,30 @@ func main() {
                 "suscipit": "iure",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "magnam",
-                Network: "debitis",
+                IPAllocation: sdk.String("magnam"),
+                Network: sdk.String("debitis"),
             },
             Options: map[string]string{
                 "delectus": "tempora",
             },
-            PrivateInstance: false,
-            Type: "BASIC",
-            Version: "molestiae",
-            Zone: "minus",
+            PrivateInstance: sdk.Bool(false),
+            Type: shared.InstanceTypeEnumBasic.ToPointer(),
+            Version: sdk.String("molestiae"),
+            Zone: sdk.String("minus"),
         },
-        AccessToken: "placeat",
-        Alt: "media",
-        Callback: "iusto",
-        Fields: "excepturi",
-        InstanceID: "nisi",
-        Key: "recusandae",
-        OauthToken: "temporibus",
+        AccessToken: sdk.String("placeat"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iusto"),
+        Fields: sdk.String("excepturi"),
+        InstanceID: sdk.String("nisi"),
+        Key: sdk.String("recusandae"),
+        OauthToken: sdk.String("temporibus"),
         Parent: "ab",
-        PrettyPrint: false,
-        QuotaUser: "quis",
-        UploadType: "veritatis",
-        UploadProtocol: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatafusionProjectsLocationsInstancesCreate(ctx, req, operations.DatafusionProjectsLocationsInstancesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quis"),
+        UploadType: sdk.String("veritatis"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.DatafusionProjectsLocationsInstancesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

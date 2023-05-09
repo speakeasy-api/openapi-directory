@@ -17,12 +17,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnumRelatedAccountsNumberHigh       GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum = "RELATED_ACCOUNTS_NUMBER_HIGH"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_DEFENDER_LABEL_UNSPECIFIED":
 		fallthrough
 	case "PROFILE_MATCH":
@@ -32,10 +36,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum) Un
 	case "SUSPICIOUS_ACCOUNT_CREATION":
 		fallthrough
 	case "RELATED_ACCOUNTS_NUMBER_HIGH":
-		*e = GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessmentLabelsEnum: %v", v)
 	}
 }
 

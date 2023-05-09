@@ -14,18 +14,22 @@ const (
 	ContributorInsightsActionEnumDisable ContributorInsightsActionEnum = "DISABLE"
 )
 
+func (e ContributorInsightsActionEnum) ToPointer() *ContributorInsightsActionEnum {
+	return &e
+}
+
 func (e *ContributorInsightsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = ContributorInsightsActionEnum(s)
+		*e = ContributorInsightsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContributorInsightsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContributorInsightsActionEnum: %v", v)
 	}
 }

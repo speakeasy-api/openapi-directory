@@ -35,7 +35,10 @@ func newGym(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // This will return all properties related to gym entity
 func (s *gym) GymGet(ctx context.Context, request operations.GymGetRequest) (*operations.GymGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Gym/{gymID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Gym/{gymID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

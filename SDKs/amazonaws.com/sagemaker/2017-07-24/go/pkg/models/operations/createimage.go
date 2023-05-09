@@ -16,17 +16,21 @@ const (
 	CreateImageXAmzTargetEnumSageMakerCreateImage CreateImageXAmzTargetEnum = "SageMaker.CreateImage"
 )
 
+func (e CreateImageXAmzTargetEnum) ToPointer() *CreateImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateImage":
-		*e = CreateImageXAmzTargetEnum(s)
+		*e = CreateImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageXAmzTargetEnum: %v", v)
 	}
 }
 

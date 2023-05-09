@@ -16,17 +16,21 @@ const (
 	AttachInstancesToLoadBalancerXAmzTargetEnumLightsail20161128AttachInstancesToLoadBalancer AttachInstancesToLoadBalancerXAmzTargetEnum = "Lightsail_20161128.AttachInstancesToLoadBalancer"
 )
 
+func (e AttachInstancesToLoadBalancerXAmzTargetEnum) ToPointer() *AttachInstancesToLoadBalancerXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachInstancesToLoadBalancerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.AttachInstancesToLoadBalancer":
-		*e = AttachInstancesToLoadBalancerXAmzTargetEnum(s)
+		*e = AttachInstancesToLoadBalancerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachInstancesToLoadBalancerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachInstancesToLoadBalancerXAmzTargetEnum: %v", v)
 	}
 }
 

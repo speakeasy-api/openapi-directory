@@ -16,17 +16,21 @@ const (
 	GetJobXAmzTargetEnumDeviceFarm20150623GetJob GetJobXAmzTargetEnum = "DeviceFarm_20150623.GetJob"
 )
 
+func (e GetJobXAmzTargetEnum) ToPointer() *GetJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.GetJob":
-		*e = GetJobXAmzTargetEnum(s)
+		*e = GetJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetJobXAmzTargetEnum: %v", v)
 	}
 }
 

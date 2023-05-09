@@ -17,12 +17,16 @@ const (
 	FolderNameEnumJunkEmail    FolderNameEnum = "JUNK_EMAIL"
 )
 
+func (e FolderNameEnum) ToPointer() *FolderNameEnum {
+	return &e
+}
+
 func (e *FolderNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOX":
 		fallthrough
 	case "DELETED_ITEMS":
@@ -32,9 +36,9 @@ func (e *FolderNameEnum) UnmarshalJSON(data []byte) error {
 	case "DRAFTS":
 		fallthrough
 	case "JUNK_EMAIL":
-		*e = FolderNameEnum(s)
+		*e = FolderNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FolderNameEnum: %s", s)
+		return fmt.Errorf("invalid value for FolderNameEnum: %v", v)
 	}
 }

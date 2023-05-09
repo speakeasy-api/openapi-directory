@@ -26,12 +26,16 @@ const (
 	GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnumSuspended                     GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum = "SUSPENDED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK_EXECUTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING_EXECUTION":
@@ -57,10 +61,10 @@ func (e *GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnu
 	case "ROLLEDBACK":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaTaskExecutionDetailsTaskExecutionStateEnum: %v", v)
 	}
 }
 

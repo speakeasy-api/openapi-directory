@@ -25,12 +25,16 @@ const (
 	DescribeReservedInstancesRequestOfferingTypeEnumAllUpfront        DescribeReservedInstancesRequestOfferingTypeEnum = "All Upfront"
 )
 
+func (e DescribeReservedInstancesRequestOfferingTypeEnum) ToPointer() *DescribeReservedInstancesRequestOfferingTypeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesRequestOfferingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Heavy Utilization":
 		fallthrough
 	case "Medium Utilization":
@@ -42,10 +46,10 @@ func (e *DescribeReservedInstancesRequestOfferingTypeEnum) UnmarshalJSON(data []
 	case "Partial Upfront":
 		fallthrough
 	case "All Upfront":
-		*e = DescribeReservedInstancesRequestOfferingTypeEnum(s)
+		*e = DescribeReservedInstancesRequestOfferingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesRequestOfferingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesRequestOfferingTypeEnum: %v", v)
 	}
 }
 

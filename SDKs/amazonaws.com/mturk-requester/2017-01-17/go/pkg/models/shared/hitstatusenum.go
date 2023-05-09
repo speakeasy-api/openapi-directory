@@ -17,12 +17,16 @@ const (
 	HITStatusEnumDisposed     HITStatusEnum = "Disposed"
 )
 
+func (e HITStatusEnum) ToPointer() *HITStatusEnum {
+	return &e
+}
+
 func (e *HITStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Assignable":
 		fallthrough
 	case "Unassignable":
@@ -32,9 +36,9 @@ func (e *HITStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Reviewing":
 		fallthrough
 	case "Disposed":
-		*e = HITStatusEnum(s)
+		*e = HITStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HITStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HITStatusEnum: %v", v)
 	}
 }

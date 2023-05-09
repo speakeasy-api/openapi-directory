@@ -14,18 +14,22 @@ const (
 	RemediationActionTypeEnumModify RemediationActionTypeEnum = "MODIFY"
 )
 
+func (e RemediationActionTypeEnum) ToPointer() *RemediationActionTypeEnum {
+	return &e
+}
+
 func (e *RemediationActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REMOVE":
 		fallthrough
 	case "MODIFY":
-		*e = RemediationActionTypeEnum(s)
+		*e = RemediationActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemediationActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemediationActionTypeEnum: %v", v)
 	}
 }

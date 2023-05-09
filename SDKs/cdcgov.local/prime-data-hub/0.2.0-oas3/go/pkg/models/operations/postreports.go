@@ -24,12 +24,16 @@ const (
 	PostReportsOptionEnumSkipInvalidItems PostReportsOptionEnum = "SkipInvalidItems"
 )
 
+func (e PostReportsOptionEnum) ToPointer() *PostReportsOptionEnum {
+	return &e
+}
+
 func (e *PostReportsOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ValidatePayload":
 		fallthrough
 	case "CheckConnections":
@@ -39,10 +43,10 @@ func (e *PostReportsOptionEnum) UnmarshalJSON(data []byte) error {
 	case "SkipSend":
 		fallthrough
 	case "SkipInvalidItems":
-		*e = PostReportsOptionEnum(s)
+		*e = PostReportsOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostReportsOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostReportsOptionEnum: %v", v)
 	}
 }
 

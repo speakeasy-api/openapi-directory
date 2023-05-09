@@ -23,12 +23,16 @@ const (
 	ListWorkflowsRequestBodyStatusEnumCancelled  ListWorkflowsRequestBodyStatusEnum = "CANCELLED"
 )
 
+func (e ListWorkflowsRequestBodyStatusEnum) ToPointer() *ListWorkflowsRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *ListWorkflowsRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -42,10 +46,10 @@ func (e *ListWorkflowsRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RETRY":
 		fallthrough
 	case "CANCELLED":
-		*e = ListWorkflowsRequestBodyStatusEnum(s)
+		*e = ListWorkflowsRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkflowsRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkflowsRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -56,17 +60,21 @@ const (
 	ListWorkflowsRequestBodyWorkflowTypeEnumAppflowIntegration ListWorkflowsRequestBodyWorkflowTypeEnum = "APPFLOW_INTEGRATION"
 )
 
+func (e ListWorkflowsRequestBodyWorkflowTypeEnum) ToPointer() *ListWorkflowsRequestBodyWorkflowTypeEnum {
+	return &e
+}
+
 func (e *ListWorkflowsRequestBodyWorkflowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPFLOW_INTEGRATION":
-		*e = ListWorkflowsRequestBodyWorkflowTypeEnum(s)
+		*e = ListWorkflowsRequestBodyWorkflowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWorkflowsRequestBodyWorkflowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWorkflowsRequestBodyWorkflowTypeEnum: %v", v)
 	}
 }
 

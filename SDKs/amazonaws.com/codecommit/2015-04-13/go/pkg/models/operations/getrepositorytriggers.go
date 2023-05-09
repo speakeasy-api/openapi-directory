@@ -16,17 +16,21 @@ const (
 	GetRepositoryTriggersXAmzTargetEnumCodeCommit20150413GetRepositoryTriggers GetRepositoryTriggersXAmzTargetEnum = "CodeCommit_20150413.GetRepositoryTriggers"
 )
 
+func (e GetRepositoryTriggersXAmzTargetEnum) ToPointer() *GetRepositoryTriggersXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRepositoryTriggersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.GetRepositoryTriggers":
-		*e = GetRepositoryTriggersXAmzTargetEnum(s)
+		*e = GetRepositoryTriggersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoryTriggersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoryTriggersXAmzTargetEnum: %v", v)
 	}
 }
 

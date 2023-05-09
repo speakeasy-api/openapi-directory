@@ -33,7 +33,10 @@ func newExternalAmbassadorAPI(defaultClient, securityClient HTTPClient, serverUR
 
 func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operations.PredictJSONRequest, security operations.PredictJSONSecurity) (*operations.PredictJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SeldonMessage", "json")
 	if err != nil {
@@ -83,9 +86,13 @@ func (s *externalAmbassadorAPI) PredictJSON(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operations.PredictRawRequest, security operations.PredictRawSecurity) (*operations.PredictRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -135,9 +142,13 @@ func (s *externalAmbassadorAPI) PredictRaw(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request operations.PredictStringRequest, security operations.PredictStringSecurity) (*operations.PredictStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -187,9 +198,13 @@ func (s *externalAmbassadorAPI) PredictString(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *externalAmbassadorAPI) SendFeedback(ctx context.Context, request operations.SendFeedbackRequest, security operations.SendFeedbackSecurity) (*operations.SendFeedbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seldon/{namespace}/{deployment}/api/v1.0/feedback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Feedback", "json")
 	if err != nil {

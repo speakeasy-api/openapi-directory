@@ -16,17 +16,21 @@ const (
 	ListClustersXAmzTargetEnumElasticMapReduceListClusters ListClustersXAmzTargetEnum = "ElasticMapReduce.ListClusters"
 )
 
+func (e ListClustersXAmzTargetEnum) ToPointer() *ListClustersXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListClustersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.ListClusters":
-		*e = ListClustersXAmzTargetEnum(s)
+		*e = ListClustersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListClustersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListClustersXAmzTargetEnum: %v", v)
 	}
 }
 

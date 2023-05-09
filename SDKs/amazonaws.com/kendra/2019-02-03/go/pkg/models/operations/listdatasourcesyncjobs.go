@@ -16,17 +16,21 @@ const (
 	ListDataSourceSyncJobsXAmzTargetEnumAwsKendraFrontendServiceListDataSourceSyncJobs ListDataSourceSyncJobsXAmzTargetEnum = "AWSKendraFrontendService.ListDataSourceSyncJobs"
 )
 
+func (e ListDataSourceSyncJobsXAmzTargetEnum) ToPointer() *ListDataSourceSyncJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDataSourceSyncJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.ListDataSourceSyncJobs":
-		*e = ListDataSourceSyncJobsXAmzTargetEnum(s)
+		*e = ListDataSourceSyncJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDataSourceSyncJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDataSourceSyncJobsXAmzTargetEnum: %v", v)
 	}
 }
 

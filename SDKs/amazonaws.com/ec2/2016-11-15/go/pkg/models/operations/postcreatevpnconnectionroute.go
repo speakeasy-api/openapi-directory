@@ -15,17 +15,21 @@ const (
 	POSTCreateVpnConnectionRouteActionEnumCreateVpnConnectionRoute POSTCreateVpnConnectionRouteActionEnum = "CreateVpnConnectionRoute"
 )
 
+func (e POSTCreateVpnConnectionRouteActionEnum) ToPointer() *POSTCreateVpnConnectionRouteActionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpnConnectionRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateVpnConnectionRoute":
-		*e = POSTCreateVpnConnectionRouteActionEnum(s)
+		*e = POSTCreateVpnConnectionRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpnConnectionRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpnConnectionRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateVpnConnectionRouteVersionEnumTwoThousandAndSixteen1115 POSTCreateVpnConnectionRouteVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateVpnConnectionRouteVersionEnum) ToPointer() *POSTCreateVpnConnectionRouteVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpnConnectionRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateVpnConnectionRouteVersionEnum(s)
+		*e = POSTCreateVpnConnectionRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpnConnectionRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpnConnectionRouteVersionEnum: %v", v)
 	}
 }
 

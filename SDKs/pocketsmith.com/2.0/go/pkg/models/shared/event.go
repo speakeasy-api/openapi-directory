@@ -20,12 +20,16 @@ const (
 	EventRepeatTypeEnumEachWeekday EventRepeatTypeEnum = "each weekday"
 )
 
+func (e EventRepeatTypeEnum) ToPointer() *EventRepeatTypeEnum {
+	return &e
+}
+
 func (e *EventRepeatTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "once":
 		fallthrough
 	case "daily":
@@ -39,10 +43,10 @@ func (e *EventRepeatTypeEnum) UnmarshalJSON(data []byte) error {
 	case "yearly":
 		fallthrough
 	case "each weekday":
-		*e = EventRepeatTypeEnum(s)
+		*e = EventRepeatTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventRepeatTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventRepeatTypeEnum: %v", v)
 	}
 }
 

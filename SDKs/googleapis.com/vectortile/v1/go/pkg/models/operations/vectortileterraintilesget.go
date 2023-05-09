@@ -23,12 +23,16 @@ const (
 	VectortileTerraintilesGetClientInfoPlatformEnumWebGl               VectortileTerraintilesGetClientInfoPlatformEnum = "WEB_GL"
 )
 
+func (e VectortileTerraintilesGetClientInfoPlatformEnum) ToPointer() *VectortileTerraintilesGetClientInfoPlatformEnum {
+	return &e
+}
+
 func (e *VectortileTerraintilesGetClientInfoPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "EDITOR":
@@ -44,10 +48,10 @@ func (e *VectortileTerraintilesGetClientInfoPlatformEnum) UnmarshalJSON(data []b
 	case "IOS":
 		fallthrough
 	case "WEB_GL":
-		*e = VectortileTerraintilesGetClientInfoPlatformEnum(s)
+		*e = VectortileTerraintilesGetClientInfoPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectortileTerraintilesGetClientInfoPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for VectortileTerraintilesGetClientInfoPlatformEnum: %v", v)
 	}
 }
 
@@ -59,21 +63,25 @@ const (
 	VectortileTerraintilesGetTerrainFormatsEnumSecondDerivative     VectortileTerraintilesGetTerrainFormatsEnum = "SECOND_DERIVATIVE"
 )
 
+func (e VectortileTerraintilesGetTerrainFormatsEnum) ToPointer() *VectortileTerraintilesGetTerrainFormatsEnum {
+	return &e
+}
+
 func (e *VectortileTerraintilesGetTerrainFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERRAIN_FORMAT_UNKNOWN":
 		fallthrough
 	case "FIRST_DERIVATIVE":
 		fallthrough
 	case "SECOND_DERIVATIVE":
-		*e = VectortileTerraintilesGetTerrainFormatsEnum(s)
+		*e = VectortileTerraintilesGetTerrainFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VectortileTerraintilesGetTerrainFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for VectortileTerraintilesGetTerrainFormatsEnum: %v", v)
 	}
 }
 

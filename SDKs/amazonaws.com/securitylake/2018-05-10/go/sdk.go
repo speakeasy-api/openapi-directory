@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <note> <p>Amazon Security Lake is in preview release. Your use of the Security Lake preview is subject to Section 2 of the <a href="http://aws.amazon.com/service-terms/">Amazon Web Services Service Terms</a>("Betas and Previews").</p> </note> <p>Amazon Security Lake is a fully managed security data lake service. You can use Security Lake to automatically centralize security data from cloud, on-premises, and custom sources into a data lake that's stored in your Amazon Web Servicesaccount. Amazon Web Services Organizations is an account management service that lets you consolidate multiple Amazon Web Services accounts into an organization that you create and centrally manage. With Organizations, you can create member accounts and invite existing accounts to join your organization. Security Lake helps you analyze security data for a more complete understanding of your security posture across the entire organization. It can also help you improve the protection of your workloads, applications, and data.</p> <p>The data lake is backed by Amazon Simple Storage Service (Amazon S3) buckets, and you retain ownership over your data. </p> <p>Amazon Security Lake integrates with CloudTrail, a service that provides a record of actions taken by a user, role, or an Amazon Web Services service in Security Lake CloudTrail captures API calls for Security Lake as events. The calls captured include calls from the Security Lake console and code calls to the Security Lake API operations. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for Security Lake. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in Event history. Using the information collected by CloudTrail you can determine the request that was made to Security Lake, the IP address from which the request was made, who made the request, when it was made, and additional details. To learn more about Security Lake information in CloudTrail, see the <a href="https://docs.aws.amazon.com/security-lake/latest/userguide/securitylake-cloudtrail.html">Amazon Security Lake User Guide</a>.</p> <p>Security Lake automates the collection of security-related log and event data from integrated Amazon Web Services and third-party services. It also helps you manage the lifecycle of data with customizable retention and replication settings. Security Lake converts ingested data into Apache Parquet format and a standard open-source schema called the Open Cybersecurity Schema Framework (OCSF).</p> <p>Other Amazon Web Services and third-party services can subscribe to the data that's stored in Security Lake for incident response and security data analytics.</p>
 // https://docs.aws.amazon.com/securitylake/ - Amazon Web Services documentation
 type SDK struct {
@@ -906,7 +921,10 @@ func (s *SDK) CreateSubscriber(ctx context.Context, request operations.CreateSub
 // CreateSubscriptionNotificationConfiguration - Notifies the subscriber when new data is written to the data lake for the sources that the subscriber consumes in Security Lake. You can create only one subscriber notification per subscriber.
 func (s *SDK) CreateSubscriptionNotificationConfiguration(ctx context.Context, request operations.CreateSubscriptionNotificationConfigurationRequest) (*operations.CreateSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1460,7 +1478,10 @@ func (s *SDK) DeleteDatalakeAutoEnable(ctx context.Context, request operations.D
 // DeleteDatalakeDelegatedAdmin - Deletes the Amazon Security Lake delegated administrator account for the organization. This API can only be called by the organization management account. The organization management account cannot be the delegated administrator account.
 func (s *SDK) DeleteDatalakeDelegatedAdmin(ctx context.Context, request operations.DeleteDatalakeDelegatedAdminRequest) (*operations.DeleteDatalakeDelegatedAdminResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/datalake/delegate/{account}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/datalake/delegate/{account}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1762,7 +1783,10 @@ func (s *SDK) DeleteSubscriber(ctx context.Context, request operations.DeleteSub
 // DeleteSubscriptionNotificationConfiguration - Deletes the specified notification subscription in Amazon Security Lake for the organization you specify.
 func (s *SDK) DeleteSubscriptionNotificationConfiguration(ctx context.Context, request operations.DeleteSubscriptionNotificationConfigurationRequest) (*operations.DeleteSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2332,7 +2356,10 @@ func (s *SDK) GetDatalakeStatus(ctx context.Context, request operations.GetDatal
 // GetSubscriber - Retrieves the subscription information for the specified subscription ID. You can get information about a specific subscriber.
 func (s *SDK) GetSubscriber(ctx context.Context, request operations.GetSubscriberRequest) (*operations.GetSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3046,7 +3073,10 @@ func (s *SDK) UpdateDatalakeExceptionsSubscription(ctx context.Context, request 
 // UpdateSubscriber - Updates an existing subscription for the given Amazon Security Lake account ID. You can update a subscriber by changing the sources that the subscriber consumes data from.
 func (s *SDK) UpdateSubscriber(ctx context.Context, request operations.UpdateSubscriberRequest) (*operations.UpdateSubscriberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/subscribers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3172,7 +3202,10 @@ func (s *SDK) UpdateSubscriber(ctx context.Context, request operations.UpdateSub
 // UpdateSubscriptionNotificationConfiguration - Updates an existing notification method for the subscription (SQS or HTTPs endpoint) or switches the notification subscription endpoint for a subscriber.
 func (s *SDK) UpdateSubscriptionNotificationConfiguration(ctx context.Context, request operations.UpdateSubscriptionNotificationConfigurationRequest) (*operations.UpdateSubscriptionNotificationConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscription-notifications/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

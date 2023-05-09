@@ -25,12 +25,16 @@ const (
 	SetInstanceAcceleratorRequestTypeEnumTpuV3                      SetInstanceAcceleratorRequestTypeEnum = "TPU_V3"
 )
 
+func (e SetInstanceAcceleratorRequestTypeEnum) ToPointer() *SetInstanceAcceleratorRequestTypeEnum {
+	return &e
+}
+
 func (e *SetInstanceAcceleratorRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCELERATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NVIDIA_TESLA_K80":
@@ -54,10 +58,10 @@ func (e *SetInstanceAcceleratorRequestTypeEnum) UnmarshalJSON(data []byte) error
 	case "TPU_V2":
 		fallthrough
 	case "TPU_V3":
-		*e = SetInstanceAcceleratorRequestTypeEnum(s)
+		*e = SetInstanceAcceleratorRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetInstanceAcceleratorRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SetInstanceAcceleratorRequestTypeEnum: %v", v)
 	}
 }
 

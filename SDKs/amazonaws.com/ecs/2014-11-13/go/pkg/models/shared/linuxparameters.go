@@ -2,7 +2,7 @@
 
 package shared
 
-// LinuxParameters - Linux-specific options that are applied to the container, such as Linux <a>KernelCapabilities</a>.
+// LinuxParameters - The Linux-specific options that are applied to the container, such as Linux <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html">KernelCapabilities</a>.
 type LinuxParameters struct {
 	Capabilities       *KernelCapabilities `json:"capabilities,omitempty"`
 	Devices            []Device            `json:"devices,omitempty"`

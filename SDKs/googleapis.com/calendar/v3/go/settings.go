@@ -35,7 +35,10 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CalendarSettingsGet - Returns a single user setting.
 func (s *settings) CalendarSettingsGet(ctx context.Context, request operations.CalendarSettingsGetRequest, security operations.CalendarSettingsGetSecurity) (*operations.CalendarSettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/me/settings/{setting}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/me/settings/{setting}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

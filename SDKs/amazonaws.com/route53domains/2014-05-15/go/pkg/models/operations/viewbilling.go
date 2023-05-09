@@ -16,17 +16,21 @@ const (
 	ViewBillingXAmzTargetEnumRoute53DomainsV20140515ViewBilling ViewBillingXAmzTargetEnum = "Route53Domains_v20140515.ViewBilling"
 )
 
+func (e ViewBillingXAmzTargetEnum) ToPointer() *ViewBillingXAmzTargetEnum {
+	return &e
+}
+
 func (e *ViewBillingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.ViewBilling":
-		*e = ViewBillingXAmzTargetEnum(s)
+		*e = ViewBillingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ViewBillingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ViewBillingXAmzTargetEnum: %v", v)
 	}
 }
 

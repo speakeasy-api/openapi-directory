@@ -73,7 +73,10 @@ func (s *management) AnalyticsManagementAccountsList(ctx context.Context, reques
 // AnalyticsManagementGoalsList - Lists goals to which the user has access.
 func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request operations.AnalyticsManagementGoalsListRequest, security operations.AnalyticsManagementGoalsListSecurity) (*operations.AnalyticsManagementGoalsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles/{profileId}/goals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -112,7 +115,10 @@ func (s *management) AnalyticsManagementGoalsList(ctx context.Context, request o
 // AnalyticsManagementProfilesList - Lists views (profiles) to which the user has access.
 func (s *management) AnalyticsManagementProfilesList(ctx context.Context, request operations.AnalyticsManagementProfilesListRequest, security operations.AnalyticsManagementProfilesListSecurity) (*operations.AnalyticsManagementProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties/{webPropertyId}/profiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +196,10 @@ func (s *management) AnalyticsManagementSegmentsList(ctx context.Context, reques
 // AnalyticsManagementWebpropertiesList - Lists web properties to which the user has access.
 func (s *management) AnalyticsManagementWebpropertiesList(ctx context.Context, request operations.AnalyticsManagementWebpropertiesListRequest, security operations.AnalyticsManagementWebpropertiesListSecurity) (*operations.AnalyticsManagementWebpropertiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/management/accounts/{accountId}/webproperties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -24,12 +24,16 @@ const (
 	DataplexProjectsLocationsOperationsGetViewEnumFull                  DataplexProjectsLocationsOperationsGetViewEnum = "FULL"
 )
 
+func (e DataplexProjectsLocationsOperationsGetViewEnum) ToPointer() *DataplexProjectsLocationsOperationsGetViewEnum {
+	return &e
+}
+
 func (e *DataplexProjectsLocationsOperationsGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
@@ -37,10 +41,10 @@ func (e *DataplexProjectsLocationsOperationsGetViewEnum) UnmarshalJSON(data []by
 	case "SCHEMA":
 		fallthrough
 	case "FULL":
-		*e = DataplexProjectsLocationsOperationsGetViewEnum(s)
+		*e = DataplexProjectsLocationsOperationsGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataplexProjectsLocationsOperationsGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataplexProjectsLocationsOperationsGetViewEnum: %v", v)
 	}
 }
 

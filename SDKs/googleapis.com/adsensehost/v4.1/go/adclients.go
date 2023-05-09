@@ -35,7 +35,10 @@ func newAdclients(defaultClient, securityClient HTTPClient, serverURL, language,
 // AdsensehostAdclientsGet - Get information about one of the ad clients in the Host AdSense account.
 func (s *adclients) AdsensehostAdclientsGet(ctx context.Context, request operations.AdsensehostAdclientsGetRequest, security operations.AdsensehostAdclientsGetSecurity) (*operations.AdsensehostAdclientsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/adclients/{adClientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

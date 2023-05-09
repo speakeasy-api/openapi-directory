@@ -39,7 +39,10 @@ func newImports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) DeleteV2ImportsIDJSON(ctx context.Context, request operations.DeleteV2ImportsIDJSONRequest) (*operations.DeleteV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *imports) GetV2ImportsJSON(ctx context.Context, request operations.GetV2
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) GetV2ImportsIDJSON(ctx context.Context, request operations.GetV2ImportsIDJSONRequest) (*operations.GetV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +235,10 @@ func (s *imports) PostV2ImportsJSON(ctx context.Context, request operations.Post
 // Admin users can access imports for the entire team, but non-admin users can only access their own imports.
 func (s *imports) PutV2ImportsIDJSON(ctx context.Context, request operations.PutV2ImportsIDJSONRequest) (*operations.PutV2ImportsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/imports/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

@@ -2,7 +2,7 @@
 
 package shared
 
-// AreaOfInterestGeometry - <p/>
+// AreaOfInterestGeometry - A GeoJSON object representing the geographic extent in the coordinate space.
 type AreaOfInterestGeometry struct {
 	MultiPolygonGeometry *MultiPolygonGeometryInput `json:"MultiPolygonGeometry,omitempty"`
 	PolygonGeometry      *PolygonGeometryInput      `json:"PolygonGeometry,omitempty"`

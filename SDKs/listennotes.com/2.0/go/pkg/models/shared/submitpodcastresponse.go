@@ -16,21 +16,25 @@ const (
 	SubmitPodcastResponseStatusEnumRejected SubmitPodcastResponseStatusEnum = "rejected"
 )
 
+func (e SubmitPodcastResponseStatusEnum) ToPointer() *SubmitPodcastResponseStatusEnum {
+	return &e
+}
+
 func (e *SubmitPodcastResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "found":
 		fallthrough
 	case "in review":
 		fallthrough
 	case "rejected":
-		*e = SubmitPodcastResponseStatusEnum(s)
+		*e = SubmitPodcastResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubmitPodcastResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubmitPodcastResponseStatusEnum: %v", v)
 	}
 }
 

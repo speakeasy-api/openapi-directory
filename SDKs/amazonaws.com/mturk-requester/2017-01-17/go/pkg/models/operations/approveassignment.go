@@ -16,17 +16,21 @@ const (
 	ApproveAssignmentXAmzTargetEnumMTurkRequesterServiceV20170117ApproveAssignment ApproveAssignmentXAmzTargetEnum = "MTurkRequesterServiceV20170117.ApproveAssignment"
 )
 
+func (e ApproveAssignmentXAmzTargetEnum) ToPointer() *ApproveAssignmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *ApproveAssignmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ApproveAssignment":
-		*e = ApproveAssignmentXAmzTargetEnum(s)
+		*e = ApproveAssignmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApproveAssignmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ApproveAssignmentXAmzTargetEnum: %v", v)
 	}
 }
 

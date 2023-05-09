@@ -25,21 +25,25 @@ const (
 	GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnumPublic       GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum = "public"
 )
 
+func (e GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum) ToPointer() *GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnumNone  GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum = "none"
 )
 
+func (e GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum) ToPointer() *GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "write":
 		fallthrough
 	case "read":
 		fallthrough
 	case "none":
-		*e = GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum(s)
+		*e = GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDPersonsMemberIDFoldersID200ApplicationJSONRightEnum: %v", v)
 	}
 }
 

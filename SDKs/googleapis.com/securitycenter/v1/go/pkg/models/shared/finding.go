@@ -19,12 +19,16 @@ const (
 	FindingFindingClassEnumSccError                FindingFindingClassEnum = "SCC_ERROR"
 )
 
+func (e FindingFindingClassEnum) ToPointer() *FindingFindingClassEnum {
+	return &e
+}
+
 func (e *FindingFindingClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINDING_CLASS_UNSPECIFIED":
 		fallthrough
 	case "THREAT":
@@ -36,10 +40,10 @@ func (e *FindingFindingClassEnum) UnmarshalJSON(data []byte) error {
 	case "OBSERVATION":
 		fallthrough
 	case "SCC_ERROR":
-		*e = FindingFindingClassEnum(s)
+		*e = FindingFindingClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingFindingClassEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingFindingClassEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	FindingMuteEnumUndefined       FindingMuteEnum = "UNDEFINED"
 )
 
+func (e FindingMuteEnum) ToPointer() *FindingMuteEnum {
+	return &e
+}
+
 func (e *FindingMuteEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MUTE_UNSPECIFIED":
 		fallthrough
 	case "MUTED":
@@ -66,10 +74,10 @@ func (e *FindingMuteEnum) UnmarshalJSON(data []byte) error {
 	case "UNMUTED":
 		fallthrough
 	case "UNDEFINED":
-		*e = FindingMuteEnum(s)
+		*e = FindingMuteEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingMuteEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingMuteEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	FindingSeverityEnumLow                 FindingSeverityEnum = "LOW"
 )
 
+func (e FindingSeverityEnum) ToPointer() *FindingSeverityEnum {
+	return &e
+}
+
 func (e *FindingSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "CRITICAL":
@@ -99,10 +111,10 @@ func (e *FindingSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "MEDIUM":
 		fallthrough
 	case "LOW":
-		*e = FindingSeverityEnum(s)
+		*e = FindingSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingSeverityEnum: %v", v)
 	}
 }
 
@@ -115,21 +127,25 @@ const (
 	FindingStateEnumInactive         FindingStateEnum = "INACTIVE"
 )
 
+func (e FindingStateEnum) ToPointer() *FindingStateEnum {
+	return &e
+}
+
 func (e *FindingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = FindingStateEnum(s)
+		*e = FindingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingStateEnum: %v", v)
 	}
 }
 
@@ -151,17 +167,17 @@ type Finding struct {
 	Connections []Connection `json:"connections,omitempty"`
 	// Output only. Map containing the points of contact for the given finding. The key represents the type of contact, while the value contains a list of all the contacts that pertain. Please refer to: https://cloud.google.com/resource-manager/docs/managing-notification-contacts#notification-categories { "security": { "contacts": [ { "email": "person1@company.com" }, { "email": "person2@company.com" } ] } }
 	Contacts map[string]ContactDetails `json:"contacts,omitempty"`
-	// Containers associated with the finding. containers provides information for both Kubernetes and non-Kubernetes containers.
+	// Containers associated with the finding. This field provides information for both Kubernetes and non-Kubernetes containers.
 	Containers []Container `json:"containers,omitempty"`
 	// The time at which the finding was created in Security Command Center.
 	CreateTime *string `json:"createTime,omitempty"`
-	// Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself. Some database resources may not have the full resource name populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. CloudSQL databases). In these cases only the display name will be provided.
+	// Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database instance itself. Some database resources might not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types, such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only the display name is provided. Some database resources may not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
 	Database *Database `json:"database,omitempty"`
-	// Contains more detail about the finding.
+	// Contains more details about the finding.
 	Description *string `json:"description,omitempty"`
 	// The time the finding was first detected. If an existing finding is updated, then this is the time the update occurred. For example, if the finding represents an open firewall, this property captures the time the detector believes the firewall became open. The accuracy is determined by the detector. If the finding is later resolved, then this time reflects when the finding was resolved. This must not be set to a value greater than the current timestamp.
 	EventTime *string `json:"eventTime,omitempty"`
-	// Exfiltration represents a data exfiltration attempt of one or more sources to one or more targets. Sources represent the source of data that is exfiltrated, and Targets represents the destination the data was copied to.
+	// Exfiltration represents a data exfiltration attempt from one or more sources to one or more targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets` attribute lists the destinations the data was copied to.
 	Exfiltration *Exfiltration `json:"exfiltration,omitempty"`
 	// Output only. Third party SIEM/SOAR fields within SCC, contains external system information and external system finding fields.
 	ExternalSystems map[string]GoogleCloudSecuritycenterV1ExternalSystem `json:"externalSystems,omitempty"`
@@ -171,7 +187,7 @@ type Finding struct {
 	Files []File `json:"files,omitempty"`
 	// The class of the finding.
 	FindingClass *FindingFindingClassEnum `json:"findingClass,omitempty"`
-	// Represents IAM bindings associated with the Finding.
+	// Represents IAM bindings associated with the finding.
 	IamBindings []IamBinding `json:"iamBindings,omitempty"`
 	// Represents what's commonly known as an _indicator of compromise_ (IoC) in computer forensics. This is an artifact observed on a network or in an operating system that, with high confidence, indicates a computer intrusion. For more information, see [Indicator of compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
 	Indicator *Indicator `json:"indicator,omitempty"`
@@ -185,16 +201,14 @@ type Finding struct {
 	ModuleName *string `json:"moduleName,omitempty"`
 	// Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
 	Mute *FindingMuteEnum `json:"mute,omitempty"`
-	// First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
+	// Records additional information about the mute operation, for example, the [mute configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who muted the finding.
 	MuteInitiator *string `json:"muteInitiator,omitempty"`
 	// Output only. The most recent time this finding was muted or unmuted.
 	MuteUpdateTime *string `json:"muteUpdateTime,omitempty"`
-	// The relative resource name of this finding. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+	// The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}", "folders/{folder_id}/sources/{source_id}/findings/{finding_id}", "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
 	Name *string `json:"name,omitempty"`
-	// Next steps associate to the finding.
+	// Steps to address the finding.
 	NextSteps *string `json:"nextSteps,omitempty"`
-	// Contains information about the org policy constraints associated with the finding.
-	OrgPolicyConstraints []OrgPolicyConstraint `json:"orgPolicyConstraints,omitempty"`
 	// The relative resource name of the source the finding belongs to. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is immutable after creation time. For example: "organizations/{organization_id}/sources/{source_id}"
 	Parent *string `json:"parent,omitempty"`
 	// Output only. The human readable display name of the finding source such as "Event Threat Detection" or "Security Health Analytics".
@@ -231,17 +245,17 @@ type FindingInput struct {
 	Compliances []Compliance `json:"compliances,omitempty"`
 	// Contains information about the IP connection associated with the finding.
 	Connections []Connection `json:"connections,omitempty"`
-	// Containers associated with the finding. containers provides information for both Kubernetes and non-Kubernetes containers.
+	// Containers associated with the finding. This field provides information for both Kubernetes and non-Kubernetes containers.
 	Containers []Container `json:"containers,omitempty"`
 	// The time at which the finding was created in Security Command Center.
 	CreateTime *string `json:"createTime,omitempty"`
-	// Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of CloudSQL instances or Cloud Spanner instances), or the database instance itself. Some database resources may not have the full resource name populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. CloudSQL databases). In these cases only the display name will be provided.
+	// Represents database access information, such as queries. A database may be a sub-resource of an instance (as in the case of Cloud SQL instances or Cloud Spanner instances), or the database instance itself. Some database resources might not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types, such as Cloud SQL databases, are not yet supported by Cloud Asset Inventory. In these cases only the display name is provided. Some database resources may not have the [full resource name](https://google.aip.dev/122#full-resource-names) populated because these resource types are not yet supported by Cloud Asset Inventory (e.g. Cloud SQL databases). In these cases only the display name will be provided.
 	Database *Database `json:"database,omitempty"`
-	// Contains more detail about the finding.
+	// Contains more details about the finding.
 	Description *string `json:"description,omitempty"`
 	// The time the finding was first detected. If an existing finding is updated, then this is the time the update occurred. For example, if the finding represents an open firewall, this property captures the time the detector believes the firewall became open. The accuracy is determined by the detector. If the finding is later resolved, then this time reflects when the finding was resolved. This must not be set to a value greater than the current timestamp.
 	EventTime *string `json:"eventTime,omitempty"`
-	// Exfiltration represents a data exfiltration attempt of one or more sources to one or more targets. Sources represent the source of data that is exfiltrated, and Targets represents the destination the data was copied to.
+	// Exfiltration represents a data exfiltration attempt from one or more sources to one or more targets. The `sources` attribute lists the sources of the exfiltrated data. The `targets` attribute lists the destinations the data was copied to.
 	Exfiltration *Exfiltration `json:"exfiltration,omitempty"`
 	// The URI that, if available, points to a web page outside of Security Command Center where additional information about the finding can be found. This field is guaranteed to be either empty or a well formed URL.
 	ExternalURI *string `json:"externalUri,omitempty"`
@@ -249,7 +263,7 @@ type FindingInput struct {
 	Files []File `json:"files,omitempty"`
 	// The class of the finding.
 	FindingClass *FindingFindingClassEnum `json:"findingClass,omitempty"`
-	// Represents IAM bindings associated with the Finding.
+	// Represents IAM bindings associated with the finding.
 	IamBindings []IamBinding `json:"iamBindings,omitempty"`
 	// Represents what's commonly known as an _indicator of compromise_ (IoC) in computer forensics. This is an artifact observed on a network or in an operating system that, with high confidence, indicates a computer intrusion. For more information, see [Indicator of compromise](https://en.wikipedia.org/wiki/Indicator_of_compromise).
 	Indicator *Indicator `json:"indicator,omitempty"`
@@ -263,14 +277,12 @@ type FindingInput struct {
 	ModuleName *string `json:"moduleName,omitempty"`
 	// Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
 	Mute *FindingMuteEnum `json:"mute,omitempty"`
-	// First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
+	// Records additional information about the mute operation, for example, the [mute configuration](/security-command-center/docs/how-to-mute-findings) that muted the finding and the user who muted the finding.
 	MuteInitiator *string `json:"muteInitiator,omitempty"`
-	// The relative resource name of this finding. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}"
+	// The [relative resource name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the finding. Example: "organizations/{organization_id}/sources/{source_id}/findings/{finding_id}", "folders/{folder_id}/sources/{source_id}/findings/{finding_id}", "projects/{project_id}/sources/{source_id}/findings/{finding_id}".
 	Name *string `json:"name,omitempty"`
-	// Next steps associate to the finding.
+	// Steps to address the finding.
 	NextSteps *string `json:"nextSteps,omitempty"`
-	// Contains information about the org policy constraints associated with the finding.
-	OrgPolicyConstraints []OrgPolicyConstraint `json:"orgPolicyConstraints,omitempty"`
 	// The relative resource name of the source the finding belongs to. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is immutable after creation time. For example: "organizations/{organization_id}/sources/{source_id}"
 	Parent *string `json:"parent,omitempty"`
 	// Represents operating system processes associated with the Finding.

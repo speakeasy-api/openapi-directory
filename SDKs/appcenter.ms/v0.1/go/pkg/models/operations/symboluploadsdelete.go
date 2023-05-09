@@ -45,19 +45,23 @@ const (
 	SymbolUploadsDelete200ApplicationJSONOriginEnumSystem SymbolUploadsDelete200ApplicationJSONOriginEnum = "System"
 )
 
+func (e SymbolUploadsDelete200ApplicationJSONOriginEnum) ToPointer() *SymbolUploadsDelete200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *SymbolUploadsDelete200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "User":
 		fallthrough
 	case "System":
-		*e = SymbolUploadsDelete200ApplicationJSONOriginEnum(s)
+		*e = SymbolUploadsDelete200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	SymbolUploadsDelete200ApplicationJSONStatusEnumFailed     SymbolUploadsDelete200ApplicationJSONStatusEnum = "failed"
 )
 
+func (e SymbolUploadsDelete200ApplicationJSONStatusEnum) ToPointer() *SymbolUploadsDelete200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SymbolUploadsDelete200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "committed":
@@ -90,10 +98,10 @@ func (e *SymbolUploadsDelete200ApplicationJSONStatusEnum) UnmarshalJSON(data []b
 	case "indexed":
 		fallthrough
 	case "failed":
-		*e = SymbolUploadsDelete200ApplicationJSONStatusEnum(s)
+		*e = SymbolUploadsDelete200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	SymbolUploadsDelete200ApplicationJSONSymbolTypeEnumUwp             SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum = "UWP"
 )
 
+func (e SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum) ToPointer() *SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum {
+	return &e
+}
+
 func (e *SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Apple":
 		fallthrough
 	case "JavaScript":
@@ -123,10 +135,10 @@ func (e *SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum) UnmarshalJSON(data
 	case "AndroidProguard":
 		fallthrough
 	case "UWP":
-		*e = SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum(s)
+		*e = SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SymbolUploadsDelete200ApplicationJSONSymbolTypeEnum: %v", v)
 	}
 }
 

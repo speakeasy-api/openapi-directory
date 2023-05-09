@@ -33,12 +33,16 @@ const (
 	ClassroomCoursesAnnouncementsListAnnouncementStatesEnumDeleted                      ClassroomCoursesAnnouncementsListAnnouncementStatesEnum = "DELETED"
 )
 
+func (e ClassroomCoursesAnnouncementsListAnnouncementStatesEnum) ToPointer() *ClassroomCoursesAnnouncementsListAnnouncementStatesEnum {
+	return &e
+}
+
 func (e *ClassroomCoursesAnnouncementsListAnnouncementStatesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOUNCEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "PUBLISHED":
@@ -46,10 +50,10 @@ func (e *ClassroomCoursesAnnouncementsListAnnouncementStatesEnum) UnmarshalJSON(
 	case "DRAFT":
 		fallthrough
 	case "DELETED":
-		*e = ClassroomCoursesAnnouncementsListAnnouncementStatesEnum(s)
+		*e = ClassroomCoursesAnnouncementsListAnnouncementStatesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassroomCoursesAnnouncementsListAnnouncementStatesEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassroomCoursesAnnouncementsListAnnouncementStatesEnum: %v", v)
 	}
 }
 

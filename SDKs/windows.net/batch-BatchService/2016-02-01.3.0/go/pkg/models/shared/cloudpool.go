@@ -17,21 +17,25 @@ const (
 	CloudPoolAllocationStateEnumStopping CloudPoolAllocationStateEnum = "stopping"
 )
 
+func (e CloudPoolAllocationStateEnum) ToPointer() *CloudPoolAllocationStateEnum {
+	return &e
+}
+
 func (e *CloudPoolAllocationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "steady":
 		fallthrough
 	case "resizing":
 		fallthrough
 	case "stopping":
-		*e = CloudPoolAllocationStateEnum(s)
+		*e = CloudPoolAllocationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudPoolAllocationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudPoolAllocationStateEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	CloudPoolStateEnumUpgrading CloudPoolStateEnum = "upgrading"
 )
 
+func (e CloudPoolStateEnum) ToPointer() *CloudPoolStateEnum {
+	return &e
+}
+
 func (e *CloudPoolStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "deleting":
 		fallthrough
 	case "upgrading":
-		*e = CloudPoolStateEnum(s)
+		*e = CloudPoolStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudPoolStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudPoolStateEnum: %v", v)
 	}
 }
 

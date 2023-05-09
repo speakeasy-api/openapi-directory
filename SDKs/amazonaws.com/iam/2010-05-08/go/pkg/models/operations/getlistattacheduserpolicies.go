@@ -15,17 +15,21 @@ const (
 	GETListAttachedUserPoliciesActionEnumListAttachedUserPolicies GETListAttachedUserPoliciesActionEnum = "ListAttachedUserPolicies"
 )
 
+func (e GETListAttachedUserPoliciesActionEnum) ToPointer() *GETListAttachedUserPoliciesActionEnum {
+	return &e
+}
+
 func (e *GETListAttachedUserPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListAttachedUserPolicies":
-		*e = GETListAttachedUserPoliciesActionEnum(s)
+		*e = GETListAttachedUserPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAttachedUserPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAttachedUserPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListAttachedUserPoliciesVersionEnumTwoThousandAndTen0508 GETListAttachedUserPoliciesVersionEnum = "2010-05-08"
 )
 
+func (e GETListAttachedUserPoliciesVersionEnum) ToPointer() *GETListAttachedUserPoliciesVersionEnum {
+	return &e
+}
+
 func (e *GETListAttachedUserPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListAttachedUserPoliciesVersionEnum(s)
+		*e = GETListAttachedUserPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListAttachedUserPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListAttachedUserPoliciesVersionEnum: %v", v)
 	}
 }
 

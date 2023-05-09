@@ -16,17 +16,21 @@ const (
 	GetHypervisorXAmzTargetEnumBackupOnPremisesV20210101GetHypervisor GetHypervisorXAmzTargetEnum = "BackupOnPremises_v20210101.GetHypervisor"
 )
 
+func (e GetHypervisorXAmzTargetEnum) ToPointer() *GetHypervisorXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetHypervisorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.GetHypervisor":
-		*e = GetHypervisorXAmzTargetEnum(s)
+		*e = GetHypervisorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHypervisorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHypervisorXAmzTargetEnum: %v", v)
 	}
 }
 

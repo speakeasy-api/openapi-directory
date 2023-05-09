@@ -16,21 +16,25 @@ const (
 	UptimeCheckConfigCheckerTypeEnumVpcCheckers            UptimeCheckConfigCheckerTypeEnum = "VPC_CHECKERS"
 )
 
+func (e UptimeCheckConfigCheckerTypeEnum) ToPointer() *UptimeCheckConfigCheckerTypeEnum {
+	return &e
+}
+
 func (e *UptimeCheckConfigCheckerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHECKER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STATIC_IP_CHECKERS":
 		fallthrough
 	case "VPC_CHECKERS":
-		*e = UptimeCheckConfigCheckerTypeEnum(s)
+		*e = UptimeCheckConfigCheckerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UptimeCheckConfigCheckerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UptimeCheckConfigCheckerTypeEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	UptimeCheckConfigSelectedRegionsEnumUsaVirginia       UptimeCheckConfigSelectedRegionsEnum = "USA_VIRGINIA"
 )
 
+func (e UptimeCheckConfigSelectedRegionsEnum) ToPointer() *UptimeCheckConfigSelectedRegionsEnum {
+	return &e
+}
+
 func (e *UptimeCheckConfigSelectedRegionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGION_UNSPECIFIED":
 		fallthrough
 	case "USA":
@@ -68,10 +76,10 @@ func (e *UptimeCheckConfigSelectedRegionsEnum) UnmarshalJSON(data []byte) error 
 	case "USA_IOWA":
 		fallthrough
 	case "USA_VIRGINIA":
-		*e = UptimeCheckConfigSelectedRegionsEnum(s)
+		*e = UptimeCheckConfigSelectedRegionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UptimeCheckConfigSelectedRegionsEnum: %s", s)
+		return fmt.Errorf("invalid value for UptimeCheckConfigSelectedRegionsEnum: %v", v)
 	}
 }
 

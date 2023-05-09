@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetBEGreetingSecurity struct {
+	APISecretKey string `security:"scheme,type=apiKey,subtype=header,name=x-api-key"`
+}
+
 // GetBEGreeting500ApplicationJSON - System error. Retry later. If the error persist, contact WOS support
 type GetBEGreeting500ApplicationJSON struct {
 	// Optional error code

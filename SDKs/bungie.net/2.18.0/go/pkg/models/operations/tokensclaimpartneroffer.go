@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type TokensClaimPartnerOfferSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // TokensClaimPartnerOffer200Wildcard - Look at the Response property for more information about the nature of this response
 type TokensClaimPartnerOffer200Wildcard struct {
 	DetailedErrorTrace *string

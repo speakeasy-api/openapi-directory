@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.ShortlinkRequest{
+    ctx := context.Background()
+    res, err := s.AddShortlink.AddShortlink(ctx, shared.ShortlinkRequest{
         Keyid: "corrupti",
         Shortlink: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddShortlink.AddShortlink(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

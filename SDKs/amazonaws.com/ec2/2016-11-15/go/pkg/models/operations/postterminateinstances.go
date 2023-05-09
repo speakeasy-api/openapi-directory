@@ -15,17 +15,21 @@ const (
 	POSTTerminateInstancesActionEnumTerminateInstances POSTTerminateInstancesActionEnum = "TerminateInstances"
 )
 
+func (e POSTTerminateInstancesActionEnum) ToPointer() *POSTTerminateInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTTerminateInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateInstances":
-		*e = POSTTerminateInstancesActionEnum(s)
+		*e = POSTTerminateInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTerminateInstancesVersionEnumTwoThousandAndSixteen1115 POSTTerminateInstancesVersionEnum = "2016-11-15"
 )
 
+func (e POSTTerminateInstancesVersionEnum) ToPointer() *POSTTerminateInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTTerminateInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTTerminateInstancesVersionEnum(s)
+		*e = POSTTerminateInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTerminateInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTerminateInstancesVersionEnum: %v", v)
 	}
 }
 

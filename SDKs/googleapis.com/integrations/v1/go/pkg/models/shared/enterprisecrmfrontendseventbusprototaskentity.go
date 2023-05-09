@@ -16,21 +16,25 @@ const (
 	EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnumIoTemplate   EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum = "IO_TEMPLATE"
 )
 
+func (e EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum) ToPointer() *EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK":
 		fallthrough
 	case "ASIS_TEMPLATE":
 		fallthrough
 	case "IO_TEMPLATE":
-		*e = EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum(s)
+		*e = EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmFrontendsEventbusProtoTaskEntityTaskTypeEnum: %v", v)
 	}
 }
 

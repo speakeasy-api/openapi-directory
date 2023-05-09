@@ -16,17 +16,21 @@ const (
 	DescribeArchiveXAmzTargetEnumAwsEventsDescribeArchive DescribeArchiveXAmzTargetEnum = "AWSEvents.DescribeArchive"
 )
 
+func (e DescribeArchiveXAmzTargetEnum) ToPointer() *DescribeArchiveXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeArchiveXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DescribeArchive":
-		*e = DescribeArchiveXAmzTargetEnum(s)
+		*e = DescribeArchiveXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeArchiveXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeArchiveXAmzTargetEnum: %v", v)
 	}
 }
 

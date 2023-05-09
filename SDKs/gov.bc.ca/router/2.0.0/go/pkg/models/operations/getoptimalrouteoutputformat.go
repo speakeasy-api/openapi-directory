@@ -17,19 +17,23 @@ const (
 	GetOptimalRouteOutputFormatCriteriaEnumFastest  GetOptimalRouteOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e GetOptimalRouteOutputFormatCriteriaEnum) ToPointer() *GetOptimalRouteOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *GetOptimalRouteOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = GetOptimalRouteOutputFormatCriteriaEnum(s)
+		*e = GetOptimalRouteOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetOptimalRouteOutputFormatDistanceUnitEnumMi GetOptimalRouteOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e GetOptimalRouteOutputFormatDistanceUnitEnum) ToPointer() *GetOptimalRouteOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *GetOptimalRouteOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = GetOptimalRouteOutputFormatDistanceUnitEnum(s)
+		*e = GetOptimalRouteOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -66,63 +74,71 @@ const (
 	GetOptimalRouteOutputFormatOutputFormatEnumHTML GetOptimalRouteOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetOptimalRouteOutputFormatOutputFormatEnum) ToPointer() *GetOptimalRouteOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetOptimalRouteOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "kml":
 		fallthrough
 	case "html":
-		*e = GetOptimalRouteOutputFormatOutputFormatEnum(s)
+		*e = GetOptimalRouteOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetOptimalRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetOptimalRouteOutputFormatOutputSrsEnum string
+type GetOptimalRouteOutputFormatOutputSrsEnum int64
 
 const (
-	GetOptimalRouteOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetOptimalRouteOutputFormatOutputSrsEnum = "4326"
-	GetOptimalRouteOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetOptimalRouteOutputFormatOutputSrsEnum = "4269"
-	GetOptimalRouteOutputFormatOutputSrsEnumThreeThousandAndFive                  GetOptimalRouteOutputFormatOutputSrsEnum = "3005"
-	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetOptimalRouteOutputFormatOutputSrsEnum = "26907"
-	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetOptimalRouteOutputFormatOutputSrsEnum = "26908"
-	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetOptimalRouteOutputFormatOutputSrsEnum = "26909"
-	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetOptimalRouteOutputFormatOutputSrsEnum = "26910"
-	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetOptimalRouteOutputFormatOutputSrsEnum = "26911"
+	GetOptimalRouteOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetOptimalRouteOutputFormatOutputSrsEnum = 4326
+	GetOptimalRouteOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetOptimalRouteOutputFormatOutputSrsEnum = 4269
+	GetOptimalRouteOutputFormatOutputSrsEnumThreeThousandAndFive                  GetOptimalRouteOutputFormatOutputSrsEnum = 3005
+	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetOptimalRouteOutputFormatOutputSrsEnum = 26907
+	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetOptimalRouteOutputFormatOutputSrsEnum = 26908
+	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetOptimalRouteOutputFormatOutputSrsEnum = 26909
+	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetOptimalRouteOutputFormatOutputSrsEnum = 26910
+	GetOptimalRouteOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetOptimalRouteOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetOptimalRouteOutputFormatOutputSrsEnum) ToPointer() *GetOptimalRouteOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetOptimalRouteOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetOptimalRouteOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetOptimalRouteOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOptimalRouteOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,12 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.CreateSignalingChannelRequest{
+    ctx := context.Background()
+    res, err := s.CreateSignalingChannel(ctx, operations.CreateSignalingChannelRequest{
         RequestBody: operations.CreateSignalingChannelRequestBody{
             ChannelName: "corrupti",
-            ChannelType: "FULL_MESH",
+            ChannelType: operations.CreateSignalingChannelRequestBodyChannelTypeEnumFullMesh.ToPointer(),
             SingleMasterConfiguration: &operations.CreateSignalingChannelRequestBodySingleMasterConfiguration{
-                MessageTTLSeconds: 715190,
+                MessageTTLSeconds: sdk.Int64(715190),
             },
             Tags: []shared.Tag{
                 shared.Tag{
@@ -43,17 +44,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSignalingChannel(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	ListEngagementsXAmzTargetEnumSsmContactsListEngagements ListEngagementsXAmzTargetEnum = "SSMContacts.ListEngagements"
 )
 
+func (e ListEngagementsXAmzTargetEnum) ToPointer() *ListEngagementsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEngagementsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.ListEngagements":
-		*e = ListEngagementsXAmzTargetEnum(s)
+		*e = ListEngagementsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEngagementsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEngagementsXAmzTargetEnum: %v", v)
 	}
 }
 

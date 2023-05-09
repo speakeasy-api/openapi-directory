@@ -29,6 +29,8 @@ type Environment struct {
 	Schedulers                   *int64                   `json:"Schedulers,omitempty"`
 	ServiceRoleArn               *string                  `json:"ServiceRoleArn,omitempty"`
 	SourceBucketArn              *string                  `json:"SourceBucketArn,omitempty"`
+	StartupScriptS3ObjectVersion *string                  `json:"StartupScriptS3ObjectVersion,omitempty"`
+	StartupScriptS3Path          *string                  `json:"StartupScriptS3Path,omitempty"`
 	Status                       *EnvironmentStatusEnum   `json:"Status,omitempty"`
 	Tags                         map[string]string        `json:"Tags,omitempty"`
 	WebserverAccessMode          *WebserverAccessModeEnum `json:"WebserverAccessMode,omitempty"`

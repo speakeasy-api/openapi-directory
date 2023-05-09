@@ -35,7 +35,10 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 
 func (s *subscriptions) DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchive(ctx context.Context, request operations.DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveRequest, security operations.DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveSecurity) (*operations.DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -76,9 +79,13 @@ func (s *subscriptions) DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchive(
 
 	return res, nil
 }
+
 func (s *subscriptions) GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByID(ctx context.Context, request operations.GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDRequest, security operations.GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDSecurity) (*operations.GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,9 +135,13 @@ func (s *subscriptions) GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByID(ctx
 
 	return res, nil
 }
+
 func (s *subscriptions) GetWebhooksV3AppIDSubscriptionsGetAll(ctx context.Context, request operations.GetWebhooksV3AppIDSubscriptionsGetAllRequest, security operations.GetWebhooksV3AppIDSubscriptionsGetAllSecurity) (*operations.GetWebhooksV3AppIDSubscriptionsGetAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,9 +191,13 @@ func (s *subscriptions) GetWebhooksV3AppIDSubscriptionsGetAll(ctx context.Contex
 
 	return res, nil
 }
+
 func (s *subscriptions) PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdate(ctx context.Context, request operations.PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdateRequest, security operations.PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdateSecurity) (*operations.PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionPatchRequest", "json")
 	if err != nil {
@@ -242,9 +257,13 @@ func (s *subscriptions) PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdate(ct
 
 	return res, nil
 }
+
 func (s *subscriptions) PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatch(ctx context.Context, request operations.PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchRequest, security operations.PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchSecurity) (*operations.PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/batch/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions/batch/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchInputSubscriptionBatchUpdateRequest", "json")
 	if err != nil {
@@ -314,9 +333,13 @@ func (s *subscriptions) PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatch(c
 
 	return res, nil
 }
+
 func (s *subscriptions) PostWebhooksV3AppIDSubscriptionsCreate(ctx context.Context, request operations.PostWebhooksV3AppIDSubscriptionsCreateRequest, security operations.PostWebhooksV3AppIDSubscriptionsCreateSecurity) (*operations.PostWebhooksV3AppIDSubscriptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscriptionCreateRequest", "json")
 	if err != nil {

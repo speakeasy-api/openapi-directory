@@ -29,12 +29,16 @@ const (
 	JobLogEventEnumJobEnd                      JobLogEventEnum = "JOB_END"
 )
 
+func (e JobLogEventEnum) ToPointer() *JobLogEventEnum {
+	return &e
+}
+
 func (e *JobLogEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_START":
 		fallthrough
 	case "SERVER_SKIPPED":
@@ -68,9 +72,9 @@ func (e *JobLogEventEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_CANCEL":
 		fallthrough
 	case "JOB_END":
-		*e = JobLogEventEnum(s)
+		*e = JobLogEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobLogEventEnum: %s", s)
+		return fmt.Errorf("invalid value for JobLogEventEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	IntentSortAttributeEnumLastUpdatedDateTime IntentSortAttributeEnum = "LastUpdatedDateTime"
 )
 
+func (e IntentSortAttributeEnum) ToPointer() *IntentSortAttributeEnum {
+	return &e
+}
+
 func (e *IntentSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IntentName":
 		fallthrough
 	case "LastUpdatedDateTime":
-		*e = IntentSortAttributeEnum(s)
+		*e = IntentSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntentSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for IntentSortAttributeEnum: %v", v)
 	}
 }

@@ -284,7 +284,10 @@ func (s *payments) GetAllPayments(ctx context.Context, request operations.GetAll
 // Get Payment by transaction ID
 func (s *payments) GetPayment(ctx context.Context, request operations.GetPaymentRequest, security operations.GetPaymentSecurity) (*operations.GetPaymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/{transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/{transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +395,10 @@ func (s *payments) GetPayment(ctx context.Context, request operations.GetPayment
 //	Only last 1000 records will be recieved if the result contain more that 1000 payments. In that case, the pagination should be used.
 func (s *payments) GetPotPayments(ctx context.Context, request operations.GetPotPaymentsRequest, security operations.GetPotPaymentsSecurity) (*operations.GetPotPaymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/getPotPayments/{pot_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/payments/v1/getPotPayments/{pot_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

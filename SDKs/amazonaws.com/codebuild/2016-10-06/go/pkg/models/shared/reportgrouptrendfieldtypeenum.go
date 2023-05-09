@@ -21,12 +21,16 @@ const (
 	ReportGroupTrendFieldTypeEnumBranchesMissed  ReportGroupTrendFieldTypeEnum = "BRANCHES_MISSED"
 )
 
+func (e ReportGroupTrendFieldTypeEnum) ToPointer() *ReportGroupTrendFieldTypeEnum {
+	return &e
+}
+
 func (e *ReportGroupTrendFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASS_RATE":
 		fallthrough
 	case "DURATION":
@@ -44,9 +48,9 @@ func (e *ReportGroupTrendFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BRANCHES_COVERED":
 		fallthrough
 	case "BRANCHES_MISSED":
-		*e = ReportGroupTrendFieldTypeEnum(s)
+		*e = ReportGroupTrendFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportGroupTrendFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportGroupTrendFieldTypeEnum: %v", v)
 	}
 }

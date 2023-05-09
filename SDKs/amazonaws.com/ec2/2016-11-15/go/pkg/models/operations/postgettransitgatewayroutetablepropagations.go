@@ -15,17 +15,21 @@ const (
 	POSTGetTransitGatewayRouteTablePropagationsActionEnumGetTransitGatewayRouteTablePropagations POSTGetTransitGatewayRouteTablePropagationsActionEnum = "GetTransitGatewayRouteTablePropagations"
 )
 
+func (e POSTGetTransitGatewayRouteTablePropagationsActionEnum) ToPointer() *POSTGetTransitGatewayRouteTablePropagationsActionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayRouteTablePropagationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTransitGatewayRouteTablePropagations":
-		*e = POSTGetTransitGatewayRouteTablePropagationsActionEnum(s)
+		*e = POSTGetTransitGatewayRouteTablePropagationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayRouteTablePropagationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayRouteTablePropagationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetTransitGatewayRouteTablePropagationsVersionEnumTwoThousandAndSixteen1115 POSTGetTransitGatewayRouteTablePropagationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetTransitGatewayRouteTablePropagationsVersionEnum) ToPointer() *POSTGetTransitGatewayRouteTablePropagationsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayRouteTablePropagationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetTransitGatewayRouteTablePropagationsVersionEnum(s)
+		*e = POSTGetTransitGatewayRouteTablePropagationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayRouteTablePropagationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayRouteTablePropagationsVersionEnum: %v", v)
 	}
 }
 

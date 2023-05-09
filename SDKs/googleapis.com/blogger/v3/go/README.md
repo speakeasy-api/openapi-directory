@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/blogger/v3
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BloggerBlogUserInfosGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        BlogID: "quibusdam",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        MaxPosts: 847252,
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-        UserID: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.BlogUserInfos.BloggerBlogUserInfosGet(ctx, req, operations.BloggerBlogUserInfosGetSecurity{
+    res, err := s.BlogUserInfos.BloggerBlogUserInfosGet(ctx, operations.BloggerBlogUserInfosGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        BlogID: "quibusdam",
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        MaxPosts: sdk.Int64(847252),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+        UserID: "iure",
+    }, operations.BloggerBlogUserInfosGetSecurity{
         Option1: &operations.BloggerBlogUserInfosGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -63,62 +61,62 @@ func main() {
 ## Available Resources and Operations
 
 
-### BlogUserInfos
+### [BlogUserInfos](docs/bloguserinfos/README.md)
 
-* `BloggerBlogUserInfosGet` - Gets one blog and user info pair by blog id and user id.
+* [BloggerBlogUserInfosGet](docs/bloguserinfos/README.md#bloggerbloguserinfosget) - Gets one blog and user info pair by blog id and user id.
 
-### Blogs
+### [Blogs](docs/blogs/README.md)
 
-* `BloggerBlogsGet` - Gets a blog by id.
-* `BloggerBlogsGetByURL` - Gets a blog by url.
-* `BloggerBlogsListByUser` - Lists blogs by user.
+* [BloggerBlogsGet](docs/blogs/README.md#bloggerblogsget) - Gets a blog by id.
+* [BloggerBlogsGetByURL](docs/blogs/README.md#bloggerblogsgetbyurl) - Gets a blog by url.
+* [BloggerBlogsListByUser](docs/blogs/README.md#bloggerblogslistbyuser) - Lists blogs by user.
 
-### Comments
+### [Comments](docs/comments/README.md)
 
-* `BloggerCommentsApprove` - Marks a comment as not spam by blog id, post id and comment id.
-* `BloggerCommentsDelete` - Deletes a comment by blog id, post id and comment id.
-* `BloggerCommentsGet` - Gets a comment by id.
-* `BloggerCommentsList` - Lists comments.
-* `BloggerCommentsListByBlog` - Lists comments by blog.
-* `BloggerCommentsMarkAsSpam` - Marks a comment as spam by blog id, post id and comment id.
-* `BloggerCommentsRemoveContent` - Removes the content of a comment by blog id, post id and comment id.
+* [BloggerCommentsApprove](docs/comments/README.md#bloggercommentsapprove) - Marks a comment as not spam by blog id, post id and comment id.
+* [BloggerCommentsDelete](docs/comments/README.md#bloggercommentsdelete) - Deletes a comment by blog id, post id and comment id.
+* [BloggerCommentsGet](docs/comments/README.md#bloggercommentsget) - Gets a comment by id.
+* [BloggerCommentsList](docs/comments/README.md#bloggercommentslist) - Lists comments.
+* [BloggerCommentsListByBlog](docs/comments/README.md#bloggercommentslistbyblog) - Lists comments by blog.
+* [BloggerCommentsMarkAsSpam](docs/comments/README.md#bloggercommentsmarkasspam) - Marks a comment as spam by blog id, post id and comment id.
+* [BloggerCommentsRemoveContent](docs/comments/README.md#bloggercommentsremovecontent) - Removes the content of a comment by blog id, post id and comment id.
 
-### PageViews
+### [PageViews](docs/pageviews/README.md)
 
-* `BloggerPageViewsGet` - Gets page views by blog id.
+* [BloggerPageViewsGet](docs/pageviews/README.md#bloggerpageviewsget) - Gets page views by blog id.
 
-### Pages
+### [Pages](docs/pages/README.md)
 
-* `BloggerPagesDelete` - Deletes a page by blog id and page id.
-* `BloggerPagesGet` - Gets a page by blog id and page id.
-* `BloggerPagesInsert` - Inserts a page.
-* `BloggerPagesList` - Lists pages.
-* `BloggerPagesPatch` - Patches a page.
-* `BloggerPagesPublish` - Publishes a page.
-* `BloggerPagesRevert` - Reverts a published or scheduled page to draft state.
-* `BloggerPagesUpdate` - Updates a page by blog id and page id.
+* [BloggerPagesDelete](docs/pages/README.md#bloggerpagesdelete) - Deletes a page by blog id and page id.
+* [BloggerPagesGet](docs/pages/README.md#bloggerpagesget) - Gets a page by blog id and page id.
+* [BloggerPagesInsert](docs/pages/README.md#bloggerpagesinsert) - Inserts a page.
+* [BloggerPagesList](docs/pages/README.md#bloggerpageslist) - Lists pages.
+* [BloggerPagesPatch](docs/pages/README.md#bloggerpagespatch) - Patches a page.
+* [BloggerPagesPublish](docs/pages/README.md#bloggerpagespublish) - Publishes a page.
+* [BloggerPagesRevert](docs/pages/README.md#bloggerpagesrevert) - Reverts a published or scheduled page to draft state.
+* [BloggerPagesUpdate](docs/pages/README.md#bloggerpagesupdate) - Updates a page by blog id and page id.
 
-### PostUserInfos
+### [PostUserInfos](docs/postuserinfos/README.md)
 
-* `BloggerPostUserInfosGet` - Gets one post and user info pair, by post_id and user_id.
-* `BloggerPostUserInfosList` - Lists post and user info pairs.
+* [BloggerPostUserInfosGet](docs/postuserinfos/README.md#bloggerpostuserinfosget) - Gets one post and user info pair, by post_id and user_id.
+* [BloggerPostUserInfosList](docs/postuserinfos/README.md#bloggerpostuserinfoslist) - Lists post and user info pairs.
 
-### Posts
+### [Posts](docs/posts/README.md)
 
-* `BloggerPostsDelete` - Deletes a post by blog id and post id.
-* `BloggerPostsGet` - Gets a post by blog id and post id
-* `BloggerPostsGetByPath` - Gets a post by path.
-* `BloggerPostsInsert` - Inserts a post.
-* `BloggerPostsList` - Lists posts.
-* `BloggerPostsPatch` - Patches a post.
-* `BloggerPostsPublish` - Publishes a post.
-* `BloggerPostsRevert` - Reverts a published or scheduled post to draft state.
-* `BloggerPostsSearch` - Searches for posts matching given query terms in the specified blog.
-* `BloggerPostsUpdate` - Updates a post by blog id and post id.
+* [BloggerPostsDelete](docs/posts/README.md#bloggerpostsdelete) - Deletes a post by blog id and post id.
+* [BloggerPostsGet](docs/posts/README.md#bloggerpostsget) - Gets a post by blog id and post id
+* [BloggerPostsGetByPath](docs/posts/README.md#bloggerpostsgetbypath) - Gets a post by path.
+* [BloggerPostsInsert](docs/posts/README.md#bloggerpostsinsert) - Inserts a post.
+* [BloggerPostsList](docs/posts/README.md#bloggerpostslist) - Lists posts.
+* [BloggerPostsPatch](docs/posts/README.md#bloggerpostspatch) - Patches a post.
+* [BloggerPostsPublish](docs/posts/README.md#bloggerpostspublish) - Publishes a post.
+* [BloggerPostsRevert](docs/posts/README.md#bloggerpostsrevert) - Reverts a published or scheduled post to draft state.
+* [BloggerPostsSearch](docs/posts/README.md#bloggerpostssearch) - Searches for posts matching given query terms in the specified blog.
+* [BloggerPostsUpdate](docs/posts/README.md#bloggerpostsupdate) - Updates a post by blog id and post id.
 
-### Users
+### [Users](docs/users/README.md)
 
-* `BloggerUsersGet` - Gets one user by user_id.
+* [BloggerUsersGet](docs/users/README.md#bloggerusersget) - Gets one user by user_id.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	UpdateDeviceFleetXAmzTargetEnumSageMakerUpdateDeviceFleet UpdateDeviceFleetXAmzTargetEnum = "SageMaker.UpdateDeviceFleet"
 )
 
+func (e UpdateDeviceFleetXAmzTargetEnum) ToPointer() *UpdateDeviceFleetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDeviceFleetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateDeviceFleet":
-		*e = UpdateDeviceFleetXAmzTargetEnum(s)
+		*e = UpdateDeviceFleetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDeviceFleetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDeviceFleetXAmzTargetEnum: %v", v)
 	}
 }
 

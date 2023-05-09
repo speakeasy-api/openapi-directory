@@ -16,12 +16,16 @@ const (
 	AdditionalConstraintsElementEnumRequireUppercase AdditionalConstraintsElementEnum = "REQUIRE_UPPERCASE"
 )
 
+func (e AdditionalConstraintsElementEnum) ToPointer() *AdditionalConstraintsElementEnum {
+	return &e
+}
+
 func (e *AdditionalConstraintsElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUIRE_DIGIT":
 		fallthrough
 	case "REQUIRE_LOWERCASE":
@@ -29,9 +33,9 @@ func (e *AdditionalConstraintsElementEnum) UnmarshalJSON(data []byte) error {
 	case "REQUIRE_SYMBOL":
 		fallthrough
 	case "REQUIRE_UPPERCASE":
-		*e = AdditionalConstraintsElementEnum(s)
+		*e = AdditionalConstraintsElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdditionalConstraintsElementEnum: %s", s)
+		return fmt.Errorf("invalid value for AdditionalConstraintsElementEnum: %v", v)
 	}
 }

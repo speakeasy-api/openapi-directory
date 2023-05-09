@@ -15,19 +15,23 @@ const (
 	GcsDestinationConfigGcsFileFormatEnumAvro                     GcsDestinationConfigGcsFileFormatEnum = "AVRO"
 )
 
+func (e GcsDestinationConfigGcsFileFormatEnum) ToPointer() *GcsDestinationConfigGcsFileFormatEnum {
+	return &e
+}
+
 func (e *GcsDestinationConfigGcsFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GCS_FILE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "AVRO":
-		*e = GcsDestinationConfigGcsFileFormatEnum(s)
+		*e = GcsDestinationConfigGcsFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GcsDestinationConfigGcsFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GcsDestinationConfigGcsFileFormatEnum: %v", v)
 	}
 }
 

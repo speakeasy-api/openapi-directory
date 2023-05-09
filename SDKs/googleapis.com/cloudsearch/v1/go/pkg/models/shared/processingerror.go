@@ -18,12 +18,16 @@ const (
 	ProcessingErrorCodeEnumACLCycle                       ProcessingErrorCodeEnum = "ACL_CYCLE"
 )
 
+func (e ProcessingErrorCodeEnum) ToPointer() *ProcessingErrorCodeEnum {
+	return &e
+}
+
 func (e *ProcessingErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING_ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "MALFORMED_REQUEST":
@@ -33,10 +37,10 @@ func (e *ProcessingErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INDIRECT_BROKEN_ACL":
 		fallthrough
 	case "ACL_CYCLE":
-		*e = ProcessingErrorCodeEnum(s)
+		*e = ProcessingErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingErrorCodeEnum: %v", v)
 	}
 }
 

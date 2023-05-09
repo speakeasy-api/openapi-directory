@@ -16,17 +16,21 @@ const (
 	SplitShardXAmzTargetEnumKinesis20131202SplitShard SplitShardXAmzTargetEnum = "Kinesis_20131202.SplitShard"
 )
 
+func (e SplitShardXAmzTargetEnum) ToPointer() *SplitShardXAmzTargetEnum {
+	return &e
+}
+
 func (e *SplitShardXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.SplitShard":
-		*e = SplitShardXAmzTargetEnum(s)
+		*e = SplitShardXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SplitShardXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SplitShardXAmzTargetEnum: %v", v)
 	}
 }
 

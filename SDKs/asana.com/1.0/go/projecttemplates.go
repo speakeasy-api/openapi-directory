@@ -43,7 +43,10 @@ func newProjectTemplates(defaultClient, securityClient HTTPClient, serverURL, la
 // Returns the complete project template record for a single project template.
 func (s *projectTemplates) GetProjectTemplate(ctx context.Context, request operations.GetProjectTemplateRequest) (*operations.GetProjectTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +180,10 @@ func (s *projectTemplates) GetProjectTemplates(ctx context.Context, request oper
 // Returns the compact project template records for all project templates in the team.
 func (s *projectTemplates) GetProjectTemplatesForTeam(ctx context.Context, request operations.GetProjectTemplatesForTeamRequest) (*operations.GetProjectTemplatesForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/project_templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/project_templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -248,7 +254,10 @@ func (s *projectTemplates) GetProjectTemplatesForTeam(ctx context.Context, reque
 // _Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/docs/workspace) parameter._
 func (s *projectTemplates) InstantiateProject(ctx context.Context, request operations.InstantiateProjectRequest) (*operations.InstantiateProjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}/instantiateProject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/project_templates/{project_template_gid}/instantiateProject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

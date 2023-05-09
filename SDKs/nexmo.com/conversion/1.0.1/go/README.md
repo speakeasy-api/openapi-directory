@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/conversion/1.0.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -31,14 +31,12 @@ func main() {
         }),
     )
 
-    req := operations.SmsConversionRequest{
-        Delivered: "0",
+    ctx := context.Background()
+    res, err := s.SMSConversion.SmsConversion(ctx, operations.SmsConversionRequest{
+        Delivered: shared.DeliveredEnumZero,
         MessageID: "provident",
         Timestamp: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.SMSConversion.SmsConversion(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,13 +52,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### SMSConversion
+### [SMSConversion](docs/smsconversion/README.md)
 
-* `SmsConversion` - Tell Nexmo if your SMS message was successful
+* [SmsConversion](docs/smsconversion/README.md#smsconversion) - Tell Nexmo if your SMS message was successful
 
-### VoiceConversion
+### [VoiceConversion](docs/voiceconversion/README.md)
 
-* `VoiceConversion` - Tell Nexmo if your voice call was successful
+* [VoiceConversion](docs/voiceconversion/README.md#voiceconversion) - Tell Nexmo if your voice call was successful
 <!-- End SDK Available Operations -->
 
 ### Maturity

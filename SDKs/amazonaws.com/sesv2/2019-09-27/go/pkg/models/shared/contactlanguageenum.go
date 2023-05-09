@@ -14,18 +14,22 @@ const (
 	ContactLanguageEnumJa ContactLanguageEnum = "JA"
 )
 
+func (e ContactLanguageEnum) ToPointer() *ContactLanguageEnum {
+	return &e
+}
+
 func (e *ContactLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EN":
 		fallthrough
 	case "JA":
-		*e = ContactLanguageEnum(s)
+		*e = ContactLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactLanguageEnum: %v", v)
 	}
 }

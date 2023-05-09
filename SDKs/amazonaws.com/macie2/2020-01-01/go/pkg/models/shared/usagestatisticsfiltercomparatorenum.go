@@ -20,12 +20,16 @@ const (
 	UsageStatisticsFilterComparatorEnumContains UsageStatisticsFilterComparatorEnum = "CONTAINS"
 )
 
+func (e UsageStatisticsFilterComparatorEnum) ToPointer() *UsageStatisticsFilterComparatorEnum {
+	return &e
+}
+
 func (e *UsageStatisticsFilterComparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GT":
 		fallthrough
 	case "GTE":
@@ -39,9 +43,9 @@ func (e *UsageStatisticsFilterComparatorEnum) UnmarshalJSON(data []byte) error {
 	case "NE":
 		fallthrough
 	case "CONTAINS":
-		*e = UsageStatisticsFilterComparatorEnum(s)
+		*e = UsageStatisticsFilterComparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageStatisticsFilterComparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageStatisticsFilterComparatorEnum: %v", v)
 	}
 }

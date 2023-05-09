@@ -14,17 +14,21 @@ const (
 	DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnumAggregateLatency DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum = "aggregate-latency"
 )
 
+func (e DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum) ToPointer() *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum {
+	return &e
+}
+
 func (e *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "aggregate-latency":
-		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum(s)
+		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsMetricEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnumOneWeek        DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum = "one-week"
 )
 
+func (e DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum) ToPointer() *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum {
+	return &e
+}
+
 func (e *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "five-minutes":
 		fallthrough
 	case "fifteen-minutes":
@@ -57,10 +65,10 @@ func (e *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeri
 	case "one-day":
 		fallthrough
 	case "one-week":
-		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum(s)
+		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsPeriodEnum: %v", v)
 	}
 }
 
@@ -71,17 +79,21 @@ const (
 	DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnumP50 DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum = "p50"
 )
 
+func (e DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum) ToPointer() *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum {
+	return &e
+}
+
 func (e *DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "p50":
-		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum(s)
+		*e = DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAwsNetworkPerformanceMetricSubscriptionsResultSubscriptionsStatisticEnum: %v", v)
 	}
 }
 

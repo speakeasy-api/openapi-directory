@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,22 +16,20 @@ func main() {
         }),
     )
 
-    req := operations.AssociateAssessmentReportEvidenceFolderRequest{
+    ctx := context.Background()
+    res, err := s.AssociateAssessmentReportEvidenceFolder(ctx, operations.AssociateAssessmentReportEvidenceFolderRequest{
         RequestBody: operations.AssociateAssessmentReportEvidenceFolderRequestBody{
             EvidenceFolderID: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
         AssessmentID: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateAssessmentReportEvidenceFolder(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

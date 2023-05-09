@@ -34,7 +34,10 @@ func newOperatingSystems(defaultClient, securityClient HTTPClient, serverURL, la
 // DfareportingOperatingSystemsGet - Gets one operating system by DART ID.
 func (s *operatingSystems) DfareportingOperatingSystemsGet(ctx context.Context, request operations.DfareportingOperatingSystemsGetRequest, security operations.DfareportingOperatingSystemsGetSecurity) (*operations.DfareportingOperatingSystemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystems/{dartId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystems/{dartId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *operatingSystems) DfareportingOperatingSystemsGet(ctx context.Context, 
 // DfareportingOperatingSystemsList - Retrieves a list of operating systems.
 func (s *operatingSystems) DfareportingOperatingSystemsList(ctx context.Context, request operations.DfareportingOperatingSystemsListRequest, security operations.DfareportingOperatingSystemsListSecurity) (*operations.DfareportingOperatingSystemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/operatingSystems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

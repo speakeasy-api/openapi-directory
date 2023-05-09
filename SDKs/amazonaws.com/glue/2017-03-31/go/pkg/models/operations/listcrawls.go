@@ -16,17 +16,21 @@ const (
 	ListCrawlsXAmzTargetEnumAwsGlueListCrawls ListCrawlsXAmzTargetEnum = "AWSGlue.ListCrawls"
 )
 
+func (e ListCrawlsXAmzTargetEnum) ToPointer() *ListCrawlsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCrawlsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.ListCrawls":
-		*e = ListCrawlsXAmzTargetEnum(s)
+		*e = ListCrawlsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCrawlsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCrawlsXAmzTargetEnum: %v", v)
 	}
 }
 

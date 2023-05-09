@@ -38,7 +38,7 @@ func newUninstallation(defaultClient, securityClient HTTPClient, serverURL, lang
 // 代わりにアンインストールフックで通知される情報は、このAPIのレスポンスに含まれています。
 //
 // アンインストール時の注意点については、[アプリのアンインストール](https://app.shop-pro.jp/open_api#section/API/アプリのインストール)を参照して下さい。
-func (s *uninstallation) DeleteInstallation(ctx context.Context) (*operations.DeleteInstallationResponse, error) {
+func (s *uninstallation) DeleteInstallation(ctx context.Context, security operations.DeleteInstallationSecurity) (*operations.DeleteInstallationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appstore/v1/installation.json"
 
@@ -47,7 +47,7 @@ func (s *uninstallation) DeleteInstallation(ctx context.Context) (*operations.De
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

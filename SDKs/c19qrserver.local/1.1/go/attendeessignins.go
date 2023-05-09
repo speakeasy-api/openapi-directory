@@ -37,7 +37,10 @@ func newAttendeesSignins(defaultClient, securityClient HTTPClient, serverURL, la
 // Delete a signin record
 func (s *attendeesSignins) DeleteSigninSigninID(ctx context.Context, request operations.DeleteSigninSigninIDRequest) (*operations.DeleteSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *attendeesSignins) DeleteSigninSigninID(ctx context.Context, request ope
 // Retrieve the information associated with a signin record
 func (s *attendeesSignins) GetSigninSigninID(ctx context.Context, request operations.GetSigninSigninIDRequest) (*operations.GetSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -278,7 +284,10 @@ func (s *attendeesSignins) PostSignin(ctx context.Context, request shared.Signin
 // Update a signin record
 func (s *attendeesSignins) PutSigninSigninID(ctx context.Context, request operations.PutSigninSigninIDRequest) (*operations.PutSigninSigninIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/signin/{signinId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Signin", "json")
 	if err != nil {

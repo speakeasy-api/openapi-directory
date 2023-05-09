@@ -16,17 +16,21 @@ const (
 	CreateCommitXAmzTargetEnumCodeCommit20150413CreateCommit CreateCommitXAmzTargetEnum = "CodeCommit_20150413.CreateCommit"
 )
 
+func (e CreateCommitXAmzTargetEnum) ToPointer() *CreateCommitXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCommitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.CreateCommit":
-		*e = CreateCommitXAmzTargetEnum(s)
+		*e = CreateCommitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCommitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCommitXAmzTargetEnum: %v", v)
 	}
 }
 

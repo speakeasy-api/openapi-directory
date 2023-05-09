@@ -16,17 +16,21 @@ const (
 	DeleteLoadBalancerTLSCertificateXAmzTargetEnumLightsail20161128DeleteLoadBalancerTLSCertificate DeleteLoadBalancerTLSCertificateXAmzTargetEnum = "Lightsail_20161128.DeleteLoadBalancerTlsCertificate"
 )
 
+func (e DeleteLoadBalancerTLSCertificateXAmzTargetEnum) ToPointer() *DeleteLoadBalancerTLSCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLoadBalancerTLSCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteLoadBalancerTlsCertificate":
-		*e = DeleteLoadBalancerTLSCertificateXAmzTargetEnum(s)
+		*e = DeleteLoadBalancerTLSCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLoadBalancerTLSCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLoadBalancerTLSCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

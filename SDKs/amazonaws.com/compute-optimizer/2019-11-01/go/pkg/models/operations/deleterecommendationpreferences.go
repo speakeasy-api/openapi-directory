@@ -16,17 +16,21 @@ const (
 	DeleteRecommendationPreferencesXAmzTargetEnumComputeOptimizerServiceDeleteRecommendationPreferences DeleteRecommendationPreferencesXAmzTargetEnum = "ComputeOptimizerService.DeleteRecommendationPreferences"
 )
 
+func (e DeleteRecommendationPreferencesXAmzTargetEnum) ToPointer() *DeleteRecommendationPreferencesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRecommendationPreferencesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.DeleteRecommendationPreferences":
-		*e = DeleteRecommendationPreferencesXAmzTargetEnum(s)
+		*e = DeleteRecommendationPreferencesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRecommendationPreferencesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRecommendationPreferencesXAmzTargetEnum: %v", v)
 	}
 }
 

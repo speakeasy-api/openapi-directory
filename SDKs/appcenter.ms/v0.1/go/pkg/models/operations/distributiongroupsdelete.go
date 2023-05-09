@@ -33,12 +33,16 @@ const (
 	DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsDeleteDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	FleetOnDemandAllocationStrategyEnumPrioritized FleetOnDemandAllocationStrategyEnum = "prioritized"
 )
 
+func (e FleetOnDemandAllocationStrategyEnum) ToPointer() *FleetOnDemandAllocationStrategyEnum {
+	return &e
+}
+
 func (e *FleetOnDemandAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lowest-price":
 		fallthrough
 	case "prioritized":
-		*e = FleetOnDemandAllocationStrategyEnum(s)
+		*e = FleetOnDemandAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetOnDemandAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetOnDemandAllocationStrategyEnum: %v", v)
 	}
 }

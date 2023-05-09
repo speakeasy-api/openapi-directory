@@ -19,12 +19,16 @@ const (
 	FleetAttributeEnumSessionScriptS3Location          FleetAttributeEnum = "SESSION_SCRIPT_S3_LOCATION"
 )
 
+func (e FleetAttributeEnum) ToPointer() *FleetAttributeEnum {
+	return &e
+}
+
 func (e *FleetAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VPC_CONFIGURATION":
 		fallthrough
 	case "VPC_CONFIGURATION_SECURITY_GROUP_IDS":
@@ -36,9 +40,9 @@ func (e *FleetAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "USB_DEVICE_FILTER_STRINGS":
 		fallthrough
 	case "SESSION_SCRIPT_S3_LOCATION":
-		*e = FleetAttributeEnum(s)
+		*e = FleetAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetAttributeEnum: %v", v)
 	}
 }

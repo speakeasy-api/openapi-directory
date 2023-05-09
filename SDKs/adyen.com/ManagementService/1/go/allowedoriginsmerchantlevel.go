@@ -38,7 +38,10 @@ func newAllowedOriginsMerchantLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—API credentials read and write
 func (s *allowedOriginsMerchantLevel) DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.DeleteMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *allowedOriginsMerchantLevel) DeleteMerchantsMerchantIDAPICredentialsAPI
 // * Management API—API credentials read and write
 func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +168,10 @@ func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 // * Management API—API credentials read and write
 func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsOriginIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins/{originId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *allowedOriginsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 // * Management API—API credentials read and write
 func (s *allowedOriginsMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOrigins(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsRequest, security operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsSecurity) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDAllowedOriginsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/allowedOrigins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AllowedOrigin", "json")
 	if err != nil {

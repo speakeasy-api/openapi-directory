@@ -15,17 +15,21 @@ const (
 	PullsDismissReviewRequestBodyEventEnumDismiss PullsDismissReviewRequestBodyEventEnum = "DISMISS"
 )
 
+func (e PullsDismissReviewRequestBodyEventEnum) ToPointer() *PullsDismissReviewRequestBodyEventEnum {
+	return &e
+}
+
 func (e *PullsDismissReviewRequestBodyEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISMISS":
-		*e = PullsDismissReviewRequestBodyEventEnum(s)
+		*e = PullsDismissReviewRequestBodyEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsDismissReviewRequestBodyEventEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsDismissReviewRequestBodyEventEnum: %v", v)
 	}
 }
 

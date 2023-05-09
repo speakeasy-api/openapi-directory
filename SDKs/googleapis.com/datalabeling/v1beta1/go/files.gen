@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -143,4 +144,6 @@ pkg/models/shared/googleclouddatalabelingv1beta1pdfinstruction.go
 pkg/models/shared/googleclouddatalabelingv1beta1csvinstruction.go
 pkg/models/shared/googleclouddatalabelingv1beta1listinstructionsresponse.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -6,6 +6,6 @@ package shared
 type Overlay struct {
 	// List of Animations. The list should be chronological, without any time overlap.
 	Animations []Animation `json:"animations,omitempty"`
-	// Overlaid jpeg image.
+	// Overlaid image.
 	Image *Image `json:"image,omitempty"`
 }

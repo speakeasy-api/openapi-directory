@@ -18,21 +18,25 @@ const (
 	GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnumTitle       GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum = "Title"
 )
 
+func (e GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum) ToPointer() *GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExpenseDate":
 		fallthrough
 	case "InclVAT":
 		fallthrough
 	case "Title":
-		*e = GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsSortNameEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnumDesc GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum = "desc"
 )
 
+func (e GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum) ToPointer() *GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsSortOrderEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnumFalse GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum = "false"
 )
 
+func (e GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum) ToPointer() *GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDExpenseReportsWithExtendEnum: %v", v)
 	}
 }
 

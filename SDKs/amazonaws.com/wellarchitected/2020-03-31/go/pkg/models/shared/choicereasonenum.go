@@ -17,12 +17,16 @@ const (
 	ChoiceReasonEnumNone                    ChoiceReasonEnum = "NONE"
 )
 
+func (e ChoiceReasonEnum) ToPointer() *ChoiceReasonEnum {
+	return &e
+}
+
 func (e *ChoiceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OUT_OF_SCOPE":
 		fallthrough
 	case "BUSINESS_PRIORITIES":
@@ -32,9 +36,9 @@ func (e *ChoiceReasonEnum) UnmarshalJSON(data []byte) error {
 	case "OTHER":
 		fallthrough
 	case "NONE":
-		*e = ChoiceReasonEnum(s)
+		*e = ChoiceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChoiceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ChoiceReasonEnum: %v", v)
 	}
 }

@@ -17,21 +17,25 @@ const (
 	CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnumHigh CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum = "high"
 )
 
+func (e CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum) ToPointer() *CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum {
+	return &e
+}
+
 func (e *CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "all":
 		fallthrough
 	case "high":
-		*e = CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum(s)
+		*e = CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum: %v", v)
 	}
 }
 

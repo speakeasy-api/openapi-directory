@@ -15,20 +15,24 @@ const (
 	BandwidthUnitsEnumKHz BandwidthUnitsEnum = "kHz"
 )
 
+func (e BandwidthUnitsEnum) ToPointer() *BandwidthUnitsEnum {
+	return &e
+}
+
 func (e *BandwidthUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GHz":
 		fallthrough
 	case "MHz":
 		fallthrough
 	case "kHz":
-		*e = BandwidthUnitsEnum(s)
+		*e = BandwidthUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BandwidthUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for BandwidthUnitsEnum: %v", v)
 	}
 }

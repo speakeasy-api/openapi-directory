@@ -42,12 +42,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnumExternalSymmetricEncryption          GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum) UnmarshalJSON(da
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionTemplateAlgorithmEnum: %v", v)
 	}
 }
 
@@ -123,12 +127,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnumExternalVpc                GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -138,10 +146,10 @@ func (e *GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum) UnmarshalJ
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyVersionTemplateProtectionLevelEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETModifyVolumeActionEnumModifyVolume GETModifyVolumeActionEnum = "ModifyVolume"
 )
 
+func (e GETModifyVolumeActionEnum) ToPointer() *GETModifyVolumeActionEnum {
+	return &e
+}
+
 func (e *GETModifyVolumeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVolume":
-		*e = GETModifyVolumeActionEnum(s)
+		*e = GETModifyVolumeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVolumeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVolumeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyVolumeVersionEnumTwoThousandAndSixteen1115 GETModifyVolumeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVolumeVersionEnum) ToPointer() *GETModifyVolumeVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVolumeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVolumeVersionEnum(s)
+		*e = GETModifyVolumeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVolumeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVolumeVersionEnum: %v", v)
 	}
 }
 
@@ -63,12 +71,16 @@ const (
 	GETModifyVolumeVolumeTypeEnumGp3      GETModifyVolumeVolumeTypeEnum = "gp3"
 )
 
+func (e GETModifyVolumeVolumeTypeEnum) ToPointer() *GETModifyVolumeVolumeTypeEnum {
+	return &e
+}
+
 func (e *GETModifyVolumeVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -82,10 +94,10 @@ func (e *GETModifyVolumeVolumeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = GETModifyVolumeVolumeTypeEnum(s)
+		*e = GETModifyVolumeVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVolumeVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVolumeVolumeTypeEnum: %v", v)
 	}
 }
 

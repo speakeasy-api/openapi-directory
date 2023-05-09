@@ -17,12 +17,16 @@ const (
 	ConfigManagementHierarchyControllerDeploymentStateExtensionEnumError                      ConfigManagementHierarchyControllerDeploymentStateExtensionEnum = "ERROR"
 )
 
+func (e ConfigManagementHierarchyControllerDeploymentStateExtensionEnum) ToPointer() *ConfigManagementHierarchyControllerDeploymentStateExtensionEnum {
+	return &e
+}
+
 func (e *ConfigManagementHierarchyControllerDeploymentStateExtensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *ConfigManagementHierarchyControllerDeploymentStateExtensionEnum) Unmars
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementHierarchyControllerDeploymentStateExtensionEnum(s)
+		*e = ConfigManagementHierarchyControllerDeploymentStateExtensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementHierarchyControllerDeploymentStateExtensionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementHierarchyControllerDeploymentStateExtensionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ConfigManagementHierarchyControllerDeploymentStateHncEnumError                      ConfigManagementHierarchyControllerDeploymentStateHncEnum = "ERROR"
 )
 
+func (e ConfigManagementHierarchyControllerDeploymentStateHncEnum) ToPointer() *ConfigManagementHierarchyControllerDeploymentStateHncEnum {
+	return &e
+}
+
 func (e *ConfigManagementHierarchyControllerDeploymentStateHncEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -60,10 +68,10 @@ func (e *ConfigManagementHierarchyControllerDeploymentStateHncEnum) UnmarshalJSO
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementHierarchyControllerDeploymentStateHncEnum(s)
+		*e = ConfigManagementHierarchyControllerDeploymentStateHncEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementHierarchyControllerDeploymentStateHncEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementHierarchyControllerDeploymentStateHncEnum: %v", v)
 	}
 }
 

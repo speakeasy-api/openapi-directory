@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/VTEX_TEMPLATE/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -46,11 +44,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Pets
+### [Pets](docs/pets/README.md)
 
-* `CreatePets` - Create a pet
-* `ListPets` - List all pets
-* `ShowPetByID` - Info for a specific pet
+* [CreatePets](docs/pets/README.md#createpets) - Create a pet
+* [ListPets](docs/pets/README.md#listpets) - List all pets
+* [ShowPetByID](docs/pets/README.md#showpetbyid) - Info for a specific pet
 <!-- End SDK Available Operations -->
 
 ### Maturity

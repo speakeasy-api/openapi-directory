@@ -16,17 +16,21 @@ const (
 	DetectModerationLabelsXAmzTargetEnumRekognitionServiceDetectModerationLabels DetectModerationLabelsXAmzTargetEnum = "RekognitionService.DetectModerationLabels"
 )
 
+func (e DetectModerationLabelsXAmzTargetEnum) ToPointer() *DetectModerationLabelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectModerationLabelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DetectModerationLabels":
-		*e = DetectModerationLabelsXAmzTargetEnum(s)
+		*e = DetectModerationLabelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectModerationLabelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectModerationLabelsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MlProjectsExplainRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.MlProjectsExplain(ctx, operations.MlProjectsExplainRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudMlV1ExplainRequest: &shared.GoogleCloudMlV1ExplainRequest{
             HTTPBody: &shared.GoogleAPIHTTPBody{
-                ContentType: "provident",
-                Data: "distinctio",
+                ContentType: sdk.String("provident"),
+                Data: sdk.String("distinctio"),
                 Extensions: []map[string]interface{}{
                     map[string]interface{}{
                         "nulla": "corrupti",
@@ -42,21 +43,18 @@ func main() {
                 },
             },
         },
-        AccessToken: "veritatis",
-        Alt: "media",
-        Callback: "perferendis",
-        Fields: "ipsam",
-        Key: "repellendus",
-        Name: "sapiente",
-        OauthToken: "quo",
-        PrettyPrint: false,
-        QuotaUser: "odit",
-        UploadType: "at",
-        UploadProtocol: "at",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.MlProjectsExplain(ctx, req, operations.MlProjectsExplainSecurity{
+        AccessToken: sdk.String("veritatis"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("perferendis"),
+        Fields: sdk.String("ipsam"),
+        Key: sdk.String("repellendus"),
+        Name: "Cedric Connelly",
+        OauthToken: sdk.String("maiores"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.MlProjectsExplainSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

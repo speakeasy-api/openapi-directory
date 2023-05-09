@@ -25,12 +25,16 @@ const (
 	ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnumTooManyRequests     ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum) ToPointer() *ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -44,10 +48,10 @@ func (e *ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum(s)
+		*e = ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetSparkleFeedDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

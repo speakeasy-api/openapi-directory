@@ -15,17 +15,21 @@ const (
 	POSTExportClientVpnClientConfigurationActionEnumExportClientVpnClientConfiguration POSTExportClientVpnClientConfigurationActionEnum = "ExportClientVpnClientConfiguration"
 )
 
+func (e POSTExportClientVpnClientConfigurationActionEnum) ToPointer() *POSTExportClientVpnClientConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTExportClientVpnClientConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExportClientVpnClientConfiguration":
-		*e = POSTExportClientVpnClientConfigurationActionEnum(s)
+		*e = POSTExportClientVpnClientConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExportClientVpnClientConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExportClientVpnClientConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTExportClientVpnClientConfigurationVersionEnumTwoThousandAndSixteen1115 POSTExportClientVpnClientConfigurationVersionEnum = "2016-11-15"
 )
 
+func (e POSTExportClientVpnClientConfigurationVersionEnum) ToPointer() *POSTExportClientVpnClientConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTExportClientVpnClientConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTExportClientVpnClientConfigurationVersionEnum(s)
+		*e = POSTExportClientVpnClientConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExportClientVpnClientConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExportClientVpnClientConfigurationVersionEnum: %v", v)
 	}
 }
 

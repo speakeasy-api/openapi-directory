@@ -16,17 +16,21 @@ const (
 	DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnumAws242ServiceCatalogServiceDisassociateServiceActionFromProvisioningArtifact DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum = "AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact"
 )
 
+func (e DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum) ToPointer() *DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DisassociateServiceActionFromProvisioningArtifact":
-		*e = DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum(s)
+		*e = DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateServiceActionFromProvisioningArtifactXAmzTargetEnum: %v", v)
 	}
 }
 

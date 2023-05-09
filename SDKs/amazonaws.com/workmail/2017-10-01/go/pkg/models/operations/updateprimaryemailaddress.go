@@ -16,17 +16,21 @@ const (
 	UpdatePrimaryEmailAddressXAmzTargetEnumWorkMailServiceUpdatePrimaryEmailAddress UpdatePrimaryEmailAddressXAmzTargetEnum = "WorkMailService.UpdatePrimaryEmailAddress"
 )
 
+func (e UpdatePrimaryEmailAddressXAmzTargetEnum) ToPointer() *UpdatePrimaryEmailAddressXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePrimaryEmailAddressXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.UpdatePrimaryEmailAddress":
-		*e = UpdatePrimaryEmailAddressXAmzTargetEnum(s)
+		*e = UpdatePrimaryEmailAddressXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePrimaryEmailAddressXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePrimaryEmailAddressXAmzTargetEnum: %v", v)
 	}
 }
 

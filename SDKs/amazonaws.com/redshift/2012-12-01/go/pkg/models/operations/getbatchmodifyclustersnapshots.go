@@ -15,17 +15,21 @@ const (
 	GETBatchModifyClusterSnapshotsActionEnumBatchModifyClusterSnapshots GETBatchModifyClusterSnapshotsActionEnum = "BatchModifyClusterSnapshots"
 )
 
+func (e GETBatchModifyClusterSnapshotsActionEnum) ToPointer() *GETBatchModifyClusterSnapshotsActionEnum {
+	return &e
+}
+
 func (e *GETBatchModifyClusterSnapshotsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BatchModifyClusterSnapshots":
-		*e = GETBatchModifyClusterSnapshotsActionEnum(s)
+		*e = GETBatchModifyClusterSnapshotsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBatchModifyClusterSnapshotsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBatchModifyClusterSnapshotsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETBatchModifyClusterSnapshotsVersionEnumTwoThousandAndTwelve1201 GETBatchModifyClusterSnapshotsVersionEnum = "2012-12-01"
 )
 
+func (e GETBatchModifyClusterSnapshotsVersionEnum) ToPointer() *GETBatchModifyClusterSnapshotsVersionEnum {
+	return &e
+}
+
 func (e *GETBatchModifyClusterSnapshotsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETBatchModifyClusterSnapshotsVersionEnum(s)
+		*e = GETBatchModifyClusterSnapshotsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETBatchModifyClusterSnapshotsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETBatchModifyClusterSnapshotsVersionEnum: %v", v)
 	}
 }
 

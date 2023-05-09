@@ -14,17 +14,21 @@ const (
 	CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnumVpc CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum = "vpc"
 )
 
+func (e CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum) ToPointer() *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
-		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum(s)
+		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum: %v", v)
 	}
 }
 
@@ -36,19 +40,23 @@ const (
 	CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnumNetworkInterface CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum = "network-interface"
 )
 
+func (e CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum) ToPointer() *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "load-balancer":
 		fallthrough
 	case "network-interface":
-		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum(s)
+		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum: %v", v)
 	}
 }
 
@@ -60,19 +68,23 @@ const (
 	CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnumHTTPS CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum = "https"
 )
 
+func (e CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum) ToPointer() *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "https":
-		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum(s)
+		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -92,19 +104,23 @@ const (
 	CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnumHTTPS CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum = "https"
 )
 
+func (e CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum) ToPointer() *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "https":
-		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum(s)
+		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -126,12 +142,16 @@ const (
 	CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnumDeleted  CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum = "deleted"
 )
 
+func (e CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum) ToPointer() *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -141,10 +161,10 @@ func (e *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum)
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum(s)
+		*e = CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum: %v", v)
 	}
 }
 
@@ -160,7 +180,7 @@ type CreateVerifiedAccessEndpointResultVerifiedAccessEndpointTags struct {
 	Value *string
 }
 
-// CreateVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Amazon Web Services Verified Access endpoint.
+// CreateVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Verified Access endpoint.
 type CreateVerifiedAccessEndpointResultVerifiedAccessEndpoint struct {
 	ApplicationDomain        *string
 	AttachmentType           *CreateVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum

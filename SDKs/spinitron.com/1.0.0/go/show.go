@@ -139,7 +139,10 @@ func (s *show) GetShows(ctx context.Context, request operations.GetShowsRequest)
 // Status 404 is returned if a show with {id} does not exist or if it does but all its scheduled occurences elapsed in the past.
 func (s *show) GetShowsID(ctx context.Context, request operations.GetShowsIDRequest) (*operations.GetShowsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/shows/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/shows/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

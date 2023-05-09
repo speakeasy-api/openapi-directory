@@ -98,12 +98,16 @@ const (
 	CreateRouteTableRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateRouteTableRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateRouteTableRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateRouteTableRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateRouteTableRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateRouteTableRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateRouteTableRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateRouteTableRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRouteTableRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRouteTableRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

@@ -2,52 +2,50 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(ctx, operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CertificateIssuanceConfigInput: &shared.CertificateIssuanceConfigInput{
             CertificateAuthorityConfig: &shared.CertificateAuthorityConfig{
                 CertificateAuthorityServiceConfig: &shared.CertificateAuthorityServiceConfig{
-                    CaPool: "provident",
+                    CaPool: sdk.String("provident"),
                 },
             },
-            Description: "distinctio",
-            KeyAlgorithm: "ECDSA_P256",
+            Description: sdk.String("distinctio"),
+            KeyAlgorithm: shared.CertificateIssuanceConfigKeyAlgorithmEnumEcdsaP256.ToPointer(),
             Labels: map[string]string{
                 "nulla": "corrupti",
                 "illum": "vel",
                 "error": "deserunt",
             },
-            Lifetime: "suscipit",
-            Name: "iure",
-            RotationWindowPercentage: 297534,
+            Lifetime: sdk.String("suscipit"),
+            Name: sdk.String("Dr. Valerie Toy"),
+            RotationWindowPercentage: sdk.Int(383441),
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        CertificateIssuanceConfigID: "tempora",
-        Fields: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
-        Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        UploadType: "iusto",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(ctx, req, operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        CertificateIssuanceConfigID: sdk.String("voluptatum"),
+        Fields: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        Parent: "recusandae",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("temporibus"),
+        UploadType: sdk.String("ab"),
+        UploadProtocol: sdk.String("quis"),
+    }, operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -14,18 +14,22 @@ const (
 	StatisticalIssueStatusEnumNoIssueDetected        StatisticalIssueStatusEnum = "NO_ISSUE_DETECTED"
 )
 
+func (e StatisticalIssueStatusEnum) ToPointer() *StatisticalIssueStatusEnum {
+	return &e
+}
+
 func (e *StatisticalIssueStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POTENTIAL_ISSUE_DETECTED":
 		fallthrough
 	case "NO_ISSUE_DETECTED":
-		*e = StatisticalIssueStatusEnum(s)
+		*e = StatisticalIssueStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatisticalIssueStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StatisticalIssueStatusEnum: %v", v)
 	}
 }

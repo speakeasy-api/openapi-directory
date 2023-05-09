@@ -22,12 +22,16 @@ const (
 	ComparisonOperatorEnumNotInSet          ComparisonOperatorEnum = "not-in-set"
 )
 
+func (e ComparisonOperatorEnum) ToPointer() *ComparisonOperatorEnum {
+	return &e
+}
+
 func (e *ComparisonOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "less-than":
 		fallthrough
 	case "less-than-equals":
@@ -47,9 +51,9 @@ func (e *ComparisonOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "in-set":
 		fallthrough
 	case "not-in-set":
-		*e = ComparisonOperatorEnum(s)
+		*e = ComparisonOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComparisonOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ComparisonOperatorEnum: %v", v)
 	}
 }

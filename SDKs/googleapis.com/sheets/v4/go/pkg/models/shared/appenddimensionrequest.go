@@ -16,21 +16,25 @@ const (
 	AppendDimensionRequestDimensionEnumColumns              AppendDimensionRequestDimensionEnum = "COLUMNS"
 )
 
+func (e AppendDimensionRequestDimensionEnum) ToPointer() *AppendDimensionRequestDimensionEnum {
+	return &e
+}
+
 func (e *AppendDimensionRequestDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = AppendDimensionRequestDimensionEnum(s)
+		*e = AppendDimensionRequestDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppendDimensionRequestDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for AppendDimensionRequestDimensionEnum: %v", v)
 	}
 }
 

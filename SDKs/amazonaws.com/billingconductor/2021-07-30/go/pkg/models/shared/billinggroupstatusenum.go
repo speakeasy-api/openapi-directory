@@ -14,18 +14,22 @@ const (
 	BillingGroupStatusEnumPrimaryAccountMissing BillingGroupStatusEnum = "PRIMARY_ACCOUNT_MISSING"
 )
 
+func (e BillingGroupStatusEnum) ToPointer() *BillingGroupStatusEnum {
+	return &e
+}
+
 func (e *BillingGroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PRIMARY_ACCOUNT_MISSING":
-		*e = BillingGroupStatusEnum(s)
+		*e = BillingGroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingGroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingGroupStatusEnum: %v", v)
 	}
 }

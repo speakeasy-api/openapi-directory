@@ -20,12 +20,16 @@ const (
 	OBExternalAccountSubType1CodeEnumSavings        OBExternalAccountSubType1CodeEnum = "Savings"
 )
 
+func (e OBExternalAccountSubType1CodeEnum) ToPointer() *OBExternalAccountSubType1CodeEnum {
+	return &e
+}
+
 func (e *OBExternalAccountSubType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChargeCard":
 		fallthrough
 	case "CreditCard":
@@ -41,9 +45,9 @@ func (e *OBExternalAccountSubType1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "PrePaidCard":
 		fallthrough
 	case "Savings":
-		*e = OBExternalAccountSubType1CodeEnum(s)
+		*e = OBExternalAccountSubType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBExternalAccountSubType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBExternalAccountSubType1CodeEnum: %v", v)
 	}
 }

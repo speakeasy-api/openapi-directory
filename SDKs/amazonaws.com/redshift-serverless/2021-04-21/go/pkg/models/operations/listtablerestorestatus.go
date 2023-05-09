@@ -16,17 +16,21 @@ const (
 	ListTableRestoreStatusXAmzTargetEnumRedshiftServerlessListTableRestoreStatus ListTableRestoreStatusXAmzTargetEnum = "RedshiftServerless.ListTableRestoreStatus"
 )
 
+func (e ListTableRestoreStatusXAmzTargetEnum) ToPointer() *ListTableRestoreStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTableRestoreStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.ListTableRestoreStatus":
-		*e = ListTableRestoreStatusXAmzTargetEnum(s)
+		*e = ListTableRestoreStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTableRestoreStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTableRestoreStatusXAmzTargetEnum: %v", v)
 	}
 }
 

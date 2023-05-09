@@ -32,12 +32,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnumRefundReverse                   GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum = "REFUND_REVERSE"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSACTION_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MERCHANT_APPROVE":
@@ -75,10 +79,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum) Unmarsha
 	case "REFUND":
 		fallthrough
 	case "REFUND_REVERSE":
-		*e = GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum: %v", v)
 	}
 }
 

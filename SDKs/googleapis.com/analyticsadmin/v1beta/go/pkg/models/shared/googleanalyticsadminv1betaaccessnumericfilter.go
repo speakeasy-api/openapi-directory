@@ -19,12 +19,16 @@ const (
 	GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnumGreaterThanOrEqual   GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum = "GREATER_THAN_OR_EQUAL"
 )
 
+func (e GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum) ToPointer() *GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATION_UNSPECIFIED":
 		fallthrough
 	case "EQUAL":
@@ -36,10 +40,10 @@ func (e *GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum) UnmarshalJS
 	case "GREATER_THAN":
 		fallthrough
 	case "GREATER_THAN_OR_EQUAL":
-		*e = GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum(s)
+		*e = GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessNumericFilterOperationEnum: %v", v)
 	}
 }
 

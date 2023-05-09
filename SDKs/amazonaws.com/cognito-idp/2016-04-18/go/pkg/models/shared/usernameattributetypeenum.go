@@ -14,18 +14,22 @@ const (
 	UsernameAttributeTypeEnumEmail       UsernameAttributeTypeEnum = "email"
 )
 
+func (e UsernameAttributeTypeEnum) ToPointer() *UsernameAttributeTypeEnum {
+	return &e
+}
+
 func (e *UsernameAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "phone_number":
 		fallthrough
 	case "email":
-		*e = UsernameAttributeTypeEnum(s)
+		*e = UsernameAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsernameAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsernameAttributeTypeEnum: %v", v)
 	}
 }

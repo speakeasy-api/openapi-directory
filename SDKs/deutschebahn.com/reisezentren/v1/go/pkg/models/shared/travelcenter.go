@@ -26,19 +26,23 @@ const (
 	TravelCenterTypeEnumMobilityCenter TravelCenterTypeEnum = "Mobility Center"
 )
 
+func (e TravelCenterTypeEnum) ToPointer() *TravelCenterTypeEnum {
+	return &e
+}
+
 func (e *TravelCenterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Reisezentrum":
 		fallthrough
 	case "Mobility Center":
-		*e = TravelCenterTypeEnum(s)
+		*e = TravelCenterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelCenterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelCenterTypeEnum: %v", v)
 	}
 }
 

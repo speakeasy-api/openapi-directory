@@ -16,17 +16,21 @@ const (
 	CreateContainerXAmzTargetEnumMediaStore20170901CreateContainer CreateContainerXAmzTargetEnum = "MediaStore_20170901.CreateContainer"
 )
 
+func (e CreateContainerXAmzTargetEnum) ToPointer() *CreateContainerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateContainerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.CreateContainer":
-		*e = CreateContainerXAmzTargetEnum(s)
+		*e = CreateContainerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateContainerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateContainerXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	PriceClassEnumPriceClassAll PriceClassEnum = "PriceClass_All"
 )
 
+func (e PriceClassEnum) ToPointer() *PriceClassEnum {
+	return &e
+}
+
 func (e *PriceClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PriceClass_100":
 		fallthrough
 	case "PriceClass_200":
 		fallthrough
 	case "PriceClass_All":
-		*e = PriceClassEnum(s)
+		*e = PriceClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceClassEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceClassEnum: %v", v)
 	}
 }

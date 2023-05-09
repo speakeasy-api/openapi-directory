@@ -35,7 +35,10 @@ func newPurchases(defaultClient, securityClient HTTPClient, serverURL, language,
 // PurchasesDelete - Removes an existing Purchase.
 func (s *purchases) PurchasesDelete(ctx context.Context, request operations.PurchasesDeleteRequest) (*operations.PurchasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *purchases) PurchasesProcessBatch(ctx context.Context, request []shared.
 // PurchasesPut - Updates an existing Purchase.
 func (s *purchases) PurchasesPut(ctx context.Context, request operations.PurchasesPutRequest) (*operations.PurchasesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PurchaseDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *purchases) PurchasesPut(ctx context.Context, request operations.Purchas
 // GetV1PurchasesID - Returns information about a single Purchases.
 func (s *purchases) GetV1PurchasesID(ctx context.Context, request operations.GetV1PurchasesIDRequest) (*operations.GetV1PurchasesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/purchases/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

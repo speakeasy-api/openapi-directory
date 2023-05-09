@@ -16,17 +16,21 @@ const (
 	ImportSSHPublicKeyXAmzTargetEnumTransferServiceImportSSHPublicKey ImportSSHPublicKeyXAmzTargetEnum = "TransferService.ImportSshPublicKey"
 )
 
+func (e ImportSSHPublicKeyXAmzTargetEnum) ToPointer() *ImportSSHPublicKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportSSHPublicKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.ImportSshPublicKey":
-		*e = ImportSSHPublicKeyXAmzTargetEnum(s)
+		*e = ImportSSHPublicKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportSSHPublicKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportSSHPublicKeyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	AuditLogConfigLogTypeEnumDataRead           AuditLogConfigLogTypeEnum = "DATA_READ"
 )
 
+func (e AuditLogConfigLogTypeEnum) ToPointer() *AuditLogConfigLogTypeEnum {
+	return &e
+}
+
 func (e *AuditLogConfigLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADMIN_READ":
@@ -30,10 +34,10 @@ func (e *AuditLogConfigLogTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATA_WRITE":
 		fallthrough
 	case "DATA_READ":
-		*e = AuditLogConfigLogTypeEnum(s)
+		*e = AuditLogConfigLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogConfigLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogConfigLogTypeEnum: %v", v)
 	}
 }
 

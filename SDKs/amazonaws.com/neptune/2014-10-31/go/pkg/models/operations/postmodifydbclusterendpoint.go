@@ -15,17 +15,21 @@ const (
 	POSTModifyDBClusterEndpointActionEnumModifyDbClusterEndpoint POSTModifyDBClusterEndpointActionEnum = "ModifyDBClusterEndpoint"
 )
 
+func (e POSTModifyDBClusterEndpointActionEnum) ToPointer() *POSTModifyDBClusterEndpointActionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBClusterEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBClusterEndpoint":
-		*e = POSTModifyDBClusterEndpointActionEnum(s)
+		*e = POSTModifyDBClusterEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBClusterEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBClusterEndpointActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyDBClusterEndpointVersionEnumTwoThousandAndFourteen1031 POSTModifyDBClusterEndpointVersionEnum = "2014-10-31"
 )
 
+func (e POSTModifyDBClusterEndpointVersionEnum) ToPointer() *POSTModifyDBClusterEndpointVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyDBClusterEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTModifyDBClusterEndpointVersionEnum(s)
+		*e = POSTModifyDBClusterEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyDBClusterEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyDBClusterEndpointVersionEnum: %v", v)
 	}
 }
 

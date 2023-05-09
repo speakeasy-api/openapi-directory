@@ -2,7 +2,7 @@
 
 package shared
 
-// AppEngineVersionEndpoint - Wrapper for app engine service version attributes.
+// AppEngineVersionEndpoint - Wrapper for the App Engine service version attributes.
 type AppEngineVersionEndpoint struct {
 	// An [App Engine](https://cloud.google.com/appengine) [service version](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions) name.
 	URI *string `json:"uri,omitempty"`

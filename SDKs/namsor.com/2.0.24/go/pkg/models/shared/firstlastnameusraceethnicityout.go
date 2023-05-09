@@ -19,12 +19,16 @@ const (
 	FirstLastNameUSRaceEthnicityOutRaceEthnicityEnumPi   FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum = "PI"
 )
 
+func (e FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum) ToPointer() *FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum {
+	return &e
+}
+
 func (e *FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "W_NL":
 		fallthrough
 	case "HL":
@@ -36,10 +40,10 @@ func (e *FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum) UnmarshalJSON(data []
 	case "AI_AN":
 		fallthrough
 	case "PI":
-		*e = FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum(s)
+		*e = FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstLastNameUSRaceEthnicityOutRaceEthnicityEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnumPi   FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum = "PI"
 )
 
+func (e FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum) ToPointer() *FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum {
+	return &e
+}
+
 func (e *FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "W_NL":
 		fallthrough
 	case "HL":
@@ -72,10 +80,10 @@ func (e *FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum) UnmarshalJSON(data
 	case "AI_AN":
 		fallthrough
 	case "PI":
-		*e = FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum(s)
+		*e = FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstLastNameUSRaceEthnicityOutRaceEthnicityAltEnum: %v", v)
 	}
 }
 

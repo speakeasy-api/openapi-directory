@@ -16,17 +16,21 @@ const (
 	BatchGetPreparedStatementXAmzTargetEnumAmazonAthenaBatchGetPreparedStatement BatchGetPreparedStatementXAmzTargetEnum = "AmazonAthena.BatchGetPreparedStatement"
 )
 
+func (e BatchGetPreparedStatementXAmzTargetEnum) ToPointer() *BatchGetPreparedStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetPreparedStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.BatchGetPreparedStatement":
-		*e = BatchGetPreparedStatementXAmzTargetEnum(s)
+		*e = BatchGetPreparedStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetPreparedStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetPreparedStatementXAmzTargetEnum: %v", v)
 	}
 }
 

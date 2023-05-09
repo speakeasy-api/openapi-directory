@@ -17,19 +17,23 @@ const (
 	USLocalAccountIdentificationAccountTypeEnumSavings  USLocalAccountIdentificationAccountTypeEnum = "savings"
 )
 
+func (e USLocalAccountIdentificationAccountTypeEnum) ToPointer() *USLocalAccountIdentificationAccountTypeEnum {
+	return &e
+}
+
 func (e *USLocalAccountIdentificationAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "checking":
 		fallthrough
 	case "savings":
-		*e = USLocalAccountIdentificationAccountTypeEnum(s)
+		*e = USLocalAccountIdentificationAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for USLocalAccountIdentificationAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for USLocalAccountIdentificationAccountTypeEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	USLocalAccountIdentificationTypeEnumUsLocal USLocalAccountIdentificationTypeEnum = "usLocal"
 )
 
+func (e USLocalAccountIdentificationTypeEnum) ToPointer() *USLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *USLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "usLocal":
-		*e = USLocalAccountIdentificationTypeEnum(s)
+		*e = USLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for USLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for USLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 
-// USLocalAccountIdentification - Bank account identification.
+// USLocalAccountIdentification - Contains the business account details. Returned when you create a payment instrument with `type` **bankAccount**.
 type USLocalAccountIdentification struct {
 	// The bank account number, without separators or whitespace.
 	AccountNumber string `json:"accountNumber"`

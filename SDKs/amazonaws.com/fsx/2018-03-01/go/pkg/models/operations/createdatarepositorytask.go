@@ -16,17 +16,21 @@ const (
 	CreateDataRepositoryTaskXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateDataRepositoryTask CreateDataRepositoryTaskXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateDataRepositoryTask"
 )
 
+func (e CreateDataRepositoryTaskXAmzTargetEnum) ToPointer() *CreateDataRepositoryTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDataRepositoryTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateDataRepositoryTask":
-		*e = CreateDataRepositoryTaskXAmzTargetEnum(s)
+		*e = CreateDataRepositoryTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDataRepositoryTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDataRepositoryTaskXAmzTargetEnum: %v", v)
 	}
 }
 

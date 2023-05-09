@@ -16,17 +16,21 @@ const (
 	DescribeVirtualInterfacesXAmzTargetEnumOvertureServiceDescribeVirtualInterfaces DescribeVirtualInterfacesXAmzTargetEnum = "OvertureService.DescribeVirtualInterfaces"
 )
 
+func (e DescribeVirtualInterfacesXAmzTargetEnum) ToPointer() *DescribeVirtualInterfacesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeVirtualInterfacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeVirtualInterfaces":
-		*e = DescribeVirtualInterfacesXAmzTargetEnum(s)
+		*e = DescribeVirtualInterfacesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVirtualInterfacesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVirtualInterfacesXAmzTargetEnum: %v", v)
 	}
 }
 

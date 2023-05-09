@@ -16,12 +16,16 @@ const (
 	ListNotificationRulesFilterNameEnumTargetAddress ListNotificationRulesFilterNameEnum = "TARGET_ADDRESS"
 )
 
+func (e ListNotificationRulesFilterNameEnum) ToPointer() *ListNotificationRulesFilterNameEnum {
+	return &e
+}
+
 func (e *ListNotificationRulesFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_TYPE_ID":
 		fallthrough
 	case "CREATED_BY":
@@ -29,9 +33,9 @@ func (e *ListNotificationRulesFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "RESOURCE":
 		fallthrough
 	case "TARGET_ADDRESS":
-		*e = ListNotificationRulesFilterNameEnum(s)
+		*e = ListNotificationRulesFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListNotificationRulesFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ListNotificationRulesFilterNameEnum: %v", v)
 	}
 }

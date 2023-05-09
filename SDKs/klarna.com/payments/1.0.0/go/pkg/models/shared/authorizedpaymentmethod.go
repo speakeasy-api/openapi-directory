@@ -23,12 +23,16 @@ const (
 	AuthorizedPaymentMethodTypeEnumFixedSumCredit     AuthorizedPaymentMethodTypeEnum = "fixed_sum_credit"
 )
 
+func (e AuthorizedPaymentMethodTypeEnum) ToPointer() *AuthorizedPaymentMethodTypeEnum {
+	return &e
+}
+
 func (e *AuthorizedPaymentMethodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invoice":
 		fallthrough
 	case "fixed_amount":
@@ -50,10 +54,10 @@ func (e *AuthorizedPaymentMethodTypeEnum) UnmarshalJSON(data []byte) error {
 	case "pay_by_card":
 		fallthrough
 	case "fixed_sum_credit":
-		*e = AuthorizedPaymentMethodTypeEnum(s)
+		*e = AuthorizedPaymentMethodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedPaymentMethodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedPaymentMethodTypeEnum: %v", v)
 	}
 }
 

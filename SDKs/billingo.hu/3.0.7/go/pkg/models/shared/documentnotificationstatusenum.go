@@ -18,12 +18,16 @@ const (
 	DocumentNotificationStatusEnumReaded     DocumentNotificationStatusEnum = "readed"
 )
 
+func (e DocumentNotificationStatusEnum) ToPointer() *DocumentNotificationStatusEnum {
+	return &e
+}
+
 func (e *DocumentNotificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "closed":
 		fallthrough
 	case "downloaded":
@@ -35,9 +39,9 @@ func (e *DocumentNotificationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "opened":
 		fallthrough
 	case "readed":
-		*e = DocumentNotificationStatusEnum(s)
+		*e = DocumentNotificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentNotificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentNotificationStatusEnum: %v", v)
 	}
 }

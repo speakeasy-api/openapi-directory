@@ -17,12 +17,16 @@ const (
 	EmploymentBasisEnumSuperincomestream EmploymentBasisEnum = "SUPERINCOMESTREAM"
 )
 
+func (e EmploymentBasisEnum) ToPointer() *EmploymentBasisEnum {
+	return &e
+}
+
 func (e *EmploymentBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULLTIME":
 		fallthrough
 	case "PARTTIME":
@@ -32,9 +36,9 @@ func (e *EmploymentBasisEnum) UnmarshalJSON(data []byte) error {
 	case "LABOURHIRE":
 		fallthrough
 	case "SUPERINCOMESTREAM":
-		*e = EmploymentBasisEnum(s)
+		*e = EmploymentBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EmploymentBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for EmploymentBasisEnum: %v", v)
 	}
 }

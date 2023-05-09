@@ -18,12 +18,16 @@ const (
 	CEStatusEnumInvalid  CEStatusEnum = "INVALID"
 )
 
+func (e CEStatusEnum) ToPointer() *CEStatusEnum {
+	return &e
+}
+
 func (e *CEStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "UPDATING":
@@ -35,9 +39,9 @@ func (e *CEStatusEnum) UnmarshalJSON(data []byte) error {
 	case "VALID":
 		fallthrough
 	case "INVALID":
-		*e = CEStatusEnum(s)
+		*e = CEStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CEStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CEStatusEnum: %v", v)
 	}
 }

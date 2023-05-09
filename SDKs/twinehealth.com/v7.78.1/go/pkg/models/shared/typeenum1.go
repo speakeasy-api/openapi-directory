@@ -13,16 +13,20 @@ const (
 	TypeEnum1CalendarEventResponse TypeEnum1 = "calendar_event_response"
 )
 
+func (e TypeEnum1) ToPointer() *TypeEnum1 {
+	return &e
+}
+
 func (e *TypeEnum1) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "calendar_event_response":
-		*e = TypeEnum1(s)
+		*e = TypeEnum1(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeEnum1: %s", s)
+		return fmt.Errorf("invalid value for TypeEnum1: %v", v)
 	}
 }

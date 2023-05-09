@@ -15,17 +15,21 @@ const (
 	GETDeleteFpgaImageActionEnumDeleteFpgaImage GETDeleteFpgaImageActionEnum = "DeleteFpgaImage"
 )
 
+func (e GETDeleteFpgaImageActionEnum) ToPointer() *GETDeleteFpgaImageActionEnum {
+	return &e
+}
+
 func (e *GETDeleteFpgaImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteFpgaImage":
-		*e = GETDeleteFpgaImageActionEnum(s)
+		*e = GETDeleteFpgaImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteFpgaImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteFpgaImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteFpgaImageVersionEnumTwoThousandAndSixteen1115 GETDeleteFpgaImageVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteFpgaImageVersionEnum) ToPointer() *GETDeleteFpgaImageVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteFpgaImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteFpgaImageVersionEnum(s)
+		*e = GETDeleteFpgaImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteFpgaImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteFpgaImageVersionEnum: %v", v)
 	}
 }
 

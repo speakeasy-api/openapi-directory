@@ -15,17 +15,21 @@ const (
 	POSTRollbackInstanceRefreshActionEnumRollbackInstanceRefresh POSTRollbackInstanceRefreshActionEnum = "RollbackInstanceRefresh"
 )
 
+func (e POSTRollbackInstanceRefreshActionEnum) ToPointer() *POSTRollbackInstanceRefreshActionEnum {
+	return &e
+}
+
 func (e *POSTRollbackInstanceRefreshActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RollbackInstanceRefresh":
-		*e = POSTRollbackInstanceRefreshActionEnum(s)
+		*e = POSTRollbackInstanceRefreshActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRollbackInstanceRefreshActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRollbackInstanceRefreshActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRollbackInstanceRefreshVersionEnumTwoThousandAndEleven0101 POSTRollbackInstanceRefreshVersionEnum = "2011-01-01"
 )
 
+func (e POSTRollbackInstanceRefreshVersionEnum) ToPointer() *POSTRollbackInstanceRefreshVersionEnum {
+	return &e
+}
+
 func (e *POSTRollbackInstanceRefreshVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTRollbackInstanceRefreshVersionEnum(s)
+		*e = POSTRollbackInstanceRefreshVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRollbackInstanceRefreshVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRollbackInstanceRefreshVersionEnum: %v", v)
 	}
 }
 

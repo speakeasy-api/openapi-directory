@@ -17,19 +17,23 @@ const (
 	TransferInstrumentTypeEnumRecurringDetail TransferInstrumentTypeEnum = "recurringDetail"
 )
 
+func (e TransferInstrumentTypeEnum) ToPointer() *TransferInstrumentTypeEnum {
+	return &e
+}
+
 func (e *TransferInstrumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bankAccount":
 		fallthrough
 	case "recurringDetail":
-		*e = TransferInstrumentTypeEnum(s)
+		*e = TransferInstrumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferInstrumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferInstrumentTypeEnum: %v", v)
 	}
 }
 

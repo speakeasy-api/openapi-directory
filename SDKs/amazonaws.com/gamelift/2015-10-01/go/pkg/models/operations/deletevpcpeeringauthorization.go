@@ -16,17 +16,21 @@ const (
 	DeleteVpcPeeringAuthorizationXAmzTargetEnumGameLiftDeleteVpcPeeringAuthorization DeleteVpcPeeringAuthorizationXAmzTargetEnum = "GameLift.DeleteVpcPeeringAuthorization"
 )
 
+func (e DeleteVpcPeeringAuthorizationXAmzTargetEnum) ToPointer() *DeleteVpcPeeringAuthorizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVpcPeeringAuthorizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DeleteVpcPeeringAuthorization":
-		*e = DeleteVpcPeeringAuthorizationXAmzTargetEnum(s)
+		*e = DeleteVpcPeeringAuthorizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVpcPeeringAuthorizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVpcPeeringAuthorizationXAmzTargetEnum: %v", v)
 	}
 }
 

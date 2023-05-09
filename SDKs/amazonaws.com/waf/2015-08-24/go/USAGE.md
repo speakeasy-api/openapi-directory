@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,23 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.CreateByteMatchSetRequest{
+    ctx := context.Background()
+    res, err := s.CreateByteMatchSet(ctx, operations.CreateByteMatchSetRequest{
         CreateByteMatchSetRequest: shared.CreateByteMatchSetRequest{
             ChangeToken: "corrupti",
-            Name: "provident",
+            Name: "Kelvin Sporer",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "AWSWAF_20150824.CreateByteMatchSet",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateByteMatchSet(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+        XAmzTarget: operations.CreateByteMatchSetXAmzTargetEnumAwswaf20150824CreateByteMatchSet,
+    })
     if err != nil {
         log.Fatal(err)
     }

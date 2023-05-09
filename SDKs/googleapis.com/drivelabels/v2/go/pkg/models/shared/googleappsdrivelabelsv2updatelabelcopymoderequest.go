@@ -17,12 +17,16 @@ const (
 	GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnumCopyAppliable       GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum = "COPY_APPLIABLE"
 )
 
+func (e GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum) ToPointer() *GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COPY_MODE_UNSPECIFIED":
 		fallthrough
 	case "DO_NOT_COPY":
@@ -30,10 +34,10 @@ func (e *GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum) Unmarsha
 	case "ALWAYS_COPY":
 		fallthrough
 	case "COPY_APPLIABLE":
-		*e = GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum(s)
+		*e = GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestCopyModeEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnumLabelViewFull  GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum = "LABEL_VIEW_FULL"
 )
 
+func (e GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum) ToPointer() *GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_VIEW_BASIC":
 		fallthrough
 	case "LABEL_VIEW_FULL":
-		*e = GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum(s)
+		*e = GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2UpdateLabelCopyModeRequestViewEnum: %v", v)
 	}
 }
 

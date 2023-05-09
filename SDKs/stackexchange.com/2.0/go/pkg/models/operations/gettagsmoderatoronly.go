@@ -16,19 +16,23 @@ const (
 	GetTagsModeratorOnlyOrderEnumAsc  GetTagsModeratorOnlyOrderEnum = "asc"
 )
 
+func (e GetTagsModeratorOnlyOrderEnum) ToPointer() *GetTagsModeratorOnlyOrderEnum {
+	return &e
+}
+
 func (e *GetTagsModeratorOnlyOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetTagsModeratorOnlyOrderEnum(s)
+		*e = GetTagsModeratorOnlyOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsModeratorOnlyOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsModeratorOnlyOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetTagsModeratorOnlySortEnumName     GetTagsModeratorOnlySortEnum = "name"
 )
 
+func (e GetTagsModeratorOnlySortEnum) ToPointer() *GetTagsModeratorOnlySortEnum {
+	return &e
+}
+
 func (e *GetTagsModeratorOnlySortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "popular":
 		fallthrough
 	case "activity":
 		fallthrough
 	case "name":
-		*e = GetTagsModeratorOnlySortEnum(s)
+		*e = GetTagsModeratorOnlySortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTagsModeratorOnlySortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTagsModeratorOnlySortEnum: %v", v)
 	}
 }
 

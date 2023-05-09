@@ -15,20 +15,24 @@ const (
 	EarthObservationJobExportStatusEnumFailed     EarthObservationJobExportStatusEnum = "FAILED"
 )
 
+func (e EarthObservationJobExportStatusEnum) ToPointer() *EarthObservationJobExportStatusEnum {
+	return &e
+}
+
 func (e *EarthObservationJobExportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = EarthObservationJobExportStatusEnum(s)
+		*e = EarthObservationJobExportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EarthObservationJobExportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EarthObservationJobExportStatusEnum: %v", v)
 	}
 }

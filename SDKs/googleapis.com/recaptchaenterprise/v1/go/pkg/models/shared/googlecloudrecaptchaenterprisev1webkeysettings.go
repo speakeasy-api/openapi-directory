@@ -17,12 +17,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnumSecurity                               GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum = "SECURITY"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED":
 		fallthrough
 	case "USABILITY":
@@ -30,10 +34,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferen
 	case "BALANCE":
 		fallthrough
 	case "SECURITY":
-		*e = GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnumInvisible                  GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum = "INVISIBLE"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SCORE":
@@ -60,10 +68,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum) Unma
 	case "CHECKBOX":
 		fallthrough
 	case "INVISIBLE":
-		*e = GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	RacesScheduleFormatEnumJSON RacesScheduleFormatEnum = "json"
 )
 
+func (e RacesScheduleFormatEnum) ToPointer() *RacesScheduleFormatEnum {
+	return &e
+}
+
 func (e *RacesScheduleFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = RacesScheduleFormatEnum(s)
+		*e = RacesScheduleFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RacesScheduleFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RacesScheduleFormatEnum: %v", v)
 	}
 }
 

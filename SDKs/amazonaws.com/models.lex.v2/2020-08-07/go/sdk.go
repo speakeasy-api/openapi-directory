@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p/>
 // https://docs.aws.amazon.com/models-v2-lex/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // BatchCreateCustomVocabularyItem - Create a batch of custom vocabulary items for a given bot locale's custom vocabulary.
 func (s *SDK) BatchCreateCustomVocabularyItem(ctx context.Context, request operations.BatchCreateCustomVocabularyItemRequest) (*operations.BatchCreateCustomVocabularyItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchcreate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchcreate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -220,7 +238,10 @@ func (s *SDK) BatchCreateCustomVocabularyItem(ctx context.Context, request opera
 // BatchDeleteCustomVocabularyItem - Delete a batch of custom vocabulary items for a given bot locale's custom vocabulary.
 func (s *SDK) BatchDeleteCustomVocabularyItem(ctx context.Context, request operations.BatchDeleteCustomVocabularyItemRequest) (*operations.BatchDeleteCustomVocabularyItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchdelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchdelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -326,7 +347,10 @@ func (s *SDK) BatchDeleteCustomVocabularyItem(ctx context.Context, request opera
 // BatchUpdateCustomVocabularyItem - Update a batch of custom vocabulary items for a given bot locale's custom vocabulary.
 func (s *SDK) BatchUpdateCustomVocabularyItem(ctx context.Context, request operations.BatchUpdateCustomVocabularyItemRequest) (*operations.BatchUpdateCustomVocabularyItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchupdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/batchupdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -432,7 +456,10 @@ func (s *SDK) BatchUpdateCustomVocabularyItem(ctx context.Context, request opera
 // BuildBotLocale - Builds a bot, its intents, and its slot types into a specific locale. A bot can be built into multiple locales. At runtime the locale is used to choose a specific build of the bot.
 func (s *SDK) BuildBotLocale(ctx context.Context, request operations.BuildBotLocaleRequest) (*operations.BuildBotLocaleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -654,7 +681,10 @@ func (s *SDK) CreateBot(ctx context.Context, request operations.CreateBotRequest
 // CreateBotAlias - <p>Creates an alias for the specified version of a bot. Use an alias to enable you to change the version of a bot without updating applications that use the bot.</p> <p>For example, you can create an alias called "PROD" that your applications use to call the Amazon Lex bot. </p>
 func (s *SDK) CreateBotAlias(ctx context.Context, request operations.CreateBotAliasRequest) (*operations.CreateBotAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -770,7 +800,10 @@ func (s *SDK) CreateBotAlias(ctx context.Context, request operations.CreateBotAl
 // CreateBotLocale - Creates a locale in the bot. The locale contains the intents and slot types that the bot uses in conversations with users in the specified language and locale. You must add a locale to a bot before you can add intents and slot types to the bot.
 func (s *SDK) CreateBotLocale(ctx context.Context, request operations.CreateBotLocaleRequest) (*operations.CreateBotLocaleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -886,7 +919,10 @@ func (s *SDK) CreateBotLocale(ctx context.Context, request operations.CreateBotL
 // CreateBotVersion - <p>Creates a new version of the bot based on the <code>DRAFT</code> version. If the <code>DRAFT</code> version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version, it returns the last created version.</p> <p>When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1.</p>
 func (s *SDK) CreateBotVersion(ctx context.Context, request operations.CreateBotVersionRequest) (*operations.CreateBotVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1118,7 +1154,10 @@ func (s *SDK) CreateExport(ctx context.Context, request operations.CreateExportR
 // CreateIntent - <p>Creates an intent.</p> <p>To define the interaction between the user and your bot, you define one or more intents. For example, for a pizza ordering bot you would create an <code>OrderPizza</code> intent.</p> <p>When you create an intent, you must provide a name. You can optionally provide the following:</p> <ul> <li> <p>Sample utterances. For example, "I want to order a pizza" and "Can I order a pizza." You can't provide utterances for built-in intents.</p> </li> <li> <p>Information to be gathered. You specify slots for the information that you bot requests from the user. You can specify standard slot types, such as date and time, or custom slot types for your application.</p> </li> <li> <p>How the intent is fulfilled. You can provide a Lambda function or configure the intent to return the intent information to your client application. If you use a Lambda function, Amazon Lex invokes the function when all of the intent information is available.</p> </li> <li> <p>A confirmation prompt to send to the user to confirm an intent. For example, "Shall I order your pizza?"</p> </li> <li> <p>A conclusion statement to send to the user after the intent is fulfilled. For example, "I ordered your pizza."</p> </li> <li> <p>A follow-up prompt that asks the user for additional activity. For example, "Do you want a drink with your pizza?"</p> </li> </ul>
 func (s *SDK) CreateIntent(ctx context.Context, request operations.CreateIntentRequest) (*operations.CreateIntentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1234,7 +1273,10 @@ func (s *SDK) CreateIntent(ctx context.Context, request operations.CreateIntentR
 // CreateResourcePolicy - Creates a new resource policy with the specified policy statements.
 func (s *SDK) CreateResourcePolicy(ctx context.Context, request operations.CreateResourcePolicyRequest) (*operations.CreateResourcePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1350,7 +1392,10 @@ func (s *SDK) CreateResourcePolicy(ctx context.Context, request operations.Creat
 // CreateResourcePolicyStatement - <p>Adds a new resource policy statement to a bot or bot alias. If a resource policy exists, the statement is added to the current resource policy. If a policy doesn't exist, a new policy is created.</p> <p>You can't create a resource policy statement that allows cross-account access.</p>
 func (s *SDK) CreateResourcePolicyStatement(ctx context.Context, request operations.CreateResourcePolicyStatementRequest) (*operations.CreateResourcePolicyStatementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/statements/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/statements/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1480,7 +1525,10 @@ func (s *SDK) CreateResourcePolicyStatement(ctx context.Context, request operati
 // CreateSlot - Creates a slot in an intent. A slot is a variable needed to fulfill an intent. For example, an <code>OrderPizza</code> intent might need slots for size, crust, and number of pizzas. For each slot, you define one or more utterances that Amazon Lex uses to elicit a response from the user.
 func (s *SDK) CreateSlot(ctx context.Context, request operations.CreateSlotRequest) (*operations.CreateSlotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1596,7 +1644,10 @@ func (s *SDK) CreateSlot(ctx context.Context, request operations.CreateSlotReque
 // CreateSlotType - <p>Creates a custom slot type</p> <p> To create a custom slot type, specify a name for the slot type and a set of enumeration values, the values that a slot of this type can assume. </p>
 func (s *SDK) CreateSlotType(ctx context.Context, request operations.CreateSlotTypeRequest) (*operations.CreateSlotTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1808,7 +1859,10 @@ func (s *SDK) CreateUploadURL(ctx context.Context, request operations.CreateUplo
 // DeleteBot - <p>Deletes all versions of a bot, including the <code>Draft</code> version. To delete a specific version, use the <code>DeleteBotVersion</code> operation.</p> <p>When you delete a bot, all of the resources contained in the bot are also deleted. Deleting a bot removes all locales, intents, slot, and slot types defined for the bot.</p> <p>If a bot has an alias, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception. If you want to delete the bot and the alias, set the <code>skipResourceInUseCheck</code> parameter to <code>true</code>.</p>
 func (s *SDK) DeleteBot(ctx context.Context, request operations.DeleteBotRequest) (*operations.DeleteBotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1918,7 +1972,10 @@ func (s *SDK) DeleteBot(ctx context.Context, request operations.DeleteBotRequest
 // DeleteBotAlias - Deletes the specified bot alias.
 func (s *SDK) DeleteBotAlias(ctx context.Context, request operations.DeleteBotAliasRequest) (*operations.DeleteBotAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2028,7 +2085,10 @@ func (s *SDK) DeleteBotAlias(ctx context.Context, request operations.DeleteBotAl
 // DeleteBotLocale - <p>Removes a locale from a bot.</p> <p>When you delete a locale, all intents, slots, and slot types defined for the locale are also deleted.</p>
 func (s *SDK) DeleteBotLocale(ctx context.Context, request operations.DeleteBotLocaleRequest) (*operations.DeleteBotLocaleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2134,7 +2194,10 @@ func (s *SDK) DeleteBotLocale(ctx context.Context, request operations.DeleteBotL
 // DeleteBotVersion - Deletes a specific version of a bot. To delete all versions of a bot, use the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DeleteBot.html">DeleteBot</a> operation.
 func (s *SDK) DeleteBotVersion(ctx context.Context, request operations.DeleteBotVersionRequest) (*operations.DeleteBotVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2244,7 +2307,10 @@ func (s *SDK) DeleteBotVersion(ctx context.Context, request operations.DeleteBot
 // DeleteCustomVocabulary - Removes a custom vocabulary from the specified locale in the specified bot.
 func (s *SDK) DeleteCustomVocabulary(ctx context.Context, request operations.DeleteCustomVocabularyRequest) (*operations.DeleteCustomVocabularyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2350,7 +2416,10 @@ func (s *SDK) DeleteCustomVocabulary(ctx context.Context, request operations.Del
 // DeleteExport - Removes a previous export and the associated files stored in an S3 bucket.
 func (s *SDK) DeleteExport(ctx context.Context, request operations.DeleteExportRequest) (*operations.DeleteExportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2446,7 +2515,10 @@ func (s *SDK) DeleteExport(ctx context.Context, request operations.DeleteExportR
 // DeleteImport - Removes a previous import and the associated file stored in an S3 bucket.
 func (s *SDK) DeleteImport(ctx context.Context, request operations.DeleteImportRequest) (*operations.DeleteImportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/imports/{importId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/imports/{importId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2542,7 +2614,10 @@ func (s *SDK) DeleteImport(ctx context.Context, request operations.DeleteImportR
 // DeleteIntent - <p>Removes the specified intent.</p> <p>Deleting an intent also deletes the slots associated with the intent.</p>
 func (s *SDK) DeleteIntent(ctx context.Context, request operations.DeleteIntentRequest) (*operations.DeleteIntentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2639,7 +2714,10 @@ func (s *SDK) DeleteIntent(ctx context.Context, request operations.DeleteIntentR
 // DeleteResourcePolicy - Removes an existing policy from a bot or bot alias. If the resource doesn't have a policy attached, Amazon Lex returns an exception.
 func (s *SDK) DeleteResourcePolicy(ctx context.Context, request operations.DeleteResourcePolicyRequest) (*operations.DeleteResourcePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2729,7 +2807,10 @@ func (s *SDK) DeleteResourcePolicy(ctx context.Context, request operations.Delet
 // DeleteResourcePolicyStatement - Deletes a policy statement from a resource policy. If you delete the last statement from a policy, the policy is deleted. If you specify a statement ID that doesn't exist in the policy, or if the bot or bot alias doesn't have a policy attached, Amazon Lex returns an exception.
 func (s *SDK) DeleteResourcePolicyStatement(ctx context.Context, request operations.DeleteResourcePolicyStatementRequest) (*operations.DeleteResourcePolicyStatementResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/statements/{statementId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/statements/{statementId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2819,7 +2900,10 @@ func (s *SDK) DeleteResourcePolicyStatement(ctx context.Context, request operati
 // DeleteSlot - Deletes the specified slot from an intent.
 func (s *SDK) DeleteSlot(ctx context.Context, request operations.DeleteSlotRequest) (*operations.DeleteSlotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2916,7 +3000,10 @@ func (s *SDK) DeleteSlot(ctx context.Context, request operations.DeleteSlotReque
 // DeleteSlotType - <p>Deletes a slot type from a bot locale.</p> <p>If a slot is using the slot type, Amazon Lex throws a <code>ResourceInUseException</code> exception. To avoid the exception, set the <code>skipResourceInUseCheck</code> parameter to <code>true</code>.</p>
 func (s *SDK) DeleteSlotType(ctx context.Context, request operations.DeleteSlotTypeRequest) (*operations.DeleteSlotTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3017,7 +3104,10 @@ func (s *SDK) DeleteSlotType(ctx context.Context, request operations.DeleteSlotT
 // DeleteUtterances - <p>Deletes stored utterances.</p> <p>Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListAggregatedUtterances.html">ListAggregatedUtterances</a> operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input..</p> <p>Use the <code>DeleteUtterances</code> operation to manually delete utterances for a specific session. When you use the <code>DeleteUtterances</code> operation, utterances stored for improving your bot's ability to respond to user input are deleted immediately. Utterances stored for use with the <code>ListAggregatedUtterances</code> operation are deleted after 15 days.</p>
 func (s *SDK) DeleteUtterances(ctx context.Context, request operations.DeleteUtterancesRequest) (*operations.DeleteUtterancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/utterances/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/utterances/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3097,7 +3187,10 @@ func (s *SDK) DeleteUtterances(ctx context.Context, request operations.DeleteUtt
 // DescribeBot - Provides metadata information about a bot.
 func (s *SDK) DescribeBot(ctx context.Context, request operations.DescribeBotRequest) (*operations.DescribeBotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3193,7 +3286,10 @@ func (s *SDK) DescribeBot(ctx context.Context, request operations.DescribeBotReq
 // DescribeBotAlias - Get information about a specific bot alias.
 func (s *SDK) DescribeBotAlias(ctx context.Context, request operations.DescribeBotAliasRequest) (*operations.DescribeBotAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3289,7 +3385,10 @@ func (s *SDK) DescribeBotAlias(ctx context.Context, request operations.DescribeB
 // DescribeBotLocale - Describes the settings that a bot has for a specific locale.
 func (s *SDK) DescribeBotLocale(ctx context.Context, request operations.DescribeBotLocaleRequest) (*operations.DescribeBotLocaleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3385,7 +3484,10 @@ func (s *SDK) DescribeBotLocale(ctx context.Context, request operations.Describe
 // DescribeBotRecommendation - Provides metadata information about a bot recommendation. This information will enable you to get a description on the request inputs, to download associated transcripts after processing is complete, and to download intents and slot-types generated by the bot recommendation.
 func (s *SDK) DescribeBotRecommendation(ctx context.Context, request operations.DescribeBotRecommendationRequest) (*operations.DescribeBotRecommendationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3471,7 +3573,10 @@ func (s *SDK) DescribeBotRecommendation(ctx context.Context, request operations.
 // DescribeBotVersion - Provides metadata about a version of a bot.
 func (s *SDK) DescribeBotVersion(ctx context.Context, request operations.DescribeBotVersionRequest) (*operations.DescribeBotVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3567,7 +3672,10 @@ func (s *SDK) DescribeBotVersion(ctx context.Context, request operations.Describ
 // DescribeCustomVocabularyMetadata - Provides metadata information about a custom vocabulary.
 func (s *SDK) DescribeCustomVocabularyMetadata(ctx context.Context, request operations.DescribeCustomVocabularyMetadataRequest) (*operations.DescribeCustomVocabularyMetadataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/metadata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/metadata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3663,7 +3771,10 @@ func (s *SDK) DescribeCustomVocabularyMetadata(ctx context.Context, request oper
 // DescribeExport - Gets information about a specific export.
 func (s *SDK) DescribeExport(ctx context.Context, request operations.DescribeExportRequest) (*operations.DescribeExportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3749,7 +3860,10 @@ func (s *SDK) DescribeExport(ctx context.Context, request operations.DescribeExp
 // DescribeImport - Gets information about a specific import.
 func (s *SDK) DescribeImport(ctx context.Context, request operations.DescribeImportRequest) (*operations.DescribeImportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/imports/{importId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/imports/{importId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3835,7 +3949,10 @@ func (s *SDK) DescribeImport(ctx context.Context, request operations.DescribeImp
 // DescribeIntent - Returns metadata about an intent.
 func (s *SDK) DescribeIntent(ctx context.Context, request operations.DescribeIntentRequest) (*operations.DescribeIntentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3931,7 +4048,10 @@ func (s *SDK) DescribeIntent(ctx context.Context, request operations.DescribeInt
 // DescribeResourcePolicy - Gets the resource policy and policy revision for a bot or bot alias.
 func (s *SDK) DescribeResourcePolicy(ctx context.Context, request operations.DescribeResourcePolicyRequest) (*operations.DescribeResourcePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4007,7 +4127,10 @@ func (s *SDK) DescribeResourcePolicy(ctx context.Context, request operations.Des
 // DescribeSlot - Gets metadata information about a slot.
 func (s *SDK) DescribeSlot(ctx context.Context, request operations.DescribeSlotRequest) (*operations.DescribeSlotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4103,7 +4226,10 @@ func (s *SDK) DescribeSlot(ctx context.Context, request operations.DescribeSlotR
 // DescribeSlotType - Gets metadata information about a slot type.
 func (s *SDK) DescribeSlotType(ctx context.Context, request operations.DescribeSlotTypeRequest) (*operations.DescribeSlotTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4199,7 +4325,10 @@ func (s *SDK) DescribeSlotType(ctx context.Context, request operations.DescribeS
 // ListAggregatedUtterances - <p>Provides a list of utterances that users have sent to the bot.</p> <p>Utterances are aggregated by the text of the utterance. For example, all instances where customers used the phrase "I want to order pizza" are aggregated into the same line in the response.</p> <p>You can see both detected utterances and missed utterances. A detected utterance is where the bot properly recognized the utterance and activated the associated intent. A missed utterance was not recognized by the bot and didn't activate an intent.</p> <p>Utterances can be aggregated for a bot alias or for a bot version, but not both at the same time.</p> <p>Utterances statistics are not generated under the following conditions:</p> <ul> <li> <p>The <code>childDirected</code> field was set to true when the bot was created.</p> </li> <li> <p>You are using slot obfuscation with one or more slots.</p> </li> <li> <p>You opted out of participating in improving Amazon Lex.</p> </li> </ul>
 func (s *SDK) ListAggregatedUtterances(ctx context.Context, request operations.ListAggregatedUtterancesRequest) (*operations.ListAggregatedUtterancesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/aggregatedutterances/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/aggregatedutterances/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4299,7 +4428,10 @@ func (s *SDK) ListAggregatedUtterances(ctx context.Context, request operations.L
 // ListBotAliases - Gets a list of aliases for the specified bot.
 func (s *SDK) ListBotAliases(ctx context.Context, request operations.ListBotAliasesRequest) (*operations.ListBotAliasesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4399,7 +4531,10 @@ func (s *SDK) ListBotAliases(ctx context.Context, request operations.ListBotAlia
 // ListBotLocales - Gets a list of locales for the specified bot.
 func (s *SDK) ListBotLocales(ctx context.Context, request operations.ListBotLocalesRequest) (*operations.ListBotLocalesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4499,7 +4634,10 @@ func (s *SDK) ListBotLocales(ctx context.Context, request operations.ListBotLoca
 // ListBotRecommendations - Get a list of bot recommendations that meet the specified criteria.
 func (s *SDK) ListBotRecommendations(ctx context.Context, request operations.ListBotRecommendationsRequest) (*operations.ListBotRecommendationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4599,7 +4737,10 @@ func (s *SDK) ListBotRecommendations(ctx context.Context, request operations.Lis
 // ListBotVersions - <p>Gets information about all of the versions of a bot.</p> <p>The <code>ListBotVersions</code> operation returns a summary of each version of a bot. For example, if a bot has three numbered versions, the <code>ListBotVersions</code> operation returns for summaries, one for each numbered version and one for the <code>DRAFT</code> version.</p> <p>The <code>ListBotVersions</code> operation always returns at least one version, the <code>DRAFT</code> version.</p>
 func (s *SDK) ListBotVersions(ctx context.Context, request operations.ListBotVersionsRequest) (*operations.ListBotVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4799,7 +4940,10 @@ func (s *SDK) ListBots(ctx context.Context, request operations.ListBotsRequest) 
 // ListBuiltInIntents - <p>Gets a list of built-in intents provided by Amazon Lex that you can use in your bot. </p> <p>To use a built-in intent as a the base for your own intent, include the built-in intent signature in the <code>parentIntentSignature</code> parameter when you call the <code>CreateIntent</code> operation. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_CreateIntent.html">CreateIntent</a>.</p>
 func (s *SDK) ListBuiltInIntents(ctx context.Context, request operations.ListBuiltInIntentsRequest) (*operations.ListBuiltInIntentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/builtins/locales/{localeId}/intents/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/builtins/locales/{localeId}/intents/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4899,7 +5043,10 @@ func (s *SDK) ListBuiltInIntents(ctx context.Context, request operations.ListBui
 // ListBuiltInSlotTypes - Gets a list of built-in slot types that meet the specified criteria.
 func (s *SDK) ListBuiltInSlotTypes(ctx context.Context, request operations.ListBuiltInSlotTypesRequest) (*operations.ListBuiltInSlotTypesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/builtins/locales/{localeId}/slottypes/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/builtins/locales/{localeId}/slottypes/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4999,7 +5146,10 @@ func (s *SDK) ListBuiltInSlotTypes(ctx context.Context, request operations.ListB
 // ListCustomVocabularyItems - Paginated list of custom vocabulary items for a given bot locale's custom vocabulary.
 func (s *SDK) ListCustomVocabularyItems(ctx context.Context, request operations.ListCustomVocabularyItemsRequest) (*operations.ListCustomVocabularyItemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/customvocabulary/DEFAULT/list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5289,7 +5439,10 @@ func (s *SDK) ListImports(ctx context.Context, request operations.ListImportsReq
 // ListIntents - Get a list of intents that meet the specified criteria.
 func (s *SDK) ListIntents(ctx context.Context, request operations.ListIntentsRequest) (*operations.ListIntentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5389,7 +5542,10 @@ func (s *SDK) ListIntents(ctx context.Context, request operations.ListIntentsReq
 // ListRecommendedIntents - Gets a list of recommended intents provided by the bot recommendation that you can use in your bot. Intents in the response are ordered by relevance.
 func (s *SDK) ListRecommendedIntents(ctx context.Context, request operations.ListRecommendedIntentsRequest) (*operations.ListRecommendedIntentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/intents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/intents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5499,7 +5655,10 @@ func (s *SDK) ListRecommendedIntents(ctx context.Context, request operations.Lis
 // ListSlotTypes - Gets a list of slot types that match the specified criteria.
 func (s *SDK) ListSlotTypes(ctx context.Context, request operations.ListSlotTypesRequest) (*operations.ListSlotTypesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5599,7 +5758,10 @@ func (s *SDK) ListSlotTypes(ctx context.Context, request operations.ListSlotType
 // ListSlots - Gets a list of slots that match the specified criteria.
 func (s *SDK) ListSlots(ctx context.Context, request operations.ListSlotsRequest) (*operations.ListSlotsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5699,7 +5861,10 @@ func (s *SDK) ListSlots(ctx context.Context, request operations.ListSlotsRequest
 // ListTagsForResource - Gets a list of tags associated with a resource. Only bots, bot aliases, and bot channels can have tags associated with them.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5785,7 +5950,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // SearchAssociatedTranscripts - Search for associated transcripts that meet the specified criteria.
 func (s *SDK) SearchAssociatedTranscripts(ctx context.Context, request operations.SearchAssociatedTranscriptsRequest) (*operations.SearchAssociatedTranscriptsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/associatedtranscripts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/associatedtranscripts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5891,7 +6059,10 @@ func (s *SDK) SearchAssociatedTranscripts(ctx context.Context, request operation
 // StartBotRecommendation - Use this to provide your transcript data, and to start the bot recommendation process.
 func (s *SDK) StartBotRecommendation(ctx context.Context, request operations.StartBotRecommendationRequest) (*operations.StartBotRecommendationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6135,7 +6306,10 @@ func (s *SDK) StartImport(ctx context.Context, request operations.StartImportReq
 // StopBotRecommendation - Stop an already running Bot Recommendation request.
 func (s *SDK) StopBotRecommendation(ctx context.Context, request operations.StopBotRecommendationRequest) (*operations.StopBotRecommendationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/stopbotrecommendation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/stopbotrecommendation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -6253,7 +6427,10 @@ func (s *SDK) StopBotRecommendation(ctx context.Context, request operations.Stop
 // TagResource - Adds the specified tags to the specified resource. If a tag key already exists, the existing value is replaced with the new value.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6349,7 +6526,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from a bot, bot alias, or bot channel.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceARN}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -6439,7 +6619,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateBot - Updates the configuration of an existing bot.
 func (s *SDK) UpdateBot(ctx context.Context, request operations.UpdateBotRequest) (*operations.UpdateBotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6555,7 +6738,10 @@ func (s *SDK) UpdateBot(ctx context.Context, request operations.UpdateBotRequest
 // UpdateBotAlias - Updates the configuration of an existing bot alias.
 func (s *SDK) UpdateBotAlias(ctx context.Context, request operations.UpdateBotAliasRequest) (*operations.UpdateBotAliasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botaliases/{botAliasId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6671,7 +6857,10 @@ func (s *SDK) UpdateBotAlias(ctx context.Context, request operations.UpdateBotAl
 // UpdateBotLocale - Updates the settings that a bot has for a specific locale.
 func (s *SDK) UpdateBotLocale(ctx context.Context, request operations.UpdateBotLocaleRequest) (*operations.UpdateBotLocaleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6787,7 +6976,10 @@ func (s *SDK) UpdateBotLocale(ctx context.Context, request operations.UpdateBotL
 // UpdateBotRecommendation - Updates an existing bot recommendation request.
 func (s *SDK) UpdateBotRecommendation(ctx context.Context, request operations.UpdateBotRecommendationRequest) (*operations.UpdateBotRecommendationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/botrecommendations/{botRecommendationId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -6915,7 +7107,10 @@ func (s *SDK) UpdateBotRecommendation(ctx context.Context, request operations.Up
 // UpdateExport - <p>Updates the password used to protect an export zip archive.</p> <p>The password is not required. If you don't supply a password, Amazon Lex generates a zip file that is not protected by a password. This is the archive that is available at the pre-signed S3 URL provided by the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">DescribeExport</a> operation.</p>
 func (s *SDK) UpdateExport(ctx context.Context, request operations.UpdateExportRequest) (*operations.UpdateExportResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/exports/{exportId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7031,7 +7226,10 @@ func (s *SDK) UpdateExport(ctx context.Context, request operations.UpdateExportR
 // UpdateIntent - Updates the settings for an intent.
 func (s *SDK) UpdateIntent(ctx context.Context, request operations.UpdateIntentRequest) (*operations.UpdateIntentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7147,7 +7345,10 @@ func (s *SDK) UpdateIntent(ctx context.Context, request operations.UpdateIntentR
 // UpdateResourcePolicy - Replaces the existing resource policy for a bot or bot alias with a new one. If the policy doesn't exist, Amazon Lex returns an exception.
 func (s *SDK) UpdateResourcePolicy(ctx context.Context, request operations.UpdateResourcePolicyRequest) (*operations.UpdateResourcePolicyResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/policy/{resourceArn}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7267,7 +7468,10 @@ func (s *SDK) UpdateResourcePolicy(ctx context.Context, request operations.Updat
 // UpdateSlot - Updates the settings for a slot.
 func (s *SDK) UpdateSlot(ctx context.Context, request operations.UpdateSlotRequest) (*operations.UpdateSlotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/intents/{intentId}/slots/{slotId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -7383,7 +7587,10 @@ func (s *SDK) UpdateSlot(ctx context.Context, request operations.UpdateSlotReque
 // UpdateSlotType - Updates the configuration of an existing slot type.
 func (s *SDK) UpdateSlotType(ctx context.Context, request operations.UpdateSlotTypeRequest) (*operations.UpdateSlotTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bots/{botId}/botversions/{botVersion}/botlocales/{localeId}/slottypes/{slotTypeId}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	MarginTypeEnumGlobal  MarginTypeEnum = "Global"
 )
 
+func (e MarginTypeEnum) ToPointer() *MarginTypeEnum {
+	return &e
+}
+
 func (e *MarginTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Tracker":
 		fallthrough
 	case "Global":
-		*e = MarginTypeEnum(s)
+		*e = MarginTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarginTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MarginTypeEnum: %v", v)
 	}
 }

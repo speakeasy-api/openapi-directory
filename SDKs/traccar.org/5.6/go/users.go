@@ -36,7 +36,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteUsersID - Delete a User
 func (s *users) DeleteUsersID(ctx context.Context, request operations.DeleteUsersIDRequest) (*operations.DeleteUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +177,10 @@ func (s *users) PostUsers(ctx context.Context, request shared.User) (*operations
 // PutUsersID - Update a User
 func (s *users) PutUsersID(ctx context.Context, request operations.PutUsersIDRequest) (*operations.PutUsersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {

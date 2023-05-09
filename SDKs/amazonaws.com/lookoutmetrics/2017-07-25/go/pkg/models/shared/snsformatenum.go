@@ -15,20 +15,24 @@ const (
 	SnsFormatEnumJSON      SnsFormatEnum = "JSON"
 )
 
+func (e SnsFormatEnum) ToPointer() *SnsFormatEnum {
+	return &e
+}
+
 func (e *SnsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LONG_TEXT":
 		fallthrough
 	case "SHORT_TEXT":
 		fallthrough
 	case "JSON":
-		*e = SnsFormatEnum(s)
+		*e = SnsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SnsFormatEnum: %v", v)
 	}
 }

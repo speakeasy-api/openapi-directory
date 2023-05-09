@@ -42,12 +42,16 @@ const (
 	AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -61,10 +65,10 @@ func (e *AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatarDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -102,12 +106,16 @@ const (
 	AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnumTester    AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum) ToPointer() *AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -115,10 +123,10 @@ func (e *AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum(s)
+		*e = AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -131,21 +139,25 @@ const (
 	AppsUpdateAvatar200ApplicationJSONOriginEnumCodepush  AppsUpdateAvatar200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsUpdateAvatar200ApplicationJSONOriginEnum) ToPointer() *AppsUpdateAvatar200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatar200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsUpdateAvatar200ApplicationJSONOriginEnum(s)
+		*e = AppsUpdateAvatar200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -163,12 +175,16 @@ const (
 	AppsUpdateAvatar200ApplicationJSONOsEnumCustom  AppsUpdateAvatar200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e AppsUpdateAvatar200ApplicationJSONOsEnum) ToPointer() *AppsUpdateAvatar200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatar200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -184,10 +200,10 @@ func (e *AppsUpdateAvatar200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) er
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = AppsUpdateAvatar200ApplicationJSONOsEnum(s)
+		*e = AppsUpdateAvatar200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -199,19 +215,23 @@ const (
 	AppsUpdateAvatar200ApplicationJSONOwnerTypeEnumUser AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum) ToPointer() *AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum(s)
+		*e = AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -249,12 +269,16 @@ const (
 	AppsUpdateAvatar200ApplicationJSONPlatformEnumCustom          AppsUpdateAvatar200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e AppsUpdateAvatar200ApplicationJSONPlatformEnum) ToPointer() *AppsUpdateAvatar200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *AppsUpdateAvatar200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -278,10 +302,10 @@ func (e *AppsUpdateAvatar200ApplicationJSONPlatformEnum) UnmarshalJSON(data []by
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = AppsUpdateAvatar200ApplicationJSONPlatformEnum(s)
+		*e = AppsUpdateAvatar200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsUpdateAvatar200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 

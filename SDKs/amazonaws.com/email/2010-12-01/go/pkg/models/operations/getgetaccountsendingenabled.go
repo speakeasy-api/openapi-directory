@@ -15,17 +15,21 @@ const (
 	GETGETAccountSendingEnabledActionEnumGetAccountSendingEnabled GETGETAccountSendingEnabledActionEnum = "GetAccountSendingEnabled"
 )
 
+func (e GETGETAccountSendingEnabledActionEnum) ToPointer() *GETGETAccountSendingEnabledActionEnum {
+	return &e
+}
+
 func (e *GETGETAccountSendingEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccountSendingEnabled":
-		*e = GETGETAccountSendingEnabledActionEnum(s)
+		*e = GETGETAccountSendingEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountSendingEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountSendingEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAccountSendingEnabledVersionEnumTwoThousandAndTen1201 GETGETAccountSendingEnabledVersionEnum = "2010-12-01"
 )
 
+func (e GETGETAccountSendingEnabledVersionEnum) ToPointer() *GETGETAccountSendingEnabledVersionEnum {
+	return &e
+}
+
 func (e *GETGETAccountSendingEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETAccountSendingEnabledVersionEnum(s)
+		*e = GETGETAccountSendingEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountSendingEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountSendingEnabledVersionEnum: %v", v)
 	}
 }
 

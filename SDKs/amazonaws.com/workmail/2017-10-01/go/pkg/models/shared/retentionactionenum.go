@@ -15,20 +15,24 @@ const (
 	RetentionActionEnumPermanentlyDelete RetentionActionEnum = "PERMANENTLY_DELETE"
 )
 
+func (e RetentionActionEnum) ToPointer() *RetentionActionEnum {
+	return &e
+}
+
 func (e *RetentionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "DELETE":
 		fallthrough
 	case "PERMANENTLY_DELETE":
-		*e = RetentionActionEnum(s)
+		*e = RetentionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetentionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for RetentionActionEnum: %v", v)
 	}
 }

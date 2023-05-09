@@ -23,15 +23,21 @@ const (
 	ListFilesPurposeInEnumTrustFormationDocument     ListFilesPurposeInEnum = "trust_formation_document"
 	ListFilesPurposeInEnumDigitalWalletArtwork       ListFilesPurposeInEnum = "digital_wallet_artwork"
 	ListFilesPurposeInEnumDigitalWalletAppIcon       ListFilesPurposeInEnum = "digital_wallet_app_icon"
+	ListFilesPurposeInEnumDocumentRequest            ListFilesPurposeInEnum = "document_request"
 	ListFilesPurposeInEnumEntitySupplementalDocument ListFilesPurposeInEnum = "entity_supplemental_document"
+	ListFilesPurposeInEnumExport                     ListFilesPurposeInEnum = "export"
 )
 
+func (e ListFilesPurposeInEnum) ToPointer() *ListFilesPurposeInEnum {
+	return &e
+}
+
 func (e *ListFilesPurposeInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_image_front":
 		fallthrough
 	case "check_image_back":
@@ -52,11 +58,15 @@ func (e *ListFilesPurposeInEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "digital_wallet_app_icon":
 		fallthrough
+	case "document_request":
+		fallthrough
 	case "entity_supplemental_document":
-		*e = ListFilesPurposeInEnum(s)
+		fallthrough
+	case "export":
+		*e = ListFilesPurposeInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesPurposeInEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesPurposeInEnum: %v", v)
 	}
 }
 
@@ -70,23 +80,27 @@ type ListFilesRequest struct {
 	PurposeIn           []ListFilesPurposeInEnum `queryParam:"style=form,explode=true,name=purpose.in"`
 }
 
-type ListFilesDefaultApplicationJSON13StatusEnum string
+type ListFilesDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListFilesDefaultApplicationJSON13StatusEnum = "429"
+	ListFilesDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListFilesDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListFilesDefaultApplicationJSON13StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListFilesDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListFilesDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -96,17 +110,21 @@ const (
 	ListFilesDefaultApplicationJSON13TypeEnumRateLimitedError ListFilesDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListFilesDefaultApplicationJSON13TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListFilesDefaultApplicationJSON13TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -118,23 +136,27 @@ type ListFilesDefaultApplicationJSON13 struct {
 	Type       ListFilesDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON12StatusEnum string
+type ListFilesDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON12StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON12StatusEnum = "403"
+	ListFilesDefaultApplicationJSON12StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListFilesDefaultApplicationJSON12StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListFilesDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListFilesDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -144,17 +166,21 @@ const (
 	ListFilesDefaultApplicationJSON12TypeEnumPrivateFeatureError ListFilesDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListFilesDefaultApplicationJSON12TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListFilesDefaultApplicationJSON12TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -165,23 +191,27 @@ type ListFilesDefaultApplicationJSON12 struct {
 	Type   ListFilesDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON11StatusEnum string
+type ListFilesDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON11StatusEnumFourHundredAndFour ListFilesDefaultApplicationJSON11StatusEnum = "404"
+	ListFilesDefaultApplicationJSON11StatusEnumFourHundredAndFour ListFilesDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListFilesDefaultApplicationJSON11StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListFilesDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListFilesDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -191,17 +221,21 @@ const (
 	ListFilesDefaultApplicationJSON11TypeEnumObjectNotFoundError ListFilesDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListFilesDefaultApplicationJSON11TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListFilesDefaultApplicationJSON11TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -212,23 +246,27 @@ type ListFilesDefaultApplicationJSON11 struct {
 	Type   ListFilesDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON10StatusEnum string
+type ListFilesDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON10StatusEnumFourHundred ListFilesDefaultApplicationJSON10StatusEnum = "400"
+	ListFilesDefaultApplicationJSON10StatusEnumFourHundred ListFilesDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListFilesDefaultApplicationJSON10StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListFilesDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListFilesDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -238,17 +276,21 @@ const (
 	ListFilesDefaultApplicationJSON10TypeEnumMalformedRequestError ListFilesDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListFilesDefaultApplicationJSON10TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListFilesDefaultApplicationJSON10TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -259,23 +301,27 @@ type ListFilesDefaultApplicationJSON10 struct {
 	Type   ListFilesDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON9StatusEnum string
+type ListFilesDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON9StatusEnumFourHundred ListFilesDefaultApplicationJSON9StatusEnum = "400"
+	ListFilesDefaultApplicationJSON9StatusEnumFourHundred ListFilesDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListFilesDefaultApplicationJSON9StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListFilesDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListFilesDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -285,46 +331,54 @@ const (
 	ListFilesDefaultApplicationJSON9TypeEnumInvalidParametersError ListFilesDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListFilesDefaultApplicationJSON9TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListFilesDefaultApplicationJSON9TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListFilesDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                   `json:"errors"`
 	Status ListFilesDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                     `json:"title"`
 	Type   ListFilesDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON8StatusEnum string
+type ListFilesDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON8StatusEnumFourHundredAndNine ListFilesDefaultApplicationJSON8StatusEnum = "409"
+	ListFilesDefaultApplicationJSON8StatusEnumFourHundredAndNine ListFilesDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListFilesDefaultApplicationJSON8StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListFilesDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListFilesDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -334,17 +388,21 @@ const (
 	ListFilesDefaultApplicationJSON8TypeEnumInvalidOperationError ListFilesDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListFilesDefaultApplicationJSON8TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListFilesDefaultApplicationJSON8TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -355,23 +413,27 @@ type ListFilesDefaultApplicationJSON8 struct {
 	Type   ListFilesDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON7StatusEnum string
+type ListFilesDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON7StatusEnumFourHundredAndOne ListFilesDefaultApplicationJSON7StatusEnum = "401"
+	ListFilesDefaultApplicationJSON7StatusEnumFourHundredAndOne ListFilesDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListFilesDefaultApplicationJSON7StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListFilesDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListFilesDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -381,17 +443,21 @@ const (
 	ListFilesDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListFilesDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListFilesDefaultApplicationJSON7TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListFilesDefaultApplicationJSON7TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -402,23 +468,27 @@ type ListFilesDefaultApplicationJSON7 struct {
 	Type   ListFilesDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON6StatusEnum string
+type ListFilesDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON6StatusEnumFiveHundred ListFilesDefaultApplicationJSON6StatusEnum = "500"
+	ListFilesDefaultApplicationJSON6StatusEnumFiveHundred ListFilesDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListFilesDefaultApplicationJSON6StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListFilesDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListFilesDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -428,17 +498,21 @@ const (
 	ListFilesDefaultApplicationJSON6TypeEnumInternalServerError ListFilesDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListFilesDefaultApplicationJSON6TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListFilesDefaultApplicationJSON6TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -449,23 +523,27 @@ type ListFilesDefaultApplicationJSON6 struct {
 	Type   ListFilesDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON5StatusEnum string
+type ListFilesDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON5StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON5StatusEnum = "403"
+	ListFilesDefaultApplicationJSON5StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListFilesDefaultApplicationJSON5StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListFilesDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListFilesDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -475,17 +553,21 @@ const (
 	ListFilesDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListFilesDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListFilesDefaultApplicationJSON5TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListFilesDefaultApplicationJSON5TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -496,23 +578,27 @@ type ListFilesDefaultApplicationJSON5 struct {
 	Type   ListFilesDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON4StatusEnum string
+type ListFilesDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListFilesDefaultApplicationJSON4StatusEnum = "422"
+	ListFilesDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListFilesDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListFilesDefaultApplicationJSON4StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListFilesDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListFilesDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -522,17 +608,21 @@ const (
 	ListFilesDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListFilesDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListFilesDefaultApplicationJSON4TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListFilesDefaultApplicationJSON4TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -543,23 +633,27 @@ type ListFilesDefaultApplicationJSON4 struct {
 	Type   ListFilesDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON3StatusEnum string
+type ListFilesDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON3StatusEnumFourHundredAndNine ListFilesDefaultApplicationJSON3StatusEnum = "409"
+	ListFilesDefaultApplicationJSON3StatusEnumFourHundredAndNine ListFilesDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListFilesDefaultApplicationJSON3StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListFilesDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListFilesDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -569,17 +663,21 @@ const (
 	ListFilesDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListFilesDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListFilesDefaultApplicationJSON3TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListFilesDefaultApplicationJSON3TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -590,23 +688,27 @@ type ListFilesDefaultApplicationJSON3 struct {
 	Type   ListFilesDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON2StatusEnum string
+type ListFilesDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON2StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON2StatusEnum = "403"
+	ListFilesDefaultApplicationJSON2StatusEnumFourHundredAndThree ListFilesDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListFilesDefaultApplicationJSON2StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListFilesDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListFilesDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -616,17 +718,21 @@ const (
 	ListFilesDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListFilesDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListFilesDefaultApplicationJSON2TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListFilesDefaultApplicationJSON2TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -637,23 +743,27 @@ type ListFilesDefaultApplicationJSON2 struct {
 	Type   ListFilesDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListFilesDefaultApplicationJSON1StatusEnum string
+type ListFilesDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListFilesDefaultApplicationJSON1StatusEnumFourHundredAndFour ListFilesDefaultApplicationJSON1StatusEnum = "404"
+	ListFilesDefaultApplicationJSON1StatusEnumFourHundredAndFour ListFilesDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListFilesDefaultApplicationJSON1StatusEnum) ToPointer() *ListFilesDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListFilesDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListFilesDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -663,17 +773,21 @@ const (
 	ListFilesDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListFilesDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListFilesDefaultApplicationJSON1TypeEnum) ToPointer() *ListFilesDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListFilesDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListFilesDefaultApplicationJSON1TypeEnum(s)
+		*e = ListFilesDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFilesDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

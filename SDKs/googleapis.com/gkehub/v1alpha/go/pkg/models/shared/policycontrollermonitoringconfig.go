@@ -15,21 +15,25 @@ const (
 	PolicyControllerMonitoringConfigBackendsEnumCloudMonitoring              PolicyControllerMonitoringConfigBackendsEnum = "CLOUD_MONITORING"
 )
 
+func (e PolicyControllerMonitoringConfigBackendsEnum) ToPointer() *PolicyControllerMonitoringConfigBackendsEnum {
+	return &e
+}
+
 func (e *PolicyControllerMonitoringConfigBackendsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONITORING_BACKEND_UNSPECIFIED":
 		fallthrough
 	case "PROMETHEUS":
 		fallthrough
 	case "CLOUD_MONITORING":
-		*e = PolicyControllerMonitoringConfigBackendsEnum(s)
+		*e = PolicyControllerMonitoringConfigBackendsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerMonitoringConfigBackendsEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerMonitoringConfigBackendsEnum: %v", v)
 	}
 }
 

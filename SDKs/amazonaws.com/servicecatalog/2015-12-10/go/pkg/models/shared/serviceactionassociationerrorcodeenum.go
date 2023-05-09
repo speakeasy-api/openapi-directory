@@ -15,14 +15,19 @@ const (
 	ServiceActionAssociationErrorCodeEnumLimitExceeded     ServiceActionAssociationErrorCodeEnum = "LIMIT_EXCEEDED"
 	ServiceActionAssociationErrorCodeEnumResourceNotFound  ServiceActionAssociationErrorCodeEnum = "RESOURCE_NOT_FOUND"
 	ServiceActionAssociationErrorCodeEnumThrottling        ServiceActionAssociationErrorCodeEnum = "THROTTLING"
+	ServiceActionAssociationErrorCodeEnumInvalidParameter  ServiceActionAssociationErrorCodeEnum = "INVALID_PARAMETER"
 )
 
+func (e ServiceActionAssociationErrorCodeEnum) ToPointer() *ServiceActionAssociationErrorCodeEnum {
+	return &e
+}
+
 func (e *ServiceActionAssociationErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DUPLICATE_RESOURCE":
 		fallthrough
 	case "INTERNAL_FAILURE":
@@ -32,9 +37,11 @@ func (e *ServiceActionAssociationErrorCodeEnum) UnmarshalJSON(data []byte) error
 	case "RESOURCE_NOT_FOUND":
 		fallthrough
 	case "THROTTLING":
-		*e = ServiceActionAssociationErrorCodeEnum(s)
+		fallthrough
+	case "INVALID_PARAMETER":
+		*e = ServiceActionAssociationErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceActionAssociationErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceActionAssociationErrorCodeEnum: %v", v)
 	}
 }

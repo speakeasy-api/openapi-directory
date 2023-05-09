@@ -18,7 +18,6 @@ type UserFeedback struct {
 	Score *int64 `json:"score,omitempty"`
 }
 
-// User - User data
 type User struct {
 	// A short bio a user has written about themselves to help other members get to know them better. May be null if the user has not written anything about themselves.
 	//

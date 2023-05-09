@@ -37,7 +37,10 @@ func newIpmi(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Agent's IPMI configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ipmi) ProtocolIpmiGetArgs(ctx context.Context, request operations.ProtocolIpmiGetArgsRequest) (*operations.ProtocolIpmiGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *ipmi) ProtocolIpmiGetArgs(ctx context.Context, request operations.Proto
 // Attribute can be working_authtype ,session_id, outbound_seq, inbound_seq , field_N
 func (s *ipmi) ProtocolIpmiGetAttr(ctx context.Context, request operations.ProtocolIpmiGetAttrRequest) (*operations.ProtocolIpmiGetAttrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/{attr}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/{attr}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *ipmi) ProtocolIpmiGetAttr(ctx context.Context, request operations.Proto
 // Agent's IPMI configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ipmi) ProtocolIpmiGetConfig(ctx context.Context, request operations.ProtocolIpmiGetConfigRequest) (*operations.ProtocolIpmiGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *ipmi) ProtocolIpmiGetConfig(ctx context.Context, request operations.Pro
 // Statistics of fields indicated in the headers
 func (s *ipmi) ProtocolIpmiGetStatistics(ctx context.Context, request operations.ProtocolIpmiGetStatisticsRequest) (*operations.ProtocolIpmiGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +280,10 @@ func (s *ipmi) ProtocolIpmiGetStatsHdr(ctx context.Context) (*operations.Protoco
 // Trace 1 means enabled, 0 means not
 func (s *ipmi) ProtocolIpmiGetTrace(ctx context.Context, request operations.ProtocolIpmiGetTraceRequest) (*operations.ProtocolIpmiGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *ipmi) ProtocolIpmiGetTrace(ctx context.Context, request operations.Prot
 // Attribute can be working_authtype ,session_id, outbound_seq, inbound_seq , field_N
 func (s *ipmi) ProtocolIpmiSetAttr(ctx context.Context, request operations.ProtocolIpmiSetAttrRequest) (*operations.ProtocolIpmiSetAttrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/{attr}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/{attr}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -361,7 +379,10 @@ func (s *ipmi) ProtocolIpmiSetAttr(ctx context.Context, request operations.Proto
 // Agent's IPMI configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ipmi) ProtocolIpmiSetConfig(ctx context.Context, request operations.ProtocolIpmiSetConfigRequest) (*operations.ProtocolIpmiSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -408,7 +429,10 @@ func (s *ipmi) ProtocolIpmiSetConfig(ctx context.Context, request operations.Pro
 // 1 to enable, 0 to disable
 func (s *ipmi) ProtocolIpmiSetTrace(ctx context.Context, request operations.ProtocolIpmiSetTraceRequest) (*operations.ProtocolIpmiSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ipmi/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -17,19 +17,23 @@ const (
 	RetargetingGetDatapointsSortDirectionEnumDesc RetargetingGetDatapointsSortDirectionEnum = "desc"
 )
 
+func (e RetargetingGetDatapointsSortDirectionEnum) ToPointer() *RetargetingGetDatapointsSortDirectionEnum {
+	return &e
+}
+
 func (e *RetargetingGetDatapointsSortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = RetargetingGetDatapointsSortDirectionEnum(s)
+		*e = RetargetingGetDatapointsSortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetargetingGetDatapointsSortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for RetargetingGetDatapointsSortDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	RetargetingGetDatapointsStatusEnumSpam    RetargetingGetDatapointsStatusEnum = "spam"
 )
 
+func (e RetargetingGetDatapointsStatusEnum) ToPointer() *RetargetingGetDatapointsStatusEnum {
+	return &e
+}
+
 func (e *RetargetingGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -56,10 +64,10 @@ func (e *RetargetingGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = RetargetingGetDatapointsStatusEnum(s)
+		*e = RetargetingGetDatapointsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetargetingGetDatapointsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetargetingGetDatapointsStatusEnum: %v", v)
 	}
 }
 

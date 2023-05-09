@@ -18,12 +18,16 @@ const (
 	FleetStatusEnumFailedToDelete FleetStatusEnum = "FAILED_TO_DELETE"
 )
 
+func (e FleetStatusEnum) ToPointer() *FleetStatusEnum {
+	return &e
+}
+
 func (e *FleetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -35,9 +39,9 @@ func (e *FleetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_TO_CREATE":
 		fallthrough
 	case "FAILED_TO_DELETE":
-		*e = FleetStatusEnum(s)
+		*e = FleetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetStatusEnum: %v", v)
 	}
 }

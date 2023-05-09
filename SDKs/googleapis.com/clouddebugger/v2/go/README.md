@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/clouddebug
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        AgentID: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        DebuggeeID: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        SuccessOnTimeout: false,
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-        WaitToken: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Controller.ClouddebuggerControllerDebuggeesBreakpointsList(ctx, req, operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity{
+    res, err := s.Controller.ClouddebuggerControllerDebuggeesBreakpointsList(ctx, operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        AgentID: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        DebuggeeID: "nulla",
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        SuccessOnTimeout: sdk.Bool(false),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+        WaitToken: sdk.String("iure"),
+    }, operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity{
         Option1: &operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -64,19 +62,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Controller
+### [Controller](docs/controller/README.md)
 
-* `ClouddebuggerControllerDebuggeesBreakpointsList` - Returns the list of all active breakpoints for the debuggee. The breakpoint specification (`location`, `condition`, and `expressions` fields) is semantically immutable, although the field values may change. For example, an agent may update the location line number to reflect the actual line where the breakpoint was set, but this doesn't change the breakpoint semantics. This means that an agent does not need to check if a breakpoint has changed when it encounters the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that are completed until the controller removes them from the active list to avoid setting those breakpoints again.
-* `ClouddebuggerControllerDebuggeesBreakpointsUpdate` - Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back to the controller service. Updates to active breakpoint fields are only allowed if the new value does not change the breakpoint specification. Updates to the `location`, `condition` and `expressions` fields should not alter the breakpoint semantics. These may only make changes such as canonicalizing a value or snapping the location to the correct line of code.
-* `ClouddebuggerControllerDebuggeesRegister` - Registers the debuggee with the controller service. All agents attached to the same application must call this method with exactly the same request content to get back the same stable `debuggee_id`. Agents should call this method again whenever `google.rpc.Code.NOT_FOUND` is returned from any controller method. This protocol allows the controller service to disable debuggees, recover from data loss, or change the `debuggee_id` format. Agents must handle `debuggee_id` value changing upon re-registration.
+* [ClouddebuggerControllerDebuggeesBreakpointsList](docs/controller/README.md#clouddebuggercontrollerdebuggeesbreakpointslist) - Returns the list of all active breakpoints for the debuggee. The breakpoint specification (`location`, `condition`, and `expressions` fields) is semantically immutable, although the field values may change. For example, an agent may update the location line number to reflect the actual line where the breakpoint was set, but this doesn't change the breakpoint semantics. This means that an agent does not need to check if a breakpoint has changed when it encounters the same breakpoint on a successive call. Moreover, an agent should remember the breakpoints that are completed until the controller removes them from the active list to avoid setting those breakpoints again.
+* [ClouddebuggerControllerDebuggeesBreakpointsUpdate](docs/controller/README.md#clouddebuggercontrollerdebuggeesbreakpointsupdate) - Updates the breakpoint state or mutable fields. The entire Breakpoint message must be sent back to the controller service. Updates to active breakpoint fields are only allowed if the new value does not change the breakpoint specification. Updates to the `location`, `condition` and `expressions` fields should not alter the breakpoint semantics. These may only make changes such as canonicalizing a value or snapping the location to the correct line of code.
+* [ClouddebuggerControllerDebuggeesRegister](docs/controller/README.md#clouddebuggercontrollerdebuggeesregister) - Registers the debuggee with the controller service. All agents attached to the same application must call this method with exactly the same request content to get back the same stable `debuggee_id`. Agents should call this method again whenever `google.rpc.Code.NOT_FOUND` is returned from any controller method. This protocol allows the controller service to disable debuggees, recover from data loss, or change the `debuggee_id` format. Agents must handle `debuggee_id` value changing upon re-registration.
 
-### Debugger
+### [Debugger](docs/debugger/README.md)
 
-* `ClouddebuggerDebuggerDebuggeesBreakpointsDelete` - Deletes the breakpoint from the debuggee.
-* `ClouddebuggerDebuggerDebuggeesBreakpointsGet` - Gets breakpoint information.
-* `ClouddebuggerDebuggerDebuggeesBreakpointsList` - Lists all breakpoints for the debuggee.
-* `ClouddebuggerDebuggerDebuggeesBreakpointsSet` - Sets the breakpoint to the debuggee.
-* `ClouddebuggerDebuggerDebuggeesList` - Lists all the debuggees that the user has access to.
+* [ClouddebuggerDebuggerDebuggeesBreakpointsDelete](docs/debugger/README.md#clouddebuggerdebuggerdebuggeesbreakpointsdelete) - Deletes the breakpoint from the debuggee.
+* [ClouddebuggerDebuggerDebuggeesBreakpointsGet](docs/debugger/README.md#clouddebuggerdebuggerdebuggeesbreakpointsget) - Gets breakpoint information.
+* [ClouddebuggerDebuggerDebuggeesBreakpointsList](docs/debugger/README.md#clouddebuggerdebuggerdebuggeesbreakpointslist) - Lists all breakpoints for the debuggee.
+* [ClouddebuggerDebuggerDebuggeesBreakpointsSet](docs/debugger/README.md#clouddebuggerdebuggerdebuggeesbreakpointsset) - Sets the breakpoint to the debuggee.
+* [ClouddebuggerDebuggerDebuggeesList](docs/debugger/README.md#clouddebuggerdebuggerdebuggeeslist) - Lists all the debuggees that the user has access to.
 <!-- End SDK Available Operations -->
 
 ### Maturity

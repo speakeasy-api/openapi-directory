@@ -16,17 +16,21 @@ const (
 	DeleteRelationalDatabaseXAmzTargetEnumLightsail20161128DeleteRelationalDatabase DeleteRelationalDatabaseXAmzTargetEnum = "Lightsail_20161128.DeleteRelationalDatabase"
 )
 
+func (e DeleteRelationalDatabaseXAmzTargetEnum) ToPointer() *DeleteRelationalDatabaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRelationalDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteRelationalDatabase":
-		*e = DeleteRelationalDatabaseXAmzTargetEnum(s)
+		*e = DeleteRelationalDatabaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRelationalDatabaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRelationalDatabaseXAmzTargetEnum: %v", v)
 	}
 }
 

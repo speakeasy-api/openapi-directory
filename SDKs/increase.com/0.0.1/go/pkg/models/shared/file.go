@@ -16,19 +16,23 @@ const (
 	FileDirectionEnumFromIncrease FileDirectionEnum = "from_increase"
 )
 
+func (e FileDirectionEnum) ToPointer() *FileDirectionEnum {
+	return &e
+}
+
 func (e *FileDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "to_increase":
 		fallthrough
 	case "from_increase":
-		*e = FileDirectionEnum(s)
+		*e = FileDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for FileDirectionEnum: %v", v)
 	}
 }
 
@@ -46,15 +50,21 @@ const (
 	FilePurposeEnumTrustFormationDocument     FilePurposeEnum = "trust_formation_document"
 	FilePurposeEnumDigitalWalletArtwork       FilePurposeEnum = "digital_wallet_artwork"
 	FilePurposeEnumDigitalWalletAppIcon       FilePurposeEnum = "digital_wallet_app_icon"
+	FilePurposeEnumDocumentRequest            FilePurposeEnum = "document_request"
 	FilePurposeEnumEntitySupplementalDocument FilePurposeEnum = "entity_supplemental_document"
+	FilePurposeEnumExport                     FilePurposeEnum = "export"
 )
 
+func (e FilePurposeEnum) ToPointer() *FilePurposeEnum {
+	return &e
+}
+
 func (e *FilePurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_image_front":
 		fallthrough
 	case "check_image_back":
@@ -75,11 +85,15 @@ func (e *FilePurposeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "digital_wallet_app_icon":
 		fallthrough
+	case "document_request":
+		fallthrough
 	case "entity_supplemental_document":
-		*e = FilePurposeEnum(s)
+		fallthrough
+	case "export":
+		*e = FilePurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilePurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilePurposeEnum: %v", v)
 	}
 }
 
@@ -90,17 +104,21 @@ const (
 	FileTypeEnumFile FileTypeEnum = "file"
 )
 
+func (e FileTypeEnum) ToPointer() *FileTypeEnum {
+	return &e
+}
+
 func (e *FileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
-		*e = FileTypeEnum(s)
+		*e = FileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileTypeEnum: %v", v)
 	}
 }
 

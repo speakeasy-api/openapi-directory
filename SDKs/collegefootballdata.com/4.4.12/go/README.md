@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/collegefootballdata.com/4
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.GetLinesRequest{
-        Away: "corrupti",
-        Conference: "provident",
-        GameID: 715190,
-        Home: "quibusdam",
-        SeasonType: "unde",
-        Team: "nulla",
-        Week: 544883,
-        Year: 847252,
-    }
-
     ctx := context.Background()
-    res, err := s.Betting.GetLines(ctx, req)
+    res, err := s.Betting.GetLines(ctx, operations.GetLinesRequest{
+        Away: sdk.String("corrupti"),
+        Conference: sdk.String("provident"),
+        GameID: sdk.Int64(715190),
+        Home: sdk.String("quibusdam"),
+        SeasonType: sdk.String("unde"),
+        Team: sdk.String("nulla"),
+        Week: sdk.Int64(544883),
+        Year: sdk.Int64(847252),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,101 +53,101 @@ func main() {
 ## Available Resources and Operations
 
 
-### Betting
+### [Betting](docs/betting/README.md)
 
-* `GetLines` - Betting lines
+* [GetLines](docs/betting/README.md#getlines) - Betting lines
 
-### Coaches
+### [Coaches](docs/coaches/README.md)
 
-* `GetCoaches` - Coaching records and history
+* [GetCoaches](docs/coaches/README.md#getcoaches) - Coaching records and history
 
-### Conferences
+### [Conferences](docs/conferences/README.md)
 
-* `GetConferences` - Conferences
+* [GetConferences](docs/conferences/README.md#getconferences) - Conferences
 
-### Draft
+### [Draft](docs/draft/README.md)
 
-* `GetDraftPicks` - List of NFL Draft picks
-* `GetNFLPositions` - List of NFL positions
-* `GetNFLTeams` - List of NFL teams
+* [GetDraftPicks](docs/draft/README.md#getdraftpicks) - List of NFL Draft picks
+* [GetNFLPositions](docs/draft/README.md#getnflpositions) - List of NFL positions
+* [GetNFLTeams](docs/draft/README.md#getnflteams) - List of NFL teams
 
-### Drives
+### [Drives](docs/drives/README.md)
 
-* `GetDrives` - Drive data and results
+* [GetDrives](docs/drives/README.md#getdrives) - Drive data and results
 
-### Games
+### [Games](docs/games/README.md)
 
-* `GetAdvancedBoxScore` - Advanced box scores
-* `GetCalendar` - Season calendar
-* `GetGameMedia` - Game media information and schedules
-* `GetGameWeather` - Game weather information (Patreon only)
-* `GetGames` - Games and results
-* `GetPlayerGameStats` - Player game stats
-* `GetScoreboard` - Live game results (Patreon only)
-* `GetTeamGameStats` - Team game stats
-* `GetTeamRecords` - Team records
+* [GetAdvancedBoxScore](docs/games/README.md#getadvancedboxscore) - Advanced box scores
+* [GetCalendar](docs/games/README.md#getcalendar) - Season calendar
+* [GetGameMedia](docs/games/README.md#getgamemedia) - Game media information and schedules
+* [GetGameWeather](docs/games/README.md#getgameweather) - Game weather information (Patreon only)
+* [GetGames](docs/games/README.md#getgames) - Games and results
+* [GetPlayerGameStats](docs/games/README.md#getplayergamestats) - Player game stats
+* [GetScoreboard](docs/games/README.md#getscoreboard) - Live game results (Patreon only)
+* [GetTeamGameStats](docs/games/README.md#getteamgamestats) - Team game stats
+* [GetTeamRecords](docs/games/README.md#getteamrecords) - Team records
 
-### Metrics
+### [Metrics](docs/metrics/README.md)
 
-* `GetGamePPA` - Team Predicated Points Added (PPA/EPA) by game
-* `GetPlayerGamePPA` - Player Predicated Points Added (PPA/EPA) broken down by game
-* `GetPlayerSeasonPPA` - Player Predicated Points Added (PPA/EPA) broken down by season
-* `GetPredictedPoints` - Predicted Points (i.e. Expected Points or EP)
-* `GetPregameWinProbabilities` - Pregame win probability data
-* `GetTeamPPA` - Predicted Points Added (PPA/EPA) data by team
-* `GetWinProbabilityData` - Win probability chart data
+* [GetGamePPA](docs/metrics/README.md#getgameppa) - Team Predicated Points Added (PPA/EPA) by game
+* [GetPlayerGamePPA](docs/metrics/README.md#getplayergameppa) - Player Predicated Points Added (PPA/EPA) broken down by game
+* [GetPlayerSeasonPPA](docs/metrics/README.md#getplayerseasonppa) - Player Predicated Points Added (PPA/EPA) broken down by season
+* [GetPredictedPoints](docs/metrics/README.md#getpredictedpoints) - Predicted Points (i.e. Expected Points or EP)
+* [GetPregameWinProbabilities](docs/metrics/README.md#getpregamewinprobabilities) - Pregame win probability data
+* [GetTeamPPA](docs/metrics/README.md#getteamppa) - Predicted Points Added (PPA/EPA) data by team
+* [GetWinProbabilityData](docs/metrics/README.md#getwinprobabilitydata) - Win probability chart data
 
-### Players
+### [Players](docs/players/README.md)
 
-* `GetPlayerSeasonStats` - Player stats by season
-* `GetPlayerUsage` - Player usage metrics broken down by season
-* `GetReturningProduction` - Team returning production metrics
-* `GetTransferPortal` - Transfer portal by season
-* `PlayerSearch` - Search for player information
+* [GetPlayerSeasonStats](docs/players/README.md#getplayerseasonstats) - Player stats by season
+* [GetPlayerUsage](docs/players/README.md#getplayerusage) - Player usage metrics broken down by season
+* [GetReturningProduction](docs/players/README.md#getreturningproduction) - Team returning production metrics
+* [GetTransferPortal](docs/players/README.md#gettransferportal) - Transfer portal by season
+* [PlayerSearch](docs/players/README.md#playersearch) - Search for player information
 
-### Plays
+### [Plays](docs/plays/README.md)
 
-* `GetLivePlays` - Live metrics and PBP (Patreon only)
-* `GetPlayStatTypes` - Types of player play stats
-* `GetPlayStats` - Play stats by play
-* `GetPlayTypes` - Play types
-* `GetPlays` - Play by play data
+* [GetLivePlays](docs/plays/README.md#getliveplays) - Live metrics and PBP (Patreon only)
+* [GetPlayStatTypes](docs/plays/README.md#getplaystattypes) - Types of player play stats
+* [GetPlayStats](docs/plays/README.md#getplaystats) - Play stats by play
+* [GetPlayTypes](docs/plays/README.md#getplaytypes) - Play types
+* [GetPlays](docs/plays/README.md#getplays) - Play by play data
 
-### Rankings
+### [Rankings](docs/rankings/README.md)
 
-* `GetRankings` - Historical polls and rankings
+* [GetRankings](docs/rankings/README.md#getrankings) - Historical polls and rankings
 
-### Ratings
+### [Ratings](docs/ratings/README.md)
 
-* `GetConferenceSPRatings` - Historical SP+ ratings by conference
-* `GetEloRatings` - Historical Elo ratings
-* `GetSPRatings` - Historical SP+ ratings
-* `GetSRSRatings` - Historical SRS ratings
+* [GetConferenceSPRatings](docs/ratings/README.md#getconferencespratings) - Historical SP+ ratings by conference
+* [GetEloRatings](docs/ratings/README.md#geteloratings) - Historical Elo ratings
+* [GetSPRatings](docs/ratings/README.md#getspratings) - Historical SP+ ratings
+* [GetSRSRatings](docs/ratings/README.md#getsrsratings) - Historical SRS ratings
 
-### Recruiting
+### [Recruiting](docs/recruiting/README.md)
 
-* `GetRecruitingGroups` - Recruit position group ratings
-* `GetRecruitingPlayers` - Player recruiting ratings and rankings
-* `GetRecruitingTeams` - Team recruiting rankings and ratings
+* [GetRecruitingGroups](docs/recruiting/README.md#getrecruitinggroups) - Recruit position group ratings
+* [GetRecruitingPlayers](docs/recruiting/README.md#getrecruitingplayers) - Player recruiting ratings and rankings
+* [GetRecruitingTeams](docs/recruiting/README.md#getrecruitingteams) - Team recruiting rankings and ratings
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `GetAdvancedTeamGameStats` - Advanced team metrics by game
-* `GetAdvancedTeamSeasonStats` - Advanced team metrics by season
-* `GetStatCategories` - Team stat categories
-* `GetTeamSeasonStats` - Team statistics by season
+* [GetAdvancedTeamGameStats](docs/stats/README.md#getadvancedteamgamestats) - Advanced team metrics by game
+* [GetAdvancedTeamSeasonStats](docs/stats/README.md#getadvancedteamseasonstats) - Advanced team metrics by season
+* [GetStatCategories](docs/stats/README.md#getstatcategories) - Team stat categories
+* [GetTeamSeasonStats](docs/stats/README.md#getteamseasonstats) - Team statistics by season
 
-### Teams
+### [Teams](docs/teams/README.md)
 
-* `GetFbsTeams` - FBS team list
-* `GetRoster` - Team rosters
-* `GetTalent` - Team talent composite rankings
-* `GetTeamMatchup` - Team matchup history
-* `GetTeams` - Team information
+* [GetFbsTeams](docs/teams/README.md#getfbsteams) - FBS team list
+* [GetRoster](docs/teams/README.md#getroster) - Team rosters
+* [GetTalent](docs/teams/README.md#gettalent) - Team talent composite rankings
+* [GetTeamMatchup](docs/teams/README.md#getteammatchup) - Team matchup history
+* [GetTeams](docs/teams/README.md#getteams) - Team information
 
-### Venues
+### [Venues](docs/venues/README.md)
 
-* `GetVenues` - Arena and venue information
+* [GetVenues](docs/venues/README.md#getvenues) - Arena and venue information
 <!-- End SDK Available Operations -->
 
 ### Maturity

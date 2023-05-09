@@ -2,84 +2,83 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudschedulerProjectsLocationsJobsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.CloudschedulerProjectsLocationsJobsCreate(ctx, operations.CloudschedulerProjectsLocationsJobsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Job: &shared.Job{
             AppEngineHTTPTarget: &shared.AppEngineHTTPTarget{
                 AppEngineRouting: &shared.AppEngineRouting{
-                    Host: "provident",
-                    Instance: "distinctio",
-                    Service: "quibusdam",
-                    Version: "unde",
+                    Host: sdk.String("provident"),
+                    Instance: sdk.String("distinctio"),
+                    Service: sdk.String("quibusdam"),
+                    Version: sdk.String("unde"),
                 },
-                Body: "nulla",
+                Body: sdk.String("nulla"),
                 Headers: map[string]string{
                     "illum": "vel",
                     "error": "deserunt",
                     "suscipit": "iure",
                 },
-                HTTPMethod: "GET",
-                RelativeURI: "debitis",
+                HTTPMethod: shared.AppEngineHTTPTargetHTTPMethodEnumGet.ToPointer(),
+                RelativeURI: sdk.String("debitis"),
             },
-            AttemptDeadline: "ipsa",
-            Description: "delectus",
+            AttemptDeadline: sdk.String("ipsa"),
+            Description: sdk.String("delectus"),
             HTTPTarget: &shared.HTTPTarget{
-                Body: "tempora",
+                Body: sdk.String("tempora"),
                 Headers: map[string]string{
                     "molestiae": "minus",
                     "placeat": "voluptatum",
                 },
-                HTTPMethod: "HEAD",
+                HTTPMethod: shared.HTTPTargetHTTPMethodEnumHead.ToPointer(),
                 OauthToken: &shared.OAuthToken{
-                    Scope: "excepturi",
-                    ServiceAccountEmail: "nisi",
+                    Scope: sdk.String("excepturi"),
+                    ServiceAccountEmail: sdk.String("nisi"),
                 },
                 OidcToken: &shared.OidcToken{
-                    Audience: "recusandae",
-                    ServiceAccountEmail: "temporibus",
+                    Audience: sdk.String("recusandae"),
+                    ServiceAccountEmail: sdk.String("temporibus"),
                 },
-                URI: "http://gloomy-blanket.name",
+                URI: sdk.String("http://gloomy-blanket.name"),
             },
-            LastAttemptTime: "perferendis",
-            LegacyAppEngineCron: false,
-            Name: "ipsam",
+            LastAttemptTime: sdk.String("perferendis"),
+            LegacyAppEngineCron: sdk.Bool(false),
+            Name: sdk.String("Estelle Will"),
             PubsubTarget: &shared.PubsubTarget{
                 Attributes: map[string]string{
-                    "sapiente": "quo",
-                    "odit": "at",
                     "at": "maiores",
                     "molestiae": "quod",
+                    "quod": "esse",
+                    "totam": "porro",
                 },
-                Data: "quod",
-                TopicName: "esse",
+                Data: sdk.String("dolorum"),
+                TopicName: sdk.String("dicta"),
             },
             RetryConfig: &shared.RetryConfig{
-                MaxBackoffDuration: "totam",
-                MaxDoublings: 780529,
-                MaxRetryDuration: "dolorum",
-                MinBackoffDuration: "dicta",
-                RetryCount: 720633,
+                MaxBackoffDuration: sdk.String("nam"),
+                MaxDoublings: sdk.Int(639921),
+                MaxRetryDuration: sdk.String("occaecati"),
+                MinBackoffDuration: sdk.String("fugit"),
+                RetryCount: sdk.Int(537373),
             },
-            Schedule: "officia",
-            ScheduleTime: "occaecati",
-            State: "STATE_UNSPECIFIED",
+            Schedule: sdk.String("hic"),
+            ScheduleTime: sdk.String("optio"),
+            State: shared.JobStateEnumPaused.ToPointer(),
             Status: &shared.Status{
-                Code: 537373,
+                Code: sdk.Int(105907),
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "totam": "beatae",
-                        "commodi": "molestiae",
                         "modi": "qui",
                         "impedit": "cum",
                     },
@@ -87,36 +86,24 @@ func main() {
                         "ipsum": "excepturi",
                         "aspernatur": "perferendis",
                     },
-                    map[string]interface{}{
-                        "natus": "sed",
-                        "iste": "dolor",
-                    },
-                    map[string]interface{}{
-                        "laboriosam": "hic",
-                        "saepe": "fuga",
-                        "in": "corporis",
-                    },
                 },
-                Message: "iste",
+                Message: sdk.String("ad"),
             },
-            TimeZone: "iure",
-            UserUpdateTime: "saepe",
+            TimeZone: sdk.String("natus"),
+            UserUpdateTime: sdk.String("sed"),
         },
-        AccessToken: "quidem",
-        Alt: "json",
-        Callback: "ipsa",
-        Fields: "reiciendis",
-        Key: "est",
-        OauthToken: "mollitia",
-        Parent: "laborum",
-        PrettyPrint: false,
-        QuotaUser: "dolores",
-        UploadType: "dolorem",
-        UploadProtocol: "corporis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudschedulerProjectsLocationsJobsCreate(ctx, req, operations.CloudschedulerProjectsLocationsJobsCreateSecurity{
+        AccessToken: sdk.String("iste"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("natus"),
+        Fields: sdk.String("laboriosam"),
+        Key: sdk.String("hic"),
+        OauthToken: sdk.String("saepe"),
+        Parent: "fuga",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("in"),
+        UploadType: sdk.String("corporis"),
+        UploadProtocol: sdk.String("iste"),
+    }, operations.CloudschedulerProjectsLocationsJobsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

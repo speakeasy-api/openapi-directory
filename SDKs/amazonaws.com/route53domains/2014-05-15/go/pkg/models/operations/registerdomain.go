@@ -16,17 +16,21 @@ const (
 	RegisterDomainXAmzTargetEnumRoute53DomainsV20140515RegisterDomain RegisterDomainXAmzTargetEnum = "Route53Domains_v20140515.RegisterDomain"
 )
 
+func (e RegisterDomainXAmzTargetEnum) ToPointer() *RegisterDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.RegisterDomain":
-		*e = RegisterDomainXAmzTargetEnum(s)
+		*e = RegisterDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDomainXAmzTargetEnum: %v", v)
 	}
 }
 

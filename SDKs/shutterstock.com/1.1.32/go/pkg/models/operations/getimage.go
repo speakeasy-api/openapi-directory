@@ -22,19 +22,23 @@ const (
 	GetImageViewEnumFull    GetImageViewEnum = "full"
 )
 
+func (e GetImageViewEnum) ToPointer() *GetImageViewEnum {
+	return &e
+}
+
 func (e *GetImageViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = GetImageViewEnum(s)
+		*e = GetImageViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImageViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImageViewEnum: %v", v)
 	}
 }
 

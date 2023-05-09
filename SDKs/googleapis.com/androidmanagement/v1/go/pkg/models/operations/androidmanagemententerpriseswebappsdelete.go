@@ -22,21 +22,25 @@ const (
 	AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnumWipeExternalStorage         AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum = "WIPE_EXTERNAL_STORAGE"
 )
 
+func (e AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum) ToPointer() *AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum {
+	return &e
+}
+
 func (e *AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WIPE_DATA_FLAG_UNSPECIFIED":
 		fallthrough
 	case "PRESERVE_RESET_PROTECTION_DATA":
 		fallthrough
 	case "WIPE_EXTERNAL_STORAGE":
-		*e = AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum(s)
+		*e = AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidmanagementEnterprisesWebAppsDeleteWipeDataFlagsEnum: %v", v)
 	}
 }
 

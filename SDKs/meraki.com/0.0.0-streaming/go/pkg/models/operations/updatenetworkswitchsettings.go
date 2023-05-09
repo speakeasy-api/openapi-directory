@@ -17,21 +17,25 @@ const (
 	UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnumUseNetworkSetting UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum = "useNetworkSetting"
 )
 
+func (e UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum) ToPointer() *UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "combined":
 		fallthrough
 	case "redundant":
 		fallthrough
 	case "useNetworkSetting":
-		*e = UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum(s)
+		*e = UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSwitchSettingsRequestBodyPowerExceptionsPowerTypeEnum: %v", v)
 	}
 }
 

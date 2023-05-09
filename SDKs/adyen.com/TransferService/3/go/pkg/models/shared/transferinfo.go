@@ -27,12 +27,16 @@ const (
 	TransferInfoCategoryEnumPlatformPayment TransferInfoCategoryEnum = "platformPayment"
 )
 
+func (e TransferInfoCategoryEnum) ToPointer() *TransferInfoCategoryEnum {
+	return &e
+}
+
 func (e *TransferInfoCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bank":
 		fallthrough
 	case "internal":
@@ -40,10 +44,10 @@ func (e *TransferInfoCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "issuedCard":
 		fallthrough
 	case "platformPayment":
-		*e = TransferInfoCategoryEnum(s)
+		*e = TransferInfoCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferInfoCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferInfoCategoryEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	TransferInfoPriorityEnumWire        TransferInfoPriorityEnum = "wire"
 )
 
+func (e TransferInfoPriorityEnum) ToPointer() *TransferInfoPriorityEnum {
+	return &e
+}
+
 func (e *TransferInfoPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crossBorder":
 		fallthrough
 	case "directDebit":
@@ -93,10 +101,10 @@ func (e *TransferInfoPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "regular":
 		fallthrough
 	case "wire":
-		*e = TransferInfoPriorityEnum(s)
+		*e = TransferInfoPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferInfoPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferInfoPriorityEnum: %v", v)
 	}
 }
 
@@ -117,7 +125,11 @@ type TransferInfo struct {
 	// - **platformPayment**: Fund movements related to payments that are acquired for your users.
 	Category     TransferInfoCategoryEnum `json:"category"`
 	Counterparty CounterpartyInfoV3       `json:"counterparty"`
-	// A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+	// Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+	//
+	// Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+	//
+	// Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
 	Description *string `json:"description,omitempty"`
 	// The ID of the resource.
 	ID *string `json:"id,omitempty"`
@@ -148,5 +160,6 @@ type TransferInfo struct {
 	// - **internal**: 80 characters
 	//
 	// - **bank**: 35 characters when transferring to an IBAN, 15 characters for others.
-	ReferenceForBeneficiary *string `json:"referenceForBeneficiary,omitempty"`
+	ReferenceForBeneficiary *string                      `json:"referenceForBeneficiary,omitempty"`
+	UltimateParty           *UltimatePartyIdentification `json:"ultimateParty,omitempty"`
 }

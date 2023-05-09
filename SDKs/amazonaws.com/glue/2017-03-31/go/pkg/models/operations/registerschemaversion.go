@@ -16,17 +16,21 @@ const (
 	RegisterSchemaVersionXAmzTargetEnumAwsGlueRegisterSchemaVersion RegisterSchemaVersionXAmzTargetEnum = "AWSGlue.RegisterSchemaVersion"
 )
 
+func (e RegisterSchemaVersionXAmzTargetEnum) ToPointer() *RegisterSchemaVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterSchemaVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.RegisterSchemaVersion":
-		*e = RegisterSchemaVersionXAmzTargetEnum(s)
+		*e = RegisterSchemaVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterSchemaVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterSchemaVersionXAmzTargetEnum: %v", v)
 	}
 }
 

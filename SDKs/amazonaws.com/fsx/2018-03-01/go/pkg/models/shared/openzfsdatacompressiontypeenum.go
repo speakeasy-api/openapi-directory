@@ -15,20 +15,24 @@ const (
 	OpenZFSDataCompressionTypeEnumLz4  OpenZFSDataCompressionTypeEnum = "LZ4"
 )
 
+func (e OpenZFSDataCompressionTypeEnum) ToPointer() *OpenZFSDataCompressionTypeEnum {
+	return &e
+}
+
 func (e *OpenZFSDataCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "ZSTD":
 		fallthrough
 	case "LZ4":
-		*e = OpenZFSDataCompressionTypeEnum(s)
+		*e = OpenZFSDataCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenZFSDataCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenZFSDataCompressionTypeEnum: %v", v)
 	}
 }

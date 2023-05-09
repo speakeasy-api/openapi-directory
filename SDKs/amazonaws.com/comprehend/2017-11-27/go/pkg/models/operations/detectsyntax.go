@@ -16,17 +16,21 @@ const (
 	DetectSyntaxXAmzTargetEnumComprehend20171127DetectSyntax DetectSyntaxXAmzTargetEnum = "Comprehend_20171127.DetectSyntax"
 )
 
+func (e DetectSyntaxXAmzTargetEnum) ToPointer() *DetectSyntaxXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectSyntaxXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DetectSyntax":
-		*e = DetectSyntaxXAmzTargetEnum(s)
+		*e = DetectSyntaxXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectSyntaxXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectSyntaxXAmzTargetEnum: %v", v)
 	}
 }
 

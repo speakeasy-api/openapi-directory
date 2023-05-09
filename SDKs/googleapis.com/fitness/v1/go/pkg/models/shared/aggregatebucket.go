@@ -18,12 +18,16 @@ const (
 	AggregateBucketTypeEnumActivitySegment AggregateBucketTypeEnum = "activitySegment"
 )
 
+func (e AggregateBucketTypeEnum) ToPointer() *AggregateBucketTypeEnum {
+	return &e
+}
+
 func (e *AggregateBucketTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "time":
@@ -33,10 +37,10 @@ func (e *AggregateBucketTypeEnum) UnmarshalJSON(data []byte) error {
 	case "activityType":
 		fallthrough
 	case "activitySegment":
-		*e = AggregateBucketTypeEnum(s)
+		*e = AggregateBucketTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregateBucketTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregateBucketTypeEnum: %v", v)
 	}
 }
 

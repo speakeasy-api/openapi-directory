@@ -35,7 +35,10 @@ func newTermsOfService(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns Terms of Service information for a legal entity.
 func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceAcceptanceInfos(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosRequest, security operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosSecurity) (*operations.GetLegalEntitiesIDTermsOfServiceAcceptanceInfosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,74 +97,14 @@ func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceAcceptanceInfos(ctx con
 	return res, nil
 }
 
-// GetLegalEntitiesIDTermsOfServiceStatus - Get Terms of Service status
-// Returns the required types of Terms of Service that need to be accepted by a legal entity.
-func (s *termsOfService) GetLegalEntitiesIDTermsOfServiceStatus(ctx context.Context, request operations.GetLegalEntitiesIDTermsOfServiceStatusRequest, security operations.GetLegalEntitiesIDTermsOfServiceStatusSecurity) (*operations.GetLegalEntitiesIDTermsOfServiceStatusResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfServiceStatus", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetLegalEntitiesIDTermsOfServiceStatusResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CalculateTermsOfServiceStatusResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.CalculateTermsOfServiceStatusResponse = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 422:
-		fallthrough
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ServiceError
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ServiceError = out
-		}
-	}
-
-	return res, nil
-}
-
 // PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid - Accept Terms of Service
 // Accepts Terms of Service.
 func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentid(ctx context.Context, request operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidRequest, security operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidSecurity) (*operations.PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumentidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcceptTermsOfServiceRequest", "json")
 	if err != nil {
@@ -231,7 +174,10 @@ func (s *termsOfService) PatchLegalEntitiesIDTermsOfServiceTermsofservicedocumen
 // Returns the Terms of Service document for a legal entity.
 func (s *termsOfService) PostLegalEntitiesIDTermsOfService(ctx context.Context, request operations.PostLegalEntitiesIDTermsOfServiceRequest, security operations.PostLegalEntitiesIDTermsOfServiceSecurity) (*operations.PostLegalEntitiesIDTermsOfServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/termsOfService", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetTermsOfServiceDocumentRequest", "json")
 	if err != nil {

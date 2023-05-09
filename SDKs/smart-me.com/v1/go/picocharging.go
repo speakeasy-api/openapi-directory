@@ -34,7 +34,10 @@ func newPicoCharging(defaultClient, securityClient HTTPClient, serverURL, langua
 // PicoChargingGet - Gets the active charging data of a pico station
 func (s *picoCharging) PicoChargingGet(ctx context.Context, request operations.PicoChargingGetRequest) (*operations.PicoChargingGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/charging/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pico/charging/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	AutoScalingTypeEnumTimer AutoScalingTypeEnum = "timer"
 )
 
+func (e AutoScalingTypeEnum) ToPointer() *AutoScalingTypeEnum {
+	return &e
+}
+
 func (e *AutoScalingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "load":
 		fallthrough
 	case "timer":
-		*e = AutoScalingTypeEnum(s)
+		*e = AutoScalingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoScalingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoScalingTypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListResourceSetsXAmzTargetEnumAwsfms20180101ListResourceSets ListResourceSetsXAmzTargetEnum = "AWSFMS_20180101.ListResourceSets"
 )
 
+func (e ListResourceSetsXAmzTargetEnum) ToPointer() *ListResourceSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.ListResourceSets":
-		*e = ListResourceSetsXAmzTargetEnum(s)
+		*e = ListResourceSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceSetsXAmzTargetEnum: %v", v)
 	}
 }
 

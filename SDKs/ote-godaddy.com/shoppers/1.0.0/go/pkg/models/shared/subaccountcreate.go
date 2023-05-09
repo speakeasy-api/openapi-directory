@@ -68,12 +68,16 @@ const (
 	SubaccountCreateMarketIDEnumZhTw SubaccountCreateMarketIDEnum = "zh-TW"
 )
 
+func (e SubaccountCreateMarketIDEnum) ToPointer() *SubaccountCreateMarketIDEnum {
+	return &e
+}
+
 func (e *SubaccountCreateMarketIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "da-DK":
 		fallthrough
 	case "de-AT":
@@ -185,10 +189,10 @@ func (e *SubaccountCreateMarketIDEnum) UnmarshalJSON(data []byte) error {
 	case "zh-SG":
 		fallthrough
 	case "zh-TW":
-		*e = SubaccountCreateMarketIDEnum(s)
+		*e = SubaccountCreateMarketIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubaccountCreateMarketIDEnum: %s", s)
+		return fmt.Errorf("invalid value for SubaccountCreateMarketIDEnum: %v", v)
 	}
 }
 

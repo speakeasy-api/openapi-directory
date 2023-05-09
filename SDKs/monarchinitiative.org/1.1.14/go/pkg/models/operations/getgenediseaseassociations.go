@@ -18,21 +18,25 @@ const (
 	GetGeneDiseaseAssociationsAssociationTypeEnumBoth      GetGeneDiseaseAssociationsAssociationTypeEnum = "both"
 )
 
+func (e GetGeneDiseaseAssociationsAssociationTypeEnum) ToPointer() *GetGeneDiseaseAssociationsAssociationTypeEnum {
+	return &e
+}
+
 func (e *GetGeneDiseaseAssociationsAssociationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "causal":
 		fallthrough
 	case "non_causal":
 		fallthrough
 	case "both":
-		*e = GetGeneDiseaseAssociationsAssociationTypeEnum(s)
+		*e = GetGeneDiseaseAssociationsAssociationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGeneDiseaseAssociationsAssociationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGeneDiseaseAssociationsAssociationTypeEnum: %v", v)
 	}
 }
 

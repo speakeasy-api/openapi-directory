@@ -18,21 +18,25 @@ const (
 	GetBelegeFormatEnumUuidlist GetBelegeFormatEnum = "uuidlist"
 )
 
+func (e GetBelegeFormatEnum) ToPointer() *GetBelegeFormatEnum {
+	return &e
+}
+
 func (e *GetBelegeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "export":
 		fallthrough
 	case "beleg":
 		fallthrough
 	case "uuidlist":
-		*e = GetBelegeFormatEnum(s)
+		*e = GetBelegeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBelegeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBelegeFormatEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	GetBelegeOrderEnumDesc GetBelegeOrderEnum = "desc"
 )
 
+func (e GetBelegeOrderEnum) ToPointer() *GetBelegeOrderEnum {
+	return &e
+}
+
 func (e *GetBelegeOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetBelegeOrderEnum(s)
+		*e = GetBelegeOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBelegeOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBelegeOrderEnum: %v", v)
 	}
 }
 

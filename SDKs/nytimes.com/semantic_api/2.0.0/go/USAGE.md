@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,15 +16,13 @@ func main() {
         }),
     )
 
-    req := operations.GetNameConceptTypeSpecificConceptJSONRequest{
-        ConceptType: "nytd_org",
-        Fields: "combinations",
+    ctx := context.Background()
+    res, err := s.GetNameConceptTypeSpecificConceptJSON(ctx, operations.GetNameConceptTypeSpecificConceptJSONRequest{
+        ConceptType: operations.GetNameConceptTypeSpecificConceptJSONConceptTypeEnumNytdOrg,
+        Fields: operations.GetNameConceptTypeSpecificConceptJSONFieldsEnumCombinations.ToPointer(),
         Query: "distinctio",
         SpecificConcept: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetNameConceptTypeSpecificConceptJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

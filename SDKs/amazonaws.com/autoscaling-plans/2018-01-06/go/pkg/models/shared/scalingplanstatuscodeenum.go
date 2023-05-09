@@ -20,12 +20,16 @@ const (
 	ScalingPlanStatusCodeEnumUpdateFailed       ScalingPlanStatusCodeEnum = "UpdateFailed"
 )
 
+func (e ScalingPlanStatusCodeEnum) ToPointer() *ScalingPlanStatusCodeEnum {
+	return &e
+}
+
 func (e *ScalingPlanStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "ActiveWithProblems":
@@ -41,9 +45,9 @@ func (e *ScalingPlanStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UpdateInProgress":
 		fallthrough
 	case "UpdateFailed":
-		*e = ScalingPlanStatusCodeEnum(s)
+		*e = ScalingPlanStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingPlanStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingPlanStatusCodeEnum: %v", v)
 	}
 }

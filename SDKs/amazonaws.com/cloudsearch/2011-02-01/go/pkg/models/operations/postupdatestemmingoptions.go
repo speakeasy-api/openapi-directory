@@ -15,17 +15,21 @@ const (
 	POSTUpdateStemmingOptionsActionEnumUpdateStemmingOptions POSTUpdateStemmingOptionsActionEnum = "UpdateStemmingOptions"
 )
 
+func (e POSTUpdateStemmingOptionsActionEnum) ToPointer() *POSTUpdateStemmingOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateStemmingOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateStemmingOptions":
-		*e = POSTUpdateStemmingOptionsActionEnum(s)
+		*e = POSTUpdateStemmingOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateStemmingOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateStemmingOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateStemmingOptionsVersionEnumTwoThousandAndEleven0201 POSTUpdateStemmingOptionsVersionEnum = "2011-02-01"
 )
 
+func (e POSTUpdateStemmingOptionsVersionEnum) ToPointer() *POSTUpdateStemmingOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateStemmingOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = POSTUpdateStemmingOptionsVersionEnum(s)
+		*e = POSTUpdateStemmingOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateStemmingOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateStemmingOptionsVersionEnum: %v", v)
 	}
 }
 

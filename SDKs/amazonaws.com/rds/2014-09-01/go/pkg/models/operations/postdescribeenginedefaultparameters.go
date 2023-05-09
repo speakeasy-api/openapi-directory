@@ -15,17 +15,21 @@ const (
 	POSTDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters POSTDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
 )
 
+func (e POSTDescribeEngineDefaultParametersActionEnum) ToPointer() *POSTDescribeEngineDefaultParametersActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEngineDefaultParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEngineDefaultParameters":
-		*e = POSTDescribeEngineDefaultParametersActionEnum(s)
+		*e = POSTDescribeEngineDefaultParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEngineDefaultParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEngineDefaultParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeEngineDefaultParametersVersionEnumTwoThousandAndFourteen0901 POSTDescribeEngineDefaultParametersVersionEnum = "2014-09-01"
 )
 
+func (e POSTDescribeEngineDefaultParametersVersionEnum) ToPointer() *POSTDescribeEngineDefaultParametersVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEngineDefaultParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = POSTDescribeEngineDefaultParametersVersionEnum(s)
+		*e = POSTDescribeEngineDefaultParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEngineDefaultParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEngineDefaultParametersVersionEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	CompatibilityEnumFullAll     CompatibilityEnum = "FULL_ALL"
 )
 
+func (e CompatibilityEnum) ToPointer() *CompatibilityEnum {
+	return &e
+}
+
 func (e *CompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "DISABLED":
@@ -41,9 +45,9 @@ func (e *CompatibilityEnum) UnmarshalJSON(data []byte) error {
 	case "FULL":
 		fallthrough
 	case "FULL_ALL":
-		*e = CompatibilityEnum(s)
+		*e = CompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CompatibilityEnum: %v", v)
 	}
 }

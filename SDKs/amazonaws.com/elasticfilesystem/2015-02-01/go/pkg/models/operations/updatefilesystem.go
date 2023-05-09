@@ -18,21 +18,25 @@ const (
 	UpdateFileSystemRequestBodyThroughputModeEnumElastic     UpdateFileSystemRequestBodyThroughputModeEnum = "elastic"
 )
 
+func (e UpdateFileSystemRequestBodyThroughputModeEnum) ToPointer() *UpdateFileSystemRequestBodyThroughputModeEnum {
+	return &e
+}
+
 func (e *UpdateFileSystemRequestBodyThroughputModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bursting":
 		fallthrough
 	case "provisioned":
 		fallthrough
 	case "elastic":
-		*e = UpdateFileSystemRequestBodyThroughputModeEnum(s)
+		*e = UpdateFileSystemRequestBodyThroughputModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFileSystemRequestBodyThroughputModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFileSystemRequestBodyThroughputModeEnum: %v", v)
 	}
 }
 

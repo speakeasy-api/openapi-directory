@@ -16,17 +16,21 @@ const (
 	UpdateProfileXAmzTargetEnumTransferServiceUpdateProfile UpdateProfileXAmzTargetEnum = "TransferService.UpdateProfile"
 )
 
+func (e UpdateProfileXAmzTargetEnum) ToPointer() *UpdateProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.UpdateProfile":
-		*e = UpdateProfileXAmzTargetEnum(s)
+		*e = UpdateProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProfileXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newOntology(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GETOntDagsUsingGET - Returns child and parent terms for Accession ID
 func (s *ontology) GETOntDagsUsingGET(ctx context.Context, request operations.GETOntDagsUsingGETRequest) (*operations.GETOntDagsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/ont/{accId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/ont/{accId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *ontology) GETOntDagsUsingGET(ctx context.Context, request operations.GE
 // GETTermUsingGET - Returns term for Accession ID
 func (s *ontology) GETTermUsingGET(ctx context.Context, request operations.GETTermUsingGETRequest) (*operations.GETTermUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{accId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{accId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *ontology) GETTermUsingGET(ctx context.Context, request operations.GETTe
 // IsDescendantOfUsingGET - Returns true or false for terms
 func (s *ontology) IsDescendantOfUsingGET(ctx context.Context, request operations.IsDescendantOfUsingGETRequest) (*operations.IsDescendantOfUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ontology/term/{accId1}/{accId2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ontology/term/{accId1}/{accId2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

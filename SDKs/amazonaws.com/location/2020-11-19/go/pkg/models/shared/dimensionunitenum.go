@@ -14,18 +14,22 @@ const (
 	DimensionUnitEnumFeet   DimensionUnitEnum = "Feet"
 )
 
+func (e DimensionUnitEnum) ToPointer() *DimensionUnitEnum {
+	return &e
+}
+
 func (e *DimensionUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Meters":
 		fallthrough
 	case "Feet":
-		*e = DimensionUnitEnum(s)
+		*e = DimensionUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionUnitEnum: %v", v)
 	}
 }

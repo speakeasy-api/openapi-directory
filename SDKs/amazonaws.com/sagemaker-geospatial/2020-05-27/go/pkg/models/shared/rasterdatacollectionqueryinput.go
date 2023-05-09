@@ -2,7 +2,7 @@
 
 package shared
 
-// RasterDataCollectionQueryInput - <p/>
+// RasterDataCollectionQueryInput - The input structure for Raster Data Collection Query containing the Area of Interest, TimeRange Filters, and Property Filters.
 type RasterDataCollectionQueryInput struct {
 	AreaOfInterest          *AreaOfInterest      `json:"AreaOfInterest,omitempty"`
 	PropertyFilters         *PropertyFilters     `json:"PropertyFilters,omitempty"`

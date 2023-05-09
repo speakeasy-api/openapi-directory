@@ -43,19 +43,23 @@ const (
 	GetPricing200ApplicationJSONPricingFloatingIpsTypeEnumIpv6 GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum = "ipv6"
 )
 
+func (e GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum) ToPointer() *GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum {
+	return &e
+}
+
 func (e *GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum(s)
+		*e = GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPricing200ApplicationJSONPricingFloatingIpsTypeEnum: %v", v)
 	}
 }
 
@@ -145,19 +149,23 @@ const (
 	GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnumIpv6 GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum = "ipv6"
 )
 
+func (e GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum) ToPointer() *GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum {
+	return &e
+}
+
 func (e *GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum(s)
+		*e = GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum: %v", v)
 	}
 }
 

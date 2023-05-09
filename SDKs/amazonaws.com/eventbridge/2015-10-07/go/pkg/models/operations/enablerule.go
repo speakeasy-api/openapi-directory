@@ -16,17 +16,21 @@ const (
 	EnableRuleXAmzTargetEnumAwsEventsEnableRule EnableRuleXAmzTargetEnum = "AWSEvents.EnableRule"
 )
 
+func (e EnableRuleXAmzTargetEnum) ToPointer() *EnableRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *EnableRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.EnableRule":
-		*e = EnableRuleXAmzTargetEnum(s)
+		*e = EnableRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableRuleXAmzTargetEnum: %v", v)
 	}
 }
 

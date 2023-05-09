@@ -19,12 +19,16 @@ const (
 	LegalEntityCapabilityAllowedLevelEnumNotApplicable LegalEntityCapabilityAllowedLevelEnum = "notApplicable"
 )
 
+func (e LegalEntityCapabilityAllowedLevelEnum) ToPointer() *LegalEntityCapabilityAllowedLevelEnum {
+	return &e
+}
+
 func (e *LegalEntityCapabilityAllowedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -32,10 +36,10 @@ func (e *LegalEntityCapabilityAllowedLevelEnum) UnmarshalJSON(data []byte) error
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = LegalEntityCapabilityAllowedLevelEnum(s)
+		*e = LegalEntityCapabilityAllowedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalEntityCapabilityAllowedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalEntityCapabilityAllowedLevelEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	LegalEntityCapabilityRequestedLevelEnumNotApplicable LegalEntityCapabilityRequestedLevelEnum = "notApplicable"
 )
 
+func (e LegalEntityCapabilityRequestedLevelEnum) ToPointer() *LegalEntityCapabilityRequestedLevelEnum {
+	return &e
+}
+
 func (e *LegalEntityCapabilityRequestedLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "high":
 		fallthrough
 	case "low":
@@ -64,10 +72,10 @@ func (e *LegalEntityCapabilityRequestedLevelEnum) UnmarshalJSON(data []byte) err
 	case "medium":
 		fallthrough
 	case "notApplicable":
-		*e = LegalEntityCapabilityRequestedLevelEnum(s)
+		*e = LegalEntityCapabilityRequestedLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalEntityCapabilityRequestedLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalEntityCapabilityRequestedLevelEnum: %v", v)
 	}
 }
 

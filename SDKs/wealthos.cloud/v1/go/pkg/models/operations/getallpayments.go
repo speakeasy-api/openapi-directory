@@ -20,19 +20,23 @@ const (
 	GetAllPaymentsSortEnumDesc GetAllPaymentsSortEnum = "desc"
 )
 
+func (e GetAllPaymentsSortEnum) ToPointer() *GetAllPaymentsSortEnum {
+	return &e
+}
+
 func (e *GetAllPaymentsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetAllPaymentsSortEnum(s)
+		*e = GetAllPaymentsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllPaymentsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllPaymentsSortEnum: %v", v)
 	}
 }
 
@@ -116,19 +120,23 @@ const (
 	GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnumElectronicFundTransfer GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum = "electronic_fund_transfer"
 )
 
+func (e GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum) ToPointer() *GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum {
+	return &e
+}
+
 func (e *GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card":
 		fallthrough
 	case "electronic_fund_transfer":
-		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum(s)
+		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsPaymentTypeEnum: %v", v)
 	}
 }
 
@@ -139,19 +147,23 @@ const (
 	GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnumInvest GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum = "invest"
 )
 
+func (e GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum) ToPointer() *GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum {
+	return &e
+}
+
 func (e *GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cash":
 		fallthrough
 	case "invest":
-		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum(s)
+		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsPurposeEnum: %v", v)
 	}
 }
 
@@ -163,21 +175,25 @@ const (
 	GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnumNone      GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum = "none"
 )
 
+func (e GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum) ToPointer() *GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum {
+	return &e
+}
+
 func (e *GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stripe":
 		fallthrough
 	case "truelayer":
 		fallthrough
 	case "none":
-		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum(s)
+		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsServiceProviderEnum: %v", v)
 	}
 }
 
@@ -208,12 +224,16 @@ const (
 	GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnumFailed              GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum = "failed"
 )
 
+func (e GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) ToPointer() *GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum {
+	return &e
+}
+
 func (e *GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_confirmation":
 		fallthrough
 	case "processing":
@@ -223,10 +243,10 @@ func (e *GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum) Unmarsha
 	case "cancelled":
 		fallthrough
 	case "failed":
-		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum(s)
+		*e = GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllPayments200ApplicationJSONRootTypeForPaymentsStatusEnum: %v", v)
 	}
 }
 

@@ -7,35 +7,39 @@ import (
 	"fmt"
 )
 
-type RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum string
+type RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum int
 
 const (
-	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumZero  RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = "0"
-	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumOne   RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = "1"
-	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumTwo   RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = "2"
-	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumThree RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = "3"
-	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumFour  RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = "4"
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumZero  RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = 0
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumOne   RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = 1
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumTwo   RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = 2
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumThree RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = 3
+	RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnumFour  RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum = 4
 )
 
+func (e RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum) ToPointer() *RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum {
+	return &e
+}
+
 func (e *RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum(s)
+	case 4:
+		*e = RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RechnungsdruckWebAppControllersAPIOrderAPIControllerSendMessageModelSendModeEnum: %v", v)
 	}
 }
 

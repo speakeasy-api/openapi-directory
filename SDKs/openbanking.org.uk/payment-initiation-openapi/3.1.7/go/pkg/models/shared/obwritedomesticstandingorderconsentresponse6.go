@@ -16,19 +16,23 @@ const (
 	OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnumSingle OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum = "Single"
 )
 
+func (e OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum) ToPointer() *OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Any":
 		fallthrough
 	case "Single":
-		*e = OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum(s)
+		*e = OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataAuthorisationAuthorisationTypeEnum: %v", v)
 	}
 }
 
@@ -174,17 +178,21 @@ const (
 	OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnumCreate OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum = "Create"
 )
 
+func (e OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum) ToPointer() *OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Create":
-		*e = OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum(s)
+		*e = OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum: %v", v)
 	}
 }
 
@@ -196,19 +204,23 @@ const (
 	OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnumYes OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum = "Yes"
 )
 
+func (e OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum) ToPointer() *OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No":
 		fallthrough
 	case "Yes":
-		*e = OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum(s)
+		*e = OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum: %v", v)
 	}
 }
 
@@ -222,12 +234,16 @@ const (
 	OBWriteDomesticStandingOrderConsentResponse6DataStatusEnumRejected              OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum) ToPointer() *OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingAuthorisation":
@@ -235,10 +251,10 @@ func (e *OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum) UnmarshalJS
 	case "Consumed":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum(s)
+		*e = OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum: %v", v)
 	}
 }
 

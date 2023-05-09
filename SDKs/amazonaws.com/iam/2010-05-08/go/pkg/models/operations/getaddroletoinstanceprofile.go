@@ -15,17 +15,21 @@ const (
 	GETAddRoleToInstanceProfileActionEnumAddRoleToInstanceProfile GETAddRoleToInstanceProfileActionEnum = "AddRoleToInstanceProfile"
 )
 
+func (e GETAddRoleToInstanceProfileActionEnum) ToPointer() *GETAddRoleToInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *GETAddRoleToInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddRoleToInstanceProfile":
-		*e = GETAddRoleToInstanceProfileActionEnum(s)
+		*e = GETAddRoleToInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddRoleToInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddRoleToInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAddRoleToInstanceProfileVersionEnumTwoThousandAndTen0508 GETAddRoleToInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e GETAddRoleToInstanceProfileVersionEnum) ToPointer() *GETAddRoleToInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *GETAddRoleToInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETAddRoleToInstanceProfileVersionEnum(s)
+		*e = GETAddRoleToInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddRoleToInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddRoleToInstanceProfileVersionEnum: %v", v)
 	}
 }
 

@@ -490,7 +490,10 @@ func (s *account) CreateAccountUserInvite(ctx context.Context, request shared.Us
 // DeleteAccountOrganizationExportToken - Removes the export token from the specified organization
 func (s *account) DeleteAccountOrganizationExportToken(ctx context.Context, request operations.DeleteAccountOrganizationExportTokenRequest, security operations.DeleteAccountOrganizationExportTokenSecurity) (*operations.DeleteAccountOrganizationExportTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -674,7 +677,10 @@ func (s *account) GetAccountAgents(ctx context.Context, request operations.GetAc
 // GetAccountCredential - Get credential details
 func (s *account) GetAccountCredential(ctx context.Context, request operations.GetAccountCredentialRequest, security operations.GetAccountCredentialSecurity) (*operations.GetAccountCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -770,7 +776,10 @@ func (s *account) GetAccountCredentials(ctx context.Context, request operations.
 // GetAccountGroup - Get group details
 func (s *account) GetAccountGroup(ctx context.Context, request operations.GetAccountGroupRequest, security operations.GetAccountGroupSecurity) (*operations.GetAccountGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -817,7 +826,10 @@ func (s *account) GetAccountGroup(ctx context.Context, request operations.GetAcc
 // GetAccountGroupMapping - Get SSO group mapping details
 func (s *account) GetAccountGroupMapping(ctx context.Context, request operations.GetAccountGroupMappingRequest, security operations.GetAccountGroupMappingSecurity) (*operations.GetAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -862,7 +874,7 @@ func (s *account) GetAccountGroupMapping(ctx context.Context, request operations
 }
 
 // GetAccountGroupMappings - Get all SSO group mappings
-func (s *account) GetAccountGroupMappings(ctx context.Context) (*operations.GetAccountGroupMappingsResponse, error) {
+func (s *account) GetAccountGroupMappings(ctx context.Context, security operations.GetAccountGroupMappingsSecurity) (*operations.GetAccountGroupMappingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/sso/groups"
 
@@ -871,7 +883,7 @@ func (s *account) GetAccountGroupMappings(ctx context.Context) (*operations.GetA
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -907,7 +919,7 @@ func (s *account) GetAccountGroupMappings(ctx context.Context) (*operations.GetA
 }
 
 // GetAccountGroups - Get all groups
-func (s *account) GetAccountGroups(ctx context.Context) (*operations.GetAccountGroupsResponse, error) {
+func (s *account) GetAccountGroups(ctx context.Context, security operations.GetAccountGroupsSecurity) (*operations.GetAccountGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/groups"
 
@@ -916,7 +928,7 @@ func (s *account) GetAccountGroups(ctx context.Context) (*operations.GetAccountG
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -954,7 +966,10 @@ func (s *account) GetAccountGroups(ctx context.Context) (*operations.GetAccountG
 // GetAccountKey - Get key details
 func (s *account) GetAccountKey(ctx context.Context, request operations.GetAccountKeyRequest, security operations.GetAccountKeySecurity) (*operations.GetAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -997,7 +1012,7 @@ func (s *account) GetAccountKey(ctx context.Context, request operations.GetAccou
 }
 
 // GetAccountKeys - Get all active API keys
-func (s *account) GetAccountKeys(ctx context.Context) (*operations.GetAccountKeysResponse, error) {
+func (s *account) GetAccountKeys(ctx context.Context, security operations.GetAccountKeysSecurity) (*operations.GetAccountKeysResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/keys"
 
@@ -1006,7 +1021,7 @@ func (s *account) GetAccountKeys(ctx context.Context) (*operations.GetAccountKey
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1042,7 +1057,7 @@ func (s *account) GetAccountKeys(ctx context.Context) (*operations.GetAccountKey
 }
 
 // GetAccountLicense - Get license details
-func (s *account) GetAccountLicense(ctx context.Context) (*operations.GetAccountLicenseResponse, error) {
+func (s *account) GetAccountLicense(ctx context.Context, security operations.GetAccountLicenseSecurity) (*operations.GetAccountLicenseResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/license"
 
@@ -1051,7 +1066,7 @@ func (s *account) GetAccountLicense(ctx context.Context) (*operations.GetAccount
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1089,7 +1104,10 @@ func (s *account) GetAccountLicense(ctx context.Context) (*operations.GetAccount
 // GetAccountOrganization - Get organization details
 func (s *account) GetAccountOrganization(ctx context.Context, request operations.GetAccountOrganizationRequest, security operations.GetAccountOrganizationSecurity) (*operations.GetAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1183,7 +1201,10 @@ func (s *account) GetAccountOrganizations(ctx context.Context, request operation
 // GetAccountScanTemplate - Get scan template details
 func (s *account) GetAccountScanTemplate(ctx context.Context, request operations.GetAccountScanTemplateRequest, security operations.GetAccountScanTemplateSecurity) (*operations.GetAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1381,7 +1402,10 @@ func (s *account) GetAccountTasks(ctx context.Context, request operations.GetAcc
 // GetAccountUser - Get user details
 func (s *account) GetAccountUser(ctx context.Context, request operations.GetAccountUserRequest, security operations.GetAccountUserSecurity) (*operations.GetAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1424,7 +1448,7 @@ func (s *account) GetAccountUser(ctx context.Context, request operations.GetAcco
 }
 
 // GetAccountUsers - Get all users
-func (s *account) GetAccountUsers(ctx context.Context) (*operations.GetAccountUsersResponse, error) {
+func (s *account) GetAccountUsers(ctx context.Context, security operations.GetAccountUsersSecurity) (*operations.GetAccountUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/users"
 
@@ -1433,7 +1457,7 @@ func (s *account) GetAccountUsers(ctx context.Context) (*operations.GetAccountUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1471,7 +1495,10 @@ func (s *account) GetAccountUsers(ctx context.Context) (*operations.GetAccountUs
 // RemoveAccountCredential - Remove this credential
 func (s *account) RemoveAccountCredential(ctx context.Context, request operations.RemoveAccountCredentialRequest, security operations.RemoveAccountCredentialSecurity) (*operations.RemoveAccountCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/credentials/{credential_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1510,7 +1537,10 @@ func (s *account) RemoveAccountCredential(ctx context.Context, request operation
 // RemoveAccountGroup - Remove this group
 func (s *account) RemoveAccountGroup(ctx context.Context, request operations.RemoveAccountGroupRequest, security operations.RemoveAccountGroupSecurity) (*operations.RemoveAccountGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/groups/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1547,7 +1577,10 @@ func (s *account) RemoveAccountGroup(ctx context.Context, request operations.Rem
 // RemoveAccountGroupMapping - Remove this SSO group mapping
 func (s *account) RemoveAccountGroupMapping(ctx context.Context, request operations.RemoveAccountGroupMappingRequest, security operations.RemoveAccountGroupMappingSecurity) (*operations.RemoveAccountGroupMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/sso/groups/{group_mapping_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1584,7 +1617,10 @@ func (s *account) RemoveAccountGroupMapping(ctx context.Context, request operati
 // RemoveAccountKey - Remove this key
 func (s *account) RemoveAccountKey(ctx context.Context, request operations.RemoveAccountKeyRequest, security operations.RemoveAccountKeySecurity) (*operations.RemoveAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1621,7 +1657,10 @@ func (s *account) RemoveAccountKey(ctx context.Context, request operations.Remov
 // RemoveAccountOrganization - Remove this organization
 func (s *account) RemoveAccountOrganization(ctx context.Context, request operations.RemoveAccountOrganizationRequest, security operations.RemoveAccountOrganizationSecurity) (*operations.RemoveAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1658,7 +1697,10 @@ func (s *account) RemoveAccountOrganization(ctx context.Context, request operati
 // RemoveAccountScanTemplate - Remove scan template
 func (s *account) RemoveAccountScanTemplate(ctx context.Context, request operations.RemoveAccountScanTemplateRequest, security operations.RemoveAccountScanTemplateSecurity) (*operations.RemoveAccountScanTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/tasks/templates/{scan_template_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1707,7 +1749,10 @@ func (s *account) RemoveAccountScanTemplate(ctx context.Context, request operati
 // RemoveAccountUser - Remove this user
 func (s *account) RemoveAccountUser(ctx context.Context, request operations.RemoveAccountUserRequest, security operations.RemoveAccountUserSecurity) (*operations.RemoveAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1744,7 +1789,10 @@ func (s *account) RemoveAccountUser(ctx context.Context, request operations.Remo
 // ResetAccountUserLockout - Resets the user's lockout status
 func (s *account) ResetAccountUserLockout(ctx context.Context, request operations.ResetAccountUserLockoutRequest, security operations.ResetAccountUserLockoutSecurity) (*operations.ResetAccountUserLockoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetLockout", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetLockout", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1789,7 +1837,10 @@ func (s *account) ResetAccountUserLockout(ctx context.Context, request operation
 // ResetAccountUserMFA - Resets the user's MFA tokens
 func (s *account) ResetAccountUserMFA(ctx context.Context, request operations.ResetAccountUserMFARequest, security operations.ResetAccountUserMFASecurity) (*operations.ResetAccountUserMFAResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetMFA", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetMFA", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1834,7 +1885,10 @@ func (s *account) ResetAccountUserMFA(ctx context.Context, request operations.Re
 // ResetAccountUserPassword - Sends the user a password reset email
 func (s *account) ResetAccountUserPassword(ctx context.Context, request operations.ResetAccountUserPasswordRequest, security operations.ResetAccountUserPasswordSecurity) (*operations.ResetAccountUserPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetPassword", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}/resetPassword", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1879,7 +1933,10 @@ func (s *account) ResetAccountUserPassword(ctx context.Context, request operatio
 // RotateAccountKey - Rotates the key secret
 func (s *account) RotateAccountKey(ctx context.Context, request operations.RotateAccountKeyRequest, security operations.RotateAccountKeySecurity) (*operations.RotateAccountKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}/rotate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/keys/{key_id}/rotate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1924,7 +1981,10 @@ func (s *account) RotateAccountKey(ctx context.Context, request operations.Rotat
 // RotateAccountOrganizationExportToken - Rotates the organization export token and returns the updated organization
 func (s *account) RotateAccountOrganizationExportToken(ctx context.Context, request operations.RotateAccountOrganizationExportTokenRequest, security operations.RotateAccountOrganizationExportTokenSecurity) (*operations.RotateAccountOrganizationExportTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken/rotate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}/exportToken/rotate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -2079,7 +2139,10 @@ func (s *account) UpdateAccountGroupMapping(ctx context.Context, request shared.
 // UpdateAccountOrganization - Update organization details
 func (s *account) UpdateAccountOrganization(ctx context.Context, request operations.UpdateAccountOrganizationRequest, security operations.UpdateAccountOrganizationSecurity) (*operations.UpdateAccountOrganizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/orgs/{org_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrgOptions", "json")
 	if err != nil {
@@ -2195,7 +2258,10 @@ func (s *account) UpdateAccountScanTemplate(ctx context.Context, request shared.
 // UpdateAccountUser - Update a user's details
 func (s *account) UpdateAccountUser(ctx context.Context, request operations.UpdateAccountUserRequest, security operations.UpdateAccountUserSecurity) (*operations.UpdateAccountUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserOptions", "json")
 	if err != nil {

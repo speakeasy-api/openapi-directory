@@ -15,18 +15,22 @@ const (
 	ActionsDefaultWorkflowPermissionsEnumWrite ActionsDefaultWorkflowPermissionsEnum = "write"
 )
 
+func (e ActionsDefaultWorkflowPermissionsEnum) ToPointer() *ActionsDefaultWorkflowPermissionsEnum {
+	return &e
+}
+
 func (e *ActionsDefaultWorkflowPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = ActionsDefaultWorkflowPermissionsEnum(s)
+		*e = ActionsDefaultWorkflowPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsDefaultWorkflowPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsDefaultWorkflowPermissionsEnum: %v", v)
 	}
 }

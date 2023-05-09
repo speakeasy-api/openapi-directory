@@ -16,12 +16,16 @@ const (
 	PartitionIndexStatusEnumFailed   PartitionIndexStatusEnum = "FAILED"
 )
 
+func (e PartitionIndexStatusEnum) ToPointer() *PartitionIndexStatusEnum {
+	return &e
+}
+
 func (e *PartitionIndexStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -29,9 +33,9 @@ func (e *PartitionIndexStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = PartitionIndexStatusEnum(s)
+		*e = PartitionIndexStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartitionIndexStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PartitionIndexStatusEnum: %v", v)
 	}
 }

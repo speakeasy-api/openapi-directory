@@ -15,20 +15,24 @@ const (
 	ClientVpnAuthenticationTypeEnumFederatedAuthentication        ClientVpnAuthenticationTypeEnum = "federated-authentication"
 )
 
+func (e ClientVpnAuthenticationTypeEnum) ToPointer() *ClientVpnAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *ClientVpnAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "certificate-authentication":
 		fallthrough
 	case "directory-service-authentication":
 		fallthrough
 	case "federated-authentication":
-		*e = ClientVpnAuthenticationTypeEnum(s)
+		*e = ClientVpnAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientVpnAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientVpnAuthenticationTypeEnum: %v", v)
 	}
 }

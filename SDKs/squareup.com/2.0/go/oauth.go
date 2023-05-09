@@ -120,7 +120,10 @@ func (s *oAuth) ObtainToken(ctx context.Context, request shared.ObtainTokenReque
 // page in the [developer dashboard](https://developer.squareup.com/apps).
 func (s *oAuth) RenewToken(ctx context.Context, request operations.RenewTokenRequest, security operations.RenewTokenSecurity) (*operations.RenewTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth2/clients/{client_id}/access-token/renew", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/oauth2/clients/{client_id}/access-token/renew", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenewTokenRequest", "json")
 	if err != nil {

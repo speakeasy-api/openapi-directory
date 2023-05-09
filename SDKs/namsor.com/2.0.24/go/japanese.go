@@ -36,7 +36,10 @@ func newJapanese(defaultClient, securityClient HTTPClient, serverURL, language, 
 // GenderJapaneseNameFull - Infer the likely gender of a Japanese full name ex. 王晓明
 func (s *japanese) GenderJapaneseNameFull(ctx context.Context, request operations.GenderJapaneseNameFullRequest, security operations.GenderJapaneseNameFullSecurity) (*operations.GenderJapaneseNameFullResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderJapaneseNameFull/{japaneseName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/genderJapaneseNameFull/{japaneseName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +142,10 @@ func (s *japanese) GenderJapaneseNameFullBatch(ctx context.Context, request shar
 // GenderJapaneseNamePinyin - Infer the likely gender of a Japanese name in LATIN (Pinyin).
 func (s *japanese) GenderJapaneseNamePinyin(ctx context.Context, request operations.GenderJapaneseNamePinyinRequest, security operations.GenderJapaneseNamePinyinSecurity) (*operations.GenderJapaneseNamePinyinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/genderJapaneseName/{japaneseSurname}/{japaneseGivenName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/genderJapaneseName/{japaneseSurname}/{japaneseGivenName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,10 +301,13 @@ func (s *japanese) JapaneseNameGenderKanjiCandidatesBatch(ctx context.Context, r
 	return res, nil
 }
 
-// JapaneseNameKanjiCandidates - Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
+// JapaneseNameKanjiCandidates - Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
 func (s *japanese) JapaneseNameKanjiCandidates(ctx context.Context, request operations.JapaneseNameKanjiCandidatesRequest, security operations.JapaneseNameKanjiCandidatesSecurity) (*operations.JapaneseNameKanjiCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,10 +407,13 @@ func (s *japanese) JapaneseNameKanjiCandidatesBatch(ctx context.Context, request
 	return res, nil
 }
 
-// JapaneseNameKanjiCandidates1 - Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae - and a known gender.
+// JapaneseNameKanjiCandidates1 - Identify japanese name candidates in KANJI, based on the romanized name ex. Yamamoto Sanae
 func (s *japanese) JapaneseNameKanjiCandidates1(ctx context.Context, request operations.JapaneseNameKanjiCandidates1Request, security operations.JapaneseNameKanjiCandidates1Security) (*operations.JapaneseNameKanjiCandidates1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{knownGender}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameKanjiCandidates/{japaneseSurnameLatin}/{japaneseGivenNameLatin}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -448,7 +460,10 @@ func (s *japanese) JapaneseNameKanjiCandidates1(ctx context.Context, request ope
 // JapaneseNameLatinCandidates - Romanize japanese name, based on the name in Kanji.
 func (s *japanese) JapaneseNameLatinCandidates(ctx context.Context, request operations.JapaneseNameLatinCandidatesRequest, security operations.JapaneseNameLatinCandidatesSecurity) (*operations.JapaneseNameLatinCandidatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameLatinCandidates/{japaneseSurnameKanji}/{japaneseGivenNameKanji}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameLatinCandidates/{japaneseSurnameKanji}/{japaneseGivenNameKanji}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -551,7 +566,10 @@ func (s *japanese) JapaneseNameLatinCandidatesBatch(ctx context.Context, request
 // JapaneseNameMatch - Return a score for matching Japanese name in KANJI ex. 山本 早苗 with a romanized name ex. Yamamoto Sanae
 func (s *japanese) JapaneseNameMatch(ctx context.Context, request operations.JapaneseNameMatchRequest, security operations.JapaneseNameMatchSecurity) (*operations.JapaneseNameMatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameMatch/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameMatch/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -654,7 +672,10 @@ func (s *japanese) JapaneseNameMatchBatch(ctx context.Context, request shared.Ba
 // JapaneseNameMatchFeedbackLoop - [CREDITS 1 UNIT] Feedback loop to better perform matching Japanese name in KANJI ex. 山本 早苗 with a romanized name ex. Yamamoto Sanae
 func (s *japanese) JapaneseNameMatchFeedbackLoop(ctx context.Context, request operations.JapaneseNameMatchFeedbackLoopRequest, security operations.JapaneseNameMatchFeedbackLoopSecurity) (*operations.JapaneseNameMatchFeedbackLoopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameMatchFeedbackLoop/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/japaneseNameMatchFeedbackLoop/{japaneseSurnameLatin}/{japaneseGivenNameLatin}/{japaneseName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,7 +722,10 @@ func (s *japanese) JapaneseNameMatchFeedbackLoop(ctx context.Context, request op
 // ParseJapaneseName - Infer the likely first/last name structure of a name, ex. 山本 早苗 or Yamamoto Sanae
 func (s *japanese) ParseJapaneseName(ctx context.Context, request operations.ParseJapaneseNameRequest, security operations.ParseJapaneseNameSecurity) (*operations.ParseJapaneseNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/parseJapaneseName/{japaneseName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/parseJapaneseName/{japaneseName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

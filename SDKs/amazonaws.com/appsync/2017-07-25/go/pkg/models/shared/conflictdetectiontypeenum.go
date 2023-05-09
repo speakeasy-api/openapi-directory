@@ -14,18 +14,22 @@ const (
 	ConflictDetectionTypeEnumNone    ConflictDetectionTypeEnum = "NONE"
 )
 
+func (e ConflictDetectionTypeEnum) ToPointer() *ConflictDetectionTypeEnum {
+	return &e
+}
+
 func (e *ConflictDetectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERSION":
 		fallthrough
 	case "NONE":
-		*e = ConflictDetectionTypeEnum(s)
+		*e = ConflictDetectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConflictDetectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConflictDetectionTypeEnum: %v", v)
 	}
 }

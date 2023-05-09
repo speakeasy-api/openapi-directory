@@ -15,17 +15,21 @@ const (
 	GETRollbackStackActionEnumRollbackStack GETRollbackStackActionEnum = "RollbackStack"
 )
 
+func (e GETRollbackStackActionEnum) ToPointer() *GETRollbackStackActionEnum {
+	return &e
+}
+
 func (e *GETRollbackStackActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RollbackStack":
-		*e = GETRollbackStackActionEnum(s)
+		*e = GETRollbackStackActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRollbackStackActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRollbackStackActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRollbackStackVersionEnumTwoThousandAndTen0515 GETRollbackStackVersionEnum = "2010-05-15"
 )
 
+func (e GETRollbackStackVersionEnum) ToPointer() *GETRollbackStackVersionEnum {
+	return &e
+}
+
 func (e *GETRollbackStackVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETRollbackStackVersionEnum(s)
+		*e = GETRollbackStackVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRollbackStackVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRollbackStackVersionEnum: %v", v)
 	}
 }
 

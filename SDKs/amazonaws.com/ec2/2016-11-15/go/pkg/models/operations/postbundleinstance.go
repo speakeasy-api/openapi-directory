@@ -15,17 +15,21 @@ const (
 	POSTBundleInstanceActionEnumBundleInstance POSTBundleInstanceActionEnum = "BundleInstance"
 )
 
+func (e POSTBundleInstanceActionEnum) ToPointer() *POSTBundleInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTBundleInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BundleInstance":
-		*e = POSTBundleInstanceActionEnum(s)
+		*e = POSTBundleInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBundleInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBundleInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTBundleInstanceVersionEnumTwoThousandAndSixteen1115 POSTBundleInstanceVersionEnum = "2016-11-15"
 )
 
+func (e POSTBundleInstanceVersionEnum) ToPointer() *POSTBundleInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTBundleInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTBundleInstanceVersionEnum(s)
+		*e = POSTBundleInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBundleInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBundleInstanceVersionEnum: %v", v)
 	}
 }
 

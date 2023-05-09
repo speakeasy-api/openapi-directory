@@ -66,12 +66,16 @@ const (
 	DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnumTargetingTypeContentGenre                 DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum = "TARGETING_TYPE_CONTENT_GENRE"
 )
 
+func (e DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum) ToPointer() *DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -163,10 +167,10 @@ func (e *DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargeting
 	case "TARGETING_TYPE_AUDIO_CONTENT_TYPE":
 		fallthrough
 	case "TARGETING_TYPE_CONTENT_GENRE":
-		*e = DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum(s)
+		*e = DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListTargetingTypeEnum: %v", v)
 	}
 }
 
@@ -181,7 +185,7 @@ type DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest struc
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// Allows filtering by assigned targeting option properties. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * The operator must be `EQUALS (=)`. * Supported fields: - `assignedTargetingOptionId` Examples: * AssignedTargetingOption with ID 123456 `assignedTargetingOptionId="123456"` The length of this field should be no more than 500 characters.
+	// Allows filtering by assigned targeting option fields. Supported syntax: * Filter expressions are made up of one or more restrictions. * Restrictions can be combined by the logical operator `OR`. * A restriction has the form of `{field} {operator} {value}`. * All fields must use the `EQUALS (=)` operator. Supported fields: * `assignedTargetingOptionId` Examples: * `AssignedTargetingOption` resource with ID 123456: `assignedTargetingOptionId="123456"` The length of this field should be no more than 500 characters. Reference our [filter `LIST` requests](/display-video/api/guides/how-tos/filters) guide for more information.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`

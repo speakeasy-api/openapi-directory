@@ -16,12 +16,16 @@ const (
 	ReleaseStageEnumCustom             ReleaseStageEnum = "custom"
 )
 
+func (e ReleaseStageEnum) ToPointer() *ReleaseStageEnum {
+	return &e
+}
+
 func (e *ReleaseStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "alpha":
 		fallthrough
 	case "beta":
@@ -29,9 +33,9 @@ func (e *ReleaseStageEnum) UnmarshalJSON(data []byte) error {
 	case "generally_available":
 		fallthrough
 	case "custom":
-		*e = ReleaseStageEnum(s)
+		*e = ReleaseStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseStageEnum: %v", v)
 	}
 }

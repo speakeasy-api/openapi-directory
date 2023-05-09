@@ -16,15 +16,25 @@ type RetrieveAccountTransactionsV2Request struct {
 }
 
 type RetrieveAccountTransactionsV2Response struct {
-	ContentType                                           string
-	StatusCode                                            int
-	RawResponse                                           *http.Response
+	ContentType string
+	StatusCode  int
+	RawResponse *http.Response
+	// Retrieve account transactions
+	RetrieveAccountTransactionsV2200ApplicationJSONObject map[string]interface{}
+	// Date range error
 	RetrieveAccountTransactionsV2400ApplicationJSONObject map[string]interface{}
+	// Failed Authentication
 	RetrieveAccountTransactionsV2401ApplicationJSONObject map[string]interface{}
+	// Account Access Forbidden
 	RetrieveAccountTransactionsV2403ApplicationJSONObject map[string]interface{}
+	// Account not found error
 	RetrieveAccountTransactionsV2404ApplicationJSONObject map[string]interface{}
+	// Account state error
 	RetrieveAccountTransactionsV2409ApplicationJSONObject map[string]interface{}
+	// Rate Limit Error
 	RetrieveAccountTransactionsV2429ApplicationJSONObject map[string]interface{}
+	// Unknown Request Error
 	RetrieveAccountTransactionsV2500ApplicationJSONObject map[string]interface{}
+	// Connection Error
 	RetrieveAccountTransactionsV2503ApplicationJSONObject map[string]interface{}
 }

@@ -88,12 +88,16 @@ const (
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeHivestack         ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
+func (e ExchangeConfigEnabledExchangeExchangeEnum) ToPointer() *ExchangeConfigEnabledExchangeExchangeEnum {
+	return &e
+}
+
 func (e *ExchangeConfigEnabledExchangeExchangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCHANGE_UNSPECIFIED":
 		fallthrough
 	case "EXCHANGE_GOOGLE_AD_MANAGER":
@@ -243,10 +247,10 @@ func (e *ExchangeConfigEnabledExchangeExchangeEnum) UnmarshalJSON(data []byte) e
 	case "EXCHANGE_RESET_DIGITAL":
 		fallthrough
 	case "EXCHANGE_HIVESTACK":
-		*e = ExchangeConfigEnabledExchangeExchangeEnum(s)
+		*e = ExchangeConfigEnabledExchangeExchangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeConfigEnabledExchangeExchangeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeConfigEnabledExchangeExchangeEnum: %v", v)
 	}
 }
 

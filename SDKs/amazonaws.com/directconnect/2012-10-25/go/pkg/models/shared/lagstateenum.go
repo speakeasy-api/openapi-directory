@@ -19,12 +19,16 @@ const (
 	LagStateEnumUnknown   LagStateEnum = "unknown"
 )
 
+func (e LagStateEnum) ToPointer() *LagStateEnum {
+	return &e
+}
+
 func (e *LagStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requested":
 		fallthrough
 	case "pending":
@@ -38,9 +42,9 @@ func (e *LagStateEnum) UnmarshalJSON(data []byte) error {
 	case "deleted":
 		fallthrough
 	case "unknown":
-		*e = LagStateEnum(s)
+		*e = LagStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LagStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LagStateEnum: %v", v)
 	}
 }

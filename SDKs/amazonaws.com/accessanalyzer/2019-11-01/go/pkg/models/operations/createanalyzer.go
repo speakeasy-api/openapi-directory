@@ -17,19 +17,23 @@ const (
 	CreateAnalyzerRequestBodyTypeEnumOrganization CreateAnalyzerRequestBodyTypeEnum = "ORGANIZATION"
 )
 
+func (e CreateAnalyzerRequestBodyTypeEnum) ToPointer() *CreateAnalyzerRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateAnalyzerRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
-		*e = CreateAnalyzerRequestBodyTypeEnum(s)
+		*e = CreateAnalyzerRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnalyzerRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnalyzerRequestBodyTypeEnum: %v", v)
 	}
 }
 

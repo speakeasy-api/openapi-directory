@@ -34,7 +34,10 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MirrorSettingsGet - Gets a single setting by ID.
 func (s *settings) MirrorSettingsGet(ctx context.Context, request operations.MirrorSettingsGetRequest, security operations.MirrorSettingsGetSecurity) (*operations.MirrorSettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

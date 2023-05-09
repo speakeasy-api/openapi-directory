@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -43,10 +44,14 @@ pkg/models/shared/createaddressresult.go
 pkg/models/shared/createaddressrequest.go
 pkg/models/shared/address.go
 pkg/models/shared/createclusterresult.go
+pkg/models/shared/joblistentry.go
+pkg/models/shared/snowballtypeenum.go
+pkg/models/shared/jobtypeenum.go
+pkg/models/shared/jobstateenum.go
 pkg/models/shared/createclusterrequest.go
 pkg/models/shared/taxdocuments.go
 pkg/models/shared/indtaxdocuments.go
-pkg/models/shared/snowballtypeenum.go
+pkg/models/shared/snowballcapacityenum.go
 pkg/models/shared/shippingoptionenum.go
 pkg/models/shared/jobresource.go
 pkg/models/shared/s3resource.go
@@ -61,14 +66,12 @@ pkg/models/shared/remotemanagementenum.go
 pkg/models/shared/ondeviceserviceconfiguration.go
 pkg/models/shared/tgwondeviceserviceconfiguration.go
 pkg/models/shared/storageunitenum.go
+pkg/models/shared/s3ondeviceserviceconfiguration.go
 pkg/models/shared/nfsondeviceserviceconfiguration.go
 pkg/models/shared/eksondeviceserviceconfiguration.go
 pkg/models/shared/notification.go
-pkg/models/shared/jobstateenum.go
-pkg/models/shared/jobtypeenum.go
 pkg/models/shared/createjobresult.go
 pkg/models/shared/createjobrequest.go
-pkg/models/shared/snowballcapacityenum.go
 pkg/models/shared/deviceconfiguration.go
 pkg/models/shared/snowconedeviceconfiguration.go
 pkg/models/shared/wirelessconnection.go
@@ -103,7 +106,6 @@ pkg/models/shared/getsnowballusageresult.go
 pkg/models/shared/getsoftwareupdatesresult.go
 pkg/models/shared/getsoftwareupdatesrequest.go
 pkg/models/shared/listclusterjobsresult.go
-pkg/models/shared/joblistentry.go
 pkg/models/shared/listclusterjobsrequest.go
 pkg/models/shared/listclustersresult.go
 pkg/models/shared/clusterlistentry.go
@@ -127,4 +129,5 @@ pkg/models/shared/updatejobshipmentstaterequest.go
 pkg/models/shared/shipmentstateenum.go
 pkg/models/shared/updatelongtermpricingrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

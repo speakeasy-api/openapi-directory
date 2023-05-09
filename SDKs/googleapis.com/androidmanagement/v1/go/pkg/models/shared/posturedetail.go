@@ -17,12 +17,16 @@ const (
 	PostureDetailSecurityRiskEnumHardwareBackedEvaluationFailed PostureDetailSecurityRiskEnum = "HARDWARE_BACKED_EVALUATION_FAILED"
 )
 
+func (e PostureDetailSecurityRiskEnum) ToPointer() *PostureDetailSecurityRiskEnum {
+	return &e
+}
+
 func (e *PostureDetailSecurityRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURITY_RISK_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN_OS":
@@ -30,10 +34,10 @@ func (e *PostureDetailSecurityRiskEnum) UnmarshalJSON(data []byte) error {
 	case "COMPROMISED_OS":
 		fallthrough
 	case "HARDWARE_BACKED_EVALUATION_FAILED":
-		*e = PostureDetailSecurityRiskEnum(s)
+		*e = PostureDetailSecurityRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostureDetailSecurityRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for PostureDetailSecurityRiskEnum: %v", v)
 	}
 }
 

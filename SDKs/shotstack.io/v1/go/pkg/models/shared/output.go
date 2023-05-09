@@ -26,12 +26,16 @@ const (
 	OutputAspectRatioEnumFour3    OutputAspectRatioEnum = "4:3"
 )
 
+func (e OutputAspectRatioEnum) ToPointer() *OutputAspectRatioEnum {
+	return &e
+}
+
 func (e *OutputAspectRatioEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "16:9":
 		fallthrough
 	case "9:16":
@@ -41,10 +45,10 @@ func (e *OutputAspectRatioEnum) UnmarshalJSON(data []byte) error {
 	case "4:5":
 		fallthrough
 	case "4:3":
-		*e = OutputAspectRatioEnum(s)
+		*e = OutputAspectRatioEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputAspectRatioEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputAspectRatioEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	OutputFormatEnumBmp OutputFormatEnum = "bmp"
 )
 
+func (e OutputFormatEnum) ToPointer() *OutputFormatEnum {
+	return &e
+}
+
 func (e *OutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mp4":
 		fallthrough
 	case "gif":
@@ -86,10 +94,10 @@ func (e *OutputFormatEnum) UnmarshalJSON(data []byte) error {
 	case "png":
 		fallthrough
 	case "bmp":
-		*e = OutputFormatEnum(s)
+		*e = OutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputFormatEnum: %v", v)
 	}
 }
 
@@ -102,35 +110,39 @@ func (e *OutputFormatEnum) UnmarshalJSON(data []byte) error {
 //	<li>`30` - 30fps</li>
 //
 // </ul>
-type OutputFpsEnum string
+type OutputFpsEnum int64
 
 const (
-	OutputFpsEnumTwelve     OutputFpsEnum = "12"
-	OutputFpsEnumFifteen    OutputFpsEnum = "15"
-	OutputFpsEnumTwentyFour OutputFpsEnum = "24"
-	OutputFpsEnumTwentyFive OutputFpsEnum = "25"
-	OutputFpsEnumThirty     OutputFpsEnum = "30"
+	OutputFpsEnumTwelve     OutputFpsEnum = 12
+	OutputFpsEnumFifteen    OutputFpsEnum = 15
+	OutputFpsEnumTwentyFour OutputFpsEnum = 24
+	OutputFpsEnumTwentyFive OutputFpsEnum = 25
+	OutputFpsEnumThirty     OutputFpsEnum = 30
 )
 
+func (e OutputFpsEnum) ToPointer() *OutputFpsEnum {
+	return &e
+}
+
 func (e *OutputFpsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "12":
+	switch v {
+	case 12:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "24":
+	case 24:
 		fallthrough
-	case "25":
+	case 25:
 		fallthrough
-	case "30":
-		*e = OutputFpsEnum(s)
+	case 30:
+		*e = OutputFpsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputFpsEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputFpsEnum: %v", v)
 	}
 }
 
@@ -149,21 +161,25 @@ const (
 	OutputQualityEnumHigh   OutputQualityEnum = "high"
 )
 
+func (e OutputQualityEnum) ToPointer() *OutputQualityEnum {
+	return &e
+}
+
 func (e *OutputQualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "low":
 		fallthrough
 	case "medium":
 		fallthrough
 	case "high":
-		*e = OutputQualityEnum(s)
+		*e = OutputQualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputQualityEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputQualityEnum: %v", v)
 	}
 }
 
@@ -186,12 +202,16 @@ const (
 	OutputResolutionEnumOneThousandAndEighty OutputResolutionEnum = "1080"
 )
 
+func (e OutputResolutionEnum) ToPointer() *OutputResolutionEnum {
+	return &e
+}
+
 func (e *OutputResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "mobile":
@@ -201,10 +221,10 @@ func (e *OutputResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "hd":
 		fallthrough
 	case "1080":
-		*e = OutputResolutionEnum(s)
+		*e = OutputResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputResolutionEnum: %v", v)
 	}
 }
 
@@ -227,12 +247,16 @@ const (
 	OutputScaleToEnumOneThousandAndEighty OutputScaleToEnum = "1080"
 )
 
+func (e OutputScaleToEnum) ToPointer() *OutputScaleToEnum {
+	return &e
+}
+
 func (e *OutputScaleToEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "mobile":
@@ -242,10 +266,10 @@ func (e *OutputScaleToEnum) UnmarshalJSON(data []byte) error {
 	case "hd":
 		fallthrough
 	case "1080":
-		*e = OutputScaleToEnum(s)
+		*e = OutputScaleToEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputScaleToEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputScaleToEnum: %v", v)
 	}
 }
 

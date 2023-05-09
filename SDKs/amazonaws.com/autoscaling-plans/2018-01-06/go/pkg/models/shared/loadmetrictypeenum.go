@@ -16,12 +16,16 @@ const (
 	LoadMetricTypeEnumAlbTargetGroupRequestCount LoadMetricTypeEnum = "ALBTargetGroupRequestCount"
 )
 
+func (e LoadMetricTypeEnum) ToPointer() *LoadMetricTypeEnum {
+	return &e
+}
+
 func (e *LoadMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASGTotalCPUUtilization":
 		fallthrough
 	case "ASGTotalNetworkIn":
@@ -29,9 +33,9 @@ func (e *LoadMetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASGTotalNetworkOut":
 		fallthrough
 	case "ALBTargetGroupRequestCount":
-		*e = LoadMetricTypeEnum(s)
+		*e = LoadMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadMetricTypeEnum: %v", v)
 	}
 }

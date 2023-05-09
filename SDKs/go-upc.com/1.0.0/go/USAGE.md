@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.GetProductInfoRequest{
-        Code: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Product.GetProductInfo(ctx, req)
+    res, err := s.Product.GetProductInfo(ctx, operations.GetProductInfoRequest{
+        Code: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

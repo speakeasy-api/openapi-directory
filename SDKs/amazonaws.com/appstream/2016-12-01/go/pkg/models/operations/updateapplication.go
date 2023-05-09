@@ -16,17 +16,21 @@ const (
 	UpdateApplicationXAmzTargetEnumPhotonAdminProxyServiceUpdateApplication UpdateApplicationXAmzTargetEnum = "PhotonAdminProxyService.UpdateApplication"
 )
 
+func (e UpdateApplicationXAmzTargetEnum) ToPointer() *UpdateApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.UpdateApplication":
-		*e = UpdateApplicationXAmzTargetEnum(s)
+		*e = UpdateApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

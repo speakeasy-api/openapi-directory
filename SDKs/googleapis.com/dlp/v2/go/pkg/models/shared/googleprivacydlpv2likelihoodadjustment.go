@@ -19,12 +19,16 @@ const (
 	GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnumVeryLikely            GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum) ToPointer() *GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIKELIHOOD_UNSPECIFIED":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -36,10 +40,10 @@ func (e *GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum) UnmarshalJSO
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum(s)
+		*e = GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2LikelihoodAdjustmentFixedLikelihoodEnum: %v", v)
 	}
 }
 

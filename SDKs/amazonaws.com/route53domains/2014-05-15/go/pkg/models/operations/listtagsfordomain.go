@@ -16,17 +16,21 @@ const (
 	ListTagsForDomainXAmzTargetEnumRoute53DomainsV20140515ListTagsForDomain ListTagsForDomainXAmzTargetEnum = "Route53Domains_v20140515.ListTagsForDomain"
 )
 
+func (e ListTagsForDomainXAmzTargetEnum) ToPointer() *ListTagsForDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTagsForDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.ListTagsForDomain":
-		*e = ListTagsForDomainXAmzTargetEnum(s)
+		*e = ListTagsForDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTagsForDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTagsForDomainXAmzTargetEnum: %v", v)
 	}
 }
 

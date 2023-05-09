@@ -24,12 +24,16 @@ const (
 	ThirdPartyVendorConfigVendorEnumThirdPartyVendorDynata            ThirdPartyVendorConfigVendorEnum = "THIRD_PARTY_VENDOR_DYNATA"
 )
 
+func (e ThirdPartyVendorConfigVendorEnum) ToPointer() *ThirdPartyVendorConfigVendorEnum {
+	return &e
+}
+
 func (e *ThirdPartyVendorConfigVendorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THIRD_PARTY_VENDOR_UNSPECIFIED":
 		fallthrough
 	case "THIRD_PARTY_VENDOR_MOAT":
@@ -51,10 +55,10 @@ func (e *ThirdPartyVendorConfigVendorEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD_PARTY_VENDOR_KANTAR":
 		fallthrough
 	case "THIRD_PARTY_VENDOR_DYNATA":
-		*e = ThirdPartyVendorConfigVendorEnum(s)
+		*e = ThirdPartyVendorConfigVendorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyVendorConfigVendorEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyVendorConfigVendorEnum: %v", v)
 	}
 }
 

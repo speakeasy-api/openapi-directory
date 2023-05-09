@@ -15,17 +15,21 @@ const (
 	POSTReceiveMessageActionEnumReceiveMessage POSTReceiveMessageActionEnum = "ReceiveMessage"
 )
 
+func (e POSTReceiveMessageActionEnum) ToPointer() *POSTReceiveMessageActionEnum {
+	return &e
+}
+
 func (e *POSTReceiveMessageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReceiveMessage":
-		*e = POSTReceiveMessageActionEnum(s)
+		*e = POSTReceiveMessageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReceiveMessageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReceiveMessageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTReceiveMessageVersionEnumTwoThousandAndTwelve1105 POSTReceiveMessageVersionEnum = "2012-11-05"
 )
 
+func (e POSTReceiveMessageVersionEnum) ToPointer() *POSTReceiveMessageVersionEnum {
+	return &e
+}
+
 func (e *POSTReceiveMessageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTReceiveMessageVersionEnum(s)
+		*e = POSTReceiveMessageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReceiveMessageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReceiveMessageVersionEnum: %v", v)
 	}
 }
 

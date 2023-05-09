@@ -88,7 +88,10 @@ func (s *customerServiceMetricTask) CreateCustomerServiceMetricTask(ctx context.
 // GetCustomerServiceMetricTask - <p>Use this method to retrieve customer service metric task details for the specified task. The input is <strong>task_id</strong>.</p>
 func (s *customerServiceMetricTask) GetCustomerServiceMetricTask(ctx context.Context, request operations.GetCustomerServiceMetricTaskRequest, security operations.GetCustomerServiceMetricTaskSecurity) (*operations.GetCustomerServiceMetricTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customer_service_metric_task/{task_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customer_service_metric_task/{task_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

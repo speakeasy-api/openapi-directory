@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RetrievePrefixPricingRequest{
+    ctx := context.Background()
+    res, err := s.Pricing.RetrievePrefixPricing(ctx, operations.RetrievePrefixPricingRequest{
         APIKey: "corrupti",
         APISecret: "provident",
         Prefix: "distinctio",
         Type: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Pricing.RetrievePrefixPricing(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

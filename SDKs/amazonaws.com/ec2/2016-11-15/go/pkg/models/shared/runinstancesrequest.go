@@ -20,12 +20,16 @@ const (
 	RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnumGp3      RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -39,10 +43,10 @@ func (e *RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RunInstancesRequestBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -87,19 +91,23 @@ const (
 	RunInstancesRequestInstanceInitiatedShutdownBehaviorEnumTerminate RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum = "terminate"
 )
 
+func (e RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum) ToPointer() *RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum {
+	return &e
+}
+
 func (e *RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum(s)
+		*e = RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for RunInstancesRequestInstanceInitiatedShutdownBehaviorEnum: %v", v)
 	}
 }
 
@@ -248,12 +256,16 @@ const (
 	RunInstancesRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       RunInstancesRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e RunInstancesRequestTagSpecificationsResourceTypeEnum) ToPointer() *RunInstancesRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *RunInstancesRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -423,10 +435,10 @@ func (e *RunInstancesRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(dat
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = RunInstancesRequestTagSpecificationsResourceTypeEnum(s)
+		*e = RunInstancesRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunInstancesRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RunInstancesRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

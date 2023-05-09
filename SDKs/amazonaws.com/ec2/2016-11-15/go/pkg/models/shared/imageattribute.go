@@ -20,12 +20,16 @@ const (
 	ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnumGp3      ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -39,10 +43,10 @@ func (e *ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data 
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributeBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -99,17 +103,21 @@ const (
 	ImageAttributeLaunchPermissionsGroupEnumAll ImageAttributeLaunchPermissionsGroupEnum = "all"
 )
 
+func (e ImageAttributeLaunchPermissionsGroupEnum) ToPointer() *ImageAttributeLaunchPermissionsGroupEnum {
+	return &e
+}
+
 func (e *ImageAttributeLaunchPermissionsGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = ImageAttributeLaunchPermissionsGroupEnum(s)
+		*e = ImageAttributeLaunchPermissionsGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributeLaunchPermissionsGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributeLaunchPermissionsGroupEnum: %v", v)
 	}
 }
 
@@ -129,19 +137,23 @@ const (
 	ImageAttributeProductCodesProductCodeTypeEnumMarketplace ImageAttributeProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e ImageAttributeProductCodesProductCodeTypeEnum) ToPointer() *ImageAttributeProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *ImageAttributeProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = ImageAttributeProductCodesProductCodeTypeEnum(s)
+		*e = ImageAttributeProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributeProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributeProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 

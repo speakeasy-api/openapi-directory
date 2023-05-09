@@ -8,54 +8,6 @@ import (
 	"time"
 )
 
-// ShareRecipientReceivedEnum - Set to true if recipient has accessed the share. Note this is set to true when the recipient clicks the link to access the share; not when they download a file.
-type ShareRecipientReceivedEnum string
-
-const (
-	ShareRecipientReceivedEnumTrue  ShareRecipientReceivedEnum = "true"
-	ShareRecipientReceivedEnumFalse ShareRecipientReceivedEnum = "false"
-)
-
-func (e *ShareRecipientReceivedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareRecipientReceivedEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareRecipientReceivedEnum: %s", s)
-	}
-}
-
-// ShareRecipientSentEnum - Set to true if invite email was sent; false otherwise.
-type ShareRecipientSentEnum string
-
-const (
-	ShareRecipientSentEnumTrue  ShareRecipientSentEnum = "true"
-	ShareRecipientSentEnumFalse ShareRecipientSentEnum = "false"
-)
-
-func (e *ShareRecipientSentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareRecipientSentEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareRecipientSentEnum: %s", s)
-	}
-}
-
 // ShareRecipientTypeEnum - Type of the recipient.
 type ShareRecipientTypeEnum string
 
@@ -64,19 +16,23 @@ const (
 	ShareRecipientTypeEnumDirect ShareRecipientTypeEnum = "direct"
 )
 
+func (e ShareRecipientTypeEnum) ToPointer() *ShareRecipientTypeEnum {
+	return &e
+}
+
 func (e *ShareRecipientTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "owner":
 		fallthrough
 	case "direct":
-		*e = ShareRecipientTypeEnum(s)
+		*e = ShareRecipientTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareRecipientTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareRecipientTypeEnum: %v", v)
 	}
 }
 
@@ -90,9 +46,9 @@ type ShareRecipient struct {
 	// ID of the recipient.
 	ID *int `json:"id,omitempty"`
 	// Set to true if recipient has accessed the share. Note this is set to true when the recipient clicks the link to access the share; not when they download a file.
-	Received *ShareRecipientReceivedEnum `json:"received,omitempty"`
+	Received *bool `json:"received,omitempty"`
 	// Set to true if invite email was sent; false otherwise.
-	Sent *ShareRecipientSentEnum `json:"sent,omitempty"`
+	Sent *bool `json:"sent,omitempty"`
 	// ID of the share that the recipoient belongs to.
 	ShareID *string `json:"shareId,omitempty"`
 	// Type of the recipient.

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,28 +17,29 @@ func main() {
         }),
     )
 
-    req := operations.CreateIdentityPoolRequest{
+    ctx := context.Background()
+    res, err := s.CreateIdentityPool(ctx, operations.CreateIdentityPoolRequest{
         CreateIdentityPoolInput: shared.CreateIdentityPoolInput{
-            AllowClassicFlow: false,
+            AllowClassicFlow: sdk.Bool(false),
             AllowUnauthenticatedIdentities: false,
             CognitoIdentityProviders: []shared.CognitoIdentityProvider{
                 shared.CognitoIdentityProvider{
-                    ClientID: "provident",
-                    ProviderName: "distinctio",
-                    ServerSideTokenCheck: false,
+                    ClientID: sdk.String("provident"),
+                    ProviderName: sdk.String("distinctio"),
+                    ServerSideTokenCheck: sdk.Bool(false),
                 },
                 shared.CognitoIdentityProvider{
-                    ClientID: "quibusdam",
-                    ProviderName: "unde",
-                    ServerSideTokenCheck: false,
+                    ClientID: sdk.String("quibusdam"),
+                    ProviderName: sdk.String("unde"),
+                    ServerSideTokenCheck: sdk.Bool(false),
                 },
                 shared.CognitoIdentityProvider{
-                    ClientID: "nulla",
-                    ProviderName: "corrupti",
-                    ServerSideTokenCheck: false,
+                    ClientID: sdk.String("nulla"),
+                    ProviderName: sdk.String("corrupti"),
+                    ServerSideTokenCheck: sdk.Bool(false),
                 },
             },
-            DeveloperProviderName: "illum",
+            DeveloperProviderName: sdk.String("illum"),
             IdentityPoolName: "vel",
             IdentityPoolTags: map[string]string{
                 "deserunt": "suscipit",
@@ -64,18 +65,15 @@ func main() {
                 "ipsam": "repellendus",
             },
         },
-        XAmzAlgorithm: "sapiente",
-        XAmzContentSha256: "quo",
-        XAmzCredential: "odit",
-        XAmzDate: "at",
-        XAmzSecurityToken: "at",
-        XAmzSignature: "maiores",
-        XAmzSignedHeaders: "molestiae",
-        XAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateIdentityPool(ctx, req)
+        XAmzAlgorithm: sdk.String("sapiente"),
+        XAmzContentSha256: sdk.String("quo"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("at"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("maiores"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+        XAmzTarget: operations.CreateIdentityPoolXAmzTargetEnumAwsCognitoIdentityServiceCreateIdentityPool,
+    })
     if err != nil {
         log.Fatal(err)
     }

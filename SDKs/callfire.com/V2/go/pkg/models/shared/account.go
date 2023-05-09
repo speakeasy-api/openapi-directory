@@ -21,12 +21,16 @@ const (
 	AccountBrandEnumTesla        AccountBrandEnum = "TESLA"
 )
 
+func (e AccountBrandEnum) ToPointer() *AccountBrandEnum {
+	return &e
+}
+
 func (e *AccountBrandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EZTEXTING":
 		fallthrough
 	case "CLUBTEXTING":
@@ -40,10 +44,10 @@ func (e *AccountBrandEnum) UnmarshalJSON(data []byte) error {
 	case "CALLFIRE":
 		fallthrough
 	case "TESLA":
-		*e = AccountBrandEnum(s)
+		*e = AccountBrandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountBrandEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountBrandEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	AccountCountryEnumCa AccountCountryEnum = "CA"
 )
 
+func (e AccountCountryEnum) ToPointer() *AccountCountryEnum {
+	return &e
+}
+
 func (e *AccountCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "US":
 		fallthrough
 	case "CA":
-		*e = AccountCountryEnum(s)
+		*e = AccountCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountCountryEnum: %v", v)
 	}
 }
 
@@ -79,19 +87,23 @@ const (
 	AccountCountryOrDefaultEnumCa AccountCountryOrDefaultEnum = "CA"
 )
 
+func (e AccountCountryOrDefaultEnum) ToPointer() *AccountCountryOrDefaultEnum {
+	return &e
+}
+
 func (e *AccountCountryOrDefaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "US":
 		fallthrough
 	case "CA":
-		*e = AccountCountryOrDefaultEnum(s)
+		*e = AccountCountryOrDefaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountCountryOrDefaultEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountCountryOrDefaultEnum: %v", v)
 	}
 }
 
@@ -103,19 +115,23 @@ const (
 	AccountEntityTypeEnumCompany AccountEntityTypeEnum = "COMPANY"
 )
 
+func (e AccountEntityTypeEnum) ToPointer() *AccountEntityTypeEnum {
+	return &e
+}
+
 func (e *AccountEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SP":
 		fallthrough
 	case "COMPANY":
-		*e = AccountEntityTypeEnum(s)
+		*e = AccountEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountEntityTypeEnum: %v", v)
 	}
 }
 
@@ -146,12 +162,16 @@ const (
 	AccountIndustryEnumTelecom         AccountIndustryEnum = "TELECOM"
 )
 
+func (e AccountIndustryEnum) ToPointer() *AccountIndustryEnum {
+	return &e
+}
+
 func (e *AccountIndustryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ADVERTISING":
@@ -193,10 +213,10 @@ func (e *AccountIndustryEnum) UnmarshalJSON(data []byte) error {
 	case "SEARCH_MARKETING":
 		fallthrough
 	case "TELECOM":
-		*e = AccountIndustryEnum(s)
+		*e = AccountIndustryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountIndustryEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountIndustryEnum: %v", v)
 	}
 }
 
@@ -213,12 +233,16 @@ const (
 	AccountReceiverPeriodTimeUnitEnumDays         AccountReceiverPeriodTimeUnitEnum = "DAYS"
 )
 
+func (e AccountReceiverPeriodTimeUnitEnum) ToPointer() *AccountReceiverPeriodTimeUnitEnum {
+	return &e
+}
+
 func (e *AccountReceiverPeriodTimeUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NANOSECONDS":
 		fallthrough
 	case "MICROSECONDS":
@@ -232,10 +256,10 @@ func (e *AccountReceiverPeriodTimeUnitEnum) UnmarshalJSON(data []byte) error {
 	case "HOURS":
 		fallthrough
 	case "DAYS":
-		*e = AccountReceiverPeriodTimeUnitEnum(s)
+		*e = AccountReceiverPeriodTimeUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountReceiverPeriodTimeUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountReceiverPeriodTimeUnitEnum: %v", v)
 	}
 }
 
@@ -246,26 +270,33 @@ const (
 	AccountStatusEnumActive           AccountStatusEnum = "ACTIVE"
 	AccountStatusEnumPendingCancelled AccountStatusEnum = "PENDING_CANCELLED"
 	AccountStatusEnumCancelled        AccountStatusEnum = "CANCELLED"
+	AccountStatusEnumArchiving        AccountStatusEnum = "ARCHIVING"
 	AccountStatusEnumArchived         AccountStatusEnum = "ARCHIVED"
 )
 
+func (e AccountStatusEnum) ToPointer() *AccountStatusEnum {
+	return &e
+}
+
 func (e *AccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PENDING_CANCELLED":
 		fallthrough
 	case "CANCELLED":
 		fallthrough
+	case "ARCHIVING":
+		fallthrough
 	case "ARCHIVED":
-		*e = AccountStatusEnum(s)
+		*e = AccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountStatusEnum: %v", v)
 	}
 }
 
@@ -280,12 +311,16 @@ const (
 	AccountTrustLevelEnumTrusted   AccountTrustLevelEnum = "TRUSTED"
 )
 
+func (e AccountTrustLevelEnum) ToPointer() *AccountTrustLevelEnum {
+	return &e
+}
+
 func (e *AccountTrustLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCKED":
 		fallthrough
 	case "SUSPENDED":
@@ -295,10 +330,10 @@ func (e *AccountTrustLevelEnum) UnmarshalJSON(data []byte) error {
 	case "NORMAL":
 		fallthrough
 	case "TRUSTED":
-		*e = AccountTrustLevelEnum(s)
+		*e = AccountTrustLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTrustLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTrustLevelEnum: %v", v)
 	}
 }
 

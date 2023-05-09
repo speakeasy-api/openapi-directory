@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,39 +17,37 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsToResourceRequest{
+    ctx := context.Background()
+    res, err := s.AddTagsToResource(ctx, operations.AddTagsToResourceRequest{
         AddTagsToResourceMessage: shared.AddTagsToResourceMessage{
             ResourceArn: "corrupti",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "distinctio",
-                    ResourceArn: "quibusdam",
-                    Value: "unde",
+                    Key: sdk.String("distinctio"),
+                    ResourceArn: sdk.String("quibusdam"),
+                    Value: sdk.String("unde"),
                 },
                 shared.Tag{
-                    Key: "nulla",
-                    ResourceArn: "corrupti",
-                    Value: "illum",
+                    Key: sdk.String("nulla"),
+                    ResourceArn: sdk.String("corrupti"),
+                    Value: sdk.String("illum"),
                 },
                 shared.Tag{
-                    Key: "vel",
-                    ResourceArn: "error",
-                    Value: "deserunt",
+                    Key: sdk.String("vel"),
+                    ResourceArn: sdk.String("error"),
+                    Value: sdk.String("deserunt"),
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTagsToResource(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.AddTagsToResourceXAmzTargetEnumAmazonDmSv20160101AddTagsToResource,
+    })
     if err != nil {
         log.Fatal(err)
     }

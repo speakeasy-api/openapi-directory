@@ -9,6 +9,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// UpdateImagePipelineRequestBodyImageScanningConfiguration - Contains settings for Image Builder image resource and container image scans.
+type UpdateImagePipelineRequestBodyImageScanningConfiguration struct {
+	EcrConfiguration     *shared.EcrConfiguration `json:"ecrConfiguration,omitempty"`
+	ImageScanningEnabled *bool                    `json:"imageScanningEnabled,omitempty"`
+}
+
 // UpdateImagePipelineRequestBodyImageTestsConfiguration - Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 type UpdateImagePipelineRequestBodyImageTestsConfiguration struct {
 	ImageTestsEnabled *bool  `json:"imageTestsEnabled,omitempty"`
@@ -30,19 +36,23 @@ const (
 	UpdateImagePipelineRequestBodyStatusEnumEnabled  UpdateImagePipelineRequestBodyStatusEnum = "ENABLED"
 )
 
+func (e UpdateImagePipelineRequestBodyStatusEnum) ToPointer() *UpdateImagePipelineRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateImagePipelineRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = UpdateImagePipelineRequestBodyStatusEnum(s)
+		*e = UpdateImagePipelineRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateImagePipelineRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateImagePipelineRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -53,17 +63,19 @@ type UpdateImagePipelineRequestBody struct {
 	ContainerRecipeArn *string `json:"containerRecipeArn,omitempty"`
 	// The description of the image pipeline.
 	Description *string `json:"description,omitempty"`
-	// The Amazon Resource Name (ARN) of the distribution configuration that will be used to configure and distribute images updated by this image pipeline.
+	// The Amazon Resource Name (ARN) of the distribution configuration that Image Builder uses to configure and distribute images that this image pipeline has updated.
 	DistributionConfigurationArn *string `json:"distributionConfigurationArn,omitempty"`
-	//  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+	// Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
 	EnhancedImageMetadataEnabled *bool `json:"enhancedImageMetadataEnabled,omitempty"`
 	// The Amazon Resource Name (ARN) of the image pipeline that you want to update.
 	ImagePipelineArn string `json:"imagePipelineArn"`
 	// The Amazon Resource Name (ARN) of the image recipe that will be used to configure images updated by this image pipeline.
 	ImageRecipeArn *string `json:"imageRecipeArn,omitempty"`
+	// Contains settings for Image Builder image resource and container image scans.
+	ImageScanningConfiguration *UpdateImagePipelineRequestBodyImageScanningConfiguration `json:"imageScanningConfiguration,omitempty"`
 	// Configure image tests for your pipeline build. Tests run after building the image, to verify that the AMI or container image is valid before distributing it.
 	ImageTestsConfiguration *UpdateImagePipelineRequestBodyImageTestsConfiguration `json:"imageTestsConfiguration,omitempty"`
-	// The Amazon Resource Name (ARN) of the infrastructure configuration that will be used to build images updated by this image pipeline.
+	// The Amazon Resource Name (ARN) of the infrastructure configuration that Image Builder uses to build images that this image pipeline has updated.
 	InfrastructureConfigurationArn string `json:"infrastructureConfigurationArn"`
 	// A schedule configures how often and when a pipeline will automatically create a new image.
 	Schedule *UpdateImagePipelineRequestBodySchedule `json:"schedule,omitempty"`

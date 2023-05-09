@@ -14,18 +14,22 @@ const (
 	InputFormatEnumOneDocPerLine InputFormatEnum = "ONE_DOC_PER_LINE"
 )
 
+func (e InputFormatEnum) ToPointer() *InputFormatEnum {
+	return &e
+}
+
 func (e *InputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE_DOC_PER_FILE":
 		fallthrough
 	case "ONE_DOC_PER_LINE":
-		*e = InputFormatEnum(s)
+		*e = InputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for InputFormatEnum: %v", v)
 	}
 }

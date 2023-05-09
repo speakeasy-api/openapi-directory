@@ -17,21 +17,25 @@ const (
 	ListPlaceIndexesResponseEntryPricingPlanEnumMobileAssetManagement ListPlaceIndexesResponseEntryPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e ListPlaceIndexesResponseEntryPricingPlanEnum) ToPointer() *ListPlaceIndexesResponseEntryPricingPlanEnum {
+	return &e
+}
+
 func (e *ListPlaceIndexesResponseEntryPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = ListPlaceIndexesResponseEntryPricingPlanEnum(s)
+		*e = ListPlaceIndexesResponseEntryPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPlaceIndexesResponseEntryPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPlaceIndexesResponseEntryPricingPlanEnum: %v", v)
 	}
 }
 

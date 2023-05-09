@@ -39,21 +39,25 @@ const (
 	FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnumFirebaseRulesExecutableV2           FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum = "FIREBASE_RULES_EXECUTABLE_V2"
 )
 
+func (e FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum) ToPointer() *FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum {
+	return &e
+}
+
 func (e *FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEASE_EXECUTABLE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "FIREBASE_RULES_EXECUTABLE_V1":
 		fallthrough
 	case "FIREBASE_RULES_EXECUTABLE_V2":
-		*e = FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum(s)
+		*e = FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for FirebaserulesProjectsReleasesGetExecutableExecutableVersionEnum: %v", v)
 	}
 }
 

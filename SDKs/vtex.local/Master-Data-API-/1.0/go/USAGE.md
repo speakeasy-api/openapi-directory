@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,29 +18,27 @@ func main() {
         }),
     )
 
-    req := operations.CreateNewCustomerAddressRequest{
+    ctx := context.Background()
+    res, err := s.Addresses.CreateNewCustomerAddress(ctx, operations.CreateNewCustomerAddressRequest{
         Accept: "application/json",
         ContentType: "application/json",
-        Schema: "schema",
+        Schema: sdk.String("schema"),
         CreateUpdateAddressRequests: shared.CreateUpdateAddressRequests{
-            AddressName: "My house",
-            AddressType: "residential",
-            City: "Rio de Janeiro",
-            Complement: "3rd floor",
-            Country: "BRA",
-            Neighborhood: "Botafogo",
-            Number: "300",
-            PostalCode: "12345-000",
-            ReceiverName: "Clark Kent.",
-            Reference: "Grey building",
-            State: "Rio de Janeiro",
-            Street: "Praia de Botafogo",
-            UserID: "7e03m794-a33a-11e9-84rt6-0adfa64s5a8e",
+            AddressName: sdk.String("My house"),
+            AddressType: sdk.String("residential"),
+            City: sdk.String("Rio de Janeiro"),
+            Complement: sdk.String("3rd floor"),
+            Country: sdk.String("BRA"),
+            Neighborhood: sdk.String("Botafogo"),
+            Number: sdk.String("300"),
+            PostalCode: sdk.String("12345-000"),
+            ReceiverName: sdk.String("Clark Kent."),
+            Reference: sdk.String("Grey building"),
+            State: sdk.String("Rio de Janeiro"),
+            Street: sdk.String("Praia de Botafogo"),
+            UserID: sdk.String("7e03m794-a33a-11e9-84rt6-0adfa64s5a8e"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Addresses.CreateNewCustomerAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

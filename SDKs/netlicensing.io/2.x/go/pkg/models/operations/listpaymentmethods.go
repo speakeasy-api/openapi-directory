@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListPaymentMethodsSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type ListPaymentMethodsResponse struct {
 	Body        []byte
 	ContentType string

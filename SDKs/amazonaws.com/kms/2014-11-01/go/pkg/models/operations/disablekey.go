@@ -16,17 +16,21 @@ const (
 	DisableKeyXAmzTargetEnumTrentServiceDisableKey DisableKeyXAmzTargetEnum = "TrentService.DisableKey"
 )
 
+func (e DisableKeyXAmzTargetEnum) ToPointer() *DisableKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.DisableKey":
-		*e = DisableKeyXAmzTargetEnum(s)
+		*e = DisableKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableKeyXAmzTargetEnum: %v", v)
 	}
 }
 

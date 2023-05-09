@@ -18,12 +18,16 @@ const (
 	StackSetOperationStatusEnumQueued    StackSetOperationStatusEnum = "QUEUED"
 )
 
+func (e StackSetOperationStatusEnum) ToPointer() *StackSetOperationStatusEnum {
+	return &e
+}
+
 func (e *StackSetOperationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "SUCCEEDED":
@@ -35,9 +39,9 @@ func (e *StackSetOperationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPED":
 		fallthrough
 	case "QUEUED":
-		*e = StackSetOperationStatusEnum(s)
+		*e = StackSetOperationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackSetOperationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackSetOperationStatusEnum: %v", v)
 	}
 }

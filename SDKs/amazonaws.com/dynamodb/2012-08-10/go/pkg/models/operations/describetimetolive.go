@@ -16,17 +16,21 @@ const (
 	DescribeTimeToLiveXAmzTargetEnumDynamoDb20120810DescribeTimeToLive DescribeTimeToLiveXAmzTargetEnum = "DynamoDB_20120810.DescribeTimeToLive"
 )
 
+func (e DescribeTimeToLiveXAmzTargetEnum) ToPointer() *DescribeTimeToLiveXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTimeToLiveXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.DescribeTimeToLive":
-		*e = DescribeTimeToLiveXAmzTargetEnum(s)
+		*e = DescribeTimeToLiveXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTimeToLiveXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTimeToLiveXAmzTargetEnum: %v", v)
 	}
 }
 

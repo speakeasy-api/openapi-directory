@@ -13,16 +13,20 @@ const (
 	TranscriptFilterTypeEnumExact TranscriptFilterTypeEnum = "EXACT"
 )
 
+func (e TranscriptFilterTypeEnum) ToPointer() *TranscriptFilterTypeEnum {
+	return &e
+}
+
 func (e *TranscriptFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACT":
-		*e = TranscriptFilterTypeEnum(s)
+		*e = TranscriptFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TranscriptFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TranscriptFilterTypeEnum: %v", v)
 	}
 }

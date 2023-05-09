@@ -16,17 +16,21 @@ const (
 	CreateGroupXAmzTargetEnumWorkMailServiceCreateGroup CreateGroupXAmzTargetEnum = "WorkMailService.CreateGroup"
 )
 
+func (e CreateGroupXAmzTargetEnum) ToPointer() *CreateGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.CreateGroup":
-		*e = CreateGroupXAmzTargetEnum(s)
+		*e = CreateGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGroupXAmzTargetEnum: %v", v)
 	}
 }
 

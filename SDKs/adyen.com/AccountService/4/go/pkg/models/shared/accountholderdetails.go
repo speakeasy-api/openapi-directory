@@ -5,8 +5,8 @@ package shared
 type AccountHolderDetails struct {
 	Address *ViasAddress `json:"address,omitempty"`
 	// Array of bank accounts associated with the account holder. For details about the required `bankAccountDetail` fields, see [Required information](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process/required-information).
-	BankAccountDetails []BankAccountDetail `json:"bankAccountDetails,omitempty"`
-	BusinessDetails    *BusinessDetails    `json:"businessDetails,omitempty"`
+	BankAccountDetails []BankAccountDetailWrapper `json:"bankAccountDetails,omitempty"`
+	BusinessDetails    *BusinessDetails           `json:"businessDetails,omitempty"`
 	// The email address of the account holder.
 	Email *string `json:"email,omitempty"`
 	// The phone number of the account holder provided as a single string. It will be handled as a landline phone.

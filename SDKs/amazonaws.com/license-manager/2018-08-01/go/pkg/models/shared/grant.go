@@ -11,6 +11,7 @@ type Grant struct {
 	GranteePrincipalArn string                 `json:"GranteePrincipalArn"`
 	HomeRegion          string                 `json:"HomeRegion"`
 	LicenseArn          string                 `json:"LicenseArn"`
+	Options             *Options               `json:"Options,omitempty"`
 	ParentArn           string                 `json:"ParentArn"`
 	StatusReason        *string                `json:"StatusReason,omitempty"`
 	Version             string                 `json:"Version"`

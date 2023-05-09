@@ -17,19 +17,23 @@ const (
 	StartTransactionRequestBodyTransactionTypeEnumReadOnly     StartTransactionRequestBodyTransactionTypeEnum = "READ_ONLY"
 )
 
+func (e StartTransactionRequestBodyTransactionTypeEnum) ToPointer() *StartTransactionRequestBodyTransactionTypeEnum {
+	return &e
+}
+
 func (e *StartTransactionRequestBodyTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ_AND_WRITE":
 		fallthrough
 	case "READ_ONLY":
-		*e = StartTransactionRequestBodyTransactionTypeEnum(s)
+		*e = StartTransactionRequestBodyTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartTransactionRequestBodyTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartTransactionRequestBodyTransactionTypeEnum: %v", v)
 	}
 }
 

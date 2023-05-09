@@ -15,17 +15,21 @@ const (
 	POSTGetAssociatedIpv6PoolCidrsActionEnumGetAssociatedIpv6PoolCidrs POSTGetAssociatedIpv6PoolCidrsActionEnum = "GetAssociatedIpv6PoolCidrs"
 )
 
+func (e POSTGetAssociatedIpv6PoolCidrsActionEnum) ToPointer() *POSTGetAssociatedIpv6PoolCidrsActionEnum {
+	return &e
+}
+
 func (e *POSTGetAssociatedIpv6PoolCidrsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAssociatedIpv6PoolCidrs":
-		*e = POSTGetAssociatedIpv6PoolCidrsActionEnum(s)
+		*e = POSTGetAssociatedIpv6PoolCidrsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAssociatedIpv6PoolCidrsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAssociatedIpv6PoolCidrsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAssociatedIpv6PoolCidrsVersionEnumTwoThousandAndSixteen1115 POSTGetAssociatedIpv6PoolCidrsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetAssociatedIpv6PoolCidrsVersionEnum) ToPointer() *POSTGetAssociatedIpv6PoolCidrsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAssociatedIpv6PoolCidrsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetAssociatedIpv6PoolCidrsVersionEnum(s)
+		*e = POSTGetAssociatedIpv6PoolCidrsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAssociatedIpv6PoolCidrsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAssociatedIpv6PoolCidrsVersionEnum: %v", v)
 	}
 }
 

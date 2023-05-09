@@ -23,21 +23,25 @@ const (
 	TagmanagerAccountsContainersCombineSettingSourceEnumOther                    TagmanagerAccountsContainersCombineSettingSourceEnum = "other"
 )
 
+func (e TagmanagerAccountsContainersCombineSettingSourceEnum) ToPointer() *TagmanagerAccountsContainersCombineSettingSourceEnum {
+	return &e
+}
+
 func (e *TagmanagerAccountsContainersCombineSettingSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "settingSourceUnspecified":
 		fallthrough
 	case "current":
 		fallthrough
 	case "other":
-		*e = TagmanagerAccountsContainersCombineSettingSourceEnum(s)
+		*e = TagmanagerAccountsContainersCombineSettingSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagmanagerAccountsContainersCombineSettingSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for TagmanagerAccountsContainersCombineSettingSourceEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateContinuousBackupsXAmzTargetEnumDynamoDb20120810UpdateContinuousBackups UpdateContinuousBackupsXAmzTargetEnum = "DynamoDB_20120810.UpdateContinuousBackups"
 )
 
+func (e UpdateContinuousBackupsXAmzTargetEnum) ToPointer() *UpdateContinuousBackupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateContinuousBackupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.UpdateContinuousBackups":
-		*e = UpdateContinuousBackupsXAmzTargetEnum(s)
+		*e = UpdateContinuousBackupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateContinuousBackupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateContinuousBackupsXAmzTargetEnum: %v", v)
 	}
 }
 

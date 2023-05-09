@@ -15,19 +15,23 @@ const (
 	UserPublicSummaryTypeEnumGuest UserPublicSummaryTypeEnum = "guest"
 )
 
+func (e UserPublicSummaryTypeEnum) ToPointer() *UserPublicSummaryTypeEnum {
+	return &e
+}
+
 func (e *UserPublicSummaryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "guest":
-		*e = UserPublicSummaryTypeEnum(s)
+		*e = UserPublicSummaryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserPublicSummaryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserPublicSummaryTypeEnum: %v", v)
 	}
 }
 

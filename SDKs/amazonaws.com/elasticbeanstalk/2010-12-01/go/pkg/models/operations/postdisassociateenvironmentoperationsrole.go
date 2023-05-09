@@ -15,17 +15,21 @@ const (
 	POSTDisassociateEnvironmentOperationsRoleActionEnumDisassociateEnvironmentOperationsRole POSTDisassociateEnvironmentOperationsRoleActionEnum = "DisassociateEnvironmentOperationsRole"
 )
 
+func (e POSTDisassociateEnvironmentOperationsRoleActionEnum) ToPointer() *POSTDisassociateEnvironmentOperationsRoleActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateEnvironmentOperationsRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateEnvironmentOperationsRole":
-		*e = POSTDisassociateEnvironmentOperationsRoleActionEnum(s)
+		*e = POSTDisassociateEnvironmentOperationsRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateEnvironmentOperationsRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateEnvironmentOperationsRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateEnvironmentOperationsRoleVersionEnumTwoThousandAndTen1201 POSTDisassociateEnvironmentOperationsRoleVersionEnum = "2010-12-01"
 )
 
+func (e POSTDisassociateEnvironmentOperationsRoleVersionEnum) ToPointer() *POSTDisassociateEnvironmentOperationsRoleVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateEnvironmentOperationsRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDisassociateEnvironmentOperationsRoleVersionEnum(s)
+		*e = POSTDisassociateEnvironmentOperationsRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateEnvironmentOperationsRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateEnvironmentOperationsRoleVersionEnum: %v", v)
 	}
 }
 

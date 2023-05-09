@@ -16,12 +16,16 @@ const (
 	AttachmentStatusEnumReady    AttachmentStatusEnum = "READY"
 )
 
+func (e AttachmentStatusEnum) ToPointer() *AttachmentStatusEnum {
+	return &e
+}
+
 func (e *AttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -29,9 +33,9 @@ func (e *AttachmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SCALING":
 		fallthrough
 	case "READY":
-		*e = AttachmentStatusEnum(s)
+		*e = AttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentStatusEnum: %v", v)
 	}
 }

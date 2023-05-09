@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.CrawlRequest{
-        Query: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Crawl(ctx, req)
+    res, err := s.Crawl(ctx, operations.CrawlRequest{
+        Query: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

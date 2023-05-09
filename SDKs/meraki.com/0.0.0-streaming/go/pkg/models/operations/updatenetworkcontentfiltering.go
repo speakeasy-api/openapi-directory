@@ -16,19 +16,23 @@ const (
 	UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnumTopSites UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum = "topSites"
 )
 
+func (e UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum) ToPointer() *UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fullList":
 		fallthrough
 	case "topSites":
-		*e = UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum(s)
+		*e = UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkContentFilteringRequestBodyURLCategoryListSizeEnum: %v", v)
 	}
 }
 

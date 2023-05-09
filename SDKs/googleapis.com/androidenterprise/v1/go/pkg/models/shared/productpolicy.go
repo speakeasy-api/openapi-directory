@@ -17,12 +17,16 @@ const (
 	ProductPolicyAutoUpdateModeEnumAutoUpdateHighPriority    ProductPolicyAutoUpdateModeEnum = "autoUpdateHighPriority"
 )
 
+func (e ProductPolicyAutoUpdateModeEnum) ToPointer() *ProductPolicyAutoUpdateModeEnum {
+	return &e
+}
+
 func (e *ProductPolicyAutoUpdateModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "autoUpdateModeUnspecified":
 		fallthrough
 	case "autoUpdateDefault":
@@ -30,10 +34,10 @@ func (e *ProductPolicyAutoUpdateModeEnum) UnmarshalJSON(data []byte) error {
 	case "autoUpdatePostponed":
 		fallthrough
 	case "autoUpdateHighPriority":
-		*e = ProductPolicyAutoUpdateModeEnum(s)
+		*e = ProductPolicyAutoUpdateModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductPolicyAutoUpdateModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductPolicyAutoUpdateModeEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	ProductPolicyTracksEnumAlpha               ProductPolicyTracksEnum = "alpha"
 )
 
+func (e ProductPolicyTracksEnum) ToPointer() *ProductPolicyTracksEnum {
+	return &e
+}
+
 func (e *ProductPolicyTracksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appTrackUnspecified":
 		fallthrough
 	case "production":
@@ -59,10 +67,10 @@ func (e *ProductPolicyTracksEnum) UnmarshalJSON(data []byte) error {
 	case "beta":
 		fallthrough
 	case "alpha":
-		*e = ProductPolicyTracksEnum(s)
+		*e = ProductPolicyTracksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductPolicyTracksEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductPolicyTracksEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	NotificationsNotificationTypesEnumUpdatedLocationState        NotificationsNotificationTypesEnum = "UPDATED_LOCATION_STATE"
 )
 
+func (e NotificationsNotificationTypesEnum) ToPointer() *NotificationsNotificationTypesEnum {
+	return &e
+}
+
 func (e *NotificationsNotificationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_UPDATE":
@@ -47,10 +51,10 @@ func (e *NotificationsNotificationTypesEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATED_ANSWER":
 		fallthrough
 	case "UPDATED_LOCATION_STATE":
-		*e = NotificationsNotificationTypesEnum(s)
+		*e = NotificationsNotificationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationsNotificationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationsNotificationTypesEnum: %v", v)
 	}
 }
 

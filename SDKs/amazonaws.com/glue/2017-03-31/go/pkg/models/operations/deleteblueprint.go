@@ -16,17 +16,21 @@ const (
 	DeleteBlueprintXAmzTargetEnumAwsGlueDeleteBlueprint DeleteBlueprintXAmzTargetEnum = "AWSGlue.DeleteBlueprint"
 )
 
+func (e DeleteBlueprintXAmzTargetEnum) ToPointer() *DeleteBlueprintXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteBlueprintXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.DeleteBlueprint":
-		*e = DeleteBlueprintXAmzTargetEnum(s)
+		*e = DeleteBlueprintXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBlueprintXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBlueprintXAmzTargetEnum: %v", v)
 	}
 }
 

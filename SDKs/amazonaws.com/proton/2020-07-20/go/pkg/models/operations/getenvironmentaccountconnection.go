@@ -16,17 +16,21 @@ const (
 	GetEnvironmentAccountConnectionXAmzTargetEnumAwsProton20200720GetEnvironmentAccountConnection GetEnvironmentAccountConnectionXAmzTargetEnum = "AwsProton20200720.GetEnvironmentAccountConnection"
 )
 
+func (e GetEnvironmentAccountConnectionXAmzTargetEnum) ToPointer() *GetEnvironmentAccountConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEnvironmentAccountConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.GetEnvironmentAccountConnection":
-		*e = GetEnvironmentAccountConnectionXAmzTargetEnum(s)
+		*e = GetEnvironmentAccountConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEnvironmentAccountConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEnvironmentAccountConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

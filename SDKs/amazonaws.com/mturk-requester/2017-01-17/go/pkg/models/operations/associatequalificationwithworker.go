@@ -16,17 +16,21 @@ const (
 	AssociateQualificationWithWorkerXAmzTargetEnumMTurkRequesterServiceV20170117AssociateQualificationWithWorker AssociateQualificationWithWorkerXAmzTargetEnum = "MTurkRequesterServiceV20170117.AssociateQualificationWithWorker"
 )
 
+func (e AssociateQualificationWithWorkerXAmzTargetEnum) ToPointer() *AssociateQualificationWithWorkerXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateQualificationWithWorkerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.AssociateQualificationWithWorker":
-		*e = AssociateQualificationWithWorkerXAmzTargetEnum(s)
+		*e = AssociateQualificationWithWorkerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateQualificationWithWorkerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateQualificationWithWorkerXAmzTargetEnum: %v", v)
 	}
 }
 

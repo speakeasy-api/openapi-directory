@@ -15,20 +15,24 @@ const (
 	AttemptStatusEnumSucceeded AttemptStatusEnum = "succeeded"
 )
 
+func (e AttemptStatusEnum) ToPointer() *AttemptStatusEnum {
+	return &e
+}
+
 func (e *AttemptStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "failed":
 		fallthrough
 	case "succeeded":
-		*e = AttemptStatusEnum(s)
+		*e = AttemptStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttemptStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AttemptStatusEnum: %v", v)
 	}
 }

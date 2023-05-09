@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CapacityCommitmentInput: &shared.CapacityCommitmentInput{
-            Edition: "ENTERPRISE",
+            Edition: shared.CapacityCommitmentEditionEnumEnterprise.ToPointer(),
             FailureStatus: &shared.Status{
-                Code: 715190,
+                Code: sdk.Int(715190),
                 Details: []map[string]interface{}{
                     map[string]interface{}{
                         "nulla": "corrupti",
@@ -40,30 +41,27 @@ func main() {
                         "ab": "quis",
                     },
                 },
-                Message: "veritatis",
+                Message: sdk.String("veritatis"),
             },
-            MultiRegionAuxiliary: false,
-            Plan: "ANNUAL",
-            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
-            SlotCount: "ipsam",
+            MultiRegionAuxiliary: sdk.Bool(false),
+            Plan: shared.CapacityCommitmentPlanEnumAnnual.ToPointer(),
+            RenewalPlan: shared.CapacityCommitmentRenewalPlanEnumCommitmentPlanUnspecified.ToPointer(),
+            SlotCount: sdk.String("ipsam"),
         },
-        AccessToken: "repellendus",
-        Alt: "proto",
-        Callback: "quo",
-        CapacityCommitmentID: "odit",
-        EnforceSingleAdminProjectPerOrg: false,
-        Fields: "at",
-        Key: "at",
-        OauthToken: "maiores",
+        AccessToken: sdk.String("repellendus"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quo"),
+        CapacityCommitmentID: sdk.String("odit"),
+        EnforceSingleAdminProjectPerOrg: sdk.Bool(false),
+        Fields: sdk.String("at"),
+        Key: sdk.String("at"),
+        OauthToken: sdk.String("maiores"),
         Parent: "molestiae",
-        PrettyPrint: false,
-        QuotaUser: "quod",
-        UploadType: "quod",
-        UploadProtocol: "esse",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quod"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("esse"),
+    }, operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
         Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

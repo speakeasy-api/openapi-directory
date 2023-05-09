@@ -16,17 +16,21 @@ const (
 	ListResourceRequestsXAmzTargetEnumCloudAPIServiceListResourceRequests ListResourceRequestsXAmzTargetEnum = "CloudApiService.ListResourceRequests"
 )
 
+func (e ListResourceRequestsXAmzTargetEnum) ToPointer() *ListResourceRequestsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceRequestsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudApiService.ListResourceRequests":
-		*e = ListResourceRequestsXAmzTargetEnum(s)
+		*e = ListResourceRequestsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceRequestsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceRequestsXAmzTargetEnum: %v", v)
 	}
 }
 

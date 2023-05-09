@@ -17,19 +17,23 @@ const (
 	SearchArtifactsByContentOrderEnumDesc SearchArtifactsByContentOrderEnum = "desc"
 )
 
+func (e SearchArtifactsByContentOrderEnum) ToPointer() *SearchArtifactsByContentOrderEnum {
+	return &e
+}
+
 func (e *SearchArtifactsByContentOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = SearchArtifactsByContentOrderEnum(s)
+		*e = SearchArtifactsByContentOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchArtifactsByContentOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchArtifactsByContentOrderEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	SearchArtifactsByContentOrderbyEnumCreatedOn SearchArtifactsByContentOrderbyEnum = "createdOn"
 )
 
+func (e SearchArtifactsByContentOrderbyEnum) ToPointer() *SearchArtifactsByContentOrderbyEnum {
+	return &e
+}
+
 func (e *SearchArtifactsByContentOrderbyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "createdOn":
-		*e = SearchArtifactsByContentOrderbyEnum(s)
+		*e = SearchArtifactsByContentOrderbyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchArtifactsByContentOrderbyEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchArtifactsByContentOrderbyEnum: %v", v)
 	}
 }
 

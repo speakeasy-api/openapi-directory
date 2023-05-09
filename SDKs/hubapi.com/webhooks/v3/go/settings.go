@@ -35,7 +35,10 @@ func newSettings(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 func (s *settings) DeleteWebhooksV3AppIDSettingsClear(ctx context.Context, request operations.DeleteWebhooksV3AppIDSettingsClearRequest, security operations.DeleteWebhooksV3AppIDSettingsClearSecurity) (*operations.DeleteWebhooksV3AppIDSettingsClearResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -76,9 +79,13 @@ func (s *settings) DeleteWebhooksV3AppIDSettingsClear(ctx context.Context, reque
 
 	return res, nil
 }
+
 func (s *settings) GetWebhooksV3AppIDSettingsGetAll(ctx context.Context, request operations.GetWebhooksV3AppIDSettingsGetAllRequest, security operations.GetWebhooksV3AppIDSettingsGetAllSecurity) (*operations.GetWebhooksV3AppIDSettingsGetAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,9 +135,13 @@ func (s *settings) GetWebhooksV3AppIDSettingsGetAll(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *settings) PutWebhooksV3AppIDSettingsConfigure(ctx context.Context, request operations.PutWebhooksV3AppIDSettingsConfigureRequest, security operations.PutWebhooksV3AppIDSettingsConfigureSecurity) (*operations.PutWebhooksV3AppIDSettingsConfigureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webhooks/v3/{appId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SettingsChangeRequest", "json")
 	if err != nil {

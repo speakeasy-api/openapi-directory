@@ -16,17 +16,21 @@ const (
 	DeleteEmailMonitoringConfigurationXAmzTargetEnumWorkMailServiceDeleteEmailMonitoringConfiguration DeleteEmailMonitoringConfigurationXAmzTargetEnum = "WorkMailService.DeleteEmailMonitoringConfiguration"
 )
 
+func (e DeleteEmailMonitoringConfigurationXAmzTargetEnum) ToPointer() *DeleteEmailMonitoringConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEmailMonitoringConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DeleteEmailMonitoringConfiguration":
-		*e = DeleteEmailMonitoringConfigurationXAmzTargetEnum(s)
+		*e = DeleteEmailMonitoringConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEmailMonitoringConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEmailMonitoringConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

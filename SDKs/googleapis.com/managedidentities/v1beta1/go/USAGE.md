@@ -2,48 +2,46 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AttachTrustRequestInput: &shared.AttachTrustRequestInput{
             Trust: &shared.TrustInput{
-                SelectiveAuthentication: false,
+                SelectiveAuthentication: sdk.Bool(false),
                 TargetDNSIPAddresses: []string{
                     "distinctio",
                     "quibusdam",
                     "unde",
                 },
-                TargetDomainName: "nulla",
-                TrustDirection: "OUTBOUND",
-                TrustHandshakeSecret: "illum",
-                TrustType: "FOREST",
+                TargetDomainName: sdk.String("nulla"),
+                TrustDirection: shared.TrustTrustDirectionEnumOutbound.ToPointer(),
+                TrustHandshakeSecret: sdk.String("illum"),
+                TrustType: shared.TrustTrustTypeEnumForest.ToPointer(),
             },
         },
-        AccessToken: "error",
-        Alt: "media",
-        Callback: "suscipit",
-        Fields: "iure",
-        Key: "magnam",
-        Name: "debitis",
-        OauthToken: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
+        AccessToken: sdk.String("error"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("suscipit"),
+        Fields: sdk.String("iure"),
+        Key: sdk.String("magnam"),
+        Name: "Larry Windler",
+        OauthToken: sdk.String("molestiae"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("minus"),
+        UploadType: sdk.String("placeat"),
+        UploadProtocol: sdk.String("voluptatum"),
+    }, operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

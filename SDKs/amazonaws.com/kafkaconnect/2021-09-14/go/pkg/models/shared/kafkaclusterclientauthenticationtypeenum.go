@@ -14,18 +14,22 @@ const (
 	KafkaClusterClientAuthenticationTypeEnumIam  KafkaClusterClientAuthenticationTypeEnum = "IAM"
 )
 
+func (e KafkaClusterClientAuthenticationTypeEnum) ToPointer() *KafkaClusterClientAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *KafkaClusterClientAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "IAM":
-		*e = KafkaClusterClientAuthenticationTypeEnum(s)
+		*e = KafkaClusterClientAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KafkaClusterClientAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KafkaClusterClientAuthenticationTypeEnum: %v", v)
 	}
 }

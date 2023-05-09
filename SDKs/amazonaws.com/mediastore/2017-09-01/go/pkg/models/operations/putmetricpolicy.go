@@ -16,17 +16,21 @@ const (
 	PutMetricPolicyXAmzTargetEnumMediaStore20170901PutMetricPolicy PutMetricPolicyXAmzTargetEnum = "MediaStore_20170901.PutMetricPolicy"
 )
 
+func (e PutMetricPolicyXAmzTargetEnum) ToPointer() *PutMetricPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutMetricPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.PutMetricPolicy":
-		*e = PutMetricPolicyXAmzTargetEnum(s)
+		*e = PutMetricPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutMetricPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutMetricPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

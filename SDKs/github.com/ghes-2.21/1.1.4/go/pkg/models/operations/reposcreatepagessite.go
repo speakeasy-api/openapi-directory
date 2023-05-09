@@ -17,19 +17,23 @@ const (
 	ReposCreatePagesSiteRequestBodySourceBranchEnumGhPages ReposCreatePagesSiteRequestBodySourceBranchEnum = "gh-pages"
 )
 
+func (e ReposCreatePagesSiteRequestBodySourceBranchEnum) ToPointer() *ReposCreatePagesSiteRequestBodySourceBranchEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBodySourceBranchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "master":
 		fallthrough
 	case "gh-pages":
-		*e = ReposCreatePagesSiteRequestBodySourceBranchEnum(s)
+		*e = ReposCreatePagesSiteRequestBodySourceBranchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBodySourceBranchEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBodySourceBranchEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	ReposCreatePagesSiteRequestBodySourcePathEnumRootDocs ReposCreatePagesSiteRequestBodySourcePathEnum = "/docs"
 )
 
+func (e ReposCreatePagesSiteRequestBodySourcePathEnum) ToPointer() *ReposCreatePagesSiteRequestBodySourcePathEnum {
+	return &e
+}
+
 func (e *ReposCreatePagesSiteRequestBodySourcePathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposCreatePagesSiteRequestBodySourcePathEnum(s)
+		*e = ReposCreatePagesSiteRequestBodySourcePathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBodySourcePathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposCreatePagesSiteRequestBodySourcePathEnum: %v", v)
 	}
 }
 

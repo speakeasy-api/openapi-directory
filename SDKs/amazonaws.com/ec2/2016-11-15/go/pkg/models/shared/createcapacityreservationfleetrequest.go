@@ -99,12 +99,16 @@ const (
 	CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -274,10 +278,10 @@ func (e *CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum)
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationFleetRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

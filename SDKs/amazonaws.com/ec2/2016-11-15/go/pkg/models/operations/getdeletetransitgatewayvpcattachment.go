@@ -15,17 +15,21 @@ const (
 	GETDeleteTransitGatewayVpcAttachmentActionEnumDeleteTransitGatewayVpcAttachment GETDeleteTransitGatewayVpcAttachmentActionEnum = "DeleteTransitGatewayVpcAttachment"
 )
 
+func (e GETDeleteTransitGatewayVpcAttachmentActionEnum) ToPointer() *GETDeleteTransitGatewayVpcAttachmentActionEnum {
+	return &e
+}
+
 func (e *GETDeleteTransitGatewayVpcAttachmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTransitGatewayVpcAttachment":
-		*e = GETDeleteTransitGatewayVpcAttachmentActionEnum(s)
+		*e = GETDeleteTransitGatewayVpcAttachmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTransitGatewayVpcAttachmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTransitGatewayVpcAttachmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteTransitGatewayVpcAttachmentVersionEnumTwoThousandAndSixteen1115 GETDeleteTransitGatewayVpcAttachmentVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteTransitGatewayVpcAttachmentVersionEnum) ToPointer() *GETDeleteTransitGatewayVpcAttachmentVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteTransitGatewayVpcAttachmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteTransitGatewayVpcAttachmentVersionEnum(s)
+		*e = GETDeleteTransitGatewayVpcAttachmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTransitGatewayVpcAttachmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTransitGatewayVpcAttachmentVersionEnum: %v", v)
 	}
 }
 

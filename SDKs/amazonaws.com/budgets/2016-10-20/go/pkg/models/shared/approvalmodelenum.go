@@ -14,18 +14,22 @@ const (
 	ApprovalModelEnumManual    ApprovalModelEnum = "MANUAL"
 )
 
+func (e ApprovalModelEnum) ToPointer() *ApprovalModelEnum {
+	return &e
+}
+
 func (e *ApprovalModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "MANUAL":
-		*e = ApprovalModelEnum(s)
+		*e = ApprovalModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApprovalModelEnum: %s", s)
+		return fmt.Errorf("invalid value for ApprovalModelEnum: %v", v)
 	}
 }

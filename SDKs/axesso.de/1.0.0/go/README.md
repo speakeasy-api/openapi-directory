@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/axesso.de/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KeywordSearchRequest{
+    ctx := context.Background()
+    res, err := s.Amz.KeywordSearch(ctx, operations.KeywordSearchRequest{
         DomainCode: "corrupti",
         Keyword: "provident",
-        NumberOfProducts: 715190,
-        SortBy: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Amz.KeywordSearch(ctx, req)
+        NumberOfProducts: sdk.Int64(715190),
+        SortBy: sdk.String("quibusdam"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,12 +45,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Amz
+### [Amz](docs/amz/README.md)
 
-* `KeywordSearch` - fetch results auf a keyword search on Amazon
-* `RequestBuyRecommendation` - request buy recommendations to a given product
-* `RequestProduct` - lookup product information
-* `SortOptions` - request available sort options to use in keyword search
+* [KeywordSearch](docs/amz/README.md#keywordsearch) - fetch results auf a keyword search on Amazon
+* [RequestBuyRecommendation](docs/amz/README.md#requestbuyrecommendation) - request buy recommendations to a given product
+* [RequestProduct](docs/amz/README.md#requestproduct) - lookup product information
+* [SortOptions](docs/amz/README.md#sortoptions) - request available sort options to use in keyword search
 <!-- End SDK Available Operations -->
 
 ### Maturity

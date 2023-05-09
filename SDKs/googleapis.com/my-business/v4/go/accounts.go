@@ -90,7 +90,10 @@ func (s *accounts) MybusinessAccountsCreate(ctx context.Context, request operati
 // MybusinessAccountsGenerateAccountNumber - Generates an account number for this account. The account number is not provisioned when an account is created. Use this request to create an account number when it is required.
 func (s *accounts) MybusinessAccountsGenerateAccountNumber(ctx context.Context, request operations.MybusinessAccountsGenerateAccountNumberRequest) (*operations.MybusinessAccountsGenerateAccountNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:generateAccountNumber", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:generateAccountNumber", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *accounts) MybusinessAccountsGenerateAccountNumber(ctx context.Context, 
 // MybusinessAccountsInvitationsAccept - Accepts the specified invitation.
 func (s *accounts) MybusinessAccountsInvitationsAccept(ctx context.Context, request operations.MybusinessAccountsInvitationsAcceptRequest) (*operations.MybusinessAccountsInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -200,7 +206,10 @@ func (s *accounts) MybusinessAccountsInvitationsAccept(ctx context.Context, requ
 // MybusinessAccountsInvitationsDecline - Declines the specified invitation.
 func (s *accounts) MybusinessAccountsInvitationsDecline(ctx context.Context, request operations.MybusinessAccountsInvitationsDeclineRequest) (*operations.MybusinessAccountsInvitationsDeclineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:decline", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:decline", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -255,7 +264,10 @@ func (s *accounts) MybusinessAccountsInvitationsDecline(ctx context.Context, req
 // MybusinessAccountsInvitationsList - Lists pending invitations for the specified account.
 func (s *accounts) MybusinessAccountsInvitationsList(ctx context.Context, request operations.MybusinessAccountsInvitationsListRequest) (*operations.MybusinessAccountsInvitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +363,10 @@ func (s *accounts) MybusinessAccountsList(ctx context.Context, request operation
 // MybusinessAccountsListRecommendGoogleLocations - List all the GoogleLocations that have been recommended to the specified Business Profile account. Recommendations are provided for personal accounts and location groups only, requests for all other account types will result in an error. The recommendations for location groups are based on the locations in that group. The recommendations for personal accounts are based on all of the locations that the user has access to on Business Profile (which includes locations they can access through location groups), and is a superset of all recommendations generated for the user.
 func (s *accounts) MybusinessAccountsListRecommendGoogleLocations(ctx context.Context, request operations.MybusinessAccountsListRecommendGoogleLocationsRequest) (*operations.MybusinessAccountsListRecommendGoogleLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:recommendGoogleLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:recommendGoogleLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +414,10 @@ func (s *accounts) MybusinessAccountsListRecommendGoogleLocations(ctx context.Co
 // MybusinessAccountsLocationsAdminsCreate - Invites the specified user to become an administrator for the specified location. The invitee must accept the invitation in order to be granted access to the location. See AcceptInvitation to programmatically accept an invitation.
 func (s *accounts) MybusinessAccountsLocationsAdminsCreate(ctx context.Context, request operations.MybusinessAccountsLocationsAdminsCreateRequest) (*operations.MybusinessAccountsLocationsAdminsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/admins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/admins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Admin", "json")
 	if err != nil {
@@ -454,7 +472,10 @@ func (s *accounts) MybusinessAccountsLocationsAdminsCreate(ctx context.Context, 
 // MybusinessAccountsLocationsAdminsList - Lists all of the admins for the specified location.
 func (s *accounts) MybusinessAccountsLocationsAdminsList(ctx context.Context, request operations.MybusinessAccountsLocationsAdminsListRequest) (*operations.MybusinessAccountsLocationsAdminsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/admins", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/admins", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -502,7 +523,10 @@ func (s *accounts) MybusinessAccountsLocationsAdminsList(ctx context.Context, re
 // MybusinessAccountsLocationsAssociate - Associates a location to a place ID. Any previous association is overwritten. This operation is only valid if the location is unverified. The association must be valid, that is, it appears in the list of `FindMatchingLocations`.
 func (s *accounts) MybusinessAccountsLocationsAssociate(ctx context.Context, request operations.MybusinessAccountsLocationsAssociateRequest) (*operations.MybusinessAccountsLocationsAssociateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:associate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:associate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssociateLocationRequest", "json")
 	if err != nil {
@@ -557,7 +581,10 @@ func (s *accounts) MybusinessAccountsLocationsAssociate(ctx context.Context, req
 // MybusinessAccountsLocationsBatchGet - Gets all of the specified locations in the given account.
 func (s *accounts) MybusinessAccountsLocationsBatchGet(ctx context.Context, request operations.MybusinessAccountsLocationsBatchGetRequest) (*operations.MybusinessAccountsLocationsBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchGetLocationsRequest", "json")
 	if err != nil {
@@ -612,7 +639,10 @@ func (s *accounts) MybusinessAccountsLocationsBatchGet(ctx context.Context, requ
 // MybusinessAccountsLocationsBatchGetReviews - Returns the paginated list of reviews for all specified locations. This operation is only valid if the specified locations are verified. *Note:* Reviews are limited to a batch size of 200 `location_names` per call.
 func (s *accounts) MybusinessAccountsLocationsBatchGetReviews(ctx context.Context, request operations.MybusinessAccountsLocationsBatchGetReviewsRequest) (*operations.MybusinessAccountsLocationsBatchGetReviewsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:batchGetReviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:batchGetReviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchGetReviewsRequest", "json")
 	if err != nil {
@@ -667,7 +697,10 @@ func (s *accounts) MybusinessAccountsLocationsBatchGetReviews(ctx context.Contex
 // MybusinessAccountsLocationsClearAssociation - Clears an association between a location and its place ID. This operation is only valid if the location is unverified.
 func (s *accounts) MybusinessAccountsLocationsClearAssociation(ctx context.Context, request operations.MybusinessAccountsLocationsClearAssociationRequest) (*operations.MybusinessAccountsLocationsClearAssociationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:clearAssociation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:clearAssociation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -722,7 +755,10 @@ func (s *accounts) MybusinessAccountsLocationsClearAssociation(ctx context.Conte
 // MybusinessAccountsLocationsCreate - Creates a new location owned by the specified account, and returns it.
 func (s *accounts) MybusinessAccountsLocationsCreate(ctx context.Context, request operations.MybusinessAccountsLocationsCreateRequest) (*operations.MybusinessAccountsLocationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationInput", "json")
 	if err != nil {
@@ -777,7 +813,10 @@ func (s *accounts) MybusinessAccountsLocationsCreate(ctx context.Context, reques
 // MybusinessAccountsLocationsFetchVerificationOptions - Reports all eligible verification options for a location in a specific language.
 func (s *accounts) MybusinessAccountsLocationsFetchVerificationOptions(ctx context.Context, request operations.MybusinessAccountsLocationsFetchVerificationOptionsRequest) (*operations.MybusinessAccountsLocationsFetchVerificationOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:fetchVerificationOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:fetchVerificationOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FetchVerificationOptionsRequest", "json")
 	if err != nil {
@@ -832,7 +871,10 @@ func (s *accounts) MybusinessAccountsLocationsFetchVerificationOptions(ctx conte
 // MybusinessAccountsLocationsFindMatches - Finds all of the possible locations that are a match to the specified location. This operation is only valid if the location is unverified.
 func (s *accounts) MybusinessAccountsLocationsFindMatches(ctx context.Context, request operations.MybusinessAccountsLocationsFindMatchesRequest) (*operations.MybusinessAccountsLocationsFindMatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:findMatches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:findMatches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FindMatchingLocationsRequest", "json")
 	if err != nil {
@@ -887,7 +929,10 @@ func (s *accounts) MybusinessAccountsLocationsFindMatches(ctx context.Context, r
 // MybusinessAccountsLocationsGetGoogleUpdated - Gets the Google-updated version of the specified location. Returns `NOT_FOUND` if the location does not exist.
 func (s *accounts) MybusinessAccountsLocationsGetGoogleUpdated(ctx context.Context, request operations.MybusinessAccountsLocationsGetGoogleUpdatedRequest) (*operations.MybusinessAccountsLocationsGetGoogleUpdatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:googleUpdated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:googleUpdated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -935,7 +980,10 @@ func (s *accounts) MybusinessAccountsLocationsGetGoogleUpdated(ctx context.Conte
 // MybusinessAccountsLocationsInsuranceNetworksList - Returns a list of all insurance networks supported by Google.
 func (s *accounts) MybusinessAccountsLocationsInsuranceNetworksList(ctx context.Context, request operations.MybusinessAccountsLocationsInsuranceNetworksListRequest) (*operations.MybusinessAccountsLocationsInsuranceNetworksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/insuranceNetworks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/insuranceNetworks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -983,7 +1031,10 @@ func (s *accounts) MybusinessAccountsLocationsInsuranceNetworksList(ctx context.
 // MybusinessAccountsLocationsList - Lists the locations for the specified account.
 func (s *accounts) MybusinessAccountsLocationsList(ctx context.Context, request operations.MybusinessAccountsLocationsListRequest) (*operations.MybusinessAccountsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1031,7 +1082,10 @@ func (s *accounts) MybusinessAccountsLocationsList(ctx context.Context, request 
 // MybusinessAccountsLocationsLocalPostsCreate - Creates a new local post associated with the specified location, and returns it.
 func (s *accounts) MybusinessAccountsLocationsLocalPostsCreate(ctx context.Context, request operations.MybusinessAccountsLocationsLocalPostsCreateRequest) (*operations.MybusinessAccountsLocationsLocalPostsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/localPosts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/localPosts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalPost", "json")
 	if err != nil {
@@ -1086,7 +1140,10 @@ func (s *accounts) MybusinessAccountsLocationsLocalPostsCreate(ctx context.Conte
 // MybusinessAccountsLocationsLocalPostsList - Returns a list of local posts associated with a location.
 func (s *accounts) MybusinessAccountsLocationsLocalPostsList(ctx context.Context, request operations.MybusinessAccountsLocationsLocalPostsListRequest) (*operations.MybusinessAccountsLocationsLocalPostsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/localPosts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/localPosts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1134,7 +1191,10 @@ func (s *accounts) MybusinessAccountsLocationsLocalPostsList(ctx context.Context
 // MybusinessAccountsLocationsLocalPostsReportInsights - Returns insights for a set of local posts associated with a single listing. Which metrics and how they are reported are options specified in the request proto. *Note:* Insight reports are limited to 100 `local_post_names` per call.
 func (s *accounts) MybusinessAccountsLocationsLocalPostsReportInsights(ctx context.Context, request operations.MybusinessAccountsLocationsLocalPostsReportInsightsRequest) (*operations.MybusinessAccountsLocationsLocalPostsReportInsightsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/localPosts:reportInsights", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/localPosts:reportInsights", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportLocalPostInsightsRequest", "json")
 	if err != nil {
@@ -1189,7 +1249,10 @@ func (s *accounts) MybusinessAccountsLocationsLocalPostsReportInsights(ctx conte
 // MybusinessAccountsLocationsLodgingGetGoogleUpdated - Returns the Google updated Lodging of a specific location.
 func (s *accounts) MybusinessAccountsLocationsLodgingGetGoogleUpdated(ctx context.Context, request operations.MybusinessAccountsLocationsLodgingGetGoogleUpdatedRequest) (*operations.MybusinessAccountsLocationsLodgingGetGoogleUpdatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:getGoogleUpdated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:getGoogleUpdated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1237,7 +1300,10 @@ func (s *accounts) MybusinessAccountsLocationsLodgingGetGoogleUpdated(ctx contex
 // MybusinessAccountsLocationsMediaCreate - Creates a new media item for the location.
 func (s *accounts) MybusinessAccountsLocationsMediaCreate(ctx context.Context, request operations.MybusinessAccountsLocationsMediaCreateRequest) (*operations.MybusinessAccountsLocationsMediaCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MediaItem", "json")
 	if err != nil {
@@ -1292,7 +1358,10 @@ func (s *accounts) MybusinessAccountsLocationsMediaCreate(ctx context.Context, r
 // MybusinessAccountsLocationsMediaCustomersList - Returns a list of media items associated with a location that have been contributed by customers.
 func (s *accounts) MybusinessAccountsLocationsMediaCustomersList(ctx context.Context, request operations.MybusinessAccountsLocationsMediaCustomersListRequest) (*operations.MybusinessAccountsLocationsMediaCustomersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media/customers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media/customers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1340,7 +1409,10 @@ func (s *accounts) MybusinessAccountsLocationsMediaCustomersList(ctx context.Con
 // MybusinessAccountsLocationsMediaList - Returns a list of media items associated with a location.
 func (s *accounts) MybusinessAccountsLocationsMediaList(ctx context.Context, request operations.MybusinessAccountsLocationsMediaListRequest) (*operations.MybusinessAccountsLocationsMediaListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1388,7 +1460,10 @@ func (s *accounts) MybusinessAccountsLocationsMediaList(ctx context.Context, req
 // MybusinessAccountsLocationsMediaStartUpload - Generates a `MediaItemDataRef` for media item uploading.
 func (s *accounts) MybusinessAccountsLocationsMediaStartUpload(ctx context.Context, request operations.MybusinessAccountsLocationsMediaStartUploadRequest) (*operations.MybusinessAccountsLocationsMediaStartUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media:startUpload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/media:startUpload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1443,7 +1518,10 @@ func (s *accounts) MybusinessAccountsLocationsMediaStartUpload(ctx context.Conte
 // MybusinessAccountsLocationsQuestionsAnswersDelete - Deletes the answer written by the current user to a question.
 func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersDelete(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsAnswersDeleteRequest) (*operations.MybusinessAccountsLocationsQuestionsAnswersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers:delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers:delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1491,7 +1569,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersDelete(ctx context
 // MybusinessAccountsLocationsQuestionsAnswersList - Returns the paginated list of answers for a specified question.
 func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersList(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsAnswersListRequest) (*operations.MybusinessAccountsLocationsQuestionsAnswersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1539,7 +1620,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersList(ctx context.C
 // MybusinessAccountsLocationsQuestionsAnswersUpsert - Creates an answer or updates the existing answer written by the user for the specified question. A user can only create one answer per question.
 func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersUpsert(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsAnswersUpsertRequest) (*operations.MybusinessAccountsLocationsQuestionsAnswersUpsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers:upsert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/answers:upsert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpsertAnswerRequest", "json")
 	if err != nil {
@@ -1594,7 +1678,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsAnswersUpsert(ctx context
 // MybusinessAccountsLocationsQuestionsCreate - Adds a question for the specified location.
 func (s *accounts) MybusinessAccountsLocationsQuestionsCreate(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsCreateRequest) (*operations.MybusinessAccountsLocationsQuestionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/questions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/questions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Question", "json")
 	if err != nil {
@@ -1649,7 +1736,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsCreate(ctx context.Contex
 // MybusinessAccountsLocationsQuestionsDelete - Deletes a specific question written by the current user.
 func (s *accounts) MybusinessAccountsLocationsQuestionsDelete(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsDeleteRequest) (*operations.MybusinessAccountsLocationsQuestionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1697,7 +1787,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsDelete(ctx context.Contex
 // MybusinessAccountsLocationsQuestionsList - Returns the paginated list of questions and some of its answers for a specified location.
 func (s *accounts) MybusinessAccountsLocationsQuestionsList(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsListRequest) (*operations.MybusinessAccountsLocationsQuestionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/questions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/questions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1745,7 +1838,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsList(ctx context.Context,
 // MybusinessAccountsLocationsQuestionsPatch - Updates a specific question written by the current user.
 func (s *accounts) MybusinessAccountsLocationsQuestionsPatch(ctx context.Context, request operations.MybusinessAccountsLocationsQuestionsPatchRequest) (*operations.MybusinessAccountsLocationsQuestionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Question", "json")
 	if err != nil {
@@ -1800,7 +1896,10 @@ func (s *accounts) MybusinessAccountsLocationsQuestionsPatch(ctx context.Context
 // MybusinessAccountsLocationsReportInsights - Returns a report containing insights on one or more metrics by location. *Note:* Insight reports are limited to a batch size of 10 `location_names` per call.
 func (s *accounts) MybusinessAccountsLocationsReportInsights(ctx context.Context, request operations.MybusinessAccountsLocationsReportInsightsRequest) (*operations.MybusinessAccountsLocationsReportInsightsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:reportInsights", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/locations:reportInsights", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportLocationInsightsRequest", "json")
 	if err != nil {
@@ -1855,7 +1954,10 @@ func (s *accounts) MybusinessAccountsLocationsReportInsights(ctx context.Context
 // MybusinessAccountsLocationsReviewsDeleteReply - Deletes the response to the specified review. This operation is only valid if the specified location is verified.
 func (s *accounts) MybusinessAccountsLocationsReviewsDeleteReply(ctx context.Context, request operations.MybusinessAccountsLocationsReviewsDeleteReplyRequest) (*operations.MybusinessAccountsLocationsReviewsDeleteReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/reply", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/reply", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1903,7 +2005,10 @@ func (s *accounts) MybusinessAccountsLocationsReviewsDeleteReply(ctx context.Con
 // MybusinessAccountsLocationsReviewsList - Returns the paginated list of reviews for the specified location. This operation is only valid if the specified location is verified.
 func (s *accounts) MybusinessAccountsLocationsReviewsList(ctx context.Context, request operations.MybusinessAccountsLocationsReviewsListRequest) (*operations.MybusinessAccountsLocationsReviewsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/reviews", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/reviews", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1951,7 +2056,10 @@ func (s *accounts) MybusinessAccountsLocationsReviewsList(ctx context.Context, r
 // MybusinessAccountsLocationsReviewsUpdateReply - Updates the reply to the specified review. A reply is created if one does not exist. This operation is only valid if the specified location is verified.
 func (s *accounts) MybusinessAccountsLocationsReviewsUpdateReply(ctx context.Context, request operations.MybusinessAccountsLocationsReviewsUpdateReplyRequest) (*operations.MybusinessAccountsLocationsReviewsUpdateReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}/reply", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}/reply", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReviewReply", "json")
 	if err != nil {
@@ -2006,7 +2114,10 @@ func (s *accounts) MybusinessAccountsLocationsReviewsUpdateReply(ctx context.Con
 // MybusinessAccountsLocationsTransfer - Moves a location from an account that the user owns to another account that the same user administers. The user must be an owner of the account the location is currently associated with and must also be at least a manager of the destination account. Returns the Location with its new resource name.
 func (s *accounts) MybusinessAccountsLocationsTransfer(ctx context.Context, request operations.MybusinessAccountsLocationsTransferRequest) (*operations.MybusinessAccountsLocationsTransferResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:transfer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:transfer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferLocationRequest", "json")
 	if err != nil {
@@ -2061,7 +2172,10 @@ func (s *accounts) MybusinessAccountsLocationsTransfer(ctx context.Context, requ
 // MybusinessAccountsLocationsVerificationsComplete - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
 func (s *accounts) MybusinessAccountsLocationsVerificationsComplete(ctx context.Context, request operations.MybusinessAccountsLocationsVerificationsCompleteRequest) (*operations.MybusinessAccountsLocationsVerificationsCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteVerificationRequest", "json")
 	if err != nil {
@@ -2116,7 +2230,10 @@ func (s *accounts) MybusinessAccountsLocationsVerificationsComplete(ctx context.
 // MybusinessAccountsLocationsVerificationsList - List verifications of a location, ordered by create time.
 func (s *accounts) MybusinessAccountsLocationsVerificationsList(ctx context.Context, request operations.MybusinessAccountsLocationsVerificationsListRequest) (*operations.MybusinessAccountsLocationsVerificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/verifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/verifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2164,7 +2281,10 @@ func (s *accounts) MybusinessAccountsLocationsVerificationsList(ctx context.Cont
 // MybusinessAccountsLocationsVerify - Starts the verification process for a location.
 func (s *accounts) MybusinessAccountsLocationsVerify(ctx context.Context, request operations.MybusinessAccountsLocationsVerifyRequest) (*operations.MybusinessAccountsLocationsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyLocationRequest", "json")
 	if err != nil {
@@ -2219,7 +2339,10 @@ func (s *accounts) MybusinessAccountsLocationsVerify(ctx context.Context, reques
 // MybusinessAccountsUpdateNotifications - Sets the pubsub notification settings for the account informing Business Profile which topic to send pubsub notifications for: - New reviews for locations administered by the account. - Updated reviews for locations administered by the account. - New `GoogleUpdates` for locations administered by the account. An account will only have one notification settings resource, and only one pubsub topic can be set.
 func (s *accounts) MybusinessAccountsUpdateNotifications(ctx context.Context, request operations.MybusinessAccountsUpdateNotificationsRequest) (*operations.MybusinessAccountsUpdateNotificationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Notifications", "json")
 	if err != nil {

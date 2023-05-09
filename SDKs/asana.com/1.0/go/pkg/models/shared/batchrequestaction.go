@@ -19,12 +19,16 @@ const (
 	BatchRequestActionMethodEnumHead   BatchRequestActionMethodEnum = "head"
 )
 
+func (e BatchRequestActionMethodEnum) ToPointer() *BatchRequestActionMethodEnum {
+	return &e
+}
+
 func (e *BatchRequestActionMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "get":
 		fallthrough
 	case "post":
@@ -36,10 +40,10 @@ func (e *BatchRequestActionMethodEnum) UnmarshalJSON(data []byte) error {
 	case "patch":
 		fallthrough
 	case "head":
-		*e = BatchRequestActionMethodEnum(s)
+		*e = BatchRequestActionMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchRequestActionMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchRequestActionMethodEnum: %v", v)
 	}
 }
 

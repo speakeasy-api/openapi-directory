@@ -17,12 +17,16 @@ const (
 	ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnumPending                            ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum = "PENDING"
 )
 
+func (e ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum) ToPointer() *ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum {
+	return &e
+}
+
 func (e *ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGGREGATED_ISSUE_SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "DISAPPROVED":
@@ -30,10 +34,10 @@ func (e *ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum) UnmarshalJ
 	case "DEMOTED":
 		fallthrough
 	case "PENDING":
-		*e = ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum(s)
+		*e = ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductViewItemIssueItemIssueSeverityAggregatedSeverityEnum: %v", v)
 	}
 }
 

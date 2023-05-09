@@ -15,20 +15,24 @@ const (
 	FirewallFailOpenStatusEnumUseLocalResourceSetting FirewallFailOpenStatusEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
+func (e FirewallFailOpenStatusEnum) ToPointer() *FirewallFailOpenStatusEnum {
+	return &e
+}
+
 func (e *FirewallFailOpenStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "USE_LOCAL_RESOURCE_SETTING":
-		*e = FirewallFailOpenStatusEnum(s)
+		*e = FirewallFailOpenStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallFailOpenStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallFailOpenStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTRunScheduledInstancesActionEnumRunScheduledInstances POSTRunScheduledInstancesActionEnum = "RunScheduledInstances"
 )
 
+func (e POSTRunScheduledInstancesActionEnum) ToPointer() *POSTRunScheduledInstancesActionEnum {
+	return &e
+}
+
 func (e *POSTRunScheduledInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RunScheduledInstances":
-		*e = POSTRunScheduledInstancesActionEnum(s)
+		*e = POSTRunScheduledInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRunScheduledInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRunScheduledInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRunScheduledInstancesVersionEnumTwoThousandAndSixteen1115 POSTRunScheduledInstancesVersionEnum = "2016-11-15"
 )
 
+func (e POSTRunScheduledInstancesVersionEnum) ToPointer() *POSTRunScheduledInstancesVersionEnum {
+	return &e
+}
+
 func (e *POSTRunScheduledInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRunScheduledInstancesVersionEnum(s)
+		*e = POSTRunScheduledInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRunScheduledInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRunScheduledInstancesVersionEnum: %v", v)
 	}
 }
 

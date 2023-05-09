@@ -35,7 +35,10 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Deletes an event by its ID.
 func (s *events) DeleteEventsID(ctx context.Context, request operations.DeleteEventsIDRequest) (*operations.DeleteEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *events) DeleteEventsID(ctx context.Context, request operations.DeleteEv
 // Gets a particular event by its ID.
 func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsIDRequest) (*operations.GetEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +154,10 @@ func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsID
 // Lists events belonging to a scenario by their ID.
 func (s *events) GetScenariosIDEvents(ctx context.Context, request operations.GetScenariosIDEventsRequest) (*operations.GetScenariosIDEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scenarios/{id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scenarios/{id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +218,10 @@ func (s *events) GetScenariosIDEvents(ctx context.Context, request operations.Ge
 // Lists events belonging to a user by their ID.
 func (s *events) GetUsersIDEvents(ctx context.Context, request operations.GetUsersIDEventsRequest) (*operations.GetUsersIDEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -270,7 +282,10 @@ func (s *events) GetUsersIDEvents(ctx context.Context, request operations.GetUse
 // Creates an event in a scenario by its ID.
 func (s *events) PostScenariosIDEvents(ctx context.Context, request operations.PostScenariosIDEventsRequest) (*operations.PostScenariosIDEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scenarios/{id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scenarios/{id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -338,7 +353,10 @@ func (s *events) PostScenariosIDEvents(ctx context.Context, request operations.P
 // Updates an event by its ID.
 func (s *events) PutEventsID(ctx context.Context, request operations.PutEventsIDRequest) (*operations.PutEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

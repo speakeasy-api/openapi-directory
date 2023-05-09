@@ -31,12 +31,16 @@ const (
 	NodegroupIssueCodeEnumEc2SubnetMissingIpv6Assignment       NodegroupIssueCodeEnum = "Ec2SubnetMissingIpv6Assignment"
 )
 
+func (e NodegroupIssueCodeEnum) ToPointer() *NodegroupIssueCodeEnum {
+	return &e
+}
+
 func (e *NodegroupIssueCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AutoScalingGroupNotFound":
 		fallthrough
 	case "AutoScalingGroupInvalidConfiguration":
@@ -74,9 +78,9 @@ func (e *NodegroupIssueCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ClusterUnreachable":
 		fallthrough
 	case "Ec2SubnetMissingIpv6Assignment":
-		*e = NodegroupIssueCodeEnum(s)
+		*e = NodegroupIssueCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodegroupIssueCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for NodegroupIssueCodeEnum: %v", v)
 	}
 }

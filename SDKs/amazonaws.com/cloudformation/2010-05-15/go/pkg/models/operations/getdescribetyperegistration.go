@@ -15,17 +15,21 @@ const (
 	GETDescribeTypeRegistrationActionEnumDescribeTypeRegistration GETDescribeTypeRegistrationActionEnum = "DescribeTypeRegistration"
 )
 
+func (e GETDescribeTypeRegistrationActionEnum) ToPointer() *GETDescribeTypeRegistrationActionEnum {
+	return &e
+}
+
 func (e *GETDescribeTypeRegistrationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTypeRegistration":
-		*e = GETDescribeTypeRegistrationActionEnum(s)
+		*e = GETDescribeTypeRegistrationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTypeRegistrationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTypeRegistrationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeTypeRegistrationVersionEnumTwoThousandAndTen0515 GETDescribeTypeRegistrationVersionEnum = "2010-05-15"
 )
 
+func (e GETDescribeTypeRegistrationVersionEnum) ToPointer() *GETDescribeTypeRegistrationVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeTypeRegistrationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDescribeTypeRegistrationVersionEnum(s)
+		*e = GETDescribeTypeRegistrationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTypeRegistrationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTypeRegistrationVersionEnum: %v", v)
 	}
 }
 

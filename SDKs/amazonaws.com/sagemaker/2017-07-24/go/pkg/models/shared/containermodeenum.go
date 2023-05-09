@@ -14,18 +14,22 @@ const (
 	ContainerModeEnumMultiModel  ContainerModeEnum = "MultiModel"
 )
 
+func (e ContainerModeEnum) ToPointer() *ContainerModeEnum {
+	return &e
+}
+
 func (e *ContainerModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SingleModel":
 		fallthrough
 	case "MultiModel":
-		*e = ContainerModeEnum(s)
+		*e = ContainerModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerModeEnum: %v", v)
 	}
 }

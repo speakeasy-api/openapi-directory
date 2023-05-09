@@ -16,21 +16,25 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnumPromotionTypeIntroductoryPricing GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum = "PROMOTION_TYPE_INTRODUCTORY_PRICING"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROMOTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROMOTION_TYPE_FREE_TRIAL":
 		fallthrough
 	case "PROMOTION_TYPE_INTRODUCTORY_PRICING":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpecTypeEnum: %v", v)
 	}
 }
 

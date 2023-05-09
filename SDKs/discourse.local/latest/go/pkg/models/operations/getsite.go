@@ -173,6 +173,7 @@ type GetSite200ApplicationJSON struct {
 	CustomEmojiTranslation              map[string]interface{}                      `json:"custom_emoji_translation"`
 	DefaultArchetype                    string                                      `json:"default_archetype"`
 	DefaultDarkColorScheme              map[string]interface{}                      `json:"default_dark_color_scheme"`
+	DeniedEmojis                        []interface{}                               `json:"denied_emojis,omitempty"`
 	DisplayedAboutPluginStatGroups      []interface{}                               `json:"displayed_about_plugin_stat_groups,omitempty"`
 	Filters                             []interface{}                               `json:"filters"`
 	Groups                              []GetSite200ApplicationJSONGroups           `json:"groups"`

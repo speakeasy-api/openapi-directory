@@ -15,19 +15,23 @@ const (
 	NetworkPolicyProviderEnumCalico              NetworkPolicyProviderEnum = "CALICO"
 )
 
+func (e NetworkPolicyProviderEnum) ToPointer() *NetworkPolicyProviderEnum {
+	return &e
+}
+
 func (e *NetworkPolicyProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVIDER_UNSPECIFIED":
 		fallthrough
 	case "CALICO":
-		*e = NetworkPolicyProviderEnum(s)
+		*e = NetworkPolicyProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkPolicyProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkPolicyProviderEnum: %v", v)
 	}
 }
 

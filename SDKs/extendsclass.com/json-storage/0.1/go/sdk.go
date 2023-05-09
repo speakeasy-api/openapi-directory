@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - JSON storage API
 type SDK struct {
 
@@ -95,7 +110,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteBinID - Delete a json bin
 func (s *SDK) DeleteBinID(ctx context.Context, request operations.DeleteBinIDRequest) (*operations.DeleteBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +171,10 @@ func (s *SDK) DeleteBinID(ctx context.Context, request operations.DeleteBinIDReq
 // GetBinID - Return a json bin
 func (s *SDK) GetBinID(ctx context.Context, request operations.GetBinIDRequest) (*operations.GetBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +230,10 @@ func (s *SDK) GetBinID(ctx context.Context, request operations.GetBinIDRequest) 
 // PatchBinID - Partially update a json bin with JSON Merge Patch
 func (s *SDK) PatchBinID(ctx context.Context, request operations.PatchBinIDRequest) (*operations.PatchBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -325,7 +349,10 @@ func (s *SDK) PostBin(ctx context.Context) (*operations.PostBinResponse, error) 
 // PutBinID - Update a json bin
 func (s *SDK) PutBinID(ctx context.Context, request operations.PutBinIDRequest) (*operations.PutBinIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bin/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

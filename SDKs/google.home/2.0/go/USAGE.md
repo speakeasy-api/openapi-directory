@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := shared.AccessibilityRequest{
+    ctx := context.Background()
+    res, err := s.Assistant.Accessibility(ctx, shared.AccessibilityRequest{
         EndpointEnabled: false,
         HotwordEnabled: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Assistant.Accessibility(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

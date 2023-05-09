@@ -16,19 +16,23 @@ const (
 	GroupAchDebitStatusEnumEnabled  GroupAchDebitStatusEnum = "enabled"
 )
 
+func (e GroupAchDebitStatusEnum) ToPointer() *GroupAchDebitStatusEnum {
+	return &e
+}
+
 func (e *GroupAchDebitStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = GroupAchDebitStatusEnum(s)
+		*e = GroupAchDebitStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupAchDebitStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupAchDebitStatusEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GroupActivationStatusEnumActivated   GroupActivationStatusEnum = "activated"
 )
 
+func (e GroupActivationStatusEnum) ToPointer() *GroupActivationStatusEnum {
+	return &e
+}
+
 func (e *GroupActivationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unactivated":
 		fallthrough
 	case "activated":
-		*e = GroupActivationStatusEnum(s)
+		*e = GroupActivationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupActivationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupActivationStatusEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GroupTypeEnumGroup GroupTypeEnum = "group"
 )
 
+func (e GroupTypeEnum) ToPointer() *GroupTypeEnum {
+	return &e
+}
+
 func (e *GroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
-		*e = GroupTypeEnum(s)
+		*e = GroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupTypeEnum: %v", v)
 	}
 }
 

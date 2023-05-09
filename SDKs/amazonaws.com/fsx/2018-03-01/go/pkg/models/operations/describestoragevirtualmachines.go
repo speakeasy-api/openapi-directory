@@ -16,17 +16,21 @@ const (
 	DescribeStorageVirtualMachinesXAmzTargetEnumAwsSimbaAPIServiceV20180301DescribeStorageVirtualMachines DescribeStorageVirtualMachinesXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DescribeStorageVirtualMachines"
 )
 
+func (e DescribeStorageVirtualMachinesXAmzTargetEnum) ToPointer() *DescribeStorageVirtualMachinesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeStorageVirtualMachinesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DescribeStorageVirtualMachines":
-		*e = DescribeStorageVirtualMachinesXAmzTargetEnum(s)
+		*e = DescribeStorageVirtualMachinesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeStorageVirtualMachinesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeStorageVirtualMachinesXAmzTargetEnum: %v", v)
 	}
 }
 

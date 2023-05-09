@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,218 +17,85 @@ func main() {
         }),
     )
 
-    req := operations.CreateAppRequest{
+    ctx := context.Background()
+    res, err := s.CreateApp(ctx, operations.CreateAppRequest{
         CreateAppRequest: shared.CreateAppRequest{
-            ClientToken: "corrupti",
-            Description: "provident",
-            Name: "distinctio",
-            RoleName: "quibusdam",
+            ClientToken: sdk.String("corrupti"),
+            Description: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
+            RoleName: sdk.String("illum"),
             ServerGroups: []shared.ServerGroup{
                 shared.ServerGroup{
-                    Name: "nulla",
-                    ServerGroupID: "corrupti",
+                    Name: sdk.String("Doug Hoppe"),
+                    ServerGroupID: sdk.String("debitis"),
                     ServerList: []shared.Server{
                         shared.Server{
-                            ReplicationJobID: "vel",
-                            ReplicationJobTerminated: false,
-                            ServerID: "error",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("delectus"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("tempora"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "deserunt",
-                                VMManagerType: "SCVMM",
-                                VMName: "iure",
-                                VMPath: "magnam",
+                                VMManagerName: sdk.String("suscipit"),
+                                VMManagerType: shared.VMManagerTypeEnumScvmm.ToPointer(),
+                                VMName: sdk.String("minus"),
+                                VMPath: sdk.String("placeat"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "debitis",
-                                    VMManagerID: "ipsa",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "delectus",
-                            ReplicationJobTerminated: false,
-                            ServerID: "tempora",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "suscipit",
-                                VMManagerType: "SCVMM",
-                                VMName: "minus",
-                                VMPath: "placeat",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "voluptatum",
-                                    VMManagerID: "iusto",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "excepturi",
-                            ReplicationJobTerminated: false,
-                            ServerID: "nisi",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "recusandae",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "ab",
-                                VMPath: "quis",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "veritatis",
-                                    VMManagerID: "deserunt",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "perferendis",
-                            ReplicationJobTerminated: false,
-                            ServerID: "ipsam",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "repellendus",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "quo",
-                                VMPath: "odit",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "at",
-                                    VMManagerID: "at",
+                                    VMID: sdk.String("voluptatum"),
+                                    VMManagerID: sdk.String("iusto"),
                                 },
                             },
                         },
                     },
                 },
                 shared.ServerGroup{
-                    Name: "maiores",
-                    ServerGroupID: "molestiae",
+                    Name: sdk.String("Charlie Walsh II"),
+                    ServerGroupID: sdk.String("veritatis"),
                     ServerList: []shared.Server{
                         shared.Server{
-                            ReplicationJobID: "quod",
-                            ReplicationJobTerminated: false,
-                            ServerID: "esse",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("perferendis"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("ipsam"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "totam",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "dolorum",
-                                VMPath: "dicta",
+                                VMManagerName: sdk.String("repellendus"),
+                                VMManagerType: shared.VMManagerTypeEnumHypervManager.ToPointer(),
+                                VMName: sdk.String("quo"),
+                                VMPath: sdk.String("odit"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "nam",
-                                    VMManagerID: "officia",
+                                    VMID: sdk.String("at"),
+                                    VMManagerID: sdk.String("at"),
                                 },
                             },
                         },
                         shared.Server{
-                            ReplicationJobID: "occaecati",
-                            ReplicationJobTerminated: false,
-                            ServerID: "fugit",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("maiores"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("molestiae"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "deleniti",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "optio",
-                                VMPath: "totam",
+                                VMManagerName: sdk.String("quod"),
+                                VMManagerType: shared.VMManagerTypeEnumHypervManager.ToPointer(),
+                                VMName: sdk.String("esse"),
+                                VMPath: sdk.String("totam"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "beatae",
-                                    VMManagerID: "commodi",
+                                    VMID: sdk.String("porro"),
+                                    VMManagerID: sdk.String("dolorum"),
                                 },
                             },
                         },
                         shared.Server{
-                            ReplicationJobID: "molestiae",
-                            ReplicationJobTerminated: false,
-                            ServerID: "modi",
-                            ServerType: "VIRTUAL_MACHINE",
+                            ReplicationJobID: sdk.String("dicta"),
+                            ReplicationJobTerminated: sdk.Bool(false),
+                            ServerID: sdk.String("nam"),
+                            ServerType: shared.ServerTypeEnumVirtualMachine.ToPointer(),
                             VMServer: &shared.VMServer{
-                                VMManagerName: "qui",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "cum",
-                                VMPath: "esse",
+                                VMManagerName: sdk.String("officia"),
+                                VMManagerType: shared.VMManagerTypeEnumScvmm.ToPointer(),
+                                VMName: sdk.String("fugit"),
+                                VMPath: sdk.String("deleniti"),
                                 VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "ipsum",
-                                    VMManagerID: "excepturi",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "aspernatur",
-                            ReplicationJobTerminated: false,
-                            ServerID: "perferendis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "ad",
-                                VMManagerType: "SCVMM",
-                                VMName: "sed",
-                                VMPath: "iste",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolor",
-                                    VMManagerID: "natus",
-                                },
-                            },
-                        },
-                    },
-                },
-                shared.ServerGroup{
-                    Name: "laboriosam",
-                    ServerGroupID: "hic",
-                    ServerList: []shared.Server{
-                        shared.Server{
-                            ReplicationJobID: "fuga",
-                            ReplicationJobTerminated: false,
-                            ServerID: "in",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "corporis",
-                                VMManagerType: "SCVMM",
-                                VMName: "iure",
-                                VMPath: "saepe",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "quidem",
-                                    VMManagerID: "architecto",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "ipsa",
-                            ReplicationJobTerminated: false,
-                            ServerID: "reiciendis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "est",
-                                VMManagerType: "SCVMM",
-                                VMName: "laborum",
-                                VMPath: "dolores",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolorem",
-                                    VMManagerID: "corporis",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "explicabo",
-                            ReplicationJobTerminated: false,
-                            ServerID: "nobis",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "enim",
-                                VMManagerType: "SCVMM",
-                                VMName: "nemo",
-                                VMPath: "minima",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "excepturi",
-                                    VMManagerID: "accusantium",
-                                },
-                            },
-                        },
-                        shared.Server{
-                            ReplicationJobID: "iure",
-                            ReplicationJobTerminated: false,
-                            ServerID: "culpa",
-                            ServerType: "VIRTUAL_MACHINE",
-                            VMServer: &shared.VMServer{
-                                VMManagerName: "doloribus",
-                                VMManagerType: "HYPERV-MANAGER",
-                                VMName: "architecto",
-                                VMPath: "mollitia",
-                                VMServerAddress: &shared.VMServerAddress{
-                                    VMID: "dolorem",
-                                    VMManagerID: "culpa",
+                                    VMID: sdk.String("hic"),
+                                    VMManagerID: sdk.String("optio"),
                                 },
                             },
                         },
@@ -237,23 +104,28 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "repellat",
-                    Value: "mollitia",
+                    Key: sdk.String("beatae"),
+                    Value: sdk.String("commodi"),
+                },
+                shared.Tag{
+                    Key: sdk.String("molestiae"),
+                    Value: sdk.String("modi"),
+                },
+                shared.Tag{
+                    Key: sdk.String("qui"),
+                    Value: sdk.String("impedit"),
                 },
             },
         },
-        XAmzAlgorithm: "occaecati",
-        XAmzContentSha256: "numquam",
-        XAmzCredential: "commodi",
-        XAmzDate: "quam",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "velit",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "AWSServerMigrationService_V2016_10_24.CreateApp",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApp(ctx, req)
+        XAmzAlgorithm: sdk.String("cum"),
+        XAmzContentSha256: sdk.String("esse"),
+        XAmzCredential: sdk.String("ipsum"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("aspernatur"),
+        XAmzSignature: sdk.String("perferendis"),
+        XAmzSignedHeaders: sdk.String("ad"),
+        XAmzTarget: operations.CreateAppXAmzTargetEnumAwsServerMigrationServiceV20161024CreateApp,
+    })
     if err != nil {
         log.Fatal(err)
     }

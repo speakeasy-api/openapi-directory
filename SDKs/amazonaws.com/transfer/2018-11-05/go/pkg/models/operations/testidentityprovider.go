@@ -16,17 +16,21 @@ const (
 	TestIdentityProviderXAmzTargetEnumTransferServiceTestIdentityProvider TestIdentityProviderXAmzTargetEnum = "TransferService.TestIdentityProvider"
 )
 
+func (e TestIdentityProviderXAmzTargetEnum) ToPointer() *TestIdentityProviderXAmzTargetEnum {
+	return &e
+}
+
 func (e *TestIdentityProviderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.TestIdentityProvider":
-		*e = TestIdentityProviderXAmzTargetEnum(s)
+		*e = TestIdentityProviderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestIdentityProviderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TestIdentityProviderXAmzTargetEnum: %v", v)
 	}
 }
 

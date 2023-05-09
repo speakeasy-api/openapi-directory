@@ -14,17 +14,21 @@ const (
 	DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnumVpc DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum = "vpc"
 )
 
+func (e DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum) ToPointer() *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
-		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum(s)
+		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum: %v", v)
 	}
 }
 
@@ -36,19 +40,23 @@ const (
 	DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnumNetworkInterface DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum = "network-interface"
 )
 
+func (e DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum) ToPointer() *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "load-balancer":
 		fallthrough
 	case "network-interface":
-		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum(s)
+		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointEndpointTypeEnum: %v", v)
 	}
 }
 
@@ -60,19 +68,23 @@ const (
 	DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnumHTTPS DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum = "https"
 )
 
+func (e DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum) ToPointer() *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "https":
-		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum(s)
+		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointLoadBalancerOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -92,19 +104,23 @@ const (
 	DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnumHTTPS DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum = "https"
 )
 
+func (e DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum) ToPointer() *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "https":
-		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum(s)
+		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum: %v", v)
 	}
 }
 
@@ -126,12 +142,16 @@ const (
 	DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnumDeleted  DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum = "deleted"
 )
 
+func (e DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum) ToPointer() *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum {
+	return &e
+}
+
 func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -141,10 +161,10 @@ func (e *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum)
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum(s)
+		*e = DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointStatusCodeEnum: %v", v)
 	}
 }
 
@@ -160,7 +180,7 @@ type DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointTags struct {
 	Value *string
 }
 
-// DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Amazon Web Services Verified Access endpoint.
+// DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint - The ID of the Verified Access endpoint.
 type DeleteVerifiedAccessEndpointResultVerifiedAccessEndpoint struct {
 	ApplicationDomain        *string
 	AttachmentType           *DeleteVerifiedAccessEndpointResultVerifiedAccessEndpointAttachmentTypeEnum

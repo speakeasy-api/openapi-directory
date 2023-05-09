@@ -16,17 +16,21 @@ const (
 	GetPoliciesStatsXAmzTargetEnumOpenSearchServerlessGetPoliciesStats GetPoliciesStatsXAmzTargetEnum = "OpenSearchServerless.GetPoliciesStats"
 )
 
+func (e GetPoliciesStatsXAmzTargetEnum) ToPointer() *GetPoliciesStatsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPoliciesStatsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.GetPoliciesStats":
-		*e = GetPoliciesStatsXAmzTargetEnum(s)
+		*e = GetPoliciesStatsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPoliciesStatsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPoliciesStatsXAmzTargetEnum: %v", v)
 	}
 }
 

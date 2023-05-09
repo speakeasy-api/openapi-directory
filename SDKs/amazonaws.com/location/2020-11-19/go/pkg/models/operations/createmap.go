@@ -23,21 +23,25 @@ const (
 	CreateMapRequestBodyPricingPlanEnumMobileAssetManagement CreateMapRequestBodyPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e CreateMapRequestBodyPricingPlanEnum) ToPointer() *CreateMapRequestBodyPricingPlanEnum {
+	return &e
+}
+
 func (e *CreateMapRequestBodyPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = CreateMapRequestBodyPricingPlanEnum(s)
+		*e = CreateMapRequestBodyPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMapRequestBodyPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMapRequestBodyPricingPlanEnum: %v", v)
 	}
 }
 

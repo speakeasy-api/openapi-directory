@@ -36,7 +36,10 @@ func newVersions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns the version of a document.
 func (s *versions) Getversion(ctx context.Context, request operations.GetversionRequest) (*operations.GetversionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions/{versionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions/{versionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *versions) Getversion(ctx context.Context, request operations.Getversion
 // Allows to list the versions of a document.
 func (s *versions) Listversions(ctx context.Context, request operations.ListversionsRequest) (*operations.ListversionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *versions) Listversions(ctx context.Context, request operations.Listvers
 // Updates document with version values.
 func (s *versions) Putversion(ctx context.Context, request operations.PutversionRequest) (*operations.PutversionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions/{versionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/versions/{versionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

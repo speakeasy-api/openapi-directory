@@ -15,17 +15,21 @@ const (
 	POSTDefineAnalysisSchemeActionEnumDefineAnalysisScheme POSTDefineAnalysisSchemeActionEnum = "DefineAnalysisScheme"
 )
 
+func (e POSTDefineAnalysisSchemeActionEnum) ToPointer() *POSTDefineAnalysisSchemeActionEnum {
+	return &e
+}
+
 func (e *POSTDefineAnalysisSchemeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DefineAnalysisScheme":
-		*e = POSTDefineAnalysisSchemeActionEnum(s)
+		*e = POSTDefineAnalysisSchemeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineAnalysisSchemeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineAnalysisSchemeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDefineAnalysisSchemeVersionEnumTwoThousandAndThirteen0101 POSTDefineAnalysisSchemeVersionEnum = "2013-01-01"
 )
 
+func (e POSTDefineAnalysisSchemeVersionEnum) ToPointer() *POSTDefineAnalysisSchemeVersionEnum {
+	return &e
+}
+
 func (e *POSTDefineAnalysisSchemeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = POSTDefineAnalysisSchemeVersionEnum(s)
+		*e = POSTDefineAnalysisSchemeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDefineAnalysisSchemeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDefineAnalysisSchemeVersionEnum: %v", v)
 	}
 }
 

@@ -7,26 +7,30 @@ import (
 	"fmt"
 )
 
-type ErrorCodeEnum string
+type ErrorCodeEnum int64
 
 const (
-	ErrorCodeEnumOneThousand       ErrorCodeEnum = "1000"
-	ErrorCodeEnumTenThousandAndOne ErrorCodeEnum = "10001"
+	ErrorCodeEnumOneThousand       ErrorCodeEnum = 1000
+	ErrorCodeEnumTenThousandAndOne ErrorCodeEnum = 10001
 )
 
+func (e ErrorCodeEnum) ToPointer() *ErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1000":
+	switch v {
+	case 1000:
 		fallthrough
-	case "10001":
-		*e = ErrorCodeEnum(s)
+	case 10001:
+		*e = ErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorCodeEnum: %v", v)
 	}
 }
 

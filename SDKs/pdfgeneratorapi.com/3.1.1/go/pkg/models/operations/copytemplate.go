@@ -34,12 +34,16 @@ const (
 	CopyTemplate422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           CopyTemplate422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e CopyTemplate422ApplicationJSONErrorEnum) ToPointer() *CopyTemplate422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CopyTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -47,10 +51,10 @@ func (e *CopyTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = CopyTemplate422ApplicationJSONErrorEnum(s)
+		*e = CopyTemplate422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyTemplate422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyTemplate422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -71,21 +75,25 @@ const (
 	CopyTemplate404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace CopyTemplate404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e CopyTemplate404ApplicationJSONErrorEnum) ToPointer() *CopyTemplate404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CopyTemplate404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = CopyTemplate404ApplicationJSONErrorEnum(s)
+		*e = CopyTemplate404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyTemplate404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyTemplate404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -104,17 +112,21 @@ const (
 	CopyTemplate403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit CopyTemplate403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e CopyTemplate403ApplicationJSONErrorEnum) ToPointer() *CopyTemplate403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CopyTemplate403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = CopyTemplate403ApplicationJSONErrorEnum(s)
+		*e = CopyTemplate403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyTemplate403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyTemplate403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -142,12 +154,16 @@ const (
 	CopyTemplate401ApplicationJSONErrorEnumAuthenticationFailed                                      CopyTemplate401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e CopyTemplate401ApplicationJSONErrorEnum) ToPointer() *CopyTemplate401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CopyTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -167,10 +183,10 @@ func (e *CopyTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) err
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = CopyTemplate401ApplicationJSONErrorEnum(s)
+		*e = CopyTemplate401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CopyTemplate401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CopyTemplate401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

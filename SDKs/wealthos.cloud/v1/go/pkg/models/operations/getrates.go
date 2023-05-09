@@ -19,17 +19,21 @@ const (
 	GetRatesRateTypeEnumFxSpot GetRatesRateTypeEnum = "fx-spot"
 )
 
+func (e GetRatesRateTypeEnum) ToPointer() *GetRatesRateTypeEnum {
+	return &e
+}
+
 func (e *GetRatesRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fx-spot":
-		*e = GetRatesRateTypeEnum(s)
+		*e = GetRatesRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRatesRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRatesRateTypeEnum: %v", v)
 	}
 }
 
@@ -87,17 +91,21 @@ const (
 	GetRates200ApplicationJSONRatesRateTypeEnumFxSpot GetRates200ApplicationJSONRatesRateTypeEnum = "fx-spot"
 )
 
+func (e GetRates200ApplicationJSONRatesRateTypeEnum) ToPointer() *GetRates200ApplicationJSONRatesRateTypeEnum {
+	return &e
+}
+
 func (e *GetRates200ApplicationJSONRatesRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fx-spot":
-		*e = GetRates200ApplicationJSONRatesRateTypeEnum(s)
+		*e = GetRates200ApplicationJSONRatesRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRates200ApplicationJSONRatesRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRates200ApplicationJSONRatesRateTypeEnum: %v", v)
 	}
 }
 

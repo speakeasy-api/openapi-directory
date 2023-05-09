@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,18 +17,18 @@ func main() {
         }),
     )
 
-    req := operations.BatchExecuteStatementRequest{
+    ctx := context.Background()
+    res, err := s.BatchExecuteStatement(ctx, operations.BatchExecuteStatementRequest{
         RequestBody: operations.BatchExecuteStatementRequestBody{
-            Database: "corrupti",
+            Database: sdk.String("corrupti"),
             ParameterSets: [][]shared.SQLParameter{
                 []shared.SQLParameter{
                     shared.SQLParameter{
-                        Name: "quibusdam",
-                        TypeHint: "DATE",
+                        Name: sdk.String("Stuart Stiedemann"),
+                        TypeHint: shared.TypeHintEnumTimestamp.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
-                                    shared.ArrayValue{},
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
@@ -39,30 +39,31 @@ func main() {
                                     false,
                                 },
                                 DoubleValues: []float64{
-                                    4236.55,
-                                    6235.64,
-                                    6458.94,
-                                    3843.82,
+                                    4375.87,
+                                    2975.34,
                                 },
                                 LongValues: []int64{
-                                    297534,
-                                    891773,
+                                    56713,
+                                    963663,
+                                    272656,
+                                    383441,
                                 },
                                 StringValues: []string{
-                                    "delectus",
+                                    "minus",
+                                    "placeat",
                                 },
                             },
-                            BlobValue: "tempora",
-                            BooleanValue: false,
-                            DoubleValue: 3834.41,
-                            IsNull: false,
-                            LongValue: 477665,
-                            StringValue: "minus",
+                            BlobValue: sdk.String("voluptatum"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(4799.77),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(568045),
+                            StringValue: sdk.String("nisi"),
                         },
                     },
                     shared.SQLParameter{
-                        Name: "placeat",
-                        TypeHint: "DATE",
+                        Name: sdk.String("Jake Bernier MD"),
+                        TypeHint: shared.TypeHintEnumJSON.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
@@ -73,73 +74,37 @@ func main() {
                                     false,
                                     false,
                                     false,
-                                },
-                                DoubleValues: []float64{
-                                    9255.97,
-                                    8360.79,
-                                },
-                                LongValues: []int64{
-                                    337396,
-                                },
-                                StringValues: []string{
-                                    "deserunt",
-                                },
-                            },
-                            BlobValue: "perferendis",
-                            BooleanValue: false,
-                            DoubleValue: 3682.41,
-                            IsNull: false,
-                            LongValue: 832620,
-                            StringValue: "sapiente",
-                        },
-                    },
-                    shared.SQLParameter{
-                        Name: "quo",
-                        TypeHint: "JSON",
-                        Value: &shared.Field{
-                            ArrayValue: &shared.ArrayValue{
-                                ArrayValues: []shared.ArrayValue{
-                                    shared.ArrayValue{},
-                                    shared.ArrayValue{},
-                                    shared.ArrayValue{},
-                                    shared.ArrayValue{},
-                                },
-                                BooleanValues: []bool{
-                                    false,
-                                    false,
-                                    false,
                                     false,
                                 },
                                 DoubleValues: []float64{
-                                    4736.08,
-                                    7991.59,
-                                    8009.11,
-                                    4614.79,
+                                    7781.57,
+                                    1403.5,
+                                    8700.13,
+                                    8700.88,
                                 },
                                 LongValues: []int64{
-                                    780529,
-                                    678880,
-                                    118274,
+                                    473608,
+                                    799159,
+                                    800911,
+                                    461479,
                                 },
                                 StringValues: []string{
-                                    "officia",
-                                    "occaecati",
-                                    "fugit",
+                                    "porro",
+                                    "dolorum",
+                                    "dicta",
                                 },
                             },
-                            BlobValue: "deleniti",
-                            BooleanValue: false,
-                            DoubleValue: 9446.69,
-                            IsNull: false,
-                            LongValue: 758616,
-                            StringValue: "totam",
+                            BlobValue: sdk.String("nam"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(6399.21),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(582020),
+                            StringValue: sdk.String("fugit"),
                         },
                     },
-                },
-                []shared.SQLParameter{
                     shared.SQLParameter{
-                        Name: "commodi",
-                        TypeHint: "TIMESTAMP",
+                        Name: sdk.String("Irvin Rosenbaum III"),
+                        TypeHint: shared.TypeHintEnumTimestamp.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
@@ -163,132 +128,209 @@ func main() {
                                     "sed",
                                 },
                             },
-                            BlobValue: "iste",
-                            BooleanValue: false,
-                            DoubleValue: 2223.21,
-                            IsNull: false,
-                            LongValue: 616934,
-                            StringValue: "laboriosam",
+                            BlobValue: sdk.String("iste"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(2223.21),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(616934),
+                            StringValue: sdk.String("laboriosam"),
                         },
                     },
                 },
                 []shared.SQLParameter{
                     shared.SQLParameter{
-                        Name: "saepe",
-                        TypeHint: "TIME",
+                        Name: sdk.String("Wilbur Kirlin"),
+                        TypeHint: shared.TypeHintEnumTimestamp.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
+                                    shared.ArrayValue{},
+                                    shared.ArrayValue{},
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
                                 },
                                 BooleanValues: []bool{
                                     false,
                                     false,
+                                    false,
                                 },
                                 DoubleValues: []float64{
-                                    4370.32,
-                                    9023.49,
-                                    6976.31,
+                                    602.25,
                                 },
                                 LongValues: []int64{
-                                    60225,
+                                    666767,
+                                    653140,
+                                    670638,
+                                    170909,
                                 },
                                 StringValues: []string{
-                                    "est",
-                                    "mollitia",
-                                    "laborum",
-                                    "dolores",
+                                    "corporis",
                                 },
                             },
-                            BlobValue: "dolorem",
-                            BooleanValue: false,
-                            DoubleValue: 3581.52,
-                            IsNull: false,
-                            LongValue: 128926,
-                            StringValue: "nobis",
+                            BlobValue: sdk.String("explicabo"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(7506.86),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(315428),
+                            StringValue: sdk.String("omnis"),
                         },
                     },
                     shared.SQLParameter{
-                        Name: "enim",
-                        TypeHint: "DATE",
+                        Name: sdk.String("Ms. Cathy Marks"),
+                        TypeHint: shared.TypeHintEnumDecimal.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
+                                    shared.ArrayValue{},
+                                    shared.ArrayValue{},
                                 },
                                 BooleanValues: []bool{
                                     false,
-                                    false,
                                 },
                                 DoubleValues: []float64{
-                                    384.25,
-                                    4386.01,
-                                    6342.74,
+                                    2088.76,
+                                    6350.59,
+                                    1613.09,
                                 },
                                 LongValues: []int64{
-                                    958950,
-                                    102044,
-                                    652790,
-                                    208876,
+                                    653108,
+                                    581850,
+                                    253291,
+                                    414369,
                                 },
                                 StringValues: []string{
-                                    "consequuntur",
-                                    "repellat",
-                                    "mollitia",
+                                    "molestiae",
+                                    "velit",
                                 },
                             },
-                            BlobValue: "occaecati",
-                            BooleanValue: false,
-                            DoubleValue: 2532.91,
-                            IsNull: false,
-                            LongValue: 414369,
-                            StringValue: "quam",
+                            BlobValue: sdk.String("error"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(1589.69),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(338007),
+                            StringValue: sdk.String("vitae"),
                         },
                     },
                     shared.SQLParameter{
-                        Name: "molestiae",
-                        TypeHint: "UUID",
+                        Name: sdk.String("Matt Hamill"),
+                        TypeHint: shared.TypeHintEnumUUID.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
+                                    shared.ArrayValue{},
                                 },
                                 BooleanValues: []bool{
                                     false,
+                                    false,
                                 },
                                 DoubleValues: []float64{
-                                    1103.75,
-                                    6747.52,
+                                    8209.94,
+                                    135.71,
+                                    971.01,
                                 },
                                 LongValues: []int64{
-                                    317202,
-                                    138183,
-                                    778346,
+                                    837945,
+                                    673660,
+                                    96098,
                                 },
                                 StringValues: []string{
-                                    "tenetur",
+                                    "voluptatibus",
+                                    "vero",
+                                    "nihil",
+                                    "praesentium",
                                 },
                             },
-                            BlobValue: "ipsam",
-                            BooleanValue: false,
-                            DoubleValue: 6625.27,
-                            IsNull: false,
-                            LongValue: 820994,
-                            StringValue: "aut",
+                            BlobValue: sdk.String("voluptatibus"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(557.14),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(604846),
+                            StringValue: sdk.String("voluptate"),
                         },
                     },
                     shared.SQLParameter{
-                        Name: "quasi",
-                        TypeHint: "DATE",
+                        Name: sdk.String("Thomas Batz"),
+                        TypeHint: shared.TypeHintEnumDecimal.ToPointer(),
+                        Value: &shared.Field{
+                            ArrayValue: &shared.ArrayValue{
+                                ArrayValues: []shared.ArrayValue{
+                                    shared.ArrayValue{},
+                                },
+                                BooleanValues: []bool{
+                                    false,
+                                    false,
+                                },
+                                DoubleValues: []float64{
+                                    4808.94,
+                                    1187.27,
+                                },
+                                LongValues: []int64{
+                                    317983,
+                                    880476,
+                                    414263,
+                                },
+                                StringValues: []string{
+                                    "quae",
+                                    "ipsum",
+                                    "quidem",
+                                    "molestias",
+                                },
+                            },
+                            BlobValue: sdk.String("excepturi"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(8651.03),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(265389),
+                            StringValue: sdk.String("praesentium"),
+                        },
+                    },
+                },
+                []shared.SQLParameter{
+                    shared.SQLParameter{
+                        Name: sdk.String("Carl Waelchi DVM"),
+                        TypeHint: shared.TypeHintEnumUUID.ToPointer(),
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
                                 ArrayValues: []shared.ArrayValue{
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
+                                },
+                                BooleanValues: []bool{
+                                    false,
+                                },
+                                DoubleValues: []float64{
+                                    8423.42,
+                                    1317.97,
+                                    6471.74,
+                                },
+                                LongValues: []int64{
+                                    841386,
+                                    289406,
+                                    264730,
+                                },
+                                StringValues: []string{
+                                    "aliquid",
+                                },
+                            },
+                            BlobValue: sdk.String("cupiditate"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(5528.22),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(20107),
+                            StringValue: sdk.String("magni"),
+                        },
+                    },
+                    shared.SQLParameter{
+                        Name: sdk.String("Vernon Abshire"),
+                        TypeHint: shared.TypeHintEnumDate.ToPointer(),
+                        Value: &shared.Field{
+                            ArrayValue: &shared.ArrayValue{
+                                ArrayValues: []shared.ArrayValue{
                                     shared.ArrayValue{},
                                     shared.ArrayValue{},
                                 },
@@ -298,45 +340,79 @@ func main() {
                                     false,
                                 },
                                 DoubleValues: []float64{
-                                    9719.45,
+                                    2884.76,
+                                    9621.89,
+                                    4332.88,
                                 },
                                 LongValues: []int64{
-                                    878194,
-                                    468651,
-                                    509624,
-                                    976762,
+                                    756107,
                                 },
                                 StringValues: []string{
-                                    "omnis",
+                                    "aliquid",
+                                    "provident",
+                                    "necessitatibus",
                                 },
                             },
-                            BlobValue: "voluptate",
-                            BooleanValue: false,
-                            DoubleValue: 7392.64,
-                            IsNull: false,
-                            LongValue: 19987,
-                            StringValue: "doloremque",
+                            BlobValue: sdk.String("sint"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(6389.21),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(223081),
+                            StringValue: sdk.String("debitis"),
+                        },
+                    },
+                    shared.SQLParameter{
+                        Name: sdk.String("Wilbur King"),
+                        TypeHint: shared.TypeHintEnumDecimal.ToPointer(),
+                        Value: &shared.Field{
+                            ArrayValue: &shared.ArrayValue{
+                                ArrayValues: []shared.ArrayValue{
+                                    shared.ArrayValue{},
+                                    shared.ArrayValue{},
+                                    shared.ArrayValue{},
+                                },
+                                BooleanValues: []bool{
+                                    false,
+                                },
+                                DoubleValues: []float64{
+                                    7670.24,
+                                    8137.98,
+                                },
+                                LongValues: []int64{
+                                    396506,
+                                    675439,
+                                },
+                                StringValues: []string{
+                                    "non",
+                                    "occaecati",
+                                    "enim",
+                                    "accusamus",
+                                },
+                            },
+                            BlobValue: sdk.String("delectus"),
+                            BooleanValue: sdk.Bool(false),
+                            DoubleValue: sdk.Float64(6925.32),
+                            IsNull: sdk.Bool(false),
+                            LongValue: sdk.Int64(588465),
+                            StringValue: sdk.String("nam"),
                         },
                     },
                 },
             },
-            ResourceArn: "reprehenderit",
-            Schema: "ut",
-            SecretArn: "maiores",
-            SQL: "dicta",
-            TransactionID: "corporis",
+            ResourceArn: "id",
+            Schema: sdk.String("blanditiis"),
+            SecretArn: "deleniti",
+            SQL: "sapiente",
+            TransactionID: sdk.String("amet"),
         },
-        XAmzAlgorithm: "dolore",
-        XAmzContentSha256: "iusto",
-        XAmzCredential: "dicta",
-        XAmzDate: "harum",
-        XAmzSecurityToken: "enim",
-        XAmzSignature: "accusamus",
-        XAmzSignedHeaders: "commodi",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchExecuteStatement(ctx, req)
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("nisi"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("natus"),
+        XAmzSecurityToken: sdk.String("omnis"),
+        XAmzSignature: sdk.String("molestiae"),
+        XAmzSignedHeaders: sdk.String("perferendis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

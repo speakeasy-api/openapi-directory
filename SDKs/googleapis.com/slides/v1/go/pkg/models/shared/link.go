@@ -18,12 +18,16 @@ const (
 	LinkRelativeLinkEnumLastSlide                    LinkRelativeLinkEnum = "LAST_SLIDE"
 )
 
+func (e LinkRelativeLinkEnum) ToPointer() *LinkRelativeLinkEnum {
+	return &e
+}
+
 func (e *LinkRelativeLinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIVE_SLIDE_LINK_UNSPECIFIED":
 		fallthrough
 	case "NEXT_SLIDE":
@@ -33,10 +37,10 @@ func (e *LinkRelativeLinkEnum) UnmarshalJSON(data []byte) error {
 	case "FIRST_SLIDE":
 		fallthrough
 	case "LAST_SLIDE":
-		*e = LinkRelativeLinkEnum(s)
+		*e = LinkRelativeLinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinkRelativeLinkEnum: %s", s)
+		return fmt.Errorf("invalid value for LinkRelativeLinkEnum: %v", v)
 	}
 }
 

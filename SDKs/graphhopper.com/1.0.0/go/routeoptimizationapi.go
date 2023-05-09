@@ -179,7 +179,10 @@ func (s *routeOptimizationAPI) AsyncVRP(ctx context.Context, request shared.Requ
 // You get the job id by sending a vehicle routing problem to the [batch mode URL](#operation/asyncVRP).
 func (s *routeOptimizationAPI) GetSolution(ctx context.Context, request operations.GetSolutionRequest) (*operations.GetSolutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vrp/solution/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vrp/solution/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

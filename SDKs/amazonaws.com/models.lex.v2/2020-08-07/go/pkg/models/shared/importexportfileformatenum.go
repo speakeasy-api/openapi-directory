@@ -14,18 +14,22 @@ const (
 	ImportExportFileFormatEnumTsv     ImportExportFileFormatEnum = "TSV"
 )
 
+func (e ImportExportFileFormatEnum) ToPointer() *ImportExportFileFormatEnum {
+	return &e
+}
+
 func (e *ImportExportFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LexJson":
 		fallthrough
 	case "TSV":
-		*e = ImportExportFileFormatEnum(s)
+		*e = ImportExportFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportExportFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportExportFileFormatEnum: %v", v)
 	}
 }

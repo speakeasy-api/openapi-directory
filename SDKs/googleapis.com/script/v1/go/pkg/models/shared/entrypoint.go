@@ -17,12 +17,16 @@ const (
 	EntryPointEntryPointTypeEnumAddOn                     EntryPointEntryPointTypeEnum = "ADD_ON"
 )
 
+func (e EntryPointEntryPointTypeEnum) ToPointer() *EntryPointEntryPointTypeEnum {
+	return &e
+}
+
 func (e *EntryPointEntryPointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTRY_POINT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WEB_APP":
@@ -30,10 +34,10 @@ func (e *EntryPointEntryPointTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EXECUTION_API":
 		fallthrough
 	case "ADD_ON":
-		*e = EntryPointEntryPointTypeEnum(s)
+		*e = EntryPointEntryPointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntryPointEntryPointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntryPointEntryPointTypeEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newPartners(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Note, this API is used to update orders and is reserved for our shipping partners.
 func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOrdersIDShipRequest, security operations.PutOrdersIDShipSecurity) (*operations.PutOrdersIDShipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/ship", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}/ship", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *partners) PutOrdersIDShip(ctx context.Context, request operations.PutOr
 // Note, this API is used to update orders and is reserved for our shipping partners.
 func (s *partners) PutOrdersIDStatus(ctx context.Context, request operations.PutOrdersIDStatusRequest, security operations.PutOrdersIDStatusSecurity) (*operations.PutOrdersIDStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	EphemerisSourceEnumSpaceTrack       EphemerisSourceEnum = "SPACE_TRACK"
 )
 
+func (e EphemerisSourceEnum) ToPointer() *EphemerisSourceEnum {
+	return &e
+}
+
 func (e *EphemerisSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_PROVIDED":
 		fallthrough
 	case "SPACE_TRACK":
-		*e = EphemerisSourceEnum(s)
+		*e = EphemerisSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EphemerisSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for EphemerisSourceEnum: %v", v)
 	}
 }

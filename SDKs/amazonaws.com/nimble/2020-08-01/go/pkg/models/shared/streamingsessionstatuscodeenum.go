@@ -28,12 +28,16 @@ const (
 	StreamingSessionStatusCodeEnumAmiValidationError               StreamingSessionStatusCodeEnum = "AMI_VALIDATION_ERROR"
 )
 
+func (e StreamingSessionStatusCodeEnum) ToPointer() *StreamingSessionStatusCodeEnum {
+	return &e
+}
+
 func (e *StreamingSessionStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STREAMING_SESSION_READY":
 		fallthrough
 	case "STREAMING_SESSION_DELETED":
@@ -65,9 +69,9 @@ func (e *StreamingSessionStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "STREAMING_SESSION_START_IN_PROGRESS":
 		fallthrough
 	case "AMI_VALIDATION_ERROR":
-		*e = StreamingSessionStatusCodeEnum(s)
+		*e = StreamingSessionStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingSessionStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingSessionStatusCodeEnum: %v", v)
 	}
 }

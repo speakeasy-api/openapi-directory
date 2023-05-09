@@ -30,12 +30,16 @@ const (
 	GetRepositoriesWorkspaceRepoSlugForksRoleEnumOwner       GetRepositoriesWorkspaceRepoSlugForksRoleEnum = "owner"
 )
 
+func (e GetRepositoriesWorkspaceRepoSlugForksRoleEnum) ToPointer() *GetRepositoriesWorkspaceRepoSlugForksRoleEnum {
+	return &e
+}
+
 func (e *GetRepositoriesWorkspaceRepoSlugForksRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "contributor":
@@ -43,10 +47,10 @@ func (e *GetRepositoriesWorkspaceRepoSlugForksRoleEnum) UnmarshalJSON(data []byt
 	case "member":
 		fallthrough
 	case "owner":
-		*e = GetRepositoriesWorkspaceRepoSlugForksRoleEnum(s)
+		*e = GetRepositoriesWorkspaceRepoSlugForksRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugForksRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoriesWorkspaceRepoSlugForksRoleEnum: %v", v)
 	}
 }
 

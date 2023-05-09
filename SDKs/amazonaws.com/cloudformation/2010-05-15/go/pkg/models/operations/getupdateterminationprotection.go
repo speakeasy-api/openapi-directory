@@ -15,17 +15,21 @@ const (
 	GETUpdateTerminationProtectionActionEnumUpdateTerminationProtection GETUpdateTerminationProtectionActionEnum = "UpdateTerminationProtection"
 )
 
+func (e GETUpdateTerminationProtectionActionEnum) ToPointer() *GETUpdateTerminationProtectionActionEnum {
+	return &e
+}
+
 func (e *GETUpdateTerminationProtectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateTerminationProtection":
-		*e = GETUpdateTerminationProtectionActionEnum(s)
+		*e = GETUpdateTerminationProtectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateTerminationProtectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateTerminationProtectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateTerminationProtectionVersionEnumTwoThousandAndTen0515 GETUpdateTerminationProtectionVersionEnum = "2010-05-15"
 )
 
+func (e GETUpdateTerminationProtectionVersionEnum) ToPointer() *GETUpdateTerminationProtectionVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateTerminationProtectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETUpdateTerminationProtectionVersionEnum(s)
+		*e = GETUpdateTerminationProtectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateTerminationProtectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateTerminationProtectionVersionEnum: %v", v)
 	}
 }
 

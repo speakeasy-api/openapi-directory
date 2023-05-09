@@ -14,18 +14,22 @@ const (
 	HTTPEndpointS3BackupModeEnumAllData        HTTPEndpointS3BackupModeEnum = "AllData"
 )
 
+func (e HTTPEndpointS3BackupModeEnum) ToPointer() *HTTPEndpointS3BackupModeEnum {
+	return &e
+}
+
 func (e *HTTPEndpointS3BackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailedDataOnly":
 		fallthrough
 	case "AllData":
-		*e = HTTPEndpointS3BackupModeEnum(s)
+		*e = HTTPEndpointS3BackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPEndpointS3BackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPEndpointS3BackupModeEnum: %v", v)
 	}
 }

@@ -9,7 +9,9 @@ import (
 // PaymentWriteRequest2 - PaymentWriteSerializer.
 type PaymentWriteRequest2 struct {
 	// Registered creditor account
-	CreditorAccount string `form:"name=creditor_account" multipartForm:"name=creditor_account"`
+	CreditorAccount *string `form:"name=creditor_account" multipartForm:"name=creditor_account"`
+	// Creditor account
+	CreditorObject *CreditorAccountWriteRequest `form:"name=creditor_object,json" multipartForm:"name=creditor_object,json"`
 	// Payment Custom Payment ID
 	CustomPaymentID *string `form:"name=custom_payment_id" multipartForm:"name=custom_payment_id"`
 	// Debtor account
@@ -21,6 +23,17 @@ type PaymentWriteRequest2 struct {
 	// Instructed amount
 	InstructedAmount InstructedAmountRequest `form:"name=instructed_amount,json" multipartForm:"name=instructed_amount,json"`
 	// Payment product
+	//
+	// * `T2P` - target-2-payments
+	// * `SCT` - sepa-credit-transfers
+	// * `ISCT` - instant-sepa-credit-transfer
+	// * `CBCT` - cross-border-credit-transfers
+	// * `BACS` - Back Payment Scheme
+	// * `CHAPS` - CHAPS Payment Scheme
+	// * `FPS` - Faster Payment Scheme
+	// * `SWIFT` - Swift Payment Service
+	// * `BT` - Balance Transfer
+	// * `MT` - Money Transfer
 	PaymentProduct interface{} `form:"name=payment_product" multipartForm:"name=payment_product"`
 	// Periodic Payment Serializer.
 	PeriodicPayment *PeriodicPaymentRequest `form:"name=periodic_payment,json" multipartForm:"name=periodic_payment,json"`
@@ -28,4 +41,6 @@ type PaymentWriteRequest2 struct {
 	Redirect string `form:"name=redirect" multipartForm:"name=redirect"`
 	// Payment Execution date (for periodic payments)
 	RequestedExecutionDate *types.Date `form:"name=requested_execution_date" multipartForm:"name=requested_execution_date"`
+	// Indicates whether payment should be submitted separately
+	SubmitPayment *bool `form:"name=submit_payment" multipartForm:"name=submit_payment"`
 }

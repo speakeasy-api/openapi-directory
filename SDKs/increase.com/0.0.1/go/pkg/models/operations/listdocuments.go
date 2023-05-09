@@ -13,20 +13,162 @@ import (
 type ListDocumentsCategoryInEnum string
 
 const (
-	ListDocumentsCategoryInEnumForm1099Int ListDocumentsCategoryInEnum = "form_1099_int"
+	ListDocumentsCategoryInEnumAccountOpeningDisclosures        ListDocumentsCategoryInEnum = "account_opening_disclosures"
+	ListDocumentsCategoryInEnumAntiMoneyLaunderingPolicy        ListDocumentsCategoryInEnum = "anti_money_laundering_policy"
+	ListDocumentsCategoryInEnumAntiMoneyLaunderingProcedures    ListDocumentsCategoryInEnum = "anti_money_laundering_procedures"
+	ListDocumentsCategoryInEnumAuditReport                      ListDocumentsCategoryInEnum = "audit_report"
+	ListDocumentsCategoryInEnumBackgroundChecks                 ListDocumentsCategoryInEnum = "background_checks"
+	ListDocumentsCategoryInEnumBusinessContinuityPlan           ListDocumentsCategoryInEnum = "business_continuity_plan"
+	ListDocumentsCategoryInEnumCollectionsPolicy                ListDocumentsCategoryInEnum = "collections_policy"
+	ListDocumentsCategoryInEnumComplaintsPolicy                 ListDocumentsCategoryInEnum = "complaints_policy"
+	ListDocumentsCategoryInEnumComplaintReport                  ListDocumentsCategoryInEnum = "complaint_report"
+	ListDocumentsCategoryInEnumComplianceReport                 ListDocumentsCategoryInEnum = "compliance_report"
+	ListDocumentsCategoryInEnumComplianceStaffingPlan           ListDocumentsCategoryInEnum = "compliance_staffing_plan"
+	ListDocumentsCategoryInEnumComplianceManagementSystemPolicy ListDocumentsCategoryInEnum = "compliance_management_system_policy"
+	ListDocumentsCategoryInEnumConsumerPrivacyNotice            ListDocumentsCategoryInEnum = "consumer_privacy_notice"
+	ListDocumentsCategoryInEnumConsumerProtectionPolicy         ListDocumentsCategoryInEnum = "consumer_protection_policy"
+	ListDocumentsCategoryInEnumCorporateFormationDocument       ListDocumentsCategoryInEnum = "corporate_formation_document"
+	ListDocumentsCategoryInEnumCreditMonitoringReport           ListDocumentsCategoryInEnum = "credit_monitoring_report"
+	ListDocumentsCategoryInEnumCustomerInformationProgramPolicy ListDocumentsCategoryInEnum = "customer_information_program_policy"
+	ListDocumentsCategoryInEnumElectronicFundsTranferActPolicy  ListDocumentsCategoryInEnum = "electronic_funds_tranfer_act_policy"
+	ListDocumentsCategoryInEnumEmployeeOverview                 ListDocumentsCategoryInEnum = "employee_overview"
+	ListDocumentsCategoryInEnumEndUserTermsOfService            ListDocumentsCategoryInEnum = "end_user_terms_of_service"
+	ListDocumentsCategoryInEnumESignPolicy                      ListDocumentsCategoryInEnum = "e_sign_policy"
+	ListDocumentsCategoryInEnumFinancialStatement               ListDocumentsCategoryInEnum = "financial_statement"
+	ListDocumentsCategoryInEnumForm1099Int                      ListDocumentsCategoryInEnum = "form_1099_int"
+	ListDocumentsCategoryInEnumFraudPreventionPolicy            ListDocumentsCategoryInEnum = "fraud_prevention_policy"
+	ListDocumentsCategoryInEnumFundsAvailabilityPolicy          ListDocumentsCategoryInEnum = "funds_availability_policy"
+	ListDocumentsCategoryInEnumFundsAvailabilityDisclosure      ListDocumentsCategoryInEnum = "funds_availability_disclosure"
+	ListDocumentsCategoryInEnumFundsFlowDiagram                 ListDocumentsCategoryInEnum = "funds_flow_diagram"
+	ListDocumentsCategoryInEnumGrammLeachBlileyActPolicy        ListDocumentsCategoryInEnum = "gramm_leach_bliley_act_policy"
+	ListDocumentsCategoryInEnumInformationSecurityPolicy        ListDocumentsCategoryInEnum = "information_security_policy"
+	ListDocumentsCategoryInEnumInsurancePolicy                  ListDocumentsCategoryInEnum = "insurance_policy"
+	ListDocumentsCategoryInEnumInvestorPresentation             ListDocumentsCategoryInEnum = "investor_presentation"
+	ListDocumentsCategoryInEnumLoanApplicationProcessingPolicy  ListDocumentsCategoryInEnum = "loan_application_processing_policy"
+	ListDocumentsCategoryInEnumManagementBiography              ListDocumentsCategoryInEnum = "management_biography"
+	ListDocumentsCategoryInEnumMarketingAndAdvertisingPolicy    ListDocumentsCategoryInEnum = "marketing_and_advertising_policy"
+	ListDocumentsCategoryInEnumNetworkSecurityDiagram           ListDocumentsCategoryInEnum = "network_security_diagram"
+	ListDocumentsCategoryInEnumOnboardingQuestionnaire          ListDocumentsCategoryInEnum = "onboarding_questionnaire"
+	ListDocumentsCategoryInEnumPenetrationTestReport            ListDocumentsCategoryInEnum = "penetration_test_report"
+	ListDocumentsCategoryInEnumProgramRiskAssessment            ListDocumentsCategoryInEnum = "program_risk_assessment"
+	ListDocumentsCategoryInEnumSecurityAuditReport              ListDocumentsCategoryInEnum = "security_audit_report"
+	ListDocumentsCategoryInEnumServicingPolicy                  ListDocumentsCategoryInEnum = "servicing_policy"
+	ListDocumentsCategoryInEnumTransactionMonitoringReport      ListDocumentsCategoryInEnum = "transaction_monitoring_report"
+	ListDocumentsCategoryInEnumTruthInSavingsActPolicy          ListDocumentsCategoryInEnum = "truth_in_savings_act_policy"
+	ListDocumentsCategoryInEnumUnderwritingPolicy               ListDocumentsCategoryInEnum = "underwriting_policy"
+	ListDocumentsCategoryInEnumVendorList                       ListDocumentsCategoryInEnum = "vendor_list"
+	ListDocumentsCategoryInEnumVendorManagementPolicy           ListDocumentsCategoryInEnum = "vendor_management_policy"
+	ListDocumentsCategoryInEnumVendorRiskManagementReport       ListDocumentsCategoryInEnum = "vendor_risk_management_report"
+	ListDocumentsCategoryInEnumVolumeForecast                   ListDocumentsCategoryInEnum = "volume_forecast"
 )
 
+func (e ListDocumentsCategoryInEnum) ToPointer() *ListDocumentsCategoryInEnum {
+	return &e
+}
+
 func (e *ListDocumentsCategoryInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
+	case "account_opening_disclosures":
+		fallthrough
+	case "anti_money_laundering_policy":
+		fallthrough
+	case "anti_money_laundering_procedures":
+		fallthrough
+	case "audit_report":
+		fallthrough
+	case "background_checks":
+		fallthrough
+	case "business_continuity_plan":
+		fallthrough
+	case "collections_policy":
+		fallthrough
+	case "complaints_policy":
+		fallthrough
+	case "complaint_report":
+		fallthrough
+	case "compliance_report":
+		fallthrough
+	case "compliance_staffing_plan":
+		fallthrough
+	case "compliance_management_system_policy":
+		fallthrough
+	case "consumer_privacy_notice":
+		fallthrough
+	case "consumer_protection_policy":
+		fallthrough
+	case "corporate_formation_document":
+		fallthrough
+	case "credit_monitoring_report":
+		fallthrough
+	case "customer_information_program_policy":
+		fallthrough
+	case "electronic_funds_tranfer_act_policy":
+		fallthrough
+	case "employee_overview":
+		fallthrough
+	case "end_user_terms_of_service":
+		fallthrough
+	case "e_sign_policy":
+		fallthrough
+	case "financial_statement":
+		fallthrough
 	case "form_1099_int":
-		*e = ListDocumentsCategoryInEnum(s)
+		fallthrough
+	case "fraud_prevention_policy":
+		fallthrough
+	case "funds_availability_policy":
+		fallthrough
+	case "funds_availability_disclosure":
+		fallthrough
+	case "funds_flow_diagram":
+		fallthrough
+	case "gramm_leach_bliley_act_policy":
+		fallthrough
+	case "information_security_policy":
+		fallthrough
+	case "insurance_policy":
+		fallthrough
+	case "investor_presentation":
+		fallthrough
+	case "loan_application_processing_policy":
+		fallthrough
+	case "management_biography":
+		fallthrough
+	case "marketing_and_advertising_policy":
+		fallthrough
+	case "network_security_diagram":
+		fallthrough
+	case "onboarding_questionnaire":
+		fallthrough
+	case "penetration_test_report":
+		fallthrough
+	case "program_risk_assessment":
+		fallthrough
+	case "security_audit_report":
+		fallthrough
+	case "servicing_policy":
+		fallthrough
+	case "transaction_monitoring_report":
+		fallthrough
+	case "truth_in_savings_act_policy":
+		fallthrough
+	case "underwriting_policy":
+		fallthrough
+	case "vendor_list":
+		fallthrough
+	case "vendor_management_policy":
+		fallthrough
+	case "vendor_risk_management_report":
+		fallthrough
+	case "volume_forecast":
+		*e = ListDocumentsCategoryInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsCategoryInEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsCategoryInEnum: %v", v)
 	}
 }
 
@@ -41,23 +183,27 @@ type ListDocumentsRequest struct {
 	Limit               *int64                        `queryParam:"style=form,explode=true,name=limit"`
 }
 
-type ListDocumentsDefaultApplicationJSON13StatusEnum string
+type ListDocumentsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListDocumentsDefaultApplicationJSON13StatusEnum = "429"
+	ListDocumentsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListDocumentsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListDocumentsDefaultApplicationJSON13StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListDocumentsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListDocumentsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -67,17 +213,21 @@ const (
 	ListDocumentsDefaultApplicationJSON13TypeEnumRateLimitedError ListDocumentsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON13TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListDocumentsDefaultApplicationJSON13TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -89,23 +239,27 @@ type ListDocumentsDefaultApplicationJSON13 struct {
 	Type       ListDocumentsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON12StatusEnum string
+type ListDocumentsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON12StatusEnum = "403"
+	ListDocumentsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListDocumentsDefaultApplicationJSON12StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListDocumentsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListDocumentsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -115,17 +269,21 @@ const (
 	ListDocumentsDefaultApplicationJSON12TypeEnumPrivateFeatureError ListDocumentsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON12TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListDocumentsDefaultApplicationJSON12TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -136,23 +294,27 @@ type ListDocumentsDefaultApplicationJSON12 struct {
 	Type   ListDocumentsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON11StatusEnum string
+type ListDocumentsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListDocumentsDefaultApplicationJSON11StatusEnum = "404"
+	ListDocumentsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListDocumentsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListDocumentsDefaultApplicationJSON11StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListDocumentsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListDocumentsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -162,17 +324,21 @@ const (
 	ListDocumentsDefaultApplicationJSON11TypeEnumObjectNotFoundError ListDocumentsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON11TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListDocumentsDefaultApplicationJSON11TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -183,23 +349,27 @@ type ListDocumentsDefaultApplicationJSON11 struct {
 	Type   ListDocumentsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON10StatusEnum string
+type ListDocumentsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON10StatusEnumFourHundred ListDocumentsDefaultApplicationJSON10StatusEnum = "400"
+	ListDocumentsDefaultApplicationJSON10StatusEnumFourHundred ListDocumentsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListDocumentsDefaultApplicationJSON10StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListDocumentsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListDocumentsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -209,17 +379,21 @@ const (
 	ListDocumentsDefaultApplicationJSON10TypeEnumMalformedRequestError ListDocumentsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON10TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListDocumentsDefaultApplicationJSON10TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -230,23 +404,27 @@ type ListDocumentsDefaultApplicationJSON10 struct {
 	Type   ListDocumentsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON9StatusEnum string
+type ListDocumentsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON9StatusEnumFourHundred ListDocumentsDefaultApplicationJSON9StatusEnum = "400"
+	ListDocumentsDefaultApplicationJSON9StatusEnumFourHundred ListDocumentsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListDocumentsDefaultApplicationJSON9StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListDocumentsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListDocumentsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -256,46 +434,54 @@ const (
 	ListDocumentsDefaultApplicationJSON9TypeEnumInvalidParametersError ListDocumentsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON9TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListDocumentsDefaultApplicationJSON9TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListDocumentsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                       `json:"errors,omitempty"`
+	Errors []map[string]interface{}                       `json:"errors"`
 	Status ListDocumentsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                         `json:"title"`
 	Type   ListDocumentsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON8StatusEnum string
+type ListDocumentsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListDocumentsDefaultApplicationJSON8StatusEnum = "409"
+	ListDocumentsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListDocumentsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListDocumentsDefaultApplicationJSON8StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListDocumentsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListDocumentsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -305,17 +491,21 @@ const (
 	ListDocumentsDefaultApplicationJSON8TypeEnumInvalidOperationError ListDocumentsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON8TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListDocumentsDefaultApplicationJSON8TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -326,23 +516,27 @@ type ListDocumentsDefaultApplicationJSON8 struct {
 	Type   ListDocumentsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON7StatusEnum string
+type ListDocumentsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListDocumentsDefaultApplicationJSON7StatusEnum = "401"
+	ListDocumentsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListDocumentsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListDocumentsDefaultApplicationJSON7StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListDocumentsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListDocumentsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -352,17 +546,21 @@ const (
 	ListDocumentsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListDocumentsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON7TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListDocumentsDefaultApplicationJSON7TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -373,23 +571,27 @@ type ListDocumentsDefaultApplicationJSON7 struct {
 	Type   ListDocumentsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON6StatusEnum string
+type ListDocumentsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON6StatusEnumFiveHundred ListDocumentsDefaultApplicationJSON6StatusEnum = "500"
+	ListDocumentsDefaultApplicationJSON6StatusEnumFiveHundred ListDocumentsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListDocumentsDefaultApplicationJSON6StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListDocumentsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListDocumentsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -399,17 +601,21 @@ const (
 	ListDocumentsDefaultApplicationJSON6TypeEnumInternalServerError ListDocumentsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON6TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListDocumentsDefaultApplicationJSON6TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -420,23 +626,27 @@ type ListDocumentsDefaultApplicationJSON6 struct {
 	Type   ListDocumentsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON5StatusEnum string
+type ListDocumentsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON5StatusEnum = "403"
+	ListDocumentsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListDocumentsDefaultApplicationJSON5StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListDocumentsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListDocumentsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -446,17 +656,21 @@ const (
 	ListDocumentsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListDocumentsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON5TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListDocumentsDefaultApplicationJSON5TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -467,23 +681,27 @@ type ListDocumentsDefaultApplicationJSON5 struct {
 	Type   ListDocumentsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON4StatusEnum string
+type ListDocumentsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListDocumentsDefaultApplicationJSON4StatusEnum = "422"
+	ListDocumentsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListDocumentsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListDocumentsDefaultApplicationJSON4StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListDocumentsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListDocumentsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -493,17 +711,21 @@ const (
 	ListDocumentsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListDocumentsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON4TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListDocumentsDefaultApplicationJSON4TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -514,23 +736,27 @@ type ListDocumentsDefaultApplicationJSON4 struct {
 	Type   ListDocumentsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON3StatusEnum string
+type ListDocumentsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListDocumentsDefaultApplicationJSON3StatusEnum = "409"
+	ListDocumentsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListDocumentsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListDocumentsDefaultApplicationJSON3StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListDocumentsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListDocumentsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -540,17 +766,21 @@ const (
 	ListDocumentsDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListDocumentsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON3TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListDocumentsDefaultApplicationJSON3TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -561,23 +791,27 @@ type ListDocumentsDefaultApplicationJSON3 struct {
 	Type   ListDocumentsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON2StatusEnum string
+type ListDocumentsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON2StatusEnum = "403"
+	ListDocumentsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListDocumentsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListDocumentsDefaultApplicationJSON2StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListDocumentsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListDocumentsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -587,17 +821,21 @@ const (
 	ListDocumentsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListDocumentsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON2TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListDocumentsDefaultApplicationJSON2TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -608,23 +846,27 @@ type ListDocumentsDefaultApplicationJSON2 struct {
 	Type   ListDocumentsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListDocumentsDefaultApplicationJSON1StatusEnum string
+type ListDocumentsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListDocumentsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListDocumentsDefaultApplicationJSON1StatusEnum = "404"
+	ListDocumentsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListDocumentsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListDocumentsDefaultApplicationJSON1StatusEnum) ToPointer() *ListDocumentsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListDocumentsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListDocumentsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -634,17 +876,21 @@ const (
 	ListDocumentsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListDocumentsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListDocumentsDefaultApplicationJSON1TypeEnum) ToPointer() *ListDocumentsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListDocumentsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListDocumentsDefaultApplicationJSON1TypeEnum(s)
+		*e = ListDocumentsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDocumentsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

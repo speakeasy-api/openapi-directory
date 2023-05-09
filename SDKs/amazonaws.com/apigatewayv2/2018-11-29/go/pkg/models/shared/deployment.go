@@ -17,21 +17,25 @@ const (
 	DeploymentDeploymentStatusEnumDeployed DeploymentDeploymentStatusEnum = "DEPLOYED"
 )
 
+func (e DeploymentDeploymentStatusEnum) ToPointer() *DeploymentDeploymentStatusEnum {
+	return &e
+}
+
 func (e *DeploymentDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "FAILED":
 		fallthrough
 	case "DEPLOYED":
-		*e = DeploymentDeploymentStatusEnum(s)
+		*e = DeploymentDeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentDeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentDeploymentStatusEnum: %v", v)
 	}
 }
 

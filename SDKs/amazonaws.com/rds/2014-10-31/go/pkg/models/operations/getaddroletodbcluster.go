@@ -15,17 +15,21 @@ const (
 	GETAddRoleToDBClusterActionEnumAddRoleToDbCluster GETAddRoleToDBClusterActionEnum = "AddRoleToDBCluster"
 )
 
+func (e GETAddRoleToDBClusterActionEnum) ToPointer() *GETAddRoleToDBClusterActionEnum {
+	return &e
+}
+
 func (e *GETAddRoleToDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddRoleToDBCluster":
-		*e = GETAddRoleToDBClusterActionEnum(s)
+		*e = GETAddRoleToDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddRoleToDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddRoleToDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAddRoleToDBClusterVersionEnumTwoThousandAndFourteen1031 GETAddRoleToDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETAddRoleToDBClusterVersionEnum) ToPointer() *GETAddRoleToDBClusterVersionEnum {
+	return &e
+}
+
 func (e *GETAddRoleToDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETAddRoleToDBClusterVersionEnum(s)
+		*e = GETAddRoleToDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddRoleToDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddRoleToDBClusterVersionEnum: %v", v)
 	}
 }
 

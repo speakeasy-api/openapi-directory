@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,7 +16,8 @@ func main() {
         }),
     )
 
-    req := operations.CompleteAttachmentUploadRequest{
+    ctx := context.Background()
+    res, err := s.CompleteAttachmentUpload(ctx, operations.CompleteAttachmentUploadRequest{
         RequestBody: operations.CompleteAttachmentUploadRequestBody{
             AttachmentIds: []string{
                 "provident",
@@ -26,18 +26,15 @@ func main() {
             },
             ClientToken: "unde",
         },
-        XAmzAlgorithm: "nulla",
+        XAmzAlgorithm: sdk.String("nulla"),
         XAmzBearer: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.CompleteAttachmentUpload(ctx, req)
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -17,19 +17,23 @@ const (
 	GetCountriesOrderEnumDescending GetCountriesOrderEnum = "descending"
 )
 
+func (e GetCountriesOrderEnum) ToPointer() *GetCountriesOrderEnum {
+	return &e
+}
+
 func (e *GetCountriesOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ascending":
 		fallthrough
 	case "descending":
-		*e = GetCountriesOrderEnum(s)
+		*e = GetCountriesOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCountriesOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCountriesOrderEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetCountriesSortEnumLabel GetCountriesSortEnum = "label"
 )
 
+func (e GetCountriesSortEnum) ToPointer() *GetCountriesSortEnum {
+	return &e
+}
+
 func (e *GetCountriesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "key":
 		fallthrough
 	case "label":
-		*e = GetCountriesSortEnum(s)
+		*e = GetCountriesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCountriesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCountriesSortEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newMarketplacesChannelCatalogsPublications(defaultClient, securityClient HT
 // GetPublications - Fetch the publication history for an account, sorted by descending start date
 func (s *marketplacesChannelCatalogsPublications) GetPublications(ctx context.Context, request operations.GetPublicationsRequest) (*operations.GetPublicationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -98,7 +101,10 @@ func (s *marketplacesChannelCatalogsPublications) GetPublications(ctx context.Co
 // PublishCatalogToMarketplace - [PREVIEW] Launch a publication of the catalog to the marketplace
 func (s *marketplacesChannelCatalogsPublications) PublishCatalogToMarketplace(ctx context.Context, request operations.PublishCatalogToMarketplaceRequest) (*operations.PublishCatalogToMarketplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/channelcatalogs/publications/{marketplaceTechnicalCode}/{accountId}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PublishCatalogToMarketplaceRequest", "json")
 	if err != nil {

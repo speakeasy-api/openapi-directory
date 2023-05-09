@@ -15,20 +15,24 @@ const (
 	IssueSubEntityEnumWorklogs    IssueSubEntityEnum = "WORKLOGS"
 )
 
+func (e IssueSubEntityEnum) ToPointer() *IssueSubEntityEnum {
+	return &e
+}
+
 func (e *IssueSubEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMENTS":
 		fallthrough
 	case "ATTACHMENTS":
 		fallthrough
 	case "WORKLOGS":
-		*e = IssueSubEntityEnum(s)
+		*e = IssueSubEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssueSubEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for IssueSubEntityEnum: %v", v)
 	}
 }

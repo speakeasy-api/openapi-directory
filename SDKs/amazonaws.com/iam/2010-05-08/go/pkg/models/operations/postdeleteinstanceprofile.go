@@ -15,17 +15,21 @@ const (
 	POSTDeleteInstanceProfileActionEnumDeleteInstanceProfile POSTDeleteInstanceProfileActionEnum = "DeleteInstanceProfile"
 )
 
+func (e POSTDeleteInstanceProfileActionEnum) ToPointer() *POSTDeleteInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInstanceProfile":
-		*e = POSTDeleteInstanceProfileActionEnum(s)
+		*e = POSTDeleteInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteInstanceProfileVersionEnumTwoThousandAndTen0508 POSTDeleteInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e POSTDeleteInstanceProfileVersionEnum) ToPointer() *POSTDeleteInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTDeleteInstanceProfileVersionEnum(s)
+		*e = POSTDeleteInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteInstanceProfileVersionEnum: %v", v)
 	}
 }
 

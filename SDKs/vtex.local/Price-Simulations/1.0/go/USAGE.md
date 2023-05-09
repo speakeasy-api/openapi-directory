@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVCustomPricesSessionSchemaRequest{
+    ctx := context.Background()
+    res, err := s.CustomPrices.GetVCustomPricesSessionSchema(ctx, operations.GetVCustomPricesSessionSchemaRequest{
         Accept: "corrupti",
         ContentType: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CustomPrices.GetVCustomPricesSessionSchema(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

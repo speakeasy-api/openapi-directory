@@ -4,7 +4,7 @@ package shared
 
 // SearchCasesResponse - The response message for the SearchCases endpoint.
 type SearchCasesResponse struct {
-	// The list of Case associated with the cloud resource, after any filters have been applied.
+	// The list of cases associated with the Google Cloud Resource, after any filters have been applied.
 	Cases []Case `json:"cases,omitempty"`
 	// A token to retrieve the next page of results. This should be set in the `page_token` field of subsequent `SearchCaseRequest` message that is issued. If unspecified, there are no more results to retrieve.
 	NextPageToken *string `json:"nextPageToken,omitempty"`

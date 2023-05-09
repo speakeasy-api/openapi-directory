@@ -16,17 +16,21 @@ const (
 	DisassociateMemberFromGroupXAmzTargetEnumWorkMailServiceDisassociateMemberFromGroup DisassociateMemberFromGroupXAmzTargetEnum = "WorkMailService.DisassociateMemberFromGroup"
 )
 
+func (e DisassociateMemberFromGroupXAmzTargetEnum) ToPointer() *DisassociateMemberFromGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateMemberFromGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DisassociateMemberFromGroup":
-		*e = DisassociateMemberFromGroupXAmzTargetEnum(s)
+		*e = DisassociateMemberFromGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateMemberFromGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateMemberFromGroupXAmzTargetEnum: %v", v)
 	}
 }
 

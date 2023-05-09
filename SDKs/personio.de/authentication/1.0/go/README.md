@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/personio.de/authenticatio
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostAuthRequest{
+    ctx := context.Background()
+    res, err := s.PostAuth(ctx, operations.PostAuthRequest{
         ClientID: "corrupti",
         ClientSecret: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.PostAuth(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,9 +42,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostAuth` - Request Authentication Token
+* [PostAuth](docs/sdk/README.md#postauth) - Request Authentication Token
 <!-- End SDK Available Operations -->
 
 ### Maturity

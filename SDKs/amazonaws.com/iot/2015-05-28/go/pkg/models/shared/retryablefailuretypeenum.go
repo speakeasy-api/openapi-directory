@@ -15,20 +15,24 @@ const (
 	RetryableFailureTypeEnumAll      RetryableFailureTypeEnum = "ALL"
 )
 
+func (e RetryableFailureTypeEnum) ToPointer() *RetryableFailureTypeEnum {
+	return &e
+}
+
 func (e *RetryableFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "TIMED_OUT":
 		fallthrough
 	case "ALL":
-		*e = RetryableFailureTypeEnum(s)
+		*e = RetryableFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetryableFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetryableFailureTypeEnum: %v", v)
 	}
 }

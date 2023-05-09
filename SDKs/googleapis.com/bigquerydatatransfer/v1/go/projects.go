@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BigquerydatatransferProjectsLocationsDataSourcesCheckValidCreds - Returns true if valid credentials exist for the given data source and requesting user.
 func (s *projects) BigquerydatatransferProjectsLocationsDataSourcesCheckValidCreds(ctx context.Context, request operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest, security operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity) (*operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:checkValidCreds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:checkValidCreds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) BigquerydatatransferProjectsLocationsDataSourcesCheckValidCre
 // BigquerydatatransferProjectsLocationsDataSourcesList - Lists supported data sources and returns their settings.
 func (s *projects) BigquerydatatransferProjectsLocationsDataSourcesList(ctx context.Context, request operations.BigquerydatatransferProjectsLocationsDataSourcesListRequest, security operations.BigquerydatatransferProjectsLocationsDataSourcesListSecurity) (*operations.BigquerydatatransferProjectsLocationsDataSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataSources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataSources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) BigquerydatatransferProjectsLocationsDataSourcesList(ctx cont
 // BigquerydatatransferProjectsLocationsEnrollDataSources - Enroll data sources in a user project. This allows users to create transfer configurations for these data sources. They will also appear in the ListDataSources RPC and as such, will appear in the [BigQuery UI](https://console.cloud.google.com/bigquery), and the documents can be found in the public guide for [BigQuery Web UI](https://cloud.google.com/bigquery/bigquery-web-ui) and [Data Transfer Service](https://cloud.google.com/bigquery/docs/working-with-transfers).
 func (s *projects) BigquerydatatransferProjectsLocationsEnrollDataSources(ctx context.Context, request operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesRequest, security operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesSecurity) (*operations.BigquerydatatransferProjectsLocationsEnrollDataSourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enrollDataSources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enrollDataSources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnrollDataSourcesRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) BigquerydatatransferProjectsLocationsEnrollDataSources(ctx co
 // BigquerydatatransferProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) BigquerydatatransferProjectsLocationsList(ctx context.Context, request operations.BigquerydatatransferProjectsLocationsListRequest, security operations.BigquerydatatransferProjectsLocationsListSecurity) (*operations.BigquerydatatransferProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) BigquerydatatransferProjectsLocationsList(ctx context.Context
 // BigquerydatatransferProjectsTransferConfigsCreate - Creates a new data transfer configuration.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsCreate(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsCreateRequest, security operations.BigquerydatatransferProjectsTransferConfigsCreateSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferConfigInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsCreate(ctx context
 // BigquerydatatransferProjectsTransferConfigsList - Returns information about all transfer configs owned by a project in the specified location.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsList(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsListRequest, security operations.BigquerydatatransferProjectsTransferConfigsListSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsList(ctx context.C
 // BigquerydatatransferProjectsTransferConfigsPatch - Updates a data transfer configuration. All fields must be set, even if they are not updated.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsPatch(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsPatchRequest, security operations.BigquerydatatransferProjectsTransferConfigsPatchSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransferConfigInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsPatch(ctx context.
 // BigquerydatatransferProjectsTransferConfigsRunsDelete - Deletes the specified transfer run.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsDelete(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteRequest, security operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsRunsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsDelete(ctx con
 // BigquerydatatransferProjectsTransferConfigsRunsGet - Returns information about the particular transfer run.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsGet(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsRunsGetRequest, security operations.BigquerydatatransferProjectsTransferConfigsRunsGetSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsRunsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsGet(ctx contex
 // BigquerydatatransferProjectsTransferConfigsRunsList - Returns information about running and completed transfer runs.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsList(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsRunsListRequest, security operations.BigquerydatatransferProjectsTransferConfigsRunsListSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsList(ctx conte
 // BigquerydatatransferProjectsTransferConfigsRunsTransferLogsList - Returns log messages for the transfer run.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsTransferLogsList(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListRequest, security operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsRunsTransferLogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferLogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/transferLogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +623,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsRunsTransferLogsLi
 // BigquerydatatransferProjectsTransferConfigsScheduleRuns - Creates transfer runs for a time range [start_time, end_time]. For each date - or whatever granularity the data source supports - in the range, one transfer run is created. Note that runs are created per UTC time in the time range. DEPRECATED: use StartManualTransferRuns instead.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsScheduleRuns(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsRequest, security operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsScheduleRunsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:scheduleRuns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:scheduleRuns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduleTransferRunsRequest", "json")
 	if err != nil {
@@ -645,7 +681,10 @@ func (s *projects) BigquerydatatransferProjectsTransferConfigsScheduleRuns(ctx c
 // BigquerydatatransferProjectsTransferConfigsStartManualRuns - Start manual transfer runs to be executed now with schedule_time equal to current time. The transfer runs can be created for a time range where the run_time is between start_time (inclusive) and end_time (exclusive), or for a specific run_time.
 func (s *projects) BigquerydatatransferProjectsTransferConfigsStartManualRuns(ctx context.Context, request operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsRequest, security operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsSecurity) (*operations.BigquerydatatransferProjectsTransferConfigsStartManualRunsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:startManualRuns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:startManualRuns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartManualTransferRunsRequest", "json")
 	if err != nil {

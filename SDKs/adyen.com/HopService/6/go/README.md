@@ -13,47 +13,45 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/HopService/6/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.GetOnboardingURLRequest{
+    ctx := context.Background()
+    res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, shared.GetOnboardingURLRequest{
         AccountHolderCode: "corrupti",
         CollectInformation: &shared.CollectInformation{
-            BankDetails: false,
-            BusinessDetails: false,
-            IndividualDetails: false,
-            LegalArrangementDetails: false,
-            PciQuestionnaire: false,
-            ShareholderDetails: false,
+            BankDetails: sdk.Bool(false),
+            BusinessDetails: sdk.Bool(false),
+            IndividualDetails: sdk.Bool(false),
+            LegalArrangementDetails: sdk.Bool(false),
+            PciQuestionnaire: sdk.Bool(false),
+            ShareholderDetails: sdk.Bool(false),
         },
-        EditMode: false,
-        MobileOAuthCallbackURL: "provident",
-        PlatformName: "distinctio",
-        ReturnURL: "quibusdam",
-        ShopperLocale: "unde",
+        EditMode: sdk.Bool(false),
+        MobileOAuthCallbackURL: sdk.String("provident"),
+        PlatformName: sdk.String("distinctio"),
+        ReturnURL: sdk.String("quibusdam"),
+        ShopperLocale: sdk.String("unde"),
         ShowPages: &shared.ShowPages{
-            BankDetailsSummaryPage: false,
-            BankVerificationPage: false,
-            BusinessDetailsSummaryPage: false,
-            ChecksOverviewPage: false,
-            IndividualDetailsSummaryPage: false,
-            LegalArrangementsDetailsSummaryPage: false,
-            ManualBankAccountPage: false,
-            ShareholderDetailsSummaryPage: false,
-            WelcomePage: false,
+            BankDetailsSummaryPage: sdk.Bool(false),
+            BankVerificationPage: sdk.Bool(false),
+            BusinessDetailsSummaryPage: sdk.Bool(false),
+            ChecksOverviewPage: sdk.Bool(false),
+            IndividualDetailsSummaryPage: sdk.Bool(false),
+            LegalArrangementsDetailsSummaryPage: sdk.Bool(false),
+            ManualBankAccountPage: sdk.Bool(false),
+            ShareholderDetailsSummaryPage: sdk.Bool(false),
+            WelcomePage: sdk.Bool(false),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.HostedOnboardingPage.PostGetOnboardingURL(ctx, req, operations.PostGetOnboardingURLSecurity{
+    }, operations.PostGetOnboardingURLSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -71,13 +69,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### HostedOnboardingPage
+### [HostedOnboardingPage](docs/hostedonboardingpage/README.md)
 
-* `PostGetOnboardingURL` - Get a link to a Adyen-hosted onboarding page
+* [PostGetOnboardingURL](docs/hostedonboardingpage/README.md#postgetonboardingurl) - Get a link to a Adyen-hosted onboarding page
 
-### PCIComplianceQuestionnairePage
+### [PCIComplianceQuestionnairePage](docs/pcicompliancequestionnairepage/README.md)
 
-* `PostGetPciQuestionnaireURL` - Get a link to a PCI compliance questionnaire
+* [PostGetPciQuestionnaireURL](docs/pcicompliancequestionnairepage/README.md#postgetpciquestionnaireurl) - Get a link to a PCI compliance questionnaire
 <!-- End SDK Available Operations -->
 
 ### Maturity

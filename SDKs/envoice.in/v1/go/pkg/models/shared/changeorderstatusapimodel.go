@@ -21,12 +21,16 @@ const (
 	ChangeOrderStatusAPIModelStatusEnumFailed         ChangeOrderStatusAPIModelStatusEnum = "Failed"
 )
 
+func (e ChangeOrderStatusAPIModelStatusEnum) ToPointer() *ChangeOrderStatusAPIModelStatusEnum {
+	return &e
+}
+
 func (e *ChangeOrderStatusAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingPayment":
 		fallthrough
 	case "Processing":
@@ -42,10 +46,10 @@ func (e *ChangeOrderStatusAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Refunded":
 		fallthrough
 	case "Failed":
-		*e = ChangeOrderStatusAPIModelStatusEnum(s)
+		*e = ChangeOrderStatusAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeOrderStatusAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeOrderStatusAPIModelStatusEnum: %v", v)
 	}
 }
 

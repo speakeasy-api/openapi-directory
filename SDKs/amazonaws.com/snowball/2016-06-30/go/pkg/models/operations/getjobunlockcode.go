@@ -16,17 +16,21 @@ const (
 	GetJobUnlockCodeXAmzTargetEnumAwsieSnowballJobManagementServiceGetJobUnlockCode GetJobUnlockCodeXAmzTargetEnum = "AWSIESnowballJobManagementService.GetJobUnlockCode"
 )
 
+func (e GetJobUnlockCodeXAmzTargetEnum) ToPointer() *GetJobUnlockCodeXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetJobUnlockCodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIESnowballJobManagementService.GetJobUnlockCode":
-		*e = GetJobUnlockCodeXAmzTargetEnum(s)
+		*e = GetJobUnlockCodeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetJobUnlockCodeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetJobUnlockCodeXAmzTargetEnum: %v", v)
 	}
 }
 

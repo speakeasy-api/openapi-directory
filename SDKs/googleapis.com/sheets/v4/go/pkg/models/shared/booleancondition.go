@@ -45,12 +45,16 @@ const (
 	BooleanConditionTypeEnumDateNotEq                BooleanConditionTypeEnum = "DATE_NOT_EQ"
 )
 
+func (e BooleanConditionTypeEnum) ToPointer() *BooleanConditionTypeEnum {
+	return &e
+}
+
 func (e *BooleanConditionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONDITION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NUMBER_GREATER":
@@ -114,10 +118,10 @@ func (e *BooleanConditionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TEXT_NOT_EQ":
 		fallthrough
 	case "DATE_NOT_EQ":
-		*e = BooleanConditionTypeEnum(s)
+		*e = BooleanConditionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooleanConditionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BooleanConditionTypeEnum: %v", v)
 	}
 }
 

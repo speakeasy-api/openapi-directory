@@ -17,19 +17,23 @@ const (
 	RefereesFormatEnumJSON RefereesFormatEnum = "JSON"
 )
 
+func (e RefereesFormatEnum) ToPointer() *RefereesFormatEnum {
+	return &e
+}
+
 func (e *RefereesFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = RefereesFormatEnum(s)
+		*e = RefereesFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RefereesFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RefereesFormatEnum: %v", v)
 	}
 }
 

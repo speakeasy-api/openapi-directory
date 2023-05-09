@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -27,7 +28,6 @@ pkg/models/operations/tpuprojectslocationsoperationslist.go
 pkg/models/operations/tpuprojectslocationsqueuedresourcescreate.go
 pkg/models/operations/tpuprojectslocationsqueuedresourcesdelete.go
 pkg/models/operations/tpuprojectslocationsqueuedresourceslist.go
-pkg/models/operations/tpuprojectslocationsqueuedresourcesreset.go
 pkg/models/operations/tpuprojectslocationsruntimeversionsget.go
 pkg/models/operations/tpuprojectslocationsruntimeversionslist.go
 pkg/models/shared/listacceleratortypesresponse.go
@@ -69,4 +69,6 @@ pkg/models/shared/guaranteed.go
 pkg/models/shared/listqueuedresourcesresponse.go
 pkg/models/shared/runtimeversion.go
 pkg/models/shared/listruntimeversionsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

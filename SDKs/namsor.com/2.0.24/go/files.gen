@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -53,6 +54,8 @@ pkg/models/operations/religion.go
 pkg/models/operations/religionindianfullbatch.go
 pkg/models/operations/subclassificationindian.go
 pkg/models/operations/subclassificationindianbatch.go
+pkg/models/operations/subclassificationindianfull.go
+pkg/models/operations/subclassificationindianfullbatch.go
 pkg/models/operations/genderjapanesenamefull.go
 pkg/models/operations/genderjapanesenamefullbatch.go
 pkg/models/operations/genderjapanesenamepinyin.go
@@ -93,6 +96,8 @@ pkg/models/operations/religionfull.go
 pkg/models/operations/religionfullbatch.go
 pkg/models/operations/subclassification.go
 pkg/models/operations/subclassificationbatch.go
+pkg/models/operations/subclassificationfull.go
+pkg/models/operations/subclassificationfullbatch.go
 pkg/models/operations/usraceethnicity.go
 pkg/models/operations/usraceethnicitybatch.go
 pkg/models/operations/usraceethnicityzip5.go
@@ -154,6 +159,10 @@ pkg/models/shared/firstlastnamegeosubclassificationout.go
 pkg/models/shared/batchfirstlastnamegeosubclassificationout.go
 pkg/models/shared/batchfirstlastnamegeoin.go
 pkg/models/shared/firstlastnamegeoin.go
+pkg/models/shared/personalnamegeosubclassificationout.go
+pkg/models/shared/batchpersonalnamegeosubclassificationout.go
+pkg/models/shared/batchpersonalnamegeoin.go
+pkg/models/shared/personalnamegeoin.go
 pkg/models/shared/feedbackloopout.go
 pkg/models/shared/corridorout.go
 pkg/models/shared/firstlastnameoriginedout.go
@@ -164,8 +173,6 @@ pkg/models/shared/corridorin.go
 pkg/models/shared/personalnamegeoout.go
 pkg/models/shared/batchpersonalnamegeoout.go
 pkg/models/shared/batchfirstlastnamediasporaedout.go
-pkg/models/shared/batchpersonalnamegeoin.go
-pkg/models/shared/personalnamegeoin.go
 pkg/models/shared/batchfirstlastnameoriginedout.go
 pkg/models/shared/batchpersonalnamegeosubdivisionin.go
 pkg/models/shared/personalnamegeosubdivisionin.go
@@ -180,4 +187,12 @@ pkg/models/shared/firstlastnamephonenumberin.go
 pkg/models/shared/batchfirstlastnamephonenumbergeoin.go
 pkg/models/shared/firstlastnamephonenumbergeoin.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/admin/README.md
+docs/chinese/README.md
+docs/general/README.md
+docs/indian/README.md
+docs/japanese/README.md
+docs/personal/README.md
+docs/social/README.md
 USAGE.md

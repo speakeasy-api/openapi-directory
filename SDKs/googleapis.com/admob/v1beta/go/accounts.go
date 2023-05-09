@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AdmobAccountsAdSourcesList - List the ad sources.
 func (s *accounts) AdmobAccountsAdSourcesList(ctx context.Context, request operations.AdmobAccountsAdSourcesListRequest) (*operations.AdmobAccountsAdSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/adSources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/adSources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *accounts) AdmobAccountsAdSourcesList(ctx context.Context, request opera
 // AdmobAccountsAdUnitsList - List the ad units under the specified AdMob account.
 func (s *accounts) AdmobAccountsAdUnitsList(ctx context.Context, request operations.AdmobAccountsAdUnitsListRequest, security operations.AdmobAccountsAdUnitsListSecurity) (*operations.AdmobAccountsAdUnitsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/adUnits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/adUnits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *accounts) AdmobAccountsAdUnitsList(ctx context.Context, request operati
 // AdmobAccountsAppsList - List the apps under the specified AdMob account.
 func (s *accounts) AdmobAccountsAppsList(ctx context.Context, request operations.AdmobAccountsAppsListRequest, security operations.AdmobAccountsAppsListSecurity) (*operations.AdmobAccountsAppsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *accounts) AdmobAccountsAppsList(ctx context.Context, request operations
 // AdmobAccountsGet - Gets information about the specified AdMob publisher account.
 func (s *accounts) AdmobAccountsGet(ctx context.Context, request operations.AdmobAccountsGetRequest, security operations.AdmobAccountsGetSecurity) (*operations.AdmobAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -275,7 +287,10 @@ func (s *accounts) AdmobAccountsList(ctx context.Context, request operations.Adm
 // AdmobAccountsMediationReportGenerate - Generates an AdMob mediation report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
 func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, request operations.AdmobAccountsMediationReportGenerateRequest, security operations.AdmobAccountsMediationReportGenerateSecurity) (*operations.AdmobAccountsMediationReportGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/mediationReport:generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/mediationReport:generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateMediationReportRequest", "json")
 	if err != nil {
@@ -330,7 +345,10 @@ func (s *accounts) AdmobAccountsMediationReportGenerate(ctx context.Context, req
 // AdmobAccountsNetworkReportGenerate - Generates an AdMob Network report based on the provided report specification. Returns result of a server-side streaming RPC. The result is returned in a sequence of responses.
 func (s *accounts) AdmobAccountsNetworkReportGenerate(ctx context.Context, request operations.AdmobAccountsNetworkReportGenerateRequest, security operations.AdmobAccountsNetworkReportGenerateSecurity) (*operations.AdmobAccountsNetworkReportGenerateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/networkReport:generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/networkReport:generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateNetworkReportRequest", "json")
 	if err != nil {

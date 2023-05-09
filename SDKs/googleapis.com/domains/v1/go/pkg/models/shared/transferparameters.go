@@ -16,12 +16,16 @@ const (
 	TransferParametersSupportedPrivacyEnumRedactedContactData       TransferParametersSupportedPrivacyEnum = "REDACTED_CONTACT_DATA"
 )
 
+func (e TransferParametersSupportedPrivacyEnum) ToPointer() *TransferParametersSupportedPrivacyEnum {
+	return &e
+}
+
 func (e *TransferParametersSupportedPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_PRIVACY_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA":
@@ -29,10 +33,10 @@ func (e *TransferParametersSupportedPrivacyEnum) UnmarshalJSON(data []byte) erro
 	case "PRIVATE_CONTACT_DATA":
 		fallthrough
 	case "REDACTED_CONTACT_DATA":
-		*e = TransferParametersSupportedPrivacyEnum(s)
+		*e = TransferParametersSupportedPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferParametersSupportedPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferParametersSupportedPrivacyEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	TransferParametersTransferLockStateEnumLocked                       TransferParametersTransferLockStateEnum = "LOCKED"
 )
 
+func (e TransferParametersTransferLockStateEnum) ToPointer() *TransferParametersTransferLockStateEnum {
+	return &e
+}
+
 func (e *TransferParametersTransferLockStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFER_LOCK_STATE_UNSPECIFIED":
 		fallthrough
 	case "UNLOCKED":
 		fallthrough
 	case "LOCKED":
-		*e = TransferParametersTransferLockStateEnum(s)
+		*e = TransferParametersTransferLockStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferParametersTransferLockStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferParametersTransferLockStateEnum: %v", v)
 	}
 }
 

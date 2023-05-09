@@ -16,17 +16,21 @@ const (
 	DescribeMonitorXAmzTargetEnumAmazonForecastDescribeMonitor DescribeMonitorXAmzTargetEnum = "AmazonForecast.DescribeMonitor"
 )
 
+func (e DescribeMonitorXAmzTargetEnum) ToPointer() *DescribeMonitorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeMonitorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DescribeMonitor":
-		*e = DescribeMonitorXAmzTargetEnum(s)
+		*e = DescribeMonitorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMonitorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMonitorXAmzTargetEnum: %v", v)
 	}
 }
 

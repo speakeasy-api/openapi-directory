@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MemcacheProjectsLocationsInstancesApplyParameters - `ApplyParameters` restarts the set of specified nodes in order to update them to the current set of parameters for the Memcached Instance.
 func (s *projects) MemcacheProjectsLocationsInstancesApplyParameters(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesApplyParametersRequest, security operations.MemcacheProjectsLocationsInstancesApplyParametersSecurity) (*operations.MemcacheProjectsLocationsInstancesApplyParametersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:applyParameters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:applyParameters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplyParametersRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesApplyParameters(ctx context
 // MemcacheProjectsLocationsInstancesApplySoftwareUpdate - Updates software on the selected nodes of the Instance.
 func (s *projects) MemcacheProjectsLocationsInstancesApplySoftwareUpdate(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesApplySoftwareUpdateRequest, security operations.MemcacheProjectsLocationsInstancesApplySoftwareUpdateSecurity) (*operations.MemcacheProjectsLocationsInstancesApplySoftwareUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{instance}:applySoftwareUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{instance}:applySoftwareUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplySoftwareUpdateRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesApplySoftwareUpdate(ctx con
 // MemcacheProjectsLocationsInstancesCreate - Creates a new Instance in a given location.
 func (s *projects) MemcacheProjectsLocationsInstancesCreate(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesCreateRequest, security operations.MemcacheProjectsLocationsInstancesCreateSecurity) (*operations.MemcacheProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesCreate(ctx context.Context,
 // MemcacheProjectsLocationsInstancesList - Lists Instances in a given location.
 func (s *projects) MemcacheProjectsLocationsInstancesList(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesListRequest, security operations.MemcacheProjectsLocationsInstancesListSecurity) (*operations.MemcacheProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesList(ctx context.Context, r
 // MemcacheProjectsLocationsInstancesPatch - Updates an existing Instance in a given project and location.
 func (s *projects) MemcacheProjectsLocationsInstancesPatch(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesPatchRequest, security operations.MemcacheProjectsLocationsInstancesPatchSecurity) (*operations.MemcacheProjectsLocationsInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesPatch(ctx context.Context, 
 // MemcacheProjectsLocationsInstancesRescheduleMaintenance - Performs the apply phase of the RescheduleMaintenance verb.
 func (s *projects) MemcacheProjectsLocationsInstancesRescheduleMaintenance(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesRescheduleMaintenanceRequest, security operations.MemcacheProjectsLocationsInstancesRescheduleMaintenanceSecurity) (*operations.MemcacheProjectsLocationsInstancesRescheduleMaintenanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{instance}:rescheduleMaintenance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{instance}:rescheduleMaintenance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RescheduleMaintenanceRequest", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesRescheduleMaintenance(ctx c
 // MemcacheProjectsLocationsInstancesUpdateParameters - Updates the defined Memcached parameters for an existing instance. This method only stages the parameters, it must be followed by `ApplyParameters` to apply the parameters to nodes of the Memcached instance.
 func (s *projects) MemcacheProjectsLocationsInstancesUpdateParameters(ctx context.Context, request operations.MemcacheProjectsLocationsInstancesUpdateParametersRequest, security operations.MemcacheProjectsLocationsInstancesUpdateParametersSecurity) (*operations.MemcacheProjectsLocationsInstancesUpdateParametersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:updateParameters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:updateParameters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateParametersRequestInput", "json")
 	if err != nil {
@@ -412,7 +433,10 @@ func (s *projects) MemcacheProjectsLocationsInstancesUpdateParameters(ctx contex
 // MemcacheProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) MemcacheProjectsLocationsList(ctx context.Context, request operations.MemcacheProjectsLocationsListRequest, security operations.MemcacheProjectsLocationsListSecurity) (*operations.MemcacheProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) MemcacheProjectsLocationsList(ctx context.Context, request op
 // MemcacheProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) MemcacheProjectsLocationsOperationsCancel(ctx context.Context, request operations.MemcacheProjectsLocationsOperationsCancelRequest, security operations.MemcacheProjectsLocationsOperationsCancelSecurity) (*operations.MemcacheProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) MemcacheProjectsLocationsOperationsCancel(ctx context.Context
 // MemcacheProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) MemcacheProjectsLocationsOperationsDelete(ctx context.Context, request operations.MemcacheProjectsLocationsOperationsDeleteRequest, security operations.MemcacheProjectsLocationsOperationsDeleteSecurity) (*operations.MemcacheProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) MemcacheProjectsLocationsOperationsDelete(ctx context.Context
 // MemcacheProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) MemcacheProjectsLocationsOperationsGet(ctx context.Context, request operations.MemcacheProjectsLocationsOperationsGetRequest, security operations.MemcacheProjectsLocationsOperationsGetSecurity) (*operations.MemcacheProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -608,10 +641,13 @@ func (s *projects) MemcacheProjectsLocationsOperationsGet(ctx context.Context, r
 	return res, nil
 }
 
-// MemcacheProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// MemcacheProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) MemcacheProjectsLocationsOperationsList(ctx context.Context, request operations.MemcacheProjectsLocationsOperationsListRequest, security operations.MemcacheProjectsLocationsOperationsListSecurity) (*operations.MemcacheProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

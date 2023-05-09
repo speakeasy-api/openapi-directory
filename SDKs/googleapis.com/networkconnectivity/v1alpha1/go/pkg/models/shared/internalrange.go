@@ -14,19 +14,23 @@ const (
 	InternalRangeOverlapsEnumOverlapRouteRange  InternalRangeOverlapsEnum = "OVERLAP_ROUTE_RANGE"
 )
 
+func (e InternalRangeOverlapsEnum) ToPointer() *InternalRangeOverlapsEnum {
+	return &e
+}
+
 func (e *InternalRangeOverlapsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERLAP_UNSPECIFIED":
 		fallthrough
 	case "OVERLAP_ROUTE_RANGE":
-		*e = InternalRangeOverlapsEnum(s)
+		*e = InternalRangeOverlapsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InternalRangeOverlapsEnum: %s", s)
+		return fmt.Errorf("invalid value for InternalRangeOverlapsEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	InternalRangePeeringEnumNotShared          InternalRangePeeringEnum = "NOT_SHARED"
 )
 
+func (e InternalRangePeeringEnum) ToPointer() *InternalRangePeeringEnum {
+	return &e
+}
+
 func (e *InternalRangePeeringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PEERING_UNSPECIFIED":
 		fallthrough
 	case "FOR_SELF":
@@ -53,10 +61,10 @@ func (e *InternalRangePeeringEnum) UnmarshalJSON(data []byte) error {
 	case "FOR_PEER":
 		fallthrough
 	case "NOT_SHARED":
-		*e = InternalRangePeeringEnum(s)
+		*e = InternalRangePeeringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InternalRangePeeringEnum: %s", s)
+		return fmt.Errorf("invalid value for InternalRangePeeringEnum: %v", v)
 	}
 }
 
@@ -69,21 +77,25 @@ const (
 	InternalRangeUsageEnumExternalToVpc    InternalRangeUsageEnum = "EXTERNAL_TO_VPC"
 )
 
+func (e InternalRangeUsageEnum) ToPointer() *InternalRangeUsageEnum {
+	return &e
+}
+
 func (e *InternalRangeUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USAGE_UNSPECIFIED":
 		fallthrough
 	case "FOR_VPC":
 		fallthrough
 	case "EXTERNAL_TO_VPC":
-		*e = InternalRangeUsageEnum(s)
+		*e = InternalRangeUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InternalRangeUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for InternalRangeUsageEnum: %v", v)
 	}
 }
 

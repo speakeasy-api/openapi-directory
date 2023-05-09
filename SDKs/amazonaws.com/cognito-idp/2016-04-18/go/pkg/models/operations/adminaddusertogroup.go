@@ -16,17 +16,21 @@ const (
 	AdminAddUserToGroupXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminAddUserToGroup AdminAddUserToGroupXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminAddUserToGroup"
 )
 
+func (e AdminAddUserToGroupXAmzTargetEnum) ToPointer() *AdminAddUserToGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminAddUserToGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminAddUserToGroup":
-		*e = AdminAddUserToGroupXAmzTargetEnum(s)
+		*e = AdminAddUserToGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminAddUserToGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminAddUserToGroupXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	DeviceServiceNameEnumS3OnDeviceService  DeviceServiceNameEnum = "S3_ON_DEVICE_SERVICE"
 )
 
+func (e DeviceServiceNameEnum) ToPointer() *DeviceServiceNameEnum {
+	return &e
+}
+
 func (e *DeviceServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NFS_ON_DEVICE_SERVICE":
 		fallthrough
 	case "S3_ON_DEVICE_SERVICE":
-		*e = DeviceServiceNameEnum(s)
+		*e = DeviceServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceServiceNameEnum: %v", v)
 	}
 }

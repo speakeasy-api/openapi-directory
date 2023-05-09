@@ -18,12 +18,16 @@ const (
 	TableCellPropertiesContentAlignmentEnumBottom                      TableCellPropertiesContentAlignmentEnum = "BOTTOM"
 )
 
+func (e TableCellPropertiesContentAlignmentEnum) ToPointer() *TableCellPropertiesContentAlignmentEnum {
+	return &e
+}
+
 func (e *TableCellPropertiesContentAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_ALIGNMENT_UNSUPPORTED":
@@ -33,10 +37,10 @@ func (e *TableCellPropertiesContentAlignmentEnum) UnmarshalJSON(data []byte) err
 	case "MIDDLE":
 		fallthrough
 	case "BOTTOM":
-		*e = TableCellPropertiesContentAlignmentEnum(s)
+		*e = TableCellPropertiesContentAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableCellPropertiesContentAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for TableCellPropertiesContentAlignmentEnum: %v", v)
 	}
 }
 

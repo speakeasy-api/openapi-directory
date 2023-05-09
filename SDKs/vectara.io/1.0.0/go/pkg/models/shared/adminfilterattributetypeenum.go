@@ -19,12 +19,16 @@ const (
 	AdminFilterAttributeTypeEnumFilterAttributeTypeTextList    AdminFilterAttributeTypeEnum = "FILTER_ATTRIBUTE_TYPE__TEXT_LIST"
 )
 
+func (e AdminFilterAttributeTypeEnum) ToPointer() *AdminFilterAttributeTypeEnum {
+	return &e
+}
+
 func (e *AdminFilterAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_ATTRIBUTE_TYPE__UNDEFINED":
 		fallthrough
 	case "FILTER_ATTRIBUTE_TYPE__INTEGER":
@@ -38,9 +42,9 @@ func (e *AdminFilterAttributeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FILTER_ATTRIBUTE_TYPE__TEXT":
 		fallthrough
 	case "FILTER_ATTRIBUTE_TYPE__TEXT_LIST":
-		*e = AdminFilterAttributeTypeEnum(s)
+		*e = AdminFilterAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminFilterAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminFilterAttributeTypeEnum: %v", v)
 	}
 }

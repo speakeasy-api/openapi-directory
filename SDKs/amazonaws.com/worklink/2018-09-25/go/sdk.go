@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon WorkLink is a cloud-based service that provides secure access to internal websites and web apps from iOS and Android phones. In a single step, your users, such as employees, can access internal websites as efficiently as they access any other public website. They enter a URL in their web browser, or choose a link to an internal website in an email. Amazon WorkLink authenticates the user's access and securely renders authorized internal web content in a secure rendering service in the AWS cloud. Amazon WorkLink doesn't download or store any internal web content on mobile devices.
 // https://docs.aws.amazon.com/worklink/ - Amazon Web Services documentation
 type SDK struct {
@@ -112,6 +127,8 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // AssociateDomain - Specifies a domain to be associated to Amazon WorkLink.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AssociateDomain(ctx context.Context, request operations.AssociateDomainRequest) (*operations.AssociateDomainResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/associateDomain"
@@ -228,6 +245,8 @@ func (s *SDK) AssociateDomain(ctx context.Context, request operations.AssociateD
 }
 
 // AssociateWebsiteAuthorizationProvider - Associates a website authorization provider with a specified fleet. This is used to authorize users against associated websites in the company network.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AssociateWebsiteAuthorizationProvider(ctx context.Context, request operations.AssociateWebsiteAuthorizationProviderRequest) (*operations.AssociateWebsiteAuthorizationProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/associateWebsiteAuthorizationProvider"
@@ -344,6 +363,8 @@ func (s *SDK) AssociateWebsiteAuthorizationProvider(ctx context.Context, request
 }
 
 // AssociateWebsiteCertificateAuthority - Imports the root certificate of a certificate authority (CA) used to obtain TLS certificates used by associated websites within the company network.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AssociateWebsiteCertificateAuthority(ctx context.Context, request operations.AssociateWebsiteCertificateAuthorityRequest) (*operations.AssociateWebsiteCertificateAuthorityResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/associateWebsiteCertificateAuthority"
@@ -460,6 +481,8 @@ func (s *SDK) AssociateWebsiteCertificateAuthority(ctx context.Context, request 
 }
 
 // CreateFleet - Creates a fleet. A fleet consists of resources and the configuration that delivers associated websites to authorized users who download and set up the Amazon WorkLink app.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetRequest) (*operations.CreateFleetResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createFleet"
@@ -576,6 +599,8 @@ func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetReq
 }
 
 // DeleteFleet - Deletes a fleet. Prevents users from accessing previously associated websites.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteFleet(ctx context.Context, request operations.DeleteFleetRequest) (*operations.DeleteFleetResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteFleet"
@@ -682,6 +707,8 @@ func (s *SDK) DeleteFleet(ctx context.Context, request operations.DeleteFleetReq
 }
 
 // DescribeAuditStreamConfiguration - Describes the configuration for delivering audit streams to the customer account.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeAuditStreamConfiguration(ctx context.Context, request operations.DescribeAuditStreamConfigurationRequest) (*operations.DescribeAuditStreamConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeAuditStreamConfiguration"
@@ -788,6 +815,8 @@ func (s *SDK) DescribeAuditStreamConfiguration(ctx context.Context, request oper
 }
 
 // DescribeCompanyNetworkConfiguration - Describes the networking configuration to access the internal websites associated with the specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeCompanyNetworkConfiguration(ctx context.Context, request operations.DescribeCompanyNetworkConfigurationRequest) (*operations.DescribeCompanyNetworkConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeCompanyNetworkConfiguration"
@@ -894,6 +923,8 @@ func (s *SDK) DescribeCompanyNetworkConfiguration(ctx context.Context, request o
 }
 
 // DescribeDevice - Provides information about a user's device.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDeviceRequest) (*operations.DescribeDeviceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeDevice"
@@ -1000,6 +1031,8 @@ func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDev
 }
 
 // DescribeDevicePolicyConfiguration - Describes the device policy configuration for the specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeDevicePolicyConfiguration(ctx context.Context, request operations.DescribeDevicePolicyConfigurationRequest) (*operations.DescribeDevicePolicyConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeDevicePolicyConfiguration"
@@ -1106,6 +1139,8 @@ func (s *SDK) DescribeDevicePolicyConfiguration(ctx context.Context, request ope
 }
 
 // DescribeDomain - Provides information about the domain.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeDomain(ctx context.Context, request operations.DescribeDomainRequest) (*operations.DescribeDomainResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeDomain"
@@ -1212,6 +1247,8 @@ func (s *SDK) DescribeDomain(ctx context.Context, request operations.DescribeDom
 }
 
 // DescribeFleetMetadata - Provides basic information for the specified fleet, excluding identity provider, networking, and device configuration details.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeFleetMetadata(ctx context.Context, request operations.DescribeFleetMetadataRequest) (*operations.DescribeFleetMetadataResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeFleetMetadata"
@@ -1318,6 +1355,8 @@ func (s *SDK) DescribeFleetMetadata(ctx context.Context, request operations.Desc
 }
 
 // DescribeIdentityProviderConfiguration - Describes the identity provider configuration of the specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeIdentityProviderConfiguration(ctx context.Context, request operations.DescribeIdentityProviderConfigurationRequest) (*operations.DescribeIdentityProviderConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeIdentityProviderConfiguration"
@@ -1424,6 +1463,8 @@ func (s *SDK) DescribeIdentityProviderConfiguration(ctx context.Context, request
 }
 
 // DescribeWebsiteCertificateAuthority - Provides information about the certificate authority.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeWebsiteCertificateAuthority(ctx context.Context, request operations.DescribeWebsiteCertificateAuthorityRequest) (*operations.DescribeWebsiteCertificateAuthorityResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeWebsiteCertificateAuthority"
@@ -1530,6 +1571,8 @@ func (s *SDK) DescribeWebsiteCertificateAuthority(ctx context.Context, request o
 }
 
 // DisassociateDomain - Disassociates a domain from Amazon WorkLink. End users lose the ability to access the domain with Amazon WorkLink.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DisassociateDomain(ctx context.Context, request operations.DisassociateDomainRequest) (*operations.DisassociateDomainResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disassociateDomain"
@@ -1636,6 +1679,8 @@ func (s *SDK) DisassociateDomain(ctx context.Context, request operations.Disasso
 }
 
 // DisassociateWebsiteAuthorizationProvider - Disassociates a website authorization provider from a specified fleet. After the disassociation, users can't load any associated websites that require this authorization provider.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DisassociateWebsiteAuthorizationProvider(ctx context.Context, request operations.DisassociateWebsiteAuthorizationProviderRequest) (*operations.DisassociateWebsiteAuthorizationProviderResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disassociateWebsiteAuthorizationProvider"
@@ -1752,6 +1797,8 @@ func (s *SDK) DisassociateWebsiteAuthorizationProvider(ctx context.Context, requ
 }
 
 // DisassociateWebsiteCertificateAuthority - Removes a certificate authority (CA).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DisassociateWebsiteCertificateAuthority(ctx context.Context, request operations.DisassociateWebsiteCertificateAuthorityRequest) (*operations.DisassociateWebsiteCertificateAuthorityResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/disassociateWebsiteCertificateAuthority"
@@ -1858,6 +1905,8 @@ func (s *SDK) DisassociateWebsiteCertificateAuthority(ctx context.Context, reque
 }
 
 // ListDevices - Retrieves a list of devices registered with the specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListDevices(ctx context.Context, request operations.ListDevicesRequest) (*operations.ListDevicesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listDevices"
@@ -1968,6 +2017,8 @@ func (s *SDK) ListDevices(ctx context.Context, request operations.ListDevicesReq
 }
 
 // ListDomains - Retrieves a list of domains associated to a specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListDomains(ctx context.Context, request operations.ListDomainsRequest) (*operations.ListDomainsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listDomains"
@@ -2078,6 +2129,8 @@ func (s *SDK) ListDomains(ctx context.Context, request operations.ListDomainsReq
 }
 
 // ListFleets - Retrieves a list of fleets for the current account and Region.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListFleets(ctx context.Context, request operations.ListFleetsRequest) (*operations.ListFleetsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listFleets"
@@ -2178,9 +2231,14 @@ func (s *SDK) ListFleets(ctx context.Context, request operations.ListFleetsReque
 }
 
 // ListTagsForResource - Retrieves a list of tags for the specified resource.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2234,6 +2292,8 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 }
 
 // ListWebsiteAuthorizationProviders - Retrieves a list of website authorization providers associated with a specified fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListWebsiteAuthorizationProviders(ctx context.Context, request operations.ListWebsiteAuthorizationProvidersRequest) (*operations.ListWebsiteAuthorizationProvidersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listWebsiteAuthorizationProviders"
@@ -2344,6 +2404,8 @@ func (s *SDK) ListWebsiteAuthorizationProviders(ctx context.Context, request ope
 }
 
 // ListWebsiteCertificateAuthorities - Retrieves a list of certificate authorities added for the current account and Region.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListWebsiteCertificateAuthorities(ctx context.Context, request operations.ListWebsiteCertificateAuthoritiesRequest) (*operations.ListWebsiteCertificateAuthoritiesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listWebsiteCertificateAuthorities"
@@ -2444,6 +2506,8 @@ func (s *SDK) ListWebsiteCertificateAuthorities(ctx context.Context, request ope
 }
 
 // RestoreDomainAccess - Moves a domain to ACTIVE status if it was in the INACTIVE status.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) RestoreDomainAccess(ctx context.Context, request operations.RestoreDomainAccessRequest) (*operations.RestoreDomainAccessResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/restoreDomainAccess"
@@ -2550,6 +2614,8 @@ func (s *SDK) RestoreDomainAccess(ctx context.Context, request operations.Restor
 }
 
 // RevokeDomainAccess - Moves a domain to INACTIVE status if it was in the ACTIVE status.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) RevokeDomainAccess(ctx context.Context, request operations.RevokeDomainAccessRequest) (*operations.RevokeDomainAccessResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/revokeDomainAccess"
@@ -2656,6 +2722,8 @@ func (s *SDK) RevokeDomainAccess(ctx context.Context, request operations.RevokeD
 }
 
 // SignOutUser - Signs the user out from all of their devices. The user can sign in again if they have valid credentials.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SignOutUser(ctx context.Context, request operations.SignOutUserRequest) (*operations.SignOutUserResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/signOutUser"
@@ -2762,9 +2830,14 @@ func (s *SDK) SignOutUser(ctx context.Context, request operations.SignOutUserReq
 }
 
 // TagResource - Adds or overwrites one or more tags for the specified resource, such as a fleet. Each tag consists of a key and an optional value. If a resource already has a tag with the same key, this operation updates its value.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2828,9 +2901,14 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 }
 
 // UntagResource - Removes one or more tags from the specified resource.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2888,6 +2966,8 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 }
 
 // UpdateAuditStreamConfiguration - Updates the audit stream configuration for the fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateAuditStreamConfiguration(ctx context.Context, request operations.UpdateAuditStreamConfigurationRequest) (*operations.UpdateAuditStreamConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateAuditStreamConfiguration"
@@ -2994,6 +3074,8 @@ func (s *SDK) UpdateAuditStreamConfiguration(ctx context.Context, request operat
 }
 
 // UpdateCompanyNetworkConfiguration - Updates the company network configuration for the fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateCompanyNetworkConfiguration(ctx context.Context, request operations.UpdateCompanyNetworkConfigurationRequest) (*operations.UpdateCompanyNetworkConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateCompanyNetworkConfiguration"
@@ -3100,6 +3182,8 @@ func (s *SDK) UpdateCompanyNetworkConfiguration(ctx context.Context, request ope
 }
 
 // UpdateDevicePolicyConfiguration - Updates the device policy configuration for the fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateDevicePolicyConfiguration(ctx context.Context, request operations.UpdateDevicePolicyConfigurationRequest) (*operations.UpdateDevicePolicyConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateDevicePolicyConfiguration"
@@ -3206,6 +3290,8 @@ func (s *SDK) UpdateDevicePolicyConfiguration(ctx context.Context, request opera
 }
 
 // UpdateDomainMetadata - Updates domain metadata, such as DisplayName.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateDomainMetadata(ctx context.Context, request operations.UpdateDomainMetadataRequest) (*operations.UpdateDomainMetadataResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateDomainMetadata"
@@ -3312,6 +3398,8 @@ func (s *SDK) UpdateDomainMetadata(ctx context.Context, request operations.Updat
 }
 
 // UpdateFleetMetadata - Updates fleet metadata, such as DisplayName.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateFleetMetadata(ctx context.Context, request operations.UpdateFleetMetadataRequest) (*operations.UpdateFleetMetadataResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/UpdateFleetMetadata"
@@ -3418,6 +3506,8 @@ func (s *SDK) UpdateFleetMetadata(ctx context.Context, request operations.Update
 }
 
 // UpdateIdentityProviderConfiguration - Updates the identity provider configuration for the fleet.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateIdentityProviderConfiguration(ctx context.Context, request operations.UpdateIdentityProviderConfigurationRequest) (*operations.UpdateIdentityProviderConfigurationResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/updateIdentityProviderConfiguration"

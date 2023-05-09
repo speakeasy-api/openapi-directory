@@ -34,7 +34,10 @@ func newPosts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BloggerPostsDelete - Deletes a post by blog id and post id.
 func (s *posts) BloggerPostsDelete(ctx context.Context, request operations.BloggerPostsDeleteRequest, security operations.BloggerPostsDeleteSecurity) (*operations.BloggerPostsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *posts) BloggerPostsDelete(ctx context.Context, request operations.Blogg
 // BloggerPostsGet - Gets a post by blog id and post id
 func (s *posts) BloggerPostsGet(ctx context.Context, request operations.BloggerPostsGetRequest, security operations.BloggerPostsGetSecurity) (*operations.BloggerPostsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *posts) BloggerPostsGet(ctx context.Context, request operations.BloggerP
 // BloggerPostsGetByPath - Gets a post by path.
 func (s *posts) BloggerPostsGetByPath(ctx context.Context, request operations.BloggerPostsGetByPathRequest, security operations.BloggerPostsGetByPathSecurity) (*operations.BloggerPostsGetByPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/bypath", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/bypath", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *posts) BloggerPostsGetByPath(ctx context.Context, request operations.Bl
 // BloggerPostsInsert - Inserts a post.
 func (s *posts) BloggerPostsInsert(ctx context.Context, request operations.BloggerPostsInsertRequest, security operations.BloggerPostsInsertSecurity) (*operations.BloggerPostsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Post", "json")
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *posts) BloggerPostsInsert(ctx context.Context, request operations.Blogg
 // BloggerPostsList - Lists posts.
 func (s *posts) BloggerPostsList(ctx context.Context, request operations.BloggerPostsListRequest, security operations.BloggerPostsListSecurity) (*operations.BloggerPostsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +287,10 @@ func (s *posts) BloggerPostsList(ctx context.Context, request operations.Blogger
 // BloggerPostsPatch - Patches a post.
 func (s *posts) BloggerPostsPatch(ctx context.Context, request operations.BloggerPostsPatchRequest, security operations.BloggerPostsPatchSecurity) (*operations.BloggerPostsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Post", "json")
 	if err != nil {
@@ -327,7 +345,10 @@ func (s *posts) BloggerPostsPatch(ctx context.Context, request operations.Blogge
 // BloggerPostsPublish - Publishes a post.
 func (s *posts) BloggerPostsPublish(ctx context.Context, request operations.BloggerPostsPublishRequest, security operations.BloggerPostsPublishSecurity) (*operations.BloggerPostsPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -375,7 +396,10 @@ func (s *posts) BloggerPostsPublish(ctx context.Context, request operations.Blog
 // BloggerPostsRevert - Reverts a published or scheduled post to draft state.
 func (s *posts) BloggerPostsRevert(ctx context.Context, request operations.BloggerPostsRevertRequest, security operations.BloggerPostsRevertSecurity) (*operations.BloggerPostsRevertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/revert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/revert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -423,7 +447,10 @@ func (s *posts) BloggerPostsRevert(ctx context.Context, request operations.Blogg
 // BloggerPostsSearch - Searches for posts matching given query terms in the specified blog.
 func (s *posts) BloggerPostsSearch(ctx context.Context, request operations.BloggerPostsSearchRequest, security operations.BloggerPostsSearchSecurity) (*operations.BloggerPostsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -471,7 +498,10 @@ func (s *posts) BloggerPostsSearch(ctx context.Context, request operations.Blogg
 // BloggerPostsUpdate - Updates a post by blog id and post id.
 func (s *posts) BloggerPostsUpdate(ctx context.Context, request operations.BloggerPostsUpdateRequest, security operations.BloggerPostsUpdateSecurity) (*operations.BloggerPostsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Post", "json")
 	if err != nil {

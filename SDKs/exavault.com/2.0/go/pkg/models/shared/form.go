@@ -14,17 +14,21 @@ const (
 	FormRelationshipsShareDataTypeEnumShare FormRelationshipsShareDataTypeEnum = "share"
 )
 
+func (e FormRelationshipsShareDataTypeEnum) ToPointer() *FormRelationshipsShareDataTypeEnum {
+	return &e
+}
+
 func (e *FormRelationshipsShareDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share":
-		*e = FormRelationshipsShareDataTypeEnum(s)
+		*e = FormRelationshipsShareDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormRelationshipsShareDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FormRelationshipsShareDataTypeEnum: %v", v)
 	}
 }
 

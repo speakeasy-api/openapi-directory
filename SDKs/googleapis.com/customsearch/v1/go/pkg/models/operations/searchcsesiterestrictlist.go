@@ -20,12 +20,16 @@ const (
 	SearchCseSiterestrictListImgColorTypeEnumTrans                 SearchCseSiterestrictListImgColorTypeEnum = "trans"
 )
 
+func (e SearchCseSiterestrictListImgColorTypeEnum) ToPointer() *SearchCseSiterestrictListImgColorTypeEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListImgColorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgColorTypeUndefined":
 		fallthrough
 	case "mono":
@@ -35,10 +39,10 @@ func (e *SearchCseSiterestrictListImgColorTypeEnum) UnmarshalJSON(data []byte) e
 	case "color":
 		fallthrough
 	case "trans":
-		*e = SearchCseSiterestrictListImgColorTypeEnum(s)
+		*e = SearchCseSiterestrictListImgColorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgColorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgColorTypeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	SearchCseSiterestrictListImgDominantColorEnumYellow                    SearchCseSiterestrictListImgDominantColorEnum = "yellow"
 )
 
+func (e SearchCseSiterestrictListImgDominantColorEnum) ToPointer() *SearchCseSiterestrictListImgDominantColorEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListImgDominantColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgDominantColorUndefined":
 		fallthrough
 	case "black":
@@ -92,10 +100,10 @@ func (e *SearchCseSiterestrictListImgDominantColorEnum) UnmarshalJSON(data []byt
 	case "white":
 		fallthrough
 	case "yellow":
-		*e = SearchCseSiterestrictListImgDominantColorEnum(s)
+		*e = SearchCseSiterestrictListImgDominantColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgDominantColorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgDominantColorEnum: %v", v)
 	}
 }
 
@@ -113,12 +121,16 @@ const (
 	SearchCseSiterestrictListImgSizeEnumXxlarge          SearchCseSiterestrictListImgSizeEnum = "XXLARGE"
 )
 
+func (e SearchCseSiterestrictListImgSizeEnum) ToPointer() *SearchCseSiterestrictListImgSizeEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListImgSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgSizeUndefined":
 		fallthrough
 	case "HUGE":
@@ -134,10 +146,10 @@ func (e *SearchCseSiterestrictListImgSizeEnum) UnmarshalJSON(data []byte) error 
 	case "XLARGE":
 		fallthrough
 	case "XXLARGE":
-		*e = SearchCseSiterestrictListImgSizeEnum(s)
+		*e = SearchCseSiterestrictListImgSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgSizeEnum: %v", v)
 	}
 }
 
@@ -154,12 +166,16 @@ const (
 	SearchCseSiterestrictListImgTypeEnumAnimated         SearchCseSiterestrictListImgTypeEnum = "animated"
 )
 
+func (e SearchCseSiterestrictListImgTypeEnum) ToPointer() *SearchCseSiterestrictListImgTypeEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListImgTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgTypeUndefined":
 		fallthrough
 	case "clipart":
@@ -173,10 +189,10 @@ func (e *SearchCseSiterestrictListImgTypeEnum) UnmarshalJSON(data []byte) error 
 	case "photo":
 		fallthrough
 	case "animated":
-		*e = SearchCseSiterestrictListImgTypeEnum(s)
+		*e = SearchCseSiterestrictListImgTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListImgTypeEnum: %v", v)
 	}
 }
 
@@ -191,12 +207,16 @@ const (
 	SearchCseSiterestrictListSafeEnumOff           SearchCseSiterestrictListSafeEnum = "off"
 )
 
+func (e SearchCseSiterestrictListSafeEnum) ToPointer() *SearchCseSiterestrictListSafeEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListSafeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "safeUndefined":
 		fallthrough
 	case "active":
@@ -206,10 +226,10 @@ func (e *SearchCseSiterestrictListSafeEnum) UnmarshalJSON(data []byte) error {
 	case "medium":
 		fallthrough
 	case "off":
-		*e = SearchCseSiterestrictListSafeEnum(s)
+		*e = SearchCseSiterestrictListSafeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListSafeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListSafeEnum: %v", v)
 	}
 }
 
@@ -221,19 +241,23 @@ const (
 	SearchCseSiterestrictListSearchTypeEnumImage               SearchCseSiterestrictListSearchTypeEnum = "image"
 )
 
+func (e SearchCseSiterestrictListSearchTypeEnum) ToPointer() *SearchCseSiterestrictListSearchTypeEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "searchTypeUndefined":
 		fallthrough
 	case "image":
-		*e = SearchCseSiterestrictListSearchTypeEnum(s)
+		*e = SearchCseSiterestrictListSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListSearchTypeEnum: %v", v)
 	}
 }
 
@@ -246,21 +270,25 @@ const (
 	SearchCseSiterestrictListSiteSearchFilterEnumI                         SearchCseSiterestrictListSiteSearchFilterEnum = "i"
 )
 
+func (e SearchCseSiterestrictListSiteSearchFilterEnum) ToPointer() *SearchCseSiterestrictListSiteSearchFilterEnum {
+	return &e
+}
+
 func (e *SearchCseSiterestrictListSiteSearchFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "siteSearchFilterUndefined":
 		fallthrough
 	case "e":
 		fallthrough
 	case "i":
-		*e = SearchCseSiterestrictListSiteSearchFilterEnum(s)
+		*e = SearchCseSiterestrictListSiteSearchFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseSiterestrictListSiteSearchFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseSiterestrictListSiteSearchFilterEnum: %v", v)
 	}
 }
 

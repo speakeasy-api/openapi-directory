@@ -14,18 +14,22 @@ const (
 	StorageTypeEnumMultiLayerStorage      StorageTypeEnum = "MULTI_LAYER_STORAGE"
 )
 
+func (e StorageTypeEnum) ToPointer() *StorageTypeEnum {
+	return &e
+}
+
 func (e *StorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SITEWISE_DEFAULT_STORAGE":
 		fallthrough
 	case "MULTI_LAYER_STORAGE":
-		*e = StorageTypeEnum(s)
+		*e = StorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageTypeEnum: %v", v)
 	}
 }

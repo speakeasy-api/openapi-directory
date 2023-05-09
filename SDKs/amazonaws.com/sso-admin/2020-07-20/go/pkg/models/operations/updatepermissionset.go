@@ -16,17 +16,21 @@ const (
 	UpdatePermissionSetXAmzTargetEnumSwbExternalServiceUpdatePermissionSet UpdatePermissionSetXAmzTargetEnum = "SWBExternalService.UpdatePermissionSet"
 )
 
+func (e UpdatePermissionSetXAmzTargetEnum) ToPointer() *UpdatePermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.UpdatePermissionSet":
-		*e = UpdatePermissionSetXAmzTargetEnum(s)
+		*e = UpdatePermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

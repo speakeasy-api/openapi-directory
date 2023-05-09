@@ -16,17 +16,21 @@ const (
 	DeleteLocationXAmzTargetEnumGameLiftDeleteLocation DeleteLocationXAmzTargetEnum = "GameLift.DeleteLocation"
 )
 
+func (e DeleteLocationXAmzTargetEnum) ToPointer() *DeleteLocationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLocationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DeleteLocation":
-		*e = DeleteLocationXAmzTargetEnum(s)
+		*e = DeleteLocationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLocationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLocationXAmzTargetEnum: %v", v)
 	}
 }
 

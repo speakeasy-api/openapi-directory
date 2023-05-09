@@ -17,12 +17,16 @@ const (
 	IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnumDependentOnDayOfWeek IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum) ToPointer() *IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum {
+	return &e
+}
+
 func (e *IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum) Unmars
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum(s)
+		*e = IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreasedFoodSafetyDiningAreasAdditionalSanitationExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	IncreasedFoodSafetyDisposableFlatwareExceptionEnumDependentOnDayOfWeek IncreasedFoodSafetyDisposableFlatwareExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e IncreasedFoodSafetyDisposableFlatwareExceptionEnum) ToPointer() *IncreasedFoodSafetyDisposableFlatwareExceptionEnum {
+	return &e
+}
+
 func (e *IncreasedFoodSafetyDisposableFlatwareExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *IncreasedFoodSafetyDisposableFlatwareExceptionEnum) UnmarshalJSON(data 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = IncreasedFoodSafetyDisposableFlatwareExceptionEnum(s)
+		*e = IncreasedFoodSafetyDisposableFlatwareExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreasedFoodSafetyDisposableFlatwareExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreasedFoodSafetyDisposableFlatwareExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnumDependentOnDayOfWeek IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum) ToPointer() *IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum {
+	return &e
+}
+
 func (e *IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEn
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum(s)
+		*e = IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreasedFoodSafetyFoodPreparationAndServingAdditionalSafetyExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	IncreasedFoodSafetyIndividualPackagedMealsExceptionEnumDependentOnDayOfWeek IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum) ToPointer() *IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum {
+	return &e
+}
+
 func (e *IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum) UnmarshalJSON(
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum(s)
+		*e = IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreasedFoodSafetyIndividualPackagedMealsExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	IncreasedFoodSafetySingleUseFoodMenusExceptionEnumDependentOnDayOfWeek IncreasedFoodSafetySingleUseFoodMenusExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e IncreasedFoodSafetySingleUseFoodMenusExceptionEnum) ToPointer() *IncreasedFoodSafetySingleUseFoodMenusExceptionEnum {
+	return &e
+}
+
 func (e *IncreasedFoodSafetySingleUseFoodMenusExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *IncreasedFoodSafetySingleUseFoodMenusExceptionEnum) UnmarshalJSON(data 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = IncreasedFoodSafetySingleUseFoodMenusExceptionEnum(s)
+		*e = IncreasedFoodSafetySingleUseFoodMenusExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreasedFoodSafetySingleUseFoodMenusExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreasedFoodSafetySingleUseFoodMenusExceptionEnum: %v", v)
 	}
 }
 

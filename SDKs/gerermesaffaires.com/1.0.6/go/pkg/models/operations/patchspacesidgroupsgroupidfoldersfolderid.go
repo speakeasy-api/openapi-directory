@@ -15,19 +15,23 @@ const (
 	PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnumWrite PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum = "write"
 )
 
+func (e PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum) ToPointer() *PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum(s)
+		*e = PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDGroupsGroupIDFoldersFolderIDRequestBodyRightEnum: %v", v)
 	}
 }
 

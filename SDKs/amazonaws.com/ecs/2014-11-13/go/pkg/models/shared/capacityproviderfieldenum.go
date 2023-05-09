@@ -13,16 +13,20 @@ const (
 	CapacityProviderFieldEnumTags CapacityProviderFieldEnum = "TAGS"
 )
 
+func (e CapacityProviderFieldEnum) ToPointer() *CapacityProviderFieldEnum {
+	return &e
+}
+
 func (e *CapacityProviderFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAGS":
-		*e = CapacityProviderFieldEnum(s)
+		*e = CapacityProviderFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityProviderFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityProviderFieldEnum: %v", v)
 	}
 }

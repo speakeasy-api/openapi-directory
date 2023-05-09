@@ -16,17 +16,21 @@ const (
 	CreateNamespaceXAmzTargetEnumRedshiftServerlessCreateNamespace CreateNamespaceXAmzTargetEnum = "RedshiftServerless.CreateNamespace"
 )
 
+func (e CreateNamespaceXAmzTargetEnum) ToPointer() *CreateNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.CreateNamespace":
-		*e = CreateNamespaceXAmzTargetEnum(s)
+		*e = CreateNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

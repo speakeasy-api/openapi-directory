@@ -17,12 +17,16 @@ const (
 	LocationFilterTelecommutePreferenceEnumTelecommuteJobsExcluded          LocationFilterTelecommutePreferenceEnum = "TELECOMMUTE_JOBS_EXCLUDED"
 )
 
+func (e LocationFilterTelecommutePreferenceEnum) ToPointer() *LocationFilterTelecommutePreferenceEnum {
+	return &e
+}
+
 func (e *LocationFilterTelecommutePreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TELECOMMUTE_PREFERENCE_UNSPECIFIED":
 		fallthrough
 	case "TELECOMMUTE_EXCLUDED":
@@ -30,10 +34,10 @@ func (e *LocationFilterTelecommutePreferenceEnum) UnmarshalJSON(data []byte) err
 	case "TELECOMMUTE_ALLOWED":
 		fallthrough
 	case "TELECOMMUTE_JOBS_EXCLUDED":
-		*e = LocationFilterTelecommutePreferenceEnum(s)
+		*e = LocationFilterTelecommutePreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationFilterTelecommutePreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationFilterTelecommutePreferenceEnum: %v", v)
 	}
 }
 

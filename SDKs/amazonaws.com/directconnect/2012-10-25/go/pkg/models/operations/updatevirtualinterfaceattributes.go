@@ -16,17 +16,21 @@ const (
 	UpdateVirtualInterfaceAttributesXAmzTargetEnumOvertureServiceUpdateVirtualInterfaceAttributes UpdateVirtualInterfaceAttributesXAmzTargetEnum = "OvertureService.UpdateVirtualInterfaceAttributes"
 )
 
+func (e UpdateVirtualInterfaceAttributesXAmzTargetEnum) ToPointer() *UpdateVirtualInterfaceAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateVirtualInterfaceAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.UpdateVirtualInterfaceAttributes":
-		*e = UpdateVirtualInterfaceAttributesXAmzTargetEnum(s)
+		*e = UpdateVirtualInterfaceAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateVirtualInterfaceAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateVirtualInterfaceAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

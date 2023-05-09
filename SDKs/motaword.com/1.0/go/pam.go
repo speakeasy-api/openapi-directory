@@ -36,7 +36,10 @@ func newPam(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Get the Pam  profile of a client for this client ID
 func (s *pam) GetClientProfileForPam(ctx context.Context, request operations.GetClientProfileForPamRequest) (*operations.GetClientProfileForPamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pam/profiles/client/{clientId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pam/profiles/client/{clientId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *pam) GetClientProfileForPam(ctx context.Context, request operations.Get
 // Get completion report data of a project
 func (s *pam) GetProjectCompletionReportForPam(ctx context.Context, request operations.GetProjectCompletionReportForPamRequest) (*operations.GetProjectCompletionReportForPamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pam/projects/{projectId}/completion-report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pam/projects/{projectId}/completion-report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

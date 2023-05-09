@@ -16,17 +16,21 @@ const (
 	AssociateServiceActionWithProvisioningArtifactXAmzTargetEnumAws242ServiceCatalogServiceAssociateServiceActionWithProvisioningArtifact AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum = "AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact"
 )
 
+func (e AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum) ToPointer() *AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.AssociateServiceActionWithProvisioningArtifact":
-		*e = AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum(s)
+		*e = AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateServiceActionWithProvisioningArtifactXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -48,6 +52,8 @@ type AssociateServiceActionWithProvisioningArtifactResponse struct {
 	ContentType                                          string
 	// DuplicateResourceException
 	DuplicateResourceException interface{}
+	// InvalidParametersException
+	InvalidParametersException interface{}
 	// LimitExceededException
 	LimitExceededException interface{}
 	// ResourceNotFoundException

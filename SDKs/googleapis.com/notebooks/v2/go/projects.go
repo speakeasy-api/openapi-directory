@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // NotebooksProjectsLocationsInstancesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) NotebooksProjectsLocationsInstancesGetIamPolicy(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesGetIamPolicyRequest, security operations.NotebooksProjectsLocationsInstancesGetIamPolicySecurity) (*operations.NotebooksProjectsLocationsInstancesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesGetIamPolicy(ctx context.C
 // NotebooksProjectsLocationsInstancesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) NotebooksProjectsLocationsInstancesSetIamPolicy(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesSetIamPolicyRequest, security operations.NotebooksProjectsLocationsInstancesSetIamPolicySecurity) (*operations.NotebooksProjectsLocationsInstancesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesSetIamPolicy(ctx context.C
 // NotebooksProjectsLocationsInstancesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) NotebooksProjectsLocationsInstancesTestIamPermissions(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesTestIamPermissionsRequest, security operations.NotebooksProjectsLocationsInstancesTestIamPermissionsSecurity) (*operations.NotebooksProjectsLocationsInstancesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesTestIamPermissions(ctx con
 // NotebooksProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) NotebooksProjectsLocationsList(ctx context.Context, request operations.NotebooksProjectsLocationsListRequest, security operations.NotebooksProjectsLocationsListSecurity) (*operations.NotebooksProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) NotebooksProjectsLocationsList(ctx context.Context, request o
 // NotebooksProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) NotebooksProjectsLocationsOperationsCancel(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsCancelRequest, security operations.NotebooksProjectsLocationsOperationsCancelSecurity) (*operations.NotebooksProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) NotebooksProjectsLocationsOperationsCancel(ctx context.Contex
 // NotebooksProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) NotebooksProjectsLocationsOperationsDelete(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsDeleteRequest, security operations.NotebooksProjectsLocationsOperationsDeleteSecurity) (*operations.NotebooksProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) NotebooksProjectsLocationsOperationsDelete(ctx context.Contex
 // NotebooksProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) NotebooksProjectsLocationsOperationsGet(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsGetRequest, security operations.NotebooksProjectsLocationsOperationsGetSecurity) (*operations.NotebooksProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) NotebooksProjectsLocationsOperationsGet(ctx context.Context, 
 // NotebooksProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) NotebooksProjectsLocationsOperationsList(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsListRequest, security operations.NotebooksProjectsLocationsOperationsListSecurity) (*operations.NotebooksProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

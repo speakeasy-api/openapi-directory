@@ -16,17 +16,21 @@ const (
 	GetSearchSuggestionsXAmzTargetEnumSageMakerGetSearchSuggestions GetSearchSuggestionsXAmzTargetEnum = "SageMaker.GetSearchSuggestions"
 )
 
+func (e GetSearchSuggestionsXAmzTargetEnum) ToPointer() *GetSearchSuggestionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSearchSuggestionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.GetSearchSuggestions":
-		*e = GetSearchSuggestionsXAmzTargetEnum(s)
+		*e = GetSearchSuggestionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSearchSuggestionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSearchSuggestionsXAmzTargetEnum: %v", v)
 	}
 }
 

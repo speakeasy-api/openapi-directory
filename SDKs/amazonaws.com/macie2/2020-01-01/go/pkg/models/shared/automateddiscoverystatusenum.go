@@ -15,18 +15,22 @@ const (
 	AutomatedDiscoveryStatusEnumDisabled AutomatedDiscoveryStatusEnum = "DISABLED"
 )
 
+func (e AutomatedDiscoveryStatusEnum) ToPointer() *AutomatedDiscoveryStatusEnum {
+	return &e
+}
+
 func (e *AutomatedDiscoveryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = AutomatedDiscoveryStatusEnum(s)
+		*e = AutomatedDiscoveryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomatedDiscoveryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomatedDiscoveryStatusEnum: %v", v)
 	}
 }

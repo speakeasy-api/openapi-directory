@@ -16,17 +16,21 @@ const (
 	SendTestEventNotificationXAmzTargetEnumMTurkRequesterServiceV20170117SendTestEventNotification SendTestEventNotificationXAmzTargetEnum = "MTurkRequesterServiceV20170117.SendTestEventNotification"
 )
 
+func (e SendTestEventNotificationXAmzTargetEnum) ToPointer() *SendTestEventNotificationXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendTestEventNotificationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.SendTestEventNotification":
-		*e = SendTestEventNotificationXAmzTargetEnum(s)
+		*e = SendTestEventNotificationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendTestEventNotificationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendTestEventNotificationXAmzTargetEnum: %v", v)
 	}
 }
 

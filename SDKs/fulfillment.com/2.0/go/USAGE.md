@@ -2,42 +2,39 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAccountingRequest{
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccounting(ctx, operations.GetAccountingRequest{
         FromDate: "corrupti",
         Hydrate: []GetAccountingHydrateEnum{
-            "items",
-            "items",
-            "items",
+            operations.GetAccountingHydrateEnumItems,
+            operations.GetAccountingHydrateEnumItems,
+            operations.GetAccountingHydrateEnumItems,
         },
-        Limit: 715190,
+        Limit: sdk.Int64(715190),
         OrderIds: []int64{
             602763,
             857946,
             544883,
             847252,
         },
-        Page: 423655,
+        Page: sdk.Int64(423655),
         ToDate: "error",
         WarehouseIds: []int64{
             384382,
             437587,
             297534,
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounting.GetAccounting(ctx, req, operations.GetAccountingSecurity{
+    }, operations.GetAccountingSecurity{
         FdcAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

@@ -21,12 +21,16 @@ const (
 	BorderStyleEnumDouble           BorderStyleEnum = "DOUBLE"
 )
 
+func (e BorderStyleEnum) ToPointer() *BorderStyleEnum {
+	return &e
+}
+
 func (e *BorderStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STYLE_UNSPECIFIED":
 		fallthrough
 	case "DOTTED":
@@ -42,10 +46,10 @@ func (e *BorderStyleEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "DOUBLE":
-		*e = BorderStyleEnum(s)
+		*e = BorderStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BorderStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for BorderStyleEnum: %v", v)
 	}
 }
 

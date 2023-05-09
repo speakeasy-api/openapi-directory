@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetNumbersBaseRequest{
-        From: 548814,
+    ctx := context.Background()
+    res, err := s.BaseConversion.GetNumbersBase(ctx, operations.GetNumbersBaseRequest{
+        From: sdk.Int64(548814),
         Number: 592845,
         To: 715190,
-    }
-
-    ctx := context.Background()
-    res, err := s.BaseConversion.GetNumbersBase(ctx, req, operations.GetNumbersBaseSecurity{
+    }, operations.GetNumbersBaseSecurity{
         XMathtoolsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

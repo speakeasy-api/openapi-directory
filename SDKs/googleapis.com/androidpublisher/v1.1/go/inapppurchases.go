@@ -34,7 +34,10 @@ func newInapppurchases(defaultClient, securityClient HTTPClient, serverURL, lang
 // AndroidpublisherInapppurchasesGet - Checks the purchase and consumption status of an inapp item.
 func (s *inapppurchases) AndroidpublisherInapppurchasesGet(ctx context.Context, request operations.AndroidpublisherInapppurchasesGetRequest, security operations.AndroidpublisherInapppurchasesGetSecurity) (*operations.AndroidpublisherInapppurchasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inapp/{productId}/purchases/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inapp/{productId}/purchases/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

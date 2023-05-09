@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIV1ScansRequest{
-        Name: "corrupti",
-        PerPage: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Scans.GetAPIV1Scans(ctx, req, operations.GetAPIV1ScansSecurity{
+    res, err := s.Scans.GetAPIV1Scans(ctx, operations.GetAPIV1ScansRequest{
+        Name: sdk.String("Terrence Rau"),
+        PerPage: sdk.String("nulla"),
+    }, operations.GetAPIV1ScansSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

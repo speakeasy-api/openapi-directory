@@ -17,21 +17,25 @@ const (
 	StatusUpdateCompactResourceSubtypeEnumGoalStatusUpdate      StatusUpdateCompactResourceSubtypeEnum = "goal_status_update"
 )
 
+func (e StatusUpdateCompactResourceSubtypeEnum) ToPointer() *StatusUpdateCompactResourceSubtypeEnum {
+	return &e
+}
+
 func (e *StatusUpdateCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "project_status_update":
 		fallthrough
 	case "portfolio_status_update":
 		fallthrough
 	case "goal_status_update":
-		*e = StatusUpdateCompactResourceSubtypeEnum(s)
+		*e = StatusUpdateCompactResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusUpdateCompactResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusUpdateCompactResourceSubtypeEnum: %v", v)
 	}
 }
 

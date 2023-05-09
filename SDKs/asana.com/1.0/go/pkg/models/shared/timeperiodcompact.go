@@ -20,12 +20,16 @@ const (
 	TimePeriodCompactPeriodEnumQ4 TimePeriodCompactPeriodEnum = "Q4"
 )
 
+func (e TimePeriodCompactPeriodEnum) ToPointer() *TimePeriodCompactPeriodEnum {
+	return &e
+}
+
 func (e *TimePeriodCompactPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FY":
 		fallthrough
 	case "H1":
@@ -39,10 +43,10 @@ func (e *TimePeriodCompactPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "Q3":
 		fallthrough
 	case "Q4":
-		*e = TimePeriodCompactPeriodEnum(s)
+		*e = TimePeriodCompactPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimePeriodCompactPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for TimePeriodCompactPeriodEnum: %v", v)
 	}
 }
 

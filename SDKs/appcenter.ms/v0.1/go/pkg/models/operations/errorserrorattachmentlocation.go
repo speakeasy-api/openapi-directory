@@ -35,12 +35,16 @@ const (
 	ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorAttachmentLocationDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

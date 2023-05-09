@@ -22,12 +22,16 @@ const (
 	ActionCategoryEnumOther                  ActionCategoryEnum = "OTHER"
 )
 
+func (e ActionCategoryEnum) ToPointer() *ActionCategoryEnum {
+	return &e
+}
+
 func (e *ActionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISASTER_RECOVERY":
 		fallthrough
 	case "OPERATING_SYSTEM":
@@ -47,9 +51,9 @@ func (e *ActionCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "BACKUP":
 		fallthrough
 	case "OTHER":
-		*e = ActionCategoryEnum(s)
+		*e = ActionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionCategoryEnum: %v", v)
 	}
 }

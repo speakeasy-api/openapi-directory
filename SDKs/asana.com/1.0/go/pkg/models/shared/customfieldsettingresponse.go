@@ -149,12 +149,16 @@ const (
 	CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnumWordCount                  CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum = "word_count"
 )
 
+func (e CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum) ToPointer() *CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum {
+	return &e
+}
+
 func (e *CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a_v_requirements":
 		fallthrough
 	case "account_name":
@@ -426,10 +430,10 @@ func (e *CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum) UnmarshalJS
 	case "vendor_type":
 		fallthrough
 	case "word_count":
-		*e = CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum(s)
+		*e = CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum: %v", v)
 	}
 }
 
@@ -441,19 +445,23 @@ const (
 	CustomFieldSettingResponseCustomFieldCustomLabelPositionEnumSuffix CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum = "suffix"
 )
 
+func (e CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum) ToPointer() *CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum {
+	return &e
+}
+
 func (e *CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "suffix":
-		*e = CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum(s)
+		*e = CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum: %v", v)
 	}
 }
 
@@ -500,12 +508,16 @@ const (
 	CustomFieldSettingResponseCustomFieldFormatEnumNone       CustomFieldSettingResponseCustomFieldFormatEnum = "none"
 )
 
+func (e CustomFieldSettingResponseCustomFieldFormatEnum) ToPointer() *CustomFieldSettingResponseCustomFieldFormatEnum {
+	return &e
+}
+
 func (e *CustomFieldSettingResponseCustomFieldFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "currency":
 		fallthrough
 	case "identifier":
@@ -515,10 +527,10 @@ func (e *CustomFieldSettingResponseCustomFieldFormatEnum) UnmarshalJSON(data []b
 	case "custom":
 		fallthrough
 	case "none":
-		*e = CustomFieldSettingResponseCustomFieldFormatEnum(s)
+		*e = CustomFieldSettingResponseCustomFieldFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldFormatEnum: %v", v)
 	}
 }
 
@@ -534,12 +546,16 @@ const (
 	CustomFieldSettingResponseCustomFieldResourceSubtypeEnumPeople    CustomFieldSettingResponseCustomFieldResourceSubtypeEnum = "people"
 )
 
+func (e CustomFieldSettingResponseCustomFieldResourceSubtypeEnum) ToPointer() *CustomFieldSettingResponseCustomFieldResourceSubtypeEnum {
+	return &e
+}
+
 func (e *CustomFieldSettingResponseCustomFieldResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -551,10 +567,10 @@ func (e *CustomFieldSettingResponseCustomFieldResourceSubtypeEnum) UnmarshalJSON
 	case "date":
 		fallthrough
 	case "people":
-		*e = CustomFieldSettingResponseCustomFieldResourceSubtypeEnum(s)
+		*e = CustomFieldSettingResponseCustomFieldResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -568,12 +584,16 @@ const (
 	CustomFieldSettingResponseCustomFieldTypeEnumNumber    CustomFieldSettingResponseCustomFieldTypeEnum = "number"
 )
 
+func (e CustomFieldSettingResponseCustomFieldTypeEnum) ToPointer() *CustomFieldSettingResponseCustomFieldTypeEnum {
+	return &e
+}
+
 func (e *CustomFieldSettingResponseCustomFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -581,10 +601,10 @@ func (e *CustomFieldSettingResponseCustomFieldTypeEnum) UnmarshalJSON(data []byt
 	case "multi_enum":
 		fallthrough
 	case "number":
-		*e = CustomFieldSettingResponseCustomFieldTypeEnum(s)
+		*e = CustomFieldSettingResponseCustomFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldSettingResponseCustomFieldTypeEnum: %v", v)
 	}
 }
 

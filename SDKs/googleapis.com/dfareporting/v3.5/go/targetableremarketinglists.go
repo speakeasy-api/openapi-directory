@@ -34,7 +34,10 @@ func newTargetableRemarketingLists(defaultClient, securityClient HTTPClient, ser
 // DfareportingTargetableRemarketingListsGet - Gets one remarketing list by ID.
 func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsGet(ctx context.Context, request operations.DfareportingTargetableRemarketingListsGetRequest, security operations.DfareportingTargetableRemarketingListsGetSecurity) (*operations.DfareportingTargetableRemarketingListsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsGet(c
 // DfareportingTargetableRemarketingListsList - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
 func (s *targetableRemarketingLists) DfareportingTargetableRemarketingListsList(ctx context.Context, request operations.DfareportingTargetableRemarketingListsListRequest, security operations.DfareportingTargetableRemarketingListsListSecurity) (*operations.DfareportingTargetableRemarketingListsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/targetableRemarketingLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

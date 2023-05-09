@@ -14,18 +14,22 @@ const (
 	TargetSelectionEnumSnapshot   TargetSelectionEnum = "SNAPSHOT"
 )
 
+func (e TargetSelectionEnum) ToPointer() *TargetSelectionEnum {
+	return &e
+}
+
 func (e *TargetSelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUOUS":
 		fallthrough
 	case "SNAPSHOT":
-		*e = TargetSelectionEnum(s)
+		*e = TargetSelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetSelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetSelectionEnum: %v", v)
 	}
 }

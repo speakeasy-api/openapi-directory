@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/fis/2020-12
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,12 +28,13 @@ func main() {
         }),
     )
 
-    req := operations.CreateExperimentTemplateRequest{
+    ctx := context.Background()
+    res, err := s.CreateExperimentTemplate(ctx, operations.CreateExperimentTemplateRequest{
         RequestBody: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
                 "provident": shared.CreateExperimentTemplateActionInput{
                     ActionID: "distinctio",
-                    Description: "quibusdam",
+                    Description: sdk.String("quibusdam"),
                     Parameters: map[string]string{
                         "nulla": "corrupti",
                         "illum": "vel",
@@ -52,7 +53,7 @@ func main() {
                 },
                 "iusto": shared.CreateExperimentTemplateActionInput{
                     ActionID: "excepturi",
-                    Description: "nisi",
+                    Description: sdk.String("nisi"),
                     Parameters: map[string]string{
                         "temporibus": "ab",
                         "quis": "veritatis",
@@ -74,7 +75,7 @@ func main() {
                 },
                 "nam": shared.CreateExperimentTemplateActionInput{
                     ActionID: "officia",
-                    Description: "occaecati",
+                    Description: sdk.String("occaecati"),
                     Parameters: map[string]string{
                         "deleniti": "hic",
                     },
@@ -96,25 +97,25 @@ func main() {
                 CloudWatchLogsConfiguration: &shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput{
                     LogGroupArn: "aspernatur",
                 },
-                LogSchemaVersion: 18789,
+                LogSchemaVersion: sdk.Int64(18789),
                 S3Configuration: &shared.ExperimentTemplateS3LogConfigurationInput{
                     BucketName: "ad",
-                    Prefix: "natus",
+                    Prefix: sdk.String("natus"),
                 },
             },
             RoleArn: "sed",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "dolor",
-                    Value: "natus",
+                    Value: sdk.String("natus"),
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "laboriosam",
-                    Value: "hic",
+                    Value: sdk.String("hic"),
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
                     Source: "saepe",
-                    Value: "fuga",
+                    Value: sdk.String("fuga"),
                 },
             },
             Tags: map[string]string{
@@ -207,17 +208,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "harum",
-        XAmzContentSha256: "enim",
-        XAmzCredential: "accusamus",
-        XAmzDate: "commodi",
-        XAmzSecurityToken: "repudiandae",
-        XAmzSignature: "quae",
-        XAmzSignedHeaders: "ipsum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateExperimentTemplate(ctx, req)
+        XAmzAlgorithm: sdk.String("harum"),
+        XAmzContentSha256: sdk.String("enim"),
+        XAmzCredential: sdk.String("accusamus"),
+        XAmzDate: sdk.String("commodi"),
+        XAmzSecurityToken: sdk.String("repudiandae"),
+        XAmzSignature: sdk.String("quae"),
+        XAmzSignedHeaders: sdk.String("ipsum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -232,24 +230,24 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateExperimentTemplate` - <p>Creates an experiment template. </p> <p>An experiment template includes the following components:</p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the <i>Fault Injection Simulator User Guide</i>.</p>
-* `DeleteExperimentTemplate` - Deletes the specified experiment template.
-* `GetAction` - Gets information about the specified FIS action.
-* `GetExperiment` - Gets information about the specified experiment.
-* `GetExperimentTemplate` - Gets information about the specified experiment template.
-* `GetTargetResourceType` - Gets information about the specified resource type.
-* `ListActions` - Lists the available FIS actions.
-* `ListExperimentTemplates` - Lists your experiment templates.
-* `ListExperiments` - Lists your experiments.
-* `ListTagsForResource` - Lists the tags for the specified resource.
-* `ListTargetResourceTypes` - Lists the target resource types.
-* `StartExperiment` - Starts running an experiment from the specified experiment template.
-* `StopExperiment` - Stops the specified experiment.
-* `TagResource` - Applies the specified tags to the specified resource.
-* `UntagResource` - Removes the specified tags from the specified resource.
-* `UpdateExperimentTemplate` - Updates the specified experiment template.
+* [CreateExperimentTemplate](docs/sdk/README.md#createexperimenttemplate) - <p>Creates an experiment template. </p> <p>An experiment template includes the following components:</p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the <i>Fault Injection Simulator User Guide</i>.</p>
+* [DeleteExperimentTemplate](docs/sdk/README.md#deleteexperimenttemplate) - Deletes the specified experiment template.
+* [GetAction](docs/sdk/README.md#getaction) - Gets information about the specified FIS action.
+* [GetExperiment](docs/sdk/README.md#getexperiment) - Gets information about the specified experiment.
+* [GetExperimentTemplate](docs/sdk/README.md#getexperimenttemplate) - Gets information about the specified experiment template.
+* [GetTargetResourceType](docs/sdk/README.md#gettargetresourcetype) - Gets information about the specified resource type.
+* [ListActions](docs/sdk/README.md#listactions) - Lists the available FIS actions.
+* [ListExperimentTemplates](docs/sdk/README.md#listexperimenttemplates) - Lists your experiment templates.
+* [ListExperiments](docs/sdk/README.md#listexperiments) - Lists your experiments.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags for the specified resource.
+* [ListTargetResourceTypes](docs/sdk/README.md#listtargetresourcetypes) - Lists the target resource types.
+* [StartExperiment](docs/sdk/README.md#startexperiment) - Starts running an experiment from the specified experiment template.
+* [StopExperiment](docs/sdk/README.md#stopexperiment) - Stops the specified experiment.
+* [TagResource](docs/sdk/README.md#tagresource) - Applies the specified tags to the specified resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes the specified tags from the specified resource.
+* [UpdateExperimentTemplate](docs/sdk/README.md#updateexperimenttemplate) - Updates the specified experiment template.
 <!-- End SDK Available Operations -->
 
 ### Maturity

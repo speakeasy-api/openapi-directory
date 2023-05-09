@@ -23,12 +23,16 @@ const (
 	GetIntersectionsWithinOutputFormatOutputFormatEnumShpz    GetIntersectionsWithinOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetIntersectionsWithinOutputFormatOutputFormatEnum) ToPointer() *GetIntersectionsWithinOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetIntersectionsWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -42,52 +46,56 @@ func (e *GetIntersectionsWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data 
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetIntersectionsWithinOutputFormatOutputFormatEnum(s)
+		*e = GetIntersectionsWithinOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIntersectionsWithinOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIntersectionsWithinOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetIntersectionsWithinOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetIntersectionsWithinOutputFormatOutputSrsEnum string
+type GetIntersectionsWithinOutputFormatOutputSrsEnum int64
 
 const (
-	GetIntersectionsWithinOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetIntersectionsWithinOutputFormatOutputSrsEnum = "4326"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetIntersectionsWithinOutputFormatOutputSrsEnum = "4269"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumThreeThousandAndFive                  GetIntersectionsWithinOutputFormatOutputSrsEnum = "3005"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetIntersectionsWithinOutputFormatOutputSrsEnum = "26907"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetIntersectionsWithinOutputFormatOutputSrsEnum = "26908"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetIntersectionsWithinOutputFormatOutputSrsEnum = "26909"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetIntersectionsWithinOutputFormatOutputSrsEnum = "26910"
-	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetIntersectionsWithinOutputFormatOutputSrsEnum = "26911"
+	GetIntersectionsWithinOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetIntersectionsWithinOutputFormatOutputSrsEnum = 4326
+	GetIntersectionsWithinOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetIntersectionsWithinOutputFormatOutputSrsEnum = 4269
+	GetIntersectionsWithinOutputFormatOutputSrsEnumThreeThousandAndFive                  GetIntersectionsWithinOutputFormatOutputSrsEnum = 3005
+	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetIntersectionsWithinOutputFormatOutputSrsEnum = 26907
+	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetIntersectionsWithinOutputFormatOutputSrsEnum = 26908
+	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetIntersectionsWithinOutputFormatOutputSrsEnum = 26909
+	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetIntersectionsWithinOutputFormatOutputSrsEnum = 26910
+	GetIntersectionsWithinOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetIntersectionsWithinOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetIntersectionsWithinOutputFormatOutputSrsEnum) ToPointer() *GetIntersectionsWithinOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetIntersectionsWithinOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetIntersectionsWithinOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetIntersectionsWithinOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIntersectionsWithinOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIntersectionsWithinOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

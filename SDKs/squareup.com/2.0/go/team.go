@@ -216,7 +216,10 @@ func (s *team) CreateTeamMember(ctx context.Context, request shared.CreateTeamMe
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrieve-a-team-member).
 func (s *team) RetrieveTeamMember(ctx context.Context, request operations.RetrieveTeamMemberRequest, security operations.RetrieveTeamMemberSecurity) (*operations.RetrieveTeamMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -263,7 +266,10 @@ func (s *team) RetrieveTeamMember(ctx context.Context, request operations.Retrie
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#retrievewagesetting).
 func (s *team) RetrieveWageSetting(ctx context.Context, request operations.RetrieveWageSettingRequest, security operations.RetrieveWageSettingSecurity) (*operations.RetrieveWageSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -367,7 +373,10 @@ func (s *team) SearchTeamMembers(ctx context.Context, request shared.SearchTeamM
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#update-a-team-member).
 func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTeamMemberRequest, security operations.UpdateTeamMemberSecurity) (*operations.UpdateTeamMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTeamMemberRequest", "json")
 	if err != nil {
@@ -426,7 +435,10 @@ func (s *team) UpdateTeamMember(ctx context.Context, request operations.UpdateTe
 // Learn about [Troubleshooting the Team API](https://developer.squareup.com/docs/team/troubleshooting#create-or-update-a-wage-setting).
 func (s *team) UpdateWageSetting(ctx context.Context, request operations.UpdateWageSettingRequest, security operations.UpdateWageSettingSecurity) (*operations.UpdateWageSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/team-members/{team_member_id}/wage-setting", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWageSettingRequest", "json")
 	if err != nil {

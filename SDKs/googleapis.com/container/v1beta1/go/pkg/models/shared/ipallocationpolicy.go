@@ -16,21 +16,25 @@ const (
 	IPAllocationPolicyIpv6AccessTypeEnumExternal                  IPAllocationPolicyIpv6AccessTypeEnum = "EXTERNAL"
 )
 
+func (e IPAllocationPolicyIpv6AccessTypeEnum) ToPointer() *IPAllocationPolicyIpv6AccessTypeEnum {
+	return &e
+}
+
 func (e *IPAllocationPolicyIpv6AccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IPV6_ACCESS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTERNAL":
 		fallthrough
 	case "EXTERNAL":
-		*e = IPAllocationPolicyIpv6AccessTypeEnum(s)
+		*e = IPAllocationPolicyIpv6AccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPAllocationPolicyIpv6AccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IPAllocationPolicyIpv6AccessTypeEnum: %v", v)
 	}
 }
 
@@ -43,26 +47,32 @@ const (
 	IPAllocationPolicyStackTypeEnumIpv4Ipv6             IPAllocationPolicyStackTypeEnum = "IPV4_IPV6"
 )
 
+func (e IPAllocationPolicyStackTypeEnum) ToPointer() *IPAllocationPolicyStackTypeEnum {
+	return &e
+}
+
 func (e *IPAllocationPolicyStackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STACK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IPV4":
 		fallthrough
 	case "IPV4_IPV6":
-		*e = IPAllocationPolicyStackTypeEnum(s)
+		*e = IPAllocationPolicyStackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPAllocationPolicyStackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IPAllocationPolicyStackTypeEnum: %v", v)
 	}
 }
 
 // IPAllocationPolicy - Configuration for controlling how IPs are allocated in the cluster.
 type IPAllocationPolicy struct {
+	// AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+	AdditionalPodRangesConfig *AdditionalPodRangesConfig `json:"additionalPodRangesConfig,omitempty"`
 	// If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
 	AllowRouteOverlap *bool `json:"allowRouteOverlap,omitempty"`
 	// This field is deprecated, use cluster_ipv4_cidr_block.
@@ -79,6 +89,8 @@ type IPAllocationPolicy struct {
 	NodeIpv4Cidr *string `json:"nodeIpv4Cidr,omitempty"`
 	// The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
 	NodeIpv4CidrBlock *string `json:"nodeIpv4CidrBlock,omitempty"`
+	// [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+	PodCidrOverprovisionConfig *PodCIDROverprovisionConfig `json:"podCidrOverprovisionConfig,omitempty"`
 	// This field is deprecated, use services_ipv4_cidr_block.
 	ServicesIpv4Cidr *string `json:"servicesIpv4Cidr,omitempty"`
 	// The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
@@ -103,6 +115,8 @@ type IPAllocationPolicy struct {
 
 // IPAllocationPolicyInput - Configuration for controlling how IPs are allocated in the cluster.
 type IPAllocationPolicyInput struct {
+	// AdditionalPodRangesConfig is the configuration for additional pod secondary ranges supporting the ClusterUpdate message.
+	AdditionalPodRangesConfig *AdditionalPodRangesConfig `json:"additionalPodRangesConfig,omitempty"`
 	// If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
 	AllowRouteOverlap *bool `json:"allowRouteOverlap,omitempty"`
 	// This field is deprecated, use cluster_ipv4_cidr_block.
@@ -119,6 +133,8 @@ type IPAllocationPolicyInput struct {
 	NodeIpv4Cidr *string `json:"nodeIpv4Cidr,omitempty"`
 	// The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
 	NodeIpv4CidrBlock *string `json:"nodeIpv4CidrBlock,omitempty"`
+	// [PRIVATE FIELD] Config for pod CIDR size overprovisioning.
+	PodCidrOverprovisionConfig *PodCIDROverprovisionConfig `json:"podCidrOverprovisionConfig,omitempty"`
 	// This field is deprecated, use services_ipv4_cidr_block.
 	ServicesIpv4Cidr *string `json:"servicesIpv4Cidr,omitempty"`
 	// The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.

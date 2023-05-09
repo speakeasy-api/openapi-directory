@@ -16,17 +16,21 @@ const (
 	DisableDomainTransferLockXAmzTargetEnumRoute53DomainsV20140515DisableDomainTransferLock DisableDomainTransferLockXAmzTargetEnum = "Route53Domains_v20140515.DisableDomainTransferLock"
 )
 
+func (e DisableDomainTransferLockXAmzTargetEnum) ToPointer() *DisableDomainTransferLockXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableDomainTransferLockXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.DisableDomainTransferLock":
-		*e = DisableDomainTransferLockXAmzTargetEnum(s)
+		*e = DisableDomainTransferLockXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableDomainTransferLockXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableDomainTransferLockXAmzTargetEnum: %v", v)
 	}
 }
 

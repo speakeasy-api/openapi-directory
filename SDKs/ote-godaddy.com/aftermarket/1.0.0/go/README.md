@@ -13,43 +13,40 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/aftermark
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := []shared.AftermarketListingExpiryCreate{
+    ctx := context.Background()
+    res, err := s.V1.AddExpiryListingsJSON(ctx, []shared.AftermarketListingExpiryCreate{
         shared.AftermarketListingExpiryCreate{
             Domain: "provident",
             ExpiresAt: "distinctio",
             LosingRegistrarID: 844266,
-            PageViewsMonthly: 602763,
-            RevenueMonthly: 857946,
+            PageViewsMonthly: sdk.Int64(602763),
+            RevenueMonthly: sdk.Int64(857946),
         },
         shared.AftermarketListingExpiryCreate{
             Domain: "corrupti",
             ExpiresAt: "illum",
             LosingRegistrarID: 423655,
-            PageViewsMonthly: 623564,
-            RevenueMonthly: 645894,
+            PageViewsMonthly: sdk.Int64(623564),
+            RevenueMonthly: sdk.Int64(645894),
         },
         shared.AftermarketListingExpiryCreate{
             Domain: "suscipit",
             ExpiresAt: "iure",
             LosingRegistrarID: 297534,
-            PageViewsMonthly: 891773,
-            RevenueMonthly: 56713,
+            PageViewsMonthly: sdk.Int64(891773),
+            RevenueMonthly: sdk.Int64(56713),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.V1.AddExpiryListingsJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -65,11 +62,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `AddExpiryListingsJSON` - Add expiry listings into GoDaddy Auction
-* `AddExpiryListingsRaw` - Add expiry listings into GoDaddy Auction
-* `DeleteListings` - Remove listings from GoDaddy Auction
+* [AddExpiryListingsJSON](docs/v1/README.md#addexpirylistingsjson) - Add expiry listings into GoDaddy Auction
+* [AddExpiryListingsRaw](docs/v1/README.md#addexpirylistingsraw) - Add expiry listings into GoDaddy Auction
+* [DeleteListings](docs/v1/README.md#deletelistings) - Remove listings from GoDaddy Auction
 <!-- End SDK Available Operations -->
 
 ### Maturity

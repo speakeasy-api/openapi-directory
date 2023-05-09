@@ -11,7 +11,8 @@ import (
 
 // RefreshTokenRequestBodyRefreshTokenBody - Describes a refresh token.
 type RefreshTokenRequestBodyRefreshTokenBody struct {
-	Token *string `json:"token,omitempty"`
+	ClientID *string `json:"clientId,omitempty"`
+	Token    *string `json:"token,omitempty"`
 }
 
 type RefreshTokenRequestBody struct {
@@ -26,17 +27,21 @@ const (
 	RefreshTokenProviderEnumFigma RefreshTokenProviderEnum = "figma"
 )
 
+func (e RefreshTokenProviderEnum) ToPointer() *RefreshTokenProviderEnum {
+	return &e
+}
+
 func (e *RefreshTokenProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "figma":
-		*e = RefreshTokenProviderEnum(s)
+		*e = RefreshTokenProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RefreshTokenProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for RefreshTokenProviderEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CPUArchitectureEnumArm64 CPUArchitectureEnum = "ARM64"
 )
 
+func (e CPUArchitectureEnum) ToPointer() *CPUArchitectureEnum {
+	return &e
+}
+
 func (e *CPUArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "X86_64":
 		fallthrough
 	case "ARM64":
-		*e = CPUArchitectureEnum(s)
+		*e = CPUArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CPUArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for CPUArchitectureEnum: %v", v)
 	}
 }

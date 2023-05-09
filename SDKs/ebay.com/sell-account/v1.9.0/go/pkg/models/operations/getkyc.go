@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetKYCSecurity struct {
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetKYCResponse struct {
 	ContentType string
 	// OK

@@ -33,12 +33,16 @@ const (
 	DistributionGroupsGetApps200ApplicationJSONOsEnumCustom  DistributionGroupsGetApps200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e DistributionGroupsGetApps200ApplicationJSONOsEnum) ToPointer() *DistributionGroupsGetApps200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *DistributionGroupsGetApps200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -54,10 +58,10 @@ func (e *DistributionGroupsGetApps200ApplicationJSONOsEnum) UnmarshalJSON(data [
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = DistributionGroupsGetApps200ApplicationJSONOsEnum(s)
+		*e = DistributionGroupsGetApps200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsGetApps200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsGetApps200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -69,19 +73,23 @@ const (
 	DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnumUser DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum) ToPointer() *DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum(s)
+		*e = DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsGetApps200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 

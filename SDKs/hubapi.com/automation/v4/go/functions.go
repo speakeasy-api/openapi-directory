@@ -37,7 +37,10 @@ func newFunctions(defaultClient, securityClient HTTPClient, serverURL, language,
 // Delete a function for a custom workflow action. This will remove the function itself as well as removing the association between the function and the custom action. This can't be undone.
 func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionT
 // Delete a function for a custom workflow action. This will remove the function itself as well as removing the association between the function and the custom action. This can't be undone.
 func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionType(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeArchiveByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *functions) DeleteAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionT
 // Returns the given function for a custom workflow action.
 func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -184,7 +193,10 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 // Returns the given function for a custom workflow action.
 func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionType(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeGetByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +251,10 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 // Returns a list of all functions that are associated with the given custom workflow action.
 func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -294,7 +309,10 @@ func (s *functions) GetAutomationV4ActionsAppIDDefinitionIDFunctionsGetPage(ctx 
 // Creates or replaces a function for a custom workflow action.
 func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplace(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceRequest, security operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceSecurity) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeFunctionIDCreateOrReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}/{functionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {
@@ -359,7 +377,10 @@ func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionType
 // Creates or replaces a function for a custom workflow action.
 func (s *functions) PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionType(ctx context.Context, request operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeRequest, security operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeSecurity) (*operations.PutAutomationV4ActionsAppIDDefinitionIDFunctionsFunctionTypeCreateOrReplaceByFunctionTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}/functions/{functionType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {

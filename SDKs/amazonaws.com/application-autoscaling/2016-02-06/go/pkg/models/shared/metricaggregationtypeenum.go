@@ -15,20 +15,24 @@ const (
 	MetricAggregationTypeEnumMaximum MetricAggregationTypeEnum = "Maximum"
 )
 
+func (e MetricAggregationTypeEnum) ToPointer() *MetricAggregationTypeEnum {
+	return &e
+}
+
 func (e *MetricAggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Average":
 		fallthrough
 	case "Minimum":
 		fallthrough
 	case "Maximum":
-		*e = MetricAggregationTypeEnum(s)
+		*e = MetricAggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricAggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricAggregationTypeEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	DirectorySiteInpageTagFormatsEnumJavascriptInpage       DirectorySiteInpageTagFormatsEnum = "JAVASCRIPT_INPAGE"
 )
 
+func (e DirectorySiteInpageTagFormatsEnum) ToPointer() *DirectorySiteInpageTagFormatsEnum {
+	return &e
+}
+
 func (e *DirectorySiteInpageTagFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "IFRAME_JAVASCRIPT_INPAGE":
@@ -29,10 +33,10 @@ func (e *DirectorySiteInpageTagFormatsEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_REDIRECT_INPAGE":
 		fallthrough
 	case "JAVASCRIPT_INPAGE":
-		*e = DirectorySiteInpageTagFormatsEnum(s)
+		*e = DirectorySiteInpageTagFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectorySiteInpageTagFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectorySiteInpageTagFormatsEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	DirectorySiteInterstitialTagFormatsEnumJavascriptInterstitial       DirectorySiteInterstitialTagFormatsEnum = "JAVASCRIPT_INTERSTITIAL"
 )
 
+func (e DirectorySiteInterstitialTagFormatsEnum) ToPointer() *DirectorySiteInterstitialTagFormatsEnum {
+	return &e
+}
+
 func (e *DirectorySiteInterstitialTagFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IFRAME_JAVASCRIPT_INTERSTITIAL":
 		fallthrough
 	case "INTERNAL_REDIRECT_INTERSTITIAL":
 		fallthrough
 	case "JAVASCRIPT_INTERSTITIAL":
-		*e = DirectorySiteInterstitialTagFormatsEnum(s)
+		*e = DirectorySiteInterstitialTagFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectorySiteInterstitialTagFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectorySiteInterstitialTagFormatsEnum: %v", v)
 	}
 }
 

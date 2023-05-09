@@ -17,19 +17,23 @@ const (
 	PlayerSeasonStatsWWorldGolfRankingsFormatEnumJSON PlayerSeasonStatsWWorldGolfRankingsFormatEnum = "JSON"
 )
 
+func (e PlayerSeasonStatsWWorldGolfRankingsFormatEnum) ToPointer() *PlayerSeasonStatsWWorldGolfRankingsFormatEnum {
+	return &e
+}
+
 func (e *PlayerSeasonStatsWWorldGolfRankingsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = PlayerSeasonStatsWWorldGolfRankingsFormatEnum(s)
+		*e = PlayerSeasonStatsWWorldGolfRankingsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerSeasonStatsWWorldGolfRankingsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerSeasonStatsWWorldGolfRankingsFormatEnum: %v", v)
 	}
 }
 

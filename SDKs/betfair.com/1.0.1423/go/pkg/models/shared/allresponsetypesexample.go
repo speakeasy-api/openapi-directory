@@ -16,12 +16,16 @@ const (
 	AllResponseTypesExampleOpTypesEnumOcm        AllResponseTypesExampleOpTypesEnum = "ocm"
 )
 
+func (e AllResponseTypesExampleOpTypesEnum) ToPointer() *AllResponseTypesExampleOpTypesEnum {
+	return &e
+}
+
 func (e *AllResponseTypesExampleOpTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "connection":
 		fallthrough
 	case "status":
@@ -29,10 +33,10 @@ func (e *AllResponseTypesExampleOpTypesEnum) UnmarshalJSON(data []byte) error {
 	case "mcm":
 		fallthrough
 	case "ocm":
-		*e = AllResponseTypesExampleOpTypesEnum(s)
+		*e = AllResponseTypesExampleOpTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllResponseTypesExampleOpTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for AllResponseTypesExampleOpTypesEnum: %v", v)
 	}
 }
 

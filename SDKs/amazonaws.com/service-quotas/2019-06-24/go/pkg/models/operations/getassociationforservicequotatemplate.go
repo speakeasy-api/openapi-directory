@@ -16,17 +16,21 @@ const (
 	GetAssociationForServiceQuotaTemplateXAmzTargetEnumServiceQuotasV20190624GetAssociationForServiceQuotaTemplate GetAssociationForServiceQuotaTemplateXAmzTargetEnum = "ServiceQuotasV20190624.GetAssociationForServiceQuotaTemplate"
 )
 
+func (e GetAssociationForServiceQuotaTemplateXAmzTargetEnum) ToPointer() *GetAssociationForServiceQuotaTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAssociationForServiceQuotaTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.GetAssociationForServiceQuotaTemplate":
-		*e = GetAssociationForServiceQuotaTemplateXAmzTargetEnum(s)
+		*e = GetAssociationForServiceQuotaTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssociationForServiceQuotaTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssociationForServiceQuotaTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

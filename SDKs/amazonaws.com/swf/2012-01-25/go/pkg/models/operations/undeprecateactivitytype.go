@@ -16,17 +16,21 @@ const (
 	UndeprecateActivityTypeXAmzTargetEnumSimpleWorkflowServiceUndeprecateActivityType UndeprecateActivityTypeXAmzTargetEnum = "SimpleWorkflowService.UndeprecateActivityType"
 )
 
+func (e UndeprecateActivityTypeXAmzTargetEnum) ToPointer() *UndeprecateActivityTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *UndeprecateActivityTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.UndeprecateActivityType":
-		*e = UndeprecateActivityTypeXAmzTargetEnum(s)
+		*e = UndeprecateActivityTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UndeprecateActivityTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UndeprecateActivityTypeXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -107,7 +107,10 @@ func (s *v1) GetCountries(ctx context.Context, request operations.GetCountriesRe
 // Authorization is not required
 func (s *v1) GetCountry(ctx context.Context, request operations.GetCountryRequest) (*operations.GetCountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{countryKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/countries/{countryKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

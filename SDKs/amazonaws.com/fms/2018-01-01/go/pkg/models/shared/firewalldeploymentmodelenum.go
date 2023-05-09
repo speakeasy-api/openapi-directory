@@ -14,18 +14,22 @@ const (
 	FirewallDeploymentModelEnumDistributed FirewallDeploymentModelEnum = "DISTRIBUTED"
 )
 
+func (e FirewallDeploymentModelEnum) ToPointer() *FirewallDeploymentModelEnum {
+	return &e
+}
+
 func (e *FirewallDeploymentModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CENTRALIZED":
 		fallthrough
 	case "DISTRIBUTED":
-		*e = FirewallDeploymentModelEnum(s)
+		*e = FirewallDeploymentModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallDeploymentModelEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallDeploymentModelEnum: %v", v)
 	}
 }

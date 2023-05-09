@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetOauthV1AccessTokensTokenGetRequest{
-        Token: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AccessTokens.GetOauthV1AccessTokensTokenGet(ctx, req)
+    res, err := s.AccessTokens.GetOauthV1AccessTokensTokenGet(ctx, operations.GetOauthV1AccessTokensTokenGetRequest{
+        Token: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

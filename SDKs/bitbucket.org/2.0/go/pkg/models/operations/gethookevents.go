@@ -7,6 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetHookEventsSecurity struct {
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetHookEventsResponse struct {
 	ContentType string
 	StatusCode  int

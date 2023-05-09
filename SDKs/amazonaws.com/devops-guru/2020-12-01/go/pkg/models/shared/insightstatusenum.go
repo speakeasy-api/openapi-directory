@@ -14,18 +14,22 @@ const (
 	InsightStatusEnumClosed  InsightStatusEnum = "CLOSED"
 )
 
+func (e InsightStatusEnum) ToPointer() *InsightStatusEnum {
+	return &e
+}
+
 func (e *InsightStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONGOING":
 		fallthrough
 	case "CLOSED":
-		*e = InsightStatusEnum(s)
+		*e = InsightStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsightStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InsightStatusEnum: %v", v)
 	}
 }

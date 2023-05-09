@@ -16,21 +16,25 @@ const (
 	CertificateAddParameterCertificateFormatEnumUnmapped CertificateAddParameterCertificateFormatEnum = "unmapped"
 )
 
+func (e CertificateAddParameterCertificateFormatEnum) ToPointer() *CertificateAddParameterCertificateFormatEnum {
+	return &e
+}
+
 func (e *CertificateAddParameterCertificateFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pfx":
 		fallthrough
 	case "cer":
 		fallthrough
 	case "unmapped":
-		*e = CertificateAddParameterCertificateFormatEnum(s)
+		*e = CertificateAddParameterCertificateFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateAddParameterCertificateFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateAddParameterCertificateFormatEnum: %v", v)
 	}
 }
 

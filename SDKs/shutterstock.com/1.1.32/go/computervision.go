@@ -198,6 +198,8 @@ func (s *computerVision) GetSimilarVideos(ctx context.Context, request operation
 
 // UploadEphemeralImage - Upload ephemeral images
 // Deprecated; use `POST /v2/cv/images` instead. This endpoint uploads an image for reverse image search. The image must be in JPEG or PNG format. To get the search results, pass the ID that this endpoint returns to the `GET /v2/images/{id}/similar` endpoint.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *computerVision) UploadEphemeralImage(ctx context.Context, request shared.ImageCreateRequest, security operations.UploadEphemeralImageSecurity) (*operations.UploadEphemeralImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/images"

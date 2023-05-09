@@ -35,7 +35,10 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 // Area120tablesWorkspacesGet - Gets a workspace. Returns NOT_FOUND if the workspace does not exist.
 func (s *workspaces) Area120tablesWorkspacesGet(ctx context.Context, request operations.Area120tablesWorkspacesGetRequest, security operations.Area120tablesWorkspacesGetSecurity) (*operations.Area120tablesWorkspacesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	GETGETInsightRuleReportActionEnumGetInsightRuleReport GETGETInsightRuleReportActionEnum = "GetInsightRuleReport"
 )
 
+func (e GETGETInsightRuleReportActionEnum) ToPointer() *GETGETInsightRuleReportActionEnum {
+	return &e
+}
+
 func (e *GETGETInsightRuleReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetInsightRuleReport":
-		*e = GETGETInsightRuleReportActionEnum(s)
+		*e = GETGETInsightRuleReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETInsightRuleReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETInsightRuleReportActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETGETInsightRuleReportVersionEnumTwoThousandAndTen0801 GETGETInsightRuleReportVersionEnum = "2010-08-01"
 )
 
+func (e GETGETInsightRuleReportVersionEnum) ToPointer() *GETGETInsightRuleReportVersionEnum {
+	return &e
+}
+
 func (e *GETGETInsightRuleReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETGETInsightRuleReportVersionEnum(s)
+		*e = GETGETInsightRuleReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETInsightRuleReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETInsightRuleReportVersionEnum: %v", v)
 	}
 }
 

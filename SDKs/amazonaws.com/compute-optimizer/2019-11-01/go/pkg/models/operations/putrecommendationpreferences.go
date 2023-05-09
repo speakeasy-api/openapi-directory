@@ -16,17 +16,21 @@ const (
 	PutRecommendationPreferencesXAmzTargetEnumComputeOptimizerServicePutRecommendationPreferences PutRecommendationPreferencesXAmzTargetEnum = "ComputeOptimizerService.PutRecommendationPreferences"
 )
 
+func (e PutRecommendationPreferencesXAmzTargetEnum) ToPointer() *PutRecommendationPreferencesXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRecommendationPreferencesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.PutRecommendationPreferences":
-		*e = PutRecommendationPreferencesXAmzTargetEnum(s)
+		*e = PutRecommendationPreferencesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRecommendationPreferencesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRecommendationPreferencesXAmzTargetEnum: %v", v)
 	}
 }
 

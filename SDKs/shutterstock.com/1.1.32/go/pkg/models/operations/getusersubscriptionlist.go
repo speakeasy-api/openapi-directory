@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetUserSubscriptionListSecurity struct {
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetUserSubscriptionListResponse struct {
 	ContentType string
 	StatusCode  int

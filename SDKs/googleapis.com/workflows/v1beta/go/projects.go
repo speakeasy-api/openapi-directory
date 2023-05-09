@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // WorkflowsProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) WorkflowsProjectsLocationsList(ctx context.Context, request operations.WorkflowsProjectsLocationsListRequest, security operations.WorkflowsProjectsLocationsListSecurity) (*operations.WorkflowsProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) WorkflowsProjectsLocationsList(ctx context.Context, request o
 // WorkflowsProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) WorkflowsProjectsLocationsOperationsList(ctx context.Context, request operations.WorkflowsProjectsLocationsOperationsListRequest, security operations.WorkflowsProjectsLocationsOperationsListSecurity) (*operations.WorkflowsProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) WorkflowsProjectsLocationsOperationsList(ctx context.Context,
 // WorkflowsProjectsLocationsWorkflowsCreate - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.
 func (s *projects) WorkflowsProjectsLocationsWorkflowsCreate(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsCreateRequest, security operations.WorkflowsProjectsLocationsWorkflowsCreateSecurity) (*operations.WorkflowsProjectsLocationsWorkflowsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workflows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workflows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkflowInput", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) WorkflowsProjectsLocationsWorkflowsCreate(ctx context.Context
 // WorkflowsProjectsLocationsWorkflowsDelete - Deletes a workflow with the specified name. This method also cancels and deletes all running executions of the workflow.
 func (s *projects) WorkflowsProjectsLocationsWorkflowsDelete(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsDeleteRequest, security operations.WorkflowsProjectsLocationsWorkflowsDeleteSecurity) (*operations.WorkflowsProjectsLocationsWorkflowsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) WorkflowsProjectsLocationsWorkflowsDelete(ctx context.Context
 // WorkflowsProjectsLocationsWorkflowsGet - Gets details of a single Workflow.
 func (s *projects) WorkflowsProjectsLocationsWorkflowsGet(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsGetRequest, security operations.WorkflowsProjectsLocationsWorkflowsGetSecurity) (*operations.WorkflowsProjectsLocationsWorkflowsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) WorkflowsProjectsLocationsWorkflowsGet(ctx context.Context, r
 // WorkflowsProjectsLocationsWorkflowsList - Lists Workflows in a given project and location. The default order is not specified.
 func (s *projects) WorkflowsProjectsLocationsWorkflowsList(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsListRequest, security operations.WorkflowsProjectsLocationsWorkflowsListSecurity) (*operations.WorkflowsProjectsLocationsWorkflowsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workflows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/workflows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *projects) WorkflowsProjectsLocationsWorkflowsList(ctx context.Context, 
 // WorkflowsProjectsLocationsWorkflowsPatch - Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow may be created as a result of a successful update operation. In that case, such revision will be used in new workflow executions.
 func (s *projects) WorkflowsProjectsLocationsWorkflowsPatch(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsPatchRequest, security operations.WorkflowsProjectsLocationsWorkflowsPatchSecurity) (*operations.WorkflowsProjectsLocationsWorkflowsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WorkflowInput", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnumModifyVerifiedAccessInstanceLoggingConfiguration POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum = "ModifyVerifiedAccessInstanceLoggingConfiguration"
 )
 
+func (e POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum) ToPointer() *POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessInstanceLoggingConfiguration":
-		*e = POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum(s)
+		*e = POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessInstanceLoggingConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnumTwoThousandAndSixteen1115 POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum) ToPointer() *POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum(s)
+		*e = POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessInstanceLoggingConfigurationVersionEnum: %v", v)
 	}
 }
 

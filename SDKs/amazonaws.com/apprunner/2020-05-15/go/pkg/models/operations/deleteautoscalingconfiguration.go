@@ -16,17 +16,21 @@ const (
 	DeleteAutoScalingConfigurationXAmzTargetEnumAppRunnerDeleteAutoScalingConfiguration DeleteAutoScalingConfigurationXAmzTargetEnum = "AppRunner.DeleteAutoScalingConfiguration"
 )
 
+func (e DeleteAutoScalingConfigurationXAmzTargetEnum) ToPointer() *DeleteAutoScalingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAutoScalingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DeleteAutoScalingConfiguration":
-		*e = DeleteAutoScalingConfigurationXAmzTargetEnum(s)
+		*e = DeleteAutoScalingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAutoScalingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAutoScalingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/truesight.local/11.1.00/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CollectNowRequest{
+    ctx := context.Background()
+    res, err := s.Actions.CollectNow(ctx, operations.CollectNowRequest{
         DeviceID: 548814,
         MonitorClass: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Actions.CollectNow(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,46 +43,46 @@ func main() {
 ## Available Resources and Operations
 
 
-### Actions
+### [Actions](docs/actions/README.md)
 
-* `CollectNow` - Triggers a new collect on a specific device.
-* `Rediscover` - Triggers a new discovery on a specific device.
-* `Reinitialize` - Sends a 'Reinitialize KM' command.
-* `Remove` - Removes a specific instance from the monitoring environment.
-* `Reset` - Resets the Error Count parameter.
+* [CollectNow](docs/actions/README.md#collectnow) - Triggers a new collect on a specific device.
+* [Rediscover](docs/actions/README.md#rediscover) - Triggers a new discovery on a specific device.
+* [Reinitialize](docs/actions/README.md#reinitialize) - Sends a 'Reinitialize KM' command.
+* [Remove](docs/actions/README.md#remove) - Removes a specific instance from the monitoring environment.
+* [Reset](docs/actions/README.md#reset) - Resets the Error Count parameter.
 
-### Applications
+### [Applications](docs/applications/README.md)
 
-* `GetApplications` - Gets summarized information about all monitored applications.
-* `GetOneApplication` - Gets detailed information for a specific application.
+* [GetApplications](docs/applications/README.md#getapplications) - Gets summarized information about all monitored applications.
+* [GetOneApplication](docs/applications/README.md#getoneapplication) - Gets detailed information for a specific application.
 
-### Devices
+### [Devices](docs/devices/README.md)
 
-* `GetAgentDevices` - Gets a list of all the devices monitored by an Agent.
-* `GetDevice` - Gets detailed information about a specific device.
-* `GetDeviceAgent` - Gets detailed information about an Agent.
-* `GetDeviceEnergyUsage` - Gets the energy usage for a specific device and a given period.
-* `GetDeviceMonitors` - Gets the Monitors for a specific device.
-* `GetDeviceParameterHistory` - Gets data history for a parameter of a specific device over a given period.
-* `GetDevices` - Gets summarized information about all monitored devices.
-* `GetDevicesSummary` - Gets overall information for all devices.
-* `GetHeatingMarginCoverage` - Gets the heating margin values for each monitored device, when available.
-* `SearchDevices` - Searches devices by name, model, manufacturer or serial number.
+* [GetAgentDevices](docs/devices/README.md#getagentdevices) - Gets a list of all the devices monitored by an Agent.
+* [GetDevice](docs/devices/README.md#getdevice) - Gets detailed information about a specific device.
+* [GetDeviceAgent](docs/devices/README.md#getdeviceagent) - Gets detailed information about an Agent.
+* [GetDeviceEnergyUsage](docs/devices/README.md#getdeviceenergyusage) - Gets the energy usage for a specific device and a given period.
+* [GetDeviceMonitors](docs/devices/README.md#getdevicemonitors) - Gets the Monitors for a specific device.
+* [GetDeviceParameterHistory](docs/devices/README.md#getdeviceparameterhistory) - Gets data history for a parameter of a specific device over a given period.
+* [GetDevices](docs/devices/README.md#getdevices) - Gets summarized information about all monitored devices.
+* [GetDevicesSummary](docs/devices/README.md#getdevicessummary) - Gets overall information for all devices.
+* [GetHeatingMarginCoverage](docs/devices/README.md#getheatingmargincoverage) - Gets the heating margin values for each monitored device, when available.
+* [SearchDevices](docs/devices/README.md#searchdevices) - Searches devices by name, model, manufacturer or serial number.
 
-### Groups
+### [Groups](docs/groups/README.md)
 
-* `GetGroups` - Gets all group summaries.
-* `GetOneGroup` - Gets detailed information about a specific group.
-* `UpdateEnergyCost` - Updates the values of the energy footprint parameter for a specific group.
+* [GetGroups](docs/groups/README.md#getgroups) - Gets all group summaries.
+* [GetOneGroup](docs/groups/README.md#getonegroup) - Gets detailed information about a specific group.
+* [UpdateEnergyCost](docs/groups/README.md#updateenergycost) - Updates the values of the energy footprint parameter for a specific group.
 
-### HistoricalData
+### [HistoricalData](docs/historicaldata/README.md)
 
-* `GetHistory` - Gets historical data for a specific group, application or service.
+* [GetHistory](docs/historicaldata/README.md#gethistory) - Gets historical data for a specific group, application or service.
 
-### Services
+### [Services](docs/services/README.md)
 
-* `GetOneService` - Gets detailed information about a specific service.
-* `GetServices` - Gets summarized information about all monitored services.
+* [GetOneService](docs/services/README.md#getoneservice) - Gets detailed information about a specific service.
+* [GetServices](docs/services/README.md#getservices) - Gets summarized information about all monitored services.
 <!-- End SDK Available Operations -->
 
 ### Maturity

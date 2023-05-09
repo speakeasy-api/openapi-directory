@@ -13,17 +13,21 @@ const (
 	TokenResourceAttributesTokenTypeEnumBearer TokenResourceAttributesTokenTypeEnum = "bearer"
 )
 
+func (e TokenResourceAttributesTokenTypeEnum) ToPointer() *TokenResourceAttributesTokenTypeEnum {
+	return &e
+}
+
 func (e *TokenResourceAttributesTokenTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bearer":
-		*e = TokenResourceAttributesTokenTypeEnum(s)
+		*e = TokenResourceAttributesTokenTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokenResourceAttributesTokenTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokenResourceAttributesTokenTypeEnum: %v", v)
 	}
 }
 
@@ -40,17 +44,21 @@ const (
 	TokenResourceRelationshipsGroupsDataTypeEnumGroup TokenResourceRelationshipsGroupsDataTypeEnum = "group"
 )
 
+func (e TokenResourceRelationshipsGroupsDataTypeEnum) ToPointer() *TokenResourceRelationshipsGroupsDataTypeEnum {
+	return &e
+}
+
 func (e *TokenResourceRelationshipsGroupsDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
-		*e = TokenResourceRelationshipsGroupsDataTypeEnum(s)
+		*e = TokenResourceRelationshipsGroupsDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokenResourceRelationshipsGroupsDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokenResourceRelationshipsGroupsDataTypeEnum: %v", v)
 	}
 }
 
@@ -74,17 +82,21 @@ const (
 	TokenResourceRelationshipsOrganizationDataTypeEnumOrganization TokenResourceRelationshipsOrganizationDataTypeEnum = "organization"
 )
 
+func (e TokenResourceRelationshipsOrganizationDataTypeEnum) ToPointer() *TokenResourceRelationshipsOrganizationDataTypeEnum {
+	return &e
+}
+
 func (e *TokenResourceRelationshipsOrganizationDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "organization":
-		*e = TokenResourceRelationshipsOrganizationDataTypeEnum(s)
+		*e = TokenResourceRelationshipsOrganizationDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokenResourceRelationshipsOrganizationDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokenResourceRelationshipsOrganizationDataTypeEnum: %v", v)
 	}
 }
 
@@ -113,17 +125,21 @@ const (
 	TokenResourceTypeEnumToken TokenResourceTypeEnum = "token"
 )
 
+func (e TokenResourceTypeEnum) ToPointer() *TokenResourceTypeEnum {
+	return &e
+}
+
 func (e *TokenResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "token":
-		*e = TokenResourceTypeEnum(s)
+		*e = TokenResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokenResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokenResourceTypeEnum: %v", v)
 	}
 }
 

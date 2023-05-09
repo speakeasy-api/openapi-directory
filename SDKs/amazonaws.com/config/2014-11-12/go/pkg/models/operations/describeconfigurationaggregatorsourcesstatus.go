@@ -16,17 +16,21 @@ const (
 	DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnumStarlingDoveServiceDescribeConfigurationAggregatorSourcesStatus DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum = "StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus"
 )
 
+func (e DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum) ToPointer() *DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DescribeConfigurationAggregatorSourcesStatus":
-		*e = DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum(s)
+		*e = DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeConfigurationAggregatorSourcesStatusXAmzTargetEnum: %v", v)
 	}
 }
 

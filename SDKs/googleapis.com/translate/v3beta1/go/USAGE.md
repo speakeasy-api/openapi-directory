@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TranslateProjectsLocationsBatchTranslateDocumentRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, operations.TranslateProjectsLocationsBatchTranslateDocumentRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchTranslateDocumentRequest: &shared.BatchTranslateDocumentRequest{
-            CustomizedAttribution: "provident",
-            EnableShadowRemovalNativePdf: false,
+            CustomizedAttribution: sdk.String("provident"),
+            EnableShadowRemovalNativePdf: sdk.Bool(false),
             FormatConversions: map[string]string{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
@@ -25,37 +26,37 @@ func main() {
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
                 "deserunt": shared.TranslateTextGlossaryConfig{
-                    Glossary: "suscipit",
-                    IgnoreCase: false,
+                    Glossary: sdk.String("suscipit"),
+                    IgnoreCase: sdk.Bool(false),
                 },
                 "iure": shared.TranslateTextGlossaryConfig{
-                    Glossary: "magnam",
-                    IgnoreCase: false,
+                    Glossary: sdk.String("magnam"),
+                    IgnoreCase: sdk.Bool(false),
                 },
                 "debitis": shared.TranslateTextGlossaryConfig{
-                    Glossary: "ipsa",
-                    IgnoreCase: false,
+                    Glossary: sdk.String("ipsa"),
+                    IgnoreCase: sdk.Bool(false),
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "tempora",
+                        InputURI: sdk.String("tempora"),
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "suscipit",
+                        InputURI: sdk.String("suscipit"),
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "molestiae",
+                        InputURI: sdk.String("molestiae"),
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "minus",
+                        InputURI: sdk.String("minus"),
                     },
                 },
             },
@@ -67,29 +68,26 @@ func main() {
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "veritatis",
+                    OutputURIPrefix: sdk.String("veritatis"),
                 },
             },
-            SourceLanguageCode: "deserunt",
+            SourceLanguageCode: sdk.String("deserunt"),
             TargetLanguageCodes: []string{
                 "ipsam",
             },
         },
-        AccessToken: "repellendus",
-        Alt: "proto",
-        Callback: "quo",
-        Fields: "odit",
-        Key: "at",
-        OauthToken: "at",
+        AccessToken: sdk.String("repellendus"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quo"),
+        Fields: sdk.String("odit"),
+        Key: sdk.String("at"),
+        OauthToken: sdk.String("at"),
         Parent: "maiores",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "quod",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, req, operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

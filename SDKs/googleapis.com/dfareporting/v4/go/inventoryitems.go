@@ -34,7 +34,10 @@ func newInventoryItems(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingInventoryItemsGet - Gets one inventory item by ID.
 func (s *inventoryItems) DfareportingInventoryItemsGet(ctx context.Context, request operations.DfareportingInventoryItemsGetRequest, security operations.DfareportingInventoryItemsGetSecurity) (*operations.DfareportingInventoryItemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *inventoryItems) DfareportingInventoryItemsGet(ctx context.Context, requ
 // DfareportingInventoryItemsList - Retrieves a list of inventory items, possibly filtered. This method supports paging.
 func (s *inventoryItems) DfareportingInventoryItemsList(ctx context.Context, request operations.DfareportingInventoryItemsListRequest, security operations.DfareportingInventoryItemsListSecurity) (*operations.DfareportingInventoryItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/inventoryItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

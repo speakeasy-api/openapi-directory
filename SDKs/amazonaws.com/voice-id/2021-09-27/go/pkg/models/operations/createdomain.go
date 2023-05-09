@@ -16,17 +16,21 @@ const (
 	CreateDomainXAmzTargetEnumVoiceIDCreateDomain CreateDomainXAmzTargetEnum = "VoiceID.CreateDomain"
 )
 
+func (e CreateDomainXAmzTargetEnum) ToPointer() *CreateDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.CreateDomain":
-		*e = CreateDomainXAmzTargetEnum(s)
+		*e = CreateDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDomainXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	GetMeQuestionsFeaturedOrderEnumAsc  GetMeQuestionsFeaturedOrderEnum = "asc"
 )
 
+func (e GetMeQuestionsFeaturedOrderEnum) ToPointer() *GetMeQuestionsFeaturedOrderEnum {
+	return &e
+}
+
 func (e *GetMeQuestionsFeaturedOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetMeQuestionsFeaturedOrderEnum(s)
+		*e = GetMeQuestionsFeaturedOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMeQuestionsFeaturedOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMeQuestionsFeaturedOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetMeQuestionsFeaturedSortEnumVotes    GetMeQuestionsFeaturedSortEnum = "votes"
 )
 
+func (e GetMeQuestionsFeaturedSortEnum) ToPointer() *GetMeQuestionsFeaturedSortEnum {
+	return &e
+}
+
 func (e *GetMeQuestionsFeaturedSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activity":
 		fallthrough
 	case "creation":
 		fallthrough
 	case "votes":
-		*e = GetMeQuestionsFeaturedSortEnum(s)
+		*e = GetMeQuestionsFeaturedSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMeQuestionsFeaturedSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMeQuestionsFeaturedSortEnum: %v", v)
 	}
 }
 

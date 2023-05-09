@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -61,4 +62,6 @@ pkg/models/shared/destroysecretversionrequest.go
 pkg/models/shared/disablesecretversionrequest.go
 pkg/models/shared/enablesecretversionrequest.go
 pkg/models/shared/listsecretversionsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

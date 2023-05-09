@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BalanceLookupRequest{
-        APIKey: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Balance.BalanceLookup(ctx, req)
+    res, err := s.Balance.BalanceLookup(ctx, operations.BalanceLookupRequest{
+        APIKey: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

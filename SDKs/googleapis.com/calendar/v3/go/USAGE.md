@@ -2,31 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CalendarACLDeleteRequest{
-        Alt: "json",
-        CalendarID: "corrupti",
-        Fields: "provident",
-        Key: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        RuleID: "nulla",
-        UserIP: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ACL.CalendarACLDelete(ctx, req, operations.CalendarACLDeleteSecurity{
+    res, err := s.ACL.CalendarACLDelete(ctx, operations.CalendarACLDeleteRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        CalendarID: "corrupti",
+        Fields: sdk.String("provident"),
+        Key: sdk.String("distinctio"),
+        OauthToken: sdk.String("quibusdam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
+        RuleID: "nulla",
+        UserIP: sdk.String("corrupti"),
+    }, operations.CalendarACLDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

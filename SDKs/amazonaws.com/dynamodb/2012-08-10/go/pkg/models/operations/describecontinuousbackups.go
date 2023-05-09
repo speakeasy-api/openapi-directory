@@ -16,17 +16,21 @@ const (
 	DescribeContinuousBackupsXAmzTargetEnumDynamoDb20120810DescribeContinuousBackups DescribeContinuousBackupsXAmzTargetEnum = "DynamoDB_20120810.DescribeContinuousBackups"
 )
 
+func (e DescribeContinuousBackupsXAmzTargetEnum) ToPointer() *DescribeContinuousBackupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeContinuousBackupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.DescribeContinuousBackups":
-		*e = DescribeContinuousBackupsXAmzTargetEnum(s)
+		*e = DescribeContinuousBackupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeContinuousBackupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeContinuousBackupsXAmzTargetEnum: %v", v)
 	}
 }
 

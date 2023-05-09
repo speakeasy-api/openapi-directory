@@ -35,7 +35,10 @@ func newGames(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // GamesAchievementsRead - Get a list of game achievements.
 func (s *games) GamesAchievementsRead(ctx context.Context, request operations.GamesAchievementsReadRequest) (*operations.GamesAchievementsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/achievements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/achievements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *games) GamesAchievementsRead(ctx context.Context, request operations.Ga
 // GamesAdditionsList - Get a list of DLC's for the game, GOTY and other editions, companion apps, etc.
 func (s *games) GamesAdditionsList(ctx context.Context, request operations.GamesAdditionsListRequest) (*operations.GamesAdditionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/additions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/additions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -127,7 +133,10 @@ func (s *games) GamesAdditionsList(ctx context.Context, request operations.Games
 // GamesDevelopmentTeamList - Get a list of individual creators that were part of the development team.
 func (s *games) GamesDevelopmentTeamList(ctx context.Context, request operations.GamesDevelopmentTeamListRequest) (*operations.GamesDevelopmentTeamListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/development-team", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/development-team", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *games) GamesDevelopmentTeamList(ctx context.Context, request operations
 // GamesGameSeriesList - Get a list of games that are part of the same series.
 func (s *games) GamesGameSeriesList(ctx context.Context, request operations.GamesGameSeriesListRequest) (*operations.GamesGameSeriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/game-series", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/game-series", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +283,10 @@ func (s *games) GamesList(ctx context.Context, request operations.GamesListReque
 // GamesMoviesRead - Get a list of game trailers.
 func (s *games) GamesMoviesRead(ctx context.Context, request operations.GamesMoviesReadRequest) (*operations.GamesMoviesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/movies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/movies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -315,7 +330,10 @@ func (s *games) GamesMoviesRead(ctx context.Context, request operations.GamesMov
 // GamesParentGamesList - Get a list of parent games for DLC's and editions.
 func (s *games) GamesParentGamesList(ctx context.Context, request operations.GamesParentGamesListRequest) (*operations.GamesParentGamesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/parent-games", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/parent-games", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -363,7 +381,10 @@ func (s *games) GamesParentGamesList(ctx context.Context, request operations.Gam
 // GamesRead - Get details of the game.
 func (s *games) GamesRead(ctx context.Context, request operations.GamesReadRequest) (*operations.GamesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -407,7 +428,10 @@ func (s *games) GamesRead(ctx context.Context, request operations.GamesReadReque
 // GamesRedditRead - Get a list of most recent posts from the game's subreddit.
 func (s *games) GamesRedditRead(ctx context.Context, request operations.GamesRedditReadRequest) (*operations.GamesRedditReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/reddit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/reddit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +475,10 @@ func (s *games) GamesRedditRead(ctx context.Context, request operations.GamesRed
 // GamesScreenshotsList - Get screenshots for the game.
 func (s *games) GamesScreenshotsList(ctx context.Context, request operations.GamesScreenshotsListRequest) (*operations.GamesScreenshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/screenshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/screenshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -499,7 +526,10 @@ func (s *games) GamesScreenshotsList(ctx context.Context, request operations.Gam
 // GamesStoresList - Get links to the stores that sell the game.
 func (s *games) GamesStoresList(ctx context.Context, request operations.GamesStoresListRequest) (*operations.GamesStoresListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/stores", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{game_pk}/stores", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -547,7 +577,10 @@ func (s *games) GamesStoresList(ctx context.Context, request operations.GamesSto
 // GamesSuggestedRead - Get a list of visually similar games, available only for business and enterprise API users.
 func (s *games) GamesSuggestedRead(ctx context.Context, request operations.GamesSuggestedReadRequest) (*operations.GamesSuggestedReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/suggested", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/suggested", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -591,7 +624,10 @@ func (s *games) GamesSuggestedRead(ctx context.Context, request operations.Games
 // GamesTwitchRead - Get streams on Twitch associated with the game, available only for business and enterprise API users.
 func (s *games) GamesTwitchRead(ctx context.Context, request operations.GamesTwitchReadRequest) (*operations.GamesTwitchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/twitch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/twitch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -635,7 +671,10 @@ func (s *games) GamesTwitchRead(ctx context.Context, request operations.GamesTwi
 // GamesYoutubeRead - Get videos from YouTube associated with the game, available only for business and enterprise API users.
 func (s *games) GamesYoutubeRead(ctx context.Context, request operations.GamesYoutubeReadRequest) (*operations.GamesYoutubeReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/{id}/youtube", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/{id}/youtube", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

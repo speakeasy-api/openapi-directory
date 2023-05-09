@@ -15,17 +15,21 @@ const (
 	POSTDescribeAutoScalingNotificationTypesActionEnumDescribeAutoScalingNotificationTypes POSTDescribeAutoScalingNotificationTypesActionEnum = "DescribeAutoScalingNotificationTypes"
 )
 
+func (e POSTDescribeAutoScalingNotificationTypesActionEnum) ToPointer() *POSTDescribeAutoScalingNotificationTypesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeAutoScalingNotificationTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAutoScalingNotificationTypes":
-		*e = POSTDescribeAutoScalingNotificationTypesActionEnum(s)
+		*e = POSTDescribeAutoScalingNotificationTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeAutoScalingNotificationTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeAutoScalingNotificationTypesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeAutoScalingNotificationTypesVersionEnumTwoThousandAndEleven0101 POSTDescribeAutoScalingNotificationTypesVersionEnum = "2011-01-01"
 )
 
+func (e POSTDescribeAutoScalingNotificationTypesVersionEnum) ToPointer() *POSTDescribeAutoScalingNotificationTypesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeAutoScalingNotificationTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTDescribeAutoScalingNotificationTypesVersionEnum(s)
+		*e = POSTDescribeAutoScalingNotificationTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeAutoScalingNotificationTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeAutoScalingNotificationTypesVersionEnum: %v", v)
 	}
 }
 

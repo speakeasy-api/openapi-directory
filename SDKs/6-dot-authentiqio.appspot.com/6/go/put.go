@@ -42,7 +42,10 @@ func newPut(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *put) KeyBind(ctx context.Context, request operations.KeyBindRequest) (*operations.KeyBindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/key/{PK}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -119,7 +122,10 @@ func (s *put) KeyBind(ctx context.Context, request operations.KeyBindRequest) (*
 // See: https://github.com/skion/authentiq/wiki/JWT-Examples
 func (s *put) SignUpdate(ctx context.Context, request operations.SignUpdateRequest) (*operations.SignUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/scope/{job}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	InputStartingPositionEnumLastStoppedPoint InputStartingPositionEnum = "LAST_STOPPED_POINT"
 )
 
+func (e InputStartingPositionEnum) ToPointer() *InputStartingPositionEnum {
+	return &e
+}
+
 func (e *InputStartingPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOW":
 		fallthrough
 	case "TRIM_HORIZON":
 		fallthrough
 	case "LAST_STOPPED_POINT":
-		*e = InputStartingPositionEnum(s)
+		*e = InputStartingPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InputStartingPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for InputStartingPositionEnum: %v", v)
 	}
 }

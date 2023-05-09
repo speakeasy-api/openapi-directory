@@ -18,21 +18,25 @@ const (
 	EnterpriseAdminListPublicKeysSortEnumAccessed EnterpriseAdminListPublicKeysSortEnum = "accessed"
 )
 
+func (e EnterpriseAdminListPublicKeysSortEnum) ToPointer() *EnterpriseAdminListPublicKeysSortEnum {
+	return &e
+}
+
 func (e *EnterpriseAdminListPublicKeysSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
 		fallthrough
 	case "accessed":
-		*e = EnterpriseAdminListPublicKeysSortEnum(s)
+		*e = EnterpriseAdminListPublicKeysSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseAdminListPublicKeysSortEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseAdminListPublicKeysSortEnum: %v", v)
 	}
 }
 

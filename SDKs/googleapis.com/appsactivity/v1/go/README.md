@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/appsactivi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppsactivityActivitiesListRequest{
-        Alt: "json",
-        DriveAncestorID: "corrupti",
-        DriveFileID: "provident",
-        Fields: "distinctio",
-        GroupingStrategy: "none",
-        Key: "unde",
-        OauthToken: "nulla",
-        PageSize: 544883,
-        PageToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        Source: "error",
-        UserID: "deserunt",
-        UserIP: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Activities.AppsactivityActivitiesList(ctx, req, operations.AppsactivityActivitiesListSecurity{
+    res, err := s.Activities.AppsactivityActivitiesList(ctx, operations.AppsactivityActivitiesListRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        DriveAncestorID: sdk.String("corrupti"),
+        DriveFileID: sdk.String("provident"),
+        Fields: sdk.String("distinctio"),
+        GroupingStrategy: operations.AppsactivityActivitiesListGroupingStrategyEnumNone.ToPointer(),
+        Key: sdk.String("unde"),
+        OauthToken: sdk.String("nulla"),
+        PageSize: sdk.Int64(544883),
+        PageToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        Source: sdk.String("error"),
+        UserID: sdk.String("deserunt"),
+        UserIP: sdk.String("suscipit"),
+    }, operations.AppsactivityActivitiesListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -61,9 +59,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Activities
+### [Activities](docs/activities/README.md)
 
-* `AppsactivityActivitiesList` - Returns a list of activities visible to the current logged in user. Visible activities are determined by the visibility settings of the object that was acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is scoped to activities from a given Google service using the source parameter.
+* [AppsactivityActivitiesList](docs/activities/README.md#appsactivityactivitieslist) - Returns a list of activities visible to the current logged in user. Visible activities are determined by the visibility settings of the object that was acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is scoped to activities from a given Google service using the source parameter.
 <!-- End SDK Available Operations -->
 
 ### Maturity

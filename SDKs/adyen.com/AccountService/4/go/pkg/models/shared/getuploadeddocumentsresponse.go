@@ -5,7 +5,7 @@ package shared
 // GetUploadedDocumentsResponse - OK - the request has succeeded.
 type GetUploadedDocumentsResponse struct {
 	// A list of the documents and their details.
-	DocumentDetails []DocumentDetail `json:"documentDetails,omitempty"`
+	DocumentDetails []DocumentDetailWrapper `json:"documentDetails,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

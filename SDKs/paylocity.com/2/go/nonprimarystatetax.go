@@ -35,7 +35,10 @@ func newNonPrimaryStateTax(defaultClient, securityClient HTTPClient, serverURL, 
 // Sends new or updated employee non-primary state tax information directly to Web Pay.
 func (s *nonPrimaryStateTax) AddOrUpdateNonPrimaryStateTax(ctx context.Context, request operations.AddOrUpdateNonPrimaryStateTaxRequest, security operations.AddOrUpdateNonPrimaryStateTaxSecurity) (*operations.AddOrUpdateNonPrimaryStateTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/nonprimaryStateTax", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NonPrimaryStateTax", "json")
 	if err != nil {

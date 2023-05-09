@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/container/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ContainerProjectsAggregatedUsableSubnetworksListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PageSize: 423655,
-        PageToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.ContainerProjectsAggregatedUsableSubnetworksList(ctx, req, operations.ContainerProjectsAggregatedUsableSubnetworksListSecurity{
+    res, err := s.Projects.ContainerProjectsAggregatedUsableSubnetworksList(ctx, operations.ContainerProjectsAggregatedUsableSubnetworksListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PageSize: sdk.Int64(423655),
+        PageToken: sdk.String("error"),
+        Parent: "deserunt",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("suscipit"),
+        UploadType: sdk.String("iure"),
+        UploadProtocol: sdk.String("magnam"),
+    }, operations.ContainerProjectsAggregatedUsableSubnetworksListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -62,69 +60,69 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ContainerProjectsAggregatedUsableSubnetworksList` - Lists subnetworks that can be used for creating clusters in a project.
-* `ContainerProjectsLocationsClustersCompleteIPRotation` - Completes master IP rotation.
-* `ContainerProjectsLocationsClustersCreate` - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
-* `ContainerProjectsLocationsClustersGetJwks` - Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet intended for general use, and is not available for all clusters.
-* `ContainerProjectsLocationsClustersList` - Lists all clusters owned by a project in either the specified zone or all zones.
-* `ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade` - CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
-* `ContainerProjectsLocationsClustersNodePoolsCreate` - Creates a node pool for a cluster.
-* `ContainerProjectsLocationsClustersNodePoolsDelete` - Deletes a node pool from a cluster.
-* `ContainerProjectsLocationsClustersNodePoolsList` - Lists the node pools for a cluster.
-* `ContainerProjectsLocationsClustersNodePoolsRollback` - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
-* `ContainerProjectsLocationsClustersNodePoolsSetAutoscaling` - Sets the autoscaling settings of a specific node pool.
-* `ContainerProjectsLocationsClustersNodePoolsSetManagement` - Sets the NodeManagement options for a node pool.
-* `ContainerProjectsLocationsClustersNodePoolsSetSize` - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
-* `ContainerProjectsLocationsClustersNodePoolsUpdate` - Updates the version and/or image type of a specific node pool.
-* `ContainerProjectsLocationsClustersSetAddons` - Sets the addons for a specific cluster.
-* `ContainerProjectsLocationsClustersSetLegacyAbac` - Enables or disables the ABAC authorization mechanism on a cluster.
-* `ContainerProjectsLocationsClustersSetLocations` - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
-* `ContainerProjectsLocationsClustersSetLogging` - Sets the logging service for a specific cluster.
-* `ContainerProjectsLocationsClustersSetMaintenancePolicy` - Sets the maintenance policy for a cluster.
-* `ContainerProjectsLocationsClustersSetMasterAuth` - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
-* `ContainerProjectsLocationsClustersSetMonitoring` - Sets the monitoring service for a specific cluster.
-* `ContainerProjectsLocationsClustersSetNetworkPolicy` - Enables or disables Network Policy for a cluster.
-* `ContainerProjectsLocationsClustersSetResourceLabels` - Sets labels on a cluster.
-* `ContainerProjectsLocationsClustersStartIPRotation` - Starts master IP rotation.
-* `ContainerProjectsLocationsClustersUpdateMaster` - Updates the master for a specific cluster.
-* `ContainerProjectsLocationsClustersWellKnownGetOpenidConfiguration` - Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0 specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API is not yet intended for general use, and is not available for all clusters.
-* `ContainerProjectsLocationsGetServerConfig` - Returns configuration info about the Google Kubernetes Engine service.
-* `ContainerProjectsLocationsList` - Fetches locations that offer Google Kubernetes Engine.
-* `ContainerProjectsLocationsOperationsCancel` - Cancels the specified operation.
-* `ContainerProjectsLocationsOperationsGet` - Gets the specified operation.
-* `ContainerProjectsLocationsOperationsList` - Lists all operations in a project in the specified zone or all zones.
-* `ContainerProjectsZonesClustersAddons` - Sets the addons for a specific cluster.
-* `ContainerProjectsZonesClustersCompleteIPRotation` - Completes master IP rotation.
-* `ContainerProjectsZonesClustersCreate` - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
-* `ContainerProjectsZonesClustersDelete` - Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes that were configured during cluster creation are also deleted. Other Google Compute Engine resources that might be in use by the cluster, such as load balancer resources, are not deleted if they weren't present when the cluster was initially created.
-* `ContainerProjectsZonesClustersGet` - Gets the details for a specific cluster.
-* `ContainerProjectsZonesClustersLegacyAbac` - Enables or disables the ABAC authorization mechanism on a cluster.
-* `ContainerProjectsZonesClustersList` - Lists all clusters owned by a project in either the specified zone or all zones.
-* `ContainerProjectsZonesClustersLocations` - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
-* `ContainerProjectsZonesClustersLogging` - Sets the logging service for a specific cluster.
-* `ContainerProjectsZonesClustersMaster` - Updates the master for a specific cluster.
-* `ContainerProjectsZonesClustersMonitoring` - Sets the monitoring service for a specific cluster.
-* `ContainerProjectsZonesClustersNodePoolsAutoscaling` - Sets the autoscaling settings of a specific node pool.
-* `ContainerProjectsZonesClustersNodePoolsCreate` - Creates a node pool for a cluster.
-* `ContainerProjectsZonesClustersNodePoolsDelete` - Deletes a node pool from a cluster.
-* `ContainerProjectsZonesClustersNodePoolsGet` - Retrieves the requested node pool.
-* `ContainerProjectsZonesClustersNodePoolsList` - Lists the node pools for a cluster.
-* `ContainerProjectsZonesClustersNodePoolsRollback` - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
-* `ContainerProjectsZonesClustersNodePoolsSetManagement` - Sets the NodeManagement options for a node pool.
-* `ContainerProjectsZonesClustersNodePoolsSetSize` - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
-* `ContainerProjectsZonesClustersNodePoolsUpdate` - Updates the version and/or image type of a specific node pool.
-* `ContainerProjectsZonesClustersResourceLabels` - Sets labels on a cluster.
-* `ContainerProjectsZonesClustersSetMaintenancePolicy` - Sets the maintenance policy for a cluster.
-* `ContainerProjectsZonesClustersSetMasterAuth` - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
-* `ContainerProjectsZonesClustersSetNetworkPolicy` - Enables or disables Network Policy for a cluster.
-* `ContainerProjectsZonesClustersStartIPRotation` - Starts master IP rotation.
-* `ContainerProjectsZonesClustersUpdate` - Updates the settings for a specific cluster.
-* `ContainerProjectsZonesGetServerconfig` - Returns configuration info about the Google Kubernetes Engine service.
-* `ContainerProjectsZonesOperationsCancel` - Cancels the specified operation.
-* `ContainerProjectsZonesOperationsGet` - Gets the specified operation.
-* `ContainerProjectsZonesOperationsList` - Lists all operations in a project in the specified zone or all zones.
+* [ContainerProjectsAggregatedUsableSubnetworksList](docs/projects/README.md#containerprojectsaggregatedusablesubnetworkslist) - Lists subnetworks that can be used for creating clusters in a project.
+* [ContainerProjectsLocationsClustersCompleteIPRotation](docs/projects/README.md#containerprojectslocationsclusterscompleteiprotation) - Completes master IP rotation.
+* [ContainerProjectsLocationsClustersCreate](docs/projects/README.md#containerprojectslocationsclusterscreate) - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
+* [ContainerProjectsLocationsClustersGetJwks](docs/projects/README.md#containerprojectslocationsclustersgetjwks) - Gets the public component of the cluster signing keys in JSON Web Key format. This API is not yet intended for general use, and is not available for all clusters.
+* [ContainerProjectsLocationsClustersList](docs/projects/README.md#containerprojectslocationsclusterslist) - Lists all clusters owned by a project in either the specified zone or all zones.
+* [ContainerProjectsLocationsClustersNodePoolsCompleteUpgrade](docs/projects/README.md#containerprojectslocationsclustersnodepoolscompleteupgrade) - CompleteNodePoolUpgrade will signal an on-going node pool upgrade to complete.
+* [ContainerProjectsLocationsClustersNodePoolsCreate](docs/projects/README.md#containerprojectslocationsclustersnodepoolscreate) - Creates a node pool for a cluster.
+* [ContainerProjectsLocationsClustersNodePoolsDelete](docs/projects/README.md#containerprojectslocationsclustersnodepoolsdelete) - Deletes a node pool from a cluster.
+* [ContainerProjectsLocationsClustersNodePoolsList](docs/projects/README.md#containerprojectslocationsclustersnodepoolslist) - Lists the node pools for a cluster.
+* [ContainerProjectsLocationsClustersNodePoolsRollback](docs/projects/README.md#containerprojectslocationsclustersnodepoolsrollback) - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
+* [ContainerProjectsLocationsClustersNodePoolsSetAutoscaling](docs/projects/README.md#containerprojectslocationsclustersnodepoolssetautoscaling) - Sets the autoscaling settings of a specific node pool.
+* [ContainerProjectsLocationsClustersNodePoolsSetManagement](docs/projects/README.md#containerprojectslocationsclustersnodepoolssetmanagement) - Sets the NodeManagement options for a node pool.
+* [ContainerProjectsLocationsClustersNodePoolsSetSize](docs/projects/README.md#containerprojectslocationsclustersnodepoolssetsize) - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
+* [ContainerProjectsLocationsClustersNodePoolsUpdate](docs/projects/README.md#containerprojectslocationsclustersnodepoolsupdate) - Updates the version and/or image type of a specific node pool.
+* [ContainerProjectsLocationsClustersSetAddons](docs/projects/README.md#containerprojectslocationsclusterssetaddons) - Sets the addons for a specific cluster.
+* [ContainerProjectsLocationsClustersSetLegacyAbac](docs/projects/README.md#containerprojectslocationsclusterssetlegacyabac) - Enables or disables the ABAC authorization mechanism on a cluster.
+* [ContainerProjectsLocationsClustersSetLocations](docs/projects/README.md#containerprojectslocationsclusterssetlocations) - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+* [ContainerProjectsLocationsClustersSetLogging](docs/projects/README.md#containerprojectslocationsclusterssetlogging) - Sets the logging service for a specific cluster.
+* [ContainerProjectsLocationsClustersSetMaintenancePolicy](docs/projects/README.md#containerprojectslocationsclusterssetmaintenancepolicy) - Sets the maintenance policy for a cluster.
+* [ContainerProjectsLocationsClustersSetMasterAuth](docs/projects/README.md#containerprojectslocationsclusterssetmasterauth) - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
+* [ContainerProjectsLocationsClustersSetMonitoring](docs/projects/README.md#containerprojectslocationsclusterssetmonitoring) - Sets the monitoring service for a specific cluster.
+* [ContainerProjectsLocationsClustersSetNetworkPolicy](docs/projects/README.md#containerprojectslocationsclusterssetnetworkpolicy) - Enables or disables Network Policy for a cluster.
+* [ContainerProjectsLocationsClustersSetResourceLabels](docs/projects/README.md#containerprojectslocationsclusterssetresourcelabels) - Sets labels on a cluster.
+* [ContainerProjectsLocationsClustersStartIPRotation](docs/projects/README.md#containerprojectslocationsclustersstartiprotation) - Starts master IP rotation.
+* [ContainerProjectsLocationsClustersUpdateMaster](docs/projects/README.md#containerprojectslocationsclustersupdatemaster) - Updates the master for a specific cluster.
+* [ContainerProjectsLocationsClustersWellKnownGetOpenidConfiguration](docs/projects/README.md#containerprojectslocationsclusterswellknowngetopenidconfiguration) - Gets the OIDC discovery document for the cluster. See the [OpenID Connect Discovery 1.0 specification](https://openid.net/specs/openid-connect-discovery-1_0.html) for details. This API is not yet intended for general use, and is not available for all clusters.
+* [ContainerProjectsLocationsGetServerConfig](docs/projects/README.md#containerprojectslocationsgetserverconfig) - Returns configuration info about the Google Kubernetes Engine service.
+* [ContainerProjectsLocationsList](docs/projects/README.md#containerprojectslocationslist) - Fetches locations that offer Google Kubernetes Engine.
+* [ContainerProjectsLocationsOperationsCancel](docs/projects/README.md#containerprojectslocationsoperationscancel) - Cancels the specified operation.
+* [ContainerProjectsLocationsOperationsGet](docs/projects/README.md#containerprojectslocationsoperationsget) - Gets the specified operation.
+* [ContainerProjectsLocationsOperationsList](docs/projects/README.md#containerprojectslocationsoperationslist) - Lists all operations in a project in the specified zone or all zones.
+* [ContainerProjectsZonesClustersAddons](docs/projects/README.md#containerprojectszonesclustersaddons) - Sets the addons for a specific cluster.
+* [ContainerProjectsZonesClustersCompleteIPRotation](docs/projects/README.md#containerprojectszonesclusterscompleteiprotation) - Completes master IP rotation.
+* [ContainerProjectsZonesClustersCreate](docs/projects/README.md#containerprojectszonesclusterscreate) - Creates a cluster, consisting of the specified number and type of Google Compute Engine instances. By default, the cluster is created in the project's [default network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks). One firewall is added for the cluster. After cluster creation, the Kubelet creates routes for each node to allow the containers on that node to communicate with all other instances in the cluster. Finally, an entry is added to the project's global metadata indicating which CIDR range the cluster is using.
+* [ContainerProjectsZonesClustersDelete](docs/projects/README.md#containerprojectszonesclustersdelete) - Deletes the cluster, including the Kubernetes endpoint and all worker nodes. Firewalls and routes that were configured during cluster creation are also deleted. Other Google Compute Engine resources that might be in use by the cluster, such as load balancer resources, are not deleted if they weren't present when the cluster was initially created.
+* [ContainerProjectsZonesClustersGet](docs/projects/README.md#containerprojectszonesclustersget) - Gets the details for a specific cluster.
+* [ContainerProjectsZonesClustersLegacyAbac](docs/projects/README.md#containerprojectszonesclusterslegacyabac) - Enables or disables the ABAC authorization mechanism on a cluster.
+* [ContainerProjectsZonesClustersList](docs/projects/README.md#containerprojectszonesclusterslist) - Lists all clusters owned by a project in either the specified zone or all zones.
+* [ContainerProjectsZonesClustersLocations](docs/projects/README.md#containerprojectszonesclusterslocations) - Sets the locations for a specific cluster. Deprecated. Use [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters/update) instead.
+* [ContainerProjectsZonesClustersLogging](docs/projects/README.md#containerprojectszonesclusterslogging) - Sets the logging service for a specific cluster.
+* [ContainerProjectsZonesClustersMaster](docs/projects/README.md#containerprojectszonesclustersmaster) - Updates the master for a specific cluster.
+* [ContainerProjectsZonesClustersMonitoring](docs/projects/README.md#containerprojectszonesclustersmonitoring) - Sets the monitoring service for a specific cluster.
+* [ContainerProjectsZonesClustersNodePoolsAutoscaling](docs/projects/README.md#containerprojectszonesclustersnodepoolsautoscaling) - Sets the autoscaling settings of a specific node pool.
+* [ContainerProjectsZonesClustersNodePoolsCreate](docs/projects/README.md#containerprojectszonesclustersnodepoolscreate) - Creates a node pool for a cluster.
+* [ContainerProjectsZonesClustersNodePoolsDelete](docs/projects/README.md#containerprojectszonesclustersnodepoolsdelete) - Deletes a node pool from a cluster.
+* [ContainerProjectsZonesClustersNodePoolsGet](docs/projects/README.md#containerprojectszonesclustersnodepoolsget) - Retrieves the requested node pool.
+* [ContainerProjectsZonesClustersNodePoolsList](docs/projects/README.md#containerprojectszonesclustersnodepoolslist) - Lists the node pools for a cluster.
+* [ContainerProjectsZonesClustersNodePoolsRollback](docs/projects/README.md#containerprojectszonesclustersnodepoolsrollback) - Rolls back a previously Aborted or Failed NodePool upgrade. This makes no changes if the last upgrade successfully completed.
+* [ContainerProjectsZonesClustersNodePoolsSetManagement](docs/projects/README.md#containerprojectszonesclustersnodepoolssetmanagement) - Sets the NodeManagement options for a node pool.
+* [ContainerProjectsZonesClustersNodePoolsSetSize](docs/projects/README.md#containerprojectszonesclustersnodepoolssetsize) - SetNodePoolSizeRequest sets the size of a node pool. The new size will be used for all replicas, including future replicas created by modifying NodePool.locations.
+* [ContainerProjectsZonesClustersNodePoolsUpdate](docs/projects/README.md#containerprojectszonesclustersnodepoolsupdate) - Updates the version and/or image type of a specific node pool.
+* [ContainerProjectsZonesClustersResourceLabels](docs/projects/README.md#containerprojectszonesclustersresourcelabels) - Sets labels on a cluster.
+* [ContainerProjectsZonesClustersSetMaintenancePolicy](docs/projects/README.md#containerprojectszonesclusterssetmaintenancepolicy) - Sets the maintenance policy for a cluster.
+* [ContainerProjectsZonesClustersSetMasterAuth](docs/projects/README.md#containerprojectszonesclusterssetmasterauth) - Sets master auth materials. Currently supports changing the admin password or a specific cluster, either via password generation or explicitly setting the password.
+* [ContainerProjectsZonesClustersSetNetworkPolicy](docs/projects/README.md#containerprojectszonesclusterssetnetworkpolicy) - Enables or disables Network Policy for a cluster.
+* [ContainerProjectsZonesClustersStartIPRotation](docs/projects/README.md#containerprojectszonesclustersstartiprotation) - Starts master IP rotation.
+* [ContainerProjectsZonesClustersUpdate](docs/projects/README.md#containerprojectszonesclustersupdate) - Updates the settings for a specific cluster.
+* [ContainerProjectsZonesGetServerconfig](docs/projects/README.md#containerprojectszonesgetserverconfig) - Returns configuration info about the Google Kubernetes Engine service.
+* [ContainerProjectsZonesOperationsCancel](docs/projects/README.md#containerprojectszonesoperationscancel) - Cancels the specified operation.
+* [ContainerProjectsZonesOperationsGet](docs/projects/README.md#containerprojectszonesoperationsget) - Gets the specified operation.
+* [ContainerProjectsZonesOperationsList](docs/projects/README.md#containerprojectszonesoperationslist) - Lists all operations in a project in the specified zone or all zones.
 <!-- End SDK Available Operations -->
 
 ### Maturity

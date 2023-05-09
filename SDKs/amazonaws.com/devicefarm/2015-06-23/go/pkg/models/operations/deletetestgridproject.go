@@ -16,17 +16,21 @@ const (
 	DeleteTestGridProjectXAmzTargetEnumDeviceFarm20150623DeleteTestGridProject DeleteTestGridProjectXAmzTargetEnum = "DeviceFarm_20150623.DeleteTestGridProject"
 )
 
+func (e DeleteTestGridProjectXAmzTargetEnum) ToPointer() *DeleteTestGridProjectXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTestGridProjectXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.DeleteTestGridProject":
-		*e = DeleteTestGridProjectXAmzTargetEnum(s)
+		*e = DeleteTestGridProjectXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTestGridProjectXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTestGridProjectXAmzTargetEnum: %v", v)
 	}
 }
 

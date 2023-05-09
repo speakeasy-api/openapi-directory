@@ -35,7 +35,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // scope of the consumer cloud resource hierarchy context.
 func (s *organizations) CloudprivatecatalogOrganizationsCatalogsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest, security operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/catalogs:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/catalogs:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *organizations) CloudprivatecatalogOrganizationsCatalogsSearch(ctx conte
 // scope of the consumer cloud resource hierarchy context.
 func (s *organizations) CloudprivatecatalogOrganizationsProductsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsProductsSearchRequest, security operations.CloudprivatecatalogOrganizationsProductsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsProductsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/products:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/products:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +139,10 @@ func (s *organizations) CloudprivatecatalogOrganizationsProductsSearch(ctx conte
 // scope of the consumer cloud resource hierarchy context.
 func (s *organizations) CloudprivatecatalogOrganizationsVersionsSearch(ctx context.Context, request operations.CloudprivatecatalogOrganizationsVersionsSearchRequest, security operations.CloudprivatecatalogOrganizationsVersionsSearchSecurity) (*operations.CloudprivatecatalogOrganizationsVersionsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/versions:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{resource}/versions:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

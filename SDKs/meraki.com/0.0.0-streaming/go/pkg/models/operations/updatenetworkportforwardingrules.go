@@ -16,19 +16,23 @@ const (
 	UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnumUDP UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum = "udp"
 )
 
+func (e UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum) ToPointer() *UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum {
+	return &e
+}
+
 func (e *UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum(s)
+		*e = UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkPortForwardingRulesRequestBodyRulesProtocolEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnumInternet2 UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum = "internet2"
 )
 
+func (e UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum) ToPointer() *UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum {
+	return &e
+}
+
 func (e *UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "both":
 		fallthrough
 	case "internet1":
 		fallthrough
 	case "internet2":
-		*e = UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum(s)
+		*e = UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkPortForwardingRulesRequestBodyRulesUplinkEnum: %v", v)
 	}
 }
 

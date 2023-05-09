@@ -15,20 +15,24 @@ const (
 	BatchDeleteImportDataErrorCodeEnumOverLimit           BatchDeleteImportDataErrorCodeEnum = "OVER_LIMIT"
 )
 
+func (e BatchDeleteImportDataErrorCodeEnum) ToPointer() *BatchDeleteImportDataErrorCodeEnum {
+	return &e
+}
+
 func (e *BatchDeleteImportDataErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_FOUND":
 		fallthrough
 	case "INTERNAL_SERVER_ERROR":
 		fallthrough
 	case "OVER_LIMIT":
-		*e = BatchDeleteImportDataErrorCodeEnum(s)
+		*e = BatchDeleteImportDataErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteImportDataErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteImportDataErrorCodeEnum: %v", v)
 	}
 }

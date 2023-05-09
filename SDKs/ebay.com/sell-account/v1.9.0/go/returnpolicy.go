@@ -94,7 +94,10 @@ func (s *returnPolicy) CreateReturnPolicy(ctx context.Context, request shared.Re
 // DeleteReturnPolicy - This method deletes a return policy. Supply the ID of the policy you want to delete in the <b>returnPolicyId</b> path parameter.
 func (s *returnPolicy) DeleteReturnPolicy(ctx context.Context, request operations.DeleteReturnPolicyRequest, security operations.DeleteReturnPolicySecurity) (*operations.DeleteReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -188,7 +191,10 @@ func (s *returnPolicy) GetReturnPolicies(ctx context.Context, request operations
 // GetReturnPolicy - This method retrieves the complete details of the return policy specified by the <b>returnPolicyId</b> path parameter.
 func (s *returnPolicy) GetReturnPolicy(ctx context.Context, request operations.GetReturnPolicyRequest, security operations.GetReturnPolicySecurity) (*operations.GetReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *returnPolicy) GetReturnPolicyByName(ctx context.Context, request operat
 // UpdateReturnPolicy - This method updates an existing return policy. Specify the policy you want to update using the <b>return_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
 func (s *returnPolicy) UpdateReturnPolicy(ctx context.Context, request operations.UpdateReturnPolicyRequest, security operations.UpdateReturnPolicySecurity) (*operations.UpdateReturnPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/return_policy/{return_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReturnPolicyRequest", "json")
 	if err != nil {

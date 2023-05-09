@@ -18,12 +18,16 @@ const (
 	JoinTypeEnumLeftanti JoinTypeEnum = "leftanti"
 )
 
+func (e JoinTypeEnum) ToPointer() *JoinTypeEnum {
+	return &e
+}
+
 func (e *JoinTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "equijoin":
 		fallthrough
 	case "left":
@@ -35,9 +39,9 @@ func (e *JoinTypeEnum) UnmarshalJSON(data []byte) error {
 	case "leftsemi":
 		fallthrough
 	case "leftanti":
-		*e = JoinTypeEnum(s)
+		*e = JoinTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JoinTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JoinTypeEnum: %v", v)
 	}
 }

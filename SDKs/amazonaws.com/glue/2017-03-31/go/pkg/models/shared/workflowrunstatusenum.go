@@ -17,12 +17,16 @@ const (
 	WorkflowRunStatusEnumError     WorkflowRunStatusEnum = "ERROR"
 )
 
+func (e WorkflowRunStatusEnum) ToPointer() *WorkflowRunStatusEnum {
+	return &e
+}
+
 func (e *WorkflowRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "COMPLETED":
@@ -32,9 +36,9 @@ func (e *WorkflowRunStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPED":
 		fallthrough
 	case "ERROR":
-		*e = WorkflowRunStatusEnum(s)
+		*e = WorkflowRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowRunStatusEnum: %v", v)
 	}
 }

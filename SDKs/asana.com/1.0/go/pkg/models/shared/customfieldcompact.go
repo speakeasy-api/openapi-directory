@@ -51,12 +51,16 @@ const (
 	CustomFieldCompactResourceSubtypeEnumPeople    CustomFieldCompactResourceSubtypeEnum = "people"
 )
 
+func (e CustomFieldCompactResourceSubtypeEnum) ToPointer() *CustomFieldCompactResourceSubtypeEnum {
+	return &e
+}
+
 func (e *CustomFieldCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -68,10 +72,10 @@ func (e *CustomFieldCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error
 	case "date":
 		fallthrough
 	case "people":
-		*e = CustomFieldCompactResourceSubtypeEnum(s)
+		*e = CustomFieldCompactResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldCompactResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldCompactResourceSubtypeEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	CustomFieldCompactTypeEnumNumber    CustomFieldCompactTypeEnum = "number"
 )
 
+func (e CustomFieldCompactTypeEnum) ToPointer() *CustomFieldCompactTypeEnum {
+	return &e
+}
+
 func (e *CustomFieldCompactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "enum":
@@ -98,10 +106,10 @@ func (e *CustomFieldCompactTypeEnum) UnmarshalJSON(data []byte) error {
 	case "multi_enum":
 		fallthrough
 	case "number":
-		*e = CustomFieldCompactTypeEnum(s)
+		*e = CustomFieldCompactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFieldCompactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFieldCompactTypeEnum: %v", v)
 	}
 }
 

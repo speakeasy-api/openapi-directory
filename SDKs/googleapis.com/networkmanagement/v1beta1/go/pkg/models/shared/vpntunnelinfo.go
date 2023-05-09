@@ -17,12 +17,16 @@ const (
 	VpnTunnelInfoRoutingTypeEnumDynamic                VpnTunnelInfoRoutingTypeEnum = "DYNAMIC"
 )
 
+func (e VpnTunnelInfoRoutingTypeEnum) ToPointer() *VpnTunnelInfoRoutingTypeEnum {
+	return &e
+}
+
 func (e *VpnTunnelInfoRoutingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROUTING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ROUTE_BASED":
@@ -30,10 +34,10 @@ func (e *VpnTunnelInfoRoutingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "POLICY_BASED":
 		fallthrough
 	case "DYNAMIC":
-		*e = VpnTunnelInfoRoutingTypeEnum(s)
+		*e = VpnTunnelInfoRoutingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpnTunnelInfoRoutingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VpnTunnelInfoRoutingTypeEnum: %v", v)
 	}
 }
 

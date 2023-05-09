@@ -47,19 +47,23 @@ const (
 	CreateJobRequestBodyTargetSelectionEnumSnapshot   CreateJobRequestBodyTargetSelectionEnum = "SNAPSHOT"
 )
 
+func (e CreateJobRequestBodyTargetSelectionEnum) ToPointer() *CreateJobRequestBodyTargetSelectionEnum {
+	return &e
+}
+
 func (e *CreateJobRequestBodyTargetSelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUOUS":
 		fallthrough
 	case "SNAPSHOT":
-		*e = CreateJobRequestBodyTargetSelectionEnum(s)
+		*e = CreateJobRequestBodyTargetSelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateJobRequestBodyTargetSelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateJobRequestBodyTargetSelectionEnum: %v", v)
 	}
 }
 

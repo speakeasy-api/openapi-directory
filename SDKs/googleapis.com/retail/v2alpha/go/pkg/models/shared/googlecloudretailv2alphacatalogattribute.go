@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnumDynamicFacetableDisabled          GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum = "DYNAMIC_FACETABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DYNAMIC_FACETABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "DYNAMIC_FACETABLE_ENABLED":
 		fallthrough
 	case "DYNAMIC_FACETABLE_DISABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnumExactSearchableDisabled          GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum = "EXACT_SEARCHABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACT_SEARCHABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EXACT_SEARCHABLE_ENABLED":
 		fallthrough
 	case "EXACT_SEARCHABLE_DISABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnumIndexableDisabled          GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum = "INDEXABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEXABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "INDEXABLE_ENABLED":
 		fallthrough
 	case "INDEXABLE_DISABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum: %v", v)
 	}
 }
 
@@ -97,21 +109,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnumRecommendationsFilteringEnabled           GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum = "RECOMMENDATIONS_FILTERING_ENABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_DISABLED":
 		fallthrough
 	case "RECOMMENDATIONS_FILTERING_ENABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeRecommendationsFilteringOptionEnum: %v", v)
 	}
 }
 
@@ -124,21 +140,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnumRetrievableDisabled          GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum = "RETRIEVABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETRIEVABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RETRIEVABLE_ENABLED":
 		fallthrough
 	case "RETRIEVABLE_DISABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeRetrievableOptionEnum: %v", v)
 	}
 }
 
@@ -151,21 +171,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnumSearchableDisabled          GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum = "SEARCHABLE_DISABLED"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCHABLE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "SEARCHABLE_ENABLED":
 		fallthrough
 	case "SEARCHABLE_DISABLED":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeSearchableOptionEnum: %v", v)
 	}
 }
 
@@ -175,6 +199,10 @@ type GoogleCloudRetailV2alphaCatalogAttributeInput struct {
 	DynamicFacetableOption *GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum `json:"dynamicFacetableOption,omitempty"`
 	// If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only applies to textual custom attributes and requires indexable set to enabled to enable exact-searchable. If unset, the server behavior defaults to EXACT_SEARCHABLE_DISABLED.
 	ExactSearchableOption *GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum `json:"exactSearchableOption,omitempty"`
+	// If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute, then a weekly pipeline calculates intervals using some percentiles on the distribution of all its product numerical attribute values. The calculated intervals might not be ideal for some attributes. Therefore, we give you the option the overwrite them. For any numerical attribute that is passed as a facet key in the request along with given intervals, the given intervals are the facet intervals returned in the response.
+	FacetIntervals []GoogleCloudRetailV2alphaInterval `json:"facetIntervals,omitempty"`
+	// Each instance represents a list of attribute values to ignore as facet values for a specific time range.
+	IgnoredFacetValues []GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues `json:"ignoredFacetValues,omitempty"`
 	// When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.
 	IndexableOption *GoogleCloudRetailV2alphaCatalogAttributeIndexableOptionEnum `json:"indexableOption,omitempty"`
 	// Required. Attribute name. For example: `color`, `brands`, `attributes.custom_attribute`, such as `attributes.xyz`. To be indexable, the attribute name can contain only alpha-numeric characters and underscores. For example, an attribute named `attributes.abc_xyz` can be indexed, but an attribute named `attributes.abc-xyz` cannot be indexed. If the attribute key starts with `attributes.`, then the attribute is a custom attribute. Attributes such as `brands`, `patterns`, and `title` are built-in and called system attributes.
@@ -196,21 +224,25 @@ const (
 	GoogleCloudRetailV2alphaCatalogAttributeTypeEnumNumerical GoogleCloudRetailV2alphaCatalogAttributeTypeEnum = "NUMERICAL"
 )
 
+func (e GoogleCloudRetailV2alphaCatalogAttributeTypeEnum) ToPointer() *GoogleCloudRetailV2alphaCatalogAttributeTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaCatalogAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "TEXTUAL":
 		fallthrough
 	case "NUMERICAL":
-		*e = GoogleCloudRetailV2alphaCatalogAttributeTypeEnum(s)
+		*e = GoogleCloudRetailV2alphaCatalogAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaCatalogAttributeTypeEnum: %v", v)
 	}
 }
 
@@ -220,6 +252,10 @@ type GoogleCloudRetailV2alphaCatalogAttribute struct {
 	DynamicFacetableOption *GoogleCloudRetailV2alphaCatalogAttributeDynamicFacetableOptionEnum `json:"dynamicFacetableOption,omitempty"`
 	// If EXACT_SEARCHABLE_ENABLED, attribute values will be exact searchable. This property only applies to textual custom attributes and requires indexable set to enabled to enable exact-searchable. If unset, the server behavior defaults to EXACT_SEARCHABLE_DISABLED.
 	ExactSearchableOption *GoogleCloudRetailV2alphaCatalogAttributeExactSearchableOptionEnum `json:"exactSearchableOption,omitempty"`
+	// If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals to a numerical attribute, then a weekly pipeline calculates intervals using some percentiles on the distribution of all its product numerical attribute values. The calculated intervals might not be ideal for some attributes. Therefore, we give you the option the overwrite them. For any numerical attribute that is passed as a facet key in the request along with given intervals, the given intervals are the facet intervals returned in the response.
+	FacetIntervals []GoogleCloudRetailV2alphaInterval `json:"facetIntervals,omitempty"`
+	// Each instance represents a list of attribute values to ignore as facet values for a specific time range.
+	IgnoredFacetValues []GoogleCloudRetailV2alphaCatalogAttributeIgnoredFacetValues `json:"ignoredFacetValues,omitempty"`
 	// Output only. Indicates whether this attribute has been used by any products. `True` if at least one Product is using this attribute in Product.attributes. Otherwise, this field is `False`. CatalogAttribute can be pre-loaded by using CatalogService.AddCatalogAttribute, CatalogService.ImportCatalogAttributes, or CatalogService.UpdateAttributesConfig APIs. This field is `False` for pre-loaded CatalogAttributes. Only pre-loaded catalog attributes that are neither in use by products nor predefined can be deleted. Catalog attributes that are either in use by products or are predefined attributes cannot be deleted; however, their configuration properties will reset to default values upon removal request. After catalog changes, it takes about 10 minutes for this field to update.
 	InUse *bool `json:"inUse,omitempty"`
 	// When AttributesConfig.attribute_config_level is CATALOG_LEVEL_ATTRIBUTE_CONFIG, if INDEXABLE_ENABLED attribute values are indexed so that it can be filtered, faceted, or boosted in SearchService.Search. Must be specified, otherwise throws INVALID_FORMAT error.

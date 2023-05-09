@@ -18,12 +18,16 @@ const (
 	DeviceDeploymentStatusEnumStopped       DeviceDeploymentStatusEnum = "STOPPED"
 )
 
+func (e DeviceDeploymentStatusEnum) ToPointer() *DeviceDeploymentStatusEnum {
+	return &e
+}
+
 func (e *DeviceDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READYTODEPLOY":
 		fallthrough
 	case "INPROGRESS":
@@ -35,9 +39,9 @@ func (e *DeviceDeploymentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "STOPPED":
-		*e = DeviceDeploymentStatusEnum(s)
+		*e = DeviceDeploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDeploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDeploymentStatusEnum: %v", v)
 	}
 }

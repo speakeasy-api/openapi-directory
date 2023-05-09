@@ -2,128 +2,130 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateConsentRequest{
-        Digest: "corrupti",
-        PSUAccept: "provident",
-        PSUAcceptCharset: "distinctio",
-        PSUAcceptEncoding: "quibusdam",
-        PSUAcceptLanguage: "unde",
-        PSUCorporateID: "nulla",
-        PSUCorporateIDType: "corrupti",
-        PSUDeviceID: "illum",
-        PSUGeoLocation: "vel",
-        PSUHTTPMethod: "PATCH",
-        PsuID: "deserunt",
-        PSUIDType: "suscipit",
+    ctx := context.Background()
+    res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, operations.CreateConsentRequest{
+        Digest: sdk.String("corrupti"),
+        PSUAccept: sdk.String("provident"),
+        PSUAcceptCharset: sdk.String("distinctio"),
+        PSUAcceptEncoding: sdk.String("quibusdam"),
+        PSUAcceptLanguage: sdk.String("unde"),
+        PSUCorporateID: sdk.String("nulla"),
+        PSUCorporateIDType: sdk.String("corrupti"),
+        PSUDeviceID: sdk.String("illum"),
+        PSUGeoLocation: sdk.String("vel"),
+        PSUHTTPMethod: shared.PSUHTTPMethodEnumPatch.ToPointer(),
+        PsuID: sdk.String("deserunt"),
+        PSUIDType: sdk.String("suscipit"),
         PSUIPAddress: "112.76.228.14",
-        PSUIPPort: "delectus",
-        PSUUserAgent: "tempora",
-        Signature: "suscipit",
-        TPPBrandLoggingInformation: "molestiae",
-        TPPExplicitAuthorisationPreferred: false,
-        TPPNokRedirectURI: "https://studious-lynx.info",
-        TPPNotificationContentPreferred: "excepturi",
-        TPPNotificationURI: "nisi",
-        TPPRedirectPreferred: false,
-        TPPRedirectURI: "https://tangible-bathroom.info",
-        TPPSignatureCertificate: "veritatis",
+        PSUIPPort: sdk.String("delectus"),
+        PSUUserAgent: sdk.String("tempora"),
+        Signature: sdk.String("suscipit"),
+        TPPBrandLoggingInformation: sdk.String("molestiae"),
+        TPPExplicitAuthorisationPreferred: sdk.Bool(false),
+        TPPNokRedirectURI: sdk.String("https://studious-lynx.info"),
+        TPPNotificationContentPreferred: sdk.String("excepturi"),
+        TPPNotificationURI: sdk.String("nisi"),
+        TPPRedirectPreferred: sdk.Bool(false),
+        TPPRedirectURI: sdk.String("https://tangible-bathroom.info"),
+        TPPSignatureCertificate: sdk.String("veritatis"),
         XRequestID: "deserunt",
         Consents: &shared.Consents{
             Access: shared.AccountAccess{
                 Accounts: []shared.AccountReference16CH{
                     shared.AccountReference16CH{
-                        CashAccountType: "ipsam",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("ipsam"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                 },
                 AdditionalInformation: &shared.AdditionalInformationAccess{
                     OwnerName: []shared.AccountReference16CH{
                         shared.AccountReference16CH{
-                            CashAccountType: "sapiente",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("sapiente"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "quo",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("quo"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "odit",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("odit"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "at",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("at"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                     },
                     TrustedBeneficiaries: []shared.AccountReference16CH{
                         shared.AccountReference16CH{
-                            CashAccountType: "maiores",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("maiores"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "molestiae",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("molestiae"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "quod",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("quod"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                         shared.AccountReference16CH{
-                            CashAccountType: "quod",
-                            Currency: "EUR",
-                            Iban: "FR7612345987650123456789014",
-                            OtherAccountIdentification: "90-100100-0",
+                            CashAccountType: sdk.String("quod"),
+                            Currency: sdk.String("EUR"),
+                            Iban: sdk.String("FR7612345987650123456789014"),
+                            OtherAccountIdentification: sdk.String("90-100100-0"),
                         },
                     },
                 },
-                AllPsd2: "allAccounts",
-                AvailableAccounts: "allAccountsWithOwnerName",
-                AvailableAccountsWithBalance: "allAccountsWithOwnerName",
+                AllPsd2: shared.AccountAccessAllPsd2EnumAllAccounts.ToPointer(),
+                AvailableAccounts: shared.AccountAccessAvailableAccountsEnumAllAccountsWithOwnerName.ToPointer(),
+                AvailableAccountsWithBalance: shared.AccountAccessAvailableAccountsWithBalanceEnumAllAccountsWithOwnerName.ToPointer(),
                 Balances: []shared.AccountReference16CH{
                     shared.AccountReference16CH{
-                        CashAccountType: "dicta",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("dicta"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                     shared.AccountReference16CH{
-                        CashAccountType: "nam",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("nam"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                     shared.AccountReference16CH{
-                        CashAccountType: "officia",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("officia"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                 },
                 RestrictedTo: []string{
@@ -133,40 +135,37 @@ func main() {
                 },
                 Transactions: []shared.AccountReference16CH{
                     shared.AccountReference16CH{
-                        CashAccountType: "totam",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("totam"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                     shared.AccountReference16CH{
-                        CashAccountType: "beatae",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("beatae"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                     shared.AccountReference16CH{
-                        CashAccountType: "commodi",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("commodi"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                     shared.AccountReference16CH{
-                        CashAccountType: "molestiae",
-                        Currency: "EUR",
-                        Iban: "FR7612345987650123456789014",
-                        OtherAccountIdentification: "90-100100-0",
+                        CashAccountType: sdk.String("molestiae"),
+                        Currency: sdk.String("EUR"),
+                        Iban: sdk.String("FR7612345987650123456789014"),
+                        OtherAccountIdentification: sdk.String("90-100100-0"),
                     },
                 },
             },
             CombinedServiceIndicator: false,
             FrequencyPerDay: 4,
             RecurringIndicator: false,
-            ValidUntil: "2020-12-31",
+            ValidUntil: types.MustDateFromString("2020-12-31"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, req, operations.CreateConsentSecurity{
+    }, operations.CreateConsentSecurity{
         BearerAuthOAuth: sdk.String("Bearer YOUR_BEARER_TOKEN_HERE"),
     })
     if err != nil {

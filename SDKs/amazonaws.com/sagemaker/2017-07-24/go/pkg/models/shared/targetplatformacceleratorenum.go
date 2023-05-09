@@ -16,12 +16,16 @@ const (
 	TargetPlatformAcceleratorEnumNna           TargetPlatformAcceleratorEnum = "NNA"
 )
 
+func (e TargetPlatformAcceleratorEnum) ToPointer() *TargetPlatformAcceleratorEnum {
+	return &e
+}
+
 func (e *TargetPlatformAcceleratorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEL_GRAPHICS":
 		fallthrough
 	case "MALI":
@@ -29,9 +33,9 @@ func (e *TargetPlatformAcceleratorEnum) UnmarshalJSON(data []byte) error {
 	case "NVIDIA":
 		fallthrough
 	case "NNA":
-		*e = TargetPlatformAcceleratorEnum(s)
+		*e = TargetPlatformAcceleratorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetPlatformAcceleratorEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetPlatformAcceleratorEnum: %v", v)
 	}
 }

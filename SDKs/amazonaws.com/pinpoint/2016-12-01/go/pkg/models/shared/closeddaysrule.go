@@ -2,7 +2,7 @@
 
 package shared
 
-// ClosedDaysRule - Closed Days Rule. Part of Journey sending schedule.
+// ClosedDaysRule - Specifies the rule settings for when messages can't be sent.
 type ClosedDaysRule struct {
 	EndDateTime   *string `json:"EndDateTime,omitempty"`
 	Name          *string `json:"Name,omitempty"`

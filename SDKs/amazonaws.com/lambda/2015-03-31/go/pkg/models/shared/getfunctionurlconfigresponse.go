@@ -9,5 +9,6 @@ type GetFunctionURLConfigResponse struct {
 	CreationTime     string                  `json:"CreationTime"`
 	FunctionArn      string                  `json:"FunctionArn"`
 	FunctionURL      string                  `json:"FunctionUrl"`
+	InvokeMode       *InvokeModeEnum         `json:"InvokeMode,omitempty"`
 	LastModifiedTime string                  `json:"LastModifiedTime"`
 }

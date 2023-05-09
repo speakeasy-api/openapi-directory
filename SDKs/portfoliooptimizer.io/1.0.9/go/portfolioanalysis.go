@@ -147,65 +147,6 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisBeta(ctx context.Context, reque
 	return res, nil
 }
 
-// PostPortfolioAnalysisConditionalValueAtRisk - Conditional Value At Risk
-// Compute the conditional value at risk of one or several portfolio(s) from portfolio values.
-//
-// References
-// * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
-// * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-func (s *portfolioAnalysis) PostPortfolioAnalysisConditionalValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisConditionalValueAtRiskRequestBody) (*operations.PostPortfolioAnalysisConditionalValueAtRiskResponse, error) {
-	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/conditional-value-at-risk"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostPortfolioAnalysisConditionalValueAtRiskResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
 // PostPortfolioAnalysisContributionsReturn - Return Contributions
 // Perform a return contribution analysis of one or several portfolio(s), optionally using groups of assets.
 //
@@ -1027,65 +968,6 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerPerformanceIndex(ctx conte
 			}
 
 			res.PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostPortfolioAnalysisValueAtRisk - Value At Risk
-// Compute the value at risk of one or several portfolio(s) from portfolio values.
-//
-// References
-// * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
-// * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
-func (s *portfolioAnalysis) PostPortfolioAnalysisValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisValueAtRiskRequestBody) (*operations.PostPortfolioAnalysisValueAtRiskResponse, error) {
-	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/value-at-risk"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostPortfolioAnalysisValueAtRiskResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostPortfolioAnalysisValueAtRisk200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PostPortfolioAnalysisValueAtRisk200ApplicationJSONObject = out
 		}
 	}
 

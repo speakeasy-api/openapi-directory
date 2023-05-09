@@ -16,17 +16,21 @@ const (
 	ListChildrenXAmzTargetEnumAwsOrganizationsV20161128ListChildren ListChildrenXAmzTargetEnum = "AWSOrganizationsV20161128.ListChildren"
 )
 
+func (e ListChildrenXAmzTargetEnum) ToPointer() *ListChildrenXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListChildrenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.ListChildren":
-		*e = ListChildrenXAmzTargetEnum(s)
+		*e = ListChildrenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListChildrenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListChildrenXAmzTargetEnum: %v", v)
 	}
 }
 

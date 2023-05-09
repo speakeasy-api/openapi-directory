@@ -16,12 +16,16 @@ const (
 	ConflictHandlerTypeEnumNone                  ConflictHandlerTypeEnum = "NONE"
 )
 
+func (e ConflictHandlerTypeEnum) ToPointer() *ConflictHandlerTypeEnum {
+	return &e
+}
+
 func (e *ConflictHandlerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIMISTIC_CONCURRENCY":
 		fallthrough
 	case "LAMBDA":
@@ -29,9 +33,9 @@ func (e *ConflictHandlerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AUTOMERGE":
 		fallthrough
 	case "NONE":
-		*e = ConflictHandlerTypeEnum(s)
+		*e = ConflictHandlerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConflictHandlerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConflictHandlerTypeEnum: %v", v)
 	}
 }

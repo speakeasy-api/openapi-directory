@@ -13,23 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/AccountService/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CloseAccountHolderRequest{
-        AccountHolderCode: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AccountHolders.PostCloseAccountHolder(ctx, req, operations.PostCloseAccountHolderSecurity{
+    res, err := s.AccountHolders.PostCloseAccountHolder(ctx, shared.CloseAccountHolderRequest{
+        AccountHolderCode: "corrupti",
+    }, operations.PostCloseAccountHolderSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -47,31 +45,31 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccountHolders
+### [AccountHolders](docs/accountholders/README.md)
 
-* `PostCloseAccountHolder` - Close an account holder
-* `PostCreateAccountHolder` - Create an account holder
-* `PostGetAccountHolder` - Get an account holder
-* `PostGetTaxForm` - Get a tax form
-* `PostSuspendAccountHolder` - Suspend an account holder
-* `PostUnSuspendAccountHolder` - Unsuspend an account holder
-* `PostUpdateAccountHolder` - Update an account holder
-* `PostUpdateAccountHolderState` - Update payout or processing state
+* [PostCloseAccountHolder](docs/accountholders/README.md#postcloseaccountholder) - Close an account holder
+* [PostCreateAccountHolder](docs/accountholders/README.md#postcreateaccountholder) - Create an account holder
+* [PostGetAccountHolder](docs/accountholders/README.md#postgetaccountholder) - Get an account holder
+* [PostGetTaxForm](docs/accountholders/README.md#postgettaxform) - Get a tax form
+* [PostSuspendAccountHolder](docs/accountholders/README.md#postsuspendaccountholder) - Suspend an account holder
+* [PostUnSuspendAccountHolder](docs/accountholders/README.md#postunsuspendaccountholder) - Unsuspend an account holder
+* [PostUpdateAccountHolder](docs/accountholders/README.md#postupdateaccountholder) - Update an account holder
+* [PostUpdateAccountHolderState](docs/accountholders/README.md#postupdateaccountholderstate) - Update payout or processing state
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `PostCloseAccount` - Close an account
-* `PostCreateAccount` - Create an account
-* `PostUpdateAccount` - Update an account
+* [PostCloseAccount](docs/accounts/README.md#postcloseaccount) - Close an account
+* [PostCreateAccount](docs/accounts/README.md#postcreateaccount) - Create an account
+* [PostUpdateAccount](docs/accounts/README.md#postupdateaccount) - Update an account
 
-### Verification
+### [Verification](docs/verification/README.md)
 
-* `PostDeleteBankAccounts` - Delete bank accounts
-* `PostDeleteLegalArrangements` - Delete legal arrangements
-* `PostDeleteShareholders` - Delete shareholders
-* `PostDeleteSignatories` - Delete signatories
-* `PostGetUploadedDocuments` - Get documents
-* `PostUploadDocument` - Upload a document
+* [PostDeleteBankAccounts](docs/verification/README.md#postdeletebankaccounts) - Delete bank accounts
+* [PostDeleteLegalArrangements](docs/verification/README.md#postdeletelegalarrangements) - Delete legal arrangements
+* [PostDeleteShareholders](docs/verification/README.md#postdeleteshareholders) - Delete shareholders
+* [PostDeleteSignatories](docs/verification/README.md#postdeletesignatories) - Delete signatories
+* [PostGetUploadedDocuments](docs/verification/README.md#postgetuploadeddocuments) - Get documents
+* [PostUploadDocument](docs/verification/README.md#postuploaddocument) - Upload a document
 <!-- End SDK Available Operations -->
 
 ### Maturity

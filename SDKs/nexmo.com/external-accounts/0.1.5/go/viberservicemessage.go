@@ -35,7 +35,10 @@ func newViberServiceMessage(defaultClient, securityClient HTTPClient, serverURL,
 // GetVSMAccount - Retrieve a Viber Service Message account
 func (s *viberServiceMessage) GetVSMAccount(ctx context.Context, request operations.GetVSMAccountRequest, security operations.GetVSMAccountSecurity) (*operations.GetVSMAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/viber_service_msg/{external_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/viber_service_msg/{external_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	InstanceGroupTypeEnumTask   InstanceGroupTypeEnum = "TASK"
 )
 
+func (e InstanceGroupTypeEnum) ToPointer() *InstanceGroupTypeEnum {
+	return &e
+}
+
 func (e *InstanceGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER":
 		fallthrough
 	case "CORE":
 		fallthrough
 	case "TASK":
-		*e = InstanceGroupTypeEnum(s)
+		*e = InstanceGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceGroupTypeEnum: %v", v)
 	}
 }

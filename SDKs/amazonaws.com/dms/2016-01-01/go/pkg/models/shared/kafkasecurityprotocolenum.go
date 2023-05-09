@@ -16,12 +16,16 @@ const (
 	KafkaSecurityProtocolEnumSaslSsl           KafkaSecurityProtocolEnum = "sasl-ssl"
 )
 
+func (e KafkaSecurityProtocolEnum) ToPointer() *KafkaSecurityProtocolEnum {
+	return &e
+}
+
 func (e *KafkaSecurityProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plaintext":
 		fallthrough
 	case "ssl-authentication":
@@ -29,9 +33,9 @@ func (e *KafkaSecurityProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "ssl-encryption":
 		fallthrough
 	case "sasl-ssl":
-		*e = KafkaSecurityProtocolEnum(s)
+		*e = KafkaSecurityProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KafkaSecurityProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for KafkaSecurityProtocolEnum: %v", v)
 	}
 }

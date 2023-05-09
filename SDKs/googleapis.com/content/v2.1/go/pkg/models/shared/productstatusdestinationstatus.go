@@ -11,6 +11,6 @@ type ProductStatusDestinationStatus struct {
 	DisapprovedCountries []string `json:"disapprovedCountries,omitempty"`
 	// List of country codes (ISO 3166-1 alpha-2) where the offer is pending approval.
 	PendingCountries []string `json:"pendingCountries,omitempty"`
-	// Destination approval status in `targetCountry` of the offer.
+	// Deprecated. Destination approval status in `targetCountry` of the offer.
 	Status *string `json:"status,omitempty"`
 }

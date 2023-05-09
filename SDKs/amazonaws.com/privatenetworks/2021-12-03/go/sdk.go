@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Web Services Private 5G is a managed service that makes it easy to deploy, operate, and scale your own private mobile network at your on-premises location. Private 5G provides the pre-configured hardware and software for mobile networks, helps automate setup, and scales capacity on demand to support additional devices as needed.
 // https://docs.aws.amazon.com/private-networks/ - Amazon Web Services documentation
 type SDK struct {
@@ -716,7 +731,10 @@ func (s *SDK) DeactivateDeviceIdentifier(ctx context.Context, request operations
 // DeleteNetwork - Deletes the specified network. You must delete network sites before you delete the network. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/APIReference/API_DeleteNetworkSite.html">DeleteNetworkSite</a> in the <i>API Reference for Amazon Web Services Private 5G</i>.
 func (s *SDK) DeleteNetwork(ctx context.Context, request operations.DeleteNetworkRequest) (*operations.DeleteNetworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -806,7 +824,10 @@ func (s *SDK) DeleteNetwork(ctx context.Context, request operations.DeleteNetwor
 // DeleteNetworkSite - Deletes the specified network site. Return the hardware after you delete the network site. You are responsible for minimum charges. For more information, see <a href="https://docs.aws.amazon.com/private-networks/latest/userguide/hardware-maintenance.html">Hardware returns</a> in the <i>Amazon Web Services Private 5G User Guide</i>.
 func (s *SDK) DeleteNetworkSite(ctx context.Context, request operations.DeleteNetworkSiteRequest) (*operations.DeleteNetworkSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -896,7 +917,10 @@ func (s *SDK) DeleteNetworkSite(ctx context.Context, request operations.DeleteNe
 // GetDeviceIdentifier - Gets the specified device identifier.
 func (s *SDK) GetDeviceIdentifier(ctx context.Context, request operations.GetDeviceIdentifierRequest) (*operations.GetDeviceIdentifierResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/device-identifiers/{deviceIdentifierArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/device-identifiers/{deviceIdentifierArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -972,7 +996,10 @@ func (s *SDK) GetDeviceIdentifier(ctx context.Context, request operations.GetDev
 // GetNetwork - Gets the specified network.
 func (s *SDK) GetNetwork(ctx context.Context, request operations.GetNetworkRequest) (*operations.GetNetworkResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/networks/{networkArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1048,7 +1075,10 @@ func (s *SDK) GetNetwork(ctx context.Context, request operations.GetNetworkReque
 // GetNetworkResource - Gets the specified network resource.
 func (s *SDK) GetNetworkResource(ctx context.Context, request operations.GetNetworkResourceRequest) (*operations.GetNetworkResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-resources/{networkResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/network-resources/{networkResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1124,7 +1154,10 @@ func (s *SDK) GetNetworkResource(ctx context.Context, request operations.GetNetw
 // GetNetworkSite - Gets the specified network site.
 func (s *SDK) GetNetworkSite(ctx context.Context, request operations.GetNetworkSiteRequest) (*operations.GetNetworkSiteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/network-sites/{networkSiteArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1200,7 +1233,10 @@ func (s *SDK) GetNetworkSite(ctx context.Context, request operations.GetNetworkS
 // GetOrder - Gets the specified order.
 func (s *SDK) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1726,7 +1762,10 @@ func (s *SDK) ListOrders(ctx context.Context, request operations.ListOrdersReque
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1964,7 +2003,10 @@ func (s *SDK) StartNetworkResourceUpdate(ctx context.Context, request operations
 // TagResource -  Adds tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2070,7 +2112,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

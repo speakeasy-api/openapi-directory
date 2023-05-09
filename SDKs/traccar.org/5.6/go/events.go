@@ -34,7 +34,10 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 func (s *events) GetEventsID(ctx context.Context, request operations.GetEventsIDRequest) (*operations.GetEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

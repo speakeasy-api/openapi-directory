@@ -20,12 +20,16 @@ const (
 	CountriesGetv1V1CountriesGetOrderByCountriesOrderEnumCount        CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum = "count"
 )
 
+func (e CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum) ToPointer() *CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum {
+	return &e
+}
+
 func (e *CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "country":
 		fallthrough
 	case "firstUpdated":
@@ -35,10 +39,10 @@ func (e *CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum) UnmarshalJSON(da
 	case "locations":
 		fallthrough
 	case "count":
-		*e = CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum(s)
+		*e = CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	CountriesGetv1V1CountriesGetSortSortEnumDesc CountriesGetv1V1CountriesGetSortSortEnum = "desc"
 )
 
+func (e CountriesGetv1V1CountriesGetSortSortEnum) ToPointer() *CountriesGetv1V1CountriesGetSortSortEnum {
+	return &e
+}
+
 func (e *CountriesGetv1V1CountriesGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = CountriesGetv1V1CountriesGetSortSortEnum(s)
+		*e = CountriesGetv1V1CountriesGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountriesGetv1V1CountriesGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for CountriesGetv1V1CountriesGetSortSortEnum: %v", v)
 	}
 }
 

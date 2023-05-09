@@ -16,12 +16,16 @@ const (
 	PredefinedMetricPairTypeEnumAlbRequestCount   PredefinedMetricPairTypeEnum = "ALBRequestCount"
 )
 
+func (e PredefinedMetricPairTypeEnum) ToPointer() *PredefinedMetricPairTypeEnum {
+	return &e
+}
+
 func (e *PredefinedMetricPairTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASGCPUUtilization":
 		fallthrough
 	case "ASGNetworkIn":
@@ -29,9 +33,9 @@ func (e *PredefinedMetricPairTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASGNetworkOut":
 		fallthrough
 	case "ALBRequestCount":
-		*e = PredefinedMetricPairTypeEnum(s)
+		*e = PredefinedMetricPairTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredefinedMetricPairTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PredefinedMetricPairTypeEnum: %v", v)
 	}
 }

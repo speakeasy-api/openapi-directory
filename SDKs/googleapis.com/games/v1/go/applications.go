@@ -35,7 +35,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // GamesApplicationsGet - Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
 func (s *applications) GamesApplicationsGet(ctx context.Context, request operations.GamesApplicationsGetRequest, security operations.GamesApplicationsGetSecurity) (*operations.GamesApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *applications) GamesApplicationsPlayed(ctx context.Context, request oper
 // GamesApplicationsVerify - Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
 func (s *applications) GamesApplicationsVerify(ctx context.Context, request operations.GamesApplicationsVerifyRequest, security operations.GamesApplicationsVerifySecurity) (*operations.GamesApplicationsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}/verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/applications/{applicationId}/verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -18,12 +18,16 @@ const (
 	AuditCheckRunStatusEnumFailed                   AuditCheckRunStatusEnum = "FAILED"
 )
 
+func (e AuditCheckRunStatusEnum) ToPointer() *AuditCheckRunStatusEnum {
+	return &e
+}
+
 func (e *AuditCheckRunStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "WAITING_FOR_DATA_COLLECTION":
@@ -35,9 +39,9 @@ func (e *AuditCheckRunStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED_NON_COMPLIANT":
 		fallthrough
 	case "FAILED":
-		*e = AuditCheckRunStatusEnum(s)
+		*e = AuditCheckRunStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditCheckRunStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditCheckRunStatusEnum: %v", v)
 	}
 }

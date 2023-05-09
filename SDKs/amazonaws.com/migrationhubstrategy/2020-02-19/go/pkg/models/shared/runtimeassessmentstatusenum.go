@@ -19,12 +19,16 @@ const (
 	RunTimeAssessmentStatusEnumDataCollectionTaskPartialSuccess RunTimeAssessmentStatusEnum = "dataCollectionTaskPartialSuccess"
 )
 
+func (e RunTimeAssessmentStatusEnum) ToPointer() *RunTimeAssessmentStatusEnum {
+	return &e
+}
+
 func (e *RunTimeAssessmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataCollectionTaskToBeScheduled":
 		fallthrough
 	case "dataCollectionTaskScheduled":
@@ -38,9 +42,9 @@ func (e *RunTimeAssessmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "dataCollectionTaskFailed":
 		fallthrough
 	case "dataCollectionTaskPartialSuccess":
-		*e = RunTimeAssessmentStatusEnum(s)
+		*e = RunTimeAssessmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunTimeAssessmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RunTimeAssessmentStatusEnum: %v", v)
 	}
 }

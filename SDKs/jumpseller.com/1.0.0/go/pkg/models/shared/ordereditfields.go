@@ -18,12 +18,16 @@ const (
 	OrderEditFieldsShipmentStatusEnumPickupAvailable OrderEditFieldsShipmentStatusEnum = "pickup_available"
 )
 
+func (e OrderEditFieldsShipmentStatusEnum) ToPointer() *OrderEditFieldsShipmentStatusEnum {
+	return &e
+}
+
 func (e *OrderEditFieldsShipmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requested":
 		fallthrough
 	case "in_transit":
@@ -33,10 +37,10 @@ func (e *OrderEditFieldsShipmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "pickup_available":
-		*e = OrderEditFieldsShipmentStatusEnum(s)
+		*e = OrderEditFieldsShipmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderEditFieldsShipmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderEditFieldsShipmentStatusEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	OrderEditFieldsStatusEnumPaid           OrderEditFieldsStatusEnum = "Paid"
 )
 
+func (e OrderEditFieldsStatusEnum) ToPointer() *OrderEditFieldsStatusEnum {
+	return &e
+}
+
 func (e *OrderEditFieldsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Abandoned":
 		fallthrough
 	case "Canceled":
@@ -63,10 +71,10 @@ func (e *OrderEditFieldsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Pending Payment":
 		fallthrough
 	case "Paid":
-		*e = OrderEditFieldsStatusEnum(s)
+		*e = OrderEditFieldsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderEditFieldsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderEditFieldsStatusEnum: %v", v)
 	}
 }
 

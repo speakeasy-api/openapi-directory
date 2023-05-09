@@ -16,17 +16,21 @@ const (
 	GetContainerImagesXAmzTargetEnumLightsail20161128GetContainerImages GetContainerImagesXAmzTargetEnum = "Lightsail_20161128.GetContainerImages"
 )
 
+func (e GetContainerImagesXAmzTargetEnum) ToPointer() *GetContainerImagesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetContainerImagesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetContainerImages":
-		*e = GetContainerImagesXAmzTargetEnum(s)
+		*e = GetContainerImagesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContainerImagesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContainerImagesXAmzTargetEnum: %v", v)
 	}
 }
 

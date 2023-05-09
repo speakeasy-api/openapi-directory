@@ -16,12 +16,16 @@ const (
 	LifecyclePolicyPreviewStatusEnumFailed     LifecyclePolicyPreviewStatusEnum = "FAILED"
 )
 
+func (e LifecyclePolicyPreviewStatusEnum) ToPointer() *LifecyclePolicyPreviewStatusEnum {
+	return &e
+}
+
 func (e *LifecyclePolicyPreviewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETE":
@@ -29,9 +33,9 @@ func (e *LifecyclePolicyPreviewStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPIRED":
 		fallthrough
 	case "FAILED":
-		*e = LifecyclePolicyPreviewStatusEnum(s)
+		*e = LifecyclePolicyPreviewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifecyclePolicyPreviewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LifecyclePolicyPreviewStatusEnum: %v", v)
 	}
 }

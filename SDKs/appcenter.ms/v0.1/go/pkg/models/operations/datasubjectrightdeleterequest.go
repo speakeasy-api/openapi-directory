@@ -9,6 +9,10 @@ import (
 	"time"
 )
 
+type DataSubjectRightDeleteRequestSecurity struct {
+	APIToken string `security:"scheme,type=apiKey,subtype=header,name=X-API-Token"`
+}
+
 type DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum string
 
 const (
@@ -21,12 +25,16 @@ const (
 	DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnumTooManyRequests     DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum) ToPointer() *DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -40,10 +48,10 @@ func (e *DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum) Unmar
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSubjectRightDeleteRequestDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	EndDateTypeEnumLimited   EndDateTypeEnum = "limited"
 )
 
+func (e EndDateTypeEnum) ToPointer() *EndDateTypeEnum {
+	return &e
+}
+
 func (e *EndDateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unlimited":
 		fallthrough
 	case "limited":
-		*e = EndDateTypeEnum(s)
+		*e = EndDateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndDateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndDateTypeEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	ChannelRoleEnumViewer ChannelRoleEnum = "VIEWER"
 )
 
+func (e ChannelRoleEnum) ToPointer() *ChannelRoleEnum {
+	return &e
+}
+
 func (e *ChannelRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER":
 		fallthrough
 	case "VIEWER":
-		*e = ChannelRoleEnum(s)
+		*e = ChannelRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelRoleEnum: %v", v)
 	}
 }

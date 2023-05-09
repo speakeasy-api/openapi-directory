@@ -90,7 +90,10 @@ func (s *inventorySources) DisplayvideoInventorySourcesCreate(ctx context.Contex
 // DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
 func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors(ctx context.Context, request operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsRequest, security operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsSecurity) (*operations.DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}:editInventorySourceReadWriteAccessors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditInventorySourceReadWriteAccessorsRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *inventorySources) DisplayvideoInventorySourcesEditInventorySourceReadWr
 // DisplayvideoInventorySourcesGet - Gets an inventory source.
 func (s *inventorySources) DisplayvideoInventorySourcesGet(ctx context.Context, request operations.DisplayvideoInventorySourcesGetRequest, security operations.DisplayvideoInventorySourcesGetSecurity) (*operations.DisplayvideoInventorySourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *inventorySources) DisplayvideoInventorySourcesList(ctx context.Context,
 // DisplayvideoInventorySourcesPatch - Updates an existing inventory source. Returns the updated inventory source if successful.
 func (s *inventorySources) DisplayvideoInventorySourcesPatch(ctx context.Context, request operations.DisplayvideoInventorySourcesPatchRequest, security operations.DisplayvideoInventorySourcesPatchSecurity) (*operations.DisplayvideoInventorySourcesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/inventorySources/{inventorySourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InventorySourceInput", "json")
 	if err != nil {

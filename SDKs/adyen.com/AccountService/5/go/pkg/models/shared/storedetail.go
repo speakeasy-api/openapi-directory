@@ -15,19 +15,23 @@ const (
 	StoreDetailShopperInteractionEnumPos       StoreDetailShopperInteractionEnum = "POS"
 )
 
+func (e StoreDetailShopperInteractionEnum) ToPointer() *StoreDetailShopperInteractionEnum {
+	return &e
+}
+
 func (e *StoreDetailShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "POS":
-		*e = StoreDetailShopperInteractionEnum(s)
+		*e = StoreDetailShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreDetailShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreDetailShopperInteractionEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	StoreDetailStatusEnumPending                   StoreDetailStatusEnum = "Pending"
 )
 
+func (e StoreDetailStatusEnum) ToPointer() *StoreDetailStatusEnum {
+	return &e
+}
+
 func (e *StoreDetailStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -57,10 +65,10 @@ func (e *StoreDetailStatusEnum) UnmarshalJSON(data []byte) error {
 	case "InactiveWithModifications":
 		fallthrough
 	case "Pending":
-		*e = StoreDetailStatusEnum(s)
+		*e = StoreDetailStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreDetailStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreDetailStatusEnum: %v", v)
 	}
 }
 

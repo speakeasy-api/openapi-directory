@@ -20,12 +20,16 @@ const (
 	GetSitesSiteIDOutputFormatLocationDescriptorEnumRoutingPoint   GetSitesSiteIDOutputFormatLocationDescriptorEnum = "routingPoint"
 )
 
+func (e GetSitesSiteIDOutputFormatLocationDescriptorEnum) ToPointer() *GetSitesSiteIDOutputFormatLocationDescriptorEnum {
+	return &e
+}
+
 func (e *GetSitesSiteIDOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "accessPoint":
@@ -37,10 +41,10 @@ func (e *GetSitesSiteIDOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []
 	case "rooftopPoint":
 		fallthrough
 	case "routingPoint":
-		*e = GetSitesSiteIDOutputFormatLocationDescriptorEnum(s)
+		*e = GetSitesSiteIDOutputFormatLocationDescriptorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatLocationDescriptorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatLocationDescriptorEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GetSitesSiteIDOutputFormatOutputFormatEnumShpz    GetSitesSiteIDOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetSitesSiteIDOutputFormatOutputFormatEnum) ToPointer() *GetSitesSiteIDOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetSitesSiteIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -78,52 +86,56 @@ func (e *GetSitesSiteIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) 
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetSitesSiteIDOutputFormatOutputFormatEnum(s)
+		*e = GetSitesSiteIDOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetSitesSiteIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetSitesSiteIDOutputFormatOutputSrsEnum string
+type GetSitesSiteIDOutputFormatOutputSrsEnum int64
 
 const (
-	GetSitesSiteIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetSitesSiteIDOutputFormatOutputSrsEnum = "4326"
-	GetSitesSiteIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetSitesSiteIDOutputFormatOutputSrsEnum = "4269"
-	GetSitesSiteIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetSitesSiteIDOutputFormatOutputSrsEnum = "3005"
-	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetSitesSiteIDOutputFormatOutputSrsEnum = "26907"
-	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetSitesSiteIDOutputFormatOutputSrsEnum = "26908"
-	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetSitesSiteIDOutputFormatOutputSrsEnum = "26909"
-	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetSitesSiteIDOutputFormatOutputSrsEnum = "26910"
-	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetSitesSiteIDOutputFormatOutputSrsEnum = "26911"
+	GetSitesSiteIDOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetSitesSiteIDOutputFormatOutputSrsEnum = 4326
+	GetSitesSiteIDOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetSitesSiteIDOutputFormatOutputSrsEnum = 4269
+	GetSitesSiteIDOutputFormatOutputSrsEnumThreeThousandAndFive                  GetSitesSiteIDOutputFormatOutputSrsEnum = 3005
+	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetSitesSiteIDOutputFormatOutputSrsEnum = 26907
+	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetSitesSiteIDOutputFormatOutputSrsEnum = 26908
+	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetSitesSiteIDOutputFormatOutputSrsEnum = 26909
+	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetSitesSiteIDOutputFormatOutputSrsEnum = 26910
+	GetSitesSiteIDOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetSitesSiteIDOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetSitesSiteIDOutputFormatOutputSrsEnum) ToPointer() *GetSitesSiteIDOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetSitesSiteIDOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetSitesSiteIDOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetSitesSiteIDOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSitesSiteIDOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

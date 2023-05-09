@@ -29,12 +29,16 @@ const (
 	CertificateSummaryV2SlotSizeEnumOneHundred CertificateSummaryV2SlotSizeEnum = "ONE_HUNDRED"
 )
 
+func (e CertificateSummaryV2SlotSizeEnum) ToPointer() *CertificateSummaryV2SlotSizeEnum {
+	return &e
+}
+
 func (e *CertificateSummaryV2SlotSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIVE":
 		fallthrough
 	case "TEN":
@@ -50,10 +54,10 @@ func (e *CertificateSummaryV2SlotSizeEnum) UnmarshalJSON(data []byte) error {
 	case "FIFTY":
 		fallthrough
 	case "ONE_HUNDRED":
-		*e = CertificateSummaryV2SlotSizeEnum(s)
+		*e = CertificateSummaryV2SlotSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateSummaryV2SlotSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateSummaryV2SlotSizeEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	CertificateSummaryV2StatusEnumUnused            CertificateSummaryV2StatusEnum = "UNUSED"
 )
 
+func (e CertificateSummaryV2StatusEnum) ToPointer() *CertificateSummaryV2StatusEnum {
+	return &e
+}
+
 func (e *CertificateSummaryV2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ISSUED":
 		fallthrough
 	case "CANCELED":
@@ -104,10 +112,10 @@ func (e *CertificateSummaryV2StatusEnum) UnmarshalJSON(data []byte) error {
 	case "REVOKED":
 		fallthrough
 	case "UNUSED":
-		*e = CertificateSummaryV2StatusEnum(s)
+		*e = CertificateSummaryV2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateSummaryV2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateSummaryV2StatusEnum: %v", v)
 	}
 }
 
@@ -137,12 +145,16 @@ const (
 	CertificateSummaryV2TypeEnumUccOvSsl        CertificateSummaryV2TypeEnum = "UCC_OV_SSL"
 )
 
+func (e CertificateSummaryV2TypeEnum) ToPointer() *CertificateSummaryV2TypeEnum {
+	return &e
+}
+
 func (e *CertificateSummaryV2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DV_SSL":
 		fallthrough
 	case "DV_WILDCARD_SSL":
@@ -162,10 +174,10 @@ func (e *CertificateSummaryV2TypeEnum) UnmarshalJSON(data []byte) error {
 	case "UCC_EV_SSL":
 		fallthrough
 	case "UCC_OV_SSL":
-		*e = CertificateSummaryV2TypeEnum(s)
+		*e = CertificateSummaryV2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateSummaryV2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateSummaryV2TypeEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newTasksClassic(defaultClient, securityClient HTTPClient, serverURL, langua
 // Adds files to a given task.
 func (s *tasksClassic) AddFile(ctx context.Context, request operations.AddFileRequest) (*operations.AddFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/files/input", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/files/input", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileDTO", "json")
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *tasksClassic) AddFile(ctx context.Context, request operations.AddFileRe
 // Removes a task.
 func (s *tasksClassic) Delete14(ctx context.Context, request operations.Delete14Request) (*operations.Delete14Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +128,10 @@ func (s *tasksClassic) Delete14(ctx context.Context, request operations.Delete14
 // Returns contacts of a given task.
 func (s *tasksClassic) GetContacts1(ctx context.Context, request operations.GetContacts1Request) (*operations.GetContacts1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -167,7 +176,10 @@ func (s *tasksClassic) GetContacts1(ctx context.Context, request operations.GetC
 // Returns custom fields of a given task.
 func (s *tasksClassic) GetCustomFields7(ctx context.Context, request operations.GetCustomFields7Request) (*operations.GetCustomFields7Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +224,10 @@ func (s *tasksClassic) GetCustomFields7(ctx context.Context, request operations.
 // Returns dates of a given task.
 func (s *tasksClassic) GetDates3(ctx context.Context, request operations.GetDates3Request) (*operations.GetDates3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/dates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/dates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +272,10 @@ func (s *tasksClassic) GetDates3(ctx context.Context, request operations.GetDate
 // Returns instructions of a given task.
 func (s *tasksClassic) GetInstructions2(ctx context.Context, request operations.GetInstructions2Request) (*operations.GetInstructions2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/instructions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/instructions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +320,10 @@ func (s *tasksClassic) GetInstructions2(ctx context.Context, request operations.
 // Returns progress of a given task. Progress contains information about task's status (ie. opened or ready) and current phase (ie. translation). Workflow phase is defined as the first one which contains not ready jobs (ie. opened or started). When no such job exists then workflow phase is not included.
 func (s *tasksClassic) GetProgress(ctx context.Context, request operations.GetProgressRequest) (*operations.GetProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -347,7 +368,10 @@ func (s *tasksClassic) GetProgress(ctx context.Context, request operations.GetPr
 // Returns several lists of files for a given task: input files divided by type, output files, bundles, files per job, preview files.
 func (s *tasksClassic) GetTaskFiles(ctx context.Context, request operations.GetTaskFilesRequest) (*operations.GetTaskFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +416,10 @@ func (s *tasksClassic) GetTaskFiles(ctx context.Context, request operations.GetT
 // Starts a task.
 func (s *tasksClassic) Start1(ctx context.Context, request operations.Start1Request) (*operations.Start1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -428,7 +455,10 @@ func (s *tasksClassic) Start1(ctx context.Context, request operations.Start1Requ
 // Updates Client Task PO Number of a given task.
 func (s *tasksClassic) UpdateClientTaskPONumber(ctx context.Context, request operations.UpdateClientTaskPONumberRequest) (*operations.UpdateClientTaskPONumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/clientTaskPONumber", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/clientTaskPONumber", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
@@ -483,7 +513,10 @@ func (s *tasksClassic) UpdateClientTaskPONumber(ctx context.Context, request ope
 // Updates contacts of a given task.
 func (s *tasksClassic) UpdateContacts1(ctx context.Context, request operations.UpdateContacts1Request) (*operations.UpdateContacts1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactsDTO", "json")
 	if err != nil {
@@ -538,7 +571,10 @@ func (s *tasksClassic) UpdateContacts1(ctx context.Context, request operations.U
 // Updates custom fields of a given task.
 func (s *tasksClassic) UpdateCustomFields5(ctx context.Context, request operations.UpdateCustomFields5Request) (*operations.UpdateCustomFields5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -593,7 +629,10 @@ func (s *tasksClassic) UpdateCustomFields5(ctx context.Context, request operatio
 // Updates dates of a given task.
 func (s *tasksClassic) UpdateDates2(ctx context.Context, request operations.UpdateDates2Request) (*operations.UpdateDates2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/dates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/dates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectDatesDTO", "json")
 	if err != nil {
@@ -648,7 +687,10 @@ func (s *tasksClassic) UpdateDates2(ctx context.Context, request operations.Upda
 // Updates instructions of a given task.
 func (s *tasksClassic) UpdateInstructions3(ctx context.Context, request operations.UpdateInstructions3Request) (*operations.UpdateInstructions3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/instructions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/instructions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstructionsDTO", "json")
 	if err != nil {
@@ -703,7 +745,10 @@ func (s *tasksClassic) UpdateInstructions3(ctx context.Context, request operatio
 // Updates name of a given task.
 func (s *tasksClassic) UpdateName(ctx context.Context, request operations.UpdateNameRequest) (*operations.UpdateNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/name", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{taskId}/name", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {

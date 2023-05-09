@@ -36,7 +36,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // <p>Use this endpoint to permanently <b>Delete</b> a service allocation. A valid <b>serviceAllocation id</b> is required.</p>
 func (s *services) DeleteSetupV1ServicesAllocationsID(ctx context.Context, request operations.DeleteSetupV1ServicesAllocationsIDRequest) (*operations.DeleteSetupV1ServicesAllocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *services) DeleteSetupV1ServicesAllocationsID(ctx context.Context, reque
 // <p>Use this endpoint to permanently <b>Delete</b> a Service Block. A valid <b>serviceBlock id</b> is required.</p>
 func (s *services) DeleteSetupV1ServicesBlockID(ctx context.Context, request operations.DeleteSetupV1ServicesBlockIDRequest) (*operations.DeleteSetupV1ServicesBlockIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/block/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/block/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +132,10 @@ func (s *services) DeleteSetupV1ServicesBlockID(ctx context.Context, request ope
 // <p>Use this endpoint to <b>Delete</b> service links from the calendar specified. A valid <b>calendar id</b> is required.</p>
 func (s *services) DeleteSetupV1ServicesCalendarID(ctx context.Context, request operations.DeleteSetupV1ServicesCalendarIDRequest) (*operations.DeleteSetupV1ServicesCalendarIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/calendar/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/calendar/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +180,10 @@ func (s *services) DeleteSetupV1ServicesCalendarID(ctx context.Context, request 
 // <p>Use this endpoint to <b>Delete</b> a service object. A valid <b>service id</b> is required. The service is not permanently deleted and can be recovered by using the <i>PUT /setup​/v1​/services​/{id}​/recover</i> endpoint.</p>
 func (s *services) DeleteSetupV1ServicesID(ctx context.Context, request operations.DeleteSetupV1ServicesIDRequest) (*operations.DeleteSetupV1ServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -216,7 +228,10 @@ func (s *services) DeleteSetupV1ServicesID(ctx context.Context, request operatio
 // <p>Use this endpoint to permanently <b>Delete</b> a previously uploaded service image. A valid <b>service id</b> is required.</p>
 func (s *services) DeleteSetupV1ServicesIDDeleteimage(ctx context.Context, request operations.DeleteSetupV1ServicesIDDeleteimageRequest) (*operations.DeleteSetupV1ServicesIDDeleteimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/deleteimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/deleteimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -310,7 +325,10 @@ func (s *services) GetSetupV1Services(ctx context.Context, request operations.Ge
 // <p>Use this endpoint to <b>Get a Service Allocation</b>. A valid <b>serviceAllocation id</b> is required.</p>
 func (s *services) GetSetupV1ServicesAllocationsID(ctx context.Context, request operations.GetSetupV1ServicesAllocationsIDRequest) (*operations.GetSetupV1ServicesAllocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -355,7 +373,10 @@ func (s *services) GetSetupV1ServicesAllocationsID(ctx context.Context, request 
 // <p>Use this endpoint to <b>Get a Service Block</b>. A valid <b>serviceBlock id</b> is required.</p>
 func (s *services) GetSetupV1ServicesBlocksID(ctx context.Context, request operations.GetSetupV1ServicesBlocksIDRequest) (*operations.GetSetupV1ServicesBlocksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/blocks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/blocks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -400,7 +421,10 @@ func (s *services) GetSetupV1ServicesBlocksID(ctx context.Context, request opera
 // <p>Use this endpoint to return a <b>Service</b> object. A valid <b>service id</b> is required. Find service id's by using the <i>GET /setup/v1/services</i> endpoint.</p>
 func (s *services) GetSetupV1ServicesID(ctx context.Context, request operations.GetSetupV1ServicesIDRequest) (*operations.GetSetupV1ServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *services) GetSetupV1ServicesID(ctx context.Context, request operations.
 // <p>The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *services) GetSetupV1ServicesIDAllocations(ctx context.Context, request operations.GetSetupV1ServicesIDAllocationsRequest) (*operations.GetSetupV1ServicesIDAllocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,7 +527,10 @@ func (s *services) GetSetupV1ServicesIDAllocations(ctx context.Context, request 
 // <p>Use this endpoint to return the <b>Weekly Service Availability</b> for an appointment service. A valid <b>service id</b> is required. Weekly availability is returned for services where the Type = 1. For event type services, where service Type = 2, refer to the <i>GET ​/setup​/v1​/services​/{id}​/allocations</i> endpoint.</p>
 func (s *services) GetSetupV1ServicesIDAvailability(ctx context.Context, request operations.GetSetupV1ServicesIDAvailabilityRequest) (*operations.GetSetupV1ServicesIDAvailabilityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/availability", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/availability", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -545,7 +575,10 @@ func (s *services) GetSetupV1ServicesIDAvailability(ctx context.Context, request
 // <p>Use this endpoint to return a list of <b>Service Blocks</b>. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *services) GetSetupV1ServicesIDBlocks(ctx context.Context, request operations.GetSetupV1ServicesIDBlocksRequest) (*operations.GetSetupV1ServicesIDBlocksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/blocks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/blocks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -599,7 +632,10 @@ func (s *services) GetSetupV1ServicesIDBlocks(ctx context.Context, request opera
 // <p>Use this endpoint to <b>Get the Linked Calendar</b> for the service requested. A valid <b>service id</b> is required. A service can only be linked to one calendar in a location.</p>
 func (s *services) GetSetupV1ServicesIDCalendar(ctx context.Context, request operations.GetSetupV1ServicesIDCalendarRequest) (*operations.GetSetupV1ServicesIDCalendarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/calendar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/calendar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -648,7 +684,10 @@ func (s *services) GetSetupV1ServicesIDCalendar(ctx context.Context, request ope
 // <p>Use this endpoint to return a list of <b>Resources</b> that provide the requested service. A valid <b>service id</b> is required. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *services) GetSetupV1ServicesIDResources(ctx context.Context, request operations.GetSetupV1ServicesIDResourcesRequest) (*operations.GetSetupV1ServicesIDResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/resources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/resources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -833,7 +872,10 @@ func (s *services) PostSetupV1ServicesCalendar(ctx context.Context, request shar
 // </p>
 func (s *services) PostSetupV1ServicesIDAllocations(ctx context.Context, request operations.PostSetupV1ServicesIDAllocationsRequest) (*operations.PostSetupV1ServicesIDAllocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceAllocationInputModel", "json")
 	if err != nil {
@@ -885,7 +927,10 @@ func (s *services) PostSetupV1ServicesIDAllocations(ctx context.Context, request
 // <p>Use this endpoint to <b>Create</b> bulk service allocations. A valid <b>service id</b> is required. Use this endpoint only if you need to POST multiple service allocations in one transaction. For details refer to: <a href="POST ​/setup​/v1​/services​/{id}​/allocations">Post Service Allocation</a></p>
 func (s *services) PostSetupV1ServicesIDAllocationsBulk(ctx context.Context, request operations.PostSetupV1ServicesIDAllocationsBulkRequest) (*operations.PostSetupV1ServicesIDAllocationsBulkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations/bulk", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/allocations/bulk", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceAllocationsInputModel", "json")
 	if err != nil {
@@ -964,7 +1009,10 @@ func (s *services) PostSetupV1ServicesIDAllocationsBulk(ctx context.Context, req
 // </p>
 func (s *services) PostSetupV1ServicesIDBlock(ctx context.Context, request operations.PostSetupV1ServicesIDBlockRequest) (*operations.PostSetupV1ServicesIDBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/block", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/block", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceBlockInputModel", "json")
 	if err != nil {
@@ -1016,7 +1064,10 @@ func (s *services) PostSetupV1ServicesIDBlock(ctx context.Context, request opera
 // <p>Use this endpoint to <b>Upload</b> an image to the service. A valid <b>service id</b> is required. You must convert the image to a <b>base64 encoded string</b> and pass that string as input along with your <b>filename</b>.</p>
 func (s *services) PostSetupV1ServicesIDUploadimage(ctx context.Context, request operations.PostSetupV1ServicesIDUploadimageRequest) (*operations.PostSetupV1ServicesIDUploadimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/uploadimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/uploadimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceImageInputModel", "json")
 	if err != nil {
@@ -1068,7 +1119,10 @@ func (s *services) PostSetupV1ServicesIDUploadimage(ctx context.Context, request
 // <p>Use this endpoint to <b>Update</b> a service allocation. A valid <b>serviceAllocation id</b> is required. Refer to the <i>POST /setup/v1/services/{id}/allocations</i> endpoint for fields names and details.</p>
 func (s *services) PutSetupV1ServicesAllocationsID(ctx context.Context, request operations.PutSetupV1ServicesAllocationsIDRequest) (*operations.PutSetupV1ServicesAllocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/allocations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceAllocationUpdateModel", "json")
 	if err != nil {
@@ -1120,7 +1174,10 @@ func (s *services) PutSetupV1ServicesAllocationsID(ctx context.Context, request 
 // <p>Use this endpoint to <b>Update</b> a Service Block. A valid <b>serviceBlock id</b> is required.</p>
 func (s *services) PutSetupV1ServicesBlockID(ctx context.Context, request operations.PutSetupV1ServicesBlockIDRequest) (*operations.PutSetupV1ServicesBlockIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/block/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/block/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceBlockUpdateModel", "json")
 	if err != nil {
@@ -1172,7 +1229,10 @@ func (s *services) PutSetupV1ServicesBlockID(ctx context.Context, request operat
 // <p>Use this endpoint to <b>Update</b> a service object. A valid <b>service id</b> is required.</p>
 func (s *services) PutSetupV1ServicesID(ctx context.Context, request operations.PutSetupV1ServicesIDRequest) (*operations.PutSetupV1ServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceUpdateModel", "json")
 	if err != nil {
@@ -1226,7 +1286,10 @@ func (s *services) PutSetupV1ServicesID(ctx context.Context, request operations.
 // <p>If you require times in between specified hours to be unavailable, use the resource blocks endpoints. Times entered represent the timezone of the business location.</p>
 func (s *services) PutSetupV1ServicesIDAvailability(ctx context.Context, request operations.PutSetupV1ServicesIDAvailabilityRequest) (*operations.PutSetupV1ServicesIDAvailabilityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/availability", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/availability", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AvailabilityInputModel", "json")
 	if err != nil {
@@ -1278,7 +1341,10 @@ func (s *services) PutSetupV1ServicesIDAvailability(ctx context.Context, request
 // <p>Use this endpoint to <b>Recover</b> a deleted service object. A valid <b>service id</b> is required.</p>
 func (s *services) PutSetupV1ServicesIDRecover(ctx context.Context, request operations.PutSetupV1ServicesIDRecoverRequest) (*operations.PutSetupV1ServicesIDRecoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/recover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/services/{id}/recover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

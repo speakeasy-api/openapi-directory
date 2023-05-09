@@ -15,20 +15,24 @@ const (
 	PostLaunchActionExecutionStatusEnumFailed     PostLaunchActionExecutionStatusEnum = "FAILED"
 )
 
+func (e PostLaunchActionExecutionStatusEnum) ToPointer() *PostLaunchActionExecutionStatusEnum {
+	return &e
+}
+
 func (e *PostLaunchActionExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = PostLaunchActionExecutionStatusEnum(s)
+		*e = PostLaunchActionExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLaunchActionExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLaunchActionExecutionStatusEnum: %v", v)
 	}
 }

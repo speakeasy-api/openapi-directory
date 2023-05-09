@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -23,15 +24,20 @@ pkg/models/operations/posttransferfunds.go
 pkg/models/shared/serviceerror.go
 pkg/models/shared/accountholderbalanceresponse.go
 pkg/models/shared/detailbalance.go
+pkg/models/shared/amountwrapper.go
 pkg/models/shared/amount.go
+pkg/models/shared/accountdetailbalancewrapper.go
 pkg/models/shared/accountdetailbalance.go
 pkg/models/shared/accountholderbalancerequest.go
 pkg/models/shared/security.go
 pkg/models/shared/accountholdertransactionlistresponse.go
+pkg/models/shared/accounttransactionlistwrapper.go
 pkg/models/shared/accounttransactionlist.go
+pkg/models/shared/transactionwrapper.go
 pkg/models/shared/transaction.go
 pkg/models/shared/bankaccountdetail.go
 pkg/models/shared/accountholdertransactionlistrequest.go
+pkg/models/shared/transactionlistforaccountwrapper.go
 pkg/models/shared/transactionlistforaccount.go
 pkg/models/shared/debitaccountholderresponse.go
 pkg/models/shared/debitaccountholderrequest.go
@@ -47,4 +53,6 @@ pkg/models/shared/setupbeneficiaryresponse.go
 pkg/models/shared/setupbeneficiaryrequest.go
 pkg/models/shared/transferfundsresponse.go
 pkg/models/shared/transferfundsrequest.go
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

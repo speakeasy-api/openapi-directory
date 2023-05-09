@@ -15,20 +15,24 @@ const (
 	LoadBalancerTypeEnumEnumGateway     LoadBalancerTypeEnumEnum = "gateway"
 )
 
+func (e LoadBalancerTypeEnumEnum) ToPointer() *LoadBalancerTypeEnumEnum {
+	return &e
+}
+
 func (e *LoadBalancerTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "application":
 		fallthrough
 	case "network":
 		fallthrough
 	case "gateway":
-		*e = LoadBalancerTypeEnumEnum(s)
+		*e = LoadBalancerTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerTypeEnumEnum: %v", v)
 	}
 }

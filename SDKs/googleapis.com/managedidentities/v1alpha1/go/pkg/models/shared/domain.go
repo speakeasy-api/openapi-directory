@@ -21,12 +21,16 @@ const (
 	DomainStateEnumDown                  DomainStateEnum = "DOWN"
 )
 
+func (e DomainStateEnum) ToPointer() *DomainStateEnum {
+	return &e
+}
+
 func (e *DomainStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -42,10 +46,10 @@ func (e *DomainStateEnum) UnmarshalJSON(data []byte) error {
 	case "PERFORMING_MAINTENANCE":
 		fallthrough
 	case "DOWN":
-		*e = DomainStateEnum(s)
+		*e = DomainStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainStateEnum: %v", v)
 	}
 }
 

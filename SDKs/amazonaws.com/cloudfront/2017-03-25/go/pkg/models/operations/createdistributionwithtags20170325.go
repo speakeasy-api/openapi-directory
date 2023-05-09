@@ -3,8 +3,6 @@
 package operations
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -20,37 +18,16 @@ type CreateDistributionWithTags20170325RequestBody struct {
 	DistributionConfigWithTags CreateDistributionWithTags20170325RequestBodyDistributionConfigWithTags
 }
 
-// CreateDistributionWithTags20170325WithTagsEnum
-type CreateDistributionWithTags20170325WithTagsEnum string
-
-const (
-	CreateDistributionWithTags20170325WithTagsEnumTrue CreateDistributionWithTags20170325WithTagsEnum = "true"
-)
-
-func (e *CreateDistributionWithTags20170325WithTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		*e = CreateDistributionWithTags20170325WithTagsEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CreateDistributionWithTags20170325WithTagsEnum: %s", s)
-	}
-}
-
 type CreateDistributionWithTags20170325Request struct {
-	RequestBody       []byte                                         `request:"mediaType=text/xml"`
-	WithTags          CreateDistributionWithTags20170325WithTagsEnum `queryParam:"style=form,explode=true,name=WithTags"`
-	XAmzAlgorithm     *string                                        `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
-	XAmzContentSha256 *string                                        `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
-	XAmzCredential    *string                                        `header:"style=simple,explode=false,name=X-Amz-Credential"`
-	XAmzDate          *string                                        `header:"style=simple,explode=false,name=X-Amz-Date"`
-	XAmzSecurityToken *string                                        `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
-	XAmzSignature     *string                                        `header:"style=simple,explode=false,name=X-Amz-Signature"`
-	XAmzSignedHeaders *string                                        `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
+	RequestBody       []byte  `request:"mediaType=text/xml"`
+	WithTags          bool    `queryParam:"style=form,explode=true,name=WithTags"`
+	XAmzAlgorithm     *string `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
+	XAmzContentSha256 *string `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`
+	XAmzCredential    *string `header:"style=simple,explode=false,name=X-Amz-Credential"`
+	XAmzDate          *string `header:"style=simple,explode=false,name=X-Amz-Date"`
+	XAmzSecurityToken *string `header:"style=simple,explode=false,name=X-Amz-Security-Token"`
+	XAmzSignature     *string `header:"style=simple,explode=false,name=X-Amz-Signature"`
+	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
 type CreateDistributionWithTags20170325Response struct {

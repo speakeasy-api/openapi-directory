@@ -29,12 +29,16 @@ const (
 	TransactionCategoryEnumPlatformPayment TransactionCategoryEnum = "platformPayment"
 )
 
+func (e TransactionCategoryEnum) ToPointer() *TransactionCategoryEnum {
+	return &e
+}
+
 func (e *TransactionCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bank":
 		fallthrough
 	case "grants":
@@ -44,10 +48,10 @@ func (e *TransactionCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "issuedCard":
 		fallthrough
 	case "platformPayment":
-		*e = TransactionCategoryEnum(s)
+		*e = TransactionCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionCategoryEnum: %v", v)
 	}
 }
 
@@ -65,19 +69,23 @@ const (
 	TransactionStatusEnumPending TransactionStatusEnum = "pending"
 )
 
+func (e TransactionStatusEnum) ToPointer() *TransactionStatusEnum {
+	return &e
+}
+
 func (e *TransactionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "booked":
 		fallthrough
 	case "pending":
-		*e = TransactionStatusEnum(s)
+		*e = TransactionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionStatusEnum: %v", v)
 	}
 }
 
@@ -115,12 +123,16 @@ const (
 	TransactionTypeEnumSecondChargeback      TransactionTypeEnum = "secondChargeback"
 )
 
+func (e TransactionTypeEnum) ToPointer() *TransactionTypeEnum {
+	return &e
+}
+
 func (e *TransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "atmWithdrawal":
 		fallthrough
 	case "atmWithdrawalReversal":
@@ -172,10 +184,10 @@ func (e *TransactionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "reserveAdjustment":
 		fallthrough
 	case "secondChargeback":
-		*e = TransactionTypeEnum(s)
+		*e = TransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionTypeEnum: %v", v)
 	}
 }
 

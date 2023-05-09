@@ -15,17 +15,21 @@ const (
 	POSTEstimateTemplateCostActionEnumEstimateTemplateCost POSTEstimateTemplateCostActionEnum = "EstimateTemplateCost"
 )
 
+func (e POSTEstimateTemplateCostActionEnum) ToPointer() *POSTEstimateTemplateCostActionEnum {
+	return &e
+}
+
 func (e *POSTEstimateTemplateCostActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EstimateTemplateCost":
-		*e = POSTEstimateTemplateCostActionEnum(s)
+		*e = POSTEstimateTemplateCostActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEstimateTemplateCostActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEstimateTemplateCostActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEstimateTemplateCostVersionEnumTwoThousandAndTen0515 POSTEstimateTemplateCostVersionEnum = "2010-05-15"
 )
 
+func (e POSTEstimateTemplateCostVersionEnum) ToPointer() *POSTEstimateTemplateCostVersionEnum {
+	return &e
+}
+
 func (e *POSTEstimateTemplateCostVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTEstimateTemplateCostVersionEnum(s)
+		*e = POSTEstimateTemplateCostVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEstimateTemplateCostVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEstimateTemplateCostVersionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newPricing(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Retrieves the pricing information based on the dialing prefix.
 func (s *pricing) RetrievePrefixPricing(ctx context.Context, request operations.RetrievePrefixPricingRequest) (*operations.RetrievePrefixPricingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-prefix-pricing/outbound/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-prefix-pricing/outbound/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *pricing) RetrievePrefixPricing(ctx context.Context, request operations.
 // Retrieves the pricing information for all countries.
 func (s *pricing) RetrievePricingAllCountries(ctx context.Context, request operations.RetrievePricingAllCountriesRequest) (*operations.RetrievePricingAllCountriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-full-pricing/outbound/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-full-pricing/outbound/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +185,10 @@ func (s *pricing) RetrievePricingAllCountries(ctx context.Context, request opera
 // Retrieves the pricing information based on the specified country.
 func (s *pricing) RetrievePricingCountry(ctx context.Context, request operations.RetrievePricingCountryRequest) (*operations.RetrievePricingCountryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/get-pricing/outbound/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/get-pricing/outbound/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

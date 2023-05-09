@@ -15,19 +15,23 @@ const (
 	AntennaPolEnumV AntennaPolEnum = "v"
 )
 
+func (e AntennaPolEnum) ToPointer() *AntennaPolEnum {
+	return &e
+}
+
 func (e *AntennaPolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "h":
 		fallthrough
 	case "v":
-		*e = AntennaPolEnum(s)
+		*e = AntennaPolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AntennaPolEnum: %s", s)
+		return fmt.Errorf("invalid value for AntennaPolEnum: %v", v)
 	}
 }
 

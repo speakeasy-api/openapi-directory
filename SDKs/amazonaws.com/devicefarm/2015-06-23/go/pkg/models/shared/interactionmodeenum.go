@@ -15,20 +15,24 @@ const (
 	InteractionModeEnumVideoOnly   InteractionModeEnum = "VIDEO_ONLY"
 )
 
+func (e InteractionModeEnum) ToPointer() *InteractionModeEnum {
+	return &e
+}
+
 func (e *InteractionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERACTIVE":
 		fallthrough
 	case "NO_VIDEO":
 		fallthrough
 	case "VIDEO_ONLY":
-		*e = InteractionModeEnum(s)
+		*e = InteractionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InteractionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InteractionModeEnum: %v", v)
 	}
 }

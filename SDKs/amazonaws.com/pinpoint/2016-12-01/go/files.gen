@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -78,6 +79,9 @@ pkg/models/operations/getjourney.go
 pkg/models/operations/getjourneydaterangekpi.go
 pkg/models/operations/getjourneyexecutionactivitymetrics.go
 pkg/models/operations/getjourneyexecutionmetrics.go
+pkg/models/operations/getjourneyrunexecutionactivitymetrics.go
+pkg/models/operations/getjourneyrunexecutionmetrics.go
+pkg/models/operations/getjourneyruns.go
 pkg/models/operations/getpushtemplate.go
 pkg/models/operations/getrecommenderconfiguration.go
 pkg/models/operations/getrecommenderconfigurations.go
@@ -345,6 +349,14 @@ pkg/models/shared/getjourneyexecutionactivitymetricsresponse.go
 pkg/models/shared/journeyexecutionactivitymetricsresponse.go
 pkg/models/shared/getjourneyexecutionmetricsresponse.go
 pkg/models/shared/journeyexecutionmetricsresponse.go
+pkg/models/shared/getjourneyrunexecutionactivitymetricsresponse.go
+pkg/models/shared/journeyrunexecutionactivitymetricsresponse.go
+pkg/models/shared/getjourneyrunexecutionmetricsresponse.go
+pkg/models/shared/journeyrunexecutionmetricsresponse.go
+pkg/models/shared/getjourneyrunsresponse.go
+pkg/models/shared/journeyrunsresponse.go
+pkg/models/shared/journeyrunresponse.go
+pkg/models/shared/journeyrunstatusenum.go
 pkg/models/shared/getpushtemplateresponse.go
 pkg/models/shared/pushnotificationtemplateresponse.go
 pkg/models/shared/getrecommenderconfigurationresponse.go
@@ -439,4 +451,5 @@ pkg/models/shared/updatevoicetemplateresponse.go
 pkg/models/shared/verifyotpmessageresponse.go
 pkg/models/shared/verificationresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

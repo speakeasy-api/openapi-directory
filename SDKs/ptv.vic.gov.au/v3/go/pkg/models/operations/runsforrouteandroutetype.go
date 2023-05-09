@@ -19,12 +19,16 @@ const (
 	RunsForRouteAndRouteTypeExpandEnumNone              RunsForRouteAndRouteTypeExpandEnum = "None"
 )
 
+func (e RunsForRouteAndRouteTypeExpandEnum) ToPointer() *RunsForRouteAndRouteTypeExpandEnum {
+	return &e
+}
+
 func (e *RunsForRouteAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "VehicleDescriptor":
@@ -32,43 +36,47 @@ func (e *RunsForRouteAndRouteTypeExpandEnum) UnmarshalJSON(data []byte) error {
 	case "VehiclePosition":
 		fallthrough
 	case "None":
-		*e = RunsForRouteAndRouteTypeExpandEnum(s)
+		*e = RunsForRouteAndRouteTypeExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeExpandEnum: %v", v)
 	}
 }
 
 // RunsForRouteAndRouteTypeRouteTypeEnum - Number identifying transport mode; values returned via RouteTypes API
-type RunsForRouteAndRouteTypeRouteTypeEnum string
+type RunsForRouteAndRouteTypeRouteTypeEnum int
 
 const (
-	RunsForRouteAndRouteTypeRouteTypeEnumZero  RunsForRouteAndRouteTypeRouteTypeEnum = "0"
-	RunsForRouteAndRouteTypeRouteTypeEnumOne   RunsForRouteAndRouteTypeRouteTypeEnum = "1"
-	RunsForRouteAndRouteTypeRouteTypeEnumTwo   RunsForRouteAndRouteTypeRouteTypeEnum = "2"
-	RunsForRouteAndRouteTypeRouteTypeEnumThree RunsForRouteAndRouteTypeRouteTypeEnum = "3"
-	RunsForRouteAndRouteTypeRouteTypeEnumFour  RunsForRouteAndRouteTypeRouteTypeEnum = "4"
+	RunsForRouteAndRouteTypeRouteTypeEnumZero  RunsForRouteAndRouteTypeRouteTypeEnum = 0
+	RunsForRouteAndRouteTypeRouteTypeEnumOne   RunsForRouteAndRouteTypeRouteTypeEnum = 1
+	RunsForRouteAndRouteTypeRouteTypeEnumTwo   RunsForRouteAndRouteTypeRouteTypeEnum = 2
+	RunsForRouteAndRouteTypeRouteTypeEnumThree RunsForRouteAndRouteTypeRouteTypeEnum = 3
+	RunsForRouteAndRouteTypeRouteTypeEnumFour  RunsForRouteAndRouteTypeRouteTypeEnum = 4
 )
 
+func (e RunsForRouteAndRouteTypeRouteTypeEnum) ToPointer() *RunsForRouteAndRouteTypeRouteTypeEnum {
+	return &e
+}
+
 func (e *RunsForRouteAndRouteTypeRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = RunsForRouteAndRouteTypeRouteTypeEnum(s)
+	case 4:
+		*e = RunsForRouteAndRouteTypeRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RunsForRouteAndRouteTypeRouteTypeEnum: %v", v)
 	}
 }
 

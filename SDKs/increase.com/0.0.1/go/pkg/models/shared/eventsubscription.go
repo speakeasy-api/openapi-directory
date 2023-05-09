@@ -25,6 +25,8 @@ const (
 	EventSubscriptionSelectedEventCategoryEnumAchTransferUpdated                                   EventSubscriptionSelectedEventCategoryEnum = "ach_transfer.updated"
 	EventSubscriptionSelectedEventCategoryEnumCardCreated                                          EventSubscriptionSelectedEventCategoryEnum = "card.created"
 	EventSubscriptionSelectedEventCategoryEnumCardUpdated                                          EventSubscriptionSelectedEventCategoryEnum = "card.updated"
+	EventSubscriptionSelectedEventCategoryEnumCardPaymentCreated                                   EventSubscriptionSelectedEventCategoryEnum = "card_payment.created"
+	EventSubscriptionSelectedEventCategoryEnumCardPaymentUpdated                                   EventSubscriptionSelectedEventCategoryEnum = "card_payment.updated"
 	EventSubscriptionSelectedEventCategoryEnumCardDisputeCreated                                   EventSubscriptionSelectedEventCategoryEnum = "card_dispute.created"
 	EventSubscriptionSelectedEventCategoryEnumCardDisputeUpdated                                   EventSubscriptionSelectedEventCategoryEnum = "card_dispute.updated"
 	EventSubscriptionSelectedEventCategoryEnumCheckDepositCreated                                  EventSubscriptionSelectedEventCategoryEnum = "check_deposit.created"
@@ -62,12 +64,16 @@ const (
 	EventSubscriptionSelectedEventCategoryEnumWireTransferUpdated                                  EventSubscriptionSelectedEventCategoryEnum = "wire_transfer.updated"
 )
 
+func (e EventSubscriptionSelectedEventCategoryEnum) ToPointer() *EventSubscriptionSelectedEventCategoryEnum {
+	return &e
+}
+
 func (e *EventSubscriptionSelectedEventCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account.created":
 		fallthrough
 	case "account.updated":
@@ -93,6 +99,10 @@ func (e *EventSubscriptionSelectedEventCategoryEnum) UnmarshalJSON(data []byte) 
 	case "card.created":
 		fallthrough
 	case "card.updated":
+		fallthrough
+	case "card_payment.created":
+		fallthrough
+	case "card_payment.updated":
 		fallthrough
 	case "card_dispute.created":
 		fallthrough
@@ -163,10 +173,10 @@ func (e *EventSubscriptionSelectedEventCategoryEnum) UnmarshalJSON(data []byte) 
 	case "wire_transfer.created":
 		fallthrough
 	case "wire_transfer.updated":
-		*e = EventSubscriptionSelectedEventCategoryEnum(s)
+		*e = EventSubscriptionSelectedEventCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSubscriptionSelectedEventCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSubscriptionSelectedEventCategoryEnum: %v", v)
 	}
 }
 
@@ -180,12 +190,16 @@ const (
 	EventSubscriptionStatusEnumRequiresAttention EventSubscriptionStatusEnum = "requires_attention"
 )
 
+func (e EventSubscriptionStatusEnum) ToPointer() *EventSubscriptionStatusEnum {
+	return &e
+}
+
 func (e *EventSubscriptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "disabled":
@@ -193,10 +207,10 @@ func (e *EventSubscriptionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "deleted":
 		fallthrough
 	case "requires_attention":
-		*e = EventSubscriptionStatusEnum(s)
+		*e = EventSubscriptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSubscriptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSubscriptionStatusEnum: %v", v)
 	}
 }
 
@@ -207,17 +221,21 @@ const (
 	EventSubscriptionTypeEnumEventSubscription EventSubscriptionTypeEnum = "event_subscription"
 )
 
+func (e EventSubscriptionTypeEnum) ToPointer() *EventSubscriptionTypeEnum {
+	return &e
+}
+
 func (e *EventSubscriptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event_subscription":
-		*e = EventSubscriptionTypeEnum(s)
+		*e = EventSubscriptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSubscriptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSubscriptionTypeEnum: %v", v)
 	}
 }
 

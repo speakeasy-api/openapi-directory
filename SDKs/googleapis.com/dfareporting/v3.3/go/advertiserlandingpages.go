@@ -34,7 +34,10 @@ func newAdvertiserLandingPages(defaultClient, securityClient HTTPClient, serverU
 // DfareportingAdvertiserLandingPagesGet - Gets one landing page by ID.
 func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesGet(ctx context.Context, request operations.DfareportingAdvertiserLandingPagesGetRequest, security operations.DfareportingAdvertiserLandingPagesGetSecurity) (*operations.DfareportingAdvertiserLandingPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesGet(ctx conte
 // DfareportingAdvertiserLandingPagesInsert - Inserts a new landing page.
 func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesInsert(ctx context.Context, request operations.DfareportingAdvertiserLandingPagesInsertRequest, security operations.DfareportingAdvertiserLandingPagesInsertSecurity) (*operations.DfareportingAdvertiserLandingPagesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LandingPage", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesInsert(ctx co
 // DfareportingAdvertiserLandingPagesList - Retrieves a list of landing pages.
 func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesList(ctx context.Context, request operations.DfareportingAdvertiserLandingPagesListRequest, security operations.DfareportingAdvertiserLandingPagesListSecurity) (*operations.DfareportingAdvertiserLandingPagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesList(ctx cont
 // DfareportingAdvertiserLandingPagesPatch - Updates an existing advertiser landing page. This method supports patch semantics.
 func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesPatch(ctx context.Context, request operations.DfareportingAdvertiserLandingPagesPatchRequest, security operations.DfareportingAdvertiserLandingPagesPatchSecurity) (*operations.DfareportingAdvertiserLandingPagesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LandingPage", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesPatch(ctx con
 // DfareportingAdvertiserLandingPagesUpdate - Updates an existing landing page.
 func (s *advertiserLandingPages) DfareportingAdvertiserLandingPagesUpdate(ctx context.Context, request operations.DfareportingAdvertiserLandingPagesUpdateRequest, security operations.DfareportingAdvertiserLandingPagesUpdateSecurity) (*operations.DfareportingAdvertiserLandingPagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserLandingPages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LandingPage", "json")
 	if err != nil {

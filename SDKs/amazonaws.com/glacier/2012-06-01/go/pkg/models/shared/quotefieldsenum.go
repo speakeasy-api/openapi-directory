@@ -14,18 +14,22 @@ const (
 	QuoteFieldsEnumAsneeded QuoteFieldsEnum = "ASNEEDED"
 )
 
+func (e QuoteFieldsEnum) ToPointer() *QuoteFieldsEnum {
+	return &e
+}
+
 func (e *QuoteFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALWAYS":
 		fallthrough
 	case "ASNEEDED":
-		*e = QuoteFieldsEnum(s)
+		*e = QuoteFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuoteFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for QuoteFieldsEnum: %v", v)
 	}
 }

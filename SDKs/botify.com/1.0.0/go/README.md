@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/botify.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateUrlsExportRequest{
+    ctx := context.Background()
+    res, err := s.Analysis.CreateUrlsExport(ctx, operations.CreateUrlsExportRequest{
         UrlsQuery: &shared.UrlsQuery{
             Fields: []string{
                 "provident",
@@ -52,13 +53,10 @@ func main() {
             },
         },
         AnalysisSlug: "voluptatum",
-        Area: "disappeared",
+        Area: operations.CreateUrlsExportAreaEnumDisappeared.ToPointer(),
         ProjectSlug: "excepturi",
         Username: "Glen.Walsh33",
-    }
-
-    ctx := context.Background()
-    res, err := s.Analysis.CreateUrlsExport(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -74,40 +72,40 @@ func main() {
 ## Available Resources and Operations
 
 
-### Analysis
+### [Analysis](docs/analysis/README.md)
 
-* `CreateUrlsExport` - Creates a new UrlExport object and starts a task that will export the results into a csv
-* `GetAnalysisSummary` - Get an Analysis detail
-* `GetCrawlStatistics` - Return global statistics for an analysis
-* `GetCrawlStatisticsByFrequency` - Return crawl statistics grouped by time frequency (1 min, 5 mins or 60 min)
-* `GetCrawlStatisticsUrls` - Return a list of 1000 latest URLs crawled (all crawled URLs or only URLS with HTTP errors)
-* `GetGanalyticsOrphanURLs` - List of Orphan URLs
-* `GetLinksPercentiles` - Get inlinks percentiles
-* `GetLinksTopDomains` - Top domains
-* `GetLinksTopSubdomains` - Top subddomains
-* `GetPageRankLost` - Lost pagerank
-* `GetSitemapsReport` - Get global information of the sitemaps found (sitemaps indexes, invalid sitemaps urls, etc
-* `GetSitemapsSamplesOutOfConfig` - Sample list of URLs which were found in your sitemaps but outside of the
-* `GetSitemapsSamplesSitemapsOnly` - Sample list of URLs which were found in your sitemaps, within the project
-* `GetURLDetail` - Gets the detail of an URL for an analysis
-* `GetUrls` - Executes a query and returns a paginated response
-* `GetUrlsAggs` - Query aggregator
-* `GetUrlsDatamodel` - Gets an Analysis datamodel
-* `GetUrlsExportStatus` - Checks the status of an CSVUrlExportJob object
-* `GetUrlsExports` - A list of the CSV Exports requests and their current status
-* `GetUrlsSuggestedFilters` - Return most frequent segments (= suggested patterns in the previous version)
+* [CreateUrlsExport](docs/analysis/README.md#createurlsexport) - Creates a new UrlExport object and starts a task that will export the results into a csv
+* [GetAnalysisSummary](docs/analysis/README.md#getanalysissummary) - Get an Analysis detail
+* [GetCrawlStatistics](docs/analysis/README.md#getcrawlstatistics) - Return global statistics for an analysis
+* [GetCrawlStatisticsByFrequency](docs/analysis/README.md#getcrawlstatisticsbyfrequency) - Return crawl statistics grouped by time frequency (1 min, 5 mins or 60 min)
+* [GetCrawlStatisticsUrls](docs/analysis/README.md#getcrawlstatisticsurls) - Return a list of 1000 latest URLs crawled (all crawled URLs or only URLS with HTTP errors)
+* [GetGanalyticsOrphanURLs](docs/analysis/README.md#getganalyticsorphanurls) - List of Orphan URLs
+* [GetLinksPercentiles](docs/analysis/README.md#getlinkspercentiles) - Get inlinks percentiles
+* [GetLinksTopDomains](docs/analysis/README.md#getlinkstopdomains) - Top domains
+* [GetLinksTopSubdomains](docs/analysis/README.md#getlinkstopsubdomains) - Top subddomains
+* [GetPageRankLost](docs/analysis/README.md#getpageranklost) - Lost pagerank
+* [GetSitemapsReport](docs/analysis/README.md#getsitemapsreport) - Get global information of the sitemaps found (sitemaps indexes, invalid sitemaps urls, etc
+* [GetSitemapsSamplesOutOfConfig](docs/analysis/README.md#getsitemapssamplesoutofconfig) - Sample list of URLs which were found in your sitemaps but outside of the
+* [GetSitemapsSamplesSitemapsOnly](docs/analysis/README.md#getsitemapssamplessitemapsonly) - Sample list of URLs which were found in your sitemaps, within the project
+* [GetURLDetail](docs/analysis/README.md#geturldetail) - Gets the detail of an URL for an analysis
+* [GetUrls](docs/analysis/README.md#geturls) - Executes a query and returns a paginated response
+* [GetUrlsAggs](docs/analysis/README.md#geturlsaggs) - Query aggregator
+* [GetUrlsDatamodel](docs/analysis/README.md#geturlsdatamodel) - Gets an Analysis datamodel
+* [GetUrlsExportStatus](docs/analysis/README.md#geturlsexportstatus) - Checks the status of an CSVUrlExportJob object
+* [GetUrlsExports](docs/analysis/README.md#geturlsexports) - A list of the CSV Exports requests and their current status
+* [GetUrlsSuggestedFilters](docs/analysis/README.md#geturlssuggestedfilters) - Return most frequent segments (= suggested patterns in the previous version)
 
-### Project
+### [Project](docs/project/README.md)
 
-* `GetProjectAnalyses` - List all analyses for a project
-* `GetProjectUrlsAggs` - Project Query aggregator
-* `GetSavedFilter` - Retrieves a specific saved filter's name, ID and filter value
-* `GetSavedFilters` - List all the project's saved filters (each filter's name, ID and filter value)
-* `TestURLRewritingRules` - Match and replace parts of a URL based on rules passed in POST data
+* [GetProjectAnalyses](docs/project/README.md#getprojectanalyses) - List all analyses for a project
+* [GetProjectUrlsAggs](docs/project/README.md#getprojecturlsaggs) - Project Query aggregator
+* [GetSavedFilter](docs/project/README.md#getsavedfilter) - Retrieves a specific saved filter's name, ID and filter value
+* [GetSavedFilters](docs/project/README.md#getsavedfilters) - List all the project's saved filters (each filter's name, ID and filter value)
+* [TestURLRewritingRules](docs/project/README.md#testurlrewritingrules) - Match and replace parts of a URL based on rules passed in POST data
 
-### User
+### [User](docs/user/README.md)
 
-* `GetUserProjects` - List all active projects for the user
+* [GetUserProjects](docs/user/README.md#getuserprojects) - List all active projects for the user
 <!-- End SDK Available Operations -->
 
 ### Maturity

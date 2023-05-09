@@ -2,7 +2,7 @@
 
 package shared
 
-// CloudRemovalConfigInput - <p/>
+// CloudRemovalConfigInput - Input structure for Cloud Removal Operation type
 type CloudRemovalConfigInput struct {
 	AlgorithmName      *AlgorithmNameCloudRemovalEnum `json:"AlgorithmName,omitempty"`
 	InterpolationValue *string                        `json:"InterpolationValue,omitempty"`

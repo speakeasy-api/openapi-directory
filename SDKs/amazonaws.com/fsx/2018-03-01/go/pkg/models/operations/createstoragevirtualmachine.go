@@ -16,17 +16,21 @@ const (
 	CreateStorageVirtualMachineXAmzTargetEnumAwsSimbaAPIServiceV20180301CreateStorageVirtualMachine CreateStorageVirtualMachineXAmzTargetEnum = "AWSSimbaAPIService_v20180301.CreateStorageVirtualMachine"
 )
 
+func (e CreateStorageVirtualMachineXAmzTargetEnum) ToPointer() *CreateStorageVirtualMachineXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateStorageVirtualMachineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.CreateStorageVirtualMachine":
-		*e = CreateStorageVirtualMachineXAmzTargetEnum(s)
+		*e = CreateStorageVirtualMachineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStorageVirtualMachineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStorageVirtualMachineXAmzTargetEnum: %v", v)
 	}
 }
 

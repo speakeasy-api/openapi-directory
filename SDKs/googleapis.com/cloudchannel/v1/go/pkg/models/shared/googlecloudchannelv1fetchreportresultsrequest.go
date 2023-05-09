@@ -8,4 +8,6 @@ type GoogleCloudChannelV1FetchReportResultsRequest struct {
 	PageSize *int `json:"pageSize,omitempty"`
 	// Optional. A token that specifies a page of results beyond the first page. Obtained through FetchReportResultsResponse.next_page_token of the previous CloudChannelReportsService.FetchReportResults call.
 	PageToken *string `json:"pageToken,omitempty"`
+	// Optional. List of keys specifying which report partitions to return. If empty, returns all partitions.
+	PartitionKeys []string `json:"partitionKeys,omitempty"`
 }

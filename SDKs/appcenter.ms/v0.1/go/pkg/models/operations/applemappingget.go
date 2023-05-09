@@ -31,12 +31,16 @@ const (
 	AppleMappingGetDefaultApplicationJSONCodeEnumTooManyRequests     AppleMappingGetDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e AppleMappingGetDefaultApplicationJSONCodeEnum) ToPointer() *AppleMappingGetDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *AppleMappingGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppleMappingGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byt
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppleMappingGetDefaultApplicationJSONCodeEnum(s)
+		*e = AppleMappingGetDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppleMappingGetDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppleMappingGetDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

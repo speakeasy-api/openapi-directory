@@ -16,17 +16,21 @@ const (
 	DisassociateDelegationSignerFromDomainXAmzTargetEnumRoute53DomainsV20140515DisassociateDelegationSignerFromDomain DisassociateDelegationSignerFromDomainXAmzTargetEnum = "Route53Domains_v20140515.DisassociateDelegationSignerFromDomain"
 )
 
+func (e DisassociateDelegationSignerFromDomainXAmzTargetEnum) ToPointer() *DisassociateDelegationSignerFromDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateDelegationSignerFromDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.DisassociateDelegationSignerFromDomain":
-		*e = DisassociateDelegationSignerFromDomainXAmzTargetEnum(s)
+		*e = DisassociateDelegationSignerFromDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateDelegationSignerFromDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateDelegationSignerFromDomainXAmzTargetEnum: %v", v)
 	}
 }
 

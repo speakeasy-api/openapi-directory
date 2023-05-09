@@ -16,19 +16,23 @@ const (
 	CreateAnAchTransferParametersFundingEnumSavings  CreateAnAchTransferParametersFundingEnum = "savings"
 )
 
+func (e CreateAnAchTransferParametersFundingEnum) ToPointer() *CreateAnAchTransferParametersFundingEnum {
+	return &e
+}
+
 func (e *CreateAnAchTransferParametersFundingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "checking":
 		fallthrough
 	case "savings":
-		*e = CreateAnAchTransferParametersFundingEnum(s)
+		*e = CreateAnAchTransferParametersFundingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAchTransferParametersFundingEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAchTransferParametersFundingEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	CreateAnAchTransferParametersStandardEntryClassCodeEnumInternetInitiated             CreateAnAchTransferParametersStandardEntryClassCodeEnum = "internet_initiated"
 )
 
+func (e CreateAnAchTransferParametersStandardEntryClassCodeEnum) ToPointer() *CreateAnAchTransferParametersStandardEntryClassCodeEnum {
+	return &e
+}
+
 func (e *CreateAnAchTransferParametersStandardEntryClassCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "corporate_credit_or_debit":
 		fallthrough
 	case "prearranged_payments_and_deposit":
 		fallthrough
 	case "internet_initiated":
-		*e = CreateAnAchTransferParametersStandardEntryClassCodeEnum(s)
+		*e = CreateAnAchTransferParametersStandardEntryClassCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAchTransferParametersStandardEntryClassCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAchTransferParametersStandardEntryClassCodeEnum: %v", v)
 	}
 }
 
@@ -68,7 +76,7 @@ type CreateAnAchTransferParameters struct {
 	Addendum *string `json:"addendum,omitempty"`
 	// The transfer amount in cents. A positive amount originates a credit transfer pushing funds to the receiving account. A negative amount originates a debit transfer pulling funds from the receiving account.
 	Amount int64 `json:"amount"`
-	// The description of the date of the transfer, usually in the format `YYYYMMDD`. This is included in the transfer data sent to the receiving bank.
+	// The description of the date of the transfer, usually in the format `YYMMDD`. This is included in the transfer data sent to the receiving bank.
 	CompanyDescriptiveDate *string `json:"company_descriptive_date,omitempty"`
 	// The data you choose to associate with the transfer. This is included in the transfer data sent to the receiving bank.
 	CompanyDiscretionaryData *string `json:"company_discretionary_data,omitempty"`

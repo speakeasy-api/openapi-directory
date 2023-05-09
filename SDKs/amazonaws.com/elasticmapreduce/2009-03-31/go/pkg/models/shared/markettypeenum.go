@@ -14,18 +14,22 @@ const (
 	MarketTypeEnumSpot     MarketTypeEnum = "SPOT"
 )
 
+func (e MarketTypeEnum) ToPointer() *MarketTypeEnum {
+	return &e
+}
+
 func (e *MarketTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_DEMAND":
 		fallthrough
 	case "SPOT":
-		*e = MarketTypeEnum(s)
+		*e = MarketTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketTypeEnum: %v", v)
 	}
 }

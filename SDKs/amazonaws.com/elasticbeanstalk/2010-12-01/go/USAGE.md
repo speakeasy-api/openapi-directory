@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,22 +16,20 @@ func main() {
         }),
     )
 
-    req := operations.GETAbortEnvironmentUpdateRequest{
-        Action: "AbortEnvironmentUpdate",
-        EnvironmentID: "corrupti",
-        EnvironmentName: "provident",
-        Version: "2010-12-01",
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.GETAbortEnvironmentUpdate(ctx, req)
+    res, err := s.GETAbortEnvironmentUpdate(ctx, operations.GETAbortEnvironmentUpdateRequest{
+        Action: operations.GETAbortEnvironmentUpdateActionEnumAbortEnvironmentUpdate,
+        EnvironmentID: sdk.String("corrupti"),
+        EnvironmentName: sdk.String("provident"),
+        Version: operations.GETAbortEnvironmentUpdateVersionEnumTwoThousandAndTen1201,
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }

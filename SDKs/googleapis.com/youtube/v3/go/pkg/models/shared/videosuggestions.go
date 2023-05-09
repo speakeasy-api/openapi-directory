@@ -16,12 +16,16 @@ const (
 	VideoSuggestionsEditorSuggestionsEnumAudioQuietAudioSwap VideoSuggestionsEditorSuggestionsEnum = "audioQuietAudioSwap"
 )
 
+func (e VideoSuggestionsEditorSuggestionsEnum) ToPointer() *VideoSuggestionsEditorSuggestionsEnum {
+	return &e
+}
+
 func (e *VideoSuggestionsEditorSuggestionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoAutoLevels":
 		fallthrough
 	case "videoStabilize":
@@ -29,10 +33,10 @@ func (e *VideoSuggestionsEditorSuggestionsEnum) UnmarshalJSON(data []byte) error
 	case "videoCrop":
 		fallthrough
 	case "audioQuietAudioSwap":
-		*e = VideoSuggestionsEditorSuggestionsEnum(s)
+		*e = VideoSuggestionsEditorSuggestionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSuggestionsEditorSuggestionsEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSuggestionsEditorSuggestionsEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	VideoSuggestionsProcessingErrorsEnumUnsupportedSpatialAudioLayout VideoSuggestionsProcessingErrorsEnum = "unsupportedSpatialAudioLayout"
 )
 
+func (e VideoSuggestionsProcessingErrorsEnum) ToPointer() *VideoSuggestionsProcessingErrorsEnum {
+	return &e
+}
+
 func (e *VideoSuggestionsProcessingErrorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audioFile":
 		fallthrough
 	case "imageFile":
@@ -67,10 +75,10 @@ func (e *VideoSuggestionsProcessingErrorsEnum) UnmarshalJSON(data []byte) error 
 	case "archiveFile":
 		fallthrough
 	case "unsupportedSpatialAudioLayout":
-		*e = VideoSuggestionsProcessingErrorsEnum(s)
+		*e = VideoSuggestionsProcessingErrorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSuggestionsProcessingErrorsEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSuggestionsProcessingErrorsEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	VideoSuggestionsProcessingHintsEnumHdrVideo             VideoSuggestionsProcessingHintsEnum = "hdrVideo"
 )
 
+func (e VideoSuggestionsProcessingHintsEnum) ToPointer() *VideoSuggestionsProcessingHintsEnum {
+	return &e
+}
+
 func (e *VideoSuggestionsProcessingHintsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nonStreamableMov":
 		fallthrough
 	case "sendBestQualityVideo":
@@ -102,10 +114,10 @@ func (e *VideoSuggestionsProcessingHintsEnum) UnmarshalJSON(data []byte) error {
 	case "vrVideo":
 		fallthrough
 	case "hdrVideo":
-		*e = VideoSuggestionsProcessingHintsEnum(s)
+		*e = VideoSuggestionsProcessingHintsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSuggestionsProcessingHintsEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSuggestionsProcessingHintsEnum: %v", v)
 	}
 }
 
@@ -126,12 +138,16 @@ const (
 	VideoSuggestionsProcessingWarningsEnumProblematicHdrLookupTable          VideoSuggestionsProcessingWarningsEnum = "problematicHdrLookupTable"
 )
 
+func (e VideoSuggestionsProcessingWarningsEnum) ToPointer() *VideoSuggestionsProcessingWarningsEnum {
+	return &e
+}
+
 func (e *VideoSuggestionsProcessingWarningsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownContainer":
 		fallthrough
 	case "unknownVideoCodec":
@@ -155,10 +171,10 @@ func (e *VideoSuggestionsProcessingWarningsEnum) UnmarshalJSON(data []byte) erro
 	case "unsupportedHdrColorMetadata":
 		fallthrough
 	case "problematicHdrLookupTable":
-		*e = VideoSuggestionsProcessingWarningsEnum(s)
+		*e = VideoSuggestionsProcessingWarningsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSuggestionsProcessingWarningsEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSuggestionsProcessingWarningsEnum: %v", v)
 	}
 }
 

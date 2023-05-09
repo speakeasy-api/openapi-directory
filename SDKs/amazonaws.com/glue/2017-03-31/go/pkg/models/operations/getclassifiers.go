@@ -16,17 +16,21 @@ const (
 	GetClassifiersXAmzTargetEnumAwsGlueGetClassifiers GetClassifiersXAmzTargetEnum = "AWSGlue.GetClassifiers"
 )
 
+func (e GetClassifiersXAmzTargetEnum) ToPointer() *GetClassifiersXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetClassifiersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetClassifiers":
-		*e = GetClassifiersXAmzTargetEnum(s)
+		*e = GetClassifiersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetClassifiersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetClassifiersXAmzTargetEnum: %v", v)
 	}
 }
 

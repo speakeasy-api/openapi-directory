@@ -19,12 +19,16 @@ const (
 	SearchJobsRequestDiversificationLevelEnumDiversifyByLooserSimilarity     SearchJobsRequestDiversificationLevelEnum = "DIVERSIFY_BY_LOOSER_SIMILARITY"
 )
 
+func (e SearchJobsRequestDiversificationLevelEnum) ToPointer() *SearchJobsRequestDiversificationLevelEnum {
+	return &e
+}
+
 func (e *SearchJobsRequestDiversificationLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIVERSIFICATION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -36,10 +40,10 @@ func (e *SearchJobsRequestDiversificationLevelEnum) UnmarshalJSON(data []byte) e
 	case "TWO_PER_COMPANY":
 		fallthrough
 	case "DIVERSIFY_BY_LOOSER_SIMILARITY":
-		*e = SearchJobsRequestDiversificationLevelEnum(s)
+		*e = SearchJobsRequestDiversificationLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchJobsRequestDiversificationLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchJobsRequestDiversificationLevelEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	SearchJobsRequestJobViewEnumJobViewFull        SearchJobsRequestJobViewEnum = "JOB_VIEW_FULL"
 )
 
+func (e SearchJobsRequestJobViewEnum) ToPointer() *SearchJobsRequestJobViewEnum {
+	return &e
+}
+
 func (e *SearchJobsRequestJobViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_VIEW_UNSPECIFIED":
 		fallthrough
 	case "JOB_VIEW_ID_ONLY":
@@ -69,10 +77,10 @@ func (e *SearchJobsRequestJobViewEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_VIEW_SMALL":
 		fallthrough
 	case "JOB_VIEW_FULL":
-		*e = SearchJobsRequestJobViewEnum(s)
+		*e = SearchJobsRequestJobViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchJobsRequestJobViewEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchJobsRequestJobViewEnum: %v", v)
 	}
 }
 
@@ -86,12 +94,16 @@ const (
 	SearchJobsRequestKeywordMatchModeEnumKeywordMatchTitleOnly       SearchJobsRequestKeywordMatchModeEnum = "KEYWORD_MATCH_TITLE_ONLY"
 )
 
+func (e SearchJobsRequestKeywordMatchModeEnum) ToPointer() *SearchJobsRequestKeywordMatchModeEnum {
+	return &e
+}
+
 func (e *SearchJobsRequestKeywordMatchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEYWORD_MATCH_MODE_UNSPECIFIED":
 		fallthrough
 	case "KEYWORD_MATCH_DISABLED":
@@ -99,10 +111,10 @@ func (e *SearchJobsRequestKeywordMatchModeEnum) UnmarshalJSON(data []byte) error
 	case "KEYWORD_MATCH_ALL":
 		fallthrough
 	case "KEYWORD_MATCH_TITLE_ONLY":
-		*e = SearchJobsRequestKeywordMatchModeEnum(s)
+		*e = SearchJobsRequestKeywordMatchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchJobsRequestKeywordMatchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchJobsRequestKeywordMatchModeEnum: %v", v)
 	}
 }
 
@@ -115,21 +127,25 @@ const (
 	SearchJobsRequestSearchModeEnumFeaturedJobSearch     SearchJobsRequestSearchModeEnum = "FEATURED_JOB_SEARCH"
 )
 
+func (e SearchJobsRequestSearchModeEnum) ToPointer() *SearchJobsRequestSearchModeEnum {
+	return &e
+}
+
 func (e *SearchJobsRequestSearchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEARCH_MODE_UNSPECIFIED":
 		fallthrough
 	case "JOB_SEARCH":
 		fallthrough
 	case "FEATURED_JOB_SEARCH":
-		*e = SearchJobsRequestSearchModeEnum(s)
+		*e = SearchJobsRequestSearchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchJobsRequestSearchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchJobsRequestSearchModeEnum: %v", v)
 	}
 }
 

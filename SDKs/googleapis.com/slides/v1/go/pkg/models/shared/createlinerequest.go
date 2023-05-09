@@ -17,12 +17,16 @@ const (
 	CreateLineRequestCategoryEnumCurved                  CreateLineRequestCategoryEnum = "CURVED"
 )
 
+func (e CreateLineRequestCategoryEnum) ToPointer() *CreateLineRequestCategoryEnum {
+	return &e
+}
+
 func (e *CreateLineRequestCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "STRAIGHT":
@@ -30,10 +34,10 @@ func (e *CreateLineRequestCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "BENT":
 		fallthrough
 	case "CURVED":
-		*e = CreateLineRequestCategoryEnum(s)
+		*e = CreateLineRequestCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLineRequestCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLineRequestCategoryEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	CreateLineRequestLineCategoryEnumCurved   CreateLineRequestLineCategoryEnum = "CURVED"
 )
 
+func (e CreateLineRequestLineCategoryEnum) ToPointer() *CreateLineRequestLineCategoryEnum {
+	return &e
+}
+
 func (e *CreateLineRequestLineCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRAIGHT":
 		fallthrough
 	case "BENT":
 		fallthrough
 	case "CURVED":
-		*e = CreateLineRequestLineCategoryEnum(s)
+		*e = CreateLineRequestLineCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLineRequestLineCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLineRequestLineCategoryEnum: %v", v)
 	}
 }
 

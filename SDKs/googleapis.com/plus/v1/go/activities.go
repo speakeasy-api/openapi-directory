@@ -35,7 +35,10 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 // PlusActivitiesGet - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 func (s *activities) PlusActivitiesGet(ctx context.Context, request operations.PlusActivitiesGetRequest, security operations.PlusActivitiesGetSecurity) (*operations.PlusActivitiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/activities/{activityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *activities) PlusActivitiesGet(ctx context.Context, request operations.P
 // PlusActivitiesList - Shut down. See https://developers.google.com/+/api-shutdown for more details.
 func (s *activities) PlusActivitiesList(ctx context.Context, request operations.PlusActivitiesListRequest, security operations.PlusActivitiesListSecurity) (*operations.PlusActivitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/people/{userId}/activities/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/people/{userId}/activities/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

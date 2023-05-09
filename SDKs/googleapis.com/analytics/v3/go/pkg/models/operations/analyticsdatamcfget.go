@@ -33,21 +33,25 @@ const (
 	AnalyticsDataMcfGetSamplingLevelEnumHigherPrecision AnalyticsDataMcfGetSamplingLevelEnum = "HIGHER_PRECISION"
 )
 
+func (e AnalyticsDataMcfGetSamplingLevelEnum) ToPointer() *AnalyticsDataMcfGetSamplingLevelEnum {
+	return &e
+}
+
 func (e *AnalyticsDataMcfGetSamplingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "FASTER":
 		fallthrough
 	case "HIGHER_PRECISION":
-		*e = AnalyticsDataMcfGetSamplingLevelEnum(s)
+		*e = AnalyticsDataMcfGetSamplingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsDataMcfGetSamplingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsDataMcfGetSamplingLevelEnum: %v", v)
 	}
 }
 

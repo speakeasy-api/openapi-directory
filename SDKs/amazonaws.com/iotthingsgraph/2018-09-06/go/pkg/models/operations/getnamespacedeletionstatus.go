@@ -16,17 +16,21 @@ const (
 	GetNamespaceDeletionStatusXAmzTargetEnumIotThingsGraphFrontEndServiceGetNamespaceDeletionStatus GetNamespaceDeletionStatusXAmzTargetEnum = "IotThingsGraphFrontEndService.GetNamespaceDeletionStatus"
 )
 
+func (e GetNamespaceDeletionStatusXAmzTargetEnum) ToPointer() *GetNamespaceDeletionStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetNamespaceDeletionStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.GetNamespaceDeletionStatus":
-		*e = GetNamespaceDeletionStatusXAmzTargetEnum(s)
+		*e = GetNamespaceDeletionStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamespaceDeletionStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamespaceDeletionStatusXAmzTargetEnum: %v", v)
 	}
 }
 

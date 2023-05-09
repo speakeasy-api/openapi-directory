@@ -29,12 +29,16 @@ const (
 	ReleasesGetIosManifest404ApplicationJSONCodeEnumTooManyRequests     ReleasesGetIosManifest404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetIosManifest404ApplicationJSONCodeEnum) ToPointer() *ReleasesGetIosManifest404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetIosManifest404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *ReleasesGetIosManifest404ApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetIosManifest404ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetIosManifest404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetIosManifest404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetIosManifest404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	ReleasesGetIosManifest403ApplicationJSONCodeEnumTooManyRequests     ReleasesGetIosManifest403ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetIosManifest403ApplicationJSONCodeEnum) ToPointer() *ReleasesGetIosManifest403ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetIosManifest403ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -92,10 +100,10 @@ func (e *ReleasesGetIosManifest403ApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetIosManifest403ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetIosManifest403ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetIosManifest403ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetIosManifest403ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -117,12 +125,16 @@ const (
 	ReleasesGetIosManifest400ApplicationJSONCodeEnumTooManyRequests     ReleasesGetIosManifest400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesGetIosManifest400ApplicationJSONCodeEnum) ToPointer() *ReleasesGetIosManifest400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesGetIosManifest400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -136,10 +148,10 @@ func (e *ReleasesGetIosManifest400ApplicationJSONCodeEnum) UnmarshalJSON(data []
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesGetIosManifest400ApplicationJSONCodeEnum(s)
+		*e = ReleasesGetIosManifest400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesGetIosManifest400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesGetIosManifest400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

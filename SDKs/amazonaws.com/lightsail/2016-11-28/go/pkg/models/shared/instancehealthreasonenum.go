@@ -23,12 +23,16 @@ const (
 	InstanceHealthReasonEnumInstanceIPUnusable               InstanceHealthReasonEnum = "Instance.IpUnusable"
 )
 
+func (e InstanceHealthReasonEnum) ToPointer() *InstanceHealthReasonEnum {
+	return &e
+}
+
 func (e *InstanceHealthReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lb.RegistrationInProgress":
 		fallthrough
 	case "Lb.InitialHealthChecking":
@@ -50,9 +54,9 @@ func (e *InstanceHealthReasonEnum) UnmarshalJSON(data []byte) error {
 	case "Instance.InvalidState":
 		fallthrough
 	case "Instance.IpUnusable":
-		*e = InstanceHealthReasonEnum(s)
+		*e = InstanceHealthReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceHealthReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceHealthReasonEnum: %v", v)
 	}
 }

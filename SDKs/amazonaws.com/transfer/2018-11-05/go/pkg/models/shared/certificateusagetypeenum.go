@@ -14,18 +14,22 @@ const (
 	CertificateUsageTypeEnumEncryption CertificateUsageTypeEnum = "ENCRYPTION"
 )
 
+func (e CertificateUsageTypeEnum) ToPointer() *CertificateUsageTypeEnum {
+	return &e
+}
+
 func (e *CertificateUsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGNING":
 		fallthrough
 	case "ENCRYPTION":
-		*e = CertificateUsageTypeEnum(s)
+		*e = CertificateUsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateUsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateUsageTypeEnum: %v", v)
 	}
 }

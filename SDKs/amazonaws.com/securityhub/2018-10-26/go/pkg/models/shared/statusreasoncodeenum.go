@@ -14,18 +14,22 @@ const (
 	StatusReasonCodeEnumInternalError                    StatusReasonCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e StatusReasonCodeEnum) ToPointer() *StatusReasonCodeEnum {
+	return &e
+}
+
 func (e *StatusReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_AVAILABLE_CONFIGURATION_RECORDER":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = StatusReasonCodeEnum(s)
+		*e = StatusReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusReasonCodeEnum: %v", v)
 	}
 }

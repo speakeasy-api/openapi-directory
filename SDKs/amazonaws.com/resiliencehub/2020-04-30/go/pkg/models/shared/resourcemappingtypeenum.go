@@ -18,12 +18,16 @@ const (
 	ResourceMappingTypeEnumEks            ResourceMappingTypeEnum = "EKS"
 )
 
+func (e ResourceMappingTypeEnum) ToPointer() *ResourceMappingTypeEnum {
+	return &e
+}
+
 func (e *ResourceMappingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CfnStack":
 		fallthrough
 	case "Resource":
@@ -35,9 +39,9 @@ func (e *ResourceMappingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Terraform":
 		fallthrough
 	case "EKS":
-		*e = ResourceMappingTypeEnum(s)
+		*e = ResourceMappingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceMappingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceMappingTypeEnum: %v", v)
 	}
 }

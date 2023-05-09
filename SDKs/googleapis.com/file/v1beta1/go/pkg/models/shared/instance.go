@@ -16,21 +16,25 @@ const (
 	InstanceProtocolEnumNfsV41                  InstanceProtocolEnum = "NFS_V4_1"
 )
 
+func (e InstanceProtocolEnum) ToPointer() *InstanceProtocolEnum {
+	return &e
+}
+
 func (e *InstanceProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "NFS_V3":
 		fallthrough
 	case "NFS_V4_1":
-		*e = InstanceProtocolEnum(s)
+		*e = InstanceProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceProtocolEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	InstanceStateEnumResuming         InstanceStateEnum = "RESUMING"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -78,10 +86,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDING":
 		fallthrough
 	case "RESUMING":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 
@@ -92,19 +100,23 @@ const (
 	InstanceSuspensionReasonsEnumKmsKeyIssue                 InstanceSuspensionReasonsEnum = "KMS_KEY_ISSUE"
 )
 
+func (e InstanceSuspensionReasonsEnum) ToPointer() *InstanceSuspensionReasonsEnum {
+	return &e
+}
+
 func (e *InstanceSuspensionReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "KMS_KEY_ISSUE":
-		*e = InstanceSuspensionReasonsEnum(s)
+		*e = InstanceSuspensionReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceSuspensionReasonsEnum: %v", v)
 	}
 }
 
@@ -119,14 +131,19 @@ const (
 	InstanceTierEnumBasicSsd        InstanceTierEnum = "BASIC_SSD"
 	InstanceTierEnumHighScaleSsd    InstanceTierEnum = "HIGH_SCALE_SSD"
 	InstanceTierEnumEnterprise      InstanceTierEnum = "ENTERPRISE"
+	InstanceTierEnumZonal           InstanceTierEnum = "ZONAL"
 )
 
+func (e InstanceTierEnum) ToPointer() *InstanceTierEnum {
+	return &e
+}
+
 func (e *InstanceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -140,10 +157,12 @@ func (e *InstanceTierEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH_SCALE_SSD":
 		fallthrough
 	case "ENTERPRISE":
-		*e = InstanceTierEnum(s)
+		fallthrough
+	case "ZONAL":
+		*e = InstanceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTierEnum: %v", v)
 	}
 }
 
@@ -157,6 +176,8 @@ type Instance struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// The description of the instance (2048 characters or less).
 	Description *string `json:"description,omitempty"`
+	// Directory Services configuration for Kerberos-based authentication.
+	DirectoryServices *DirectoryServicesConfig `json:"directoryServices,omitempty"`
 	// Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 	Etag *string `json:"etag,omitempty"`
 	// File system shares on the instance. For this version, only a single file share is supported.
@@ -167,7 +188,7 @@ type Instance struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. The max capacity of the instance.
 	MaxCapacityGb *string `json:"maxCapacityGb,omitempty"`
-	// Output only. The max number of shares allowed.
+	// The max number of shares allowed.
 	MaxShareCount *string `json:"maxShareCount,omitempty"`
 	// Indicates whether this instance uses a multi-share configuration with which it can have more than one file-share or none at all. File-shares are added, updated and removed through the separate file-share APIs.
 	MultiShareEnabled *bool `json:"multiShareEnabled,omitempty"`
@@ -195,6 +216,8 @@ type InstanceInput struct {
 	CapacityGb *string `json:"capacityGb,omitempty"`
 	// The description of the instance (2048 characters or less).
 	Description *string `json:"description,omitempty"`
+	// Directory Services configuration for Kerberos-based authentication.
+	DirectoryServices *DirectoryServicesConfig `json:"directoryServices,omitempty"`
 	// Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
 	Etag *string `json:"etag,omitempty"`
 	// File system shares on the instance. For this version, only a single file share is supported.
@@ -203,6 +226,8 @@ type InstanceInput struct {
 	KmsKeyName *string `json:"kmsKeyName,omitempty"`
 	// Resource labels to represent user provided metadata.
 	Labels map[string]string `json:"labels,omitempty"`
+	// The max number of shares allowed.
+	MaxShareCount *string `json:"maxShareCount,omitempty"`
 	// Indicates whether this instance uses a multi-share configuration with which it can have more than one file-share or none at all. File-shares are added, updated and removed through the separate file-share APIs.
 	MultiShareEnabled *bool `json:"multiShareEnabled,omitempty"`
 	// VPC networks to which the instance is connected. For this version, only a single network is supported.

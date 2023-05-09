@@ -34,7 +34,10 @@ func newRegistry(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RegistryCreateAPI - CreateApi creates a specified API.
 func (s *registry) RegistryCreateAPI(ctx context.Context, request operations.RegistryCreateAPIRequest) (*operations.RegistryCreateAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIInput", "json")
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *registry) RegistryCreateAPI(ctx context.Context, request operations.Reg
 // RegistryCreateAPIDeployment - CreateApiDeployment creates a specified deployment.
 func (s *registry) RegistryCreateAPIDeployment(ctx context.Context, request operations.RegistryCreateAPIDeploymentRequest) (*operations.RegistryCreateAPIDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIDeploymentInput", "json")
 	if err != nil {
@@ -170,7 +176,10 @@ func (s *registry) RegistryCreateAPIDeployment(ctx context.Context, request oper
 // RegistryCreateAPISpec - CreateApiSpec creates a specified spec.
 func (s *registry) RegistryCreateAPISpec(ctx context.Context, request operations.RegistryCreateAPISpecRequest) (*operations.RegistryCreateAPISpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APISpecInput", "json")
 	if err != nil {
@@ -238,7 +247,10 @@ func (s *registry) RegistryCreateAPISpec(ctx context.Context, request operations
 // RegistryCreateAPIVersion - CreateApiVersion creates a specified version.
 func (s *registry) RegistryCreateAPIVersion(ctx context.Context, request operations.RegistryCreateAPIVersionRequest) (*operations.RegistryCreateAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIVersionInput", "json")
 	if err != nil {
@@ -306,7 +318,10 @@ func (s *registry) RegistryCreateAPIVersion(ctx context.Context, request operati
 // RegistryCreateArtifact - CreateArtifact creates a specified artifact.
 func (s *registry) RegistryCreateArtifact(ctx context.Context, request operations.RegistryCreateArtifactRequest) (*operations.RegistryCreateArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactInput", "json")
 	if err != nil {
@@ -376,7 +391,10 @@ func (s *registry) RegistryCreateArtifact(ctx context.Context, request operation
 //	owns.
 func (s *registry) RegistryDeleteAPI(ctx context.Context, request operations.RegistryDeleteAPIRequest) (*operations.RegistryDeleteAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -427,7 +445,10 @@ func (s *registry) RegistryDeleteAPI(ctx context.Context, request operations.Reg
 //	child resources (e.g. artifacts).
 func (s *registry) RegistryDeleteAPIDeployment(ctx context.Context, request operations.RegistryDeleteAPIDeploymentRequest) (*operations.RegistryDeleteAPIDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -476,7 +497,10 @@ func (s *registry) RegistryDeleteAPIDeployment(ctx context.Context, request oper
 // RegistryDeleteAPIDeploymentRevision - DeleteApiDeploymentRevision deletes a revision of a deployment.
 func (s *registry) RegistryDeleteAPIDeploymentRevision(ctx context.Context, request operations.RegistryDeleteAPIDeploymentRevisionRequest) (*operations.RegistryDeleteAPIDeploymentRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:deleteRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:deleteRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -532,7 +556,10 @@ func (s *registry) RegistryDeleteAPIDeploymentRevision(ctx context.Context, requ
 //	resources (e.g. artifacts).
 func (s *registry) RegistryDeleteAPISpec(ctx context.Context, request operations.RegistryDeleteAPISpecRequest) (*operations.RegistryDeleteAPISpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -581,7 +608,10 @@ func (s *registry) RegistryDeleteAPISpec(ctx context.Context, request operations
 // RegistryDeleteAPISpecRevision - DeleteApiSpecRevision deletes a revision of a spec.
 func (s *registry) RegistryDeleteAPISpecRevision(ctx context.Context, request operations.RegistryDeleteAPISpecRevisionRequest) (*operations.RegistryDeleteAPISpecRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:deleteRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:deleteRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -637,7 +667,10 @@ func (s *registry) RegistryDeleteAPISpecRevision(ctx context.Context, request op
 //	it owns.
 func (s *registry) RegistryDeleteAPIVersion(ctx context.Context, request operations.RegistryDeleteAPIVersionRequest) (*operations.RegistryDeleteAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -686,7 +719,10 @@ func (s *registry) RegistryDeleteAPIVersion(ctx context.Context, request operati
 // RegistryDeleteArtifact - DeleteArtifact removes a specified artifact.
 func (s *registry) RegistryDeleteArtifact(ctx context.Context, request operations.RegistryDeleteArtifactRequest) (*operations.RegistryDeleteArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -731,7 +767,10 @@ func (s *registry) RegistryDeleteArtifact(ctx context.Context, request operation
 // RegistryGetAPI - GetApi returns a specified API.
 func (s *registry) RegistryGetAPI(ctx context.Context, request operations.RegistryGetAPIRequest) (*operations.RegistryGetAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -785,7 +824,10 @@ func (s *registry) RegistryGetAPI(ctx context.Context, request operations.Regist
 // RegistryGetAPIDeployment - GetApiDeployment returns a specified deployment.
 func (s *registry) RegistryGetAPIDeployment(ctx context.Context, request operations.RegistryGetAPIDeploymentRequest) (*operations.RegistryGetAPIDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -839,7 +881,10 @@ func (s *registry) RegistryGetAPIDeployment(ctx context.Context, request operati
 // RegistryGetAPISpec - GetApiSpec returns a specified spec.
 func (s *registry) RegistryGetAPISpec(ctx context.Context, request operations.RegistryGetAPISpecRequest) (*operations.RegistryGetAPISpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -897,7 +942,10 @@ func (s *registry) RegistryGetAPISpec(ctx context.Context, request operations.Re
 //	indicates the exact format returned).
 func (s *registry) RegistryGetAPISpecContents(ctx context.Context, request operations.RegistryGetAPISpecContentsRequest) (*operations.RegistryGetAPISpecContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:getContents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:getContents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -942,7 +990,10 @@ func (s *registry) RegistryGetAPISpecContents(ctx context.Context, request opera
 // RegistryGetAPIVersion - GetApiVersion returns a specified version.
 func (s *registry) RegistryGetAPIVersion(ctx context.Context, request operations.RegistryGetAPIVersionRequest) (*operations.RegistryGetAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -996,7 +1047,10 @@ func (s *registry) RegistryGetAPIVersion(ctx context.Context, request operations
 // RegistryGetArtifact - GetArtifact returns a specified artifact.
 func (s *registry) RegistryGetArtifact(ctx context.Context, request operations.RegistryGetArtifactRequest) (*operations.RegistryGetArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1054,7 +1108,10 @@ func (s *registry) RegistryGetArtifact(ctx context.Context, request operations.R
 //	indicates the exact format returned).
 func (s *registry) RegistryGetArtifactContents(ctx context.Context, request operations.RegistryGetArtifactContentsRequest) (*operations.RegistryGetArtifactContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}:getContents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}:getContents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1101,7 +1158,10 @@ func (s *registry) RegistryGetArtifactContents(ctx context.Context, request oper
 //	Revisions are returned in descending order of revision creation time.
 func (s *registry) RegistryListAPIDeploymentRevisions(ctx context.Context, request operations.RegistryListAPIDeploymentRevisionsRequest) (*operations.RegistryListAPIDeploymentRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:listRevisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:listRevisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1159,7 +1219,10 @@ func (s *registry) RegistryListAPIDeploymentRevisions(ctx context.Context, reque
 // RegistryListAPIDeployments - ListApiDeployments returns matching deployments.
 func (s *registry) RegistryListAPIDeployments(ctx context.Context, request operations.RegistryListAPIDeploymentsRequest) (*operations.RegistryListAPIDeploymentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1219,7 +1282,10 @@ func (s *registry) RegistryListAPIDeployments(ctx context.Context, request opera
 //	Revisions are returned in descending order of revision creation time.
 func (s *registry) RegistryListAPISpecRevisions(ctx context.Context, request operations.RegistryListAPISpecRevisionsRequest) (*operations.RegistryListAPISpecRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:listRevisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:listRevisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1277,7 +1343,10 @@ func (s *registry) RegistryListAPISpecRevisions(ctx context.Context, request ope
 // RegistryListAPISpecs - ListApiSpecs returns matching specs.
 func (s *registry) RegistryListAPISpecs(ctx context.Context, request operations.RegistryListAPISpecsRequest) (*operations.RegistryListAPISpecsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1335,7 +1404,10 @@ func (s *registry) RegistryListAPISpecs(ctx context.Context, request operations.
 // RegistryListAPIVersions - ListApiVersions returns matching versions.
 func (s *registry) RegistryListAPIVersions(ctx context.Context, request operations.RegistryListAPIVersionsRequest) (*operations.RegistryListAPIVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1393,7 +1465,10 @@ func (s *registry) RegistryListAPIVersions(ctx context.Context, request operatio
 // RegistryListApis - ListApis returns matching APIs.
 func (s *registry) RegistryListApis(ctx context.Context, request operations.RegistryListApisRequest) (*operations.RegistryListApisResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1451,7 +1526,10 @@ func (s *registry) RegistryListApis(ctx context.Context, request operations.Regi
 // RegistryListArtifacts - ListArtifacts returns matching artifacts.
 func (s *registry) RegistryListArtifacts(ctx context.Context, request operations.RegistryListArtifactsRequest) (*operations.RegistryListArtifactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1509,7 +1587,10 @@ func (s *registry) RegistryListArtifacts(ctx context.Context, request operations
 // RegistryReplaceArtifact - ReplaceArtifact can be used to replace a specified artifact.
 func (s *registry) RegistryReplaceArtifact(ctx context.Context, request operations.RegistryReplaceArtifactRequest) (*operations.RegistryReplaceArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/artifacts/{artifact}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ArtifactInput", "json")
 	if err != nil {
@@ -1575,7 +1656,10 @@ func (s *registry) RegistryReplaceArtifact(ctx context.Context, request operatio
 //	revision. Note that this creates a new revision with a new revision ID.
 func (s *registry) RegistryRollbackAPIDeployment(ctx context.Context, request operations.RegistryRollbackAPIDeploymentRequest) (*operations.RegistryRollbackAPIDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackAPIDeploymentRequest", "json")
 	if err != nil {
@@ -1641,7 +1725,10 @@ func (s *registry) RegistryRollbackAPIDeployment(ctx context.Context, request op
 //	Note that this creates a new revision with a new revision ID.
 func (s *registry) RegistryRollbackAPISpec(ctx context.Context, request operations.RegistryRollbackAPISpecRequest) (*operations.RegistryRollbackAPISpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackAPISpecRequest", "json")
 	if err != nil {
@@ -1707,7 +1794,10 @@ func (s *registry) RegistryRollbackAPISpec(ctx context.Context, request operatio
 //	deployment.
 func (s *registry) RegistryTagAPIDeploymentRevision(ctx context.Context, request operations.RegistryTagAPIDeploymentRevisionRequest) (*operations.RegistryTagAPIDeploymentRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:tagRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}:tagRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagAPIDeploymentRevisionRequest", "json")
 	if err != nil {
@@ -1771,7 +1861,10 @@ func (s *registry) RegistryTagAPIDeploymentRevision(ctx context.Context, request
 // RegistryTagAPISpecRevision - TagApiSpecRevision adds a tag to a specified revision of a spec.
 func (s *registry) RegistryTagAPISpecRevision(ctx context.Context, request operations.RegistryTagAPISpecRevisionRequest) (*operations.RegistryTagAPISpecRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:tagRevision", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}:tagRevision", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagAPISpecRevisionRequest", "json")
 	if err != nil {
@@ -1835,7 +1928,10 @@ func (s *registry) RegistryTagAPISpecRevision(ctx context.Context, request opera
 // RegistryUpdateAPI - UpdateApi can be used to modify a specified API.
 func (s *registry) RegistryUpdateAPI(ctx context.Context, request operations.RegistryUpdateAPIRequest) (*operations.RegistryUpdateAPIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIInput", "json")
 	if err != nil {
@@ -1903,7 +1999,10 @@ func (s *registry) RegistryUpdateAPI(ctx context.Context, request operations.Reg
 // RegistryUpdateAPIDeployment - UpdateApiDeployment can be used to modify a specified deployment.
 func (s *registry) RegistryUpdateAPIDeployment(ctx context.Context, request operations.RegistryUpdateAPIDeploymentRequest) (*operations.RegistryUpdateAPIDeploymentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/deployments/{deployment}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIDeploymentInput", "json")
 	if err != nil {
@@ -1971,7 +2070,10 @@ func (s *registry) RegistryUpdateAPIDeployment(ctx context.Context, request oper
 // RegistryUpdateAPISpec - UpdateApiSpec can be used to modify a specified spec.
 func (s *registry) RegistryUpdateAPISpec(ctx context.Context, request operations.RegistryUpdateAPISpecRequest) (*operations.RegistryUpdateAPISpecResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}/specs/{spec}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APISpecInput", "json")
 	if err != nil {
@@ -2039,7 +2141,10 @@ func (s *registry) RegistryUpdateAPISpec(ctx context.Context, request operations
 // RegistryUpdateAPIVersion - UpdateApiVersion can be used to modify a specified version.
 func (s *registry) RegistryUpdateAPIVersion(ctx context.Context, request operations.RegistryUpdateAPIVersionRequest) (*operations.RegistryUpdateAPIVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/locations/{location}/apis/{api}/versions/{version}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APIVersionInput", "json")
 	if err != nil {

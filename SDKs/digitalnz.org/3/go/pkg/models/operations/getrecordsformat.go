@@ -32,12 +32,16 @@ const (
 	GetRecordsFormatAndCategoryEnumSets             GetRecordsFormatAndCategoryEnum = "Sets"
 )
 
+func (e GetRecordsFormatAndCategoryEnum) ToPointer() *GetRecordsFormatAndCategoryEnum {
+	return &e
+}
+
 func (e *GetRecordsFormatAndCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Newspapers":
 		fallthrough
 	case "Images":
@@ -71,10 +75,10 @@ func (e *GetRecordsFormatAndCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "Websites":
 		fallthrough
 	case "Sets":
-		*e = GetRecordsFormatAndCategoryEnum(s)
+		*e = GetRecordsFormatAndCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatAndCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatAndCategoryEnum: %v", v)
 	}
 }
 
@@ -86,43 +90,21 @@ const (
 	GetRecordsFormatAndHasLargeThumbnailURLEnumY GetRecordsFormatAndHasLargeThumbnailURLEnum = "Y"
 )
 
-func (e *GetRecordsFormatAndHasLargeThumbnailURLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "Y":
-		*e = GetRecordsFormatAndHasLargeThumbnailURLEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatAndHasLargeThumbnailURLEnum: %s", s)
-	}
+func (e GetRecordsFormatAndHasLargeThumbnailURLEnum) ToPointer() *GetRecordsFormatAndHasLargeThumbnailURLEnum {
+	return &e
 }
 
-// GetRecordsFormatAndHasLatLngEnum - Filters results to only those records that have latitude and longitude coordinates present in the metadata.
-//
-// *Tip* - To see the location metadata you'll need to specifically request that field using the *fields* parameter - *"&fields=verbose,locations"*  as it is not part of the default, or verbose field sets.
-type GetRecordsFormatAndHasLatLngEnum string
-
-const (
-	GetRecordsFormatAndHasLatLngEnumTrue  GetRecordsFormatAndHasLatLngEnum = "true"
-	GetRecordsFormatAndHasLatLngEnumFalse GetRecordsFormatAndHasLatLngEnum = "false"
-)
-
-func (e *GetRecordsFormatAndHasLatLngEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+func (e *GetRecordsFormatAndHasLargeThumbnailURLEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = GetRecordsFormatAndHasLatLngEnum(s)
+	switch v {
+	case "Y":
+		*e = GetRecordsFormatAndHasLargeThumbnailURLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatAndHasLatLngEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatAndHasLargeThumbnailURLEnum: %v", v)
 	}
 }
 
@@ -137,12 +119,16 @@ const (
 	GetRecordsFormatAndUsageEnumUnknown           GetRecordsFormatAndUsageEnum = "Unknown"
 )
 
+func (e GetRecordsFormatAndUsageEnum) ToPointer() *GetRecordsFormatAndUsageEnum {
+	return &e
+}
+
 func (e *GetRecordsFormatAndUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Share":
 		fallthrough
 	case "Modify":
@@ -152,10 +138,10 @@ func (e *GetRecordsFormatAndUsageEnum) UnmarshalJSON(data []byte) error {
 	case "All rights reserved":
 		fallthrough
 	case "Unknown":
-		*e = GetRecordsFormatAndUsageEnum(s)
+		*e = GetRecordsFormatAndUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatAndUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatAndUsageEnum: %v", v)
 	}
 }
 
@@ -169,19 +155,23 @@ const (
 	GetRecordsFormatDirectionEnumDesc GetRecordsFormatDirectionEnum = "desc"
 )
 
+func (e GetRecordsFormatDirectionEnum) ToPointer() *GetRecordsFormatDirectionEnum {
+	return &e
+}
+
 func (e *GetRecordsFormatDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetRecordsFormatDirectionEnum(s)
+		*e = GetRecordsFormatDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatDirectionEnum: %v", v)
 	}
 }
 
@@ -207,12 +197,16 @@ const (
 	GetRecordsFormatFacetsEnumDcType            GetRecordsFormatFacetsEnum = "dc_type"
 )
 
+func (e GetRecordsFormatFacetsEnum) ToPointer() *GetRecordsFormatFacetsEnum {
+	return &e
+}
+
 func (e *GetRecordsFormatFacetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "category":
 		fallthrough
 	case "content_partner":
@@ -246,10 +240,10 @@ func (e *GetRecordsFormatFacetsEnum) UnmarshalJSON(data []byte) error {
 	case "format":
 		fallthrough
 	case "dc_type":
-		*e = GetRecordsFormatFacetsEnum(s)
+		*e = GetRecordsFormatFacetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatFacetsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatFacetsEnum: %v", v)
 	}
 }
 
@@ -265,19 +259,23 @@ const (
 	GetRecordsFormatSortEnumDate            GetRecordsFormatSortEnum = "date"
 )
 
+func (e GetRecordsFormatSortEnum) ToPointer() *GetRecordsFormatSortEnum {
+	return &e
+}
+
 func (e *GetRecordsFormatSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "syndication_date":
 		fallthrough
 	case "date":
-		*e = GetRecordsFormatSortEnum(s)
+		*e = GetRecordsFormatSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRecordsFormatSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRecordsFormatSortEnum: %v", v)
 	}
 }
 
@@ -345,7 +343,7 @@ type GetRecordsFormatRequest struct {
 	//
 	// *Tip* - To see the location metadata you'll need to specifically request that field using the *fields* parameter - *"&fields=verbose,locations"*  as it is not part of the default, or verbose field sets.
 	//
-	AndHasLatLng *GetRecordsFormatAndHasLatLngEnum `queryParam:"style=form,explode=true,name=and[has_lat_lng]"`
+	AndHasLatLng *bool `queryParam:"style=form,explode=true,name=and[has_lat_lng]"`
 	// Some DigitalNZ partners offer their metadata for use in commercial applications. This content can be identified through the *is_commercial_use* flag. Only API results where the *is_commercial_use* field set to True can be used for commercial purposes. Check out the [terms of use](https://digitalnz.org/about/terms-of-use/developer-api-terms-of-use#commercial_use_terms) for more information.
 	//
 	AndIsCommercialUse *bool `queryParam:"style=form,explode=true,name=and[is_commercial_use]"`

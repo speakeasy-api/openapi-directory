@@ -35,7 +35,10 @@ func newMarkedEpisodes(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteUserEpisodesEpisodeID - Unmark an episode
 func (s *markedEpisodes) DeleteUserEpisodesEpisodeID(ctx context.Context, request operations.DeleteUserEpisodesEpisodeIDRequest) (*operations.DeleteUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -120,7 +123,10 @@ func (s *markedEpisodes) GetUserEpisodes(ctx context.Context, request operations
 // GetUserEpisodesEpisodeID - Check if an episode is marked
 func (s *markedEpisodes) GetUserEpisodesEpisodeID(ctx context.Context, request operations.GetUserEpisodesEpisodeIDRequest) (*operations.GetUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +172,10 @@ func (s *markedEpisodes) GetUserEpisodesEpisodeID(ctx context.Context, request o
 // Set `marked_at` to `NULL` or leave it out to use the current time.
 func (s *markedEpisodes) PutUserEpisodesEpisodeID(ctx context.Context, request operations.PutUserEpisodesEpisodeIDRequest) (*operations.PutUserEpisodesEpisodeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/episodes/{episode_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MarkedEpisodeInput", "json")
 	if err != nil {

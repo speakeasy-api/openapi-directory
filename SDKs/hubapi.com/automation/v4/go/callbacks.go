@@ -94,7 +94,10 @@ func (s *callbacks) PostAutomationV4ActionsCallbacksCompleteCompleteBatch(ctx co
 // Completes the given action callback.
 func (s *callbacks) PostAutomationV4ActionsCallbacksCallbackIDCompleteComplete(ctx context.Context, request operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteRequest, security operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteSecurity) (*operations.PostAutomationV4ActionsCallbacksCallbackIDCompleteCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/callbacks/{callbackId}/complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/callbacks/{callbackId}/complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CallbackCompletionRequest", "json")
 	if err != nil {

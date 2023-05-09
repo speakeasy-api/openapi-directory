@@ -16,17 +16,21 @@ const (
 	DetachPolicyXAmzTargetEnumAwsOrganizationsV20161128DetachPolicy DetachPolicyXAmzTargetEnum = "AWSOrganizationsV20161128.DetachPolicy"
 )
 
+func (e DetachPolicyXAmzTargetEnum) ToPointer() *DetachPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DetachPolicy":
-		*e = DetachPolicyXAmzTargetEnum(s)
+		*e = DetachPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

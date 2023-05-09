@@ -15,17 +15,21 @@ const (
 	POSTTagServerCertificateActionEnumTagServerCertificate POSTTagServerCertificateActionEnum = "TagServerCertificate"
 )
 
+func (e POSTTagServerCertificateActionEnum) ToPointer() *POSTTagServerCertificateActionEnum {
+	return &e
+}
+
 func (e *POSTTagServerCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagServerCertificate":
-		*e = POSTTagServerCertificateActionEnum(s)
+		*e = POSTTagServerCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagServerCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagServerCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTagServerCertificateVersionEnumTwoThousandAndTen0508 POSTTagServerCertificateVersionEnum = "2010-05-08"
 )
 
+func (e POSTTagServerCertificateVersionEnum) ToPointer() *POSTTagServerCertificateVersionEnum {
+	return &e
+}
+
 func (e *POSTTagServerCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTTagServerCertificateVersionEnum(s)
+		*e = POSTTagServerCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagServerCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagServerCertificateVersionEnum: %v", v)
 	}
 }
 

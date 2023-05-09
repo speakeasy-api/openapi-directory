@@ -17,12 +17,16 @@ const (
 	TemplateTypeEnumInapp TemplateTypeEnum = "INAPP"
 )
 
+func (e TemplateTypeEnum) ToPointer() *TemplateTypeEnum {
+	return &e
+}
+
 func (e *TemplateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EMAIL":
 		fallthrough
 	case "SMS":
@@ -32,9 +36,9 @@ func (e *TemplateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PUSH":
 		fallthrough
 	case "INAPP":
-		*e = TemplateTypeEnum(s)
+		*e = TemplateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateTypeEnum: %v", v)
 	}
 }

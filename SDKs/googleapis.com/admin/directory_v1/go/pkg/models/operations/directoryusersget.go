@@ -33,21 +33,25 @@ const (
 	DirectoryUsersGetProjectionEnumFull   DirectoryUsersGetProjectionEnum = "full"
 )
 
+func (e DirectoryUsersGetProjectionEnum) ToPointer() *DirectoryUsersGetProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryUsersGetProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "custom":
 		fallthrough
 	case "full":
-		*e = DirectoryUsersGetProjectionEnum(s)
+		*e = DirectoryUsersGetProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersGetProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersGetProjectionEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	DirectoryUsersGetViewTypeEnumDomainPublic DirectoryUsersGetViewTypeEnum = "domain_public"
 )
 
+func (e DirectoryUsersGetViewTypeEnum) ToPointer() *DirectoryUsersGetViewTypeEnum {
+	return &e
+}
+
 func (e *DirectoryUsersGetViewTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin_view":
 		fallthrough
 	case "domain_public":
-		*e = DirectoryUsersGetViewTypeEnum(s)
+		*e = DirectoryUsersGetViewTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersGetViewTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersGetViewTypeEnum: %v", v)
 	}
 }
 

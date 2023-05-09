@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nhl-v3-scor
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreGamesInProgressRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, operations.AreGamesInProgressRequest{
+        Format: operations.AreGamesInProgressFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,26 +45,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreGamesInProgress` - Are Games In Progress
-* `CurrentSeason` - Current Season
-* `GamesByDate` - Games by Date
-* `News` - News
-* `NewsByDate` - News by Date
-* `NewsByPlayer` - News by Player
-* `PlayerDetailsByActive` - Player Details by Active
-* `PlayerDetailsByFreeAgent` - Player Details by Free Agent
-* `PlayerDetailsByPlayer` - Player Details by Player
-* `PlayersByTeam` - Players by Team
-* `Schedules` - Schedules
-* `Stadiums` - Stadiums
-* `Standings` - Standings
-* `TeamGameLogsBySeason` - Team Game Logs By Season
-* `TeamGameStatsByDate` - Team Game Stats by Date
-* `TeamSeasonStats` - Team Season Stats
-* `TeamsActive` - Teams (Active)
-* `TeamsAll` - Teams (All)
+* [AreGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [CurrentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [GamesByDateBasic](docs/sdk/README.md#gamesbydatebasic) - Games by Date (Basic)
+* [News](docs/sdk/README.md#news) - News
+* [NewsByDate](docs/sdk/README.md#newsbydate) - News by Date
+* [NewsByPlayer](docs/sdk/README.md#newsbyplayer) - News by Player
+* [PlayerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [PlayerDetailsByFreeAgent](docs/sdk/README.md#playerdetailsbyfreeagent) - Player Details by Free Agent
+* [PlayerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [PlayersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [PlayersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [Schedules](docs/sdk/README.md#schedules) - Schedules
+* [SchedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [Stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [Standings](docs/sdk/README.md#standings) - Standings
+* [TeamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [TeamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [TeamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [TeamsActive](docs/sdk/README.md#teamsactive) - Teams (Active)
+* [TeamsAll](docs/sdk/README.md#teamsall) - Teams (All)
 <!-- End SDK Available Operations -->
 
 ### Maturity

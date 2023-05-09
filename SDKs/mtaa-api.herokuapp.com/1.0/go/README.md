@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mtaa-api.herokuapp.com/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DistrictsInARegionRequest{
+    ctx := context.Background()
+    res, err := s.DistrictsInRegion.DistrictsInARegion(ctx, operations.DistrictsInARegionRequest{
         Country: "Malta",
         Region: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.DistrictsInRegion.DistrictsInARegion(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,25 +43,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### DistrictsInRegion
+### [DistrictsInRegion](docs/districtsinregion/README.md)
 
-* `DistrictsInARegion` - Returns all districts in region
+* [DistrictsInARegion](docs/districtsinregion/README.md#districtsinaregion) - Returns all districts in region
 
-### StreetsInAWard
+### [StreetsInAWard](docs/streetsinaward/README.md)
 
-* `StreetsInAWard` - Returns all streets in a ward
+* [StreetsInAWard](docs/streetsinaward/README.md#streetsinaward) - Returns all streets in a ward
 
-### TanzaniaRegions
+### [TanzaniaRegions](docs/tanzaniaregions/README.md)
 
-* `TanzaniaRegions` - Returns all regions present in Tanzania
+* [TanzaniaRegions](docs/tanzaniaregions/README.md#tanzaniaregions) - Returns all regions present in Tanzania
 
-### WardsInADistrict
+### [WardsInADistrict](docs/wardsinadistrict/README.md)
 
-* `WardsInADistrict` - Returns all wards in a district
+* [WardsInADistrict](docs/wardsinadistrict/README.md#wardsinadistrict) - Returns all wards in a district
 
-### NeighborhoodInAStreet
+### [NeighborhoodInAStreet](docs/neighborhoodinastreet/README.md)
 
-* `NeighborhoodInAStreet` - Returns all neighborhood in a street
+* [NeighborhoodInAStreet](docs/neighborhoodinastreet/README.md#neighborhoodinastreet) - Returns all neighborhood in a street
 <!-- End SDK Available Operations -->
 
 ### Maturity

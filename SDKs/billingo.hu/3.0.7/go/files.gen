@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -98,4 +99,13 @@ pkg/models/shared/product.go
 pkg/models/shared/productlist.go
 pkg/models/shared/id.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/bankaccount/README.md
+docs/currency/README.md
+docs/document/README.md
+docs/documentblock/README.md
+docs/organization/README.md
+docs/partner/README.md
+docs/product/README.md
+docs/util/README.md
 USAGE.md

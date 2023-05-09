@@ -15,21 +15,25 @@ const (
 	RuleSetRuleSetTypeEnumAwsStandard RuleSetRuleSetTypeEnum = "AWS_STANDARD"
 )
 
+func (e RuleSetRuleSetTypeEnum) ToPointer() *RuleSetRuleSetTypeEnum {
+	return &e
+}
+
 func (e *RuleSetRuleSetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NSX_STANDARD":
 		fallthrough
 	case "NSX_REDIRECT":
 		fallthrough
 	case "AWS_STANDARD":
-		*e = RuleSetRuleSetTypeEnum(s)
+		*e = RuleSetRuleSetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleSetRuleSetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleSetRuleSetTypeEnum: %v", v)
 	}
 }
 

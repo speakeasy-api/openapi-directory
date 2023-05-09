@@ -17,19 +17,23 @@ const (
 	CreateProjectClassificationTypeEnumMultilabel CreateProjectClassificationTypeEnum = "Multilabel"
 )
 
+func (e CreateProjectClassificationTypeEnum) ToPointer() *CreateProjectClassificationTypeEnum {
+	return &e
+}
+
 func (e *CreateProjectClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Multiclass":
 		fallthrough
 	case "Multilabel":
-		*e = CreateProjectClassificationTypeEnum(s)
+		*e = CreateProjectClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProjectClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProjectClassificationTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	CreateProjectTargetExportPlatformsEnumVaidk      CreateProjectTargetExportPlatformsEnum = "VAIDK"
 )
 
+func (e CreateProjectTargetExportPlatformsEnum) ToPointer() *CreateProjectTargetExportPlatformsEnum {
+	return &e
+}
+
 func (e *CreateProjectTargetExportPlatformsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CoreML":
 		fallthrough
 	case "TensorFlow":
@@ -58,10 +66,10 @@ func (e *CreateProjectTargetExportPlatformsEnum) UnmarshalJSON(data []byte) erro
 	case "ONNX":
 		fallthrough
 	case "VAIDK":
-		*e = CreateProjectTargetExportPlatformsEnum(s)
+		*e = CreateProjectTargetExportPlatformsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProjectTargetExportPlatformsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProjectTargetExportPlatformsEnum: %v", v)
 	}
 }
 

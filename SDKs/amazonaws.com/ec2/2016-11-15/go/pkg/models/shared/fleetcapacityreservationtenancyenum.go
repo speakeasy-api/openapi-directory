@@ -13,16 +13,20 @@ const (
 	FleetCapacityReservationTenancyEnumDefault FleetCapacityReservationTenancyEnum = "default"
 )
 
+func (e FleetCapacityReservationTenancyEnum) ToPointer() *FleetCapacityReservationTenancyEnum {
+	return &e
+}
+
 func (e *FleetCapacityReservationTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
-		*e = FleetCapacityReservationTenancyEnum(s)
+		*e = FleetCapacityReservationTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetCapacityReservationTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetCapacityReservationTenancyEnum: %v", v)
 	}
 }

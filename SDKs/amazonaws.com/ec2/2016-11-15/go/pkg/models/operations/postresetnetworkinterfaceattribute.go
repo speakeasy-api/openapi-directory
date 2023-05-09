@@ -15,17 +15,21 @@ const (
 	POSTResetNetworkInterfaceAttributeActionEnumResetNetworkInterfaceAttribute POSTResetNetworkInterfaceAttributeActionEnum = "ResetNetworkInterfaceAttribute"
 )
 
+func (e POSTResetNetworkInterfaceAttributeActionEnum) ToPointer() *POSTResetNetworkInterfaceAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTResetNetworkInterfaceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetNetworkInterfaceAttribute":
-		*e = POSTResetNetworkInterfaceAttributeActionEnum(s)
+		*e = POSTResetNetworkInterfaceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetNetworkInterfaceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetNetworkInterfaceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetNetworkInterfaceAttributeVersionEnumTwoThousandAndSixteen1115 POSTResetNetworkInterfaceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTResetNetworkInterfaceAttributeVersionEnum) ToPointer() *POSTResetNetworkInterfaceAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTResetNetworkInterfaceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTResetNetworkInterfaceAttributeVersionEnum(s)
+		*e = POSTResetNetworkInterfaceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetNetworkInterfaceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetNetworkInterfaceAttributeVersionEnum: %v", v)
 	}
 }
 

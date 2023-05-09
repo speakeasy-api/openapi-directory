@@ -16,21 +16,25 @@ const (
 	KeyedAppStateSeverityEnumSeverityError   KeyedAppStateSeverityEnum = "severityError"
 )
 
+func (e KeyedAppStateSeverityEnum) ToPointer() *KeyedAppStateSeverityEnum {
+	return &e
+}
+
 func (e *KeyedAppStateSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "severityUnknown":
 		fallthrough
 	case "severityInfo":
 		fallthrough
 	case "severityError":
-		*e = KeyedAppStateSeverityEnum(s)
+		*e = KeyedAppStateSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyedAppStateSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyedAppStateSeverityEnum: %v", v)
 	}
 }
 

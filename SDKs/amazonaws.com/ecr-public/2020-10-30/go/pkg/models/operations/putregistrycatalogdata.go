@@ -16,17 +16,21 @@ const (
 	PutRegistryCatalogDataXAmzTargetEnumSpencerFrontendServicePutRegistryCatalogData PutRegistryCatalogDataXAmzTargetEnum = "SpencerFrontendService.PutRegistryCatalogData"
 )
 
+func (e PutRegistryCatalogDataXAmzTargetEnum) ToPointer() *PutRegistryCatalogDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRegistryCatalogDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SpencerFrontendService.PutRegistryCatalogData":
-		*e = PutRegistryCatalogDataXAmzTargetEnum(s)
+		*e = PutRegistryCatalogDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRegistryCatalogDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRegistryCatalogDataXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -79,6 +80,8 @@ pkg/models/shared/creategrantrequest.go
 pkg/models/shared/allowedoperationenum.go
 pkg/models/shared/creategrantversionresponse.go
 pkg/models/shared/creategrantversionrequest.go
+pkg/models/shared/options.go
+pkg/models/shared/activationoverridebehaviorenum.go
 pkg/models/shared/createlicenseresponse.go
 pkg/models/shared/licensestatusenum.go
 pkg/models/shared/createlicenserequest.go
@@ -206,4 +209,5 @@ pkg/models/shared/updatelicensemanagerreportgeneratorrequest.go
 pkg/models/shared/updatelicensespecificationsforresourcerequest.go
 pkg/models/shared/updateservicesettingsrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

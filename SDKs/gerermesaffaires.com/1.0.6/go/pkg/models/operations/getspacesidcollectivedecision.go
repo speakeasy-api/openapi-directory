@@ -16,19 +16,23 @@ const (
 	GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnumFalse GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum = "false"
 )
 
+func (e GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum) ToPointer() *GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum(s)
+		*e = GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasCompanyRegistrationCertificateEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetSpacesIDCollectiveDecisionHasMinutesEnumFalse GetSpacesIDCollectiveDecisionHasMinutesEnum = "false"
 )
 
+func (e GetSpacesIDCollectiveDecisionHasMinutesEnum) ToPointer() *GetSpacesIDCollectiveDecisionHasMinutesEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecisionHasMinutesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDCollectiveDecisionHasMinutesEnum(s)
+		*e = GetSpacesIDCollectiveDecisionHasMinutesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasMinutesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasMinutesEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	GetSpacesIDCollectiveDecisionHasSireneRegisterEnumFalse GetSpacesIDCollectiveDecisionHasSireneRegisterEnum = "false"
 )
 
+func (e GetSpacesIDCollectiveDecisionHasSireneRegisterEnum) ToPointer() *GetSpacesIDCollectiveDecisionHasSireneRegisterEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecisionHasSireneRegisterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDCollectiveDecisionHasSireneRegisterEnum(s)
+		*e = GetSpacesIDCollectiveDecisionHasSireneRegisterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasSireneRegisterEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasSireneRegisterEnum: %v", v)
 	}
 }
 
@@ -88,19 +100,23 @@ const (
 	GetSpacesIDCollectiveDecisionHasStatusEnumFalse GetSpacesIDCollectiveDecisionHasStatusEnum = "false"
 )
 
+func (e GetSpacesIDCollectiveDecisionHasStatusEnum) ToPointer() *GetSpacesIDCollectiveDecisionHasStatusEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecisionHasStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDCollectiveDecisionHasStatusEnum(s)
+		*e = GetSpacesIDCollectiveDecisionHasStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecisionHasStatusEnum: %v", v)
 	}
 }
 
@@ -140,12 +156,16 @@ const (
 	GetSpacesIDCollectiveDecision200ApplicationJSONEventEnumPartnersMeeting     GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum = "PartnersMeeting"
 )
 
+func (e GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum) ToPointer() *GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EGM":
 		fallthrough
 	case "CGM":
@@ -169,10 +189,10 @@ func (e *GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum) UnmarshalJSON
 	case "Board":
 		fallthrough
 	case "PartnersMeeting":
-		*e = GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum(s)
+		*e = GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecision200ApplicationJSONEventEnum: %v", v)
 	}
 }
 
@@ -184,21 +204,25 @@ const (
 	GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnumPublic       GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum = "public"
 )
 
+func (e GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum) ToPointer() *GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum {
+	return &e
+}
+
 func (e *GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum(s)
+		*e = GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDCollectiveDecision200ApplicationJSONLevelEnum: %v", v)
 	}
 }
 

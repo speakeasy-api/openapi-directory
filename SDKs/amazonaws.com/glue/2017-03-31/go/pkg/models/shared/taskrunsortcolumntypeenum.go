@@ -15,20 +15,24 @@ const (
 	TaskRunSortColumnTypeEnumStarted     TaskRunSortColumnTypeEnum = "STARTED"
 )
 
+func (e TaskRunSortColumnTypeEnum) ToPointer() *TaskRunSortColumnTypeEnum {
+	return &e
+}
+
 func (e *TaskRunSortColumnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TASK_RUN_TYPE":
 		fallthrough
 	case "STATUS":
 		fallthrough
 	case "STARTED":
-		*e = TaskRunSortColumnTypeEnum(s)
+		*e = TaskRunSortColumnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskRunSortColumnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskRunSortColumnTypeEnum: %v", v)
 	}
 }

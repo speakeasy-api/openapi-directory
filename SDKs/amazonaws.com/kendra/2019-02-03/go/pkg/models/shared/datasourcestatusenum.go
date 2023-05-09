@@ -17,12 +17,16 @@ const (
 	DataSourceStatusEnumActive   DataSourceStatusEnum = "ACTIVE"
 )
 
+func (e DataSourceStatusEnum) ToPointer() *DataSourceStatusEnum {
+	return &e
+}
+
 func (e *DataSourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "DELETING":
@@ -32,9 +36,9 @@ func (e *DataSourceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "ACTIVE":
-		*e = DataSourceStatusEnum(s)
+		*e = DataSourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceStatusEnum: %v", v)
 	}
 }

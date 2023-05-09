@@ -16,17 +16,21 @@ const (
 	AssignVolumeXAmzTargetEnumOpsWorks20130218AssignVolume AssignVolumeXAmzTargetEnum = "OpsWorks_20130218.AssignVolume"
 )
 
+func (e AssignVolumeXAmzTargetEnum) ToPointer() *AssignVolumeXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssignVolumeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.AssignVolume":
-		*e = AssignVolumeXAmzTargetEnum(s)
+		*e = AssignVolumeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignVolumeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignVolumeXAmzTargetEnum: %v", v)
 	}
 }
 

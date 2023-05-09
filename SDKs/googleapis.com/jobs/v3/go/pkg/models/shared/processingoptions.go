@@ -16,21 +16,25 @@ const (
 	ProcessingOptionsHTMLSanitizationEnumSimpleFormattingOnly        ProcessingOptionsHTMLSanitizationEnum = "SIMPLE_FORMATTING_ONLY"
 )
 
+func (e ProcessingOptionsHTMLSanitizationEnum) ToPointer() *ProcessingOptionsHTMLSanitizationEnum {
+	return &e
+}
+
 func (e *ProcessingOptionsHTMLSanitizationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTML_SANITIZATION_UNSPECIFIED":
 		fallthrough
 	case "HTML_SANITIZATION_DISABLED":
 		fallthrough
 	case "SIMPLE_FORMATTING_ONLY":
-		*e = ProcessingOptionsHTMLSanitizationEnum(s)
+		*e = ProcessingOptionsHTMLSanitizationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingOptionsHTMLSanitizationEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingOptionsHTMLSanitizationEnum: %v", v)
 	}
 }
 

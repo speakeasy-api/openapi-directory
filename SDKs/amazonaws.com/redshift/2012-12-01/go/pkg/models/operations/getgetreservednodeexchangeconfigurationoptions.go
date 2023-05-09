@@ -15,17 +15,21 @@ const (
 	GETGETReservedNodeExchangeConfigurationOptionsActionEnumGetReservedNodeExchangeConfigurationOptions GETGETReservedNodeExchangeConfigurationOptionsActionEnum = "GetReservedNodeExchangeConfigurationOptions"
 )
 
+func (e GETGETReservedNodeExchangeConfigurationOptionsActionEnum) ToPointer() *GETGETReservedNodeExchangeConfigurationOptionsActionEnum {
+	return &e
+}
+
 func (e *GETGETReservedNodeExchangeConfigurationOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetReservedNodeExchangeConfigurationOptions":
-		*e = GETGETReservedNodeExchangeConfigurationOptionsActionEnum(s)
+		*e = GETGETReservedNodeExchangeConfigurationOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnumResizeCluster  GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum = "resize-cluster"
 )
 
+func (e GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum) ToPointer() *GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum {
+	return &e
+}
+
 func (e *GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "restore-cluster":
 		fallthrough
 	case "resize-cluster":
-		*e = GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum(s)
+		*e = GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETGETReservedNodeExchangeConfigurationOptionsVersionEnumTwoThousandAndTwelve1201 GETGETReservedNodeExchangeConfigurationOptionsVersionEnum = "2012-12-01"
 )
 
+func (e GETGETReservedNodeExchangeConfigurationOptionsVersionEnum) ToPointer() *GETGETReservedNodeExchangeConfigurationOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETGETReservedNodeExchangeConfigurationOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETGETReservedNodeExchangeConfigurationOptionsVersionEnum(s)
+		*e = GETGETReservedNodeExchangeConfigurationOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETReservedNodeExchangeConfigurationOptionsVersionEnum: %v", v)
 	}
 }
 

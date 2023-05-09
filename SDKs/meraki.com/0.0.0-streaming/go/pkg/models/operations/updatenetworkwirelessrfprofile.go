@@ -17,21 +17,25 @@ const (
 	UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnumDual    UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum = "dual"
 )
 
+func (e UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum) ToPointer() *UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2.4ghz":
 		fallthrough
 	case "5ghz":
 		fallthrough
 	case "dual":
-		*e = UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum(s)
+		*e = UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyApBandSettingsBandOperationModeEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnumSsid UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum = "ssid"
 )
 
+func (e UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum) ToPointer() *UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ap":
 		fallthrough
 	case "ssid":
-		*e = UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum(s)
+		*e = UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyBandSelectionTypeEnum: %v", v)
 	}
 }
 
@@ -91,19 +99,23 @@ const (
 	UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnumSsid UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum = "ssid"
 )
 
+func (e UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum) ToPointer() *UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "band":
 		fallthrough
 	case "ssid":
-		*e = UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum(s)
+		*e = UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkWirelessRfProfileRequestBodyMinBitrateTypeEnum: %v", v)
 	}
 }
 

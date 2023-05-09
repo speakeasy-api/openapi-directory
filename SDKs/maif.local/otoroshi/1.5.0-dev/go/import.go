@@ -35,7 +35,7 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // FullExport - Export the full state of Otoroshi
 // Export the full state of Otoroshi
-func (s *importT) FullExport(ctx context.Context) (*operations.FullExportResponse, error) {
+func (s *importT) FullExport(ctx context.Context, security operations.FullExportSecurity) (*operations.FullExportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/otoroshi.json"
 
@@ -44,7 +44,7 @@ func (s *importT) FullExport(ctx context.Context) (*operations.FullExportRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

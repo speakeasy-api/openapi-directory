@@ -86,7 +86,10 @@ func (s *pendingEmails) GetV2PendingEmailsJSON(ctx context.Context, request oper
 // Updates the status of an email sent by an External Email Client. Does not affect lofted emails.
 func (s *pendingEmails) PutV2PendingEmailsIDJSON(ctx context.Context, request operations.PutV2PendingEmailsIDJSONRequest) (*operations.PutV2PendingEmailsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/pending_emails/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/pending_emails/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

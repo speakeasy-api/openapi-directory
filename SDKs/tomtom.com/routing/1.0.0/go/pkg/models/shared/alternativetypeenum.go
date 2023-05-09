@@ -15,18 +15,22 @@ const (
 	AlternativeTypeEnumBetterRoute AlternativeTypeEnum = "betterRoute"
 )
 
+func (e AlternativeTypeEnum) ToPointer() *AlternativeTypeEnum {
+	return &e
+}
+
 func (e *AlternativeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "anyRoute":
 		fallthrough
 	case "betterRoute":
-		*e = AlternativeTypeEnum(s)
+		*e = AlternativeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlternativeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlternativeTypeEnum: %v", v)
 	}
 }

@@ -37,7 +37,10 @@ func newVisionTraining(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns the status of a model's training process. Use the progress field to determine how far the training has progressed. When training completes successfully, the status is SUCCEEDED and the progress is 1.
 func (s *visionTraining) GetTrainStatusAndProgress1(ctx context.Context, request operations.GetTrainStatusAndProgress1Request, security operations.GetTrainStatusAndProgress1Security) (*operations.GetTrainStatusAndProgress1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/vision/train/{modelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/vision/train/{modelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,6 +16,8 @@ type Runnable struct {
 	Environment *Environment `json:"environment,omitempty"`
 	// Normally, a non-zero exit status causes the Task to fail. This flag allows execution of other Runnables to continue instead.
 	IgnoreExitStatus *bool `json:"ignoreExitStatus,omitempty"`
+	// Labels for this Runnable.
+	Labels map[string]string `json:"labels,omitempty"`
 	// Script runnable.
 	Script *Script `json:"script,omitempty"`
 	// Timeout for this Runnable.

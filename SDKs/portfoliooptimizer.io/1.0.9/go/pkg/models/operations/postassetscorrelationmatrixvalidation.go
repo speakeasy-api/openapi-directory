@@ -25,12 +25,16 @@ const (
 	PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnumInvalidCorrelationMatrixNonPositiveSemiDefiniteMatrix PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum = "invalid correlation matrix - non positive semi-definite matrix"
 )
 
+func (e PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum) ToPointer() *PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "valid correlation matrix":
 		fallthrough
 	case "invalid correlation matrix - non symmetric matrix":
@@ -38,10 +42,10 @@ func (e *PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum) Unm
 	case "invalid correlation matrix - non positive diagonal elements":
 		fallthrough
 	case "invalid correlation matrix - non positive semi-definite matrix":
-		*e = PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum(s)
+		*e = PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum: %v", v)
 	}
 }
 

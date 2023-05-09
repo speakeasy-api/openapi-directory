@@ -16,12 +16,16 @@ const (
 	OperationEnumDivide   OperationEnum = "DIVIDE"
 )
 
+func (e OperationEnum) ToPointer() *OperationEnum {
+	return &e
+}
+
 func (e *OperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD":
 		fallthrough
 	case "SUBTRACT":
@@ -29,9 +33,9 @@ func (e *OperationEnum) UnmarshalJSON(data []byte) error {
 	case "MULTIPLY":
 		fallthrough
 	case "DIVIDE":
-		*e = OperationEnum(s)
+		*e = OperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationEnum: %v", v)
 	}
 }

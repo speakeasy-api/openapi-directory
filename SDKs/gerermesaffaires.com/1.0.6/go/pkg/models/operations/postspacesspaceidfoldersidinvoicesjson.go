@@ -28,12 +28,16 @@ const (
 	PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -51,10 +55,10 @@ func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnu
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2AccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnumInformationsInvoice PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum = "informations-invoice"
 )
 
+func (e PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial-invoice":
 		fallthrough
 	case "credit-note":
@@ -100,10 +108,10 @@ func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum) UnmarshalJS
 	case "down-payment-invoice":
 		fallthrough
 	case "informations-invoice":
-		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -137,12 +145,16 @@ const (
 	PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnumInformationsInvoice PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum = "informations-invoice"
 )
 
+func (e PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial-invoice":
 		fallthrough
 	case "credit-note":
@@ -156,10 +168,10 @@ func (e *PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum) UnmarshalJS
 	case "down-payment-invoice":
 		fallthrough
 	case "informations-invoice":
-		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDInvoicesApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

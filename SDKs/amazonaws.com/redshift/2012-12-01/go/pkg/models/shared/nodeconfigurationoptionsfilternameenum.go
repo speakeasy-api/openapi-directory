@@ -16,12 +16,16 @@ const (
 	NodeConfigurationOptionsFilterNameEnumMode                            NodeConfigurationOptionsFilterNameEnum = "Mode"
 )
 
+func (e NodeConfigurationOptionsFilterNameEnum) ToPointer() *NodeConfigurationOptionsFilterNameEnum {
+	return &e
+}
+
 func (e *NodeConfigurationOptionsFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NodeType":
 		fallthrough
 	case "NumberOfNodes":
@@ -29,9 +33,9 @@ func (e *NodeConfigurationOptionsFilterNameEnum) UnmarshalJSON(data []byte) erro
 	case "EstimatedDiskUtilizationPercent":
 		fallthrough
 	case "Mode":
-		*e = NodeConfigurationOptionsFilterNameEnum(s)
+		*e = NodeConfigurationOptionsFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeConfigurationOptionsFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeConfigurationOptionsFilterNameEnum: %v", v)
 	}
 }

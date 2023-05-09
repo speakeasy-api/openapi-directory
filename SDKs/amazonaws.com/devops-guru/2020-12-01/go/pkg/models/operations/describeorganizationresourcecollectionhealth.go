@@ -19,12 +19,16 @@ const (
 	DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnumAwsTags           DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum = "AWS_TAGS"
 )
 
+func (e DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum) ToPointer() *DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum {
+	return &e
+}
+
 func (e *DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_CLOUD_FORMATION":
 		fallthrough
 	case "AWS_SERVICE":
@@ -32,10 +36,10 @@ func (e *DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationReso
 	case "AWS_ACCOUNT":
 		fallthrough
 	case "AWS_TAGS":
-		*e = DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum(s)
+		*e = DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeOrganizationResourceCollectionHealthRequestBodyOrganizationResourceCollectionTypeEnum: %v", v)
 	}
 }
 

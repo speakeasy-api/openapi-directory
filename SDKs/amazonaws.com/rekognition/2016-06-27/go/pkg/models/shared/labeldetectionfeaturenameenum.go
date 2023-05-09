@@ -13,16 +13,20 @@ const (
 	LabelDetectionFeatureNameEnumGeneralLabels LabelDetectionFeatureNameEnum = "GENERAL_LABELS"
 )
 
+func (e LabelDetectionFeatureNameEnum) ToPointer() *LabelDetectionFeatureNameEnum {
+	return &e
+}
+
 func (e *LabelDetectionFeatureNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERAL_LABELS":
-		*e = LabelDetectionFeatureNameEnum(s)
+		*e = LabelDetectionFeatureNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabelDetectionFeatureNameEnum: %s", s)
+		return fmt.Errorf("invalid value for LabelDetectionFeatureNameEnum: %v", v)
 	}
 }

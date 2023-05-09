@@ -15,20 +15,24 @@ const (
 	TargetTypeEnumNone   TargetTypeEnum = "NONE"
 )
 
+func (e TargetTypeEnum) ToPointer() *TargetTypeEnum {
+	return &e
+}
+
 func (e *TargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE":
 		fallthrough
 	case "ALL":
 		fallthrough
 	case "NONE":
-		*e = TargetTypeEnum(s)
+		*e = TargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetTypeEnum: %v", v)
 	}
 }

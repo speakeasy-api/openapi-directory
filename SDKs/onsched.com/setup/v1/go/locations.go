@@ -36,7 +36,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // <p>Use this endpoint to <b>Unlink</b> a location service from a business location. A valid <b>locationService id</b> is required. Find location services by using the <i>GET ​/setup​/v1​/locations​/{id}​/services</i> endpoint. </p>
 func (s *locations) DeleteSetupV1LocationsServicesID(ctx context.Context, request operations.DeleteSetupV1LocationsServicesIDRequest) (*operations.DeleteSetupV1LocationsServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *locations) DeleteSetupV1LocationsServicesID(ctx context.Context, reques
 // <p>Use this endpoint to <b>Delete</b> a business location. A valid business <b>location id</b> is required. The location is not permanently deleted and can be recovered by using the <i>PUT /setup​/v1​/locations​/{id}​/recover</i> endpoint.</p>
 func (s *locations) DeleteSetupV1LocationsID(ctx context.Context, request operations.DeleteSetupV1LocationsIDRequest) (*operations.DeleteSetupV1LocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +132,10 @@ func (s *locations) DeleteSetupV1LocationsID(ctx context.Context, request operat
 // <p>Use this endpoint to <b>Delete All</b> location images from the location blob storage container. An option exists to use upper case for matching the subdirectory name. Legacy apps stored pics using upper case while the API uses lower case names.</p>
 func (s *locations) DeleteSetupV1LocationsIDDeleteallimages(ctx context.Context, request operations.DeleteSetupV1LocationsIDDeleteallimagesRequest) (*operations.DeleteSetupV1LocationsIDDeleteallimagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/deleteallimages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/deleteallimages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -175,7 +184,10 @@ func (s *locations) DeleteSetupV1LocationsIDDeleteallimages(ctx context.Context,
 // <p>Use this endpoint to <b>Delete</b> a previously uploaded location image. A valid business <b>location id</b> is required.</p>
 func (s *locations) DeleteSetupV1LocationsIDDeleteimage(ctx context.Context, request operations.DeleteSetupV1LocationsIDDeleteimageRequest) (*operations.DeleteSetupV1LocationsIDDeleteimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/deleteimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/deleteimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -220,7 +232,10 @@ func (s *locations) DeleteSetupV1LocationsIDDeleteimage(ctx context.Context, req
 // <p>Use this endpoint to <b>Delete Custom Master Email Template Settings</b>. A valid business <b>location id</b> is required. Deleting a custom master email template will reactivate the original default OnSched template settings.</p>
 func (s *locations) DeleteSetupV1LocationsIDEmailTemplatesMaster(ctx context.Context, request operations.DeleteSetupV1LocationsIDEmailTemplatesMasterRequest) (*operations.DeleteSetupV1LocationsIDEmailTemplatesMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -266,7 +281,10 @@ func (s *locations) DeleteSetupV1LocationsIDEmailTemplatesMaster(ctx context.Con
 // <p>The email template endpoints work a little differently than most. When you delete you are deleting the custom template you created, and the original default Email Template created by OnSched will be reactivated.</p>
 func (s *locations) DeleteSetupV1LocationsIDEmailTemplatesTemplateName(ctx context.Context, request operations.DeleteSetupV1LocationsIDEmailTemplatesTemplateNameRequest) (*operations.DeleteSetupV1LocationsIDEmailTemplatesTemplateNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/{templateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/{templateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -311,7 +329,10 @@ func (s *locations) DeleteSetupV1LocationsIDEmailTemplatesTemplateName(ctx conte
 // <p>Use this endpoint to <b>Delete</b> authorized access to all google calendar users in your organization. Upon deletion Google Calendars will no longer be synced for resources.</p>
 func (s *locations) DeleteSetupV1LocationsIDGoogleServiceAccount(ctx context.Context, request operations.DeleteSetupV1LocationsIDGoogleServiceAccountRequest) (*operations.DeleteSetupV1LocationsIDGoogleServiceAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/google/service/account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/google/service/account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -347,7 +368,10 @@ func (s *locations) DeleteSetupV1LocationsIDGoogleServiceAccount(ctx context.Con
 // <p>Use this endpoint to <b>Delete All</b> location linked services from a business location. A valid business <b>location id</b> is required. </p>
 func (s *locations) DeleteSetupV1LocationsIDServices(ctx context.Context, request operations.DeleteSetupV1LocationsIDServicesRequest) (*operations.DeleteSetupV1LocationsIDServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -444,7 +468,10 @@ func (s *locations) GetSetupV1Locations(ctx context.Context, request operations.
 // <p>Use this endpoint to <b>Get a Linked Service</b>. A valid <b>locationService id</b> is required.</p>
 func (s *locations) GetSetupV1LocationsServicesID(ctx context.Context, request operations.GetSetupV1LocationsServicesIDRequest) (*operations.GetSetupV1LocationsServicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/services/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/services/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -497,7 +524,10 @@ func (s *locations) GetSetupV1LocationsServicesID(ctx context.Context, request o
 //	<b>IMPORTANT DEPRECATION NOTICE</b>: The following online settings parameters were intended for internal use in our Portal application only. They will be deprecated on <b>OCTOBER 15, 2022</b>. These fields are currently part of the <b>SETTINGS</b> object in all location endpoints: <b>businessId, enabled, familyMembersEnabled, serviceLabel, resourceLabel, resourceAnyLabel, resourceSelection, liveMode, formFlow, availabilityForm, showServiceGroups, showOnSchedLogo, showBusinessLogo, disableAuthorization, hideNavBar, hideLocationNav, hideServiceGroupsNav, hideServicesNav, hideContinueBooking, returnToService, returnToAvailability, hideBreadCrumbNav.</b> If you are using these fields, please adjust your code to handle the deprecation or let us know by submitting a ticket to: <b><i>support@onsched.com</i></b> as we do not want to interrupt your existing workflows.</p>
 func (s *locations) GetSetupV1LocationsID(ctx context.Context, request operations.GetSetupV1LocationsIDRequest) (*operations.GetSetupV1LocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *locations) GetSetupV1LocationsID(ctx context.Context, request operation
 // <p>Use this endpoint to <b>Get Email and SMS appointment reminder settings</b> for the requested location. A valid business <b>location id</b> is required. </p>
 func (s *locations) GetSetupV1LocationsIDAppointmentreminders(ctx context.Context, request operations.GetSetupV1LocationsIDAppointmentremindersRequest) (*operations.GetSetupV1LocationsIDAppointmentremindersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/appointmentreminders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/appointmentreminders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +620,10 @@ func (s *locations) GetSetupV1LocationsIDAppointmentreminders(ctx context.Contex
 // <p>Use this endpoint to return a <b>List of Email Templates</b> that are provided and may be customized. If the template has been customized, the customized property is true. The scope parameter indicates if the email template has been customized. This endpoint returns <b>only company level templates</b>, so the scope is always company.</p>
 func (s *locations) GetSetupV1LocationsIDEmailTemplates(ctx context.Context, request operations.GetSetupV1LocationsIDEmailTemplatesRequest) (*operations.GetSetupV1LocationsIDEmailTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -632,7 +668,10 @@ func (s *locations) GetSetupV1LocationsIDEmailTemplates(ctx context.Context, req
 // <p>Use this endpoint to get <b>Master Email Template Settings</b>. A valid business <b>location id</b> is required. Settings exist for showing or hiding panels and for changing color schemes. </p>
 func (s *locations) GetSetupV1LocationsIDEmailTemplatesMaster(ctx context.Context, request operations.GetSetupV1LocationsIDEmailTemplatesMasterRequest) (*operations.GetSetupV1LocationsIDEmailTemplatesMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -677,7 +716,10 @@ func (s *locations) GetSetupV1LocationsIDEmailTemplatesMaster(ctx context.Contex
 // <p>Use this endpoint to return the requested <b>Email Template</b>. The template is from the primary business location. If it wasn't customized the default template is returned. The response content is in html format. A valid <b>emailTemplate name</b> is required. Find template names by using the <i>GET ​/setup​/v1​/locations​/{id}​/email​/templates</i> endpoint. Note: The master template cannot be accessed here. </p>
 func (s *locations) GetSetupV1LocationsIDEmailTemplatesTemplateName(ctx context.Context, request operations.GetSetupV1LocationsIDEmailTemplatesTemplateNameRequest) (*operations.GetSetupV1LocationsIDEmailTemplatesTemplateNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/{templateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/{templateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -722,7 +764,10 @@ func (s *locations) GetSetupV1LocationsIDEmailTemplatesTemplateName(ctx context.
 // <p>Use this endpoint to return a list of <b>Location Linked Services</b>. A valid business <b>location id</b> is required. By default, there are no location linked services attached to a location. Refer to the: <i>POST /setup​/v1​/locations​/{id}​/services</i> for details. The results are returned in pages. Use the offset and limit parameters to control the page start and number of results. Default offset is 0, limit is 20, max is 100. Use the query parameters to filter the results further.</p>
 func (s *locations) GetSetupV1LocationsIDServices(ctx context.Context, request operations.GetSetupV1LocationsIDServicesRequest) (*operations.GetSetupV1LocationsIDServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -925,7 +970,10 @@ func (s *locations) PostSetupV1LocationsBulk(ctx context.Context, request shared
 // <p>The email template endpoints work a little differently than most. There are no endpoints to update the templates, we use the post endpoint to create a custom template instead. This endpoint creates a new email template that will be used instead. If you delete it, you are deleting the custom template you created and the original default template created by OnSched will be reactivated.</p>
 func (s *locations) PostSetupV1LocationsIDEmailTemplates(ctx context.Context, request operations.PostSetupV1LocationsIDEmailTemplatesRequest) (*operations.PostSetupV1LocationsIDEmailTemplatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EmailTemplateInputModel", "json")
 	if err != nil {
@@ -978,7 +1026,10 @@ func (s *locations) PostSetupV1LocationsIDEmailTemplates(ctx context.Context, re
 // <p>The email template endpoints work a little differently than most. There are no endpoints to update the templates, we use the post endpoint to create a custom template instead. This endpoint creates a new custom Master Template Settings file that will be used instead. If you delete it, you are deleting the custom template settings you created and the original default Master Template created by OnSched would be reactivated.</p>
 func (s *locations) PostSetupV1LocationsIDEmailTemplatesMaster(ctx context.Context, request operations.PostSetupV1LocationsIDEmailTemplatesMasterRequest) (*operations.PostSetupV1LocationsIDEmailTemplatesMasterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/email/templates/master", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MasterTemplateSettingsInputModel", "json")
 	if err != nil {
@@ -1030,7 +1081,10 @@ func (s *locations) PostSetupV1LocationsIDEmailTemplatesMaster(ctx context.Conte
 // <p>Use this endpoint to <b>Authorize Access</b> to google calendar users in your organization. You must create/have a Google Service account as an admin of your GSuite, then save the credentials as a Json Key file. This <b>Json Key</b> and a valid business <b>location id</b> are required. </p>
 func (s *locations) PostSetupV1LocationsIDGoogleServiceAccount(ctx context.Context, request operations.PostSetupV1LocationsIDGoogleServiceAccountRequest) (*operations.PostSetupV1LocationsIDGoogleServiceAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/google/service/account", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/google/service/account", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleServiceAccountCreds", "json")
 	if err != nil {
@@ -1085,7 +1139,10 @@ func (s *locations) PostSetupV1LocationsIDGoogleServiceAccount(ctx context.Conte
 // <p>Supplying the list of services ids to cherry-pick/link to the location in the request body will explicitly define which Primary Location Services are offered by the specified business location.</p>
 func (s *locations) PostSetupV1LocationsIDServices(ctx context.Context, request operations.PostSetupV1LocationsIDServicesRequest) (*operations.PostSetupV1LocationsIDServicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1137,7 +1194,10 @@ func (s *locations) PostSetupV1LocationsIDServices(ctx context.Context, request 
 // <p>Use this endpoint to <b>Upload</b> an image to a location object. A valid business <b>location id</b> is required. You must convert the image to a <b>base64 encoded string</b> and pass that string as input along with your <b>filename</b>.</p>
 func (s *locations) PostSetupV1LocationsIDUploadimage(ctx context.Context, request operations.PostSetupV1LocationsIDUploadimageRequest) (*operations.PostSetupV1LocationsIDUploadimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/uploadimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/uploadimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceImageInputModel", "json")
 	if err != nil {
@@ -1191,7 +1251,10 @@ func (s *locations) PostSetupV1LocationsIDUploadimage(ctx context.Context, reque
 // <p>Refer to: <i><b>POST ​/setup​/v1​/locations</b></i> endpoint for details.</p>
 func (s *locations) PutSetupV1LocationsID(ctx context.Context, request operations.PutSetupV1LocationsIDRequest) (*operations.PutSetupV1LocationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocationUpdateModel", "json")
 	if err != nil {
@@ -1253,7 +1316,10 @@ func (s *locations) PutSetupV1LocationsID(ctx context.Context, request operation
 // <p>Example 2: <b>emailSecondReminder: 3, emailSecondReminderInterval: 1</b> - results in 2nd reminder being sent <b>3 Hours before</b> the appointment time.</p>
 func (s *locations) PutSetupV1LocationsIDAppointmentreminders(ctx context.Context, request operations.PutSetupV1LocationsIDAppointmentremindersRequest) (*operations.PutSetupV1LocationsIDAppointmentremindersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/appointmentreminders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/appointmentreminders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppointmentRemindersInputModel", "json")
 	if err != nil {
@@ -1306,7 +1372,10 @@ func (s *locations) PutSetupV1LocationsIDAppointmentreminders(ctx context.Contex
 // <p>Holidays are automatically defined with the initial Post Location endpoint and are based on country code. Find your location holiday codes by using the: <i>GET /setup​/v1​/locations​/{id}</i> endpoint. Change your holidays to open or closed by passing in the <b>holidayId</b> along with the <b>closed</b> boolean value to change the status of a specific holiday. Pass in an <b>asterisk *</b> for the holidayId then all business holidays will be set as defined.</p>
 func (s *locations) PutSetupV1LocationsIDHolidaysHolidayIDClosed(ctx context.Context, request operations.PutSetupV1LocationsIDHolidaysHolidayIDClosedRequest) (*operations.PutSetupV1LocationsIDHolidaysHolidayIDClosedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/holidays/{holidayId}/{closed}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/holidays/{holidayId}/{closed}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1351,7 +1420,10 @@ func (s *locations) PutSetupV1LocationsIDHolidaysHolidayIDClosed(ctx context.Con
 // <p>Use this endpoint to <b>Recover</b> a deleted business location. A valid business <b>location id</b> is required.</p>
 func (s *locations) PutSetupV1LocationsIDRecover(ctx context.Context, request operations.PutSetupV1LocationsIDRecoverRequest) (*operations.PutSetupV1LocationsIDRecoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/recover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/recover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1399,7 +1471,10 @@ func (s *locations) PutSetupV1LocationsIDRecover(ctx context.Context, request op
 //	<b>settingsScope</b> values are <b>0 = company scope, 1 = business location scope</b>. To inherit the online settings defined in the primary business location, then use value = 0 for company scope. Otherwise, to override the settings for a specific location then use value = 1 for business location scope. <b>Note</b>: You cannot change the settings scope of the Primary Business Location.</p>
 func (s *locations) PutSetupV1LocationsIDSettingsScopeSettingsScope(ctx context.Context, request operations.PutSetupV1LocationsIDSettingsScopeSettingsScopeRequest) (*operations.PutSetupV1LocationsIDSettingsScopeSettingsScopeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/settings/scope/{settingsScope}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/locations/{id}/settings/scope/{settingsScope}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

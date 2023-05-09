@@ -16,17 +16,21 @@ const (
 	UpdateLocationNfsXAmzTargetEnumFmrsServiceUpdateLocationNfs UpdateLocationNfsXAmzTargetEnum = "FmrsService.UpdateLocationNfs"
 )
 
+func (e UpdateLocationNfsXAmzTargetEnum) ToPointer() *UpdateLocationNfsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateLocationNfsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.UpdateLocationNfs":
-		*e = UpdateLocationNfsXAmzTargetEnum(s)
+		*e = UpdateLocationNfsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateLocationNfsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateLocationNfsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
+    ctx := context.Background()
+    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
         Altitude: 10,
         Latitude: 80,
         Longitude: 100,
         Year: 2020.5,
-    }
-
-    ctx := context.Background()
-    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

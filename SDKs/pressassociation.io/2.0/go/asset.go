@@ -35,7 +35,10 @@ func newAsset(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Return the content of the selected asset.
 func (s *asset) GetAsset(ctx context.Context, request operations.GetAssetRequest, security operations.GetAssetSecurity) (*operations.GetAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *asset) GetAsset(ctx context.Context, request operations.GetAssetRequest
 // Return the contributors of the selected asset.
 func (s *asset) GetAssetContributors(ctx context.Context, request operations.GetAssetContributorsRequest, security operations.GetAssetContributorsSecurity) (*operations.GetAssetContributorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}/contributor", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/asset/{assetId}/contributor", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

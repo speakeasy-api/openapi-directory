@@ -15,17 +15,21 @@ const (
 	GETDeleteVpcEndpointServiceConfigurationsActionEnumDeleteVpcEndpointServiceConfigurations GETDeleteVpcEndpointServiceConfigurationsActionEnum = "DeleteVpcEndpointServiceConfigurations"
 )
 
+func (e GETDeleteVpcEndpointServiceConfigurationsActionEnum) ToPointer() *GETDeleteVpcEndpointServiceConfigurationsActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVpcEndpointServiceConfigurationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVpcEndpointServiceConfigurations":
-		*e = GETDeleteVpcEndpointServiceConfigurationsActionEnum(s)
+		*e = GETDeleteVpcEndpointServiceConfigurationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVpcEndpointServiceConfigurationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVpcEndpointServiceConfigurationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVpcEndpointServiceConfigurationsVersionEnumTwoThousandAndSixteen1115 GETDeleteVpcEndpointServiceConfigurationsVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteVpcEndpointServiceConfigurationsVersionEnum) ToPointer() *GETDeleteVpcEndpointServiceConfigurationsVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVpcEndpointServiceConfigurationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteVpcEndpointServiceConfigurationsVersionEnum(s)
+		*e = GETDeleteVpcEndpointServiceConfigurationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVpcEndpointServiceConfigurationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVpcEndpointServiceConfigurationsVersionEnum: %v", v)
 	}
 }
 

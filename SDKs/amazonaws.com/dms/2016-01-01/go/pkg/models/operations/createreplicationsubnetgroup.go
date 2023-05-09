@@ -16,17 +16,21 @@ const (
 	CreateReplicationSubnetGroupXAmzTargetEnumAmazonDmSv20160101CreateReplicationSubnetGroup CreateReplicationSubnetGroupXAmzTargetEnum = "AmazonDMSv20160101.CreateReplicationSubnetGroup"
 )
 
+func (e CreateReplicationSubnetGroupXAmzTargetEnum) ToPointer() *CreateReplicationSubnetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateReplicationSubnetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.CreateReplicationSubnetGroup":
-		*e = CreateReplicationSubnetGroupXAmzTargetEnum(s)
+		*e = CreateReplicationSubnetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplicationSubnetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplicationSubnetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

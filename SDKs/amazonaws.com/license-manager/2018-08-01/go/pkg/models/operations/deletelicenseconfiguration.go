@@ -16,17 +16,21 @@ const (
 	DeleteLicenseConfigurationXAmzTargetEnumAwsLicenseManagerDeleteLicenseConfiguration DeleteLicenseConfigurationXAmzTargetEnum = "AWSLicenseManager.DeleteLicenseConfiguration"
 )
 
+func (e DeleteLicenseConfigurationXAmzTargetEnum) ToPointer() *DeleteLicenseConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLicenseConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.DeleteLicenseConfiguration":
-		*e = DeleteLicenseConfigurationXAmzTargetEnum(s)
+		*e = DeleteLicenseConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLicenseConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLicenseConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

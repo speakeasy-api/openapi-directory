@@ -16,17 +16,21 @@ const (
 	ListProtocolsListsXAmzTargetEnumAwsfms20180101ListProtocolsLists ListProtocolsListsXAmzTargetEnum = "AWSFMS_20180101.ListProtocolsLists"
 )
 
+func (e ListProtocolsListsXAmzTargetEnum) ToPointer() *ListProtocolsListsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListProtocolsListsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.ListProtocolsLists":
-		*e = ListProtocolsListsXAmzTargetEnum(s)
+		*e = ListProtocolsListsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProtocolsListsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProtocolsListsXAmzTargetEnum: %v", v)
 	}
 }
 

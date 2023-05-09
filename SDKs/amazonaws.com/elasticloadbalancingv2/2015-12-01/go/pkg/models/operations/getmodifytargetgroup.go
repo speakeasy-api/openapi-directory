@@ -15,17 +15,21 @@ const (
 	GETModifyTargetGroupActionEnumModifyTargetGroup GETModifyTargetGroupActionEnum = "ModifyTargetGroup"
 )
 
+func (e GETModifyTargetGroupActionEnum) ToPointer() *GETModifyTargetGroupActionEnum {
+	return &e
+}
+
 func (e *GETModifyTargetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyTargetGroup":
-		*e = GETModifyTargetGroupActionEnum(s)
+		*e = GETModifyTargetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTargetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTargetGroupActionEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GETModifyTargetGroupHealthCheckProtocolEnumGeneve GETModifyTargetGroupHealthCheckProtocolEnum = "GENEVE"
 )
 
+func (e GETModifyTargetGroupHealthCheckProtocolEnum) ToPointer() *GETModifyTargetGroupHealthCheckProtocolEnum {
+	return &e
+}
+
 func (e *GETModifyTargetGroupHealthCheckProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
@@ -61,10 +69,10 @@ func (e *GETModifyTargetGroupHealthCheckProtocolEnum) UnmarshalJSON(data []byte)
 	case "TCP_UDP":
 		fallthrough
 	case "GENEVE":
-		*e = GETModifyTargetGroupHealthCheckProtocolEnum(s)
+		*e = GETModifyTargetGroupHealthCheckProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTargetGroupHealthCheckProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTargetGroupHealthCheckProtocolEnum: %v", v)
 	}
 }
 
@@ -81,17 +89,21 @@ const (
 	GETModifyTargetGroupVersionEnumTwoThousandAndFifteen1201 GETModifyTargetGroupVersionEnum = "2015-12-01"
 )
 
+func (e GETModifyTargetGroupVersionEnum) ToPointer() *GETModifyTargetGroupVersionEnum {
+	return &e
+}
+
 func (e *GETModifyTargetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETModifyTargetGroupVersionEnum(s)
+		*e = GETModifyTargetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTargetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTargetGroupVersionEnum: %v", v)
 	}
 }
 

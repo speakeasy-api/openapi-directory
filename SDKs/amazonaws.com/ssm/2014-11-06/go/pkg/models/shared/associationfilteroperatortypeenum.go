@@ -15,20 +15,24 @@ const (
 	AssociationFilterOperatorTypeEnumGreaterThan AssociationFilterOperatorTypeEnum = "GREATER_THAN"
 )
 
+func (e AssociationFilterOperatorTypeEnum) ToPointer() *AssociationFilterOperatorTypeEnum {
+	return &e
+}
+
 func (e *AssociationFilterOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUAL":
 		fallthrough
 	case "LESS_THAN":
 		fallthrough
 	case "GREATER_THAN":
-		*e = AssociationFilterOperatorTypeEnum(s)
+		*e = AssociationFilterOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationFilterOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationFilterOperatorTypeEnum: %v", v)
 	}
 }

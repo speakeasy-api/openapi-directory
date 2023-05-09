@@ -37,7 +37,10 @@ func newStyleGuide(defaultClient, securityClient HTTPClient, serverURL, language
 // Upload a new style guide
 func (s *styleGuide) CreateStyleGuideJSON(ctx context.Context, request operations.CreateStyleGuideJSONRequest) (*operations.CreateStyleGuideJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StyleGuideUploadRequest", "json")
 	if err != nil {
@@ -105,7 +108,10 @@ func (s *styleGuide) CreateStyleGuideJSON(ctx context.Context, request operation
 // Upload a new style guide
 func (s *styleGuide) CreateStyleGuideMultipart(ctx context.Context, request operations.CreateStyleGuideMultipartRequest) (*operations.CreateStyleGuideMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StyleGuideUploadRequest1", "multipart")
 	if err != nil {
@@ -173,7 +179,10 @@ func (s *styleGuide) CreateStyleGuideMultipart(ctx context.Context, request oper
 // Delete the existing style guide from the project.
 func (s *styleGuide) DeleteStyleGuide(ctx context.Context, request operations.DeleteStyleGuideRequest) (*operations.DeleteStyleGuideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -286,7 +295,10 @@ func (s *styleGuide) DownloadGlobalStyleGuide(ctx context.Context) (*operations.
 // Download a previously uploaded style guide file.
 func (s *styleGuide) DownloadStyleGuide(ctx context.Context, request operations.DownloadStyleGuideRequest) (*operations.DownloadStyleGuideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,7 +354,10 @@ func (s *styleGuide) DownloadStyleGuide(ctx context.Context, request operations.
 // View the details of a style guide uploaded to a project
 func (s *styleGuide) GetStyleGuide(ctx context.Context, request operations.GetStyleGuideRequest) (*operations.GetStyleGuideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -401,7 +416,10 @@ func (s *styleGuide) GetStyleGuide(ctx context.Context, request operations.GetSt
 // View a list of style guides in your project.
 func (s *styleGuide) GetStyleGuides(ctx context.Context, request operations.GetStyleGuidesRequest) (*operations.GetStyleGuidesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -588,7 +606,10 @@ func (s *styleGuide) UpdateGlobalStyleGuideMultipart(ctx context.Context, reques
 // Update the existing style guide in the project. Public users are allowed to have only 1 style guide per project and file name and contents will replaced with the new style guide that you are uploading via this endpoint.
 func (s *styleGuide) UpdateStyleGuideJSON(ctx context.Context, request operations.UpdateStyleGuideJSONRequest) (*operations.UpdateStyleGuideJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StyleGuideUploadRequest", "json")
 	if err != nil {
@@ -656,7 +677,10 @@ func (s *styleGuide) UpdateStyleGuideJSON(ctx context.Context, request operation
 // Update the existing style guide in the project. Public users are allowed to have only 1 style guide per project and file name and contents will replaced with the new style guide that you are uploading via this endpoint.
 func (s *styleGuide) UpdateStyleGuideMultipart(ctx context.Context, request operations.UpdateStyleGuideMultipartRequest) (*operations.UpdateStyleGuideMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/styleguides/{styleGuideId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StyleGuideUploadRequest1", "multipart")
 	if err != nil {

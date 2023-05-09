@@ -17,12 +17,16 @@ const (
 	TravelClassEnumFirst          TravelClassEnum = "FIRST"
 )
 
+func (e TravelClassEnum) ToPointer() *TravelClassEnum {
+	return &e
+}
+
 func (e *TravelClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ECONOMY":
 		fallthrough
 	case "PREMIUM_ECONOMY":
@@ -30,9 +34,9 @@ func (e *TravelClassEnum) UnmarshalJSON(data []byte) error {
 	case "BUSINESS":
 		fallthrough
 	case "FIRST":
-		*e = TravelClassEnum(s)
+		*e = TravelClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TravelClassEnum: %s", s)
+		return fmt.Errorf("invalid value for TravelClassEnum: %v", v)
 	}
 }

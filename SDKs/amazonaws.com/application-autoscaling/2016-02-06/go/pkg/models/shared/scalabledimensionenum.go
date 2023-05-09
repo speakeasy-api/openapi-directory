@@ -32,12 +32,16 @@ const (
 	ScalableDimensionEnumNeptuneClusterReadReplicaCount                            ScalableDimensionEnum = "neptune:cluster:ReadReplicaCount"
 )
 
+func (e ScalableDimensionEnum) ToPointer() *ScalableDimensionEnum {
+	return &e
+}
+
 func (e *ScalableDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ecs:service:DesiredCount":
 		fallthrough
 	case "ec2:spot-fleet-request:TargetCapacity":
@@ -77,9 +81,9 @@ func (e *ScalableDimensionEnum) UnmarshalJSON(data []byte) error {
 	case "elasticache:replication-group:Replicas":
 		fallthrough
 	case "neptune:cluster:ReadReplicaCount":
-		*e = ScalableDimensionEnum(s)
+		*e = ScalableDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalableDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalableDimensionEnum: %v", v)
 	}
 }

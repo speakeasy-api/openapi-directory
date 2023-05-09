@@ -17,12 +17,16 @@ const (
 	ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnumError                      ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum = "ERROR"
 )
 
+func (e ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum) ToPointer() *ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum {
+	return &e
+}
+
 func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum) Unmarshal
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum(s)
+		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperAuditEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnumError                      ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum = "ERROR"
 )
 
+func (e ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum) ToPointer() *ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum {
+	return &e
+}
+
 func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -60,10 +68,10 @@ func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerSta
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum(s)
+		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperControllerManagerStateEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnumError                      ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum = "ERROR"
 )
 
+func (e ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum) ToPointer() *ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum {
+	return &e
+}
+
 func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -90,10 +102,10 @@ func (e *ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum) Unmars
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum(s)
+		*e = ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementGatekeeperDeploymentStateGatekeeperMutationEnum: %v", v)
 	}
 }
 

@@ -20,19 +20,23 @@ const (
 	DescribeVolumeAttributeResultProductCodesProductCodeTypeEnumMarketplace DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum) ToPointer() *DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum(s)
+		*e = DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumeAttributeResultProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 

@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1beta3ListProcessorsResponse - Response message for list processors.
+// GoogleCloudDocumentaiV1beta3ListProcessorsResponse - Response message for the ListProcessors method.
 type GoogleCloudDocumentaiV1beta3ListProcessorsResponse struct {
 	// Points to the next processor, otherwise empty.
 	NextPageToken *string `json:"nextPageToken,omitempty"`

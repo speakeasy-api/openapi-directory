@@ -16,17 +16,21 @@ const (
 	CreateGeoMatchSetXAmzTargetEnumAwswafRegional20161128CreateGeoMatchSet CreateGeoMatchSetXAmzTargetEnum = "AWSWAF_Regional_20161128.CreateGeoMatchSet"
 )
 
+func (e CreateGeoMatchSetXAmzTargetEnum) ToPointer() *CreateGeoMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGeoMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.CreateGeoMatchSet":
-		*e = CreateGeoMatchSetXAmzTargetEnum(s)
+		*e = CreateGeoMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGeoMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGeoMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

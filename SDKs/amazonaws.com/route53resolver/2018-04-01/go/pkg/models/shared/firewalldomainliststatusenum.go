@@ -17,12 +17,16 @@ const (
 	FirewallDomainListStatusEnumUpdating             FirewallDomainListStatusEnum = "UPDATING"
 )
 
+func (e FirewallDomainListStatusEnum) ToPointer() *FirewallDomainListStatusEnum {
+	return &e
+}
+
 func (e *FirewallDomainListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETE":
 		fallthrough
 	case "COMPLETE_IMPORT_FAILED":
@@ -32,9 +36,9 @@ func (e *FirewallDomainListStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UPDATING":
-		*e = FirewallDomainListStatusEnum(s)
+		*e = FirewallDomainListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallDomainListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallDomainListStatusEnum: %v", v)
 	}
 }

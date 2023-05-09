@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/mobile/2017
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,24 +27,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateProjectRequest{
-        RequestBody: operations.CreateProjectRequestBody{
-            Contents: "corrupti",
-        },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        Name: "vel",
-        Region: "error",
-        SnapshotID: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.CreateProject(ctx, req)
+    res, err := s.CreateProject(ctx, operations.CreateProjectRequest{
+        RequestBody: operations.CreateProjectRequestBody{
+            Contents: sdk.String("corrupti"),
+        },
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        Name: sdk.String("Sabrina Oberbrunner"),
+        Region: sdk.String("magnam"),
+        SnapshotID: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,17 +57,17 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateProject` -  Creates an AWS Mobile Hub project. 
-* `DeleteProject` -  Delets a project in AWS Mobile Hub. 
-* `DescribeBundle` -  Get the bundle details for the requested bundle id. 
-* `DescribeProject` -  Gets details about a project in AWS Mobile Hub. 
-* `ExportBundle` -  Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources. 
-* `ExportProject` -  Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account. 
-* `ListBundles` -  List all available bundles. 
-* `ListProjects` -  Lists projects in AWS Mobile Hub. 
-* `UpdateProject` -  Update an existing project. 
+* [CreateProject](docs/sdk/README.md#createproject) -  Creates an AWS Mobile Hub project. 
+* [DeleteProject](docs/sdk/README.md#deleteproject) -  Delets a project in AWS Mobile Hub. 
+* [DescribeBundle](docs/sdk/README.md#describebundle) -  Get the bundle details for the requested bundle id. 
+* [DescribeProject](docs/sdk/README.md#describeproject) -  Gets details about a project in AWS Mobile Hub. 
+* [ExportBundle](docs/sdk/README.md#exportbundle) -  Generates customized software development kit (SDK) and or tool packages used to integrate mobile web or mobile app clients with backend AWS resources. 
+* [ExportProject](docs/sdk/README.md#exportproject) -  Exports project configuration to a snapshot which can be downloaded and shared. Note that mobile app push credentials are encrypted in exported projects, so they can only be shared successfully within the same AWS account. 
+* [ListBundles](docs/sdk/README.md#listbundles) -  List all available bundles. 
+* [ListProjects](docs/sdk/README.md#listprojects) -  Lists projects in AWS Mobile Hub. 
+* [UpdateProject](docs/sdk/README.md#updateproject) -  Update an existing project. 
 <!-- End SDK Available Operations -->
 
 ### Maturity

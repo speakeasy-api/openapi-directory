@@ -32,12 +32,16 @@ const (
 	FindingsSeverityEnumHigh   FindingsSeverityEnum = "high"
 )
 
+func (e FindingsSeverityEnum) ToPointer() *FindingsSeverityEnum {
+	return &e
+}
+
 func (e *FindingsSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "info":
 		fallthrough
 	case "low":
@@ -45,10 +49,10 @@ func (e *FindingsSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "medium":
 		fallthrough
 	case "high":
-		*e = FindingsSeverityEnum(s)
+		*e = FindingsSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingsSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingsSeverityEnum: %v", v)
 	}
 }
 

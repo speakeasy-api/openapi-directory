@@ -21,12 +21,16 @@ const (
 	GoogleCloudConnectorsV1ConnectionStatusStateEnumAuthorizationRequired GoogleCloudConnectorsV1ConnectionStatusStateEnum = "AUTHORIZATION_REQUIRED"
 )
 
+func (e GoogleCloudConnectorsV1ConnectionStatusStateEnum) ToPointer() *GoogleCloudConnectorsV1ConnectionStatusStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudConnectorsV1ConnectionStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -42,10 +46,10 @@ func (e *GoogleCloudConnectorsV1ConnectionStatusStateEnum) UnmarshalJSON(data []
 	case "ERROR":
 		fallthrough
 	case "AUTHORIZATION_REQUIRED":
-		*e = GoogleCloudConnectorsV1ConnectionStatusStateEnum(s)
+		*e = GoogleCloudConnectorsV1ConnectionStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1ConnectionStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudConnectorsV1ConnectionStatusStateEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	CallBroadcastAnsweringMachineConfigEnumLiveImmediate CallBroadcastAnsweringMachineConfigEnum = "LIVE_IMMEDIATE"
 )
 
+func (e CallBroadcastAnsweringMachineConfigEnum) ToPointer() *CallBroadcastAnsweringMachineConfigEnum {
+	return &e
+}
+
 func (e *CallBroadcastAnsweringMachineConfigEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AM_ONLY":
 		fallthrough
 	case "AM_AND_LIVE":
@@ -30,10 +34,10 @@ func (e *CallBroadcastAnsweringMachineConfigEnum) UnmarshalJSON(data []byte) err
 	case "LIVE_WITH_AMD":
 		fallthrough
 	case "LIVE_IMMEDIATE":
-		*e = CallBroadcastAnsweringMachineConfigEnum(s)
+		*e = CallBroadcastAnsweringMachineConfigEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastAnsweringMachineConfigEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastAnsweringMachineConfigEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	CallBroadcastStatusEnumApproved          CallBroadcastStatusEnum = "APPROVED"
 )
 
+func (e CallBroadcastStatusEnum) ToPointer() *CallBroadcastStatusEnum {
+	return &e
+}
+
 func (e *CallBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST":
 		fallthrough
 	case "SETUP":
@@ -122,10 +130,10 @@ func (e *CallBroadcastStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DECLINED":
 		fallthrough
 	case "APPROVED":
-		*e = CallBroadcastStatusEnum(s)
+		*e = CallBroadcastStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastStatusEnum: %v", v)
 	}
 }
 

@@ -22,21 +22,25 @@ const (
 	PrivateProjectsListOrderEnumViews         PrivateProjectsListOrderEnum = "views"
 )
 
+func (e PrivateProjectsListOrderEnum) ToPointer() *PrivateProjectsListOrderEnum {
+	return &e
+}
+
 func (e *PrivateProjectsListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published_date":
 		fallthrough
 	case "modified_date":
 		fallthrough
 	case "views":
-		*e = PrivateProjectsListOrderEnum(s)
+		*e = PrivateProjectsListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateProjectsListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateProjectsListOrderEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	PrivateProjectsListOrderDirectionEnumDesc PrivateProjectsListOrderDirectionEnum = "desc"
 )
 
+func (e PrivateProjectsListOrderDirectionEnum) ToPointer() *PrivateProjectsListOrderDirectionEnum {
+	return &e
+}
+
 func (e *PrivateProjectsListOrderDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PrivateProjectsListOrderDirectionEnum(s)
+		*e = PrivateProjectsListOrderDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateProjectsListOrderDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateProjectsListOrderDirectionEnum: %v", v)
 	}
 }
 
@@ -72,19 +80,23 @@ const (
 	PrivateProjectsListStorageEnumIndividual PrivateProjectsListStorageEnum = "individual"
 )
 
+func (e PrivateProjectsListStorageEnum) ToPointer() *PrivateProjectsListStorageEnum {
+	return &e
+}
+
 func (e *PrivateProjectsListStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "individual":
-		*e = PrivateProjectsListStorageEnum(s)
+		*e = PrivateProjectsListStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrivateProjectsListStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for PrivateProjectsListStorageEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsAutoAcceptSharedAttachmentsEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTableAssociationEnum: %v", v)
 	}
 }
 
@@ -64,19 +72,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDefaultRouteTablePropagationEnum: %v", v)
 	}
 }
 
@@ -88,19 +100,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsDNSSupportEnum: %v", v)
 	}
 }
 
@@ -112,19 +128,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsMulticastSupportEnum: %v", v)
 	}
 }
 
@@ -136,19 +156,23 @@ const (
 	DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnumDisable DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum = "disable"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayOptionsVpnEcmpSupportEnum: %v", v)
 	}
 }
 
@@ -177,12 +201,16 @@ const (
 	DeleteTransitGatewayResultTransitGatewayStateEnumDeleted   DeleteTransitGatewayResultTransitGatewayStateEnum = "deleted"
 )
 
+func (e DeleteTransitGatewayResultTransitGatewayStateEnum) ToPointer() *DeleteTransitGatewayResultTransitGatewayStateEnum {
+	return &e
+}
+
 func (e *DeleteTransitGatewayResultTransitGatewayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -192,10 +220,10 @@ func (e *DeleteTransitGatewayResultTransitGatewayStateEnum) UnmarshalJSON(data [
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = DeleteTransitGatewayResultTransitGatewayStateEnum(s)
+		*e = DeleteTransitGatewayResultTransitGatewayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTransitGatewayResultTransitGatewayStateEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTRegisterTransitGatewayMulticastGroupMembersActionEnumRegisterTransitGatewayMulticastGroupMembers POSTRegisterTransitGatewayMulticastGroupMembersActionEnum = "RegisterTransitGatewayMulticastGroupMembers"
 )
 
+func (e POSTRegisterTransitGatewayMulticastGroupMembersActionEnum) ToPointer() *POSTRegisterTransitGatewayMulticastGroupMembersActionEnum {
+	return &e
+}
+
 func (e *POSTRegisterTransitGatewayMulticastGroupMembersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterTransitGatewayMulticastGroupMembers":
-		*e = POSTRegisterTransitGatewayMulticastGroupMembersActionEnum(s)
+		*e = POSTRegisterTransitGatewayMulticastGroupMembersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterTransitGatewayMulticastGroupMembersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterTransitGatewayMulticastGroupMembersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRegisterTransitGatewayMulticastGroupMembersVersionEnumTwoThousandAndSixteen1115 POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum = "2016-11-15"
 )
 
+func (e POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum) ToPointer() *POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum {
+	return &e
+}
+
 func (e *POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum(s)
+		*e = POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterTransitGatewayMulticastGroupMembersVersionEnum: %v", v)
 	}
 }
 

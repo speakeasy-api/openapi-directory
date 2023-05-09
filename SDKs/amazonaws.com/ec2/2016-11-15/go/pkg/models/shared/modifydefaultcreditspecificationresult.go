@@ -17,12 +17,16 @@ const (
 	ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnumT4g ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum = "t4g"
 )
 
+func (e ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum) ToPointer() *ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum {
+	return &e
+}
+
 func (e *ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "t2":
 		fallthrough
 	case "t3":
@@ -30,10 +34,10 @@ func (e *ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification
 	case "t3a":
 		fallthrough
 	case "t4g":
-		*e = ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum(s)
+		*e = ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	ActionsCreateRequiredWorkflowRequestBodyScopeEnumAll      ActionsCreateRequiredWorkflowRequestBodyScopeEnum = "all"
 )
 
+func (e ActionsCreateRequiredWorkflowRequestBodyScopeEnum) ToPointer() *ActionsCreateRequiredWorkflowRequestBodyScopeEnum {
+	return &e
+}
+
 func (e *ActionsCreateRequiredWorkflowRequestBodyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "selected":
 		fallthrough
 	case "all":
-		*e = ActionsCreateRequiredWorkflowRequestBodyScopeEnum(s)
+		*e = ActionsCreateRequiredWorkflowRequestBodyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsCreateRequiredWorkflowRequestBodyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsCreateRequiredWorkflowRequestBodyScopeEnum: %v", v)
 	}
 }
 

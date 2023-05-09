@@ -14,18 +14,22 @@ const (
 	VerifiedAccessEndpointTypeEnumNetworkInterface VerifiedAccessEndpointTypeEnum = "network-interface"
 )
 
+func (e VerifiedAccessEndpointTypeEnum) ToPointer() *VerifiedAccessEndpointTypeEnum {
+	return &e
+}
+
 func (e *VerifiedAccessEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "load-balancer":
 		fallthrough
 	case "network-interface":
-		*e = VerifiedAccessEndpointTypeEnum(s)
+		*e = VerifiedAccessEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifiedAccessEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifiedAccessEndpointTypeEnum: %v", v)
 	}
 }

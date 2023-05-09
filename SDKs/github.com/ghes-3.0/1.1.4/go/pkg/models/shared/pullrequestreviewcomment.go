@@ -34,19 +34,23 @@ const (
 	PullRequestReviewCommentSideEnumRight PullRequestReviewCommentSideEnum = "RIGHT"
 )
 
+func (e PullRequestReviewCommentSideEnum) ToPointer() *PullRequestReviewCommentSideEnum {
+	return &e
+}
+
 func (e *PullRequestReviewCommentSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = PullRequestReviewCommentSideEnum(s)
+		*e = PullRequestReviewCommentSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullRequestReviewCommentSideEnum: %s", s)
+		return fmt.Errorf("invalid value for PullRequestReviewCommentSideEnum: %v", v)
 	}
 }
 
@@ -58,19 +62,23 @@ const (
 	PullRequestReviewCommentStartSideEnumRight PullRequestReviewCommentStartSideEnum = "RIGHT"
 )
 
+func (e PullRequestReviewCommentStartSideEnum) ToPointer() *PullRequestReviewCommentStartSideEnum {
+	return &e
+}
+
 func (e *PullRequestReviewCommentStartSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "RIGHT":
-		*e = PullRequestReviewCommentStartSideEnum(s)
+		*e = PullRequestReviewCommentStartSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullRequestReviewCommentStartSideEnum: %s", s)
+		return fmt.Errorf("invalid value for PullRequestReviewCommentStartSideEnum: %v", v)
 	}
 }
 

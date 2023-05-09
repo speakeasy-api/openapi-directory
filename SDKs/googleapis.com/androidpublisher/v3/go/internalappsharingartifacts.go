@@ -34,7 +34,10 @@ func newInternalappsharingartifacts(defaultClient, securityClient HTTPClient, se
 // AndroidpublisherInternalappsharingartifactsUploadapk - Uploads an APK to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
 func (s *internalappsharingartifacts) AndroidpublisherInternalappsharingartifactsUploadapk(ctx context.Context, request operations.AndroidpublisherInternalappsharingartifactsUploadapkRequest, security operations.AndroidpublisherInternalappsharingartifactsUploadapkSecurity) (*operations.AndroidpublisherInternalappsharingartifactsUploadapkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/apk", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/apk", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *internalappsharingartifacts) AndroidpublisherInternalappsharingartifact
 // AndroidpublisherInternalappsharingartifactsUploadbundle - Uploads an app bundle to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
 func (s *internalappsharingartifacts) AndroidpublisherInternalappsharingartifactsUploadbundle(ctx context.Context, request operations.AndroidpublisherInternalappsharingartifactsUploadbundleRequest, security operations.AndroidpublisherInternalappsharingartifactsUploadbundleSecurity) (*operations.AndroidpublisherInternalappsharingartifactsUploadbundleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/bundle", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/internalappsharing/{packageName}/artifacts/bundle", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	EventSourceStateEnumDeleted EventSourceStateEnum = "DELETED"
 )
 
+func (e EventSourceStateEnum) ToPointer() *EventSourceStateEnum {
+	return &e
+}
+
 func (e *EventSourceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = EventSourceStateEnum(s)
+		*e = EventSourceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSourceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSourceStateEnum: %v", v)
 	}
 }

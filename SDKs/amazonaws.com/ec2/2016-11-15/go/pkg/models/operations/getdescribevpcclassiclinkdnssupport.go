@@ -15,17 +15,21 @@ const (
 	GETDescribeVpcClassicLinkDNSSupportActionEnumDescribeVpcClassicLinkDNSSupport GETDescribeVpcClassicLinkDNSSupportActionEnum = "DescribeVpcClassicLinkDnsSupport"
 )
 
+func (e GETDescribeVpcClassicLinkDNSSupportActionEnum) ToPointer() *GETDescribeVpcClassicLinkDNSSupportActionEnum {
+	return &e
+}
+
 func (e *GETDescribeVpcClassicLinkDNSSupportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVpcClassicLinkDnsSupport":
-		*e = GETDescribeVpcClassicLinkDNSSupportActionEnum(s)
+		*e = GETDescribeVpcClassicLinkDNSSupportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVpcClassicLinkDNSSupportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVpcClassicLinkDNSSupportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeVpcClassicLinkDNSSupportVersionEnumTwoThousandAndSixteen1115 GETDescribeVpcClassicLinkDNSSupportVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeVpcClassicLinkDNSSupportVersionEnum) ToPointer() *GETDescribeVpcClassicLinkDNSSupportVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeVpcClassicLinkDNSSupportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeVpcClassicLinkDNSSupportVersionEnum(s)
+		*e = GETDescribeVpcClassicLinkDNSSupportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeVpcClassicLinkDNSSupportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeVpcClassicLinkDNSSupportVersionEnum: %v", v)
 	}
 }
 

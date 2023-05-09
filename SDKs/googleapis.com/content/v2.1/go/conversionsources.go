@@ -34,7 +34,10 @@ func newConversionsources(defaultClient, securityClient HTTPClient, serverURL, l
 // ContentConversionsourcesCreate - Creates a new conversion source.
 func (s *conversionsources) ContentConversionsourcesCreate(ctx context.Context, request operations.ContentConversionsourcesCreateRequest, security operations.ContentConversionsourcesCreateSecurity) (*operations.ContentConversionsourcesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionSourceInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *conversionsources) ContentConversionsourcesCreate(ctx context.Context, 
 // ContentConversionsourcesDelete - Archives an existing conversion source. It will be recoverable for 30 days. This archiving behavior is not typical in the Content API and unique to this service.
 func (s *conversionsources) ContentConversionsourcesDelete(ctx context.Context, request operations.ContentConversionsourcesDeleteRequest, security operations.ContentConversionsourcesDeleteSecurity) (*operations.ContentConversionsourcesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *conversionsources) ContentConversionsourcesDelete(ctx context.Context, 
 // ContentConversionsourcesGet - Fetches a conversion source.
 func (s *conversionsources) ContentConversionsourcesGet(ctx context.Context, request operations.ContentConversionsourcesGetRequest, security operations.ContentConversionsourcesGetSecurity) (*operations.ContentConversionsourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *conversionsources) ContentConversionsourcesGet(ctx context.Context, req
 // ContentConversionsourcesList - Retrieves the list of conversion sources the caller has access to.
 func (s *conversionsources) ContentConversionsourcesList(ctx context.Context, request operations.ContentConversionsourcesListRequest, security operations.ContentConversionsourcesListSecurity) (*operations.ContentConversionsourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *conversionsources) ContentConversionsourcesList(ctx context.Context, re
 // ContentConversionsourcesPatch - Updates information of an existing conversion source.
 func (s *conversionsources) ContentConversionsourcesPatch(ctx context.Context, request operations.ContentConversionsourcesPatchRequest, security operations.ContentConversionsourcesPatchSecurity) (*operations.ContentConversionsourcesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionSourceInput", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *conversionsources) ContentConversionsourcesPatch(ctx context.Context, r
 // ContentConversionsourcesUndelete - Re-enables an archived conversion source.
 func (s *conversionsources) ContentConversionsourcesUndelete(ctx context.Context, request operations.ContentConversionsourcesUndeleteRequest, security operations.ContentConversionsourcesUndeleteSecurity) (*operations.ContentConversionsourcesUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/conversionsources/{conversionSourceId}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

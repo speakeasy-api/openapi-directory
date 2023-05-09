@@ -34,7 +34,10 @@ func newSplashSettings(defaultClient, securityClient HTTPClient, serverURL, lang
 // Display the splash page settings for the given SSID
 func (s *splashSettings) GetNetworkSsidSplashSettings(ctx context.Context, request operations.GetNetworkSsidSplashSettingsRequest) (*operations.GetNetworkSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *splashSettings) GetNetworkSsidSplashSettings(ctx context.Context, reque
 // Modify the splash page settings for the given SSID
 func (s *splashSettings) UpdateNetworkSsidSplashSettings(ctx context.Context, request operations.UpdateNetworkSsidSplashSettingsRequest) (*operations.UpdateNetworkSsidSplashSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/ssids/{number}/splashSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

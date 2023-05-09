@@ -16,17 +16,21 @@ const (
 	PutRecordXAmzTargetEnumFirehose20150804PutRecord PutRecordXAmzTargetEnum = "Firehose_20150804.PutRecord"
 )
 
+func (e PutRecordXAmzTargetEnum) ToPointer() *PutRecordXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRecordXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Firehose_20150804.PutRecord":
-		*e = PutRecordXAmzTargetEnum(s)
+		*e = PutRecordXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRecordXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRecordXAmzTargetEnum: %v", v)
 	}
 }
 

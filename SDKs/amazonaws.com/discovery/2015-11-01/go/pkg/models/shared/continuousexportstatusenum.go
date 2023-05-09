@@ -19,12 +19,16 @@ const (
 	ContinuousExportStatusEnumInactive        ContinuousExportStatusEnum = "INACTIVE"
 )
 
+func (e ContinuousExportStatusEnum) ToPointer() *ContinuousExportStatusEnum {
+	return &e
+}
+
 func (e *ContinuousExportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_IN_PROGRESS":
 		fallthrough
 	case "START_FAILED":
@@ -38,9 +42,9 @@ func (e *ContinuousExportStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOP_FAILED":
 		fallthrough
 	case "INACTIVE":
-		*e = ContinuousExportStatusEnum(s)
+		*e = ContinuousExportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContinuousExportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContinuousExportStatusEnum: %v", v)
 	}
 }

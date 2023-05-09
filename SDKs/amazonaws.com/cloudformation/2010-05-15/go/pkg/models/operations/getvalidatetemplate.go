@@ -15,17 +15,21 @@ const (
 	GETValidateTemplateActionEnumValidateTemplate GETValidateTemplateActionEnum = "ValidateTemplate"
 )
 
+func (e GETValidateTemplateActionEnum) ToPointer() *GETValidateTemplateActionEnum {
+	return &e
+}
+
 func (e *GETValidateTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ValidateTemplate":
-		*e = GETValidateTemplateActionEnum(s)
+		*e = GETValidateTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETValidateTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETValidateTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETValidateTemplateVersionEnumTwoThousandAndTen0515 GETValidateTemplateVersionEnum = "2010-05-15"
 )
 
+func (e GETValidateTemplateVersionEnum) ToPointer() *GETValidateTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETValidateTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETValidateTemplateVersionEnum(s)
+		*e = GETValidateTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETValidateTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETValidateTemplateVersionEnum: %v", v)
 	}
 }
 

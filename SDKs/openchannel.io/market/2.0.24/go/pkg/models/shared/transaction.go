@@ -15,19 +15,23 @@ const (
 	TransactionTypeEnumRefund  TransactionTypeEnum = "refund"
 )
 
+func (e TransactionTypeEnum) ToPointer() *TransactionTypeEnum {
+	return &e
+}
+
 func (e *TransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment":
 		fallthrough
 	case "refund":
-		*e = TransactionTypeEnum(s)
+		*e = TransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ApplicationDeploymentLifecycleEnumDeployed  ApplicationDeploymentLifecycleEnum = "Deployed"
 )
 
+func (e ApplicationDeploymentLifecycleEnum) ToPointer() *ApplicationDeploymentLifecycleEnum {
+	return &e
+}
+
 func (e *ApplicationDeploymentLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Deploying":
 		fallthrough
 	case "Deployed":
-		*e = ApplicationDeploymentLifecycleEnum(s)
+		*e = ApplicationDeploymentLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationDeploymentLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationDeploymentLifecycleEnum: %v", v)
 	}
 }

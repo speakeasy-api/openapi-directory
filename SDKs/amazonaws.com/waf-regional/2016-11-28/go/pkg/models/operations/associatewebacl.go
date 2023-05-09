@@ -16,17 +16,21 @@ const (
 	AssociateWebACLXAmzTargetEnumAwswafRegional20161128AssociateWebACL AssociateWebACLXAmzTargetEnum = "AWSWAF_Regional_20161128.AssociateWebACL"
 )
 
+func (e AssociateWebACLXAmzTargetEnum) ToPointer() *AssociateWebACLXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateWebACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.AssociateWebACL":
-		*e = AssociateWebACLXAmzTargetEnum(s)
+		*e = AssociateWebACLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateWebACLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateWebACLXAmzTargetEnum: %v", v)
 	}
 }
 

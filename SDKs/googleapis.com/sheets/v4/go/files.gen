@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -275,4 +276,6 @@ pkg/models/shared/updatevaluesbydatafilterresponse.go
 pkg/models/shared/batchupdatevaluesbydatafilterrequest.go
 pkg/models/shared/datafiltervaluerange.go
 pkg/models/shared/clearvaluesresponse.go
+docs/sdk/README.md
+docs/spreadsheets/README.md
 USAGE.md

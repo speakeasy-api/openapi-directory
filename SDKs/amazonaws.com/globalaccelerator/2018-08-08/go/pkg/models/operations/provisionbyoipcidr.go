@@ -16,17 +16,21 @@ const (
 	ProvisionByoipCidrXAmzTargetEnumGlobalAcceleratorV20180706ProvisionByoipCidr ProvisionByoipCidrXAmzTargetEnum = "GlobalAccelerator_V20180706.ProvisionByoipCidr"
 )
 
+func (e ProvisionByoipCidrXAmzTargetEnum) ToPointer() *ProvisionByoipCidrXAmzTargetEnum {
+	return &e
+}
+
 func (e *ProvisionByoipCidrXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.ProvisionByoipCidr":
-		*e = ProvisionByoipCidrXAmzTargetEnum(s)
+		*e = ProvisionByoipCidrXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisionByoipCidrXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisionByoipCidrXAmzTargetEnum: %v", v)
 	}
 }
 

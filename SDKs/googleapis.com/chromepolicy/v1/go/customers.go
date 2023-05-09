@@ -34,7 +34,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // ChromepolicyCustomersPoliciesGroupsBatchDelete - Delete multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx context.Context, request operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest, security operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity) (*operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:batchDelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:batchDelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *customers) ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx context.C
 // ChromepolicyCustomersPoliciesGroupsBatchModify - Modify multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesGroupsBatchModify(ctx context.Context, request operations.ChromepolicyCustomersPoliciesGroupsBatchModifyRequest, security operations.ChromepolicyCustomersPoliciesGroupsBatchModifySecurity) (*operations.ChromepolicyCustomersPoliciesGroupsBatchModifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:batchModify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:batchModify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *customers) ChromepolicyCustomersPoliciesGroupsBatchModify(ctx context.C
 // ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering - Retrieve a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering(ctx context.Context, request operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingRequest, security operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity) (*operations.ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:listGroupPriorityOrdering", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:listGroupPriorityOrdering", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1ListGroupPriorityOrderingRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *customers) ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrdering
 // ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering - Update a group priority ordering for an app. The target app must be supplied in `additionalTargetKeyNames` in the PolicyTargetKey. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrdering(ctx context.Context, request operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingRequest, security operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingSecurity) (*operations.ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:updateGroupPriorityOrdering", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/groups:updateGroupPriorityOrdering", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest", "json")
 	if err != nil {
@@ -254,7 +266,10 @@ func (s *customers) ChromepolicyCustomersPoliciesGroupsUpdateGroupPriorityOrderi
 // ChromepolicyCustomersPoliciesNetworksDefineCertificate - Creates a certificate at a specified OU for a customer.
 func (s *customers) ChromepolicyCustomersPoliciesNetworksDefineCertificate(ctx context.Context, request operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateRequest, security operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateSecurity) (*operations.ChromepolicyCustomersPoliciesNetworksDefineCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:defineCertificate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:defineCertificate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1DefineCertificateRequest", "json")
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *customers) ChromepolicyCustomersPoliciesNetworksDefineCertificate(ctx c
 // ChromepolicyCustomersPoliciesNetworksDefineNetwork - Define a new network.
 func (s *customers) ChromepolicyCustomersPoliciesNetworksDefineNetwork(ctx context.Context, request operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkRequest, security operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkSecurity) (*operations.ChromepolicyCustomersPoliciesNetworksDefineNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:defineNetwork", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:defineNetwork", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1DefineNetworkRequest", "json")
 	if err != nil {
@@ -364,7 +382,10 @@ func (s *customers) ChromepolicyCustomersPoliciesNetworksDefineNetwork(ctx conte
 // ChromepolicyCustomersPoliciesNetworksRemoveCertificate - Remove an existing certificate by guid.
 func (s *customers) ChromepolicyCustomersPoliciesNetworksRemoveCertificate(ctx context.Context, request operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateRequest, security operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateSecurity) (*operations.ChromepolicyCustomersPoliciesNetworksRemoveCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:removeCertificate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:removeCertificate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1RemoveCertificateRequest", "json")
 	if err != nil {
@@ -419,7 +440,10 @@ func (s *customers) ChromepolicyCustomersPoliciesNetworksRemoveCertificate(ctx c
 // ChromepolicyCustomersPoliciesNetworksRemoveNetwork - Remove an existing network by guid.
 func (s *customers) ChromepolicyCustomersPoliciesNetworksRemoveNetwork(ctx context.Context, request operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkRequest, security operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkSecurity) (*operations.ChromepolicyCustomersPoliciesNetworksRemoveNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:removeNetwork", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/networks:removeNetwork", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1RemoveNetworkRequest", "json")
 	if err != nil {
@@ -474,7 +498,10 @@ func (s *customers) ChromepolicyCustomersPoliciesNetworksRemoveNetwork(ctx conte
 // ChromepolicyCustomersPoliciesOrgunitsBatchInherit - Modify multiple policy values that are applied to a specific org unit so that they now inherit the value from a parent (if applicable). All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesOrgunitsBatchInherit(ctx context.Context, request operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritRequest, security operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritSecurity) (*operations.ChromepolicyCustomersPoliciesOrgunitsBatchInheritResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/orgunits:batchInherit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/orgunits:batchInherit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest", "json")
 	if err != nil {
@@ -529,7 +556,10 @@ func (s *customers) ChromepolicyCustomersPoliciesOrgunitsBatchInherit(ctx contex
 // ChromepolicyCustomersPoliciesOrgunitsBatchModify - Modify multiple policy values that are applied to a specific org unit. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
 func (s *customers) ChromepolicyCustomersPoliciesOrgunitsBatchModify(ctx context.Context, request operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyRequest, security operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifySecurity) (*operations.ChromepolicyCustomersPoliciesOrgunitsBatchModifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/orgunits:batchModify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies/orgunits:batchModify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1BatchModifyOrgUnitPoliciesRequest", "json")
 	if err != nil {
@@ -584,7 +614,10 @@ func (s *customers) ChromepolicyCustomersPoliciesOrgunitsBatchModify(ctx context
 // ChromepolicyCustomersPoliciesResolve - Gets the resolved policy values for a list of policies that match a search query.
 func (s *customers) ChromepolicyCustomersPoliciesResolve(ctx context.Context, request operations.ChromepolicyCustomersPoliciesResolveRequest, security operations.ChromepolicyCustomersPoliciesResolveSecurity) (*operations.ChromepolicyCustomersPoliciesResolveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies:resolve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/policies:resolve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleChromePolicyVersionsV1ResolveRequest", "json")
 	if err != nil {
@@ -639,7 +672,10 @@ func (s *customers) ChromepolicyCustomersPoliciesResolve(ctx context.Context, re
 // ChromepolicyCustomersPolicySchemasGet - Get a specific policy schema for a customer by its resource name.
 func (s *customers) ChromepolicyCustomersPolicySchemasGet(ctx context.Context, request operations.ChromepolicyCustomersPolicySchemasGetRequest, security operations.ChromepolicyCustomersPolicySchemasGetSecurity) (*operations.ChromepolicyCustomersPolicySchemasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -687,7 +723,10 @@ func (s *customers) ChromepolicyCustomersPolicySchemasGet(ctx context.Context, r
 // ChromepolicyCustomersPolicySchemasList - Gets a list of policy schemas that match a specified filter value for a given customer.
 func (s *customers) ChromepolicyCustomersPolicySchemasList(ctx context.Context, request operations.ChromepolicyCustomersPolicySchemasListRequest, security operations.ChromepolicyCustomersPolicySchemasListSecurity) (*operations.ChromepolicyCustomersPolicySchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/policySchemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/policySchemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

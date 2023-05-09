@@ -15,20 +15,24 @@ const (
 	ResourceSubTypeEnumDatabaseProcess ResourceSubTypeEnum = "DatabaseProcess"
 )
 
+func (e ResourceSubTypeEnum) ToPointer() *ResourceSubTypeEnum {
+	return &e
+}
+
 func (e *ResourceSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Database":
 		fallthrough
 	case "Process":
 		fallthrough
 	case "DatabaseProcess":
-		*e = ResourceSubTypeEnum(s)
+		*e = ResourceSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceSubTypeEnum: %v", v)
 	}
 }

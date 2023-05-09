@@ -18,12 +18,16 @@ const (
 	GoogleCloudRetailV2ProductAvailabilityEnumBackorder               GoogleCloudRetailV2ProductAvailabilityEnum = "BACKORDER"
 )
 
+func (e GoogleCloudRetailV2ProductAvailabilityEnum) ToPointer() *GoogleCloudRetailV2ProductAvailabilityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2ProductAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABILITY_UNSPECIFIED":
 		fallthrough
 	case "IN_STOCK":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRetailV2ProductAvailabilityEnum) UnmarshalJSON(data []byte) 
 	case "PREORDER":
 		fallthrough
 	case "BACKORDER":
-		*e = GoogleCloudRetailV2ProductAvailabilityEnum(s)
+		*e = GoogleCloudRetailV2ProductAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2ProductAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2ProductAvailabilityEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	GoogleCloudRetailV2ProductTypeEnumCollection      GoogleCloudRetailV2ProductTypeEnum = "COLLECTION"
 )
 
+func (e GoogleCloudRetailV2ProductTypeEnum) ToPointer() *GoogleCloudRetailV2ProductTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2ProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY":
@@ -63,10 +71,10 @@ func (e *GoogleCloudRetailV2ProductTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VARIANT":
 		fallthrough
 	case "COLLECTION":
-		*e = GoogleCloudRetailV2ProductTypeEnum(s)
+		*e = GoogleCloudRetailV2ProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2ProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2ProductTypeEnum: %v", v)
 	}
 }
 

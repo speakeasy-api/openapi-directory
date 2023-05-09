@@ -15,20 +15,24 @@ const (
 	SamlStatusEnumEnumEnabledWithDirectoryLoginFallback SamlStatusEnumEnum = "ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK"
 )
 
+func (e SamlStatusEnumEnum) ToPointer() *SamlStatusEnumEnum {
+	return &e
+}
+
 func (e *SamlStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
 		fallthrough
 	case "ENABLED_WITH_DIRECTORY_LOGIN_FALLBACK":
-		*e = SamlStatusEnumEnum(s)
+		*e = SamlStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SamlStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for SamlStatusEnumEnum: %v", v)
 	}
 }

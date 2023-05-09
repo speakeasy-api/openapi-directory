@@ -30,12 +30,16 @@ const (
 	OperationTypeEnumInternalTransferInDomain  OperationTypeEnum = "INTERNAL_TRANSFER_IN_DOMAIN"
 )
 
+func (e OperationTypeEnum) ToPointer() *OperationTypeEnum {
+	return &e
+}
+
 func (e *OperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTER_DOMAIN":
 		fallthrough
 	case "DELETE_DOMAIN":
@@ -71,9 +75,9 @@ func (e *OperationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_TRANSFER_OUT_DOMAIN":
 		fallthrough
 	case "INTERNAL_TRANSFER_IN_DOMAIN":
-		*e = OperationTypeEnum(s)
+		*e = OperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationTypeEnum: %v", v)
 	}
 }

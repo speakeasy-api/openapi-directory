@@ -16,17 +16,21 @@ const (
 	DeleteContainerXAmzTargetEnumMediaStore20170901DeleteContainer DeleteContainerXAmzTargetEnum = "MediaStore_20170901.DeleteContainer"
 )
 
+func (e DeleteContainerXAmzTargetEnum) ToPointer() *DeleteContainerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteContainerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.DeleteContainer":
-		*e = DeleteContainerXAmzTargetEnum(s)
+		*e = DeleteContainerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteContainerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteContainerXAmzTargetEnum: %v", v)
 	}
 }
 

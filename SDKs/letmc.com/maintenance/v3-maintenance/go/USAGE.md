@@ -2,59 +2,58 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MaintenanceControllerCreateMaintenanceJobFormRequest{
+    ctx := context.Background()
+    res, err := s.MaintenanceController.MaintenanceControllerCreateMaintenanceJobForm(ctx, operations.MaintenanceControllerCreateMaintenanceJobFormRequest{
         MaintenanceIssueModel: shared.MaintenanceIssueModel{
             Documents: []shared.MaintenanceDocumentModel{
                 shared.MaintenanceDocumentModel{
-                    MimeType: "provident",
-                    URL: "distinctio",
+                    MimeType: sdk.String("provident"),
+                    URL: sdk.String("distinctio"),
                 },
                 shared.MaintenanceDocumentModel{
-                    MimeType: "quibusdam",
-                    URL: "unde",
+                    MimeType: sdk.String("quibusdam"),
+                    URL: sdk.String("unde"),
                 },
                 shared.MaintenanceDocumentModel{
-                    MimeType: "nulla",
-                    URL: "corrupti",
+                    MimeType: sdk.String("nulla"),
+                    URL: sdk.String("corrupti"),
                 },
             },
-            ExternalID: "illum",
-            IssueFault: "vel",
-            IssueNotes: "error",
-            IssuePriority: "Medium",
-            IssueTitle: "suscipit",
-            PropertyAddress1: "iure",
-            PropertyAddress2: "magnam",
-            PropertyAddress3: "debitis",
-            PropertyAddress4: "ipsa",
-            PropertyCountry: "delectus",
-            PropertyPostcode: "tempora",
-            ReportedAt: "2022-07-10T15:39:12.517Z",
-            TenantEMailAddress: "minus",
-            TenantForename: "placeat",
-            TenantPhonePrimary: "voluptatum",
-            TenantPhoneSecondary: "iusto",
-            TenantPresenceRequested: false,
-            TenantSurname: "excepturi",
-            TenantTitle: "nisi",
+            ExternalID: sdk.String("illum"),
+            IssueFault: sdk.String("vel"),
+            IssueNotes: sdk.String("error"),
+            IssuePriority: shared.MaintenanceIssueModelIssuePriorityEnumMedium.ToPointer(),
+            IssueTitle: sdk.String("suscipit"),
+            PropertyAddress1: sdk.String("iure"),
+            PropertyAddress2: sdk.String("magnam"),
+            PropertyAddress3: sdk.String("debitis"),
+            PropertyAddress4: sdk.String("ipsa"),
+            PropertyCountry: sdk.String("delectus"),
+            PropertyPostcode: sdk.String("tempora"),
+            ReportedAt: types.MustTimeFromString("2022-07-10T15:39:12.517Z"),
+            TenantEMailAddress: sdk.String("minus"),
+            TenantForename: sdk.String("placeat"),
+            TenantPhonePrimary: sdk.String("voluptatum"),
+            TenantPhoneSecondary: sdk.String("iusto"),
+            TenantPresenceRequested: sdk.Bool(false),
+            TenantSurname: sdk.String("excepturi"),
+            TenantTitle: sdk.String("nisi"),
         },
         BranchID: "recusandae",
         ShortName: "temporibus",
-    }
-
-    ctx := context.Background()
-    res, err := s.MaintenanceController.MaintenanceControllerCreateMaintenanceJobForm(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	MigrateWorkspaceXAmzTargetEnumWorkspacesServiceMigrateWorkspace MigrateWorkspaceXAmzTargetEnum = "WorkspacesService.MigrateWorkspace"
 )
 
+func (e MigrateWorkspaceXAmzTargetEnum) ToPointer() *MigrateWorkspaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *MigrateWorkspaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.MigrateWorkspace":
-		*e = MigrateWorkspaceXAmzTargetEnum(s)
+		*e = MigrateWorkspaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrateWorkspaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrateWorkspaceXAmzTargetEnum: %v", v)
 	}
 }
 

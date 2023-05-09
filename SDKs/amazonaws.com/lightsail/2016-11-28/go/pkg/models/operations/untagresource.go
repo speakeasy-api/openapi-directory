@@ -16,17 +16,21 @@ const (
 	UntagResourceXAmzTargetEnumLightsail20161128UntagResource UntagResourceXAmzTargetEnum = "Lightsail_20161128.UntagResource"
 )
 
+func (e UntagResourceXAmzTargetEnum) ToPointer() *UntagResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UntagResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.UntagResource":
-		*e = UntagResourceXAmzTargetEnum(s)
+		*e = UntagResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UntagResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UntagResourceXAmzTargetEnum: %v", v)
 	}
 }
 

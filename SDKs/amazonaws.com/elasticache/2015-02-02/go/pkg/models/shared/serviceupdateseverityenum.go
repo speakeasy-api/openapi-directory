@@ -16,12 +16,16 @@ const (
 	ServiceUpdateSeverityEnumLow       ServiceUpdateSeverityEnum = "low"
 )
 
+func (e ServiceUpdateSeverityEnum) ToPointer() *ServiceUpdateSeverityEnum {
+	return &e
+}
+
 func (e *ServiceUpdateSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "critical":
 		fallthrough
 	case "important":
@@ -29,9 +33,9 @@ func (e *ServiceUpdateSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "medium":
 		fallthrough
 	case "low":
-		*e = ServiceUpdateSeverityEnum(s)
+		*e = ServiceUpdateSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceUpdateSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceUpdateSeverityEnum: %v", v)
 	}
 }

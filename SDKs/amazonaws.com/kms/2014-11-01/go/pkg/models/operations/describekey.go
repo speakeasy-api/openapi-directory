@@ -16,17 +16,21 @@ const (
 	DescribeKeyXAmzTargetEnumTrentServiceDescribeKey DescribeKeyXAmzTargetEnum = "TrentService.DescribeKey"
 )
 
+func (e DescribeKeyXAmzTargetEnum) ToPointer() *DescribeKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.DescribeKey":
-		*e = DescribeKeyXAmzTargetEnum(s)
+		*e = DescribeKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeKeyXAmzTargetEnum: %v", v)
 	}
 }
 

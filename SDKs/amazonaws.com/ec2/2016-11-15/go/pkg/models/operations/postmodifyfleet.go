@@ -15,17 +15,21 @@ const (
 	POSTModifyFleetActionEnumModifyFleet POSTModifyFleetActionEnum = "ModifyFleet"
 )
 
+func (e POSTModifyFleetActionEnum) ToPointer() *POSTModifyFleetActionEnum {
+	return &e
+}
+
 func (e *POSTModifyFleetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyFleet":
-		*e = POSTModifyFleetActionEnum(s)
+		*e = POSTModifyFleetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyFleetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyFleetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyFleetVersionEnumTwoThousandAndSixteen1115 POSTModifyFleetVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyFleetVersionEnum) ToPointer() *POSTModifyFleetVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyFleetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyFleetVersionEnum(s)
+		*e = POSTModifyFleetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyFleetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyFleetVersionEnum: %v", v)
 	}
 }
 

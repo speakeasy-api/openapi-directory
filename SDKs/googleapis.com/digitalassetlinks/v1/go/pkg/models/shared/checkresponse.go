@@ -23,12 +23,16 @@ const (
 	CheckResponseErrorCodeEnumErrorCodeFetchBudgetExhausted        CheckResponseErrorCodeEnum = "ERROR_CODE_FETCH_BUDGET_EXHAUSTED"
 )
 
+func (e CheckResponseErrorCodeEnum) ToPointer() *CheckResponseErrorCodeEnum {
+	return &e
+}
+
 func (e *CheckResponseErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "ERROR_CODE_INVALID_QUERY":
@@ -50,10 +54,10 @@ func (e *CheckResponseErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR_CODE_SECURE_ASSET_INCLUDES_INSECURE":
 		fallthrough
 	case "ERROR_CODE_FETCH_BUDGET_EXHAUSTED":
-		*e = CheckResponseErrorCodeEnum(s)
+		*e = CheckResponseErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckResponseErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckResponseErrorCodeEnum: %v", v)
 	}
 }
 

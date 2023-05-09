@@ -15,17 +15,21 @@ const (
 	GETDeleteLifecycleHookActionEnumDeleteLifecycleHook GETDeleteLifecycleHookActionEnum = "DeleteLifecycleHook"
 )
 
+func (e GETDeleteLifecycleHookActionEnum) ToPointer() *GETDeleteLifecycleHookActionEnum {
+	return &e
+}
+
 func (e *GETDeleteLifecycleHookActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLifecycleHook":
-		*e = GETDeleteLifecycleHookActionEnum(s)
+		*e = GETDeleteLifecycleHookActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLifecycleHookActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLifecycleHookActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteLifecycleHookVersionEnumTwoThousandAndEleven0101 GETDeleteLifecycleHookVersionEnum = "2011-01-01"
 )
 
+func (e GETDeleteLifecycleHookVersionEnum) ToPointer() *GETDeleteLifecycleHookVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteLifecycleHookVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDeleteLifecycleHookVersionEnum(s)
+		*e = GETDeleteLifecycleHookVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLifecycleHookVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLifecycleHookVersionEnum: %v", v)
 	}
 }
 

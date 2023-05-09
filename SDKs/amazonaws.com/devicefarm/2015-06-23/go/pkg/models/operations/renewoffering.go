@@ -16,17 +16,21 @@ const (
 	RenewOfferingXAmzTargetEnumDeviceFarm20150623RenewOffering RenewOfferingXAmzTargetEnum = "DeviceFarm_20150623.RenewOffering"
 )
 
+func (e RenewOfferingXAmzTargetEnum) ToPointer() *RenewOfferingXAmzTargetEnum {
+	return &e
+}
+
 func (e *RenewOfferingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.RenewOffering":
-		*e = RenewOfferingXAmzTargetEnum(s)
+		*e = RenewOfferingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenewOfferingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RenewOfferingXAmzTargetEnum: %v", v)
 	}
 }
 

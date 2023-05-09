@@ -13,16 +13,20 @@ const (
 	ListLabelingJobsForWorkteamSortByOptionsEnumCreationTime ListLabelingJobsForWorkteamSortByOptionsEnum = "CreationTime"
 )
 
+func (e ListLabelingJobsForWorkteamSortByOptionsEnum) ToPointer() *ListLabelingJobsForWorkteamSortByOptionsEnum {
+	return &e
+}
+
 func (e *ListLabelingJobsForWorkteamSortByOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
-		*e = ListLabelingJobsForWorkteamSortByOptionsEnum(s)
+		*e = ListLabelingJobsForWorkteamSortByOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLabelingJobsForWorkteamSortByOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLabelingJobsForWorkteamSortByOptionsEnum: %v", v)
 	}
 }

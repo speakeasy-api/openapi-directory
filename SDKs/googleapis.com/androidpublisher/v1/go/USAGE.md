@@ -2,32 +2,30 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AndroidpublisherPurchasesCancelRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        Key: "provident",
-        OauthToken: "distinctio",
+    ctx := context.Background()
+    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, operations.AndroidpublisherPurchasesCancelRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("provident"),
+        OauthToken: sdk.String("distinctio"),
         PackageName: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
         SubscriptionID: "nulla",
         Token: "corrupti",
-        UserIP: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, req, operations.AndroidpublisherPurchasesCancelSecurity{
+        UserIP: sdk.String("illum"),
+    }, operations.AndroidpublisherPurchasesCancelSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

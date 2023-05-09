@@ -20,12 +20,16 @@ const (
 	InlinePayloadInfoFormatEnumImportJobFormatManualCsv        InlinePayloadInfoFormatEnum = "IMPORT_JOB_FORMAT_MANUAL_CSV"
 )
 
+func (e InlinePayloadInfoFormatEnum) ToPointer() *InlinePayloadInfoFormatEnum {
+	return &e
+}
+
 func (e *InlinePayloadInfoFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_JOB_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_JOB_FORMAT_CMDB":
@@ -39,10 +43,10 @@ func (e *InlinePayloadInfoFormatEnum) UnmarshalJSON(data []byte) error {
 	case "IMPORT_JOB_FORMAT_EXPORTED_AZURE_CSV":
 		fallthrough
 	case "IMPORT_JOB_FORMAT_MANUAL_CSV":
-		*e = InlinePayloadInfoFormatEnum(s)
+		*e = InlinePayloadInfoFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InlinePayloadInfoFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for InlinePayloadInfoFormatEnum: %v", v)
 	}
 }
 

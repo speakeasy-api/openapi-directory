@@ -16,12 +16,16 @@ const (
 	PutMetricsErrorCodeEnumConflictError       PutMetricsErrorCodeEnum = "CONFLICT_ERROR"
 )
 
+func (e PutMetricsErrorCodeEnum) ToPointer() *PutMetricsErrorCodeEnum {
+	return &e
+}
+
 func (e *PutMetricsErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_LIMIT_EXCEEDED":
 		fallthrough
 	case "INTERNAL_ERROR":
@@ -29,9 +33,9 @@ func (e *PutMetricsErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATION_ERROR":
 		fallthrough
 	case "CONFLICT_ERROR":
-		*e = PutMetricsErrorCodeEnum(s)
+		*e = PutMetricsErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutMetricsErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutMetricsErrorCodeEnum: %v", v)
 	}
 }

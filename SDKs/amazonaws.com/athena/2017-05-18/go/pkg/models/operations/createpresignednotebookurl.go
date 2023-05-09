@@ -16,17 +16,21 @@ const (
 	CreatePresignedNotebookURLXAmzTargetEnumAmazonAthenaCreatePresignedNotebookURL CreatePresignedNotebookURLXAmzTargetEnum = "AmazonAthena.CreatePresignedNotebookUrl"
 )
 
+func (e CreatePresignedNotebookURLXAmzTargetEnum) ToPointer() *CreatePresignedNotebookURLXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePresignedNotebookURLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.CreatePresignedNotebookUrl":
-		*e = CreatePresignedNotebookURLXAmzTargetEnum(s)
+		*e = CreatePresignedNotebookURLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePresignedNotebookURLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePresignedNotebookURLXAmzTargetEnum: %v", v)
 	}
 }
 

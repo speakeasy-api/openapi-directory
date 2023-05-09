@@ -33,12 +33,16 @@ const (
 	StoreReleasesGetLatestDefaultApplicationJSONCodeEnumTooManyRequests     StoreReleasesGetLatestDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoreReleasesGetLatestDefaultApplicationJSONCodeEnum) ToPointer() *StoreReleasesGetLatestDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetLatestDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *StoreReleasesGetLatestDefaultApplicationJSONCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoreReleasesGetLatestDefaultApplicationJSONCodeEnum(s)
+		*e = StoreReleasesGetLatestDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetLatestDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetLatestDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -73,19 +77,23 @@ const (
 	StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnumGoogleplay StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum = "googleplay"
 )
 
+func (e StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum) ToPointer() *StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
-		*e = StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum(s)
+		*e = StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONDistributionStoresTypeEnum: %v", v)
 	}
 }
 
@@ -108,19 +116,23 @@ const (
 	StoreReleasesGetLatest200ApplicationJSONInstallURLEnumStore StoreReleasesGetLatest200ApplicationJSONInstallURLEnum = "store"
 )
 
+func (e StoreReleasesGetLatest200ApplicationJSONInstallURLEnum) ToPointer() *StoreReleasesGetLatest200ApplicationJSONInstallURLEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetLatest200ApplicationJSONInstallURLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
-		*e = StoreReleasesGetLatest200ApplicationJSONInstallURLEnum(s)
+		*e = StoreReleasesGetLatest200ApplicationJSONInstallURLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONInstallURLEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONInstallURLEnum: %v", v)
 	}
 }
 
@@ -135,19 +147,23 @@ const (
 	StoreReleasesGetLatest200ApplicationJSONStatusEnumUnavailable StoreReleasesGetLatest200ApplicationJSONStatusEnum = "unavailable"
 )
 
+func (e StoreReleasesGetLatest200ApplicationJSONStatusEnum) ToPointer() *StoreReleasesGetLatest200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetLatest200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "unavailable":
-		*e = StoreReleasesGetLatest200ApplicationJSONStatusEnum(s)
+		*e = StoreReleasesGetLatest200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetLatest200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

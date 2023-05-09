@@ -20,12 +20,16 @@ const (
 	PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnumInformationsInvoice PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum = "informations-invoice"
 )
 
+func (e PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum) ToPointer() *PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "commercial-invoice":
 		fallthrough
 	case "credit-note":
@@ -39,10 +43,10 @@ func (e *PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum)
 	case "down-payment-invoice":
 		fallthrough
 	case "informations-invoice":
-		*e = PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum(s)
+		*e = PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDInvoicesDocumentIDRequestBodyTypeEnum: %v", v)
 	}
 }
 

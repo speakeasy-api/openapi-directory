@@ -15,17 +15,21 @@ const (
 	POSTStartDBInstanceAutomatedBackupsReplicationActionEnumStartDbInstanceAutomatedBackupsReplication POSTStartDBInstanceAutomatedBackupsReplicationActionEnum = "StartDBInstanceAutomatedBackupsReplication"
 )
 
+func (e POSTStartDBInstanceAutomatedBackupsReplicationActionEnum) ToPointer() *POSTStartDBInstanceAutomatedBackupsReplicationActionEnum {
+	return &e
+}
+
 func (e *POSTStartDBInstanceAutomatedBackupsReplicationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartDBInstanceAutomatedBackupsReplication":
-		*e = POSTStartDBInstanceAutomatedBackupsReplicationActionEnum(s)
+		*e = POSTStartDBInstanceAutomatedBackupsReplicationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBInstanceAutomatedBackupsReplicationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBInstanceAutomatedBackupsReplicationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
+func (e POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum) ToPointer() *POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum {
+	return &e
+}
+
 func (e *POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum(s)
+		*e = POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBInstanceAutomatedBackupsReplicationVersionEnum: %v", v)
 	}
 }
 

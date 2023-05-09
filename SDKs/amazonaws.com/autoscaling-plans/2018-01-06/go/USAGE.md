@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,13 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.CreateScalingPlanRequest{
+    ctx := context.Background()
+    res, err := s.CreateScalingPlan(ctx, operations.CreateScalingPlanRequest{
         CreateScalingPlanRequest: shared.CreateScalingPlanRequest{
             ApplicationSource: shared.ApplicationSource{
-                CloudFormationStackARN: "corrupti",
+                CloudFormationStackARN: sdk.String("corrupti"),
                 TagFilters: []shared.TagFilter{
                     shared.TagFilter{
-                        Key: "distinctio",
+                        Key: sdk.String("distinctio"),
                         Values: []string{
                             "unde",
                             "nulla",
@@ -32,7 +33,7 @@ func main() {
                         },
                     },
                     shared.TagFilter{
-                        Key: "vel",
+                        Key: sdk.String("vel"),
                         Values: []string{
                             "deserunt",
                             "suscipit",
@@ -40,7 +41,7 @@ func main() {
                         },
                     },
                     shared.TagFilter{
-                        Key: "magnam",
+                        Key: sdk.String("magnam"),
                         Values: []string{
                             "ipsa",
                             "delectus",
@@ -55,131 +56,127 @@ func main() {
                     CustomizedLoadMetricSpecification: &shared.CustomizedLoadMetricSpecification{
                         Dimensions: []shared.MetricDimension{
                             shared.MetricDimension{
-                                Name: "placeat",
-                                Value: "voluptatum",
-                            },
-                            shared.MetricDimension{
-                                Name: "iusto",
-                                Value: "excepturi",
-                            },
-                            shared.MetricDimension{
-                                Name: "nisi",
+                                Name: "Ken Kshlerin",
                                 Value: "recusandae",
                             },
                             shared.MetricDimension{
-                                Name: "temporibus",
-                                Value: "ab",
+                                Name: "Miss Raymond Hauck III",
+                                Value: "repellendus",
+                            },
+                            shared.MetricDimension{
+                                Name: "Cedric Connelly",
+                                Value: "maiores",
+                            },
+                            shared.MetricDimension{
+                                Name: "Bernadette Schmidt",
+                                Value: "porro",
                             },
                         },
-                        MetricName: "quis",
-                        Namespace: "veritatis",
-                        Statistic: "SampleCount",
-                        Unit: "perferendis",
+                        MetricName: "dolorum",
+                        Namespace: "dicta",
+                        Statistic: shared.MetricStatisticEnumSampleCount,
+                        Unit: sdk.String("officia"),
                     },
-                    DisableDynamicScaling: false,
-                    MaxCapacity: 368241,
-                    MinCapacity: 832620,
+                    DisableDynamicScaling: sdk.Bool(false),
+                    MaxCapacity: 582020,
+                    MinCapacity: 143353,
                     PredefinedLoadMetricSpecification: &shared.PredefinedLoadMetricSpecification{
-                        PredefinedLoadMetricType: "ALBTargetGroupRequestCount",
-                        ResourceLabel: "quo",
+                        PredefinedLoadMetricType: shared.LoadMetricTypeEnumAsgTotalNetworkOut,
+                        ResourceLabel: sdk.String("hic"),
                     },
-                    PredictiveScalingMaxCapacityBehavior: "SetForecastCapacityToMaxCapacity",
-                    PredictiveScalingMaxCapacityBuffer: 870013,
-                    PredictiveScalingMode: "ForecastOnly",
-                    ResourceID: "maiores",
-                    ScalableDimension: "rds:cluster:ReadReplicaCount",
-                    ScalingPolicyUpdateBehavior: "ReplaceExternalPolicies",
-                    ScheduledActionBufferTime: 800911,
-                    ServiceNamespace: "ec2",
+                    PredictiveScalingMaxCapacityBehavior: shared.PredictiveScalingMaxCapacityBehaviorEnumSetMaxCapacityAboveForecastCapacity.ToPointer(),
+                    PredictiveScalingMaxCapacityBuffer: sdk.Int64(521848),
+                    PredictiveScalingMode: shared.PredictiveScalingModeEnumForecastAndScale.ToPointer(),
+                    ResourceID: "commodi",
+                    ScalableDimension: shared.ScalableDimensionEnumRdsClusterReadReplicaCount,
+                    ScalingPolicyUpdateBehavior: shared.ScalingPolicyUpdateBehaviorEnumKeepExternalPolicies.ToPointer(),
+                    ScheduledActionBufferTime: sdk.Int64(186332),
+                    ServiceNamespace: shared.ServiceNamespaceEnumRds,
                     TargetTrackingConfigurations: []shared.TargetTrackingConfiguration{
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "dolorum",
-                                        Value: "dicta",
+                                        Name: "Mrs. Miriam Collier",
+                                        Value: "sed",
                                     },
                                     shared.MetricDimension{
-                                        Name: "nam",
-                                        Value: "officia",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "occaecati",
-                                        Value: "fugit",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "deleniti",
-                                        Value: "hic",
+                                        Name: "Curtis Morissette",
+                                        Value: "saepe",
                                     },
                                 },
-                                MetricName: "optio",
-                                Namespace: "totam",
-                                Statistic: "Average",
-                                Unit: "commodi",
+                                MetricName: "fuga",
+                                Namespace: "in",
+                                Statistic: shared.MetricStatisticEnumMinimum,
+                                Unit: sdk.String("iste"),
                             },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 473600,
+                            DisableScaleIn: sdk.Bool(false),
+                            EstimatedInstanceWarmup: sdk.Int64(437032),
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "DynamoDBReadCapacityUtilization",
-                                ResourceLabel: "qui",
+                                PredefinedScalingMetricType: shared.ScalingMetricTypeEnumEc2SpotFleetRequestAverageNetworkIn,
+                                ResourceLabel: sdk.String("quidem"),
                             },
-                            ScaleInCooldown: 774234,
-                            ScaleOutCooldown: 736918,
-                            TargetValue: 4561.5,
+                            ScaleInCooldown: sdk.Int64(99280),
+                            ScaleOutCooldown: sdk.Int64(60225),
+                            TargetValue: 9698.1,
                         },
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "excepturi",
-                                        Value: "aspernatur",
+                                        Name: "Cameron Dach",
+                                        Value: "explicabo",
+                                    },
+                                    shared.MetricDimension{
+                                        Name: "Ronnie Mohr",
+                                        Value: "excepturi",
+                                    },
+                                    shared.MetricDimension{
+                                        Name: "Charlene Nicolas",
+                                        Value: "architecto",
                                     },
                                 },
-                                MetricName: "perferendis",
-                                Namespace: "ad",
-                                Statistic: "SampleCount",
-                                Unit: "sed",
+                                MetricName: "mollitia",
+                                Namespace: "dolorem",
+                                Statistic: shared.MetricStatisticEnumSampleCount,
+                                Unit: sdk.String("consequuntur"),
                             },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 612096,
+                            DisableScaleIn: sdk.Bool(false),
+                            EstimatedInstanceWarmup: sdk.Int64(995300),
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "ASGAverageNetworkOut",
-                                ResourceLabel: "natus",
+                                PredefinedScalingMetricType: shared.ScalingMetricTypeEnumRdsReaderAverageCPUUtilization,
+                                ResourceLabel: sdk.String("occaecati"),
                             },
-                            ScaleInCooldown: 386489,
-                            ScaleOutCooldown: 943749,
-                            TargetValue: 9025.99,
+                            ScaleInCooldown: sdk.Int64(253291),
+                            ScaleOutCooldown: sdk.Int64(414369),
+                            TargetValue: 4663.11,
                         },
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "in",
-                                        Value: "corporis",
+                                        Name: "Sabrina Cronin MD",
+                                        Value: "animi",
                                     },
                                     shared.MetricDimension{
-                                        Name: "iste",
-                                        Value: "iure",
-                                    },
-                                    shared.MetricDimension{
-                                        Name: "saepe",
-                                        Value: "quidem",
+                                        Name: "Christina Satterfield",
+                                        Value: "ipsam",
                                     },
                                 },
-                                MetricName: "architecto",
-                                Namespace: "ipsa",
-                                Statistic: "Sum",
-                                Unit: "est",
+                                MetricName: "id",
+                                Namespace: "possimus",
+                                Statistic: shared.MetricStatisticEnumAverage,
+                                Unit: sdk.String("quasi"),
                             },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 653140,
+                            DisableScaleIn: sdk.Bool(false),
+                            EstimatedInstanceWarmup: sdk.Int64(622846),
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "RDSReaderAverageCPUUtilization",
-                                ResourceLabel: "dolores",
+                                PredefinedScalingMetricType: shared.ScalingMetricTypeEnumEc2SpotFleetRequestAverageCPUUtilization,
+                                ResourceLabel: sdk.String("laborum"),
                             },
-                            ScaleInCooldown: 210382,
-                            ScaleOutCooldown: 358152,
-                            TargetValue: 1289.26,
+                            ScaleInCooldown: sdk.Int64(96098),
+                            ScaleOutCooldown: sdk.Int64(971945),
+                            TargetValue: 9764.6,
                         },
                     },
                 },
@@ -187,87 +184,88 @@ func main() {
                     CustomizedLoadMetricSpecification: &shared.CustomizedLoadMetricSpecification{
                         Dimensions: []shared.MetricDimension{
                             shared.MetricDimension{
-                                Name: "enim",
-                                Value: "omnis",
+                                Name: "Miss Irma Wolff",
+                                Value: "cum",
                             },
                             shared.MetricDimension{
-                                Name: "nemo",
-                                Value: "minima",
+                                Name: "Sharon Kiehn",
+                                Value: "dicta",
                             },
                             shared.MetricDimension{
-                                Name: "excepturi",
-                                Value: "accusantium",
+                                Name: "Miss Valerie Kshlerin",
+                                Value: "accusamus",
                             },
                             shared.MetricDimension{
-                                Name: "iure",
-                                Value: "culpa",
+                                Name: "Elvira Bergnaum",
+                                Value: "molestias",
                             },
                         },
-                        MetricName: "doloribus",
-                        Namespace: "sapiente",
-                        Statistic: "Average",
-                        Unit: "mollitia",
+                        MetricName: "excepturi",
+                        Namespace: "pariatur",
+                        Statistic: shared.MetricStatisticEnumMinimum,
+                        Unit: sdk.String("praesentium"),
                     },
-                    DisableDynamicScaling: false,
-                    MaxCapacity: 208876,
-                    MinCapacity: 635059,
+                    DisableDynamicScaling: sdk.Bool(false),
+                    MaxCapacity: 523248,
+                    MinCapacity: 916723,
                     PredefinedLoadMetricSpecification: &shared.PredefinedLoadMetricSpecification{
-                        PredefinedLoadMetricType: "ASGTotalCPUUtilization",
-                        ResourceLabel: "repellat",
+                        PredefinedLoadMetricType: shared.LoadMetricTypeEnumAsgTotalCPUUtilization,
+                        ResourceLabel: sdk.String("repudiandae"),
                     },
-                    PredictiveScalingMaxCapacityBehavior: "SetMaxCapacityToForecastCapacity",
-                    PredictiveScalingMaxCapacityBuffer: 581850,
-                    PredictiveScalingMode: "ForecastAndScale",
-                    ResourceID: "commodi",
-                    ScalableDimension: "rds:cluster:ReadReplicaCount",
-                    ScalingPolicyUpdateBehavior: "KeepExternalPolicies",
-                    ScheduledActionBufferTime: 244425,
-                    ServiceNamespace: "rds",
+                    PredictiveScalingMaxCapacityBehavior: shared.PredictiveScalingMaxCapacityBehaviorEnumSetMaxCapacityToForecastCapacity.ToPointer(),
+                    PredictiveScalingMaxCapacityBuffer: sdk.Int64(83112),
+                    PredictiveScalingMode: shared.PredictiveScalingModeEnumForecastOnly.ToPointer(),
+                    ResourceID: "incidunt",
+                    ScalableDimension: shared.ScalableDimensionEnumEc2SpotFleetRequestTargetCapacity,
+                    ScalingPolicyUpdateBehavior: shared.ScalingPolicyUpdateBehaviorEnumKeepExternalPolicies.ToPointer(),
+                    ScheduledActionBufferTime: sdk.Int64(667411),
+                    ServiceNamespace: shared.ServiceNamespaceEnumDynamodb,
                     TargetTrackingConfigurations: []shared.TargetTrackingConfiguration{
                         shared.TargetTrackingConfiguration{
                             CustomizedScalingMetricSpecification: &shared.CustomizedScalingMetricSpecification{
                                 Dimensions: []shared.MetricDimension{
                                     shared.MetricDimension{
-                                        Name: "vitae",
-                                        Value: "laborum",
+                                        Name: "Marty Green",
+                                        Value: "aliquid",
                                     },
                                     shared.MetricDimension{
-                                        Name: "animi",
-                                        Value: "enim",
+                                        Name: "Isaac Aufderhar",
+                                        Value: "ipsam",
+                                    },
+                                    shared.MetricDimension{
+                                        Name: "Denise Pagac",
+                                        Value: "facilis",
                                     },
                                 },
-                                MetricName: "odit",
-                                Namespace: "quo",
-                                Statistic: "Average",
-                                Unit: "tenetur",
+                                MetricName: "tempore",
+                                Namespace: "labore",
+                                Statistic: shared.MetricStatisticEnumSum,
+                                Unit: sdk.String("eum"),
                             },
-                            DisableScaleIn: false,
-                            EstimatedInstanceWarmup: 368725,
+                            DisableScaleIn: sdk.Bool(false),
+                            EstimatedInstanceWarmup: sdk.Int64(248753),
                             PredefinedScalingMetricSpecification: &shared.PredefinedScalingMetricSpecification{
-                                PredefinedScalingMetricType: "RDSReaderAverageCPUUtilization",
-                                ResourceLabel: "possimus",
+                                PredefinedScalingMetricType: shared.ScalingMetricTypeEnumRdsReaderAverageDatabaseConnections,
+                                ResourceLabel: sdk.String("sint"),
                             },
-                            ScaleInCooldown: 13571,
-                            ScaleOutCooldown: 97101,
-                            TargetValue: 6228.46,
+                            ScaleInCooldown: sdk.Int64(396098),
+                            ScaleOutCooldown: sdk.Int64(592042),
+                            TargetValue: 8960.39,
                         },
                     },
                 },
             },
-            ScalingPlanName: "temporibus",
+            ScalingPlanName: "sint",
         },
-        XAmzAlgorithm: "laborum",
-        XAmzContentSha256: "quasi",
-        XAmzCredential: "reiciendis",
-        XAmzDate: "voluptatibus",
-        XAmzSecurityToken: "vero",
-        XAmzSignature: "nihil",
-        XAmzSignedHeaders: "praesentium",
-        XAmzTarget: "AnyScaleScalingPlannerFrontendService.CreateScalingPlan",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateScalingPlan(ctx, req)
+        XAmzAlgorithm: sdk.String("officia"),
+        XAmzContentSha256: sdk.String("dolor"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("a"),
+        XAmzSecurityToken: sdk.String("dolorum"),
+        XAmzSignature: sdk.String("in"),
+        XAmzSignedHeaders: sdk.String("in"),
+        XAmzTarget: operations.CreateScalingPlanXAmzTargetEnumAnyScaleScalingPlannerFrontendServiceCreateScalingPlan,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -7,6 +7,37 @@ import (
 	"fmt"
 )
 
+// JobModeEnum - The processing mode of the job. The default is `PROCESSING_MODE_INTERACTIVE`.
+type JobModeEnum string
+
+const (
+	JobModeEnumProcessingModeUnspecified JobModeEnum = "PROCESSING_MODE_UNSPECIFIED"
+	JobModeEnumProcessingModeInteractive JobModeEnum = "PROCESSING_MODE_INTERACTIVE"
+	JobModeEnumProcessingModeBatch       JobModeEnum = "PROCESSING_MODE_BATCH"
+)
+
+func (e JobModeEnum) ToPointer() *JobModeEnum {
+	return &e
+}
+
+func (e *JobModeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "PROCESSING_MODE_UNSPECIFIED":
+		fallthrough
+	case "PROCESSING_MODE_INTERACTIVE":
+		fallthrough
+	case "PROCESSING_MODE_BATCH":
+		*e = JobModeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for JobModeEnum: %v", v)
+	}
+}
+
 // JobStateEnum - Output only. The current state of the job.
 type JobStateEnum string
 
@@ -18,12 +49,16 @@ const (
 	JobStateEnumFailed                     JobStateEnum = "FAILED"
 )
 
+func (e JobStateEnum) ToPointer() *JobStateEnum {
+	return &e
+}
+
 func (e *JobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -33,10 +68,10 @@ func (e *JobStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = JobStateEnum(s)
+		*e = JobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for JobStateEnum: %v", v)
 	}
 }
 
@@ -54,6 +89,8 @@ type Job struct {
 	InputURI *string `json:"inputUri,omitempty"`
 	// The labels associated with this job. You can use these to organize and group your jobs.
 	Labels map[string]string `json:"labels,omitempty"`
+	// The processing mode of the job. The default is `PROCESSING_MODE_INTERACTIVE`.
+	Mode *JobModeEnum `json:"mode,omitempty"`
 	// The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
 	Name *string `json:"name,omitempty"`
 	// Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
@@ -78,6 +115,8 @@ type JobInput struct {
 	InputURI *string `json:"inputUri,omitempty"`
 	// The labels associated with this job. You can use these to organize and group your jobs.
 	Labels map[string]string `json:"labels,omitempty"`
+	// The processing mode of the job. The default is `PROCESSING_MODE_INTERACTIVE`.
+	Mode *JobModeEnum `json:"mode,omitempty"`
 	// The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
 	Name *string `json:"name,omitempty"`
 	// Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).

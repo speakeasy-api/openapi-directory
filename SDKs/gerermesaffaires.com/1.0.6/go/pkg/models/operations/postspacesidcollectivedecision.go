@@ -30,12 +30,16 @@ const (
 	PostSpacesIDCollectiveDecisionRequestBodyEventEnumPartnersMeeting     PostSpacesIDCollectiveDecisionRequestBodyEventEnum = "PartnersMeeting"
 )
 
+func (e PostSpacesIDCollectiveDecisionRequestBodyEventEnum) ToPointer() *PostSpacesIDCollectiveDecisionRequestBodyEventEnum {
+	return &e
+}
+
 func (e *PostSpacesIDCollectiveDecisionRequestBodyEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EGM":
 		fallthrough
 	case "CGM":
@@ -59,10 +63,10 @@ func (e *PostSpacesIDCollectiveDecisionRequestBodyEventEnum) UnmarshalJSON(data 
 	case "Board":
 		fallthrough
 	case "PartnersMeeting":
-		*e = PostSpacesIDCollectiveDecisionRequestBodyEventEnum(s)
+		*e = PostSpacesIDCollectiveDecisionRequestBodyEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesIDCollectiveDecisionRequestBodyEventEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesIDCollectiveDecisionRequestBodyEventEnum: %v", v)
 	}
 }
 
@@ -74,21 +78,25 @@ const (
 	PostSpacesIDCollectiveDecisionRequestBodyLevelEnumPublic       PostSpacesIDCollectiveDecisionRequestBodyLevelEnum = "public"
 )
 
+func (e PostSpacesIDCollectiveDecisionRequestBodyLevelEnum) ToPointer() *PostSpacesIDCollectiveDecisionRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesIDCollectiveDecisionRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PostSpacesIDCollectiveDecisionRequestBodyLevelEnum(s)
+		*e = PostSpacesIDCollectiveDecisionRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesIDCollectiveDecisionRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesIDCollectiveDecisionRequestBodyLevelEnum: %v", v)
 	}
 }
 

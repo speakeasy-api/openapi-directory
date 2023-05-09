@@ -13,23 +13,27 @@ type ReverseASandboxWireTransferRequest struct {
 	WireTransferID string `pathParam:"style=simple,explode=false,name=wire_transfer_id"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum = "429"
+	ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnumRateLimitedError ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON13 struct {
 	Type       ReverseASandboxWireTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum = "403"
+	ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON12 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum = "404"
+	ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON11 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnumFourHundred ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum = "400"
+	ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnumFourHundred ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnumMalformedRequestError ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON10 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnumFourHundred ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum = "400"
+	ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnumFourHundred ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnumInvalidParametersError ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ReverseASandboxWireTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                     `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                     `json:"errors"`
 	Status ReverseASandboxWireTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                       `json:"title"`
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum = "409"
+	ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnumInvalidOperationError ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON8 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum = "401"
+	ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON7 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnumFiveHundred ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum = "500"
+	ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnumFiveHundred ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnumInternalServerError ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON6 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum = "403"
+	ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON5 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum = "422"
+	ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON4 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum = "409"
+	ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON3 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum = "403"
+	ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type ReverseASandboxWireTransferDefaultApplicationJSON2 struct {
 	Type   ReverseASandboxWireTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum string
+type ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum = "404"
+	ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum) ToPointer() *ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReverseASandboxWireTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

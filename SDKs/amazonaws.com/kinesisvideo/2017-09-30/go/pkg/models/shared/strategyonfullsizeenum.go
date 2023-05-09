@@ -14,18 +14,22 @@ const (
 	StrategyOnFullSizeEnumDenyNewMedia      StrategyOnFullSizeEnum = "DENY_NEW_MEDIA"
 )
 
+func (e StrategyOnFullSizeEnum) ToPointer() *StrategyOnFullSizeEnum {
+	return &e
+}
+
 func (e *StrategyOnFullSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE_OLDEST_MEDIA":
 		fallthrough
 	case "DENY_NEW_MEDIA":
-		*e = StrategyOnFullSizeEnum(s)
+		*e = StrategyOnFullSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StrategyOnFullSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for StrategyOnFullSizeEnum: %v", v)
 	}
 }

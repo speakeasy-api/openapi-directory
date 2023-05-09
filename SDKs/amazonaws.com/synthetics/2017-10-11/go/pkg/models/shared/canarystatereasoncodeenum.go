@@ -24,12 +24,16 @@ const (
 	CanaryStateReasonCodeEnumSyncDeleteInProgress CanaryStateReasonCodeEnum = "SYNC_DELETE_IN_PROGRESS"
 )
 
+func (e CanaryStateReasonCodeEnum) ToPointer() *CanaryStateReasonCodeEnum {
+	return &e
+}
+
 func (e *CanaryStateReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_PERMISSIONS":
 		fallthrough
 	case "CREATE_PENDING":
@@ -53,9 +57,9 @@ func (e *CanaryStateReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DELETE_FAILED":
 		fallthrough
 	case "SYNC_DELETE_IN_PROGRESS":
-		*e = CanaryStateReasonCodeEnum(s)
+		*e = CanaryStateReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CanaryStateReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CanaryStateReasonCodeEnum: %v", v)
 	}
 }

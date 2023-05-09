@@ -16,17 +16,21 @@ const (
 	CreateCaseXAmzTargetEnumAwsSupport20130415CreateCase CreateCaseXAmzTargetEnum = "AWSSupport_20130415.CreateCase"
 )
 
+func (e CreateCaseXAmzTargetEnum) ToPointer() *CreateCaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.CreateCase":
-		*e = CreateCaseXAmzTargetEnum(s)
+		*e = CreateCaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCaseXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	PasswordErrorCodeEnumPwNotUnique    PasswordErrorCodeEnum = "PW_NOT_UNIQUE"
 )
 
+func (e PasswordErrorCodeEnum) ToPointer() *PasswordErrorCodeEnum {
+	return &e
+}
+
 func (e *PasswordErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PW_BLACK_LIST":
 		fallthrough
 	case "PW_TOO_SHORT":
@@ -39,10 +43,10 @@ func (e *PasswordErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "PW_RECENTLY_USED":
 		fallthrough
 	case "PW_NOT_UNIQUE":
-		*e = PasswordErrorCodeEnum(s)
+		*e = PasswordErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordErrorCodeEnum: %v", v)
 	}
 }
 

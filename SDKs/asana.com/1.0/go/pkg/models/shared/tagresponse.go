@@ -32,12 +32,16 @@ const (
 	TagResponseColorEnumLightWarmGray TagResponseColorEnum = "light-warm-gray"
 )
 
+func (e TagResponseColorEnum) ToPointer() *TagResponseColorEnum {
+	return &e
+}
+
 func (e *TagResponseColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dark-pink":
 		fallthrough
 	case "dark-green":
@@ -73,10 +77,10 @@ func (e *TagResponseColorEnum) UnmarshalJSON(data []byte) error {
 	case "light-purple":
 		fallthrough
 	case "light-warm-gray":
-		*e = TagResponseColorEnum(s)
+		*e = TagResponseColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagResponseColorEnum: %s", s)
+		return fmt.Errorf("invalid value for TagResponseColorEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteDBParameterGroupActionEnumDeleteDbParameterGroup GETDeleteDBParameterGroupActionEnum = "DeleteDBParameterGroup"
 )
 
+func (e GETDeleteDBParameterGroupActionEnum) ToPointer() *GETDeleteDBParameterGroupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDBParameterGroup":
-		*e = GETDeleteDBParameterGroupActionEnum(s)
+		*e = GETDeleteDBParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteDBParameterGroupVersionEnumTwoThousandAndThirteen0110 GETDeleteDBParameterGroupVersionEnum = "2013-01-10"
 )
 
+func (e GETDeleteDBParameterGroupVersionEnum) ToPointer() *GETDeleteDBParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETDeleteDBParameterGroupVersionEnum(s)
+		*e = GETDeleteDBParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBParameterGroupVersionEnum: %v", v)
 	}
 }
 

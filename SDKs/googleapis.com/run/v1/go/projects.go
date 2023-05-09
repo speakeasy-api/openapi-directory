@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RunProjectsLocationsAuthorizeddomainsList - List authorized domains.
 func (s *projects) RunProjectsLocationsAuthorizeddomainsList(ctx context.Context, request operations.RunProjectsLocationsAuthorizeddomainsListRequest, security operations.RunProjectsLocationsAuthorizeddomainsListSecurity) (*operations.RunProjectsLocationsAuthorizeddomainsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizeddomains", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizeddomains", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) RunProjectsLocationsAuthorizeddomainsList(ctx context.Context
 // RunProjectsLocationsConfigurationsList - List configurations.
 func (s *projects) RunProjectsLocationsConfigurationsList(ctx context.Context, request operations.RunProjectsLocationsConfigurationsListRequest, security operations.RunProjectsLocationsConfigurationsListSecurity) (*operations.RunProjectsLocationsConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/configurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) RunProjectsLocationsConfigurationsList(ctx context.Context, r
 // RunProjectsLocationsDomainmappingsCreate - Create a new domain mapping.
 func (s *projects) RunProjectsLocationsDomainmappingsCreate(ctx context.Context, request operations.RunProjectsLocationsDomainmappingsCreateRequest, security operations.RunProjectsLocationsDomainmappingsCreateSecurity) (*operations.RunProjectsLocationsDomainmappingsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/domainmappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/domainmappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DomainMapping", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) RunProjectsLocationsDomainmappingsCreate(ctx context.Context,
 // RunProjectsLocationsDomainmappingsList - List all domain mappings.
 func (s *projects) RunProjectsLocationsDomainmappingsList(ctx context.Context, request operations.RunProjectsLocationsDomainmappingsListRequest, security operations.RunProjectsLocationsDomainmappingsListSecurity) (*operations.RunProjectsLocationsDomainmappingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/domainmappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/domainmappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) RunProjectsLocationsDomainmappingsList(ctx context.Context, r
 // RunProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) RunProjectsLocationsList(ctx context.Context, request operations.RunProjectsLocationsListRequest, security operations.RunProjectsLocationsListSecurity) (*operations.RunProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) RunProjectsLocationsList(ctx context.Context, request operati
 // RunProjectsLocationsRevisionsList - List revisions.
 func (s *projects) RunProjectsLocationsRevisionsList(ctx context.Context, request operations.RunProjectsLocationsRevisionsListRequest, security operations.RunProjectsLocationsRevisionsListSecurity) (*operations.RunProjectsLocationsRevisionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/revisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/revisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *projects) RunProjectsLocationsRevisionsList(ctx context.Context, reques
 // RunProjectsLocationsRoutesList - List routes.
 func (s *projects) RunProjectsLocationsRoutesList(ctx context.Context, request operations.RunProjectsLocationsRoutesListRequest, security operations.RunProjectsLocationsRoutesListSecurity) (*operations.RunProjectsLocationsRoutesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/routes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +398,10 @@ func (s *projects) RunProjectsLocationsRoutesList(ctx context.Context, request o
 // RunProjectsLocationsServicesCreate - Creates a new Service. Service creation will trigger a new deployment. Use GetService, and check service.status to determine if the Service is ready.
 func (s *projects) RunProjectsLocationsServicesCreate(ctx context.Context, request operations.RunProjectsLocationsServicesCreateRequest, security operations.RunProjectsLocationsServicesCreateSecurity) (*operations.RunProjectsLocationsServicesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
@@ -432,7 +456,10 @@ func (s *projects) RunProjectsLocationsServicesCreate(ctx context.Context, reque
 // RunProjectsLocationsServicesDelete - Deletes the provided service. This will cause the Service to stop serving traffic and will delete all associated Revisions.
 func (s *projects) RunProjectsLocationsServicesDelete(ctx context.Context, request operations.RunProjectsLocationsServicesDeleteRequest, security operations.RunProjectsLocationsServicesDeleteSecurity) (*operations.RunProjectsLocationsServicesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -480,7 +507,10 @@ func (s *projects) RunProjectsLocationsServicesDelete(ctx context.Context, reque
 // RunProjectsLocationsServicesGet - Gets information about a service.
 func (s *projects) RunProjectsLocationsServicesGet(ctx context.Context, request operations.RunProjectsLocationsServicesGetRequest, security operations.RunProjectsLocationsServicesGetSecurity) (*operations.RunProjectsLocationsServicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -528,7 +558,10 @@ func (s *projects) RunProjectsLocationsServicesGet(ctx context.Context, request 
 // RunProjectsLocationsServicesGetIamPolicy - Gets the IAM Access Control policy currently in effect for the given Cloud Run service. This result does not include any inherited policies.
 func (s *projects) RunProjectsLocationsServicesGetIamPolicy(ctx context.Context, request operations.RunProjectsLocationsServicesGetIamPolicyRequest, security operations.RunProjectsLocationsServicesGetIamPolicySecurity) (*operations.RunProjectsLocationsServicesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -576,7 +609,10 @@ func (s *projects) RunProjectsLocationsServicesGetIamPolicy(ctx context.Context,
 // RunProjectsLocationsServicesList - Lists services for the given project and region.
 func (s *projects) RunProjectsLocationsServicesList(ctx context.Context, request operations.RunProjectsLocationsServicesListRequest, security operations.RunProjectsLocationsServicesListSecurity) (*operations.RunProjectsLocationsServicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/services", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -624,7 +660,10 @@ func (s *projects) RunProjectsLocationsServicesList(ctx context.Context, request
 // RunProjectsLocationsServicesReplaceService - Replaces a service. Only the spec and metadata labels and annotations are modifiable. After the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May provide metadata.resourceVersion to enforce update from last read for optimistic concurrency control.
 func (s *projects) RunProjectsLocationsServicesReplaceService(ctx context.Context, request operations.RunProjectsLocationsServicesReplaceServiceRequest, security operations.RunProjectsLocationsServicesReplaceServiceSecurity) (*operations.RunProjectsLocationsServicesReplaceServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceInput", "json")
 	if err != nil {
@@ -679,7 +718,10 @@ func (s *projects) RunProjectsLocationsServicesReplaceService(ctx context.Contex
 // RunProjectsLocationsServicesSetIamPolicy - Sets the IAM Access control policy for the specified Service. Overwrites any existing policy.
 func (s *projects) RunProjectsLocationsServicesSetIamPolicy(ctx context.Context, request operations.RunProjectsLocationsServicesSetIamPolicyRequest, security operations.RunProjectsLocationsServicesSetIamPolicySecurity) (*operations.RunProjectsLocationsServicesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -734,7 +776,10 @@ func (s *projects) RunProjectsLocationsServicesSetIamPolicy(ctx context.Context,
 // RunProjectsLocationsServicesTestIamPermissions - Returns permissions that a caller has on the specified Project. There are no permissions required for making this API call.
 func (s *projects) RunProjectsLocationsServicesTestIamPermissions(ctx context.Context, request operations.RunProjectsLocationsServicesTestIamPermissionsRequest, security operations.RunProjectsLocationsServicesTestIamPermissionsSecurity) (*operations.RunProjectsLocationsServicesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

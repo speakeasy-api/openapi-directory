@@ -35,7 +35,10 @@ func newPlatform(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Return the content of the selected platform.
 func (s *platform) GetPlatform(ctx context.Context, request operations.GetPlatformRequest, security operations.GetPlatformSecurity) (*operations.GetPlatformResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *platform) GetPlatform(ctx context.Context, request operations.GetPlatfo
 // Return a list of regions for a platform.
 func (s *platform) ListPlatformRegions(ctx context.Context, request operations.ListPlatformRegionsRequest, security operations.ListPlatformRegionsSecurity) (*operations.ListPlatformRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}/region", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/platform/{platformId}/region", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -13,16 +13,20 @@ const (
 	StreamingImageEncryptionConfigurationKeyTypeEnumCustomerManagedKey StreamingImageEncryptionConfigurationKeyTypeEnum = "CUSTOMER_MANAGED_KEY"
 )
 
+func (e StreamingImageEncryptionConfigurationKeyTypeEnum) ToPointer() *StreamingImageEncryptionConfigurationKeyTypeEnum {
+	return &e
+}
+
 func (e *StreamingImageEncryptionConfigurationKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_MANAGED_KEY":
-		*e = StreamingImageEncryptionConfigurationKeyTypeEnum(s)
+		*e = StreamingImageEncryptionConfigurationKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingImageEncryptionConfigurationKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingImageEncryptionConfigurationKeyTypeEnum: %v", v)
 	}
 }

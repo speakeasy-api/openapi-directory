@@ -16,17 +16,21 @@ const (
 	StartFlywheelIterationXAmzTargetEnumComprehend20171127StartFlywheelIteration StartFlywheelIterationXAmzTargetEnum = "Comprehend_20171127.StartFlywheelIteration"
 )
 
+func (e StartFlywheelIterationXAmzTargetEnum) ToPointer() *StartFlywheelIterationXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartFlywheelIterationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartFlywheelIteration":
-		*e = StartFlywheelIterationXAmzTargetEnum(s)
+		*e = StartFlywheelIterationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartFlywheelIterationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartFlywheelIterationXAmzTargetEnum: %v", v)
 	}
 }
 

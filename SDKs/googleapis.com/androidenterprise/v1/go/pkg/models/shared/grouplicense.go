@@ -15,19 +15,23 @@ const (
 	GroupLicenseAcquisitionKindEnumBulkPurchase GroupLicenseAcquisitionKindEnum = "bulkPurchase"
 )
 
+func (e GroupLicenseAcquisitionKindEnum) ToPointer() *GroupLicenseAcquisitionKindEnum {
+	return &e
+}
+
 func (e *GroupLicenseAcquisitionKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "free":
 		fallthrough
 	case "bulkPurchase":
-		*e = GroupLicenseAcquisitionKindEnum(s)
+		*e = GroupLicenseAcquisitionKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupLicenseAcquisitionKindEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupLicenseAcquisitionKindEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	GroupLicenseApprovalEnumUnapproved GroupLicenseApprovalEnum = "unapproved"
 )
 
+func (e GroupLicenseApprovalEnum) ToPointer() *GroupLicenseApprovalEnum {
+	return &e
+}
+
 func (e *GroupLicenseApprovalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "unapproved":
-		*e = GroupLicenseApprovalEnum(s)
+		*e = GroupLicenseApprovalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupLicenseApprovalEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupLicenseApprovalEnum: %v", v)
 	}
 }
 
@@ -64,21 +72,25 @@ const (
 	GroupLicensePermissionsEnumAllCurrentAndFutureApproved GroupLicensePermissionsEnum = "allCurrentAndFutureApproved"
 )
 
+func (e GroupLicensePermissionsEnum) ToPointer() *GroupLicensePermissionsEnum {
+	return &e
+}
+
 func (e *GroupLicensePermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "currentApproved":
 		fallthrough
 	case "needsReapproval":
 		fallthrough
 	case "allCurrentAndFutureApproved":
-		*e = GroupLicensePermissionsEnum(s)
+		*e = GroupLicensePermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupLicensePermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupLicensePermissionsEnum: %v", v)
 	}
 }
 

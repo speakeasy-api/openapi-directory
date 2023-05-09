@@ -15,19 +15,23 @@ const (
 	RestoreTypeEnumUntrash         RestoreTypeEnum = "UNTRASH"
 )
 
+func (e RestoreTypeEnum) ToPointer() *RestoreTypeEnum {
+	return &e
+}
+
 func (e *RestoreTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "UNTRASH":
-		*e = RestoreTypeEnum(s)
+		*e = RestoreTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreTypeEnum: %v", v)
 	}
 }
 

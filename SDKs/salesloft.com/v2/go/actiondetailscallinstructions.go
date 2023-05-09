@@ -87,7 +87,10 @@ func (s *actionDetailsCallInstructions) GetV2ActionDetailsCallInstructionsJSON(c
 // Fetches a call instruction, by ID only.
 func (s *actionDetailsCallInstructions) GetV2ActionDetailsCallInstructionsIDJSON(ctx context.Context, request operations.GetV2ActionDetailsCallInstructionsIDJSONRequest) (*operations.GetV2ActionDetailsCallInstructionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/action_details/call_instructions/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/action_details/call_instructions/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

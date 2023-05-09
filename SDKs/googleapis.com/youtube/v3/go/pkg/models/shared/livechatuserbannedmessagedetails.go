@@ -15,19 +15,23 @@ const (
 	LiveChatUserBannedMessageDetailsBanTypeEnumTemporary LiveChatUserBannedMessageDetailsBanTypeEnum = "temporary"
 )
 
+func (e LiveChatUserBannedMessageDetailsBanTypeEnum) ToPointer() *LiveChatUserBannedMessageDetailsBanTypeEnum {
+	return &e
+}
+
 func (e *LiveChatUserBannedMessageDetailsBanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "permanent":
 		fallthrough
 	case "temporary":
-		*e = LiveChatUserBannedMessageDetailsBanTypeEnum(s)
+		*e = LiveChatUserBannedMessageDetailsBanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveChatUserBannedMessageDetailsBanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveChatUserBannedMessageDetailsBanTypeEnum: %v", v)
 	}
 }
 

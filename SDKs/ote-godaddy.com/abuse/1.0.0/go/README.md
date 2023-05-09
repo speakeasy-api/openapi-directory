@@ -13,29 +13,26 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/abuse/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AbuseTicketCreate{
-        Info: "corrupti",
-        InfoURL: "provident",
-        Intentional: false,
-        Proxy: "distinctio",
-        Source: "quibusdam",
-        Target: "unde",
-        Type: "PHISHING",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.CreateTicket(ctx, req)
+    res, err := s.V1.CreateTicket(ctx, shared.AbuseTicketCreate{
+        Info: sdk.String("corrupti"),
+        InfoURL: sdk.String("provident"),
+        Intentional: sdk.Bool(false),
+        Proxy: sdk.String("distinctio"),
+        Source: sdk.String("quibusdam"),
+        Target: sdk.String("unde"),
+        Type: shared.AbuseTicketCreateTypeEnumPhishing.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,11 +48,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `CreateTicket` - Create a new abuse ticket
-* `GetTicketInfo` - Return the abuse ticket data for a given ticket id
-* `GetTickets` - List all abuse tickets ids that match user provided filters
+* [CreateTicket](docs/v1/README.md#createticket) - Create a new abuse ticket
+* [GetTicketInfo](docs/v1/README.md#getticketinfo) - Return the abuse ticket data for a given ticket id
+* [GetTickets](docs/v1/README.md#gettickets) - List all abuse tickets ids that match user provided filters
 <!-- End SDK Available Operations -->
 
 ### Maturity

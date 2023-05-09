@@ -32,12 +32,16 @@ const (
 	GetCertificatesIDActionsSortParameterSortEnumFinishedDesc GetCertificatesIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetCertificatesIDActionsSortParameterSortEnum) ToPointer() *GetCertificatesIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetCertificatesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byt
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetCertificatesIDActionsSortParameterSortEnum(s)
+		*e = GetCertificatesIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetCertificatesIDActionsStatusParameterStatusEnumError   GetCertificatesIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetCertificatesIDActionsStatusParameterStatusEnum) ToPointer() *GetCertificatesIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetCertificatesIDActionsStatusParameterStatusEnum(s)
+		*e = GetCertificatesIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetCertificatesIDActionsActionsResponseActionStatusEnumError   GetCertificatesIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetCertificatesIDActionsActionsResponseActionStatusEnum) ToPointer() *GetCertificatesIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetCertificatesIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetCertificatesIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetCertificatesIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCertificatesIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCertificatesIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

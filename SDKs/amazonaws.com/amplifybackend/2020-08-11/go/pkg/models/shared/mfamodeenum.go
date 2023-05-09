@@ -15,20 +15,24 @@ const (
 	MFAModeEnumOptional MFAModeEnum = "OPTIONAL"
 )
 
+func (e MFAModeEnum) ToPointer() *MFAModeEnum {
+	return &e
+}
+
 func (e *MFAModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON":
 		fallthrough
 	case "OFF":
 		fallthrough
 	case "OPTIONAL":
-		*e = MFAModeEnum(s)
+		*e = MFAModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MFAModeEnum: %s", s)
+		return fmt.Errorf("invalid value for MFAModeEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newCustomerFriends(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetFriendInfo - Get friend information
 func (s *customerFriends) GetFriendInfo(ctx context.Context, request operations.GetFriendInfoRequest) (*operations.GetFriendInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/friends/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/friends/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

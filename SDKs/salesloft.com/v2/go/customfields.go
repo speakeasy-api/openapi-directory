@@ -37,7 +37,10 @@ func newCustomFields(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes a custom field.
 func (s *customFields) DeleteV2CustomFieldsIDJSON(ctx context.Context, request operations.DeleteV2CustomFieldsIDJSONRequest) (*operations.DeleteV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *customFields) GetV2CustomFieldsJSON(ctx context.Context, request operat
 // Fetches a custom field, by ID only.
 func (s *customFields) GetV2CustomFieldsIDJSON(ctx context.Context, request operations.GetV2CustomFieldsIDJSONRequest) (*operations.GetV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +229,10 @@ func (s *customFields) PostV2CustomFieldsJSON(ctx context.Context, request opera
 // Update a custom field.
 func (s *customFields) PutV2CustomFieldsIDJSON(ctx context.Context, request operations.PutV2CustomFieldsIDJSONRequest) (*operations.PutV2CustomFieldsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/custom_fields/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

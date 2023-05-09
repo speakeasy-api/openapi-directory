@@ -15,17 +15,21 @@ const (
 	POSTExecuteChangeSetActionEnumExecuteChangeSet POSTExecuteChangeSetActionEnum = "ExecuteChangeSet"
 )
 
+func (e POSTExecuteChangeSetActionEnum) ToPointer() *POSTExecuteChangeSetActionEnum {
+	return &e
+}
+
 func (e *POSTExecuteChangeSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExecuteChangeSet":
-		*e = POSTExecuteChangeSetActionEnum(s)
+		*e = POSTExecuteChangeSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExecuteChangeSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExecuteChangeSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTExecuteChangeSetVersionEnumTwoThousandAndTen0515 POSTExecuteChangeSetVersionEnum = "2010-05-15"
 )
 
+func (e POSTExecuteChangeSetVersionEnum) ToPointer() *POSTExecuteChangeSetVersionEnum {
+	return &e
+}
+
 func (e *POSTExecuteChangeSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTExecuteChangeSetVersionEnum(s)
+		*e = POSTExecuteChangeSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExecuteChangeSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExecuteChangeSetVersionEnum: %v", v)
 	}
 }
 

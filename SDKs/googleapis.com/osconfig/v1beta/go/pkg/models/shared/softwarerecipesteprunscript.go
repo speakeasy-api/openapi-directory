@@ -16,21 +16,25 @@ const (
 	SoftwareRecipeStepRunScriptInterpreterEnumPowershell             SoftwareRecipeStepRunScriptInterpreterEnum = "POWERSHELL"
 )
 
+func (e SoftwareRecipeStepRunScriptInterpreterEnum) ToPointer() *SoftwareRecipeStepRunScriptInterpreterEnum {
+	return &e
+}
+
 func (e *SoftwareRecipeStepRunScriptInterpreterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERPRETER_UNSPECIFIED":
 		fallthrough
 	case "SHELL":
 		fallthrough
 	case "POWERSHELL":
-		*e = SoftwareRecipeStepRunScriptInterpreterEnum(s)
+		*e = SoftwareRecipeStepRunScriptInterpreterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoftwareRecipeStepRunScriptInterpreterEnum: %s", s)
+		return fmt.Errorf("invalid value for SoftwareRecipeStepRunScriptInterpreterEnum: %v", v)
 	}
 }
 

@@ -21,19 +21,23 @@ const (
 	NodesIdentifiersListIdentifierAttributesCategoryEnumDoi NodesIdentifiersListIdentifierAttributesCategoryEnum = "doi"
 )
 
+func (e NodesIdentifiersListIdentifierAttributesCategoryEnum) ToPointer() *NodesIdentifiersListIdentifierAttributesCategoryEnum {
+	return &e
+}
+
 func (e *NodesIdentifiersListIdentifierAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ark":
 		fallthrough
 	case "doi":
-		*e = NodesIdentifiersListIdentifierAttributesCategoryEnum(s)
+		*e = NodesIdentifiersListIdentifierAttributesCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodesIdentifiersListIdentifierAttributesCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for NodesIdentifiersListIdentifierAttributesCategoryEnum: %v", v)
 	}
 }
 

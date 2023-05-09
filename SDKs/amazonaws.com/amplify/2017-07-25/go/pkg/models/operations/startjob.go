@@ -20,12 +20,16 @@ const (
 	StartJobRequestBodyJobTypeEnumWebHook StartJobRequestBodyJobTypeEnum = "WEB_HOOK"
 )
 
+func (e StartJobRequestBodyJobTypeEnum) ToPointer() *StartJobRequestBodyJobTypeEnum {
+	return &e
+}
+
 func (e *StartJobRequestBodyJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEASE":
 		fallthrough
 	case "RETRY":
@@ -33,10 +37,10 @@ func (e *StartJobRequestBodyJobTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MANUAL":
 		fallthrough
 	case "WEB_HOOK":
-		*e = StartJobRequestBodyJobTypeEnum(s)
+		*e = StartJobRequestBodyJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartJobRequestBodyJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartJobRequestBodyJobTypeEnum: %v", v)
 	}
 }
 

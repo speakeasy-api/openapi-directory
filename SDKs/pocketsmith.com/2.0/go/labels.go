@@ -35,7 +35,10 @@ func newLabels(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Lists labels belonging to a user by their ID.
 func (s *labels) GetUsersIDLabels(ctx context.Context, request operations.GetUsersIDLabelsRequest) (*operations.GetUsersIDLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/labels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/labels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

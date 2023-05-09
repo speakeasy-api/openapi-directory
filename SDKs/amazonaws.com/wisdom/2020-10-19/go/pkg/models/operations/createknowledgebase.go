@@ -17,19 +17,23 @@ const (
 	CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnumCustom   CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum = "CUSTOM"
 )
 
+func (e CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum) ToPointer() *CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum {
+	return &e
+}
+
 func (e *CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL":
 		fallthrough
 	case "CUSTOM":
-		*e = CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum(s)
+		*e = CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateKnowledgeBaseRequestBodyKnowledgeBaseTypeEnum: %v", v)
 	}
 }
 

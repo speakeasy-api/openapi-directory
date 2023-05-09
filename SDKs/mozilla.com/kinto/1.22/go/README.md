@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mozilla.com/kinto/1.22/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateAttachmentRequest{
+    ctx := context.Background()
+    res, err := s.Attachment.CreateAttachment(ctx, operations.CreateAttachmentRequest{
         BucketID: "corrupti",
         CollectionID: "provident",
-        ID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachment.CreateAttachment(ctx, req)
+        ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,51 +44,51 @@ func main() {
 ## Available Resources and Operations
 
 
-### Attachment
+### [Attachment](docs/attachment/README.md)
 
-* `CreateAttachment`
-* `DeleteAttachment`
+* [CreateAttachment](docs/attachment/README.md#createattachment)
+* [DeleteAttachment](docs/attachment/README.md#deleteattachment)
 
-### Batch
+### [Batch](docs/batch/README.md)
 
-* `Batch`
+* [Batch](docs/batch/README.md#batch)
 
-### Buckets
+### [Buckets](docs/buckets/README.md)
 
-* `GetBucket`
-* `GetBuckets`
+* [GetBucket](docs/buckets/README.md#getbucket)
+* [GetBuckets](docs/buckets/README.md#getbuckets)
 
-### Changess
+### [Changess](docs/changess/README.md)
 
-* `GetChangess`
+* [GetChangess](docs/changess/README.md#getchangess)
 
-### CollectionChangeset
+### [CollectionChangeset](docs/collectionchangeset/README.md)
 
-* `GetCollectionChangeset`
+* [GetCollectionChangeset](docs/collectionchangeset/README.md#getcollectionchangeset)
 
-### Collections
+### [Collections](docs/collections/README.md)
 
-* `GetCollection`
-* `GetCollections`
+* [GetCollection](docs/collections/README.md#getcollection)
+* [GetCollections](docs/collections/README.md#getcollections)
 
-### Groups
+### [Groups](docs/groups/README.md)
 
-* `GetGroup`
-* `GetGroups`
+* [GetGroup](docs/groups/README.md#getgroup)
+* [GetGroups](docs/groups/README.md#getgroups)
 
-### Records
+### [Records](docs/records/README.md)
 
-* `GetRecord`
-* `GetRecords`
+* [GetRecord](docs/records/README.md#getrecord)
+* [GetRecords](docs/records/README.md#getrecords)
 
-### Utilities
+### [Utilities](docs/utilities/README.md)
 
-* `Heartbeat`
-* `Lbheartbeat`
-* `Version`
-* `Contribute`
-* `GetOpenapiSpec`
-* `ServerInfo`
+* [Heartbeat](docs/utilities/README.md#heartbeat)
+* [Lbheartbeat](docs/utilities/README.md#lbheartbeat)
+* [Version](docs/utilities/README.md#version)
+* [Contribute](docs/utilities/README.md#contribute)
+* [GetOpenapiSpec](docs/utilities/README.md#getopenapispec)
+* [ServerInfo](docs/utilities/README.md#serverinfo)
 <!-- End SDK Available Operations -->
 
 ### Maturity

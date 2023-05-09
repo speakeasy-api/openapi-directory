@@ -35,7 +35,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // WebHookManagementDelete - Deletes an existing WebHook registration.
 func (s *webhooks) WebHookManagementDelete(ctx context.Context, request operations.WebHookManagementDeleteRequest) (*operations.WebHookManagementDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -239,7 +242,10 @@ func (s *webhooks) WebHookManagementGetFilters(ctx context.Context) (*operations
 // WebHookManagementLookup - Looks up a registered WebHook with the given {id} for a given user.
 func (s *webhooks) WebHookManagementLookup(ctx context.Context, request operations.WebHookManagementLookupRequest) (*operations.WebHookManagementLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +357,10 @@ func (s *webhooks) WebHookManagementPost(ctx context.Context, request shared.Rec
 // WebHookManagementPut - Updates an existing WebHook registration.
 func (s *webhooks) WebHookManagementPut(ctx context.Context, request operations.WebHookManagementPutRequest) (*operations.WebHookManagementPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RechnungsdruckWebAppControllersAPIWebHookAPIModel", "json")
 	if err != nil {

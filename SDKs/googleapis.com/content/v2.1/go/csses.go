@@ -34,7 +34,10 @@ func newCsses(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ContentCssesGet - Retrieves a single CSS domain by ID.
 func (s *csses) ContentCssesGet(ctx context.Context, request operations.ContentCssesGetRequest, security operations.ContentCssesGetSecurity) (*operations.ContentCssesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *csses) ContentCssesGet(ctx context.Context, request operations.ContentC
 // ContentCssesList - Lists CSS domains affiliated with a CSS group.
 func (s *csses) ContentCssesList(ctx context.Context, request operations.ContentCssesListRequest, security operations.ContentCssesListSecurity) (*operations.ContentCssesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *csses) ContentCssesList(ctx context.Context, request operations.Content
 // ContentCssesUpdatelabels - Updates labels that are assigned to a CSS domain by its CSS group.
 func (s *csses) ContentCssesUpdatelabels(ctx context.Context, request operations.ContentCssesUpdatelabelsRequest, security operations.ContentCssesUpdatelabelsSecurity) (*operations.ContentCssesUpdatelabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}/updatelabels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{cssGroupId}/csses/{cssDomainId}/updatelabels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LabelIds", "json")
 	if err != nil {

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // NotebooksProjectsLocationsEnvironmentsCreate - Creates a new Environment.
 func (s *projects) NotebooksProjectsLocationsEnvironmentsCreate(ctx context.Context, request operations.NotebooksProjectsLocationsEnvironmentsCreateRequest, security operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity) (*operations.NotebooksProjectsLocationsEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnvironmentInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) NotebooksProjectsLocationsEnvironmentsCreate(ctx context.Cont
 // NotebooksProjectsLocationsEnvironmentsList - Lists environments in a project.
 func (s *projects) NotebooksProjectsLocationsEnvironmentsList(ctx context.Context, request operations.NotebooksProjectsLocationsEnvironmentsListRequest, security operations.NotebooksProjectsLocationsEnvironmentsListSecurity) (*operations.NotebooksProjectsLocationsEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) NotebooksProjectsLocationsEnvironmentsList(ctx context.Contex
 // NotebooksProjectsLocationsExecutionsCreate - Creates a new Execution in a given project and location.
 func (s *projects) NotebooksProjectsLocationsExecutionsCreate(ctx context.Context, request operations.NotebooksProjectsLocationsExecutionsCreateRequest, security operations.NotebooksProjectsLocationsExecutionsCreateSecurity) (*operations.NotebooksProjectsLocationsExecutionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutionInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) NotebooksProjectsLocationsExecutionsCreate(ctx context.Contex
 // NotebooksProjectsLocationsExecutionsList - Lists executions in a given project and location
 func (s *projects) NotebooksProjectsLocationsExecutionsList(ctx context.Context, request operations.NotebooksProjectsLocationsExecutionsListRequest, security operations.NotebooksProjectsLocationsExecutionsListSecurity) (*operations.NotebooksProjectsLocationsExecutionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) NotebooksProjectsLocationsExecutionsList(ctx context.Context,
 // NotebooksProjectsLocationsInstancesCreate - Creates a new Instance in a given project and location.
 func (s *projects) NotebooksProjectsLocationsInstancesCreate(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesCreateRequest, security operations.NotebooksProjectsLocationsInstancesCreateSecurity) (*operations.NotebooksProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesCreate(ctx context.Context
 // NotebooksProjectsLocationsInstancesGetInstanceHealth - Check if a notebook instance is healthy.
 func (s *projects) NotebooksProjectsLocationsInstancesGetInstanceHealth(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesGetInstanceHealthRequest, security operations.NotebooksProjectsLocationsInstancesGetInstanceHealthSecurity) (*operations.NotebooksProjectsLocationsInstancesGetInstanceHealthResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getInstanceHealth", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:getInstanceHealth", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesGetInstanceHealth(ctx cont
 // NotebooksProjectsLocationsInstancesIsUpgradeable - Check if a notebook instance is upgradable.
 func (s *projects) NotebooksProjectsLocationsInstancesIsUpgradeable(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesIsUpgradeableRequest, security operations.NotebooksProjectsLocationsInstancesIsUpgradeableSecurity) (*operations.NotebooksProjectsLocationsInstancesIsUpgradeableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{notebookInstance}:isUpgradeable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{notebookInstance}:isUpgradeable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesIsUpgradeable(ctx context.
 // NotebooksProjectsLocationsInstancesList - Lists instances in a given project and location.
 func (s *projects) NotebooksProjectsLocationsInstancesList(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesListRequest, security operations.NotebooksProjectsLocationsInstancesListSecurity) (*operations.NotebooksProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesList(ctx context.Context, 
 // NotebooksProjectsLocationsInstancesRegister - Registers an existing legacy notebook instance to the Notebooks API server. Legacy instances are instances created with the legacy Compute Engine calls. They are not manageable by the Notebooks API out of the box. This call makes these instances manageable by the Notebooks API.
 func (s *projects) NotebooksProjectsLocationsInstancesRegister(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesRegisterRequest, security operations.NotebooksProjectsLocationsInstancesRegisterSecurity) (*operations.NotebooksProjectsLocationsInstancesRegisterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances:register", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances:register", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegisterInstanceRequest", "json")
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesRegister(ctx context.Conte
 // NotebooksProjectsLocationsInstancesReport - Allows notebook instances to report their latest instance information to the Notebooks API server. The server will merge the reported information to the instance metadata store. Do not use this method directly.
 func (s *projects) NotebooksProjectsLocationsInstancesReport(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesReportRequest, security operations.NotebooksProjectsLocationsInstancesReportSecurity) (*operations.NotebooksProjectsLocationsInstancesReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportInstanceInfoRequest", "json")
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesReport(ctx context.Context
 // NotebooksProjectsLocationsInstancesRollback - Rollbacks a notebook instance to the previous version.
 func (s *projects) NotebooksProjectsLocationsInstancesRollback(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesRollbackRequest, security operations.NotebooksProjectsLocationsInstancesRollbackSecurity) (*operations.NotebooksProjectsLocationsInstancesRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackInstanceRequest", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesRollback(ctx context.Conte
 // NotebooksProjectsLocationsInstancesSetAccelerator - Updates the guest accelerators of a single Instance.
 func (s *projects) NotebooksProjectsLocationsInstancesSetAccelerator(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesSetAcceleratorRequest, security operations.NotebooksProjectsLocationsInstancesSetAcceleratorSecurity) (*operations.NotebooksProjectsLocationsInstancesSetAcceleratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setAccelerator", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setAccelerator", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetInstanceAcceleratorRequest", "json")
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesSetAccelerator(ctx context
 // NotebooksProjectsLocationsInstancesSetLabels - Replaces all the labels of an Instance.
 func (s *projects) NotebooksProjectsLocationsInstancesSetLabels(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesSetLabelsRequest, security operations.NotebooksProjectsLocationsInstancesSetLabelsSecurity) (*operations.NotebooksProjectsLocationsInstancesSetLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setLabels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setLabels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetInstanceLabelsRequest", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesSetLabels(ctx context.Cont
 // NotebooksProjectsLocationsInstancesSetMachineType - Updates the machine type of a single Instance.
 func (s *projects) NotebooksProjectsLocationsInstancesSetMachineType(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesSetMachineTypeRequest, security operations.NotebooksProjectsLocationsInstancesSetMachineTypeSecurity) (*operations.NotebooksProjectsLocationsInstancesSetMachineTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMachineType", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:setMachineType", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetInstanceMachineTypeRequest", "json")
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesSetMachineType(ctx context
 // NotebooksProjectsLocationsInstancesUpdateConfig - Update Notebook Instance configurations.
 func (s *projects) NotebooksProjectsLocationsInstancesUpdateConfig(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesUpdateConfigRequest, security operations.NotebooksProjectsLocationsInstancesUpdateConfigSecurity) (*operations.NotebooksProjectsLocationsInstancesUpdateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateInstanceConfigRequest", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesUpdateConfig(ctx context.C
 // NotebooksProjectsLocationsInstancesUpdateMetadataItems - Add/update metadata items for an instance.
 func (s *projects) NotebooksProjectsLocationsInstancesUpdateMetadataItems(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesUpdateMetadataItemsRequest, security operations.NotebooksProjectsLocationsInstancesUpdateMetadataItemsSecurity) (*operations.NotebooksProjectsLocationsInstancesUpdateMetadataItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateMetadataItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateMetadataItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateInstanceMetadataItemsRequest", "json")
 	if err != nil {
@@ -879,7 +927,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesUpdateMetadataItems(ctx co
 // NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConfig - Updates the Shielded instance configuration of a single Instance.
 func (s *projects) NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConfig(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConfigRequest, security operations.NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConfigSecurity) (*operations.NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateShieldedInstanceConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:updateShieldedInstanceConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateShieldedInstanceConfigRequest", "json")
 	if err != nil {
@@ -934,7 +985,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesUpdateShieldedInstanceConf
 // NotebooksProjectsLocationsInstancesUpgradeInternal - Allows notebook instances to call this endpoint to upgrade themselves. Do not use this method directly.
 func (s *projects) NotebooksProjectsLocationsInstancesUpgradeInternal(ctx context.Context, request operations.NotebooksProjectsLocationsInstancesUpgradeInternalRequest, security operations.NotebooksProjectsLocationsInstancesUpgradeInternalSecurity) (*operations.NotebooksProjectsLocationsInstancesUpgradeInternalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgradeInternal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgradeInternal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpgradeInstanceInternalRequest", "json")
 	if err != nil {
@@ -989,7 +1043,10 @@ func (s *projects) NotebooksProjectsLocationsInstancesUpgradeInternal(ctx contex
 // NotebooksProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) NotebooksProjectsLocationsList(ctx context.Context, request operations.NotebooksProjectsLocationsListRequest, security operations.NotebooksProjectsLocationsListSecurity) (*operations.NotebooksProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1037,7 +1094,10 @@ func (s *projects) NotebooksProjectsLocationsList(ctx context.Context, request o
 // NotebooksProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) NotebooksProjectsLocationsOperationsCancel(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsCancelRequest, security operations.NotebooksProjectsLocationsOperationsCancelSecurity) (*operations.NotebooksProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1092,7 +1152,10 @@ func (s *projects) NotebooksProjectsLocationsOperationsCancel(ctx context.Contex
 // NotebooksProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) NotebooksProjectsLocationsOperationsList(ctx context.Context, request operations.NotebooksProjectsLocationsOperationsListRequest, security operations.NotebooksProjectsLocationsOperationsListSecurity) (*operations.NotebooksProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1140,7 +1203,10 @@ func (s *projects) NotebooksProjectsLocationsOperationsList(ctx context.Context,
 // NotebooksProjectsLocationsRuntimesCreate - Creates a new Runtime in a given project and location.
 func (s *projects) NotebooksProjectsLocationsRuntimesCreate(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesCreateRequest, security operations.NotebooksProjectsLocationsRuntimesCreateSecurity) (*operations.NotebooksProjectsLocationsRuntimesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RuntimeInput", "json")
 	if err != nil {
@@ -1195,7 +1261,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesCreate(ctx context.Context,
 // NotebooksProjectsLocationsRuntimesDiagnose - Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
 func (s *projects) NotebooksProjectsLocationsRuntimesDiagnose(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesDiagnoseRequest, security operations.NotebooksProjectsLocationsRuntimesDiagnoseSecurity) (*operations.NotebooksProjectsLocationsRuntimesDiagnoseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:diagnose", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:diagnose", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DiagnoseRuntimeRequest", "json")
 	if err != nil {
@@ -1250,7 +1319,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesDiagnose(ctx context.Contex
 // NotebooksProjectsLocationsRuntimesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) NotebooksProjectsLocationsRuntimesGetIamPolicy(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesGetIamPolicyRequest, security operations.NotebooksProjectsLocationsRuntimesGetIamPolicySecurity) (*operations.NotebooksProjectsLocationsRuntimesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1298,7 +1370,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesGetIamPolicy(ctx context.Co
 // NotebooksProjectsLocationsRuntimesList - Lists Runtimes in a given project and location.
 func (s *projects) NotebooksProjectsLocationsRuntimesList(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesListRequest, security operations.NotebooksProjectsLocationsRuntimesListSecurity) (*operations.NotebooksProjectsLocationsRuntimesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/runtimes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1346,7 +1421,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesList(ctx context.Context, r
 // NotebooksProjectsLocationsRuntimesPatch - Update Notebook Runtime configuration.
 func (s *projects) NotebooksProjectsLocationsRuntimesPatch(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesPatchRequest, security operations.NotebooksProjectsLocationsRuntimesPatchSecurity) (*operations.NotebooksProjectsLocationsRuntimesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RuntimeInput", "json")
 	if err != nil {
@@ -1401,7 +1479,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesPatch(ctx context.Context, 
 // NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternal - Gets an access token for the consumer service account that the customer attached to the runtime. Only accessible from the tenant instance.
 func (s *projects) NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternal(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalRequest, security operations.NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalSecurity) (*operations.NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternalResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:refreshRuntimeTokenInternal", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:refreshRuntimeTokenInternal", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RefreshRuntimeTokenInternalRequest", "json")
 	if err != nil {
@@ -1456,7 +1537,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesRefreshRuntimeTokenInternal
 // NotebooksProjectsLocationsRuntimesReportEvent - Report and process a runtime event.
 func (s *projects) NotebooksProjectsLocationsRuntimesReportEvent(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesReportEventRequest, security operations.NotebooksProjectsLocationsRuntimesReportEventSecurity) (*operations.NotebooksProjectsLocationsRuntimesReportEventResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reportEvent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reportEvent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportRuntimeEventRequest", "json")
 	if err != nil {
@@ -1511,7 +1595,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesReportEvent(ctx context.Con
 // NotebooksProjectsLocationsRuntimesReset - Resets a Managed Notebook Runtime.
 func (s *projects) NotebooksProjectsLocationsRuntimesReset(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesResetRequest, security operations.NotebooksProjectsLocationsRuntimesResetSecurity) (*operations.NotebooksProjectsLocationsRuntimesResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResetRuntimeRequest", "json")
 	if err != nil {
@@ -1566,7 +1653,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesReset(ctx context.Context, 
 // NotebooksProjectsLocationsRuntimesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) NotebooksProjectsLocationsRuntimesSetIamPolicy(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesSetIamPolicyRequest, security operations.NotebooksProjectsLocationsRuntimesSetIamPolicySecurity) (*operations.NotebooksProjectsLocationsRuntimesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1621,7 +1711,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesSetIamPolicy(ctx context.Co
 // NotebooksProjectsLocationsRuntimesStart - Starts a Managed Notebook Runtime. Perform "Start" on GPU instances; "Resume" on CPU instances See: https://cloud.google.com/compute/docs/instances/stop-start-instance https://cloud.google.com/compute/docs/instances/suspend-resume-instance
 func (s *projects) NotebooksProjectsLocationsRuntimesStart(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesStartRequest, security operations.NotebooksProjectsLocationsRuntimesStartSecurity) (*operations.NotebooksProjectsLocationsRuntimesStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartRuntimeRequest", "json")
 	if err != nil {
@@ -1676,7 +1769,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesStart(ctx context.Context, 
 // NotebooksProjectsLocationsRuntimesStop - Stops a Managed Notebook Runtime. Perform "Stop" on GPU instances; "Suspend" on CPU instances See: https://cloud.google.com/compute/docs/instances/stop-start-instance https://cloud.google.com/compute/docs/instances/suspend-resume-instance
 func (s *projects) NotebooksProjectsLocationsRuntimesStop(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesStopRequest, security operations.NotebooksProjectsLocationsRuntimesStopSecurity) (*operations.NotebooksProjectsLocationsRuntimesStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StopRuntimeRequest", "json")
 	if err != nil {
@@ -1731,7 +1827,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesStop(ctx context.Context, r
 // NotebooksProjectsLocationsRuntimesSwitch - Switch a Managed Notebook Runtime.
 func (s *projects) NotebooksProjectsLocationsRuntimesSwitch(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesSwitchRequest, security operations.NotebooksProjectsLocationsRuntimesSwitchSecurity) (*operations.NotebooksProjectsLocationsRuntimesSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:switch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:switch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SwitchRuntimeRequest", "json")
 	if err != nil {
@@ -1786,7 +1885,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesSwitch(ctx context.Context,
 // NotebooksProjectsLocationsRuntimesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) NotebooksProjectsLocationsRuntimesTestIamPermissions(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesTestIamPermissionsRequest, security operations.NotebooksProjectsLocationsRuntimesTestIamPermissionsSecurity) (*operations.NotebooksProjectsLocationsRuntimesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1841,7 +1943,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesTestIamPermissions(ctx cont
 // NotebooksProjectsLocationsRuntimesUpgrade - Upgrades a Managed Notebook Runtime to the latest version.
 func (s *projects) NotebooksProjectsLocationsRuntimesUpgrade(ctx context.Context, request operations.NotebooksProjectsLocationsRuntimesUpgradeRequest, security operations.NotebooksProjectsLocationsRuntimesUpgradeSecurity) (*operations.NotebooksProjectsLocationsRuntimesUpgradeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgrade", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgrade", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpgradeRuntimeRequest", "json")
 	if err != nil {
@@ -1896,7 +2001,10 @@ func (s *projects) NotebooksProjectsLocationsRuntimesUpgrade(ctx context.Context
 // NotebooksProjectsLocationsSchedulesCreate - Creates a new Scheduled Notebook in a given project and location.
 func (s *projects) NotebooksProjectsLocationsSchedulesCreate(ctx context.Context, request operations.NotebooksProjectsLocationsSchedulesCreateRequest, security operations.NotebooksProjectsLocationsSchedulesCreateSecurity) (*operations.NotebooksProjectsLocationsSchedulesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/schedules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/schedules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ScheduleInput", "json")
 	if err != nil {
@@ -1951,7 +2059,10 @@ func (s *projects) NotebooksProjectsLocationsSchedulesCreate(ctx context.Context
 // NotebooksProjectsLocationsSchedulesDelete - Deletes schedule and all underlying jobs
 func (s *projects) NotebooksProjectsLocationsSchedulesDelete(ctx context.Context, request operations.NotebooksProjectsLocationsSchedulesDeleteRequest, security operations.NotebooksProjectsLocationsSchedulesDeleteSecurity) (*operations.NotebooksProjectsLocationsSchedulesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1999,7 +2110,10 @@ func (s *projects) NotebooksProjectsLocationsSchedulesDelete(ctx context.Context
 // NotebooksProjectsLocationsSchedulesGet - Gets details of schedule
 func (s *projects) NotebooksProjectsLocationsSchedulesGet(ctx context.Context, request operations.NotebooksProjectsLocationsSchedulesGetRequest, security operations.NotebooksProjectsLocationsSchedulesGetSecurity) (*operations.NotebooksProjectsLocationsSchedulesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2047,7 +2161,10 @@ func (s *projects) NotebooksProjectsLocationsSchedulesGet(ctx context.Context, r
 // NotebooksProjectsLocationsSchedulesList - Lists schedules in a given project and location.
 func (s *projects) NotebooksProjectsLocationsSchedulesList(ctx context.Context, request operations.NotebooksProjectsLocationsSchedulesListRequest, security operations.NotebooksProjectsLocationsSchedulesListSecurity) (*operations.NotebooksProjectsLocationsSchedulesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/schedules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/schedules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2095,7 +2212,10 @@ func (s *projects) NotebooksProjectsLocationsSchedulesList(ctx context.Context, 
 // NotebooksProjectsLocationsSchedulesTrigger - Triggers execution of an existing schedule.
 func (s *projects) NotebooksProjectsLocationsSchedulesTrigger(ctx context.Context, request operations.NotebooksProjectsLocationsSchedulesTriggerRequest, security operations.NotebooksProjectsLocationsSchedulesTriggerSecurity) (*operations.NotebooksProjectsLocationsSchedulesTriggerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:trigger", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:trigger", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

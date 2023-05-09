@@ -35,7 +35,10 @@ func newCreatives(defaultClient, securityClient HTTPClient, serverURL, language,
 // AdexchangebuyerCreativesGet - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
 func (s *creatives) AdexchangebuyerCreativesGet(ctx context.Context, request operations.AdexchangebuyerCreativesGetRequest, security operations.AdexchangebuyerCreativesGetSecurity) (*operations.AdexchangebuyerCreativesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creatives/{accountId}/{buyerCreativeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

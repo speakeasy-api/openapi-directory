@@ -17,12 +17,16 @@ const (
 	CorporateTaxDeclarationOrderEnumRegularization CorporateTaxDeclarationOrderEnum = "regularization"
 )
 
+func (e CorporateTaxDeclarationOrderEnum) ToPointer() *CorporateTaxDeclarationOrderEnum {
+	return &e
+}
+
 func (e *CorporateTaxDeclarationOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1st advance":
 		fallthrough
 	case "2nd advance":
@@ -32,10 +36,10 @@ func (e *CorporateTaxDeclarationOrderEnum) UnmarshalJSON(data []byte) error {
 	case "4th advance":
 		fallthrough
 	case "regularization":
-		*e = CorporateTaxDeclarationOrderEnum(s)
+		*e = CorporateTaxDeclarationOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CorporateTaxDeclarationOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for CorporateTaxDeclarationOrderEnum: %v", v)
 	}
 }
 

@@ -80,7 +80,10 @@ func newPreprintProviders(defaultClient, securityClient HTTPClient, serverURL, l
 // The above structure would allow Architecture, Architectural Engineering, all of Architectural Engineering's children, Engineering, Aerospace Engineering, and Aerodynamics and Fluid Mechanics.
 func (s *preprintProviders) PreprintProviderDetail(ctx context.Context, request operations.PreprintProviderDetailRequest) (*operations.PreprintProviderDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *preprintProviders) PreprintProviderDetail(ctx context.Context, request 
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *preprintProviders) PreprintProviderLicensesList(ctx context.Context, request operations.PreprintProviderLicensesListRequest) (*operations.PreprintProviderLicensesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/licenses/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/licenses/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,7 +252,10 @@ func (s *preprintProviders) PreprintProviderList(ctx context.Context) (*operatio
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *preprintProviders) PreprintProviderTaxonomiesList(ctx context.Context, request operations.PreprintProviderTaxonomiesListRequest) (*operations.PreprintProviderTaxonomiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/taxonomies/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/taxonomies/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -305,7 +314,10 @@ func (s *preprintProviders) PreprintProviderTaxonomiesList(ctx context.Context, 
 // Preprints may be filtered by their `id`, `is_published`, `date_created`, `date_modified`, and `provider`.
 func (s *preprintProviders) PreprintProvidersPreprintsList(ctx context.Context, request operations.PreprintProvidersPreprintsListRequest) (*operations.PreprintProvidersPreprintsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/preprints/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/preprint_providers/{preprint_provider_id}/preprints/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

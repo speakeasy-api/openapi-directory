@@ -21,12 +21,16 @@ const (
 	AutoExportSettingsExportIntervalEnumYearly       AutoExportSettingsExportIntervalEnum = "Yearly"
 )
 
+func (e AutoExportSettingsExportIntervalEnum) ToPointer() *AutoExportSettingsExportIntervalEnum {
+	return &e
+}
+
 func (e *AutoExportSettingsExportIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoExport":
 		fallthrough
 	case "Hourly":
@@ -42,10 +46,10 @@ func (e *AutoExportSettingsExportIntervalEnum) UnmarshalJSON(data []byte) error 
 	case "HalfYearly":
 		fallthrough
 	case "Yearly":
-		*e = AutoExportSettingsExportIntervalEnum(s)
+		*e = AutoExportSettingsExportIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoExportSettingsExportIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoExportSettingsExportIntervalEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	InsightTypeEnumProactive InsightTypeEnum = "PROACTIVE"
 )
 
+func (e InsightTypeEnum) ToPointer() *InsightTypeEnum {
+	return &e
+}
+
 func (e *InsightTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REACTIVE":
 		fallthrough
 	case "PROACTIVE":
-		*e = InsightTypeEnum(s)
+		*e = InsightTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsightTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InsightTypeEnum: %v", v)
 	}
 }

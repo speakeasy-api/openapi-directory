@@ -18,12 +18,16 @@ const (
 	UpdatePageElementsZOrderRequestOperationEnumSendToBack                 UpdatePageElementsZOrderRequestOperationEnum = "SEND_TO_BACK"
 )
 
+func (e UpdatePageElementsZOrderRequestOperationEnum) ToPointer() *UpdatePageElementsZOrderRequestOperationEnum {
+	return &e
+}
+
 func (e *UpdatePageElementsZOrderRequestOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Z_ORDER_OPERATION_UNSPECIFIED":
 		fallthrough
 	case "BRING_TO_FRONT":
@@ -33,10 +37,10 @@ func (e *UpdatePageElementsZOrderRequestOperationEnum) UnmarshalJSON(data []byte
 	case "SEND_BACKWARD":
 		fallthrough
 	case "SEND_TO_BACK":
-		*e = UpdatePageElementsZOrderRequestOperationEnum(s)
+		*e = UpdatePageElementsZOrderRequestOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePageElementsZOrderRequestOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePageElementsZOrderRequestOperationEnum: %v", v)
 	}
 }
 

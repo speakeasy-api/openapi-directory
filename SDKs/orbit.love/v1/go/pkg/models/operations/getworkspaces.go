@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetWorkspacesSecurity struct {
+	Bearer string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetWorkspacesResponse struct {
 	ContentType string
 	StatusCode  int

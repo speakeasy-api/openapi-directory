@@ -14,18 +14,22 @@ const (
 	EnhancedInfrastructureMetricsEnumInactive EnhancedInfrastructureMetricsEnum = "Inactive"
 )
 
+func (e EnhancedInfrastructureMetricsEnum) ToPointer() *EnhancedInfrastructureMetricsEnum {
+	return &e
+}
+
 func (e *EnhancedInfrastructureMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = EnhancedInfrastructureMetricsEnum(s)
+		*e = EnhancedInfrastructureMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnhancedInfrastructureMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for EnhancedInfrastructureMetricsEnum: %v", v)
 	}
 }

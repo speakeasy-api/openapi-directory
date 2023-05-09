@@ -15,20 +15,24 @@ const (
 	UsageRecordResultStatusEnumDuplicateRecord       UsageRecordResultStatusEnum = "DuplicateRecord"
 )
 
+func (e UsageRecordResultStatusEnum) ToPointer() *UsageRecordResultStatusEnum {
+	return &e
+}
+
 func (e *UsageRecordResultStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Success":
 		fallthrough
 	case "CustomerNotSubscribed":
 		fallthrough
 	case "DuplicateRecord":
-		*e = UsageRecordResultStatusEnum(s)
+		*e = UsageRecordResultStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageRecordResultStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageRecordResultStatusEnum: %v", v)
 	}
 }

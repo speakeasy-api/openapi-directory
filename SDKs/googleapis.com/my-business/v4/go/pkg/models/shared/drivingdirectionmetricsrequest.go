@@ -16,21 +16,25 @@ const (
 	DrivingDirectionMetricsRequestNumDaysEnumNinety DrivingDirectionMetricsRequestNumDaysEnum = "NINETY"
 )
 
+func (e DrivingDirectionMetricsRequestNumDaysEnum) ToPointer() *DrivingDirectionMetricsRequestNumDaysEnum {
+	return &e
+}
+
 func (e *DrivingDirectionMetricsRequestNumDaysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVEN":
 		fallthrough
 	case "THIRTY":
 		fallthrough
 	case "NINETY":
-		*e = DrivingDirectionMetricsRequestNumDaysEnum(s)
+		*e = DrivingDirectionMetricsRequestNumDaysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DrivingDirectionMetricsRequestNumDaysEnum: %s", s)
+		return fmt.Errorf("invalid value for DrivingDirectionMetricsRequestNumDaysEnum: %v", v)
 	}
 }
 

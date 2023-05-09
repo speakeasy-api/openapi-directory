@@ -14,18 +14,22 @@ const (
 	HealthEventImpactTypeEnumPerformance  HealthEventImpactTypeEnum = "PERFORMANCE"
 )
 
+func (e HealthEventImpactTypeEnum) ToPointer() *HealthEventImpactTypeEnum {
+	return &e
+}
+
 func (e *HealthEventImpactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABILITY":
 		fallthrough
 	case "PERFORMANCE":
-		*e = HealthEventImpactTypeEnum(s)
+		*e = HealthEventImpactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthEventImpactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthEventImpactTypeEnum: %v", v)
 	}
 }

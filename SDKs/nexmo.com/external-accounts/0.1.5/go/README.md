@@ -13,25 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/external-accoun
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAllAccountsRequest{
-        PageNumber: 1,
-        PageSize: 1,
-        Provider: "viber_service_msg",
-    }
-
     ctx := context.Background()
-    res, err := s.Account.GetAllAccounts(ctx, req, operations.GetAllAccountsSecurity{
+    res, err := s.Account.GetAllAccounts(ctx, operations.GetAllAccountsRequest{
+        PageNumber: sdk.Int64(1),
+        PageSize: sdk.Int64(1),
+        Provider: operations.GetAllAccountsProviderEnumViberServiceMsg.ToPointer(),
+    }, operations.GetAllAccountsSecurity{
         BasicAuth: &shared.SchemeBasicAuth{
             Password: "YOUR_PASSWORD_HERE",
             Username: "YOUR_USERNAME_HERE",
@@ -52,29 +50,29 @@ func main() {
 ## Available Resources and Operations
 
 
-### Account
+### [Account](docs/account/README.md)
 
-* `GetAllAccounts` - Retrieve all accounts you own
+* [GetAllAccounts](docs/account/README.md#getallaccounts) - Retrieve all accounts you own
 
-### Application
+### [Application](docs/application/README.md)
 
-* `LinkApplication` - Link application to an account
-* `UnliWithoutApplicationnkApplication` - Unlink application from an account
+* [LinkApplication](docs/application/README.md#linkapplication) - Link application to an account
+* [UnliWithoutApplicationnkApplication](docs/application/README.md#unliwithoutapplicationnkapplication) - Unlink application from an account
 
-### FacebookMessenger
+### [FacebookMessenger](docs/facebookmessenger/README.md)
 
-* `CreateMessengerAccount` - Create a Messenger account
-* `DeleteMessengerAccount` - Delete a Messenger account
-* `GetMessengerAccount` - Retrieve a Messenger account
-* `UpdateMessengerAccount` - Update a Messenger account
+* [CreateMessengerAccount](docs/facebookmessenger/README.md#createmessengeraccount) - Create a Messenger account
+* [DeleteMessengerAccount](docs/facebookmessenger/README.md#deletemessengeraccount) - Delete a Messenger account
+* [GetMessengerAccount](docs/facebookmessenger/README.md#getmessengeraccount) - Retrieve a Messenger account
+* [UpdateMessengerAccount](docs/facebookmessenger/README.md#updatemessengeraccount) - Update a Messenger account
 
-### ViberServiceMessage
+### [ViberServiceMessage](docs/viberservicemessage/README.md)
 
-* `GetVSMAccount` - Retrieve a Viber Service Message account
+* [GetVSMAccount](docs/viberservicemessage/README.md#getvsmaccount) - Retrieve a Viber Service Message account
 
-### WhatsApp
+### [WhatsApp](docs/whatsapp/README.md)
 
-* `GetWAAccount` - Retrieve a Whatsapp account
+* [GetWAAccount](docs/whatsapp/README.md#getwaaccount) - Retrieve a Whatsapp account
 <!-- End SDK Available Operations -->
 
 ### Maturity

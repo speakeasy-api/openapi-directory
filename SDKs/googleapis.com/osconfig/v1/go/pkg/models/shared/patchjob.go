@@ -21,12 +21,16 @@ const (
 	PatchJobStateEnumTimedOut            PatchJobStateEnum = "TIMED_OUT"
 )
 
+func (e PatchJobStateEnum) ToPointer() *PatchJobStateEnum {
+	return &e
+}
+
 func (e *PatchJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STARTED":
@@ -42,14 +46,14 @@ func (e *PatchJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELED":
 		fallthrough
 	case "TIMED_OUT":
-		*e = PatchJobStateEnum(s)
+		*e = PatchJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchJobStateEnum: %v", v)
 	}
 }
 
-// PatchJob - A high level representation of a patch job that is either in progress or has completed. Instance details are not included in the job. To paginate through instance details, use ListPatchJobInstanceDetails. For more information about patch jobs, see [Creating patch jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
+// PatchJob - A high level representation of a patch job that is either in progress or has completed. Instance details are not included in the job. To paginate through instance details, use `ListPatchJobInstanceDetails`. For more information about patch jobs, see [Creating patch jobs](https://cloud.google.com/compute/docs/os-patch-management/create-patch-job).
 type PatchJob struct {
 	// Time this patch job was created.
 	CreateTime *string `json:"createTime,omitempty"`

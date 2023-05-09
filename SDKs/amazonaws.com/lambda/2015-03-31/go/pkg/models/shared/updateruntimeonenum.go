@@ -15,20 +15,24 @@ const (
 	UpdateRuntimeOnEnumFunctionUpdate UpdateRuntimeOnEnum = "FunctionUpdate"
 )
 
+func (e UpdateRuntimeOnEnum) ToPointer() *UpdateRuntimeOnEnum {
+	return &e
+}
+
 func (e *UpdateRuntimeOnEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Auto":
 		fallthrough
 	case "Manual":
 		fallthrough
 	case "FunctionUpdate":
-		*e = UpdateRuntimeOnEnum(s)
+		*e = UpdateRuntimeOnEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateRuntimeOnEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateRuntimeOnEnum: %v", v)
 	}
 }

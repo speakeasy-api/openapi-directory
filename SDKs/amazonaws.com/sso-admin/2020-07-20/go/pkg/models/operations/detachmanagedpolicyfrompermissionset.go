@@ -16,17 +16,21 @@ const (
 	DetachManagedPolicyFromPermissionSetXAmzTargetEnumSwbExternalServiceDetachManagedPolicyFromPermissionSet DetachManagedPolicyFromPermissionSetXAmzTargetEnum = "SWBExternalService.DetachManagedPolicyFromPermissionSet"
 )
 
+func (e DetachManagedPolicyFromPermissionSetXAmzTargetEnum) ToPointer() *DetachManagedPolicyFromPermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachManagedPolicyFromPermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DetachManagedPolicyFromPermissionSet":
-		*e = DetachManagedPolicyFromPermissionSetXAmzTargetEnum(s)
+		*e = DetachManagedPolicyFromPermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachManagedPolicyFromPermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachManagedPolicyFromPermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

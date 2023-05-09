@@ -32,17 +32,21 @@ const (
 	RegriiRequestBodyFormatEnumPdf RegriiRequestBodyFormatEnum = "pdf"
 )
 
+func (e RegriiRequestBodyFormatEnum) ToPointer() *RegriiRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *RegriiRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = RegriiRequestBodyFormatEnum(s)
+		*e = RegriiRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegriiRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RegriiRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	Regrii504ApplicationJSONErrorEnumGatewayTimeout Regrii504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Regrii504ApplicationJSONErrorEnum) ToPointer() *Regrii504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Regrii504ApplicationJSONErrorEnum(s)
+		*e = Regrii504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -82,17 +90,21 @@ const (
 	Regrii504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Regrii504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Regrii504ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Regrii504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -108,17 +120,21 @@ const (
 	Regrii503ApplicationJSONErrorEnumServiceUnavailable Regrii503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Regrii503ApplicationJSONErrorEnum) ToPointer() *Regrii503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Regrii503ApplicationJSONErrorEnum(s)
+		*e = Regrii503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -128,17 +144,21 @@ const (
 	Regrii503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Regrii503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Regrii503ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Regrii503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -154,17 +174,21 @@ const (
 	Regrii502ApplicationJSONErrorEnumBadGatewy Regrii502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Regrii502ApplicationJSONErrorEnum) ToPointer() *Regrii502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Regrii502ApplicationJSONErrorEnum(s)
+		*e = Regrii502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -174,17 +198,21 @@ const (
 	Regrii502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Regrii502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Regrii502ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Regrii502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -200,17 +228,21 @@ const (
 	Regrii500ApplicationJSONErrorEnumInternalServerError Regrii500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Regrii500ApplicationJSONErrorEnum) ToPointer() *Regrii500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Regrii500ApplicationJSONErrorEnum(s)
+		*e = Regrii500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -220,17 +252,21 @@ const (
 	Regrii500ApplicationJSONErrorDescriptionEnumInternalServerError Regrii500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Regrii500ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Regrii500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -247,19 +283,23 @@ const (
 	Regrii404ApplicationJSONErrorEnumURLNotFound    Regrii404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Regrii404ApplicationJSONErrorEnum) ToPointer() *Regrii404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Regrii404ApplicationJSONErrorEnum(s)
+		*e = Regrii404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -270,19 +310,23 @@ const (
 	Regrii404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Regrii404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Regrii404ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Regrii404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -299,19 +343,23 @@ const (
 	Regrii401ApplicationJSONErrorEnumInvalidAuthorization  Regrii401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Regrii401ApplicationJSONErrorEnum) ToPointer() *Regrii401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Regrii401ApplicationJSONErrorEnum(s)
+		*e = Regrii401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -322,19 +370,23 @@ const (
 	Regrii401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Regrii401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Regrii401ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Regrii401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -354,12 +406,16 @@ const (
 	Regrii400ApplicationJSONErrorEnumInvalidConsentid Regrii400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Regrii400ApplicationJSONErrorEnum) ToPointer() *Regrii400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Regrii400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -369,10 +425,10 @@ func (e *Regrii400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Regrii400ApplicationJSONErrorEnum(s)
+		*e = Regrii400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -386,12 +442,16 @@ const (
 	Regrii400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Regrii400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Regrii400ApplicationJSONErrorDescriptionEnum) ToPointer() *Regrii400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Regrii400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -401,10 +461,10 @@ func (e *Regrii400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Regrii400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Regrii400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Regrii400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Regrii400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

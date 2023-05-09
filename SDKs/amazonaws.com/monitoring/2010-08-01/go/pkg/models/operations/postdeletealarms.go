@@ -15,17 +15,21 @@ const (
 	POSTDeleteAlarmsActionEnumDeleteAlarms POSTDeleteAlarmsActionEnum = "DeleteAlarms"
 )
 
+func (e POSTDeleteAlarmsActionEnum) ToPointer() *POSTDeleteAlarmsActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteAlarmsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteAlarms":
-		*e = POSTDeleteAlarmsActionEnum(s)
+		*e = POSTDeleteAlarmsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteAlarmsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteAlarmsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteAlarmsVersionEnumTwoThousandAndTen0801 POSTDeleteAlarmsVersionEnum = "2010-08-01"
 )
 
+func (e POSTDeleteAlarmsVersionEnum) ToPointer() *POSTDeleteAlarmsVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteAlarmsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTDeleteAlarmsVersionEnum(s)
+		*e = POSTDeleteAlarmsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteAlarmsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteAlarmsVersionEnum: %v", v)
 	}
 }
 

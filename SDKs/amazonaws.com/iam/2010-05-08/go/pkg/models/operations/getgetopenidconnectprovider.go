@@ -15,17 +15,21 @@ const (
 	GETGETOpenIDConnectProviderActionEnumGetOpenIDConnectProvider GETGETOpenIDConnectProviderActionEnum = "GetOpenIDConnectProvider"
 )
 
+func (e GETGETOpenIDConnectProviderActionEnum) ToPointer() *GETGETOpenIDConnectProviderActionEnum {
+	return &e
+}
+
 func (e *GETGETOpenIDConnectProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetOpenIDConnectProvider":
-		*e = GETGETOpenIDConnectProviderActionEnum(s)
+		*e = GETGETOpenIDConnectProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETOpenIDConnectProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETOpenIDConnectProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 GETGETOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
+func (e GETGETOpenIDConnectProviderVersionEnum) ToPointer() *GETGETOpenIDConnectProviderVersionEnum {
+	return &e
+}
+
 func (e *GETGETOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETOpenIDConnectProviderVersionEnum(s)
+		*e = GETGETOpenIDConnectProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETOpenIDConnectProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETOpenIDConnectProviderVersionEnum: %v", v)
 	}
 }
 

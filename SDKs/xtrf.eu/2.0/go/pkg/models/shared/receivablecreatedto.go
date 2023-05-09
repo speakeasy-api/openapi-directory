@@ -16,12 +16,16 @@ const (
 	ReceivableCreateDTORateOriginEnumAutocalculated ReceivableCreateDTORateOriginEnum = "AUTOCALCULATED"
 )
 
+func (e ReceivableCreateDTORateOriginEnum) ToPointer() *ReceivableCreateDTORateOriginEnum {
+	return &e
+}
+
 func (e *ReceivableCreateDTORateOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICE_PROFILE":
 		fallthrough
 	case "PRICE_LIST":
@@ -29,10 +33,10 @@ func (e *ReceivableCreateDTORateOriginEnum) UnmarshalJSON(data []byte) error {
 	case "FILLED_MANUALLY":
 		fallthrough
 	case "AUTOCALCULATED":
-		*e = ReceivableCreateDTORateOriginEnum(s)
+		*e = ReceivableCreateDTORateOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceivableCreateDTORateOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceivableCreateDTORateOriginEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	ReceivableCreateDTOTypeEnumCat    ReceivableCreateDTOTypeEnum = "CAT"
 )
 
+func (e ReceivableCreateDTOTypeEnum) ToPointer() *ReceivableCreateDTOTypeEnum {
+	return &e
+}
+
 func (e *ReceivableCreateDTOTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIMPLE":
 		fallthrough
 	case "CAT":
-		*e = ReceivableCreateDTOTypeEnum(s)
+		*e = ReceivableCreateDTOTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceivableCreateDTOTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceivableCreateDTOTypeEnum: %v", v)
 	}
 }
 

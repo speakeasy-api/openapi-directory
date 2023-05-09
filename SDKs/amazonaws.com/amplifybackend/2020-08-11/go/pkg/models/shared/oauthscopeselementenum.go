@@ -17,12 +17,16 @@ const (
 	OAuthScopesElementEnumAwsCognitoSigninUserAdmin OAuthScopesElementEnum = "AWS_COGNITO_SIGNIN_USER_ADMIN"
 )
 
+func (e OAuthScopesElementEnum) ToPointer() *OAuthScopesElementEnum {
+	return &e
+}
+
 func (e *OAuthScopesElementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHONE":
 		fallthrough
 	case "EMAIL":
@@ -32,9 +36,9 @@ func (e *OAuthScopesElementEnum) UnmarshalJSON(data []byte) error {
 	case "PROFILE":
 		fallthrough
 	case "AWS_COGNITO_SIGNIN_USER_ADMIN":
-		*e = OAuthScopesElementEnum(s)
+		*e = OAuthScopesElementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OAuthScopesElementEnum: %s", s)
+		return fmt.Errorf("invalid value for OAuthScopesElementEnum: %v", v)
 	}
 }

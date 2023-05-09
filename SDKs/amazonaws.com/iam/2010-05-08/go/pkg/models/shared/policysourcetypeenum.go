@@ -19,12 +19,16 @@ const (
 	PolicySourceTypeEnumNone        PolicySourceTypeEnum = "none"
 )
 
+func (e PolicySourceTypeEnum) ToPointer() *PolicySourceTypeEnum {
+	return &e
+}
+
 func (e *PolicySourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "group":
@@ -38,9 +42,9 @@ func (e *PolicySourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "resource":
 		fallthrough
 	case "none":
-		*e = PolicySourceTypeEnum(s)
+		*e = PolicySourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicySourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicySourceTypeEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	DescribeIpamScopesResultIpamScopesIpamScopeTypeEnumPrivate DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum = "private"
 )
 
+func (e DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum) ToPointer() *DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum {
+	return &e
+}
+
 func (e *DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum(s)
+		*e = DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeIpamScopesResultIpamScopesIpamScopeTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	DescribeIpamScopesResultIpamScopesStateEnumRestoreInProgress DescribeIpamScopesResultIpamScopesStateEnum = "restore-in-progress"
 )
 
+func (e DescribeIpamScopesResultIpamScopesStateEnum) ToPointer() *DescribeIpamScopesResultIpamScopesStateEnum {
+	return &e
+}
+
 func (e *DescribeIpamScopesResultIpamScopesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -78,10 +86,10 @@ func (e *DescribeIpamScopesResultIpamScopesStateEnum) UnmarshalJSON(data []byte)
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = DescribeIpamScopesResultIpamScopesStateEnum(s)
+		*e = DescribeIpamScopesResultIpamScopesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeIpamScopesResultIpamScopesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeIpamScopesResultIpamScopesStateEnum: %v", v)
 	}
 }
 

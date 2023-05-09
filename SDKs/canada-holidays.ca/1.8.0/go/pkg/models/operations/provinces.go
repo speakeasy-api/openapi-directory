@@ -19,12 +19,16 @@ const (
 	ProvincesOptionalEnumFalse ProvincesOptionalEnum = "false"
 )
 
+func (e ProvincesOptionalEnum) ToPointer() *ProvincesOptionalEnum {
+	return &e
+}
+
 func (e *ProvincesOptionalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "0":
@@ -32,10 +36,10 @@ func (e *ProvincesOptionalEnum) UnmarshalJSON(data []byte) error {
 	case "true":
 		fallthrough
 	case "false":
-		*e = ProvincesOptionalEnum(s)
+		*e = ProvincesOptionalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvincesOptionalEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvincesOptionalEnum: %v", v)
 	}
 }
 

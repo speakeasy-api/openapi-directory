@@ -83,7 +83,10 @@ func (s *taxes) GetTaxesJSON(ctx context.Context, request operations.GetTaxesJSO
 // GetTaxesIDJSON - Retrieve a single Tax information.
 func (s *taxes) GetTaxesIDJSON(ctx context.Context, request operations.GetTaxesIDJSONRequest) (*operations.GetTaxesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/taxes/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/taxes/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

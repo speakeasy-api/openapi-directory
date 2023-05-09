@@ -16,17 +16,21 @@ const (
 	UpdateEvaluationXAmzTargetEnumAmazonMl20141212UpdateEvaluation UpdateEvaluationXAmzTargetEnum = "AmazonML_20141212.UpdateEvaluation"
 )
 
+func (e UpdateEvaluationXAmzTargetEnum) ToPointer() *UpdateEvaluationXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEvaluationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.UpdateEvaluation":
-		*e = UpdateEvaluationXAmzTargetEnum(s)
+		*e = UpdateEvaluationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEvaluationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEvaluationXAmzTargetEnum: %v", v)
 	}
 }
 

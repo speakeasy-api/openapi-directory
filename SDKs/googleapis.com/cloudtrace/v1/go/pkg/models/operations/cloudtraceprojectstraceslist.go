@@ -34,12 +34,16 @@ const (
 	CloudtraceProjectsTracesListViewEnumComplete            CloudtraceProjectsTracesListViewEnum = "COMPLETE"
 )
 
+func (e CloudtraceProjectsTracesListViewEnum) ToPointer() *CloudtraceProjectsTracesListViewEnum {
+	return &e
+}
+
 func (e *CloudtraceProjectsTracesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MINIMAL":
@@ -47,10 +51,10 @@ func (e *CloudtraceProjectsTracesListViewEnum) UnmarshalJSON(data []byte) error 
 	case "ROOTSPAN":
 		fallthrough
 	case "COMPLETE":
-		*e = CloudtraceProjectsTracesListViewEnum(s)
+		*e = CloudtraceProjectsTracesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudtraceProjectsTracesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudtraceProjectsTracesListViewEnum: %v", v)
 	}
 }
 

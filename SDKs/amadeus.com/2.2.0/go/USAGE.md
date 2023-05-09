@@ -2,36 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFlightOffersRequest{
-        Adults: 548814,
-        Children: 592845,
-        CurrencyCode: "distinctio",
-        DepartureDate: "2021-03-11",
-        DestinationLocationCode: "nulla",
-        ExcludedAirlineCodes: "corrupti",
-        IncludedAirlineCodes: "illum",
-        Infants: 423655,
-        Max: 623564,
-        MaxPrice: 645894,
-        NonStop: false,
-        OriginLocationCode: "suscipit",
-        ReturnDate: "2022-09-14",
-        TravelClass: "FIRST",
-    }
-
     ctx := context.Background()
-    res, err := s.Shopping.GetFlightOffers(ctx, req)
+    res, err := s.Shopping.GetFlightOffers(ctx, operations.GetFlightOffersRequest{
+        Adults: 548814,
+        Children: sdk.Int64(592845),
+        CurrencyCode: sdk.String("distinctio"),
+        DepartureDate: types.MustDateFromString("2021-03-11"),
+        DestinationLocationCode: "nulla",
+        ExcludedAirlineCodes: sdk.String("corrupti"),
+        IncludedAirlineCodes: sdk.String("illum"),
+        Infants: sdk.Int64(423655),
+        Max: sdk.Int64(623564),
+        MaxPrice: sdk.Int64(645894),
+        NonStop: sdk.Bool(false),
+        OriginLocationCode: "suscipit",
+        ReturnDate: types.MustDateFromString("2022-09-14"),
+        TravelClass: operations.GetFlightOffersTravelClassEnumFirst.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

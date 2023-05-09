@@ -17,12 +17,16 @@ const (
 	PaymentMethodBrandEnumOther           PaymentMethodBrandEnum = "Other"
 )
 
+func (e PaymentMethodBrandEnum) ToPointer() *PaymentMethodBrandEnum {
+	return &e
+}
+
 func (e *PaymentMethodBrandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Visa":
 		fallthrough
 	case "MasterCard":
@@ -30,10 +34,10 @@ func (e *PaymentMethodBrandEnum) UnmarshalJSON(data []byte) error {
 	case "AmericanExpress":
 		fallthrough
 	case "Other":
-		*e = PaymentMethodBrandEnum(s)
+		*e = PaymentMethodBrandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodBrandEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodBrandEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	PaymentMethodTypeEnumWallet PaymentMethodTypeEnum = "Wallet"
 )
 
+func (e PaymentMethodTypeEnum) ToPointer() *PaymentMethodTypeEnum {
+	return &e
+}
+
 func (e *PaymentMethodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Card":
 		fallthrough
 	case "Wallet":
-		*e = PaymentMethodTypeEnum(s)
+		*e = PaymentMethodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentMethodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentMethodTypeEnum: %v", v)
 	}
 }
 

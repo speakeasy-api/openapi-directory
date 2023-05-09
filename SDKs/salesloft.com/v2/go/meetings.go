@@ -88,7 +88,10 @@ func (s *meetings) GetV2MeetingsJSON(ctx context.Context, request operations.Get
 // Updates a meeting, by ID only.
 func (s *meetings) PutV2MeetingsIDJSON(ctx context.Context, request operations.PutV2MeetingsIDJSONRequest) (*operations.PutV2MeetingsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/meetings/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/meetings/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

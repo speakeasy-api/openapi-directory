@@ -39,7 +39,10 @@ func newPipelines(defaultClient, securityClient HTTPClient, serverURL, language,
 // Create a deployment environment level variable.
 func (s *pipelines) CreateDeploymentVariable(ctx context.Context, request operations.CreateDeploymentVariableRequest) (*operations.CreateDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -289,7 +292,10 @@ func (s *pipelines) CreateDeploymentVariable(ctx context.Context, request operat
 // ```
 func (s *pipelines) CreatePipelineForRepository(ctx context.Context, request operations.CreatePipelineForRepositoryRequest) (*operations.CreatePipelineForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -357,9 +363,14 @@ func (s *pipelines) CreatePipelineForRepository(ctx context.Context, request ope
 // CreatePipelineVariableForTeam - Create a variable for a user
 // Create an account level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) CreatePipelineVariableForTeam(ctx context.Context, request operations.CreatePipelineVariableForTeamRequest) (*operations.CreatePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -424,9 +435,14 @@ func (s *pipelines) CreatePipelineVariableForTeam(ctx context.Context, request o
 // CreatePipelineVariableForUser - Create a variable for a user
 // Create a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) CreatePipelineVariableForUser(ctx context.Context, request operations.CreatePipelineVariableForUserRequest) (*operations.CreatePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -492,7 +508,10 @@ func (s *pipelines) CreatePipelineVariableForUser(ctx context.Context, request o
 // Create a workspace level variable.
 func (s *pipelines) CreatePipelineVariableForWorkspace(ctx context.Context, request operations.CreatePipelineVariableForWorkspaceRequest) (*operations.CreatePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -558,7 +577,10 @@ func (s *pipelines) CreatePipelineVariableForWorkspace(ctx context.Context, requ
 // Create a repository level known host.
 func (s *pipelines) CreateRepositoryPipelineKnownHost(ctx context.Context, request operations.CreateRepositoryPipelineKnownHostRequest) (*operations.CreateRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -627,7 +649,10 @@ func (s *pipelines) CreateRepositoryPipelineKnownHost(ctx context.Context, reque
 // Create a schedule for the given repository.
 func (s *pipelines) CreateRepositoryPipelineSchedule(ctx context.Context, request operations.CreateRepositoryPipelineScheduleRequest) (*operations.CreateRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -696,7 +721,10 @@ func (s *pipelines) CreateRepositoryPipelineSchedule(ctx context.Context, reques
 // Create a repository level variable.
 func (s *pipelines) CreateRepositoryPipelineVariable(ctx context.Context, request operations.CreateRepositoryPipelineVariableRequest) (*operations.CreateRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -765,7 +793,10 @@ func (s *pipelines) CreateRepositoryPipelineVariable(ctx context.Context, reques
 // Delete a deployment environment level variable.
 func (s *pipelines) DeleteDeploymentVariable(ctx context.Context, request operations.DeleteDeploymentVariableRequest) (*operations.DeleteDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -810,9 +841,14 @@ func (s *pipelines) DeleteDeploymentVariable(ctx context.Context, request operat
 // DeletePipelineVariableForTeam - Delete a variable for a team
 // Delete a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) DeletePipelineVariableForTeam(ctx context.Context, request operations.DeletePipelineVariableForTeamRequest) (*operations.DeletePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -857,9 +893,14 @@ func (s *pipelines) DeletePipelineVariableForTeam(ctx context.Context, request o
 // DeletePipelineVariableForUser - Delete a variable for a user
 // Delete an account level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) DeletePipelineVariableForUser(ctx context.Context, request operations.DeletePipelineVariableForUserRequest) (*operations.DeletePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -905,7 +946,10 @@ func (s *pipelines) DeletePipelineVariableForUser(ctx context.Context, request o
 // Delete a workspace level variable.
 func (s *pipelines) DeletePipelineVariableForWorkspace(ctx context.Context, request operations.DeletePipelineVariableForWorkspaceRequest) (*operations.DeletePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -951,7 +995,10 @@ func (s *pipelines) DeletePipelineVariableForWorkspace(ctx context.Context, requ
 // Delete a repository cache.
 func (s *pipelines) DeleteRepositoryPipelineCache(ctx context.Context, request operations.DeleteRepositoryPipelineCacheRequest) (*operations.DeleteRepositoryPipelineCacheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -997,7 +1044,10 @@ func (s *pipelines) DeleteRepositoryPipelineCache(ctx context.Context, request o
 // Delete repository cache versions by name.
 func (s *pipelines) DeleteRepositoryPipelineCaches(ctx context.Context, request operations.DeleteRepositoryPipelineCachesRequest) (*operations.DeleteRepositoryPipelineCachesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1047,7 +1097,10 @@ func (s *pipelines) DeleteRepositoryPipelineCaches(ctx context.Context, request 
 // Delete the repository SSH key pair.
 func (s *pipelines) DeleteRepositoryPipelineKeyPair(ctx context.Context, request operations.DeleteRepositoryPipelineKeyPairRequest) (*operations.DeleteRepositoryPipelineKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1093,7 +1146,10 @@ func (s *pipelines) DeleteRepositoryPipelineKeyPair(ctx context.Context, request
 // Delete a repository level known host.
 func (s *pipelines) DeleteRepositoryPipelineKnownHost(ctx context.Context, request operations.DeleteRepositoryPipelineKnownHostRequest) (*operations.DeleteRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1139,7 +1195,10 @@ func (s *pipelines) DeleteRepositoryPipelineKnownHost(ctx context.Context, reque
 // Delete a schedule.
 func (s *pipelines) DeleteRepositoryPipelineSchedule(ctx context.Context, request operations.DeleteRepositoryPipelineScheduleRequest) (*operations.DeleteRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1185,7 +1244,10 @@ func (s *pipelines) DeleteRepositoryPipelineSchedule(ctx context.Context, reques
 // Delete a repository level variable.
 func (s *pipelines) DeleteRepositoryPipelineVariable(ctx context.Context, request operations.DeleteRepositoryPipelineVariableRequest) (*operations.DeleteRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1231,7 +1293,10 @@ func (s *pipelines) DeleteRepositoryPipelineVariable(ctx context.Context, reques
 // Find deployment environment level variables.
 func (s *pipelines) GetDeploymentVariables(ctx context.Context, request operations.GetDeploymentVariablesRequest) (*operations.GetDeploymentVariablesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1276,7 +1341,10 @@ func (s *pipelines) GetDeploymentVariables(ctx context.Context, request operatio
 // This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
 func (s *pipelines) GetOIDCConfiguration(ctx context.Context, request operations.GetOIDCConfigurationRequest) (*operations.GetOIDCConfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/.well-known/openid-configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/.well-known/openid-configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1322,7 +1390,10 @@ func (s *pipelines) GetOIDCConfiguration(ctx context.Context, request operations
 // This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
 func (s *pipelines) GetOIDCKeys(ctx context.Context, request operations.GetOIDCKeysRequest) (*operations.GetOIDCKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/keys.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/keys.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1370,7 +1441,10 @@ func (s *pipelines) GetOIDCKeys(ctx context.Context, request operations.GetOIDCK
 // This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
 func (s *pipelines) GetPipelineContainerLog(ctx context.Context, request operations.GetPipelineContainerLogRequest) (*operations.GetPipelineContainerLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/logs/{log_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/logs/{log_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1416,7 +1490,10 @@ func (s *pipelines) GetPipelineContainerLog(ctx context.Context, request operati
 // Retrieve a specified pipeline
 func (s *pipelines) GetPipelineForRepository(ctx context.Context, request operations.GetPipelineForRepositoryRequest) (*operations.GetPipelineForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1471,7 +1548,10 @@ func (s *pipelines) GetPipelineForRepository(ctx context.Context, request operat
 // Retrieve a given step of a pipeline.
 func (s *pipelines) GetPipelineStepForRepository(ctx context.Context, request operations.GetPipelineStepForRepositoryRequest) (*operations.GetPipelineStepForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1528,7 +1608,10 @@ func (s *pipelines) GetPipelineStepForRepository(ctx context.Context, request op
 // This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
 func (s *pipelines) GetPipelineStepLogForRepository(ctx context.Context, request operations.GetPipelineStepLogForRepositoryRequest) (*operations.GetPipelineStepLogForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/log", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/log", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1578,7 +1661,10 @@ func (s *pipelines) GetPipelineStepLogForRepository(ctx context.Context, request
 // Find steps for the given pipeline.
 func (s *pipelines) GetPipelineStepsForRepository(ctx context.Context, request operations.GetPipelineStepsForRepositoryRequest) (*operations.GetPipelineStepsForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1622,7 +1708,10 @@ func (s *pipelines) GetPipelineStepsForRepository(ctx context.Context, request o
 // GetPipelineTestReportTestCaseReasons - Get test case reasons (output) for a given test case in a step of a pipeline.
 func (s *pipelines) GetPipelineTestReportTestCaseReasons(ctx context.Context, request operations.GetPipelineTestReportTestCaseReasonsRequest) (*operations.GetPipelineTestReportTestCaseReasonsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases/{test_case_uuid}/test_case_reasons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases/{test_case_uuid}/test_case_reasons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1667,7 +1756,10 @@ func (s *pipelines) GetPipelineTestReportTestCaseReasons(ctx context.Context, re
 // GetPipelineTestReportTestCases - Get test cases for a given step of a pipeline.
 func (s *pipelines) GetPipelineTestReportTestCases(ctx context.Context, request operations.GetPipelineTestReportTestCasesRequest) (*operations.GetPipelineTestReportTestCasesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1712,7 +1804,10 @@ func (s *pipelines) GetPipelineTestReportTestCases(ctx context.Context, request 
 // GetPipelineTestReports - Get a summary of test reports for a given step of a pipeline.
 func (s *pipelines) GetPipelineTestReports(ctx context.Context, request operations.GetPipelineTestReportsRequest) (*operations.GetPipelineTestReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1757,9 +1852,14 @@ func (s *pipelines) GetPipelineTestReports(ctx context.Context, request operatio
 // GetPipelineVariableForTeam - Get a variable for a team
 // Retrieve a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) GetPipelineVariableForTeam(ctx context.Context, request operations.GetPipelineVariableForTeamRequest) (*operations.GetPipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1813,9 +1913,14 @@ func (s *pipelines) GetPipelineVariableForTeam(ctx context.Context, request oper
 // GetPipelineVariableForUser - Get a variable for a user
 // Retrieve a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) GetPipelineVariableForUser(ctx context.Context, request operations.GetPipelineVariableForUserRequest) (*operations.GetPipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1870,7 +1975,10 @@ func (s *pipelines) GetPipelineVariableForUser(ctx context.Context, request oper
 // Retrieve a workspace level variable.
 func (s *pipelines) GetPipelineVariableForWorkspace(ctx context.Context, request operations.GetPipelineVariableForWorkspaceRequest) (*operations.GetPipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1924,9 +2032,14 @@ func (s *pipelines) GetPipelineVariableForWorkspace(ctx context.Context, request
 // GetPipelineVariablesForTeam - List variables for an account
 // Find account level variables.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) GetPipelineVariablesForTeam(ctx context.Context, request operations.GetPipelineVariablesForTeamRequest) (*operations.GetPipelineVariablesForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1970,9 +2083,14 @@ func (s *pipelines) GetPipelineVariablesForTeam(ctx context.Context, request ope
 // GetPipelineVariablesForUser - List variables for a user
 // Find user level variables.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) GetPipelineVariablesForUser(ctx context.Context, request operations.GetPipelineVariablesForUserRequest) (*operations.GetPipelineVariablesForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2017,7 +2135,10 @@ func (s *pipelines) GetPipelineVariablesForUser(ctx context.Context, request ope
 // Find workspace level variables.
 func (s *pipelines) GetPipelineVariablesForWorkspace(ctx context.Context, request operations.GetPipelineVariablesForWorkspaceRequest) (*operations.GetPipelineVariablesForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2062,7 +2183,10 @@ func (s *pipelines) GetPipelineVariablesForWorkspace(ctx context.Context, reques
 // Find pipelines
 func (s *pipelines) GetPipelinesForRepository(ctx context.Context, request operations.GetPipelinesForRepositoryRequest) (*operations.GetPipelinesForRepositoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2107,7 +2231,10 @@ func (s *pipelines) GetPipelinesForRepository(ctx context.Context, request opera
 // Retrieve the URI of the content of the specified cache.
 func (s *pipelines) GetRepositoryPipelineCacheContentURI(ctx context.Context, request operations.GetRepositoryPipelineCacheContentURIRequest) (*operations.GetRepositoryPipelineCacheContentURIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}/content-uri", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}/content-uri", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2162,7 +2289,10 @@ func (s *pipelines) GetRepositoryPipelineCacheContentURI(ctx context.Context, re
 // Retrieve the repository pipelines caches.
 func (s *pipelines) GetRepositoryPipelineCaches(ctx context.Context, request operations.GetRepositoryPipelineCachesRequest) (*operations.GetRepositoryPipelineCachesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2217,7 +2347,10 @@ func (s *pipelines) GetRepositoryPipelineCaches(ctx context.Context, request ope
 // Retrieve the repository pipelines configuration.
 func (s *pipelines) GetRepositoryPipelineConfig(ctx context.Context, request operations.GetRepositoryPipelineConfigRequest) (*operations.GetRepositoryPipelineConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2262,7 +2395,10 @@ func (s *pipelines) GetRepositoryPipelineConfig(ctx context.Context, request ope
 // Retrieve a repository level known host.
 func (s *pipelines) GetRepositoryPipelineKnownHost(ctx context.Context, request operations.GetRepositoryPipelineKnownHostRequest) (*operations.GetRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2317,7 +2453,10 @@ func (s *pipelines) GetRepositoryPipelineKnownHost(ctx context.Context, request 
 // Find repository level known hosts.
 func (s *pipelines) GetRepositoryPipelineKnownHosts(ctx context.Context, request operations.GetRepositoryPipelineKnownHostsRequest) (*operations.GetRepositoryPipelineKnownHostsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2362,7 +2501,10 @@ func (s *pipelines) GetRepositoryPipelineKnownHosts(ctx context.Context, request
 // Retrieve a schedule by its UUID.
 func (s *pipelines) GetRepositoryPipelineSchedule(ctx context.Context, request operations.GetRepositoryPipelineScheduleRequest) (*operations.GetRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2417,7 +2559,10 @@ func (s *pipelines) GetRepositoryPipelineSchedule(ctx context.Context, request o
 // Retrieve the executions of a given schedule.
 func (s *pipelines) GetRepositoryPipelineScheduleExecutions(ctx context.Context, request operations.GetRepositoryPipelineScheduleExecutionsRequest) (*operations.GetRepositoryPipelineScheduleExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2472,7 +2617,10 @@ func (s *pipelines) GetRepositoryPipelineScheduleExecutions(ctx context.Context,
 // Retrieve the configured schedules for the given repository.
 func (s *pipelines) GetRepositoryPipelineSchedules(ctx context.Context, request operations.GetRepositoryPipelineSchedulesRequest) (*operations.GetRepositoryPipelineSchedulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2527,7 +2675,10 @@ func (s *pipelines) GetRepositoryPipelineSchedules(ctx context.Context, request 
 // Retrieve the repository SSH key pair excluding the SSH private key. The private key is a write only field and will never be exposed in the logs or the REST API.
 func (s *pipelines) GetRepositoryPipelineSSHKeyPair(ctx context.Context, request operations.GetRepositoryPipelineSSHKeyPairRequest) (*operations.GetRepositoryPipelineSSHKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2582,7 +2733,10 @@ func (s *pipelines) GetRepositoryPipelineSSHKeyPair(ctx context.Context, request
 // Retrieve a repository level variable.
 func (s *pipelines) GetRepositoryPipelineVariable(ctx context.Context, request operations.GetRepositoryPipelineVariableRequest) (*operations.GetRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2637,7 +2791,10 @@ func (s *pipelines) GetRepositoryPipelineVariable(ctx context.Context, request o
 // Find repository level variables.
 func (s *pipelines) GetRepositoryPipelineVariables(ctx context.Context, request operations.GetRepositoryPipelineVariablesRequest) (*operations.GetRepositoryPipelineVariablesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2682,7 +2839,10 @@ func (s *pipelines) GetRepositoryPipelineVariables(ctx context.Context, request 
 // Signal the stop of a pipeline and all of its steps that not have completed yet.
 func (s *pipelines) StopPipeline(ctx context.Context, request operations.StopPipelineRequest) (*operations.StopPipelineResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/stopPipeline", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/stopPipeline", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2730,7 +2890,10 @@ func (s *pipelines) StopPipeline(ctx context.Context, request operations.StopPip
 // Update a deployment environment level variable.
 func (s *pipelines) UpdateDeploymentVariable(ctx context.Context, request operations.UpdateDeploymentVariableRequest) (*operations.UpdateDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2794,9 +2957,14 @@ func (s *pipelines) UpdateDeploymentVariable(ctx context.Context, request operat
 // UpdatePipelineVariableForTeam - Update a variable for a team
 // Update a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) UpdatePipelineVariableForTeam(ctx context.Context, request operations.UpdatePipelineVariableForTeamRequest) (*operations.UpdatePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{username}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2860,9 +3028,14 @@ func (s *pipelines) UpdatePipelineVariableForTeam(ctx context.Context, request o
 // UpdatePipelineVariableForUser - Update a variable for a user
 // Update a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *pipelines) UpdatePipelineVariableForUser(ctx context.Context, request operations.UpdatePipelineVariableForUserRequest) (*operations.UpdatePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2927,7 +3100,10 @@ func (s *pipelines) UpdatePipelineVariableForUser(ctx context.Context, request o
 // Update a workspace level variable.
 func (s *pipelines) UpdatePipelineVariableForWorkspace(ctx context.Context, request operations.UpdatePipelineVariableForWorkspaceRequest) (*operations.UpdatePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2992,7 +3168,10 @@ func (s *pipelines) UpdatePipelineVariableForWorkspace(ctx context.Context, requ
 // Update the next build number that should be assigned to a pipeline. The next build number that will be configured has to be strictly higher than the current latest build number for this repository.
 func (s *pipelines) UpdateRepositoryBuildNumber(ctx context.Context, request operations.UpdateRepositoryBuildNumberRequest) (*operations.UpdateRepositoryBuildNumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/build_number", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/build_number", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3059,7 +3238,10 @@ func (s *pipelines) UpdateRepositoryBuildNumber(ctx context.Context, request ope
 // Update the pipelines configuration for a repository.
 func (s *pipelines) UpdateRepositoryPipelineConfig(ctx context.Context, request operations.UpdateRepositoryPipelineConfigRequest) (*operations.UpdateRepositoryPipelineConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3114,7 +3296,10 @@ func (s *pipelines) UpdateRepositoryPipelineConfig(ctx context.Context, request 
 // Create or update the repository SSH key pair. The private key will be set as a default SSH identity in your build container.
 func (s *pipelines) UpdateRepositoryPipelineKeyPair(ctx context.Context, request operations.UpdateRepositoryPipelineKeyPairRequest) (*operations.UpdateRepositoryPipelineKeyPairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3179,7 +3364,10 @@ func (s *pipelines) UpdateRepositoryPipelineKeyPair(ctx context.Context, request
 // Update a repository level known host.
 func (s *pipelines) UpdateRepositoryPipelineKnownHost(ctx context.Context, request operations.UpdateRepositoryPipelineKnownHostRequest) (*operations.UpdateRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3244,7 +3432,10 @@ func (s *pipelines) UpdateRepositoryPipelineKnownHost(ctx context.Context, reque
 // Update a schedule.
 func (s *pipelines) UpdateRepositoryPipelineSchedule(ctx context.Context, request operations.UpdateRepositoryPipelineScheduleRequest) (*operations.UpdateRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3309,7 +3500,10 @@ func (s *pipelines) UpdateRepositoryPipelineSchedule(ctx context.Context, reques
 // Update a repository level variable.
 func (s *pipelines) UpdateRepositoryPipelineVariable(ctx context.Context, request operations.UpdateRepositoryPipelineVariableRequest) (*operations.UpdateRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -21,12 +21,16 @@ const (
 	AttributeNameEnumFuture           AttributeNameEnum = "FUTURE"
 )
 
+func (e AttributeNameEnum) ToPointer() *AttributeNameEnum {
+	return &e
+}
+
 func (e *AttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGN":
 		fallthrough
 	case "SYMPTOM":
@@ -44,9 +48,9 @@ func (e *AttributeNameEnum) UnmarshalJSON(data []byte) error {
 	case "PAST_HISTORY":
 		fallthrough
 	case "FUTURE":
-		*e = AttributeNameEnum(s)
+		*e = AttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributeNameEnum: %v", v)
 	}
 }

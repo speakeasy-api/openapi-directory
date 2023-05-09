@@ -16,21 +16,25 @@ const (
 	GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnumDataStudio       GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum = "DATA_STUDIO"
 )
 
+func (e GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum) ToPointer() *GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_ADDON_TYPE":
 		fallthrough
 	case "GMAIL":
 		fallthrough
 	case "DATA_STUDIO":
-		*e = GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum(s)
+		*e = GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsScriptTypeAddOnEntryPointAddOnTypeEnum: %v", v)
 	}
 }
 

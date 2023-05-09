@@ -36,7 +36,10 @@ func newActions(defaultClient, securityClient HTTPClient, serverURL, language, s
 // You need to provide the <b>Device ID</b> and <b>Monitor Class</b> parameters to identify the device:<br>- Use the <b>/hardware/devices</b> service in the <b>Device</b> section to retrieve the <b>Device ID</b> of any device.<br>- Use the <b>/hardware/device-monitors/{deviceId}</b> service in the <b>Device</b> section to retrieve the <b>Monitor Class</b> of a device.
 func (s *actions) CollectNow(ctx context.Context, request operations.CollectNowRequest) (*operations.CollectNowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/collect-now", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/collect-now", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *actions) CollectNow(ctx context.Context, request operations.CollectNowR
 // You need to provide the <b>Device ID</b> to identify the device:<br>- Use the <b>/hardware/devices</b> service in the <b>Device</b> section to retrieve the <b>Device ID</b> of a device.
 func (s *actions) Rediscover(ctx context.Context, request operations.RediscoverRequest) (*operations.RediscoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/rediscover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/rediscover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *actions) Rediscover(ctx context.Context, request operations.RediscoverR
 // Launches a 'Reinitialize KM' command for the following parameters:<br>- resetDiscoveryAndPollingIntervals<br>- resetAlertAfterNTimes<br>- resetAlertActions<br>- resetOtherA<br>- resetSettings<br>- resetDebugMode<br>- resetRemovedPausedObjectList<br>- resetReportSettings<br>- resetJavaSettings<br>- resetThresholds<br><br>You need to provide the <b>Device ID</b> to identify the device:<br>- Use the <b>/hardware/devices</b> service in the <b>Device</b> section to retrieve the <b>Device ID</b> of a device.
 func (s *actions) Reinitialize(ctx context.Context, request operations.ReinitializeRequest) (*operations.ReinitializeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/reinitialize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/reinitialize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReinitializeActionConfiguration", "json")
 	if err != nil {
@@ -197,7 +206,10 @@ func (s *actions) Reinitialize(ctx context.Context, request operations.Reinitial
 // You need to provide the <b>Device ID</b>, the <b>Monitor Class</b> and the <b>Monitor SID</b> parameters:<br>- Use the <b>/hardware/devices</b> service in the <b>Device</b> section to retrieve the <b>Device ID</b> of any device.<br>- Use the <b>/hardware/device-monitors/{deviceId}</b> service in the <b>Device</b> section to retrieve the <b>Monitor Class</b> and the <b>Monitor SID</b> for a device.<br><br>(Example:"path":"/MS_HW_MAIN/10025150" where <em>MS_HW_MAIN</em> is the Monitor Class and <em>10025150</em> is the Monitor SID).
 func (s *actions) Remove(ctx context.Context, request operations.RemoveRequest) (*operations.RemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/remove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/remove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -250,7 +262,10 @@ func (s *actions) Remove(ctx context.Context, request operations.RemoveRequest) 
 // Sets the Error Count parameter to 0.<br><br>You need to provide the <b>Device ID</b>, the <b>Monitor Class</b> and the <b>Monitor SID</b> parameters:<br>- Use the <b>/hardware/devices</b> service in the <b>Device</b> section to retrieve the <b>Device ID</b> of any device.<br>- Use the <b>/hardware/device-monitors/{deviceId}</b> service in the <b>Device</b> section to retrieve the <b>Monitor Class</b> and the <b>Monitor SID</b> for a device.<br><br>(Example:"path":"/MS_HW_MAIN/10025150" where <em>MS_HW_MAIN</em> is the Monitor Class and <em>10025150</em> is the monitorSid).
 func (s *actions) Reset(ctx context.Context, request operations.ResetRequest) (*operations.ResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/reset-error-count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hardware/actions/{deviceId}/reset-error-count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

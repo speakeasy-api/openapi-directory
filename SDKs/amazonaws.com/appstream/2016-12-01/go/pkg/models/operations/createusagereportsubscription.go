@@ -16,17 +16,21 @@ const (
 	CreateUsageReportSubscriptionXAmzTargetEnumPhotonAdminProxyServiceCreateUsageReportSubscription CreateUsageReportSubscriptionXAmzTargetEnum = "PhotonAdminProxyService.CreateUsageReportSubscription"
 )
 
+func (e CreateUsageReportSubscriptionXAmzTargetEnum) ToPointer() *CreateUsageReportSubscriptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateUsageReportSubscriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.CreateUsageReportSubscription":
-		*e = CreateUsageReportSubscriptionXAmzTargetEnum(s)
+		*e = CreateUsageReportSubscriptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUsageReportSubscriptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUsageReportSubscriptionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteClientVpnEndpointActionEnumDeleteClientVpnEndpoint GETDeleteClientVpnEndpointActionEnum = "DeleteClientVpnEndpoint"
 )
 
+func (e GETDeleteClientVpnEndpointActionEnum) ToPointer() *GETDeleteClientVpnEndpointActionEnum {
+	return &e
+}
+
 func (e *GETDeleteClientVpnEndpointActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteClientVpnEndpoint":
-		*e = GETDeleteClientVpnEndpointActionEnum(s)
+		*e = GETDeleteClientVpnEndpointActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteClientVpnEndpointActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteClientVpnEndpointActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteClientVpnEndpointVersionEnumTwoThousandAndSixteen1115 GETDeleteClientVpnEndpointVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteClientVpnEndpointVersionEnum) ToPointer() *GETDeleteClientVpnEndpointVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteClientVpnEndpointVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteClientVpnEndpointVersionEnum(s)
+		*e = GETDeleteClientVpnEndpointVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteClientVpnEndpointVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteClientVpnEndpointVersionEnum: %v", v)
 	}
 }
 

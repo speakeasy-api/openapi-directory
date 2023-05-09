@@ -14,18 +14,22 @@ const (
 	SlotTypeFilterOperatorEnumEq SlotTypeFilterOperatorEnum = "EQ"
 )
 
+func (e SlotTypeFilterOperatorEnum) ToPointer() *SlotTypeFilterOperatorEnum {
+	return &e
+}
+
 func (e *SlotTypeFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CO":
 		fallthrough
 	case "EQ":
-		*e = SlotTypeFilterOperatorEnum(s)
+		*e = SlotTypeFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlotTypeFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SlotTypeFilterOperatorEnum: %v", v)
 	}
 }

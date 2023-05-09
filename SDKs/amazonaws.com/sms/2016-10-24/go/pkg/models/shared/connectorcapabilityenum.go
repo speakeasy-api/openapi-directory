@@ -17,12 +17,16 @@ const (
 	ConnectorCapabilityEnumSmsOptimized     ConnectorCapabilityEnum = "SMS_OPTIMIZED"
 )
 
+func (e ConnectorCapabilityEnum) ToPointer() *ConnectorCapabilityEnum {
+	return &e
+}
+
 func (e *ConnectorCapabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VSPHERE":
 		fallthrough
 	case "SCVMM":
@@ -32,9 +36,9 @@ func (e *ConnectorCapabilityEnum) UnmarshalJSON(data []byte) error {
 	case "SNAPSHOT_BATCHING":
 		fallthrough
 	case "SMS_OPTIMIZED":
-		*e = ConnectorCapabilityEnum(s)
+		*e = ConnectorCapabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectorCapabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectorCapabilityEnum: %v", v)
 	}
 }

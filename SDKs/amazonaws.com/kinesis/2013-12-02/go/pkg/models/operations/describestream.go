@@ -16,17 +16,21 @@ const (
 	DescribeStreamXAmzTargetEnumKinesis20131202DescribeStream DescribeStreamXAmzTargetEnum = "Kinesis_20131202.DescribeStream"
 )
 
+func (e DescribeStreamXAmzTargetEnum) ToPointer() *DescribeStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.DescribeStream":
-		*e = DescribeStreamXAmzTargetEnum(s)
+		*e = DescribeStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeStreamXAmzTargetEnum: %v", v)
 	}
 }
 

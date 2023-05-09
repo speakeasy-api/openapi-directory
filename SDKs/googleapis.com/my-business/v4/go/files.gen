@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -230,4 +231,10 @@ pkg/models/shared/searchchainsresponse.go
 pkg/models/shared/reportgooglelocationrequest.go
 pkg/models/shared/searchgooglelocationsresponse.go
 pkg/models/shared/searchgooglelocationsrequest.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/attributes/README.md
+docs/categories/README.md
+docs/chains/README.md
+docs/googlelocations/README.md
 USAGE.md

@@ -45,7 +45,10 @@ func newCommonServices(defaultClient, securityClient HTTPClient, serverURL, lang
 // Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
 func (s *commonServices) DeleteSigningBasket(ctx context.Context, request operations.DeleteSigningBasketRequest, security operations.DeleteSigningBasketSecurity) (*operations.DeleteSigningBasketResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -211,7 +214,10 @@ func (s *commonServices) DeleteSigningBasket(ctx context.Context, request operat
 // This method returns the SCA status of a consent initiation's authorisation sub-resource.
 func (s *commonServices) GetConsentScaStatus(ctx context.Context, request operations.GetConsentScaStatusRequest, security operations.GetConsentScaStatusSecurity) (*operations.GetConsentScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -421,7 +427,10 @@ func (s *commonServices) GetConsentScaStatus(ctx context.Context, request operat
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
 func (s *commonServices) GetPaymentCancellationScaStatus(ctx context.Context, request operations.GetPaymentCancellationScaStatusRequest, security operations.GetPaymentCancellationScaStatusSecurity) (*operations.GetPaymentCancellationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -599,7 +608,10 @@ func (s *commonServices) GetPaymentCancellationScaStatus(ctx context.Context, re
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
 func (s *commonServices) GetPaymentInitiationAuthorisation(ctx context.Context, request operations.GetPaymentInitiationAuthorisationRequest, security operations.GetPaymentInitiationAuthorisationSecurity) (*operations.GetPaymentInitiationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -775,7 +787,10 @@ func (s *commonServices) GetPaymentInitiationAuthorisation(ctx context.Context, 
 // This method returns the SCA status of a payment initiation's authorisation sub-resource.
 func (s *commonServices) GetPaymentInitiationScaStatus(ctx context.Context, request operations.GetPaymentInitiationScaStatusRequest, security operations.GetPaymentInitiationScaStatusSecurity) (*operations.GetPaymentInitiationScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -953,7 +968,10 @@ func (s *commonServices) GetPaymentInitiationScaStatus(ctx context.Context, requ
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
 func (s *commonServices) GetSigningBasketAuthorisation(ctx context.Context, request operations.GetSigningBasketAuthorisationRequest, security operations.GetSigningBasketAuthorisationSecurity) (*operations.GetSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1129,7 +1147,10 @@ func (s *commonServices) GetSigningBasketAuthorisation(ctx context.Context, requ
 // This method returns the SCA status of a signing basket's authorisation sub-resource.
 func (s *commonServices) GetSigningBasketScaStatus(ctx context.Context, request operations.GetSigningBasketScaStatusRequest, security operations.GetSigningBasketScaStatusSecurity) (*operations.GetSigningBasketScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1305,7 +1326,10 @@ func (s *commonServices) GetSigningBasketScaStatus(ctx context.Context, request 
 // Returns the status of a signing basket object.
 func (s *commonServices) GetSigningBasketStatus(ctx context.Context, request operations.GetSigningBasketStatusRequest, security operations.GetSigningBasketStatusSecurity) (*operations.GetSigningBasketStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1512,7 +1536,10 @@ func (s *commonServices) GetSigningBasketStatus(ctx context.Context, request ope
 //   - The signing basket needs to be authorised yet.
 func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request operations.StartConsentAuthorisationRequest, security operations.StartConsentAuthorisationSecurity) (*operations.StartConsentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1761,7 +1788,10 @@ func (s *commonServices) StartConsentAuthorisation(ctx context.Context, request 
 //   - The signing basket needs to be authorised yet.
 func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request operations.StartPaymentAuthorisationRequest, security operations.StartPaymentAuthorisationSecurity) (*operations.StartPaymentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1975,7 +2005,10 @@ func (s *commonServices) StartPaymentAuthorisation(ctx context.Context, request 
 //   - The signing basket needs to be authorised yet.
 func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx context.Context, request operations.StartPaymentInitiationCancellationAuthorisationRequest, security operations.StartPaymentInitiationCancellationAuthorisationSecurity) (*operations.StartPaymentInitiationCancellationAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2190,7 +2223,10 @@ func (s *commonServices) StartPaymentInitiationCancellationAuthorisation(ctx con
 //   - The signing basket needs to be authorised yet.
 func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, request operations.StartSigningBasketAuthorisationRequest, security operations.StartSigningBasketAuthorisationSecurity) (*operations.StartSigningBasketAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2410,7 +2446,10 @@ func (s *commonServices) StartSigningBasketAuthorisation(ctx context.Context, re
 //     Maybe in a later version the access path will change.
 func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request operations.UpdateConsentsPsuDataRequest, security operations.UpdateConsentsPsuDataSecurity) (*operations.UpdateConsentsPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2664,7 +2703,10 @@ func (s *commonServices) UpdateConsentsPsuData(ctx context.Context, request oper
 //     Maybe in a later version the access path will change.
 func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, request operations.UpdatePaymentCancellationPsuDataRequest, security operations.UpdatePaymentCancellationPsuDataSecurity) (*operations.UpdatePaymentCancellationPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/cancellation-authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2884,7 +2926,10 @@ func (s *commonServices) UpdatePaymentCancellationPsuData(ctx context.Context, r
 //     Maybe in a later version the access path will change.
 func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request operations.UpdatePaymentPsuDataRequest, security operations.UpdatePaymentPsuDataSecurity) (*operations.UpdatePaymentPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{payment-service}/{payment-product}/{paymentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3104,7 +3149,10 @@ func (s *commonServices) UpdatePaymentPsuData(ctx context.Context, request opera
 //     Maybe in a later version the access path will change.
 func (s *commonServices) UpdateSigningBasketPsuData(ctx context.Context, request operations.UpdateSigningBasketPsuDataRequest, security operations.UpdateSigningBasketPsuDataSecurity) (*operations.UpdateSigningBasketPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

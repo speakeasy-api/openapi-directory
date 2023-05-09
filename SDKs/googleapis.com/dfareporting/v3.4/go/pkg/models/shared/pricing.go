@@ -17,21 +17,25 @@ const (
 	PricingCapCostTypeEnumPlanningPlacementCapCostTypeCumulative PricingCapCostTypeEnum = "PLANNING_PLACEMENT_CAP_COST_TYPE_CUMULATIVE"
 )
 
+func (e PricingCapCostTypeEnum) ToPointer() *PricingCapCostTypeEnum {
+	return &e
+}
+
 func (e *PricingCapCostTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PLACEMENT_CAP_COST_TYPE_NONE":
 		fallthrough
 	case "PLANNING_PLACEMENT_CAP_COST_TYPE_MONTHLY":
 		fallthrough
 	case "PLANNING_PLACEMENT_CAP_COST_TYPE_CUMULATIVE":
-		*e = PricingCapCostTypeEnum(s)
+		*e = PricingCapCostTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingCapCostTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingCapCostTypeEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	PricingGroupTypeEnumPlanningPlacementGroupTypeRoadblock PricingGroupTypeEnum = "PLANNING_PLACEMENT_GROUP_TYPE_ROADBLOCK"
 )
 
+func (e PricingGroupTypeEnum) ToPointer() *PricingGroupTypeEnum {
+	return &e
+}
+
 func (e *PricingGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PLACEMENT_GROUP_TYPE_PACKAGE":
 		fallthrough
 	case "PLANNING_PLACEMENT_GROUP_TYPE_ROADBLOCK":
-		*e = PricingGroupTypeEnum(s)
+		*e = PricingGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingGroupTypeEnum: %v", v)
 	}
 }
 
@@ -73,12 +81,16 @@ const (
 	PricingPricingTypeEnumPlanningPlacementPricingTypeCpmActiveview       PricingPricingTypeEnum = "PLANNING_PLACEMENT_PRICING_TYPE_CPM_ACTIVEVIEW"
 )
 
+func (e PricingPricingTypeEnum) ToPointer() *PricingPricingTypeEnum {
+	return &e
+}
+
 func (e *PricingPricingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANNING_PLACEMENT_PRICING_TYPE_IMPRESSIONS":
 		fallthrough
 	case "PLANNING_PLACEMENT_PRICING_TYPE_CPM":
@@ -94,10 +106,10 @@ func (e *PricingPricingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PLANNING_PLACEMENT_PRICING_TYPE_FLAT_RATE_CLICKS":
 		fallthrough
 	case "PLANNING_PLACEMENT_PRICING_TYPE_CPM_ACTIVEVIEW":
-		*e = PricingPricingTypeEnum(s)
+		*e = PricingPricingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingPricingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingPricingTypeEnum: %v", v)
 	}
 }
 

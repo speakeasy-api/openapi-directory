@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1ValidationSingleRequest{
-        Email: "Larue_Rau85@yahoo.com",
-        Format: "xml",
-        Key: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GetV1ValidationSingle(ctx, req)
+    res, err := s.GetV1ValidationSingle(ctx, operations.GetV1ValidationSingleRequest{
+        Email: "Larue_Rau85@yahoo.com",
+        Format: operations.GetV1ValidationSingleFormatEnumXML.ToPointer(),
+        Key: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }

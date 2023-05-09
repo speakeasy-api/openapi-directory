@@ -94,7 +94,10 @@ func (s *paymentPolicy) CreatePaymentPolicy(ctx context.Context, request shared.
 // DeletePaymentPolicy - This method deletes a payment policy. Supply the ID of the policy you want to delete in the <b>paymentPolicyId</b> path parameter.
 func (s *paymentPolicy) DeletePaymentPolicy(ctx context.Context, request operations.DeletePaymentPolicyRequest, security operations.DeletePaymentPolicySecurity) (*operations.DeletePaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -188,7 +191,10 @@ func (s *paymentPolicy) GetPaymentPolicies(ctx context.Context, request operatio
 // GetPaymentPolicy - This method retrieves the complete details of a payment policy. Supply the ID of the policy you want to retrieve using the <b>paymentPolicyId</b> path parameter.
 func (s *paymentPolicy) GetPaymentPolicy(ctx context.Context, request operations.GetPaymentPolicyRequest, security operations.GetPaymentPolicySecurity) (*operations.GetPaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *paymentPolicy) GetPaymentPolicyByName(ctx context.Context, request oper
 // UpdatePaymentPolicy - This method updates an existing payment policy. Specify the policy you want to update using the <b>payment_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
 func (s *paymentPolicy) UpdatePaymentPolicy(ctx context.Context, request operations.UpdatePaymentPolicyRequest, security operations.UpdatePaymentPolicySecurity) (*operations.UpdatePaymentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment_policy/{payment_policy_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentPolicyRequest", "json")
 	if err != nil {

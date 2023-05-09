@@ -76,6 +76,7 @@ func (s *health) GetUtilityV1HealthHeartbeat(ctx context.Context) (*operations.G
 
 	return res, nil
 }
+
 func (s *health) GetUtilityV1HealthThreadinfo(ctx context.Context) (*operations.GetUtilityV1HealthThreadinfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/utility/v1/health/threadinfo"

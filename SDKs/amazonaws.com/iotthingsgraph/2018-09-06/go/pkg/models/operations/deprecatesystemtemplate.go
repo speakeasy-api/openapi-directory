@@ -16,17 +16,21 @@ const (
 	DeprecateSystemTemplateXAmzTargetEnumIotThingsGraphFrontEndServiceDeprecateSystemTemplate DeprecateSystemTemplateXAmzTargetEnum = "IotThingsGraphFrontEndService.DeprecateSystemTemplate"
 )
 
+func (e DeprecateSystemTemplateXAmzTargetEnum) ToPointer() *DeprecateSystemTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeprecateSystemTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DeprecateSystemTemplate":
-		*e = DeprecateSystemTemplateXAmzTargetEnum(s)
+		*e = DeprecateSystemTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeprecateSystemTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeprecateSystemTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

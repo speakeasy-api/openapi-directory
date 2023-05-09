@@ -14,18 +14,22 @@ const (
 	StepCancellationOptionEnumTerminateProcess StepCancellationOptionEnum = "TERMINATE_PROCESS"
 )
 
+func (e StepCancellationOptionEnum) ToPointer() *StepCancellationOptionEnum {
+	return &e
+}
+
 func (e *StepCancellationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEND_INTERRUPT":
 		fallthrough
 	case "TERMINATE_PROCESS":
-		*e = StepCancellationOptionEnum(s)
+		*e = StepCancellationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StepCancellationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for StepCancellationOptionEnum: %v", v)
 	}
 }

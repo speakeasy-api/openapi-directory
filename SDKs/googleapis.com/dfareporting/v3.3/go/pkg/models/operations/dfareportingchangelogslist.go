@@ -37,12 +37,16 @@ const (
 	DfareportingChangeLogsListActionEnumActionShare         DfareportingChangeLogsListActionEnum = "ACTION_SHARE"
 )
 
+func (e DfareportingChangeLogsListActionEnum) ToPointer() *DfareportingChangeLogsListActionEnum {
+	return &e
+}
+
 func (e *DfareportingChangeLogsListActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_CREATE":
 		fallthrough
 	case "ACTION_UPDATE":
@@ -76,10 +80,10 @@ func (e *DfareportingChangeLogsListActionEnum) UnmarshalJSON(data []byte) error 
 	case "ACTION_EMAIL_TAGS":
 		fallthrough
 	case "ACTION_SHARE":
-		*e = DfareportingChangeLogsListActionEnum(s)
+		*e = DfareportingChangeLogsListActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingChangeLogsListActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingChangeLogsListActionEnum: %v", v)
 	}
 }
 
@@ -129,12 +133,16 @@ const (
 	DfareportingChangeLogsListObjectTypeEnumObjectFloodlightDv360Link     DfareportingChangeLogsListObjectTypeEnum = "OBJECT_FLOODLIGHT_DV360_LINK"
 )
 
+func (e DfareportingChangeLogsListObjectTypeEnum) ToPointer() *DfareportingChangeLogsListObjectTypeEnum {
+	return &e
+}
+
 func (e *DfareportingChangeLogsListObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_ADVERTISER":
 		fallthrough
 	case "OBJECT_FLOODLIGHT_CONFIGURATION":
@@ -214,10 +222,10 @@ func (e *DfareportingChangeLogsListObjectTypeEnum) UnmarshalJSON(data []byte) er
 	case "OBJECT_SEARCH_LIFT_STUDY":
 		fallthrough
 	case "OBJECT_FLOODLIGHT_DV360_LINK":
-		*e = DfareportingChangeLogsListObjectTypeEnum(s)
+		*e = DfareportingChangeLogsListObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingChangeLogsListObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingChangeLogsListObjectTypeEnum: %v", v)
 	}
 }
 

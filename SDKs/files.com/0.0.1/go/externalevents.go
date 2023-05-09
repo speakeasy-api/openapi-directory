@@ -105,7 +105,10 @@ func (s *externalEvents) GetExternalEvents(ctx context.Context, request operatio
 // Show External Event
 func (s *externalEvents) GetExternalEventsID(ctx context.Context, request operations.GetExternalEventsIDRequest) (*operations.GetExternalEventsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/external_events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/external_events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

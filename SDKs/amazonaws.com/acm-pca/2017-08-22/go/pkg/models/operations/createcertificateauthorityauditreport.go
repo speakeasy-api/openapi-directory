@@ -16,17 +16,21 @@ const (
 	CreateCertificateAuthorityAuditReportXAmzTargetEnumAcmPrivateCaCreateCertificateAuthorityAuditReport CreateCertificateAuthorityAuditReportXAmzTargetEnum = "ACMPrivateCA.CreateCertificateAuthorityAuditReport"
 )
 
+func (e CreateCertificateAuthorityAuditReportXAmzTargetEnum) ToPointer() *CreateCertificateAuthorityAuditReportXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCertificateAuthorityAuditReportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.CreateCertificateAuthorityAuditReport":
-		*e = CreateCertificateAuthorityAuditReportXAmzTargetEnum(s)
+		*e = CreateCertificateAuthorityAuditReportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCertificateAuthorityAuditReportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCertificateAuthorityAuditReportXAmzTargetEnum: %v", v)
 	}
 }
 

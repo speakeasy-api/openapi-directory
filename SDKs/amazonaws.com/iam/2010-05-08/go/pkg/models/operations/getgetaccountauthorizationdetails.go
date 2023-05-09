@@ -16,17 +16,21 @@ const (
 	GETGETAccountAuthorizationDetailsActionEnumGetAccountAuthorizationDetails GETGETAccountAuthorizationDetailsActionEnum = "GetAccountAuthorizationDetails"
 )
 
+func (e GETGETAccountAuthorizationDetailsActionEnum) ToPointer() *GETGETAccountAuthorizationDetailsActionEnum {
+	return &e
+}
+
 func (e *GETGETAccountAuthorizationDetailsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccountAuthorizationDetails":
-		*e = GETGETAccountAuthorizationDetailsActionEnum(s)
+		*e = GETGETAccountAuthorizationDetailsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountAuthorizationDetailsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountAuthorizationDetailsActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETGETAccountAuthorizationDetailsVersionEnumTwoThousandAndTen0508 GETGETAccountAuthorizationDetailsVersionEnum = "2010-05-08"
 )
 
+func (e GETGETAccountAuthorizationDetailsVersionEnum) ToPointer() *GETGETAccountAuthorizationDetailsVersionEnum {
+	return &e
+}
+
 func (e *GETGETAccountAuthorizationDetailsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETAccountAuthorizationDetailsVersionEnum(s)
+		*e = GETGETAccountAuthorizationDetailsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccountAuthorizationDetailsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccountAuthorizationDetailsVersionEnum: %v", v)
 	}
 }
 

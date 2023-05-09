@@ -16,20 +16,24 @@ const (
 	ConnectionScheduleTypeEnumCron   ConnectionScheduleTypeEnum = "cron"
 )
 
+func (e ConnectionScheduleTypeEnum) ToPointer() *ConnectionScheduleTypeEnum {
+	return &e
+}
+
 func (e *ConnectionScheduleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "basic":
 		fallthrough
 	case "cron":
-		*e = ConnectionScheduleTypeEnum(s)
+		*e = ConnectionScheduleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionScheduleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionScheduleTypeEnum: %v", v)
 	}
 }

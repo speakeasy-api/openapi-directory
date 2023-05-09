@@ -16,12 +16,16 @@ const (
 	TaggableResourceTypeEnumMlModel         TaggableResourceTypeEnum = "MLModel"
 )
 
+func (e TaggableResourceTypeEnum) ToPointer() *TaggableResourceTypeEnum {
+	return &e
+}
+
 func (e *TaggableResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BatchPrediction":
 		fallthrough
 	case "DataSource":
@@ -29,9 +33,9 @@ func (e *TaggableResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Evaluation":
 		fallthrough
 	case "MLModel":
-		*e = TaggableResourceTypeEnum(s)
+		*e = TaggableResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaggableResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaggableResourceTypeEnum: %v", v)
 	}
 }

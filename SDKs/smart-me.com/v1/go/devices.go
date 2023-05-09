@@ -348,7 +348,10 @@ func (s *devices) DevicesPostRaw(ctx context.Context, request []byte) (*operatio
 //	For new implementations please use the "actions" command
 func (s *devices) DevicesPut(ctx context.Context, request operations.DevicesPutRequest) (*operations.DevicesPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -421,7 +424,10 @@ func (s *devices) DevicesPut(ctx context.Context, request operations.DevicesPutR
 // Gets a Device by it's ID
 func (s *devices) GetAPIDevicesID(ctx context.Context, request operations.GetAPIDevicesIDRequest) (*operations.GetAPIDevicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/Devices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

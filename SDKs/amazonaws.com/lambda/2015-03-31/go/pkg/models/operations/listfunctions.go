@@ -16,17 +16,21 @@ const (
 	ListFunctionsFunctionVersionEnumAll ListFunctionsFunctionVersionEnum = "ALL"
 )
 
+func (e ListFunctionsFunctionVersionEnum) ToPointer() *ListFunctionsFunctionVersionEnum {
+	return &e
+}
+
 func (e *ListFunctionsFunctionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
-		*e = ListFunctionsFunctionVersionEnum(s)
+		*e = ListFunctionsFunctionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFunctionsFunctionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFunctionsFunctionVersionEnum: %v", v)
 	}
 }
 

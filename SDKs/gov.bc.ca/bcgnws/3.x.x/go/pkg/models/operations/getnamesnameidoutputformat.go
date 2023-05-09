@@ -19,12 +19,16 @@ const (
 	GetNamesNameIDOutputFormatOutputFormatEnumHTML GetNamesNameIDOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetNamesNameIDOutputFormatOutputFormatEnum) ToPointer() *GetNamesNameIDOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesNameIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -34,10 +38,10 @@ func (e *GetNamesNameIDOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) 
 	case "csv":
 		fallthrough
 	case "html":
-		*e = GetNamesNameIDOutputFormatOutputFormatEnum(s)
+		*e = GetNamesNameIDOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesNameIDOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesNameIDOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 

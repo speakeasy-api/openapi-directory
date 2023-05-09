@@ -28,12 +28,16 @@ const (
 	FindingReasonCodeEnumDiskThroughputUnderProvisioned   FindingReasonCodeEnum = "DISK_THROUGHPUT_UNDER_PROVISIONED"
 )
 
+func (e FindingReasonCodeEnum) ToPointer() *FindingReasonCodeEnum {
+	return &e
+}
+
 func (e *FindingReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPU_OVER_PROVISIONED":
 		fallthrough
 	case "CPU_UNDER_PROVISIONED":
@@ -65,9 +69,9 @@ func (e *FindingReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DISK_THROUGHPUT_OVER_PROVISIONED":
 		fallthrough
 	case "DISK_THROUGHPUT_UNDER_PROVISIONED":
-		*e = FindingReasonCodeEnum(s)
+		*e = FindingReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingReasonCodeEnum: %v", v)
 	}
 }

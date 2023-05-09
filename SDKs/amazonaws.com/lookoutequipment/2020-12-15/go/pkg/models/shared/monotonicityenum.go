@@ -15,20 +15,24 @@ const (
 	MonotonicityEnumStatic     MonotonicityEnum = "STATIC"
 )
 
+func (e MonotonicityEnum) ToPointer() *MonotonicityEnum {
+	return &e
+}
+
 func (e *MonotonicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DECREASING":
 		fallthrough
 	case "INCREASING":
 		fallthrough
 	case "STATIC":
-		*e = MonotonicityEnum(s)
+		*e = MonotonicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonotonicityEnum: %s", s)
+		return fmt.Errorf("invalid value for MonotonicityEnum: %v", v)
 	}
 }

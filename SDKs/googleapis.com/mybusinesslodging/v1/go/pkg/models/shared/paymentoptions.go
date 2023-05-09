@@ -17,12 +17,16 @@ const (
 	PaymentOptionsCashExceptionEnumDependentOnDayOfWeek PaymentOptionsCashExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PaymentOptionsCashExceptionEnum) ToPointer() *PaymentOptionsCashExceptionEnum {
+	return &e
+}
+
 func (e *PaymentOptionsCashExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PaymentOptionsCashExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PaymentOptionsCashExceptionEnum(s)
+		*e = PaymentOptionsCashExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentOptionsCashExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentOptionsCashExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PaymentOptionsChequeExceptionEnumDependentOnDayOfWeek PaymentOptionsChequeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PaymentOptionsChequeExceptionEnum) ToPointer() *PaymentOptionsChequeExceptionEnum {
+	return &e
+}
+
 func (e *PaymentOptionsChequeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PaymentOptionsChequeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PaymentOptionsChequeExceptionEnum(s)
+		*e = PaymentOptionsChequeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentOptionsChequeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentOptionsChequeExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PaymentOptionsCreditCardExceptionEnumDependentOnDayOfWeek PaymentOptionsCreditCardExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PaymentOptionsCreditCardExceptionEnum) ToPointer() *PaymentOptionsCreditCardExceptionEnum {
+	return &e
+}
+
 func (e *PaymentOptionsCreditCardExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PaymentOptionsCreditCardExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PaymentOptionsCreditCardExceptionEnum(s)
+		*e = PaymentOptionsCreditCardExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentOptionsCreditCardExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentOptionsCreditCardExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PaymentOptionsDebitCardExceptionEnumDependentOnDayOfWeek PaymentOptionsDebitCardExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PaymentOptionsDebitCardExceptionEnum) ToPointer() *PaymentOptionsDebitCardExceptionEnum {
+	return &e
+}
+
 func (e *PaymentOptionsDebitCardExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PaymentOptionsDebitCardExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PaymentOptionsDebitCardExceptionEnum(s)
+		*e = PaymentOptionsDebitCardExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentOptionsDebitCardExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentOptionsDebitCardExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	PaymentOptionsMobileNfcExceptionEnumDependentOnDayOfWeek PaymentOptionsMobileNfcExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PaymentOptionsMobileNfcExceptionEnum) ToPointer() *PaymentOptionsMobileNfcExceptionEnum {
+	return &e
+}
+
 func (e *PaymentOptionsMobileNfcExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *PaymentOptionsMobileNfcExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PaymentOptionsMobileNfcExceptionEnum(s)
+		*e = PaymentOptionsMobileNfcExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentOptionsMobileNfcExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentOptionsMobileNfcExceptionEnum: %v", v)
 	}
 }
 

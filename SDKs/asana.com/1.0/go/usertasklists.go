@@ -36,7 +36,10 @@ func newUserTaskLists(defaultClient, securityClient HTTPClient, serverURL, langu
 // Returns the full record for a user task list.
 func (s *userTaskLists) GetUserTaskList(ctx context.Context, request operations.GetUserTaskListRequest) (*operations.GetUserTaskListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user_task_lists/{user_task_list_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *userTaskLists) GetUserTaskList(ctx context.Context, request operations.
 // Returns the full record for a user's task list.
 func (s *userTaskLists) GetUserTaskListForUser(ctx context.Context, request operations.GetUserTaskListForUserRequest) (*operations.GetUserTaskListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/user_task_list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/user_task_list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -27,19 +27,23 @@ const (
 	CreateNetworkACLEntryRequestRuleActionEnumDeny  CreateNetworkACLEntryRequestRuleActionEnum = "deny"
 )
 
+func (e CreateNetworkACLEntryRequestRuleActionEnum) ToPointer() *CreateNetworkACLEntryRequestRuleActionEnum {
+	return &e
+}
+
 func (e *CreateNetworkACLEntryRequestRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allow":
 		fallthrough
 	case "deny":
-		*e = CreateNetworkACLEntryRequestRuleActionEnum(s)
+		*e = CreateNetworkACLEntryRequestRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNetworkACLEntryRequestRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNetworkACLEntryRequestRuleActionEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	AwsLogSourceTypeEnumShFindings AwsLogSourceTypeEnum = "SH_FINDINGS"
 )
 
+func (e AwsLogSourceTypeEnum) ToPointer() *AwsLogSourceTypeEnum {
+	return &e
+}
+
 func (e *AwsLogSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROUTE53":
 		fallthrough
 	case "VPC_FLOW":
@@ -29,9 +33,9 @@ func (e *AwsLogSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_TRAIL":
 		fallthrough
 	case "SH_FINDINGS":
-		*e = AwsLogSourceTypeEnum(s)
+		*e = AwsLogSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsLogSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsLogSourceTypeEnum: %v", v)
 	}
 }

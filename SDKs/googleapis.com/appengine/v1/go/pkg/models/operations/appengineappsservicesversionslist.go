@@ -38,19 +38,23 @@ const (
 	AppengineAppsServicesVersionsListViewEnumFull  AppengineAppsServicesVersionsListViewEnum = "FULL"
 )
 
+func (e AppengineAppsServicesVersionsListViewEnum) ToPointer() *AppengineAppsServicesVersionsListViewEnum {
+	return &e
+}
+
 func (e *AppengineAppsServicesVersionsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = AppengineAppsServicesVersionsListViewEnum(s)
+		*e = AppengineAppsServicesVersionsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppengineAppsServicesVersionsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for AppengineAppsServicesVersionsListViewEnum: %v", v)
 	}
 }
 

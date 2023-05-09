@@ -19,12 +19,16 @@ const (
 	RepositoryInvitationPermissionsEnumMaintain RepositoryInvitationPermissionsEnum = "maintain"
 )
 
+func (e RepositoryInvitationPermissionsEnum) ToPointer() *RepositoryInvitationPermissionsEnum {
+	return &e
+}
+
 func (e *RepositoryInvitationPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -34,10 +38,10 @@ func (e *RepositoryInvitationPermissionsEnum) UnmarshalJSON(data []byte) error {
 	case "triage":
 		fallthrough
 	case "maintain":
-		*e = RepositoryInvitationPermissionsEnum(s)
+		*e = RepositoryInvitationPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryInvitationPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryInvitationPermissionsEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,24 +18,25 @@ func main() {
         }),
     )
 
-    req := operations.CreateBudgetRequest{
+    ctx := context.Background()
+    res, err := s.CreateBudget(ctx, operations.CreateBudgetRequest{
         CreateBudgetRequest: shared.CreateBudgetRequest{
             AccountID: "corrupti",
             Budget: shared.Budget{
                 AutoAdjustData: &shared.AutoAdjustData{
-                    AutoAdjustType: "FORECAST",
+                    AutoAdjustType: shared.AutoAdjustTypeEnumForecast,
                     HistoricalOptions: &shared.HistoricalOptions{
                         BudgetAdjustmentPeriod: 715190,
-                        LookBackAvailablePeriods: 844266,
+                        LookBackAvailablePeriods: sdk.Int64(844266),
                     },
-                    LastAutoAdjustTime: "2021-04-14T16:47:33.722Z",
+                    LastAutoAdjustTime: types.MustTimeFromString("2021-04-14T16:47:33.722Z"),
                 },
                 BudgetLimit: &shared.Spend{
                     Amount: "corrupti",
                     Unit: "illum",
                 },
                 BudgetName: "vel",
-                BudgetType: "RI_COVERAGE",
+                BudgetType: shared.BudgetTypeEnumRiCoverage,
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
                         Amount: "deserunt",
@@ -69,19 +71,19 @@ func main() {
                     },
                 },
                 CostTypes: &shared.CostTypes{
-                    IncludeCredit: false,
-                    IncludeDiscount: false,
-                    IncludeOtherSubscription: false,
-                    IncludeRecurring: false,
-                    IncludeRefund: false,
-                    IncludeSubscription: false,
-                    IncludeSupport: false,
-                    IncludeTax: false,
-                    IncludeUpfront: false,
-                    UseAmortized: false,
-                    UseBlended: false,
+                    IncludeCredit: sdk.Bool(false),
+                    IncludeDiscount: sdk.Bool(false),
+                    IncludeOtherSubscription: sdk.Bool(false),
+                    IncludeRecurring: sdk.Bool(false),
+                    IncludeRefund: sdk.Bool(false),
+                    IncludeSubscription: sdk.Bool(false),
+                    IncludeSupport: sdk.Bool(false),
+                    IncludeTax: sdk.Bool(false),
+                    IncludeUpfront: sdk.Bool(false),
+                    UseAmortized: sdk.Bool(false),
+                    UseBlended: sdk.Bool(false),
                 },
-                LastUpdatedTime: "2022-07-31T07:34:52.790Z",
+                LastUpdatedTime: types.MustTimeFromString("2022-07-31T07:34:52.790Z"),
                 PlannedBudgetLimits: map[string]shared.Spend{
                     "at": shared.Spend{
                         Amount: "maiores",
@@ -101,103 +103,100 @@ func main() {
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "2022-09-18T08:27:00.721Z",
-                    Start: "2021-02-10T09:24:01.909Z",
+                    End: types.MustTimeFromString("2022-09-18T08:27:00.721Z"),
+                    Start: types.MustTimeFromString("2021-02-10T09:24:01.909Z"),
                 },
-                TimeUnit: "ANNUALLY",
+                TimeUnit: shared.TimeUnitEnumAnnually,
             },
             NotificationsWithSubscribers: []shared.NotificationWithSubscribers{
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
-                        NotificationState: "OK",
-                        NotificationType: "ACTUAL",
+                        ComparisonOperator: shared.ComparisonOperatorEnumGreaterThan,
+                        NotificationState: shared.NotificationStateEnumOk.ToPointer(),
+                        NotificationType: shared.NotificationTypeEnumActual,
                         Threshold: 2645.55,
-                        ThresholdType: "PERCENTAGE",
+                        ThresholdType: shared.ThresholdTypeEnumPercentage.ToPointer(),
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
                             Address: "cum",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "ipsum",
-                            SubscriptionType: "EMAIL",
+                            SubscriptionType: shared.SubscriptionTypeEnumEmail,
                         },
                         shared.Subscriber{
                             Address: "aspernatur",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "ad",
-                            SubscriptionType: "EMAIL",
+                            SubscriptionType: shared.SubscriptionTypeEnumEmail,
                         },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
-                        NotificationState: "ALARM",
-                        NotificationType: "ACTUAL",
+                        ComparisonOperator: shared.ComparisonOperatorEnumGreaterThan,
+                        NotificationState: shared.NotificationStateEnumAlarm.ToPointer(),
+                        NotificationType: shared.NotificationTypeEnumActual,
                         Threshold: 6169.34,
-                        ThresholdType: "PERCENTAGE",
+                        ThresholdType: shared.ThresholdTypeEnumPercentage.ToPointer(),
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
                             Address: "saepe",
-                            SubscriptionType: "EMAIL",
+                            SubscriptionType: shared.SubscriptionTypeEnumEmail,
                         },
                         shared.Subscriber{
                             Address: "in",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "iste",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "saepe",
-                            SubscriptionType: "EMAIL",
+                            SubscriptionType: shared.SubscriptionTypeEnumEmail,
                         },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
-                        NotificationState: "OK",
-                        NotificationType: "FORECASTED",
+                        ComparisonOperator: shared.ComparisonOperatorEnumGreaterThan,
+                        NotificationState: shared.NotificationStateEnumOk.ToPointer(),
+                        NotificationType: shared.NotificationTypeEnumForecasted,
                         Threshold: 6667.67,
-                        ThresholdType: "ABSOLUTE_VALUE",
+                        ThresholdType: shared.ThresholdTypeEnumAbsoluteValue.ToPointer(),
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
                             Address: "dolores",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "corporis",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                         shared.Subscriber{
                             Address: "nobis",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: shared.SubscriptionTypeEnumSns,
                         },
                     },
                 },
             },
         },
-        XAmzAlgorithm: "omnis",
-        XAmzContentSha256: "nemo",
-        XAmzCredential: "minima",
-        XAmzDate: "excepturi",
-        XAmzSecurityToken: "accusantium",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "culpa",
-        XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateBudget(ctx, req)
+        XAmzAlgorithm: sdk.String("omnis"),
+        XAmzContentSha256: sdk.String("nemo"),
+        XAmzCredential: sdk.String("minima"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("accusantium"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("culpa"),
+        XAmzTarget: operations.CreateBudgetXAmzTargetEnumAwsBudgetServiceGatewayCreateBudget,
+    })
     if err != nil {
         log.Fatal(err)
     }

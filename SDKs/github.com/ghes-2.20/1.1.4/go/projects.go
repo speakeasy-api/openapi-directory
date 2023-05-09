@@ -38,7 +38,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#add-project-collaborator - API method documentation
 func (s *projects) ProjectsAddCollaborator(ctx context.Context, request operations.ProjectsAddCollaboratorRequest) (*operations.ProjectsAddCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -117,7 +120,10 @@ func (s *projects) ProjectsAddCollaborator(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#create-a-project-card - API method documentation
 func (s *projects) ProjectsCreateCard(ctx context.Context, request operations.ProjectsCreateCardRequest) (*operations.ProjectsCreateCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/cards", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/cards", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -205,7 +211,10 @@ func (s *projects) ProjectsCreateCard(ctx context.Context, request operations.Pr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#create-a-project-column - API method documentation
 func (s *projects) ProjectsCreateColumn(ctx context.Context, request operations.ProjectsCreateColumnRequest) (*operations.ProjectsCreateColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/columns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/columns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -372,7 +381,10 @@ func (s *projects) ProjectsCreateForAuthenticatedUser(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#create-an-organization-project - API method documentation
 func (s *projects) ProjectsCreateForOrg(ctx context.Context, request operations.ProjectsCreateForOrgRequest) (*operations.ProjectsCreateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -454,7 +466,10 @@ func (s *projects) ProjectsCreateForOrg(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#create-a-repository-project - API method documentation
 func (s *projects) ProjectsCreateForRepo(ctx context.Context, request operations.ProjectsCreateForRepoRequest) (*operations.ProjectsCreateForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -536,7 +551,10 @@ func (s *projects) ProjectsCreateForRepo(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#delete-a-project - API method documentation
 func (s *projects) ProjectsDelete(ctx context.Context, request operations.ProjectsDeleteRequest) (*operations.ProjectsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -598,7 +616,10 @@ func (s *projects) ProjectsDelete(ctx context.Context, request operations.Projec
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#delete-a-project-card - API method documentation
 func (s *projects) ProjectsDeleteCard(ctx context.Context, request operations.ProjectsDeleteCardRequest) (*operations.ProjectsDeleteCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -658,7 +679,10 @@ func (s *projects) ProjectsDeleteCard(ctx context.Context, request operations.Pr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#delete-a-project-column - API method documentation
 func (s *projects) ProjectsDeleteColumn(ctx context.Context, request operations.ProjectsDeleteColumnRequest) (*operations.ProjectsDeleteColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -709,7 +733,10 @@ func (s *projects) ProjectsDeleteColumn(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#get-a-project - API method documentation
 func (s *projects) ProjectsGet(ctx context.Context, request operations.ProjectsGetRequest) (*operations.ProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -767,7 +794,10 @@ func (s *projects) ProjectsGet(ctx context.Context, request operations.ProjectsG
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#get-a-project-card - API method documentation
 func (s *projects) ProjectsGetCard(ctx context.Context, request operations.ProjectsGetCardRequest) (*operations.ProjectsGetCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -827,7 +857,10 @@ func (s *projects) ProjectsGetCard(ctx context.Context, request operations.Proje
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#get-a-project-column - API method documentation
 func (s *projects) ProjectsGetColumn(ctx context.Context, request operations.ProjectsGetColumnRequest) (*operations.ProjectsGetColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -888,7 +921,10 @@ func (s *projects) ProjectsGetColumn(ctx context.Context, request operations.Pro
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#get-project-permission-for-a-user - API method documentation
 func (s *projects) ProjectsGetPermissionForUser(ctx context.Context, request operations.ProjectsGetPermissionForUserRequest) (*operations.ProjectsGetPermissionForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}/permission", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}/permission", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +1004,10 @@ func (s *projects) ProjectsGetPermissionForUser(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-project-cards - API method documentation
 func (s *projects) ProjectsListCards(ctx context.Context, request operations.ProjectsListCardsRequest) (*operations.ProjectsListCardsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/cards", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/cards", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1033,7 +1072,10 @@ func (s *projects) ProjectsListCards(ctx context.Context, request operations.Pro
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-project-collaborators - API method documentation
 func (s *projects) ProjectsListCollaborators(ctx context.Context, request operations.ProjectsListCollaboratorsRequest) (*operations.ProjectsListCollaboratorsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1119,7 +1161,10 @@ func (s *projects) ProjectsListCollaborators(ctx context.Context, request operat
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-project-columns - API method documentation
 func (s *projects) ProjectsListColumns(ctx context.Context, request operations.ProjectsListColumnsRequest) (*operations.ProjectsListColumnsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/columns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/columns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1184,7 +1229,10 @@ func (s *projects) ProjectsListColumns(ctx context.Context, request operations.P
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-organization-projects - API method documentation
 func (s *projects) ProjectsListForOrg(ctx context.Context, request operations.ProjectsListForOrgRequest) (*operations.ProjectsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1246,7 +1294,10 @@ func (s *projects) ProjectsListForOrg(ctx context.Context, request operations.Pr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-repository-projects - API method documentation
 func (s *projects) ProjectsListForRepo(ctx context.Context, request operations.ProjectsListForRepoRequest) (*operations.ProjectsListForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1323,7 +1374,10 @@ func (s *projects) ProjectsListForRepo(ctx context.Context, request operations.P
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#list-user-projects - API method documentation
 func (s *projects) ProjectsListForUser(ctx context.Context, request operations.ProjectsListForUserRequest) (*operations.ProjectsListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1394,7 +1448,10 @@ func (s *projects) ProjectsListForUser(ctx context.Context, request operations.P
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#move-a-project-card - API method documentation
 func (s *projects) ProjectsMoveCard(ctx context.Context, request operations.ProjectsMoveCardRequest) (*operations.ProjectsMoveCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}/moves", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}/moves", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1490,7 +1547,10 @@ func (s *projects) ProjectsMoveCard(ctx context.Context, request operations.Proj
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#move-a-project-column - API method documentation
 func (s *projects) ProjectsMoveColumn(ctx context.Context, request operations.ProjectsMoveColumnRequest) (*operations.ProjectsMoveColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/moves", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}/moves", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1569,7 +1629,10 @@ func (s *projects) ProjectsMoveColumn(ctx context.Context, request operations.Pr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#remove-project-collaborator - API method documentation
 func (s *projects) ProjectsRemoveCollaborator(ctx context.Context, request operations.ProjectsRemoveCollaboratorRequest) (*operations.ProjectsRemoveCollaboratorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}/collaborators/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1642,7 +1705,10 @@ func (s *projects) ProjectsRemoveCollaborator(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#update-a-project - API method documentation
 func (s *projects) ProjectsUpdate(ctx context.Context, request operations.ProjectsUpdateRequest) (*operations.ProjectsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1729,7 +1795,10 @@ func (s *projects) ProjectsUpdate(ctx context.Context, request operations.Projec
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#update-a-project-card - API method documentation
 func (s *projects) ProjectsUpdateCard(ctx context.Context, request operations.ProjectsUpdateCardRequest) (*operations.ProjectsUpdateCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/cards/{card_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1806,7 +1875,10 @@ func (s *projects) ProjectsUpdateCard(ctx context.Context, request operations.Pr
 // https://docs.github.com/enterprise-server@2.20/rest/reference/projects#update-a-project-column - API method documentation
 func (s *projects) ProjectsUpdateColumn(ctx context.Context, request operations.ProjectsUpdateColumnRequest) (*operations.ProjectsUpdateColumnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/columns/{column_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

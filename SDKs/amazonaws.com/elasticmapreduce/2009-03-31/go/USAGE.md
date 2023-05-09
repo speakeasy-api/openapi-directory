@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,18 +17,19 @@ func main() {
         }),
     )
 
-    req := operations.AddInstanceFleetRequest{
+    ctx := context.Background()
+    res, err := s.AddInstanceFleet(ctx, operations.AddInstanceFleetRequest{
         AddInstanceFleetInput: shared.AddInstanceFleetInput{
             ClusterID: "corrupti",
             InstanceFleet: shared.InstanceFleetConfig{
-                InstanceFleetType: "CORE",
+                InstanceFleetType: shared.InstanceFleetTypeEnumCore,
                 InstanceTypeConfigs: []shared.InstanceTypeConfig{
                     shared.InstanceTypeConfig{
-                        BidPrice: "quibusdam",
-                        BidPriceAsPercentageOfOnDemandPrice: 6027.63,
+                        BidPrice: sdk.String("quibusdam"),
+                        BidPriceAsPercentageOfOnDemandPrice: sdk.Float64(6027.63),
                         Configurations: []shared.Configuration{
                             shared.Configuration{
-                                Classification: "corrupti",
+                                Classification: sdk.String("corrupti"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -41,7 +42,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "magnam",
+                                Classification: sdk.String("magnam"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -53,7 +54,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "suscipit",
+                                Classification: sdk.String("suscipit"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -66,7 +67,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "quis",
+                                Classification: sdk.String("quis"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                 },
@@ -77,57 +78,57 @@ func main() {
                                 },
                             },
                         },
-                        CustomAmiID: "at",
+                        CustomAmiID: sdk.String("at"),
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 978619,
+                                        Iops: sdk.Int64(978619),
                                         SizeInGB: 473608,
-                                        Throughput: 799159,
+                                        Throughput: sdk.Int64(799159),
                                         VolumeType: "quod",
                                     },
-                                    VolumesPerInstance: 461479,
+                                    VolumesPerInstance: sdk.Int64(461479),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 520478,
+                                        Iops: sdk.Int64(520478),
                                         SizeInGB: 780529,
-                                        Throughput: 678880,
+                                        Throughput: sdk.Int64(678880),
                                         VolumeType: "dicta",
                                     },
-                                    VolumesPerInstance: 720633,
+                                    VolumesPerInstance: sdk.Int64(720633),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 639921,
+                                        Iops: sdk.Int64(639921),
                                         SizeInGB: 582020,
-                                        Throughput: 143353,
+                                        Throughput: sdk.Int64(143353),
                                         VolumeType: "deleniti",
                                     },
-                                    VolumesPerInstance: 944669,
+                                    VolumesPerInstance: sdk.Int64(944669),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 758616,
+                                        Iops: sdk.Int64(758616),
                                         SizeInGB: 521848,
-                                        Throughput: 105907,
+                                        Throughput: sdk.Int64(105907),
                                         VolumeType: "commodi",
                                     },
-                                    VolumesPerInstance: 473600,
+                                    VolumesPerInstance: sdk.Int64(473600),
                                 },
                             },
-                            EbsOptimized: false,
+                            EbsOptimized: sdk.Bool(false),
                         },
                         InstanceType: "modi",
-                        WeightedCapacity: 186332,
+                        WeightedCapacity: sdk.Int64(186332),
                     },
                     shared.InstanceTypeConfig{
-                        BidPrice: "impedit",
-                        BidPriceAsPercentageOfOnDemandPrice: 7369.18,
+                        BidPrice: sdk.String("impedit"),
+                        BidPriceAsPercentageOfOnDemandPrice: sdk.Float64(7369.18),
                         Configurations: []shared.Configuration{
                             shared.Configuration{
-                                Classification: "ipsum",
+                                Classification: sdk.String("ipsum"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -138,7 +139,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "natus",
+                                Classification: sdk.String("natus"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                 },
@@ -149,39 +150,39 @@ func main() {
                                 },
                             },
                         },
-                        CustomAmiID: "in",
+                        CustomAmiID: sdk.String("in"),
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 613064,
+                                        Iops: sdk.Int64(613064),
                                         SizeInGB: 437032,
-                                        Throughput: 902349,
+                                        Throughput: sdk.Int64(902349),
                                         VolumeType: "quidem",
                                     },
-                                    VolumesPerInstance: 99280,
+                                    VolumesPerInstance: sdk.Int64(99280),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 60225,
+                                        Iops: sdk.Int64(60225),
                                         SizeInGB: 969810,
-                                        Throughput: 666767,
+                                        Throughput: sdk.Int64(666767),
                                         VolumeType: "mollitia",
                                     },
-                                    VolumesPerInstance: 670638,
+                                    VolumesPerInstance: sdk.Int64(670638),
                                 },
                             },
-                            EbsOptimized: false,
+                            EbsOptimized: sdk.Bool(false),
                         },
                         InstanceType: "dolores",
-                        WeightedCapacity: 210382,
+                        WeightedCapacity: sdk.Int64(210382),
                     },
                     shared.InstanceTypeConfig{
-                        BidPrice: "corporis",
-                        BidPriceAsPercentageOfOnDemandPrice: 1289.26,
+                        BidPrice: sdk.String("corporis"),
+                        BidPriceAsPercentageOfOnDemandPrice: sdk.Float64(1289.26),
                         Configurations: []shared.Configuration{
                             shared.Configuration{
-                                Classification: "enim",
+                                Classification: sdk.String("enim"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -193,7 +194,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "culpa",
+                                Classification: sdk.String("culpa"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -208,7 +209,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "numquam",
+                                Classification: sdk.String("numquam"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                     shared.Configuration{},
@@ -219,7 +220,7 @@ func main() {
                                 },
                             },
                             shared.Configuration{
-                                Classification: "quis",
+                                Classification: sdk.String("quis"),
                                 Configurations: []shared.Configuration{
                                     shared.Configuration{},
                                 },
@@ -230,84 +231,81 @@ func main() {
                                 },
                             },
                         },
-                        CustomAmiID: "ipsam",
+                        CustomAmiID: sdk.String("ipsam"),
                         EbsConfiguration: &shared.EbsConfiguration{
                             EbsBlockDeviceConfigs: []shared.EbsBlockDeviceConfig{
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 820994,
+                                        Iops: sdk.Int64(820994),
                                         SizeInGB: 13571,
-                                        Throughput: 97101,
+                                        Throughput: sdk.Int64(97101),
                                         VolumeType: "error",
                                     },
-                                    VolumesPerInstance: 837945,
+                                    VolumesPerInstance: sdk.Int64(837945),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 673660,
+                                        Iops: sdk.Int64(673660),
                                         SizeInGB: 96098,
-                                        Throughput: 971945,
+                                        Throughput: sdk.Int64(971945),
                                         VolumeType: "voluptatibus",
                                     },
-                                    VolumesPerInstance: 878194,
+                                    VolumesPerInstance: sdk.Int64(878194),
                                 },
                                 shared.EbsBlockDeviceConfig{
                                     VolumeSpecification: shared.VolumeSpecification{
-                                        Iops: 468651,
+                                        Iops: sdk.Int64(468651),
                                         SizeInGB: 509624,
-                                        Throughput: 976762,
+                                        Throughput: sdk.Int64(976762),
                                         VolumeType: "ipsa",
                                     },
-                                    VolumesPerInstance: 604846,
+                                    VolumesPerInstance: sdk.Int64(604846),
                                 },
                             },
-                            EbsOptimized: false,
+                            EbsOptimized: sdk.Bool(false),
                         },
                         InstanceType: "voluptate",
-                        WeightedCapacity: 739264,
+                        WeightedCapacity: sdk.Int64(739264),
                     },
                 },
                 LaunchSpecifications: &shared.InstanceFleetProvisioningSpecifications{
                     OnDemandSpecification: &shared.OnDemandProvisioningSpecification{
-                        AllocationStrategy: "lowest-price",
+                        AllocationStrategy: shared.OnDemandProvisioningAllocationStrategyEnumLowestPrice,
                         CapacityReservationOptions: &shared.OnDemandCapacityReservationOptions{
-                            CapacityReservationPreference: "open",
-                            CapacityReservationResourceGroupArn: "doloremque",
-                            UsageStrategy: "use-capacity-reservations-first",
+                            CapacityReservationPreference: shared.OnDemandCapacityReservationPreferenceEnumOpen.ToPointer(),
+                            CapacityReservationResourceGroupArn: sdk.String("doloremque"),
+                            UsageStrategy: shared.OnDemandCapacityReservationUsageStrategyEnumUseCapacityReservationsFirst.ToPointer(),
                         },
                     },
                     SpotSpecification: &shared.SpotProvisioningSpecification{
-                        AllocationStrategy: "capacity-optimized",
-                        BlockDurationMinutes: 441711,
-                        TimeoutAction: "SWITCH_TO_ON_DEMAND",
+                        AllocationStrategy: shared.SpotProvisioningAllocationStrategyEnumCapacityOptimized.ToPointer(),
+                        BlockDurationMinutes: sdk.Int64(441711),
+                        TimeoutAction: shared.SpotProvisioningTimeoutActionEnumSwitchToOnDemand,
                         TimeoutDurationMinutes: 979587,
                     },
                 },
-                Name: "dicta",
+                Name: sdk.String("Stacy Gulgowski MD"),
                 ResizeSpecifications: &shared.InstanceFleetResizingSpecifications{
                     OnDemandResizeSpecification: &shared.OnDemandResizingSpecification{
-                        TimeoutDurationMinutes: 359444,
+                        TimeoutDurationMinutes: 317983,
                     },
                     SpotResizeSpecification: &shared.SpotResizingSpecification{
-                        TimeoutDurationMinutes: 296140,
+                        TimeoutDurationMinutes: 880476,
                     },
                 },
-                TargetOnDemandCapacity: 480894,
-                TargetSpotCapacity: 118727,
+                TargetOnDemandCapacity: sdk.Int64(414263),
+                TargetSpotCapacity: sdk.Int64(918236),
             },
         },
-        XAmzAlgorithm: "harum",
-        XAmzContentSha256: "enim",
-        XAmzCredential: "accusamus",
-        XAmzDate: "commodi",
-        XAmzSecurityToken: "repudiandae",
-        XAmzSignature: "quae",
-        XAmzSignedHeaders: "ipsum",
-        XAmzTarget: "ElasticMapReduce.AddInstanceFleet",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddInstanceFleet(ctx, req)
+        XAmzAlgorithm: sdk.String("quae"),
+        XAmzContentSha256: sdk.String("ipsum"),
+        XAmzCredential: sdk.String("quidem"),
+        XAmzDate: sdk.String("molestias"),
+        XAmzSecurityToken: sdk.String("excepturi"),
+        XAmzSignature: sdk.String("pariatur"),
+        XAmzSignedHeaders: sdk.String("modi"),
+        XAmzTarget: operations.AddInstanceFleetXAmzTargetEnumElasticMapReduceAddInstanceFleet,
+    })
     if err != nil {
         log.Fatal(err)
     }

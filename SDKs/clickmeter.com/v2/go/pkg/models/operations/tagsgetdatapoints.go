@@ -19,12 +19,16 @@ const (
 	TagsGetDatapointsStatusEnumSpam    TagsGetDatapointsStatusEnum = "spam"
 )
 
+func (e TagsGetDatapointsStatusEnum) ToPointer() *TagsGetDatapointsStatusEnum {
+	return &e
+}
+
 func (e *TagsGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -32,10 +36,10 @@ func (e *TagsGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = TagsGetDatapointsStatusEnum(s)
+		*e = TagsGetDatapointsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagsGetDatapointsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TagsGetDatapointsStatusEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	TagsGetDatapointsTypeEnumTl TagsGetDatapointsTypeEnum = "tl"
 )
 
+func (e TagsGetDatapointsTypeEnum) ToPointer() *TagsGetDatapointsTypeEnum {
+	return &e
+}
+
 func (e *TagsGetDatapointsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = TagsGetDatapointsTypeEnum(s)
+		*e = TagsGetDatapointsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagsGetDatapointsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagsGetDatapointsTypeEnum: %v", v)
 	}
 }
 

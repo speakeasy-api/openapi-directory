@@ -18,12 +18,16 @@ const (
 	GoogleCloudDatacatalogLineageV1RunStateEnumAborted   GoogleCloudDatacatalogLineageV1RunStateEnum = "ABORTED"
 )
 
+func (e GoogleCloudDatacatalogLineageV1RunStateEnum) ToPointer() *GoogleCloudDatacatalogLineageV1RunStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogLineageV1RunStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "STARTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDatacatalogLineageV1RunStateEnum) UnmarshalJSON(data []byte)
 	case "FAILED":
 		fallthrough
 	case "ABORTED":
-		*e = GoogleCloudDatacatalogLineageV1RunStateEnum(s)
+		*e = GoogleCloudDatacatalogLineageV1RunStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogLineageV1RunStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogLineageV1RunStateEnum: %v", v)
 	}
 }
 

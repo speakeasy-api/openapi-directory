@@ -32,17 +32,21 @@ const (
 	GetBusinessCurrentAccounts503ErrorObjectDescriptionEnumTheServiceIsTemporarilyUnavailable GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum = "The service is temporarily unavailable."
 )
 
+func (e GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum) ToPointer() *GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "The service is temporarily unavailable.":
-		*e = GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum(s)
+		*e = GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -52,17 +56,21 @@ const (
 	GetBusinessCurrentAccounts503ErrorObjectStatusEnumFiveHundredAndThree GetBusinessCurrentAccounts503ErrorObjectStatusEnum = "503"
 )
 
+func (e GetBusinessCurrentAccounts503ErrorObjectStatusEnum) ToPointer() *GetBusinessCurrentAccounts503ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts503ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "503":
-		*e = GetBusinessCurrentAccounts503ErrorObjectStatusEnum(s)
+		*e = GetBusinessCurrentAccounts503ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -72,17 +80,21 @@ const (
 	GetBusinessCurrentAccounts503ErrorObjectTitleEnumServiceTemporarilyUnavailable GetBusinessCurrentAccounts503ErrorObjectTitleEnum = "Service temporarily unavailable"
 )
 
+func (e GetBusinessCurrentAccounts503ErrorObjectTitleEnum) ToPointer() *GetBusinessCurrentAccounts503ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts503ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Service temporarily unavailable":
-		*e = GetBusinessCurrentAccounts503ErrorObjectTitleEnum(s)
+		*e = GetBusinessCurrentAccounts503ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts503ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -99,17 +111,21 @@ const (
 	GetBusinessCurrentAccounts500ErrorObjectDescriptionEnumAnErrorOccurredOnTheServerNoFurtherInformationIsAvailable GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum = "An error occurred on the server. No further information is available."
 )
 
+func (e GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum) ToPointer() *GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "An error occurred on the server. No further information is available.":
-		*e = GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum(s)
+		*e = GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -119,17 +135,21 @@ const (
 	GetBusinessCurrentAccounts500ErrorObjectStatusEnumFiveHundred GetBusinessCurrentAccounts500ErrorObjectStatusEnum = "500"
 )
 
+func (e GetBusinessCurrentAccounts500ErrorObjectStatusEnum) ToPointer() *GetBusinessCurrentAccounts500ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts500ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "500":
-		*e = GetBusinessCurrentAccounts500ErrorObjectStatusEnum(s)
+		*e = GetBusinessCurrentAccounts500ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -139,17 +159,21 @@ const (
 	GetBusinessCurrentAccounts500ErrorObjectTitleEnumInternalServerError GetBusinessCurrentAccounts500ErrorObjectTitleEnum = "Internal server error"
 )
 
+func (e GetBusinessCurrentAccounts500ErrorObjectTitleEnum) ToPointer() *GetBusinessCurrentAccounts500ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts500ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = GetBusinessCurrentAccounts500ErrorObjectTitleEnum(s)
+		*e = GetBusinessCurrentAccounts500ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts500ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -166,17 +190,21 @@ const (
 	GetBusinessCurrentAccounts429ErrorObjectDescriptionEnumYouHaveRequestedThisResourceTooOftenSlowDown GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum = "You have requested this resource too often. Slow down."
 )
 
+func (e GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum) ToPointer() *GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have requested this resource too often. Slow down.":
-		*e = GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum(s)
+		*e = GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -186,17 +214,21 @@ const (
 	GetBusinessCurrentAccounts429ErrorObjectStatusEnumFourHundredAndTwentyNine GetBusinessCurrentAccounts429ErrorObjectStatusEnum = "429"
 )
 
+func (e GetBusinessCurrentAccounts429ErrorObjectStatusEnum) ToPointer() *GetBusinessCurrentAccounts429ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts429ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "429":
-		*e = GetBusinessCurrentAccounts429ErrorObjectStatusEnum(s)
+		*e = GetBusinessCurrentAccounts429ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -206,17 +238,21 @@ const (
 	GetBusinessCurrentAccounts429ErrorObjectTitleEnumTooManyRequests GetBusinessCurrentAccounts429ErrorObjectTitleEnum = "Too many requests"
 )
 
+func (e GetBusinessCurrentAccounts429ErrorObjectTitleEnum) ToPointer() *GetBusinessCurrentAccounts429ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts429ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Too many requests":
-		*e = GetBusinessCurrentAccounts429ErrorObjectTitleEnum(s)
+		*e = GetBusinessCurrentAccounts429ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts429ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -233,17 +269,21 @@ const (
 	GetBusinessCurrentAccounts408ErrorObjectDescriptionEnumYourClientHasFailedToSubmitARequestAndATimeoutHasOccurred GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum = "Your client has failed to submit a request, and a timeout has occurred."
 )
 
+func (e GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum) ToPointer() *GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your client has failed to submit a request, and a timeout has occurred.":
-		*e = GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum(s)
+		*e = GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -253,17 +293,21 @@ const (
 	GetBusinessCurrentAccounts408ErrorObjectStatusEnumFourHundredAndEight GetBusinessCurrentAccounts408ErrorObjectStatusEnum = "408"
 )
 
+func (e GetBusinessCurrentAccounts408ErrorObjectStatusEnum) ToPointer() *GetBusinessCurrentAccounts408ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts408ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "408":
-		*e = GetBusinessCurrentAccounts408ErrorObjectStatusEnum(s)
+		*e = GetBusinessCurrentAccounts408ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	GetBusinessCurrentAccounts408ErrorObjectTitleEnumClientTimeout GetBusinessCurrentAccounts408ErrorObjectTitleEnum = "Client timeout"
 )
 
+func (e GetBusinessCurrentAccounts408ErrorObjectTitleEnum) ToPointer() *GetBusinessCurrentAccounts408ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts408ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Client timeout":
-		*e = GetBusinessCurrentAccounts408ErrorObjectTitleEnum(s)
+		*e = GetBusinessCurrentAccounts408ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts408ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -300,17 +348,21 @@ const (
 	GetBusinessCurrentAccounts400ErrorObjectDescriptionEnumYouHaveSentARequestWhichCouldNotBeUnderstood GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum = "You have sent a request which could not be understood."
 )
 
+func (e GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum) ToPointer() *GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "You have sent a request which could not be understood.":
-		*e = GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum(s)
+		*e = GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectDescriptionEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	GetBusinessCurrentAccounts400ErrorObjectStatusEnumFourHundred GetBusinessCurrentAccounts400ErrorObjectStatusEnum = "400"
 )
 
+func (e GetBusinessCurrentAccounts400ErrorObjectStatusEnum) ToPointer() *GetBusinessCurrentAccounts400ErrorObjectStatusEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts400ErrorObjectStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "400":
-		*e = GetBusinessCurrentAccounts400ErrorObjectStatusEnum(s)
+		*e = GetBusinessCurrentAccounts400ErrorObjectStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectStatusEnum: %v", v)
 	}
 }
 
@@ -340,17 +396,21 @@ const (
 	GetBusinessCurrentAccounts400ErrorObjectTitleEnumBadRequest GetBusinessCurrentAccounts400ErrorObjectTitleEnum = "Bad request"
 )
 
+func (e GetBusinessCurrentAccounts400ErrorObjectTitleEnum) ToPointer() *GetBusinessCurrentAccounts400ErrorObjectTitleEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts400ErrorObjectTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bad request":
-		*e = GetBusinessCurrentAccounts400ErrorObjectTitleEnum(s)
+		*e = GetBusinessCurrentAccounts400ErrorObjectTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts400ErrorObjectTitleEnum: %v", v)
 	}
 }
 
@@ -379,12 +439,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnumText                     GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum = "Text"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATM":
 		fallthrough
 	case "Branch":
@@ -408,10 +472,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "RelationshipManager":
 		fallthrough
 	case "Text":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountAccessChannelsEnum: %v", v)
 	}
 }
 
@@ -428,12 +492,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnumRegularDeposit GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum = "RegularDeposit"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CashDeposit":
 		fallthrough
 	case "Deposit":
@@ -447,10 +515,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "MobileLogon":
 		fallthrough
 	case "RegularDeposit":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitItemBenefitDetailCriteriaTypeEnum: %v", v)
 	}
 }
 
@@ -503,21 +571,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountBenefitsBenefitGroupBenefitSubTypeEnum: %v", v)
 	}
 }
 
@@ -559,21 +631,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCAPricingProductStateEnum: %v", v)
 	}
 }
 
@@ -602,12 +678,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnumPocaCard                   GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum = "POCACard"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BasicCard":
 		fallthrough
 	case "BusinessQuickLodgeCard":
@@ -629,10 +709,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "OperatorCard":
 		fallthrough
 	case "POCACard":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCardTypeEnum: %v", v)
 	}
 }
 
@@ -649,12 +729,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnumOvernight  GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum = "Overnight"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Weekly":
@@ -668,10 +752,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Yearly":
 		fallthrough
 	case "Overnight":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationFrequencyEnum: %v", v)
 	}
 }
 
@@ -684,21 +768,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnumWhole  GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum = "Whole"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Banded":
 		fallthrough
 	case "Tiered":
 		fallthrough
 	case "Whole":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemCalculationMethodEnum: %v", v)
 	}
 }
 
@@ -710,19 +798,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnumVariable GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum = "Variable"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Fixed":
 		fallthrough
 	case "Variable":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestRateTypeEnum: %v", v)
 	}
 }
 
@@ -737,12 +829,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnumRepApr GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum = "RepApr"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APR":
 		fallthrough
 	case "AER":
@@ -752,10 +848,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Net":
 		fallthrough
 	case "RepApr":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemInterestTiersRateComparisonTypeEnum: %v", v)
 	}
 }
 
@@ -789,12 +885,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnumSimpleInterest GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum = "SimpleInterest"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Compound":
 		fallthrough
 	case "PayAway":
@@ -802,10 +902,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "SelfCredit":
 		fallthrough
 	case "SimpleInterest":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupCreditInterestItemPaymentMethodEnum: %v", v)
 	}
 }
 
@@ -847,21 +947,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditInterestCreditInterestGroupInterestTierSubTypeEnum: %v", v)
 	}
 }
 
@@ -888,19 +992,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnumSoft GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum = "Soft"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hard":
 		fallthrough
 	case "Soft":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIDVerificationIsAHardOrSoftCreditScoreEnum: %v", v)
 	}
 }
 
@@ -912,19 +1020,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnumSoft GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum = "Soft"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Hard":
 		fallthrough
 	case "Soft":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountCreditScoringPartOfAccountOpeningIsAHardOrSoftCreditScoreEnum: %v", v)
 	}
 }
 
@@ -953,12 +1065,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnumUcasFulltimeTwoYears      GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum = "UCASFulltimeTwoYears"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyBusinessCustomer":
 		fallthrough
 	case "BusinessOnly":
@@ -996,10 +1112,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "TwoMonthsOfCourseStart":
 		fallthrough
 	case "UCASFulltimeTwoYears":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityEligibilityTypeEnum: %v", v)
 	}
 }
 
@@ -1013,12 +1129,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnumStartUp           GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum = "StartUp"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExistingCustomers":
 		fallthrough
 	case "NewCustomersOnly":
@@ -1026,10 +1146,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "SwitchersOnly":
 		fallthrough
 	case "StartUp":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMarketingEligibilityEnum: %v", v)
 	}
 }
 
@@ -1045,12 +1165,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnumYearly       GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum = "Yearly"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "HalfYearly":
@@ -1062,10 +1186,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityMinimumIncomeFrequencyEnum: %v", v)
 	}
 }
 
@@ -1084,12 +1208,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnumIrl   GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum = "IRL"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EEA":
@@ -1107,10 +1235,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "GB - WLS":
 		fallthrough
 	case "IRL":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilityResidencyRestrictedRegionEnum: %v", v)
 	}
 }
 
@@ -1124,12 +1252,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnumTurnover    GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum = "Turnover"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Joint":
 		fallthrough
 	case "SoleIncome":
@@ -1137,10 +1269,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "SoleOrJoint":
 		fallthrough
 	case "Turnover":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountEligibilitySingleJointIncomeEnum: %v", v)
 	}
 }
 
@@ -1221,21 +1353,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureFeatureDetailsFeatureSubTypeEnum: %v", v)
 	}
 }
 
@@ -1271,21 +1407,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeatureProductStateEnum: %v", v)
 	}
 }
 
@@ -1334,12 +1474,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnumYearly                   GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum = "Yearly"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "AccountClosing":
@@ -1381,10 +1525,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Weekly":
 		fallthrough
 	case "Yearly":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeSubDetailsFeeFrequencyEnum: %v", v)
 	}
 }
 
@@ -1788,12 +1932,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnumCounterCashFeePercent                 GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum = "CounterCashFeePercent"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Other":
 		fallthrough
 	case "ATMDonation":
@@ -2533,10 +2681,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "CounterPaidTrans":
 		fallthrough
 	case "CounterCashFeePercent":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeDetailFeeTypeEnum: %v", v)
 	}
 }
 
@@ -2567,21 +2715,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesFeesFeeDetailsFeeSubTypeEnum: %v", v)
 	}
 }
 
@@ -2619,21 +2771,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountFeesAndChargesProductStateEnum: %v", v)
 	}
 }
 
@@ -2659,12 +2815,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnumVodafoneWallet   GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum = "VodafoneWallet"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AndroidPay":
 		fallthrough
 	case "ApplePay":
@@ -2680,10 +2840,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "SamsungPay":
 		fallthrough
 	case "VodafoneWallet":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountMobileWalletEnum: %v", v)
 	}
 }
 
@@ -2695,19 +2855,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnumEu GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum = "EU"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UK":
 		fallthrough
 	case "EU":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOrganisationBrandTrademarkIPOCodeEnum: %v", v)
 	}
 }
 
@@ -2751,19 +2915,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnumYes GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum = "Yes"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No":
 		fallthrough
 	case "Yes":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeeChargeNegotiableIndicatorEnum: %v", v)
 	}
 }
 
@@ -2782,12 +2950,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -2805,10 +2977,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeApplicationFrequencyEnum: %v", v)
 	}
 }
 
@@ -2827,12 +2999,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -2850,10 +3026,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeCalculationFrequencyEnum: %v", v)
 	}
 }
 
@@ -2906,21 +3082,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnumOther GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Gross":
 		fallthrough
 	case "Net":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeRateTypeEnum: %v", v)
 	}
 }
 
@@ -2942,12 +3122,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnumOther            GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Periodic":
 		fallthrough
 	case "Minimum":
@@ -2971,10 +3155,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "EmergencyLending":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftFeesAndChargesFeeChargeTypeEnum: %v", v)
 	}
 }
 
@@ -3011,21 +3195,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnumRegular             GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum = "Regular"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FutureMultipleTerms":
 		fallthrough
 	case "Promotional":
 		fallthrough
 	case "Regular":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftProductStateEnum: %v", v)
 	}
 }
 
@@ -3048,21 +3236,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnumOther      GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unarranged":
 		fallthrough
 	case "Arranged":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetArrangementTypeEnum: %v", v)
 	}
 }
 
@@ -3081,12 +3273,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -3104,10 +3300,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeApplicationFrequencyEnum: %v", v)
 	}
 }
 
@@ -3126,12 +3322,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -3149,10 +3349,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeCalculationFrequencyEnum: %v", v)
 	}
 }
 
@@ -3205,21 +3405,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnumOther GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Gross":
 		fallthrough
 	case "Net":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeRateTypeEnum: %v", v)
 	}
 }
 
@@ -3241,12 +3445,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnumOther            GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Periodic":
 		fallthrough
 	case "Minimum":
@@ -3270,10 +3478,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "EmergencyLending":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetFeesAndChargesFeeChargeTypeEnum: %v", v)
 	}
 }
 
@@ -3316,12 +3524,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -3339,10 +3551,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeApplicationFrequencyEnum: %v", v)
 	}
 }
 
@@ -3361,12 +3573,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnumOther        GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcademicTerm":
 		fallthrough
 	case "Daily":
@@ -3384,10 +3600,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "Overnight":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeCalculationFrequencyEnum: %v", v)
 	}
 }
 
@@ -3440,21 +3656,25 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnumOther GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Gross":
 		fallthrough
 	case "Net":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeRateTypeEnum: %v", v)
 	}
 }
 
@@ -3476,12 +3696,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnumOther            GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum = "Other"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Periodic":
 		fallthrough
 	case "Minimum":
@@ -3505,10 +3729,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "EmergencyLending":
 		fallthrough
 	case "Other":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTierBandSetOverdraftTierBandFeesAndChargesFeeChargeTypeEnum: %v", v)
 	}
 }
 
@@ -3580,19 +3804,23 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnumOnDemand  GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum = "OnDemand"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Committed":
 		fallthrough
 	case "OnDemand":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountOverdraftOverdraftTypeEnum: %v", v)
 	}
 }
 
@@ -3642,12 +3870,16 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnumYouth         GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum = "Youth"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Basic":
 		fallthrough
 	case "Business":
@@ -3673,10 +3905,10 @@ func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJS
 	case "YoungAdult":
 		fallthrough
 	case "Youth":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductSegmentEnum: %v", v)
 	}
 }
 
@@ -3687,17 +3919,21 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnumBca GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum = "BCA"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BCA":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONBusinessCurrentAccountProductTypeEnum: %v", v)
 	}
 }
 
@@ -3769,17 +4005,21 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnumUseOfTheApIsAndAnyRelatedDataWillBeSubjectToTheTermsOfTheOpenLicenceAndSubjectToTermsAndConditions GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum = "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataAgreementEnum: %v", v)
 	}
 }
 
@@ -3790,17 +4030,21 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnumHTTPSWwwOpenbankingOrgUkOpenLicence GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum = "https://www.openbanking.org.uk/open-licence"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/open-licence":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataLicenseEnum: %v", v)
 	}
 }
 
@@ -3811,17 +4055,21 @@ const (
 	GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnumHTTPSWwwOpenbankingOrgUkTerms GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum = "https://www.openbanking.org.uk/terms"
 )
 
+func (e GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) ToPointer() *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum {
+	return &e
+}
+
 func (e *GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "https://www.openbanking.org.uk/terms":
-		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(s)
+		*e = GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBusinessCurrentAccounts200ApplicationPrsOpenbankingOpendataV13PlusJSONMetaDataTermsOfUseEnum: %v", v)
 	}
 }
 

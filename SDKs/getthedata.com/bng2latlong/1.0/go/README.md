@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/getthedata.com/bng2latlon
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBng2latlongEastingNorthingRequest{
+    ctx := context.Background()
+    res, err := s.GetBng2latlongEastingNorthing(ctx, operations.GetBng2latlongEastingNorthingRequest{
         Easting: 548814,
         Northing: 592845,
-    }
-
-    ctx := context.Background()
-    res, err := s.GetBng2latlongEastingNorthing(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,9 +42,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetBng2latlongEastingNorthing` - Returns latitude and longitude for the given easting and northing.
+* [GetBng2latlongEastingNorthing](docs/sdk/README.md#getbng2latlongeastingnorthing) - Returns latitude and longitude for the given easting and northing.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,17 +15,21 @@ const (
 	POSTDeregisterInstanceEventNotificationAttributesActionEnumDeregisterInstanceEventNotificationAttributes POSTDeregisterInstanceEventNotificationAttributesActionEnum = "DeregisterInstanceEventNotificationAttributes"
 )
 
+func (e POSTDeregisterInstanceEventNotificationAttributesActionEnum) ToPointer() *POSTDeregisterInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterInstanceEventNotificationAttributes":
-		*e = POSTDeregisterInstanceEventNotificationAttributesActionEnum(s)
+		*e = POSTDeregisterInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeregisterInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 POSTDeregisterInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeregisterInstanceEventNotificationAttributesVersionEnum) ToPointer() *POSTDeregisterInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeregisterInstanceEventNotificationAttributesVersionEnum(s)
+		*e = POSTDeregisterInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

@@ -45,7 +45,10 @@ func newClient(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // The members of a fleet are clients randomly generated from the fleet name.
 func (s *client) GetClientClientID(ctx context.Context, request operations.GetClientClientIDRequest) (*operations.GetClientClientIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/client/{client_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *client) GetClientClientID(ctx context.Context, request operations.GetCl
 // It is primarily used for testing purposes, when, for example, the token from the standard authentication flow is not available to the test code.
 func (s *client) GetClientClientIDTokenKind(ctx context.Context, request operations.GetClientClientIDTokenKindRequest) (*operations.GetClientClientIDTokenKindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/client/{client_id}/token/{kind}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/client/{client_id}/token/{kind}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

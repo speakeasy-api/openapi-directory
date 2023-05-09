@@ -19,12 +19,16 @@ const (
 	ImageStateEnumImporting ImageStateEnum = "IMPORTING"
 )
 
+func (e ImageStateEnum) ToPointer() *ImageStateEnum {
+	return &e
+}
+
 func (e *ImageStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "AVAILABLE":
@@ -38,9 +42,9 @@ func (e *ImageStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATING":
 		fallthrough
 	case "IMPORTING":
-		*e = ImageStateEnum(s)
+		*e = ImageStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageStateEnum: %v", v)
 	}
 }

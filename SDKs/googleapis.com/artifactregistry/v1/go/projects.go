@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ArtifactregistryProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) ArtifactregistryProjectsLocationsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsListRequest, security operations.ArtifactregistryProjectsLocationsListSecurity) (*operations.ArtifactregistryProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) ArtifactregistryProjectsLocationsList(ctx context.Context, re
 // ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport - Imports Apt artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportAptArtifactsRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImpo
 // ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload - Directly uploads an Apt artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/aptArtifacts:create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUplo
 // ArtifactregistryProjectsLocationsRepositoriesCreate - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesCreateRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesCreateSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RepositoryInput", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesCreate(ctx conte
 // ArtifactregistryProjectsLocationsRepositoriesDockerImagesList - Lists docker images.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesDockerImagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesDockerImagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dockerImages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dockerImages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesDockerImagesList
 // ArtifactregistryProjectsLocationsRepositoriesFilesList - Lists files.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesFilesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesFilesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesFilesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesFilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesFilesList(ctx co
 // ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy - Gets the IAM policy for a given resource.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicySecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -388,10 +409,129 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy(ctx
 	return res, nil
 }
 
+// ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImport - Imports GooGet artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/googetArtifacts:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportGoogetArtifactsRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImportResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUpload - Directly uploads a GooGet artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+func (s *projects) ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/googetArtifacts:create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUploadResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UploadGoogetArtifactMediaResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UploadGoogetArtifactMediaResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload - Directly uploads a KFP artifact. The returned Operation will complete once the resource is uploaded. Package, Version, and File resources will be created based on the uploaded artifact. Uploaded artifacts that conflict with existing resources will be overwritten.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/kfpArtifacts:create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/kfpArtifacts:create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -446,7 +586,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUplo
 // ArtifactregistryProjectsLocationsRepositoriesList - Lists repositories.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +637,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesList(ctx context
 // ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList - Lists maven artifacts.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mavenArtifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mavenArtifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +688,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsLi
 // ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList - Lists npm packages.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesNpmPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/npmPackages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/npmPackages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +739,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList(
 // ArtifactregistryProjectsLocationsRepositoriesPackagesList - Lists packages.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -638,7 +790,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesList(ctx
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate - Creates a tag.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
@@ -693,7 +848,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCrea
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList - Lists tags.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -741,7 +899,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList
 // ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch - Updates a tag.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tag", "json")
 	if err != nil {
@@ -796,7 +957,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatc
 // ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -844,7 +1008,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersions
 // ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList - Lists versions.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -892,7 +1059,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPackagesVersions
 // ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet - Gets a python package.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -940,7 +1110,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGe
 // ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList - Lists python packages.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesPythonPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pythonPackages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pythonPackages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -988,7 +1161,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesPythonPackagesLi
 // ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy - Updates the IAM policy for a given resource.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicySecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -1043,7 +1219,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy(ctx
 // ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions - Tests if the caller has a list of permissions on a resource.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -1098,7 +1277,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesTestIamPermissio
 // ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport - Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportYumArtifactsRequest", "json")
 	if err != nil {
@@ -1153,7 +1335,10 @@ func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImpo
 // ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload - Directly uploads a Yum artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
 func (s *projects) ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload(ctx context.Context, request operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadRequest, security operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadSecurity) (*operations.ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:create", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/yumArtifacts:create", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

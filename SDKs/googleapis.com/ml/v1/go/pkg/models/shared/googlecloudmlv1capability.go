@@ -19,17 +19,21 @@ const (
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumNvidiaTeslaA100            GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "NVIDIA_TESLA_A100"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV2                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V2"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV3                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V3"
-	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV4                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V4"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV2Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V2_POD"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV3Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V3_POD"
+	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV4Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V4_POD"
 )
 
+func (e GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum) ToPointer() *GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCELERATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NVIDIA_TESLA_K80":
@@ -48,15 +52,15 @@ func (e *GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum) UnmarshalJSON(data 
 		fallthrough
 	case "TPU_V3":
 		fallthrough
-	case "TPU_V4":
-		fallthrough
 	case "TPU_V2_POD":
 		fallthrough
 	case "TPU_V3_POD":
-		*e = GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum(s)
+		fallthrough
+	case "TPU_V4_POD":
+		*e = GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	GoogleCloudMlV1CapabilityTypeEnumOnlinePrediction GoogleCloudMlV1CapabilityTypeEnum = "ONLINE_PREDICTION"
 )
 
+func (e GoogleCloudMlV1CapabilityTypeEnum) ToPointer() *GoogleCloudMlV1CapabilityTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1CapabilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TRAINING":
@@ -82,10 +90,10 @@ func (e *GoogleCloudMlV1CapabilityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BATCH_PREDICTION":
 		fallthrough
 	case "ONLINE_PREDICTION":
-		*e = GoogleCloudMlV1CapabilityTypeEnum(s)
+		*e = GoogleCloudMlV1CapabilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1CapabilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1CapabilityTypeEnum: %v", v)
 	}
 }
 

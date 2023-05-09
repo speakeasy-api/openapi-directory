@@ -16,12 +16,16 @@ const (
 	RegionStatusEnumFailed   RegionStatusEnum = "FAILED"
 )
 
+func (e RegionStatusEnum) ToPointer() *RegionStatusEnum {
+	return &e
+}
+
 func (e *RegionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -29,9 +33,9 @@ func (e *RegionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = RegionStatusEnum(s)
+		*e = RegionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RegionStatusEnum: %v", v)
 	}
 }

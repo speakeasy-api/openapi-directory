@@ -37,12 +37,16 @@ const (
 	DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnumTooManyRequests     DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum) ToPointer() *DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -56,10 +60,10 @@ func (e *DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum(s)
+		*e = DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnumTooManyRequests     DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum) ToPointer() *DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -100,10 +108,10 @@ func (e *DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum(s)
+		*e = DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesGetReleaseUpdateDevicesStatus400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

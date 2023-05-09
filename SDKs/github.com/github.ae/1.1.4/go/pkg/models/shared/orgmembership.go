@@ -20,21 +20,25 @@ const (
 	OrgMembershipRoleEnumBillingManager OrgMembershipRoleEnum = "billing_manager"
 )
 
+func (e OrgMembershipRoleEnum) ToPointer() *OrgMembershipRoleEnum {
+	return &e
+}
+
 func (e *OrgMembershipRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "member":
 		fallthrough
 	case "billing_manager":
-		*e = OrgMembershipRoleEnum(s)
+		*e = OrgMembershipRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgMembershipRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgMembershipRoleEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	OrgMembershipStateEnumPending OrgMembershipStateEnum = "pending"
 )
 
+func (e OrgMembershipStateEnum) ToPointer() *OrgMembershipStateEnum {
+	return &e
+}
+
 func (e *OrgMembershipStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
-		*e = OrgMembershipStateEnum(s)
+		*e = OrgMembershipStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgMembershipStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgMembershipStateEnum: %v", v)
 	}
 }
 

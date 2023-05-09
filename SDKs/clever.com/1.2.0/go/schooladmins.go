@@ -35,7 +35,10 @@ func newSchoolAdmins(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetSchoolAdmin - Returns a specific school admin
 func (s *schoolAdmins) GetSchoolAdmin(ctx context.Context, request operations.GetSchoolAdminRequest) (*operations.GetSchoolAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/school_admins/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/school_admins/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -141,7 +144,10 @@ func (s *schoolAdmins) GetSchoolAdmins(ctx context.Context, request operations.G
 // GetSchoolsForSchoolAdmin - Returns the schools for a school admin
 func (s *schoolAdmins) GetSchoolsForSchoolAdmin(ctx context.Context, request operations.GetSchoolsForSchoolAdminRequest) (*operations.GetSchoolsForSchoolAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/school_admins/{id}/schools", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/school_admins/{id}/schools", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

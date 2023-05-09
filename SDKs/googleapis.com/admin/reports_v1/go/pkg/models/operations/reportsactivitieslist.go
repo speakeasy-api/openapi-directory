@@ -41,12 +41,16 @@ const (
 	ReportsActivitiesListApplicationNameEnumKeep               ReportsActivitiesListApplicationNameEnum = "keep"
 )
 
+func (e ReportsActivitiesListApplicationNameEnum) ToPointer() *ReportsActivitiesListApplicationNameEnum {
+	return &e
+}
+
 func (e *ReportsActivitiesListApplicationNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "access_transparency":
 		fallthrough
 	case "admin":
@@ -88,10 +92,10 @@ func (e *ReportsActivitiesListApplicationNameEnum) UnmarshalJSON(data []byte) er
 	case "data_studio":
 		fallthrough
 	case "keep":
-		*e = ReportsActivitiesListApplicationNameEnum(s)
+		*e = ReportsActivitiesListApplicationNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportsActivitiesListApplicationNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportsActivitiesListApplicationNameEnum: %v", v)
 	}
 }
 

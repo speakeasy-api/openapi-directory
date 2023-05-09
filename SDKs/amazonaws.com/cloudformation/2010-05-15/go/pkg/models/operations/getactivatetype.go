@@ -15,17 +15,21 @@ const (
 	GETActivateTypeActionEnumActivateType GETActivateTypeActionEnum = "ActivateType"
 )
 
+func (e GETActivateTypeActionEnum) ToPointer() *GETActivateTypeActionEnum {
+	return &e
+}
+
 func (e *GETActivateTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActivateType":
-		*e = GETActivateTypeActionEnum(s)
+		*e = GETActivateTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETActivateTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETActivateTypeActionEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	GETActivateTypeTypeEnumHook     GETActivateTypeTypeEnum = "HOOK"
 )
 
+func (e GETActivateTypeTypeEnum) ToPointer() *GETActivateTypeTypeEnum {
+	return &e
+}
+
 func (e *GETActivateTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETActivateTypeTypeEnum(s)
+		*e = GETActivateTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETActivateTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETActivateTypeTypeEnum: %v", v)
 	}
 }
 
@@ -69,17 +77,21 @@ const (
 	GETActivateTypeVersionEnumTwoThousandAndTen0515 GETActivateTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETActivateTypeVersionEnum) ToPointer() *GETActivateTypeVersionEnum {
+	return &e
+}
+
 func (e *GETActivateTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETActivateTypeVersionEnum(s)
+		*e = GETActivateTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETActivateTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETActivateTypeVersionEnum: %v", v)
 	}
 }
 
@@ -91,19 +103,23 @@ const (
 	GETActivateTypeVersionBumpEnumMinor GETActivateTypeVersionBumpEnum = "MINOR"
 )
 
+func (e GETActivateTypeVersionBumpEnum) ToPointer() *GETActivateTypeVersionBumpEnum {
+	return &e
+}
+
 func (e *GETActivateTypeVersionBumpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MAJOR":
 		fallthrough
 	case "MINOR":
-		*e = GETActivateTypeVersionBumpEnum(s)
+		*e = GETActivateTypeVersionBumpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETActivateTypeVersionBumpEnum: %s", s)
+		return fmt.Errorf("invalid value for GETActivateTypeVersionBumpEnum: %v", v)
 	}
 }
 

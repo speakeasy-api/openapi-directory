@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type MembershipGetSecurity struct {
+	Bearer string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type MembershipGetResponse struct {
 	ContentType string
 	// API Response with all Members entity as a list.

@@ -16,21 +16,25 @@ const (
 	CreateAccountResponsePayoutSpeedEnumStandard CreateAccountResponsePayoutSpeedEnum = "STANDARD"
 )
 
+func (e CreateAccountResponsePayoutSpeedEnum) ToPointer() *CreateAccountResponsePayoutSpeedEnum {
+	return &e
+}
+
 func (e *CreateAccountResponsePayoutSpeedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANT":
 		fallthrough
 	case "SAME_DAY":
 		fallthrough
 	case "STANDARD":
-		*e = CreateAccountResponsePayoutSpeedEnum(s)
+		*e = CreateAccountResponsePayoutSpeedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountResponsePayoutSpeedEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountResponsePayoutSpeedEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	CreateAccountResponseStatusEnumSuspended CreateAccountResponseStatusEnum = "Suspended"
 )
 
+func (e CreateAccountResponseStatusEnum) ToPointer() *CreateAccountResponseStatusEnum {
+	return &e
+}
+
 func (e *CreateAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -58,10 +66,10 @@ func (e *CreateAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Inactive":
 		fallthrough
 	case "Suspended":
-		*e = CreateAccountResponseStatusEnum(s)
+		*e = CreateAccountResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountResponseStatusEnum: %v", v)
 	}
 }
 

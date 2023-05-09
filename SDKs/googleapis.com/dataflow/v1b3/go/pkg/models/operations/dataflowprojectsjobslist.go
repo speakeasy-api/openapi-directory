@@ -46,12 +46,16 @@ const (
 	DataflowProjectsJobsListFilterEnumActive     DataflowProjectsJobsListFilterEnum = "ACTIVE"
 )
 
+func (e DataflowProjectsJobsListFilterEnum) ToPointer() *DataflowProjectsJobsListFilterEnum {
+	return &e
+}
+
 func (e *DataflowProjectsJobsListFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ALL":
@@ -59,10 +63,10 @@ func (e *DataflowProjectsJobsListFilterEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATED":
 		fallthrough
 	case "ACTIVE":
-		*e = DataflowProjectsJobsListFilterEnum(s)
+		*e = DataflowProjectsJobsListFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsJobsListFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsJobsListFilterEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	DataflowProjectsJobsListViewEnumJobViewDescription DataflowProjectsJobsListViewEnum = "JOB_VIEW_DESCRIPTION"
 )
 
+func (e DataflowProjectsJobsListViewEnum) ToPointer() *DataflowProjectsJobsListViewEnum {
+	return &e
+}
+
 func (e *DataflowProjectsJobsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_VIEW_UNKNOWN":
 		fallthrough
 	case "JOB_VIEW_SUMMARY":
@@ -89,10 +97,10 @@ func (e *DataflowProjectsJobsListViewEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_VIEW_ALL":
 		fallthrough
 	case "JOB_VIEW_DESCRIPTION":
-		*e = DataflowProjectsJobsListViewEnum(s)
+		*e = DataflowProjectsJobsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsJobsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsJobsListViewEnum: %v", v)
 	}
 }
 

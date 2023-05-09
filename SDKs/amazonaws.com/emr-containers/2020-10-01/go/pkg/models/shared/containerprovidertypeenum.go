@@ -13,16 +13,20 @@ const (
 	ContainerProviderTypeEnumEks ContainerProviderTypeEnum = "EKS"
 )
 
+func (e ContainerProviderTypeEnum) ToPointer() *ContainerProviderTypeEnum {
+	return &e
+}
+
 func (e *ContainerProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EKS":
-		*e = ContainerProviderTypeEnum(s)
+		*e = ContainerProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerProviderTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETSetSecurityTokenServicePreferencesActionEnumSetSecurityTokenServicePreferences GETSetSecurityTokenServicePreferencesActionEnum = "SetSecurityTokenServicePreferences"
 )
 
+func (e GETSetSecurityTokenServicePreferencesActionEnum) ToPointer() *GETSetSecurityTokenServicePreferencesActionEnum {
+	return &e
+}
+
 func (e *GETSetSecurityTokenServicePreferencesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetSecurityTokenServicePreferences":
-		*e = GETSetSecurityTokenServicePreferencesActionEnum(s)
+		*e = GETSetSecurityTokenServicePreferencesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnumV2Token GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum = "v2Token"
 )
 
+func (e GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum) ToPointer() *GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum {
+	return &e
+}
+
 func (e *GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v1Token":
 		fallthrough
 	case "v2Token":
-		*e = GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum(s)
+		*e = GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesGlobalEndpointTokenVersionEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETSetSecurityTokenServicePreferencesVersionEnumTwoThousandAndTen0508 GETSetSecurityTokenServicePreferencesVersionEnum = "2010-05-08"
 )
 
+func (e GETSetSecurityTokenServicePreferencesVersionEnum) ToPointer() *GETSetSecurityTokenServicePreferencesVersionEnum {
+	return &e
+}
+
 func (e *GETSetSecurityTokenServicePreferencesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETSetSecurityTokenServicePreferencesVersionEnum(s)
+		*e = GETSetSecurityTokenServicePreferencesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetSecurityTokenServicePreferencesVersionEnum: %v", v)
 	}
 }
 

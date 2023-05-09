@@ -34,7 +34,10 @@ func newSwitchPorts(defaultClient, securityClient HTTPClient, serverURL, languag
 // Return the status for all the ports of a switch
 func (s *switchPorts) GetDeviceSwitchPortStatuses(ctx context.Context, request operations.GetDeviceSwitchPortStatusesRequest) (*operations.GetDeviceSwitchPortStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switchPortStatuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switchPortStatuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *switchPorts) GetDeviceSwitchPortStatuses(ctx context.Context, request o
 // Return the packet counters for all the ports of a switch
 func (s *switchPorts) GetDeviceSwitchPortStatusesPackets(ctx context.Context, request operations.GetDeviceSwitchPortStatusesPacketsRequest) (*operations.GetDeviceSwitchPortStatusesPacketsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switchPortStatuses/packets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{serial}/switchPortStatuses/packets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

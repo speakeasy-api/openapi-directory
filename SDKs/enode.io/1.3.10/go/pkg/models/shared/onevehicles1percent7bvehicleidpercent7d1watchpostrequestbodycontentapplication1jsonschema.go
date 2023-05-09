@@ -19,12 +19,16 @@ const (
 	Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnumLocation          Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum = "LOCATION"
 )
 
+func (e Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum) ToPointer() *Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum {
+	return &e
+}
+
 func (e *Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATTERY_LEVEL":
 		fallthrough
 	case "RANGE":
@@ -36,10 +40,10 @@ func (e *Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentAppl
 	case "IS_CHARGING_REASONS":
 		fallthrough
 	case "LOCATION":
-		*e = Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum(s)
+		*e = Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum: %s", s)
+		return fmt.Errorf("invalid value for Onevehicles1Percent7BvehicleIDPercent7D1watchPostRequestBodyContentApplication1jsonSchemaPropertiesEnum: %v", v)
 	}
 }
 

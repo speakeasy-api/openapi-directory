@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -105,7 +120,10 @@ func New(opts ...SDKOption) *SDK {
 // DriverDetails - Driver Details
 func (s *SDK) DriverDetails(ctx context.Context, request operations.DriverDetailsRequest) (*operations.DriverDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/driver/{driverid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/driver/{driverid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +167,10 @@ func (s *SDK) DriverDetails(ctx context.Context, request operations.DriverDetail
 // DriverRaceProjectionsEntryList - Driver Race Projections (Entry List)
 func (s *SDK) DriverRaceProjectionsEntryList(ctx context.Context, request operations.DriverRaceProjectionsEntryListRequest) (*operations.DriverRaceProjectionsEntryListResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/DriverRaceProjections/{raceid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/DriverRaceProjections/{raceid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +214,10 @@ func (s *SDK) DriverRaceProjectionsEntryList(ctx context.Context, request operat
 // Drivers - Drivers
 func (s *SDK) Drivers(ctx context.Context, request operations.DriversRequest) (*operations.DriversResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/drivers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/drivers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,7 +261,10 @@ func (s *SDK) Drivers(ctx context.Context, request operations.DriversRequest) (*
 // RaceResults - Race Results
 func (s *SDK) RaceResults(ctx context.Context, request operations.RaceResultsRequest) (*operations.RaceResultsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/raceresult/{raceid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/raceresult/{raceid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +308,10 @@ func (s *SDK) RaceResults(ctx context.Context, request operations.RaceResultsReq
 // RacesSchedule - Races / Schedule
 func (s *SDK) RacesSchedule(ctx context.Context, request operations.RacesScheduleRequest) (*operations.RacesScheduleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/races/{season}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/races/{season}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +355,10 @@ func (s *SDK) RacesSchedule(ctx context.Context, request operations.RacesSchedul
 // Series - Series
 func (s *SDK) Series(ctx context.Context, request operations.SeriesRequest) (*operations.SeriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/series", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/series", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

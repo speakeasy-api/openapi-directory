@@ -2,41 +2,39 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.AmpUrls.AcceleratedmobilepageurlAmpUrlsBatchGet(ctx, operations.AcceleratedmobilepageurlAmpUrlsBatchGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchGetAmpUrlsRequest: &shared.BatchGetAmpUrlsRequest{
-            LookupStrategy: "IN_INDEX_DOC",
+            LookupStrategy: shared.BatchGetAmpUrlsRequestLookupStrategyEnumInIndexDoc.ToPointer(),
             Urls: []string{
                 "quibusdam",
                 "unde",
                 "nulla",
             },
         },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.AmpUrls.AcceleratedmobilepageurlAmpUrlsBatchGet(ctx, req)
+        AccessToken: sdk.String("corrupti"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }

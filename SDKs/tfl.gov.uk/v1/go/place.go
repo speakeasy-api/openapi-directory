@@ -36,7 +36,10 @@ func newPlace(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // PlaceGet - Gets the place with the given id.
 func (s *place) PlaceGet(ctx context.Context, request operations.PlaceGetRequest) (*operations.PlaceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Place/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Place/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *place) PlaceGet(ctx context.Context, request operations.PlaceGetRequest
 //	must be polygonal e.g. a BoroughBoundary.
 func (s *place) PlaceGetAt(ctx context.Context, request operations.PlaceGetAtRequest) (*operations.PlaceGetAtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Place/{type}/At/{Lat}/{Lon}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Place/{type}/At/{Lat}/{Lon}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +255,10 @@ func (s *place) PlaceGetByGeo(ctx context.Context, request operations.PlaceGetBy
 // PlaceGetByType - Gets all places of a given type
 func (s *place) PlaceGetByType(ctx context.Context, request operations.PlaceGetByTypeRequest) (*operations.PlaceGetByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Place/Type/{types}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Place/Type/{types}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +327,10 @@ func (s *place) PlaceGetByType(ctx context.Context, request operations.PlaceGetB
 // PlaceGetOverlay - Gets the place overlay for a given set of co-ordinates and a given width/height.
 func (s *place) PlaceGetOverlay(ctx context.Context, request operations.PlaceGetOverlayRequest) (*operations.PlaceGetOverlayResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Place/{type}/overlay/{z}/{Lat}/{Lon}/{width}/{height}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Place/{type}/overlay/{z}/{Lat}/{Lon}/{width}/{height}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -387,7 +399,10 @@ func (s *place) PlaceGetOverlay(ctx context.Context, request operations.PlaceGet
 // PlaceGetStreetsByPostCode - Gets the set of streets associated with a post code.
 func (s *place) PlaceGetStreetsByPostCode(ctx context.Context, request operations.PlaceGetStreetsByPostCodeRequest) (*operations.PlaceGetStreetsByPostCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Place/Address/Streets/{Postcode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Place/Address/Streets/{Postcode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

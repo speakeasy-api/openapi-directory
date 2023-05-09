@@ -15,43 +15,51 @@ const (
 	FollowUpClientManagementEnumNull    FollowUpClientManagementEnum = "null"
 )
 
+func (e FollowUpClientManagementEnum) ToPointer() *FollowUpClientManagementEnum {
+	return &e
+}
+
 func (e *FollowUpClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "adn":
 		fallthrough
 	case "null":
-		*e = FollowUpClientManagementEnum(s)
+		*e = FollowUpClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FollowUpClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for FollowUpClientManagementEnum: %v", v)
 	}
 }
 
 type FollowUpInvitationStatusEnum string
 
 const (
-	FollowUpInvitationStatusEnumNull                 FollowUpInvitationStatusEnum = "null"
-	FollowUpInvitationStatusEnumOn                   FollowUpInvitationStatusEnum = "on"
-	FollowUpInvitationStatusEnumRefused              FollowUpInvitationStatusEnum = "refused"
-	FollowUpInvitationStatusEnumAccepted             FollowUpInvitationStatusEnum = "accepted"
-	FollowUpInvitationStatusEnumFinished             FollowUpInvitationStatusEnum = "finished"
-	FollowUpInvitationStatusEnumExpired              FollowUpInvitationStatusEnum = "expired"
-	FollowUpInvitationStatusEnumWaitingForValidation FollowUpInvitationStatusEnum = "waiting for validation"
+	FollowUpInvitationStatusEnumLessThanNilGreaterThan FollowUpInvitationStatusEnum = "<nil>"
+	FollowUpInvitationStatusEnumOn                     FollowUpInvitationStatusEnum = "on"
+	FollowUpInvitationStatusEnumRefused                FollowUpInvitationStatusEnum = "refused"
+	FollowUpInvitationStatusEnumAccepted               FollowUpInvitationStatusEnum = "accepted"
+	FollowUpInvitationStatusEnumFinished               FollowUpInvitationStatusEnum = "finished"
+	FollowUpInvitationStatusEnumExpired                FollowUpInvitationStatusEnum = "expired"
+	FollowUpInvitationStatusEnumWaitingForValidation   FollowUpInvitationStatusEnum = "waiting for validation"
 )
 
+func (e FollowUpInvitationStatusEnum) ToPointer() *FollowUpInvitationStatusEnum {
+	return &e
+}
+
 func (e *FollowUpInvitationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "null":
+	switch v {
+	case "<nil>":
 		fallthrough
 	case "on":
 		fallthrough
@@ -64,10 +72,10 @@ func (e *FollowUpInvitationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "expired":
 		fallthrough
 	case "waiting for validation":
-		*e = FollowUpInvitationStatusEnum(s)
+		*e = FollowUpInvitationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FollowUpInvitationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FollowUpInvitationStatusEnum: %v", v)
 	}
 }
 
@@ -85,21 +93,25 @@ const (
 	FollowUpLevelEnumPublic       FollowUpLevelEnum = "public"
 )
 
+func (e FollowUpLevelEnum) ToPointer() *FollowUpLevelEnum {
+	return &e
+}
+
 func (e *FollowUpLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = FollowUpLevelEnum(s)
+		*e = FollowUpLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FollowUpLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for FollowUpLevelEnum: %v", v)
 	}
 }
 
@@ -113,12 +125,16 @@ const (
 	FollowUpPlayerEnumAssistant    FollowUpPlayerEnum = "assistant"
 )
 
+func (e FollowUpPlayerEnum) ToPointer() *FollowUpPlayerEnum {
+	return &e
+}
+
 func (e *FollowUpPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "manager":
@@ -128,10 +144,10 @@ func (e *FollowUpPlayerEnum) UnmarshalJSON(data []byte) error {
 	case "owner":
 		fallthrough
 	case "assistant":
-		*e = FollowUpPlayerEnum(s)
+		*e = FollowUpPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FollowUpPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for FollowUpPlayerEnum: %v", v)
 	}
 }
 

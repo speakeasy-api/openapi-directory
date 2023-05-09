@@ -2,7 +2,7 @@
 
 package shared
 
-// OutputResolutionStackInput - <p/>
+// OutputResolutionStackInput - The input structure representing Output Resolution for Stacking Operation.
 type OutputResolutionStackInput struct {
 	Predefined  *PredefinedResolutionEnum `json:"Predefined,omitempty"`
 	UserDefined *UserDefined              `json:"UserDefined,omitempty"`

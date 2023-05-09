@@ -7,6 +7,38 @@ import (
 	"fmt"
 )
 
+// AddressCountryEnumEnum - * `AT` - Austria
+// * `BE` - Belgium
+// * `BG` - Bulgaria
+// * `HR` - Croatia
+// * `CY` - Cyprus
+// * `CZ` - Czechia
+// * `DK` - Denmark
+// * `EE` - Estonia
+// * `FI` - Finland
+// * `FR` - France
+// * `DE` - Germany
+// * `GR` - Greece
+// * `HU` - Hungary
+// * `IS` - Iceland
+// * `IE` - Ireland
+// * `IT` - Italy
+// * `LV` - Latvia
+// * `LI` - Liechtenstein
+// * `LT` - Lithuania
+// * `LU` - Luxembourg
+// * `MT` - Malta
+// * `NL` - Netherlands
+// * `NO` - Norway
+// * `PL` - Poland
+// * `PT` - Portugal
+// * `RO` - Romania
+// * `SK` - Slovakia
+// * `SI` - Slovenia
+// * `ES` - Spain
+// * `SE` - Sweden
+// * `GB` - United Kingdom
+// * `US` - United States of America
 type AddressCountryEnumEnum string
 
 const (
@@ -41,14 +73,19 @@ const (
 	AddressCountryEnumEnumEs AddressCountryEnumEnum = "ES"
 	AddressCountryEnumEnumSe AddressCountryEnumEnum = "SE"
 	AddressCountryEnumEnumGb AddressCountryEnumEnum = "GB"
+	AddressCountryEnumEnumUs AddressCountryEnumEnum = "US"
 )
 
+func (e AddressCountryEnumEnum) ToPointer() *AddressCountryEnumEnum {
+	return &e
+}
+
 func (e *AddressCountryEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AT":
 		fallthrough
 	case "BE":
@@ -110,9 +147,11 @@ func (e *AddressCountryEnumEnum) UnmarshalJSON(data []byte) error {
 	case "SE":
 		fallthrough
 	case "GB":
-		*e = AddressCountryEnumEnum(s)
+		fallthrough
+	case "US":
+		*e = AddressCountryEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressCountryEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressCountryEnumEnum: %v", v)
 	}
 }

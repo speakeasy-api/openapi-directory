@@ -2,23 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AccountHolderBalanceRequest{
-        AccountHolderCode: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.General.PostAccountHolderBalance(ctx, req, operations.PostAccountHolderBalanceSecurity{
+    res, err := s.General.PostAccountHolderBalance(ctx, shared.AccountHolderBalanceRequest{
+        AccountHolderCode: "corrupti",
+    }, operations.PostAccountHolderBalanceSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

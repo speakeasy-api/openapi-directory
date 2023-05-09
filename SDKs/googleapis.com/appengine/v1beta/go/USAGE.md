@@ -2,58 +2,58 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, operations.AppengineAppsAuthorizedCertificatesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AuthorizedCertificate: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "provident",
-                PublicCertificate: "distinctio",
+                PrivateKey: sdk.String("provident"),
+                PublicCertificate: sdk.String("distinctio"),
             },
-            DisplayName: "quibusdam",
-            DomainMappingsCount: 602763,
+            DisplayName: sdk.String("quibusdam"),
+            DomainMappingsCount: sdk.Int(602763),
             DomainNames: []string{
                 "corrupti",
                 "illum",
                 "vel",
                 "error",
             },
-            ExpireTime: "deserunt",
-            ID: "suscipit",
+            ExpireTime: sdk.String("deserunt"),
+            ID: sdk.String("674e0f46-7cc8-4796-ad15-1a05dfc2ddf7"),
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "iure",
-                Status: "PENDING",
+                LastRenewalTime: sdk.String("quod"),
+                Status: shared.ManagedCertificateStatusEnumFailedRetryingCaaForbidden.ToPointer(),
             },
-            Name: "debitis",
+            Name: sdk.String("Deanna Sauer MD"),
             VisibleDomainMappings: []string{
-                "delectus",
+                "occaecati",
+                "fugit",
+                "deleniti",
             },
         },
-        AccessToken: "tempora",
-        Alt: "media",
-        AppsID: "molestiae",
-        Callback: "minus",
-        Fields: "placeat",
-        Key: "voluptatum",
-        OauthToken: "iusto",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        UploadType: "nisi",
-        UploadProtocol: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req, operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
+        AccessToken: sdk.String("hic"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        AppsID: "totam",
+        Callback: sdk.String("beatae"),
+        Fields: sdk.String("commodi"),
+        Key: sdk.String("molestiae"),
+        OauthToken: sdk.String("modi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("qui"),
+        UploadType: sdk.String("impedit"),
+        UploadProtocol: sdk.String("cum"),
+    }, operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -16,21 +16,25 @@ const (
 	EntitlementReasonEnumUserPurchase EntitlementReasonEnum = "userPurchase"
 )
 
+func (e EntitlementReasonEnum) ToPointer() *EntitlementReasonEnum {
+	return &e
+}
+
 func (e *EntitlementReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "free":
 		fallthrough
 	case "groupLicense":
 		fallthrough
 	case "userPurchase":
-		*e = EntitlementReasonEnum(s)
+		*e = EntitlementReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementReasonEnum: %v", v)
 	}
 }
 

@@ -15,21 +15,25 @@ const (
 	EnterpriseCrmLoggingGwsFieldLimitsLogActionEnumLog                  EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum = "LOG"
 )
 
+func (e EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum) ToPointer() *EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_ACTION_UNSPECIFIED":
 		fallthrough
 	case "DONT_LOG":
 		fallthrough
 	case "LOG":
-		*e = EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum(s)
+		*e = EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsLogActionEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnumAll                EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum = "ALL"
 )
 
+func (e EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum) ToPointer() *EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GWS":
@@ -55,10 +63,10 @@ func (e *EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum) UnmarshalJSON(data []byt
 	case "GTS":
 		fallthrough
 	case "ALL":
-		*e = EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum(s)
+		*e = EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsLogTypeEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnumShortenDomain            EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum = "SHORTEN_DOMAIN"
 )
 
+func (e EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum) ToPointer() *EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHORTENER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SHORTEN":
@@ -93,10 +105,10 @@ func (e *EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum) UnmarshalJSON(data
 	case "SHORTEN_EMAIL_WITH_HASH":
 		fallthrough
 	case "SHORTEN_DOMAIN":
-		*e = EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum(s)
+		*e = EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmLoggingGwsFieldLimitsShortenerTypeEnum: %v", v)
 	}
 }
 

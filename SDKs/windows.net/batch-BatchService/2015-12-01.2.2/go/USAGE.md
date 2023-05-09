@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApplicationGetRequest{
+    ctx := context.Background()
+    res, err := s.Applications.ApplicationGet(ctx, operations.ApplicationGetRequest{
         APIVersion: "corrupti",
         ApplicationID: "provident",
-        ClientRequestID: "distinctio",
-        OcpDate: "quibusdam",
-        ReturnClientRequestID: false,
-        Timeout: 602763,
-    }
-
-    ctx := context.Background()
-    res, err := s.Applications.ApplicationGet(ctx, req)
+        ClientRequestID: sdk.String("distinctio"),
+        OcpDate: sdk.String("quibusdam"),
+        ReturnClientRequestID: sdk.Bool(false),
+        Timeout: sdk.Int(602763),
+    })
     if err != nil {
         log.Fatal(err)
     }

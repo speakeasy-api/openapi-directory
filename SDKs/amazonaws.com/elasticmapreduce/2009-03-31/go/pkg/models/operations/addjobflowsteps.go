@@ -16,17 +16,21 @@ const (
 	AddJobFlowStepsXAmzTargetEnumElasticMapReduceAddJobFlowSteps AddJobFlowStepsXAmzTargetEnum = "ElasticMapReduce.AddJobFlowSteps"
 )
 
+func (e AddJobFlowStepsXAmzTargetEnum) ToPointer() *AddJobFlowStepsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddJobFlowStepsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.AddJobFlowSteps":
-		*e = AddJobFlowStepsXAmzTargetEnum(s)
+		*e = AddJobFlowStepsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddJobFlowStepsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddJobFlowStepsXAmzTargetEnum: %v", v)
 	}
 }
 

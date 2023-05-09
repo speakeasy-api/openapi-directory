@@ -15,17 +15,21 @@ const (
 	GetStyleGuidesWithEnumPreview GetStyleGuidesWithEnum = "preview"
 )
 
+func (e GetStyleGuidesWithEnum) ToPointer() *GetStyleGuidesWithEnum {
+	return &e
+}
+
 func (e *GetStyleGuidesWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
-		*e = GetStyleGuidesWithEnum(s)
+		*e = GetStyleGuidesWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStyleGuidesWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStyleGuidesWithEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTPurchaseReservedDBInstancesOfferingActionEnumPurchaseReservedDbInstancesOffering POSTPurchaseReservedDBInstancesOfferingActionEnum = "PurchaseReservedDBInstancesOffering"
 )
 
+func (e POSTPurchaseReservedDBInstancesOfferingActionEnum) ToPointer() *POSTPurchaseReservedDBInstancesOfferingActionEnum {
+	return &e
+}
+
 func (e *POSTPurchaseReservedDBInstancesOfferingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurchaseReservedDBInstancesOffering":
-		*e = POSTPurchaseReservedDBInstancesOfferingActionEnum(s)
+		*e = POSTPurchaseReservedDBInstancesOfferingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurchaseReservedDBInstancesOfferingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurchaseReservedDBInstancesOfferingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPurchaseReservedDBInstancesOfferingVersionEnumTwoThousandAndFourteen1031 POSTPurchaseReservedDBInstancesOfferingVersionEnum = "2014-10-31"
 )
 
+func (e POSTPurchaseReservedDBInstancesOfferingVersionEnum) ToPointer() *POSTPurchaseReservedDBInstancesOfferingVersionEnum {
+	return &e
+}
+
 func (e *POSTPurchaseReservedDBInstancesOfferingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTPurchaseReservedDBInstancesOfferingVersionEnum(s)
+		*e = POSTPurchaseReservedDBInstancesOfferingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurchaseReservedDBInstancesOfferingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurchaseReservedDBInstancesOfferingVersionEnum: %v", v)
 	}
 }
 

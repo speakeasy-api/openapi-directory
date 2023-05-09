@@ -16,17 +16,21 @@ const (
 	OptOutSpeakerXAmzTargetEnumVoiceIDOptOutSpeaker OptOutSpeakerXAmzTargetEnum = "VoiceID.OptOutSpeaker"
 )
 
+func (e OptOutSpeakerXAmzTargetEnum) ToPointer() *OptOutSpeakerXAmzTargetEnum {
+	return &e
+}
+
 func (e *OptOutSpeakerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VoiceID.OptOutSpeaker":
-		*e = OptOutSpeakerXAmzTargetEnum(s)
+		*e = OptOutSpeakerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptOutSpeakerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for OptOutSpeakerXAmzTargetEnum: %v", v)
 	}
 }
 

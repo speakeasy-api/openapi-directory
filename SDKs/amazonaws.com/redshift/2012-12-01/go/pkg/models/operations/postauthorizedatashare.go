@@ -15,17 +15,21 @@ const (
 	POSTAuthorizeDataShareActionEnumAuthorizeDataShare POSTAuthorizeDataShareActionEnum = "AuthorizeDataShare"
 )
 
+func (e POSTAuthorizeDataShareActionEnum) ToPointer() *POSTAuthorizeDataShareActionEnum {
+	return &e
+}
+
 func (e *POSTAuthorizeDataShareActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeDataShare":
-		*e = POSTAuthorizeDataShareActionEnum(s)
+		*e = POSTAuthorizeDataShareActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAuthorizeDataShareActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAuthorizeDataShareActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAuthorizeDataShareVersionEnumTwoThousandAndTwelve1201 POSTAuthorizeDataShareVersionEnum = "2012-12-01"
 )
 
+func (e POSTAuthorizeDataShareVersionEnum) ToPointer() *POSTAuthorizeDataShareVersionEnum {
+	return &e
+}
+
 func (e *POSTAuthorizeDataShareVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTAuthorizeDataShareVersionEnum(s)
+		*e = POSTAuthorizeDataShareVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAuthorizeDataShareVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAuthorizeDataShareVersionEnum: %v", v)
 	}
 }
 

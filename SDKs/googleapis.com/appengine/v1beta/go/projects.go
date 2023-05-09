@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AppengineProjectsLocationsApplicationsCreate - Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The ID of the target Cloud Platform project. location - The region (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application located.For more information about App Engine applications, see Managing Projects, Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
 func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsCreateRequest, security operations.AppengineProjectsLocationsApplicationsCreateSecurity) (*operations.AppengineProjectsLocationsApplicationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplicationInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Cont
 // AppengineProjectsLocationsApplicationsGet - Gets information about an application.
 func (s *projects) AppengineProjectsLocationsApplicationsGet(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsGetRequest, security operations.AppengineProjectsLocationsApplicationsGetSecurity) (*operations.AppengineProjectsLocationsApplicationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) AppengineProjectsLocationsApplicationsGet(ctx context.Context
 // AppengineProjectsLocationsApplicationsRepair - Recreates the required App Engine features for the specified App Engine application, for example a Cloud Storage bucket or App Engine service account. Use this method if you receive an error message about a missing feature, for example, Error retrieving the App Engine service account. If you have deleted your App Engine service account, this will not be able to recreate it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be found in the Cloud Console Activity Log.
 func (s *projects) AppengineProjectsLocationsApplicationsRepair(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsRepairRequest, security operations.AppengineProjectsLocationsApplicationsRepairSecurity) (*operations.AppengineProjectsLocationsApplicationsRepairResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}:repair", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}:repair", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) AppengineProjectsLocationsApplicationsRepair(ctx context.Cont
 // AppengineProjectsLocationsGet - Gets information about a location.
 func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request operations.AppengineProjectsLocationsGetRequest, security operations.AppengineProjectsLocationsGetSecurity) (*operations.AppengineProjectsLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request op
 // AppengineProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request operations.AppengineProjectsLocationsListRequest, security operations.AppengineProjectsLocationsListSecurity) (*operations.AppengineProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request o
 // AppengineProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, request operations.AppengineProjectsLocationsOperationsGetRequest, security operations.AppengineProjectsLocationsOperationsGetSecurity) (*operations.AppengineProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, 
 // AppengineProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 func (s *projects) AppengineProjectsLocationsOperationsList(ctx context.Context, request operations.AppengineProjectsLocationsOperationsListRequest, security operations.AppengineProjectsLocationsOperationsListSecurity) (*operations.AppengineProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/projects/{projectsId}/locations/{locationsId}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

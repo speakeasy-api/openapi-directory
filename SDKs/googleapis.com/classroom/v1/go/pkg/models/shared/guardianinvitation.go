@@ -16,21 +16,25 @@ const (
 	GuardianInvitationStateEnumComplete                           GuardianInvitationStateEnum = "COMPLETE"
 )
 
+func (e GuardianInvitationStateEnum) ToPointer() *GuardianInvitationStateEnum {
+	return &e
+}
+
 func (e *GuardianInvitationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GUARDIAN_INVITATION_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "COMPLETE":
-		*e = GuardianInvitationStateEnum(s)
+		*e = GuardianInvitationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GuardianInvitationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GuardianInvitationStateEnum: %v", v)
 	}
 }
 

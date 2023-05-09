@@ -26,12 +26,16 @@ const (
 	DataReplicationErrorStringEnumFailedToStartDataTransfer               DataReplicationErrorStringEnum = "FAILED_TO_START_DATA_TRANSFER"
 )
 
+func (e DataReplicationErrorStringEnum) ToPointer() *DataReplicationErrorStringEnum {
+	return &e
+}
+
 func (e *DataReplicationErrorStringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT_NOT_SEEN":
 		fallthrough
 	case "SNAPSHOTS_FAILURE":
@@ -59,9 +63,9 @@ func (e *DataReplicationErrorStringEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED_TO_CONNECT_AGENT_TO_REPLICATION_SERVER":
 		fallthrough
 	case "FAILED_TO_START_DATA_TRANSFER":
-		*e = DataReplicationErrorStringEnum(s)
+		*e = DataReplicationErrorStringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataReplicationErrorStringEnum: %s", s)
+		return fmt.Errorf("invalid value for DataReplicationErrorStringEnum: %v", v)
 	}
 }

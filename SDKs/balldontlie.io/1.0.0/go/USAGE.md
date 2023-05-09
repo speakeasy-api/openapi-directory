@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AllGamesExampleParametersRequest{
-        Seasons: "2018",
-        TeamIds: "1",
-    }
-
     ctx := context.Background()
-    res, err := s.Games.AllGamesExampleParameters(ctx, req)
+    res, err := s.Games.AllGamesExampleParameters(ctx, operations.AllGamesExampleParametersRequest{
+        Seasons: sdk.String("2018"),
+        TeamIds: sdk.String("1"),
+    })
     if err != nil {
         log.Fatal(err)
     }

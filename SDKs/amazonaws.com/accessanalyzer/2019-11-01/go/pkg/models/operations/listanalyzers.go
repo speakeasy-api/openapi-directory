@@ -17,19 +17,23 @@ const (
 	ListAnalyzersTypeEnumOrganization ListAnalyzersTypeEnum = "ORGANIZATION"
 )
 
+func (e ListAnalyzersTypeEnum) ToPointer() *ListAnalyzersTypeEnum {
+	return &e
+}
+
 func (e *ListAnalyzersTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
-		*e = ListAnalyzersTypeEnum(s)
+		*e = ListAnalyzersTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAnalyzersTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAnalyzersTypeEnum: %v", v)
 	}
 }
 

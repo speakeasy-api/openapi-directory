@@ -98,12 +98,16 @@ const (
 	CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum) U
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVerifiedAccessEndpointRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

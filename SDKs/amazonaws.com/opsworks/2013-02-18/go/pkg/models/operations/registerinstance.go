@@ -16,17 +16,21 @@ const (
 	RegisterInstanceXAmzTargetEnumOpsWorks20130218RegisterInstance RegisterInstanceXAmzTargetEnum = "OpsWorks_20130218.RegisterInstance"
 )
 
+func (e RegisterInstanceXAmzTargetEnum) ToPointer() *RegisterInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.RegisterInstance":
-		*e = RegisterInstanceXAmzTargetEnum(s)
+		*e = RegisterInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

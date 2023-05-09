@@ -21,12 +21,16 @@ const (
 	CutoverJobStateEnumAdaptingOs       CutoverJobStateEnum = "ADAPTING_OS"
 )
 
+func (e CutoverJobStateEnum) ToPointer() *CutoverJobStateEnum {
+	return &e
+}
+
 func (e *CutoverJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -42,10 +46,10 @@ func (e *CutoverJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "ADAPTING_OS":
-		*e = CutoverJobStateEnum(s)
+		*e = CutoverJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CutoverJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CutoverJobStateEnum: %v", v)
 	}
 }
 

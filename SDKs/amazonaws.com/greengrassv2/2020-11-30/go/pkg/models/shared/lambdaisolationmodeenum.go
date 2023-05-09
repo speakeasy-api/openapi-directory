@@ -14,18 +14,22 @@ const (
 	LambdaIsolationModeEnumNoContainer         LambdaIsolationModeEnum = "NoContainer"
 )
 
+func (e LambdaIsolationModeEnum) ToPointer() *LambdaIsolationModeEnum {
+	return &e
+}
+
 func (e *LambdaIsolationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GreengrassContainer":
 		fallthrough
 	case "NoContainer":
-		*e = LambdaIsolationModeEnum(s)
+		*e = LambdaIsolationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaIsolationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaIsolationModeEnum: %v", v)
 	}
 }

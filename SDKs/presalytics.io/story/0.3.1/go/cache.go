@@ -37,7 +37,10 @@ func newCache(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // An endpoint for broswer retreive html documents that were cached durin the rendering process via a nonce (token)
 func (s *cache) CacheNonceGet(ctx context.Context, request operations.CacheNonceGetRequest) (*operations.CacheNonceGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cache/{nonce}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cache/{nonce}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,19 +16,23 @@ const (
 	GetUsersIDTagsTagsTopAnswersOrderEnumAsc  GetUsersIDTagsTagsTopAnswersOrderEnum = "asc"
 )
 
+func (e GetUsersIDTagsTagsTopAnswersOrderEnum) ToPointer() *GetUsersIDTagsTagsTopAnswersOrderEnum {
+	return &e
+}
+
 func (e *GetUsersIDTagsTagsTopAnswersOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetUsersIDTagsTagsTopAnswersOrderEnum(s)
+		*e = GetUsersIDTagsTagsTopAnswersOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIDTagsTagsTopAnswersOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIDTagsTagsTopAnswersOrderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	GetUsersIDTagsTagsTopAnswersSortEnumVotes    GetUsersIDTagsTagsTopAnswersSortEnum = "votes"
 )
 
+func (e GetUsersIDTagsTagsTopAnswersSortEnum) ToPointer() *GetUsersIDTagsTagsTopAnswersSortEnum {
+	return &e
+}
+
 func (e *GetUsersIDTagsTagsTopAnswersSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activity":
 		fallthrough
 	case "creation":
 		fallthrough
 	case "votes":
-		*e = GetUsersIDTagsTagsTopAnswersSortEnum(s)
+		*e = GetUsersIDTagsTagsTopAnswersSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIDTagsTagsTopAnswersSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIDTagsTagsTopAnswersSortEnum: %v", v)
 	}
 }
 

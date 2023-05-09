@@ -16,21 +16,25 @@ const (
 	SiteTypeEnumUserSite        SiteTypeEnum = "USER_SITE"
 )
 
+func (e SiteTypeEnum) ToPointer() *SiteTypeEnum {
+	return &e
+}
+
 func (e *SiteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT_SITE":
 		fallthrough
 	case "USER_SITE":
-		*e = SiteTypeEnum(s)
+		*e = SiteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteTypeEnum: %v", v)
 	}
 }
 

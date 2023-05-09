@@ -22,19 +22,23 @@ const (
 	BooksVolumesListDownloadEnumEpub              BooksVolumesListDownloadEnum = "EPUB"
 )
 
+func (e BooksVolumesListDownloadEnum) ToPointer() *BooksVolumesListDownloadEnum {
+	return &e
+}
+
 func (e *BooksVolumesListDownloadEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOWNLOAD_UNDEFINED":
 		fallthrough
 	case "EPUB":
-		*e = BooksVolumesListDownloadEnum(s)
+		*e = BooksVolumesListDownloadEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListDownloadEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListDownloadEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	BooksVolumesListFilterEnumPartial         BooksVolumesListFilterEnum = "partial"
 )
 
+func (e BooksVolumesListFilterEnum) ToPointer() *BooksVolumesListFilterEnum {
+	return &e
+}
+
 func (e *BooksVolumesListFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_UNDEFINED":
 		fallthrough
 	case "ebooks":
@@ -67,10 +75,10 @@ func (e *BooksVolumesListFilterEnum) UnmarshalJSON(data []byte) error {
 	case "paid-ebooks":
 		fallthrough
 	case "partial":
-		*e = BooksVolumesListFilterEnum(s)
+		*e = BooksVolumesListFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListFilterEnum: %v", v)
 	}
 }
 
@@ -83,21 +91,25 @@ const (
 	BooksVolumesListLibraryRestrictEnumNoRestrict               BooksVolumesListLibraryRestrictEnum = "no-restrict"
 )
 
+func (e BooksVolumesListLibraryRestrictEnum) ToPointer() *BooksVolumesListLibraryRestrictEnum {
+	return &e
+}
+
 func (e *BooksVolumesListLibraryRestrictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIBRARY_RESTRICT_UNDEFINED":
 		fallthrough
 	case "my-library":
 		fallthrough
 	case "no-restrict":
-		*e = BooksVolumesListLibraryRestrictEnum(s)
+		*e = BooksVolumesListLibraryRestrictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListLibraryRestrictEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListLibraryRestrictEnum: %v", v)
 	}
 }
 
@@ -110,21 +122,25 @@ const (
 	BooksVolumesListMaxAllowedMaturityRatingEnumNotMature                         BooksVolumesListMaxAllowedMaturityRatingEnum = "not-mature"
 )
 
+func (e BooksVolumesListMaxAllowedMaturityRatingEnum) ToPointer() *BooksVolumesListMaxAllowedMaturityRatingEnum {
+	return &e
+}
+
 func (e *BooksVolumesListMaxAllowedMaturityRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MAX_ALLOWED_MATURITY_RATING_UNDEFINED":
 		fallthrough
 	case "MATURE":
 		fallthrough
 	case "not-mature":
-		*e = BooksVolumesListMaxAllowedMaturityRatingEnum(s)
+		*e = BooksVolumesListMaxAllowedMaturityRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListMaxAllowedMaturityRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListMaxAllowedMaturityRatingEnum: %v", v)
 	}
 }
 
@@ -137,21 +153,25 @@ const (
 	BooksVolumesListOrderByEnumRelevance        BooksVolumesListOrderByEnum = "relevance"
 )
 
+func (e BooksVolumesListOrderByEnum) ToPointer() *BooksVolumesListOrderByEnum {
+	return &e
+}
+
 func (e *BooksVolumesListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_BY_UNDEFINED":
 		fallthrough
 	case "newest":
 		fallthrough
 	case "relevance":
-		*e = BooksVolumesListOrderByEnum(s)
+		*e = BooksVolumesListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListOrderByEnum: %v", v)
 	}
 }
 
@@ -165,12 +185,16 @@ const (
 	BooksVolumesListPrintTypeEnumMagazines          BooksVolumesListPrintTypeEnum = "MAGAZINES"
 )
 
+func (e BooksVolumesListPrintTypeEnum) ToPointer() *BooksVolumesListPrintTypeEnum {
+	return &e
+}
+
 func (e *BooksVolumesListPrintTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRINT_TYPE_UNDEFINED":
 		fallthrough
 	case "ALL":
@@ -178,10 +202,10 @@ func (e *BooksVolumesListPrintTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BOOKS":
 		fallthrough
 	case "MAGAZINES":
-		*e = BooksVolumesListPrintTypeEnum(s)
+		*e = BooksVolumesListPrintTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListPrintTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListPrintTypeEnum: %v", v)
 	}
 }
 
@@ -194,21 +218,25 @@ const (
 	BooksVolumesListProjectionEnumLite                BooksVolumesListProjectionEnum = "LITE"
 )
 
+func (e BooksVolumesListProjectionEnum) ToPointer() *BooksVolumesListProjectionEnum {
+	return &e
+}
+
 func (e *BooksVolumesListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION_UNDEFINED":
 		fallthrough
 	case "FULL":
 		fallthrough
 	case "LITE":
-		*e = BooksVolumesListProjectionEnum(s)
+		*e = BooksVolumesListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesListProjectionEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	AttributionSettingsAttributionModelEnumCrossChannelTimeDecay       AttributionSettingsAttributionModelEnum = "CROSS_CHANNEL_TIME_DECAY"
 )
 
+func (e AttributionSettingsAttributionModelEnum) ToPointer() *AttributionSettingsAttributionModelEnum {
+	return &e
+}
+
 func (e *AttributionSettingsAttributionModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTION_MODEL_UNSPECIFIED":
 		fallthrough
 	case "CROSS_CHANNEL_LAST_CLICK":
@@ -42,10 +46,10 @@ func (e *AttributionSettingsAttributionModelEnum) UnmarshalJSON(data []byte) err
 	case "CROSS_CHANNEL_POSITION_BASED":
 		fallthrough
 	case "CROSS_CHANNEL_TIME_DECAY":
-		*e = AttributionSettingsAttributionModelEnum(s)
+		*e = AttributionSettingsAttributionModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttributionSettingsAttributionModelEnum: %s", s)
+		return fmt.Errorf("invalid value for AttributionSettingsAttributionModelEnum: %v", v)
 	}
 }
 

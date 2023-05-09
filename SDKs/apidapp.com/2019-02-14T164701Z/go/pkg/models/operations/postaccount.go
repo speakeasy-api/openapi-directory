@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type PostAccountSecurity struct {
+	Key2 string `security:"scheme,type=apiKey,subtype=header,name=X-Api-Key"`
+}
+
 type PostAccountResponse struct {
 	ContentType string
 	// 200 response

@@ -16,17 +16,21 @@ const (
 	DisassociateS3ResourcesXAmzTargetEnumMacieServiceDisassociateS3Resources DisassociateS3ResourcesXAmzTargetEnum = "MacieService.DisassociateS3Resources"
 )
 
+func (e DisassociateS3ResourcesXAmzTargetEnum) ToPointer() *DisassociateS3ResourcesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateS3ResourcesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MacieService.DisassociateS3Resources":
-		*e = DisassociateS3ResourcesXAmzTargetEnum(s)
+		*e = DisassociateS3ResourcesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateS3ResourcesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateS3ResourcesXAmzTargetEnum: %v", v)
 	}
 }
 

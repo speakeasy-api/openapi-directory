@@ -37,21 +37,25 @@ const (
 	PostServersIDActionsRebootActionResponseActionStatusEnumError   PostServersIDActionsRebootActionResponseActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsRebootActionResponseActionStatusEnum) ToPointer() *PostServersIDActionsRebootActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsRebootActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsRebootActionResponseActionStatusEnum(s)
+		*e = PostServersIDActionsRebootActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsRebootActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsRebootActionResponseActionStatusEnum: %v", v)
 	}
 }
 

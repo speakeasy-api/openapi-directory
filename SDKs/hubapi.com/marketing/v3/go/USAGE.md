@@ -2,18 +2,19 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest{
+    ctx := context.Background()
+    res, err := s.AttendanceSubscriberStateChanges.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest{
         BatchInputMarketingEventSubscriber: shared.BatchInputMarketingEventSubscriber{
             Inputs: []shared.MarketingEventSubscriber{
                 shared.MarketingEventSubscriber{
@@ -23,7 +24,7 @@ func main() {
                         "nulla": "corrupti",
                         "illum": "vel",
                     },
-                    Vid: 623564,
+                    Vid: sdk.Int(623564),
                 },
                 shared.MarketingEventSubscriber{
                     InteractionDateTime: 645894,
@@ -31,7 +32,7 @@ func main() {
                         "iure": "magnam",
                         "debitis": "ipsa",
                     },
-                    Vid: 963663,
+                    Vid: sdk.Int(963663),
                 },
                 shared.MarketingEventSubscriber{
                     InteractionDateTime: 272656,
@@ -39,17 +40,14 @@ func main() {
                         "molestiae": "minus",
                         "placeat": "voluptatum",
                     },
-                    Vid: 479977,
+                    Vid: sdk.Int(479977),
                 },
             },
         },
-        ExternalAccountID: "excepturi",
+        ExternalAccountID: sdk.String("excepturi"),
         ExternalEventID: "nisi",
         SubscriberState: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AttendanceSubscriberStateChanges.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx, req, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity{
+    }, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity{
         Oauth2Legacy: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {

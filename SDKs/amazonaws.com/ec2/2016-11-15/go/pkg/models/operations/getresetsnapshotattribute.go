@@ -15,17 +15,21 @@ const (
 	GETResetSnapshotAttributeActionEnumResetSnapshotAttribute GETResetSnapshotAttributeActionEnum = "ResetSnapshotAttribute"
 )
 
+func (e GETResetSnapshotAttributeActionEnum) ToPointer() *GETResetSnapshotAttributeActionEnum {
+	return &e
+}
+
 func (e *GETResetSnapshotAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetSnapshotAttribute":
-		*e = GETResetSnapshotAttributeActionEnum(s)
+		*e = GETResetSnapshotAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetSnapshotAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetSnapshotAttributeActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETResetSnapshotAttributeAttributeEnumCreateVolumePermission GETResetSnapshotAttributeAttributeEnum = "createVolumePermission"
 )
 
+func (e GETResetSnapshotAttributeAttributeEnum) ToPointer() *GETResetSnapshotAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETResetSnapshotAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "productCodes":
 		fallthrough
 	case "createVolumePermission":
-		*e = GETResetSnapshotAttributeAttributeEnum(s)
+		*e = GETResetSnapshotAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetSnapshotAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetSnapshotAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETResetSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GETResetSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETResetSnapshotAttributeVersionEnum) ToPointer() *GETResetSnapshotAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETResetSnapshotAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETResetSnapshotAttributeVersionEnum(s)
+		*e = GETResetSnapshotAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResetSnapshotAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResetSnapshotAttributeVersionEnum: %v", v)
 	}
 }
 

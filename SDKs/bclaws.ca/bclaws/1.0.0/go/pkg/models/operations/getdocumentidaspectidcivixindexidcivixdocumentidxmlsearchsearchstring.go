@@ -23,12 +23,16 @@ const (
 	GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnumArchOic  GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum = "arch_oic"
 )
 
+func (e GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum) ToPointer() *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum {
+	return &e
+}
+
 func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "corpreg":
@@ -46,10 +50,10 @@ func (e *GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAs
 	case "hscr":
 		fallthrough
 	case "arch_oic":
-		*e = GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum(s)
+		*e = GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringAspectIDEnum: %v", v)
 	}
 }
 

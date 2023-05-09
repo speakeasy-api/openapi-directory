@@ -96,7 +96,10 @@ func (s *privateDockerImagesRegistry) GetRegistryNamespaces(ctx context.Context,
 // - The namespace can only contain lowercase letters, numbers or underscores (_).
 func (s *privateDockerImagesRegistry) GetRegistryNamespacesNamespace(ctx context.Context, request operations.GetRegistryNamespacesNamespaceRequest) (*operations.GetRegistryNamespacesNamespaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,7 +159,10 @@ func (s *privateDockerImagesRegistry) GetRegistryNamespacesNamespace(ctx context
 // - The namespace can only contain lowercase letters, numbers or underscores (_).
 func (s *privateDockerImagesRegistry) PutRegistryNamespacesNamespace(ctx context.Context, request operations.PutRegistryNamespacesNamespaceRequest) (*operations.PutRegistryNamespacesNamespaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/registry/namespaces/{namespace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

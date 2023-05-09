@@ -14,18 +14,22 @@ const (
 	SourceSetUpOptionEnumProceduralControlsMapping SourceSetUpOptionEnum = "Procedural_Controls_Mapping"
 )
 
+func (e SourceSetUpOptionEnum) ToPointer() *SourceSetUpOptionEnum {
+	return &e
+}
+
 func (e *SourceSetUpOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "System_Controls_Mapping":
 		fallthrough
 	case "Procedural_Controls_Mapping":
-		*e = SourceSetUpOptionEnum(s)
+		*e = SourceSetUpOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceSetUpOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceSetUpOptionEnum: %v", v)
 	}
 }

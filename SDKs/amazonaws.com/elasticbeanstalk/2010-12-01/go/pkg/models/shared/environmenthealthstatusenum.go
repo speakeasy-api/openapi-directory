@@ -21,12 +21,16 @@ const (
 	EnvironmentHealthStatusEnumSuspended EnvironmentHealthStatusEnum = "Suspended"
 )
 
+func (e EnvironmentHealthStatusEnum) ToPointer() *EnvironmentHealthStatusEnum {
+	return &e
+}
+
 func (e *EnvironmentHealthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NoData":
 		fallthrough
 	case "Unknown":
@@ -44,9 +48,9 @@ func (e *EnvironmentHealthStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Severe":
 		fallthrough
 	case "Suspended":
-		*e = EnvironmentHealthStatusEnum(s)
+		*e = EnvironmentHealthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentHealthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentHealthStatusEnum: %v", v)
 	}
 }

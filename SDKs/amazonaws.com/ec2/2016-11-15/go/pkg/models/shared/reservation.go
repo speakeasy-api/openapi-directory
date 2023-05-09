@@ -25,12 +25,16 @@ const (
 	ReservationInstancesArchitectureEnumArm64Mac ReservationInstancesArchitectureEnum = "arm64_mac"
 )
 
+func (e ReservationInstancesArchitectureEnum) ToPointer() *ReservationInstancesArchitectureEnum {
+	return &e
+}
+
 func (e *ReservationInstancesArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -40,10 +44,10 @@ func (e *ReservationInstancesArchitectureEnum) UnmarshalJSON(data []byte) error 
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = ReservationInstancesArchitectureEnum(s)
+		*e = ReservationInstancesArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesArchitectureEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	ReservationInstancesBlockDeviceMappingsEbsStatusEnumDetached  ReservationInstancesBlockDeviceMappingsEbsStatusEnum = "detached"
 )
 
+func (e ReservationInstancesBlockDeviceMappingsEbsStatusEnum) ToPointer() *ReservationInstancesBlockDeviceMappingsEbsStatusEnum {
+	return &e
+}
+
 func (e *ReservationInstancesBlockDeviceMappingsEbsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -70,10 +78,10 @@ func (e *ReservationInstancesBlockDeviceMappingsEbsStatusEnum) UnmarshalJSON(dat
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = ReservationInstancesBlockDeviceMappingsEbsStatusEnum(s)
+		*e = ReservationInstancesBlockDeviceMappingsEbsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesBlockDeviceMappingsEbsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesBlockDeviceMappingsEbsStatusEnum: %v", v)
 	}
 }
 
@@ -100,21 +108,25 @@ const (
 	ReservationInstancesBootModeEnumUefiPreferred ReservationInstancesBootModeEnum = "uefi-preferred"
 )
 
+func (e ReservationInstancesBootModeEnum) ToPointer() *ReservationInstancesBootModeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
 		fallthrough
 	case "uefi-preferred":
-		*e = ReservationInstancesBootModeEnum(s)
+		*e = ReservationInstancesBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesBootModeEnum: %v", v)
 	}
 }
 
@@ -126,19 +138,23 @@ const (
 	ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnumNone ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum = "none"
 )
 
+func (e ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum) ToPointer() *ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum {
+	return &e
+}
+
 func (e *ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "none":
-		*e = ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum(s)
+		*e = ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesCapacityReservationSpecificationCapacityReservationPreferenceEnum: %v", v)
 	}
 }
 
@@ -168,19 +184,23 @@ const (
 	ReservationInstancesCurrentInstanceBootModeEnumUefi       ReservationInstancesCurrentInstanceBootModeEnum = "uefi"
 )
 
+func (e ReservationInstancesCurrentInstanceBootModeEnum) ToPointer() *ReservationInstancesCurrentInstanceBootModeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesCurrentInstanceBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
-		*e = ReservationInstancesCurrentInstanceBootModeEnum(s)
+		*e = ReservationInstancesCurrentInstanceBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesCurrentInstanceBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesCurrentInstanceBootModeEnum: %v", v)
 	}
 }
 
@@ -218,19 +238,23 @@ const (
 	ReservationInstancesHypervisorEnumXen ReservationInstancesHypervisorEnum = "xen"
 )
 
+func (e ReservationInstancesHypervisorEnum) ToPointer() *ReservationInstancesHypervisorEnum {
+	return &e
+}
+
 func (e *ReservationInstancesHypervisorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ovm":
 		fallthrough
 	case "xen":
-		*e = ReservationInstancesHypervisorEnum(s)
+		*e = ReservationInstancesHypervisorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesHypervisorEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesHypervisorEnum: %v", v)
 	}
 }
 
@@ -248,19 +272,23 @@ const (
 	ReservationInstancesInstanceLifecycleEnumScheduled ReservationInstancesInstanceLifecycleEnum = "scheduled"
 )
 
+func (e ReservationInstancesInstanceLifecycleEnum) ToPointer() *ReservationInstancesInstanceLifecycleEnum {
+	return &e
+}
+
 func (e *ReservationInstancesInstanceLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spot":
 		fallthrough
 	case "scheduled":
-		*e = ReservationInstancesInstanceLifecycleEnum(s)
+		*e = ReservationInstancesInstanceLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesInstanceLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesInstanceLifecycleEnum: %v", v)
 	}
 }
 
@@ -906,14 +934,23 @@ const (
 	ReservationInstancesInstanceTypeEnumR7g12xlarge     ReservationInstancesInstanceTypeEnum = "r7g.12xlarge"
 	ReservationInstancesInstanceTypeEnumR7g16xlarge     ReservationInstancesInstanceTypeEnum = "r7g.16xlarge"
 	ReservationInstancesInstanceTypeEnumR7gMetal        ReservationInstancesInstanceTypeEnum = "r7g.metal"
+	ReservationInstancesInstanceTypeEnumC6inMetal       ReservationInstancesInstanceTypeEnum = "c6in.metal"
+	ReservationInstancesInstanceTypeEnumM6inMetal       ReservationInstancesInstanceTypeEnum = "m6in.metal"
+	ReservationInstancesInstanceTypeEnumM6idnMetal      ReservationInstancesInstanceTypeEnum = "m6idn.metal"
+	ReservationInstancesInstanceTypeEnumR6inMetal       ReservationInstancesInstanceTypeEnum = "r6in.metal"
+	ReservationInstancesInstanceTypeEnumR6idnMetal      ReservationInstancesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e ReservationInstancesInstanceTypeEnum) ToPointer() *ReservationInstancesInstanceTypeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2189,10 +2226,20 @@ func (e *ReservationInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = ReservationInstancesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = ReservationInstancesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2209,19 +2256,23 @@ const (
 	ReservationInstancesMaintenanceOptionsAutoRecoveryEnumDefault  ReservationInstancesMaintenanceOptionsAutoRecoveryEnum = "default"
 )
 
+func (e ReservationInstancesMaintenanceOptionsAutoRecoveryEnum) ToPointer() *ReservationInstancesMaintenanceOptionsAutoRecoveryEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMaintenanceOptionsAutoRecoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "default":
-		*e = ReservationInstancesMaintenanceOptionsAutoRecoveryEnum(s)
+		*e = ReservationInstancesMaintenanceOptionsAutoRecoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMaintenanceOptionsAutoRecoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMaintenanceOptionsAutoRecoveryEnum: %v", v)
 	}
 }
 
@@ -2238,19 +2289,23 @@ const (
 	ReservationInstancesMetadataOptionsHTTPEndpointEnumEnabled  ReservationInstancesMetadataOptionsHTTPEndpointEnum = "enabled"
 )
 
+func (e ReservationInstancesMetadataOptionsHTTPEndpointEnum) ToPointer() *ReservationInstancesMetadataOptionsHTTPEndpointEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMetadataOptionsHTTPEndpointEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ReservationInstancesMetadataOptionsHTTPEndpointEnum(s)
+		*e = ReservationInstancesMetadataOptionsHTTPEndpointEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPEndpointEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPEndpointEnum: %v", v)
 	}
 }
 
@@ -2262,19 +2317,23 @@ const (
 	ReservationInstancesMetadataOptionsHTTPProtocolIpv6EnumEnabled  ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum) ToPointer() *ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum(s)
+		*e = ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPProtocolIpv6Enum: %v", v)
 	}
 }
 
@@ -2286,19 +2345,23 @@ const (
 	ReservationInstancesMetadataOptionsHTTPTokensEnumRequired ReservationInstancesMetadataOptionsHTTPTokensEnum = "required"
 )
 
+func (e ReservationInstancesMetadataOptionsHTTPTokensEnum) ToPointer() *ReservationInstancesMetadataOptionsHTTPTokensEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMetadataOptionsHTTPTokensEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = ReservationInstancesMetadataOptionsHTTPTokensEnum(s)
+		*e = ReservationInstancesMetadataOptionsHTTPTokensEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPTokensEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsHTTPTokensEnum: %v", v)
 	}
 }
 
@@ -2310,19 +2373,23 @@ const (
 	ReservationInstancesMetadataOptionsInstanceMetadataTagsEnumEnabled  ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum = "enabled"
 )
 
+func (e ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum) ToPointer() *ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum(s)
+		*e = ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsInstanceMetadataTagsEnum: %v", v)
 	}
 }
 
@@ -2334,19 +2401,23 @@ const (
 	ReservationInstancesMetadataOptionsStateEnumApplied ReservationInstancesMetadataOptionsStateEnum = "applied"
 )
 
+func (e ReservationInstancesMetadataOptionsStateEnum) ToPointer() *ReservationInstancesMetadataOptionsStateEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMetadataOptionsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "applied":
-		*e = ReservationInstancesMetadataOptionsStateEnum(s)
+		*e = ReservationInstancesMetadataOptionsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMetadataOptionsStateEnum: %v", v)
 	}
 }
 
@@ -2370,12 +2441,16 @@ const (
 	ReservationInstancesMonitoringStateEnumPending   ReservationInstancesMonitoringStateEnum = "pending"
 )
 
+func (e ReservationInstancesMonitoringStateEnum) ToPointer() *ReservationInstancesMonitoringStateEnum {
+	return &e
+}
+
 func (e *ReservationInstancesMonitoringStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "disabling":
@@ -2383,10 +2458,10 @@ func (e *ReservationInstancesMonitoringStateEnum) UnmarshalJSON(data []byte) err
 	case "enabled":
 		fallthrough
 	case "pending":
-		*e = ReservationInstancesMonitoringStateEnum(s)
+		*e = ReservationInstancesMonitoringStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesMonitoringStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesMonitoringStateEnum: %v", v)
 	}
 }
 
@@ -2414,12 +2489,16 @@ const (
 	ReservationInstancesNetworkInterfacesAttachmentStatusEnumDetached  ReservationInstancesNetworkInterfacesAttachmentStatusEnum = "detached"
 )
 
+func (e ReservationInstancesNetworkInterfacesAttachmentStatusEnum) ToPointer() *ReservationInstancesNetworkInterfacesAttachmentStatusEnum {
+	return &e
+}
+
 func (e *ReservationInstancesNetworkInterfacesAttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -2427,10 +2506,10 @@ func (e *ReservationInstancesNetworkInterfacesAttachmentStatusEnum) UnmarshalJSO
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = ReservationInstancesNetworkInterfacesAttachmentStatusEnum(s)
+		*e = ReservationInstancesNetworkInterfacesAttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesNetworkInterfacesAttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesNetworkInterfacesAttachmentStatusEnum: %v", v)
 	}
 }
 
@@ -2493,12 +2572,16 @@ const (
 	ReservationInstancesNetworkInterfacesStatusEnumDetaching  ReservationInstancesNetworkInterfacesStatusEnum = "detaching"
 )
 
+func (e ReservationInstancesNetworkInterfacesStatusEnum) ToPointer() *ReservationInstancesNetworkInterfacesStatusEnum {
+	return &e
+}
+
 func (e *ReservationInstancesNetworkInterfacesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "associated":
@@ -2508,10 +2591,10 @@ func (e *ReservationInstancesNetworkInterfacesStatusEnum) UnmarshalJSON(data []b
 	case "in-use":
 		fallthrough
 	case "detaching":
-		*e = ReservationInstancesNetworkInterfacesStatusEnum(s)
+		*e = ReservationInstancesNetworkInterfacesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesNetworkInterfacesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesNetworkInterfacesStatusEnum: %v", v)
 	}
 }
 
@@ -2546,21 +2629,25 @@ const (
 	ReservationInstancesPlacementTenancyEnumHost      ReservationInstancesPlacementTenancyEnum = "host"
 )
 
+func (e ReservationInstancesPlacementTenancyEnum) ToPointer() *ReservationInstancesPlacementTenancyEnum {
+	return &e
+}
+
 func (e *ReservationInstancesPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = ReservationInstancesPlacementTenancyEnum(s)
+		*e = ReservationInstancesPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2584,17 +2671,21 @@ const (
 	ReservationInstancesPlatformEnumWindows ReservationInstancesPlatformEnum = "Windows"
 )
 
+func (e ReservationInstancesPlatformEnum) ToPointer() *ReservationInstancesPlatformEnum {
+	return &e
+}
+
 func (e *ReservationInstancesPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = ReservationInstancesPlatformEnum(s)
+		*e = ReservationInstancesPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesPlatformEnum: %v", v)
 	}
 }
 
@@ -2606,19 +2697,23 @@ const (
 	ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnumResourceName ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum = "resource-name"
 )
 
+func (e ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum) ToPointer() *ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum(s)
+		*e = ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesPrivateDNSNameOptionsHostnameTypeEnum: %v", v)
 	}
 }
 
@@ -2637,19 +2732,23 @@ const (
 	ReservationInstancesProductCodesProductCodeTypeEnumMarketplace ReservationInstancesProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e ReservationInstancesProductCodesProductCodeTypeEnum) ToPointer() *ReservationInstancesProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = ReservationInstancesProductCodesProductCodeTypeEnum(s)
+		*e = ReservationInstancesProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 
@@ -2667,19 +2766,23 @@ const (
 	ReservationInstancesRootDeviceTypeEnumInstanceStore ReservationInstancesRootDeviceTypeEnum = "instance-store"
 )
 
+func (e ReservationInstancesRootDeviceTypeEnum) ToPointer() *ReservationInstancesRootDeviceTypeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesRootDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ebs":
 		fallthrough
 	case "instance-store":
-		*e = ReservationInstancesRootDeviceTypeEnum(s)
+		*e = ReservationInstancesRootDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesRootDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesRootDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -2701,12 +2804,16 @@ const (
 	ReservationInstancesStateNameEnumStopped      ReservationInstancesStateNameEnum = "stopped"
 )
 
+func (e ReservationInstancesStateNameEnum) ToPointer() *ReservationInstancesStateNameEnum {
+	return &e
+}
+
 func (e *ReservationInstancesStateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "running":
@@ -2718,10 +2825,10 @@ func (e *ReservationInstancesStateNameEnum) UnmarshalJSON(data []byte) error {
 	case "stopping":
 		fallthrough
 	case "stopped":
-		*e = ReservationInstancesStateNameEnum(s)
+		*e = ReservationInstancesStateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesStateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesStateNameEnum: %v", v)
 	}
 }
 
@@ -2751,19 +2858,23 @@ const (
 	ReservationInstancesVirtualizationTypeEnumParavirtual ReservationInstancesVirtualizationTypeEnum = "paravirtual"
 )
 
+func (e ReservationInstancesVirtualizationTypeEnum) ToPointer() *ReservationInstancesVirtualizationTypeEnum {
+	return &e
+}
+
 func (e *ReservationInstancesVirtualizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = ReservationInstancesVirtualizationTypeEnum(s)
+		*e = ReservationInstancesVirtualizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReservationInstancesVirtualizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReservationInstancesVirtualizationTypeEnum: %v", v)
 	}
 }
 

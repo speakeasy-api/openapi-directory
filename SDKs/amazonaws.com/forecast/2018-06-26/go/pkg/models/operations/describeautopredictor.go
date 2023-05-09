@@ -16,17 +16,21 @@ const (
 	DescribeAutoPredictorXAmzTargetEnumAmazonForecastDescribeAutoPredictor DescribeAutoPredictorXAmzTargetEnum = "AmazonForecast.DescribeAutoPredictor"
 )
 
+func (e DescribeAutoPredictorXAmzTargetEnum) ToPointer() *DescribeAutoPredictorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAutoPredictorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DescribeAutoPredictor":
-		*e = DescribeAutoPredictorXAmzTargetEnum(s)
+		*e = DescribeAutoPredictorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAutoPredictorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAutoPredictorXAmzTargetEnum: %v", v)
 	}
 }
 

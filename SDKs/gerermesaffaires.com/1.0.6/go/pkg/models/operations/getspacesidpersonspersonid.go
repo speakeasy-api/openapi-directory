@@ -35,19 +35,23 @@ const (
 	GetSpacesIDPersonsPersonID200ApplicationJSONSexEnumFemale GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum = "female"
 )
 
+func (e GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum) ToPointer() *GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum {
+	return &e
+}
+
 func (e *GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum(s)
+		*e = GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonID200ApplicationJSONSexEnum: %v", v)
 	}
 }
 
@@ -58,19 +62,23 @@ const (
 	GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnumFalse GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum = "false"
 )
 
+func (e GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum) ToPointer() *GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum {
+	return &e
+}
+
 func (e *GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum(s)
+		*e = GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDPersonsPersonID200ApplicationJSONValidatedEnum: %v", v)
 	}
 }
 

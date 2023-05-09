@@ -15,17 +15,21 @@ const (
 	POSTModifyTransitGatewayVpcAttachmentActionEnumModifyTransitGatewayVpcAttachment POSTModifyTransitGatewayVpcAttachmentActionEnum = "ModifyTransitGatewayVpcAttachment"
 )
 
+func (e POSTModifyTransitGatewayVpcAttachmentActionEnum) ToPointer() *POSTModifyTransitGatewayVpcAttachmentActionEnum {
+	return &e
+}
+
 func (e *POSTModifyTransitGatewayVpcAttachmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyTransitGatewayVpcAttachment":
-		*e = POSTModifyTransitGatewayVpcAttachmentActionEnum(s)
+		*e = POSTModifyTransitGatewayVpcAttachmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTransitGatewayVpcAttachmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTransitGatewayVpcAttachmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyTransitGatewayVpcAttachmentVersionEnumTwoThousandAndSixteen1115 POSTModifyTransitGatewayVpcAttachmentVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyTransitGatewayVpcAttachmentVersionEnum) ToPointer() *POSTModifyTransitGatewayVpcAttachmentVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyTransitGatewayVpcAttachmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyTransitGatewayVpcAttachmentVersionEnum(s)
+		*e = POSTModifyTransitGatewayVpcAttachmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyTransitGatewayVpcAttachmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyTransitGatewayVpcAttachmentVersionEnum: %v", v)
 	}
 }
 

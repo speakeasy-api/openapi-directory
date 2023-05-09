@@ -14,18 +14,22 @@ const (
 	OperatorEnumAny OperatorEnum = "ANY"
 )
 
+func (e OperatorEnum) ToPointer() *OperatorEnum {
+	return &e
+}
+
 func (e *OperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ANY":
-		*e = OperatorEnum(s)
+		*e = OperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorEnum: %v", v)
 	}
 }

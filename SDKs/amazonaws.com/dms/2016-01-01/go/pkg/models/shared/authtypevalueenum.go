@@ -14,18 +14,22 @@ const (
 	AuthTypeValueEnumPassword AuthTypeValueEnum = "password"
 )
 
+func (e AuthTypeValueEnum) ToPointer() *AuthTypeValueEnum {
+	return &e
+}
+
 func (e *AuthTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "password":
-		*e = AuthTypeValueEnum(s)
+		*e = AuthTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthTypeValueEnum: %v", v)
 	}
 }

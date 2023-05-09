@@ -15,20 +15,24 @@ const (
 	AuthenticationTypeEnumIam        AuthenticationTypeEnum = "iam"
 )
 
+func (e AuthenticationTypeEnum) ToPointer() *AuthenticationTypeEnum {
+	return &e
+}
+
 func (e *AuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "password":
 		fallthrough
 	case "no-password":
 		fallthrough
 	case "iam":
-		*e = AuthenticationTypeEnum(s)
+		*e = AuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthenticationTypeEnum: %v", v)
 	}
 }

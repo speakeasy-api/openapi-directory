@@ -16,12 +16,16 @@ const (
 	FilterEventTypeEnumSecurityBulletinEvent FilterEventTypeEnum = "SECURITY_BULLETIN_EVENT"
 )
 
+func (e FilterEventTypeEnum) ToPointer() *FilterEventTypeEnum {
+	return &e
+}
+
 func (e *FilterEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "UPGRADE_AVAILABLE_EVENT":
@@ -29,10 +33,10 @@ func (e *FilterEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UPGRADE_EVENT":
 		fallthrough
 	case "SECURITY_BULLETIN_EVENT":
-		*e = FilterEventTypeEnum(s)
+		*e = FilterEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterEventTypeEnum: %v", v)
 	}
 }
 

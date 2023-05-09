@@ -28,12 +28,16 @@ const (
 	EssentialcontactsProjectsContactsComputeNotificationCategoriesEnumTechnicalIncidents              EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum = "TECHNICAL_INCIDENTS"
 )
 
+func (e EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum) ToPointer() *EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum {
+	return &e
+}
+
 func (e *EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTIFICATION_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -51,10 +55,10 @@ func (e *EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum) Unm
 	case "PRODUCT_UPDATES":
 		fallthrough
 	case "TECHNICAL_INCIDENTS":
-		*e = EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum(s)
+		*e = EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum: %v", v)
 	}
 }
 

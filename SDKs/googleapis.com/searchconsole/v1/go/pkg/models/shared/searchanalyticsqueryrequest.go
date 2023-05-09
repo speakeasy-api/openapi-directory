@@ -16,21 +16,25 @@ const (
 	SearchAnalyticsQueryRequestAggregationTypeEnumByPage     SearchAnalyticsQueryRequestAggregationTypeEnum = "BY_PAGE"
 )
 
+func (e SearchAnalyticsQueryRequestAggregationTypeEnum) ToPointer() *SearchAnalyticsQueryRequestAggregationTypeEnum {
+	return &e
+}
+
 func (e *SearchAnalyticsQueryRequestAggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO":
 		fallthrough
 	case "BY_PROPERTY":
 		fallthrough
 	case "BY_PAGE":
-		*e = SearchAnalyticsQueryRequestAggregationTypeEnum(s)
+		*e = SearchAnalyticsQueryRequestAggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestAggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestAggregationTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	SearchAnalyticsQueryRequestDataStateEnumAll                  SearchAnalyticsQueryRequestDataStateEnum = "ALL"
 )
 
+func (e SearchAnalyticsQueryRequestDataStateEnum) ToPointer() *SearchAnalyticsQueryRequestDataStateEnum {
+	return &e
+}
+
 func (e *SearchAnalyticsQueryRequestDataStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_STATE_UNSPECIFIED":
 		fallthrough
 	case "FINAL":
 		fallthrough
 	case "ALL":
-		*e = SearchAnalyticsQueryRequestDataStateEnum(s)
+		*e = SearchAnalyticsQueryRequestDataStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestDataStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestDataStateEnum: %v", v)
 	}
 }
 
@@ -72,12 +80,16 @@ const (
 	SearchAnalyticsQueryRequestDimensionsEnumSearchAppearance SearchAnalyticsQueryRequestDimensionsEnum = "SEARCH_APPEARANCE"
 )
 
+func (e SearchAnalyticsQueryRequestDimensionsEnum) ToPointer() *SearchAnalyticsQueryRequestDimensionsEnum {
+	return &e
+}
+
 func (e *SearchAnalyticsQueryRequestDimensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATE":
 		fallthrough
 	case "QUERY":
@@ -89,10 +101,10 @@ func (e *SearchAnalyticsQueryRequestDimensionsEnum) UnmarshalJSON(data []byte) e
 	case "DEVICE":
 		fallthrough
 	case "SEARCH_APPEARANCE":
-		*e = SearchAnalyticsQueryRequestDimensionsEnum(s)
+		*e = SearchAnalyticsQueryRequestDimensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestDimensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestDimensionsEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	SearchAnalyticsQueryRequestSearchTypeEnumGoogleNews SearchAnalyticsQueryRequestSearchTypeEnum = "GOOGLE_NEWS"
 )
 
+func (e SearchAnalyticsQueryRequestSearchTypeEnum) ToPointer() *SearchAnalyticsQueryRequestSearchTypeEnum {
+	return &e
+}
+
 func (e *SearchAnalyticsQueryRequestSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB":
 		fallthrough
 	case "IMAGE":
@@ -125,10 +141,10 @@ func (e *SearchAnalyticsQueryRequestSearchTypeEnum) UnmarshalJSON(data []byte) e
 	case "DISCOVER":
 		fallthrough
 	case "GOOGLE_NEWS":
-		*e = SearchAnalyticsQueryRequestSearchTypeEnum(s)
+		*e = SearchAnalyticsQueryRequestSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestSearchTypeEnum: %v", v)
 	}
 }
 
@@ -144,12 +160,16 @@ const (
 	SearchAnalyticsQueryRequestTypeEnumGoogleNews SearchAnalyticsQueryRequestTypeEnum = "GOOGLE_NEWS"
 )
 
+func (e SearchAnalyticsQueryRequestTypeEnum) ToPointer() *SearchAnalyticsQueryRequestTypeEnum {
+	return &e
+}
+
 func (e *SearchAnalyticsQueryRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB":
 		fallthrough
 	case "IMAGE":
@@ -161,10 +181,10 @@ func (e *SearchAnalyticsQueryRequestTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DISCOVER":
 		fallthrough
 	case "GOOGLE_NEWS":
-		*e = SearchAnalyticsQueryRequestTypeEnum(s)
+		*e = SearchAnalyticsQueryRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchAnalyticsQueryRequestTypeEnum: %v", v)
 	}
 }
 

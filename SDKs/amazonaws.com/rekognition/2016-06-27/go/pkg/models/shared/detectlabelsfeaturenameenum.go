@@ -14,18 +14,22 @@ const (
 	DetectLabelsFeatureNameEnumImageProperties DetectLabelsFeatureNameEnum = "IMAGE_PROPERTIES"
 )
 
+func (e DetectLabelsFeatureNameEnum) ToPointer() *DetectLabelsFeatureNameEnum {
+	return &e
+}
+
 func (e *DetectLabelsFeatureNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERAL_LABELS":
 		fallthrough
 	case "IMAGE_PROPERTIES":
-		*e = DetectLabelsFeatureNameEnum(s)
+		*e = DetectLabelsFeatureNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectLabelsFeatureNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectLabelsFeatureNameEnum: %v", v)
 	}
 }

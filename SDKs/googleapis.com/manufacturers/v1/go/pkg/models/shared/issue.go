@@ -16,21 +16,25 @@ const (
 	IssueResolutionEnumPendingProcessing     IssueResolutionEnum = "PENDING_PROCESSING"
 )
 
+func (e IssueResolutionEnum) ToPointer() *IssueResolutionEnum {
+	return &e
+}
+
 func (e *IssueResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOLUTION_UNSPECIFIED":
 		fallthrough
 	case "USER_ACTION":
 		fallthrough
 	case "PENDING_PROCESSING":
-		*e = IssueResolutionEnum(s)
+		*e = IssueResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssueResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for IssueResolutionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	IssueSeverityEnumInfo                IssueSeverityEnum = "INFO"
 )
 
+func (e IssueSeverityEnum) ToPointer() *IssueSeverityEnum {
+	return &e
+}
+
 func (e *IssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -57,10 +65,10 @@ func (e *IssueSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "INFO":
-		*e = IssueSeverityEnum(s)
+		*e = IssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for IssueSeverityEnum: %v", v)
 	}
 }
 

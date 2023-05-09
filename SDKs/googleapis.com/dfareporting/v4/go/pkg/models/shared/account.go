@@ -15,19 +15,23 @@ const (
 	AccountAccountProfileEnumAccountProfileStandard AccountAccountProfileEnum = "ACCOUNT_PROFILE_STANDARD"
 )
 
+func (e AccountAccountProfileEnum) ToPointer() *AccountAccountProfileEnum {
+	return &e
+}
+
 func (e *AccountAccountProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_PROFILE_BASIC":
 		fallthrough
 	case "ACCOUNT_PROFILE_STANDARD":
-		*e = AccountAccountProfileEnum(s)
+		*e = AccountAccountProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountAccountProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountAccountProfileEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	AccountActiveAdsLimitTierEnumActiveAdsTier1M   AccountActiveAdsLimitTierEnum = "ACTIVE_ADS_TIER_1M"
 )
 
+func (e AccountActiveAdsLimitTierEnum) ToPointer() *AccountActiveAdsLimitTierEnum {
+	return &e
+}
+
 func (e *AccountActiveAdsLimitTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_ADS_TIER_40K":
 		fallthrough
 	case "ACTIVE_ADS_TIER_75K":
@@ -66,10 +74,10 @@ func (e *AccountActiveAdsLimitTierEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE_ADS_TIER_750K":
 		fallthrough
 	case "ACTIVE_ADS_TIER_1M":
-		*e = AccountActiveAdsLimitTierEnum(s)
+		*e = AccountActiveAdsLimitTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountActiveAdsLimitTierEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountActiveAdsLimitTierEnum: %v", v)
 	}
 }
 

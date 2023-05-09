@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,14 +18,15 @@ func main() {
         }),
     )
 
-    req := operations.BatchCreatePartitionRequest{
+    ctx := context.Background()
+    res, err := s.BatchCreatePartition(ctx, operations.BatchCreatePartitionRequest{
         BatchCreatePartitionRequest: shared.BatchCreatePartitionRequest{
-            CatalogID: "corrupti",
+            CatalogID: sdk.String("corrupti"),
             DatabaseName: "provident",
             PartitionInputList: []shared.PartitionInput{
                 shared.PartitionInput{
-                    LastAccessTime: "2021-03-11T23:22:42.658Z",
-                    LastAnalyzedTime: "2021-05-14T08:28:11.899Z",
+                    LastAccessTime: types.MustTimeFromString("2021-03-11T23:22:42.658Z"),
+                    LastAnalyzedTime: types.MustTimeFromString("2021-05-14T08:28:11.899Z"),
                     Parameters: map[string]string{
                         "vel": "error",
                         "deserunt": "suscipit",
@@ -46,361 +48,326 @@ func main() {
                         },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "temporibus",
-                                Name: "ab",
+                                Comment: sdk.String("temporibus"),
+                                Name: "Erica Bogisich III",
                                 Parameters: map[string]string{
-                                    "veritatis": "deserunt",
-                                    "perferendis": "ipsam",
+                                    "sapiente": "quo",
+                                    "odit": "at",
+                                    "at": "maiores",
+                                    "molestiae": "quod",
                                 },
-                                Type: "repellendus",
+                                Type: sdk.String("quod"),
                             },
                             shared.Column{
-                                Comment: "sapiente",
-                                Name: "quo",
+                                Comment: sdk.String("esse"),
+                                Name: "Miss Lowell Parisian",
                                 Parameters: map[string]string{
-                                    "at": "at",
-                                },
-                                Type: "maiores",
-                            },
-                            shared.Column{
-                                Comment: "molestiae",
-                                Name: "quod",
-                                Parameters: map[string]string{
-                                    "esse": "totam",
-                                    "porro": "dolorum",
-                                    "dicta": "nam",
-                                    "officia": "occaecati",
-                                },
-                                Type: "fugit",
-                            },
-                            shared.Column{
-                                Comment: "deleniti",
-                                Name: "hic",
-                                Parameters: map[string]string{
+                                    "fugit": "deleniti",
+                                    "hic": "optio",
                                     "totam": "beatae",
-                                    "commodi": "molestiae",
-                                    "modi": "qui",
-                                    "impedit": "cum",
                                 },
-                                Type: "esse",
+                                Type: sdk.String("commodi"),
+                            },
+                            shared.Column{
+                                Comment: sdk.String("molestiae"),
+                                Name: "Norma Ryan",
+                                Parameters: map[string]string{
+                                    "excepturi": "aspernatur",
+                                },
+                                Type: sdk.String("perferendis"),
+                            },
+                            shared.Column{
+                                Comment: sdk.String("ad"),
+                                Name: "Louis Moore",
+                                Parameters: map[string]string{
+                                    "hic": "saepe",
+                                    "fuga": "in",
+                                },
+                                Type: sdk.String("corporis"),
                             },
                         },
-                        Compressed: false,
-                        InputFormat: "ipsum",
-                        Location: "excepturi",
-                        NumberOfBuckets: 135218,
-                        OutputFormat: "perferendis",
+                        Compressed: sdk.Bool(false),
+                        InputFormat: sdk.String("iste"),
+                        Location: sdk.String("iure"),
+                        NumberOfBuckets: sdk.Int64(902349),
+                        OutputFormat: sdk.String("quidem"),
                         Parameters: map[string]string{
-                            "natus": "sed",
-                            "iste": "dolor",
+                            "ipsa": "reiciendis",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "natus",
-                                SchemaArn: "laboriosam",
-                                SchemaName: "hic",
+                                RegistryName: sdk.String("est"),
+                                SchemaArn: sdk.String("mollitia"),
+                                SchemaName: sdk.String("laborum"),
                             },
-                            SchemaVersionID: "saepe",
-                            SchemaVersionNumber: 681820,
+                            SchemaVersionID: sdk.String("dolores"),
+                            SchemaVersionNumber: sdk.Int64(210382),
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "in",
+                            Name: sdk.String("Rose Rolfson"),
                             Parameters: map[string]string{
-                                "iste": "iure",
-                                "saepe": "quidem",
+                                "minima": "excepturi",
+                                "accusantium": "iure",
                             },
-                            SerializationLibrary: "architecto",
+                            SerializationLibrary: sdk.String("culpa"),
                         },
                         SkewedInfo: &shared.SkewedInfo{
                             SkewedColumnNames: []string{
-                                "reiciendis",
+                                "sapiente",
+                                "architecto",
+                                "mollitia",
+                                "dolorem",
                             },
                             SkewedColumnValueLocationMaps: map[string]string{
-                                "mollitia": "laborum",
-                                "dolores": "dolorem",
-                                "corporis": "explicabo",
+                                "consequuntur": "repellat",
+                                "mollitia": "occaecati",
+                                "numquam": "commodi",
                             },
                             SkewedColumnValues: []string{
-                                "enim",
-                                "omnis",
-                                "nemo",
-                                "minima",
+                                "molestiae",
+                                "velit",
                             },
                         },
                         SortColumns: []shared.Order{
                             shared.Order{
-                                Column: "accusantium",
-                                SortOrder: 438601,
+                                Column: "quia",
+                                SortOrder: 338007,
                             },
                             shared.Order{
-                                Column: "culpa",
-                                SortOrder: 988374,
+                                Column: "vitae",
+                                SortOrder: 674752,
                             },
                             shared.Order{
-                                Column: "sapiente",
-                                SortOrder: 102044,
+                                Column: "animi",
+                                SortOrder: 317202,
                             },
                         },
-                        StoredAsSubDirectories: false,
+                        StoredAsSubDirectories: sdk.Bool(false),
                     },
                     Values: []string{
-                        "dolorem",
-                        "culpa",
-                        "consequuntur",
+                        "quo",
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2021-01-15T20:18:47.519Z",
-                    LastAnalyzedTime: "2022-06-30T02:19:51.375Z",
+                    LastAccessTime: types.MustTimeFromString("2022-01-19T09:45:27.272Z"),
+                    LastAnalyzedTime: types.MustTimeFromString("2022-05-04T04:15:52.352Z"),
                     Parameters: map[string]string{
-                        "quam": "molestiae",
-                        "velit": "error",
+                        "aut": "quasi",
+                        "error": "temporibus",
+                        "laborum": "quasi",
+                        "reiciendis": "voluptatibus",
                     },
                     StorageDescriptor: &shared.StorageDescriptor{
                         AdditionalLocations: []string{
-                            "quis",
+                            "nihil",
+                            "praesentium",
+                            "voluptatibus",
+                            "ipsa",
                         },
                         BucketColumns: []string{
-                            "laborum",
+                            "voluptate",
+                            "cum",
+                            "perferendis",
                         },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "enim",
-                                Name: "odit",
+                                Comment: sdk.String("reprehenderit"),
+                                Name: "Shawna Carter",
                                 Parameters: map[string]string{
-                                    "sequi": "tenetur",
-                                    "ipsam": "id",
-                                    "possimus": "aut",
-                                    "quasi": "error",
+                                    "dicta": "harum",
+                                    "enim": "accusamus",
                                 },
-                                Type: "temporibus",
-                            },
-                            shared.Column{
-                                Comment: "laborum",
-                                Name: "quasi",
-                                Parameters: map[string]string{
-                                    "voluptatibus": "vero",
-                                    "nihil": "praesentium",
-                                    "voluptatibus": "ipsa",
-                                    "omnis": "voluptate",
-                                },
-                                Type: "cum",
-                            },
-                            shared.Column{
-                                Comment: "perferendis",
-                                Name: "doloremque",
-                                Parameters: map[string]string{
-                                    "ut": "maiores",
-                                    "dicta": "corporis",
-                                },
-                                Type: "dolore",
+                                Type: sdk.String("commodi"),
                             },
                         },
-                        Compressed: false,
-                        InputFormat: "iusto",
-                        Location: "dicta",
-                        NumberOfBuckets: 688661,
-                        OutputFormat: "enim",
+                        Compressed: sdk.Bool(false),
+                        InputFormat: sdk.String("repudiandae"),
+                        Location: sdk.String("quae"),
+                        NumberOfBuckets: sdk.Int64(216822),
+                        OutputFormat: sdk.String("quidem"),
                         Parameters: map[string]string{
-                            "commodi": "repudiandae",
-                            "quae": "ipsum",
-                            "quidem": "molestias",
                             "excepturi": "pariatur",
+                            "modi": "praesentium",
+                            "rem": "voluptates",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "modi",
-                                SchemaArn: "praesentium",
-                                SchemaName: "rem",
+                                RegistryName: sdk.String("quasi"),
+                                SchemaArn: sdk.String("repudiandae"),
+                                SchemaName: sdk.String("sint"),
                             },
-                            SchemaVersionID: "voluptates",
-                            SchemaVersionNumber: 93940,
+                            SchemaVersionID: sdk.String("veritatis"),
+                            SchemaVersionNumber: sdk.Int64(929297),
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "repudiandae",
+                            Name: sdk.String("Erin Altenwerth"),
                             Parameters: map[string]string{
-                                "veritatis": "itaque",
-                                "incidunt": "enim",
-                                "consequatur": "est",
+                                "deserunt": "distinctio",
                             },
-                            SerializationLibrary: "quibusdam",
+                            SerializationLibrary: sdk.String("quibusdam"),
                         },
                         SkewedInfo: &shared.SkewedInfo{
                             SkewedColumnNames: []string{
-                                "deserunt",
+                                "modi",
+                                "qui",
                             },
                             SkewedColumnValueLocationMaps: map[string]string{
-                                "quibusdam": "labore",
-                                "modi": "qui",
-                                "aliquid": "cupiditate",
+                                "cupiditate": "quos",
+                                "perferendis": "magni",
                             },
                             SkewedColumnValues: []string{
-                                "perferendis",
-                                "magni",
-                                "assumenda",
+                                "ipsam",
+                                "alias",
+                                "fugit",
+                                "dolorum",
                             },
                         },
                         SortColumns: []shared.Order{
                             shared.Order{
-                                Column: "alias",
-                                SortOrder: 146441,
+                                Column: "tempora",
+                                SortOrder: 703737,
                             },
                             shared.Order{
-                                Column: "dolorum",
-                                SortOrder: 569618,
+                                Column: "tempore",
+                                SortOrder: 288476,
+                            },
+                            shared.Order{
+                                Column: "delectus",
+                                SortOrder: 433288,
                             },
                         },
-                        StoredAsSubDirectories: false,
+                        StoredAsSubDirectories: sdk.Bool(false),
                     },
                     Values: []string{
-                        "facilis",
-                        "tempore",
+                        "eligendi",
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2022-01-14T19:13:42.009Z",
-                    LastAnalyzedTime: "2022-10-02T04:55:20.234Z",
+                    LastAccessTime: types.MustTimeFromString("2022-03-17T20:21:28.792Z"),
+                    LastAnalyzedTime: types.MustTimeFromString("2021-03-17T21:24:26.606Z"),
                     Parameters: map[string]string{
-                        "sint": "aliquid",
-                        "provident": "necessitatibus",
-                        "sint": "officia",
-                        "dolor": "debitis",
+                        "officia": "dolor",
+                        "debitis": "a",
+                        "dolorum": "in",
                     },
                     StorageDescriptor: &shared.StorageDescriptor{
                         AdditionalLocations: []string{
-                            "dolorum",
-                            "in",
-                            "in",
                             "illum",
+                            "maiores",
                         },
                         BucketColumns: []string{
-                            "rerum",
                             "dicta",
                             "magnam",
                             "cumque",
                         },
                         Columns: []shared.Column{
                             shared.Column{
-                                Comment: "ea",
-                                Name: "aliquid",
+                                Comment: sdk.String("ea"),
+                                Name: "Kayla Thompson",
                                 Parameters: map[string]string{
-                                    "accusamus": "non",
-                                    "occaecati": "enim",
                                     "accusamus": "delectus",
+                                    "quidem": "provident",
                                 },
-                                Type: "quidem",
+                                Type: sdk.String("nam"),
                             },
                             shared.Column{
-                                Comment: "provident",
-                                Name: "nam",
+                                Comment: sdk.String("id"),
+                                Name: "Jaime Will",
                                 Parameters: map[string]string{
-                                    "blanditiis": "deleniti",
-                                    "sapiente": "amet",
-                                    "deserunt": "nisi",
+                                    "vel": "natus",
+                                    "omnis": "molestiae",
                                 },
-                                Type: "vel",
+                                Type: sdk.String("perferendis"),
                             },
                             shared.Column{
-                                Comment: "natus",
-                                Name: "omnis",
-                                Parameters: map[string]string{
-                                    "perferendis": "nihil",
-                                    "magnam": "distinctio",
-                                },
-                                Type: "id",
-                            },
-                            shared.Column{
-                                Comment: "labore",
-                                Name: "labore",
+                                Comment: sdk.String("nihil"),
+                                Name: "Verna Olson",
                                 Parameters: map[string]string{
                                     "natus": "nobis",
                                     "eum": "vero",
                                 },
-                                Type: "aspernatur",
+                                Type: sdk.String("aspernatur"),
+                            },
+                            shared.Column{
+                                Comment: sdk.String("architecto"),
+                                Name: "Frances Marks",
+                                Parameters: map[string]string{
+                                    "sint": "accusantium",
+                                    "mollitia": "reiciendis",
+                                    "mollitia": "ad",
+                                },
+                                Type: sdk.String("eum"),
                             },
                         },
-                        Compressed: false,
-                        InputFormat: "architecto",
-                        Location: "magnam",
-                        NumberOfBuckets: 92373,
-                        OutputFormat: "excepturi",
+                        Compressed: sdk.Bool(false),
+                        InputFormat: sdk.String("dolor"),
+                        Location: sdk.String("necessitatibus"),
+                        NumberOfBuckets: sdk.Int64(141264),
+                        OutputFormat: sdk.String("nemo"),
                         Parameters: map[string]string{
-                            "provident": "quos",
-                            "sint": "accusantium",
+                            "iure": "doloribus",
                         },
                         SchemaReference: &shared.SchemaReference{
                             SchemaID: &shared.SchemaID{
-                                RegistryName: "mollitia",
-                                SchemaArn: "reiciendis",
-                                SchemaName: "mollitia",
+                                RegistryName: sdk.String("debitis"),
+                                SchemaArn: sdk.String("eius"),
+                                SchemaName: sdk.String("maxime"),
                             },
-                            SchemaVersionID: "ad",
-                            SchemaVersionNumber: 431418,
+                            SchemaVersionID: sdk.String("deleniti"),
+                            SchemaVersionNumber: sdk.Int64(703889),
                         },
                         SerdeInfo: &shared.SerDeInfo{
-                            Name: "dolor",
+                            Name: sdk.String("Alice Bradtke"),
                             Parameters: map[string]string{
-                                "odit": "nemo",
-                                "quasi": "iure",
-                                "doloribus": "debitis",
-                                "eius": "maxime",
-                            },
-                            SerializationLibrary: "deleniti",
-                        },
-                        SkewedInfo: &shared.SkewedInfo{
-                            SkewedColumnNames: []string{
-                                "in",
-                                "architecto",
-                                "architecto",
-                            },
-                            SkewedColumnValueLocationMaps: map[string]string{
-                                "ullam": "expedita",
                                 "nihil": "repellat",
                                 "quibusdam": "sed",
                                 "saepe": "pariatur",
                             },
+                            SerializationLibrary: sdk.String("accusantium"),
+                        },
+                        SkewedInfo: &shared.SkewedInfo{
+                            SkewedColumnNames: []string{
+                                "praesentium",
+                            },
+                            SkewedColumnValueLocationMaps: map[string]string{
+                                "magni": "sunt",
+                                "quo": "illum",
+                                "pariatur": "maxime",
+                            },
                             SkewedColumnValues: []string{
-                                "consequuntur",
+                                "excepturi",
+                                "odit",
                             },
                         },
                         SortColumns: []shared.Order{
                             shared.Order{
-                                Column: "natus",
-                                SortOrder: 166847,
+                                Column: "accusantium",
+                                SortOrder: 69167,
                             },
                             shared.Order{
-                                Column: "sunt",
-                                SortOrder: 779051,
-                            },
-                            shared.Order{
-                                Column: "illum",
-                                SortOrder: 864934,
+                                Column: "maiores",
+                                SortOrder: 697429,
                             },
                         },
-                        StoredAsSubDirectories: false,
+                        StoredAsSubDirectories: sdk.Bool(false),
                     },
                     Values: []string{
-                        "ea",
-                        "excepturi",
-                        "odit",
-                        "ea",
+                        "voluptate",
+                        "autem",
                     },
                 },
             },
-            TableName: "accusantium",
+            TableName: "nam",
         },
-        XAmzAlgorithm: "ab",
-        XAmzContentSha256: "maiores",
-        XAmzCredential: "quidem",
-        XAmzDate: "ipsam",
-        XAmzSecurityToken: "voluptate",
-        XAmzSignature: "autem",
-        XAmzSignedHeaders: "nam",
-        XAmzTarget: "AWSGlue.BatchCreatePartition",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchCreatePartition(ctx, req)
+        XAmzAlgorithm: sdk.String("eaque"),
+        XAmzContentSha256: sdk.String("pariatur"),
+        XAmzCredential: sdk.String("nemo"),
+        XAmzDate: sdk.String("voluptatibus"),
+        XAmzSecurityToken: sdk.String("perferendis"),
+        XAmzSignature: sdk.String("fugiat"),
+        XAmzSignedHeaders: sdk.String("amet"),
+        XAmzTarget: operations.BatchCreatePartitionXAmzTargetEnumAwsGlueBatchCreatePartition,
+    })
     if err != nil {
         log.Fatal(err)
     }

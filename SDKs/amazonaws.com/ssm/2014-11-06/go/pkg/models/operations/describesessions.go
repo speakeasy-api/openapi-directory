@@ -16,17 +16,21 @@ const (
 	DescribeSessionsXAmzTargetEnumAmazonSsmDescribeSessions DescribeSessionsXAmzTargetEnum = "AmazonSSM.DescribeSessions"
 )
 
+func (e DescribeSessionsXAmzTargetEnum) ToPointer() *DescribeSessionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribeSessions":
-		*e = DescribeSessionsXAmzTargetEnum(s)
+		*e = DescribeSessionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSessionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSessionsXAmzTargetEnum: %v", v)
 	}
 }
 

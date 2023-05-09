@@ -15,17 +15,21 @@ const (
 	GETDeleteNetworkACLEntryActionEnumDeleteNetworkACLEntry GETDeleteNetworkACLEntryActionEnum = "DeleteNetworkAclEntry"
 )
 
+func (e GETDeleteNetworkACLEntryActionEnum) ToPointer() *GETDeleteNetworkACLEntryActionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkACLEntryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkAclEntry":
-		*e = GETDeleteNetworkACLEntryActionEnum(s)
+		*e = GETDeleteNetworkACLEntryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkACLEntryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkACLEntryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteNetworkACLEntryVersionEnumTwoThousandAndSixteen1115 GETDeleteNetworkACLEntryVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteNetworkACLEntryVersionEnum) ToPointer() *GETDeleteNetworkACLEntryVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkACLEntryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteNetworkACLEntryVersionEnum(s)
+		*e = GETDeleteNetworkACLEntryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkACLEntryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkACLEntryVersionEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	RegisterDeviceRequestBodyPlatformEnumAdm         RegisterDeviceRequestBodyPlatformEnum = "ADM"
 )
 
+func (e RegisterDeviceRequestBodyPlatformEnum) ToPointer() *RegisterDeviceRequestBodyPlatformEnum {
+	return &e
+}
+
 func (e *RegisterDeviceRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APNS":
 		fallthrough
 	case "APNS_SANDBOX":
@@ -32,10 +36,10 @@ func (e *RegisterDeviceRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error
 	case "GCM":
 		fallthrough
 	case "ADM":
-		*e = RegisterDeviceRequestBodyPlatformEnum(s)
+		*e = RegisterDeviceRequestBodyPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterDeviceRequestBodyPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterDeviceRequestBodyPlatformEnum: %v", v)
 	}
 }
 

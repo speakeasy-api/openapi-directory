@@ -16,12 +16,16 @@ const (
 	TestTypeEnumRegion   TestTypeEnum = "Region"
 )
 
+func (e TestTypeEnum) ToPointer() *TestTypeEnum {
+	return &e
+}
+
 func (e *TestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Software":
 		fallthrough
 	case "Hardware":
@@ -29,9 +33,9 @@ func (e *TestTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AZ":
 		fallthrough
 	case "Region":
-		*e = TestTypeEnum(s)
+		*e = TestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestTypeEnum: %v", v)
 	}
 }

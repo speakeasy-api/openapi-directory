@@ -34,7 +34,10 @@ func newAsps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DirectoryAspsDelete - Deletes an ASP issued by a user.
 func (s *asps) DirectoryAspsDelete(ctx context.Context, request operations.DirectoryAspsDeleteRequest, security operations.DirectoryAspsDeleteSecurity) (*operations.DirectoryAspsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *asps) DirectoryAspsDelete(ctx context.Context, request operations.Direc
 // DirectoryAspsGet - Gets information about an ASP issued by a user.
 func (s *asps) DirectoryAspsGet(ctx context.Context, request operations.DirectoryAspsGetRequest, security operations.DirectoryAspsGetSecurity) (*operations.DirectoryAspsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps/{codeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *asps) DirectoryAspsGet(ctx context.Context, request operations.Director
 // DirectoryAspsList - Lists the ASPs issued by a user.
 func (s *asps) DirectoryAspsList(ctx context.Context, request operations.DirectoryAspsListRequest, security operations.DirectoryAspsListSecurity) (*operations.DirectoryAspsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/users/{userKey}/asps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

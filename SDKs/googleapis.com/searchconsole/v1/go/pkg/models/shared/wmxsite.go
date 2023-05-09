@@ -18,12 +18,16 @@ const (
 	WmxSitePermissionLevelEnumSiteUnverifiedUser             WmxSitePermissionLevelEnum = "SITE_UNVERIFIED_USER"
 )
 
+func (e WmxSitePermissionLevelEnum) ToPointer() *WmxSitePermissionLevelEnum {
+	return &e
+}
+
 func (e *WmxSitePermissionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SITE_PERMISSION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SITE_OWNER":
@@ -33,10 +37,10 @@ func (e *WmxSitePermissionLevelEnum) UnmarshalJSON(data []byte) error {
 	case "SITE_RESTRICTED_USER":
 		fallthrough
 	case "SITE_UNVERIFIED_USER":
-		*e = WmxSitePermissionLevelEnum(s)
+		*e = WmxSitePermissionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WmxSitePermissionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for WmxSitePermissionLevelEnum: %v", v)
 	}
 }
 

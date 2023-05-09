@@ -16,12 +16,16 @@ const (
 	ActionTypeEnumConnect   ActionTypeEnum = "CONNECT"
 )
 
+func (e ActionTypeEnum) ToPointer() *ActionTypeEnum {
+	return &e
+}
+
 func (e *ActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLISH":
 		fallthrough
 	case "SUBSCRIBE":
@@ -29,9 +33,9 @@ func (e *ActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RECEIVE":
 		fallthrough
 	case "CONNECT":
-		*e = ActionTypeEnum(s)
+		*e = ActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionTypeEnum: %v", v)
 	}
 }

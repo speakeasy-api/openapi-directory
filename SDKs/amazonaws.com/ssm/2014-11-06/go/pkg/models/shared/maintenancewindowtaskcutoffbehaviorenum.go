@@ -14,18 +14,22 @@ const (
 	MaintenanceWindowTaskCutoffBehaviorEnumCancelTask   MaintenanceWindowTaskCutoffBehaviorEnum = "CANCEL_TASK"
 )
 
+func (e MaintenanceWindowTaskCutoffBehaviorEnum) ToPointer() *MaintenanceWindowTaskCutoffBehaviorEnum {
+	return &e
+}
+
 func (e *MaintenanceWindowTaskCutoffBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTINUE_TASK":
 		fallthrough
 	case "CANCEL_TASK":
-		*e = MaintenanceWindowTaskCutoffBehaviorEnum(s)
+		*e = MaintenanceWindowTaskCutoffBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceWindowTaskCutoffBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceWindowTaskCutoffBehaviorEnum: %v", v)
 	}
 }

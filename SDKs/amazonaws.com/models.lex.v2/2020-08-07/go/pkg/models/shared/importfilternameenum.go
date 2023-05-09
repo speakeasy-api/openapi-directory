@@ -13,16 +13,20 @@ const (
 	ImportFilterNameEnumImportResourceType ImportFilterNameEnum = "ImportResourceType"
 )
 
+func (e ImportFilterNameEnum) ToPointer() *ImportFilterNameEnum {
+	return &e
+}
+
 func (e *ImportFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportResourceType":
-		*e = ImportFilterNameEnum(s)
+		*e = ImportFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportFilterNameEnum: %v", v)
 	}
 }

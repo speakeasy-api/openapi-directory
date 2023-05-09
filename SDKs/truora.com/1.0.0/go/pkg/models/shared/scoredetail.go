@@ -19,12 +19,16 @@ const (
 	ScoreDetailResultEnumIgnored  ScoreDetailResultEnum = "ignored"
 )
 
+func (e ScoreDetailResultEnum) ToPointer() *ScoreDetailResultEnum {
+	return &e
+}
+
 func (e *ScoreDetailResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "found":
@@ -36,10 +40,10 @@ func (e *ScoreDetailResultEnum) UnmarshalJSON(data []byte) error {
 	case "delayed":
 		fallthrough
 	case "ignored":
-		*e = ScoreDetailResultEnum(s)
+		*e = ScoreDetailResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreDetailResultEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreDetailResultEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	ScoreDetailSeverityEnumVeryHigh ScoreDetailSeverityEnum = "very_high"
 )
 
+func (e ScoreDetailSeverityEnum) ToPointer() *ScoreDetailSeverityEnum {
+	return &e
+}
+
 func (e *ScoreDetailSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "none":
@@ -75,10 +83,10 @@ func (e *ScoreDetailSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "high":
 		fallthrough
 	case "very_high":
-		*e = ScoreDetailSeverityEnum(s)
+		*e = ScoreDetailSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreDetailSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreDetailSeverityEnum: %v", v)
 	}
 }
 

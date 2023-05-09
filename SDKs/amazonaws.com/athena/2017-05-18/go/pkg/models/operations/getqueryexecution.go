@@ -16,17 +16,21 @@ const (
 	GetQueryExecutionXAmzTargetEnumAmazonAthenaGetQueryExecution GetQueryExecutionXAmzTargetEnum = "AmazonAthena.GetQueryExecution"
 )
 
+func (e GetQueryExecutionXAmzTargetEnum) ToPointer() *GetQueryExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetQueryExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetQueryExecution":
-		*e = GetQueryExecutionXAmzTargetEnum(s)
+		*e = GetQueryExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQueryExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQueryExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

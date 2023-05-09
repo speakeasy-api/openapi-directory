@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.ActivateDockRequest{
+    ctx := context.Background()
+    res, err := s.Docks.ActivateDock(ctx, operations.ActivateDockRequest{
         Accept: "corrupti",
         ContentType: "provident",
         DockID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Docks.ActivateDock(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,21 +16,25 @@ const (
 	CloudInterconnectWorkloadInterconnectTypeEnumInterconnectTypePartner     CloudInterconnectWorkloadInterconnectTypeEnum = "INTERCONNECT_TYPE_PARTNER"
 )
 
+func (e CloudInterconnectWorkloadInterconnectTypeEnum) ToPointer() *CloudInterconnectWorkloadInterconnectTypeEnum {
+	return &e
+}
+
 func (e *CloudInterconnectWorkloadInterconnectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERCONNECT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTERCONNECT_TYPE_DEDICATED":
 		fallthrough
 	case "INTERCONNECT_TYPE_PARTNER":
-		*e = CloudInterconnectWorkloadInterconnectTypeEnum(s)
+		*e = CloudInterconnectWorkloadInterconnectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudInterconnectWorkloadInterconnectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudInterconnectWorkloadInterconnectTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	CloudInterconnectWorkloadLinkTypeEnumLinkTypeEthernet100GLr CloudInterconnectWorkloadLinkTypeEnum = "LINK_TYPE_ETHERNET_100G_LR"
 )
 
+func (e CloudInterconnectWorkloadLinkTypeEnum) ToPointer() *CloudInterconnectWorkloadLinkTypeEnum {
+	return &e
+}
+
 func (e *CloudInterconnectWorkloadLinkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINK_TYPE_ETHERNET_10G_LR":
 		fallthrough
 	case "LINK_TYPE_ETHERNET_100G_LR":
-		*e = CloudInterconnectWorkloadLinkTypeEnum(s)
+		*e = CloudInterconnectWorkloadLinkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudInterconnectWorkloadLinkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudInterconnectWorkloadLinkTypeEnum: %v", v)
 	}
 }
 

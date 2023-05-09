@@ -48,12 +48,16 @@ const (
 	AnalysisSchemeLanguageEnumZhHant AnalysisSchemeLanguageEnum = "zh-Hant"
 )
 
+func (e AnalysisSchemeLanguageEnum) ToPointer() *AnalysisSchemeLanguageEnum {
+	return &e
+}
+
 func (e *AnalysisSchemeLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ar":
 		fallthrough
 	case "bg":
@@ -123,9 +127,9 @@ func (e *AnalysisSchemeLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "zh-Hans":
 		fallthrough
 	case "zh-Hant":
-		*e = AnalysisSchemeLanguageEnum(s)
+		*e = AnalysisSchemeLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalysisSchemeLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalysisSchemeLanguageEnum: %v", v)
 	}
 }

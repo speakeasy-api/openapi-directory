@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -77,4 +78,7 @@ pkg/models/shared/queryinstantrequest.go
 pkg/models/shared/queryexemplarsrequest.go
 pkg/models/shared/queryrangerequest.go
 pkg/models/shared/queryseriesrequest.go
+docs/sdk/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

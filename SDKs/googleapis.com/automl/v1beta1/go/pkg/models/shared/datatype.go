@@ -20,12 +20,16 @@ const (
 	DataTypeTypeCodeEnumCategory            DataTypeTypeCodeEnum = "CATEGORY"
 )
 
+func (e DataTypeTypeCodeEnum) ToPointer() *DataTypeTypeCodeEnum {
+	return &e
+}
+
 func (e *DataTypeTypeCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_CODE_UNSPECIFIED":
 		fallthrough
 	case "FLOAT64":
@@ -39,10 +43,10 @@ func (e *DataTypeTypeCodeEnum) UnmarshalJSON(data []byte) error {
 	case "STRUCT":
 		fallthrough
 	case "CATEGORY":
-		*e = DataTypeTypeCodeEnum(s)
+		*e = DataTypeTypeCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataTypeTypeCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataTypeTypeCodeEnum: %v", v)
 	}
 }
 

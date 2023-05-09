@@ -16,12 +16,16 @@ const (
 	TriggerTypeEnumEvent       TriggerTypeEnum = "EVENT"
 )
 
+func (e TriggerTypeEnum) ToPointer() *TriggerTypeEnum {
+	return &e
+}
+
 func (e *TriggerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCHEDULED":
 		fallthrough
 	case "CONDITIONAL":
@@ -29,9 +33,9 @@ func (e *TriggerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ON_DEMAND":
 		fallthrough
 	case "EVENT":
-		*e = TriggerTypeEnum(s)
+		*e = TriggerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TriggerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TriggerTypeEnum: %v", v)
 	}
 }

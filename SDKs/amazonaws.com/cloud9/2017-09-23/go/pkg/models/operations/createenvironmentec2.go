@@ -16,17 +16,21 @@ const (
 	CreateEnvironmentEc2XAmzTargetEnumAwsCloud9WorkspaceManagementServiceCreateEnvironmentEc2 CreateEnvironmentEc2XAmzTargetEnum = "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2"
 )
 
+func (e CreateEnvironmentEc2XAmzTargetEnum) ToPointer() *CreateEnvironmentEc2XAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEnvironmentEc2XAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2":
-		*e = CreateEnvironmentEc2XAmzTargetEnum(s)
+		*e = CreateEnvironmentEc2XAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEnvironmentEc2XAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEnvironmentEc2XAmzTargetEnum: %v", v)
 	}
 }
 

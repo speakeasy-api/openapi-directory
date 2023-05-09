@@ -15,17 +15,21 @@ const (
 	POSTDeleteVpcEndpointsActionEnumDeleteVpcEndpoints POSTDeleteVpcEndpointsActionEnum = "DeleteVpcEndpoints"
 )
 
+func (e POSTDeleteVpcEndpointsActionEnum) ToPointer() *POSTDeleteVpcEndpointsActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVpcEndpointsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVpcEndpoints":
-		*e = POSTDeleteVpcEndpointsActionEnum(s)
+		*e = POSTDeleteVpcEndpointsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteVpcEndpointsVersionEnumTwoThousandAndSixteen1115 POSTDeleteVpcEndpointsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteVpcEndpointsVersionEnum) ToPointer() *POSTDeleteVpcEndpointsVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVpcEndpointsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteVpcEndpointsVersionEnum(s)
+		*e = POSTDeleteVpcEndpointsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointsVersionEnum: %v", v)
 	}
 }
 

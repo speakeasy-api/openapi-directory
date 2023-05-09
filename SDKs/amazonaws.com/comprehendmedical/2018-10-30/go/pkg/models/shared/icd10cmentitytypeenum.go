@@ -14,18 +14,22 @@ const (
 	Icd10CMEntityTypeEnumTimeExpression Icd10CMEntityTypeEnum = "TIME_EXPRESSION"
 )
 
+func (e Icd10CMEntityTypeEnum) ToPointer() *Icd10CMEntityTypeEnum {
+	return &e
+}
+
 func (e *Icd10CMEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DX_NAME":
 		fallthrough
 	case "TIME_EXPRESSION":
-		*e = Icd10CMEntityTypeEnum(s)
+		*e = Icd10CMEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Icd10CMEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Icd10CMEntityTypeEnum: %v", v)
 	}
 }

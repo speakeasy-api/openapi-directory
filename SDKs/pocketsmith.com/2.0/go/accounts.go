@@ -35,7 +35,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Deletes an account and all its data by ID, optionally merge scenarios into another account.
 func (s *accounts) DeleteAccountsID(ctx context.Context, request operations.DeleteAccountsIDRequest) (*operations.DeleteAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *accounts) DeleteAccountsID(ctx context.Context, request operations.Dele
 // Gets an account by its ID.
 func (s *accounts) GetAccountsID(ctx context.Context, request operations.GetAccountsIDRequest) (*operations.GetAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *accounts) GetAccountsID(ctx context.Context, request operations.GetAcco
 // Lists accounts belonging to an institution by its ID.
 func (s *accounts) GetInstitutionsIDAccounts(ctx context.Context, request operations.GetInstitutionsIDAccountsRequest) (*operations.GetInstitutionsIDAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *accounts) GetInstitutionsIDAccounts(ctx context.Context, request operat
 // Lists all accounts belonging to the user by their ID.
 func (s *accounts) GetUsersIDAccounts(ctx context.Context, request operations.GetUsersIDAccountsRequest) (*operations.GetUsersIDAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -256,7 +268,10 @@ func (s *accounts) GetUsersIDAccounts(ctx context.Context, request operations.Ge
 // Creates and returns an account belonging to the user by their ID.
 func (s *accounts) PostUsersIDAccounts(ctx context.Context, request operations.PostUsersIDAccountsRequest) (*operations.PostUsersIDAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -322,7 +337,10 @@ func (s *accounts) PostUsersIDAccounts(ctx context.Context, request operations.P
 // Updates and returns an account by its ID.
 func (s *accounts) PutAccountsID(ctx context.Context, request operations.PutAccountsIDRequest) (*operations.PutAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -388,7 +406,10 @@ func (s *accounts) PutAccountsID(ctx context.Context, request operations.PutAcco
 // Updates the display order of accounts belonging to the user, by accepting an array of accounts in their new display order.
 func (s *accounts) PutUsersIDAccounts(ctx context.Context, request operations.PutUsersIDAccountsRequest) (*operations.PutUsersIDAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

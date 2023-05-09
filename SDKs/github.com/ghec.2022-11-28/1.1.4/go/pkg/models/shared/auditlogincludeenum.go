@@ -22,20 +22,24 @@ const (
 	AuditLogIncludeEnumAll AuditLogIncludeEnum = "all"
 )
 
+func (e AuditLogIncludeEnum) ToPointer() *AuditLogIncludeEnum {
+	return &e
+}
+
 func (e *AuditLogIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "git":
 		fallthrough
 	case "all":
-		*e = AuditLogIncludeEnum(s)
+		*e = AuditLogIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogIncludeEnum: %v", v)
 	}
 }

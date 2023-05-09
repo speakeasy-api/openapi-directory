@@ -15,20 +15,24 @@ const (
 	ListStateFilterActionEnumIgnore  ListStateFilterActionEnum = "ignore"
 )
 
+func (e ListStateFilterActionEnum) ToPointer() *ListStateFilterActionEnum {
+	return &e
+}
+
 func (e *ListStateFilterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "include":
 		fallthrough
 	case "exclude":
 		fallthrough
 	case "ignore":
-		*e = ListStateFilterActionEnum(s)
+		*e = ListStateFilterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListStateFilterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListStateFilterActionEnum: %v", v)
 	}
 }

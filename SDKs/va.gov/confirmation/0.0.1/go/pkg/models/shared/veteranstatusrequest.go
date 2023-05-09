@@ -15,19 +15,23 @@ const (
 	VeteranStatusRequestGenderEnumF VeteranStatusRequestGenderEnum = "F"
 )
 
+func (e VeteranStatusRequestGenderEnum) ToPointer() *VeteranStatusRequestGenderEnum {
+	return &e
+}
+
 func (e *VeteranStatusRequestGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "M":
 		fallthrough
 	case "F":
-		*e = VeteranStatusRequestGenderEnum(s)
+		*e = VeteranStatusRequestGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VeteranStatusRequestGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for VeteranStatusRequestGenderEnum: %v", v)
 	}
 }
 

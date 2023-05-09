@@ -13,16 +13,20 @@ const (
 	TaskDefinitionPlacementConstraintTypeEnumMemberOf TaskDefinitionPlacementConstraintTypeEnum = "memberOf"
 )
 
+func (e TaskDefinitionPlacementConstraintTypeEnum) ToPointer() *TaskDefinitionPlacementConstraintTypeEnum {
+	return &e
+}
+
 func (e *TaskDefinitionPlacementConstraintTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "memberOf":
-		*e = TaskDefinitionPlacementConstraintTypeEnum(s)
+		*e = TaskDefinitionPlacementConstraintTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskDefinitionPlacementConstraintTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskDefinitionPlacementConstraintTypeEnum: %v", v)
 	}
 }

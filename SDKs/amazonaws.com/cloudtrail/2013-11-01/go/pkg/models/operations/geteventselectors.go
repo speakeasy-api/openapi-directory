@@ -16,17 +16,21 @@ const (
 	GetEventSelectorsXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101GetEventSelectors GetEventSelectorsXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetEventSelectors"
 )
 
+func (e GetEventSelectorsXAmzTargetEnum) ToPointer() *GetEventSelectorsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetEventSelectorsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.GetEventSelectors":
-		*e = GetEventSelectorsXAmzTargetEnum(s)
+		*e = GetEventSelectorsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEventSelectorsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEventSelectorsXAmzTargetEnum: %v", v)
 	}
 }
 

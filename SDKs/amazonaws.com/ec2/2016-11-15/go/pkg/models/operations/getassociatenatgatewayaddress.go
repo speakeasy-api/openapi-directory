@@ -15,17 +15,21 @@ const (
 	GETAssociateNatGatewayAddressActionEnumAssociateNatGatewayAddress GETAssociateNatGatewayAddressActionEnum = "AssociateNatGatewayAddress"
 )
 
+func (e GETAssociateNatGatewayAddressActionEnum) ToPointer() *GETAssociateNatGatewayAddressActionEnum {
+	return &e
+}
+
 func (e *GETAssociateNatGatewayAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateNatGatewayAddress":
-		*e = GETAssociateNatGatewayAddressActionEnum(s)
+		*e = GETAssociateNatGatewayAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateNatGatewayAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateNatGatewayAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssociateNatGatewayAddressVersionEnumTwoThousandAndSixteen1115 GETAssociateNatGatewayAddressVersionEnum = "2016-11-15"
 )
 
+func (e GETAssociateNatGatewayAddressVersionEnum) ToPointer() *GETAssociateNatGatewayAddressVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateNatGatewayAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAssociateNatGatewayAddressVersionEnum(s)
+		*e = GETAssociateNatGatewayAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateNatGatewayAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateNatGatewayAddressVersionEnum: %v", v)
 	}
 }
 

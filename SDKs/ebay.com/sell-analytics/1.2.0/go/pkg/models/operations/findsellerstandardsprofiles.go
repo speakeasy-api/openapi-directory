@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type FindSellerStandardsProfilesSecurity struct {
+	APIAuth string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type FindSellerStandardsProfilesResponse struct {
 	ContentType string
 	// Success

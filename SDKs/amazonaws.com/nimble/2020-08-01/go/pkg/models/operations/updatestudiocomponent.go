@@ -27,12 +27,16 @@ const (
 	UpdateStudioComponentRequestBodySubtypeEnumCustom                UpdateStudioComponentRequestBodySubtypeEnum = "CUSTOM"
 )
 
+func (e UpdateStudioComponentRequestBodySubtypeEnum) ToPointer() *UpdateStudioComponentRequestBodySubtypeEnum {
+	return &e
+}
+
 func (e *UpdateStudioComponentRequestBodySubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_MANAGED_MICROSOFT_AD":
 		fallthrough
 	case "AMAZON_FSX_FOR_WINDOWS":
@@ -40,10 +44,10 @@ func (e *UpdateStudioComponentRequestBodySubtypeEnum) UnmarshalJSON(data []byte)
 	case "AMAZON_FSX_FOR_LUSTRE":
 		fallthrough
 	case "CUSTOM":
-		*e = UpdateStudioComponentRequestBodySubtypeEnum(s)
+		*e = UpdateStudioComponentRequestBodySubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStudioComponentRequestBodySubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStudioComponentRequestBodySubtypeEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	UpdateStudioComponentRequestBodyTypeEnumCustom           UpdateStudioComponentRequestBodyTypeEnum = "CUSTOM"
 )
 
+func (e UpdateStudioComponentRequestBodyTypeEnum) ToPointer() *UpdateStudioComponentRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *UpdateStudioComponentRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_DIRECTORY":
 		fallthrough
 	case "SHARED_FILE_SYSTEM":
@@ -73,10 +81,10 @@ func (e *UpdateStudioComponentRequestBodyTypeEnum) UnmarshalJSON(data []byte) er
 	case "LICENSE_SERVICE":
 		fallthrough
 	case "CUSTOM":
-		*e = UpdateStudioComponentRequestBodyTypeEnum(s)
+		*e = UpdateStudioComponentRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStudioComponentRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStudioComponentRequestBodyTypeEnum: %v", v)
 	}
 }
 

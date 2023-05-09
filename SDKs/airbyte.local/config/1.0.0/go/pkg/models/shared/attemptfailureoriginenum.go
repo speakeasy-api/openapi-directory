@@ -21,12 +21,16 @@ const (
 	AttemptFailureOriginEnumUnknown         AttemptFailureOriginEnum = "unknown"
 )
 
+func (e AttemptFailureOriginEnum) ToPointer() *AttemptFailureOriginEnum {
+	return &e
+}
+
 func (e *AttemptFailureOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "source":
 		fallthrough
 	case "destination":
@@ -42,9 +46,9 @@ func (e *AttemptFailureOriginEnum) UnmarshalJSON(data []byte) error {
 	case "airbyte_platform":
 		fallthrough
 	case "unknown":
-		*e = AttemptFailureOriginEnum(s)
+		*e = AttemptFailureOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttemptFailureOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AttemptFailureOriginEnum: %v", v)
 	}
 }

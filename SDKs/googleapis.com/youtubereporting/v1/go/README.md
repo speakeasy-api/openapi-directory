@@ -13,42 +13,40 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/youtuberep
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.YoutubereportingJobsCreateRequest{
-        DollarXgafv: "2",
-        Job: &shared.Job{
-            CreateTime: "provident",
-            ExpireTime: "distinctio",
-            ID: "quibusdam",
-            Name: "unde",
-            ReportTypeID: "nulla",
-            SystemManaged: false,
-        },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        OnBehalfOfContentOwner: "iure",
-        PrettyPrint: false,
-        QuotaUser: "magnam",
-        UploadType: "debitis",
-        UploadProtocol: "ipsa",
-    }
-
     ctx := context.Background()
-    res, err := s.Jobs.YoutubereportingJobsCreate(ctx, req, operations.YoutubereportingJobsCreateSecurity{
+    res, err := s.Jobs.YoutubereportingJobsCreate(ctx, operations.YoutubereportingJobsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        Job: &shared.Job{
+            CreateTime: sdk.String("provident"),
+            ExpireTime: sdk.String("distinctio"),
+            ID: sdk.String("d9d8d69a-674e-40f4-a7cc-8796ed151a05"),
+            Name: sdk.String("Timmy Satterfield"),
+            ReportTypeID: sdk.String("at"),
+            SystemManaged: sdk.Bool(false),
+        },
+        AccessToken: sdk.String("maiores"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("quod"),
+        Fields: sdk.String("quod"),
+        Key: sdk.String("esse"),
+        OauthToken: sdk.String("totam"),
+        OnBehalfOfContentOwner: sdk.String("porro"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("dolorum"),
+        UploadType: sdk.String("dicta"),
+        UploadProtocol: sdk.String("nam"),
+    }, operations.YoutubereportingJobsCreateSecurity{
         Option1: &operations.YoutubereportingJobsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -69,22 +67,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### Jobs
+### [Jobs](docs/jobs/README.md)
 
-* `YoutubereportingJobsCreate` - Creates a job and returns it.
-* `YoutubereportingJobsDelete` - Deletes a job.
-* `YoutubereportingJobsGet` - Gets a job.
-* `YoutubereportingJobsList` - Lists jobs.
-* `YoutubereportingJobsReportsGet` - Gets the metadata of a specific report.
-* `YoutubereportingJobsReportsList` - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
+* [YoutubereportingJobsCreate](docs/jobs/README.md#youtubereportingjobscreate) - Creates a job and returns it.
+* [YoutubereportingJobsDelete](docs/jobs/README.md#youtubereportingjobsdelete) - Deletes a job.
+* [YoutubereportingJobsGet](docs/jobs/README.md#youtubereportingjobsget) - Gets a job.
+* [YoutubereportingJobsList](docs/jobs/README.md#youtubereportingjobslist) - Lists jobs.
+* [YoutubereportingJobsReportsGet](docs/jobs/README.md#youtubereportingjobsreportsget) - Gets the metadata of a specific report.
+* [YoutubereportingJobsReportsList](docs/jobs/README.md#youtubereportingjobsreportslist) - Lists reports created by a specific job. Returns NOT_FOUND if the job does not exist.
 
-### Media
+### [Media](docs/media/README.md)
 
-* `YoutubereportingMediaDownload` - Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
+* [YoutubereportingMediaDownload](docs/media/README.md#youtubereportingmediadownload) - Method for media download. Download is supported on the URI `/v1/media/{+name}?alt=media`.
 
-### ReportTypes
+### [ReportTypes](docs/reporttypes/README.md)
 
-* `YoutubereportingReportTypesList` - Lists report types.
+* [YoutubereportingReportTypesList](docs/reporttypes/README.md#youtubereportingreporttypeslist) - Lists report types.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/phantauth.net/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetClientClientIDRequest{
-        ClientID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Client.GetClientClientID(ctx, req)
+    res, err := s.Client.GetClientClientID(ctx, operations.GetClientClientIDRequest{
+        ClientID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,33 +42,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### Client
+### [Client](docs/client/README.md)
 
-* `GetClientClientID` - Get a Client
-* `GetClientClientIDTokenKind` - Get a Client Token
-* `PostClient` - Create a Client Selfie
+* [GetClientClientID](docs/client/README.md#getclientclientid) - Get a Client
+* [GetClientClientIDTokenKind](docs/client/README.md#getclientclientidtokenkind) - Get a Client Token
+* [PostClient](docs/client/README.md#postclient) - Create a Client Selfie
 
-### Domain
+### [Domain](docs/domain/README.md)
 
-* `GetDomainDomainname` - Get a Domain
+* [GetDomainDomainname](docs/domain/README.md#getdomaindomainname) - Get a Domain
 
-### Fleet
+### [Fleet](docs/fleet/README.md)
 
-* `GetFleetFleetname` - Get a Fleet
+* [GetFleetFleetname](docs/fleet/README.md#getfleetfleetname) - Get a Fleet
 
-### Team
+### [Team](docs/team/README.md)
 
-* `GetTeamTeamname` - Get a Team
+* [GetTeamTeamname](docs/team/README.md#getteamteamname) - Get a Team
 
-### Tenant
+### [Tenant](docs/tenant/README.md)
 
-* `GetTenantTenantname` - Get a Tenant
+* [GetTenantTenantname](docs/tenant/README.md#gettenanttenantname) - Get a Tenant
 
-### User
+### [User](docs/user/README.md)
 
-* `GetUserUsername` - Get a User
-* `GetUserUsernameTokenKind` - Get a User Token
-* `PostUser` - Create a User Selfie
+* [GetUserUsername](docs/user/README.md#getuserusername) - Get a User
+* [GetUserUsernameTokenKind](docs/user/README.md#getuserusernametokenkind) - Get a User Token
+* [PostUser](docs/user/README.md#postuser) - Create a User Selfie
 <!-- End SDK Available Operations -->
 
 ### Maturity

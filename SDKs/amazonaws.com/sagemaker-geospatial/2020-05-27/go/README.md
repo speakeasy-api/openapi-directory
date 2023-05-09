@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sagemaker-g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.DeleteEarthObservationJobRequest{
-        Arn: "corrupti",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteEarthObservationJob(ctx, req)
+    res, err := s.DeleteEarthObservationJob(ctx, operations.DeleteEarthObservationJobRequest{
+        Arn: "corrupti",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,27 +52,27 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteEarthObservationJob` - Use this operation to delete an Earth Observation job.
-* `DeleteVectorEnrichmentJob` - Use this operation to delete a Vector Enrichment job.
-* `ExportEarthObservationJob` - Use this operation to export results of an Earth Observation job and optionally source images used as input to the EOJ to an S3 location.
-* `ExportVectorEnrichmentJob` - Use this operation to copy results of a Vector Enrichment job to an S3 location.
-* `GetEarthObservationJob` - Get the details for a previously initiated Earth Observation job.
-* `GetRasterDataCollection` - Use this operation to get details of a specific raster data collection.
-* `GetTile` - Gets a web mercator tile for the given Earth Observation job.
-* `GetVectorEnrichmentJob` - Retrieves details of a Vector Enrichment Job for a given job Amazon Resource Name (ARN).
-* `ListEarthObservationJobs` - Use this operation to get a list of the Earth Observation jobs associated with the calling Amazon Web Services account.
-* `ListRasterDataCollections` - Use this operation to get raster data collections.
-* `ListTagsForResource` - Lists the tags attached to the resource.
-* `ListVectorEnrichmentJobs` - Retrieves a list of vector enrichment jobs.
-* `SearchRasterDataCollection` - Allows you run image query on a specific raster data collection to get a list of the satellite imagery matching the selected filters.
-* `StartEarthObservationJob` - Use this operation to create an Earth observation job.
-* `StartVectorEnrichmentJob` - Creates a Vector Enrichment job for the supplied job type. Currently, there are two supported job types: reverse geocoding and map matching.
-* `StopEarthObservationJob` - Use this operation to stop an existing earth observation job.
-* `StopVectorEnrichmentJob` - Stops the Vector Enrichment job for a given job ARN.
-* `TagResource` - The resource you want to tag.
-* `UntagResource` - The resource you want to untag.
+* [DeleteEarthObservationJob](docs/sdk/README.md#deleteearthobservationjob) - Use this operation to delete an Earth Observation job.
+* [DeleteVectorEnrichmentJob](docs/sdk/README.md#deletevectorenrichmentjob) - Use this operation to delete a Vector Enrichment job.
+* [ExportEarthObservationJob](docs/sdk/README.md#exportearthobservationjob) - Use this operation to export results of an Earth Observation job and optionally source images used as input to the EOJ to an Amazon S3 location.
+* [ExportVectorEnrichmentJob](docs/sdk/README.md#exportvectorenrichmentjob) - Use this operation to copy results of a Vector Enrichment job to an Amazon S3 location.
+* [GetEarthObservationJob](docs/sdk/README.md#getearthobservationjob) - Get the details for a previously initiated Earth Observation job.
+* [GetRasterDataCollection](docs/sdk/README.md#getrasterdatacollection) - Use this operation to get details of a specific raster data collection.
+* [GetTile](docs/sdk/README.md#gettile) - Gets a web mercator tile for the given Earth Observation job.
+* [GetVectorEnrichmentJob](docs/sdk/README.md#getvectorenrichmentjob) - Retrieves details of a Vector Enrichment Job for a given job Amazon Resource Name (ARN).
+* [ListEarthObservationJobs](docs/sdk/README.md#listearthobservationjobs) - Use this operation to get a list of the Earth Observation jobs associated with the calling Amazon Web Services account.
+* [ListRasterDataCollections](docs/sdk/README.md#listrasterdatacollections) - Use this operation to get raster data collections.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags attached to the resource.
+* [ListVectorEnrichmentJobs](docs/sdk/README.md#listvectorenrichmentjobs) - Retrieves a list of vector enrichment jobs.
+* [SearchRasterDataCollection](docs/sdk/README.md#searchrasterdatacollection) - Allows you run image query on a specific raster data collection to get a list of the satellite imagery matching the selected filters.
+* [StartEarthObservationJob](docs/sdk/README.md#startearthobservationjob) - Use this operation to create an Earth observation job.
+* [StartVectorEnrichmentJob](docs/sdk/README.md#startvectorenrichmentjob) - Creates a Vector Enrichment job for the supplied job type. Currently, there are two supported job types: reverse geocoding and map matching.
+* [StopEarthObservationJob](docs/sdk/README.md#stopearthobservationjob) - Use this operation to stop an existing earth observation job.
+* [StopVectorEnrichmentJob](docs/sdk/README.md#stopvectorenrichmentjob) - Stops the Vector Enrichment job for a given job ARN.
+* [TagResource](docs/sdk/README.md#tagresource) - The resource you want to tag.
+* [UntagResource](docs/sdk/README.md#untagresource) - The resource you want to untag.
 <!-- End SDK Available Operations -->
 
 ### Maturity

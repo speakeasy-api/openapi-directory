@@ -15,20 +15,24 @@ const (
 	RepositoryCloneMethodEnumSigv4 RepositoryCloneMethodEnum = "SIGV4"
 )
 
+func (e RepositoryCloneMethodEnum) ToPointer() *RepositoryCloneMethodEnum {
+	return &e
+}
+
 func (e *RepositoryCloneMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSH":
 		fallthrough
 	case "TOKEN":
 		fallthrough
 	case "SIGV4":
-		*e = RepositoryCloneMethodEnum(s)
+		*e = RepositoryCloneMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryCloneMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryCloneMethodEnum: %v", v)
 	}
 }

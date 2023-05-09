@@ -19,12 +19,16 @@ const (
 	ListImageRecipesRequestBodyOwnerEnumThirdParty ListImageRecipesRequestBodyOwnerEnum = "ThirdParty"
 )
 
+func (e ListImageRecipesRequestBodyOwnerEnum) ToPointer() *ListImageRecipesRequestBodyOwnerEnum {
+	return &e
+}
+
 func (e *ListImageRecipesRequestBodyOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Self":
 		fallthrough
 	case "Shared":
@@ -32,10 +36,10 @@ func (e *ListImageRecipesRequestBodyOwnerEnum) UnmarshalJSON(data []byte) error 
 	case "Amazon":
 		fallthrough
 	case "ThirdParty":
-		*e = ListImageRecipesRequestBodyOwnerEnum(s)
+		*e = ListImageRecipesRequestBodyOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListImageRecipesRequestBodyOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for ListImageRecipesRequestBodyOwnerEnum: %v", v)
 	}
 }
 

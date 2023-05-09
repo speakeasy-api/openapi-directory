@@ -14,18 +14,22 @@ const (
 	RStudioServerProUserGroupEnumRStudioUser  RStudioServerProUserGroupEnum = "R_STUDIO_USER"
 )
 
+func (e RStudioServerProUserGroupEnum) ToPointer() *RStudioServerProUserGroupEnum {
+	return &e
+}
+
 func (e *RStudioServerProUserGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "R_STUDIO_ADMIN":
 		fallthrough
 	case "R_STUDIO_USER":
-		*e = RStudioServerProUserGroupEnum(s)
+		*e = RStudioServerProUserGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RStudioServerProUserGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for RStudioServerProUserGroupEnum: %v", v)
 	}
 }

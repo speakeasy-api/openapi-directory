@@ -20,12 +20,16 @@ const (
 	FeedTypeEnumOffers        FeedTypeEnum = "Offers"
 )
 
+func (e FeedTypeEnum) ToPointer() *FeedTypeEnum {
+	return &e
+}
+
 func (e *FeedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Products":
 		fallthrough
 	case "Inventory":
@@ -39,9 +43,9 @@ func (e *FeedTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Unpublish":
 		fallthrough
 	case "Offers":
-		*e = FeedTypeEnum(s)
+		*e = FeedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedTypeEnum: %v", v)
 	}
 }

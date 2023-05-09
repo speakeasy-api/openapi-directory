@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Orders-API/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,13 +28,11 @@ func main() {
         }),
     )
 
-    req := operations.GetWindowToChangeSellerRequest{
+    ctx := context.Background()
+    res, err := s.ChangeSeller.GetWindowToChangeSeller(ctx, operations.GetWindowToChangeSellerRequest{
         Accept: "corrupti",
         ContentType: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.ChangeSeller.GetWindowToChangeSeller(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,66 +48,66 @@ func main() {
 ## Available Resources and Operations
 
 
-### ChangeSeller
+### [ChangeSeller](docs/changeseller/README.md)
 
-* `GetWindowToChangeSeller` - Get window to change seller
-* `UpdateWindowToChangeSeller` - Update window to change seller
+* [GetWindowToChangeSeller](docs/changeseller/README.md#getwindowtochangeseller) - Get window to change seller
+* [UpdateWindowToChangeSeller](docs/changeseller/README.md#updatewindowtochangeseller) - Update window to change seller
 
-### Conversation
+### [Conversation](docs/conversation/README.md)
 
-* `GetConversation` - Retrieve order conversation
+* [GetConversation](docs/conversation/README.md#getconversation) - Retrieve order conversation
 
-### ExportOrderReport
+### [ExportOrderReport](docs/exportorderreport/README.md)
 
-* `StatusCompleted` - Export order report with status 'Completed'
-* `StatusInProgress` - Export order report with status 'In Progress'
+* [StatusCompleted](docs/exportorderreport/README.md#statuscompleted) - Export order report with status 'Completed'
+* [StatusInProgress](docs/exportorderreport/README.md#statusinprogress) - Export order report with status 'In Progress'
 
-### FeedV2Deprecated
+### [FeedV2Deprecated](docs/feedv2deprecated/README.md)
 
-* `Getfeedorderstatus` - Get feed order status
+* [Getfeedorderstatus](docs/feedv2deprecated/README.md#getfeedorderstatus) - Get feed order status
 
-### FeedV3
+### [FeedV3](docs/feedv3/README.md)
 
-* `Commititemfeedorderstatus` - Commit feed items
-* `FeedConfiguration` - Create or update feed configuration
-* `FeedConfigurationDelete` - Delete feed configuration
-* `GetFeedConfiguration` - Get feed configuration
-* `Getfeedorderstatus1` - Retrieve feed items
-* `TestJSONataExpression` - Test JSONata expression
+* [Commititemfeedorderstatus](docs/feedv3/README.md#commititemfeedorderstatus) - Commit feed items
+* [FeedConfiguration](docs/feedv3/README.md#feedconfiguration) - Create or update feed configuration
+* [FeedConfigurationDelete](docs/feedv3/README.md#feedconfigurationdelete) - Delete feed configuration
+* [GetFeedConfiguration](docs/feedv3/README.md#getfeedconfiguration) - Get feed configuration
+* [Getfeedorderstatus1](docs/feedv3/README.md#getfeedorderstatus1) - Retrieve feed items
+* [TestJSONataExpression](docs/feedv3/README.md#testjsonataexpression) - Test JSONata expression
 
-### Invoice
+### [Invoice](docs/invoice/README.md)
 
-* `InvoiceNotification` - Order invoice notification
-* `UpdatepartialinvoiceSendTrackingNumber` - Update order's partial invoice (send tracking number)
+* [InvoiceNotification](docs/invoice/README.md#invoicenotification) - Order invoice notification
+* [UpdatepartialinvoiceSendTrackingNumber](docs/invoice/README.md#updatepartialinvoicesendtrackingnumber) - Update order's partial invoice (send tracking number)
 
-### OrderHook
+### [OrderHook](docs/orderhook/README.md)
 
-* `DeleteHookConfiguration` - Delete hook configuration
-* `GetHookConfiguration` - Get hook configuration
-* `HookConfiguration` - Create or update hook configuration
+* [DeleteHookConfiguration](docs/orderhook/README.md#deletehookconfiguration) - Delete hook configuration
+* [GetHookConfiguration](docs/orderhook/README.md#gethookconfiguration) - Get hook configuration
+* [HookConfiguration](docs/orderhook/README.md#hookconfiguration) - Create or update hook configuration
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `AddLog` - Add log in orders
-* `CancelOrder` - Cancel order
-* `GetOrder` - Get order
-* `ListOrders` - List orders
-* `RegisterChange` - Register change on order
-* `StartHandling` - Start handling order
+* [AddLog](docs/orders/README.md#addlog) - Add log in orders
+* [CancelOrder](docs/orders/README.md#cancelorder) - Cancel order
+* [GetOrder](docs/orders/README.md#getorder) - Get order
+* [ListOrders](docs/orders/README.md#listorders) - List orders
+* [RegisterChange](docs/orders/README.md#registerchange) - Register change on order
+* [StartHandling](docs/orders/README.md#starthandling) - Start handling order
 
-### Payment
+### [Payment](docs/payment/README.md)
 
-* `GetPaymenttransaction` - Retrieve payment transaction
-* `SendPaymentNotification` - Send payment notification
+* [GetPaymenttransaction](docs/payment/README.md#getpaymenttransaction) - Retrieve payment transaction
+* [SendPaymentNotification](docs/payment/README.md#sendpaymentnotification) - Send payment notification
 
-### Tracking
+### [Tracking](docs/tracking/README.md)
 
-* `UpdateTrackingStatus` - Update order tracking status
+* [UpdateTrackingStatus](docs/tracking/README.md#updatetrackingstatus) - Update order tracking status
 
-### UserOrders
+### [UserOrders](docs/userorders/README.md)
 
-* `Userorderdetails` - Retrieve user order details
-* `Userorderslist` - Retrieve user's orders
+* [Userorderdetails](docs/userorders/README.md#userorderdetails) - Retrieve user order details
+* [Userorderslist](docs/userorders/README.md#userorderslist) - Retrieve user's orders
 <!-- End SDK Available Operations -->
 
 ### Maturity

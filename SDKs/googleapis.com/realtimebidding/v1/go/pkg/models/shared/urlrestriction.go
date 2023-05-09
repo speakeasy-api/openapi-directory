@@ -22,12 +22,16 @@ const (
 	URLRestrictionRestrictionTypeEnumDoesNotEndWith             URLRestrictionRestrictionTypeEnum = "DOES_NOT_END_WITH"
 )
 
+func (e URLRestrictionRestrictionTypeEnum) ToPointer() *URLRestrictionRestrictionTypeEnum {
+	return &e
+}
+
 func (e *URLRestrictionRestrictionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONTAINS":
@@ -45,10 +49,10 @@ func (e *URLRestrictionRestrictionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DOES_NOT_START_WITH":
 		fallthrough
 	case "DOES_NOT_END_WITH":
-		*e = URLRestrictionRestrictionTypeEnum(s)
+		*e = URLRestrictionRestrictionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for URLRestrictionRestrictionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for URLRestrictionRestrictionTypeEnum: %v", v)
 	}
 }
 

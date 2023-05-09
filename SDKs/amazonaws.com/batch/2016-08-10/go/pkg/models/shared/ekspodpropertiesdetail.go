@@ -4,11 +4,13 @@ package shared
 
 // EksPodPropertiesDetail - The details for the pod.
 type EksPodPropertiesDetail struct {
-	Containers         []EksContainerDetail `json:"containers,omitempty"`
-	DNSPolicy          *string              `json:"dnsPolicy,omitempty"`
-	HostNetwork        *bool                `json:"hostNetwork,omitempty"`
-	NodeName           *string              `json:"nodeName,omitempty"`
-	PodName            *string              `json:"podName,omitempty"`
-	ServiceAccountName *string              `json:"serviceAccountName,omitempty"`
-	Volumes            []EksVolume          `json:"volumes,omitempty"`
+	Containers  []EksContainerDetail `json:"containers,omitempty"`
+	DNSPolicy   *string              `json:"dnsPolicy,omitempty"`
+	HostNetwork *bool                `json:"hostNetwork,omitempty"`
+	// Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
+	Metadata           *EksMetadata `json:"metadata,omitempty"`
+	NodeName           *string      `json:"nodeName,omitempty"`
+	PodName            *string      `json:"podName,omitempty"`
+	ServiceAccountName *string      `json:"serviceAccountName,omitempty"`
+	Volumes            []EksVolume  `json:"volumes,omitempty"`
 }

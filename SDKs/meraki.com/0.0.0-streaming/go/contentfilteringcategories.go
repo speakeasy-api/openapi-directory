@@ -34,7 +34,10 @@ func newContentFilteringCategories(defaultClient, securityClient HTTPClient, ser
 // List all available content filtering categories for an MX network
 func (s *contentFilteringCategories) GetNetworkContentFilteringCategories(ctx context.Context, request operations.GetNetworkContentFilteringCategoriesRequest) (*operations.GetNetworkContentFilteringCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/contentFiltering/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

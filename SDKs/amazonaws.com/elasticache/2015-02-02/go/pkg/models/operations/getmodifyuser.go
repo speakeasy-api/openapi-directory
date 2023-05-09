@@ -16,17 +16,21 @@ const (
 	GETModifyUserActionEnumModifyUser GETModifyUserActionEnum = "ModifyUser"
 )
 
+func (e GETModifyUserActionEnum) ToPointer() *GETModifyUserActionEnum {
+	return &e
+}
+
 func (e *GETModifyUserActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyUser":
-		*e = GETModifyUserActionEnum(s)
+		*e = GETModifyUserActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyUserActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyUserActionEnum: %v", v)
 	}
 }
 
@@ -43,17 +47,21 @@ const (
 	GETModifyUserVersionEnumTwoThousandAndFifteen0202 GETModifyUserVersionEnum = "2015-02-02"
 )
 
+func (e GETModifyUserVersionEnum) ToPointer() *GETModifyUserVersionEnum {
+	return &e
+}
+
 func (e *GETModifyUserVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETModifyUserVersionEnum(s)
+		*e = GETModifyUserVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyUserVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyUserVersionEnum: %v", v)
 	}
 }
 

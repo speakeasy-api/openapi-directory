@@ -35,7 +35,10 @@ func newPrimaryStateTax(defaultClient, securityClient HTTPClient, serverURL, lan
 // Sends new or updated employee primary state tax information directly to Web Pay.
 func (s *primaryStateTax) AddOrUpdatePrimaryStateTax(ctx context.Context, request operations.AddOrUpdatePrimaryStateTaxRequest, security operations.AddOrUpdatePrimaryStateTaxSecurity) (*operations.AddOrUpdatePrimaryStateTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/primaryStateTax", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/primaryStateTax", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StateTax", "json")
 	if err != nil {

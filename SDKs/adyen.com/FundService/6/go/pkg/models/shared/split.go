@@ -24,12 +24,16 @@ const (
 	SplitTypeEnumVerification   SplitTypeEnum = "Verification"
 )
 
+func (e SplitTypeEnum) ToPointer() *SplitTypeEnum {
+	return &e
+}
+
 func (e *SplitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BalanceAccount":
 		fallthrough
 	case "Commission":
@@ -49,10 +53,10 @@ func (e *SplitTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VAT":
 		fallthrough
 	case "Verification":
-		*e = SplitTypeEnum(s)
+		*e = SplitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SplitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SplitTypeEnum: %v", v)
 	}
 }
 

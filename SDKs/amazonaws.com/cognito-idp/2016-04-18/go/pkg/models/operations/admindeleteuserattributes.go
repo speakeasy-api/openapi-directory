@@ -16,17 +16,21 @@ const (
 	AdminDeleteUserAttributesXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminDeleteUserAttributes AdminDeleteUserAttributesXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminDeleteUserAttributes"
 )
 
+func (e AdminDeleteUserAttributesXAmzTargetEnum) ToPointer() *AdminDeleteUserAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminDeleteUserAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminDeleteUserAttributes":
-		*e = AdminDeleteUserAttributesXAmzTargetEnum(s)
+		*e = AdminDeleteUserAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminDeleteUserAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminDeleteUserAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

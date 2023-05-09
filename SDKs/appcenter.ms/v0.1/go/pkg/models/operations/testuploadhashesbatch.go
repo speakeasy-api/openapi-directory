@@ -21,21 +21,25 @@ const (
 	TestUploadHashesBatchTestCloudFileHashFileTypeEnumTestFile TestUploadHashesBatchTestCloudFileHashFileTypeEnum = "test-file"
 )
 
+func (e TestUploadHashesBatchTestCloudFileHashFileTypeEnum) ToPointer() *TestUploadHashesBatchTestCloudFileHashFileTypeEnum {
+	return &e
+}
+
 func (e *TestUploadHashesBatchTestCloudFileHashFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dsym-file":
 		fallthrough
 	case "app-file":
 		fallthrough
 	case "test-file":
-		*e = TestUploadHashesBatchTestCloudFileHashFileTypeEnum(s)
+		*e = TestUploadHashesBatchTestCloudFileHashFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestUploadHashesBatchTestCloudFileHashFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestUploadHashesBatchTestCloudFileHashFileTypeEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnumTestFile TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum = "test-file"
 )
 
+func (e TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum) ToPointer() *TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum {
+	return &e
+}
+
 func (e *TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dsym-file":
 		fallthrough
 	case "app-file":
 		fallthrough
 	case "test-file":
-		*e = TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum(s)
+		*e = TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestUploadHashesBatchTestCloudFileHashResponseFileTypeEnum: %v", v)
 	}
 }
 

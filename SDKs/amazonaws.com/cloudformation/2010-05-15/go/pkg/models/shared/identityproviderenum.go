@@ -15,20 +15,24 @@ const (
 	IdentityProviderEnumBitbucket      IdentityProviderEnum = "Bitbucket"
 )
 
+func (e IdentityProviderEnum) ToPointer() *IdentityProviderEnum {
+	return &e
+}
+
 func (e *IdentityProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_Marketplace":
 		fallthrough
 	case "GitHub":
 		fallthrough
 	case "Bitbucket":
-		*e = IdentityProviderEnum(s)
+		*e = IdentityProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityProviderEnum: %v", v)
 	}
 }

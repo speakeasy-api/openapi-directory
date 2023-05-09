@@ -15,17 +15,21 @@ const (
 	POSTVerifyEmailIdentityActionEnumVerifyEmailIdentity POSTVerifyEmailIdentityActionEnum = "VerifyEmailIdentity"
 )
 
+func (e POSTVerifyEmailIdentityActionEnum) ToPointer() *POSTVerifyEmailIdentityActionEnum {
+	return &e
+}
+
 func (e *POSTVerifyEmailIdentityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VerifyEmailIdentity":
-		*e = POSTVerifyEmailIdentityActionEnum(s)
+		*e = POSTVerifyEmailIdentityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTVerifyEmailIdentityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTVerifyEmailIdentityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTVerifyEmailIdentityVersionEnumTwoThousandAndTen1201 POSTVerifyEmailIdentityVersionEnum = "2010-12-01"
 )
 
+func (e POSTVerifyEmailIdentityVersionEnum) ToPointer() *POSTVerifyEmailIdentityVersionEnum {
+	return &e
+}
+
 func (e *POSTVerifyEmailIdentityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTVerifyEmailIdentityVersionEnum(s)
+		*e = POSTVerifyEmailIdentityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTVerifyEmailIdentityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTVerifyEmailIdentityVersionEnum: %v", v)
 	}
 }
 

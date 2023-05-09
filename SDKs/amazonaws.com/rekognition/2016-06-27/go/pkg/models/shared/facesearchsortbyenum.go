@@ -14,18 +14,22 @@ const (
 	FaceSearchSortByEnumTimestamp FaceSearchSortByEnum = "TIMESTAMP"
 )
 
+func (e FaceSearchSortByEnum) ToPointer() *FaceSearchSortByEnum {
+	return &e
+}
+
 func (e *FaceSearchSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEX":
 		fallthrough
 	case "TIMESTAMP":
-		*e = FaceSearchSortByEnum(s)
+		*e = FaceSearchSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaceSearchSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for FaceSearchSortByEnum: %v", v)
 	}
 }

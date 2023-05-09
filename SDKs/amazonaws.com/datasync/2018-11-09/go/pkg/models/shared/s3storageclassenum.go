@@ -20,12 +20,16 @@ const (
 	S3StorageClassEnumGlacierInstantRetrieval S3StorageClassEnum = "GLACIER_INSTANT_RETRIEVAL"
 )
 
+func (e S3StorageClassEnum) ToPointer() *S3StorageClassEnum {
+	return &e
+}
+
 func (e *S3StorageClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "STANDARD_IA":
@@ -41,9 +45,9 @@ func (e *S3StorageClassEnum) UnmarshalJSON(data []byte) error {
 	case "OUTPOSTS":
 		fallthrough
 	case "GLACIER_INSTANT_RETRIEVAL":
-		*e = S3StorageClassEnum(s)
+		*e = S3StorageClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3StorageClassEnum: %s", s)
+		return fmt.Errorf("invalid value for S3StorageClassEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETCancelCapacityReservationFleetsActionEnumCancelCapacityReservationFleets GETCancelCapacityReservationFleetsActionEnum = "CancelCapacityReservationFleets"
 )
 
+func (e GETCancelCapacityReservationFleetsActionEnum) ToPointer() *GETCancelCapacityReservationFleetsActionEnum {
+	return &e
+}
+
 func (e *GETCancelCapacityReservationFleetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelCapacityReservationFleets":
-		*e = GETCancelCapacityReservationFleetsActionEnum(s)
+		*e = GETCancelCapacityReservationFleetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelCapacityReservationFleetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelCapacityReservationFleetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelCapacityReservationFleetsVersionEnumTwoThousandAndSixteen1115 GETCancelCapacityReservationFleetsVersionEnum = "2016-11-15"
 )
 
+func (e GETCancelCapacityReservationFleetsVersionEnum) ToPointer() *GETCancelCapacityReservationFleetsVersionEnum {
+	return &e
+}
+
 func (e *GETCancelCapacityReservationFleetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCancelCapacityReservationFleetsVersionEnum(s)
+		*e = GETCancelCapacityReservationFleetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelCapacityReservationFleetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelCapacityReservationFleetsVersionEnum: %v", v)
 	}
 }
 

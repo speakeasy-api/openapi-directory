@@ -16,17 +16,21 @@ const (
 	DescribeProductAsAdminXAmzTargetEnumAws242ServiceCatalogServiceDescribeProductAsAdmin DescribeProductAsAdminXAmzTargetEnum = "AWS242ServiceCatalogService.DescribeProductAsAdmin"
 )
 
+func (e DescribeProductAsAdminXAmzTargetEnum) ToPointer() *DescribeProductAsAdminXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeProductAsAdminXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribeProductAsAdmin":
-		*e = DescribeProductAsAdminXAmzTargetEnum(s)
+		*e = DescribeProductAsAdminXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeProductAsAdminXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeProductAsAdminXAmzTargetEnum: %v", v)
 	}
 }
 

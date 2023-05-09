@@ -19,12 +19,16 @@ const (
 	ProjectsUpdateRequestBodyOrganizationPermissionEnumNone  ProjectsUpdateRequestBodyOrganizationPermissionEnum = "none"
 )
 
+func (e ProjectsUpdateRequestBodyOrganizationPermissionEnum) ToPointer() *ProjectsUpdateRequestBodyOrganizationPermissionEnum {
+	return &e
+}
+
 func (e *ProjectsUpdateRequestBodyOrganizationPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -32,10 +36,10 @@ func (e *ProjectsUpdateRequestBodyOrganizationPermissionEnum) UnmarshalJSON(data
 	case "admin":
 		fallthrough
 	case "none":
-		*e = ProjectsUpdateRequestBodyOrganizationPermissionEnum(s)
+		*e = ProjectsUpdateRequestBodyOrganizationPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsUpdateRequestBodyOrganizationPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsUpdateRequestBodyOrganizationPermissionEnum: %v", v)
 	}
 }
 

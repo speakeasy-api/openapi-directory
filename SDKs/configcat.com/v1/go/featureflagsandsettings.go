@@ -51,7 +51,10 @@ func newFeatureFlagsAndSettings(defaultClient, securityClient HTTPClient, server
 // **Important:** The `key` attribute must be unique within the given Config.
 func (s *featureFlagsAndSettings) CreateSetting(ctx context.Context, request operations.CreateSettingRequest) (*operations.CreateSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSettingInitialValues", "json")
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *featureFlagsAndSettings) CreateSetting(ctx context.Context, request ope
 // identified by the `configId` parameter.
 func (s *featureFlagsAndSettings) DeleteSetting(ctx context.Context, request operations.DeleteSettingRequest) (*operations.DeleteSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -166,7 +172,10 @@ func (s *featureFlagsAndSettings) DeleteSetting(ctx context.Context, request ope
 // identified by the `settingId` parameter.
 func (s *featureFlagsAndSettings) GetSetting(ctx context.Context, request operations.GetSettingRequest) (*operations.GetSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +235,10 @@ func (s *featureFlagsAndSettings) GetSetting(ctx context.Context, request operat
 // specified Config, identified by the `configId` parameter.
 func (s *featureFlagsAndSettings) GetSettings(ctx context.Context, request operations.GetSettingsRequest) (*operations.GetSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -354,7 +366,10 @@ func (s *featureFlagsAndSettings) GetSettings(ctx context.Context, request opera
 // ```
 func (s *featureFlagsAndSettings) UpdateSetting(ctx context.Context, request operations.UpdateSettingRequest) (*operations.UpdateSettingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/settings/{settingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JSONPatchInput", "json")
 	if err != nil {

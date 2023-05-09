@@ -16,19 +16,23 @@ const (
 	UpdateDataRetentionRequestBodyOperationEnumDecreaseDataRetention UpdateDataRetentionRequestBodyOperationEnum = "DECREASE_DATA_RETENTION"
 )
 
+func (e UpdateDataRetentionRequestBodyOperationEnum) ToPointer() *UpdateDataRetentionRequestBodyOperationEnum {
+	return &e
+}
+
 func (e *UpdateDataRetentionRequestBodyOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCREASE_DATA_RETENTION":
 		fallthrough
 	case "DECREASE_DATA_RETENTION":
-		*e = UpdateDataRetentionRequestBodyOperationEnum(s)
+		*e = UpdateDataRetentionRequestBodyOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDataRetentionRequestBodyOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDataRetentionRequestBodyOperationEnum: %v", v)
 	}
 }
 

@@ -15,18 +15,22 @@ const (
 	TLSSecurityPolicyEnumPolicyMinTls12201907 TLSSecurityPolicyEnum = "Policy-Min-TLS-1-2-2019-07"
 )
 
+func (e TLSSecurityPolicyEnum) ToPointer() *TLSSecurityPolicyEnum {
+	return &e
+}
+
 func (e *TLSSecurityPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Policy-Min-TLS-1-0-2019-07":
 		fallthrough
 	case "Policy-Min-TLS-1-2-2019-07":
-		*e = TLSSecurityPolicyEnum(s)
+		*e = TLSSecurityPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TLSSecurityPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for TLSSecurityPolicyEnum: %v", v)
 	}
 }

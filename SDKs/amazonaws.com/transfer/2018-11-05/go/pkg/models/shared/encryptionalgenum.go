@@ -16,12 +16,16 @@ const (
 	EncryptionAlgEnumNone      EncryptionAlgEnum = "NONE"
 )
 
+func (e EncryptionAlgEnum) ToPointer() *EncryptionAlgEnum {
+	return &e
+}
+
 func (e *EncryptionAlgEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES128_CBC":
 		fallthrough
 	case "AES192_CBC":
@@ -29,9 +33,9 @@ func (e *EncryptionAlgEnum) UnmarshalJSON(data []byte) error {
 	case "AES256_CBC":
 		fallthrough
 	case "NONE":
-		*e = EncryptionAlgEnum(s)
+		*e = EncryptionAlgEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionAlgEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionAlgEnum: %v", v)
 	}
 }

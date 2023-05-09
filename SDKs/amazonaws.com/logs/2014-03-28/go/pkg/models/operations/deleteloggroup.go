@@ -16,17 +16,21 @@ const (
 	DeleteLogGroupXAmzTargetEnumLogs20140328DeleteLogGroup DeleteLogGroupXAmzTargetEnum = "Logs_20140328.DeleteLogGroup"
 )
 
+func (e DeleteLogGroupXAmzTargetEnum) ToPointer() *DeleteLogGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLogGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DeleteLogGroup":
-		*e = DeleteLogGroupXAmzTargetEnum(s)
+		*e = DeleteLogGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLogGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLogGroupXAmzTargetEnum: %v", v)
 	}
 }
 

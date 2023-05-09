@@ -16,17 +16,21 @@ const (
 	DeleteResolverQueryLogConfigXAmzTargetEnumRoute53ResolverDeleteResolverQueryLogConfig DeleteResolverQueryLogConfigXAmzTargetEnum = "Route53Resolver.DeleteResolverQueryLogConfig"
 )
 
+func (e DeleteResolverQueryLogConfigXAmzTargetEnum) ToPointer() *DeleteResolverQueryLogConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResolverQueryLogConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.DeleteResolverQueryLogConfig":
-		*e = DeleteResolverQueryLogConfigXAmzTargetEnum(s)
+		*e = DeleteResolverQueryLogConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResolverQueryLogConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResolverQueryLogConfigXAmzTargetEnum: %v", v)
 	}
 }
 

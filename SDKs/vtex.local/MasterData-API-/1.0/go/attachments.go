@@ -42,7 +42,10 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 // ```
 func (s *attachments) Retrieveattachment(ctx context.Context, request operations.RetrieveattachmentRequest) (*operations.RetrieveattachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments/{file-name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments/{file-name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *attachments) Retrieveattachment(ctx context.Context, request operations
 // You can upload more than one file. Just add a new field in the `form-data` with type `File`.
 func (s *attachments) Saveattachment(ctx context.Context, request operations.SaveattachmentRequest) (*operations.SaveattachmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/{field}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

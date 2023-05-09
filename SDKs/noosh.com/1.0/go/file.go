@@ -36,7 +36,10 @@ func newFile(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Get File from Project.  Works for Regular and Remote Files
 func (s *file) GetFile(ctx context.Context, request operations.GetFileRequest) (*operations.GetFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files/{file_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files/{file_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +192,10 @@ func (s *file) GetFile(ctx context.Context, request operations.GetFileRequest) (
 // List Tags from Workgroup and Project.
 func (s *file) GetFileTags(ctx context.Context, request operations.GetFileTagsRequest) (*operations.GetFileTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/fileTags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,7 +348,10 @@ func (s *file) GetFileTags(ctx context.Context, request operations.GetFileTagsRe
 // List Files from Project.  Works for Regular and Remote Files
 func (s *file) GetFiles(ctx context.Context, request operations.GetFilesRequest) (*operations.GetFilesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -495,7 +504,10 @@ func (s *file) GetFiles(ctx context.Context, request operations.GetFilesRequest)
 // Upload File to Project.  A multipart/form-data request with a name "file"
 func (s *file) UploadFile(ctx context.Context, request operations.UploadFileRequest) (*operations.UploadFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

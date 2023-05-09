@@ -83,7 +83,10 @@ func (s *metagame) GamesMetagameGetMetagameConfig(ctx context.Context, request o
 // GamesMetagameListCategoriesByPlayer - List play data aggregated per category for the player corresponding to `playerId`.
 func (s *metagame) GamesMetagameListCategoriesByPlayer(ctx context.Context, request operations.GamesMetagameListCategoriesByPlayerRequest, security operations.GamesMetagameListCategoriesByPlayerSecurity) (*operations.GamesMetagameListCategoriesByPlayerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/categories/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/categories/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

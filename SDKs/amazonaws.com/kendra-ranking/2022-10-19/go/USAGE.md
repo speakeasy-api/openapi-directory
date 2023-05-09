@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,41 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.CreateRescoreExecutionPlanRequest{
+    ctx := context.Background()
+    res, err := s.CreateRescoreExecutionPlan(ctx, operations.CreateRescoreExecutionPlanRequest{
         CreateRescoreExecutionPlanRequest: shared.CreateRescoreExecutionPlanRequest{
             CapacityUnits: &shared.CapacityUnitsConfiguration{
                 RescoreCapacityUnits: 548814,
             },
-            ClientToken: "provident",
-            Description: "distinctio",
-            Name: "quibusdam",
+            ClientToken: sdk.String("provident"),
+            Description: sdk.String("distinctio"),
+            Name: "Stuart Stiedemann",
             Tags: []shared.Tag{
-                shared.Tag{
-                    Key: "nulla",
-                    Value: "corrupti",
-                },
-                shared.Tag{
-                    Key: "illum",
-                    Value: "vel",
-                },
                 shared.Tag{
                     Key: "error",
                     Value: "deserunt",
                 },
+                shared.Tag{
+                    Key: "suscipit",
+                    Value: "iure",
+                },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateRescoreExecutionPlan(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+        XAmzTarget: operations.CreateRescoreExecutionPlanXAmzTargetEnumAwsKendraRerankingFrontendServiceCreateRescoreExecutionPlan,
+    })
     if err != nil {
         log.Fatal(err)
     }

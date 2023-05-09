@@ -21,12 +21,16 @@ const (
 	OrganizationTypeEnumPrivateCompany           OrganizationTypeEnum = "privateCompany"
 )
 
+func (e OrganizationTypeEnum) ToPointer() *OrganizationTypeEnum {
+	return &e
+}
+
 func (e *OrganizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associationIncorporated":
 		fallthrough
 	case "governmentalOrganization":
@@ -38,10 +42,10 @@ func (e *OrganizationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "partnershipIncorporated":
 		fallthrough
 	case "privateCompany":
-		*e = OrganizationTypeEnum(s)
+		*e = OrganizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationTypeEnum: %v", v)
 	}
 }
 
@@ -55,19 +59,23 @@ const (
 	OrganizationVatAbsenceReasonEnumBelowTaxThreshold OrganizationVatAbsenceReasonEnum = "belowTaxThreshold"
 )
 
+func (e OrganizationVatAbsenceReasonEnum) ToPointer() *OrganizationVatAbsenceReasonEnum {
+	return &e
+}
+
 func (e *OrganizationVatAbsenceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "industryExemption":
 		fallthrough
 	case "belowTaxThreshold":
-		*e = OrganizationVatAbsenceReasonEnum(s)
+		*e = OrganizationVatAbsenceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationVatAbsenceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationVatAbsenceReasonEnum: %v", v)
 	}
 }
 

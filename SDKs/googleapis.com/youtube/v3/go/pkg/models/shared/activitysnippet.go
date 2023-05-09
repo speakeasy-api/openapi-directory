@@ -26,12 +26,16 @@ const (
 	ActivitySnippetTypeEnumPromotedItem    ActivitySnippetTypeEnum = "promotedItem"
 )
 
+func (e ActivitySnippetTypeEnum) ToPointer() *ActivitySnippetTypeEnum {
+	return &e
+}
+
 func (e *ActivitySnippetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "typeUnspecified":
 		fallthrough
 	case "upload":
@@ -55,10 +59,10 @@ func (e *ActivitySnippetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "channelItem":
 		fallthrough
 	case "promotedItem":
-		*e = ActivitySnippetTypeEnum(s)
+		*e = ActivitySnippetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivitySnippetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivitySnippetTypeEnum: %v", v)
 	}
 }
 

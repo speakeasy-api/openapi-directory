@@ -16,17 +16,21 @@ const (
 	GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnumStarlingDoveServiceGetAggregateComplianceDetailsByConfigRule GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum = "StarlingDoveService.GetAggregateComplianceDetailsByConfigRule"
 )
 
+func (e GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum) ToPointer() *GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetAggregateComplianceDetailsByConfigRule":
-		*e = GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum(s)
+		*e = GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAggregateComplianceDetailsByConfigRuleXAmzTargetEnum: %v", v)
 	}
 }
 

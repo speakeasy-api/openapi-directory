@@ -15,17 +15,21 @@ const (
 	GETSetTypeConfigurationActionEnumSetTypeConfiguration GETSetTypeConfigurationActionEnum = "SetTypeConfiguration"
 )
 
+func (e GETSetTypeConfigurationActionEnum) ToPointer() *GETSetTypeConfigurationActionEnum {
+	return &e
+}
+
 func (e *GETSetTypeConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetTypeConfiguration":
-		*e = GETSetTypeConfigurationActionEnum(s)
+		*e = GETSetTypeConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETSetTypeConfigurationTypeEnumHook     GETSetTypeConfigurationTypeEnum = "HOOK"
 )
 
+func (e GETSetTypeConfigurationTypeEnum) ToPointer() *GETSetTypeConfigurationTypeEnum {
+	return &e
+}
+
 func (e *GETSetTypeConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETSetTypeConfigurationTypeEnum(s)
+		*e = GETSetTypeConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeConfigurationTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETSetTypeConfigurationVersionEnumTwoThousandAndTen0515 GETSetTypeConfigurationVersionEnum = "2010-05-15"
 )
 
+func (e GETSetTypeConfigurationVersionEnum) ToPointer() *GETSetTypeConfigurationVersionEnum {
+	return &e
+}
+
 func (e *GETSetTypeConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETSetTypeConfigurationVersionEnum(s)
+		*e = GETSetTypeConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeConfigurationVersionEnum: %v", v)
 	}
 }
 

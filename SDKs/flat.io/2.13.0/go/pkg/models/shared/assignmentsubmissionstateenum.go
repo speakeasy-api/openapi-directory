@@ -16,20 +16,24 @@ const (
 	AssignmentSubmissionStateEnumReturned AssignmentSubmissionStateEnum = "returned"
 )
 
+func (e AssignmentSubmissionStateEnum) ToPointer() *AssignmentSubmissionStateEnum {
+	return &e
+}
+
 func (e *AssignmentSubmissionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "turnedIn":
 		fallthrough
 	case "returned":
-		*e = AssignmentSubmissionStateEnum(s)
+		*e = AssignmentSubmissionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentSubmissionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentSubmissionStateEnum: %v", v)
 	}
 }

@@ -36,7 +36,10 @@ func newScripts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ExportZipUsingGET - exportZip
 func (s *scripts) ExportZipUsingGET(ctx context.Context, request operations.ExportZipUsingGETRequest) (*operations.ExportZipUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *scripts) ExportZipUsingGET(ctx context.Context, request operations.Expo
 // GETScriptDifferencesUsingGET - getScriptDifferences
 func (s *scripts) GETScriptDifferencesUsingGET(ctx context.Context, request operations.GETScriptDifferencesUsingGETRequest) (*operations.GETScriptDifferencesUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/differences/{snapshotId1}/{snapshotId2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +140,10 @@ func (s *scripts) GETScriptDifferencesUsingGET(ctx context.Context, request oper
 // GETScriptVersionsUsingGET - getScriptVersions
 func (s *scripts) GETScriptVersionsUsingGET(ctx context.Context, request operations.GETScriptVersionsUsingGETRequest) (*operations.GETScriptVersionsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions/{page}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -187,7 +196,10 @@ func (s *scripts) GETScriptVersionsUsingGET(ctx context.Context, request operati
 // GETScriptVersionsUsingGET1 - getScriptVersions
 func (s *scripts) GETScriptVersionsUsingGET1(ctx context.Context, request operations.GETScriptVersionsUsingGET1Request) (*operations.GETScriptVersionsUsingGET1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *scripts) GETScriptVersionsUsingGET1(ctx context.Context, request operat
 // ImportAcceptUsingPOST - importAccept
 func (s *scripts) ImportAcceptUsingPOST(ctx context.Context, request operations.ImportAcceptUsingPOSTRequest) (*operations.ImportAcceptUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -303,7 +318,10 @@ func (s *scripts) ImportAcceptUsingPOST(ctx context.Context, request operations.
 // ImportZipUsingPOST - importZip
 func (s *scripts) ImportZipUsingPOST(ctx context.Context, request operations.ImportZipUsingPOSTRequest) (*operations.ImportZipUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/preview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/scripts/import/preview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

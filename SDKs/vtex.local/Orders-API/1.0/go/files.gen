@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -134,4 +135,16 @@ pkg/models/shared/totalitems1.go
 pkg/models/shared/list1.go
 pkg/models/shared/item2.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/changeseller/README.md
+docs/conversation/README.md
+docs/exportorderreport/README.md
+docs/feedv2deprecated/README.md
+docs/feedv3/README.md
+docs/invoice/README.md
+docs/orderhook/README.md
+docs/orders/README.md
+docs/payment/README.md
+docs/tracking/README.md
+docs/userorders/README.md
 USAGE.md

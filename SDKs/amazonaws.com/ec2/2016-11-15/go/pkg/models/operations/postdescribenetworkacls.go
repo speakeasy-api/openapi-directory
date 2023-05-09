@@ -15,17 +15,21 @@ const (
 	POSTDescribeNetworkAclsActionEnumDescribeNetworkAcls POSTDescribeNetworkAclsActionEnum = "DescribeNetworkAcls"
 )
 
+func (e POSTDescribeNetworkAclsActionEnum) ToPointer() *POSTDescribeNetworkAclsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNetworkAclsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeNetworkAcls":
-		*e = POSTDescribeNetworkAclsActionEnum(s)
+		*e = POSTDescribeNetworkAclsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNetworkAclsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNetworkAclsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeNetworkAclsVersionEnumTwoThousandAndSixteen1115 POSTDescribeNetworkAclsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeNetworkAclsVersionEnum) ToPointer() *POSTDescribeNetworkAclsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNetworkAclsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeNetworkAclsVersionEnum(s)
+		*e = POSTDescribeNetworkAclsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNetworkAclsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNetworkAclsVersionEnum: %v", v)
 	}
 }
 

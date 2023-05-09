@@ -28,4 +28,6 @@ type RetrieveAllSupportedInstitutionsInAGivenCountryResponse struct {
 	RetrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RetrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject map[string]interface{}
 }

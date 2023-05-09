@@ -17,19 +17,23 @@ const (
 	TrainProjectFormTrainingTypeEnumAdvanced TrainProjectFormTrainingTypeEnum = "Advanced"
 )
 
+func (e TrainProjectFormTrainingTypeEnum) ToPointer() *TrainProjectFormTrainingTypeEnum {
+	return &e
+}
+
 func (e *TrainProjectFormTrainingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Advanced":
-		*e = TrainProjectFormTrainingTypeEnum(s)
+		*e = TrainProjectFormTrainingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainProjectFormTrainingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainProjectFormTrainingTypeEnum: %v", v)
 	}
 }
 

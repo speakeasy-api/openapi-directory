@@ -20,12 +20,16 @@ const (
 	UpdateBranchRequestBodyStageEnumPullRequest  UpdateBranchRequestBodyStageEnum = "PULL_REQUEST"
 )
 
+func (e UpdateBranchRequestBodyStageEnum) ToPointer() *UpdateBranchRequestBodyStageEnum {
+	return &e
+}
+
 func (e *UpdateBranchRequestBodyStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
 		fallthrough
 	case "BETA":
@@ -35,10 +39,10 @@ func (e *UpdateBranchRequestBodyStageEnum) UnmarshalJSON(data []byte) error {
 	case "EXPERIMENTAL":
 		fallthrough
 	case "PULL_REQUEST":
-		*e = UpdateBranchRequestBodyStageEnum(s)
+		*e = UpdateBranchRequestBodyStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBranchRequestBodyStageEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBranchRequestBodyStageEnum: %v", v)
 	}
 }
 

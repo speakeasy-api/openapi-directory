@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/ideahub/v1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IdeahubIdeasListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        OrderBy: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Ideas.IdeahubIdeasList(ctx, req)
+    res, err := s.Ideas.IdeahubIdeasList(ctx, operations.IdeahubIdeasListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        OrderBy: sdk.String("vel"),
+        PageSize: sdk.Int64(623564),
+        PageToken: sdk.String("deserunt"),
+        Parent: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -60,16 +58,16 @@ func main() {
 ## Available Resources and Operations
 
 
-### Ideas
+### [Ideas](docs/ideas/README.md)
 
-* `IdeahubIdeasList` - List ideas for a given Creator and filter and sort options.
+* [IdeahubIdeasList](docs/ideas/README.md#ideahubideaslist) - List ideas for a given Creator and filter and sort options.
 
-### Platforms
+### [Platforms](docs/platforms/README.md)
 
-* `IdeahubPlatformsPropertiesIdeaActivitiesCreate` - Creates an idea activity entry.
-* `IdeahubPlatformsPropertiesIdeasList` - List ideas for a given Creator and filter and sort options.
-* `IdeahubPlatformsPropertiesLocalesList` - Returns which locales ideas are available in for a given Creator.
-* `IdeahubPlatformsPropertiesTopicStatesPatch` - Update a topic state resource.
+* [IdeahubPlatformsPropertiesIdeaActivitiesCreate](docs/platforms/README.md#ideahubplatformspropertiesideaactivitiescreate) - Creates an idea activity entry.
+* [IdeahubPlatformsPropertiesIdeasList](docs/platforms/README.md#ideahubplatformspropertiesideaslist) - List ideas for a given Creator and filter and sort options.
+* [IdeahubPlatformsPropertiesLocalesList](docs/platforms/README.md#ideahubplatformspropertieslocaleslist) - Returns which locales ideas are available in for a given Creator.
+* [IdeahubPlatformsPropertiesTopicStatesPatch](docs/platforms/README.md#ideahubplatformspropertiestopicstatespatch) - Update a topic state resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

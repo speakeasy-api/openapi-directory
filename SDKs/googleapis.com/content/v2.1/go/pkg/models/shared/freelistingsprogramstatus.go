@@ -17,12 +17,16 @@ const (
 	FreeListingsProgramStatusGlobalStateEnumEnabled                 FreeListingsProgramStatusGlobalStateEnum = "ENABLED"
 )
 
+func (e FreeListingsProgramStatusGlobalStateEnum) ToPointer() *FreeListingsProgramStatusGlobalStateEnum {
+	return &e
+}
+
 func (e *FreeListingsProgramStatusGlobalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROGRAM_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_ENABLED":
@@ -30,10 +34,10 @@ func (e *FreeListingsProgramStatusGlobalStateEnum) UnmarshalJSON(data []byte) er
 	case "NO_OFFERS_UPLOADED":
 		fallthrough
 	case "ENABLED":
-		*e = FreeListingsProgramStatusGlobalStateEnum(s)
+		*e = FreeListingsProgramStatusGlobalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FreeListingsProgramStatusGlobalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FreeListingsProgramStatusGlobalStateEnum: %v", v)
 	}
 }
 

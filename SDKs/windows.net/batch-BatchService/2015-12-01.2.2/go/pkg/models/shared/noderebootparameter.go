@@ -17,12 +17,16 @@ const (
 	NodeRebootParameterNodeRebootOptionEnumRetaineddata   NodeRebootParameterNodeRebootOptionEnum = "retaineddata"
 )
 
+func (e NodeRebootParameterNodeRebootOptionEnum) ToPointer() *NodeRebootParameterNodeRebootOptionEnum {
+	return &e
+}
+
 func (e *NodeRebootParameterNodeRebootOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
@@ -30,10 +34,10 @@ func (e *NodeRebootParameterNodeRebootOptionEnum) UnmarshalJSON(data []byte) err
 	case "taskcompletion":
 		fallthrough
 	case "retaineddata":
-		*e = NodeRebootParameterNodeRebootOptionEnum(s)
+		*e = NodeRebootParameterNodeRebootOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeRebootParameterNodeRebootOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeRebootParameterNodeRebootOptionEnum: %v", v)
 	}
 }
 

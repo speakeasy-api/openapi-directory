@@ -15,17 +15,21 @@ const (
 	POSTResetAddressAttributeActionEnumResetAddressAttribute POSTResetAddressAttributeActionEnum = "ResetAddressAttribute"
 )
 
+func (e POSTResetAddressAttributeActionEnum) ToPointer() *POSTResetAddressAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTResetAddressAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetAddressAttribute":
-		*e = POSTResetAddressAttributeActionEnum(s)
+		*e = POSTResetAddressAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetAddressAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetAddressAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetAddressAttributeVersionEnumTwoThousandAndSixteen1115 POSTResetAddressAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTResetAddressAttributeVersionEnum) ToPointer() *POSTResetAddressAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTResetAddressAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTResetAddressAttributeVersionEnum(s)
+		*e = POSTResetAddressAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetAddressAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetAddressAttributeVersionEnum: %v", v)
 	}
 }
 

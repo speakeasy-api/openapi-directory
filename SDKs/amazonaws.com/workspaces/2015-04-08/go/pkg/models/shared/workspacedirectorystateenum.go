@@ -17,12 +17,16 @@ const (
 	WorkspaceDirectoryStateEnumError         WorkspaceDirectoryStateEnum = "ERROR"
 )
 
+func (e WorkspaceDirectoryStateEnum) ToPointer() *WorkspaceDirectoryStateEnum {
+	return &e
+}
+
 func (e *WorkspaceDirectoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTERING":
 		fallthrough
 	case "REGISTERED":
@@ -32,9 +36,9 @@ func (e *WorkspaceDirectoryStateEnum) UnmarshalJSON(data []byte) error {
 	case "DEREGISTERED":
 		fallthrough
 	case "ERROR":
-		*e = WorkspaceDirectoryStateEnum(s)
+		*e = WorkspaceDirectoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkspaceDirectoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkspaceDirectoryStateEnum: %v", v)
 	}
 }

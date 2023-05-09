@@ -30,12 +30,16 @@ const (
 	JobEventTypeEnumNotInterested                 JobEventTypeEnum = "NOT_INTERESTED"
 )
 
+func (e JobEventTypeEnum) ToPointer() *JobEventTypeEnum {
+	return &e
+}
+
 func (e *JobEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMPRESSION":
@@ -69,10 +73,10 @@ func (e *JobEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INTERVIEW_GRANTED":
 		fallthrough
 	case "NOT_INTERESTED":
-		*e = JobEventTypeEnum(s)
+		*e = JobEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobEventTypeEnum: %v", v)
 	}
 }
 

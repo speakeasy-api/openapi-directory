@@ -14,18 +14,22 @@ const (
 	StatefulRuleDirectionEnumAny     StatefulRuleDirectionEnum = "ANY"
 )
 
+func (e StatefulRuleDirectionEnum) ToPointer() *StatefulRuleDirectionEnum {
+	return &e
+}
+
 func (e *StatefulRuleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORWARD":
 		fallthrough
 	case "ANY":
-		*e = StatefulRuleDirectionEnum(s)
+		*e = StatefulRuleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatefulRuleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StatefulRuleDirectionEnum: %v", v)
 	}
 }

@@ -27,12 +27,16 @@ const (
 	UlimitNameEnumStack      UlimitNameEnum = "stack"
 )
 
+func (e UlimitNameEnum) ToPointer() *UlimitNameEnum {
+	return &e
+}
+
 func (e *UlimitNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "core":
 		fallthrough
 	case "cpu":
@@ -62,9 +66,9 @@ func (e *UlimitNameEnum) UnmarshalJSON(data []byte) error {
 	case "sigpending":
 		fallthrough
 	case "stack":
-		*e = UlimitNameEnum(s)
+		*e = UlimitNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UlimitNameEnum: %s", s)
+		return fmt.Errorf("invalid value for UlimitNameEnum: %v", v)
 	}
 }

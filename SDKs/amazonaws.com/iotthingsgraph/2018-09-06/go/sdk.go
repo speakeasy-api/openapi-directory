@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>AWS IoT Things Graph</fullname> <p>AWS IoT Things Graph provides an integrated set of tools that enable developers to connect devices and services that use different standards, such as units of measure and communication protocols. AWS IoT Things Graph makes it possible to build IoT applications with little to no code by connecting devices and services and defining how they interact at an abstract level.</p> <p>For more information about how AWS IoT Things Graph works, see the <a href="https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-whatis.html">User Guide</a>.</p> <p>The AWS IoT Things Graph service is discontinued.</p>
 // https://docs.aws.amazon.com/iotthingsgraph/ - Amazon Web Services documentation
 type SDK struct {
@@ -112,6 +127,8 @@ func New(opts ...SDKOption) *SDK {
 }
 
 // AssociateEntityToThing - <p>Associates a device with a concrete thing that is in the user's registry.</p> <p>A thing can be associated with only one device at a time. If you associate a thing with a new device id, its previous association will be removed.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) AssociateEntityToThing(ctx context.Context, request operations.AssociateEntityToThingRequest) (*operations.AssociateEntityToThingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.AssociateEntityToThing"
@@ -208,6 +225,8 @@ func (s *SDK) AssociateEntityToThing(ctx context.Context, request operations.Ass
 }
 
 // CreateFlowTemplate - Creates a workflow template. Workflows can be created only in the user's namespace. (The public namespace contains only entities.) The workflow can contain only entities in the specified namespace. The workflow is validated against the entities in the latest version of the user's namespace unless another namespace version is specified in the request.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateFlowTemplate(ctx context.Context, request operations.CreateFlowTemplateRequest) (*operations.CreateFlowTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateFlowTemplate"
@@ -314,6 +333,8 @@ func (s *SDK) CreateFlowTemplate(ctx context.Context, request operations.CreateF
 }
 
 // CreateSystemInstance - <p>Creates a system instance. </p> <p>This action validates the system instance, prepares the deployment-related resources. For Greengrass deployments, it updates the Greengrass group that is specified by the <code>greengrassGroupName</code> parameter. It also adds a file to the S3 bucket specified by the <code>s3BucketName</code> parameter. You need to call <code>DeploySystemInstance</code> after running this action.</p> <p>For Greengrass deployments, since this action modifies and adds resources to a Greengrass group and an S3 bucket on the caller's behalf, the calling identity must have write permissions to both the specified Greengrass group and S3 bucket. Otherwise, the call will fail with an authorization error.</p> <p>For cloud deployments, this action requires a <code>flowActionsRoleArn</code> value. This is an IAM role that has permissions to access AWS services, such as AWS Lambda and AWS IoT, that the flow uses when it executes.</p> <p>If the definition document doesn't specify a version of the user's namespace, the latest version will be used by default.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateSystemInstance(ctx context.Context, request operations.CreateSystemInstanceRequest) (*operations.CreateSystemInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemInstance"
@@ -420,6 +441,8 @@ func (s *SDK) CreateSystemInstance(ctx context.Context, request operations.Creat
 }
 
 // CreateSystemTemplate - Creates a system. The system is validated against the entities in the latest version of the user's namespace unless another namespace version is specified in the request.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateSystemTemplate(ctx context.Context, request operations.CreateSystemTemplateRequest) (*operations.CreateSystemTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemTemplate"
@@ -516,6 +539,8 @@ func (s *SDK) CreateSystemTemplate(ctx context.Context, request operations.Creat
 }
 
 // DeleteFlowTemplate - Deletes a workflow. Any new system or deployment that contains this workflow will fail to update or deploy. Existing deployments that contain the workflow will continue to run (since they use a snapshot of the workflow taken at the time of deployment).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteFlowTemplate(ctx context.Context, request operations.DeleteFlowTemplateRequest) (*operations.DeleteFlowTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteFlowTemplate"
@@ -612,6 +637,8 @@ func (s *SDK) DeleteFlowTemplate(ctx context.Context, request operations.DeleteF
 }
 
 // DeleteNamespace - Deletes the specified namespace. This action deletes all of the entities in the namespace. Delete the systems and flows that use entities in the namespace before performing this action. This action takes no request parameters.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteNamespace(ctx context.Context, request operations.DeleteNamespaceRequest) (*operations.DeleteNamespaceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteNamespace"
@@ -688,6 +715,8 @@ func (s *SDK) DeleteNamespace(ctx context.Context, request operations.DeleteName
 }
 
 // DeleteSystemInstance - <p>Deletes a system instance. Only system instances that have never been deployed, or that have been undeployed can be deleted.</p> <p>Users can create a new system instance that has the same ID as a deleted system instance.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteSystemInstance(ctx context.Context, request operations.DeleteSystemInstanceRequest) (*operations.DeleteSystemInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemInstance"
@@ -784,6 +813,8 @@ func (s *SDK) DeleteSystemInstance(ctx context.Context, request operations.Delet
 }
 
 // DeleteSystemTemplate - Deletes a system. New deployments can't contain the system after its deletion. Existing deployments that contain the system will continue to work because they use a snapshot of the system that is taken when it is deployed.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteSystemTemplate(ctx context.Context, request operations.DeleteSystemTemplateRequest) (*operations.DeleteSystemTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemTemplate"
@@ -880,6 +911,8 @@ func (s *SDK) DeleteSystemTemplate(ctx context.Context, request operations.Delet
 }
 
 // DeploySystemInstance - <p> <b>Greengrass and Cloud Deployments</b> </p> <p>Deploys the system instance to the target specified in <code>CreateSystemInstance</code>. </p> <p> <b>Greengrass Deployments</b> </p> <p>If the system or any workflows and entities have been updated before this action is called, then the deployment will create a new Amazon Simple Storage Service resource file and then deploy it.</p> <p>Since this action creates a Greengrass deployment on the caller's behalf, the calling identity must have write permissions to the specified Greengrass group. Otherwise, the call will fail with an authorization error.</p> <p>For information about the artifacts that get added to your Greengrass core device when you use this API, see <a href="https://docs.aws.amazon.com/thingsgraph/latest/ug/iot-tg-greengrass.html">AWS IoT Things Graph and AWS IoT Greengrass</a>.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeploySystemInstance(ctx context.Context, request operations.DeploySystemInstanceRequest) (*operations.DeploySystemInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeploySystemInstance"
@@ -986,6 +1019,8 @@ func (s *SDK) DeploySystemInstance(ctx context.Context, request operations.Deplo
 }
 
 // DeprecateFlowTemplate - Deprecates the specified workflow. This action marks the workflow for deletion. Deprecated flows can't be deployed, but existing deployments will continue to run.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeprecateFlowTemplate(ctx context.Context, request operations.DeprecateFlowTemplateRequest) (*operations.DeprecateFlowTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateFlowTemplate"
@@ -1082,6 +1117,8 @@ func (s *SDK) DeprecateFlowTemplate(ctx context.Context, request operations.Depr
 }
 
 // DeprecateSystemTemplate - Deprecates the specified system.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeprecateSystemTemplate(ctx context.Context, request operations.DeprecateSystemTemplateRequest) (*operations.DeprecateSystemTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateSystemTemplate"
@@ -1178,6 +1215,8 @@ func (s *SDK) DeprecateSystemTemplate(ctx context.Context, request operations.De
 }
 
 // DescribeNamespace - Gets the latest version of the user's namespace and the public version that it is tracking.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeNamespace(ctx context.Context, request operations.DescribeNamespaceRequest) (*operations.DescribeNamespaceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DescribeNamespace"
@@ -1274,6 +1313,8 @@ func (s *SDK) DescribeNamespace(ctx context.Context, request operations.Describe
 }
 
 // DissociateEntityFromThing - Dissociates a device entity from a concrete thing. The action takes only the type of the entity that you need to dissociate because only one entity of a particular type can be associated with a thing.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DissociateEntityFromThing(ctx context.Context, request operations.DissociateEntityFromThingRequest) (*operations.DissociateEntityFromThingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.DissociateEntityFromThing"
@@ -1370,6 +1411,8 @@ func (s *SDK) DissociateEntityFromThing(ctx context.Context, request operations.
 }
 
 // GetEntities - <p>Gets definitions of the specified entities. Uses the latest version of the user's namespace by default. This API returns the following TDM entities.</p> <ul> <li> <p>Properties</p> </li> <li> <p>States</p> </li> <li> <p>Events</p> </li> <li> <p>Actions</p> </li> <li> <p>Capabilities</p> </li> <li> <p>Mappings</p> </li> <li> <p>Devices</p> </li> <li> <p>Device Models</p> </li> <li> <p>Services</p> </li> </ul> <p>This action doesn't return definitions for systems, flows, and deployments.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetEntities(ctx context.Context, request operations.GetEntitiesRequest) (*operations.GetEntitiesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetEntities"
@@ -1466,6 +1509,8 @@ func (s *SDK) GetEntities(ctx context.Context, request operations.GetEntitiesReq
 }
 
 // GetFlowTemplate - Gets the latest version of the <code>DefinitionDocument</code> and <code>FlowTemplateSummary</code> for the specified workflow.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetFlowTemplate(ctx context.Context, request operations.GetFlowTemplateRequest) (*operations.GetFlowTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplate"
@@ -1562,6 +1607,8 @@ func (s *SDK) GetFlowTemplate(ctx context.Context, request operations.GetFlowTem
 }
 
 // GetFlowTemplateRevisions - Gets revisions of the specified workflow. Only the last 100 revisions are stored. If the workflow has been deprecated, this action will return revisions that occurred before the deprecation. This action won't work for workflows that have been deleted.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetFlowTemplateRevisions(ctx context.Context, request operations.GetFlowTemplateRevisionsRequest) (*operations.GetFlowTemplateRevisionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplateRevisions"
@@ -1662,6 +1709,8 @@ func (s *SDK) GetFlowTemplateRevisions(ctx context.Context, request operations.G
 }
 
 // GetNamespaceDeletionStatus - Gets the status of a namespace deletion task.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetNamespaceDeletionStatus(ctx context.Context, request operations.GetNamespaceDeletionStatusRequest) (*operations.GetNamespaceDeletionStatusResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetNamespaceDeletionStatus"
@@ -1748,6 +1797,8 @@ func (s *SDK) GetNamespaceDeletionStatus(ctx context.Context, request operations
 }
 
 // GetSystemInstance - Gets a system instance.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetSystemInstance(ctx context.Context, request operations.GetSystemInstanceRequest) (*operations.GetSystemInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemInstance"
@@ -1844,6 +1895,8 @@ func (s *SDK) GetSystemInstance(ctx context.Context, request operations.GetSyste
 }
 
 // GetSystemTemplate - Gets a system.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetSystemTemplate(ctx context.Context, request operations.GetSystemTemplateRequest) (*operations.GetSystemTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplate"
@@ -1940,6 +1993,8 @@ func (s *SDK) GetSystemTemplate(ctx context.Context, request operations.GetSyste
 }
 
 // GetSystemTemplateRevisions - Gets revisions made to the specified system template. Only the previous 100 revisions are stored. If the system has been deprecated, this action will return the revisions that occurred before its deprecation. This action won't work with systems that have been deleted.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetSystemTemplateRevisions(ctx context.Context, request operations.GetSystemTemplateRevisionsRequest) (*operations.GetSystemTemplateRevisionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplateRevisions"
@@ -2040,6 +2095,8 @@ func (s *SDK) GetSystemTemplateRevisions(ctx context.Context, request operations
 }
 
 // GetUploadStatus - Gets the status of the specified upload.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) GetUploadStatus(ctx context.Context, request operations.GetUploadStatusRequest) (*operations.GetUploadStatusResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.GetUploadStatus"
@@ -2136,6 +2193,8 @@ func (s *SDK) GetUploadStatus(ctx context.Context, request operations.GetUploadS
 }
 
 // ListFlowExecutionMessages - Returns a list of objects that contain information about events in a flow execution.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListFlowExecutionMessages(ctx context.Context, request operations.ListFlowExecutionMessagesRequest) (*operations.ListFlowExecutionMessagesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.ListFlowExecutionMessages"
@@ -2236,6 +2295,8 @@ func (s *SDK) ListFlowExecutionMessages(ctx context.Context, request operations.
 }
 
 // ListTagsForResource - Lists all tags on an AWS IoT Things Graph resource.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.ListTagsForResource"
@@ -2336,6 +2397,8 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 }
 
 // SearchEntities - Searches for entities of the specified type. You can search for entities in your namespace and the public namespace that you're tracking.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchEntities(ctx context.Context, request operations.SearchEntitiesRequest) (*operations.SearchEntitiesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchEntities"
@@ -2426,6 +2489,8 @@ func (s *SDK) SearchEntities(ctx context.Context, request operations.SearchEntit
 }
 
 // SearchFlowExecutions - Searches for AWS IoT Things Graph workflow execution instances.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchFlowExecutions(ctx context.Context, request operations.SearchFlowExecutionsRequest) (*operations.SearchFlowExecutionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowExecutions"
@@ -2526,6 +2591,8 @@ func (s *SDK) SearchFlowExecutions(ctx context.Context, request operations.Searc
 }
 
 // SearchFlowTemplates - Searches for summary information about workflows.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchFlowTemplates(ctx context.Context, request operations.SearchFlowTemplatesRequest) (*operations.SearchFlowTemplatesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowTemplates"
@@ -2616,6 +2683,8 @@ func (s *SDK) SearchFlowTemplates(ctx context.Context, request operations.Search
 }
 
 // SearchSystemInstances - Searches for system instances in the user's account.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchSystemInstances(ctx context.Context, request operations.SearchSystemInstancesRequest) (*operations.SearchSystemInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemInstances"
@@ -2706,6 +2775,8 @@ func (s *SDK) SearchSystemInstances(ctx context.Context, request operations.Sear
 }
 
 // SearchSystemTemplates - Searches for summary information about systems in the user's account. You can filter by the ID of a workflow to return only systems that use the specified workflow.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchSystemTemplates(ctx context.Context, request operations.SearchSystemTemplatesRequest) (*operations.SearchSystemTemplatesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemTemplates"
@@ -2796,6 +2867,8 @@ func (s *SDK) SearchSystemTemplates(ctx context.Context, request operations.Sear
 }
 
 // SearchThings - <p>Searches for things associated with the specified entity. You can search by both device and device model.</p> <p>For example, if two different devices, camera1 and camera2, implement the camera device model, the user can associate thing1 to camera1 and thing2 to camera2. <code>SearchThings(camera2)</code> will return only thing2, but <code>SearchThings(camera)</code> will return both thing1 and thing2.</p> <p>This action searches for exact matches and doesn't perform partial text matching.</p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SearchThings(ctx context.Context, request operations.SearchThingsRequest) (*operations.SearchThingsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchThings"
@@ -2896,6 +2969,8 @@ func (s *SDK) SearchThings(ctx context.Context, request operations.SearchThingsR
 }
 
 // TagResource - Creates a tag for the specified resource.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.TagResource"
@@ -2992,6 +3067,8 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 }
 
 // UndeploySystemInstance - Removes a system instance from its target (Cloud or Greengrass).
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UndeploySystemInstance(ctx context.Context, request operations.UndeploySystemInstanceRequest) (*operations.UndeploySystemInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.UndeploySystemInstance"
@@ -3098,6 +3175,8 @@ func (s *SDK) UndeploySystemInstance(ctx context.Context, request operations.Und
 }
 
 // UntagResource - Removes a tag from the specified resource.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.UntagResource"
@@ -3194,6 +3273,8 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 }
 
 // UpdateFlowTemplate - Updates the specified workflow. All deployed systems and system instances that use the workflow will see the changes in the flow when it is redeployed. If you don't want this behavior, copy the workflow (creating a new workflow with a different ID), and update the copy. The workflow can contain only entities in the specified namespace.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateFlowTemplate(ctx context.Context, request operations.UpdateFlowTemplateRequest) (*operations.UpdateFlowTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateFlowTemplate"
@@ -3290,6 +3371,8 @@ func (s *SDK) UpdateFlowTemplate(ctx context.Context, request operations.UpdateF
 }
 
 // UpdateSystemTemplate - Updates the specified system. You don't need to run this action after updating a workflow. Any deployment that uses the system will see the changes in the system when it is redeployed.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UpdateSystemTemplate(ctx context.Context, request operations.UpdateSystemTemplateRequest) (*operations.UpdateSystemTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateSystemTemplate"
@@ -3386,6 +3469,8 @@ func (s *SDK) UpdateSystemTemplate(ctx context.Context, request operations.Updat
 }
 
 // UploadEntityDefinitions - <p>Asynchronously uploads one or more entity definitions to the user's namespace. The <code>document</code> parameter is required if <code>syncWithPublicNamespace</code> and <code>deleteExistingEntites</code> are false. If the <code>syncWithPublicNamespace</code> parameter is set to <code>true</code>, the user's namespace will synchronize with the latest version of the public namespace. If <code>deprecateExistingEntities</code> is set to true, all entities in the latest version will be deleted before the new <code>DefinitionDocument</code> is uploaded.</p> <p>When a user uploads entity definitions for the first time, the service creates a new namespace for the user. The new namespace tracks the public namespace. Currently users can have only one namespace. The namespace version increments whenever a user uploads entity definitions that are backwards-incompatible and whenever a user sets the <code>syncWithPublicNamespace</code> parameter or the <code>deprecateExistingEntities</code> parameter to <code>true</code>.</p> <p>The IDs for all of the entities should be in URN format. Each entity must be in the user's namespace. Users can't create entities in the public namespace, but entity definitions can refer to entities in the public namespace.</p> <p>Valid entities are <code>Device</code>, <code>DeviceModel</code>, <code>Service</code>, <code>Capability</code>, <code>State</code>, <code>Action</code>, <code>Event</code>, <code>Property</code>, <code>Mapping</code>, <code>Enum</code>. </p>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) UploadEntityDefinitions(ctx context.Context, request operations.UploadEntityDefinitionsRequest) (*operations.UploadEntityDefinitionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=IotThingsGraphFrontEndService.UploadEntityDefinitions"

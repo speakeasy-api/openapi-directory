@@ -2,31 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FacetsRequest{
-        Count: 548814,
-        EndDate: "2021-07-27",
-        FacetFilters: "quibusdam",
-        SearchTerms: "unde",
-        SortKeys: "updated,,desc",
-        Source: "ADE",
-        Spatial: "illum",
-        StartDate: "2022-05-18",
-        StartIndex: 645894,
-    }
-
     ctx := context.Background()
-    res, err := s.SwaggerDocs.Facets(ctx, req)
+    res, err := s.SwaggerDocs.Facets(ctx, operations.FacetsRequest{
+        Count: sdk.Int64(548814),
+        EndDate: types.MustDateFromString("2021-07-27"),
+        FacetFilters: sdk.String("quibusdam"),
+        SearchTerms: sdk.String("unde"),
+        SortKeys: operations.FacetsSortKeysEnumUpdatedDesc.ToPointer(),
+        Source: operations.FacetsSourceEnumAde.ToPointer(),
+        Spatial: sdk.String("illum"),
+        StartDate: types.MustDateFromString("2022-05-18"),
+        StartIndex: sdk.Int64(645894),
+    })
     if err != nil {
         log.Fatal(err)
     }

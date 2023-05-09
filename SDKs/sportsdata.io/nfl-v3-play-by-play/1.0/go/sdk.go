@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - NFL play-by-play API.
 type SDK struct {
 
@@ -106,7 +121,10 @@ func New(opts ...SDKOption) *SDK {
 // PlayByPlay - Play By Play
 func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayRequest) (*operations.PlayByPlayResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlay/{season}/{week}/{hometeam}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +168,10 @@ func (s *SDK) PlayByPlay(ctx context.Context, request operations.PlayByPlayReque
 // PlayByPlayDelta - Play By Play Delta
 func (s *SDK) PlayByPlayDelta(ctx context.Context, request operations.PlayByPlayDeltaRequest) (*operations.PlayByPlayDeltaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/PlayByPlayDelta/{season}/{week}/{minutes}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +216,10 @@ func (s *SDK) PlayByPlayDelta(ctx context.Context, request operations.PlayByPlay
 // Gets simulated live play-by-play of NFL games, covering the Conference Championship games on January 21, 2018.
 func (s *SDK) PlayByPlaySimulation(ctx context.Context, request operations.PlayByPlaySimulationRequest) (*operations.PlayByPlaySimulationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedPlayByPlay/{numberofplays}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{format}/SimulatedPlayByPlay/{numberofplays}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

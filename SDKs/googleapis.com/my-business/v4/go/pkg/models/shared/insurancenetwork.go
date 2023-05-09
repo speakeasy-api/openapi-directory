@@ -18,12 +18,16 @@ const (
 	InsuranceNetworkStateEnumNotAccepted             InsuranceNetworkStateEnum = "NOT_ACCEPTED"
 )
 
+func (e InsuranceNetworkStateEnum) ToPointer() *InsuranceNetworkStateEnum {
+	return &e
+}
+
 func (e *InsuranceNetworkStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACCEPTED":
@@ -33,10 +37,10 @@ func (e *InsuranceNetworkStateEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_DELETE":
 		fallthrough
 	case "NOT_ACCEPTED":
-		*e = InsuranceNetworkStateEnum(s)
+		*e = InsuranceNetworkStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InsuranceNetworkStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InsuranceNetworkStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ConfirmCustomerAgreementXAmzTargetEnumOvertureServiceConfirmCustomerAgreement ConfirmCustomerAgreementXAmzTargetEnum = "OvertureService.ConfirmCustomerAgreement"
 )
 
+func (e ConfirmCustomerAgreementXAmzTargetEnum) ToPointer() *ConfirmCustomerAgreementXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConfirmCustomerAgreementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.ConfirmCustomerAgreement":
-		*e = ConfirmCustomerAgreementXAmzTargetEnum(s)
+		*e = ConfirmCustomerAgreementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfirmCustomerAgreementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfirmCustomerAgreementXAmzTargetEnum: %v", v)
 	}
 }
 

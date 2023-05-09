@@ -16,17 +16,21 @@ const (
 	GetResolverRuleXAmzTargetEnumRoute53ResolverGetResolverRule GetResolverRuleXAmzTargetEnum = "Route53Resolver.GetResolverRule"
 )
 
+func (e GetResolverRuleXAmzTargetEnum) ToPointer() *GetResolverRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResolverRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.GetResolverRule":
-		*e = GetResolverRuleXAmzTargetEnum(s)
+		*e = GetResolverRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResolverRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResolverRuleXAmzTargetEnum: %v", v)
 	}
 }
 

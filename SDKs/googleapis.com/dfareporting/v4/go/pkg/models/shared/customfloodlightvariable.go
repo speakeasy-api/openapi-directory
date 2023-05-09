@@ -113,12 +113,16 @@ const (
 	CustomFloodlightVariableTypeEnumU100 CustomFloodlightVariableTypeEnum = "U100"
 )
 
+func (e CustomFloodlightVariableTypeEnum) ToPointer() *CustomFloodlightVariableTypeEnum {
+	return &e
+}
+
 func (e *CustomFloodlightVariableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "U1":
 		fallthrough
 	case "U2":
@@ -318,10 +322,10 @@ func (e *CustomFloodlightVariableTypeEnum) UnmarshalJSON(data []byte) error {
 	case "U99":
 		fallthrough
 	case "U100":
-		*e = CustomFloodlightVariableTypeEnum(s)
+		*e = CustomFloodlightVariableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomFloodlightVariableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomFloodlightVariableTypeEnum: %v", v)
 	}
 }
 

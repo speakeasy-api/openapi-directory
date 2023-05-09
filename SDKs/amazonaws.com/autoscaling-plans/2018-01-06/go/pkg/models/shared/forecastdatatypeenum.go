@@ -16,12 +16,16 @@ const (
 	ForecastDataTypeEnumScheduledActionMaxCapacity ForecastDataTypeEnum = "ScheduledActionMaxCapacity"
 )
 
+func (e ForecastDataTypeEnum) ToPointer() *ForecastDataTypeEnum {
+	return &e
+}
+
 func (e *ForecastDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CapacityForecast":
 		fallthrough
 	case "LoadForecast":
@@ -29,9 +33,9 @@ func (e *ForecastDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ScheduledActionMinCapacity":
 		fallthrough
 	case "ScheduledActionMaxCapacity":
-		*e = ForecastDataTypeEnum(s)
+		*e = ForecastDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ForecastDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ForecastDataTypeEnum: %v", v)
 	}
 }

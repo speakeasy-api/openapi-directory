@@ -17,12 +17,16 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnumErrorSetupCheckFailed          GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum = "ERROR_SETUP_CHECK_FAILED"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SETUP_ERROR_UNSPECIFIED":
 		fallthrough
 	case "ERROR_INVALID_BASE_SETUP":
@@ -32,10 +36,10 @@ func (e *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEn
 	case "ERROR_NOT_ALL_SERVICES_ENROLLED":
 		fallthrough
 	case "ERROR_SETUP_CHECK_FAILED":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum: %v", v)
 	}
 }
 
@@ -48,21 +52,25 @@ const (
 	GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnumStatusComplete        GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum = "STATUS_COMPLETE"
 )
 
+func (e GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum) ToPointer() *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SETUP_STATE_UNSPECIFIED":
 		fallthrough
 	case "STATUS_PENDING":
 		fallthrough
 	case "STATUS_COMPLETE":
-		*e = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum: %v", v)
 	}
 }
 

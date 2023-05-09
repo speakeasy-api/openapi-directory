@@ -24,19 +24,23 @@ const (
 	GetPropertyValueHistoryRequestBodyOrderByTimeEnumDescending GetPropertyValueHistoryRequestBodyOrderByTimeEnum = "DESCENDING"
 )
 
+func (e GetPropertyValueHistoryRequestBodyOrderByTimeEnum) ToPointer() *GetPropertyValueHistoryRequestBodyOrderByTimeEnum {
+	return &e
+}
+
 func (e *GetPropertyValueHistoryRequestBodyOrderByTimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = GetPropertyValueHistoryRequestBodyOrderByTimeEnum(s)
+		*e = GetPropertyValueHistoryRequestBodyOrderByTimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPropertyValueHistoryRequestBodyOrderByTimeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPropertyValueHistoryRequestBodyOrderByTimeEnum: %v", v)
 	}
 }
 

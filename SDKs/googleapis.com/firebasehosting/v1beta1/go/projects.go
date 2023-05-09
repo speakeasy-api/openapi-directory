@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FirebasehostingProjectsSitesCreate - Creates a new Hosting Site in the specified parent Firebase project. Note that Hosting sites can take several minutes to propagate through Firebase systems.
 func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, request operations.FirebasehostingProjectsSitesCreateRequest, security operations.FirebasehostingProjectsSitesCreateSecurity) (*operations.FirebasehostingProjectsSitesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SiteInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) FirebasehostingProjectsSitesCreate(ctx context.Context, reque
 // FirebasehostingProjectsSitesList - Lists each Hosting Site associated with the specified parent Firebase project.
 func (s *projects) FirebasehostingProjectsSitesList(ctx context.Context, request operations.FirebasehostingProjectsSitesListRequest, security operations.FirebasehostingProjectsSitesListSecurity) (*operations.FirebasehostingProjectsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

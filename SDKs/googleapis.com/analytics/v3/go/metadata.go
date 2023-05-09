@@ -34,7 +34,10 @@ func newMetadata(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AnalyticsMetadataColumnsList - Lists all columns for a report type
 func (s *metadata) AnalyticsMetadataColumnsList(ctx context.Context, request operations.AnalyticsMetadataColumnsListRequest, security operations.AnalyticsMetadataColumnsListSecurity) (*operations.AnalyticsMetadataColumnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/metadata/{reportType}/columns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/metadata/{reportType}/columns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

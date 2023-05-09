@@ -18,12 +18,16 @@ const (
 	CallBroadcastSoundsDncSoundTextVoiceEnumFrenchcanadian1 CallBroadcastSoundsDncSoundTextVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e CallBroadcastSoundsDncSoundTextVoiceEnum) ToPointer() *CallBroadcastSoundsDncSoundTextVoiceEnum {
+	return &e
+}
+
 func (e *CallBroadcastSoundsDncSoundTextVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -33,10 +37,10 @@ func (e *CallBroadcastSoundsDncSoundTextVoiceEnum) UnmarshalJSON(data []byte) er
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = CallBroadcastSoundsDncSoundTextVoiceEnum(s)
+		*e = CallBroadcastSoundsDncSoundTextVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastSoundsDncSoundTextVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastSoundsDncSoundTextVoiceEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	CallBroadcastSoundsLiveSoundTextVoiceEnumFrenchcanadian1 CallBroadcastSoundsLiveSoundTextVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e CallBroadcastSoundsLiveSoundTextVoiceEnum) ToPointer() *CallBroadcastSoundsLiveSoundTextVoiceEnum {
+	return &e
+}
+
 func (e *CallBroadcastSoundsLiveSoundTextVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -66,10 +74,10 @@ func (e *CallBroadcastSoundsLiveSoundTextVoiceEnum) UnmarshalJSON(data []byte) e
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = CallBroadcastSoundsLiveSoundTextVoiceEnum(s)
+		*e = CallBroadcastSoundsLiveSoundTextVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastSoundsLiveSoundTextVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastSoundsLiveSoundTextVoiceEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	CallBroadcastSoundsMachineSoundTextVoiceEnumFrenchcanadian1 CallBroadcastSoundsMachineSoundTextVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e CallBroadcastSoundsMachineSoundTextVoiceEnum) ToPointer() *CallBroadcastSoundsMachineSoundTextVoiceEnum {
+	return &e
+}
+
 func (e *CallBroadcastSoundsMachineSoundTextVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -99,10 +111,10 @@ func (e *CallBroadcastSoundsMachineSoundTextVoiceEnum) UnmarshalJSON(data []byte
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = CallBroadcastSoundsMachineSoundTextVoiceEnum(s)
+		*e = CallBroadcastSoundsMachineSoundTextVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastSoundsMachineSoundTextVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastSoundsMachineSoundTextVoiceEnum: %v", v)
 	}
 }
 
@@ -117,12 +129,16 @@ const (
 	CallBroadcastSoundsTransferSoundTextVoiceEnumFrenchcanadian1 CallBroadcastSoundsTransferSoundTextVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e CallBroadcastSoundsTransferSoundTextVoiceEnum) ToPointer() *CallBroadcastSoundsTransferSoundTextVoiceEnum {
+	return &e
+}
+
 func (e *CallBroadcastSoundsTransferSoundTextVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -132,10 +148,10 @@ func (e *CallBroadcastSoundsTransferSoundTextVoiceEnum) UnmarshalJSON(data []byt
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = CallBroadcastSoundsTransferSoundTextVoiceEnum(s)
+		*e = CallBroadcastSoundsTransferSoundTextVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallBroadcastSoundsTransferSoundTextVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CallBroadcastSoundsTransferSoundTextVoiceEnum: %v", v)
 	}
 }
 

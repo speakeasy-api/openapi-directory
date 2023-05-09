@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData - The input data used to train a new `ProcessorVersion`.
+// GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData - The input data used to train a new ProcessorVersion.
 type GoogleCloudDocumentaiV1TrainProcessorVersionRequestInputData struct {
 	// The common config to specify a set of documents used as input.
 	TestDocuments *GoogleCloudDocumentaiV1BatchDocumentsInputConfig `json:"testDocuments,omitempty"`

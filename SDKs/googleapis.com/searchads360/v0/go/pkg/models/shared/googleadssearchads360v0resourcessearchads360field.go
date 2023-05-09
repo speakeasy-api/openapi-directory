@@ -19,12 +19,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnumMetric      GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum = "METRIC"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -36,10 +40,10 @@ func (e *GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum) Unmarsha
 	case "SEGMENT":
 		fallthrough
 	case "METRIC":
-		*e = GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesSearchAds360FieldCategoryEnum: %v", v)
 	}
 }
 
@@ -62,12 +66,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnumUint64       GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum = "UINT64"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -93,10 +101,10 @@ func (e *GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum) Unmarsha
 	case "STRING":
 		fallthrough
 	case "UINT64":
-		*e = GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesSearchAds360FieldDataTypeEnum: %v", v)
 	}
 }
 

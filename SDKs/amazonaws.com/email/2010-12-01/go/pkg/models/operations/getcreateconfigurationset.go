@@ -15,17 +15,21 @@ const (
 	GETCreateConfigurationSetActionEnumCreateConfigurationSet GETCreateConfigurationSetActionEnum = "CreateConfigurationSet"
 )
 
+func (e GETCreateConfigurationSetActionEnum) ToPointer() *GETCreateConfigurationSetActionEnum {
+	return &e
+}
+
 func (e *GETCreateConfigurationSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateConfigurationSet":
-		*e = GETCreateConfigurationSetActionEnum(s)
+		*e = GETCreateConfigurationSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateConfigurationSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateConfigurationSetActionEnum: %v", v)
 	}
 }
 
@@ -41,17 +45,21 @@ const (
 	GETCreateConfigurationSetVersionEnumTwoThousandAndTen1201 GETCreateConfigurationSetVersionEnum = "2010-12-01"
 )
 
+func (e GETCreateConfigurationSetVersionEnum) ToPointer() *GETCreateConfigurationSetVersionEnum {
+	return &e
+}
+
 func (e *GETCreateConfigurationSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCreateConfigurationSetVersionEnum(s)
+		*e = GETCreateConfigurationSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateConfigurationSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateConfigurationSetVersionEnum: %v", v)
 	}
 }
 

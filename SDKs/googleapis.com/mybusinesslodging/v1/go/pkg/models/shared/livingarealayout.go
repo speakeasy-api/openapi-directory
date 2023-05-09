@@ -17,12 +17,16 @@ const (
 	LivingAreaLayoutBalconyExceptionEnumDependentOnDayOfWeek LivingAreaLayoutBalconyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutBalconyExceptionEnum) ToPointer() *LivingAreaLayoutBalconyExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutBalconyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *LivingAreaLayoutBalconyExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutBalconyExceptionEnum(s)
+		*e = LivingAreaLayoutBalconyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutBalconyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutBalconyExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	LivingAreaLayoutLivingAreaSqMetersExceptionEnumDependentOnDayOfWeek LivingAreaLayoutLivingAreaSqMetersExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutLivingAreaSqMetersExceptionEnum) ToPointer() *LivingAreaLayoutLivingAreaSqMetersExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutLivingAreaSqMetersExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *LivingAreaLayoutLivingAreaSqMetersExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutLivingAreaSqMetersExceptionEnum(s)
+		*e = LivingAreaLayoutLivingAreaSqMetersExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutLivingAreaSqMetersExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutLivingAreaSqMetersExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	LivingAreaLayoutLoftExceptionEnumDependentOnDayOfWeek LivingAreaLayoutLoftExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutLoftExceptionEnum) ToPointer() *LivingAreaLayoutLoftExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutLoftExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *LivingAreaLayoutLoftExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutLoftExceptionEnum(s)
+		*e = LivingAreaLayoutLoftExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutLoftExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutLoftExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	LivingAreaLayoutNonSmokingExceptionEnumDependentOnDayOfWeek LivingAreaLayoutNonSmokingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutNonSmokingExceptionEnum) ToPointer() *LivingAreaLayoutNonSmokingExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutNonSmokingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *LivingAreaLayoutNonSmokingExceptionEnum) UnmarshalJSON(data []byte) err
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutNonSmokingExceptionEnum(s)
+		*e = LivingAreaLayoutNonSmokingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutNonSmokingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutNonSmokingExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	LivingAreaLayoutPatioExceptionEnumDependentOnDayOfWeek LivingAreaLayoutPatioExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutPatioExceptionEnum) ToPointer() *LivingAreaLayoutPatioExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutPatioExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *LivingAreaLayoutPatioExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutPatioExceptionEnum(s)
+		*e = LivingAreaLayoutPatioExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutPatioExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutPatioExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	LivingAreaLayoutStairsExceptionEnumDependentOnDayOfWeek LivingAreaLayoutStairsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e LivingAreaLayoutStairsExceptionEnum) ToPointer() *LivingAreaLayoutStairsExceptionEnum {
+	return &e
+}
+
 func (e *LivingAreaLayoutStairsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *LivingAreaLayoutStairsExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = LivingAreaLayoutStairsExceptionEnum(s)
+		*e = LivingAreaLayoutStairsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LivingAreaLayoutStairsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for LivingAreaLayoutStairsExceptionEnum: %v", v)
 	}
 }
 

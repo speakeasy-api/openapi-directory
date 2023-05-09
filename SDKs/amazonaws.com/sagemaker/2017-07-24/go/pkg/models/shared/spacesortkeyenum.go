@@ -14,18 +14,22 @@ const (
 	SpaceSortKeyEnumLastModifiedTime SpaceSortKeyEnum = "LastModifiedTime"
 )
 
+func (e SpaceSortKeyEnum) ToPointer() *SpaceSortKeyEnum {
+	return &e
+}
+
 func (e *SpaceSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
 		fallthrough
 	case "LastModifiedTime":
-		*e = SpaceSortKeyEnum(s)
+		*e = SpaceSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for SpaceSortKeyEnum: %v", v)
 	}
 }

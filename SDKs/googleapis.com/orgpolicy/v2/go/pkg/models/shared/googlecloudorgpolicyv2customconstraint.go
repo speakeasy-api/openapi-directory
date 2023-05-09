@@ -16,21 +16,25 @@ const (
 	GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnumDeny                  GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum = "DENY"
 )
 
+func (e GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum) ToPointer() *GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum(s)
+		*e = GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnumDelete                GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum = "DELETE"
 )
 
+func (e GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum) ToPointer() *GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATE":
@@ -56,10 +64,10 @@ func (e *GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum) UnmarshalJSON(da
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum(s)
+		*e = GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum: %v", v)
 	}
 }
 
@@ -77,7 +85,7 @@ type GoogleCloudOrgpolicyV2CustomConstraint struct {
 	MethodTypes []GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum `json:"methodTypes,omitempty"`
 	// Immutable. Name of the constraint. This is unique within the organization. Format of the name should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example: `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70 characters and the minimum length is 1. Note that the prefix `organizations/{organization_id}/customConstraints/` is not counted.
 	Name *string `json:"name,omitempty"`
-	// Immutable. The resource instance type on which this policy applies. Format will be of the form : "/" Example: * `compute.googleapis.com/Instance`.
+	// Immutable. The resource instance type on which this policy applies. Format will be of the form : `/` Example: * `compute.googleapis.com/Instance`.
 	ResourceTypes []string `json:"resourceTypes,omitempty"`
 	// Output only. The last time this custom constraint was updated. This represents the last time that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
 	UpdateTime *string `json:"updateTime,omitempty"`
@@ -97,6 +105,6 @@ type GoogleCloudOrgpolicyV2CustomConstraintInput struct {
 	MethodTypes []GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum `json:"methodTypes,omitempty"`
 	// Immutable. Name of the constraint. This is unique within the organization. Format of the name should be * `organizations/{organization_id}/customConstraints/{custom_constraint_id}` Example: `organizations/123/customConstraints/custom.createOnlyE2TypeVms` The max length is 70 characters and the minimum length is 1. Note that the prefix `organizations/{organization_id}/customConstraints/` is not counted.
 	Name *string `json:"name,omitempty"`
-	// Immutable. The resource instance type on which this policy applies. Format will be of the form : "/" Example: * `compute.googleapis.com/Instance`.
+	// Immutable. The resource instance type on which this policy applies. Format will be of the form : `/` Example: * `compute.googleapis.com/Instance`.
 	ResourceTypes []string `json:"resourceTypes,omitempty"`
 }

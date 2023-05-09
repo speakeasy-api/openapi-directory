@@ -24,12 +24,16 @@ const (
 	FieldFilterOpEnumNotIn               FieldFilterOpEnum = "NOT_IN"
 )
 
+func (e FieldFilterOpEnum) ToPointer() *FieldFilterOpEnum {
+	return &e
+}
+
 func (e *FieldFilterOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "LESS_THAN":
@@ -51,10 +55,10 @@ func (e *FieldFilterOpEnum) UnmarshalJSON(data []byte) error {
 	case "ARRAY_CONTAINS_ANY":
 		fallthrough
 	case "NOT_IN":
-		*e = FieldFilterOpEnum(s)
+		*e = FieldFilterOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldFilterOpEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldFilterOpEnum: %v", v)
 	}
 }
 

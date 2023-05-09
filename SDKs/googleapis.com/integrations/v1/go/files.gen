@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -74,6 +75,7 @@ pkg/models/shared/googlecloudconnectorsv1sslconfig.go
 pkg/models/shared/googlecloudconnectorsv1secret.go
 pkg/models/shared/googlecloudconnectorsv1configvariable.go
 pkg/models/shared/googlecloudconnectorsv1nodeconfig.go
+pkg/models/shared/googlecloudconnectorsv1logconfig.go
 pkg/models/shared/googlecloudconnectorsv1lockconfig.go
 pkg/models/shared/googlecloudconnectorsv1destinationconfig.go
 pkg/models/shared/googlecloudconnectorsv1destination.go
@@ -83,6 +85,7 @@ pkg/models/shared/googlecloudconnectorsv1authconfigsshpublickey.go
 pkg/models/shared/googlecloudconnectorsv1authconfigoauth2jwtbearer.go
 pkg/models/shared/googlecloudconnectorsv1authconfigoauth2jwtbearerjwtclaims.go
 pkg/models/shared/googlecloudconnectorsv1authconfigoauth2clientcredentials.go
+pkg/models/shared/googlecloudconnectorsv1authconfigoauth2authcodeflow.go
 pkg/models/shared/googlecloudintegrationsv1alphalistruntimeactionschemasresponse.go
 pkg/models/shared/googlecloudintegrationsv1alpharuntimeactionschema.go
 pkg/models/shared/googlecloudintegrationsv1alphalistruntimeentityschemasresponse.go
@@ -248,4 +251,8 @@ pkg/models/shared/googlecloudintegrationsv1alphasfdcinstance.go
 pkg/models/shared/googlecloudintegrationsv1alphalistsfdcinstancesresponse.go
 pkg/models/shared/googlecloudintegrationsv1alphasfdcchannel.go
 pkg/models/shared/googlecloudintegrationsv1alphalistsfdcchannelsresponse.go
+docs/sdk/README.md
+docs/callback/README.md
+docs/connectorplatformregions/README.md
+docs/projects/README.md
 USAGE.md

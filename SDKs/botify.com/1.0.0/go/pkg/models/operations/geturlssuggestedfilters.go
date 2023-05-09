@@ -17,19 +17,23 @@ const (
 	GetUrlsSuggestedFiltersAreaEnumNew     GetUrlsSuggestedFiltersAreaEnum = "new"
 )
 
+func (e GetUrlsSuggestedFiltersAreaEnum) ToPointer() *GetUrlsSuggestedFiltersAreaEnum {
+	return &e
+}
+
 func (e *GetUrlsSuggestedFiltersAreaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "new":
-		*e = GetUrlsSuggestedFiltersAreaEnum(s)
+		*e = GetUrlsSuggestedFiltersAreaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUrlsSuggestedFiltersAreaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUrlsSuggestedFiltersAreaEnum: %v", v)
 	}
 }
 

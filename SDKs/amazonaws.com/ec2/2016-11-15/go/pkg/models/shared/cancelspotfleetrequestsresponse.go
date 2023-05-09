@@ -20,12 +20,16 @@ const (
 	CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnumModifying            CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum = "modifying"
 )
 
+func (e CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum) ToPointer() *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum {
+	return &e
+}
+
 func (e *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "active":
@@ -39,10 +43,10 @@ func (e *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetR
 	case "cancelled_terminating":
 		fallthrough
 	case "modifying":
-		*e = CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum(s)
+		*e = CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseSuccessfulFleetRequestsCurrentSpotFleetRequestStateEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnumModifying            CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum = "modifying"
 )
 
+func (e CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum) ToPointer() *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum {
+	return &e
+}
+
 func (e *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "active":
@@ -78,10 +86,10 @@ func (e *CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleet
 	case "cancelled_terminating":
 		fallthrough
 	case "modifying":
-		*e = CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum(s)
+		*e = CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseSuccessfulFleetRequestsPreviousSpotFleetRequestStateEnum: %v", v)
 	}
 }
 
@@ -102,12 +110,16 @@ const (
 	CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnumUnexpectedError                   CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum = "unexpectedError"
 )
 
+func (e CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum) ToPointer() *CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum {
+	return &e
+}
+
 func (e *CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fleetRequestIdDoesNotExist":
 		fallthrough
 	case "fleetRequestIdMalformed":
@@ -115,10 +127,10 @@ func (e *CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum) 
 	case "fleetRequestNotInCancellableState":
 		fallthrough
 	case "unexpectedError":
-		*e = CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum(s)
+		*e = CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelSpotFleetRequestsResponseUnsuccessfulFleetRequestsErrorCodeEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	UpdateFindingsFilterRequestBodyActionEnumNoop    UpdateFindingsFilterRequestBodyActionEnum = "NOOP"
 )
 
+func (e UpdateFindingsFilterRequestBodyActionEnum) ToPointer() *UpdateFindingsFilterRequestBodyActionEnum {
+	return &e
+}
+
 func (e *UpdateFindingsFilterRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVE":
 		fallthrough
 	case "NOOP":
-		*e = UpdateFindingsFilterRequestBodyActionEnum(s)
+		*e = UpdateFindingsFilterRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFindingsFilterRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFindingsFilterRequestBodyActionEnum: %v", v)
 	}
 }
 

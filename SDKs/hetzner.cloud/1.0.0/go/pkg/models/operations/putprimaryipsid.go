@@ -30,17 +30,21 @@ const (
 	PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnumServer PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum = "server"
 )
 
+func (e PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum) ToPointer() *PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum {
+	return &e
+}
+
 func (e *PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
-		*e = PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum(s)
+		*e = PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPrimaryIpsIDPrimaryIPResponsePrimaryIPAssigneeTypeEnum: %v", v)
 	}
 }
 
@@ -107,19 +111,23 @@ const (
 	PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnumIpv6 PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum = "ipv6"
 )
 
+func (e PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum) ToPointer() *PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum {
+	return &e
+}
+
 func (e *PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum(s)
+		*e = PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PutPrimaryIpsIDPrimaryIPResponsePrimaryIPTypeEnum: %v", v)
 	}
 }
 

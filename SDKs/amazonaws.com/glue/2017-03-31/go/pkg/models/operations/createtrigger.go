@@ -16,17 +16,21 @@ const (
 	CreateTriggerXAmzTargetEnumAwsGlueCreateTrigger CreateTriggerXAmzTargetEnum = "AWSGlue.CreateTrigger"
 )
 
+func (e CreateTriggerXAmzTargetEnum) ToPointer() *CreateTriggerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTriggerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.CreateTrigger":
-		*e = CreateTriggerXAmzTargetEnum(s)
+		*e = CreateTriggerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTriggerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTriggerXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListActivatedRulesInRuleGroupXAmzTargetEnumAwswaf20150824ListActivatedRulesInRuleGroup ListActivatedRulesInRuleGroupXAmzTargetEnum = "AWSWAF_20150824.ListActivatedRulesInRuleGroup"
 )
 
+func (e ListActivatedRulesInRuleGroupXAmzTargetEnum) ToPointer() *ListActivatedRulesInRuleGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListActivatedRulesInRuleGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.ListActivatedRulesInRuleGroup":
-		*e = ListActivatedRulesInRuleGroupXAmzTargetEnum(s)
+		*e = ListActivatedRulesInRuleGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListActivatedRulesInRuleGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListActivatedRulesInRuleGroupXAmzTargetEnum: %v", v)
 	}
 }
 

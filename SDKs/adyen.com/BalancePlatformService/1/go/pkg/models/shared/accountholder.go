@@ -27,12 +27,16 @@ const (
 	AccountHolderStatusEnumSuspended AccountHolderStatusEnum = "Suspended"
 )
 
+func (e AccountHolderStatusEnum) ToPointer() *AccountHolderStatusEnum {
+	return &e
+}
+
 func (e *AccountHolderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -40,10 +44,10 @@ func (e *AccountHolderStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Inactive":
 		fallthrough
 	case "Suspended":
-		*e = AccountHolderStatusEnum(s)
+		*e = AccountHolderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountHolderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountHolderStatusEnum: %v", v)
 	}
 }
 
@@ -58,7 +62,7 @@ type AccountHolder struct {
 	Description *string `json:"description,omitempty"`
 	// The unique identifier of the account holder.
 	ID string `json:"id"`
-	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
+	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
 	LegalEntityID string `json:"legalEntityId"`
 	// The ID of the account holder's primary balance account. By default, this is set to the first balance account that you create for the account holder. To assign a different balance account, send a PATCH request.
 	PrimaryBalanceAccount *string `json:"primaryBalanceAccount,omitempty"`
@@ -89,7 +93,7 @@ type AccountHolderInput struct {
 	ContactDetails *ContactDetails                         `json:"contactDetails,omitempty"`
 	// Your description for the account holder, maximum 300 characters.
 	Description *string `json:"description,omitempty"`
-	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
+	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
 	LegalEntityID string `json:"legalEntityId"`
 	// The ID of the account holder's primary balance account. By default, this is set to the first balance account that you create for the account holder. To assign a different balance account, send a PATCH request.
 	PrimaryBalanceAccount *string `json:"primaryBalanceAccount,omitempty"`

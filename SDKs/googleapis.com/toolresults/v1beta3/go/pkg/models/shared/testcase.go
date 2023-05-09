@@ -18,12 +18,16 @@ const (
 	TestCaseStatusEnumFlaky   TestCaseStatusEnum = "flaky"
 )
 
+func (e TestCaseStatusEnum) ToPointer() *TestCaseStatusEnum {
+	return &e
+}
+
 func (e *TestCaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "passed":
 		fallthrough
 	case "failed":
@@ -33,10 +37,10 @@ func (e *TestCaseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "skipped":
 		fallthrough
 	case "flaky":
-		*e = TestCaseStatusEnum(s)
+		*e = TestCaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCaseStatusEnum: %v", v)
 	}
 }
 

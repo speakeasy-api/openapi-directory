@@ -34,7 +34,10 @@ func newVitals(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // PlaydeveloperreportingVitalsErrorsIssuesSearch - Searches all error issues in which reports have been grouped.
 func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest, security operations.PlaydeveloperreportingVitalsErrorsIssuesSearchSecurity) (*operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorIssues:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorIssues:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Cont
 // PlaydeveloperreportingVitalsErrorsReportsSearch - Searches all error reports received for an app.
 func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest, security operations.PlaydeveloperreportingVitalsErrorsReportsSearchSecurity) (*operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorReports:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorReports:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Con
 // PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet - Describes the properties of the metric set.
 func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest, security operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetSecurity) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx 
 // PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery - Queries the metrics in the metric set.
 func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest, security operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuerySecurity) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest", "json")
 	if err != nil {

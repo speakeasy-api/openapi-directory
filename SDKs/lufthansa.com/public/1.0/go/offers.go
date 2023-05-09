@@ -34,7 +34,10 @@ func newOffers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Lounge information
 func (s *offers) OffersLoungesByLocationGet(ctx context.Context, request operations.OffersLoungesByLocationGetRequest, security operations.OffersLoungesByLocationGetSecurity) (*operations.OffersLoungesByLocationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/lounges/{location}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offers/lounges/{location}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *offers) OffersLoungesByLocationGet(ctx context.Context, request operati
 // Cabin layout and seat characteristics.
 func (s *offers) OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGet(ctx context.Context, request operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetRequest, security operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetSecurity) (*operations.OffersSeatmapsDestinationDateCabinClassByFlightNumberAndOriginGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/seatmaps/{flightNumber}/{origin}/{destination}/{date}/{cabinClass}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offers/seatmaps/{flightNumber}/{origin}/{destination}/{date}/{cabinClass}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

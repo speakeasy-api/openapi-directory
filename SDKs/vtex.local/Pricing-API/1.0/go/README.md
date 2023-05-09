@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Pricing-API/1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,14 +28,12 @@ func main() {
         }),
     )
 
-    req := operations.GetrulesforapricetableRequest{
+    ctx := context.Background()
+    res, err := s.PriceTables.Getrulesforapricetable(ctx, operations.GetrulesforapricetableRequest{
         Accept: "application/json",
         ContentType: "corrupti",
         PriceTableID: "b2c",
-    }
-
-    ctx := context.Background()
-    res, err := s.PriceTables.Getrulesforapricetable(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,28 +49,28 @@ func main() {
 ## Available Resources and Operations
 
 
-### PriceTables
+### [PriceTables](docs/pricetables/README.md)
 
-* `Getrulesforapricetable` - Get rules for a price table
-* `Listpricetables` - List price tables
-* `Getallpricetablesandrules` - Get all price tables and their rules
-* `PutPricingPipelineCatalogPriceTableID` - Update rules for a price table
+* [Getrulesforapricetable](docs/pricetables/README.md#getrulesforapricetable) - Get rules for a price table
+* [Listpricetables](docs/pricetables/README.md#listpricetables) - List price tables
+* [Getallpricetablesandrules](docs/pricetables/README.md#getallpricetablesandrules) - Get all price tables and their rules
+* [PutPricingPipelineCatalogPriceTableID](docs/pricetables/README.md#putpricingpipelinecatalogpricetableid) - Update rules for a price table
 
-### PricesAndFixedPrices
+### [PricesAndFixedPrices](docs/pricesandfixedprices/README.md)
 
-* `CreateUpdatePriceOrFixedPrice` - Create or Update Base Price or Fixed Prices
-* `DeletePrice` - Delete Price
-* `Deletefixedpricesonapricetableortradepolicy` - Delete Fixed Prices on a price table or trade policy
-* `GetComputedPricebypricetable` - Get Computed Price by price table or trade policy
-* `GetFixedPrices` - Get Fixed Prices
-* `GetFixedPricesonapricetable` - Get Fixed Prices on a price table or trade policy
-* `GetPrice` - Get Price
-* `Createorupdatefixedpricesonpricetableortradepolicy` - Create or Update Fixed Prices on a price table or trade policy
+* [CreateUpdatePriceOrFixedPrice](docs/pricesandfixedprices/README.md#createupdatepriceorfixedprice) - Create or Update Base Price or Fixed Prices
+* [DeletePrice](docs/pricesandfixedprices/README.md#deleteprice) - Delete Price
+* [Deletefixedpricesonapricetableortradepolicy](docs/pricesandfixedprices/README.md#deletefixedpricesonapricetableortradepolicy) - Delete Fixed Prices on a price table or trade policy
+* [GetComputedPricebypricetable](docs/pricesandfixedprices/README.md#getcomputedpricebypricetable) - Get Computed Price by price table or trade policy
+* [GetFixedPrices](docs/pricesandfixedprices/README.md#getfixedprices) - Get Fixed Prices
+* [GetFixedPricesonapricetable](docs/pricesandfixedprices/README.md#getfixedpricesonapricetable) - Get Fixed Prices on a price table or trade policy
+* [GetPrice](docs/pricesandfixedprices/README.md#getprice) - Get Price
+* [Createorupdatefixedpricesonpricetableortradepolicy](docs/pricesandfixedprices/README.md#createorupdatefixedpricesonpricetableortradepolicy) - Create or Update Fixed Prices on a price table or trade policy
 
-### PricingConfiguration
+### [PricingConfiguration](docs/pricingconfiguration/README.md)
 
-* `GetPricingConfig` - Get Pricing Configuration
-* `GetPricingv2Status` - Get Pricing v2 Status
+* [GetPricingConfig](docs/pricingconfiguration/README.md#getpricingconfig) - Get Pricing Configuration
+* [GetPricingv2Status](docs/pricingconfiguration/README.md#getpricingv2status) - Get Pricing v2 Status
 <!-- End SDK Available Operations -->
 
 ### Maturity

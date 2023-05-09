@@ -16,17 +16,21 @@ const (
 	DescribeAccountXAmzTargetEnumAwsOrganizationsV20161128DescribeAccount DescribeAccountXAmzTargetEnum = "AWSOrganizationsV20161128.DescribeAccount"
 )
 
+func (e DescribeAccountXAmzTargetEnum) ToPointer() *DescribeAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DescribeAccount":
-		*e = DescribeAccountXAmzTargetEnum(s)
+		*e = DescribeAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAccountXAmzTargetEnum: %v", v)
 	}
 }
 

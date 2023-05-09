@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Fault Injection Simulator is a managed service that enables you to perform fault injection experiments on your Amazon Web Services workloads. For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">Fault Injection Simulator User Guide</a>.
 // https://docs.aws.amazon.com/fis/ - Amazon Web Services documentation
 type SDK struct {
@@ -210,7 +225,10 @@ func (s *SDK) CreateExperimentTemplate(ctx context.Context, request operations.C
 // DeleteExperimentTemplate - Deletes the specified experiment template.
 func (s *SDK) DeleteExperimentTemplate(ctx context.Context, request operations.DeleteExperimentTemplateRequest) (*operations.DeleteExperimentTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -276,7 +294,10 @@ func (s *SDK) DeleteExperimentTemplate(ctx context.Context, request operations.D
 // GetAction - Gets information about the specified FIS action.
 func (s *SDK) GetAction(ctx context.Context, request operations.GetActionRequest) (*operations.GetActionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/actions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/actions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,7 +363,10 @@ func (s *SDK) GetAction(ctx context.Context, request operations.GetActionRequest
 // GetExperiment - Gets information about the specified experiment.
 func (s *SDK) GetExperiment(ctx context.Context, request operations.GetExperimentRequest) (*operations.GetExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/experiments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/experiments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +432,10 @@ func (s *SDK) GetExperiment(ctx context.Context, request operations.GetExperimen
 // GetExperimentTemplate - Gets information about the specified experiment template.
 func (s *SDK) GetExperimentTemplate(ctx context.Context, request operations.GetExperimentTemplateRequest) (*operations.GetExperimentTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -474,7 +501,10 @@ func (s *SDK) GetExperimentTemplate(ctx context.Context, request operations.GetE
 // GetTargetResourceType - Gets information about the specified resource type.
 func (s *SDK) GetTargetResourceType(ctx context.Context, request operations.GetTargetResourceTypeRequest) (*operations.GetTargetResourceTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/targetResourceTypes/{resourceType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/targetResourceTypes/{resourceType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -720,7 +750,10 @@ func (s *SDK) ListExperiments(ctx context.Context, request operations.ListExperi
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -922,7 +955,10 @@ func (s *SDK) StartExperiment(ctx context.Context, request operations.StartExper
 // StopExperiment - Stops the specified experiment.
 func (s *SDK) StopExperiment(ctx context.Context, request operations.StopExperimentRequest) (*operations.StopExperimentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/experiments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/experiments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -988,7 +1024,10 @@ func (s *SDK) StopExperiment(ctx context.Context, request operations.StopExperim
 // TagResource - Applies the specified tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1044,7 +1083,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes the specified tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1094,7 +1136,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateExperimentTemplate - Updates the specified experiment template.
 func (s *SDK) UpdateExperimentTemplate(ctx context.Context, request operations.UpdateExperimentTemplateRequest) (*operations.UpdateExperimentTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/experimentTemplates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -30,12 +30,16 @@ const (
 	StandardSQLDataTypeTypeKindEnumStruct              StandardSQLDataTypeTypeKindEnum = "STRUCT"
 )
 
+func (e StandardSQLDataTypeTypeKindEnum) ToPointer() *StandardSQLDataTypeTypeKindEnum {
+	return &e
+}
+
 func (e *StandardSQLDataTypeTypeKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_KIND_UNSPECIFIED":
 		fallthrough
 	case "INT64":
@@ -69,10 +73,10 @@ func (e *StandardSQLDataTypeTypeKindEnum) UnmarshalJSON(data []byte) error {
 	case "ARRAY":
 		fallthrough
 	case "STRUCT":
-		*e = StandardSQLDataTypeTypeKindEnum(s)
+		*e = StandardSQLDataTypeTypeKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandardSQLDataTypeTypeKindEnum: %s", s)
+		return fmt.Errorf("invalid value for StandardSQLDataTypeTypeKindEnum: %v", v)
 	}
 }
 

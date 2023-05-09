@@ -39,7 +39,10 @@ func newPaymentMethod(defaultClient, securityClient HTTPClient, serverURL, langu
 // Return a Payment Method info by 'paymentMethodNumber'
 func (s *paymentMethod) GetPaymentMethod(ctx context.Context, request operations.GetPaymentMethodRequest, security operations.GetPaymentMethodSecurity) (*operations.GetPaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,7 @@ func (s *paymentMethod) GetPaymentMethod(ctx context.Context, request operations
 
 // ListPaymentMethods - List Payment Methods
 // Return a list of all Payment Methods for the current Vendor
-func (s *paymentMethod) ListPaymentMethods(ctx context.Context) (*operations.ListPaymentMethodsResponse, error) {
+func (s *paymentMethod) ListPaymentMethods(ctx context.Context, security operations.ListPaymentMethodsSecurity) (*operations.ListPaymentMethodsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/paymentmethod"
 
@@ -105,7 +108,7 @@ func (s *paymentMethod) ListPaymentMethods(ctx context.Context) (*operations.Lis
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -157,7 +160,10 @@ func (s *paymentMethod) ListPaymentMethods(ctx context.Context) (*operations.Lis
 // Sets the provided properties to a Payment Method. Return an updated Payment Method
 func (s *paymentMethod) UpdatePaymentMethod(ctx context.Context, request operations.UpdatePaymentMethodRequest, security operations.UpdatePaymentMethodSecurity) (*operations.UpdatePaymentMethodResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/paymentmethod/{paymentMethodNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

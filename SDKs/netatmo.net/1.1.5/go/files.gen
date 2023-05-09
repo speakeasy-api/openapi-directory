@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -105,4 +106,12 @@ pkg/models/shared/nawelcomecamera.go
 pkg/models/shared/nawelcomeglobalinfo.go
 pkg/models/shared/nawelcomepersonsawayresponse.go
 pkg/models/shared/nawelcomepersonshomeresponse.go
+docs/sdk/README.md
+docs/deprecated/README.md
+docs/healthyhomecoach/README.md
+docs/partner/README.md
+docs/public/README.md
+docs/station/README.md
+docs/thermostat/README.md
+docs/welcome/README.md
 USAGE.md

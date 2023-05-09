@@ -16,21 +16,25 @@ const (
 	CompositeFilterLogicOperatorEnumNot CompositeFilterLogicOperatorEnum = "NOT"
 )
 
+func (e CompositeFilterLogicOperatorEnum) ToPointer() *CompositeFilterLogicOperatorEnum {
+	return &e
+}
+
 func (e *CompositeFilterLogicOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "OR":
 		fallthrough
 	case "NOT":
-		*e = CompositeFilterLogicOperatorEnum(s)
+		*e = CompositeFilterLogicOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompositeFilterLogicOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for CompositeFilterLogicOperatorEnum: %v", v)
 	}
 }
 

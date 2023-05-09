@@ -20,12 +20,16 @@ const (
 	LogAnomalyTypeEnumNewFieldName   LogAnomalyTypeEnum = "NEW_FIELD_NAME"
 )
 
+func (e LogAnomalyTypeEnum) ToPointer() *LogAnomalyTypeEnum {
+	return &e
+}
+
 func (e *LogAnomalyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEYWORD":
 		fallthrough
 	case "KEYWORD_TOKEN":
@@ -41,9 +45,9 @@ func (e *LogAnomalyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NUMERICAL_NAN":
 		fallthrough
 	case "NEW_FIELD_NAME":
-		*e = LogAnomalyTypeEnum(s)
+		*e = LogAnomalyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogAnomalyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LogAnomalyTypeEnum: %v", v)
 	}
 }

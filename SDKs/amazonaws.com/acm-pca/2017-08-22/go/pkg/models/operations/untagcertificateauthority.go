@@ -16,17 +16,21 @@ const (
 	UntagCertificateAuthorityXAmzTargetEnumAcmPrivateCaUntagCertificateAuthority UntagCertificateAuthorityXAmzTargetEnum = "ACMPrivateCA.UntagCertificateAuthority"
 )
 
+func (e UntagCertificateAuthorityXAmzTargetEnum) ToPointer() *UntagCertificateAuthorityXAmzTargetEnum {
+	return &e
+}
+
 func (e *UntagCertificateAuthorityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.UntagCertificateAuthority":
-		*e = UntagCertificateAuthorityXAmzTargetEnum(s)
+		*e = UntagCertificateAuthorityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UntagCertificateAuthorityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UntagCertificateAuthorityXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	QuerySuggestionsBlockListStatusEnumFailed                QuerySuggestionsBlockListStatusEnum = "FAILED"
 )
 
+func (e QuerySuggestionsBlockListStatusEnum) ToPointer() *QuerySuggestionsBlockListStatusEnum {
+	return &e
+}
+
 func (e *QuerySuggestionsBlockListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CREATING":
@@ -35,9 +39,9 @@ func (e *QuerySuggestionsBlockListStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE_BUT_UPDATE_FAILED":
 		fallthrough
 	case "FAILED":
-		*e = QuerySuggestionsBlockListStatusEnum(s)
+		*e = QuerySuggestionsBlockListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QuerySuggestionsBlockListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QuerySuggestionsBlockListStatusEnum: %v", v)
 	}
 }

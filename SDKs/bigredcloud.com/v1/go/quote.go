@@ -35,7 +35,10 @@ func newQuote(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // QuoteClose - Close a Quote.
 func (s *quote) QuoteClose(ctx context.Context, request operations.QuoteCloseRequest) (*operations.QuoteCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/close/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/quotes/close/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *quote) QuoteClose(ctx context.Context, request operations.QuoteCloseReq
 // QuoteDelete - Removes an existing Quote.
 func (s *quote) QuoteDelete(ctx context.Context, request operations.QuoteDeleteRequest) (*operations.QuoteDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -390,7 +396,10 @@ func (s *quote) QuoteProcessBatch(ctx context.Context, request []shared.BatchIte
 // QuotePut - Updates an existing Quote.
 func (s *quote) QuotePut(ctx context.Context, request operations.QuotePutRequest) (*operations.QuotePutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QuoteDto", "json")
 	if err != nil {
@@ -444,7 +453,10 @@ func (s *quote) QuotePut(ctx context.Context, request operations.QuotePutRequest
 // QuoteReopen - Reopen a Quote.
 func (s *quote) QuoteReopen(ctx context.Context, request operations.QuoteReopenRequest) (*operations.QuoteReopenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/reopen/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/quotes/reopen/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -488,7 +500,10 @@ func (s *quote) QuoteReopen(ctx context.Context, request operations.QuoteReopenR
 // GetV1QuotesID - Returns information about a single Quote.
 func (s *quote) GetV1QuotesID(ctx context.Context, request operations.GetV1QuotesIDRequest) (*operations.GetV1QuotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/quotes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	DeviceDefenderIndexingModeEnumViolations DeviceDefenderIndexingModeEnum = "VIOLATIONS"
 )
 
+func (e DeviceDefenderIndexingModeEnum) ToPointer() *DeviceDefenderIndexingModeEnum {
+	return &e
+}
+
 func (e *DeviceDefenderIndexingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "VIOLATIONS":
-		*e = DeviceDefenderIndexingModeEnum(s)
+		*e = DeviceDefenderIndexingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDefenderIndexingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDefenderIndexingModeEnum: %v", v)
 	}
 }

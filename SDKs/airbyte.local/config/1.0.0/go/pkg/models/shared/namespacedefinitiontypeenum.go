@@ -16,20 +16,24 @@ const (
 	NamespaceDefinitionTypeEnumCustomformat NamespaceDefinitionTypeEnum = "customformat"
 )
 
+func (e NamespaceDefinitionTypeEnum) ToPointer() *NamespaceDefinitionTypeEnum {
+	return &e
+}
+
 func (e *NamespaceDefinitionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "source":
 		fallthrough
 	case "destination":
 		fallthrough
 	case "customformat":
-		*e = NamespaceDefinitionTypeEnum(s)
+		*e = NamespaceDefinitionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamespaceDefinitionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NamespaceDefinitionTypeEnum: %v", v)
 	}
 }

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/mediastore-
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.DeleteObjectRequest{
-        Path: "corrupti",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteObject(ctx, req)
+    res, err := s.DeleteObject(ctx, operations.DeleteObjectRequest{
+        Path: "corrupti",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,13 +52,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteObject` - Deletes an object at the specified path.
-* `DescribeObject` - Gets the headers for an object at the specified path.
-* `GetObject` - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
-* `ListItems` - Provides a list of metadata entries about folders and objects in the specified folder.
-* `PutObject` - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
+* [DeleteObject](docs/sdk/README.md#deleteobject) - Deletes an object at the specified path.
+* [DescribeObject](docs/sdk/README.md#describeobject) - Gets the headers for an object at the specified path.
+* [GetObject](docs/sdk/README.md#getobject) - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
+* [ListItems](docs/sdk/README.md#listitems) - Provides a list of metadata entries about folders and objects in the specified folder.
+* [PutObject](docs/sdk/README.md#putobject) - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
 <!-- End SDK Available Operations -->
 
 ### Maturity

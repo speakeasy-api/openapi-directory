@@ -15,19 +15,23 @@ const (
 	CreateRowRequestViewEnumColumnIDView    CreateRowRequestViewEnum = "COLUMN_ID_VIEW"
 )
 
+func (e CreateRowRequestViewEnum) ToPointer() *CreateRowRequestViewEnum {
+	return &e
+}
+
 func (e *CreateRowRequestViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "COLUMN_ID_VIEW":
-		*e = CreateRowRequestViewEnum(s)
+		*e = CreateRowRequestViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRowRequestViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRowRequestViewEnum: %v", v)
 	}
 }
 

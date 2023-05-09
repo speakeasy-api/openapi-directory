@@ -19,12 +19,16 @@ const (
 	DeliveryStatusEnumDuplicate        DeliveryStatusEnum = "DUPLICATE"
 )
 
+func (e DeliveryStatusEnum) ToPointer() *DeliveryStatusEnum {
+	return &e
+}
+
 func (e *DeliveryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESSFUL":
 		fallthrough
 	case "THROTTLED":
@@ -38,9 +42,9 @@ func (e *DeliveryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "OPT_OUT":
 		fallthrough
 	case "DUPLICATE":
-		*e = DeliveryStatusEnum(s)
+		*e = DeliveryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryStatusEnum: %v", v)
 	}
 }

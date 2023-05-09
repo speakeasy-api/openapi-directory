@@ -14,17 +14,21 @@ const (
 	CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnumServiceOwner CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum = "ServiceOwner"
 )
 
+func (e CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum) ToPointer() *CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceOwner":
-		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum(s)
+		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationPayerResponsibilityEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnumFailed              CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum = "failed"
 )
 
+func (e CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum) ToPointer() *CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pendingVerification":
 		fallthrough
 	case "verified":
 		fallthrough
 	case "failed":
-		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum(s)
+		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDNSNameConfigurationStateEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnumFailed    CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum = "Failed"
 )
 
+func (e CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum) ToPointer() *CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Available":
@@ -89,10 +101,10 @@ func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceS
 	case "Deleted":
 		fallthrough
 	case "Failed":
-		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum(s)
+		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceStateEnum: %v", v)
 	}
 }
 
@@ -105,21 +117,25 @@ const (
 	CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnumGatewayLoadBalancer CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum = "GatewayLoadBalancer"
 )
 
+func (e CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum) ToPointer() *CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Interface":
 		fallthrough
 	case "Gateway":
 		fallthrough
 	case "GatewayLoadBalancer":
-		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum(s)
+		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationServiceTypeServiceTypeEnum: %v", v)
 	}
 }
 
@@ -135,19 +151,23 @@ const (
 	CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnumIpv6 CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum = "ipv6"
 )
 
+func (e CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum) ToPointer() *CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum(s)
+		*e = CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointServiceConfigurationResultServiceConfigurationSupportedIPAddressTypesEnum: %v", v)
 	}
 }
 

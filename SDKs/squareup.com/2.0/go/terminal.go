@@ -36,7 +36,10 @@ func newTerminal(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Cancels a Terminal checkout request if the status of the request permits it.
 func (s *terminal) CancelTerminalCheckout(ctx context.Context, request operations.CancelTerminalCheckoutRequest, security operations.CancelTerminalCheckoutSecurity) (*operations.CancelTerminalCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *terminal) CancelTerminalCheckout(ctx context.Context, request operation
 // Cancels an Interac Terminal refund request by refund request ID if the status of the request permits it.
 func (s *terminal) CancelTerminalRefund(ctx context.Context, request operations.CancelTerminalRefundRequest, security operations.CancelTerminalRefundSecurity) (*operations.CancelTerminalRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -237,7 +243,10 @@ func (s *terminal) CreateTerminalRefund(ctx context.Context, request shared.Crea
 // Retrieves a Terminal checkout request by `checkout_id`.
 func (s *terminal) GetTerminalCheckout(ctx context.Context, request operations.GetTerminalCheckoutRequest, security operations.GetTerminalCheckoutSecurity) (*operations.GetTerminalCheckoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/terminals/checkouts/{checkout_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +291,10 @@ func (s *terminal) GetTerminalCheckout(ctx context.Context, request operations.G
 // Retrieves an Interac Terminal refund object by ID.
 func (s *terminal) GetTerminalRefund(ctx context.Context, request operations.GetTerminalRefundRequest, security operations.GetTerminalRefundSecurity) (*operations.GetTerminalRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/terminals/refunds/{terminal_refund_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -30,12 +30,16 @@ const (
 	DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnumRestoreInProgress DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum = "restore-in-progress"
 )
 
+func (e DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum) ToPointer() *DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum {
+	return &e
+}
+
 func (e *DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -59,10 +63,10 @@ func (e *DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum) 
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum(s)
+		*e = DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeIpamResourceDiscoveriesResultIpamResourceDiscoveriesStateEnum: %v", v)
 	}
 }
 

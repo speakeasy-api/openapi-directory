@@ -16,21 +16,25 @@ const (
 	SiteSummaryResponseAbusiveStatusEnumFailing SiteSummaryResponseAbusiveStatusEnum = "FAILING"
 )
 
+func (e SiteSummaryResponseAbusiveStatusEnum) ToPointer() *SiteSummaryResponseAbusiveStatusEnum {
+	return &e
+}
+
 func (e *SiteSummaryResponseAbusiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "PASSING":
 		fallthrough
 	case "FAILING":
-		*e = SiteSummaryResponseAbusiveStatusEnum(s)
+		*e = SiteSummaryResponseAbusiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteSummaryResponseAbusiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteSummaryResponseAbusiveStatusEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	SiteSummaryResponseFilterStatusEnumPending SiteSummaryResponseFilterStatusEnum = "PENDING"
 )
 
+func (e SiteSummaryResponseFilterStatusEnum) ToPointer() *SiteSummaryResponseFilterStatusEnum {
+	return &e
+}
+
 func (e *SiteSummaryResponseFilterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ON":
@@ -60,10 +68,10 @@ func (e *SiteSummaryResponseFilterStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED":
 		fallthrough
 	case "PENDING":
-		*e = SiteSummaryResponseFilterStatusEnum(s)
+		*e = SiteSummaryResponseFilterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteSummaryResponseFilterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteSummaryResponseFilterStatusEnum: %v", v)
 	}
 }
 

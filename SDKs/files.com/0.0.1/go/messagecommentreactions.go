@@ -37,7 +37,10 @@ func newMessageCommentReactions(defaultClient, securityClient HTTPClient, server
 // Delete Message Comment Reaction
 func (s *messageCommentReactions) DeleteMessageCommentReactionsID(ctx context.Context, request operations.DeleteMessageCommentReactionsIDRequest) (*operations.DeleteMessageCommentReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *messageCommentReactions) GetMessageCommentReactions(ctx context.Context
 // Show Message Comment Reaction
 func (s *messageCommentReactions) GetMessageCommentReactionsID(ctx context.Context, request operations.GetMessageCommentReactionsIDRequest) (*operations.GetMessageCommentReactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/message_comment_reactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

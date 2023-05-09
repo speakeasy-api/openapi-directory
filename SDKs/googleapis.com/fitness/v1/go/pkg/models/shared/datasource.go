@@ -22,12 +22,16 @@ const (
 	DataSourceDataQualityStandardEnumDataQualityBloodGlucoseIso151972013 DataSourceDataQualityStandardEnum = "dataQualityBloodGlucoseIso151972013"
 )
 
+func (e DataSourceDataQualityStandardEnum) ToPointer() *DataSourceDataQualityStandardEnum {
+	return &e
+}
+
 func (e *DataSourceDataQualityStandardEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataQualityUnknown":
 		fallthrough
 	case "dataQualityBloodPressureEsh2002":
@@ -47,10 +51,10 @@ func (e *DataSourceDataQualityStandardEnum) UnmarshalJSON(data []byte) error {
 	case "dataQualityBloodGlucoseIso151972003":
 		fallthrough
 	case "dataQualityBloodGlucoseIso151972013":
-		*e = DataSourceDataQualityStandardEnum(s)
+		*e = DataSourceDataQualityStandardEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceDataQualityStandardEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceDataQualityStandardEnum: %v", v)
 	}
 }
 
@@ -62,19 +66,23 @@ const (
 	DataSourceTypeEnumDerived DataSourceTypeEnum = "derived"
 )
 
+func (e DataSourceTypeEnum) ToPointer() *DataSourceTypeEnum {
+	return &e
+}
+
 func (e *DataSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "raw":
 		fallthrough
 	case "derived":
-		*e = DataSourceTypeEnum(s)
+		*e = DataSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceTypeEnum: %v", v)
 	}
 }
 

@@ -54,19 +54,23 @@ const (
 	GetAllinvestorAccounts409ApplicationJSONStatusEnumComplete   GetAllinvestorAccounts409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e GetAllinvestorAccounts409ApplicationJSONStatusEnum) ToPointer() *GetAllinvestorAccounts409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetAllinvestorAccounts409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = GetAllinvestorAccounts409ApplicationJSONStatusEnum(s)
+		*e = GetAllinvestorAccounts409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllinvestorAccounts409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllinvestorAccounts409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -121,12 +125,16 @@ const (
 	GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnumG GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum = "G"
 )
 
+func (e GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum) ToPointer() *GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum {
+	return &e
+}
+
 func (e *GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "X":
 		fallthrough
 	case "Z":
@@ -134,10 +142,10 @@ func (e *GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum
 	case "B":
 		fallthrough
 	case "G":
-		*e = GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum(s)
+		*e = GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllinvestorAccounts200ApplicationJSONInvestorAccountsAccountTypeEnum: %v", v)
 	}
 }
 
@@ -148,17 +156,21 @@ const (
 	GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnumActive GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum = "active"
 )
 
+func (e GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum) ToPointer() *GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum {
+	return &e
+}
+
 func (e *GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
-		*e = GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum(s)
+		*e = GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllinvestorAccounts200ApplicationJSONInvestorAccountsStatusEnum: %v", v)
 	}
 }
 

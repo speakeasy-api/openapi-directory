@@ -19,12 +19,16 @@ const (
 	InvoiceFullDetailsAPIModelStatusEnumVoid    InvoiceFullDetailsAPIModelStatusEnum = "Void"
 )
 
+func (e InvoiceFullDetailsAPIModelStatusEnum) ToPointer() *InvoiceFullDetailsAPIModelStatusEnum {
+	return &e
+}
+
 func (e *InvoiceFullDetailsAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Paid":
@@ -34,10 +38,10 @@ func (e *InvoiceFullDetailsAPIModelStatusEnum) UnmarshalJSON(data []byte) error 
 	case "Overdue":
 		fallthrough
 	case "Void":
-		*e = InvoiceFullDetailsAPIModelStatusEnum(s)
+		*e = InvoiceFullDetailsAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceFullDetailsAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceFullDetailsAPIModelStatusEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	GetPlaylistByIDSortEnumOldestPublishedFirst GetPlaylistByIDSortEnum = "oldest_published_first"
 )
 
+func (e GetPlaylistByIDSortEnum) ToPointer() *GetPlaylistByIDSortEnum {
+	return &e
+}
+
 func (e *GetPlaylistByIDSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "recent_added_first":
 		fallthrough
 	case "oldest_added_first":
@@ -32,10 +36,10 @@ func (e *GetPlaylistByIDSortEnum) UnmarshalJSON(data []byte) error {
 	case "recent_published_first":
 		fallthrough
 	case "oldest_published_first":
-		*e = GetPlaylistByIDSortEnum(s)
+		*e = GetPlaylistByIDSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlaylistByIDSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlaylistByIDSortEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	GetPlaylistByIDTypeEnumPodcastList GetPlaylistByIDTypeEnum = "podcast_list"
 )
 
+func (e GetPlaylistByIDTypeEnum) ToPointer() *GetPlaylistByIDTypeEnum {
+	return &e
+}
+
 func (e *GetPlaylistByIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode_list":
 		fallthrough
 	case "podcast_list":
-		*e = GetPlaylistByIDTypeEnum(s)
+		*e = GetPlaylistByIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlaylistByIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlaylistByIDTypeEnum: %v", v)
 	}
 }
 

@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type APIUsageHistorySecurity struct {
+	APIKey string `security:"scheme,type=apiKey,subtype=header,name=X-API-KEY"`
+}
+
 type APIUsageHistoryResponse struct {
 	// Print historical API usage (NB. new output format form v2.0.15)
 	APIUsageHistoryOut *shared.APIUsageHistoryOut

@@ -34,7 +34,10 @@ func newTypes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeploymentmanagerTypesGet - Gets information about a specific type.
 func (s *types) DeploymentmanagerTypesGet(ctx context.Context, request operations.DeploymentmanagerTypesGetRequest, security operations.DeploymentmanagerTypesGetSecurity) (*operations.DeploymentmanagerTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/types/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/types/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *types) DeploymentmanagerTypesGet(ctx context.Context, request operation
 // DeploymentmanagerTypesList - Lists all resource types for Deployment Manager.
 func (s *types) DeploymentmanagerTypesList(ctx context.Context, request operations.DeploymentmanagerTypesListRequest, security operations.DeploymentmanagerTypesListSecurity) (*operations.DeploymentmanagerTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/types", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/types", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

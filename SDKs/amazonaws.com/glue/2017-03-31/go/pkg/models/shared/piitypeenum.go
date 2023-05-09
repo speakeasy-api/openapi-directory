@@ -16,12 +16,16 @@ const (
 	PiiTypeEnumColumnMasking PiiTypeEnum = "ColumnMasking"
 )
 
+func (e PiiTypeEnum) ToPointer() *PiiTypeEnum {
+	return &e
+}
+
 func (e *PiiTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RowAudit":
 		fallthrough
 	case "RowMasking":
@@ -29,9 +33,9 @@ func (e *PiiTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ColumnAudit":
 		fallthrough
 	case "ColumnMasking":
-		*e = PiiTypeEnum(s)
+		*e = PiiTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PiiTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PiiTypeEnum: %v", v)
 	}
 }

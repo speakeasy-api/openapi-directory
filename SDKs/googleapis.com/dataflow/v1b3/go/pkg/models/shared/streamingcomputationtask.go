@@ -16,21 +16,25 @@ const (
 	StreamingComputationTaskTaskTypeEnumStreamingComputationTaskStart   StreamingComputationTaskTaskTypeEnum = "STREAMING_COMPUTATION_TASK_START"
 )
 
+func (e StreamingComputationTaskTaskTypeEnum) ToPointer() *StreamingComputationTaskTaskTypeEnum {
+	return &e
+}
+
 func (e *StreamingComputationTaskTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STREAMING_COMPUTATION_TASK_UNKNOWN":
 		fallthrough
 	case "STREAMING_COMPUTATION_TASK_STOP":
 		fallthrough
 	case "STREAMING_COMPUTATION_TASK_START":
-		*e = StreamingComputationTaskTaskTypeEnum(s)
+		*e = StreamingComputationTaskTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingComputationTaskTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingComputationTaskTaskTypeEnum: %v", v)
 	}
 }
 

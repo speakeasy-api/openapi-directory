@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/traccar.org/5.6/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,12 +28,10 @@ func main() {
         }),
     )
 
-    req := operations.DeleteAttributesComputedIDRequest{
-        ID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Attributes.DeleteAttributesComputedID(ctx, req)
+    res, err := s.Attributes.DeleteAttributesComputedID(ctx, operations.DeleteAttributesComputedIDRequest{
+        ID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,117 +47,117 @@ func main() {
 ## Available Resources and Operations
 
 
-### Attributes
+### [Attributes](docs/attributes/README.md)
 
-* `DeleteAttributesComputedID` - Delete an Attribute
-* `GetAttributesComputed` - Fetch a list of Attributes
-* `PostAttributesComputed` - Create an Attribute
-* `PutAttributesComputedID` - Update an Attribute
+* [DeleteAttributesComputedID](docs/attributes/README.md#deleteattributescomputedid) - Delete an Attribute
+* [GetAttributesComputed](docs/attributes/README.md#getattributescomputed) - Fetch a list of Attributes
+* [PostAttributesComputed](docs/attributes/README.md#postattributescomputed) - Create an Attribute
+* [PutAttributesComputedID](docs/attributes/README.md#putattributescomputedid) - Update an Attribute
 
-### Calendars
+### [Calendars](docs/calendars/README.md)
 
-* `DeleteCalendarsID` - Delete a Calendar
-* `GetCalendars` - Fetch a list of Calendars
-* `PostCalendars` - Create a Calendar
-* `PutCalendarsID` - Update a Calendar
+* [DeleteCalendarsID](docs/calendars/README.md#deletecalendarsid) - Delete a Calendar
+* [GetCalendars](docs/calendars/README.md#getcalendars) - Fetch a list of Calendars
+* [PostCalendars](docs/calendars/README.md#postcalendars) - Create a Calendar
+* [PutCalendarsID](docs/calendars/README.md#putcalendarsid) - Update a Calendar
 
-### Commands
+### [Commands](docs/commands/README.md)
 
-* `DeleteCommandsID` - Delete a Saved Command
-* `GetCommands` - Fetch a list of Saved Commands
-* `GetCommandsSend` - Fetch a list of Saved Commands supported by Device at the moment
-* `GetCommandsTypes` - Fetch a list of available Commands for the Device or all possible Commands if Device ommited
-* `PostCommands` - Create a Saved Command
-* `PostCommandsSend` - Dispatch commands to device
-* `PutCommandsID` - Update a Saved Command
+* [DeleteCommandsID](docs/commands/README.md#deletecommandsid) - Delete a Saved Command
+* [GetCommands](docs/commands/README.md#getcommands) - Fetch a list of Saved Commands
+* [GetCommandsSend](docs/commands/README.md#getcommandssend) - Fetch a list of Saved Commands supported by Device at the moment
+* [GetCommandsTypes](docs/commands/README.md#getcommandstypes) - Fetch a list of available Commands for the Device or all possible Commands if Device ommited
+* [PostCommands](docs/commands/README.md#postcommands) - Create a Saved Command
+* [PostCommandsSend](docs/commands/README.md#postcommandssend) - Dispatch commands to device
+* [PutCommandsID](docs/commands/README.md#putcommandsid) - Update a Saved Command
 
-### Devices
+### [Devices](docs/devices/README.md)
 
-* `DeleteDevicesID` - Delete a Device
-* `GetDevices` - Fetch a list of Devices
-* `PostDevices` - Create a Device
-* `PutDevicesID` - Update a Device
-* `PutDevicesIDAccumulators` - Update total distance and hours of the Device
+* [DeleteDevicesID](docs/devices/README.md#deletedevicesid) - Delete a Device
+* [GetDevices](docs/devices/README.md#getdevices) - Fetch a list of Devices
+* [PostDevices](docs/devices/README.md#postdevices) - Create a Device
+* [PutDevicesID](docs/devices/README.md#putdevicesid) - Update a Device
+* [PutDevicesIDAccumulators](docs/devices/README.md#putdevicesidaccumulators) - Update total distance and hours of the Device
 
-### Drivers
+### [Drivers](docs/drivers/README.md)
 
-* `DeleteDriversID` - Delete a Driver
-* `GetDrivers` - Fetch a list of Drivers
-* `PostDrivers` - Create a Driver
-* `PutDriversID` - Update a Driver
+* [DeleteDriversID](docs/drivers/README.md#deletedriversid) - Delete a Driver
+* [GetDrivers](docs/drivers/README.md#getdrivers) - Fetch a list of Drivers
+* [PostDrivers](docs/drivers/README.md#postdrivers) - Create a Driver
+* [PutDriversID](docs/drivers/README.md#putdriversid) - Update a Driver
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GetEventsID`
+* [GetEventsID](docs/events/README.md#geteventsid)
 
-### Geofences
+### [Geofences](docs/geofences/README.md)
 
-* `DeleteGeofencesID` - Delete a Geofence
-* `GetGeofences` - Fetch a list of Geofences
-* `PostGeofences` - Create a Geofence
-* `PutGeofencesID` - Update a Geofence
+* [DeleteGeofencesID](docs/geofences/README.md#deletegeofencesid) - Delete a Geofence
+* [GetGeofences](docs/geofences/README.md#getgeofences) - Fetch a list of Geofences
+* [PostGeofences](docs/geofences/README.md#postgeofences) - Create a Geofence
+* [PutGeofencesID](docs/geofences/README.md#putgeofencesid) - Update a Geofence
 
-### Groups
+### [Groups](docs/groups/README.md)
 
-* `DeleteGroupsID` - Delete a Group
-* `GetGroups` - Fetch a list of Groups
-* `PostGroups` - Create a Group
-* `PutGroupsID` - Update a Group
+* [DeleteGroupsID](docs/groups/README.md#deletegroupsid) - Delete a Group
+* [GetGroups](docs/groups/README.md#getgroups) - Fetch a list of Groups
+* [PostGroups](docs/groups/README.md#postgroups) - Create a Group
+* [PutGroupsID](docs/groups/README.md#putgroupsid) - Update a Group
 
-### Maintenance
+### [Maintenance](docs/maintenance/README.md)
 
-* `DeleteMaintenanceID` - Delete a Maintenance
-* `GetMaintenance` - Fetch a list of Maintenance
-* `PostMaintenance` - Create a Maintenance
-* `PutMaintenanceID` - Update a Maintenance
+* [DeleteMaintenanceID](docs/maintenance/README.md#deletemaintenanceid) - Delete a Maintenance
+* [GetMaintenance](docs/maintenance/README.md#getmaintenance) - Fetch a list of Maintenance
+* [PostMaintenance](docs/maintenance/README.md#postmaintenance) - Create a Maintenance
+* [PutMaintenanceID](docs/maintenance/README.md#putmaintenanceid) - Update a Maintenance
 
-### Notifications
+### [Notifications](docs/notifications/README.md)
 
-* `DeleteNotificationsID` - Delete a Notification
-* `GetNotifications` - Fetch a list of Notifications
-* `GetNotificationsTypes` - Fetch a list of available Notification types
-* `PostNotifications` - Create a Notification
-* `PostNotificationsTest` - Send test notification to current user via Email and SMS
-* `PutNotificationsID` - Update a Notification
+* [DeleteNotificationsID](docs/notifications/README.md#deletenotificationsid) - Delete a Notification
+* [GetNotifications](docs/notifications/README.md#getnotifications) - Fetch a list of Notifications
+* [GetNotificationsTypes](docs/notifications/README.md#getnotificationstypes) - Fetch a list of available Notification types
+* [PostNotifications](docs/notifications/README.md#postnotifications) - Create a Notification
+* [PostNotificationsTest](docs/notifications/README.md#postnotificationstest) - Send test notification to current user via Email and SMS
+* [PutNotificationsID](docs/notifications/README.md#putnotificationsid) - Update a Notification
 
-### Permissions
+### [Permissions](docs/permissions/README.md)
 
-* `DeletePermissions` - Unlink an Object from another Object
-* `PostPermissions` - Link an Object to another Object
+* [DeletePermissions](docs/permissions/README.md#deletepermissions) - Unlink an Object from another Object
+* [PostPermissions](docs/permissions/README.md#postpermissions) - Link an Object to another Object
 
-### Positions
+### [Positions](docs/positions/README.md)
 
-* `GetPositions` - Fetches a list of Positions
+* [GetPositions](docs/positions/README.md#getpositions) - Fetches a list of Positions
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `GetReportsEvents` - Fetch a list of Events within the time period for the Devices or Groups
-* `GetReportsRoute` - Fetch a list of Positions within the time period for the Devices or Groups
-* `GetReportsStops` - Fetch a list of ReportStops within the time period for the Devices or Groups
-* `GetReportsSummary` - Fetch a list of ReportSummary within the time period for the Devices or Groups
-* `GetReportsTrips` - Fetch a list of ReportTrips within the time period for the Devices or Groups
+* [GetReportsEvents](docs/reports/README.md#getreportsevents) - Fetch a list of Events within the time period for the Devices or Groups
+* [GetReportsRoute](docs/reports/README.md#getreportsroute) - Fetch a list of Positions within the time period for the Devices or Groups
+* [GetReportsStops](docs/reports/README.md#getreportsstops) - Fetch a list of ReportStops within the time period for the Devices or Groups
+* [GetReportsSummary](docs/reports/README.md#getreportssummary) - Fetch a list of ReportSummary within the time period for the Devices or Groups
+* [GetReportsTrips](docs/reports/README.md#getreportstrips) - Fetch a list of ReportTrips within the time period for the Devices or Groups
 
-### Server
+### [Server](docs/server/README.md)
 
-* `GetServer` - Fetch Server information
-* `PutServer` - Update Server information
+* [GetServer](docs/server/README.md#getserver) - Fetch Server information
+* [PutServer](docs/server/README.md#putserver) - Update Server information
 
-### Session
+### [Session](docs/session/README.md)
 
-* `DeleteSession` - Close the Session
-* `GetSession` - Fetch Session information
-* `PostSession` - Create a new Session
+* [DeleteSession](docs/session/README.md#deletesession) - Close the Session
+* [GetSession](docs/session/README.md#getsession) - Fetch Session information
+* [PostSession](docs/session/README.md#postsession) - Create a new Session
 
-### Statistics
+### [Statistics](docs/statistics/README.md)
 
-* `GetStatistics` - Fetch server Statistics
+* [GetStatistics](docs/statistics/README.md#getstatistics) - Fetch server Statistics
 
-### Users
+### [Users](docs/users/README.md)
 
-* `DeleteUsersID` - Delete a User
-* `GetUsers` - Fetch a list of Users
-* `PostUsers` - Create a User
-* `PutUsersID` - Update a User
+* [DeleteUsersID](docs/users/README.md#deleteusersid) - Delete a User
+* [GetUsers](docs/users/README.md#getusers) - Fetch a list of Users
+* [PostUsers](docs/users/README.md#postusers) - Create a User
+* [PutUsersID](docs/users/README.md#putusersid) - Update a User
 <!-- End SDK Available Operations -->
 
 ### Maturity

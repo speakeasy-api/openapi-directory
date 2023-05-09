@@ -16,17 +16,21 @@ const (
 	PutDeliveryChannelXAmzTargetEnumStarlingDoveServicePutDeliveryChannel PutDeliveryChannelXAmzTargetEnum = "StarlingDoveService.PutDeliveryChannel"
 )
 
+func (e PutDeliveryChannelXAmzTargetEnum) ToPointer() *PutDeliveryChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutDeliveryChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutDeliveryChannel":
-		*e = PutDeliveryChannelXAmzTargetEnum(s)
+		*e = PutDeliveryChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutDeliveryChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutDeliveryChannelXAmzTargetEnum: %v", v)
 	}
 }
 

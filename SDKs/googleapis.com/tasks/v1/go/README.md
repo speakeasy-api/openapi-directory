@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/tasks/v1/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TasksTasklistsDeleteRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PrettyPrint: false,
-        QuotaUser: "illum",
-        Tasklist: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Tasklists.TasksTasklistsDelete(ctx, req, operations.TasksTasklistsDeleteSecurity{
+    res, err := s.Tasklists.TasksTasklistsDelete(ctx, operations.TasksTasklistsDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("illum"),
+        Tasklist: "vel",
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.TasksTasklistsDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,25 +57,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Tasklists
+### [Tasklists](docs/tasklists/README.md)
 
-* `TasksTasklistsDelete` - Deletes the authenticated user's specified task list.
-* `TasksTasklistsGet` - Returns the authenticated user's specified task list.
-* `TasksTasklistsInsert` - Creates a new task list and adds it to the authenticated user's task lists.
-* `TasksTasklistsList` - Returns all the authenticated user's task lists.
-* `TasksTasklistsPatch` - Updates the authenticated user's specified task list. This method supports patch semantics.
-* `TasksTasklistsUpdate` - Updates the authenticated user's specified task list.
+* [TasksTasklistsDelete](docs/tasklists/README.md#taskstasklistsdelete) - Deletes the authenticated user's specified task list.
+* [TasksTasklistsGet](docs/tasklists/README.md#taskstasklistsget) - Returns the authenticated user's specified task list.
+* [TasksTasklistsInsert](docs/tasklists/README.md#taskstasklistsinsert) - Creates a new task list and adds it to the authenticated user's task lists.
+* [TasksTasklistsList](docs/tasklists/README.md#taskstasklistslist) - Returns all the authenticated user's task lists.
+* [TasksTasklistsPatch](docs/tasklists/README.md#taskstasklistspatch) - Updates the authenticated user's specified task list. This method supports patch semantics.
+* [TasksTasklistsUpdate](docs/tasklists/README.md#taskstasklistsupdate) - Updates the authenticated user's specified task list.
 
-### Tasks
+### [Tasks](docs/tasks/README.md)
 
-* `TasksTasksClear` - Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.
-* `TasksTasksDelete` - Deletes the specified task from the task list.
-* `TasksTasksGet` - Returns the specified task.
-* `TasksTasksInsert` - Creates a new task on the specified task list.
-* `TasksTasksList` - Returns all tasks in the specified task list.
-* `TasksTasksMove` - Moves the specified task to another position in the task list. This can include putting it as a child task under a new parent and/or move it to a different position among its sibling tasks.
-* `TasksTasksPatch` - Updates the specified task. This method supports patch semantics.
-* `TasksTasksUpdate` - Updates the specified task.
+* [TasksTasksClear](docs/tasks/README.md#taskstasksclear) - Clears all completed tasks from the specified task list. The affected tasks will be marked as 'hidden' and no longer be returned by default when retrieving all tasks for a task list.
+* [TasksTasksDelete](docs/tasks/README.md#taskstasksdelete) - Deletes the specified task from the task list.
+* [TasksTasksGet](docs/tasks/README.md#taskstasksget) - Returns the specified task.
+* [TasksTasksInsert](docs/tasks/README.md#taskstasksinsert) - Creates a new task on the specified task list.
+* [TasksTasksList](docs/tasks/README.md#taskstaskslist) - Returns all tasks in the specified task list.
+* [TasksTasksMove](docs/tasks/README.md#taskstasksmove) - Moves the specified task to another position in the task list. This can include putting it as a child task under a new parent and/or move it to a different position among its sibling tasks.
+* [TasksTasksPatch](docs/tasks/README.md#taskstaskspatch) - Updates the specified task. This method supports patch semantics.
+* [TasksTasksUpdate](docs/tasks/README.md#taskstasksupdate) - Updates the specified task.
 <!-- End SDK Available Operations -->
 
 ### Maturity

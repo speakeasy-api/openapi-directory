@@ -14,19 +14,23 @@ const (
 	DependencyGraphDiffChangeTypeEnumRemoved DependencyGraphDiffChangeTypeEnum = "removed"
 )
 
+func (e DependencyGraphDiffChangeTypeEnum) ToPointer() *DependencyGraphDiffChangeTypeEnum {
+	return &e
+}
+
 func (e *DependencyGraphDiffChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "added":
 		fallthrough
 	case "removed":
-		*e = DependencyGraphDiffChangeTypeEnum(s)
+		*e = DependencyGraphDiffChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependencyGraphDiffChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependencyGraphDiffChangeTypeEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	DependencyGraphDiffScopeEnumDevelopment DependencyGraphDiffScopeEnum = "development"
 )
 
+func (e DependencyGraphDiffScopeEnum) ToPointer() *DependencyGraphDiffScopeEnum {
+	return &e
+}
+
 func (e *DependencyGraphDiffScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "runtime":
 		fallthrough
 	case "development":
-		*e = DependencyGraphDiffScopeEnum(s)
+		*e = DependencyGraphDiffScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependencyGraphDiffScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependencyGraphDiffScopeEnum: %v", v)
 	}
 }
 

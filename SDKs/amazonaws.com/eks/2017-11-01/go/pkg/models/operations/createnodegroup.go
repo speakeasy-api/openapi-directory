@@ -27,12 +27,16 @@ const (
 	CreateNodegroupRequestBodyAmiTypeEnumWindowsFull2022X8664    CreateNodegroupRequestBodyAmiTypeEnum = "WINDOWS_FULL_2022_x86_64"
 )
 
+func (e CreateNodegroupRequestBodyAmiTypeEnum) ToPointer() *CreateNodegroupRequestBodyAmiTypeEnum {
+	return &e
+}
+
 func (e *CreateNodegroupRequestBodyAmiTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL2_x86_64":
 		fallthrough
 	case "AL2_x86_64_GPU":
@@ -56,10 +60,10 @@ func (e *CreateNodegroupRequestBodyAmiTypeEnum) UnmarshalJSON(data []byte) error
 	case "WINDOWS_CORE_2022_x86_64":
 		fallthrough
 	case "WINDOWS_FULL_2022_x86_64":
-		*e = CreateNodegroupRequestBodyAmiTypeEnum(s)
+		*e = CreateNodegroupRequestBodyAmiTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNodegroupRequestBodyAmiTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNodegroupRequestBodyAmiTypeEnum: %v", v)
 	}
 }
 
@@ -71,19 +75,23 @@ const (
 	CreateNodegroupRequestBodyCapacityTypeEnumSpot     CreateNodegroupRequestBodyCapacityTypeEnum = "SPOT"
 )
 
+func (e CreateNodegroupRequestBodyCapacityTypeEnum) ToPointer() *CreateNodegroupRequestBodyCapacityTypeEnum {
+	return &e
+}
+
 func (e *CreateNodegroupRequestBodyCapacityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_DEMAND":
 		fallthrough
 	case "SPOT":
-		*e = CreateNodegroupRequestBodyCapacityTypeEnum(s)
+		*e = CreateNodegroupRequestBodyCapacityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNodegroupRequestBodyCapacityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNodegroupRequestBodyCapacityTypeEnum: %v", v)
 	}
 }
 

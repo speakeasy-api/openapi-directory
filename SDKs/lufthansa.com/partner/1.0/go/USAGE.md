@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BaggageTripAndContactRequest{
+    ctx := context.Background()
+    res, err := s.Baggage.BaggageTripAndContact(ctx, operations.BaggageTripAndContactRequest{
         Accept: "corrupti",
         SearchID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Baggage.BaggageTripAndContact(ctx, req, operations.BaggageTripAndContactSecurity{
+    }, operations.BaggageTripAndContactSecurity{
         Auth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

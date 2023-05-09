@@ -14,16 +14,20 @@ const (
 	FindingActionTypeEnumAwsAPICall FindingActionTypeEnum = "AWS_API_CALL"
 )
 
+func (e FindingActionTypeEnum) ToPointer() *FindingActionTypeEnum {
+	return &e
+}
+
 func (e *FindingActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_API_CALL":
-		*e = FindingActionTypeEnum(s)
+		*e = FindingActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingActionTypeEnum: %v", v)
 	}
 }

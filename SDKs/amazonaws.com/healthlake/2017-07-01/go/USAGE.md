@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,18 +17,19 @@ func main() {
         }),
     )
 
-    req := operations.CreateFHIRDatastoreRequest{
+    ctx := context.Background()
+    res, err := s.CreateFHIRDatastore(ctx, operations.CreateFHIRDatastoreRequest{
         CreateFHIRDatastoreRequest: shared.CreateFHIRDatastoreRequest{
-            ClientToken: "corrupti",
-            DatastoreName: "provident",
-            DatastoreTypeVersion: "R4",
+            ClientToken: sdk.String("corrupti"),
+            DatastoreName: sdk.String("provident"),
+            DatastoreTypeVersion: shared.FHIRVersionEnumR4,
             PreloadDataConfig: &shared.PreloadDataConfig{
-                PreloadDataType: "SYNTHEA",
+                PreloadDataType: shared.PreloadDataTypeEnumSynthea,
             },
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
-                    CmkType: "AWS_OWNED_KMS_KEY",
-                    KmsKeyID: "quibusdam",
+                    CmkType: shared.CmkTypeEnumAwsOwnedKmsKey,
+                    KmsKeyID: sdk.String("quibusdam"),
                 },
             },
             Tags: []shared.Tag{
@@ -46,18 +47,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "HealthLake.CreateFHIRDatastore",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateFHIRDatastore(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.CreateFHIRDatastoreXAmzTargetEnumHealthLakeCreateFhirDatastore,
+    })
     if err != nil {
         log.Fatal(err)
     }

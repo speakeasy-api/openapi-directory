@@ -16,12 +16,16 @@ const (
 	ProcessorTypeEnumAppendDelimiterToRecord ProcessorTypeEnum = "AppendDelimiterToRecord"
 )
 
+func (e ProcessorTypeEnum) ToPointer() *ProcessorTypeEnum {
+	return &e
+}
+
 func (e *ProcessorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RecordDeAggregation":
 		fallthrough
 	case "Lambda":
@@ -29,9 +33,9 @@ func (e *ProcessorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MetadataExtraction":
 		fallthrough
 	case "AppendDelimiterToRecord":
-		*e = ProcessorTypeEnum(s)
+		*e = ProcessorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessorTypeEnum: %v", v)
 	}
 }

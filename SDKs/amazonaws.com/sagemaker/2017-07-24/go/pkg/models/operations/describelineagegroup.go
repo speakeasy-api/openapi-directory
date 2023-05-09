@@ -16,17 +16,21 @@ const (
 	DescribeLineageGroupXAmzTargetEnumSageMakerDescribeLineageGroup DescribeLineageGroupXAmzTargetEnum = "SageMaker.DescribeLineageGroup"
 )
 
+func (e DescribeLineageGroupXAmzTargetEnum) ToPointer() *DescribeLineageGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLineageGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeLineageGroup":
-		*e = DescribeLineageGroupXAmzTargetEnum(s)
+		*e = DescribeLineageGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLineageGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLineageGroupXAmzTargetEnum: %v", v)
 	}
 }
 

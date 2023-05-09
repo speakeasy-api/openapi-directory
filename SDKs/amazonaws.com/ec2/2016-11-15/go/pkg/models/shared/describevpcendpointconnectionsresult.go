@@ -23,21 +23,25 @@ const (
 	DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnumIpv6      DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum = "ipv6"
 )
 
+func (e DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum) ToPointer() *DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
 		fallthrough
 	case "ipv6":
-		*e = DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum(s)
+		*e = DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsIPAddressTypeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnumExpired           DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum = "Expired"
 )
 
+func (e DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum) ToPointer() *DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingAcceptance":
 		fallthrough
 	case "Pending":
@@ -82,10 +90,10 @@ func (e *DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointSt
 	case "Failed":
 		fallthrough
 	case "Expired":
-		*e = DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum(s)
+		*e = DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointConnectionsResultVpcEndpointConnectionsVpcEndpointStateEnum: %v", v)
 	}
 }
 

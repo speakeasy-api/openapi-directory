@@ -35,7 +35,10 @@ func newConversion(defaultClient, securityClient HTTPClient, serverURL, language
 // DoubleclicksearchConversionGet - Retrieves a list of conversions from a DoubleClick Search engine account.
 func (s *conversion) DoubleclicksearchConversionGet(ctx context.Context, request operations.DoubleclicksearchConversionGetRequest, security operations.DoubleclicksearchConversionGetSecurity) (*operations.DoubleclicksearchConversionGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/agency/{agencyId}/advertiser/{advertiserId}/engine/{engineAccountId}/conversion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *conversion) DoubleclicksearchConversionGet(ctx context.Context, request
 // DoubleclicksearchConversionGetByCustomerID - Retrieves a list of conversions from a DoubleClick Search engine account.
 func (s *conversion) DoubleclicksearchConversionGetByCustomerID(ctx context.Context, request operations.DoubleclicksearchConversionGetByCustomerIDRequest, security operations.DoubleclicksearchConversionGetByCustomerIDSecurity) (*operations.DoubleclicksearchConversionGetByCustomerIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/customer/{customerId}/conversion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/doubleclicksearch/v2/customer/{customerId}/conversion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

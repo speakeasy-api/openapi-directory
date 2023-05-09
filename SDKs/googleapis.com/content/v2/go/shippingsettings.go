@@ -90,7 +90,10 @@ func (s *shippingsettings) ContentShippingsettingsCustombatch(ctx context.Contex
 // ContentShippingsettingsGet - Retrieves the shipping settings of the account.
 func (s *shippingsettings) ContentShippingsettingsGet(ctx context.Context, request operations.ContentShippingsettingsGetRequest, security operations.ContentShippingsettingsGetSecurity) (*operations.ContentShippingsettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *shippingsettings) ContentShippingsettingsGet(ctx context.Context, reque
 // ContentShippingsettingsGetsupportedcarriers - Retrieves supported carriers and carrier services for an account.
 func (s *shippingsettings) ContentShippingsettingsGetsupportedcarriers(ctx context.Context, request operations.ContentShippingsettingsGetsupportedcarriersRequest, security operations.ContentShippingsettingsGetsupportedcarriersSecurity) (*operations.ContentShippingsettingsGetsupportedcarriersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedCarriers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedCarriers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedcarriers(ctx conte
 // ContentShippingsettingsGetsupportedholidays - Retrieves supported holidays for an account.
 func (s *shippingsettings) ContentShippingsettingsGetsupportedholidays(ctx context.Context, request operations.ContentShippingsettingsGetsupportedholidaysRequest, security operations.ContentShippingsettingsGetsupportedholidaysSecurity) (*operations.ContentShippingsettingsGetsupportedholidaysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedHolidays", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedHolidays", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +243,10 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedholidays(ctx conte
 // ContentShippingsettingsGetsupportedpickupservices - Retrieves supported pickup services for an account.
 func (s *shippingsettings) ContentShippingsettingsGetsupportedpickupservices(ctx context.Context, request operations.ContentShippingsettingsGetsupportedpickupservicesRequest, security operations.ContentShippingsettingsGetsupportedpickupservicesSecurity) (*operations.ContentShippingsettingsGetsupportedpickupservicesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedPickupServices", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/supportedPickupServices", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -282,7 +294,10 @@ func (s *shippingsettings) ContentShippingsettingsGetsupportedpickupservices(ctx
 // ContentShippingsettingsList - Lists the shipping settings of the sub-accounts in your Merchant Center account.
 func (s *shippingsettings) ContentShippingsettingsList(ctx context.Context, request operations.ContentShippingsettingsListRequest, security operations.ContentShippingsettingsListSecurity) (*operations.ContentShippingsettingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -330,7 +345,10 @@ func (s *shippingsettings) ContentShippingsettingsList(ctx context.Context, requ
 // ContentShippingsettingsUpdate - Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
 func (s *shippingsettings) ContentShippingsettingsUpdate(ctx context.Context, request operations.ContentShippingsettingsUpdateRequest, security operations.ContentShippingsettingsUpdateSecurity) (*operations.ContentShippingsettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/shippingsettings/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingSettings", "json")
 	if err != nil {

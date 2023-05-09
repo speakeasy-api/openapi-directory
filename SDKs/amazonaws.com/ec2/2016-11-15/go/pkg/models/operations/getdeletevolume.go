@@ -15,17 +15,21 @@ const (
 	GETDeleteVolumeActionEnumDeleteVolume GETDeleteVolumeActionEnum = "DeleteVolume"
 )
 
+func (e GETDeleteVolumeActionEnum) ToPointer() *GETDeleteVolumeActionEnum {
+	return &e
+}
+
 func (e *GETDeleteVolumeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVolume":
-		*e = GETDeleteVolumeActionEnum(s)
+		*e = GETDeleteVolumeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVolumeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVolumeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteVolumeVersionEnumTwoThousandAndSixteen1115 GETDeleteVolumeVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteVolumeVersionEnum) ToPointer() *GETDeleteVolumeVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteVolumeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteVolumeVersionEnum(s)
+		*e = GETDeleteVolumeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteVolumeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteVolumeVersionEnum: %v", v)
 	}
 }
 

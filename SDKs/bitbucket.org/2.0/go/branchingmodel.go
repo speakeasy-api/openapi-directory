@@ -112,7 +112,10 @@ func newBranchingModel(defaultClient, securityClient HTTPClient, serverURL, lang
 // ```
 func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModel(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchingModelRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchingModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +232,10 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModel(ctx cont
 // ```
 func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModelSettings(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, security operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -287,7 +293,10 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModelSettings(
 // GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModel - Get the effective, or currently applied, branching model for a repository
 func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModel(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest, security operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-branching-model", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-branching-model", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,7 +411,10 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModel
 // ```
 func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModel(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -518,7 +530,10 @@ func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModel(
 // ```
 func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,7 +679,10 @@ func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelS
 // We have deprecated this side effect and will remove it on 1 August 2022.
 func (s *branchingModel) PutRepositoriesWorkspaceRepoSlugBranchingModelSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest, security operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -793,7 +811,10 @@ func (s *branchingModel) PutRepositoriesWorkspaceRepoSlugBranchingModelSettings(
 // ```
 func (s *branchingModel) PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(ctx context.Context, request operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest, security operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsSecurity) (*operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

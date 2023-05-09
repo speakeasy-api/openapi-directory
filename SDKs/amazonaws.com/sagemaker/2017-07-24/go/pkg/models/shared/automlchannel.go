@@ -2,7 +2,7 @@
 
 package shared
 
-// AutoMLChannel - <p>A channel is a named input source that training algorithms can consume. The validation dataset size is limited to less than 2 GB. The training dataset size must be less than 100 GB. For more information, see <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"> Channel</a> </code>.</p> <note> <p>A validation dataset must contain the same headers as the training dataset.</p> </note> <p/>
+// AutoMLChannel - <p>A channel is a named input source that training algorithms can consume. The validation dataset size is limited to less than 2 GB. The training dataset size must be less than 100 GB. For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Channel.html"> Channel</a>.</p> <note> <p>A validation dataset must contain the same headers as the training dataset.</p> </note> <p/>
 type AutoMLChannel struct {
 	ChannelType         *AutoMLChannelTypeEnum `json:"ChannelType,omitempty"`
 	CompressionType     *CompressionTypeEnum   `json:"CompressionType,omitempty"`

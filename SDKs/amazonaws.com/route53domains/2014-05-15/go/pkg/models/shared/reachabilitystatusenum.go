@@ -15,20 +15,24 @@ const (
 	ReachabilityStatusEnumExpired ReachabilityStatusEnum = "EXPIRED"
 )
 
+func (e ReachabilityStatusEnum) ToPointer() *ReachabilityStatusEnum {
+	return &e
+}
+
 func (e *ReachabilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "DONE":
 		fallthrough
 	case "EXPIRED":
-		*e = ReachabilityStatusEnum(s)
+		*e = ReachabilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReachabilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReachabilityStatusEnum: %v", v)
 	}
 }

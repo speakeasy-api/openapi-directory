@@ -24,12 +24,16 @@ const (
 	ImageAttributeNameEnumImdsSupport        ImageAttributeNameEnum = "imdsSupport"
 )
 
+func (e ImageAttributeNameEnum) ToPointer() *ImageAttributeNameEnum {
+	return &e
+}
+
 func (e *ImageAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "kernel":
@@ -53,9 +57,9 @@ func (e *ImageAttributeNameEnum) UnmarshalJSON(data []byte) error {
 	case "lastLaunchedTime":
 		fallthrough
 	case "imdsSupport":
-		*e = ImageAttributeNameEnum(s)
+		*e = ImageAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageAttributeNameEnum: %v", v)
 	}
 }

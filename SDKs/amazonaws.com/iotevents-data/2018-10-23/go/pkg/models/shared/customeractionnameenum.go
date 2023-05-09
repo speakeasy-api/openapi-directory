@@ -17,12 +17,16 @@ const (
 	CustomerActionNameEnumReset       CustomerActionNameEnum = "RESET"
 )
 
+func (e CustomerActionNameEnum) ToPointer() *CustomerActionNameEnum {
+	return &e
+}
+
 func (e *CustomerActionNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNOOZE":
 		fallthrough
 	case "ENABLE":
@@ -32,9 +36,9 @@ func (e *CustomerActionNameEnum) UnmarshalJSON(data []byte) error {
 	case "ACKNOWLEDGE":
 		fallthrough
 	case "RESET":
-		*e = CustomerActionNameEnum(s)
+		*e = CustomerActionNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerActionNameEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerActionNameEnum: %v", v)
 	}
 }

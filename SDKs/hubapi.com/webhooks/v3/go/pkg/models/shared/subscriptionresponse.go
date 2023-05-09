@@ -36,14 +36,35 @@ const (
 	SubscriptionResponseEventTypeEnumConversationNewMessage      SubscriptionResponseEventTypeEnum = "conversation.newMessage"
 	SubscriptionResponseEventTypeEnumConversationPrivacyDeletion SubscriptionResponseEventTypeEnum = "conversation.privacyDeletion"
 	SubscriptionResponseEventTypeEnumConversationPropertyChange  SubscriptionResponseEventTypeEnum = "conversation.propertyChange"
+	SubscriptionResponseEventTypeEnumContactMerge                SubscriptionResponseEventTypeEnum = "contact.merge"
+	SubscriptionResponseEventTypeEnumCompanyMerge                SubscriptionResponseEventTypeEnum = "company.merge"
+	SubscriptionResponseEventTypeEnumDealMerge                   SubscriptionResponseEventTypeEnum = "deal.merge"
+	SubscriptionResponseEventTypeEnumTicketMerge                 SubscriptionResponseEventTypeEnum = "ticket.merge"
+	SubscriptionResponseEventTypeEnumProductMerge                SubscriptionResponseEventTypeEnum = "product.merge"
+	SubscriptionResponseEventTypeEnumLineItemMerge               SubscriptionResponseEventTypeEnum = "line_item.merge"
+	SubscriptionResponseEventTypeEnumContactRestore              SubscriptionResponseEventTypeEnum = "contact.restore"
+	SubscriptionResponseEventTypeEnumCompanyRestore              SubscriptionResponseEventTypeEnum = "company.restore"
+	SubscriptionResponseEventTypeEnumDealRestore                 SubscriptionResponseEventTypeEnum = "deal.restore"
+	SubscriptionResponseEventTypeEnumTicketRestore               SubscriptionResponseEventTypeEnum = "ticket.restore"
+	SubscriptionResponseEventTypeEnumProductRestore              SubscriptionResponseEventTypeEnum = "product.restore"
+	SubscriptionResponseEventTypeEnumLineItemRestore             SubscriptionResponseEventTypeEnum = "line_item.restore"
+	SubscriptionResponseEventTypeEnumContactAssociationChange    SubscriptionResponseEventTypeEnum = "contact.associationChange"
+	SubscriptionResponseEventTypeEnumCompanyAssociationChange    SubscriptionResponseEventTypeEnum = "company.associationChange"
+	SubscriptionResponseEventTypeEnumDealAssociationChange       SubscriptionResponseEventTypeEnum = "deal.associationChange"
+	SubscriptionResponseEventTypeEnumTicketAssociationChange     SubscriptionResponseEventTypeEnum = "ticket.associationChange"
+	SubscriptionResponseEventTypeEnumLineItemAssociationChange   SubscriptionResponseEventTypeEnum = "line_item.associationChange"
 )
 
+func (e SubscriptionResponseEventTypeEnum) ToPointer() *SubscriptionResponseEventTypeEnum {
+	return &e
+}
+
 func (e *SubscriptionResponseEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contact.propertyChange":
 		fallthrough
 	case "company.propertyChange":
@@ -91,10 +112,44 @@ func (e *SubscriptionResponseEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "conversation.privacyDeletion":
 		fallthrough
 	case "conversation.propertyChange":
-		*e = SubscriptionResponseEventTypeEnum(s)
+		fallthrough
+	case "contact.merge":
+		fallthrough
+	case "company.merge":
+		fallthrough
+	case "deal.merge":
+		fallthrough
+	case "ticket.merge":
+		fallthrough
+	case "product.merge":
+		fallthrough
+	case "line_item.merge":
+		fallthrough
+	case "contact.restore":
+		fallthrough
+	case "company.restore":
+		fallthrough
+	case "deal.restore":
+		fallthrough
+	case "ticket.restore":
+		fallthrough
+	case "product.restore":
+		fallthrough
+	case "line_item.restore":
+		fallthrough
+	case "contact.associationChange":
+		fallthrough
+	case "company.associationChange":
+		fallthrough
+	case "deal.associationChange":
+		fallthrough
+	case "ticket.associationChange":
+		fallthrough
+	case "line_item.associationChange":
+		*e = SubscriptionResponseEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionResponseEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionResponseEventTypeEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	ScoreCommentTypeEnumInline   ScoreCommentTypeEnum = "inline"
 )
 
+func (e ScoreCommentTypeEnum) ToPointer() *ScoreCommentTypeEnum {
+	return &e
+}
+
 func (e *ScoreCommentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "document":
 		fallthrough
 	case "inline":
-		*e = ScoreCommentTypeEnum(s)
+		*e = ScoreCommentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreCommentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreCommentTypeEnum: %v", v)
 	}
 }
 

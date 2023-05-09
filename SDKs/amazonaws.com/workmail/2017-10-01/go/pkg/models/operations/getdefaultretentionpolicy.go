@@ -16,17 +16,21 @@ const (
 	GetDefaultRetentionPolicyXAmzTargetEnumWorkMailServiceGetDefaultRetentionPolicy GetDefaultRetentionPolicyXAmzTargetEnum = "WorkMailService.GetDefaultRetentionPolicy"
 )
 
+func (e GetDefaultRetentionPolicyXAmzTargetEnum) ToPointer() *GetDefaultRetentionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDefaultRetentionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.GetDefaultRetentionPolicy":
-		*e = GetDefaultRetentionPolicyXAmzTargetEnum(s)
+		*e = GetDefaultRetentionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDefaultRetentionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDefaultRetentionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

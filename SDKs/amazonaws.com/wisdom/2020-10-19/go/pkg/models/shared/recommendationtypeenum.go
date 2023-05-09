@@ -13,16 +13,20 @@ const (
 	RecommendationTypeEnumKnowledgeContent RecommendationTypeEnum = "KNOWLEDGE_CONTENT"
 )
 
+func (e RecommendationTypeEnum) ToPointer() *RecommendationTypeEnum {
+	return &e
+}
+
 func (e *RecommendationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWLEDGE_CONTENT":
-		*e = RecommendationTypeEnum(s)
+		*e = RecommendationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationTypeEnum: %v", v)
 	}
 }

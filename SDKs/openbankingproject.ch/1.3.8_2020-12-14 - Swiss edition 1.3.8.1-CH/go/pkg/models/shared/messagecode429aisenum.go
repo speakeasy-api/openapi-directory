@@ -14,16 +14,20 @@ const (
 	MessageCode429AISEnumAccessExceeded MessageCode429AISEnum = "ACCESS_EXCEEDED"
 )
 
+func (e MessageCode429AISEnum) ToPointer() *MessageCode429AISEnum {
+	return &e
+}
+
 func (e *MessageCode429AISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_EXCEEDED":
-		*e = MessageCode429AISEnum(s)
+		*e = MessageCode429AISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode429AISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode429AISEnum: %v", v)
 	}
 }

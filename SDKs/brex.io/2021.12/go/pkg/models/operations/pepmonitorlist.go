@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/types"
 )
 
+type PepMonitorListSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // PepMonitorListDefaultApplicationJSON - Detailed information about the error
 type PepMonitorListDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

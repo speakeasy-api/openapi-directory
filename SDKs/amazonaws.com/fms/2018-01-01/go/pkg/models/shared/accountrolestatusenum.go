@@ -17,12 +17,16 @@ const (
 	AccountRoleStatusEnumDeleted         AccountRoleStatusEnum = "DELETED"
 )
 
+func (e AccountRoleStatusEnum) ToPointer() *AccountRoleStatusEnum {
+	return &e
+}
+
 func (e *AccountRoleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "CREATING":
@@ -32,9 +36,9 @@ func (e *AccountRoleStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = AccountRoleStatusEnum(s)
+		*e = AccountRoleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountRoleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountRoleStatusEnum: %v", v)
 	}
 }

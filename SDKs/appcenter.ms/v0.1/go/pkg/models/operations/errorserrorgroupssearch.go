@@ -21,19 +21,23 @@ const (
 	ErrorsErrorGroupsSearchOrderEnumAsc  ErrorsErrorGroupsSearchOrderEnum = "asc"
 )
 
+func (e ErrorsErrorGroupsSearchOrderEnum) ToPointer() *ErrorsErrorGroupsSearchOrderEnum {
+	return &e
+}
+
 func (e *ErrorsErrorGroupsSearchOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = ErrorsErrorGroupsSearchOrderEnum(s)
+		*e = ErrorsErrorGroupsSearchOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchOrderEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	ErrorsErrorGroupsSearchSortEnumLastOccurrence       ErrorsErrorGroupsSearchSortEnum = "lastOccurrence"
 )
 
+func (e ErrorsErrorGroupsSearchSortEnum) ToPointer() *ErrorsErrorGroupsSearchSortEnum {
+	return &e
+}
+
 func (e *ErrorsErrorGroupsSearchSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "matchingReportsCount":
 		fallthrough
 	case "exceptionClassName":
@@ -63,10 +71,10 @@ func (e *ErrorsErrorGroupsSearchSortEnum) UnmarshalJSON(data []byte) error {
 	case "exceptionMethod":
 		fallthrough
 	case "lastOccurrence":
-		*e = ErrorsErrorGroupsSearchSortEnum(s)
+		*e = ErrorsErrorGroupsSearchSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchSortEnum: %v", v)
 	}
 }
 
@@ -101,12 +109,16 @@ const (
 	ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -120,10 +132,10 @@ func (e *ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearchDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnumUnknown      ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum = "Unknown"
 )
 
+func (e ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum) ToPointer() *ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum {
+	return &e
+}
+
 func (e *ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -175,10 +191,10 @@ func (e *ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguag
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum(s)
+		*e = ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsReasonFramesLanguageEnum: %v", v)
 	}
 }
 
@@ -219,21 +235,25 @@ const (
 	ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnumIgnored ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum = "ignored"
 )
 
+func (e ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum) ToPointer() *ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum {
+	return &e
+}
+
 func (e *ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum(s)
+		*e = ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorGroupsSearch200ApplicationJSONErrorGroupsStateEnum: %v", v)
 	}
 }
 

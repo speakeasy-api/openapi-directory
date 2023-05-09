@@ -15,20 +15,24 @@ const (
 	ReadWriteTypeEnumAll       ReadWriteTypeEnum = "All"
 )
 
+func (e ReadWriteTypeEnum) ToPointer() *ReadWriteTypeEnum {
+	return &e
+}
+
 func (e *ReadWriteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReadOnly":
 		fallthrough
 	case "WriteOnly":
 		fallthrough
 	case "All":
-		*e = ReadWriteTypeEnum(s)
+		*e = ReadWriteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReadWriteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReadWriteTypeEnum: %v", v)
 	}
 }

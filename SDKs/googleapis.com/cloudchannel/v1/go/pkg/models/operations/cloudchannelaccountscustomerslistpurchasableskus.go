@@ -23,21 +23,25 @@ const (
 	CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnumDowngrade             CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum = "DOWNGRADE"
 )
 
+func (e CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum) ToPointer() *CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum {
+	return &e
+}
+
 func (e *CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "UPGRADE":
 		fallthrough
 	case "DOWNGRADE":
-		*e = CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum(s)
+		*e = CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudchannelAccountsCustomersListPurchasableSkusChangeOfferPurchaseChangeTypeEnum: %v", v)
 	}
 }
 

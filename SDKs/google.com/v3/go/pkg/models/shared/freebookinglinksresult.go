@@ -18,12 +18,16 @@ const (
 	FreeBookingLinksResultDeviceTypeEnumTablet            FreeBookingLinksResultDeviceTypeEnum = "TABLET"
 )
 
+func (e FreeBookingLinksResultDeviceTypeEnum) ToPointer() *FreeBookingLinksResultDeviceTypeEnum {
+	return &e
+}
+
 func (e *FreeBookingLinksResultDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_UNKNOWN":
@@ -33,10 +37,10 @@ func (e *FreeBookingLinksResultDeviceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "MOBILE":
 		fallthrough
 	case "TABLET":
-		*e = FreeBookingLinksResultDeviceTypeEnum(s)
+		*e = FreeBookingLinksResultDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FreeBookingLinksResultDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FreeBookingLinksResultDeviceTypeEnum: %v", v)
 	}
 }
 

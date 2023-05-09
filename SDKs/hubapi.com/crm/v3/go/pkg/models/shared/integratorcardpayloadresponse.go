@@ -14,19 +14,23 @@ const (
 	IntegratorCardPayloadResponseResponseVersionEnumV3 IntegratorCardPayloadResponseResponseVersionEnum = "v3"
 )
 
+func (e IntegratorCardPayloadResponseResponseVersionEnum) ToPointer() *IntegratorCardPayloadResponseResponseVersionEnum {
+	return &e
+}
+
 func (e *IntegratorCardPayloadResponseResponseVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v1":
 		fallthrough
 	case "v3":
-		*e = IntegratorCardPayloadResponseResponseVersionEnum(s)
+		*e = IntegratorCardPayloadResponseResponseVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegratorCardPayloadResponseResponseVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegratorCardPayloadResponseResponseVersionEnum: %v", v)
 	}
 }
 

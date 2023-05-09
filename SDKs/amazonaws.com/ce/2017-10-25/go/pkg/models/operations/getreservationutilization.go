@@ -16,17 +16,21 @@ const (
 	GetReservationUtilizationXAmzTargetEnumAwsInsightsIndexServiceGetReservationUtilization GetReservationUtilizationXAmzTargetEnum = "AWSInsightsIndexService.GetReservationUtilization"
 )
 
+func (e GetReservationUtilizationXAmzTargetEnum) ToPointer() *GetReservationUtilizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetReservationUtilizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetReservationUtilization":
-		*e = GetReservationUtilizationXAmzTargetEnum(s)
+		*e = GetReservationUtilizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReservationUtilizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReservationUtilizationXAmzTargetEnum: %v", v)
 	}
 }
 

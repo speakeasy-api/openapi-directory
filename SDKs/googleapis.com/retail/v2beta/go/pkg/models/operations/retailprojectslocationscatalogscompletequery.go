@@ -19,8 +19,6 @@ type RetailProjectsLocationsCatalogsCompleteQueryRequest struct {
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
-	// The banner context for completion suggestions.
-	Banner *string `queryParam:"style=form,explode=true,name=banner"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Required. Catalog for which the completion is performed. Full resource name of catalog, such as `projects/*/locations/global/catalogs/default_catalog`.
@@ -29,6 +27,8 @@ type RetailProjectsLocationsCatalogsCompleteQueryRequest struct {
 	Dataset *string `queryParam:"style=form,explode=true,name=dataset"`
 	// The device type context for completion suggestions. We recommend that you leave this field empty. It can apply different suggestions on different device types, e.g. `DESKTOP`, `MOBILE`. If it is empty, the suggestions are across all device types. Supported formats: * `UNKNOWN_DEVICE_TYPE` * `DESKTOP` * `MOBILE` * A customized string starts with `OTHER_`, e.g. `OTHER_IPHONE`.
 	DeviceType *string `queryParam:"style=form,explode=true,name=deviceType"`
+	// The entity for customers who run multiple entities, domains, sites, or regions, for example, `Google US`, `Google Ads`, `Waymo`, `google.com`, `youtube.com`, etc. If this is set, it must be an exact match with UserEvent.entity to get per-entity autocomplete results.
+	Entity *string `queryParam:"style=form,explode=true,name=entity"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.

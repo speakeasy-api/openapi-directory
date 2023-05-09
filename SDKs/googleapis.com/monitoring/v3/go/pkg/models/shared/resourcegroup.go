@@ -16,21 +16,25 @@ const (
 	ResourceGroupResourceTypeEnumAwsElbLoadBalancer      ResourceGroupResourceTypeEnum = "AWS_ELB_LOAD_BALANCER"
 )
 
+func (e ResourceGroupResourceTypeEnum) ToPointer() *ResourceGroupResourceTypeEnum {
+	return &e
+}
+
 func (e *ResourceGroupResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INSTANCE":
 		fallthrough
 	case "AWS_ELB_LOAD_BALANCER":
-		*e = ResourceGroupResourceTypeEnum(s)
+		*e = ResourceGroupResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceGroupResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceGroupResourceTypeEnum: %v", v)
 	}
 }
 

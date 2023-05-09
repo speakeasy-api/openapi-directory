@@ -16,17 +16,21 @@ const (
 	GetFaceDetectionXAmzTargetEnumRekognitionServiceGetFaceDetection GetFaceDetectionXAmzTargetEnum = "RekognitionService.GetFaceDetection"
 )
 
+func (e GetFaceDetectionXAmzTargetEnum) ToPointer() *GetFaceDetectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetFaceDetectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.GetFaceDetection":
-		*e = GetFaceDetectionXAmzTargetEnum(s)
+		*e = GetFaceDetectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFaceDetectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFaceDetectionXAmzTargetEnum: %v", v)
 	}
 }
 

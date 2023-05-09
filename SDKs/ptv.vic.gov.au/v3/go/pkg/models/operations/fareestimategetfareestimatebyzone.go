@@ -10,35 +10,39 @@ import (
 	"time"
 )
 
-type FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum string
+type FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum int
 
 const (
-	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumZero  FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = "0"
-	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumOne   FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = "1"
-	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumTwo   FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = "2"
-	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumThree FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = "3"
-	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumFour  FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = "4"
+	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumZero  FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = 0
+	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumOne   FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = 1
+	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumTwo   FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = 2
+	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumThree FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = 3
+	FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnumFour  FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum = 4
 )
 
+func (e FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum) ToPointer() *FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum {
+	return &e
+}
+
 func (e *FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum(s)
+	case 4:
+		*e = FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for FareEstimateGetFareEstimateByZoneTravelledRouteTypesEnum: %v", v)
 	}
 }
 

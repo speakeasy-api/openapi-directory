@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/va.gov/benefits/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetBenefitsDocumentUploadDownloadRequest{
-        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.VBADocuments.GetBenefitsDocumentUploadDownload(ctx, req, operations.GetBenefitsDocumentUploadDownloadSecurity{
+    res, err := s.VBADocuments.GetBenefitsDocumentUploadDownload(ctx, operations.GetBenefitsDocumentUploadDownloadRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.GetBenefitsDocumentUploadDownloadSecurity{
         Apikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,14 +44,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### VBADocuments
+### [VBADocuments](docs/vbadocuments/README.md)
 
-* `GetBenefitsDocumentUploadDownload` - Download zip of "what the server sees"
-* `GetBenefitsDocumentUploadStatus` - Get status for a previous benefits document upload
-* `GetBenefitsDocumentUploadStatusReport` - Get a bulk status report for a list of previous uploads
-* `PostBenefitsDocumentUpload` - Get a location for subsequent document upload PUT request
-* `PostBenefitsDocumentUploadValidateDocument` - Validate an individual document against system file requirements
-* `PutBenefitsDocumentUpload` - Accepts document upload.
+* [GetBenefitsDocumentUploadDownload](docs/vbadocuments/README.md#getbenefitsdocumentuploaddownload) - Download zip of "what the server sees"
+* [GetBenefitsDocumentUploadStatus](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatus) - Get status for a previous benefits document upload
+* [GetBenefitsDocumentUploadStatusReport](docs/vbadocuments/README.md#getbenefitsdocumentuploadstatusreport) - Get a bulk status report for a list of previous uploads
+* [PostBenefitsDocumentUpload](docs/vbadocuments/README.md#postbenefitsdocumentupload) - Get a location for subsequent document upload PUT request
+* [PostBenefitsDocumentUploadValidateDocument](docs/vbadocuments/README.md#postbenefitsdocumentuploadvalidatedocument) - Validate an individual document against system file requirements
+* [PutBenefitsDocumentUpload](docs/vbadocuments/README.md#putbenefitsdocumentupload) - Accepts document upload.
 <!-- End SDK Available Operations -->
 
 ### Maturity

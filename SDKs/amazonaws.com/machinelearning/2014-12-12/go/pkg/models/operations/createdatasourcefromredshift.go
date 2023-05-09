@@ -16,17 +16,21 @@ const (
 	CreateDataSourceFromRedshiftXAmzTargetEnumAmazonMl20141212CreateDataSourceFromRedshift CreateDataSourceFromRedshiftXAmzTargetEnum = "AmazonML_20141212.CreateDataSourceFromRedshift"
 )
 
+func (e CreateDataSourceFromRedshiftXAmzTargetEnum) ToPointer() *CreateDataSourceFromRedshiftXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDataSourceFromRedshiftXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.CreateDataSourceFromRedshift":
-		*e = CreateDataSourceFromRedshiftXAmzTargetEnum(s)
+		*e = CreateDataSourceFromRedshiftXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDataSourceFromRedshiftXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDataSourceFromRedshiftXAmzTargetEnum: %v", v)
 	}
 }
 

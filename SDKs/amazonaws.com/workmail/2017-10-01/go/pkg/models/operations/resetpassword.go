@@ -16,17 +16,21 @@ const (
 	ResetPasswordXAmzTargetEnumWorkMailServiceResetPassword ResetPasswordXAmzTargetEnum = "WorkMailService.ResetPassword"
 )
 
+func (e ResetPasswordXAmzTargetEnum) ToPointer() *ResetPasswordXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResetPasswordXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.ResetPassword":
-		*e = ResetPasswordXAmzTargetEnum(s)
+		*e = ResetPasswordXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResetPasswordXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResetPasswordXAmzTargetEnum: %v", v)
 	}
 }
 

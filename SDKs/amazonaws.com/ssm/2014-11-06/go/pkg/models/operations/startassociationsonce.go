@@ -16,17 +16,21 @@ const (
 	StartAssociationsOnceXAmzTargetEnumAmazonSsmStartAssociationsOnce StartAssociationsOnceXAmzTargetEnum = "AmazonSSM.StartAssociationsOnce"
 )
 
+func (e StartAssociationsOnceXAmzTargetEnum) ToPointer() *StartAssociationsOnceXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartAssociationsOnceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.StartAssociationsOnce":
-		*e = StartAssociationsOnceXAmzTargetEnum(s)
+		*e = StartAssociationsOnceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartAssociationsOnceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartAssociationsOnceXAmzTargetEnum: %v", v)
 	}
 }
 

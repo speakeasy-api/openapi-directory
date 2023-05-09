@@ -16,17 +16,21 @@ const (
 	DeleteDirectoryXAmzTargetEnumDirectoryService20150416DeleteDirectory DeleteDirectoryXAmzTargetEnum = "DirectoryService_20150416.DeleteDirectory"
 )
 
+func (e DeleteDirectoryXAmzTargetEnum) ToPointer() *DeleteDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DeleteDirectory":
-		*e = DeleteDirectoryXAmzTargetEnum(s)
+		*e = DeleteDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

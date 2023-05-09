@@ -23,21 +23,25 @@ const (
 	CreateStageResponseDefaultRouteSettingsLoggingLevelEnumOff   CreateStageResponseDefaultRouteSettingsLoggingLevelEnum = "OFF"
 )
 
+func (e CreateStageResponseDefaultRouteSettingsLoggingLevelEnum) ToPointer() *CreateStageResponseDefaultRouteSettingsLoggingLevelEnum {
+	return &e
+}
+
 func (e *CreateStageResponseDefaultRouteSettingsLoggingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR":
 		fallthrough
 	case "INFO":
 		fallthrough
 	case "OFF":
-		*e = CreateStageResponseDefaultRouteSettingsLoggingLevelEnum(s)
+		*e = CreateStageResponseDefaultRouteSettingsLoggingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStageResponseDefaultRouteSettingsLoggingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStageResponseDefaultRouteSettingsLoggingLevelEnum: %v", v)
 	}
 }
 

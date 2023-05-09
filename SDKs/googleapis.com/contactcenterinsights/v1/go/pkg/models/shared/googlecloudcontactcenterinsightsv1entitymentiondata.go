@@ -16,21 +16,25 @@ const (
 	GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnumCommon                 GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum = "COMMON"
 )
 
+func (e GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum) ToPointer() *GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MENTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROPER":
 		fallthrough
 	case "COMMON":
-		*e = GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1EntityMentionDataTypeEnum: %v", v)
 	}
 }
 

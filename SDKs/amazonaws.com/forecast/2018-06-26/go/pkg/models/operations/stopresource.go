@@ -16,17 +16,21 @@ const (
 	StopResourceXAmzTargetEnumAmazonForecastStopResource StopResourceXAmzTargetEnum = "AmazonForecast.StopResource"
 )
 
+func (e StopResourceXAmzTargetEnum) ToPointer() *StopResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.StopResource":
-		*e = StopResourceXAmzTargetEnum(s)
+		*e = StopResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopResourceXAmzTargetEnum: %v", v)
 	}
 }
 

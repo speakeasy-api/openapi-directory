@@ -35,7 +35,10 @@ func newDepartures(defaultClient, securityClient HTTPClient, serverURL, language
 // DeparturesGetForStop - View departures for all routes from a stop
 func (s *departures) DeparturesGetForStop(ctx context.Context, request operations.DeparturesGetForStopRequest) (*operations.DeparturesGetForStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/departures/route_type/{route_type}/stop/{stop_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/departures/route_type/{route_type}/stop/{stop_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *departures) DeparturesGetForStop(ctx context.Context, request operation
 // DeparturesGetForStopAndRoute - View departures for a specific route from a stop
 func (s *departures) DeparturesGetForStopAndRoute(ctx context.Context, request operations.DeparturesGetForStopAndRouteRequest) (*operations.DeparturesGetForStopAndRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/departures/route_type/{route_type}/stop/{stop_id}/route/{route_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/departures/route_type/{route_type}/stop/{stop_id}/route/{route_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

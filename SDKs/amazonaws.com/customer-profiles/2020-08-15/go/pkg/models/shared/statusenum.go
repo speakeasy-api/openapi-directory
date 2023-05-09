@@ -19,12 +19,16 @@ const (
 	StatusEnumCancelled  StatusEnum = "CANCELLED"
 )
 
+func (e StatusEnum) ToPointer() *StatusEnum {
+	return &e
+}
+
 func (e *StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -38,9 +42,9 @@ func (e *StatusEnum) UnmarshalJSON(data []byte) error {
 	case "RETRY":
 		fallthrough
 	case "CANCELLED":
-		*e = StatusEnum(s)
+		*e = StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusEnum: %v", v)
 	}
 }

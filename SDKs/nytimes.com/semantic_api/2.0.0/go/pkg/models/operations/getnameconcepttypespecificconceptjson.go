@@ -19,12 +19,16 @@ const (
 	GetNameConceptTypeSpecificConceptJSONConceptTypeEnumNytdDes GetNameConceptTypeSpecificConceptJSONConceptTypeEnum = "nytd_des"
 )
 
+func (e GetNameConceptTypeSpecificConceptJSONConceptTypeEnum) ToPointer() *GetNameConceptTypeSpecificConceptJSONConceptTypeEnum {
+	return &e
+}
+
 func (e *GetNameConceptTypeSpecificConceptJSONConceptTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nytd_geo":
 		fallthrough
 	case "nytd_per":
@@ -32,10 +36,10 @@ func (e *GetNameConceptTypeSpecificConceptJSONConceptTypeEnum) UnmarshalJSON(dat
 	case "nytd_org":
 		fallthrough
 	case "nytd_des":
-		*e = GetNameConceptTypeSpecificConceptJSONConceptTypeEnum(s)
+		*e = GetNameConceptTypeSpecificConceptJSONConceptTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNameConceptTypeSpecificConceptJSONConceptTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNameConceptTypeSpecificConceptJSONConceptTypeEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	GetNameConceptTypeSpecificConceptJSONFieldsEnumSearchAPIQuery GetNameConceptTypeSpecificConceptJSONFieldsEnum = "search_api_query"
 )
 
+func (e GetNameConceptTypeSpecificConceptJSONFieldsEnum) ToPointer() *GetNameConceptTypeSpecificConceptJSONFieldsEnum {
+	return &e
+}
+
 func (e *GetNameConceptTypeSpecificConceptJSONFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "pages":
@@ -92,10 +100,10 @@ func (e *GetNameConceptTypeSpecificConceptJSONFieldsEnum) UnmarshalJSON(data []b
 	case "scope_notes":
 		fallthrough
 	case "search_api_query":
-		*e = GetNameConceptTypeSpecificConceptJSONFieldsEnum(s)
+		*e = GetNameConceptTypeSpecificConceptJSONFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNameConceptTypeSpecificConceptJSONFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNameConceptTypeSpecificConceptJSONFieldsEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	MetricSetSourceEnumTest       MetricSetSourceEnum = "Test"
 )
 
+func (e MetricSetSourceEnum) ToPointer() *MetricSetSourceEnum {
+	return &e
+}
+
 func (e *MetricSetSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Train":
 		fallthrough
 	case "Validation":
 		fallthrough
 	case "Test":
-		*e = MetricSetSourceEnum(s)
+		*e = MetricSetSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricSetSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricSetSourceEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	AutoRenewingBasePlanTypeProrationModeEnumSubscriptionProrationModeChargeFullPriceImmediately AutoRenewingBasePlanTypeProrationModeEnum = "SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY"
 )
 
+func (e AutoRenewingBasePlanTypeProrationModeEnum) ToPointer() *AutoRenewingBasePlanTypeProrationModeEnum {
+	return &e
+}
+
 func (e *AutoRenewingBasePlanTypeProrationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBSCRIPTION_PRORATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "SUBSCRIPTION_PRORATION_MODE_CHARGE_ON_NEXT_BILLING_DATE":
 		fallthrough
 	case "SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY":
-		*e = AutoRenewingBasePlanTypeProrationModeEnum(s)
+		*e = AutoRenewingBasePlanTypeProrationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoRenewingBasePlanTypeProrationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoRenewingBasePlanTypeProrationModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	AutoRenewingBasePlanTypeResubscribeStateEnumResubscribeStateInactive    AutoRenewingBasePlanTypeResubscribeStateEnum = "RESUBSCRIBE_STATE_INACTIVE"
 )
 
+func (e AutoRenewingBasePlanTypeResubscribeStateEnum) ToPointer() *AutoRenewingBasePlanTypeResubscribeStateEnum {
+	return &e
+}
+
 func (e *AutoRenewingBasePlanTypeResubscribeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESUBSCRIBE_STATE_UNSPECIFIED":
 		fallthrough
 	case "RESUBSCRIBE_STATE_ACTIVE":
 		fallthrough
 	case "RESUBSCRIBE_STATE_INACTIVE":
-		*e = AutoRenewingBasePlanTypeResubscribeStateEnum(s)
+		*e = AutoRenewingBasePlanTypeResubscribeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoRenewingBasePlanTypeResubscribeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoRenewingBasePlanTypeResubscribeStateEnum: %v", v)
 	}
 }
 

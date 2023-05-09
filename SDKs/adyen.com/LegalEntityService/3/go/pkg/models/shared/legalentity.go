@@ -20,12 +20,16 @@ const (
 	LegalEntityTypeEnumUnincorporatedPartnership LegalEntityTypeEnum = "unincorporatedPartnership"
 )
 
+func (e LegalEntityTypeEnum) ToPointer() *LegalEntityTypeEnum {
+	return &e
+}
+
 func (e *LegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "individual":
 		fallthrough
 	case "organization":
@@ -35,10 +39,10 @@ func (e *LegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "trust":
 		fallthrough
 	case "unincorporatedPartnership":
-		*e = LegalEntityTypeEnum(s)
+		*e = LegalEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LegalEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LegalEntityTypeEnum: %v", v)
 	}
 }
 

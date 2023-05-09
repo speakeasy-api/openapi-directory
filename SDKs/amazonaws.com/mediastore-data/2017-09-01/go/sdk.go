@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - An AWS Elemental MediaStore asset is an object, similar to an object in the Amazon S3 service. Objects are the fundamental entities that are stored in AWS Elemental MediaStore.
 // https://docs.aws.amazon.com/mediastore/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteObject - Deletes an object at the specified path.
 func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectRequest) (*operations.DeleteObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -190,7 +208,10 @@ func (s *SDK) DeleteObject(ctx context.Context, request operations.DeleteObjectR
 // DescribeObject - Gets the headers for an object at the specified path.
 func (s *SDK) DescribeObject(ctx context.Context, request operations.DescribeObjectRequest) (*operations.DescribeObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -266,7 +287,10 @@ func (s *SDK) DescribeObject(ctx context.Context, request operations.DescribeObj
 // GetObject - Downloads the object at the specified path. If the object’s upload availability is set to <code>streaming</code>, AWS Elemental MediaStore downloads the object even if it’s still uploading the object.
 func (s *SDK) GetObject(ctx context.Context, request operations.GetObjectRequest) (*operations.GetObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -422,7 +446,10 @@ func (s *SDK) ListItems(ctx context.Context, request operations.ListItemsRequest
 // PutObject - Uploads an object to the specified path. Object sizes are limited to 25 MB for standard upload availability and 10 MB for streaming upload availability.
 func (s *SDK) PutObject(ctx context.Context, request operations.PutObjectRequest) (*operations.PutObjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{Path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

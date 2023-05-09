@@ -34,12 +34,16 @@ const (
 	ControlErrorResponseStatusEnumNineteen ControlErrorResponseStatusEnum = "19"
 )
 
+func (e ControlErrorResponseStatusEnum) ToPointer() *ControlErrorResponseStatusEnum {
+	return &e
+}
+
 func (e *ControlErrorResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "0":
 		fallthrough
 	case "1":
@@ -59,10 +63,10 @@ func (e *ControlErrorResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "9":
 		fallthrough
 	case "19":
-		*e = ControlErrorResponseStatusEnum(s)
+		*e = ControlErrorResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlErrorResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlErrorResponseStatusEnum: %v", v)
 	}
 }
 

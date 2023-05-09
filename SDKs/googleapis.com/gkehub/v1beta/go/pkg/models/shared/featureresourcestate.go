@@ -19,12 +19,16 @@ const (
 	FeatureResourceStateStateEnumServiceUpdating  FeatureResourceStateStateEnum = "SERVICE_UPDATING"
 )
 
+func (e FeatureResourceStateStateEnum) ToPointer() *FeatureResourceStateStateEnum {
+	return &e
+}
+
 func (e *FeatureResourceStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ENABLING":
@@ -36,10 +40,10 @@ func (e *FeatureResourceStateStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "SERVICE_UPDATING":
-		*e = FeatureResourceStateStateEnum(s)
+		*e = FeatureResourceStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureResourceStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureResourceStateStateEnum: %v", v)
 	}
 }
 

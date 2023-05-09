@@ -18,12 +18,16 @@ const (
 	ChangeStatusAPIModelStatusEnumVoid    ChangeStatusAPIModelStatusEnum = "Void"
 )
 
+func (e ChangeStatusAPIModelStatusEnum) ToPointer() *ChangeStatusAPIModelStatusEnum {
+	return &e
+}
+
 func (e *ChangeStatusAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Paid":
@@ -33,10 +37,10 @@ func (e *ChangeStatusAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Overdue":
 		fallthrough
 	case "Void":
-		*e = ChangeStatusAPIModelStatusEnum(s)
+		*e = ChangeStatusAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeStatusAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeStatusAPIModelStatusEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newTiers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // SQLTiersList - Lists all available machine types (tiers) for Cloud SQL, for example, `db-custom-1-3840`. For more information, see https://cloud.google.com/sql/pricing.
 func (s *tiers) SQLTiersList(ctx context.Context, request operations.SQLTiersListRequest, security operations.SQLTiersListSecurity) (*operations.SQLTiersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/tiers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/projects/{project}/tiers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	OSPolicyResourceFileResourceStateEnumContentsMatch           OSPolicyResourceFileResourceStateEnum = "CONTENTS_MATCH"
 )
 
+func (e OSPolicyResourceFileResourceStateEnum) ToPointer() *OSPolicyResourceFileResourceStateEnum {
+	return &e
+}
+
 func (e *OSPolicyResourceFileResourceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESIRED_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRESENT":
@@ -30,10 +34,10 @@ func (e *OSPolicyResourceFileResourceStateEnum) UnmarshalJSON(data []byte) error
 	case "ABSENT":
 		fallthrough
 	case "CONTENTS_MATCH":
-		*e = OSPolicyResourceFileResourceStateEnum(s)
+		*e = OSPolicyResourceFileResourceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourceFileResourceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourceFileResourceStateEnum: %v", v)
 	}
 }
 

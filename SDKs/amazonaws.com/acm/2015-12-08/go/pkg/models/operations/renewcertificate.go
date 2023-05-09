@@ -16,17 +16,21 @@ const (
 	RenewCertificateXAmzTargetEnumCertificateManagerRenewCertificate RenewCertificateXAmzTargetEnum = "CertificateManager.RenewCertificate"
 )
 
+func (e RenewCertificateXAmzTargetEnum) ToPointer() *RenewCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RenewCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.RenewCertificate":
-		*e = RenewCertificateXAmzTargetEnum(s)
+		*e = RenewCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenewCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RenewCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

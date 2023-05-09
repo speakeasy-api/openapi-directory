@@ -23,12 +23,16 @@ const (
 	InstanceGroupStateEnumEnded         InstanceGroupStateEnum = "ENDED"
 )
 
+func (e InstanceGroupStateEnum) ToPointer() *InstanceGroupStateEnum {
+	return &e
+}
+
 func (e *InstanceGroupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONING":
 		fallthrough
 	case "BOOTSTRAPPING":
@@ -50,9 +54,9 @@ func (e *InstanceGroupStateEnum) UnmarshalJSON(data []byte) error {
 	case "SHUTTING_DOWN":
 		fallthrough
 	case "ENDED":
-		*e = InstanceGroupStateEnum(s)
+		*e = InstanceGroupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceGroupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceGroupStateEnum: %v", v)
 	}
 }

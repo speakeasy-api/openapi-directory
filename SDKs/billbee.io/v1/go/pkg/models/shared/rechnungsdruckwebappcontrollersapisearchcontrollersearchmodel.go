@@ -7,35 +7,39 @@ import (
 	"fmt"
 )
 
-type RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum string
+type RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum int
 
 const (
-	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumZero  RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = "0"
-	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumOne   RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = "1"
-	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumTwo   RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = "2"
-	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumThree RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = "3"
-	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumFour  RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = "4"
+	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumZero  RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = 0
+	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumOne   RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = 1
+	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumTwo   RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = 2
+	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumThree RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = 3
+	RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnumFour  RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum = 4
 )
 
+func (e RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum) ToPointer() *RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum {
+	return &e
+}
+
 func (e *RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
-		*e = RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum(s)
+	case 4:
+		*e = RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RechnungsdruckWebAppControllersAPISearchControllerSearchModelSearchModeEnum: %v", v)
 	}
 }
 

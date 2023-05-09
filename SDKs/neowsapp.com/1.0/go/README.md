@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/neowsapp.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RetrieveNEOFeedTodayRequest{
-        Detailed: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Feed.RetrieveNEOFeedToday(ctx, req)
+    res, err := s.Feed.RetrieveNEOFeedToday(ctx, operations.RetrieveNEOFeedTodayRequest{
+        Detailed: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,24 +42,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Feed
+### [Feed](docs/feed/README.md)
 
-* `RetrieveNEOFeedToday` - Find Near Earth Objects for today
-* `RetrieveNearEarthObjectFeed` - Find Near Earth Objects by date
+* [RetrieveNEOFeedToday](docs/feed/README.md#retrieveneofeedtoday) - Find Near Earth Objects for today
+* [RetrieveNearEarthObjectFeed](docs/feed/README.md#retrievenearearthobjectfeed) - Find Near Earth Objects by date
 
-### Neo
+### [Neo](docs/neo/README.md)
 
-* `BrowseNearEarthObjects` - Browse the Near Earth Objects service
-* `RetrieveNearEarthObjectByID` - Find Near Earth Objects by id
+* [BrowseNearEarthObjects](docs/neo/README.md#browsenearearthobjects) - Browse the Near Earth Objects service
+* [RetrieveNearEarthObjectByID](docs/neo/README.md#retrievenearearthobjectbyid) - Find Near Earth Objects by id
 
-### Neosentry
+### [Neosentry](docs/neosentry/README.md)
 
-* `RetrieveSentryRiskData` - Retrieve Sentry (Impact Risk ) Near Earth Objects
-* `RetrieveSentryRiskDataByID` - Retrieve Sentry (Impact Risk ) Near Earth Objectby ID 
+* [RetrieveSentryRiskData](docs/neosentry/README.md#retrievesentryriskdata) - Retrieve Sentry (Impact Risk ) Near Earth Objects
+* [RetrieveSentryRiskDataByID](docs/neosentry/README.md#retrievesentryriskdatabyid) - Retrieve Sentry (Impact Risk ) Near Earth Objectby ID 
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `RetrieveCurrentNeoStatistics` - Get the Near Earth Object data set totals
+* [RetrieveCurrentNeoStatistics](docs/stats/README.md#retrievecurrentneostatistics) - Get the Near Earth Object data set totals
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,25 +17,23 @@ func main() {
         }),
     )
 
-    req := operations.AssociateFirewallPolicyRequest{
-        AssociateFirewallPolicyRequest: shared.AssociateFirewallPolicyRequest{
-            FirewallArn: "corrupti",
-            FirewallName: "provident",
-            FirewallPolicyArn: "distinctio",
-            UpdateToken: "quibusdam",
-        },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "NetworkFirewall_20201112.AssociateFirewallPolicy",
-    }
-
     ctx := context.Background()
-    res, err := s.AssociateFirewallPolicy(ctx, req)
+    res, err := s.AssociateFirewallPolicy(ctx, operations.AssociateFirewallPolicyRequest{
+        AssociateFirewallPolicyRequest: shared.AssociateFirewallPolicyRequest{
+            FirewallArn: sdk.String("corrupti"),
+            FirewallName: sdk.String("provident"),
+            FirewallPolicyArn: "distinctio",
+            UpdateToken: sdk.String("quibusdam"),
+        },
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.AssociateFirewallPolicyXAmzTargetEnumNetworkFirewall20201112AssociateFirewallPolicy,
+    })
     if err != nil {
         log.Fatal(err)
     }

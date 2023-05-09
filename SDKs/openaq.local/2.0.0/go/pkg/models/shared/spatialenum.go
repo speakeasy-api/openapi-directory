@@ -17,12 +17,16 @@ const (
 	SpatialEnumTotal    SpatialEnum = "total"
 )
 
+func (e SpatialEnum) ToPointer() *SpatialEnum {
+	return &e
+}
+
 func (e *SpatialEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "country":
 		fallthrough
 	case "location":
@@ -30,9 +34,9 @@ func (e *SpatialEnum) UnmarshalJSON(data []byte) error {
 	case "project":
 		fallthrough
 	case "total":
-		*e = SpatialEnum(s)
+		*e = SpatialEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpatialEnum: %s", s)
+		return fmt.Errorf("invalid value for SpatialEnum: %v", v)
 	}
 }

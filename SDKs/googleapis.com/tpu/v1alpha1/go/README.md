@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/tpu/v1alph
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TpuProjectsLocationsAcceleratorTypesListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        OrderBy: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.TpuProjectsLocationsAcceleratorTypesList(ctx, req, operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
+    res, err := s.Projects.TpuProjectsLocationsAcceleratorTypesList(ctx, operations.TpuProjectsLocationsAcceleratorTypesListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        OrderBy: sdk.String("vel"),
+        PageSize: sdk.Int64(623564),
+        PageToken: sdk.String("deserunt"),
+        Parent: "suscipit",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -63,20 +61,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `TpuProjectsLocationsAcceleratorTypesList` - Lists accelerator types supported by this API.
-* `TpuProjectsLocationsList` - Lists information about the supported locations for this service.
-* `TpuProjectsLocationsNodesCreate` - Creates a node.
-* `TpuProjectsLocationsNodesList` - Lists nodes.
-* `TpuProjectsLocationsNodesReimage` - Reimages a node's OS.
-* `TpuProjectsLocationsNodesStart` - Starts a node.
-* `TpuProjectsLocationsNodesStop` - Stops a node. This operation is only available with single TPU nodes.
-* `TpuProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `TpuProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `TpuProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `TpuProjectsLocationsTensorflowVersionsGet` - Gets TensorFlow Version.
-* `TpuProjectsLocationsTensorflowVersionsList` - Lists TensorFlow versions supported by this API.
+* [TpuProjectsLocationsAcceleratorTypesList](docs/projects/README.md#tpuprojectslocationsacceleratortypeslist) - Lists accelerator types supported by this API.
+* [TpuProjectsLocationsList](docs/projects/README.md#tpuprojectslocationslist) - Lists information about the supported locations for this service.
+* [TpuProjectsLocationsNodesCreate](docs/projects/README.md#tpuprojectslocationsnodescreate) - Creates a node.
+* [TpuProjectsLocationsNodesList](docs/projects/README.md#tpuprojectslocationsnodeslist) - Lists nodes.
+* [TpuProjectsLocationsNodesReimage](docs/projects/README.md#tpuprojectslocationsnodesreimage) - Reimages a node's OS.
+* [TpuProjectsLocationsNodesStart](docs/projects/README.md#tpuprojectslocationsnodesstart) - Starts a node.
+* [TpuProjectsLocationsNodesStop](docs/projects/README.md#tpuprojectslocationsnodesstop) - Stops a node. This operation is only available with single TPU nodes.
+* [TpuProjectsLocationsOperationsCancel](docs/projects/README.md#tpuprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [TpuProjectsLocationsOperationsDelete](docs/projects/README.md#tpuprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [TpuProjectsLocationsOperationsList](docs/projects/README.md#tpuprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [TpuProjectsLocationsTensorflowVersionsGet](docs/projects/README.md#tpuprojectslocationstensorflowversionsget) - Gets TensorFlow Version.
+* [TpuProjectsLocationsTensorflowVersionsList](docs/projects/README.md#tpuprojectslocationstensorflowversionslist) - Lists TensorFlow versions supported by this API.
 <!-- End SDK Available Operations -->
 
 ### Maturity

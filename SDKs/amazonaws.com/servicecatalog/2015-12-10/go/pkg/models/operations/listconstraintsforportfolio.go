@@ -16,17 +16,21 @@ const (
 	ListConstraintsForPortfolioXAmzTargetEnumAws242ServiceCatalogServiceListConstraintsForPortfolio ListConstraintsForPortfolioXAmzTargetEnum = "AWS242ServiceCatalogService.ListConstraintsForPortfolio"
 )
 
+func (e ListConstraintsForPortfolioXAmzTargetEnum) ToPointer() *ListConstraintsForPortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListConstraintsForPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ListConstraintsForPortfolio":
-		*e = ListConstraintsForPortfolioXAmzTargetEnum(s)
+		*e = ListConstraintsForPortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListConstraintsForPortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListConstraintsForPortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

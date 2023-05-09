@@ -18,12 +18,16 @@ const (
 	CompensationFilterTypeEnumAnnualizedTotalAmount CompensationFilterTypeEnum = "ANNUALIZED_TOTAL_AMOUNT"
 )
 
+func (e CompensationFilterTypeEnum) ToPointer() *CompensationFilterTypeEnum {
+	return &e
+}
+
 func (e *CompensationFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "UNIT_ONLY":
@@ -33,10 +37,10 @@ func (e *CompensationFilterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ANNUALIZED_BASE_AMOUNT":
 		fallthrough
 	case "ANNUALIZED_TOTAL_AMOUNT":
-		*e = CompensationFilterTypeEnum(s)
+		*e = CompensationFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompensationFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CompensationFilterTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	CompensationFilterUnitsEnumOtherCompensationUnit       CompensationFilterUnitsEnum = "OTHER_COMPENSATION_UNIT"
 )
 
+func (e CompensationFilterUnitsEnum) ToPointer() *CompensationFilterUnitsEnum {
+	return &e
+}
+
 func (e *CompensationFilterUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPENSATION_UNIT_UNSPECIFIED":
 		fallthrough
 	case "HOURLY":
@@ -74,10 +82,10 @@ func (e *CompensationFilterUnitsEnum) UnmarshalJSON(data []byte) error {
 	case "ONE_TIME":
 		fallthrough
 	case "OTHER_COMPENSATION_UNIT":
-		*e = CompensationFilterUnitsEnum(s)
+		*e = CompensationFilterUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompensationFilterUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for CompensationFilterUnitsEnum: %v", v)
 	}
 }
 

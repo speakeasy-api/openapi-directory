@@ -16,17 +16,21 @@ const (
 	UpdateUsageLimitXAmzTargetEnumRedshiftServerlessUpdateUsageLimit UpdateUsageLimitXAmzTargetEnum = "RedshiftServerless.UpdateUsageLimit"
 )
 
+func (e UpdateUsageLimitXAmzTargetEnum) ToPointer() *UpdateUsageLimitXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateUsageLimitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.UpdateUsageLimit":
-		*e = UpdateUsageLimitXAmzTargetEnum(s)
+		*e = UpdateUsageLimitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateUsageLimitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateUsageLimitXAmzTargetEnum: %v", v)
 	}
 }
 

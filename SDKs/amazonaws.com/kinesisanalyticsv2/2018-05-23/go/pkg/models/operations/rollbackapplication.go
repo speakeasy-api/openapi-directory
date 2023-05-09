@@ -16,17 +16,21 @@ const (
 	RollbackApplicationXAmzTargetEnumKinesisAnalytics20180523RollbackApplication RollbackApplicationXAmzTargetEnum = "KinesisAnalytics_20180523.RollbackApplication"
 )
 
+func (e RollbackApplicationXAmzTargetEnum) ToPointer() *RollbackApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *RollbackApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.RollbackApplication":
-		*e = RollbackApplicationXAmzTargetEnum(s)
+		*e = RollbackApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RollbackApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RollbackApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

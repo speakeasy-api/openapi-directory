@@ -19,12 +19,16 @@ const (
 	PartnerEntityStatusEnumEntityStatusScheduledForDeletion PartnerEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e PartnerEntityStatusEnum) ToPointer() *PartnerEntityStatusEnum {
+	return &e
+}
+
 func (e *PartnerEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *PartnerEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = PartnerEntityStatusEnum(s)
+		*e = PartnerEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerEntityStatusEnum: %v", v)
 	}
 }
 

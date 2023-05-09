@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts and on-premises servers.
 // https://docs.aws.amazon.com/license-manager/ - Amazon Web Services documentation
 type SDK struct {
@@ -695,7 +710,7 @@ func (s *SDK) CheckoutLicense(ctx context.Context, request operations.CheckoutLi
 	return res, nil
 }
 
-// CreateGrant - Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon Web Services accounts.
+// CreateGrant - Creates a grant for the specified license. A grant shares the use of license entitlements with a specific Amazon Web Services account, an organization, or an organizational unit (OU). For more information, see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">Granted licenses in License Manager</a> in the <i>License Manager User Guide</i>.
 func (s *SDK) CreateGrant(ctx context.Context, request operations.CreateGrantRequest) (*operations.CreateGrantResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSLicenseManager.CreateGrant"
@@ -821,7 +836,7 @@ func (s *SDK) CreateGrant(ctx context.Context, request operations.CreateGrantReq
 	return res, nil
 }
 
-// CreateGrantVersion - Creates a new version of the specified grant.
+// CreateGrantVersion - Creates a new version of the specified grant. For more information, see <a href="https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html">Granted licenses in License Manager</a> in the <i>License Manager User Guide</i>.
 func (s *SDK) CreateGrantVersion(ctx context.Context, request operations.CreateGrantVersionRequest) (*operations.CreateGrantVersionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSLicenseManager.CreateGrantVersion"
@@ -4411,7 +4426,7 @@ func (s *SDK) ListLicenses(ctx context.Context, request operations.ListLicensesR
 	return res, nil
 }
 
-// ListReceivedGrants - Lists grants that are received but not accepted.
+// ListReceivedGrants - Lists grants that are received. Received grants are grants created while specifying the recipient as this Amazon Web Services account, your organization, or an organizational unit (OU) to which this member account belongs.
 func (s *SDK) ListReceivedGrants(ctx context.Context, request operations.ListReceivedGrantsRequest) (*operations.ListReceivedGrantsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AWSLicenseManager.ListReceivedGrants"

@@ -48,12 +48,16 @@ const (
 	CardProfileStatusEnumArchived CardProfileStatusEnum = "archived"
 )
 
+func (e CardProfileStatusEnum) ToPointer() *CardProfileStatusEnum {
+	return &e
+}
+
 func (e *CardProfileStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "rejected":
@@ -61,10 +65,10 @@ func (e *CardProfileStatusEnum) UnmarshalJSON(data []byte) error {
 	case "active":
 		fallthrough
 	case "archived":
-		*e = CardProfileStatusEnum(s)
+		*e = CardProfileStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardProfileStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CardProfileStatusEnum: %v", v)
 	}
 }
 
@@ -75,17 +79,21 @@ const (
 	CardProfileTypeEnumCardProfile CardProfileTypeEnum = "card_profile"
 )
 
+func (e CardProfileTypeEnum) ToPointer() *CardProfileTypeEnum {
+	return &e
+}
+
 func (e *CardProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_profile":
-		*e = CardProfileTypeEnum(s)
+		*e = CardProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CardProfileTypeEnum: %v", v)
 	}
 }
 

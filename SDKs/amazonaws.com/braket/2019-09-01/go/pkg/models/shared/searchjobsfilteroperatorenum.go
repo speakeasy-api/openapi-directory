@@ -19,12 +19,16 @@ const (
 	SearchJobsFilterOperatorEnumContains SearchJobsFilterOperatorEnum = "CONTAINS"
 )
 
+func (e SearchJobsFilterOperatorEnum) ToPointer() *SearchJobsFilterOperatorEnum {
+	return &e
+}
+
 func (e *SearchJobsFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LT":
 		fallthrough
 	case "LTE":
@@ -38,9 +42,9 @@ func (e *SearchJobsFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "BETWEEN":
 		fallthrough
 	case "CONTAINS":
-		*e = SearchJobsFilterOperatorEnum(s)
+		*e = SearchJobsFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchJobsFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchJobsFilterOperatorEnum: %v", v)
 	}
 }

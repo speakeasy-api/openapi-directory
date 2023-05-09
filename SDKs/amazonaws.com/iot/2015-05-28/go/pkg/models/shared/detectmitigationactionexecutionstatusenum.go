@@ -16,12 +16,16 @@ const (
 	DetectMitigationActionExecutionStatusEnumSkipped    DetectMitigationActionExecutionStatusEnum = "SKIPPED"
 )
 
+func (e DetectMitigationActionExecutionStatusEnum) ToPointer() *DetectMitigationActionExecutionStatusEnum {
+	return &e
+}
+
 func (e *DetectMitigationActionExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCESSFUL":
@@ -29,9 +33,9 @@ func (e *DetectMitigationActionExecutionStatusEnum) UnmarshalJSON(data []byte) e
 	case "FAILED":
 		fallthrough
 	case "SKIPPED":
-		*e = DetectMitigationActionExecutionStatusEnum(s)
+		*e = DetectMitigationActionExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectMitigationActionExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectMitigationActionExecutionStatusEnum: %v", v)
 	}
 }

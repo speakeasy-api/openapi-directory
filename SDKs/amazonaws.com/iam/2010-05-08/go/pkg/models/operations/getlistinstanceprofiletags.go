@@ -15,17 +15,21 @@ const (
 	GETListInstanceProfileTagsActionEnumListInstanceProfileTags GETListInstanceProfileTagsActionEnum = "ListInstanceProfileTags"
 )
 
+func (e GETListInstanceProfileTagsActionEnum) ToPointer() *GETListInstanceProfileTagsActionEnum {
+	return &e
+}
+
 func (e *GETListInstanceProfileTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListInstanceProfileTags":
-		*e = GETListInstanceProfileTagsActionEnum(s)
+		*e = GETListInstanceProfileTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListInstanceProfileTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListInstanceProfileTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListInstanceProfileTagsVersionEnumTwoThousandAndTen0508 GETListInstanceProfileTagsVersionEnum = "2010-05-08"
 )
 
+func (e GETListInstanceProfileTagsVersionEnum) ToPointer() *GETListInstanceProfileTagsVersionEnum {
+	return &e
+}
+
 func (e *GETListInstanceProfileTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListInstanceProfileTagsVersionEnum(s)
+		*e = GETListInstanceProfileTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListInstanceProfileTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListInstanceProfileTagsVersionEnum: %v", v)
 	}
 }
 

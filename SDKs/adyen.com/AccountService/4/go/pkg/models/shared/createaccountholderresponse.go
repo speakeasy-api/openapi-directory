@@ -16,21 +16,25 @@ const (
 	CreateAccountHolderResponseLegalEntityEnumNonProfit  CreateAccountHolderResponseLegalEntityEnum = "NonProfit"
 )
 
+func (e CreateAccountHolderResponseLegalEntityEnum) ToPointer() *CreateAccountHolderResponseLegalEntityEnum {
+	return &e
+}
+
 func (e *CreateAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
 		fallthrough
 	case "NonProfit":
-		*e = CreateAccountHolderResponseLegalEntityEnum(s)
+		*e = CreateAccountHolderResponseLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountHolderResponseLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountHolderResponseLegalEntityEnum: %v", v)
 	}
 }
 
@@ -45,7 +49,7 @@ type CreateAccountHolderResponse struct {
 	// The description of the new account holder.
 	Description *string `json:"description,omitempty"`
 	// A list of fields that caused the `/createAccountHolder` request to fail.
-	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
+	InvalidFields []ErrorFieldTypeWrapper `json:"invalidFields,omitempty"`
 	// The type of legal entity of the new account holder.
 	LegalEntity *CreateAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.

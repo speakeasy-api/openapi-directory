@@ -18,21 +18,25 @@ const (
 	GetReadSetFileEnumIndex   GetReadSetFileEnum = "INDEX"
 )
 
+func (e GetReadSetFileEnum) ToPointer() *GetReadSetFileEnum {
+	return &e
+}
+
 func (e *GetReadSetFileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE1":
 		fallthrough
 	case "SOURCE2":
 		fallthrough
 	case "INDEX":
-		*e = GetReadSetFileEnum(s)
+		*e = GetReadSetFileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetReadSetFileEnum: %s", s)
+		return fmt.Errorf("invalid value for GetReadSetFileEnum: %v", v)
 	}
 }
 

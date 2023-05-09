@@ -34,7 +34,10 @@ func newSdfdownloadtasks(defaultClient, securityClient HTTPClient, serverURL, la
 // DisplayvideoSdfdownloadtasksOperationsGet - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
 func (s *sdfdownloadtasks) DisplayvideoSdfdownloadtasksOperationsGet(ctx context.Context, request operations.DisplayvideoSdfdownloadtasksOperationsGetRequest, security operations.DisplayvideoSdfdownloadtasksOperationsGetSecurity) (*operations.DisplayvideoSdfdownloadtasksOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1dev/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1dev/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

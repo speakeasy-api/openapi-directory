@@ -6,7 +6,7 @@ package shared
 //
 // (1) Providers who allow side effects or (2) actions that do not have a side effect should use this class.
 type ExecuteRequest struct {
-	// Plain english instructions. Provide as much detail as possible.
+	// Plain english instructions. Provide as much detail as possible, even if other fields are present.
 	Instructions string `json:"instructions"`
 	// If true, we will not execute the action, but will return the params of the preview.
 	PreviewOnly *bool `json:"preview_only,omitempty"`

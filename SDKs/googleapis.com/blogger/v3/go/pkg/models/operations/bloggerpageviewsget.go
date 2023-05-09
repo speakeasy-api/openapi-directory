@@ -22,21 +22,25 @@ const (
 	BloggerPageViewsGetRangeEnumSevenDays  BloggerPageViewsGetRangeEnum = "7DAYS"
 )
 
+func (e BloggerPageViewsGetRangeEnum) ToPointer() *BloggerPageViewsGetRangeEnum {
+	return &e
+}
+
 func (e *BloggerPageViewsGetRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "30DAYS":
 		fallthrough
 	case "7DAYS":
-		*e = BloggerPageViewsGetRangeEnum(s)
+		*e = BloggerPageViewsGetRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BloggerPageViewsGetRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for BloggerPageViewsGetRangeEnum: %v", v)
 	}
 }
 

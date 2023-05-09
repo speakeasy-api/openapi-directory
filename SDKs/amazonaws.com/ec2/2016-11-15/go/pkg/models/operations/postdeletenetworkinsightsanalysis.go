@@ -15,17 +15,21 @@ const (
 	POSTDeleteNetworkInsightsAnalysisActionEnumDeleteNetworkInsightsAnalysis POSTDeleteNetworkInsightsAnalysisActionEnum = "DeleteNetworkInsightsAnalysis"
 )
 
+func (e POSTDeleteNetworkInsightsAnalysisActionEnum) ToPointer() *POSTDeleteNetworkInsightsAnalysisActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkInsightsAnalysisActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkInsightsAnalysis":
-		*e = POSTDeleteNetworkInsightsAnalysisActionEnum(s)
+		*e = POSTDeleteNetworkInsightsAnalysisActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAnalysisActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAnalysisActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteNetworkInsightsAnalysisVersionEnumTwoThousandAndSixteen1115 POSTDeleteNetworkInsightsAnalysisVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteNetworkInsightsAnalysisVersionEnum) ToPointer() *POSTDeleteNetworkInsightsAnalysisVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkInsightsAnalysisVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteNetworkInsightsAnalysisVersionEnum(s)
+		*e = POSTDeleteNetworkInsightsAnalysisVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAnalysisVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAnalysisVersionEnum: %v", v)
 	}
 }
 

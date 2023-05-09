@@ -105,12 +105,16 @@ const (
 	CloudWatchLogsEncodingEnumUTF8Sig       CloudWatchLogsEncodingEnum = "utf_8_sig"
 )
 
+func (e CloudWatchLogsEncodingEnum) ToPointer() *CloudWatchLogsEncodingEnum {
+	return &e
+}
+
 func (e *CloudWatchLogsEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ascii":
 		fallthrough
 	case "big5":
@@ -294,9 +298,9 @@ func (e *CloudWatchLogsEncodingEnum) UnmarshalJSON(data []byte) error {
 	case "utf_8":
 		fallthrough
 	case "utf_8_sig":
-		*e = CloudWatchLogsEncodingEnum(s)
+		*e = CloudWatchLogsEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudWatchLogsEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudWatchLogsEncodingEnum: %v", v)
 	}
 }

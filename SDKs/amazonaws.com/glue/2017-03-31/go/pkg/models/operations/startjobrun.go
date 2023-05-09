@@ -16,17 +16,21 @@ const (
 	StartJobRunXAmzTargetEnumAwsGlueStartJobRun StartJobRunXAmzTargetEnum = "AWSGlue.StartJobRun"
 )
 
+func (e StartJobRunXAmzTargetEnum) ToPointer() *StartJobRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartJobRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StartJobRun":
-		*e = StartJobRunXAmzTargetEnum(s)
+		*e = StartJobRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartJobRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartJobRunXAmzTargetEnum: %v", v)
 	}
 }
 

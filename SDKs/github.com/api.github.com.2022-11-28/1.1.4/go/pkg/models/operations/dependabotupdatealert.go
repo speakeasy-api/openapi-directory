@@ -20,12 +20,16 @@ const (
 	DependabotUpdateAlertRequestBodyDismissedReasonEnumTolerableRisk DependabotUpdateAlertRequestBodyDismissedReasonEnum = "tolerable_risk"
 )
 
+func (e DependabotUpdateAlertRequestBodyDismissedReasonEnum) ToPointer() *DependabotUpdateAlertRequestBodyDismissedReasonEnum {
+	return &e
+}
+
 func (e *DependabotUpdateAlertRequestBodyDismissedReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fix_started":
 		fallthrough
 	case "inaccurate":
@@ -35,10 +39,10 @@ func (e *DependabotUpdateAlertRequestBodyDismissedReasonEnum) UnmarshalJSON(data
 	case "not_used":
 		fallthrough
 	case "tolerable_risk":
-		*e = DependabotUpdateAlertRequestBodyDismissedReasonEnum(s)
+		*e = DependabotUpdateAlertRequestBodyDismissedReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotUpdateAlertRequestBodyDismissedReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotUpdateAlertRequestBodyDismissedReasonEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	DependabotUpdateAlertRequestBodyStateEnumOpen      DependabotUpdateAlertRequestBodyStateEnum = "open"
 )
 
+func (e DependabotUpdateAlertRequestBodyStateEnum) ToPointer() *DependabotUpdateAlertRequestBodyStateEnum {
+	return &e
+}
+
 func (e *DependabotUpdateAlertRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dismissed":
 		fallthrough
 	case "open":
-		*e = DependabotUpdateAlertRequestBodyStateEnum(s)
+		*e = DependabotUpdateAlertRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotUpdateAlertRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotUpdateAlertRequestBodyStateEnum: %v", v)
 	}
 }
 

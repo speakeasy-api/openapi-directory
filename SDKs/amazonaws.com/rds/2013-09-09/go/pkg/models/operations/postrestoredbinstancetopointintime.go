@@ -15,17 +15,21 @@ const (
 	POSTRestoreDBInstanceToPointInTimeActionEnumRestoreDbInstanceToPointInTime POSTRestoreDBInstanceToPointInTimeActionEnum = "RestoreDBInstanceToPointInTime"
 )
 
+func (e POSTRestoreDBInstanceToPointInTimeActionEnum) ToPointer() *POSTRestoreDBInstanceToPointInTimeActionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBInstanceToPointInTimeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreDBInstanceToPointInTime":
-		*e = POSTRestoreDBInstanceToPointInTimeActionEnum(s)
+		*e = POSTRestoreDBInstanceToPointInTimeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBInstanceToPointInTimeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBInstanceToPointInTimeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRestoreDBInstanceToPointInTimeVersionEnumTwoThousandAndThirteen0909 POSTRestoreDBInstanceToPointInTimeVersionEnum = "2013-09-09"
 )
 
+func (e POSTRestoreDBInstanceToPointInTimeVersionEnum) ToPointer() *POSTRestoreDBInstanceToPointInTimeVersionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBInstanceToPointInTimeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-09-09":
-		*e = POSTRestoreDBInstanceToPointInTimeVersionEnum(s)
+		*e = POSTRestoreDBInstanceToPointInTimeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBInstanceToPointInTimeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBInstanceToPointInTimeVersionEnum: %v", v)
 	}
 }
 

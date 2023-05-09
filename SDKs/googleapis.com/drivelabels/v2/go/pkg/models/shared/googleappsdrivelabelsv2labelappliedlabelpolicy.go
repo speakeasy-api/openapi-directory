@@ -17,12 +17,16 @@ const (
 	GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnumCopyAppliable       GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum = "COPY_APPLIABLE"
 )
 
+func (e GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum) ToPointer() *GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COPY_MODE_UNSPECIFIED":
 		fallthrough
 	case "DO_NOT_COPY":
@@ -30,10 +34,10 @@ func (e *GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum) UnmarshalJS
 	case "ALWAYS_COPY":
 		fallthrough
 	case "COPY_APPLIABLE":
-		*e = GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum(s)
+		*e = GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2LabelAppliedLabelPolicyCopyModeEnum: %v", v)
 	}
 }
 

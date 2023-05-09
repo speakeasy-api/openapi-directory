@@ -44,12 +44,16 @@ const (
 	DirectoryMobiledevicesListOrderByEnumType     DirectoryMobiledevicesListOrderByEnum = "type"
 )
 
+func (e DirectoryMobiledevicesListOrderByEnum) ToPointer() *DirectoryMobiledevicesListOrderByEnum {
+	return &e
+}
+
 func (e *DirectoryMobiledevicesListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deviceId":
 		fallthrough
 	case "email":
@@ -65,10 +69,10 @@ func (e *DirectoryMobiledevicesListOrderByEnum) UnmarshalJSON(data []byte) error
 	case "status":
 		fallthrough
 	case "type":
-		*e = DirectoryMobiledevicesListOrderByEnum(s)
+		*e = DirectoryMobiledevicesListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryMobiledevicesListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryMobiledevicesListOrderByEnum: %v", v)
 	}
 }
 
@@ -80,19 +84,23 @@ const (
 	DirectoryMobiledevicesListProjectionEnumFull  DirectoryMobiledevicesListProjectionEnum = "FULL"
 )
 
+func (e DirectoryMobiledevicesListProjectionEnum) ToPointer() *DirectoryMobiledevicesListProjectionEnum {
+	return &e
+}
+
 func (e *DirectoryMobiledevicesListProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DirectoryMobiledevicesListProjectionEnum(s)
+		*e = DirectoryMobiledevicesListProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryMobiledevicesListProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryMobiledevicesListProjectionEnum: %v", v)
 	}
 }
 
@@ -104,19 +112,23 @@ const (
 	DirectoryMobiledevicesListSortOrderEnumDescending DirectoryMobiledevicesListSortOrderEnum = "DESCENDING"
 )
 
+func (e DirectoryMobiledevicesListSortOrderEnum) ToPointer() *DirectoryMobiledevicesListSortOrderEnum {
+	return &e
+}
+
 func (e *DirectoryMobiledevicesListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DirectoryMobiledevicesListSortOrderEnum(s)
+		*e = DirectoryMobiledevicesListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryMobiledevicesListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryMobiledevicesListSortOrderEnum: %v", v)
 	}
 }
 

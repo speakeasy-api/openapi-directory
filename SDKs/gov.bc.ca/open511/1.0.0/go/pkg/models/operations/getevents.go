@@ -19,12 +19,16 @@ const (
 	GetEventsEventTypeEnumRoadCondition    GetEventsEventTypeEnum = "ROAD_CONDITION"
 )
 
+func (e GetEventsEventTypeEnum) ToPointer() *GetEventsEventTypeEnum {
+	return &e
+}
+
 func (e *GetEventsEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONSTRUCTION":
 		fallthrough
 	case "SPECIAL_EVENT":
@@ -34,10 +38,10 @@ func (e *GetEventsEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WEATHER_CONDITION":
 		fallthrough
 	case "ROAD_CONDITION":
-		*e = GetEventsEventTypeEnum(s)
+		*e = GetEventsEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEventsEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEventsEventTypeEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetEventsFormatEnumXML  GetEventsFormatEnum = "xml"
 )
 
+func (e GetEventsFormatEnum) ToPointer() *GetEventsFormatEnum {
+	return &e
+}
+
 func (e *GetEventsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetEventsFormatEnum(s)
+		*e = GetEventsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEventsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEventsFormatEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	GetEventsStatusEnumArchived GetEventsStatusEnum = "ARCHIVED"
 )
 
+func (e GetEventsStatusEnum) ToPointer() *GetEventsStatusEnum {
+	return &e
+}
+
 func (e *GetEventsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = GetEventsStatusEnum(s)
+		*e = GetEventsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEventsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEventsStatusEnum: %v", v)
 	}
 }
 

@@ -33,12 +33,16 @@ const (
 	TeamsRemoveAppDefaultApplicationJSONErrorCodeEnumTooManyRequests     TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum) ToPointer() *TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -52,10 +56,10 @@ func (e *TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum(s)
+		*e = TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsRemoveAppDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

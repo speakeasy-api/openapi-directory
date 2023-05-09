@@ -16,21 +16,25 @@ const (
 	GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnumShutdown                                 GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum = "SHUTDOWN"
 )
 
+func (e GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum) ToPointer() *GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_KEY_REVOCATION_ACTION_UNSPECIFIED":
 		fallthrough
 	case "PREVENT_NEW":
 		fallthrough
 	case "SHUTDOWN":
-		*e = GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum(s)
+		*e = GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionEncryptionKeyRevocationActionEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudRunV2RevisionExecutionEnvironmentEnumExecutionEnvironmentGen2        GoogleCloudRunV2RevisionExecutionEnvironmentEnum = "EXECUTION_ENVIRONMENT_GEN2"
 )
 
+func (e GoogleCloudRunV2RevisionExecutionEnvironmentEnum) ToPointer() *GoogleCloudRunV2RevisionExecutionEnvironmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2RevisionExecutionEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN1":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN2":
-		*e = GoogleCloudRunV2RevisionExecutionEnvironmentEnum(s)
+		*e = GoogleCloudRunV2RevisionExecutionEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionExecutionEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionExecutionEnvironmentEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	GoogleCloudRunV2RevisionLaunchStageEnumDeprecated             GoogleCloudRunV2RevisionLaunchStageEnum = "DEPRECATED"
 )
 
+func (e GoogleCloudRunV2RevisionLaunchStageEnum) ToPointer() *GoogleCloudRunV2RevisionLaunchStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2RevisionLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -96,16 +108,16 @@ func (e *GoogleCloudRunV2RevisionLaunchStageEnum) UnmarshalJSON(data []byte) err
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = GoogleCloudRunV2RevisionLaunchStageEnum(s)
+		*e = GoogleCloudRunV2RevisionLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2RevisionLaunchStageEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2Revision - A Revision is an immutable snapshot of code and configuration. A Revision references a container image. Revisions are only created by updates to its parent Service.
 type GoogleCloudRunV2Revision struct {
-	// KRM-style annotations for the resource.
+	// Output only. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Output only. The Condition of this Revision, containing its readiness status, and detailed error information in case it did not reach a serving state.
 	Conditions []GoogleCloudRunV2Condition `json:"conditions,omitempty"`
@@ -129,7 +141,7 @@ type GoogleCloudRunV2Revision struct {
 	ExpireTime *string `json:"expireTime,omitempty"`
 	// Output only. A number that monotonically increases every time the user modifies the desired state.
 	Generation *string `json:"generation,omitempty"`
-	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+	// Output only. Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 	Labels map[string]string `json:"labels,omitempty"`
 	// The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 	LaunchStage *GoogleCloudRunV2RevisionLaunchStageEnum `json:"launchStage,omitempty"`
@@ -151,6 +163,8 @@ type GoogleCloudRunV2Revision struct {
 	Service *string `json:"service,omitempty"`
 	// Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has.
 	ServiceAccount *string `json:"serviceAccount,omitempty"`
+	// Enable session affinity.
+	SessionAffinity *bool `json:"sessionAffinity,omitempty"`
 	// Max allowed time for an instance to respond to a request.
 	Timeout *string `json:"timeout,omitempty"`
 	// Output only. Server assigned unique identifier for the Revision. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.

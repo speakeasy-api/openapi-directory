@@ -16,17 +16,21 @@ const (
 	CreateUserImportJobXAmzTargetEnumAwsCognitoIdentityProviderServiceCreateUserImportJob CreateUserImportJobXAmzTargetEnum = "AWSCognitoIdentityProviderService.CreateUserImportJob"
 )
 
+func (e CreateUserImportJobXAmzTargetEnum) ToPointer() *CreateUserImportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateUserImportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.CreateUserImportJob":
-		*e = CreateUserImportJobXAmzTargetEnum(s)
+		*e = CreateUserImportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserImportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserImportJobXAmzTargetEnum: %v", v)
 	}
 }
 

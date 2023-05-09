@@ -15,17 +15,21 @@ const (
 	POSTRestoreDBClusterFromS3ActionEnumRestoreDbClusterFromS3 POSTRestoreDBClusterFromS3ActionEnum = "RestoreDBClusterFromS3"
 )
 
+func (e POSTRestoreDBClusterFromS3ActionEnum) ToPointer() *POSTRestoreDBClusterFromS3ActionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBClusterFromS3ActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreDBClusterFromS3":
-		*e = POSTRestoreDBClusterFromS3ActionEnum(s)
+		*e = POSTRestoreDBClusterFromS3ActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBClusterFromS3ActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBClusterFromS3ActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRestoreDBClusterFromS3VersionEnumTwoThousandAndFourteen1031 POSTRestoreDBClusterFromS3VersionEnum = "2014-10-31"
 )
 
+func (e POSTRestoreDBClusterFromS3VersionEnum) ToPointer() *POSTRestoreDBClusterFromS3VersionEnum {
+	return &e
+}
+
 func (e *POSTRestoreDBClusterFromS3VersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTRestoreDBClusterFromS3VersionEnum(s)
+		*e = POSTRestoreDBClusterFromS3VersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRestoreDBClusterFromS3VersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRestoreDBClusterFromS3VersionEnum: %v", v)
 	}
 }
 

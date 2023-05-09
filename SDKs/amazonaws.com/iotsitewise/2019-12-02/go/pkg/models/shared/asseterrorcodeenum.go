@@ -13,16 +13,20 @@ const (
 	AssetErrorCodeEnumInternalFailure AssetErrorCodeEnum = "INTERNAL_FAILURE"
 )
 
+func (e AssetErrorCodeEnum) ToPointer() *AssetErrorCodeEnum {
+	return &e
+}
+
 func (e *AssetErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_FAILURE":
-		*e = AssetErrorCodeEnum(s)
+		*e = AssetErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetErrorCodeEnum: %v", v)
 	}
 }

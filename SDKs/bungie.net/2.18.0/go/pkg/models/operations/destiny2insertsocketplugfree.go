@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type Destiny2InsertSocketPlugFreeSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // Destiny2InsertSocketPlugFree200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2InsertSocketPlugFree200Wildcard struct {
 	DetailedErrorTrace *string

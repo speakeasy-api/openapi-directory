@@ -16,17 +16,21 @@ const (
 	GetSQLInjectionMatchSetXAmzTargetEnumAwswaf20150824GetSQLInjectionMatchSet GetSQLInjectionMatchSetXAmzTargetEnum = "AWSWAF_20150824.GetSqlInjectionMatchSet"
 )
 
+func (e GetSQLInjectionMatchSetXAmzTargetEnum) ToPointer() *GetSQLInjectionMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSQLInjectionMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetSqlInjectionMatchSet":
-		*e = GetSQLInjectionMatchSetXAmzTargetEnum(s)
+		*e = GetSQLInjectionMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSQLInjectionMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSQLInjectionMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

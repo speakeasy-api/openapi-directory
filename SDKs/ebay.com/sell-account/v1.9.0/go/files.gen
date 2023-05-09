@@ -15,6 +15,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -108,4 +109,18 @@ pkg/models/shared/salestax.go
 pkg/models/shared/salestaxes.go
 pkg/models/shared/subscriptionresponse.go
 pkg/models/shared/subscription.go
+docs/sdk/README.md
+docs/advertisingeligibility/README.md
+docs/custompolicy/README.md
+docs/fulfillmentpolicy/README.md
+docs/kyc/README.md
+docs/onboarding/README.md
+docs/paymentpolicy/README.md
+docs/paymentsprogram/README.md
+docs/privilege/README.md
+docs/program/README.md
+docs/ratetable/README.md
+docs/returnpolicy/README.md
+docs/salestax/README.md
+docs/subscription/README.md
 USAGE.md

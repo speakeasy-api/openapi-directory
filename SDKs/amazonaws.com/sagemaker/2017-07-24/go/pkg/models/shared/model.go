@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Model - The properties of a model as returned by the <a>Search</a> API.
+// Model - The properties of a model as returned by the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
 type Model struct {
 	Containers             []ContainerDefinition `json:"Containers,omitempty"`
 	CreationTime           *time.Time            `json:"CreationTime,omitempty"`

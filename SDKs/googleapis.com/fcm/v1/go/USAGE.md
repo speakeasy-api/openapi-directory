@@ -2,150 +2,154 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FcmProjectsMessagesSendRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FcmProjectsMessagesSend(ctx, operations.FcmProjectsMessagesSendRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         SendMessageRequest: &shared.SendMessageRequest{
             Message: &shared.Message{
                 Android: &shared.AndroidConfig{
-                    CollapseKey: "provident",
+                    CollapseKey: sdk.String("provident"),
                     Data: map[string]string{
                         "quibusdam": "unde",
                         "nulla": "corrupti",
                         "illum": "vel",
                     },
-                    DirectBootOk: false,
+                    DirectBootOk: sdk.Bool(false),
                     FcmOptions: &shared.AndroidFcmOptions{
-                        AnalyticsLabel: "error",
+                        AnalyticsLabel: sdk.String("error"),
                     },
                     Notification: &shared.AndroidNotification{
-                        Body: "deserunt",
+                        Body: sdk.String("deserunt"),
                         BodyLocArgs: []string{
                             "iure",
                             "magnam",
                         },
-                        BodyLocKey: "debitis",
-                        BypassProxyNotification: false,
-                        ChannelID: "ipsa",
-                        ClickAction: "delectus",
-                        Color: "tempora",
-                        DefaultLightSettings: false,
-                        DefaultSound: false,
-                        DefaultVibrateTimings: false,
-                        EventTime: "suscipit",
-                        Icon: "molestiae",
-                        Image: "minus",
+                        BodyLocKey: sdk.String("debitis"),
+                        BypassProxyNotification: sdk.Bool(false),
+                        ChannelID: sdk.String("ipsa"),
+                        ClickAction: sdk.String("delectus"),
+                        Color: sdk.String("tempora"),
+                        DefaultLightSettings: sdk.Bool(false),
+                        DefaultSound: sdk.Bool(false),
+                        DefaultVibrateTimings: sdk.Bool(false),
+                        EventTime: sdk.String("suscipit"),
+                        Icon: sdk.String("molestiae"),
+                        Image: sdk.String("minus"),
                         LightSettings: &shared.LightSettings{
                             Color: &shared.Color{
-                                Alpha: 8121.69,
-                                Blue: 5288.95,
-                                Green: 4799.77,
-                                Red: 5680.45,
+                                Alpha: sdk.Float32(8121.69),
+                                Blue: sdk.Float32(5288.95),
+                                Green: sdk.Float32(4799.77),
+                                Red: sdk.Float32(5680.45),
                             },
-                            LightOffDuration: "nisi",
-                            LightOnDuration: "recusandae",
+                            LightOffDuration: sdk.String("nisi"),
+                            LightOnDuration: sdk.String("recusandae"),
                         },
-                        LocalOnly: false,
-                        NotificationCount: 836079,
-                        NotificationPriority: "PRIORITY_UNSPECIFIED",
-                        Sound: "quis",
-                        Sticky: false,
-                        Tag: "veritatis",
-                        Ticker: "deserunt",
-                        Title: "Mr.",
+                        LocalOnly: sdk.Bool(false),
+                        NotificationCount: sdk.Int(836079),
+                        NotificationPriority: shared.AndroidNotificationNotificationPriorityEnumPriorityUnspecified.ToPointer(),
+                        Proxy: shared.AndroidNotificationProxyEnumAllow.ToPointer(),
+                        Sound: sdk.String("veritatis"),
+                        Sticky: sdk.Bool(false),
+                        Tag: sdk.String("deserunt"),
+                        Ticker: sdk.String("perferendis"),
+                        Title: sdk.String("Mrs."),
                         TitleLocArgs: []string{
-                            "repellendus",
                             "sapiente",
-                        },
-                        TitleLocKey: "quo",
-                        VibrateTimings: []string{
+                            "quo",
+                            "odit",
                             "at",
                         },
-                        Visibility: "SECRET",
+                        TitleLocKey: sdk.String("at"),
+                        VibrateTimings: []string{
+                            "molestiae",
+                            "quod",
+                            "quod",
+                            "esse",
+                        },
+                        Visibility: shared.AndroidNotificationVisibilityEnumPublic.ToPointer(),
                     },
-                    Priority: "HIGH",
-                    RestrictedPackageName: "molestiae",
-                    TTL: "quod",
+                    Priority: shared.AndroidConfigPriorityEnumHigh.ToPointer(),
+                    RestrictedPackageName: sdk.String("dolorum"),
+                    TTL: sdk.String("dicta"),
                 },
                 Apns: &shared.ApnsConfig{
                     FcmOptions: &shared.ApnsFcmOptions{
-                        AnalyticsLabel: "quod",
-                        Image: "esse",
+                        AnalyticsLabel: sdk.String("nam"),
+                        Image: sdk.String("officia"),
                     },
                     Headers: map[string]string{
-                        "porro": "dolorum",
-                        "dicta": "nam",
-                        "officia": "occaecati",
+                        "fugit": "deleniti",
+                        "hic": "optio",
+                        "totam": "beatae",
                     },
                     Payload: map[string]interface{}{
-                        "deleniti": "hic",
+                        "molestiae": "modi",
+                        "qui": "impedit",
                     },
                 },
-                Condition: "optio",
+                Condition: sdk.String("cum"),
                 Data: map[string]string{
-                    "beatae": "commodi",
-                    "molestiae": "modi",
-                    "qui": "impedit",
+                    "ipsum": "excepturi",
+                    "aspernatur": "perferendis",
                 },
                 FcmOptions: &shared.FcmOptions{
-                    AnalyticsLabel: "cum",
+                    AnalyticsLabel: sdk.String("ad"),
                 },
-                Name: "esse",
+                Name: sdk.String("Louis Moore"),
                 Notification: &shared.Notification{
-                    Body: "ipsum",
-                    Image: "excepturi",
-                    Title: "Mr.",
+                    Body: sdk.String("laboriosam"),
+                    Image: sdk.String("hic"),
+                    Title: sdk.String("Dr."),
                 },
-                Token: "perferendis",
-                Topic: "ad",
+                Token: sdk.String("fuga"),
+                Topic: sdk.String("in"),
                 Webpush: &shared.WebpushConfig{
                     Data: map[string]string{
-                        "sed": "iste",
-                        "dolor": "natus",
-                        "laboriosam": "hic",
+                        "iste": "iure",
+                        "saepe": "quidem",
                     },
                     FcmOptions: &shared.WebpushFcmOptions{
-                        AnalyticsLabel: "saepe",
-                        Link: "fuga",
+                        AnalyticsLabel: sdk.String("architecto"),
+                        Link: sdk.String("ipsa"),
                     },
                     Headers: map[string]string{
-                        "corporis": "iste",
-                        "iure": "saepe",
+                        "est": "mollitia",
+                        "laborum": "dolores",
+                        "dolorem": "corporis",
+                        "explicabo": "nobis",
                     },
                     Notification: map[string]interface{}{
-                        "architecto": "ipsa",
-                        "reiciendis": "est",
-                        "mollitia": "laborum",
+                        "omnis": "nemo",
+                        "minima": "excepturi",
                     },
                 },
             },
-            ValidateOnly: false,
+            ValidateOnly: sdk.Bool(false),
         },
-        AccessToken: "dolores",
-        Alt: "json",
-        Callback: "corporis",
-        Fields: "explicabo",
-        Key: "nobis",
-        OauthToken: "enim",
-        Parent: "omnis",
-        PrettyPrint: false,
-        QuotaUser: "nemo",
-        UploadType: "minima",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FcmProjectsMessagesSend(ctx, req, operations.FcmProjectsMessagesSendSecurity{
+        AccessToken: sdk.String("accusantium"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("culpa"),
+        Fields: sdk.String("doloribus"),
+        Key: sdk.String("sapiente"),
+        OauthToken: sdk.String("architecto"),
+        Parent: "mollitia",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("dolorem"),
+        UploadType: sdk.String("culpa"),
+        UploadProtocol: sdk.String("consequuntur"),
+    }, operations.FcmProjectsMessagesSendSecurity{
         Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

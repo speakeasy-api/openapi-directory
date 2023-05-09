@@ -13,16 +13,20 @@ const (
 	AwsJobAbortCriteriaAbortActionEnumCancel AwsJobAbortCriteriaAbortActionEnum = "CANCEL"
 )
 
+func (e AwsJobAbortCriteriaAbortActionEnum) ToPointer() *AwsJobAbortCriteriaAbortActionEnum {
+	return &e
+}
+
 func (e *AwsJobAbortCriteriaAbortActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCEL":
-		*e = AwsJobAbortCriteriaAbortActionEnum(s)
+		*e = AwsJobAbortCriteriaAbortActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsJobAbortCriteriaAbortActionEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsJobAbortCriteriaAbortActionEnum: %v", v)
 	}
 }

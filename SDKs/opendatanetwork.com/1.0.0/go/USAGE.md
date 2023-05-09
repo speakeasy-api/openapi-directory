@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateAMapRequest{
-        XAppToken: "corrupti",
-        AppToken: "provident",
-        Constraint: "distinctio",
+    ctx := context.Background()
+    res, err := s.CreateAMap(ctx, operations.CreateAMapRequest{
+        XAppToken: sdk.String("corrupti"),
+        AppToken: sdk.String("provident"),
+        Constraint: sdk.String("distinctio"),
         EntityID: "quibusdam",
         Variable: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAMap(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -83,7 +83,10 @@ func (s *paymentMethods) GetPaymentMethodsJSON(ctx context.Context, request oper
 // GetPaymentMethodsIDJSON - Retrieve a single Payment Method.
 func (s *paymentMethods) GetPaymentMethodsIDJSON(ctx context.Context, request operations.GetPaymentMethodsIDJSONRequest) (*operations.GetPaymentMethodsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payment_methods/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payment_methods/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

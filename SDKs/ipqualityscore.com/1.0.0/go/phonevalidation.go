@@ -34,7 +34,10 @@ func newPhoneValidation(defaultClient, securityClient HTTPClient, serverURL, lan
 // Phone Validation
 func (s *phoneValidation) PhoneValidation(ctx context.Context, request operations.PhoneValidationRequest) (*operations.PhoneValidationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/json/phone/{YOUR_API_KEY_HERE}/{USER_PHONE_HERE}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/json/phone/{YOUR_API_KEY_HERE}/{USER_PHONE_HERE}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

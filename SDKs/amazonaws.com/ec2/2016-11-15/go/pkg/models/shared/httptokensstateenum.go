@@ -14,18 +14,22 @@ const (
 	HTTPTokensStateEnumRequired HTTPTokensStateEnum = "required"
 )
 
+func (e HTTPTokensStateEnum) ToPointer() *HTTPTokensStateEnum {
+	return &e
+}
+
 func (e *HTTPTokensStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = HTTPTokensStateEnum(s)
+		*e = HTTPTokensStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPTokensStateEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPTokensStateEnum: %v", v)
 	}
 }

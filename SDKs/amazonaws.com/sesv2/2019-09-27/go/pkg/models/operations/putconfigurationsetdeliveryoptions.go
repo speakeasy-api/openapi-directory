@@ -16,19 +16,23 @@ const (
 	PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnumOptional PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum = "OPTIONAL"
 )
 
+func (e PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum) ToPointer() *PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum {
+	return &e
+}
+
 func (e *PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUIRE":
 		fallthrough
 	case "OPTIONAL":
-		*e = PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum(s)
+		*e = PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PutConfigurationSetDeliveryOptionsRequestBodyTLSPolicyEnum: %v", v)
 	}
 }
 

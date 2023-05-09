@@ -19,12 +19,16 @@ const (
 	NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnumNativeContentPositionRecommendation NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum = "NATIVE_CONTENT_POSITION_RECOMMENDATION"
 )
 
+func (e NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum) ToPointer() *NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum {
+	return &e
+}
+
 func (e *NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NATIVE_CONTENT_POSITION_UNSPECIFIED":
 		fallthrough
 	case "NATIVE_CONTENT_POSITION_UNKNOWN":
@@ -36,10 +40,10 @@ func (e *NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum)
 	case "NATIVE_CONTENT_POSITION_PERIPHERAL":
 		fallthrough
 	case "NATIVE_CONTENT_POSITION_RECOMMENDATION":
-		*e = NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum(s)
+		*e = NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for NativeContentPositionAssignedTargetingOptionDetailsContentPositionEnum: %v", v)
 	}
 }
 

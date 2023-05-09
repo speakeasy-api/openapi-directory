@@ -16,21 +16,25 @@ const (
 	AmpIssueSeverityEnumError               AmpIssueSeverityEnum = "ERROR"
 )
 
+func (e AmpIssueSeverityEnum) ToPointer() *AmpIssueSeverityEnum {
+	return &e
+}
+
 func (e *AmpIssueSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = AmpIssueSeverityEnum(s)
+		*e = AmpIssueSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpIssueSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpIssueSeverityEnum: %v", v)
 	}
 }
 

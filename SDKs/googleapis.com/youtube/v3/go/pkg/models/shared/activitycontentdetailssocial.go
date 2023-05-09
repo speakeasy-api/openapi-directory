@@ -17,12 +17,16 @@ const (
 	ActivityContentDetailsSocialTypeEnumTwitter     ActivityContentDetailsSocialTypeEnum = "twitter"
 )
 
+func (e ActivityContentDetailsSocialTypeEnum) ToPointer() *ActivityContentDetailsSocialTypeEnum {
+	return &e
+}
+
 func (e *ActivityContentDetailsSocialTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unspecified":
 		fallthrough
 	case "googlePlus":
@@ -30,10 +34,10 @@ func (e *ActivityContentDetailsSocialTypeEnum) UnmarshalJSON(data []byte) error 
 	case "facebook":
 		fallthrough
 	case "twitter":
-		*e = ActivityContentDetailsSocialTypeEnum(s)
+		*e = ActivityContentDetailsSocialTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityContentDetailsSocialTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityContentDetailsSocialTypeEnum: %v", v)
 	}
 }
 

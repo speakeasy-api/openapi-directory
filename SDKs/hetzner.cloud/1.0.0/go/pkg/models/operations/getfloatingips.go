@@ -20,12 +20,16 @@ const (
 	GetFloatingIpsSortEnumCreatedDesc GetFloatingIpsSortEnum = "created:desc"
 )
 
+func (e GetFloatingIpsSortEnum) ToPointer() *GetFloatingIpsSortEnum {
+	return &e
+}
+
 func (e *GetFloatingIpsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -37,10 +41,10 @@ func (e *GetFloatingIpsSortEnum) UnmarshalJSON(data []byte) error {
 	case "created:asc":
 		fallthrough
 	case "created:desc":
-		*e = GetFloatingIpsSortEnum(s)
+		*e = GetFloatingIpsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIpsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIpsSortEnum: %v", v)
 	}
 }
 
@@ -94,19 +98,23 @@ const (
 	GetFloatingIps200ApplicationJSONFloatingIpsTypeEnumIpv6 GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum = "ipv6"
 )
 
+func (e GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum) ToPointer() *GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum {
+	return &e
+}
+
 func (e *GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "ipv6":
-		*e = GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum(s)
+		*e = GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIps200ApplicationJSONFloatingIpsTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeBatchLoadTaskXAmzTargetEnumTimestream20181101DescribeBatchLoadTask DescribeBatchLoadTaskXAmzTargetEnum = "Timestream_20181101.DescribeBatchLoadTask"
 )
 
+func (e DescribeBatchLoadTaskXAmzTargetEnum) ToPointer() *DescribeBatchLoadTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeBatchLoadTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.DescribeBatchLoadTask":
-		*e = DescribeBatchLoadTaskXAmzTargetEnum(s)
+		*e = DescribeBatchLoadTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeBatchLoadTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeBatchLoadTaskXAmzTargetEnum: %v", v)
 	}
 }
 

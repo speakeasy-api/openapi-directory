@@ -20,12 +20,16 @@ const (
 	GetSaveOntologyTagFormatEnumPdf  GetSaveOntologyTagFormatEnum = "pdf"
 )
 
+func (e GetSaveOntologyTagFormatEnum) ToPointer() *GetSaveOntologyTagFormatEnum {
+	return &e
+}
+
 func (e *GetSaveOntologyTagFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetSaveOntologyTagFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetSaveOntologyTagFormatEnum(s)
+		*e = GetSaveOntologyTagFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSaveOntologyTagFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSaveOntologyTagFormatEnum: %v", v)
 	}
 }
 

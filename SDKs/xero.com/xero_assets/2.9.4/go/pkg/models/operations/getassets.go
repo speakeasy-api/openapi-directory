@@ -26,12 +26,16 @@ const (
 	GetAssetsOrderByEnumDisposalPrice GetAssetsOrderByEnum = "DisposalPrice"
 )
 
+func (e GetAssetsOrderByEnum) ToPointer() *GetAssetsOrderByEnum {
+	return &e
+}
+
 func (e *GetAssetsOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssetType":
 		fallthrough
 	case "AssetName":
@@ -45,10 +49,10 @@ func (e *GetAssetsOrderByEnum) UnmarshalJSON(data []byte) error {
 	case "DisposalDate":
 		fallthrough
 	case "DisposalPrice":
-		*e = GetAssetsOrderByEnum(s)
+		*e = GetAssetsOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssetsOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssetsOrderByEnum: %v", v)
 	}
 }
 
@@ -60,19 +64,23 @@ const (
 	GetAssetsSortDirectionEnumDesc GetAssetsSortDirectionEnum = "desc"
 )
 
+func (e GetAssetsSortDirectionEnum) ToPointer() *GetAssetsSortDirectionEnum {
+	return &e
+}
+
 func (e *GetAssetsSortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetAssetsSortDirectionEnum(s)
+		*e = GetAssetsSortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssetsSortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssetsSortDirectionEnum: %v", v)
 	}
 }
 

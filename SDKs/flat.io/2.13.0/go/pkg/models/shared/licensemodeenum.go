@@ -15,18 +15,22 @@ const (
 	LicenseModeEnumSite   LicenseModeEnum = "site"
 )
 
+func (e LicenseModeEnum) ToPointer() *LicenseModeEnum {
+	return &e
+}
+
 func (e *LicenseModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "credit":
 		fallthrough
 	case "site":
-		*e = LicenseModeEnum(s)
+		*e = LicenseModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseModeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseModeEnum: %v", v)
 	}
 }

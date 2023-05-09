@@ -34,7 +34,10 @@ func newTokenBurnController(defaultClient, securityClient HTTPClient, serverURL,
 
 func (s *tokenBurnController) GetBurningTransaction(ctx context.Context, request operations.GetBurningTransactionRequest) (*operations.GetBurningTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mosaik/tokenburn/get/{uuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mosaik/tokenburn/get/{uuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,6 +121,7 @@ func (s *tokenBurnController) GetBurningTransaction(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *tokenBurnController) MainApp(ctx context.Context) (*operations.MainAppResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/tokenburn"
@@ -204,6 +208,7 @@ func (s *tokenBurnController) MainApp(ctx context.Context) (*operations.MainAppR
 
 	return res, nil
 }
+
 func (s *tokenBurnController) PrepareTransaction(ctx context.Context, request map[string]map[string]interface{}) (*operations.PrepareTransactionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/tokenburn/prepare"

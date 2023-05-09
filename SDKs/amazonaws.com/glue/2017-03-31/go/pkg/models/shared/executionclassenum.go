@@ -14,18 +14,22 @@ const (
 	ExecutionClassEnumStandard ExecutionClassEnum = "STANDARD"
 )
 
+func (e ExecutionClassEnum) ToPointer() *ExecutionClassEnum {
+	return &e
+}
+
 func (e *ExecutionClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLEX":
 		fallthrough
 	case "STANDARD":
-		*e = ExecutionClassEnum(s)
+		*e = ExecutionClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionClassEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionClassEnum: %v", v)
 	}
 }

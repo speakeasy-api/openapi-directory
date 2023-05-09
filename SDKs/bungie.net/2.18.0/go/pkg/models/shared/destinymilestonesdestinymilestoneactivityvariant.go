@@ -8,272 +8,276 @@ import (
 )
 
 // DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum - The enumeration equivalent of the most specific Activity Mode under which this activity is played.
-type DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum string
+type DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum int
 
 const (
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumZero         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "0"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwo          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "2"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThree        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "3"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFour         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "4"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFive         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "5"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSix          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "6"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeven        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "7"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNine         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "9"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTen          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "10"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEleven       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "11"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwelve       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "12"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "13"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFifteen      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "15"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixteen      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "16"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventeen    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "17"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEighteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "18"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNineteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "19"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwenty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "20"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "21"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "22"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyFour   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "24"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyFive   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "25"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentySix    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "26"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "27"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "28"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "29"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "30"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "31"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "32"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "37"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "38"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "39"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumForty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "40"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "41"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "42"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "43"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "44"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "45"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "46"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "47"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "48"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "49"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFifty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "50"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "51"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "52"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "53"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "54"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "55"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "56"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "57"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "58"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "59"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "60"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "61"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "62"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "63"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "64"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "65"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "66"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "67"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "68"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "69"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventy      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "70"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyOne   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "71"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyTwo   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "72"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyThree DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "73"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyFour  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "74"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyFive  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "75"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventySix   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "76"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventySeven DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "77"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyEight DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "78"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyNine  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "79"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEighty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "80"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "81"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "82"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyThree  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "83"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyFour   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "84"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyFive   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "85"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightySix    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "86"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "87"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "88"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "89"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNinety       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "90"
-	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNinetyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = "91"
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumZero         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 0
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwo          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 2
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThree        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 3
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFour         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 4
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFive         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 5
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSix          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 6
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeven        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 7
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNine         DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 9
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTen          DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 10
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEleven       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 11
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwelve       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 12
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 13
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFifteen      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 15
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixteen      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 16
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventeen    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 17
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEighteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 18
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNineteen     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 19
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwenty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 20
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 21
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 22
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyFour   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 24
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyFive   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 25
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentySix    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 26
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 27
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 28
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumTwentyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 29
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 30
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 31
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 32
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 37
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 38
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumThirtyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 39
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumForty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 40
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 41
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 42
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 43
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 44
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 45
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 46
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 47
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 48
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFortyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 49
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFifty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 50
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 51
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 52
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 53
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 54
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 55
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 56
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 57
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 58
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumFiftyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 59
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixty        DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 60
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyOne     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 61
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyTwo     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 62
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyThree   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 63
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyFour    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 64
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyFive    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 65
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtySix     DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 66
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtySeven   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 67
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyEight   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 68
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSixtyNine    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 69
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventy      DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 70
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyOne   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 71
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyTwo   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 72
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyThree DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 73
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyFour  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 74
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyFive  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 75
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventySix   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 76
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventySeven DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 77
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyEight DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 78
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumSeventyNine  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 79
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEighty       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 80
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 81
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyTwo    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 82
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyThree  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 83
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyFour   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 84
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyFive   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 85
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightySix    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 86
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightySeven  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 87
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyEight  DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 88
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumEightyNine   DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 89
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNinety       DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 90
+	DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnumNinetyOne    DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum = 91
 )
 
+func (e DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum) ToPointer() *DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum {
+	return &e
+}
+
 func (e *DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
+	case 18:
 		fallthrough
-	case "19":
+	case 19:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "21":
+	case 21:
 		fallthrough
-	case "22":
+	case 22:
 		fallthrough
-	case "24":
+	case 24:
 		fallthrough
-	case "25":
+	case 25:
 		fallthrough
-	case "26":
+	case 26:
 		fallthrough
-	case "27":
+	case 27:
 		fallthrough
-	case "28":
+	case 28:
 		fallthrough
-	case "29":
+	case 29:
 		fallthrough
-	case "30":
+	case 30:
 		fallthrough
-	case "31":
+	case 31:
 		fallthrough
-	case "32":
+	case 32:
 		fallthrough
-	case "37":
+	case 37:
 		fallthrough
-	case "38":
+	case 38:
 		fallthrough
-	case "39":
+	case 39:
 		fallthrough
-	case "40":
+	case 40:
 		fallthrough
-	case "41":
+	case 41:
 		fallthrough
-	case "42":
+	case 42:
 		fallthrough
-	case "43":
+	case 43:
 		fallthrough
-	case "44":
+	case 44:
 		fallthrough
-	case "45":
+	case 45:
 		fallthrough
-	case "46":
+	case 46:
 		fallthrough
-	case "47":
+	case 47:
 		fallthrough
-	case "48":
+	case 48:
 		fallthrough
-	case "49":
+	case 49:
 		fallthrough
-	case "50":
+	case 50:
 		fallthrough
-	case "51":
+	case 51:
 		fallthrough
-	case "52":
+	case 52:
 		fallthrough
-	case "53":
+	case 53:
 		fallthrough
-	case "54":
+	case 54:
 		fallthrough
-	case "55":
+	case 55:
 		fallthrough
-	case "56":
+	case 56:
 		fallthrough
-	case "57":
+	case 57:
 		fallthrough
-	case "58":
+	case 58:
 		fallthrough
-	case "59":
+	case 59:
 		fallthrough
-	case "60":
+	case 60:
 		fallthrough
-	case "61":
+	case 61:
 		fallthrough
-	case "62":
+	case 62:
 		fallthrough
-	case "63":
+	case 63:
 		fallthrough
-	case "64":
+	case 64:
 		fallthrough
-	case "65":
+	case 65:
 		fallthrough
-	case "66":
+	case 66:
 		fallthrough
-	case "67":
+	case 67:
 		fallthrough
-	case "68":
+	case 68:
 		fallthrough
-	case "69":
+	case 69:
 		fallthrough
-	case "70":
+	case 70:
 		fallthrough
-	case "71":
+	case 71:
 		fallthrough
-	case "72":
+	case 72:
 		fallthrough
-	case "73":
+	case 73:
 		fallthrough
-	case "74":
+	case 74:
 		fallthrough
-	case "75":
+	case 75:
 		fallthrough
-	case "76":
+	case 76:
 		fallthrough
-	case "77":
+	case 77:
 		fallthrough
-	case "78":
+	case 78:
 		fallthrough
-	case "79":
+	case 79:
 		fallthrough
-	case "80":
+	case 80:
 		fallthrough
-	case "81":
+	case 81:
 		fallthrough
-	case "82":
+	case 82:
 		fallthrough
-	case "83":
+	case 83:
 		fallthrough
-	case "84":
+	case 84:
 		fallthrough
-	case "85":
+	case 85:
 		fallthrough
-	case "86":
+	case 86:
 		fallthrough
-	case "87":
+	case 87:
 		fallthrough
-	case "88":
+	case 88:
 		fallthrough
-	case "89":
+	case 89:
 		fallthrough
-	case "90":
+	case 90:
 		fallthrough
-	case "91":
-		*e = DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum(s)
+	case 91:
+		*e = DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinyMilestonesDestinyMilestoneActivityVariantActivityModeTypeEnum: %v", v)
 	}
 }
 

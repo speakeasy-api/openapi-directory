@@ -19,12 +19,16 @@ const (
 	FailbackStateEnumFailbackLaunchStateNotAvailable FailbackStateEnum = "FAILBACK_LAUNCH_STATE_NOT_AVAILABLE"
 )
 
+func (e FailbackStateEnum) ToPointer() *FailbackStateEnum {
+	return &e
+}
+
 func (e *FailbackStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILBACK_NOT_STARTED":
 		fallthrough
 	case "FAILBACK_IN_PROGRESS":
@@ -38,9 +42,9 @@ func (e *FailbackStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILBACK_NOT_READY_FOR_LAUNCH":
 		fallthrough
 	case "FAILBACK_LAUNCH_STATE_NOT_AVAILABLE":
-		*e = FailbackStateEnum(s)
+		*e = FailbackStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailbackStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FailbackStateEnum: %v", v)
 	}
 }

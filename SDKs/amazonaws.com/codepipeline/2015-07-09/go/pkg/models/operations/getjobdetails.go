@@ -16,17 +16,21 @@ const (
 	GetJobDetailsXAmzTargetEnumCodePipeline20150709GetJobDetails GetJobDetailsXAmzTargetEnum = "CodePipeline_20150709.GetJobDetails"
 )
 
+func (e GetJobDetailsXAmzTargetEnum) ToPointer() *GetJobDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetJobDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.GetJobDetails":
-		*e = GetJobDetailsXAmzTargetEnum(s)
+		*e = GetJobDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetJobDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetJobDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

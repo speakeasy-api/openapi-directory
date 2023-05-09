@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1TaskTriggerSpecTypeEnumRecurring       GoogleCloudDataplexV1TaskTriggerSpecTypeEnum = "RECURRING"
 )
 
+func (e GoogleCloudDataplexV1TaskTriggerSpecTypeEnum) ToPointer() *GoogleCloudDataplexV1TaskTriggerSpecTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1TaskTriggerSpecTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ON_DEMAND":
 		fallthrough
 	case "RECURRING":
-		*e = GoogleCloudDataplexV1TaskTriggerSpecTypeEnum(s)
+		*e = GoogleCloudDataplexV1TaskTriggerSpecTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1TaskTriggerSpecTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1TaskTriggerSpecTypeEnum: %v", v)
 	}
 }
 

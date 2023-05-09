@@ -14,18 +14,22 @@ const (
 	ImpersonationRoleTypeEnumReadOnly   ImpersonationRoleTypeEnum = "READ_ONLY"
 )
 
+func (e ImpersonationRoleTypeEnum) ToPointer() *ImpersonationRoleTypeEnum {
+	return &e
+}
+
 func (e *ImpersonationRoleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL_ACCESS":
 		fallthrough
 	case "READ_ONLY":
-		*e = ImpersonationRoleTypeEnum(s)
+		*e = ImpersonationRoleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImpersonationRoleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImpersonationRoleTypeEnum: %v", v)
 	}
 }

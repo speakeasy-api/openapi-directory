@@ -16,17 +16,21 @@ const (
 	BatchUpdatePartitionXAmzTargetEnumAwsGlueBatchUpdatePartition BatchUpdatePartitionXAmzTargetEnum = "AWSGlue.BatchUpdatePartition"
 )
 
+func (e BatchUpdatePartitionXAmzTargetEnum) ToPointer() *BatchUpdatePartitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchUpdatePartitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchUpdatePartition":
-		*e = BatchUpdatePartitionXAmzTargetEnum(s)
+		*e = BatchUpdatePartitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdatePartitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdatePartitionXAmzTargetEnum: %v", v)
 	}
 }
 

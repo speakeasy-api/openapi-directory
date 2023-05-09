@@ -16,17 +16,21 @@ const (
 	CreateProvisionedProductPlanXAmzTargetEnumAws242ServiceCatalogServiceCreateProvisionedProductPlan CreateProvisionedProductPlanXAmzTargetEnum = "AWS242ServiceCatalogService.CreateProvisionedProductPlan"
 )
 
+func (e CreateProvisionedProductPlanXAmzTargetEnum) ToPointer() *CreateProvisionedProductPlanXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProvisionedProductPlanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.CreateProvisionedProductPlan":
-		*e = CreateProvisionedProductPlanXAmzTargetEnum(s)
+		*e = CreateProvisionedProductPlanXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProvisionedProductPlanXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProvisionedProductPlanXAmzTargetEnum: %v", v)
 	}
 }
 

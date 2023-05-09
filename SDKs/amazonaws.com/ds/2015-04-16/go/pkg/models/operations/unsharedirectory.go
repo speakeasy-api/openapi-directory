@@ -16,17 +16,21 @@ const (
 	UnshareDirectoryXAmzTargetEnumDirectoryService20150416UnshareDirectory UnshareDirectoryXAmzTargetEnum = "DirectoryService_20150416.UnshareDirectory"
 )
 
+func (e UnshareDirectoryXAmzTargetEnum) ToPointer() *UnshareDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *UnshareDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.UnshareDirectory":
-		*e = UnshareDirectoryXAmzTargetEnum(s)
+		*e = UnshareDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnshareDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UnshareDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

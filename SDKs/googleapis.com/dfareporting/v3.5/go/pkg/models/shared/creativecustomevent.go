@@ -16,21 +16,25 @@ const (
 	CreativeCustomEventAdvertiserCustomEventTypeEnumAdvertiserEventCounter CreativeCustomEventAdvertiserCustomEventTypeEnum = "ADVERTISER_EVENT_COUNTER"
 )
 
+func (e CreativeCustomEventAdvertiserCustomEventTypeEnum) ToPointer() *CreativeCustomEventAdvertiserCustomEventTypeEnum {
+	return &e
+}
+
 func (e *CreativeCustomEventAdvertiserCustomEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADVERTISER_EVENT_TIMER":
 		fallthrough
 	case "ADVERTISER_EVENT_EXIT":
 		fallthrough
 	case "ADVERTISER_EVENT_COUNTER":
-		*e = CreativeCustomEventAdvertiserCustomEventTypeEnum(s)
+		*e = CreativeCustomEventAdvertiserCustomEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCustomEventAdvertiserCustomEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCustomEventAdvertiserCustomEventTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CreativeCustomEventArtworkTypeEnumArtworkTypeImage CreativeCustomEventArtworkTypeEnum = "ARTWORK_TYPE_IMAGE"
 )
 
+func (e CreativeCustomEventArtworkTypeEnum) ToPointer() *CreativeCustomEventArtworkTypeEnum {
+	return &e
+}
+
 func (e *CreativeCustomEventArtworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARTWORK_TYPE_FLASH":
 		fallthrough
 	case "ARTWORK_TYPE_HTML5":
@@ -57,10 +65,10 @@ func (e *CreativeCustomEventArtworkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ARTWORK_TYPE_MIXED":
 		fallthrough
 	case "ARTWORK_TYPE_IMAGE":
-		*e = CreativeCustomEventArtworkTypeEnum(s)
+		*e = CreativeCustomEventArtworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCustomEventArtworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCustomEventArtworkTypeEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	CreativeCustomEventTargetTypeEnumTargetPopup  CreativeCustomEventTargetTypeEnum = "TARGET_POPUP"
 )
 
+func (e CreativeCustomEventTargetTypeEnum) ToPointer() *CreativeCustomEventTargetTypeEnum {
+	return &e
+}
+
 func (e *CreativeCustomEventTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_BLANK":
 		fallthrough
 	case "TARGET_TOP":
@@ -90,10 +102,10 @@ func (e *CreativeCustomEventTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TARGET_PARENT":
 		fallthrough
 	case "TARGET_POPUP":
-		*e = CreativeCustomEventTargetTypeEnum(s)
+		*e = CreativeCustomEventTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCustomEventTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCustomEventTargetTypeEnum: %v", v)
 	}
 }
 

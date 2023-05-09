@@ -18,19 +18,23 @@ const (
 	PullsListReviewCommentsDirectionEnumDesc PullsListReviewCommentsDirectionEnum = "desc"
 )
 
+func (e PullsListReviewCommentsDirectionEnum) ToPointer() *PullsListReviewCommentsDirectionEnum {
+	return &e
+}
+
 func (e *PullsListReviewCommentsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PullsListReviewCommentsDirectionEnum(s)
+		*e = PullsListReviewCommentsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullsListReviewCommentsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PullsListReviewCommentsDirectionEnum: %v", v)
 	}
 }
 

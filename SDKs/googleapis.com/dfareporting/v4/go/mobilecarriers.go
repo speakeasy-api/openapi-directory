@@ -34,7 +34,10 @@ func newMobileCarriers(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingMobileCarriersGet - Gets one mobile carrier by ID.
 func (s *mobileCarriers) DfareportingMobileCarriersGet(ctx context.Context, request operations.DfareportingMobileCarriersGetRequest, security operations.DfareportingMobileCarriersGetSecurity) (*operations.DfareportingMobileCarriersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *mobileCarriers) DfareportingMobileCarriersGet(ctx context.Context, requ
 // DfareportingMobileCarriersList - Retrieves a list of mobile carriers.
 func (s *mobileCarriers) DfareportingMobileCarriersList(ctx context.Context, request operations.DfareportingMobileCarriersListRequest, security operations.DfareportingMobileCarriersListSecurity) (*operations.DfareportingMobileCarriersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/mobileCarriers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

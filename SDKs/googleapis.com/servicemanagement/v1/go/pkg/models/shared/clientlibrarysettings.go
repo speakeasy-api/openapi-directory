@@ -21,12 +21,16 @@ const (
 	ClientLibrarySettingsLaunchStageEnumDeprecated             ClientLibrarySettingsLaunchStageEnum = "DEPRECATED"
 )
 
+func (e ClientLibrarySettingsLaunchStageEnum) ToPointer() *ClientLibrarySettingsLaunchStageEnum {
+	return &e
+}
+
 func (e *ClientLibrarySettingsLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,10 +46,10 @@ func (e *ClientLibrarySettingsLaunchStageEnum) UnmarshalJSON(data []byte) error 
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = ClientLibrarySettingsLaunchStageEnum(s)
+		*e = ClientLibrarySettingsLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientLibrarySettingsLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientLibrarySettingsLaunchStageEnum: %v", v)
 	}
 }
 

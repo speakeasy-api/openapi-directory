@@ -7,6 +7,36 @@ import (
 	"fmt"
 )
 
+// CALocalAccountIdentificationAccountTypeEnum - The bank account type.
+//
+// Possible values: **checking** or **savings**. Defaults to **checking**.
+type CALocalAccountIdentificationAccountTypeEnum string
+
+const (
+	CALocalAccountIdentificationAccountTypeEnumChecking CALocalAccountIdentificationAccountTypeEnum = "checking"
+	CALocalAccountIdentificationAccountTypeEnumSavings  CALocalAccountIdentificationAccountTypeEnum = "savings"
+)
+
+func (e CALocalAccountIdentificationAccountTypeEnum) ToPointer() *CALocalAccountIdentificationAccountTypeEnum {
+	return &e
+}
+
+func (e *CALocalAccountIdentificationAccountTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "checking":
+		fallthrough
+	case "savings":
+		*e = CALocalAccountIdentificationAccountTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CALocalAccountIdentificationAccountTypeEnum: %v", v)
+	}
+}
+
 // CALocalAccountIdentificationTypeEnum - **caLocal**
 type CALocalAccountIdentificationTypeEnum string
 
@@ -14,17 +44,21 @@ const (
 	CALocalAccountIdentificationTypeEnumCaLocal CALocalAccountIdentificationTypeEnum = "caLocal"
 )
 
+func (e CALocalAccountIdentificationTypeEnum) ToPointer() *CALocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *CALocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "caLocal":
-		*e = CALocalAccountIdentificationTypeEnum(s)
+		*e = CALocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CALocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CALocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 
@@ -32,6 +66,10 @@ func (e *CALocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error 
 type CALocalAccountIdentification struct {
 	// The 5- to 12-digit bank account number, without separators or whitespace.
 	AccountNumber string `json:"accountNumber"`
+	// The bank account type.
+	//
+	// Possible values: **checking** or **savings**. Defaults to **checking**.
+	AccountType *CALocalAccountIdentificationAccountTypeEnum `json:"accountType,omitempty"`
 	// The 3-digit institution number, without separators or whitespace.
 	InstitutionNumber string `json:"institutionNumber"`
 	// The 5-digit transit number, without separators or whitespace.

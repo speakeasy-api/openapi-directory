@@ -16,21 +16,25 @@ const (
 	RouteSettingsLoggingLevelEnumOff   RouteSettingsLoggingLevelEnum = "OFF"
 )
 
+func (e RouteSettingsLoggingLevelEnum) ToPointer() *RouteSettingsLoggingLevelEnum {
+	return &e
+}
+
 func (e *RouteSettingsLoggingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR":
 		fallthrough
 	case "INFO":
 		fallthrough
 	case "OFF":
-		*e = RouteSettingsLoggingLevelEnum(s)
+		*e = RouteSettingsLoggingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteSettingsLoggingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteSettingsLoggingLevelEnum: %v", v)
 	}
 }
 

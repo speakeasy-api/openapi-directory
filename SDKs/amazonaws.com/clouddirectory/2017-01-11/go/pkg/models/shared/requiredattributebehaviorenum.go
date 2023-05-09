@@ -14,18 +14,22 @@ const (
 	RequiredAttributeBehaviorEnumNotRequired    RequiredAttributeBehaviorEnum = "NOT_REQUIRED"
 )
 
+func (e RequiredAttributeBehaviorEnum) ToPointer() *RequiredAttributeBehaviorEnum {
+	return &e
+}
+
 func (e *RequiredAttributeBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUIRED_ALWAYS":
 		fallthrough
 	case "NOT_REQUIRED":
-		*e = RequiredAttributeBehaviorEnum(s)
+		*e = RequiredAttributeBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequiredAttributeBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for RequiredAttributeBehaviorEnum: %v", v)
 	}
 }

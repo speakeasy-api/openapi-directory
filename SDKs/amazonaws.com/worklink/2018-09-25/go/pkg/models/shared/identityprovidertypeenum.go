@@ -13,16 +13,20 @@ const (
 	IdentityProviderTypeEnumSaml IdentityProviderTypeEnum = "SAML"
 )
 
+func (e IdentityProviderTypeEnum) ToPointer() *IdentityProviderTypeEnum {
+	return &e
+}
+
 func (e *IdentityProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAML":
-		*e = IdentityProviderTypeEnum(s)
+		*e = IdentityProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdentityProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IdentityProviderTypeEnum: %v", v)
 	}
 }

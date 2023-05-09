@@ -16,17 +16,21 @@ const (
 	RebootNodeXAmzTargetEnumAmazonDaxv3RebootNode RebootNodeXAmzTargetEnum = "AmazonDAXV3.RebootNode"
 )
 
+func (e RebootNodeXAmzTargetEnum) ToPointer() *RebootNodeXAmzTargetEnum {
+	return &e
+}
+
 func (e *RebootNodeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.RebootNode":
-		*e = RebootNodeXAmzTargetEnum(s)
+		*e = RebootNodeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RebootNodeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RebootNodeXAmzTargetEnum: %v", v)
 	}
 }
 

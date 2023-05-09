@@ -22,12 +22,16 @@ const (
 	LineStyleTypeEnumLongDashedDotted        LineStyleTypeEnum = "LONG_DASHED_DOTTED"
 )
 
+func (e LineStyleTypeEnum) ToPointer() *LineStyleTypeEnum {
+	return &e
+}
+
 func (e *LineStyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_DASH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INVISIBLE":
@@ -45,10 +49,10 @@ func (e *LineStyleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LONG_DASHED":
 		fallthrough
 	case "LONG_DASHED_DOTTED":
-		*e = LineStyleTypeEnum(s)
+		*e = LineStyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineStyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineStyleTypeEnum: %v", v)
 	}
 }
 

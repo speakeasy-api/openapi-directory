@@ -17,18 +17,22 @@ const (
 	DependabotAlertSortEnumUpdated DependabotAlertSortEnum = "updated"
 )
 
+func (e DependabotAlertSortEnum) ToPointer() *DependabotAlertSortEnum {
+	return &e
+}
+
 func (e *DependabotAlertSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
-		*e = DependabotAlertSortEnum(s)
+		*e = DependabotAlertSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertSortEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertSortEnum: %v", v)
 	}
 }

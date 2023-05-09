@@ -13,16 +13,20 @@ const (
 	MapComparisonEnumEquals MapComparisonEnum = "EQUALS"
 )
 
+func (e MapComparisonEnum) ToPointer() *MapComparisonEnum {
+	return &e
+}
+
 func (e *MapComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
-		*e = MapComparisonEnum(s)
+		*e = MapComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MapComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for MapComparisonEnum: %v", v)
 	}
 }

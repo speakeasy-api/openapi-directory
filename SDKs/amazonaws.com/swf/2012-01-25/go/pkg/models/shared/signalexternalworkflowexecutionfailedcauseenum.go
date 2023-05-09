@@ -15,20 +15,24 @@ const (
 	SignalExternalWorkflowExecutionFailedCauseEnumOperationNotPermitted                       SignalExternalWorkflowExecutionFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e SignalExternalWorkflowExecutionFailedCauseEnum) ToPointer() *SignalExternalWorkflowExecutionFailedCauseEnum {
+	return &e
+}
+
 func (e *SignalExternalWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_EXTERNAL_WORKFLOW_EXECUTION":
 		fallthrough
 	case "SIGNAL_EXTERNAL_WORKFLOW_EXECUTION_RATE_EXCEEDED":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = SignalExternalWorkflowExecutionFailedCauseEnum(s)
+		*e = SignalExternalWorkflowExecutionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignalExternalWorkflowExecutionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for SignalExternalWorkflowExecutionFailedCauseEnum: %v", v)
 	}
 }

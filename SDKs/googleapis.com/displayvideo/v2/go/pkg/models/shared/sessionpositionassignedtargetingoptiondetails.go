@@ -15,19 +15,23 @@ const (
 	SessionPositionAssignedTargetingOptionDetailsSessionPositionEnumSessionPositionFirstImpression SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum = "SESSION_POSITION_FIRST_IMPRESSION"
 )
 
+func (e SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum) ToPointer() *SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum {
+	return &e
+}
+
 func (e *SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SESSION_POSITION_UNSPECIFIED":
 		fallthrough
 	case "SESSION_POSITION_FIRST_IMPRESSION":
-		*e = SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum(s)
+		*e = SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionPositionAssignedTargetingOptionDetailsSessionPositionEnum: %v", v)
 	}
 }
 

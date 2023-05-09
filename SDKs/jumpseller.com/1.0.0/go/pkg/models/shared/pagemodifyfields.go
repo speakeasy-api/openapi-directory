@@ -22,21 +22,25 @@ const (
 	PageModifyFieldsStatusEnumHidden PageModifyFieldsStatusEnum = "hidden"
 )
 
+func (e PageModifyFieldsStatusEnum) ToPointer() *PageModifyFieldsStatusEnum {
+	return &e
+}
+
 func (e *PageModifyFieldsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "draft":
 		fallthrough
 	case "hidden":
-		*e = PageModifyFieldsStatusEnum(s)
+		*e = PageModifyFieldsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageModifyFieldsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PageModifyFieldsStatusEnum: %v", v)
 	}
 }
 

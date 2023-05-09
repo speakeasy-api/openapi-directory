@@ -59,7 +59,10 @@ func newPayoutsAPI(defaultClient, securityClient HTTPClient, serverURL, language
 // ```
 func (s *payoutsAPI) VerifyPayout(ctx context.Context, request operations.VerifyPayoutRequest) (*operations.VerifyPayoutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/payout/{withdrawals-id}/verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/payout/{withdrawals-id}/verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/wikipathways.org/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetFindInteractionsRequest{
-        Format: "dump",
-        Query: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.AllFunctions.GetFindInteractions(ctx, req)
+    res, err := s.AllFunctions.GetFindInteractions(ctx, operations.GetFindInteractionsRequest{
+        Format: operations.GetFindInteractionsFormatEnumDump.ToPointer(),
+        Query: "provident",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,101 +43,101 @@ func main() {
 ## Available Resources and Operations
 
 
-### AllFunctions
+### [AllFunctions](docs/allfunctions/README.md)
 
-* `GetFindInteractions` - findInteractionsFind interactions defined in WikiPathways pathways.
-* `GetFindPathwaysByLiterature` - findPathwaysByLiterature
-* `GetFindPathwaysByText` - findPathwaysByText
-* `GetFindPathwaysByXref` - findPathwaysByXref
-* `GetGetColoredPathway` - getColoredPathwayGet a colored image version of the pathway.
-* `GetGetCurationTagHistory` - getCurationTagHistory
-* `GetGetCurationTags` - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetCurationTagsByName` - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetOntologyTermsByPathway` - getOntologyTermsByPathway
-* `GetGetPathway` - getPathway
-* `GetGetPathwayAs` - getPathwayAsDownload a pathway in the specified file format.
-* `GetGetPathwayHistory` - getPathwayHistoryGet the revision history of a pathway.
-* `GetGetPathwayInfo` - getPathwayInfoGet some general info about the pathway, such as the name, species, without downloading the GPML.
-* `GetGetPathwaysByOntologyTerm` - getPathwaysByOntologyTerm
-* `GetGetPathwaysByParentOntologyTerm` - getPathwaysByParentOntologyTerm
-* `GetGetRecentChanges` - getRecentChangesGet the recently changed pathways.<br>Note: the recent changes table only retains items for a limited time (2 months), so there is no guarantee that you will get all changes when the timestamp points to a date that is more than 2 months in the past.
-* `GetGetUserByOrcid` - getUserByOrcid
-* `GetGetXrefList` - getXrefList
-* `GetListOrganisms` - listOrganisms
-* `GetListPathways` - listPathways
-* `GetLogin` - loginStart a logged in session, using an existing WikiPathways account. This function will return an authentication code that can be used to excecute methods that need authentication (e.g. updatePathway).
-* `GetRemoveCurationTag` - removeCurationTagRemove a curation tag from a pathway.
-* `GetRemoveOntologyTag` - removeOntologyTag
-* `GetSaveCurationTag` - saveCurationTag
-* `GetSaveOntologyTag` - saveOntologyTag
-* `GetUpdatePathway` - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
-* `PostCreatePathway` - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
+* [GetFindInteractions](docs/allfunctions/README.md#getfindinteractions) - findInteractionsFind interactions defined in WikiPathways pathways.
+* [GetFindPathwaysByLiterature](docs/allfunctions/README.md#getfindpathwaysbyliterature) - findPathwaysByLiterature
+* [GetFindPathwaysByText](docs/allfunctions/README.md#getfindpathwaysbytext) - findPathwaysByText
+* [GetFindPathwaysByXref](docs/allfunctions/README.md#getfindpathwaysbyxref) - findPathwaysByXref
+* [GetGetColoredPathway](docs/allfunctions/README.md#getgetcoloredpathway) - getColoredPathwayGet a colored image version of the pathway.
+* [GetGetCurationTagHistory](docs/allfunctions/README.md#getgetcurationtaghistory) - getCurationTagHistory
+* [GetGetCurationTags](docs/allfunctions/README.md#getgetcurationtags) - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetCurationTagsByName](docs/allfunctions/README.md#getgetcurationtagsbyname) - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetOntologyTermsByPathway](docs/allfunctions/README.md#getgetontologytermsbypathway) - getOntologyTermsByPathway
+* [GetGetPathway](docs/allfunctions/README.md#getgetpathway) - getPathway
+* [GetGetPathwayAs](docs/allfunctions/README.md#getgetpathwayas) - getPathwayAsDownload a pathway in the specified file format.
+* [GetGetPathwayHistory](docs/allfunctions/README.md#getgetpathwayhistory) - getPathwayHistoryGet the revision history of a pathway.
+* [GetGetPathwayInfo](docs/allfunctions/README.md#getgetpathwayinfo) - getPathwayInfoGet some general info about the pathway, such as the name, species, without downloading the GPML.
+* [GetGetPathwaysByOntologyTerm](docs/allfunctions/README.md#getgetpathwaysbyontologyterm) - getPathwaysByOntologyTerm
+* [GetGetPathwaysByParentOntologyTerm](docs/allfunctions/README.md#getgetpathwaysbyparentontologyterm) - getPathwaysByParentOntologyTerm
+* [GetGetRecentChanges](docs/allfunctions/README.md#getgetrecentchanges) - getRecentChangesGet the recently changed pathways.<br>Note: the recent changes table only retains items for a limited time (2 months), so there is no guarantee that you will get all changes when the timestamp points to a date that is more than 2 months in the past.
+* [GetGetUserByOrcid](docs/allfunctions/README.md#getgetuserbyorcid) - getUserByOrcid
+* [GetGetXrefList](docs/allfunctions/README.md#getgetxreflist) - getXrefList
+* [GetListOrganisms](docs/allfunctions/README.md#getlistorganisms) - listOrganisms
+* [GetListPathways](docs/allfunctions/README.md#getlistpathways) - listPathways
+* [GetLogin](docs/allfunctions/README.md#getlogin) - loginStart a logged in session, using an existing WikiPathways account. This function will return an authentication code that can be used to excecute methods that need authentication (e.g. updatePathway).
+* [GetRemoveCurationTag](docs/allfunctions/README.md#getremovecurationtag) - removeCurationTagRemove a curation tag from a pathway.
+* [GetRemoveOntologyTag](docs/allfunctions/README.md#getremoveontologytag) - removeOntologyTag
+* [GetSaveCurationTag](docs/allfunctions/README.md#getsavecurationtag) - saveCurationTag
+* [GetSaveOntologyTag](docs/allfunctions/README.md#getsaveontologytag) - saveOntologyTag
+* [GetUpdatePathway](docs/allfunctions/README.md#getupdatepathway) - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
+* [PostCreatePathway](docs/allfunctions/README.md#postcreatepathway) - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
 
-### CurationTags
+### [CurationTags](docs/curationtags/README.md)
 
-* `GetGetCurationTagHistory` - getCurationTagHistory
-* `GetGetCurationTags` - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetCurationTagsByName` - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetOntologyTermsByPathway` - getOntologyTermsByPathway
-* `GetSaveCurationTag` - saveCurationTag
+* [GetGetCurationTagHistory](docs/curationtags/README.md#getgetcurationtaghistory) - getCurationTagHistory
+* [GetGetCurationTags](docs/curationtags/README.md#getgetcurationtags) - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetCurationTagsByName](docs/curationtags/README.md#getgetcurationtagsbyname) - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetOntologyTermsByPathway](docs/curationtags/README.md#getgetontologytermsbypathway) - getOntologyTermsByPathway
+* [GetSaveCurationTag](docs/curationtags/README.md#getsavecurationtag) - saveCurationTag
 
-### Download
+### [Download](docs/download/README.md)
 
-* `GetGetColoredPathway` - getColoredPathwayGet a colored image version of the pathway.
-* `GetGetPathwayAs` - getPathwayAsDownload a pathway in the specified file format.
-* `GetGetXrefList` - getXrefList
+* [GetGetColoredPathway](docs/download/README.md#getgetcoloredpathway) - getColoredPathwayGet a colored image version of the pathway.
+* [GetGetPathwayAs](docs/download/README.md#getgetpathwayas) - getPathwayAsDownload a pathway in the specified file format.
+* [GetGetXrefList](docs/download/README.md#getgetxreflist) - getXrefList
 
-### History
+### [History](docs/history/README.md)
 
-* `GetGetCurationTagHistory` - getCurationTagHistory
-* `GetGetPathwayHistory` - getPathwayHistoryGet the revision history of a pathway.
-* `GetGetRecentChanges` - getRecentChangesGet the recently changed pathways.<br>Note: the recent changes table only retains items for a limited time (2 months), so there is no guarantee that you will get all changes when the timestamp points to a date that is more than 2 months in the past.
+* [GetGetCurationTagHistory](docs/history/README.md#getgetcurationtaghistory) - getCurationTagHistory
+* [GetGetPathwayHistory](docs/history/README.md#getgetpathwayhistory) - getPathwayHistoryGet the revision history of a pathway.
+* [GetGetRecentChanges](docs/history/README.md#getgetrecentchanges) - getRecentChangesGet the recently changed pathways.<br>Note: the recent changes table only retains items for a limited time (2 months), so there is no guarantee that you will get all changes when the timestamp points to a date that is more than 2 months in the past.
 
-### OntologyTags
+### [OntologyTags](docs/ontologytags/README.md)
 
-* `GetGetPathwaysByOntologyTerm` - getPathwaysByOntologyTerm
-* `GetGetPathwaysByParentOntologyTerm` - getPathwaysByParentOntologyTerm
-* `GetRemoveOntologyTag` - removeOntologyTag
-* `GetSaveOntologyTag` - saveOntologyTag
+* [GetGetPathwaysByOntologyTerm](docs/ontologytags/README.md#getgetpathwaysbyontologyterm) - getPathwaysByOntologyTerm
+* [GetGetPathwaysByParentOntologyTerm](docs/ontologytags/README.md#getgetpathwaysbyparentontologyterm) - getPathwaysByParentOntologyTerm
+* [GetRemoveOntologyTag](docs/ontologytags/README.md#getremoveontologytag) - removeOntologyTag
+* [GetSaveOntologyTag](docs/ontologytags/README.md#getsaveontologytag) - saveOntologyTag
 
-### OrganismList
+### [OrganismList](docs/organismlist/README.md)
 
-* `GetListOrganisms` - listOrganisms
+* [GetListOrganisms](docs/organismlist/README.md#getlistorganisms) - listOrganisms
 
-### PathwayInformation
+### [PathwayInformation](docs/pathwayinformation/README.md)
 
-* `GetGetCurationTags` - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetOntologyTermsByPathway` - getOntologyTermsByPathway
-* `GetGetPathway` - getPathway
-* `GetGetPathwayInfo` - getPathwayInfoGet some general info about the pathway, such as the name, species, without downloading the GPML.
+* [GetGetCurationTags](docs/pathwayinformation/README.md#getgetcurationtags) - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetOntologyTermsByPathway](docs/pathwayinformation/README.md#getgetontologytermsbypathway) - getOntologyTermsByPathway
+* [GetGetPathway](docs/pathwayinformation/README.md#getgetpathway) - getPathway
+* [GetGetPathwayInfo](docs/pathwayinformation/README.md#getgetpathwayinfo) - getPathwayInfoGet some general info about the pathway, such as the name, species, without downloading the GPML.
 
-### PathwayList
+### [PathwayList](docs/pathwaylist/README.md)
 
-* `GetGetCurationTagsByName` - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
-* `GetGetPathwaysByOntologyTerm` - getPathwaysByOntologyTerm
-* `GetGetPathwaysByParentOntologyTerm` - getPathwaysByParentOntologyTerm
-* `GetListPathways` - listPathways
+* [GetGetCurationTagsByName](docs/pathwaylist/README.md#getgetcurationtagsbyname) - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
+* [GetGetPathwaysByOntologyTerm](docs/pathwaylist/README.md#getgetpathwaysbyontologyterm) - getPathwaysByOntologyTerm
+* [GetGetPathwaysByParentOntologyTerm](docs/pathwaylist/README.md#getgetpathwaysbyparentontologyterm) - getPathwaysByParentOntologyTerm
+* [GetListPathways](docs/pathwaylist/README.md#getlistpathways) - listPathways
 
-### Search
+### [Search](docs/search/README.md)
 
-* `GetFindInteractions` - findInteractionsFind interactions defined in WikiPathways pathways.
-* `GetFindPathwaysByLiterature` - findPathwaysByLiterature
-* `GetFindPathwaysByText` - findPathwaysByText
-* `GetFindPathwaysByXref` - findPathwaysByXref
-* `GetRemoveCurationTag` - removeCurationTagRemove a curation tag from a pathway.
+* [GetFindInteractions](docs/search/README.md#getfindinteractions) - findInteractionsFind interactions defined in WikiPathways pathways.
+* [GetFindPathwaysByLiterature](docs/search/README.md#getfindpathwaysbyliterature) - findPathwaysByLiterature
+* [GetFindPathwaysByText](docs/search/README.md#getfindpathwaysbytext) - findPathwaysByText
+* [GetFindPathwaysByXref](docs/search/README.md#getfindpathwaysbyxref) - findPathwaysByXref
+* [GetRemoveCurationTag](docs/search/README.md#getremovecurationtag) - removeCurationTagRemove a curation tag from a pathway.
 
-### UserManagement
+### [UserManagement](docs/usermanagement/README.md)
 
-* `GetGetUserByOrcid` - getUserByOrcid
-* `GetLogin` - loginStart a logged in session, using an existing WikiPathways account. This function will return an authentication code that can be used to excecute methods that need authentication (e.g. updatePathway).
+* [GetGetUserByOrcid](docs/usermanagement/README.md#getgetuserbyorcid) - getUserByOrcid
+* [GetLogin](docs/usermanagement/README.md#getlogin) - loginStart a logged in session, using an existing WikiPathways account. This function will return an authentication code that can be used to excecute methods that need authentication (e.g. updatePathway).
 
-### WriteCreateUpdateDelete
+### [WriteCreateUpdateDelete](docs/writecreateupdatedelete/README.md)
 
-* `GetRemoveOntologyTag` - removeOntologyTag
-* `GetSaveCurationTag` - saveCurationTag
-* `GetSaveOntologyTag` - saveOntologyTag
-* `GetUpdatePathway` - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
-* `PostCreatePathway` - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
+* [GetRemoveOntologyTag](docs/writecreateupdatedelete/README.md#getremoveontologytag) - removeOntologyTag
+* [GetSaveCurationTag](docs/writecreateupdatedelete/README.md#getsavecurationtag) - saveCurationTag
+* [GetSaveOntologyTag](docs/writecreateupdatedelete/README.md#getsaveontologytag) - saveOntologyTag
+* [GetUpdatePathway](docs/writecreateupdatedelete/README.md#getupdatepathway) - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
+* [PostCreatePathway](docs/writecreateupdatedelete/README.md#postcreatepathway) - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

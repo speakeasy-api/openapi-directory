@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/archive.org/search/1.0.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetSearchV1FieldsRequest{
-        Callback: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetSearchV1Fields(ctx, req)
+    res, err := s.GetSearchV1Fields(ctx, operations.GetSearchV1FieldsRequest{
+        Callback: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,12 +41,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetSearchV1Fields` - Fields that can be requested
-* `GetSearchV1Organic` - Return relevance-based results from search queries
+* [GetSearchV1Fields](docs/sdk/README.md#getsearchv1fields) - Fields that can be requested
+* [GetSearchV1Organic](docs/sdk/README.md#getsearchv1organic) - Return relevance-based results from search queries
 
-* `GetSearchV1Scrape` - Scrape search results from Internet Archive, allowing a scrolling cursor
+* [GetSearchV1Scrape](docs/sdk/README.md#getsearchv1scrape) - Scrape search results from Internet Archive, allowing a scrolling cursor
 
 <!-- End SDK Available Operations -->
 

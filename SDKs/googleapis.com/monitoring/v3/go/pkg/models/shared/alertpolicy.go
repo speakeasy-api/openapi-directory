@@ -17,12 +17,16 @@ const (
 	AlertPolicyCombinerEnumAndWithMatchingResource AlertPolicyCombinerEnum = "AND_WITH_MATCHING_RESOURCE"
 )
 
+func (e AlertPolicyCombinerEnum) ToPointer() *AlertPolicyCombinerEnum {
+	return &e
+}
+
 func (e *AlertPolicyCombinerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMBINE_UNSPECIFIED":
 		fallthrough
 	case "AND":
@@ -30,10 +34,10 @@ func (e *AlertPolicyCombinerEnum) UnmarshalJSON(data []byte) error {
 	case "OR":
 		fallthrough
 	case "AND_WITH_MATCHING_RESOURCE":
-		*e = AlertPolicyCombinerEnum(s)
+		*e = AlertPolicyCombinerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlertPolicyCombinerEnum: %s", s)
+		return fmt.Errorf("invalid value for AlertPolicyCombinerEnum: %v", v)
 	}
 }
 

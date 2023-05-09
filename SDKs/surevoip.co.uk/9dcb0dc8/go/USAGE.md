@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -20,13 +19,11 @@ func main() {
         }),
     )
 
-    req := operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
+    ctx := context.Background()
+    res, err := s.Announcements.DeleteCustomersAccountAnnouncementsAnnouncementID(ctx, operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
         Account: 548814,
         AnnouncementID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Announcements.DeleteCustomersAccountAnnouncementsAnnouncementID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

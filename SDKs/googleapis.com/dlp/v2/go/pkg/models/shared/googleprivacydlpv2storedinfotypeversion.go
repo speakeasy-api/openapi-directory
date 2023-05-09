@@ -18,12 +18,16 @@ const (
 	GooglePrivacyDlpV2StoredInfoTypeVersionStateEnumInvalid                        GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum = "INVALID"
 )
 
+func (e GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum) ToPointer() *GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORED_INFO_TYPE_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -33,10 +37,10 @@ func (e *GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum) UnmarshalJSON(data []
 	case "FAILED":
 		fallthrough
 	case "INVALID":
-		*e = GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum(s)
+		*e = GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2StoredInfoTypeVersionStateEnum: %v", v)
 	}
 }
 

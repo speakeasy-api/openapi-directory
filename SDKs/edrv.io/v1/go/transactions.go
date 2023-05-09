@@ -34,7 +34,10 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetTransaction - Get a specific transaction
 func (s *transactions) GetTransaction(ctx context.Context, request operations.GetTransactionRequest) (*operations.GetTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -75,7 +78,10 @@ func (s *transactions) GetTransaction(ctx context.Context, request operations.Ge
 // GetTransactionCost - Get a specific transaction's cost
 func (s *transactions) GetTransactionCost(ctx context.Context, request operations.GetTransactionCostRequest) (*operations.GetTransactionCostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}/cost", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/transactions/{id}/cost", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

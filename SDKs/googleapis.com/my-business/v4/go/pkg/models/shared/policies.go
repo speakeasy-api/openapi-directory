@@ -17,12 +17,16 @@ const (
 	PoliciesAllInclusiveAvailableExceptionEnumDependentOnDayOfWeek PoliciesAllInclusiveAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesAllInclusiveAvailableExceptionEnum) ToPointer() *PoliciesAllInclusiveAvailableExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesAllInclusiveAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *PoliciesAllInclusiveAvailableExceptionEnum) UnmarshalJSON(data []byte) 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesAllInclusiveAvailableExceptionEnum(s)
+		*e = PoliciesAllInclusiveAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesAllInclusiveAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesAllInclusiveAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	PoliciesAllInclusiveOnlyExceptionEnumDependentOnDayOfWeek PoliciesAllInclusiveOnlyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesAllInclusiveOnlyExceptionEnum) ToPointer() *PoliciesAllInclusiveOnlyExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesAllInclusiveOnlyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *PoliciesAllInclusiveOnlyExceptionEnum) UnmarshalJSON(data []byte) error
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesAllInclusiveOnlyExceptionEnum(s)
+		*e = PoliciesAllInclusiveOnlyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesAllInclusiveOnlyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesAllInclusiveOnlyExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	PoliciesCheckinTimeExceptionEnumDependentOnDayOfWeek PoliciesCheckinTimeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesCheckinTimeExceptionEnum) ToPointer() *PoliciesCheckinTimeExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesCheckinTimeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *PoliciesCheckinTimeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesCheckinTimeExceptionEnum(s)
+		*e = PoliciesCheckinTimeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesCheckinTimeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesCheckinTimeExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	PoliciesCheckoutTimeExceptionEnumDependentOnDayOfWeek PoliciesCheckoutTimeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesCheckoutTimeExceptionEnum) ToPointer() *PoliciesCheckoutTimeExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesCheckoutTimeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *PoliciesCheckoutTimeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesCheckoutTimeExceptionEnum(s)
+		*e = PoliciesCheckoutTimeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesCheckoutTimeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesCheckoutTimeExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	PoliciesKidsStayFreeExceptionEnumDependentOnDayOfWeek PoliciesKidsStayFreeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesKidsStayFreeExceptionEnum) ToPointer() *PoliciesKidsStayFreeExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesKidsStayFreeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *PoliciesKidsStayFreeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesKidsStayFreeExceptionEnum(s)
+		*e = PoliciesKidsStayFreeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesKidsStayFreeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesKidsStayFreeExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	PoliciesMaxChildAgeExceptionEnumDependentOnDayOfWeek PoliciesMaxChildAgeExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesMaxChildAgeExceptionEnum) ToPointer() *PoliciesMaxChildAgeExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesMaxChildAgeExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *PoliciesMaxChildAgeExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesMaxChildAgeExceptionEnum(s)
+		*e = PoliciesMaxChildAgeExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesMaxChildAgeExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesMaxChildAgeExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	PoliciesMaxKidsStayFreeCountExceptionEnumDependentOnDayOfWeek PoliciesMaxKidsStayFreeCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesMaxKidsStayFreeCountExceptionEnum) ToPointer() *PoliciesMaxKidsStayFreeCountExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesMaxKidsStayFreeCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *PoliciesMaxKidsStayFreeCountExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesMaxKidsStayFreeCountExceptionEnum(s)
+		*e = PoliciesMaxKidsStayFreeCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesMaxKidsStayFreeCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesMaxKidsStayFreeCountExceptionEnum: %v", v)
 	}
 }
 
@@ -227,12 +255,16 @@ const (
 	PoliciesSmokeFreePropertyExceptionEnumDependentOnDayOfWeek PoliciesSmokeFreePropertyExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e PoliciesSmokeFreePropertyExceptionEnum) ToPointer() *PoliciesSmokeFreePropertyExceptionEnum {
+	return &e
+}
+
 func (e *PoliciesSmokeFreePropertyExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -240,10 +272,10 @@ func (e *PoliciesSmokeFreePropertyExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = PoliciesSmokeFreePropertyExceptionEnum(s)
+		*e = PoliciesSmokeFreePropertyExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PoliciesSmokeFreePropertyExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for PoliciesSmokeFreePropertyExceptionEnum: %v", v)
 	}
 }
 

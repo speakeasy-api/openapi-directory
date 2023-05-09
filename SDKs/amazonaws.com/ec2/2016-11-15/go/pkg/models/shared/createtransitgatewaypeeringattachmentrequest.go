@@ -98,12 +98,16 @@ const (
 	CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTy
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransitGatewayPeeringAttachmentRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

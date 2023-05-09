@@ -39,12 +39,16 @@ const (
 	AWSRegionEnumCnNorthwest1 AWSRegionEnum = "cn-northwest-1"
 )
 
+func (e AWSRegionEnum) ToPointer() *AWSRegionEnum {
+	return &e
+}
+
 func (e *AWSRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "af-south-1":
 		fallthrough
 	case "ap-east-1":
@@ -96,9 +100,9 @@ func (e *AWSRegionEnum) UnmarshalJSON(data []byte) error {
 	case "cn-north-1":
 		fallthrough
 	case "cn-northwest-1":
-		*e = AWSRegionEnum(s)
+		*e = AWSRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AWSRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for AWSRegionEnum: %v", v)
 	}
 }

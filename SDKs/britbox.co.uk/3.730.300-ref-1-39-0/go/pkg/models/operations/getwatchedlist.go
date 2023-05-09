@@ -23,19 +23,23 @@ const (
 	GetWatchedListOrderByEnumDateModified GetWatchedListOrderByEnum = "date-modified"
 )
 
+func (e GetWatchedListOrderByEnum) ToPointer() *GetWatchedListOrderByEnum {
+	return &e
+}
+
 func (e *GetWatchedListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date-added":
 		fallthrough
 	case "date-modified":
-		*e = GetWatchedListOrderByEnum(s)
+		*e = GetWatchedListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWatchedListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWatchedListOrderByEnum: %v", v)
 	}
 }
 

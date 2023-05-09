@@ -16,17 +16,21 @@ const (
 	RenewDomainXAmzTargetEnumRoute53DomainsV20140515RenewDomain RenewDomainXAmzTargetEnum = "Route53Domains_v20140515.RenewDomain"
 )
 
+func (e RenewDomainXAmzTargetEnum) ToPointer() *RenewDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *RenewDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.RenewDomain":
-		*e = RenewDomainXAmzTargetEnum(s)
+		*e = RenewDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenewDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RenewDomainXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newTracks(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DeleteTracksTrackID - Deletes a track.
 func (s *tracks) DeleteTracksTrackID(ctx context.Context, request operations.DeleteTracksTrackIDRequest, security operations.DeleteTracksTrackIDSecurity) (*operations.DeleteTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *tracks) DeleteTracksTrackID(ctx context.Context, request operations.Del
 // GetTracksTrackID - Returns a track.
 func (s *tracks) GetTracksTrackID(ctx context.Context, request operations.GetTracksTrackIDRequest, security operations.GetTracksTrackIDSecurity) (*operations.GetTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *tracks) GetTracksTrackID(ctx context.Context, request operations.GetTra
 // GetTracksTrackIDComments - Returns the comments posted on the track(track_id).
 func (s *tracks) GetTracksTrackIDComments(ctx context.Context, request operations.GetTracksTrackIDCommentsRequest, security operations.GetTracksTrackIDCommentsSecurity) (*operations.GetTracksTrackIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *tracks) GetTracksTrackIDComments(ctx context.Context, request operation
 // GetTracksTrackIDFavoriters - Returns a list of users who have favorited or liked the track.
 func (s *tracks) GetTracksTrackIDFavoriters(ctx context.Context, request operations.GetTracksTrackIDFavoritersRequest, security operations.GetTracksTrackIDFavoritersSecurity) (*operations.GetTracksTrackIDFavoritersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/favoriters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/favoriters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -285,7 +297,10 @@ func (s *tracks) GetTracksTrackIDFavoriters(ctx context.Context, request operati
 // GetTracksTrackIDRelated - Returns all related tracks of track on SoundCloud.
 func (s *tracks) GetTracksTrackIDRelated(ctx context.Context, request operations.GetTracksTrackIDRelatedRequest, security operations.GetTracksTrackIDRelatedSecurity) (*operations.GetTracksTrackIDRelatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/related", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/related", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +368,10 @@ func (s *tracks) GetTracksTrackIDRelated(ctx context.Context, request operations
 // GetTracksTrackIDReposters - Returns a collection of track's reposters.
 func (s *tracks) GetTracksTrackIDReposters(ctx context.Context, request operations.GetTracksTrackIDRepostersRequest, security operations.GetTracksTrackIDRepostersSecurity) (*operations.GetTracksTrackIDRepostersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/reposters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/reposters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -421,7 +439,10 @@ func (s *tracks) GetTracksTrackIDReposters(ctx context.Context, request operatio
 // GetTracksTrackIDStreams - Returns a track's streamable URLs
 func (s *tracks) GetTracksTrackIDStreams(ctx context.Context, request operations.GetTracksTrackIDStreamsRequest, security operations.GetTracksTrackIDStreamsSecurity) (*operations.GetTracksTrackIDStreamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/streams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/streams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -552,7 +573,10 @@ func (s *tracks) PostTracks(ctx context.Context, request shared.TrackDataRequest
 // PostTracksTrackIDComments - Returns the newly created comment on success
 func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operations.PostTracksTrackIDCommentsRequest, security operations.PostTracksTrackIDCommentsSecurity) (*operations.PostTracksTrackIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -626,7 +650,10 @@ func (s *tracks) PostTracksTrackIDComments(ctx context.Context, request operatio
 // PutTracksTrackIDJSON - Updates a track's information.
 func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.PutTracksTrackIDJSONRequest, security operations.PutTracksTrackIDJSONSecurity) (*operations.PutTracksTrackIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TrackMetadataRequest", "json")
 	if err != nil {
@@ -689,7 +716,10 @@ func (s *tracks) PutTracksTrackIDJSON(ctx context.Context, request operations.Pu
 // PutTracksTrackIDMultipart - Updates a track's information.
 func (s *tracks) PutTracksTrackIDMultipart(ctx context.Context, request operations.PutTracksTrackIDMultipartRequest, security operations.PutTracksTrackIDMultipartSecurity) (*operations.PutTracksTrackIDMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TrackDataRequest", "multipart")
 	if err != nil {

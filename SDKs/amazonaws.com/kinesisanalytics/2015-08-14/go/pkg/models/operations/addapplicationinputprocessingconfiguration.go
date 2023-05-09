@@ -16,17 +16,21 @@ const (
 	AddApplicationInputProcessingConfigurationXAmzTargetEnumKinesisAnalytics20150814AddApplicationInputProcessingConfiguration AddApplicationInputProcessingConfigurationXAmzTargetEnum = "KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration"
 )
 
+func (e AddApplicationInputProcessingConfigurationXAmzTargetEnum) ToPointer() *AddApplicationInputProcessingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddApplicationInputProcessingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20150814.AddApplicationInputProcessingConfiguration":
-		*e = AddApplicationInputProcessingConfigurationXAmzTargetEnum(s)
+		*e = AddApplicationInputProcessingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddApplicationInputProcessingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddApplicationInputProcessingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,18 +20,22 @@ const (
 	ScaStatusAuthorisationConfirmationEnumFailed    ScaStatusAuthorisationConfirmationEnum = "failed"
 )
 
+func (e ScaStatusAuthorisationConfirmationEnum) ToPointer() *ScaStatusAuthorisationConfirmationEnum {
+	return &e
+}
+
 func (e *ScaStatusAuthorisationConfirmationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "finalised":
 		fallthrough
 	case "failed":
-		*e = ScaStatusAuthorisationConfirmationEnum(s)
+		*e = ScaStatusAuthorisationConfirmationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScaStatusAuthorisationConfirmationEnum: %s", s)
+		return fmt.Errorf("invalid value for ScaStatusAuthorisationConfirmationEnum: %v", v)
 	}
 }

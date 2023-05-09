@@ -16,21 +16,25 @@ const (
 	CloudCdnWorkloadCacheFillOriginServiceEnumCacheFillOriginServiceBackendService           CloudCdnWorkloadCacheFillOriginServiceEnum = "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE"
 )
 
+func (e CloudCdnWorkloadCacheFillOriginServiceEnum) ToPointer() *CloudCdnWorkloadCacheFillOriginServiceEnum {
+	return &e
+}
+
 func (e *CloudCdnWorkloadCacheFillOriginServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CACHE_FILL_ORIGIN_SERVICE_UNSPECIFIED":
 		fallthrough
 	case "CACHE_FILL_ORIGIN_SERVICE_GOOGLE_CLOUD_STORAGE_BUCKET":
 		fallthrough
 	case "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE":
-		*e = CloudCdnWorkloadCacheFillOriginServiceEnum(s)
+		*e = CloudCdnWorkloadCacheFillOriginServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudCdnWorkloadCacheFillOriginServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudCdnWorkloadCacheFillOriginServiceEnum: %v", v)
 	}
 }
 

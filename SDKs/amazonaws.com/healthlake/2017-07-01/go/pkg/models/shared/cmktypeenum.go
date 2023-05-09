@@ -14,18 +14,22 @@ const (
 	CmkTypeEnumAwsOwnedKmsKey        CmkTypeEnum = "AWS_OWNED_KMS_KEY"
 )
 
+func (e CmkTypeEnum) ToPointer() *CmkTypeEnum {
+	return &e
+}
+
 func (e *CmkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_MANAGED_KMS_KEY":
 		fallthrough
 	case "AWS_OWNED_KMS_KEY":
-		*e = CmkTypeEnum(s)
+		*e = CmkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CmkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CmkTypeEnum: %v", v)
 	}
 }

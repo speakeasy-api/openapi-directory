@@ -35,7 +35,10 @@ func newTestHarness(defaultClient, securityClient HTTPClient, serverURL, languag
 // CreateTestHarnessScenarioUsingPOST - createTestHarnessScenario
 func (s *testHarness) CreateTestHarnessScenarioUsingPOST(ctx context.Context, request operations.CreateTestHarnessScenarioUsingPOSTRequest) (*operations.CreateTestHarnessScenarioUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestHarnessScenarioModel", "json")
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *testHarness) CreateTestHarnessScenarioUsingPOST(ctx context.Context, re
 // DELETETestHarnessScenarioUsingDELETE - deleteTestHarnessScenario
 func (s *testHarness) DELETETestHarnessScenarioUsingDELETE(ctx context.Context, request operations.DELETETestHarnessScenarioUsingDELETERequest) (*operations.DELETETestHarnessScenarioUsingDELETEResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +157,10 @@ func (s *testHarness) DELETETestHarnessScenarioUsingDELETE(ctx context.Context, 
 // GETTestHarnessScenarioUsingGET - getTestHarnessScenario
 func (s *testHarness) GETTestHarnessScenarioUsingGET(ctx context.Context, request operations.GETTestHarnessScenarioUsingGETRequest) (*operations.GETTestHarnessScenarioUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +217,10 @@ func (s *testHarness) GETTestHarnessScenarioUsingGET(ctx context.Context, reques
 // GETTestHarnessScenariosUsingGET - getTestHarnessScenarios
 func (s *testHarness) GETTestHarnessScenariosUsingGET(ctx context.Context, request operations.GETTestHarnessScenariosUsingGETRequest) (*operations.GETTestHarnessScenariosUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +277,10 @@ func (s *testHarness) GETTestHarnessScenariosUsingGET(ctx context.Context, reque
 // UpdateTestHarnessScenarioUsingPUT - updateTestHarnessScenario
 func (s *testHarness) UpdateTestHarnessScenarioUsingPUT(ctx context.Context, request operations.UpdateTestHarnessScenarioUsingPUTRequest) (*operations.UpdateTestHarnessScenarioUsingPUTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/testHarness/scenarios/{scenarioName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestHarnessScenarioModel", "json")
 	if err != nil {

@@ -34,7 +34,10 @@ func newManifests(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeploymentmanagerManifestsGet - Gets information about a specific manifest.
 func (s *manifests) DeploymentmanagerManifestsGet(ctx context.Context, request operations.DeploymentmanagerManifestsGetRequest, security operations.DeploymentmanagerManifestsGetSecurity) (*operations.DeploymentmanagerManifestsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/manifests/{manifest}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *manifests) DeploymentmanagerManifestsGet(ctx context.Context, request o
 // DeploymentmanagerManifestsList - Lists all manifests for a given deployment.
 func (s *manifests) DeploymentmanagerManifestsList(ctx context.Context, request operations.DeploymentmanagerManifestsListRequest, security operations.DeploymentmanagerManifestsListSecurity) (*operations.DeploymentmanagerManifestsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/manifests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/alpha/projects/{project}/global/deployments/{deployment}/manifests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

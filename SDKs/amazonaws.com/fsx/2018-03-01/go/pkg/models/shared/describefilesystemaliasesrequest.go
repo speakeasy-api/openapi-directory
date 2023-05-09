@@ -4,7 +4,7 @@ package shared
 
 // DescribeFileSystemAliasesRequest - The request object for <code>DescribeFileSystemAliases</code> operation.
 type DescribeFileSystemAliasesRequest struct {
-	// (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+	// (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
 	ClientRequestToken *string `json:"ClientRequestToken,omitempty"`
 	FileSystemID       string  `json:"FileSystemId"`
 	MaxResults         *int64  `json:"MaxResults,omitempty"`

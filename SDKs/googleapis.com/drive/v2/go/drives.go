@@ -35,7 +35,10 @@ func newDrives(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DriveDrivesDelete - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
 func (s *drives) DriveDrivesDelete(ctx context.Context, request operations.DriveDrivesDeleteRequest, security operations.DriveDrivesDeleteSecurity) (*operations.DriveDrivesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *drives) DriveDrivesDelete(ctx context.Context, request operations.Drive
 // DriveDrivesGet - Gets a shared drive's metadata by ID.
 func (s *drives) DriveDrivesGet(ctx context.Context, request operations.DriveDrivesGetRequest, security operations.DriveDrivesGetSecurity) (*operations.DriveDrivesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +128,10 @@ func (s *drives) DriveDrivesGet(ctx context.Context, request operations.DriveDri
 // DriveDrivesHide - Hides a shared drive from the default view.
 func (s *drives) DriveDrivesHide(ctx context.Context, request operations.DriveDrivesHideRequest, security operations.DriveDrivesHideSecurity) (*operations.DriveDrivesHideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}/hide", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}/hide", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -273,7 +282,10 @@ func (s *drives) DriveDrivesList(ctx context.Context, request operations.DriveDr
 // DriveDrivesUnhide - Restores a shared drive to the default view.
 func (s *drives) DriveDrivesUnhide(ctx context.Context, request operations.DriveDrivesUnhideRequest, security operations.DriveDrivesUnhideSecurity) (*operations.DriveDrivesUnhideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}/unhide", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}/unhide", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -321,7 +333,10 @@ func (s *drives) DriveDrivesUnhide(ctx context.Context, request operations.Drive
 // DriveDrivesUpdate - Updates the metadata for a shared drive.
 func (s *drives) DriveDrivesUpdate(ctx context.Context, request operations.DriveDrivesUpdateRequest, security operations.DriveDrivesUpdateSecurity) (*operations.DriveDrivesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Drive", "json")
 	if err != nil {

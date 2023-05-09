@@ -6,6 +6,11 @@ import (
 	"net/http"
 )
 
+type HealthGetQueueTasksSecurity struct {
+	Key     string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Key"`
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type HealthGetQueueTasksResponse struct {
 	ContentType string
 	StatusCode  int

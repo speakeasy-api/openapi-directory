@@ -16,17 +16,21 @@ const (
 	CreateEntityRecognizerXAmzTargetEnumComprehend20171127CreateEntityRecognizer CreateEntityRecognizerXAmzTargetEnum = "Comprehend_20171127.CreateEntityRecognizer"
 )
 
+func (e CreateEntityRecognizerXAmzTargetEnum) ToPointer() *CreateEntityRecognizerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEntityRecognizerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.CreateEntityRecognizer":
-		*e = CreateEntityRecognizerXAmzTargetEnum(s)
+		*e = CreateEntityRecognizerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEntityRecognizerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEntityRecognizerXAmzTargetEnum: %v", v)
 	}
 }
 

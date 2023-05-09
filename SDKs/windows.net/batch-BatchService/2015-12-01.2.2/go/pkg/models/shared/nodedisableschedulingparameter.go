@@ -16,21 +16,25 @@ const (
 	NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnumTaskcompletion NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum = "taskcompletion"
 )
 
+func (e NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum) ToPointer() *NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum {
+	return &e
+}
+
 func (e *NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
 		fallthrough
 	case "taskcompletion":
-		*e = NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum(s)
+		*e = NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum: %v", v)
 	}
 }
 

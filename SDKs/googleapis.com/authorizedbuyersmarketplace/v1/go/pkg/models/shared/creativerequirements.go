@@ -16,21 +16,25 @@ const (
 	CreativeRequirementsCreativeFormatEnumVideo                     CreativeRequirementsCreativeFormatEnum = "VIDEO"
 )
 
+func (e CreativeRequirementsCreativeFormatEnum) ToPointer() *CreativeRequirementsCreativeFormatEnum {
+	return &e
+}
+
 func (e *CreativeRequirementsCreativeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "DISPLAY":
 		fallthrough
 	case "VIDEO":
-		*e = CreativeRequirementsCreativeFormatEnum(s)
+		*e = CreativeRequirementsCreativeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRequirementsCreativeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRequirementsCreativeFormatEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	CreativeRequirementsCreativePreApprovalPolicyEnumSellerPreApprovalNotRequired         CreativeRequirementsCreativePreApprovalPolicyEnum = "SELLER_PRE_APPROVAL_NOT_REQUIRED"
 )
 
+func (e CreativeRequirementsCreativePreApprovalPolicyEnum) ToPointer() *CreativeRequirementsCreativePreApprovalPolicyEnum {
+	return &e
+}
+
 func (e *CreativeRequirementsCreativePreApprovalPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_PRE_APPROVAL_POLICY_UNSPECIFIED":
 		fallthrough
 	case "SELLER_PRE_APPROVAL_REQUIRED":
 		fallthrough
 	case "SELLER_PRE_APPROVAL_NOT_REQUIRED":
-		*e = CreativeRequirementsCreativePreApprovalPolicyEnum(s)
+		*e = CreativeRequirementsCreativePreApprovalPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRequirementsCreativePreApprovalPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRequirementsCreativePreApprovalPolicyEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	CreativeRequirementsCreativeSafeFrameCompatibilityEnumIncompatible                              CreativeRequirementsCreativeSafeFrameCompatibilityEnum = "INCOMPATIBLE"
 )
 
+func (e CreativeRequirementsCreativeSafeFrameCompatibilityEnum) ToPointer() *CreativeRequirementsCreativeSafeFrameCompatibilityEnum {
+	return &e
+}
+
 func (e *CreativeRequirementsCreativeSafeFrameCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_SAFE_FRAME_COMPATIBILITY_UNSPECIFIED":
 		fallthrough
 	case "COMPATIBLE":
 		fallthrough
 	case "INCOMPATIBLE":
-		*e = CreativeRequirementsCreativeSafeFrameCompatibilityEnum(s)
+		*e = CreativeRequirementsCreativeSafeFrameCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRequirementsCreativeSafeFrameCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRequirementsCreativeSafeFrameCompatibilityEnum: %v", v)
 	}
 }
 
@@ -97,21 +109,25 @@ const (
 	CreativeRequirementsProgrammaticCreativeSourceEnumPublisher                             CreativeRequirementsProgrammaticCreativeSourceEnum = "PUBLISHER"
 )
 
+func (e CreativeRequirementsProgrammaticCreativeSourceEnum) ToPointer() *CreativeRequirementsProgrammaticCreativeSourceEnum {
+	return &e
+}
+
 func (e *CreativeRequirementsProgrammaticCreativeSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROGRAMMATIC_CREATIVE_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "ADVERTISER":
 		fallthrough
 	case "PUBLISHER":
-		*e = CreativeRequirementsProgrammaticCreativeSourceEnum(s)
+		*e = CreativeRequirementsProgrammaticCreativeSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRequirementsProgrammaticCreativeSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRequirementsProgrammaticCreativeSourceEnum: %v", v)
 	}
 }
 
@@ -126,12 +142,16 @@ const (
 	CreativeRequirementsSkippableAdTypeEnumAny                        CreativeRequirementsSkippableAdTypeEnum = "ANY"
 )
 
+func (e CreativeRequirementsSkippableAdTypeEnum) ToPointer() *CreativeRequirementsSkippableAdTypeEnum {
+	return &e
+}
+
 func (e *CreativeRequirementsSkippableAdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKIPPABLE_AD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SKIPPABLE":
@@ -141,10 +161,10 @@ func (e *CreativeRequirementsSkippableAdTypeEnum) UnmarshalJSON(data []byte) err
 	case "NOT_SKIPPABLE":
 		fallthrough
 	case "ANY":
-		*e = CreativeRequirementsSkippableAdTypeEnum(s)
+		*e = CreativeRequirementsSkippableAdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRequirementsSkippableAdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRequirementsSkippableAdTypeEnum: %v", v)
 	}
 }
 

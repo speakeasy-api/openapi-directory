@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/arespass.net/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAboutRequest{
-        OutputFormat: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetAbout(ctx, req)
+    res, err := s.GetAbout(ctx, operations.GetAboutRequest{
+        OutputFormat: sdk.String("corrupti"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,13 +41,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetAbout` - Metadata about this API&#58; version number, release date and available languages.
+* [GetAbout](docs/sdk/README.md#getabout) - Metadata about this API&#58; version number, release date and available languages.
 
 Metadata requests are NOT billed.
 
-* `GetEc` - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
+* [GetEc](docs/sdk/README.md#getec) - The entropy calculator - alias ec -, analyzes a password and calculates its entropy.
 
 Entropy calculator requests are billed.
 

@@ -61,12 +61,16 @@ const (
 	BigtableadminProjectsInstancesTablesListViewEnumFull            BigtableadminProjectsInstancesTablesListViewEnum = "FULL"
 )
 
+func (e BigtableadminProjectsInstancesTablesListViewEnum) ToPointer() *BigtableadminProjectsInstancesTablesListViewEnum {
+	return &e
+}
+
 func (e *BigtableadminProjectsInstancesTablesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "NAME_ONLY":
@@ -80,10 +84,10 @@ func (e *BigtableadminProjectsInstancesTablesListViewEnum) UnmarshalJSON(data []
 	case "STATS_VIEW":
 		fallthrough
 	case "FULL":
-		*e = BigtableadminProjectsInstancesTablesListViewEnum(s)
+		*e = BigtableadminProjectsInstancesTablesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BigtableadminProjectsInstancesTablesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for BigtableadminProjectsInstancesTablesListViewEnum: %v", v)
 	}
 }
 

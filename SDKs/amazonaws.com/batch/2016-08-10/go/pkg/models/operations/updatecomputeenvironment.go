@@ -38,19 +38,23 @@ const (
 	UpdateComputeEnvironmentRequestBodyStateEnumDisabled UpdateComputeEnvironmentRequestBodyStateEnum = "DISABLED"
 )
 
+func (e UpdateComputeEnvironmentRequestBodyStateEnum) ToPointer() *UpdateComputeEnvironmentRequestBodyStateEnum {
+	return &e
+}
+
 func (e *UpdateComputeEnvironmentRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = UpdateComputeEnvironmentRequestBodyStateEnum(s)
+		*e = UpdateComputeEnvironmentRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateComputeEnvironmentRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateComputeEnvironmentRequestBodyStateEnum: %v", v)
 	}
 }
 

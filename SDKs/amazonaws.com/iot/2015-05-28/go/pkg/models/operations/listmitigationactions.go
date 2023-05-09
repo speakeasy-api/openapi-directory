@@ -21,12 +21,16 @@ const (
 	ListMitigationActionsActionTypeEnumPublishFindingToSns         ListMitigationActionsActionTypeEnum = "PUBLISH_FINDING_TO_SNS"
 )
 
+func (e ListMitigationActionsActionTypeEnum) ToPointer() *ListMitigationActionsActionTypeEnum {
+	return &e
+}
+
 func (e *ListMitigationActionsActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_DEVICE_CERTIFICATE":
 		fallthrough
 	case "UPDATE_CA_CERTIFICATE":
@@ -38,10 +42,10 @@ func (e *ListMitigationActionsActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLE_IOT_LOGGING":
 		fallthrough
 	case "PUBLISH_FINDING_TO_SNS":
-		*e = ListMitigationActionsActionTypeEnum(s)
+		*e = ListMitigationActionsActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMitigationActionsActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMitigationActionsActionTypeEnum: %v", v)
 	}
 }
 

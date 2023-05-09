@@ -109,12 +109,16 @@ const (
 	VoiceNameEnumZuzana     VoiceNameEnum = "Zuzana"
 )
 
+func (e VoiceNameEnum) ToPointer() *VoiceNameEnum {
+	return &e
+}
+
 func (e *VoiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Aditi":
 		fallthrough
 	case "Agnieszka":
@@ -306,9 +310,9 @@ func (e *VoiceNameEnum) UnmarshalJSON(data []byte) error {
 	case "Zhiyu":
 		fallthrough
 	case "Zuzana":
-		*e = VoiceNameEnum(s)
+		*e = VoiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceNameEnum: %v", v)
 	}
 }

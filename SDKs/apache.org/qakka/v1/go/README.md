@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apache.org/qakka/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AckMessageRequest{
+    ctx := context.Background()
+    res, err := s.Queues.AckMessage(ctx, operations.AckMessageRequest{
         QueueMessageID: "corrupti",
         QueueName: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Queues.AckMessage(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,21 +43,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Queues
+### [Queues](docs/queues/README.md)
 
-* `AckMessage` - Acknowledge that Queue Message has been processed.
-* `CreateQueue` - Create new queue.
-* `DeleteQueue` - Delete Queue.
-* `GetListOfQueues` - Get list of all Queues.
-* `GetMessageData` - Get data associated with a Queue Message.
-* `GetNextMessages` - Get next Queue Messages from a Queue
-* `GetQueueConfig` - Get Queue config.
-* `SendMessageBinary` - Send Queue Message with a binary data (blob) payload.
-* `UpdateQueueConfig` - Update Queue configuration.
+* [AckMessage](docs/queues/README.md#ackmessage) - Acknowledge that Queue Message has been processed.
+* [CreateQueue](docs/queues/README.md#createqueue) - Create new queue.
+* [DeleteQueue](docs/queues/README.md#deletequeue) - Delete Queue.
+* [GetListOfQueues](docs/queues/README.md#getlistofqueues) - Get list of all Queues.
+* [GetMessageData](docs/queues/README.md#getmessagedata) - Get data associated with a Queue Message.
+* [GetNextMessages](docs/queues/README.md#getnextmessages) - Get next Queue Messages from a Queue
+* [GetQueueConfig](docs/queues/README.md#getqueueconfig) - Get Queue config.
+* [SendMessageBinary](docs/queues/README.md#sendmessagebinary) - Send Queue Message with a binary data (blob) payload.
+* [UpdateQueueConfig](docs/queues/README.md#updatequeueconfig) - Update Queue configuration.
 
-### Status
+### [Status](docs/status/README.md)
 
-* `Status` - Status of webapp.
+* [Status](docs/status/README.md#status) - Status of webapp.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -13,16 +13,20 @@ const (
 	ScanningRepositoryFilterTypeEnumWildcard ScanningRepositoryFilterTypeEnum = "WILDCARD"
 )
 
+func (e ScanningRepositoryFilterTypeEnum) ToPointer() *ScanningRepositoryFilterTypeEnum {
+	return &e
+}
+
 func (e *ScanningRepositoryFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WILDCARD":
-		*e = ScanningRepositoryFilterTypeEnum(s)
+		*e = ScanningRepositoryFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanningRepositoryFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanningRepositoryFilterTypeEnum: %v", v)
 	}
 }

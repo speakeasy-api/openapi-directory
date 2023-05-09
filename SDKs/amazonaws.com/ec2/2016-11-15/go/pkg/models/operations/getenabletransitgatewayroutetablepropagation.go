@@ -15,17 +15,21 @@ const (
 	GETEnableTransitGatewayRouteTablePropagationActionEnumEnableTransitGatewayRouteTablePropagation GETEnableTransitGatewayRouteTablePropagationActionEnum = "EnableTransitGatewayRouteTablePropagation"
 )
 
+func (e GETEnableTransitGatewayRouteTablePropagationActionEnum) ToPointer() *GETEnableTransitGatewayRouteTablePropagationActionEnum {
+	return &e
+}
+
 func (e *GETEnableTransitGatewayRouteTablePropagationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableTransitGatewayRouteTablePropagation":
-		*e = GETEnableTransitGatewayRouteTablePropagationActionEnum(s)
+		*e = GETEnableTransitGatewayRouteTablePropagationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableTransitGatewayRouteTablePropagationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableTransitGatewayRouteTablePropagationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableTransitGatewayRouteTablePropagationVersionEnumTwoThousandAndSixteen1115 GETEnableTransitGatewayRouteTablePropagationVersionEnum = "2016-11-15"
 )
 
+func (e GETEnableTransitGatewayRouteTablePropagationVersionEnum) ToPointer() *GETEnableTransitGatewayRouteTablePropagationVersionEnum {
+	return &e
+}
+
 func (e *GETEnableTransitGatewayRouteTablePropagationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETEnableTransitGatewayRouteTablePropagationVersionEnum(s)
+		*e = GETEnableTransitGatewayRouteTablePropagationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableTransitGatewayRouteTablePropagationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableTransitGatewayRouteTablePropagationVersionEnum: %v", v)
 	}
 }
 

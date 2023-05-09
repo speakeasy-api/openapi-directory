@@ -15,17 +15,21 @@ const (
 	GETDeleteInsightRulesActionEnumDeleteInsightRules GETDeleteInsightRulesActionEnum = "DeleteInsightRules"
 )
 
+func (e GETDeleteInsightRulesActionEnum) ToPointer() *GETDeleteInsightRulesActionEnum {
+	return &e
+}
+
 func (e *GETDeleteInsightRulesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInsightRules":
-		*e = GETDeleteInsightRulesActionEnum(s)
+		*e = GETDeleteInsightRulesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInsightRulesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInsightRulesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteInsightRulesVersionEnumTwoThousandAndTen0801 GETDeleteInsightRulesVersionEnum = "2010-08-01"
 )
 
+func (e GETDeleteInsightRulesVersionEnum) ToPointer() *GETDeleteInsightRulesVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteInsightRulesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETDeleteInsightRulesVersionEnum(s)
+		*e = GETDeleteInsightRulesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInsightRulesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInsightRulesVersionEnum: %v", v)
 	}
 }
 

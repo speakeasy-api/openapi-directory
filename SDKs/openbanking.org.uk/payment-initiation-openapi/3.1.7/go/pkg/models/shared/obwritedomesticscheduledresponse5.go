@@ -108,21 +108,25 @@ const (
 	OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnumRejected                     OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum = "Rejected"
 )
 
+func (e OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum) ToPointer() *OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorised":
 		fallthrough
 	case "AwaitingFurtherAuthorisation":
 		fallthrough
 	case "Rejected":
-		*e = OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum(s)
+		*e = OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticScheduledResponse5DataMultiAuthorisationStatusEnum: %v", v)
 	}
 }
 
@@ -175,12 +179,16 @@ const (
 	OBWriteDomesticScheduledResponse5DataStatusEnumInitiationPending   OBWriteDomesticScheduledResponse5DataStatusEnum = "InitiationPending"
 )
 
+func (e OBWriteDomesticScheduledResponse5DataStatusEnum) ToPointer() *OBWriteDomesticScheduledResponse5DataStatusEnum {
+	return &e
+}
+
 func (e *OBWriteDomesticScheduledResponse5DataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InitiationCompleted":
@@ -188,10 +196,10 @@ func (e *OBWriteDomesticScheduledResponse5DataStatusEnum) UnmarshalJSON(data []b
 	case "InitiationFailed":
 		fallthrough
 	case "InitiationPending":
-		*e = OBWriteDomesticScheduledResponse5DataStatusEnum(s)
+		*e = OBWriteDomesticScheduledResponse5DataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWriteDomesticScheduledResponse5DataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWriteDomesticScheduledResponse5DataStatusEnum: %v", v)
 	}
 }
 

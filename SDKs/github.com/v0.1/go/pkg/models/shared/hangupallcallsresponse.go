@@ -15,19 +15,23 @@ const (
 	HangupAllCallsResponseMessageEnumHangupCallFailed HangupAllCallsResponseMessageEnum = "Hangup Call Failed"
 )
 
+func (e HangupAllCallsResponseMessageEnum) ToPointer() *HangupAllCallsResponseMessageEnum {
+	return &e
+}
+
 func (e *HangupAllCallsResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All Calls Hungup":
 		fallthrough
 	case "Hangup Call Failed":
-		*e = HangupAllCallsResponseMessageEnum(s)
+		*e = HangupAllCallsResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HangupAllCallsResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for HangupAllCallsResponseMessageEnum: %v", v)
 	}
 }
 

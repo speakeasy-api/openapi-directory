@@ -16,12 +16,16 @@ const (
 	DataRepositoryTaskTypeEnumAutoReleaseData              DataRepositoryTaskTypeEnum = "AUTO_RELEASE_DATA"
 )
 
+func (e DataRepositoryTaskTypeEnum) ToPointer() *DataRepositoryTaskTypeEnum {
+	return &e
+}
+
 func (e *DataRepositoryTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_TO_REPOSITORY":
 		fallthrough
 	case "IMPORT_METADATA_FROM_REPOSITORY":
@@ -29,9 +33,9 @@ func (e *DataRepositoryTaskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RELEASE_DATA_FROM_FILESYSTEM":
 		fallthrough
 	case "AUTO_RELEASE_DATA":
-		*e = DataRepositoryTaskTypeEnum(s)
+		*e = DataRepositoryTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataRepositoryTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataRepositoryTaskTypeEnum: %v", v)
 	}
 }

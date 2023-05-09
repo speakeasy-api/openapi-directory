@@ -15,17 +15,21 @@ const (
 	GETDescribeEngineDefaultParametersActionEnumDescribeEngineDefaultParameters GETDescribeEngineDefaultParametersActionEnum = "DescribeEngineDefaultParameters"
 )
 
+func (e GETDescribeEngineDefaultParametersActionEnum) ToPointer() *GETDescribeEngineDefaultParametersActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEngineDefaultParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEngineDefaultParameters":
-		*e = GETDescribeEngineDefaultParametersActionEnum(s)
+		*e = GETDescribeEngineDefaultParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEngineDefaultParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEngineDefaultParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeEngineDefaultParametersVersionEnumTwoThousandAndThirteen0110 GETDescribeEngineDefaultParametersVersionEnum = "2013-01-10"
 )
 
+func (e GETDescribeEngineDefaultParametersVersionEnum) ToPointer() *GETDescribeEngineDefaultParametersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEngineDefaultParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETDescribeEngineDefaultParametersVersionEnum(s)
+		*e = GETDescribeEngineDefaultParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEngineDefaultParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEngineDefaultParametersVersionEnum: %v", v)
 	}
 }
 

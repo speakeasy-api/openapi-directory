@@ -16,17 +16,21 @@ const (
 	EnableAWSServiceAccessXAmzTargetEnumAwsOrganizationsV20161128EnableAwsServiceAccess EnableAWSServiceAccessXAmzTargetEnum = "AWSOrganizationsV20161128.EnableAWSServiceAccess"
 )
 
+func (e EnableAWSServiceAccessXAmzTargetEnum) ToPointer() *EnableAWSServiceAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *EnableAWSServiceAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.EnableAWSServiceAccess":
-		*e = EnableAWSServiceAccessXAmzTargetEnum(s)
+		*e = EnableAWSServiceAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableAWSServiceAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableAWSServiceAccessXAmzTargetEnum: %v", v)
 	}
 }
 

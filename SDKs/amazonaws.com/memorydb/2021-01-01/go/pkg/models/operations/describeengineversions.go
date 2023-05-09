@@ -16,17 +16,21 @@ const (
 	DescribeEngineVersionsXAmzTargetEnumAmazonMemoryDbDescribeEngineVersions DescribeEngineVersionsXAmzTargetEnum = "AmazonMemoryDB.DescribeEngineVersions"
 )
 
+func (e DescribeEngineVersionsXAmzTargetEnum) ToPointer() *DescribeEngineVersionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEngineVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.DescribeEngineVersions":
-		*e = DescribeEngineVersionsXAmzTargetEnum(s)
+		*e = DescribeEngineVersionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEngineVersionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEngineVersionsXAmzTargetEnum: %v", v)
 	}
 }
 

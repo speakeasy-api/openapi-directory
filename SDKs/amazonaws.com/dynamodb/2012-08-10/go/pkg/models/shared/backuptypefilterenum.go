@@ -16,12 +16,16 @@ const (
 	BackupTypeFilterEnumAll       BackupTypeFilterEnum = "ALL"
 )
 
+func (e BackupTypeFilterEnum) ToPointer() *BackupTypeFilterEnum {
+	return &e
+}
+
 func (e *BackupTypeFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "SYSTEM":
@@ -29,9 +33,9 @@ func (e *BackupTypeFilterEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_BACKUP":
 		fallthrough
 	case "ALL":
-		*e = BackupTypeFilterEnum(s)
+		*e = BackupTypeFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupTypeFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupTypeFilterEnum: %v", v)
 	}
 }

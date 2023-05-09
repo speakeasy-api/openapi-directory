@@ -21,12 +21,16 @@ const (
 	As2IncomingMessageEntityProcessingResultEnumSuccess                   As2IncomingMessageEntityProcessingResultEnum = "success"
 )
 
+func (e As2IncomingMessageEntityProcessingResultEnum) ToPointer() *As2IncomingMessageEntityProcessingResultEnum {
+	return &e
+}
+
 func (e *As2IncomingMessageEntityProcessingResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_started":
 		fallthrough
 	case "unable_to_find_station":
@@ -40,10 +44,10 @@ func (e *As2IncomingMessageEntityProcessingResultEnum) UnmarshalJSON(data []byte
 	case "file_save_fail":
 		fallthrough
 	case "success":
-		*e = As2IncomingMessageEntityProcessingResultEnum(s)
+		*e = As2IncomingMessageEntityProcessingResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for As2IncomingMessageEntityProcessingResultEnum: %s", s)
+		return fmt.Errorf("invalid value for As2IncomingMessageEntityProcessingResultEnum: %v", v)
 	}
 }
 

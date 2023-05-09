@@ -15,17 +15,21 @@ const (
 	MigrationsStartForOrgRequestBodyExcludeEnumRepositories MigrationsStartForOrgRequestBodyExcludeEnum = "repositories"
 )
 
+func (e MigrationsStartForOrgRequestBodyExcludeEnum) ToPointer() *MigrationsStartForOrgRequestBodyExcludeEnum {
+	return &e
+}
+
 func (e *MigrationsStartForOrgRequestBodyExcludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "repositories":
-		*e = MigrationsStartForOrgRequestBodyExcludeEnum(s)
+		*e = MigrationsStartForOrgRequestBodyExcludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationsStartForOrgRequestBodyExcludeEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationsStartForOrgRequestBodyExcludeEnum: %v", v)
 	}
 }
 

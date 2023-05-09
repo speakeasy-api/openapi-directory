@@ -16,17 +16,21 @@ const (
 	RemoveManagedScalingPolicyXAmzTargetEnumElasticMapReduceRemoveManagedScalingPolicy RemoveManagedScalingPolicyXAmzTargetEnum = "ElasticMapReduce.RemoveManagedScalingPolicy"
 )
 
+func (e RemoveManagedScalingPolicyXAmzTargetEnum) ToPointer() *RemoveManagedScalingPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveManagedScalingPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.RemoveManagedScalingPolicy":
-		*e = RemoveManagedScalingPolicyXAmzTargetEnum(s)
+		*e = RemoveManagedScalingPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveManagedScalingPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveManagedScalingPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

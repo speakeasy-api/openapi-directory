@@ -17,12 +17,16 @@ const (
 	LoadBalancerInfoBackendTypeEnumTargetInstance         LoadBalancerInfoBackendTypeEnum = "TARGET_INSTANCE"
 )
 
+func (e LoadBalancerInfoBackendTypeEnum) ToPointer() *LoadBalancerInfoBackendTypeEnum {
+	return &e
+}
+
 func (e *LoadBalancerInfoBackendTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BACKEND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BACKEND_SERVICE":
@@ -30,10 +34,10 @@ func (e *LoadBalancerInfoBackendTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TARGET_POOL":
 		fallthrough
 	case "TARGET_INSTANCE":
-		*e = LoadBalancerInfoBackendTypeEnum(s)
+		*e = LoadBalancerInfoBackendTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerInfoBackendTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerInfoBackendTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	LoadBalancerInfoLoadBalancerTypeEnumSslProxy                    LoadBalancerInfoLoadBalancerTypeEnum = "SSL_PROXY"
 )
 
+func (e LoadBalancerInfoLoadBalancerTypeEnum) ToPointer() *LoadBalancerInfoLoadBalancerTypeEnum {
+	return &e
+}
+
 func (e *LoadBalancerInfoLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOAD_BALANCER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTERNAL_TCP_UDP":
@@ -66,10 +74,10 @@ func (e *LoadBalancerInfoLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error 
 	case "TCP_PROXY":
 		fallthrough
 	case "SSL_PROXY":
-		*e = LoadBalancerInfoLoadBalancerTypeEnum(s)
+		*e = LoadBalancerInfoLoadBalancerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerInfoLoadBalancerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerInfoLoadBalancerTypeEnum: %v", v)
 	}
 }
 

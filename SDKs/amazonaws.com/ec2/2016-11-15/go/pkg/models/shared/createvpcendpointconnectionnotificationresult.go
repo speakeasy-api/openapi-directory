@@ -15,19 +15,23 @@ const (
 	CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnumDisabled CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum = "Disabled"
 )
 
+func (e CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum) ToPointer() *CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum(s)
+		*e = CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationStateEnum: %v", v)
 	}
 }
 
@@ -38,17 +42,21 @@ const (
 	CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnumTopic CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum = "Topic"
 )
 
+func (e CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum) ToPointer() *CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum {
+	return &e
+}
+
 func (e *CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Topic":
-		*e = CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum(s)
+		*e = CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcEndpointConnectionNotificationResultConnectionNotificationConnectionNotificationTypeEnum: %v", v)
 	}
 }
 

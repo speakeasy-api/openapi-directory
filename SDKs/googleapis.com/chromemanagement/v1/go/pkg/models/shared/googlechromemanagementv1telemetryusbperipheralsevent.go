@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+// GoogleChromeManagementV1TelemetryUsbPeripheralsEvent - `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
 type GoogleChromeManagementV1TelemetryUsbPeripheralsEvent struct {
 	// List of usb devices that were either added or removed.
 	UsbPeripheralReport []GoogleChromeManagementV1UsbPeripheralReport `json:"usbPeripheralReport,omitempty"`

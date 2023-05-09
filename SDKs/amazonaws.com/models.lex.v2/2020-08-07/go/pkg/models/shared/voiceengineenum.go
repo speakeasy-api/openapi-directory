@@ -14,18 +14,22 @@ const (
 	VoiceEngineEnumNeural   VoiceEngineEnum = "neural"
 )
 
+func (e VoiceEngineEnum) ToPointer() *VoiceEngineEnum {
+	return &e
+}
+
 func (e *VoiceEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "neural":
-		*e = VoiceEngineEnum(s)
+		*e = VoiceEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceEngineEnum: %v", v)
 	}
 }

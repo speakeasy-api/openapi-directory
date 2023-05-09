@@ -34,7 +34,10 @@ func newCredentialOperations(defaultClient, securityClient HTTPClient, serverURL
 // Change Password
 func (s *credentialOperations) ChangePassword(ctx context.Context, request operations.ChangePasswordRequest) (*operations.ChangePasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/change_password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/change_password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -77,7 +80,10 @@ func (s *credentialOperations) ChangePassword(ctx context.Context, request opera
 // Change Recovery Question
 func (s *credentialOperations) ChangeRecoveryQuestion(ctx context.Context, request operations.ChangeRecoveryQuestionRequest) (*operations.ChangeRecoveryQuestionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/change_recovery_question", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/change_recovery_question", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -120,7 +126,10 @@ func (s *credentialOperations) ChangeRecoveryQuestion(ctx context.Context, reque
 // Forgot Password (One Time Code)
 func (s *credentialOperations) ForgotPasswordOneTimeCode(ctx context.Context, request operations.ForgotPasswordOneTimeCodeRequest) (*operations.ForgotPasswordOneTimeCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/forgot_password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}/credentials/forgot_password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -167,7 +176,10 @@ func (s *credentialOperations) ForgotPasswordOneTimeCode(ctx context.Context, re
 // Set Recovery Credential
 func (s *credentialOperations) SetRecoveryCredential(ctx context.Context, request operations.SetRecoveryCredentialRequest) (*operations.SetRecoveryCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

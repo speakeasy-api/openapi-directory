@@ -16,19 +16,23 @@ const (
 	AddPasswordV1RequestBodyEncryptionAlgorithmEnumAes256 AddPasswordV1RequestBodyEncryptionAlgorithmEnum = "AES-256"
 )
 
+func (e AddPasswordV1RequestBodyEncryptionAlgorithmEnum) ToPointer() *AddPasswordV1RequestBodyEncryptionAlgorithmEnum {
+	return &e
+}
+
 func (e *AddPasswordV1RequestBodyEncryptionAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES-128":
 		fallthrough
 	case "AES-256":
-		*e = AddPasswordV1RequestBodyEncryptionAlgorithmEnum(s)
+		*e = AddPasswordV1RequestBodyEncryptionAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddPasswordV1RequestBodyEncryptionAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for AddPasswordV1RequestBodyEncryptionAlgorithmEnum: %v", v)
 	}
 }
 

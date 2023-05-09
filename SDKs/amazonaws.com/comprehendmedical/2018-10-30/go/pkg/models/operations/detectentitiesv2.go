@@ -16,17 +16,21 @@ const (
 	DetectEntitiesV2XAmzTargetEnumComprehendMedical20181030DetectEntitiesV2 DetectEntitiesV2XAmzTargetEnum = "ComprehendMedical_20181030.DetectEntitiesV2"
 )
 
+func (e DetectEntitiesV2XAmzTargetEnum) ToPointer() *DetectEntitiesV2XAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectEntitiesV2XAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComprehendMedical_20181030.DetectEntitiesV2":
-		*e = DetectEntitiesV2XAmzTargetEnum(s)
+		*e = DetectEntitiesV2XAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectEntitiesV2XAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectEntitiesV2XAmzTargetEnum: %v", v)
 	}
 }
 

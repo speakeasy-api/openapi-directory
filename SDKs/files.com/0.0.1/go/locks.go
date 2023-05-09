@@ -36,7 +36,10 @@ func newLocks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Delete Lock
 func (s *locks) DeleteLocksPath(ctx context.Context, request operations.DeleteLocksPathRequest) (*operations.DeleteLocksPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *locks) DeleteLocksPath(ctx context.Context, request operations.DeleteLo
 // List Locks by path
 func (s *locks) LockListForPath(ctx context.Context, request operations.LockListForPathRequest) (*operations.LockListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +170,10 @@ func (s *locks) LockListForPath(ctx context.Context, request operations.LockList
 // Create Lock
 func (s *locks) PostLocksPath(ctx context.Context, request operations.PostLocksPathRequest) (*operations.PostLocksPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/locks/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

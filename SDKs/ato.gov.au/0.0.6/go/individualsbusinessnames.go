@@ -36,7 +36,10 @@ func newIndividualsBusinessNames(defaultClient, securityClient HTTPClient, serve
 // Delete a business name
 func (s *individualsBusinessNames) DeleteIndividualsPartyIDBusinessNamesProductID(ctx context.Context, request operations.DeleteIndividualsPartyIDBusinessNamesProductIDRequest) (*operations.DeleteIndividualsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -93,7 +96,10 @@ func (s *individualsBusinessNames) DeleteIndividualsPartyIDBusinessNamesProductI
 // GetIndividualsPartyIDBusinessNames - Retrieve a list of business names
 func (s *individualsBusinessNames) GetIndividualsPartyIDBusinessNames(ctx context.Context, request operations.GetIndividualsPartyIDBusinessNamesRequest) (*operations.GetIndividualsPartyIDBusinessNamesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -162,7 +168,10 @@ func (s *individualsBusinessNames) GetIndividualsPartyIDBusinessNames(ctx contex
 // Retrieve a business name
 func (s *individualsBusinessNames) GetIndividualsPartyIDBusinessNamesProductID(ctx context.Context, request operations.GetIndividualsPartyIDBusinessNamesProductIDRequest) (*operations.GetIndividualsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *individualsBusinessNames) GetIndividualsPartyIDBusinessNamesProductID(c
 // Create a business name
 func (s *individualsBusinessNames) PostIndividualsPartyIDBusinessNames(ctx context.Context, request operations.PostIndividualsPartyIDBusinessNamesRequest) (*operations.PostIndividualsPartyIDBusinessNamesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessNameInput", "json")
 	if err != nil {
@@ -308,7 +320,10 @@ func (s *individualsBusinessNames) PostIndividualsPartyIDBusinessNames(ctx conte
 // Update a business name
 func (s *individualsBusinessNames) PutIndividualsPartyIDBusinessNamesProductID(ctx context.Context, request operations.PutIndividualsPartyIDBusinessNamesProductIDRequest) (*operations.PutIndividualsPartyIDBusinessNamesProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/business-names/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BusinessNameInput", "json")
 	if err != nil {

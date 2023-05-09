@@ -16,17 +16,21 @@ const (
 	StartDocumentClassificationJobXAmzTargetEnumComprehend20171127StartDocumentClassificationJob StartDocumentClassificationJobXAmzTargetEnum = "Comprehend_20171127.StartDocumentClassificationJob"
 )
 
+func (e StartDocumentClassificationJobXAmzTargetEnum) ToPointer() *StartDocumentClassificationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartDocumentClassificationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartDocumentClassificationJob":
-		*e = StartDocumentClassificationJobXAmzTargetEnum(s)
+		*e = StartDocumentClassificationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartDocumentClassificationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartDocumentClassificationJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartDocumentClassificationJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// ResourceNotFoundException
 	ResourceNotFoundException interface{}
 	// ResourceUnavailableException

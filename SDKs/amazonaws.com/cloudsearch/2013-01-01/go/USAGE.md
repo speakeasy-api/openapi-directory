@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,21 +16,19 @@ func main() {
         }),
     )
 
-    req := operations.GETBuildSuggestersRequest{
-        Action: "BuildSuggesters",
-        DomainName: "corrupti",
-        Version: "2013-01-01",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GETBuildSuggesters(ctx, req)
+    res, err := s.GETBuildSuggesters(ctx, operations.GETBuildSuggestersRequest{
+        Action: operations.GETBuildSuggestersActionEnumBuildSuggesters,
+        DomainName: "corrupti",
+        Version: operations.GETBuildSuggestersVersionEnumTwoThousandAndThirteen0101,
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

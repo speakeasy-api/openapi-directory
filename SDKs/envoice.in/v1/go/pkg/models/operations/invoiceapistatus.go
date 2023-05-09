@@ -25,12 +25,16 @@ const (
 	InvoiceAPIStatus200TextJSONEnumVoid    InvoiceAPIStatus200TextJSONEnum = "Void"
 )
 
+func (e InvoiceAPIStatus200TextJSONEnum) ToPointer() *InvoiceAPIStatus200TextJSONEnum {
+	return &e
+}
+
 func (e *InvoiceAPIStatus200TextJSONEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Paid":
@@ -40,10 +44,10 @@ func (e *InvoiceAPIStatus200TextJSONEnum) UnmarshalJSON(data []byte) error {
 	case "Overdue":
 		fallthrough
 	case "Void":
-		*e = InvoiceAPIStatus200TextJSONEnum(s)
+		*e = InvoiceAPIStatus200TextJSONEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceAPIStatus200TextJSONEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceAPIStatus200TextJSONEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	InvoiceAPIStatus200ApplicationXMLEnumVoid    InvoiceAPIStatus200ApplicationXMLEnum = "Void"
 )
 
+func (e InvoiceAPIStatus200ApplicationXMLEnum) ToPointer() *InvoiceAPIStatus200ApplicationXMLEnum {
+	return &e
+}
+
 func (e *InvoiceAPIStatus200ApplicationXMLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Paid":
@@ -73,10 +81,10 @@ func (e *InvoiceAPIStatus200ApplicationXMLEnum) UnmarshalJSON(data []byte) error
 	case "Overdue":
 		fallthrough
 	case "Void":
-		*e = InvoiceAPIStatus200ApplicationXMLEnum(s)
+		*e = InvoiceAPIStatus200ApplicationXMLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceAPIStatus200ApplicationXMLEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceAPIStatus200ApplicationXMLEnum: %v", v)
 	}
 }
 
@@ -91,12 +99,16 @@ const (
 	InvoiceAPIStatus200ApplicationJSONEnumVoid    InvoiceAPIStatus200ApplicationJSONEnum = "Void"
 )
 
+func (e InvoiceAPIStatus200ApplicationJSONEnum) ToPointer() *InvoiceAPIStatus200ApplicationJSONEnum {
+	return &e
+}
+
 func (e *InvoiceAPIStatus200ApplicationJSONEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "Paid":
@@ -106,10 +118,10 @@ func (e *InvoiceAPIStatus200ApplicationJSONEnum) UnmarshalJSON(data []byte) erro
 	case "Overdue":
 		fallthrough
 	case "Void":
-		*e = InvoiceAPIStatus200ApplicationJSONEnum(s)
+		*e = InvoiceAPIStatus200ApplicationJSONEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceAPIStatus200ApplicationJSONEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceAPIStatus200ApplicationJSONEnum: %v", v)
 	}
 }
 

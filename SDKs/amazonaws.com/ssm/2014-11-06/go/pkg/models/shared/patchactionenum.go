@@ -14,18 +14,22 @@ const (
 	PatchActionEnumBlock             PatchActionEnum = "BLOCK"
 )
 
+func (e PatchActionEnum) ToPointer() *PatchActionEnum {
+	return &e
+}
+
 func (e *PatchActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW_AS_DEPENDENCY":
 		fallthrough
 	case "BLOCK":
-		*e = PatchActionEnum(s)
+		*e = PatchActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchActionEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchActionEnum: %v", v)
 	}
 }

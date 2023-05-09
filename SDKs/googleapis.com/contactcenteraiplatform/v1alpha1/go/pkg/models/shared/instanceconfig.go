@@ -20,12 +20,16 @@ const (
 	InstanceConfigInstanceSizeEnumStandard3Xlarge         InstanceConfigInstanceSizeEnum = "STANDARD_3XLARGE"
 )
 
+func (e InstanceConfigInstanceSizeEnum) ToPointer() *InstanceConfigInstanceSizeEnum {
+	return &e
+}
+
 func (e *InstanceConfigInstanceSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE_SIZE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD_SMALL":
@@ -39,10 +43,10 @@ func (e *InstanceConfigInstanceSizeEnum) UnmarshalJSON(data []byte) error {
 	case "STANDARD_2XLARGE":
 		fallthrough
 	case "STANDARD_3XLARGE":
-		*e = InstanceConfigInstanceSizeEnum(s)
+		*e = InstanceConfigInstanceSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceConfigInstanceSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceConfigInstanceSizeEnum: %v", v)
 	}
 }
 

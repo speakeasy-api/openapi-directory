@@ -15,20 +15,24 @@ const (
 	DeleteBehaviorEnumDeprecateInDatabase DeleteBehaviorEnum = "DEPRECATE_IN_DATABASE"
 )
 
+func (e DeleteBehaviorEnum) ToPointer() *DeleteBehaviorEnum {
+	return &e
+}
+
 func (e *DeleteBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG":
 		fallthrough
 	case "DELETE_FROM_DATABASE":
 		fallthrough
 	case "DEPRECATE_IN_DATABASE":
-		*e = DeleteBehaviorEnum(s)
+		*e = DeleteBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBehaviorEnum: %v", v)
 	}
 }

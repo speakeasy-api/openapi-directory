@@ -25,21 +25,25 @@ const (
 	CampaignRequestTriggerCodeEnumFu CampaignRequestTriggerCodeEnum = "FU"
 )
 
+func (e CampaignRequestTriggerCodeEnum) ToPointer() *CampaignRequestTriggerCodeEnum {
+	return &e
+}
+
 func (e *CampaignRequestTriggerCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "M":
 		fallthrough
 	case "S":
 		fallthrough
 	case "FU":
-		*e = CampaignRequestTriggerCodeEnum(s)
+		*e = CampaignRequestTriggerCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignRequestTriggerCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignRequestTriggerCodeEnum: %v", v)
 	}
 }
 

@@ -13,63 +13,61 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/playablelo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlayablelocationsLogImpressionsRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.V3.PlayablelocationsLogImpressions(ctx, operations.PlayablelocationsLogImpressionsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleMapsPlayablelocationsV3LogImpressionsRequest: &shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest{
             ClientInfo: &shared.GoogleMapsUnityClientInfo{
-                APIClient: "provident",
-                ApplicationID: "distinctio",
-                ApplicationVersion: "quibusdam",
-                DeviceModel: "unde",
-                LanguageCode: "nulla",
-                OperatingSystem: "corrupti",
-                OperatingSystemBuild: "illum",
-                Platform: "WINDOWS",
+                APIClient: sdk.String("provident"),
+                ApplicationID: sdk.String("distinctio"),
+                ApplicationVersion: sdk.String("quibusdam"),
+                DeviceModel: sdk.String("unde"),
+                LanguageCode: sdk.String("nulla"),
+                OperatingSystem: sdk.String("corrupti"),
+                OperatingSystemBuild: sdk.String("illum"),
+                Platform: shared.GoogleMapsUnityClientInfoPlatformEnumWindows.ToPointer(),
             },
             Impressions: []shared.GoogleMapsPlayablelocationsV3Impression{
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 645894,
-                    ImpressionType: "PRESENTED",
-                    LocationName: "iure",
+                    GameObjectType: sdk.Int(645894),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumPresented.ToPointer(),
+                    LocationName: sdk.String("iure"),
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 297534,
-                    ImpressionType: "INTERACTED",
-                    LocationName: "ipsa",
+                    GameObjectType: sdk.Int(297534),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumInteracted.ToPointer(),
+                    LocationName: sdk.String("ipsa"),
                 },
                 shared.GoogleMapsPlayablelocationsV3Impression{
-                    GameObjectType: 963663,
-                    ImpressionType: "IMPRESSION_TYPE_UNSPECIFIED",
-                    LocationName: "suscipit",
+                    GameObjectType: sdk.Int(963663),
+                    ImpressionType: shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnumImpressionTypeUnspecified.ToPointer(),
+                    LocationName: sdk.String("suscipit"),
                 },
             },
-            RequestID: "molestiae",
+            RequestID: sdk.String("molestiae"),
         },
-        AccessToken: "minus",
-        Alt: "proto",
-        Callback: "voluptatum",
-        Fields: "iusto",
-        Key: "excepturi",
-        OauthToken: "nisi",
-        PrettyPrint: false,
-        QuotaUser: "recusandae",
-        UploadType: "temporibus",
-        UploadProtocol: "ab",
-    }
-
-    ctx := context.Background()
-    res, err := s.V3.PlayablelocationsLogImpressions(ctx, req)
+        AccessToken: sdk.String("minus"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("voluptatum"),
+        Fields: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("recusandae"),
+        UploadType: sdk.String("temporibus"),
+        UploadProtocol: sdk.String("ab"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -85,11 +83,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### V3
+### [V3](docs/v3/README.md)
 
-* `PlayablelocationsLogImpressions` - Logs new events when playable locations are displayed, and when they are interacted with. Impressions are not partially saved; either all impressions are saved and this request succeeds, or no impressions are saved, and this request fails.
-* `PlayablelocationsLogPlayerReports` - Logs bad playable location reports submitted by players. Reports are not partially saved; either all reports are saved and this request succeeds, or no reports are saved, and this request fails.
-* `PlayablelocationsSamplePlayableLocations` - Returns a set of playable locations that lie within a specified area, that satisfy optional filter criteria. Note: Identical `SamplePlayableLocations` requests can return different results as the state of the world changes over time.
+* [PlayablelocationsLogImpressions](docs/v3/README.md#playablelocationslogimpressions) - Logs new events when playable locations are displayed, and when they are interacted with. Impressions are not partially saved; either all impressions are saved and this request succeeds, or no impressions are saved, and this request fails.
+* [PlayablelocationsLogPlayerReports](docs/v3/README.md#playablelocationslogplayerreports) - Logs bad playable location reports submitted by players. Reports are not partially saved; either all reports are saved and this request succeeds, or no reports are saved, and this request fails.
+* [PlayablelocationsSamplePlayableLocations](docs/v3/README.md#playablelocationssampleplayablelocations) - Returns a set of playable locations that lie within a specified area, that satisfy optional filter criteria. Note: Identical `SamplePlayableLocations` requests can return different results as the state of the world changes over time.
 <!-- End SDK Available Operations -->
 
 ### Maturity

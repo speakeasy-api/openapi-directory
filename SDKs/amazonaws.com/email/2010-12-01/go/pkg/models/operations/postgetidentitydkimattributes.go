@@ -15,17 +15,21 @@ const (
 	POSTGetIdentityDkimAttributesActionEnumGetIdentityDkimAttributes POSTGetIdentityDkimAttributesActionEnum = "GetIdentityDkimAttributes"
 )
 
+func (e POSTGetIdentityDkimAttributesActionEnum) ToPointer() *POSTGetIdentityDkimAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTGetIdentityDkimAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIdentityDkimAttributes":
-		*e = POSTGetIdentityDkimAttributesActionEnum(s)
+		*e = POSTGetIdentityDkimAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIdentityDkimAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIdentityDkimAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetIdentityDkimAttributesVersionEnumTwoThousandAndTen1201 POSTGetIdentityDkimAttributesVersionEnum = "2010-12-01"
 )
 
+func (e POSTGetIdentityDkimAttributesVersionEnum) ToPointer() *POSTGetIdentityDkimAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetIdentityDkimAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTGetIdentityDkimAttributesVersionEnum(s)
+		*e = POSTGetIdentityDkimAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIdentityDkimAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIdentityDkimAttributesVersionEnum: %v", v)
 	}
 }
 

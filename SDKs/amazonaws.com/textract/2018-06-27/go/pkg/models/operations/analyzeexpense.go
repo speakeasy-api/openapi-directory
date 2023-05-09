@@ -16,17 +16,21 @@ const (
 	AnalyzeExpenseXAmzTargetEnumTextractAnalyzeExpense AnalyzeExpenseXAmzTargetEnum = "Textract.AnalyzeExpense"
 )
 
+func (e AnalyzeExpenseXAmzTargetEnum) ToPointer() *AnalyzeExpenseXAmzTargetEnum {
+	return &e
+}
+
 func (e *AnalyzeExpenseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Textract.AnalyzeExpense":
-		*e = AnalyzeExpenseXAmzTargetEnum(s)
+		*e = AnalyzeExpenseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyzeExpenseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyzeExpenseXAmzTargetEnum: %v", v)
 	}
 }
 

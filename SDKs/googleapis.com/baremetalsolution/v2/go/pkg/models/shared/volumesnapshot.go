@@ -16,21 +16,25 @@ const (
 	VolumeSnapshotTypeEnumScheduled               VolumeSnapshotTypeEnum = "SCHEDULED"
 )
 
+func (e VolumeSnapshotTypeEnum) ToPointer() *VolumeSnapshotTypeEnum {
+	return &e
+}
+
 func (e *VolumeSnapshotTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNAPSHOT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AD_HOC":
 		fallthrough
 	case "SCHEDULED":
-		*e = VolumeSnapshotTypeEnum(s)
+		*e = VolumeSnapshotTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeSnapshotTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeSnapshotTypeEnum: %v", v)
 	}
 }
 

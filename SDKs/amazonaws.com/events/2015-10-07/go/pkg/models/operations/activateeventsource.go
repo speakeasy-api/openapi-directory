@@ -16,17 +16,21 @@ const (
 	ActivateEventSourceXAmzTargetEnumAwsEventsActivateEventSource ActivateEventSourceXAmzTargetEnum = "AWSEvents.ActivateEventSource"
 )
 
+func (e ActivateEventSourceXAmzTargetEnum) ToPointer() *ActivateEventSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ActivateEventSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.ActivateEventSource":
-		*e = ActivateEventSourceXAmzTargetEnum(s)
+		*e = ActivateEventSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivateEventSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivateEventSourceXAmzTargetEnum: %v", v)
 	}
 }
 

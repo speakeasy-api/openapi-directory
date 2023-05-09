@@ -15,17 +15,21 @@ const (
 	POSTDeleteTrafficMirrorFilterRuleActionEnumDeleteTrafficMirrorFilterRule POSTDeleteTrafficMirrorFilterRuleActionEnum = "DeleteTrafficMirrorFilterRule"
 )
 
+func (e POSTDeleteTrafficMirrorFilterRuleActionEnum) ToPointer() *POSTDeleteTrafficMirrorFilterRuleActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTrafficMirrorFilterRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTrafficMirrorFilterRule":
-		*e = POSTDeleteTrafficMirrorFilterRuleActionEnum(s)
+		*e = POSTDeleteTrafficMirrorFilterRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTrafficMirrorFilterRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTrafficMirrorFilterRuleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 POSTDeleteTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteTrafficMirrorFilterRuleVersionEnum) ToPointer() *POSTDeleteTrafficMirrorFilterRuleVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTrafficMirrorFilterRuleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteTrafficMirrorFilterRuleVersionEnum(s)
+		*e = POSTDeleteTrafficMirrorFilterRuleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTrafficMirrorFilterRuleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTrafficMirrorFilterRuleVersionEnum: %v", v)
 	}
 }
 

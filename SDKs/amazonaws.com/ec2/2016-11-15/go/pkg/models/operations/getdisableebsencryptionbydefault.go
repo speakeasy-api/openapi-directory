@@ -15,17 +15,21 @@ const (
 	GETDisableEbsEncryptionByDefaultActionEnumDisableEbsEncryptionByDefault GETDisableEbsEncryptionByDefaultActionEnum = "DisableEbsEncryptionByDefault"
 )
 
+func (e GETDisableEbsEncryptionByDefaultActionEnum) ToPointer() *GETDisableEbsEncryptionByDefaultActionEnum {
+	return &e
+}
+
 func (e *GETDisableEbsEncryptionByDefaultActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableEbsEncryptionByDefault":
-		*e = GETDisableEbsEncryptionByDefaultActionEnum(s)
+		*e = GETDisableEbsEncryptionByDefaultActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableEbsEncryptionByDefaultActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableEbsEncryptionByDefaultActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableEbsEncryptionByDefaultVersionEnumTwoThousandAndSixteen1115 GETDisableEbsEncryptionByDefaultVersionEnum = "2016-11-15"
 )
 
+func (e GETDisableEbsEncryptionByDefaultVersionEnum) ToPointer() *GETDisableEbsEncryptionByDefaultVersionEnum {
+	return &e
+}
+
 func (e *GETDisableEbsEncryptionByDefaultVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisableEbsEncryptionByDefaultVersionEnum(s)
+		*e = GETDisableEbsEncryptionByDefaultVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableEbsEncryptionByDefaultVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableEbsEncryptionByDefaultVersionEnum: %v", v)
 	}
 }
 

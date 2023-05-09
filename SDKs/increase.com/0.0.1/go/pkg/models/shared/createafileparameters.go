@@ -24,15 +24,20 @@ const (
 	CreateAFileParametersPurposeEnumTrustFormationDocument     CreateAFileParametersPurposeEnum = "trust_formation_document"
 	CreateAFileParametersPurposeEnumDigitalWalletArtwork       CreateAFileParametersPurposeEnum = "digital_wallet_artwork"
 	CreateAFileParametersPurposeEnumDigitalWalletAppIcon       CreateAFileParametersPurposeEnum = "digital_wallet_app_icon"
+	CreateAFileParametersPurposeEnumDocumentRequest            CreateAFileParametersPurposeEnum = "document_request"
 	CreateAFileParametersPurposeEnumEntitySupplementalDocument CreateAFileParametersPurposeEnum = "entity_supplemental_document"
 )
 
+func (e CreateAFileParametersPurposeEnum) ToPointer() *CreateAFileParametersPurposeEnum {
+	return &e
+}
+
 func (e *CreateAFileParametersPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_image_front":
 		fallthrough
 	case "check_image_back":
@@ -49,11 +54,13 @@ func (e *CreateAFileParametersPurposeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "digital_wallet_app_icon":
 		fallthrough
+	case "document_request":
+		fallthrough
 	case "entity_supplemental_document":
-		*e = CreateAFileParametersPurposeEnum(s)
+		*e = CreateAFileParametersPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileParametersPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileParametersPurposeEnum: %v", v)
 	}
 }
 

@@ -36,12 +36,16 @@ const (
 	GetItemExpandEnumParent    GetItemExpandEnum = "parent"
 )
 
+func (e GetItemExpandEnum) ToPointer() *GetItemExpandEnum {
+	return &e
+}
+
 func (e *GetItemExpandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "children":
@@ -49,10 +53,10 @@ func (e *GetItemExpandEnum) UnmarshalJSON(data []byte) error {
 	case "ancestors":
 		fallthrough
 	case "parent":
-		*e = GetItemExpandEnum(s)
+		*e = GetItemExpandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItemExpandEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItemExpandEnum: %v", v)
 	}
 }
 
@@ -71,19 +75,23 @@ const (
 	GetItemSelectSeasonEnumLatest GetItemSelectSeasonEnum = "latest"
 )
 
+func (e GetItemSelectSeasonEnum) ToPointer() *GetItemSelectSeasonEnum {
+	return &e
+}
+
 func (e *GetItemSelectSeasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "first":
 		fallthrough
 	case "latest":
-		*e = GetItemSelectSeasonEnum(s)
+		*e = GetItemSelectSeasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetItemSelectSeasonEnum: %s", s)
+		return fmt.Errorf("invalid value for GetItemSelectSeasonEnum: %v", v)
 	}
 }
 

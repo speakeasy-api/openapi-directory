@@ -14,18 +14,22 @@ const (
 	SharePointOnlineAuthenticationTypeEnumOauth2    SharePointOnlineAuthenticationTypeEnum = "OAUTH2"
 )
 
+func (e SharePointOnlineAuthenticationTypeEnum) ToPointer() *SharePointOnlineAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *SharePointOnlineAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_BASIC":
 		fallthrough
 	case "OAUTH2":
-		*e = SharePointOnlineAuthenticationTypeEnum(s)
+		*e = SharePointOnlineAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SharePointOnlineAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SharePointOnlineAuthenticationTypeEnum: %v", v)
 	}
 }

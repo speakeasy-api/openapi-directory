@@ -21,21 +21,25 @@ const (
 	RepositoryMergeCommitMessageEnumBlank   RepositoryMergeCommitMessageEnum = "BLANK"
 )
 
+func (e RepositoryMergeCommitMessageEnum) ToPointer() *RepositoryMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *RepositoryMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "PR_TITLE":
 		fallthrough
 	case "BLANK":
-		*e = RepositoryMergeCommitMessageEnum(s)
+		*e = RepositoryMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	RepositoryMergeCommitTitleEnumMergeMessage RepositoryMergeCommitTitleEnum = "MERGE_MESSAGE"
 )
 
+func (e RepositoryMergeCommitTitleEnum) ToPointer() *RepositoryMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *RepositoryMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "MERGE_MESSAGE":
-		*e = RepositoryMergeCommitTitleEnum(s)
+		*e = RepositoryMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	RepositorySquashMergeCommitMessageEnumBlank          RepositorySquashMergeCommitMessageEnum = "BLANK"
 )
 
+func (e RepositorySquashMergeCommitMessageEnum) ToPointer() *RepositorySquashMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *RepositorySquashMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "COMMIT_MESSAGES":
 		fallthrough
 	case "BLANK":
-		*e = RepositorySquashMergeCommitMessageEnum(s)
+		*e = RepositorySquashMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositorySquashMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositorySquashMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -116,19 +128,23 @@ const (
 	RepositorySquashMergeCommitTitleEnumCommitOrPrTitle RepositorySquashMergeCommitTitleEnum = "COMMIT_OR_PR_TITLE"
 )
 
+func (e RepositorySquashMergeCommitTitleEnum) ToPointer() *RepositorySquashMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *RepositorySquashMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "COMMIT_OR_PR_TITLE":
-		*e = RepositorySquashMergeCommitTitleEnum(s)
+		*e = RepositorySquashMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositorySquashMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositorySquashMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -145,21 +161,25 @@ const (
 	RepositoryTemplateRepositoryMergeCommitMessageEnumBlank   RepositoryTemplateRepositoryMergeCommitMessageEnum = "BLANK"
 )
 
+func (e RepositoryTemplateRepositoryMergeCommitMessageEnum) ToPointer() *RepositoryTemplateRepositoryMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *RepositoryTemplateRepositoryMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "PR_TITLE":
 		fallthrough
 	case "BLANK":
-		*e = RepositoryTemplateRepositoryMergeCommitMessageEnum(s)
+		*e = RepositoryTemplateRepositoryMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryTemplateRepositoryMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryTemplateRepositoryMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -174,19 +194,23 @@ const (
 	RepositoryTemplateRepositoryMergeCommitTitleEnumMergeMessage RepositoryTemplateRepositoryMergeCommitTitleEnum = "MERGE_MESSAGE"
 )
 
+func (e RepositoryTemplateRepositoryMergeCommitTitleEnum) ToPointer() *RepositoryTemplateRepositoryMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *RepositoryTemplateRepositoryMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "MERGE_MESSAGE":
-		*e = RepositoryTemplateRepositoryMergeCommitTitleEnum(s)
+		*e = RepositoryTemplateRepositoryMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryTemplateRepositoryMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryTemplateRepositoryMergeCommitTitleEnum: %v", v)
 	}
 }
 
@@ -232,21 +256,25 @@ const (
 	RepositoryTemplateRepositorySquashMergeCommitMessageEnumBlank          RepositoryTemplateRepositorySquashMergeCommitMessageEnum = "BLANK"
 )
 
+func (e RepositoryTemplateRepositorySquashMergeCommitMessageEnum) ToPointer() *RepositoryTemplateRepositorySquashMergeCommitMessageEnum {
+	return &e
+}
+
 func (e *RepositoryTemplateRepositorySquashMergeCommitMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_BODY":
 		fallthrough
 	case "COMMIT_MESSAGES":
 		fallthrough
 	case "BLANK":
-		*e = RepositoryTemplateRepositorySquashMergeCommitMessageEnum(s)
+		*e = RepositoryTemplateRepositorySquashMergeCommitMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryTemplateRepositorySquashMergeCommitMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryTemplateRepositorySquashMergeCommitMessageEnum: %v", v)
 	}
 }
 
@@ -261,19 +289,23 @@ const (
 	RepositoryTemplateRepositorySquashMergeCommitTitleEnumCommitOrPrTitle RepositoryTemplateRepositorySquashMergeCommitTitleEnum = "COMMIT_OR_PR_TITLE"
 )
 
+func (e RepositoryTemplateRepositorySquashMergeCommitTitleEnum) ToPointer() *RepositoryTemplateRepositorySquashMergeCommitTitleEnum {
+	return &e
+}
+
 func (e *RepositoryTemplateRepositorySquashMergeCommitTitleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PR_TITLE":
 		fallthrough
 	case "COMMIT_OR_PR_TITLE":
-		*e = RepositoryTemplateRepositorySquashMergeCommitTitleEnum(s)
+		*e = RepositoryTemplateRepositorySquashMergeCommitTitleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryTemplateRepositorySquashMergeCommitTitleEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryTemplateRepositorySquashMergeCommitTitleEnum: %v", v)
 	}
 }
 

@@ -2,6 +2,7 @@
 
 package shared
 
+// EksMetadata - Describes and uniquely identifies Kubernetes resources. For example, the compute environment that a pod runs in or the <code>jobID</code> for a job running in the pod. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/">Understanding Kubernetes Objects</a> in the <i>Kubernetes documentation</i>.
 type EksMetadata struct {
 	Labels map[string]string `json:"labels,omitempty"`
 }

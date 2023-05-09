@@ -35,7 +35,10 @@ func newSalesChannelMapping(defaultClient, securityClient HTTPClient, serverURL,
 // Retrieves information about the mapping between marketplace's sales channels and a specific seller.
 func (s *salesChannelMapping) RetrieveMapping(ctx context.Context, request operations.RetrieveMappingRequest) (*operations.RetrieveMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/sales-channel/mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/sales-channel/mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *salesChannelMapping) RetrieveMapping(ctx context.Context, request opera
 // This endpoint allows the marketplace to map its sales channels with a seller's [affiliate](https://help.vtex.com/en/tutorial/configuring-affiliates--tutorials_187). The seller can have multiple sales channels associated with the same marketplace, by creating different affiliates. The mapping enables the seller to segment catalog, prices, inventory, logistics, and payments in the marketplace.
 func (s *salesChannelMapping) UpsertMapping(ctx context.Context, request operations.UpsertMappingRequest) (*operations.UpsertMappingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/sales-channel/mapping", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}/sales-channel/mapping", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

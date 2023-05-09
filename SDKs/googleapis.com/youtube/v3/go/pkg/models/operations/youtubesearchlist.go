@@ -45,21 +45,25 @@ const (
 	YoutubeSearchListChannelTypeEnumShow                   YoutubeSearchListChannelTypeEnum = "show"
 )
 
+func (e YoutubeSearchListChannelTypeEnum) ToPointer() *YoutubeSearchListChannelTypeEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "channelTypeUnspecified":
 		fallthrough
 	case "any":
 		fallthrough
 	case "show":
-		*e = YoutubeSearchListChannelTypeEnum(s)
+		*e = YoutubeSearchListChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListChannelTypeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	YoutubeSearchListEventTypeEnumCompleted YoutubeSearchListEventTypeEnum = "completed"
 )
 
+func (e YoutubeSearchListEventTypeEnum) ToPointer() *YoutubeSearchListEventTypeEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "upcoming":
@@ -86,10 +94,10 @@ func (e *YoutubeSearchListEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "live":
 		fallthrough
 	case "completed":
-		*e = YoutubeSearchListEventTypeEnum(s)
+		*e = YoutubeSearchListEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListEventTypeEnum: %v", v)
 	}
 }
 
@@ -106,12 +114,16 @@ const (
 	YoutubeSearchListOrderEnumVideoCount            YoutubeSearchListOrderEnum = "videoCount"
 )
 
+func (e YoutubeSearchListOrderEnum) ToPointer() *YoutubeSearchListOrderEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "searchSortUnspecified":
 		fallthrough
 	case "date":
@@ -125,10 +137,10 @@ func (e *YoutubeSearchListOrderEnum) UnmarshalJSON(data []byte) error {
 	case "title":
 		fallthrough
 	case "videoCount":
-		*e = YoutubeSearchListOrderEnum(s)
+		*e = YoutubeSearchListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListOrderEnum: %v", v)
 	}
 }
 
@@ -142,12 +154,16 @@ const (
 	YoutubeSearchListSafeSearchEnumStrict                       YoutubeSearchListSafeSearchEnum = "strict"
 )
 
+func (e YoutubeSearchListSafeSearchEnum) ToPointer() *YoutubeSearchListSafeSearchEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListSafeSearchEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "safeSearchSettingUnspecified":
 		fallthrough
 	case "none":
@@ -155,10 +171,10 @@ func (e *YoutubeSearchListSafeSearchEnum) UnmarshalJSON(data []byte) error {
 	case "moderate":
 		fallthrough
 	case "strict":
-		*e = YoutubeSearchListSafeSearchEnum(s)
+		*e = YoutubeSearchListSafeSearchEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListSafeSearchEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListSafeSearchEnum: %v", v)
 	}
 }
 
@@ -172,12 +188,16 @@ const (
 	YoutubeSearchListVideoCaptionEnumNone                    YoutubeSearchListVideoCaptionEnum = "none"
 )
 
+func (e YoutubeSearchListVideoCaptionEnum) ToPointer() *YoutubeSearchListVideoCaptionEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoCaptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoCaptionUnspecified":
 		fallthrough
 	case "any":
@@ -185,10 +205,10 @@ func (e *YoutubeSearchListVideoCaptionEnum) UnmarshalJSON(data []byte) error {
 	case "closedCaption":
 		fallthrough
 	case "none":
-		*e = YoutubeSearchListVideoCaptionEnum(s)
+		*e = YoutubeSearchListVideoCaptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoCaptionEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoCaptionEnum: %v", v)
 	}
 }
 
@@ -201,21 +221,25 @@ const (
 	YoutubeSearchListVideoDefinitionEnumHigh     YoutubeSearchListVideoDefinitionEnum = "high"
 )
 
+func (e YoutubeSearchListVideoDefinitionEnum) ToPointer() *YoutubeSearchListVideoDefinitionEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoDefinitionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "standard":
 		fallthrough
 	case "high":
-		*e = YoutubeSearchListVideoDefinitionEnum(s)
+		*e = YoutubeSearchListVideoDefinitionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoDefinitionEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoDefinitionEnum: %v", v)
 	}
 }
 
@@ -228,21 +252,25 @@ const (
 	YoutubeSearchListVideoDimensionEnumThreed YoutubeSearchListVideoDimensionEnum = "3d"
 )
 
+func (e YoutubeSearchListVideoDimensionEnum) ToPointer() *YoutubeSearchListVideoDimensionEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "2d":
 		fallthrough
 	case "3d":
-		*e = YoutubeSearchListVideoDimensionEnum(s)
+		*e = YoutubeSearchListVideoDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoDimensionEnum: %v", v)
 	}
 }
 
@@ -257,12 +285,16 @@ const (
 	YoutubeSearchListVideoDurationEnumLong                     YoutubeSearchListVideoDurationEnum = "long"
 )
 
+func (e YoutubeSearchListVideoDurationEnum) ToPointer() *YoutubeSearchListVideoDurationEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoDurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoDurationUnspecified":
 		fallthrough
 	case "any":
@@ -272,10 +304,10 @@ func (e *YoutubeSearchListVideoDurationEnum) UnmarshalJSON(data []byte) error {
 	case "medium":
 		fallthrough
 	case "long":
-		*e = YoutubeSearchListVideoDurationEnum(s)
+		*e = YoutubeSearchListVideoDurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoDurationEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoDurationEnum: %v", v)
 	}
 }
 
@@ -288,21 +320,25 @@ const (
 	YoutubeSearchListVideoEmbeddableEnumTrue                       YoutubeSearchListVideoEmbeddableEnum = "true"
 )
 
+func (e YoutubeSearchListVideoEmbeddableEnum) ToPointer() *YoutubeSearchListVideoEmbeddableEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoEmbeddableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoEmbeddableUnspecified":
 		fallthrough
 	case "any":
 		fallthrough
 	case "true":
-		*e = YoutubeSearchListVideoEmbeddableEnum(s)
+		*e = YoutubeSearchListVideoEmbeddableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoEmbeddableEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoEmbeddableEnum: %v", v)
 	}
 }
 
@@ -315,21 +351,25 @@ const (
 	YoutubeSearchListVideoLicenseEnumCreativeCommon YoutubeSearchListVideoLicenseEnum = "creativeCommon"
 )
 
+func (e YoutubeSearchListVideoLicenseEnum) ToPointer() *YoutubeSearchListVideoLicenseEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "youtube":
 		fallthrough
 	case "creativeCommon":
-		*e = YoutubeSearchListVideoLicenseEnum(s)
+		*e = YoutubeSearchListVideoLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoLicenseEnum: %v", v)
 	}
 }
 
@@ -342,21 +382,25 @@ const (
 	YoutubeSearchListVideoSyndicatedEnumTrue                       YoutubeSearchListVideoSyndicatedEnum = "true"
 )
 
+func (e YoutubeSearchListVideoSyndicatedEnum) ToPointer() *YoutubeSearchListVideoSyndicatedEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoSyndicatedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoSyndicatedUnspecified":
 		fallthrough
 	case "any":
 		fallthrough
 	case "true":
-		*e = YoutubeSearchListVideoSyndicatedEnum(s)
+		*e = YoutubeSearchListVideoSyndicatedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoSyndicatedEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoSyndicatedEnum: %v", v)
 	}
 }
 
@@ -370,12 +414,16 @@ const (
 	YoutubeSearchListVideoTypeEnumEpisode              YoutubeSearchListVideoTypeEnum = "episode"
 )
 
+func (e YoutubeSearchListVideoTypeEnum) ToPointer() *YoutubeSearchListVideoTypeEnum {
+	return &e
+}
+
 func (e *YoutubeSearchListVideoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "videoTypeUnspecified":
 		fallthrough
 	case "any":
@@ -383,10 +431,10 @@ func (e *YoutubeSearchListVideoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "movie":
 		fallthrough
 	case "episode":
-		*e = YoutubeSearchListVideoTypeEnum(s)
+		*e = YoutubeSearchListVideoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSearchListVideoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSearchListVideoTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DescribeClustersXAmzTargetEnumAmazonDaxv3DescribeClusters DescribeClustersXAmzTargetEnum = "AmazonDAXV3.DescribeClusters"
 )
 
+func (e DescribeClustersXAmzTargetEnum) ToPointer() *DescribeClustersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeClustersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.DescribeClusters":
-		*e = DescribeClustersXAmzTargetEnum(s)
+		*e = DescribeClustersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClustersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClustersXAmzTargetEnum: %v", v)
 	}
 }
 

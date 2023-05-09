@@ -22,21 +22,25 @@ const (
 	PreprintsContributorsListContributorAttributesPermissionEnumAdmin PreprintsContributorsListContributorAttributesPermissionEnum = "admin"
 )
 
+func (e PreprintsContributorsListContributorAttributesPermissionEnum) ToPointer() *PreprintsContributorsListContributorAttributesPermissionEnum {
+	return &e
+}
+
 func (e *PreprintsContributorsListContributorAttributesPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
 		fallthrough
 	case "admin":
-		*e = PreprintsContributorsListContributorAttributesPermissionEnum(s)
+		*e = PreprintsContributorsListContributorAttributesPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreprintsContributorsListContributorAttributesPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for PreprintsContributorsListContributorAttributesPermissionEnum: %v", v)
 	}
 }
 

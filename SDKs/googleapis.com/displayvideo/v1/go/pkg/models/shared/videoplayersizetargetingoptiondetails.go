@@ -18,12 +18,16 @@ const (
 	VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnumVideoPlayerSizeUnknown     VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum = "VIDEO_PLAYER_SIZE_UNKNOWN"
 )
 
+func (e VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum) ToPointer() *VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum {
+	return &e
+}
+
 func (e *VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_PLAYER_SIZE_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_PLAYER_SIZE_SMALL":
@@ -33,10 +37,10 @@ func (e *VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum) UnmarshalJSON
 	case "VIDEO_PLAYER_SIZE_HD":
 		fallthrough
 	case "VIDEO_PLAYER_SIZE_UNKNOWN":
-		*e = VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum(s)
+		*e = VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoPlayerSizeTargetingOptionDetailsVideoPlayerSizeEnum: %v", v)
 	}
 }
 

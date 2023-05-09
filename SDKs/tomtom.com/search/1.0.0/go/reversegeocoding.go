@@ -33,7 +33,10 @@ func newReverseGeocoding(defaultClient, securityClient HTTPClient, serverURL, la
 // GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt - Cross Street lookup
 func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodeCrossStreetPositionExt(ctx context.Context, request operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest) (*operations.GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/crossStreet/{position}.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodeCrossStreetPositi
 // GetSearchVersionNumberReverseGeocodePositionExt - Reverse Geocode
 func (s *reverseGeocoding) GetSearchVersionNumberReverseGeocodePositionExt(ctx context.Context, request operations.GetSearchVersionNumberReverseGeocodePositionExtRequest) (*operations.GetSearchVersionNumberReverseGeocodePositionExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/reverseGeocode/{position}.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

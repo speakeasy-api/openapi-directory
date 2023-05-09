@@ -37,7 +37,10 @@ func newAs2Stations(defaultClient, securityClient HTTPClient, serverURL, languag
 // Delete As2 Station
 func (s *as2Stations) DeleteAs2StationsID(ctx context.Context, request operations.DeleteAs2StationsIDRequest) (*operations.DeleteAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *as2Stations) GetAs2Stations(ctx context.Context, request operations.Get
 // Show As2 Station
 func (s *as2Stations) GetAs2StationsID(ctx context.Context, request operations.GetAs2StationsIDRequest) (*operations.GetAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *as2Stations) GetAs2StationsID(ctx context.Context, request operations.G
 // Update As2 Station
 func (s *as2Stations) PatchAs2StationsID(ctx context.Context, request operations.PatchAs2StationsIDRequest) (*operations.PatchAs2StationsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/as2_stations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

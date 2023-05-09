@@ -16,12 +16,16 @@ const (
 	AccountLevelBpaSyncStatusEnumDefaulted   AccountLevelBpaSyncStatusEnum = "Defaulted"
 )
 
+func (e AccountLevelBpaSyncStatusEnum) ToPointer() *AccountLevelBpaSyncStatusEnum {
+	return &e
+}
+
 func (e *AccountLevelBpaSyncStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InSync":
 		fallthrough
 	case "Failed":
@@ -29,9 +33,9 @@ func (e *AccountLevelBpaSyncStatusEnum) UnmarshalJSON(data []byte) error {
 	case "NeverSynced":
 		fallthrough
 	case "Defaulted":
-		*e = AccountLevelBpaSyncStatusEnum(s)
+		*e = AccountLevelBpaSyncStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountLevelBpaSyncStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountLevelBpaSyncStatusEnum: %v", v)
 	}
 }

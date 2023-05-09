@@ -16,12 +16,16 @@ const (
 	PredefinedScalingMetricTypeEnumAlbRequestCountPerTarget PredefinedScalingMetricTypeEnum = "ALBRequestCountPerTarget"
 )
 
+func (e PredefinedScalingMetricTypeEnum) ToPointer() *PredefinedScalingMetricTypeEnum {
+	return &e
+}
+
 func (e *PredefinedScalingMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASGAverageCPUUtilization":
 		fallthrough
 	case "ASGAverageNetworkIn":
@@ -29,9 +33,9 @@ func (e *PredefinedScalingMetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ASGAverageNetworkOut":
 		fallthrough
 	case "ALBRequestCountPerTarget":
-		*e = PredefinedScalingMetricTypeEnum(s)
+		*e = PredefinedScalingMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredefinedScalingMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PredefinedScalingMetricTypeEnum: %v", v)
 	}
 }

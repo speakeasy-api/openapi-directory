@@ -15,19 +15,23 @@ const (
 	GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnumAudio                        GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum = "AUDIO"
 )
 
+func (e GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum) ToPointer() *GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESPONSE_MEDIA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIO":
-		*e = GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum(s)
+		*e = GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageMediaContentMediaTypeEnum: %v", v)
 	}
 }
 

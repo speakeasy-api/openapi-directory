@@ -16,17 +16,21 @@ const (
 	BatchGetCollectionXAmzTargetEnumOpenSearchServerlessBatchGetCollection BatchGetCollectionXAmzTargetEnum = "OpenSearchServerless.BatchGetCollection"
 )
 
+func (e BatchGetCollectionXAmzTargetEnum) ToPointer() *BatchGetCollectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetCollectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.BatchGetCollection":
-		*e = BatchGetCollectionXAmzTargetEnum(s)
+		*e = BatchGetCollectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetCollectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetCollectionXAmzTargetEnum: %v", v)
 	}
 }
 

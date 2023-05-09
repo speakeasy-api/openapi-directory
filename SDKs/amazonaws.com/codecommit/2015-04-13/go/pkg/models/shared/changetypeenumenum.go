@@ -15,20 +15,24 @@ const (
 	ChangeTypeEnumEnumD ChangeTypeEnumEnum = "D"
 )
 
+func (e ChangeTypeEnumEnum) ToPointer() *ChangeTypeEnumEnum {
+	return &e
+}
+
 func (e *ChangeTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A":
 		fallthrough
 	case "M":
 		fallthrough
 	case "D":
-		*e = ChangeTypeEnumEnum(s)
+		*e = ChangeTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeTypeEnumEnum: %v", v)
 	}
 }

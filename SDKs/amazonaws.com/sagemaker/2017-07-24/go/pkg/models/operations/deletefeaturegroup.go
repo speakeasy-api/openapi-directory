@@ -16,17 +16,21 @@ const (
 	DeleteFeatureGroupXAmzTargetEnumSageMakerDeleteFeatureGroup DeleteFeatureGroupXAmzTargetEnum = "SageMaker.DeleteFeatureGroup"
 )
 
+func (e DeleteFeatureGroupXAmzTargetEnum) ToPointer() *DeleteFeatureGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFeatureGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteFeatureGroup":
-		*e = DeleteFeatureGroupXAmzTargetEnum(s)
+		*e = DeleteFeatureGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFeatureGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFeatureGroupXAmzTargetEnum: %v", v)
 	}
 }
 

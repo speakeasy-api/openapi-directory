@@ -17,12 +17,16 @@ const (
 	ExecStepConfigInterpreterEnumPowershell             ExecStepConfigInterpreterEnum = "POWERSHELL"
 )
 
+func (e ExecStepConfigInterpreterEnum) ToPointer() *ExecStepConfigInterpreterEnum {
+	return &e
+}
+
 func (e *ExecStepConfigInterpreterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERPRETER_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -30,10 +34,10 @@ func (e *ExecStepConfigInterpreterEnum) UnmarshalJSON(data []byte) error {
 	case "SHELL":
 		fallthrough
 	case "POWERSHELL":
-		*e = ExecStepConfigInterpreterEnum(s)
+		*e = ExecStepConfigInterpreterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecStepConfigInterpreterEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecStepConfigInterpreterEnum: %v", v)
 	}
 }
 

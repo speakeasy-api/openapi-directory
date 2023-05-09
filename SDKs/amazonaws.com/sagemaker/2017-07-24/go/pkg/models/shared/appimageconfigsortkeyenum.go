@@ -15,20 +15,24 @@ const (
 	AppImageConfigSortKeyEnumName             AppImageConfigSortKeyEnum = "Name"
 )
 
+func (e AppImageConfigSortKeyEnum) ToPointer() *AppImageConfigSortKeyEnum {
+	return &e
+}
+
 func (e *AppImageConfigSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
 		fallthrough
 	case "LastModifiedTime":
 		fallthrough
 	case "Name":
-		*e = AppImageConfigSortKeyEnum(s)
+		*e = AppImageConfigSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppImageConfigSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AppImageConfigSortKeyEnum: %v", v)
 	}
 }

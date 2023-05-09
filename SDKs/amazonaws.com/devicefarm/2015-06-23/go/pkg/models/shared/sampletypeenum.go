@@ -29,12 +29,16 @@ const (
 	SampleTypeEnumOpenglMaxDrawtime SampleTypeEnum = "OPENGL_MAX_DRAWTIME"
 )
 
+func (e SampleTypeEnum) ToPointer() *SampleTypeEnum {
+	return &e
+}
+
 func (e *SampleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPU":
 		fallthrough
 	case "MEMORY":
@@ -68,9 +72,9 @@ func (e *SampleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OPENGL_AVG_DRAWTIME":
 		fallthrough
 	case "OPENGL_MAX_DRAWTIME":
-		*e = SampleTypeEnum(s)
+		*e = SampleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SampleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SampleTypeEnum: %v", v)
 	}
 }

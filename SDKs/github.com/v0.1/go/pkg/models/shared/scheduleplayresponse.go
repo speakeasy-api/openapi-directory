@@ -23,12 +23,16 @@ const (
 	SchedulePlayResponseMessageEnumPlayFailed                            SchedulePlayResponseMessageEnum = "Play Failed"
 )
 
+func (e SchedulePlayResponseMessageEnum) ToPointer() *SchedulePlayResponseMessageEnum {
+	return &e
+}
+
 func (e *SchedulePlayResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Play Executed":
 		fallthrough
 	case "CallUUID Parameter Missing":
@@ -48,10 +52,10 @@ func (e *SchedulePlayResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "Play Failed -- Call not found":
 		fallthrough
 	case "Play Failed":
-		*e = SchedulePlayResponseMessageEnum(s)
+		*e = SchedulePlayResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchedulePlayResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for SchedulePlayResponseMessageEnum: %v", v)
 	}
 }
 

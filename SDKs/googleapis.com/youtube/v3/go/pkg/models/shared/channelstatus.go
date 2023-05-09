@@ -17,12 +17,16 @@ const (
 	ChannelStatusLongUploadsStatusEnumDisallowed             ChannelStatusLongUploadsStatusEnum = "disallowed"
 )
 
+func (e ChannelStatusLongUploadsStatusEnum) ToPointer() *ChannelStatusLongUploadsStatusEnum {
+	return &e
+}
+
 func (e *ChannelStatusLongUploadsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "longUploadsUnspecified":
 		fallthrough
 	case "allowed":
@@ -30,10 +34,10 @@ func (e *ChannelStatusLongUploadsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "eligible":
 		fallthrough
 	case "disallowed":
-		*e = ChannelStatusLongUploadsStatusEnum(s)
+		*e = ChannelStatusLongUploadsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelStatusLongUploadsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelStatusLongUploadsStatusEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ChannelStatusPrivacyStatusEnumPrivate  ChannelStatusPrivacyStatusEnum = "private"
 )
 
+func (e ChannelStatusPrivacyStatusEnum) ToPointer() *ChannelStatusPrivacyStatusEnum {
+	return &e
+}
+
 func (e *ChannelStatusPrivacyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
 		fallthrough
 	case "private":
-		*e = ChannelStatusPrivacyStatusEnum(s)
+		*e = ChannelStatusPrivacyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelStatusPrivacyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelStatusPrivacyStatusEnum: %v", v)
 	}
 }
 

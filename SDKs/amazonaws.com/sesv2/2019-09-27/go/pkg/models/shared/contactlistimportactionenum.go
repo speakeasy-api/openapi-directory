@@ -14,18 +14,22 @@ const (
 	ContactListImportActionEnumPut    ContactListImportActionEnum = "PUT"
 )
 
+func (e ContactListImportActionEnum) ToPointer() *ContactListImportActionEnum {
+	return &e
+}
+
 func (e *ContactListImportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE":
 		fallthrough
 	case "PUT":
-		*e = ContactListImportActionEnum(s)
+		*e = ContactListImportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactListImportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactListImportActionEnum: %v", v)
 	}
 }

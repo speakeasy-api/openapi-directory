@@ -35,12 +35,16 @@ const (
 	InvoicePaymentAPIModelTypeEnumBraintree    InvoicePaymentAPIModelTypeEnum = "Braintree"
 )
 
+func (e InvoicePaymentAPIModelTypeEnum) ToPointer() *InvoicePaymentAPIModelTypeEnum {
+	return &e
+}
+
 func (e *InvoicePaymentAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Other":
 		fallthrough
 	case "Paypal":
@@ -82,10 +86,10 @@ func (e *InvoicePaymentAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AuthorizeNet":
 		fallthrough
 	case "Braintree":
-		*e = InvoicePaymentAPIModelTypeEnum(s)
+		*e = InvoicePaymentAPIModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoicePaymentAPIModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoicePaymentAPIModelTypeEnum: %v", v)
 	}
 }
 

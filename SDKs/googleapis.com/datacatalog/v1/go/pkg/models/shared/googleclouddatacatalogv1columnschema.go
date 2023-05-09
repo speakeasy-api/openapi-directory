@@ -18,12 +18,16 @@ const (
 	GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnumIndexingTypePrimaryKey  GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum = "INDEXING_TYPE_PRIMARY_KEY"
 )
 
+func (e GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum) ToPointer() *GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDEXING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INDEXING_TYPE_NONE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum) UnmarshalJ
 	case "INDEXING_TYPE_UNIQUE":
 		fallthrough
 	case "INDEXING_TYPE_PRIMARY_KEY":
-		*e = GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1ColumnSchemaHighestIndexingTypeEnum: %v", v)
 	}
 }
 

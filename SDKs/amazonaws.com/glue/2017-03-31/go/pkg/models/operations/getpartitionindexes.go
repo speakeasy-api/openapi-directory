@@ -16,17 +16,21 @@ const (
 	GetPartitionIndexesXAmzTargetEnumAwsGlueGetPartitionIndexes GetPartitionIndexesXAmzTargetEnum = "AWSGlue.GetPartitionIndexes"
 )
 
+func (e GetPartitionIndexesXAmzTargetEnum) ToPointer() *GetPartitionIndexesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPartitionIndexesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetPartitionIndexes":
-		*e = GetPartitionIndexesXAmzTargetEnum(s)
+		*e = GetPartitionIndexesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPartitionIndexesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPartitionIndexesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -31,7 +31,7 @@ func newAccount(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-func (s *account) UsersGetUserMetadata(ctx context.Context) (*operations.UsersGetUserMetadataResponse, error) {
+func (s *account) UsersGetUserMetadata(ctx context.Context, security operations.UsersGetUserMetadataSecurity) (*operations.UsersGetUserMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/metadata/optimizely"
 
@@ -40,7 +40,7 @@ func (s *account) UsersGetUserMetadata(ctx context.Context) (*operations.UsersGe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -87,7 +87,10 @@ func (s *account) UsersGetUserMetadata(ctx context.Context) (*operations.UsersGe
 // AppAPITokensDelete - Delete the App Api Token object with the specific ID
 func (s *account) AppAPITokensDelete(ctx context.Context, request operations.AppAPITokensDeleteRequest, security operations.AppAPITokensDeleteSecurity) (*operations.AppAPITokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens/{api_token_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +155,10 @@ func (s *account) AppAPITokensDelete(ctx context.Context, request operations.App
 // AppAPITokensList - Returns App API tokens for the app
 func (s *account) AppAPITokensList(ctx context.Context, request operations.AppAPITokensListRequest, security operations.AppAPITokensListSecurity) (*operations.AppAPITokensListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,7 +222,10 @@ func (s *account) AppAPITokensList(ctx context.Context, request operations.AppAP
 // AppAPITokensNew - Creates a new App API token
 func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPITokensNewRequest, security operations.AppAPITokensNewSecurity) (*operations.AppAPITokensNewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/api_tokens", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -287,7 +296,10 @@ func (s *account) AppAPITokensNew(ctx context.Context, request operations.AppAPI
 // AppInvitationsAccept - Accepts a pending invitation for the specified user
 func (s *account) AppInvitationsAccept(ctx context.Context, request operations.AppInvitationsAcceptRequest, security operations.AppInvitationsAcceptSecurity) (*operations.AppInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -339,7 +351,10 @@ func (s *account) AppInvitationsAccept(ctx context.Context, request operations.A
 // AppInvitationsCreate - Invites a new or existing user to an app
 func (s *account) AppInvitationsCreate(ctx context.Context, request operations.AppInvitationsCreateRequest, security operations.AppInvitationsCreateSecurity) (*operations.AppInvitationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -389,9 +404,14 @@ func (s *account) AppInvitationsCreate(ctx context.Context, request operations.A
 }
 
 // AppInvitationsCreateByEmail - Invites a new or existing user to an app
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request operations.AppInvitationsCreateByEmailRequest, security operations.AppInvitationsCreateByEmailSecurity) (*operations.AppInvitationsCreateByEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -443,7 +463,10 @@ func (s *account) AppInvitationsCreateByEmail(ctx context.Context, request opera
 // AppInvitationsDelete - Removes a user's invitation to an app
 func (s *account) AppInvitationsDelete(ctx context.Context, request operations.AppInvitationsDeleteRequest, security operations.AppInvitationsDeleteSecurity) (*operations.AppInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -488,7 +511,10 @@ func (s *account) AppInvitationsDelete(ctx context.Context, request operations.A
 // AppInvitationsList - Gets the pending invitations for the app
 func (s *account) AppInvitationsList(ctx context.Context, request operations.AppInvitationsListRequest, security operations.AppInvitationsListSecurity) (*operations.AppInvitationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +568,10 @@ func (s *account) AppInvitationsList(ctx context.Context, request operations.App
 // AppInvitationsReject - Rejects a pending invitation for the specified user
 func (s *account) AppInvitationsReject(ctx context.Context, request operations.AppInvitationsRejectRequest, security operations.AppInvitationsRejectSecurity) (*operations.AppInvitationsRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/apps/{invitation_token}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -594,7 +623,10 @@ func (s *account) AppInvitationsReject(ctx context.Context, request operations.A
 // AppInvitationsUpdatePermissions - Update pending invitation permission
 func (s *account) AppInvitationsUpdatePermissions(ctx context.Context, request operations.AppInvitationsUpdatePermissionsRequest, security operations.AppInvitationsUpdatePermissionsSecurity) (*operations.AppInvitationsUpdatePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/invitations/{user_email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -713,7 +745,10 @@ func (s *account) AppsCreate(ctx context.Context, request operations.AppsCreateR
 // AppsCreateForOrg - Creates a new app for the organization and returns it to the caller
 func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsCreateForOrgRequest, security operations.AppsCreateForOrgSecurity) (*operations.AppsCreateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -787,7 +822,10 @@ func (s *account) AppsCreateForOrg(ctx context.Context, request operations.AppsC
 // AppsDelete - Delete an app
 func (s *account) AppsDelete(ctx context.Context, request operations.AppsDeleteRequest, security operations.AppsDeleteSecurity) (*operations.AppsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -832,7 +870,10 @@ func (s *account) AppsDelete(ctx context.Context, request operations.AppsDeleteR
 // AppsDeleteAvatar - Deletes the uploaded app avatar
 func (s *account) AppsDeleteAvatar(ctx context.Context, request operations.AppsDeleteAvatarRequest, security operations.AppsDeleteAvatarSecurity) (*operations.AppsDeleteAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -886,7 +927,10 @@ func (s *account) AppsDeleteAvatar(ctx context.Context, request operations.AppsD
 // AppsGet - Return a specific app with the given app name which belongs to the given owner.
 func (s *account) AppsGet(ctx context.Context, request operations.AppsGetRequest, security operations.AppsGetSecurity) (*operations.AppsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -940,7 +984,10 @@ func (s *account) AppsGet(ctx context.Context, request operations.AppsGetRequest
 // AppsGetForOrgUser - Get a user apps information from an organization by name
 func (s *account) AppsGetForOrgUser(ctx context.Context, request operations.AppsGetForOrgUserRequest, security operations.AppsGetForOrgUserSecurity) (*operations.AppsGetForOrgUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -994,7 +1041,10 @@ func (s *account) AppsGetForOrgUser(ctx context.Context, request operations.Apps
 // AppsGetTeams - Returns the details of all teams that have access to the app.
 func (s *account) AppsGetTeams(ctx context.Context, request operations.AppsGetTeamsRequest, security operations.AppsGetTeamsSecurity) (*operations.AppsGetTeamsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1106,7 +1156,10 @@ func (s *account) AppsList(ctx context.Context, request operations.AppsListReque
 // AppsListForOrg - Returns a list of apps for the organization
 func (s *account) AppsListForOrg(ctx context.Context, request operations.AppsListForOrgRequest, security operations.AppsListForOrgSecurity) (*operations.AppsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1160,7 +1213,10 @@ func (s *account) AppsListForOrg(ctx context.Context, request operations.AppsLis
 // AppsListTesters - Returns the testers associated with the app specified with the given app name which belongs to the given owner.
 func (s *account) AppsListTesters(ctx context.Context, request operations.AppsListTestersRequest, security operations.AppsListTestersSecurity) (*operations.AppsListTestersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/testers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1214,7 +1270,10 @@ func (s *account) AppsListTesters(ctx context.Context, request operations.AppsLi
 // AppsRemoveUser - Removes the user from the app
 func (s *account) AppsRemoveUser(ctx context.Context, request operations.AppsRemoveUserRequest, security operations.AppsRemoveUserSecurity) (*operations.AppsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1259,7 +1318,10 @@ func (s *account) AppsRemoveUser(ctx context.Context, request operations.AppsRem
 // AppsTransferOwnershipJSON - Transfers ownership of an app to a different user or organization
 func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operations.AppsTransferOwnershipJSONRequest, security operations.AppsTransferOwnershipJSONSecurity) (*operations.AppsTransferOwnershipJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1320,7 +1382,10 @@ func (s *account) AppsTransferOwnershipJSON(ctx context.Context, request operati
 // AppsTransferOwnershipRaw - Transfers ownership of an app to a different user or organization
 func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operations.AppsTransferOwnershipRawRequest, security operations.AppsTransferOwnershipRawSecurity) (*operations.AppsTransferOwnershipRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer/{destination_owner_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1381,7 +1446,10 @@ func (s *account) AppsTransferOwnershipRaw(ctx context.Context, request operatio
 // AppsTransferToOrg - Transfers ownership of an app to a new organization
 func (s *account) AppsTransferToOrg(ctx context.Context, request operations.AppsTransferToOrgRequest, security operations.AppsTransferToOrgSecurity) (*operations.AppsTransferToOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/transfer_to_org", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1442,7 +1510,10 @@ func (s *account) AppsTransferToOrg(ctx context.Context, request operations.Apps
 // AppsUpdate - Partially updates a single app
 func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateRequest, security operations.AppsUpdateSecurity) (*operations.AppsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1503,7 +1574,10 @@ func (s *account) AppsUpdate(ctx context.Context, request operations.AppsUpdateR
 // AppsUpdateAvatar - Sets the app avatar
 func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsUpdateAvatarRequest, security operations.AppsUpdateAvatarSecurity) (*operations.AppsUpdateAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/avatar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -1564,7 +1638,10 @@ func (s *account) AppsUpdateAvatar(ctx context.Context, request operations.AppsU
 // AppsUpdateUserPermissions - Update user permission for the app
 func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operations.AppsUpdateUserPermissionsRequest, security operations.AppsUpdateUserPermissionsSecurity) (*operations.AppsUpdateUserPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users/{user_email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1619,7 +1696,10 @@ func (s *account) AppsUpdateUserPermissions(ctx context.Context, request operati
 // AzureSubscriptionDeleteForApp - Delete the azure subscriptions for the app
 func (s *account) AzureSubscriptionDeleteForApp(ctx context.Context, request operations.AzureSubscriptionDeleteForAppRequest, security operations.AzureSubscriptionDeleteForAppSecurity) (*operations.AzureSubscriptionDeleteForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions/{azure_subscription_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1664,7 +1744,10 @@ func (s *account) AzureSubscriptionDeleteForApp(ctx context.Context, request ope
 // AzureSubscriptionLinkForApp - Link azure subscription to an app
 func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request operations.AzureSubscriptionLinkForAppRequest, security operations.AzureSubscriptionLinkForAppSecurity) (*operations.AzureSubscriptionLinkForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1719,7 +1802,10 @@ func (s *account) AzureSubscriptionLinkForApp(ctx context.Context, request opera
 // AzureSubscriptionListForApp - Returns a list of azure subscriptions for the app
 func (s *account) AzureSubscriptionListForApp(ctx context.Context, request operations.AzureSubscriptionListForAppRequest, security operations.AzureSubscriptionListForAppSecurity) (*operations.AzureSubscriptionListForAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/azure_subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1773,7 +1859,10 @@ func (s *account) AzureSubscriptionListForApp(ctx context.Context, request opera
 // AzureSubscriptionListForOrg - Returns a list of azure subscriptions for the organization
 func (s *account) AzureSubscriptionListForOrg(ctx context.Context, request operations.AzureSubscriptionListForOrgRequest, security operations.AzureSubscriptionListForOrgSecurity) (*operations.AzureSubscriptionListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/azure_subscriptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/azure_subscriptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1825,7 +1914,7 @@ func (s *account) AzureSubscriptionListForOrg(ctx context.Context, request opera
 }
 
 // AzureSubscriptionListForUser - Returns a list of azure subscriptions for the user
-func (s *account) AzureSubscriptionListForUser(ctx context.Context) (*operations.AzureSubscriptionListForUserResponse, error) {
+func (s *account) AzureSubscriptionListForUser(ctx context.Context, security operations.AzureSubscriptionListForUserSecurity) (*operations.AzureSubscriptionListForUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/azure_subscriptions"
 
@@ -1834,7 +1923,7 @@ func (s *account) AzureSubscriptionListForUser(ctx context.Context) (*operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1933,7 +2022,10 @@ func (s *account) DistributionGroupInvitationsAcceptAll(ctx context.Context, req
 // DistributionGroupsAddApps - Add apps to distribution group in an org
 func (s *account) DistributionGroupsAddApps(ctx context.Context, request operations.DistributionGroupsAddAppsRequest, security operations.DistributionGroupsAddAppsSecurity) (*operations.DistributionGroupsAddAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1978,7 +2070,10 @@ func (s *account) DistributionGroupsAddApps(ctx context.Context, request operati
 // DistributionGroupsAddUser - Adds the members to the specified distribution group
 func (s *account) DistributionGroupsAddUser(ctx context.Context, request operations.DistributionGroupsAddUserRequest, security operations.DistributionGroupsAddUserSecurity) (*operations.DistributionGroupsAddUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2042,7 +2137,10 @@ func (s *account) DistributionGroupsAddUser(ctx context.Context, request operati
 // DistributionGroupsAddUsersForOrg - Accepts an array of user email addresses to get added to the specified group
 func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request operations.DistributionGroupsAddUsersForOrgRequest, security operations.DistributionGroupsAddUsersForOrgSecurity) (*operations.DistributionGroupsAddUsersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2106,7 +2204,10 @@ func (s *account) DistributionGroupsAddUsersForOrg(ctx context.Context, request 
 // DistributionGroupsBulkDeleteApps - Delete apps from distribution group in an org
 func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request operations.DistributionGroupsBulkDeleteAppsRequest, security operations.DistributionGroupsBulkDeleteAppsSecurity) (*operations.DistributionGroupsBulkDeleteAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps/bulk_delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2151,7 +2252,10 @@ func (s *account) DistributionGroupsBulkDeleteApps(ctx context.Context, request 
 // DistributionGroupsBulkDeleteUsers - Delete testers from distribution group in an org
 func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request operations.DistributionGroupsBulkDeleteUsersRequest, security operations.DistributionGroupsBulkDeleteUsersSecurity) (*operations.DistributionGroupsBulkDeleteUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2196,7 +2300,10 @@ func (s *account) DistributionGroupsBulkDeleteUsers(ctx context.Context, request
 // DistributionGroupsCreate - Creates a new distribution group and returns it to the caller
 func (s *account) DistributionGroupsCreate(ctx context.Context, request operations.DistributionGroupsCreateRequest, security operations.DistributionGroupsCreateSecurity) (*operations.DistributionGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2260,7 +2367,10 @@ func (s *account) DistributionGroupsCreate(ctx context.Context, request operatio
 // DistributionGroupsCreateForOrg - Creates a disribution goup which can be shared across apps under an organization
 func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request operations.DistributionGroupsCreateForOrgRequest, security operations.DistributionGroupsCreateForOrgSecurity) (*operations.DistributionGroupsCreateForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2324,7 +2434,10 @@ func (s *account) DistributionGroupsCreateForOrg(ctx context.Context, request op
 // DistributionGroupsDelete - Deletes a distribution group
 func (s *account) DistributionGroupsDelete(ctx context.Context, request operations.DistributionGroupsDeleteRequest, security operations.DistributionGroupsDeleteSecurity) (*operations.DistributionGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2369,7 +2482,10 @@ func (s *account) DistributionGroupsDelete(ctx context.Context, request operatio
 // DistributionGroupsDeleteForOrg - Deletes a single distribution group from an org with a given distribution group name
 func (s *account) DistributionGroupsDeleteForOrg(ctx context.Context, request operations.DistributionGroupsDeleteForOrgRequest, security operations.DistributionGroupsDeleteForOrgSecurity) (*operations.DistributionGroupsDeleteForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2414,7 +2530,10 @@ func (s *account) DistributionGroupsDeleteForOrg(ctx context.Context, request op
 // DistributionGroupsDetailsForOrg - Returns a list of distribution groups with details for an organization
 func (s *account) DistributionGroupsDetailsForOrg(ctx context.Context, request operations.DistributionGroupsDetailsForOrgRequest, security operations.DistributionGroupsDetailsForOrgSecurity) (*operations.DistributionGroupsDetailsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups_details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups_details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2472,7 +2591,10 @@ func (s *account) DistributionGroupsDetailsForOrg(ctx context.Context, request o
 // DistributionGroupsGet - Returns a single distribution group for a given distribution group name
 func (s *account) DistributionGroupsGet(ctx context.Context, request operations.DistributionGroupsGetRequest, security operations.DistributionGroupsGetSecurity) (*operations.DistributionGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2526,7 +2648,10 @@ func (s *account) DistributionGroupsGet(ctx context.Context, request operations.
 // DistributionGroupsGetApps - Get apps from a distribution group in an org
 func (s *account) DistributionGroupsGetApps(ctx context.Context, request operations.DistributionGroupsGetAppsRequest, security operations.DistributionGroupsGetAppsSecurity) (*operations.DistributionGroupsGetAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2570,7 +2695,10 @@ func (s *account) DistributionGroupsGetApps(ctx context.Context, request operati
 // DistributionGroupsGetForOrg - Returns a single distribution group in org for a given distribution group name
 func (s *account) DistributionGroupsGetForOrg(ctx context.Context, request operations.DistributionGroupsGetForOrgRequest, security operations.DistributionGroupsGetForOrgSecurity) (*operations.DistributionGroupsGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2624,7 +2752,10 @@ func (s *account) DistributionGroupsGetForOrg(ctx context.Context, request opera
 // DistributionGroupsList - Returns a list of distribution groups in the app specified
 func (s *account) DistributionGroupsList(ctx context.Context, request operations.DistributionGroupsListRequest, security operations.DistributionGroupsListSecurity) (*operations.DistributionGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2678,7 +2809,10 @@ func (s *account) DistributionGroupsList(ctx context.Context, request operations
 // DistributionGroupsListAllTestersForOrg - Returns a unique list of users including the whole organization members plus testers in any shared group of that org
 func (s *account) DistributionGroupsListAllTestersForOrg(ctx context.Context, request operations.DistributionGroupsListAllTestersForOrgRequest, security operations.DistributionGroupsListAllTestersForOrgSecurity) (*operations.DistributionGroupsListAllTestersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/testers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/testers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2732,7 +2866,10 @@ func (s *account) DistributionGroupsListAllTestersForOrg(ctx context.Context, re
 // DistributionGroupsListForOrg - Returns a list of distribution groups in the org specified
 func (s *account) DistributionGroupsListForOrg(ctx context.Context, request operations.DistributionGroupsListForOrgRequest, security operations.DistributionGroupsListForOrgSecurity) (*operations.DistributionGroupsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2786,7 +2923,10 @@ func (s *account) DistributionGroupsListForOrg(ctx context.Context, request oper
 // DistributionGroupsListUsers - Returns a list of member details in the distribution group specified
 func (s *account) DistributionGroupsListUsers(ctx context.Context, request operations.DistributionGroupsListUsersRequest, security operations.DistributionGroupsListUsersSecurity) (*operations.DistributionGroupsListUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2844,7 +2984,10 @@ func (s *account) DistributionGroupsListUsers(ctx context.Context, request opera
 // DistributionGroupsListUsersForOrg - Returns a list of member in the distribution group specified
 func (s *account) DistributionGroupsListUsersForOrg(ctx context.Context, request operations.DistributionGroupsListUsersForOrgRequest, security operations.DistributionGroupsListUsersForOrgSecurity) (*operations.DistributionGroupsListUsersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2898,7 +3041,10 @@ func (s *account) DistributionGroupsListUsersForOrg(ctx context.Context, request
 // DistributionGroupsPatchForOrg - Update one given distribution group name in an org
 func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request operations.DistributionGroupsPatchForOrgRequest, security operations.DistributionGroupsPatchForOrgSecurity) (*operations.DistributionGroupsPatchForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2959,7 +3105,10 @@ func (s *account) DistributionGroupsPatchForOrg(ctx context.Context, request ope
 // DistributionGroupsRemoveUser - Remove the users from the distribution group
 func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request operations.DistributionGroupsRemoveUserRequest, security operations.DistributionGroupsRemoveUserSecurity) (*operations.DistributionGroupsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/members/bulk_delete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3023,7 +3172,10 @@ func (s *account) DistributionGroupsRemoveUser(ctx context.Context, request oper
 // DistributionGroupsResendInvite - Resend distribution group app invite notification to previously invited testers
 func (s *account) DistributionGroupsResendInvite(ctx context.Context, request operations.DistributionGroupsResendInviteRequest, security operations.DistributionGroupsResendInviteSecurity) (*operations.DistributionGroupsResendInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3078,7 +3230,10 @@ func (s *account) DistributionGroupsResendInvite(ctx context.Context, request op
 // DistributionGroupsResendSharedInvite - Resend shared distribution group invite notification to previously invited testers
 func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, request operations.DistributionGroupsResendSharedInviteRequest, security operations.DistributionGroupsResendSharedInviteSecurity) (*operations.DistributionGroupsResendSharedInviteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/distribution_groups/{distribution_group_name}/resend_invite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3133,7 +3288,10 @@ func (s *account) DistributionGroupsResendSharedInvite(ctx context.Context, requ
 // DistributionGroupsUpdate - Updates the attributes of distribution group
 func (s *account) DistributionGroupsUpdate(ctx context.Context, request operations.DistributionGroupsUpdateRequest, security operations.DistributionGroupsUpdateSecurity) (*operations.DistributionGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/distribution_groups/{distribution_group_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3195,7 +3353,7 @@ func (s *account) DistributionGroupsUpdate(ctx context.Context, request operatio
 }
 
 // InvitationsSent - Returns all invitations sent by the caller
-func (s *account) InvitationsSent(ctx context.Context) (*operations.InvitationsSentResponse, error) {
+func (s *account) InvitationsSent(ctx context.Context, security operations.InvitationsSentSecurity) (*operations.InvitationsSentResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/invitations/sent"
 
@@ -3204,7 +3362,7 @@ func (s *account) InvitationsSent(ctx context.Context) (*operations.InvitationsS
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -3251,7 +3409,10 @@ func (s *account) InvitationsSent(ctx context.Context) (*operations.InvitationsS
 // OrgInvitations - Removes a user's invitation to an organization
 func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvitationsRequest, security operations.OrgInvitationsSecurity) (*operations.OrgInvitationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/revoke", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3303,7 +3464,10 @@ func (s *account) OrgInvitations(ctx context.Context, request operations.OrgInvi
 // OrgInvitationsAccept - Accepts a pending organization invitation for the specified user
 func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.OrgInvitationsAcceptRequest, security operations.OrgInvitationsAcceptSecurity) (*operations.OrgInvitationsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3355,7 +3519,10 @@ func (s *account) OrgInvitationsAccept(ctx context.Context, request operations.O
 // OrgInvitationsCreate - Invites a new or existing user to an organization
 func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.OrgInvitationsCreateRequest, security operations.OrgInvitationsCreateSecurity) (*operations.OrgInvitationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3410,7 +3577,10 @@ func (s *account) OrgInvitationsCreate(ctx context.Context, request operations.O
 // OrgInvitationsDelete - Removes a user's invitation to an organization
 func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.OrgInvitationsDeleteRequest, security operations.OrgInvitationsDeleteSecurity) (*operations.OrgInvitationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3465,7 +3635,10 @@ func (s *account) OrgInvitationsDelete(ctx context.Context, request operations.O
 // OrgInvitationsListPending - Gets the pending invitations for the organization
 func (s *account) OrgInvitationsListPending(ctx context.Context, request operations.OrgInvitationsListPendingRequest, security operations.OrgInvitationsListPendingSecurity) (*operations.OrgInvitationsListPendingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3519,7 +3692,10 @@ func (s *account) OrgInvitationsListPending(ctx context.Context, request operati
 // OrgInvitationsReject - Rejects a pending organization invitation
 func (s *account) OrgInvitationsReject(ctx context.Context, request operations.OrgInvitationsRejectRequest, security operations.OrgInvitationsRejectSecurity) (*operations.OrgInvitationsRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/user/invitations/orgs/{invitation_token}/reject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3571,7 +3747,10 @@ func (s *account) OrgInvitationsReject(ctx context.Context, request operations.O
 // OrgInvitationsSendNewInvitation - Cancels an existing organization invitation for the user and sends a new one
 func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request operations.OrgInvitationsSendNewInvitationRequest, security operations.OrgInvitationsSendNewInvitationSecurity) (*operations.OrgInvitationsSendNewInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}/resend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3623,7 +3802,10 @@ func (s *account) OrgInvitationsSendNewInvitation(ctx context.Context, request o
 // OrgInvitationsUpdate - Allows the role of an invited user to be changed
 func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.OrgInvitationsUpdateRequest, security operations.OrgInvitationsUpdateSecurity) (*operations.OrgInvitationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/invitations/{email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3678,7 +3860,10 @@ func (s *account) OrgInvitationsUpdate(ctx context.Context, request operations.O
 // OrganizationDeleteAvatar - Deletes the uploaded organization avatar
 func (s *account) OrganizationDeleteAvatar(ctx context.Context, request operations.OrganizationDeleteAvatarRequest, security operations.OrganizationDeleteAvatarSecurity) (*operations.OrganizationDeleteAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3732,7 +3917,10 @@ func (s *account) OrganizationDeleteAvatar(ctx context.Context, request operatio
 // OrganizationUpdateAvatar - Sets the organization avatar
 func (s *account) OrganizationUpdateAvatar(ctx context.Context, request operations.OrganizationUpdateAvatarRequest, security operations.OrganizationUpdateAvatarSecurity) (*operations.OrganizationUpdateAvatarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/avatar", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -3857,7 +4045,10 @@ func (s *account) OrganizationsCreateOrUpdate(ctx context.Context, request opera
 // OrganizationsDelete - Deletes a single organization
 func (s *account) OrganizationsDelete(ctx context.Context, request operations.OrganizationsDeleteRequest, security operations.OrganizationsDeleteSecurity) (*operations.OrganizationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3902,7 +4093,10 @@ func (s *account) OrganizationsDelete(ctx context.Context, request operations.Or
 // OrganizationsGet - Returns the details of a single organization
 func (s *account) OrganizationsGet(ctx context.Context, request operations.OrganizationsGetRequest, security operations.OrganizationsGetSecurity) (*operations.OrganizationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3954,7 +4148,7 @@ func (s *account) OrganizationsGet(ctx context.Context, request operations.Organ
 }
 
 // OrganizationsList - Returns a list of organizations the requesting user has access to
-func (s *account) OrganizationsList(ctx context.Context) (*operations.OrganizationsListResponse, error) {
+func (s *account) OrganizationsList(ctx context.Context, security operations.OrganizationsListSecurity) (*operations.OrganizationsListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/orgs"
 
@@ -3963,7 +4157,7 @@ func (s *account) OrganizationsList(ctx context.Context) (*operations.Organizati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4008,7 +4202,7 @@ func (s *account) OrganizationsList(ctx context.Context) (*operations.Organizati
 }
 
 // OrganizationsListAdministered - Returns a list organizations in which the requesting user is an admin
-func (s *account) OrganizationsListAdministered(ctx context.Context) (*operations.OrganizationsListAdministeredResponse, error) {
+func (s *account) OrganizationsListAdministered(ctx context.Context, security operations.OrganizationsListAdministeredSecurity) (*operations.OrganizationsListAdministeredResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/administeredOrgs"
 
@@ -4017,7 +4211,7 @@ func (s *account) OrganizationsListAdministered(ctx context.Context) (*operation
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4064,7 +4258,10 @@ func (s *account) OrganizationsListAdministered(ctx context.Context) (*operation
 // OrganizationsUpdate - Returns a list of organizations the requesting user has access to
 func (s *account) OrganizationsUpdate(ctx context.Context, request operations.OrganizationsUpdateRequest, security operations.OrganizationsUpdateSecurity) (*operations.OrganizationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4126,7 +4323,7 @@ func (s *account) OrganizationsUpdate(ctx context.Context, request operations.Or
 }
 
 // SharedconnectionConnections - Gets all service connections of the service type for GDPR export.
-func (s *account) SharedconnectionConnections(ctx context.Context) (*operations.SharedconnectionConnectionsResponse, error) {
+func (s *account) SharedconnectionConnections(ctx context.Context, security operations.SharedconnectionConnectionsSecurity) (*operations.SharedconnectionConnectionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user/export/serviceConnections"
 
@@ -4135,7 +4332,7 @@ func (s *account) SharedconnectionConnections(ctx context.Context) (*operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -4182,7 +4379,10 @@ func (s *account) SharedconnectionConnections(ctx context.Context) (*operations.
 // TeamsAddApp - Adds an app to a team
 func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAppRequest, security operations.TeamsAddAppSecurity) (*operations.TeamsAddAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4246,7 +4446,10 @@ func (s *account) TeamsAddApp(ctx context.Context, request operations.TeamsAddAp
 // TeamsAddUser - Adds a new user to a team that is owned by an organization
 func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddUserRequest, security operations.TeamsAddUserSecurity) (*operations.TeamsAddUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4310,7 +4513,10 @@ func (s *account) TeamsAddUser(ctx context.Context, request operations.TeamsAddU
 // TeamsCreateTeam - Creates a team and returns it
 func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsCreateTeamRequest, security operations.TeamsCreateTeamSecurity) (*operations.TeamsCreateTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4374,7 +4580,10 @@ func (s *account) TeamsCreateTeam(ctx context.Context, request operations.TeamsC
 // TeamsDelete - Deletes a single team
 func (s *account) TeamsDelete(ctx context.Context, request operations.TeamsDeleteRequest, security operations.TeamsDeleteSecurity) (*operations.TeamsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4419,7 +4628,10 @@ func (s *account) TeamsDelete(ctx context.Context, request operations.TeamsDelet
 // TeamsGetTeam - Returns the details of a single team
 func (s *account) TeamsGetTeam(ctx context.Context, request operations.TeamsGetTeamRequest, security operations.TeamsGetTeamSecurity) (*operations.TeamsGetTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4473,7 +4685,10 @@ func (s *account) TeamsGetTeam(ctx context.Context, request operations.TeamsGetT
 // TeamsGetUsers - Returns the users of a team which is owned by an organization
 func (s *account) TeamsGetUsers(ctx context.Context, request operations.TeamsGetUsersRequest, security operations.TeamsGetUsersSecurity) (*operations.TeamsGetUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4527,7 +4742,10 @@ func (s *account) TeamsGetUsers(ctx context.Context, request operations.TeamsGet
 // TeamsListAll - Returns the list of all teams in this org
 func (s *account) TeamsListAll(ctx context.Context, request operations.TeamsListAllRequest, security operations.TeamsListAllSecurity) (*operations.TeamsListAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4581,7 +4799,10 @@ func (s *account) TeamsListAll(ctx context.Context, request operations.TeamsList
 // TeamsListApps - Returns the apps a team has access to
 func (s *account) TeamsListApps(ctx context.Context, request operations.TeamsListAppsRequest, security operations.TeamsListAppsSecurity) (*operations.TeamsListAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4635,7 +4856,10 @@ func (s *account) TeamsListApps(ctx context.Context, request operations.TeamsLis
 // TeamsRemoveApp - Removes an app from a team
 func (s *account) TeamsRemoveApp(ctx context.Context, request operations.TeamsRemoveAppRequest, security operations.TeamsRemoveAppSecurity) (*operations.TeamsRemoveAppResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4680,7 +4904,10 @@ func (s *account) TeamsRemoveApp(ctx context.Context, request operations.TeamsRe
 // TeamsRemoveUser - Removes a user from a team that is owned by an organization
 func (s *account) TeamsRemoveUser(ctx context.Context, request operations.TeamsRemoveUserRequest, security operations.TeamsRemoveUserSecurity) (*operations.TeamsRemoveUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/users/{user_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4725,7 +4952,10 @@ func (s *account) TeamsRemoveUser(ctx context.Context, request operations.TeamsR
 // TeamsUpdate - Updates a single team
 func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdateRequest, security operations.TeamsUpdateSecurity) (*operations.TeamsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4789,7 +5019,10 @@ func (s *account) TeamsUpdate(ctx context.Context, request operations.TeamsUpdat
 // TeamsUpdatePermissions - Updates the permissions the team has to the app
 func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations.TeamsUpdatePermissionsRequest, security operations.TeamsUpdatePermissionsSecurity) (*operations.TeamsUpdatePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/teams/{team_name}/apps/{app_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -4853,7 +5086,10 @@ func (s *account) TeamsUpdatePermissions(ctx context.Context, request operations
 // UserAPITokensDelete - Delete the user api_token object with the specific id
 func (s *account) UserAPITokensDelete(ctx context.Context, request operations.UserAPITokensDeleteRequest, security operations.UserAPITokensDeleteSecurity) (*operations.UserAPITokensDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/api_tokens/{api_token_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/api_tokens/{api_token_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -4916,7 +5152,7 @@ func (s *account) UserAPITokensDelete(ctx context.Context, request operations.Us
 }
 
 // UserAPITokensList - Returns api tokens for the authenticated user
-func (s *account) UserAPITokensList(ctx context.Context) (*operations.UserAPITokensListResponse, error) {
+func (s *account) UserAPITokensList(ctx context.Context, security operations.UserAPITokensListSecurity) (*operations.UserAPITokensListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/api_tokens"
 
@@ -4925,7 +5161,7 @@ func (s *account) UserAPITokensList(ctx context.Context) (*operations.UserAPITok
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5051,7 +5287,7 @@ func (s *account) UserAPITokensNew(ctx context.Context, request operations.UserA
 }
 
 // UsersGet - Returns the user profile data
-func (s *account) UsersGet(ctx context.Context) (*operations.UsersGetResponse, error) {
+func (s *account) UsersGet(ctx context.Context, security operations.UsersGetSecurity) (*operations.UsersGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v0.1/user"
 
@@ -5060,7 +5296,7 @@ func (s *account) UsersGet(ctx context.Context) (*operations.UsersGetResponse, e
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -5107,7 +5343,10 @@ func (s *account) UsersGet(ctx context.Context) (*operations.UsersGetResponse, e
 // UsersGetForOrg - Get a user information from an organization by name - if there is explicit permission return it, if not if not return highest implicit permission
 func (s *account) UsersGetForOrg(ctx context.Context, request operations.UsersGetForOrgRequest, security operations.UsersGetForOrgSecurity) (*operations.UsersGetForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5161,7 +5400,10 @@ func (s *account) UsersGetForOrg(ctx context.Context, request operations.UsersGe
 // UsersList - Returns the users associated with the app specified with the given app name which belongs to the given owner.
 func (s *account) UsersList(ctx context.Context, request operations.UsersListRequest, security operations.UsersListSecurity) (*operations.UsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5215,7 +5457,10 @@ func (s *account) UsersList(ctx context.Context, request operations.UsersListReq
 // UsersListForOrg - Returns a list of users that belong to an organization
 func (s *account) UsersListForOrg(ctx context.Context, request operations.UsersListForOrgRequest, security operations.UsersListForOrgSecurity) (*operations.UsersListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -5269,7 +5514,10 @@ func (s *account) UsersListForOrg(ctx context.Context, request operations.UsersL
 // UsersRemoveFromOrg - Removes a user from an organization.
 func (s *account) UsersRemoveFromOrg(ctx context.Context, request operations.UsersRemoveFromOrgRequest, security operations.UsersRemoveFromOrgSecurity) (*operations.UsersRemoveFromOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -5378,7 +5626,10 @@ func (s *account) UsersUpdate(ctx context.Context, request operations.UsersUpdat
 // UsersUpdateOrgRole - Updates the given organization user
 func (s *account) UsersUpdateOrgRole(ctx context.Context, request operations.UsersUpdateOrgRoleRequest, security operations.UsersUpdateOrgRoleSecurity) (*operations.UsersUpdateOrgRoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/orgs/{org_name}/users/{user_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

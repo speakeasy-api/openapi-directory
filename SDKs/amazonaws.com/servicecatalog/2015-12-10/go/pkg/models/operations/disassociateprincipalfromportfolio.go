@@ -16,17 +16,21 @@ const (
 	DisassociatePrincipalFromPortfolioXAmzTargetEnumAws242ServiceCatalogServiceDisassociatePrincipalFromPortfolio DisassociatePrincipalFromPortfolioXAmzTargetEnum = "AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio"
 )
 
+func (e DisassociatePrincipalFromPortfolioXAmzTargetEnum) ToPointer() *DisassociatePrincipalFromPortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociatePrincipalFromPortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DisassociatePrincipalFromPortfolio":
-		*e = DisassociatePrincipalFromPortfolioXAmzTargetEnum(s)
+		*e = DisassociatePrincipalFromPortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociatePrincipalFromPortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociatePrincipalFromPortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newScripts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ScriptScriptsRun - Runs a function in an Apps Script project. The script project must be deployed for use with the Apps Script API and the calling application must share the same Cloud Platform project. This method requires authorization with an OAuth 2.0 token that includes at least one of the scopes listed in the [Authorization](#authorization-scopes) section; script projects that do not require authorization cannot be executed through this API. To find the correct scopes to include in the authentication token, open the script project **Overview** page and scroll down to "Project OAuth Scopes." The error `403, PERMISSION_DENIED: The caller does not have permission` indicates that the Cloud Platform project used to authorize the request is not the same as the one used by the script.
 func (s *scripts) ScriptScriptsRun(ctx context.Context, request operations.ScriptScriptsRunRequest, security operations.ScriptScriptsRunSecurity) (*operations.ScriptScriptsRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/scripts/{scriptId}:run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/scripts/{scriptId}:run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecutionRequest", "json")
 	if err != nil {

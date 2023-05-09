@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -47,4 +48,7 @@ pkg/models/shared/assetresponse.go
 pkg/models/shared/assetresponsedata.go
 pkg/models/shared/assetresponseattributes.go
 pkg/models/shared/assetrenderresponse.go
+docs/sdk/README.md
+docs/edit/README.md
+docs/serve/README.md
 USAGE.md

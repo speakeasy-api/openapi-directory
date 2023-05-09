@@ -16,17 +16,21 @@ const (
 	DeleteIPSetXAmzTargetEnumAwswafRegional20161128DeleteIPSet DeleteIPSetXAmzTargetEnum = "AWSWAF_Regional_20161128.DeleteIPSet"
 )
 
+func (e DeleteIPSetXAmzTargetEnum) ToPointer() *DeleteIPSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteIPSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DeleteIPSet":
-		*e = DeleteIPSetXAmzTargetEnum(s)
+		*e = DeleteIPSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteIPSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteIPSetXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnumUnexpectedError                   DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum = "unexpected-error"
 )
 
+func (e DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum) ToPointer() *DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum {
+	return &e
+}
+
 func (e *DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reserved-instances-id-invalid":
 		fallthrough
 	case "reserved-instances-not-in-queued-state":
 		fallthrough
 	case "unexpected-error":
-		*e = DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum(s)
+		*e = DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletionsErrorCodeEnum: %v", v)
 	}
 }
 

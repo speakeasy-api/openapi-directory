@@ -2,7 +2,7 @@
 
 package shared
 
-// CreateVerifiedAccessTrustProviderDeviceOptions - Options for a device-identity type trust provider.
+// CreateVerifiedAccessTrustProviderDeviceOptions - Describes the options when creating an Amazon Web Services Verified Access trust provider using the <code>device</code> type.
 type CreateVerifiedAccessTrustProviderDeviceOptions struct {
 	TenantID *string
 }

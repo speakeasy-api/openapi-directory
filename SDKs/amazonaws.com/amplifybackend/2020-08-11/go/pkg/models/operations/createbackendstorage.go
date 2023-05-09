@@ -22,17 +22,21 @@ const (
 	CreateBackendStorageRequestBodyResourceConfigServiceNameEnumS3 CreateBackendStorageRequestBodyResourceConfigServiceNameEnum = "S3"
 )
 
+func (e CreateBackendStorageRequestBodyResourceConfigServiceNameEnum) ToPointer() *CreateBackendStorageRequestBodyResourceConfigServiceNameEnum {
+	return &e
+}
+
 func (e *CreateBackendStorageRequestBodyResourceConfigServiceNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S3":
-		*e = CreateBackendStorageRequestBodyResourceConfigServiceNameEnum(s)
+		*e = CreateBackendStorageRequestBodyResourceConfigServiceNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBackendStorageRequestBodyResourceConfigServiceNameEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBackendStorageRequestBodyResourceConfigServiceNameEnum: %v", v)
 	}
 }
 

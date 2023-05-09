@@ -34,7 +34,10 @@ func newRoleAssignments(defaultClient, securityClient HTTPClient, serverURL, lan
 // DirectoryRoleAssignmentsDelete - Deletes a role assignment.
 func (s *roleAssignments) DirectoryRoleAssignmentsDelete(ctx context.Context, request operations.DirectoryRoleAssignmentsDeleteRequest, security operations.DirectoryRoleAssignmentsDeleteSecurity) (*operations.DirectoryRoleAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *roleAssignments) DirectoryRoleAssignmentsDelete(ctx context.Context, re
 // DirectoryRoleAssignmentsGet - Retrieves a role assignment.
 func (s *roleAssignments) DirectoryRoleAssignmentsGet(ctx context.Context, request operations.DirectoryRoleAssignmentsGetRequest, security operations.DirectoryRoleAssignmentsGetSecurity) (*operations.DirectoryRoleAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments/{roleAssignmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *roleAssignments) DirectoryRoleAssignmentsGet(ctx context.Context, reque
 // DirectoryRoleAssignmentsInsert - Creates a role assignment.
 func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, request operations.DirectoryRoleAssignmentsInsertRequest, security operations.DirectoryRoleAssignmentsInsertSecurity) (*operations.DirectoryRoleAssignmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoleAssignmentInput", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *roleAssignments) DirectoryRoleAssignmentsInsert(ctx context.Context, re
 // DirectoryRoleAssignmentsList - Retrieves a paginated list of all roleAssignments.
 func (s *roleAssignments) DirectoryRoleAssignmentsList(ctx context.Context, request operations.DirectoryRoleAssignmentsListRequest, security operations.DirectoryRoleAssignmentsListSecurity) (*operations.DirectoryRoleAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roleassignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

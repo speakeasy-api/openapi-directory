@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ote-godaddy.com/certifica
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CertificateActionRetrieveRequest{
-        CertificateID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.CertificateActionRetrieve(ctx, req)
+    res, err := s.V1.CertificateActionRetrieve(ctx, operations.CertificateActionRetrieveRequest{
+        CertificateID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,36 +42,36 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `CertificateActionRetrieve` - Retrieve all certificate actions
-* `CertificateAlternateEmailAddress` - Add alternate email address
-* `CertificateCallbackDelete` - Unregister system callback
-* `CertificateCallbackGet` - Retrieve system stateful action callback url
-* `CertificateCallbackReplace` - Register of certificate action callback
-* `CertificateCancel` - Cancel a pending certificate
-* `CertificateCreate` - Create a pending order for certificate
-* `CertificateDownload` - Download certificate
-* `CertificateDownloadEntitlement` - Download certificate by entitlement
-* `CertificateEmailHistory` - Retrieve email history
-* `CertificateGet` - Retrieve certificate details
-* `CertificateGetEntitlement` - Search for certificate details by entitlement
-* `CertificateReissue` - Reissue active certificate
-* `CertificateRenew` - Renew active certificate
-* `CertificateResendEmail` - Resend an email
-* `CertificateResendEmailAddress` - Resend email to email address
-* `CertificateRevoke` - Revoke active certificate
-* `CertificateSitesealGet` - Get Site seal
-* `CertificateValidate` - Validate a pending order for certificate
-* `CertificateVerifydomaincontrol` - Check Domain Control
+* [CertificateActionRetrieve](docs/v1/README.md#certificateactionretrieve) - Retrieve all certificate actions
+* [CertificateAlternateEmailAddress](docs/v1/README.md#certificatealternateemailaddress) - Add alternate email address
+* [CertificateCallbackDelete](docs/v1/README.md#certificatecallbackdelete) - Unregister system callback
+* [CertificateCallbackGet](docs/v1/README.md#certificatecallbackget) - Retrieve system stateful action callback url
+* [CertificateCallbackReplace](docs/v1/README.md#certificatecallbackreplace) - Register of certificate action callback
+* [CertificateCancel](docs/v1/README.md#certificatecancel) - Cancel a pending certificate
+* [CertificateCreate](docs/v1/README.md#certificatecreate) - Create a pending order for certificate
+* [CertificateDownload](docs/v1/README.md#certificatedownload) - Download certificate
+* [CertificateDownloadEntitlement](docs/v1/README.md#certificatedownloadentitlement) - Download certificate by entitlement
+* [CertificateEmailHistory](docs/v1/README.md#certificateemailhistory) - Retrieve email history
+* [CertificateGet](docs/v1/README.md#certificateget) - Retrieve certificate details
+* [CertificateGetEntitlement](docs/v1/README.md#certificategetentitlement) - Search for certificate details by entitlement
+* [CertificateReissue](docs/v1/README.md#certificatereissue) - Reissue active certificate
+* [CertificateRenew](docs/v1/README.md#certificaterenew) - Renew active certificate
+* [CertificateResendEmail](docs/v1/README.md#certificateresendemail) - Resend an email
+* [CertificateResendEmailAddress](docs/v1/README.md#certificateresendemailaddress) - Resend email to email address
+* [CertificateRevoke](docs/v1/README.md#certificaterevoke) - Revoke active certificate
+* [CertificateSitesealGet](docs/v1/README.md#certificatesitesealget) - Get Site seal
+* [CertificateValidate](docs/v1/README.md#certificatevalidate) - Validate a pending order for certificate
+* [CertificateVerifydomaincontrol](docs/v1/README.md#certificateverifydomaincontrol) - Check Domain Control
 
-### V2
+### [V2](docs/v2/README.md)
 
-* `GetAcmeExternalAccountBinding` - Retrieves the external account binding for the specified customer
-* `GetCertificateDetailByCertIdentifier` - Retrieve individual certificate details
-* `GetCustomerCertificatesByCustomerID` - Retrieve customer's certificates
-* `GetDomainDetailsByDomain` - Retrieve detailed information for supplied domain
-* `GetDomainInformationByCertificateID` - Retrieve domain verification status
+* [GetAcmeExternalAccountBinding](docs/v2/README.md#getacmeexternalaccountbinding) - Retrieves the external account binding for the specified customer
+* [GetCertificateDetailByCertIdentifier](docs/v2/README.md#getcertificatedetailbycertidentifier) - Retrieve individual certificate details
+* [GetCustomerCertificatesByCustomerID](docs/v2/README.md#getcustomercertificatesbycustomerid) - Retrieve customer's certificates
+* [GetDomainDetailsByDomain](docs/v2/README.md#getdomaindetailsbydomain) - Retrieve detailed information for supplied domain
+* [GetDomainInformationByCertificateID](docs/v2/README.md#getdomaininformationbycertificateid) - Retrieve domain verification status
 <!-- End SDK Available Operations -->
 
 ### Maturity

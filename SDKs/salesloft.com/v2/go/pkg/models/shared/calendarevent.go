@@ -9,9 +9,9 @@ import (
 // CalendarEvent - Success
 type CalendarEvent struct {
 	// Whether the calendar event is an all-day event.
-	AllDay *string
+	AllDay *bool
 	// The attendees of the calendar event.
-	Attendees map[string]interface{}
+	Attendees []interface{}
 	// Raw body content from Microsoft calendar events
 	BodyHTML *string
 	// Busy/free status of the calendar event
@@ -19,13 +19,13 @@ type CalendarEvent struct {
 	// Calendar ID of the user calendar.
 	CalendarID *string
 	// The canceled date of the calendar event.
-	CanceledAt *string
+	CanceledAt *time.Time
 	// The conference-related information, such as details of a Google Meet conference.
 	ConferenceData map[string]interface{}
 	// Creation time of the calendar event.
-	CreatedAt *string
+	CreatedAt *time.Time
 	// The creator email of the calendar event.
-	Creator map[string]interface{}
+	Creator *string
 	// Description of the calendar event
 	Description *string
 	// The (exclusive) end time of the calendar event.
@@ -45,7 +45,7 @@ type CalendarEvent struct {
 	// The provider of the calendar event.
 	Provider *string
 	// Whether the calendar event is a recurring event.
-	Recurring *string
+	Recurring *bool
 	// The (inclusive) start time of the calendar event.
 	StartTime *time.Time
 	// The status of the calendar event. It can be empty for non-google events.
@@ -55,7 +55,7 @@ type CalendarEvent struct {
 	// Title of the calendar event
 	Title *string
 	// Last modification time of the calendar event.
-	UpdatedAt *string
+	UpdatedAt *time.Time
 	// User GUID of the user calendar.
 	UserGUID *string
 }

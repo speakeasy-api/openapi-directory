@@ -33,7 +33,10 @@ func newPlayers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GamesManagementPlayersHide - Hide the given player's leaderboard scores from the given application. This method is only available to user accounts for your developer console.
 func (s *players) GamesManagementPlayersHide(ctx context.Context, request operations.GamesManagementPlayersHideRequest, security operations.GamesManagementPlayersHideSecurity) (*operations.GamesManagementPlayersHideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *players) GamesManagementPlayersHide(ctx context.Context, request operat
 // GamesManagementPlayersUnhide - Unhide the given player's leaderboard scores from the given application. This method is only available to user accounts for your developer console.
 func (s *players) GamesManagementPlayersUnhide(ctx context.Context, request operations.GamesManagementPlayersUnhideRequest, security operations.GamesManagementPlayersUnhideSecurity) (*operations.GamesManagementPlayersUnhideResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/applications/{applicationId}/players/hidden/{playerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

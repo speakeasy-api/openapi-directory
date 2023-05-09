@@ -17,12 +17,16 @@ const (
 	NumberLeaseCallFeatureStatusEnumEnabled     NumberLeaseCallFeatureStatusEnum = "ENABLED"
 )
 
+func (e NumberLeaseCallFeatureStatusEnum) ToPointer() *NumberLeaseCallFeatureStatusEnum {
+	return &e
+}
+
 func (e *NumberLeaseCallFeatureStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSUPPORTED":
 		fallthrough
 	case "PENDING":
@@ -30,10 +34,10 @@ func (e *NumberLeaseCallFeatureStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = NumberLeaseCallFeatureStatusEnum(s)
+		*e = NumberLeaseCallFeatureStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberLeaseCallFeatureStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberLeaseCallFeatureStatusEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	NumberLeaseTextFeatureStatusEnumEnabled     NumberLeaseTextFeatureStatusEnum = "ENABLED"
 )
 
+func (e NumberLeaseTextFeatureStatusEnum) ToPointer() *NumberLeaseTextFeatureStatusEnum {
+	return &e
+}
+
 func (e *NumberLeaseTextFeatureStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSUPPORTED":
 		fallthrough
 	case "PENDING":
@@ -60,10 +68,10 @@ func (e *NumberLeaseTextFeatureStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = NumberLeaseTextFeatureStatusEnum(s)
+		*e = NumberLeaseTextFeatureStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberLeaseTextFeatureStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberLeaseTextFeatureStatusEnum: %v", v)
 	}
 }
 
@@ -75,19 +83,23 @@ const (
 	NumberLeaseTypeEnumExtra NumberLeaseTypeEnum = "EXTRA"
 )
 
+func (e NumberLeaseTypeEnum) ToPointer() *NumberLeaseTypeEnum {
+	return &e
+}
+
 func (e *NumberLeaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLAN":
 		fallthrough
 	case "EXTRA":
-		*e = NumberLeaseTypeEnum(s)
+		*e = NumberLeaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberLeaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberLeaseTypeEnum: %v", v)
 	}
 }
 
@@ -129,12 +141,16 @@ const (
 	NumberLeaseStatusEnumUnavailable NumberLeaseStatusEnum = "UNAVAILABLE"
 )
 
+func (e NumberLeaseStatusEnum) ToPointer() *NumberLeaseStatusEnum {
+	return &e
+}
+
 func (e *NumberLeaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
@@ -142,10 +158,10 @@ func (e *NumberLeaseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RELEASED":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = NumberLeaseStatusEnum(s)
+		*e = NumberLeaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberLeaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberLeaseStatusEnum: %v", v)
 	}
 }
 

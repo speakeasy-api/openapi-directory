@@ -15,20 +15,24 @@ const (
 	AnomalyDetectorStateValueEnumTrained                 AnomalyDetectorStateValueEnum = "TRAINED"
 )
 
+func (e AnomalyDetectorStateValueEnum) ToPointer() *AnomalyDetectorStateValueEnum {
+	return &e
+}
+
 func (e *AnomalyDetectorStateValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_TRAINING":
 		fallthrough
 	case "TRAINED_INSUFFICIENT_DATA":
 		fallthrough
 	case "TRAINED":
-		*e = AnomalyDetectorStateValueEnum(s)
+		*e = AnomalyDetectorStateValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnomalyDetectorStateValueEnum: %s", s)
+		return fmt.Errorf("invalid value for AnomalyDetectorStateValueEnum: %v", v)
 	}
 }

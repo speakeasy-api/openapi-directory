@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,50 +17,44 @@ func main() {
         }),
     )
 
-    req := operations.AddNotificationChannelsRequest{
+    ctx := context.Background()
+    res, err := s.AddNotificationChannels(ctx, operations.AddNotificationChannelsRequest{
         RequestBody: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
-                        "AnomalyDetection",
-                        "AnomalyDetection",
-                        "AnomalyDetection",
+                        shared.EventPublisherEnumAnomalyDetection,
+                        shared.EventPublisherEnumAnomalyDetection,
+                        shared.EventPublisherEnumAnomalyDetection,
                     },
-                    ID: "distinctio",
-                    URI: "https://outstanding-strait.name",
+                    ID: sdk.String("bd9d8d69-a674-4e0f-867c-c8796ed151a0"),
+                    URI: "http://sympathetic-viewer.net",
                 },
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
-                        "AnomalyDetection",
-                        "AnomalyDetection",
-                        "AnomalyDetection",
-                        "AnomalyDetection",
+                        shared.EventPublisherEnumAnomalyDetection,
                     },
-                    ID: "vel",
-                    URI: "https://present-giggle.info",
+                    ID: sdk.String("ddf7cc78-ca1b-4a92-8fc8-16742cb73920"),
+                    URI: "http://perky-charset.name",
                 },
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
-                        "AnomalyDetection",
-                        "AnomalyDetection",
+                        shared.EventPublisherEnumAnomalyDetection,
                     },
-                    ID: "debitis",
-                    URI: "http://whirlwind-diver.info",
+                    ID: sdk.String("96fea759-6eb1-40fa-aa23-52c5955907af"),
+                    URI: "https://buttery-petitioner.biz",
                 },
             },
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "minus",
-        XAmzCredential: "placeat",
-        XAmzDate: "voluptatum",
-        XAmzSecurityToken: "iusto",
-        XAmzSignature: "excepturi",
-        XAmzSignedHeaders: "nisi",
-        ProfilingGroupName: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddNotificationChannels(ctx, req)
+        XAmzAlgorithm: sdk.String("culpa"),
+        XAmzContentSha256: sdk.String("consequuntur"),
+        XAmzCredential: sdk.String("repellat"),
+        XAmzDate: sdk.String("mollitia"),
+        XAmzSecurityToken: sdk.String("occaecati"),
+        XAmzSignature: sdk.String("numquam"),
+        XAmzSignedHeaders: sdk.String("commodi"),
+        ProfilingGroupName: "quam",
+    })
     if err != nil {
         log.Fatal(err)
     }

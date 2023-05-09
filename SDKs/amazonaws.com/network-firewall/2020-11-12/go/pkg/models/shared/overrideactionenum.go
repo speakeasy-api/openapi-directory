@@ -13,16 +13,20 @@ const (
 	OverrideActionEnumDropToAlert OverrideActionEnum = "DROP_TO_ALERT"
 )
 
+func (e OverrideActionEnum) ToPointer() *OverrideActionEnum {
+	return &e
+}
+
 func (e *OverrideActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DROP_TO_ALERT":
-		*e = OverrideActionEnum(s)
+		*e = OverrideActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OverrideActionEnum: %s", s)
+		return fmt.Errorf("invalid value for OverrideActionEnum: %v", v)
 	}
 }

@@ -17,19 +17,23 @@ const (
 	ScheduleFormatEnumJSON ScheduleFormatEnum = "JSON"
 )
 
+func (e ScheduleFormatEnum) ToPointer() *ScheduleFormatEnum {
+	return &e
+}
+
 func (e *ScheduleFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = ScheduleFormatEnum(s)
+		*e = ScheduleFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleFormatEnum: %v", v)
 	}
 }
 

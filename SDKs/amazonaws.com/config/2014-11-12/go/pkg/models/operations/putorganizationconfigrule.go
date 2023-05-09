@@ -16,17 +16,21 @@ const (
 	PutOrganizationConfigRuleXAmzTargetEnumStarlingDoveServicePutOrganizationConfigRule PutOrganizationConfigRuleXAmzTargetEnum = "StarlingDoveService.PutOrganizationConfigRule"
 )
 
+func (e PutOrganizationConfigRuleXAmzTargetEnum) ToPointer() *PutOrganizationConfigRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutOrganizationConfigRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutOrganizationConfigRule":
-		*e = PutOrganizationConfigRuleXAmzTargetEnum(s)
+		*e = PutOrganizationConfigRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutOrganizationConfigRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutOrganizationConfigRuleXAmzTargetEnum: %v", v)
 	}
 }
 

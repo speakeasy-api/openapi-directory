@@ -15,17 +15,21 @@ const (
 	GETDeleteEgressOnlyInternetGatewayActionEnumDeleteEgressOnlyInternetGateway GETDeleteEgressOnlyInternetGatewayActionEnum = "DeleteEgressOnlyInternetGateway"
 )
 
+func (e GETDeleteEgressOnlyInternetGatewayActionEnum) ToPointer() *GETDeleteEgressOnlyInternetGatewayActionEnum {
+	return &e
+}
+
 func (e *GETDeleteEgressOnlyInternetGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEgressOnlyInternetGateway":
-		*e = GETDeleteEgressOnlyInternetGatewayActionEnum(s)
+		*e = GETDeleteEgressOnlyInternetGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEgressOnlyInternetGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEgressOnlyInternetGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteEgressOnlyInternetGatewayVersionEnumTwoThousandAndSixteen1115 GETDeleteEgressOnlyInternetGatewayVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteEgressOnlyInternetGatewayVersionEnum) ToPointer() *GETDeleteEgressOnlyInternetGatewayVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteEgressOnlyInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteEgressOnlyInternetGatewayVersionEnum(s)
+		*e = GETDeleteEgressOnlyInternetGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEgressOnlyInternetGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEgressOnlyInternetGatewayVersionEnum: %v", v)
 	}
 }
 

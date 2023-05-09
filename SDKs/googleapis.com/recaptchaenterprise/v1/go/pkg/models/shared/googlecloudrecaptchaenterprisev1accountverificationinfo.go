@@ -33,12 +33,16 @@ const (
 	GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnumErrorVerdictMismatch              GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum = "ERROR_VERDICT_MISMATCH"
 )
 
+func (e GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum) ToPointer() *GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESULT_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS_USER_VERIFIED":
@@ -58,10 +62,10 @@ func (e *GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificati
 	case "ERROR_VERIFICATION_BYPASSED":
 		fallthrough
 	case "ERROR_VERDICT_MISMATCH":
-		*e = GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum(s)
+		*e = GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoLatestVerificationResultEnum: %v", v)
 	}
 }
 

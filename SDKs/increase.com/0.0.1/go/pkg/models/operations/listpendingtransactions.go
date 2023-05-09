@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
+	"time"
 )
 
 type ListPendingTransactionsStatusInEnum string
@@ -16,48 +17,60 @@ const (
 	ListPendingTransactionsStatusInEnumComplete ListPendingTransactionsStatusInEnum = "complete"
 )
 
+func (e ListPendingTransactionsStatusInEnum) ToPointer() *ListPendingTransactionsStatusInEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsStatusInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "complete":
-		*e = ListPendingTransactionsStatusInEnum(s)
+		*e = ListPendingTransactionsStatusInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsStatusInEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsStatusInEnum: %v", v)
 	}
 }
 
 type ListPendingTransactionsRequest struct {
-	AccountID *string                               `queryParam:"style=form,explode=true,name=account_id"`
-	Cursor    *string                               `queryParam:"style=form,explode=true,name=cursor"`
-	Limit     *int64                                `queryParam:"style=form,explode=true,name=limit"`
-	RouteID   *string                               `queryParam:"style=form,explode=true,name=route_id"`
-	SourceID  *string                               `queryParam:"style=form,explode=true,name=source_id"`
-	StatusIn  []ListPendingTransactionsStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
+	AccountID           *string                               `queryParam:"style=form,explode=true,name=account_id"`
+	CreatedAtAfter      *time.Time                            `queryParam:"style=form,explode=true,name=created_at.after"`
+	CreatedAtBefore     *time.Time                            `queryParam:"style=form,explode=true,name=created_at.before"`
+	CreatedAtOnOrAfter  *time.Time                            `queryParam:"style=form,explode=true,name=created_at.on_or_after"`
+	CreatedAtOnOrBefore *time.Time                            `queryParam:"style=form,explode=true,name=created_at.on_or_before"`
+	Cursor              *string                               `queryParam:"style=form,explode=true,name=cursor"`
+	Limit               *int64                                `queryParam:"style=form,explode=true,name=limit"`
+	RouteID             *string                               `queryParam:"style=form,explode=true,name=route_id"`
+	SourceID            *string                               `queryParam:"style=form,explode=true,name=source_id"`
+	StatusIn            []ListPendingTransactionsStatusInEnum `queryParam:"style=form,explode=true,name=status.in"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON13StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListPendingTransactionsDefaultApplicationJSON13StatusEnum = "429"
+	ListPendingTransactionsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListPendingTransactionsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON13StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListPendingTransactionsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListPendingTransactionsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -67,17 +80,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON13TypeEnumRateLimitedError ListPendingTransactionsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON13TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON13TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -89,23 +106,27 @@ type ListPendingTransactionsDefaultApplicationJSON13 struct {
 	Type       ListPendingTransactionsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON12StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON12StatusEnum = "403"
+	ListPendingTransactionsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON12StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListPendingTransactionsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListPendingTransactionsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -115,17 +136,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON12TypeEnumPrivateFeatureError ListPendingTransactionsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON12TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON12TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -136,23 +161,27 @@ type ListPendingTransactionsDefaultApplicationJSON12 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON11StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListPendingTransactionsDefaultApplicationJSON11StatusEnum = "404"
+	ListPendingTransactionsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListPendingTransactionsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON11StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListPendingTransactionsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListPendingTransactionsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -162,17 +191,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON11TypeEnumObjectNotFoundError ListPendingTransactionsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON11TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON11TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -183,23 +216,27 @@ type ListPendingTransactionsDefaultApplicationJSON11 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON10StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON10StatusEnumFourHundred ListPendingTransactionsDefaultApplicationJSON10StatusEnum = "400"
+	ListPendingTransactionsDefaultApplicationJSON10StatusEnumFourHundred ListPendingTransactionsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON10StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListPendingTransactionsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListPendingTransactionsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -209,17 +246,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON10TypeEnumMalformedRequestError ListPendingTransactionsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON10TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON10TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -230,23 +271,27 @@ type ListPendingTransactionsDefaultApplicationJSON10 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON9StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON9StatusEnumFourHundred ListPendingTransactionsDefaultApplicationJSON9StatusEnum = "400"
+	ListPendingTransactionsDefaultApplicationJSON9StatusEnumFourHundred ListPendingTransactionsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON9StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListPendingTransactionsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListPendingTransactionsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -256,46 +301,54 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON9TypeEnumInvalidParametersError ListPendingTransactionsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON9TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON9TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListPendingTransactionsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                 `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                 `json:"errors"`
 	Status ListPendingTransactionsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                   `json:"title"`
 	Type   ListPendingTransactionsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON8StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListPendingTransactionsDefaultApplicationJSON8StatusEnum = "409"
+	ListPendingTransactionsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListPendingTransactionsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON8StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListPendingTransactionsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListPendingTransactionsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -305,17 +358,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON8TypeEnumInvalidOperationError ListPendingTransactionsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON8TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON8TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -326,23 +383,27 @@ type ListPendingTransactionsDefaultApplicationJSON8 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON7StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListPendingTransactionsDefaultApplicationJSON7StatusEnum = "401"
+	ListPendingTransactionsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListPendingTransactionsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON7StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListPendingTransactionsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListPendingTransactionsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -352,17 +413,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListPendingTransactionsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON7TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON7TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -373,23 +438,27 @@ type ListPendingTransactionsDefaultApplicationJSON7 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON6StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON6StatusEnumFiveHundred ListPendingTransactionsDefaultApplicationJSON6StatusEnum = "500"
+	ListPendingTransactionsDefaultApplicationJSON6StatusEnumFiveHundred ListPendingTransactionsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON6StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListPendingTransactionsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListPendingTransactionsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -399,17 +468,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON6TypeEnumInternalServerError ListPendingTransactionsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON6TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON6TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -420,23 +493,27 @@ type ListPendingTransactionsDefaultApplicationJSON6 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON5StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON5StatusEnum = "403"
+	ListPendingTransactionsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON5StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListPendingTransactionsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListPendingTransactionsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -446,17 +523,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListPendingTransactionsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON5TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON5TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -467,23 +548,27 @@ type ListPendingTransactionsDefaultApplicationJSON5 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON4StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListPendingTransactionsDefaultApplicationJSON4StatusEnum = "422"
+	ListPendingTransactionsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListPendingTransactionsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON4StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListPendingTransactionsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListPendingTransactionsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -493,17 +578,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListPendingTransactionsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON4TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON4TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -514,23 +603,27 @@ type ListPendingTransactionsDefaultApplicationJSON4 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON3StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListPendingTransactionsDefaultApplicationJSON3StatusEnum = "409"
+	ListPendingTransactionsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListPendingTransactionsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON3StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListPendingTransactionsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListPendingTransactionsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -540,17 +633,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListPendingTransactionsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON3TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON3TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -561,23 +658,27 @@ type ListPendingTransactionsDefaultApplicationJSON3 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON2StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON2StatusEnum = "403"
+	ListPendingTransactionsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListPendingTransactionsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON2StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListPendingTransactionsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListPendingTransactionsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -587,17 +688,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListPendingTransactionsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON2TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON2TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -608,23 +713,27 @@ type ListPendingTransactionsDefaultApplicationJSON2 struct {
 	Type   ListPendingTransactionsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListPendingTransactionsDefaultApplicationJSON1StatusEnum string
+type ListPendingTransactionsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListPendingTransactionsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListPendingTransactionsDefaultApplicationJSON1StatusEnum = "404"
+	ListPendingTransactionsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListPendingTransactionsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON1StatusEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListPendingTransactionsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListPendingTransactionsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -634,17 +743,21 @@ const (
 	ListPendingTransactionsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListPendingTransactionsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListPendingTransactionsDefaultApplicationJSON1TypeEnum) ToPointer() *ListPendingTransactionsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListPendingTransactionsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListPendingTransactionsDefaultApplicationJSON1TypeEnum(s)
+		*e = ListPendingTransactionsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPendingTransactionsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

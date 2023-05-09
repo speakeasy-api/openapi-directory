@@ -15,20 +15,24 @@ const (
 	EventSourcePositionEnumAtTimestamp EventSourcePositionEnum = "AT_TIMESTAMP"
 )
 
+func (e EventSourcePositionEnum) ToPointer() *EventSourcePositionEnum {
+	return &e
+}
+
 func (e *EventSourcePositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRIM_HORIZON":
 		fallthrough
 	case "LATEST":
 		fallthrough
 	case "AT_TIMESTAMP":
-		*e = EventSourcePositionEnum(s)
+		*e = EventSourcePositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSourcePositionEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSourcePositionEnum: %v", v)
 	}
 }

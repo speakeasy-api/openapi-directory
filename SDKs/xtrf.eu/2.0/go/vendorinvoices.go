@@ -37,7 +37,10 @@ func newVendorInvoices(defaultClient, securityClient HTTPClient, serverURL, lang
 // Creates a new payment on the vendor account and assigns the payment to the invoice.
 func (s *vendorInvoices) CreatePayment1(ctx context.Context, request operations.CreatePayment1Request) (*operations.CreatePayment1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PaymentDTO", "json")
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *vendorInvoices) Create4(ctx context.Context, request shared.ProviderInv
 // Removes a provider invoice.
 func (s *vendorInvoices) Delete6(ctx context.Context, request operations.Delete6Request) (*operations.Delete6Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +180,10 @@ func (s *vendorInvoices) Delete6(ctx context.Context, request operations.Delete6
 // Removes a provider payment.
 func (s *vendorInvoices) Delete7(ctx context.Context, request operations.Delete7Request) (*operations.Delete7Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/payments/{paymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/payments/{paymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -308,7 +317,10 @@ func (s *vendorInvoices) GetAll2(ctx context.Context, request operations.GetAll2
 // Returns provider invoice details.
 func (s *vendorInvoices) GetByID3(ctx context.Context, request operations.GetByID3Request) (*operations.GetByID3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +365,10 @@ func (s *vendorInvoices) GetByID3(ctx context.Context, request operations.GetByI
 // Generates provider invoice document (PDF).
 func (s *vendorInvoices) GetDocument1(ctx context.Context, request operations.GetDocument1Request) (*operations.GetDocument1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/document", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/document", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +413,10 @@ func (s *vendorInvoices) GetDocument1(ctx context.Context, request operations.Ge
 // Returns all payments for the vendor invoice.
 func (s *vendorInvoices) GetPayments1(ctx context.Context, request operations.GetPayments1Request) (*operations.GetPayments1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/payments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -443,7 +461,10 @@ func (s *vendorInvoices) GetPayments1(ctx context.Context, request operations.Ge
 // Sends a provider invoice.
 func (s *vendorInvoices) Send(ctx context.Context, request operations.SendRequest) (*operations.SendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/send", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/send", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -479,7 +500,10 @@ func (s *vendorInvoices) Send(ctx context.Context, request operations.SendReques
 // Changes invoice status to given status.
 func (s *vendorInvoices) SetStatus(ctx context.Context, request operations.SetStatusRequest) (*operations.SetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounting/providers/invoices/{invoiceId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StatusRequestDTO", "json")
 	if err != nil {

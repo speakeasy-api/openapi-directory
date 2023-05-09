@@ -19,12 +19,16 @@ const (
 	TransferCallResponseMessageEnumTransferCallFailed             TransferCallResponseMessageEnum = "Transfer Call Failed"
 )
 
+func (e TransferCallResponseMessageEnum) ToPointer() *TransferCallResponseMessageEnum {
+	return &e
+}
+
 func (e *TransferCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transfer Call Executed":
 		fallthrough
 	case "CallUUID Parameter must be present":
@@ -36,10 +40,10 @@ func (e *TransferCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "Transfer Call Failed -- Call not found":
 		fallthrough
 	case "Transfer Call Failed":
-		*e = TransferCallResponseMessageEnum(s)
+		*e = TransferCallResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferCallResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferCallResponseMessageEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	AlternateContactTypeEnumSecurity   AlternateContactTypeEnum = "SECURITY"
 )
 
+func (e AlternateContactTypeEnum) ToPointer() *AlternateContactTypeEnum {
+	return &e
+}
+
 func (e *AlternateContactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BILLING":
 		fallthrough
 	case "OPERATIONS":
 		fallthrough
 	case "SECURITY":
-		*e = AlternateContactTypeEnum(s)
+		*e = AlternateContactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlternateContactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AlternateContactTypeEnum: %v", v)
 	}
 }

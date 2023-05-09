@@ -35,7 +35,10 @@ func newTemplates(defaultClient, securityClient HTTPClient, serverURL, language,
 // TemplatesCreate - Create template
 func (s *templates) TemplatesCreate(ctx context.Context, request operations.TemplatesCreateRequest, security operations.TemplatesCreateSecurity) (*operations.TemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TemplateRequest", "json")
 	if err != nil {
@@ -86,7 +89,10 @@ func (s *templates) TemplatesCreate(ctx context.Context, request operations.Temp
 // TemplatesFetch - Fetch template by ID
 func (s *templates) TemplatesFetch(ctx context.Context, request operations.TemplatesFetchRequest, security operations.TemplatesFetchSecurity) (*operations.TemplatesFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *templates) TemplatesFetch(ctx context.Context, request operations.Templ
 // TemplatesFetchAll - Fetch templates
 func (s *templates) TemplatesFetchAll(ctx context.Context, request operations.TemplatesFetchAllRequest, security operations.TemplatesFetchAllSecurity) (*operations.TemplatesFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +199,10 @@ func (s *templates) TemplatesFetchAll(ctx context.Context, request operations.Te
 // TemplatesRemove - Deletes a template
 func (s *templates) TemplatesRemove(ctx context.Context, request operations.TemplatesRemoveRequest, security operations.TemplatesRemoveSecurity) (*operations.TemplatesRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +246,10 @@ func (s *templates) TemplatesRemove(ctx context.Context, request operations.Temp
 // TemplatesUpdate - Updates a template
 func (s *templates) TemplatesUpdate(ctx context.Context, request operations.TemplatesUpdateRequest, security operations.TemplatesUpdateSecurity) (*operations.TemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/templates/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

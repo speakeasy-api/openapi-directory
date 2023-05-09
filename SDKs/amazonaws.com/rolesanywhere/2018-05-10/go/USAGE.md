@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,45 +17,39 @@ func main() {
         }),
     )
 
-    req := operations.CreateProfileRequest{
+    ctx := context.Background()
+    res, err := s.CreateProfile(ctx, operations.CreateProfileRequest{
         RequestBody: operations.CreateProfileRequestBody{
-            DurationSeconds: 548814,
-            Enabled: false,
+            DurationSeconds: sdk.Int64(548814),
+            Enabled: sdk.Bool(false),
             ManagedPolicyArns: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Name: "nulla",
-            RequireInstanceProperties: false,
+            Name: "Johnnie Stamm",
+            RequireInstanceProperties: sdk.Bool(false),
             RoleArns: []string{
-                "illum",
-                "vel",
-                "error",
+                "suscipit",
+                "iure",
+                "magnam",
             },
-            SessionPolicy: "deserunt",
+            SessionPolicy: sdk.String("debitis"),
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
-                },
-                shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "delectus",
+                    Value: "tempora",
                 },
             },
         },
-        XAmzAlgorithm: "delectus",
-        XAmzContentSha256: "tempora",
-        XAmzCredential: "suscipit",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "minus",
-        XAmzSignature: "placeat",
-        XAmzSignedHeaders: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateProfile(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("minus"),
+        XAmzDate: sdk.String("placeat"),
+        XAmzSecurityToken: sdk.String("voluptatum"),
+        XAmzSignature: sdk.String("iusto"),
+        XAmzSignedHeaders: sdk.String("excepturi"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,18 +14,22 @@ const (
 	FeatureEvaluationStrategyEnumDefaultVariation FeatureEvaluationStrategyEnum = "DEFAULT_VARIATION"
 )
 
+func (e FeatureEvaluationStrategyEnum) ToPointer() *FeatureEvaluationStrategyEnum {
+	return &e
+}
+
 func (e *FeatureEvaluationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_RULES":
 		fallthrough
 	case "DEFAULT_VARIATION":
-		*e = FeatureEvaluationStrategyEnum(s)
+		*e = FeatureEvaluationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureEvaluationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureEvaluationStrategyEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListWebhooksXAmzTargetEnumCodePipeline20150709ListWebhooks ListWebhooksXAmzTargetEnum = "CodePipeline_20150709.ListWebhooks"
 )
 
+func (e ListWebhooksXAmzTargetEnum) ToPointer() *ListWebhooksXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWebhooksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.ListWebhooks":
-		*e = ListWebhooksXAmzTargetEnum(s)
+		*e = ListWebhooksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWebhooksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWebhooksXAmzTargetEnum: %v", v)
 	}
 }
 

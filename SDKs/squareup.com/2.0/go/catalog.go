@@ -222,7 +222,7 @@ func (s *catalog) BatchUpsertCatalogObjects(ctx context.Context, request shared.
 // CatalogInfo - CatalogInfo
 // Retrieves information about the Square Catalog API, such as batch size
 // limits that can be used by the `BatchUpsertCatalogObjects` endpoint.
-func (s *catalog) CatalogInfo(ctx context.Context) (*operations.CatalogInfoResponse, error) {
+func (s *catalog) CatalogInfo(ctx context.Context, security operations.CatalogInfoSecurity) (*operations.CatalogInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/catalog/info"
 
@@ -231,7 +231,7 @@ func (s *catalog) CatalogInfo(ctx context.Context) (*operations.CatalogInfoRespo
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -274,7 +274,10 @@ func (s *catalog) CatalogInfo(ctx context.Context) (*operations.CatalogInfoRespo
 // [CatalogItemVariation](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogItemVariation) children.
 func (s *catalog) DeleteCatalogObject(ctx context.Context, request operations.DeleteCatalogObjectRequest, security operations.DeleteCatalogObjectSecurity) (*operations.DeleteCatalogObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -382,7 +385,10 @@ func (s *catalog) ListCatalog(ctx context.Context, request operations.ListCatalo
 // any [CatalogTax](https://developer.squareup.com/reference/square_2021-08-18/objects/CatalogTax) objects that apply to it.
 func (s *catalog) RetrieveCatalogObject(ctx context.Context, request operations.RetrieveCatalogObjectRequest, security operations.RetrieveCatalogObjectSecurity) (*operations.RetrieveCatalogObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/catalog/object/{object_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	TraceSpanKindEnumRPCClient           TraceSpanKindEnum = "RPC_CLIENT"
 )
 
+func (e TraceSpanKindEnum) ToPointer() *TraceSpanKindEnum {
+	return &e
+}
+
 func (e *TraceSpanKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPAN_KIND_UNSPECIFIED":
 		fallthrough
 	case "RPC_SERVER":
 		fallthrough
 	case "RPC_CLIENT":
-		*e = TraceSpanKindEnum(s)
+		*e = TraceSpanKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TraceSpanKindEnum: %s", s)
+		return fmt.Errorf("invalid value for TraceSpanKindEnum: %v", v)
 	}
 }
 

@@ -37,7 +37,10 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // <strong>API Resellers</strong><ul><li>This endpoint does not support subaccounts and therefore API Resellers should not supply an X-Shopper-Id header</li></ul>
 func (s *v1) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/orders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

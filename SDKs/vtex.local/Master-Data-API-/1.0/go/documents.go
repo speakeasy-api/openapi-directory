@@ -112,7 +112,10 @@ func newDocuments(defaultClient, securityClient HTTPClient, serverURL, language,
 // ```
 func (s *documents) Createnewdocument(ctx context.Context, request operations.CreatenewdocumentRequest) (*operations.CreatenewdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -214,7 +217,10 @@ func (s *documents) Createnewdocument(ctx context.Context, request operations.Cr
 // ```
 func (s *documents) Createorupdatepartialdocument(ctx context.Context, request operations.CreateorupdatepartialdocumentRequest) (*operations.CreateorupdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -275,7 +281,10 @@ func (s *documents) Createorupdatepartialdocument(ctx context.Context, request o
 // It allows to delete a document.
 func (s *documents) Deletedocument(ctx context.Context, request operations.DeletedocumentRequest) (*operations.DeletedocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -315,7 +324,10 @@ func (s *documents) Deletedocument(ctx context.Context, request operations.Delet
 // > Assign the `_fields` parameter in the query string to retrieve the desired fields. If you want to return all the fields use `_fields=_all`.
 func (s *documents) Getdocument(ctx context.Context, request operations.GetdocumentRequest) (*operations.GetdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -422,7 +434,10 @@ func (s *documents) Getdocument(ctx context.Context, request operations.Getdocum
 // ```
 func (s *documents) Updateentiredocument(ctx context.Context, request operations.UpdateentiredocumentRequest) (*operations.UpdateentiredocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -524,7 +539,10 @@ func (s *documents) Updateentiredocument(ctx context.Context, request operations
 // ```
 func (s *documents) Updatepartialdocument(ctx context.Context, request operations.UpdatepartialdocumentRequest) (*operations.UpdatepartialdocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{dataEntityName}/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

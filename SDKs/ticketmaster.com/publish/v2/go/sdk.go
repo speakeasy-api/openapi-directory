@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Publish API
 type SDK struct {
 
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // Since 1.0.0
 func (s *SDK) PatchAttraction(ctx context.Context, request operations.PatchAttractionRequest) (*operations.PatchAttractionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
@@ -153,7 +171,10 @@ func (s *SDK) PatchAttraction(ctx context.Context, request operations.PatchAttra
 // Since 1.0.0
 func (s *SDK) PatchEvent(ctx context.Context, request operations.PatchEventRequest) (*operations.PatchEventResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
@@ -210,7 +231,10 @@ func (s *SDK) PatchEvent(ctx context.Context, request operations.PatchEventReque
 // Since 1.0.0
 func (s *SDK) PatchVenue(ctx context.Context, request operations.PatchVenueRequest) (*operations.PatchVenueResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/venues/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publish/v2/venues/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AugmentationData", "json")
 	if err != nil {
@@ -324,7 +348,10 @@ func (s *SDK) PublishAttraction(ctx context.Context, request operations.PublishA
 // Since 1.0.0
 func (s *SDK) PublishAttractionVideos(ctx context.Context, request operations.PublishAttractionVideosRequest) (*operations.PublishAttractionVideosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}/videos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publish/v2/attractions/{id}/videos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Video", "json")
 	if err != nil {
@@ -495,7 +522,10 @@ func (s *SDK) PublishEvent(ctx context.Context, request operations.PublishEventR
 // Since 1.0.0
 func (s *SDK) PublishEventVideos(ctx context.Context, request operations.PublishEventVideosRequest) (*operations.PublishEventVideosResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}/videos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/publish/v2/events/{id}/videos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Video", "json")
 	if err != nil {

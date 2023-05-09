@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -470,6 +471,7 @@ pkg/models/shared/dataqualitytargettable.go
 pkg/models/shared/createdatabaserequest.go
 pkg/models/shared/databaseinput.go
 pkg/models/shared/databaseidentifier.go
+pkg/models/shared/federateddatabase.go
 pkg/models/shared/principalpermissions.go
 pkg/models/shared/datalakeprincipal.go
 pkg/models/shared/permissionenum.go
@@ -735,6 +737,7 @@ pkg/models/shared/statementoutputdata.go
 pkg/models/shared/getstatementrequest.go
 pkg/models/shared/gettableresponse.go
 pkg/models/shared/table.go
+pkg/models/shared/federatedtable.go
 pkg/models/shared/gettablerequest.go
 pkg/models/shared/gettableversionresponse.go
 pkg/models/shared/tableversion.go
@@ -927,4 +930,5 @@ pkg/models/shared/updateuserdefinedfunctionrequest.go
 pkg/models/shared/updateworkflowresponse.go
 pkg/models/shared/updateworkflowrequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

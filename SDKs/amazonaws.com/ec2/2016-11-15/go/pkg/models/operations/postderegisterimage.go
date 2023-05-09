@@ -15,17 +15,21 @@ const (
 	POSTDeregisterImageActionEnumDeregisterImage POSTDeregisterImageActionEnum = "DeregisterImage"
 )
 
+func (e POSTDeregisterImageActionEnum) ToPointer() *POSTDeregisterImageActionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterImage":
-		*e = POSTDeregisterImageActionEnum(s)
+		*e = POSTDeregisterImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeregisterImageVersionEnumTwoThousandAndSixteen1115 POSTDeregisterImageVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeregisterImageVersionEnum) ToPointer() *POSTDeregisterImageVersionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeregisterImageVersionEnum(s)
+		*e = POSTDeregisterImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterImageVersionEnum: %v", v)
 	}
 }
 

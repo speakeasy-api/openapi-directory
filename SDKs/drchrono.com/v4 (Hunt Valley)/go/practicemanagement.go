@@ -95,7 +95,10 @@ func (s *practiceManagement) InventoryCategoriesList(ctx context.Context, reques
 // InventoryCategoriesRead - Retrieve an existing inventory category
 func (s *practiceManagement) InventoryCategoriesRead(ctx context.Context, request operations.InventoryCategoriesReadRequest, security operations.InventoryCategoriesReadSecurity) (*operations.InventoryCategoriesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_categories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/inventory_categories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +275,10 @@ func (s *practiceManagement) InventoryVaccinesList(ctx context.Context, request 
 // InventoryVaccinesRead - Retrieve an existing vaccine inventory
 func (s *practiceManagement) InventoryVaccinesRead(ctx context.Context, request operations.InventoryVaccinesReadRequest, security operations.InventoryVaccinesReadSecurity) (*operations.InventoryVaccinesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/inventory_vaccines/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/inventory_vaccines/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -390,7 +396,10 @@ func (s *practiceManagement) MessagesCreate(ctx context.Context, request operati
 // MessagesDelete - Delete an existing message in doctor's message center
 func (s *practiceManagement) MessagesDelete(ctx context.Context, request operations.MessagesDeleteRequest, security operations.MessagesDeleteSecurity) (*operations.MessagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -500,7 +509,10 @@ func (s *practiceManagement) MessagesList(ctx context.Context, request operation
 // MessagesPartialUpdate - Update an existing message in doctor's message center
 func (s *practiceManagement) MessagesPartialUpdate(ctx context.Context, request operations.MessagesPartialUpdateRequest, security operations.MessagesPartialUpdateSecurity) (*operations.MessagesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -551,7 +563,10 @@ func (s *practiceManagement) MessagesPartialUpdate(ctx context.Context, request 
 // MessagesRead - Retrieve an existing message in doctor's message center
 func (s *practiceManagement) MessagesRead(ctx context.Context, request operations.MessagesReadRequest, security operations.MessagesReadSecurity) (*operations.MessagesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -610,7 +625,10 @@ func (s *practiceManagement) MessagesRead(ctx context.Context, request operation
 // MessagesUpdate - Update an existing message in doctor's message center
 func (s *practiceManagement) MessagesUpdate(ctx context.Context, request operations.MessagesUpdateRequest, security operations.MessagesUpdateSecurity) (*operations.MessagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/messages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -661,7 +679,10 @@ func (s *practiceManagement) MessagesUpdate(ctx context.Context, request operati
 // OfficesAddExamRoom - Add an exam room to the office
 func (s *practiceManagement) OfficesAddExamRoom(ctx context.Context, request operations.OfficesAddExamRoomRequest, security operations.OfficesAddExamRoomSecurity) (*operations.OfficesAddExamRoomResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}/add_exam_room", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}/add_exam_room", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -779,7 +800,10 @@ func (s *practiceManagement) OfficesList(ctx context.Context, request operations
 // OfficesPartialUpdate - Update an existing office
 func (s *practiceManagement) OfficesPartialUpdate(ctx context.Context, request operations.OfficesPartialUpdateRequest, security operations.OfficesPartialUpdateSecurity) (*operations.OfficesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -830,7 +854,10 @@ func (s *practiceManagement) OfficesPartialUpdate(ctx context.Context, request o
 // OfficesRead - Retrieve an existing office
 func (s *practiceManagement) OfficesRead(ctx context.Context, request operations.OfficesReadRequest, security operations.OfficesReadSecurity) (*operations.OfficesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -889,7 +916,10 @@ func (s *practiceManagement) OfficesRead(ctx context.Context, request operations
 // OfficesUpdate - Update an existing office
 func (s *practiceManagement) OfficesUpdate(ctx context.Context, request operations.OfficesUpdateRequest, security operations.OfficesUpdateSecurity) (*operations.OfficesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/offices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1058,7 +1088,10 @@ func (s *practiceManagement) TaskCategoriesList(ctx context.Context, request ope
 // TaskCategoriesPartialUpdate - Update an existing task category
 func (s *practiceManagement) TaskCategoriesPartialUpdate(ctx context.Context, request operations.TaskCategoriesPartialUpdateRequest, security operations.TaskCategoriesPartialUpdateSecurity) (*operations.TaskCategoriesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1109,7 +1142,10 @@ func (s *practiceManagement) TaskCategoriesPartialUpdate(ctx context.Context, re
 // TaskCategoriesRead - Retrieve an existing task category
 func (s *practiceManagement) TaskCategoriesRead(ctx context.Context, request operations.TaskCategoriesReadRequest, security operations.TaskCategoriesReadSecurity) (*operations.TaskCategoriesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1168,7 +1204,10 @@ func (s *practiceManagement) TaskCategoriesRead(ctx context.Context, request ope
 // TaskCategoriesUpdate - Update an existing task category
 func (s *practiceManagement) TaskCategoriesUpdate(ctx context.Context, request operations.TaskCategoriesUpdateRequest, security operations.TaskCategoriesUpdateSecurity) (*operations.TaskCategoriesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_categories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1337,7 +1376,10 @@ func (s *practiceManagement) TaskNotesList(ctx context.Context, request operatio
 // TaskNotesPartialUpdate - Update an existing task note
 func (s *practiceManagement) TaskNotesPartialUpdate(ctx context.Context, request operations.TaskNotesPartialUpdateRequest, security operations.TaskNotesPartialUpdateSecurity) (*operations.TaskNotesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1388,7 +1430,10 @@ func (s *practiceManagement) TaskNotesPartialUpdate(ctx context.Context, request
 // TaskNotesRead - Retrieve an existing task note
 func (s *practiceManagement) TaskNotesRead(ctx context.Context, request operations.TaskNotesReadRequest, security operations.TaskNotesReadSecurity) (*operations.TaskNotesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1447,7 +1492,10 @@ func (s *practiceManagement) TaskNotesRead(ctx context.Context, request operatio
 // TaskNotesUpdate - Update an existing task note
 func (s *practiceManagement) TaskNotesUpdate(ctx context.Context, request operations.TaskNotesUpdateRequest, security operations.TaskNotesUpdateSecurity) (*operations.TaskNotesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_notes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1616,7 +1664,10 @@ func (s *practiceManagement) TaskStatusesList(ctx context.Context, request opera
 // TaskStatusesPartialUpdate - Update an existing task status
 func (s *practiceManagement) TaskStatusesPartialUpdate(ctx context.Context, request operations.TaskStatusesPartialUpdateRequest, security operations.TaskStatusesPartialUpdateSecurity) (*operations.TaskStatusesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1667,7 +1718,10 @@ func (s *practiceManagement) TaskStatusesPartialUpdate(ctx context.Context, requ
 // TaskStatusesRead - Retrieve an existing task status
 func (s *practiceManagement) TaskStatusesRead(ctx context.Context, request operations.TaskStatusesReadRequest, security operations.TaskStatusesReadSecurity) (*operations.TaskStatusesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1726,7 +1780,10 @@ func (s *practiceManagement) TaskStatusesRead(ctx context.Context, request opera
 // TaskStatusesUpdate - Update an existing task status
 func (s *practiceManagement) TaskStatusesUpdate(ctx context.Context, request operations.TaskStatusesUpdateRequest, security operations.TaskStatusesUpdateSecurity) (*operations.TaskStatusesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_statuses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1895,7 +1952,10 @@ func (s *practiceManagement) TaskTemplatesList(ctx context.Context, request oper
 // TaskTemplatesPartialUpdate - Update an existing task template
 func (s *practiceManagement) TaskTemplatesPartialUpdate(ctx context.Context, request operations.TaskTemplatesPartialUpdateRequest, security operations.TaskTemplatesPartialUpdateSecurity) (*operations.TaskTemplatesPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -1946,7 +2006,10 @@ func (s *practiceManagement) TaskTemplatesPartialUpdate(ctx context.Context, req
 // TaskTemplatesRead - Retrieve an existing task template
 func (s *practiceManagement) TaskTemplatesRead(ctx context.Context, request operations.TaskTemplatesReadRequest, security operations.TaskTemplatesReadSecurity) (*operations.TaskTemplatesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2005,7 +2068,10 @@ func (s *practiceManagement) TaskTemplatesRead(ctx context.Context, request oper
 // TaskTemplatesUpdate - Update an existing task template
 func (s *practiceManagement) TaskTemplatesUpdate(ctx context.Context, request operations.TaskTemplatesUpdateRequest, security operations.TaskTemplatesUpdateSecurity) (*operations.TaskTemplatesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/task_templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2174,7 +2240,10 @@ func (s *practiceManagement) TasksList(ctx context.Context, request operations.T
 // TasksPartialUpdate - Update an existing task
 func (s *practiceManagement) TasksPartialUpdate(ctx context.Context, request operations.TasksPartialUpdateRequest, security operations.TasksPartialUpdateSecurity) (*operations.TasksPartialUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -2225,7 +2294,10 @@ func (s *practiceManagement) TasksPartialUpdate(ctx context.Context, request ope
 // TasksRead - Retrieve an existing task
 func (s *practiceManagement) TasksRead(ctx context.Context, request operations.TasksReadRequest, security operations.TasksReadSecurity) (*operations.TasksReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2284,7 +2356,10 @@ func (s *practiceManagement) TasksRead(ctx context.Context, request operations.T
 // TasksUpdate - Update an existing task
 func (s *practiceManagement) TasksUpdate(ctx context.Context, request operations.TasksUpdateRequest, security operations.TasksUpdateSecurity) (*operations.TasksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/tasks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -37,7 +37,7 @@ func newUtility(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // LicenseTypes - List License Types
 // Return a list of all License Types supported by the service
-func (s *utility) LicenseTypes(ctx context.Context) (*operations.LicenseTypesResponse, error) {
+func (s *utility) LicenseTypes(ctx context.Context, security operations.LicenseTypesSecurity) (*operations.LicenseTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/utility/licenseTypes"
 
@@ -46,7 +46,7 @@ func (s *utility) LicenseTypes(ctx context.Context) (*operations.LicenseTypesRes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -96,7 +96,7 @@ func (s *utility) LicenseTypes(ctx context.Context) (*operations.LicenseTypesRes
 
 // LicensingModels - List Licensing Models
 // Return a list of all licensing models supported by the service
-func (s *utility) LicensingModels(ctx context.Context) (*operations.LicensingModelsResponse, error) {
+func (s *utility) LicensingModels(ctx context.Context, security operations.LicensingModelsSecurity) (*operations.LicensingModelsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/utility/licensingModels"
 
@@ -105,7 +105,7 @@ func (s *utility) LicensingModels(ctx context.Context) (*operations.LicensingMod
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

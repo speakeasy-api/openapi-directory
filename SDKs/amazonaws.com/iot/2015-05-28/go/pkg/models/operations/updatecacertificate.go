@@ -30,19 +30,23 @@ const (
 	UpdateCACertificateNewAutoRegistrationStatusEnumDisable UpdateCACertificateNewAutoRegistrationStatusEnum = "DISABLE"
 )
 
+func (e UpdateCACertificateNewAutoRegistrationStatusEnum) ToPointer() *UpdateCACertificateNewAutoRegistrationStatusEnum {
+	return &e
+}
+
 func (e *UpdateCACertificateNewAutoRegistrationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = UpdateCACertificateNewAutoRegistrationStatusEnum(s)
+		*e = UpdateCACertificateNewAutoRegistrationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCACertificateNewAutoRegistrationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCACertificateNewAutoRegistrationStatusEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	UpdateCACertificateNewStatusEnumInactive UpdateCACertificateNewStatusEnum = "INACTIVE"
 )
 
+func (e UpdateCACertificateNewStatusEnum) ToPointer() *UpdateCACertificateNewStatusEnum {
+	return &e
+}
+
 func (e *UpdateCACertificateNewStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = UpdateCACertificateNewStatusEnum(s)
+		*e = UpdateCACertificateNewStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCACertificateNewStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCACertificateNewStatusEnum: %v", v)
 	}
 }
 

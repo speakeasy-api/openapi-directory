@@ -16,17 +16,21 @@ const (
 	DeregisterManagedInstanceXAmzTargetEnumAmazonSsmDeregisterManagedInstance DeregisterManagedInstanceXAmzTargetEnum = "AmazonSSM.DeregisterManagedInstance"
 )
 
+func (e DeregisterManagedInstanceXAmzTargetEnum) ToPointer() *DeregisterManagedInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterManagedInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeregisterManagedInstance":
-		*e = DeregisterManagedInstanceXAmzTargetEnum(s)
+		*e = DeregisterManagedInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterManagedInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterManagedInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,47 +2,45 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateNotificationConfigurationRequest{
+    ctx := context.Background()
+    res, err := s.General.PostCreateNotificationConfiguration(ctx, shared.CreateNotificationConfigurationRequest{
         ConfigurationDetails: shared.NotificationConfigurationDetails{
-            Active: false,
-            APIVersion: 548814,
-            Description: "provident",
+            Active: sdk.Bool(false),
+            APIVersion: sdk.Int(548814),
+            Description: sdk.String("provident"),
             EventConfigs: []shared.NotificationEventConfiguration{
                 shared.NotificationEventConfiguration{
-                    EventType: "SCHEDULED_REFUNDS",
-                    IncludeMode: "INCLUDE",
+                    EventType: shared.NotificationEventConfigurationEventTypeEnumScheduledRefunds,
+                    IncludeMode: shared.NotificationEventConfigurationIncludeModeEnumInclude,
                 },
                 shared.NotificationEventConfiguration{
-                    EventType: "SCHEDULED_REFUNDS",
-                    IncludeMode: "INCLUDE",
+                    EventType: shared.NotificationEventConfigurationEventTypeEnumScheduledRefunds,
+                    IncludeMode: shared.NotificationEventConfigurationIncludeModeEnumInclude,
                 },
                 shared.NotificationEventConfiguration{
-                    EventType: "SCHEDULED_REFUNDS",
-                    IncludeMode: "EXCLUDE",
+                    EventType: shared.NotificationEventConfigurationEventTypeEnumScheduledRefunds,
+                    IncludeMode: shared.NotificationEventConfigurationIncludeModeEnumExclude,
                 },
             },
-            HmacSignatureKey: "error",
-            NotificationID: 645894,
-            NotifyPassword: "suscipit",
-            NotifyURL: "iure",
-            NotifyUsername: "magnam",
-            SslProtocol: "TLSv13",
+            HmacSignatureKey: sdk.String("error"),
+            NotificationID: sdk.Int64(645894),
+            NotifyPassword: sdk.String("suscipit"),
+            NotifyURL: sdk.String("iure"),
+            NotifyUsername: sdk.String("magnam"),
+            SslProtocol: shared.NotificationConfigurationDetailsSslProtocolEnumTlSv13.ToPointer(),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostCreateNotificationConfiguration(ctx, req, operations.PostCreateNotificationConfigurationSecurity{
+    }, operations.PostCreateNotificationConfigurationSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

@@ -15,20 +15,24 @@ const (
 	FailureReasonEnumOther                FailureReasonEnum = "OTHER"
 )
 
+func (e FailureReasonEnum) ToPointer() *FailureReasonEnum {
+	return &e
+}
+
 func (e *FailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUEST_TIMED_OUT":
 		fallthrough
 	case "UNSUPPORTED_ALGORITHM":
 		fallthrough
 	case "OTHER":
-		*e = FailureReasonEnum(s)
+		*e = FailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for FailureReasonEnum: %v", v)
 	}
 }

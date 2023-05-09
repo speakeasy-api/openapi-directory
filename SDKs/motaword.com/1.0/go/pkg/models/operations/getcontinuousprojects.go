@@ -16,17 +16,21 @@ const (
 	GetContinuousProjectsTypeEnumActive GetContinuousProjectsTypeEnum = "active"
 )
 
+func (e GetContinuousProjectsTypeEnum) ToPointer() *GetContinuousProjectsTypeEnum {
+	return &e
+}
+
 func (e *GetContinuousProjectsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
-		*e = GetContinuousProjectsTypeEnum(s)
+		*e = GetContinuousProjectsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContinuousProjectsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContinuousProjectsTypeEnum: %v", v)
 	}
 }
 

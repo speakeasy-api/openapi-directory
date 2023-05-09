@@ -16,17 +16,21 @@ const (
 	GetDimensionKeyDetailsXAmzTargetEnumPerformanceInsightsv20180227GetDimensionKeyDetails GetDimensionKeyDetailsXAmzTargetEnum = "PerformanceInsightsv20180227.GetDimensionKeyDetails"
 )
 
+func (e GetDimensionKeyDetailsXAmzTargetEnum) ToPointer() *GetDimensionKeyDetailsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDimensionKeyDetailsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PerformanceInsightsv20180227.GetDimensionKeyDetails":
-		*e = GetDimensionKeyDetailsXAmzTargetEnum(s)
+		*e = GetDimensionKeyDetailsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDimensionKeyDetailsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDimensionKeyDetailsXAmzTargetEnum: %v", v)
 	}
 }
 

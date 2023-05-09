@@ -19,14 +19,19 @@ const (
 	SnowballCapacityEnumT14          SnowballCapacityEnum = "T14"
 	SnowballCapacityEnumT32          SnowballCapacityEnum = "T32"
 	SnowballCapacityEnumNoPreference SnowballCapacityEnum = "NoPreference"
+	SnowballCapacityEnumT240         SnowballCapacityEnum = "T240"
 )
 
+func (e SnowballCapacityEnum) ToPointer() *SnowballCapacityEnum {
+	return &e
+}
+
 func (e *SnowballCapacityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "T50":
 		fallthrough
 	case "T80":
@@ -44,9 +49,11 @@ func (e *SnowballCapacityEnum) UnmarshalJSON(data []byte) error {
 	case "T32":
 		fallthrough
 	case "NoPreference":
-		*e = SnowballCapacityEnum(s)
+		fallthrough
+	case "T240":
+		*e = SnowballCapacityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnowballCapacityEnum: %s", s)
+		return fmt.Errorf("invalid value for SnowballCapacityEnum: %v", v)
 	}
 }

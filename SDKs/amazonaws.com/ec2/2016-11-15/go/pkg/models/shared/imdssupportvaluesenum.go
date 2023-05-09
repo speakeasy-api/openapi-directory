@@ -13,16 +13,20 @@ const (
 	ImdsSupportValuesEnumV20 ImdsSupportValuesEnum = "v2.0"
 )
 
+func (e ImdsSupportValuesEnum) ToPointer() *ImdsSupportValuesEnum {
+	return &e
+}
+
 func (e *ImdsSupportValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v2.0":
-		*e = ImdsSupportValuesEnum(s)
+		*e = ImdsSupportValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImdsSupportValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for ImdsSupportValuesEnum: %v", v)
 	}
 }

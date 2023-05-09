@@ -18,12 +18,16 @@ const (
 	TrackReleaseStatusEnumCompleted         TrackReleaseStatusEnum = "completed"
 )
 
+func (e TrackReleaseStatusEnum) ToPointer() *TrackReleaseStatusEnum {
+	return &e
+}
+
 func (e *TrackReleaseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "statusUnspecified":
 		fallthrough
 	case "draft":
@@ -33,10 +37,10 @@ func (e *TrackReleaseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "halted":
 		fallthrough
 	case "completed":
-		*e = TrackReleaseStatusEnum(s)
+		*e = TrackReleaseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackReleaseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackReleaseStatusEnum: %v", v)
 	}
 }
 

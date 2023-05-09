@@ -18,12 +18,16 @@ const (
 	LifecycleErrorCodeEnumUnknownError        LifecycleErrorCodeEnum = "UnknownError"
 )
 
+func (e LifecycleErrorCodeEnum) ToPointer() *LifecycleErrorCodeEnum {
+	return &e
+}
+
 func (e *LifecycleErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Success":
 		fallthrough
 	case "ScriptMissing":
@@ -35,9 +39,9 @@ func (e *LifecycleErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ScriptFailed":
 		fallthrough
 	case "UnknownError":
-		*e = LifecycleErrorCodeEnum(s)
+		*e = LifecycleErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifecycleErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LifecycleErrorCodeEnum: %v", v)
 	}
 }

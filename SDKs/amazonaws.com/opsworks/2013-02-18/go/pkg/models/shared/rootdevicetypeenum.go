@@ -14,18 +14,22 @@ const (
 	RootDeviceTypeEnumInstanceStore RootDeviceTypeEnum = "instance-store"
 )
 
+func (e RootDeviceTypeEnum) ToPointer() *RootDeviceTypeEnum {
+	return &e
+}
+
 func (e *RootDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ebs":
 		fallthrough
 	case "instance-store":
-		*e = RootDeviceTypeEnum(s)
+		*e = RootDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RootDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RootDeviceTypeEnum: %v", v)
 	}
 }

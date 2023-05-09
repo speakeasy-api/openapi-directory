@@ -6,5 +6,6 @@ package shared
 type OnDeviceServiceConfiguration struct {
 	EKSOnDeviceService *EKSOnDeviceServiceConfiguration `json:"EKSOnDeviceService,omitempty"`
 	NFSOnDeviceService *NFSOnDeviceServiceConfiguration `json:"NFSOnDeviceService,omitempty"`
+	S3OnDeviceService  *S3OnDeviceServiceConfiguration  `json:"S3OnDeviceService,omitempty"`
 	TGWOnDeviceService *TGWOnDeviceServiceConfiguration `json:"TGWOnDeviceService,omitempty"`
 }

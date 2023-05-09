@@ -16,19 +16,23 @@ const (
 	PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnumLeastConnections PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum = "least_connections"
 )
 
+func (e PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum) ToPointer() *PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "round_robin":
 		fallthrough
 	case "least_connections":
-		*e = PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum(s)
+		*e = PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeAlgorithmRequestBodyTypeEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnumError   PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum = "error"
 )
 
+func (e PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum) ToPointer() *PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum(s)
+		*e = PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeAlgorithmActionResponseActionStatusEnum: %v", v)
 	}
 }
 

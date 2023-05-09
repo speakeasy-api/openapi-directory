@@ -36,7 +36,10 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Delete file/folder
 func (s *files) DeleteFilesPath(ctx context.Context, request operations.DeleteFilesPathRequest) (*operations.DeleteFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *files) DeleteFilesPath(ctx context.Context, request operations.DeleteFi
 // Download file
 func (s *files) FileDownload(ctx context.Context, request operations.FileDownloadRequest) (*operations.FileDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -164,7 +170,10 @@ func (s *files) FileDownload(ctx context.Context, request operations.FileDownloa
 // Update file/folder metadata
 func (s *files) PatchFilesPath(ctx context.Context, request operations.PatchFilesPathRequest) (*operations.PatchFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -235,7 +244,10 @@ func (s *files) PatchFilesPath(ctx context.Context, request operations.PatchFile
 // Upload file
 func (s *files) PostFilesPath(ctx context.Context, request operations.PostFilesPathRequest) (*operations.PostFilesPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

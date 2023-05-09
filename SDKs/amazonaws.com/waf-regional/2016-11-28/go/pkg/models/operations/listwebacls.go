@@ -16,17 +16,21 @@ const (
 	ListWebACLsXAmzTargetEnumAwswafRegional20161128ListWebAcLs ListWebACLsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListWebACLs"
 )
 
+func (e ListWebACLsXAmzTargetEnum) ToPointer() *ListWebACLsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListWebACLsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.ListWebACLs":
-		*e = ListWebACLsXAmzTargetEnum(s)
+		*e = ListWebACLsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListWebACLsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListWebACLsXAmzTargetEnum: %v", v)
 	}
 }
 

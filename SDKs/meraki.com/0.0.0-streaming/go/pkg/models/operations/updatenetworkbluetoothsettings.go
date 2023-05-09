@@ -16,19 +16,23 @@ const (
 	UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnumUnique    UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum = "Unique"
 )
 
+func (e UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum) ToPointer() *UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Non-unique":
 		fallthrough
 	case "Unique":
-		*e = UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum(s)
+		*e = UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkBluetoothSettingsRequestBodyMajorMinorAssignmentModeEnum: %v", v)
 	}
 }
 

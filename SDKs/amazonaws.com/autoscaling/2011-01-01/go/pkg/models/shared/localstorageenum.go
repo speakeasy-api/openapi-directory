@@ -15,20 +15,24 @@ const (
 	LocalStorageEnumRequired LocalStorageEnum = "required"
 )
 
+func (e LocalStorageEnum) ToPointer() *LocalStorageEnum {
+	return &e
+}
+
 func (e *LocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "excluded":
 		fallthrough
 	case "required":
-		*e = LocalStorageEnum(s)
+		*e = LocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalStorageEnum: %v", v)
 	}
 }

@@ -16,19 +16,23 @@ const (
 	UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnumDisabled UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum = "DISABLED"
 )
 
+func (e UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum) ToPointer() *UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum {
+	return &e
+}
+
 func (e *UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum(s)
+		*e = UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum: %v", v)
 	}
 }
 

@@ -8,171 +8,31 @@ import (
 	"time"
 )
 
-// ShareAttributesExpiredEnum - True if the share has expired.
-type ShareAttributesExpiredEnum string
-
-const (
-	ShareAttributesExpiredEnumTrue  ShareAttributesExpiredEnum = "true"
-	ShareAttributesExpiredEnumFalse ShareAttributesExpiredEnum = "false"
-)
-
-func (e *ShareAttributesExpiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesExpiredEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesExpiredEnum: %s", s)
-	}
-}
-
-// ShareAttributesFileDropCreateFoldersEnum - Flag to show if separate folders should be created for each file upload to receive folder.
-type ShareAttributesFileDropCreateFoldersEnum string
-
-const (
-	ShareAttributesFileDropCreateFoldersEnumTrue  ShareAttributesFileDropCreateFoldersEnum = "true"
-	ShareAttributesFileDropCreateFoldersEnumFalse ShareAttributesFileDropCreateFoldersEnum = "false"
-)
-
-func (e *ShareAttributesFileDropCreateFoldersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesFileDropCreateFoldersEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesFileDropCreateFoldersEnum: %s", s)
-	}
-}
-
-// ShareAttributesHasNotificationEnum - True if share has notification.
-type ShareAttributesHasNotificationEnum string
-
-const (
-	ShareAttributesHasNotificationEnumTrue  ShareAttributesHasNotificationEnum = "true"
-	ShareAttributesHasNotificationEnumFalse ShareAttributesHasNotificationEnum = "false"
-)
-
-func (e *ShareAttributesHasNotificationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesHasNotificationEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesHasNotificationEnum: %s", s)
-	}
-}
-
-// ShareAttributesHasPasswordEnum - True if the share has password.
-type ShareAttributesHasPasswordEnum string
-
-const (
-	ShareAttributesHasPasswordEnumTrue  ShareAttributesHasPasswordEnum = "true"
-	ShareAttributesHasPasswordEnumFalse ShareAttributesHasPasswordEnum = "false"
-)
-
-func (e *ShareAttributesHasPasswordEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesHasPasswordEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesHasPasswordEnum: %s", s)
-	}
-}
-
-// ShareAttributesInheritedEnum - True if share inherited from parent folder.
-type ShareAttributesInheritedEnum string
-
-const (
-	ShareAttributesInheritedEnumTrue  ShareAttributesInheritedEnum = "true"
-	ShareAttributesInheritedEnumFalse ShareAttributesInheritedEnum = "false"
-)
-
-func (e *ShareAttributesInheritedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesInheritedEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesInheritedEnum: %s", s)
-	}
-}
-
-// ShareAttributesPublicEnum - True if the share has a public url.
-type ShareAttributesPublicEnum string
-
-const (
-	ShareAttributesPublicEnumTrue  ShareAttributesPublicEnum = "true"
-	ShareAttributesPublicEnumFalse ShareAttributesPublicEnum = "false"
-)
-
-func (e *ShareAttributesPublicEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "true":
-		fallthrough
-	case "false":
-		*e = ShareAttributesPublicEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for ShareAttributesPublicEnum: %s", s)
-	}
-}
-
 // ShareAttributesStatusEnum - Share activity status. Can be active (1) or deactivated (0).
-type ShareAttributesStatusEnum string
+type ShareAttributesStatusEnum int
 
 const (
-	ShareAttributesStatusEnumZero ShareAttributesStatusEnum = "0"
-	ShareAttributesStatusEnumOne  ShareAttributesStatusEnum = "1"
+	ShareAttributesStatusEnumZero ShareAttributesStatusEnum = 0
+	ShareAttributesStatusEnumOne  ShareAttributesStatusEnum = 1
 )
+
+func (e ShareAttributesStatusEnum) ToPointer() *ShareAttributesStatusEnum {
+	return &e
+}
 
 func (e *ShareAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = ShareAttributesStatusEnum(s)
+	case 1:
+		*e = ShareAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareAttributesStatusEnum: %v", v)
 	}
 }
 
@@ -185,21 +45,25 @@ const (
 	ShareAttributesTrackingStatusEnumPending    ShareAttributesTrackingStatusEnum = "pending"
 )
 
+func (e ShareAttributesTrackingStatusEnum) ToPointer() *ShareAttributesTrackingStatusEnum {
+	return &e
+}
+
 func (e *ShareAttributesTrackingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "complete":
 		fallthrough
 	case "incomplete":
 		fallthrough
 	case "pending":
-		*e = ShareAttributesTrackingStatusEnum(s)
+		*e = ShareAttributesTrackingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareAttributesTrackingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareAttributesTrackingStatusEnum: %v", v)
 	}
 }
 
@@ -212,21 +76,25 @@ const (
 	ShareAttributesTypeEnumReceive      ShareAttributesTypeEnum = "receive"
 )
 
+func (e ShareAttributesTypeEnum) ToPointer() *ShareAttributesTypeEnum {
+	return &e
+}
+
 func (e *ShareAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared_folder":
 		fallthrough
 	case "send":
 		fallthrough
 	case "receive":
-		*e = ShareAttributesTypeEnum(s)
+		*e = ShareAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareAttributesTypeEnum: %v", v)
 	}
 }
 
@@ -243,19 +111,19 @@ type ShareAttributes struct {
 	// Expiration date of the share.
 	Expiration *string `json:"expiration,omitempty"`
 	// True if the share has expired.
-	Expired *ShareAttributesExpiredEnum `json:"expired,omitempty"`
+	Expired *bool `json:"expired,omitempty"`
 	// Flag to show if separate folders should be created for each file upload to receive folder.
-	FileDropCreateFolders *ShareAttributesFileDropCreateFoldersEnum `json:"fileDropCreateFolders,omitempty"`
+	FileDropCreateFolders *bool `json:"fileDropCreateFolders,omitempty"`
 	// ID of the form.
 	FormID *int64 `json:"formId,omitempty"`
 	// True if share has notification.
-	HasNotification *ShareAttributesHasNotificationEnum `json:"hasNotification,omitempty"`
+	HasNotification *bool `json:"hasNotification,omitempty"`
 	// True if the share has password.
-	HasPassword *ShareAttributesHasPasswordEnum `json:"hasPassword,omitempty"`
+	HasPassword *bool `json:"hasPassword,omitempty"`
 	// Share hash.
 	Hash *string `json:"hash,omitempty"`
 	// True if share inherited from parent folder.
-	Inherited *ShareAttributesInheritedEnum `json:"inherited,omitempty"`
+	Inherited *bool `json:"inherited,omitempty"`
 	// Array of invitation messages.
 	Messages []ShareMessage `json:"messages,omitempty"`
 	// Timestamp of share modification. Can be `null` if it wasn't modified.
@@ -267,7 +135,7 @@ type ShareAttributes struct {
 	// Path to the shared resource in your account.
 	Paths []string `json:"paths,omitempty"`
 	// True if the share has a public url.
-	Public *ShareAttributesPublicEnum `json:"public,omitempty"`
+	Public *bool `json:"public,omitempty"`
 	// Array of recipients.
 	Recipients []ShareRecipient `json:"recipients,omitempty"`
 	// True if share requires email to access.

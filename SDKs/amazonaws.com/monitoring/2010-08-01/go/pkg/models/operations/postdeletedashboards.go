@@ -15,17 +15,21 @@ const (
 	POSTDeleteDashboardsActionEnumDeleteDashboards POSTDeleteDashboardsActionEnum = "DeleteDashboards"
 )
 
+func (e POSTDeleteDashboardsActionEnum) ToPointer() *POSTDeleteDashboardsActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDashboardsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDashboards":
-		*e = POSTDeleteDashboardsActionEnum(s)
+		*e = POSTDeleteDashboardsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDashboardsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDashboardsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteDashboardsVersionEnumTwoThousandAndTen0801 POSTDeleteDashboardsVersionEnum = "2010-08-01"
 )
 
+func (e POSTDeleteDashboardsVersionEnum) ToPointer() *POSTDeleteDashboardsVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteDashboardsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTDeleteDashboardsVersionEnum(s)
+		*e = POSTDeleteDashboardsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteDashboardsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteDashboardsVersionEnum: %v", v)
 	}
 }
 

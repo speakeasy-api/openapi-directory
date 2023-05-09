@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -31,7 +32,7 @@ pkg/models/operations/retailprojectslocationscatalogscontrolscreate.go
 pkg/models/operations/retailprojectslocationscatalogscontrolslist.go
 pkg/models/operations/retailprojectslocationscatalogsgetdefaultbranch.go
 pkg/models/operations/retailprojectslocationscatalogslist.go
-pkg/models/operations/retailprojectslocationscatalogsmerchantcenteraccountlinkscreatemerchantcenteraccountlink.go
+pkg/models/operations/retailprojectslocationscatalogsmerchantcenteraccountlinkscreate.go
 pkg/models/operations/retailprojectslocationscatalogsmerchantcenteraccountlinkslist.go
 pkg/models/operations/retailprojectslocationscatalogsmodelscreate.go
 pkg/models/operations/retailprojectslocationscatalogsmodelslist.go
@@ -56,6 +57,8 @@ pkg/models/operations/retailprojectsoperationsget.go
 pkg/models/operations/retailprojectsoperationslist.go
 pkg/models/shared/googlecloudretailv2alphaattributesconfig.go
 pkg/models/shared/googlecloudretailv2alphacatalogattribute.go
+pkg/models/shared/googlecloudretailv2alphacatalogattributeignoredfacetvalues.go
+pkg/models/shared/googlecloudretailv2alphainterval.go
 pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudretailv2alphaaddcatalogattributerequest.go
 pkg/models/shared/xgafvenum.go
@@ -70,7 +73,6 @@ pkg/models/shared/googlecloudretailv2alphaaddlocalinventoriesrequest.go
 pkg/models/shared/googlecloudretailv2alphalocalinventory.go
 pkg/models/shared/googlecloudretailv2alphapriceinfo.go
 pkg/models/shared/googlecloudretailv2alphapriceinfopricerange.go
-pkg/models/shared/googlecloudretailv2alphainterval.go
 pkg/models/shared/googlecloudretailv2alphacustomattribute.go
 pkg/models/shared/googlecloudretailv2alphaproduct.go
 pkg/models/shared/googlecloudretailv2alpharating.go
@@ -94,6 +96,8 @@ pkg/models/shared/googlecloudretailv2alphasetinventoryrequest.go
 pkg/models/shared/googlecloudretailv2alphacompletequeryresponse.go
 pkg/models/shared/googlecloudretailv2alphacompletequeryresponserecentsearchresult.go
 pkg/models/shared/googlecloudretailv2alphacompletequeryresponsecompletionresult.go
+pkg/models/shared/googlecloudretailv2alphasearchresponsefacet.go
+pkg/models/shared/googlecloudretailv2alphasearchresponsefacetfacetvalue.go
 pkg/models/shared/googlecloudretailv2alphacompletequeryresponseattributeresult.go
 pkg/models/shared/googlecloudretailv2alphaimportcompletiondatarequest.go
 pkg/models/shared/googlecloudretailv2alphacompletiondatainputconfig.go
@@ -127,6 +131,8 @@ pkg/models/shared/googlecloudretailv2alphamodel.go
 pkg/models/shared/googlecloudretailv2alphamodelpageoptimizationconfig.go
 pkg/models/shared/googlecloudretailv2alphamodelpageoptimizationconfigpanel.go
 pkg/models/shared/googlecloudretailv2alphamodelpageoptimizationconfigcandidate.go
+pkg/models/shared/googlecloudretailv2alphamodelmodelfeaturesconfig.go
+pkg/models/shared/googlecloudretailv2alphamodelfrequentlyboughttogetherfeaturesconfig.go
 pkg/models/shared/googlecloudretailv2alphalistmodelsresponse.go
 pkg/models/shared/googlecloudretailv2alphamodelservingconfiglist.go
 pkg/models/shared/googlecloudretailv2alphaservingconfig.go
@@ -147,8 +153,6 @@ pkg/models/shared/googlecloudretailv2alphasearchresponse.go
 pkg/models/shared/googlecloudretailv2alphasearchresponsesearchresult.go
 pkg/models/shared/googlecloudretailv2alphasearchresponsequeryexpansioninfo.go
 pkg/models/shared/googlecloudretailv2alphasearchrequestboostspecconditionboostspec.go
-pkg/models/shared/googlecloudretailv2alphasearchresponsefacet.go
-pkg/models/shared/googlecloudretailv2alphasearchresponsefacetfacetvalue.go
 pkg/models/shared/googlecloudretailv2alphaexperimentinfo.go
 pkg/models/shared/googlecloudretailv2alphaexperimentinfoservingconfigexperiment.go
 pkg/models/shared/googlecloudretailv2alphasearchrequest.go
@@ -163,4 +167,6 @@ pkg/models/shared/googlecloudretailv2alphausereventinlinesource.go
 pkg/models/shared/googlecloudretailv2alphapurgeusereventsrequest.go
 pkg/models/shared/googlecloudretailv2alpharejoinusereventsrequest.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -18,12 +18,16 @@ const (
 	ScoreConfidenceEnumNotAvailable ScoreConfidenceEnum = "NOT_AVAILABLE"
 )
 
+func (e ScoreConfidenceEnum) ToPointer() *ScoreConfidenceEnum {
+	return &e
+}
+
 func (e *ScoreConfidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERY_HIGH":
 		fallthrough
 	case "HIGH":
@@ -33,9 +37,9 @@ func (e *ScoreConfidenceEnum) UnmarshalJSON(data []byte) error {
 	case "LOW":
 		fallthrough
 	case "NOT_AVAILABLE":
-		*e = ScoreConfidenceEnum(s)
+		*e = ScoreConfidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreConfidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreConfidenceEnum: %v", v)
 	}
 }

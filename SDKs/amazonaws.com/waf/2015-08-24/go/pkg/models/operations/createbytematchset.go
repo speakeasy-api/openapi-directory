@@ -16,17 +16,21 @@ const (
 	CreateByteMatchSetXAmzTargetEnumAwswaf20150824CreateByteMatchSet CreateByteMatchSetXAmzTargetEnum = "AWSWAF_20150824.CreateByteMatchSet"
 )
 
+func (e CreateByteMatchSetXAmzTargetEnum) ToPointer() *CreateByteMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateByteMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.CreateByteMatchSet":
-		*e = CreateByteMatchSetXAmzTargetEnum(s)
+		*e = CreateByteMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateByteMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateByteMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

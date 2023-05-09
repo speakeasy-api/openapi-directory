@@ -17,12 +17,16 @@ const (
 	SeparatorEnumTab       SeparatorEnum = "tab"
 )
 
+func (e SeparatorEnum) ToPointer() *SeparatorEnum {
+	return &e
+}
+
 func (e *SeparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "comma":
 		fallthrough
 	case "ctrla":
@@ -32,9 +36,9 @@ func (e *SeparatorEnum) UnmarshalJSON(data []byte) error {
 	case "semicolon":
 		fallthrough
 	case "tab":
-		*e = SeparatorEnum(s)
+		*e = SeparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SeparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SeparatorEnum: %v", v)
 	}
 }

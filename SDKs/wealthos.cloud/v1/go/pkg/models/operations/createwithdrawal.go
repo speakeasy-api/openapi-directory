@@ -19,17 +19,21 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnumWithdrawal CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum = "Withdrawal"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Withdrawal":
-		*e = CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -79,19 +83,23 @@ const (
 	CreateWithdrawal409ApplicationJSONStatusEnumComplete   CreateWithdrawal409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e CreateWithdrawal409ApplicationJSONStatusEnum) ToPointer() *CreateWithdrawal409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateWithdrawal409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = CreateWithdrawal409ApplicationJSONStatusEnum(s)
+		*e = CreateWithdrawal409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawal409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawal409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -145,19 +153,23 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnumOut CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum = "out"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseDirectionEnum: %v", v)
 	}
 }
 
@@ -171,12 +183,16 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnumSystem     CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum = "system"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "admin_ui":
@@ -184,10 +200,10 @@ func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum) Unmars
 	case "file_upload":
 		fallthrough
 	case "system":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseOriginEnum: %v", v)
 	}
 }
 
@@ -197,17 +213,21 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnumWithdrawal CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum = "Withdrawal"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Withdrawal":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponsePrimaryTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -218,17 +238,21 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnumWithdrawal CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum = "Withdrawal"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Withdrawal":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -245,12 +269,16 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnumScheduled  CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum = "scheduled"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "confirmed":
@@ -264,10 +292,10 @@ func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum) Unmar
 	case "cancelled":
 		fallthrough
 	case "scheduled":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseSubTypeEnum: %v", v)
 	}
 }
 
@@ -279,19 +307,23 @@ const (
 	CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnumArchived CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum = "archived"
 )
 
+func (e CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum) ToPointer() *CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum {
+	return &e
+}
+
 func (e *CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "archived":
-		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum(s)
+		*e = CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWithdrawalRootTypeForWithdrawalCreationResponseTypeEnum: %v", v)
 	}
 }
 

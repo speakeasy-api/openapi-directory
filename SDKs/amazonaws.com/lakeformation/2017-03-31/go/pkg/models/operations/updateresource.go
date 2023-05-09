@@ -11,6 +11,8 @@ type UpdateResourceRequestBody struct {
 	ResourceArn string `json:"ResourceArn"`
 	// The new role to use for the given resource registered in Lake Formation.
 	RoleArn string `json:"RoleArn"`
+	// Whether or not the resource is a federated resource.
+	WithFederation *bool `json:"WithFederation,omitempty"`
 }
 
 type UpdateResourceRequest struct {

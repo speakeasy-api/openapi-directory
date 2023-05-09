@@ -56,7 +56,10 @@ func newAuditLogAPI(defaultClient, securityClient HTTPClient, serverURL, languag
 // When no `offset` is provided, the response will begin with the oldest events that match the provided filters. It is important to note that [AuditLogEvent](/docs/audit-log-event) objects will be permanently deleted from our systems after 90 days. If you wish to keep a permanent record of these events, we recommend using a SIEM tool to ingest and store these logs.
 func (s *auditLogAPI) GetAuditLogEvents(ctx context.Context, request operations.GetAuditLogEventsRequest) (*operations.GetAuditLogEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/audit_log_events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/audit_log_events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

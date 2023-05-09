@@ -701,21 +701,25 @@ const (
 	GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnumFailed    GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum = "failed"
 )
 
+func (e GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum) ToPointer() *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum {
+	return &e
+}
+
 func (e *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum(s)
+		*e = GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum: %v", v)
 	}
 }
 

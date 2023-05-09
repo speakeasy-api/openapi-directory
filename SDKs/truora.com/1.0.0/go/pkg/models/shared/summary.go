@@ -16,19 +16,23 @@ const (
 	SummaryGenderEnumFemale SummaryGenderEnum = "female"
 )
 
+func (e SummaryGenderEnum) ToPointer() *SummaryGenderEnum {
+	return &e
+}
+
 func (e *SummaryGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = SummaryGenderEnum(s)
+		*e = SummaryGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummaryGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for SummaryGenderEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	SummaryIdentityStatusEnumDead     SummaryIdentityStatusEnum = "dead"
 )
 
+func (e SummaryIdentityStatusEnum) ToPointer() *SummaryIdentityStatusEnum {
+	return &e
+}
+
 func (e *SummaryIdentityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "found":
 		fallthrough
 	case "not_found":
 		fallthrough
 	case "dead":
-		*e = SummaryIdentityStatusEnum(s)
+		*e = SummaryIdentityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SummaryIdentityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SummaryIdentityStatusEnum: %v", v)
 	}
 }
 

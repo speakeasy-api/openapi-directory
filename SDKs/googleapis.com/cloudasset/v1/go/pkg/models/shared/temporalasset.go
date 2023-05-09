@@ -18,12 +18,16 @@ const (
 	TemporalAssetPriorAssetStateEnumDeleted                    TemporalAssetPriorAssetStateEnum = "DELETED"
 )
 
+func (e TemporalAssetPriorAssetStateEnum) ToPointer() *TemporalAssetPriorAssetStateEnum {
+	return &e
+}
+
 func (e *TemporalAssetPriorAssetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIOR_ASSET_STATE_UNSPECIFIED":
 		fallthrough
 	case "PRESENT":
@@ -33,10 +37,10 @@ func (e *TemporalAssetPriorAssetStateEnum) UnmarshalJSON(data []byte) error {
 	case "DOES_NOT_EXIST":
 		fallthrough
 	case "DELETED":
-		*e = TemporalAssetPriorAssetStateEnum(s)
+		*e = TemporalAssetPriorAssetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemporalAssetPriorAssetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TemporalAssetPriorAssetStateEnum: %v", v)
 	}
 }
 

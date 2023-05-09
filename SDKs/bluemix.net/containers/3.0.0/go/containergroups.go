@@ -36,7 +36,10 @@ func newContainerGroups(defaultClient, securityClient HTTPClient, serverURL, lan
 // Stops and deletes the container instances that run in a container group (corresponding IBM Containers command: `cf ic group rm <group_name>`). When you delete a container group, all floating private IP addresses are released.
 func (s *containerGroups) DeleteContainersGroupsNameOrID(ctx context.Context, request operations.DeleteContainersGroupsNameOrIDRequest) (*operations.DeleteContainersGroupsNameOrIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -136,7 +139,10 @@ func (s *containerGroups) GetContainersGroups(ctx context.Context, request opera
 // This endpoint retrieves detailed information about a container group with a given name (corresponding IBM Containers command: `cf ic group inspect GROUP`).
 func (s *containerGroups) GetContainersGroupsNameOrID(ctx context.Context, request operations.GetContainersGroupsNameOrIDRequest) (*operations.GetContainersGroupsNameOrIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +198,10 @@ func (s *containerGroups) GetContainersGroupsNameOrID(ctx context.Context, reque
 //	The desired number is the number of container instances that you require. It must be within the current limits of Max and Min. To increase the number of desired container instances above the Max value, you must first execute an update on the Max value. Once this update is completed, you can increase the desired number of container instances.
 func (s *containerGroups) PatchContainersGroupsNameOrID(ctx context.Context, request operations.PatchContainersGroupsNameOrIDRequest) (*operations.PatchContainersGroupsNameOrIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContainersGroupsNameOrIDPatchUpdatedInfo", "json")
 	if err != nil {
@@ -317,7 +326,10 @@ func (s *containerGroups) PostContainersGroups(ctx context.Context, request oper
 // If you want your container group to be accessible from the Internet, you need to expose a public port and map a public route to it (corresponding IBM Containers command: `cf ic route map -n <host> -d <domain> <group>`). Every route consists of the host name and domain.
 func (s *containerGroups) PostContainersGroupsNameOrIDMaproute(ctx context.Context, request operations.PostContainersGroupsNameOrIDMaprouteRequest) (*operations.PostContainersGroupsNameOrIDMaprouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}/maproute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}/maproute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Route", "json")
 	if err != nil {
@@ -383,7 +395,10 @@ func (s *containerGroups) PostContainersGroupsNameOrIDMaproute(ctx context.Conte
 //	When you unmap a route from a container group, the route is not deleted and can be mapped to other container groups.
 func (s *containerGroups) PostContainersGroupsNameOrIDUnmaproute(ctx context.Context, request operations.PostContainersGroupsNameOrIDUnmaprouteRequest) (*operations.PostContainersGroupsNameOrIDUnmaprouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}/unmaproute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/containers/groups/{name_or_id}/unmaproute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Route", "json")
 	if err != nil {

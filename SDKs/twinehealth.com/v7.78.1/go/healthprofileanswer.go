@@ -37,7 +37,10 @@ func newHealthProfileAnswer(defaultClient, securityClient HTTPClient, serverURL,
 // Get a health profile answer by id
 func (s *healthProfileAnswer) FetchHealthProfileAnswer(ctx context.Context, request operations.FetchHealthProfileAnswerRequest) (*operations.FetchHealthProfileAnswerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/health_profile_answer/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/health_profile_answer/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

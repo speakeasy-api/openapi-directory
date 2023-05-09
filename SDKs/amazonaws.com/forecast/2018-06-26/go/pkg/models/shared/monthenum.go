@@ -24,12 +24,16 @@ const (
 	MonthEnumDecember  MonthEnum = "DECEMBER"
 )
 
+func (e MonthEnum) ToPointer() *MonthEnum {
+	return &e
+}
+
 func (e *MonthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JANUARY":
 		fallthrough
 	case "FEBRUARY":
@@ -53,9 +57,9 @@ func (e *MonthEnum) UnmarshalJSON(data []byte) error {
 	case "NOVEMBER":
 		fallthrough
 	case "DECEMBER":
-		*e = MonthEnum(s)
+		*e = MonthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonthEnum: %s", s)
+		return fmt.Errorf("invalid value for MonthEnum: %v", v)
 	}
 }

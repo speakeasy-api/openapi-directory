@@ -18,24 +18,28 @@ const (
 	GetTransactionsByPayeeTypeEnumUnapproved    GetTransactionsByPayeeTypeEnum = "unapproved"
 )
 
+func (e GetTransactionsByPayeeTypeEnum) ToPointer() *GetTransactionsByPayeeTypeEnum {
+	return &e
+}
+
 func (e *GetTransactionsByPayeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uncategorized":
 		fallthrough
 	case "unapproved":
-		*e = GetTransactionsByPayeeTypeEnum(s)
+		*e = GetTransactionsByPayeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransactionsByPayeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransactionsByPayeeTypeEnum: %v", v)
 	}
 }
 
 type GetTransactionsByPayeeRequest struct {
-	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+	// The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 	// The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
 	LastKnowledgeOfServer *int64 `queryParam:"style=form,explode=true,name=last_knowledge_of_server"`

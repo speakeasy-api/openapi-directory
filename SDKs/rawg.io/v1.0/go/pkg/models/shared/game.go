@@ -20,12 +20,16 @@ const (
 	GameEsrbRatingNameEnumRatingPending  GameEsrbRatingNameEnum = "Rating Pending"
 )
 
+func (e GameEsrbRatingNameEnum) ToPointer() *GameEsrbRatingNameEnum {
+	return &e
+}
+
 func (e *GameEsrbRatingNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Everyone":
 		fallthrough
 	case "Everyone 10+":
@@ -37,10 +41,10 @@ func (e *GameEsrbRatingNameEnum) UnmarshalJSON(data []byte) error {
 	case "Adults Only":
 		fallthrough
 	case "Rating Pending":
-		*e = GameEsrbRatingNameEnum(s)
+		*e = GameEsrbRatingNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameEsrbRatingNameEnum: %s", s)
+		return fmt.Errorf("invalid value for GameEsrbRatingNameEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GameEsrbRatingSlugEnumRatingPending  GameEsrbRatingSlugEnum = "rating-pending"
 )
 
+func (e GameEsrbRatingSlugEnum) ToPointer() *GameEsrbRatingSlugEnum {
+	return &e
+}
+
 func (e *GameEsrbRatingSlugEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "everyone":
 		fallthrough
 	case "everyone-10-plus":
@@ -72,10 +80,10 @@ func (e *GameEsrbRatingSlugEnum) UnmarshalJSON(data []byte) error {
 	case "adults-only":
 		fallthrough
 	case "rating-pending":
-		*e = GameEsrbRatingSlugEnum(s)
+		*e = GameEsrbRatingSlugEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameEsrbRatingSlugEnum: %s", s)
+		return fmt.Errorf("invalid value for GameEsrbRatingSlugEnum: %v", v)
 	}
 }
 

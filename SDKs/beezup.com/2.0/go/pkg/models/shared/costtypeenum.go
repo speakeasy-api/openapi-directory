@@ -22,12 +22,16 @@ const (
 	CostTypeEnumFixedGlobal   CostTypeEnum = "Fixed_Global"
 )
 
+func (e CostTypeEnum) ToPointer() *CostTypeEnum {
+	return &e
+}
+
 func (e *CostTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPC_Global":
 		fallthrough
 	case "CPA_Global":
@@ -37,9 +41,9 @@ func (e *CostTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CPA_ByCategory":
 		fallthrough
 	case "Fixed_Global":
-		*e = CostTypeEnum(s)
+		*e = CostTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CostTypeEnum: %v", v)
 	}
 }

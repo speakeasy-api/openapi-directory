@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bclaws.ca/bclaws/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetContentAspectIDRequest{
-        AspectID: "oic",
-    }
-
     ctx := context.Background()
-    res, err := s.Content.GetContentAspectID(ctx, req)
+    res, err := s.Content.GetContentAspectID(ctx, operations.GetContentAspectIDRequest{
+        AspectID: operations.GetContentAspectIDAspectIDEnumOic,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,21 +42,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Content
+### [Content](docs/content/README.md)
 
-* `GetContentAspectID` - Describes the documents and directories available within a specific 'aspect' (content group) of the BCLaws library
-* `GetContentAspectIDCivixDocumentID` - Lists the metadata available for the specified index or directory from the BCLaws legislative respository
+* [GetContentAspectID](docs/content/README.md#getcontentaspectid) - Describes the documents and directories available within a specific 'aspect' (content group) of the BCLaws library
+* [GetContentAspectIDCivixDocumentID](docs/content/README.md#getcontentaspectidcivixdocumentid) - Lists the metadata available for the specified index or directory from the BCLaws legislative respository
 
-### Document
+### [Document](docs/document/README.md)
 
-* `GetDocumentIDAspectIDCivixIndexIDCivixDocumentID` - Retrieves a specific document from the BCLaws legislative repository (HTML format)
-* `GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchString` - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (HTML format)
-* `GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXML` - Retrieves a specific document from the BCLaws legislative repository (XML format)
-* `GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchString` - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (XML format)
+* [GetDocumentIDAspectIDCivixIndexIDCivixDocumentID](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentid) - Retrieves a specific document from the BCLaws legislative repository (HTML format)
+* [GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchString](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidsearchsearchstring) - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (HTML format)
+* [GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXML](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidxml) - Retrieves a specific document from the BCLaws legislative repository (XML format)
+* [GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchString](docs/document/README.md#getdocumentidaspectidcivixindexidcivixdocumentidxmlsearchsearchstring) - Retrieves a specific document from the BCLaws legislative repository with search text highlighted (XML format)
 
-### Search
+### [Search](docs/search/README.md)
 
-* `GetSearchAspectIDFullsearch` - A listing of metadata available for the specified aspect and search term from the BCLaws legislative repository
+* [GetSearchAspectIDFullsearch](docs/search/README.md#getsearchaspectidfullsearch) - A listing of metadata available for the specified aspect and search term from the BCLaws legislative repository
 <!-- End SDK Available Operations -->
 
 ### Maturity

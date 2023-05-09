@@ -15,20 +15,24 @@ const (
 	FirewallStatusValueEnumReady        FirewallStatusValueEnum = "READY"
 )
 
+func (e FirewallStatusValueEnum) ToPointer() *FirewallStatusValueEnum {
+	return &e
+}
+
 func (e *FirewallStatusValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONING":
 		fallthrough
 	case "DELETING":
 		fallthrough
 	case "READY":
-		*e = FirewallStatusValueEnum(s)
+		*e = FirewallStatusValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallStatusValueEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallStatusValueEnum: %v", v)
 	}
 }

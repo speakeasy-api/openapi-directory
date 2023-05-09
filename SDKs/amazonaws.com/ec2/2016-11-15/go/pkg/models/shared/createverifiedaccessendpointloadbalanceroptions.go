@@ -2,7 +2,7 @@
 
 package shared
 
-// CreateVerifiedAccessEndpointLoadBalancerOptions - Describes a load balancer when creating an Amazon Web Services Verified Access endpoint using the <code>load-balancer</code> type.
+// CreateVerifiedAccessEndpointLoadBalancerOptions - Describes the load balancer options when creating an Amazon Web Services Verified Access endpoint using the <code>load-balancer</code> type.
 type CreateVerifiedAccessEndpointLoadBalancerOptions struct {
 	LoadBalancerArn *string
 	Port            *int64

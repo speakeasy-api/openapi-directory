@@ -15,17 +15,21 @@ const (
 	GETDeleteConfigurationSetEventDestinationActionEnumDeleteConfigurationSetEventDestination GETDeleteConfigurationSetEventDestinationActionEnum = "DeleteConfigurationSetEventDestination"
 )
 
+func (e GETDeleteConfigurationSetEventDestinationActionEnum) ToPointer() *GETDeleteConfigurationSetEventDestinationActionEnum {
+	return &e
+}
+
 func (e *GETDeleteConfigurationSetEventDestinationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteConfigurationSetEventDestination":
-		*e = GETDeleteConfigurationSetEventDestinationActionEnum(s)
+		*e = GETDeleteConfigurationSetEventDestinationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteConfigurationSetEventDestinationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteConfigurationSetEventDestinationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteConfigurationSetEventDestinationVersionEnumTwoThousandAndTen1201 GETDeleteConfigurationSetEventDestinationVersionEnum = "2010-12-01"
 )
 
+func (e GETDeleteConfigurationSetEventDestinationVersionEnum) ToPointer() *GETDeleteConfigurationSetEventDestinationVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteConfigurationSetEventDestinationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDeleteConfigurationSetEventDestinationVersionEnum(s)
+		*e = GETDeleteConfigurationSetEventDestinationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteConfigurationSetEventDestinationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteConfigurationSetEventDestinationVersionEnum: %v", v)
 	}
 }
 

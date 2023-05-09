@@ -36,7 +36,10 @@ func newRaster(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // using either a center point plus width and height or a bounding box.
 func (s *raster) GetMapVersionNumberStaticimage(ctx context.Context, request operations.GetMapVersionNumberStaticimageRequest) (*operations.GetMapVersionNumberStaticimageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/staticimage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/staticimage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *raster) GetMapVersionNumberStaticimage(ctx context.Context, request ope
 // The Maps API Raster Service delivers raster tiles, which are representations of square sections of map data.
 func (s *raster) GetMapVersionNumberTileLayerStyleZoomXYFormat(ctx context.Context, request operations.GetMapVersionNumberTileLayerStyleZoomXYFormatRequest) (*operations.GetMapVersionNumberTileLayerStyleZoomXYFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.{format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/map/{versionNumber}/tile/{layer}/{style}/{zoom}/{X}/{Y}.{format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

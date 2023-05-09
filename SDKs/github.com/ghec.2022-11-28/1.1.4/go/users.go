@@ -115,7 +115,10 @@ func (s *users) UsersAddEmailForAuthenticatedUser(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#block-a-user - API method documentation
 func (s *users) UsersBlock(ctx context.Context, request operations.UsersBlockRequest) (*operations.UsersBlockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -177,7 +180,10 @@ func (s *users) UsersBlock(ctx context.Context, request operations.UsersBlockReq
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#check-if-a-user-is-blocked-by-the-authenticated-user - API method documentation
 func (s *users) UsersCheckBlocked(ctx context.Context, request operations.UsersCheckBlockedRequest) (*operations.UsersCheckBlockedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +235,10 @@ func (s *users) UsersCheckBlocked(ctx context.Context, request operations.UsersC
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#check-if-a-user-follows-another-user - API method documentation
 func (s *users) UsersCheckFollowingForUser(ctx context.Context, request operations.UsersCheckFollowingForUserRequest) (*operations.UsersCheckFollowingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following/{target_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/following/{target_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +276,10 @@ func (s *users) UsersCheckFollowingForUser(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#check-if-a-person-is-followed-by-the-authenticated-user - API method documentation
 func (s *users) UsersCheckPersonIsFollowedByAuthenticated(ctx context.Context, request operations.UsersCheckPersonIsFollowedByAuthenticatedRequest) (*operations.UsersCheckPersonIsFollowedByAuthenticatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -633,7 +645,10 @@ func (s *users) UsersDeleteEmailForAuthenticatedUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#delete-a-gpg-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeleteGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteGpgKeyForAuthenticatedUserRequest) (*operations.UsersDeleteGpgKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -696,7 +711,10 @@ func (s *users) UsersDeleteGpgKeyForAuthenticatedUser(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#delete-a-public-ssh-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeletePublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeletePublicSSHKeyForAuthenticatedUserRequest) (*operations.UsersDeletePublicSSHKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -749,7 +767,10 @@ func (s *users) UsersDeletePublicSSHKeyForAuthenticatedUser(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#delete-a-ssh-signing-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersDeleteSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersDeleteSSHSigningKeyForAuthenticatedUserRequest) (*operations.UsersDeleteSSHSigningKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -804,7 +825,10 @@ func (s *users) UsersDeleteSSHSigningKeyForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#follow-a-user - API method documentation
 func (s *users) UsersFollow(ctx context.Context, request operations.UsersFollowRequest) (*operations.UsersFollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -924,7 +948,10 @@ func (s *users) UsersGetAuthenticated(ctx context.Context) (*operations.UsersGet
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#get-a-user - API method documentation
 func (s *users) UsersGetByUsername(ctx context.Context, request operations.UsersGetByUsernameRequest) (*operations.UsersGetByUsernameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -989,7 +1016,10 @@ func (s *users) UsersGetByUsername(ctx context.Context, request operations.Users
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#get-contextual-information-for-a-user - API method documentation
 func (s *users) UsersGetContextForUser(ctx context.Context, request operations.UsersGetContextForUserRequest) (*operations.UsersGetContextForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/hovercard", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/hovercard", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1059,7 +1089,10 @@ func (s *users) UsersGetContextForUser(ctx context.Context, request operations.U
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#get-a-gpg-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetGpgKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetGpgKeyForAuthenticatedUserRequest) (*operations.UsersGetGpgKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/gpg_keys/{gpg_key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1120,7 +1153,10 @@ func (s *users) UsersGetGpgKeyForAuthenticatedUser(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#get-a-public-ssh-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetPublicSSHKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetPublicSSHKeyForAuthenticatedUserRequest) (*operations.UsersGetPublicSSHKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/keys/{key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1181,7 +1217,10 @@ func (s *users) UsersGetPublicSSHKeyForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#get-a-ssh-signing-key-for-the-authenticated-user - API method documentation
 func (s *users) UsersGetSSHSigningKeyForAuthenticatedUser(ctx context.Context, request operations.UsersGetSSHSigningKeyForAuthenticatedUserRequest) (*operations.UsersGetSSHSigningKeyForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/ssh_signing_keys/{ssh_signing_key_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1559,7 +1598,10 @@ func (s *users) UsersListFollowersForAuthenticatedUser(ctx context.Context, requ
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#list-followers-of-a-user - API method documentation
 func (s *users) UsersListFollowersForUser(ctx context.Context, request operations.UsersListFollowersForUserRequest) (*operations.UsersListFollowersForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/followers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/followers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1611,7 +1653,10 @@ func (s *users) UsersListFollowersForUser(ctx context.Context, request operation
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#list-the-people-a-user-follows - API method documentation
 func (s *users) UsersListFollowingForUser(ctx context.Context, request operations.UsersListFollowingForUserRequest) (*operations.UsersListFollowingForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/following", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/following", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1730,7 +1775,10 @@ func (s *users) UsersListGpgKeysForAuthenticatedUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#list-gpg-keys-for-a-user - API method documentation
 func (s *users) UsersListGpgKeysForUser(ctx context.Context, request operations.UsersListGpgKeysForUserRequest) (*operations.UsersListGpgKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gpg_keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/gpg_keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1849,7 +1897,10 @@ func (s *users) UsersListPublicEmailsForAuthenticatedUser(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#list-public-keys-for-a-user - API method documentation
 func (s *users) UsersListPublicKeysForUser(ctx context.Context, request operations.UsersListPublicKeysForUserRequest) (*operations.UsersListPublicKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2035,7 +2086,10 @@ func (s *users) UsersListSSHSigningKeysForAuthenticatedUser(ctx context.Context,
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#list-ssh-signing-keys-for-a-user - API method documentation
 func (s *users) UsersListSSHSigningKeysForUser(ctx context.Context, request operations.UsersListSSHSigningKeysForUserRequest) (*operations.UsersListSSHSigningKeysForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/ssh_signing_keys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/ssh_signing_keys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2167,7 +2221,10 @@ func (s *users) UsersSetPrimaryEmailVisibilityForAuthenticatedUser(ctx context.C
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#unblock-a-user - API method documentation
 func (s *users) UsersUnblock(ctx context.Context, request operations.UsersUnblockRequest) (*operations.UsersUnblockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/blocks/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2220,7 +2277,10 @@ func (s *users) UsersUnblock(ctx context.Context, request operations.UsersUnbloc
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/users#unfollow-a-user - API method documentation
 func (s *users) UsersUnfollow(ctx context.Context, request operations.UsersUnfollowRequest) (*operations.UsersUnfollowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/following/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

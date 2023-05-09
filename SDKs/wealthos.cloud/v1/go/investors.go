@@ -254,7 +254,10 @@ func (s *investors) GetAllInvestors(ctx context.Context, request operations.GetA
 // Get details of an investor
 func (s *investors) GetInvestor(ctx context.Context, request operations.GetInvestorRequest, security operations.GetInvestorSecurity) (*operations.GetInvestorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investors/v1/{investor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/investors/v1/{investor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -361,7 +364,10 @@ func (s *investors) GetInvestor(ctx context.Context, request operations.GetInves
 // Update an existing investor. WealthOS will update only the fields sent in the request. Field mentioned as Nullable can be deleted by updating those values with null.
 func (s *investors) UpdateInvestor(ctx context.Context, request operations.UpdateInvestorRequest, security operations.UpdateInvestorSecurity) (*operations.UpdateInvestorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investors/v1/{investor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/investors/v1/{investor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

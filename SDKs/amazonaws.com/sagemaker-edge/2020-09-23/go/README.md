@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sagemaker-e
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,22 +27,20 @@ func main() {
         }),
     )
 
-    req := operations.GetDeploymentsRequest{
+    ctx := context.Background()
+    res, err := s.GetDeployments(ctx, operations.GetDeploymentsRequest{
         RequestBody: operations.GetDeploymentsRequestBody{
             DeviceFleetName: "corrupti",
             DeviceName: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetDeployments(ctx, req)
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,11 +55,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetDeployments` - Use to get the active deployments from a device.
-* `GetDeviceRegistration` - Use to check if a device is registered with SageMaker Edge Manager.
-* `SendHeartbeat` - Use to get the current status of devices registered on SageMaker Edge Manager.
+* [GetDeployments](docs/sdk/README.md#getdeployments) - Use to get the active deployments from a device.
+* [GetDeviceRegistration](docs/sdk/README.md#getdeviceregistration) - Use to check if a device is registered with SageMaker Edge Manager.
+* [SendHeartbeat](docs/sdk/README.md#sendheartbeat) - Use to get the current status of devices registered on SageMaker Edge Manager.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	EvaluateExpressionXAmzTargetEnumDataPipelineEvaluateExpression EvaluateExpressionXAmzTargetEnum = "DataPipeline.EvaluateExpression"
 )
 
+func (e EvaluateExpressionXAmzTargetEnum) ToPointer() *EvaluateExpressionXAmzTargetEnum {
+	return &e
+}
+
 func (e *EvaluateExpressionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.EvaluateExpression":
-		*e = EvaluateExpressionXAmzTargetEnum(s)
+		*e = EvaluateExpressionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EvaluateExpressionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EvaluateExpressionXAmzTargetEnum: %v", v)
 	}
 }
 

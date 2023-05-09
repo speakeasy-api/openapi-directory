@@ -14,18 +14,22 @@ const (
 	AggregationTypeEnumSingleFile AggregationTypeEnum = "SingleFile"
 )
 
+func (e AggregationTypeEnum) ToPointer() *AggregationTypeEnum {
+	return &e
+}
+
 func (e *AggregationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "SingleFile":
-		*e = AggregationTypeEnum(s)
+		*e = AggregationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationTypeEnum: %v", v)
 	}
 }

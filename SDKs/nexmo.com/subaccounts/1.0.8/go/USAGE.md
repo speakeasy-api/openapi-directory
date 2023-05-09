@@ -2,28 +2,26 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateSubAccountRequest{
+    ctx := context.Background()
+    res, err := s.SubaccountManagement.CreateSubAccount(ctx, operations.CreateSubAccountRequest{
         NewSubaccountRequest: shared.NewSubaccountRequest{
             Name: "Subaccount department A",
-            Secret: "Password123",
-            UsePrimaryAccountBalance: false,
+            Secret: sdk.String("Password123"),
+            UsePrimaryAccountBalance: sdk.Bool(false),
         },
         APIKey: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.SubaccountManagement.CreateSubAccount(ctx, req, operations.CreateSubAccountSecurity{
+    }, operations.CreateSubAccountSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })

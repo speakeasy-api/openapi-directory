@@ -14,19 +14,23 @@ const (
 	MessageLevelEnumRegular      MessageLevelEnum = "regular"
 )
 
+func (e MessageLevelEnum) ToPointer() *MessageLevelEnum {
+	return &e
+}
+
 func (e *MessageLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
-		*e = MessageLevelEnum(s)
+		*e = MessageLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageLevelEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	MembershipRoleEnumRoleManager               MembershipRoleEnum = "ROLE_MANAGER"
 )
 
+func (e MembershipRoleEnum) ToPointer() *MembershipRoleEnum {
+	return &e
+}
+
 func (e *MembershipRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMBERSHIP_ROLE_UNSPECIFIED":
 		fallthrough
 	case "ROLE_MEMBER":
 		fallthrough
 	case "ROLE_MANAGER":
-		*e = MembershipRoleEnum(s)
+		*e = MembershipRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipRoleEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	MembershipStateEnumNotAMember                 MembershipStateEnum = "NOT_A_MEMBER"
 )
 
+func (e MembershipStateEnum) ToPointer() *MembershipStateEnum {
+	return &e
+}
+
 func (e *MembershipStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMBERSHIP_STATE_UNSPECIFIED":
 		fallthrough
 	case "JOINED":
@@ -57,10 +65,10 @@ func (e *MembershipStateEnum) UnmarshalJSON(data []byte) error {
 	case "INVITED":
 		fallthrough
 	case "NOT_A_MEMBER":
-		*e = MembershipStateEnum(s)
+		*e = MembershipStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipStateEnum: %v", v)
 	}
 }
 

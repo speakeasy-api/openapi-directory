@@ -15,20 +15,24 @@ const (
 	ScalingAdjustmentTypeEnumPercentChangeInCapacity ScalingAdjustmentTypeEnum = "PercentChangeInCapacity"
 )
 
+func (e ScalingAdjustmentTypeEnum) ToPointer() *ScalingAdjustmentTypeEnum {
+	return &e
+}
+
 func (e *ScalingAdjustmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChangeInCapacity":
 		fallthrough
 	case "ExactCapacity":
 		fallthrough
 	case "PercentChangeInCapacity":
-		*e = ScalingAdjustmentTypeEnum(s)
+		*e = ScalingAdjustmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingAdjustmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingAdjustmentTypeEnum: %v", v)
 	}
 }

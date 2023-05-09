@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ntropy.network/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
-        ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
-    }
-
     ctx := context.Background()
-    res, err := s.Batch.GetABatchOfConsumerTransactionClassificationResults(ctx, req)
+    res, err := s.Batch.GetABatchOfConsumerTransactionClassificationResults(ctx, operations.GetABatchOfConsumerTransactionClassificationResultsRequest{
+        ID: "247ee045-3d04-4b3c-872b-a9160b810f33",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,26 +42,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Batch
+### [Batch](docs/batch/README.md)
 
-* `GetABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [GetABatchOfConsumerTransactionClassificationResults](docs/batch/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 
-### Batch1
+### [Batch1](docs/batch1/README.md)
 
-* `GetABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
+* [GetABatchOfBusinessTransactionClassificationResults](docs/batch1/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
 
-### Business
+### [Business](docs/business/README.md)
 
-* `GetABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
+* [GetABatchOfBusinessTransactionClassificationResults](docs/business/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
 
-### Classifier
+### [Classifier](docs/classifier/README.md)
 
-* `GetABatchOfBusinessTransactionClassificationResults` - Get a batch of business transaction classification results.
-* `GetABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [GetABatchOfBusinessTransactionClassificationResults](docs/classifier/README.md#getabatchofbusinesstransactionclassificationresults) - Get a batch of business transaction classification results.
+* [GetABatchOfConsumerTransactionClassificationResults](docs/classifier/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 
-### Consumer
+### [Consumer](docs/consumer/README.md)
 
-* `GetABatchOfConsumerTransactionClassificationResults` - Get a batch of consumer transaction classification results.
+* [GetABatchOfConsumerTransactionClassificationResults](docs/consumer/README.md#getabatchofconsumertransactionclassificationresults) - Get a batch of consumer transaction classification results.
 <!-- End SDK Available Operations -->
 
 ### Maturity

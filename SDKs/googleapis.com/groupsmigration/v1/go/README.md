@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/groupsmigr
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GroupsmigrationArchiveInsertRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        GroupID: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Archive.GroupsmigrationArchiveInsert(ctx, req, operations.GroupsmigrationArchiveInsertSecurity{
+    res, err := s.Archive.GroupsmigrationArchiveInsert(ctx, operations.GroupsmigrationArchiveInsertRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        GroupID: "nulla",
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    }, operations.GroupsmigrationArchiveInsertSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -59,9 +57,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Archive
+### [Archive](docs/archive/README.md)
 
-* `GroupsmigrationArchiveInsert` - Inserts a new mail into the archive of the Google group.
+* [GroupsmigrationArchiveInsert](docs/archive/README.md#groupsmigrationarchiveinsert) - Inserts a new mail into the archive of the Google group.
 <!-- End SDK Available Operations -->
 
 ### Maturity

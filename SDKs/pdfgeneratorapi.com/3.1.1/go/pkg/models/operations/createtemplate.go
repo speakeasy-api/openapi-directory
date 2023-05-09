@@ -27,12 +27,16 @@ const (
 	CreateTemplate422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           CreateTemplate422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e CreateTemplate422ApplicationJSONErrorEnum) ToPointer() *CreateTemplate422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CreateTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -40,10 +44,10 @@ func (e *CreateTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) e
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = CreateTemplate422ApplicationJSONErrorEnum(s)
+		*e = CreateTemplate422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTemplate422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTemplate422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -64,21 +68,25 @@ const (
 	CreateTemplate404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace CreateTemplate404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e CreateTemplate404ApplicationJSONErrorEnum) ToPointer() *CreateTemplate404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CreateTemplate404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = CreateTemplate404ApplicationJSONErrorEnum(s)
+		*e = CreateTemplate404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTemplate404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTemplate404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -97,17 +105,21 @@ const (
 	CreateTemplate403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit CreateTemplate403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e CreateTemplate403ApplicationJSONErrorEnum) ToPointer() *CreateTemplate403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CreateTemplate403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = CreateTemplate403ApplicationJSONErrorEnum(s)
+		*e = CreateTemplate403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTemplate403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTemplate403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -135,12 +147,16 @@ const (
 	CreateTemplate401ApplicationJSONErrorEnumAuthenticationFailed                                      CreateTemplate401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e CreateTemplate401ApplicationJSONErrorEnum) ToPointer() *CreateTemplate401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *CreateTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -160,10 +176,10 @@ func (e *CreateTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) e
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = CreateTemplate401ApplicationJSONErrorEnum(s)
+		*e = CreateTemplate401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTemplate401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTemplate401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

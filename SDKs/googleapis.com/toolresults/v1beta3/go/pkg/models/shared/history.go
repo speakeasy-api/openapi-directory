@@ -16,21 +16,25 @@ const (
 	HistoryTestPlatformEnumIos             HistoryTestPlatformEnum = "ios"
 )
 
+func (e HistoryTestPlatformEnum) ToPointer() *HistoryTestPlatformEnum {
+	return &e
+}
+
 func (e *HistoryTestPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknownPlatform":
 		fallthrough
 	case "android":
 		fallthrough
 	case "ios":
-		*e = HistoryTestPlatformEnum(s)
+		*e = HistoryTestPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistoryTestPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for HistoryTestPlatformEnum: %v", v)
 	}
 }
 

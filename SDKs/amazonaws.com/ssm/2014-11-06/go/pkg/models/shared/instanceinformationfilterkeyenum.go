@@ -20,12 +20,16 @@ const (
 	InstanceInformationFilterKeyEnumAssociationStatus InstanceInformationFilterKeyEnum = "AssociationStatus"
 )
 
+func (e InstanceInformationFilterKeyEnum) ToPointer() *InstanceInformationFilterKeyEnum {
+	return &e
+}
+
 func (e *InstanceInformationFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstanceIds":
 		fallthrough
 	case "AgentVersion":
@@ -41,9 +45,9 @@ func (e *InstanceInformationFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "ResourceType":
 		fallthrough
 	case "AssociationStatus":
-		*e = InstanceInformationFilterKeyEnum(s)
+		*e = InstanceInformationFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceInformationFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceInformationFilterKeyEnum: %v", v)
 	}
 }

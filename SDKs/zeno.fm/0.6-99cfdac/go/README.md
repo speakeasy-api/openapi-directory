@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/zeno.fm/0.6-99cfdac/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,43 +28,41 @@ func main() {
         }),
     )
 
-    req := operations.CreatePodcastRequestBody{
+    ctx := context.Background()
+    res, err := s.APIV2.CreatePodcast(ctx, operations.CreatePodcastRequestBody{
         FileLogo: operations.CreatePodcastRequestBodyFileLogo{
             Content: []byte("corrupti"),
             FileLogo: "provident",
         },
         Podcast: shared.Podcast{
-            Author: "distinctio",
-            Block: false,
+            Author: sdk.String("distinctio"),
+            Block: sdk.Bool(false),
             Categories: []string{
                 "unde",
                 "nulla",
                 "corrupti",
                 "illum",
             },
-            Copyright: "vel",
-            Country: "Netherlands Antilles",
+            Copyright: sdk.String("vel"),
+            Country: sdk.String("Netherlands Antilles"),
             Description: "deserunt",
-            Explicit: false,
-            Image: "suscipit",
-            Key: "iure",
+            Explicit: sdk.Bool(false),
+            Image: sdk.String("suscipit"),
+            Key: sdk.String("iure"),
             Keywords: []string{
                 "debitis",
                 "ipsa",
             },
             Language: "delectus",
-            Link: "tempora",
-            OwnerEmail: "suscipit",
-            OwnerName: "molestiae",
-            ShowType: "minus",
-            Subtitle: "placeat",
+            Link: sdk.String("tempora"),
+            OwnerEmail: sdk.String("suscipit"),
+            OwnerName: sdk.String("molestiae"),
+            ShowType: sdk.String("minus"),
+            Subtitle: sdk.String("placeat"),
             Summary: "voluptatum",
             Title: "Ms.",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.APIV2.CreatePodcast(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,26 +78,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIV2
+### [APIV2](docs/apiv2/README.md)
 
-* `CreatePodcast` - Create podcast
-* `CreatePodcastEpisode` - Create podcast episode
-* `DeletePodcast` - Delete podcast
-* `DeletePodcast1` - Delete podcast episode
-* `GetPartnerAggregatorStations` - List stations
-* `GetPodcast` - Get podcast
-* `GetPodcastCategories` - Get the list of Categories that can be used to filter podcasts in the search podcasts request
-* `GetPodcastCountries` - Get the list of Countries that can be used to filter podcasts in the search podcasts request
-* `GetPodcastEpisode` - Get podcast episode
-* `GetPodcastEpisodes` - Get podcast episodes
-* `GetPodcastLanguages` - Get the list of Languages that can be used to filter podcasts in the search podcasts request
-* `GetStationCountries` - Get the list of Countries that can be used to filter stations in the search stations request
-* `GetStationGenres` - Get the list of Genres that can be used to filter stations in the search stations request
-* `GetStationLanguages` - Get the list of Languages that can be used to filter stations in the search stations request
-* `SearchPodcasts` - Search podcasts
-* `SearchStations` - Search stations
-* `UpdatePodcast` - Update podcast
-* `UpdatePodcastEpisode` - Update podcast episode
+* [CreatePodcast](docs/apiv2/README.md#createpodcast) - Create podcast
+* [CreatePodcastEpisode](docs/apiv2/README.md#createpodcastepisode) - Create podcast episode
+* [DeletePodcast](docs/apiv2/README.md#deletepodcast) - Delete podcast
+* [DeletePodcast1](docs/apiv2/README.md#deletepodcast1) - Delete podcast episode
+* [GetPartnerAggregatorStations](docs/apiv2/README.md#getpartneraggregatorstations) - List stations
+* [GetPodcast](docs/apiv2/README.md#getpodcast) - Get podcast
+* [GetPodcastCategories](docs/apiv2/README.md#getpodcastcategories) - Get the list of Categories that can be used to filter podcasts in the search podcasts request
+* [GetPodcastCountries](docs/apiv2/README.md#getpodcastcountries) - Get the list of Countries that can be used to filter podcasts in the search podcasts request
+* [GetPodcastEpisode](docs/apiv2/README.md#getpodcastepisode) - Get podcast episode
+* [GetPodcastEpisodes](docs/apiv2/README.md#getpodcastepisodes) - Get podcast episodes
+* [GetPodcastLanguages](docs/apiv2/README.md#getpodcastlanguages) - Get the list of Languages that can be used to filter podcasts in the search podcasts request
+* [GetStationCountries](docs/apiv2/README.md#getstationcountries) - Get the list of Countries that can be used to filter stations in the search stations request
+* [GetStationGenres](docs/apiv2/README.md#getstationgenres) - Get the list of Genres that can be used to filter stations in the search stations request
+* [GetStationLanguages](docs/apiv2/README.md#getstationlanguages) - Get the list of Languages that can be used to filter stations in the search stations request
+* [SearchPodcasts](docs/apiv2/README.md#searchpodcasts) - Search podcasts
+* [SearchStations](docs/apiv2/README.md#searchstations) - Search stations
+* [UpdatePodcast](docs/apiv2/README.md#updatepodcast) - Update podcast
+* [UpdatePodcastEpisode](docs/apiv2/README.md#updatepodcastepisode) - Update podcast episode
 <!-- End SDK Available Operations -->
 
 ### Maturity

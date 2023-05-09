@@ -15,17 +15,21 @@ const (
 	GETDescribeClusterSubnetGroupsActionEnumDescribeClusterSubnetGroups GETDescribeClusterSubnetGroupsActionEnum = "DescribeClusterSubnetGroups"
 )
 
+func (e GETDescribeClusterSubnetGroupsActionEnum) ToPointer() *GETDescribeClusterSubnetGroupsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeClusterSubnetGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeClusterSubnetGroups":
-		*e = GETDescribeClusterSubnetGroupsActionEnum(s)
+		*e = GETDescribeClusterSubnetGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeClusterSubnetGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeClusterSubnetGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeClusterSubnetGroupsVersionEnumTwoThousandAndTwelve1201 GETDescribeClusterSubnetGroupsVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeClusterSubnetGroupsVersionEnum) ToPointer() *GETDescribeClusterSubnetGroupsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeClusterSubnetGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeClusterSubnetGroupsVersionEnum(s)
+		*e = GETDescribeClusterSubnetGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeClusterSubnetGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeClusterSubnetGroupsVersionEnum: %v", v)
 	}
 }
 

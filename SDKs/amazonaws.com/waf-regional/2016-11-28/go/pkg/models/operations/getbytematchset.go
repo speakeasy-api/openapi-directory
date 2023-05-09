@@ -16,17 +16,21 @@ const (
 	GetByteMatchSetXAmzTargetEnumAwswafRegional20161128GetByteMatchSet GetByteMatchSetXAmzTargetEnum = "AWSWAF_Regional_20161128.GetByteMatchSet"
 )
 
+func (e GetByteMatchSetXAmzTargetEnum) ToPointer() *GetByteMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetByteMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.GetByteMatchSet":
-		*e = GetByteMatchSetXAmzTargetEnum(s)
+		*e = GetByteMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetByteMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetByteMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

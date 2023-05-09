@@ -15,19 +15,23 @@ const (
 	NullableScopedInstallationRepositorySelectionEnumSelected NullableScopedInstallationRepositorySelectionEnum = "selected"
 )
 
+func (e NullableScopedInstallationRepositorySelectionEnum) ToPointer() *NullableScopedInstallationRepositorySelectionEnum {
+	return &e
+}
+
 func (e *NullableScopedInstallationRepositorySelectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "selected":
-		*e = NullableScopedInstallationRepositorySelectionEnum(s)
+		*e = NullableScopedInstallationRepositorySelectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NullableScopedInstallationRepositorySelectionEnum: %s", s)
+		return fmt.Errorf("invalid value for NullableScopedInstallationRepositorySelectionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	LoadBalancerProtocolEnumHTTP      LoadBalancerProtocolEnum = "HTTP"
 )
 
+func (e LoadBalancerProtocolEnum) ToPointer() *LoadBalancerProtocolEnum {
+	return &e
+}
+
 func (e *LoadBalancerProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP_HTTPS":
 		fallthrough
 	case "HTTP":
-		*e = LoadBalancerProtocolEnum(s)
+		*e = LoadBalancerProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoadBalancerProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for LoadBalancerProtocolEnum: %v", v)
 	}
 }

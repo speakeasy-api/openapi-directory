@@ -16,17 +16,21 @@ const (
 	GetUICustomizationXAmzTargetEnumAwsCognitoIdentityProviderServiceGetUICustomization GetUICustomizationXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetUICustomization"
 )
 
+func (e GetUICustomizationXAmzTargetEnum) ToPointer() *GetUICustomizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUICustomizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetUICustomization":
-		*e = GetUICustomizationXAmzTargetEnum(s)
+		*e = GetUICustomizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUICustomizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUICustomizationXAmzTargetEnum: %v", v)
 	}
 }
 

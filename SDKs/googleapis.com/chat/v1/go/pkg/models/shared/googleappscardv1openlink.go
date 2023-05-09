@@ -15,19 +15,23 @@ const (
 	GoogleAppsCardV1OpenLinkOnCloseEnumReload  GoogleAppsCardV1OpenLinkOnCloseEnum = "RELOAD"
 )
 
+func (e GoogleAppsCardV1OpenLinkOnCloseEnum) ToPointer() *GoogleAppsCardV1OpenLinkOnCloseEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1OpenLinkOnCloseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTHING":
 		fallthrough
 	case "RELOAD":
-		*e = GoogleAppsCardV1OpenLinkOnCloseEnum(s)
+		*e = GoogleAppsCardV1OpenLinkOnCloseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1OpenLinkOnCloseEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1OpenLinkOnCloseEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	GoogleAppsCardV1OpenLinkOpenAsEnumOverlay  GoogleAppsCardV1OpenLinkOpenAsEnum = "OVERLAY"
 )
 
+func (e GoogleAppsCardV1OpenLinkOpenAsEnum) ToPointer() *GoogleAppsCardV1OpenLinkOpenAsEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1OpenLinkOpenAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL_SIZE":
 		fallthrough
 	case "OVERLAY":
-		*e = GoogleAppsCardV1OpenLinkOpenAsEnum(s)
+		*e = GoogleAppsCardV1OpenLinkOpenAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1OpenLinkOpenAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1OpenLinkOpenAsEnum: %v", v)
 	}
 }
 

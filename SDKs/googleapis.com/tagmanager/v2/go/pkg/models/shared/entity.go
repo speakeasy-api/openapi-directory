@@ -18,12 +18,16 @@ const (
 	EntityChangeStatusEnumUpdated                 EntityChangeStatusEnum = "updated"
 )
 
+func (e EntityChangeStatusEnum) ToPointer() *EntityChangeStatusEnum {
+	return &e
+}
+
 func (e *EntityChangeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "changeStatusUnspecified":
 		fallthrough
 	case "none":
@@ -33,10 +37,10 @@ func (e *EntityChangeStatusEnum) UnmarshalJSON(data []byte) error {
 	case "deleted":
 		fallthrough
 	case "updated":
-		*e = EntityChangeStatusEnum(s)
+		*e = EntityChangeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityChangeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityChangeStatusEnum: %v", v)
 	}
 }
 

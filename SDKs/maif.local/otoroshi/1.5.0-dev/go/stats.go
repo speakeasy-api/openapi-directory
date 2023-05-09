@@ -36,7 +36,7 @@ func newStats(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // GlobalLiveStats - Get global otoroshi stats
 // Get global otoroshi stats
-func (s *stats) GlobalLiveStats(ctx context.Context) (*operations.GlobalLiveStatsResponse, error) {
+func (s *stats) GlobalLiveStats(ctx context.Context, security operations.GlobalLiveStatsSecurity) (*operations.GlobalLiveStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/live"
 
@@ -45,7 +45,7 @@ func (s *stats) GlobalLiveStats(ctx context.Context) (*operations.GlobalLiveStat
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -88,7 +88,10 @@ func (s *stats) GlobalLiveStats(ctx context.Context) (*operations.GlobalLiveStat
 // Get live feed of global otoroshi stats (global) or for a service {id}
 func (s *stats) ServiceLiveStats(ctx context.Context, request operations.ServiceLiveStatsRequest, security operations.ServiceLiveStatsSecurity) (*operations.ServiceLiveStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/live/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/live/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	RegisterTaskDefinitionXAmzTargetEnumAmazonEc2ContainerServiceV20141113RegisterTaskDefinition RegisterTaskDefinitionXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.RegisterTaskDefinition"
 )
 
+func (e RegisterTaskDefinitionXAmzTargetEnum) ToPointer() *RegisterTaskDefinitionXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterTaskDefinitionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.RegisterTaskDefinition":
-		*e = RegisterTaskDefinitionXAmzTargetEnum(s)
+		*e = RegisterTaskDefinitionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterTaskDefinitionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterTaskDefinitionXAmzTargetEnum: %v", v)
 	}
 }
 

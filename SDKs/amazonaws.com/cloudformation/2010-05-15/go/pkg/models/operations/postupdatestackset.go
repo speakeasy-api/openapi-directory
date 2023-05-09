@@ -15,17 +15,21 @@ const (
 	POSTUpdateStackSetActionEnumUpdateStackSet POSTUpdateStackSetActionEnum = "UpdateStackSet"
 )
 
+func (e POSTUpdateStackSetActionEnum) ToPointer() *POSTUpdateStackSetActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateStackSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateStackSet":
-		*e = POSTUpdateStackSetActionEnum(s)
+		*e = POSTUpdateStackSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateStackSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateStackSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateStackSetVersionEnumTwoThousandAndTen0515 POSTUpdateStackSetVersionEnum = "2010-05-15"
 )
 
+func (e POSTUpdateStackSetVersionEnum) ToPointer() *POSTUpdateStackSetVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateStackSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTUpdateStackSetVersionEnum(s)
+		*e = POSTUpdateStackSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateStackSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateStackSetVersionEnum: %v", v)
 	}
 }
 

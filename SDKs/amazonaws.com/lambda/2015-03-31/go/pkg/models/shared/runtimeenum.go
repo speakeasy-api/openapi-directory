@@ -38,14 +38,19 @@ const (
 	RuntimeEnumProvided     RuntimeEnum = "provided"
 	RuntimeEnumProvidedAl2  RuntimeEnum = "provided.al2"
 	RuntimeEnumNodejs18X    RuntimeEnum = "nodejs18.x"
+	RuntimeEnumPython310    RuntimeEnum = "python3.10"
 )
 
+func (e RuntimeEnum) ToPointer() *RuntimeEnum {
+	return &e
+}
+
 func (e *RuntimeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nodejs":
 		fallthrough
 	case "nodejs4.3":
@@ -101,9 +106,11 @@ func (e *RuntimeEnum) UnmarshalJSON(data []byte) error {
 	case "provided.al2":
 		fallthrough
 	case "nodejs18.x":
-		*e = RuntimeEnum(s)
+		fallthrough
+	case "python3.10":
+		*e = RuntimeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeEnum: %v", v)
 	}
 }

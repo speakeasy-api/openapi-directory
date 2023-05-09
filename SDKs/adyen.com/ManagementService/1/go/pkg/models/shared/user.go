@@ -9,6 +9,8 @@ type User struct {
 	AccountGroups []string `json:"accountGroups,omitempty"`
 	// Indicates whether this user is active.
 	Active *bool `json:"active,omitempty"`
+	// Set of authn apps available to this user
+	AuthnApps []string `json:"authnApps,omitempty"`
 	// The email address of the user.
 	Email string `json:"email"`
 	// The unique identifier of the user.

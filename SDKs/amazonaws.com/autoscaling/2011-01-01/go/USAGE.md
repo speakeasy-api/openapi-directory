@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,26 +16,24 @@ func main() {
         }),
     )
 
-    req := operations.GETAttachInstancesRequest{
-        Action: "AttachInstances",
+    ctx := context.Background()
+    res, err := s.GETAttachInstances(ctx, operations.GETAttachInstancesRequest{
+        Action: operations.GETAttachInstancesActionEnumAttachInstances,
         AutoScalingGroupName: "corrupti",
         InstanceIds: []string{
             "distinctio",
             "quibusdam",
             "unde",
         },
-        Version: "2011-01-01",
-        XAmzAlgorithm: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETAttachInstances(ctx, req)
+        Version: operations.GETAttachInstancesVersionEnumTwoThousandAndEleven0101,
+        XAmzAlgorithm: sdk.String("nulla"),
+        XAmzContentSha256: sdk.String("corrupti"),
+        XAmzCredential: sdk.String("illum"),
+        XAmzDate: sdk.String("vel"),
+        XAmzSecurityToken: sdk.String("error"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

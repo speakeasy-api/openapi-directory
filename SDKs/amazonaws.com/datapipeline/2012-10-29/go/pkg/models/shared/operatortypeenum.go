@@ -17,12 +17,16 @@ const (
 	OperatorTypeEnumBetween OperatorTypeEnum = "BETWEEN"
 )
 
+func (e OperatorTypeEnum) ToPointer() *OperatorTypeEnum {
+	return &e
+}
+
 func (e *OperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "REF_EQ":
@@ -32,9 +36,9 @@ func (e *OperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GE":
 		fallthrough
 	case "BETWEEN":
-		*e = OperatorTypeEnum(s)
+		*e = OperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperatorTypeEnum: %v", v)
 	}
 }

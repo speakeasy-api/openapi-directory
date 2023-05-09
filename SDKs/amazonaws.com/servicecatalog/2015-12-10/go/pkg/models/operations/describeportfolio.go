@@ -16,17 +16,21 @@ const (
 	DescribePortfolioXAmzTargetEnumAws242ServiceCatalogServiceDescribePortfolio DescribePortfolioXAmzTargetEnum = "AWS242ServiceCatalogService.DescribePortfolio"
 )
 
+func (e DescribePortfolioXAmzTargetEnum) ToPointer() *DescribePortfolioXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePortfolioXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribePortfolio":
-		*e = DescribePortfolioXAmzTargetEnum(s)
+		*e = DescribePortfolioXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePortfolioXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePortfolioXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnumEipAssociate   DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum = "EIP-ASSOCIATE"
 )
 
+func (e DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum) ToPointer() *DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE-ATTACH":
 		fallthrough
 	case "EIP-ASSOCIATE":
-		*e = DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum(s)
+		*e = DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnumRevoked  DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum = "revoked"
 )
 
+func (e DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum) ToPointer() *DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "granted":
@@ -54,10 +62,10 @@ func (e *DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPer
 	case "revoking":
 		fallthrough
 	case "revoked":
-		*e = DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum(s)
+		*e = DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfacePermissionsResultNetworkInterfacePermissionsPermissionStateStateEnum: %v", v)
 	}
 }
 

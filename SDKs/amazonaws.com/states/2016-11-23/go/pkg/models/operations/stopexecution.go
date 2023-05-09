@@ -16,17 +16,21 @@ const (
 	StopExecutionXAmzTargetEnumAwsStepFunctionsStopExecution StopExecutionXAmzTargetEnum = "AWSStepFunctions.StopExecution"
 )
 
+func (e StopExecutionXAmzTargetEnum) ToPointer() *StopExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.StopExecution":
-		*e = StopExecutionXAmzTargetEnum(s)
+		*e = StopExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

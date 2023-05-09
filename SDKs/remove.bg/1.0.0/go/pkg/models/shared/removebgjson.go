@@ -15,19 +15,23 @@ const (
 	RemoveBgJSONChannelsEnumAlpha RemoveBgJSONChannelsEnum = "alpha"
 )
 
+func (e RemoveBgJSONChannelsEnum) ToPointer() *RemoveBgJSONChannelsEnum {
+	return &e
+}
+
 func (e *RemoveBgJSONChannelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rgba":
 		fallthrough
 	case "alpha":
-		*e = RemoveBgJSONChannelsEnum(s)
+		*e = RemoveBgJSONChannelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgJSONChannelsEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgJSONChannelsEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	RemoveBgJSONFormatEnumZip  RemoveBgJSONFormatEnum = "zip"
 )
 
+func (e RemoveBgJSONFormatEnum) ToPointer() *RemoveBgJSONFormatEnum {
+	return &e
+}
+
 func (e *RemoveBgJSONFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "png":
@@ -58,10 +66,10 @@ func (e *RemoveBgJSONFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "zip":
-		*e = RemoveBgJSONFormatEnum(s)
+		*e = RemoveBgJSONFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgJSONFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgJSONFormatEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	RemoveBgJSONSizeEnumAuto    RemoveBgJSONSizeEnum = "auto"
 )
 
+func (e RemoveBgJSONSizeEnum) ToPointer() *RemoveBgJSONSizeEnum {
+	return &e
+}
+
 func (e *RemoveBgJSONSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "full":
 		fallthrough
 	case "auto":
-		*e = RemoveBgJSONSizeEnum(s)
+		*e = RemoveBgJSONSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgJSONSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgJSONSizeEnum: %v", v)
 	}
 }
 
@@ -111,12 +123,16 @@ const (
 	RemoveBgJSONTypeEnumCar     RemoveBgJSONTypeEnum = "car"
 )
 
+func (e RemoveBgJSONTypeEnum) ToPointer() *RemoveBgJSONTypeEnum {
+	return &e
+}
+
 func (e *RemoveBgJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "person":
@@ -124,10 +140,10 @@ func (e *RemoveBgJSONTypeEnum) UnmarshalJSON(data []byte) error {
 	case "product":
 		fallthrough
 	case "car":
-		*e = RemoveBgJSONTypeEnum(s)
+		*e = RemoveBgJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgJSONTypeEnum: %v", v)
 	}
 }
 
@@ -145,12 +161,16 @@ const (
 	RemoveBgJSONTypeLevelEnumLatest RemoveBgJSONTypeLevelEnum = "latest"
 )
 
+func (e RemoveBgJSONTypeLevelEnum) ToPointer() *RemoveBgJSONTypeLevelEnum {
+	return &e
+}
+
 func (e *RemoveBgJSONTypeLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "1":
@@ -158,10 +178,10 @@ func (e *RemoveBgJSONTypeLevelEnum) UnmarshalJSON(data []byte) error {
 	case "2":
 		fallthrough
 	case "latest":
-		*e = RemoveBgJSONTypeLevelEnum(s)
+		*e = RemoveBgJSONTypeLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgJSONTypeLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgJSONTypeLevelEnum: %v", v)
 	}
 }
 

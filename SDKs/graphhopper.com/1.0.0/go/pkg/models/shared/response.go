@@ -16,21 +16,25 @@ const (
 	ResponseStatusEnumFinished       ResponseStatusEnum = "finished"
 )
 
+func (e ResponseStatusEnum) ToPointer() *ResponseStatusEnum {
+	return &e
+}
+
 func (e *ResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "waiting_in_queue":
 		fallthrough
 	case "processing":
 		fallthrough
 	case "finished":
-		*e = ResponseStatusEnum(s)
+		*e = ResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResponseStatusEnum: %v", v)
 	}
 }
 

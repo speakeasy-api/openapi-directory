@@ -126,12 +126,16 @@ const (
 	Ec2InstanceTypeEnumR5d24xlarge Ec2InstanceTypeEnum = "r5d.24xlarge"
 )
 
+func (e Ec2InstanceTypeEnum) ToPointer() *Ec2InstanceTypeEnum {
+	return &e
+}
+
 func (e *Ec2InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "t2.micro":
 		fallthrough
 	case "t2.small":
@@ -359,9 +363,9 @@ func (e *Ec2InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "r5d.16xlarge":
 		fallthrough
 	case "r5d.24xlarge":
-		*e = Ec2InstanceTypeEnum(s)
+		*e = Ec2InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ec2InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Ec2InstanceTypeEnum: %v", v)
 	}
 }

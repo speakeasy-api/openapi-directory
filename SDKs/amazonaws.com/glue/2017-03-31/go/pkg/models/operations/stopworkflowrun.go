@@ -16,17 +16,21 @@ const (
 	StopWorkflowRunXAmzTargetEnumAwsGlueStopWorkflowRun StopWorkflowRunXAmzTargetEnum = "AWSGlue.StopWorkflowRun"
 )
 
+func (e StopWorkflowRunXAmzTargetEnum) ToPointer() *StopWorkflowRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopWorkflowRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StopWorkflowRun":
-		*e = StopWorkflowRunXAmzTargetEnum(s)
+		*e = StopWorkflowRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopWorkflowRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopWorkflowRunXAmzTargetEnum: %v", v)
 	}
 }
 

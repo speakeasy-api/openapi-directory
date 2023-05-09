@@ -16,17 +16,21 @@ const (
 	DeleteConformancePackXAmzTargetEnumStarlingDoveServiceDeleteConformancePack DeleteConformancePackXAmzTargetEnum = "StarlingDoveService.DeleteConformancePack"
 )
 
+func (e DeleteConformancePackXAmzTargetEnum) ToPointer() *DeleteConformancePackXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteConformancePackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.DeleteConformancePack":
-		*e = DeleteConformancePackXAmzTargetEnum(s)
+		*e = DeleteConformancePackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConformancePackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConformancePackXAmzTargetEnum: %v", v)
 	}
 }
 

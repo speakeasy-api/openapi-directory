@@ -15,17 +15,21 @@ const (
 	POSTCreateIpamScopeActionEnumCreateIpamScope POSTCreateIpamScopeActionEnum = "CreateIpamScope"
 )
 
+func (e POSTCreateIpamScopeActionEnum) ToPointer() *POSTCreateIpamScopeActionEnum {
+	return &e
+}
+
 func (e *POSTCreateIpamScopeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateIpamScope":
-		*e = POSTCreateIpamScopeActionEnum(s)
+		*e = POSTCreateIpamScopeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateIpamScopeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateIpamScopeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateIpamScopeVersionEnumTwoThousandAndSixteen1115 POSTCreateIpamScopeVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateIpamScopeVersionEnum) ToPointer() *POSTCreateIpamScopeVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateIpamScopeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateIpamScopeVersionEnum(s)
+		*e = POSTCreateIpamScopeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateIpamScopeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateIpamScopeVersionEnum: %v", v)
 	}
 }
 

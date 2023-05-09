@@ -33,8 +33,12 @@ type DependabotListAlertsForRepoRequest struct {
 	// A comma-separated list of package names. If specified, only alerts for these packages will be returned.
 	Package *string `queryParam:"style=form,explode=true,name=package"`
 	// **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// The number of results per page (max 100).
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	PerPage *int64 `queryParam:"style=form,explode=true,name=per_page"`
 	// The name of the repository. The name is not case sensitive.
 	Repo string `pathParam:"style=simple,explode=false,name=repo"`

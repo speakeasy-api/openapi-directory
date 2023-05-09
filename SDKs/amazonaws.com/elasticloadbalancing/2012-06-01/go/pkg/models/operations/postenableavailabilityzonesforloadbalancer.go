@@ -15,17 +15,21 @@ const (
 	POSTEnableAvailabilityZonesForLoadBalancerActionEnumEnableAvailabilityZonesForLoadBalancer POSTEnableAvailabilityZonesForLoadBalancerActionEnum = "EnableAvailabilityZonesForLoadBalancer"
 )
 
+func (e POSTEnableAvailabilityZonesForLoadBalancerActionEnum) ToPointer() *POSTEnableAvailabilityZonesForLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *POSTEnableAvailabilityZonesForLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableAvailabilityZonesForLoadBalancer":
-		*e = POSTEnableAvailabilityZonesForLoadBalancerActionEnum(s)
+		*e = POSTEnableAvailabilityZonesForLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableAvailabilityZonesForLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableAvailabilityZonesForLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableAvailabilityZonesForLoadBalancerVersionEnumTwoThousandAndTwelve0601 POSTEnableAvailabilityZonesForLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e POSTEnableAvailabilityZonesForLoadBalancerVersionEnum) ToPointer() *POSTEnableAvailabilityZonesForLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableAvailabilityZonesForLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTEnableAvailabilityZonesForLoadBalancerVersionEnum(s)
+		*e = POSTEnableAvailabilityZonesForLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableAvailabilityZonesForLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableAvailabilityZonesForLoadBalancerVersionEnum: %v", v)
 	}
 }
 

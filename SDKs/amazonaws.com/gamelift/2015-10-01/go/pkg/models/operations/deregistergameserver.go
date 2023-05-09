@@ -16,17 +16,21 @@ const (
 	DeregisterGameServerXAmzTargetEnumGameLiftDeregisterGameServer DeregisterGameServerXAmzTargetEnum = "GameLift.DeregisterGameServer"
 )
 
+func (e DeregisterGameServerXAmzTargetEnum) ToPointer() *DeregisterGameServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeregisterGameServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DeregisterGameServer":
-		*e = DeregisterGameServerXAmzTargetEnum(s)
+		*e = DeregisterGameServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeregisterGameServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeregisterGameServerXAmzTargetEnum: %v", v)
 	}
 }
 

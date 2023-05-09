@@ -14,18 +14,22 @@ const (
 	InstanceCollectionTypeEnumInstanceGroup InstanceCollectionTypeEnum = "INSTANCE_GROUP"
 )
 
+func (e InstanceCollectionTypeEnum) ToPointer() *InstanceCollectionTypeEnum {
+	return &e
+}
+
 func (e *InstanceCollectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE_FLEET":
 		fallthrough
 	case "INSTANCE_GROUP":
-		*e = InstanceCollectionTypeEnum(s)
+		*e = InstanceCollectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceCollectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceCollectionTypeEnum: %v", v)
 	}
 }

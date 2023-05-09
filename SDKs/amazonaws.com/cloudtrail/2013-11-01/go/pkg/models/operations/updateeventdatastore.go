@@ -16,17 +16,21 @@ const (
 	UpdateEventDataStoreXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101UpdateEventDataStore UpdateEventDataStoreXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.UpdateEventDataStore"
 )
 
+func (e UpdateEventDataStoreXAmzTargetEnum) ToPointer() *UpdateEventDataStoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateEventDataStoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.UpdateEventDataStore":
-		*e = UpdateEventDataStoreXAmzTargetEnum(s)
+		*e = UpdateEventDataStoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEventDataStoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEventDataStoreXAmzTargetEnum: %v", v)
 	}
 }
 

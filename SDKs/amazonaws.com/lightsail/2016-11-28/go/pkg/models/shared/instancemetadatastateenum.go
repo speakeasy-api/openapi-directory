@@ -14,18 +14,22 @@ const (
 	InstanceMetadataStateEnumApplied InstanceMetadataStateEnum = "applied"
 )
 
+func (e InstanceMetadataStateEnum) ToPointer() *InstanceMetadataStateEnum {
+	return &e
+}
+
 func (e *InstanceMetadataStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "applied":
-		*e = InstanceMetadataStateEnum(s)
+		*e = InstanceMetadataStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMetadataStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMetadataStateEnum: %v", v)
 	}
 }

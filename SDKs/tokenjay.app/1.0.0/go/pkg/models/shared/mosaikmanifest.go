@@ -15,21 +15,25 @@ const (
 	MosaikManifestTargetCanvasDimensionEnumFullWidth    MosaikManifestTargetCanvasDimensionEnum = "FULL_WIDTH"
 )
 
+func (e MosaikManifestTargetCanvasDimensionEnum) ToPointer() *MosaikManifestTargetCanvasDimensionEnum {
+	return &e
+}
+
 func (e *MosaikManifestTargetCanvasDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPACT_WIDTH":
 		fallthrough
 	case "MEDIUM_WIDTH":
 		fallthrough
 	case "FULL_WIDTH":
-		*e = MosaikManifestTargetCanvasDimensionEnum(s)
+		*e = MosaikManifestTargetCanvasDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MosaikManifestTargetCanvasDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for MosaikManifestTargetCanvasDimensionEnum: %v", v)
 	}
 }
 

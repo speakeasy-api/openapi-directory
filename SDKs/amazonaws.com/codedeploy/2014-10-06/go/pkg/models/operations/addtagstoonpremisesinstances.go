@@ -16,17 +16,21 @@ const (
 	AddTagsToOnPremisesInstancesXAmzTargetEnumCodeDeploy20141006AddTagsToOnPremisesInstances AddTagsToOnPremisesInstancesXAmzTargetEnum = "CodeDeploy_20141006.AddTagsToOnPremisesInstances"
 )
 
+func (e AddTagsToOnPremisesInstancesXAmzTargetEnum) ToPointer() *AddTagsToOnPremisesInstancesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddTagsToOnPremisesInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.AddTagsToOnPremisesInstances":
-		*e = AddTagsToOnPremisesInstancesXAmzTargetEnum(s)
+		*e = AddTagsToOnPremisesInstancesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsToOnPremisesInstancesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsToOnPremisesInstancesXAmzTargetEnum: %v", v)
 	}
 }
 

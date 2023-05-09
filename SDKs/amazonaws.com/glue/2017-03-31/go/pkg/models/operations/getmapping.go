@@ -16,17 +16,21 @@ const (
 	GetMappingXAmzTargetEnumAwsGlueGetMapping GetMappingXAmzTargetEnum = "AWSGlue.GetMapping"
 )
 
+func (e GetMappingXAmzTargetEnum) ToPointer() *GetMappingXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMappingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetMapping":
-		*e = GetMappingXAmzTargetEnum(s)
+		*e = GetMappingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMappingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMappingXAmzTargetEnum: %v", v)
 	}
 }
 

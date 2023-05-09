@@ -28,12 +28,16 @@ const (
 	SectionGradeEnumOther           SectionGradeEnum = "Other"
 )
 
+func (e SectionGradeEnum) ToPointer() *SectionGradeEnum {
+	return &e
+}
+
 func (e *SectionGradeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -65,10 +69,10 @@ func (e *SectionGradeEnum) UnmarshalJSON(data []byte) error {
 	case "PostGraduate":
 		fallthrough
 	case "Other":
-		*e = SectionGradeEnum(s)
+		*e = SectionGradeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionGradeEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionGradeEnum: %v", v)
 	}
 }
 
@@ -88,12 +92,16 @@ const (
 	SectionSubjectEnumOther                       SectionSubjectEnum = "other"
 )
 
+func (e SectionSubjectEnum) ToPointer() *SectionSubjectEnum {
+	return &e
+}
+
 func (e *SectionSubjectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "english/language arts":
 		fallthrough
 	case "math":
@@ -115,10 +123,10 @@ func (e *SectionSubjectEnum) UnmarshalJSON(data []byte) error {
 	case "arts and music":
 		fallthrough
 	case "other":
-		*e = SectionSubjectEnum(s)
+		*e = SectionSubjectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionSubjectEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionSubjectEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	PolicyTypeEnumTargetTrackingScaling PolicyTypeEnum = "TargetTrackingScaling"
 )
 
+func (e PolicyTypeEnum) ToPointer() *PolicyTypeEnum {
+	return &e
+}
+
 func (e *PolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TargetTrackingScaling":
-		*e = PolicyTypeEnum(s)
+		*e = PolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyTypeEnum: %v", v)
 	}
 }

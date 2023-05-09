@@ -16,17 +16,21 @@ const (
 	ShareDirectoryXAmzTargetEnumDirectoryService20150416ShareDirectory ShareDirectoryXAmzTargetEnum = "DirectoryService_20150416.ShareDirectory"
 )
 
+func (e ShareDirectoryXAmzTargetEnum) ToPointer() *ShareDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ShareDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.ShareDirectory":
-		*e = ShareDirectoryXAmzTargetEnum(s)
+		*e = ShareDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

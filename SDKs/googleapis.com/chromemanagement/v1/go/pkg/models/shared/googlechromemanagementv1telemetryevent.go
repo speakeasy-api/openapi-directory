@@ -18,12 +18,16 @@ const (
 	GoogleChromeManagementV1TelemetryEventEventTypeEnumNetworkHTTPSLatencyChange GoogleChromeManagementV1TelemetryEventEventTypeEnum = "NETWORK_HTTPS_LATENCY_CHANGE"
 )
 
+func (e GoogleChromeManagementV1TelemetryEventEventTypeEnum) ToPointer() *GoogleChromeManagementV1TelemetryEventEventTypeEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1TelemetryEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIO_SEVERE_UNDERRUN":
@@ -33,29 +37,29 @@ func (e *GoogleChromeManagementV1TelemetryEventEventTypeEnum) UnmarshalJSON(data
 	case "USB_REMOVED":
 		fallthrough
 	case "NETWORK_HTTPS_LATENCY_CHANGE":
-		*e = GoogleChromeManagementV1TelemetryEventEventTypeEnum(s)
+		*e = GoogleChromeManagementV1TelemetryEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1TelemetryEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1TelemetryEventEventTypeEnum: %v", v)
 	}
 }
 
 // GoogleChromeManagementV1TelemetryEvent - Telemetry data reported by a managed device.
 type GoogleChromeManagementV1TelemetryEvent struct {
-	// `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds.
+	// `TelemetryAudioSevereUnderrunEvent` is triggered when a audio devices run out of buffer data for more than 5 seconds. * Granular permission needed: TELEMETRY_API_AUDIO_REPORT
 	AudioSevereUnderrunEvent map[string]interface{} `json:"audioSevereUnderrunEvent,omitempty"`
-	// Information about a device associated with telemetry data.
+	// Information about a device associated with telemetry data. * Granular Permission needed: TELEMETRY_API_DEVICE
 	Device *GoogleChromeManagementV1TelemetryDeviceInfo `json:"device,omitempty"`
 	// The event type of the current event.
 	EventType *GoogleChromeManagementV1TelemetryEventEventTypeEnum `json:"eventType,omitempty"`
-	// Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem..
+	// Https latency routine is run periodically and `TelemetryHttpsLatencyChangeEvent` is triggered if a latency problem was detected or if the device has recovered from a latency problem. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
 	HTTPSLatencyChangeEvent *GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent `json:"httpsLatencyChangeEvent,omitempty"`
 	// Output only. Resource name of the event.
 	Name *string `json:"name,omitempty"`
 	// Timestamp that represents when the event was reported.
 	ReportTime *string `json:"reportTime,omitempty"`
-	// `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed.
+	// `TelemetryUsbPeripheralsEvent` is triggered USB devices are either added or removed. * Granular permission needed: TELEMETRY_API_PERIPHERALS_REPORT
 	UsbPeripheralsEvent *GoogleChromeManagementV1TelemetryUsbPeripheralsEvent `json:"usbPeripheralsEvent,omitempty"`
-	// Information about a user associated with telemetry data.
+	// Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER
 	User *GoogleChromeManagementV1TelemetryUserInfo `json:"user,omitempty"`
 }

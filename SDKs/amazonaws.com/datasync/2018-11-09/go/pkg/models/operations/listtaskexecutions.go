@@ -16,17 +16,21 @@ const (
 	ListTaskExecutionsXAmzTargetEnumFmrsServiceListTaskExecutions ListTaskExecutionsXAmzTargetEnum = "FmrsService.ListTaskExecutions"
 )
 
+func (e ListTaskExecutionsXAmzTargetEnum) ToPointer() *ListTaskExecutionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTaskExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.ListTaskExecutions":
-		*e = ListTaskExecutionsXAmzTargetEnum(s)
+		*e = ListTaskExecutionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTaskExecutionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTaskExecutionsXAmzTargetEnum: %v", v)
 	}
 }
 

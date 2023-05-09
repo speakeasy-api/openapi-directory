@@ -19,12 +19,16 @@ const (
 	BusinessNameLifecycleStateEnumSuspended       BusinessNameLifecycleStateEnum = "Suspended"
 )
 
+func (e BusinessNameLifecycleStateEnum) ToPointer() *BusinessNameLifecycleStateEnum {
+	return &e
+}
+
 func (e *BusinessNameLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Approved":
 		fallthrough
 	case "Expired":
@@ -34,10 +38,10 @@ func (e *BusinessNameLifecycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "Pending Approval":
 		fallthrough
 	case "Suspended":
-		*e = BusinessNameLifecycleStateEnum(s)
+		*e = BusinessNameLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessNameLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessNameLifecycleStateEnum: %v", v)
 	}
 }
 

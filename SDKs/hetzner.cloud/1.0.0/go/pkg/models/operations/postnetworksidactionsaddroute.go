@@ -45,21 +45,25 @@ const (
 	PostNetworksIDActionsAddRouteActionResponseActionStatusEnumError   PostNetworksIDActionsAddRouteActionResponseActionStatusEnum = "error"
 )
 
+func (e PostNetworksIDActionsAddRouteActionResponseActionStatusEnum) ToPointer() *PostNetworksIDActionsAddRouteActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostNetworksIDActionsAddRouteActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostNetworksIDActionsAddRouteActionResponseActionStatusEnum(s)
+		*e = PostNetworksIDActionsAddRouteActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworksIDActionsAddRouteActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworksIDActionsAddRouteActionResponseActionStatusEnum: %v", v)
 	}
 }
 

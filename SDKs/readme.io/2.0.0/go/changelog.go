@@ -84,7 +84,10 @@ func (s *changelog) CreateChangelog(ctx context.Context, request shared.Changelo
 // Delete the changelog with this slug
 func (s *changelog) DeleteChangelog(ctx context.Context, request operations.DeleteChangelogRequest, security operations.DeleteChangelogSecurity) (*operations.DeleteChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *changelog) DeleteChangelog(ctx context.Context, request operations.Dele
 // Returns the changelog with this slug
 func (s *changelog) GetChangelog(ctx context.Context, request operations.GetChangelogRequest, security operations.GetChangelogSecurity) (*operations.GetChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +207,10 @@ func (s *changelog) GetChangelogs(ctx context.Context, request operations.GetCha
 // Update a changelog with this slug
 func (s *changelog) UpdateChangelog(ctx context.Context, request operations.UpdateChangelogRequest, security operations.UpdateChangelogSecurity) (*operations.UpdateChangelogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/changelogs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Changelog", "json")
 	if err != nil {

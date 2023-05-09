@@ -15,17 +15,21 @@ const (
 	GETModifyVolumeAttributeActionEnumModifyVolumeAttribute GETModifyVolumeAttributeActionEnum = "ModifyVolumeAttribute"
 )
 
+func (e GETModifyVolumeAttributeActionEnum) ToPointer() *GETModifyVolumeAttributeActionEnum {
+	return &e
+}
+
 func (e *GETModifyVolumeAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVolumeAttribute":
-		*e = GETModifyVolumeAttributeActionEnum(s)
+		*e = GETModifyVolumeAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVolumeAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVolumeAttributeActionEnum: %v", v)
 	}
 }
 
@@ -41,17 +45,21 @@ const (
 	GETModifyVolumeAttributeVersionEnumTwoThousandAndSixteen1115 GETModifyVolumeAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyVolumeAttributeVersionEnum) ToPointer() *GETModifyVolumeAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETModifyVolumeAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyVolumeAttributeVersionEnum(s)
+		*e = GETModifyVolumeAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyVolumeAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyVolumeAttributeVersionEnum: %v", v)
 	}
 }
 

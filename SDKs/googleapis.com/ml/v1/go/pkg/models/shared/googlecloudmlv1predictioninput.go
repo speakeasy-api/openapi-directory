@@ -19,12 +19,16 @@ const (
 	GoogleCloudMlV1PredictionInputDataFormatEnumCsv                   GoogleCloudMlV1PredictionInputDataFormatEnum = "CSV"
 )
 
+func (e GoogleCloudMlV1PredictionInputDataFormatEnum) ToPointer() *GoogleCloudMlV1PredictionInputDataFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1PredictionInputDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "JSON":
@@ -36,10 +40,10 @@ func (e *GoogleCloudMlV1PredictionInputDataFormatEnum) UnmarshalJSON(data []byte
 	case "TF_RECORD_GZIP":
 		fallthrough
 	case "CSV":
-		*e = GoogleCloudMlV1PredictionInputDataFormatEnum(s)
+		*e = GoogleCloudMlV1PredictionInputDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1PredictionInputDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1PredictionInputDataFormatEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	GoogleCloudMlV1PredictionInputOutputDataFormatEnumCsv                   GoogleCloudMlV1PredictionInputOutputDataFormatEnum = "CSV"
 )
 
+func (e GoogleCloudMlV1PredictionInputOutputDataFormatEnum) ToPointer() *GoogleCloudMlV1PredictionInputOutputDataFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1PredictionInputOutputDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "JSON":
@@ -72,10 +80,10 @@ func (e *GoogleCloudMlV1PredictionInputOutputDataFormatEnum) UnmarshalJSON(data 
 	case "TF_RECORD_GZIP":
 		fallthrough
 	case "CSV":
-		*e = GoogleCloudMlV1PredictionInputOutputDataFormatEnum(s)
+		*e = GoogleCloudMlV1PredictionInputOutputDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1PredictionInputOutputDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1PredictionInputOutputDataFormatEnum: %v", v)
 	}
 }
 

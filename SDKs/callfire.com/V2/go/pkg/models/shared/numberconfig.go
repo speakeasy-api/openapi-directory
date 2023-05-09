@@ -15,19 +15,23 @@ const (
 	NumberConfigConfigTypeEnumTracking NumberConfigConfigTypeEnum = "TRACKING"
 )
 
+func (e NumberConfigConfigTypeEnum) ToPointer() *NumberConfigConfigTypeEnum {
+	return &e
+}
+
 func (e *NumberConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IVR":
 		fallthrough
 	case "TRACKING":
-		*e = NumberConfigConfigTypeEnum(s)
+		*e = NumberConfigConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberConfigConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberConfigConfigTypeEnum: %v", v)
 	}
 }
 

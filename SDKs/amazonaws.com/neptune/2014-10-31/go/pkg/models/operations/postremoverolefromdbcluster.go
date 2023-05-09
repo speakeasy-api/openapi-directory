@@ -15,17 +15,21 @@ const (
 	POSTRemoveRoleFromDBClusterActionEnumRemoveRoleFromDbCluster POSTRemoveRoleFromDBClusterActionEnum = "RemoveRoleFromDBCluster"
 )
 
+func (e POSTRemoveRoleFromDBClusterActionEnum) ToPointer() *POSTRemoveRoleFromDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTRemoveRoleFromDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveRoleFromDBCluster":
-		*e = POSTRemoveRoleFromDBClusterActionEnum(s)
+		*e = POSTRemoveRoleFromDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveRoleFromDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveRoleFromDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemoveRoleFromDBClusterVersionEnumTwoThousandAndFourteen1031 POSTRemoveRoleFromDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTRemoveRoleFromDBClusterVersionEnum) ToPointer() *POSTRemoveRoleFromDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTRemoveRoleFromDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTRemoveRoleFromDBClusterVersionEnum(s)
+		*e = POSTRemoveRoleFromDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveRoleFromDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveRoleFromDBClusterVersionEnum: %v", v)
 	}
 }
 

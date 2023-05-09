@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.DriverDetailsRequest{
-        Driverid: "corrupti",
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.DriverDetails(ctx, req)
+    res, err := s.DriverDetails(ctx, operations.DriverDetailsRequest{
+        Driverid: "corrupti",
+        Format: operations.DriverDetailsFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }

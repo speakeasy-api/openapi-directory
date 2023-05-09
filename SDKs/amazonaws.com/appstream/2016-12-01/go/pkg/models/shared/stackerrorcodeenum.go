@@ -14,18 +14,22 @@ const (
 	StackErrorCodeEnumInternalServiceError  StackErrorCodeEnum = "INTERNAL_SERVICE_ERROR"
 )
 
+func (e StackErrorCodeEnum) ToPointer() *StackErrorCodeEnum {
+	return &e
+}
+
 func (e *StackErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_CONNECTOR_ERROR":
 		fallthrough
 	case "INTERNAL_SERVICE_ERROR":
-		*e = StackErrorCodeEnum(s)
+		*e = StackErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StackErrorCodeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DescribeResourcePolicyXAmzTargetEnumNetworkFirewall20201112DescribeResourcePolicy DescribeResourcePolicyXAmzTargetEnum = "NetworkFirewall_20201112.DescribeResourcePolicy"
 )
 
+func (e DescribeResourcePolicyXAmzTargetEnum) ToPointer() *DescribeResourcePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeResourcePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkFirewall_20201112.DescribeResourcePolicy":
-		*e = DescribeResourcePolicyXAmzTargetEnum(s)
+		*e = DescribeResourcePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeResourcePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeResourcePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

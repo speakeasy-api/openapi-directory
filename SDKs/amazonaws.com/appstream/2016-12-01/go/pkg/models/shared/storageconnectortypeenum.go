@@ -16,20 +16,24 @@ const (
 	StorageConnectorTypeEnumOneDrive    StorageConnectorTypeEnum = "ONE_DRIVE"
 )
 
+func (e StorageConnectorTypeEnum) ToPointer() *StorageConnectorTypeEnum {
+	return &e
+}
+
 func (e *StorageConnectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOMEFOLDERS":
 		fallthrough
 	case "GOOGLE_DRIVE":
 		fallthrough
 	case "ONE_DRIVE":
-		*e = StorageConnectorTypeEnum(s)
+		*e = StorageConnectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageConnectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageConnectorTypeEnum: %v", v)
 	}
 }

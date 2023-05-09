@@ -16,21 +16,25 @@ const (
 	MoveAddressToVpcResultStatusEnumInClassic      MoveAddressToVpcResultStatusEnum = "InClassic"
 )
 
+func (e MoveAddressToVpcResultStatusEnum) ToPointer() *MoveAddressToVpcResultStatusEnum {
+	return &e
+}
+
 func (e *MoveAddressToVpcResultStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MoveInProgress":
 		fallthrough
 	case "InVpc":
 		fallthrough
 	case "InClassic":
-		*e = MoveAddressToVpcResultStatusEnum(s)
+		*e = MoveAddressToVpcResultStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MoveAddressToVpcResultStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MoveAddressToVpcResultStatusEnum: %v", v)
 	}
 }
 

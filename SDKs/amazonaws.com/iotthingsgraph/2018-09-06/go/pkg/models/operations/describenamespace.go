@@ -16,17 +16,21 @@ const (
 	DescribeNamespaceXAmzTargetEnumIotThingsGraphFrontEndServiceDescribeNamespace DescribeNamespaceXAmzTargetEnum = "IotThingsGraphFrontEndService.DescribeNamespace"
 )
 
+func (e DescribeNamespaceXAmzTargetEnum) ToPointer() *DescribeNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DescribeNamespace":
-		*e = DescribeNamespaceXAmzTargetEnum(s)
+		*e = DescribeNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

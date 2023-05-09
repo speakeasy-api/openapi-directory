@@ -16,21 +16,25 @@ const (
 	AptSettingsTypeEnumUpgrade         AptSettingsTypeEnum = "UPGRADE"
 )
 
+func (e AptSettingsTypeEnum) ToPointer() *AptSettingsTypeEnum {
+	return &e
+}
+
 func (e *AptSettingsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "DIST":
 		fallthrough
 	case "UPGRADE":
-		*e = AptSettingsTypeEnum(s)
+		*e = AptSettingsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AptSettingsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AptSettingsTypeEnum: %v", v)
 	}
 }
 

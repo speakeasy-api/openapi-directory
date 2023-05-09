@@ -15,20 +15,24 @@ const (
 	ImportTaskFilterNameEnumName         ImportTaskFilterNameEnum = "NAME"
 )
 
+func (e ImportTaskFilterNameEnum) ToPointer() *ImportTaskFilterNameEnum {
+	return &e
+}
+
 func (e *ImportTaskFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_TASK_ID":
 		fallthrough
 	case "STATUS":
 		fallthrough
 	case "NAME":
-		*e = ImportTaskFilterNameEnum(s)
+		*e = ImportTaskFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportTaskFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportTaskFilterNameEnum: %v", v)
 	}
 }

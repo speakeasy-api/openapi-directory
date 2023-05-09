@@ -15,17 +15,21 @@ const (
 	GETDeleteDBInstanceAutomatedBackupActionEnumDeleteDbInstanceAutomatedBackup GETDeleteDBInstanceAutomatedBackupActionEnum = "DeleteDBInstanceAutomatedBackup"
 )
 
+func (e GETDeleteDBInstanceAutomatedBackupActionEnum) ToPointer() *GETDeleteDBInstanceAutomatedBackupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBInstanceAutomatedBackupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteDBInstanceAutomatedBackup":
-		*e = GETDeleteDBInstanceAutomatedBackupActionEnum(s)
+		*e = GETDeleteDBInstanceAutomatedBackupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBInstanceAutomatedBackupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBInstanceAutomatedBackupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteDBInstanceAutomatedBackupVersionEnumTwoThousandAndFourteen1031 GETDeleteDBInstanceAutomatedBackupVersionEnum = "2014-10-31"
 )
 
+func (e GETDeleteDBInstanceAutomatedBackupVersionEnum) ToPointer() *GETDeleteDBInstanceAutomatedBackupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteDBInstanceAutomatedBackupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETDeleteDBInstanceAutomatedBackupVersionEnum(s)
+		*e = GETDeleteDBInstanceAutomatedBackupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteDBInstanceAutomatedBackupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteDBInstanceAutomatedBackupVersionEnum: %v", v)
 	}
 }
 

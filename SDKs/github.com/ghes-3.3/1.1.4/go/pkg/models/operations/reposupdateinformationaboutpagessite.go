@@ -17,19 +17,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnumWorkflow ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum = "workflow"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5BuildTypeEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnumRootDocs ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum = "/docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5Source2PathEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody5Source1EnumMasterDocs ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum = "master /docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gh-pages":
 		fallthrough
 	case "master":
 		fallthrough
 	case "master /docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody5Source1Enum: %v", v)
 	}
 }
 
@@ -110,19 +122,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnumWorkflow ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum = "workflow"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4BuildTypeEnum: %v", v)
 	}
 }
 
@@ -134,19 +150,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnumRootDocs ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum = "/docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4Source2PathEnum: %v", v)
 	}
 }
 
@@ -167,21 +187,25 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody4Source1EnumMasterDocs ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum = "master /docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gh-pages":
 		fallthrough
 	case "master":
 		fallthrough
 	case "master /docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody4Source1Enum: %v", v)
 	}
 }
 
@@ -203,19 +227,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnumWorkflow ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum = "workflow"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3BuildTypeEnum: %v", v)
 	}
 }
 
@@ -227,19 +255,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnumRootDocs ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum = "/docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3Source2PathEnum: %v", v)
 	}
 }
 
@@ -260,21 +292,25 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody3Source1EnumMasterDocs ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum = "master /docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gh-pages":
 		fallthrough
 	case "master":
 		fallthrough
 	case "master /docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody3Source1Enum: %v", v)
 	}
 }
 
@@ -296,19 +332,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnumWorkflow ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum = "workflow"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2BuildTypeEnum: %v", v)
 	}
 }
 
@@ -320,19 +360,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnumRootDocs ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum = "/docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2Source2PathEnum: %v", v)
 	}
 }
 
@@ -353,21 +397,25 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody2Source1EnumMasterDocs ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum = "master /docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gh-pages":
 		fallthrough
 	case "master":
 		fallthrough
 	case "master /docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody2Source1Enum: %v", v)
 	}
 }
 
@@ -389,19 +437,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnumWorkflow ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum = "workflow"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy":
 		fallthrough
 	case "workflow":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1BuildTypeEnum: %v", v)
 	}
 }
 
@@ -413,19 +465,23 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnumRootDocs ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum = "/docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "/":
 		fallthrough
 	case "/docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1Source2PathEnum: %v", v)
 	}
 }
 
@@ -446,21 +502,25 @@ const (
 	ReposUpdateInformationAboutPagesSiteRequestBody1Source1EnumMasterDocs ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum = "master /docs"
 )
 
+func (e ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum) ToPointer() *ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum {
+	return &e
+}
+
 func (e *ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gh-pages":
 		fallthrough
 	case "master":
 		fallthrough
 	case "master /docs":
-		*e = ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum(s)
+		*e = ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum: %s", s)
+		return fmt.Errorf("invalid value for ReposUpdateInformationAboutPagesSiteRequestBody1Source1Enum: %v", v)
 	}
 }
 

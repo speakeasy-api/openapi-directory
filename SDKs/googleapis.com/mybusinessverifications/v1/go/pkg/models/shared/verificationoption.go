@@ -20,12 +20,16 @@ const (
 	VerificationOptionVerificationMethodEnumVettedPartner                 VerificationOptionVerificationMethodEnum = "VETTED_PARTNER"
 )
 
+func (e VerificationOptionVerificationMethodEnum) ToPointer() *VerificationOptionVerificationMethodEnum {
+	return &e
+}
+
 func (e *VerificationOptionVerificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ADDRESS":
@@ -39,10 +43,10 @@ func (e *VerificationOptionVerificationMethodEnum) UnmarshalJSON(data []byte) er
 	case "AUTO":
 		fallthrough
 	case "VETTED_PARTNER":
-		*e = VerificationOptionVerificationMethodEnum(s)
+		*e = VerificationOptionVerificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerificationOptionVerificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VerificationOptionVerificationMethodEnum: %v", v)
 	}
 }
 

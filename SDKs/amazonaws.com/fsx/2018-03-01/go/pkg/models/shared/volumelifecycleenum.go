@@ -19,12 +19,16 @@ const (
 	VolumeLifecycleEnumAvailable     VolumeLifecycleEnum = "AVAILABLE"
 )
 
+func (e VolumeLifecycleEnum) ToPointer() *VolumeLifecycleEnum {
+	return &e
+}
+
 func (e *VolumeLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -38,9 +42,9 @@ func (e *VolumeLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING":
 		fallthrough
 	case "AVAILABLE":
-		*e = VolumeLifecycleEnum(s)
+		*e = VolumeLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeLifecycleEnum: %v", v)
 	}
 }

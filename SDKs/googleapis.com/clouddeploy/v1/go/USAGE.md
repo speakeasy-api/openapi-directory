@@ -2,19 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx, operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         DeliveryPipelineInput: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
                 "distinctio": "quibusdam",
@@ -23,8 +24,8 @@ func main() {
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
-                    Status: false,
-                    UpdateTime: "vel",
+                    Status: sdk.Bool(false),
+                    UpdateTime: sdk.String("vel"),
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
@@ -32,166 +33,277 @@ func main() {
                         "suscipit",
                         "iure",
                     },
-                    Status: false,
-                    UpdateTime: "magnam",
+                    Status: sdk.Bool(false),
+                    UpdateTime: sdk.String("magnam"),
                 },
                 TargetsTypeCondition: &shared.TargetsTypeCondition{
-                    ErrorDetails: "debitis",
-                    Status: false,
+                    ErrorDetails: sdk.String("debitis"),
+                    Status: sdk.Bool(false),
                 },
             },
-            Description: "ipsa",
-            Etag: "delectus",
+            Description: sdk.String("ipsa"),
+            Etag: sdk.String("delectus"),
             Labels: map[string]string{
                 "suscipit": "molestiae",
                 "minus": "placeat",
             },
-            Name: "voluptatum",
+            Name: sdk.String("Ted Mante"),
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "nisi",
-                            "recusandae",
-                            "temporibus",
+                            "quis",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
                                 CanaryDeployment: &shared.CanaryDeployment{
                                     Percentages: []int{
-                                        337396,
+                                        648172,
                                     },
-                                    Verify: false,
+                                    Verify: sdk.Bool(false),
                                 },
                                 CustomCanaryDeployment: &shared.CustomCanaryDeployment{
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
-                                            Percentage: 648172,
-                                            PhaseID: "perferendis",
+                                            Percentage: sdk.Int(368241),
+                                            PhaseID: sdk.String("repellendus"),
                                             Profiles: []string{
-                                                "repellendus",
-                                                "sapiente",
+                                                "quo",
+                                                "odit",
+                                                "at",
+                                                "at",
                                             },
-                                            Verify: false,
+                                            Verify: sdk.Bool(false),
                                         },
                                     },
                                 },
                                 RuntimeConfig: &shared.RuntimeConfig{
                                     CloudRun: &shared.CloudRunConfig{
-                                        AutomaticTrafficControl: false,
+                                        AutomaticTrafficControl: sdk.Bool(false),
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "quo",
-                                            HTTPRoute: "odit",
-                                            Service: "at",
+                                            Deployment: sdk.String("maiores"),
+                                            HTTPRoute: sdk.String("molestiae"),
+                                            Service: sdk.String("quod"),
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "at",
-                                            Service: "maiores",
+                                            Deployment: sdk.String("quod"),
+                                            Service: sdk.String("esse"),
                                         },
                                     },
                                 },
                             },
                             Standard: &shared.Standard{
-                                Verify: false,
+                                Verify: sdk.Bool(false),
                             },
                         },
-                        TargetID: "molestiae",
+                        TargetID: sdk.String("totam"),
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "quod",
-                            "esse",
-                            "totam",
-                            "porro",
+                            "dolorum",
+                            "dicta",
+                            "nam",
+                            "officia",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
                                 CanaryDeployment: &shared.CanaryDeployment{
                                     Percentages: []int{
-                                        118274,
-                                        720633,
-                                        639921,
+                                        143353,
+                                        537373,
+                                        944669,
                                     },
-                                    Verify: false,
+                                    Verify: sdk.Bool(false),
                                 },
                                 CustomCanaryDeployment: &shared.CustomCanaryDeployment{
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
-                                            Percentage: 143353,
-                                            PhaseID: "deleniti",
+                                            Percentage: sdk.Int(521848),
+                                            PhaseID: sdk.String("beatae"),
                                             Profiles: []string{
-                                                "optio",
-                                                "totam",
-                                                "beatae",
-                                                "commodi",
+                                                "molestiae",
+                                                "modi",
                                             },
-                                            Verify: false,
+                                            Verify: sdk.Bool(false),
                                         },
                                         shared.PhaseConfig{
-                                            Percentage: 473600,
-                                            PhaseID: "modi",
+                                            Percentage: sdk.Int(186332),
+                                            PhaseID: sdk.String("impedit"),
                                             Profiles: []string{
-                                                "impedit",
-                                            },
-                                            Verify: false,
-                                        },
-                                        shared.PhaseConfig{
-                                            Percentage: 736918,
-                                            PhaseID: "esse",
-                                            Profiles: []string{
+                                                "esse",
+                                                "ipsum",
                                                 "excepturi",
                                             },
-                                            Verify: false,
+                                            Verify: sdk.Bool(false),
+                                        },
+                                        shared.PhaseConfig{
+                                            Percentage: sdk.Int(135218),
+                                            PhaseID: sdk.String("perferendis"),
+                                            Profiles: []string{
+                                                "natus",
+                                                "sed",
+                                            },
+                                            Verify: sdk.Bool(false),
+                                        },
+                                        shared.PhaseConfig{
+                                            Percentage: sdk.Int(612096),
+                                            PhaseID: sdk.String("dolor"),
+                                            Profiles: []string{
+                                                "laboriosam",
+                                                "hic",
+                                                "saepe",
+                                            },
+                                            Verify: sdk.Bool(false),
                                         },
                                     },
                                 },
                                 RuntimeConfig: &shared.RuntimeConfig{
                                     CloudRun: &shared.CloudRunConfig{
-                                        AutomaticTrafficControl: false,
+                                        AutomaticTrafficControl: sdk.Bool(false),
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "aspernatur",
-                                            HTTPRoute: "perferendis",
-                                            Service: "ad",
+                                            Deployment: sdk.String("fuga"),
+                                            HTTPRoute: sdk.String("in"),
+                                            Service: sdk.String("corporis"),
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "natus",
-                                            Service: "sed",
+                                            Deployment: sdk.String("iste"),
+                                            Service: sdk.String("iure"),
                                         },
                                     },
                                 },
                             },
                             Standard: &shared.Standard{
-                                Verify: false,
+                                Verify: sdk.Bool(false),
                             },
                         },
-                        TargetID: "iste",
+                        TargetID: sdk.String("saepe"),
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "architecto",
+                            "ipsa",
+                            "reiciendis",
+                        },
+                        Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        653140,
+                                        670638,
+                                        170909,
+                                    },
+                                    Verify: sdk.Bool(false),
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: sdk.Int(358152),
+                                            PhaseID: sdk.String("explicabo"),
+                                            Profiles: []string{
+                                                "enim",
+                                                "omnis",
+                                                "nemo",
+                                                "minima",
+                                            },
+                                            Verify: sdk.Bool(false),
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: sdk.Bool(false),
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: sdk.String("excepturi"),
+                                            HTTPRoute: sdk.String("accusantium"),
+                                            Service: sdk.String("iure"),
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: sdk.String("culpa"),
+                                            Service: sdk.String("doloribus"),
+                                        },
+                                    },
+                                },
+                            },
+                            Standard: &shared.Standard{
+                                Verify: sdk.Bool(false),
+                            },
+                        },
+                        TargetID: sdk.String("sapiente"),
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "mollitia",
+                        },
+                        Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        635059,
+                                    },
+                                    Verify: sdk.Bool(false),
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: sdk.Int(995300),
+                                            PhaseID: sdk.String("mollitia"),
+                                            Profiles: []string{
+                                                "numquam",
+                                                "commodi",
+                                                "quam",
+                                            },
+                                            Verify: sdk.Bool(false),
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: sdk.Bool(false),
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: sdk.String("molestiae"),
+                                            HTTPRoute: sdk.String("velit"),
+                                            Service: sdk.String("error"),
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: sdk.String("quia"),
+                                            Service: sdk.String("quis"),
+                                        },
+                                    },
+                                },
+                            },
+                            Standard: &shared.Standard{
+                                Verify: sdk.Bool(false),
+                            },
+                        },
+                        TargetID: sdk.String("vitae"),
                     },
                 },
             },
-            Suspended: false,
+            Suspended: sdk.Bool(false),
         },
-        AccessToken: "dolor",
-        Alt: "media",
-        Callback: "laboriosam",
-        DeliveryPipelineID: "hic",
-        Fields: "saepe",
-        Key: "fuga",
-        OauthToken: "in",
-        Parent: "corporis",
-        PrettyPrint: false,
-        QuotaUser: "iste",
-        RequestID: "iure",
-        UploadType: "saepe",
-        UploadProtocol: "quidem",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx, req, operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity{
+        AccessToken: sdk.String("laborum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("enim"),
+        DeliveryPipelineID: sdk.String("odit"),
+        Fields: sdk.String("quo"),
+        Key: sdk.String("sequi"),
+        OauthToken: sdk.String("tenetur"),
+        Parent: "ipsam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("id"),
+        RequestID: sdk.String("possimus"),
+        UploadType: sdk.String("aut"),
+        UploadProtocol: sdk.String("quasi"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

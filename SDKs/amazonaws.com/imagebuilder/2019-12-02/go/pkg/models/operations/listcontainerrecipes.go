@@ -19,12 +19,16 @@ const (
 	ListContainerRecipesRequestBodyOwnerEnumThirdParty ListContainerRecipesRequestBodyOwnerEnum = "ThirdParty"
 )
 
+func (e ListContainerRecipesRequestBodyOwnerEnum) ToPointer() *ListContainerRecipesRequestBodyOwnerEnum {
+	return &e
+}
+
 func (e *ListContainerRecipesRequestBodyOwnerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Self":
 		fallthrough
 	case "Shared":
@@ -32,19 +36,19 @@ func (e *ListContainerRecipesRequestBodyOwnerEnum) UnmarshalJSON(data []byte) er
 	case "Amazon":
 		fallthrough
 	case "ThirdParty":
-		*e = ListContainerRecipesRequestBodyOwnerEnum(s)
+		*e = ListContainerRecipesRequestBodyOwnerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListContainerRecipesRequestBodyOwnerEnum: %s", s)
+		return fmt.Errorf("invalid value for ListContainerRecipesRequestBodyOwnerEnum: %v", v)
 	}
 }
 
 type ListContainerRecipesRequestBody struct {
 	// <p>Use the following filters to streamline results:</p> <ul> <li> <p> <code>containerType</code> </p> </li> <li> <p> <code>name</code> </p> </li> <li> <p> <code>parentImage</code> </p> </li> <li> <p> <code>platform</code> </p> </li> </ul>
 	Filters []shared.Filter `json:"filters,omitempty"`
-	// The maximum number of results to return in the list.
+	// The maximum items to return in a request.
 	MaxResults *int64 `json:"maxResults,omitempty"`
-	// Provides a token for pagination, which determines where to begin the next set of results when the current set reaches the maximum for one request.
+	// A token to specify where to start paginating. This is the NextToken from a previously truncated response.
 	NextToken *string `json:"nextToken,omitempty"`
 	// Returns container recipes belonging to the specified owner, that have been shared with you. You can omit this field to return container recipes belonging to your account.
 	Owner *ListContainerRecipesRequestBodyOwnerEnum `json:"owner,omitempty"`

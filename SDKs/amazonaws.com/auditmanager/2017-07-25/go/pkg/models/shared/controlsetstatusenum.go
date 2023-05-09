@@ -15,20 +15,24 @@ const (
 	ControlSetStatusEnumReviewed    ControlSetStatusEnum = "REVIEWED"
 )
 
+func (e ControlSetStatusEnum) ToPointer() *ControlSetStatusEnum {
+	return &e
+}
+
 func (e *ControlSetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "UNDER_REVIEW":
 		fallthrough
 	case "REVIEWED":
-		*e = ControlSetStatusEnum(s)
+		*e = ControlSetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlSetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlSetStatusEnum: %v", v)
 	}
 }

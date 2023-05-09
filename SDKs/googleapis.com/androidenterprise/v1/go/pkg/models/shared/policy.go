@@ -18,12 +18,16 @@ const (
 	PolicyAutoUpdatePolicyEnumAlways                      PolicyAutoUpdatePolicyEnum = "always"
 )
 
+func (e PolicyAutoUpdatePolicyEnum) ToPointer() *PolicyAutoUpdatePolicyEnum {
+	return &e
+}
+
 func (e *PolicyAutoUpdatePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "autoUpdatePolicyUnspecified":
 		fallthrough
 	case "choiceToTheUser":
@@ -33,10 +37,10 @@ func (e *PolicyAutoUpdatePolicyEnum) UnmarshalJSON(data []byte) error {
 	case "wifiOnly":
 		fallthrough
 	case "always":
-		*e = PolicyAutoUpdatePolicyEnum(s)
+		*e = PolicyAutoUpdatePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyAutoUpdatePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyAutoUpdatePolicyEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	PolicyDeviceReportPolicyEnumDeviceReportEnabled           PolicyDeviceReportPolicyEnum = "deviceReportEnabled"
 )
 
+func (e PolicyDeviceReportPolicyEnum) ToPointer() *PolicyDeviceReportPolicyEnum {
+	return &e
+}
+
 func (e *PolicyDeviceReportPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deviceReportPolicyUnspecified":
 		fallthrough
 	case "deviceReportDisabled":
 		fallthrough
 	case "deviceReportEnabled":
-		*e = PolicyDeviceReportPolicyEnum(s)
+		*e = PolicyDeviceReportPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyDeviceReportPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyDeviceReportPolicyEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	PolicyProductAvailabilityPolicyEnumAll                                  PolicyProductAvailabilityPolicyEnum = "all"
 )
 
+func (e PolicyProductAvailabilityPolicyEnum) ToPointer() *PolicyProductAvailabilityPolicyEnum {
+	return &e
+}
+
 func (e *PolicyProductAvailabilityPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "productAvailabilityPolicyUnspecified":
 		fallthrough
 	case "whitelist":
 		fallthrough
 	case "all":
-		*e = PolicyProductAvailabilityPolicyEnum(s)
+		*e = PolicyProductAvailabilityPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyProductAvailabilityPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyProductAvailabilityPolicyEnum: %v", v)
 	}
 }
 

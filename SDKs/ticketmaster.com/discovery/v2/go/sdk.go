@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Ticketmaster Discovery API allows you to search for events, attractions, or venues.
 type SDK struct {
 	V2 *v2
@@ -155,7 +170,10 @@ func (s *SDK) Find(ctx context.Context, request operations.FindRequest) (*operat
 // Get details for a specific attraction using the unique identifier for the attraction.
 func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/attractions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/attractions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +222,10 @@ func (s *SDK) Get(ctx context.Context, request operations.GetRequest) (*operatio
 // Get details for a specific genre using its unique identifier.
 func (s *SDK) GetGenre(ctx context.Context, request operations.GetGenreRequest) (*operations.GetGenreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/genres/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/genres/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,7 +274,10 @@ func (s *SDK) GetGenre(ctx context.Context, request operations.GetGenreRequest) 
 // Get images for a specific event using the unique identifier for the event.
 func (s *SDK) GetImages(ctx context.Context, request operations.GetImagesRequest) (*operations.GetImagesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -302,7 +326,10 @@ func (s *SDK) GetImages(ctx context.Context, request operations.GetImagesRequest
 // Get details for a specific segment using its unique identifier.
 func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentRequest) (*operations.GetSegmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/segments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/segments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -351,7 +378,10 @@ func (s *SDK) GetSegment(ctx context.Context, request operations.GetSegmentReque
 // Get details for a specific sub-genre using its unique identifier.
 func (s *SDK) GetSubgenre(ctx context.Context, request operations.GetSubgenreRequest) (*operations.GetSubgenreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/subgenres/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/subgenres/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -449,7 +479,10 @@ func (s *SDK) GetDiscoveryV2Classifications(ctx context.Context, request operati
 // Get details for a specific segment, genre, or sub-genre using its unique identifier.
 func (s *SDK) GetDiscoveryV2ClassificationsID(ctx context.Context, request operations.GetDiscoveryV2ClassificationsIDRequest) (*operations.GetDiscoveryV2ClassificationsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/classifications/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -547,7 +580,10 @@ func (s *SDK) GetDiscoveryV2Events(ctx context.Context, request operations.GetDi
 // Get details for a specific event using the unique identifier for the event. This includes the venue and location, the attraction(s), and the Ticketmaster Website URL for purchasing tickets for the event.
 func (s *SDK) GetDiscoveryV2EventsID(ctx context.Context, request operations.GetDiscoveryV2EventsIDRequest) (*operations.GetDiscoveryV2EventsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/events/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -645,7 +681,10 @@ func (s *SDK) GetDiscoveryV2Venues(ctx context.Context, request operations.GetDi
 // Get details for a specific venue using the unique identifier for the venue.
 func (s *SDK) GetDiscoveryV2VenuesID(ctx context.Context, request operations.GetDiscoveryV2VenuesIDRequest) (*operations.GetDiscoveryV2VenuesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/discovery/v2/venues/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/discovery/v2/venues/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

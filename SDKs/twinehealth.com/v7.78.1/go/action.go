@@ -106,7 +106,10 @@ func (s *action) CreateAction(ctx context.Context, request shared.CreateActionRe
 // Get a health action from a patient's plan.
 func (s *action) FetchAction(ctx context.Context, request operations.FetchActionRequest) (*operations.FetchActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +166,10 @@ func (s *action) FetchAction(ctx context.Context, request operations.FetchAction
 // Update a health action from a patient's plan.
 func (s *action) UpdateAction(ctx context.Context, request operations.UpdateActionRequest) (*operations.UpdateActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/action/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateActionRequestInput", "json")
 	if err != nil {

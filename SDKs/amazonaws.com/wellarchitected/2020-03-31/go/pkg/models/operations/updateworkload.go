@@ -22,19 +22,23 @@ const (
 	UpdateWorkloadRequestBodyEnvironmentEnumPreproduction UpdateWorkloadRequestBodyEnvironmentEnum = "PREPRODUCTION"
 )
 
+func (e UpdateWorkloadRequestBodyEnvironmentEnum) ToPointer() *UpdateWorkloadRequestBodyEnvironmentEnum {
+	return &e
+}
+
 func (e *UpdateWorkloadRequestBodyEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCTION":
 		fallthrough
 	case "PREPRODUCTION":
-		*e = UpdateWorkloadRequestBodyEnvironmentEnum(s)
+		*e = UpdateWorkloadRequestBodyEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkloadRequestBodyEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkloadRequestBodyEnvironmentEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	UpdateWorkloadRequestBodyImprovementStatusEnumRiskAcknowledged UpdateWorkloadRequestBodyImprovementStatusEnum = "RISK_ACKNOWLEDGED"
 )
 
+func (e UpdateWorkloadRequestBodyImprovementStatusEnum) ToPointer() *UpdateWorkloadRequestBodyImprovementStatusEnum {
+	return &e
+}
+
 func (e *UpdateWorkloadRequestBodyImprovementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_APPLICABLE":
 		fallthrough
 	case "NOT_STARTED":
@@ -64,10 +72,10 @@ func (e *UpdateWorkloadRequestBodyImprovementStatusEnum) UnmarshalJSON(data []by
 	case "COMPLETE":
 		fallthrough
 	case "RISK_ACKNOWLEDGED":
-		*e = UpdateWorkloadRequestBodyImprovementStatusEnum(s)
+		*e = UpdateWorkloadRequestBodyImprovementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkloadRequestBodyImprovementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkloadRequestBodyImprovementStatusEnum: %v", v)
 	}
 }
 

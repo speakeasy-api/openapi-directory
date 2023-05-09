@@ -14,18 +14,22 @@ const (
 	ReleaseStatusValuesEnumProd ReleaseStatusValuesEnum = "prod"
 )
 
+func (e ReleaseStatusValuesEnum) ToPointer() *ReleaseStatusValuesEnum {
+	return &e
+}
+
 func (e *ReleaseStatusValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "beta":
 		fallthrough
 	case "prod":
-		*e = ReleaseStatusValuesEnum(s)
+		*e = ReleaseStatusValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseStatusValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseStatusValuesEnum: %v", v)
 	}
 }

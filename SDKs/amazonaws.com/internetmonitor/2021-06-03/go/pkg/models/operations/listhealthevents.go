@@ -18,19 +18,23 @@ const (
 	ListHealthEventsEventStatusEnumResolved ListHealthEventsEventStatusEnum = "RESOLVED"
 )
 
+func (e ListHealthEventsEventStatusEnum) ToPointer() *ListHealthEventsEventStatusEnum {
+	return &e
+}
+
 func (e *ListHealthEventsEventStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "RESOLVED":
-		*e = ListHealthEventsEventStatusEnum(s)
+		*e = ListHealthEventsEventStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHealthEventsEventStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHealthEventsEventStatusEnum: %v", v)
 	}
 }
 

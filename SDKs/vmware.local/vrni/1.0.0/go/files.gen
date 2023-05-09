@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -268,4 +269,13 @@ pkg/models/shared/recommendedrule.go
 pkg/models/shared/simpleportrange.go
 pkg/models/shared/searchrequest.go
 pkg/models/shared/sortbyclause.go
+docs/sdk/README.md
+docs/applications/README.md
+docs/authentication/README.md
+docs/datasources/README.md
+docs/entities/README.md
+docs/info/README.md
+docs/infrastructure/README.md
+docs/microsegmentation/README.md
+docs/search/README.md
 USAGE.md

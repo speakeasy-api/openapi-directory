@@ -29,12 +29,16 @@ const (
 	SpaceSpaceThreadingStateEnumUnthreadedMessages             SpaceSpaceThreadingStateEnum = "UNTHREADED_MESSAGES"
 )
 
+func (e SpaceSpaceThreadingStateEnum) ToPointer() *SpaceSpaceThreadingStateEnum {
+	return &e
+}
+
 func (e *SpaceSpaceThreadingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPACE_THREADING_STATE_UNSPECIFIED":
 		fallthrough
 	case "THREADED_MESSAGES":
@@ -42,10 +46,10 @@ func (e *SpaceSpaceThreadingStateEnum) UnmarshalJSON(data []byte) error {
 	case "GROUPED_MESSAGES":
 		fallthrough
 	case "UNTHREADED_MESSAGES":
-		*e = SpaceSpaceThreadingStateEnum(s)
+		*e = SpaceSpaceThreadingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceSpaceThreadingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SpaceSpaceThreadingStateEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	SpaceTypeEnumDm              SpaceTypeEnum = "DM"
 )
 
+func (e SpaceTypeEnum) ToPointer() *SpaceTypeEnum {
+	return &e
+}
+
 func (e *SpaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ROOM":
 		fallthrough
 	case "DM":
-		*e = SpaceTypeEnum(s)
+		*e = SpaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SpaceTypeEnum: %v", v)
 	}
 }
 

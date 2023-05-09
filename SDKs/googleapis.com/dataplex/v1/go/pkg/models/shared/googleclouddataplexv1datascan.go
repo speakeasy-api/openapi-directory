@@ -18,12 +18,16 @@ const (
 	GoogleCloudDataplexV1DataScanStateEnumActionRequired   GoogleCloudDataplexV1DataScanStateEnum = "ACTION_REQUIRED"
 )
 
+func (e GoogleCloudDataplexV1DataScanStateEnum) ToPointer() *GoogleCloudDataplexV1DataScanStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1DataScanStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDataplexV1DataScanStateEnum) UnmarshalJSON(data []byte) erro
 	case "DELETING":
 		fallthrough
 	case "ACTION_REQUIRED":
-		*e = GoogleCloudDataplexV1DataScanStateEnum(s)
+		*e = GoogleCloudDataplexV1DataScanStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataScanStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataScanStateEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudDataplexV1DataScanTypeEnumDataProfile             GoogleCloudDataplexV1DataScanTypeEnum = "DATA_PROFILE"
 )
 
+func (e GoogleCloudDataplexV1DataScanTypeEnum) ToPointer() *GoogleCloudDataplexV1DataScanTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1DataScanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_SCAN_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATA_QUALITY":
 		fallthrough
 	case "DATA_PROFILE":
-		*e = GoogleCloudDataplexV1DataScanTypeEnum(s)
+		*e = GoogleCloudDataplexV1DataScanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataScanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataScanTypeEnum: %v", v)
 	}
 }
 
@@ -76,7 +84,7 @@ type GoogleCloudDataplexV1DataScan struct {
 	// DataProfileResult defines the output of DataProfileScan. Each field of the table will have field type specific profile result.
 	DataProfileResult *GoogleCloudDataplexV1DataProfileResult `json:"dataProfileResult,omitempty"`
 	// DataProfileScan related setting.
-	DataProfileSpec map[string]interface{} `json:"dataProfileSpec,omitempty"`
+	DataProfileSpec *GoogleCloudDataplexV1DataProfileSpec `json:"dataProfileSpec,omitempty"`
 	// The output of a DataQualityScan.
 	DataQualityResult *GoogleCloudDataplexV1DataQualityResult `json:"dataQualityResult,omitempty"`
 	// DataQualityScan related setting.
@@ -110,7 +118,7 @@ type GoogleCloudDataplexV1DataScanInput struct {
 	// DataProfileResult defines the output of DataProfileScan. Each field of the table will have field type specific profile result.
 	DataProfileResult *GoogleCloudDataplexV1DataProfileResult `json:"dataProfileResult,omitempty"`
 	// DataProfileScan related setting.
-	DataProfileSpec map[string]interface{} `json:"dataProfileSpec,omitempty"`
+	DataProfileSpec *GoogleCloudDataplexV1DataProfileSpec `json:"dataProfileSpec,omitempty"`
 	// The output of a DataQualityScan.
 	DataQualityResult *GoogleCloudDataplexV1DataQualityResult `json:"dataQualityResult,omitempty"`
 	// DataQualityScan related setting.

@@ -36,12 +36,16 @@ const (
 	ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -55,10 +59,10 @@ func (e *ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorStackTraceDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

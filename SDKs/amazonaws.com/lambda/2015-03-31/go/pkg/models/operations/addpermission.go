@@ -17,19 +17,23 @@ const (
 	AddPermissionRequestBodyFunctionURLAuthTypeEnumAwsIam AddPermissionRequestBodyFunctionURLAuthTypeEnum = "AWS_IAM"
 )
 
+func (e AddPermissionRequestBodyFunctionURLAuthTypeEnum) ToPointer() *AddPermissionRequestBodyFunctionURLAuthTypeEnum {
+	return &e
+}
+
 func (e *AddPermissionRequestBodyFunctionURLAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "AWS_IAM":
-		*e = AddPermissionRequestBodyFunctionURLAuthTypeEnum(s)
+		*e = AddPermissionRequestBodyFunctionURLAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddPermissionRequestBodyFunctionURLAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddPermissionRequestBodyFunctionURLAuthTypeEnum: %v", v)
 	}
 }
 

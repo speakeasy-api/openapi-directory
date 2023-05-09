@@ -62,7 +62,10 @@ func newSchemaResponses(defaultClient, securityClient HTTPClient, serverURL, lan
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponses) SchemaResponseDelete(ctx context.Context, request operations.SchemaResponseDeleteRequest) (*operations.SchemaResponseDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *schemaResponses) SchemaResponseDelete(ctx context.Context, request oper
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponses) SchemaResponsePatch(ctx context.Context, request operations.SchemaResponsePatchRequest) (*operations.SchemaResponsePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -269,7 +275,10 @@ func (s *schemaResponses) SchemaResponsesList(ctx context.Context) (*operations.
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *schemaResponses) SchemaResponsesRead(ctx context.Context, request operations.SchemaResponsesReadRequest) (*operations.SchemaResponsesReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schema_responses/{schema_response_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

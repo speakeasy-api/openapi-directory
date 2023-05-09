@@ -2,27 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCountriesRequest{
-        MarketID: "corrupti",
-        Order: "descending",
-        RegionName: "distinctio",
-        RegionTypeID: 844266,
-        Sort: "label",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.GetCountries(ctx, req)
+    res, err := s.V1.GetCountries(ctx, operations.GetCountriesRequest{
+        MarketID: "corrupti",
+        Order: operations.GetCountriesOrderEnumDescending.ToPointer(),
+        RegionName: sdk.String("distinctio"),
+        RegionTypeID: sdk.Int64(844266),
+        Sort: operations.GetCountriesSortEnumLabel.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -14,18 +14,22 @@ const (
 	VideoColorRangeEnumLimited VideoColorRangeEnum = "LIMITED"
 )
 
+func (e VideoColorRangeEnum) ToPointer() *VideoColorRangeEnum {
+	return &e
+}
+
 func (e *VideoColorRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL":
 		fallthrough
 	case "LIMITED":
-		*e = VideoColorRangeEnum(s)
+		*e = VideoColorRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoColorRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoColorRangeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	UpdateHITReviewStatusXAmzTargetEnumMTurkRequesterServiceV20170117UpdateHitReviewStatus UpdateHITReviewStatusXAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateHITReviewStatus"
 )
 
+func (e UpdateHITReviewStatusXAmzTargetEnum) ToPointer() *UpdateHITReviewStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateHITReviewStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.UpdateHITReviewStatus":
-		*e = UpdateHITReviewStatusXAmzTargetEnum(s)
+		*e = UpdateHITReviewStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateHITReviewStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateHITReviewStatusXAmzTargetEnum: %v", v)
 	}
 }
 

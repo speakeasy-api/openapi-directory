@@ -18,12 +18,16 @@ const (
 	DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnumDisassociated  DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum = "disassociated"
 )
 
+func (e DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum) ToPointer() *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -31,10 +35,10 @@ func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssocia
 	case "disassociating":
 		fallthrough
 	case "disassociated":
-		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum(s)
+		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsAssociationStateEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnumTgwPeering           DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum = "tgw-peering"
 )
 
+func (e DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum) ToPointer() *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -73,10 +81,10 @@ func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourc
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum(s)
+		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -99,12 +107,16 @@ const (
 	DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnumFailing           DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum = "failing"
 )
 
+func (e DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum) ToPointer() *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum {
+	return &e
+}
+
 func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initiating":
 		fallthrough
 	case "initiatingRequest":
@@ -130,10 +142,10 @@ func (e *DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEn
 	case "rejecting":
 		fallthrough
 	case "failing":
-		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum(s)
+		*e = DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTransitGatewayAttachmentsResultTransitGatewayAttachmentsStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListAssessmentTemplatesXAmzTargetEnumInspectorServiceListAssessmentTemplates ListAssessmentTemplatesXAmzTargetEnum = "InspectorService.ListAssessmentTemplates"
 )
 
+func (e ListAssessmentTemplatesXAmzTargetEnum) ToPointer() *ListAssessmentTemplatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAssessmentTemplatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.ListAssessmentTemplates":
-		*e = ListAssessmentTemplatesXAmzTargetEnum(s)
+		*e = ListAssessmentTemplatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssessmentTemplatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssessmentTemplatesXAmzTargetEnum: %v", v)
 	}
 }
 

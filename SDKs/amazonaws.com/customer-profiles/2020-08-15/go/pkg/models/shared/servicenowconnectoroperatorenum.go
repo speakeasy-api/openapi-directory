@@ -33,12 +33,16 @@ const (
 	ServiceNowConnectorOperatorEnumNoOp                 ServiceNowConnectorOperatorEnum = "NO_OP"
 )
 
+func (e ServiceNowConnectorOperatorEnum) ToPointer() *ServiceNowConnectorOperatorEnum {
+	return &e
+}
+
 func (e *ServiceNowConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "CONTAINS":
@@ -80,9 +84,9 @@ func (e *ServiceNowConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = ServiceNowConnectorOperatorEnum(s)
+		*e = ServiceNowConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceNowConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceNowConnectorOperatorEnum: %v", v)
 	}
 }

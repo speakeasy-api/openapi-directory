@@ -14,19 +14,23 @@ const (
 	ConsentAcknowledgementStatusEnumUnknown ConsentAcknowledgementStatusEnum = "UNKNOWN"
 )
 
+func (e ConsentAcknowledgementStatusEnum) ToPointer() *ConsentAcknowledgementStatusEnum {
+	return &e
+}
+
 func (e *ConsentAcknowledgementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "UNKNOWN":
-		*e = ConsentAcknowledgementStatusEnum(s)
+		*e = ConsentAcknowledgementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConsentAcknowledgementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConsentAcknowledgementStatusEnum: %v", v)
 	}
 }
 

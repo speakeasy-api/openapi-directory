@@ -17,9 +17,9 @@ type RetrieveAllRequisitionsRequest struct {
 type RetrieveAllRequisitionsResponse struct {
 	ContentType string
 	// Retrieve all requisitions
-	PaginatedRequisitionV2List *shared.PaginatedRequisitionV2List
-	StatusCode                 int
-	RawResponse                *http.Response
+	PaginatedRequisitionList *shared.PaginatedRequisitionList
+	StatusCode               int
+	RawResponse              *http.Response
 	// Unknown Fields
 	RetrieveAllRequisitions400ApplicationJSONObject map[string]interface{}
 	// Invalid token
@@ -28,4 +28,6 @@ type RetrieveAllRequisitionsResponse struct {
 	RetrieveAllRequisitions403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RetrieveAllRequisitions404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveAllRequisitions429ApplicationJSONObject map[string]interface{}
 }

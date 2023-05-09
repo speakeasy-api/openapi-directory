@@ -15,20 +15,24 @@ const (
 	RegistryTypeEnumHook     RegistryTypeEnum = "HOOK"
 )
 
+func (e RegistryTypeEnum) ToPointer() *RegistryTypeEnum {
+	return &e
+}
+
 func (e *RegistryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = RegistryTypeEnum(s)
+		*e = RegistryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistryTypeEnum: %v", v)
 	}
 }

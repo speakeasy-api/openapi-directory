@@ -17,12 +17,16 @@ const (
 	HistoryKeyFormFactorEnumTablet         HistoryKeyFormFactorEnum = "TABLET"
 )
 
+func (e HistoryKeyFormFactorEnum) ToPointer() *HistoryKeyFormFactorEnum {
+	return &e
+}
+
 func (e *HistoryKeyFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_FORM_FACTORS":
 		fallthrough
 	case "PHONE":
@@ -30,10 +34,10 @@ func (e *HistoryKeyFormFactorEnum) UnmarshalJSON(data []byte) error {
 	case "DESKTOP":
 		fallthrough
 	case "TABLET":
-		*e = HistoryKeyFormFactorEnum(s)
+		*e = HistoryKeyFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HistoryKeyFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for HistoryKeyFormFactorEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newSettlementreports(defaultClient, securityClient HTTPClient, serverURL, l
 // ContentSettlementreportsGet - Retrieves a settlement report from your Merchant Center account.
 func (s *settlementreports) ContentSettlementreportsGet(ctx context.Context, request operations.ContentSettlementreportsGetRequest, security operations.ContentSettlementreportsGetSecurity) (*operations.ContentSettlementreportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *settlementreports) ContentSettlementreportsGet(ctx context.Context, req
 // ContentSettlementreportsList - Retrieves a list of settlement reports from your Merchant Center account.
 func (s *settlementreports) ContentSettlementreportsList(ctx context.Context, request operations.ContentSettlementreportsListRequest, security operations.ContentSettlementreportsListSecurity) (*operations.ContentSettlementreportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

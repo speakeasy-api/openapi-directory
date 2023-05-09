@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -30,6 +31,7 @@ pkg/models/operations/getpodcastsinbatch.go
 pkg/models/operations/getregions.go
 pkg/models/operations/justlisten.go
 pkg/models/operations/getpodcastaudience.go
+pkg/models/operations/getpodcastsbydomainname.go
 pkg/models/operations/getplaylistbyid.go
 pkg/models/operations/getplaylists.go
 pkg/models/operations/deletepodcastbyid.go
@@ -64,6 +66,7 @@ pkg/models/shared/getpodcastsinbatchresponse.go
 pkg/models/shared/getpodcastsinbatchform.go
 pkg/models/shared/getregionsresponse.go
 pkg/models/shared/podcastaudienceresponse.go
+pkg/models/shared/podcastdomainresponse.go
 pkg/models/shared/playlistresponse.go
 pkg/models/shared/playlistvisibilityfieldenum.go
 pkg/models/shared/playlistitem.go
@@ -86,4 +89,10 @@ pkg/models/shared/podcastminimumrss.go
 pkg/models/webhooks/podcastdeleted.go
 pkg/models/webhooks/podcastssubmitaccepted.go
 pkg/models/webhooks/podcastssubmitrejected.go
+docs/sdk/README.md
+docs/directoryapi/README.md
+docs/insightsapi/README.md
+docs/playlistapi/README.md
+docs/podcasterapi/README.md
+docs/searchapi/README.md
 USAGE.md

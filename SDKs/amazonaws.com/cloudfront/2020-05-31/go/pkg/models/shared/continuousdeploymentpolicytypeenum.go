@@ -14,18 +14,22 @@ const (
 	ContinuousDeploymentPolicyTypeEnumSingleHeader ContinuousDeploymentPolicyTypeEnum = "SingleHeader"
 )
 
+func (e ContinuousDeploymentPolicyTypeEnum) ToPointer() *ContinuousDeploymentPolicyTypeEnum {
+	return &e
+}
+
 func (e *ContinuousDeploymentPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SingleWeight":
 		fallthrough
 	case "SingleHeader":
-		*e = ContinuousDeploymentPolicyTypeEnum(s)
+		*e = ContinuousDeploymentPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContinuousDeploymentPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContinuousDeploymentPolicyTypeEnum: %v", v)
 	}
 }

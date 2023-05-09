@@ -15,17 +15,21 @@ const (
 	POSTDescribeEnvironmentManagedActionHistoryActionEnumDescribeEnvironmentManagedActionHistory POSTDescribeEnvironmentManagedActionHistoryActionEnum = "DescribeEnvironmentManagedActionHistory"
 )
 
+func (e POSTDescribeEnvironmentManagedActionHistoryActionEnum) ToPointer() *POSTDescribeEnvironmentManagedActionHistoryActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEnvironmentManagedActionHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEnvironmentManagedActionHistory":
-		*e = POSTDescribeEnvironmentManagedActionHistoryActionEnum(s)
+		*e = POSTDescribeEnvironmentManagedActionHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionHistoryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeEnvironmentManagedActionHistoryVersionEnumTwoThousandAndTen1201 POSTDescribeEnvironmentManagedActionHistoryVersionEnum = "2010-12-01"
 )
 
+func (e POSTDescribeEnvironmentManagedActionHistoryVersionEnum) ToPointer() *POSTDescribeEnvironmentManagedActionHistoryVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeEnvironmentManagedActionHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDescribeEnvironmentManagedActionHistoryVersionEnum(s)
+		*e = POSTDescribeEnvironmentManagedActionHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeEnvironmentManagedActionHistoryVersionEnum: %v", v)
 	}
 }
 

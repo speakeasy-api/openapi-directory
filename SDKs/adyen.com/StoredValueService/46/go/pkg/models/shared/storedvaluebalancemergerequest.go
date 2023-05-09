@@ -24,12 +24,16 @@ const (
 	StoredValueBalanceMergeRequestShopperInteractionEnumPos       StoredValueBalanceMergeRequestShopperInteractionEnum = "POS"
 )
 
+func (e StoredValueBalanceMergeRequestShopperInteractionEnum) ToPointer() *StoredValueBalanceMergeRequestShopperInteractionEnum {
+	return &e
+}
+
 func (e *StoredValueBalanceMergeRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "ContAuth":
@@ -37,10 +41,10 @@ func (e *StoredValueBalanceMergeRequestShopperInteractionEnum) UnmarshalJSON(dat
 	case "Moto":
 		fallthrough
 	case "POS":
-		*e = StoredValueBalanceMergeRequestShopperInteractionEnum(s)
+		*e = StoredValueBalanceMergeRequestShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoredValueBalanceMergeRequestShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for StoredValueBalanceMergeRequestShopperInteractionEnum: %v", v)
 	}
 }
 

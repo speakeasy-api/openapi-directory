@@ -16,27 +16,31 @@ const (
 	GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnumAnyOf                               GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum = "ANY_OF"
 )
 
+func (e GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum) ToPointer() *GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHRASE_MATCH_RULE_GROUP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ALL_OF":
 		fallthrough
 	case "ANY_OF":
-		*e = GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum: %v", v)
 	}
 }
 
 // GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup - A message representing a rule in the phrase matcher.
 type GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup struct {
-	// A list of phase match rules that are included in this group.
+	// A list of phrase match rules that are included in this group.
 	PhraseMatchRules []GoogleCloudContactcenterinsightsV1PhraseMatchRule `json:"phraseMatchRules,omitempty"`
 	// Required. The type of this phrase match rule group.
 	Type *GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupTypeEnum `json:"type,omitempty"`

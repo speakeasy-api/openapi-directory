@@ -16,17 +16,21 @@ const (
 	IncreaseStreamRetentionPeriodXAmzTargetEnumKinesis20131202IncreaseStreamRetentionPeriod IncreaseStreamRetentionPeriodXAmzTargetEnum = "Kinesis_20131202.IncreaseStreamRetentionPeriod"
 )
 
+func (e IncreaseStreamRetentionPeriodXAmzTargetEnum) ToPointer() *IncreaseStreamRetentionPeriodXAmzTargetEnum {
+	return &e
+}
+
 func (e *IncreaseStreamRetentionPeriodXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.IncreaseStreamRetentionPeriod":
-		*e = IncreaseStreamRetentionPeriodXAmzTargetEnum(s)
+		*e = IncreaseStreamRetentionPeriodXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncreaseStreamRetentionPeriodXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for IncreaseStreamRetentionPeriodXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CachePolicyTypeEnumCustom  CachePolicyTypeEnum = "custom"
 )
 
+func (e CachePolicyTypeEnum) ToPointer() *CachePolicyTypeEnum {
+	return &e
+}
+
 func (e *CachePolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managed":
 		fallthrough
 	case "custom":
-		*e = CachePolicyTypeEnum(s)
+		*e = CachePolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CachePolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CachePolicyTypeEnum: %v", v)
 	}
 }

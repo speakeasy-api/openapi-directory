@@ -19,12 +19,16 @@ const (
 	CommissionStatusEnumWaitingInvoice CommissionStatusEnum = "waiting_invoice"
 )
 
+func (e CommissionStatusEnum) ToPointer() *CommissionStatusEnum {
+	return &e
+}
+
 func (e *CommissionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completed":
 		fallthrough
 	case "unclaimed":
@@ -36,10 +40,10 @@ func (e *CommissionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "waiting":
 		fallthrough
 	case "waiting_invoice":
-		*e = CommissionStatusEnum(s)
+		*e = CommissionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommissionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CommissionStatusEnum: %v", v)
 	}
 }
 

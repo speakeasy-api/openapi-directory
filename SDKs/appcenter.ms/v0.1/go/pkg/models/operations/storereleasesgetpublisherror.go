@@ -35,12 +35,16 @@ const (
 	StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnumTooManyRequests     StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum) ToPointer() *StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum(s)
+		*e = StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetPublishErrorDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

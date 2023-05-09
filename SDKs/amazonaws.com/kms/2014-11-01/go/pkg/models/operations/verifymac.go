@@ -16,17 +16,21 @@ const (
 	VerifyMacXAmzTargetEnumTrentServiceVerifyMac VerifyMacXAmzTargetEnum = "TrentService.VerifyMac"
 )
 
+func (e VerifyMacXAmzTargetEnum) ToPointer() *VerifyMacXAmzTargetEnum {
+	return &e
+}
+
 func (e *VerifyMacXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.VerifyMac":
-		*e = VerifyMacXAmzTargetEnum(s)
+		*e = VerifyMacXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyMacXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyMacXAmzTargetEnum: %v", v)
 	}
 }
 

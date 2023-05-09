@@ -17,12 +17,16 @@ const (
 	InstancePolicyProvisioningModelEnumPreemptible                  InstancePolicyProvisioningModelEnum = "PREEMPTIBLE"
 )
 
+func (e InstancePolicyProvisioningModelEnum) ToPointer() *InstancePolicyProvisioningModelEnum {
+	return &e
+}
+
 func (e *InstancePolicyProvisioningModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVISIONING_MODEL_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -30,10 +34,10 @@ func (e *InstancePolicyProvisioningModelEnum) UnmarshalJSON(data []byte) error {
 	case "SPOT":
 		fallthrough
 	case "PREEMPTIBLE":
-		*e = InstancePolicyProvisioningModelEnum(s)
+		*e = InstancePolicyProvisioningModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstancePolicyProvisioningModelEnum: %s", s)
+		return fmt.Errorf("invalid value for InstancePolicyProvisioningModelEnum: %v", v)
 	}
 }
 

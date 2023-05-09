@@ -4,5 +4,6 @@ package shared
 
 // CreateClusterResult - Success
 type CreateClusterResult struct {
-	ClusterID *string `json:"ClusterId,omitempty"`
+	ClusterID      *string        `json:"ClusterId,omitempty"`
+	JobListEntries []JobListEntry `json:"JobListEntries,omitempty"`
 }

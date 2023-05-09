@@ -36,7 +36,10 @@ func newJobs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Deletes a transcription job. All data related to the job, such as input media and transcript, will be permanently deleted. A job can only be deleted once it's completed (either with success or failure).
 func (s *jobs) DeleteJobByID(ctx context.Context, request operations.DeleteJobByIDRequest) (*operations.DeleteJobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *jobs) DeleteJobByID(ctx context.Context, request operations.DeleteJobBy
 // Returns information about a transcription job
 func (s *jobs) GetJobByID(ctx context.Context, request operations.GetJobByIDRequest) (*operations.GetJobByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

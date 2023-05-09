@@ -15,17 +15,21 @@ const (
 	POSTGetInstanceTypesFromInstanceRequirementsActionEnumGetInstanceTypesFromInstanceRequirements POSTGetInstanceTypesFromInstanceRequirementsActionEnum = "GetInstanceTypesFromInstanceRequirements"
 )
 
+func (e POSTGetInstanceTypesFromInstanceRequirementsActionEnum) ToPointer() *POSTGetInstanceTypesFromInstanceRequirementsActionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceTypesFromInstanceRequirementsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetInstanceTypesFromInstanceRequirements":
-		*e = POSTGetInstanceTypesFromInstanceRequirementsActionEnum(s)
+		*e = POSTGetInstanceTypesFromInstanceRequirementsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceTypesFromInstanceRequirementsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceTypesFromInstanceRequirementsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetInstanceTypesFromInstanceRequirementsVersionEnumTwoThousandAndSixteen1115 POSTGetInstanceTypesFromInstanceRequirementsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetInstanceTypesFromInstanceRequirementsVersionEnum) ToPointer() *POSTGetInstanceTypesFromInstanceRequirementsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceTypesFromInstanceRequirementsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetInstanceTypesFromInstanceRequirementsVersionEnum(s)
+		*e = POSTGetInstanceTypesFromInstanceRequirementsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceTypesFromInstanceRequirementsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceTypesFromInstanceRequirementsVersionEnum: %v", v)
 	}
 }
 

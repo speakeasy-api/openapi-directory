@@ -16,17 +16,21 @@ const (
 	UpdateIdentityProviderXAmzTargetEnumAwsCognitoIdentityProviderServiceUpdateIdentityProvider UpdateIdentityProviderXAmzTargetEnum = "AWSCognitoIdentityProviderService.UpdateIdentityProvider"
 )
 
+func (e UpdateIdentityProviderXAmzTargetEnum) ToPointer() *UpdateIdentityProviderXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateIdentityProviderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.UpdateIdentityProvider":
-		*e = UpdateIdentityProviderXAmzTargetEnum(s)
+		*e = UpdateIdentityProviderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateIdentityProviderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateIdentityProviderXAmzTargetEnum: %v", v)
 	}
 }
 

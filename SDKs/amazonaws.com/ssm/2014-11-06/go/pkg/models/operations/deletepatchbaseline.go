@@ -16,17 +16,21 @@ const (
 	DeletePatchBaselineXAmzTargetEnumAmazonSsmDeletePatchBaseline DeletePatchBaselineXAmzTargetEnum = "AmazonSSM.DeletePatchBaseline"
 )
 
+func (e DeletePatchBaselineXAmzTargetEnum) ToPointer() *DeletePatchBaselineXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePatchBaselineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeletePatchBaseline":
-		*e = DeletePatchBaselineXAmzTargetEnum(s)
+		*e = DeletePatchBaselineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePatchBaselineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePatchBaselineXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -8,9 +8,9 @@ type Answer struct {
 	// List of choices available for a question.
 	Choices                    []Choice `json:"Choices,omitempty"`
 	HelpfulResourceDisplayText *string  `json:"HelpfulResourceDisplayText,omitempty"`
-	// The helpful resource URL for a question.
+	// <p>The helpful resource URL.</p> <p>For Amazon Web Services official lenses, this is the helpful resource URL for a question or choice.</p> <p>For custom lenses, this is the helpful resource URL for a question and is only provided if <code>HelpfulResourceDisplayText</code> was specified for the question.</p>
 	HelpfulResourceURL *string `json:"HelpfulResourceUrl,omitempty"`
-	// <p>The improvement plan URL for a question.</p> <p>This value is only available if the question has been answered.</p>
+	// <p>The improvement plan URL for a question in an Amazon Web Services official lenses.</p> <p>This value is only available if the question has been answered.</p> <p>This value does not apply to custom lenses.</p>
 	ImprovementPlanURL *string `json:"ImprovementPlanUrl,omitempty"`
 	// Defines whether this question is applicable to a lens review.
 	IsApplicable *bool `json:"IsApplicable,omitempty"`

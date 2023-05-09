@@ -15,20 +15,24 @@ const (
 	CertificateStatusTypeEnumInactive        CertificateStatusTypeEnum = "INACTIVE"
 )
 
+func (e CertificateStatusTypeEnum) ToPointer() *CertificateStatusTypeEnum {
+	return &e
+}
+
 func (e *CertificateStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PENDING_ROTATION":
 		fallthrough
 	case "INACTIVE":
-		*e = CertificateStatusTypeEnum(s)
+		*e = CertificateStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateStatusTypeEnum: %v", v)
 	}
 }

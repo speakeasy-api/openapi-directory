@@ -17,12 +17,16 @@ const (
 	CancelScheduledPlayResponseMessageEnumScheduledPlayCancelationFailed           CancelScheduledPlayResponseMessageEnum = "Scheduled Play Cancelation Failed"
 )
 
+func (e CancelScheduledPlayResponseMessageEnum) ToPointer() *CancelScheduledPlayResponseMessageEnum {
+	return &e
+}
+
 func (e *CancelScheduledPlayResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scheduled Play Cancelation Executed":
 		fallthrough
 	case "SchedPlayId Parameter must be present":
@@ -30,10 +34,10 @@ func (e *CancelScheduledPlayResponseMessageEnum) UnmarshalJSON(data []byte) erro
 	case "Scheduled Play Cancelation Failed -- ID not found":
 		fallthrough
 	case "Scheduled Play Cancelation Failed":
-		*e = CancelScheduledPlayResponseMessageEnum(s)
+		*e = CancelScheduledPlayResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelScheduledPlayResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelScheduledPlayResponseMessageEnum: %v", v)
 	}
 }
 

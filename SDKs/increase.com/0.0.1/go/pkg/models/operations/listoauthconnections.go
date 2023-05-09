@@ -14,23 +14,27 @@ type ListOauthConnectionsRequest struct {
 	Limit  *int64  `queryParam:"style=form,explode=true,name=limit"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON13StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListOauthConnectionsDefaultApplicationJSON13StatusEnum = "429"
+	ListOauthConnectionsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListOauthConnectionsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON13StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListOauthConnectionsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListOauthConnectionsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -40,17 +44,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON13TypeEnumRateLimitedError ListOauthConnectionsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON13TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON13TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -62,23 +70,27 @@ type ListOauthConnectionsDefaultApplicationJSON13 struct {
 	Type       ListOauthConnectionsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON12StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON12StatusEnum = "403"
+	ListOauthConnectionsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON12StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListOauthConnectionsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListOauthConnectionsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -88,17 +100,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON12TypeEnumPrivateFeatureError ListOauthConnectionsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON12TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON12TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -109,23 +125,27 @@ type ListOauthConnectionsDefaultApplicationJSON12 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON11StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListOauthConnectionsDefaultApplicationJSON11StatusEnum = "404"
+	ListOauthConnectionsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListOauthConnectionsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON11StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListOauthConnectionsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListOauthConnectionsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -135,17 +155,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON11TypeEnumObjectNotFoundError ListOauthConnectionsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON11TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON11TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -156,23 +180,27 @@ type ListOauthConnectionsDefaultApplicationJSON11 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON10StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON10StatusEnumFourHundred ListOauthConnectionsDefaultApplicationJSON10StatusEnum = "400"
+	ListOauthConnectionsDefaultApplicationJSON10StatusEnumFourHundred ListOauthConnectionsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON10StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListOauthConnectionsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListOauthConnectionsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -182,17 +210,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON10TypeEnumMalformedRequestError ListOauthConnectionsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON10TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON10TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -203,23 +235,27 @@ type ListOauthConnectionsDefaultApplicationJSON10 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON9StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON9StatusEnumFourHundred ListOauthConnectionsDefaultApplicationJSON9StatusEnum = "400"
+	ListOauthConnectionsDefaultApplicationJSON9StatusEnumFourHundred ListOauthConnectionsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON9StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListOauthConnectionsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListOauthConnectionsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -229,46 +265,54 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON9TypeEnumInvalidParametersError ListOauthConnectionsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON9TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON9TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListOauthConnectionsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                              `json:"errors,omitempty"`
+	Errors []map[string]interface{}                              `json:"errors"`
 	Status ListOauthConnectionsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                `json:"title"`
 	Type   ListOauthConnectionsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON8StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListOauthConnectionsDefaultApplicationJSON8StatusEnum = "409"
+	ListOauthConnectionsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListOauthConnectionsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON8StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListOauthConnectionsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListOauthConnectionsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -278,17 +322,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON8TypeEnumInvalidOperationError ListOauthConnectionsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON8TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON8TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -299,23 +347,27 @@ type ListOauthConnectionsDefaultApplicationJSON8 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON7StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListOauthConnectionsDefaultApplicationJSON7StatusEnum = "401"
+	ListOauthConnectionsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListOauthConnectionsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON7StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListOauthConnectionsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListOauthConnectionsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -325,17 +377,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListOauthConnectionsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON7TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON7TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -346,23 +402,27 @@ type ListOauthConnectionsDefaultApplicationJSON7 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON6StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON6StatusEnumFiveHundred ListOauthConnectionsDefaultApplicationJSON6StatusEnum = "500"
+	ListOauthConnectionsDefaultApplicationJSON6StatusEnumFiveHundred ListOauthConnectionsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON6StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListOauthConnectionsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListOauthConnectionsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -372,17 +432,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON6TypeEnumInternalServerError ListOauthConnectionsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON6TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON6TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -393,23 +457,27 @@ type ListOauthConnectionsDefaultApplicationJSON6 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON5StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON5StatusEnum = "403"
+	ListOauthConnectionsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON5StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListOauthConnectionsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListOauthConnectionsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -419,17 +487,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListOauthConnectionsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON5TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON5TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -440,23 +512,27 @@ type ListOauthConnectionsDefaultApplicationJSON5 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON4StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListOauthConnectionsDefaultApplicationJSON4StatusEnum = "422"
+	ListOauthConnectionsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListOauthConnectionsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON4StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListOauthConnectionsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListOauthConnectionsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -466,17 +542,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListOauthConnectionsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON4TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON4TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -487,23 +567,27 @@ type ListOauthConnectionsDefaultApplicationJSON4 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON3StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListOauthConnectionsDefaultApplicationJSON3StatusEnum = "409"
+	ListOauthConnectionsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListOauthConnectionsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON3StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListOauthConnectionsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListOauthConnectionsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -513,17 +597,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListOauthConnectionsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON3TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON3TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -534,23 +622,27 @@ type ListOauthConnectionsDefaultApplicationJSON3 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON2StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON2StatusEnum = "403"
+	ListOauthConnectionsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListOauthConnectionsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON2StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListOauthConnectionsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListOauthConnectionsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -560,17 +652,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListOauthConnectionsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON2TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON2TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -581,23 +677,27 @@ type ListOauthConnectionsDefaultApplicationJSON2 struct {
 	Type   ListOauthConnectionsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListOauthConnectionsDefaultApplicationJSON1StatusEnum string
+type ListOauthConnectionsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListOauthConnectionsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListOauthConnectionsDefaultApplicationJSON1StatusEnum = "404"
+	ListOauthConnectionsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListOauthConnectionsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON1StatusEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListOauthConnectionsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListOauthConnectionsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -607,17 +707,21 @@ const (
 	ListOauthConnectionsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListOauthConnectionsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListOauthConnectionsDefaultApplicationJSON1TypeEnum) ToPointer() *ListOauthConnectionsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListOauthConnectionsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListOauthConnectionsDefaultApplicationJSON1TypeEnum(s)
+		*e = ListOauthConnectionsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOauthConnectionsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

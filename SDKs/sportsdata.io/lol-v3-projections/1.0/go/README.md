@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/lol-v3-proj
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        Date: "corrupti",
-        Format: "xml",
-    }
-
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DfsSlatesByDate(ctx, operations.DfsSlatesByDateRequest{
+        Date: "corrupti",
+        Format: operations.DfsSlatesByDateFormatEnumXML,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,11 +46,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DfsSlatesByDate` - Dfs Slates By Date
-* `ProjectedPlayerGameStatsByDate` - Projected Player Game Stats by Date
-* `ProjectedPlayerGameStatsByPlayer` - Projected Player Game Stats by Player
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [ProjectedPlayerGameStatsByDate](docs/sdk/README.md#projectedplayergamestatsbydate) - Projected Player Game Stats by Date
+* [ProjectedPlayerGameStatsByPlayer](docs/sdk/README.md#projectedplayergamestatsbyplayer) - Projected Player Game Stats by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

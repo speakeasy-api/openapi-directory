@@ -16,17 +16,21 @@ const (
 	DescribePatchGroupsXAmzTargetEnumAmazonSsmDescribePatchGroups DescribePatchGroupsXAmzTargetEnum = "AmazonSSM.DescribePatchGroups"
 )
 
+func (e DescribePatchGroupsXAmzTargetEnum) ToPointer() *DescribePatchGroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePatchGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribePatchGroups":
-		*e = DescribePatchGroupsXAmzTargetEnum(s)
+		*e = DescribePatchGroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePatchGroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePatchGroupsXAmzTargetEnum: %v", v)
 	}
 }
 

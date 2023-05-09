@@ -18,12 +18,16 @@ const (
 	CallRecipientVoiceEnumFrenchcanadian1 CallRecipientVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e CallRecipientVoiceEnum) ToPointer() *CallRecipientVoiceEnum {
+	return &e
+}
+
 func (e *CallRecipientVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -33,10 +37,10 @@ func (e *CallRecipientVoiceEnum) UnmarshalJSON(data []byte) error {
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = CallRecipientVoiceEnum(s)
+		*e = CallRecipientVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallRecipientVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for CallRecipientVoiceEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateNotificationSettingsXAmzTargetEnumMTurkRequesterServiceV20170117UpdateNotificationSettings UpdateNotificationSettingsXAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateNotificationSettings"
 )
 
+func (e UpdateNotificationSettingsXAmzTargetEnum) ToPointer() *UpdateNotificationSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateNotificationSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.UpdateNotificationSettings":
-		*e = UpdateNotificationSettingsXAmzTargetEnum(s)
+		*e = UpdateNotificationSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNotificationSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNotificationSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

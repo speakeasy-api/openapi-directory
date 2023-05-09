@@ -16,17 +16,21 @@ const (
 	DescribeEndpointsXAmzTargetEnumTimestream20181101DescribeEndpoints DescribeEndpointsXAmzTargetEnum = "Timestream_20181101.DescribeEndpoints"
 )
 
+func (e DescribeEndpointsXAmzTargetEnum) ToPointer() *DescribeEndpointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.DescribeEndpoints":
-		*e = DescribeEndpointsXAmzTargetEnum(s)
+		*e = DescribeEndpointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEndpointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEndpointsXAmzTargetEnum: %v", v)
 	}
 }
 

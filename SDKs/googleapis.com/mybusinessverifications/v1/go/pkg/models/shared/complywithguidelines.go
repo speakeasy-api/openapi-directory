@@ -16,21 +16,25 @@ const (
 	ComplyWithGuidelinesRecommendationReasonEnumBusinessLocationDisabled        ComplyWithGuidelinesRecommendationReasonEnum = "BUSINESS_LOCATION_DISABLED"
 )
 
+func (e ComplyWithGuidelinesRecommendationReasonEnum) ToPointer() *ComplyWithGuidelinesRecommendationReasonEnum {
+	return &e
+}
+
 func (e *ComplyWithGuidelinesRecommendationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOMMENDATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "BUSINESS_LOCATION_SUSPENDED":
 		fallthrough
 	case "BUSINESS_LOCATION_DISABLED":
-		*e = ComplyWithGuidelinesRecommendationReasonEnum(s)
+		*e = ComplyWithGuidelinesRecommendationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComplyWithGuidelinesRecommendationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ComplyWithGuidelinesRecommendationReasonEnum: %v", v)
 	}
 }
 

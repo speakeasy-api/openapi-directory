@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ebay.com/commerce-charity
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCharityOrgRequest{
+    ctx := context.Background()
+    res, err := s.CharityOrg.GetCharityOrg(ctx, operations.GetCharityOrgRequest{
         XEbayCMarketplaceID: "corrupti",
         CharityOrgID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CharityOrg.GetCharityOrg(ctx, req, operations.GetCharityOrgSecurity{
+    }, operations.GetCharityOrgSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -48,10 +45,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### CharityOrg
+### [CharityOrg](docs/charityorg/README.md)
 
-* `GetCharityOrg` - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
-* `GetCharityOrgs` - This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria.<br /><br />The call returns paginated search results containing the charitable organizations that match the specified criteria.
+* [GetCharityOrg](docs/charityorg/README.md#getcharityorg) - This call is used to retrieve detailed information about supported charitable organizations. It allows users to retrieve the details for a specific charitable organization using its charity organization ID.
+* [GetCharityOrgs](docs/charityorg/README.md#getcharityorgs) - This call is used to search for supported charitable organizations. It allows users to search for a specific charitable organization, or for multiple charitable organizations, from a particular charitable domain and/or geographical region, or by using search criteria.<br /><br />The call returns paginated search results containing the charitable organizations that match the specified criteria.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -22,21 +22,25 @@ const (
 	DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnumGatewayLoadBalancerEndpoint DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum = "gateway-load-balancer-endpoint"
 )
 
+func (e DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum) ToPointer() *DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum {
+	return &e
+}
+
 func (e *DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "network-interface":
 		fallthrough
 	case "network-load-balancer":
 		fallthrough
 	case "gateway-load-balancer-endpoint":
-		*e = DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum(s)
+		*e = DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum: %v", v)
 	}
 }
 

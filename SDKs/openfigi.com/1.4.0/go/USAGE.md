@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.GetMappingValuesKeyRequest{
-        Key: "currency",
-    }
-
     ctx := context.Background()
-    res, err := s.GetMappingValuesKey(ctx, req)
+    res, err := s.GetMappingValuesKey(ctx, operations.GetMappingValuesKeyRequest{
+        Key: operations.GetMappingValuesKeyKeyEnumCurrency,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,19 +15,23 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnumDatabasePersistenceDisabled          GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum = "DATABASE_PERSISTENCE_DISABLED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_PERSISTENCE_POLICY_UNSPECIFIED":
 		fallthrough
 	case "DATABASE_PERSISTENCE_DISABLED":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionDatabasePersistencePolicyEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnumSnapshot GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum = "SNAPSHOT"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "DRAFT":
@@ -57,10 +65,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum) Unm
 	case "ARCHIVED":
 		fallthrough
 	case "SNAPSHOT":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationTemplateVersionStatusEnum: %v", v)
 	}
 }
 

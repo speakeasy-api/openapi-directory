@@ -15,17 +15,21 @@ const (
 	GETModifyDBInstanceActionEnumModifyDbInstance GETModifyDBInstanceActionEnum = "ModifyDBInstance"
 )
 
+func (e GETModifyDBInstanceActionEnum) ToPointer() *GETModifyDBInstanceActionEnum {
+	return &e
+}
+
 func (e *GETModifyDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBInstance":
-		*e = GETModifyDBInstanceActionEnum(s)
+		*e = GETModifyDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	GETModifyDBInstanceVersionEnumTwoThousandAndFourteen1031 GETModifyDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyDBInstanceVersionEnum) ToPointer() *GETModifyDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETModifyDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyDBInstanceVersionEnum(s)
+		*e = GETModifyDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBInstanceVersionEnum: %v", v)
 	}
 }
 

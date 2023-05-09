@@ -15,17 +15,21 @@ const (
 	POSTCopyDBClusterParameterGroupActionEnumCopyDbClusterParameterGroup POSTCopyDBClusterParameterGroupActionEnum = "CopyDBClusterParameterGroup"
 )
 
+func (e POSTCopyDBClusterParameterGroupActionEnum) ToPointer() *POSTCopyDBClusterParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCopyDBClusterParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CopyDBClusterParameterGroup":
-		*e = POSTCopyDBClusterParameterGroupActionEnum(s)
+		*e = POSTCopyDBClusterParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyDBClusterParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyDBClusterParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCopyDBClusterParameterGroupVersionEnumTwoThousandAndFourteen1031 POSTCopyDBClusterParameterGroupVersionEnum = "2014-10-31"
 )
 
+func (e POSTCopyDBClusterParameterGroupVersionEnum) ToPointer() *POSTCopyDBClusterParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCopyDBClusterParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTCopyDBClusterParameterGroupVersionEnum(s)
+		*e = POSTCopyDBClusterParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCopyDBClusterParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCopyDBClusterParameterGroupVersionEnum: %v", v)
 	}
 }
 

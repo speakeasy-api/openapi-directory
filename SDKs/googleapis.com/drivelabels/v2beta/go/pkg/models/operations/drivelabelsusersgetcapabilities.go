@@ -17,19 +17,23 @@ const (
 	DrivelabelsUsersGetCapabilitiesViewEnumLabelViewFull  DrivelabelsUsersGetCapabilitiesViewEnum = "LABEL_VIEW_FULL"
 )
 
+func (e DrivelabelsUsersGetCapabilitiesViewEnum) ToPointer() *DrivelabelsUsersGetCapabilitiesViewEnum {
+	return &e
+}
+
 func (e *DrivelabelsUsersGetCapabilitiesViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_VIEW_BASIC":
 		fallthrough
 	case "LABEL_VIEW_FULL":
-		*e = DrivelabelsUsersGetCapabilitiesViewEnum(s)
+		*e = DrivelabelsUsersGetCapabilitiesViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DrivelabelsUsersGetCapabilitiesViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DrivelabelsUsersGetCapabilitiesViewEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	LeaderboardEntryTimeSpanEnumDaily                    LeaderboardEntryTimeSpanEnum = "DAILY"
 )
 
+func (e LeaderboardEntryTimeSpanEnum) ToPointer() *LeaderboardEntryTimeSpanEnum {
+	return &e
+}
+
 func (e *LeaderboardEntryTimeSpanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_TIME_SPAN_UNSPECIFIED":
 		fallthrough
 	case "ALL_TIME":
@@ -30,10 +34,10 @@ func (e *LeaderboardEntryTimeSpanEnum) UnmarshalJSON(data []byte) error {
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = LeaderboardEntryTimeSpanEnum(s)
+		*e = LeaderboardEntryTimeSpanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeaderboardEntryTimeSpanEnum: %s", s)
+		return fmt.Errorf("invalid value for LeaderboardEntryTimeSpanEnum: %v", v)
 	}
 }
 

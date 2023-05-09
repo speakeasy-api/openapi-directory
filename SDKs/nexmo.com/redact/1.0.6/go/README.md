@@ -13,25 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/redact/1.0.6/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.RedactTransaction{
-        ID: "209ab3c7536542b91e8b5aef032f6861",
-        Product: "sms",
-        Type: "outbound",
-    }
-
     ctx := context.Background()
-    res, err := s.RedactMessage(ctx, req, operations.RedactMessageSecurity{
+    res, err := s.RedactMessage(ctx, shared.RedactTransaction{
+        ID: "209ab3c7536542b91e8b5aef032f6861",
+        Product: shared.RedactTransactionProductEnumSms,
+        Type: shared.RedactTransactionTypeEnumOutbound,
+    }, operations.RedactMessageSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -49,9 +47,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `RedactMessage` - Redact a specific message
+* [RedactMessage](docs/sdk/README.md#redactmessage) - Redact a specific message
 <!-- End SDK Available Operations -->
 
 ### Maturity

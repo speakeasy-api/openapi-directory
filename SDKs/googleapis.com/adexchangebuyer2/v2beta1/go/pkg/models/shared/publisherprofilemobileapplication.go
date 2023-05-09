@@ -26,12 +26,16 @@ const (
 	PublisherProfileMobileApplicationAppStoreEnumXiaomi                  PublisherProfileMobileApplicationAppStoreEnum = "XIAOMI"
 )
 
+func (e PublisherProfileMobileApplicationAppStoreEnum) ToPointer() *PublisherProfileMobileApplicationAppStoreEnum {
+	return &e
+}
+
 func (e *PublisherProfileMobileApplicationAppStoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_STORE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "APPLE_ITUNES":
@@ -57,10 +61,10 @@ func (e *PublisherProfileMobileApplicationAppStoreEnum) UnmarshalJSON(data []byt
 	case "VIVO":
 		fallthrough
 	case "XIAOMI":
-		*e = PublisherProfileMobileApplicationAppStoreEnum(s)
+		*e = PublisherProfileMobileApplicationAppStoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublisherProfileMobileApplicationAppStoreEnum: %s", s)
+		return fmt.Errorf("invalid value for PublisherProfileMobileApplicationAppStoreEnum: %v", v)
 	}
 }
 

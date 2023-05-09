@@ -17,12 +17,16 @@ const (
 	DynamicGroupStatusStatusEnumInvalidQuery        DynamicGroupStatusStatusEnum = "INVALID_QUERY"
 )
 
+func (e DynamicGroupStatusStatusEnum) ToPointer() *DynamicGroupStatusStatusEnum {
+	return &e
+}
+
 func (e *DynamicGroupStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "UP_TO_DATE":
@@ -30,10 +34,10 @@ func (e *DynamicGroupStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING_MEMBERSHIPS":
 		fallthrough
 	case "INVALID_QUERY":
-		*e = DynamicGroupStatusStatusEnum(s)
+		*e = DynamicGroupStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamicGroupStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamicGroupStatusStatusEnum: %v", v)
 	}
 }
 

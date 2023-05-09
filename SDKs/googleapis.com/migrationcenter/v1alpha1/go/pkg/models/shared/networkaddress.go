@@ -16,21 +16,25 @@ const (
 	NetworkAddressAssignmentEnumAddressAssignmentDhcp        NetworkAddressAssignmentEnum = "ADDRESS_ASSIGNMENT_DHCP"
 )
 
+func (e NetworkAddressAssignmentEnum) ToPointer() *NetworkAddressAssignmentEnum {
+	return &e
+}
+
 func (e *NetworkAddressAssignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADDRESS_ASSIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "ADDRESS_ASSIGNMENT_STATIC":
 		fallthrough
 	case "ADDRESS_ASSIGNMENT_DHCP":
-		*e = NetworkAddressAssignmentEnum(s)
+		*e = NetworkAddressAssignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkAddressAssignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkAddressAssignmentEnum: %v", v)
 	}
 }
 

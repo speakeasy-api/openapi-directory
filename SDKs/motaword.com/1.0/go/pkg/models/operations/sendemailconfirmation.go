@@ -15,19 +15,23 @@ const (
 	SendEmailConfirmation200ApplicationJSONStatusEnumAlreadyConfirmed SendEmailConfirmation200ApplicationJSONStatusEnum = "already_confirmed"
 )
 
+func (e SendEmailConfirmation200ApplicationJSONStatusEnum) ToPointer() *SendEmailConfirmation200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *SendEmailConfirmation200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "already_confirmed":
-		*e = SendEmailConfirmation200ApplicationJSONStatusEnum(s)
+		*e = SendEmailConfirmation200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendEmailConfirmation200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SendEmailConfirmation200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

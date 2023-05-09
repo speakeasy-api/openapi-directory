@@ -16,12 +16,16 @@ const (
 	ReplacementTypeEnumEnumUseNewContent   ReplacementTypeEnumEnum = "USE_NEW_CONTENT"
 )
 
+func (e ReplacementTypeEnumEnum) ToPointer() *ReplacementTypeEnumEnum {
+	return &e
+}
+
 func (e *ReplacementTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KEEP_BASE":
 		fallthrough
 	case "KEEP_SOURCE":
@@ -29,9 +33,9 @@ func (e *ReplacementTypeEnumEnum) UnmarshalJSON(data []byte) error {
 	case "KEEP_DESTINATION":
 		fallthrough
 	case "USE_NEW_CONTENT":
-		*e = ReplacementTypeEnumEnum(s)
+		*e = ReplacementTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplacementTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplacementTypeEnumEnum: %v", v)
 	}
 }

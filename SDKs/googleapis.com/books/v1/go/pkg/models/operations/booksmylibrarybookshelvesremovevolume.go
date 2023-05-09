@@ -22,19 +22,23 @@ const (
 	BooksMylibraryBookshelvesRemoveVolumeReasonEnumOnboarding      BooksMylibraryBookshelvesRemoveVolumeReasonEnum = "ONBOARDING"
 )
 
+func (e BooksMylibraryBookshelvesRemoveVolumeReasonEnum) ToPointer() *BooksMylibraryBookshelvesRemoveVolumeReasonEnum {
+	return &e
+}
+
 func (e *BooksMylibraryBookshelvesRemoveVolumeReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNDEFINED":
 		fallthrough
 	case "ONBOARDING":
-		*e = BooksMylibraryBookshelvesRemoveVolumeReasonEnum(s)
+		*e = BooksMylibraryBookshelvesRemoveVolumeReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksMylibraryBookshelvesRemoveVolumeReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksMylibraryBookshelvesRemoveVolumeReasonEnum: %v", v)
 	}
 }
 

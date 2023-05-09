@@ -16,12 +16,16 @@ const (
 	AccountLimitNameEnumOptOutLists       AccountLimitNameEnum = "OPT_OUT_LISTS"
 )
 
+func (e AccountLimitNameEnum) ToPointer() *AccountLimitNameEnum {
+	return &e
+}
+
 func (e *AccountLimitNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHONE_NUMBERS":
 		fallthrough
 	case "POOLS":
@@ -29,9 +33,9 @@ func (e *AccountLimitNameEnum) UnmarshalJSON(data []byte) error {
 	case "CONFIGURATION_SETS":
 		fallthrough
 	case "OPT_OUT_LISTS":
-		*e = AccountLimitNameEnum(s)
+		*e = AccountLimitNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountLimitNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountLimitNameEnum: %v", v)
 	}
 }

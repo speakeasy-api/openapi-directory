@@ -16,12 +16,16 @@ const (
 	GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnumComplete              GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum = "COMPLETE"
 )
 
+func (e GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum) ToPointer() *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum {
+	return &e
+}
+
 func (e *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -29,10 +33,10 @@ func (e *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagement
 	case "BASIC":
 		fallthrough
 	case "COMPLETE":
-		*e = GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum(s)
+		*e = GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedDeviceManagementLevelsEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnumEncrypted             GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum = "ENCRYPTED"
 )
 
+func (e GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum) ToPointer() *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum {
+	return &e
+}
+
 func (e *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_UNSPECIFIED":
 		fallthrough
 	case "ENCRYPTION_UNSUPPORTED":
@@ -58,10 +66,10 @@ func (e *GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatus
 	case "UNENCRYPTED":
 		fallthrough
 	case "ENCRYPTED":
-		*e = GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum(s)
+		*e = GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleIdentityAccesscontextmanagerV1DevicePolicyAllowedEncryptionStatusesEnum: %v", v)
 	}
 }
 

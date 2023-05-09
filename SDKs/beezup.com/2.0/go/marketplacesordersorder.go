@@ -32,9 +32,14 @@ func newMarketplacesOrdersOrder(defaultClient, securityClient HTTPClient, server
 }
 
 // ChangeOrder - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.)
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request operations.ChangeOrderRequest) (*operations.ChangeOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/{changeOrderType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -109,9 +114,14 @@ func (s *marketplacesOrdersOrder) ChangeOrder(ctx context.Context, request opera
 }
 
 // ClearMerchantOrderInfo - [DEPRECATED] Clear an Order's merchant information
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) ClearMerchantOrderInfo(ctx context.Context, request operations.ClearMerchantOrderInfoRequest) (*operations.ClearMerchantOrderInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/clearMerchantOrderInfo", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -159,9 +169,14 @@ func (s *marketplacesOrdersOrder) ClearMerchantOrderInfo(ctx context.Context, re
 
 // GetOrder - [DEPRECATED] DEPRECATED - Get full Order and Order Item(s) properties
 // DEPRECATED - Use /orders/v3 instead
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -222,9 +237,14 @@ func (s *marketplacesOrdersOrder) GetOrder(ctx context.Context, request operatio
 }
 
 // GetOrderHistory - [DEPRECATED] Get an Order's harvest and change history
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) GetOrderHistory(ctx context.Context, request operations.GetOrderHistoryRequest) (*operations.GetOrderHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -283,9 +303,14 @@ func (s *marketplacesOrdersOrder) GetOrderHistory(ctx context.Context, request o
 }
 
 // HarvestOrder - [DEPRECATED] Send harvest request for a single Order
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request operations.HarvestOrderRequest) (*operations.HarvestOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/harvest", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -347,9 +372,14 @@ func (s *marketplacesOrdersOrder) HarvestOrder(ctx context.Context, request oper
 // DEPRECATED - Use /orders/v3 instead
 // The purpose of this operation is to reduce the bandwith usage by getting just the meta information about the order (ETag, Last-Modified) with the body.
 // This could be useful
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) HeadOrder(ctx context.Context, request operations.HeadOrderRequest) (*operations.HeadOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -400,9 +430,14 @@ func (s *marketplacesOrdersOrder) HeadOrder(ctx context.Context, request operati
 }
 
 // SetMerchantOrderInfo - [DEPRECATED] Set an Order's merchant information
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *marketplacesOrdersOrder) SetMerchantOrderInfo(ctx context.Context, request operations.SetMerchantOrderInfoRequest) (*operations.SetMerchantOrderInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderId}/setMerchantOrderInfo", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetMerchantOrderInfoRequest", "json")
 	if err != nil {

@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -26,4 +27,7 @@ pkg/models/shared/googletypetimezone.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1phonelead.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1messagelead.go
 pkg/models/shared/googleadshomeserviceslocalservicesv1bookinglead.go
+docs/sdk/README.md
+docs/accountreports/README.md
+docs/detailedleadreports/README.md
 USAGE.md

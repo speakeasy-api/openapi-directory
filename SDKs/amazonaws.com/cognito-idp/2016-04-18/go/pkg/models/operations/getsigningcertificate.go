@@ -16,17 +16,21 @@ const (
 	GetSigningCertificateXAmzTargetEnumAwsCognitoIdentityProviderServiceGetSigningCertificate GetSigningCertificateXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetSigningCertificate"
 )
 
+func (e GetSigningCertificateXAmzTargetEnum) ToPointer() *GetSigningCertificateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSigningCertificateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetSigningCertificate":
-		*e = GetSigningCertificateXAmzTargetEnum(s)
+		*e = GetSigningCertificateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSigningCertificateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSigningCertificateXAmzTargetEnum: %v", v)
 	}
 }
 

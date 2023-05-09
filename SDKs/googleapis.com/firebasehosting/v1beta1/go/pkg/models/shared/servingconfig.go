@@ -15,19 +15,23 @@ const (
 	ServingConfigAppAssociationEnumNone ServingConfigAppAssociationEnum = "NONE"
 )
 
+func (e ServingConfigAppAssociationEnum) ToPointer() *ServingConfigAppAssociationEnum {
+	return &e
+}
+
 func (e *ServingConfigAppAssociationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO":
 		fallthrough
 	case "NONE":
-		*e = ServingConfigAppAssociationEnum(s)
+		*e = ServingConfigAppAssociationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServingConfigAppAssociationEnum: %s", s)
+		return fmt.Errorf("invalid value for ServingConfigAppAssociationEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	ServingConfigTrailingSlashBehaviorEnumRemove                           ServingConfigTrailingSlashBehaviorEnum = "REMOVE"
 )
 
+func (e ServingConfigTrailingSlashBehaviorEnum) ToPointer() *ServingConfigTrailingSlashBehaviorEnum {
+	return &e
+}
+
 func (e *ServingConfigTrailingSlashBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAILING_SLASH_BEHAVIOR_UNSPECIFIED":
 		fallthrough
 	case "ADD":
 		fallthrough
 	case "REMOVE":
-		*e = ServingConfigTrailingSlashBehaviorEnum(s)
+		*e = ServingConfigTrailingSlashBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServingConfigTrailingSlashBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ServingConfigTrailingSlashBehaviorEnum: %v", v)
 	}
 }
 

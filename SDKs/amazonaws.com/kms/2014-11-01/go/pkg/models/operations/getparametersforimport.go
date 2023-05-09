@@ -16,17 +16,21 @@ const (
 	GetParametersForImportXAmzTargetEnumTrentServiceGetParametersForImport GetParametersForImportXAmzTargetEnum = "TrentService.GetParametersForImport"
 )
 
+func (e GetParametersForImportXAmzTargetEnum) ToPointer() *GetParametersForImportXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetParametersForImportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GetParametersForImport":
-		*e = GetParametersForImportXAmzTargetEnum(s)
+		*e = GetParametersForImportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetParametersForImportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetParametersForImportXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newPicoChargingHistory(defaultClient, securityClient HTTPClient, serverURL,
 // PicoChargingHistoryGet - Gets the last charging history for a pico station
 func (s *picoChargingHistory) PicoChargingHistoryGet(ctx context.Context, request operations.PicoChargingHistoryGetRequest) (*operations.PicoChargingHistoryGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pico/history/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pico/history/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

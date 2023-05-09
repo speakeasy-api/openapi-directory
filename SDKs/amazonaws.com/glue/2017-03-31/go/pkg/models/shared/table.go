@@ -13,6 +13,7 @@ type Table struct {
 	CreatedBy                     *string            `json:"CreatedBy,omitempty"`
 	DatabaseName                  *string            `json:"DatabaseName,omitempty"`
 	Description                   *string            `json:"Description,omitempty"`
+	FederatedTable                *FederatedTable    `json:"FederatedTable,omitempty"`
 	IsRegisteredWithLakeFormation *bool              `json:"IsRegisteredWithLakeFormation,omitempty"`
 	LastAccessTime                *time.Time         `json:"LastAccessTime,omitempty"`
 	LastAnalyzedTime              *time.Time         `json:"LastAnalyzedTime,omitempty"`

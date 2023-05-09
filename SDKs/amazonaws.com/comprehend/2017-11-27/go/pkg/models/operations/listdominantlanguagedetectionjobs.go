@@ -16,17 +16,21 @@ const (
 	ListDominantLanguageDetectionJobsXAmzTargetEnumComprehend20171127ListDominantLanguageDetectionJobs ListDominantLanguageDetectionJobsXAmzTargetEnum = "Comprehend_20171127.ListDominantLanguageDetectionJobs"
 )
 
+func (e ListDominantLanguageDetectionJobsXAmzTargetEnum) ToPointer() *ListDominantLanguageDetectionJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDominantLanguageDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ListDominantLanguageDetectionJobs":
-		*e = ListDominantLanguageDetectionJobsXAmzTargetEnum(s)
+		*e = ListDominantLanguageDetectionJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDominantLanguageDetectionJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDominantLanguageDetectionJobsXAmzTargetEnum: %v", v)
 	}
 }
 

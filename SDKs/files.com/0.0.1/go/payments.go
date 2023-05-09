@@ -105,7 +105,10 @@ func (s *payments) GetPayments(ctx context.Context, request operations.GetPaymen
 // Show Payment
 func (s *payments) GetPaymentsID(ctx context.Context, request operations.GetPaymentsIDRequest) (*operations.GetPaymentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/payments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/payments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -2,27 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetVehicleDetailsByRegistrationNumberRequest{
-        VehicleRequest: shared.VehicleRequest{
-            RegistrationNumber: "corrupti",
-        },
-        XCorrelationID: "provident",
-        XAPIKey: "distinctio",
-    }
-
     ctx := context.Background()
-    res, err := s.Vehicle.GetVehicleDetailsByRegistrationNumber(ctx, req)
+    res, err := s.Vehicle.GetVehicleDetailsByRegistrationNumber(ctx, operations.GetVehicleDetailsByRegistrationNumberRequest{
+        VehicleRequest: shared.VehicleRequest{
+            RegistrationNumber: sdk.String("corrupti"),
+        },
+        XCorrelationID: sdk.String("provident"),
+        XAPIKey: "distinctio",
+    })
     if err != nil {
         log.Fatal(err)
     }

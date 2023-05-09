@@ -14,18 +14,22 @@ const (
 	LayerAvailabilityEnumUnavailable LayerAvailabilityEnum = "UNAVAILABLE"
 )
 
+func (e LayerAvailabilityEnum) ToPointer() *LayerAvailabilityEnum {
+	return &e
+}
+
 func (e *LayerAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = LayerAvailabilityEnum(s)
+		*e = LayerAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LayerAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for LayerAvailabilityEnum: %v", v)
 	}
 }

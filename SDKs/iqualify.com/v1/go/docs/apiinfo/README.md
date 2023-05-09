@@ -1,0 +1,39 @@
+# APIInfo
+
+### Available Operations
+
+* [Get](#get) - List supported endpoints URLs
+
+## Get
+
+Responds with all supported endpoints URLs for v2 version.
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"openapi"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Authorization: "YOUR_API_KEY_HERE",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.APIInfo.Get(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.Get200ApplicationJSONObject != nil {
+        // handle response
+    }
+}
+```

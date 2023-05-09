@@ -16,17 +16,21 @@ const (
 	DeleteEnvironmentMembershipXAmzTargetEnumAwsCloud9WorkspaceManagementServiceDeleteEnvironmentMembership DeleteEnvironmentMembershipXAmzTargetEnum = "AWSCloud9WorkspaceManagementService.DeleteEnvironmentMembership"
 )
 
+func (e DeleteEnvironmentMembershipXAmzTargetEnum) ToPointer() *DeleteEnvironmentMembershipXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEnvironmentMembershipXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCloud9WorkspaceManagementService.DeleteEnvironmentMembership":
-		*e = DeleteEnvironmentMembershipXAmzTargetEnum(s)
+		*e = DeleteEnvironmentMembershipXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEnvironmentMembershipXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEnvironmentMembershipXAmzTargetEnum: %v", v)
 	}
 }
 

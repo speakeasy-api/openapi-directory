@@ -38,7 +38,10 @@ func newAPICredentialsMerchantLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—API credentials read and write
 func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsRequest, security operations.GetMerchantsMerchantIDAPICredentialsSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +112,10 @@ func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentials(ctx c
 // * Management API—API credentials read and write
 func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDRequest, security operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDSecurity) (*operations.GetMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +182,10 @@ func (s *apiCredentialsMerchantLevel) GetMerchantsMerchantIDAPICredentialsAPICre
 // * Management API—API credentials read and write
 func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPICredentialID(ctx context.Context, request operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDRequest, security operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDSecurity) (*operations.PatchMerchantsMerchantIDAPICredentialsAPICredentialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMerchantAPICredentialRequest", "json")
 	if err != nil {
@@ -259,7 +268,10 @@ func (s *apiCredentialsMerchantLevel) PatchMerchantsMerchantIDAPICredentialsAPIC
 // * Management API—API credentials read and write
 func (s *apiCredentialsMerchantLevel) PostMerchantsMerchantIDAPICredentials(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsRequest, security operations.PostMerchantsMerchantIDAPICredentialsSecurity) (*operations.PostMerchantsMerchantIDAPICredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateMerchantAPICredentialRequest", "json")
 	if err != nil {

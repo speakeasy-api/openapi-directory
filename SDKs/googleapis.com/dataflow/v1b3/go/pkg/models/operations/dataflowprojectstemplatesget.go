@@ -43,17 +43,21 @@ const (
 	DataflowProjectsTemplatesGetViewEnumMetadataOnly DataflowProjectsTemplatesGetViewEnum = "METADATA_ONLY"
 )
 
+func (e DataflowProjectsTemplatesGetViewEnum) ToPointer() *DataflowProjectsTemplatesGetViewEnum {
+	return &e
+}
+
 func (e *DataflowProjectsTemplatesGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METADATA_ONLY":
-		*e = DataflowProjectsTemplatesGetViewEnum(s)
+		*e = DataflowProjectsTemplatesGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsTemplatesGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsTemplatesGetViewEnum: %v", v)
 	}
 }
 

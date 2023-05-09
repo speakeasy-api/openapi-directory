@@ -15,20 +15,24 @@ const (
 	EventDataStoreStatusEnumPendingDeletion EventDataStoreStatusEnum = "PENDING_DELETION"
 )
 
+func (e EventDataStoreStatusEnum) ToPointer() *EventDataStoreStatusEnum {
+	return &e
+}
+
 func (e *EventDataStoreStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "ENABLED":
 		fallthrough
 	case "PENDING_DELETION":
-		*e = EventDataStoreStatusEnum(s)
+		*e = EventDataStoreStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventDataStoreStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EventDataStoreStatusEnum: %v", v)
 	}
 }

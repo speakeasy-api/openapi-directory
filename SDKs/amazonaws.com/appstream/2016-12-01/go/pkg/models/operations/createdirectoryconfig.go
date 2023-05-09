@@ -16,17 +16,21 @@ const (
 	CreateDirectoryConfigXAmzTargetEnumPhotonAdminProxyServiceCreateDirectoryConfig CreateDirectoryConfigXAmzTargetEnum = "PhotonAdminProxyService.CreateDirectoryConfig"
 )
 
+func (e CreateDirectoryConfigXAmzTargetEnum) ToPointer() *CreateDirectoryConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDirectoryConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.CreateDirectoryConfig":
-		*e = CreateDirectoryConfigXAmzTargetEnum(s)
+		*e = CreateDirectoryConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDirectoryConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDirectoryConfigXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newGrouplicenseusers(defaultClient, securityClient HTTPClient, serverURL, l
 // AndroidenterpriseGrouplicenseusersList - Retrieves the IDs of the users who have been granted entitlements under the license. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 func (s *grouplicenseusers) AndroidenterpriseGrouplicenseusersList(ctx context.Context, request operations.AndroidenterpriseGrouplicenseusersListRequest, security operations.AndroidenterpriseGrouplicenseusersListSecurity) (*operations.AndroidenterpriseGrouplicenseusersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/groupLicenses/{groupLicenseId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

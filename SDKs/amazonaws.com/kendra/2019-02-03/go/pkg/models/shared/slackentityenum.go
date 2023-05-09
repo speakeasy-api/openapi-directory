@@ -16,12 +16,16 @@ const (
 	SlackEntityEnumDirectMessage  SlackEntityEnum = "DIRECT_MESSAGE"
 )
 
+func (e SlackEntityEnum) ToPointer() *SlackEntityEnum {
+	return &e
+}
+
 func (e *SlackEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLIC_CHANNEL":
 		fallthrough
 	case "PRIVATE_CHANNEL":
@@ -29,9 +33,9 @@ func (e *SlackEntityEnum) UnmarshalJSON(data []byte) error {
 	case "GROUP_MESSAGE":
 		fallthrough
 	case "DIRECT_MESSAGE":
-		*e = SlackEntityEnum(s)
+		*e = SlackEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SlackEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for SlackEntityEnum: %v", v)
 	}
 }

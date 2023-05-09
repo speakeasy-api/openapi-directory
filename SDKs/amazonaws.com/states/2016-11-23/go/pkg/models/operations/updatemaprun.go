@@ -16,17 +16,21 @@ const (
 	UpdateMapRunXAmzTargetEnumAwsStepFunctionsUpdateMapRun UpdateMapRunXAmzTargetEnum = "AWSStepFunctions.UpdateMapRun"
 )
 
+func (e UpdateMapRunXAmzTargetEnum) ToPointer() *UpdateMapRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateMapRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.UpdateMapRun":
-		*e = UpdateMapRunXAmzTargetEnum(s)
+		*e = UpdateMapRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMapRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMapRunXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	TargetVMDetailsBootOptionEnumBios                  TargetVMDetailsBootOptionEnum = "BIOS"
 )
 
+func (e TargetVMDetailsBootOptionEnum) ToPointer() *TargetVMDetailsBootOptionEnum {
+	return &e
+}
+
 func (e *TargetVMDetailsBootOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOT_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EFI":
 		fallthrough
 	case "BIOS":
-		*e = TargetVMDetailsBootOptionEnum(s)
+		*e = TargetVMDetailsBootOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetVMDetailsBootOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetVMDetailsBootOptionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	TargetVMDetailsDiskTypeEnumSsd                 TargetVMDetailsDiskTypeEnum = "SSD"
 )
 
+func (e TargetVMDetailsDiskTypeEnum) ToPointer() *TargetVMDetailsDiskTypeEnum {
+	return &e
+}
+
 func (e *TargetVMDetailsDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
@@ -57,10 +65,10 @@ func (e *TargetVMDetailsDiskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BALANCED":
 		fallthrough
 	case "SSD":
-		*e = TargetVMDetailsDiskTypeEnum(s)
+		*e = TargetVMDetailsDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetVMDetailsDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetVMDetailsDiskTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	TargetVMDetailsLicenseTypeEnumByol    TargetVMDetailsLicenseTypeEnum = "BYOL"
 )
 
+func (e TargetVMDetailsLicenseTypeEnum) ToPointer() *TargetVMDetailsLicenseTypeEnum {
+	return &e
+}
+
 func (e *TargetVMDetailsLicenseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "PAYG":
 		fallthrough
 	case "BYOL":
-		*e = TargetVMDetailsLicenseTypeEnum(s)
+		*e = TargetVMDetailsLicenseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetVMDetailsLicenseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetVMDetailsLicenseTypeEnum: %v", v)
 	}
 }
 

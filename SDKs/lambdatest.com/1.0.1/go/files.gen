@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -48,4 +49,14 @@ pkg/models/shared/startscreenshotbadrequest.go
 pkg/models/shared/screenshotpayload.go
 pkg/models/shared/stopscreenshotsuccess.go
 pkg/models/shared/stopscreenshotnotfound.go
+docs/sdk/README.md
+docs/getdevices/README.md
+docs/getlocations/README.md
+docs/getosbrowsers/README.md
+docs/getprofiles/README.md
+docs/getresolutions/README.md
+docs/getscreenshots/README.md
+docs/getzippedscreenshots/README.md
+docs/startscreenshottest/README.md
+docs/stopscreenshottest/README.md
 USAGE.md

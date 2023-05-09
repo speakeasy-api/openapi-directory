@@ -16,17 +16,21 @@ const (
 	ListKeyPhrasesDetectionJobsXAmzTargetEnumComprehend20171127ListKeyPhrasesDetectionJobs ListKeyPhrasesDetectionJobsXAmzTargetEnum = "Comprehend_20171127.ListKeyPhrasesDetectionJobs"
 )
 
+func (e ListKeyPhrasesDetectionJobsXAmzTargetEnum) ToPointer() *ListKeyPhrasesDetectionJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListKeyPhrasesDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ListKeyPhrasesDetectionJobs":
-		*e = ListKeyPhrasesDetectionJobsXAmzTargetEnum(s)
+		*e = ListKeyPhrasesDetectionJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListKeyPhrasesDetectionJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListKeyPhrasesDetectionJobsXAmzTargetEnum: %v", v)
 	}
 }
 

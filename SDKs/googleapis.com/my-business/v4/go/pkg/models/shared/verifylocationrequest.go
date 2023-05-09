@@ -19,12 +19,16 @@ const (
 	VerifyLocationRequestMethodEnumAuto                          VerifyLocationRequestMethodEnum = "AUTO"
 )
 
+func (e VerifyLocationRequestMethodEnum) ToPointer() *VerifyLocationRequestMethodEnum {
+	return &e
+}
+
 func (e *VerifyLocationRequestMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFICATION_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ADDRESS":
@@ -36,10 +40,10 @@ func (e *VerifyLocationRequestMethodEnum) UnmarshalJSON(data []byte) error {
 	case "SMS":
 		fallthrough
 	case "AUTO":
-		*e = VerifyLocationRequestMethodEnum(s)
+		*e = VerifyLocationRequestMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyLocationRequestMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyLocationRequestMethodEnum: %v", v)
 	}
 }
 

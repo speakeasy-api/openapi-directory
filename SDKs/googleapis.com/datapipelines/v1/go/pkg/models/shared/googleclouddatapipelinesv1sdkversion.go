@@ -18,12 +18,16 @@ const (
 	GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnumUnsupported GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum = "UNSUPPORTED"
 )
 
+func (e GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum) ToPointer() *GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "SUPPORTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum) UnmarshalJSON
 	case "DEPRECATED":
 		fallthrough
 	case "UNSUPPORTED":
-		*e = GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum(s)
+		*e = GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatapipelinesV1SDKVersionSDKSupportStatusEnum: %v", v)
 	}
 }
 

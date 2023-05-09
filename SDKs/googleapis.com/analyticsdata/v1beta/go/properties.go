@@ -34,7 +34,10 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 // AnalyticsdataPropertiesBatchRunPivotReports - Returns multiple pivot reports in a batch. All reports must be for the same GA4 Property.
 func (s *properties) AnalyticsdataPropertiesBatchRunPivotReports(ctx context.Context, request operations.AnalyticsdataPropertiesBatchRunPivotReportsRequest, security operations.AnalyticsdataPropertiesBatchRunPivotReportsSecurity) (*operations.AnalyticsdataPropertiesBatchRunPivotReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:batchRunPivotReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:batchRunPivotReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRunPivotReportsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *properties) AnalyticsdataPropertiesBatchRunPivotReports(ctx context.Con
 // AnalyticsdataPropertiesBatchRunReports - Returns multiple reports in a batch. All reports must be for the same GA4 Property.
 func (s *properties) AnalyticsdataPropertiesBatchRunReports(ctx context.Context, request operations.AnalyticsdataPropertiesBatchRunReportsRequest, security operations.AnalyticsdataPropertiesBatchRunReportsSecurity) (*operations.AnalyticsdataPropertiesBatchRunReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:batchRunReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:batchRunReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRunReportsRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *properties) AnalyticsdataPropertiesBatchRunReports(ctx context.Context,
 // AnalyticsdataPropertiesCheckCompatibility - This compatibility method lists dimensions and metrics that can be added to a report request and maintain compatibility. This method fails if the request's dimensions and metrics are incompatible. In Google Analytics, reports fail if they request incompatible dimensions and/or metrics; in that case, you will need to remove dimensions and/or metrics from the incompatible report until the report is compatible. The Realtime and Core reports have different compatibility rules. This method checks compatibility for Core reports.
 func (s *properties) AnalyticsdataPropertiesCheckCompatibility(ctx context.Context, request operations.AnalyticsdataPropertiesCheckCompatibilityRequest, security operations.AnalyticsdataPropertiesCheckCompatibilitySecurity) (*operations.AnalyticsdataPropertiesCheckCompatibilityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:checkCompatibility", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:checkCompatibility", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckCompatibilityRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *properties) AnalyticsdataPropertiesCheckCompatibility(ctx context.Conte
 // AnalyticsdataPropertiesGetMetadata - Returns metadata for dimensions and metrics available in reporting methods. Used to explore the dimensions and metrics. In this method, a Google Analytics GA4 Property Identifier is specified in the request, and the metadata response includes Custom dimensions and metrics as well as Universal metadata. For example if a custom metric with parameter name `levels_unlocked` is registered to a property, the Metadata response will contain `customEvent:levels_unlocked`. Universal metadata are dimensions and metrics applicable to any property such as `country` and `totalUsers`.
 func (s *properties) AnalyticsdataPropertiesGetMetadata(ctx context.Context, request operations.AnalyticsdataPropertiesGetMetadataRequest, security operations.AnalyticsdataPropertiesGetMetadataSecurity) (*operations.AnalyticsdataPropertiesGetMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *properties) AnalyticsdataPropertiesGetMetadata(ctx context.Context, req
 // AnalyticsdataPropertiesRunPivotReport - Returns a customized pivot report of your Google Analytics event data. Pivot reports are more advanced and expressive formats than regular reports. In a pivot report, dimensions are only visible if they are included in a pivot. Multiple pivots can be specified to further dissect your data.
 func (s *properties) AnalyticsdataPropertiesRunPivotReport(ctx context.Context, request operations.AnalyticsdataPropertiesRunPivotReportRequest, security operations.AnalyticsdataPropertiesRunPivotReportSecurity) (*operations.AnalyticsdataPropertiesRunPivotReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runPivotReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runPivotReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunPivotReportRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *properties) AnalyticsdataPropertiesRunPivotReport(ctx context.Context, 
 // AnalyticsdataPropertiesRunRealtimeReport - Returns a customized report of realtime event data for your property. Events appear in realtime reports seconds after they have been sent to the Google Analytics. Realtime reports show events and usage data for the periods of time ranging from the present moment to 30 minutes ago (up to 60 minutes for Google Analytics 360 properties). For a guide to constructing realtime requests & understanding responses, see [Creating a Realtime Report](https://developers.google.com/analytics/devguides/reporting/data/v1/realtime-basics).
 func (s *properties) AnalyticsdataPropertiesRunRealtimeReport(ctx context.Context, request operations.AnalyticsdataPropertiesRunRealtimeReportRequest, security operations.AnalyticsdataPropertiesRunRealtimeReportSecurity) (*operations.AnalyticsdataPropertiesRunRealtimeReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runRealtimeReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runRealtimeReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunRealtimeReportRequest", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *properties) AnalyticsdataPropertiesRunRealtimeReport(ctx context.Contex
 // AnalyticsdataPropertiesRunReport - Returns a customized report of your Google Analytics event data. Reports contain statistics derived from data collected by the Google Analytics tracking code. The data returned from the API is as a table with columns for the requested dimensions and metrics. Metrics are individual measurements of user activity on your property, such as active users or event count. Dimensions break down metrics across some common criteria, such as country or event name. For a guide to constructing requests & understanding responses, see [Creating a Report](https://developers.google.com/analytics/devguides/reporting/data/v1/basics).
 func (s *properties) AnalyticsdataPropertiesRunReport(ctx context.Context, request operations.AnalyticsdataPropertiesRunReportRequest, security operations.AnalyticsdataPropertiesRunReportSecurity) (*operations.AnalyticsdataPropertiesRunReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runReport", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{property}:runReport", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunReportRequest", "json")
 	if err != nil {

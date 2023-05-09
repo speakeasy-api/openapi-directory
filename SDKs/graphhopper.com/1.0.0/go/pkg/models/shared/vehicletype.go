@@ -15,19 +15,23 @@ const (
 	VehicleTypeNetworkDataProviderEnumTomtom        VehicleTypeNetworkDataProviderEnum = "tomtom"
 )
 
+func (e VehicleTypeNetworkDataProviderEnum) ToPointer() *VehicleTypeNetworkDataProviderEnum {
+	return &e
+}
+
 func (e *VehicleTypeNetworkDataProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "openstreetmap":
 		fallthrough
 	case "tomtom":
-		*e = VehicleTypeNetworkDataProviderEnum(s)
+		*e = VehicleTypeNetworkDataProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleTypeNetworkDataProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleTypeNetworkDataProviderEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	VehicleTypeProfileEnumSmallTruck VehicleTypeProfileEnum = "small_truck"
 )
 
+func (e VehicleTypeProfileEnum) ToPointer() *VehicleTypeProfileEnum {
+	return &e
+}
+
 func (e *VehicleTypeProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "car":
 		fallthrough
 	case "bike":
@@ -69,10 +77,10 @@ func (e *VehicleTypeProfileEnum) UnmarshalJSON(data []byte) error {
 	case "truck":
 		fallthrough
 	case "small_truck":
-		*e = VehicleTypeProfileEnum(s)
+		*e = VehicleTypeProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VehicleTypeProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for VehicleTypeProfileEnum: %v", v)
 	}
 }
 

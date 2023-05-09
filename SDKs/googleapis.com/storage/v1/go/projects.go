@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // StorageProjectsHmacKeysCreate - Creates a new HMAC key for the specified service account.
 func (s *projects) StorageProjectsHmacKeysCreate(ctx context.Context, request operations.StorageProjectsHmacKeysCreateRequest, security operations.StorageProjectsHmacKeysCreateSecurity) (*operations.StorageProjectsHmacKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) StorageProjectsHmacKeysCreate(ctx context.Context, request op
 // StorageProjectsHmacKeysDelete - Deletes an HMAC key.
 func (s *projects) StorageProjectsHmacKeysDelete(ctx context.Context, request operations.StorageProjectsHmacKeysDeleteRequest, security operations.StorageProjectsHmacKeysDeleteSecurity) (*operations.StorageProjectsHmacKeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *projects) StorageProjectsHmacKeysDelete(ctx context.Context, request op
 // StorageProjectsHmacKeysGet - Retrieves an HMAC key's metadata
 func (s *projects) StorageProjectsHmacKeysGet(ctx context.Context, request operations.StorageProjectsHmacKeysGetRequest, security operations.StorageProjectsHmacKeysGetSecurity) (*operations.StorageProjectsHmacKeysGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *projects) StorageProjectsHmacKeysGet(ctx context.Context, request opera
 // StorageProjectsHmacKeysList - Retrieves a list of HMAC keys matching the criteria.
 func (s *projects) StorageProjectsHmacKeysList(ctx context.Context, request operations.StorageProjectsHmacKeysListRequest, security operations.StorageProjectsHmacKeysListSecurity) (*operations.StorageProjectsHmacKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +229,10 @@ func (s *projects) StorageProjectsHmacKeysList(ctx context.Context, request oper
 // StorageProjectsHmacKeysUpdate - Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
 func (s *projects) StorageProjectsHmacKeysUpdate(ctx context.Context, request operations.StorageProjectsHmacKeysUpdateRequest, security operations.StorageProjectsHmacKeysUpdateSecurity) (*operations.StorageProjectsHmacKeysUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/hmacKeys/{accessId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HmacKeyMetadata", "json")
 	if err != nil {
@@ -272,7 +287,10 @@ func (s *projects) StorageProjectsHmacKeysUpdate(ctx context.Context, request op
 // StorageProjectsServiceAccountGet - Get the email address of this project's Google Cloud Storage service account.
 func (s *projects) StorageProjectsServiceAccountGet(ctx context.Context, request operations.StorageProjectsServiceAccountGetRequest, security operations.StorageProjectsServiceAccountGetSecurity) (*operations.StorageProjectsServiceAccountGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/serviceAccount", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

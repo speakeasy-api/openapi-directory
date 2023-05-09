@@ -16,17 +16,21 @@ const (
 	StartInstanceXAmzTargetEnumLightsail20161128StartInstance StartInstanceXAmzTargetEnum = "Lightsail_20161128.StartInstance"
 )
 
+func (e StartInstanceXAmzTargetEnum) ToPointer() *StartInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.StartInstance":
-		*e = StartInstanceXAmzTargetEnum(s)
+		*e = StartInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

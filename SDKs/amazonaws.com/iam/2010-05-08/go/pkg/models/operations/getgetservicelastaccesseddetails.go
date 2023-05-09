@@ -15,17 +15,21 @@ const (
 	GETGETServiceLastAccessedDetailsActionEnumGetServiceLastAccessedDetails GETGETServiceLastAccessedDetailsActionEnum = "GetServiceLastAccessedDetails"
 )
 
+func (e GETGETServiceLastAccessedDetailsActionEnum) ToPointer() *GETGETServiceLastAccessedDetailsActionEnum {
+	return &e
+}
+
 func (e *GETGETServiceLastAccessedDetailsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetServiceLastAccessedDetails":
-		*e = GETGETServiceLastAccessedDetailsActionEnum(s)
+		*e = GETGETServiceLastAccessedDetailsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETServiceLastAccessedDetailsVersionEnumTwoThousandAndTen0508 GETGETServiceLastAccessedDetailsVersionEnum = "2010-05-08"
 )
 
+func (e GETGETServiceLastAccessedDetailsVersionEnum) ToPointer() *GETGETServiceLastAccessedDetailsVersionEnum {
+	return &e
+}
+
 func (e *GETGETServiceLastAccessedDetailsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETServiceLastAccessedDetailsVersionEnum(s)
+		*e = GETGETServiceLastAccessedDetailsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETServiceLastAccessedDetailsVersionEnum: %v", v)
 	}
 }
 

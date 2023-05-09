@@ -16,12 +16,16 @@ const (
 	NfsVersionEnumNfs41     NfsVersionEnum = "NFS4_1"
 )
 
+func (e NfsVersionEnum) ToPointer() *NfsVersionEnum {
+	return &e
+}
+
 func (e *NfsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOMATIC":
 		fallthrough
 	case "NFS3":
@@ -29,9 +33,9 @@ func (e *NfsVersionEnum) UnmarshalJSON(data []byte) error {
 	case "NFS4_0":
 		fallthrough
 	case "NFS4_1":
-		*e = NfsVersionEnum(s)
+		*e = NfsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NfsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for NfsVersionEnum: %v", v)
 	}
 }

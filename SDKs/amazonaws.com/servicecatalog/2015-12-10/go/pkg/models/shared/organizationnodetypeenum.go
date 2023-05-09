@@ -15,20 +15,24 @@ const (
 	OrganizationNodeTypeEnumAccount            OrganizationNodeTypeEnum = "ACCOUNT"
 )
 
+func (e OrganizationNodeTypeEnum) ToPointer() *OrganizationNodeTypeEnum {
+	return &e
+}
+
 func (e *OrganizationNodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORGANIZATION":
 		fallthrough
 	case "ORGANIZATIONAL_UNIT":
 		fallthrough
 	case "ACCOUNT":
-		*e = OrganizationNodeTypeEnum(s)
+		*e = OrganizationNodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationNodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationNodeTypeEnum: %v", v)
 	}
 }

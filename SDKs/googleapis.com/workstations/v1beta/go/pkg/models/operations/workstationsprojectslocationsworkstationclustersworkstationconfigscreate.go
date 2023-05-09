@@ -40,7 +40,7 @@ type WorkstationsProjectsLocationsWorkstationClustersWorkstationConfigsCreateReq
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
 	// If set, validate the request and preview the review, but do not actually apply it.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
-	// Required. ID to use for the config.
+	// Required. ID to use for the workstation configuration.
 	WorkstationConfigID *string `queryParam:"style=form,explode=true,name=workstationConfigId"`
 }
 

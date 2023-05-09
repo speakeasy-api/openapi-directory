@@ -16,17 +16,21 @@ const (
 	StartReplicationTaskAssessmentXAmzTargetEnumAmazonDmSv20160101StartReplicationTaskAssessment StartReplicationTaskAssessmentXAmzTargetEnum = "AmazonDMSv20160101.StartReplicationTaskAssessment"
 )
 
+func (e StartReplicationTaskAssessmentXAmzTargetEnum) ToPointer() *StartReplicationTaskAssessmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartReplicationTaskAssessmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.StartReplicationTaskAssessment":
-		*e = StartReplicationTaskAssessmentXAmzTargetEnum(s)
+		*e = StartReplicationTaskAssessmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartReplicationTaskAssessmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartReplicationTaskAssessmentXAmzTargetEnum: %v", v)
 	}
 }
 

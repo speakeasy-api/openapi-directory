@@ -27,17 +27,21 @@ const (
 	SSHKeyTypeEnumSSHKey SSHKeyTypeEnum = "sshKey"
 )
 
+func (e SSHKeyTypeEnum) ToPointer() *SSHKeyTypeEnum {
+	return &e
+}
+
 func (e *SSHKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sshKey":
-		*e = SSHKeyTypeEnum(s)
+		*e = SSHKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SSHKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SSHKeyTypeEnum: %v", v)
 	}
 }
 

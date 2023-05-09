@@ -19,12 +19,16 @@ const (
 	FailureTypeEnumPermissionsError        FailureTypeEnum = "PermissionsError"
 )
 
+func (e FailureTypeEnum) ToPointer() *FailureTypeEnum {
+	return &e
+}
+
 func (e *FailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateCancelled":
 		fallthrough
 	case "CancellationFailed":
@@ -38,9 +42,9 @@ func (e *FailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "InvalidEnvironmentState":
 		fallthrough
 	case "PermissionsError":
-		*e = FailureTypeEnum(s)
+		*e = FailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailureTypeEnum: %v", v)
 	}
 }

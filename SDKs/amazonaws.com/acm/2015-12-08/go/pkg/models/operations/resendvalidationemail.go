@@ -16,17 +16,21 @@ const (
 	ResendValidationEmailXAmzTargetEnumCertificateManagerResendValidationEmail ResendValidationEmailXAmzTargetEnum = "CertificateManager.ResendValidationEmail"
 )
 
+func (e ResendValidationEmailXAmzTargetEnum) ToPointer() *ResendValidationEmailXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResendValidationEmailXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CertificateManager.ResendValidationEmail":
-		*e = ResendValidationEmailXAmzTargetEnum(s)
+		*e = ResendValidationEmailXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResendValidationEmailXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResendValidationEmailXAmzTargetEnum: %v", v)
 	}
 }
 

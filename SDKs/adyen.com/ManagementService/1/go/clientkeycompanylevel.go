@@ -38,7 +38,10 @@ func newClientKeyCompanyLevel(defaultClient, securityClient HTTPClient, serverUR
 // * Management API—API credentials read and write
 func (s *clientKeyCompanyLevel) PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKey(ctx context.Context, request operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyRequest, security operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeySecurity) (*operations.PostCompaniesCompanyIDAPICredentialsAPICredentialIDGenerateClientKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/generateClientKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/apiCredentials/{apiCredentialId}/generateClientKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

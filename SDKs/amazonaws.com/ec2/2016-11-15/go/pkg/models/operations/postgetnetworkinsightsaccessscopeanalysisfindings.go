@@ -15,17 +15,21 @@ const (
 	POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnumGetNetworkInsightsAccessScopeAnalysisFindings POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum = "GetNetworkInsightsAccessScopeAnalysisFindings"
 )
 
+func (e POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum) ToPointer() *POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum {
+	return &e
+}
+
 func (e *POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetNetworkInsightsAccessScopeAnalysisFindings":
-		*e = POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum(s)
+		*e = POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetNetworkInsightsAccessScopeAnalysisFindingsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnumTwoThousandAndSixteen1115 POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum) ToPointer() *POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum(s)
+		*e = POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetNetworkInsightsAccessScopeAnalysisFindingsVersionEnum: %v", v)
 	}
 }
 

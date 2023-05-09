@@ -16,17 +16,21 @@ const (
 	StopBuildBatchXAmzTargetEnumCodeBuild20161006StopBuildBatch StopBuildBatchXAmzTargetEnum = "CodeBuild_20161006.StopBuildBatch"
 )
 
+func (e StopBuildBatchXAmzTargetEnum) ToPointer() *StopBuildBatchXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopBuildBatchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.StopBuildBatch":
-		*e = StopBuildBatchXAmzTargetEnum(s)
+		*e = StopBuildBatchXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopBuildBatchXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopBuildBatchXAmzTargetEnum: %v", v)
 	}
 }
 

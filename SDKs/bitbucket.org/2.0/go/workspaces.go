@@ -40,7 +40,10 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 // Deletes the specified webhook subscription from the given workspace.
 func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest, security operations.DeleteWorkspacesWorkspaceHooksUIDSecurity) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -321,7 +324,10 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 // Returns the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operations.GetWorkspacesWorkspaceRequest, security operations.GetWorkspacesWorkspaceSecurity) (*operations.GetWorkspacesWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -376,7 +382,10 @@ func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operati
 // Returns a paginated list of webhooks installed on this workspace.
 func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest, security operations.GetWorkspacesWorkspaceHooksSecurity) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -434,7 +443,10 @@ func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request op
 // workspace.
 func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest, security operations.GetWorkspacesWorkspaceHooksUIDSecurity) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -489,7 +501,10 @@ func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request
 // Returns all members of the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersRequest, security operations.GetWorkspacesWorkspaceMembersSecurity) (*operations.GetWorkspacesWorkspaceMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -546,7 +561,10 @@ func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request 
 // for the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersMemberRequest, security operations.GetWorkspacesWorkspaceMembersMemberSecurity) (*operations.GetWorkspacesWorkspaceMembersMemberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members/{member}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members/{member}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -662,7 +680,10 @@ func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, re
 // * `q=permission="owner"`
 func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRequest, security operations.GetWorkspacesWorkspacePermissionsSecurity) (*operations.GetWorkspacesWorkspacePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -804,7 +825,10 @@ func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, requ
 // would become `%3D`.
 func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRequest, security operations.GetWorkspacesWorkspacePermissionsRepositoriesSecurity) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -930,7 +954,10 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.C
 // would become `%3D`.
 func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx context.Context, request operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest, security operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity) (*operations.GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/permissions/repositories/{repo_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -989,7 +1016,10 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx c
 // Returns the list of projects in this workspace.
 func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsRequest, security operations.GetWorkspacesWorkspaceProjectsSecurity) (*operations.GetWorkspacesWorkspaceProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1044,7 +1074,10 @@ func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request
 // Returns the requested project.
 func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest, security operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1134,7 +1167,10 @@ func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Contex
 // Only workspace owners can install webhooks on workspaces.
 func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest, security operations.PostWorkspacesWorkspaceHooksSecurity) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1200,7 +1236,10 @@ func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request o
 // * `events`
 func (s *workspaces) PutWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.PutWorkspacesWorkspaceHooksUIDRequest, security operations.PutWorkspacesWorkspaceHooksUIDSecurity) (*operations.PutWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

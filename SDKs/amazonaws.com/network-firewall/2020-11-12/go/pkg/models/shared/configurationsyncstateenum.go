@@ -15,20 +15,24 @@ const (
 	ConfigurationSyncStateEnumCapacityConstrained ConfigurationSyncStateEnum = "CAPACITY_CONSTRAINED"
 )
 
+func (e ConfigurationSyncStateEnum) ToPointer() *ConfigurationSyncStateEnum {
+	return &e
+}
+
 func (e *ConfigurationSyncStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "IN_SYNC":
 		fallthrough
 	case "CAPACITY_CONSTRAINED":
-		*e = ConfigurationSyncStateEnum(s)
+		*e = ConfigurationSyncStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationSyncStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationSyncStateEnum: %v", v)
 	}
 }

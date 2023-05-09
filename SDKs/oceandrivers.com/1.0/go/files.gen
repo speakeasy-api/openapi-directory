@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -22,4 +23,6 @@ pkg/models/operations/getforecasttimeserieswrf.go
 pkg/models/operations/getsocibweatherstation.go
 pkg/models/operations/getweatherdisplay.go
 pkg/models/operations/getwebcams.go
+docs/sdk/README.md
+docs/odweather/README.md
 USAGE.md

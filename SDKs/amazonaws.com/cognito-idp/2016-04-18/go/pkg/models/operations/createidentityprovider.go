@@ -16,17 +16,21 @@ const (
 	CreateIdentityProviderXAmzTargetEnumAwsCognitoIdentityProviderServiceCreateIdentityProvider CreateIdentityProviderXAmzTargetEnum = "AWSCognitoIdentityProviderService.CreateIdentityProvider"
 )
 
+func (e CreateIdentityProviderXAmzTargetEnum) ToPointer() *CreateIdentityProviderXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateIdentityProviderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.CreateIdentityProvider":
-		*e = CreateIdentityProviderXAmzTargetEnum(s)
+		*e = CreateIdentityProviderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIdentityProviderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIdentityProviderXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,21 +15,25 @@ const (
 	ActiveMetricRestrictionRestrictedMetricTypesEnumRevenueData                     ActiveMetricRestrictionRestrictedMetricTypesEnum = "REVENUE_DATA"
 )
 
+func (e ActiveMetricRestrictionRestrictedMetricTypesEnum) ToPointer() *ActiveMetricRestrictionRestrictedMetricTypesEnum {
+	return &e
+}
+
 func (e *ActiveMetricRestrictionRestrictedMetricTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESTRICTED_METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "COST_DATA":
 		fallthrough
 	case "REVENUE_DATA":
-		*e = ActiveMetricRestrictionRestrictedMetricTypesEnum(s)
+		*e = ActiveMetricRestrictionRestrictedMetricTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActiveMetricRestrictionRestrictedMetricTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ActiveMetricRestrictionRestrictedMetricTypesEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListTagsForResourceXAmzTargetEnumAwswaf20150824ListTagsForResource ListTagsForResourceXAmzTargetEnum = "AWSWAF_20150824.ListTagsForResource"
 )
 
+func (e ListTagsForResourceXAmzTargetEnum) ToPointer() *ListTagsForResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTagsForResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.ListTagsForResource":
-		*e = ListTagsForResourceXAmzTargetEnum(s)
+		*e = ListTagsForResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTagsForResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTagsForResourceXAmzTargetEnum: %v", v)
 	}
 }
 

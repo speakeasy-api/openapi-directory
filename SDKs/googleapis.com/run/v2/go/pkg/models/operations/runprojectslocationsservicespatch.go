@@ -18,7 +18,7 @@ type RunProjectsLocationsServicesPatchRequest struct {
 	GoogleCloudRunV2ServiceInput *shared.GoogleCloudRunV2ServiceInput `request:"mediaType=application/json"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
-	// This field is currently not used by Cloud Run; setting it does not have any effect.
+	// If set to true, and if the Service does not exist, it will create a new one. The caller must have 'run.services.create' permissions if this is set to true and the Service does not exist.
 	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`

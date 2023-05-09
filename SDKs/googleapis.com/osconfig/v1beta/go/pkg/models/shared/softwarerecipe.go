@@ -17,12 +17,16 @@ const (
 	SoftwareRecipeDesiredStateEnumRemoved                 SoftwareRecipeDesiredStateEnum = "REMOVED"
 )
 
+func (e SoftwareRecipeDesiredStateEnum) ToPointer() *SoftwareRecipeDesiredStateEnum {
+	return &e
+}
+
 func (e *SoftwareRecipeDesiredStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESIRED_STATE_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED":
@@ -30,10 +34,10 @@ func (e *SoftwareRecipeDesiredStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATED":
 		fallthrough
 	case "REMOVED":
-		*e = SoftwareRecipeDesiredStateEnum(s)
+		*e = SoftwareRecipeDesiredStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoftwareRecipeDesiredStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SoftwareRecipeDesiredStateEnum: %v", v)
 	}
 }
 

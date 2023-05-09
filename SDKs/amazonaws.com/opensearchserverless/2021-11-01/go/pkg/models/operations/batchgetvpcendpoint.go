@@ -16,17 +16,21 @@ const (
 	BatchGetVpcEndpointXAmzTargetEnumOpenSearchServerlessBatchGetVpcEndpoint BatchGetVpcEndpointXAmzTargetEnum = "OpenSearchServerless.BatchGetVpcEndpoint"
 )
 
+func (e BatchGetVpcEndpointXAmzTargetEnum) ToPointer() *BatchGetVpcEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchGetVpcEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.BatchGetVpcEndpoint":
-		*e = BatchGetVpcEndpointXAmzTargetEnum(s)
+		*e = BatchGetVpcEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetVpcEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetVpcEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

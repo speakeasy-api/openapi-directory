@@ -16,17 +16,21 @@ const (
 	DeleteHITXAmzTargetEnumMTurkRequesterServiceV20170117DeleteHit DeleteHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.DeleteHIT"
 )
 
+func (e DeleteHITXAmzTargetEnum) ToPointer() *DeleteHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.DeleteHIT":
-		*e = DeleteHITXAmzTargetEnum(s)
+		*e = DeleteHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteHITXAmzTargetEnum: %v", v)
 	}
 }
 

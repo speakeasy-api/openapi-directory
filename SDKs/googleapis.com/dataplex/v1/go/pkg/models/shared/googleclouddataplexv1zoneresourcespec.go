@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnumMultiRegion             GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum = "MULTI_REGION"
 )
 
+func (e GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum) ToPointer() *GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SINGLE_REGION":
 		fallthrough
 	case "MULTI_REGION":
-		*e = GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum(s)
+		*e = GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ZoneResourceSpecLocationTypeEnum: %v", v)
 	}
 }
 

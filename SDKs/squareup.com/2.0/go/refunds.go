@@ -36,7 +36,10 @@ func newRefunds(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Retrieves a specific refund using the `refund_id`.
 func (s *refunds) GetPaymentRefund(ctx context.Context, request operations.GetPaymentRefundRequest, security operations.GetPaymentRefundSecurity) (*operations.GetPaymentRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/refunds/{refund_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/refunds/{refund_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

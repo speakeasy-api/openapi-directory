@@ -23,12 +23,16 @@ const (
 	CertificateCreateProductTypeEnumUccOvSsl      CertificateCreateProductTypeEnum = "UCC_OV_SSL"
 )
 
+func (e CertificateCreateProductTypeEnum) ToPointer() *CertificateCreateProductTypeEnum {
+	return &e
+}
+
 func (e *CertificateCreateProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DV_SSL":
 		fallthrough
 	case "DV_WILDCARD_SSL":
@@ -48,10 +52,10 @@ func (e *CertificateCreateProductTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UCC_EV_SSL":
 		fallthrough
 	case "UCC_OV_SSL":
-		*e = CertificateCreateProductTypeEnum(s)
+		*e = CertificateCreateProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateCreateProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateCreateProductTypeEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	CertificateCreateRootTypeEnumStarfieldSha2 CertificateCreateRootTypeEnum = "STARFIELD_SHA_2"
 )
 
+func (e CertificateCreateRootTypeEnum) ToPointer() *CertificateCreateRootTypeEnum {
+	return &e
+}
+
 func (e *CertificateCreateRootTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GODADDY_SHA_1":
 		fallthrough
 	case "GODADDY_SHA_2":
@@ -78,10 +86,10 @@ func (e *CertificateCreateRootTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STARFIELD_SHA_1":
 		fallthrough
 	case "STARFIELD_SHA_2":
-		*e = CertificateCreateRootTypeEnum(s)
+		*e = CertificateCreateRootTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateCreateRootTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateCreateRootTypeEnum: %v", v)
 	}
 }
 
@@ -99,12 +107,16 @@ const (
 	CertificateCreateSlotSizeEnumOneHundred CertificateCreateSlotSizeEnum = "ONE_HUNDRED"
 )
 
+func (e CertificateCreateSlotSizeEnum) ToPointer() *CertificateCreateSlotSizeEnum {
+	return &e
+}
+
 func (e *CertificateCreateSlotSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIVE":
 		fallthrough
 	case "TEN":
@@ -120,10 +132,10 @@ func (e *CertificateCreateSlotSizeEnum) UnmarshalJSON(data []byte) error {
 	case "FIFTY":
 		fallthrough
 	case "ONE_HUNDRED":
-		*e = CertificateCreateSlotSizeEnum(s)
+		*e = CertificateCreateSlotSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateCreateSlotSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateCreateSlotSizeEnum: %v", v)
 	}
 }
 

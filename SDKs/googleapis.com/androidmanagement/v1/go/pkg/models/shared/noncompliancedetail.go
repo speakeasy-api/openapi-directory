@@ -24,12 +24,16 @@ const (
 	NonComplianceDetailInstallationFailureReasonEnumUserInvalid                          NonComplianceDetailInstallationFailureReasonEnum = "USER_INVALID"
 )
 
+func (e NonComplianceDetailInstallationFailureReasonEnum) ToPointer() *NonComplianceDetailInstallationFailureReasonEnum {
+	return &e
+}
+
 func (e *NonComplianceDetailInstallationFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALLATION_FAILURE_REASON_UNSPECIFIED":
 		fallthrough
 	case "INSTALLATION_FAILURE_REASON_UNKNOWN":
@@ -51,10 +55,10 @@ func (e *NonComplianceDetailInstallationFailureReasonEnum) UnmarshalJSON(data []
 	case "NOT_ENROLLED":
 		fallthrough
 	case "USER_INVALID":
-		*e = NonComplianceDetailInstallationFailureReasonEnum(s)
+		*e = NonComplianceDetailInstallationFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonComplianceDetailInstallationFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NonComplianceDetailInstallationFailureReasonEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	NonComplianceDetailNonComplianceReasonEnumAppNotUpdated                  NonComplianceDetailNonComplianceReasonEnum = "APP_NOT_UPDATED"
 )
 
+func (e NonComplianceDetailNonComplianceReasonEnum) ToPointer() *NonComplianceDetailNonComplianceReasonEnum {
+	return &e
+}
+
 func (e *NonComplianceDetailNonComplianceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NON_COMPLIANCE_REASON_UNSPECIFIED":
 		fallthrough
 	case "API_LEVEL":
@@ -102,10 +110,10 @@ func (e *NonComplianceDetailNonComplianceReasonEnum) UnmarshalJSON(data []byte) 
 	case "APP_INCOMPATIBLE":
 		fallthrough
 	case "APP_NOT_UPDATED":
-		*e = NonComplianceDetailNonComplianceReasonEnum(s)
+		*e = NonComplianceDetailNonComplianceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonComplianceDetailNonComplianceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NonComplianceDetailNonComplianceReasonEnum: %v", v)
 	}
 }
 
@@ -121,12 +129,16 @@ const (
 	NonComplianceDetailSpecificNonComplianceReasonEnumOncWifiAPILevel                                     NonComplianceDetailSpecificNonComplianceReasonEnum = "ONC_WIFI_API_LEVEL"
 )
 
+func (e NonComplianceDetailSpecificNonComplianceReasonEnum) ToPointer() *NonComplianceDetailSpecificNonComplianceReasonEnum {
+	return &e
+}
+
 func (e *NonComplianceDetailSpecificNonComplianceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPECIFIC_NON_COMPLIANCE_REASON_UNSPECIFIED":
 		fallthrough
 	case "PASSWORD_POLICIES_USER_CREDENTIALS_CONFIRMATION_REQUIRED":
@@ -138,10 +150,10 @@ func (e *NonComplianceDetailSpecificNonComplianceReasonEnum) UnmarshalJSON(data 
 	case "ONC_WIFI_INVALID_VALUE":
 		fallthrough
 	case "ONC_WIFI_API_LEVEL":
-		*e = NonComplianceDetailSpecificNonComplianceReasonEnum(s)
+		*e = NonComplianceDetailSpecificNonComplianceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NonComplianceDetailSpecificNonComplianceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NonComplianceDetailSpecificNonComplianceReasonEnum: %v", v)
 	}
 }
 

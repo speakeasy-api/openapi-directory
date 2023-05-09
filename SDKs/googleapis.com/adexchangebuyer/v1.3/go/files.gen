@@ -9,6 +9,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -53,4 +54,12 @@ pkg/models/shared/performancereportlist.go
 pkg/models/shared/performancereport.go
 pkg/models/shared/pretargetingconfig.go
 pkg/models/shared/pretargetingconfiglist.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/billinginfo/README.md
+docs/budget/README.md
+docs/creatives/README.md
+docs/directdeals/README.md
+docs/performancereport/README.md
+docs/pretargetingconfig/README.md
 USAGE.md

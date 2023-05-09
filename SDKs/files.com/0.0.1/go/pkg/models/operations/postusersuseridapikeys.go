@@ -22,12 +22,16 @@ const (
 	PostUsersUserIDAPIKeysRequestBodyPermissionSetEnumMobileApp         PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum = "mobile_app"
 )
 
+func (e PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum) ToPointer() *PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum {
+	return &e
+}
+
 func (e *PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "full":
@@ -39,10 +43,10 @@ func (e *PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum) UnmarshalJSON(data 
 	case "office_integration":
 		fallthrough
 	case "mobile_app":
-		*e = PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum(s)
+		*e = PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostUsersUserIDAPIKeysRequestBodyPermissionSetEnum: %v", v)
 	}
 }
 

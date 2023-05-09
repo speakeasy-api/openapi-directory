@@ -15,17 +15,21 @@ const (
 	GETDeleteInternetGatewayActionEnumDeleteInternetGateway GETDeleteInternetGatewayActionEnum = "DeleteInternetGateway"
 )
 
+func (e GETDeleteInternetGatewayActionEnum) ToPointer() *GETDeleteInternetGatewayActionEnum {
+	return &e
+}
+
 func (e *GETDeleteInternetGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInternetGateway":
-		*e = GETDeleteInternetGatewayActionEnum(s)
+		*e = GETDeleteInternetGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInternetGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInternetGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteInternetGatewayVersionEnumTwoThousandAndSixteen1115 GETDeleteInternetGatewayVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteInternetGatewayVersionEnum) ToPointer() *GETDeleteInternetGatewayVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteInternetGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteInternetGatewayVersionEnum(s)
+		*e = GETDeleteInternetGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInternetGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInternetGatewayVersionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newCompanySpecificSchema(defaultClient, securityClient HTTPClient, serverUR
 // The company-specific Open API endpoint allows the client to GET an Open API document for the Paylocity API that is customized with company-specific resource schemas. These customized resource schemas define certain properties as enumerations of pre-defined values that correspond to the company's setup with Web Pay. The customized schemas also indicate which properties are required by the company within Web Pay.<br  />To learn more about Open API, click [here](https://www.openapis.org/)
 func (s *companySpecificSchema) GetCompanySpecificOpenAPIDocumentation(ctx context.Context, request operations.GetCompanySpecificOpenAPIDocumentationRequest, security operations.GetCompanySpecificOpenAPIDocumentationSecurity) (*operations.GetCompanySpecificOpenAPIDocumentationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/openapi", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/openapi", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

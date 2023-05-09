@@ -19,20 +19,24 @@ const (
 	CatalogStoreStatusEnumOutdated CatalogStoreStatusEnum = "Outdated"
 )
 
+func (e CatalogStoreStatusEnum) ToPointer() *CatalogStoreStatusEnum {
+	return &e
+}
+
 func (e *CatalogStoreStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "Failed":
 		fallthrough
 	case "Outdated":
-		*e = CatalogStoreStatusEnum(s)
+		*e = CatalogStoreStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CatalogStoreStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CatalogStoreStatusEnum: %v", v)
 	}
 }

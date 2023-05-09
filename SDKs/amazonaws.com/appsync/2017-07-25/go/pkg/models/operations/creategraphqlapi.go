@@ -20,12 +20,16 @@ const (
 	CreateGraphqlAPIRequestBodyAuthenticationTypeEnumAwsLambda              CreateGraphqlAPIRequestBodyAuthenticationTypeEnum = "AWS_LAMBDA"
 )
 
+func (e CreateGraphqlAPIRequestBodyAuthenticationTypeEnum) ToPointer() *CreateGraphqlAPIRequestBodyAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *CreateGraphqlAPIRequestBodyAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_KEY":
 		fallthrough
 	case "AWS_IAM":
@@ -35,10 +39,10 @@ func (e *CreateGraphqlAPIRequestBodyAuthenticationTypeEnum) UnmarshalJSON(data [
 	case "OPENID_CONNECT":
 		fallthrough
 	case "AWS_LAMBDA":
-		*e = CreateGraphqlAPIRequestBodyAuthenticationTypeEnum(s)
+		*e = CreateGraphqlAPIRequestBodyAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGraphqlAPIRequestBodyAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGraphqlAPIRequestBodyAuthenticationTypeEnum: %v", v)
 	}
 }
 

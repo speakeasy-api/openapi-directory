@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/savingsplan
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -28,11 +28,12 @@ func main() {
         }),
     )
 
-    req := operations.CreateSavingsPlanRequest{
+    ctx := context.Background()
+    res, err := s.CreateSavingsPlan(ctx, operations.CreateSavingsPlanRequest{
         RequestBody: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             Commitment: "provident",
-            PurchaseTime: "2021-04-24T16:27:50.833Z",
+            PurchaseTime: types.MustTimeFromString("2021-04-24T16:27:50.833Z"),
             SavingsPlanOfferingID: "unde",
             Tags: map[string]string{
                 "corrupti": "illum",
@@ -40,19 +41,16 @@ func main() {
                 "deserunt": "suscipit",
                 "iure": "magnam",
             },
-            UpfrontPaymentAmount: "debitis",
+            UpfrontPaymentAmount: sdk.String("debitis"),
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSavingsPlan(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -67,17 +65,17 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateSavingsPlan` - Creates a Savings Plan.
-* `DeleteQueuedSavingsPlan` - Deletes the queued purchase for the specified Savings Plan.
-* `DescribeSavingsPlanRates` - Describes the specified Savings Plans rates.
-* `DescribeSavingsPlans` - Describes the specified Savings Plans.
-* `DescribeSavingsPlansOfferingRates` - Describes the specified Savings Plans offering rates.
-* `DescribeSavingsPlansOfferings` - Describes the specified Savings Plans offerings.
-* `ListTagsForResource` - Lists the tags for the specified resource.
-* `TagResource` - Adds the specified tags to the specified resource.
-* `UntagResource` - Removes the specified tags from the specified resource.
+* [CreateSavingsPlan](docs/sdk/README.md#createsavingsplan) - Creates a Savings Plan.
+* [DeleteQueuedSavingsPlan](docs/sdk/README.md#deletequeuedsavingsplan) - Deletes the queued purchase for the specified Savings Plan.
+* [DescribeSavingsPlanRates](docs/sdk/README.md#describesavingsplanrates) - Describes the specified Savings Plans rates.
+* [DescribeSavingsPlans](docs/sdk/README.md#describesavingsplans) - Describes the specified Savings Plans.
+* [DescribeSavingsPlansOfferingRates](docs/sdk/README.md#describesavingsplansofferingrates) - Describes the specified Savings Plans offering rates.
+* [DescribeSavingsPlansOfferings](docs/sdk/README.md#describesavingsplansofferings) - Describes the specified Savings Plans offerings.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags for the specified resource.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds the specified tags to the specified resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes the specified tags from the specified resource.
 <!-- End SDK Available Operations -->
 
 ### Maturity

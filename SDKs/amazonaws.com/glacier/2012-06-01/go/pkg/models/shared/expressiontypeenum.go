@@ -13,16 +13,20 @@ const (
 	ExpressionTypeEnumSQL ExpressionTypeEnum = "SQL"
 )
 
+func (e ExpressionTypeEnum) ToPointer() *ExpressionTypeEnum {
+	return &e
+}
+
 func (e *ExpressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL":
-		*e = ExpressionTypeEnum(s)
+		*e = ExpressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExpressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExpressionTypeEnum: %v", v)
 	}
 }

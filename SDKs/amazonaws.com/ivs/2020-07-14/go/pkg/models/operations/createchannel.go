@@ -17,19 +17,23 @@ const (
 	CreateChannelRequestBodyLatencyModeEnumLow    CreateChannelRequestBodyLatencyModeEnum = "LOW"
 )
 
+func (e CreateChannelRequestBodyLatencyModeEnum) ToPointer() *CreateChannelRequestBodyLatencyModeEnum {
+	return &e
+}
+
 func (e *CreateChannelRequestBodyLatencyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NORMAL":
 		fallthrough
 	case "LOW":
-		*e = CreateChannelRequestBodyLatencyModeEnum(s)
+		*e = CreateChannelRequestBodyLatencyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateChannelRequestBodyLatencyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateChannelRequestBodyLatencyModeEnum: %v", v)
 	}
 }
 
@@ -41,25 +45,31 @@ const (
 	CreateChannelRequestBodyTypeEnumStandard CreateChannelRequestBodyTypeEnum = "STANDARD"
 )
 
+func (e CreateChannelRequestBodyTypeEnum) ToPointer() *CreateChannelRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateChannelRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "STANDARD":
-		*e = CreateChannelRequestBodyTypeEnum(s)
+		*e = CreateChannelRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateChannelRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateChannelRequestBodyTypeEnum: %v", v)
 	}
 }
 
 type CreateChannelRequestBody struct {
 	// Whether the channel is private (enabled for playback authorization). Default: <code>false</code>.
 	Authorized *bool `json:"authorized,omitempty"`
+	// Whether the channel allows insecure RTMP ingest. Default: <code>false</code>.
+	InsecureIngest *bool `json:"insecureIngest,omitempty"`
 	// Channel latency mode. Use <code>NORMAL</code> to broadcast and deliver live video up to Full HD. Use <code>LOW</code> for near-real-time interaction with viewers. (Note: In the Amazon IVS console, <code>LOW</code> and <code>NORMAL</code> correspond to Ultra-low and Standard, respectively.) Default: <code>LOW</code>.
 	LatencyMode *CreateChannelRequestBodyLatencyModeEnum `json:"latencyMode,omitempty"`
 	// Channel name.

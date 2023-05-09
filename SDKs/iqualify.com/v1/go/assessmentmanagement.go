@@ -35,7 +35,10 @@ func newAssessmentManagement(defaultClient, securityClient HTTPClient, serverURL
 // Removes the assessment document file for a specified assessment in an offering.
 func (s *assessmentManagement) DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentID(ctx context.Context, request operations.DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentIDRequest) (*operations.DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}/documents/{documentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}/documents/{documentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *assessmentManagement) DeleteOfferingsOfferingIDAssessmentsAssessmentIDD
 // Resets the user's submitted assessment to a draft state.
 func (s *assessmentManagement) DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentID(ctx context.Context, request operations.DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDRequest) (*operations.DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *assessmentManagement) DeleteOfferingsOfferingIDUsersUserEmailAssessment
 // Responds with the activities in a specific offering.
 func (s *assessmentManagement) GetOfferingsOfferingIDActivitiesOpenresponse(ctx context.Context, request operations.GetOfferingsOfferingIDActivitiesOpenresponseRequest) (*operations.GetOfferingsOfferingIDActivitiesOpenresponseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/activities/openresponse", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/activities/openresponse", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -196,7 +205,10 @@ func (s *assessmentManagement) GetOfferingsOfferingIDActivitiesOpenresponse(ctx 
 // Responds with all assessments in an offering matching the offeringId.
 func (s *assessmentManagement) GetOfferingsOfferingIDAssessments(ctx context.Context, request operations.GetOfferingsOfferingIDAssessmentsRequest) (*operations.GetOfferingsOfferingIDAssessmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -255,7 +267,10 @@ func (s *assessmentManagement) GetOfferingsOfferingIDAssessments(ctx context.Con
 // Responds with learners who have one or more assessments due x days before the due date, with each assessment that is due, where x = the number of days specified in the request. The default is 3 days.
 func (s *assessmentManagement) GetOfferingsOfferingIDLearnersPendingSubmission(ctx context.Context, request operations.GetOfferingsOfferingIDLearnersPendingSubmissionRequest) (*operations.GetOfferingsOfferingIDLearnersPendingSubmissionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/learners/pending-submission", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/learners/pending-submission", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +335,10 @@ func (s *assessmentManagement) GetOfferingsOfferingIDLearnersPendingSubmission(c
 // Responds with open response assessment submissions by a learner in an offering.
 func (s *assessmentManagement) GetOfferingsOfferingIDUsersUserEmailSubmissionsOpenResponse(ctx context.Context, request operations.GetOfferingsOfferingIDUsersUserEmailSubmissionsOpenResponseRequest) (*operations.GetOfferingsOfferingIDUsersUserEmailSubmissionsOpenResponseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/submissions/open-response", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/users/{userEmail}/submissions/open-response", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -381,7 +399,10 @@ func (s *assessmentManagement) GetOfferingsOfferingIDUsersUserEmailSubmissionsOp
 // Updates the assessment details for a specified assessment in an offering.
 func (s *assessmentManagement) PatchOfferingsOfferingIDAssessmentsAssessmentID(ctx context.Context, request operations.PatchOfferingsOfferingIDAssessmentsAssessmentIDRequest) (*operations.PatchOfferingsOfferingIDAssessmentsAssessmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Assessment", "json")
 	if err != nil {
@@ -452,7 +473,10 @@ func (s *assessmentManagement) PatchOfferingsOfferingIDAssessmentsAssessmentID(c
 // Updates the due dates for a learner's quiz attempt specified by the assessmentId.
 func (s *assessmentManagement) PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmail(ctx context.Context, request operations.PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailRequest) (*operations.PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}/{userEmail}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/assessments/{assessmentId}/{userEmail}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

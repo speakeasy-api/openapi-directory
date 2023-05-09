@@ -25,12 +25,16 @@ const (
 	PropertyPerformanceResultAdvanceBookingWindowEnumAdvanceBookingWindowDaysOver180  PropertyPerformanceResultAdvanceBookingWindowEnum = "ADVANCE_BOOKING_WINDOW_DAYS_OVER_180"
 )
 
+func (e PropertyPerformanceResultAdvanceBookingWindowEnum) ToPointer() *PropertyPerformanceResultAdvanceBookingWindowEnum {
+	return &e
+}
+
 func (e *PropertyPerformanceResultAdvanceBookingWindowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADVANCE_BOOKING_WINDOW_UNSPECIFIED":
 		fallthrough
 	case "ADVANCE_BOOKING_WINDOW_SAME_DAY":
@@ -54,10 +58,10 @@ func (e *PropertyPerformanceResultAdvanceBookingWindowEnum) UnmarshalJSON(data [
 	case "ADVANCE_BOOKING_WINDOW_DAYS_151_TO_180":
 		fallthrough
 	case "ADVANCE_BOOKING_WINDOW_DAYS_OVER_180":
-		*e = PropertyPerformanceResultAdvanceBookingWindowEnum(s)
+		*e = PropertyPerformanceResultAdvanceBookingWindowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyPerformanceResultAdvanceBookingWindowEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyPerformanceResultAdvanceBookingWindowEnum: %v", v)
 	}
 }
 
@@ -72,12 +76,16 @@ const (
 	PropertyPerformanceResultDeviceTypeEnumTablet            PropertyPerformanceResultDeviceTypeEnum = "TABLET"
 )
 
+func (e PropertyPerformanceResultDeviceTypeEnum) ToPointer() *PropertyPerformanceResultDeviceTypeEnum {
+	return &e
+}
+
 func (e *PropertyPerformanceResultDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_UNKNOWN":
@@ -87,10 +95,10 @@ func (e *PropertyPerformanceResultDeviceTypeEnum) UnmarshalJSON(data []byte) err
 	case "MOBILE":
 		fallthrough
 	case "TABLET":
-		*e = PropertyPerformanceResultDeviceTypeEnum(s)
+		*e = PropertyPerformanceResultDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyPerformanceResultDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyPerformanceResultDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -109,12 +117,16 @@ const (
 	PropertyPerformanceResultLengthOfStayEnumLengthOfStayNightsOver30 PropertyPerformanceResultLengthOfStayEnum = "LENGTH_OF_STAY_NIGHTS_OVER_30"
 )
 
+func (e PropertyPerformanceResultLengthOfStayEnum) ToPointer() *PropertyPerformanceResultLengthOfStayEnum {
+	return &e
+}
+
 func (e *PropertyPerformanceResultLengthOfStayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LENGTH_OF_STAY_UNSPECIFIED":
 		fallthrough
 	case "LENGTH_OF_STAY_NIGHTS_1":
@@ -132,10 +144,10 @@ func (e *PropertyPerformanceResultLengthOfStayEnum) UnmarshalJSON(data []byte) e
 	case "LENGTH_OF_STAY_NIGHTS_22_TO_30":
 		fallthrough
 	case "LENGTH_OF_STAY_NIGHTS_OVER_30":
-		*e = PropertyPerformanceResultLengthOfStayEnum(s)
+		*e = PropertyPerformanceResultLengthOfStayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyPerformanceResultLengthOfStayEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyPerformanceResultLengthOfStayEnum: %v", v)
 	}
 }
 
@@ -151,12 +163,16 @@ const (
 	PropertyPerformanceResultOccupancyEnumOccupancyOver4       PropertyPerformanceResultOccupancyEnum = "OCCUPANCY_OVER_4"
 )
 
+func (e PropertyPerformanceResultOccupancyEnum) ToPointer() *PropertyPerformanceResultOccupancyEnum {
+	return &e
+}
+
 func (e *PropertyPerformanceResultOccupancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OCCUPANCY_UNSPECIFIED":
 		fallthrough
 	case "OCCUPANCY_1":
@@ -168,10 +184,10 @@ func (e *PropertyPerformanceResultOccupancyEnum) UnmarshalJSON(data []byte) erro
 	case "OCCUPANCY_4":
 		fallthrough
 	case "OCCUPANCY_OVER_4":
-		*e = PropertyPerformanceResultOccupancyEnum(s)
+		*e = PropertyPerformanceResultOccupancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PropertyPerformanceResultOccupancyEnum: %s", s)
+		return fmt.Errorf("invalid value for PropertyPerformanceResultOccupancyEnum: %v", v)
 	}
 }
 
@@ -211,4 +227,6 @@ type PropertyPerformanceResult struct {
 	PropertyRegionCode *string `json:"propertyRegionCode,omitempty"`
 	// ISO 3116 region code of the country/region of the user. Only present if `userRegionCode` is specified in `aggregateBy` in the request
 	UserRegionCode *string `json:"userRegionCode,omitempty"`
+	// The total number of clicks on the "Website" button on Google for vacation rentals.
+	VrWebsiteButtonClicks *string `json:"vrWebsiteButtonClicks,omitempty"`
 }

@@ -16,17 +16,21 @@ const (
 	ListAccountSettingsXAmzTargetEnumAmazonEc2ContainerServiceV20141113ListAccountSettings ListAccountSettingsXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.ListAccountSettings"
 )
 
+func (e ListAccountSettingsXAmzTargetEnum) ToPointer() *ListAccountSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAccountSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.ListAccountSettings":
-		*e = ListAccountSettingsXAmzTargetEnum(s)
+		*e = ListAccountSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAccountSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAccountSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

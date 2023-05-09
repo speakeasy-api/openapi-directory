@@ -15,17 +15,21 @@ const (
 	POSTGetIpamAddressHistoryActionEnumGetIpamAddressHistory POSTGetIpamAddressHistoryActionEnum = "GetIpamAddressHistory"
 )
 
+func (e POSTGetIpamAddressHistoryActionEnum) ToPointer() *POSTGetIpamAddressHistoryActionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamAddressHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIpamAddressHistory":
-		*e = POSTGetIpamAddressHistoryActionEnum(s)
+		*e = POSTGetIpamAddressHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamAddressHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamAddressHistoryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetIpamAddressHistoryVersionEnumTwoThousandAndSixteen1115 POSTGetIpamAddressHistoryVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetIpamAddressHistoryVersionEnum) ToPointer() *POSTGetIpamAddressHistoryVersionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamAddressHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetIpamAddressHistoryVersionEnum(s)
+		*e = POSTGetIpamAddressHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamAddressHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamAddressHistoryVersionEnum: %v", v)
 	}
 }
 

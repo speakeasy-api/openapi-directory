@@ -17,12 +17,16 @@ const (
 	ConfigurationItemStatusEnumResourceDeletedNotRecorded ConfigurationItemStatusEnum = "ResourceDeletedNotRecorded"
 )
 
+func (e ConfigurationItemStatusEnum) ToPointer() *ConfigurationItemStatusEnum {
+	return &e
+}
+
 func (e *ConfigurationItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "ResourceDiscovered":
@@ -32,9 +36,9 @@ func (e *ConfigurationItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ResourceDeleted":
 		fallthrough
 	case "ResourceDeletedNotRecorded":
-		*e = ConfigurationItemStatusEnum(s)
+		*e = ConfigurationItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationItemStatusEnum: %v", v)
 	}
 }

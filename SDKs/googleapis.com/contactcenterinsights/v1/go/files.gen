@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -19,6 +20,7 @@ pkg/models/operations/contactcenterinsightsprojectslocationsconversationscalcula
 pkg/models/operations/contactcenterinsightsprojectslocationsconversationscreate.go
 pkg/models/operations/contactcenterinsightsprojectslocationsconversationsingest.go
 pkg/models/operations/contactcenterinsightsprojectslocationsconversationslist.go
+pkg/models/operations/contactcenterinsightsprojectslocationsconversationsupload.go
 pkg/models/operations/contactcenterinsightsprojectslocationsinsightsdataexport.go
 pkg/models/operations/contactcenterinsightsprojectslocationsissuemodelscalculateissuemodelstats.go
 pkg/models/operations/contactcenterinsightsprojectslocationsissuemodelscreate.go
@@ -40,6 +42,7 @@ pkg/models/shared/googlerpcstatus.go
 pkg/models/shared/altenum.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1analysis.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1annotatorselector.go
+pkg/models/shared/googlecloudcontactcenterinsightsv1annotatorselectorsummarizationconfig.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1analysisresult.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1analysisresultcallanalysismetadata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1conversationlevelsentiment.go
@@ -72,6 +75,7 @@ pkg/models/shared/googlecloudcontactcenterinsightsv1smartreplydata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1smartcomposesuggestiondata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1faqanswerdata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1dialogflowinteractiondata.go
+pkg/models/shared/googlecloudcontactcenterinsightsv1conversationsummarizationsuggestiondata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1articlesuggestiondata.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1answerfeedback.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1dialogflowintent.go
@@ -84,6 +88,8 @@ pkg/models/shared/googlecloudcontactcenterinsightsv1ingestconversationsrequesttr
 pkg/models/shared/googlecloudcontactcenterinsightsv1ingestconversationsrequestgcssource.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1ingestconversationsrequestconversationconfig.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1listconversationsresponse.go
+pkg/models/shared/googlecloudcontactcenterinsightsv1uploadconversationrequest.go
+pkg/models/shared/googlecloudcontactcenterinsightsv1redactionconfig.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1exportinsightsdatarequest.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1exportinsightsdatarequestbigquerydestination.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1calculateissuemodelstatsresponse.go
@@ -104,4 +110,6 @@ pkg/models/shared/googlecloudcontactcenterinsightsv1exactmatchconfig.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1listphrasematchersresponse.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1view.go
 pkg/models/shared/googlecloudcontactcenterinsightsv1listviewsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -19,12 +19,16 @@ const (
 	OrderByOrderTypeEnumDimensionAsInteger   OrderByOrderTypeEnum = "DIMENSION_AS_INTEGER"
 )
 
+func (e OrderByOrderTypeEnum) ToPointer() *OrderByOrderTypeEnum {
+	return &e
+}
+
 func (e *OrderByOrderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ORDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "VALUE":
@@ -36,10 +40,10 @@ func (e *OrderByOrderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "HISTOGRAM_BUCKET":
 		fallthrough
 	case "DIMENSION_AS_INTEGER":
-		*e = OrderByOrderTypeEnum(s)
+		*e = OrderByOrderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderByOrderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderByOrderTypeEnum: %v", v)
 	}
 }
 
@@ -52,21 +56,25 @@ const (
 	OrderBySortOrderEnumDescending           OrderBySortOrderEnum = "DESCENDING"
 )
 
+func (e OrderBySortOrderEnum) ToPointer() *OrderBySortOrderEnum {
+	return &e
+}
+
 func (e *OrderBySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SORT_ORDER_UNSPECIFIED":
 		fallthrough
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = OrderBySortOrderEnum(s)
+		*e = OrderBySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderBySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderBySortOrderEnum: %v", v)
 	}
 }
 

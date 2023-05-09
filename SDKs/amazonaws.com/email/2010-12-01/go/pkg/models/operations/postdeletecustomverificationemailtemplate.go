@@ -15,17 +15,21 @@ const (
 	POSTDeleteCustomVerificationEmailTemplateActionEnumDeleteCustomVerificationEmailTemplate POSTDeleteCustomVerificationEmailTemplateActionEnum = "DeleteCustomVerificationEmailTemplate"
 )
 
+func (e POSTDeleteCustomVerificationEmailTemplateActionEnum) ToPointer() *POSTDeleteCustomVerificationEmailTemplateActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCustomVerificationEmailTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCustomVerificationEmailTemplate":
-		*e = POSTDeleteCustomVerificationEmailTemplateActionEnum(s)
+		*e = POSTDeleteCustomVerificationEmailTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCustomVerificationEmailTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCustomVerificationEmailTemplateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteCustomVerificationEmailTemplateVersionEnumTwoThousandAndTen1201 POSTDeleteCustomVerificationEmailTemplateVersionEnum = "2010-12-01"
 )
 
+func (e POSTDeleteCustomVerificationEmailTemplateVersionEnum) ToPointer() *POSTDeleteCustomVerificationEmailTemplateVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteCustomVerificationEmailTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTDeleteCustomVerificationEmailTemplateVersionEnum(s)
+		*e = POSTDeleteCustomVerificationEmailTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteCustomVerificationEmailTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteCustomVerificationEmailTemplateVersionEnum: %v", v)
 	}
 }
 

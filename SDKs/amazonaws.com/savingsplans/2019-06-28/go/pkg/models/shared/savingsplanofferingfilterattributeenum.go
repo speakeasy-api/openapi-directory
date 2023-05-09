@@ -14,18 +14,22 @@ const (
 	SavingsPlanOfferingFilterAttributeEnumInstanceFamily SavingsPlanOfferingFilterAttributeEnum = "instanceFamily"
 )
 
+func (e SavingsPlanOfferingFilterAttributeEnum) ToPointer() *SavingsPlanOfferingFilterAttributeEnum {
+	return &e
+}
+
 func (e *SavingsPlanOfferingFilterAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "region":
 		fallthrough
 	case "instanceFamily":
-		*e = SavingsPlanOfferingFilterAttributeEnum(s)
+		*e = SavingsPlanOfferingFilterAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanOfferingFilterAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanOfferingFilterAttributeEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	InterpolationPointTypeEnumPercentile                        InterpolationPointTypeEnum = "PERCENTILE"
 )
 
+func (e InterpolationPointTypeEnum) ToPointer() *InterpolationPointTypeEnum {
+	return &e
+}
+
 func (e *InterpolationPointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERPOLATION_POINT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MIN":
@@ -36,10 +40,10 @@ func (e *InterpolationPointTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERCENT":
 		fallthrough
 	case "PERCENTILE":
-		*e = InterpolationPointTypeEnum(s)
+		*e = InterpolationPointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InterpolationPointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InterpolationPointTypeEnum: %v", v)
 	}
 }
 

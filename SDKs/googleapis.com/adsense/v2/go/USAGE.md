@@ -2,42 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdsenseAccountsAdclientsAdunitsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.AdsenseAccountsAdclientsAdunitsCreate(ctx, operations.AdsenseAccountsAdclientsAdunitsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AdUnitInput: &shared.AdUnitInput{
             ContentAdsSettings: &shared.ContentAdsSettings{
-                Size: "provident",
-                Type: "MATCHED_CONTENT",
+                Size: sdk.String("provident"),
+                Type: shared.ContentAdsSettingsTypeEnumMatchedContent.ToPointer(),
             },
-            DisplayName: "quibusdam",
-            State: "ACTIVE",
+            DisplayName: sdk.String("quibusdam"),
+            State: shared.AdUnitStateEnumActive.ToPointer(),
         },
-        AccessToken: "nulla",
-        Alt: "media",
-        Callback: "illum",
-        Fields: "vel",
-        Key: "error",
-        OauthToken: "deserunt",
+        AccessToken: sdk.String("nulla"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("illum"),
+        Fields: sdk.String("vel"),
+        Key: sdk.String("error"),
+        OauthToken: sdk.String("deserunt"),
         Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.AdsenseAccountsAdclientsAdunitsCreate(ctx, req, operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

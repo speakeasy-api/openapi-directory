@@ -15,17 +15,21 @@ const (
 	GETDescribePartnersActionEnumDescribePartners GETDescribePartnersActionEnum = "DescribePartners"
 )
 
+func (e GETDescribePartnersActionEnum) ToPointer() *GETDescribePartnersActionEnum {
+	return &e
+}
+
 func (e *GETDescribePartnersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribePartners":
-		*e = GETDescribePartnersActionEnum(s)
+		*e = GETDescribePartnersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePartnersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePartnersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribePartnersVersionEnumTwoThousandAndTwelve1201 GETDescribePartnersVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribePartnersVersionEnum) ToPointer() *GETDescribePartnersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribePartnersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribePartnersVersionEnum(s)
+		*e = GETDescribePartnersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePartnersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePartnersVersionEnum: %v", v)
 	}
 }
 

@@ -13,23 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/obono.at/1.4.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
-    s := sdk.New(
-        sdk.WithSecurity(shared.Security{
-            Jwt: "YOUR_API_KEY_HERE",
-        }),
-    )
+    s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Auth.GetAuth(ctx)
+    res, err := s.Auth.GetAuth(ctx, operations.GetAuthSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,38 +43,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### Auth
+### [Auth](docs/auth/README.md)
 
-* `GetAuth` - Request a JWT access token using your obono username and password.
+* [GetAuth](docs/auth/README.md#getauth) - Request a JWT access token using your obono username and password.
 
-### Beleg
+### [Beleg](docs/beleg/README.md)
 
-* `AddBeleg` - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
-* `CreateAbschluss` - Generates an `Abschlussbeleg`.
-* `GetBeleg` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
-* `GetBelege` - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
-* `GetBelegeBelegUUID` - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+* [AddBeleg](docs/beleg/README.md#addbeleg) - Signs a receipt and stores it in the "Datenerfassungsprotokoll".
+* [CreateAbschluss](docs/beleg/README.md#createabschluss) - Generates an `Abschlussbeleg`.
+* [GetBeleg](docs/beleg/README.md#getbeleg) - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
+* [GetBelege](docs/beleg/README.md#getbelege) - Retrieves the `Beleg` collection from the "Datenerfassungsprotokoll".
+* [GetBelegeBelegUUID](docs/beleg/README.md#getbelegebeleguuid) - Retrieves a particular `Beleg` from the "Datenerfassungsprotokoll".
 
-### Export
+### [Export](docs/export/README.md)
 
-* `GetExportCsvRegistrierkassenRegistrierkasseUUIDBelege`
-* `GetExportDep131RegistrierkassenRegistrierkasseUUIDBelege`
-* `GetExportDep7RegistrierkassenRegistrierkasseUUIDBelege`
-* `GetExportGobdRegistrierkassenRegistrierkasseUUID`
-* `GetExportHTMLBelegeBelegUUID`
-* `GetExportPdfBelegeBelegUUID`
-* `GetExportQrBelegeBelegUUID`
-* `GetExportThermalPrintBelegeBelegUUID`
-* `GetExportXlsRegistrierkassenRegistrierkasseUUIDBelege`
+* [GetExportCsvRegistrierkassenRegistrierkasseUUIDBelege](docs/export/README.md#getexportcsvregistrierkassenregistrierkasseuuidbelege)
+* [GetExportDep131RegistrierkassenRegistrierkasseUUIDBelege](docs/export/README.md#getexportdep131registrierkassenregistrierkasseuuidbelege)
+* [GetExportDep7RegistrierkassenRegistrierkasseUUIDBelege](docs/export/README.md#getexportdep7registrierkassenregistrierkasseuuidbelege)
+* [GetExportGobdRegistrierkassenRegistrierkasseUUID](docs/export/README.md#getexportgobdregistrierkassenregistrierkasseuuid)
+* [GetExportHTMLBelegeBelegUUID](docs/export/README.md#getexporthtmlbelegebeleguuid)
+* [GetExportPdfBelegeBelegUUID](docs/export/README.md#getexportpdfbelegebeleguuid)
+* [GetExportQrBelegeBelegUUID](docs/export/README.md#getexportqrbelegebeleguuid)
+* [GetExportThermalPrintBelegeBelegUUID](docs/export/README.md#getexportthermalprintbelegebeleguuid)
+* [GetExportXlsRegistrierkassenRegistrierkasseUUIDBelege](docs/export/README.md#getexportxlsregistrierkassenregistrierkasseuuidbelege)
 
-### Monatsbelege
+### [Monatsbelege](docs/monatsbelege/README.md)
 
-* `GetMonatsbelege` - Returns a list of `Monatsbelege`.
+* [GetMonatsbelege](docs/monatsbelege/README.md#getmonatsbelege) - Returns a list of `Monatsbelege`.
 
-### Registrierkasse
+### [Registrierkasse](docs/registrierkasse/README.md)
 
-* `GetDEP` - Generates a DEP file.
-* `GetRegistrierkasse` - Returns information about a particular `Registrierkasse`.
+* [GetDEP](docs/registrierkasse/README.md#getdep) - Generates a DEP file.
+* [GetRegistrierkasse](docs/registrierkasse/README.md#getregistrierkasse) - Returns information about a particular `Registrierkasse`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

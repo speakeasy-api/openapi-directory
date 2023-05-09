@@ -20,12 +20,16 @@ const (
 	PersonalDocumentDataTypeEnumVisa           PersonalDocumentDataTypeEnum = "VISA"
 )
 
+func (e PersonalDocumentDataTypeEnum) ToPointer() *PersonalDocumentDataTypeEnum {
+	return &e
+}
+
 func (e *PersonalDocumentDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRIVINGLICENSE":
 		fallthrough
 	case "ID":
@@ -35,10 +39,10 @@ func (e *PersonalDocumentDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOCIALSECURITY":
 		fallthrough
 	case "VISA":
-		*e = PersonalDocumentDataTypeEnum(s)
+		*e = PersonalDocumentDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PersonalDocumentDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PersonalDocumentDataTypeEnum: %v", v)
 	}
 }
 

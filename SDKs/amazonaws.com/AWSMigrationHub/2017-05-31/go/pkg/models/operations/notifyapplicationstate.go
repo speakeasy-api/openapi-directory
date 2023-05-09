@@ -16,17 +16,21 @@ const (
 	NotifyApplicationStateXAmzTargetEnumAwsMigrationHubNotifyApplicationState NotifyApplicationStateXAmzTargetEnum = "AWSMigrationHub.NotifyApplicationState"
 )
 
+func (e NotifyApplicationStateXAmzTargetEnum) ToPointer() *NotifyApplicationStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *NotifyApplicationStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.NotifyApplicationState":
-		*e = NotifyApplicationStateXAmzTargetEnum(s)
+		*e = NotifyApplicationStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotifyApplicationStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for NotifyApplicationStateXAmzTargetEnum: %v", v)
 	}
 }
 

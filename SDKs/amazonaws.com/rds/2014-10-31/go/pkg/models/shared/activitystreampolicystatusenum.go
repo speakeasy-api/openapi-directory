@@ -16,12 +16,16 @@ const (
 	ActivityStreamPolicyStatusEnumUnlockingPolicy ActivityStreamPolicyStatusEnum = "unlocking-policy"
 )
 
+func (e ActivityStreamPolicyStatusEnum) ToPointer() *ActivityStreamPolicyStatusEnum {
+	return &e
+}
+
 func (e *ActivityStreamPolicyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "locked":
 		fallthrough
 	case "unlocked":
@@ -29,9 +33,9 @@ func (e *ActivityStreamPolicyStatusEnum) UnmarshalJSON(data []byte) error {
 	case "locking-policy":
 		fallthrough
 	case "unlocking-policy":
-		*e = ActivityStreamPolicyStatusEnum(s)
+		*e = ActivityStreamPolicyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityStreamPolicyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityStreamPolicyStatusEnum: %v", v)
 	}
 }

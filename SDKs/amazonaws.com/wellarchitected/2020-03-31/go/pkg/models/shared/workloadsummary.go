@@ -14,7 +14,7 @@ type WorkloadSummary struct {
 	Lenses []string `json:"Lenses,omitempty"`
 	// An Amazon Web Services account ID.
 	Owner *string `json:"Owner,omitempty"`
-	// A map from risk names to the count of how questions have that rating.
+	// A map from risk names to the count of how many questions have that rating.
 	RiskCounts map[string]int64 `json:"RiskCounts,omitempty"`
 	// The date and time recorded.
 	UpdatedAt *time.Time `json:"UpdatedAt,omitempty"`

@@ -15,19 +15,23 @@ const (
 	TwoHundredResultResultAstPackagePathTypeEnumPackage TwoHundredResultResultAstPackagePathTypeEnum = "package"
 )
 
+func (e TwoHundredResultResultAstPackagePathTypeEnum) ToPointer() *TwoHundredResultResultAstPackagePathTypeEnum {
+	return &e
+}
+
 func (e *TwoHundredResultResultAstPackagePathTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "import":
 		fallthrough
 	case "package":
-		*e = TwoHundredResultResultAstPackagePathTypeEnum(s)
+		*e = TwoHundredResultResultAstPackagePathTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TwoHundredResultResultAstPackagePathTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TwoHundredResultResultAstPackagePathTypeEnum: %v", v)
 	}
 }
 

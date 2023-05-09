@@ -16,17 +16,21 @@ const (
 	TerminateAppXAmzTargetEnumAwsServerMigrationServiceV20161024TerminateApp TerminateAppXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.TerminateApp"
 )
 
+func (e TerminateAppXAmzTargetEnum) ToPointer() *TerminateAppXAmzTargetEnum {
+	return &e
+}
+
 func (e *TerminateAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.TerminateApp":
-		*e = TerminateAppXAmzTargetEnum(s)
+		*e = TerminateAppXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateAppXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateAppXAmzTargetEnum: %v", v)
 	}
 }
 

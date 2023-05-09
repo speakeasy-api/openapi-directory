@@ -16,17 +16,21 @@ const (
 	UpdateNamedQueryXAmzTargetEnumAmazonAthenaUpdateNamedQuery UpdateNamedQueryXAmzTargetEnum = "AmazonAthena.UpdateNamedQuery"
 )
 
+func (e UpdateNamedQueryXAmzTargetEnum) ToPointer() *UpdateNamedQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateNamedQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.UpdateNamedQuery":
-		*e = UpdateNamedQueryXAmzTargetEnum(s)
+		*e = UpdateNamedQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNamedQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNamedQueryXAmzTargetEnum: %v", v)
 	}
 }
 

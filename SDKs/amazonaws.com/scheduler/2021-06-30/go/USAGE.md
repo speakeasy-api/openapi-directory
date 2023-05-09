@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,153 +18,152 @@ func main() {
         }),
     )
 
-    req := operations.CreateScheduleRequest{
-        Name: "corrupti",
+    ctx := context.Background()
+    res, err := s.CreateSchedule(ctx, operations.CreateScheduleRequest{
+        Name: "Terrence Rau",
         RequestBody: operations.CreateScheduleRequestBody{
-            ClientToken: "provident",
-            Description: "distinctio",
-            EndDate: "2021-03-11T23:22:42.658Z",
+            ClientToken: sdk.String("nulla"),
+            Description: sdk.String("corrupti"),
+            EndDate: types.MustTimeFromString("2021-09-24T02:21:06.409Z"),
             FlexibleTimeWindow: operations.CreateScheduleRequestBodyFlexibleTimeWindow{
-                MaximumWindowInMinutes: 857946,
-                Mode: "FLEXIBLE",
+                MaximumWindowInMinutes: sdk.Int64(623564),
+                Mode: shared.FlexibleTimeWindowModeEnumFlexible.ToPointer(),
             },
-            GroupName: "illum",
-            KmsKeyArn: "vel",
-            ScheduleExpression: "error",
-            ScheduleExpressionTimezone: "deserunt",
-            StartDate: "2022-07-25T06:44:09.184Z",
-            State: "ENABLED",
+            GroupName: sdk.String("suscipit"),
+            KmsKeyArn: sdk.String("iure"),
+            ScheduleExpression: "magnam",
+            ScheduleExpressionTimezone: sdk.String("debitis"),
+            StartDate: types.MustTimeFromString("2022-01-14T06:18:51.036Z"),
+            State: operations.CreateScheduleRequestBodyStateEnumEnabled.ToPointer(),
             Target: operations.CreateScheduleRequestBodyTarget{
-                Arn: "debitis",
+                Arn: sdk.String("suscipit"),
                 DeadLetterConfig: &shared.DeadLetterConfig{
-                    Arn: "ipsa",
+                    Arn: sdk.String("molestiae"),
                 },
                 EcsParameters: &shared.EcsParameters{
                     CapacityProviderStrategy: []shared.CapacityProviderStrategyItem{
                         shared.CapacityProviderStrategyItem{
-                            Base: 272656,
-                            CapacityProvider: "suscipit",
-                            Weight: 477665,
+                            Base: sdk.Int64(812169),
+                            CapacityProvider: "voluptatum",
+                            Weight: sdk.Int64(479977),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 791725,
-                            CapacityProvider: "placeat",
-                            Weight: 528895,
+                            Base: sdk.Int64(568045),
+                            CapacityProvider: "nisi",
+                            Weight: sdk.Int64(925597),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 479977,
-                            CapacityProvider: "excepturi",
-                            Weight: 392785,
+                            Base: sdk.Int64(836079),
+                            CapacityProvider: "ab",
+                            Weight: sdk.Int64(337396),
                         },
                         shared.CapacityProviderStrategyItem{
-                            Base: 925597,
-                            CapacityProvider: "temporibus",
-                            Weight: 71036,
+                            Base: sdk.Int64(87129),
+                            CapacityProvider: "deserunt",
+                            Weight: sdk.Int64(20218),
                         },
                     },
-                    EnableECSManagedTags: false,
-                    EnableExecuteCommand: false,
-                    Group: "quis",
-                    LaunchType: "EC2",
+                    EnableECSManagedTags: sdk.Bool(false),
+                    EnableExecuteCommand: sdk.Bool(false),
+                    Group: sdk.String("ipsam"),
+                    LaunchType: shared.LaunchTypeEnumExternal.ToPointer(),
                     NetworkConfiguration: &shared.NetworkConfiguration{
                         AwsvpcConfiguration: &shared.AwsVpcConfiguration{
-                            AssignPublicIP: "DISABLED",
+                            AssignPublicIP: shared.AssignPublicIPEnumDisabled.ToPointer(),
                             SecurityGroups: []string{
-                                "ipsam",
-                            },
-                            Subnets: []string{
-                                "sapiente",
-                                "quo",
                                 "odit",
                                 "at",
+                                "at",
+                                "maiores",
+                            },
+                            Subnets: []string{
+                                "quod",
+                                "quod",
                             },
                         },
                     },
                     PlacementConstraints: []shared.PlacementConstraint{
                         shared.PlacementConstraint{
-                            Expression: "maiores",
-                            Type: "distinctInstance",
+                            Expression: sdk.String("totam"),
+                            Type: shared.PlacementConstraintTypeEnumMemberOf.ToPointer(),
                         },
                         shared.PlacementConstraint{
-                            Expression: "quod",
-                            Type: "memberOf",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "esse",
-                            Type: "memberOf",
-                        },
-                        shared.PlacementConstraint{
-                            Expression: "porro",
-                            Type: "memberOf",
+                            Expression: sdk.String("dolorum"),
+                            Type: shared.PlacementConstraintTypeEnumDistinctInstance.ToPointer(),
                         },
                     },
                     PlacementStrategy: []shared.PlacementStrategy{
                         shared.PlacementStrategy{
-                            Field: "nam",
-                            Type: "spread",
+                            Field: sdk.String("officia"),
+                            Type: shared.PlacementStrategyTypeEnumSpread.ToPointer(),
+                        },
+                        shared.PlacementStrategy{
+                            Field: sdk.String("fugit"),
+                            Type: shared.PlacementStrategyTypeEnumSpread.ToPointer(),
+                        },
+                        shared.PlacementStrategy{
+                            Field: sdk.String("hic"),
+                            Type: shared.PlacementStrategyTypeEnumBinpack.ToPointer(),
                         },
                     },
-                    PlatformVersion: "occaecati",
-                    PropagateTags: "TASK_DEFINITION",
-                    ReferenceID: "fugit",
+                    PlatformVersion: sdk.String("totam"),
+                    PropagateTags: shared.PropagateTagsEnumTaskDefinition.ToPointer(),
+                    ReferenceID: sdk.String("beatae"),
                     Tags: []map[string]string{
                         map[string]string{
-                            "optio": "totam",
-                            "beatae": "commodi",
-                            "molestiae": "modi",
-                            "qui": "impedit",
+                            "modi": "qui",
+                            "impedit": "cum",
                         },
                         map[string]string{
-                            "esse": "ipsum",
-                            "excepturi": "aspernatur",
-                            "perferendis": "ad",
-                        },
-                        map[string]string{
-                            "sed": "iste",
-                            "dolor": "natus",
-                            "laboriosam": "hic",
+                            "ipsum": "excepturi",
+                            "aspernatur": "perferendis",
                         },
                     },
-                    TaskCount: 902599,
-                    TaskDefinitionArn: "fuga",
+                    TaskCount: sdk.Int64(324141),
+                    TaskDefinitionArn: "natus",
                 },
                 EventBridgeParameters: &shared.EventBridgeParameters{
-                    DetailType: "in",
-                    Source: "corporis",
+                    DetailType: "sed",
+                    Source: "iste",
                 },
-                Input: "iste",
+                Input: sdk.String("dolor"),
                 KinesisParameters: &shared.KinesisParameters{
-                    PartitionKey: "iure",
+                    PartitionKey: "natus",
                 },
                 RetryPolicy: &shared.RetryPolicy{
-                    MaximumEventAgeInSeconds: 902349,
-                    MaximumRetryAttempts: 697631,
+                    MaximumEventAgeInSeconds: sdk.Int64(386489),
+                    MaximumRetryAttempts: sdk.Int64(943749),
                 },
-                RoleArn: "architecto",
+                RoleArn: sdk.String("saepe"),
                 SageMakerPipelineParameters: &shared.SageMakerPipelineParameters{
                     PipelineParameterList: []shared.SageMakerPipelineParameter{
                         shared.SageMakerPipelineParameter{
-                            Name: "reiciendis",
-                            Value: "est",
+                            Name: "Stacy Moore",
+                            Value: "quidem",
+                        },
+                        shared.SageMakerPipelineParameter{
+                            Name: "Brenda Wisozk",
+                            Value: "laborum",
+                        },
+                        shared.SageMakerPipelineParameter{
+                            Name: "Connie Herzog",
+                            Value: "enim",
                         },
                     },
                 },
                 SqsParameters: &shared.SqsParameters{
-                    MessageGroupID: "mollitia",
+                    MessageGroupID: sdk.String("omnis"),
                 },
             },
         },
-        XAmzAlgorithm: "laborum",
-        XAmzContentSha256: "dolores",
-        XAmzCredential: "dolorem",
-        XAmzDate: "corporis",
-        XAmzSecurityToken: "explicabo",
-        XAmzSignature: "nobis",
-        XAmzSignedHeaders: "enim",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSchedule(ctx, req)
+        XAmzAlgorithm: sdk.String("nemo"),
+        XAmzContentSha256: sdk.String("minima"),
+        XAmzCredential: sdk.String("excepturi"),
+        XAmzDate: sdk.String("accusantium"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("culpa"),
+        XAmzSignedHeaders: sdk.String("doloribus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -20,12 +20,16 @@ const (
 	SearchCseListImgColorTypeEnumTrans                 SearchCseListImgColorTypeEnum = "trans"
 )
 
+func (e SearchCseListImgColorTypeEnum) ToPointer() *SearchCseListImgColorTypeEnum {
+	return &e
+}
+
 func (e *SearchCseListImgColorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgColorTypeUndefined":
 		fallthrough
 	case "mono":
@@ -35,10 +39,10 @@ func (e *SearchCseListImgColorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "color":
 		fallthrough
 	case "trans":
-		*e = SearchCseListImgColorTypeEnum(s)
+		*e = SearchCseListImgColorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListImgColorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListImgColorTypeEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	SearchCseListImgDominantColorEnumYellow                    SearchCseListImgDominantColorEnum = "yellow"
 )
 
+func (e SearchCseListImgDominantColorEnum) ToPointer() *SearchCseListImgDominantColorEnum {
+	return &e
+}
+
 func (e *SearchCseListImgDominantColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgDominantColorUndefined":
 		fallthrough
 	case "black":
@@ -92,10 +100,10 @@ func (e *SearchCseListImgDominantColorEnum) UnmarshalJSON(data []byte) error {
 	case "white":
 		fallthrough
 	case "yellow":
-		*e = SearchCseListImgDominantColorEnum(s)
+		*e = SearchCseListImgDominantColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListImgDominantColorEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListImgDominantColorEnum: %v", v)
 	}
 }
 
@@ -113,12 +121,16 @@ const (
 	SearchCseListImgSizeEnumXxlarge          SearchCseListImgSizeEnum = "XXLARGE"
 )
 
+func (e SearchCseListImgSizeEnum) ToPointer() *SearchCseListImgSizeEnum {
+	return &e
+}
+
 func (e *SearchCseListImgSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgSizeUndefined":
 		fallthrough
 	case "HUGE":
@@ -134,10 +146,10 @@ func (e *SearchCseListImgSizeEnum) UnmarshalJSON(data []byte) error {
 	case "XLARGE":
 		fallthrough
 	case "XXLARGE":
-		*e = SearchCseListImgSizeEnum(s)
+		*e = SearchCseListImgSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListImgSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListImgSizeEnum: %v", v)
 	}
 }
 
@@ -154,12 +166,16 @@ const (
 	SearchCseListImgTypeEnumAnimated         SearchCseListImgTypeEnum = "animated"
 )
 
+func (e SearchCseListImgTypeEnum) ToPointer() *SearchCseListImgTypeEnum {
+	return &e
+}
+
 func (e *SearchCseListImgTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "imgTypeUndefined":
 		fallthrough
 	case "clipart":
@@ -173,10 +189,10 @@ func (e *SearchCseListImgTypeEnum) UnmarshalJSON(data []byte) error {
 	case "photo":
 		fallthrough
 	case "animated":
-		*e = SearchCseListImgTypeEnum(s)
+		*e = SearchCseListImgTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListImgTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListImgTypeEnum: %v", v)
 	}
 }
 
@@ -191,12 +207,16 @@ const (
 	SearchCseListSafeEnumOff           SearchCseListSafeEnum = "off"
 )
 
+func (e SearchCseListSafeEnum) ToPointer() *SearchCseListSafeEnum {
+	return &e
+}
+
 func (e *SearchCseListSafeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "safeUndefined":
 		fallthrough
 	case "active":
@@ -206,10 +226,10 @@ func (e *SearchCseListSafeEnum) UnmarshalJSON(data []byte) error {
 	case "medium":
 		fallthrough
 	case "off":
-		*e = SearchCseListSafeEnum(s)
+		*e = SearchCseListSafeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListSafeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListSafeEnum: %v", v)
 	}
 }
 
@@ -221,19 +241,23 @@ const (
 	SearchCseListSearchTypeEnumImage               SearchCseListSearchTypeEnum = "image"
 )
 
+func (e SearchCseListSearchTypeEnum) ToPointer() *SearchCseListSearchTypeEnum {
+	return &e
+}
+
 func (e *SearchCseListSearchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "searchTypeUndefined":
 		fallthrough
 	case "image":
-		*e = SearchCseListSearchTypeEnum(s)
+		*e = SearchCseListSearchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListSearchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListSearchTypeEnum: %v", v)
 	}
 }
 
@@ -246,21 +270,25 @@ const (
 	SearchCseListSiteSearchFilterEnumI                         SearchCseListSiteSearchFilterEnum = "i"
 )
 
+func (e SearchCseListSiteSearchFilterEnum) ToPointer() *SearchCseListSiteSearchFilterEnum {
+	return &e
+}
+
 func (e *SearchCseListSiteSearchFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "siteSearchFilterUndefined":
 		fallthrough
 	case "e":
 		fallthrough
 	case "i":
-		*e = SearchCseListSiteSearchFilterEnum(s)
+		*e = SearchCseListSiteSearchFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCseListSiteSearchFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCseListSiteSearchFilterEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	IdpFantasyPlayersWithAdpFormatEnumJSON IdpFantasyPlayersWithAdpFormatEnum = "JSON"
 )
 
+func (e IdpFantasyPlayersWithAdpFormatEnum) ToPointer() *IdpFantasyPlayersWithAdpFormatEnum {
+	return &e
+}
+
 func (e *IdpFantasyPlayersWithAdpFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = IdpFantasyPlayersWithAdpFormatEnum(s)
+		*e = IdpFantasyPlayersWithAdpFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IdpFantasyPlayersWithAdpFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for IdpFantasyPlayersWithAdpFormatEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteCustomerGatewayActionEnumDeleteCustomerGateway GETDeleteCustomerGatewayActionEnum = "DeleteCustomerGateway"
 )
 
+func (e GETDeleteCustomerGatewayActionEnum) ToPointer() *GETDeleteCustomerGatewayActionEnum {
+	return &e
+}
+
 func (e *GETDeleteCustomerGatewayActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteCustomerGateway":
-		*e = GETDeleteCustomerGatewayActionEnum(s)
+		*e = GETDeleteCustomerGatewayActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCustomerGatewayActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCustomerGatewayActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteCustomerGatewayVersionEnumTwoThousandAndSixteen1115 GETDeleteCustomerGatewayVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteCustomerGatewayVersionEnum) ToPointer() *GETDeleteCustomerGatewayVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteCustomerGatewayVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteCustomerGatewayVersionEnum(s)
+		*e = GETDeleteCustomerGatewayVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteCustomerGatewayVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteCustomerGatewayVersionEnum: %v", v)
 	}
 }
 

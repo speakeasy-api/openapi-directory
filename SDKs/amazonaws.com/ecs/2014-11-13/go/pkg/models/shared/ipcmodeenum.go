@@ -15,20 +15,24 @@ const (
 	IpcModeEnumNone IpcModeEnum = "none"
 )
 
+func (e IpcModeEnum) ToPointer() *IpcModeEnum {
+	return &e
+}
+
 func (e *IpcModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "host":
 		fallthrough
 	case "task":
 		fallthrough
 	case "none":
-		*e = IpcModeEnum(s)
+		*e = IpcModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IpcModeEnum: %s", s)
+		return fmt.Errorf("invalid value for IpcModeEnum: %v", v)
 	}
 }

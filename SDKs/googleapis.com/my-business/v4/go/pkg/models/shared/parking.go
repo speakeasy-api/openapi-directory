@@ -17,12 +17,16 @@ const (
 	ParkingElectricCarChargingStationsExceptionEnumDependentOnDayOfWeek ParkingElectricCarChargingStationsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingElectricCarChargingStationsExceptionEnum) ToPointer() *ParkingElectricCarChargingStationsExceptionEnum {
+	return &e
+}
+
 func (e *ParkingElectricCarChargingStationsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *ParkingElectricCarChargingStationsExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingElectricCarChargingStationsExceptionEnum(s)
+		*e = ParkingElectricCarChargingStationsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingElectricCarChargingStationsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingElectricCarChargingStationsExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ParkingFreeParkingExceptionEnumDependentOnDayOfWeek ParkingFreeParkingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingFreeParkingExceptionEnum) ToPointer() *ParkingFreeParkingExceptionEnum {
+	return &e
+}
+
 func (e *ParkingFreeParkingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *ParkingFreeParkingExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingFreeParkingExceptionEnum(s)
+		*e = ParkingFreeParkingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingFreeParkingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingFreeParkingExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ParkingFreeSelfParkingExceptionEnumDependentOnDayOfWeek ParkingFreeSelfParkingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingFreeSelfParkingExceptionEnum) ToPointer() *ParkingFreeSelfParkingExceptionEnum {
+	return &e
+}
+
 func (e *ParkingFreeSelfParkingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *ParkingFreeSelfParkingExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingFreeSelfParkingExceptionEnum(s)
+		*e = ParkingFreeSelfParkingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingFreeSelfParkingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingFreeSelfParkingExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	ParkingFreeValetParkingExceptionEnumDependentOnDayOfWeek ParkingFreeValetParkingExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingFreeValetParkingExceptionEnum) ToPointer() *ParkingFreeValetParkingExceptionEnum {
+	return &e
+}
+
 func (e *ParkingFreeValetParkingExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *ParkingFreeValetParkingExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingFreeValetParkingExceptionEnum(s)
+		*e = ParkingFreeValetParkingExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingFreeValetParkingExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingFreeValetParkingExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	ParkingParkingAvailableExceptionEnumDependentOnDayOfWeek ParkingParkingAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingParkingAvailableExceptionEnum) ToPointer() *ParkingParkingAvailableExceptionEnum {
+	return &e
+}
+
 func (e *ParkingParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *ParkingParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) error 
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingParkingAvailableExceptionEnum(s)
+		*e = ParkingParkingAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingParkingAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingParkingAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	ParkingSelfParkingAvailableExceptionEnumDependentOnDayOfWeek ParkingSelfParkingAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingSelfParkingAvailableExceptionEnum) ToPointer() *ParkingSelfParkingAvailableExceptionEnum {
+	return &e
+}
+
 func (e *ParkingSelfParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *ParkingSelfParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) er
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingSelfParkingAvailableExceptionEnum(s)
+		*e = ParkingSelfParkingAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingSelfParkingAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingSelfParkingAvailableExceptionEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	ParkingValetParkingAvailableExceptionEnumDependentOnDayOfWeek ParkingValetParkingAvailableExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e ParkingValetParkingAvailableExceptionEnum) ToPointer() *ParkingValetParkingAvailableExceptionEnum {
+	return &e
+}
+
 func (e *ParkingValetParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -210,10 +238,10 @@ func (e *ParkingValetParkingAvailableExceptionEnum) UnmarshalJSON(data []byte) e
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = ParkingValetParkingAvailableExceptionEnum(s)
+		*e = ParkingValetParkingAvailableExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParkingValetParkingAvailableExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParkingValetParkingAvailableExceptionEnum: %v", v)
 	}
 }
 

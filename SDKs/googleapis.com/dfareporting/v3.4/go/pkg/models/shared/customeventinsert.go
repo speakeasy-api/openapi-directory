@@ -16,21 +16,25 @@ const (
 	CustomEventInsertInsertEventTypeEnumClick      CustomEventInsertInsertEventTypeEnum = "CLICK"
 )
 
+func (e CustomEventInsertInsertEventTypeEnum) ToPointer() *CustomEventInsertInsertEventTypeEnum {
+	return &e
+}
+
 func (e *CustomEventInsertInsertEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "IMPRESSION":
 		fallthrough
 	case "CLICK":
-		*e = CustomEventInsertInsertEventTypeEnum(s)
+		*e = CustomEventInsertInsertEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomEventInsertInsertEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomEventInsertInsertEventTypeEnum: %v", v)
 	}
 }
 

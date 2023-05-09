@@ -20,12 +20,16 @@ const (
 	LookupAttributeKeyEnumAccessKeyID  LookupAttributeKeyEnum = "AccessKeyId"
 )
 
+func (e LookupAttributeKeyEnum) ToPointer() *LookupAttributeKeyEnum {
+	return &e
+}
+
 func (e *LookupAttributeKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EventId":
 		fallthrough
 	case "EventName":
@@ -41,9 +45,9 @@ func (e *LookupAttributeKeyEnum) UnmarshalJSON(data []byte) error {
 	case "EventSource":
 		fallthrough
 	case "AccessKeyId":
-		*e = LookupAttributeKeyEnum(s)
+		*e = LookupAttributeKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LookupAttributeKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for LookupAttributeKeyEnum: %v", v)
 	}
 }

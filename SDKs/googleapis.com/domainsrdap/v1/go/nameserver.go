@@ -34,7 +34,10 @@ func newNameserver(defaultClient, securityClient HTTPClient, serverURL, language
 // DomainsrdapNameserverGet - The RDAP API recognizes this command from the RDAP specification but does not support it. The response is a formatted 501 error.
 func (s *nameserver) DomainsrdapNameserverGet(ctx context.Context, request operations.DomainsrdapNameserverGetRequest) (*operations.DomainsrdapNameserverGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/nameserver/{nameserverId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/nameserver/{nameserverId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

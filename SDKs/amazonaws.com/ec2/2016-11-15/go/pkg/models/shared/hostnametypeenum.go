@@ -14,18 +14,22 @@ const (
 	HostnameTypeEnumResourceName HostnameTypeEnum = "resource-name"
 )
 
+func (e HostnameTypeEnum) ToPointer() *HostnameTypeEnum {
+	return &e
+}
+
 func (e *HostnameTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ip-name":
 		fallthrough
 	case "resource-name":
-		*e = HostnameTypeEnum(s)
+		*e = HostnameTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HostnameTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HostnameTypeEnum: %v", v)
 	}
 }

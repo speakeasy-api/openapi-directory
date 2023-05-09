@@ -15,17 +15,21 @@ const (
 	GETCancelBundleTaskActionEnumCancelBundleTask GETCancelBundleTaskActionEnum = "CancelBundleTask"
 )
 
+func (e GETCancelBundleTaskActionEnum) ToPointer() *GETCancelBundleTaskActionEnum {
+	return &e
+}
+
 func (e *GETCancelBundleTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelBundleTask":
-		*e = GETCancelBundleTaskActionEnum(s)
+		*e = GETCancelBundleTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelBundleTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelBundleTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelBundleTaskVersionEnumTwoThousandAndSixteen1115 GETCancelBundleTaskVersionEnum = "2016-11-15"
 )
 
+func (e GETCancelBundleTaskVersionEnum) ToPointer() *GETCancelBundleTaskVersionEnum {
+	return &e
+}
+
 func (e *GETCancelBundleTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCancelBundleTaskVersionEnum(s)
+		*e = GETCancelBundleTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelBundleTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelBundleTaskVersionEnum: %v", v)
 	}
 }
 

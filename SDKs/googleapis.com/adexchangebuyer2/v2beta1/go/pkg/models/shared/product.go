@@ -18,12 +18,16 @@ const (
 	ProductSyndicationProductEnumGames                         ProductSyndicationProductEnum = "GAMES"
 )
 
+func (e ProductSyndicationProductEnum) ToPointer() *ProductSyndicationProductEnum {
+	return &e
+}
+
 func (e *ProductSyndicationProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNDICATION_PRODUCT_UNSPECIFIED":
 		fallthrough
 	case "CONTENT":
@@ -33,10 +37,10 @@ func (e *ProductSyndicationProductEnum) UnmarshalJSON(data []byte) error {
 	case "VIDEO":
 		fallthrough
 	case "GAMES":
-		*e = ProductSyndicationProductEnum(s)
+		*e = ProductSyndicationProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductSyndicationProductEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductSyndicationProductEnum: %v", v)
 	}
 }
 

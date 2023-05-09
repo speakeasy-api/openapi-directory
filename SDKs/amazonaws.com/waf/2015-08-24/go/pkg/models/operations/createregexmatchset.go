@@ -16,17 +16,21 @@ const (
 	CreateRegexMatchSetXAmzTargetEnumAwswaf20150824CreateRegexMatchSet CreateRegexMatchSetXAmzTargetEnum = "AWSWAF_20150824.CreateRegexMatchSet"
 )
 
+func (e CreateRegexMatchSetXAmzTargetEnum) ToPointer() *CreateRegexMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRegexMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.CreateRegexMatchSet":
-		*e = CreateRegexMatchSetXAmzTargetEnum(s)
+		*e = CreateRegexMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRegexMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRegexMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

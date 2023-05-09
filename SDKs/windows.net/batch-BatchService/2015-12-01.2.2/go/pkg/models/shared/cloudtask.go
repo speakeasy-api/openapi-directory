@@ -18,12 +18,16 @@ const (
 	CloudTaskPreviousStateEnumCompleted CloudTaskPreviousStateEnum = "completed"
 )
 
+func (e CloudTaskPreviousStateEnum) ToPointer() *CloudTaskPreviousStateEnum {
+	return &e
+}
+
 func (e *CloudTaskPreviousStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "preparing":
@@ -31,10 +35,10 @@ func (e *CloudTaskPreviousStateEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = CloudTaskPreviousStateEnum(s)
+		*e = CloudTaskPreviousStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudTaskPreviousStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudTaskPreviousStateEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	CloudTaskStateEnumCompleted CloudTaskStateEnum = "completed"
 )
 
+func (e CloudTaskStateEnum) ToPointer() *CloudTaskStateEnum {
+	return &e
+}
+
 func (e *CloudTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "preparing":
@@ -61,10 +69,10 @@ func (e *CloudTaskStateEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = CloudTaskStateEnum(s)
+		*e = CloudTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudTaskStateEnum: %v", v)
 	}
 }
 

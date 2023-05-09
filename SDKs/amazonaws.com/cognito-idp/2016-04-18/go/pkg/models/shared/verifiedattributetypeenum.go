@@ -14,18 +14,22 @@ const (
 	VerifiedAttributeTypeEnumEmail       VerifiedAttributeTypeEnum = "email"
 )
 
+func (e VerifiedAttributeTypeEnum) ToPointer() *VerifiedAttributeTypeEnum {
+	return &e
+}
+
 func (e *VerifiedAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "phone_number":
 		fallthrough
 	case "email":
-		*e = VerifiedAttributeTypeEnum(s)
+		*e = VerifiedAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifiedAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifiedAttributeTypeEnum: %v", v)
 	}
 }

@@ -41,12 +41,16 @@ const (
 	PaymentProductEnumPain001SwissSixCreditTransfers      PaymentProductEnum = "pain.001-swiss-six-credit-transfers"
 )
 
+func (e PaymentProductEnum) ToPointer() *PaymentProductEnum {
+	return &e
+}
+
 func (e *PaymentProductEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domestic-swiss-credit-transfers-isr":
 		fallthrough
 	case "domestic-swiss-credit-transfers":
@@ -64,9 +68,9 @@ func (e *PaymentProductEnum) UnmarshalJSON(data []byte) error {
 	case "pain.001-cross-border-credit-transfers":
 		fallthrough
 	case "pain.001-swiss-six-credit-transfers":
-		*e = PaymentProductEnum(s)
+		*e = PaymentProductEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentProductEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentProductEnum: %v", v)
 	}
 }

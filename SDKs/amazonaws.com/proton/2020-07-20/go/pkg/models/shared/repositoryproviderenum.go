@@ -15,20 +15,24 @@ const (
 	RepositoryProviderEnumBitbucket        RepositoryProviderEnum = "BITBUCKET"
 )
 
+func (e RepositoryProviderEnum) ToPointer() *RepositoryProviderEnum {
+	return &e
+}
+
 func (e *RepositoryProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GITHUB":
 		fallthrough
 	case "GITHUB_ENTERPRISE":
 		fallthrough
 	case "BITBUCKET":
-		*e = RepositoryProviderEnum(s)
+		*e = RepositoryProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryProviderEnum: %v", v)
 	}
 }

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -19,8 +20,6 @@ pkg/models/operations/chromemanagementcustomersreportscountchromedevicesthatneed
 pkg/models/operations/chromemanagementcustomersreportscountchromehardwarefleetdevices.go
 pkg/models/operations/chromemanagementcustomersreportscountchromeversions.go
 pkg/models/operations/chromemanagementcustomersreportscountinstalledapps.go
-pkg/models/operations/chromemanagementcustomersreportscountprintjobsbyprinter.go
-pkg/models/operations/chromemanagementcustomersreportscountprintjobsbyuser.go
 pkg/models/operations/chromemanagementcustomersreportsfindinstalledappdevices.go
 pkg/models/operations/chromemanagementcustomerstelemetrydeviceslist.go
 pkg/models/operations/chromemanagementcustomerstelemetryeventslist.go
@@ -40,10 +39,6 @@ pkg/models/shared/googlechromemanagementv1countchromeversionsresponse.go
 pkg/models/shared/googlechromemanagementv1browserversion.go
 pkg/models/shared/googlechromemanagementv1countinstalledappsresponse.go
 pkg/models/shared/googlechromemanagementv1installedapp.go
-pkg/models/shared/googlechromemanagementv1countprintjobsbyprinterresponse.go
-pkg/models/shared/googlechromemanagementv1printerreport.go
-pkg/models/shared/googlechromemanagementv1countprintjobsbyuserresponse.go
-pkg/models/shared/googlechromemanagementv1userprintreport.go
 pkg/models/shared/googlechromemanagementv1findinstalledappdevicesresponse.go
 pkg/models/shared/googlechromemanagementv1device.go
 pkg/models/shared/googlechromemanagementv1listtelemetrydevicesresponse.go
@@ -89,4 +84,6 @@ pkg/models/shared/googlechromemanagementv1telemetrydeviceinfo.go
 pkg/models/shared/googlechromemanagementv1telemetryuser.go
 pkg/models/shared/googlechromemanagementv1telemetryuserdevice.go
 pkg/models/shared/googlechromemanagementv1listtelemetryusersresponse.go
+docs/sdk/README.md
+docs/customers/README.md
 USAGE.md

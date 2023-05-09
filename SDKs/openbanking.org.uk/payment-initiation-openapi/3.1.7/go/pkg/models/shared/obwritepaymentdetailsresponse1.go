@@ -34,12 +34,16 @@ const (
 	OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnumRejectedCancellationRequest          OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum = "RejectedCancellationRequest"
 )
 
+func (e OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum) ToPointer() *OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum {
+	return &e
+}
+
 func (e *OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Accepted":
 		fallthrough
 	case "AcceptedCancellationRequest":
@@ -79,10 +83,10 @@ func (e *OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum) UnmarshalJSO
 	case "Rejected":
 		fallthrough
 	case "RejectedCancellationRequest":
-		*e = OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum(s)
+		*e = OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWritePaymentDetailsResponse1DataPaymentStatusStatusEnum: %v", v)
 	}
 }
 
@@ -99,12 +103,16 @@ const (
 	OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnumUnmatched                OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum = "Unmatched"
 )
 
+func (e OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum) ToPointer() *OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum {
+	return &e
+}
+
 func (e *OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "PendingFailingSettlement":
@@ -118,10 +126,10 @@ func (e *OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReason
 	case "Suspended":
 		fallthrough
 	case "Unmatched":
-		*e = OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum(s)
+		*e = OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for OBWritePaymentDetailsResponse1DataPaymentStatusStatusDetailStatusReasonEnum: %v", v)
 	}
 }
 

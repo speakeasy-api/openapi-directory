@@ -15,17 +15,21 @@ const (
 	GETGETEbsEncryptionByDefaultActionEnumGetEbsEncryptionByDefault GETGETEbsEncryptionByDefaultActionEnum = "GetEbsEncryptionByDefault"
 )
 
+func (e GETGETEbsEncryptionByDefaultActionEnum) ToPointer() *GETGETEbsEncryptionByDefaultActionEnum {
+	return &e
+}
+
 func (e *GETGETEbsEncryptionByDefaultActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetEbsEncryptionByDefault":
-		*e = GETGETEbsEncryptionByDefaultActionEnum(s)
+		*e = GETGETEbsEncryptionByDefaultActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETEbsEncryptionByDefaultActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETEbsEncryptionByDefaultActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETEbsEncryptionByDefaultVersionEnumTwoThousandAndSixteen1115 GETGETEbsEncryptionByDefaultVersionEnum = "2016-11-15"
 )
 
+func (e GETGETEbsEncryptionByDefaultVersionEnum) ToPointer() *GETGETEbsEncryptionByDefaultVersionEnum {
+	return &e
+}
+
 func (e *GETGETEbsEncryptionByDefaultVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETEbsEncryptionByDefaultVersionEnum(s)
+		*e = GETGETEbsEncryptionByDefaultVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETEbsEncryptionByDefaultVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETEbsEncryptionByDefaultVersionEnum: %v", v)
 	}
 }
 

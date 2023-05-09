@@ -14,19 +14,23 @@ const (
 	NotificationReadStatusEnumFailed    NotificationReadStatusEnum = "failed"
 )
 
+func (e NotificationReadStatusEnum) ToPointer() *NotificationReadStatusEnum {
+	return &e
+}
+
 func (e *NotificationReadStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = NotificationReadStatusEnum(s)
+		*e = NotificationReadStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationReadStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationReadStatusEnum: %v", v)
 	}
 }
 

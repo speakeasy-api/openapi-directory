@@ -37,7 +37,10 @@ func newSubscriptions(defaultClient, securityClient HTTPClient, serverURL, langu
 // After this date, the status changes from ACTIVE to CANCELED.
 func (s *subscriptions) CancelSubscription(ctx context.Context, request operations.CancelSubscriptionRequest, security operations.CancelSubscriptionSecurity) (*operations.CancelSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *subscriptions) CreateSubscription(ctx context.Context, request shared.C
 // In the current implementation, only `START_SUBSCRIPTION` and `STOP_SUBSCRIPTION` (when the subscription was canceled) events are returned.
 func (s *subscriptions) ListSubscriptionEvents(ctx context.Context, request operations.ListSubscriptionEventsRequest, security operations.ListSubscriptionEventsSecurity) (*operations.ListSubscriptionEventsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/events", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/events", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +198,10 @@ func (s *subscriptions) ListSubscriptionEvents(ctx context.Context, request oper
 // Resumes a deactivated subscription.
 func (s *subscriptions) ResumeSubscription(ctx context.Context, request operations.ResumeSubscriptionRequest, security operations.ResumeSubscriptionSecurity) (*operations.ResumeSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}/resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -237,7 +246,10 @@ func (s *subscriptions) ResumeSubscription(ctx context.Context, request operatio
 // Retrieves a subscription.
 func (s *subscriptions) RetrieveSubscription(ctx context.Context, request operations.RetrieveSubscriptionRequest, security operations.RetrieveSubscriptionSecurity) (*operations.RetrieveSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +365,10 @@ func (s *subscriptions) SearchSubscriptions(ctx context.Context, request shared.
 // `subscription` field values.
 func (s *subscriptions) UpdateSubscription(ctx context.Context, request operations.UpdateSubscriptionRequest, security operations.UpdateSubscriptionSecurity) (*operations.UpdateSubscriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/subscriptions/{subscription_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSubscriptionRequest", "json")
 	if err != nil {

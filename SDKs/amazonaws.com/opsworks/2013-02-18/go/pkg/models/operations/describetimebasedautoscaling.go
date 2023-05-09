@@ -16,17 +16,21 @@ const (
 	DescribeTimeBasedAutoScalingXAmzTargetEnumOpsWorks20130218DescribeTimeBasedAutoScaling DescribeTimeBasedAutoScalingXAmzTargetEnum = "OpsWorks_20130218.DescribeTimeBasedAutoScaling"
 )
 
+func (e DescribeTimeBasedAutoScalingXAmzTargetEnum) ToPointer() *DescribeTimeBasedAutoScalingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTimeBasedAutoScalingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.DescribeTimeBasedAutoScaling":
-		*e = DescribeTimeBasedAutoScalingXAmzTargetEnum(s)
+		*e = DescribeTimeBasedAutoScalingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTimeBasedAutoScalingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTimeBasedAutoScalingXAmzTargetEnum: %v", v)
 	}
 }
 

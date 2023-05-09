@@ -13,41 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/pubsub/v1b
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PubsubSubscriptionsAcknowledgeRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Subscriptions.PubsubSubscriptionsAcknowledge(ctx, operations.PubsubSubscriptionsAcknowledgeRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AcknowledgeRequest: &shared.AcknowledgeRequest{
             AckID: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            Subscription: "nulla",
+            Subscription: sdk.String("nulla"),
         },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Subscriptions.PubsubSubscriptionsAcknowledge(ctx, req, operations.PubsubSubscriptionsAcknowledgeSecurity{
+        AccessToken: sdk.String("corrupti"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.PubsubSubscriptionsAcknowledgeSecurity{
         Option1: &operations.PubsubSubscriptionsAcknowledgeSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -68,26 +66,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Subscriptions
+### [Subscriptions](docs/subscriptions/README.md)
 
-* `PubsubSubscriptionsAcknowledge` - Acknowledges a particular received message: the Pub/Sub system can remove the given message from the subscription. Acknowledging a message whose Ack deadline has expired may succeed, but the message could have been already redelivered. Acknowledging a message more than once will not result in an error. This is only used for messages received via pull.
-* `PubsubSubscriptionsCreate` - Creates a subscription on a given topic for a given subscriber. If the subscription already exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND. If the name is not provided in the request, the server will assign a random name for this subscription on the same project as the topic.
-* `PubsubSubscriptionsDelete` - Deletes an existing subscription. All pending messages in the subscription are immediately dropped. Calls to Pull after deletion will return NOT_FOUND.
-* `PubsubSubscriptionsGet` - Gets the configuration details of a subscription.
-* `PubsubSubscriptionsList` - Lists matching subscriptions.
-* `PubsubSubscriptionsModifyAckDeadline` - Modifies the Ack deadline for a message received from a pull request.
-* `PubsubSubscriptionsModifyPushConfig` - Modifies the PushConfig for a specified subscription. This method can be used to suspend the flow of messages to an endpoint by clearing the PushConfig field in the request. Messages will be accumulated for delivery even if no push configuration is defined or while the configuration is modified.
-* `PubsubSubscriptionsPull` - Pulls a single message from the server. If return_immediately is true, and no messages are available in the subscription, this method returns FAILED_PRECONDITION. The system is free to return an UNAVAILABLE error if no messages are available in a reasonable amount of time (to reduce system load).
-* `PubsubSubscriptionsPullBatch` - Pulls messages from the server. Returns an empty list if there are no messages available in the backlog. The system is free to return UNAVAILABLE if there are too many pull requests outstanding for the given subscription.
+* [PubsubSubscriptionsAcknowledge](docs/subscriptions/README.md#pubsubsubscriptionsacknowledge) - Acknowledges a particular received message: the Pub/Sub system can remove the given message from the subscription. Acknowledging a message whose Ack deadline has expired may succeed, but the message could have been already redelivered. Acknowledging a message more than once will not result in an error. This is only used for messages received via pull.
+* [PubsubSubscriptionsCreate](docs/subscriptions/README.md#pubsubsubscriptionscreate) - Creates a subscription on a given topic for a given subscriber. If the subscription already exists, returns ALREADY_EXISTS. If the corresponding topic doesn't exist, returns NOT_FOUND. If the name is not provided in the request, the server will assign a random name for this subscription on the same project as the topic.
+* [PubsubSubscriptionsDelete](docs/subscriptions/README.md#pubsubsubscriptionsdelete) - Deletes an existing subscription. All pending messages in the subscription are immediately dropped. Calls to Pull after deletion will return NOT_FOUND.
+* [PubsubSubscriptionsGet](docs/subscriptions/README.md#pubsubsubscriptionsget) - Gets the configuration details of a subscription.
+* [PubsubSubscriptionsList](docs/subscriptions/README.md#pubsubsubscriptionslist) - Lists matching subscriptions.
+* [PubsubSubscriptionsModifyAckDeadline](docs/subscriptions/README.md#pubsubsubscriptionsmodifyackdeadline) - Modifies the Ack deadline for a message received from a pull request.
+* [PubsubSubscriptionsModifyPushConfig](docs/subscriptions/README.md#pubsubsubscriptionsmodifypushconfig) - Modifies the PushConfig for a specified subscription. This method can be used to suspend the flow of messages to an endpoint by clearing the PushConfig field in the request. Messages will be accumulated for delivery even if no push configuration is defined or while the configuration is modified.
+* [PubsubSubscriptionsPull](docs/subscriptions/README.md#pubsubsubscriptionspull) - Pulls a single message from the server. If return_immediately is true, and no messages are available in the subscription, this method returns FAILED_PRECONDITION. The system is free to return an UNAVAILABLE error if no messages are available in a reasonable amount of time (to reduce system load).
+* [PubsubSubscriptionsPullBatch](docs/subscriptions/README.md#pubsubsubscriptionspullbatch) - Pulls messages from the server. Returns an empty list if there are no messages available in the backlog. The system is free to return UNAVAILABLE if there are too many pull requests outstanding for the given subscription.
 
-### Topics
+### [Topics](docs/topics/README.md)
 
-* `PubsubTopicsCreate` - Creates the given topic with the given name.
-* `PubsubTopicsDelete` - Deletes the topic with the given name. Returns NOT_FOUND if the topic does not exist. After a topic is deleted, a new topic may be created with the same name.
-* `PubsubTopicsGet` - Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
-* `PubsubTopicsList` - Lists matching topics.
-* `PubsubTopicsPublish` - Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
-* `PubsubTopicsPublishBatch` - Adds one or more messages to the topic. Returns NOT_FOUND if the topic does not exist.
+* [PubsubTopicsCreate](docs/topics/README.md#pubsubtopicscreate) - Creates the given topic with the given name.
+* [PubsubTopicsDelete](docs/topics/README.md#pubsubtopicsdelete) - Deletes the topic with the given name. Returns NOT_FOUND if the topic does not exist. After a topic is deleted, a new topic may be created with the same name.
+* [PubsubTopicsGet](docs/topics/README.md#pubsubtopicsget) - Gets the configuration of a topic. Since the topic only has the name attribute, this method is only useful to check the existence of a topic. If other attributes are added in the future, they will be returned here.
+* [PubsubTopicsList](docs/topics/README.md#pubsubtopicslist) - Lists matching topics.
+* [PubsubTopicsPublish](docs/topics/README.md#pubsubtopicspublish) - Adds a message to the topic. Returns NOT_FOUND if the topic does not exist.
+* [PubsubTopicsPublishBatch](docs/topics/README.md#pubsubtopicspublishbatch) - Adds one or more messages to the topic. Returns NOT_FOUND if the topic does not exist.
 <!-- End SDK Available Operations -->
 
 ### Maturity

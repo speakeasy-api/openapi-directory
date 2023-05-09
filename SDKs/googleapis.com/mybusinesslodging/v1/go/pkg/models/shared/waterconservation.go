@@ -17,12 +17,16 @@ const (
 	WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnumDependentOnDayOfWeek WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum) ToPointer() *WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum) Un
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum(s)
+		*e = WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationIndependentOrganizationAuditsWaterUseExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	WaterConservationLinenReuseProgramExceptionEnumDependentOnDayOfWeek WaterConservationLinenReuseProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationLinenReuseProgramExceptionEnum) ToPointer() *WaterConservationLinenReuseProgramExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationLinenReuseProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *WaterConservationLinenReuseProgramExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationLinenReuseProgramExceptionEnum(s)
+		*e = WaterConservationLinenReuseProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationLinenReuseProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationLinenReuseProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	WaterConservationTowelReuseProgramExceptionEnumDependentOnDayOfWeek WaterConservationTowelReuseProgramExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationTowelReuseProgramExceptionEnum) ToPointer() *WaterConservationTowelReuseProgramExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationTowelReuseProgramExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *WaterConservationTowelReuseProgramExceptionEnum) UnmarshalJSON(data []b
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationTowelReuseProgramExceptionEnum(s)
+		*e = WaterConservationTowelReuseProgramExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationTowelReuseProgramExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationTowelReuseProgramExceptionEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	WaterConservationWaterSavingShowersExceptionEnumDependentOnDayOfWeek WaterConservationWaterSavingShowersExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationWaterSavingShowersExceptionEnum) ToPointer() *WaterConservationWaterSavingShowersExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationWaterSavingShowersExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -120,10 +136,10 @@ func (e *WaterConservationWaterSavingShowersExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationWaterSavingShowersExceptionEnum(s)
+		*e = WaterConservationWaterSavingShowersExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationWaterSavingShowersExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationWaterSavingShowersExceptionEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	WaterConservationWaterSavingSinksExceptionEnumDependentOnDayOfWeek WaterConservationWaterSavingSinksExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationWaterSavingSinksExceptionEnum) ToPointer() *WaterConservationWaterSavingSinksExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationWaterSavingSinksExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -150,10 +170,10 @@ func (e *WaterConservationWaterSavingSinksExceptionEnum) UnmarshalJSON(data []by
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationWaterSavingSinksExceptionEnum(s)
+		*e = WaterConservationWaterSavingSinksExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationWaterSavingSinksExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationWaterSavingSinksExceptionEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	WaterConservationWaterSavingToiletsExceptionEnumDependentOnDayOfWeek WaterConservationWaterSavingToiletsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e WaterConservationWaterSavingToiletsExceptionEnum) ToPointer() *WaterConservationWaterSavingToiletsExceptionEnum {
+	return &e
+}
+
 func (e *WaterConservationWaterSavingToiletsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -180,10 +204,10 @@ func (e *WaterConservationWaterSavingToiletsExceptionEnum) UnmarshalJSON(data []
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = WaterConservationWaterSavingToiletsExceptionEnum(s)
+		*e = WaterConservationWaterSavingToiletsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaterConservationWaterSavingToiletsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for WaterConservationWaterSavingToiletsExceptionEnum: %v", v)
 	}
 }
 

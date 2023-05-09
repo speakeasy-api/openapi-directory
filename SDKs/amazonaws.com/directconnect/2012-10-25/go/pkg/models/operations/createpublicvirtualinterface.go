@@ -16,17 +16,21 @@ const (
 	CreatePublicVirtualInterfaceXAmzTargetEnumOvertureServiceCreatePublicVirtualInterface CreatePublicVirtualInterfaceXAmzTargetEnum = "OvertureService.CreatePublicVirtualInterface"
 )
 
+func (e CreatePublicVirtualInterfaceXAmzTargetEnum) ToPointer() *CreatePublicVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePublicVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.CreatePublicVirtualInterface":
-		*e = CreatePublicVirtualInterfaceXAmzTargetEnum(s)
+		*e = CreatePublicVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePublicVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePublicVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	DQStopJobOnFailureTimingEnumAfterDataLoad DQStopJobOnFailureTimingEnum = "AfterDataLoad"
 )
 
+func (e DQStopJobOnFailureTimingEnum) ToPointer() *DQStopJobOnFailureTimingEnum {
+	return &e
+}
+
 func (e *DQStopJobOnFailureTimingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Immediate":
 		fallthrough
 	case "AfterDataLoad":
-		*e = DQStopJobOnFailureTimingEnum(s)
+		*e = DQStopJobOnFailureTimingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DQStopJobOnFailureTimingEnum: %s", s)
+		return fmt.Errorf("invalid value for DQStopJobOnFailureTimingEnum: %v", v)
 	}
 }

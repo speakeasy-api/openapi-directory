@@ -23,21 +23,25 @@ const (
 	CloudassetProjectsBatchGetAssetsHistoryContentTypeEnumIamPolicy              CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum = "IAM_POLICY"
 )
 
+func (e CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum) ToPointer() *CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum {
+	return &e
+}
+
 func (e *CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE":
 		fallthrough
 	case "IAM_POLICY":
-		*e = CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum(s)
+		*e = CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum: %v", v)
 	}
 }
 

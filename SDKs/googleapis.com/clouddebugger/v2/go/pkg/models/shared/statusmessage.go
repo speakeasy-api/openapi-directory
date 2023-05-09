@@ -21,12 +21,16 @@ const (
 	StatusMessageRefersToEnumVariableValue            StatusMessageRefersToEnum = "VARIABLE_VALUE"
 )
 
+func (e StatusMessageRefersToEnum) ToPointer() *StatusMessageRefersToEnum {
+	return &e
+}
+
 func (e *StatusMessageRefersToEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "BREAKPOINT_SOURCE_LOCATION":
@@ -42,10 +46,10 @@ func (e *StatusMessageRefersToEnum) UnmarshalJSON(data []byte) error {
 	case "VARIABLE_NAME":
 		fallthrough
 	case "VARIABLE_VALUE":
-		*e = StatusMessageRefersToEnum(s)
+		*e = StatusMessageRefersToEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusMessageRefersToEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusMessageRefersToEnum: %v", v)
 	}
 }
 

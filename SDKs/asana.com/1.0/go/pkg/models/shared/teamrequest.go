@@ -16,21 +16,25 @@ const (
 	TeamRequestVisibilityEnumPublic        TeamRequestVisibilityEnum = "public"
 )
 
+func (e TeamRequestVisibilityEnum) ToPointer() *TeamRequestVisibilityEnum {
+	return &e
+}
+
 func (e *TeamRequestVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "secret":
 		fallthrough
 	case "request_to_join":
 		fallthrough
 	case "public":
-		*e = TeamRequestVisibilityEnum(s)
+		*e = TeamRequestVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamRequestVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamRequestVisibilityEnum: %v", v)
 	}
 }
 

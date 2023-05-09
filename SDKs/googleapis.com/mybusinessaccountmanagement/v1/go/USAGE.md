@@ -2,62 +2,62 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MybusinessaccountmanagementAccountsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.MybusinessaccountmanagementAccountsCreate(ctx, operations.MybusinessaccountmanagementAccountsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AccountInput: &shared.AccountInput{
-            AccountName: "provident",
-            Name: "distinctio",
+            AccountName: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
             OrganizationInfo: &shared.OrganizationInfoInput{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "unde",
-                        "nulla",
-                        "corrupti",
-                        "illum",
+                        "vel",
+                        "error",
+                        "deserunt",
+                        "suscipit",
                     },
-                    AdministrativeArea: "vel",
-                    LanguageCode: "error",
-                    Locality: "deserunt",
-                    Organization: "suscipit",
-                    PostalCode: "28092",
+                    AdministrativeArea: sdk.String("iure"),
+                    LanguageCode: sdk.String("magnam"),
+                    Locality: sdk.String("debitis"),
+                    Organization: sdk.String("ipsa"),
+                    PostalCode: sdk.String("23478-5453"),
                     Recipients: []string{
-                        "molestiae",
-                        "minus",
+                        "temporibus",
+                        "ab",
+                        "quis",
+                        "veritatis",
                     },
-                    RegionCode: "placeat",
-                    Revision: 528895,
-                    SortingCode: "iusto",
-                    Sublocality: "excepturi",
+                    RegionCode: sdk.String("deserunt"),
+                    Revision: sdk.Int(20218),
+                    SortingCode: sdk.String("ipsam"),
+                    Sublocality: sdk.String("repellendus"),
                 },
             },
-            PrimaryOwner: "nisi",
-            Type: "ORGANIZATION",
+            PrimaryOwner: sdk.String("sapiente"),
+            Type: shared.AccountTypeEnumUserGroup.ToPointer(),
         },
-        AccessToken: "temporibus",
-        Alt: "json",
-        Callback: "quis",
-        Fields: "veritatis",
-        Key: "deserunt",
-        OauthToken: "perferendis",
-        PrettyPrint: false,
-        QuotaUser: "ipsam",
-        UploadType: "repellendus",
-        UploadProtocol: "sapiente",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.MybusinessaccountmanagementAccountsCreate(ctx, req)
+        AccessToken: sdk.String("odit"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("at"),
+        Fields: sdk.String("maiores"),
+        Key: sdk.String("molestiae"),
+        OauthToken: sdk.String("quod"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quod"),
+        UploadType: sdk.String("esse"),
+        UploadProtocol: sdk.String("totam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

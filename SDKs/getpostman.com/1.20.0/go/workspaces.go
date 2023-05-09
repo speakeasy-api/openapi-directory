@@ -154,7 +154,10 @@ func (s *workspaces) CreateWorkspace(ctx context.Context, request operations.Cre
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *workspaces) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -201,7 +204,10 @@ func (s *workspaces) DeleteWorkspace(ctx context.Context, request operations.Del
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *workspaces) SingleWorkspace(ctx context.Context, request operations.SingleWorkspaceRequest) (*operations.SingleWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -264,7 +270,10 @@ func (s *workspaces) SingleWorkspace(ctx context.Context, request operations.Sin
 // For eg. if your workspace has collections A and B, and in the update call, you send C's uid in the collections array, then A and B would be removed from the workspace and C would be added.
 func (s *workspaces) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

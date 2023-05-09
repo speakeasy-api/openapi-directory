@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CalcSigmaRsvExchangeRequest{
-        Amount: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.AgeUsd.CalcSigmaRsvExchange(ctx, req)
+    res, err := s.AgeUsd.CalcSigmaRsvExchange(ctx, operations.CalcSigmaRsvExchangeRequest{
+        Amount: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }

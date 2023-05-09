@@ -15,17 +15,21 @@ const (
 	GETAddPermissionActionEnumAddPermission GETAddPermissionActionEnum = "AddPermission"
 )
 
+func (e GETAddPermissionActionEnum) ToPointer() *GETAddPermissionActionEnum {
+	return &e
+}
+
 func (e *GETAddPermissionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddPermission":
-		*e = GETAddPermissionActionEnum(s)
+		*e = GETAddPermissionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddPermissionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddPermissionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAddPermissionVersionEnumTwoThousandAndTwelve1105 GETAddPermissionVersionEnum = "2012-11-05"
 )
 
+func (e GETAddPermissionVersionEnum) ToPointer() *GETAddPermissionVersionEnum {
+	return &e
+}
+
 func (e *GETAddPermissionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = GETAddPermissionVersionEnum(s)
+		*e = GETAddPermissionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddPermissionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddPermissionVersionEnum: %v", v)
 	}
 }
 

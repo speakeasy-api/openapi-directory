@@ -16,17 +16,21 @@ const (
 	GetOpsMetadataXAmzTargetEnumAmazonSsmGetOpsMetadata GetOpsMetadataXAmzTargetEnum = "AmazonSSM.GetOpsMetadata"
 )
 
+func (e GetOpsMetadataXAmzTargetEnum) ToPointer() *GetOpsMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetOpsMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetOpsMetadata":
-		*e = GetOpsMetadataXAmzTargetEnum(s)
+		*e = GetOpsMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetOpsMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetOpsMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

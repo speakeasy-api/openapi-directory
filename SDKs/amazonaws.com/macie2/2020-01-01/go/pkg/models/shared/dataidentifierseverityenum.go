@@ -16,20 +16,24 @@ const (
 	DataIdentifierSeverityEnumHigh   DataIdentifierSeverityEnum = "HIGH"
 )
 
+func (e DataIdentifierSeverityEnum) ToPointer() *DataIdentifierSeverityEnum {
+	return &e
+}
+
 func (e *DataIdentifierSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOW":
 		fallthrough
 	case "MEDIUM":
 		fallthrough
 	case "HIGH":
-		*e = DataIdentifierSeverityEnum(s)
+		*e = DataIdentifierSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataIdentifierSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for DataIdentifierSeverityEnum: %v", v)
 	}
 }

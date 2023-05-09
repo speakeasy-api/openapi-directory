@@ -16,17 +16,21 @@ const (
 	DescribeMLModelsXAmzTargetEnumAmazonMl20141212DescribeMlModels DescribeMLModelsXAmzTargetEnum = "AmazonML_20141212.DescribeMLModels"
 )
 
+func (e DescribeMLModelsXAmzTargetEnum) ToPointer() *DescribeMLModelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeMLModelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DescribeMLModels":
-		*e = DescribeMLModelsXAmzTargetEnum(s)
+		*e = DescribeMLModelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMLModelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMLModelsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateHumanTaskUIXAmzTargetEnumSageMakerCreateHumanTaskUI CreateHumanTaskUIXAmzTargetEnum = "SageMaker.CreateHumanTaskUi"
 )
 
+func (e CreateHumanTaskUIXAmzTargetEnum) ToPointer() *CreateHumanTaskUIXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateHumanTaskUIXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateHumanTaskUi":
-		*e = CreateHumanTaskUIXAmzTargetEnum(s)
+		*e = CreateHumanTaskUIXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHumanTaskUIXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHumanTaskUIXAmzTargetEnum: %v", v)
 	}
 }
 

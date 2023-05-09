@@ -37,12 +37,16 @@ const (
 	DevicesListCsvFormat400TextCsvCodeEnumTooManyRequests     DevicesListCsvFormat400TextCsvCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesListCsvFormat400TextCsvCodeEnum) ToPointer() *DevicesListCsvFormat400TextCsvCodeEnum {
+	return &e
+}
+
 func (e *DevicesListCsvFormat400TextCsvCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -56,10 +60,10 @@ func (e *DevicesListCsvFormat400TextCsvCodeEnum) UnmarshalJSON(data []byte) erro
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesListCsvFormat400TextCsvCodeEnum(s)
+		*e = DevicesListCsvFormat400TextCsvCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesListCsvFormat400TextCsvCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesListCsvFormat400TextCsvCodeEnum: %v", v)
 	}
 }
 

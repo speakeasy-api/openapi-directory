@@ -16,17 +16,21 @@ const (
 	DeleteAvailabilityConfigurationXAmzTargetEnumWorkMailServiceDeleteAvailabilityConfiguration DeleteAvailabilityConfigurationXAmzTargetEnum = "WorkMailService.DeleteAvailabilityConfiguration"
 )
 
+func (e DeleteAvailabilityConfigurationXAmzTargetEnum) ToPointer() *DeleteAvailabilityConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAvailabilityConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DeleteAvailabilityConfiguration":
-		*e = DeleteAvailabilityConfigurationXAmzTargetEnum(s)
+		*e = DeleteAvailabilityConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAvailabilityConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAvailabilityConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

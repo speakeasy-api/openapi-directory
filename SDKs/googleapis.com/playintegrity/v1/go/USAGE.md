@@ -2,37 +2,35 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlayintegrityDecodeIntegrityTokenRequest{
-        DollarXgafv: "2",
-        DecodeIntegrityTokenRequest: &shared.DecodeIntegrityTokenRequest{
-            IntegrityToken: "provident",
-        },
-        AccessToken: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        PackageName: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.PlayintegrityDecodeIntegrityToken(ctx, req, operations.PlayintegrityDecodeIntegrityTokenSecurity{
+    res, err := s.V1.PlayintegrityDecodeIntegrityToken(ctx, operations.PlayintegrityDecodeIntegrityTokenRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        DecodeIntegrityTokenRequest: &shared.DecodeIntegrityTokenRequest{
+            IntegrityToken: sdk.String("provident"),
+        },
+        AccessToken: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        PackageName: "vel",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.PlayintegrityDecodeIntegrityTokenSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -14,18 +14,22 @@ const (
 	TargetWorkspaceStateEnumAdminMaintenance TargetWorkspaceStateEnum = "ADMIN_MAINTENANCE"
 )
 
+func (e TargetWorkspaceStateEnum) ToPointer() *TargetWorkspaceStateEnum {
+	return &e
+}
+
 func (e *TargetWorkspaceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "ADMIN_MAINTENANCE":
-		*e = TargetWorkspaceStateEnum(s)
+		*e = TargetWorkspaceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetWorkspaceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetWorkspaceStateEnum: %v", v)
 	}
 }

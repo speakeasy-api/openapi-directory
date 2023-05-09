@@ -20,17 +20,21 @@ const (
 	GetInvestmentProductCategoryIDEnumFunds GetInvestmentProductCategoryIDEnum = "funds"
 )
 
+func (e GetInvestmentProductCategoryIDEnum) ToPointer() *GetInvestmentProductCategoryIDEnum {
+	return &e
+}
+
 func (e *GetInvestmentProductCategoryIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "funds":
-		*e = GetInvestmentProductCategoryIDEnum(s)
+		*e = GetInvestmentProductCategoryIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInvestmentProductCategoryIDEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInvestmentProductCategoryIDEnum: %v", v)
 	}
 }
 
@@ -90,19 +94,23 @@ const (
 	GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnumIsa GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum = "isa"
 )
 
+func (e GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum) ToPointer() *GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum {
+	return &e
+}
+
 func (e *GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gia":
 		fallthrough
 	case "isa":
-		*e = GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum(s)
+		*e = GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum: %v", v)
 	}
 }
 
@@ -113,17 +121,21 @@ const (
 	GetInvestmentProduct200ApplicationJSONAssetTypeEnumFunds GetInvestmentProduct200ApplicationJSONAssetTypeEnum = "funds"
 )
 
+func (e GetInvestmentProduct200ApplicationJSONAssetTypeEnum) ToPointer() *GetInvestmentProduct200ApplicationJSONAssetTypeEnum {
+	return &e
+}
+
 func (e *GetInvestmentProduct200ApplicationJSONAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "funds":
-		*e = GetInvestmentProduct200ApplicationJSONAssetTypeEnum(s)
+		*e = GetInvestmentProduct200ApplicationJSONAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONAssetTypeEnum: %v", v)
 	}
 }
 
@@ -136,21 +148,25 @@ const (
 	GetInvestmentProduct200ApplicationJSONIDTypeEnumFundServID GetInvestmentProduct200ApplicationJSONIDTypeEnum = "FundServID"
 )
 
+func (e GetInvestmentProduct200ApplicationJSONIDTypeEnum) ToPointer() *GetInvestmentProduct200ApplicationJSONIDTypeEnum {
+	return &e
+}
+
 func (e *GetInvestmentProduct200ApplicationJSONIDTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ISIN":
 		fallthrough
 	case "CUSIP":
 		fallthrough
 	case "FundServID":
-		*e = GetInvestmentProduct200ApplicationJSONIDTypeEnum(s)
+		*e = GetInvestmentProduct200ApplicationJSONIDTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONIDTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONIDTypeEnum: %v", v)
 	}
 }
 
@@ -162,19 +178,23 @@ const (
 	GetInvestmentProduct200ApplicationJSONStatusEnumInactive GetInvestmentProduct200ApplicationJSONStatusEnum = "inactive"
 )
 
+func (e GetInvestmentProduct200ApplicationJSONStatusEnum) ToPointer() *GetInvestmentProduct200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetInvestmentProduct200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = GetInvestmentProduct200ApplicationJSONStatusEnum(s)
+		*e = GetInvestmentProduct200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInvestmentProduct200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

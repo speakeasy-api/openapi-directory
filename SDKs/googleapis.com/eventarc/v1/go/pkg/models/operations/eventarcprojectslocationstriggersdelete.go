@@ -41,7 +41,7 @@ type EventarcProjectsLocationsTriggersDeleteRequest struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-	// Required. If set, validate the request and preview the review, but do not post it.
+	// Optional. If set, validate the request and preview the review, but do not post it.
 	ValidateOnly *bool `queryParam:"style=form,explode=true,name=validateOnly"`
 }
 

@@ -16,22 +16,58 @@ const (
 	GoogleCloudContactcenterinsightsV1ConversationMediumEnumChat              GoogleCloudContactcenterinsightsV1ConversationMediumEnum = "CHAT"
 )
 
+func (e GoogleCloudContactcenterinsightsV1ConversationMediumEnum) ToPointer() *GoogleCloudContactcenterinsightsV1ConversationMediumEnum {
+	return &e
+}
+
 func (e *GoogleCloudContactcenterinsightsV1ConversationMediumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDIUM_UNSPECIFIED":
 		fallthrough
 	case "PHONE_CALL":
 		fallthrough
 	case "CHAT":
-		*e = GoogleCloudContactcenterinsightsV1ConversationMediumEnum(s)
+		*e = GoogleCloudContactcenterinsightsV1ConversationMediumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ConversationMediumEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudContactcenterinsightsV1ConversationMediumEnum: %v", v)
 	}
+}
+
+// GoogleCloudContactcenterinsightsV1ConversationInput - The conversation resource.
+type GoogleCloudContactcenterinsightsV1ConversationInput struct {
+	// An opaque, user-specified string representing the human agent who handled the conversation.
+	AgentID *string `json:"agentId,omitempty"`
+	// Call-specific metadata.
+	CallMetadata *GoogleCloudContactcenterinsightsV1ConversationCallMetadata `json:"callMetadata,omitempty"`
+	// The conversation source, which is a combination of transcript and audio.
+	DataSource *GoogleCloudContactcenterinsightsV1ConversationDataSourceInput `json:"dataSource,omitempty"`
+	// The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
+	ExpireTime *string `json:"expireTime,omitempty"`
+	// A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
+	Labels map[string]string `json:"labels,omitempty"`
+	// A user-specified language code for the conversation.
+	LanguageCode *string `json:"languageCode,omitempty"`
+	// The analysis resource.
+	LatestAnalysis *GoogleCloudContactcenterinsightsV1AnalysisInput `json:"latestAnalysis,omitempty"`
+	// Conversation summarization suggestion data.
+	LatestSummary *GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData `json:"latestSummary,omitempty"`
+	// Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
+	Medium *GoogleCloudContactcenterinsightsV1ConversationMediumEnum `json:"medium,omitempty"`
+	// Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
+	Name *string `json:"name,omitempty"`
+	// Obfuscated user ID which the customer sent to us.
+	ObfuscatedUserID *string `json:"obfuscatedUserId,omitempty"`
+	// The time at which the conversation started.
+	StartTime *string `json:"startTime,omitempty"`
+	// A message representing the transcript of a conversation.
+	Transcript *GoogleCloudContactcenterinsightsV1ConversationTranscript `json:"transcript,omitempty"`
+	// Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
+	TTL *string `json:"ttl,omitempty"`
 }
 
 // GoogleCloudContactcenterinsightsV1Conversation - The conversation resource.
@@ -56,6 +92,8 @@ type GoogleCloudContactcenterinsightsV1Conversation struct {
 	LanguageCode *string `json:"languageCode,omitempty"`
 	// The analysis resource.
 	LatestAnalysis *GoogleCloudContactcenterinsightsV1Analysis `json:"latestAnalysis,omitempty"`
+	// Conversation summarization suggestion data.
+	LatestSummary *GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData `json:"latestSummary,omitempty"`
 	// Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
 	Medium *GoogleCloudContactcenterinsightsV1ConversationMediumEnum `json:"medium,omitempty"`
 	// Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
@@ -74,34 +112,4 @@ type GoogleCloudContactcenterinsightsV1Conversation struct {
 	TurnCount *int `json:"turnCount,omitempty"`
 	// Output only. The most recent time at which the conversation was updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
-}
-
-// GoogleCloudContactcenterinsightsV1ConversationInput - The conversation resource.
-type GoogleCloudContactcenterinsightsV1ConversationInput struct {
-	// An opaque, user-specified string representing the human agent who handled the conversation.
-	AgentID *string `json:"agentId,omitempty"`
-	// Call-specific metadata.
-	CallMetadata *GoogleCloudContactcenterinsightsV1ConversationCallMetadata `json:"callMetadata,omitempty"`
-	// The conversation source, which is a combination of transcript and audio.
-	DataSource *GoogleCloudContactcenterinsightsV1ConversationDataSourceInput `json:"dataSource,omitempty"`
-	// The time at which this conversation should expire. After this time, the conversation data and any associated analyses will be deleted.
-	ExpireTime *string `json:"expireTime,omitempty"`
-	// A map for the user to specify any custom fields. A maximum of 20 labels per conversation is allowed, with a maximum of 256 characters per entry.
-	Labels map[string]string `json:"labels,omitempty"`
-	// A user-specified language code for the conversation.
-	LanguageCode *string `json:"languageCode,omitempty"`
-	// The analysis resource.
-	LatestAnalysis *GoogleCloudContactcenterinsightsV1AnalysisInput `json:"latestAnalysis,omitempty"`
-	// Immutable. The conversation medium, if unspecified will default to PHONE_CALL.
-	Medium *GoogleCloudContactcenterinsightsV1ConversationMediumEnum `json:"medium,omitempty"`
-	// Immutable. The resource name of the conversation. Format: projects/{project}/locations/{location}/conversations/{conversation}
-	Name *string `json:"name,omitempty"`
-	// Obfuscated user ID which the customer sent to us.
-	ObfuscatedUserID *string `json:"obfuscatedUserId,omitempty"`
-	// The time at which the conversation started.
-	StartTime *string `json:"startTime,omitempty"`
-	// A message representing the transcript of a conversation.
-	Transcript *GoogleCloudContactcenterinsightsV1ConversationTranscript `json:"transcript,omitempty"`
-	// Input only. The TTL for this resource. If specified, then this TTL will be used to calculate the expire time.
-	TTL *string `json:"ttl,omitempty"`
 }

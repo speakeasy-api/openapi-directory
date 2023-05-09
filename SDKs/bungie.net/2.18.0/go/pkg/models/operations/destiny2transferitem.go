@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type Destiny2TransferItemSecurity struct {
+	Oauth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // Destiny2TransferItem200Wildcard - Look at the Response property for more information about the nature of this response
 type Destiny2TransferItem200Wildcard struct {
 	DetailedErrorTrace *string

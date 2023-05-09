@@ -16,17 +16,21 @@ const (
 	CreateHomeRegionControlXAmzTargetEnumAwsMigrationHubMultiAccountServiceCreateHomeRegionControl CreateHomeRegionControlXAmzTargetEnum = "AWSMigrationHubMultiAccountService.CreateHomeRegionControl"
 )
 
+func (e CreateHomeRegionControlXAmzTargetEnum) ToPointer() *CreateHomeRegionControlXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateHomeRegionControlXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHubMultiAccountService.CreateHomeRegionControl":
-		*e = CreateHomeRegionControlXAmzTargetEnum(s)
+		*e = CreateHomeRegionControlXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHomeRegionControlXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHomeRegionControlXAmzTargetEnum: %v", v)
 	}
 }
 

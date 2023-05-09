@@ -16,17 +16,21 @@ const (
 	UpdateQuerySuggestionsConfigXAmzTargetEnumAwsKendraFrontendServiceUpdateQuerySuggestionsConfig UpdateQuerySuggestionsConfigXAmzTargetEnum = "AWSKendraFrontendService.UpdateQuerySuggestionsConfig"
 )
 
+func (e UpdateQuerySuggestionsConfigXAmzTargetEnum) ToPointer() *UpdateQuerySuggestionsConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateQuerySuggestionsConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.UpdateQuerySuggestionsConfig":
-		*e = UpdateQuerySuggestionsConfigXAmzTargetEnum(s)
+		*e = UpdateQuerySuggestionsConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateQuerySuggestionsConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateQuerySuggestionsConfigXAmzTargetEnum: %v", v)
 	}
 }
 

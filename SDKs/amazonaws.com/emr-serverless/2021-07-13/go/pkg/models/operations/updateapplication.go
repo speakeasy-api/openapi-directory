@@ -17,19 +17,23 @@ const (
 	UpdateApplicationRequestBodyArchitectureEnumX8664 UpdateApplicationRequestBodyArchitectureEnum = "X86_64"
 )
 
+func (e UpdateApplicationRequestBodyArchitectureEnum) ToPointer() *UpdateApplicationRequestBodyArchitectureEnum {
+	return &e
+}
+
 func (e *UpdateApplicationRequestBodyArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARM64":
 		fallthrough
 	case "X86_64":
-		*e = UpdateApplicationRequestBodyArchitectureEnum(s)
+		*e = UpdateApplicationRequestBodyArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationRequestBodyArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationRequestBodyArchitectureEnum: %v", v)
 	}
 }
 

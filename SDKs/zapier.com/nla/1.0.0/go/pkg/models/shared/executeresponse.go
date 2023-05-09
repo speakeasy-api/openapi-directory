@@ -17,12 +17,16 @@ const (
 	ExecuteResponseStatusEnumPreview ExecuteResponseStatusEnum = "preview"
 )
 
+func (e ExecuteResponseStatusEnum) ToPointer() *ExecuteResponseStatusEnum {
+	return &e
+}
+
 func (e *ExecuteResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "error":
@@ -30,10 +34,10 @@ func (e *ExecuteResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "empty":
 		fallthrough
 	case "preview":
-		*e = ExecuteResponseStatusEnum(s)
+		*e = ExecuteResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteResponseStatusEnum: %v", v)
 	}
 }
 
@@ -41,6 +45,10 @@ func (e *ExecuteResponseStatusEnum) UnmarshalJSON(data []byte) error {
 type ExecuteResponse struct {
 	// The name of the action that was executed.
 	ActionUsed string `json:"action_used"`
+	// The rest of the full results. Always returns an array of objects
+	AdditionalResults []map[string]interface{} `json:"additional_results"`
+	// A hint for the assistant on what to do next.
+	AssistantHint *string `json:"assistant_hint,omitempty"`
 	// The error message if the execution failed.
 	Error *string `json:"error,omitempty"`
 	// The id of the execution log.
@@ -49,6 +57,8 @@ type ExecuteResponse struct {
 	InputParams map[string]interface{} `json:"input_params"`
 	// A trimmed down result of the first item of the full results. Ideal for humans and language models!
 	Result map[string]interface{} `json:"result,omitempty"`
+	// Human readable labels for some of the keys in the result.
+	ResultFieldLabels map[string]interface{} `json:"result_field_labels,omitempty"`
 	// The URL to run the action or review the AI choices the AI made for input_params given instructions.
 	ReviewURL string `json:"review_url"`
 	// The status of the execution.

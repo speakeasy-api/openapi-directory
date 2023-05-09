@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AccessapprovalProjectsApprovalRequestsApprove - Approves a request and returns the updated ApprovalRequest. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
 func (s *projects) AccessapprovalProjectsApprovalRequestsApprove(ctx context.Context, request operations.AccessapprovalProjectsApprovalRequestsApproveRequest, security operations.AccessapprovalProjectsApprovalRequestsApproveSecurity) (*operations.AccessapprovalProjectsApprovalRequestsApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApproveApprovalRequestMessage", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) AccessapprovalProjectsApprovalRequestsApprove(ctx context.Con
 // AccessapprovalProjectsApprovalRequestsDismiss - Dismisses a request. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It is equivalent in effect to ignoring the request altogether. Returns NOT_FOUND if the request does not exist. Returns FAILED_PRECONDITION if the request exists but is not in a pending state.
 func (s *projects) AccessapprovalProjectsApprovalRequestsDismiss(ctx context.Context, request operations.AccessapprovalProjectsApprovalRequestsDismissRequest, security operations.AccessapprovalProjectsApprovalRequestsDismissSecurity) (*operations.AccessapprovalProjectsApprovalRequestsDismissResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:dismiss", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:dismiss", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) AccessapprovalProjectsApprovalRequestsDismiss(ctx context.Con
 // AccessapprovalProjectsApprovalRequestsGet - Gets an approval request. Returns NOT_FOUND if the request does not exist.
 func (s *projects) AccessapprovalProjectsApprovalRequestsGet(ctx context.Context, request operations.AccessapprovalProjectsApprovalRequestsGetRequest, security operations.AccessapprovalProjectsApprovalRequestsGetSecurity) (*operations.AccessapprovalProjectsApprovalRequestsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) AccessapprovalProjectsApprovalRequestsGet(ctx context.Context
 // AccessapprovalProjectsApprovalRequestsInvalidate - Invalidates an existing ApprovalRequest. Returns the updated ApprovalRequest. NOTE: This does not deny access to the resource if another request has been made and approved. It only invalidates a single approval. Returns FAILED_PRECONDITION if the request exists but is not in an approved state.
 func (s *projects) AccessapprovalProjectsApprovalRequestsInvalidate(ctx context.Context, request operations.AccessapprovalProjectsApprovalRequestsInvalidateRequest, security operations.AccessapprovalProjectsApprovalRequestsInvalidateSecurity) (*operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:invalidate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:invalidate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) AccessapprovalProjectsApprovalRequestsInvalidate(ctx context.
 // AccessapprovalProjectsApprovalRequestsList - Lists approval requests associated with a project, folder, or organization. Approval requests can be filtered by state (pending, active, dismissed). The order is reverse chronological.
 func (s *projects) AccessapprovalProjectsApprovalRequestsList(ctx context.Context, request operations.AccessapprovalProjectsApprovalRequestsListRequest, security operations.AccessapprovalProjectsApprovalRequestsListSecurity) (*operations.AccessapprovalProjectsApprovalRequestsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/approvalRequests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/approvalRequests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) AccessapprovalProjectsApprovalRequestsList(ctx context.Contex
 // AccessapprovalProjectsDeleteAccessApprovalSettings - Deletes the settings associated with a project, folder, or organization. This will have the effect of disabling Access Approval for the project, folder, or organization, but only if all ancestors also have Access Approval disabled. If Access Approval is enabled at a higher level of the hierarchy, then Access Approval will still be enabled at this level as the settings are inherited.
 func (s *projects) AccessapprovalProjectsDeleteAccessApprovalSettings(ctx context.Context, request operations.AccessapprovalProjectsDeleteAccessApprovalSettingsRequest, security operations.AccessapprovalProjectsDeleteAccessApprovalSettingsSecurity) (*operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) AccessapprovalProjectsDeleteAccessApprovalSettings(ctx contex
 // AccessapprovalProjectsUpdateAccessApprovalSettings - Updates the settings associated with a project, folder, or organization. Settings to update are determined by the value of field_mask.
 func (s *projects) AccessapprovalProjectsUpdateAccessApprovalSettings(ctx context.Context, request operations.AccessapprovalProjectsUpdateAccessApprovalSettingsRequest, security operations.AccessapprovalProjectsUpdateAccessApprovalSettingsSecurity) (*operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccessApprovalSettingsInput", "json")
 	if err != nil {

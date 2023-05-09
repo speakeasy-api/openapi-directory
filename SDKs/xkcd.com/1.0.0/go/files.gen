@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -14,4 +15,5 @@ pkg/utils/utils.go
 pkg/models/operations/getinfo0json.go
 pkg/models/operations/getcomicidinfo0json.go
 pkg/models/shared/comic.go
+docs/sdk/README.md
 USAGE.md

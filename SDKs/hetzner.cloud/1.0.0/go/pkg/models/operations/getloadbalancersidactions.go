@@ -32,12 +32,16 @@ const (
 	GetLoadBalancersIDActionsSortParameterSortEnumFinishedDesc GetLoadBalancersIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetLoadBalancersIDActionsSortParameterSortEnum) ToPointer() *GetLoadBalancersIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetLoadBalancersIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetLoadBalancersIDActionsSortParameterSortEnum) UnmarshalJSON(data []by
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetLoadBalancersIDActionsSortParameterSortEnum(s)
+		*e = GetLoadBalancersIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetLoadBalancersIDActionsStatusParameterStatusEnumError   GetLoadBalancersIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetLoadBalancersIDActionsStatusParameterStatusEnum) ToPointer() *GetLoadBalancersIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetLoadBalancersIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetLoadBalancersIDActionsStatusParameterStatusEnum(s)
+		*e = GetLoadBalancersIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetLoadBalancersIDActionsActionsResponseActionStatusEnumError   GetLoadBalancersIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetLoadBalancersIDActionsActionsResponseActionStatusEnum) ToPointer() *GetLoadBalancersIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetLoadBalancersIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetLoadBalancersIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetLoadBalancersIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoadBalancersIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

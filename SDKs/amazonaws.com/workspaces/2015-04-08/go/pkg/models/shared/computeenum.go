@@ -21,12 +21,16 @@ const (
 	ComputeEnumGraphicsproG4Dn ComputeEnum = "GRAPHICSPRO_G4DN"
 )
 
+func (e ComputeEnum) ToPointer() *ComputeEnum {
+	return &e
+}
+
 func (e *ComputeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALUE":
 		fallthrough
 	case "STANDARD":
@@ -44,9 +48,9 @@ func (e *ComputeEnum) UnmarshalJSON(data []byte) error {
 	case "GRAPHICS_G4DN":
 		fallthrough
 	case "GRAPHICSPRO_G4DN":
-		*e = ComputeEnum(s)
+		*e = ComputeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputeEnum: %v", v)
 	}
 }

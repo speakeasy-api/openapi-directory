@@ -17,12 +17,16 @@ const (
 	GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnumHyphen          GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum = "HYPHEN"
 )
 
+func (e GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum) ToPointer() *GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "SPACE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum) Unm
 	case "WIDE_SPACE":
 		fallthrough
 	case "HYPHEN":
-		*e = GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum(s)
+		*e = GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1beta3DocumentPageTokenDetectedBreakTypeEnum: %v", v)
 	}
 }
 

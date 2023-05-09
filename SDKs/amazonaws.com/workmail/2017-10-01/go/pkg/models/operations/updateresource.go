@@ -16,17 +16,21 @@ const (
 	UpdateResourceXAmzTargetEnumWorkMailServiceUpdateResource UpdateResourceXAmzTargetEnum = "WorkMailService.UpdateResource"
 )
 
+func (e UpdateResourceXAmzTargetEnum) ToPointer() *UpdateResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.UpdateResource":
-		*e = UpdateResourceXAmzTargetEnum(s)
+		*e = UpdateResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateResourceXAmzTargetEnum: %v", v)
 	}
 }
 

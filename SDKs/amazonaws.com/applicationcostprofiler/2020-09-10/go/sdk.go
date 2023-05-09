@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>This reference provides descriptions of the AWS Application Cost Profiler API.</p> <p>The AWS Application Cost Profiler API provides programmatic access to view, create, update, and delete application cost report definitions, as well as to import your usage data into the Application Cost Profiler service.</p> <p>For more information about using this service, see the <a href="https://docs.aws.amazon.com/application-cost-profiler/latest/userguide/introduction.html">AWS Application Cost Profiler User Guide</a>.</p>
 // https://docs.aws.amazon.com/application-cost-profiler/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteReportDefinition - Deletes the specified report definition in AWS Application Cost Profiler. This stops the report from being generated.
 func (s *SDK) DeleteReportDefinition(ctx context.Context, request operations.DeleteReportDefinitionRequest) (*operations.DeleteReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -200,7 +218,10 @@ func (s *SDK) DeleteReportDefinition(ctx context.Context, request operations.Del
 // GetReportDefinition - Retrieves the definition of a report already configured in AWS Application Cost Profiler.
 func (s *SDK) GetReportDefinition(ctx context.Context, request operations.GetReportDefinitionRequest) (*operations.GetReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -578,7 +599,10 @@ func (s *SDK) PutReportDefinition(ctx context.Context, request operations.PutRep
 // UpdateReportDefinition - Updates existing report in AWS Application Cost Profiler.
 func (s *SDK) UpdateReportDefinition(ctx context.Context, request operations.UpdateReportDefinitionRequest) (*operations.UpdateReportDefinitionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reportDefinition/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

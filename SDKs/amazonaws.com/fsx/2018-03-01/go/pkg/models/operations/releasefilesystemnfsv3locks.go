@@ -16,17 +16,21 @@ const (
 	ReleaseFileSystemNfsV3LocksXAmzTargetEnumAwsSimbaAPIServiceV20180301ReleaseFileSystemNfsV3Locks ReleaseFileSystemNfsV3LocksXAmzTargetEnum = "AWSSimbaAPIService_v20180301.ReleaseFileSystemNfsV3Locks"
 )
 
+func (e ReleaseFileSystemNfsV3LocksXAmzTargetEnum) ToPointer() *ReleaseFileSystemNfsV3LocksXAmzTargetEnum {
+	return &e
+}
+
 func (e *ReleaseFileSystemNfsV3LocksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.ReleaseFileSystemNfsV3Locks":
-		*e = ReleaseFileSystemNfsV3LocksXAmzTargetEnum(s)
+		*e = ReleaseFileSystemNfsV3LocksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleaseFileSystemNfsV3LocksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleaseFileSystemNfsV3LocksXAmzTargetEnum: %v", v)
 	}
 }
 

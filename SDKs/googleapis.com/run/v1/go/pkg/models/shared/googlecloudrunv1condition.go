@@ -14,6 +14,6 @@ type GoogleCloudRunV1Condition struct {
 	Severity *string `json:"severity,omitempty"`
 	// Status of the condition, one of True, False, Unknown.
 	Status *string `json:"status,omitempty"`
-	// type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready" or "Completed": True when the Resource is ready.
+	// type is used to communicate the status of the reconciliation process. Types common to all resources include: * "Ready" or "Completed": True when the Resource is ready.
 	Type *string `json:"type,omitempty"`
 }

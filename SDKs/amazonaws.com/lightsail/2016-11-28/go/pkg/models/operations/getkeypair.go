@@ -16,17 +16,21 @@ const (
 	GetKeyPairXAmzTargetEnumLightsail20161128GetKeyPair GetKeyPairXAmzTargetEnum = "Lightsail_20161128.GetKeyPair"
 )
 
+func (e GetKeyPairXAmzTargetEnum) ToPointer() *GetKeyPairXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetKeyPairXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetKeyPair":
-		*e = GetKeyPairXAmzTargetEnum(s)
+		*e = GetKeyPairXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetKeyPairXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetKeyPairXAmzTargetEnum: %v", v)
 	}
 }
 

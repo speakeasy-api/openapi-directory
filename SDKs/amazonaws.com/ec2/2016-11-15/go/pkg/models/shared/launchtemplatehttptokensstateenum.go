@@ -14,18 +14,22 @@ const (
 	LaunchTemplateHTTPTokensStateEnumRequired LaunchTemplateHTTPTokensStateEnum = "required"
 )
 
+func (e LaunchTemplateHTTPTokensStateEnum) ToPointer() *LaunchTemplateHTTPTokensStateEnum {
+	return &e
+}
+
 func (e *LaunchTemplateHTTPTokensStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "optional":
 		fallthrough
 	case "required":
-		*e = LaunchTemplateHTTPTokensStateEnum(s)
+		*e = LaunchTemplateHTTPTokensStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchTemplateHTTPTokensStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchTemplateHTTPTokensStateEnum: %v", v)
 	}
 }

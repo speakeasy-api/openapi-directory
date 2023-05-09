@@ -15,20 +15,24 @@ const (
 	StartReplicationTaskTypeValueEnumReloadTarget     StartReplicationTaskTypeValueEnum = "reload-target"
 )
 
+func (e StartReplicationTaskTypeValueEnum) ToPointer() *StartReplicationTaskTypeValueEnum {
+	return &e
+}
+
 func (e *StartReplicationTaskTypeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "start-replication":
 		fallthrough
 	case "resume-processing":
 		fallthrough
 	case "reload-target":
-		*e = StartReplicationTaskTypeValueEnum(s)
+		*e = StartReplicationTaskTypeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartReplicationTaskTypeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for StartReplicationTaskTypeValueEnum: %v", v)
 	}
 }

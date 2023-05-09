@@ -16,17 +16,21 @@ const (
 	DissociateEntityFromThingXAmzTargetEnumIotThingsGraphFrontEndServiceDissociateEntityFromThing DissociateEntityFromThingXAmzTargetEnum = "IotThingsGraphFrontEndService.DissociateEntityFromThing"
 )
 
+func (e DissociateEntityFromThingXAmzTargetEnum) ToPointer() *DissociateEntityFromThingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DissociateEntityFromThingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DissociateEntityFromThing":
-		*e = DissociateEntityFromThingXAmzTargetEnum(s)
+		*e = DissociateEntityFromThingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DissociateEntityFromThingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DissociateEntityFromThingXAmzTargetEnum: %v", v)
 	}
 }
 

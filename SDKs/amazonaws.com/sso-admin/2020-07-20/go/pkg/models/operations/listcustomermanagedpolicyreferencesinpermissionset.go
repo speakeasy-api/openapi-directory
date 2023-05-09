@@ -16,17 +16,21 @@ const (
 	ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnumSwbExternalServiceListCustomerManagedPolicyReferencesInPermissionSet ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum = "SWBExternalService.ListCustomerManagedPolicyReferencesInPermissionSet"
 )
 
+func (e ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum) ToPointer() *ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.ListCustomerManagedPolicyReferencesInPermissionSet":
-		*e = ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum(s)
+		*e = ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCustomerManagedPolicyReferencesInPermissionSetXAmzTargetEnum: %v", v)
 	}
 }
 

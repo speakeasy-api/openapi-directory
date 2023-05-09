@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The new Amazon Elastic DocumentDB service endpoint.
 // https://docs.aws.amazon.com/docdb-elastic/ - Amazon Web Services documentation
 type SDK struct {
@@ -356,7 +371,10 @@ func (s *SDK) CreateClusterSnapshot(ctx context.Context, request operations.Crea
 // DeleteCluster - Delete a Elastic DocumentDB cluster.
 func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteClusterRequest) (*operations.DeleteClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -462,7 +480,10 @@ func (s *SDK) DeleteCluster(ctx context.Context, request operations.DeleteCluste
 // DeleteClusterSnapshot - Delete a Elastic DocumentDB snapshot.
 func (s *SDK) DeleteClusterSnapshot(ctx context.Context, request operations.DeleteClusterSnapshotRequest) (*operations.DeleteClusterSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -568,7 +589,10 @@ func (s *SDK) DeleteClusterSnapshot(ctx context.Context, request operations.Dele
 // GetCluster - Returns information about a specific Elastic DocumentDB cluster.
 func (s *SDK) GetCluster(ctx context.Context, request operations.GetClusterRequest) (*operations.GetClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -664,7 +688,10 @@ func (s *SDK) GetCluster(ctx context.Context, request operations.GetClusterReque
 // GetClusterSnapshot - Returns information about a specific Elastic DocumentDB snapshot
 func (s *SDK) GetClusterSnapshot(ctx context.Context, request operations.GetClusterSnapshotRequest) (*operations.GetClusterSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -940,7 +967,10 @@ func (s *SDK) ListClusters(ctx context.Context, request operations.ListClustersR
 // ListTagsForResource - Lists all tags on a Elastic DocumentDB resource
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1026,7 +1056,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // RestoreClusterFromSnapshot - Restores a Elastic DocumentDB cluster from a snapshot.
 func (s *SDK) RestoreClusterFromSnapshot(ctx context.Context, request operations.RestoreClusterFromSnapshotRequest) (*operations.RestoreClusterFromSnapshotResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}/restore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster-snapshot/{snapshotArn}/restore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1152,7 +1185,10 @@ func (s *SDK) RestoreClusterFromSnapshot(ctx context.Context, request operations
 // TagResource - Adds metadata tags to a Elastic DocumentDB resource
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1248,7 +1284,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes metadata tags to a Elastic DocumentDB resource
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1338,7 +1377,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCluster - Modifies a Elastic DocumentDB cluster. This includes updating admin-username/password, upgrading API version setting up a backup window and maintenance window
 func (s *SDK) UpdateCluster(ctx context.Context, request operations.UpdateClusterRequest) (*operations.UpdateClusterResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cluster/{clusterArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

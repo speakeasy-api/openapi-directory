@@ -17,12 +17,16 @@ const (
 	ConfigChangeChangeTypeEnumModified              ConfigChangeChangeTypeEnum = "MODIFIED"
 )
 
+func (e ConfigChangeChangeTypeEnum) ToPointer() *ConfigChangeChangeTypeEnum {
+	return &e
+}
+
 func (e *ConfigChangeChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADDED":
@@ -30,10 +34,10 @@ func (e *ConfigChangeChangeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REMOVED":
 		fallthrough
 	case "MODIFIED":
-		*e = ConfigChangeChangeTypeEnum(s)
+		*e = ConfigChangeChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigChangeChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigChangeChangeTypeEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.PostCheckCodeRequestBody{
-        Code: "corrupti",
-        Email: "Micheal_Sporer@yahoo.com",
-    }
-
     ctx := context.Background()
-    res, err := s.PostCheckCode(ctx, req)
+    res, err := s.PostCheckCode(ctx, operations.PostCheckCodeRequestBody{
+        Code: sdk.String("corrupti"),
+        Email: sdk.String("Micheal_Sporer@yahoo.com"),
+    })
     if err != nil {
         log.Fatal(err)
     }

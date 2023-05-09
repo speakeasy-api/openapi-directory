@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,28 +17,26 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsToStreamRequest{
+    ctx := context.Background()
+    res, err := s.AddTagsToStream(ctx, operations.AddTagsToStreamRequest{
         AddTagsToStreamInput: shared.AddTagsToStreamInput{
-            StreamARN: "corrupti",
-            StreamName: "provident",
+            StreamARN: sdk.String("corrupti"),
+            StreamName: sdk.String("provident"),
             Tags: map[string]string{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
                 "illum": "vel",
             },
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "Kinesis_20131202.AddTagsToStream",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTagsToStream(ctx, req)
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+        XAmzTarget: operations.AddTagsToStreamXAmzTargetEnumKinesis20131202AddTagsToStream,
+    })
     if err != nil {
         log.Fatal(err)
     }

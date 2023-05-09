@@ -14,6 +14,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -462,4 +463,17 @@ pkg/models/shared/useremailoptindefinition.go
 pkg/models/shared/commonmodelsdestiny2coresettings.go
 pkg/models/shared/globalalert.go
 pkg/models/shared/streaminfo.go
+docs/sdk/README.md
+docs/app/README.md
+docs/communitycontent/README.md
+docs/content/README.md
+docs/destiny2/README.md
+docs/fireteam/README.md
+docs/forum/README.md
+docs/groupv2/README.md
+docs/preview/README.md
+docs/social/README.md
+docs/tokens/README.md
+docs/trending/README.md
+docs/user/README.md
 USAGE.md

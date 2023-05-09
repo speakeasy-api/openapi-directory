@@ -7,7 +7,7 @@ import (
 )
 
 type PutAPIDisplayAdsIDUnpublishRequest struct {
-	// The ID of the user to unpublish.
+	// The ID of the display ad to unpublish.
 	ID int `pathParam:"style=simple,explode=false,name=id"`
 }
 

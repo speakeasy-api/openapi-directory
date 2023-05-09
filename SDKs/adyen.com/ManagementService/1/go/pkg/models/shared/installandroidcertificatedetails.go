@@ -14,17 +14,21 @@ const (
 	InstallAndroidCertificateDetailsTypeEnumInstallAndroidCertificate InstallAndroidCertificateDetailsTypeEnum = "InstallAndroidCertificate"
 )
 
+func (e InstallAndroidCertificateDetailsTypeEnum) ToPointer() *InstallAndroidCertificateDetailsTypeEnum {
+	return &e
+}
+
 func (e *InstallAndroidCertificateDetailsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstallAndroidCertificate":
-		*e = InstallAndroidCertificateDetailsTypeEnum(s)
+		*e = InstallAndroidCertificateDetailsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstallAndroidCertificateDetailsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstallAndroidCertificateDetailsTypeEnum: %v", v)
 	}
 }
 

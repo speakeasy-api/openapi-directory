@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Compute - Resources used to host your game servers. A compute resource can be managed GameLift Amazon EC2 instances or your own resources.
+// Compute - Resources used to host your game servers. A compute resource can be managed Amazon GameLift Amazon EC2 instances or your own resources.
 type Compute struct {
 	ComputeArn                 *string              `json:"ComputeArn,omitempty"`
 	ComputeName                *string              `json:"ComputeName,omitempty"`

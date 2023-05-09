@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetfullnameparsedmatchRequest{
+    ctx := context.Background()
+    res, err := s.FullNameParsedSimilarityKey.Getfullnameparsedmatch(ctx, operations.GetfullnameparsedmatchRequest{
         Firstname: "Katharina",
         Lastname: "Medhurst",
         License: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.FullNameParsedSimilarityKey.Getfullnameparsedmatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

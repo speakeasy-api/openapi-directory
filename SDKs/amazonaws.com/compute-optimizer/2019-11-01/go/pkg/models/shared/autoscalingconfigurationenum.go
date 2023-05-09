@@ -14,18 +14,22 @@ const (
 	AutoScalingConfigurationEnumTargetTrackingScalingMemory AutoScalingConfigurationEnum = "TargetTrackingScalingMemory"
 )
 
+func (e AutoScalingConfigurationEnum) ToPointer() *AutoScalingConfigurationEnum {
+	return &e
+}
+
 func (e *AutoScalingConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TargetTrackingScalingCpu":
 		fallthrough
 	case "TargetTrackingScalingMemory":
-		*e = AutoScalingConfigurationEnum(s)
+		*e = AutoScalingConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoScalingConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoScalingConfigurationEnum: %v", v)
 	}
 }

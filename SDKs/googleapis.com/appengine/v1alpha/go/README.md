@@ -13,58 +13,58 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/appengine/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, operations.AppengineAppsAuthorizedCertificatesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AuthorizedCertificate: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "provident",
-                PublicCertificate: "distinctio",
+                PrivateKey: sdk.String("provident"),
+                PublicCertificate: sdk.String("distinctio"),
             },
-            DisplayName: "quibusdam",
-            DomainMappingsCount: 602763,
+            DisplayName: sdk.String("quibusdam"),
+            DomainMappingsCount: sdk.Int(602763),
             DomainNames: []string{
                 "corrupti",
                 "illum",
                 "vel",
                 "error",
             },
-            ExpireTime: "deserunt",
-            ID: "suscipit",
+            ExpireTime: sdk.String("deserunt"),
+            ID: sdk.String("674e0f46-7cc8-4796-ad15-1a05dfc2ddf7"),
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "iure",
-                Status: "PENDING",
+                LastRenewalTime: sdk.String("quod"),
+                Status: shared.ManagedCertificateStatusEnumFailedRetryingCaaForbidden.ToPointer(),
             },
-            Name: "debitis",
+            Name: sdk.String("Deanna Sauer MD"),
             VisibleDomainMappings: []string{
-                "delectus",
+                "occaecati",
+                "fugit",
+                "deleniti",
             },
         },
-        AccessToken: "tempora",
-        Alt: "media",
-        AppsID: "molestiae",
-        Callback: "minus",
-        Fields: "placeat",
-        Key: "voluptatum",
-        OauthToken: "iusto",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        UploadType: "nisi",
-        UploadProtocol: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req, operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
+        AccessToken: sdk.String("hic"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        AppsID: "totam",
+        Callback: sdk.String("beatae"),
+        Fields: sdk.String("commodi"),
+        Key: sdk.String("molestiae"),
+        OauthToken: sdk.String("modi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("qui"),
+        UploadType: sdk.String("impedit"),
+        UploadProtocol: sdk.String("cum"),
+    }, operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -83,30 +83,30 @@ func main() {
 ## Available Resources and Operations
 
 
-### Apps
+### [Apps](docs/apps/README.md)
 
-* `AppengineAppsAuthorizedCertificatesCreate` - Uploads the specified SSL certificate.
-* `AppengineAppsAuthorizedCertificatesDelete` - Deletes the specified SSL certificate.
-* `AppengineAppsAuthorizedCertificatesGet` - Gets the specified SSL certificate.
-* `AppengineAppsAuthorizedCertificatesList` - Lists all SSL certificates the user is authorized to administer.
-* `AppengineAppsAuthorizedCertificatesPatch` - Updates the specified SSL certificate. To renew a certificate and maintain its existing domain mappings, update certificate_data with a new certificate. The new certificate must be applicable to the same domains as the original certificate. The certificate display_name may also be updated.
-* `AppengineAppsAuthorizedDomainsList` - Lists all domains the user is authorized to administer.
-* `AppengineAppsDomainMappingsCreate` - Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
-* `AppengineAppsDomainMappingsDelete` - Deletes the specified domain mapping. A user must be authorized to administer the associated domain in order to delete a DomainMapping resource.
-* `AppengineAppsDomainMappingsGet` - Gets the specified domain mapping.
-* `AppengineAppsDomainMappingsList` - Lists the domain mappings on an application.
-* `AppengineAppsDomainMappingsPatch` - Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to administer the associated domain in order to update a DomainMapping resource.
-* `AppengineAppsLocationsGet` - Gets information about a location.
-* `AppengineAppsLocationsList` - Lists information about the supported locations for this service.
-* `AppengineAppsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `AppengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
+* [AppengineAppsAuthorizedCertificatesCreate](docs/apps/README.md#appengineappsauthorizedcertificatescreate) - Uploads the specified SSL certificate.
+* [AppengineAppsAuthorizedCertificatesDelete](docs/apps/README.md#appengineappsauthorizedcertificatesdelete) - Deletes the specified SSL certificate.
+* [AppengineAppsAuthorizedCertificatesGet](docs/apps/README.md#appengineappsauthorizedcertificatesget) - Gets the specified SSL certificate.
+* [AppengineAppsAuthorizedCertificatesList](docs/apps/README.md#appengineappsauthorizedcertificateslist) - Lists all SSL certificates the user is authorized to administer.
+* [AppengineAppsAuthorizedCertificatesPatch](docs/apps/README.md#appengineappsauthorizedcertificatespatch) - Updates the specified SSL certificate. To renew a certificate and maintain its existing domain mappings, update certificate_data with a new certificate. The new certificate must be applicable to the same domains as the original certificate. The certificate display_name may also be updated.
+* [AppengineAppsAuthorizedDomainsList](docs/apps/README.md#appengineappsauthorizeddomainslist) - Lists all domains the user is authorized to administer.
+* [AppengineAppsDomainMappingsCreate](docs/apps/README.md#appengineappsdomainmappingscreate) - Maps a domain to an application. A user must be authorized to administer a domain in order to map it to an application. For a list of available authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
+* [AppengineAppsDomainMappingsDelete](docs/apps/README.md#appengineappsdomainmappingsdelete) - Deletes the specified domain mapping. A user must be authorized to administer the associated domain in order to delete a DomainMapping resource.
+* [AppengineAppsDomainMappingsGet](docs/apps/README.md#appengineappsdomainmappingsget) - Gets the specified domain mapping.
+* [AppengineAppsDomainMappingsList](docs/apps/README.md#appengineappsdomainmappingslist) - Lists the domain mappings on an application.
+* [AppengineAppsDomainMappingsPatch](docs/apps/README.md#appengineappsdomainmappingspatch) - Updates the specified domain mapping. To map an SSL certificate to a domain mapping, update certificate_id to point to an AuthorizedCertificate resource. A user must be authorized to administer the associated domain in order to update a DomainMapping resource.
+* [AppengineAppsLocationsGet](docs/apps/README.md#appengineappslocationsget) - Gets information about a location.
+* [AppengineAppsLocationsList](docs/apps/README.md#appengineappslocationslist) - Lists information about the supported locations for this service.
+* [AppengineAppsOperationsGet](docs/apps/README.md#appengineappsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [AppengineAppsOperationsList](docs/apps/README.md#appengineappsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `AppengineProjectsLocationsGet` - Gets information about a location.
-* `AppengineProjectsLocationsList` - Lists information about the supported locations for this service.
-* `AppengineProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `AppengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
+* [AppengineProjectsLocationsGet](docs/projects/README.md#appengineprojectslocationsget) - Gets information about a location.
+* [AppengineProjectsLocationsList](docs/projects/README.md#appengineprojectslocationslist) - Lists information about the supported locations for this service.
+* [AppengineProjectsLocationsOperationsGet](docs/projects/README.md#appengineprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [AppengineProjectsLocationsOperationsList](docs/projects/README.md#appengineprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,16 +15,20 @@ const (
 	SslCertificateFileFormatEnumPfx SslCertificateFileFormatEnum = "pfx"
 )
 
+func (e SslCertificateFileFormatEnum) ToPointer() *SslCertificateFileFormatEnum {
+	return &e
+}
+
 func (e *SslCertificateFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pfx":
-		*e = SslCertificateFileFormatEnum(s)
+		*e = SslCertificateFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslCertificateFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SslCertificateFileFormatEnum: %v", v)
 	}
 }

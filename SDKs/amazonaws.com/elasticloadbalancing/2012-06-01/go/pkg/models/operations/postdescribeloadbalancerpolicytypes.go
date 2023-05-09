@@ -15,17 +15,21 @@ const (
 	POSTDescribeLoadBalancerPolicyTypesActionEnumDescribeLoadBalancerPolicyTypes POSTDescribeLoadBalancerPolicyTypesActionEnum = "DescribeLoadBalancerPolicyTypes"
 )
 
+func (e POSTDescribeLoadBalancerPolicyTypesActionEnum) ToPointer() *POSTDescribeLoadBalancerPolicyTypesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLoadBalancerPolicyTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLoadBalancerPolicyTypes":
-		*e = POSTDescribeLoadBalancerPolicyTypesActionEnum(s)
+		*e = POSTDescribeLoadBalancerPolicyTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLoadBalancerPolicyTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLoadBalancerPolicyTypesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLoadBalancerPolicyTypesVersionEnumTwoThousandAndTwelve0601 POSTDescribeLoadBalancerPolicyTypesVersionEnum = "2012-06-01"
 )
 
+func (e POSTDescribeLoadBalancerPolicyTypesVersionEnum) ToPointer() *POSTDescribeLoadBalancerPolicyTypesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLoadBalancerPolicyTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTDescribeLoadBalancerPolicyTypesVersionEnum(s)
+		*e = POSTDescribeLoadBalancerPolicyTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLoadBalancerPolicyTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLoadBalancerPolicyTypesVersionEnum: %v", v)
 	}
 }
 

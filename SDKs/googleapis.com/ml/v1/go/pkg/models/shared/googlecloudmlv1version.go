@@ -17,12 +17,16 @@ const (
 	GoogleCloudMlV1VersionFrameworkEnumXgboost              GoogleCloudMlV1VersionFrameworkEnum = "XGBOOST"
 )
 
+func (e GoogleCloudMlV1VersionFrameworkEnum) ToPointer() *GoogleCloudMlV1VersionFrameworkEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1VersionFrameworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FRAMEWORK_UNSPECIFIED":
 		fallthrough
 	case "TENSORFLOW":
@@ -30,10 +34,10 @@ func (e *GoogleCloudMlV1VersionFrameworkEnum) UnmarshalJSON(data []byte) error {
 	case "SCIKIT_LEARN":
 		fallthrough
 	case "XGBOOST":
-		*e = GoogleCloudMlV1VersionFrameworkEnum(s)
+		*e = GoogleCloudMlV1VersionFrameworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1VersionFrameworkEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1VersionFrameworkEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	GoogleCloudMlV1VersionStateEnumUpdating GoogleCloudMlV1VersionStateEnum = "UPDATING"
 )
 
+func (e GoogleCloudMlV1VersionStateEnum) ToPointer() *GoogleCloudMlV1VersionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1VersionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "READY":
@@ -66,10 +74,10 @@ func (e *GoogleCloudMlV1VersionStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UPDATING":
-		*e = GoogleCloudMlV1VersionStateEnum(s)
+		*e = GoogleCloudMlV1VersionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1VersionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1VersionStateEnum: %v", v)
 	}
 }
 

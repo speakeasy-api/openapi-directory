@@ -23,21 +23,25 @@ const (
 	AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnumCel                    AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum = "CEL"
 )
 
+func (e AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum) ToPointer() *AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum {
+	return &e
+}
+
 func (e *AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEVEL_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "AS_DEFINED":
 		fallthrough
 	case "CEL":
-		*e = AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum(s)
+		*e = AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for AccesscontextmanagerAccessPoliciesAccessLevelsListAccessLevelFormatEnum: %v", v)
 	}
 }
 

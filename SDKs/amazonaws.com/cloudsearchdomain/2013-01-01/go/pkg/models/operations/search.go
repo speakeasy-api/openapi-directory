@@ -16,17 +16,21 @@ const (
 	SearchFormatEnumSDK SearchFormatEnum = "sdk"
 )
 
+func (e SearchFormatEnum) ToPointer() *SearchFormatEnum {
+	return &e
+}
+
 func (e *SearchFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sdk":
-		*e = SearchFormatEnum(s)
+		*e = SearchFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchFormatEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	SearchPrettyEnumTrue SearchPrettyEnum = "true"
 )
 
+func (e SearchPrettyEnum) ToPointer() *SearchPrettyEnum {
+	return &e
+}
+
 func (e *SearchPrettyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
-		*e = SearchPrettyEnum(s)
+		*e = SearchPrettyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchPrettyEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchPrettyEnum: %v", v)
 	}
 }
 
@@ -61,12 +69,16 @@ const (
 	SearchQParserEnumDismax     SearchQParserEnum = "dismax"
 )
 
+func (e SearchQParserEnum) ToPointer() *SearchQParserEnum {
+	return &e
+}
+
 func (e *SearchQParserEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "simple":
 		fallthrough
 	case "structured":
@@ -74,10 +86,10 @@ func (e *SearchQParserEnum) UnmarshalJSON(data []byte) error {
 	case "lucene":
 		fallthrough
 	case "dismax":
-		*e = SearchQParserEnum(s)
+		*e = SearchQParserEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchQParserEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchQParserEnum: %v", v)
 	}
 }
 

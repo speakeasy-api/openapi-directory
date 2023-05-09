@@ -16,17 +16,21 @@ const (
 	SearchSystemTemplatesXAmzTargetEnumIotThingsGraphFrontEndServiceSearchSystemTemplates SearchSystemTemplatesXAmzTargetEnum = "IotThingsGraphFrontEndService.SearchSystemTemplates"
 )
 
+func (e SearchSystemTemplatesXAmzTargetEnum) ToPointer() *SearchSystemTemplatesXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchSystemTemplatesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.SearchSystemTemplates":
-		*e = SearchSystemTemplatesXAmzTargetEnum(s)
+		*e = SearchSystemTemplatesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchSystemTemplatesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchSystemTemplatesXAmzTargetEnum: %v", v)
 	}
 }
 

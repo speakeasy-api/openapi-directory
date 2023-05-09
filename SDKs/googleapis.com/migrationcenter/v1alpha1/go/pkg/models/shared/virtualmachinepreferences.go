@@ -17,12 +17,16 @@ const (
 	VirtualMachinePreferencesCommitmentPlanEnumCommitmentPlanThreeYears  VirtualMachinePreferencesCommitmentPlanEnum = "COMMITMENT_PLAN_THREE_YEARS"
 )
 
+func (e VirtualMachinePreferencesCommitmentPlanEnum) ToPointer() *VirtualMachinePreferencesCommitmentPlanEnum {
+	return &e
+}
+
 func (e *VirtualMachinePreferencesCommitmentPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMITMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "COMMITMENT_PLAN_NONE":
@@ -30,10 +34,10 @@ func (e *VirtualMachinePreferencesCommitmentPlanEnum) UnmarshalJSON(data []byte)
 	case "COMMITMENT_PLAN_ONE_YEAR":
 		fallthrough
 	case "COMMITMENT_PLAN_THREE_YEARS":
-		*e = VirtualMachinePreferencesCommitmentPlanEnum(s)
+		*e = VirtualMachinePreferencesCommitmentPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualMachinePreferencesCommitmentPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualMachinePreferencesCommitmentPlanEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	VirtualMachinePreferencesSizingOptimizationStrategyEnumSizingOptimizationStrategyAggressive   VirtualMachinePreferencesSizingOptimizationStrategyEnum = "SIZING_OPTIMIZATION_STRATEGY_AGGRESSIVE"
 )
 
+func (e VirtualMachinePreferencesSizingOptimizationStrategyEnum) ToPointer() *VirtualMachinePreferencesSizingOptimizationStrategyEnum {
+	return &e
+}
+
 func (e *VirtualMachinePreferencesSizingOptimizationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIZING_OPTIMIZATION_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "SIZING_OPTIMIZATION_STRATEGY_SAME_AS_SOURCE":
@@ -60,10 +68,10 @@ func (e *VirtualMachinePreferencesSizingOptimizationStrategyEnum) UnmarshalJSON(
 	case "SIZING_OPTIMIZATION_STRATEGY_MODERATE":
 		fallthrough
 	case "SIZING_OPTIMIZATION_STRATEGY_AGGRESSIVE":
-		*e = VirtualMachinePreferencesSizingOptimizationStrategyEnum(s)
+		*e = VirtualMachinePreferencesSizingOptimizationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualMachinePreferencesSizingOptimizationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualMachinePreferencesSizingOptimizationStrategyEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	DomainsCountTypeEnumDedicated DomainsCountTypeEnum = "dedicated"
 )
 
+func (e DomainsCountTypeEnum) ToPointer() *DomainsCountTypeEnum {
+	return &e
+}
+
 func (e *DomainsCountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "go":
@@ -32,10 +36,10 @@ func (e *DomainsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "personal":
 		fallthrough
 	case "dedicated":
-		*e = DomainsCountTypeEnum(s)
+		*e = DomainsCountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainsCountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainsCountTypeEnum: %v", v)
 	}
 }
 

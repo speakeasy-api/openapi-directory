@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertRequestBody{
-        HundredsForm: "مائة",
-        TheNumber: "2519.50",
-        Unit: " ريال سعودي",
-    }
-
     ctx := context.Background()
-    res, err := s.Convert(ctx, req)
+    res, err := s.Convert(ctx, operations.ConvertRequestBody{
+        HundredsForm: sdk.String("مائة"),
+        TheNumber: sdk.String("2519.50"),
+        Unit: sdk.String(" ريال سعودي"),
+    })
     if err != nil {
         log.Fatal(err)
     }

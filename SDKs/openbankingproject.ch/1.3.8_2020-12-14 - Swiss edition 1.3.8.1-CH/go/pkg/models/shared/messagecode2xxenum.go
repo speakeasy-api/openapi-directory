@@ -14,16 +14,20 @@ const (
 	MessageCode2XXEnumWarning MessageCode2XXEnum = "WARNING"
 )
 
+func (e MessageCode2XXEnum) ToPointer() *MessageCode2XXEnum {
+	return &e
+}
+
 func (e *MessageCode2XXEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WARNING":
-		*e = MessageCode2XXEnum(s)
+		*e = MessageCode2XXEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode2XXEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode2XXEnum: %v", v)
 	}
 }

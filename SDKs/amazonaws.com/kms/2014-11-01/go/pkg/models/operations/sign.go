@@ -16,17 +16,21 @@ const (
 	SignXAmzTargetEnumTrentServiceSign SignXAmzTargetEnum = "TrentService.Sign"
 )
 
+func (e SignXAmzTargetEnum) ToPointer() *SignXAmzTargetEnum {
+	return &e
+}
+
 func (e *SignXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.Sign":
-		*e = SignXAmzTargetEnum(s)
+		*e = SignXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SignXAmzTargetEnum: %v", v)
 	}
 }
 

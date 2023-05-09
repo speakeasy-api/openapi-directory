@@ -35,7 +35,10 @@ func newAssessmentData(defaultClient, securityClient HTTPClient, serverURL, lang
 // Responds with all learner activity attempts for open response activities in an offering matching the offeringId.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsActivitiesResponses(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsActivitiesResponsesRequest) (*operations.GetOfferingsOfferingIDAnalyticsActivitiesResponsesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/activities/responses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/activities/responses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *assessmentData) GetOfferingsOfferingIDAnalyticsActivitiesResponses(ctx 
 // Responds with all learner assessment marks in an offering matching the offeringId.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsMarksAssignments(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsMarksAssignmentsRequest) (*operations.GetOfferingsOfferingIDAnalyticsMarksAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/marks/assignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/marks/assignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *assessmentData) GetOfferingsOfferingIDAnalyticsMarksAssignments(ctx con
 // Responds with all learner quiz marks in an offering matching the offeringId.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsMarksQuizzes(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsMarksQuizzesRequest) (*operations.GetOfferingsOfferingIDAnalyticsMarksQuizzesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/marks/quizzes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/marks/quizzes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +221,10 @@ func (s *assessmentData) GetOfferingsOfferingIDAnalyticsMarksQuizzes(ctx context
 // Responds with all learner assessment submissions and marks, if any, in an offering matching the offeringId.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsSubmissionsAssignments(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsSubmissionsAssignmentsRequest) (*operations.GetOfferingsOfferingIDAnalyticsSubmissionsAssignmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/assignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/assignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,7 +283,10 @@ func (s *assessmentData) GetOfferingsOfferingIDAnalyticsSubmissionsAssignments(c
 // Responds with all learner assessment submissions and marks, if any, in a specified open response assessment.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentID(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentIDRequest) (*operations.GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/open-response/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/open-response/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -330,7 +345,10 @@ func (s *assessmentData) GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseA
 // Responds with the learner's assessment submission and any marks for the submission.
 func (s *assessmentData) GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentID(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentIDRequest) (*operations.GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/{userEmail}/assignments/{assessmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/submissions/{userEmail}/assignments/{assessmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

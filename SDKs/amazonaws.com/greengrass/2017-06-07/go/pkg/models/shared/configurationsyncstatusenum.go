@@ -14,18 +14,22 @@ const (
 	ConfigurationSyncStatusEnumOutOfSync ConfigurationSyncStatusEnum = "OutOfSync"
 )
 
+func (e ConfigurationSyncStatusEnum) ToPointer() *ConfigurationSyncStatusEnum {
+	return &e
+}
+
 func (e *ConfigurationSyncStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InSync":
 		fallthrough
 	case "OutOfSync":
-		*e = ConfigurationSyncStatusEnum(s)
+		*e = ConfigurationSyncStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationSyncStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationSyncStatusEnum: %v", v)
 	}
 }

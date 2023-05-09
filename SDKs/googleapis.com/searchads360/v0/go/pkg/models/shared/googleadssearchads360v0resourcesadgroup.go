@@ -17,12 +17,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnumRotateForever GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum = "ROTATE_FOREVER"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -30,10 +34,65 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum) UnmarshalJSO
 	case "OPTIMIZE":
 		fallthrough
 	case "ROTATE_FOREVER":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum: %v", v)
+	}
+}
+
+// GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum - Output only. The Engine Status for ad group.
+type GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum string
+
+const (
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumUnspecified      GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "UNSPECIFIED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumUnknown          GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "UNKNOWN"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupEligible  GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_ELIGIBLE"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupExpired   GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_EXPIRED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupRemoved   GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_REMOVED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupDraft     GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_DRAFT"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupPaused    GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_PAUSED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupServing   GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_SERVING"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAdGroupSubmitted GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "AD_GROUP_SUBMITTED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumCampaignPaused   GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "CAMPAIGN_PAUSED"
+	GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnumAccountPaused    GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum = "ACCOUNT_PAUSED"
+)
+
+func (e GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum {
+	return &e
+}
+
+func (e *GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "UNSPECIFIED":
+		fallthrough
+	case "UNKNOWN":
+		fallthrough
+	case "AD_GROUP_ELIGIBLE":
+		fallthrough
+	case "AD_GROUP_EXPIRED":
+		fallthrough
+	case "AD_GROUP_REMOVED":
+		fallthrough
+	case "AD_GROUP_DRAFT":
+		fallthrough
+	case "AD_GROUP_PAUSED":
+		fallthrough
+	case "AD_GROUP_SERVING":
+		fallthrough
+	case "AD_GROUP_SUBMITTED":
+		fallthrough
+	case "CAMPAIGN_PAUSED":
+		fallthrough
+	case "ACCOUNT_PAUSED":
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum: %v", v)
 	}
 }
 
@@ -48,12 +107,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupStatusEnumRemoved     GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum = "REMOVED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -63,10 +126,10 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum) UnmarshalJSON(data [
 	case "PAUSED":
 		fallthrough
 	case "REMOVED":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum: %v", v)
 	}
 }
 
@@ -93,14 +156,19 @@ const (
 	GoogleAdsSearchads360V0ResourcesAdGroupTypeEnumVideoResponsive              GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum = "VIDEO_RESPONSIVE"
 	GoogleAdsSearchads360V0ResourcesAdGroupTypeEnumVideoEfficientReach          GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum = "VIDEO_EFFICIENT_REACH"
 	GoogleAdsSearchads360V0ResourcesAdGroupTypeEnumSmartCampaignAds             GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum = "SMART_CAMPAIGN_ADS"
+	GoogleAdsSearchads360V0ResourcesAdGroupTypeEnumTravelAds                    GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum = "TRAVEL_ADS"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -138,10 +206,12 @@ func (e *GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum) UnmarshalJSON(data []b
 	case "VIDEO_EFFICIENT_REACH":
 		fallthrough
 	case "SMART_CAMPAIGN_ADS":
-		*e = GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum(s)
+		fallthrough
+	case "TRAVEL_ADS":
+		*e = GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum: %v", v)
 	}
 }
 
@@ -151,14 +221,32 @@ type GoogleAdsSearchads360V0ResourcesAdGroup struct {
 	AdRotationMode *GoogleAdsSearchads360V0ResourcesAdGroupAdRotationModeEnum `json:"adRotationMode,omitempty"`
 	// The maximum CPC (cost-per-click) bid.
 	CpcBidMicros *string `json:"cpcBidMicros,omitempty"`
+	// Output only. The timestamp when this ad_group was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+	CreationTime *string `json:"creationTime,omitempty"`
+	// Output only. Date when the ad group ends serving ads. By default, the ad group ends on the ad group's end date. If this field is set, then the ad group ends at the end of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+	EndDate *string `json:"endDate,omitempty"`
+	// Output only. ID of the ad group in the external engine account. This field is for non-Google Ads account only, for example, Yahoo Japan, Microsoft, Baidu etc. For Google Ads entity, use "ad_group.id" instead.
+	EngineID *string `json:"engineId,omitempty"`
+	// Output only. The Engine Status for ad group.
+	EngineStatus *GoogleAdsSearchads360V0ResourcesAdGroupEngineStatusEnum `json:"engineStatus,omitempty"`
 	// Output only. The ID of the ad group.
 	ID *string `json:"id,omitempty"`
+	// Output only. The resource names of labels attached to this ad group.
+	Labels []string `json:"labels,omitempty"`
+	// Output only. The language of the ads and keywords in an ad group. This field is only available for Microsoft Advertising accounts. More details: https://docs.microsoft.com/en-us/advertising/guides/ad-languages?view=bingads-13#adlanguage
+	LanguageCode *string `json:"languageCode,omitempty"`
+	// Output only. The datetime when this ad group was last modified. The datetime is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss.ssssss" format.
+	LastModifiedTime *string `json:"lastModifiedTime,omitempty"`
 	// The name of the ad group. This field is required and should not be empty when creating new ad groups. It must contain fewer than 255 UTF-8 full-width characters. It must not contain any null (code point 0x0), NL line feed (code point 0xA) or carriage return (code point 0xD) characters.
 	Name *string `json:"name,omitempty"`
 	// Immutable. The resource name of the ad group. Ad group resource names have the form: `customers/{customer_id}/adGroups/{ad_group_id}`
 	ResourceName *string `json:"resourceName,omitempty"`
+	// Output only. Date when this ad group starts serving ads. By default, the ad group starts now or the ad group's start date, whichever is later. If this field is set, then the ad group starts at the beginning of the specified date in the customer's time zone. This field is only available for Microsoft Advertising and Facebook gateway accounts. Format: YYYY-MM-DD Example: 2019-03-14
+	StartDate *string `json:"startDate,omitempty"`
 	// The status of the ad group.
 	Status *GoogleAdsSearchads360V0ResourcesAdGroupStatusEnum `json:"status,omitempty"`
+	// Settings for the targeting-related features, at the campaign and ad group levels. For more details about the targeting setting, visit https://support.google.com/google-ads/answer/7365594
+	TargetingSetting *GoogleAdsSearchads360V0CommonTargetingSetting `json:"targetingSetting,omitempty"`
 	// Immutable. The type of the ad group.
 	Type *GoogleAdsSearchads360V0ResourcesAdGroupTypeEnum `json:"type,omitempty"`
 }

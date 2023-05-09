@@ -9,26 +9,30 @@ import (
 )
 
 // BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum - The type of the address
-type BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum string
+type BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnumOne BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnumTwo BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum = "2"
+	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnumOne BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum = 1
+	BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnumTwo BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum = 2
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
-		*e = BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum(s)
+	case 2:
+		*e = BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelCustomerAddressAPIModelAddressTypeEnum: %v", v)
 	}
 }
 

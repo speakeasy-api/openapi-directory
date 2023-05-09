@@ -16,21 +16,25 @@ const (
 	BillingProfileInvoiceLevelEnumCampaignLevel   BillingProfileInvoiceLevelEnum = "CAMPAIGN_LEVEL"
 )
 
+func (e BillingProfileInvoiceLevelEnum) ToPointer() *BillingProfileInvoiceLevelEnum {
+	return &e
+}
+
 func (e *BillingProfileInvoiceLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_LEVEL":
 		fallthrough
 	case "ADVERTISER_LEVEL":
 		fallthrough
 	case "CAMPAIGN_LEVEL":
-		*e = BillingProfileInvoiceLevelEnum(s)
+		*e = BillingProfileInvoiceLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingProfileInvoiceLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingProfileInvoiceLevelEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	BillingProfileStatusEnumArchived    BillingProfileStatusEnum = "ARCHIVED"
 )
 
+func (e BillingProfileStatusEnum) ToPointer() *BillingProfileStatusEnum {
+	return &e
+}
+
 func (e *BillingProfileStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNDER_REVIEW":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "ARCHIVED":
-		*e = BillingProfileStatusEnum(s)
+		*e = BillingProfileStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingProfileStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingProfileStatusEnum: %v", v)
 	}
 }
 

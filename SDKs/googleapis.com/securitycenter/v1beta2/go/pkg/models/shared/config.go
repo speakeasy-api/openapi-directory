@@ -17,12 +17,16 @@ const (
 	ConfigModuleEnablementStateEnumDisabled                   ConfigModuleEnablementStateEnum = "DISABLED"
 )
 
+func (e ConfigModuleEnablementStateEnum) ToPointer() *ConfigModuleEnablementStateEnum {
+	return &e
+}
+
 func (e *ConfigModuleEnablementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "INHERITED":
@@ -30,10 +34,10 @@ func (e *ConfigModuleEnablementStateEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ConfigModuleEnablementStateEnum(s)
+		*e = ConfigModuleEnablementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigModuleEnablementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigModuleEnablementStateEnum: %v", v)
 	}
 }
 

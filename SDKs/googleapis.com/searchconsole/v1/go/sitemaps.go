@@ -34,7 +34,10 @@ func newSitemaps(defaultClient, securityClient HTTPClient, serverURL, language, 
 // WebmastersSitemapsDelete - Deletes a sitemap from the Sitemaps report. Does not stop Google from crawling this sitemap or the URLs that were previously crawled in the deleted sitemap.
 func (s *sitemaps) WebmastersSitemapsDelete(ctx context.Context, request operations.WebmastersSitemapsDeleteRequest, security operations.WebmastersSitemapsDeleteSecurity) (*operations.WebmastersSitemapsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *sitemaps) WebmastersSitemapsDelete(ctx context.Context, request operati
 // WebmastersSitemapsGet - Retrieves information about a specific sitemap.
 func (s *sitemaps) WebmastersSitemapsGet(ctx context.Context, request operations.WebmastersSitemapsGetRequest, security operations.WebmastersSitemapsGetSecurity) (*operations.WebmastersSitemapsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *sitemaps) WebmastersSitemapsGet(ctx context.Context, request operations
 // WebmastersSitemapsList -  Lists the [sitemaps-entries](/webmaster-tools/v3/sitemaps) submitted for this site, or included in the sitemap index file (if `sitemapIndex` is specified in the request).
 func (s *sitemaps) WebmastersSitemapsList(ctx context.Context, request operations.WebmastersSitemapsListRequest, security operations.WebmastersSitemapsListSecurity) (*operations.WebmastersSitemapsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *sitemaps) WebmastersSitemapsList(ctx context.Context, request operation
 // WebmastersSitemapsSubmit - Submits a sitemap for a site.
 func (s *sitemaps) WebmastersSitemapsSubmit(ctx context.Context, request operations.WebmastersSitemapsSubmitRequest, security operations.WebmastersSitemapsSubmitSecurity) (*operations.WebmastersSitemapsSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

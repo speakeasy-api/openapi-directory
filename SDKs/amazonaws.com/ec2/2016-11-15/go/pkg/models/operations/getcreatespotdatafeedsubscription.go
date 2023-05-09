@@ -15,17 +15,21 @@ const (
 	GETCreateSpotDatafeedSubscriptionActionEnumCreateSpotDatafeedSubscription GETCreateSpotDatafeedSubscriptionActionEnum = "CreateSpotDatafeedSubscription"
 )
 
+func (e GETCreateSpotDatafeedSubscriptionActionEnum) ToPointer() *GETCreateSpotDatafeedSubscriptionActionEnum {
+	return &e
+}
+
 func (e *GETCreateSpotDatafeedSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateSpotDatafeedSubscription":
-		*e = GETCreateSpotDatafeedSubscriptionActionEnum(s)
+		*e = GETCreateSpotDatafeedSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateSpotDatafeedSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateSpotDatafeedSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateSpotDatafeedSubscriptionVersionEnumTwoThousandAndSixteen1115 GETCreateSpotDatafeedSubscriptionVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateSpotDatafeedSubscriptionVersionEnum) ToPointer() *GETCreateSpotDatafeedSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *GETCreateSpotDatafeedSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateSpotDatafeedSubscriptionVersionEnum(s)
+		*e = GETCreateSpotDatafeedSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateSpotDatafeedSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateSpotDatafeedSubscriptionVersionEnum: %v", v)
 	}
 }
 

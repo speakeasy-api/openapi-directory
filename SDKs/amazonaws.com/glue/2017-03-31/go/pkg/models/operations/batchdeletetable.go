@@ -16,17 +16,21 @@ const (
 	BatchDeleteTableXAmzTargetEnumAwsGlueBatchDeleteTable BatchDeleteTableXAmzTargetEnum = "AWSGlue.BatchDeleteTable"
 )
 
+func (e BatchDeleteTableXAmzTargetEnum) ToPointer() *BatchDeleteTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDeleteTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.BatchDeleteTable":
-		*e = BatchDeleteTableXAmzTargetEnum(s)
+		*e = BatchDeleteTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteTableXAmzTargetEnum: %v", v)
 	}
 }
 

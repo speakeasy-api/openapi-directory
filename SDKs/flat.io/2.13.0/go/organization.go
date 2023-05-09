@@ -286,7 +286,7 @@ func (s *organization) CreateOrganizationUser(ctx context.Context, request share
 }
 
 // ListLtiCredentials - List LTI 1.x credentials
-func (s *organization) ListLtiCredentials(ctx context.Context) (*operations.ListLtiCredentialsResponse, error) {
+func (s *organization) ListLtiCredentials(ctx context.Context, security operations.ListLtiCredentialsSecurity) (*operations.ListLtiCredentialsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/organizations/lti/credentials"
 
@@ -295,7 +295,7 @@ func (s *organization) ListLtiCredentials(ctx context.Context) (*operations.List
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -460,7 +460,10 @@ func (s *organization) ListOrganizationUsers(ctx context.Context, request operat
 // RemoveOrganizationInvitation - Remove an organization invitation
 func (s *organization) RemoveOrganizationInvitation(ctx context.Context, request operations.RemoveOrganizationInvitationRequest, security operations.RemoveOrganizationInvitationSecurity) (*operations.RemoveOrganizationInvitationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/invitations/{invitation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/invitations/{invitation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -508,7 +511,10 @@ func (s *organization) RemoveOrganizationInvitation(ctx context.Context, request
 // * Education related data (assignments and classroom information)
 func (s *organization) RemoveOrganizationUser(ctx context.Context, request operations.RemoveOrganizationUserRequest, security operations.RemoveOrganizationUserSecurity) (*operations.RemoveOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -557,7 +563,10 @@ func (s *organization) RemoveOrganizationUser(ctx context.Context, request opera
 // RevokeLtiCredentials - Revoke LTI 1.x credentials
 func (s *organization) RevokeLtiCredentials(ctx context.Context, request operations.RevokeLtiCredentialsRequest, security operations.RevokeLtiCredentialsSecurity) (*operations.RevokeLtiCredentialsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/lti/credentials/{credentials}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/lti/credentials/{credentials}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -606,7 +615,10 @@ func (s *organization) RevokeLtiCredentials(ctx context.Context, request operati
 // UpdateOrganizationUser - Update account information
 func (s *organization) UpdateOrganizationUser(ctx context.Context, request operations.UpdateOrganizationUserRequest, security operations.UpdateOrganizationUserSecurity) (*operations.UpdateOrganizationUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/users/{user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserAdminUpdate", "json")
 	if err != nil {

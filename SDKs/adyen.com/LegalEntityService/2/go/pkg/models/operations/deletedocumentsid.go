@@ -24,5 +24,5 @@ type DeleteDocumentsIDResponse struct {
 	// Bad Request - a problem reading or understanding the request.
 	ServiceError *shared.ServiceError
 	// OK - the request has succeeded.
-	VoidResponse map[string]interface{}
+	Void map[string]interface{}
 }

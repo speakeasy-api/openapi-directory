@@ -17,12 +17,16 @@ const (
 	DiagnosticLevelEnumError       DiagnosticLevelEnum = "ERROR"
 )
 
+func (e DiagnosticLevelEnum) ToPointer() *DiagnosticLevelEnum {
+	return &e
+}
+
 func (e *DiagnosticLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "INFORMATION":
@@ -30,10 +34,10 @@ func (e *DiagnosticLevelEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = DiagnosticLevelEnum(s)
+		*e = DiagnosticLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiagnosticLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for DiagnosticLevelEnum: %v", v)
 	}
 }
 

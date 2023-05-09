@@ -15,17 +15,21 @@ const (
 	GETDetachLoadBalancersActionEnumDetachLoadBalancers GETDetachLoadBalancersActionEnum = "DetachLoadBalancers"
 )
 
+func (e GETDetachLoadBalancersActionEnum) ToPointer() *GETDetachLoadBalancersActionEnum {
+	return &e
+}
+
 func (e *GETDetachLoadBalancersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachLoadBalancers":
-		*e = GETDetachLoadBalancersActionEnum(s)
+		*e = GETDetachLoadBalancersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachLoadBalancersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachLoadBalancersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetachLoadBalancersVersionEnumTwoThousandAndEleven0101 GETDetachLoadBalancersVersionEnum = "2011-01-01"
 )
 
+func (e GETDetachLoadBalancersVersionEnum) ToPointer() *GETDetachLoadBalancersVersionEnum {
+	return &e
+}
+
 func (e *GETDetachLoadBalancersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDetachLoadBalancersVersionEnum(s)
+		*e = GETDetachLoadBalancersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachLoadBalancersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachLoadBalancersVersionEnum: %v", v)
 	}
 }
 

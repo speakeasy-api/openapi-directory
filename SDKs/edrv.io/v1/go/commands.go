@@ -128,7 +128,10 @@ func (s *commands) GetCommands(ctx context.Context, request operations.GetComman
 // GetVariables - Get a charge station's config variables
 func (s *commands) GetVariables(ctx context.Context, request operations.GetVariablesRequest) (*operations.GetVariablesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -163,7 +166,10 @@ func (s *commands) GetVariables(ctx context.Context, request operations.GetVaria
 // PatchChargeStationVariable - Update config variables for a chargestation
 func (s *commands) PatchChargeStationVariable(ctx context.Context, request operations.PatchChargeStationVariableRequest) (*operations.PatchChargeStationVariableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/commands/{id}/variables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

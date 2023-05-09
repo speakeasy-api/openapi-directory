@@ -14,18 +14,22 @@ const (
 	CapacityProviderStatusEnumInactive CapacityProviderStatusEnum = "INACTIVE"
 )
 
+func (e CapacityProviderStatusEnum) ToPointer() *CapacityProviderStatusEnum {
+	return &e
+}
+
 func (e *CapacityProviderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = CapacityProviderStatusEnum(s)
+		*e = CapacityProviderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityProviderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityProviderStatusEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	UpdateDocumentDefaultVersionXAmzTargetEnumAmazonSsmUpdateDocumentDefaultVersion UpdateDocumentDefaultVersionXAmzTargetEnum = "AmazonSSM.UpdateDocumentDefaultVersion"
 )
 
+func (e UpdateDocumentDefaultVersionXAmzTargetEnum) ToPointer() *UpdateDocumentDefaultVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDocumentDefaultVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.UpdateDocumentDefaultVersion":
-		*e = UpdateDocumentDefaultVersionXAmzTargetEnum(s)
+		*e = UpdateDocumentDefaultVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDocumentDefaultVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDocumentDefaultVersionXAmzTargetEnum: %v", v)
 	}
 }
 

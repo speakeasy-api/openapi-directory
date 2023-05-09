@@ -33,7 +33,10 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteWorkspaceSlugMembersMemberSlugActivitiesID - Delete a post activity
 func (s *activities) DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest, security operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity) (*operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *activities) DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx contex
 // GetWorkspaceSlugActivities - List activities for a workspace
 func (s *activities) GetWorkspaceSlugActivities(ctx context.Context, request operations.GetWorkspaceSlugActivitiesRequest, security operations.GetWorkspaceSlugActivitiesSecurity) (*operations.GetWorkspaceSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -109,7 +115,10 @@ func (s *activities) GetWorkspaceSlugActivities(ctx context.Context, request ope
 // GetWorkspaceSlugActivitiesID - Get an activity in the workspace
 func (s *activities) GetWorkspaceSlugActivitiesID(ctx context.Context, request operations.GetWorkspaceSlugActivitiesIDRequest, security operations.GetWorkspaceSlugActivitiesIDSecurity) (*operations.GetWorkspaceSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,7 +153,10 @@ func (s *activities) GetWorkspaceSlugActivitiesID(ctx context.Context, request o
 // GetWorkspaceSlugMembersMemberSlugActivities - List activities for a member
 func (s *activities) GetWorkspaceSlugMembersMemberSlugActivities(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugActivitiesRequest, security operations.GetWorkspaceSlugMembersMemberSlugActivitiesSecurity) (*operations.GetWorkspaceSlugMembersMemberSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -183,7 +195,10 @@ func (s *activities) GetWorkspaceSlugMembersMemberSlugActivities(ctx context.Con
 // GetWorkspaceSlugOrganizationsOrganizationIDActivities - List member activities in an organization
 func (s *activities) GetWorkspaceSlugOrganizationsOrganizationIDActivities(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesRequest, security operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesSecurity) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +238,10 @@ func (s *activities) GetWorkspaceSlugOrganizationsOrganizationIDActivities(ctx c
 // Use this method when you know an identity of the member (github, email, twitter, etc.) but not their Orbit ID. Pass fields in the member object to update the member in addition to creating the activity.
 func (s *activities) PostWorkspaceSlugActivities(ctx context.Context, request operations.PostWorkspaceSlugActivitiesRequest, security operations.PostWorkspaceSlugActivitiesSecurity) (*operations.PostWorkspaceSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ActivityAndIdentity", "json")
 	if err != nil {
@@ -269,7 +287,10 @@ func (s *activities) PostWorkspaceSlugActivities(ctx context.Context, request op
 // PostWorkspaceSlugMembersMemberSlugActivities - Create a Custom or a Content activity for a member
 func (s *activities) PostWorkspaceSlugMembersMemberSlugActivities(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugActivitiesRequest, security operations.PostWorkspaceSlugMembersMemberSlugActivitiesSecurity) (*operations.PostWorkspaceSlugMembersMemberSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomOrPostActivity", "json")
 	if err != nil {
@@ -315,7 +336,10 @@ func (s *activities) PostWorkspaceSlugMembersMemberSlugActivities(ctx context.Co
 // PutWorkspaceSlugMembersMemberSlugActivitiesID - Update a custom activity for a member
 func (s *activities) PutWorkspaceSlugMembersMemberSlugActivitiesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDRequest, security operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDSecurity) (*operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Activity", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	PublisherStatusEnumUnverified PublisherStatusEnum = "UNVERIFIED"
 )
 
+func (e PublisherStatusEnum) ToPointer() *PublisherStatusEnum {
+	return &e
+}
+
 func (e *PublisherStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERIFIED":
 		fallthrough
 	case "UNVERIFIED":
-		*e = PublisherStatusEnum(s)
+		*e = PublisherStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublisherStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PublisherStatusEnum: %v", v)
 	}
 }

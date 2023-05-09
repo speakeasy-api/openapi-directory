@@ -21,12 +21,16 @@ const (
 	ProcessorParameterNameEnumDelimiter               ProcessorParameterNameEnum = "Delimiter"
 )
 
+func (e ProcessorParameterNameEnum) ToPointer() *ProcessorParameterNameEnum {
+	return &e
+}
+
 func (e *ProcessorParameterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LambdaArn":
 		fallthrough
 	case "NumberOfRetries":
@@ -44,9 +48,9 @@ func (e *ProcessorParameterNameEnum) UnmarshalJSON(data []byte) error {
 	case "SubRecordType":
 		fallthrough
 	case "Delimiter":
-		*e = ProcessorParameterNameEnum(s)
+		*e = ProcessorParameterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessorParameterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessorParameterNameEnum: %v", v)
 	}
 }

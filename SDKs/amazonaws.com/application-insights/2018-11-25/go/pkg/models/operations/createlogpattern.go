@@ -16,17 +16,21 @@ const (
 	CreateLogPatternXAmzTargetEnumEc2WindowsBarleyServiceCreateLogPattern CreateLogPatternXAmzTargetEnum = "EC2WindowsBarleyService.CreateLogPattern"
 )
 
+func (e CreateLogPatternXAmzTargetEnum) ToPointer() *CreateLogPatternXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLogPatternXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.CreateLogPattern":
-		*e = CreateLogPatternXAmzTargetEnum(s)
+		*e = CreateLogPatternXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLogPatternXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLogPatternXAmzTargetEnum: %v", v)
 	}
 }
 

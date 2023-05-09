@@ -16,17 +16,21 @@ const (
 	StartEventsDetectionJobXAmzTargetEnumComprehend20171127StartEventsDetectionJob StartEventsDetectionJobXAmzTargetEnum = "Comprehend_20171127.StartEventsDetectionJob"
 )
 
+func (e StartEventsDetectionJobXAmzTargetEnum) ToPointer() *StartEventsDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartEventsDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartEventsDetectionJob":
-		*e = StartEventsDetectionJobXAmzTargetEnum(s)
+		*e = StartEventsDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartEventsDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartEventsDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartEventsDetectionJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// Success
 	StartEventsDetectionJobResponse *shared.StartEventsDetectionJobResponse
 	StatusCode                      int

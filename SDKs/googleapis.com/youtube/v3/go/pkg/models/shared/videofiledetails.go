@@ -20,12 +20,16 @@ const (
 	VideoFileDetailsFileTypeEnumOther    VideoFileDetailsFileTypeEnum = "other"
 )
 
+func (e VideoFileDetailsFileTypeEnum) ToPointer() *VideoFileDetailsFileTypeEnum {
+	return &e
+}
+
 func (e *VideoFileDetailsFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "video":
 		fallthrough
 	case "audio":
@@ -39,10 +43,10 @@ func (e *VideoFileDetailsFileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "project":
 		fallthrough
 	case "other":
-		*e = VideoFileDetailsFileTypeEnum(s)
+		*e = VideoFileDetailsFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoFileDetailsFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoFileDetailsFileTypeEnum: %v", v)
 	}
 }
 

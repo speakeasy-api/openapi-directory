@@ -16,21 +16,25 @@ const (
 	DeleteTypeEnumPermanentDelete DeleteTypeEnum = "PERMANENT_DELETE"
 )
 
+func (e DeleteTypeEnum) ToPointer() *DeleteTypeEnum {
+	return &e
+}
+
 func (e *DeleteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TRASH":
 		fallthrough
 	case "PERMANENT_DELETE":
-		*e = DeleteTypeEnum(s)
+		*e = DeleteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTypeEnum: %v", v)
 	}
 }
 

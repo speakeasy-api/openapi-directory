@@ -15,17 +15,21 @@ const (
 	POSTModifyVpnTunnelCertificateActionEnumModifyVpnTunnelCertificate POSTModifyVpnTunnelCertificateActionEnum = "ModifyVpnTunnelCertificate"
 )
 
+func (e POSTModifyVpnTunnelCertificateActionEnum) ToPointer() *POSTModifyVpnTunnelCertificateActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpnTunnelCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpnTunnelCertificate":
-		*e = POSTModifyVpnTunnelCertificateActionEnum(s)
+		*e = POSTModifyVpnTunnelCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpnTunnelCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpnTunnelCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVpnTunnelCertificateVersionEnumTwoThousandAndSixteen1115 POSTModifyVpnTunnelCertificateVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVpnTunnelCertificateVersionEnum) ToPointer() *POSTModifyVpnTunnelCertificateVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpnTunnelCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVpnTunnelCertificateVersionEnum(s)
+		*e = POSTModifyVpnTunnelCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpnTunnelCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpnTunnelCertificateVersionEnum: %v", v)
 	}
 }
 

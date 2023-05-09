@@ -15,20 +15,24 @@ const (
 	ResourceShareFeatureSetEnumStandard            ResourceShareFeatureSetEnum = "STANDARD"
 )
 
+func (e ResourceShareFeatureSetEnum) ToPointer() *ResourceShareFeatureSetEnum {
+	return &e
+}
+
 func (e *ResourceShareFeatureSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED_FROM_POLICY":
 		fallthrough
 	case "PROMOTING_TO_STANDARD":
 		fallthrough
 	case "STANDARD":
-		*e = ResourceShareFeatureSetEnum(s)
+		*e = ResourceShareFeatureSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceShareFeatureSetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceShareFeatureSetEnum: %v", v)
 	}
 }

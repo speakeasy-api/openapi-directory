@@ -22,19 +22,23 @@ const (
 	DfareportingAdvertisersListSortFieldEnumName DfareportingAdvertisersListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingAdvertisersListSortFieldEnum) ToPointer() *DfareportingAdvertisersListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingAdvertisersListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingAdvertisersListSortFieldEnum(s)
+		*e = DfareportingAdvertisersListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdvertisersListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdvertisersListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingAdvertisersListSortOrderEnumDescending DfareportingAdvertisersListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingAdvertisersListSortOrderEnum) ToPointer() *DfareportingAdvertisersListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingAdvertisersListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingAdvertisersListSortOrderEnum(s)
+		*e = DfareportingAdvertisersListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdvertisersListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdvertisersListSortOrderEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	DfareportingAdvertisersListStatusEnumOnHold   DfareportingAdvertisersListStatusEnum = "ON_HOLD"
 )
 
+func (e DfareportingAdvertisersListStatusEnum) ToPointer() *DfareportingAdvertisersListStatusEnum {
+	return &e
+}
+
 func (e *DfareportingAdvertisersListStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVED":
 		fallthrough
 	case "ON_HOLD":
-		*e = DfareportingAdvertisersListStatusEnum(s)
+		*e = DfareportingAdvertisersListStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingAdvertisersListStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingAdvertisersListStatusEnum: %v", v)
 	}
 }
 

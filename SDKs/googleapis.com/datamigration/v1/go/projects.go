@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DatamigrationProjectsLocationsConnectionProfilesCreate - Creates a new connection profile in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest, security operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity) (*operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectionProfileInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DatamigrationProjectsLocationsConnectionProfilesCreate(ctx co
 // DatamigrationProjectsLocationsConnectionProfilesList - Retrieves a list of all connection profiles in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsConnectionProfilesList(ctx context.Context, request operations.DatamigrationProjectsLocationsConnectionProfilesListRequest, security operations.DatamigrationProjectsLocationsConnectionProfilesListSecurity) (*operations.DatamigrationProjectsLocationsConnectionProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectionProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) DatamigrationProjectsLocationsConnectionProfilesList(ctx cont
 // DatamigrationProjectsLocationsConversionWorkspacesApply - Applies draft tree onto a specific destination database.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesApply(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesApplyRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesApplySecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesApplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:apply", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:apply", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApplyConversionWorkspaceRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesApply(ctx c
 // DatamigrationProjectsLocationsConversionWorkspacesCommit - Marks all the data in the conversion workspace as committed.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesCommit(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesCommitRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesCommitSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:commit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:commit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitConversionWorkspaceRequest", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesCommit(ctx 
 // DatamigrationProjectsLocationsConversionWorkspacesConvert - Creates a draft tree schema for the destination database.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesConvert(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesConvertRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesConvertSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesConvertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:convert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:convert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConvertConversionWorkspaceRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesConvert(ctx
 // DatamigrationProjectsLocationsConversionWorkspacesCreate - Creates a new conversion workspace in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesCreateRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesCreateSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversionWorkspaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversionWorkspaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConversionWorkspaceInput", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesCreate(ctx 
 // DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisions - Retrieves a list of committed revisions of a specific conversion workspace.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisions(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:describeConversionWorkspaceRevisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:describeConversionWorkspaceRevisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesDescribeCon
 // DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntities - Describes the database entities tree for a specific conversion workspace and a specific tree type. Database entities are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are simple data objects describing the structure of the client database.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntities(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:describeDatabaseEntities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:describeDatabaseEntities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesDescribeDat
 // DatamigrationProjectsLocationsConversionWorkspacesList - Lists conversion workspaces in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesList(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesListRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesListSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversionWorkspaces", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/conversionWorkspaces", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesList(ctx co
 // DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImport - Imports the mapping rules for a given conversion workspace. Supports various formats of external rules files.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImport(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mappingRules:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/mappingRules:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportMappingRulesRequest", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesMappingRule
 // DatamigrationProjectsLocationsConversionWorkspacesRollback - Rolls back a conversion workspace to the last committed snapshot.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesRollback(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesRollback(ct
 // DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobs - Searches/lists the background jobs for a specific conversion workspace. The background jobs are not resources like conversion workspaces or mapping rules, and they can't be created, updated or deleted. Instead, they are a way to expose the data plane jobs log.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobs(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:searchBackgroundJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{conversionWorkspace}:searchBackgroundJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesSearchBackg
 // DatamigrationProjectsLocationsConversionWorkspacesSeed - Imports a snapshot of the source database into the conversion workspace.
 func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesSeed(ctx context.Context, request operations.DatamigrationProjectsLocationsConversionWorkspacesSeedRequest, security operations.DatamigrationProjectsLocationsConversionWorkspacesSeedSecurity) (*operations.DatamigrationProjectsLocationsConversionWorkspacesSeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:seed", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:seed", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SeedConversionWorkspaceRequest", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) DatamigrationProjectsLocationsConversionWorkspacesSeed(ctx co
 // DatamigrationProjectsLocationsFetchStaticIps - Fetches a set of static IP addresses that need to be allowlisted by the customer when using the static-IP connectivity method.
 func (s *projects) DatamigrationProjectsLocationsFetchStaticIps(ctx context.Context, request operations.DatamigrationProjectsLocationsFetchStaticIpsRequest, security operations.DatamigrationProjectsLocationsFetchStaticIpsSecurity) (*operations.DatamigrationProjectsLocationsFetchStaticIpsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetchStaticIps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:fetchStaticIps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) DatamigrationProjectsLocationsFetchStaticIps(ctx context.Cont
 // DatamigrationProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DatamigrationProjectsLocationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsListRequest, security operations.DatamigrationProjectsLocationsListSecurity) (*operations.DatamigrationProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) DatamigrationProjectsLocationsList(ctx context.Context, reque
 // DatamigrationProjectsLocationsMigrationJobsCreate - Creates a new migration job in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsCreateRequest, security operations.DatamigrationProjectsLocationsMigrationJobsCreateSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migrationJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migrationJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrationJobInput", "json")
 	if err != nil {
@@ -865,7 +913,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsCreate(ctx context
 // DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript - Generate a SSH configuration script to configure the reverse SSH connectivity.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptRequest, security operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsGenerateSSHScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{migrationJob}:generateSshScript", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{migrationJob}:generateSshScript", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateSSHScriptRequest", "json")
 	if err != nil {
@@ -917,58 +968,13 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript(
 	return res, nil
 }
 
-// DatamigrationProjectsLocationsMigrationJobsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsGetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DatamigrationProjectsLocationsMigrationJobsGetIamPolicyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Policy
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Policy = out
-		}
-	}
-
-	return res, nil
-}
-
 // DatamigrationProjectsLocationsMigrationJobsList - Lists migration jobs in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsList(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsListRequest, security operations.DatamigrationProjectsLocationsMigrationJobsListSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migrationJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migrationJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1016,7 +1022,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsList(ctx context.C
 // DatamigrationProjectsLocationsMigrationJobsPatch - Updates the parameters of a single migration job.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPatchRequest, security operations.DatamigrationProjectsLocationsMigrationJobsPatchSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigrationJobInput", "json")
 	if err != nil {
@@ -1071,7 +1080,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPatch(ctx context.
 // DatamigrationProjectsLocationsMigrationJobsPromote - Promote a migration job, stopping replication to the destination and promoting the destination to be a standalone database.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsPromoteRequest, security operations.DatamigrationProjectsLocationsMigrationJobsPromoteSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsPromoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:promote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:promote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1126,7 +1138,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsPromote(ctx contex
 // DatamigrationProjectsLocationsMigrationJobsRestart - Restart a stopped or failed migration job, resetting the destination instance to its original state and starting the migration process from scratch.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsRestartRequest, security operations.DatamigrationProjectsLocationsMigrationJobsRestartSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsRestartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restart", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restart", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1181,7 +1196,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsRestart(ctx contex
 // DatamigrationProjectsLocationsMigrationJobsResume - Resume a migration job that is currently stopped and is resumable (was stopped during CDC phase).
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsResumeRequest, security operations.DatamigrationProjectsLocationsMigrationJobsResumeSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1233,65 +1251,13 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsResume(ctx context
 	return res, nil
 }
 
-// DatamigrationProjectsLocationsMigrationJobsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsSetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DatamigrationProjectsLocationsMigrationJobsSetIamPolicyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Policy
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Policy = out
-		}
-	}
-
-	return res, nil
-}
-
 // DatamigrationProjectsLocationsMigrationJobsStart - Start an already created migration job.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStartRequest, security operations.DatamigrationProjectsLocationsMigrationJobsStartSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1346,7 +1312,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStart(ctx context.
 // DatamigrationProjectsLocationsMigrationJobsStop - Stops a running migration job.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsStopRequest, security operations.DatamigrationProjectsLocationsMigrationJobsStopSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1398,65 +1367,13 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsStop(ctx context.C
 	return res, nil
 }
 
-// DatamigrationProjectsLocationsMigrationJobsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *projects) DatamigrationProjectsLocationsMigrationJobsTestIamPermissions(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsRequest, security operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsSecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DatamigrationProjectsLocationsMigrationJobsTestIamPermissionsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.TestIamPermissionsResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.TestIamPermissionsResponse = out
-		}
-	}
-
-	return res, nil
-}
-
 // DatamigrationProjectsLocationsMigrationJobsVerify - Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
 func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context.Context, request operations.DatamigrationProjectsLocationsMigrationJobsVerifyRequest, security operations.DatamigrationProjectsLocationsMigrationJobsVerifySecurity) (*operations.DatamigrationProjectsLocationsMigrationJobsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1511,7 +1428,10 @@ func (s *projects) DatamigrationProjectsLocationsMigrationJobsVerify(ctx context
 // DatamigrationProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsCancelRequest, security operations.DatamigrationProjectsLocationsOperationsCancelSecurity) (*operations.DatamigrationProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1566,7 +1486,10 @@ func (s *projects) DatamigrationProjectsLocationsOperationsCancel(ctx context.Co
 // DatamigrationProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) DatamigrationProjectsLocationsOperationsList(ctx context.Context, request operations.DatamigrationProjectsLocationsOperationsListRequest, security operations.DatamigrationProjectsLocationsOperationsListSecurity) (*operations.DatamigrationProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1614,7 +1537,10 @@ func (s *projects) DatamigrationProjectsLocationsOperationsList(ctx context.Cont
 // DatamigrationProjectsLocationsPrivateConnectionsCreate - Creates a new private connection in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsCreate(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsCreateRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsCreateSecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrivateConnectionInput", "json")
 	if err != nil {
@@ -1669,7 +1595,10 @@ func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsCreate(ctx co
 // DatamigrationProjectsLocationsPrivateConnectionsDelete - Deletes a single Database Migration Service private connection.
 func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsDelete(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteSecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1717,7 +1646,10 @@ func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsDelete(ctx co
 // DatamigrationProjectsLocationsPrivateConnectionsGet - Gets details of a single private connection.
 func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsGet(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsGetRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsGetSecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1762,10 +1694,64 @@ func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsGet(ctx conte
 	return res, nil
 }
 
+// DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DatamigrationProjectsLocationsPrivateConnectionsGetIamPolicyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Policy
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Policy = out
+		}
+	}
+
+	return res, nil
+}
+
 // DatamigrationProjectsLocationsPrivateConnectionsList - Retrieves a list of private connections in a given project and location.
 func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsList(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsListRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsListSecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/privateConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1804,6 +1790,122 @@ func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsList(ctx cont
 			}
 
 			res.ListPrivateConnectionsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicy(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicySecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DatamigrationProjectsLocationsPrivateConnectionsSetIamPolicyResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Policy
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Policy = out
+		}
+	}
+
+	return res, nil
+}
+
+// DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+func (s *projects) DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissions(ctx context.Context, request operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsRequest, security operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsSecurity) (*operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DatamigrationProjectsLocationsPrivateConnectionsTestIamPermissionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TestIamPermissionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TestIamPermissionsResponse = out
 		}
 	}
 

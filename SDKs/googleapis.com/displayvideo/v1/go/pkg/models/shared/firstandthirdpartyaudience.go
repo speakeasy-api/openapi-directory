@@ -22,12 +22,16 @@ const (
 	FirstAndThirdPartyAudienceAudienceTypeEnumLicensed                 FirstAndThirdPartyAudienceAudienceTypeEnum = "LICENSED"
 )
 
+func (e FirstAndThirdPartyAudienceAudienceTypeEnum) ToPointer() *FirstAndThirdPartyAudienceAudienceTypeEnum {
+	return &e
+}
+
 func (e *FirstAndThirdPartyAudienceAudienceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CUSTOMER_MATCH_CONTACT_INFO":
@@ -45,10 +49,10 @@ func (e *FirstAndThirdPartyAudienceAudienceTypeEnum) UnmarshalJSON(data []byte) 
 	case "YOUTUBE_USERS":
 		fallthrough
 	case "LICENSED":
-		*e = FirstAndThirdPartyAudienceAudienceTypeEnum(s)
+		*e = FirstAndThirdPartyAudienceAudienceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceAudienceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceAudienceTypeEnum: %v", v)
 	}
 }
 
@@ -61,21 +65,25 @@ const (
 	FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnumFirstAndThirdPartyAudienceTypeThirdParty  FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum = "FIRST_AND_THIRD_PARTY_AUDIENCE_TYPE_THIRD_PARTY"
 )
 
+func (e FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum) ToPointer() *FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum {
+	return &e
+}
+
 func (e *FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIRST_AND_THIRD_PARTY_AUDIENCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIRST_AND_THIRD_PARTY_AUDIENCE_TYPE_FIRST_PARTY":
 		fallthrough
 	case "FIRST_AND_THIRD_PARTY_AUDIENCE_TYPE_THIRD_PARTY":
-		*e = FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum(s)
+		*e = FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceFirstAndThirdPartyAudienceTypeEnum: %v", v)
 	}
 }
 
@@ -112,12 +120,16 @@ const (
 	FirstAndThirdPartyAudienceAudienceSourceEnumAdsDataHub                FirstAndThirdPartyAudienceAudienceSourceEnum = "ADS_DATA_HUB"
 )
 
+func (e FirstAndThirdPartyAudienceAudienceSourceEnum) ToPointer() *FirstAndThirdPartyAudienceAudienceSourceEnum {
+	return &e
+}
+
 func (e *FirstAndThirdPartyAudienceAudienceSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "DISPLAY_VIDEO_360":
@@ -131,10 +143,10 @@ func (e *FirstAndThirdPartyAudienceAudienceSourceEnum) UnmarshalJSON(data []byte
 	case "YOUTUBE":
 		fallthrough
 	case "ADS_DATA_HUB":
-		*e = FirstAndThirdPartyAudienceAudienceSourceEnum(s)
+		*e = FirstAndThirdPartyAudienceAudienceSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceAudienceSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstAndThirdPartyAudienceAudienceSourceEnum: %v", v)
 	}
 }
 

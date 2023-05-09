@@ -15,20 +15,24 @@ const (
 	SpotInstanceInterruptionBehaviorEnumTerminate SpotInstanceInterruptionBehaviorEnum = "terminate"
 )
 
+func (e SpotInstanceInterruptionBehaviorEnum) ToPointer() *SpotInstanceInterruptionBehaviorEnum {
+	return &e
+}
+
 func (e *SpotInstanceInterruptionBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hibernate":
 		fallthrough
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = SpotInstanceInterruptionBehaviorEnum(s)
+		*e = SpotInstanceInterruptionBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpotInstanceInterruptionBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for SpotInstanceInterruptionBehaviorEnum: %v", v)
 	}
 }

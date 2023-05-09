@@ -19,12 +19,16 @@ const (
 	GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnumLineBreak    GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum = "LINE_BREAK"
 )
 
+func (e GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum) ToPointer() *GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "SPACE":
@@ -36,10 +40,10 @@ func (e *GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum) Unmarsha
 	case "HYPHEN":
 		fallthrough
 	case "LINE_BREAK":
-		*e = GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum(s)
+		*e = GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudVisionV1p1beta1TextAnnotationDetectedBreakTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ModelCardSortByEnumCreationTime ModelCardSortByEnum = "CreationTime"
 )
 
+func (e ModelCardSortByEnum) ToPointer() *ModelCardSortByEnum {
+	return &e
+}
+
 func (e *ModelCardSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
-		*e = ModelCardSortByEnum(s)
+		*e = ModelCardSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCardSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCardSortByEnum: %v", v)
 	}
 }

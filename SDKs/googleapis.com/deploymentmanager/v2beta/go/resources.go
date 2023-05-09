@@ -34,7 +34,10 @@ func newResources(defaultClient, securityClient HTTPClient, serverURL, language,
 // DeploymentmanagerResourcesGet - Gets information about a single resource.
 func (s *resources) DeploymentmanagerResourcesGet(ctx context.Context, request operations.DeploymentmanagerResourcesGetRequest, security operations.DeploymentmanagerResourcesGetSecurity) (*operations.DeploymentmanagerResourcesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/resources/{resource}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/resources/{resource}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *resources) DeploymentmanagerResourcesGet(ctx context.Context, request o
 // DeploymentmanagerResourcesList - Lists all resources in a given deployment.
 func (s *resources) DeploymentmanagerResourcesList(ctx context.Context, request operations.DeploymentmanagerResourcesListRequest, security operations.DeploymentmanagerResourcesListSecurity) (*operations.DeploymentmanagerResourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/resources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2beta/projects/{project}/global/deployments/{deployment}/resources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

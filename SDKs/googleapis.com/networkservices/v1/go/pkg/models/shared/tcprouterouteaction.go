@@ -4,8 +4,8 @@ package shared
 
 // TCPRouteRouteAction - The specifications for routing traffic and applying associated policies.
 type TCPRouteRouteAction struct {
-	// Optional. The destination services to which traffic should be forwarded. At least one destination service is required.
+	// Optional. The destination services to which traffic should be forwarded. At least one destination service is required. Only one of route destination or original destination can be set.
 	Destinations []TCPRouteRouteDestination `json:"destinations,omitempty"`
-	// Optional. If true, Router will use the destination IP and port of the original connection as the destination of the request. Default is false.
+	// Optional. If true, Router will use the destination IP and port of the original connection as the destination of the request. Default is false. Only one of route destinations or original destination can be set.
 	OriginalDestination *bool `json:"originalDestination,omitempty"`
 }

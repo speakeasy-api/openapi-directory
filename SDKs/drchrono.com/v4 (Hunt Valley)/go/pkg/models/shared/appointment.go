@@ -61,12 +61,16 @@ const (
 	AppointmentIns1StatusEnumHcfaFormFaxed                AppointmentIns1StatusEnum = "HCFA Form Faxed"
 )
 
+func (e AppointmentIns1StatusEnum) ToPointer() *AppointmentIns1StatusEnum {
+	return &e
+}
+
 func (e *AppointmentIns1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Incomplete Information":
@@ -102,10 +106,10 @@ func (e *AppointmentIns1StatusEnum) UnmarshalJSON(data []byte) error {
 	case "ERA Denied":
 		fallthrough
 	case "HCFA Form Faxed":
-		*e = AppointmentIns1StatusEnum(s)
+		*e = AppointmentIns1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppointmentIns1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppointmentIns1StatusEnum: %v", v)
 	}
 }
 
@@ -133,12 +137,16 @@ const (
 	AppointmentIns2StatusEnumHcfaFormFaxed                AppointmentIns2StatusEnum = "HCFA Form Faxed"
 )
 
+func (e AppointmentIns2StatusEnum) ToPointer() *AppointmentIns2StatusEnum {
+	return &e
+}
+
 func (e *AppointmentIns2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Incomplete Information":
@@ -174,10 +182,10 @@ func (e *AppointmentIns2StatusEnum) UnmarshalJSON(data []byte) error {
 	case "ERA Denied":
 		fallthrough
 	case "HCFA Form Faxed":
-		*e = AppointmentIns2StatusEnum(s)
+		*e = AppointmentIns2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppointmentIns2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppointmentIns2StatusEnum: %v", v)
 	}
 }
 
@@ -190,12 +198,16 @@ const (
 	AppointmentSimpleReminderTypeEnumAutoCall AppointmentSimpleReminderTypeEnum = "auto_call"
 )
 
+func (e AppointmentSimpleReminderTypeEnum) ToPointer() *AppointmentSimpleReminderTypeEnum {
+	return &e
+}
+
 func (e *AppointmentSimpleReminderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "email":
 		fallthrough
 	case "sms":
@@ -203,10 +215,10 @@ func (e *AppointmentSimpleReminderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "phone":
 		fallthrough
 	case "auto_call":
-		*e = AppointmentSimpleReminderTypeEnum(s)
+		*e = AppointmentSimpleReminderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppointmentSimpleReminderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppointmentSimpleReminderTypeEnum: %v", v)
 	}
 }
 
@@ -234,12 +246,16 @@ const (
 	AppointmentStatusEnumNoShow          AppointmentStatusEnum = "No Show"
 )
 
+func (e AppointmentStatusEnum) ToPointer() *AppointmentStatusEnum {
+	return &e
+}
+
 func (e *AppointmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Arrived":
@@ -263,10 +279,10 @@ func (e *AppointmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Cancelled":
 		fallthrough
 	case "No Show":
-		*e = AppointmentStatusEnum(s)
+		*e = AppointmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppointmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppointmentStatusEnum: %v", v)
 	}
 }
 
@@ -291,12 +307,16 @@ const (
 	AppointmentSystemVitalsSmokingStatusEnumFourHundredAndTwentyEightTrillionSixtyOneBillionOneHundredAndTwentyFourThousandOneHundredAndFive    AppointmentSystemVitalsSmokingStatusEnum = "428061000124105"
 )
 
+func (e AppointmentSystemVitalsSmokingStatusEnum) ToPointer() *AppointmentSystemVitalsSmokingStatusEnum {
+	return &e
+}
+
 func (e *AppointmentSystemVitalsSmokingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blank":
 		fallthrough
 	case "449868002":
@@ -314,10 +334,10 @@ func (e *AppointmentSystemVitalsSmokingStatusEnum) UnmarshalJSON(data []byte) er
 	case "428071000124103":
 		fallthrough
 	case "428061000124105":
-		*e = AppointmentSystemVitalsSmokingStatusEnum(s)
+		*e = AppointmentSystemVitalsSmokingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppointmentSystemVitalsSmokingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppointmentSystemVitalsSmokingStatusEnum: %v", v)
 	}
 }
 

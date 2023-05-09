@@ -16,17 +16,21 @@ const (
 	GetWorkflowExecutionHistoryXAmzTargetEnumSimpleWorkflowServiceGetWorkflowExecutionHistory GetWorkflowExecutionHistoryXAmzTargetEnum = "SimpleWorkflowService.GetWorkflowExecutionHistory"
 )
 
+func (e GetWorkflowExecutionHistoryXAmzTargetEnum) ToPointer() *GetWorkflowExecutionHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetWorkflowExecutionHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.GetWorkflowExecutionHistory":
-		*e = GetWorkflowExecutionHistoryXAmzTargetEnum(s)
+		*e = GetWorkflowExecutionHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkflowExecutionHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkflowExecutionHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

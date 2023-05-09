@@ -21,19 +21,23 @@ const (
 	ErrorsAvailableVersionsDollarInlinecountEnumNone     ErrorsAvailableVersionsDollarInlinecountEnum = "none"
 )
 
+func (e ErrorsAvailableVersionsDollarInlinecountEnum) ToPointer() *ErrorsAvailableVersionsDollarInlinecountEnum {
+	return &e
+}
+
 func (e *ErrorsAvailableVersionsDollarInlinecountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allpages":
 		fallthrough
 	case "none":
-		*e = ErrorsAvailableVersionsDollarInlinecountEnum(s)
+		*e = ErrorsAvailableVersionsDollarInlinecountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsAvailableVersionsDollarInlinecountEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsAvailableVersionsDollarInlinecountEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ErrorsAvailableVersionsErrorTypeEnumHandledError   ErrorsAvailableVersionsErrorTypeEnum = "handledError"
 )
 
+func (e ErrorsAvailableVersionsErrorTypeEnum) ToPointer() *ErrorsAvailableVersionsErrorTypeEnum {
+	return &e
+}
+
 func (e *ErrorsAvailableVersionsErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "unhandledError":
 		fallthrough
 	case "handledError":
-		*e = ErrorsAvailableVersionsErrorTypeEnum(s)
+		*e = ErrorsAvailableVersionsErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsAvailableVersionsErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsAvailableVersionsErrorTypeEnum: %v", v)
 	}
 }
 
@@ -97,12 +105,16 @@ const (
 	ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -116,10 +128,10 @@ func (e *ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum) UnmarshalJS
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsAvailableVersionsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

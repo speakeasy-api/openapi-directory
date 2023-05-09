@@ -35,7 +35,10 @@ func newCombinedAudiences(defaultClient, securityClient HTTPClient, serverURL, l
 // DisplayvideoCombinedAudiencesGet - Gets a combined audience.
 func (s *combinedAudiences) DisplayvideoCombinedAudiencesGet(ctx context.Context, request operations.DisplayvideoCombinedAudiencesGetRequest, security operations.DisplayvideoCombinedAudiencesGetSecurity) (*operations.DisplayvideoCombinedAudiencesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/combinedAudiences/{combinedAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/combinedAudiences/{combinedAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

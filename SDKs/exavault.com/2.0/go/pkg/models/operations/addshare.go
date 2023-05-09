@@ -26,21 +26,25 @@ const (
 	AddShareAddShareRequestBodyTypeEnumSend         AddShareAddShareRequestBodyTypeEnum = "send"
 )
 
+func (e AddShareAddShareRequestBodyTypeEnum) ToPointer() *AddShareAddShareRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *AddShareAddShareRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared_folder":
 		fallthrough
 	case "receive":
 		fallthrough
 	case "send":
-		*e = AddShareAddShareRequestBodyTypeEnum(s)
+		*e = AddShareAddShareRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddShareAddShareRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddShareAddShareRequestBodyTypeEnum: %v", v)
 	}
 }
 

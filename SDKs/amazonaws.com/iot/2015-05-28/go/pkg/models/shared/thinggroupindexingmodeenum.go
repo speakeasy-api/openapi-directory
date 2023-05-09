@@ -14,18 +14,22 @@ const (
 	ThingGroupIndexingModeEnumOn  ThingGroupIndexingModeEnum = "ON"
 )
 
+func (e ThingGroupIndexingModeEnum) ToPointer() *ThingGroupIndexingModeEnum {
+	return &e
+}
+
 func (e *ThingGroupIndexingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "ON":
-		*e = ThingGroupIndexingModeEnum(s)
+		*e = ThingGroupIndexingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThingGroupIndexingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThingGroupIndexingModeEnum: %v", v)
 	}
 }

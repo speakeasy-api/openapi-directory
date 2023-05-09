@@ -17,21 +17,25 @@ const (
 	MessageEncodingEnumBinary  MessageEncodingEnum = "BINARY"
 )
 
+func (e MessageEncodingEnum) ToPointer() *MessageEncodingEnum {
+	return &e
+}
+
 func (e *MessageEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT":
 		fallthrough
 	case "UNICODE":
 		fallthrough
 	case "BINARY":
-		*e = MessageEncodingEnum(s)
+		*e = MessageEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageEncodingEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	MessageStatusSubtypeEnumNotSent      MessageStatusSubtypeEnum = "NOT_SENT"
 )
 
+func (e MessageStatusSubtypeEnum) ToPointer() *MessageStatusSubtypeEnum {
+	return &e
+}
+
 func (e *MessageStatusSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPIRED":
 		fallthrough
 	case "HANDSET_ERROR":
@@ -66,10 +74,10 @@ func (e *MessageStatusSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "BLOCKED":
 		fallthrough
 	case "NOT_SENT":
-		*e = MessageStatusSubtypeEnum(s)
+		*e = MessageStatusSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusSubtypeEnum: %v", v)
 	}
 }
 
@@ -96,12 +104,16 @@ const (
 	MessageStatusTypeEnumFailed    MessageStatusTypeEnum = "FAILED"
 )
 
+func (e MessageStatusTypeEnum) ToPointer() *MessageStatusTypeEnum {
+	return &e
+}
+
 func (e *MessageStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPTED":
 		fallthrough
 	case "SCHEDULED":
@@ -113,10 +125,10 @@ func (e *MessageStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UNKNOWN":
 		fallthrough
 	case "FAILED":
-		*e = MessageStatusTypeEnum(s)
+		*e = MessageStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusTypeEnum: %v", v)
 	}
 }
 
@@ -168,19 +180,23 @@ const (
 	MessageTypeEnumReceived MessageTypeEnum = "RECEIVED"
 )
 
+func (e MessageTypeEnum) ToPointer() *MessageTypeEnum {
+	return &e
+}
+
 func (e *MessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENT":
 		fallthrough
 	case "RECEIVED":
-		*e = MessageTypeEnum(s)
+		*e = MessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageTypeEnum: %v", v)
 	}
 }
 

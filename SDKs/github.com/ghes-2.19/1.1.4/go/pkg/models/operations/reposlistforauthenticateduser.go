@@ -18,19 +18,23 @@ const (
 	ReposListForAuthenticatedUserDirectionEnumDesc ReposListForAuthenticatedUserDirectionEnum = "desc"
 )
 
+func (e ReposListForAuthenticatedUserDirectionEnum) ToPointer() *ReposListForAuthenticatedUserDirectionEnum {
+	return &e
+}
+
 func (e *ReposListForAuthenticatedUserDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ReposListForAuthenticatedUserDirectionEnum(s)
+		*e = ReposListForAuthenticatedUserDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserDirectionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ReposListForAuthenticatedUserSortEnumFullName ReposListForAuthenticatedUserSortEnum = "full_name"
 )
 
+func (e ReposListForAuthenticatedUserSortEnum) ToPointer() *ReposListForAuthenticatedUserSortEnum {
+	return &e
+}
+
 func (e *ReposListForAuthenticatedUserSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "updated":
@@ -57,10 +65,10 @@ func (e *ReposListForAuthenticatedUserSortEnum) UnmarshalJSON(data []byte) error
 	case "pushed":
 		fallthrough
 	case "full_name":
-		*e = ReposListForAuthenticatedUserSortEnum(s)
+		*e = ReposListForAuthenticatedUserSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserSortEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ReposListForAuthenticatedUserTypeEnumMember  ReposListForAuthenticatedUserTypeEnum = "member"
 )
 
+func (e ReposListForAuthenticatedUserTypeEnum) ToPointer() *ReposListForAuthenticatedUserTypeEnum {
+	return &e
+}
+
 func (e *ReposListForAuthenticatedUserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "owner":
@@ -92,10 +104,10 @@ func (e *ReposListForAuthenticatedUserTypeEnum) UnmarshalJSON(data []byte) error
 	case "private":
 		fallthrough
 	case "member":
-		*e = ReposListForAuthenticatedUserTypeEnum(s)
+		*e = ReposListForAuthenticatedUserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserTypeEnum: %v", v)
 	}
 }
 
@@ -108,21 +120,25 @@ const (
 	ReposListForAuthenticatedUserVisibilityEnumPrivate ReposListForAuthenticatedUserVisibilityEnum = "private"
 )
 
+func (e ReposListForAuthenticatedUserVisibilityEnum) ToPointer() *ReposListForAuthenticatedUserVisibilityEnum {
+	return &e
+}
+
 func (e *ReposListForAuthenticatedUserVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "public":
 		fallthrough
 	case "private":
-		*e = ReposListForAuthenticatedUserVisibilityEnum(s)
+		*e = ReposListForAuthenticatedUserVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposListForAuthenticatedUserVisibilityEnum: %v", v)
 	}
 }
 

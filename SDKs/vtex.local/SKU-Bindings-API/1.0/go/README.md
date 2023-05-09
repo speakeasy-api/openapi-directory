@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/SKU-Bindings-A
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,15 +28,13 @@ func main() {
         }),
     )
 
-    req := operations.ActivateSKUBindingRequest{
+    ctx := context.Background()
+    res, err := s.SKUBindings.ActivateSKUBinding(ctx, operations.ActivateSKUBindingRequest{
         Accept: "corrupti",
         ContentType: "provident",
         SellerID: "vtxkfj7352",
         SkuSellerID: "71",
-    }
-
-    ctx := context.Background()
-    res, err := s.SKUBindings.ActivateSKUBinding(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -53,20 +50,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### SKUBindings
+### [SKUBindings](docs/skubindings/README.md)
 
-* `ActivateSKUBinding` - Activate SKU Binding
-* `Bindtoanothersku` - Bind a seller's SKU to another SKU
-* `ChangeNotification` - Change Notification with SKU ID
-* `DeactivateSKUBinding` - Deactivate SKU Binding
-* `DeleteSKUsellerassociation` - Remove a seller's SKU Binding
-* `GetSKUseller` - Get details of a seller's SKU
-* `GetallbySellerID` - Get all SKU Bindings by Seller ID
-* `GetbySkuID` - Get SKU Bindings by SKU ID
-* `Getpagedadmin` - Get SKU Bindings information
-* `GetpagedbySellerID` - Get paged SKU Bindings by Seller ID
-* `InsertSKUBinding` - Insert SKU Binding
-* `PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuID` - Change Notification with Seller ID and Seller SKU ID
+* [ActivateSKUBinding](docs/skubindings/README.md#activateskubinding) - Activate SKU Binding
+* [Bindtoanothersku](docs/skubindings/README.md#bindtoanothersku) - Bind a seller's SKU to another SKU
+* [ChangeNotification](docs/skubindings/README.md#changenotification) - Change Notification with SKU ID
+* [DeactivateSKUBinding](docs/skubindings/README.md#deactivateskubinding) - Deactivate SKU Binding
+* [DeleteSKUsellerassociation](docs/skubindings/README.md#deleteskusellerassociation) - Remove a seller's SKU Binding
+* [GetSKUseller](docs/skubindings/README.md#getskuseller) - Get details of a seller's SKU
+* [GetallbySellerID](docs/skubindings/README.md#getallbysellerid) - Get all SKU Bindings by Seller ID
+* [GetbySkuID](docs/skubindings/README.md#getbyskuid) - Get SKU Bindings by SKU ID
+* [Getpagedadmin](docs/skubindings/README.md#getpagedadmin) - Get SKU Bindings information
+* [GetpagedbySellerID](docs/skubindings/README.md#getpagedbysellerid) - Get paged SKU Bindings by Seller ID
+* [InsertSKUBinding](docs/skubindings/README.md#insertskubinding) - Insert SKU Binding
+* [PostSkuBindingPvtSkusellerChangenotificationSellerIDSellerSkuID](docs/skubindings/README.md#postskubindingpvtskusellerchangenotificationselleridsellerskuid) - Change Notification with Seller ID and Seller SKU ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

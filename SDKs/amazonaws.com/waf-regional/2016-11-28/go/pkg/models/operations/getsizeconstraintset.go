@@ -16,17 +16,21 @@ const (
 	GetSizeConstraintSetXAmzTargetEnumAwswafRegional20161128GetSizeConstraintSet GetSizeConstraintSetXAmzTargetEnum = "AWSWAF_Regional_20161128.GetSizeConstraintSet"
 )
 
+func (e GetSizeConstraintSetXAmzTargetEnum) ToPointer() *GetSizeConstraintSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSizeConstraintSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.GetSizeConstraintSet":
-		*e = GetSizeConstraintSetXAmzTargetEnum(s)
+		*e = GetSizeConstraintSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSizeConstraintSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSizeConstraintSetXAmzTargetEnum: %v", v)
 	}
 }
 

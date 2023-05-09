@@ -19,12 +19,16 @@ const (
 	ScriptsDifferenceModelChangeTypeEnumChangedNameInvalid ScriptsDifferenceModelChangeTypeEnum = "CHANGED_NAME_INVALID"
 )
 
+func (e ScriptsDifferenceModelChangeTypeEnum) ToPointer() *ScriptsDifferenceModelChangeTypeEnum {
+	return &e
+}
+
 func (e *ScriptsDifferenceModelChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOCHANGE":
 		fallthrough
 	case "ADDED":
@@ -38,10 +42,10 @@ func (e *ScriptsDifferenceModelChangeTypeEnum) UnmarshalJSON(data []byte) error 
 	case "CHANGED_CODE_INVALID":
 		fallthrough
 	case "CHANGED_NAME_INVALID":
-		*e = ScriptsDifferenceModelChangeTypeEnum(s)
+		*e = ScriptsDifferenceModelChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScriptsDifferenceModelChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScriptsDifferenceModelChangeTypeEnum: %v", v)
 	}
 }
 

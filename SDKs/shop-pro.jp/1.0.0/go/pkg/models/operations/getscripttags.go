@@ -8,6 +8,10 @@ import (
 	"net/http"
 )
 
+type GetScriptTagsSecurity struct {
+	OAuth2 string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 // GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum - スクリプトを出力するページ。
 //
 // - `all`: ショップページと注文完了ページの両方
@@ -23,12 +27,16 @@ const (
 	GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnumCart       GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum = "cart"
 )
 
+func (e GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum) ToPointer() *GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum {
+	return &e
+}
+
 func (e *GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "shop":
@@ -36,10 +44,10 @@ func (e *GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum) UnmarshalJSO
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum(s)
+		*e = GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum: %v", v)
 	}
 }
 

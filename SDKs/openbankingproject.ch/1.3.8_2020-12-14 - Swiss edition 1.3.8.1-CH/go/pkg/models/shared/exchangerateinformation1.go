@@ -15,21 +15,25 @@ const (
 	ExchangeRateInformation1RateTypeEnumAgrd ExchangeRateInformation1RateTypeEnum = "AGRD"
 )
 
+func (e ExchangeRateInformation1RateTypeEnum) ToPointer() *ExchangeRateInformation1RateTypeEnum {
+	return &e
+}
+
 func (e *ExchangeRateInformation1RateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPOT":
 		fallthrough
 	case "SALE":
 		fallthrough
 	case "AGRD":
-		*e = ExchangeRateInformation1RateTypeEnum(s)
+		*e = ExchangeRateInformation1RateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeRateInformation1RateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeRateInformation1RateTypeEnum: %v", v)
 	}
 }
 

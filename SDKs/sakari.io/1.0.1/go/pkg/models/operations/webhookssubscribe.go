@@ -29,12 +29,16 @@ const (
 	WebhooksSubscribeRequestBodyEventTypesEnumListOptIn           WebhooksSubscribeRequestBodyEventTypesEnum = "list-opt-in"
 )
 
+func (e WebhooksSubscribeRequestBodyEventTypesEnum) ToPointer() *WebhooksSubscribeRequestBodyEventTypesEnum {
+	return &e
+}
+
 func (e *WebhooksSubscribeRequestBodyEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contact-created":
 		fallthrough
 	case "contact-updated":
@@ -56,10 +60,10 @@ func (e *WebhooksSubscribeRequestBodyEventTypesEnum) UnmarshalJSON(data []byte) 
 	case "list-opt-out":
 		fallthrough
 	case "list-opt-in":
-		*e = WebhooksSubscribeRequestBodyEventTypesEnum(s)
+		*e = WebhooksSubscribeRequestBodyEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhooksSubscribeRequestBodyEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhooksSubscribeRequestBodyEventTypesEnum: %v", v)
 	}
 }
 

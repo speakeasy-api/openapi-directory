@@ -16,17 +16,21 @@ const (
 	DeleteFileSystemXAmzTargetEnumAwsSimbaAPIServiceV20180301DeleteFileSystem DeleteFileSystemXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DeleteFileSystem"
 )
 
+func (e DeleteFileSystemXAmzTargetEnum) ToPointer() *DeleteFileSystemXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFileSystemXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DeleteFileSystem":
-		*e = DeleteFileSystemXAmzTargetEnum(s)
+		*e = DeleteFileSystemXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFileSystemXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFileSystemXAmzTargetEnum: %v", v)
 	}
 }
 

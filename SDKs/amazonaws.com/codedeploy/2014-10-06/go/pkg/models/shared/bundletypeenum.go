@@ -17,12 +17,16 @@ const (
 	BundleTypeEnumJSON BundleTypeEnum = "JSON"
 )
 
+func (e BundleTypeEnum) ToPointer() *BundleTypeEnum {
+	return &e
+}
+
 func (e *BundleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tar":
 		fallthrough
 	case "tgz":
@@ -32,9 +36,9 @@ func (e *BundleTypeEnum) UnmarshalJSON(data []byte) error {
 	case "YAML":
 		fallthrough
 	case "JSON":
-		*e = BundleTypeEnum(s)
+		*e = BundleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BundleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BundleTypeEnum: %v", v)
 	}
 }

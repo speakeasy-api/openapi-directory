@@ -18,12 +18,16 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnumOfferingSoftBundle    GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum = "OFFERING_SOFT_BUNDLE"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFFERING_UNSPECIFIED":
 		fallthrough
 	case "OFFERING_VAS_BUNDLE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum) 
 	case "OFFERING_HARD_BUNDLE":
 		fallthrough
 	case "OFFERING_SOFT_BUNDLE":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadOfferingEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnumChannelOnlineIosApp     GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum = "CHANNEL_ONLINE_IOS_APP"
 )
 
+func (e GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum) ToPointer() *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum {
+	return &e
+}
+
 func (e *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "CHANNEL_RETAIL":
@@ -66,10 +74,10 @@ func (e *GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEn
 	case "CHANNEL_ONLINE_ANDROID_APP":
 		fallthrough
 	case "CHANNEL_ONLINE_IOS_APP":
-		*e = GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum(s)
+		*e = GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayloadSalesChannelEnum: %v", v)
 	}
 }
 

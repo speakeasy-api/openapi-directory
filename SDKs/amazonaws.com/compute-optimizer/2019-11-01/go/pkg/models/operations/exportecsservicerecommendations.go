@@ -16,17 +16,21 @@ const (
 	ExportECSServiceRecommendationsXAmzTargetEnumComputeOptimizerServiceExportEcsServiceRecommendations ExportECSServiceRecommendationsXAmzTargetEnum = "ComputeOptimizerService.ExportECSServiceRecommendations"
 )
 
+func (e ExportECSServiceRecommendationsXAmzTargetEnum) ToPointer() *ExportECSServiceRecommendationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportECSServiceRecommendationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.ExportECSServiceRecommendations":
-		*e = ExportECSServiceRecommendationsXAmzTargetEnum(s)
+		*e = ExportECSServiceRecommendationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportECSServiceRecommendationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportECSServiceRecommendationsXAmzTargetEnum: %v", v)
 	}
 }
 

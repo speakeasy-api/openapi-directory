@@ -21,12 +21,16 @@ const (
 	FrameworkEnumSklearn    FrameworkEnum = "SKLEARN"
 )
 
+func (e FrameworkEnum) ToPointer() *FrameworkEnum {
+	return &e
+}
+
 func (e *FrameworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TENSORFLOW":
 		fallthrough
 	case "KERAS":
@@ -44,9 +48,9 @@ func (e *FrameworkEnum) UnmarshalJSON(data []byte) error {
 	case "DARKNET":
 		fallthrough
 	case "SKLEARN":
-		*e = FrameworkEnum(s)
+		*e = FrameworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrameworkEnum: %s", s)
+		return fmt.Errorf("invalid value for FrameworkEnum: %v", v)
 	}
 }

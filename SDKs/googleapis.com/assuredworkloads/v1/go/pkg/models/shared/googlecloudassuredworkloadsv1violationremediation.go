@@ -18,12 +18,16 @@ const (
 	GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnumRemediationRestrictCmekCryptoKeyProjectsOrgPolicyViolation GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum = "REMEDIATION_RESTRICT_CMEK_CRYPTO_KEY_PROJECTS_ORG_POLICY_VIOLATION"
 )
 
+func (e GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum) ToPointer() *GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REMEDIATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REMEDIATION_BOOLEAN_ORG_POLICY_VIOLATION":
@@ -33,10 +37,10 @@ func (e *GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum) U
 	case "REMEDIATION_LIST_DENIED_VALUES_ORG_POLICY_VIOLATION":
 		fallthrough
 	case "REMEDIATION_RESTRICT_CMEK_CRYPTO_KEY_PROJECTS_ORG_POLICY_VIOLATION":
-		*e = GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum(s)
+		*e = GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudAssuredworkloadsV1ViolationRemediationRemediationTypeEnum: %v", v)
 	}
 }
 

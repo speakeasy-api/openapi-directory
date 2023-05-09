@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateACardProfileDefaultApplicationJSON13StatusEnum string
+type CreateACardProfileDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateACardProfileDefaultApplicationJSON13StatusEnum = "429"
+	CreateACardProfileDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateACardProfileDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateACardProfileDefaultApplicationJSON13StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateACardProfileDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateACardProfileDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON13TypeEnumRateLimitedError CreateACardProfileDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON13TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateACardProfileDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type CreateACardProfileDefaultApplicationJSON13 struct {
 	Type       CreateACardProfileDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON12StatusEnum string
+type CreateACardProfileDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON12StatusEnum = "403"
+	CreateACardProfileDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateACardProfileDefaultApplicationJSON12StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACardProfileDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACardProfileDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateACardProfileDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON12TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateACardProfileDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type CreateACardProfileDefaultApplicationJSON12 struct {
 	Type   CreateACardProfileDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON11StatusEnum string
+type CreateACardProfileDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateACardProfileDefaultApplicationJSON11StatusEnum = "404"
+	CreateACardProfileDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateACardProfileDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateACardProfileDefaultApplicationJSON11StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateACardProfileDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateACardProfileDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateACardProfileDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON11TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateACardProfileDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type CreateACardProfileDefaultApplicationJSON11 struct {
 	Type   CreateACardProfileDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON10StatusEnum string
+type CreateACardProfileDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON10StatusEnumFourHundred CreateACardProfileDefaultApplicationJSON10StatusEnum = "400"
+	CreateACardProfileDefaultApplicationJSON10StatusEnumFourHundred CreateACardProfileDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateACardProfileDefaultApplicationJSON10StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateACardProfileDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateACardProfileDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON10TypeEnumMalformedRequestError CreateACardProfileDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON10TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateACardProfileDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type CreateACardProfileDefaultApplicationJSON10 struct {
 	Type   CreateACardProfileDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON9StatusEnum string
+type CreateACardProfileDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON9StatusEnumFourHundred CreateACardProfileDefaultApplicationJSON9StatusEnum = "400"
+	CreateACardProfileDefaultApplicationJSON9StatusEnumFourHundred CreateACardProfileDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateACardProfileDefaultApplicationJSON9StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateACardProfileDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateACardProfileDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	CreateACardProfileDefaultApplicationJSON9TypeEnumInvalidParametersError CreateACardProfileDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON9TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateACardProfileDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateACardProfileDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                            `json:"errors,omitempty"`
+	Errors []map[string]interface{}                            `json:"errors"`
 	Status CreateACardProfileDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                              `json:"title"`
 	Type   CreateACardProfileDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON8StatusEnum string
+type CreateACardProfileDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateACardProfileDefaultApplicationJSON8StatusEnum = "409"
+	CreateACardProfileDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateACardProfileDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateACardProfileDefaultApplicationJSON8StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateACardProfileDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateACardProfileDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON8TypeEnumInvalidOperationError CreateACardProfileDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON8TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateACardProfileDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type CreateACardProfileDefaultApplicationJSON8 struct {
 	Type   CreateACardProfileDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON7StatusEnum string
+type CreateACardProfileDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateACardProfileDefaultApplicationJSON7StatusEnum = "401"
+	CreateACardProfileDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateACardProfileDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateACardProfileDefaultApplicationJSON7StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateACardProfileDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateACardProfileDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateACardProfileDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON7TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateACardProfileDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type CreateACardProfileDefaultApplicationJSON7 struct {
 	Type   CreateACardProfileDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON6StatusEnum string
+type CreateACardProfileDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON6StatusEnumFiveHundred CreateACardProfileDefaultApplicationJSON6StatusEnum = "500"
+	CreateACardProfileDefaultApplicationJSON6StatusEnumFiveHundred CreateACardProfileDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateACardProfileDefaultApplicationJSON6StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateACardProfileDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateACardProfileDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON6TypeEnumInternalServerError CreateACardProfileDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON6TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateACardProfileDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type CreateACardProfileDefaultApplicationJSON6 struct {
 	Type   CreateACardProfileDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON5StatusEnum string
+type CreateACardProfileDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON5StatusEnum = "403"
+	CreateACardProfileDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateACardProfileDefaultApplicationJSON5StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACardProfileDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACardProfileDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateACardProfileDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON5TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateACardProfileDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type CreateACardProfileDefaultApplicationJSON5 struct {
 	Type   CreateACardProfileDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON4StatusEnum string
+type CreateACardProfileDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateACardProfileDefaultApplicationJSON4StatusEnum = "422"
+	CreateACardProfileDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateACardProfileDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateACardProfileDefaultApplicationJSON4StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateACardProfileDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateACardProfileDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateACardProfileDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON4TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateACardProfileDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type CreateACardProfileDefaultApplicationJSON4 struct {
 	Type   CreateACardProfileDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON3StatusEnum string
+type CreateACardProfileDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateACardProfileDefaultApplicationJSON3StatusEnum = "409"
+	CreateACardProfileDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateACardProfileDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateACardProfileDefaultApplicationJSON3StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateACardProfileDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateACardProfileDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateACardProfileDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON3TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateACardProfileDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type CreateACardProfileDefaultApplicationJSON3 struct {
 	Type   CreateACardProfileDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON2StatusEnum string
+type CreateACardProfileDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON2StatusEnum = "403"
+	CreateACardProfileDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateACardProfileDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateACardProfileDefaultApplicationJSON2StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateACardProfileDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateACardProfileDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateACardProfileDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON2TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateACardProfileDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type CreateACardProfileDefaultApplicationJSON2 struct {
 	Type   CreateACardProfileDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateACardProfileDefaultApplicationJSON1StatusEnum string
+type CreateACardProfileDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateACardProfileDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateACardProfileDefaultApplicationJSON1StatusEnum = "404"
+	CreateACardProfileDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateACardProfileDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateACardProfileDefaultApplicationJSON1StatusEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateACardProfileDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateACardProfileDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	CreateACardProfileDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateACardProfileDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateACardProfileDefaultApplicationJSON1TypeEnum) ToPointer() *CreateACardProfileDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateACardProfileDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateACardProfileDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateACardProfileDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateACardProfileDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

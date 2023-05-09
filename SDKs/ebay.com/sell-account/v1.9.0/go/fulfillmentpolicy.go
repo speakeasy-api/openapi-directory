@@ -94,7 +94,10 @@ func (s *fulfillmentPolicy) CreateFulfillmentPolicy(ctx context.Context, request
 // DeleteFulfillmentPolicy - This method deletes a fulfillment policy. Supply the ID of the policy you want to delete in the <b>fulfillmentPolicyId</b> path parameter.
 func (s *fulfillmentPolicy) DeleteFulfillmentPolicy(ctx context.Context, request operations.DeleteFulfillmentPolicyRequest, security operations.DeleteFulfillmentPolicySecurity) (*operations.DeleteFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -188,7 +191,10 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicies(ctx context.Context, request 
 // GetFulfillmentPolicy - This method retrieves the complete details of a fulfillment policy. Supply the ID of the policy you want to retrieve using the <b>fulfillmentPolicyId</b> path parameter.
 func (s *fulfillmentPolicy) GetFulfillmentPolicy(ctx context.Context, request operations.GetFulfillmentPolicyRequest, security operations.GetFulfillmentPolicySecurity) (*operations.GetFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +294,10 @@ func (s *fulfillmentPolicy) GetFulfillmentPolicyByName(ctx context.Context, requ
 // UpdateFulfillmentPolicy - This method updates an existing fulfillment policy. Specify the policy you want to update using the <b>fulfillment_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
 func (s *fulfillmentPolicy) UpdateFulfillmentPolicy(ctx context.Context, request operations.UpdateFulfillmentPolicyRequest, security operations.UpdateFulfillmentPolicySecurity) (*operations.UpdateFulfillmentPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/fulfillment_policy/{fulfillmentPolicyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FulfillmentPolicyRequest", "json")
 	if err != nil {

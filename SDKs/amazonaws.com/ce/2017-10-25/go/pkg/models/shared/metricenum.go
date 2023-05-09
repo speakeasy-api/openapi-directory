@@ -19,12 +19,16 @@ const (
 	MetricEnumNormalizedUsageAmount MetricEnum = "NORMALIZED_USAGE_AMOUNT"
 )
 
+func (e MetricEnum) ToPointer() *MetricEnum {
+	return &e
+}
+
 func (e *MetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLENDED_COST":
 		fallthrough
 	case "UNBLENDED_COST":
@@ -38,9 +42,9 @@ func (e *MetricEnum) UnmarshalJSON(data []byte) error {
 	case "USAGE_QUANTITY":
 		fallthrough
 	case "NORMALIZED_USAGE_AMOUNT":
-		*e = MetricEnum(s)
+		*e = MetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricEnum: %v", v)
 	}
 }

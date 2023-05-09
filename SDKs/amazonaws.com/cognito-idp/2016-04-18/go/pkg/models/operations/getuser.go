@@ -16,17 +16,21 @@ const (
 	GetUserXAmzTargetEnumAwsCognitoIdentityProviderServiceGetUser GetUserXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetUser"
 )
 
+func (e GetUserXAmzTargetEnum) ToPointer() *GetUserXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUserXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetUser":
-		*e = GetUserXAmzTargetEnum(s)
+		*e = GetUserXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserXAmzTargetEnum: %v", v)
 	}
 }
 

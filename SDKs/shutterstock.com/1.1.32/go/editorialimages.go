@@ -34,7 +34,9 @@ func newEditorialImages(defaultClient, securityClient HTTPClient, serverURL, lan
 
 // GetEditorialCategories - (Deprecated) List editorial categories
 // Deprecated; use `GET /v2/editorial/images/categories` instead. This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-func (s *editorialImages) GetEditorialCategories(ctx context.Context) (*operations.GetEditorialCategoriesResponse, error) {
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
+func (s *editorialImages) GetEditorialCategories(ctx context.Context, security operations.GetEditorialCategoriesSecurity) (*operations.GetEditorialCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/categories"
 
@@ -43,7 +45,7 @@ func (s *editorialImages) GetEditorialCategories(ctx context.Context) (*operatio
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -86,7 +88,10 @@ func (s *editorialImages) GetEditorialCategories(ctx context.Context) (*operatio
 // This endpoint shows information about an editorial image, including a URL to a preview image and the sizes that it is available in.
 func (s *editorialImages) GetEditorialImage(ctx context.Context, request operations.GetEditorialImageRequest, security operations.GetEditorialImageSecurity) (*operations.GetEditorialImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +200,10 @@ func (s *editorialImages) GetEditorialImageLicenseList(ctx context.Context, requ
 // GetEditorialImageLivefeed - Get editorial livefeed
 func (s *editorialImages) GetEditorialImageLivefeed(ctx context.Context, request operations.GetEditorialImageLivefeedRequest, security operations.GetEditorialImageLivefeedSecurity) (*operations.GetEditorialImageLivefeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -250,7 +258,10 @@ func (s *editorialImages) GetEditorialImageLivefeed(ctx context.Context, request
 // GetEditorialImageLivefeedItems - Get editorial livefeed items
 func (s *editorialImages) GetEditorialImageLivefeedItems(ctx context.Context, request operations.GetEditorialImageLivefeedItemsRequest, security operations.GetEditorialImageLivefeedItemsSecurity) (*operations.GetEditorialImageLivefeedItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/images/livefeeds/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -359,9 +370,14 @@ func (s *editorialImages) GetEditorialImageLivefeedList(ctx context.Context, req
 
 // GetEditorialLivefeed - (Deprecated) Get editorial livefeed
 // Deprecated: use `GET /v2/editorial/images/livefeeds/{id}` instead to get an editorial livefeed.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) GetEditorialLivefeed(ctx context.Context, request operations.GetEditorialLivefeedRequest, security operations.GetEditorialLivefeedSecurity) (*operations.GetEditorialLivefeedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -415,9 +431,14 @@ func (s *editorialImages) GetEditorialLivefeed(ctx context.Context, request oper
 
 // GetEditorialLivefeedItems - (Deprecated) Get editorial livefeed items
 // Deprecated; use `GET /v2/editorial/images/livefeeds/{id}/items` instead to get editorial livefeed items.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) GetEditorialLivefeedItems(ctx context.Context, request operations.GetEditorialLivefeedItemsRequest, security operations.GetEditorialLivefeedItemsSecurity) (*operations.GetEditorialLivefeedItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/livefeeds/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -471,6 +492,8 @@ func (s *editorialImages) GetEditorialLivefeedItems(ctx context.Context, request
 
 // GetEditorialLivefeedList - (Deprecated) Get editorial livefeed list
 // Deprecated; use `GET /v2/editorial/images/livefeeds` instead to get a list of editorial livefeeds.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request operations.GetEditorialLivefeedListRequest, security operations.GetEditorialLivefeedListSecurity) (*operations.GetEditorialLivefeedListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/livefeeds"
@@ -527,6 +550,8 @@ func (s *editorialImages) GetEditorialLivefeedList(ctx context.Context, request 
 
 // GetUpdatedEditorialImage - (Deprecated) List updated content
 // Deprecated; use `GET /v2/editorial/images/updated` instead to get recently updated items.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) GetUpdatedEditorialImage(ctx context.Context, request operations.GetUpdatedEditorialImageRequest, security operations.GetUpdatedEditorialImageSecurity) (*operations.GetUpdatedEditorialImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/updated"
@@ -639,9 +664,14 @@ func (s *editorialImages) GetUpdatedEditorialImages(ctx context.Context, request
 
 // GetV2EditorialID - (Deprecated) Get editorial content details
 // Deprecated; use `GET /v2/editorial/images/{id}` instead to show information about an editorial image, including a URL to a preview image and the sizes that it is available in.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) GetV2EditorialID(ctx context.Context, request operations.GetV2EditorialIDRequest, security operations.GetV2EditorialIDSecurity) (*operations.GetV2EditorialIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/editorial/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/editorial/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -695,6 +725,8 @@ func (s *editorialImages) GetV2EditorialID(ctx context.Context, request operatio
 
 // LicenseEditorialImage - (Deprecated) License editorial content
 // Deprecated; use `POST /v2/editorial/images/licenses` instead to get licenses for one or more editorial images. You must specify the country and one or more editorial images to license. The download links in the response are valid for 8 hours.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) LicenseEditorialImage(ctx context.Context, request shared.LicenseEditorialContentRequest, security operations.LicenseEditorialImageSecurity) (*operations.LicenseEditorialImageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/licenses"
@@ -819,7 +851,7 @@ func (s *editorialImages) LicenseEditorialImages(ctx context.Context, request sh
 
 // ListEditorialImageCategories - List editorial categories
 // This endpoint lists the categories that editorial images can belong to, which are separate from the categories that other types of assets can belong to.
-func (s *editorialImages) ListEditorialImageCategories(ctx context.Context) (*operations.ListEditorialImageCategoriesResponse, error) {
+func (s *editorialImages) ListEditorialImageCategories(ctx context.Context, security operations.ListEditorialImageCategoriesSecurity) (*operations.ListEditorialImageCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/images/categories"
 
@@ -828,7 +860,7 @@ func (s *editorialImages) ListEditorialImageCategories(ctx context.Context) (*op
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -869,6 +901,8 @@ func (s *editorialImages) ListEditorialImageCategories(ctx context.Context) (*op
 
 // SearchEditorial - (Deprecated) Search editorial content
 // Deprecated; use `GET /v2/editorial/images/search` instead to search for editorial images.
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *editorialImages) SearchEditorial(ctx context.Context, request operations.SearchEditorialRequest, security operations.SearchEditorialSecurity) (*operations.SearchEditorialResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/editorial/search"

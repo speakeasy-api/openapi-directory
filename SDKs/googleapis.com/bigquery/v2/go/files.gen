@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -151,6 +152,7 @@ pkg/models/shared/arimaforecastingmetrics.go
 pkg/models/shared/arimasinglemodelforecastingmetrics.go
 pkg/models/shared/arimafittingmetrics.go
 pkg/models/shared/datasplitresult.go
+pkg/models/shared/remotemodelinfo.go
 pkg/models/shared/standardsqlfield.go
 pkg/models/shared/standardsqldatatype.go
 pkg/models/shared/standardsqlstructtype.go
@@ -200,4 +202,13 @@ pkg/models/shared/tablelist.go
 pkg/models/shared/setiampolicyrequest.go
 pkg/models/shared/testiampermissionsresponse.go
 pkg/models/shared/testiampermissionsrequest.go
+docs/sdk/README.md
+docs/datasets/README.md
+docs/jobs/README.md
+docs/models/README.md
+docs/projects/README.md
+docs/routines/README.md
+docs/rowaccesspolicies/README.md
+docs/tabledata/README.md
+docs/tables/README.md
 USAGE.md

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,43 +16,41 @@ func main() {
         }),
     )
 
-    req := operations.GetAddressesOutputFormatRequest{
-        AddressString: "corrupti",
-        AutoComplete: false,
-        Bbox: "provident",
-        Brief: false,
-        Centre: "distinctio",
-        CivicNumber: "quibusdam",
-        CivicNumberSuffix: "unde",
-        Echo: false,
-        Extrapolate: false,
-        Interpolation: "none",
-        Localities: "corrupti",
-        LocalityName: "illum",
-        LocationDescriptor: "frontDoorPoint",
-        MatchPrecision: "error",
-        MatchPrecisionNot: "deserunt",
-        MaxDistance: 3843.82,
-        MaxResults: 437587,
-        MinScore: 297534,
-        NotLocalities: "debitis",
-        OutputFormat: "json",
-        OutputSRS: "26911",
-        ParcelPoint: "tempora",
-        ProvinceCode: "suscipit",
-        SetBack: 477665,
-        SiteName: "minus",
-        StreetDirection: "SE",
-        StreetName: "voluptatum",
-        StreetQualifier: "iusto",
-        StreetType: "excepturi",
-        UnitDesignator: "PAD",
-        UnitNumber: "recusandae",
-        UnitNumberSuffix: "temporibus",
-    }
-
     ctx := context.Background()
-    res, err := s.Intersections.GetAddressesOutputFormat(ctx, req)
+    res, err := s.Intersections.GetAddressesOutputFormat(ctx, operations.GetAddressesOutputFormatRequest{
+        AddressString: sdk.String("corrupti"),
+        AutoComplete: sdk.Bool(false),
+        Bbox: sdk.String("provident"),
+        Brief: sdk.Bool(false),
+        Centre: sdk.String("distinctio"),
+        CivicNumber: sdk.String("quibusdam"),
+        CivicNumberSuffix: sdk.String("unde"),
+        Echo: sdk.Bool(false),
+        Extrapolate: sdk.Bool(false),
+        Interpolation: operations.GetAddressesOutputFormatInterpolationEnumNone.ToPointer(),
+        Localities: sdk.String("corrupti"),
+        LocalityName: sdk.String("illum"),
+        LocationDescriptor: operations.GetAddressesOutputFormatLocationDescriptorEnumFrontDoorPoint.ToPointer(),
+        MatchPrecision: sdk.String("error"),
+        MatchPrecisionNot: sdk.String("deserunt"),
+        MaxDistance: sdk.Float64(3843.82),
+        MaxResults: sdk.Int64(437587),
+        MinScore: sdk.Int64(297534),
+        NotLocalities: sdk.String("debitis"),
+        OutputFormat: operations.GetAddressesOutputFormatOutputFormatEnumJSON,
+        OutputSRS: operations.GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven.ToPointer(),
+        ParcelPoint: sdk.String("tempora"),
+        ProvinceCode: sdk.String("suscipit"),
+        SetBack: sdk.Int64(477665),
+        SiteName: sdk.String("minus"),
+        StreetDirection: operations.GetAddressesOutputFormatStreetDirectionEnumSe.ToPointer(),
+        StreetName: sdk.String("voluptatum"),
+        StreetQualifier: sdk.String("iusto"),
+        StreetType: sdk.String("excepturi"),
+        UnitDesignator: operations.GetAddressesOutputFormatUnitDesignatorEnumPad.ToPointer(),
+        UnitNumber: sdk.String("recusandae"),
+        UnitNumberSuffix: sdk.String("temporibus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

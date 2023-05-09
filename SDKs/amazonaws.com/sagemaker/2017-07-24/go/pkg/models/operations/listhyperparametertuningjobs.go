@@ -16,17 +16,21 @@ const (
 	ListHyperParameterTuningJobsXAmzTargetEnumSageMakerListHyperParameterTuningJobs ListHyperParameterTuningJobsXAmzTargetEnum = "SageMaker.ListHyperParameterTuningJobs"
 )
 
+func (e ListHyperParameterTuningJobsXAmzTargetEnum) ToPointer() *ListHyperParameterTuningJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListHyperParameterTuningJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListHyperParameterTuningJobs":
-		*e = ListHyperParameterTuningJobsXAmzTargetEnum(s)
+		*e = ListHyperParameterTuningJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHyperParameterTuningJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHyperParameterTuningJobsXAmzTargetEnum: %v", v)
 	}
 }
 

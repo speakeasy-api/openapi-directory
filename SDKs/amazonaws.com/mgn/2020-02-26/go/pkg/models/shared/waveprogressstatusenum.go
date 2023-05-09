@@ -15,20 +15,24 @@ const (
 	WaveProgressStatusEnumCompleted  WaveProgressStatusEnum = "COMPLETED"
 )
 
+func (e WaveProgressStatusEnum) ToPointer() *WaveProgressStatusEnum {
+	return &e
+}
+
 func (e *WaveProgressStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
-		*e = WaveProgressStatusEnum(s)
+		*e = WaveProgressStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WaveProgressStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WaveProgressStatusEnum: %v", v)
 	}
 }

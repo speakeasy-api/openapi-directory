@@ -15,17 +15,21 @@ const (
 	POSTUpdateJobActionEnumUpdateJob POSTUpdateJobActionEnum = "UpdateJob"
 )
 
+func (e POSTUpdateJobActionEnum) ToPointer() *POSTUpdateJobActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateJobActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateJob":
-		*e = POSTUpdateJobActionEnum(s)
+		*e = POSTUpdateJobActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateJobActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateJobActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateJobOperationEnumUpdateJob POSTUpdateJobOperationEnum = "UpdateJob"
 )
 
+func (e POSTUpdateJobOperationEnum) ToPointer() *POSTUpdateJobOperationEnum {
+	return &e
+}
+
 func (e *POSTUpdateJobOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateJob":
-		*e = POSTUpdateJobOperationEnum(s)
+		*e = POSTUpdateJobOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateJobOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateJobOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	POSTUpdateJobVersionEnumTwoThousandAndTen0601 POSTUpdateJobVersionEnum = "2010-06-01"
 )
 
+func (e POSTUpdateJobVersionEnum) ToPointer() *POSTUpdateJobVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateJobVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = POSTUpdateJobVersionEnum(s)
+		*e = POSTUpdateJobVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateJobVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateJobVersionEnum: %v", v)
 	}
 }
 

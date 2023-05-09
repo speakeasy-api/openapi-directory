@@ -16,21 +16,25 @@ const (
 	NetworkingConfigConnectionTypeEnumPrivateServiceConnect     NetworkingConfigConnectionTypeEnum = "PRIVATE_SERVICE_CONNECT"
 )
 
+func (e NetworkingConfigConnectionTypeEnum) ToPointer() *NetworkingConfigConnectionTypeEnum {
+	return &e
+}
+
 func (e *NetworkingConfigConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "VPC_PEERING":
 		fallthrough
 	case "PRIVATE_SERVICE_CONNECT":
-		*e = NetworkingConfigConnectionTypeEnum(s)
+		*e = NetworkingConfigConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkingConfigConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkingConfigConnectionTypeEnum: %v", v)
 	}
 }
 

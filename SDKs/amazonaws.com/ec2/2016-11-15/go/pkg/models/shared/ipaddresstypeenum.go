@@ -15,20 +15,24 @@ const (
 	IPAddressTypeEnumIpv6      IPAddressTypeEnum = "ipv6"
 )
 
+func (e IPAddressTypeEnum) ToPointer() *IPAddressTypeEnum {
+	return &e
+}
+
 func (e *IPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
 		fallthrough
 	case "ipv6":
-		*e = IPAddressTypeEnum(s)
+		*e = IPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for IPAddressTypeEnum: %v", v)
 	}
 }

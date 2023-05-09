@@ -16,17 +16,21 @@ const (
 	DeleteOpsMetadataXAmzTargetEnumAmazonSsmDeleteOpsMetadata DeleteOpsMetadataXAmzTargetEnum = "AmazonSSM.DeleteOpsMetadata"
 )
 
+func (e DeleteOpsMetadataXAmzTargetEnum) ToPointer() *DeleteOpsMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteOpsMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeleteOpsMetadata":
-		*e = DeleteOpsMetadataXAmzTargetEnum(s)
+		*e = DeleteOpsMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteOpsMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteOpsMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

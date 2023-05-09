@@ -13,16 +13,20 @@ const (
 	IntentFilterNameEnumIntentName IntentFilterNameEnum = "IntentName"
 )
 
+func (e IntentFilterNameEnum) ToPointer() *IntentFilterNameEnum {
+	return &e
+}
+
 func (e *IntentFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IntentName":
-		*e = IntentFilterNameEnum(s)
+		*e = IntentFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntentFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for IntentFilterNameEnum: %v", v)
 	}
 }

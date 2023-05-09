@@ -15,20 +15,24 @@ const (
 	DataLocationConstraintEnumSameCountry   DataLocationConstraintEnum = "SameCountry"
 )
 
+func (e DataLocationConstraintEnum) ToPointer() *DataLocationConstraintEnum {
+	return &e
+}
+
 func (e *DataLocationConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyLocation":
 		fallthrough
 	case "SameContinent":
 		fallthrough
 	case "SameCountry":
-		*e = DataLocationConstraintEnum(s)
+		*e = DataLocationConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataLocationConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for DataLocationConstraintEnum: %v", v)
 	}
 }

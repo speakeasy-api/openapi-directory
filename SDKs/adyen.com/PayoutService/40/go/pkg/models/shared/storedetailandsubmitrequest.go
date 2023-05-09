@@ -5,7 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
-	"time"
+	"openapi/pkg/types"
 )
 
 // StoreDetailAndSubmitRequestEntityTypeEnum - The type of the entity the payout is processed for.
@@ -16,19 +16,23 @@ const (
 	StoreDetailAndSubmitRequestEntityTypeEnumCompany       StoreDetailAndSubmitRequestEntityTypeEnum = "Company"
 )
 
+func (e StoreDetailAndSubmitRequestEntityTypeEnum) ToPointer() *StoreDetailAndSubmitRequestEntityTypeEnum {
+	return &e
+}
+
 func (e *StoreDetailAndSubmitRequestEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NaturalPerson":
 		fallthrough
 	case "Company":
-		*e = StoreDetailAndSubmitRequestEntityTypeEnum(s)
+		*e = StoreDetailAndSubmitRequestEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreDetailAndSubmitRequestEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreDetailAndSubmitRequestEntityTypeEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type StoreDetailAndSubmitRequest struct {
 	// Format: [ISO-8601](https://www.w3.org/TR/NOTE-datetime); example: YYYY-MM-DD
 	// For Paysafecard it must be the same as used when registering the Paysafecard account.
 	// > This field is mandatory for natural persons.
-	DateOfBirth time.Time `json:"dateOfBirth"`
+	DateOfBirth types.Date `json:"dateOfBirth"`
 	// The type of the entity the payout is processed for.
 	EntityType StoreDetailAndSubmitRequestEntityTypeEnum `json:"entityType"`
 	// An integer value that is added to the normal fraud score. The value can be either positive or negative.

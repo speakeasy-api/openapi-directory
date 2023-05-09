@@ -20,12 +20,16 @@ const (
 	VersionStatusEnumCloning                  VersionStatusEnum = "CLONING"
 )
 
+func (e VersionStatusEnum) ToPointer() *VersionStatusEnum {
+	return &e
+}
+
 func (e *VersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERSION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -39,10 +43,10 @@ func (e *VersionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPIRED":
 		fallthrough
 	case "CLONING":
-		*e = VersionStatusEnum(s)
+		*e = VersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionStatusEnum: %v", v)
 	}
 }
 

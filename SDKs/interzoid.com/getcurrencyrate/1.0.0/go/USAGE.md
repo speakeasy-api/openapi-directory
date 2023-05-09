@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcurrencyrateRequest{
+    ctx := context.Background()
+    res, err := s.CurrencyRates.Getcurrencyrate(ctx, operations.GetcurrencyrateRequest{
         License: "corrupti",
         Symbol: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CurrencyRates.Getcurrencyrate(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

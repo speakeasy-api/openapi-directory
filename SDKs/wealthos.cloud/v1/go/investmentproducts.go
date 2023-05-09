@@ -240,7 +240,10 @@ func (s *investmentProducts) GetConfiguredInvestmentProducts(ctx context.Context
 // Returns the requested investment product
 func (s *investmentProducts) GetInvestmentProduct(ctx context.Context, request operations.GetInvestmentProductRequest, security operations.GetInvestmentProductSecurity) (*operations.GetInvestmentProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +340,10 @@ func (s *investmentProducts) GetInvestmentProduct(ctx context.Context, request o
 // Returns current price of the requested investment product
 func (s *investmentProducts) GetInvestmentProductPrice(ctx context.Context, request operations.GetInvestmentProductPriceRequest, security operations.GetInvestmentProductPriceSecurity) (*operations.GetInvestmentProductPriceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/investment-products/v1/{category_id}/{investment_product_id}/getCurrentPrice", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -20,12 +20,16 @@ const (
 	PublicSubscriptionStatusLegalBasisEnumLegitimateInterestOther  PublicSubscriptionStatusLegalBasisEnum = "LEGITIMATE_INTEREST_OTHER"
 )
 
+func (e PublicSubscriptionStatusLegalBasisEnum) ToPointer() *PublicSubscriptionStatusLegalBasisEnum {
+	return &e
+}
+
 func (e *PublicSubscriptionStatusLegalBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEGITIMATE_INTEREST_PQL":
 		fallthrough
 	case "LEGITIMATE_INTEREST_CLIENT":
@@ -39,10 +43,10 @@ func (e *PublicSubscriptionStatusLegalBasisEnum) UnmarshalJSON(data []byte) erro
 	case "PROCESS_AND_STORE":
 		fallthrough
 	case "LEGITIMATE_INTEREST_OTHER":
-		*e = PublicSubscriptionStatusLegalBasisEnum(s)
+		*e = PublicSubscriptionStatusLegalBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicSubscriptionStatusLegalBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicSubscriptionStatusLegalBasisEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	PublicSubscriptionStatusSourceOfStatusEnumSubscriptionStatus PublicSubscriptionStatusSourceOfStatusEnum = "SUBSCRIPTION_STATUS"
 )
 
+func (e PublicSubscriptionStatusSourceOfStatusEnum) ToPointer() *PublicSubscriptionStatusSourceOfStatusEnum {
+	return &e
+}
+
 func (e *PublicSubscriptionStatusSourceOfStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PORTAL_WIDE_STATUS":
 		fallthrough
 	case "BRAND_WIDE_STATUS":
 		fallthrough
 	case "SUBSCRIPTION_STATUS":
-		*e = PublicSubscriptionStatusSourceOfStatusEnum(s)
+		*e = PublicSubscriptionStatusSourceOfStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicSubscriptionStatusSourceOfStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicSubscriptionStatusSourceOfStatusEnum: %v", v)
 	}
 }
 
@@ -81,19 +89,23 @@ const (
 	PublicSubscriptionStatusStatusEnumNotSubscribed PublicSubscriptionStatusStatusEnum = "NOT_SUBSCRIBED"
 )
 
+func (e PublicSubscriptionStatusStatusEnum) ToPointer() *PublicSubscriptionStatusStatusEnum {
+	return &e
+}
+
 func (e *PublicSubscriptionStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBSCRIBED":
 		fallthrough
 	case "NOT_SUBSCRIBED":
-		*e = PublicSubscriptionStatusStatusEnum(s)
+		*e = PublicSubscriptionStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicSubscriptionStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicSubscriptionStatusStatusEnum: %v", v)
 	}
 }
 

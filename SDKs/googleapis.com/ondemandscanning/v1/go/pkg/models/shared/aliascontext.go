@@ -17,12 +17,16 @@ const (
 	AliasContextKindEnumOther           AliasContextKindEnum = "OTHER"
 )
 
+func (e AliasContextKindEnum) ToPointer() *AliasContextKindEnum {
+	return &e
+}
+
 func (e *AliasContextKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KIND_UNSPECIFIED":
 		fallthrough
 	case "FIXED":
@@ -30,10 +34,10 @@ func (e *AliasContextKindEnum) UnmarshalJSON(data []byte) error {
 	case "MOVABLE":
 		fallthrough
 	case "OTHER":
-		*e = AliasContextKindEnum(s)
+		*e = AliasContextKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AliasContextKindEnum: %s", s)
+		return fmt.Errorf("invalid value for AliasContextKindEnum: %v", v)
 	}
 }
 

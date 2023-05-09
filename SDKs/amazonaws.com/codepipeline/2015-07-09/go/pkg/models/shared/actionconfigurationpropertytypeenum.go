@@ -15,20 +15,24 @@ const (
 	ActionConfigurationPropertyTypeEnumBoolean ActionConfigurationPropertyTypeEnum = "Boolean"
 )
 
+func (e ActionConfigurationPropertyTypeEnum) ToPointer() *ActionConfigurationPropertyTypeEnum {
+	return &e
+}
+
 func (e *ActionConfigurationPropertyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "String":
 		fallthrough
 	case "Number":
 		fallthrough
 	case "Boolean":
-		*e = ActionConfigurationPropertyTypeEnum(s)
+		*e = ActionConfigurationPropertyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionConfigurationPropertyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionConfigurationPropertyTypeEnum: %v", v)
 	}
 }

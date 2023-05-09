@@ -23,12 +23,16 @@ const (
 	ErrorValueTypeEnumLoading              ErrorValueTypeEnum = "LOADING"
 )
 
+func (e ErrorValueTypeEnum) ToPointer() *ErrorValueTypeEnum {
+	return &e
+}
+
 func (e *ErrorValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ERROR":
@@ -48,10 +52,10 @@ func (e *ErrorValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "N_A":
 		fallthrough
 	case "LOADING":
-		*e = ErrorValueTypeEnum(s)
+		*e = ErrorValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorValueTypeEnum: %v", v)
 	}
 }
 

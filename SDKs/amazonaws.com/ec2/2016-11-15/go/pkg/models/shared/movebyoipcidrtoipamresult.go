@@ -21,12 +21,16 @@ const (
 	MoveByoipCidrToIpamResultByoipCidrStateEnumProvisionedNotPubliclyAdvertisable MoveByoipCidrToIpamResultByoipCidrStateEnum = "provisioned-not-publicly-advertisable"
 )
 
+func (e MoveByoipCidrToIpamResultByoipCidrStateEnum) ToPointer() *MoveByoipCidrToIpamResultByoipCidrStateEnum {
+	return &e
+}
+
 func (e *MoveByoipCidrToIpamResultByoipCidrStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "advertised":
 		fallthrough
 	case "deprovisioned":
@@ -42,10 +46,10 @@ func (e *MoveByoipCidrToIpamResultByoipCidrStateEnum) UnmarshalJSON(data []byte)
 	case "provisioned":
 		fallthrough
 	case "provisioned-not-publicly-advertisable":
-		*e = MoveByoipCidrToIpamResultByoipCidrStateEnum(s)
+		*e = MoveByoipCidrToIpamResultByoipCidrStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MoveByoipCidrToIpamResultByoipCidrStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MoveByoipCidrToIpamResultByoipCidrStateEnum: %v", v)
 	}
 }
 

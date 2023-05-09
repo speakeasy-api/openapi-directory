@@ -36,7 +36,10 @@ func newSDKKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // This endpoint returns the SDK Key for your Config in a specified Environment.
 func (s *sdkKeys) GetSDKKeys(ctx context.Context, request operations.GetSDKKeysRequest) (*operations.GetSDKKeysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/configs/{configId}/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

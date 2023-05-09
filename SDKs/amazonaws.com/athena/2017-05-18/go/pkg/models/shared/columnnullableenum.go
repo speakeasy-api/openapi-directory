@@ -15,20 +15,24 @@ const (
 	ColumnNullableEnumUnknown  ColumnNullableEnum = "UNKNOWN"
 )
 
+func (e ColumnNullableEnum) ToPointer() *ColumnNullableEnum {
+	return &e
+}
+
 func (e *ColumnNullableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_NULL":
 		fallthrough
 	case "NULLABLE":
 		fallthrough
 	case "UNKNOWN":
-		*e = ColumnNullableEnum(s)
+		*e = ColumnNullableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ColumnNullableEnum: %s", s)
+		return fmt.Errorf("invalid value for ColumnNullableEnum: %v", v)
 	}
 }

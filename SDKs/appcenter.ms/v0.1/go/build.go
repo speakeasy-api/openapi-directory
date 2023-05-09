@@ -34,7 +34,10 @@ func newBuild(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BranchConfigurationsCreate - Configures the branch for build
 func (s *build) BranchConfigurationsCreate(ctx context.Context, request operations.BranchConfigurationsCreateRequest, security operations.BranchConfigurationsCreateSecurity) (*operations.BranchConfigurationsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -88,7 +91,10 @@ func (s *build) BranchConfigurationsCreate(ctx context.Context, request operatio
 // BranchConfigurationsDelete - Deletes the branch build configuration
 func (s *build) BranchConfigurationsDelete(ctx context.Context, request operations.BranchConfigurationsDeleteRequest, security operations.BranchConfigurationsDeleteSecurity) (*operations.BranchConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -139,7 +145,10 @@ func (s *build) BranchConfigurationsDelete(ctx context.Context, request operatio
 // BranchConfigurationsGet - Gets the branch configuration
 func (s *build) BranchConfigurationsGet(ctx context.Context, request operations.BranchConfigurationsGetRequest, security operations.BranchConfigurationsGetSecurity) (*operations.BranchConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *build) BranchConfigurationsGet(ctx context.Context, request operations.
 // BranchConfigurationsUpdate - Reconfigures the branch for build
 func (s *build) BranchConfigurationsUpdate(ctx context.Context, request operations.BranchConfigurationsUpdateRequest, security operations.BranchConfigurationsUpdateSecurity) (*operations.BranchConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *build) BranchConfigurationsUpdate(ctx context.Context, request operatio
 // BuildConfigurationsGet - Gets the build configuration in Azure pipeline YAML format
 func (s *build) BuildConfigurationsGet(ctx context.Context, request operations.BuildConfigurationsGetRequest, security operations.BuildConfigurationsGetSecurity) (*operations.BuildConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/export_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/export_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -305,7 +320,10 @@ func (s *build) BuildConfigurationsGet(ctx context.Context, request operations.B
 // BuildsCreate - Create a build
 func (s *build) BuildsCreate(ctx context.Context, request operations.BuildsCreateRequest, security operations.BuildsCreateSecurity) (*operations.BuildsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/builds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/builds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -356,7 +374,10 @@ func (s *build) BuildsCreate(ctx context.Context, request operations.BuildsCreat
 // BuildsDistribute - Distribute a build
 func (s *build) BuildsDistribute(ctx context.Context, request operations.BuildsDistributeRequest, security operations.BuildsDistributeSecurity) (*operations.BuildsDistributeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/distribute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/distribute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -410,7 +431,10 @@ func (s *build) BuildsDistribute(ctx context.Context, request operations.BuildsD
 // BuildsGet - Returns the build detail for the given build ID
 func (s *build) BuildsGet(ctx context.Context, request operations.BuildsGetRequest, security operations.BuildsGetSecurity) (*operations.BuildsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *build) BuildsGet(ctx context.Context, request operations.BuildsGetReque
 // BuildsGetDownloadURI - Gets the download URI
 func (s *build) BuildsGetDownloadURI(ctx context.Context, request operations.BuildsGetDownloadURIRequest, security operations.BuildsGetDownloadURISecurity) (*operations.BuildsGetDownloadURIResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/downloads/{download_type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/downloads/{download_type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -498,7 +525,10 @@ func (s *build) BuildsGetDownloadURI(ctx context.Context, request operations.Bui
 // BuildsGetLog - Get the build log
 func (s *build) BuildsGetLog(ctx context.Context, request operations.BuildsGetLogRequest, security operations.BuildsGetLogSecurity) (*operations.BuildsGetLogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *build) BuildsGetLog(ctx context.Context, request operations.BuildsGetLo
 // BuildsGetStatusByAppID - Application specific build service status
 func (s *build) BuildsGetStatusByAppID(ctx context.Context, request operations.BuildsGetStatusByAppIDRequest, security operations.BuildsGetStatusByAppIDSecurity) (*operations.BuildsGetStatusByAppIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/build_service_status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/build_service_status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +620,10 @@ func (s *build) BuildsGetStatusByAppID(ctx context.Context, request operations.B
 // BuildsListBranches - Returns the list of Git branches for this application
 func (s *build) BuildsListBranches(ctx context.Context, request operations.BuildsListBranchesRequest, security operations.BuildsListBranchesSecurity) (*operations.BuildsListBranchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -641,7 +677,10 @@ func (s *build) BuildsListBranches(ctx context.Context, request operations.Build
 // BuildsListByBranch - Returns the list of builds for the branch
 func (s *build) BuildsListByBranch(ctx context.Context, request operations.BuildsListByBranchRequest, security operations.BuildsListByBranchSecurity) (*operations.BuildsListByBranchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/builds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/builds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -685,7 +724,10 @@ func (s *build) BuildsListByBranch(ctx context.Context, request operations.Build
 // BuildsListToolsetProjects - Returns the projects in the repository for the branch, for all toolsets
 func (s *build) BuildsListToolsetProjects(ctx context.Context, request operations.BuildsListToolsetProjectsRequest, security operations.BuildsListToolsetProjectsSecurity) (*operations.BuildsListToolsetProjectsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/toolset_projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/branches/{branch}/toolset_projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -733,7 +775,10 @@ func (s *build) BuildsListToolsetProjects(ctx context.Context, request operation
 // BuildsListToolsets - Returns available toolsets for application
 func (s *build) BuildsListToolsets(ctx context.Context, request operations.BuildsListToolsetsRequest, security operations.BuildsListToolsetsSecurity) (*operations.BuildsListToolsetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/toolsets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/toolsets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -789,9 +834,14 @@ func (s *build) BuildsListToolsets(ctx context.Context, request operations.Build
 }
 
 // BuildsListXamarinSDKBundles - Gets the Xamarin SDK bundles available to this app
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *build) BuildsListXamarinSDKBundles(ctx context.Context, request operations.BuildsListXamarinSDKBundlesRequest, security operations.BuildsListXamarinSDKBundlesSecurity) (*operations.BuildsListXamarinSDKBundlesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/xamarin_sdk_bundles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/xamarin_sdk_bundles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -843,9 +893,14 @@ func (s *build) BuildsListXamarinSDKBundles(ctx context.Context, request operati
 }
 
 // BuildsListXcodeVersions - Gets the Xcode versions available to this app
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *build) BuildsListXcodeVersions(ctx context.Context, request operations.BuildsListXcodeVersionsRequest, security operations.BuildsListXcodeVersionsSecurity) (*operations.BuildsListXcodeVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/xcode_versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/xcode_versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -899,7 +954,10 @@ func (s *build) BuildsListXcodeVersions(ctx context.Context, request operations.
 // BuildsUpdate - Cancels a build
 func (s *build) BuildsUpdate(ctx context.Context, request operations.BuildsUpdateRequest, security operations.BuildsUpdateSecurity) (*operations.BuildsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/builds/{build_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1005,7 +1063,10 @@ func (s *build) BuildsWebhook(ctx context.Context, request map[string]interface{
 // CommitsListByShaList - Returns commit information for a batch of shas
 func (s *build) CommitsListByShaList(ctx context.Context, request operations.CommitsListByShaListRequest, security operations.CommitsListByShaListSecurity) (*operations.CommitsListByShaListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/commits/batch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/commits/batch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1053,7 +1114,10 @@ func (s *build) CommitsListByShaList(ctx context.Context, request operations.Com
 // FileAssetsCreate - Create a new asset to upload a file
 func (s *build) FileAssetsCreate(ctx context.Context, request operations.FileAssetsCreateRequest, security operations.FileAssetsCreateSecurity) (*operations.FileAssetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/file_asset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/file_asset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1114,7 +1178,10 @@ func (s *build) FileAssetsCreate(ctx context.Context, request operations.FileAss
 // RepositoriesList - Gets the repositories available from the source code host
 func (s *build) RepositoriesList(ctx context.Context, request operations.RepositoriesListRequest, security operations.RepositoriesListSecurity) (*operations.RepositoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/source_hosts/{source_host}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/source_hosts/{source_host}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1172,7 +1239,10 @@ func (s *build) RepositoriesList(ctx context.Context, request operations.Reposit
 // RepositoryConfigurationsCreateOrUpdate - Configures the repository for build
 func (s *build) RepositoryConfigurationsCreateOrUpdate(ctx context.Context, request operations.RepositoryConfigurationsCreateOrUpdateRequest, security operations.RepositoryConfigurationsCreateOrUpdateSecurity) (*operations.RepositoryConfigurationsCreateOrUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1236,7 +1306,10 @@ func (s *build) RepositoryConfigurationsCreateOrUpdate(ctx context.Context, requ
 // RepositoryConfigurationsDelete - Removes the configuration for the repository
 func (s *build) RepositoryConfigurationsDelete(ctx context.Context, request operations.RepositoryConfigurationsDeleteRequest, security operations.RepositoryConfigurationsDeleteSecurity) (*operations.RepositoryConfigurationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1290,7 +1363,10 @@ func (s *build) RepositoryConfigurationsDelete(ctx context.Context, request oper
 // RepositoryConfigurationsList - Returns the repository build configuration status of the app
 func (s *build) RepositoryConfigurationsList(ctx context.Context, request operations.RepositoryConfigurationsListRequest, security operations.RepositoryConfigurationsListSecurity) (*operations.RepositoryConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0.1/apps/{owner_name}/{app_name}/repo_config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

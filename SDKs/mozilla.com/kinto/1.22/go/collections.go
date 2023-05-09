@@ -32,7 +32,10 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 
 func (s *collections) GetCollection(ctx context.Context, request operations.GetCollectionRequest) (*operations.GetCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,9 +108,13 @@ func (s *collections) GetCollection(ctx context.Context, request operations.GetC
 
 	return res, nil
 }
+
 func (s *collections) GetCollections(ctx context.Context, request operations.GetCollectionsRequest) (*operations.GetCollectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/buckets/{bucket_id}/collections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

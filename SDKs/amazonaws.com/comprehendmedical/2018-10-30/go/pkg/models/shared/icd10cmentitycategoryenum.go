@@ -13,16 +13,20 @@ const (
 	Icd10CMEntityCategoryEnumMedicalCondition Icd10CMEntityCategoryEnum = "MEDICAL_CONDITION"
 )
 
+func (e Icd10CMEntityCategoryEnum) ToPointer() *Icd10CMEntityCategoryEnum {
+	return &e
+}
+
 func (e *Icd10CMEntityCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDICAL_CONDITION":
-		*e = Icd10CMEntityCategoryEnum(s)
+		*e = Icd10CMEntityCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Icd10CMEntityCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for Icd10CMEntityCategoryEnum: %v", v)
 	}
 }

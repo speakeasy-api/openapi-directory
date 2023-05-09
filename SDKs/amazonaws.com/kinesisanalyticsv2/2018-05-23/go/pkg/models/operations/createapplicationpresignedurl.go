@@ -16,17 +16,21 @@ const (
 	CreateApplicationPresignedURLXAmzTargetEnumKinesisAnalytics20180523CreateApplicationPresignedURL CreateApplicationPresignedURLXAmzTargetEnum = "KinesisAnalytics_20180523.CreateApplicationPresignedUrl"
 )
 
+func (e CreateApplicationPresignedURLXAmzTargetEnum) ToPointer() *CreateApplicationPresignedURLXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateApplicationPresignedURLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20180523.CreateApplicationPresignedUrl":
-		*e = CreateApplicationPresignedURLXAmzTargetEnum(s)
+		*e = CreateApplicationPresignedURLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateApplicationPresignedURLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateApplicationPresignedURLXAmzTargetEnum: %v", v)
 	}
 }
 

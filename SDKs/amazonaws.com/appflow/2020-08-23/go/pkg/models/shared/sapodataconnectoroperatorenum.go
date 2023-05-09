@@ -33,12 +33,16 @@ const (
 	SAPODataConnectorOperatorEnumNoOp                 SAPODataConnectorOperatorEnum = "NO_OP"
 )
 
+func (e SAPODataConnectorOperatorEnum) ToPointer() *SAPODataConnectorOperatorEnum {
+	return &e
+}
+
 func (e *SAPODataConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "LESS_THAN":
@@ -80,9 +84,9 @@ func (e *SAPODataConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = SAPODataConnectorOperatorEnum(s)
+		*e = SAPODataConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SAPODataConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for SAPODataConnectorOperatorEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	CreateFlowTemplateXAmzTargetEnumIotThingsGraphFrontEndServiceCreateFlowTemplate CreateFlowTemplateXAmzTargetEnum = "IotThingsGraphFrontEndService.CreateFlowTemplate"
 )
 
+func (e CreateFlowTemplateXAmzTargetEnum) ToPointer() *CreateFlowTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateFlowTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.CreateFlowTemplate":
-		*e = CreateFlowTemplateXAmzTargetEnum(s)
+		*e = CreateFlowTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFlowTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFlowTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

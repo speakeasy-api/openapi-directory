@@ -32,21 +32,25 @@ const (
 	ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnumLimitDecreasePercentageTooHigh ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum = "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH"
 )
 
+func (e ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum) ToPointer() *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum {
+	return &e
+}
+
 func (e *ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUOTA_SAFETY_CHECK_UNSPECIFIED":
 		fallthrough
 	case "LIMIT_DECREASE_BELOW_USAGE":
 		fallthrough
 	case "LIMIT_DECREASE_PERCENTAGE_TOO_HIGH":
-		*e = ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum(s)
+		*e = ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceusageServicesConsumerQuotaMetricsLimitsConsumerOverridesDeleteForceOnlyEnum: %v", v)
 	}
 }
 

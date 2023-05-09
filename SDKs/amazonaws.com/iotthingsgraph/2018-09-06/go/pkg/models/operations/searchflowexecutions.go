@@ -16,17 +16,21 @@ const (
 	SearchFlowExecutionsXAmzTargetEnumIotThingsGraphFrontEndServiceSearchFlowExecutions SearchFlowExecutionsXAmzTargetEnum = "IotThingsGraphFrontEndService.SearchFlowExecutions"
 )
 
+func (e SearchFlowExecutionsXAmzTargetEnum) ToPointer() *SearchFlowExecutionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchFlowExecutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.SearchFlowExecutions":
-		*e = SearchFlowExecutionsXAmzTargetEnum(s)
+		*e = SearchFlowExecutionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchFlowExecutionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchFlowExecutionsXAmzTargetEnum: %v", v)
 	}
 }
 

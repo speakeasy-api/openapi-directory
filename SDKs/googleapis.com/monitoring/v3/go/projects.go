@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MonitoringProjectsAlertPoliciesCreate - Creates a new alerting policy.Design your application to single-thread API calls that modify the state of alerting policies in a single project. This includes calls to CreateAlertPolicy, DeleteAlertPolicy and UpdateAlertPolicy.
 func (s *projects) MonitoringProjectsAlertPoliciesCreate(ctx context.Context, request operations.MonitoringProjectsAlertPoliciesCreateRequest, security operations.MonitoringProjectsAlertPoliciesCreateSecurity) (*operations.MonitoringProjectsAlertPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/alertPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/alertPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AlertPolicy", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) MonitoringProjectsAlertPoliciesCreate(ctx context.Context, re
 // MonitoringProjectsAlertPoliciesList - Lists the existing alerting policies for the workspace.
 func (s *projects) MonitoringProjectsAlertPoliciesList(ctx context.Context, request operations.MonitoringProjectsAlertPoliciesListRequest, security operations.MonitoringProjectsAlertPoliciesListSecurity) (*operations.MonitoringProjectsAlertPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/alertPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/alertPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) MonitoringProjectsAlertPoliciesList(ctx context.Context, requ
 // MonitoringProjectsCollectdTimeSeriesCreate - Cloud Monitoring Agent only: Creates a new time series.This method is only for use by the Cloud Monitoring Agent. Use projects.timeSeries.create instead.
 func (s *projects) MonitoringProjectsCollectdTimeSeriesCreate(ctx context.Context, request operations.MonitoringProjectsCollectdTimeSeriesCreateRequest, security operations.MonitoringProjectsCollectdTimeSeriesCreateSecurity) (*operations.MonitoringProjectsCollectdTimeSeriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/collectdTimeSeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/collectdTimeSeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCollectdTimeSeriesRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) MonitoringProjectsCollectdTimeSeriesCreate(ctx context.Contex
 // MonitoringProjectsGroupsCreate - Creates a new group.
 func (s *projects) MonitoringProjectsGroupsCreate(ctx context.Context, request operations.MonitoringProjectsGroupsCreateRequest, security operations.MonitoringProjectsGroupsCreateSecurity) (*operations.MonitoringProjectsGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) MonitoringProjectsGroupsCreate(ctx context.Context, request o
 // MonitoringProjectsGroupsList - Lists the existing groups.
 func (s *projects) MonitoringProjectsGroupsList(ctx context.Context, request operations.MonitoringProjectsGroupsListRequest, security operations.MonitoringProjectsGroupsListSecurity) (*operations.MonitoringProjectsGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) MonitoringProjectsGroupsList(ctx context.Context, request ope
 // MonitoringProjectsGroupsMembersList - Lists the monitored resources that are members of a group.
 func (s *projects) MonitoringProjectsGroupsMembersList(ctx context.Context, request operations.MonitoringProjectsGroupsMembersListRequest, security operations.MonitoringProjectsGroupsMembersListSecurity) (*operations.MonitoringProjectsGroupsMembersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) MonitoringProjectsGroupsMembersList(ctx context.Context, requ
 // MonitoringProjectsGroupsUpdate - Updates an existing group. You can change any group attributes except name.
 func (s *projects) MonitoringProjectsGroupsUpdate(ctx context.Context, request operations.MonitoringProjectsGroupsUpdateRequest, security operations.MonitoringProjectsGroupsUpdateSecurity) (*operations.MonitoringProjectsGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) MonitoringProjectsGroupsUpdate(ctx context.Context, request o
 // MonitoringProjectsMetricDescriptorsCreate - Creates a new metric descriptor. The creation is executed asynchronously. User-created metric descriptors define custom metrics (https://cloud.google.com/monitoring/custom-metrics). The metric descriptor is updated if it already exists, except that metric labels are never removed.
 func (s *projects) MonitoringProjectsMetricDescriptorsCreate(ctx context.Context, request operations.MonitoringProjectsMetricDescriptorsCreateRequest, security operations.MonitoringProjectsMetricDescriptorsCreateSecurity) (*operations.MonitoringProjectsMetricDescriptorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/metricDescriptors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/metricDescriptors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MetricDescriptor", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) MonitoringProjectsMetricDescriptorsCreate(ctx context.Context
 // MonitoringProjectsMetricDescriptorsList - Lists metric descriptors that match a filter.
 func (s *projects) MonitoringProjectsMetricDescriptorsList(ctx context.Context, request operations.MonitoringProjectsMetricDescriptorsListRequest, security operations.MonitoringProjectsMetricDescriptorsListSecurity) (*operations.MonitoringProjectsMetricDescriptorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/metricDescriptors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/metricDescriptors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) MonitoringProjectsMetricDescriptorsList(ctx context.Context, 
 // MonitoringProjectsMonitoredResourceDescriptorsList - Lists monitored resource descriptors that match a filter.
 func (s *projects) MonitoringProjectsMonitoredResourceDescriptorsList(ctx context.Context, request operations.MonitoringProjectsMonitoredResourceDescriptorsListRequest, security operations.MonitoringProjectsMonitoredResourceDescriptorsListSecurity) (*operations.MonitoringProjectsMonitoredResourceDescriptorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/monitoredResourceDescriptors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/monitoredResourceDescriptors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) MonitoringProjectsMonitoredResourceDescriptorsList(ctx contex
 // MonitoringProjectsNotificationChannelDescriptorsList - Lists the descriptors for supported channel types. The use of descriptors makes it possible for new channel types to be dynamically added.
 func (s *projects) MonitoringProjectsNotificationChannelDescriptorsList(ctx context.Context, request operations.MonitoringProjectsNotificationChannelDescriptorsListRequest, security operations.MonitoringProjectsNotificationChannelDescriptorsListSecurity) (*operations.MonitoringProjectsNotificationChannelDescriptorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannelDescriptors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannelDescriptors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) MonitoringProjectsNotificationChannelDescriptorsList(ctx cont
 // MonitoringProjectsNotificationChannelsCreate - Creates a new notification channel, representing a single notification endpoint such as an email address, SMS number, or PagerDuty service.Design your application to single-thread API calls that modify the state of notification channels in a single project. This includes calls to CreateNotificationChannel, DeleteNotificationChannel and UpdateNotificationChannel.
 func (s *projects) MonitoringProjectsNotificationChannelsCreate(ctx context.Context, request operations.MonitoringProjectsNotificationChannelsCreateRequest, security operations.MonitoringProjectsNotificationChannelsCreateSecurity) (*operations.MonitoringProjectsNotificationChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NotificationChannel", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) MonitoringProjectsNotificationChannelsCreate(ctx context.Cont
 // MonitoringProjectsNotificationChannelsGetVerificationCode - Requests a verification code for an already verified channel that can then be used in a call to VerifyNotificationChannel() on a different channel with an equivalent identity in the same or in a different project. This makes it possible to copy a channel between projects without requiring manual reverification of the channel. If the channel is not in the verified state, this method will fail (in other words, this may only be used if the SendNotificationChannelVerificationCode and VerifyNotificationChannel paths have already been used to put the given channel into the verified state).There is no guarantee that the verification codes returned by this method will be of a similar structure or form as the ones that are delivered to the channel via SendNotificationChannelVerificationCode; while VerifyNotificationChannel() will recognize both the codes delivered via SendNotificationChannelVerificationCode() and returned from GetNotificationChannelVerificationCode(), it is typically the case that the verification codes delivered via SendNotificationChannelVerificationCode() will be shorter and also have a shorter expiration (e.g. codes such as "G-123456") whereas GetVerificationCode() will typically return a much longer, websafe base 64 encoded string that has a longer expiration time.
 func (s *projects) MonitoringProjectsNotificationChannelsGetVerificationCode(ctx context.Context, request operations.MonitoringProjectsNotificationChannelsGetVerificationCodeRequest, security operations.MonitoringProjectsNotificationChannelsGetVerificationCodeSecurity) (*operations.MonitoringProjectsNotificationChannelsGetVerificationCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:getVerificationCode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:getVerificationCode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetNotificationChannelVerificationCodeRequest", "json")
 	if err != nil {
@@ -704,10 +743,13 @@ func (s *projects) MonitoringProjectsNotificationChannelsGetVerificationCode(ctx
 	return res, nil
 }
 
-// MonitoringProjectsNotificationChannelsList - Lists the notification channels that have been created for the project.
+// MonitoringProjectsNotificationChannelsList - Lists the notification channels that have been created for the project. To list the types of notification channels that are supported, use the ListNotificationChannelDescriptors method.
 func (s *projects) MonitoringProjectsNotificationChannelsList(ctx context.Context, request operations.MonitoringProjectsNotificationChannelsListRequest, security operations.MonitoringProjectsNotificationChannelsListSecurity) (*operations.MonitoringProjectsNotificationChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/notificationChannels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) MonitoringProjectsNotificationChannelsList(ctx context.Contex
 // MonitoringProjectsNotificationChannelsSendVerificationCode - Causes a verification code to be delivered to the channel. The code can then be supplied in VerifyNotificationChannel to verify the channel.
 func (s *projects) MonitoringProjectsNotificationChannelsSendVerificationCode(ctx context.Context, request operations.MonitoringProjectsNotificationChannelsSendVerificationCodeRequest, security operations.MonitoringProjectsNotificationChannelsSendVerificationCodeSecurity) (*operations.MonitoringProjectsNotificationChannelsSendVerificationCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:sendVerificationCode", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:sendVerificationCode", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) MonitoringProjectsNotificationChannelsSendVerificationCode(ct
 // MonitoringProjectsNotificationChannelsVerify - Verifies a NotificationChannel by proving receipt of the code delivered to the channel as a result of calling SendNotificationChannelVerificationCode.
 func (s *projects) MonitoringProjectsNotificationChannelsVerify(ctx context.Context, request operations.MonitoringProjectsNotificationChannelsVerifyRequest, security operations.MonitoringProjectsNotificationChannelsVerifySecurity) (*operations.MonitoringProjectsNotificationChannelsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}:verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}:verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyNotificationChannelRequest", "json")
 	if err != nil {
@@ -865,7 +913,10 @@ func (s *projects) MonitoringProjectsNotificationChannelsVerify(ctx context.Cont
 // MonitoringProjectsSnoozesCreate - Creates a Snooze that will prevent alerts, which match the provided criteria, from being opened. The Snooze applies for a specific time interval.
 func (s *projects) MonitoringProjectsSnoozesCreate(ctx context.Context, request operations.MonitoringProjectsSnoozesCreateRequest, security operations.MonitoringProjectsSnoozesCreateSecurity) (*operations.MonitoringProjectsSnoozesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/snoozes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/snoozes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Snooze", "json")
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) MonitoringProjectsSnoozesCreate(ctx context.Context, request 
 // MonitoringProjectsSnoozesList - Lists the Snoozes associated with a project. Can optionally pass in filter, which specifies predicates to match Snoozes.
 func (s *projects) MonitoringProjectsSnoozesList(ctx context.Context, request operations.MonitoringProjectsSnoozesListRequest, security operations.MonitoringProjectsSnoozesListSecurity) (*operations.MonitoringProjectsSnoozesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/snoozes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/snoozes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *projects) MonitoringProjectsSnoozesList(ctx context.Context, request op
 // MonitoringProjectsTimeSeriesCreate - Creates or adds data to one or more time series. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response.
 func (s *projects) MonitoringProjectsTimeSeriesCreate(ctx context.Context, request operations.MonitoringProjectsTimeSeriesCreateRequest, security operations.MonitoringProjectsTimeSeriesCreateSecurity) (*operations.MonitoringProjectsTimeSeriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateTimeSeriesRequest", "json")
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) MonitoringProjectsTimeSeriesCreate(ctx context.Context, reque
 // MonitoringProjectsTimeSeriesCreateService - Creates or adds data to one or more service time series. A service time series is a time series for a metric from a Google Cloud service. The response is empty if all time series in the request were written. If any time series could not be written, a corresponding failure message is included in the error response. This endpoint rejects writes to user-defined metrics. This method is only for use by Google Cloud services. Use projects.timeSeries.create instead.
 func (s *projects) MonitoringProjectsTimeSeriesCreateService(ctx context.Context, request operations.MonitoringProjectsTimeSeriesCreateServiceRequest, security operations.MonitoringProjectsTimeSeriesCreateServiceSecurity) (*operations.MonitoringProjectsTimeSeriesCreateServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries:createService", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries:createService", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateTimeSeriesRequest", "json")
 	if err != nil {
@@ -1078,7 +1138,10 @@ func (s *projects) MonitoringProjectsTimeSeriesCreateService(ctx context.Context
 // MonitoringProjectsTimeSeriesList - Lists time series that match a filter.
 func (s *projects) MonitoringProjectsTimeSeriesList(ctx context.Context, request operations.MonitoringProjectsTimeSeriesListRequest, security operations.MonitoringProjectsTimeSeriesListSecurity) (*operations.MonitoringProjectsTimeSeriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1126,7 +1189,10 @@ func (s *projects) MonitoringProjectsTimeSeriesList(ctx context.Context, request
 // MonitoringProjectsTimeSeriesQuery - Queries time series using Monitoring Query Language.
 func (s *projects) MonitoringProjectsTimeSeriesQuery(ctx context.Context, request operations.MonitoringProjectsTimeSeriesQueryRequest, security operations.MonitoringProjectsTimeSeriesQuerySecurity) (*operations.MonitoringProjectsTimeSeriesQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries:query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{name}/timeSeries:query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "QueryTimeSeriesRequest", "json")
 	if err != nil {
@@ -1181,7 +1247,10 @@ func (s *projects) MonitoringProjectsTimeSeriesQuery(ctx context.Context, reques
 // MonitoringProjectsUptimeCheckConfigsCreate - Creates a new Uptime check configuration.
 func (s *projects) MonitoringProjectsUptimeCheckConfigsCreate(ctx context.Context, request operations.MonitoringProjectsUptimeCheckConfigsCreateRequest, security operations.MonitoringProjectsUptimeCheckConfigsCreateSecurity) (*operations.MonitoringProjectsUptimeCheckConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/uptimeCheckConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/uptimeCheckConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UptimeCheckConfig", "json")
 	if err != nil {
@@ -1236,7 +1305,10 @@ func (s *projects) MonitoringProjectsUptimeCheckConfigsCreate(ctx context.Contex
 // MonitoringProjectsUptimeCheckConfigsList - Lists the existing valid Uptime check configurations for the project (leaving out any invalid configurations).
 func (s *projects) MonitoringProjectsUptimeCheckConfigsList(ctx context.Context, request operations.MonitoringProjectsUptimeCheckConfigsListRequest, security operations.MonitoringProjectsUptimeCheckConfigsListSecurity) (*operations.MonitoringProjectsUptimeCheckConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/uptimeCheckConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/{parent}/uptimeCheckConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

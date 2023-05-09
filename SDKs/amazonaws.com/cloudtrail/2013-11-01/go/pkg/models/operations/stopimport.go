@@ -16,17 +16,21 @@ const (
 	StopImportXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101StopImport StopImportXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StopImport"
 )
 
+func (e StopImportXAmzTargetEnum) ToPointer() *StopImportXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopImportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StopImport":
-		*e = StopImportXAmzTargetEnum(s)
+		*e = StopImportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopImportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopImportXAmzTargetEnum: %v", v)
 	}
 }
 

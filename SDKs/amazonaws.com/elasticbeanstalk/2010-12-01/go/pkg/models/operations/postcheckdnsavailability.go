@@ -15,17 +15,21 @@ const (
 	POSTCheckDNSAvailabilityActionEnumCheckDNSAvailability POSTCheckDNSAvailabilityActionEnum = "CheckDNSAvailability"
 )
 
+func (e POSTCheckDNSAvailabilityActionEnum) ToPointer() *POSTCheckDNSAvailabilityActionEnum {
+	return &e
+}
+
 func (e *POSTCheckDNSAvailabilityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CheckDNSAvailability":
-		*e = POSTCheckDNSAvailabilityActionEnum(s)
+		*e = POSTCheckDNSAvailabilityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCheckDNSAvailabilityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCheckDNSAvailabilityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCheckDNSAvailabilityVersionEnumTwoThousandAndTen1201 POSTCheckDNSAvailabilityVersionEnum = "2010-12-01"
 )
 
+func (e POSTCheckDNSAvailabilityVersionEnum) ToPointer() *POSTCheckDNSAvailabilityVersionEnum {
+	return &e
+}
+
 func (e *POSTCheckDNSAvailabilityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCheckDNSAvailabilityVersionEnum(s)
+		*e = POSTCheckDNSAvailabilityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCheckDNSAvailabilityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCheckDNSAvailabilityVersionEnum: %v", v)
 	}
 }
 

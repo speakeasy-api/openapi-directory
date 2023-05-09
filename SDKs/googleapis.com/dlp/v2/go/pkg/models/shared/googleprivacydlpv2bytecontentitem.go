@@ -27,12 +27,16 @@ const (
 	GooglePrivacyDlpV2ByteContentItemTypeEnumTsv                  GooglePrivacyDlpV2ByteContentItemTypeEnum = "TSV"
 )
 
+func (e GooglePrivacyDlpV2ByteContentItemTypeEnum) ToPointer() *GooglePrivacyDlpV2ByteContentItemTypeEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2ByteContentItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BYTES_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE":
@@ -60,10 +64,10 @@ func (e *GooglePrivacyDlpV2ByteContentItemTypeEnum) UnmarshalJSON(data []byte) e
 	case "CSV":
 		fallthrough
 	case "TSV":
-		*e = GooglePrivacyDlpV2ByteContentItemTypeEnum(s)
+		*e = GooglePrivacyDlpV2ByteContentItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ByteContentItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ByteContentItemTypeEnum: %v", v)
 	}
 }
 

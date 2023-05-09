@@ -35,7 +35,10 @@ func newV1NifVerification(defaultClient, securityClient HTTPClient, serverURL, l
 // Performs a basic verification check of a given NIF tax number against NIF.com. Optional parameters may be added to improve calculation of confidence score.
 func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.NifBasicRequest, security operations.NifBasicSecurity) (*operations.NifBasicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/basic-check/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/basic-check/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *v1NifVerification) NifBasic(ctx context.Context, request operations.Nif
 // Comprehensive verification of given portuguese NIF number against NIF.com. Optional parameters may help to build a better confidence score. Additional company data will be provided.
 func (s *v1NifVerification) NifComprehensive(ctx context.Context, request operations.NifComprehensiveRequest, security operations.NifComprehensiveSecurity) (*operations.NifComprehensiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/comprehensive-check/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/nif-verification/comprehensive-check/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

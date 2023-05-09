@@ -16,12 +16,16 @@ const (
 	ComplianceStatusEnumNotAvailable ComplianceStatusEnum = "NOT_AVAILABLE"
 )
 
+func (e ComplianceStatusEnum) ToPointer() *ComplianceStatusEnum {
+	return &e
+}
+
 func (e *ComplianceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASSED":
 		fallthrough
 	case "WARNING":
@@ -29,9 +33,9 @@ func (e *ComplianceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "NOT_AVAILABLE":
-		*e = ComplianceStatusEnum(s)
+		*e = ComplianceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComplianceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ComplianceStatusEnum: %v", v)
 	}
 }

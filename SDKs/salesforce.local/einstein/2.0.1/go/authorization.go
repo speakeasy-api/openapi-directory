@@ -89,7 +89,10 @@ func (s *authorization) GenerateTokenV2(ctx context.Context, request operations.
 // RevokeRefreshTokenV2 - Delete a Refresh Token
 func (s *authorization) RevokeRefreshTokenV2(ctx context.Context, request operations.RevokeRefreshTokenV2Request, security operations.RevokeRefreshTokenV2Security) (*operations.RevokeRefreshTokenV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/oauth2/tokens/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/oauth2/tokens/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

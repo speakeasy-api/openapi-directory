@@ -17,12 +17,16 @@ const (
 	GoogleChromeManagementV1OsUpdateStatusUpdateStateEnumOsUpdateNeedReboot        GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum = "OS_UPDATE_NEED_REBOOT"
 )
 
+func (e GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum) ToPointer() *GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_STATE_UNSPECIFIED":
 		fallthrough
 	case "OS_IMAGE_DOWNLOAD_NOT_STARTED":
@@ -30,14 +34,14 @@ func (e *GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum) UnmarshalJSON(da
 	case "OS_IMAGE_DOWNLOAD_IN_PROGRESS":
 		fallthrough
 	case "OS_UPDATE_NEED_REBOOT":
-		*e = GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum(s)
+		*e = GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1OsUpdateStatusUpdateStateEnum: %v", v)
 	}
 }
 
-// GoogleChromeManagementV1OsUpdateStatus - Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+// GoogleChromeManagementV1OsUpdateStatus - Contains information regarding the current OS update status. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceOsUpdateStatus](https://chromeenterprise.google/policies/#ReportDeviceOsUpdateStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_OS_REPORT
 type GoogleChromeManagementV1OsUpdateStatus struct {
 	// Output only. Timestamp of the last reboot.
 	LastRebootTime *string `json:"lastRebootTime,omitempty"`

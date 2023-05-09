@@ -36,7 +36,10 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetDomainsTldZoneIDDownload - Download Whole Dataset for TLD
 func (s *domains) GetDomainsTldZoneIDDownload(ctx context.Context, request operations.GetDomainsTldZoneIDDownloadRequest) (*operations.GetDomainsTldZoneIDDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -77,7 +80,10 @@ func (s *domains) GetDomainsTldZoneIDDownload(ctx context.Context, request opera
 // GetDomainsTldZoneIDSearch - Domains Search for TLD
 func (s *domains) GetDomainsTldZoneIDSearch(ctx context.Context, request operations.GetDomainsTldZoneIDSearchRequest) (*operations.GetDomainsTldZoneIDSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -414,7 +420,10 @@ func (s *domains) GetSearchDomainItem(ctx context.Context, request operations.Ge
 // GetTldDomainItem - Get TLD records
 func (s *domains) GetTldDomainItem(ctx context.Context, request operations.GetTldDomainItemRequest) (*operations.GetTldDomainItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/tld/{zone_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

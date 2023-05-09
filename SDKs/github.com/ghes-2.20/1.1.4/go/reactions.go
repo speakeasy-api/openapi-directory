@@ -37,7 +37,10 @@ func newReactions(defaultClient, securityClient HTTPClient, serverURL, language,
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#create-reaction-for-a-commit-comment - API method documentation
 func (s *reactions) ReactionsCreateForCommitComment(ctx context.Context, request operations.ReactionsCreateForCommitCommentRequest) (*operations.ReactionsCreateForCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -115,7 +118,10 @@ func (s *reactions) ReactionsCreateForCommitComment(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#create-reaction-for-an-issue - API method documentation
 func (s *reactions) ReactionsCreateForIssue(ctx context.Context, request operations.ReactionsCreateForIssueRequest) (*operations.ReactionsCreateForIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *reactions) ReactionsCreateForIssue(ctx context.Context, request operati
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#create-reaction-for-an-issue-comment - API method documentation
 func (s *reactions) ReactionsCreateForIssueComment(ctx context.Context, request operations.ReactionsCreateForIssueCommentRequest) (*operations.ReactionsCreateForIssueCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -271,7 +280,10 @@ func (s *reactions) ReactionsCreateForIssueComment(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#create-reaction-for-a-pull-request-review-comment - API method documentation
 func (s *reactions) ReactionsCreateForPullRequestReviewComment(ctx context.Context, request operations.ReactionsCreateForPullRequestReviewCommentRequest) (*operations.ReactionsCreateForPullRequestReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -349,7 +361,10 @@ func (s *reactions) ReactionsCreateForPullRequestReviewComment(ctx context.Conte
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions/#create-reaction-for-a-team-discussion - API method documentation
 func (s *reactions) ReactionsCreateForTeamDiscussion(ctx context.Context, request operations.ReactionsCreateForTeamDiscussionRequest) (*operations.ReactionsCreateForTeamDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -407,7 +422,10 @@ func (s *reactions) ReactionsCreateForTeamDiscussion(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions/#create-reaction-for-a-team-discussion-comment - API method documentation
 func (s *reactions) ReactionsCreateForTeamDiscussionComment(ctx context.Context, request operations.ReactionsCreateForTeamDiscussionCommentRequest) (*operations.ReactionsCreateForTeamDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -465,7 +483,10 @@ func (s *reactions) ReactionsCreateForTeamDiscussionComment(ctx context.Context,
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#delete-a-reaction-legacy - API method documentation
 func (s *reactions) ReactionsDelete(ctx context.Context, request operations.ReactionsDeleteRequest) (*operations.ReactionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reactions/{reaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reactions/{reaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -504,7 +525,10 @@ func (s *reactions) ReactionsDelete(ctx context.Context, request operations.Reac
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#list-reactions-for-a-commit-comment - API method documentation
 func (s *reactions) ReactionsListForCommitComment(ctx context.Context, request operations.ReactionsListForCommitCommentRequest) (*operations.ReactionsListForCommitCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -576,7 +600,10 @@ func (s *reactions) ReactionsListForCommitComment(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#list-reactions-for-an-issue - API method documentation
 func (s *reactions) ReactionsListForIssue(ctx context.Context, request operations.ReactionsListForIssueRequest) (*operations.ReactionsListForIssueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/{issue_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -650,7 +677,10 @@ func (s *reactions) ReactionsListForIssue(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#list-reactions-for-an-issue-comment - API method documentation
 func (s *reactions) ReactionsListForIssueComment(ctx context.Context, request operations.ReactionsListForIssueCommentRequest) (*operations.ReactionsListForIssueCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -722,7 +752,10 @@ func (s *reactions) ReactionsListForIssueComment(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions#list-reactions-for-a-pull-request-review-comment - API method documentation
 func (s *reactions) ReactionsListForPullRequestReviewComment(ctx context.Context, request operations.ReactionsListForPullRequestReviewCommentRequest) (*operations.ReactionsListForPullRequestReviewCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -794,7 +827,10 @@ func (s *reactions) ReactionsListForPullRequestReviewComment(ctx context.Context
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions/#list-reactions-for-a-team-discussion - API method documentation
 func (s *reactions) ReactionsListForTeamDiscussion(ctx context.Context, request operations.ReactionsListForTeamDiscussionRequest) (*operations.ReactionsListForTeamDiscussionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -848,7 +884,10 @@ func (s *reactions) ReactionsListForTeamDiscussion(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@2.20/rest/reference/reactions/#list-reactions-for-a-team-discussion-comment - API method documentation
 func (s *reactions) ReactionsListForTeamDiscussionComment(ctx context.Context, request operations.ReactionsListForTeamDiscussionCommentRequest) (*operations.ReactionsListForTeamDiscussionCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	UndeprecateDomainXAmzTargetEnumSimpleWorkflowServiceUndeprecateDomain UndeprecateDomainXAmzTargetEnum = "SimpleWorkflowService.UndeprecateDomain"
 )
 
+func (e UndeprecateDomainXAmzTargetEnum) ToPointer() *UndeprecateDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *UndeprecateDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.UndeprecateDomain":
-		*e = UndeprecateDomainXAmzTargetEnum(s)
+		*e = UndeprecateDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UndeprecateDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UndeprecateDomainXAmzTargetEnum: %v", v)
 	}
 }
 

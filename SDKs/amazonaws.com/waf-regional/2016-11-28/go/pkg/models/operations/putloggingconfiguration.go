@@ -16,17 +16,21 @@ const (
 	PutLoggingConfigurationXAmzTargetEnumAwswafRegional20161128PutLoggingConfiguration PutLoggingConfigurationXAmzTargetEnum = "AWSWAF_Regional_20161128.PutLoggingConfiguration"
 )
 
+func (e PutLoggingConfigurationXAmzTargetEnum) ToPointer() *PutLoggingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutLoggingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.PutLoggingConfiguration":
-		*e = PutLoggingConfigurationXAmzTargetEnum(s)
+		*e = PutLoggingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLoggingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLoggingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

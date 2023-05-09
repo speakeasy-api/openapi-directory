@@ -16,17 +16,21 @@ const (
 	DeleteGroupMembershipXAmzTargetEnumAwsIdentityStoreDeleteGroupMembership DeleteGroupMembershipXAmzTargetEnum = "AWSIdentityStore.DeleteGroupMembership"
 )
 
+func (e DeleteGroupMembershipXAmzTargetEnum) ToPointer() *DeleteGroupMembershipXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteGroupMembershipXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIdentityStore.DeleteGroupMembership":
-		*e = DeleteGroupMembershipXAmzTargetEnum(s)
+		*e = DeleteGroupMembershipXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteGroupMembershipXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteGroupMembershipXAmzTargetEnum: %v", v)
 	}
 }
 

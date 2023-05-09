@@ -90,7 +90,10 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsCreate(ctx con
 // CloudidentityInboundSsoAssignmentsDelete - Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has `sso_mode` == `SSO_OFF`.
 func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsDelete(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsDeleteRequest, security operations.CloudidentityInboundSsoAssignmentsDeleteSecurity) (*operations.CloudidentityInboundSsoAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsDelete(ctx con
 // CloudidentityInboundSsoAssignmentsGet - Gets an InboundSsoAssignment.
 func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsGet(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsGetRequest, security operations.CloudidentityInboundSsoAssignmentsGetSecurity) (*operations.CloudidentityInboundSsoAssignmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsList(ctx conte
 // CloudidentityInboundSsoAssignmentsPatch - Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field and the `update_mask` is relative to that. For example: a PATCH to `/v1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-targeted assignments down in priority.
 func (s *inboundSsoAssignments) CloudidentityInboundSsoAssignmentsPatch(ctx context.Context, request operations.CloudidentityInboundSsoAssignmentsPatchRequest, security operations.CloudidentityInboundSsoAssignmentsPatchSecurity) (*operations.CloudidentityInboundSsoAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InboundSsoAssignmentInput", "json")
 	if err != nil {

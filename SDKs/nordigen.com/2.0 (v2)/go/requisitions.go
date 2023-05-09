@@ -35,7 +35,10 @@ func newRequisitions(defaultClient, securityClient HTTPClient, serverURL, langua
 // DeleteRequisitionByIDV2 - Delete requisition and its end user agreement
 func (s *requisitions) DeleteRequisitionByIDV2(ctx context.Context, request operations.DeleteRequisitionByIDV2Request) (*operations.DeleteRequisitionByIDV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -101,6 +104,16 @@ func (s *requisitions) DeleteRequisitionByIDV2(ctx context.Context, request oper
 
 			res.DeleteRequisitionByIDV2404ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteRequisitionByIDV2429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
@@ -109,7 +122,10 @@ func (s *requisitions) DeleteRequisitionByIDV2(ctx context.Context, request oper
 // RequisitionByID - Retrieve a requisition by ID
 func (s *requisitions) RequisitionByID(ctx context.Context, request operations.RequisitionByIDRequest) (*operations.RequisitionByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/requisitions/{id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,12 +154,12 @@ func (s *requisitions) RequisitionByID(ctx context.Context, request operations.R
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.RequisitionV2
+			var out *shared.Requisition
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.RequisitionV2 = out
+			res.Requisition = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -185,13 +201,23 @@ func (s *requisitions) RequisitionByID(ctx context.Context, request operations.R
 
 			res.RequisitionByID404ApplicationJSONObject = out
 		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequisitionByID429ApplicationJSONObject = out
+		}
 	}
 
 	return res, nil
 }
 
 // RequisitionCreated - Create a new requisition
-func (s *requisitions) RequisitionCreated(ctx context.Context, request shared.RequisitionV2Request) (*operations.RequisitionCreatedResponse, error) {
+func (s *requisitions) RequisitionCreated(ctx context.Context, request shared.RequisitionRequest) (*operations.RequisitionCreatedResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/v2/requisitions/"
 
@@ -232,12 +258,12 @@ func (s *requisitions) RequisitionCreated(ctx context.Context, request shared.Re
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.SpectacularRequisitionV2
+			var out *shared.SpectacularRequisition
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.SpectacularRequisitionV2 = out
+			res.SpectacularRequisition = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -278,6 +304,16 @@ func (s *requisitions) RequisitionCreated(ctx context.Context, request shared.Re
 			}
 
 			res.RequisitionCreated404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RequisitionCreated429ApplicationJSONObject = out
 		}
 	}
 
@@ -320,12 +356,12 @@ func (s *requisitions) RetrieveAllRequisitions(ctx context.Context, request oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedRequisitionV2List
+			var out *shared.PaginatedRequisitionList
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PaginatedRequisitionV2List = out
+			res.PaginatedRequisitionList = out
 		}
 	case httpRes.StatusCode == 400:
 		switch {
@@ -366,6 +402,16 @@ func (s *requisitions) RetrieveAllRequisitions(ctx context.Context, request oper
 			}
 
 			res.RetrieveAllRequisitions404ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RetrieveAllRequisitions429ApplicationJSONObject = out
 		}
 	}
 

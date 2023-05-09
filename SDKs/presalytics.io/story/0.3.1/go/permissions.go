@@ -37,7 +37,10 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Check whether user have certain types of permissions.  Use http status codes to understand if permission is granted - 204 = Granted, 403 = Forbidden
 func (s *permissions) StoryIDCollaboratorsUseridPermissiontypeGet(ctx context.Context, request operations.StoryIDCollaboratorsUseridPermissiontypeGetRequest) (*operations.StoryIDCollaboratorsUseridPermissiontypeGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/authorize/{story_collaborator_userid}/{permissiontype}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/collaborators/authorize/{story_collaborator_userid}/{permissiontype}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

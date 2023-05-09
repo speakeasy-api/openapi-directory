@@ -6,6 +6,8 @@ package shared
 type GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription struct {
 	// Output only. Additional description for this value.
 	Description *string `json:"description,omitempty"`
+	// Output only. Field conditions required for this value to be valid.
+	FieldDependencies []GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies `json:"fieldDependencies,omitempty"`
 	// Output only. The string represenstation of the value that can be set for the field.
 	Value *string `json:"value,omitempty"`
 }

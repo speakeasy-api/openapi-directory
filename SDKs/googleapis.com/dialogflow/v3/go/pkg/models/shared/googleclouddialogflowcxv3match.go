@@ -20,12 +20,16 @@ const (
 	GoogleCloudDialogflowCxV3MatchMatchTypeEnumEvent                GoogleCloudDialogflowCxV3MatchMatchTypeEnum = "EVENT"
 )
 
+func (e GoogleCloudDialogflowCxV3MatchMatchTypeEnum) ToPointer() *GoogleCloudDialogflowCxV3MatchMatchTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3MatchMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INTENT":
@@ -39,10 +43,10 @@ func (e *GoogleCloudDialogflowCxV3MatchMatchTypeEnum) UnmarshalJSON(data []byte)
 	case "NO_INPUT":
 		fallthrough
 	case "EVENT":
-		*e = GoogleCloudDialogflowCxV3MatchMatchTypeEnum(s)
+		*e = GoogleCloudDialogflowCxV3MatchMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3MatchMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3MatchMatchTypeEnum: %v", v)
 	}
 }
 

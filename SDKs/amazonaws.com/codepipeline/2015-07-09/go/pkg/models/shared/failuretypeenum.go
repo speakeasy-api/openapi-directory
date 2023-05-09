@@ -18,12 +18,16 @@ const (
 	FailureTypeEnumSystemUnavailable   FailureTypeEnum = "SystemUnavailable"
 )
 
+func (e FailureTypeEnum) ToPointer() *FailureTypeEnum {
+	return &e
+}
+
 func (e *FailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JobFailed":
 		fallthrough
 	case "ConfigurationError":
@@ -35,9 +39,9 @@ func (e *FailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RevisionUnavailable":
 		fallthrough
 	case "SystemUnavailable":
-		*e = FailureTypeEnum(s)
+		*e = FailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FailureTypeEnum: %v", v)
 	}
 }

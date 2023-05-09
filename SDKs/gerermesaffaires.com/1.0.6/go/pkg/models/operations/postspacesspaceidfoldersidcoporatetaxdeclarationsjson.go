@@ -28,12 +28,16 @@ const (
 	PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -51,10 +55,10 @@ func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2Accoun
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2AccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnumRegularization PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum = "regularization"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1st advance":
 		fallthrough
 	case "2nd advance":
@@ -94,10 +102,10 @@ func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderE
 	case "4th advance":
 		fallthrough
 	case "regularization":
-		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON2OrderEnum: %v", v)
 	}
 }
 
@@ -126,12 +134,16 @@ const (
 	PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnumRegularization PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum = "regularization"
 )
 
+func (e PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum) ToPointer() *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1st advance":
 		fallthrough
 	case "2nd advance":
@@ -141,10 +153,10 @@ func (e *PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderE
 	case "4th advance":
 		fallthrough
 	case "regularization":
-		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDCoporateTaxDeclarationsApplicationJSON1OrderEnum: %v", v)
 	}
 }
 

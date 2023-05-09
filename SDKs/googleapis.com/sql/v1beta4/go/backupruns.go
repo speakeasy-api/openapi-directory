@@ -34,7 +34,10 @@ func newBackupRuns(defaultClient, securityClient HTTPClient, serverURL, language
 // SQLBackupRunsDelete - Deletes the backup taken by a backup run.
 func (s *backupRuns) SQLBackupRunsDelete(ctx context.Context, request operations.SQLBackupRunsDeleteRequest, security operations.SQLBackupRunsDeleteSecurity) (*operations.SQLBackupRunsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *backupRuns) SQLBackupRunsDelete(ctx context.Context, request operations
 // SQLBackupRunsGet - Retrieves a resource containing information about a backup run.
 func (s *backupRuns) SQLBackupRunsGet(ctx context.Context, request operations.SQLBackupRunsGetRequest, security operations.SQLBackupRunsGetSecurity) (*operations.SQLBackupRunsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *backupRuns) SQLBackupRunsGet(ctx context.Context, request operations.SQ
 // SQLBackupRunsInsert - Creates a new backup run on demand.
 func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations.SQLBackupRunsInsertRequest, security operations.SQLBackupRunsInsertSecurity) (*operations.SQLBackupRunsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BackupRun", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *backupRuns) SQLBackupRunsInsert(ctx context.Context, request operations
 // SQLBackupRunsList - Lists all backup runs associated with the project or a given instance and configuration in the reverse chronological order of the backup initiation time.
 func (s *backupRuns) SQLBackupRunsList(ctx context.Context, request operations.SQLBackupRunsListRequest, security operations.SQLBackupRunsListSecurity) (*operations.SQLBackupRunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/backupRuns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

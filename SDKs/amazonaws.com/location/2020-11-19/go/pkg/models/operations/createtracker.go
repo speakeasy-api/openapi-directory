@@ -18,21 +18,25 @@ const (
 	CreateTrackerRequestBodyPositionFilteringEnumAccuracyBased CreateTrackerRequestBodyPositionFilteringEnum = "AccuracyBased"
 )
 
+func (e CreateTrackerRequestBodyPositionFilteringEnum) ToPointer() *CreateTrackerRequestBodyPositionFilteringEnum {
+	return &e
+}
+
 func (e *CreateTrackerRequestBodyPositionFilteringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimeBased":
 		fallthrough
 	case "DistanceBased":
 		fallthrough
 	case "AccuracyBased":
-		*e = CreateTrackerRequestBodyPositionFilteringEnum(s)
+		*e = CreateTrackerRequestBodyPositionFilteringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrackerRequestBodyPositionFilteringEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrackerRequestBodyPositionFilteringEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	CreateTrackerRequestBodyPricingPlanEnumMobileAssetManagement CreateTrackerRequestBodyPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e CreateTrackerRequestBodyPricingPlanEnum) ToPointer() *CreateTrackerRequestBodyPricingPlanEnum {
+	return &e
+}
+
 func (e *CreateTrackerRequestBodyPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = CreateTrackerRequestBodyPricingPlanEnum(s)
+		*e = CreateTrackerRequestBodyPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrackerRequestBodyPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrackerRequestBodyPricingPlanEnum: %v", v)
 	}
 }
 

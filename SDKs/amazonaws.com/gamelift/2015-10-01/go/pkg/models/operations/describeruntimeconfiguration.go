@@ -16,17 +16,21 @@ const (
 	DescribeRuntimeConfigurationXAmzTargetEnumGameLiftDescribeRuntimeConfiguration DescribeRuntimeConfigurationXAmzTargetEnum = "GameLift.DescribeRuntimeConfiguration"
 )
 
+func (e DescribeRuntimeConfigurationXAmzTargetEnum) ToPointer() *DescribeRuntimeConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeRuntimeConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.DescribeRuntimeConfiguration":
-		*e = DescribeRuntimeConfigurationXAmzTargetEnum(s)
+		*e = DescribeRuntimeConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeRuntimeConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeRuntimeConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

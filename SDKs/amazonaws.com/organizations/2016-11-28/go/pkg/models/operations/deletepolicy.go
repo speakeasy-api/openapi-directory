@@ -16,17 +16,21 @@ const (
 	DeletePolicyXAmzTargetEnumAwsOrganizationsV20161128DeletePolicy DeletePolicyXAmzTargetEnum = "AWSOrganizationsV20161128.DeletePolicy"
 )
 
+func (e DeletePolicyXAmzTargetEnum) ToPointer() *DeletePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DeletePolicy":
-		*e = DeletePolicyXAmzTargetEnum(s)
+		*e = DeletePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

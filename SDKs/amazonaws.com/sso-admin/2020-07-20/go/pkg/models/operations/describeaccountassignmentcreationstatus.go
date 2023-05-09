@@ -16,17 +16,21 @@ const (
 	DescribeAccountAssignmentCreationStatusXAmzTargetEnumSwbExternalServiceDescribeAccountAssignmentCreationStatus DescribeAccountAssignmentCreationStatusXAmzTargetEnum = "SWBExternalService.DescribeAccountAssignmentCreationStatus"
 )
 
+func (e DescribeAccountAssignmentCreationStatusXAmzTargetEnum) ToPointer() *DescribeAccountAssignmentCreationStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAccountAssignmentCreationStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.DescribeAccountAssignmentCreationStatus":
-		*e = DescribeAccountAssignmentCreationStatusXAmzTargetEnum(s)
+		*e = DescribeAccountAssignmentCreationStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAccountAssignmentCreationStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAccountAssignmentCreationStatusXAmzTargetEnum: %v", v)
 	}
 }
 

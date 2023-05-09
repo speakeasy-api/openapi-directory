@@ -18,12 +18,16 @@ const (
 	ConfigRecommendationOptimizationTypeEnumBestRegionRecovery ConfigRecommendationOptimizationTypeEnum = "BestRegionRecovery"
 )
 
+func (e ConfigRecommendationOptimizationTypeEnum) ToPointer() *ConfigRecommendationOptimizationTypeEnum {
+	return &e
+}
+
 func (e *ConfigRecommendationOptimizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LeastCost":
 		fallthrough
 	case "LeastChange":
@@ -35,9 +39,9 @@ func (e *ConfigRecommendationOptimizationTypeEnum) UnmarshalJSON(data []byte) er
 	case "BestAttainable":
 		fallthrough
 	case "BestRegionRecovery":
-		*e = ConfigRecommendationOptimizationTypeEnum(s)
+		*e = ConfigRecommendationOptimizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigRecommendationOptimizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigRecommendationOptimizationTypeEnum: %v", v)
 	}
 }

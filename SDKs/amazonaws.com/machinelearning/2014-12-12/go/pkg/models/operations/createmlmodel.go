@@ -16,17 +16,21 @@ const (
 	CreateMLModelXAmzTargetEnumAmazonMl20141212CreateMlModel CreateMLModelXAmzTargetEnum = "AmazonML_20141212.CreateMLModel"
 )
 
+func (e CreateMLModelXAmzTargetEnum) ToPointer() *CreateMLModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateMLModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.CreateMLModel":
-		*e = CreateMLModelXAmzTargetEnum(s)
+		*e = CreateMLModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMLModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMLModelXAmzTargetEnum: %v", v)
 	}
 }
 

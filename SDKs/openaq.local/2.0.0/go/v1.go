@@ -93,7 +93,10 @@ func (s *v1) CitiesGetv1V1CitiesGet(ctx context.Context, request operations.Citi
 // CountriesGetV1CountriesCountryIDGet - Countries Get
 func (s *v1) CountriesGetV1CountriesCountryIDGet(ctx context.Context, request operations.CountriesGetV1CountriesCountryIDGetRequest) (*operations.CountriesGetV1CountriesCountryIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/countries/{country_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/countries/{country_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +212,10 @@ func (s *v1) CountriesGetv1V1CountriesGet(ctx context.Context, request operation
 // LatestV1GetV1LatestLocationIDGet - Latest V1 Get
 func (s *v1) LatestV1GetV1LatestLocationIDGet(ctx context.Context, request operations.LatestV1GetV1LatestLocationIDGetRequest) (*operations.LatestV1GetV1LatestLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/latest/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/latest/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +331,10 @@ func (s *v1) LatestV1GetV1LatestGet(ctx context.Context, request operations.Late
 // Locationsv1GetV1LocationsLocationIDGet - Locationsv1 Get
 func (s *v1) Locationsv1GetV1LocationsLocationIDGet(ctx context.Context, request operations.Locationsv1GetV1LocationsLocationIDGetRequest) (*operations.Locationsv1GetV1LocationsLocationIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/locations/{location_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/locations/{location_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

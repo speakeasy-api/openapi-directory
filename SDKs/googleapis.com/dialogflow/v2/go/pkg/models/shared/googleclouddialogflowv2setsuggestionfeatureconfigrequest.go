@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnumEndUser         GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum = "END_USER"
 )
 
+func (e GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum) ToPointer() *GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "HUMAN_AGENT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRole
 	case "AUTOMATED_AGENT":
 		fallthrough
 	case "END_USER":
-		*e = GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum(s)
+		*e = GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2SetSuggestionFeatureConfigRequestParticipantRoleEnum: %v", v)
 	}
 }
 

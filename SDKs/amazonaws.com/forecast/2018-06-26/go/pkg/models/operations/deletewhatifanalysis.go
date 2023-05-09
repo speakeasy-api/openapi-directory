@@ -16,17 +16,21 @@ const (
 	DeleteWhatIfAnalysisXAmzTargetEnumAmazonForecastDeleteWhatIfAnalysis DeleteWhatIfAnalysisXAmzTargetEnum = "AmazonForecast.DeleteWhatIfAnalysis"
 )
 
+func (e DeleteWhatIfAnalysisXAmzTargetEnum) ToPointer() *DeleteWhatIfAnalysisXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWhatIfAnalysisXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DeleteWhatIfAnalysis":
-		*e = DeleteWhatIfAnalysisXAmzTargetEnum(s)
+		*e = DeleteWhatIfAnalysisXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWhatIfAnalysisXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWhatIfAnalysisXAmzTargetEnum: %v", v)
 	}
 }
 

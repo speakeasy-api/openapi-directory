@@ -16,12 +16,16 @@ const (
 	MaintenanceWindowTaskTypeEnumLambda        MaintenanceWindowTaskTypeEnum = "LAMBDA"
 )
 
+func (e MaintenanceWindowTaskTypeEnum) ToPointer() *MaintenanceWindowTaskTypeEnum {
+	return &e
+}
+
 func (e *MaintenanceWindowTaskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUN_COMMAND":
 		fallthrough
 	case "AUTOMATION":
@@ -29,9 +33,9 @@ func (e *MaintenanceWindowTaskTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STEP_FUNCTIONS":
 		fallthrough
 	case "LAMBDA":
-		*e = MaintenanceWindowTaskTypeEnum(s)
+		*e = MaintenanceWindowTaskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceWindowTaskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceWindowTaskTypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	CreateTransformJobXAmzTargetEnumSageMakerCreateTransformJob CreateTransformJobXAmzTargetEnum = "SageMaker.CreateTransformJob"
 )
 
+func (e CreateTransformJobXAmzTargetEnum) ToPointer() *CreateTransformJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTransformJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateTransformJob":
-		*e = CreateTransformJobXAmzTargetEnum(s)
+		*e = CreateTransformJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTransformJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTransformJobXAmzTargetEnum: %v", v)
 	}
 }
 

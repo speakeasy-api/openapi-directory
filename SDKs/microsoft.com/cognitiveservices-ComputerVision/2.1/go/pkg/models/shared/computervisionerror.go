@@ -32,12 +32,16 @@ const (
 	ComputerVisionErrorCodeEnumStorageException          ComputerVisionErrorCodeEnum = "StorageException"
 )
 
+func (e ComputerVisionErrorCodeEnum) ToPointer() *ComputerVisionErrorCodeEnum {
+	return &e
+}
+
 func (e *ComputerVisionErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InvalidImageFormat":
 		fallthrough
 	case "UnsupportedMediaType":
@@ -75,10 +79,10 @@ func (e *ComputerVisionErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "Unspecified":
 		fallthrough
 	case "StorageException":
-		*e = ComputerVisionErrorCodeEnum(s)
+		*e = ComputerVisionErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputerVisionErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputerVisionErrorCodeEnum: %v", v)
 	}
 }
 

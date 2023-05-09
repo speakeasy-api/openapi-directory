@@ -16,21 +16,25 @@ const (
 	PartnerUnclaimSectionTypeEnumSectionTypeZeroTouch   PartnerUnclaimSectionTypeEnum = "SECTION_TYPE_ZERO_TOUCH"
 )
 
+func (e PartnerUnclaimSectionTypeEnum) ToPointer() *PartnerUnclaimSectionTypeEnum {
+	return &e
+}
+
 func (e *PartnerUnclaimSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SECTION_TYPE_SIM_LOCK":
 		fallthrough
 	case "SECTION_TYPE_ZERO_TOUCH":
-		*e = PartnerUnclaimSectionTypeEnum(s)
+		*e = PartnerUnclaimSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerUnclaimSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerUnclaimSectionTypeEnum: %v", v)
 	}
 }
 

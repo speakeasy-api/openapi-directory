@@ -17,12 +17,16 @@ const (
 	StandardsStatusEnumIncomplete StandardsStatusEnum = "INCOMPLETE"
 )
 
+func (e StandardsStatusEnum) ToPointer() *StandardsStatusEnum {
+	return &e
+}
+
 func (e *StandardsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "READY":
@@ -32,9 +36,9 @@ func (e *StandardsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "INCOMPLETE":
-		*e = StandardsStatusEnum(s)
+		*e = StandardsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandardsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StandardsStatusEnum: %v", v)
 	}
 }

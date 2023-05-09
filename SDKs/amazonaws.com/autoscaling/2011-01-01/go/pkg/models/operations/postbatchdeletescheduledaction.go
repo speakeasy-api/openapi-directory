@@ -15,17 +15,21 @@ const (
 	POSTBatchDeleteScheduledActionActionEnumBatchDeleteScheduledAction POSTBatchDeleteScheduledActionActionEnum = "BatchDeleteScheduledAction"
 )
 
+func (e POSTBatchDeleteScheduledActionActionEnum) ToPointer() *POSTBatchDeleteScheduledActionActionEnum {
+	return &e
+}
+
 func (e *POSTBatchDeleteScheduledActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BatchDeleteScheduledAction":
-		*e = POSTBatchDeleteScheduledActionActionEnum(s)
+		*e = POSTBatchDeleteScheduledActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBatchDeleteScheduledActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBatchDeleteScheduledActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTBatchDeleteScheduledActionVersionEnumTwoThousandAndEleven0101 POSTBatchDeleteScheduledActionVersionEnum = "2011-01-01"
 )
 
+func (e POSTBatchDeleteScheduledActionVersionEnum) ToPointer() *POSTBatchDeleteScheduledActionVersionEnum {
+	return &e
+}
+
 func (e *POSTBatchDeleteScheduledActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTBatchDeleteScheduledActionVersionEnum(s)
+		*e = POSTBatchDeleteScheduledActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTBatchDeleteScheduledActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTBatchDeleteScheduledActionVersionEnum: %v", v)
 	}
 }
 

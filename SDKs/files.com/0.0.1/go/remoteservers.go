@@ -37,7 +37,10 @@ func newRemoteServers(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete Remote Server
 func (s *remoteServers) DeleteRemoteServersID(ctx context.Context, request operations.DeleteRemoteServersIDRequest) (*operations.DeleteRemoteServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *remoteServers) GetRemoteServers(ctx context.Context, request operations
 // Show Remote Server
 func (s *remoteServers) GetRemoteServersID(ctx context.Context, request operations.GetRemoteServersIDRequest) (*operations.GetRemoteServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *remoteServers) GetRemoteServersID(ctx context.Context, request operatio
 // Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
 func (s *remoteServers) GetRemoteServersIDConfigurationFile(ctx context.Context, request operations.GetRemoteServersIDConfigurationFileRequest) (*operations.GetRemoteServersIDConfigurationFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -289,7 +298,10 @@ func (s *remoteServers) GetRemoteServersIDConfigurationFile(ctx context.Context,
 // Update Remote Server
 func (s *remoteServers) PatchRemoteServersID(ctx context.Context, request operations.PatchRemoteServersIDRequest) (*operations.PatchRemoteServersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -431,7 +443,10 @@ func (s *remoteServers) PostRemoteServers(ctx context.Context, request operation
 // Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
 func (s *remoteServers) PostRemoteServersIDConfigurationFile(ctx context.Context, request operations.PostRemoteServersIDConfigurationFileRequest) (*operations.PostRemoteServersIDConfigurationFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

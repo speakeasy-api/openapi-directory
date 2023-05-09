@@ -13,16 +13,20 @@ const (
 	KeywordFilterNameEnumKeywordAction KeywordFilterNameEnum = "keyword-action"
 )
 
+func (e KeywordFilterNameEnum) ToPointer() *KeywordFilterNameEnum {
+	return &e
+}
+
 func (e *KeywordFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "keyword-action":
-		*e = KeywordFilterNameEnum(s)
+		*e = KeywordFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeywordFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for KeywordFilterNameEnum: %v", v)
 	}
 }

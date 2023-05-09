@@ -17,12 +17,16 @@ const (
 	WebSecurityScannerSettingsServiceEnablementStateEnumDisabled                   WebSecurityScannerSettingsServiceEnablementStateEnum = "DISABLED"
 )
 
+func (e WebSecurityScannerSettingsServiceEnablementStateEnum) ToPointer() *WebSecurityScannerSettingsServiceEnablementStateEnum {
+	return &e
+}
+
 func (e *WebSecurityScannerSettingsServiceEnablementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "INHERITED":
@@ -30,10 +34,10 @@ func (e *WebSecurityScannerSettingsServiceEnablementStateEnum) UnmarshalJSON(dat
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = WebSecurityScannerSettingsServiceEnablementStateEnum(s)
+		*e = WebSecurityScannerSettingsServiceEnablementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebSecurityScannerSettingsServiceEnablementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WebSecurityScannerSettingsServiceEnablementStateEnum: %v", v)
 	}
 }
 

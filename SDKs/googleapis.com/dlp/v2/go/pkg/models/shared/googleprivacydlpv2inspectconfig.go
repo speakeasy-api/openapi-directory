@@ -15,21 +15,25 @@ const (
 	GooglePrivacyDlpV2InspectConfigContentOptionsEnumContentImage       GooglePrivacyDlpV2InspectConfigContentOptionsEnum = "CONTENT_IMAGE"
 )
 
+func (e GooglePrivacyDlpV2InspectConfigContentOptionsEnum) ToPointer() *GooglePrivacyDlpV2InspectConfigContentOptionsEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InspectConfigContentOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_TEXT":
 		fallthrough
 	case "CONTENT_IMAGE":
-		*e = GooglePrivacyDlpV2InspectConfigContentOptionsEnum(s)
+		*e = GooglePrivacyDlpV2InspectConfigContentOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InspectConfigContentOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InspectConfigContentOptionsEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GooglePrivacyDlpV2InspectConfigMinLikelihoodEnumVeryLikely            GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum = "VERY_LIKELY"
 )
 
+func (e GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum) ToPointer() *GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIKELIHOOD_UNSPECIFIED":
 		fallthrough
 	case "VERY_UNLIKELY":
@@ -62,10 +70,10 @@ func (e *GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum) UnmarshalJSON(data []
 	case "LIKELY":
 		fallthrough
 	case "VERY_LIKELY":
-		*e = GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum(s)
+		*e = GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InspectConfigMinLikelihoodEnum: %v", v)
 	}
 }
 

@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -35,4 +36,13 @@ pkg/models/operations/link.go
 pkg/models/operations/upsertuser.go
 pkg/models/operations/getvalidity.go
 pkg/models/operations/gettrackingsnippet.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/events/README.md
+docs/properties/README.md
+docs/segments/README.md
+docs/track/README.md
+docs/users/README.md
+docs/validation/README.md
+docs/websites/README.md
 USAGE.md

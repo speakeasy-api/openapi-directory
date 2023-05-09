@@ -4,5 +4,7 @@ package shared
 
 // FormInputValueProperty - Describes the configuration for an input field on a form. Use <code>FormInputValueProperty</code> to specify the values to render or bind by default.
 type FormInputValueProperty struct {
-	Value *string `json:"value,omitempty"`
+	BindingProperties *FormInputValuePropertyBindingProperties `json:"bindingProperties,omitempty"`
+	Concat            []FormInputValueProperty                 `json:"concat,omitempty"`
+	Value             *string                                  `json:"value,omitempty"`
 }

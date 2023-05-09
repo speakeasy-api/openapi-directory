@@ -17,19 +17,23 @@ const (
 	GetTranscriptRequestBodyScanDirectionEnumBackward GetTranscriptRequestBodyScanDirectionEnum = "BACKWARD"
 )
 
+func (e GetTranscriptRequestBodyScanDirectionEnum) ToPointer() *GetTranscriptRequestBodyScanDirectionEnum {
+	return &e
+}
+
 func (e *GetTranscriptRequestBodyScanDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORWARD":
 		fallthrough
 	case "BACKWARD":
-		*e = GetTranscriptRequestBodyScanDirectionEnum(s)
+		*e = GetTranscriptRequestBodyScanDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTranscriptRequestBodyScanDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTranscriptRequestBodyScanDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetTranscriptRequestBodySortOrderEnumAscending  GetTranscriptRequestBodySortOrderEnum = "ASCENDING"
 )
 
+func (e GetTranscriptRequestBodySortOrderEnum) ToPointer() *GetTranscriptRequestBodySortOrderEnum {
+	return &e
+}
+
 func (e *GetTranscriptRequestBodySortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESCENDING":
 		fallthrough
 	case "ASCENDING":
-		*e = GetTranscriptRequestBodySortOrderEnum(s)
+		*e = GetTranscriptRequestBodySortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTranscriptRequestBodySortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTranscriptRequestBodySortOrderEnum: %v", v)
 	}
 }
 

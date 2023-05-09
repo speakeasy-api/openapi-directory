@@ -15,17 +15,21 @@ const (
 	GETUpdateSAMLProviderActionEnumUpdateSamlProvider GETUpdateSAMLProviderActionEnum = "UpdateSAMLProvider"
 )
 
+func (e GETUpdateSAMLProviderActionEnum) ToPointer() *GETUpdateSAMLProviderActionEnum {
+	return &e
+}
+
 func (e *GETUpdateSAMLProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSAMLProvider":
-		*e = GETUpdateSAMLProviderActionEnum(s)
+		*e = GETUpdateSAMLProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSAMLProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSAMLProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateSAMLProviderVersionEnumTwoThousandAndTen0508 GETUpdateSAMLProviderVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateSAMLProviderVersionEnum) ToPointer() *GETUpdateSAMLProviderVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateSAMLProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateSAMLProviderVersionEnum(s)
+		*e = GETUpdateSAMLProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSAMLProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSAMLProviderVersionEnum: %v", v)
 	}
 }
 

@@ -17,21 +17,25 @@ const (
 	PreprintsContributorsCreateContributorAttributesPermissionEnumAdmin PreprintsContributorsCreateContributorAttributesPermissionEnum = "admin"
 )
 
+func (e PreprintsContributorsCreateContributorAttributesPermissionEnum) ToPointer() *PreprintsContributorsCreateContributorAttributesPermissionEnum {
+	return &e
+}
+
 func (e *PreprintsContributorsCreateContributorAttributesPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
 		fallthrough
 	case "admin":
-		*e = PreprintsContributorsCreateContributorAttributesPermissionEnum(s)
+		*e = PreprintsContributorsCreateContributorAttributesPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreprintsContributorsCreateContributorAttributesPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for PreprintsContributorsCreateContributorAttributesPermissionEnum: %v", v)
 	}
 }
 

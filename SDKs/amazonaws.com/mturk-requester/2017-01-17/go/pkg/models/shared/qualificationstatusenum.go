@@ -14,18 +14,22 @@ const (
 	QualificationStatusEnumRevoked QualificationStatusEnum = "Revoked"
 )
 
+func (e QualificationStatusEnum) ToPointer() *QualificationStatusEnum {
+	return &e
+}
+
 func (e *QualificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Granted":
 		fallthrough
 	case "Revoked":
-		*e = QualificationStatusEnum(s)
+		*e = QualificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QualificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QualificationStatusEnum: %v", v)
 	}
 }

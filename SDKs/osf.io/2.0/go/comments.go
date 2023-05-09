@@ -39,7 +39,10 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // If the request is unsuccessful, a JSON object with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *comments) CommentsDelete(ctx context.Context, request operations.CommentsDeleteRequest) (*operations.CommentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *comments) CommentsDelete(ctx context.Context, request operations.Commen
 // If the request is unsuccessful, JSON with an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *comments) CommentsPut(ctx context.Context, request operations.CommentsPutRequest) (*operations.CommentsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *comments) CommentsPut(ctx context.Context, request operations.CommentsP
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *comments) CommentsRead(ctx context.Context, request operations.CommentsReadRequest) (*operations.CommentsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/comments/{comment_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

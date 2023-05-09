@@ -16,17 +16,21 @@ const (
 	EnableKinesisStreamingDestinationXAmzTargetEnumDynamoDb20120810EnableKinesisStreamingDestination EnableKinesisStreamingDestinationXAmzTargetEnum = "DynamoDB_20120810.EnableKinesisStreamingDestination"
 )
 
+func (e EnableKinesisStreamingDestinationXAmzTargetEnum) ToPointer() *EnableKinesisStreamingDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *EnableKinesisStreamingDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.EnableKinesisStreamingDestination":
-		*e = EnableKinesisStreamingDestinationXAmzTargetEnum(s)
+		*e = EnableKinesisStreamingDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnableKinesisStreamingDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EnableKinesisStreamingDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

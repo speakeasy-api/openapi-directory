@@ -19,12 +19,16 @@ const (
 	HTTPRouteRedirectResponseCodeEnumPermanentRedirect       HTTPRouteRedirectResponseCodeEnum = "PERMANENT_REDIRECT"
 )
 
+func (e HTTPRouteRedirectResponseCodeEnum) ToPointer() *HTTPRouteRedirectResponseCodeEnum {
+	return &e
+}
+
 func (e *HTTPRouteRedirectResponseCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESPONSE_CODE_UNSPECIFIED":
 		fallthrough
 	case "MOVED_PERMANENTLY_DEFAULT":
@@ -36,10 +40,10 @@ func (e *HTTPRouteRedirectResponseCodeEnum) UnmarshalJSON(data []byte) error {
 	case "TEMPORARY_REDIRECT":
 		fallthrough
 	case "PERMANENT_REDIRECT":
-		*e = HTTPRouteRedirectResponseCodeEnum(s)
+		*e = HTTPRouteRedirectResponseCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPRouteRedirectResponseCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPRouteRedirectResponseCodeEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnumPartialRegexp        GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum = "PARTIAL_REGEXP"
 )
 
+func (e GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum) ToPointer() *GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXACT":
@@ -39,10 +43,10 @@ func (e *GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum) UnmarshalJSO
 	case "FULL_REGEXP":
 		fallthrough
 	case "PARTIAL_REGEXP":
-		*e = GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaAccessStringFilterMatchTypeEnum: %v", v)
 	}
 }
 

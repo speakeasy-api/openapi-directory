@@ -15,17 +15,21 @@ const (
 	POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnumDescribeAwsNetworkPerformanceMetricSubscriptions POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum = "DescribeAwsNetworkPerformanceMetricSubscriptions"
 )
 
+func (e POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum) ToPointer() *POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAwsNetworkPerformanceMetricSubscriptions":
-		*e = POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum(s)
+		*e = POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeAwsNetworkPerformanceMetricSubscriptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnumTwoThousandAndSixteen1115 POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum) ToPointer() *POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum(s)
+		*e = POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeAwsNetworkPerformanceMetricSubscriptionsVersionEnum: %v", v)
 	}
 }
 

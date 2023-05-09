@@ -36,7 +36,10 @@ func newStatsFindMarketplaceStatistics(defaultClient, securityClient HTTPClient,
 // Return a timeseries nested array containing date and value. Example: [[1406520000000,2],[1406606400000,34],[1406692800000,245],...]
 func (s *statsFindMarketplaceStatistics) GetStatsSeriesPeriodFields(ctx context.Context, request operations.GetStatsSeriesPeriodFieldsRequest) (*operations.GetStatsSeriesPeriodFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/series/{period}/{fields}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stats/series/{period}/{fields}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +136,10 @@ func (s *statsFindMarketplaceStatistics) GetStatsTotal(ctx context.Context, requ
 // increment a statistics field
 func (s *statsFindMarketplaceStatistics) PostStatsIncrementField(ctx context.Context, request operations.PostStatsIncrementFieldRequest) (*operations.PostStatsIncrementFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stats/increment/{field}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stats/increment/{field}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

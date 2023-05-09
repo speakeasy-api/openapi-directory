@@ -15,20 +15,24 @@ const (
 	DifferenceTypeEnumNotEqual DifferenceTypeEnum = "NOT_EQUAL"
 )
 
+func (e DifferenceTypeEnum) ToPointer() *DifferenceTypeEnum {
+	return &e
+}
+
 func (e *DifferenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADD":
 		fallthrough
 	case "REMOVE":
 		fallthrough
 	case "NOT_EQUAL":
-		*e = DifferenceTypeEnum(s)
+		*e = DifferenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DifferenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DifferenceTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	OBExternalLimitType1CodeEnumTemporary OBExternalLimitType1CodeEnum = "Temporary"
 )
 
+func (e OBExternalLimitType1CodeEnum) ToPointer() *OBExternalLimitType1CodeEnum {
+	return &e
+}
+
 func (e *OBExternalLimitType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Available":
 		fallthrough
 	case "Credit":
@@ -32,9 +36,9 @@ func (e *OBExternalLimitType1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "Pre-Agreed":
 		fallthrough
 	case "Temporary":
-		*e = OBExternalLimitType1CodeEnum(s)
+		*e = OBExternalLimitType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBExternalLimitType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBExternalLimitType1CodeEnum: %v", v)
 	}
 }

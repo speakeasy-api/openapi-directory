@@ -16,17 +16,21 @@ const (
 	SearchFacesByImageXAmzTargetEnumRekognitionServiceSearchFacesByImage SearchFacesByImageXAmzTargetEnum = "RekognitionService.SearchFacesByImage"
 )
 
+func (e SearchFacesByImageXAmzTargetEnum) ToPointer() *SearchFacesByImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchFacesByImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.SearchFacesByImage":
-		*e = SearchFacesByImageXAmzTargetEnum(s)
+		*e = SearchFacesByImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchFacesByImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchFacesByImageXAmzTargetEnum: %v", v)
 	}
 }
 

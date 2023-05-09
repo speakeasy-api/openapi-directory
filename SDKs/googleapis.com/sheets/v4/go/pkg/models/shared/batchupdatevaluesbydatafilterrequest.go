@@ -15,19 +15,23 @@ const (
 	BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnumFormattedString BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum = "FORMATTED_STRING"
 )
 
+func (e BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum) ToPointer() *BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum {
+	return &e
+}
+
 func (e *BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIAL_NUMBER":
 		fallthrough
 	case "FORMATTED_STRING":
-		*e = BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum(s)
+		*e = BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestResponseDateTimeRenderOptionEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnumFormula          BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum = "FORMULA"
 )
 
+func (e BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum) ToPointer() *BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum {
+	return &e
+}
+
 func (e *BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMATTED_VALUE":
 		fallthrough
 	case "UNFORMATTED_VALUE":
 		fallthrough
 	case "FORMULA":
-		*e = BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum(s)
+		*e = BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestResponseValueRenderOptionEnum: %v", v)
 	}
 }
 
@@ -67,21 +75,25 @@ const (
 	BatchUpdateValuesByDataFilterRequestValueInputOptionEnumUserEntered                 BatchUpdateValuesByDataFilterRequestValueInputOptionEnum = "USER_ENTERED"
 )
 
+func (e BatchUpdateValuesByDataFilterRequestValueInputOptionEnum) ToPointer() *BatchUpdateValuesByDataFilterRequestValueInputOptionEnum {
+	return &e
+}
+
 func (e *BatchUpdateValuesByDataFilterRequestValueInputOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INPUT_VALUE_OPTION_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "USER_ENTERED":
-		*e = BatchUpdateValuesByDataFilterRequestValueInputOptionEnum(s)
+		*e = BatchUpdateValuesByDataFilterRequestValueInputOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestValueInputOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateValuesByDataFilterRequestValueInputOptionEnum: %v", v)
 	}
 }
 

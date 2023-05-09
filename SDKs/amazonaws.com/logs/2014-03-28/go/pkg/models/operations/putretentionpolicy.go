@@ -16,17 +16,21 @@ const (
 	PutRetentionPolicyXAmzTargetEnumLogs20140328PutRetentionPolicy PutRetentionPolicyXAmzTargetEnum = "Logs_20140328.PutRetentionPolicy"
 )
 
+func (e PutRetentionPolicyXAmzTargetEnum) ToPointer() *PutRetentionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRetentionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.PutRetentionPolicy":
-		*e = PutRetentionPolicyXAmzTargetEnum(s)
+		*e = PutRetentionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRetentionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRetentionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

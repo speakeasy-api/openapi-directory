@@ -2,42 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VaultMattersAddPermissionsRequest{
-        DollarXgafv: "2",
-        AddMatterPermissionsRequest: &shared.AddMatterPermissionsRequest{
-            CcMe: false,
-            MatterPermission: &shared.MatterPermission{
-                AccountID: "provident",
-                Role: "OWNER",
-            },
-            SendEmails: false,
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        MatterID: "vel",
-        OauthToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Matters.VaultMattersAddPermissions(ctx, req, operations.VaultMattersAddPermissionsSecurity{
+    res, err := s.Matters.VaultMattersAddPermissions(ctx, operations.VaultMattersAddPermissionsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AddMatterPermissionsRequest: &shared.AddMatterPermissionsRequest{
+            CcMe: sdk.Bool(false),
+            MatterPermission: &shared.MatterPermission{
+                AccountID: sdk.String("provident"),
+                Role: shared.MatterPermissionRoleEnumOwner.ToPointer(),
+            },
+            SendEmails: sdk.Bool(false),
+        },
+        AccessToken: sdk.String("quibusdam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        MatterID: "vel",
+        OauthToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    }, operations.VaultMattersAddPermissionsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

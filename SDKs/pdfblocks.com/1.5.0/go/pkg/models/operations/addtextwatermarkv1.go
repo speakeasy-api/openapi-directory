@@ -18,12 +18,16 @@ const (
 	AddTextWatermarkV1RequestBodyColorEnumBlack AddTextWatermarkV1RequestBodyColorEnum = "Black"
 )
 
+func (e AddTextWatermarkV1RequestBodyColorEnum) ToPointer() *AddTextWatermarkV1RequestBodyColorEnum {
+	return &e
+}
+
 func (e *AddTextWatermarkV1RequestBodyColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Red":
 		fallthrough
 	case "Blue":
@@ -31,10 +35,10 @@ func (e *AddTextWatermarkV1RequestBodyColorEnum) UnmarshalJSON(data []byte) erro
 	case "Gray":
 		fallthrough
 	case "Black":
-		*e = AddTextWatermarkV1RequestBodyColorEnum(s)
+		*e = AddTextWatermarkV1RequestBodyColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTextWatermarkV1RequestBodyColorEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTextWatermarkV1RequestBodyColorEnum: %v", v)
 	}
 }
 

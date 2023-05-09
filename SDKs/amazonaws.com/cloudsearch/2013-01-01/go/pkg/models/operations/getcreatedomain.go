@@ -15,17 +15,21 @@ const (
 	GETCreateDomainActionEnumCreateDomain GETCreateDomainActionEnum = "CreateDomain"
 )
 
+func (e GETCreateDomainActionEnum) ToPointer() *GETCreateDomainActionEnum {
+	return &e
+}
+
 func (e *GETCreateDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDomain":
-		*e = GETCreateDomainActionEnum(s)
+		*e = GETCreateDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDomainVersionEnumTwoThousandAndThirteen0101 GETCreateDomainVersionEnum = "2013-01-01"
 )
 
+func (e GETCreateDomainVersionEnum) ToPointer() *GETCreateDomainVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETCreateDomainVersionEnum(s)
+		*e = GETCreateDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDomainVersionEnum: %v", v)
 	}
 }
 

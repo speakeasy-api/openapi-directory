@@ -23,12 +23,16 @@ const (
 	ConfluenceAttachmentFieldNameEnumVersion     ConfluenceAttachmentFieldNameEnum = "VERSION"
 )
 
+func (e ConfluenceAttachmentFieldNameEnum) ToPointer() *ConfluenceAttachmentFieldNameEnum {
+	return &e
+}
+
 func (e *ConfluenceAttachmentFieldNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHOR":
 		fallthrough
 	case "CONTENT_TYPE":
@@ -50,9 +54,9 @@ func (e *ConfluenceAttachmentFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "URL":
 		fallthrough
 	case "VERSION":
-		*e = ConfluenceAttachmentFieldNameEnum(s)
+		*e = ConfluenceAttachmentFieldNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfluenceAttachmentFieldNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfluenceAttachmentFieldNameEnum: %v", v)
 	}
 }

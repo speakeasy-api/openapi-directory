@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,10 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.CreateGameRequest{
+    ctx := context.Background()
+    res, err := s.CreateGame(ctx, operations.CreateGameRequest{
         RequestBody: operations.CreateGameRequestBody{
-            ClientToken: "corrupti",
-            Description: "provident",
+            ClientToken: sdk.String("corrupti"),
+            Description: sdk.String("provident"),
             GameName: "distinctio",
             Tags: map[string]string{
                 "unde": "nulla",
@@ -29,17 +29,14 @@ func main() {
                 "deserunt": "suscipit",
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateGame(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

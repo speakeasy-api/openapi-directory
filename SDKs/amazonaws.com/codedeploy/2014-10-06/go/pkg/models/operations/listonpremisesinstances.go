@@ -16,17 +16,21 @@ const (
 	ListOnPremisesInstancesXAmzTargetEnumCodeDeploy20141006ListOnPremisesInstances ListOnPremisesInstancesXAmzTargetEnum = "CodeDeploy_20141006.ListOnPremisesInstances"
 )
 
+func (e ListOnPremisesInstancesXAmzTargetEnum) ToPointer() *ListOnPremisesInstancesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListOnPremisesInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.ListOnPremisesInstances":
-		*e = ListOnPremisesInstancesXAmzTargetEnum(s)
+		*e = ListOnPremisesInstancesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOnPremisesInstancesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOnPremisesInstancesXAmzTargetEnum: %v", v)
 	}
 }
 

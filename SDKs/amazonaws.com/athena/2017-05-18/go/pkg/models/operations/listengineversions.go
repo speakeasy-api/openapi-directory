@@ -16,17 +16,21 @@ const (
 	ListEngineVersionsXAmzTargetEnumAmazonAthenaListEngineVersions ListEngineVersionsXAmzTargetEnum = "AmazonAthena.ListEngineVersions"
 )
 
+func (e ListEngineVersionsXAmzTargetEnum) ToPointer() *ListEngineVersionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEngineVersionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.ListEngineVersions":
-		*e = ListEngineVersionsXAmzTargetEnum(s)
+		*e = ListEngineVersionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEngineVersionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEngineVersionsXAmzTargetEnum: %v", v)
 	}
 }
 

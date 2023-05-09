@@ -34,7 +34,10 @@ func newAnalyticsOptimisations(defaultClient, securityClient HTTPClient, serverU
 // CopyOptimisation - Copy product optimisations between 2 channels
 func (s *analyticsOptimisations) CopyOptimisation(ctx context.Context, request operations.CopyOptimisationRequest) (*operations.CopyOptimisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CopyOptimisationRequest", "json")
 	if err != nil {
@@ -105,7 +108,10 @@ func (s *analyticsOptimisations) CopyOptimisation(ctx context.Context, request o
 // This operation is used at the bottom of the analytics page result.
 func (s *analyticsOptimisations) Optimise(ctx context.Context, request operations.OptimiseRequest) (*operations.OptimiseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OptimiseRequest", "json")
 	if err != nil {
@@ -167,7 +173,10 @@ func (s *analyticsOptimisations) Optimise(ctx context.Context, request operation
 // This operation is used at the bottom of the analytics page result.
 func (s *analyticsOptimisations) OptimiseAll(ctx context.Context, request operations.OptimiseAllRequest) (*operations.OptimiseAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/all/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/all/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OptimiseAllRequest", "json")
 	if err != nil {
@@ -228,7 +237,10 @@ func (s *analyticsOptimisations) OptimiseAll(ctx context.Context, request operat
 // This operation will reenable or disable products's category for every channel indicated in the body.
 func (s *analyticsOptimisations) OptimiseByCategory(ctx context.Context, request operations.OptimiseByCategoryRequest) (*operations.OptimiseByCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/bycategory/{catalogCategoryId}/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -286,7 +298,10 @@ func (s *analyticsOptimisations) OptimiseByCategory(ctx context.Context, request
 // Apply the operation on every product on this channel.
 func (s *analyticsOptimisations) OptimiseByChannel(ctx context.Context, request operations.OptimiseByChannelRequest) (*operations.OptimiseByChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/bychannel/{channelId}/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -337,7 +352,10 @@ func (s *analyticsOptimisations) OptimiseByChannel(ctx context.Context, request 
 // This operation will reenable or disable this product for every channel indicated in the body.
 func (s *analyticsOptimisations) OptimiseByProduct(ctx context.Context, request operations.OptimiseByProductRequest) (*operations.OptimiseByProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/optimisations/byproduct/{productId}/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

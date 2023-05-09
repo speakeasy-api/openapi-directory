@@ -25,12 +25,16 @@ const (
 	ValidatePolicyRequestBodyLocaleEnumZhTw ValidatePolicyRequestBodyLocaleEnum = "ZH_TW"
 )
 
+func (e ValidatePolicyRequestBodyLocaleEnum) ToPointer() *ValidatePolicyRequestBodyLocaleEnum {
+	return &e
+}
+
 func (e *ValidatePolicyRequestBodyLocaleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DE":
 		fallthrough
 	case "EN":
@@ -50,10 +54,10 @@ func (e *ValidatePolicyRequestBodyLocaleEnum) UnmarshalJSON(data []byte) error {
 	case "ZH_CN":
 		fallthrough
 	case "ZH_TW":
-		*e = ValidatePolicyRequestBodyLocaleEnum(s)
+		*e = ValidatePolicyRequestBodyLocaleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyLocaleEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyLocaleEnum: %v", v)
 	}
 }
 
@@ -66,21 +70,25 @@ const (
 	ValidatePolicyRequestBodyPolicyTypeEnumServiceControlPolicy ValidatePolicyRequestBodyPolicyTypeEnum = "SERVICE_CONTROL_POLICY"
 )
 
+func (e ValidatePolicyRequestBodyPolicyTypeEnum) ToPointer() *ValidatePolicyRequestBodyPolicyTypeEnum {
+	return &e
+}
+
 func (e *ValidatePolicyRequestBodyPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IDENTITY_POLICY":
 		fallthrough
 	case "RESOURCE_POLICY":
 		fallthrough
 	case "SERVICE_CONTROL_POLICY":
-		*e = ValidatePolicyRequestBodyPolicyTypeEnum(s)
+		*e = ValidatePolicyRequestBodyPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyPolicyTypeEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	ValidatePolicyRequestBodyValidatePolicyResourceTypeEnumAwsIamAssumeRolePolicyDocument ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum = "AWS::IAM::AssumeRolePolicyDocument"
 )
 
+func (e ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum) ToPointer() *ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum {
+	return &e
+}
+
 func (e *ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS::S3::Bucket":
 		fallthrough
 	case "AWS::S3::AccessPoint":
@@ -110,10 +122,10 @@ func (e *ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum) UnmarshalJSON(
 	case "AWS::S3ObjectLambda::AccessPoint":
 		fallthrough
 	case "AWS::IAM::AssumeRolePolicyDocument":
-		*e = ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum(s)
+		*e = ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum: %v", v)
 	}
 }
 

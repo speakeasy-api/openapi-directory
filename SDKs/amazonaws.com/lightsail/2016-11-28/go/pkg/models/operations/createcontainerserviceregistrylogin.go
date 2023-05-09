@@ -16,17 +16,21 @@ const (
 	CreateContainerServiceRegistryLoginXAmzTargetEnumLightsail20161128CreateContainerServiceRegistryLogin CreateContainerServiceRegistryLoginXAmzTargetEnum = "Lightsail_20161128.CreateContainerServiceRegistryLogin"
 )
 
+func (e CreateContainerServiceRegistryLoginXAmzTargetEnum) ToPointer() *CreateContainerServiceRegistryLoginXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateContainerServiceRegistryLoginXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateContainerServiceRegistryLogin":
-		*e = CreateContainerServiceRegistryLoginXAmzTargetEnum(s)
+		*e = CreateContainerServiceRegistryLoginXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateContainerServiceRegistryLoginXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateContainerServiceRegistryLoginXAmzTargetEnum: %v", v)
 	}
 }
 

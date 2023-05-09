@@ -16,17 +16,21 @@ const (
 	DescribeSubnetGroupsXAmzTargetEnumAmazonMemoryDbDescribeSubnetGroups DescribeSubnetGroupsXAmzTargetEnum = "AmazonMemoryDB.DescribeSubnetGroups"
 )
 
+func (e DescribeSubnetGroupsXAmzTargetEnum) ToPointer() *DescribeSubnetGroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSubnetGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.DescribeSubnetGroups":
-		*e = DescribeSubnetGroupsXAmzTargetEnum(s)
+		*e = DescribeSubnetGroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSubnetGroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSubnetGroupsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	GetSpacesIDPersonsAllValidatedEnumFalse GetSpacesIDPersonsAllValidatedEnum = "false"
 )
 
+func (e GetSpacesIDPersonsAllValidatedEnum) ToPointer() *GetSpacesIDPersonsAllValidatedEnum {
+	return &e
+}
+
 func (e *GetSpacesIDPersonsAllValidatedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GetSpacesIDPersonsAllValidatedEnum(s)
+		*e = GetSpacesIDPersonsAllValidatedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesIDPersonsAllValidatedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesIDPersonsAllValidatedEnum: %v", v)
 	}
 }
 

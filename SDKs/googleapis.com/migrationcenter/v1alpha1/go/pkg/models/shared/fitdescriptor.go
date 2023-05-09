@@ -17,12 +17,16 @@ const (
 	FitDescriptorFitLevelEnumRequiresEffort      FitDescriptorFitLevelEnum = "REQUIRES_EFFORT"
 )
 
+func (e FitDescriptorFitLevelEnum) ToPointer() *FitDescriptorFitLevelEnum {
+	return &e
+}
+
 func (e *FitDescriptorFitLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIT_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "FIT":
@@ -30,10 +34,10 @@ func (e *FitDescriptorFitLevelEnum) UnmarshalJSON(data []byte) error {
 	case "NO_FIT":
 		fallthrough
 	case "REQUIRES_EFFORT":
-		*e = FitDescriptorFitLevelEnum(s)
+		*e = FitDescriptorFitLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FitDescriptorFitLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for FitDescriptorFitLevelEnum: %v", v)
 	}
 }
 

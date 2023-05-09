@@ -20,21 +20,25 @@ const (
 	PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnumAdn     PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum = "adn"
 )
 
+func (e PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum) ToPointer() *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no":
 		fallthrough
 	case "manager":
 		fallthrough
 	case "adn":
-		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum(s)
+		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyClientManagementEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnumWrite PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum = "write"
 )
 
+func (e PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum) ToPointer() *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
-		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum(s)
+		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyFoldersRightEnum: %v", v)
 	}
 }
 
@@ -76,12 +84,16 @@ const (
 	PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnumCollaborator PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum = "collaborator"
 )
 
+func (e PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum) ToPointer() *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "guest":
 		fallthrough
 	case "owner":
@@ -91,10 +103,10 @@ func (e *PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum) UnmarshalJS
 	case "assistant":
 		fallthrough
 	case "collaborator":
-		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum(s)
+		*e = PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDPersonsIDInvitationRequestBodyPlayerEnum: %v", v)
 	}
 }
 

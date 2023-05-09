@@ -28,12 +28,16 @@ const (
 	MediationReportSpecDimensionsEnumServingRestriction   MediationReportSpecDimensionsEnum = "SERVING_RESTRICTION"
 )
 
+func (e MediationReportSpecDimensionsEnum) ToPointer() *MediationReportSpecDimensionsEnum {
+	return &e
+}
+
 func (e *MediationReportSpecDimensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -65,10 +69,10 @@ func (e *MediationReportSpecDimensionsEnum) UnmarshalJSON(data []byte) error {
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = MediationReportSpecDimensionsEnum(s)
+		*e = MediationReportSpecDimensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecDimensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecDimensionsEnum: %v", v)
 	}
 }
 
@@ -86,12 +90,16 @@ const (
 	MediationReportSpecMetricsEnumObservedEcpm      MediationReportSpecMetricsEnum = "OBSERVED_ECPM"
 )
 
+func (e MediationReportSpecMetricsEnum) ToPointer() *MediationReportSpecMetricsEnum {
+	return &e
+}
+
 func (e *MediationReportSpecMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "AD_REQUESTS":
@@ -109,10 +117,10 @@ func (e *MediationReportSpecMetricsEnum) UnmarshalJSON(data []byte) error {
 	case "MATCH_RATE":
 		fallthrough
 	case "OBSERVED_ECPM":
-		*e = MediationReportSpecMetricsEnum(s)
+		*e = MediationReportSpecMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediationReportSpecMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for MediationReportSpecMetricsEnum: %v", v)
 	}
 }
 

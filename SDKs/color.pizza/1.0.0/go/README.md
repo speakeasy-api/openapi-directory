@@ -13,25 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/color.pizza/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
-        List: "nbsIscc",
-        Noduplicates: false,
-        Values: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Get(ctx, req)
+    res, err := s.Get(ctx, operations.GetRequest{
+        List: shared.PossibleListsEnumNbsIscc.ToPointer(),
+        Noduplicates: sdk.Bool(false),
+        Values: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,12 +44,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Get` - Get all colors of the default color name list
-* `GetLists` - Get all colors of the default color name list
-* `GetNames` - Get all colors of the default color name list
-* `GetSwatch` - Generate a color swatch for any color
+* [Get](docs/sdk/README.md#get) - Get all colors of the default color name list
+* [GetLists](docs/sdk/README.md#getlists) - Get all colors of the default color name list
+* [GetNames](docs/sdk/README.md#getnames) - Get all colors of the default color name list
+* [GetSwatch](docs/sdk/README.md#getswatch) - Generate a color swatch for any color
 <!-- End SDK Available Operations -->
 
 ### Maturity

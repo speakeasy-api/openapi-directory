@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Webcomic of romance, sarcasm, math, and language.
 // https://xkcd.com/json.html
 type SDK struct {
@@ -140,7 +155,10 @@ func (s *SDK) GetInfo0JSON(ctx context.Context) (*operations.GetInfo0JSONRespons
 // GetComicIDInfo0JSON - Fetch comics and metadata  by comic id.
 func (s *SDK) GetComicIDInfo0JSON(ctx context.Context, request operations.GetComicIDInfo0JSONRequest) (*operations.GetComicIDInfo0JSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{comicId}/info.0.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

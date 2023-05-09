@@ -14,18 +14,22 @@ const (
 	MessageActionTypeEnumSuppress MessageActionTypeEnum = "SUPPRESS"
 )
 
+func (e MessageActionTypeEnum) ToPointer() *MessageActionTypeEnum {
+	return &e
+}
+
 func (e *MessageActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESEND":
 		fallthrough
 	case "SUPPRESS":
-		*e = MessageActionTypeEnum(s)
+		*e = MessageActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageActionTypeEnum: %v", v)
 	}
 }

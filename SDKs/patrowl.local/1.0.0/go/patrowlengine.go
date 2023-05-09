@@ -38,7 +38,10 @@ func newPatrowlEngine(defaultClient, securityClient HTTPClient, serverURL, langu
 // Clean scan identified by id.
 func (s *patrowlEngine) CleanScanPage(ctx context.Context, request operations.CleanScanPageRequest) (*operations.CleanScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/clean/{scanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/clean/{scanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +131,10 @@ func (s *patrowlEngine) CleanScansPage(ctx context.Context) (*operations.CleanSc
 // Get findings on finished scans.
 func (s *patrowlEngine) GetFindingPage(ctx context.Context, request operations.GetFindingPageRequest) (*operations.GetFindingPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/getfindings/{scanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/getfindings/{scanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +234,10 @@ func (s *patrowlEngine) StartScanPage(ctx context.Context, request shared.ScanDe
 // Status of a scan identified by id.
 func (s *patrowlEngine) StatusScanPage(ctx context.Context, request operations.StatusScanPageRequest) (*operations.StatusScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status/{scanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/status/{scanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -318,7 +327,10 @@ func (s *patrowlEngine) StatusScansPage(ctx context.Context) (*operations.Status
 // Stop a scan identified by id.
 func (s *patrowlEngine) StopScanPage(ctx context.Context, request operations.StopScanPageRequest) (*operations.StopScanPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stop/{scanId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stop/{scanId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

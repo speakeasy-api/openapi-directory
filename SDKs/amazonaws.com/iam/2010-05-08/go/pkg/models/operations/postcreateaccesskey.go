@@ -15,17 +15,21 @@ const (
 	POSTCreateAccessKeyActionEnumCreateAccessKey POSTCreateAccessKeyActionEnum = "CreateAccessKey"
 )
 
+func (e POSTCreateAccessKeyActionEnum) ToPointer() *POSTCreateAccessKeyActionEnum {
+	return &e
+}
+
 func (e *POSTCreateAccessKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateAccessKey":
-		*e = POSTCreateAccessKeyActionEnum(s)
+		*e = POSTCreateAccessKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAccessKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAccessKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateAccessKeyVersionEnumTwoThousandAndTen0508 POSTCreateAccessKeyVersionEnum = "2010-05-08"
 )
 
+func (e POSTCreateAccessKeyVersionEnum) ToPointer() *POSTCreateAccessKeyVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTCreateAccessKeyVersionEnum(s)
+		*e = POSTCreateAccessKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateAccessKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateAccessKeyVersionEnum: %v", v)
 	}
 }
 

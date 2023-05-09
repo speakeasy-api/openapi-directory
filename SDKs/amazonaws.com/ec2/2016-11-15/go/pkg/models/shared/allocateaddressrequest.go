@@ -98,12 +98,16 @@ const (
 	AllocateAddressRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       AllocateAddressRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e AllocateAddressRequestTagSpecificationsResourceTypeEnum) ToPointer() *AllocateAddressRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *AllocateAddressRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *AllocateAddressRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = AllocateAddressRequestTagSpecificationsResourceTypeEnum(s)
+		*e = AllocateAddressRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllocateAddressRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AllocateAddressRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

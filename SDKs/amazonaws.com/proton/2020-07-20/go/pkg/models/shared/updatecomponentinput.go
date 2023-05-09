@@ -3,6 +3,7 @@
 package shared
 
 type UpdateComponentInput struct {
+	ClientToken         *string                           `json:"clientToken,omitempty"`
 	DeploymentType      ComponentDeploymentUpdateTypeEnum `json:"deploymentType"`
 	Description         *string                           `json:"description,omitempty"`
 	Name                string                            `json:"name"`

@@ -19,12 +19,16 @@ const (
 	SnapshotStateEnumRecovering  SnapshotStateEnum = "recovering"
 )
 
+func (e SnapshotStateEnum) ToPointer() *SnapshotStateEnum {
+	return &e
+}
+
 func (e *SnapshotStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "completed":
@@ -34,10 +38,10 @@ func (e *SnapshotStateEnum) UnmarshalJSON(data []byte) error {
 	case "recoverable":
 		fallthrough
 	case "recovering":
-		*e = SnapshotStateEnum(s)
+		*e = SnapshotStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotStateEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	SnapshotStorageTierEnumStandard SnapshotStorageTierEnum = "standard"
 )
 
+func (e SnapshotStorageTierEnum) ToPointer() *SnapshotStorageTierEnum {
+	return &e
+}
+
 func (e *SnapshotStorageTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "archive":
 		fallthrough
 	case "standard":
-		*e = SnapshotStorageTierEnum(s)
+		*e = SnapshotStorageTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotStorageTierEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotStorageTierEnum: %v", v)
 	}
 }
 

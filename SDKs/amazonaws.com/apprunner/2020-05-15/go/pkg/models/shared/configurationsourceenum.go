@@ -14,18 +14,22 @@ const (
 	ConfigurationSourceEnumAPI        ConfigurationSourceEnum = "API"
 )
 
+func (e ConfigurationSourceEnum) ToPointer() *ConfigurationSourceEnum {
+	return &e
+}
+
 func (e *ConfigurationSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPOSITORY":
 		fallthrough
 	case "API":
-		*e = ConfigurationSourceEnum(s)
+		*e = ConfigurationSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigurationSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigurationSourceEnum: %v", v)
 	}
 }

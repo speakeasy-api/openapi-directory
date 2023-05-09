@@ -16,21 +16,25 @@ const (
 	InventoryCategoryCategoryTypeEnumService InventoryCategoryCategoryTypeEnum = "service"
 )
 
+func (e InventoryCategoryCategoryTypeEnum) ToPointer() *InventoryCategoryCategoryTypeEnum {
+	return &e
+}
+
 func (e *InventoryCategoryCategoryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vaccine":
 		fallthrough
 	case "product":
 		fallthrough
 	case "service":
-		*e = InventoryCategoryCategoryTypeEnum(s)
+		*e = InventoryCategoryCategoryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InventoryCategoryCategoryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InventoryCategoryCategoryTypeEnum: %v", v)
 	}
 }
 

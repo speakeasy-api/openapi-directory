@@ -15,17 +15,21 @@ const (
 	GETDetachRolePolicyActionEnumDetachRolePolicy GETDetachRolePolicyActionEnum = "DetachRolePolicy"
 )
 
+func (e GETDetachRolePolicyActionEnum) ToPointer() *GETDetachRolePolicyActionEnum {
+	return &e
+}
+
 func (e *GETDetachRolePolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetachRolePolicy":
-		*e = GETDetachRolePolicyActionEnum(s)
+		*e = GETDetachRolePolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachRolePolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachRolePolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDetachRolePolicyVersionEnumTwoThousandAndTen0508 GETDetachRolePolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETDetachRolePolicyVersionEnum) ToPointer() *GETDetachRolePolicyVersionEnum {
+	return &e
+}
+
 func (e *GETDetachRolePolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDetachRolePolicyVersionEnum(s)
+		*e = GETDetachRolePolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetachRolePolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetachRolePolicyVersionEnum: %v", v)
 	}
 }
 

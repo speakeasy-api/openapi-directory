@@ -16,12 +16,16 @@ const (
 	OpsItemFilterOperatorEnumLessThan    OpsItemFilterOperatorEnum = "LessThan"
 )
 
+func (e OpsItemFilterOperatorEnum) ToPointer() *OpsItemFilterOperatorEnum {
+	return &e
+}
+
 func (e *OpsItemFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equal":
 		fallthrough
 	case "Contains":
@@ -29,9 +33,9 @@ func (e *OpsItemFilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "GreaterThan":
 		fallthrough
 	case "LessThan":
-		*e = OpsItemFilterOperatorEnum(s)
+		*e = OpsItemFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsItemFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsItemFilterOperatorEnum: %v", v)
 	}
 }

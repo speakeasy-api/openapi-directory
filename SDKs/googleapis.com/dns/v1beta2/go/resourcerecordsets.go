@@ -34,7 +34,10 @@ func newResourceRecordSets(defaultClient, securityClient HTTPClient, serverURL, 
 // DNSResourceRecordSetsCreate - Creates a new ResourceRecordSet.
 func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, request operations.DNSResourceRecordSetsCreateRequest, security operations.DNSResourceRecordSetsCreateSecurity) (*operations.DNSResourceRecordSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceRecordSet", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *resourceRecordSets) DNSResourceRecordSetsCreate(ctx context.Context, re
 // DNSResourceRecordSetsDelete - Deletes a previously created ResourceRecordSet.
 func (s *resourceRecordSets) DNSResourceRecordSetsDelete(ctx context.Context, request operations.DNSResourceRecordSetsDeleteRequest, security operations.DNSResourceRecordSetsDeleteSecurity) (*operations.DNSResourceRecordSetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *resourceRecordSets) DNSResourceRecordSetsDelete(ctx context.Context, re
 // DNSResourceRecordSetsGet - Fetches the representation of an existing ResourceRecordSet.
 func (s *resourceRecordSets) DNSResourceRecordSetsGet(ctx context.Context, request operations.DNSResourceRecordSetsGetRequest, security operations.DNSResourceRecordSetsGetSecurity) (*operations.DNSResourceRecordSetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *resourceRecordSets) DNSResourceRecordSetsGet(ctx context.Context, reque
 // DNSResourceRecordSetsList - Enumerates ResourceRecordSets that you have created but not yet deleted.
 func (s *resourceRecordSets) DNSResourceRecordSetsList(ctx context.Context, request operations.DNSResourceRecordSetsListRequest, security operations.DNSResourceRecordSetsListSecurity) (*operations.DNSResourceRecordSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *resourceRecordSets) DNSResourceRecordSetsList(ctx context.Context, requ
 // DNSResourceRecordSetsPatch - Applies a partial update to an existing ResourceRecordSet.
 func (s *resourceRecordSets) DNSResourceRecordSetsPatch(ctx context.Context, request operations.DNSResourceRecordSetsPatchRequest, security operations.DNSResourceRecordSetsPatchSecurity) (*operations.DNSResourceRecordSetsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1beta2/projects/{project}/managedZones/{managedZone}/rrsets/{name}/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResourceRecordSet", "json")
 	if err != nil {

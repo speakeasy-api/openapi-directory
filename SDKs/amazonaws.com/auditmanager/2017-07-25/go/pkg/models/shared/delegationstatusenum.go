@@ -15,20 +15,24 @@ const (
 	DelegationStatusEnumComplete    DelegationStatusEnum = "COMPLETE"
 )
 
+func (e DelegationStatusEnum) ToPointer() *DelegationStatusEnum {
+	return &e
+}
+
 func (e *DelegationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "UNDER_REVIEW":
 		fallthrough
 	case "COMPLETE":
-		*e = DelegationStatusEnum(s)
+		*e = DelegationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DelegationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DelegationStatusEnum: %v", v)
 	}
 }

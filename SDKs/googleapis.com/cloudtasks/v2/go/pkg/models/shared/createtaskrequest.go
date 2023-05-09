@@ -16,21 +16,25 @@ const (
 	CreateTaskRequestResponseViewEnumFull            CreateTaskRequestResponseViewEnum = "FULL"
 )
 
+func (e CreateTaskRequestResponseViewEnum) ToPointer() *CreateTaskRequestResponseViewEnum {
+	return &e
+}
+
 func (e *CreateTaskRequestResponseViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = CreateTaskRequestResponseViewEnum(s)
+		*e = CreateTaskRequestResponseViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTaskRequestResponseViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTaskRequestResponseViewEnum: %v", v)
 	}
 }
 

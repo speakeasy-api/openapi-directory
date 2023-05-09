@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/ivs-realtim
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateParticipantTokenRequest{
+    ctx := context.Background()
+    res, err := s.CreateParticipantToken(ctx, operations.CreateParticipantTokenRequest{
         RequestBody: operations.CreateParticipantTokenRequestBody{
             Attributes: map[string]string{
                 "provident": "distinctio",
@@ -36,26 +37,23 @@ func main() {
                 "nulla": "corrupti",
             },
             Capabilities: []shared.ParticipantTokenCapabilityEnum{
-                "PUBLISH",
-                "SUBSCRIBE",
-                "SUBSCRIBE",
-                "PUBLISH",
+                shared.ParticipantTokenCapabilityEnumPublish,
+                shared.ParticipantTokenCapabilityEnumSubscribe,
+                shared.ParticipantTokenCapabilityEnumSubscribe,
+                shared.ParticipantTokenCapabilityEnumPublish,
             },
-            Duration: 437587,
+            Duration: sdk.Int64(437587),
             StageArn: "magnam",
-            UserID: "debitis",
+            UserID: sdk.String("debitis"),
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateParticipantToken(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -70,18 +68,18 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateParticipantToken` - <p>Creates an additional token for a specified stage. This can be done after stage creation or when tokens expire. Tokens always are scoped to the stage for which they are created.</p> <p>Encryption keys are owned by Amazon IVS and never used directly by your application.</p>
-* `CreateStage` - Creates a new stage (and optionally participant tokens).
-* `DeleteStage` - Shuts down and deletes the specified stage (disconnecting all participants).
-* `DisconnectParticipant` - Disconnects a specified participant and revokes the participant permanently from a specified stage.
-* `GetStage` - Gets information for the specified stage.
-* `ListStages` - Gets summary information about all stages in your account, in the AWS region where the API request is processed.
-* `ListTagsForResource` - Gets information about AWS tags for the specified ARN.
-* `TagResource` - Adds or updates tags for the AWS resource with the specified ARN.
-* `UntagResource` - Removes tags from the resource with the specified ARN.
-* `UpdateStage` - Updates a stage’s configuration.
+* [CreateParticipantToken](docs/sdk/README.md#createparticipanttoken) - <p>Creates an additional token for a specified stage. This can be done after stage creation or when tokens expire. Tokens always are scoped to the stage for which they are created.</p> <p>Encryption keys are owned by Amazon IVS and never used directly by your application.</p>
+* [CreateStage](docs/sdk/README.md#createstage) - Creates a new stage (and optionally participant tokens).
+* [DeleteStage](docs/sdk/README.md#deletestage) - Shuts down and deletes the specified stage (disconnecting all participants).
+* [DisconnectParticipant](docs/sdk/README.md#disconnectparticipant) - Disconnects a specified participant and revokes the participant permanently from a specified stage.
+* [GetStage](docs/sdk/README.md#getstage) - Gets information for the specified stage.
+* [ListStages](docs/sdk/README.md#liststages) - Gets summary information about all stages in your account, in the AWS region where the API request is processed.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Gets information about AWS tags for the specified ARN.
+* [TagResource](docs/sdk/README.md#tagresource) - Adds or updates tags for the AWS resource with the specified ARN.
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes tags from the resource with the specified ARN.
+* [UpdateStage](docs/sdk/README.md#updatestage) - Updates a stage’s configuration.
 <!-- End SDK Available Operations -->
 
 ### Maturity

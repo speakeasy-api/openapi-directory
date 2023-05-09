@@ -15,19 +15,23 @@ const (
 	EstimationAttachmentAPIModelTypeEnumUploaded EstimationAttachmentAPIModelTypeEnum = "Uploaded"
 )
 
+func (e EstimationAttachmentAPIModelTypeEnum) ToPointer() *EstimationAttachmentAPIModelTypeEnum {
+	return &e
+}
+
 func (e *EstimationAttachmentAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "External":
 		fallthrough
 	case "Uploaded":
-		*e = EstimationAttachmentAPIModelTypeEnum(s)
+		*e = EstimationAttachmentAPIModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationAttachmentAPIModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationAttachmentAPIModelTypeEnum: %v", v)
 	}
 }
 

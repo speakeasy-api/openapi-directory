@@ -6,7 +6,7 @@ package shared
 type GoogleAppsCardV1DecoratedText struct {
 	// The text that appears below `text`. Always truncates.
 	BottomLabel *string `json:"bottomLabel,omitempty"`
-	// A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action. Currently supported in Chat apps (including [dialogs] (https://developers.google.com/chat/how-tos/dialogs) and [card messages] (https://developers.google.com/chat/api/guides/message-formats/cards)) and Google Workspace Add-ons.
+	// A text, icon, or text + icon button that users can click. To make an image a clickable button, specify an Image (not an ImageComponent) and set an `onClick` action.
 	Button *GoogleAppsCardV1Button `json:"button,omitempty"`
 	// An icon displayed in a widget on a card. Supports [built-in](https://developers.google.com/chat/api/guides/message-formats/cards#builtinicons) and [custom](https://developers.google.com/chat/api/guides/message-formats/cards#customicons) icons.
 	EndIcon *GoogleAppsCardV1Icon `json:"endIcon,omitempty"`
@@ -18,7 +18,7 @@ type GoogleAppsCardV1DecoratedText struct {
 	StartIcon *GoogleAppsCardV1Icon `json:"startIcon,omitempty"`
 	// Either a toggle-style switch or a checkbox inside a `decoratedText` widget. Only supported on the `decoratedText` widget.
 	SwitchControl *GoogleAppsCardV1SwitchControl `json:"switchControl,omitempty"`
-	// Required. The primary text. Supports simple formatting. See Text formatting for formatting details.
+	// Required. The primary text. Supports simple formatting. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
 	Text *string `json:"text,omitempty"`
 	// The text that appears above `text`. Always truncates.
 	TopLabel *string `json:"topLabel,omitempty"`

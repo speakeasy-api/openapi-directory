@@ -24,6 +24,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Convert an OSGB36 easting and northing (British National Grid) to WGS84 latitude and longitude.
 // https://www.getthedata.com/bng2latlong - Full documentation
 type SDK struct {
@@ -104,7 +119,10 @@ func New(opts ...SDKOption) *SDK {
 // * error - an error message
 func (s *SDK) GetBng2latlongEastingNorthing(ctx context.Context, request operations.GetBng2latlongEastingNorthingRequest) (*operations.GetBng2latlongEastingNorthingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/bng2latlong/{easting}/{northing}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bng2latlong/{easting}/{northing}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

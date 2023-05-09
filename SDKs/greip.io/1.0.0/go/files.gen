@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -11,9 +12,14 @@ pkg/utils/requestbody.go
 pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
+pkg/models/operations/getasnlookup.go
+pkg/models/operations/getbinlookup.go
 pkg/models/operations/getbulklookup.go
 pkg/models/operations/getcountry.go
 pkg/models/operations/getgeoip.go
 pkg/models/operations/getiplookup.go
 pkg/models/operations/getbadwords.go
+pkg/models/operations/getvalidateemail.go
+pkg/models/operations/getvalidatephone.go
+docs/sdk/README.md
 USAGE.md

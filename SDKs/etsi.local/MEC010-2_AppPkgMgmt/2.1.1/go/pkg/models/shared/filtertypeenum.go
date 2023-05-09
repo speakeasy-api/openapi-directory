@@ -15,18 +15,22 @@ const (
 	FilterTypeEnumPacket FilterTypeEnum = "PACKET"
 )
 
+func (e FilterTypeEnum) ToPointer() *FilterTypeEnum {
+	return &e
+}
+
 func (e *FilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLOW":
 		fallthrough
 	case "PACKET":
-		*e = FilterTypeEnum(s)
+		*e = FilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterTypeEnum: %v", v)
 	}
 }

@@ -31,17 +31,21 @@ const (
 	PlusActivitiesListCollectionEnumPublic PlusActivitiesListCollectionEnum = "public"
 )
 
+func (e PlusActivitiesListCollectionEnum) ToPointer() *PlusActivitiesListCollectionEnum {
+	return &e
+}
+
 func (e *PlusActivitiesListCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
-		*e = PlusActivitiesListCollectionEnum(s)
+		*e = PlusActivitiesListCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlusActivitiesListCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PlusActivitiesListCollectionEnum: %v", v)
 	}
 }
 

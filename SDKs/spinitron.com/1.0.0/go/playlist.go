@@ -98,7 +98,10 @@ func (s *playlist) GetPlaylists(ctx context.Context, request operations.GetPlayl
 // Status 404 is returned if a playlist with {id} does not exist or if it does but starts in the future (with allowed tolerance equals 1 hour in future).
 func (s *playlist) GetPlaylistsID(ctx context.Context, request operations.GetPlaylistsIDRequest) (*operations.GetPlaylistsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

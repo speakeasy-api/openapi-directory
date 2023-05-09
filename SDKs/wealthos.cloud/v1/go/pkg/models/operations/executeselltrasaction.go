@@ -61,19 +61,23 @@ const (
 	ExecuteSellTrasaction409ApplicationJSONStatusEnumComplete   ExecuteSellTrasaction409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e ExecuteSellTrasaction409ApplicationJSONStatusEnum) ToPointer() *ExecuteSellTrasaction409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = ExecuteSellTrasaction409ApplicationJSONStatusEnum(s)
+		*e = ExecuteSellTrasaction409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -129,19 +133,23 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONStatusEnumPartiallySubmitted ExecuteSellTrasaction200ApplicationJSONStatusEnum = "partially_submitted"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONStatusEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "partially_submitted":
-		*e = ExecuteSellTrasaction200ApplicationJSONStatusEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -153,19 +161,23 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnumOut ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum = "out"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsDirectionEnum: %v", v)
 	}
 }
 
@@ -179,12 +191,16 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnumSystem     ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum = "system"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api":
 		fallthrough
 	case "admin_ui":
@@ -192,10 +208,10 @@ func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum) Unmarsha
 	case "file_upload":
 		fallthrough
 	case "system":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsOriginEnum: %v", v)
 	}
 }
 
@@ -213,12 +229,16 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnumCorporateActions ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum = "Corporate actions"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Fees":
 		fallthrough
 	case "Buy":
@@ -236,10 +256,10 @@ func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTy
 	case "Withdrawal":
 		fallthrough
 	case "Corporate actions":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsPrimaryTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -250,19 +270,23 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnumFailed    ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum = "failed"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "failed":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsStatusEnum: %v", v)
 	}
 }
 
@@ -335,12 +359,16 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnumMiscellaneousCorporateActionExercise     ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum = "Miscellaneous Corporate Action Exercise"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Dividend Reinvestment":
 		fallthrough
 	case "Interest Reinvestment":
@@ -466,10 +494,10 @@ func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEn
 	case "Withdrawal":
 		fallthrough
 	case "Miscellaneous Corporate Action Exercise":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsSubTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -486,12 +514,16 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnumScheduled  ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum = "scheduled"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instructed":
 		fallthrough
 	case "confirmed":
@@ -505,10 +537,10 @@ func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum) Unmarsh
 	case "cancelled":
 		fallthrough
 	case "scheduled":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsSubTypeEnum: %v", v)
 	}
 }
 
@@ -520,19 +552,23 @@ const (
 	ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnumArchived ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum = "archived"
 )
 
+func (e ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum) ToPointer() *ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum {
+	return &e
+}
+
 func (e *ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "archived":
-		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum(s)
+		*e = ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecuteSellTrasaction200ApplicationJSONTransactionsTypeEnum: %v", v)
 	}
 }
 

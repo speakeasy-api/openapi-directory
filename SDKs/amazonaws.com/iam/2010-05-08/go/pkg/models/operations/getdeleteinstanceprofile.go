@@ -15,17 +15,21 @@ const (
 	GETDeleteInstanceProfileActionEnumDeleteInstanceProfile GETDeleteInstanceProfileActionEnum = "DeleteInstanceProfile"
 )
 
+func (e GETDeleteInstanceProfileActionEnum) ToPointer() *GETDeleteInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *GETDeleteInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteInstanceProfile":
-		*e = GETDeleteInstanceProfileActionEnum(s)
+		*e = GETDeleteInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteInstanceProfileVersionEnumTwoThousandAndTen0508 GETDeleteInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e GETDeleteInstanceProfileVersionEnum) ToPointer() *GETDeleteInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETDeleteInstanceProfileVersionEnum(s)
+		*e = GETDeleteInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteInstanceProfileVersionEnum: %v", v)
 	}
 }
 

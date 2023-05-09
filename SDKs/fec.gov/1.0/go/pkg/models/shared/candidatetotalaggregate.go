@@ -9,6 +9,7 @@ type CandidateTotalAggregate struct {
 	Office                                     *string  `json:"office,omitempty"`
 	Party                                      *string  `json:"party,omitempty"`
 	State                                      *string  `json:"state,omitempty"`
+	StateFull                                  *string  `json:"state_full,omitempty"`
 	TotalCashOnHandEndPeriod                   *float64 `json:"total_cash_on_hand_end_period,omitempty"`
 	TotalDebtsOwedByCommittee                  *float64 `json:"total_debts_owed_by_committee,omitempty"`
 	TotalDisbursements                         *float64 `json:"total_disbursements,omitempty"`

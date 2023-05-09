@@ -31,12 +31,16 @@ const (
 	FrequencyCodeEnumMonthlyVariable FrequencyCodeEnum = "MonthlyVariable"
 )
 
+func (e FrequencyCodeEnum) ToPointer() *FrequencyCodeEnum {
+	return &e
+}
+
 func (e *FrequencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Daily":
 		fallthrough
 	case "Weekly":
@@ -54,9 +58,9 @@ func (e *FrequencyCodeEnum) UnmarshalJSON(data []byte) error {
 	case "Annual":
 		fallthrough
 	case "MonthlyVariable":
-		*e = FrequencyCodeEnum(s)
+		*e = FrequencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrequencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FrequencyCodeEnum: %v", v)
 	}
 }

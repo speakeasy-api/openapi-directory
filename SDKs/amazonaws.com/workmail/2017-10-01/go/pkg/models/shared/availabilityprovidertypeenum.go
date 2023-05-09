@@ -14,18 +14,22 @@ const (
 	AvailabilityProviderTypeEnumLambda AvailabilityProviderTypeEnum = "LAMBDA"
 )
 
+func (e AvailabilityProviderTypeEnum) ToPointer() *AvailabilityProviderTypeEnum {
+	return &e
+}
+
 func (e *AvailabilityProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EWS":
 		fallthrough
 	case "LAMBDA":
-		*e = AvailabilityProviderTypeEnum(s)
+		*e = AvailabilityProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AvailabilityProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AvailabilityProviderTypeEnum: %v", v)
 	}
 }

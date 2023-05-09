@@ -16,17 +16,21 @@ const (
 	GetMLTaskRunXAmzTargetEnumAwsGlueGetMlTaskRun GetMLTaskRunXAmzTargetEnum = "AWSGlue.GetMLTaskRun"
 )
 
+func (e GetMLTaskRunXAmzTargetEnum) ToPointer() *GetMLTaskRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetMLTaskRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetMLTaskRun":
-		*e = GetMLTaskRunXAmzTargetEnum(s)
+		*e = GetMLTaskRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMLTaskRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMLTaskRunXAmzTargetEnum: %v", v)
 	}
 }
 

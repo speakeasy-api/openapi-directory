@@ -15,17 +15,21 @@ const (
 	GETDescribeReservedNodeExchangeStatusActionEnumDescribeReservedNodeExchangeStatus GETDescribeReservedNodeExchangeStatusActionEnum = "DescribeReservedNodeExchangeStatus"
 )
 
+func (e GETDescribeReservedNodeExchangeStatusActionEnum) ToPointer() *GETDescribeReservedNodeExchangeStatusActionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedNodeExchangeStatusActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeReservedNodeExchangeStatus":
-		*e = GETDescribeReservedNodeExchangeStatusActionEnum(s)
+		*e = GETDescribeReservedNodeExchangeStatusActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedNodeExchangeStatusActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedNodeExchangeStatusActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeReservedNodeExchangeStatusVersionEnumTwoThousandAndTwelve1201 GETDescribeReservedNodeExchangeStatusVersionEnum = "2012-12-01"
 )
 
+func (e GETDescribeReservedNodeExchangeStatusVersionEnum) ToPointer() *GETDescribeReservedNodeExchangeStatusVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedNodeExchangeStatusVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDescribeReservedNodeExchangeStatusVersionEnum(s)
+		*e = GETDescribeReservedNodeExchangeStatusVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedNodeExchangeStatusVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedNodeExchangeStatusVersionEnum: %v", v)
 	}
 }
 

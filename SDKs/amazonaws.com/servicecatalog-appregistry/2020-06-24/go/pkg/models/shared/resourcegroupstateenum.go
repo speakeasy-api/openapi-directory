@@ -18,12 +18,16 @@ const (
 	ResourceGroupStateEnumUpdateFailed   ResourceGroupStateEnum = "UPDATE_FAILED"
 )
 
+func (e ResourceGroupStateEnum) ToPointer() *ResourceGroupStateEnum {
+	return &e
+}
+
 func (e *ResourceGroupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATE_COMPLETE":
@@ -35,9 +39,9 @@ func (e *ResourceGroupStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_COMPLETE":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = ResourceGroupStateEnum(s)
+		*e = ResourceGroupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceGroupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceGroupStateEnum: %v", v)
 	}
 }

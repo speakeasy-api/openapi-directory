@@ -16,17 +16,21 @@ const (
 	AttachPolicyXAmzTargetEnumAwsOrganizationsV20161128AttachPolicy AttachPolicyXAmzTargetEnum = "AWSOrganizationsV20161128.AttachPolicy"
 )
 
+func (e AttachPolicyXAmzTargetEnum) ToPointer() *AttachPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.AttachPolicy":
-		*e = AttachPolicyXAmzTargetEnum(s)
+		*e = AttachPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

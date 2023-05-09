@@ -13,7 +13,6 @@ type Gender1Security struct {
 
 type Gender1Request struct {
 	FirstName string `pathParam:"style=simple,explode=false,name=firstName"`
-	LastName  string `pathParam:"style=simple,explode=false,name=lastName"`
 }
 
 type Gender1Response struct {

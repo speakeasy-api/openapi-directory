@@ -14,18 +14,22 @@ const (
 	GlobalEndpointTokenVersionEnumV2Token GlobalEndpointTokenVersionEnum = "v2Token"
 )
 
+func (e GlobalEndpointTokenVersionEnum) ToPointer() *GlobalEndpointTokenVersionEnum {
+	return &e
+}
+
 func (e *GlobalEndpointTokenVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v1Token":
 		fallthrough
 	case "v2Token":
-		*e = GlobalEndpointTokenVersionEnum(s)
+		*e = GlobalEndpointTokenVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GlobalEndpointTokenVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GlobalEndpointTokenVersionEnum: %v", v)
 	}
 }

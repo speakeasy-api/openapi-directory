@@ -15,14 +15,20 @@ const (
 	SettingNameEnumContainerInstanceLongArnFormat SettingNameEnum = "containerInstanceLongArnFormat"
 	SettingNameEnumAwsvpcTrunking                 SettingNameEnum = "awsvpcTrunking"
 	SettingNameEnumContainerInsights              SettingNameEnum = "containerInsights"
+	SettingNameEnumFargateFipsMode                SettingNameEnum = "fargateFIPSMode"
+	SettingNameEnumTagResourceAuthorization       SettingNameEnum = "tagResourceAuthorization"
 )
 
+func (e SettingNameEnum) ToPointer() *SettingNameEnum {
+	return &e
+}
+
 func (e *SettingNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "serviceLongArnFormat":
 		fallthrough
 	case "taskLongArnFormat":
@@ -32,9 +38,13 @@ func (e *SettingNameEnum) UnmarshalJSON(data []byte) error {
 	case "awsvpcTrunking":
 		fallthrough
 	case "containerInsights":
-		*e = SettingNameEnum(s)
+		fallthrough
+	case "fargateFIPSMode":
+		fallthrough
+	case "tagResourceAuthorization":
+		*e = SettingNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingNameEnum: %v", v)
 	}
 }

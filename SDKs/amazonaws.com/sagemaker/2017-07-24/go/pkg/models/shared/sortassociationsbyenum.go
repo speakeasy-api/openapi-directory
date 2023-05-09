@@ -17,12 +17,16 @@ const (
 	SortAssociationsByEnumCreationTime    SortAssociationsByEnum = "CreationTime"
 )
 
+func (e SortAssociationsByEnum) ToPointer() *SortAssociationsByEnum {
+	return &e
+}
+
 func (e *SortAssociationsByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SourceArn":
 		fallthrough
 	case "DestinationArn":
@@ -32,9 +36,9 @@ func (e *SortAssociationsByEnum) UnmarshalJSON(data []byte) error {
 	case "DestinationType":
 		fallthrough
 	case "CreationTime":
-		*e = SortAssociationsByEnum(s)
+		*e = SortAssociationsByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortAssociationsByEnum: %s", s)
+		return fmt.Errorf("invalid value for SortAssociationsByEnum: %v", v)
 	}
 }

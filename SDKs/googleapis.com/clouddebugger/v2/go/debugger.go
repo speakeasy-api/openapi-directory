@@ -35,7 +35,10 @@ func newDebugger(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ClouddebuggerDebuggerDebuggeesBreakpointsDelete - Deletes the breakpoint from the debuggee.
 func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsDelete(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsDelete(ctx context.C
 // ClouddebuggerDebuggerDebuggeesBreakpointsGet - Gets breakpoint information.
 func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsGet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/{breakpointId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +137,10 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsGet(ctx context.Cont
 // ClouddebuggerDebuggerDebuggeesBreakpointsList - Lists all breakpoints for the debuggee.
 func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsList(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsListRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsListSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +188,10 @@ func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsList(ctx context.Con
 // ClouddebuggerDebuggerDebuggeesBreakpointsSet - Sets the breakpoint to the debuggee.
 func (s *debugger) ClouddebuggerDebuggerDebuggeesBreakpointsSet(ctx context.Context, request operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetRequest, security operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetSecurity) (*operations.ClouddebuggerDebuggerDebuggeesBreakpointsSetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/debugger/debuggees/{debuggeeId}/breakpoints/set", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Breakpoint", "json")
 	if err != nil {

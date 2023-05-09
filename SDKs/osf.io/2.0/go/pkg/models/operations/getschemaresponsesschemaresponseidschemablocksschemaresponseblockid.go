@@ -34,12 +34,16 @@ const (
 	GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnumSelectOtherOption GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum = "select-other-option"
 )
 
+func (e GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum) ToPointer() *GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum {
+	return &e
+}
+
 func (e *GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "page-heading":
 		fallthrough
 	case "section-heading":
@@ -65,10 +69,10 @@ func (e *GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegi
 	case "select-input-option":
 		fallthrough
 	case "select-other-option":
-		*e = GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum(s)
+		*e = GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockIDRegistrationSchemaBlockAttributesBlockTypeEnum: %v", v)
 	}
 }
 

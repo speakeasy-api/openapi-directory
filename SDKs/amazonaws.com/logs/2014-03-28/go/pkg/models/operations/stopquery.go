@@ -16,17 +16,21 @@ const (
 	StopQueryXAmzTargetEnumLogs20140328StopQuery StopQueryXAmzTargetEnum = "Logs_20140328.StopQuery"
 )
 
+func (e StopQueryXAmzTargetEnum) ToPointer() *StopQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.StopQuery":
-		*e = StopQueryXAmzTargetEnum(s)
+		*e = StopQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopQueryXAmzTargetEnum: %v", v)
 	}
 }
 

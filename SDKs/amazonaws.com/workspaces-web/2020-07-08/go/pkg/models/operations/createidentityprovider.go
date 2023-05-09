@@ -21,12 +21,16 @@ const (
 	CreateIdentityProviderRequestBodyIdentityProviderTypeEnumOidc            CreateIdentityProviderRequestBodyIdentityProviderTypeEnum = "OIDC"
 )
 
+func (e CreateIdentityProviderRequestBodyIdentityProviderTypeEnum) ToPointer() *CreateIdentityProviderRequestBodyIdentityProviderTypeEnum {
+	return &e
+}
+
 func (e *CreateIdentityProviderRequestBodyIdentityProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAML":
 		fallthrough
 	case "Facebook":
@@ -38,10 +42,10 @@ func (e *CreateIdentityProviderRequestBodyIdentityProviderTypeEnum) UnmarshalJSO
 	case "SignInWithApple":
 		fallthrough
 	case "OIDC":
-		*e = CreateIdentityProviderRequestBodyIdentityProviderTypeEnum(s)
+		*e = CreateIdentityProviderRequestBodyIdentityProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIdentityProviderRequestBodyIdentityProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIdentityProviderRequestBodyIdentityProviderTypeEnum: %v", v)
 	}
 }
 

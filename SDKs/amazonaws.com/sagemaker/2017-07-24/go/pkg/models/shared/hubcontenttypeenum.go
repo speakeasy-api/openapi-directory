@@ -14,18 +14,22 @@ const (
 	HubContentTypeEnumNotebook HubContentTypeEnum = "Notebook"
 )
 
+func (e HubContentTypeEnum) ToPointer() *HubContentTypeEnum {
+	return &e
+}
+
 func (e *HubContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Model":
 		fallthrough
 	case "Notebook":
-		*e = HubContentTypeEnum(s)
+		*e = HubContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HubContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HubContentTypeEnum: %v", v)
 	}
 }

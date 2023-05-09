@@ -26,12 +26,16 @@ const (
 	ServiceStatusEnumUpdateCompleteCleanupFailed   ServiceStatusEnum = "UPDATE_COMPLETE_CLEANUP_FAILED"
 )
 
+func (e ServiceStatusEnum) ToPointer() *ServiceStatusEnum {
+	return &e
+}
+
 func (e *ServiceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "CREATE_FAILED_CLEANUP_IN_PROGRESS":
@@ -59,9 +63,9 @@ func (e *ServiceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_FAILED":
 		fallthrough
 	case "UPDATE_COMPLETE_CLEANUP_FAILED":
-		*e = ServiceStatusEnum(s)
+		*e = ServiceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceStatusEnum: %v", v)
 	}
 }

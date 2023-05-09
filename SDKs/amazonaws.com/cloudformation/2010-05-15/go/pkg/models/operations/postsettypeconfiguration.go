@@ -15,17 +15,21 @@ const (
 	POSTSetTypeConfigurationActionEnumSetTypeConfiguration POSTSetTypeConfigurationActionEnum = "SetTypeConfiguration"
 )
 
+func (e POSTSetTypeConfigurationActionEnum) ToPointer() *POSTSetTypeConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTSetTypeConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetTypeConfiguration":
-		*e = POSTSetTypeConfigurationActionEnum(s)
+		*e = POSTSetTypeConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetTypeConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetTypeConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetTypeConfigurationVersionEnumTwoThousandAndTen0515 POSTSetTypeConfigurationVersionEnum = "2010-05-15"
 )
 
+func (e POSTSetTypeConfigurationVersionEnum) ToPointer() *POSTSetTypeConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTSetTypeConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTSetTypeConfigurationVersionEnum(s)
+		*e = POSTSetTypeConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetTypeConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetTypeConfigurationVersionEnum: %v", v)
 	}
 }
 

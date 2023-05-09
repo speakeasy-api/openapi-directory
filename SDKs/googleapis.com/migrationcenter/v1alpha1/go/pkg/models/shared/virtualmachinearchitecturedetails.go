@@ -16,21 +16,25 @@ const (
 	VirtualMachineArchitectureDetailsHyperthreadingEnumHyperThreadingEnabled     VirtualMachineArchitectureDetailsHyperthreadingEnum = "HYPER_THREADING_ENABLED"
 )
 
+func (e VirtualMachineArchitectureDetailsHyperthreadingEnum) ToPointer() *VirtualMachineArchitectureDetailsHyperthreadingEnum {
+	return &e
+}
+
 func (e *VirtualMachineArchitectureDetailsHyperthreadingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HYPER_THREADING_UNSPECIFIED":
 		fallthrough
 	case "HYPER_THREADING_DISABLED":
 		fallthrough
 	case "HYPER_THREADING_ENABLED":
-		*e = VirtualMachineArchitectureDetailsHyperthreadingEnum(s)
+		*e = VirtualMachineArchitectureDetailsHyperthreadingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualMachineArchitectureDetailsHyperthreadingEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualMachineArchitectureDetailsHyperthreadingEnum: %v", v)
 	}
 }
 

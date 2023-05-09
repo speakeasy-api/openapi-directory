@@ -85,7 +85,10 @@ func (s *docs) CreateDoc(ctx context.Context, request operations.CreateDocReques
 // Delete the doc with this slug
 func (s *docs) DeleteDoc(ctx context.Context, request operations.DeleteDocRequest, security operations.DeleteDocSecurity) (*operations.DeleteDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +128,10 @@ func (s *docs) DeleteDoc(ctx context.Context, request operations.DeleteDocReques
 // Returns the doc with this slug
 func (s *docs) GetDoc(ctx context.Context, request operations.GetDocRequest, security operations.GetDocSecurity) (*operations.GetDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +215,10 @@ func (s *docs) SearchDocs(ctx context.Context, request operations.SearchDocsRequ
 // Update a doc with this slug
 func (s *docs) UpdateDoc(ctx context.Context, request operations.UpdateDocRequest, security operations.UpdateDocSecurity) (*operations.UpdateDocResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/docs/{slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Doc", "json")
 	if err != nil {

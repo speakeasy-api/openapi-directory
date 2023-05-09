@@ -19,12 +19,16 @@ const (
 	StateHistoryStateEnumStudentEditedAfterTurnIn StateHistoryStateEnum = "STUDENT_EDITED_AFTER_TURN_IN"
 )
 
+func (e StateHistoryStateEnum) ToPointer() *StateHistoryStateEnum {
+	return &e
+}
+
 func (e *StateHistoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -36,10 +40,10 @@ func (e *StateHistoryStateEnum) UnmarshalJSON(data []byte) error {
 	case "RECLAIMED_BY_STUDENT":
 		fallthrough
 	case "STUDENT_EDITED_AFTER_TURN_IN":
-		*e = StateHistoryStateEnum(s)
+		*e = StateHistoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateHistoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StateHistoryStateEnum: %v", v)
 	}
 }
 

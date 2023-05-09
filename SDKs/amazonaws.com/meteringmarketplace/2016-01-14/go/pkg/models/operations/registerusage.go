@@ -16,17 +16,21 @@ const (
 	RegisterUsageXAmzTargetEnumAwsmpMeteringServiceRegisterUsage RegisterUsageXAmzTargetEnum = "AWSMPMeteringService.RegisterUsage"
 )
 
+func (e RegisterUsageXAmzTargetEnum) ToPointer() *RegisterUsageXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterUsageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMPMeteringService.RegisterUsage":
-		*e = RegisterUsageXAmzTargetEnum(s)
+		*e = RegisterUsageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterUsageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterUsageXAmzTargetEnum: %v", v)
 	}
 }
 

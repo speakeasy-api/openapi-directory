@@ -17,12 +17,16 @@ const (
 	InstanceTypeEnumDeveloper       InstanceTypeEnum = "DEVELOPER"
 )
 
+func (e InstanceTypeEnum) ToPointer() *InstanceTypeEnum {
+	return &e
+}
+
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
@@ -30,10 +34,10 @@ func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENTERPRISE":
 		fallthrough
 	case "DEVELOPER":
-		*e = InstanceTypeEnum(s)
+		*e = InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTypeEnum: %v", v)
 	}
 }
 
@@ -80,19 +84,23 @@ const (
 	InstanceDisabledReasonEnumKmsKeyIssue               InstanceDisabledReasonEnum = "KMS_KEY_ISSUE"
 )
 
+func (e InstanceDisabledReasonEnum) ToPointer() *InstanceDisabledReasonEnum {
+	return &e
+}
+
 func (e *InstanceDisabledReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED_REASON_UNSPECIFIED":
 		fallthrough
 	case "KMS_KEY_ISSUE":
-		*e = InstanceDisabledReasonEnum(s)
+		*e = InstanceDisabledReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceDisabledReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceDisabledReasonEnum: %v", v)
 	}
 }
 
@@ -113,12 +121,16 @@ const (
 	InstanceStateEnumDisabled         InstanceStateEnum = "DISABLED"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -140,10 +152,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "AUTO_UPGRADING":
 		fallthrough
 	case "DISABLED":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 

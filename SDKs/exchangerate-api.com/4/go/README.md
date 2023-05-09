@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/exchangerate-api.com/4/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetLatestBaseCurrencyRequest{
-        BaseCurrency: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetLatestBaseCurrency(ctx, req)
+    res, err := s.GetLatestBaseCurrency(ctx, operations.GetLatestBaseCurrencyRequest{
+        BaseCurrency: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,9 +41,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetLatestBaseCurrency` - Returns latest exchange rates in parameter-supplied base currency.
+* [GetLatestBaseCurrency](docs/sdk/README.md#getlatestbasecurrency) - Returns latest exchange rates in parameter-supplied base currency.
 <!-- End SDK Available Operations -->
 
 ### Maturity

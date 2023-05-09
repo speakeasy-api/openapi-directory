@@ -34,7 +34,10 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GamesManagementEventsReset - Resets all player progress on the event with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
 func (s *events) GamesManagementEventsReset(ctx context.Context, request operations.GamesManagementEventsResetRequest, security operations.GamesManagementEventsResetSecurity) (*operations.GamesManagementEventsResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -151,7 +154,10 @@ func (s *events) GamesManagementEventsResetAllForAllPlayers(ctx context.Context,
 // GamesManagementEventsResetForAllPlayers - Resets the event with the given ID for all players. This method is only available to user accounts for your developer console. Only draft events can be reset.
 func (s *events) GamesManagementEventsResetForAllPlayers(ctx context.Context, request operations.GamesManagementEventsResetForAllPlayersRequest, security operations.GamesManagementEventsResetForAllPlayersSecurity) (*operations.GamesManagementEventsResetForAllPlayersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/resetForAllPlayers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1management/events/{eventId}/resetForAllPlayers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

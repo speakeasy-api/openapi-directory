@@ -17,12 +17,16 @@ const (
 	CreativeArtworkTypeEnumArtworkTypeImage CreativeArtworkTypeEnum = "ARTWORK_TYPE_IMAGE"
 )
 
+func (e CreativeArtworkTypeEnum) ToPointer() *CreativeArtworkTypeEnum {
+	return &e
+}
+
 func (e *CreativeArtworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARTWORK_TYPE_FLASH":
 		fallthrough
 	case "ARTWORK_TYPE_HTML5":
@@ -30,10 +34,10 @@ func (e *CreativeArtworkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ARTWORK_TYPE_MIXED":
 		fallthrough
 	case "ARTWORK_TYPE_IMAGE":
-		*e = CreativeArtworkTypeEnum(s)
+		*e = CreativeArtworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeArtworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeArtworkTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	CreativeAuthoringSourceEnumCreativeAuthoringSourceAcs    CreativeAuthoringSourceEnum = "CREATIVE_AUTHORING_SOURCE_ACS"
 )
 
+func (e CreativeAuthoringSourceEnum) ToPointer() *CreativeAuthoringSourceEnum {
+	return &e
+}
+
 func (e *CreativeAuthoringSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_AUTHORING_SOURCE_DCM":
 		fallthrough
 	case "CREATIVE_AUTHORING_SOURCE_DBM":
@@ -63,10 +71,10 @@ func (e *CreativeAuthoringSourceEnum) UnmarshalJSON(data []byte) error {
 	case "CREATIVE_AUTHORING_SOURCE_GWD":
 		fallthrough
 	case "CREATIVE_AUTHORING_SOURCE_ACS":
-		*e = CreativeAuthoringSourceEnum(s)
+		*e = CreativeAuthoringSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAuthoringSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAuthoringSourceEnum: %v", v)
 	}
 }
 
@@ -78,19 +86,23 @@ const (
 	CreativeAuthoringToolEnumSwiffy CreativeAuthoringToolEnum = "SWIFFY"
 )
 
+func (e CreativeAuthoringToolEnum) ToPointer() *CreativeAuthoringToolEnum {
+	return &e
+}
+
 func (e *CreativeAuthoringToolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NINJA":
 		fallthrough
 	case "SWIFFY":
-		*e = CreativeAuthoringToolEnum(s)
+		*e = CreativeAuthoringToolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAuthoringToolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAuthoringToolEnum: %v", v)
 	}
 }
 
@@ -165,12 +177,16 @@ const (
 	CreativeBackupImageFeaturesEnumSvgFeImage             CreativeBackupImageFeaturesEnum = "SVG_FE_IMAGE"
 )
 
+func (e CreativeBackupImageFeaturesEnum) ToPointer() *CreativeBackupImageFeaturesEnum {
+	return &e
+}
+
 func (e *CreativeBackupImageFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSS_FONT_FACE":
 		fallthrough
 	case "CSS_BACKGROUND_SIZE":
@@ -302,10 +318,10 @@ func (e *CreativeBackupImageFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "SVG_FILTERS":
 		fallthrough
 	case "SVG_FE_IMAGE":
-		*e = CreativeBackupImageFeaturesEnum(s)
+		*e = CreativeBackupImageFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeBackupImageFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeBackupImageFeaturesEnum: %v", v)
 	}
 }
 
@@ -320,12 +336,16 @@ const (
 	CreativeCompatibilityEnumInStreamAudio       CreativeCompatibilityEnum = "IN_STREAM_AUDIO"
 )
 
+func (e CreativeCompatibilityEnum) ToPointer() *CreativeCompatibilityEnum {
+	return &e
+}
+
 func (e *CreativeCompatibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -337,10 +357,10 @@ func (e *CreativeCompatibilityEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = CreativeCompatibilityEnum(s)
+		*e = CreativeCompatibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeCompatibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeCompatibilityEnum: %v", v)
 	}
 }
 
@@ -375,12 +395,16 @@ const (
 	CreativeTypeEnumInstreamAudio                             CreativeTypeEnum = "INSTREAM_AUDIO"
 )
 
+func (e CreativeTypeEnum) ToPointer() *CreativeTypeEnum {
+	return &e
+}
+
 func (e *CreativeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE":
 		fallthrough
 	case "DISPLAY_REDIRECT":
@@ -430,10 +454,10 @@ func (e *CreativeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BRAND_SAFE_DEFAULT_INSTREAM_VIDEO":
 		fallthrough
 	case "INSTREAM_AUDIO":
-		*e = CreativeTypeEnum(s)
+		*e = CreativeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeTypeEnum: %v", v)
 	}
 }
 

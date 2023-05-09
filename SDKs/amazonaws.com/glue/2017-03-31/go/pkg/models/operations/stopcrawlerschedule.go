@@ -16,17 +16,21 @@ const (
 	StopCrawlerScheduleXAmzTargetEnumAwsGlueStopCrawlerSchedule StopCrawlerScheduleXAmzTargetEnum = "AWSGlue.StopCrawlerSchedule"
 )
 
+func (e StopCrawlerScheduleXAmzTargetEnum) ToPointer() *StopCrawlerScheduleXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopCrawlerScheduleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StopCrawlerSchedule":
-		*e = StopCrawlerScheduleXAmzTargetEnum(s)
+		*e = StopCrawlerScheduleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopCrawlerScheduleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopCrawlerScheduleXAmzTargetEnum: %v", v)
 	}
 }
 

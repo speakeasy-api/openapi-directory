@@ -15,20 +15,24 @@ const (
 	VersionControlEnumAzureDevopsGit   VersionControlEnum = "AZURE_DEVOPS_GIT"
 )
 
+func (e VersionControlEnum) ToPointer() *VersionControlEnum {
+	return &e
+}
+
 func (e *VersionControlEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GITHUB":
 		fallthrough
 	case "GITHUB_ENTERPRISE":
 		fallthrough
 	case "AZURE_DEVOPS_GIT":
-		*e = VersionControlEnum(s)
+		*e = VersionControlEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionControlEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionControlEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // PlayintegrityDecodeIntegrityToken - Decodes the integrity token and returns the token payload.
 func (s *v1) PlayintegrityDecodeIntegrityToken(ctx context.Context, request operations.PlayintegrityDecodeIntegrityTokenRequest, security operations.PlayintegrityDecodeIntegrityTokenSecurity) (*operations.PlayintegrityDecodeIntegrityTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{packageName}:decodeIntegrityToken", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{packageName}:decodeIntegrityToken", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DecodeIntegrityTokenRequest", "json")
 	if err != nil {

@@ -22,12 +22,16 @@ const (
 	ExportFmtEnumTiff   ExportFmtEnum = "tiff"
 )
 
+func (e ExportFmtEnum) ToPointer() *ExportFmtEnum {
+	return &e
+}
+
 func (e *ExportFmtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kml":
 		fallthrough
 	case "kmzppa":
@@ -35,10 +39,10 @@ func (e *ExportFmtEnum) UnmarshalJSON(data []byte) error {
 	case "shp":
 		fallthrough
 	case "tiff":
-		*e = ExportFmtEnum(s)
+		*e = ExportFmtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportFmtEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportFmtEnum: %v", v)
 	}
 }
 

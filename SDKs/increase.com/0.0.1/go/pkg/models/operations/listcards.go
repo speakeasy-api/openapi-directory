@@ -20,23 +20,27 @@ type ListCardsRequest struct {
 	Limit               *int64     `queryParam:"style=form,explode=true,name=limit"`
 }
 
-type ListCardsDefaultApplicationJSON13StatusEnum string
+type ListCardsDefaultApplicationJSON13StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListCardsDefaultApplicationJSON13StatusEnum = "429"
+	ListCardsDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine ListCardsDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e ListCardsDefaultApplicationJSON13StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = ListCardsDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = ListCardsDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	ListCardsDefaultApplicationJSON13TypeEnumRateLimitedError ListCardsDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e ListCardsDefaultApplicationJSON13TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = ListCardsDefaultApplicationJSON13TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -68,23 +76,27 @@ type ListCardsDefaultApplicationJSON13 struct {
 	Type       ListCardsDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON12StatusEnum string
+type ListCardsDefaultApplicationJSON12StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON12StatusEnum = "403"
+	ListCardsDefaultApplicationJSON12StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e ListCardsDefaultApplicationJSON12StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListCardsDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListCardsDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -94,17 +106,21 @@ const (
 	ListCardsDefaultApplicationJSON12TypeEnumPrivateFeatureError ListCardsDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e ListCardsDefaultApplicationJSON12TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = ListCardsDefaultApplicationJSON12TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -115,23 +131,27 @@ type ListCardsDefaultApplicationJSON12 struct {
 	Type   ListCardsDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON11StatusEnum string
+type ListCardsDefaultApplicationJSON11StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListCardsDefaultApplicationJSON11StatusEnum = "404"
+	ListCardsDefaultApplicationJSON11StatusEnumFourHundredAndFour ListCardsDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e ListCardsDefaultApplicationJSON11StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListCardsDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListCardsDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -141,17 +161,21 @@ const (
 	ListCardsDefaultApplicationJSON11TypeEnumObjectNotFoundError ListCardsDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e ListCardsDefaultApplicationJSON11TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = ListCardsDefaultApplicationJSON11TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -162,23 +186,27 @@ type ListCardsDefaultApplicationJSON11 struct {
 	Type   ListCardsDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON10StatusEnum string
+type ListCardsDefaultApplicationJSON10StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON10StatusEnumFourHundred ListCardsDefaultApplicationJSON10StatusEnum = "400"
+	ListCardsDefaultApplicationJSON10StatusEnumFourHundred ListCardsDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e ListCardsDefaultApplicationJSON10StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListCardsDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListCardsDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -188,17 +216,21 @@ const (
 	ListCardsDefaultApplicationJSON10TypeEnumMalformedRequestError ListCardsDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e ListCardsDefaultApplicationJSON10TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = ListCardsDefaultApplicationJSON10TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -209,23 +241,27 @@ type ListCardsDefaultApplicationJSON10 struct {
 	Type   ListCardsDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON9StatusEnum string
+type ListCardsDefaultApplicationJSON9StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON9StatusEnumFourHundred ListCardsDefaultApplicationJSON9StatusEnum = "400"
+	ListCardsDefaultApplicationJSON9StatusEnumFourHundred ListCardsDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e ListCardsDefaultApplicationJSON9StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = ListCardsDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = ListCardsDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -235,46 +271,54 @@ const (
 	ListCardsDefaultApplicationJSON9TypeEnumInvalidParametersError ListCardsDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e ListCardsDefaultApplicationJSON9TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = ListCardsDefaultApplicationJSON9TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type ListCardsDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                   `json:"errors"`
 	Status ListCardsDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                     `json:"title"`
 	Type   ListCardsDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON8StatusEnum string
+type ListCardsDefaultApplicationJSON8StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListCardsDefaultApplicationJSON8StatusEnum = "409"
+	ListCardsDefaultApplicationJSON8StatusEnumFourHundredAndNine ListCardsDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e ListCardsDefaultApplicationJSON8StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListCardsDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListCardsDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -284,17 +328,21 @@ const (
 	ListCardsDefaultApplicationJSON8TypeEnumInvalidOperationError ListCardsDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e ListCardsDefaultApplicationJSON8TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = ListCardsDefaultApplicationJSON8TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -305,23 +353,27 @@ type ListCardsDefaultApplicationJSON8 struct {
 	Type   ListCardsDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON7StatusEnum string
+type ListCardsDefaultApplicationJSON7StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListCardsDefaultApplicationJSON7StatusEnum = "401"
+	ListCardsDefaultApplicationJSON7StatusEnumFourHundredAndOne ListCardsDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e ListCardsDefaultApplicationJSON7StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = ListCardsDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = ListCardsDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -331,17 +383,21 @@ const (
 	ListCardsDefaultApplicationJSON7TypeEnumInvalidAPIKeyError ListCardsDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e ListCardsDefaultApplicationJSON7TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = ListCardsDefaultApplicationJSON7TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -352,23 +408,27 @@ type ListCardsDefaultApplicationJSON7 struct {
 	Type   ListCardsDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON6StatusEnum string
+type ListCardsDefaultApplicationJSON6StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON6StatusEnumFiveHundred ListCardsDefaultApplicationJSON6StatusEnum = "500"
+	ListCardsDefaultApplicationJSON6StatusEnumFiveHundred ListCardsDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e ListCardsDefaultApplicationJSON6StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = ListCardsDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = ListCardsDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -378,17 +438,21 @@ const (
 	ListCardsDefaultApplicationJSON6TypeEnumInternalServerError ListCardsDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e ListCardsDefaultApplicationJSON6TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = ListCardsDefaultApplicationJSON6TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -399,23 +463,27 @@ type ListCardsDefaultApplicationJSON6 struct {
 	Type   ListCardsDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON5StatusEnum string
+type ListCardsDefaultApplicationJSON5StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON5StatusEnum = "403"
+	ListCardsDefaultApplicationJSON5StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e ListCardsDefaultApplicationJSON5StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListCardsDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListCardsDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -425,17 +493,21 @@ const (
 	ListCardsDefaultApplicationJSON5TypeEnumInsufficientPermissionsError ListCardsDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e ListCardsDefaultApplicationJSON5TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = ListCardsDefaultApplicationJSON5TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -446,23 +518,27 @@ type ListCardsDefaultApplicationJSON5 struct {
 	Type   ListCardsDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON4StatusEnum string
+type ListCardsDefaultApplicationJSON4StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListCardsDefaultApplicationJSON4StatusEnum = "422"
+	ListCardsDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo ListCardsDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e ListCardsDefaultApplicationJSON4StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = ListCardsDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = ListCardsDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -472,17 +548,21 @@ const (
 	ListCardsDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError ListCardsDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e ListCardsDefaultApplicationJSON4TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = ListCardsDefaultApplicationJSON4TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -493,23 +573,27 @@ type ListCardsDefaultApplicationJSON4 struct {
 	Type   ListCardsDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON3StatusEnum string
+type ListCardsDefaultApplicationJSON3StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListCardsDefaultApplicationJSON3StatusEnum = "409"
+	ListCardsDefaultApplicationJSON3StatusEnumFourHundredAndNine ListCardsDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e ListCardsDefaultApplicationJSON3StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = ListCardsDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = ListCardsDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -519,17 +603,21 @@ const (
 	ListCardsDefaultApplicationJSON3TypeEnumIdempotencyConflictError ListCardsDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e ListCardsDefaultApplicationJSON3TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = ListCardsDefaultApplicationJSON3TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -540,23 +628,27 @@ type ListCardsDefaultApplicationJSON3 struct {
 	Type   ListCardsDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON2StatusEnum string
+type ListCardsDefaultApplicationJSON2StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON2StatusEnum = "403"
+	ListCardsDefaultApplicationJSON2StatusEnumFourHundredAndThree ListCardsDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e ListCardsDefaultApplicationJSON2StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = ListCardsDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = ListCardsDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -566,17 +658,21 @@ const (
 	ListCardsDefaultApplicationJSON2TypeEnumEnvironmentMismatchError ListCardsDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e ListCardsDefaultApplicationJSON2TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = ListCardsDefaultApplicationJSON2TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -587,23 +683,27 @@ type ListCardsDefaultApplicationJSON2 struct {
 	Type   ListCardsDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type ListCardsDefaultApplicationJSON1StatusEnum string
+type ListCardsDefaultApplicationJSON1StatusEnum int64
 
 const (
-	ListCardsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListCardsDefaultApplicationJSON1StatusEnum = "404"
+	ListCardsDefaultApplicationJSON1StatusEnumFourHundredAndFour ListCardsDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e ListCardsDefaultApplicationJSON1StatusEnum) ToPointer() *ListCardsDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = ListCardsDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = ListCardsDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -613,17 +713,21 @@ const (
 	ListCardsDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError ListCardsDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e ListCardsDefaultApplicationJSON1TypeEnum) ToPointer() *ListCardsDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *ListCardsDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = ListCardsDefaultApplicationJSON1TypeEnum(s)
+		*e = ListCardsDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCardsDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

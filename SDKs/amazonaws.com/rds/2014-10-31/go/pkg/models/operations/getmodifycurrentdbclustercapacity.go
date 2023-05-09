@@ -15,17 +15,21 @@ const (
 	GETModifyCurrentDBClusterCapacityActionEnumModifyCurrentDbClusterCapacity GETModifyCurrentDBClusterCapacityActionEnum = "ModifyCurrentDBClusterCapacity"
 )
 
+func (e GETModifyCurrentDBClusterCapacityActionEnum) ToPointer() *GETModifyCurrentDBClusterCapacityActionEnum {
+	return &e
+}
+
 func (e *GETModifyCurrentDBClusterCapacityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyCurrentDBClusterCapacity":
-		*e = GETModifyCurrentDBClusterCapacityActionEnum(s)
+		*e = GETModifyCurrentDBClusterCapacityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCurrentDBClusterCapacityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCurrentDBClusterCapacityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyCurrentDBClusterCapacityVersionEnumTwoThousandAndFourteen1031 GETModifyCurrentDBClusterCapacityVersionEnum = "2014-10-31"
 )
 
+func (e GETModifyCurrentDBClusterCapacityVersionEnum) ToPointer() *GETModifyCurrentDBClusterCapacityVersionEnum {
+	return &e
+}
+
 func (e *GETModifyCurrentDBClusterCapacityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETModifyCurrentDBClusterCapacityVersionEnum(s)
+		*e = GETModifyCurrentDBClusterCapacityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCurrentDBClusterCapacityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCurrentDBClusterCapacityVersionEnum: %v", v)
 	}
 }
 

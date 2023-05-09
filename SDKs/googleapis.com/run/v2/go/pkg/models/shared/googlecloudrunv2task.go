@@ -16,27 +16,31 @@ const (
 	GoogleCloudRunV2TaskExecutionEnvironmentEnumExecutionEnvironmentGen2        GoogleCloudRunV2TaskExecutionEnvironmentEnum = "EXECUTION_ENVIRONMENT_GEN2"
 )
 
+func (e GoogleCloudRunV2TaskExecutionEnvironmentEnum) ToPointer() *GoogleCloudRunV2TaskExecutionEnvironmentEnum {
+	return &e
+}
+
 func (e *GoogleCloudRunV2TaskExecutionEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN1":
 		fallthrough
 	case "EXECUTION_ENVIRONMENT_GEN2":
-		*e = GoogleCloudRunV2TaskExecutionEnvironmentEnum(s)
+		*e = GoogleCloudRunV2TaskExecutionEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRunV2TaskExecutionEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRunV2TaskExecutionEnvironmentEnum: %v", v)
 	}
 }
 
 // GoogleCloudRunV2Task - Task represents a single run of a container to completion.
 type GoogleCloudRunV2Task struct {
-	// KRM-style annotations for the resource.
+	// Output only. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Output only. Represents time when the Task was completed. It is not guaranteed to be set in happens-before order across separate operations.
 	CompletionTime *string `json:"completionTime,omitempty"`
@@ -64,7 +68,7 @@ type GoogleCloudRunV2Task struct {
 	Index *int `json:"index,omitempty"`
 	// Output only. The name of the parent Job.
 	Job *string `json:"job,omitempty"`
-	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
+	// Output only. Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
 	Labels map[string]string `json:"labels,omitempty"`
 	// Result of a task attempt.
 	LastAttemptResult *GoogleCloudRunV2TaskAttemptResult `json:"lastAttemptResult,omitempty"`

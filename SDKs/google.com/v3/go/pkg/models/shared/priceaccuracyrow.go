@@ -18,12 +18,16 @@ const (
 	PriceAccuracyRowDeviceTypeEnumTablet            PriceAccuracyRowDeviceTypeEnum = "TABLET"
 )
 
+func (e PriceAccuracyRowDeviceTypeEnum) ToPointer() *PriceAccuracyRowDeviceTypeEnum {
+	return &e
+}
+
 func (e *PriceAccuracyRowDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_UNKNOWN":
@@ -33,10 +37,10 @@ func (e *PriceAccuracyRowDeviceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MOBILE":
 		fallthrough
 	case "TABLET":
-		*e = PriceAccuracyRowDeviceTypeEnum(s)
+		*e = PriceAccuracyRowDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceAccuracyRowDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceAccuracyRowDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	PriceAccuracyRowMismatchReasonEnumWrongItinerary            PriceAccuracyRowMismatchReasonEnum = "WRONG_ITINERARY"
 )
 
+func (e PriceAccuracyRowMismatchReasonEnum) ToPointer() *PriceAccuracyRowMismatchReasonEnum {
+	return &e
+}
+
 func (e *PriceAccuracyRowMismatchReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MISMATCH_REASON_UNSPECIFIED":
 		fallthrough
 	case "MISMATCH_REASON_UNKNOWN":
@@ -78,10 +86,10 @@ func (e *PriceAccuracyRowMismatchReasonEnum) UnmarshalJSON(data []byte) error {
 	case "INCORRECT_DISCOUNT_VALUE":
 		fallthrough
 	case "WRONG_ITINERARY":
-		*e = PriceAccuracyRowMismatchReasonEnum(s)
+		*e = PriceAccuracyRowMismatchReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceAccuracyRowMismatchReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceAccuracyRowMismatchReasonEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	PriceAccuracyRowSignalSourceEnumPixel                   PriceAccuracyRowSignalSourceEnum = "PIXEL"
 )
 
+func (e PriceAccuracyRowSignalSourceEnum) ToPointer() *PriceAccuracyRowSignalSourceEnum {
+	return &e
+}
+
 func (e *PriceAccuracyRowSignalSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGNAL_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "SIGNAL_SOURCE_UNKNOWN":
@@ -108,10 +120,10 @@ func (e *PriceAccuracyRowSignalSourceEnum) UnmarshalJSON(data []byte) error {
 	case "FETCHED":
 		fallthrough
 	case "PIXEL":
-		*e = PriceAccuracyRowSignalSourceEnum(s)
+		*e = PriceAccuracyRowSignalSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceAccuracyRowSignalSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceAccuracyRowSignalSourceEnum: %v", v)
 	}
 }
 

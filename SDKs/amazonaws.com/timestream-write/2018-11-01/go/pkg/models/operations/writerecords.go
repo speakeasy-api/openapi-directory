@@ -16,17 +16,21 @@ const (
 	WriteRecordsXAmzTargetEnumTimestream20181101WriteRecords WriteRecordsXAmzTargetEnum = "Timestream_20181101.WriteRecords"
 )
 
+func (e WriteRecordsXAmzTargetEnum) ToPointer() *WriteRecordsXAmzTargetEnum {
+	return &e
+}
+
 func (e *WriteRecordsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.WriteRecords":
-		*e = WriteRecordsXAmzTargetEnum(s)
+		*e = WriteRecordsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WriteRecordsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for WriteRecordsXAmzTargetEnum: %v", v)
 	}
 }
 

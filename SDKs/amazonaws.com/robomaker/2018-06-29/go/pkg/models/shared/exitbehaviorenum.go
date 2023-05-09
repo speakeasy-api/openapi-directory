@@ -14,18 +14,22 @@ const (
 	ExitBehaviorEnumRestart ExitBehaviorEnum = "RESTART"
 )
 
+func (e ExitBehaviorEnum) ToPointer() *ExitBehaviorEnum {
+	return &e
+}
+
 func (e *ExitBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAIL":
 		fallthrough
 	case "RESTART":
-		*e = ExitBehaviorEnum(s)
+		*e = ExitBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExitBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ExitBehaviorEnum: %v", v)
 	}
 }

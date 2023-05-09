@@ -16,21 +16,25 @@ const (
 	TestCaseExpectationEnumDeny                   TestCaseExpectationEnum = "DENY"
 )
 
+func (e TestCaseExpectationEnum) ToPointer() *TestCaseExpectationEnum {
+	return &e
+}
+
 func (e *TestCaseExpectationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPECTATION_UNSPECIFIED":
 		fallthrough
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = TestCaseExpectationEnum(s)
+		*e = TestCaseExpectationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCaseExpectationEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCaseExpectationEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	TestCaseExpressionReportLevelEnumVisited          TestCaseExpressionReportLevelEnum = "VISITED"
 )
 
+func (e TestCaseExpressionReportLevelEnum) ToPointer() *TestCaseExpressionReportLevelEnum {
+	return &e
+}
+
 func (e *TestCaseExpressionReportLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NONE":
@@ -57,10 +65,10 @@ func (e *TestCaseExpressionReportLevelEnum) UnmarshalJSON(data []byte) error {
 	case "FULL":
 		fallthrough
 	case "VISITED":
-		*e = TestCaseExpressionReportLevelEnum(s)
+		*e = TestCaseExpressionReportLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCaseExpressionReportLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCaseExpressionReportLevelEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	TestCasePathEncodingEnumPlain               TestCasePathEncodingEnum = "PLAIN"
 )
 
+func (e TestCasePathEncodingEnum) ToPointer() *TestCasePathEncodingEnum {
+	return &e
+}
+
 func (e *TestCasePathEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCODING_UNSPECIFIED":
 		fallthrough
 	case "URL_ENCODED":
 		fallthrough
 	case "PLAIN":
-		*e = TestCasePathEncodingEnum(s)
+		*e = TestCasePathEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestCasePathEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for TestCasePathEncodingEnum: %v", v)
 	}
 }
 

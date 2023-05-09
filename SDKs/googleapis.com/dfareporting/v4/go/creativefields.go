@@ -34,7 +34,10 @@ func newCreativeFields(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingCreativeFieldsDelete - Deletes an existing creative field.
 func (s *creativeFields) DfareportingCreativeFieldsDelete(ctx context.Context, request operations.DfareportingCreativeFieldsDeleteRequest, security operations.DfareportingCreativeFieldsDeleteSecurity) (*operations.DfareportingCreativeFieldsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *creativeFields) DfareportingCreativeFieldsDelete(ctx context.Context, r
 // DfareportingCreativeFieldsGet - Gets one creative field by ID.
 func (s *creativeFields) DfareportingCreativeFieldsGet(ctx context.Context, request operations.DfareportingCreativeFieldsGetRequest, security operations.DfareportingCreativeFieldsGetSecurity) (*operations.DfareportingCreativeFieldsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *creativeFields) DfareportingCreativeFieldsGet(ctx context.Context, requ
 // DfareportingCreativeFieldsInsert - Inserts a new creative field.
 func (s *creativeFields) DfareportingCreativeFieldsInsert(ctx context.Context, request operations.DfareportingCreativeFieldsInsertRequest, security operations.DfareportingCreativeFieldsInsertSecurity) (*operations.DfareportingCreativeFieldsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeField", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *creativeFields) DfareportingCreativeFieldsInsert(ctx context.Context, r
 // DfareportingCreativeFieldsList - Retrieves a list of creative fields, possibly filtered. This method supports paging.
 func (s *creativeFields) DfareportingCreativeFieldsList(ctx context.Context, request operations.DfareportingCreativeFieldsListRequest, security operations.DfareportingCreativeFieldsListSecurity) (*operations.DfareportingCreativeFieldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *creativeFields) DfareportingCreativeFieldsList(ctx context.Context, req
 // DfareportingCreativeFieldsPatch - Updates an existing creative field. This method supports patch semantics.
 func (s *creativeFields) DfareportingCreativeFieldsPatch(ctx context.Context, request operations.DfareportingCreativeFieldsPatchRequest, security operations.DfareportingCreativeFieldsPatchSecurity) (*operations.DfareportingCreativeFieldsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeField", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *creativeFields) DfareportingCreativeFieldsPatch(ctx context.Context, re
 // DfareportingCreativeFieldsUpdate - Updates an existing creative field.
 func (s *creativeFields) DfareportingCreativeFieldsUpdate(ctx context.Context, request operations.DfareportingCreativeFieldsUpdateRequest, security operations.DfareportingCreativeFieldsUpdateSecurity) (*operations.DfareportingCreativeFieldsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/creativeFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreativeField", "json")
 	if err != nil {

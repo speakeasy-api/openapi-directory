@@ -15,17 +15,21 @@ const (
 	GETAddSourceIdentifierToSubscriptionActionEnumAddSourceIdentifierToSubscription GETAddSourceIdentifierToSubscriptionActionEnum = "AddSourceIdentifierToSubscription"
 )
 
+func (e GETAddSourceIdentifierToSubscriptionActionEnum) ToPointer() *GETAddSourceIdentifierToSubscriptionActionEnum {
+	return &e
+}
+
 func (e *GETAddSourceIdentifierToSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AddSourceIdentifierToSubscription":
-		*e = GETAddSourceIdentifierToSubscriptionActionEnum(s)
+		*e = GETAddSourceIdentifierToSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddSourceIdentifierToSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddSourceIdentifierToSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAddSourceIdentifierToSubscriptionVersionEnumTwoThousandAndThirteen0110 GETAddSourceIdentifierToSubscriptionVersionEnum = "2013-01-10"
 )
 
+func (e GETAddSourceIdentifierToSubscriptionVersionEnum) ToPointer() *GETAddSourceIdentifierToSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *GETAddSourceIdentifierToSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETAddSourceIdentifierToSubscriptionVersionEnum(s)
+		*e = GETAddSourceIdentifierToSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAddSourceIdentifierToSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAddSourceIdentifierToSubscriptionVersionEnum: %v", v)
 	}
 }
 

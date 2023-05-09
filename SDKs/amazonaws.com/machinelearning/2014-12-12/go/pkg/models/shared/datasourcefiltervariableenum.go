@@ -19,12 +19,16 @@ const (
 	DataSourceFilterVariableEnumIamUser        DataSourceFilterVariableEnum = "IAMUser"
 )
 
+func (e DataSourceFilterVariableEnum) ToPointer() *DataSourceFilterVariableEnum {
+	return &e
+}
+
 func (e *DataSourceFilterVariableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreatedAt":
 		fallthrough
 	case "LastUpdatedAt":
@@ -36,9 +40,9 @@ func (e *DataSourceFilterVariableEnum) UnmarshalJSON(data []byte) error {
 	case "DataLocationS3":
 		fallthrough
 	case "IAMUser":
-		*e = DataSourceFilterVariableEnum(s)
+		*e = DataSourceFilterVariableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceFilterVariableEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceFilterVariableEnum: %v", v)
 	}
 }

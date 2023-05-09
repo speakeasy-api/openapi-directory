@@ -17,12 +17,16 @@ const (
 	SeverityLabelEnumCritical      SeverityLabelEnum = "CRITICAL"
 )
 
+func (e SeverityLabelEnum) ToPointer() *SeverityLabelEnum {
+	return &e
+}
+
 func (e *SeverityLabelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INFORMATIONAL":
 		fallthrough
 	case "LOW":
@@ -32,9 +36,9 @@ func (e *SeverityLabelEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH":
 		fallthrough
 	case "CRITICAL":
-		*e = SeverityLabelEnum(s)
+		*e = SeverityLabelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SeverityLabelEnum: %s", s)
+		return fmt.Errorf("invalid value for SeverityLabelEnum: %v", v)
 	}
 }

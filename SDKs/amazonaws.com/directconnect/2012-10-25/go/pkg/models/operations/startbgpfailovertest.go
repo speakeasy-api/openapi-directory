@@ -16,17 +16,21 @@ const (
 	StartBgpFailoverTestXAmzTargetEnumOvertureServiceStartBgpFailoverTest StartBgpFailoverTestXAmzTargetEnum = "OvertureService.StartBgpFailoverTest"
 )
 
+func (e StartBgpFailoverTestXAmzTargetEnum) ToPointer() *StartBgpFailoverTestXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartBgpFailoverTestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.StartBgpFailoverTest":
-		*e = StartBgpFailoverTestXAmzTargetEnum(s)
+		*e = StartBgpFailoverTestXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartBgpFailoverTestXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartBgpFailoverTestXAmzTargetEnum: %v", v)
 	}
 }
 

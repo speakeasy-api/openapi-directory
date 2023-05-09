@@ -16,17 +16,21 @@ const (
 	BatchDeleteImageXAmzTargetEnumSpencerFrontendServiceBatchDeleteImage BatchDeleteImageXAmzTargetEnum = "SpencerFrontendService.BatchDeleteImage"
 )
 
+func (e BatchDeleteImageXAmzTargetEnum) ToPointer() *BatchDeleteImageXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDeleteImageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SpencerFrontendService.BatchDeleteImage":
-		*e = BatchDeleteImageXAmzTargetEnum(s)
+		*e = BatchDeleteImageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDeleteImageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDeleteImageXAmzTargetEnum: %v", v)
 	}
 }
 

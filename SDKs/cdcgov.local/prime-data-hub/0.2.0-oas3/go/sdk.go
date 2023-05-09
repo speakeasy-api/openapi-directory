@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - A router of public health data from multiple senders and receivers
 type SDK struct {
 
@@ -95,7 +110,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteSettingsOrganizationsOrganizationName - Delete an organization (and the associated receivers and senders)
 func (s *SDK) DeleteSettingsOrganizationsOrganizationName(ctx context.Context, request operations.DeleteSettingsOrganizationsOrganizationNameRequest, security operations.DeleteSettingsOrganizationsOrganizationNameSecurity) (*operations.DeleteSettingsOrganizationsOrganizationNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +160,10 @@ func (s *SDK) DeleteSettingsOrganizationsOrganizationName(ctx context.Context, r
 // DeleteSettingsOrganizationsOrganizationNameReceiversReceiverName - Delete a receiver
 func (s *SDK) DeleteSettingsOrganizationsOrganizationNameReceiversReceiverName(ctx context.Context, request operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity) (*operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -189,7 +210,10 @@ func (s *SDK) DeleteSettingsOrganizationsOrganizationNameReceiversReceiverName(c
 // DeleteSettingsOrganizationsOrganizationNameSendersSenderName - Delete a sender
 func (s *SDK) DeleteSettingsOrganizationsOrganizationNameSendersSenderName(ctx context.Context, request operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameSecurity) (*operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +258,7 @@ func (s *SDK) DeleteSettingsOrganizationsOrganizationNameSendersSenderName(ctx c
 }
 
 // GetSettingsOrganizations - The settings for all organizations of the system. Must have admin access.
-func (s *SDK) GetSettingsOrganizations(ctx context.Context) (*operations.GetSettingsOrganizationsResponse, error) {
+func (s *SDK) GetSettingsOrganizations(ctx context.Context, security operations.GetSettingsOrganizationsSecurity) (*operations.GetSettingsOrganizationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/settings/organizations"
 
@@ -243,7 +267,7 @@ func (s *SDK) GetSettingsOrganizations(ctx context.Context) (*operations.GetSett
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -282,7 +306,10 @@ func (s *SDK) GetSettingsOrganizations(ctx context.Context) (*operations.GetSett
 // GetSettingsOrganizationsOrganizationName - A single organization settings
 func (s *SDK) GetSettingsOrganizationsOrganizationName(ctx context.Context, request operations.GetSettingsOrganizationsOrganizationNameRequest, security operations.GetSettingsOrganizationsOrganizationNameSecurity) (*operations.GetSettingsOrganizationsOrganizationNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +353,10 @@ func (s *SDK) GetSettingsOrganizationsOrganizationName(ctx context.Context, requ
 // GetSettingsOrganizationsOrganizationNameReceivers - A list of receivers and their current settings
 func (s *SDK) GetSettingsOrganizationsOrganizationNameReceivers(ctx context.Context, request operations.GetSettingsOrganizationsOrganizationNameReceiversRequest, security operations.GetSettingsOrganizationsOrganizationNameReceiversSecurity) (*operations.GetSettingsOrganizationsOrganizationNameReceiversResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -373,7 +403,10 @@ func (s *SDK) GetSettingsOrganizationsOrganizationNameReceivers(ctx context.Cont
 // GetSettingsOrganizationsOrganizationNameReceiversReceiverName - The settings of a single of receiver
 func (s *SDK) GetSettingsOrganizationsOrganizationNameReceiversReceiverName(ctx context.Context, request operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity) (*operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -420,7 +453,10 @@ func (s *SDK) GetSettingsOrganizationsOrganizationNameReceiversReceiverName(ctx 
 // GetSettingsOrganizationsOrganizationNameSenders - A list of senders
 func (s *SDK) GetSettingsOrganizationsOrganizationNameSenders(ctx context.Context, request operations.GetSettingsOrganizationsOrganizationNameSendersRequest, security operations.GetSettingsOrganizationsOrganizationNameSendersSecurity) (*operations.GetSettingsOrganizationsOrganizationNameSendersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -467,7 +503,10 @@ func (s *SDK) GetSettingsOrganizationsOrganizationNameSenders(ctx context.Contex
 // GetSettingsOrganizationsOrganizationNameSendersSenderName - The settings of a single of sender
 func (s *SDK) GetSettingsOrganizationsOrganizationNameSendersSenderName(ctx context.Context, request operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameSecurity) (*operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -512,7 +551,7 @@ func (s *SDK) GetSettingsOrganizationsOrganizationNameSendersSenderName(ctx cont
 }
 
 // HeadSettingsOrganizations - Retrived the last modified for all settings of the system. Must have admin access.
-func (s *SDK) HeadSettingsOrganizations(ctx context.Context) (*operations.HeadSettingsOrganizationsResponse, error) {
+func (s *SDK) HeadSettingsOrganizations(ctx context.Context, security operations.HeadSettingsOrganizationsSecurity) (*operations.HeadSettingsOrganizationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/settings/organizations"
 
@@ -521,7 +560,7 @@ func (s *SDK) HeadSettingsOrganizations(ctx context.Context) (*operations.HeadSe
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -613,7 +652,10 @@ func (s *SDK) PostReports(ctx context.Context, request operations.PostReportsReq
 // PutSettingsOrganizationsOrganizationName - Create or update the direct settings associated with an organization
 func (s *SDK) PutSettingsOrganizationsOrganizationName(ctx context.Context, request operations.PutSettingsOrganizationsOrganizationNameRequest, security operations.PutSettingsOrganizationsOrganizationNameSecurity) (*operations.PutSettingsOrganizationsOrganizationNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrganizationInput", "json")
 	if err != nil {
@@ -669,7 +711,10 @@ func (s *SDK) PutSettingsOrganizationsOrganizationName(ctx context.Context, requ
 // PutSettingsOrganizationsOrganizationNameReceiversReceiverName - Update a single reciever
 func (s *SDK) PutSettingsOrganizationsOrganizationNameReceiversReceiverName(ctx context.Context, request operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameRequest, security operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameSecurity) (*operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/receivers/{receiverName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceiverInput", "json")
 	if err != nil {
@@ -725,7 +770,10 @@ func (s *SDK) PutSettingsOrganizationsOrganizationNameReceiversReceiverName(ctx 
 // PutSettingsOrganizationsOrganizationNameSendersSenderName - Update a single sender
 func (s *SDK) PutSettingsOrganizationsOrganizationNameSendersSenderName(ctx context.Context, request operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameRequest, security operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameSecurity) (*operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/settings/organizations/{organizationName}/senders/{senderName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SenderInput", "json")
 	if err != nil {

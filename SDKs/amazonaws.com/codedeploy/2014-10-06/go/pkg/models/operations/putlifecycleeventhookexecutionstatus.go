@@ -16,17 +16,21 @@ const (
 	PutLifecycleEventHookExecutionStatusXAmzTargetEnumCodeDeploy20141006PutLifecycleEventHookExecutionStatus PutLifecycleEventHookExecutionStatusXAmzTargetEnum = "CodeDeploy_20141006.PutLifecycleEventHookExecutionStatus"
 )
 
+func (e PutLifecycleEventHookExecutionStatusXAmzTargetEnum) ToPointer() *PutLifecycleEventHookExecutionStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutLifecycleEventHookExecutionStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.PutLifecycleEventHookExecutionStatus":
-		*e = PutLifecycleEventHookExecutionStatusXAmzTargetEnum(s)
+		*e = PutLifecycleEventHookExecutionStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutLifecycleEventHookExecutionStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutLifecycleEventHookExecutionStatusXAmzTargetEnum: %v", v)
 	}
 }
 

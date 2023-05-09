@@ -17,12 +17,16 @@ const (
 	GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnumDeleting  GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum = "deleting"
 )
 
+func (e GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum) ToPointer() *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -30,10 +34,10 @@ func (e *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListRefe
 	case "modifying":
 		fallthrough
 	case "deleting":
-		*e = GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum(s)
+		*e = GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesStateEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnumTgwPeering           GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum = "tgw-peering"
 )
 
+func (e GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum) ToPointer() *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum {
+	return &e
+}
+
 func (e *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -66,10 +74,10 @@ func (e *GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListRefe
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum(s)
+		*e = GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransitGatewayPrefixListReferencesResultTransitGatewayPrefixListReferencesTransitGatewayAttachmentResourceTypeEnum: %v", v)
 	}
 }
 

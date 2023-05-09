@@ -15,17 +15,21 @@ const (
 	GETFailoverGlobalClusterActionEnumFailoverGlobalCluster GETFailoverGlobalClusterActionEnum = "FailoverGlobalCluster"
 )
 
+func (e GETFailoverGlobalClusterActionEnum) ToPointer() *GETFailoverGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *GETFailoverGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailoverGlobalCluster":
-		*e = GETFailoverGlobalClusterActionEnum(s)
+		*e = GETFailoverGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETFailoverGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETFailoverGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETFailoverGlobalClusterVersionEnumTwoThousandAndFourteen1031 GETFailoverGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETFailoverGlobalClusterVersionEnum) ToPointer() *GETFailoverGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *GETFailoverGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETFailoverGlobalClusterVersionEnum(s)
+		*e = GETFailoverGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETFailoverGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETFailoverGlobalClusterVersionEnum: %v", v)
 	}
 }
 

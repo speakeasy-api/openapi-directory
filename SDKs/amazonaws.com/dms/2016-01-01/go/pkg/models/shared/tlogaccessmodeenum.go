@@ -16,12 +16,16 @@ const (
 	TlogAccessModeEnumTlogOnly     TlogAccessModeEnum = "TlogOnly"
 )
 
+func (e TlogAccessModeEnum) ToPointer() *TlogAccessModeEnum {
+	return &e
+}
+
 func (e *TlogAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnly":
 		fallthrough
 	case "PreferBackup":
@@ -29,9 +33,9 @@ func (e *TlogAccessModeEnum) UnmarshalJSON(data []byte) error {
 	case "PreferTlog":
 		fallthrough
 	case "TlogOnly":
-		*e = TlogAccessModeEnum(s)
+		*e = TlogAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TlogAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TlogAccessModeEnum: %v", v)
 	}
 }

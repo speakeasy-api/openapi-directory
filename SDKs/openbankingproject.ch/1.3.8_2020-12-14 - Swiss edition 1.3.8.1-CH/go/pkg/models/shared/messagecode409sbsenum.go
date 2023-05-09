@@ -15,18 +15,22 @@ const (
 	MessageCode409SBSEnumStatusInvalid          MessageCode409SBSEnum = "STATUS_INVALID"
 )
 
+func (e MessageCode409SBSEnum) ToPointer() *MessageCode409SBSEnum {
+	return &e
+}
+
 func (e *MessageCode409SBSEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REFERENCE_STATUS_INVALID":
 		fallthrough
 	case "STATUS_INVALID":
-		*e = MessageCode409SBSEnum(s)
+		*e = MessageCode409SBSEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode409SBSEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode409SBSEnum: %v", v)
 	}
 }

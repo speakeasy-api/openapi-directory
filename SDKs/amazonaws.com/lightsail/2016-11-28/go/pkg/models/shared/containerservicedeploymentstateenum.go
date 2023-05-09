@@ -16,12 +16,16 @@ const (
 	ContainerServiceDeploymentStateEnumFailed     ContainerServiceDeploymentStateEnum = "FAILED"
 )
 
+func (e ContainerServiceDeploymentStateEnum) ToPointer() *ContainerServiceDeploymentStateEnum {
+	return &e
+}
+
 func (e *ContainerServiceDeploymentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVATING":
 		fallthrough
 	case "ACTIVE":
@@ -29,9 +33,9 @@ func (e *ContainerServiceDeploymentStateEnum) UnmarshalJSON(data []byte) error {
 	case "INACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = ContainerServiceDeploymentStateEnum(s)
+		*e = ContainerServiceDeploymentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerServiceDeploymentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerServiceDeploymentStateEnum: %v", v)
 	}
 }

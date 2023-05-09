@@ -16,21 +16,25 @@ const (
 	CreativeRestrictionsCreativeFormatEnumVideo                     CreativeRestrictionsCreativeFormatEnum = "VIDEO"
 )
 
+func (e CreativeRestrictionsCreativeFormatEnum) ToPointer() *CreativeRestrictionsCreativeFormatEnum {
+	return &e
+}
+
 func (e *CreativeRestrictionsCreativeFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATIVE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "DISPLAY":
 		fallthrough
 	case "VIDEO":
-		*e = CreativeRestrictionsCreativeFormatEnum(s)
+		*e = CreativeRestrictionsCreativeFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRestrictionsCreativeFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRestrictionsCreativeFormatEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	CreativeRestrictionsSkippableAdTypeEnumNotSkippable               CreativeRestrictionsSkippableAdTypeEnum = "NOT_SKIPPABLE"
 )
 
+func (e CreativeRestrictionsSkippableAdTypeEnum) ToPointer() *CreativeRestrictionsSkippableAdTypeEnum {
+	return &e
+}
+
 func (e *CreativeRestrictionsSkippableAdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SKIPPABLE_AD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SKIPPABLE":
@@ -57,10 +65,10 @@ func (e *CreativeRestrictionsSkippableAdTypeEnum) UnmarshalJSON(data []byte) err
 	case "INSTREAM_SELECT":
 		fallthrough
 	case "NOT_SKIPPABLE":
-		*e = CreativeRestrictionsSkippableAdTypeEnum(s)
+		*e = CreativeRestrictionsSkippableAdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRestrictionsSkippableAdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRestrictionsSkippableAdTypeEnum: %v", v)
 	}
 }
 

@@ -26,12 +26,16 @@ const (
 	ContentOrdersGettestordertemplateTemplateNameEnumTemplate4  ContentOrdersGettestordertemplateTemplateNameEnum = "TEMPLATE4"
 )
 
+func (e ContentOrdersGettestordertemplateTemplateNameEnum) ToPointer() *ContentOrdersGettestordertemplateTemplateNameEnum {
+	return &e
+}
+
 func (e *ContentOrdersGettestordertemplateTemplateNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEMPLATE1":
 		fallthrough
 	case "TEMPLATE2":
@@ -43,10 +47,10 @@ func (e *ContentOrdersGettestordertemplateTemplateNameEnum) UnmarshalJSON(data [
 	case "TEMPLATE3":
 		fallthrough
 	case "TEMPLATE4":
-		*e = ContentOrdersGettestordertemplateTemplateNameEnum(s)
+		*e = ContentOrdersGettestordertemplateTemplateNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentOrdersGettestordertemplateTemplateNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentOrdersGettestordertemplateTemplateNameEnum: %v", v)
 	}
 }
 

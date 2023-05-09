@@ -19,9 +19,9 @@ type CreateAppVersionResourceRequestBodyLogicalResourceID struct {
 type CreateAppVersionResourceRequestBody struct {
 	// Currently, there is no supported additional information for resources.
 	AdditionalInfo map[string][]string `json:"additionalInfo,omitempty"`
-	// The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+	// The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
 	AppArn string `json:"appArn"`
-	// The list of Application Components that this resource belongs to. If an Application Component is not part of the AWS Resilience Hub application, it will be added.
+	// The list of Application Components that this resource belongs to. If an Application Component is not part of the Resilience Hub application, it will be added.
 	AppComponents []string `json:"appComponents"`
 	// The Amazon Web Services account that owns the physical resource.
 	AwsAccountID *string `json:"awsAccountId,omitempty"`

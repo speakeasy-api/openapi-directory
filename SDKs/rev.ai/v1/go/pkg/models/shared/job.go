@@ -22,12 +22,16 @@ const (
 	JobFailureEnumInvoicingLimitExceeded JobFailureEnum = "invoicing_limit_exceeded"
 )
 
+func (e JobFailureEnum) ToPointer() *JobFailureEnum {
+	return &e
+}
+
 func (e *JobFailureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_processing":
 		fallthrough
 	case "download_failure":
@@ -45,10 +49,10 @@ func (e *JobFailureEnum) UnmarshalJSON(data []byte) error {
 	case "insufficient_balance":
 		fallthrough
 	case "invoicing_limit_exceeded":
-		*e = JobFailureEnum(s)
+		*e = JobFailureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobFailureEnum: %s", s)
+		return fmt.Errorf("invalid value for JobFailureEnum: %v", v)
 	}
 }
 
@@ -88,12 +92,16 @@ const (
 	JobLanguageEnumTr  JobLanguageEnum = "tr"
 )
 
+func (e JobLanguageEnum) ToPointer() *JobLanguageEnum {
+	return &e
+}
+
 func (e *JobLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en":
 		fallthrough
 	case "ar":
@@ -155,10 +163,10 @@ func (e *JobLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "sv":
 		fallthrough
 	case "tr":
-		*e = JobLanguageEnum(s)
+		*e = JobLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for JobLanguageEnum: %v", v)
 	}
 }
 
@@ -171,21 +179,25 @@ const (
 	JobStatusEnumFailed      JobStatusEnum = "failed"
 )
 
+func (e JobStatusEnum) ToPointer() *JobStatusEnum {
+	return &e
+}
+
 func (e *JobStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in_progress":
 		fallthrough
 	case "transcribed":
 		fallthrough
 	case "failed":
-		*e = JobStatusEnum(s)
+		*e = JobStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for JobStatusEnum: %v", v)
 	}
 }
 
@@ -196,17 +208,21 @@ const (
 	JobTypeEnumAsync JobTypeEnum = "async"
 )
 
+func (e JobTypeEnum) ToPointer() *JobTypeEnum {
+	return &e
+}
+
 func (e *JobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "async":
-		*e = JobTypeEnum(s)
+		*e = JobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for JobTypeEnum: %v", v)
 	}
 }
 

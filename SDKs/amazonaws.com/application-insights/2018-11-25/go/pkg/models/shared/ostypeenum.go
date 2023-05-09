@@ -14,18 +14,22 @@ const (
 	OsTypeEnumLinux   OsTypeEnum = "LINUX"
 )
 
+func (e OsTypeEnum) ToPointer() *OsTypeEnum {
+	return &e
+}
+
 func (e *OsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WINDOWS":
 		fallthrough
 	case "LINUX":
-		*e = OsTypeEnum(s)
+		*e = OsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OsTypeEnum: %v", v)
 	}
 }

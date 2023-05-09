@@ -17,12 +17,16 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnumTelecommunications  GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum = "TELECOMMUNICATIONS"
 )
 
+func (e GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum) ToPointer() *GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDUSTRY_UNSPECIFIED":
 		fallthrough
 	case "FINANCE":
@@ -30,10 +34,10 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum) UnmarshalJSON(d
 	case "HEALTH":
 		fallthrough
 	case "TELECOMMUNICATIONS":
-		*e = GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum(s)
+		*e = GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryIndustryCategoryEnum: %v", v)
 	}
 }
 
@@ -86,12 +90,16 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumInternal            GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "INTERNAL"
 )
 
+func (e GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) ToPointer() *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_UNSPECIFIED":
 		fallthrough
 	case "GLOBAL":
@@ -177,10 +185,10 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(d
 	case "VENEZUELA":
 		fallthrough
 	case "INTERNAL":
-		*e = GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum(s)
+		*e = GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum: %v", v)
 	}
 }
 
@@ -198,12 +206,16 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnumContextualInformation GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum = "CONTEXTUAL_INFORMATION"
 )
 
+func (e GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum) ToPointer() *GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "PII":
@@ -219,10 +231,10 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum) UnmarshalJSON(data 
 	case "DOCUMENT":
 		fallthrough
 	case "CONTEXTUAL_INFORMATION":
-		*e = GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum(s)
+		*e = GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2InfoTypeCategoryTypeCategoryEnum: %v", v)
 	}
 }
 

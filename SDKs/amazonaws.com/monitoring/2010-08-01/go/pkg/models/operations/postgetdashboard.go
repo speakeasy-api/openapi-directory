@@ -15,17 +15,21 @@ const (
 	POSTGetDashboardActionEnumGetDashboard POSTGetDashboardActionEnum = "GetDashboard"
 )
 
+func (e POSTGetDashboardActionEnum) ToPointer() *POSTGetDashboardActionEnum {
+	return &e
+}
+
 func (e *POSTGetDashboardActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetDashboard":
-		*e = POSTGetDashboardActionEnum(s)
+		*e = POSTGetDashboardActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetDashboardActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetDashboardActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetDashboardVersionEnumTwoThousandAndTen0801 POSTGetDashboardVersionEnum = "2010-08-01"
 )
 
+func (e POSTGetDashboardVersionEnum) ToPointer() *POSTGetDashboardVersionEnum {
+	return &e
+}
+
 func (e *POSTGetDashboardVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTGetDashboardVersionEnum(s)
+		*e = POSTGetDashboardVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetDashboardVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetDashboardVersionEnum: %v", v)
 	}
 }
 

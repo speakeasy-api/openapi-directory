@@ -48,7 +48,10 @@ func (s *timelineWeatherAPI15DayForecastRequest) GetVisualCrossingWebServicesRes
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/VisualCrossingWebServices/rest/services/timeline/{location}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

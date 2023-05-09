@@ -14,18 +14,22 @@ const (
 	AwsManagedHumanLoopRequestSourceEnumAwsTextractAnalyzeDocumentFormsV1           AwsManagedHumanLoopRequestSourceEnum = "AWS/Textract/AnalyzeDocument/Forms/V1"
 )
 
+func (e AwsManagedHumanLoopRequestSourceEnum) ToPointer() *AwsManagedHumanLoopRequestSourceEnum {
+	return &e
+}
+
 func (e *AwsManagedHumanLoopRequestSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS/Rekognition/DetectModerationLabels/Image/V3":
 		fallthrough
 	case "AWS/Textract/AnalyzeDocument/Forms/V1":
-		*e = AwsManagedHumanLoopRequestSourceEnum(s)
+		*e = AwsManagedHumanLoopRequestSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsManagedHumanLoopRequestSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsManagedHumanLoopRequestSourceEnum: %v", v)
 	}
 }

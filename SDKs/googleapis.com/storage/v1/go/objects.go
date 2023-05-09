@@ -34,7 +34,10 @@ func newObjects(defaultClient, securityClient HTTPClient, serverURL, language, s
 // StorageObjectsCompose - Concatenates a list of existing objects into a new object in the same bucket.
 func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.StorageObjectsComposeRequest, security operations.StorageObjectsComposeSecurity) (*operations.StorageObjectsComposeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{destinationBucket}/o/{destinationObject}/compose", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{destinationBucket}/o/{destinationObject}/compose", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ComposeRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *objects) StorageObjectsCompose(ctx context.Context, request operations.
 // StorageObjectsCopy - Copies a source object to a destination object. Optionally overrides metadata.
 func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.StorageObjectsCopyRequest, security operations.StorageObjectsCopySecurity) (*operations.StorageObjectsCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/copyTo/b/{destinationBucket}/o/{destinationObject}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/copyTo/b/{destinationBucket}/o/{destinationObject}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *objects) StorageObjectsCopy(ctx context.Context, request operations.Sto
 // StorageObjectsDelete - Deletes an object and its metadata. Deletions are permanent if versioning is not enabled for the bucket, or if the generation parameter is used.
 func (s *objects) StorageObjectsDelete(ctx context.Context, request operations.StorageObjectsDeleteRequest, security operations.StorageObjectsDeleteSecurity) (*operations.StorageObjectsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -183,7 +192,10 @@ func (s *objects) StorageObjectsDelete(ctx context.Context, request operations.S
 // StorageObjectsGet - Retrieves an object or its metadata.
 func (s *objects) StorageObjectsGet(ctx context.Context, request operations.StorageObjectsGetRequest, security operations.StorageObjectsGetSecurity) (*operations.StorageObjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -231,7 +243,10 @@ func (s *objects) StorageObjectsGet(ctx context.Context, request operations.Stor
 // StorageObjectsGetIamPolicy - Returns an IAM policy for the specified object.
 func (s *objects) StorageObjectsGetIamPolicy(ctx context.Context, request operations.StorageObjectsGetIamPolicyRequest, security operations.StorageObjectsGetIamPolicySecurity) (*operations.StorageObjectsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *objects) StorageObjectsGetIamPolicy(ctx context.Context, request operat
 // StorageObjectsInsert - Stores a new object and metadata.
 func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.StorageObjectsInsertRequest, security operations.StorageObjectsInsertSecurity) (*operations.StorageObjectsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -334,7 +352,10 @@ func (s *objects) StorageObjectsInsert(ctx context.Context, request operations.S
 // StorageObjectsList - Retrieves a list of objects matching the criteria.
 func (s *objects) StorageObjectsList(ctx context.Context, request operations.StorageObjectsListRequest, security operations.StorageObjectsListSecurity) (*operations.StorageObjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -382,7 +403,10 @@ func (s *objects) StorageObjectsList(ctx context.Context, request operations.Sto
 // StorageObjectsPatch - Patches an object's metadata.
 func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.StorageObjectsPatchRequest, security operations.StorageObjectsPatchSecurity) (*operations.StorageObjectsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object1", "json")
 	if err != nil {
@@ -437,7 +461,10 @@ func (s *objects) StorageObjectsPatch(ctx context.Context, request operations.St
 // StorageObjectsRewrite - Rewrites a source object to a destination object. Optionally overrides metadata.
 func (s *objects) StorageObjectsRewrite(ctx context.Context, request operations.StorageObjectsRewriteRequest, security operations.StorageObjectsRewriteSecurity) (*operations.StorageObjectsRewriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/rewriteTo/b/{destinationBucket}/o/{destinationObject}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{sourceBucket}/o/{sourceObject}/rewriteTo/b/{destinationBucket}/o/{destinationObject}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object", "json")
 	if err != nil {
@@ -492,7 +519,10 @@ func (s *objects) StorageObjectsRewrite(ctx context.Context, request operations.
 // StorageObjectsSetIamPolicy - Updates an IAM policy for the specified object.
 func (s *objects) StorageObjectsSetIamPolicy(ctx context.Context, request operations.StorageObjectsSetIamPolicyRequest, security operations.StorageObjectsSetIamPolicySecurity) (*operations.StorageObjectsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Policy", "json")
 	if err != nil {
@@ -547,7 +577,10 @@ func (s *objects) StorageObjectsSetIamPolicy(ctx context.Context, request operat
 // StorageObjectsTestIamPermissions - Tests a set of permissions on the given object to see which, if any, are held by the caller.
 func (s *objects) StorageObjectsTestIamPermissions(ctx context.Context, request operations.StorageObjectsTestIamPermissionsRequest, security operations.StorageObjectsTestIamPermissionsSecurity) (*operations.StorageObjectsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam/testPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}/iam/testPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -595,7 +628,10 @@ func (s *objects) StorageObjectsTestIamPermissions(ctx context.Context, request 
 // StorageObjectsUpdate - Updates an object's metadata.
 func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.StorageObjectsUpdateRequest, security operations.StorageObjectsUpdateSecurity) (*operations.StorageObjectsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/{object}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Object1", "json")
 	if err != nil {
@@ -650,7 +686,10 @@ func (s *objects) StorageObjectsUpdate(ctx context.Context, request operations.S
 // StorageObjectsWatchAll - Watch for changes on all objects in a bucket.
 func (s *objects) StorageObjectsWatchAll(ctx context.Context, request operations.StorageObjectsWatchAllRequest, security operations.StorageObjectsWatchAllSecurity) (*operations.StorageObjectsWatchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/b/{bucket}/o/watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Channel", "json")
 	if err != nil {

@@ -8,9 +8,7 @@ import (
 )
 
 type GetPostsByIdsSecurity struct {
-	APIKey         *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
-	Oauth2Code     *string `security:"scheme,type=oauth2,name=Authorization"`
-	Oauth2Implicit *string `security:"scheme,type=oauth2,name=Authorization"`
+	APIKey string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
 }
 
 type GetPostsByIdsRequest struct {

@@ -18,12 +18,16 @@ const (
 	RichResultsInspectionResultVerdictEnumNeutral            RichResultsInspectionResultVerdictEnum = "NEUTRAL"
 )
 
+func (e RichResultsInspectionResultVerdictEnum) ToPointer() *RichResultsInspectionResultVerdictEnum {
+	return &e
+}
+
 func (e *RichResultsInspectionResultVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERDICT_UNSPECIFIED":
 		fallthrough
 	case "PASS":
@@ -33,10 +37,10 @@ func (e *RichResultsInspectionResultVerdictEnum) UnmarshalJSON(data []byte) erro
 	case "FAIL":
 		fallthrough
 	case "NEUTRAL":
-		*e = RichResultsInspectionResultVerdictEnum(s)
+		*e = RichResultsInspectionResultVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RichResultsInspectionResultVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for RichResultsInspectionResultVerdictEnum: %v", v)
 	}
 }
 

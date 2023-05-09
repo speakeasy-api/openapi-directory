@@ -16,17 +16,21 @@ const (
 	PutAccountSettingXAmzTargetEnumAmazonEc2ContainerServiceV20141113PutAccountSetting PutAccountSettingXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.PutAccountSetting"
 )
 
+func (e PutAccountSettingXAmzTargetEnum) ToPointer() *PutAccountSettingXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutAccountSettingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.PutAccountSetting":
-		*e = PutAccountSettingXAmzTargetEnum(s)
+		*e = PutAccountSettingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAccountSettingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAccountSettingXAmzTargetEnum: %v", v)
 	}
 }
 

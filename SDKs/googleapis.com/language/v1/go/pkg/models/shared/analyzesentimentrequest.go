@@ -17,12 +17,16 @@ const (
 	AnalyzeSentimentRequestEncodingTypeEnumUtf32 AnalyzeSentimentRequestEncodingTypeEnum = "UTF32"
 )
 
+func (e AnalyzeSentimentRequestEncodingTypeEnum) ToPointer() *AnalyzeSentimentRequestEncodingTypeEnum {
+	return &e
+}
+
 func (e *AnalyzeSentimentRequestEncodingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "UTF8":
@@ -30,10 +34,10 @@ func (e *AnalyzeSentimentRequestEncodingTypeEnum) UnmarshalJSON(data []byte) err
 	case "UTF16":
 		fallthrough
 	case "UTF32":
-		*e = AnalyzeSentimentRequestEncodingTypeEnum(s)
+		*e = AnalyzeSentimentRequestEncodingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyzeSentimentRequestEncodingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyzeSentimentRequestEncodingTypeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	FlowExecutionStatusEnumFailed    FlowExecutionStatusEnum = "FAILED"
 )
 
+func (e FlowExecutionStatusEnum) ToPointer() *FlowExecutionStatusEnum {
+	return &e
+}
+
 func (e *FlowExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNNING":
 		fallthrough
 	case "ABORTED":
@@ -29,9 +33,9 @@ func (e *FlowExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = FlowExecutionStatusEnum(s)
+		*e = FlowExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowExecutionStatusEnum: %v", v)
 	}
 }

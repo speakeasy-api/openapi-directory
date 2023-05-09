@@ -15,17 +15,21 @@ const (
 	POSTRotateEncryptionKeyActionEnumRotateEncryptionKey POSTRotateEncryptionKeyActionEnum = "RotateEncryptionKey"
 )
 
+func (e POSTRotateEncryptionKeyActionEnum) ToPointer() *POSTRotateEncryptionKeyActionEnum {
+	return &e
+}
+
 func (e *POSTRotateEncryptionKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RotateEncryptionKey":
-		*e = POSTRotateEncryptionKeyActionEnum(s)
+		*e = POSTRotateEncryptionKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRotateEncryptionKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRotateEncryptionKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRotateEncryptionKeyVersionEnumTwoThousandAndTwelve1201 POSTRotateEncryptionKeyVersionEnum = "2012-12-01"
 )
 
+func (e POSTRotateEncryptionKeyVersionEnum) ToPointer() *POSTRotateEncryptionKeyVersionEnum {
+	return &e
+}
+
 func (e *POSTRotateEncryptionKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTRotateEncryptionKeyVersionEnum(s)
+		*e = POSTRotateEncryptionKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRotateEncryptionKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRotateEncryptionKeyVersionEnum: %v", v)
 	}
 }
 

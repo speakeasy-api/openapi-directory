@@ -34,7 +34,10 @@ func newOrderreturns(defaultClient, securityClient HTTPClient, serverURL, langua
 // ContentOrderreturnsGet - Retrieves an order return from your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request operations.ContentOrderreturnsGetRequest, security operations.ContentOrderreturnsGetSecurity) (*operations.ContentOrderreturnsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns/{returnId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *orderreturns) ContentOrderreturnsGet(ctx context.Context, request opera
 // ContentOrderreturnsList - Lists order returns in your Merchant Center account.
 func (s *orderreturns) ContentOrderreturnsList(ctx context.Context, request operations.ContentOrderreturnsListRequest, security operations.ContentOrderreturnsListSecurity) (*operations.ContentOrderreturnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreturns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

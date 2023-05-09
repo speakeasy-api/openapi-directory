@@ -14,16 +14,20 @@ const (
 	BucketMetadataErrorCodeEnumAccessDenied BucketMetadataErrorCodeEnum = "ACCESS_DENIED"
 )
 
+func (e BucketMetadataErrorCodeEnum) ToPointer() *BucketMetadataErrorCodeEnum {
+	return &e
+}
+
 func (e *BucketMetadataErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_DENIED":
-		*e = BucketMetadataErrorCodeEnum(s)
+		*e = BucketMetadataErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BucketMetadataErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BucketMetadataErrorCodeEnum: %v", v)
 	}
 }

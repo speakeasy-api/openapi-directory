@@ -17,12 +17,16 @@ const (
 	SystemUpdateTypeEnumPostpone                    SystemUpdateTypeEnum = "POSTPONE"
 )
 
+func (e SystemUpdateTypeEnum) ToPointer() *SystemUpdateTypeEnum {
+	return &e
+}
+
 func (e *SystemUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM_UPDATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATIC":
@@ -30,10 +34,10 @@ func (e *SystemUpdateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WINDOWED":
 		fallthrough
 	case "POSTPONE":
-		*e = SystemUpdateTypeEnum(s)
+		*e = SystemUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SystemUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SystemUpdateTypeEnum: %v", v)
 	}
 }
 

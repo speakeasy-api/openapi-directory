@@ -16,17 +16,21 @@ const (
 	UpdateApplicationLayerAutomaticResponseXAmzTargetEnumAwsShield20160616UpdateApplicationLayerAutomaticResponse UpdateApplicationLayerAutomaticResponseXAmzTargetEnum = "AWSShield_20160616.UpdateApplicationLayerAutomaticResponse"
 )
 
+func (e UpdateApplicationLayerAutomaticResponseXAmzTargetEnum) ToPointer() *UpdateApplicationLayerAutomaticResponseXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateApplicationLayerAutomaticResponseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.UpdateApplicationLayerAutomaticResponse":
-		*e = UpdateApplicationLayerAutomaticResponseXAmzTargetEnum(s)
+		*e = UpdateApplicationLayerAutomaticResponseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateApplicationLayerAutomaticResponseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateApplicationLayerAutomaticResponseXAmzTargetEnum: %v", v)
 	}
 }
 

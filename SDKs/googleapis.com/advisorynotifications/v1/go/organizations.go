@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // AdvisorynotificationsOrganizationsLocationsNotificationsGet - Gets a notification.
 func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsGet(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetRequest, security operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetSecurity) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotifications
 // AdvisorynotificationsOrganizationsLocationsNotificationsList - Lists notifications under a given parent.
 func (s *organizations) AdvisorynotificationsOrganizationsLocationsNotificationsList(ctx context.Context, request operations.AdvisorynotificationsOrganizationsLocationsNotificationsListRequest, security operations.AdvisorynotificationsOrganizationsLocationsNotificationsListSecurity) (*operations.AdvisorynotificationsOrganizationsLocationsNotificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/notifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -52,4 +53,6 @@ pkg/models/shared/outdatedlibrary.go
 pkg/models/shared/form.go
 pkg/models/shared/listfindingsresponse.go
 pkg/models/shared/listscanrunsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

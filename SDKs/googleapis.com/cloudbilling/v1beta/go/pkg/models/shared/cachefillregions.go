@@ -21,12 +21,16 @@ const (
 	CacheFillRegionsDestinationRegionEnumCacheFillDestinationRegionOthers       CacheFillRegionsDestinationRegionEnum = "CACHE_FILL_DESTINATION_REGION_OTHERS"
 )
 
+func (e CacheFillRegionsDestinationRegionEnum) ToPointer() *CacheFillRegionsDestinationRegionEnum {
+	return &e
+}
+
 func (e *CacheFillRegionsDestinationRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CACHE_FILL_DESTINATION_REGION_UNSPECIFIED":
 		fallthrough
 	case "CACHE_FILL_DESTINATION_REGION_ASIA_PACIFIC":
@@ -42,10 +46,10 @@ func (e *CacheFillRegionsDestinationRegionEnum) UnmarshalJSON(data []byte) error
 	case "CACHE_FILL_DESTINATION_REGION_CHINA":
 		fallthrough
 	case "CACHE_FILL_DESTINATION_REGION_OTHERS":
-		*e = CacheFillRegionsDestinationRegionEnum(s)
+		*e = CacheFillRegionsDestinationRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CacheFillRegionsDestinationRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for CacheFillRegionsDestinationRegionEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	CacheFillRegionsSourceRegionEnumCacheFillSourceRegionSouthAmerica CacheFillRegionsSourceRegionEnum = "CACHE_FILL_SOURCE_REGION_SOUTH_AMERICA"
 )
 
+func (e CacheFillRegionsSourceRegionEnum) ToPointer() *CacheFillRegionsSourceRegionEnum {
+	return &e
+}
+
 func (e *CacheFillRegionsSourceRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CACHE_FILL_SOURCE_REGION_UNSPECIFIED":
 		fallthrough
 	case "CACHE_FILL_REGION_ASIA_PACIFIC":
@@ -78,10 +86,10 @@ func (e *CacheFillRegionsSourceRegionEnum) UnmarshalJSON(data []byte) error {
 	case "CACHE_FILL_SOURCE_REGION_OCEANIA":
 		fallthrough
 	case "CACHE_FILL_SOURCE_REGION_SOUTH_AMERICA":
-		*e = CacheFillRegionsSourceRegionEnum(s)
+		*e = CacheFillRegionsSourceRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CacheFillRegionsSourceRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for CacheFillRegionsSourceRegionEnum: %v", v)
 	}
 }
 

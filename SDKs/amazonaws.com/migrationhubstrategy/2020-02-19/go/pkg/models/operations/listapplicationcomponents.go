@@ -23,12 +23,16 @@ const (
 	ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnumErrorCategory  ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum = "ERROR_CATEGORY"
 )
 
+func (e ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum) ToPointer() *ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum {
+	return &e
+}
+
 func (e *ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_DEFINED":
 		fallthrough
 	case "APP_NAME":
@@ -44,10 +48,10 @@ func (e *ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum) U
 	case "ANALYSIS_STATUS":
 		fallthrough
 	case "ERROR_CATEGORY":
-		*e = ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum(s)
+		*e = ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for ListApplicationComponentsRequestBodyApplicationComponentCriteriaEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	ListApplicationComponentsRequestBodySortEnumDesc ListApplicationComponentsRequestBodySortEnum = "DESC"
 )
 
+func (e ListApplicationComponentsRequestBodySortEnum) ToPointer() *ListApplicationComponentsRequestBodySortEnum {
+	return &e
+}
+
 func (e *ListApplicationComponentsRequestBodySortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = ListApplicationComponentsRequestBodySortEnum(s)
+		*e = ListApplicationComponentsRequestBodySortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListApplicationComponentsRequestBodySortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListApplicationComponentsRequestBodySortEnum: %v", v)
 	}
 }
 

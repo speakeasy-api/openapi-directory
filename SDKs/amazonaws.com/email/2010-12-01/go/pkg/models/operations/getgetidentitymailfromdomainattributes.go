@@ -15,17 +15,21 @@ const (
 	GETGETIdentityMailFromDomainAttributesActionEnumGetIdentityMailFromDomainAttributes GETGETIdentityMailFromDomainAttributesActionEnum = "GetIdentityMailFromDomainAttributes"
 )
 
+func (e GETGETIdentityMailFromDomainAttributesActionEnum) ToPointer() *GETGETIdentityMailFromDomainAttributesActionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityMailFromDomainAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIdentityMailFromDomainAttributes":
-		*e = GETGETIdentityMailFromDomainAttributesActionEnum(s)
+		*e = GETGETIdentityMailFromDomainAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityMailFromDomainAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityMailFromDomainAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETIdentityMailFromDomainAttributesVersionEnumTwoThousandAndTen1201 GETGETIdentityMailFromDomainAttributesVersionEnum = "2010-12-01"
 )
 
+func (e GETGETIdentityMailFromDomainAttributesVersionEnum) ToPointer() *GETGETIdentityMailFromDomainAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETGETIdentityMailFromDomainAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETGETIdentityMailFromDomainAttributesVersionEnum(s)
+		*e = GETGETIdentityMailFromDomainAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIdentityMailFromDomainAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIdentityMailFromDomainAttributesVersionEnum: %v", v)
 	}
 }
 

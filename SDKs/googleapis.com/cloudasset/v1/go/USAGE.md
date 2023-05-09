@@ -2,48 +2,46 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetAssetsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
+    ctx := context.Background()
+    res, err := s.Assets.CloudassetAssetsList(ctx, operations.CloudassetAssetsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
         AssetTypes: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-        Callback: "vel",
-        ContentType: "ACCESS_POLICY",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
-        PageSize: 297534,
-        PageToken: "debitis",
+        Callback: sdk.String("vel"),
+        ContentType: operations.CloudassetAssetsListContentTypeEnumAccessPolicy.ToPointer(),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
         Parent: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        ReadTime: "tempora",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
+        ReadTime: sdk.String("tempora"),
         RelationshipTypes: []string{
             "molestiae",
             "minus",
         },
-        UploadType: "placeat",
-        UploadProtocol: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Assets.CloudassetAssetsList(ctx, req, operations.CloudassetAssetsListSecurity{
+        UploadType: sdk.String("placeat"),
+        UploadProtocol: sdk.String("voluptatum"),
+    }, operations.CloudassetAssetsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

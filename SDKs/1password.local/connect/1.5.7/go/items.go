@@ -35,7 +35,10 @@ func newItems(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // CreateVaultItem - Create a new Item
 func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVaultItemRequest, security operations.CreateVaultItemSecurity) (*operations.CreateVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FullItemInput", "json")
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *items) CreateVaultItem(ctx context.Context, request operations.CreateVa
 // DeleteVaultItem - Delete an Item
 func (s *items) DeleteVaultItem(ctx context.Context, request operations.DeleteVaultItemRequest, security operations.DeleteVaultItemSecurity) (*operations.DeleteVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +157,10 @@ func (s *items) DeleteVaultItem(ctx context.Context, request operations.DeleteVa
 // GetVaultItemByID - Get the details of an Item
 func (s *items) GetVaultItemByID(ctx context.Context, request operations.GetVaultItemByIDRequest, security operations.GetVaultItemByIDSecurity) (*operations.GetVaultItemByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +218,10 @@ func (s *items) GetVaultItemByID(ctx context.Context, request operations.GetVaul
 // GetVaultItems - Get all items for inside a Vault
 func (s *items) GetVaultItems(ctx context.Context, request operations.GetVaultItemsRequest, security operations.GetVaultItemsSecurity) (*operations.GetVaultItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +284,10 @@ func (s *items) GetVaultItems(ctx context.Context, request operations.GetVaultIt
 // When modifying a specific ItemField, the ItemField's ID in the `path` attribute of the operation object: `/fields/{fieldId}`
 func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaultItemRequest, security operations.PatchVaultItemSecurity) (*operations.PatchVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -337,7 +352,10 @@ func (s *items) PatchVaultItem(ctx context.Context, request operations.PatchVaul
 // UpdateVaultItem - Update an Item
 func (s *items) UpdateVaultItem(ctx context.Context, request operations.UpdateVaultItemRequest, security operations.UpdateVaultItemSecurity) (*operations.UpdateVaultItemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vaults/{vaultUuid}/items/{itemUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FullItemInput", "json")
 	if err != nil {

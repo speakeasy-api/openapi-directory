@@ -16,17 +16,21 @@ const (
 	DescribeFileCachesXAmzTargetEnumAwsSimbaAPIServiceV20180301DescribeFileCaches DescribeFileCachesXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DescribeFileCaches"
 )
 
+func (e DescribeFileCachesXAmzTargetEnum) ToPointer() *DescribeFileCachesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFileCachesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DescribeFileCaches":
-		*e = DescribeFileCachesXAmzTargetEnum(s)
+		*e = DescribeFileCachesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFileCachesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFileCachesXAmzTargetEnum: %v", v)
 	}
 }
 

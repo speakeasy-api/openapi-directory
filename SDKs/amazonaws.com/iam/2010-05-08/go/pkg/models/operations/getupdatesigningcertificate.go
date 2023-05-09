@@ -15,17 +15,21 @@ const (
 	GETUpdateSigningCertificateActionEnumUpdateSigningCertificate GETUpdateSigningCertificateActionEnum = "UpdateSigningCertificate"
 )
 
+func (e GETUpdateSigningCertificateActionEnum) ToPointer() *GETUpdateSigningCertificateActionEnum {
+	return &e
+}
+
 func (e *GETUpdateSigningCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSigningCertificate":
-		*e = GETUpdateSigningCertificateActionEnum(s)
+		*e = GETUpdateSigningCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSigningCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSigningCertificateActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETUpdateSigningCertificateStatusEnumInactive GETUpdateSigningCertificateStatusEnum = "Inactive"
 )
 
+func (e GETUpdateSigningCertificateStatusEnum) ToPointer() *GETUpdateSigningCertificateStatusEnum {
+	return &e
+}
+
 func (e *GETUpdateSigningCertificateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = GETUpdateSigningCertificateStatusEnum(s)
+		*e = GETUpdateSigningCertificateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSigningCertificateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSigningCertificateStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETUpdateSigningCertificateVersionEnumTwoThousandAndTen0508 GETUpdateSigningCertificateVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateSigningCertificateVersionEnum) ToPointer() *GETUpdateSigningCertificateVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateSigningCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateSigningCertificateVersionEnum(s)
+		*e = GETUpdateSigningCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateSigningCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateSigningCertificateVersionEnum: %v", v)
 	}
 }
 

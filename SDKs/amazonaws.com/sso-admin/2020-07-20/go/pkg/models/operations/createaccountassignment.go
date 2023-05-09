@@ -16,17 +16,21 @@ const (
 	CreateAccountAssignmentXAmzTargetEnumSwbExternalServiceCreateAccountAssignment CreateAccountAssignmentXAmzTargetEnum = "SWBExternalService.CreateAccountAssignment"
 )
 
+func (e CreateAccountAssignmentXAmzTargetEnum) ToPointer() *CreateAccountAssignmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAccountAssignmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SWBExternalService.CreateAccountAssignment":
-		*e = CreateAccountAssignmentXAmzTargetEnum(s)
+		*e = CreateAccountAssignmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccountAssignmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccountAssignmentXAmzTargetEnum: %v", v)
 	}
 }
 

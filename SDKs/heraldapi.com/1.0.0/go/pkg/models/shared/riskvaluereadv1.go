@@ -33,12 +33,16 @@ const (
 	RiskValueReadV1InputTypeEnumFile       RiskValueReadV1InputTypeEnum = "file"
 )
 
+func (e RiskValueReadV1InputTypeEnum) ToPointer() *RiskValueReadV1InputTypeEnum {
+	return &e
+}
+
 func (e *RiskValueReadV1InputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "date":
 		fallthrough
 	case "number":
@@ -66,10 +70,10 @@ func (e *RiskValueReadV1InputTypeEnum) UnmarshalJSON(data []byte) error {
 	case "website":
 		fallthrough
 	case "file":
-		*e = RiskValueReadV1InputTypeEnum(s)
+		*e = RiskValueReadV1InputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RiskValueReadV1InputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RiskValueReadV1InputTypeEnum: %v", v)
 	}
 }
 
@@ -81,21 +85,25 @@ const (
 	RiskValueReadV1RequiredForEnumNull  RiskValueReadV1RequiredForEnum = "null"
 )
 
+func (e RiskValueReadV1RequiredForEnum) ToPointer() *RiskValueReadV1RequiredForEnum {
+	return &e
+}
+
 func (e *RiskValueReadV1RequiredForEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "quote":
 		fallthrough
 	case "bind":
 		fallthrough
 	case "null":
-		*e = RiskValueReadV1RequiredForEnum(s)
+		*e = RiskValueReadV1RequiredForEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RiskValueReadV1RequiredForEnum: %s", s)
+		return fmt.Errorf("invalid value for RiskValueReadV1RequiredForEnum: %v", v)
 	}
 }
 

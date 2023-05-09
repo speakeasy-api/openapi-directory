@@ -16,17 +16,21 @@ const (
 	DeleteAgentXAmzTargetEnumFmrsServiceDeleteAgent DeleteAgentXAmzTargetEnum = "FmrsService.DeleteAgent"
 )
 
+func (e DeleteAgentXAmzTargetEnum) ToPointer() *DeleteAgentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAgentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.DeleteAgent":
-		*e = DeleteAgentXAmzTargetEnum(s)
+		*e = DeleteAgentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAgentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAgentXAmzTargetEnum: %v", v)
 	}
 }
 

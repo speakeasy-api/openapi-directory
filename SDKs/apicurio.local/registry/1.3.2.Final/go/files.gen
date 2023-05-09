@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -63,4 +64,11 @@ pkg/models/shared/versionmetadata.go
 pkg/models/shared/editablemetadata.go
 pkg/models/shared/versionsearchresults.go
 pkg/models/shared/searchedversion.go
+docs/sdk/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/versions/README.md
 USAGE.md

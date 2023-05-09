@@ -16,17 +16,21 @@ const (
 	MoveAccountXAmzTargetEnumAwsOrganizationsV20161128MoveAccount MoveAccountXAmzTargetEnum = "AWSOrganizationsV20161128.MoveAccount"
 )
 
+func (e MoveAccountXAmzTargetEnum) ToPointer() *MoveAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *MoveAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.MoveAccount":
-		*e = MoveAccountXAmzTargetEnum(s)
+		*e = MoveAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MoveAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for MoveAccountXAmzTargetEnum: %v", v)
 	}
 }
 

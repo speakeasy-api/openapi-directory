@@ -13,16 +13,20 @@ const (
 	BotLocaleSortAttributeEnumBotLocaleName BotLocaleSortAttributeEnum = "BotLocaleName"
 )
 
+func (e BotLocaleSortAttributeEnum) ToPointer() *BotLocaleSortAttributeEnum {
+	return &e
+}
+
 func (e *BotLocaleSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BotLocaleName":
-		*e = BotLocaleSortAttributeEnum(s)
+		*e = BotLocaleSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BotLocaleSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for BotLocaleSortAttributeEnum: %v", v)
 	}
 }

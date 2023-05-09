@@ -15,18 +15,22 @@ const (
 	CodeScanningAlertSetStateEnumDismissed CodeScanningAlertSetStateEnum = "dismissed"
 )
 
+func (e CodeScanningAlertSetStateEnum) ToPointer() *CodeScanningAlertSetStateEnum {
+	return &e
+}
+
 func (e *CodeScanningAlertSetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "dismissed":
-		*e = CodeScanningAlertSetStateEnum(s)
+		*e = CodeScanningAlertSetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodeScanningAlertSetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CodeScanningAlertSetStateEnum: %v", v)
 	}
 }

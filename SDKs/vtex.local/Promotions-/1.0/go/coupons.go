@@ -36,7 +36,10 @@ func newCoupons(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Archives a specifc coupon by its coupon code.
 func (s *coupons) Archivebycouponcode(ctx context.Context, request operations.ArchivebycouponcodeRequest) (*operations.ArchivebycouponcodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/coupon/{couponCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/coupon/{couponCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *coupons) Getall(ctx context.Context, request operations.GetallRequest) 
 // Retrieves a specific archived coupon by its coupon code.
 func (s *coupons) Getarchivedbycouponcode(ctx context.Context, request operations.GetarchivedbycouponcodeRequest) (*operations.GetarchivedbycouponcodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/coupon/{couponCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/archive/coupon/{couponCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +187,10 @@ func (s *coupons) Getarchivedbycouponcode(ctx context.Context, request operation
 // Retrieves a specific coupon by its coupon code.
 func (s *coupons) Getbycouponcode(ctx context.Context, request operations.GetbycouponcodeRequest) (*operations.GetbycouponcodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/coupon/{couponCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/coupon/{couponCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +237,10 @@ func (s *coupons) Getbycouponcode(ctx context.Context, request operations.Getbyc
 // Retrieves information about the coupon usage.
 func (s *coupons) Getusage(ctx context.Context, request operations.GetusageRequest) (*operations.GetusageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/coupon/usage/{couponCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/coupon/usage/{couponCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +348,10 @@ func (s *coupons) MassiveGeneration(ctx context.Context, request operations.Mass
 // Unarchives a specifc coupon by its coupon code.
 func (s *coupons) Unarchivebycouponcode(ctx context.Context, request operations.UnarchivebycouponcodeRequest) (*operations.UnarchivebycouponcodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/coupon/{couponCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/unarchive/coupon/{couponCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

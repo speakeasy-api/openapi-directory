@@ -17,19 +17,23 @@ const (
 	CreateSignalingChannelRequestBodyChannelTypeEnumFullMesh     CreateSignalingChannelRequestBodyChannelTypeEnum = "FULL_MESH"
 )
 
+func (e CreateSignalingChannelRequestBodyChannelTypeEnum) ToPointer() *CreateSignalingChannelRequestBodyChannelTypeEnum {
+	return &e
+}
+
 func (e *CreateSignalingChannelRequestBodyChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_MASTER":
 		fallthrough
 	case "FULL_MESH":
-		*e = CreateSignalingChannelRequestBodyChannelTypeEnum(s)
+		*e = CreateSignalingChannelRequestBodyChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSignalingChannelRequestBodyChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSignalingChannelRequestBodyChannelTypeEnum: %v", v)
 	}
 }
 

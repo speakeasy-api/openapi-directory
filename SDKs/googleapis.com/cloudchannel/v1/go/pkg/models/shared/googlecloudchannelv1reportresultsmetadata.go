@@ -8,7 +8,7 @@ type GoogleCloudChannelV1ReportResultsMetadata struct {
 	DateRange *GoogleCloudChannelV1DateRange `json:"dateRange,omitempty"`
 	// A representation of usage or invoice date ranges.
 	PrecedingDateRange *GoogleCloudChannelV1DateRange `json:"precedingDateRange,omitempty"`
-	// The ID and description of a report that was used to generate report data. For example, "GCP Daily Spend", "Google Workspace License Activity", etc.
+	// The ID and description of a report that was used to generate report data. For example, "Google Cloud Daily Spend", "Google Workspace License Activity", etc.
 	Report *GoogleCloudChannelV1Report `json:"report,omitempty"`
 	// The total number of rows of data in the final report.
 	RowCount *string `json:"rowCount,omitempty"`

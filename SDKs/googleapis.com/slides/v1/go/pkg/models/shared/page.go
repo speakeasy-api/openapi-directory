@@ -18,12 +18,16 @@ const (
 	PagePageTypeEnumNotesMaster PagePageTypeEnum = "NOTES_MASTER"
 )
 
+func (e PagePageTypeEnum) ToPointer() *PagePageTypeEnum {
+	return &e
+}
+
 func (e *PagePageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SLIDE":
 		fallthrough
 	case "MASTER":
@@ -33,10 +37,10 @@ func (e *PagePageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NOTES":
 		fallthrough
 	case "NOTES_MASTER":
-		*e = PagePageTypeEnum(s)
+		*e = PagePageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PagePageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PagePageTypeEnum: %v", v)
 	}
 }
 

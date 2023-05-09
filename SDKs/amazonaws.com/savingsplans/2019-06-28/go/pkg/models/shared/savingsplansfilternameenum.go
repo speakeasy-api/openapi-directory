@@ -21,12 +21,16 @@ const (
 	SavingsPlansFilterNameEnumEnd               SavingsPlansFilterNameEnum = "end"
 )
 
+func (e SavingsPlansFilterNameEnum) ToPointer() *SavingsPlansFilterNameEnum {
+	return &e
+}
+
 func (e *SavingsPlansFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "region":
 		fallthrough
 	case "ec2-instance-family":
@@ -44,9 +48,9 @@ func (e *SavingsPlansFilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "start":
 		fallthrough
 	case "end":
-		*e = SavingsPlansFilterNameEnum(s)
+		*e = SavingsPlansFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlansFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlansFilterNameEnum: %v", v)
 	}
 }

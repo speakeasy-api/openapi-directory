@@ -16,17 +16,21 @@ const (
 	ListResourceEvaluationsXAmzTargetEnumStarlingDoveServiceListResourceEvaluations ListResourceEvaluationsXAmzTargetEnum = "StarlingDoveService.ListResourceEvaluations"
 )
 
+func (e ListResourceEvaluationsXAmzTargetEnum) ToPointer() *ListResourceEvaluationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceEvaluationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.ListResourceEvaluations":
-		*e = ListResourceEvaluationsXAmzTargetEnum(s)
+		*e = ListResourceEvaluationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceEvaluationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceEvaluationsXAmzTargetEnum: %v", v)
 	}
 }
 

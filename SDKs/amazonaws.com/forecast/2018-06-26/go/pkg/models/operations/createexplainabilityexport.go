@@ -16,17 +16,21 @@ const (
 	CreateExplainabilityExportXAmzTargetEnumAmazonForecastCreateExplainabilityExport CreateExplainabilityExportXAmzTargetEnum = "AmazonForecast.CreateExplainabilityExport"
 )
 
+func (e CreateExplainabilityExportXAmzTargetEnum) ToPointer() *CreateExplainabilityExportXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateExplainabilityExportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.CreateExplainabilityExport":
-		*e = CreateExplainabilityExportXAmzTargetEnum(s)
+		*e = CreateExplainabilityExportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateExplainabilityExportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateExplainabilityExportXAmzTargetEnum: %v", v)
 	}
 }
 

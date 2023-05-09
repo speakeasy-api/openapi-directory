@@ -34,7 +34,10 @@ func newBillingRates(defaultClient, securityClient HTTPClient, serverURL, langua
 // DfareportingBillingRatesList - Retrieves a list of billing rates. This method supports paging.
 func (s *billingRates) DfareportingBillingRatesList(ctx context.Context, request operations.DfareportingBillingRatesListRequest, security operations.DfareportingBillingRatesListSecurity) (*operations.DfareportingBillingRatesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/billingProfiles/{billingProfileId}/billingRates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

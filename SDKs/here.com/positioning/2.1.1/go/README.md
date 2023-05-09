@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/here.com/positioning/2.1.
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,10 +43,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIInformation
+### [APIInformation](docs/apiinformation/README.md)
 
-* `GetAPIVersion` - API version
-* `GetHealth` - Service health
+* [GetAPIVersion](docs/apiinformation/README.md#getapiversion) - API version
+* [GetHealth](docs/apiinformation/README.md#gethealth) - Service health
 <!-- End SDK Available Operations -->
 
 ### Maturity

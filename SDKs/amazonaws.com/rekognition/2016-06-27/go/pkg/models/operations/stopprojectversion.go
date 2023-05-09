@@ -16,17 +16,21 @@ const (
 	StopProjectVersionXAmzTargetEnumRekognitionServiceStopProjectVersion StopProjectVersionXAmzTargetEnum = "RekognitionService.StopProjectVersion"
 )
 
+func (e StopProjectVersionXAmzTargetEnum) ToPointer() *StopProjectVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopProjectVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StopProjectVersion":
-		*e = StopProjectVersionXAmzTargetEnum(s)
+		*e = StopProjectVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopProjectVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopProjectVersionXAmzTargetEnum: %v", v)
 	}
 }
 

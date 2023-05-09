@@ -15,20 +15,24 @@ const (
 	FilterNameEnumRecommendationSourceType FilterNameEnum = "RecommendationSourceType"
 )
 
+func (e FilterNameEnum) ToPointer() *FilterNameEnum {
+	return &e
+}
+
 func (e *FilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Finding":
 		fallthrough
 	case "FindingReasonCodes":
 		fallthrough
 	case "RecommendationSourceType":
-		*e = FilterNameEnum(s)
+		*e = FilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterNameEnum: %v", v)
 	}
 }

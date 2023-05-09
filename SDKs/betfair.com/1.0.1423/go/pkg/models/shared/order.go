@@ -16,21 +16,25 @@ const (
 	OrderOtEnumMoc OrderOtEnum = "MOC"
 )
 
+func (e OrderOtEnum) ToPointer() *OrderOtEnum {
+	return &e
+}
+
 func (e *OrderOtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L":
 		fallthrough
 	case "LOC":
 		fallthrough
 	case "MOC":
-		*e = OrderOtEnum(s)
+		*e = OrderOtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderOtEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderOtEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	OrderPtEnumMoc OrderPtEnum = "MOC"
 )
 
+func (e OrderPtEnum) ToPointer() *OrderPtEnum {
+	return &e
+}
+
 func (e *OrderPtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L":
 		fallthrough
 	case "P":
 		fallthrough
 	case "MOC":
-		*e = OrderPtEnum(s)
+		*e = OrderPtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderPtEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderPtEnum: %v", v)
 	}
 }
 
@@ -69,19 +77,23 @@ const (
 	OrderSideEnumL OrderSideEnum = "L"
 )
 
+func (e OrderSideEnum) ToPointer() *OrderSideEnum {
+	return &e
+}
+
 func (e *OrderSideEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "B":
 		fallthrough
 	case "L":
-		*e = OrderSideEnum(s)
+		*e = OrderSideEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderSideEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderSideEnum: %v", v)
 	}
 }
 
@@ -93,19 +105,23 @@ const (
 	OrderStatusEnumEc OrderStatusEnum = "EC"
 )
 
+func (e OrderStatusEnum) ToPointer() *OrderStatusEnum {
+	return &e
+}
+
 func (e *OrderStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "E":
 		fallthrough
 	case "EC":
-		*e = OrderStatusEnum(s)
+		*e = OrderStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderStatusEnum: %v", v)
 	}
 }
 

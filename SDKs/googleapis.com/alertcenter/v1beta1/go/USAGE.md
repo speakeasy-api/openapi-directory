@@ -2,41 +2,39 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AlertcenterAlertsBatchDeleteRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Alerts.AlertcenterAlertsBatchDelete(ctx, operations.AlertcenterAlertsBatchDeleteRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchDeleteAlertsRequest: &shared.BatchDeleteAlertsRequest{
             AlertID: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            CustomerID: "nulla",
+            CustomerID: sdk.String("nulla"),
         },
-        AccessToken: "corrupti",
-        Alt: "proto",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Alerts.AlertcenterAlertsBatchDelete(ctx, req, operations.AlertcenterAlertsBatchDeleteSecurity{
+        AccessToken: sdk.String("corrupti"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.AlertcenterAlertsBatchDeleteSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

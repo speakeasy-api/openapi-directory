@@ -17,12 +17,16 @@ const (
 	AssociationComplianceSeverityEnumUnspecified AssociationComplianceSeverityEnum = "UNSPECIFIED"
 )
 
+func (e AssociationComplianceSeverityEnum) ToPointer() *AssociationComplianceSeverityEnum {
+	return &e
+}
+
 func (e *AssociationComplianceSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
@@ -32,9 +36,9 @@ func (e *AssociationComplianceSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "LOW":
 		fallthrough
 	case "UNSPECIFIED":
-		*e = AssociationComplianceSeverityEnum(s)
+		*e = AssociationComplianceSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationComplianceSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationComplianceSeverityEnum: %v", v)
 	}
 }

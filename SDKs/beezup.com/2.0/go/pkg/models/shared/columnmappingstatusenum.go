@@ -15,20 +15,24 @@ const (
 	ColumnMappingStatusEnumFailed  ColumnMappingStatusEnum = "failed"
 )
 
+func (e ColumnMappingStatusEnum) ToPointer() *ColumnMappingStatusEnum {
+	return &e
+}
+
 func (e *ColumnMappingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "warning":
 		fallthrough
 	case "success":
 		fallthrough
 	case "failed":
-		*e = ColumnMappingStatusEnum(s)
+		*e = ColumnMappingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ColumnMappingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ColumnMappingStatusEnum: %v", v)
 	}
 }

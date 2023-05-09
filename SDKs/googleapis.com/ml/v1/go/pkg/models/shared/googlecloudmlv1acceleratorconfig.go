@@ -20,17 +20,21 @@ const (
 	GoogleCloudMlV1AcceleratorConfigTypeEnumNvidiaTeslaA100            GoogleCloudMlV1AcceleratorConfigTypeEnum = "NVIDIA_TESLA_A100"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV2                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V2"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV3                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V3"
-	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV4                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V4"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV2Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V2_POD"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV3Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V3_POD"
+	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV4Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V4_POD"
 )
 
+func (e GoogleCloudMlV1AcceleratorConfigTypeEnum) ToPointer() *GoogleCloudMlV1AcceleratorConfigTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1AcceleratorConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCELERATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NVIDIA_TESLA_K80":
@@ -49,15 +53,15 @@ func (e *GoogleCloudMlV1AcceleratorConfigTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "TPU_V3":
 		fallthrough
-	case "TPU_V4":
-		fallthrough
 	case "TPU_V2_POD":
 		fallthrough
 	case "TPU_V3_POD":
-		*e = GoogleCloudMlV1AcceleratorConfigTypeEnum(s)
+		fallthrough
+	case "TPU_V4_POD":
+		*e = GoogleCloudMlV1AcceleratorConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1AcceleratorConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1AcceleratorConfigTypeEnum: %v", v)
 	}
 }
 

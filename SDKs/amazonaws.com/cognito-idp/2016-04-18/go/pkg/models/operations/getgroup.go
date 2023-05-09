@@ -16,17 +16,21 @@ const (
 	GetGroupXAmzTargetEnumAwsCognitoIdentityProviderServiceGetGroup GetGroupXAmzTargetEnum = "AWSCognitoIdentityProviderService.GetGroup"
 )
 
+func (e GetGroupXAmzTargetEnum) ToPointer() *GetGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.GetGroup":
-		*e = GetGroupXAmzTargetEnum(s)
+		*e = GetGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGroupXAmzTargetEnum: %v", v)
 	}
 }
 

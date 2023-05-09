@@ -98,7 +98,10 @@ func (s *jobSchedules) JobScheduleAdd(ctx context.Context, request operations.Jo
 // JobScheduleDelete - Deletes a job schedule from the specified account.
 func (s *jobSchedules) JobScheduleDelete(ctx context.Context, request operations.JobScheduleDeleteRequest) (*operations.JobScheduleDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -151,7 +154,10 @@ func (s *jobSchedules) JobScheduleDelete(ctx context.Context, request operations
 // JobScheduleDisable - Disables a job schedule.
 func (s *jobSchedules) JobScheduleDisable(ctx context.Context, request operations.JobScheduleDisableRequest) (*operations.JobScheduleDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -204,7 +210,10 @@ func (s *jobSchedules) JobScheduleDisable(ctx context.Context, request operation
 // JobScheduleEnable - Enables a job schedule.
 func (s *jobSchedules) JobScheduleEnable(ctx context.Context, request operations.JobScheduleEnableRequest) (*operations.JobScheduleEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -257,7 +266,10 @@ func (s *jobSchedules) JobScheduleEnable(ctx context.Context, request operations
 // JobScheduleExists - Checks the specified job schedule exists.
 func (s *jobSchedules) JobScheduleExists(ctx context.Context, request operations.JobScheduleExistsRequest) (*operations.JobScheduleExistsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "HEAD", url, nil)
 	if err != nil {
@@ -311,7 +323,10 @@ func (s *jobSchedules) JobScheduleExists(ctx context.Context, request operations
 // JobScheduleGet - Gets information about the specified job schedule.
 func (s *jobSchedules) JobScheduleGet(ctx context.Context, request operations.JobScheduleGetRequest) (*operations.JobScheduleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -435,7 +450,10 @@ func (s *jobSchedules) JobScheduleList(ctx context.Context, request operations.J
 // JobSchedulePatch - Updates the properties of the specified job schedule.
 func (s *jobSchedules) JobSchedulePatch(ctx context.Context, request operations.JobSchedulePatchRequest) (*operations.JobSchedulePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobSchedulePatchParameter", "json")
 	if err != nil {
@@ -498,7 +516,10 @@ func (s *jobSchedules) JobSchedulePatch(ctx context.Context, request operations.
 // JobScheduleTerminate - Terminates a job schedule.
 func (s *jobSchedules) JobScheduleTerminate(ctx context.Context, request operations.JobScheduleTerminateRequest) (*operations.JobScheduleTerminateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/terminate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}/terminate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -551,7 +572,10 @@ func (s *jobSchedules) JobScheduleTerminate(ctx context.Context, request operati
 // JobScheduleUpdate - Updates the properties of the specified job schedule.
 func (s *jobSchedules) JobScheduleUpdate(ctx context.Context, request operations.JobScheduleUpdateRequest) (*operations.JobScheduleUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobschedules/{jobScheduleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobScheduleUpdateParameter", "json")
 	if err != nil {

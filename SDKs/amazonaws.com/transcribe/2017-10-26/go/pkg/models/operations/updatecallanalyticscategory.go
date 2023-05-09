@@ -16,17 +16,21 @@ const (
 	UpdateCallAnalyticsCategoryXAmzTargetEnumTranscribeUpdateCallAnalyticsCategory UpdateCallAnalyticsCategoryXAmzTargetEnum = "Transcribe.UpdateCallAnalyticsCategory"
 )
 
+func (e UpdateCallAnalyticsCategoryXAmzTargetEnum) ToPointer() *UpdateCallAnalyticsCategoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateCallAnalyticsCategoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.UpdateCallAnalyticsCategory":
-		*e = UpdateCallAnalyticsCategoryXAmzTargetEnum(s)
+		*e = UpdateCallAnalyticsCategoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCallAnalyticsCategoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCallAnalyticsCategoryXAmzTargetEnum: %v", v)
 	}
 }
 

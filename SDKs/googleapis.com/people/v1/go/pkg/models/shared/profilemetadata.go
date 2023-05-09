@@ -16,21 +16,25 @@ const (
 	ProfileMetadataObjectTypeEnumPage                  ProfileMetadataObjectTypeEnum = "PAGE"
 )
 
+func (e ProfileMetadataObjectTypeEnum) ToPointer() *ProfileMetadataObjectTypeEnum {
+	return &e
+}
+
 func (e *ProfileMetadataObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PERSON":
 		fallthrough
 	case "PAGE":
-		*e = ProfileMetadataObjectTypeEnum(s)
+		*e = ProfileMetadataObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileMetadataObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileMetadataObjectTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	ProfileMetadataUserTypesEnumGoogleAppsUser  ProfileMetadataUserTypesEnum = "GOOGLE_APPS_USER"
 )
 
+func (e ProfileMetadataUserTypesEnum) ToPointer() *ProfileMetadataUserTypesEnum {
+	return &e
+}
+
 func (e *ProfileMetadataUserTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_TYPE_UNKNOWN":
 		fallthrough
 	case "GOOGLE_USER":
@@ -56,10 +64,10 @@ func (e *ProfileMetadataUserTypesEnum) UnmarshalJSON(data []byte) error {
 	case "GPLUS_USER":
 		fallthrough
 	case "GOOGLE_APPS_USER":
-		*e = ProfileMetadataUserTypesEnum(s)
+		*e = ProfileMetadataUserTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileMetadataUserTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileMetadataUserTypesEnum: %v", v)
 	}
 }
 

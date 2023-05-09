@@ -16,12 +16,16 @@ const (
 	UnitEnumRequests UnitEnum = "REQUESTS"
 )
 
+func (e UnitEnum) ToPointer() *UnitEnum {
+	return &e
+}
+
 func (e *UnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BITS":
 		fallthrough
 	case "BYTES":
@@ -29,9 +33,9 @@ func (e *UnitEnum) UnmarshalJSON(data []byte) error {
 	case "PACKETS":
 		fallthrough
 	case "REQUESTS":
-		*e = UnitEnum(s)
+		*e = UnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UnitEnum: %v", v)
 	}
 }

@@ -108,7 +108,10 @@ func (s *token) CreateToken(ctx context.Context, request operations.CreateTokenR
 // Delete a token by 'number'
 func (s *token) DeleteToken(ctx context.Context, request operations.DeleteTokenRequest, security operations.DeleteTokenSecurity) (*operations.DeleteTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +170,10 @@ func (s *token) DeleteToken(ctx context.Context, request operations.DeleteTokenR
 // Return a token by 'tokenNumber'
 func (s *token) GetToken(ctx context.Context, request operations.GetTokenRequest, security operations.GetTokenSecurity) (*operations.GetTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/token/{tokenNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,7 @@ func (s *token) GetToken(ctx context.Context, request operations.GetTokenRequest
 
 // ListTokens - List Tokens
 // Return a list of all tokens for the current Vendor
-func (s *token) ListTokens(ctx context.Context) (*operations.ListTokensResponse, error) {
+func (s *token) ListTokens(ctx context.Context, security operations.ListTokensSecurity) (*operations.ListTokensResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
@@ -233,7 +239,7 @@ func (s *token) ListTokens(ctx context.Context) (*operations.ListTokensResponse,
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

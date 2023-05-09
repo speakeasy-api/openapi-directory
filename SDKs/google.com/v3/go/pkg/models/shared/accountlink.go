@@ -18,12 +18,16 @@ const (
 	AccountLinkStatusEnumApproved                     AccountLinkStatusEnum = "APPROVED"
 )
 
+func (e AccountLinkStatusEnum) ToPointer() *AccountLinkStatusEnum {
+	return &e
+}
+
 func (e *AccountLinkStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_LINK_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT_LINK_STATUS_UNKNOWN":
@@ -33,10 +37,10 @@ func (e *AccountLinkStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REQUESTED_FROM_GOOGLE_ADS":
 		fallthrough
 	case "APPROVED":
-		*e = AccountLinkStatusEnum(s)
+		*e = AccountLinkStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountLinkStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountLinkStatusEnum: %v", v)
 	}
 }
 

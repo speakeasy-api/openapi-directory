@@ -16,17 +16,21 @@ const (
 	AddApplicationReferenceDataSourceXAmzTargetEnumKinesisAnalytics20150814AddApplicationReferenceDataSource AddApplicationReferenceDataSourceXAmzTargetEnum = "KinesisAnalytics_20150814.AddApplicationReferenceDataSource"
 )
 
+func (e AddApplicationReferenceDataSourceXAmzTargetEnum) ToPointer() *AddApplicationReferenceDataSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddApplicationReferenceDataSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KinesisAnalytics_20150814.AddApplicationReferenceDataSource":
-		*e = AddApplicationReferenceDataSourceXAmzTargetEnum(s)
+		*e = AddApplicationReferenceDataSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddApplicationReferenceDataSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddApplicationReferenceDataSourceXAmzTargetEnum: %v", v)
 	}
 }
 

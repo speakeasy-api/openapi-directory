@@ -10,9 +10,9 @@ import (
 type RequisitionCreatedResponse struct {
 	ContentType string
 	// Requisition has been successfully created
-	SpectacularRequisitionV2 *shared.SpectacularRequisitionV2
-	StatusCode               int
-	RawResponse              *http.Response
+	SpectacularRequisition *shared.SpectacularRequisition
+	StatusCode             int
+	RawResponse            *http.Response
 	// Fields required
 	RequisitionCreated400ApplicationJSONObject map[string]interface{}
 	// Invalid token
@@ -21,4 +21,6 @@ type RequisitionCreatedResponse struct {
 	RequisitionCreated403ApplicationJSONObject map[string]interface{}
 	// Agreement not found errors
 	RequisitionCreated404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RequisitionCreated429ApplicationJSONObject map[string]interface{}
 }

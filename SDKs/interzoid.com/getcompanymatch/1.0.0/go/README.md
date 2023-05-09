@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcompanym
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcompanymatchRequest{
+    ctx := context.Background()
+    res, err := s.CompanyNameSimilarityKey.Getcompanymatch(ctx, operations.GetcompanymatchRequest{
         Company: "Medhurst - Rau",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CompanyNameSimilarityKey.Getcompanymatch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CompanyNameSimilarityKey
+### [CompanyNameSimilarityKey](docs/companynamesimilaritykey/README.md)
 
-* `Getcompanymatch` - Gets a similarity key for matching purposes for company name data
+* [Getcompanymatch](docs/companynamesimilaritykey/README.md#getcompanymatch) - Gets a similarity key for matching purposes for company name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

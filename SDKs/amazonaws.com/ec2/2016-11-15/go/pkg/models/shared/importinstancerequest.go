@@ -18,12 +18,16 @@ const (
 	ImportInstanceRequestLaunchSpecificationArchitectureEnumArm64Mac ImportInstanceRequestLaunchSpecificationArchitectureEnum = "arm64_mac"
 )
 
+func (e ImportInstanceRequestLaunchSpecificationArchitectureEnum) ToPointer() *ImportInstanceRequestLaunchSpecificationArchitectureEnum {
+	return &e
+}
+
 func (e *ImportInstanceRequestLaunchSpecificationArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -33,10 +37,10 @@ func (e *ImportInstanceRequestLaunchSpecificationArchitectureEnum) UnmarshalJSON
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = ImportInstanceRequestLaunchSpecificationArchitectureEnum(s)
+		*e = ImportInstanceRequestLaunchSpecificationArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationArchitectureEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnumTerminate ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum = "terminate"
 )
 
+func (e ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum) ToPointer() *ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum {
+	return &e
+}
+
 func (e *ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum(s)
+		*e = ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationInstanceInitiatedShutdownBehaviorEnum: %v", v)
 	}
 }
 
@@ -706,14 +714,23 @@ const (
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g12xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.12xlarge"
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g16xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.16xlarge"
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7gMetal        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumC6inMetal       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "c6in.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM6inMetal       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m6in.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM6idnMetal      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m6idn.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR6inMetal       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r6in.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR6idnMetal      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e ImportInstanceRequestLaunchSpecificationInstanceTypeEnum) ToPointer() *ImportInstanceRequestLaunchSpecificationInstanceTypeEnum {
+	return &e
+}
+
 func (e *ImportInstanceRequestLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1989,10 +2006,20 @@ func (e *ImportInstanceRequestLaunchSpecificationInstanceTypeEnum) UnmarshalJSON
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = ImportInstanceRequestLaunchSpecificationInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = ImportInstanceRequestLaunchSpecificationInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2005,21 +2032,25 @@ const (
 	ImportInstanceRequestLaunchSpecificationPlacementTenancyEnumHost      ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum = "host"
 )
 
+func (e ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum) ToPointer() *ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum {
+	return &e
+}
+
 func (e *ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum(s)
+		*e = ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2063,17 +2094,21 @@ const (
 	ImportInstanceRequestPlatformEnumWindows ImportInstanceRequestPlatformEnum = "Windows"
 )
 
+func (e ImportInstanceRequestPlatformEnum) ToPointer() *ImportInstanceRequestPlatformEnum {
+	return &e
+}
+
 func (e *ImportInstanceRequestPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = ImportInstanceRequestPlatformEnum(s)
+		*e = ImportInstanceRequestPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportInstanceRequestPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportInstanceRequestPlatformEnum: %v", v)
 	}
 }
 

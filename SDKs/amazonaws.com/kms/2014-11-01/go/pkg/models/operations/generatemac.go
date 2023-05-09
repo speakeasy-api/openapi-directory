@@ -16,17 +16,21 @@ const (
 	GenerateMacXAmzTargetEnumTrentServiceGenerateMac GenerateMacXAmzTargetEnum = "TrentService.GenerateMac"
 )
 
+func (e GenerateMacXAmzTargetEnum) ToPointer() *GenerateMacXAmzTargetEnum {
+	return &e
+}
+
 func (e *GenerateMacXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.GenerateMac":
-		*e = GenerateMacXAmzTargetEnum(s)
+		*e = GenerateMacXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateMacXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateMacXAmzTargetEnum: %v", v)
 	}
 }
 

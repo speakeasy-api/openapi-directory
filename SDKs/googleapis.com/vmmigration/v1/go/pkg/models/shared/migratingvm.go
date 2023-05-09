@@ -25,12 +25,16 @@ const (
 	MigratingVMStateEnumError            MigratingVMStateEnum = "ERROR"
 )
 
+func (e MigratingVMStateEnum) ToPointer() *MigratingVMStateEnum {
+	return &e
+}
+
 func (e *MigratingVMStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -54,10 +58,10 @@ func (e *MigratingVMStateEnum) UnmarshalJSON(data []byte) error {
 	case "FINALIZED":
 		fallthrough
 	case "ERROR":
-		*e = MigratingVMStateEnum(s)
+		*e = MigratingVMStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigratingVMStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MigratingVMStateEnum: %v", v)
 	}
 }
 
@@ -71,6 +75,8 @@ type MigratingVM struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// ReplicationCycle contains information about the current replication cycle status.
 	CurrentSyncInfo *ReplicationCycle `json:"currentSyncInfo,omitempty"`
+	// CutoverForecast holds information about future CutoverJobs of a MigratingVm.
+	CutoverForecast *CutoverForecast `json:"cutoverForecast,omitempty"`
 	// The description attached to the migrating VM by the user.
 	Description *string `json:"description,omitempty"`
 	// The display name attached to the MigratingVm by the user.

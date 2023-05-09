@@ -11,6 +11,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -215,4 +216,14 @@ pkg/models/shared/psd2registrationlog.go
 pkg/models/shared/alert.go
 pkg/models/shared/accountlog.go
 pkg/models/shared/profile.go
+docs/sdk/README.md
+docs/administration/README.md
+docs/authentication/README.md
+docs/banks/README.md
+docs/connections/README.md
+docs/pfm/README.md
+docs/providers/README.md
+docs/timeline/README.md
+docs/transfer/README.md
+docs/usersmanagement/README.md
 USAGE.md

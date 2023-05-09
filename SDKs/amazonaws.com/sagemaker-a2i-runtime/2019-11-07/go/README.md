@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sagemaker-a
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.DeleteHumanLoopRequest{
-        HumanLoopName: "corrupti",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteHumanLoop(ctx, req)
+    res, err := s.DeleteHumanLoop(ctx, operations.DeleteHumanLoopRequest{
+        HumanLoopName: "corrupti",
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,13 +52,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteHumanLoop` - <p>Deletes the specified human loop for a flow definition.</p> <p>If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code>. </p>
-* `DescribeHumanLoop` - Returns information about the specified human loop. If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code> error. 
-* `ListHumanLoops` - Returns information about human loops, given the specified parameters. If a human loop was deleted, it will not be included.
-* `StartHumanLoop` - Starts a human loop, provided that at least one activation condition is met.
-* `StopHumanLoop` - Stops the specified human loop.
+* [DeleteHumanLoop](docs/sdk/README.md#deletehumanloop) - <p>Deletes the specified human loop for a flow definition.</p> <p>If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code>. </p>
+* [DescribeHumanLoop](docs/sdk/README.md#describehumanloop) - Returns information about the specified human loop. If the human loop was deleted, this operation will return a <code>ResourceNotFoundException</code> error. 
+* [ListHumanLoops](docs/sdk/README.md#listhumanloops) - Returns information about human loops, given the specified parameters. If a human loop was deleted, it will not be included.
+* [StartHumanLoop](docs/sdk/README.md#starthumanloop) - Starts a human loop, provided that at least one activation condition is met.
+* [StopHumanLoop](docs/sdk/README.md#stophumanloop) - Stops the specified human loop.
 <!-- End SDK Available Operations -->
 
 ### Maturity

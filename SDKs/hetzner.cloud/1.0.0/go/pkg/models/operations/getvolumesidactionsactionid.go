@@ -39,21 +39,25 @@ const (
 	GetVolumesIDActionsActionIDActionResponseActionStatusEnumError   GetVolumesIDActionsActionIDActionResponseActionStatusEnum = "error"
 )
 
+func (e GetVolumesIDActionsActionIDActionResponseActionStatusEnum) ToPointer() *GetVolumesIDActionsActionIDActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetVolumesIDActionsActionIDActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetVolumesIDActionsActionIDActionResponseActionStatusEnum(s)
+		*e = GetVolumesIDActionsActionIDActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesIDActionsActionIDActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesIDActionsActionIDActionResponseActionStatusEnum: %v", v)
 	}
 }
 

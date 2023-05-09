@@ -13,16 +13,20 @@ const (
 	ProxyConfigurationTypeEnumAppmesh ProxyConfigurationTypeEnum = "APPMESH"
 )
 
+func (e ProxyConfigurationTypeEnum) ToPointer() *ProxyConfigurationTypeEnum {
+	return &e
+}
+
 func (e *ProxyConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPMESH":
-		*e = ProxyConfigurationTypeEnum(s)
+		*e = ProxyConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProxyConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProxyConfigurationTypeEnum: %v", v)
 	}
 }

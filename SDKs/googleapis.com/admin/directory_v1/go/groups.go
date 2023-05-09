@@ -35,7 +35,10 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DirectoryGroupsAliasesDelete - Removes an alias.
 func (s *groups) DirectoryGroupsAliasesDelete(ctx context.Context, request operations.DirectoryGroupsAliasesDeleteRequest, security operations.DirectoryGroupsAliasesDeleteSecurity) (*operations.DirectoryGroupsAliasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases/{alias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases/{alias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *groups) DirectoryGroupsAliasesDelete(ctx context.Context, request opera
 // DirectoryGroupsAliasesInsert - Adds an alias for the group.
 func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request operations.DirectoryGroupsAliasesInsertRequest, security operations.DirectoryGroupsAliasesInsertSecurity) (*operations.DirectoryGroupsAliasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Alias", "json")
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *groups) DirectoryGroupsAliasesInsert(ctx context.Context, request opera
 // DirectoryGroupsAliasesList - Lists all aliases for a group.
 func (s *groups) DirectoryGroupsAliasesList(ctx context.Context, request operations.DirectoryGroupsAliasesListRequest, security operations.DirectoryGroupsAliasesListSecurity) (*operations.DirectoryGroupsAliasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}/aliases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -177,7 +186,10 @@ func (s *groups) DirectoryGroupsAliasesList(ctx context.Context, request operati
 // DirectoryGroupsDelete - Deletes a group.
 func (s *groups) DirectoryGroupsDelete(ctx context.Context, request operations.DirectoryGroupsDeleteRequest, security operations.DirectoryGroupsDeleteSecurity) (*operations.DirectoryGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -216,7 +228,10 @@ func (s *groups) DirectoryGroupsDelete(ctx context.Context, request operations.D
 // DirectoryGroupsGet - Retrieves a group's properties.
 func (s *groups) DirectoryGroupsGet(ctx context.Context, request operations.DirectoryGroupsGetRequest, security operations.DirectoryGroupsGetSecurity) (*operations.DirectoryGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -367,7 +382,10 @@ func (s *groups) DirectoryGroupsList(ctx context.Context, request operations.Dir
 // DirectoryGroupsPatch - Updates a group's properties. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.DirectoryGroupsPatchRequest, security operations.DirectoryGroupsPatchSecurity) (*operations.DirectoryGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {
@@ -422,7 +440,10 @@ func (s *groups) DirectoryGroupsPatch(ctx context.Context, request operations.Di
 // DirectoryGroupsUpdate - Updates a group's properties.
 func (s *groups) DirectoryGroupsUpdate(ctx context.Context, request operations.DirectoryGroupsUpdateRequest, security operations.DirectoryGroupsUpdateSecurity) (*operations.DirectoryGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/groups/{groupKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {

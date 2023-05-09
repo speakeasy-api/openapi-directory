@@ -21,19 +21,23 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnumReject ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum = "reject"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnumEgress  ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum = "egress"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum: %v", v)
 	}
 }
 
@@ -96,19 +104,23 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnumReject ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum = "reject"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum: %v", v)
 	}
 }
 
@@ -126,19 +138,23 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnumEgress  ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum = "egress"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum: %v", v)
 	}
 }
 
@@ -163,17 +179,21 @@ const (
 	ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnumAmazonDNS ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum = "amazon-dns"
 )
 
+func (e ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum) ToPointer() *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum {
+	return &e
+}
+
 func (e *ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum(s)
+		*e = ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyTrafficMirrorFilterNetworkServicesResultTrafficMirrorFilterNetworkServicesEnum: %v", v)
 	}
 }
 

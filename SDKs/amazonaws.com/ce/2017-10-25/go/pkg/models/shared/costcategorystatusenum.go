@@ -14,18 +14,22 @@ const (
 	CostCategoryStatusEnumApplied    CostCategoryStatusEnum = "APPLIED"
 )
 
+func (e CostCategoryStatusEnum) ToPointer() *CostCategoryStatusEnum {
+	return &e
+}
+
 func (e *CostCategoryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "APPLIED":
-		*e = CostCategoryStatusEnum(s)
+		*e = CostCategoryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostCategoryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CostCategoryStatusEnum: %v", v)
 	}
 }

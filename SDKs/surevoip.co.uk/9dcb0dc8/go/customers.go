@@ -35,7 +35,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // GetCustomer - Represents a customer
 func (s *customers) GetCustomer(ctx context.Context, request operations.GetCustomerRequest) (*operations.GetCustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{account}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

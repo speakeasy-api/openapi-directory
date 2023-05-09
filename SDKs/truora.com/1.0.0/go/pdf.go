@@ -34,7 +34,10 @@ func newPdf(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Creates a PDF containing the background check results.
 func (s *pdf) CreatePDF(ctx context.Context, request operations.CreatePDFRequest) (*operations.CreatePDFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/pdf", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/pdf", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -72,7 +75,10 @@ func (s *pdf) CreatePDF(ctx context.Context, request operations.CreatePDFRequest
 // Downloads the PDF in the specified language, Spanish by default.
 func (s *pdf) GetPDF(ctx context.Context, request operations.GetPDFRequest) (*operations.GetPDFResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/pdf", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/pdf", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

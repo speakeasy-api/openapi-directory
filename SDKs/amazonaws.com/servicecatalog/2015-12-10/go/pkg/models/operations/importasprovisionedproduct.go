@@ -16,17 +16,21 @@ const (
 	ImportAsProvisionedProductXAmzTargetEnumAws242ServiceCatalogServiceImportAsProvisionedProduct ImportAsProvisionedProductXAmzTargetEnum = "AWS242ServiceCatalogService.ImportAsProvisionedProduct"
 )
 
+func (e ImportAsProvisionedProductXAmzTargetEnum) ToPointer() *ImportAsProvisionedProductXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportAsProvisionedProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.ImportAsProvisionedProduct":
-		*e = ImportAsProvisionedProductXAmzTargetEnum(s)
+		*e = ImportAsProvisionedProductXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportAsProvisionedProductXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportAsProvisionedProductXAmzTargetEnum: %v", v)
 	}
 }
 

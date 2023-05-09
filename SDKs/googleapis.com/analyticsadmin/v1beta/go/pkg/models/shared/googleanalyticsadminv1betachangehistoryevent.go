@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnumSupport              GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum = "SUPPORT"
 )
 
+func (e GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum) ToPointer() *GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER":
@@ -30,10 +34,10 @@ func (e *GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum) UnmarshalJSO
 	case "SYSTEM":
 		fallthrough
 	case "SUPPORT":
-		*e = GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1betaChangeHistoryEventActorTypeEnum: %v", v)
 	}
 }
 

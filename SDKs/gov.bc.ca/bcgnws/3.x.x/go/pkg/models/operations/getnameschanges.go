@@ -9,26 +9,30 @@ import (
 )
 
 // GetNamesChangesEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
-type GetNamesChangesEmbedEnum string
+type GetNamesChangesEmbedEnum int64
 
 const (
-	GetNamesChangesEmbedEnumZero GetNamesChangesEmbedEnum = "0"
-	GetNamesChangesEmbedEnumOne  GetNamesChangesEmbedEnum = "1"
+	GetNamesChangesEmbedEnumZero GetNamesChangesEmbedEnum = 0
+	GetNamesChangesEmbedEnumOne  GetNamesChangesEmbedEnum = 1
 )
 
+func (e GetNamesChangesEmbedEnum) ToPointer() *GetNamesChangesEmbedEnum {
+	return &e
+}
+
 func (e *GetNamesChangesEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesChangesEmbedEnum(s)
+	case 1:
+		*e = GetNamesChangesEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesChangesEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesChangesEmbedEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetNamesChangesOutputFormatEnumCsv  GetNamesChangesOutputFormatEnum = "csv"
 )
 
+func (e GetNamesChangesOutputFormatEnum) ToPointer() *GetNamesChangesOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesChangesOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -55,55 +63,59 @@ func (e *GetNamesChangesOutputFormatEnum) UnmarshalJSON(data []byte) error {
 	case "kml":
 		fallthrough
 	case "csv":
-		*e = GetNamesChangesOutputFormatEnum(s)
+		*e = GetNamesChangesOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesChangesOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesChangesOutputFormatEnum: %v", v)
 	}
 }
 
 // GetNamesChangesOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries.
-type GetNamesChangesOutputSrsEnum string
+type GetNamesChangesOutputSrsEnum int64
 
 const (
-	GetNamesChangesOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesChangesOutputSrsEnum = "4326"
-	GetNamesChangesOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesChangesOutputSrsEnum = "4269"
-	GetNamesChangesOutputSrsEnumThreeThousandAndFive                   GetNamesChangesOutputSrsEnum = "3005"
-	GetNamesChangesOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesChangesOutputSrsEnum = "3857"
-	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesChangesOutputSrsEnum = "26907"
-	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesChangesOutputSrsEnum = "26908"
-	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesChangesOutputSrsEnum = "26909"
-	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesChangesOutputSrsEnum = "26910"
-	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesChangesOutputSrsEnum = "26911"
+	GetNamesChangesOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesChangesOutputSrsEnum = 4326
+	GetNamesChangesOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesChangesOutputSrsEnum = 4269
+	GetNamesChangesOutputSrsEnumThreeThousandAndFive                   GetNamesChangesOutputSrsEnum = 3005
+	GetNamesChangesOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesChangesOutputSrsEnum = 3857
+	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesChangesOutputSrsEnum = 26907
+	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesChangesOutputSrsEnum = 26908
+	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesChangesOutputSrsEnum = 26909
+	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesChangesOutputSrsEnum = 26910
+	GetNamesChangesOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesChangesOutputSrsEnum = 26911
 )
 
+func (e GetNamesChangesOutputSrsEnum) ToPointer() *GetNamesChangesOutputSrsEnum {
+	return &e
+}
+
 func (e *GetNamesChangesOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "3857":
+	case 3857:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetNamesChangesOutputSrsEnum(s)
+	case 26911:
+		*e = GetNamesChangesOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesChangesOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesChangesOutputSrsEnum: %v", v)
 	}
 }
 
@@ -115,19 +127,23 @@ const (
 	GetNamesChangesOutputStyleEnumDetail  GetNamesChangesOutputStyleEnum = "detail"
 )
 
+func (e GetNamesChangesOutputStyleEnum) ToPointer() *GetNamesChangesOutputStyleEnum {
+	return &e
+}
+
 func (e *GetNamesChangesOutputStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "summary":
 		fallthrough
 	case "detail":
-		*e = GetNamesChangesOutputStyleEnum(s)
+		*e = GetNamesChangesOutputStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesChangesOutputStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesChangesOutputStyleEnum: %v", v)
 	}
 }
 
@@ -140,21 +156,25 @@ const (
 	GetNamesChangesSortByEnumDecisionDate GetNamesChangesSortByEnum = "decisionDate"
 )
 
+func (e GetNamesChangesSortByEnum) ToPointer() *GetNamesChangesSortByEnum {
+	return &e
+}
+
 func (e *GetNamesChangesSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "featureType":
 		fallthrough
 	case "decisionDate":
-		*e = GetNamesChangesSortByEnum(s)
+		*e = GetNamesChangesSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesChangesSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesChangesSortByEnum: %v", v)
 	}
 }
 

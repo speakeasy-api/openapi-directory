@@ -15,20 +15,24 @@ const (
 	RiskLevelTypeEnumHigh   RiskLevelTypeEnum = "High"
 )
 
+func (e RiskLevelTypeEnum) ToPointer() *RiskLevelTypeEnum {
+	return &e
+}
+
 func (e *RiskLevelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Low":
 		fallthrough
 	case "Medium":
 		fallthrough
 	case "High":
-		*e = RiskLevelTypeEnum(s)
+		*e = RiskLevelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RiskLevelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RiskLevelTypeEnum: %v", v)
 	}
 }

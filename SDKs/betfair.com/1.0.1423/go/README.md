@@ -13,46 +13,46 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/betfair.com/1.0.1423/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.AllRequestTypesExample{
+    ctx := context.Background()
+    res, err := s.PostRequest(ctx, shared.AllRequestTypesExample{
         Authentication: &shared.AuthenticationMessage{
-            AppKey: "corrupti",
-            ID: 592845,
-            Op: "distinctio",
-            Session: "quibusdam",
+            AppKey: sdk.String("corrupti"),
+            ID: sdk.Int(592845),
+            Op: sdk.String("distinctio"),
+            Session: sdk.String("quibusdam"),
         },
         Heartbeat: &shared.HeartbeatMessage{
-            ID: 602763,
-            Op: "nulla",
+            ID: sdk.Int(602763),
+            Op: sdk.String("nulla"),
         },
         MarketSubscription: &shared.MarketSubscriptionMessage{
-            Clk: "corrupti",
-            ConflateMs: 847252,
-            HeartbeatMs: 423655,
-            ID: 623564,
-            InitialClk: "deserunt",
+            Clk: sdk.String("corrupti"),
+            ConflateMs: sdk.Int64(847252),
+            HeartbeatMs: sdk.Int64(423655),
+            ID: sdk.Int(623564),
+            InitialClk: sdk.String("deserunt"),
             MarketDataFilter: &shared.MarketDataFilter{
                 Fields: []shared.MarketDataFilterFieldsEnum{
-                    "EX_TRADED",
-                    "EX_ALL_OFFERS",
+                    shared.MarketDataFilterFieldsEnumExTraded,
+                    shared.MarketDataFilterFieldsEnumExAllOffers,
                 },
-                LadderLevels: 891773,
+                LadderLevels: sdk.Int(891773),
             },
             MarketFilter: &shared.MarketFilter{
                 BettingTypes: []shared.MarketFilterBettingTypesEnum{
-                    "ASIAN_HANDICAP_SINGLE_LINE",
+                    shared.MarketFilterBettingTypesEnumAsianHandicapSingleLine,
                 },
-                BspMarket: false,
+                BspMarket: sdk.Bool(false),
                 CountryCodes: []string{
                     "suscipit",
                     "molestiae",
@@ -76,7 +76,7 @@ func main() {
                 RaceTypes: []string{
                     "ipsam",
                 },
-                TurnInPlayEnabled: false,
+                TurnInPlayEnabled: sdk.Bool(false),
                 Venues: []string{
                     "sapiente",
                     "quo",
@@ -84,17 +84,17 @@ func main() {
                     "at",
                 },
             },
-            Op: "at",
-            SegmentationEnabled: false,
+            Op: sdk.String("at"),
+            SegmentationEnabled: sdk.Bool(false),
         },
-        OpTypes: "orderSubscription",
+        OpTypes: shared.AllRequestTypesExampleOpTypesEnumOrderSubscription.ToPointer(),
         OrderSubscriptionMessage: &shared.OrderSubscriptionMessage{
-            Clk: "molestiae",
-            ConflateMs: 799159,
-            HeartbeatMs: 800911,
-            ID: 461479,
-            InitialClk: "totam",
-            Op: "porro",
+            Clk: sdk.String("molestiae"),
+            ConflateMs: sdk.Int64(799159),
+            HeartbeatMs: sdk.Int64(800911),
+            ID: sdk.Int(461479),
+            InitialClk: sdk.String("totam"),
+            Op: sdk.String("porro"),
             OrderFilter: &shared.OrderFilter{
                 AccountIds: []int64{
                     118274,
@@ -106,15 +106,12 @@ func main() {
                     "deleniti",
                     "hic",
                 },
-                IncludeOverallPosition: false,
-                PartitionMatchedByStrategyRef: false,
+                IncludeOverallPosition: sdk.Bool(false),
+                PartitionMatchedByStrategyRef: sdk.Bool(false),
             },
-            SegmentationEnabled: false,
+            SegmentationEnabled: sdk.Bool(false),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.PostRequest(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -129,9 +126,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostRequest` - This is a socket protocol delimited by CRLF (not http)
+* [PostRequest](docs/sdk/README.md#postrequest) - This is a socket protocol delimited by CRLF (not http)
 <!-- End SDK Available Operations -->
 
 ### Maturity

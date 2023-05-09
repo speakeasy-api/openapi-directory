@@ -37,7 +37,10 @@ func newUserRequests(defaultClient, securityClient HTTPClient, serverURL, langua
 // Delete User Request
 func (s *userRequests) DeleteUserRequestsID(ctx context.Context, request operations.DeleteUserRequestsIDRequest) (*operations.DeleteUserRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -161,7 +164,10 @@ func (s *userRequests) GetUserRequests(ctx context.Context, request operations.G
 // Show User Request
 func (s *userRequests) GetUserRequestsID(ctx context.Context, request operations.GetUserRequestsIDRequest) (*operations.GetUserRequestsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user_requests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

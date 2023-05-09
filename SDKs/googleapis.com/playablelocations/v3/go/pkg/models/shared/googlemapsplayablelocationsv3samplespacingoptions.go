@@ -16,21 +16,25 @@ const (
 	GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnumSnappedPoint         GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum = "SNAPPED_POINT"
 )
 
+func (e GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum) ToPointer() *GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum {
+	return &e
+}
+
 func (e *GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POINT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CENTER_POINT":
 		fallthrough
 	case "SNAPPED_POINT":
-		*e = GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum(s)
+		*e = GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum: %v", v)
 	}
 }
 

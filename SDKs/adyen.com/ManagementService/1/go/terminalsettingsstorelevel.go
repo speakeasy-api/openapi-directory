@@ -41,7 +41,10 @@ func newTerminalSettingsStoreLevel(defaultClient, securityClient HTTPClient, ser
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsStoreLevel) GetMerchantsMerchantIDStoresReferenceTerminalLogos(ctx context.Context, request operations.GetMerchantsMerchantIDStoresReferenceTerminalLogosRequest, security operations.GetMerchantsMerchantIDStoresReferenceTerminalLogosSecurity) (*operations.GetMerchantsMerchantIDStoresReferenceTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -111,9 +114,15 @@ func (s *terminalSettingsStoreLevel) GetMerchantsMerchantIDStoresReferenceTermin
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
+//
+// For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+// * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsStoreLevel) GetMerchantsMerchantIDStoresReferenceTerminalSettings(ctx context.Context, request operations.GetMerchantsMerchantIDStoresReferenceTerminalSettingsRequest, security operations.GetMerchantsMerchantIDStoresReferenceTerminalSettingsSecurity) (*operations.GetMerchantsMerchantIDStoresReferenceTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -183,7 +192,10 @@ func (s *terminalSettingsStoreLevel) GetMerchantsMerchantIDStoresReferenceTermin
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsStoreLevel) GetStoresStoreIDTerminalLogos(ctx context.Context, request operations.GetStoresStoreIDTerminalLogosRequest, security operations.GetStoresStoreIDTerminalLogosSecurity) (*operations.GetStoresStoreIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -252,9 +264,15 @@ func (s *terminalSettingsStoreLevel) GetStoresStoreIDTerminalLogos(ctx context.C
 // To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read
 // * Management API—Terminal settings read and write
+//
+// For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+// * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsStoreLevel) GetStoresStoreIDTerminalSettings(ctx context.Context, request operations.GetStoresStoreIDTerminalSettingsRequest, security operations.GetStoresStoreIDTerminalSettingsSecurity) (*operations.GetStoresStoreIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -324,7 +342,10 @@ func (s *terminalSettingsStoreLevel) GetStoresStoreIDTerminalSettings(ctx contex
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsStoreLevel) PatchMerchantsMerchantIDStoresReferenceTerminalLogos(ctx context.Context, request operations.PatchMerchantsMerchantIDStoresReferenceTerminalLogosRequest, security operations.PatchMerchantsMerchantIDStoresReferenceTerminalLogosSecurity) (*operations.PatchMerchantsMerchantIDStoresReferenceTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
@@ -404,9 +425,15 @@ func (s *terminalSettingsStoreLevel) PatchMerchantsMerchantIDStoresReferenceTerm
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
+//
+// For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+// * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsStoreLevel) PatchMerchantsMerchantIDStoresReferenceTerminalSettings(ctx context.Context, request operations.PatchMerchantsMerchantIDStoresReferenceTerminalSettingsRequest, security operations.PatchMerchantsMerchantIDStoresReferenceTerminalSettingsSecurity) (*operations.PatchMerchantsMerchantIDStoresReferenceTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/stores/{reference}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {
@@ -484,7 +511,10 @@ func (s *terminalSettingsStoreLevel) PatchMerchantsMerchantIDStoresReferenceTerm
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsStoreLevel) PatchStoresStoreIDTerminalLogos(ctx context.Context, request operations.PatchStoresStoreIDTerminalLogosRequest, security operations.PatchStoresStoreIDTerminalLogosSecurity) (*operations.PatchStoresStoreIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
@@ -563,9 +593,15 @@ func (s *terminalSettingsStoreLevel) PatchStoresStoreIDTerminalLogos(ctx context
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
+//
+// For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+// * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsStoreLevel) PatchStoresStoreIDTerminalSettings(ctx context.Context, request operations.PatchStoresStoreIDTerminalSettingsRequest, security operations.PatchStoresStoreIDTerminalSettingsSecurity) (*operations.PatchStoresStoreIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stores/{storeId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {

@@ -34,7 +34,7 @@ func newGetProfiles(defaultClient, securityClient HTTPClient, serverURL, languag
 
 // Profiles - Fetch login profiles
 // Fetch login profiles
-func (s *getProfiles) Profiles(ctx context.Context) (*operations.ProfilesResponse, error) {
+func (s *getProfiles) Profiles(ctx context.Context, security operations.ProfilesSecurity) (*operations.ProfilesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/profiles"
 
@@ -43,7 +43,7 @@ func (s *getProfiles) Profiles(ctx context.Context) (*operations.ProfilesRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

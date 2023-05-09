@@ -17,21 +17,25 @@ const (
 	GetMapVersionNumberStaticimageFormatEnumJpeg GetMapVersionNumberStaticimageFormatEnum = "jpeg"
 )
 
+func (e GetMapVersionNumberStaticimageFormatEnum) ToPointer() *GetMapVersionNumberStaticimageFormatEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "png":
 		fallthrough
 	case "jpg":
 		fallthrough
 	case "jpeg":
-		*e = GetMapVersionNumberStaticimageFormatEnum(s)
+		*e = GetMapVersionNumberStaticimageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageFormatEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	GetMapVersionNumberStaticimageLayerEnumLabels GetMapVersionNumberStaticimageLayerEnum = "labels"
 )
 
+func (e GetMapVersionNumberStaticimageLayerEnum) ToPointer() *GetMapVersionNumberStaticimageLayerEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageLayerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "basic":
 		fallthrough
 	case "hybrid":
 		fallthrough
 	case "labels":
-		*e = GetMapVersionNumberStaticimageLayerEnum(s)
+		*e = GetMapVersionNumberStaticimageLayerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageLayerEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageLayerEnum: %v", v)
 	}
 }
 
@@ -71,40 +79,48 @@ const (
 	GetMapVersionNumberStaticimageStyleEnumNight GetMapVersionNumberStaticimageStyleEnum = "night"
 )
 
+func (e GetMapVersionNumberStaticimageStyleEnum) ToPointer() *GetMapVersionNumberStaticimageStyleEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "main":
 		fallthrough
 	case "night":
-		*e = GetMapVersionNumberStaticimageStyleEnum(s)
+		*e = GetMapVersionNumberStaticimageStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageStyleEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberStaticimageVersionNumberEnum - Version of the service to call. The current version is 1.
-type GetMapVersionNumberStaticimageVersionNumberEnum string
+type GetMapVersionNumberStaticimageVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberStaticimageVersionNumberEnumOne GetMapVersionNumberStaticimageVersionNumberEnum = "1"
+	GetMapVersionNumberStaticimageVersionNumberEnumOne GetMapVersionNumberStaticimageVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberStaticimageVersionNumberEnum) ToPointer() *GetMapVersionNumberStaticimageVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberStaticimageVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberStaticimageVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageVersionNumberEnum: %v", v)
 	}
 }
 
@@ -116,106 +132,114 @@ const (
 	GetMapVersionNumberStaticimageViewEnumIn      GetMapVersionNumberStaticimageViewEnum = "IN"
 )
 
+func (e GetMapVersionNumberStaticimageViewEnum) ToPointer() *GetMapVersionNumberStaticimageViewEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unified":
 		fallthrough
 	case "IN":
-		*e = GetMapVersionNumberStaticimageViewEnum(s)
+		*e = GetMapVersionNumberStaticimageViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageViewEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberStaticimageZoomEnum - Zoom level of map image to be returned.
-type GetMapVersionNumberStaticimageZoomEnum string
+type GetMapVersionNumberStaticimageZoomEnum int64
 
 const (
-	GetMapVersionNumberStaticimageZoomEnumZero      GetMapVersionNumberStaticimageZoomEnum = "0"
-	GetMapVersionNumberStaticimageZoomEnumOne       GetMapVersionNumberStaticimageZoomEnum = "1"
-	GetMapVersionNumberStaticimageZoomEnumTwo       GetMapVersionNumberStaticimageZoomEnum = "2"
-	GetMapVersionNumberStaticimageZoomEnumThree     GetMapVersionNumberStaticimageZoomEnum = "3"
-	GetMapVersionNumberStaticimageZoomEnumFour      GetMapVersionNumberStaticimageZoomEnum = "4"
-	GetMapVersionNumberStaticimageZoomEnumFive      GetMapVersionNumberStaticimageZoomEnum = "5"
-	GetMapVersionNumberStaticimageZoomEnumSix       GetMapVersionNumberStaticimageZoomEnum = "6"
-	GetMapVersionNumberStaticimageZoomEnumSeven     GetMapVersionNumberStaticimageZoomEnum = "7"
-	GetMapVersionNumberStaticimageZoomEnumEight     GetMapVersionNumberStaticimageZoomEnum = "8"
-	GetMapVersionNumberStaticimageZoomEnumNine      GetMapVersionNumberStaticimageZoomEnum = "9"
-	GetMapVersionNumberStaticimageZoomEnumTen       GetMapVersionNumberStaticimageZoomEnum = "10"
-	GetMapVersionNumberStaticimageZoomEnumEleven    GetMapVersionNumberStaticimageZoomEnum = "11"
-	GetMapVersionNumberStaticimageZoomEnumTwelve    GetMapVersionNumberStaticimageZoomEnum = "12"
-	GetMapVersionNumberStaticimageZoomEnumThirteen  GetMapVersionNumberStaticimageZoomEnum = "13"
-	GetMapVersionNumberStaticimageZoomEnumFourteen  GetMapVersionNumberStaticimageZoomEnum = "14"
-	GetMapVersionNumberStaticimageZoomEnumFifteen   GetMapVersionNumberStaticimageZoomEnum = "15"
-	GetMapVersionNumberStaticimageZoomEnumSixteen   GetMapVersionNumberStaticimageZoomEnum = "16"
-	GetMapVersionNumberStaticimageZoomEnumSeventeen GetMapVersionNumberStaticimageZoomEnum = "17"
-	GetMapVersionNumberStaticimageZoomEnumEighteen  GetMapVersionNumberStaticimageZoomEnum = "18"
-	GetMapVersionNumberStaticimageZoomEnumNineteen  GetMapVersionNumberStaticimageZoomEnum = "19"
-	GetMapVersionNumberStaticimageZoomEnumTwenty    GetMapVersionNumberStaticimageZoomEnum = "20"
-	GetMapVersionNumberStaticimageZoomEnumTwentyOne GetMapVersionNumberStaticimageZoomEnum = "21"
-	GetMapVersionNumberStaticimageZoomEnumTwentyTwo GetMapVersionNumberStaticimageZoomEnum = "22"
+	GetMapVersionNumberStaticimageZoomEnumZero      GetMapVersionNumberStaticimageZoomEnum = 0
+	GetMapVersionNumberStaticimageZoomEnumOne       GetMapVersionNumberStaticimageZoomEnum = 1
+	GetMapVersionNumberStaticimageZoomEnumTwo       GetMapVersionNumberStaticimageZoomEnum = 2
+	GetMapVersionNumberStaticimageZoomEnumThree     GetMapVersionNumberStaticimageZoomEnum = 3
+	GetMapVersionNumberStaticimageZoomEnumFour      GetMapVersionNumberStaticimageZoomEnum = 4
+	GetMapVersionNumberStaticimageZoomEnumFive      GetMapVersionNumberStaticimageZoomEnum = 5
+	GetMapVersionNumberStaticimageZoomEnumSix       GetMapVersionNumberStaticimageZoomEnum = 6
+	GetMapVersionNumberStaticimageZoomEnumSeven     GetMapVersionNumberStaticimageZoomEnum = 7
+	GetMapVersionNumberStaticimageZoomEnumEight     GetMapVersionNumberStaticimageZoomEnum = 8
+	GetMapVersionNumberStaticimageZoomEnumNine      GetMapVersionNumberStaticimageZoomEnum = 9
+	GetMapVersionNumberStaticimageZoomEnumTen       GetMapVersionNumberStaticimageZoomEnum = 10
+	GetMapVersionNumberStaticimageZoomEnumEleven    GetMapVersionNumberStaticimageZoomEnum = 11
+	GetMapVersionNumberStaticimageZoomEnumTwelve    GetMapVersionNumberStaticimageZoomEnum = 12
+	GetMapVersionNumberStaticimageZoomEnumThirteen  GetMapVersionNumberStaticimageZoomEnum = 13
+	GetMapVersionNumberStaticimageZoomEnumFourteen  GetMapVersionNumberStaticimageZoomEnum = 14
+	GetMapVersionNumberStaticimageZoomEnumFifteen   GetMapVersionNumberStaticimageZoomEnum = 15
+	GetMapVersionNumberStaticimageZoomEnumSixteen   GetMapVersionNumberStaticimageZoomEnum = 16
+	GetMapVersionNumberStaticimageZoomEnumSeventeen GetMapVersionNumberStaticimageZoomEnum = 17
+	GetMapVersionNumberStaticimageZoomEnumEighteen  GetMapVersionNumberStaticimageZoomEnum = 18
+	GetMapVersionNumberStaticimageZoomEnumNineteen  GetMapVersionNumberStaticimageZoomEnum = 19
+	GetMapVersionNumberStaticimageZoomEnumTwenty    GetMapVersionNumberStaticimageZoomEnum = 20
+	GetMapVersionNumberStaticimageZoomEnumTwentyOne GetMapVersionNumberStaticimageZoomEnum = 21
+	GetMapVersionNumberStaticimageZoomEnumTwentyTwo GetMapVersionNumberStaticimageZoomEnum = 22
 )
 
+func (e GetMapVersionNumberStaticimageZoomEnum) ToPointer() *GetMapVersionNumberStaticimageZoomEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberStaticimageZoomEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
+	case 16:
 		fallthrough
-	case "17":
+	case 17:
 		fallthrough
-	case "18":
+	case 18:
 		fallthrough
-	case "19":
+	case 19:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "21":
+	case 21:
 		fallthrough
-	case "22":
-		*e = GetMapVersionNumberStaticimageZoomEnum(s)
+	case 22:
+		*e = GetMapVersionNumberStaticimageZoomEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageZoomEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberStaticimageZoomEnum: %v", v)
 	}
 }
 

@@ -21,19 +21,23 @@ const (
 	GetCallLogsDirectionEnumOutbound GetCallLogsDirectionEnum = "Outbound"
 )
 
+func (e GetCallLogsDirectionEnum) ToPointer() *GetCallLogsDirectionEnum {
+	return &e
+}
+
 func (e *GetCallLogsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Inbound":
 		fallthrough
 	case "Outbound":
-		*e = GetCallLogsDirectionEnum(s)
+		*e = GetCallLogsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCallLogsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCallLogsDirectionEnum: %v", v)
 	}
 }
 

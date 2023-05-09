@@ -16,17 +16,21 @@ const (
 	CancelStepsXAmzTargetEnumElasticMapReduceCancelSteps CancelStepsXAmzTargetEnum = "ElasticMapReduce.CancelSteps"
 )
 
+func (e CancelStepsXAmzTargetEnum) ToPointer() *CancelStepsXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelStepsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.CancelSteps":
-		*e = CancelStepsXAmzTargetEnum(s)
+		*e = CancelStepsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelStepsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelStepsXAmzTargetEnum: %v", v)
 	}
 }
 

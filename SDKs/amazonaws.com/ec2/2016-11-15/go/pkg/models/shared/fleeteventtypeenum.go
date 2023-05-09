@@ -15,20 +15,24 @@ const (
 	FleetEventTypeEnumServiceError   FleetEventTypeEnum = "service-error"
 )
 
+func (e FleetEventTypeEnum) ToPointer() *FleetEventTypeEnum {
+	return &e
+}
+
 func (e *FleetEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-change":
 		fallthrough
 	case "fleet-change":
 		fallthrough
 	case "service-error":
-		*e = FleetEventTypeEnum(s)
+		*e = FleetEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetEventTypeEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnumModifying          DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum = "modifying"
 )
 
+func (e DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum) ToPointer() *DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum {
+	return &e
+}
+
 func (e *DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "active":
@@ -39,10 +43,10 @@ func (e *DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum) Unmars
 	case "deleted_terminating":
 		fallthrough
 	case "modifying":
-		*e = DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum(s)
+		*e = DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFleetsResultSuccessfulFleetDeletionsCurrentFleetStateEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnumModifying          DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum = "modifying"
 )
 
+func (e DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum) ToPointer() *DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum {
+	return &e
+}
+
 func (e *DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "active":
@@ -78,10 +86,10 @@ func (e *DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum) Unmar
 	case "deleted_terminating":
 		fallthrough
 	case "modifying":
-		*e = DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum(s)
+		*e = DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFleetsResultSuccessfulFleetDeletionsPreviousFleetStateEnum: %v", v)
 	}
 }
 
@@ -102,12 +110,16 @@ const (
 	DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnumUnexpectedError          DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum = "unexpectedError"
 )
 
+func (e DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum) ToPointer() *DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum {
+	return &e
+}
+
 func (e *DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fleetIdDoesNotExist":
 		fallthrough
 	case "fleetIdMalformed":
@@ -115,10 +127,10 @@ func (e *DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum) UnmarshalJSO
 	case "fleetNotInDeletableState":
 		fallthrough
 	case "unexpectedError":
-		*e = DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum(s)
+		*e = DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFleetsResultUnsuccessfulFleetDeletionsErrorCodeEnum: %v", v)
 	}
 }
 

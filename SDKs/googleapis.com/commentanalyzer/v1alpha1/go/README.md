@@ -13,54 +13,55 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/commentana
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CommentanalyzerCommentsAnalyzeRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Comments.CommentanalyzerCommentsAnalyze(ctx, operations.CommentanalyzerCommentsAnalyzeRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AnalyzeCommentRequest: &shared.AnalyzeCommentRequest{
-            ClientToken: "provident",
+            ClientToken: sdk.String("provident"),
             Comment: &shared.TextEntry{
-                Text: "distinctio",
-                Type: "HTML",
+                Text: sdk.String("distinctio"),
+                Type: shared.TextEntryTypeEnumHTML.ToPointer(),
             },
-            CommunityID: "unde",
+            CommunityID: sdk.String("unde"),
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "nulla",
-                        Type: "PLAIN_TEXT",
+                        Text: sdk.String("nulla"),
+                        Type: shared.TextEntryTypeEnumPlainText.ToPointer(),
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "illum",
-                        Type: "PLAIN_TEXT",
+                        Text: sdk.String("illum"),
+                        Type: shared.TextEntryTypeEnumPlainText.ToPointer(),
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "deserunt",
-                        Type: "PLAIN_TEXT",
+                        Text: sdk.String("deserunt"),
+                        Type: shared.TextEntryTypeEnumPlainText.ToPointer(),
                     },
                     shared.TextEntry{
-                        Text: "iure",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: sdk.String("iure"),
+                        Type: shared.TextEntryTypeEnumTextTypeUnspecified.ToPointer(),
                     },
                     shared.TextEntry{
-                        Text: "debitis",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: sdk.String("debitis"),
+                        Type: shared.TextEntryTypeEnumTextTypeUnspecified.ToPointer(),
                     },
                 },
             },
-            DoNotStore: false,
-            DropUnsupportedAttributes: false,
+            DoNotStore: sdk.Bool(false),
+            DropUnsupportedAttributes: sdk.Bool(false),
             Languages: []string{
                 "tempora",
                 "suscipit",
@@ -69,39 +70,36 @@ func main() {
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
                 "voluptatum": shared.AttributeParameters{
-                    ScoreThreshold: 4799.77,
-                    ScoreType: "STD_DEV_SCORE",
+                    ScoreThreshold: sdk.Float32(4799.77),
+                    ScoreType: shared.AttributeParametersScoreTypeEnumStdDevScore.ToPointer(),
                 },
                 "nisi": shared.AttributeParameters{
-                    ScoreThreshold: 9255.97,
-                    ScoreType: "RAW",
+                    ScoreThreshold: sdk.Float32(9255.97),
+                    ScoreType: shared.AttributeParametersScoreTypeEnumRaw.ToPointer(),
                 },
                 "ab": shared.AttributeParameters{
-                    ScoreThreshold: 3373.96,
-                    ScoreType: "SCORE_TYPE_UNSPECIFIED",
+                    ScoreThreshold: sdk.Float32(3373.96),
+                    ScoreType: shared.AttributeParametersScoreTypeEnumScoreTypeUnspecified.ToPointer(),
                 },
                 "deserunt": shared.AttributeParameters{
-                    ScoreThreshold: 202.18,
-                    ScoreType: "PROBABILITY",
+                    ScoreThreshold: sdk.Float32(202.18),
+                    ScoreType: shared.AttributeParametersScoreTypeEnumProbability.ToPointer(),
                 },
             },
-            SessionID: "repellendus",
-            SpanAnnotations: false,
+            SessionID: sdk.String("repellendus"),
+            SpanAnnotations: sdk.Bool(false),
         },
-        AccessToken: "sapiente",
-        Alt: "proto",
-        Callback: "odit",
-        Fields: "at",
-        Key: "at",
-        OauthToken: "maiores",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "quod",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.Comments.CommentanalyzerCommentsAnalyze(ctx, req, operations.CommentanalyzerCommentsAnalyzeSecurity{
+        AccessToken: sdk.String("sapiente"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("odit"),
+        Fields: sdk.String("at"),
+        Key: sdk.String("at"),
+        OauthToken: sdk.String("maiores"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.CommentanalyzerCommentsAnalyzeSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -120,10 +118,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Comments
+### [Comments](docs/comments/README.md)
 
-* `CommentanalyzerCommentsAnalyze` - Analyzes the provided text and returns scores for requested attributes.
-* `CommentanalyzerCommentsSuggestscore` - Suggest comment scores as training data.
+* [CommentanalyzerCommentsAnalyze](docs/comments/README.md#commentanalyzercommentsanalyze) - Analyzes the provided text and returns scores for requested attributes.
+* [CommentanalyzerCommentsSuggestscore](docs/comments/README.md#commentanalyzercommentssuggestscore) - Suggest comment scores as training data.
 <!-- End SDK Available Operations -->
 
 ### Maturity

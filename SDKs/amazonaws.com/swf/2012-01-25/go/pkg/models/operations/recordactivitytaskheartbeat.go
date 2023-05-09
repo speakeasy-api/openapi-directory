@@ -16,17 +16,21 @@ const (
 	RecordActivityTaskHeartbeatXAmzTargetEnumSimpleWorkflowServiceRecordActivityTaskHeartbeat RecordActivityTaskHeartbeatXAmzTargetEnum = "SimpleWorkflowService.RecordActivityTaskHeartbeat"
 )
 
+func (e RecordActivityTaskHeartbeatXAmzTargetEnum) ToPointer() *RecordActivityTaskHeartbeatXAmzTargetEnum {
+	return &e
+}
+
 func (e *RecordActivityTaskHeartbeatXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.RecordActivityTaskHeartbeat":
-		*e = RecordActivityTaskHeartbeatXAmzTargetEnum(s)
+		*e = RecordActivityTaskHeartbeatXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordActivityTaskHeartbeatXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordActivityTaskHeartbeatXAmzTargetEnum: %v", v)
 	}
 }
 

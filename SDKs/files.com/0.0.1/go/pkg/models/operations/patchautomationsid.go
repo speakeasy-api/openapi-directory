@@ -24,12 +24,16 @@ const (
 	PatchAutomationsIDRequestBodyAutomationEnumRunSync        PatchAutomationsIDRequestBodyAutomationEnum = "run_sync"
 )
 
+func (e PatchAutomationsIDRequestBodyAutomationEnum) ToPointer() *PatchAutomationsIDRequestBodyAutomationEnum {
+	return &e
+}
+
 func (e *PatchAutomationsIDRequestBodyAutomationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create_folder":
 		fallthrough
 	case "request_file":
@@ -47,10 +51,10 @@ func (e *PatchAutomationsIDRequestBodyAutomationEnum) UnmarshalJSON(data []byte)
 	case "as2_send":
 		fallthrough
 	case "run_sync":
-		*e = PatchAutomationsIDRequestBodyAutomationEnum(s)
+		*e = PatchAutomationsIDRequestBodyAutomationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchAutomationsIDRequestBodyAutomationEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchAutomationsIDRequestBodyAutomationEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	PatchAutomationsIDRequestBodyTriggerEnumAction         PatchAutomationsIDRequestBodyTriggerEnum = "action"
 )
 
+func (e PatchAutomationsIDRequestBodyTriggerEnum) ToPointer() *PatchAutomationsIDRequestBodyTriggerEnum {
+	return &e
+}
+
 func (e *PatchAutomationsIDRequestBodyTriggerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "realtime":
 		fallthrough
 	case "daily":
@@ -83,10 +91,10 @@ func (e *PatchAutomationsIDRequestBodyTriggerEnum) UnmarshalJSON(data []byte) er
 	case "email":
 		fallthrough
 	case "action":
-		*e = PatchAutomationsIDRequestBodyTriggerEnum(s)
+		*e = PatchAutomationsIDRequestBodyTriggerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchAutomationsIDRequestBodyTriggerEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchAutomationsIDRequestBodyTriggerEnum: %v", v)
 	}
 }
 
@@ -113,6 +121,8 @@ type PatchAutomationsIDRequestBody struct {
 	Name *string `multipartForm:"name=name"`
 	// Path on which this Automation runs.  Supports globs.
 	Path *string `multipartForm:"name=path"`
+	// If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+	RecurringDay *int `multipartForm:"name=recurring_day"`
 	// Custom schedule for running this automation.
 	Schedule map[string]interface{} `multipartForm:"name=schedule,json"`
 	// Source Path

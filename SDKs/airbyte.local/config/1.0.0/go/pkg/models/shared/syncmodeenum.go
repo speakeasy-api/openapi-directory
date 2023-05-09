@@ -14,18 +14,22 @@ const (
 	SyncModeEnumIncremental SyncModeEnum = "incremental"
 )
 
+func (e SyncModeEnum) ToPointer() *SyncModeEnum {
+	return &e
+}
+
 func (e *SyncModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full_refresh":
 		fallthrough
 	case "incremental":
-		*e = SyncModeEnum(s)
+		*e = SyncModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncModeEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncModeEnum: %v", v)
 	}
 }

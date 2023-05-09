@@ -25,12 +25,16 @@ const (
 	TransactionRuleIntervalTypeEnumWeekly         TransactionRuleIntervalTypeEnum = "weekly"
 )
 
+func (e TransactionRuleIntervalTypeEnum) ToPointer() *TransactionRuleIntervalTypeEnum {
+	return &e
+}
+
 func (e *TransactionRuleIntervalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "daily":
 		fallthrough
 	case "lifetime":
@@ -40,10 +44,10 @@ func (e *TransactionRuleIntervalTypeEnum) UnmarshalJSON(data []byte) error {
 	case "perTransaction":
 		fallthrough
 	case "weekly":
-		*e = TransactionRuleIntervalTypeEnum(s)
+		*e = TransactionRuleIntervalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionRuleIntervalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionRuleIntervalTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetWorkflowXAmzTargetEnumAwsGlueGetWorkflow GetWorkflowXAmzTargetEnum = "AWSGlue.GetWorkflow"
 )
 
+func (e GetWorkflowXAmzTargetEnum) ToPointer() *GetWorkflowXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetWorkflowXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetWorkflow":
-		*e = GetWorkflowXAmzTargetEnum(s)
+		*e = GetWorkflowXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetWorkflowXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetWorkflowXAmzTargetEnum: %v", v)
 	}
 }
 

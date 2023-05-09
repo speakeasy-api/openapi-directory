@@ -16,17 +16,21 @@ const (
 	DeleteProtectionGroupXAmzTargetEnumAwsShield20160616DeleteProtectionGroup DeleteProtectionGroupXAmzTargetEnum = "AWSShield_20160616.DeleteProtectionGroup"
 )
 
+func (e DeleteProtectionGroupXAmzTargetEnum) ToPointer() *DeleteProtectionGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProtectionGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DeleteProtectionGroup":
-		*e = DeleteProtectionGroupXAmzTargetEnum(s)
+		*e = DeleteProtectionGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProtectionGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProtectionGroupXAmzTargetEnum: %v", v)
 	}
 }
 

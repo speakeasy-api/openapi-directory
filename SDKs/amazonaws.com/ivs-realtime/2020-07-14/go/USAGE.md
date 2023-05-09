@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateParticipantTokenRequest{
+    ctx := context.Background()
+    res, err := s.CreateParticipantToken(ctx, operations.CreateParticipantTokenRequest{
         RequestBody: operations.CreateParticipantTokenRequestBody{
             Attributes: map[string]string{
                 "provident": "distinctio",
@@ -25,26 +26,23 @@ func main() {
                 "nulla": "corrupti",
             },
             Capabilities: []shared.ParticipantTokenCapabilityEnum{
-                "PUBLISH",
-                "SUBSCRIBE",
-                "SUBSCRIBE",
-                "PUBLISH",
+                shared.ParticipantTokenCapabilityEnumPublish,
+                shared.ParticipantTokenCapabilityEnumSubscribe,
+                shared.ParticipantTokenCapabilityEnumSubscribe,
+                shared.ParticipantTokenCapabilityEnumPublish,
             },
-            Duration: 437587,
+            Duration: sdk.Int64(437587),
             StageArn: "magnam",
-            UserID: "debitis",
+            UserID: sdk.String("debitis"),
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateParticipantToken(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }

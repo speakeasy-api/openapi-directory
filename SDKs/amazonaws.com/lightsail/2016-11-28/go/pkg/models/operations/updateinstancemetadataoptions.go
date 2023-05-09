@@ -16,17 +16,21 @@ const (
 	UpdateInstanceMetadataOptionsXAmzTargetEnumLightsail20161128UpdateInstanceMetadataOptions UpdateInstanceMetadataOptionsXAmzTargetEnum = "Lightsail_20161128.UpdateInstanceMetadataOptions"
 )
 
+func (e UpdateInstanceMetadataOptionsXAmzTargetEnum) ToPointer() *UpdateInstanceMetadataOptionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateInstanceMetadataOptionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.UpdateInstanceMetadataOptions":
-		*e = UpdateInstanceMetadataOptionsXAmzTargetEnum(s)
+		*e = UpdateInstanceMetadataOptionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInstanceMetadataOptionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInstanceMetadataOptionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -21,6 +21,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - The Legal Entity Management API enables you to manage legal entities that contain information required for verification.
 // ## Authentication
 // To connect to the Legal Entity Management API, you must use the basic authentication credentials of your web service user. If you don't have one, contact the [Adyen Support Team](https://www.adyen.help/hc/en-us/requests/new). Use the web service user credentials to authenticate your request, for example:
@@ -36,6 +51,8 @@ func String(s string) *string { return &s }
 // ## Versioning
 // The Legal Entity Management API supports versioning of its endpoints through a version suffix in the endpoint URL. This suffix has the following format: "vXX", where XX is the version number.
 //
+// >If you are using hosted onboarding, [only use v2](https://docs.adyen.com/release-notes/platforms-and-financial-products#releaseNote=2023-05-01-legal-entity-management-api-3) for your API requests.
+//
 // For example:
 // ```
 // https://kyc-test.adyen.com/lem/v2/legalEntities
@@ -47,6 +64,7 @@ type SDK struct {
 	Documents           *documents
 	HostedOnboarding    *hostedOnboarding
 	LegalEntities       *legalEntities
+	PCIQuestionnaires   *pciQuestionnaires
 	TermsOfService      *termsOfService
 	TransferInstruments *transferInstruments
 
@@ -138,6 +156,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.LegalEntities = newLegalEntities(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PCIQuestionnaires = newPCIQuestionnaires(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

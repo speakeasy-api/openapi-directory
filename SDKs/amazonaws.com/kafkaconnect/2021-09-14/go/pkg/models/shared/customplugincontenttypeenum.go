@@ -14,18 +14,22 @@ const (
 	CustomPluginContentTypeEnumZip CustomPluginContentTypeEnum = "ZIP"
 )
 
+func (e CustomPluginContentTypeEnum) ToPointer() *CustomPluginContentTypeEnum {
+	return &e
+}
+
 func (e *CustomPluginContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JAR":
 		fallthrough
 	case "ZIP":
-		*e = CustomPluginContentTypeEnum(s)
+		*e = CustomPluginContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomPluginContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomPluginContentTypeEnum: %v", v)
 	}
 }

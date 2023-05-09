@@ -15,19 +15,23 @@ const (
 	FloodlightConfigurationFirstDayOfWeekEnumSunday FloodlightConfigurationFirstDayOfWeekEnum = "SUNDAY"
 )
 
+func (e FloodlightConfigurationFirstDayOfWeekEnum) ToPointer() *FloodlightConfigurationFirstDayOfWeekEnum {
+	return &e
+}
+
 func (e *FloodlightConfigurationFirstDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = FloodlightConfigurationFirstDayOfWeekEnum(s)
+		*e = FloodlightConfigurationFirstDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightConfigurationFirstDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightConfigurationFirstDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	FloodlightConfigurationNaturalSearchConversionAttributionOptionEnumIncludeNaturalSearchTieredConversionAttribution FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum = "INCLUDE_NATURAL_SEARCH_TIERED_CONVERSION_ATTRIBUTION"
 )
 
+func (e FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum) ToPointer() *FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum {
+	return &e
+}
+
 func (e *FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCLUDE_NATURAL_SEARCH_CONVERSION_ATTRIBUTION":
 		fallthrough
 	case "INCLUDE_NATURAL_SEARCH_CONVERSION_ATTRIBUTION":
 		fallthrough
 	case "INCLUDE_NATURAL_SEARCH_TIERED_CONVERSION_ATTRIBUTION":
-		*e = FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum(s)
+		*e = FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for FloodlightConfigurationNaturalSearchConversionAttributionOptionEnum: %v", v)
 	}
 }
 

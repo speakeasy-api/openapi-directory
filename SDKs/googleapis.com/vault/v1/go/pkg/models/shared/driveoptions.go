@@ -17,12 +17,16 @@ const (
 	DriveOptionsClientSideEncryptedOptionEnumClientSideEncryptedOptionUnencrypted DriveOptionsClientSideEncryptedOptionEnum = "CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED"
 )
 
+func (e DriveOptionsClientSideEncryptedOptionEnum) ToPointer() *DriveOptionsClientSideEncryptedOptionEnum {
+	return &e
+}
+
 func (e *DriveOptionsClientSideEncryptedOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_SIDE_ENCRYPTED_OPTION_UNSPECIFIED":
 		fallthrough
 	case "CLIENT_SIDE_ENCRYPTED_OPTION_ANY":
@@ -30,10 +34,10 @@ func (e *DriveOptionsClientSideEncryptedOptionEnum) UnmarshalJSON(data []byte) e
 	case "CLIENT_SIDE_ENCRYPTED_OPTION_ENCRYPTED":
 		fallthrough
 	case "CLIENT_SIDE_ENCRYPTED_OPTION_UNENCRYPTED":
-		*e = DriveOptionsClientSideEncryptedOptionEnum(s)
+		*e = DriveOptionsClientSideEncryptedOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveOptionsClientSideEncryptedOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveOptionsClientSideEncryptedOptionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTExportImageActionEnumExportImage POSTExportImageActionEnum = "ExportImage"
 )
 
+func (e POSTExportImageActionEnum) ToPointer() *POSTExportImageActionEnum {
+	return &e
+}
+
 func (e *POSTExportImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExportImage":
-		*e = POSTExportImageActionEnum(s)
+		*e = POSTExportImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExportImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExportImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTExportImageVersionEnumTwoThousandAndSixteen1115 POSTExportImageVersionEnum = "2016-11-15"
 )
 
+func (e POSTExportImageVersionEnum) ToPointer() *POSTExportImageVersionEnum {
+	return &e
+}
+
 func (e *POSTExportImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTExportImageVersionEnum(s)
+		*e = POSTExportImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTExportImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTExportImageVersionEnum: %v", v)
 	}
 }
 

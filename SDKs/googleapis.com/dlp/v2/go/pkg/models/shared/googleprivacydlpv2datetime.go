@@ -21,12 +21,16 @@ const (
 	GooglePrivacyDlpV2DateTimeDayOfWeekEnumSunday               GooglePrivacyDlpV2DateTimeDayOfWeekEnum = "SUNDAY"
 )
 
+func (e GooglePrivacyDlpV2DateTimeDayOfWeekEnum) ToPointer() *GooglePrivacyDlpV2DateTimeDayOfWeekEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2DateTimeDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *GooglePrivacyDlpV2DateTimeDayOfWeekEnum) UnmarshalJSON(data []byte) err
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = GooglePrivacyDlpV2DateTimeDayOfWeekEnum(s)
+		*e = GooglePrivacyDlpV2DateTimeDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DateTimeDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2DateTimeDayOfWeekEnum: %v", v)
 	}
 }
 

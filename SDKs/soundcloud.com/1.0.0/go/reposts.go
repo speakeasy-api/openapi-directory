@@ -35,7 +35,10 @@ func newReposts(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteRepostsPlaylistsPlaylistID - Removes a repost on a playlist as the authenticated user
 func (s *reposts) DeleteRepostsPlaylistsPlaylistID(ctx context.Context, request operations.DeleteRepostsPlaylistsPlaylistIDRequest, security operations.DeleteRepostsPlaylistsPlaylistIDSecurity) (*operations.DeleteRepostsPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reposts/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reposts/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *reposts) DeleteRepostsPlaylistsPlaylistID(ctx context.Context, request 
 // DeleteRepostsTracksTrackID - Removes a repost on a track as the authenticated user
 func (s *reposts) DeleteRepostsTracksTrackID(ctx context.Context, request operations.DeleteRepostsTracksTrackIDRequest, security operations.DeleteRepostsTracksTrackIDSecurity) (*operations.DeleteRepostsTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reposts/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reposts/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *reposts) DeleteRepostsTracksTrackID(ctx context.Context, request operat
 // PostRepostsPlaylistsPlaylistID - Reposts a playlist as the authenticated user
 func (s *reposts) PostRepostsPlaylistsPlaylistID(ctx context.Context, request operations.PostRepostsPlaylistsPlaylistIDRequest, security operations.PostRepostsPlaylistsPlaylistIDSecurity) (*operations.PostRepostsPlaylistsPlaylistIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reposts/playlists/{playlist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reposts/playlists/{playlist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -200,7 +209,10 @@ func (s *reposts) PostRepostsPlaylistsPlaylistID(ctx context.Context, request op
 // PostRepostsTracksTrackID - Reposts a track as the authenticated user
 func (s *reposts) PostRepostsTracksTrackID(ctx context.Context, request operations.PostRepostsTracksTrackIDRequest, security operations.PostRepostsTracksTrackIDSecurity) (*operations.PostRepostsTracksTrackIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reposts/tracks/{track_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reposts/tracks/{track_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

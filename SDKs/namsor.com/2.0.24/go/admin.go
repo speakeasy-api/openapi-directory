@@ -36,7 +36,10 @@ func newAdmin(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Anonymize - Activate/deactivate anonymization for a source.
 func (s *admin) Anonymize(ctx context.Context, request operations.AnonymizeRequest) (*operations.AnonymizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/anonymize/{source}/{anonymized}/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/anonymize/{source}/{anonymized}/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +172,7 @@ func (s *admin) APIStatus(ctx context.Context) (*operations.APIStatusResponse, e
 }
 
 // APIUsage - Print current API usage.
-func (s *admin) APIUsage(ctx context.Context) (*operations.APIUsageResponse, error) {
+func (s *admin) APIUsage(ctx context.Context, security operations.APIUsageSecurity) (*operations.APIUsageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/apiUsage"
 
@@ -178,7 +181,7 @@ func (s *admin) APIUsage(ctx context.Context) (*operations.APIUsageResponse, err
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +217,7 @@ func (s *admin) APIUsage(ctx context.Context) (*operations.APIUsageResponse, err
 }
 
 // APIUsageHistory - Print historical API usage.
-func (s *admin) APIUsageHistory(ctx context.Context) (*operations.APIUsageHistoryResponse, error) {
+func (s *admin) APIUsageHistory(ctx context.Context, security operations.APIUsageHistorySecurity) (*operations.APIUsageHistoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/apiUsageHistory"
 
@@ -223,7 +226,7 @@ func (s *admin) APIUsageHistory(ctx context.Context) (*operations.APIUsageHistor
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -259,7 +262,7 @@ func (s *admin) APIUsageHistory(ctx context.Context) (*operations.APIUsageHistor
 }
 
 // APIUsageHistoryAggregate - Print historical API usage (in an aggregated view, by service, by day/hour/min).
-func (s *admin) APIUsageHistoryAggregate(ctx context.Context) (*operations.APIUsageHistoryAggregateResponse, error) {
+func (s *admin) APIUsageHistoryAggregate(ctx context.Context, security operations.APIUsageHistoryAggregateSecurity) (*operations.APIUsageHistoryAggregateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api2/json/apiUsageHistoryAggregate"
 
@@ -268,7 +271,7 @@ func (s *admin) APIUsageHistoryAggregate(ctx context.Context) (*operations.APIUs
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -351,7 +354,10 @@ func (s *admin) AvailableServices(ctx context.Context) (*operations.AvailableSer
 // Learnable - Activate/deactivate learning from a source.
 func (s *admin) Learnable(ctx context.Context, request operations.LearnableRequest) (*operations.LearnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/learnable/{source}/{learnable}/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/learnable/{source}/{learnable}/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -486,7 +492,10 @@ func (s *admin) SoftwareVersion(ctx context.Context) (*operations.SoftwareVersio
 // TaxonomyClasses - Print the taxonomy classes valid for the given classifier.
 func (s *admin) TaxonomyClasses(ctx context.Context, request operations.TaxonomyClassesRequest) (*operations.TaxonomyClassesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/taxonomyClasses/{classifierName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/taxonomyClasses/{classifierName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

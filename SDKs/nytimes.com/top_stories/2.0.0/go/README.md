@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/top_stories/2
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,14 +27,12 @@ func main() {
         }),
     )
 
-    req := operations.GetSectionFormatRequest{
-        Callback: "corrupti",
-        Format: "jsonp",
-        Section: "tmagazine",
-    }
-
     ctx := context.Background()
-    res, err := s.Stories.GetSectionFormat(ctx, req)
+    res, err := s.Stories.GetSectionFormat(ctx, operations.GetSectionFormatRequest{
+        Callback: sdk.String("corrupti"),
+        Format: operations.GetSectionFormatFormatEnumJsonp,
+        Section: operations.GetSectionFormatSectionEnumTmagazine,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,9 +48,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Stories
+### [Stories](docs/stories/README.md)
 
-* `GetSectionFormat` - Top Stories
+* [GetSectionFormat](docs/stories/README.md#getsectionformat) - Top Stories
 <!-- End SDK Available Operations -->
 
 ### Maturity

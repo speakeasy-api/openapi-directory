@@ -17,19 +17,23 @@ const (
 	YoutubeThirdPartyLinksDeleteTypeEnumChannelToStoreLink YoutubeThirdPartyLinksDeleteTypeEnum = "channelToStoreLink"
 )
 
+func (e YoutubeThirdPartyLinksDeleteTypeEnum) ToPointer() *YoutubeThirdPartyLinksDeleteTypeEnum {
+	return &e
+}
+
 func (e *YoutubeThirdPartyLinksDeleteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "linkUnspecified":
 		fallthrough
 	case "channelToStoreLink":
-		*e = YoutubeThirdPartyLinksDeleteTypeEnum(s)
+		*e = YoutubeThirdPartyLinksDeleteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeThirdPartyLinksDeleteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeThirdPartyLinksDeleteTypeEnum: %v", v)
 	}
 }
 

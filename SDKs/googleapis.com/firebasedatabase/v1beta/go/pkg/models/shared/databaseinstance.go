@@ -17,12 +17,16 @@ const (
 	DatabaseInstanceStateEnumDeleted                   DatabaseInstanceStateEnum = "DELETED"
 )
 
+func (e DatabaseInstanceStateEnum) ToPointer() *DatabaseInstanceStateEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -30,10 +34,10 @@ func (e *DatabaseInstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLED":
 		fallthrough
 	case "DELETED":
-		*e = DatabaseInstanceStateEnum(s)
+		*e = DatabaseInstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceStateEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	DatabaseInstanceTypeEnumUserDatabase                    DatabaseInstanceTypeEnum = "USER_DATABASE"
 )
 
+func (e DatabaseInstanceTypeEnum) ToPointer() *DatabaseInstanceTypeEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_INSTANCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT_DATABASE":
 		fallthrough
 	case "USER_DATABASE":
-		*e = DatabaseInstanceTypeEnum(s)
+		*e = DatabaseInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceTypeEnum: %v", v)
 	}
 }
 

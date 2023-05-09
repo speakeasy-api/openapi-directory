@@ -36,7 +36,10 @@ func newSpotInsertions(defaultClient, securityClient HTTPClient, serverURL, lang
 // DeleteAPIV2SpotinsertionsID - Deletes the spot insertion with the given ID.
 func (s *spotInsertions) DeleteAPIV2SpotinsertionsID(ctx context.Context, request operations.DeleteAPIV2SpotinsertionsIDRequest, security operations.DeleteAPIV2SpotinsertionsIDSecurity) (*operations.DeleteAPIV2SpotinsertionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -141,7 +144,10 @@ func (s *spotInsertions) GetAPIV2Spotinsertions(ctx context.Context, request ope
 // GetAPIV2SpotinsertionsID - Returns the spot insertion matching the given ID.
 func (s *spotInsertions) GetAPIV2SpotinsertionsID(ctx context.Context, request operations.GetAPIV2SpotinsertionsIDRequest, security operations.GetAPIV2SpotinsertionsIDSecurity) (*operations.GetAPIV2SpotinsertionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/spotinsertions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

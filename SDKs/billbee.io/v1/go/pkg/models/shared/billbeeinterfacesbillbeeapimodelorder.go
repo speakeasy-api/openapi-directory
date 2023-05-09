@@ -9,491 +9,509 @@ import (
 )
 
 // BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum - The payment method
-type BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum string
+type BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOne                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwo                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThree                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "3"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFour                     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "4"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSix                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "6"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNineteen                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "19"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwenty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "20"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "21"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "22"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "23"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "24"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "25"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "26"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "27"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "28"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "29"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "30"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "31"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "32"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "33"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "34"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "35"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "36"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "37"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "38"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "39"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumForty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "40"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "41"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "42"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "43"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "44"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "45"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "46"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "47"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "48"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "49"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFifty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "50"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "51"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "52"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "53"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "54"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "55"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "56"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "57"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "58"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "59"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "60"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "61"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "62"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "63"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "64"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "65"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "66"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "67"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "68"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "69"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventy                  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "70"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyOne               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "71"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyTwo               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "72"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyThree             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "73"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyFour              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "74"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyFive              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "75"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventySix               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "76"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventySeven             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "77"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyEight             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "78"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyNine              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "79"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEighty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "80"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "81"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "82"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "83"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "84"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "85"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "86"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "87"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "88"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "89"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinety                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "90"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "91"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "92"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "93"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "94"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "95"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "96"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "97"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "98"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "99"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundred               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "100"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndOne         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "101"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwo         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "102"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThree       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "103"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFour        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "104"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFive        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "105"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSix         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "106"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSeven       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "107"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEight       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "108"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndNine        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "109"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTen         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "110"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEleven      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "111"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwelve      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "112"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "113"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFourteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "114"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFifteen     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "115"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSixteen     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "116"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSeventeen   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "117"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEighteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "118"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndNineteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "119"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwenty      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "120"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyOne   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "121"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyTwo   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "122"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyThree BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "123"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyFour  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "124"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyFive  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "125"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentySix   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "126"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentySeven BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "127"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyEight BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "128"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyNine  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "129"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirty      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "130"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyOne   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "131"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyTwo   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "132"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyThree BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "133"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyFour  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "134"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyFive  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "135"
-	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtySix   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = "136"
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOne                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 1
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwo                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 2
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThree                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 3
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFour                     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 4
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSix                      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 6
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNineteen                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 19
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwenty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 20
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 21
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 22
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 23
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 24
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 25
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 26
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 27
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 28
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumTwentyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 29
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 30
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 31
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 32
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 33
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 34
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 35
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 36
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 37
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 38
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumThirtyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 39
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumForty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 40
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 41
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 42
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 43
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 44
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 45
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 46
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 47
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 48
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFortyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 49
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFifty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 50
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 51
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 52
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 53
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 54
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 55
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 56
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 57
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 58
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumFiftyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 59
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixty                    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 60
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyOne                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 61
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyTwo                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 62
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyThree               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 63
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyFour                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 64
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyFive                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 65
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtySix                 BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 66
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtySeven               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 67
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyEight               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 68
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSixtyNine                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 69
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventy                  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 70
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyOne               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 71
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyTwo               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 72
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyThree             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 73
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyFour              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 74
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyFive              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 75
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventySix               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 76
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventySeven             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 77
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyEight             BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 78
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumSeventyNine              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 79
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEighty                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 80
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 81
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 82
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 83
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 84
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 85
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 86
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 87
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 88
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumEightyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 89
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinety                   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 90
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyOne                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 91
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyTwo                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 92
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyThree              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 93
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyFour               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 94
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyFive               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 95
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetySix                BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 96
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetySeven              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 97
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyEight              BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 98
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumNinetyNine               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 99
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundred               BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 100
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndOne         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 101
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwo         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 102
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThree       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 103
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFour        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 104
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFive        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 105
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSix         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 106
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSeven       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 107
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEight       BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 108
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndNine        BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 109
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTen         BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 110
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEleven      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 111
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwelve      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 112
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 113
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFourteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 114
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndFifteen     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 115
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSixteen     BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 116
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndSeventeen   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 117
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndEighteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 118
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndNineteen    BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 119
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwenty      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 120
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyOne   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 121
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyTwo   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 122
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyThree BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 123
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyFour  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 124
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyFive  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 125
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentySix   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 126
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentySeven BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 127
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyEight BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 128
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndTwentyNine  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 129
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirty      BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 130
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyOne   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 131
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyTwo   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 132
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyThree BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 133
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyFour  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 134
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyFive  BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 135
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtySix   BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 136
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtySeven BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 137
+	BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnumOneHundredAndThirtyEight BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum = 138
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "19":
+	case 19:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "21":
+	case 21:
 		fallthrough
-	case "22":
+	case 22:
 		fallthrough
-	case "23":
+	case 23:
 		fallthrough
-	case "24":
+	case 24:
 		fallthrough
-	case "25":
+	case 25:
 		fallthrough
-	case "26":
+	case 26:
 		fallthrough
-	case "27":
+	case 27:
 		fallthrough
-	case "28":
+	case 28:
 		fallthrough
-	case "29":
+	case 29:
 		fallthrough
-	case "30":
+	case 30:
 		fallthrough
-	case "31":
+	case 31:
 		fallthrough
-	case "32":
+	case 32:
 		fallthrough
-	case "33":
+	case 33:
 		fallthrough
-	case "34":
+	case 34:
 		fallthrough
-	case "35":
+	case 35:
 		fallthrough
-	case "36":
+	case 36:
 		fallthrough
-	case "37":
+	case 37:
 		fallthrough
-	case "38":
+	case 38:
 		fallthrough
-	case "39":
+	case 39:
 		fallthrough
-	case "40":
+	case 40:
 		fallthrough
-	case "41":
+	case 41:
 		fallthrough
-	case "42":
+	case 42:
 		fallthrough
-	case "43":
+	case 43:
 		fallthrough
-	case "44":
+	case 44:
 		fallthrough
-	case "45":
+	case 45:
 		fallthrough
-	case "46":
+	case 46:
 		fallthrough
-	case "47":
+	case 47:
 		fallthrough
-	case "48":
+	case 48:
 		fallthrough
-	case "49":
+	case 49:
 		fallthrough
-	case "50":
+	case 50:
 		fallthrough
-	case "51":
+	case 51:
 		fallthrough
-	case "52":
+	case 52:
 		fallthrough
-	case "53":
+	case 53:
 		fallthrough
-	case "54":
+	case 54:
 		fallthrough
-	case "55":
+	case 55:
 		fallthrough
-	case "56":
+	case 56:
 		fallthrough
-	case "57":
+	case 57:
 		fallthrough
-	case "58":
+	case 58:
 		fallthrough
-	case "59":
+	case 59:
 		fallthrough
-	case "60":
+	case 60:
 		fallthrough
-	case "61":
+	case 61:
 		fallthrough
-	case "62":
+	case 62:
 		fallthrough
-	case "63":
+	case 63:
 		fallthrough
-	case "64":
+	case 64:
 		fallthrough
-	case "65":
+	case 65:
 		fallthrough
-	case "66":
+	case 66:
 		fallthrough
-	case "67":
+	case 67:
 		fallthrough
-	case "68":
+	case 68:
 		fallthrough
-	case "69":
+	case 69:
 		fallthrough
-	case "70":
+	case 70:
 		fallthrough
-	case "71":
+	case 71:
 		fallthrough
-	case "72":
+	case 72:
 		fallthrough
-	case "73":
+	case 73:
 		fallthrough
-	case "74":
+	case 74:
 		fallthrough
-	case "75":
+	case 75:
 		fallthrough
-	case "76":
+	case 76:
 		fallthrough
-	case "77":
+	case 77:
 		fallthrough
-	case "78":
+	case 78:
 		fallthrough
-	case "79":
+	case 79:
 		fallthrough
-	case "80":
+	case 80:
 		fallthrough
-	case "81":
+	case 81:
 		fallthrough
-	case "82":
+	case 82:
 		fallthrough
-	case "83":
+	case 83:
 		fallthrough
-	case "84":
+	case 84:
 		fallthrough
-	case "85":
+	case 85:
 		fallthrough
-	case "86":
+	case 86:
 		fallthrough
-	case "87":
+	case 87:
 		fallthrough
-	case "88":
+	case 88:
 		fallthrough
-	case "89":
+	case 89:
 		fallthrough
-	case "90":
+	case 90:
 		fallthrough
-	case "91":
+	case 91:
 		fallthrough
-	case "92":
+	case 92:
 		fallthrough
-	case "93":
+	case 93:
 		fallthrough
-	case "94":
+	case 94:
 		fallthrough
-	case "95":
+	case 95:
 		fallthrough
-	case "96":
+	case 96:
 		fallthrough
-	case "97":
+	case 97:
 		fallthrough
-	case "98":
+	case 98:
 		fallthrough
-	case "99":
+	case 99:
 		fallthrough
-	case "100":
+	case 100:
 		fallthrough
-	case "101":
+	case 101:
 		fallthrough
-	case "102":
+	case 102:
 		fallthrough
-	case "103":
+	case 103:
 		fallthrough
-	case "104":
+	case 104:
 		fallthrough
-	case "105":
+	case 105:
 		fallthrough
-	case "106":
+	case 106:
 		fallthrough
-	case "107":
+	case 107:
 		fallthrough
-	case "108":
+	case 108:
 		fallthrough
-	case "109":
+	case 109:
 		fallthrough
-	case "110":
+	case 110:
 		fallthrough
-	case "111":
+	case 111:
 		fallthrough
-	case "112":
+	case 112:
 		fallthrough
-	case "113":
+	case 113:
 		fallthrough
-	case "114":
+	case 114:
 		fallthrough
-	case "115":
+	case 115:
 		fallthrough
-	case "116":
+	case 116:
 		fallthrough
-	case "117":
+	case 117:
 		fallthrough
-	case "118":
+	case 118:
 		fallthrough
-	case "119":
+	case 119:
 		fallthrough
-	case "120":
+	case 120:
 		fallthrough
-	case "121":
+	case 121:
 		fallthrough
-	case "122":
+	case 122:
 		fallthrough
-	case "123":
+	case 123:
 		fallthrough
-	case "124":
+	case 124:
 		fallthrough
-	case "125":
+	case 125:
 		fallthrough
-	case "126":
+	case 126:
 		fallthrough
-	case "127":
+	case 127:
 		fallthrough
-	case "128":
+	case 128:
 		fallthrough
-	case "129":
+	case 129:
 		fallthrough
-	case "130":
+	case 130:
 		fallthrough
-	case "131":
+	case 131:
 		fallthrough
-	case "132":
+	case 132:
 		fallthrough
-	case "133":
+	case 133:
 		fallthrough
-	case "134":
+	case 134:
 		fallthrough
-	case "135":
+	case 135:
 		fallthrough
-	case "136":
-		*e = BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum(s)
+	case 136:
+		fallthrough
+	case 137:
+		fallthrough
+	case 138:
+		*e = BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderPaymentMethodEnum: %v", v)
 	}
 }
 
 // BillbeeInterfacesBillbeeAPIModelOrderStateEnum - The current state of the order
-type BillbeeInterfacesBillbeeAPIModelOrderStateEnum string
+type BillbeeInterfacesBillbeeAPIModelOrderStateEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumOne      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTwo      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumThree    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "3"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFour     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "4"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFive     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "5"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSix      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "6"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSeven    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "7"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumEight    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "8"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumNine     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "9"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTen      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "10"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumEleven   BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "11"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTwelve   BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "12"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumThirteen BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "13"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFourteen BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "14"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFifteen  BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "15"
-	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSixteen  BillbeeInterfacesBillbeeAPIModelOrderStateEnum = "16"
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumOne      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 1
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTwo      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 2
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumThree    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 3
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFour     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 4
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFive     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 5
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSix      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 6
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSeven    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 7
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumEight    BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 8
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumNine     BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 9
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTen      BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 10
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumEleven   BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 11
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumTwelve   BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 12
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumThirteen BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 13
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFourteen BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 14
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumFifteen  BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 15
+	BillbeeInterfacesBillbeeAPIModelOrderStateEnumSixteen  BillbeeInterfacesBillbeeAPIModelOrderStateEnum = 16
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelOrderStateEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelOrderStateEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelOrderStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "11":
+	case 11:
 		fallthrough
-	case "12":
+	case 12:
 		fallthrough
-	case "13":
+	case 13:
 		fallthrough
-	case "14":
+	case 14:
 		fallthrough
-	case "15":
+	case 15:
 		fallthrough
-	case "16":
-		*e = BillbeeInterfacesBillbeeAPIModelOrderStateEnum(s)
+	case 16:
+		*e = BillbeeInterfacesBillbeeAPIModelOrderStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderStateEnum: %v", v)
 	}
 }
 
 // BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum - The vat mode of the order
-type BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum string
+type BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum int
 
 const (
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumZero  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "0"
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumOne   BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "1"
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumTwo   BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "2"
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumThree BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "3"
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumFour  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "4"
-	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumFive  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = "5"
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumZero  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 0
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumOne   BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 1
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumTwo   BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 2
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumThree BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 3
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumFour  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 4
+	BillbeeInterfacesBillbeeAPIModelOrderVatModeEnumFive  BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum = 5
 )
 
+func (e BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum) ToPointer() *BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum {
+	return &e
+}
+
 func (e *BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
-		*e = BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum(s)
+	case 5:
+		*e = BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillbeeInterfacesBillbeeAPIModelOrderVatModeEnum: %v", v)
 	}
 }
 

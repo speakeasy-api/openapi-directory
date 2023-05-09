@@ -17,12 +17,16 @@ const (
 	FlywheelStatusEnumFailed   FlywheelStatusEnum = "FAILED"
 )
 
+func (e FlywheelStatusEnum) ToPointer() *FlywheelStatusEnum {
+	return &e
+}
+
 func (e *FlywheelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *FlywheelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = FlywheelStatusEnum(s)
+		*e = FlywheelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlywheelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FlywheelStatusEnum: %v", v)
 	}
 }

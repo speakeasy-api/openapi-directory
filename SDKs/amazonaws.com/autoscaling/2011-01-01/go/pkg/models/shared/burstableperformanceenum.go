@@ -15,20 +15,24 @@ const (
 	BurstablePerformanceEnumRequired BurstablePerformanceEnum = "required"
 )
 
+func (e BurstablePerformanceEnum) ToPointer() *BurstablePerformanceEnum {
+	return &e
+}
+
 func (e *BurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "excluded":
 		fallthrough
 	case "required":
-		*e = BurstablePerformanceEnum(s)
+		*e = BurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for BurstablePerformanceEnum: %v", v)
 	}
 }

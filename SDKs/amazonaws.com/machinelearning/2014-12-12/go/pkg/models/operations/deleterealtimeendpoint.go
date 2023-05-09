@@ -16,17 +16,21 @@ const (
 	DeleteRealtimeEndpointXAmzTargetEnumAmazonMl20141212DeleteRealtimeEndpoint DeleteRealtimeEndpointXAmzTargetEnum = "AmazonML_20141212.DeleteRealtimeEndpoint"
 )
 
+func (e DeleteRealtimeEndpointXAmzTargetEnum) ToPointer() *DeleteRealtimeEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRealtimeEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DeleteRealtimeEndpoint":
-		*e = DeleteRealtimeEndpointXAmzTargetEnum(s)
+		*e = DeleteRealtimeEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRealtimeEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRealtimeEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

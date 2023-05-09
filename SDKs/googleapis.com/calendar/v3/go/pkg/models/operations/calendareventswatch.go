@@ -44,19 +44,23 @@ const (
 	CalendarEventsWatchOrderByEnumUpdated   CalendarEventsWatchOrderByEnum = "updated"
 )
 
+func (e CalendarEventsWatchOrderByEnum) ToPointer() *CalendarEventsWatchOrderByEnum {
+	return &e
+}
+
 func (e *CalendarEventsWatchOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "startTime":
 		fallthrough
 	case "updated":
-		*e = CalendarEventsWatchOrderByEnum(s)
+		*e = CalendarEventsWatchOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarEventsWatchOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarEventsWatchOrderByEnum: %v", v)
 	}
 }
 
@@ -68,7 +72,15 @@ type CalendarEventsWatchRequest struct {
 	AlwaysIncludeEmail *bool `queryParam:"style=form,explode=true,name=alwaysIncludeEmail"`
 	// Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
 	CalendarID string `pathParam:"style=simple,explode=false,name=calendarId"`
-	// Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is used by the Working Location developer preview and only the default value is allowed for non-opted-in users.
+	// Event types to return. Optional. Possible values are:
+	// - "default"
+	// - "focusTime"
+	// - "outOfOffice"This parameter can be repeated multiple times to return events of different types. Currently, this is the only allowed value for this field:
+	// - ["default", "focusTime", "outOfOffice"] This value will be the default.
+	//
+	// If you're enrolled in the Working Location developer preview program, in addition to the default value above you can also set the "workingLocation" event type:
+	// - ["default", "focusTime", "outOfOffice", "workingLocation"]
+	// - ["workingLocation"] Additional combinations of these 4 event types will be made available in later releases. Developer Preview.
 	EventTypes []string `queryParam:"style=form,explode=true,name=eventTypes"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`

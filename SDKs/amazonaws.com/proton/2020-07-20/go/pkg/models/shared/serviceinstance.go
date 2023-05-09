@@ -13,6 +13,7 @@ type ServiceInstance struct {
 	DeploymentStatus          DeploymentStatusEnum `json:"deploymentStatus"`
 	DeploymentStatusMessage   *string              `json:"deploymentStatusMessage,omitempty"`
 	EnvironmentName           string               `json:"environmentName"`
+	LastClientRequestToken    *string              `json:"lastClientRequestToken,omitempty"`
 	LastDeploymentAttemptedAt time.Time            `json:"lastDeploymentAttemptedAt"`
 	LastDeploymentSucceededAt time.Time            `json:"lastDeploymentSucceededAt"`
 	Name                      string               `json:"name"`

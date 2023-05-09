@@ -17,12 +17,16 @@ const (
 	ItemACLACLInheritanceTypeEnumBothPermit     ItemACLACLInheritanceTypeEnum = "BOTH_PERMIT"
 )
 
+func (e ItemACLACLInheritanceTypeEnum) ToPointer() *ItemACLACLInheritanceTypeEnum {
+	return &e
+}
+
 func (e *ItemACLACLInheritanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_APPLICABLE":
 		fallthrough
 	case "CHILD_OVERRIDE":
@@ -30,10 +34,10 @@ func (e *ItemACLACLInheritanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PARENT_OVERRIDE":
 		fallthrough
 	case "BOTH_PERMIT":
-		*e = ItemACLACLInheritanceTypeEnum(s)
+		*e = ItemACLACLInheritanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ItemACLACLInheritanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ItemACLACLInheritanceTypeEnum: %v", v)
 	}
 }
 

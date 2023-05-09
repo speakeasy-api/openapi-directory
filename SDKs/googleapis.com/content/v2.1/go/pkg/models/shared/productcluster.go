@@ -17,12 +17,16 @@ const (
 	ProductClusterBrandInventoryStatusEnumNotInInventory             ProductClusterBrandInventoryStatusEnum = "NOT_IN_INVENTORY"
 )
 
+func (e ProductClusterBrandInventoryStatusEnum) ToPointer() *ProductClusterBrandInventoryStatusEnum {
+	return &e
+}
+
 func (e *ProductClusterBrandInventoryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "IN_STOCK":
@@ -30,10 +34,10 @@ func (e *ProductClusterBrandInventoryStatusEnum) UnmarshalJSON(data []byte) erro
 	case "OUT_OF_STOCK":
 		fallthrough
 	case "NOT_IN_INVENTORY":
-		*e = ProductClusterBrandInventoryStatusEnum(s)
+		*e = ProductClusterBrandInventoryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductClusterBrandInventoryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductClusterBrandInventoryStatusEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ProductClusterInventoryStatusEnumNotInInventory             ProductClusterInventoryStatusEnum = "NOT_IN_INVENTORY"
 )
 
+func (e ProductClusterInventoryStatusEnum) ToPointer() *ProductClusterInventoryStatusEnum {
+	return &e
+}
+
 func (e *ProductClusterInventoryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVENTORY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "IN_STOCK":
@@ -60,10 +68,10 @@ func (e *ProductClusterInventoryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "OUT_OF_STOCK":
 		fallthrough
 	case "NOT_IN_INVENTORY":
-		*e = ProductClusterInventoryStatusEnum(s)
+		*e = ProductClusterInventoryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductClusterInventoryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductClusterInventoryStatusEnum: %v", v)
 	}
 }
 

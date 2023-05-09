@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/gov.bc.ca/open511/1.0.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAreasRequest{
-        Format: "xml",
-    }
-
     ctx := context.Background()
-    res, err := s.Resources.GetAreas(ctx, req)
+    res, err := s.Resources.GetAreas(ctx, operations.GetAreasRequest{
+        Format: operations.GetAreasFormatEnumXML.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,12 +42,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Resources
+### [Resources](docs/resources/README.md)
 
-* `GetAreas` - Lists the geographical areas (e.g. districts) that can be used to filter events.
-* `GetEvents` - Lists road events
-* `GetJurisdiction` - Lists the jurisdictions publishing data through this Open511 API implementation
-* `GetJurisdictiongeography` - Provides the geographical boundaries for all the jurisdictions.
+* [GetAreas](docs/resources/README.md#getareas) - Lists the geographical areas (e.g. districts) that can be used to filter events.
+* [GetEvents](docs/resources/README.md#getevents) - Lists road events
+* [GetJurisdiction](docs/resources/README.md#getjurisdiction) - Lists the jurisdictions publishing data through this Open511 API implementation
+* [GetJurisdictiongeography](docs/resources/README.md#getjurisdictiongeography) - Provides the geographical boundaries for all the jurisdictions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,20 +15,24 @@ const (
 	DirectConnectGatewayAssociationProposalStateEnumDeleted   DirectConnectGatewayAssociationProposalStateEnum = "deleted"
 )
 
+func (e DirectConnectGatewayAssociationProposalStateEnum) ToPointer() *DirectConnectGatewayAssociationProposalStateEnum {
+	return &e
+}
+
 func (e *DirectConnectGatewayAssociationProposalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requested":
 		fallthrough
 	case "accepted":
 		fallthrough
 	case "deleted":
-		*e = DirectConnectGatewayAssociationProposalStateEnum(s)
+		*e = DirectConnectGatewayAssociationProposalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectConnectGatewayAssociationProposalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectConnectGatewayAssociationProposalStateEnum: %v", v)
 	}
 }

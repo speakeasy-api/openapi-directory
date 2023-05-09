@@ -38,7 +38,10 @@ func newVBADocuments(defaultClient, securityClient HTTPClient, serverURL, langua
 // An endpoint that will allow you to see exactly what the server sees. We split apart all submitted docs and metadata and zip the file to make it available to you to help with debugging purposes. Files are deleted after 10 days. Only available in testing environments, not production.
 func (s *vbaDocuments) GetBenefitsDocumentUploadDownload(ctx context.Context, request operations.GetBenefitsDocumentUploadDownloadRequest, security operations.GetBenefitsDocumentUploadDownloadSecurity) (*operations.GetBenefitsDocumentUploadDownloadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/uploads/{id}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/uploads/{id}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +135,10 @@ func (s *vbaDocuments) GetBenefitsDocumentUploadDownload(ctx context.Context, re
 // GetBenefitsDocumentUploadStatus - Get status for a previous benefits document upload
 func (s *vbaDocuments) GetBenefitsDocumentUploadStatus(ctx context.Context, request operations.GetBenefitsDocumentUploadStatusRequest, security operations.GetBenefitsDocumentUploadStatusSecurity) (*operations.GetBenefitsDocumentUploadStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/uploads/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/uploads/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +335,7 @@ func (s *vbaDocuments) GetBenefitsDocumentUploadStatusReport(ctx context.Context
 }
 
 // PostBenefitsDocumentUpload - Get a location for subsequent document upload PUT request
-func (s *vbaDocuments) PostBenefitsDocumentUpload(ctx context.Context) (*operations.PostBenefitsDocumentUploadResponse, error) {
+func (s *vbaDocuments) PostBenefitsDocumentUpload(ctx context.Context, security operations.PostBenefitsDocumentUploadSecurity) (*operations.PostBenefitsDocumentUploadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/uploads"
 
@@ -338,7 +344,7 @@ func (s *vbaDocuments) PostBenefitsDocumentUpload(ctx context.Context) (*operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

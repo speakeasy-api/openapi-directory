@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,20 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.CreateGatewayRouteRequest{
+    ctx := context.Background()
+    res, err := s.CreateGatewayRoute(ctx, operations.CreateGatewayRouteRequest{
         RequestBody: operations.CreateGatewayRouteRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             GatewayRouteName: "provident",
             Spec: operations.CreateGatewayRouteRequestBodySpec{
                 GrpcRoute: &shared.GrpcGatewayRoute{
                     Action: shared.GrpcGatewayRouteAction{
                         Rewrite: &shared.GrpcGatewayRouteRewrite{
                             Hostname: &shared.GatewayRouteHostnameRewrite{
-                                DefaultTargetHostname: "DISABLED",
+                                DefaultTargetHostname: shared.DefaultGatewayRouteRewriteEnumDisabled.ToPointer(),
                             },
                         },
                         Target: shared.GatewayRouteTarget{
-                            Port: 844266,
+                            Port: sdk.Int64(844266),
                             VirtualService: shared.GatewayRouteVirtualService{
                                 VirtualServiceName: "unde",
                             },
@@ -38,152 +39,174 @@ func main() {
                     },
                     Match: shared.GrpcGatewayRouteMatch{
                         Hostname: &shared.GatewayRouteHostnameMatch{
-                            Exact: "nulla",
-                            Suffix: "corrupti",
+                            Exact: sdk.String("nulla"),
+                            Suffix: sdk.String("corrupti"),
                         },
                         Metadata: []shared.GrpcGatewayRouteMetadata{
                             shared.GrpcGatewayRouteMetadata{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.GrpcMetadataMatchMethod{
-                                    Exact: "vel",
-                                    Prefix: "error",
+                                    Exact: sdk.String("vel"),
+                                    Prefix: sdk.String("error"),
                                     Range: &shared.MatchRange{
                                         End: 645894,
                                         Start: 384382,
                                     },
-                                    Regex: "iure",
-                                    Suffix: "magnam",
+                                    Regex: sdk.String("iure"),
+                                    Suffix: sdk.String("magnam"),
                                 },
-                                Name: "debitis",
+                                Name: "Larry Windler",
                             },
                             shared.GrpcGatewayRouteMetadata{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.GrpcMetadataMatchMethod{
-                                    Exact: "ipsa",
-                                    Prefix: "delectus",
+                                    Exact: sdk.String("molestiae"),
+                                    Prefix: sdk.String("minus"),
                                     Range: &shared.MatchRange{
-                                        End: 272656,
-                                        Start: 383441,
+                                        End: 812169,
+                                        Start: 528895,
                                     },
-                                    Regex: "molestiae",
-                                    Suffix: "minus",
+                                    Regex: sdk.String("iusto"),
+                                    Suffix: sdk.String("excepturi"),
                                 },
-                                Name: "placeat",
+                                Name: "Mrs. Sophie Smith MD",
                             },
                             shared.GrpcGatewayRouteMetadata{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.GrpcMetadataMatchMethod{
-                                    Exact: "voluptatum",
-                                    Prefix: "iusto",
+                                    Exact: sdk.String("perferendis"),
+                                    Prefix: sdk.String("ipsam"),
                                     Range: &shared.MatchRange{
-                                        End: 568045,
-                                        Start: 392785,
+                                        End: 832620,
+                                        Start: 957156,
                                     },
-                                    Regex: "recusandae",
-                                    Suffix: "temporibus",
+                                    Regex: sdk.String("quo"),
+                                    Suffix: sdk.String("odit"),
                                 },
-                                Name: "ab",
+                                Name: "Wilfred Wolff",
                             },
                             shared.GrpcGatewayRouteMetadata{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.GrpcMetadataMatchMethod{
-                                    Exact: "quis",
-                                    Prefix: "veritatis",
+                                    Exact: sdk.String("quod"),
+                                    Prefix: sdk.String("esse"),
                                     Range: &shared.MatchRange{
-                                        End: 648172,
-                                        Start: 20218,
+                                        End: 520478,
+                                        Start: 780529,
                                     },
-                                    Regex: "ipsam",
-                                    Suffix: "repellendus",
+                                    Regex: sdk.String("dolorum"),
+                                    Suffix: sdk.String("dicta"),
                                 },
-                                Name: "sapiente",
+                                Name: "Luke McCullough",
                             },
                         },
-                        Port: 778157,
-                        ServiceName: "odit",
+                        Port: sdk.Int64(944669),
+                        ServiceName: sdk.String("optio"),
                     },
                 },
                 Http2Route: &shared.HTTPGatewayRoute{
                     Action: shared.HTTPGatewayRouteAction{
                         Rewrite: &shared.HTTPGatewayRouteRewrite{
                             Hostname: &shared.GatewayRouteHostnameRewrite{
-                                DefaultTargetHostname: "DISABLED",
+                                DefaultTargetHostname: shared.DefaultGatewayRouteRewriteEnumDisabled.ToPointer(),
                             },
                             Path: &shared.HTTPGatewayRoutePathRewrite{
-                                Exact: "at",
+                                Exact: sdk.String("beatae"),
                             },
                             Prefix: &shared.HTTPGatewayRoutePrefixRewrite{
-                                DefaultPrefix: "DISABLED",
-                                Value: "molestiae",
+                                DefaultPrefix: shared.DefaultGatewayRouteRewriteEnumEnabled.ToPointer(),
+                                Value: sdk.String("molestiae"),
                             },
                         },
                         Target: shared.GatewayRouteTarget{
-                            Port: 799159,
+                            Port: sdk.Int64(264555),
                             VirtualService: shared.GatewayRouteVirtualService{
-                                VirtualServiceName: "quod",
+                                VirtualServiceName: "qui",
                             },
                         },
                     },
                     Match: shared.HTTPGatewayRouteMatch{
                         Headers: []shared.HTTPGatewayRouteHeader{
                             shared.HTTPGatewayRouteHeader{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.HeaderMatchMethod{
-                                    Exact: "totam",
-                                    Prefix: "porro",
+                                    Exact: sdk.String("cum"),
+                                    Prefix: sdk.String("esse"),
                                     Range: &shared.MatchRange{
-                                        End: 678880,
-                                        Start: 118274,
+                                        End: 216550,
+                                        Start: 568434,
                                     },
-                                    Regex: "nam",
-                                    Suffix: "officia",
+                                    Regex: sdk.String("aspernatur"),
+                                    Suffix: sdk.String("perferendis"),
                                 },
-                                Name: "occaecati",
+                                Name: "Faye Cormier",
                             },
                             shared.HTTPGatewayRouteHeader{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.HeaderMatchMethod{
-                                    Exact: "fugit",
-                                    Prefix: "deleniti",
+                                    Exact: sdk.String("natus"),
+                                    Prefix: sdk.String("laboriosam"),
                                     Range: &shared.MatchRange{
-                                        End: 944669,
-                                        Start: 758616,
+                                        End: 943749,
+                                        Start: 902599,
                                     },
-                                    Regex: "totam",
-                                    Suffix: "beatae",
+                                    Regex: sdk.String("fuga"),
+                                    Suffix: sdk.String("in"),
                                 },
-                                Name: "commodi",
+                                Name: "Sheryl Kertzmann",
+                            },
+                            shared.HTTPGatewayRouteHeader{
+                                Invert: sdk.Bool(false),
+                                Match: &shared.HeaderMatchMethod{
+                                    Exact: sdk.String("architecto"),
+                                    Prefix: sdk.String("ipsa"),
+                                    Range: &shared.MatchRange{
+                                        End: 969810,
+                                        Start: 666767,
+                                    },
+                                    Regex: sdk.String("mollitia"),
+                                    Suffix: sdk.String("laborum"),
+                                },
+                                Name: "Connie Herzog",
+                            },
+                            shared.HTTPGatewayRouteHeader{
+                                Invert: sdk.Bool(false),
+                                Match: &shared.HeaderMatchMethod{
+                                    Exact: sdk.String("enim"),
+                                    Prefix: sdk.String("omnis"),
+                                    Range: &shared.MatchRange{
+                                        End: 363711,
+                                        Start: 325047,
+                                    },
+                                    Regex: sdk.String("excepturi"),
+                                    Suffix: sdk.String("accusantium"),
+                                },
+                                Name: "Cecilia Yundt MD",
                             },
                         },
                         Hostname: &shared.GatewayRouteHostnameMatch{
-                            Exact: "molestiae",
-                            Suffix: "modi",
+                            Exact: sdk.String("dolorem"),
+                            Suffix: sdk.String("culpa"),
                         },
-                        Method: "HEAD",
+                        Method: shared.HTTPMethodEnumHead.ToPointer(),
                         Path: &shared.HTTPPathMatch{
-                            Exact: "impedit",
-                            Regex: "cum",
+                            Exact: sdk.String("repellat"),
+                            Regex: sdk.String("mollitia"),
                         },
-                        Port: 456150,
-                        Prefix: "ipsum",
+                        Port: sdk.Int64(581850),
+                        Prefix: sdk.String("numquam"),
                         QueryParameters: []shared.HTTPQueryParameter{
                             shared.HTTPQueryParameter{
                                 Match: &shared.QueryParameterMatch{
-                                    Exact: "aspernatur",
+                                    Exact: sdk.String("quam"),
                                 },
-                                Name: "perferendis",
+                                Name: "Shannon Mueller",
                             },
                             shared.HTTPQueryParameter{
                                 Match: &shared.QueryParameterMatch{
-                                    Exact: "ad",
+                                    Exact: sdk.String("vitae"),
                                 },
-                                Name: "natus",
-                            },
-                            shared.HTTPQueryParameter{
-                                Match: &shared.QueryParameterMatch{
-                                    Exact: "sed",
-                                },
-                                Name: "iste",
+                                Name: "Matt Hamill",
                             },
                         },
                     },
@@ -192,110 +215,85 @@ func main() {
                     Action: shared.HTTPGatewayRouteAction{
                         Rewrite: &shared.HTTPGatewayRouteRewrite{
                             Hostname: &shared.GatewayRouteHostnameRewrite{
-                                DefaultTargetHostname: "ENABLED",
+                                DefaultTargetHostname: shared.DefaultGatewayRouteRewriteEnumEnabled.ToPointer(),
                             },
                             Path: &shared.HTTPGatewayRoutePathRewrite{
-                                Exact: "natus",
+                                Exact: sdk.String("tenetur"),
                             },
                             Prefix: &shared.HTTPGatewayRoutePrefixRewrite{
-                                DefaultPrefix: "ENABLED",
-                                Value: "hic",
+                                DefaultPrefix: shared.DefaultGatewayRouteRewriteEnumEnabled.ToPointer(),
+                                Value: sdk.String("id"),
                             },
                         },
                         Target: shared.GatewayRouteTarget{
-                            Port: 902599,
+                            Port: sdk.Int64(820994),
                             VirtualService: shared.GatewayRouteVirtualService{
-                                VirtualServiceName: "fuga",
+                                VirtualServiceName: "aut",
                             },
                         },
                     },
                     Match: shared.HTTPGatewayRouteMatch{
                         Headers: []shared.HTTPGatewayRouteHeader{
                             shared.HTTPGatewayRouteHeader{
-                                Invert: false,
+                                Invert: sdk.Bool(false),
                                 Match: &shared.HeaderMatchMethod{
-                                    Exact: "corporis",
-                                    Prefix: "iste",
+                                    Exact: sdk.String("error"),
+                                    Prefix: sdk.String("temporibus"),
                                     Range: &shared.MatchRange{
-                                        End: 437032,
-                                        Start: 902349,
+                                        End: 673660,
+                                        Start: 96098,
                                     },
-                                    Regex: "quidem",
-                                    Suffix: "architecto",
+                                    Regex: sdk.String("reiciendis"),
+                                    Suffix: sdk.String("voluptatibus"),
                                 },
-                                Name: "ipsa",
-                            },
-                            shared.HTTPGatewayRouteHeader{
-                                Invert: false,
-                                Match: &shared.HeaderMatchMethod{
-                                    Exact: "reiciendis",
-                                    Prefix: "est",
-                                    Range: &shared.MatchRange{
-                                        End: 653140,
-                                        Start: 670638,
-                                    },
-                                    Regex: "dolores",
-                                    Suffix: "dolorem",
-                                },
-                                Name: "corporis",
+                                Name: "Jessie Langosh V",
                             },
                         },
                         Hostname: &shared.GatewayRouteHostnameMatch{
-                            Exact: "explicabo",
-                            Suffix: "nobis",
+                            Exact: sdk.String("voluptate"),
+                            Suffix: sdk.String("cum"),
                         },
-                        Method: "POST",
+                        Method: shared.HTTPMethodEnumGet.ToPointer(),
                         Path: &shared.HTTPPathMatch{
-                            Exact: "omnis",
-                            Regex: "nemo",
+                            Exact: sdk.String("doloremque"),
+                            Regex: sdk.String("reprehenderit"),
                         },
-                        Port: 325047,
-                        Prefix: "excepturi",
+                        Port: sdk.Int64(282807),
+                        Prefix: sdk.String("maiores"),
                         QueryParameters: []shared.HTTPQueryParameter{
                             shared.HTTPQueryParameter{
                                 Match: &shared.QueryParameterMatch{
-                                    Exact: "iure",
+                                    Exact: sdk.String("corporis"),
                                 },
-                                Name: "culpa",
+                                Name: "Heidi Carter",
                             },
                         },
                     },
                 },
-                Priority: 988374,
+                Priority: sdk.Int64(880476),
             },
             Tags: []shared.TagRef{
                 shared.TagRef{
-                    Key: "architecto",
-                    Value: "mollitia",
+                    Key: "repudiandae",
+                    Value: "quae",
                 },
                 shared.TagRef{
-                    Key: "dolorem",
-                    Value: "culpa",
-                },
-                shared.TagRef{
-                    Key: "consequuntur",
-                    Value: "repellat",
-                },
-                shared.TagRef{
-                    Key: "mollitia",
-                    Value: "occaecati",
+                    Key: "ipsum",
+                    Value: "quidem",
                 },
             },
         },
-        XAmzAlgorithm: "numquam",
-        XAmzContentSha256: "commodi",
-        XAmzCredential: "quam",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "velit",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "quia",
-        MeshName: "quis",
-        MeshOwner: "vitae",
-        VirtualGatewayName: "laborum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateGatewayRoute(ctx, req)
+        XAmzAlgorithm: sdk.String("molestias"),
+        XAmzContentSha256: sdk.String("excepturi"),
+        XAmzCredential: sdk.String("pariatur"),
+        XAmzDate: sdk.String("modi"),
+        XAmzSecurityToken: sdk.String("praesentium"),
+        XAmzSignature: sdk.String("rem"),
+        XAmzSignedHeaders: sdk.String("voluptates"),
+        MeshName: "quasi",
+        MeshOwner: sdk.String("repudiandae"),
+        VirtualGatewayName: "sint",
+    })
     if err != nil {
         log.Fatal(err)
     }

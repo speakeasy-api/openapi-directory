@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnumEntityOverrideModeSupplement  GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum = "ENTITY_OVERRIDE_MODE_SUPPLEMENT"
 )
 
+func (e GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum) ToPointer() *GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_OVERRIDE_MODE_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_OVERRIDE_MODE_OVERRIDE":
 		fallthrough
 	case "ENTITY_OVERRIDE_MODE_SUPPLEMENT":
-		*e = GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum(s)
+		*e = GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SessionEntityTypeEntityOverrideModeEnum: %v", v)
 	}
 }
 

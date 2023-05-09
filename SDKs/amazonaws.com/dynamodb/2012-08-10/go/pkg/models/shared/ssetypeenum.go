@@ -14,18 +14,22 @@ const (
 	SSETypeEnumKms    SSETypeEnum = "KMS"
 )
 
+func (e SSETypeEnum) ToPointer() *SSETypeEnum {
+	return &e
+}
+
 func (e *SSETypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES256":
 		fallthrough
 	case "KMS":
-		*e = SSETypeEnum(s)
+		*e = SSETypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SSETypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SSETypeEnum: %v", v)
 	}
 }

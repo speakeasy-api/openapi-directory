@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRateLimitsRequest{
-        APIContext: "corrupti",
-        APIName: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.RateLimit.GetRateLimits(ctx, req, operations.GetRateLimitsSecurity{
+    res, err := s.RateLimit.GetRateLimits(ctx, operations.GetRateLimitsRequest{
+        APIContext: sdk.String("corrupti"),
+        APIName: sdk.String("provident"),
+    }, operations.GetRateLimitsSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

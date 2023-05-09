@@ -19,12 +19,16 @@ const (
 	EnterpriseCrmEventbusProtoAttributesDataTypeEnumDomainName          EnterpriseCrmEventbusProtoAttributesDataTypeEnum = "DOMAIN_NAME"
 )
 
+func (e EnterpriseCrmEventbusProtoAttributesDataTypeEnum) ToPointer() *EnterpriseCrmEventbusProtoAttributesDataTypeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoAttributesDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EMAIL":
@@ -36,10 +40,10 @@ func (e *EnterpriseCrmEventbusProtoAttributesDataTypeEnum) UnmarshalJSON(data []
 	case "TIMESTAMP":
 		fallthrough
 	case "DOMAIN_NAME":
-		*e = EnterpriseCrmEventbusProtoAttributesDataTypeEnum(s)
+		*e = EnterpriseCrmEventbusProtoAttributesDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoAttributesDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoAttributesDataTypeEnum: %v", v)
 	}
 }
 
@@ -51,21 +55,25 @@ const (
 	EnterpriseCrmEventbusProtoAttributesSearchableEnumNo          EnterpriseCrmEventbusProtoAttributesSearchableEnum = "NO"
 )
 
+func (e EnterpriseCrmEventbusProtoAttributesSearchableEnum) ToPointer() *EnterpriseCrmEventbusProtoAttributesSearchableEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoAttributesSearchableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "YES":
 		fallthrough
 	case "NO":
-		*e = EnterpriseCrmEventbusProtoAttributesSearchableEnum(s)
+		*e = EnterpriseCrmEventbusProtoAttributesSearchableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoAttributesSearchableEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoAttributesSearchableEnum: %v", v)
 	}
 }
 

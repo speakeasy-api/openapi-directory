@@ -14,18 +14,22 @@ const (
 	OrganizationFeatureSetEnumConsolidatedBilling OrganizationFeatureSetEnum = "CONSOLIDATED_BILLING"
 )
 
+func (e OrganizationFeatureSetEnum) ToPointer() *OrganizationFeatureSetEnum {
+	return &e
+}
+
 func (e *OrganizationFeatureSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "CONSOLIDATED_BILLING":
-		*e = OrganizationFeatureSetEnum(s)
+		*e = OrganizationFeatureSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationFeatureSetEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationFeatureSetEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DetectProtectiveEquipmentXAmzTargetEnumRekognitionServiceDetectProtectiveEquipment DetectProtectiveEquipmentXAmzTargetEnum = "RekognitionService.DetectProtectiveEquipment"
 )
 
+func (e DetectProtectiveEquipmentXAmzTargetEnum) ToPointer() *DetectProtectiveEquipmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectProtectiveEquipmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DetectProtectiveEquipment":
-		*e = DetectProtectiveEquipmentXAmzTargetEnum(s)
+		*e = DetectProtectiveEquipmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectProtectiveEquipmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectProtectiveEquipmentXAmzTargetEnum: %v", v)
 	}
 }
 

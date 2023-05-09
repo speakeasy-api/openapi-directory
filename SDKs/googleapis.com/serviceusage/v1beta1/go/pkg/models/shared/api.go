@@ -16,21 +16,25 @@ const (
 	APISyntaxEnumSyntaxEditions APISyntaxEnum = "SYNTAX_EDITIONS"
 )
 
+func (e APISyntaxEnum) ToPointer() *APISyntaxEnum {
+	return &e
+}
+
 func (e *APISyntaxEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
 		fallthrough
 	case "SYNTAX_EDITIONS":
-		*e = APISyntaxEnum(s)
+		*e = APISyntaxEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APISyntaxEnum: %s", s)
+		return fmt.Errorf("invalid value for APISyntaxEnum: %v", v)
 	}
 }
 

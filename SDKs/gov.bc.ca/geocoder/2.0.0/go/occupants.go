@@ -34,7 +34,10 @@ func newOccupants(defaultClient, securityClient HTTPClient, serverURL, language,
 // Represents the set of occupants whose addresses best match a given query address. Every occupant has an associated site which has a standardized address and a coordinate location on the Earth.
 func (s *occupants) GetOccupantsAddressesOutputFormat(ctx context.Context, request operations.GetOccupantsAddressesOutputFormatRequest) (*operations.GetOccupantsAddressesOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/occupants/addresses.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/occupants/addresses.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *occupants) GetOccupantsAddressesOutputFormat(ctx context.Context, reque
 // Represents occupants near a given point in order of closest to farthest
 func (s *occupants) GetOccupantsNearOutputFormat(ctx context.Context, request operations.GetOccupantsNearOutputFormatRequest) (*operations.GetOccupantsNearOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/occupants/near.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/occupants/near.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,7 +120,10 @@ func (s *occupants) GetOccupantsNearOutputFormat(ctx context.Context, request op
 // Represents the closest occupant to a given point
 func (s *occupants) GetOccupantsNearestOutputFormat(ctx context.Context, request operations.GetOccupantsNearestOutputFormatRequest) (*operations.GetOccupantsNearestOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/occupants/nearest.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/occupants/nearest.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +163,10 @@ func (s *occupants) GetOccupantsNearestOutputFormat(ctx context.Context, request
 // Represents all occupants within a given area
 func (s *occupants) GetOccupantsWithinOutputFormat(ctx context.Context, request operations.GetOccupantsWithinOutputFormatRequest) (*operations.GetOccupantsWithinOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/occupants/within.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/occupants/within.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +206,10 @@ func (s *occupants) GetOccupantsWithinOutputFormat(ctx context.Context, request 
 // Represents an individual occupant
 func (s *occupants) GetOccupantsOccupantIDOutputFormat(ctx context.Context, request operations.GetOccupantsOccupantIDOutputFormatRequest) (*operations.GetOccupantsOccupantIDOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/occupants/{occupantID}.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/occupants/{occupantID}.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

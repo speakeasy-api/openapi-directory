@@ -38,12 +38,16 @@ const (
 	RecolorNameEnumCustom    RecolorNameEnum = "CUSTOM"
 )
 
+func (e RecolorNameEnum) ToPointer() *RecolorNameEnum {
+	return &e
+}
+
 func (e *RecolorNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "LIGHT1":
@@ -93,10 +97,10 @@ func (e *RecolorNameEnum) UnmarshalJSON(data []byte) error {
 	case "SEPIA":
 		fallthrough
 	case "CUSTOM":
-		*e = RecolorNameEnum(s)
+		*e = RecolorNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecolorNameEnum: %s", s)
+		return fmt.Errorf("invalid value for RecolorNameEnum: %v", v)
 	}
 }
 

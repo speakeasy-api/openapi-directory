@@ -15,17 +15,21 @@ const (
 	GETSetDesiredCapacityActionEnumSetDesiredCapacity GETSetDesiredCapacityActionEnum = "SetDesiredCapacity"
 )
 
+func (e GETSetDesiredCapacityActionEnum) ToPointer() *GETSetDesiredCapacityActionEnum {
+	return &e
+}
+
 func (e *GETSetDesiredCapacityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetDesiredCapacity":
-		*e = GETSetDesiredCapacityActionEnum(s)
+		*e = GETSetDesiredCapacityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetDesiredCapacityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetDesiredCapacityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetDesiredCapacityVersionEnumTwoThousandAndEleven0101 GETSetDesiredCapacityVersionEnum = "2011-01-01"
 )
 
+func (e GETSetDesiredCapacityVersionEnum) ToPointer() *GETSetDesiredCapacityVersionEnum {
+	return &e
+}
+
 func (e *GETSetDesiredCapacityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETSetDesiredCapacityVersionEnum(s)
+		*e = GETSetDesiredCapacityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetDesiredCapacityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetDesiredCapacityVersionEnum: %v", v)
 	}
 }
 

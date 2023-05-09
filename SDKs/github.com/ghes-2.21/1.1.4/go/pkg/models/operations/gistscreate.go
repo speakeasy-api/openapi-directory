@@ -23,19 +23,23 @@ const (
 	GistsCreateRequestBodyPublic2EnumFalse GistsCreateRequestBodyPublic2Enum = "false"
 )
 
+func (e GistsCreateRequestBodyPublic2Enum) ToPointer() *GistsCreateRequestBodyPublic2Enum {
+	return &e
+}
+
 func (e *GistsCreateRequestBodyPublic2Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = GistsCreateRequestBodyPublic2Enum(s)
+		*e = GistsCreateRequestBodyPublic2Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GistsCreateRequestBodyPublic2Enum: %s", s)
+		return fmt.Errorf("invalid value for GistsCreateRequestBodyPublic2Enum: %v", v)
 	}
 }
 

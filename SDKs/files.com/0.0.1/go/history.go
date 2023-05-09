@@ -105,7 +105,10 @@ func (s *history) HistoryList(ctx context.Context, request operations.HistoryLis
 // List history for specific file.
 func (s *history) HistoryListForFile(ctx context.Context, request operations.HistoryListForFileRequest) (*operations.HistoryListForFileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/files/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/history/files/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -173,7 +176,10 @@ func (s *history) HistoryListForFile(ctx context.Context, request operations.His
 // List history for specific folder.
 func (s *history) HistoryListForFolder(ctx context.Context, request operations.HistoryListForFolderRequest) (*operations.HistoryListForFolderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/folders/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/history/folders/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *history) HistoryListForFolder(ctx context.Context, request operations.H
 // List history for specific user.
 func (s *history) HistoryListForUser(ctx context.Context, request operations.HistoryListForUserRequest) (*operations.HistoryListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/history/users/{user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/history/users/{user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

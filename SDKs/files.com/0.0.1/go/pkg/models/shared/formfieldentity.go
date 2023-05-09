@@ -17,12 +17,16 @@ const (
 	FormFieldEntityFieldTypeEnumRadio    FormFieldEntityFieldTypeEnum = "radio"
 )
 
+func (e FormFieldEntityFieldTypeEnum) ToPointer() *FormFieldEntityFieldTypeEnum {
+	return &e
+}
+
 func (e *FormFieldEntityFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "text_area":
@@ -30,10 +34,10 @@ func (e *FormFieldEntityFieldTypeEnum) UnmarshalJSON(data []byte) error {
 	case "dropdown":
 		fallthrough
 	case "radio":
-		*e = FormFieldEntityFieldTypeEnum(s)
+		*e = FormFieldEntityFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FormFieldEntityFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FormFieldEntityFieldTypeEnum: %v", v)
 	}
 }
 

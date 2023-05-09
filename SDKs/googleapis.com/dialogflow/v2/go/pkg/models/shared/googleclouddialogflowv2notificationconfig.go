@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2NotificationConfigMessageFormatEnumJSON                     GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum = "JSON"
 )
 
+func (e GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum) ToPointer() *GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MESSAGE_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "PROTO":
 		fallthrough
 	case "JSON":
-		*e = GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum(s)
+		*e = GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2NotificationConfigMessageFormatEnum: %v", v)
 	}
 }
 

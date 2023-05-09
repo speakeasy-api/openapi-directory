@@ -18,12 +18,16 @@ const (
 	LoanCategoryEnumObligation         LoanCategoryEnum = "obligation"
 )
 
+func (e LoanCategoryEnum) ToPointer() *LoanCategoryEnum {
+	return &e
+}
+
 func (e *LoanCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debt spreading":
 		fallthrough
 	case "bank loan":
@@ -35,10 +39,10 @@ func (e *LoanCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "leasing":
 		fallthrough
 	case "obligation":
-		*e = LoanCategoryEnum(s)
+		*e = LoanCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoanCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for LoanCategoryEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	LoanLevelEnumPublic       LoanLevelEnum = "public"
 )
 
+func (e LoanLevelEnum) ToPointer() *LoanLevelEnum {
+	return &e
+}
+
 func (e *LoanLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = LoanLevelEnum(s)
+		*e = LoanLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoanLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for LoanLevelEnum: %v", v)
 	}
 }
 

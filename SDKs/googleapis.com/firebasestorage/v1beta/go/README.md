@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/firebasest
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasestorageProjectsBucketsAddFirebaseRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FirebasestorageProjectsBucketsAddFirebase(ctx, operations.FirebasestorageProjectsBucketsAddFirebaseRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
         Bucket: "deserunt",
-        Callback: "suscipit",
-        Fields: "iure",
-        Key: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FirebasestorageProjectsBucketsAddFirebase(ctx, req, operations.FirebasestorageProjectsBucketsAddFirebaseSecurity{
+        Callback: sdk.String("suscipit"),
+        Fields: sdk.String("iure"),
+        Key: sdk.String("magnam"),
+        OauthToken: sdk.String("debitis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.FirebasestorageProjectsBucketsAddFirebaseSecurity{
         Option1: &operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -66,12 +64,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `FirebasestorageProjectsBucketsAddFirebase` - Links a Google Cloud Storage bucket to a Firebase project.
-* `FirebasestorageProjectsBucketsGet` - Gets a single linked storage bucket.
-* `FirebasestorageProjectsBucketsList` - Lists the linked storage buckets for a project.
-* `FirebasestorageProjectsBucketsRemoveFirebase` - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
+* [FirebasestorageProjectsBucketsAddFirebase](docs/projects/README.md#firebasestorageprojectsbucketsaddfirebase) - Links a Google Cloud Storage bucket to a Firebase project.
+* [FirebasestorageProjectsBucketsGet](docs/projects/README.md#firebasestorageprojectsbucketsget) - Gets a single linked storage bucket.
+* [FirebasestorageProjectsBucketsList](docs/projects/README.md#firebasestorageprojectsbucketslist) - Lists the linked storage buckets for a project.
+* [FirebasestorageProjectsBucketsRemoveFirebase](docs/projects/README.md#firebasestorageprojectsbucketsremovefirebase) - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
 <!-- End SDK Available Operations -->
 
 ### Maturity

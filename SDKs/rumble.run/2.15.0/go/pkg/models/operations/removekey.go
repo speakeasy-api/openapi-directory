@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type RemoveKeySecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type RemoveKeyResponse struct {
 	ContentType string
 	StatusCode  int

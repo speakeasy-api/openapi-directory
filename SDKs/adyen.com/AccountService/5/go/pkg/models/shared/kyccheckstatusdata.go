@@ -24,12 +24,16 @@ const (
 	KYCCheckStatusDataStatusEnumUnchecked         KYCCheckStatusDataStatusEnum = "UNCHECKED"
 )
 
+func (e KYCCheckStatusDataStatusEnum) ToPointer() *KYCCheckStatusDataStatusEnum {
+	return &e
+}
+
 func (e *KYCCheckStatusDataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWAITING_DATA":
 		fallthrough
 	case "DATA_PROVIDED":
@@ -47,10 +51,10 @@ func (e *KYCCheckStatusDataStatusEnum) UnmarshalJSON(data []byte) error {
 	case "RETRY_LIMIT_REACHED":
 		fallthrough
 	case "UNCHECKED":
-		*e = KYCCheckStatusDataStatusEnum(s)
+		*e = KYCCheckStatusDataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KYCCheckStatusDataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for KYCCheckStatusDataStatusEnum: %v", v)
 	}
 }
 
@@ -89,12 +93,16 @@ const (
 	KYCCheckStatusDataTypeEnumPciVerification              KYCCheckStatusDataTypeEnum = "PCI_VERIFICATION"
 )
 
+func (e KYCCheckStatusDataTypeEnum) ToPointer() *KYCCheckStatusDataTypeEnum {
+	return &e
+}
+
 func (e *KYCCheckStatusDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANK_ACCOUNT_VERIFICATION":
 		fallthrough
 	case "CARD_VERIFICATION":
@@ -112,10 +120,10 @@ func (e *KYCCheckStatusDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PAYOUT_METHOD_VERIFICATION":
 		fallthrough
 	case "PCI_VERIFICATION":
-		*e = KYCCheckStatusDataTypeEnum(s)
+		*e = KYCCheckStatusDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KYCCheckStatusDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KYCCheckStatusDataTypeEnum: %v", v)
 	}
 }
 

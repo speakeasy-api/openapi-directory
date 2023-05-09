@@ -34,7 +34,10 @@ func newPubsubnotificationsettings(defaultClient, securityClient HTTPClient, ser
 // ContentPubsubnotificationsettingsGet - Retrieves a Merchant Center account's pubsub notification settings.
 func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsGet(ctx context.Context, request operations.ContentPubsubnotificationsettingsGetRequest, security operations.ContentPubsubnotificationsettingsGetSecurity) (*operations.ContentPubsubnotificationsettingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsGet(ctx co
 // ContentPubsubnotificationsettingsUpdate - Register a Merchant Center account for pubsub notifications. Note that cloud topic name shouldn't be provided as part of the request.
 func (s *pubsubnotificationsettings) ContentPubsubnotificationsettingsUpdate(ctx context.Context, request operations.ContentPubsubnotificationsettingsUpdateRequest, security operations.ContentPubsubnotificationsettingsUpdateSecurity) (*operations.ContentPubsubnotificationsettingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/pubsubnotificationsettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PubsubNotificationSettings", "json")
 	if err != nil {

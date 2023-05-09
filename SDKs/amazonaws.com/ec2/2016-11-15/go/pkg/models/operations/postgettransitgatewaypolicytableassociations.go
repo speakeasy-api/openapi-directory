@@ -15,17 +15,21 @@ const (
 	POSTGetTransitGatewayPolicyTableAssociationsActionEnumGetTransitGatewayPolicyTableAssociations POSTGetTransitGatewayPolicyTableAssociationsActionEnum = "GetTransitGatewayPolicyTableAssociations"
 )
 
+func (e POSTGetTransitGatewayPolicyTableAssociationsActionEnum) ToPointer() *POSTGetTransitGatewayPolicyTableAssociationsActionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayPolicyTableAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTransitGatewayPolicyTableAssociations":
-		*e = POSTGetTransitGatewayPolicyTableAssociationsActionEnum(s)
+		*e = POSTGetTransitGatewayPolicyTableAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayPolicyTableAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayPolicyTableAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetTransitGatewayPolicyTableAssociationsVersionEnumTwoThousandAndSixteen1115 POSTGetTransitGatewayPolicyTableAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetTransitGatewayPolicyTableAssociationsVersionEnum) ToPointer() *POSTGetTransitGatewayPolicyTableAssociationsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayPolicyTableAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetTransitGatewayPolicyTableAssociationsVersionEnum(s)
+		*e = POSTGetTransitGatewayPolicyTableAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayPolicyTableAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayPolicyTableAssociationsVersionEnum: %v", v)
 	}
 }
 

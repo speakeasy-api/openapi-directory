@@ -16,17 +16,21 @@ const (
 	DescribeTagOptionXAmzTargetEnumAws242ServiceCatalogServiceDescribeTagOption DescribeTagOptionXAmzTargetEnum = "AWS242ServiceCatalogService.DescribeTagOption"
 )
 
+func (e DescribeTagOptionXAmzTargetEnum) ToPointer() *DescribeTagOptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTagOptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribeTagOption":
-		*e = DescribeTagOptionXAmzTargetEnum(s)
+		*e = DescribeTagOptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTagOptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTagOptionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/viator.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,32 +27,30 @@ func main() {
         }),
     )
 
-    req := operations.BookingAvailabilityRequest{
+    ctx := context.Background()
+    res, err := s.BookingServices.BookingAvailability(ctx, operations.BookingAvailabilityRequest{
         AcceptLanguage: "en-US",
         RequestBody: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 592845,
-                    Count: 715190,
+                    BandID: sdk.Int64(592845),
+                    Count: sdk.Int64(715190),
                 },
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 844266,
-                    Count: 602763,
+                    BandID: sdk.Int64(844266),
+                    Count: sdk.Int64(602763),
                 },
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 857946,
-                    Count: 544883,
+                    BandID: sdk.Int64(857946),
+                    Count: sdk.Int64(544883),
                 },
             },
-            CurrencyCode: "illum",
-            Month: "vel",
-            ProductCode: "error",
-            Year: "deserunt",
+            CurrencyCode: sdk.String("illum"),
+            Month: sdk.String("vel"),
+            ProductCode: sdk.String("error"),
+            Year: sdk.String("deserunt"),
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.BookingServices.BookingAvailability(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -69,48 +66,48 @@ func main() {
 ## Available Resources and Operations
 
 
-### BookingServices
+### [BookingServices](docs/bookingservices/README.md)
 
-* `BookingAvailability` - /booking/availability
-* `BookingAvailabilityDates` - /booking/availability/dates
-* `BookingAvailabilityTourgrades` - /booking/availability/tourgrades
-* `BookingAvailabilityTourgradesPricingmatrix` - /booking/availability/tourgrades/pricingmatrix
-* `BookingBook` - /booking/book
-* `BookingCalculateprice` - /booking/calculateprice
-* `BookingHotels` - /booking/hotels
-* `BookingMybookings` - /booking/mybookings
-* `BookingPastbooking` - /booking/pastbooking
-* `BookingPricingmatrix` - /booking/pricingmatrix
-* `BookingStatus` - /booking/status
-* `BookingStatusItems` - /booking/status/items
-* `BookingVoucher` - /booking/voucher
-* `CancelBooking` - /bookings/{booking-reference}/cancel
-* `CancelBookingQuote` - /bookings/{booking-reference}/cancel-quote
-* `CancellationReasons` - /bookings/cancel-reasons
+* [BookingAvailability](docs/bookingservices/README.md#bookingavailability) - /booking/availability
+* [BookingAvailabilityDates](docs/bookingservices/README.md#bookingavailabilitydates) - /booking/availability/dates
+* [BookingAvailabilityTourgrades](docs/bookingservices/README.md#bookingavailabilitytourgrades) - /booking/availability/tourgrades
+* [BookingAvailabilityTourgradesPricingmatrix](docs/bookingservices/README.md#bookingavailabilitytourgradespricingmatrix) - /booking/availability/tourgrades/pricingmatrix
+* [BookingBook](docs/bookingservices/README.md#bookingbook) - /booking/book
+* [BookingCalculateprice](docs/bookingservices/README.md#bookingcalculateprice) - /booking/calculateprice
+* [BookingHotels](docs/bookingservices/README.md#bookinghotels) - /booking/hotels
+* [BookingMybookings](docs/bookingservices/README.md#bookingmybookings) - /booking/mybookings
+* [BookingPastbooking](docs/bookingservices/README.md#bookingpastbooking) - /booking/pastbooking
+* [BookingPricingmatrix](docs/bookingservices/README.md#bookingpricingmatrix) - /booking/pricingmatrix
+* [BookingStatus](docs/bookingservices/README.md#bookingstatus) - /booking/status
+* [BookingStatusItems](docs/bookingservices/README.md#bookingstatusitems) - /booking/status/items
+* [BookingVoucher](docs/bookingservices/README.md#bookingvoucher) - /booking/voucher
+* [CancelBooking](docs/bookingservices/README.md#cancelbooking) - /bookings/{booking-reference}/cancel
+* [CancelBookingQuote](docs/bookingservices/README.md#cancelbookingquote) - /bookings/{booking-reference}/cancel-quote
+* [CancellationReasons](docs/bookingservices/README.md#cancellationreasons) - /bookings/cancel-reasons
 
-### DeprecatedServices
+### [DeprecatedServices](docs/deprecatedservices/README.md)
 
-* `MerchantCancellation` - /merchant/cancellation
+* [~~MerchantCancellation~~](docs/deprecatedservices/README.md#merchantcancellation) - /merchant/cancellation :warning: **Deprecated**
 
-### GeneralServices
+### [GeneralServices](docs/generalservices/README.md)
 
-* `HealthCheck` - /health/check
+* [HealthCheck](docs/generalservices/README.md#healthcheck) - /health/check
 
-### ProductServices
+### [ProductServices](docs/productservices/README.md)
 
-* `AvailableProducts` - /available/products
-* `Product` - /product
-* `ProductPhotos` - /product/photos
-* `ProductReviews` - /product/reviews
-* `SearchFreetext` - /search/freetext
-* `SearchProducts` - /search/products
-* `SearchProductsCodes` - /search/products/codes
+* [AvailableProducts](docs/productservices/README.md#availableproducts) - /available/products
+* [Product](docs/productservices/README.md#product) - /product
+* [ProductPhotos](docs/productservices/README.md#productphotos) - /product/photos
+* [ProductReviews](docs/productservices/README.md#productreviews) - /product/reviews
+* [SearchFreetext](docs/productservices/README.md#searchfreetext) - /search/freetext
+* [SearchProducts](docs/productservices/README.md#searchproducts) - /search/products
+* [SearchProductsCodes](docs/productservices/README.md#searchproductscodes) - /search/products/codes
 
-### TaxonomyServices
+### [TaxonomyServices](docs/taxonomyservices/README.md)
 
-* `TaxonomyAttractions` - /taxonomy/attractions
-* `TaxonomyCategories` - /taxonomy/categories
-* `TaxonomyDestinations` - /taxonomy/destinations
+* [TaxonomyAttractions](docs/taxonomyservices/README.md#taxonomyattractions) - /taxonomy/attractions
+* [TaxonomyCategories](docs/taxonomyservices/README.md#taxonomycategories) - /taxonomy/categories
+* [TaxonomyDestinations](docs/taxonomyservices/README.md#taxonomydestinations) - /taxonomy/destinations
 <!-- End SDK Available Operations -->
 
 ### Maturity

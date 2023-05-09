@@ -78,6 +78,7 @@ func (s *userinfo) Oauth2UserinfoGet(ctx context.Context, request operations.Oau
 
 	return res, nil
 }
+
 func (s *userinfo) Oauth2UserinfoV2MeGet(ctx context.Context, request operations.Oauth2UserinfoV2MeGetRequest, security operations.Oauth2UserinfoV2MeGetSecurity) (*operations.Oauth2UserinfoV2MeGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/userinfo/v2/me"

@@ -16,17 +16,21 @@ const (
 	CreateResourceDataSyncXAmzTargetEnumAmazonSsmCreateResourceDataSync CreateResourceDataSyncXAmzTargetEnum = "AmazonSSM.CreateResourceDataSync"
 )
 
+func (e CreateResourceDataSyncXAmzTargetEnum) ToPointer() *CreateResourceDataSyncXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateResourceDataSyncXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreateResourceDataSync":
-		*e = CreateResourceDataSyncXAmzTargetEnum(s)
+		*e = CreateResourceDataSyncXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResourceDataSyncXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResourceDataSyncXAmzTargetEnum: %v", v)
 	}
 }
 

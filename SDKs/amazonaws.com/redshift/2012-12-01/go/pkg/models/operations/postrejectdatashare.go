@@ -15,17 +15,21 @@ const (
 	POSTRejectDataShareActionEnumRejectDataShare POSTRejectDataShareActionEnum = "RejectDataShare"
 )
 
+func (e POSTRejectDataShareActionEnum) ToPointer() *POSTRejectDataShareActionEnum {
+	return &e
+}
+
 func (e *POSTRejectDataShareActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RejectDataShare":
-		*e = POSTRejectDataShareActionEnum(s)
+		*e = POSTRejectDataShareActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectDataShareActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectDataShareActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRejectDataShareVersionEnumTwoThousandAndTwelve1201 POSTRejectDataShareVersionEnum = "2012-12-01"
 )
 
+func (e POSTRejectDataShareVersionEnum) ToPointer() *POSTRejectDataShareVersionEnum {
+	return &e
+}
+
 func (e *POSTRejectDataShareVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTRejectDataShareVersionEnum(s)
+		*e = POSTRejectDataShareVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRejectDataShareVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRejectDataShareVersionEnum: %v", v)
 	}
 }
 

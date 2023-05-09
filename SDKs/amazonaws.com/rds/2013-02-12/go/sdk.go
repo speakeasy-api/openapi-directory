@@ -38,6 +38,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK
 // https://docs.aws.amazon.com/rds/ - Amazon Web Services documentation
 type SDK struct {
@@ -168,6 +183,7 @@ func (s *SDK) GETAddSourceIdentifierToSubscription(ctx context.Context, request 
 
 	return res, nil
 }
+
 func (s *SDK) GETAuthorizeDBSecurityGroupIngress(ctx context.Context, request operations.GETAuthorizeDBSecurityGroupIngressRequest) (*operations.GETAuthorizeDBSecurityGroupIngressResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AuthorizeDBSecurityGroupIngress"
@@ -224,6 +240,7 @@ func (s *SDK) GETAuthorizeDBSecurityGroupIngress(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *SDK) GETCopyDBSnapshot(ctx context.Context, request operations.GETCopyDBSnapshotRequest) (*operations.GETCopyDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CopyDBSnapshot"
@@ -280,6 +297,7 @@ func (s *SDK) GETCopyDBSnapshot(ctx context.Context, request operations.GETCopyD
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBInstance(ctx context.Context, request operations.GETCreateDBInstanceRequest) (*operations.GETCreateDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBInstance"
@@ -352,6 +370,7 @@ func (s *SDK) GETCreateDBInstance(ctx context.Context, request operations.GETCre
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBInstanceReadReplica(ctx context.Context, request operations.GETCreateDBInstanceReadReplicaRequest) (*operations.GETCreateDBInstanceReadReplicaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBInstanceReadReplica"
@@ -428,6 +447,7 @@ func (s *SDK) GETCreateDBInstanceReadReplica(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBParameterGroup(ctx context.Context, request operations.GETCreateDBParameterGroupRequest) (*operations.GETCreateDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBParameterGroup"
@@ -480,6 +500,7 @@ func (s *SDK) GETCreateDBParameterGroup(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBSecurityGroup(ctx context.Context, request operations.GETCreateDBSecurityGroupRequest) (*operations.GETCreateDBSecurityGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSecurityGroup"
@@ -534,6 +555,7 @@ func (s *SDK) GETCreateDBSecurityGroup(ctx context.Context, request operations.G
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBSnapshot(ctx context.Context, request operations.GETCreateDBSnapshotRequest) (*operations.GETCreateDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSnapshot"
@@ -590,6 +612,7 @@ func (s *SDK) GETCreateDBSnapshot(ctx context.Context, request operations.GETCre
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateDBSubnetGroup(ctx context.Context, request operations.GETCreateDBSubnetGroupRequest) (*operations.GETCreateDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSubnetGroup"
@@ -648,6 +671,7 @@ func (s *SDK) GETCreateDBSubnetGroup(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateEventSubscription(ctx context.Context, request operations.GETCreateEventSubscriptionRequest) (*operations.GETCreateEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateEventSubscription"
@@ -710,6 +734,7 @@ func (s *SDK) GETCreateEventSubscription(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) GETCreateOptionGroup(ctx context.Context, request operations.GETCreateOptionGroupRequest) (*operations.GETCreateOptionGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateOptionGroup"
@@ -762,6 +787,7 @@ func (s *SDK) GETCreateOptionGroup(ctx context.Context, request operations.GETCr
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteDBInstance(ctx context.Context, request operations.GETDeleteDBInstanceRequest) (*operations.GETDeleteDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBInstance"
@@ -818,6 +844,7 @@ func (s *SDK) GETDeleteDBInstance(ctx context.Context, request operations.GETDel
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteDBParameterGroup(ctx context.Context, request operations.GETDeleteDBParameterGroupRequest) (*operations.GETDeleteDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBParameterGroup"
@@ -869,6 +896,7 @@ func (s *SDK) GETDeleteDBParameterGroup(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteDBSecurityGroup(ctx context.Context, request operations.GETDeleteDBSecurityGroupRequest) (*operations.GETDeleteDBSecurityGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSecurityGroup"
@@ -920,6 +948,7 @@ func (s *SDK) GETDeleteDBSecurityGroup(ctx context.Context, request operations.G
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteDBSnapshot(ctx context.Context, request operations.GETDeleteDBSnapshotRequest) (*operations.GETDeleteDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSnapshot"
@@ -972,6 +1001,7 @@ func (s *SDK) GETDeleteDBSnapshot(ctx context.Context, request operations.GETDel
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteDBSubnetGroup(ctx context.Context, request operations.GETDeleteDBSubnetGroupRequest) (*operations.GETDeleteDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSubnetGroup"
@@ -1025,6 +1055,7 @@ func (s *SDK) GETDeleteDBSubnetGroup(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteEventSubscription(ctx context.Context, request operations.GETDeleteEventSubscriptionRequest) (*operations.GETDeleteEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteEventSubscription"
@@ -1077,6 +1108,7 @@ func (s *SDK) GETDeleteEventSubscription(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) GETDeleteOptionGroup(ctx context.Context, request operations.GETDeleteOptionGroupRequest) (*operations.GETDeleteOptionGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteOptionGroup"
@@ -1128,6 +1160,7 @@ func (s *SDK) GETDeleteOptionGroup(ctx context.Context, request operations.GETDe
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBEngineVersions(ctx context.Context, request operations.GETDescribeDBEngineVersionsRequest) (*operations.GETDescribeDBEngineVersionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBEngineVersions"
@@ -1176,6 +1209,7 @@ func (s *SDK) GETDescribeDBEngineVersions(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBInstances(ctx context.Context, request operations.GETDescribeDBInstancesRequest) (*operations.GETDescribeDBInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBInstances"
@@ -1226,6 +1260,7 @@ func (s *SDK) GETDescribeDBInstances(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBLogFiles(ctx context.Context, request operations.GETDescribeDBLogFilesRequest) (*operations.GETDescribeDBLogFilesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBLogFiles"
@@ -1276,6 +1311,7 @@ func (s *SDK) GETDescribeDBLogFiles(ctx context.Context, request operations.GETD
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBParameterGroups(ctx context.Context, request operations.GETDescribeDBParameterGroupsRequest) (*operations.GETDescribeDBParameterGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBParameterGroups"
@@ -1326,6 +1362,7 @@ func (s *SDK) GETDescribeDBParameterGroups(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBParameters(ctx context.Context, request operations.GETDescribeDBParametersRequest) (*operations.GETDescribeDBParametersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBParameters"
@@ -1376,6 +1413,7 @@ func (s *SDK) GETDescribeDBParameters(ctx context.Context, request operations.GE
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBSecurityGroups(ctx context.Context, request operations.GETDescribeDBSecurityGroupsRequest) (*operations.GETDescribeDBSecurityGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSecurityGroups"
@@ -1426,6 +1464,7 @@ func (s *SDK) GETDescribeDBSecurityGroups(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBSnapshots(ctx context.Context, request operations.GETDescribeDBSnapshotsRequest) (*operations.GETDescribeDBSnapshotsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSnapshots"
@@ -1476,6 +1515,7 @@ func (s *SDK) GETDescribeDBSnapshots(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeDBSubnetGroups(ctx context.Context, request operations.GETDescribeDBSubnetGroupsRequest) (*operations.GETDescribeDBSubnetGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSubnetGroups"
@@ -1526,6 +1566,7 @@ func (s *SDK) GETDescribeDBSubnetGroups(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeEngineDefaultParameters(ctx context.Context, request operations.GETDescribeEngineDefaultParametersRequest) (*operations.GETDescribeEngineDefaultParametersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEngineDefaultParameters"
@@ -1574,6 +1615,7 @@ func (s *SDK) GETDescribeEngineDefaultParameters(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeEventCategories(ctx context.Context, request operations.GETDescribeEventCategoriesRequest) (*operations.GETDescribeEventCategoriesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEventCategories"
@@ -1622,6 +1664,7 @@ func (s *SDK) GETDescribeEventCategories(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeEventSubscriptions(ctx context.Context, request operations.GETDescribeEventSubscriptionsRequest) (*operations.GETDescribeEventSubscriptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEventSubscriptions"
@@ -1672,6 +1715,7 @@ func (s *SDK) GETDescribeEventSubscriptions(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeEvents(ctx context.Context, request operations.GETDescribeEventsRequest) (*operations.GETDescribeEventsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEvents"
@@ -1720,6 +1764,7 @@ func (s *SDK) GETDescribeEvents(ctx context.Context, request operations.GETDescr
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeOptionGroupOptions(ctx context.Context, request operations.GETDescribeOptionGroupOptionsRequest) (*operations.GETDescribeOptionGroupOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOptionGroupOptions"
@@ -1768,6 +1813,7 @@ func (s *SDK) GETDescribeOptionGroupOptions(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeOptionGroups(ctx context.Context, request operations.GETDescribeOptionGroupsRequest) (*operations.GETDescribeOptionGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOptionGroups"
@@ -1818,6 +1864,7 @@ func (s *SDK) GETDescribeOptionGroups(ctx context.Context, request operations.GE
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeOrderableDBInstanceOptions(ctx context.Context, request operations.GETDescribeOrderableDBInstanceOptionsRequest) (*operations.GETDescribeOrderableDBInstanceOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOrderableDBInstanceOptions"
@@ -1866,6 +1913,7 @@ func (s *SDK) GETDescribeOrderableDBInstanceOptions(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeReservedDBInstances(ctx context.Context, request operations.GETDescribeReservedDBInstancesRequest) (*operations.GETDescribeReservedDBInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeReservedDBInstances"
@@ -1916,6 +1964,7 @@ func (s *SDK) GETDescribeReservedDBInstances(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) GETDescribeReservedDBInstancesOfferings(ctx context.Context, request operations.GETDescribeReservedDBInstancesOfferingsRequest) (*operations.GETDescribeReservedDBInstancesOfferingsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeReservedDBInstancesOfferings"
@@ -1966,6 +2015,7 @@ func (s *SDK) GETDescribeReservedDBInstancesOfferings(ctx context.Context, reque
 
 	return res, nil
 }
+
 func (s *SDK) GETDownloadDBLogFilePortion(ctx context.Context, request operations.GETDownloadDBLogFilePortionRequest) (*operations.GETDownloadDBLogFilePortionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DownloadDBLogFilePortion"
@@ -2018,6 +2068,7 @@ func (s *SDK) GETDownloadDBLogFilePortion(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) GETListTagsForResource(ctx context.Context, request operations.GETListTagsForResourceRequest) (*operations.GETListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListTagsForResource"
@@ -2070,6 +2121,7 @@ func (s *SDK) GETListTagsForResource(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETModifyDBInstance(ctx context.Context, request operations.GETModifyDBInstanceRequest) (*operations.GETModifyDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyDBInstance"
@@ -2142,6 +2194,7 @@ func (s *SDK) GETModifyDBInstance(ctx context.Context, request operations.GETMod
 
 	return res, nil
 }
+
 func (s *SDK) GETModifyDBSubnetGroup(ctx context.Context, request operations.GETModifyDBSubnetGroupRequest) (*operations.GETModifyDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyDBSubnetGroup"
@@ -2200,6 +2253,7 @@ func (s *SDK) GETModifyDBSubnetGroup(ctx context.Context, request operations.GET
 
 	return res, nil
 }
+
 func (s *SDK) GETModifyEventSubscription(ctx context.Context, request operations.GETModifyEventSubscriptionRequest) (*operations.GETModifyEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyEventSubscription"
@@ -2260,6 +2314,7 @@ func (s *SDK) GETModifyEventSubscription(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) GETPromoteReadReplica(ctx context.Context, request operations.GETPromoteReadReplicaRequest) (*operations.GETPromoteReadReplicaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PromoteReadReplica"
@@ -2312,6 +2367,7 @@ func (s *SDK) GETPromoteReadReplica(ctx context.Context, request operations.GETP
 
 	return res, nil
 }
+
 func (s *SDK) GETPurchaseReservedDBInstancesOffering(ctx context.Context, request operations.GETPurchaseReservedDBInstancesOfferingRequest) (*operations.GETPurchaseReservedDBInstancesOfferingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PurchaseReservedDBInstancesOffering"
@@ -2366,6 +2422,7 @@ func (s *SDK) GETPurchaseReservedDBInstancesOffering(ctx context.Context, reques
 
 	return res, nil
 }
+
 func (s *SDK) GETRebootDBInstance(ctx context.Context, request operations.GETRebootDBInstanceRequest) (*operations.GETRebootDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RebootDBInstance"
@@ -2418,6 +2475,7 @@ func (s *SDK) GETRebootDBInstance(ctx context.Context, request operations.GETReb
 
 	return res, nil
 }
+
 func (s *SDK) GETRemoveSourceIdentifierFromSubscription(ctx context.Context, request operations.GETRemoveSourceIdentifierFromSubscriptionRequest) (*operations.GETRemoveSourceIdentifierFromSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RemoveSourceIdentifierFromSubscription"
@@ -2470,6 +2528,7 @@ func (s *SDK) GETRemoveSourceIdentifierFromSubscription(ctx context.Context, req
 
 	return res, nil
 }
+
 func (s *SDK) GETRemoveTagsFromResource(ctx context.Context, request operations.GETRemoveTagsFromResourceRequest) (*operations.GETRemoveTagsFromResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RemoveTagsFromResource"
@@ -2521,6 +2580,7 @@ func (s *SDK) GETRemoveTagsFromResource(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) GETRestoreDBInstanceFromDBSnapshot(ctx context.Context, request operations.GETRestoreDBInstanceFromDBSnapshotRequest) (*operations.GETRestoreDBInstanceFromDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RestoreDBInstanceFromDBSnapshot"
@@ -2595,6 +2655,7 @@ func (s *SDK) GETRestoreDBInstanceFromDBSnapshot(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *SDK) GETRestoreDBInstanceToPointInTime(ctx context.Context, request operations.GETRestoreDBInstanceToPointInTimeRequest) (*operations.GETRestoreDBInstanceToPointInTimeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RestoreDBInstanceToPointInTime"
@@ -2671,6 +2732,7 @@ func (s *SDK) GETRestoreDBInstanceToPointInTime(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *SDK) GETRevokeDBSecurityGroupIngress(ctx context.Context, request operations.GETRevokeDBSecurityGroupIngressRequest) (*operations.GETRevokeDBSecurityGroupIngressResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RevokeDBSecurityGroupIngress"
@@ -2725,6 +2787,7 @@ func (s *SDK) GETRevokeDBSecurityGroupIngress(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *SDK) POSTAddSourceIdentifierToSubscription(ctx context.Context, request operations.POSTAddSourceIdentifierToSubscriptionRequest) (*operations.POSTAddSourceIdentifierToSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AddSourceIdentifierToSubscription"
@@ -2784,6 +2847,7 @@ func (s *SDK) POSTAddSourceIdentifierToSubscription(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *SDK) POSTAddTagsToResource(ctx context.Context, request operations.POSTAddTagsToResourceRequest) (*operations.POSTAddTagsToResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AddTagsToResource"
@@ -2842,6 +2906,7 @@ func (s *SDK) POSTAddTagsToResource(ctx context.Context, request operations.POST
 
 	return res, nil
 }
+
 func (s *SDK) POSTAuthorizeDBSecurityGroupIngress(ctx context.Context, request operations.POSTAuthorizeDBSecurityGroupIngressRequest) (*operations.POSTAuthorizeDBSecurityGroupIngressResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=AuthorizeDBSecurityGroupIngress"
@@ -2905,6 +2970,7 @@ func (s *SDK) POSTAuthorizeDBSecurityGroupIngress(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *SDK) POSTCopyDBSnapshot(ctx context.Context, request operations.POSTCopyDBSnapshotRequest) (*operations.POSTCopyDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CopyDBSnapshot"
@@ -2968,6 +3034,7 @@ func (s *SDK) POSTCopyDBSnapshot(ctx context.Context, request operations.POSTCop
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBInstance(ctx context.Context, request operations.POSTCreateDBInstanceRequest) (*operations.POSTCreateDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBInstance"
@@ -3047,6 +3114,7 @@ func (s *SDK) POSTCreateDBInstance(ctx context.Context, request operations.POSTC
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBInstanceReadReplica(ctx context.Context, request operations.POSTCreateDBInstanceReadReplicaRequest) (*operations.POSTCreateDBInstanceReadReplicaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBInstanceReadReplica"
@@ -3130,6 +3198,7 @@ func (s *SDK) POSTCreateDBInstanceReadReplica(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBParameterGroup(ctx context.Context, request operations.POSTCreateDBParameterGroupRequest) (*operations.POSTCreateDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBParameterGroup"
@@ -3189,6 +3258,7 @@ func (s *SDK) POSTCreateDBParameterGroup(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBSecurityGroup(ctx context.Context, request operations.POSTCreateDBSecurityGroupRequest) (*operations.POSTCreateDBSecurityGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSecurityGroup"
@@ -3250,6 +3320,7 @@ func (s *SDK) POSTCreateDBSecurityGroup(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBSnapshot(ctx context.Context, request operations.POSTCreateDBSnapshotRequest) (*operations.POSTCreateDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSnapshot"
@@ -3313,6 +3384,7 @@ func (s *SDK) POSTCreateDBSnapshot(ctx context.Context, request operations.POSTC
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateDBSubnetGroup(ctx context.Context, request operations.POSTCreateDBSubnetGroupRequest) (*operations.POSTCreateDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateDBSubnetGroup"
@@ -3378,6 +3450,7 @@ func (s *SDK) POSTCreateDBSubnetGroup(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateEventSubscription(ctx context.Context, request operations.POSTCreateEventSubscriptionRequest) (*operations.POSTCreateEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateEventSubscription"
@@ -3447,6 +3520,7 @@ func (s *SDK) POSTCreateEventSubscription(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) POSTCreateOptionGroup(ctx context.Context, request operations.POSTCreateOptionGroupRequest) (*operations.POSTCreateOptionGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=CreateOptionGroup"
@@ -3506,6 +3580,7 @@ func (s *SDK) POSTCreateOptionGroup(ctx context.Context, request operations.POST
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteDBInstance(ctx context.Context, request operations.POSTDeleteDBInstanceRequest) (*operations.POSTDeleteDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBInstance"
@@ -3569,6 +3644,7 @@ func (s *SDK) POSTDeleteDBInstance(ctx context.Context, request operations.POSTD
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteDBParameterGroup(ctx context.Context, request operations.POSTDeleteDBParameterGroupRequest) (*operations.POSTDeleteDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBParameterGroup"
@@ -3627,6 +3703,7 @@ func (s *SDK) POSTDeleteDBParameterGroup(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteDBSecurityGroup(ctx context.Context, request operations.POSTDeleteDBSecurityGroupRequest) (*operations.POSTDeleteDBSecurityGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSecurityGroup"
@@ -3685,6 +3762,7 @@ func (s *SDK) POSTDeleteDBSecurityGroup(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteDBSnapshot(ctx context.Context, request operations.POSTDeleteDBSnapshotRequest) (*operations.POSTDeleteDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSnapshot"
@@ -3744,6 +3822,7 @@ func (s *SDK) POSTDeleteDBSnapshot(ctx context.Context, request operations.POSTD
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteDBSubnetGroup(ctx context.Context, request operations.POSTDeleteDBSubnetGroupRequest) (*operations.POSTDeleteDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteDBSubnetGroup"
@@ -3804,6 +3883,7 @@ func (s *SDK) POSTDeleteDBSubnetGroup(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteEventSubscription(ctx context.Context, request operations.POSTDeleteEventSubscriptionRequest) (*operations.POSTDeleteEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteEventSubscription"
@@ -3863,6 +3943,7 @@ func (s *SDK) POSTDeleteEventSubscription(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) POSTDeleteOptionGroup(ctx context.Context, request operations.POSTDeleteOptionGroupRequest) (*operations.POSTDeleteOptionGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DeleteOptionGroup"
@@ -3921,6 +4002,7 @@ func (s *SDK) POSTDeleteOptionGroup(ctx context.Context, request operations.POST
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBEngineVersions(ctx context.Context, request operations.POSTDescribeDBEngineVersionsRequest) (*operations.POSTDescribeDBEngineVersionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBEngineVersions"
@@ -3976,6 +4058,7 @@ func (s *SDK) POSTDescribeDBEngineVersions(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBInstances(ctx context.Context, request operations.POSTDescribeDBInstancesRequest) (*operations.POSTDescribeDBInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBInstances"
@@ -4033,6 +4116,7 @@ func (s *SDK) POSTDescribeDBInstances(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBLogFiles(ctx context.Context, request operations.POSTDescribeDBLogFilesRequest) (*operations.POSTDescribeDBLogFilesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBLogFiles"
@@ -4090,6 +4174,7 @@ func (s *SDK) POSTDescribeDBLogFiles(ctx context.Context, request operations.POS
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBParameterGroups(ctx context.Context, request operations.POSTDescribeDBParameterGroupsRequest) (*operations.POSTDescribeDBParameterGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBParameterGroups"
@@ -4147,6 +4232,7 @@ func (s *SDK) POSTDescribeDBParameterGroups(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBParameters(ctx context.Context, request operations.POSTDescribeDBParametersRequest) (*operations.POSTDescribeDBParametersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBParameters"
@@ -4204,6 +4290,7 @@ func (s *SDK) POSTDescribeDBParameters(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBSecurityGroups(ctx context.Context, request operations.POSTDescribeDBSecurityGroupsRequest) (*operations.POSTDescribeDBSecurityGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSecurityGroups"
@@ -4261,6 +4348,7 @@ func (s *SDK) POSTDescribeDBSecurityGroups(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBSnapshots(ctx context.Context, request operations.POSTDescribeDBSnapshotsRequest) (*operations.POSTDescribeDBSnapshotsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSnapshots"
@@ -4318,6 +4406,7 @@ func (s *SDK) POSTDescribeDBSnapshots(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeDBSubnetGroups(ctx context.Context, request operations.POSTDescribeDBSubnetGroupsRequest) (*operations.POSTDescribeDBSubnetGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeDBSubnetGroups"
@@ -4375,6 +4464,7 @@ func (s *SDK) POSTDescribeDBSubnetGroups(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeEngineDefaultParameters(ctx context.Context, request operations.POSTDescribeEngineDefaultParametersRequest) (*operations.POSTDescribeEngineDefaultParametersResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEngineDefaultParameters"
@@ -4430,6 +4520,7 @@ func (s *SDK) POSTDescribeEngineDefaultParameters(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeEventCategories(ctx context.Context, request operations.POSTDescribeEventCategoriesRequest) (*operations.POSTDescribeEventCategoriesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEventCategories"
@@ -4485,6 +4576,7 @@ func (s *SDK) POSTDescribeEventCategories(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeEventSubscriptions(ctx context.Context, request operations.POSTDescribeEventSubscriptionsRequest) (*operations.POSTDescribeEventSubscriptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEventSubscriptions"
@@ -4542,6 +4634,7 @@ func (s *SDK) POSTDescribeEventSubscriptions(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeEvents(ctx context.Context, request operations.POSTDescribeEventsRequest) (*operations.POSTDescribeEventsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeEvents"
@@ -4597,6 +4690,7 @@ func (s *SDK) POSTDescribeEvents(ctx context.Context, request operations.POSTDes
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeOptionGroupOptions(ctx context.Context, request operations.POSTDescribeOptionGroupOptionsRequest) (*operations.POSTDescribeOptionGroupOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOptionGroupOptions"
@@ -4652,6 +4746,7 @@ func (s *SDK) POSTDescribeOptionGroupOptions(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeOptionGroups(ctx context.Context, request operations.POSTDescribeOptionGroupsRequest) (*operations.POSTDescribeOptionGroupsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOptionGroups"
@@ -4709,6 +4804,7 @@ func (s *SDK) POSTDescribeOptionGroups(ctx context.Context, request operations.P
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeOrderableDBInstanceOptions(ctx context.Context, request operations.POSTDescribeOrderableDBInstanceOptionsRequest) (*operations.POSTDescribeOrderableDBInstanceOptionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeOrderableDBInstanceOptions"
@@ -4764,6 +4860,7 @@ func (s *SDK) POSTDescribeOrderableDBInstanceOptions(ctx context.Context, reques
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeReservedDBInstances(ctx context.Context, request operations.POSTDescribeReservedDBInstancesRequest) (*operations.POSTDescribeReservedDBInstancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeReservedDBInstances"
@@ -4821,6 +4918,7 @@ func (s *SDK) POSTDescribeReservedDBInstances(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *SDK) POSTDescribeReservedDBInstancesOfferings(ctx context.Context, request operations.POSTDescribeReservedDBInstancesOfferingsRequest) (*operations.POSTDescribeReservedDBInstancesOfferingsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DescribeReservedDBInstancesOfferings"
@@ -4878,6 +4976,7 @@ func (s *SDK) POSTDescribeReservedDBInstancesOfferings(ctx context.Context, requ
 
 	return res, nil
 }
+
 func (s *SDK) POSTDownloadDBLogFilePortion(ctx context.Context, request operations.POSTDownloadDBLogFilePortionRequest) (*operations.POSTDownloadDBLogFilePortionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=DownloadDBLogFilePortion"
@@ -4937,6 +5036,7 @@ func (s *SDK) POSTDownloadDBLogFilePortion(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *SDK) POSTListTagsForResource(ctx context.Context, request operations.POSTListTagsForResourceRequest) (*operations.POSTListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ListTagsForResource"
@@ -4996,6 +5096,7 @@ func (s *SDK) POSTListTagsForResource(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTModifyDBInstance(ctx context.Context, request operations.POSTModifyDBInstanceRequest) (*operations.POSTModifyDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyDBInstance"
@@ -5075,6 +5176,7 @@ func (s *SDK) POSTModifyDBInstance(ctx context.Context, request operations.POSTM
 
 	return res, nil
 }
+
 func (s *SDK) POSTModifyDBParameterGroup(ctx context.Context, request operations.POSTModifyDBParameterGroupRequest) (*operations.POSTModifyDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyDBParameterGroup"
@@ -5134,6 +5236,7 @@ func (s *SDK) POSTModifyDBParameterGroup(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) POSTModifyDBSubnetGroup(ctx context.Context, request operations.POSTModifyDBSubnetGroupRequest) (*operations.POSTModifyDBSubnetGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyDBSubnetGroup"
@@ -5199,6 +5302,7 @@ func (s *SDK) POSTModifyDBSubnetGroup(ctx context.Context, request operations.PO
 
 	return res, nil
 }
+
 func (s *SDK) POSTModifyEventSubscription(ctx context.Context, request operations.POSTModifyEventSubscriptionRequest) (*operations.POSTModifyEventSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyEventSubscription"
@@ -5266,6 +5370,7 @@ func (s *SDK) POSTModifyEventSubscription(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) POSTModifyOptionGroup(ctx context.Context, request operations.POSTModifyOptionGroupRequest) (*operations.POSTModifyOptionGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ModifyOptionGroup"
@@ -5325,6 +5430,7 @@ func (s *SDK) POSTModifyOptionGroup(ctx context.Context, request operations.POST
 
 	return res, nil
 }
+
 func (s *SDK) POSTPromoteReadReplica(ctx context.Context, request operations.POSTPromoteReadReplicaRequest) (*operations.POSTPromoteReadReplicaResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PromoteReadReplica"
@@ -5384,6 +5490,7 @@ func (s *SDK) POSTPromoteReadReplica(ctx context.Context, request operations.POS
 
 	return res, nil
 }
+
 func (s *SDK) POSTPurchaseReservedDBInstancesOffering(ctx context.Context, request operations.POSTPurchaseReservedDBInstancesOfferingRequest) (*operations.POSTPurchaseReservedDBInstancesOfferingResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=PurchaseReservedDBInstancesOffering"
@@ -5445,6 +5552,7 @@ func (s *SDK) POSTPurchaseReservedDBInstancesOffering(ctx context.Context, reque
 
 	return res, nil
 }
+
 func (s *SDK) POSTRebootDBInstance(ctx context.Context, request operations.POSTRebootDBInstanceRequest) (*operations.POSTRebootDBInstanceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RebootDBInstance"
@@ -5504,6 +5612,7 @@ func (s *SDK) POSTRebootDBInstance(ctx context.Context, request operations.POSTR
 
 	return res, nil
 }
+
 func (s *SDK) POSTRemoveSourceIdentifierFromSubscription(ctx context.Context, request operations.POSTRemoveSourceIdentifierFromSubscriptionRequest) (*operations.POSTRemoveSourceIdentifierFromSubscriptionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RemoveSourceIdentifierFromSubscription"
@@ -5563,6 +5672,7 @@ func (s *SDK) POSTRemoveSourceIdentifierFromSubscription(ctx context.Context, re
 
 	return res, nil
 }
+
 func (s *SDK) POSTRemoveTagsFromResource(ctx context.Context, request operations.POSTRemoveTagsFromResourceRequest) (*operations.POSTRemoveTagsFromResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RemoveTagsFromResource"
@@ -5621,6 +5731,7 @@ func (s *SDK) POSTRemoveTagsFromResource(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) POSTResetDBParameterGroup(ctx context.Context, request operations.POSTResetDBParameterGroupRequest) (*operations.POSTResetDBParameterGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=ResetDBParameterGroup"
@@ -5680,6 +5791,7 @@ func (s *SDK) POSTResetDBParameterGroup(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) POSTRestoreDBInstanceFromDBSnapshot(ctx context.Context, request operations.POSTRestoreDBInstanceFromDBSnapshotRequest) (*operations.POSTRestoreDBInstanceFromDBSnapshotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RestoreDBInstanceFromDBSnapshot"
@@ -5761,6 +5873,7 @@ func (s *SDK) POSTRestoreDBInstanceFromDBSnapshot(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *SDK) POSTRestoreDBInstanceToPointInTime(ctx context.Context, request operations.POSTRestoreDBInstanceToPointInTimeRequest) (*operations.POSTRestoreDBInstanceToPointInTimeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RestoreDBInstanceToPointInTime"
@@ -5844,6 +5957,7 @@ func (s *SDK) POSTRestoreDBInstanceToPointInTime(ctx context.Context, request op
 
 	return res, nil
 }
+
 func (s *SDK) POSTRevokeDBSecurityGroupIngress(ctx context.Context, request operations.POSTRevokeDBSecurityGroupIngressRequest) (*operations.POSTRevokeDBSecurityGroupIngressResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#Action=RevokeDBSecurityGroupIngress"

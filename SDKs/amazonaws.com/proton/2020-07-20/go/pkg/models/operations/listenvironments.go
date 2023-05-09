@@ -16,17 +16,21 @@ const (
 	ListEnvironmentsXAmzTargetEnumAwsProton20200720ListEnvironments ListEnvironmentsXAmzTargetEnum = "AwsProton20200720.ListEnvironments"
 )
 
+func (e ListEnvironmentsXAmzTargetEnum) ToPointer() *ListEnvironmentsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEnvironmentsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.ListEnvironments":
-		*e = ListEnvironmentsXAmzTargetEnum(s)
+		*e = ListEnvironmentsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEnvironmentsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEnvironmentsXAmzTargetEnum: %v", v)
 	}
 }
 

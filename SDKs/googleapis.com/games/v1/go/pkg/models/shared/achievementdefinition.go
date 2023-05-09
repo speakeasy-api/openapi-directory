@@ -16,21 +16,25 @@ const (
 	AchievementDefinitionAchievementTypeEnumIncremental                AchievementDefinitionAchievementTypeEnum = "INCREMENTAL"
 )
 
+func (e AchievementDefinitionAchievementTypeEnum) ToPointer() *AchievementDefinitionAchievementTypeEnum {
+	return &e
+}
+
 func (e *AchievementDefinitionAchievementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACHIEVEMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
 		fallthrough
 	case "INCREMENTAL":
-		*e = AchievementDefinitionAchievementTypeEnum(s)
+		*e = AchievementDefinitionAchievementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementDefinitionAchievementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementDefinitionAchievementTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	AchievementDefinitionInitialStateEnumUnlocked                           AchievementDefinitionInitialStateEnum = "UNLOCKED"
 )
 
+func (e AchievementDefinitionInitialStateEnum) ToPointer() *AchievementDefinitionInitialStateEnum {
+	return &e
+}
+
 func (e *AchievementDefinitionInitialStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIAL_ACHIEVEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "HIDDEN":
@@ -57,10 +65,10 @@ func (e *AchievementDefinitionInitialStateEnum) UnmarshalJSON(data []byte) error
 	case "REVEALED":
 		fallthrough
 	case "UNLOCKED":
-		*e = AchievementDefinitionInitialStateEnum(s)
+		*e = AchievementDefinitionInitialStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementDefinitionInitialStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementDefinitionInitialStateEnum: %v", v)
 	}
 }
 

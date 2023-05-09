@@ -16,21 +16,25 @@ const (
 	VideoSettingsOrientationEnumPortrait  VideoSettingsOrientationEnum = "PORTRAIT"
 )
 
+func (e VideoSettingsOrientationEnum) ToPointer() *VideoSettingsOrientationEnum {
+	return &e
+}
+
 func (e *VideoSettingsOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANY":
 		fallthrough
 	case "LANDSCAPE":
 		fallthrough
 	case "PORTRAIT":
-		*e = VideoSettingsOrientationEnum(s)
+		*e = VideoSettingsOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoSettingsOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoSettingsOrientationEnum: %v", v)
 	}
 }
 

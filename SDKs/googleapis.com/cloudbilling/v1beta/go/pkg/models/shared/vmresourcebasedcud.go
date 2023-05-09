@@ -16,21 +16,25 @@ const (
 	VMResourceBasedCudPlanEnumThirtySixMonth            VMResourceBasedCudPlanEnum = "THIRTY_SIX_MONTH"
 )
 
+func (e VMResourceBasedCudPlanEnum) ToPointer() *VMResourceBasedCudPlanEnum {
+	return &e
+}
+
 func (e *VMResourceBasedCudPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMITMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "TWELVE_MONTH":
 		fallthrough
 	case "THIRTY_SIX_MONTH":
-		*e = VMResourceBasedCudPlanEnum(s)
+		*e = VMResourceBasedCudPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VMResourceBasedCudPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for VMResourceBasedCudPlanEnum: %v", v)
 	}
 }
 

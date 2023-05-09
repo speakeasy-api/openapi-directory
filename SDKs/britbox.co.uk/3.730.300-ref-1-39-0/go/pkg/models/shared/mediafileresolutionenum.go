@@ -18,12 +18,16 @@ const (
 	MediaFileResolutionEnumExternal MediaFileResolutionEnum = "External"
 )
 
+func (e MediaFileResolutionEnum) ToPointer() *MediaFileResolutionEnum {
+	return &e
+}
+
 func (e *MediaFileResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HD-4K":
 		fallthrough
 	case "HD-1080":
@@ -33,9 +37,9 @@ func (e *MediaFileResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "SD":
 		fallthrough
 	case "External":
-		*e = MediaFileResolutionEnum(s)
+		*e = MediaFileResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFileResolutionEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	DirectoryStateEnumDeleted  DirectoryStateEnum = "DELETED"
 )
 
+func (e DirectoryStateEnum) ToPointer() *DirectoryStateEnum {
+	return &e
+}
+
 func (e *DirectoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DELETED":
-		*e = DirectoryStateEnum(s)
+		*e = DirectoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryStateEnum: %v", v)
 	}
 }

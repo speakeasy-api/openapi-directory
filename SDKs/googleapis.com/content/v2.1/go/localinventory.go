@@ -90,7 +90,10 @@ func (s *localinventory) ContentLocalinventoryCustombatch(ctx context.Context, r
 // ContentLocalinventoryInsert - Updates the local inventory of a product in your Merchant Center account.
 func (s *localinventory) ContentLocalinventoryInsert(ctx context.Context, request operations.ContentLocalinventoryInsertRequest, security operations.ContentLocalinventoryInsertSecurity) (*operations.ContentLocalinventoryInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/localinventory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/products/{productId}/localinventory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalInventory", "json")
 	if err != nil {

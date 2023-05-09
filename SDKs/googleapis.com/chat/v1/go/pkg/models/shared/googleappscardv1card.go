@@ -16,21 +16,25 @@ const (
 	GoogleAppsCardV1CardDisplayStyleEnumReplace                 GoogleAppsCardV1CardDisplayStyleEnum = "REPLACE"
 )
 
+func (e GoogleAppsCardV1CardDisplayStyleEnum) ToPointer() *GoogleAppsCardV1CardDisplayStyleEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1CardDisplayStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY_STYLE_UNSPECIFIED":
 		fallthrough
 	case "PEEK":
 		fallthrough
 	case "REPLACE":
-		*e = GoogleAppsCardV1CardDisplayStyleEnum(s)
+		*e = GoogleAppsCardV1CardDisplayStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1CardDisplayStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1CardDisplayStyleEnum: %v", v)
 	}
 }
 
@@ -40,7 +44,7 @@ type GoogleAppsCardV1Card struct {
 	CardActions []GoogleAppsCardV1CardAction `json:"cardActions,omitempty"`
 	// In Google Workspace add-ons, sets the display properties of the `peekCardHeader`. Not supported by Chat apps.
 	DisplayStyle *GoogleAppsCardV1CardDisplayStyleEnum `json:"displayStyle,omitempty"`
-	// A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Chat apps support `fixedFooter` in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not in [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
+	// A persistent (sticky) footer that that appears at the bottom of the card. Setting `fixedFooter` without specifying a `primaryButton` or a `secondaryButton` causes an error. Supported by Google Workspace Add-ons and Chat apps. For Chat apps, you can use fixed footers in [dialogs](https://developers.google.com/chat/how-tos/dialogs), but not [card messages](https://developers.google.com/chat/api/guides/message-formats/cards).
 	FixedFooter *GoogleAppsCardV1CardFixedFooter `json:"fixedFooter,omitempty"`
 	// Represents a card header.
 	Header *GoogleAppsCardV1CardHeader `json:"header,omitempty"`

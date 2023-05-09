@@ -34,7 +34,10 @@ func newWirelessHealth(defaultClient, securityClient HTTPClient, serverURL, lang
 // Aggregated connectivity info for a given client on this network. Clients are identified by their MAC.
 func (s *wirelessHealth) GetNetworkClientConnectionStats(ctx context.Context, request operations.GetNetworkClientConnectionStatsRequest) (*operations.GetNetworkClientConnectionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/connectionStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/connectionStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *wirelessHealth) GetNetworkClientConnectionStats(ctx context.Context, re
 // Aggregated latency info for a given client on this network. Clients are identified by their MAC.
 func (s *wirelessHealth) GetNetworkClientLatencyStats(ctx context.Context, request operations.GetNetworkClientLatencyStatsRequest) (*operations.GetNetworkClientLatencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/latencyStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/{clientId}/latencyStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +138,10 @@ func (s *wirelessHealth) GetNetworkClientLatencyStats(ctx context.Context, reque
 // Aggregated connectivity info for this network, grouped by clients
 func (s *wirelessHealth) GetNetworkClientsConnectionStats(ctx context.Context, request operations.GetNetworkClientsConnectionStatsRequest) (*operations.GetNetworkClientsConnectionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/connectionStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/connectionStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -181,7 +190,10 @@ func (s *wirelessHealth) GetNetworkClientsConnectionStats(ctx context.Context, r
 // Aggregated latency info for this network, grouped by clients
 func (s *wirelessHealth) GetNetworkClientsLatencyStats(ctx context.Context, request operations.GetNetworkClientsLatencyStatsRequest) (*operations.GetNetworkClientsLatencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/latencyStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/clients/latencyStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,7 +242,10 @@ func (s *wirelessHealth) GetNetworkClientsLatencyStats(ctx context.Context, requ
 // Aggregated connectivity info for this network
 func (s *wirelessHealth) GetNetworkConnectionStats(ctx context.Context, request operations.GetNetworkConnectionStatsRequest) (*operations.GetNetworkConnectionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/connectionStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/connectionStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *wirelessHealth) GetNetworkConnectionStats(ctx context.Context, request 
 // Aggregated connectivity info for a given AP on this network
 func (s *wirelessHealth) GetNetworkDeviceConnectionStats(ctx context.Context, request operations.GetNetworkDeviceConnectionStatsRequest) (*operations.GetNetworkDeviceConnectionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/connectionStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/connectionStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,7 +346,10 @@ func (s *wirelessHealth) GetNetworkDeviceConnectionStats(ctx context.Context, re
 // Aggregated latency info for a given AP on this network
 func (s *wirelessHealth) GetNetworkDeviceLatencyStats(ctx context.Context, request operations.GetNetworkDeviceLatencyStatsRequest) (*operations.GetNetworkDeviceLatencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/latencyStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/latencyStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +398,10 @@ func (s *wirelessHealth) GetNetworkDeviceLatencyStats(ctx context.Context, reque
 // Aggregated connectivity info for this network, grouped by node
 func (s *wirelessHealth) GetNetworkDevicesConnectionStats(ctx context.Context, request operations.GetNetworkDevicesConnectionStatsRequest) (*operations.GetNetworkDevicesConnectionStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/connectionStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/connectionStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -426,7 +450,10 @@ func (s *wirelessHealth) GetNetworkDevicesConnectionStats(ctx context.Context, r
 // Aggregated latency info for this network, grouped by node
 func (s *wirelessHealth) GetNetworkDevicesLatencyStats(ctx context.Context, request operations.GetNetworkDevicesLatencyStatsRequest) (*operations.GetNetworkDevicesLatencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/latencyStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/latencyStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -475,7 +502,10 @@ func (s *wirelessHealth) GetNetworkDevicesLatencyStats(ctx context.Context, requ
 // List of all failed client connection events on this network in a given time range
 func (s *wirelessHealth) GetNetworkFailedConnections(ctx context.Context, request operations.GetNetworkFailedConnectionsRequest) (*operations.GetNetworkFailedConnectionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/failedConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/failedConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -524,7 +554,10 @@ func (s *wirelessHealth) GetNetworkFailedConnections(ctx context.Context, reques
 // Aggregated latency info for this network
 func (s *wirelessHealth) GetNetworkLatencyStats(ctx context.Context, request operations.GetNetworkLatencyStatsRequest) (*operations.GetNetworkLatencyStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/latencyStats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/latencyStats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

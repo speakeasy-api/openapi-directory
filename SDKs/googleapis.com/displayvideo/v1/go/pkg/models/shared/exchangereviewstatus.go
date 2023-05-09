@@ -88,12 +88,16 @@ const (
 	ExchangeReviewStatusExchangeEnumExchangeHivestack         ExchangeReviewStatusExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
+func (e ExchangeReviewStatusExchangeEnum) ToPointer() *ExchangeReviewStatusExchangeEnum {
+	return &e
+}
+
 func (e *ExchangeReviewStatusExchangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCHANGE_UNSPECIFIED":
 		fallthrough
 	case "EXCHANGE_GOOGLE_AD_MANAGER":
@@ -243,10 +247,10 @@ func (e *ExchangeReviewStatusExchangeEnum) UnmarshalJSON(data []byte) error {
 	case "EXCHANGE_RESET_DIGITAL":
 		fallthrough
 	case "EXCHANGE_HIVESTACK":
-		*e = ExchangeReviewStatusExchangeEnum(s)
+		*e = ExchangeReviewStatusExchangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeReviewStatusExchangeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeReviewStatusExchangeEnum: %v", v)
 	}
 }
 
@@ -260,12 +264,16 @@ const (
 	ExchangeReviewStatusStatusEnumReviewStatusPending     ExchangeReviewStatusStatusEnum = "REVIEW_STATUS_PENDING"
 )
 
+func (e ExchangeReviewStatusStatusEnum) ToPointer() *ExchangeReviewStatusStatusEnum {
+	return &e
+}
+
 func (e *ExchangeReviewStatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATUS_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATUS_APPROVED":
@@ -273,10 +281,10 @@ func (e *ExchangeReviewStatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "REVIEW_STATUS_REJECTED":
 		fallthrough
 	case "REVIEW_STATUS_PENDING":
-		*e = ExchangeReviewStatusStatusEnum(s)
+		*e = ExchangeReviewStatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExchangeReviewStatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExchangeReviewStatusStatusEnum: %v", v)
 	}
 }
 

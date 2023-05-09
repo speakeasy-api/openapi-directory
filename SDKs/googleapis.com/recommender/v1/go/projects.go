@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RecommenderProjectsLocationsInsightTypesInsightsList - Lists insights for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified insight type.
 func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsList(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsListRequest, security operations.RecommenderProjectsLocationsInsightTypesInsightsListSecurity) (*operations.RecommenderProjectsLocationsInsightTypesInsightsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/insights", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/insights", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsList(ctx cont
 // RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted - Marks the Insight State as Accepted. Users can use this method to indicate to the Recommender API that they have applied some action based on the insight. This stops the insight content from being updated. MarkInsightAccepted can be applied to insights in ACTIVE state. Requires the recommender.*.update IAM permission for the specified insight.
 func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(ctx context.Context, request operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedRequest, security operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedSecurity) (*operations.RecommenderProjectsLocationsInsightTypesInsightsMarkAcceptedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markAccepted", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markAccepted", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1MarkInsightAcceptedRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) RecommenderProjectsLocationsInsightTypesInsightsMarkAccepted(
 // RecommenderProjectsLocationsRecommendersRecommendationsGet - Gets the requested recommendation. Requires the recommender.*.get IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsGet(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsGetRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsGetSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsGet(ct
 // RecommenderProjectsLocationsRecommendersRecommendationsList - Lists recommendations for the specified Cloud Resource. Requires the recommender.*.list IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsList(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsListRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsListSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/recommendations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/recommendations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsList(c
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimed - Marks the Recommendation State as Claimed. Users can use this method to indicate to the Recommender API that they are starting to apply the recommendation themselves. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationClaimed can be applied to recommendations in CLAIMED, SUCCEEDED, FAILED, or ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkClaimedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markClaimed", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markClaimed", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1MarkRecommendationClaimedRequest", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkCl
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed - Mark the Recommendation State as Dismissed. Users can use this method to indicate to the Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED. MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markDismissed", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markDismissed", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1MarkRecommendationDismissedRequest", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDi
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed - Marks the Recommendation State as Failed. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation failed. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markFailed", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markFailed", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1MarkRecommendationFailedRequest", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFa
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded - Marks the Recommendation State as Succeeded. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation was successful. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationSucceeded can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
 func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceeded(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededRequest, security operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededSecurity) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkSucceededResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markSucceeded", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markSucceeded", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1MarkRecommendationSucceededRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkSu
 // RecommenderProjectsLocationsRecommendersUpdateConfig - Updates a Recommender Config. This will create a new revision of the config.
 func (s *projects) RecommenderProjectsLocationsRecommendersUpdateConfig(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersUpdateConfigRequest, security operations.RecommenderProjectsLocationsRecommendersUpdateConfigSecurity) (*operations.RecommenderProjectsLocationsRecommendersUpdateConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudRecommenderV1RecommenderConfigInput", "json")
 	if err != nil {

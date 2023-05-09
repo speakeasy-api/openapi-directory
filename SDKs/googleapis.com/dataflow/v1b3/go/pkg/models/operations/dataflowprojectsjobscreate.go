@@ -46,12 +46,16 @@ const (
 	DataflowProjectsJobsCreateViewEnumJobViewDescription DataflowProjectsJobsCreateViewEnum = "JOB_VIEW_DESCRIPTION"
 )
 
+func (e DataflowProjectsJobsCreateViewEnum) ToPointer() *DataflowProjectsJobsCreateViewEnum {
+	return &e
+}
+
 func (e *DataflowProjectsJobsCreateViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_VIEW_UNKNOWN":
 		fallthrough
 	case "JOB_VIEW_SUMMARY":
@@ -59,10 +63,10 @@ func (e *DataflowProjectsJobsCreateViewEnum) UnmarshalJSON(data []byte) error {
 	case "JOB_VIEW_ALL":
 		fallthrough
 	case "JOB_VIEW_DESCRIPTION":
-		*e = DataflowProjectsJobsCreateViewEnum(s)
+		*e = DataflowProjectsJobsCreateViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsJobsCreateViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsJobsCreateViewEnum: %v", v)
 	}
 }
 

@@ -30,12 +30,16 @@ const (
 	PlaceholderTypeEnumSlideImage    PlaceholderTypeEnum = "SLIDE_IMAGE"
 )
 
+func (e PlaceholderTypeEnum) ToPointer() *PlaceholderTypeEnum {
+	return &e
+}
+
 func (e *PlaceholderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "BODY":
@@ -69,10 +73,10 @@ func (e *PlaceholderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TITLE":
 		fallthrough
 	case "SLIDE_IMAGE":
-		*e = PlaceholderTypeEnum(s)
+		*e = PlaceholderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaceholderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaceholderTypeEnum: %v", v)
 	}
 }
 

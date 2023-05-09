@@ -18,12 +18,16 @@ const (
 	RegisterImageRequestArchitectureEnumArm64Mac RegisterImageRequestArchitectureEnum = "arm64_mac"
 )
 
+func (e RegisterImageRequestArchitectureEnum) ToPointer() *RegisterImageRequestArchitectureEnum {
+	return &e
+}
+
 func (e *RegisterImageRequestArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -33,10 +37,10 @@ func (e *RegisterImageRequestArchitectureEnum) UnmarshalJSON(data []byte) error 
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = RegisterImageRequestArchitectureEnum(s)
+		*e = RegisterImageRequestArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterImageRequestArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterImageRequestArchitectureEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnumGp3      RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -72,10 +80,10 @@ func (e *RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterImageRequestBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	PullRequestStatusEnumEnumClosed PullRequestStatusEnumEnum = "CLOSED"
 )
 
+func (e PullRequestStatusEnumEnum) ToPointer() *PullRequestStatusEnumEnum {
+	return &e
+}
+
 func (e *PullRequestStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "CLOSED":
-		*e = PullRequestStatusEnumEnum(s)
+		*e = PullRequestStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PullRequestStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for PullRequestStatusEnumEnum: %v", v)
 	}
 }

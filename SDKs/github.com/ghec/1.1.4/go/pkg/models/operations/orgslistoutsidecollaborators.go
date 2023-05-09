@@ -17,19 +17,23 @@ const (
 	OrgsListOutsideCollaboratorsFilterEnumAll           OrgsListOutsideCollaboratorsFilterEnum = "all"
 )
 
+func (e OrgsListOutsideCollaboratorsFilterEnum) ToPointer() *OrgsListOutsideCollaboratorsFilterEnum {
+	return &e
+}
+
 func (e *OrgsListOutsideCollaboratorsFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2fa_disabled":
 		fallthrough
 	case "all":
-		*e = OrgsListOutsideCollaboratorsFilterEnum(s)
+		*e = OrgsListOutsideCollaboratorsFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListOutsideCollaboratorsFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListOutsideCollaboratorsFilterEnum: %v", v)
 	}
 }
 

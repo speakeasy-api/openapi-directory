@@ -22,12 +22,16 @@ const (
 	RecognitionConfigEncodingEnumWebmOpus            RecognitionConfigEncodingEnum = "WEBM_OPUS"
 )
 
+func (e RecognitionConfigEncodingEnum) ToPointer() *RecognitionConfigEncodingEnum {
+	return &e
+}
+
 func (e *RecognitionConfigEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCODING_UNSPECIFIED":
 		fallthrough
 	case "LINEAR16":
@@ -45,17 +49,17 @@ func (e *RecognitionConfigEncodingEnum) UnmarshalJSON(data []byte) error {
 	case "SPEEX_WITH_HEADER_BYTE":
 		fallthrough
 	case "WEBM_OPUS":
-		*e = RecognitionConfigEncodingEnum(s)
+		*e = RecognitionConfigEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecognitionConfigEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for RecognitionConfigEncodingEnum: %v", v)
 	}
 }
 
 // RecognitionConfigInput - Provides information to the recognizer that specifies how to process the request.
 type RecognitionConfigInput struct {
 	// Speech adaptation configuration.
-	Adaptation *SpeechAdaptation `json:"adaptation,omitempty"`
+	Adaptation *SpeechAdaptationInput `json:"adaptation,omitempty"`
 	// A list of up to 3 additional [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tags, listing possible alternative languages of the supplied audio. See [Language Support](https://cloud.google.com/speech-to-text/docs/languages) for a list of the currently supported language codes. If alternative languages are listed, recognition result will contain recognition in the most likely language detected including the main language_code. The recognition result will include the language tag of the language detected in the audio. Note: This feature is only supported for Voice Command and Voice Search use cases and performance may vary for other use cases (e.g., phone call transcription).
 	AlternativeLanguageCodes []string `json:"alternativeLanguageCodes,omitempty"`
 	// The number of channels in the input audio data. ONLY set this for MULTI-CHANNEL recognition. Valid values for LINEAR16, OGG_OPUS and FLAC are `1`-`8`. Valid value for MULAW, AMR, AMR_WB and SPEEX_WITH_HEADER_BYTE is only `1`. If `0` or omitted, defaults to one channel (mono). Note: We only recognize the first channel by default. To perform independent recognition on each channel set `enable_separate_recognition_per_channel` to 'true'.

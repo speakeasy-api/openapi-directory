@@ -17,19 +17,23 @@ const (
 	CreateWorkspaceRequestBodyAccountAccessTypeEnumOrganization   CreateWorkspaceRequestBodyAccountAccessTypeEnum = "ORGANIZATION"
 )
 
+func (e CreateWorkspaceRequestBodyAccountAccessTypeEnum) ToPointer() *CreateWorkspaceRequestBodyAccountAccessTypeEnum {
+	return &e
+}
+
 func (e *CreateWorkspaceRequestBodyAccountAccessTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURRENT_ACCOUNT":
 		fallthrough
 	case "ORGANIZATION":
-		*e = CreateWorkspaceRequestBodyAccountAccessTypeEnum(s)
+		*e = CreateWorkspaceRequestBodyAccountAccessTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkspaceRequestBodyAccountAccessTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkspaceRequestBodyAccountAccessTypeEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	CreateWorkspaceRequestBodyPermissionTypeEnumServiceManaged  CreateWorkspaceRequestBodyPermissionTypeEnum = "SERVICE_MANAGED"
 )
 
+func (e CreateWorkspaceRequestBodyPermissionTypeEnum) ToPointer() *CreateWorkspaceRequestBodyPermissionTypeEnum {
+	return &e
+}
+
 func (e *CreateWorkspaceRequestBodyPermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOMER_MANAGED":
 		fallthrough
 	case "SERVICE_MANAGED":
-		*e = CreateWorkspaceRequestBodyPermissionTypeEnum(s)
+		*e = CreateWorkspaceRequestBodyPermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateWorkspaceRequestBodyPermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateWorkspaceRequestBodyPermissionTypeEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	AwsVMDetailsArchitectureEnumX8664Mac                  AwsVMDetailsArchitectureEnum = "X86_64_MAC"
 )
 
+func (e AwsVMDetailsArchitectureEnum) ToPointer() *AwsVMDetailsArchitectureEnum {
+	return &e
+}
+
 func (e *AwsVMDetailsArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VM_ARCHITECTURE_UNSPECIFIED":
 		fallthrough
 	case "I386":
@@ -33,10 +37,10 @@ func (e *AwsVMDetailsArchitectureEnum) UnmarshalJSON(data []byte) error {
 	case "ARM64":
 		fallthrough
 	case "X86_64_MAC":
-		*e = AwsVMDetailsArchitectureEnum(s)
+		*e = AwsVMDetailsArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsVMDetailsArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsVMDetailsArchitectureEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	AwsVMDetailsBootOptionEnumBios                  AwsVMDetailsBootOptionEnum = "BIOS"
 )
 
+func (e AwsVMDetailsBootOptionEnum) ToPointer() *AwsVMDetailsBootOptionEnum {
+	return &e
+}
+
 func (e *AwsVMDetailsBootOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOT_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EFI":
 		fallthrough
 	case "BIOS":
-		*e = AwsVMDetailsBootOptionEnum(s)
+		*e = AwsVMDetailsBootOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsVMDetailsBootOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsVMDetailsBootOptionEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	AwsVMDetailsPowerStateEnumPending               AwsVMDetailsPowerStateEnum = "PENDING"
 )
 
+func (e AwsVMDetailsPowerStateEnum) ToPointer() *AwsVMDetailsPowerStateEnum {
+	return &e
+}
+
 func (e *AwsVMDetailsPowerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_STATE_UNSPECIFIED":
 		fallthrough
 	case "ON":
@@ -93,10 +105,10 @@ func (e *AwsVMDetailsPowerStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUSPENDED":
 		fallthrough
 	case "PENDING":
-		*e = AwsVMDetailsPowerStateEnum(s)
+		*e = AwsVMDetailsPowerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsVMDetailsPowerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsVMDetailsPowerStateEnum: %v", v)
 	}
 }
 
@@ -109,21 +121,25 @@ const (
 	AwsVMDetailsVirtualizationTypeEnumParavirtual                     AwsVMDetailsVirtualizationTypeEnum = "PARAVIRTUAL"
 )
 
+func (e AwsVMDetailsVirtualizationTypeEnum) ToPointer() *AwsVMDetailsVirtualizationTypeEnum {
+	return &e
+}
+
 func (e *AwsVMDetailsVirtualizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VM_VIRTUALIZATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HVM":
 		fallthrough
 	case "PARAVIRTUAL":
-		*e = AwsVMDetailsVirtualizationTypeEnum(s)
+		*e = AwsVMDetailsVirtualizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsVMDetailsVirtualizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsVMDetailsVirtualizationTypeEnum: %v", v)
 	}
 }
 

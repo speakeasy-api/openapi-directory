@@ -36,7 +36,10 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 // Returns all categories grouped by category group.  Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).
 func (s *categories) GetCategories(ctx context.Context, request operations.GetCategoriesRequest) (*operations.GetCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *categories) GetCategories(ctx context.Context, request operations.GetCa
 // Returns a single category.  Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).
 func (s *categories) GetCategoryByID(ctx context.Context, request operations.GetCategoryByIDRequest) (*operations.GetCategoryByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories/{category_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/categories/{category_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +160,10 @@ func (s *categories) GetCategoryByID(ctx context.Context, request operations.Get
 // Returns a single category for a specific budget month.  Amounts (budgeted, activity, balance, etc.) are specific to the current budget month (UTC).
 func (s *categories) GetMonthCategoryByID(ctx context.Context, request operations.GetMonthCategoryByIDRequest) (*operations.GetMonthCategoryByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -211,7 +220,10 @@ func (s *categories) GetMonthCategoryByID(ctx context.Context, request operation
 // Update a category for a specific month.  Only `budgeted` amount can be updated.
 func (s *categories) UpdateMonthCategory(ctx context.Context, request operations.UpdateMonthCategoryRequest) (*operations.UpdateMonthCategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PatchMonthCategoryWrapper", "json")
 	if err != nil {

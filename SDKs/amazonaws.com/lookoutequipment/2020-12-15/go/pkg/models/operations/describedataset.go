@@ -16,17 +16,21 @@ const (
 	DescribeDatasetXAmzTargetEnumAwsLookoutEquipmentFrontendServiceDescribeDataset DescribeDatasetXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.DescribeDataset"
 )
 
+func (e DescribeDatasetXAmzTargetEnum) ToPointer() *DescribeDatasetXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDatasetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.DescribeDataset":
-		*e = DescribeDatasetXAmzTargetEnum(s)
+		*e = DescribeDatasetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDatasetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDatasetXAmzTargetEnum: %v", v)
 	}
 }
 

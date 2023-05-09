@@ -19,12 +19,16 @@ const (
 	CLMLanguageCodeEnumJaJp CLMLanguageCodeEnum = "ja-JP"
 )
 
+func (e CLMLanguageCodeEnum) ToPointer() *CLMLanguageCodeEnum {
+	return &e
+}
+
 func (e *CLMLanguageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en-US":
 		fallthrough
 	case "hi-IN":
@@ -38,9 +42,9 @@ func (e *CLMLanguageCodeEnum) UnmarshalJSON(data []byte) error {
 	case "de-DE":
 		fallthrough
 	case "ja-JP":
-		*e = CLMLanguageCodeEnum(s)
+		*e = CLMLanguageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CLMLanguageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CLMLanguageCodeEnum: %v", v)
 	}
 }

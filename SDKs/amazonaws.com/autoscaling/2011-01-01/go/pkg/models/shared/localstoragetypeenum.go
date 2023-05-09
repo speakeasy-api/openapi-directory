@@ -14,18 +14,22 @@ const (
 	LocalStorageTypeEnumSsd LocalStorageTypeEnum = "ssd"
 )
 
+func (e LocalStorageTypeEnum) ToPointer() *LocalStorageTypeEnum {
+	return &e
+}
+
 func (e *LocalStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = LocalStorageTypeEnum(s)
+		*e = LocalStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocalStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocalStorageTypeEnum: %v", v)
 	}
 }

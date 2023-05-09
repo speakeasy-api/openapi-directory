@@ -16,17 +16,21 @@ const (
 	TerminateProvisionedProductXAmzTargetEnumAws242ServiceCatalogServiceTerminateProvisionedProduct TerminateProvisionedProductXAmzTargetEnum = "AWS242ServiceCatalogService.TerminateProvisionedProduct"
 )
 
+func (e TerminateProvisionedProductXAmzTargetEnum) ToPointer() *TerminateProvisionedProductXAmzTargetEnum {
+	return &e
+}
+
 func (e *TerminateProvisionedProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.TerminateProvisionedProduct":
-		*e = TerminateProvisionedProductXAmzTargetEnum(s)
+		*e = TerminateProvisionedProductXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateProvisionedProductXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateProvisionedProductXAmzTargetEnum: %v", v)
 	}
 }
 

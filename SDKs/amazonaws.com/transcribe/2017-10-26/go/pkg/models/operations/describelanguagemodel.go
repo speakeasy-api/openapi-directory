@@ -16,17 +16,21 @@ const (
 	DescribeLanguageModelXAmzTargetEnumTranscribeDescribeLanguageModel DescribeLanguageModelXAmzTargetEnum = "Transcribe.DescribeLanguageModel"
 )
 
+func (e DescribeLanguageModelXAmzTargetEnum) ToPointer() *DescribeLanguageModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeLanguageModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.DescribeLanguageModel":
-		*e = DescribeLanguageModelXAmzTargetEnum(s)
+		*e = DescribeLanguageModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeLanguageModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeLanguageModelXAmzTargetEnum: %v", v)
 	}
 }
 

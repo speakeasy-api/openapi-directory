@@ -13,6 +13,8 @@ type JWTObtainResponse struct {
 	JWTObtain401ApplicationJSONObject map[string]interface{}
 	// IP Access denied
 	JWTObtain403ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	JWTObtain429ApplicationJSONObject map[string]interface{}
 	// Obtain JWT response.
 	SpectacularJWTObtain *shared.SpectacularJWTObtain
 	StatusCode           int

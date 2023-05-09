@@ -15,17 +15,21 @@ const (
 	GETStartExportTaskActionEnumStartExportTask GETStartExportTaskActionEnum = "StartExportTask"
 )
 
+func (e GETStartExportTaskActionEnum) ToPointer() *GETStartExportTaskActionEnum {
+	return &e
+}
+
 func (e *GETStartExportTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartExportTask":
-		*e = GETStartExportTaskActionEnum(s)
+		*e = GETStartExportTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartExportTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartExportTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStartExportTaskVersionEnumTwoThousandAndFourteen1031 GETStartExportTaskVersionEnum = "2014-10-31"
 )
 
+func (e GETStartExportTaskVersionEnum) ToPointer() *GETStartExportTaskVersionEnum {
+	return &e
+}
+
 func (e *GETStartExportTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStartExportTaskVersionEnum(s)
+		*e = GETStartExportTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartExportTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartExportTaskVersionEnum: %v", v)
 	}
 }
 

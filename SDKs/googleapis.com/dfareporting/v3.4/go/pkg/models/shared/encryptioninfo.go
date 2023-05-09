@@ -20,12 +20,16 @@ const (
 	EncryptionInfoEncryptionEntityTypeEnumDfpNetworkCode              EncryptionInfoEncryptionEntityTypeEnum = "DFP_NETWORK_CODE"
 )
 
+func (e EncryptionInfoEncryptionEntityTypeEnum) ToPointer() *EncryptionInfoEncryptionEntityTypeEnum {
+	return &e
+}
+
 func (e *EncryptionInfoEncryptionEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_ENTITY_TYPE_UNKNOWN":
 		fallthrough
 	case "DCM_ACCOUNT":
@@ -39,10 +43,10 @@ func (e *EncryptionInfoEncryptionEntityTypeEnum) UnmarshalJSON(data []byte) erro
 	case "ADWORDS_CUSTOMER":
 		fallthrough
 	case "DFP_NETWORK_CODE":
-		*e = EncryptionInfoEncryptionEntityTypeEnum(s)
+		*e = EncryptionInfoEncryptionEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionInfoEncryptionEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionInfoEncryptionEntityTypeEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	EncryptionInfoEncryptionSourceEnumDataTransfer           EncryptionInfoEncryptionSourceEnum = "DATA_TRANSFER"
 )
 
+func (e EncryptionInfoEncryptionSourceEnum) ToPointer() *EncryptionInfoEncryptionSourceEnum {
+	return &e
+}
+
 func (e *EncryptionInfoEncryptionSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_SCOPE_UNKNOWN":
 		fallthrough
 	case "AD_SERVING":
 		fallthrough
 	case "DATA_TRANSFER":
-		*e = EncryptionInfoEncryptionSourceEnum(s)
+		*e = EncryptionInfoEncryptionSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionInfoEncryptionSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionInfoEncryptionSourceEnum: %v", v)
 	}
 }
 

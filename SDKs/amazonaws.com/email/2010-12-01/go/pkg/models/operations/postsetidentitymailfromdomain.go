@@ -15,17 +15,21 @@ const (
 	POSTSetIdentityMailFromDomainActionEnumSetIdentityMailFromDomain POSTSetIdentityMailFromDomainActionEnum = "SetIdentityMailFromDomain"
 )
 
+func (e POSTSetIdentityMailFromDomainActionEnum) ToPointer() *POSTSetIdentityMailFromDomainActionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityMailFromDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityMailFromDomain":
-		*e = POSTSetIdentityMailFromDomainActionEnum(s)
+		*e = POSTSetIdentityMailFromDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityMailFromDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityMailFromDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetIdentityMailFromDomainVersionEnumTwoThousandAndTen1201 POSTSetIdentityMailFromDomainVersionEnum = "2010-12-01"
 )
 
+func (e POSTSetIdentityMailFromDomainVersionEnum) ToPointer() *POSTSetIdentityMailFromDomainVersionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityMailFromDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSetIdentityMailFromDomainVersionEnum(s)
+		*e = POSTSetIdentityMailFromDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityMailFromDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityMailFromDomainVersionEnum: %v", v)
 	}
 }
 

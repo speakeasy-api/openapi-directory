@@ -15,17 +15,21 @@ const (
 	GETGenerateOrganizationsAccessReportActionEnumGenerateOrganizationsAccessReport GETGenerateOrganizationsAccessReportActionEnum = "GenerateOrganizationsAccessReport"
 )
 
+func (e GETGenerateOrganizationsAccessReportActionEnum) ToPointer() *GETGenerateOrganizationsAccessReportActionEnum {
+	return &e
+}
+
 func (e *GETGenerateOrganizationsAccessReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GenerateOrganizationsAccessReport":
-		*e = GETGenerateOrganizationsAccessReportActionEnum(s)
+		*e = GETGenerateOrganizationsAccessReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGenerateOrganizationsAccessReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGenerateOrganizationsAccessReportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGenerateOrganizationsAccessReportVersionEnumTwoThousandAndTen0508 GETGenerateOrganizationsAccessReportVersionEnum = "2010-05-08"
 )
 
+func (e GETGenerateOrganizationsAccessReportVersionEnum) ToPointer() *GETGenerateOrganizationsAccessReportVersionEnum {
+	return &e
+}
+
 func (e *GETGenerateOrganizationsAccessReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGenerateOrganizationsAccessReportVersionEnum(s)
+		*e = GETGenerateOrganizationsAccessReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGenerateOrganizationsAccessReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGenerateOrganizationsAccessReportVersionEnum: %v", v)
 	}
 }
 

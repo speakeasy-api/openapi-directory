@@ -37,12 +37,16 @@ const (
 	CreateArtifactXRegistryArtifactTypeEnumXML        CreateArtifactXRegistryArtifactTypeEnum = "XML"
 )
 
+func (e CreateArtifactXRegistryArtifactTypeEnum) ToPointer() *CreateArtifactXRegistryArtifactTypeEnum {
+	return &e
+}
+
 func (e *CreateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVRO":
 		fallthrough
 	case "PROTOBUF":
@@ -64,10 +68,10 @@ func (e *CreateArtifactXRegistryArtifactTypeEnum) UnmarshalJSON(data []byte) err
 	case "XSD":
 		fallthrough
 	case "XML":
-		*e = CreateArtifactXRegistryArtifactTypeEnum(s)
+		*e = CreateArtifactXRegistryArtifactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateArtifactXRegistryArtifactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateArtifactXRegistryArtifactTypeEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	CreateArtifactIfExistsEnumReturnOrUpdate CreateArtifactIfExistsEnum = "RETURN_OR_UPDATE"
 )
 
+func (e CreateArtifactIfExistsEnum) ToPointer() *CreateArtifactIfExistsEnum {
+	return &e
+}
+
 func (e *CreateArtifactIfExistsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAIL":
 		fallthrough
 	case "UPDATE":
@@ -94,10 +102,10 @@ func (e *CreateArtifactIfExistsEnum) UnmarshalJSON(data []byte) error {
 	case "RETURN":
 		fallthrough
 	case "RETURN_OR_UPDATE":
-		*e = CreateArtifactIfExistsEnum(s)
+		*e = CreateArtifactIfExistsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateArtifactIfExistsEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateArtifactIfExistsEnum: %v", v)
 	}
 }
 

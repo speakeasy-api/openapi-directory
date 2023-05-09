@@ -16,17 +16,21 @@ const (
 	ResolveCaseXAmzTargetEnumAwsSupport20130415ResolveCase ResolveCaseXAmzTargetEnum = "AWSSupport_20130415.ResolveCase"
 )
 
+func (e ResolveCaseXAmzTargetEnum) ToPointer() *ResolveCaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResolveCaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.ResolveCase":
-		*e = ResolveCaseXAmzTargetEnum(s)
+		*e = ResolveCaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolveCaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolveCaseXAmzTargetEnum: %v", v)
 	}
 }
 

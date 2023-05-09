@@ -29,12 +29,16 @@ const (
 	DevicesDeviceDetails404ApplicationJSONCodeEnumTooManyRequests     DevicesDeviceDetails404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesDeviceDetails404ApplicationJSONCodeEnum) ToPointer() *DevicesDeviceDetails404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesDeviceDetails404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *DevicesDeviceDetails404ApplicationJSONCodeEnum) UnmarshalJSON(data []by
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesDeviceDetails404ApplicationJSONCodeEnum(s)
+		*e = DevicesDeviceDetails404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesDeviceDetails404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesDeviceDetails404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	DevicesDeviceDetails403ApplicationJSONCodeEnumTooManyRequests     DevicesDeviceDetails403ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesDeviceDetails403ApplicationJSONCodeEnum) ToPointer() *DevicesDeviceDetails403ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesDeviceDetails403ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -92,10 +100,10 @@ func (e *DevicesDeviceDetails403ApplicationJSONCodeEnum) UnmarshalJSON(data []by
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesDeviceDetails403ApplicationJSONCodeEnum(s)
+		*e = DevicesDeviceDetails403ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesDeviceDetails403ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesDeviceDetails403ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -117,12 +125,16 @@ const (
 	DevicesDeviceDetails400ApplicationJSONCodeEnumTooManyRequests     DevicesDeviceDetails400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e DevicesDeviceDetails400ApplicationJSONCodeEnum) ToPointer() *DevicesDeviceDetails400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *DevicesDeviceDetails400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -136,10 +148,10 @@ func (e *DevicesDeviceDetails400ApplicationJSONCodeEnum) UnmarshalJSON(data []by
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DevicesDeviceDetails400ApplicationJSONCodeEnum(s)
+		*e = DevicesDeviceDetails400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicesDeviceDetails400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicesDeviceDetails400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

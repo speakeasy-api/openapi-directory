@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,24 +17,22 @@ func main() {
         }),
     )
 
-    req := operations.AssociateEntityToThingRequest{
+    ctx := context.Background()
+    res, err := s.AssociateEntityToThing(ctx, operations.AssociateEntityToThingRequest{
         AssociateEntityToThingRequest: shared.AssociateEntityToThingRequest{
             EntityID: "corrupti",
-            NamespaceVersion: 592845,
+            NamespaceVersion: sdk.Int64(592845),
             ThingName: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
-        XAmzTarget: "IotThingsGraphFrontEndService.AssociateEntityToThing",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateEntityToThing(ctx, req)
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
+        XAmzTarget: operations.AssociateEntityToThingXAmzTargetEnumIotThingsGraphFrontEndServiceAssociateEntityToThing,
+    })
     if err != nil {
         log.Fatal(err)
     }

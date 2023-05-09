@@ -16,17 +16,21 @@ const (
 	ChangePasswordXAmzTargetEnumAwsCognitoIdentityProviderServiceChangePassword ChangePasswordXAmzTargetEnum = "AWSCognitoIdentityProviderService.ChangePassword"
 )
 
+func (e ChangePasswordXAmzTargetEnum) ToPointer() *ChangePasswordXAmzTargetEnum {
+	return &e
+}
+
 func (e *ChangePasswordXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.ChangePassword":
-		*e = ChangePasswordXAmzTargetEnum(s)
+		*e = ChangePasswordXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangePasswordXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangePasswordXAmzTargetEnum: %v", v)
 	}
 }
 

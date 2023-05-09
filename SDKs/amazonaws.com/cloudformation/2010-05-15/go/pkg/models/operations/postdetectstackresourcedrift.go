@@ -15,17 +15,21 @@ const (
 	POSTDetectStackResourceDriftActionEnumDetectStackResourceDrift POSTDetectStackResourceDriftActionEnum = "DetectStackResourceDrift"
 )
 
+func (e POSTDetectStackResourceDriftActionEnum) ToPointer() *POSTDetectStackResourceDriftActionEnum {
+	return &e
+}
+
 func (e *POSTDetectStackResourceDriftActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetectStackResourceDrift":
-		*e = POSTDetectStackResourceDriftActionEnum(s)
+		*e = POSTDetectStackResourceDriftActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetectStackResourceDriftActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetectStackResourceDriftActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDetectStackResourceDriftVersionEnumTwoThousandAndTen0515 POSTDetectStackResourceDriftVersionEnum = "2010-05-15"
 )
 
+func (e POSTDetectStackResourceDriftVersionEnum) ToPointer() *POSTDetectStackResourceDriftVersionEnum {
+	return &e
+}
+
 func (e *POSTDetectStackResourceDriftVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTDetectStackResourceDriftVersionEnum(s)
+		*e = POSTDetectStackResourceDriftVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDetectStackResourceDriftVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDetectStackResourceDriftVersionEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ManagedCredentialsActionEnumDisable ManagedCredentialsActionEnum = "DISABLE"
 )
 
+func (e ManagedCredentialsActionEnum) ToPointer() *ManagedCredentialsActionEnum {
+	return &e
+}
+
 func (e *ManagedCredentialsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = ManagedCredentialsActionEnum(s)
+		*e = ManagedCredentialsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedCredentialsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedCredentialsActionEnum: %v", v)
 	}
 }

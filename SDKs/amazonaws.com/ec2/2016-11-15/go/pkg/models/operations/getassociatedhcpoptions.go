@@ -15,17 +15,21 @@ const (
 	GETAssociateDhcpOptionsActionEnumAssociateDhcpOptions GETAssociateDhcpOptionsActionEnum = "AssociateDhcpOptions"
 )
 
+func (e GETAssociateDhcpOptionsActionEnum) ToPointer() *GETAssociateDhcpOptionsActionEnum {
+	return &e
+}
+
 func (e *GETAssociateDhcpOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateDhcpOptions":
-		*e = GETAssociateDhcpOptionsActionEnum(s)
+		*e = GETAssociateDhcpOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateDhcpOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateDhcpOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssociateDhcpOptionsVersionEnumTwoThousandAndSixteen1115 GETAssociateDhcpOptionsVersionEnum = "2016-11-15"
 )
 
+func (e GETAssociateDhcpOptionsVersionEnum) ToPointer() *GETAssociateDhcpOptionsVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateDhcpOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAssociateDhcpOptionsVersionEnum(s)
+		*e = GETAssociateDhcpOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateDhcpOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateDhcpOptionsVersionEnum: %v", v)
 	}
 }
 

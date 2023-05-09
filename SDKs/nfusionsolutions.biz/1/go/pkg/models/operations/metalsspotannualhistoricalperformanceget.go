@@ -17,19 +17,23 @@ const (
 	MetalsSpotAnnualHistoricalPerformanceGETFormatEnumXML  MetalsSpotAnnualHistoricalPerformanceGETFormatEnum = "xml"
 )
 
+func (e MetalsSpotAnnualHistoricalPerformanceGETFormatEnum) ToPointer() *MetalsSpotAnnualHistoricalPerformanceGETFormatEnum {
+	return &e
+}
+
 func (e *MetalsSpotAnnualHistoricalPerformanceGETFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = MetalsSpotAnnualHistoricalPerformanceGETFormatEnum(s)
+		*e = MetalsSpotAnnualHistoricalPerformanceGETFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsSpotAnnualHistoricalPerformanceGETFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsSpotAnnualHistoricalPerformanceGETFormatEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnumDwt MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum = "dwt"
 )
 
+func (e MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum) ToPointer() *MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum {
+	return &e
+}
+
 func (e *MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mg":
 		fallthrough
 	case "g":
@@ -76,10 +84,10 @@ func (e *MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum) UnmarshalJSO
 	case "ct":
 		fallthrough
 	case "dwt":
-		*e = MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum(s)
+		*e = MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum: %s", s)
+		return fmt.Errorf("invalid value for MetalsSpotAnnualHistoricalPerformanceGETUnitofmeasureEnum: %v", v)
 	}
 }
 

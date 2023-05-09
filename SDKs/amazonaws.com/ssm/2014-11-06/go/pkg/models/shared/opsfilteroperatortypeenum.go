@@ -18,12 +18,16 @@ const (
 	OpsFilterOperatorTypeEnumExists      OpsFilterOperatorTypeEnum = "Exists"
 )
 
+func (e OpsFilterOperatorTypeEnum) ToPointer() *OpsFilterOperatorTypeEnum {
+	return &e
+}
+
 func (e *OpsFilterOperatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Equal":
 		fallthrough
 	case "NotEqual":
@@ -35,9 +39,9 @@ func (e *OpsFilterOperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GreaterThan":
 		fallthrough
 	case "Exists":
-		*e = OpsFilterOperatorTypeEnum(s)
+		*e = OpsFilterOperatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpsFilterOperatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OpsFilterOperatorTypeEnum: %v", v)
 	}
 }

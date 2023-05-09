@@ -94,7 +94,10 @@ func (s *authConfig) CreateGlobalAuthModule(ctx context.Context, request operati
 // Delete one global auth. module config
 func (s *authConfig) DeleteGlobalAuthModule(ctx context.Context, request operations.DeleteGlobalAuthModuleRequest, security operations.DeleteGlobalAuthModuleSecurity) (*operations.DeleteGlobalAuthModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +145,7 @@ func (s *authConfig) DeleteGlobalAuthModule(ctx context.Context, request operati
 
 // FindAllGlobalAuthModules - Get all global auth. module configs
 // Get all global auth. module configs
-func (s *authConfig) FindAllGlobalAuthModules(ctx context.Context) (*operations.FindAllGlobalAuthModulesResponse, error) {
+func (s *authConfig) FindAllGlobalAuthModules(ctx context.Context, security operations.FindAllGlobalAuthModulesSecurity) (*operations.FindAllGlobalAuthModulesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/auths"
 
@@ -151,7 +154,7 @@ func (s *authConfig) FindAllGlobalAuthModules(ctx context.Context) (*operations.
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *authConfig) FindAllGlobalAuthModules(ctx context.Context) (*operations.
 // Get one global auth. module configs
 func (s *authConfig) FindGlobalAuthModuleByID(ctx context.Context, request operations.FindGlobalAuthModuleByIDRequest, security operations.FindGlobalAuthModuleByIDSecurity) (*operations.FindGlobalAuthModuleByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -244,7 +250,10 @@ func (s *authConfig) FindGlobalAuthModuleByID(ctx context.Context, request opera
 // Update one global auth. module config
 func (s *authConfig) PatchGlobalAuthModule(ctx context.Context, request operations.PatchGlobalAuthModuleRequest, security operations.PatchGlobalAuthModuleSecurity) (*operations.PatchGlobalAuthModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *authConfig) PatchGlobalAuthModule(ctx context.Context, request operatio
 // Update one global auth. module config
 func (s *authConfig) UpdateGlobalAuthModule(ctx context.Context, request operations.UpdateGlobalAuthModuleRequest, security operations.UpdateGlobalAuthModuleSecurity) (*operations.UpdateGlobalAuthModuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/auths/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

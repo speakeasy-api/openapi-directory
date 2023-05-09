@@ -20,19 +20,23 @@ const (
 	UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnumInactive UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum = "inactive"
 )
 
+func (e UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum) ToPointer() *UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum {
+	return &e
+}
+
 func (e *UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum(s)
+		*e = UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnumNo  UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum = "no"
 )
 
+func (e UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum) ToPointer() *UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum {
+	return &e
+}
+
 func (e *UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case "no":
-		*e = UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum(s)
+		*e = UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum: %v", v)
 	}
 }
 
@@ -101,19 +109,23 @@ const (
 	UpdateBankAccount409ApplicationJSONStatusEnumComplete   UpdateBankAccount409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e UpdateBankAccount409ApplicationJSONStatusEnum) ToPointer() *UpdateBankAccount409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *UpdateBankAccount409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = UpdateBankAccount409ApplicationJSONStatusEnum(s)
+		*e = UpdateBankAccount409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBankAccount409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBankAccount409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -167,19 +179,23 @@ const (
 	UpdateBankAccount201ApplicationJSONAccountStatusEnumInactive UpdateBankAccount201ApplicationJSONAccountStatusEnum = "inactive"
 )
 
+func (e UpdateBankAccount201ApplicationJSONAccountStatusEnum) ToPointer() *UpdateBankAccount201ApplicationJSONAccountStatusEnum {
+	return &e
+}
+
 func (e *UpdateBankAccount201ApplicationJSONAccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = UpdateBankAccount201ApplicationJSONAccountStatusEnum(s)
+		*e = UpdateBankAccount201ApplicationJSONAccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBankAccount201ApplicationJSONAccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBankAccount201ApplicationJSONAccountStatusEnum: %v", v)
 	}
 }
 
@@ -191,19 +207,23 @@ const (
 	UpdateBankAccount201ApplicationJSONDefaultAccountEnumNo  UpdateBankAccount201ApplicationJSONDefaultAccountEnum = "no"
 )
 
+func (e UpdateBankAccount201ApplicationJSONDefaultAccountEnum) ToPointer() *UpdateBankAccount201ApplicationJSONDefaultAccountEnum {
+	return &e
+}
+
 func (e *UpdateBankAccount201ApplicationJSONDefaultAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case "no":
-		*e = UpdateBankAccount201ApplicationJSONDefaultAccountEnum(s)
+		*e = UpdateBankAccount201ApplicationJSONDefaultAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateBankAccount201ApplicationJSONDefaultAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateBankAccount201ApplicationJSONDefaultAccountEnum: %v", v)
 	}
 }
 

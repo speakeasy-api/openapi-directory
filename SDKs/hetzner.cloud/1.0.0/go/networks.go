@@ -86,7 +86,10 @@ func newNetworks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Note: if the network object changes during the request, the response will be a “conflict” error.
 func (s *networks) DeleteNetworksID(ctx context.Context, request operations.DeleteNetworksIDRequest) (*operations.DeleteNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +174,10 @@ func (s *networks) GetNetworks(ctx context.Context, request operations.GetNetwor
 // Gets a specific network object.
 func (s *networks) GetNetworksID(ctx context.Context, request operations.GetNetworksIDRequest) (*operations.GetNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +282,10 @@ func (s *networks) PostNetworks(ctx context.Context, request operations.PostNetw
 // Note: if the network object changes during the request, the response will be a “conflict” error.
 func (s *networks) PutNetworksID(ctx context.Context, request operations.PutNetworksIDRequest) (*operations.PutNetworksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

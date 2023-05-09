@@ -15,20 +15,24 @@ const (
 	PredictiveScalingMaxCapacityBehaviorEnumSetMaxCapacityAboveForecastCapacity PredictiveScalingMaxCapacityBehaviorEnum = "SetMaxCapacityAboveForecastCapacity"
 )
 
+func (e PredictiveScalingMaxCapacityBehaviorEnum) ToPointer() *PredictiveScalingMaxCapacityBehaviorEnum {
+	return &e
+}
+
 func (e *PredictiveScalingMaxCapacityBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetForecastCapacityToMaxCapacity":
 		fallthrough
 	case "SetMaxCapacityToForecastCapacity":
 		fallthrough
 	case "SetMaxCapacityAboveForecastCapacity":
-		*e = PredictiveScalingMaxCapacityBehaviorEnum(s)
+		*e = PredictiveScalingMaxCapacityBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredictiveScalingMaxCapacityBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for PredictiveScalingMaxCapacityBehaviorEnum: %v", v)
 	}
 }

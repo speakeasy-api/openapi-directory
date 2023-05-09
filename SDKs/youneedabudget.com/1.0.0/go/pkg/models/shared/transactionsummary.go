@@ -17,21 +17,25 @@ const (
 	TransactionSummaryClearedEnumReconciled TransactionSummaryClearedEnum = "reconciled"
 )
 
+func (e TransactionSummaryClearedEnum) ToPointer() *TransactionSummaryClearedEnum {
+	return &e
+}
+
 func (e *TransactionSummaryClearedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cleared":
 		fallthrough
 	case "uncleared":
 		fallthrough
 	case "reconciled":
-		*e = TransactionSummaryClearedEnum(s)
+		*e = TransactionSummaryClearedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionSummaryClearedEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionSummaryClearedEnum: %v", v)
 	}
 }
 
@@ -39,23 +43,27 @@ func (e *TransactionSummaryClearedEnum) UnmarshalJSON(data []byte) error {
 type TransactionSummaryDebtTransactionTypeEnum string
 
 const (
-	TransactionSummaryDebtTransactionTypeEnumPayment            TransactionSummaryDebtTransactionTypeEnum = "payment"
-	TransactionSummaryDebtTransactionTypeEnumRefund             TransactionSummaryDebtTransactionTypeEnum = "refund"
-	TransactionSummaryDebtTransactionTypeEnumFee                TransactionSummaryDebtTransactionTypeEnum = "fee"
-	TransactionSummaryDebtTransactionTypeEnumInterest           TransactionSummaryDebtTransactionTypeEnum = "interest"
-	TransactionSummaryDebtTransactionTypeEnumEscrow             TransactionSummaryDebtTransactionTypeEnum = "escrow"
-	TransactionSummaryDebtTransactionTypeEnumBalancedAdjustment TransactionSummaryDebtTransactionTypeEnum = "balancedAdjustment"
-	TransactionSummaryDebtTransactionTypeEnumCredit             TransactionSummaryDebtTransactionTypeEnum = "credit"
-	TransactionSummaryDebtTransactionTypeEnumCharge             TransactionSummaryDebtTransactionTypeEnum = "charge"
-	TransactionSummaryDebtTransactionTypeEnumNull               TransactionSummaryDebtTransactionTypeEnum = "null"
+	TransactionSummaryDebtTransactionTypeEnumPayment                TransactionSummaryDebtTransactionTypeEnum = "payment"
+	TransactionSummaryDebtTransactionTypeEnumRefund                 TransactionSummaryDebtTransactionTypeEnum = "refund"
+	TransactionSummaryDebtTransactionTypeEnumFee                    TransactionSummaryDebtTransactionTypeEnum = "fee"
+	TransactionSummaryDebtTransactionTypeEnumInterest               TransactionSummaryDebtTransactionTypeEnum = "interest"
+	TransactionSummaryDebtTransactionTypeEnumEscrow                 TransactionSummaryDebtTransactionTypeEnum = "escrow"
+	TransactionSummaryDebtTransactionTypeEnumBalancedAdjustment     TransactionSummaryDebtTransactionTypeEnum = "balancedAdjustment"
+	TransactionSummaryDebtTransactionTypeEnumCredit                 TransactionSummaryDebtTransactionTypeEnum = "credit"
+	TransactionSummaryDebtTransactionTypeEnumCharge                 TransactionSummaryDebtTransactionTypeEnum = "charge"
+	TransactionSummaryDebtTransactionTypeEnumLessThanNilGreaterThan TransactionSummaryDebtTransactionTypeEnum = "<nil>"
 )
 
+func (e TransactionSummaryDebtTransactionTypeEnum) ToPointer() *TransactionSummaryDebtTransactionTypeEnum {
+	return &e
+}
+
 func (e *TransactionSummaryDebtTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "payment":
 		fallthrough
 	case "refund":
@@ -72,11 +80,11 @@ func (e *TransactionSummaryDebtTransactionTypeEnum) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "charge":
 		fallthrough
-	case "null":
-		*e = TransactionSummaryDebtTransactionTypeEnum(s)
+	case "<nil>":
+		*e = TransactionSummaryDebtTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionSummaryDebtTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionSummaryDebtTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -84,21 +92,25 @@ func (e *TransactionSummaryDebtTransactionTypeEnum) UnmarshalJSON(data []byte) e
 type TransactionSummaryFlagColorEnum string
 
 const (
-	TransactionSummaryFlagColorEnumRed    TransactionSummaryFlagColorEnum = "red"
-	TransactionSummaryFlagColorEnumOrange TransactionSummaryFlagColorEnum = "orange"
-	TransactionSummaryFlagColorEnumYellow TransactionSummaryFlagColorEnum = "yellow"
-	TransactionSummaryFlagColorEnumGreen  TransactionSummaryFlagColorEnum = "green"
-	TransactionSummaryFlagColorEnumBlue   TransactionSummaryFlagColorEnum = "blue"
-	TransactionSummaryFlagColorEnumPurple TransactionSummaryFlagColorEnum = "purple"
-	TransactionSummaryFlagColorEnumNull   TransactionSummaryFlagColorEnum = "null"
+	TransactionSummaryFlagColorEnumRed                    TransactionSummaryFlagColorEnum = "red"
+	TransactionSummaryFlagColorEnumOrange                 TransactionSummaryFlagColorEnum = "orange"
+	TransactionSummaryFlagColorEnumYellow                 TransactionSummaryFlagColorEnum = "yellow"
+	TransactionSummaryFlagColorEnumGreen                  TransactionSummaryFlagColorEnum = "green"
+	TransactionSummaryFlagColorEnumBlue                   TransactionSummaryFlagColorEnum = "blue"
+	TransactionSummaryFlagColorEnumPurple                 TransactionSummaryFlagColorEnum = "purple"
+	TransactionSummaryFlagColorEnumLessThanNilGreaterThan TransactionSummaryFlagColorEnum = "<nil>"
 )
 
+func (e TransactionSummaryFlagColorEnum) ToPointer() *TransactionSummaryFlagColorEnum {
+	return &e
+}
+
 func (e *TransactionSummaryFlagColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "orange":
@@ -111,11 +123,11 @@ func (e *TransactionSummaryFlagColorEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "purple":
 		fallthrough
-	case "null":
-		*e = TransactionSummaryFlagColorEnum(s)
+	case "<nil>":
+		*e = TransactionSummaryFlagColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionSummaryFlagColorEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionSummaryFlagColorEnum: %v", v)
 	}
 }
 

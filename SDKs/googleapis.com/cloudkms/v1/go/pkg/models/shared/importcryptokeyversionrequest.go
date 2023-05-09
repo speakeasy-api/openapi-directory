@@ -42,12 +42,16 @@ const (
 	ImportCryptoKeyVersionRequestAlgorithmEnumExternalSymmetricEncryption          ImportCryptoKeyVersionRequestAlgorithmEnum = "EXTERNAL_SYMMETRIC_ENCRYPTION"
 )
 
+func (e ImportCryptoKeyVersionRequestAlgorithmEnum) ToPointer() *ImportCryptoKeyVersionRequestAlgorithmEnum {
+	return &e
+}
+
 func (e *ImportCryptoKeyVersionRequestAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_SYMMETRIC_ENCRYPTION":
@@ -105,10 +109,10 @@ func (e *ImportCryptoKeyVersionRequestAlgorithmEnum) UnmarshalJSON(data []byte) 
 	case "HMAC_SHA224":
 		fallthrough
 	case "EXTERNAL_SYMMETRIC_ENCRYPTION":
-		*e = ImportCryptoKeyVersionRequestAlgorithmEnum(s)
+		*e = ImportCryptoKeyVersionRequestAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportCryptoKeyVersionRequestAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportCryptoKeyVersionRequestAlgorithmEnum: %v", v)
 	}
 }
 

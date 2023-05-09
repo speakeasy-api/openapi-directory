@@ -21,12 +21,16 @@ const (
 	ContestLevelEnumSpecial             ContestLevelEnum = "special"
 )
 
+func (e ContestLevelEnum) ToPointer() *ContestLevelEnum {
+	return &e
+}
+
 func (e *ContestLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "international":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *ContestLevelEnum) UnmarshalJSON(data []byte) error {
 	case "subLocality2":
 		fallthrough
 	case "special":
-		*e = ContestLevelEnum(s)
+		*e = ContestLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContestLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ContestLevelEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	ContestRolesEnumOtherRole              ContestRolesEnum = "otherRole"
 )
 
+func (e ContestRolesEnum) ToPointer() *ContestRolesEnum {
+	return &e
+}
+
 func (e *ContestRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "headOfState":
 		fallthrough
 	case "headOfGovernment":
@@ -97,10 +105,10 @@ func (e *ContestRolesEnum) UnmarshalJSON(data []byte) error {
 	case "specialPurposeOfficer":
 		fallthrough
 	case "otherRole":
-		*e = ContestRolesEnum(s)
+		*e = ContestRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContestRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for ContestRolesEnum: %v", v)
 	}
 }
 

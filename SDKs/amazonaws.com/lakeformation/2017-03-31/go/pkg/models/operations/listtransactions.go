@@ -20,12 +20,16 @@ const (
 	ListTransactionsRequestBodyStatusFilterEnumAborted   ListTransactionsRequestBodyStatusFilterEnum = "ABORTED"
 )
 
+func (e ListTransactionsRequestBodyStatusFilterEnum) ToPointer() *ListTransactionsRequestBodyStatusFilterEnum {
+	return &e
+}
+
 func (e *ListTransactionsRequestBodyStatusFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "COMPLETED":
@@ -35,10 +39,10 @@ func (e *ListTransactionsRequestBodyStatusFilterEnum) UnmarshalJSON(data []byte)
 	case "COMMITTED":
 		fallthrough
 	case "ABORTED":
-		*e = ListTransactionsRequestBodyStatusFilterEnum(s)
+		*e = ListTransactionsRequestBodyStatusFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTransactionsRequestBodyStatusFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTransactionsRequestBodyStatusFilterEnum: %v", v)
 	}
 }
 

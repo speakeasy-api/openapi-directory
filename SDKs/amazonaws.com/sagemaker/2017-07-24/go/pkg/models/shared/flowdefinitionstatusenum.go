@@ -16,12 +16,16 @@ const (
 	FlowDefinitionStatusEnumDeleting     FlowDefinitionStatusEnum = "Deleting"
 )
 
+func (e FlowDefinitionStatusEnum) ToPointer() *FlowDefinitionStatusEnum {
+	return &e
+}
+
 func (e *FlowDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Initializing":
 		fallthrough
 	case "Active":
@@ -29,9 +33,9 @@ func (e *FlowDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Deleting":
-		*e = FlowDefinitionStatusEnum(s)
+		*e = FlowDefinitionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlowDefinitionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FlowDefinitionStatusEnum: %v", v)
 	}
 }

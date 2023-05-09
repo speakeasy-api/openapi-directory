@@ -15,18 +15,22 @@ const (
 	LastRunErrorStatusCodeEnumError LastRunErrorStatusCodeEnum = "ERROR"
 )
 
+func (e LastRunErrorStatusCodeEnum) ToPointer() *LastRunErrorStatusCodeEnum {
+	return &e
+}
+
 func (e *LastRunErrorStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "ERROR":
-		*e = LastRunErrorStatusCodeEnum(s)
+		*e = LastRunErrorStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LastRunErrorStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for LastRunErrorStatusCodeEnum: %v", v)
 	}
 }

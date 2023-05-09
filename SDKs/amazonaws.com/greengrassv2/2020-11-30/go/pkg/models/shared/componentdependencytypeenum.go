@@ -14,18 +14,22 @@ const (
 	ComponentDependencyTypeEnumSoft ComponentDependencyTypeEnum = "SOFT"
 )
 
+func (e ComponentDependencyTypeEnum) ToPointer() *ComponentDependencyTypeEnum {
+	return &e
+}
+
 func (e *ComponentDependencyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HARD":
 		fallthrough
 	case "SOFT":
-		*e = ComponentDependencyTypeEnum(s)
+		*e = ComponentDependencyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentDependencyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentDependencyTypeEnum: %v", v)
 	}
 }

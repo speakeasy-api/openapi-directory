@@ -16,21 +16,25 @@ const (
 	SasPortalInstallationParamsHeightTypeEnumHeightTypeAmsl        SasPortalInstallationParamsHeightTypeEnum = "HEIGHT_TYPE_AMSL"
 )
 
+func (e SasPortalInstallationParamsHeightTypeEnum) ToPointer() *SasPortalInstallationParamsHeightTypeEnum {
+	return &e
+}
+
 func (e *SasPortalInstallationParamsHeightTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEIGHT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HEIGHT_TYPE_AGL":
 		fallthrough
 	case "HEIGHT_TYPE_AMSL":
-		*e = SasPortalInstallationParamsHeightTypeEnum(s)
+		*e = SasPortalInstallationParamsHeightTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SasPortalInstallationParamsHeightTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SasPortalInstallationParamsHeightTypeEnum: %v", v)
 	}
 }
 

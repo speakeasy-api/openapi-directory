@@ -34,7 +34,10 @@ func newReplies(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DriveRepliesDelete - Deletes a reply.
 func (s *replies) DriveRepliesDelete(ctx context.Context, request operations.DriveRepliesDeleteRequest, security operations.DriveRepliesDeleteSecurity) (*operations.DriveRepliesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *replies) DriveRepliesDelete(ctx context.Context, request operations.Dri
 // DriveRepliesGet - Gets a reply.
 func (s *replies) DriveRepliesGet(ctx context.Context, request operations.DriveRepliesGetRequest, security operations.DriveRepliesGetSecurity) (*operations.DriveRepliesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *replies) DriveRepliesGet(ctx context.Context, request operations.DriveR
 // DriveRepliesInsert - Creates a new reply to the given comment.
 func (s *replies) DriveRepliesInsert(ctx context.Context, request operations.DriveRepliesInsertRequest, security operations.DriveRepliesInsertSecurity) (*operations.DriveRepliesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommentReply", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *replies) DriveRepliesInsert(ctx context.Context, request operations.Dri
 // DriveRepliesList - Lists all of the replies to a comment.
 func (s *replies) DriveRepliesList(ctx context.Context, request operations.DriveRepliesListRequest, security operations.DriveRepliesListSecurity) (*operations.DriveRepliesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *replies) DriveRepliesList(ctx context.Context, request operations.Drive
 // DriveRepliesPatch - Updates an existing reply.
 func (s *replies) DriveRepliesPatch(ctx context.Context, request operations.DriveRepliesPatchRequest, security operations.DriveRepliesPatchSecurity) (*operations.DriveRepliesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommentReply", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *replies) DriveRepliesPatch(ctx context.Context, request operations.Driv
 // DriveRepliesUpdate - Updates an existing reply.
 func (s *replies) DriveRepliesUpdate(ctx context.Context, request operations.DriveRepliesUpdateRequest, security operations.DriveRepliesUpdateSecurity) (*operations.DriveRepliesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies/{replyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommentReply", "json")
 	if err != nil {

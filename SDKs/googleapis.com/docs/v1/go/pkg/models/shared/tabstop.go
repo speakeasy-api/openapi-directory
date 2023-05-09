@@ -17,12 +17,16 @@ const (
 	TabStopAlignmentEnumEnd                         TabStopAlignmentEnum = "END"
 )
 
+func (e TabStopAlignmentEnum) ToPointer() *TabStopAlignmentEnum {
+	return &e
+}
+
 func (e *TabStopAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TAB_STOP_ALIGNMENT_UNSPECIFIED":
 		fallthrough
 	case "START":
@@ -30,10 +34,10 @@ func (e *TabStopAlignmentEnum) UnmarshalJSON(data []byte) error {
 	case "CENTER":
 		fallthrough
 	case "END":
-		*e = TabStopAlignmentEnum(s)
+		*e = TabStopAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TabStopAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for TabStopAlignmentEnum: %v", v)
 	}
 }
 

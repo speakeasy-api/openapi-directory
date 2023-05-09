@@ -294,17 +294,21 @@ const (
 	PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnumUniform PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum = "uniform"
 )
 
+func (e PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) ToPointer() *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum {
+	return &e
+}
+
 func (e *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uniform":
-		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(s)
+		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionUniformTypeEnum: %v", v)
 	}
 }
 
@@ -321,17 +325,21 @@ const (
 	PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnumLognormal PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum = "lognormal"
 )
 
+func (e PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) ToPointer() *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum {
+	return &e
+}
+
 func (e *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lognormal":
-		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(s)
+		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseDelayDistributionLogNormalTypeEnum: %v", v)
 	}
 }
 
@@ -420,12 +428,16 @@ const (
 	PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnumRandomDataThenClose    PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum = "RANDOM_DATA_THEN_CLOSE"
 )
 
+func (e PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum) ToPointer() *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum {
+	return &e
+}
+
 func (e *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_RESET_BY_PEER":
 		fallthrough
 	case "EMPTY_RESPONSE":
@@ -433,10 +445,10 @@ func (e *PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultE
 	case "MALFORMED_RESPONSE_CHUNK":
 		fallthrough
 	case "RANDOM_DATA_THEN_CLOSE":
-		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum(s)
+		*e = PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAdminMappingsFindByMetadata200ApplicationJSONMappingsResponseFaultEnum: %v", v)
 	}
 }
 

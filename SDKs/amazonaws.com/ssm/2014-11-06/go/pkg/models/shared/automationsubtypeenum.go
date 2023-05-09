@@ -13,16 +13,20 @@ const (
 	AutomationSubtypeEnumChangeRequest AutomationSubtypeEnum = "ChangeRequest"
 )
 
+func (e AutomationSubtypeEnum) ToPointer() *AutomationSubtypeEnum {
+	return &e
+}
+
 func (e *AutomationSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ChangeRequest":
-		*e = AutomationSubtypeEnum(s)
+		*e = AutomationSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutomationSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutomationSubtypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DeleteWorkteamXAmzTargetEnumSageMakerDeleteWorkteam DeleteWorkteamXAmzTargetEnum = "SageMaker.DeleteWorkteam"
 )
 
+func (e DeleteWorkteamXAmzTargetEnum) ToPointer() *DeleteWorkteamXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWorkteamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteWorkteam":
-		*e = DeleteWorkteamXAmzTargetEnum(s)
+		*e = DeleteWorkteamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWorkteamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWorkteamXAmzTargetEnum: %v", v)
 	}
 }
 

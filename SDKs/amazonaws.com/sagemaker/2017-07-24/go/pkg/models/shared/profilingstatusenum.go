@@ -14,18 +14,22 @@ const (
 	ProfilingStatusEnumDisabled ProfilingStatusEnum = "Disabled"
 )
 
+func (e ProfilingStatusEnum) ToPointer() *ProfilingStatusEnum {
+	return &e
+}
+
 func (e *ProfilingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = ProfilingStatusEnum(s)
+		*e = ProfilingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfilingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfilingStatusEnum: %v", v)
 	}
 }

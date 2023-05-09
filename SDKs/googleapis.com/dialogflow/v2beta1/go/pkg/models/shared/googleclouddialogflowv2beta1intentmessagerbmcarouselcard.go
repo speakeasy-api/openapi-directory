@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnumMedium               GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum = "MEDIUM"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CARD_WIDTH_UNSPECIFIED":
 		fallthrough
 	case "SMALL":
 		fallthrough
 	case "MEDIUM":
-		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardCardWidthEnum: %v", v)
 	}
 }
 

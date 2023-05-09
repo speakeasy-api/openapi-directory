@@ -15,17 +15,21 @@ const (
 	POSTModifyGlobalClusterActionEnumModifyGlobalCluster POSTModifyGlobalClusterActionEnum = "ModifyGlobalCluster"
 )
 
+func (e POSTModifyGlobalClusterActionEnum) ToPointer() *POSTModifyGlobalClusterActionEnum {
+	return &e
+}
+
 func (e *POSTModifyGlobalClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyGlobalCluster":
-		*e = POSTModifyGlobalClusterActionEnum(s)
+		*e = POSTModifyGlobalClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyGlobalClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyGlobalClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyGlobalClusterVersionEnumTwoThousandAndFourteen1031 POSTModifyGlobalClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTModifyGlobalClusterVersionEnum) ToPointer() *POSTModifyGlobalClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyGlobalClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTModifyGlobalClusterVersionEnum(s)
+		*e = POSTModifyGlobalClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyGlobalClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyGlobalClusterVersionEnum: %v", v)
 	}
 }
 

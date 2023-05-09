@@ -16,17 +16,21 @@ const (
 	DetachDiskXAmzTargetEnumLightsail20161128DetachDisk DetachDiskXAmzTargetEnum = "Lightsail_20161128.DetachDisk"
 )
 
+func (e DetachDiskXAmzTargetEnum) ToPointer() *DetachDiskXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DetachDisk":
-		*e = DetachDiskXAmzTargetEnum(s)
+		*e = DetachDiskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachDiskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachDiskXAmzTargetEnum: %v", v)
 	}
 }
 

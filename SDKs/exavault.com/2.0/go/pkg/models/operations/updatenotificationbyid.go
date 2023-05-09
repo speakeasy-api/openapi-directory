@@ -19,12 +19,16 @@ const (
 	UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnumAll      UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum = "all"
 )
 
+func (e UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum) ToPointer() *UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum {
+	return &e
+}
+
 func (e *UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "upload":
 		fallthrough
 	case "download":
@@ -32,10 +36,10 @@ func (e *UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum) Unma
 	case "delete":
 		fallthrough
 	case "all":
-		*e = UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum(s)
+		*e = UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNotificationByIDUpdateNotificationByIDRequestBodyActionEnum: %v", v)
 	}
 }
 

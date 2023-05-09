@@ -22,12 +22,16 @@ const (
 	PatchUsersIDRequestBodyAuthenticationMethodEnumPasswordWithImportedHash PatchUsersIDRequestBodyAuthenticationMethodEnum = "password_with_imported_hash"
 )
 
+func (e PatchUsersIDRequestBodyAuthenticationMethodEnum) ToPointer() *PatchUsersIDRequestBodyAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *PatchUsersIDRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "password":
 		fallthrough
 	case "unused_former_ldap":
@@ -39,10 +43,10 @@ func (e *PatchUsersIDRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []b
 	case "email_signup":
 		fallthrough
 	case "password_with_imported_hash":
-		*e = PatchUsersIDRequestBodyAuthenticationMethodEnum(s)
+		*e = PatchUsersIDRequestBodyAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchUsersIDRequestBodyAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchUsersIDRequestBodyAuthenticationMethodEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	PatchUsersIDRequestBodyRequire2faEnumNeverRequire     PatchUsersIDRequestBodyRequire2faEnum = "never_require"
 )
 
+func (e PatchUsersIDRequestBodyRequire2faEnum) ToPointer() *PatchUsersIDRequestBodyRequire2faEnum {
+	return &e
+}
+
 func (e *PatchUsersIDRequestBodyRequire2faEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = PatchUsersIDRequestBodyRequire2faEnum(s)
+		*e = PatchUsersIDRequestBodyRequire2faEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchUsersIDRequestBodyRequire2faEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchUsersIDRequestBodyRequire2faEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	PatchUsersIDRequestBodySslRequiredEnumNeverRequire     PatchUsersIDRequestBodySslRequiredEnum = "never_require"
 )
 
+func (e PatchUsersIDRequestBodySslRequiredEnum) ToPointer() *PatchUsersIDRequestBodySslRequiredEnum {
+	return &e
+}
+
 func (e *PatchUsersIDRequestBodySslRequiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = PatchUsersIDRequestBodySslRequiredEnum(s)
+		*e = PatchUsersIDRequestBodySslRequiredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchUsersIDRequestBodySslRequiredEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchUsersIDRequestBodySslRequiredEnum: %v", v)
 	}
 }
 
@@ -140,7 +152,7 @@ type PatchUsersIDRequestBody struct {
 	Email *string `multipartForm:"name=email"`
 	// Can the user access with FTP/FTPS?
 	FtpPermission *bool `multipartForm:"name=ftp_permission"`
-	// Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, or `history`.
+	// Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, `read+write`, or `list+write`
 	GrantPermission *string `multipartForm:"name=grant_permission"`
 	// Group ID to associate this user with.
 	GroupID *int `multipartForm:"name=group_id"`

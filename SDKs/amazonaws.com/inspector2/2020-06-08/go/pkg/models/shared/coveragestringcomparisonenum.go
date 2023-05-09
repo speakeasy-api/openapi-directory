@@ -14,18 +14,22 @@ const (
 	CoverageStringComparisonEnumNotEquals CoverageStringComparisonEnum = "NOT_EQUALS"
 )
 
+func (e CoverageStringComparisonEnum) ToPointer() *CoverageStringComparisonEnum {
+	return &e
+}
+
 func (e *CoverageStringComparisonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "NOT_EQUALS":
-		*e = CoverageStringComparisonEnum(s)
+		*e = CoverageStringComparisonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CoverageStringComparisonEnum: %s", s)
+		return fmt.Errorf("invalid value for CoverageStringComparisonEnum: %v", v)
 	}
 }

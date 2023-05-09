@@ -41,7 +41,10 @@ func newPayoutSettingsMerchantLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—Payout account settings read and write
 func (s *payoutSettingsMerchantLevel) DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.DeleteMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *payoutSettingsMerchantLevel) DeleteMerchantsMerchantIDPayoutSettingsPay
 // * Management API—Payout account settings read
 func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsRequest, security operations.GetMerchantsMerchantIDPayoutSettingsSecurity) (*operations.GetMerchantsMerchantIDPayoutSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +175,10 @@ func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettings(ctx c
 // * Management API—Payout account settings read
 func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.GetMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +248,10 @@ func (s *payoutSettingsMerchantLevel) GetMerchantsMerchantIDPayoutSettingsPayout
 // * Management API—Payout account settings read and write
 func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsID(ctx context.Context, request operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDRequest, security operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDSecurity) (*operations.PatchMerchantsMerchantIDPayoutSettingsPayoutSettingsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings/{payoutSettingsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdatePayoutSettingsRequest", "json")
 	if err != nil {
@@ -318,7 +330,10 @@ func (s *payoutSettingsMerchantLevel) PatchMerchantsMerchantIDPayoutSettingsPayo
 // * Management API—Payout account settings read and write
 func (s *payoutSettingsMerchantLevel) PostMerchantsMerchantIDPayoutSettings(ctx context.Context, request operations.PostMerchantsMerchantIDPayoutSettingsRequest, security operations.PostMerchantsMerchantIDPayoutSettingsSecurity) (*operations.PostMerchantsMerchantIDPayoutSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/payoutSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayoutSettingsRequest", "json")
 	if err != nil {

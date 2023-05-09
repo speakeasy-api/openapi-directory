@@ -13,96 +13,97 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/apigateway
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApigatewayProjectsLocationsApisConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ApigatewayProjectsLocationsApisConfigsCreate(ctx, operations.ApigatewayProjectsLocationsApisConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ApigatewayAPIConfigInput: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "provident",
-            GatewayServiceAccount: "distinctio",
+            DisplayName: sdk.String("provident"),
+            GatewayServiceAccount: sdk.String("distinctio"),
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "unde",
-                        Path: "nulla",
+                        Contents: sdk.String("unde"),
+                        Path: sdk.String("nulla"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "illum",
-                            Path: "vel",
+                            Contents: sdk.String("illum"),
+                            Path: sdk.String("vel"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "error",
-                            Path: "deserunt",
+                            Contents: sdk.String("error"),
+                            Path: sdk.String("deserunt"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "suscipit",
-                            Path: "iure",
+                            Contents: sdk.String("suscipit"),
+                            Path: sdk.String("iure"),
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "magnam",
-                        Path: "debitis",
+                        Contents: sdk.String("magnam"),
+                        Path: sdk.String("debitis"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "delectus",
-                            Path: "tempora",
+                            Contents: sdk.String("delectus"),
+                            Path: sdk.String("tempora"),
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "suscipit",
-                        Path: "molestiae",
+                        Contents: sdk.String("suscipit"),
+                        Path: sdk.String("molestiae"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "placeat",
-                            Path: "voluptatum",
+                            Contents: sdk.String("placeat"),
+                            Path: sdk.String("voluptatum"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "iusto",
-                            Path: "excepturi",
+                            Contents: sdk.String("iusto"),
+                            Path: sdk.String("excepturi"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "nisi",
-                            Path: "recusandae",
+                            Contents: sdk.String("nisi"),
+                            Path: sdk.String("recusandae"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "temporibus",
-                            Path: "ab",
+                            Contents: sdk.String("temporibus"),
+                            Path: sdk.String("ab"),
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "quis",
-                        Path: "veritatis",
+                        Contents: sdk.String("quis"),
+                        Path: sdk.String("veritatis"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "perferendis",
-                            Path: "ipsam",
+                            Contents: sdk.String("perferendis"),
+                            Path: sdk.String("ipsam"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "repellendus",
-                            Path: "sapiente",
+                            Contents: sdk.String("repellendus"),
+                            Path: sdk.String("sapiente"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "quo",
-                            Path: "odit",
+                            Contents: sdk.String("quo"),
+                            Path: sdk.String("odit"),
                         },
                     },
                 },
@@ -115,61 +116,58 @@ func main() {
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "dicta",
-                    Path: "nam",
+                    Contents: sdk.String("dicta"),
+                    Path: sdk.String("nam"),
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "officia",
-                    Path: "occaecati",
+                    Contents: sdk.String("officia"),
+                    Path: sdk.String("occaecati"),
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "fugit",
-                    Path: "deleniti",
+                    Contents: sdk.String("fugit"),
+                    Path: sdk.String("deleniti"),
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "optio",
-                        Path: "totam",
+                        Contents: sdk.String("optio"),
+                        Path: sdk.String("totam"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "beatae",
-                        Path: "commodi",
+                        Contents: sdk.String("beatae"),
+                        Path: sdk.String("commodi"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "molestiae",
-                        Path: "modi",
+                        Contents: sdk.String("molestiae"),
+                        Path: sdk.String("modi"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "qui",
-                        Path: "impedit",
+                        Contents: sdk.String("qui"),
+                        Path: sdk.String("impedit"),
                     },
                 },
             },
         },
-        AccessToken: "cum",
-        Alt: "media",
-        APIConfigID: "ipsum",
-        Callback: "excepturi",
-        Fields: "aspernatur",
-        Key: "perferendis",
-        OauthToken: "ad",
+        AccessToken: sdk.String("cum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        APIConfigID: sdk.String("ipsum"),
+        Callback: sdk.String("excepturi"),
+        Fields: sdk.String("aspernatur"),
+        Key: sdk.String("perferendis"),
+        OauthToken: sdk.String("ad"),
         Parent: "natus",
-        PrettyPrint: false,
-        QuotaUser: "sed",
-        UploadType: "iste",
-        UploadProtocol: "dolor",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ApigatewayProjectsLocationsApisConfigsCreate(ctx, req, operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("sed"),
+        UploadType: sdk.String("iste"),
+        UploadProtocol: sdk.String("dolor"),
+    }, operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -188,23 +186,23 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ApigatewayProjectsLocationsApisConfigsCreate` - Creates a new ApiConfig in a given project and location.
-* `ApigatewayProjectsLocationsApisConfigsList` - Lists ApiConfigs in a given project and location.
-* `ApigatewayProjectsLocationsApisCreate` - Creates a new Api in a given project and location.
-* `ApigatewayProjectsLocationsApisList` - Lists Apis in a given project and location.
-* `ApigatewayProjectsLocationsGatewaysCreate` - Creates a new Gateway in a given project and location.
-* `ApigatewayProjectsLocationsGatewaysGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `ApigatewayProjectsLocationsGatewaysList` - Lists Gateways in a given project and location.
-* `ApigatewayProjectsLocationsGatewaysPatch` - Updates the parameters of a single Gateway.
-* `ApigatewayProjectsLocationsGatewaysSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `ApigatewayProjectsLocationsGatewaysTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-* `ApigatewayProjectsLocationsList` - Lists information about the supported locations for this service.
-* `ApigatewayProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `ApigatewayProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `ApigatewayProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `ApigatewayProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [ApigatewayProjectsLocationsApisConfigsCreate](docs/projects/README.md#apigatewayprojectslocationsapisconfigscreate) - Creates a new ApiConfig in a given project and location.
+* [ApigatewayProjectsLocationsApisConfigsList](docs/projects/README.md#apigatewayprojectslocationsapisconfigslist) - Lists ApiConfigs in a given project and location.
+* [ApigatewayProjectsLocationsApisCreate](docs/projects/README.md#apigatewayprojectslocationsapiscreate) - Creates a new Api in a given project and location.
+* [ApigatewayProjectsLocationsApisList](docs/projects/README.md#apigatewayprojectslocationsapislist) - Lists Apis in a given project and location.
+* [ApigatewayProjectsLocationsGatewaysCreate](docs/projects/README.md#apigatewayprojectslocationsgatewayscreate) - Creates a new Gateway in a given project and location.
+* [ApigatewayProjectsLocationsGatewaysGetIamPolicy](docs/projects/README.md#apigatewayprojectslocationsgatewaysgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [ApigatewayProjectsLocationsGatewaysList](docs/projects/README.md#apigatewayprojectslocationsgatewayslist) - Lists Gateways in a given project and location.
+* [ApigatewayProjectsLocationsGatewaysPatch](docs/projects/README.md#apigatewayprojectslocationsgatewayspatch) - Updates the parameters of a single Gateway.
+* [ApigatewayProjectsLocationsGatewaysSetIamPolicy](docs/projects/README.md#apigatewayprojectslocationsgatewayssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [ApigatewayProjectsLocationsGatewaysTestIamPermissions](docs/projects/README.md#apigatewayprojectslocationsgatewaystestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [ApigatewayProjectsLocationsList](docs/projects/README.md#apigatewayprojectslocationslist) - Lists information about the supported locations for this service.
+* [ApigatewayProjectsLocationsOperationsCancel](docs/projects/README.md#apigatewayprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [ApigatewayProjectsLocationsOperationsDelete](docs/projects/README.md#apigatewayprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [ApigatewayProjectsLocationsOperationsGet](docs/projects/README.md#apigatewayprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [ApigatewayProjectsLocationsOperationsList](docs/projects/README.md#apigatewayprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
 ### Maturity

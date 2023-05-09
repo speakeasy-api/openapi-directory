@@ -16,21 +16,25 @@ const (
 	SectionSectionTypeEnumServices               SectionSectionTypeEnum = "SERVICES"
 )
 
+func (e SectionSectionTypeEnum) ToPointer() *SectionSectionTypeEnum {
+	return &e
+}
+
 func (e *SectionSectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FOOD":
 		fallthrough
 	case "SERVICES":
-		*e = SectionSectionTypeEnum(s)
+		*e = SectionSectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SectionSectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SectionSectionTypeEnum: %v", v)
 	}
 }
 

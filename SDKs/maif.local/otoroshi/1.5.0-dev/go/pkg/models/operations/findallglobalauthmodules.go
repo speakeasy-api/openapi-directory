@@ -10,6 +10,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type FindAllGlobalAuthModulesSecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type FindAllGlobalAuthModules200ApplicationJSONType string
 
 const (

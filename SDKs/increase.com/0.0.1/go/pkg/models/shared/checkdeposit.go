@@ -20,12 +20,16 @@ const (
 	CheckDepositCurrencyEnumUsd CheckDepositCurrencyEnum = "USD"
 )
 
+func (e CheckDepositCurrencyEnum) ToPointer() *CheckDepositCurrencyEnum {
+	return &e
+}
+
 func (e *CheckDepositCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -37,10 +41,10 @@ func (e *CheckDepositCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = CheckDepositCurrencyEnum(s)
+		*e = CheckDepositCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCurrencyEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	CheckDepositCheckDepositAcceptanceCurrencyEnumUsd CheckDepositCheckDepositAcceptanceCurrencyEnum = "USD"
 )
 
+func (e CheckDepositCheckDepositAcceptanceCurrencyEnum) ToPointer() *CheckDepositCheckDepositAcceptanceCurrencyEnum {
+	return &e
+}
+
 func (e *CheckDepositCheckDepositAcceptanceCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -73,10 +81,10 @@ func (e *CheckDepositCheckDepositAcceptanceCurrencyEnum) UnmarshalJSON(data []by
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = CheckDepositCheckDepositAcceptanceCurrencyEnum(s)
+		*e = CheckDepositCheckDepositAcceptanceCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCheckDepositAcceptanceCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCheckDepositAcceptanceCurrencyEnum: %v", v)
 	}
 }
 
@@ -110,12 +118,16 @@ const (
 	CheckDepositCheckDepositRejectionCurrencyEnumUsd CheckDepositCheckDepositRejectionCurrencyEnum = "USD"
 )
 
+func (e CheckDepositCheckDepositRejectionCurrencyEnum) ToPointer() *CheckDepositCheckDepositRejectionCurrencyEnum {
+	return &e
+}
+
 func (e *CheckDepositCheckDepositRejectionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -127,10 +139,10 @@ func (e *CheckDepositCheckDepositRejectionCurrencyEnum) UnmarshalJSON(data []byt
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = CheckDepositCheckDepositRejectionCurrencyEnum(s)
+		*e = CheckDepositCheckDepositRejectionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCheckDepositRejectionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCheckDepositRejectionCurrencyEnum: %v", v)
 	}
 }
 
@@ -147,12 +159,16 @@ const (
 	CheckDepositCheckDepositRejectionReasonEnumUnknown                     CheckDepositCheckDepositRejectionReasonEnum = "unknown"
 )
 
+func (e CheckDepositCheckDepositRejectionReasonEnum) ToPointer() *CheckDepositCheckDepositRejectionReasonEnum {
+	return &e
+}
+
 func (e *CheckDepositCheckDepositRejectionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "incomplete_image":
 		fallthrough
 	case "duplicate":
@@ -166,10 +182,10 @@ func (e *CheckDepositCheckDepositRejectionReasonEnum) UnmarshalJSON(data []byte)
 	case "not_eligible_for_mobile_deposit":
 		fallthrough
 	case "unknown":
-		*e = CheckDepositCheckDepositRejectionReasonEnum(s)
+		*e = CheckDepositCheckDepositRejectionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCheckDepositRejectionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCheckDepositRejectionReasonEnum: %v", v)
 	}
 }
 
@@ -197,12 +213,16 @@ const (
 	CheckDepositCheckDepositReturnCurrencyEnumUsd CheckDepositCheckDepositReturnCurrencyEnum = "USD"
 )
 
+func (e CheckDepositCheckDepositReturnCurrencyEnum) ToPointer() *CheckDepositCheckDepositReturnCurrencyEnum {
+	return &e
+}
+
 func (e *CheckDepositCheckDepositReturnCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -214,10 +234,10 @@ func (e *CheckDepositCheckDepositReturnCurrencyEnum) UnmarshalJSON(data []byte) 
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = CheckDepositCheckDepositReturnCurrencyEnum(s)
+		*e = CheckDepositCheckDepositReturnCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCheckDepositReturnCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCheckDepositReturnCurrencyEnum: %v", v)
 	}
 }
 
@@ -237,12 +257,16 @@ const (
 	CheckDepositCheckDepositReturnReturnReasonEnumUnreadableImage           CheckDepositCheckDepositReturnReturnReasonEnum = "unreadable_image"
 )
 
+func (e CheckDepositCheckDepositReturnReturnReasonEnum) ToPointer() *CheckDepositCheckDepositReturnReturnReasonEnum {
+	return &e
+}
+
 func (e *CheckDepositCheckDepositReturnReturnReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_conversion_not_supported":
 		fallthrough
 	case "closed_account":
@@ -264,10 +288,10 @@ func (e *CheckDepositCheckDepositReturnReturnReasonEnum) UnmarshalJSON(data []by
 	case "unmatched_details":
 		fallthrough
 	case "unreadable_image":
-		*e = CheckDepositCheckDepositReturnReturnReasonEnum(s)
+		*e = CheckDepositCheckDepositReturnReturnReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositCheckDepositReturnReturnReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositCheckDepositReturnReturnReasonEnum: %v", v)
 	}
 }
 
@@ -296,12 +320,16 @@ const (
 	CheckDepositStatusEnumReturned  CheckDepositStatusEnum = "returned"
 )
 
+func (e CheckDepositStatusEnum) ToPointer() *CheckDepositStatusEnum {
+	return &e
+}
+
 func (e *CheckDepositStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "submitted":
@@ -309,10 +337,10 @@ func (e *CheckDepositStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "returned":
-		*e = CheckDepositStatusEnum(s)
+		*e = CheckDepositStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositStatusEnum: %v", v)
 	}
 }
 
@@ -323,17 +351,21 @@ const (
 	CheckDepositTypeEnumCheckDeposit CheckDepositTypeEnum = "check_deposit"
 )
 
+func (e CheckDepositTypeEnum) ToPointer() *CheckDepositTypeEnum {
+	return &e
+}
+
 func (e *CheckDepositTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_deposit":
-		*e = CheckDepositTypeEnum(s)
+		*e = CheckDepositTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckDepositTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckDepositTypeEnum: %v", v)
 	}
 }
 

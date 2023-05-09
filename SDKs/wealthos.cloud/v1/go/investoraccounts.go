@@ -155,7 +155,10 @@ func (s *investorAccounts) GetAllinvestorAccounts(ctx context.Context, request o
 // GetinvestorAccount - Retrieve existing investor account from account id
 func (s *investorAccounts) GetinvestorAccount(ctx context.Context, request operations.GetinvestorAccountRequest, security operations.GetinvestorAccountSecurity) (*operations.GetinvestorAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/investor-accounts/v1/{account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/investor-accounts/v1/{account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

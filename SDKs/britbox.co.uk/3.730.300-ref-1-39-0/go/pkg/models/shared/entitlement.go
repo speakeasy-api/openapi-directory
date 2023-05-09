@@ -18,12 +18,16 @@ const (
 	EntitlementDeliveryTypeEnumNone                EntitlementDeliveryTypeEnum = "None"
 )
 
+func (e EntitlementDeliveryTypeEnum) ToPointer() *EntitlementDeliveryTypeEnum {
+	return &e
+}
+
 func (e *EntitlementDeliveryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Stream":
 		fallthrough
 	case "Download":
@@ -33,10 +37,10 @@ func (e *EntitlementDeliveryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ProgressiveDownload":
 		fallthrough
 	case "None":
-		*e = EntitlementDeliveryTypeEnum(s)
+		*e = EntitlementDeliveryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementDeliveryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementDeliveryTypeEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	EntitlementItemTypeEnumCustomAsset EntitlementItemTypeEnum = "customAsset"
 )
 
+func (e EntitlementItemTypeEnum) ToPointer() *EntitlementItemTypeEnum {
+	return &e
+}
+
 func (e *EntitlementItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movie":
 		fallthrough
 	case "show":
@@ -78,10 +86,10 @@ func (e *EntitlementItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "channel":
 		fallthrough
 	case "customAsset":
-		*e = EntitlementItemTypeEnum(s)
+		*e = EntitlementItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementItemTypeEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	EntitlementOwnershipEnumNone         EntitlementOwnershipEnum = "None"
 )
 
+func (e EntitlementOwnershipEnum) ToPointer() *EntitlementOwnershipEnum {
+	return &e
+}
+
 func (e *EntitlementOwnershipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Subscription":
 		fallthrough
 	case "Free":
@@ -110,10 +122,10 @@ func (e *EntitlementOwnershipEnum) UnmarshalJSON(data []byte) error {
 	case "Own":
 		fallthrough
 	case "None":
-		*e = EntitlementOwnershipEnum(s)
+		*e = EntitlementOwnershipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementOwnershipEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementOwnershipEnum: %v", v)
 	}
 }
 
@@ -128,12 +140,16 @@ const (
 	EntitlementResolutionEnumUnknown  EntitlementResolutionEnum = "Unknown"
 )
 
+func (e EntitlementResolutionEnum) ToPointer() *EntitlementResolutionEnum {
+	return &e
+}
+
 func (e *EntitlementResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SD":
 		fallthrough
 	case "HD-720":
@@ -145,10 +161,10 @@ func (e *EntitlementResolutionEnum) UnmarshalJSON(data []byte) error {
 	case "External":
 		fallthrough
 	case "Unknown":
-		*e = EntitlementResolutionEnum(s)
+		*e = EntitlementResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntitlementResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for EntitlementResolutionEnum: %v", v)
 	}
 }
 

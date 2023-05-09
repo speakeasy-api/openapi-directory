@@ -15,20 +15,24 @@ const (
 	AlgorithmSpecEnumRsaesOaepSha256 AlgorithmSpecEnum = "RSAES_OAEP_SHA_256"
 )
 
+func (e AlgorithmSpecEnum) ToPointer() *AlgorithmSpecEnum {
+	return &e
+}
+
 func (e *AlgorithmSpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RSAES_PKCS1_V1_5":
 		fallthrough
 	case "RSAES_OAEP_SHA_1":
 		fallthrough
 	case "RSAES_OAEP_SHA_256":
-		*e = AlgorithmSpecEnum(s)
+		*e = AlgorithmSpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmSpecEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmSpecEnum: %v", v)
 	}
 }

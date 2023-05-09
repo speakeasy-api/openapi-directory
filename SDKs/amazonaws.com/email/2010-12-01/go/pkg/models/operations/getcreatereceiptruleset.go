@@ -15,17 +15,21 @@ const (
 	GETCreateReceiptRuleSetActionEnumCreateReceiptRuleSet GETCreateReceiptRuleSetActionEnum = "CreateReceiptRuleSet"
 )
 
+func (e GETCreateReceiptRuleSetActionEnum) ToPointer() *GETCreateReceiptRuleSetActionEnum {
+	return &e
+}
+
 func (e *GETCreateReceiptRuleSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateReceiptRuleSet":
-		*e = GETCreateReceiptRuleSetActionEnum(s)
+		*e = GETCreateReceiptRuleSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateReceiptRuleSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateReceiptRuleSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateReceiptRuleSetVersionEnumTwoThousandAndTen1201 GETCreateReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
+func (e GETCreateReceiptRuleSetVersionEnum) ToPointer() *GETCreateReceiptRuleSetVersionEnum {
+	return &e
+}
+
 func (e *GETCreateReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCreateReceiptRuleSetVersionEnum(s)
+		*e = GETCreateReceiptRuleSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateReceiptRuleSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateReceiptRuleSetVersionEnum: %v", v)
 	}
 }
 

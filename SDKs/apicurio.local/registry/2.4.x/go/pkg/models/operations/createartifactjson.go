@@ -17,19 +17,23 @@ const (
 	CreateArtifactJSONXRegistryHashAlgorithmEnumMd5    CreateArtifactJSONXRegistryHashAlgorithmEnum = "MD5"
 )
 
+func (e CreateArtifactJSONXRegistryHashAlgorithmEnum) ToPointer() *CreateArtifactJSONXRegistryHashAlgorithmEnum {
+	return &e
+}
+
 func (e *CreateArtifactJSONXRegistryHashAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHA256":
 		fallthrough
 	case "MD5":
-		*e = CreateArtifactJSONXRegistryHashAlgorithmEnum(s)
+		*e = CreateArtifactJSONXRegistryHashAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateArtifactJSONXRegistryHashAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateArtifactJSONXRegistryHashAlgorithmEnum: %v", v)
 	}
 }
 
@@ -47,7 +51,7 @@ type CreateArtifactJSONRequest struct {
 	// * Web Services Description Language (`WSDL`)
 	// * XML Schema (`XSD`)
 	//
-	ContentCreateRequest shared.ContentCreateRequest `request:"mediaType=application/vnd.create.extended+json"`
+	ArtifactContent shared.ArtifactContent `request:"mediaType=application/vnd.create.extended+json"`
 	// A client-provided, globally unique identifier for the new artifact.
 	XRegistryArtifactID *string `header:"style=simple,explode=false,name=X-Registry-ArtifactId"`
 	// Specifies the type of the artifact being added. Possible values include:

@@ -36,7 +36,10 @@ func newShoppingCart(defaultClient, securityClient HTTPClient, serverURL, langua
 // Use this request to add coupons to a given shopping cart.
 func (s *shoppingCart) AddCoupons(ctx context.Context, request operations.AddCouponsRequest) (*operations.AddCouponsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/coupons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/coupons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -211,7 +214,10 @@ func (s *shoppingCart) CreateANewCart(ctx context.Context, request operations.Cr
 // > This request has a time out of 45 seconds.
 func (s *shoppingCart) GetCartInformationByID(ctx context.Context, request operations.GetCartInformationByIDRequest) (*operations.GetCartInformationByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,7 +265,10 @@ func (s *shoppingCart) GetCartInformationByID(ctx context.Context, request opera
 // This endpoint should be called only after the selected `orderForm` already has a `paymentData`.
 func (s *shoppingCart) GetCartInstallments(ctx context.Context, request operations.GetCartInstallmentsRequest) (*operations.GetCartInstallmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/installments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/installments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -305,7 +314,10 @@ func (s *shoppingCart) GetCartInstallments(ctx context.Context, request operatio
 // Note that this request will only work if you have not sent the `clientProfileData` to the cart yet. Sending it to a cart that already has a `clientProfileData` should return a status `403 Forbidden` error, with an `Access denied` message.
 func (s *shoppingCart) IgnoreProfileData(ctx context.Context, request operations.IgnoreProfileDataRequest) (*operations.IgnoreProfileDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/profile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/profile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -357,7 +369,10 @@ func (s *shoppingCart) IgnoreProfileData(ctx context.Context, request operations
 // > This request has a time out of 45 seconds.
 func (s *shoppingCart) Items(ctx context.Context, request operations.ItemsRequest) (*operations.ItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -427,7 +442,10 @@ func (s *shoppingCart) Items(ctx context.Context, request operations.ItemsReques
 // > This request has a time out of 45 seconds.
 func (s *shoppingCart) ItemsUpdate(ctx context.Context, request operations.ItemsUpdateRequest) (*operations.ItemsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -498,7 +516,10 @@ func (s *shoppingCart) ItemsUpdate(ctx context.Context, request operations.Items
 // > Whenever you use this request to change the price of an item, all items in that cart with the same SKU are affected by this change. This applies even to items that share the SKU but have been separated into different objects in the `items` array due to customizations or attachments, for example.
 func (s *shoppingCart) PriceChange(ctx context.Context, request operations.PriceChangeRequest) (*operations.PriceChangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/{itemIndex}/price", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PriceChangeRequest", "json")
 	if err != nil {
@@ -552,7 +573,10 @@ func (s *shoppingCart) PriceChange(ctx context.Context, request operations.Price
 // **Important**: **Request Body** must always be sent with empty value "{ }" in this endpoint.
 func (s *shoppingCart) RemoveAllItems(ctx context.Context, request operations.RemoveAllItemsRequest) (*operations.RemoveAllItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/removeAll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/checkout/pub/orderForm/{orderFormId}/items/removeAll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -610,7 +634,10 @@ func (s *shoppingCart) RemoveAllItems(ctx context.Context, request operations.Re
 // This call works by creating a new orderForm, setting a new cookie, and returning a redirect 302 to the cart URL (`/checkout/#/orderform`).
 func (s *shoppingCart) Removeallpersonaldata(ctx context.Context, request operations.RemoveallpersonaldataRequest) (*operations.RemoveallpersonaldataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/checkout/changeToAnonymousUser/{orderFormId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/checkout/changeToAnonymousUser/{orderFormId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

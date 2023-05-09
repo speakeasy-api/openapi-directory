@@ -27,12 +27,16 @@ const (
 	BundleInstanceResultBundleTaskStateEnumFailed             BundleInstanceResultBundleTaskStateEnum = "failed"
 )
 
+func (e BundleInstanceResultBundleTaskStateEnum) ToPointer() *BundleInstanceResultBundleTaskStateEnum {
+	return &e
+}
+
 func (e *BundleInstanceResultBundleTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "waiting-for-shutdown":
@@ -46,10 +50,10 @@ func (e *BundleInstanceResultBundleTaskStateEnum) UnmarshalJSON(data []byte) err
 	case "complete":
 		fallthrough
 	case "failed":
-		*e = BundleInstanceResultBundleTaskStateEnum(s)
+		*e = BundleInstanceResultBundleTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BundleInstanceResultBundleTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BundleInstanceResultBundleTaskStateEnum: %v", v)
 	}
 }
 

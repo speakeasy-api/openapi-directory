@@ -16,17 +16,21 @@ const (
 	GETGETIpamAddressHistoryActionEnumGetIpamAddressHistory GETGETIpamAddressHistoryActionEnum = "GetIpamAddressHistory"
 )
 
+func (e GETGETIpamAddressHistoryActionEnum) ToPointer() *GETGETIpamAddressHistoryActionEnum {
+	return &e
+}
+
 func (e *GETGETIpamAddressHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIpamAddressHistory":
-		*e = GETGETIpamAddressHistoryActionEnum(s)
+		*e = GETGETIpamAddressHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIpamAddressHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIpamAddressHistoryActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETGETIpamAddressHistoryVersionEnumTwoThousandAndSixteen1115 GETGETIpamAddressHistoryVersionEnum = "2016-11-15"
 )
 
+func (e GETGETIpamAddressHistoryVersionEnum) ToPointer() *GETGETIpamAddressHistoryVersionEnum {
+	return &e
+}
+
 func (e *GETGETIpamAddressHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETIpamAddressHistoryVersionEnum(s)
+		*e = GETGETIpamAddressHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETIpamAddressHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETIpamAddressHistoryVersionEnum: %v", v)
 	}
 }
 

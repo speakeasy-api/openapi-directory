@@ -16,21 +16,25 @@ const (
 	ObjectFilterStatusEnumAll      ObjectFilterStatusEnum = "ALL"
 )
 
+func (e ObjectFilterStatusEnum) ToPointer() *ObjectFilterStatusEnum {
+	return &e
+}
+
 func (e *ObjectFilterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "ASSIGNED":
 		fallthrough
 	case "ALL":
-		*e = ObjectFilterStatusEnum(s)
+		*e = ObjectFilterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectFilterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectFilterStatusEnum: %v", v)
 	}
 }
 

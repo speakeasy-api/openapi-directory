@@ -18,12 +18,16 @@ const (
 	GenerateRandomBytesRequestProtectionLevelEnumExternalVpc                GenerateRandomBytesRequestProtectionLevelEnum = "EXTERNAL_VPC"
 )
 
+func (e GenerateRandomBytesRequestProtectionLevelEnum) ToPointer() *GenerateRandomBytesRequestProtectionLevelEnum {
+	return &e
+}
+
 func (e *GenerateRandomBytesRequestProtectionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTECTION_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SOFTWARE":
@@ -33,10 +37,10 @@ func (e *GenerateRandomBytesRequestProtectionLevelEnum) UnmarshalJSON(data []byt
 	case "EXTERNAL":
 		fallthrough
 	case "EXTERNAL_VPC":
-		*e = GenerateRandomBytesRequestProtectionLevelEnum(s)
+		*e = GenerateRandomBytesRequestProtectionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateRandomBytesRequestProtectionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateRandomBytesRequestProtectionLevelEnum: %v", v)
 	}
 }
 

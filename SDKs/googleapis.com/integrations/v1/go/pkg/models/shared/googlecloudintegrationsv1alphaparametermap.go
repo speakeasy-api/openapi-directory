@@ -25,12 +25,16 @@ const (
 	GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnumProtoArray                              GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum = "PROTO_ARRAY"
 )
 
+func (e GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATION_PARAMETER_DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING_VALUE":
@@ -54,10 +58,10 @@ func (e *GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum) UnmarshalJSON(da
 	case "PROTO_VALUE":
 		fallthrough
 	case "PROTO_ARRAY":
-		*e = GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnumProtoArray                              GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum = "PROTO_ARRAY"
 )
 
+func (e GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTEGRATION_PARAMETER_DATA_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING_VALUE":
@@ -108,10 +116,10 @@ func (e *GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum) UnmarshalJSON(
 	case "PROTO_VALUE":
 		fallthrough
 	case "PROTO_ARRAY":
-		*e = GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum: %v", v)
 	}
 }
 

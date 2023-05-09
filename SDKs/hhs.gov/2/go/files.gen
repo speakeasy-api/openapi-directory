@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -72,4 +73,13 @@ pkg/models/shared/tagtypemarshaller.go
 pkg/models/shared/taglanguagemarshaller.go
 pkg/models/shared/taglanguagemarshallerwrapped.go
 pkg/models/shared/tagtypemarshallerwrapped.go
+docs/sdk/README.md
+docs/campaigns/README.md
+docs/languages/README.md
+docs/media/README.md
+docs/mediatypes/README.md
+docs/resources/README.md
+docs/sources/README.md
+docs/tags/README.md
+docs/usermedialists/README.md
 USAGE.md

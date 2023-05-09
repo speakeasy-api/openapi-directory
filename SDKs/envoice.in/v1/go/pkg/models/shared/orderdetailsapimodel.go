@@ -21,12 +21,16 @@ const (
 	OrderDetailsAPIModelStatusEnumFailed         OrderDetailsAPIModelStatusEnum = "Failed"
 )
 
+func (e OrderDetailsAPIModelStatusEnum) ToPointer() *OrderDetailsAPIModelStatusEnum {
+	return &e
+}
+
 func (e *OrderDetailsAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingPayment":
 		fallthrough
 	case "Processing":
@@ -42,10 +46,10 @@ func (e *OrderDetailsAPIModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Refunded":
 		fallthrough
 	case "Failed":
-		*e = OrderDetailsAPIModelStatusEnum(s)
+		*e = OrderDetailsAPIModelStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderDetailsAPIModelStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderDetailsAPIModelStatusEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newAdvertiserGroups(defaultClient, securityClient HTTPClient, serverURL, la
 // DfareportingAdvertiserGroupsDelete - Deletes an existing advertiser group.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsDelete(ctx context.Context, request operations.DfareportingAdvertiserGroupsDeleteRequest, security operations.DfareportingAdvertiserGroupsDeleteSecurity) (*operations.DfareportingAdvertiserGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *advertiserGroups) DfareportingAdvertiserGroupsDelete(ctx context.Contex
 // DfareportingAdvertiserGroupsGet - Gets one advertiser group by ID.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsGet(ctx context.Context, request operations.DfareportingAdvertiserGroupsGetRequest, security operations.DfareportingAdvertiserGroupsGetSecurity) (*operations.DfareportingAdvertiserGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *advertiserGroups) DfareportingAdvertiserGroupsGet(ctx context.Context, 
 // DfareportingAdvertiserGroupsInsert - Inserts a new advertiser group.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsInsert(ctx context.Context, request operations.DfareportingAdvertiserGroupsInsertRequest, security operations.DfareportingAdvertiserGroupsInsertSecurity) (*operations.DfareportingAdvertiserGroupsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserGroup", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *advertiserGroups) DfareportingAdvertiserGroupsInsert(ctx context.Contex
 // DfareportingAdvertiserGroupsList - Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsList(ctx context.Context, request operations.DfareportingAdvertiserGroupsListRequest, security operations.DfareportingAdvertiserGroupsListSecurity) (*operations.DfareportingAdvertiserGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *advertiserGroups) DfareportingAdvertiserGroupsList(ctx context.Context,
 // DfareportingAdvertiserGroupsPatch - Updates an existing advertiser group. This method supports patch semantics.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsPatch(ctx context.Context, request operations.DfareportingAdvertiserGroupsPatchRequest, security operations.DfareportingAdvertiserGroupsPatchSecurity) (*operations.DfareportingAdvertiserGroupsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserGroup", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *advertiserGroups) DfareportingAdvertiserGroupsPatch(ctx context.Context
 // DfareportingAdvertiserGroupsUpdate - Updates an existing advertiser group.
 func (s *advertiserGroups) DfareportingAdvertiserGroupsUpdate(ctx context.Context, request operations.DfareportingAdvertiserGroupsUpdateRequest, security operations.DfareportingAdvertiserGroupsUpdateSecurity) (*operations.DfareportingAdvertiserGroupsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/advertiserGroups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdvertiserGroup", "json")
 	if err != nil {

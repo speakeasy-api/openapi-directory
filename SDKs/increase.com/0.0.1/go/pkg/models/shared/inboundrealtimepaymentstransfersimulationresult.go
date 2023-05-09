@@ -21,12 +21,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -38,10 +42,38 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurre
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionCurrencyEnum: %v", v)
+	}
+}
+
+// InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum - The type of the route this Declined Transaction came through.
+type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum string
+
+const (
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnumAccountNumber InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum = "account_number"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnumCard          InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum = "card"
+)
+
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum {
+	return &e
+}
+
+func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "account_number":
+		fallthrough
+	case "card":
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum: %v", v)
 	}
 }
 
@@ -55,19 +87,24 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumCreditEntryRefusedByReceiver InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "credit_entry_refused_by_receiver"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumDuplicateReturn              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "duplicate_return"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumEntityNotActive              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "entity_not_active"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumTransactionNotAllowed        InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "transaction_not_allowed"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumGroupLocked                  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "group_locked"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumInsufficientFunds            InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "insufficient_funds"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumMisroutedReturn              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "misrouted_return"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumNoAchRoute                   InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "no_ach_route"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumOriginatorRequest            InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "originator_request"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnumTransactionNotAllowed        InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum = "transaction_not_allowed"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_route_canceled":
 		fallthrough
 	case "ach_route_disabled":
@@ -80,19 +117,21 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 		fallthrough
 	case "entity_not_active":
 		fallthrough
-	case "transaction_not_allowed":
-		fallthrough
 	case "group_locked":
 		fallthrough
 	case "insufficient_funds":
 		fallthrough
+	case "misrouted_return":
+		fallthrough
 	case "no_ach_route":
 		fallthrough
 	case "originator_request":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum(s)
+		fallthrough
+	case "transaction_not_allowed":
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceACHDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -123,12 +162,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -140,10 +183,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -154,17 +197,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnumVisa InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum = "visa"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "visa":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkEnum: %v", v)
 	}
 }
 
@@ -182,12 +229,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnumNonSecureTransaction                                    InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum = "non_secure_transaction"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mail_phone_order":
 		fallthrough
 	case "recurring":
@@ -203,10 +254,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "non_authenticated_security_transaction":
 		fallthrough
 	case "non_secure_transaction":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaElectronicCommerceIndicatorEnum: %v", v)
 	}
 }
 
@@ -225,12 +276,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnumIntegratedCircuitCardNoCvv InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum = "integrated_circuit_card_no_cvv"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "magnetic_stripe_no_cvv":
@@ -248,10 +303,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "contactless_magnetic_stripe":
 		fallthrough
 	case "integrated_circuit_card_no_cvv":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineNetworkDetailsVisaPointOfServiceEntryModeEnum: %v", v)
 	}
 }
 
@@ -273,24 +328,30 @@ type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedT
 type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum string
 
 const (
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCardNotActive               InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "card_not_active"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumEntityNotActive             InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "entity_not_active"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumGroupLocked                 InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "group_locked"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInsufficientFunds           InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "insufficient_funds"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCvv2Mismatch                InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "cvv2_mismatch"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumTransactionNotAllowed       InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "transaction_not_allowed"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumBreachesLimit               InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "breaches_limit"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookDeclined             InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_declined"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookTimedOut             InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_timed_out"
-	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumDeclinedByStandInProcessing InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "declined_by_stand_in_processing"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCardNotActive                InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "card_not_active"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumEntityNotActive              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "entity_not_active"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumGroupLocked                  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "group_locked"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInsufficientFunds            InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "insufficient_funds"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumCvv2Mismatch                 InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "cvv2_mismatch"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumTransactionNotAllowed        InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "transaction_not_allowed"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumBreachesLimit                InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "breaches_limit"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookDeclined              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_declined"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumWebhookTimedOut              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "webhook_timed_out"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumDeclinedByStandInProcessing  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "declined_by_stand_in_processing"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumInvalidPhysicalCard          InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "invalid_physical_card"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnumMissingOriginalAuthorization InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum = "missing_original_authorization"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_not_active":
 		fallthrough
 	case "entity_not_active":
@@ -310,10 +371,14 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "webhook_timed_out":
 		fallthrough
 	case "declined_by_stand_in_processing":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum(s)
+		fallthrough
+	case "invalid_physical_card":
+		fallthrough
+	case "missing_original_authorization":
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCardDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -359,12 +424,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -376,10 +445,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceDeprecatedCardDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -410,12 +479,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnumOther                                  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum = "other"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_decline":
 		fallthrough
 	case "card_decline":
@@ -429,10 +502,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "card_route_decline":
 		fallthrough
 	case "other":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCategoryEnum: %v", v)
 	}
 }
 
@@ -451,14 +524,20 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumReferToImage          InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "refer_to_image"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumStopPaymentRequested  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "stop_payment_requested"
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumReturned              InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "returned"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumDuplicatePresentment  InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "duplicate_presentment"
+	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnumNotAuthorized         InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum = "not_authorized"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_route_canceled":
 		fallthrough
 	case "ach_route_disabled":
@@ -480,10 +559,14 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "stop_payment_requested":
 		fallthrough
 	case "returned":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum(s)
+		fallthrough
+	case "duplicate_presentment":
+		fallthrough
+	case "not_authorized":
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceCheckDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -508,12 +591,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -525,10 +612,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineCurrencyEnum: %v", v)
 	}
 }
 
@@ -543,12 +630,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnumRealTimePaymentsNotEnabled InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum = "real_time_payments_not_enabled"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_number_canceled":
 		fallthrough
 	case "account_number_disabled":
@@ -558,10 +649,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDecli
 	case "entity_not_active":
 		fallthrough
 	case "real_time_payments_not_enabled":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSourceInboundRealTimePaymentsTransferDeclineReasonEnum: %v", v)
 	}
 }
 
@@ -653,17 +744,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnumDeclinedTransaction InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum = "declined_transaction"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "declined_transaction":
-		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -684,7 +779,7 @@ type InboundRealTimePaymentsTransferSimulationResultDeclinedTransaction struct {
 	// The identifier for the route this Declined Transaction came through. Routes are things like cards and ACH details.
 	RouteID string `json:"route_id"`
 	// The type of the route this Declined Transaction came through.
-	RouteType string `json:"route_type"`
+	RouteType InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionRouteTypeEnum `json:"route_type"`
 	// This is an object giving more details on the network-level event that caused the Declined Transaction. For example, for a card transaction this lists the merchant's industry and location. Note that for backwards compatibility reasons, additional undocumented keys may appear in this object. These should be treated as deprecated and will be removed in the future.
 	Source InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionDeclinedTransactionSource `json:"source"`
 	// A constant representing the object's type. For this resource it will always be `declined_transaction`.
@@ -703,12 +798,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -720,10 +819,38 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum)
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionCurrencyEnum: %v", v)
+	}
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum - The type of the route this Transaction came through.
+type InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum string
+
+const (
+	InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnumAccountNumber InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum = "account_number"
+	InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnumCard          InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum = "card"
+)
+
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum {
+	return &e
+}
+
+func (e *InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "account_number":
+		fallthrough
+	case "card":
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum: %v", v)
 	}
 }
 
@@ -739,12 +866,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -756,10 +887,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceAccountTransferIntentionCurrencyEnum: %v", v)
 	}
 }
 
@@ -841,12 +972,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnumOther                                                     InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum = "other"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_fund":
 		fallthrough
 	case "no_account":
@@ -892,10 +1027,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "incorrectly_coded_outbound_international_payment":
 		fallthrough
 	case "other":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceACHTransferReturnReturnReasonCodeEnum: %v", v)
 	}
 }
 
@@ -933,12 +1068,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -950,10 +1089,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum: %v", v)
 	}
 }
 
@@ -964,17 +1103,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnumCardRefund InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum = "card_refund"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_refund":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum: %v", v)
 	}
 }
 
@@ -986,8 +1129,76 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	CardSettlementTransactionID string `json:"card_settlement_transaction_id"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction's currency.
 	Currency InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundCurrencyEnum `json:"currency"`
+	// The Card Refund identifier.
+	ID string `json:"id"`
+	// The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
+	MerchantAcceptorID string `json:"merchant_acceptor_id"`
+	// The 4-digit MCC describing the merchant's business.
+	MerchantCategoryCode string `json:"merchant_category_code"`
+	// The city the merchant resides in.
+	MerchantCity string `json:"merchant_city"`
+	// The country the merchant resides in.
+	MerchantCountry string `json:"merchant_country"`
+	// The name of the merchant.
+	MerchantName string `json:"merchant_name"`
+	// The state the merchant resides in.
+	MerchantState string `json:"merchant_state"`
 	// A constant representing the object's type. For this resource it will always be `card_refund`.
 	Type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefundTypeEnum `json:"type"`
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction currency.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum string
+
+const (
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumCad InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "CAD"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumChf InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "CHF"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumEur InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "EUR"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumGbp InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "GBP"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumJpy InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "JPY"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum = "USD"
+)
+
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum {
+	return &e
+}
+
+func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CAD":
+		fallthrough
+	case "CHF":
+		fallthrough
+	case "EUR":
+		fallthrough
+	case "GBP":
+		fallthrough
+	case "JPY":
+		fallthrough
+	case "USD":
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum: %v", v)
+	}
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePayment - A Card Revenue Payment object. This field will be present in the JSON response if and only if `category` is equal to `card_revenue_payment`.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePayment struct {
+	// The amount in the minor unit of the transaction's currency. For dollars, for example, this is cents.
+	Amount int64 `json:"amount"`
+	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction currency.
+	Currency InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePaymentCurrencyEnum `json:"currency"`
+	// The end of the period for which this transaction paid interest.
+	PeriodEnd time.Time `json:"period_end"`
+	// The start of the period for which this transaction paid interest.
+	PeriodStart time.Time `json:"period_start"`
+	// The account the card belonged to.
+	TransactedOnAccountID string `json:"transacted_on_account_id"`
 }
 
 // InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the refund currency.
@@ -1002,12 +1213,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1019,10 +1234,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefundCurrencyEnum: %v", v)
 	}
 }
 
@@ -1052,12 +1267,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1069,10 +1288,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardSettlementCurrencyEnum: %v", v)
 	}
 }
 
@@ -1102,12 +1321,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1119,10 +1342,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum: %v", v)
 	}
 }
 
@@ -1133,17 +1356,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnumCardSettlement InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum = "card_settlement"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "card_settlement":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementTypeEnum: %v", v)
 	}
 }
 
@@ -1151,13 +1378,24 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlement struct {
 	// The amount in the minor unit of the transaction's settlement currency. For dollars, for example, this is cents.
 	Amount int64 `json:"amount"`
+	// The Card Authorization that was created prior to this Card Settlement, if on exists.
+	CardAuthorization string `json:"card_authorization"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction's settlement currency.
-	Currency             InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum `json:"currency"`
-	MerchantCategoryCode string                                                                                                `json:"merchant_category_code"`
-	MerchantCity         string                                                                                                `json:"merchant_city"`
-	MerchantCountry      string                                                                                                `json:"merchant_country"`
-	MerchantName         string                                                                                                `json:"merchant_name"`
-	MerchantState        string                                                                                                `json:"merchant_state"`
+	Currency InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardSettlementCurrencyEnum `json:"currency"`
+	// The Card Settlement identifier.
+	ID string `json:"id"`
+	// The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
+	MerchantAcceptorID string `json:"merchant_acceptor_id"`
+	// The 4-digit MCC describing the merchant's business.
+	MerchantCategoryCode string `json:"merchant_category_code"`
+	// The city the merchant resides in.
+	MerchantCity string `json:"merchant_city"`
+	// The country the merchant resides in.
+	MerchantCountry string `json:"merchant_country"`
+	// The name of the merchant.
+	MerchantName string `json:"merchant_name"`
+	// The state the merchant resides in.
+	MerchantState string `json:"merchant_state"`
 	// The identifier of the Pending Transaction associated with this Transaction.
 	PendingTransactionID string `json:"pending_transaction_id"`
 	// The amount in the minor unit of the transaction's presentment currency.
@@ -1181,6 +1419,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCardDisputeAcceptance                       InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "card_dispute_acceptance"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCardRefund                                  InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "card_refund"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCardSettlement                              InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "card_settlement"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCardRevenuePayment                          InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "card_revenue_payment"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCheckDepositAcceptance                      InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "check_deposit_acceptance"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCheckDepositReturn                          InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "check_deposit_return"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCheckTransferIntention                      InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "check_transfer_intention"
@@ -1189,6 +1428,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumCheckTransferStopPaymentRequest             InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "check_transfer_stop_payment_request"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumDisputeResolution                           InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "dispute_resolution"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumEmpyrealCashDeposit                         InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "empyreal_cash_deposit"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumFeePayment                                  InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "fee_payment"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumInboundAchTransfer                          InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "inbound_ach_transfer"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumInboundAchTransferReturnIntention           InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "inbound_ach_transfer_return_intention"
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumInboundCheck                                InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "inbound_check"
@@ -1212,12 +1452,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnumOther                                       InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum = "other"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_transfer_intention":
 		fallthrough
 	case "ach_check_conversion_return":
@@ -1236,6 +1480,8 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 		fallthrough
 	case "card_settlement":
 		fallthrough
+	case "card_revenue_payment":
+		fallthrough
 	case "check_deposit_acceptance":
 		fallthrough
 	case "check_deposit_return":
@@ -1251,6 +1497,8 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "dispute_resolution":
 		fallthrough
 	case "empyreal_cash_deposit":
+		fallthrough
+	case "fee_payment":
 		fallthrough
 	case "inbound_ach_transfer":
 		fallthrough
@@ -1293,10 +1541,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "wire_transfer_rejection":
 		fallthrough
 	case "other":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCategoryEnum: %v", v)
 	}
 }
 
@@ -1312,12 +1560,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1329,10 +1581,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositAcceptanceCurrencyEnum: %v", v)
 	}
 }
 
@@ -1366,12 +1618,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1383,10 +1639,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnCurrencyEnum: %v", v)
 	}
 }
 
@@ -1406,12 +1662,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnumUnreadableImage           InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum = "unreadable_image"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_conversion_not_supported":
 		fallthrough
 	case "closed_account":
@@ -1433,10 +1693,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "unmatched_details":
 		fallthrough
 	case "unreadable_image":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckDepositReturnReturnReasonEnum: %v", v)
 	}
 }
 
@@ -1467,12 +1727,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1484,10 +1748,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferIntentionCurrencyEnum: %v", v)
 	}
 }
 
@@ -1519,10 +1783,44 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	TransferID string `json:"transfer_id"`
 }
 
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum - The reason why the check was returned.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum string
+
+const (
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnumMailDeliveryFailure InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum = "mail_delivery_failure"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnumRefusedByRecipient  InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum = "refused_by_recipient"
+)
+
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum {
+	return &e
+}
+
+func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "mail_delivery_failure":
+		fallthrough
+	case "refused_by_recipient":
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum: %v", v)
+	}
+}
+
 // InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturn - A Check Transfer Return object. This field will be present in the JSON response if and only if `category` is equal to `check_transfer_return`.
 type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturn struct {
 	// If available, a document with additional information about the return.
 	FileID string `json:"file_id"`
+	// The reason why the check was returned.
+	Reason InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferReturnReasonEnum `json:"reason"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the check was returned.
+	ReturnedAt time.Time `json:"returned_at"`
+	// The identifier of the Transaction that was created to credit you for the returned check.
+	TransactionID string `json:"transaction_id"`
 	// The identifier of the returned Check Transfer.
 	TransferID string `json:"transfer_id"`
 }
@@ -1534,17 +1832,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnumCheckTransferStopPaymentRequest InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum = "check_transfer_stop_payment_request"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "check_transfer_stop_payment_request":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCheckTransferStopPaymentRequestTypeEnum: %v", v)
 	}
 }
 
@@ -1572,12 +1874,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1589,10 +1895,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolutionCurrencyEnum: %v", v)
 	}
 }
 
@@ -1612,6 +1918,54 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	Amount      int64     `json:"amount"`
 	BagID       string    `json:"bag_id"`
 	DepositDate time.Time `json:"deposit_date"`
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction currency.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum string
+
+const (
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumCad InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "CAD"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumChf InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "CHF"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumEur InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "EUR"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumGbp InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "GBP"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumJpy InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "JPY"
+	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum = "USD"
+)
+
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum {
+	return &e
+}
+
+func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "CAD":
+		fallthrough
+	case "CHF":
+		fallthrough
+	case "EUR":
+		fallthrough
+	case "GBP":
+		fallthrough
+	case "JPY":
+		fallthrough
+	case "USD":
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum: %v", v)
+	}
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePayment - A Fee Payment object. This field will be present in the JSON response if and only if `category` is equal to `fee_payment`.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePayment struct {
+	// The amount in the minor unit of the transaction's currency. For dollars, for example, this is cents.
+	Amount int64 `json:"amount"`
+	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction currency.
+	Currency InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePaymentCurrencyEnum `json:"currency"`
 }
 
 // InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundACHTransfer - A Inbound ACH Transfer object. This field will be present in the JSON response if and only if `category` is equal to `inbound_ach_transfer`.
@@ -1640,12 +1994,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1657,10 +2015,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundCheckCurrencyEnum: %v", v)
 	}
 }
 
@@ -1728,12 +2086,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1745,10 +2107,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundRealTimePaymentsTransferConfirmationCurrencyEnum: %v", v)
 	}
 }
 
@@ -1818,6 +2180,8 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundWireReversal struct {
 	// The amount that was reversed.
 	Amount int64 `json:"amount"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the reversal was created.
+	CreatedAt time.Time `json:"created_at"`
 	// The description on the reversal message from Fedwire.
 	Description string `json:"description"`
 	// Additional financial institution information included in the wire reversal.
@@ -1840,6 +2204,8 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	PreviousMessageInputSource string `json:"previous_message_input_source"`
 	// Information included in the wire reversal for the receiving financial institution.
 	ReceiverFinancialInstitutionInformation string `json:"receiver_financial_institution_information"`
+	// The ID for the Transaction associated with the transfer reversal.
+	TransactionID string `json:"transaction_id"`
 }
 
 // InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundWireTransfer - A Inbound Wire Transfer object. This field will be present in the JSON response if and only if `category` is equal to `inbound_wire_transfer`.
@@ -1876,12 +2242,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1893,10 +2263,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPaymentCurrencyEnum: %v", v)
 	}
 }
 
@@ -1926,12 +2296,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnumUsd InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum = "USD"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -1943,10 +2317,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum: %v", v)
 	}
 }
 
@@ -1964,12 +2338,16 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnumSampleFundsReturn  InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum = "sample_funds_return"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bank_migration":
 		fallthrough
 	case "cashback":
@@ -1987,10 +2365,10 @@ func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSo
 	case "sample_funds":
 		fallthrough
 	case "sample_funds_return":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum: %v", v)
 	}
 }
 
@@ -2001,6 +2379,20 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction currency.
 	Currency InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceCurrencyEnum `json:"currency"`
 	Reason   InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSourceReasonEnum   `json:"reason"`
+}
+
+// InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement - A Real Time Payments Transfer Acknowledgement object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_acknowledgement`.
+type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement struct {
+	// The transfer amount in USD cents.
+	Amount int64 `json:"amount"`
+	// The destination account number.
+	DestinationAccountNumber string `json:"destination_account_number"`
+	// The American Bankers' Association (ABA) Routing Transit Number (RTN).
+	DestinationRoutingNumber string `json:"destination_routing_number"`
+	// Unstructured information that will show on the recipient's bank statement.
+	RemittanceInformation string `json:"remittance_information"`
+	// The identifier of the Real Time Payments Transfer that led to this Transaction.
+	TransferID string `json:"transfer_id"`
 }
 
 // InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceSampleFunds - A Sample Funds object. This field will be present in the JSON response if and only if `category` is equal to `sample_funds`.
@@ -2060,6 +2452,8 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	CardDisputeAcceptance InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardDisputeAcceptance `json:"card_dispute_acceptance"`
 	// A Card Refund object. This field will be present in the JSON response if and only if `category` is equal to `card_refund`.
 	CardRefund InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRefund `json:"card_refund"`
+	// A Card Revenue Payment object. This field will be present in the JSON response if and only if `category` is equal to `card_revenue_payment`.
+	CardRevenuePayment InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceCardRevenuePayment `json:"card_revenue_payment"`
 	// A Deprecated Card Refund object. This field will be present in the JSON response if and only if `category` is equal to `card_route_refund`.
 	CardRouteRefund InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDeprecatedCardRefund `json:"card_route_refund"`
 	// A Deprecated Card Settlement object. This field will be present in the JSON response if and only if `category` is equal to `card_route_settlement`.
@@ -2084,6 +2478,8 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	DisputeResolution InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceDisputeResolution `json:"dispute_resolution"`
 	// A Empyreal Cash Deposit object. This field will be present in the JSON response if and only if `category` is equal to `empyreal_cash_deposit`.
 	EmpyrealCashDeposit InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceEmpyrealCashDeposit `json:"empyreal_cash_deposit"`
+	// A Fee Payment object. This field will be present in the JSON response if and only if `category` is equal to `fee_payment`.
+	FeePayment InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceFeePayment `json:"fee_payment"`
 	// A Inbound ACH Transfer object. This field will be present in the JSON response if and only if `category` is equal to `inbound_ach_transfer`.
 	InboundAchTransfer InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInboundACHTransfer `json:"inbound_ach_transfer"`
 	// A Inbound Check object. This field will be present in the JSON response if and only if `category` is equal to `inbound_check`.
@@ -2104,6 +2500,8 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource
 	InterestPayment InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInterestPayment `json:"interest_payment"`
 	// A Internal Source object. This field will be present in the JSON response if and only if `category` is equal to `internal_source`.
 	InternalSource InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceInternalSource `json:"internal_source"`
+	// A Real Time Payments Transfer Acknowledgement object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_acknowledgement`.
+	RealTimePaymentsTransferAcknowledgement InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceRealTimePaymentsTransferAcknowledgement `json:"real_time_payments_transfer_acknowledgement"`
 	// A Sample Funds object. This field will be present in the JSON response if and only if `category` is equal to `sample_funds`.
 	SampleFunds InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSourceSampleFunds `json:"sample_funds"`
 	// A Wire Drawdown Payment Intention object. This field will be present in the JSON response if and only if `category` is equal to `wire_drawdown_payment_intention`.
@@ -2123,17 +2521,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnumTransaction InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum = "transaction"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
-		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -2154,7 +2556,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransaction struct {
 	// The identifier for the route this Transaction came through. Routes are things like cards and ACH details.
 	RouteID string `json:"route_id"`
 	// The type of the route this Transaction came through.
-	RouteType string `json:"route_type"`
+	RouteType InboundRealTimePaymentsTransferSimulationResultTransactionRouteTypeEnum `json:"route_type"`
 	// This is an object giving more details on the network-level event that caused the Transaction. Note that for backwards compatibility reasons, additional undocumented keys may appear in this object. These should be treated as deprecated and will be removed in the future.
 	Source InboundRealTimePaymentsTransferSimulationResultTransactionTransactionSource `json:"source"`
 	// A constant representing the object's type. For this resource it will always be `transaction`.
@@ -2168,17 +2570,21 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTypeEnumInboundRealTimePaymentsTransferSimulationResult InboundRealTimePaymentsTransferSimulationResultTypeEnum = "inbound_real_time_payments_transfer_simulation_result"
 )
 
+func (e InboundRealTimePaymentsTransferSimulationResultTypeEnum) ToPointer() *InboundRealTimePaymentsTransferSimulationResultTypeEnum {
+	return &e
+}
+
 func (e *InboundRealTimePaymentsTransferSimulationResultTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inbound_real_time_payments_transfer_simulation_result":
-		*e = InboundRealTimePaymentsTransferSimulationResultTypeEnum(s)
+		*e = InboundRealTimePaymentsTransferSimulationResultTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundRealTimePaymentsTransferSimulationResultTypeEnum: %v", v)
 	}
 }
 

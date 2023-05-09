@@ -31,7 +31,7 @@ type RunNamespacesDomainmappingsDeleteRequest struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Cloud Run currently ignores this parameter.
 	Kind *string `queryParam:"style=form,explode=true,name=kind"`
-	// The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
+	// Required. The name of the domain mapping to delete. For Cloud Run (fully managed), replace {namespace} with the project ID or number. It takes the form namespaces/{namespace}. For example: namespaces/PROJECT_ID
 	Name string `pathParam:"style=simple,explode=false,name=name"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`

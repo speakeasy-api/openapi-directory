@@ -16,17 +16,21 @@ const (
 	ListReleaseLabelsXAmzTargetEnumElasticMapReduceListReleaseLabels ListReleaseLabelsXAmzTargetEnum = "ElasticMapReduce.ListReleaseLabels"
 )
 
+func (e ListReleaseLabelsXAmzTargetEnum) ToPointer() *ListReleaseLabelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListReleaseLabelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.ListReleaseLabels":
-		*e = ListReleaseLabelsXAmzTargetEnum(s)
+		*e = ListReleaseLabelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListReleaseLabelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListReleaseLabelsXAmzTargetEnum: %v", v)
 	}
 }
 

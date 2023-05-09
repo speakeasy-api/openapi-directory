@@ -24,12 +24,16 @@ const (
 	PasswordRequirementsPasswordQualityEnumComplexityHigh             PasswordRequirementsPasswordQualityEnum = "COMPLEXITY_HIGH"
 )
 
+func (e PasswordRequirementsPasswordQualityEnum) ToPointer() *PasswordRequirementsPasswordQualityEnum {
+	return &e
+}
+
 func (e *PasswordRequirementsPasswordQualityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASSWORD_QUALITY_UNSPECIFIED":
 		fallthrough
 	case "BIOMETRIC_WEAK":
@@ -51,10 +55,10 @@ func (e *PasswordRequirementsPasswordQualityEnum) UnmarshalJSON(data []byte) err
 	case "COMPLEXITY_MEDIUM":
 		fallthrough
 	case "COMPLEXITY_HIGH":
-		*e = PasswordRequirementsPasswordQualityEnum(s)
+		*e = PasswordRequirementsPasswordQualityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordRequirementsPasswordQualityEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordRequirementsPasswordQualityEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	PasswordRequirementsPasswordScopeEnumScopeProfile     PasswordRequirementsPasswordScopeEnum = "SCOPE_PROFILE"
 )
 
+func (e PasswordRequirementsPasswordScopeEnum) ToPointer() *PasswordRequirementsPasswordScopeEnum {
+	return &e
+}
+
 func (e *PasswordRequirementsPasswordScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCOPE_UNSPECIFIED":
 		fallthrough
 	case "SCOPE_DEVICE":
 		fallthrough
 	case "SCOPE_PROFILE":
-		*e = PasswordRequirementsPasswordScopeEnum(s)
+		*e = PasswordRequirementsPasswordScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordRequirementsPasswordScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordRequirementsPasswordScopeEnum: %v", v)
 	}
 }
 
@@ -94,21 +102,25 @@ const (
 	PasswordRequirementsRequirePasswordUnlockEnumRequireEveryDay                  PasswordRequirementsRequirePasswordUnlockEnum = "REQUIRE_EVERY_DAY"
 )
 
+func (e PasswordRequirementsRequirePasswordUnlockEnum) ToPointer() *PasswordRequirementsRequirePasswordUnlockEnum {
+	return &e
+}
+
 func (e *PasswordRequirementsRequirePasswordUnlockEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REQUIRE_PASSWORD_UNLOCK_UNSPECIFIED":
 		fallthrough
 	case "USE_DEFAULT_DEVICE_TIMEOUT":
 		fallthrough
 	case "REQUIRE_EVERY_DAY":
-		*e = PasswordRequirementsRequirePasswordUnlockEnum(s)
+		*e = PasswordRequirementsRequirePasswordUnlockEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordRequirementsRequirePasswordUnlockEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordRequirementsRequirePasswordUnlockEnum: %v", v)
 	}
 }
 
@@ -121,21 +133,25 @@ const (
 	PasswordRequirementsUnifiedLockSettingsEnumRequireSeparateWorkLock         PasswordRequirementsUnifiedLockSettingsEnum = "REQUIRE_SEPARATE_WORK_LOCK"
 )
 
+func (e PasswordRequirementsUnifiedLockSettingsEnum) ToPointer() *PasswordRequirementsUnifiedLockSettingsEnum {
+	return &e
+}
+
 func (e *PasswordRequirementsUnifiedLockSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIFIED_LOCK_SETTINGS_UNSPECIFIED":
 		fallthrough
 	case "ALLOW_UNIFIED_WORK_AND_PERSONAL_LOCK":
 		fallthrough
 	case "REQUIRE_SEPARATE_WORK_LOCK":
-		*e = PasswordRequirementsUnifiedLockSettingsEnum(s)
+		*e = PasswordRequirementsUnifiedLockSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordRequirementsUnifiedLockSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordRequirementsUnifiedLockSettingsEnum: %v", v)
 	}
 }
 

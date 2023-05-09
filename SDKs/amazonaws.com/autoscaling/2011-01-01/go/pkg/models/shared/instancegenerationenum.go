@@ -14,18 +14,22 @@ const (
 	InstanceGenerationEnumPrevious InstanceGenerationEnum = "previous"
 )
 
+func (e InstanceGenerationEnum) ToPointer() *InstanceGenerationEnum {
+	return &e
+}
+
 func (e *InstanceGenerationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = InstanceGenerationEnum(s)
+		*e = InstanceGenerationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceGenerationEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceGenerationEnum: %v", v)
 	}
 }

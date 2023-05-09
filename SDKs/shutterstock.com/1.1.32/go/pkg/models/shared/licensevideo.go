@@ -17,12 +17,16 @@ const (
 	LicenseVideoSizeEnumFourk LicenseVideoSizeEnum = "4k"
 )
 
+func (e LicenseVideoSizeEnum) ToPointer() *LicenseVideoSizeEnum {
+	return &e
+}
+
 func (e *LicenseVideoSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "sd":
@@ -30,10 +34,10 @@ func (e *LicenseVideoSizeEnum) UnmarshalJSON(data []byte) error {
 	case "hd":
 		fallthrough
 	case "4k":
-		*e = LicenseVideoSizeEnum(s)
+		*e = LicenseVideoSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseVideoSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseVideoSizeEnum: %v", v)
 	}
 }
 

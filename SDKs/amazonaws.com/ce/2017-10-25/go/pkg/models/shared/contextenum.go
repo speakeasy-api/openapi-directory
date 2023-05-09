@@ -15,20 +15,24 @@ const (
 	ContextEnumSavingsPlans ContextEnum = "SAVINGS_PLANS"
 )
 
+func (e ContextEnum) ToPointer() *ContextEnum {
+	return &e
+}
+
 func (e *ContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COST_AND_USAGE":
 		fallthrough
 	case "RESERVATIONS":
 		fallthrough
 	case "SAVINGS_PLANS":
-		*e = ContextEnum(s)
+		*e = ContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContextEnum: %s", s)
+		return fmt.Errorf("invalid value for ContextEnum: %v", v)
 	}
 }

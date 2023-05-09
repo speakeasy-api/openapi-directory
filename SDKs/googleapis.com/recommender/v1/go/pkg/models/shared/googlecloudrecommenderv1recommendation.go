@@ -18,12 +18,16 @@ const (
 	GoogleCloudRecommenderV1RecommendationPriorityEnumP1                  GoogleCloudRecommenderV1RecommendationPriorityEnum = "P1"
 )
 
+func (e GoogleCloudRecommenderV1RecommendationPriorityEnum) ToPointer() *GoogleCloudRecommenderV1RecommendationPriorityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1RecommendationPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIORITY_UNSPECIFIED":
 		fallthrough
 	case "P4":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRecommenderV1RecommendationPriorityEnum) UnmarshalJSON(data 
 	case "P2":
 		fallthrough
 	case "P1":
-		*e = GoogleCloudRecommenderV1RecommendationPriorityEnum(s)
+		*e = GoogleCloudRecommenderV1RecommendationPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1RecommendationPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1RecommendationPriorityEnum: %v", v)
 	}
 }
 

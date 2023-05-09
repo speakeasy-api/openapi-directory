@@ -20,17 +20,21 @@ const (
 	GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnumSpread GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum = "spread"
 )
 
+func (e GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum) ToPointer() *GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum {
+	return &e
+}
+
 func (e *GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "spread":
-		*e = GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum(s)
+		*e = GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlacementGroupsIDPlacementGroupResponsePlacementGroupTypeEnum: %v", v)
 	}
 }
 

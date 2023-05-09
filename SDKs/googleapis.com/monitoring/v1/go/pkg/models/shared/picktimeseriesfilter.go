@@ -16,21 +16,25 @@ const (
 	PickTimeSeriesFilterDirectionEnumBottom               PickTimeSeriesFilterDirectionEnum = "BOTTOM"
 )
 
+func (e PickTimeSeriesFilterDirectionEnum) ToPointer() *PickTimeSeriesFilterDirectionEnum {
+	return &e
+}
+
 func (e *PickTimeSeriesFilterDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "TOP":
 		fallthrough
 	case "BOTTOM":
-		*e = PickTimeSeriesFilterDirectionEnum(s)
+		*e = PickTimeSeriesFilterDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PickTimeSeriesFilterDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PickTimeSeriesFilterDirectionEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	PickTimeSeriesFilterRankingMethodEnumMethodLatest      PickTimeSeriesFilterRankingMethodEnum = "METHOD_LATEST"
 )
 
+func (e PickTimeSeriesFilterRankingMethodEnum) ToPointer() *PickTimeSeriesFilterRankingMethodEnum {
+	return &e
+}
+
 func (e *PickTimeSeriesFilterRankingMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_UNSPECIFIED":
 		fallthrough
 	case "METHOD_MEAN":
@@ -63,10 +71,10 @@ func (e *PickTimeSeriesFilterRankingMethodEnum) UnmarshalJSON(data []byte) error
 	case "METHOD_SUM":
 		fallthrough
 	case "METHOD_LATEST":
-		*e = PickTimeSeriesFilterRankingMethodEnum(s)
+		*e = PickTimeSeriesFilterRankingMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PickTimeSeriesFilterRankingMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PickTimeSeriesFilterRankingMethodEnum: %v", v)
 	}
 }
 

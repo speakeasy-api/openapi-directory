@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -49,4 +50,8 @@ pkg/models/shared/findcredentials.go
 pkg/models/shared/productcreatemodify.go
 pkg/models/shared/apicredentials.go
 pkg/models/shared/subscriptioncreatemodify.go
+docs/sdk/README.md
+docs/keysapi/README.md
+docs/productsapi/README.md
+docs/subscriptionsapi/README.md
 USAGE.md

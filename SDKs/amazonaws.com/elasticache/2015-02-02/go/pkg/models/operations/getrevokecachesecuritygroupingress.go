@@ -15,17 +15,21 @@ const (
 	GETRevokeCacheSecurityGroupIngressActionEnumRevokeCacheSecurityGroupIngress GETRevokeCacheSecurityGroupIngressActionEnum = "RevokeCacheSecurityGroupIngress"
 )
 
+func (e GETRevokeCacheSecurityGroupIngressActionEnum) ToPointer() *GETRevokeCacheSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *GETRevokeCacheSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RevokeCacheSecurityGroupIngress":
-		*e = GETRevokeCacheSecurityGroupIngressActionEnum(s)
+		*e = GETRevokeCacheSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeCacheSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeCacheSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRevokeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 GETRevokeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
 )
 
+func (e GETRevokeCacheSecurityGroupIngressVersionEnum) ToPointer() *GETRevokeCacheSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *GETRevokeCacheSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETRevokeCacheSecurityGroupIngressVersionEnum(s)
+		*e = GETRevokeCacheSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRevokeCacheSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRevokeCacheSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

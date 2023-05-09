@@ -31,19 +31,23 @@ const (
 	StartNetworkResourceUpdateRequestBodyUpdateTypeEnumReturn  StartNetworkResourceUpdateRequestBodyUpdateTypeEnum = "RETURN"
 )
 
+func (e StartNetworkResourceUpdateRequestBodyUpdateTypeEnum) ToPointer() *StartNetworkResourceUpdateRequestBodyUpdateTypeEnum {
+	return &e
+}
+
 func (e *StartNetworkResourceUpdateRequestBodyUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPLACE":
 		fallthrough
 	case "RETURN":
-		*e = StartNetworkResourceUpdateRequestBodyUpdateTypeEnum(s)
+		*e = StartNetworkResourceUpdateRequestBodyUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartNetworkResourceUpdateRequestBodyUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartNetworkResourceUpdateRequestBodyUpdateTypeEnum: %v", v)
 	}
 }
 

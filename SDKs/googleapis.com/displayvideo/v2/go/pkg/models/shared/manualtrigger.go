@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// ManualTriggerInput - A single manual trigger in Display & Video 360.
+// ManualTriggerInput - A single manual trigger in Display & Video 360. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 type ManualTriggerInput struct {
 	// Required. The maximum duration of each activation in minutes. Must be between 1 and 360 inclusive. After this duration, the trigger will be automatically deactivated.
 	ActivationDurationMinutes *string `json:"activationDurationMinutes,omitempty"`
@@ -26,25 +26,29 @@ const (
 	ManualTriggerStateEnumActive           ManualTriggerStateEnum = "ACTIVE"
 )
 
+func (e ManualTriggerStateEnum) ToPointer() *ManualTriggerStateEnum {
+	return &e
+}
+
 func (e *ManualTriggerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "ACTIVE":
-		*e = ManualTriggerStateEnum(s)
+		*e = ManualTriggerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManualTriggerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ManualTriggerStateEnum: %v", v)
 	}
 }
 
-// ManualTrigger - A single manual trigger in Display & Video 360.
+// ManualTrigger - A single manual trigger in Display & Video 360. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
 type ManualTrigger struct {
 	// Required. The maximum duration of each activation in minutes. Must be between 1 and 360 inclusive. After this duration, the trigger will be automatically deactivated.
 	ActivationDurationMinutes *string `json:"activationDurationMinutes,omitempty"`

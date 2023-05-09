@@ -16,21 +16,25 @@ const (
 	LineItemFlightFlightDateTypeEnumLineItemFlightDateTypeCustom      LineItemFlightFlightDateTypeEnum = "LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM"
 )
 
+func (e LineItemFlightFlightDateTypeEnum) ToPointer() *LineItemFlightFlightDateTypeEnum {
+	return &e
+}
+
 func (e *LineItemFlightFlightDateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_INHERITED":
 		fallthrough
 	case "LINE_ITEM_FLIGHT_DATE_TYPE_CUSTOM":
-		*e = LineItemFlightFlightDateTypeEnum(s)
+		*e = LineItemFlightFlightDateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemFlightFlightDateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemFlightFlightDateTypeEnum: %v", v)
 	}
 }
 

@@ -24,12 +24,16 @@ const (
 	DfareportingDynamicTargetingKeysDeleteObjectTypeEnumObjectPlacement  DfareportingDynamicTargetingKeysDeleteObjectTypeEnum = "OBJECT_PLACEMENT"
 )
 
+func (e DfareportingDynamicTargetingKeysDeleteObjectTypeEnum) ToPointer() *DfareportingDynamicTargetingKeysDeleteObjectTypeEnum {
+	return &e
+}
+
 func (e *DfareportingDynamicTargetingKeysDeleteObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OBJECT_ADVERTISER":
 		fallthrough
 	case "OBJECT_AD":
@@ -37,10 +41,10 @@ func (e *DfareportingDynamicTargetingKeysDeleteObjectTypeEnum) UnmarshalJSON(dat
 	case "OBJECT_CREATIVE":
 		fallthrough
 	case "OBJECT_PLACEMENT":
-		*e = DfareportingDynamicTargetingKeysDeleteObjectTypeEnum(s)
+		*e = DfareportingDynamicTargetingKeysDeleteObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingDynamicTargetingKeysDeleteObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingDynamicTargetingKeysDeleteObjectTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTCreateImageActionEnumCreateImage POSTCreateImageActionEnum = "CreateImage"
 )
 
+func (e POSTCreateImageActionEnum) ToPointer() *POSTCreateImageActionEnum {
+	return &e
+}
+
 func (e *POSTCreateImageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateImage":
-		*e = POSTCreateImageActionEnum(s)
+		*e = POSTCreateImageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateImageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateImageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateImageVersionEnumTwoThousandAndSixteen1115 POSTCreateImageVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateImageVersionEnum) ToPointer() *POSTCreateImageVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateImageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateImageVersionEnum(s)
+		*e = POSTCreateImageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateImageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateImageVersionEnum: %v", v)
 	}
 }
 

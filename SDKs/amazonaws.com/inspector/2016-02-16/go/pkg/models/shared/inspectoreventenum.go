@@ -17,12 +17,16 @@ const (
 	InspectorEventEnumOther                     InspectorEventEnum = "OTHER"
 )
 
+func (e InspectorEventEnum) ToPointer() *InspectorEventEnum {
+	return &e
+}
+
 func (e *InspectorEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSESSMENT_RUN_STARTED":
 		fallthrough
 	case "ASSESSMENT_RUN_COMPLETED":
@@ -32,9 +36,9 @@ func (e *InspectorEventEnum) UnmarshalJSON(data []byte) error {
 	case "FINDING_REPORTED":
 		fallthrough
 	case "OTHER":
-		*e = InspectorEventEnum(s)
+		*e = InspectorEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InspectorEventEnum: %s", s)
+		return fmt.Errorf("invalid value for InspectorEventEnum: %v", v)
 	}
 }

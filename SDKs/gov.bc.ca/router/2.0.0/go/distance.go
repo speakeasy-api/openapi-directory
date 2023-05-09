@@ -34,7 +34,10 @@ func newDistance(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Represents the distance and time of the shortest or fastest path between given start and end points.
 func (s *distance) GetDistanceOutputFormat(ctx context.Context, request operations.GetDistanceOutputFormatRequest) (*operations.GetDistanceOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distance.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/distance.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *distance) GetDistanceOutputFormat(ctx context.Context, request operatio
 // Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
 func (s *distance) GetDistanceBetweenPairsOutputFormat(ctx context.Context, request operations.GetDistanceBetweenPairsOutputFormatRequest) (*operations.GetDistanceBetweenPairsOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distance/betweenPairs.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/distance/betweenPairs.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -114,7 +120,10 @@ func (s *distance) GetDistanceBetweenPairsOutputFormat(ctx context.Context, requ
 // Represents the distance and time of the shortest or fastest path between given start and end points.
 func (s *distance) GetTruckDistanceOutputFormat(ctx context.Context, request operations.GetTruckDistanceOutputFormatRequest) (*operations.GetTruckDistanceOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/distance.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/truck/distance.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +163,10 @@ func (s *distance) GetTruckDistanceOutputFormat(ctx context.Context, request ope
 // Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints for a commercial vehicle. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
 func (s *distance) GetTruckDistanceBetweenPairsOutputFormat(ctx context.Context, request operations.GetTruckDistanceBetweenPairsOutputFormatRequest) (*operations.GetTruckDistanceBetweenPairsOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/distance/betweenPairs.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/truck/distance/betweenPairs.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -194,7 +206,10 @@ func (s *distance) GetTruckDistanceBetweenPairsOutputFormat(ctx context.Context,
 // Represents the distance and time of the shortest or fastest path between given start and end points.
 func (s *distance) PostDistanceOutputFormat(ctx context.Context, request operations.PostDistanceOutputFormatRequest) (*operations.PostDistanceOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distance.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/distance.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -234,7 +249,10 @@ func (s *distance) PostDistanceOutputFormat(ctx context.Context, request operati
 // Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
 func (s *distance) PostDistanceBetweenPairsOutputFormat(ctx context.Context, request operations.PostDistanceBetweenPairsOutputFormatRequest) (*operations.PostDistanceBetweenPairsOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/distance/betweenPairs.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/distance/betweenPairs.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -274,7 +292,10 @@ func (s *distance) PostDistanceBetweenPairsOutputFormat(ctx context.Context, req
 // Represents the distance and time of the shortest or fastest path between given start and end points.
 func (s *distance) PostTruckDistanceOutputFormat(ctx context.Context, request operations.PostTruckDistanceOutputFormatRequest) (*operations.PostTruckDistanceOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/distance.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/truck/distance.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -314,7 +335,10 @@ func (s *distance) PostTruckDistanceOutputFormat(ctx context.Context, request op
 // Represents the distance and time of the shortest or fastest paths between all pairs of fromPoints and toPoints. The number of fromPoints times the number of toPoints should not exceed 100 or the request will time out.
 func (s *distance) PostTruckDistanceBetweenPairsOutputFormat(ctx context.Context, request operations.PostTruckDistanceBetweenPairsOutputFormatRequest) (*operations.PostTruckDistanceBetweenPairsOutputFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/truck/distance/betweenPairs.{outputFormat}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/truck/distance/betweenPairs.{outputFormat}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

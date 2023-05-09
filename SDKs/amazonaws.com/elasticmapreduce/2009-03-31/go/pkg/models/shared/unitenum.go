@@ -39,12 +39,16 @@ const (
 	UnitEnumCountPerSecond     UnitEnum = "COUNT_PER_SECOND"
 )
 
+func (e UnitEnum) ToPointer() *UnitEnum {
+	return &e
+}
+
 func (e *UnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "SECONDS":
@@ -98,9 +102,9 @@ func (e *UnitEnum) UnmarshalJSON(data []byte) error {
 	case "TERA_BITS_PER_SECOND":
 		fallthrough
 	case "COUNT_PER_SECOND":
-		*e = UnitEnum(s)
+		*e = UnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UnitEnum: %v", v)
 	}
 }

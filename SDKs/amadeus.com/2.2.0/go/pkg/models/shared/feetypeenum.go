@@ -16,20 +16,24 @@ const (
 	FeeTypeEnumSupplier      FeeTypeEnum = "SUPPLIER"
 )
 
+func (e FeeTypeEnum) ToPointer() *FeeTypeEnum {
+	return &e
+}
+
 func (e *FeeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TICKETING":
 		fallthrough
 	case "FORM_OF_PAYMENT":
 		fallthrough
 	case "SUPPLIER":
-		*e = FeeTypeEnum(s)
+		*e = FeeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeeTypeEnum: %v", v)
 	}
 }

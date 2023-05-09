@@ -19,12 +19,16 @@ const (
 	VolumeAttachmentStateEnumBusy      VolumeAttachmentStateEnum = "busy"
 )
 
+func (e VolumeAttachmentStateEnum) ToPointer() *VolumeAttachmentStateEnum {
+	return &e
+}
+
 func (e *VolumeAttachmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -34,10 +38,10 @@ func (e *VolumeAttachmentStateEnum) UnmarshalJSON(data []byte) error {
 	case "detached":
 		fallthrough
 	case "busy":
-		*e = VolumeAttachmentStateEnum(s)
+		*e = VolumeAttachmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeAttachmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeAttachmentStateEnum: %v", v)
 	}
 }
 

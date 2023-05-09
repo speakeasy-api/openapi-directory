@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetweatherzipcodeRequest{
+    ctx := context.Background()
+    res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, operations.GetweatherzipcodeRequest{
         License: "corrupti",
         Zip: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

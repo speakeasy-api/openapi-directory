@@ -17,12 +17,16 @@ const (
 	BusinessBusinessCenterExceptionEnumDependentOnDayOfWeek BusinessBusinessCenterExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e BusinessBusinessCenterExceptionEnum) ToPointer() *BusinessBusinessCenterExceptionEnum {
+	return &e
+}
+
 func (e *BusinessBusinessCenterExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -30,10 +34,10 @@ func (e *BusinessBusinessCenterExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = BusinessBusinessCenterExceptionEnum(s)
+		*e = BusinessBusinessCenterExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessBusinessCenterExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessBusinessCenterExceptionEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	BusinessMeetingRoomsCountExceptionEnumDependentOnDayOfWeek BusinessMeetingRoomsCountExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e BusinessMeetingRoomsCountExceptionEnum) ToPointer() *BusinessMeetingRoomsCountExceptionEnum {
+	return &e
+}
+
 func (e *BusinessMeetingRoomsCountExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -60,10 +68,10 @@ func (e *BusinessMeetingRoomsCountExceptionEnum) UnmarshalJSON(data []byte) erro
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = BusinessMeetingRoomsCountExceptionEnum(s)
+		*e = BusinessMeetingRoomsCountExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessMeetingRoomsCountExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessMeetingRoomsCountExceptionEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	BusinessMeetingRoomsExceptionEnumDependentOnDayOfWeek BusinessMeetingRoomsExceptionEnum = "DEPENDENT_ON_DAY_OF_WEEK"
 )
 
+func (e BusinessMeetingRoomsExceptionEnum) ToPointer() *BusinessMeetingRoomsExceptionEnum {
+	return &e
+}
+
 func (e *BusinessMeetingRoomsExceptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEPTION_UNSPECIFIED":
 		fallthrough
 	case "UNDER_CONSTRUCTION":
@@ -90,10 +102,10 @@ func (e *BusinessMeetingRoomsExceptionEnum) UnmarshalJSON(data []byte) error {
 	case "DEPENDENT_ON_SEASON":
 		fallthrough
 	case "DEPENDENT_ON_DAY_OF_WEEK":
-		*e = BusinessMeetingRoomsExceptionEnum(s)
+		*e = BusinessMeetingRoomsExceptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessMeetingRoomsExceptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessMeetingRoomsExceptionEnum: %v", v)
 	}
 }
 

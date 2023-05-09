@@ -88,7 +88,10 @@ func (s *inventoryTask) CreateInventoryTask(ctx context.Context, request shared.
 // GetInventoryTask - This method retrieves the task details and status of the specified inventory-related task. The input is <strong>task_id</strong>.
 func (s *inventoryTask) GetInventoryTask(ctx context.Context, request operations.GetInventoryTaskRequest, security operations.GetInventoryTaskSecurity) (*operations.GetInventoryTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/inventory_task/{task_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/inventory_task/{task_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

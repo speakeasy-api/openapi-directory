@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -26,4 +27,6 @@ pkg/models/shared/signblobresponse.go
 pkg/models/shared/signblobrequest.go
 pkg/models/shared/signjwtresponse.go
 pkg/models/shared/signjwtrequest.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

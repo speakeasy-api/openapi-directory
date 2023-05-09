@@ -20,12 +20,16 @@ const (
 	ScorecardChartSpecAggregateTypeEnumSum                           ScorecardChartSpecAggregateTypeEnum = "SUM"
 )
 
+func (e ScorecardChartSpecAggregateTypeEnum) ToPointer() *ScorecardChartSpecAggregateTypeEnum {
+	return &e
+}
+
 func (e *ScorecardChartSpecAggregateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHART_AGGREGATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AVERAGE":
@@ -39,10 +43,10 @@ func (e *ScorecardChartSpecAggregateTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MIN":
 		fallthrough
 	case "SUM":
-		*e = ScorecardChartSpecAggregateTypeEnum(s)
+		*e = ScorecardChartSpecAggregateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScorecardChartSpecAggregateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScorecardChartSpecAggregateTypeEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	ScorecardChartSpecNumberFormatSourceEnumCustom                           ScorecardChartSpecNumberFormatSourceEnum = "CUSTOM"
 )
 
+func (e ScorecardChartSpecNumberFormatSourceEnum) ToPointer() *ScorecardChartSpecNumberFormatSourceEnum {
+	return &e
+}
+
 func (e *ScorecardChartSpecNumberFormatSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHART_NUMBER_FORMAT_SOURCE_UNDEFINED":
 		fallthrough
 	case "FROM_DATA":
 		fallthrough
 	case "CUSTOM":
-		*e = ScorecardChartSpecNumberFormatSourceEnum(s)
+		*e = ScorecardChartSpecNumberFormatSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScorecardChartSpecNumberFormatSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ScorecardChartSpecNumberFormatSourceEnum: %v", v)
 	}
 }
 

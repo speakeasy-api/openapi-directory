@@ -16,17 +16,21 @@ const (
 	DeleteCorsPolicyXAmzTargetEnumMediaStore20170901DeleteCorsPolicy DeleteCorsPolicyXAmzTargetEnum = "MediaStore_20170901.DeleteCorsPolicy"
 )
 
+func (e DeleteCorsPolicyXAmzTargetEnum) ToPointer() *DeleteCorsPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCorsPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.DeleteCorsPolicy":
-		*e = DeleteCorsPolicyXAmzTargetEnum(s)
+		*e = DeleteCorsPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCorsPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCorsPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

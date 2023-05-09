@@ -28,19 +28,23 @@ const (
 	PostFirewallsCreateFirewallRequestApplyToTypeEnumLabelSelector PostFirewallsCreateFirewallRequestApplyToTypeEnum = "label_selector"
 )
 
+func (e PostFirewallsCreateFirewallRequestApplyToTypeEnum) ToPointer() *PostFirewallsCreateFirewallRequestApplyToTypeEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallRequestApplyToTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
-		*e = PostFirewallsCreateFirewallRequestApplyToTypeEnum(s)
+		*e = PostFirewallsCreateFirewallRequestApplyToTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestApplyToTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestApplyToTypeEnum: %v", v)
 	}
 }
 
@@ -61,19 +65,23 @@ const (
 	PostFirewallsCreateFirewallRequestRuleDirectionEnumOut PostFirewallsCreateFirewallRequestRuleDirectionEnum = "out"
 )
 
+func (e PostFirewallsCreateFirewallRequestRuleDirectionEnum) ToPointer() *PostFirewallsCreateFirewallRequestRuleDirectionEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallRequestRuleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = PostFirewallsCreateFirewallRequestRuleDirectionEnum(s)
+		*e = PostFirewallsCreateFirewallRequestRuleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestRuleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestRuleDirectionEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	PostFirewallsCreateFirewallRequestRuleProtocolEnumGre  PostFirewallsCreateFirewallRequestRuleProtocolEnum = "gre"
 )
 
+func (e PostFirewallsCreateFirewallRequestRuleProtocolEnum) ToPointer() *PostFirewallsCreateFirewallRequestRuleProtocolEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallRequestRuleProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
@@ -103,10 +115,10 @@ func (e *PostFirewallsCreateFirewallRequestRuleProtocolEnum) UnmarshalJSON(data 
 	case "esp":
 		fallthrough
 	case "gre":
-		*e = PostFirewallsCreateFirewallRequestRuleProtocolEnum(s)
+		*e = PostFirewallsCreateFirewallRequestRuleProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestRuleProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallRequestRuleProtocolEnum: %v", v)
 	}
 }
 
@@ -160,21 +172,25 @@ const (
 	PostFirewallsCreateFirewallResponseActionStatusEnumError   PostFirewallsCreateFirewallResponseActionStatusEnum = "error"
 )
 
+func (e PostFirewallsCreateFirewallResponseActionStatusEnum) ToPointer() *PostFirewallsCreateFirewallResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFirewallsCreateFirewallResponseActionStatusEnum(s)
+		*e = PostFirewallsCreateFirewallResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseActionStatusEnum: %v", v)
 	}
 }
 
@@ -209,17 +225,21 @@ const (
 	PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnumServer PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum = "server"
 )
 
+func (e PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum) ToPointer() *PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
-		*e = PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum(s)
+		*e = PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallAppliedToAppliedToResourcesTypeEnum: %v", v)
 	}
 }
 
@@ -247,19 +267,23 @@ const (
 	PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnumLabelSelector PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum = "label_selector"
 )
 
+func (e PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum) ToPointer() *PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
-		*e = PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum(s)
+		*e = PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallAppliedToTypeEnum: %v", v)
 	}
 }
 
@@ -279,19 +303,23 @@ const (
 	PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnumOut PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum = "out"
 )
 
+func (e PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum) ToPointer() *PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "in":
 		fallthrough
 	case "out":
-		*e = PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum(s)
+		*e = PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallRuleDirectionEnum: %v", v)
 	}
 }
 
@@ -306,12 +334,16 @@ const (
 	PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnumGre  PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum = "gre"
 )
 
+func (e PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum) ToPointer() *PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum {
+	return &e
+}
+
 func (e *PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tcp":
 		fallthrough
 	case "udp":
@@ -321,10 +353,10 @@ func (e *PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum) UnmarshalJ
 	case "esp":
 		fallthrough
 	case "gre":
-		*e = PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum(s)
+		*e = PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsCreateFirewallResponseFirewallRuleProtocolEnum: %v", v)
 	}
 }
 

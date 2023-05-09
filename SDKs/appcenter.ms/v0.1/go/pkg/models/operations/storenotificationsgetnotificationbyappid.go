@@ -31,12 +31,16 @@ const (
 	StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnumTooManyRequests     StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum) ToPointer() *StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum)
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum(s)
+		*e = StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreNotificationsGetNotificationByAppIDDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 

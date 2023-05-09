@@ -15,17 +15,21 @@ const (
 	POSTCreateReplaceRootVolumeTaskActionEnumCreateReplaceRootVolumeTask POSTCreateReplaceRootVolumeTaskActionEnum = "CreateReplaceRootVolumeTask"
 )
 
+func (e POSTCreateReplaceRootVolumeTaskActionEnum) ToPointer() *POSTCreateReplaceRootVolumeTaskActionEnum {
+	return &e
+}
+
 func (e *POSTCreateReplaceRootVolumeTaskActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateReplaceRootVolumeTask":
-		*e = POSTCreateReplaceRootVolumeTaskActionEnum(s)
+		*e = POSTCreateReplaceRootVolumeTaskActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReplaceRootVolumeTaskActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReplaceRootVolumeTaskActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateReplaceRootVolumeTaskVersionEnumTwoThousandAndSixteen1115 POSTCreateReplaceRootVolumeTaskVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateReplaceRootVolumeTaskVersionEnum) ToPointer() *POSTCreateReplaceRootVolumeTaskVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateReplaceRootVolumeTaskVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateReplaceRootVolumeTaskVersionEnum(s)
+		*e = POSTCreateReplaceRootVolumeTaskVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateReplaceRootVolumeTaskVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateReplaceRootVolumeTaskVersionEnum: %v", v)
 	}
 }
 

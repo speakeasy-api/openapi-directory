@@ -15,17 +15,21 @@ const (
 	GETListPoliciesActionEnumListPolicies GETListPoliciesActionEnum = "ListPolicies"
 )
 
+func (e GETListPoliciesActionEnum) ToPointer() *GETListPoliciesActionEnum {
+	return &e
+}
+
 func (e *GETListPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListPolicies":
-		*e = GETListPoliciesActionEnum(s)
+		*e = GETListPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETListPoliciesPolicyUsageFilterEnumPermissionsBoundary GETListPoliciesPolicyUsageFilterEnum = "PermissionsBoundary"
 )
 
+func (e GETListPoliciesPolicyUsageFilterEnum) ToPointer() *GETListPoliciesPolicyUsageFilterEnum {
+	return &e
+}
+
 func (e *GETListPoliciesPolicyUsageFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PermissionsPolicy":
 		fallthrough
 	case "PermissionsBoundary":
-		*e = GETListPoliciesPolicyUsageFilterEnum(s)
+		*e = GETListPoliciesPolicyUsageFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListPoliciesPolicyUsageFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListPoliciesPolicyUsageFilterEnum: %v", v)
 	}
 }
 
@@ -62,21 +70,25 @@ const (
 	GETListPoliciesScopeEnumLocal GETListPoliciesScopeEnum = "Local"
 )
 
+func (e GETListPoliciesScopeEnum) ToPointer() *GETListPoliciesScopeEnum {
+	return &e
+}
+
 func (e *GETListPoliciesScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "AWS":
 		fallthrough
 	case "Local":
-		*e = GETListPoliciesScopeEnum(s)
+		*e = GETListPoliciesScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListPoliciesScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListPoliciesScopeEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	GETListPoliciesVersionEnumTwoThousandAndTen0508 GETListPoliciesVersionEnum = "2010-05-08"
 )
 
+func (e GETListPoliciesVersionEnum) ToPointer() *GETListPoliciesVersionEnum {
+	return &e
+}
+
 func (e *GETListPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListPoliciesVersionEnum(s)
+		*e = GETListPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListPoliciesVersionEnum: %v", v)
 	}
 }
 

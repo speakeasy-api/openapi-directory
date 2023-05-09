@@ -7,7 +7,8 @@ import (
 	"fmt"
 )
 
-// CreditorAccountWriteTypeEnum - Creditor account type
+// CreditorAccountWriteTypeEnum - * `IBAN` - IBAN
+// * `SCAN` - SortCodeAccountNumber
 type CreditorAccountWriteTypeEnum string
 
 const (
@@ -15,26 +16,62 @@ const (
 	CreditorAccountWriteTypeEnumScan CreditorAccountWriteTypeEnum = "SCAN"
 )
 
+func (e CreditorAccountWriteTypeEnum) ToPointer() *CreditorAccountWriteTypeEnum {
+	return &e
+}
+
 func (e *CreditorAccountWriteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IBAN":
 		fallthrough
 	case "SCAN":
-		*e = CreditorAccountWriteTypeEnum(s)
+		*e = CreditorAccountWriteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreditorAccountWriteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreditorAccountWriteTypeEnum: %v", v)
 	}
 }
 
 // CreditorAccountWrite - Creditor account write serializer.
 type CreditorAccountWrite struct {
 	// Creditor account type identifier
-	Account        string                  `json:"account"`
+	Account string `json:"account"`
+	// * `AT` - Austria
+	// * `BE` - Belgium
+	// * `BG` - Bulgaria
+	// * `HR` - Croatia
+	// * `CY` - Cyprus
+	// * `CZ` - Czechia
+	// * `DK` - Denmark
+	// * `EE` - Estonia
+	// * `FI` - Finland
+	// * `FR` - France
+	// * `DE` - Germany
+	// * `GR` - Greece
+	// * `HU` - Hungary
+	// * `IS` - Iceland
+	// * `IE` - Ireland
+	// * `IT` - Italy
+	// * `LV` - Latvia
+	// * `LI` - Liechtenstein
+	// * `LT` - Lithuania
+	// * `LU` - Luxembourg
+	// * `MT` - Malta
+	// * `NL` - Netherlands
+	// * `NO` - Norway
+	// * `PL` - Poland
+	// * `PT` - Portugal
+	// * `RO` - Romania
+	// * `SK` - Slovakia
+	// * `SI` - Slovenia
+	// * `ES` - Spain
+	// * `SE` - Sweden
+	// * `GB` - United Kingdom
+	// * `US` - United States of America
 	AddressCountry *AddressCountryEnumEnum `json:"address_country,omitempty"`
 	// Creditor account address street
 	AddressStreet *string `json:"address_street,omitempty"`
@@ -53,5 +90,8 @@ type CreditorAccountWrite struct {
 	// Creditor account address post code
 	PostCode *string `json:"post_code,omitempty"`
 	// Creditor account type
+	//
+	// * `IBAN` - IBAN
+	// * `SCAN` - SortCodeAccountNumber
 	Type *CreditorAccountWriteTypeEnum `json:"type,omitempty"`
 }

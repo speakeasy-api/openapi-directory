@@ -41,12 +41,16 @@ const (
 	ReleasesPutDistributionTester404ApplicationJSONCodeEnumTooManyRequests     ReleasesPutDistributionTester404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesPutDistributionTester404ApplicationJSONCodeEnum) ToPointer() *ReleasesPutDistributionTester404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesPutDistributionTester404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -60,10 +64,10 @@ func (e *ReleasesPutDistributionTester404ApplicationJSONCodeEnum) UnmarshalJSON(
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesPutDistributionTester404ApplicationJSONCodeEnum(s)
+		*e = ReleasesPutDistributionTester404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesPutDistributionTester404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesPutDistributionTester404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

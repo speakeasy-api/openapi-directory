@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -110,4 +111,8 @@ pkg/models/shared/listdirectorypeopleresponse.go
 pkg/models/shared/searchdirectorypeopleresponse.go
 pkg/models/shared/updatecontactphotoresponse.go
 pkg/models/shared/updatecontactphotorequest.go
+docs/sdk/README.md
+docs/contactgroups/README.md
+docs/othercontacts/README.md
+docs/people/README.md
 USAGE.md

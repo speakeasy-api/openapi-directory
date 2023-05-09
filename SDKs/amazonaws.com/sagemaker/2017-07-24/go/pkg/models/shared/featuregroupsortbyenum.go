@@ -16,12 +16,16 @@ const (
 	FeatureGroupSortByEnumCreationTime       FeatureGroupSortByEnum = "CreationTime"
 )
 
+func (e FeatureGroupSortByEnum) ToPointer() *FeatureGroupSortByEnum {
+	return &e
+}
+
 func (e *FeatureGroupSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "FeatureGroupStatus":
@@ -29,9 +33,9 @@ func (e *FeatureGroupSortByEnum) UnmarshalJSON(data []byte) error {
 	case "OfflineStoreStatus":
 		fallthrough
 	case "CreationTime":
-		*e = FeatureGroupSortByEnum(s)
+		*e = FeatureGroupSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureGroupSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureGroupSortByEnum: %v", v)
 	}
 }

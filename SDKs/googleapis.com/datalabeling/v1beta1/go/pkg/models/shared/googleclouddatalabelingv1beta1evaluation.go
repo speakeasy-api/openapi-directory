@@ -27,12 +27,16 @@ const (
 	GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnumGeneralClassificationAnnotation    GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum = "GENERAL_CLASSIFICATION_ANNOTATION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_CLASSIFICATION_ANNOTATION":
@@ -60,10 +64,10 @@ func (e *GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum) UnmarshalJS
 	case "TEXT_ENTITY_EXTRACTION_ANNOTATION":
 		fallthrough
 	case "GENERAL_CLASSIFICATION_ANNOTATION":
-		*e = GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1EvaluationAnnotationTypeEnum: %v", v)
 	}
 }
 

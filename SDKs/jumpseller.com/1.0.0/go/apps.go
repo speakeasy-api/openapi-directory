@@ -36,7 +36,10 @@ func newApps(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DeleteJsappsCodeJSON - Delete an existing JSApp.
 func (s *apps) DeleteJsappsCodeJSON(ctx context.Context, request operations.DeleteJsappsCodeJSONRequest) (*operations.DeleteJsappsCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *apps) GetJsappsJSON(ctx context.Context, request operations.GetJsappsJS
 // GetJsappsCodeJSON - Retrieve a JSApp.
 func (s *apps) GetJsappsCodeJSON(ctx context.Context, request operations.GetJsappsCodeJSONRequest) (*operations.GetJsappsCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jsapps/{code}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

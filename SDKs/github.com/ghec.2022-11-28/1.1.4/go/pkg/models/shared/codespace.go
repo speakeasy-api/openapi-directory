@@ -32,12 +32,16 @@ const (
 	CodespaceLocationEnumWestUs2       CodespaceLocationEnum = "WestUs2"
 )
 
+func (e CodespaceLocationEnum) ToPointer() *CodespaceLocationEnum {
+	return &e
+}
+
 func (e *CodespaceLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EastUs":
 		fallthrough
 	case "SouthEastAsia":
@@ -45,10 +49,10 @@ func (e *CodespaceLocationEnum) UnmarshalJSON(data []byte) error {
 	case "WestEurope":
 		fallthrough
 	case "WestUs2":
-		*e = CodespaceLocationEnum(s)
+		*e = CodespaceLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespaceLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespaceLocationEnum: %v", v)
 	}
 }
 
@@ -80,12 +84,16 @@ const (
 	CodespaceStateEnumRebuilding   CodespaceStateEnum = "Rebuilding"
 )
 
+func (e CodespaceStateEnum) ToPointer() *CodespaceStateEnum {
+	return &e
+}
+
 func (e *CodespaceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unknown":
 		fallthrough
 	case "Created":
@@ -119,10 +127,10 @@ func (e *CodespaceStateEnum) UnmarshalJSON(data []byte) error {
 	case "Updating":
 		fallthrough
 	case "Rebuilding":
-		*e = CodespaceStateEnum(s)
+		*e = CodespaceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespaceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespaceStateEnum: %v", v)
 	}
 }
 

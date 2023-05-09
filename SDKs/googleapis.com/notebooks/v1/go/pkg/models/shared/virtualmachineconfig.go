@@ -16,21 +16,25 @@ const (
 	VirtualMachineConfigNicTypeEnumGvnic              VirtualMachineConfigNicTypeEnum = "GVNIC"
 )
 
+func (e VirtualMachineConfigNicTypeEnum) ToPointer() *VirtualMachineConfigNicTypeEnum {
+	return &e
+}
+
 func (e *VirtualMachineConfigNicTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_NIC_TYPE":
 		fallthrough
 	case "VIRTIO_NET":
 		fallthrough
 	case "GVNIC":
-		*e = VirtualMachineConfigNicTypeEnum(s)
+		*e = VirtualMachineConfigNicTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualMachineConfigNicTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualMachineConfigNicTypeEnum: %v", v)
 	}
 }
 

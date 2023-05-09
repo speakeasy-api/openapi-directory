@@ -16,17 +16,21 @@ const (
 	GETModifyClusterMaintenanceActionEnumModifyClusterMaintenance GETModifyClusterMaintenanceActionEnum = "ModifyClusterMaintenance"
 )
 
+func (e GETModifyClusterMaintenanceActionEnum) ToPointer() *GETModifyClusterMaintenanceActionEnum {
+	return &e
+}
+
 func (e *GETModifyClusterMaintenanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyClusterMaintenance":
-		*e = GETModifyClusterMaintenanceActionEnum(s)
+		*e = GETModifyClusterMaintenanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyClusterMaintenanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyClusterMaintenanceActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETModifyClusterMaintenanceVersionEnumTwoThousandAndTwelve1201 GETModifyClusterMaintenanceVersionEnum = "2012-12-01"
 )
 
+func (e GETModifyClusterMaintenanceVersionEnum) ToPointer() *GETModifyClusterMaintenanceVersionEnum {
+	return &e
+}
+
 func (e *GETModifyClusterMaintenanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETModifyClusterMaintenanceVersionEnum(s)
+		*e = GETModifyClusterMaintenanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyClusterMaintenanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyClusterMaintenanceVersionEnum: %v", v)
 	}
 }
 

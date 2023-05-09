@@ -16,17 +16,21 @@ const (
 	BatchDetectSyntaxXAmzTargetEnumComprehend20171127BatchDetectSyntax BatchDetectSyntaxXAmzTargetEnum = "Comprehend_20171127.BatchDetectSyntax"
 )
 
+func (e BatchDetectSyntaxXAmzTargetEnum) ToPointer() *BatchDetectSyntaxXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDetectSyntaxXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.BatchDetectSyntax":
-		*e = BatchDetectSyntaxXAmzTargetEnum(s)
+		*e = BatchDetectSyntaxXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDetectSyntaxXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDetectSyntaxXAmzTargetEnum: %v", v)
 	}
 }
 

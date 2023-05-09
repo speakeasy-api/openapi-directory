@@ -16,12 +16,16 @@ const (
 	RadiusAuthenticationProtocolEnumMsChaPv2 RadiusAuthenticationProtocolEnum = "MS-CHAPv2"
 )
 
+func (e RadiusAuthenticationProtocolEnum) ToPointer() *RadiusAuthenticationProtocolEnum {
+	return &e
+}
+
 func (e *RadiusAuthenticationProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAP":
 		fallthrough
 	case "CHAP":
@@ -29,9 +33,9 @@ func (e *RadiusAuthenticationProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "MS-CHAPv1":
 		fallthrough
 	case "MS-CHAPv2":
-		*e = RadiusAuthenticationProtocolEnum(s)
+		*e = RadiusAuthenticationProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RadiusAuthenticationProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for RadiusAuthenticationProtocolEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTGetServiceLastAccessedDetailsWithEntitiesActionEnumGetServiceLastAccessedDetailsWithEntities POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum = "GetServiceLastAccessedDetailsWithEntities"
 )
 
+func (e POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum) ToPointer() *POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum {
+	return &e
+}
+
 func (e *POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetServiceLastAccessedDetailsWithEntities":
-		*e = POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum(s)
+		*e = POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetServiceLastAccessedDetailsWithEntitiesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnumTwoThousandAndTen0508 POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum) ToPointer() *POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum(s)
+		*e = POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetServiceLastAccessedDetailsWithEntitiesVersionEnum: %v", v)
 	}
 }
 

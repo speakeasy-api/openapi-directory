@@ -18,12 +18,16 @@ const (
 	DescribeImagesResultImagesArchitectureEnumArm64Mac DescribeImagesResultImagesArchitectureEnum = "arm64_mac"
 )
 
+func (e DescribeImagesResultImagesArchitectureEnum) ToPointer() *DescribeImagesResultImagesArchitectureEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "i386":
 		fallthrough
 	case "x86_64":
@@ -33,10 +37,10 @@ func (e *DescribeImagesResultImagesArchitectureEnum) UnmarshalJSON(data []byte) 
 	case "x86_64_mac":
 		fallthrough
 	case "arm64_mac":
-		*e = DescribeImagesResultImagesArchitectureEnum(s)
+		*e = DescribeImagesResultImagesArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesArchitectureEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnumGp3      DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -72,10 +80,10 @@ func (e *DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum) Unmarsh
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -109,21 +117,25 @@ const (
 	DescribeImagesResultImagesBootModeEnumUefiPreferred DescribeImagesResultImagesBootModeEnum = "uefi-preferred"
 )
 
+func (e DescribeImagesResultImagesBootModeEnum) ToPointer() *DescribeImagesResultImagesBootModeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesBootModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
 		fallthrough
 	case "uefi-preferred":
-		*e = DescribeImagesResultImagesBootModeEnum(s)
+		*e = DescribeImagesResultImagesBootModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesBootModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesBootModeEnum: %v", v)
 	}
 }
 
@@ -135,19 +147,23 @@ const (
 	DescribeImagesResultImagesHypervisorEnumXen DescribeImagesResultImagesHypervisorEnum = "xen"
 )
 
+func (e DescribeImagesResultImagesHypervisorEnum) ToPointer() *DescribeImagesResultImagesHypervisorEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesHypervisorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ovm":
 		fallthrough
 	case "xen":
-		*e = DescribeImagesResultImagesHypervisorEnum(s)
+		*e = DescribeImagesResultImagesHypervisorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesHypervisorEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesHypervisorEnum: %v", v)
 	}
 }
 
@@ -160,21 +176,25 @@ const (
 	DescribeImagesResultImagesImageTypeEnumRamdisk DescribeImagesResultImagesImageTypeEnum = "ramdisk"
 )
 
+func (e DescribeImagesResultImagesImageTypeEnum) ToPointer() *DescribeImagesResultImagesImageTypeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "machine":
 		fallthrough
 	case "kernel":
 		fallthrough
 	case "ramdisk":
-		*e = DescribeImagesResultImagesImageTypeEnum(s)
+		*e = DescribeImagesResultImagesImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesImageTypeEnum: %v", v)
 	}
 }
 
@@ -185,17 +205,21 @@ const (
 	DescribeImagesResultImagesImdsSupportEnumV20 DescribeImagesResultImagesImdsSupportEnum = "v2.0"
 )
 
+func (e DescribeImagesResultImagesImdsSupportEnum) ToPointer() *DescribeImagesResultImagesImdsSupportEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesImdsSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v2.0":
-		*e = DescribeImagesResultImagesImdsSupportEnum(s)
+		*e = DescribeImagesResultImagesImdsSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesImdsSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesImdsSupportEnum: %v", v)
 	}
 }
 
@@ -206,17 +230,21 @@ const (
 	DescribeImagesResultImagesPlatformEnumWindows DescribeImagesResultImagesPlatformEnum = "Windows"
 )
 
+func (e DescribeImagesResultImagesPlatformEnum) ToPointer() *DescribeImagesResultImagesPlatformEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = DescribeImagesResultImagesPlatformEnum(s)
+		*e = DescribeImagesResultImagesPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesPlatformEnum: %v", v)
 	}
 }
 
@@ -228,19 +256,23 @@ const (
 	DescribeImagesResultImagesProductCodesProductCodeTypeEnumMarketplace DescribeImagesResultImagesProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeImagesResultImagesProductCodesProductCodeTypeEnum) ToPointer() *DescribeImagesResultImagesProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeImagesResultImagesProductCodesProductCodeTypeEnum(s)
+		*e = DescribeImagesResultImagesProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 
@@ -258,19 +290,23 @@ const (
 	DescribeImagesResultImagesRootDeviceTypeEnumInstanceStore DescribeImagesResultImagesRootDeviceTypeEnum = "instance-store"
 )
 
+func (e DescribeImagesResultImagesRootDeviceTypeEnum) ToPointer() *DescribeImagesResultImagesRootDeviceTypeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesRootDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ebs":
 		fallthrough
 	case "instance-store":
-		*e = DescribeImagesResultImagesRootDeviceTypeEnum(s)
+		*e = DescribeImagesResultImagesRootDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesRootDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesRootDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -287,12 +323,16 @@ const (
 	DescribeImagesResultImagesStateEnumError        DescribeImagesResultImagesStateEnum = "error"
 )
 
+func (e DescribeImagesResultImagesStateEnum) ToPointer() *DescribeImagesResultImagesStateEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "available":
@@ -306,10 +346,10 @@ func (e *DescribeImagesResultImagesStateEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "error":
-		*e = DescribeImagesResultImagesStateEnum(s)
+		*e = DescribeImagesResultImagesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesStateEnum: %v", v)
 	}
 }
 
@@ -332,17 +372,21 @@ const (
 	DescribeImagesResultImagesTpmSupportEnumV20 DescribeImagesResultImagesTpmSupportEnum = "v2.0"
 )
 
+func (e DescribeImagesResultImagesTpmSupportEnum) ToPointer() *DescribeImagesResultImagesTpmSupportEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesTpmSupportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "v2.0":
-		*e = DescribeImagesResultImagesTpmSupportEnum(s)
+		*e = DescribeImagesResultImagesTpmSupportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesTpmSupportEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesTpmSupportEnum: %v", v)
 	}
 }
 
@@ -354,19 +398,23 @@ const (
 	DescribeImagesResultImagesVirtualizationTypeEnumParavirtual DescribeImagesResultImagesVirtualizationTypeEnum = "paravirtual"
 )
 
+func (e DescribeImagesResultImagesVirtualizationTypeEnum) ToPointer() *DescribeImagesResultImagesVirtualizationTypeEnum {
+	return &e
+}
+
 func (e *DescribeImagesResultImagesVirtualizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hvm":
 		fallthrough
 	case "paravirtual":
-		*e = DescribeImagesResultImagesVirtualizationTypeEnum(s)
+		*e = DescribeImagesResultImagesVirtualizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeImagesResultImagesVirtualizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeImagesResultImagesVirtualizationTypeEnum: %v", v)
 	}
 }
 

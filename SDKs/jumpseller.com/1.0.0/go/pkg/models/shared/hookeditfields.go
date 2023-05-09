@@ -25,12 +25,16 @@ const (
 	HookEditFieldsEventEnumCustomerDeleted     HookEditFieldsEventEnum = "customer_deleted"
 )
 
+func (e HookEditFieldsEventEnum) ToPointer() *HookEditFieldsEventEnum {
+	return &e
+}
+
 func (e *HookEditFieldsEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "order_updated":
 		fallthrough
 	case "order_pending_payment":
@@ -54,10 +58,10 @@ func (e *HookEditFieldsEventEnum) UnmarshalJSON(data []byte) error {
 	case "customer_updated":
 		fallthrough
 	case "customer_deleted":
-		*e = HookEditFieldsEventEnum(s)
+		*e = HookEditFieldsEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookEditFieldsEventEnum: %s", s)
+		return fmt.Errorf("invalid value for HookEditFieldsEventEnum: %v", v)
 	}
 }
 

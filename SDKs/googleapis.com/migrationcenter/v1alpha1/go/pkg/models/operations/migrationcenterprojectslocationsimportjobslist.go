@@ -23,21 +23,25 @@ const (
 	MigrationcenterProjectsLocationsImportJobsListViewEnumImportJobViewFull        MigrationcenterProjectsLocationsImportJobsListViewEnum = "IMPORT_JOB_VIEW_FULL"
 )
 
+func (e MigrationcenterProjectsLocationsImportJobsListViewEnum) ToPointer() *MigrationcenterProjectsLocationsImportJobsListViewEnum {
+	return &e
+}
+
 func (e *MigrationcenterProjectsLocationsImportJobsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_JOB_VIEW_UNSPECIFIED":
 		fallthrough
 	case "IMPORT_JOB_VIEW_BASIC":
 		fallthrough
 	case "IMPORT_JOB_VIEW_FULL":
-		*e = MigrationcenterProjectsLocationsImportJobsListViewEnum(s)
+		*e = MigrationcenterProjectsLocationsImportJobsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationcenterProjectsLocationsImportJobsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationcenterProjectsLocationsImportJobsListViewEnum: %v", v)
 	}
 }
 

@@ -11,30 +11,34 @@ import (
 type DatabaseEntityEntityTypeEnum string
 
 const (
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeUnspecified     DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_UNSPECIFIED"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSchema          DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SCHEMA"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeTable           DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_TABLE"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeColumn          DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_COLUMN"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeConstraint      DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_CONSTRAINT"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeIndex           DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_INDEX"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeTrigger         DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_TRIGGER"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeView            DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_VIEW"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSequence        DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SEQUENCE"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeStoredProcedure DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_STORED_PROCEDURE"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeFunction        DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_FUNCTION"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSynonym         DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SYNONYM"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabasePackage DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeUdt             DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeMaterialView    DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_MATERIAL_VIEW"
-	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabase        DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeUnspecified      DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_UNSPECIFIED"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSchema           DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SCHEMA"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeTable            DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_TABLE"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeColumn           DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_COLUMN"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeConstraint       DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_CONSTRAINT"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeIndex            DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_INDEX"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeTrigger          DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_TRIGGER"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeView             DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_VIEW"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSequence         DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SEQUENCE"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeStoredProcedure  DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_STORED_PROCEDURE"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeFunction         DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_FUNCTION"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeSynonym          DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_SYNONYM"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabasePackage  DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeUdt              DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeMaterializedView DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabase         DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
 )
 
+func (e DatabaseEntityEntityTypeEnum) ToPointer() *DatabaseEntityEntityTypeEnum {
+	return &e
+}
+
 func (e *DatabaseEntityEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_ENTITY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATABASE_ENTITY_TYPE_SCHEMA":
@@ -63,13 +67,13 @@ func (e *DatabaseEntityEntityTypeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "DATABASE_ENTITY_TYPE_UDT":
 		fallthrough
-	case "DATABASE_ENTITY_TYPE_MATERIAL_VIEW":
+	case "DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW":
 		fallthrough
 	case "DATABASE_ENTITY_TYPE_DATABASE":
-		*e = DatabaseEntityEntityTypeEnum(s)
+		*e = DatabaseEntityEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseEntityEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseEntityEntityTypeEnum: %v", v)
 	}
 }
 
@@ -83,12 +87,16 @@ const (
 	DatabaseEntityTreeEnumDestination         DatabaseEntityTreeEnum = "DESTINATION"
 )
 
+func (e DatabaseEntityTreeEnum) ToPointer() *DatabaseEntityTreeEnum {
+	return &e
+}
+
 func (e *DatabaseEntityTreeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TREE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SOURCE":
@@ -96,10 +104,10 @@ func (e *DatabaseEntityTreeEnum) UnmarshalJSON(data []byte) error {
 	case "DRAFT":
 		fallthrough
 	case "DESTINATION":
-		*e = DatabaseEntityTreeEnum(s)
+		*e = DatabaseEntityTreeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseEntityTreeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseEntityTreeEnum: %v", v)
 	}
 }
 

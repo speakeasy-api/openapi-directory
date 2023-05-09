@@ -37,7 +37,10 @@ func newCommitStatuses(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns all statuses (e.g. build results) for a specific commit.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses(ct
 // Returns the specified build status for a commit.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, security operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -154,7 +160,10 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBui
 // request.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest, security operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +248,10 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequest
 // The context variables available are `repository` and `commit`.
 func (s *commitStatuses) PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest, security operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -314,7 +326,10 @@ func (s *commitStatuses) PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBu
 // The `key` cannot be changed.
 func (s *commitStatuses) PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest, security operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeySecurity) (*operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	DeliveryMediumTypeEnumEmail DeliveryMediumTypeEnum = "EMAIL"
 )
 
+func (e DeliveryMediumTypeEnum) ToPointer() *DeliveryMediumTypeEnum {
+	return &e
+}
+
 func (e *DeliveryMediumTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SMS":
 		fallthrough
 	case "EMAIL":
-		*e = DeliveryMediumTypeEnum(s)
+		*e = DeliveryMediumTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryMediumTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryMediumTypeEnum: %v", v)
 	}
 }

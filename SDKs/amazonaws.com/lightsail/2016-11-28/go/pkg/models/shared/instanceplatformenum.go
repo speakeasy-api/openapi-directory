@@ -14,18 +14,22 @@ const (
 	InstancePlatformEnumWindows   InstancePlatformEnum = "WINDOWS"
 )
 
+func (e InstancePlatformEnum) ToPointer() *InstancePlatformEnum {
+	return &e
+}
+
 func (e *InstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LINUX_UNIX":
 		fallthrough
 	case "WINDOWS":
-		*e = InstancePlatformEnum(s)
+		*e = InstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for InstancePlatformEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	StoredValueLoadRequestLoadTypeEnumLoad              StoredValueLoadRequestLoadTypeEnum = "load"
 )
 
+func (e StoredValueLoadRequestLoadTypeEnum) ToPointer() *StoredValueLoadRequestLoadTypeEnum {
+	return &e
+}
+
 func (e *StoredValueLoadRequestLoadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "merchandiseReturn":
 		fallthrough
 	case "load":
-		*e = StoredValueLoadRequestLoadTypeEnum(s)
+		*e = StoredValueLoadRequestLoadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoredValueLoadRequestLoadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoredValueLoadRequestLoadTypeEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	StoredValueLoadRequestShopperInteractionEnumPos       StoredValueLoadRequestShopperInteractionEnum = "POS"
 )
 
+func (e StoredValueLoadRequestShopperInteractionEnum) ToPointer() *StoredValueLoadRequestShopperInteractionEnum {
+	return &e
+}
+
 func (e *StoredValueLoadRequestShopperInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecommerce":
 		fallthrough
 	case "ContAuth":
@@ -61,10 +69,10 @@ func (e *StoredValueLoadRequestShopperInteractionEnum) UnmarshalJSON(data []byte
 	case "Moto":
 		fallthrough
 	case "POS":
-		*e = StoredValueLoadRequestShopperInteractionEnum(s)
+		*e = StoredValueLoadRequestShopperInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoredValueLoadRequestShopperInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for StoredValueLoadRequestShopperInteractionEnum: %v", v)
 	}
 }
 

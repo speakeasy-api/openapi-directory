@@ -8,7 +8,7 @@ type DeleteVerifiedAccessGroupResultVerifiedAccessGroupTags struct {
 	Value *string
 }
 
-// DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Amazon Web Services Verified Access group.
+// DeleteVerifiedAccessGroupResultVerifiedAccessGroup - The ID of the Verified Access group.
 type DeleteVerifiedAccessGroupResultVerifiedAccessGroup struct {
 	CreationTime             *string
 	DeletionTime             *string

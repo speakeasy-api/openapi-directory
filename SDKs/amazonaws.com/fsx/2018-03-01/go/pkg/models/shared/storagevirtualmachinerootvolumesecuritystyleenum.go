@@ -15,20 +15,24 @@ const (
 	StorageVirtualMachineRootVolumeSecurityStyleEnumMixed StorageVirtualMachineRootVolumeSecurityStyleEnum = "MIXED"
 )
 
+func (e StorageVirtualMachineRootVolumeSecurityStyleEnum) ToPointer() *StorageVirtualMachineRootVolumeSecurityStyleEnum {
+	return &e
+}
+
 func (e *StorageVirtualMachineRootVolumeSecurityStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNIX":
 		fallthrough
 	case "NTFS":
 		fallthrough
 	case "MIXED":
-		*e = StorageVirtualMachineRootVolumeSecurityStyleEnum(s)
+		*e = StorageVirtualMachineRootVolumeSecurityStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageVirtualMachineRootVolumeSecurityStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageVirtualMachineRootVolumeSecurityStyleEnum: %v", v)
 	}
 }

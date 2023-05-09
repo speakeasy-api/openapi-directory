@@ -15,19 +15,23 @@ const (
 	DescribeFleetInstancesResultActiveInstancesInstanceHealthEnumUnhealthy DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum = "unhealthy"
 )
 
+func (e DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum) ToPointer() *DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum {
+	return &e
+}
+
 func (e *DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "healthy":
 		fallthrough
 	case "unhealthy":
-		*e = DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum(s)
+		*e = DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFleetInstancesResultActiveInstancesInstanceHealthEnum: %v", v)
 	}
 }
 

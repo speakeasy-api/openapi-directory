@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConnectRequestBody{
-        Endpoint: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Connect(ctx, req)
+    res, err := s.Connect(ctx, operations.ConnectRequestBody{
+        Endpoint: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

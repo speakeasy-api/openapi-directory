@@ -29,12 +29,16 @@ const (
 	ThirdPartyURLTypeEnumThirdPartyURLTypeAudioVideoProgress      ThirdPartyURLTypeEnum = "THIRD_PARTY_URL_TYPE_AUDIO_VIDEO_PROGRESS"
 )
 
+func (e ThirdPartyURLTypeEnum) ToPointer() *ThirdPartyURLTypeEnum {
+	return &e
+}
+
 func (e *ThirdPartyURLTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THIRD_PARTY_URL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "THIRD_PARTY_URL_TYPE_IMPRESSION":
@@ -66,10 +70,10 @@ func (e *ThirdPartyURLTypeEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD_PARTY_URL_TYPE_AUDIO_VIDEO_SKIP":
 		fallthrough
 	case "THIRD_PARTY_URL_TYPE_AUDIO_VIDEO_PROGRESS":
-		*e = ThirdPartyURLTypeEnum(s)
+		*e = ThirdPartyURLTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyURLTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyURLTypeEnum: %v", v)
 	}
 }
 

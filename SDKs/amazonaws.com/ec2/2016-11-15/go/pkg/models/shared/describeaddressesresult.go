@@ -15,19 +15,23 @@ const (
 	DescribeAddressesResultAddressesDomainEnumStandard DescribeAddressesResultAddressesDomainEnum = "standard"
 )
 
+func (e DescribeAddressesResultAddressesDomainEnum) ToPointer() *DescribeAddressesResultAddressesDomainEnum {
+	return &e
+}
+
 func (e *DescribeAddressesResultAddressesDomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "standard":
-		*e = DescribeAddressesResultAddressesDomainEnum(s)
+		*e = DescribeAddressesResultAddressesDomainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAddressesResultAddressesDomainEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAddressesResultAddressesDomainEnum: %v", v)
 	}
 }
 

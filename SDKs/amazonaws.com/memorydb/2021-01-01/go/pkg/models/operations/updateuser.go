@@ -16,17 +16,21 @@ const (
 	UpdateUserXAmzTargetEnumAmazonMemoryDbUpdateUser UpdateUserXAmzTargetEnum = "AmazonMemoryDB.UpdateUser"
 )
 
+func (e UpdateUserXAmzTargetEnum) ToPointer() *UpdateUserXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateUserXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.UpdateUser":
-		*e = UpdateUserXAmzTargetEnum(s)
+		*e = UpdateUserXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateUserXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateUserXAmzTargetEnum: %v", v)
 	}
 }
 

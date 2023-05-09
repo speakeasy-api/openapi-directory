@@ -35,7 +35,10 @@ func newGoogleLocations(defaultClient, securityClient HTTPClient, serverURL, lan
 // MybusinessGoogleLocationsReport - Report a GoogleLocation.
 func (s *googleLocations) MybusinessGoogleLocationsReport(ctx context.Context, request operations.MybusinessGoogleLocationsReportRequest) (*operations.MybusinessGoogleLocationsReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}:report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}:report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportGoogleLocationRequest", "json")
 	if err != nil {

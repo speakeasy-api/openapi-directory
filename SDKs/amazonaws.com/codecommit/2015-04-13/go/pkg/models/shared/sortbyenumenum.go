@@ -14,18 +14,22 @@ const (
 	SortByEnumEnumLastModifiedDate SortByEnumEnum = "lastModifiedDate"
 )
 
+func (e SortByEnumEnum) ToPointer() *SortByEnumEnum {
+	return &e
+}
+
 func (e *SortByEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "repositoryName":
 		fallthrough
 	case "lastModifiedDate":
-		*e = SortByEnumEnum(s)
+		*e = SortByEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortByEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for SortByEnumEnum: %v", v)
 	}
 }

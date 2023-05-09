@@ -15,19 +15,23 @@ const (
 	ProductsApproveRequestApprovedPermissionsEnumAllPermissions         ProductsApproveRequestApprovedPermissionsEnum = "allPermissions"
 )
 
+func (e ProductsApproveRequestApprovedPermissionsEnum) ToPointer() *ProductsApproveRequestApprovedPermissionsEnum {
+	return &e
+}
+
 func (e *ProductsApproveRequestApprovedPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "currentPermissionsOnly":
 		fallthrough
 	case "allPermissions":
-		*e = ProductsApproveRequestApprovedPermissionsEnum(s)
+		*e = ProductsApproveRequestApprovedPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductsApproveRequestApprovedPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductsApproveRequestApprovedPermissionsEnum: %v", v)
 	}
 }
 

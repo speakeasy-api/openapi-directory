@@ -18,12 +18,16 @@ const (
 	CommuteFilterCommuteMethodEnumCycling                  CommuteFilterCommuteMethodEnum = "CYCLING"
 )
 
+func (e CommuteFilterCommuteMethodEnum) ToPointer() *CommuteFilterCommuteMethodEnum {
+	return &e
+}
+
 func (e *CommuteFilterCommuteMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMUTE_METHOD_UNSPECIFIED":
 		fallthrough
 	case "DRIVING":
@@ -33,10 +37,10 @@ func (e *CommuteFilterCommuteMethodEnum) UnmarshalJSON(data []byte) error {
 	case "WALKING":
 		fallthrough
 	case "CYCLING":
-		*e = CommuteFilterCommuteMethodEnum(s)
+		*e = CommuteFilterCommuteMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommuteFilterCommuteMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CommuteFilterCommuteMethodEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	CommuteFilterRoadTrafficEnumBusyHour               CommuteFilterRoadTrafficEnum = "BUSY_HOUR"
 )
 
+func (e CommuteFilterRoadTrafficEnum) ToPointer() *CommuteFilterRoadTrafficEnum {
+	return &e
+}
+
 func (e *CommuteFilterRoadTrafficEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROAD_TRAFFIC_UNSPECIFIED":
 		fallthrough
 	case "TRAFFIC_FREE":
 		fallthrough
 	case "BUSY_HOUR":
-		*e = CommuteFilterRoadTrafficEnum(s)
+		*e = CommuteFilterRoadTrafficEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommuteFilterRoadTrafficEnum: %s", s)
+		return fmt.Errorf("invalid value for CommuteFilterRoadTrafficEnum: %v", v)
 	}
 }
 

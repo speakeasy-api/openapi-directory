@@ -14,19 +14,23 @@ const (
 	ManagedShortLinkFlaggedAttributeEnumSpam                 ManagedShortLinkFlaggedAttributeEnum = "SPAM"
 )
 
+func (e ManagedShortLinkFlaggedAttributeEnum) ToPointer() *ManagedShortLinkFlaggedAttributeEnum {
+	return &e
+}
+
 func (e *ManagedShortLinkFlaggedAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_ATTRIBUTE":
 		fallthrough
 	case "SPAM":
-		*e = ManagedShortLinkFlaggedAttributeEnum(s)
+		*e = ManagedShortLinkFlaggedAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedShortLinkFlaggedAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedShortLinkFlaggedAttributeEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	ManagedShortLinkVisibilityEnumNeverShown            ManagedShortLinkVisibilityEnum = "NEVER_SHOWN"
 )
 
+func (e ManagedShortLinkVisibilityEnum) ToPointer() *ManagedShortLinkVisibilityEnum {
+	return &e
+}
+
 func (e *ManagedShortLinkVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_VISIBILITY":
 		fallthrough
 	case "UNARCHIVED":
@@ -53,10 +61,10 @@ func (e *ManagedShortLinkVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "ARCHIVED":
 		fallthrough
 	case "NEVER_SHOWN":
-		*e = ManagedShortLinkVisibilityEnum(s)
+		*e = ManagedShortLinkVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedShortLinkVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedShortLinkVisibilityEnum: %v", v)
 	}
 }
 

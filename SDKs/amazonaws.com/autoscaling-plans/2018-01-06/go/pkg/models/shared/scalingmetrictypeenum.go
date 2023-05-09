@@ -25,12 +25,16 @@ const (
 	ScalingMetricTypeEnumEc2SpotFleetRequestAverageNetworkOut     ScalingMetricTypeEnum = "EC2SpotFleetRequestAverageNetworkOut"
 )
 
+func (e ScalingMetricTypeEnum) ToPointer() *ScalingMetricTypeEnum {
+	return &e
+}
+
 func (e *ScalingMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASGAverageCPUUtilization":
 		fallthrough
 	case "ASGAverageNetworkIn":
@@ -56,9 +60,9 @@ func (e *ScalingMetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EC2SpotFleetRequestAverageNetworkIn":
 		fallthrough
 	case "EC2SpotFleetRequestAverageNetworkOut":
-		*e = ScalingMetricTypeEnum(s)
+		*e = ScalingMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingMetricTypeEnum: %v", v)
 	}
 }

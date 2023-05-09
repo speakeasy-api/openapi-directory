@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,10 +17,11 @@ func main() {
         }),
     )
 
-    req := operations.CreateAccessRequest{
+    ctx := context.Background()
+    res, err := s.CreateAccess(ctx, operations.CreateAccessRequest{
         CreateAccessRequest: shared.CreateAccessRequest{
             ExternalID: "corrupti",
-            HomeDirectory: "provident",
+            HomeDirectory: sdk.String("provident"),
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
                     Entry: "quibusdam",
@@ -35,8 +36,8 @@ func main() {
                     Target: "vel",
                 },
             },
-            HomeDirectoryType: "LOGICAL",
-            Policy: "deserunt",
+            HomeDirectoryType: shared.HomeDirectoryTypeEnumLogical.ToPointer(),
+            Policy: sdk.String("deserunt"),
             PosixProfile: &shared.PosixProfile{
                 Gid: 384382,
                 SecondaryGids: []int64{
@@ -48,18 +49,15 @@ func main() {
             Role: "delectus",
             ServerID: "tempora",
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "molestiae",
-        XAmzCredential: "minus",
-        XAmzDate: "placeat",
-        XAmzSecurityToken: "voluptatum",
-        XAmzSignature: "iusto",
-        XAmzSignedHeaders: "excepturi",
-        XAmzTarget: "TransferService.CreateAccess",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAccess(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("minus"),
+        XAmzDate: sdk.String("placeat"),
+        XAmzSecurityToken: sdk.String("voluptatum"),
+        XAmzSignature: sdk.String("iusto"),
+        XAmzSignedHeaders: sdk.String("excepturi"),
+        XAmzTarget: operations.CreateAccessXAmzTargetEnumTransferServiceCreateAccess,
+    })
     if err != nil {
         log.Fatal(err)
     }

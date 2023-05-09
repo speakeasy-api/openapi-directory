@@ -19,12 +19,16 @@ const (
 	DynamicLinkEventStatEventEnumAppReOpen                   DynamicLinkEventStatEventEnum = "APP_RE_OPEN"
 )
 
+func (e DynamicLinkEventStatEventEnum) ToPointer() *DynamicLinkEventStatEventEnum {
+	return &e
+}
+
 func (e *DynamicLinkEventStatEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DYNAMIC_LINK_EVENT_UNSPECIFIED":
 		fallthrough
 	case "CLICK":
@@ -36,10 +40,10 @@ func (e *DynamicLinkEventStatEventEnum) UnmarshalJSON(data []byte) error {
 	case "APP_FIRST_OPEN":
 		fallthrough
 	case "APP_RE_OPEN":
-		*e = DynamicLinkEventStatEventEnum(s)
+		*e = DynamicLinkEventStatEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamicLinkEventStatEventEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamicLinkEventStatEventEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	DynamicLinkEventStatPlatformEnumOther                          DynamicLinkEventStatPlatformEnum = "OTHER"
 )
 
+func (e DynamicLinkEventStatPlatformEnum) ToPointer() *DynamicLinkEventStatPlatformEnum {
+	return &e
+}
+
 func (e *DynamicLinkEventStatPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DYNAMIC_LINK_PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "ANDROID":
@@ -69,10 +77,10 @@ func (e *DynamicLinkEventStatPlatformEnum) UnmarshalJSON(data []byte) error {
 	case "DESKTOP":
 		fallthrough
 	case "OTHER":
-		*e = DynamicLinkEventStatPlatformEnum(s)
+		*e = DynamicLinkEventStatPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamicLinkEventStatPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamicLinkEventStatPlatformEnum: %v", v)
 	}
 }
 

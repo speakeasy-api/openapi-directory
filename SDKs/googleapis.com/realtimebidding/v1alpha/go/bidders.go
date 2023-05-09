@@ -34,7 +34,10 @@ func newBidders(defaultClient, securityClient HTTPClient, serverURL, language, s
 // RealtimebiddingBiddersBiddingFunctionsActivate - Activates an existing bidding function. An activated function is available for invocation for the server-side TURTLEDOVE simulations.
 func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsActivateRequest, security operations.RealtimebiddingBiddersBiddingFunctionsActivateSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsActivate(ctx context.Con
 // RealtimebiddingBiddersBiddingFunctionsArchive - Archives an existing bidding function. An archived function will not be available for function invocation for the server-side TURTLEDOVE simulations unless it is activated.
 func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsArchiveRequest, security operations.RealtimebiddingBiddersBiddingFunctionsArchiveSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsArchive(ctx context.Cont
 // RealtimebiddingBiddersBiddingFunctionsCreate - Creates a new bidding function.
 func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsCreateRequest, security operations.RealtimebiddingBiddersBiddingFunctionsCreateSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BiddingFunctionInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *bidders) RealtimebiddingBiddersBiddingFunctionsCreate(ctx context.Conte
 // RealtimebiddingBiddersBiddingFunctionsList - Lists the bidding functions that a bidder currently has registered.
 func (s *bidders) RealtimebiddingBiddersBiddingFunctionsList(ctx context.Context, request operations.RealtimebiddingBiddersBiddingFunctionsListRequest, security operations.RealtimebiddingBiddersBiddingFunctionsListSecurity) (*operations.RealtimebiddingBiddersBiddingFunctionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/biddingFunctions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

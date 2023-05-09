@@ -14,18 +14,22 @@ const (
 	AccessEffectEnumDeny  AccessEffectEnum = "DENY"
 )
 
+func (e AccessEffectEnum) ToPointer() *AccessEffectEnum {
+	return &e
+}
+
 func (e *AccessEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW":
 		fallthrough
 	case "DENY":
-		*e = AccessEffectEnum(s)
+		*e = AccessEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessEffectEnum: %v", v)
 	}
 }

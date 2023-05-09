@@ -4,6 +4,8 @@ package shared
 
 // PhaseArtifact - Contains the paths to the artifacts, relative to the URI, for a phase.
 type PhaseArtifact struct {
+	// Output only. File path of the directory of rendered job manifests relative to the URI. This is only set if it is applicable.
+	JobManifestsPath *string `json:"jobManifestsPath,omitempty"`
 	// Output only. File path of the rendered manifest relative to the URI.
 	ManifestPath *string `json:"manifestPath,omitempty"`
 	// Output only. File path of the resolved Skaffold configuration relative to the URI.

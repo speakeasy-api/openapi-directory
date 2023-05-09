@@ -17,12 +17,16 @@ const (
 	EnvironmentConfigEnvironmentSizeEnumEnvironmentSizeLarge       EnvironmentConfigEnvironmentSizeEnum = "ENVIRONMENT_SIZE_LARGE"
 )
 
+func (e EnvironmentConfigEnvironmentSizeEnum) ToPointer() *EnvironmentConfigEnvironmentSizeEnum {
+	return &e
+}
+
 func (e *EnvironmentConfigEnvironmentSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_SIZE_UNSPECIFIED":
 		fallthrough
 	case "ENVIRONMENT_SIZE_SMALL":
@@ -30,10 +34,10 @@ func (e *EnvironmentConfigEnvironmentSizeEnum) UnmarshalJSON(data []byte) error 
 	case "ENVIRONMENT_SIZE_MEDIUM":
 		fallthrough
 	case "ENVIRONMENT_SIZE_LARGE":
-		*e = EnvironmentConfigEnvironmentSizeEnum(s)
+		*e = EnvironmentConfigEnvironmentSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentConfigEnvironmentSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentConfigEnvironmentSizeEnum: %v", v)
 	}
 }
 

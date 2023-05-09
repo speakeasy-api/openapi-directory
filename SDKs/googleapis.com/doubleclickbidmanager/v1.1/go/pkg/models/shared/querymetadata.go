@@ -33,12 +33,16 @@ const (
 	QueryMetadataDataRangeEnumLast60Days        QueryMetadataDataRangeEnum = "LAST_60_DAYS"
 )
 
+func (e QueryMetadataDataRangeEnum) ToPointer() *QueryMetadataDataRangeEnum {
+	return &e
+}
+
 func (e *QueryMetadataDataRangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CUSTOM_DATES":
 		fallthrough
 	case "CURRENT_DAY":
@@ -78,10 +82,10 @@ func (e *QueryMetadataDataRangeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_NOT_SUPPORTED":
 		fallthrough
 	case "LAST_60_DAYS":
-		*e = QueryMetadataDataRangeEnum(s)
+		*e = QueryMetadataDataRangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryMetadataDataRangeEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryMetadataDataRangeEnum: %v", v)
 	}
 }
 
@@ -94,21 +98,25 @@ const (
 	QueryMetadataFormatEnumXlsx     QueryMetadataFormatEnum = "XLSX"
 )
 
+func (e QueryMetadataFormatEnum) ToPointer() *QueryMetadataFormatEnum {
+	return &e
+}
+
 func (e *QueryMetadataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "EXCEL_CSV":
 		fallthrough
 	case "XLSX":
-		*e = QueryMetadataFormatEnum(s)
+		*e = QueryMetadataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryMetadataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryMetadataFormatEnum: %v", v)
 	}
 }
 

@@ -19,19 +19,23 @@ const (
 	PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnumRegular      PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum = "regular"
 )
 
+func (e PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum) ToPointer() *PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
-		*e = PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDMessagesRequestBodyLevelEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnumSms  PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum = "sms"
 )
 
+func (e PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum) ToPointer() *PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "std":
 		fallthrough
 	case "mail":
 		fallthrough
 	case "sms":
-		*e = PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDMessagesRequestBodyNotifyHowEnum: %v", v)
 	}
 }
 

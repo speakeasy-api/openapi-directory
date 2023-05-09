@@ -19,12 +19,16 @@ const (
 	SetV2LoggingOptionsRequestBodyDefaultLogLevelEnumDisabled SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum = "DISABLED"
 )
 
+func (e SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum) ToPointer() *SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum {
+	return &e
+}
+
 func (e *SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEBUG":
 		fallthrough
 	case "INFO":
@@ -34,10 +38,10 @@ func (e *SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum) UnmarshalJSON(data [
 	case "WARN":
 		fallthrough
 	case "DISABLED":
-		*e = SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum(s)
+		*e = SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for SetV2LoggingOptionsRequestBodyDefaultLogLevelEnum: %v", v)
 	}
 }
 

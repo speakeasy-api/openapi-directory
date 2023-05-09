@@ -98,12 +98,16 @@ const (
 	CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEgressOnlyInternetGatewayRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

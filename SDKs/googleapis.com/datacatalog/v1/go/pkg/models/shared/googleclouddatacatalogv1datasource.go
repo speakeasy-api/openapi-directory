@@ -16,21 +16,25 @@ const (
 	GoogleCloudDatacatalogV1DataSourceServiceEnumBigquery           GoogleCloudDatacatalogV1DataSourceServiceEnum = "BIGQUERY"
 )
 
+func (e GoogleCloudDatacatalogV1DataSourceServiceEnum) ToPointer() *GoogleCloudDatacatalogV1DataSourceServiceEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1DataSourceServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_STORAGE":
 		fallthrough
 	case "BIGQUERY":
-		*e = GoogleCloudDatacatalogV1DataSourceServiceEnum(s)
+		*e = GoogleCloudDatacatalogV1DataSourceServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DataSourceServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1DataSourceServiceEnum: %v", v)
 	}
 }
 

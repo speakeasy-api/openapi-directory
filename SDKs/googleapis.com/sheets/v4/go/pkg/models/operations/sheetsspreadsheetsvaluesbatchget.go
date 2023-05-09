@@ -50,19 +50,23 @@ const (
 	SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnumFormattedString SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum = "FORMATTED_STRING"
 )
 
+func (e SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIAL_NUMBER":
 		fallthrough
 	case "FORMATTED_STRING":
-		*e = SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetDateTimeRenderOptionEnum: %v", v)
 	}
 }
 
@@ -75,21 +79,25 @@ const (
 	SheetsSpreadsheetsValuesBatchGetMajorDimensionEnumColumns              SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum = "COLUMNS"
 )
 
+func (e SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum) ToPointer() *SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum(s)
+		*e = SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetMajorDimensionEnum: %v", v)
 	}
 }
 
@@ -102,21 +110,25 @@ const (
 	SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnumFormula          SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum = "FORMULA"
 )
 
+func (e SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum) ToPointer() *SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum {
+	return &e
+}
+
 func (e *SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMATTED_VALUE":
 		fallthrough
 	case "UNFORMATTED_VALUE":
 		fallthrough
 	case "FORMULA":
-		*e = SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum(s)
+		*e = SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SheetsSpreadsheetsValuesBatchGetValueRenderOptionEnum: %v", v)
 	}
 }
 

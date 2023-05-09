@@ -15,17 +15,21 @@ const (
 	POSTUpdateApplicationVersionActionEnumUpdateApplicationVersion POSTUpdateApplicationVersionActionEnum = "UpdateApplicationVersion"
 )
 
+func (e POSTUpdateApplicationVersionActionEnum) ToPointer() *POSTUpdateApplicationVersionActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateApplicationVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateApplicationVersion":
-		*e = POSTUpdateApplicationVersionActionEnum(s)
+		*e = POSTUpdateApplicationVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateApplicationVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateApplicationVersionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateApplicationVersionVersionEnumTwoThousandAndTen1201 POSTUpdateApplicationVersionVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateApplicationVersionVersionEnum) ToPointer() *POSTUpdateApplicationVersionVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateApplicationVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateApplicationVersionVersionEnum(s)
+		*e = POSTUpdateApplicationVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateApplicationVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateApplicationVersionVersionEnum: %v", v)
 	}
 }
 

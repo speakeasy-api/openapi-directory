@@ -36,7 +36,10 @@ func newSSHKeys(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Deletes an SSH key. It cannot be used anymore.
 func (s *sshKeys) DeleteSSHKeysID(ctx context.Context, request operations.DeleteSSHKeysIDRequest) (*operations.DeleteSSHKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -121,7 +124,10 @@ func (s *sshKeys) GetSSHKeys(ctx context.Context, request operations.GetSSHKeysR
 // Returns a specific SSH key object.
 func (s *sshKeys) GetSSHKeysID(ctx context.Context, request operations.GetSSHKeysIDRequest) (*operations.GetSSHKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -220,7 +226,10 @@ func (s *sshKeys) PostSSHKeys(ctx context.Context, request operations.PostSSHKey
 // Please note that when updating labels, the SSH key current set of labels will be replaced with the labels provided in the request body. So, for example, if you want to add a new label, you have to provide all existing labels plus the new label in the request body.
 func (s *sshKeys) PutSSHKeysID(ctx context.Context, request operations.PutSSHKeysIDRequest) (*operations.PutSSHKeysIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ssh_keys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

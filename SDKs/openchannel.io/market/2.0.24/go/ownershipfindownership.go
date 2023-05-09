@@ -86,7 +86,10 @@ func (s *ownershipFindOwnership) GetOwnership(ctx context.Context, request opera
 //   - Results are returned for the market provided within the basic authentication credentials
 func (s *ownershipFindOwnership) GetOwnershipOwnershipID(ctx context.Context, request operations.GetOwnershipOwnershipIDRequest) (*operations.GetOwnershipOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +135,10 @@ func (s *ownershipFindOwnership) GetOwnershipOwnershipID(ctx context.Context, re
 //   - Results are returned for the market provided within the basic authentication credentials
 func (s *ownershipFindOwnership) PatchOwnershipOwnershipID(ctx context.Context, request operations.PatchOwnershipOwnershipIDRequest) (*operations.PatchOwnershipOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -242,7 +248,10 @@ func (s *ownershipFindOwnership) PostOwnershipInstall(ctx context.Context, reque
 //   - This method is called on behalf of a user - User data and statistics are recorded when this method is called
 func (s *ownershipFindOwnership) PostOwnershipUninstallOwnershipID(ctx context.Context, request operations.PostOwnershipUninstallOwnershipIDRequest) (*operations.PostOwnershipUninstallOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ownership/uninstall/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ownership/uninstall/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -296,7 +305,10 @@ func (s *ownershipFindOwnership) PostOwnershipUninstallOwnershipID(ctx context.C
 //   - Results are returned for the market provided within the basic authentication credentials
 func (s *ownershipFindOwnership) PostOwnershipOwnershipID(ctx context.Context, request operations.PostOwnershipOwnershipIDRequest) (*operations.PostOwnershipOwnershipIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ownership/{ownershipId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

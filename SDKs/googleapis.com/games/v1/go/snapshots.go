@@ -34,7 +34,10 @@ func newSnapshots(defaultClient, securityClient HTTPClient, serverURL, language,
 // GamesSnapshotsGet - Retrieves the metadata for a given snapshot ID.
 func (s *snapshots) GamesSnapshotsGet(ctx context.Context, request operations.GamesSnapshotsGetRequest, security operations.GamesSnapshotsGetSecurity) (*operations.GamesSnapshotsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/snapshots/{snapshotId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/snapshots/{snapshotId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *snapshots) GamesSnapshotsGet(ctx context.Context, request operations.Ga
 // GamesSnapshotsList - Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
 func (s *snapshots) GamesSnapshotsList(ctx context.Context, request operations.GamesSnapshotsListRequest, security operations.GamesSnapshotsListSecurity) (*operations.GamesSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

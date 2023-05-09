@@ -15,18 +15,22 @@ const (
 	TunnelTypeEnumGre  TunnelTypeEnum = "GRE"
 )
 
+func (e TunnelTypeEnum) ToPointer() *TunnelTypeEnum {
+	return &e
+}
+
 func (e *TunnelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GTP-U":
 		fallthrough
 	case "GRE":
-		*e = TunnelTypeEnum(s)
+		*e = TunnelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TunnelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TunnelTypeEnum: %v", v)
 	}
 }

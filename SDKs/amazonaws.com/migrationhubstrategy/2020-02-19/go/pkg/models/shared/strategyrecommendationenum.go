@@ -16,12 +16,16 @@ const (
 	StrategyRecommendationEnumPotential      StrategyRecommendationEnum = "potential"
 )
 
+func (e StrategyRecommendationEnum) ToPointer() *StrategyRecommendationEnum {
+	return &e
+}
+
 func (e *StrategyRecommendationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "recommended":
 		fallthrough
 	case "viableOption":
@@ -29,9 +33,9 @@ func (e *StrategyRecommendationEnum) UnmarshalJSON(data []byte) error {
 	case "notRecommended":
 		fallthrough
 	case "potential":
-		*e = StrategyRecommendationEnum(s)
+		*e = StrategyRecommendationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StrategyRecommendationEnum: %s", s)
+		return fmt.Errorf("invalid value for StrategyRecommendationEnum: %v", v)
 	}
 }

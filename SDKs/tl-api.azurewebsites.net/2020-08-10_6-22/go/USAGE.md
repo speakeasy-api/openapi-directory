@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,26 +16,24 @@ func main() {
         }),
     )
 
-    req := []shared.MeasureUnitDTO{
-        shared.MeasureUnitDTO{
-            ID: 592845,
-            Name: "distinctio",
-            Type: "quibusdam",
-        },
-        shared.MeasureUnitDTO{
-            ID: 602763,
-            Name: "nulla",
-            Type: "corrupti",
-        },
-        shared.MeasureUnitDTO{
-            ID: 847252,
-            Name: "vel",
-            Type: "error",
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Article.ArticleAddMeasureUnit(ctx, req)
+    res, err := s.Article.ArticleAddMeasureUnit(ctx, []shared.MeasureUnitDTO{
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(592845),
+            Name: sdk.String("Ellis Mitchell"),
+            Type: sdk.String("illum"),
+        },
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(423655),
+            Name: sdk.String("Doug Hoppe"),
+            Type: sdk.String("debitis"),
+        },
+        shared.MeasureUnitDTO{
+            ID: sdk.Int(56713),
+            Name: sdk.String("Ricky Hoppe"),
+            Type: sdk.String("placeat"),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

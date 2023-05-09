@@ -35,7 +35,10 @@ func newDistrictAdmins(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetDistrictAdmin - Returns a specific district admin
 func (s *districtAdmins) GetDistrictAdmin(ctx context.Context, request operations.GetDistrictAdminRequest) (*operations.GetDistrictAdminResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/district_admins/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/district_admins/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

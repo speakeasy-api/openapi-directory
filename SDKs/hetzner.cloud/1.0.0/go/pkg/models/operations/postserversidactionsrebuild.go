@@ -45,21 +45,25 @@ const (
 	PostServersIDActionsRebuild201ApplicationJSONActionStatusEnumError   PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum) ToPointer() *PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum(s)
+		*e = PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostServersIDActionsRebuild201ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 

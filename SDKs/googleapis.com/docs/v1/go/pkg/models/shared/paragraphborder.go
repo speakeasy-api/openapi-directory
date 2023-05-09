@@ -17,12 +17,16 @@ const (
 	ParagraphBorderDashStyleEnumDash                 ParagraphBorderDashStyleEnum = "DASH"
 )
 
+func (e ParagraphBorderDashStyleEnum) ToPointer() *ParagraphBorderDashStyleEnum {
+	return &e
+}
+
 func (e *ParagraphBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -30,10 +34,10 @@ func (e *ParagraphBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "DOT":
 		fallthrough
 	case "DASH":
-		*e = ParagraphBorderDashStyleEnum(s)
+		*e = ParagraphBorderDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParagraphBorderDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for ParagraphBorderDashStyleEnum: %v", v)
 	}
 }
 

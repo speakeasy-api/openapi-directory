@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -57,6 +58,7 @@ pkg/models/shared/formstyleconfig.go
 pkg/models/shared/sectionalelement.go
 pkg/models/shared/fieldposition.go
 pkg/models/shared/fixedpositionenum.go
+pkg/models/shared/labeldecoratorenum.go
 pkg/models/shared/formactiontypeenum.go
 pkg/models/shared/fieldconfig.go
 pkg/models/shared/fieldvalidationconfiguration.go
@@ -64,6 +66,11 @@ pkg/models/shared/fieldinputconfig.go
 pkg/models/shared/valuemappings.go
 pkg/models/shared/valuemapping.go
 pkg/models/shared/forminputvalueproperty.go
+pkg/models/shared/forminputvaluepropertybindingproperties.go
+pkg/models/shared/forminputbindingpropertiesvalue.go
+pkg/models/shared/forminputbindingpropertiesvalueproperties.go
+pkg/models/shared/fileuploaderfieldconfig.go
+pkg/models/shared/storageaccesslevelenum.go
 pkg/models/shared/formdatatypeconfig.go
 pkg/models/shared/formdatasourcetypeenum.go
 pkg/models/shared/formcta.go
@@ -92,4 +99,5 @@ pkg/models/shared/updatecomponentresponse.go
 pkg/models/shared/updateformresponse.go
 pkg/models/shared/updatethemeresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

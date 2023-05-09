@@ -14,18 +14,22 @@ const (
 	CapacityTypesEnumSpot     CapacityTypesEnum = "SPOT"
 )
 
+func (e CapacityTypesEnum) ToPointer() *CapacityTypesEnum {
+	return &e
+}
+
 func (e *CapacityTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ON_DEMAND":
 		fallthrough
 	case "SPOT":
-		*e = CapacityTypesEnum(s)
+		*e = CapacityTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityTypesEnum: %v", v)
 	}
 }

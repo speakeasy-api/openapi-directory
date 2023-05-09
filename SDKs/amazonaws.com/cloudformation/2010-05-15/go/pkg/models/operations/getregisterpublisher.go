@@ -15,17 +15,21 @@ const (
 	GETRegisterPublisherActionEnumRegisterPublisher GETRegisterPublisherActionEnum = "RegisterPublisher"
 )
 
+func (e GETRegisterPublisherActionEnum) ToPointer() *GETRegisterPublisherActionEnum {
+	return &e
+}
+
 func (e *GETRegisterPublisherActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterPublisher":
-		*e = GETRegisterPublisherActionEnum(s)
+		*e = GETRegisterPublisherActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterPublisherActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterPublisherActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRegisterPublisherVersionEnumTwoThousandAndTen0515 GETRegisterPublisherVersionEnum = "2010-05-15"
 )
 
+func (e GETRegisterPublisherVersionEnum) ToPointer() *GETRegisterPublisherVersionEnum {
+	return &e
+}
+
 func (e *GETRegisterPublisherVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETRegisterPublisherVersionEnum(s)
+		*e = GETRegisterPublisherVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRegisterPublisherVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRegisterPublisherVersionEnum: %v", v)
 	}
 }
 

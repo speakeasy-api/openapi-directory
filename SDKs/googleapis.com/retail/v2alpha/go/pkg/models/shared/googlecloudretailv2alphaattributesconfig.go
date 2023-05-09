@@ -16,21 +16,25 @@ const (
 	GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnumCatalogLevelAttributeConfig     GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum = "CATALOG_LEVEL_ATTRIBUTE_CONFIG"
 )
 
+func (e GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum) ToPointer() *GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_CONFIG_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "PRODUCT_LEVEL_ATTRIBUTE_CONFIG":
 		fallthrough
 	case "CATALOG_LEVEL_ATTRIBUTE_CONFIG":
-		*e = GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum(s)
+		*e = GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2alphaAttributesConfigAttributeConfigLevelEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DisassociateGatewayFromServerXAmzTargetEnumBackupOnPremisesV20210101DisassociateGatewayFromServer DisassociateGatewayFromServerXAmzTargetEnum = "BackupOnPremises_v20210101.DisassociateGatewayFromServer"
 )
 
+func (e DisassociateGatewayFromServerXAmzTargetEnum) ToPointer() *DisassociateGatewayFromServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateGatewayFromServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.DisassociateGatewayFromServer":
-		*e = DisassociateGatewayFromServerXAmzTargetEnum(s)
+		*e = DisassociateGatewayFromServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateGatewayFromServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateGatewayFromServerXAmzTargetEnum: %v", v)
 	}
 }
 

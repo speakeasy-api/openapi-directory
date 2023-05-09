@@ -17,12 +17,16 @@ const (
 	ConversionErrorCodeEnumNotFound         ConversionErrorCodeEnum = "NOT_FOUND"
 )
 
+func (e ConversionErrorCodeEnum) ToPointer() *ConversionErrorCodeEnum {
+	return &e
+}
+
 func (e *ConversionErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INVALID_ARGUMENT":
 		fallthrough
 	case "INTERNAL":
@@ -30,10 +34,10 @@ func (e *ConversionErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "PERMISSION_DENIED":
 		fallthrough
 	case "NOT_FOUND":
-		*e = ConversionErrorCodeEnum(s)
+		*e = ConversionErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConversionErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConversionErrorCodeEnum: %v", v)
 	}
 }
 

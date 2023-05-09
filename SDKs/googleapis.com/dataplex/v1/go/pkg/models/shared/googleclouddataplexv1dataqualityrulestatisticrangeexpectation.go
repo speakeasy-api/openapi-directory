@@ -7,6 +7,7 @@ import (
 	"fmt"
 )
 
+// GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum - The aggregate metric to evaluate.
 type GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum string
 
 const (
@@ -16,12 +17,16 @@ const (
 	GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnumMax                GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum = "MAX"
 )
 
+func (e GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum) ToPointer() *GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATISTIC_UNDEFINED":
 		fallthrough
 	case "MEAN":
@@ -29,10 +34,10 @@ func (e *GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticE
 	case "MIN":
 		fallthrough
 	case "MAX":
-		*e = GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum(s)
+		*e = GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum: %v", v)
 	}
 }
 
@@ -41,7 +46,8 @@ type GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation struct {
 	// The maximum column statistic value allowed for a row to pass this validation.At least one of min_value and max_value need to be provided.
 	MaxValue *string `json:"maxValue,omitempty"`
 	// The minimum column statistic value allowed for a row to pass this validation.At least one of min_value and max_value need to be provided.
-	MinValue  *string                                                                     `json:"minValue,omitempty"`
+	MinValue *string `json:"minValue,omitempty"`
+	// The aggregate metric to evaluate.
 	Statistic *GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectationStatisticEnum `json:"statistic,omitempty"`
 	// Whether column statistic needs to be strictly lesser than ('<') the maximum, or if equality is allowed.Only relevant if a max_value has been defined. Default = false.
 	StrictMaxEnabled *bool `json:"strictMaxEnabled,omitempty"`

@@ -34,7 +34,10 @@ func newCustomerAlerts(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetStoreAlerts - Get store's alerts
 func (s *customerAlerts) GetStoreAlerts(ctx context.Context, request operations.GetStoreAlertsRequest) (*operations.GetStoreAlertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/alerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/alerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,7 +99,10 @@ func (s *customerAlerts) GetStoreAlerts(ctx context.Context, request operations.
 // You just have to send the alert you want to update, does not need all alerts. (PARTIAL UPDATE ACCEPTED)
 func (s *customerAlerts) SaveStoreAlerts(ctx context.Context, request operations.SaveStoreAlertsRequest) (*operations.SaveStoreAlertsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/alerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/customer/stores/{storeId}/alerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

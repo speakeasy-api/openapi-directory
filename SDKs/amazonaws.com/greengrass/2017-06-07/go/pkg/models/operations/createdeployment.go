@@ -19,12 +19,16 @@ const (
 	CreateDeploymentRequestBodyDeploymentTypeEnumForceResetDeployment CreateDeploymentRequestBodyDeploymentTypeEnum = "ForceResetDeployment"
 )
 
+func (e CreateDeploymentRequestBodyDeploymentTypeEnum) ToPointer() *CreateDeploymentRequestBodyDeploymentTypeEnum {
+	return &e
+}
+
 func (e *CreateDeploymentRequestBodyDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NewDeployment":
 		fallthrough
 	case "Redeployment":
@@ -32,10 +36,10 @@ func (e *CreateDeploymentRequestBodyDeploymentTypeEnum) UnmarshalJSON(data []byt
 	case "ResetDeployment":
 		fallthrough
 	case "ForceResetDeployment":
-		*e = CreateDeploymentRequestBodyDeploymentTypeEnum(s)
+		*e = CreateDeploymentRequestBodyDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDeploymentRequestBodyDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDeploymentRequestBodyDeploymentTypeEnum: %v", v)
 	}
 }
 

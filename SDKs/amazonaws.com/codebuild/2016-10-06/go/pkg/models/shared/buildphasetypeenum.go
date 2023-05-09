@@ -23,12 +23,16 @@ const (
 	BuildPhaseTypeEnumCompleted       BuildPhaseTypeEnum = "COMPLETED"
 )
 
+func (e BuildPhaseTypeEnum) ToPointer() *BuildPhaseTypeEnum {
+	return &e
+}
+
 func (e *BuildPhaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBMITTED":
 		fallthrough
 	case "QUEUED":
@@ -50,9 +54,9 @@ func (e *BuildPhaseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FINALIZING":
 		fallthrough
 	case "COMPLETED":
-		*e = BuildPhaseTypeEnum(s)
+		*e = BuildPhaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildPhaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildPhaseTypeEnum: %v", v)
 	}
 }

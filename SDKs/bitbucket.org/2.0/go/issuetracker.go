@@ -44,7 +44,10 @@ func newIssueTracker(defaultClient, securityClient HTTPClient, serverURL, langua
 // repository.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx cont
 // Deletes an attachment.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmen
 // Deletes the specified comment.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsC
 // Retract your vote.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -230,7 +242,10 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx 
 // Stop watching this issue.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -282,7 +297,10 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx
 // tracker enabled.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugComponentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +355,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Co
 // Returns the specified issue tracker component object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +413,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx
 // Returns the issues in the issue tracker.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -475,7 +499,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Contex
 // Once the job has successfully completed, it returns a stream of the zip file.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZip(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZipResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export/{repo_name}-issues-{task_id}.zip", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -558,7 +585,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssue
 // After it is finished, it becomes a 200 response with status SUCCESS or FAILURE.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesImportRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesImportSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -619,7 +649,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.
 // Returns the specified issue.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -683,7 +716,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 // The files are always ordered by their upload date.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -746,7 +782,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(
 // As a result, the link should not be persisted, stored, or shared.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -923,7 +962,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsP
 // future. Use `changes.assignee_account_id` instead.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -985,7 +1027,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx 
 // tracker enabled.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes/{change_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1047,7 +1092,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChang
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1096,7 +1144,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx
 // Returns the specified issue comment object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1143,7 +1194,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 // implies they haven't.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1193,7 +1247,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 // issue.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1245,7 +1302,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx co
 // tracker enabled.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesRequest, security operations.GetRepositoriesWorkspaceRepoSlugMilestonesSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1300,7 +1360,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Co
 // Returns the specified issue tracker milestone object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1358,7 +1421,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx
 // tracker enabled.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsRequest, security operations.GetRepositoriesWorkspaceRepoSlugVersionsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1413,7 +1479,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Cont
 // Returns the specified issue tracker version object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1474,7 +1543,10 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx con
 // The authenticated user is used for the issue's `reporter` field.
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1553,7 +1625,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Conte
 // 'Location' response header. This url is the endpoint for where the user can obtain their zip files."
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesExportRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesExportSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1634,7 +1709,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context
 // ```
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesImportRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesImportSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1701,7 +1779,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context
 // then the existing file will be replaced.
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1791,7 +1872,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments
 // has appropriate authorization.
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/changes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1871,7 +1955,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx
 // ```
 func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest, security operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1956,7 +2043,10 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ct
 // also has a comment associated with the change.
 func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2023,7 +2113,10 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 // ```
 func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2091,7 +2184,10 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 // the operation was successful.
 func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2143,7 +2239,10 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 // indicates that the operation was successful.
 func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest, security operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

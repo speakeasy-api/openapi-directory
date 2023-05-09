@@ -35,7 +35,10 @@ func newImagePredictionAPI(defaultClient, securityClient HTTPClient, serverURL, 
 // PredictImage - Predict an image and saves the result
 func (s *imagePredictionAPI) PredictImage(ctx context.Context, request operations.PredictImageRequest) (*operations.PredictImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/image", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -116,7 +119,10 @@ func (s *imagePredictionAPI) PredictImage(ctx context.Context, request operation
 // PredictImageURLWithNoStoreForm - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreForm(ctx context.Context, request operations.PredictImageURLWithNoStoreFormRequest) (*operations.PredictImageURLWithNoStoreFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -197,7 +203,10 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreForm(ctx context.Context,
 // PredictImageURLWithNoStoreJSON - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreJSON(ctx context.Context, request operations.PredictImageURLWithNoStoreJSONRequest) (*operations.PredictImageURLWithNoStoreJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -278,7 +287,10 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreJSON(ctx context.Context,
 // PredictImageURLWithNoStoreRaw - Predict an image url without saving the result
 func (s *imagePredictionAPI) PredictImageURLWithNoStoreRaw(ctx context.Context, request operations.PredictImageURLWithNoStoreRawRequest) (*operations.PredictImageURLWithNoStoreRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -359,7 +371,10 @@ func (s *imagePredictionAPI) PredictImageURLWithNoStoreRaw(ctx context.Context, 
 // PredictImageURLForm - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLForm(ctx context.Context, request operations.PredictImageURLFormRequest) (*operations.PredictImageURLFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "form")
 	if err != nil {
@@ -440,7 +455,10 @@ func (s *imagePredictionAPI) PredictImageURLForm(ctx context.Context, request op
 // PredictImageURLJSON - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLJSON(ctx context.Context, request operations.PredictImageURLJSONRequest) (*operations.PredictImageURLJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURL", "json")
 	if err != nil {
@@ -521,7 +539,10 @@ func (s *imagePredictionAPI) PredictImageURLJSON(ctx context.Context, request op
 // PredictImageURLRaw - Predict an image url and saves the result
 func (s *imagePredictionAPI) PredictImageURLRaw(ctx context.Context, request operations.PredictImageURLRawRequest) (*operations.PredictImageURLRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/url", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -602,7 +623,10 @@ func (s *imagePredictionAPI) PredictImageURLRaw(ctx context.Context, request ope
 // PredictImageWithNoStore - Predict an image without saving the result
 func (s *imagePredictionAPI) PredictImageWithNoStore(ctx context.Context, request operations.PredictImageWithNoStoreRequest) (*operations.PredictImageWithNoStoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{projectId}/image/nostore", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{projectId}/image/nostore", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

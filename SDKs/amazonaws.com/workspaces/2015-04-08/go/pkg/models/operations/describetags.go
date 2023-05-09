@@ -16,17 +16,21 @@ const (
 	DescribeTagsXAmzTargetEnumWorkspacesServiceDescribeTags DescribeTagsXAmzTargetEnum = "WorkspacesService.DescribeTags"
 )
 
+func (e DescribeTagsXAmzTargetEnum) ToPointer() *DescribeTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DescribeTags":
-		*e = DescribeTagsXAmzTargetEnum(s)
+		*e = DescribeTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTagsXAmzTargetEnum: %v", v)
 	}
 }
 

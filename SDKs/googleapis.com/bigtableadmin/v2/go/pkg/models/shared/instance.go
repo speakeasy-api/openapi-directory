@@ -16,21 +16,25 @@ const (
 	InstanceStateEnumCreating      InstanceStateEnum = "CREATING"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_NOT_KNOWN":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "CREATING":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	InstanceTypeEnumDevelopment     InstanceTypeEnum = "DEVELOPMENT"
 )
 
+func (e InstanceTypeEnum) ToPointer() *InstanceTypeEnum {
+	return &e
+}
+
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRODUCTION":
 		fallthrough
 	case "DEVELOPMENT":
-		*e = InstanceTypeEnum(s)
+		*e = InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTypeEnum: %v", v)
 	}
 }
 

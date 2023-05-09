@@ -15,19 +15,23 @@ const (
 	As2PartnerEntityServerCertificateEnumAllowAny     As2PartnerEntityServerCertificateEnum = "allow_any"
 )
 
+func (e As2PartnerEntityServerCertificateEnum) ToPointer() *As2PartnerEntityServerCertificateEnum {
+	return &e
+}
+
 func (e *As2PartnerEntityServerCertificateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "require_match":
 		fallthrough
 	case "allow_any":
-		*e = As2PartnerEntityServerCertificateEnum(s)
+		*e = As2PartnerEntityServerCertificateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for As2PartnerEntityServerCertificateEnum: %s", s)
+		return fmt.Errorf("invalid value for As2PartnerEntityServerCertificateEnum: %v", v)
 	}
 }
 
@@ -35,6 +39,8 @@ func (e *As2PartnerEntityServerCertificateEnum) UnmarshalJSON(data []byte) error
 type As2PartnerEntity struct {
 	// Id of the AS2 Station associated with this partner.
 	As2StationID *int `json:"as2_station_id,omitempty"`
+	// `true` if remote server only accepts connections from dedicated IPs
+	EnableDedicatedIps *bool `json:"enable_dedicated_ips,omitempty"`
 	// Serial of public certificate used for message security in hex format.
 	HexPublicCertificateSerial *string `json:"hex_public_certificate_serial,omitempty"`
 	// Id of the AS2 Partner.

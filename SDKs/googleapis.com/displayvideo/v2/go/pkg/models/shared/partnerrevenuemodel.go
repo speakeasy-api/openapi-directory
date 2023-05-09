@@ -17,12 +17,16 @@ const (
 	PartnerRevenueModelMarkupTypeEnumPartnerRevenueModelMarkupTypeTotalMediaCostMarkup PartnerRevenueModelMarkupTypeEnum = "PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP"
 )
 
+func (e PartnerRevenueModelMarkupTypeEnum) ToPointer() *PartnerRevenueModelMarkupTypeEnum {
+	return &e
+}
+
 func (e *PartnerRevenueModelMarkupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARTNER_REVENUE_MODEL_MARKUP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PARTNER_REVENUE_MODEL_MARKUP_TYPE_CPM":
@@ -30,10 +34,10 @@ func (e *PartnerRevenueModelMarkupTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PARTNER_REVENUE_MODEL_MARKUP_TYPE_MEDIA_COST_MARKUP":
 		fallthrough
 	case "PARTNER_REVENUE_MODEL_MARKUP_TYPE_TOTAL_MEDIA_COST_MARKUP":
-		*e = PartnerRevenueModelMarkupTypeEnum(s)
+		*e = PartnerRevenueModelMarkupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartnerRevenueModelMarkupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartnerRevenueModelMarkupTypeEnum: %v", v)
 	}
 }
 

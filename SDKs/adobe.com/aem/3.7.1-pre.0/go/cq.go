@@ -75,6 +75,7 @@ func (s *cq) GetLoginPage(ctx context.Context) (*operations.GetLoginPageResponse
 
 	return res, nil
 }
+
 func (s *cq) PostCqActions(ctx context.Context, request operations.PostCqActionsRequest) (*operations.PostCqActionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/.cqactions.html"

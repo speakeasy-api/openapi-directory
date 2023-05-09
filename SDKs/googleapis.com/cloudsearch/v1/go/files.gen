@@ -10,6 +10,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -217,4 +218,13 @@ pkg/models/shared/getsearchapplicationsessionstatsresponse.go
 pkg/models/shared/searchapplicationsessionstats.go
 pkg/models/shared/getsearchapplicationuserstatsresponse.go
 pkg/models/shared/searchapplicationuserstats.go
+docs/sdk/README.md
+docs/debug/README.md
+docs/indexing/README.md
+docs/media/README.md
+docs/operations/README.md
+docs/query/README.md
+docs/settings/README.md
+docs/stats/README.md
+docs/v1/README.md
 USAGE.md

@@ -27,12 +27,16 @@ const (
 	GetScoreRevisionDataFormatEnumSynchronizationPoints GetScoreRevisionDataFormatEnum = "synchronizationPoints"
 )
 
+func (e GetScoreRevisionDataFormatEnum) ToPointer() *GetScoreRevisionDataFormatEnum {
+	return &e
+}
+
 func (e *GetScoreRevisionDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "mxl":
@@ -48,10 +52,10 @@ func (e *GetScoreRevisionDataFormatEnum) UnmarshalJSON(data []byte) error {
 	case "thumbnail.png":
 		fallthrough
 	case "synchronizationPoints":
-		*e = GetScoreRevisionDataFormatEnum(s)
+		*e = GetScoreRevisionDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScoreRevisionDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScoreRevisionDataFormatEnum: %v", v)
 	}
 }
 

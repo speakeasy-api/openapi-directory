@@ -14,18 +14,22 @@ const (
 	ScopeTypeEnumRulesPackageArn ScopeTypeEnum = "RULES_PACKAGE_ARN"
 )
 
+func (e ScopeTypeEnum) ToPointer() *ScopeTypeEnum {
+	return &e
+}
+
 func (e *ScopeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE_ID":
 		fallthrough
 	case "RULES_PACKAGE_ARN":
-		*e = ScopeTypeEnum(s)
+		*e = ScopeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScopeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScopeTypeEnum: %v", v)
 	}
 }

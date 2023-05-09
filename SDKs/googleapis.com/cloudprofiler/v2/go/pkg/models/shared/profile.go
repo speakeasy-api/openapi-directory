@@ -21,12 +21,16 @@ const (
 	ProfileProfileTypeEnumHeapAlloc              ProfileProfileTypeEnum = "HEAP_ALLOC"
 )
 
+func (e ProfileProfileTypeEnum) ToPointer() *ProfileProfileTypeEnum {
+	return &e
+}
+
 func (e *ProfileProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROFILE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CPU":
@@ -42,10 +46,10 @@ func (e *ProfileProfileTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PEAK_HEAP":
 		fallthrough
 	case "HEAP_ALLOC":
-		*e = ProfileProfileTypeEnum(s)
+		*e = ProfileProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileProfileTypeEnum: %v", v)
 	}
 }
 

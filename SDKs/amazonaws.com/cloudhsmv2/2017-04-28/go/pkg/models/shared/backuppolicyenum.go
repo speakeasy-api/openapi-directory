@@ -13,16 +13,20 @@ const (
 	BackupPolicyEnumDefault BackupPolicyEnum = "DEFAULT"
 )
 
+func (e BackupPolicyEnum) ToPointer() *BackupPolicyEnum {
+	return &e
+}
+
 func (e *BackupPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
-		*e = BackupPolicyEnum(s)
+		*e = BackupPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackupPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for BackupPolicyEnum: %v", v)
 	}
 }

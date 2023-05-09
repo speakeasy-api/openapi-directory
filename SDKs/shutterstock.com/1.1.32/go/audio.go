@@ -36,7 +36,10 @@ func newAudio(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // This endpoint adds one or more tracks to a collection by track IDs.
 func (s *audio) AddTrackCollectionItems(ctx context.Context, request operations.AddTrackCollectionItemsRequest, security operations.AddTrackCollectionItemsSecurity) (*operations.AddTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionItemRequest", "json")
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *audio) CreateTrackCollection(ctx context.Context, request shared.Collec
 // This endpoint deletes a collection.
 func (s *audio) DeleteTrackCollection(ctx context.Context, request operations.DeleteTrackCollectionRequest, security operations.DeleteTrackCollectionSecurity) (*operations.DeleteTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -194,7 +200,10 @@ func (s *audio) DeleteTrackCollection(ctx context.Context, request operations.De
 // This endpoint removes one or more tracks from a collection.
 func (s *audio) DeleteTrackCollectionItems(ctx context.Context, request operations.DeleteTrackCollectionItemsRequest, security operations.DeleteTrackCollectionItemsSecurity) (*operations.DeleteTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -242,7 +251,10 @@ func (s *audio) DeleteTrackCollectionItems(ctx context.Context, request operatio
 // This endpoint redownloads tracks that you have already received a license for. The download links in the response are valid for 8 hours.
 func (s *audio) DownloadTracks(ctx context.Context, request operations.DownloadTracksRequest, security operations.DownloadTracksSecurity) (*operations.DownloadTracksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/licenses/{id}/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/licenses/{id}/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -292,7 +304,10 @@ func (s *audio) DownloadTracks(ctx context.Context, request operations.DownloadT
 // This endpoint shows information about a track, including its genres, instruments, and other attributes.
 func (s *audio) GetTrack(ctx context.Context, request operations.GetTrackRequest, security operations.GetTrackSecurity) (*operations.GetTrackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +361,10 @@ func (s *audio) GetTrack(ctx context.Context, request operations.GetTrackRequest
 // This endpoint gets more detailed information about a collection, including the number of items in it and when it was last updated. To get the tracks in collections, use `GET /v2/audio/collections/{id}/items`.
 func (s *audio) GetTrackCollection(ctx context.Context, request operations.GetTrackCollectionRequest, security operations.GetTrackCollectionSecurity) (*operations.GetTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -402,7 +420,10 @@ func (s *audio) GetTrackCollection(ctx context.Context, request operations.GetTr
 // This endpoint lists the IDs of tracks in a collection and the date that each was added.
 func (s *audio) GetTrackCollectionItems(ctx context.Context, request operations.GetTrackCollectionItemsRequest, security operations.GetTrackCollectionItemsSecurity) (*operations.GetTrackCollectionItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -831,7 +852,10 @@ func (s *audio) ListMoods(ctx context.Context, request operations.ListMoodsReque
 // This endpoint sets a new name for a collection.
 func (s *audio) RenameTrackCollection(ctx context.Context, request operations.RenameTrackCollectionRequest, security operations.RenameTrackCollectionSecurity) (*operations.RenameTrackCollectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/audio/collections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CollectionUpdateRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTFailoverDBClusterActionEnumFailoverDbCluster POSTFailoverDBClusterActionEnum = "FailoverDBCluster"
 )
 
+func (e POSTFailoverDBClusterActionEnum) ToPointer() *POSTFailoverDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTFailoverDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailoverDBCluster":
-		*e = POSTFailoverDBClusterActionEnum(s)
+		*e = POSTFailoverDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTFailoverDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTFailoverDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTFailoverDBClusterVersionEnumTwoThousandAndFourteen1031 POSTFailoverDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTFailoverDBClusterVersionEnum) ToPointer() *POSTFailoverDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTFailoverDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTFailoverDBClusterVersionEnum(s)
+		*e = POSTFailoverDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTFailoverDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTFailoverDBClusterVersionEnum: %v", v)
 	}
 }
 

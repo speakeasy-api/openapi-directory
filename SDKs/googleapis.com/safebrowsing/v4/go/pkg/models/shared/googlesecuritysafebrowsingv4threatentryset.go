@@ -16,21 +16,25 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnumRice                       GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum = "RICE"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPRESSION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "RICE":
-		*e = GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatEntrySetCompressionTypeEnum: %v", v)
 	}
 }
 

@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// ResourceShareAssociation - Describes an association with a resource share and either a principal or a resource.
+// ResourceShareAssociation - Describes an association between a resource share and either a principal or a resource.
 type ResourceShareAssociation struct {
 	AssociatedEntity  *string                             `json:"associatedEntity,omitempty"`
 	AssociationType   *ResourceShareAssociationTypeEnum   `json:"associationType,omitempty"`

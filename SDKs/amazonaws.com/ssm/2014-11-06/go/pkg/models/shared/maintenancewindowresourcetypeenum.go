@@ -14,18 +14,22 @@ const (
 	MaintenanceWindowResourceTypeEnumResourceGroup MaintenanceWindowResourceTypeEnum = "RESOURCE_GROUP"
 )
 
+func (e MaintenanceWindowResourceTypeEnum) ToPointer() *MaintenanceWindowResourceTypeEnum {
+	return &e
+}
+
 func (e *MaintenanceWindowResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE":
 		fallthrough
 	case "RESOURCE_GROUP":
-		*e = MaintenanceWindowResourceTypeEnum(s)
+		*e = MaintenanceWindowResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaintenanceWindowResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MaintenanceWindowResourceTypeEnum: %v", v)
 	}
 }

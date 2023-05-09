@@ -14,18 +14,22 @@ const (
 	RecommendationTargetEnumCrossInstanceFamily RecommendationTargetEnum = "CROSS_INSTANCE_FAMILY"
 )
 
+func (e RecommendationTargetEnum) ToPointer() *RecommendationTargetEnum {
+	return &e
+}
+
 func (e *RecommendationTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAME_INSTANCE_FAMILY":
 		fallthrough
 	case "CROSS_INSTANCE_FAMILY":
-		*e = RecommendationTargetEnum(s)
+		*e = RecommendationTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecommendationTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RecommendationTargetEnum: %v", v)
 	}
 }

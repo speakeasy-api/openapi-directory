@@ -2,51 +2,49 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KgsearchEntitiesSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
+    ctx := context.Background()
+    res, err := s.Entities.KgsearchEntitiesSearch(ctx, operations.KgsearchEntitiesSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
         Ids: []string{
             "corrupti",
             "illum",
             "vel",
             "error",
         },
-        Indent: false,
-        Key: "deserunt",
+        Indent: sdk.Bool(false),
+        Key: sdk.String("deserunt"),
         Languages: []string{
             "iure",
             "magnam",
         },
-        Limit: 891773,
-        OauthToken: "ipsa",
-        Prefix: false,
-        PrettyPrint: false,
-        Query: "delectus",
-        QuotaUser: "tempora",
+        Limit: sdk.Int64(891773),
+        OauthToken: sdk.String("ipsa"),
+        Prefix: sdk.Bool(false),
+        PrettyPrint: sdk.Bool(false),
+        Query: sdk.String("delectus"),
+        QuotaUser: sdk.String("tempora"),
         Types: []string{
             "molestiae",
             "minus",
         },
-        UploadType: "placeat",
-        UploadProtocol: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Entities.KgsearchEntitiesSearch(ctx, req)
+        UploadType: sdk.String("placeat"),
+        UploadProtocol: sdk.String("voluptatum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

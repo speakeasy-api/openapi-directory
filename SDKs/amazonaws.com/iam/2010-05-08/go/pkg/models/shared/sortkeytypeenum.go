@@ -16,12 +16,16 @@ const (
 	SortKeyTypeEnumLastAuthenticatedTimeDescending SortKeyTypeEnum = "LAST_AUTHENTICATED_TIME_DESCENDING"
 )
 
+func (e SortKeyTypeEnum) ToPointer() *SortKeyTypeEnum {
+	return &e
+}
+
 func (e *SortKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_NAMESPACE_ASCENDING":
 		fallthrough
 	case "SERVICE_NAMESPACE_DESCENDING":
@@ -29,9 +33,9 @@ func (e *SortKeyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LAST_AUTHENTICATED_TIME_ASCENDING":
 		fallthrough
 	case "LAST_AUTHENTICATED_TIME_DESCENDING":
-		*e = SortKeyTypeEnum(s)
+		*e = SortKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SortKeyTypeEnum: %v", v)
 	}
 }

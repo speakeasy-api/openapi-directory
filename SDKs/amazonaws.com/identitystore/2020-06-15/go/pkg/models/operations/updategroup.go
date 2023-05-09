@@ -16,17 +16,21 @@ const (
 	UpdateGroupXAmzTargetEnumAwsIdentityStoreUpdateGroup UpdateGroupXAmzTargetEnum = "AWSIdentityStore.UpdateGroup"
 )
 
+func (e UpdateGroupXAmzTargetEnum) ToPointer() *UpdateGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIdentityStore.UpdateGroup":
-		*e = UpdateGroupXAmzTargetEnum(s)
+		*e = UpdateGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGroupXAmzTargetEnum: %v", v)
 	}
 }
 

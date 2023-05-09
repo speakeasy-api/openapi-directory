@@ -452,7 +452,10 @@ func (s *offers) LowestFares(ctx context.Context, request operations.LowestFares
 // Returns LH route origin & destination information
 func (s *offers) ONDRoute(ctx context.Context, request operations.ONDRouteRequest, security operations.ONDRouteSecurity) (*operations.ONDRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offers/ond/route/{origin}/{destination}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offers/ond/route/{origin}/{destination}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

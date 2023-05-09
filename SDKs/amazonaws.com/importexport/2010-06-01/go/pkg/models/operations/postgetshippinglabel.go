@@ -15,17 +15,21 @@ const (
 	POSTGetShippingLabelActionEnumGetShippingLabel POSTGetShippingLabelActionEnum = "GetShippingLabel"
 )
 
+func (e POSTGetShippingLabelActionEnum) ToPointer() *POSTGetShippingLabelActionEnum {
+	return &e
+}
+
 func (e *POSTGetShippingLabelActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetShippingLabel":
-		*e = POSTGetShippingLabelActionEnum(s)
+		*e = POSTGetShippingLabelActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetShippingLabelActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetShippingLabelActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetShippingLabelOperationEnumGetShippingLabel POSTGetShippingLabelOperationEnum = "GetShippingLabel"
 )
 
+func (e POSTGetShippingLabelOperationEnum) ToPointer() *POSTGetShippingLabelOperationEnum {
+	return &e
+}
+
 func (e *POSTGetShippingLabelOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetShippingLabel":
-		*e = POSTGetShippingLabelOperationEnum(s)
+		*e = POSTGetShippingLabelOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetShippingLabelOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetShippingLabelOperationEnum: %v", v)
 	}
 }
 
@@ -57,17 +65,21 @@ const (
 	POSTGetShippingLabelVersionEnumTwoThousandAndTen0601 POSTGetShippingLabelVersionEnum = "2010-06-01"
 )
 
+func (e POSTGetShippingLabelVersionEnum) ToPointer() *POSTGetShippingLabelVersionEnum {
+	return &e
+}
+
 func (e *POSTGetShippingLabelVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = POSTGetShippingLabelVersionEnum(s)
+		*e = POSTGetShippingLabelVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetShippingLabelVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetShippingLabelVersionEnum: %v", v)
 	}
 }
 

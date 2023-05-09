@@ -20,19 +20,23 @@ const (
 	RepositoriesListFormEnumFull RepositoriesListFormEnum = "full"
 )
 
+func (e RepositoriesListFormEnum) ToPointer() *RepositoriesListFormEnum {
+	return &e
+}
+
 func (e *RepositoriesListFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lite":
 		fallthrough
 	case "full":
-		*e = RepositoriesListFormEnum(s)
+		*e = RepositoriesListFormEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoriesListFormEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoriesListFormEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	RepositoriesListSourceHostEnumGitlab    RepositoriesListSourceHostEnum = "gitlab"
 )
 
+func (e RepositoriesListSourceHostEnum) ToPointer() *RepositoriesListSourceHostEnum {
+	return &e
+}
+
 func (e *RepositoriesListSourceHostEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "github":
 		fallthrough
 	case "bitbucket":
@@ -59,10 +67,10 @@ func (e *RepositoriesListSourceHostEnum) UnmarshalJSON(data []byte) error {
 	case "vsts":
 		fallthrough
 	case "gitlab":
-		*e = RepositoriesListSourceHostEnum(s)
+		*e = RepositoriesListSourceHostEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoriesListSourceHostEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoriesListSourceHostEnum: %v", v)
 	}
 }
 

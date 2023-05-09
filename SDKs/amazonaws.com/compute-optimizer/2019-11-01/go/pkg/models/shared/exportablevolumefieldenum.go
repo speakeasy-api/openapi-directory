@@ -38,14 +38,19 @@ const (
 	ExportableVolumeFieldEnumRecommendationOptionsSavingsOpportunityPercentage          ExportableVolumeFieldEnum = "RecommendationOptionsSavingsOpportunityPercentage"
 	ExportableVolumeFieldEnumRecommendationOptionsEstimatedMonthlySavingsCurrency       ExportableVolumeFieldEnum = "RecommendationOptionsEstimatedMonthlySavingsCurrency"
 	ExportableVolumeFieldEnumRecommendationOptionsEstimatedMonthlySavingsValue          ExportableVolumeFieldEnum = "RecommendationOptionsEstimatedMonthlySavingsValue"
+	ExportableVolumeFieldEnumRootVolume                                                 ExportableVolumeFieldEnum = "RootVolume"
 )
 
+func (e ExportableVolumeFieldEnum) ToPointer() *ExportableVolumeFieldEnum {
+	return &e
+}
+
 func (e *ExportableVolumeFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountId":
 		fallthrough
 	case "VolumeArn":
@@ -101,9 +106,11 @@ func (e *ExportableVolumeFieldEnum) UnmarshalJSON(data []byte) error {
 	case "RecommendationOptionsEstimatedMonthlySavingsCurrency":
 		fallthrough
 	case "RecommendationOptionsEstimatedMonthlySavingsValue":
-		*e = ExportableVolumeFieldEnum(s)
+		fallthrough
+	case "RootVolume":
+		*e = ExportableVolumeFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportableVolumeFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportableVolumeFieldEnum: %v", v)
 	}
 }

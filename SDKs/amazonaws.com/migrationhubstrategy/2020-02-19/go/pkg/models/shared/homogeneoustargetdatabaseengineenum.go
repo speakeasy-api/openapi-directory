@@ -13,16 +13,20 @@ const (
 	HomogeneousTargetDatabaseEngineEnumNoneSpecified HomogeneousTargetDatabaseEngineEnum = "None specified"
 )
 
+func (e HomogeneousTargetDatabaseEngineEnum) ToPointer() *HomogeneousTargetDatabaseEngineEnum {
+	return &e
+}
+
 func (e *HomogeneousTargetDatabaseEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None specified":
-		*e = HomogeneousTargetDatabaseEngineEnum(s)
+		*e = HomogeneousTargetDatabaseEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HomogeneousTargetDatabaseEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for HomogeneousTargetDatabaseEngineEnum: %v", v)
 	}
 }

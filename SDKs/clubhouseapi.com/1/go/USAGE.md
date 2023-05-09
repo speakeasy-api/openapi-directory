@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCheckForUpdateRequest{
-        IsTestflight: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.GetCheckForUpdate(ctx, req)
+    res, err := s.GetCheckForUpdate(ctx, operations.GetCheckForUpdateRequest{
+        IsTestflight: sdk.Int64(548814),
+    })
     if err != nil {
         log.Fatal(err)
     }

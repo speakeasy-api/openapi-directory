@@ -16,17 +16,21 @@ const (
 	CreatePrivateDNSNamespaceXAmzTargetEnumRoute53AutoNamingV20170314CreatePrivateDNSNamespace CreatePrivateDNSNamespaceXAmzTargetEnum = "Route53AutoNaming_v20170314.CreatePrivateDnsNamespace"
 )
 
+func (e CreatePrivateDNSNamespaceXAmzTargetEnum) ToPointer() *CreatePrivateDNSNamespaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreatePrivateDNSNamespaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.CreatePrivateDnsNamespace":
-		*e = CreatePrivateDNSNamespaceXAmzTargetEnum(s)
+		*e = CreatePrivateDNSNamespaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreatePrivateDNSNamespaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreatePrivateDNSNamespaceXAmzTargetEnum: %v", v)
 	}
 }
 

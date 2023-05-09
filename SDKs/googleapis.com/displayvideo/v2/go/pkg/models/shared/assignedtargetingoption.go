@@ -17,12 +17,16 @@ const (
 	AssignedTargetingOptionInheritanceEnumInheritedFromAdvertiser AssignedTargetingOptionInheritanceEnum = "INHERITED_FROM_ADVERTISER"
 )
 
+func (e AssignedTargetingOptionInheritanceEnum) ToPointer() *AssignedTargetingOptionInheritanceEnum {
+	return &e
+}
+
 func (e *AssignedTargetingOptionInheritanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INHERITANCE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INHERITED":
@@ -30,10 +34,10 @@ func (e *AssignedTargetingOptionInheritanceEnum) UnmarshalJSON(data []byte) erro
 	case "INHERITED_FROM_PARTNER":
 		fallthrough
 	case "INHERITED_FROM_ADVERTISER":
-		*e = AssignedTargetingOptionInheritanceEnum(s)
+		*e = AssignedTargetingOptionInheritanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignedTargetingOptionInheritanceEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignedTargetingOptionInheritanceEnum: %v", v)
 	}
 }
 
@@ -92,12 +96,16 @@ const (
 	AssignedTargetingOptionTargetingTypeEnumTargetingTypeSessionPosition              AssignedTargetingOptionTargetingTypeEnum = "TARGETING_TYPE_SESSION_POSITION"
 )
 
+func (e AssignedTargetingOptionTargetingTypeEnum) ToPointer() *AssignedTargetingOptionTargetingTypeEnum {
+	return &e
+}
+
 func (e *AssignedTargetingOptionTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -195,10 +203,10 @@ func (e *AssignedTargetingOptionTargetingTypeEnum) UnmarshalJSON(data []byte) er
 	case "TARGETING_TYPE_YOUTUBE_CHANNEL":
 		fallthrough
 	case "TARGETING_TYPE_SESSION_POSITION":
-		*e = AssignedTargetingOptionTargetingTypeEnum(s)
+		*e = AssignedTargetingOptionTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignedTargetingOptionTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignedTargetingOptionTargetingTypeEnum: %v", v)
 	}
 }
 
@@ -218,7 +226,7 @@ type AssignedTargetingOption struct {
 	AudienceGroupDetails *AudienceGroupAssignedTargetingOptionDetails `json:"audienceGroupDetails,omitempty"`
 	// Details for audio content type assigned targeting option. This will be populated in the audio_content_type_details field when targeting_type is `TARGETING_TYPE_AUDIO_CONTENT_TYPE`. Explicitly targeting all options is not supported. Remove all audio content type targeting options to achieve this effect.
 	AudioContentTypeDetails *AudioContentTypeAssignedTargetingOptionDetails `json:"audioContentTypeDetails,omitempty"`
-	// Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+	// Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it is using the "Authorized Direct Sellers and Resellers" option.
 	AuthorizedSellerStatusDetails *AuthorizedSellerStatusAssignedTargetingOptionDetails `json:"authorizedSellerStatusDetails,omitempty"`
 	// Details for assigned browser targeting option. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_BROWSER`.
 	BrowserDetails *BrowserAssignedTargetingOptionDetails `json:"browserDetails,omitempty"`
@@ -324,7 +332,7 @@ type AssignedTargetingOptionInput struct {
 	AudienceGroupDetails *AudienceGroupAssignedTargetingOptionDetails `json:"audienceGroupDetails,omitempty"`
 	// Details for audio content type assigned targeting option. This will be populated in the audio_content_type_details field when targeting_type is `TARGETING_TYPE_AUDIO_CONTENT_TYPE`. Explicitly targeting all options is not supported. Remove all audio content type targeting options to achieve this effect.
 	AudioContentTypeDetails *AudioContentTypeAssignedTargetingOptionDetails `json:"audioContentTypeDetails,omitempty"`
-	// Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`.
+	// Represents an assigned authorized seller status. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS`. If a resource does not have an `TARGETING_TYPE_AUTHORIZED_SELLER_STATUS` assigned targeting option, it is using the "Authorized Direct Sellers and Resellers" option.
 	AuthorizedSellerStatusDetails *AuthorizedSellerStatusAssignedTargetingOptionDetailsInput `json:"authorizedSellerStatusDetails,omitempty"`
 	// Details for assigned browser targeting option. This will be populated in the details field of an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_BROWSER`.
 	BrowserDetails *BrowserAssignedTargetingOptionDetailsInput `json:"browserDetails,omitempty"`

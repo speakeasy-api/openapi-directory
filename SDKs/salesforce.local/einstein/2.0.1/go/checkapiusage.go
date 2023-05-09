@@ -35,7 +35,7 @@ func newCheckAPIUsage(defaultClient, securityClient HTTPClient, serverURL, langu
 
 // GetAPIUsagePlansV2 - Get API Isage
 // Returns prediction usage on a monthly basis for the current calendar month and future months. Each apiusage object in the response corresponds to a calendar month in your plan.
-func (s *checkAPIUsage) GetAPIUsagePlansV2(ctx context.Context) (*operations.GetAPIUsagePlansV2Response, error) {
+func (s *checkAPIUsage) GetAPIUsagePlansV2(ctx context.Context, security operations.GetAPIUsagePlansV2Security) (*operations.GetAPIUsagePlansV2Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v2/apiusage"
 
@@ -44,7 +44,7 @@ func (s *checkAPIUsage) GetAPIUsagePlansV2(ctx context.Context) (*operations.Get
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

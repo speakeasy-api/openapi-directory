@@ -15,19 +15,23 @@ const (
 	PlaylistResponseTypeEnumPodcastList PlaylistResponseTypeEnum = "podcast_list"
 )
 
+func (e PlaylistResponseTypeEnum) ToPointer() *PlaylistResponseTypeEnum {
+	return &e
+}
+
 func (e *PlaylistResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "episode_list":
 		fallthrough
 	case "podcast_list":
-		*e = PlaylistResponseTypeEnum(s)
+		*e = PlaylistResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaylistResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaylistResponseTypeEnum: %v", v)
 	}
 }
 

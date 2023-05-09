@@ -16,21 +16,25 @@ const (
 	PageBackgroundFillPropertyStateEnumInherit     PageBackgroundFillPropertyStateEnum = "INHERIT"
 )
 
+func (e PageBackgroundFillPropertyStateEnum) ToPointer() *PageBackgroundFillPropertyStateEnum {
+	return &e
+}
+
 func (e *PageBackgroundFillPropertyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RENDERED":
 		fallthrough
 	case "NOT_RENDERED":
 		fallthrough
 	case "INHERIT":
-		*e = PageBackgroundFillPropertyStateEnum(s)
+		*e = PageBackgroundFillPropertyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PageBackgroundFillPropertyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PageBackgroundFillPropertyStateEnum: %v", v)
 	}
 }
 

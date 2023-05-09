@@ -18,12 +18,16 @@ const (
 	TagsCountTypeEnumGr TagsCountTypeEnum = "gr"
 )
 
+func (e TagsCountTypeEnum) ToPointer() *TagsCountTypeEnum {
+	return &e
+}
+
 func (e *TagsCountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
@@ -31,10 +35,10 @@ func (e *TagsCountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "dp":
 		fallthrough
 	case "gr":
-		*e = TagsCountTypeEnum(s)
+		*e = TagsCountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagsCountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagsCountTypeEnum: %v", v)
 	}
 }
 

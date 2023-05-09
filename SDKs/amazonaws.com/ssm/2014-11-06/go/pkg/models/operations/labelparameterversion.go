@@ -16,17 +16,21 @@ const (
 	LabelParameterVersionXAmzTargetEnumAmazonSsmLabelParameterVersion LabelParameterVersionXAmzTargetEnum = "AmazonSSM.LabelParameterVersion"
 )
 
+func (e LabelParameterVersionXAmzTargetEnum) ToPointer() *LabelParameterVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *LabelParameterVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.LabelParameterVersion":
-		*e = LabelParameterVersionXAmzTargetEnum(s)
+		*e = LabelParameterVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LabelParameterVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for LabelParameterVersionXAmzTargetEnum: %v", v)
 	}
 }
 

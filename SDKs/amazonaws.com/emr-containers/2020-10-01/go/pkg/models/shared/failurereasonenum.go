@@ -16,12 +16,16 @@ const (
 	FailureReasonEnumClusterUnavailable FailureReasonEnum = "CLUSTER_UNAVAILABLE"
 )
 
+func (e FailureReasonEnum) ToPointer() *FailureReasonEnum {
+	return &e
+}
+
 func (e *FailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "USER_ERROR":
@@ -29,9 +33,9 @@ func (e *FailureReasonEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATION_ERROR":
 		fallthrough
 	case "CLUSTER_UNAVAILABLE":
-		*e = FailureReasonEnum(s)
+		*e = FailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for FailureReasonEnum: %v", v)
 	}
 }

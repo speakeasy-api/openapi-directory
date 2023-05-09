@@ -17,12 +17,16 @@ const (
 	EscalationReasonEnumBusinessImpact     EscalationReasonEnum = "BUSINESS_IMPACT"
 )
 
+func (e EscalationReasonEnum) ToPointer() *EscalationReasonEnum {
+	return &e
+}
+
 func (e *EscalationReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNSPECIFIED":
 		fallthrough
 	case "RESOLUTION_TIME":
@@ -30,10 +34,10 @@ func (e *EscalationReasonEnum) UnmarshalJSON(data []byte) error {
 	case "TECHNICAL_EXPERTISE":
 		fallthrough
 	case "BUSINESS_IMPACT":
-		*e = EscalationReasonEnum(s)
+		*e = EscalationReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EscalationReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for EscalationReasonEnum: %v", v)
 	}
 }
 

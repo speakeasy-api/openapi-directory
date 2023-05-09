@@ -17,12 +17,16 @@ const (
 	EnvironmentLifecycleStatusEnumDeleteFailed EnvironmentLifecycleStatusEnum = "DELETE_FAILED"
 )
 
+func (e EnvironmentLifecycleStatusEnum) ToPointer() *EnvironmentLifecycleStatusEnum {
+	return &e
+}
+
 func (e *EnvironmentLifecycleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -32,9 +36,9 @@ func (e *EnvironmentLifecycleStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETE_FAILED":
-		*e = EnvironmentLifecycleStatusEnum(s)
+		*e = EnvironmentLifecycleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentLifecycleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentLifecycleStatusEnum: %v", v)
 	}
 }

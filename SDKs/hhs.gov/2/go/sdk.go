@@ -21,6 +21,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <div class="swagger-ui-wrap extraFooter"><h3>Common Features / Behaviors</h3> <div class="features"> <ul> <li><strong>* "sort" param:</strong> supports multi column sorting through the use of commas as delimiters, and a hyphen to denote descending order. <br/> <strong><span>Examples:</span></strong> <ul> <li><span class="example">name</span><span class="description">sort results by name ascending</span></li> <li><span class="example">-name</span><span class="description">sort results by name descending</span></li> <li><span class="example">-name,id</span><span class="description">sort results by name descending and then by id ascending</span></li> <li><span class="example">id,-dateContentAuthored</span><span class="description">sort results by id ascending and then date descending</span></li> </ul> </li> <li><strong>Date formats:</strong> Date input format is expected to be based on <a href="http://www.ietf.org/rfc/rfc3339.txt">RFC 3339</a>. <br/> <span><strong>Example:</strong></span> <ul><li>2013-11-18T18:43:01Z</li></ul> </li> </ul> </div> </div>
 type SDK struct {
 	// Campaigns - Information about campaigns

@@ -17,19 +17,23 @@ const (
 	CreateComponentRequestBodyPlatformEnumLinux   CreateComponentRequestBodyPlatformEnum = "Linux"
 )
 
+func (e CreateComponentRequestBodyPlatformEnum) ToPointer() *CreateComponentRequestBodyPlatformEnum {
+	return &e
+}
+
 func (e *CreateComponentRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
 		fallthrough
 	case "Linux":
-		*e = CreateComponentRequestBodyPlatformEnum(s)
+		*e = CreateComponentRequestBodyPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateComponentRequestBodyPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateComponentRequestBodyPlatformEnum: %v", v)
 	}
 }
 
@@ -50,7 +54,7 @@ type CreateComponentRequestBody struct {
 	Platform CreateComponentRequestBodyPlatformEnum `json:"platform"`
 	// <p>The semantic version of the component. This version follows the semantic version syntax.</p> <note> <p>The semantic version has four nodes: &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;/&lt;build&gt;. You can assign values for the first three, and can filter on all of them.</p> <p> <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the fourth node.</p> <p> <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign. For example, you might choose a software version pattern, such as 1.0.0, or a date, such as 2021.01.01.</p> </note>
 	SemanticVersion string `json:"semanticVersion"`
-	//  The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
+	// The operating system (OS) version supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation.
 	SupportedOsVersions []string `json:"supportedOsVersions,omitempty"`
 	// The tags that apply to the component.
 	Tags map[string]string `json:"tags,omitempty"`

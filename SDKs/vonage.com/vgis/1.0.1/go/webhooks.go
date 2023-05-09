@@ -111,7 +111,10 @@ func (s *webhooks) CreateWebhook(ctx context.Context, request shared.WebhookCrea
 // DestroyWebhook - Remove a web hook
 func (s *webhooks) DestroyWebhook(ctx context.Context, request operations.DestroyWebhookRequest) (*operations.DestroyWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -233,7 +236,10 @@ func (s *webhooks) ListWebhooks(ctx context.Context) (*operations.ListWebhooksRe
 // RenewWebhook - Renews a web hook
 func (s *webhooks) RenewWebhook(ctx context.Context, request operations.RenewWebhookRequest) (*operations.RenewWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}/renew", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}/renew", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -298,7 +304,10 @@ func (s *webhooks) RenewWebhook(ctx context.Context, request operations.RenewWeb
 // ViewWebhook - Get web hook details
 func (s *webhooks) ViewWebhook(ctx context.Context, request operations.ViewWebhookRequest) (*operations.ViewWebhookResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/self/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -24,12 +24,16 @@ const (
 	ListingSettingsNamingEnumExtensions   ListingSettingsNamingEnum = "EXTENSIONS"
 )
 
+func (e ListingSettingsNamingEnum) ToPointer() *ListingSettingsNamingEnum {
+	return &e
+}
+
 func (e *ListingSettingsNamingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LISTING":
 		fallthrough
 	case "LISTINGS":
@@ -53,10 +57,10 @@ func (e *ListingSettingsNamingEnum) UnmarshalJSON(data []byte) error {
 	case "CONNECTIONS":
 		fallthrough
 	case "EXTENSIONS":
-		*e = ListingSettingsNamingEnum(s)
+		*e = ListingSettingsNamingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListingSettingsNamingEnum: %s", s)
+		return fmt.Errorf("invalid value for ListingSettingsNamingEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	ListingSettingsSidebarPositionEnumHidden ListingSettingsSidebarPositionEnum = "HIDDEN"
 )
 
+func (e ListingSettingsSidebarPositionEnum) ToPointer() *ListingSettingsSidebarPositionEnum {
+	return &e
+}
+
 func (e *ListingSettingsSidebarPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOP":
 		fallthrough
 	case "LEFT":
@@ -82,10 +90,10 @@ func (e *ListingSettingsSidebarPositionEnum) UnmarshalJSON(data []byte) error {
 	case "RIGHT":
 		fallthrough
 	case "HIDDEN":
-		*e = ListingSettingsSidebarPositionEnum(s)
+		*e = ListingSettingsSidebarPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListingSettingsSidebarPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListingSettingsSidebarPositionEnum: %v", v)
 	}
 }
 

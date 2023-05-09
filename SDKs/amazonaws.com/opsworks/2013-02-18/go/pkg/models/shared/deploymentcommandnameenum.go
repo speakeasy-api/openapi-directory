@@ -24,12 +24,16 @@ const (
 	DeploymentCommandNameEnumUndeploy              DeploymentCommandNameEnum = "undeploy"
 )
 
+func (e DeploymentCommandNameEnum) ToPointer() *DeploymentCommandNameEnum {
+	return &e
+}
+
 func (e *DeploymentCommandNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "install_dependencies":
 		fallthrough
 	case "update_dependencies":
@@ -53,9 +57,9 @@ func (e *DeploymentCommandNameEnum) UnmarshalJSON(data []byte) error {
 	case "restart":
 		fallthrough
 	case "undeploy":
-		*e = DeploymentCommandNameEnum(s)
+		*e = DeploymentCommandNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentCommandNameEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentCommandNameEnum: %v", v)
 	}
 }

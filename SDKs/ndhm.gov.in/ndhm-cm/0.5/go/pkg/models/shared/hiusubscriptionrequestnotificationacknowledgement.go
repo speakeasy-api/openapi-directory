@@ -14,17 +14,21 @@ const (
 	HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnumOk HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum = "OK"
 )
 
+func (e HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum) ToPointer() *HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum {
+	return &e
+}
+
 func (e *HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum(s)
+		*e = HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HIUSubscriptionRequestNotificationAcknowledgementAcknowledgementStatusEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetRepositoryPolicyXAmzTargetEnumAmazonEc2ContainerRegistryV20150921GetRepositoryPolicy GetRepositoryPolicyXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.GetRepositoryPolicy"
 )
 
+func (e GetRepositoryPolicyXAmzTargetEnum) ToPointer() *GetRepositoryPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRepositoryPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.GetRepositoryPolicy":
-		*e = GetRepositoryPolicyXAmzTargetEnum(s)
+		*e = GetRepositoryPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRepositoryPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRepositoryPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	ProviderTypeEnumGitHubEnterpriseServer ProviderTypeEnum = "GitHubEnterpriseServer"
 )
 
+func (e ProviderTypeEnum) ToPointer() *ProviderTypeEnum {
+	return &e
+}
+
 func (e *ProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Bitbucket":
 		fallthrough
 	case "GitHub":
 		fallthrough
 	case "GitHubEnterpriseServer":
-		*e = ProviderTypeEnum(s)
+		*e = ProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProviderTypeEnum: %v", v)
 	}
 }

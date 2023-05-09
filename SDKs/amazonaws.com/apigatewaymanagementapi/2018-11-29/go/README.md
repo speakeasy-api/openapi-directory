@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/apigatewaym
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.DeleteConnectionRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        ConnectionID: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteConnection(ctx, req)
+    res, err := s.DeleteConnection(ctx, operations.DeleteConnectionRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        ConnectionID: "illum",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,11 +52,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteConnection` - Delete the connection with the provided id.
-* `GetConnection` - Get information about the connection with the provided id.
-* `PostToConnection` - Sends the provided data to the specified connection.
+* [DeleteConnection](docs/sdk/README.md#deleteconnection) - Delete the connection with the provided id.
+* [GetConnection](docs/sdk/README.md#getconnection) - Get information about the connection with the provided id.
+* [PostToConnection](docs/sdk/README.md#posttoconnection) - Sends the provided data to the specified connection.
 <!-- End SDK Available Operations -->
 
 ### Maturity

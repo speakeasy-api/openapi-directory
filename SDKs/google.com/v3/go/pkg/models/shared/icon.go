@@ -19,12 +19,16 @@ const (
 	IconDisapprovalReasonsEnumTextTooSmall                      IconDisapprovalReasonsEnum = "TEXT_TOO_SMALL"
 )
 
+func (e IconDisapprovalReasonsEnum) ToPointer() *IconDisapprovalReasonsEnum {
+	return &e
+}
+
 func (e *IconDisapprovalReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_DISAPPROVAL_REASON_UNSPECIFIED":
 		fallthrough
 	case "NOT_LIKE_SITE":
@@ -38,10 +42,10 @@ func (e *IconDisapprovalReasonsEnum) UnmarshalJSON(data []byte) error {
 	case "BAD_BACKGROUND":
 		fallthrough
 	case "TEXT_TOO_SMALL":
-		*e = IconDisapprovalReasonsEnum(s)
+		*e = IconDisapprovalReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IconDisapprovalReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for IconDisapprovalReasonsEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	IconStateEnumRejected         IconStateEnum = "REJECTED"
 )
 
+func (e IconStateEnum) ToPointer() *IconStateEnum {
+	return &e
+}
+
 func (e *IconStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "NEW":
@@ -68,10 +76,10 @@ func (e *IconStateEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVED":
 		fallthrough
 	case "REJECTED":
-		*e = IconStateEnum(s)
+		*e = IconStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IconStateEnum: %s", s)
+		return fmt.Errorf("invalid value for IconStateEnum: %v", v)
 	}
 }
 

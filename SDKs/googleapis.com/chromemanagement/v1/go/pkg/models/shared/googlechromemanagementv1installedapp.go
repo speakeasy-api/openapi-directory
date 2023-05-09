@@ -20,12 +20,16 @@ const (
 	GoogleChromeManagementV1InstalledAppAppInstallTypeEnumOther                     GoogleChromeManagementV1InstalledAppAppInstallTypeEnum = "OTHER"
 )
 
+func (e GoogleChromeManagementV1InstalledAppAppInstallTypeEnum) ToPointer() *GoogleChromeManagementV1InstalledAppAppInstallTypeEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1InstalledAppAppInstallTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_INSTALL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MULTIPLE":
@@ -39,10 +43,10 @@ func (e *GoogleChromeManagementV1InstalledAppAppInstallTypeEnum) UnmarshalJSON(d
 	case "SIDELOAD":
 		fallthrough
 	case "OTHER":
-		*e = GoogleChromeManagementV1InstalledAppAppInstallTypeEnum(s)
+		*e = GoogleChromeManagementV1InstalledAppAppInstallTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppInstallTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppInstallTypeEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	GoogleChromeManagementV1InstalledAppAppSourceEnumPlayStore            GoogleChromeManagementV1InstalledAppAppSourceEnum = "PLAY_STORE"
 )
 
+func (e GoogleChromeManagementV1InstalledAppAppSourceEnum) ToPointer() *GoogleChromeManagementV1InstalledAppAppSourceEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1InstalledAppAppSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "CHROME_WEBSTORE":
 		fallthrough
 	case "PLAY_STORE":
-		*e = GoogleChromeManagementV1InstalledAppAppSourceEnum(s)
+		*e = GoogleChromeManagementV1InstalledAppAppSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppSourceEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	GoogleChromeManagementV1InstalledAppAppTypeEnumAndroidApp         GoogleChromeManagementV1InstalledAppAppTypeEnum = "ANDROID_APP"
 )
 
+func (e GoogleChromeManagementV1InstalledAppAppTypeEnum) ToPointer() *GoogleChromeManagementV1InstalledAppAppTypeEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1InstalledAppAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXTENSION":
@@ -102,10 +114,10 @@ func (e *GoogleChromeManagementV1InstalledAppAppTypeEnum) UnmarshalJSON(data []b
 	case "HOSTED_APP":
 		fallthrough
 	case "ANDROID_APP":
-		*e = GoogleChromeManagementV1InstalledAppAppTypeEnum(s)
+		*e = GoogleChromeManagementV1InstalledAppAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1InstalledAppAppTypeEnum: %v", v)
 	}
 }
 

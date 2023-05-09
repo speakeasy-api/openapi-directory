@@ -14,18 +14,22 @@ const (
 	DataCompressionTypeEnumLz4  DataCompressionTypeEnum = "LZ4"
 )
 
+func (e DataCompressionTypeEnum) ToPointer() *DataCompressionTypeEnum {
+	return &e
+}
+
 func (e *DataCompressionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "LZ4":
-		*e = DataCompressionTypeEnum(s)
+		*e = DataCompressionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataCompressionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataCompressionTypeEnum: %v", v)
 	}
 }

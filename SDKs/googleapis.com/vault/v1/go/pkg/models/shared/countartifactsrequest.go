@@ -16,21 +16,25 @@ const (
 	CountArtifactsRequestViewEnumAll                        CountArtifactsRequestViewEnum = "ALL"
 )
 
+func (e CountArtifactsRequestViewEnum) ToPointer() *CountArtifactsRequestViewEnum {
+	return &e
+}
+
 func (e *CountArtifactsRequestViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COUNT_RESULT_VIEW_UNSPECIFIED":
 		fallthrough
 	case "TOTAL_COUNT":
 		fallthrough
 	case "ALL":
-		*e = CountArtifactsRequestViewEnum(s)
+		*e = CountArtifactsRequestViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CountArtifactsRequestViewEnum: %s", s)
+		return fmt.Errorf("invalid value for CountArtifactsRequestViewEnum: %v", v)
 	}
 }
 

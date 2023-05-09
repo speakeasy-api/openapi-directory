@@ -15,17 +15,21 @@ const (
 	POSTAssociateTransitGatewayMulticastDomainActionEnumAssociateTransitGatewayMulticastDomain POSTAssociateTransitGatewayMulticastDomainActionEnum = "AssociateTransitGatewayMulticastDomain"
 )
 
+func (e POSTAssociateTransitGatewayMulticastDomainActionEnum) ToPointer() *POSTAssociateTransitGatewayMulticastDomainActionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTransitGatewayMulticastDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateTransitGatewayMulticastDomain":
-		*e = POSTAssociateTransitGatewayMulticastDomainActionEnum(s)
+		*e = POSTAssociateTransitGatewayMulticastDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayMulticastDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayMulticastDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssociateTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 POSTAssociateTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssociateTransitGatewayMulticastDomainVersionEnum) ToPointer() *POSTAssociateTransitGatewayMulticastDomainVersionEnum {
+	return &e
+}
+
 func (e *POSTAssociateTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssociateTransitGatewayMulticastDomainVersionEnum(s)
+		*e = POSTAssociateTransitGatewayMulticastDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayMulticastDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateTransitGatewayMulticastDomainVersionEnum: %v", v)
 	}
 }
 

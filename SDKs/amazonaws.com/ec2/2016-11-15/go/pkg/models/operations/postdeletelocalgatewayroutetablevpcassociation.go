@@ -15,17 +15,21 @@ const (
 	POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnumDeleteLocalGatewayRouteTableVpcAssociation POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum = "DeleteLocalGatewayRouteTableVpcAssociation"
 )
 
+func (e POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum) ToPointer() *POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLocalGatewayRouteTableVpcAssociation":
-		*e = POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVpcAssociationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnumTwoThousandAndSixteen1115 POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum) ToPointer() *POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteTableVpcAssociationVersionEnum: %v", v)
 	}
 }
 

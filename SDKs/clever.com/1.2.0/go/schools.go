@@ -35,7 +35,10 @@ func newSchools(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetDistrictForSchool - Returns the district for a school
 func (s *schools) GetDistrictForSchool(ctx context.Context, request operations.GetDistrictForSchoolRequest) (*operations.GetDistrictForSchoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schools/{id}/district", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schools/{id}/district", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *schools) GetDistrictForSchool(ctx context.Context, request operations.G
 // GetSchool - Returns a specific school
 func (s *schools) GetSchool(ctx context.Context, request operations.GetSchoolRequest) (*operations.GetSchoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schools/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schools/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +197,10 @@ func (s *schools) GetSchools(ctx context.Context, request operations.GetSchoolsR
 // GetSectionsForSchool - Returns the sections for a school
 func (s *schools) GetSectionsForSchool(ctx context.Context, request operations.GetSectionsForSchoolRequest) (*operations.GetSectionsForSchoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schools/{id}/sections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schools/{id}/sections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +258,10 @@ func (s *schools) GetSectionsForSchool(ctx context.Context, request operations.G
 // GetStudentsForSchool - Returns the students for a school
 func (s *schools) GetStudentsForSchool(ctx context.Context, request operations.GetStudentsForSchoolRequest) (*operations.GetStudentsForSchoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schools/{id}/students", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schools/{id}/students", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -307,7 +319,10 @@ func (s *schools) GetStudentsForSchool(ctx context.Context, request operations.G
 // GetTeachersForSchool - Returns the teachers for a school
 func (s *schools) GetTeachersForSchool(ctx context.Context, request operations.GetTeachersForSchoolRequest) (*operations.GetTeachersForSchoolResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schools/{id}/teachers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schools/{id}/teachers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

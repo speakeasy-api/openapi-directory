@@ -18,21 +18,25 @@ const (
 	CreateOrderRequestBodyPaymentOptionEnumPartialUpfront CreateOrderRequestBodyPaymentOptionEnum = "PARTIAL_UPFRONT"
 )
 
+func (e CreateOrderRequestBodyPaymentOptionEnum) ToPointer() *CreateOrderRequestBodyPaymentOptionEnum {
+	return &e
+}
+
 func (e *CreateOrderRequestBodyPaymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL_UPFRONT":
 		fallthrough
 	case "NO_UPFRONT":
 		fallthrough
 	case "PARTIAL_UPFRONT":
-		*e = CreateOrderRequestBodyPaymentOptionEnum(s)
+		*e = CreateOrderRequestBodyPaymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOrderRequestBodyPaymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOrderRequestBodyPaymentOptionEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	CreateOrderRequestBodyPaymentTermEnumOneYear    CreateOrderRequestBodyPaymentTermEnum = "ONE_YEAR"
 )
 
+func (e CreateOrderRequestBodyPaymentTermEnum) ToPointer() *CreateOrderRequestBodyPaymentTermEnum {
+	return &e
+}
+
 func (e *CreateOrderRequestBodyPaymentTermEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREE_YEARS":
 		fallthrough
 	case "ONE_YEAR":
-		*e = CreateOrderRequestBodyPaymentTermEnum(s)
+		*e = CreateOrderRequestBodyPaymentTermEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateOrderRequestBodyPaymentTermEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateOrderRequestBodyPaymentTermEnum: %v", v)
 	}
 }
 

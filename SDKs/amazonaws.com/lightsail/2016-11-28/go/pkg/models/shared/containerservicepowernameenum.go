@@ -18,12 +18,16 @@ const (
 	ContainerServicePowerNameEnumXlarge ContainerServicePowerNameEnum = "xlarge"
 )
 
+func (e ContainerServicePowerNameEnum) ToPointer() *ContainerServicePowerNameEnum {
+	return &e
+}
+
 func (e *ContainerServicePowerNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nano":
 		fallthrough
 	case "micro":
@@ -35,9 +39,9 @@ func (e *ContainerServicePowerNameEnum) UnmarshalJSON(data []byte) error {
 	case "large":
 		fallthrough
 	case "xlarge":
-		*e = ContainerServicePowerNameEnum(s)
+		*e = ContainerServicePowerNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerServicePowerNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerServicePowerNameEnum: %v", v)
 	}
 }

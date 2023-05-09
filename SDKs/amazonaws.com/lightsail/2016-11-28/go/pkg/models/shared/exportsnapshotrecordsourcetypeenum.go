@@ -14,18 +14,22 @@ const (
 	ExportSnapshotRecordSourceTypeEnumDiskSnapshot     ExportSnapshotRecordSourceTypeEnum = "DiskSnapshot"
 )
 
+func (e ExportSnapshotRecordSourceTypeEnum) ToPointer() *ExportSnapshotRecordSourceTypeEnum {
+	return &e
+}
+
 func (e *ExportSnapshotRecordSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstanceSnapshot":
 		fallthrough
 	case "DiskSnapshot":
-		*e = ExportSnapshotRecordSourceTypeEnum(s)
+		*e = ExportSnapshotRecordSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportSnapshotRecordSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportSnapshotRecordSourceTypeEnum: %v", v)
 	}
 }

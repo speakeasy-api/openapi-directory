@@ -17,19 +17,23 @@ const (
 	GetCreditCreditEnumTwo GetCreditCreditEnum = "2"
 )
 
+func (e GetCreditCreditEnum) ToPointer() *GetCreditCreditEnum {
+	return &e
+}
+
 func (e *GetCreditCreditEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
-		*e = GetCreditCreditEnum(s)
+		*e = GetCreditCreditEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCreditCreditEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCreditCreditEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListCostAllocationTagsXAmzTargetEnumAwsInsightsIndexServiceListCostAllocationTags ListCostAllocationTagsXAmzTargetEnum = "AWSInsightsIndexService.ListCostAllocationTags"
 )
 
+func (e ListCostAllocationTagsXAmzTargetEnum) ToPointer() *ListCostAllocationTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCostAllocationTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.ListCostAllocationTags":
-		*e = ListCostAllocationTagsXAmzTargetEnum(s)
+		*e = ListCostAllocationTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCostAllocationTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCostAllocationTagsXAmzTargetEnum: %v", v)
 	}
 }
 

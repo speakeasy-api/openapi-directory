@@ -16,17 +16,21 @@ const (
 	DescribeReplicationInstancesXAmzTargetEnumAmazonDmSv20160101DescribeReplicationInstances DescribeReplicationInstancesXAmzTargetEnum = "AmazonDMSv20160101.DescribeReplicationInstances"
 )
 
+func (e DescribeReplicationInstancesXAmzTargetEnum) ToPointer() *DescribeReplicationInstancesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeReplicationInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DescribeReplicationInstances":
-		*e = DescribeReplicationInstancesXAmzTargetEnum(s)
+		*e = DescribeReplicationInstancesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReplicationInstancesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReplicationInstancesXAmzTargetEnum: %v", v)
 	}
 }
 

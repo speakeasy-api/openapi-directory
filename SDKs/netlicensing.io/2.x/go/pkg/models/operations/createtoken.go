@@ -21,17 +21,21 @@ const (
 	CreateTokenRequestBodyActionEnumLicenseeLogin CreateTokenRequestBodyActionEnum = "licenseeLogin"
 )
 
+func (e CreateTokenRequestBodyActionEnum) ToPointer() *CreateTokenRequestBodyActionEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "licenseeLogin":
-		*e = CreateTokenRequestBodyActionEnum(s)
+		*e = CreateTokenRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestBodyActionEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	CreateTokenRequestBodyAPIKeyRoleEnumRoleApikeyAdmin       CreateTokenRequestBodyAPIKeyRoleEnum = "ROLE_APIKEY_ADMIN"
 )
 
+func (e CreateTokenRequestBodyAPIKeyRoleEnum) ToPointer() *CreateTokenRequestBodyAPIKeyRoleEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestBodyAPIKeyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_APIKEY_LICENSEE":
 		fallthrough
 	case "ROLE_APIKEY_ANALYTICS":
@@ -61,10 +69,10 @@ func (e *CreateTokenRequestBodyAPIKeyRoleEnum) UnmarshalJSON(data []byte) error 
 	case "ROLE_APIKEY_MAINTENANCE":
 		fallthrough
 	case "ROLE_APIKEY_ADMIN":
-		*e = CreateTokenRequestBodyAPIKeyRoleEnum(s)
+		*e = CreateTokenRequestBodyAPIKeyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestBodyAPIKeyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestBodyAPIKeyRoleEnum: %v", v)
 	}
 }
 
@@ -77,21 +85,25 @@ const (
 	CreateTokenRequestBodyTokenTypeEnumApikey  CreateTokenRequestBodyTokenTypeEnum = "APIKEY"
 )
 
+func (e CreateTokenRequestBodyTokenTypeEnum) ToPointer() *CreateTokenRequestBodyTokenTypeEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestBodyTokenTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "SHOP":
 		fallthrough
 	case "APIKEY":
-		*e = CreateTokenRequestBodyTokenTypeEnum(s)
+		*e = CreateTokenRequestBodyTokenTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestBodyTokenTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestBodyTokenTypeEnum: %v", v)
 	}
 }
 
@@ -102,17 +114,21 @@ const (
 	CreateTokenRequestBodyTypeEnumAction CreateTokenRequestBodyTypeEnum = "ACTION"
 )
 
+func (e CreateTokenRequestBodyTypeEnum) ToPointer() *CreateTokenRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateTokenRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION":
-		*e = CreateTokenRequestBodyTypeEnum(s)
+		*e = CreateTokenRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenRequestBodyTypeEnum: %v", v)
 	}
 }
 

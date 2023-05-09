@@ -15,20 +15,24 @@ const (
 	CloudHsmObjectStateEnumDegraded CloudHsmObjectStateEnum = "DEGRADED"
 )
 
+func (e CloudHsmObjectStateEnum) ToPointer() *CloudHsmObjectStateEnum {
+	return &e
+}
+
 func (e *CloudHsmObjectStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READY":
 		fallthrough
 	case "UPDATING":
 		fallthrough
 	case "DEGRADED":
-		*e = CloudHsmObjectStateEnum(s)
+		*e = CloudHsmObjectStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudHsmObjectStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudHsmObjectStateEnum: %v", v)
 	}
 }

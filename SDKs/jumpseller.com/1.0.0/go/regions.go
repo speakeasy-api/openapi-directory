@@ -34,7 +34,10 @@ func newRegions(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetCountriesCountryCodeRegionsJSON - Retrieve all Regions from a single Country.
 func (s *regions) GetCountriesCountryCodeRegionsJSON(ctx context.Context, request operations.GetCountriesCountryCodeRegionsJSONRequest) (*operations.GetCountriesCountryCodeRegionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +95,10 @@ func (s *regions) GetCountriesCountryCodeRegionsJSON(ctx context.Context, reques
 // GetCountriesCountryCodeRegionsRegionCodeJSON - Retrieve a single Region information object.
 func (s *regions) GetCountriesCountryCodeRegionsRegionCodeJSON(ctx context.Context, request operations.GetCountriesCountryCodeRegionsRegionCodeJSONRequest) (*operations.GetCountriesCountryCodeRegionsRegionCodeJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions/{region_code}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/countries/{country_code}/regions/{region_code}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

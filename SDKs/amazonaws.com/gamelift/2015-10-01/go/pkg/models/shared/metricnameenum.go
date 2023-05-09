@@ -24,12 +24,16 @@ const (
 	MetricNameEnumConcurrentActivatableGameSessions MetricNameEnum = "ConcurrentActivatableGameSessions"
 )
 
+func (e MetricNameEnum) ToPointer() *MetricNameEnum {
+	return &e
+}
+
 func (e *MetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActivatingGameSessions":
 		fallthrough
 	case "ActiveGameSessions":
@@ -53,9 +57,9 @@ func (e *MetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "WaitTime":
 		fallthrough
 	case "ConcurrentActivatableGameSessions":
-		*e = MetricNameEnum(s)
+		*e = MetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricNameEnum: %v", v)
 	}
 }

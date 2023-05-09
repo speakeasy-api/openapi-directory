@@ -16,17 +16,21 @@ const (
 	CreateBucketXAmzTargetEnumLightsail20161128CreateBucket CreateBucketXAmzTargetEnum = "Lightsail_20161128.CreateBucket"
 )
 
+func (e CreateBucketXAmzTargetEnum) ToPointer() *CreateBucketXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBucketXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateBucket":
-		*e = CreateBucketXAmzTargetEnum(s)
+		*e = CreateBucketXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBucketXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBucketXAmzTargetEnum: %v", v)
 	}
 }
 

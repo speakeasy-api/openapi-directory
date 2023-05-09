@@ -13,16 +13,20 @@ const (
 	ComponentTypeEnumHana ComponentTypeEnum = "HANA"
 )
 
+func (e ComponentTypeEnum) ToPointer() *ComponentTypeEnum {
+	return &e
+}
+
 func (e *ComponentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HANA":
-		*e = ComponentTypeEnum(s)
+		*e = ComponentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentTypeEnum: %v", v)
 	}
 }

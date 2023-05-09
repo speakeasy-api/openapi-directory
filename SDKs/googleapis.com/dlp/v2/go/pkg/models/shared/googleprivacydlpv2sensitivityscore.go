@@ -17,12 +17,16 @@ const (
 	GooglePrivacyDlpV2SensitivityScoreScoreEnumSensitivityHigh             GooglePrivacyDlpV2SensitivityScoreScoreEnum = "SENSITIVITY_HIGH"
 )
 
+func (e GooglePrivacyDlpV2SensitivityScoreScoreEnum) ToPointer() *GooglePrivacyDlpV2SensitivityScoreScoreEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2SensitivityScoreScoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SENSITIVITY_SCORE_UNSPECIFIED":
 		fallthrough
 	case "SENSITIVITY_LOW":
@@ -30,10 +34,10 @@ func (e *GooglePrivacyDlpV2SensitivityScoreScoreEnum) UnmarshalJSON(data []byte)
 	case "SENSITIVITY_MODERATE":
 		fallthrough
 	case "SENSITIVITY_HIGH":
-		*e = GooglePrivacyDlpV2SensitivityScoreScoreEnum(s)
+		*e = GooglePrivacyDlpV2SensitivityScoreScoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2SensitivityScoreScoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2SensitivityScoreScoreEnum: %v", v)
 	}
 }
 

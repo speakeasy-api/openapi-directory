@@ -44,7 +44,10 @@ func newPlaylistAPI(defaultClient, securityClient HTTPClient, serverURL, languag
 // You can fetch all playlists created by you, and **public** / **unlisted** playlists created by others.
 func (s *playlistAPI) GetPlaylistByID(ctx context.Context, request operations.GetPlaylistByIDRequest) (*operations.GetPlaylistByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/playlists/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

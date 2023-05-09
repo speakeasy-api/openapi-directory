@@ -15,17 +15,21 @@ const (
 	POSTEnableMetricsCollectionActionEnumEnableMetricsCollection POSTEnableMetricsCollectionActionEnum = "EnableMetricsCollection"
 )
 
+func (e POSTEnableMetricsCollectionActionEnum) ToPointer() *POSTEnableMetricsCollectionActionEnum {
+	return &e
+}
+
 func (e *POSTEnableMetricsCollectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableMetricsCollection":
-		*e = POSTEnableMetricsCollectionActionEnum(s)
+		*e = POSTEnableMetricsCollectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableMetricsCollectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableMetricsCollectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableMetricsCollectionVersionEnumTwoThousandAndEleven0101 POSTEnableMetricsCollectionVersionEnum = "2011-01-01"
 )
 
+func (e POSTEnableMetricsCollectionVersionEnum) ToPointer() *POSTEnableMetricsCollectionVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableMetricsCollectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTEnableMetricsCollectionVersionEnum(s)
+		*e = POSTEnableMetricsCollectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableMetricsCollectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableMetricsCollectionVersionEnum: %v", v)
 	}
 }
 

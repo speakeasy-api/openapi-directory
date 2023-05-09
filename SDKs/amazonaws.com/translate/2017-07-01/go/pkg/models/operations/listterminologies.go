@@ -16,17 +16,21 @@ const (
 	ListTerminologiesXAmzTargetEnumAwsShineFrontendService20170701ListTerminologies ListTerminologiesXAmzTargetEnum = "AWSShineFrontendService_20170701.ListTerminologies"
 )
 
+func (e ListTerminologiesXAmzTargetEnum) ToPointer() *ListTerminologiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTerminologiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.ListTerminologies":
-		*e = ListTerminologiesXAmzTargetEnum(s)
+		*e = ListTerminologiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTerminologiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTerminologiesXAmzTargetEnum: %v", v)
 	}
 }
 

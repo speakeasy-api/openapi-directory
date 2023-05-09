@@ -15,17 +15,21 @@ const (
 	POSTImportStacksToStackSetActionEnumImportStacksToStackSet POSTImportStacksToStackSetActionEnum = "ImportStacksToStackSet"
 )
 
+func (e POSTImportStacksToStackSetActionEnum) ToPointer() *POSTImportStacksToStackSetActionEnum {
+	return &e
+}
+
 func (e *POSTImportStacksToStackSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportStacksToStackSet":
-		*e = POSTImportStacksToStackSetActionEnum(s)
+		*e = POSTImportStacksToStackSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTImportStacksToStackSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTImportStacksToStackSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTImportStacksToStackSetVersionEnumTwoThousandAndTen0515 POSTImportStacksToStackSetVersionEnum = "2010-05-15"
 )
 
+func (e POSTImportStacksToStackSetVersionEnum) ToPointer() *POSTImportStacksToStackSetVersionEnum {
+	return &e
+}
+
 func (e *POSTImportStacksToStackSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTImportStacksToStackSetVersionEnum(s)
+		*e = POSTImportStacksToStackSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTImportStacksToStackSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTImportStacksToStackSetVersionEnum: %v", v)
 	}
 }
 

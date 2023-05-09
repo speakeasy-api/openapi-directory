@@ -15,19 +15,23 @@ const (
 	PlanPurchaseTypeEnumSubscription PlanPurchaseTypeEnum = "Subscription"
 )
 
+func (e PlanPurchaseTypeEnum) ToPointer() *PlanPurchaseTypeEnum {
+	return &e
+}
+
 func (e *PlanPurchaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Free":
 		fallthrough
 	case "Subscription":
-		*e = PlanPurchaseTypeEnum(s)
+		*e = PlanPurchaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanPurchaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanPurchaseTypeEnum: %v", v)
 	}
 }
 

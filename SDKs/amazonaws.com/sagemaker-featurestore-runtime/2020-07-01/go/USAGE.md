@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetRecordRequest{
+    ctx := context.Background()
+    res, err := s.BatchGetRecord(ctx, operations.BatchGetRecordRequest{
         RequestBody: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
@@ -61,17 +62,14 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "ab",
-        XAmzContentSha256: "quis",
-        XAmzCredential: "veritatis",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "perferendis",
-        XAmzSignature: "ipsam",
-        XAmzSignedHeaders: "repellendus",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetRecord(ctx, req)
+        XAmzAlgorithm: sdk.String("ab"),
+        XAmzContentSha256: sdk.String("quis"),
+        XAmzCredential: sdk.String("veritatis"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("perferendis"),
+        XAmzSignature: sdk.String("ipsam"),
+        XAmzSignedHeaders: sdk.String("repellendus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

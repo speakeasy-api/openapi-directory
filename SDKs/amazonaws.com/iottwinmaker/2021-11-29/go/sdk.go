@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - IoT TwinMaker is a service with which you can build operational digital twins of physical systems. IoT TwinMaker overlays measurements and analysis from real-world sensors, cameras, and enterprise applications so you can create data visualizations to monitor your physical factory, building, or industrial plant. You can use this real-world data to monitor operations and diagnose and repair errors.
 // https://docs.aws.amazon.com/iottwinmaker/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // BatchPutPropertyValues - Sets values for multiple time series properties.
 func (s *SDK) BatchPutPropertyValues(ctx context.Context, request operations.BatchPutPropertyValuesRequest) (*operations.BatchPutPropertyValuesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -210,7 +228,10 @@ func (s *SDK) BatchPutPropertyValues(ctx context.Context, request operations.Bat
 // CreateComponentType - Creates a component type.
 func (s *SDK) CreateComponentType(ctx context.Context, request operations.CreateComponentTypeRequest) (*operations.CreateComponentTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -326,7 +347,10 @@ func (s *SDK) CreateComponentType(ctx context.Context, request operations.Create
 // CreateEntity - Creates an entity.
 func (s *SDK) CreateEntity(ctx context.Context, request operations.CreateEntityRequest) (*operations.CreateEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -442,7 +466,10 @@ func (s *SDK) CreateEntity(ctx context.Context, request operations.CreateEntityR
 // CreateScene - Creates a scene.
 func (s *SDK) CreateScene(ctx context.Context, request operations.CreateSceneRequest) (*operations.CreateSceneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -558,7 +585,10 @@ func (s *SDK) CreateScene(ctx context.Context, request operations.CreateSceneReq
 // CreateSyncJob - This action creates a SyncJob.
 func (s *SDK) CreateSyncJob(ctx context.Context, request operations.CreateSyncJobRequest) (*operations.CreateSyncJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -674,7 +704,10 @@ func (s *SDK) CreateSyncJob(ctx context.Context, request operations.CreateSyncJo
 // CreateWorkspace - Creates a workplace.
 func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWorkspaceRequest) (*operations.CreateWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -790,7 +823,10 @@ func (s *SDK) CreateWorkspace(ctx context.Context, request operations.CreateWork
 // DeleteComponentType - Deletes a component type.
 func (s *SDK) DeleteComponentType(ctx context.Context, request operations.DeleteComponentTypeRequest) (*operations.DeleteComponentTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -886,7 +922,10 @@ func (s *SDK) DeleteComponentType(ctx context.Context, request operations.Delete
 // DeleteEntity - Deletes an entity.
 func (s *SDK) DeleteEntity(ctx context.Context, request operations.DeleteEntityRequest) (*operations.DeleteEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -986,7 +1025,10 @@ func (s *SDK) DeleteEntity(ctx context.Context, request operations.DeleteEntityR
 // DeleteScene - Deletes a scene.
 func (s *SDK) DeleteScene(ctx context.Context, request operations.DeleteSceneRequest) (*operations.DeleteSceneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1082,7 +1124,10 @@ func (s *SDK) DeleteScene(ctx context.Context, request operations.DeleteSceneReq
 // DeleteSyncJob - Delete the SyncJob.
 func (s *SDK) DeleteSyncJob(ctx context.Context, request operations.DeleteSyncJobRequest) (*operations.DeleteSyncJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1188,7 +1233,10 @@ func (s *SDK) DeleteSyncJob(ctx context.Context, request operations.DeleteSyncJo
 // DeleteWorkspace - Deletes a workspace.
 func (s *SDK) DeleteWorkspace(ctx context.Context, request operations.DeleteWorkspaceRequest) (*operations.DeleteWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1404,7 +1452,10 @@ func (s *SDK) ExecuteQuery(ctx context.Context, request operations.ExecuteQueryR
 // GetComponentType - Retrieves information about a component type.
 func (s *SDK) GetComponentType(ctx context.Context, request operations.GetComponentTypeRequest) (*operations.GetComponentTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1500,7 +1551,10 @@ func (s *SDK) GetComponentType(ctx context.Context, request operations.GetCompon
 // GetEntity - Retrieves information about an entity.
 func (s *SDK) GetEntity(ctx context.Context, request operations.GetEntityRequest) (*operations.GetEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1682,7 +1736,10 @@ func (s *SDK) GetPricingPlan(ctx context.Context, request operations.GetPricingP
 // GetPropertyValue - <p>Gets the property values for a component, component type, entity, or workspace.</p> <p>You must specify a value for either <code>componentName</code>, <code>componentTypeId</code>, <code>entityId</code>, or <code>workspaceId</code>.</p>
 func (s *SDK) GetPropertyValue(ctx context.Context, request operations.GetPropertyValueRequest) (*operations.GetPropertyValueResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties/value", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties/value", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1812,7 +1869,10 @@ func (s *SDK) GetPropertyValue(ctx context.Context, request operations.GetProper
 // GetPropertyValueHistory - <p>Retrieves information about the history of a time series property value for a component, component type, entity, or workspace.</p> <p>You must specify a value for <code>workspaceId</code>. For entity-specific queries, specify values for <code>componentName</code> and <code>entityId</code>. For cross-entity quries, specify a value for <code>componentTypeId</code>.</p>
 func (s *SDK) GetPropertyValueHistory(ctx context.Context, request operations.GetPropertyValueHistoryRequest) (*operations.GetPropertyValueHistoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties/history", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entity-properties/history", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1942,7 +2002,10 @@ func (s *SDK) GetPropertyValueHistory(ctx context.Context, request operations.Ge
 // GetScene - Retrieves information about a scene.
 func (s *SDK) GetScene(ctx context.Context, request operations.GetSceneRequest) (*operations.GetSceneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2038,7 +2101,10 @@ func (s *SDK) GetScene(ctx context.Context, request operations.GetSceneRequest) 
 // GetSyncJob - Gets the SyncJob.
 func (s *SDK) GetSyncJob(ctx context.Context, request operations.GetSyncJobRequest) (*operations.GetSyncJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sync-jobs/{syncSource}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sync-jobs/{syncSource}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2148,7 +2214,10 @@ func (s *SDK) GetSyncJob(ctx context.Context, request operations.GetSyncJobReque
 // GetWorkspace - Retrieves information about a workspace.
 func (s *SDK) GetWorkspace(ctx context.Context, request operations.GetWorkspaceRequest) (*operations.GetWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2244,7 +2313,10 @@ func (s *SDK) GetWorkspace(ctx context.Context, request operations.GetWorkspaceR
 // ListComponentTypes - Lists all component types in a workspace.
 func (s *SDK) ListComponentTypes(ctx context.Context, request operations.ListComponentTypesRequest) (*operations.ListComponentTypesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2344,7 +2416,10 @@ func (s *SDK) ListComponentTypes(ctx context.Context, request operations.ListCom
 // ListEntities - Lists all entities in a workspace.
 func (s *SDK) ListEntities(ctx context.Context, request operations.ListEntitiesRequest) (*operations.ListEntitiesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2444,7 +2519,10 @@ func (s *SDK) ListEntities(ctx context.Context, request operations.ListEntitiesR
 // ListScenes - Lists all scenes in a workspace.
 func (s *SDK) ListScenes(ctx context.Context, request operations.ListScenesRequest) (*operations.ListScenesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2544,7 +2622,10 @@ func (s *SDK) ListScenes(ctx context.Context, request operations.ListScenesReque
 // ListSyncJobs - List all SyncJobs.
 func (s *SDK) ListSyncJobs(ctx context.Context, request operations.ListSyncJobsRequest) (*operations.ListSyncJobsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2654,7 +2735,10 @@ func (s *SDK) ListSyncJobs(ctx context.Context, request operations.ListSyncJobsR
 // ListSyncResources - Lists the sync resources.
 func (s *SDK) ListSyncResources(ctx context.Context, request operations.ListSyncResourcesRequest) (*operations.ListSyncResourcesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}/resources-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/sync-jobs/{syncSource}/resources-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3096,7 +3180,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateComponentType - Updates information in a component type.
 func (s *SDK) UpdateComponentType(ctx context.Context, request operations.UpdateComponentTypeRequest) (*operations.UpdateComponentTypeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/component-types/{componentTypeId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3212,7 +3299,10 @@ func (s *SDK) UpdateComponentType(ctx context.Context, request operations.Update
 // UpdateEntity - Updates an entity.
 func (s *SDK) UpdateEntity(ctx context.Context, request operations.UpdateEntityRequest) (*operations.UpdateEntityResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/entities/{entityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3434,7 +3524,10 @@ func (s *SDK) UpdatePricingPlan(ctx context.Context, request operations.UpdatePr
 // UpdateScene - Updates a scene.
 func (s *SDK) UpdateScene(ctx context.Context, request operations.UpdateSceneRequest) (*operations.UpdateSceneResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}/scenes/{sceneId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3540,7 +3633,10 @@ func (s *SDK) UpdateScene(ctx context.Context, request operations.UpdateSceneReq
 // UpdateWorkspace - Updates a workspace.
 func (s *SDK) UpdateWorkspace(ctx context.Context, request operations.UpdateWorkspaceRequest) (*operations.UpdateWorkspaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspaceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

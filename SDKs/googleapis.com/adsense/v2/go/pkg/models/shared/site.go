@@ -18,12 +18,16 @@ const (
 	SiteStateEnumNeedsAttention   SiteStateEnum = "NEEDS_ATTENTION"
 )
 
+func (e SiteStateEnum) ToPointer() *SiteStateEnum {
+	return &e
+}
+
 func (e *SiteStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "REQUIRES_REVIEW":
@@ -33,10 +37,10 @@ func (e *SiteStateEnum) UnmarshalJSON(data []byte) error {
 	case "READY":
 		fallthrough
 	case "NEEDS_ATTENTION":
-		*e = SiteStateEnum(s)
+		*e = SiteStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteStateEnum: %v", v)
 	}
 }
 

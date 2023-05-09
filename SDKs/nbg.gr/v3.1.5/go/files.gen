@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -111,4 +112,15 @@ pkg/models/shared/obentrystatus1codeenum.go
 pkg/models/shared/proprietarybanktransactioncodestructure1.go
 pkg/models/shared/obcashaccount6.go
 pkg/models/shared/obtransactioncashbalance.go
+docs/sdk/README.md
+docs/accountaccess/README.md
+docs/accounts/README.md
+docs/balances/README.md
+docs/beneficiaries/README.md
+docs/parties/README.md
+docs/sandbox/README.md
+docs/scheduledpayments/README.md
+docs/standingorders/README.md
+docs/statements/README.md
+docs/transactions/README.md
 USAGE.md

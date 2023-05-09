@@ -20,12 +20,16 @@ const (
 	UserImportJobStatusTypeEnumSucceeded  UserImportJobStatusTypeEnum = "Succeeded"
 )
 
+func (e UserImportJobStatusTypeEnum) ToPointer() *UserImportJobStatusTypeEnum {
+	return &e
+}
+
 func (e *UserImportJobStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Created":
 		fallthrough
 	case "Pending":
@@ -41,9 +45,9 @@ func (e *UserImportJobStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Succeeded":
-		*e = UserImportJobStatusTypeEnum(s)
+		*e = UserImportJobStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserImportJobStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserImportJobStatusTypeEnum: %v", v)
 	}
 }

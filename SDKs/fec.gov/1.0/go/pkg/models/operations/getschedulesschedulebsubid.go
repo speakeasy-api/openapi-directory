@@ -22,12 +22,16 @@ const (
 	GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnumD       GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum = "D"
 )
 
+func (e GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum) ToPointer() *GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -41,10 +45,10 @@ func (e *GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum) UnmarshalJSO
 	case "B":
 		fallthrough
 	case "D":
-		*e = GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum(s)
+		*e = GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeDesignationEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnumW       GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum = "W"
 )
 
+func (e GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum) ToPointer() *GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -79,10 +87,10 @@ func (e *GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum) UnmarshalJSON(da
 	case "V":
 		fallthrough
 	case "W":
-		*e = GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum(s)
+		*e = GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeOrgTypeEnum: %v", v)
 	}
 }
 
@@ -108,12 +116,16 @@ const (
 	GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnumZ       GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum = "Z"
 )
 
+func (e GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum) ToPointer() *GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -147,10 +159,10 @@ func (e *GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum) UnmarshalJSON(data 
 	case "Y":
 		fallthrough
 	case "Z":
-		*e = GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum(s)
+		*e = GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleBSubIDSpenderCommitteeTypeEnum: %v", v)
 	}
 }
 

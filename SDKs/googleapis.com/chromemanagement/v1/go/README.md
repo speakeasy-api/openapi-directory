@@ -13,38 +13,36 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/chromemana
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Customer: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        OrderBy: "vel",
-        OrgUnitID: "error",
-        PageSize: 645894,
-        PageToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, req, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
+    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Customer: "unde",
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        OrderBy: sdk.String("vel"),
+        OrgUnitID: sdk.String("error"),
+        PageSize: sdk.Int64(645894),
+        PageToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -63,22 +61,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Customers
+### [Customers](docs/customers/README.md)
 
-* `ChromemanagementCustomersAppsCountChromeAppRequests` - Generate summary of app installation requests.
-* `ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttention` - Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have no recent activity.
-* `ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate` - Generate report of the number of devices expiring in each month of the selected time frame. Devices are grouped by auto update expiration date and model. Further information can be found [here](https://support.google.com/chrome/a/answer/10564947).
-* `ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention` - Counts of ChromeOS devices that have not synced policies or have lacked user activity in the past 28 days, are out of date, or are not complaint. Further information can be found here https://support.google.com/chrome/a/answer/10564947
-* `ChromemanagementCustomersReportsCountChromeHardwareFleetDevices` - Counts of devices with a specific hardware specification from the requested hardware type (for example model name, processor type). Further information can be found here https://support.google.com/chrome/a/answer/10564947
-* `ChromemanagementCustomersReportsCountChromeVersions` - Generate report of installed Chrome versions.
-* `ChromemanagementCustomersReportsCountInstalledApps` - Generate report of app installations.
-* `ChromemanagementCustomersReportsCountPrintJobsByPrinter` - Get a summary of printing done by each printer.
-* `ChromemanagementCustomersReportsCountPrintJobsByUser` - Get a summary of printing done by each user.
-* `ChromemanagementCustomersReportsFindInstalledAppDevices` - Generate report of managed Chrome browser devices that have a specified app installed.
-* `ChromemanagementCustomersTelemetryDevicesList` - List all telemetry devices.
-* `ChromemanagementCustomersTelemetryEventsList` - List telemetry events.
-* `ChromemanagementCustomersTelemetryUsersGet` - Get telemetry user.
-* `ChromemanagementCustomersTelemetryUsersList` - List all telemetry users.
+* [ChromemanagementCustomersAppsCountChromeAppRequests](docs/customers/README.md#chromemanagementcustomersappscountchromeapprequests) - Generate summary of app installation requests.
+* [ChromemanagementCustomersReportsCountChromeBrowsersNeedingAttention](docs/customers/README.md#chromemanagementcustomersreportscountchromebrowsersneedingattention) - Count of Chrome Browsers that have been recently enrolled, have new policy to be synced, or have no recent activity.
+* [ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDate](docs/customers/README.md#chromemanagementcustomersreportscountchromedevicesreachingautoexpirationdate) - Generate report of the number of devices expiring in each month of the selected time frame. Devices are grouped by auto update expiration date and model. Further information can be found [here](https://support.google.com/chrome/a/answer/10564947).
+* [ChromemanagementCustomersReportsCountChromeDevicesThatNeedAttention](docs/customers/README.md#chromemanagementcustomersreportscountchromedevicesthatneedattention) - Counts of ChromeOS devices that have not synced policies or have lacked user activity in the past 28 days, are out of date, or are not complaint. Further information can be found here https://support.google.com/chrome/a/answer/10564947
+* [ChromemanagementCustomersReportsCountChromeHardwareFleetDevices](docs/customers/README.md#chromemanagementcustomersreportscountchromehardwarefleetdevices) - Counts of devices with a specific hardware specification from the requested hardware type (for example model name, processor type). Further information can be found here https://support.google.com/chrome/a/answer/10564947
+* [ChromemanagementCustomersReportsCountChromeVersions](docs/customers/README.md#chromemanagementcustomersreportscountchromeversions) - Generate report of installed Chrome versions.
+* [ChromemanagementCustomersReportsCountInstalledApps](docs/customers/README.md#chromemanagementcustomersreportscountinstalledapps) - Generate report of app installations.
+* [ChromemanagementCustomersReportsFindInstalledAppDevices](docs/customers/README.md#chromemanagementcustomersreportsfindinstalledappdevices) - Generate report of managed Chrome browser devices that have a specified app installed.
+* [ChromemanagementCustomersTelemetryDevicesList](docs/customers/README.md#chromemanagementcustomerstelemetrydeviceslist) - List all telemetry devices.
+* [ChromemanagementCustomersTelemetryEventsList](docs/customers/README.md#chromemanagementcustomerstelemetryeventslist) - List telemetry events.
+* [ChromemanagementCustomersTelemetryUsersGet](docs/customers/README.md#chromemanagementcustomerstelemetryusersget) - Get telemetry user.
+* [ChromemanagementCustomersTelemetryUsersList](docs/customers/README.md#chromemanagementcustomerstelemetryuserslist) - List all telemetry users.
 <!-- End SDK Available Operations -->
 
 ### Maturity

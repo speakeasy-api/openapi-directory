@@ -18,12 +18,16 @@ const (
 	ServiceLanguageEnumZh ServiceLanguageEnum = "zh"
 )
 
+func (e ServiceLanguageEnum) ToPointer() *ServiceLanguageEnum {
+	return &e
+}
+
 func (e *ServiceLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en":
 		fallthrough
 	case "es":
@@ -33,9 +37,9 @@ func (e *ServiceLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "pt":
 		fallthrough
 	case "zh":
-		*e = ServiceLanguageEnum(s)
+		*e = ServiceLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceLanguageEnum: %v", v)
 	}
 }

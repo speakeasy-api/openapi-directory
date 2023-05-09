@@ -15,20 +15,24 @@ const (
 	OntapVolumeTypeEnumLs OntapVolumeTypeEnum = "LS"
 )
 
+func (e OntapVolumeTypeEnum) ToPointer() *OntapVolumeTypeEnum {
+	return &e
+}
+
 func (e *OntapVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RW":
 		fallthrough
 	case "DP":
 		fallthrough
 	case "LS":
-		*e = OntapVolumeTypeEnum(s)
+		*e = OntapVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OntapVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OntapVolumeTypeEnum: %v", v)
 	}
 }

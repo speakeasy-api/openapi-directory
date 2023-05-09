@@ -19,12 +19,16 @@ const (
 	TraceSpanSpanKindEnumConsumer            TraceSpanSpanKindEnum = "CONSUMER"
 )
 
+func (e TraceSpanSpanKindEnum) ToPointer() *TraceSpanSpanKindEnum {
+	return &e
+}
+
 func (e *TraceSpanSpanKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPAN_KIND_UNSPECIFIED":
 		fallthrough
 	case "INTERNAL":
@@ -36,10 +40,10 @@ func (e *TraceSpanSpanKindEnum) UnmarshalJSON(data []byte) error {
 	case "PRODUCER":
 		fallthrough
 	case "CONSUMER":
-		*e = TraceSpanSpanKindEnum(s)
+		*e = TraceSpanSpanKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TraceSpanSpanKindEnum: %s", s)
+		return fmt.Errorf("invalid value for TraceSpanSpanKindEnum: %v", v)
 	}
 }
 

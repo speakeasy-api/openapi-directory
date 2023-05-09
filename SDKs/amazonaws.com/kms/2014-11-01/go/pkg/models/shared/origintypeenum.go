@@ -16,12 +16,16 @@ const (
 	OriginTypeEnumExternalKeyStore OriginTypeEnum = "EXTERNAL_KEY_STORE"
 )
 
+func (e OriginTypeEnum) ToPointer() *OriginTypeEnum {
+	return &e
+}
+
 func (e *OriginTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_KMS":
 		fallthrough
 	case "EXTERNAL":
@@ -29,9 +33,9 @@ func (e *OriginTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS_CLOUDHSM":
 		fallthrough
 	case "EXTERNAL_KEY_STORE":
-		*e = OriginTypeEnum(s)
+		*e = OriginTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginTypeEnum: %v", v)
 	}
 }

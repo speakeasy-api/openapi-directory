@@ -14,18 +14,22 @@ const (
 	LastLaunchTypeEnumDrill    LastLaunchTypeEnum = "DRILL"
 )
 
+func (e LastLaunchTypeEnum) ToPointer() *LastLaunchTypeEnum {
+	return &e
+}
+
 func (e *LastLaunchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECOVERY":
 		fallthrough
 	case "DRILL":
-		*e = LastLaunchTypeEnum(s)
+		*e = LastLaunchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LastLaunchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LastLaunchTypeEnum: %v", v)
 	}
 }

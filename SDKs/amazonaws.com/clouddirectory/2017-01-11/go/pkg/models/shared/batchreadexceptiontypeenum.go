@@ -25,12 +25,16 @@ const (
 	BatchReadExceptionTypeEnumInternalServiceException        BatchReadExceptionTypeEnum = "InternalServiceException"
 )
 
+func (e BatchReadExceptionTypeEnum) ToPointer() *BatchReadExceptionTypeEnum {
+	return &e
+}
+
 func (e *BatchReadExceptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ValidationException":
 		fallthrough
 	case "InvalidArnException":
@@ -56,9 +60,9 @@ func (e *BatchReadExceptionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LimitExceededException":
 		fallthrough
 	case "InternalServiceException":
-		*e = BatchReadExceptionTypeEnum(s)
+		*e = BatchReadExceptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchReadExceptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchReadExceptionTypeEnum: %v", v)
 	}
 }

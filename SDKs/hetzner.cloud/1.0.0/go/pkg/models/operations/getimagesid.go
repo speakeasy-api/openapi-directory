@@ -32,12 +32,16 @@ const (
 	GetImagesID200ApplicationJSONImageOsFlavorEnumUnknown GetImagesID200ApplicationJSONImageOsFlavorEnum = "unknown"
 )
 
+func (e GetImagesID200ApplicationJSONImageOsFlavorEnum) ToPointer() *GetImagesID200ApplicationJSONImageOsFlavorEnum {
+	return &e
+}
+
 func (e *GetImagesID200ApplicationJSONImageOsFlavorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ubuntu":
 		fallthrough
 	case "centos":
@@ -47,10 +51,10 @@ func (e *GetImagesID200ApplicationJSONImageOsFlavorEnum) UnmarshalJSON(data []by
 	case "fedora":
 		fallthrough
 	case "unknown":
-		*e = GetImagesID200ApplicationJSONImageOsFlavorEnum(s)
+		*e = GetImagesID200ApplicationJSONImageOsFlavorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageOsFlavorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageOsFlavorEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	GetImagesID200ApplicationJSONImageStatusEnumUnavailable GetImagesID200ApplicationJSONImageStatusEnum = "unavailable"
 )
 
+func (e GetImagesID200ApplicationJSONImageStatusEnum) ToPointer() *GetImagesID200ApplicationJSONImageStatusEnum {
+	return &e
+}
+
 func (e *GetImagesID200ApplicationJSONImageStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "creating":
 		fallthrough
 	case "unavailable":
-		*e = GetImagesID200ApplicationJSONImageStatusEnum(s)
+		*e = GetImagesID200ApplicationJSONImageStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageStatusEnum: %v", v)
 	}
 }
 
@@ -98,12 +106,16 @@ const (
 	GetImagesID200ApplicationJSONImageTypeEnumTemporary GetImagesID200ApplicationJSONImageTypeEnum = "temporary"
 )
 
+func (e GetImagesID200ApplicationJSONImageTypeEnum) ToPointer() *GetImagesID200ApplicationJSONImageTypeEnum {
+	return &e
+}
+
 func (e *GetImagesID200ApplicationJSONImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "app":
@@ -113,10 +125,10 @@ func (e *GetImagesID200ApplicationJSONImageTypeEnum) UnmarshalJSON(data []byte) 
 	case "backup":
 		fallthrough
 	case "temporary":
-		*e = GetImagesID200ApplicationJSONImageTypeEnum(s)
+		*e = GetImagesID200ApplicationJSONImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesID200ApplicationJSONImageTypeEnum: %v", v)
 	}
 }
 

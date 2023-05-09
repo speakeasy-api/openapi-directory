@@ -18,21 +18,25 @@ const (
 	UpdateMapRequestBodyPricingPlanEnumMobileAssetManagement UpdateMapRequestBodyPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e UpdateMapRequestBodyPricingPlanEnum) ToPointer() *UpdateMapRequestBodyPricingPlanEnum {
+	return &e
+}
+
 func (e *UpdateMapRequestBodyPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = UpdateMapRequestBodyPricingPlanEnum(s)
+		*e = UpdateMapRequestBodyPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMapRequestBodyPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMapRequestBodyPricingPlanEnum: %v", v)
 	}
 }
 

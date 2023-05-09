@@ -36,7 +36,10 @@ func newV1(defaultClient, securityClient HTTPClient, serverURL, language, sdkVer
 // set.
 func (s *v1) ServicebrokerGetIamPolicy(ctx context.Context, request operations.ServicebrokerGetIamPolicyRequest, security operations.ServicebrokerGetIamPolicySecurity) (*operations.ServicebrokerGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -87,7 +90,10 @@ func (s *v1) ServicebrokerGetIamPolicy(ctx context.Context, request operations.S
 // Can return Public Errors: NOT_FOUND, INVALID_ARGUMENT and PERMISSION_DENIED
 func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.ServicebrokerSetIamPolicyRequest, security operations.ServicebrokerSetIamPolicySecurity) (*operations.ServicebrokerSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -148,7 +154,10 @@ func (s *v1) ServicebrokerSetIamPolicy(ctx context.Context, request operations.S
 // may "fail open" without warning.
 func (s *v1) ServicebrokerTestIamPermissions(ctx context.Context, request operations.ServicebrokerTestIamPermissionsRequest, security operations.ServicebrokerTestIamPermissionsSecurity) (*operations.ServicebrokerTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {

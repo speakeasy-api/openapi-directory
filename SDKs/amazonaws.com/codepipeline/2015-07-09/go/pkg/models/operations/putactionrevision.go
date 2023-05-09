@@ -16,17 +16,21 @@ const (
 	PutActionRevisionXAmzTargetEnumCodePipeline20150709PutActionRevision PutActionRevisionXAmzTargetEnum = "CodePipeline_20150709.PutActionRevision"
 )
 
+func (e PutActionRevisionXAmzTargetEnum) ToPointer() *PutActionRevisionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutActionRevisionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.PutActionRevision":
-		*e = PutActionRevisionXAmzTargetEnum(s)
+		*e = PutActionRevisionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutActionRevisionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutActionRevisionXAmzTargetEnum: %v", v)
 	}
 }
 

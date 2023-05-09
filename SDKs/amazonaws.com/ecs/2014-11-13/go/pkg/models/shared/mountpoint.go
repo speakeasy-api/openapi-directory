@@ -2,7 +2,7 @@
 
 package shared
 
-// MountPoint - Details for a volume mount point that's used in a container definition.
+// MountPoint - The details for a volume mount point that's used in a container definition.
 type MountPoint struct {
 	ContainerPath *string `json:"containerPath,omitempty"`
 	ReadOnly      *bool   `json:"readOnly,omitempty"`

@@ -16,17 +16,21 @@ const (
 	CreateEventDestinationXAmzTargetEnumPinpointSmsVoiceV2CreateEventDestination CreateEventDestinationXAmzTargetEnum = "PinpointSMSVoiceV2.CreateEventDestination"
 )
 
+func (e CreateEventDestinationXAmzTargetEnum) ToPointer() *CreateEventDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEventDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.CreateEventDestination":
-		*e = CreateEventDestinationXAmzTargetEnum(s)
+		*e = CreateEventDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEventDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEventDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

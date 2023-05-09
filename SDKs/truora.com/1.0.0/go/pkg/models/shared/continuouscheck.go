@@ -18,12 +18,16 @@ const (
 	ContinuousCheckContinuousCheckStatusEnumSame ContinuousCheckContinuousCheckStatusEnum = "same"
 )
 
+func (e ContinuousCheckContinuousCheckStatusEnum) ToPointer() *ContinuousCheckContinuousCheckStatusEnum {
+	return &e
+}
+
 func (e *ContinuousCheckContinuousCheckStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "new":
 		fallthrough
 	case "up":
@@ -31,10 +35,10 @@ func (e *ContinuousCheckContinuousCheckStatusEnum) UnmarshalJSON(data []byte) er
 	case "down":
 		fallthrough
 	case "same":
-		*e = ContinuousCheckContinuousCheckStatusEnum(s)
+		*e = ContinuousCheckContinuousCheckStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContinuousCheckContinuousCheckStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContinuousCheckContinuousCheckStatusEnum: %v", v)
 	}
 }
 

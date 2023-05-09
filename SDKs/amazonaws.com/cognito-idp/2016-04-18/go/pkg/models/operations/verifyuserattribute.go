@@ -16,17 +16,21 @@ const (
 	VerifyUserAttributeXAmzTargetEnumAwsCognitoIdentityProviderServiceVerifyUserAttribute VerifyUserAttributeXAmzTargetEnum = "AWSCognitoIdentityProviderService.VerifyUserAttribute"
 )
 
+func (e VerifyUserAttributeXAmzTargetEnum) ToPointer() *VerifyUserAttributeXAmzTargetEnum {
+	return &e
+}
+
 func (e *VerifyUserAttributeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.VerifyUserAttribute":
-		*e = VerifyUserAttributeXAmzTargetEnum(s)
+		*e = VerifyUserAttributeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyUserAttributeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyUserAttributeXAmzTargetEnum: %v", v)
 	}
 }
 

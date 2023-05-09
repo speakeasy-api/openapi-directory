@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,22 +16,20 @@ func main() {
         }),
     )
 
-    req := operations.DescribeJobExecutionRequest{
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "provident",
-        XAmzCredential: "distinctio",
-        XAmzDate: "quibusdam",
-        XAmzSecurityToken: "unde",
-        XAmzSignature: "nulla",
-        XAmzSignedHeaders: "corrupti",
-        ExecutionNumber: 847252,
-        IncludeJobDocument: false,
+    ctx := context.Background()
+    res, err := s.DescribeJobExecution(ctx, operations.DescribeJobExecutionRequest{
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("provident"),
+        XAmzCredential: sdk.String("distinctio"),
+        XAmzDate: sdk.String("quibusdam"),
+        XAmzSecurityToken: sdk.String("unde"),
+        XAmzSignature: sdk.String("nulla"),
+        XAmzSignedHeaders: sdk.String("corrupti"),
+        ExecutionNumber: sdk.Int64(847252),
+        IncludeJobDocument: sdk.Bool(false),
         JobID: "vel",
         ThingName: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.DescribeJobExecution(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

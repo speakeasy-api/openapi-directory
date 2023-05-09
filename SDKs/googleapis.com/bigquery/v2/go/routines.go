@@ -34,7 +34,10 @@ func newRoutines(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BigqueryRoutinesDelete - Deletes the routine specified by routineId from the dataset.
 func (s *routines) BigqueryRoutinesDelete(ctx context.Context, request operations.BigqueryRoutinesDeleteRequest, security operations.BigqueryRoutinesDeleteSecurity) (*operations.BigqueryRoutinesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *routines) BigqueryRoutinesDelete(ctx context.Context, request operation
 // BigqueryRoutinesGet - Gets the specified routine resource by routine ID.
 func (s *routines) BigqueryRoutinesGet(ctx context.Context, request operations.BigqueryRoutinesGetRequest, security operations.BigqueryRoutinesGetSecurity) (*operations.BigqueryRoutinesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *routines) BigqueryRoutinesGet(ctx context.Context, request operations.B
 // BigqueryRoutinesInsert - Creates a new routine in the dataset.
 func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operations.BigqueryRoutinesInsertRequest, security operations.BigqueryRoutinesInsertSecurity) (*operations.BigqueryRoutinesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoutineInput", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *routines) BigqueryRoutinesInsert(ctx context.Context, request operation
 // BigqueryRoutinesList - Lists all routines in the specified dataset. Requires the READER dataset role.
 func (s *routines) BigqueryRoutinesList(ctx context.Context, request operations.BigqueryRoutinesListRequest, security operations.BigqueryRoutinesListSecurity) (*operations.BigqueryRoutinesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *routines) BigqueryRoutinesList(ctx context.Context, request operations.
 // BigqueryRoutinesUpdate - Updates information in an existing routine. The update method replaces the entire Routine resource.
 func (s *routines) BigqueryRoutinesUpdate(ctx context.Context, request operations.BigqueryRoutinesUpdateRequest, security operations.BigqueryRoutinesUpdateSecurity) (*operations.BigqueryRoutinesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/datasets/{datasetId}/routines/{routineId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RoutineInput", "json")
 	if err != nil {

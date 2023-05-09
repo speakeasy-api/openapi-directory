@@ -35,7 +35,10 @@ func newFeature(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Return the content of the selected feature.
 func (s *feature) GetFeature(ctx context.Context, request operations.GetFeatureRequest, security operations.GetFeatureSecurity) (*operations.GetFeatureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/feature/{featureId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/feature/{featureId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -78,7 +81,7 @@ func (s *feature) GetFeature(ctx context.Context, request operations.GetFeatureR
 
 // ListFeatureTypes - Feature Type Collection
 // Return a collection of Feature Types.
-func (s *feature) ListFeatureTypes(ctx context.Context) (*operations.ListFeatureTypesResponse, error) {
+func (s *feature) ListFeatureTypes(ctx context.Context, security operations.ListFeatureTypesSecurity) (*operations.ListFeatureTypesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/feature-type"
 
@@ -87,7 +90,7 @@ func (s *feature) ListFeatureTypes(ctx context.Context) (*operations.ListFeature
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	UserStackAssociationErrorCodeEnumInternalError     UserStackAssociationErrorCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e UserStackAssociationErrorCodeEnum) ToPointer() *UserStackAssociationErrorCodeEnum {
+	return &e
+}
+
 func (e *UserStackAssociationErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STACK_NOT_FOUND":
 		fallthrough
 	case "USER_NAME_NOT_FOUND":
@@ -29,9 +33,9 @@ func (e *UserStackAssociationErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DIRECTORY_NOT_FOUND":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = UserStackAssociationErrorCodeEnum(s)
+		*e = UserStackAssociationErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserStackAssociationErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserStackAssociationErrorCodeEnum: %v", v)
 	}
 }

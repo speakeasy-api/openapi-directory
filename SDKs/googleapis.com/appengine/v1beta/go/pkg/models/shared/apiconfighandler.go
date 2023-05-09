@@ -16,21 +16,25 @@ const (
 	APIConfigHandlerAuthFailActionEnumAuthFailActionUnauthorized APIConfigHandlerAuthFailActionEnum = "AUTH_FAIL_ACTION_UNAUTHORIZED"
 )
 
+func (e APIConfigHandlerAuthFailActionEnum) ToPointer() *APIConfigHandlerAuthFailActionEnum {
+	return &e
+}
+
 func (e *APIConfigHandlerAuthFailActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_FAIL_ACTION_UNSPECIFIED":
 		fallthrough
 	case "AUTH_FAIL_ACTION_REDIRECT":
 		fallthrough
 	case "AUTH_FAIL_ACTION_UNAUTHORIZED":
-		*e = APIConfigHandlerAuthFailActionEnum(s)
+		*e = APIConfigHandlerAuthFailActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIConfigHandlerAuthFailActionEnum: %s", s)
+		return fmt.Errorf("invalid value for APIConfigHandlerAuthFailActionEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	APIConfigHandlerLoginEnumLoginRequired    APIConfigHandlerLoginEnum = "LOGIN_REQUIRED"
 )
 
+func (e APIConfigHandlerLoginEnum) ToPointer() *APIConfigHandlerLoginEnum {
+	return &e
+}
+
 func (e *APIConfigHandlerLoginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOGIN_UNSPECIFIED":
 		fallthrough
 	case "LOGIN_OPTIONAL":
@@ -57,10 +65,10 @@ func (e *APIConfigHandlerLoginEnum) UnmarshalJSON(data []byte) error {
 	case "LOGIN_ADMIN":
 		fallthrough
 	case "LOGIN_REQUIRED":
-		*e = APIConfigHandlerLoginEnum(s)
+		*e = APIConfigHandlerLoginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIConfigHandlerLoginEnum: %s", s)
+		return fmt.Errorf("invalid value for APIConfigHandlerLoginEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	APIConfigHandlerSecurityLevelEnumSecureAlways      APIConfigHandlerSecurityLevelEnum = "SECURE_ALWAYS"
 )
 
+func (e APIConfigHandlerSecurityLevelEnum) ToPointer() *APIConfigHandlerSecurityLevelEnum {
+	return &e
+}
+
 func (e *APIConfigHandlerSecurityLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURE_UNSPECIFIED":
 		fallthrough
 	case "SECURE_DEFAULT":
@@ -90,10 +102,10 @@ func (e *APIConfigHandlerSecurityLevelEnum) UnmarshalJSON(data []byte) error {
 	case "SECURE_OPTIONAL":
 		fallthrough
 	case "SECURE_ALWAYS":
-		*e = APIConfigHandlerSecurityLevelEnum(s)
+		*e = APIConfigHandlerSecurityLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIConfigHandlerSecurityLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for APIConfigHandlerSecurityLevelEnum: %v", v)
 	}
 }
 

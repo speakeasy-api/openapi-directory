@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apideck.com/ecosystem/0.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CategoriesAllRequest{
-        Cursor: "corrupti",
-        EcosystemID: "provident",
-        Limit: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.Category.CategoriesAll(ctx, req)
+    res, err := s.Category.CategoriesAll(ctx, operations.CategoriesAllRequest{
+        Cursor: sdk.String("corrupti"),
+        EcosystemID: "provident",
+        Limit: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,32 +44,32 @@ func main() {
 ## Available Resources and Operations
 
 
-### Category
+### [Category](docs/category/README.md)
 
-* `CategoriesAll` - List categories
-* `CategoriesOne` - Get category
-* `CategoryListingsAll` - List category listings
+* [CategoriesAll](docs/category/README.md#categoriesall) - List categories
+* [CategoriesOne](docs/category/README.md#categoriesone) - Get category
+* [CategoryListingsAll](docs/category/README.md#categorylistingsall) - List category listings
 
-### Collection
+### [Collection](docs/collection/README.md)
 
-* `CollectionListingsAll` - List collection listings
-* `CollectionsAll` - List collections
-* `CollectionsOne` - Get collection
+* [CollectionListingsAll](docs/collection/README.md#collectionlistingsall) - List collection listings
+* [CollectionsAll](docs/collection/README.md#collectionsall) - List collections
+* [CollectionsOne](docs/collection/README.md#collectionsone) - Get collection
 
-### Ecosystem
+### [Ecosystem](docs/ecosystem/README.md)
 
-* `EcosystemsOne` - Get ecosystem
+* [EcosystemsOne](docs/ecosystem/README.md#ecosystemsone) - Get ecosystem
 
-### Listing
+### [Listing](docs/listing/README.md)
 
-* `ListingsAll` - List listings
-* `ListingsOne` - Get listing
+* [ListingsAll](docs/listing/README.md#listingsall) - List listings
+* [ListingsOne](docs/listing/README.md#listingsone) - Get listing
 
-### Product
+### [Product](docs/product/README.md)
 
-* `ProductListingsAll` - List product listings
-* `ProductsAll` - List products
-* `ProductsOne` - Get product
+* [ProductListingsAll](docs/product/README.md#productlistingsall) - List product listings
+* [ProductsAll](docs/product/README.md#productsall) - List products
+* [ProductsOne](docs/product/README.md#productsone) - Get product
 <!-- End SDK Available Operations -->
 
 ### Maturity

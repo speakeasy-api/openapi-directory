@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,33 +16,31 @@ func main() {
         }),
     )
 
-    req := operations.GETActivateTypeRequest{
-        Action: "ActivateType",
-        AutoUpdate: false,
-        ExecutionRoleArn: "corrupti",
+    ctx := context.Background()
+    res, err := s.GETActivateType(ctx, operations.GETActivateTypeRequest{
+        Action: operations.GETActivateTypeActionEnumActivateType,
+        AutoUpdate: sdk.Bool(false),
+        ExecutionRoleArn: sdk.String("corrupti"),
         LoggingConfig: &operations.GETActivateTypeLoggingConfig{
             LogGroupName: "provident",
             LogRoleArn: "distinctio",
         },
-        MajorVersion: 844266,
-        PublicTypeArn: "unde",
-        PublisherID: "nulla",
-        Type: "MODULE",
-        TypeName: "illum",
-        TypeNameAlias: "vel",
-        Version: "2010-05-15",
-        VersionBump: "MINOR",
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.GETActivateType(ctx, req)
+        MajorVersion: sdk.Int64(844266),
+        PublicTypeArn: sdk.String("unde"),
+        PublisherID: sdk.String("nulla"),
+        Type: operations.GETActivateTypeTypeEnumModule.ToPointer(),
+        TypeName: sdk.String("illum"),
+        TypeNameAlias: sdk.String("vel"),
+        Version: operations.GETActivateTypeVersionEnumTwoThousandAndTen0515,
+        VersionBump: operations.GETActivateTypeVersionBumpEnumMinor.ToPointer(),
+        XAmzAlgorithm: sdk.String("deserunt"),
+        XAmzContentSha256: sdk.String("suscipit"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("magnam"),
+        XAmzSecurityToken: sdk.String("debitis"),
+        XAmzSignature: sdk.String("ipsa"),
+        XAmzSignedHeaders: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

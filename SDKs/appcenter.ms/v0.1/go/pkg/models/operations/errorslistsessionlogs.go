@@ -36,12 +36,16 @@ const (
 	ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -55,10 +59,10 @@ func (e *ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsListSessionLogsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -158,12 +162,16 @@ const (
 	ErrorsListSessionLogs200ApplicationJSONLogsTypeEnumCustomProperties ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum = "custom_properties"
 )
 
+func (e ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum) ToPointer() *ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum {
+	return &e
+}
+
 func (e *ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
 		fallthrough
 	case "page":
@@ -177,10 +185,10 @@ func (e *ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum) UnmarshalJSON(data
 	case "start_service":
 		fallthrough
 	case "custom_properties":
-		*e = ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum(s)
+		*e = ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsListSessionLogs200ApplicationJSONLogsTypeEnum: %v", v)
 	}
 }
 

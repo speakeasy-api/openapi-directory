@@ -18,21 +18,25 @@ const (
 	TeamsListMembersLegacyRoleEnumAll        TeamsListMembersLegacyRoleEnum = "all"
 )
 
+func (e TeamsListMembersLegacyRoleEnum) ToPointer() *TeamsListMembersLegacyRoleEnum {
+	return &e
+}
+
 func (e *TeamsListMembersLegacyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "member":
 		fallthrough
 	case "maintainer":
 		fallthrough
 	case "all":
-		*e = TeamsListMembersLegacyRoleEnum(s)
+		*e = TeamsListMembersLegacyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsListMembersLegacyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsListMembersLegacyRoleEnum: %v", v)
 	}
 }
 

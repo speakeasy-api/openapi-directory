@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateCustomerServiceMetricTaskRequest{
+    ctx := context.Background()
+    res, err := s.CustomerServiceMetricTask.CreateCustomerServiceMetricTask(ctx, operations.CreateCustomerServiceMetricTaskRequest{
         CreateServiceMetricsTaskRequest: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "corrupti",
+            FeedType: sdk.String("corrupti"),
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
-                CustomerServiceMetricType: "provident",
-                EvaluationMarketplaceID: "distinctio",
+                CustomerServiceMetricType: sdk.String("provident"),
+                EvaluationMarketplaceID: sdk.String("distinctio"),
                 ListingCategories: []string{
                     "unde",
                     "nulla",
@@ -30,13 +31,10 @@ func main() {
                     "deserunt",
                 },
             },
-            SchemaVersion: "suscipit",
+            SchemaVersion: sdk.String("suscipit"),
         },
         AcceptLanguage: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.CustomerServiceMetricTask.CreateCustomerServiceMetricTask(ctx, req, operations.CreateCustomerServiceMetricTaskSecurity{
+    }, operations.CreateCustomerServiceMetricTaskSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

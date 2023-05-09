@@ -16,25 +16,29 @@ const (
 	GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnumExclude                       GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum = "EXCLUDE"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIENCE_CLAUSE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "INCLUDE":
 		fallthrough
 	case "EXCLUDE":
-		*e = GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum: %v", v)
 	}
 }
 
-// GoogleAnalyticsAdminV1alphaAudienceFilterClause - A clause for defining either a simple or sequence filter. A filter can be inclusive (i.e., users satisfying the filter clause are included in the Audience) or exclusive (i.e., users satisfying the filter clause are excluded from the Audience).
+// GoogleAnalyticsAdminV1alphaAudienceFilterClause - A clause for defining either a simple or sequence filter. A filter can be inclusive (For example, users satisfying the filter clause are included in the Audience) or exclusive (For example, users satisfying the filter clause are excluded from the Audience).
 type GoogleAnalyticsAdminV1alphaAudienceFilterClause struct {
 	// Required. Specifies whether this is an include or exclude filter clause.
 	ClauseType *GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum `json:"clauseType,omitempty"`

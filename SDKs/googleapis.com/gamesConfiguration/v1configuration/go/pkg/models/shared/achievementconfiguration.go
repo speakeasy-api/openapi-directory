@@ -16,21 +16,25 @@ const (
 	AchievementConfigurationAchievementTypeEnumIncremental                AchievementConfigurationAchievementTypeEnum = "INCREMENTAL"
 )
 
+func (e AchievementConfigurationAchievementTypeEnum) ToPointer() *AchievementConfigurationAchievementTypeEnum {
+	return &e
+}
+
 func (e *AchievementConfigurationAchievementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACHIEVEMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STANDARD":
 		fallthrough
 	case "INCREMENTAL":
-		*e = AchievementConfigurationAchievementTypeEnum(s)
+		*e = AchievementConfigurationAchievementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementConfigurationAchievementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementConfigurationAchievementTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	AchievementConfigurationInitialStateEnumRevealed                AchievementConfigurationInitialStateEnum = "REVEALED"
 )
 
+func (e AchievementConfigurationInitialStateEnum) ToPointer() *AchievementConfigurationInitialStateEnum {
+	return &e
+}
+
 func (e *AchievementConfigurationInitialStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "HIDDEN":
 		fallthrough
 	case "REVEALED":
-		*e = AchievementConfigurationInitialStateEnum(s)
+		*e = AchievementConfigurationInitialStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementConfigurationInitialStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementConfigurationInitialStateEnum: %v", v)
 	}
 }
 

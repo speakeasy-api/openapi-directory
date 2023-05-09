@@ -16,17 +16,21 @@ const (
 	ListTestGridSessionArtifactsXAmzTargetEnumDeviceFarm20150623ListTestGridSessionArtifacts ListTestGridSessionArtifactsXAmzTargetEnum = "DeviceFarm_20150623.ListTestGridSessionArtifacts"
 )
 
+func (e ListTestGridSessionArtifactsXAmzTargetEnum) ToPointer() *ListTestGridSessionArtifactsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTestGridSessionArtifactsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.ListTestGridSessionArtifacts":
-		*e = ListTestGridSessionArtifactsXAmzTargetEnum(s)
+		*e = ListTestGridSessionArtifactsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTestGridSessionArtifactsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTestGridSessionArtifactsXAmzTargetEnum: %v", v)
 	}
 }
 

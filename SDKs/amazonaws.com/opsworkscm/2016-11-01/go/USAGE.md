@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,37 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.AssociateNodeRequest{
+    ctx := context.Background()
+    res, err := s.AssociateNode(ctx, operations.AssociateNodeRequest{
         AssociateNodeRequest: shared.AssociateNodeRequest{
             EngineAttributes: []shared.EngineAttribute{
                 shared.EngineAttribute{
-                    Name: "provident",
-                    Value: "distinctio",
+                    Name: sdk.String("Kelvin Sporer"),
+                    Value: sdk.String("corrupti"),
                 },
                 shared.EngineAttribute{
-                    Name: "quibusdam",
-                    Value: "unde",
+                    Name: sdk.String("Ben Mueller"),
+                    Value: sdk.String("iure"),
                 },
                 shared.EngineAttribute{
-                    Name: "nulla",
-                    Value: "corrupti",
+                    Name: sdk.String("Raquel Bednar"),
+                    Value: sdk.String("suscipit"),
                 },
             },
-            NodeName: "illum",
-            ServerName: "vel",
+            NodeName: "molestiae",
+            ServerName: "minus",
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "OpsWorksCM_V2016_11_01.AssociateNode",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateNode(ctx, req)
+        XAmzAlgorithm: sdk.String("placeat"),
+        XAmzContentSha256: sdk.String("voluptatum"),
+        XAmzCredential: sdk.String("iusto"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("nisi"),
+        XAmzSignature: sdk.String("recusandae"),
+        XAmzSignedHeaders: sdk.String("temporibus"),
+        XAmzTarget: operations.AssociateNodeXAmzTargetEnumOpsWorksCmV20161101AssociateNode,
+    })
     if err != nil {
         log.Fatal(err)
     }

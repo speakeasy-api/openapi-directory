@@ -15,19 +15,23 @@ const (
 	FileMiniV1StatusEnumDeleted   FileMiniV1StatusEnum = "deleted"
 )
 
+func (e FileMiniV1StatusEnum) ToPointer() *FileMiniV1StatusEnum {
+	return &e
+}
+
 func (e *FileMiniV1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "deleted":
-		*e = FileMiniV1StatusEnum(s)
+		*e = FileMiniV1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileMiniV1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FileMiniV1StatusEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	FileMiniV1TypeEnumApplicationSummary FileMiniV1TypeEnum = "application_summary"
 )
 
+func (e FileMiniV1TypeEnum) ToPointer() *FileMiniV1TypeEnum {
+	return &e
+}
+
 func (e *FileMiniV1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "quote_summary":
 		fallthrough
 	case "policy_specimen":
@@ -54,10 +62,10 @@ func (e *FileMiniV1TypeEnum) UnmarshalJSON(data []byte) error {
 	case "cyber_risk_assement":
 		fallthrough
 	case "application_summary":
-		*e = FileMiniV1TypeEnum(s)
+		*e = FileMiniV1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileMiniV1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileMiniV1TypeEnum: %v", v)
 	}
 }
 

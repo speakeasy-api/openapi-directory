@@ -15,19 +15,23 @@ const (
 	GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnumAutoExpansionModeDefault     GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum = "AUTO_EXPANSION_MODE_DEFAULT"
 )
 
+func (e GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum) ToPointer() *GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO_EXPANSION_MODE_UNSPECIFIED":
 		fallthrough
 	case "AUTO_EXPANSION_MODE_DEFAULT":
-		*e = GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum(s)
+		*e = GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EntityTypeAutoExpansionModeEnum: %v", v)
 	}
 }
 
@@ -41,12 +45,16 @@ const (
 	GoogleCloudDialogflowV2EntityTypeKindEnumKindRegexp      GoogleCloudDialogflowV2EntityTypeKindEnum = "KIND_REGEXP"
 )
 
+func (e GoogleCloudDialogflowV2EntityTypeKindEnum) ToPointer() *GoogleCloudDialogflowV2EntityTypeKindEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2EntityTypeKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KIND_UNSPECIFIED":
 		fallthrough
 	case "KIND_MAP":
@@ -54,10 +62,10 @@ func (e *GoogleCloudDialogflowV2EntityTypeKindEnum) UnmarshalJSON(data []byte) e
 	case "KIND_LIST":
 		fallthrough
 	case "KIND_REGEXP":
-		*e = GoogleCloudDialogflowV2EntityTypeKindEnum(s)
+		*e = GoogleCloudDialogflowV2EntityTypeKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EntityTypeKindEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2EntityTypeKindEnum: %v", v)
 	}
 }
 

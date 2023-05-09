@@ -14,18 +14,22 @@ const (
 	IndexEditionEnumEnterpriseEdition IndexEditionEnum = "ENTERPRISE_EDITION"
 )
 
+func (e IndexEditionEnum) ToPointer() *IndexEditionEnum {
+	return &e
+}
+
 func (e *IndexEditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_EDITION":
 		fallthrough
 	case "ENTERPRISE_EDITION":
-		*e = IndexEditionEnum(s)
+		*e = IndexEditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IndexEditionEnum: %s", s)
+		return fmt.Errorf("invalid value for IndexEditionEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	OpenZFSDeploymentTypeEnumSingleAz2 OpenZFSDeploymentTypeEnum = "SINGLE_AZ_2"
 )
 
+func (e OpenZFSDeploymentTypeEnum) ToPointer() *OpenZFSDeploymentTypeEnum {
+	return &e
+}
+
 func (e *OpenZFSDeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_AZ_1":
 		fallthrough
 	case "SINGLE_AZ_2":
-		*e = OpenZFSDeploymentTypeEnum(s)
+		*e = OpenZFSDeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenZFSDeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenZFSDeploymentTypeEnum: %v", v)
 	}
 }

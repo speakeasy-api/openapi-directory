@@ -15,17 +15,21 @@ const (
 	GETSetStackPolicyActionEnumSetStackPolicy GETSetStackPolicyActionEnum = "SetStackPolicy"
 )
 
+func (e GETSetStackPolicyActionEnum) ToPointer() *GETSetStackPolicyActionEnum {
+	return &e
+}
+
 func (e *GETSetStackPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetStackPolicy":
-		*e = GETSetStackPolicyActionEnum(s)
+		*e = GETSetStackPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetStackPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetStackPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetStackPolicyVersionEnumTwoThousandAndTen0515 GETSetStackPolicyVersionEnum = "2010-05-15"
 )
 
+func (e GETSetStackPolicyVersionEnum) ToPointer() *GETSetStackPolicyVersionEnum {
+	return &e
+}
+
 func (e *GETSetStackPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETSetStackPolicyVersionEnum(s)
+		*e = GETSetStackPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetStackPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetStackPolicyVersionEnum: %v", v)
 	}
 }
 

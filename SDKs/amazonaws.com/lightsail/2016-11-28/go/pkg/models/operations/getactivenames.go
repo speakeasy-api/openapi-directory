@@ -16,17 +16,21 @@ const (
 	GetActiveNamesXAmzTargetEnumLightsail20161128GetActiveNames GetActiveNamesXAmzTargetEnum = "Lightsail_20161128.GetActiveNames"
 )
 
+func (e GetActiveNamesXAmzTargetEnum) ToPointer() *GetActiveNamesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetActiveNamesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetActiveNames":
-		*e = GetActiveNamesXAmzTargetEnum(s)
+		*e = GetActiveNamesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetActiveNamesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetActiveNamesXAmzTargetEnum: %v", v)
 	}
 }
 

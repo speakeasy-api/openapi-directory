@@ -30,12 +30,16 @@ const (
 	StateConditionCodeEnumDataLoss           StateConditionCodeEnum = "DATA_LOSS"
 )
 
+func (e StateConditionCodeEnum) ToPointer() *StateConditionCodeEnum {
+	return &e
+}
+
 func (e *StateConditionCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "CANCELLED":
@@ -69,10 +73,10 @@ func (e *StateConditionCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNAVAILABLE":
 		fallthrough
 	case "DATA_LOSS":
-		*e = StateConditionCodeEnum(s)
+		*e = StateConditionCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StateConditionCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StateConditionCodeEnum: %v", v)
 	}
 }
 

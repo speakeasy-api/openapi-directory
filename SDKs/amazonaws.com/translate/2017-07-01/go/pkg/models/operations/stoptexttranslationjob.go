@@ -16,17 +16,21 @@ const (
 	StopTextTranslationJobXAmzTargetEnumAwsShineFrontendService20170701StopTextTranslationJob StopTextTranslationJobXAmzTargetEnum = "AWSShineFrontendService_20170701.StopTextTranslationJob"
 )
 
+func (e StopTextTranslationJobXAmzTargetEnum) ToPointer() *StopTextTranslationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopTextTranslationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.StopTextTranslationJob":
-		*e = StopTextTranslationJobXAmzTargetEnum(s)
+		*e = StopTextTranslationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopTextTranslationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopTextTranslationJobXAmzTargetEnum: %v", v)
 	}
 }
 

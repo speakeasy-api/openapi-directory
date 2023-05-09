@@ -18,12 +18,16 @@ const (
 	GoogleCloudRetailV2betaProductAvailabilityEnumBackorder               GoogleCloudRetailV2betaProductAvailabilityEnum = "BACKORDER"
 )
 
+func (e GoogleCloudRetailV2betaProductAvailabilityEnum) ToPointer() *GoogleCloudRetailV2betaProductAvailabilityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaProductAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABILITY_UNSPECIFIED":
 		fallthrough
 	case "IN_STOCK":
@@ -33,10 +37,10 @@ func (e *GoogleCloudRetailV2betaProductAvailabilityEnum) UnmarshalJSON(data []by
 	case "PREORDER":
 		fallthrough
 	case "BACKORDER":
-		*e = GoogleCloudRetailV2betaProductAvailabilityEnum(s)
+		*e = GoogleCloudRetailV2betaProductAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaProductAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaProductAvailabilityEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	GoogleCloudRetailV2betaProductTypeEnumCollection      GoogleCloudRetailV2betaProductTypeEnum = "COLLECTION"
 )
 
+func (e GoogleCloudRetailV2betaProductTypeEnum) ToPointer() *GoogleCloudRetailV2betaProductTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudRetailV2betaProductTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "PRIMARY":
@@ -63,10 +71,10 @@ func (e *GoogleCloudRetailV2betaProductTypeEnum) UnmarshalJSON(data []byte) erro
 	case "VARIANT":
 		fallthrough
 	case "COLLECTION":
-		*e = GoogleCloudRetailV2betaProductTypeEnum(s)
+		*e = GoogleCloudRetailV2betaProductTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaProductTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRetailV2betaProductTypeEnum: %v", v)
 	}
 }
 

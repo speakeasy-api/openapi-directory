@@ -18,12 +18,16 @@ const (
 	AuthorizationLoggingOptionsPermissionTypeEnumDataWrite                 AuthorizationLoggingOptionsPermissionTypeEnum = "DATA_WRITE"
 )
 
+func (e AuthorizationLoggingOptionsPermissionTypeEnum) ToPointer() *AuthorizationLoggingOptionsPermissionTypeEnum {
+	return &e
+}
+
 func (e *AuthorizationLoggingOptionsPermissionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ADMIN_READ":
@@ -33,10 +37,10 @@ func (e *AuthorizationLoggingOptionsPermissionTypeEnum) UnmarshalJSON(data []byt
 	case "DATA_READ":
 		fallthrough
 	case "DATA_WRITE":
-		*e = AuthorizationLoggingOptionsPermissionTypeEnum(s)
+		*e = AuthorizationLoggingOptionsPermissionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationLoggingOptionsPermissionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationLoggingOptionsPermissionTypeEnum: %v", v)
 	}
 }
 

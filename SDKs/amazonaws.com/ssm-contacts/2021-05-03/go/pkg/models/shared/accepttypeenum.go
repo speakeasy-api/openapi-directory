@@ -14,18 +14,22 @@ const (
 	AcceptTypeEnumRead      AcceptTypeEnum = "READ"
 )
 
+func (e AcceptTypeEnum) ToPointer() *AcceptTypeEnum {
+	return &e
+}
+
 func (e *AcceptTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERED":
 		fallthrough
 	case "READ":
-		*e = AcceptTypeEnum(s)
+		*e = AcceptTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AcceptTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AcceptTypeEnum: %v", v)
 	}
 }

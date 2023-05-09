@@ -15,17 +15,21 @@ const (
 	POSTListSnapshotsInRecycleBinActionEnumListSnapshotsInRecycleBin POSTListSnapshotsInRecycleBinActionEnum = "ListSnapshotsInRecycleBin"
 )
 
+func (e POSTListSnapshotsInRecycleBinActionEnum) ToPointer() *POSTListSnapshotsInRecycleBinActionEnum {
+	return &e
+}
+
 func (e *POSTListSnapshotsInRecycleBinActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListSnapshotsInRecycleBin":
-		*e = POSTListSnapshotsInRecycleBinActionEnum(s)
+		*e = POSTListSnapshotsInRecycleBinActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListSnapshotsInRecycleBinActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListSnapshotsInRecycleBinActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListSnapshotsInRecycleBinVersionEnumTwoThousandAndSixteen1115 POSTListSnapshotsInRecycleBinVersionEnum = "2016-11-15"
 )
 
+func (e POSTListSnapshotsInRecycleBinVersionEnum) ToPointer() *POSTListSnapshotsInRecycleBinVersionEnum {
+	return &e
+}
+
 func (e *POSTListSnapshotsInRecycleBinVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTListSnapshotsInRecycleBinVersionEnum(s)
+		*e = POSTListSnapshotsInRecycleBinVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListSnapshotsInRecycleBinVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListSnapshotsInRecycleBinVersionEnum: %v", v)
 	}
 }
 

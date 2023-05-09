@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetContainersMessagesRequest{
+    ctx := context.Background()
+    res, err := s.APIInfo.GetContainersMessages(ctx, operations.GetContainersMessagesRequest{
         XAuthProjectID: "corrupti",
         XAuthToken: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.APIInfo.GetContainersMessages(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

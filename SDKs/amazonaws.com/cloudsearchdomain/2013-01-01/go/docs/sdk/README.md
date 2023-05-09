@@ -1,0 +1,168 @@
+# SDK
+
+## Overview
+
+<p>You use the AmazonCloudSearch2013 API to upload documents to a search domain and search those documents. </p> <p>The endpoints for submitting <code>UploadDocuments</code>, <code>Search</code>, and <code>Suggest</code> requests are domain-specific. To get the endpoints for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. The domain endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. You submit suggest requests to the search endpoint. </p> <p>For more information, see the <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide">Amazon CloudSearch Developer Guide</a>.</p>
+
+Amazon Web Services documentation
+<https://docs.aws.amazon.com/cloudsearchdomain/>
+### Available Operations
+
+* [Search](#search) - <p>Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on which query parser you use. Amazon CloudSearch supports four query parsers:</p> <ul> <li><code>simple</code>: search all <code>text</code> and <code>text-array</code> fields for the specified string. Search for phrases, individual terms, and prefixes. </li> <li><code>structured</code>: search specific fields, construct compound queries using Boolean operators, and use advanced features such as term boosting and proximity searching.</li> <li><code>lucene</code>: specify search criteria using the Apache Lucene query parser syntax.</li> <li><code>dismax</code>: specify search criteria using the simplified subset of the Apache Lucene query parser syntax defined by the DisMax query parser.</li> </ul> <p>For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html">Searching Your Data</a> in the <i>Amazon CloudSearch Developer Guide</i>.</p> <p>The endpoint for submitting <code>Search</code> requests is domain-specific. You submit search requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p>
+* [Suggest](#suggest) - <p>Retrieves autocomplete suggestions for a partial query string. You can use suggestions enable you to display likely matches before users finish typing. In Amazon CloudSearch, suggestions are based on the contents of a particular text field. When you request suggestions, Amazon CloudSearch finds all of the documents whose values in the suggester field start with the specified query string. The beginning of the field must match the query string to be considered a match. </p> <p>For more information about configuring suggesters and retrieving suggestions, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html">Getting Suggestions</a> in the <i>Amazon CloudSearch Developer Guide</i>. </p> <p>The endpoint for submitting <code>Suggest</code> requests is domain-specific. You submit suggest requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p>
+* [UploadDocuments](#uploaddocuments) - <p>Posts a batch of documents to a search domain for indexing. A document batch is a collection of add and delete operations that represent the documents you want to add, update, or delete from your domain. Batches can be described in either JSON or XML. Each item that you want Amazon CloudSearch to return as a search result (such as a product) is represented as a document. Every document has a unique ID and one or more fields that contain the data that you want to search and return in results. Individual documents cannot contain more than 1 MB of data. The entire batch cannot exceed 5 MB. To get the best possible upload performance, group add and delete operations in batches that are close the 5 MB limit. Submitting a large volume of single-document batches can overload a domain's document service. </p> <p>The endpoint for submitting <code>UploadDocuments</code> requests is domain-specific. To get the document endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p> <p>For more information about formatting your data for Amazon CloudSearch, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/preparing-data.html">Preparing Your Data</a> in the <i>Amazon CloudSearch Developer Guide</i>. For more information about uploading data for indexing, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading Data</a> in the <i>Amazon CloudSearch Developer Guide</i>. </p>
+
+## Search
+
+<p>Retrieves a list of documents that match the specified search criteria. How you specify the search criteria depends on which query parser you use. Amazon CloudSearch supports four query parsers:</p> <ul> <li><code>simple</code>: search all <code>text</code> and <code>text-array</code> fields for the specified string. Search for phrases, individual terms, and prefixes. </li> <li><code>structured</code>: search specific fields, construct compound queries using Boolean operators, and use advanced features such as term boosting and proximity searching.</li> <li><code>lucene</code>: specify search criteria using the Apache Lucene query parser syntax.</li> <li><code>dismax</code>: specify search criteria using the simplified subset of the Apache Lucene query parser syntax defined by the DisMax query parser.</li> </ul> <p>For more information, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html">Searching Your Data</a> in the <i>Amazon CloudSearch Developer Guide</i>.</p> <p>The endpoint for submitting <code>Search</code> requests is domain-specific. You submit search requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p>
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: "YOUR_API_KEY_HERE",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.SDK.Search(ctx, operations.SearchRequest{
+        XAmzAlgorithm: sdk.String("minus"),
+        XAmzContentSha256: sdk.String("placeat"),
+        XAmzCredential: sdk.String("voluptatum"),
+        XAmzDate: sdk.String("iusto"),
+        XAmzSecurityToken: sdk.String("excepturi"),
+        XAmzSignature: sdk.String("nisi"),
+        XAmzSignedHeaders: sdk.String("recusandae"),
+        Cursor: sdk.String("temporibus"),
+        Expr: sdk.String("ab"),
+        Facet: sdk.String("quis"),
+        Format: operations.SearchFormatEnumSDK,
+        Fq: sdk.String("veritatis"),
+        Highlight: sdk.String("deserunt"),
+        Partial: sdk.Bool(false),
+        Pretty: operations.SearchPrettyEnumTrue,
+        Q: "perferendis",
+        QOptions: sdk.String("ipsam"),
+        QParser: operations.SearchQParserEnumDismax.ToPointer(),
+        Return: sdk.String("sapiente"),
+        Size: sdk.Int64(778157),
+        Sort: sdk.String("odit"),
+        Start: sdk.Int64(870013),
+        Stats: sdk.String("at"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.SearchResponse != nil {
+        // handle response
+    }
+}
+```
+
+## Suggest
+
+<p>Retrieves autocomplete suggestions for a partial query string. You can use suggestions enable you to display likely matches before users finish typing. In Amazon CloudSearch, suggestions are based on the contents of a particular text field. When you request suggestions, Amazon CloudSearch finds all of the documents whose values in the suggester field start with the specified query string. The beginning of the field must match the query string to be considered a match. </p> <p>For more information about configuring suggesters and retrieving suggestions, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/getting-suggestions.html">Getting Suggestions</a> in the <i>Amazon CloudSearch Developer Guide</i>. </p> <p>The endpoint for submitting <code>Suggest</code> requests is domain-specific. You submit suggest requests to a domain's search endpoint. To get the search endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p>
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: "YOUR_API_KEY_HERE",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.SDK.Suggest(ctx, operations.SuggestRequest{
+        XAmzAlgorithm: sdk.String("maiores"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("quod"),
+        XAmzDate: sdk.String("quod"),
+        XAmzSecurityToken: sdk.String("esse"),
+        XAmzSignature: sdk.String("totam"),
+        XAmzSignedHeaders: sdk.String("porro"),
+        Format: operations.SuggestFormatEnumSDK,
+        Pretty: operations.SuggestPrettyEnumTrue,
+        Q: "dolorum",
+        Size: sdk.Int64(118274),
+        Suggester: "nam",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.SuggestResponse != nil {
+        // handle response
+    }
+}
+```
+
+## UploadDocuments
+
+<p>Posts a batch of documents to a search domain for indexing. A document batch is a collection of add and delete operations that represent the documents you want to add, update, or delete from your domain. Batches can be described in either JSON or XML. Each item that you want Amazon CloudSearch to return as a search result (such as a product) is represented as a document. Every document has a unique ID and one or more fields that contain the data that you want to search and return in results. Individual documents cannot contain more than 1 MB of data. The entire batch cannot exceed 5 MB. To get the best possible upload performance, group add and delete operations in batches that are close the 5 MB limit. Submitting a large volume of single-document batches can overload a domain's document service. </p> <p>The endpoint for submitting <code>UploadDocuments</code> requests is domain-specific. To get the document endpoint for your domain, use the Amazon CloudSearch configuration service <code>DescribeDomains</code> action. A domain's endpoints are also displayed on the domain dashboard in the Amazon CloudSearch console. </p> <p>For more information about formatting your data for Amazon CloudSearch, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/preparing-data.html">Preparing Your Data</a> in the <i>Amazon CloudSearch Developer Guide</i>. For more information about uploading data for indexing, see <a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/uploading-data.html">Uploading Data</a> in the <i>Amazon CloudSearch Developer Guide</i>. </p>
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: "YOUR_API_KEY_HERE",
+        }),
+    )
+
+    ctx := context.Background()
+    res, err := s.SDK.UploadDocuments(ctx, operations.UploadDocumentsRequest{
+        ContentType: operations.UploadDocumentsContentTypeEnumApplicationXML,
+        RequestBody: operations.UploadDocumentsRequestBody{
+            Documents: "occaecati",
+        },
+        XAmzAlgorithm: sdk.String("fugit"),
+        XAmzContentSha256: sdk.String("deleniti"),
+        XAmzCredential: sdk.String("hic"),
+        XAmzDate: sdk.String("optio"),
+        XAmzSecurityToken: sdk.String("totam"),
+        XAmzSignature: sdk.String("beatae"),
+        XAmzSignedHeaders: sdk.String("commodi"),
+        Format: operations.UploadDocumentsFormatEnumSDK,
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.UploadDocumentsResponse != nil {
+        // handle response
+    }
+}
+```

@@ -9,4 +9,5 @@ type ClassifyDocumentResponse struct {
 	DocumentType     []DocumentTypeListItem `json:"DocumentType,omitempty"`
 	Errors           []ErrorsListItem       `json:"Errors,omitempty"`
 	Labels           []DocumentLabel        `json:"Labels,omitempty"`
+	Warnings         []WarningsListItem     `json:"Warnings,omitempty"`
 }

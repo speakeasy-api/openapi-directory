@@ -22,17 +22,21 @@ const (
 	DisableFastLaunchResultResourceTypeEnumSnapshot DisableFastLaunchResultResourceTypeEnum = "snapshot"
 )
 
+func (e DisableFastLaunchResultResourceTypeEnum) ToPointer() *DisableFastLaunchResultResourceTypeEnum {
+	return &e
+}
+
 func (e *DisableFastLaunchResultResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "snapshot":
-		*e = DisableFastLaunchResultResourceTypeEnum(s)
+		*e = DisableFastLaunchResultResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableFastLaunchResultResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableFastLaunchResultResourceTypeEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	DisableFastLaunchResultStateEnumDisablingFailed DisableFastLaunchResultStateEnum = "disabling-failed"
 )
 
+func (e DisableFastLaunchResultStateEnum) ToPointer() *DisableFastLaunchResultStateEnum {
+	return &e
+}
+
 func (e *DisableFastLaunchResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabling":
 		fallthrough
 	case "enabling-failed":
@@ -70,10 +78,10 @@ func (e *DisableFastLaunchResultStateEnum) UnmarshalJSON(data []byte) error {
 	case "disabling":
 		fallthrough
 	case "disabling-failed":
-		*e = DisableFastLaunchResultStateEnum(s)
+		*e = DisableFastLaunchResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableFastLaunchResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableFastLaunchResultStateEnum: %v", v)
 	}
 }
 

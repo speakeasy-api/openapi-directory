@@ -13,16 +13,20 @@ const (
 	ExportSortAttributeEnumLastUpdatedDateTime ExportSortAttributeEnum = "LastUpdatedDateTime"
 )
 
+func (e ExportSortAttributeEnum) ToPointer() *ExportSortAttributeEnum {
+	return &e
+}
+
 func (e *ExportSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LastUpdatedDateTime":
-		*e = ExportSortAttributeEnum(s)
+		*e = ExportSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportSortAttributeEnum: %v", v)
 	}
 }

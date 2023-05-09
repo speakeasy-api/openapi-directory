@@ -84,7 +84,10 @@ func (s *ratStrain) GETAllStrainsUsingGET(ctx context.Context) (*operations.GETA
 // GETStrainByRgdIDUsingGET - Return a strain by RGD ID
 func (s *ratStrain) GETStrainByRgdIDUsingGET(ctx context.Context, request operations.GETStrainByRgdIDUsingGETRequest) (*operations.GETStrainByRgdIDUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/strains/{rgdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/strains/{rgdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -133,7 +136,10 @@ func (s *ratStrain) GETStrainByRgdIDUsingGET(ctx context.Context, request operat
 // GETStrainsByPositionUsingGET - Return all active strains by position
 func (s *ratStrain) GETStrainsByPositionUsingGET(ctx context.Context, request operations.GETStrainsByPositionUsingGETRequest) (*operations.GETStrainsByPositionUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/strains/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/strains/{chr}/{start}/{stop}/{mapKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

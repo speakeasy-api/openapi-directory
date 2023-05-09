@@ -23,12 +23,16 @@ const (
 	PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnumObligation         PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum = "obligation"
 )
 
+func (e PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum) ToPointer() *PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "debt spreading":
 		fallthrough
 	case "bank loan":
@@ -40,10 +44,10 @@ func (e *PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum) Unmarshal
 	case "leasing":
 		fallthrough
 	case "obligation":
-		*e = PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum(s)
+		*e = PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyCategoryEnum: %v", v)
 	}
 }
 
@@ -55,21 +59,25 @@ const (
 	PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnumPublic       PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum = "public"
 )
 
+func (e PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum) ToPointer() *PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum(s)
+		*e = PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDLegalEntitiesIDLoansRequestBodyLevelEnum: %v", v)
 	}
 }
 

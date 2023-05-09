@@ -34,7 +34,10 @@ func newFloodlightConfigurations(defaultClient, securityClient HTTPClient, serve
 // DfareportingFloodlightConfigurationsGet - Gets one floodlight configuration by ID.
 func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsGet(ctx context.Context, request operations.DfareportingFloodlightConfigurationsGetRequest, security operations.DfareportingFloodlightConfigurationsGetSecurity) (*operations.DfareportingFloodlightConfigurationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsGet(ctx c
 // DfareportingFloodlightConfigurationsList - Retrieves a list of floodlight configurations, possibly filtered.
 func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsList(ctx context.Context, request operations.DfareportingFloodlightConfigurationsListRequest, security operations.DfareportingFloodlightConfigurationsListSecurity) (*operations.DfareportingFloodlightConfigurationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsList(ctx 
 // DfareportingFloodlightConfigurationsPatch - Updates an existing floodlight configuration. This method supports patch semantics.
 func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx context.Context, request operations.DfareportingFloodlightConfigurationsPatchRequest, security operations.DfareportingFloodlightConfigurationsPatchSecurity) (*operations.DfareportingFloodlightConfigurationsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FloodlightConfiguration", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsPatch(ctx
 // DfareportingFloodlightConfigurationsUpdate - Updates an existing floodlight configuration.
 func (s *floodlightConfigurations) DfareportingFloodlightConfigurationsUpdate(ctx context.Context, request operations.DfareportingFloodlightConfigurationsUpdateRequest, security operations.DfareportingFloodlightConfigurationsUpdateSecurity) (*operations.DfareportingFloodlightConfigurationsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/floodlightConfigurations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FloodlightConfiguration", "json")
 	if err != nil {

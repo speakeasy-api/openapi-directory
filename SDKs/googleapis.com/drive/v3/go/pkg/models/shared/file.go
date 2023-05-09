@@ -6,13 +6,13 @@ import (
 	"time"
 )
 
-// FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+// FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
 type FileCapabilities struct {
 	// Whether the current user is the pending owner of the file. Not populated for shared drive files.
 	CanAcceptOwnership *bool `json:"canAcceptOwnership,omitempty"`
-	// Whether the current user can add children to this folder. This is always false when the item is not a folder.
+	// Whether the current user can add children to this folder. This is always false when the item isn't a folder.
 	CanAddChildren *bool `json:"canAddChildren,omitempty"`
-	// Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+	// Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
 	CanAddFolderFromAnotherDrive *bool `json:"canAddFolderFromAnotherDrive,omitempty"`
 	// Whether the current user can add a parent for the item without removing an existing parent in the same request. Not populated for shared drive files.
 	CanAddMyDriveParent *bool `json:"canAddMyDriveParent,omitempty"`
@@ -24,17 +24,17 @@ type FileCapabilities struct {
 	CanChangeViewersCanCopyContent *bool `json:"canChangeViewersCanCopyContent,omitempty"`
 	// Whether the current user can comment on this file.
 	CanComment *bool `json:"canComment,omitempty"`
-	// Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it is not a folder.
+	// Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it's not a folder.
 	CanCopy *bool `json:"canCopy,omitempty"`
 	// Whether the current user can delete this file.
 	CanDelete *bool `json:"canDelete,omitempty"`
-	// Whether the current user can delete children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+	// Whether the current user can delete children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
 	CanDeleteChildren *bool `json:"canDeleteChildren,omitempty"`
 	// Whether the current user can download this file.
 	CanDownload *bool `json:"canDownload,omitempty"`
-	// Whether the current user can edit this file. Other factors may limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
+	// Whether the current user can edit this file. Other factors might limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
 	CanEdit *bool `json:"canEdit,omitempty"`
-	// Whether the current user can list the children of this folder. This is always false when the item is not a folder.
+	// Whether the current user can list the children of this folder. This is always false when the item isn't a folder.
 	CanListChildren *bool `json:"canListChildren,omitempty"`
 	// Whether the current user can modify the content of this file.
 	CanModifyContent *bool `json:"canModifyContent,omitempty"`
@@ -42,21 +42,21 @@ type FileCapabilities struct {
 	CanModifyContentRestriction *bool `json:"canModifyContentRestriction,omitempty"`
 	// Whether the current user can modify the labels on this file.
 	CanModifyLabels *bool `json:"canModifyLabels,omitempty"`
-	// Whether the current user can move children of this folder outside of the shared drive. This is false when the item is not a folder. Only populated for items in shared drives.
+	// Whether the current user can move children of this folder outside of the shared drive. This is false when the item isn't a folder. Only populated for items in shared drives.
 	CanMoveChildrenOutOfDrive *bool `json:"canMoveChildrenOutOfDrive,omitempty"`
 	// Deprecated - use canMoveChildrenOutOfDrive instead.
 	CanMoveChildrenOutOfTeamDrive *bool `json:"canMoveChildrenOutOfTeamDrive,omitempty"`
-	// Whether the current user can move children of this folder within this drive. This is false when the item is not a folder. Note that a request to move the child may still fail depending on the current user's access to the child and to the destination folder.
+	// Whether the current user can move children of this folder within this shared drive or My Drive. This is false when the item isn't a folder. Note that a request to move the child might still fail depending on the current user's access to the child and to the destination folder.
 	CanMoveChildrenWithinDrive *bool `json:"canMoveChildrenWithinDrive,omitempty"`
 	// Deprecated - use canMoveChildrenWithinDrive instead.
 	CanMoveChildrenWithinTeamDrive *bool `json:"canMoveChildrenWithinTeamDrive,omitempty"`
 	// Deprecated - use canMoveItemOutOfDrive instead.
 	CanMoveItemIntoTeamDrive *bool `json:"canMoveItemIntoTeamDrive,omitempty"`
-	// Whether the current user can move this item outside of this drive by changing its parent. Note that a request to change the parent of the item may still fail depending on the new parent that is being added.
+	// Whether the current user can move this item outside of this shared drive or My Drive by changing its parent. Note that a request to change the parent of the item might still fail depending on the new parent that's being added.
 	CanMoveItemOutOfDrive *bool `json:"canMoveItemOutOfDrive,omitempty"`
 	// Deprecated - use canMoveItemOutOfDrive instead.
 	CanMoveItemOutOfTeamDrive *bool `json:"canMoveItemOutOfTeamDrive,omitempty"`
-	// Whether the current user can move this item within this drive. Note that a request to change the parent of the item may still fail depending on the new parent that is being added and the parent that is being removed.
+	// Whether the current user can move this item within this shared drive or My Drive. Note that a request to change the parent of the item might still fail depending on the new parent that's being added and the parent that's being removed.
 	CanMoveItemWithinDrive *bool `json:"canMoveItemWithinDrive,omitempty"`
 	// Deprecated - use canMoveItemWithinDrive instead.
 	CanMoveItemWithinTeamDrive *bool `json:"canMoveItemWithinTeamDrive,omitempty"`
@@ -66,11 +66,11 @@ type FileCapabilities struct {
 	CanReadDrive *bool `json:"canReadDrive,omitempty"`
 	// Whether the current user can read the labels on this file.
 	CanReadLabels *bool `json:"canReadLabels,omitempty"`
-	// Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it isn't a folder, can be read.
+	// Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it's not a folder, can be read.
 	CanReadRevisions *bool `json:"canReadRevisions,omitempty"`
 	// Deprecated - use canReadDrive instead.
 	CanReadTeamDrive *bool `json:"canReadTeamDrive,omitempty"`
-	// Whether the current user can remove children from this folder. This is always false when the item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
+	// Whether the current user can remove children from this folder. This is always false when the item isn't a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
 	CanRemoveChildren *bool `json:"canRemoveChildren,omitempty"`
 	// Whether the current user can remove a parent from the item without adding another parent in the same request. Not populated for shared drive files.
 	CanRemoveMyDriveParent *bool `json:"canRemoveMyDriveParent,omitempty"`
@@ -80,7 +80,7 @@ type FileCapabilities struct {
 	CanShare *bool `json:"canShare,omitempty"`
 	// Whether the current user can move this file to trash.
 	CanTrash *bool `json:"canTrash,omitempty"`
-	// Whether the current user can trash children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+	// Whether the current user can trash children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
 	CanTrashChildren *bool `json:"canTrashChildren,omitempty"`
 	// Whether the current user can restore this file from trash.
 	CanUntrash *bool `json:"canUntrash,omitempty"`
@@ -96,7 +96,7 @@ type FileContentHintsThumbnail struct {
 
 // FileContentHints - Additional information about the content of the file. These fields are never populated in responses.
 type FileContentHints struct {
-	// Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and may contain HTML elements. For more information, see Manage file metadata.
+	// Text to be indexed for the file to improve fullText queries. This is limited to 128 KB in length and might contain HTML elements. For more information, see Manage file metadata.
 	IndexableText *string `json:"indexableText,omitempty"`
 	// A thumbnail for the file. This will only be used if Google Drive cannot generate a standard thumbnail.
 	Thumbnail *FileContentHintsThumbnail `json:"thumbnail,omitempty"`
@@ -144,7 +144,7 @@ type FileImageMediaMetadata struct {
 	MaxApertureValue *float32 `json:"maxApertureValue,omitempty"`
 	// The metering mode used to create the photo.
 	MeteringMode *string `json:"meteringMode,omitempty"`
-	// The number of clockwise 90 degree rotations applied from the image's original orientation.
+	// The number of clockwise 90-degree rotations applied from the image's original orientation.
 	Rotation *int `json:"rotation,omitempty"`
 	// The type of sensor used to create the photo.
 	Sensor *string `json:"sensor,omitempty"`
@@ -182,7 +182,7 @@ type FileShortcutDetails struct {
 	TargetResourceKey *string `json:"targetResourceKey,omitempty"`
 }
 
-// FileVideoMediaMetadata - Additional metadata about video media. This may not be available immediately upon upload.
+// FileVideoMediaMetadata - Additional metadata about video media. This might not be available immediately upon upload.
 type FileVideoMediaMetadata struct {
 	// The duration of the video in milliseconds.
 	DurationMillis *string `json:"durationMillis,omitempty"`
@@ -194,10 +194,10 @@ type FileVideoMediaMetadata struct {
 
 // FileInput - The metadata for a file.
 type FileInput struct {
-	// A collection of arbitrary key-value pairs which are private to the requesting app.
-	// Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve private properties.
+	// A collection of arbitrary key-value pairs that are private to the requesting app.
+	// Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties.
 	AppProperties map[string]string `json:"appProperties,omitempty"`
-	// Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+	// Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
 	Capabilities *FileCapabilities `json:"capabilities,omitempty"`
 	// Additional information about the content of the file. These fields are never populated in responses.
 	ContentHints *FileContentHints `json:"contentHints,omitempty"`
@@ -218,14 +218,14 @@ type FileInput struct {
 	// The color for a folder or shortcut to a folder as an RGB hex string. The supported colors are published in the folderColorPalette field of the About resource.
 	// If an unsupported color is specified, the closest color in the palette will be used instead.
 	FolderColorRgb *string `json:"folderColorRgb,omitempty"`
-	// The full file extension extracted from the name field. May contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
-	// This is automatically updated when the name field changes, however it isn't cleared if the new name does not contain a valid extension.
+	// The full file extension extracted from the name field. Can contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
+	// This is automatically updated when the name field changes, however it's not cleared if the new name does not contain a valid extension.
 	FullFileExtension *string `json:"fullFileExtension,omitempty"`
 	// Whether there are permissions directly on this file. This field is only populated for items in shared drives.
 	HasAugmentedPermissions *bool `json:"hasAugmentedPermissions,omitempty"`
 	// Whether this file has a thumbnail. This does not indicate whether the requesting app has access to the thumbnail. To check access, look for the presence of the thumbnailLink field.
 	HasThumbnail *bool `json:"hasThumbnail,omitempty"`
-	// The ID of the file's head revision. This is currently only available for files with binary content in Google Drive.
+	// The ID of the file's head revision. This is only available for files with binary content in Google Drive.
 	HeadRevisionID *string `json:"headRevisionId,omitempty"`
 	// A static, unauthenticated link to the file's icon.
 	IconLink *string `json:"iconLink,omitempty"`
@@ -233,7 +233,7 @@ type FileInput struct {
 	ID *string `json:"id,omitempty"`
 	// Additional metadata about image media, if available.
 	ImageMediaMetadata *FileImageMediaMetadata `json:"imageMediaMetadata,omitempty"`
-	// Whether the file was created or opened by the requesting app.
+	// Whether the requesting app created or opened the file.
 	IsAppAuthorized *bool `json:"isAppAuthorized,omitempty"`
 	// Identifies what kind of resource this is. Value: the fixed string "drive#file".
 	Kind *string `json:"kind,omitempty"`
@@ -249,38 +249,38 @@ type FileInput struct {
 	// Google Drive will attempt to automatically detect an appropriate value from uploaded content if no value is provided. The value cannot be changed unless a new revision is uploaded.
 	// If a file is created with a Google Doc MIME type, the uploaded content will be imported if possible. The supported import formats are published in the About resource.
 	MimeType *string `json:"mimeType,omitempty"`
-	// Whether the file has been modified by this user.
+	// Whether this user has modified the file.
 	ModifiedByMe *bool `json:"modifiedByMe,omitempty"`
-	// The last time the file was modified by the user (RFC 3339 date-time).
+	// The last time the user modified the file (RFC 3339 date-time).
 	ModifiedByMeTime *time.Time `json:"modifiedByMeTime,omitempty"`
-	// The last time the file was modified by anyone (RFC 3339 date-time).
+	// The last time anyone modified the file (RFC 3339 date-time).
 	// Note that setting modifiedTime will also update modifiedByMeTime for the user.
 	ModifiedTime *time.Time `json:"modifiedTime,omitempty"`
-	// The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
+	// The name of the file. This isn't necessarily unique within a folder. Note that for immutable items such as the top-level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
 	Name *string `json:"name,omitempty"`
 	// The original filename of the uploaded content if available, or else the original value of the name field. This is only available for files with binary content in Google Drive.
 	OriginalFilename *string `json:"originalFilename,omitempty"`
 	// Whether the user owns the file. Not populated for items in shared drives.
 	OwnedByMe *bool `json:"ownedByMe,omitempty"`
-	// The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives.
+	// The owner of this file. Only certain legacy files might have more than one owner. This field isn't populated for items in shared drives.
 	Owners []User `json:"owners,omitempty"`
-	// The IDs of the parent folders which contain the file.
+	// The IDs of the parent folders that contain the file.
 	// If not specified as part of a create request, the file will be placed directly in the user's My Drive folder. If not specified as part of a copy request, the file will inherit any discoverable parents of the source file. Update requests must use the addParents and removeParents parameters to modify the parents list.
 	Parents []string `json:"parents,omitempty"`
 	// List of permission IDs for users with access to this file.
 	PermissionIds []string `json:"permissionIds,omitempty"`
 	// The full list of permissions for the file. This is only available if the requesting user can share the file. Not populated for items in shared drives.
 	Permissions []PermissionInput `json:"permissions,omitempty"`
-	// A collection of arbitrary key-value pairs which are visible to all apps.
+	// A collection of arbitrary key-value pairs that are visible to all apps.
 	// Entries with null values are cleared in update and copy requests.
 	Properties map[string]string `json:"properties,omitempty"`
 	// The number of storage quota bytes used by the file. This includes the head revision as well as previous revisions with keepForever enabled.
 	QuotaBytesUsed *string `json:"quotaBytesUsed,omitempty"`
 	// A key needed to access the item via a shared link.
 	ResourceKey *string `json:"resourceKey,omitempty"`
-	// The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+	// The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
 	Sha1Checksum *string `json:"sha1Checksum,omitempty"`
-	// The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+	// The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
 	Sha256Checksum *string `json:"sha256Checksum,omitempty"`
 	// Whether the file has been shared. Not populated for items in shared drives.
 	Shared *bool `json:"shared,omitempty"`
@@ -290,9 +290,9 @@ type FileInput struct {
 	SharingUser *User `json:"sharingUser,omitempty"`
 	// Shortcut file details. Only populated for shortcut files, which have the mimeType field set to application/vnd.google-apps.shortcut.
 	ShortcutDetails *FileShortcutDetails `json:"shortcutDetails,omitempty"`
-	// The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or folders.
+	// The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it's not populated for shortcuts or folders.
 	Size *string `json:"size,omitempty"`
-	// The list of spaces which contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
+	// The list of spaces that contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
 	Spaces []string `json:"spaces,omitempty"`
 	// Whether the user has starred the file.
 	Starred *bool `json:"starred,omitempty"`
@@ -302,7 +302,7 @@ type FileInput struct {
 	ThumbnailLink *string `json:"thumbnailLink,omitempty"`
 	// The thumbnail version for use in thumbnail cache invalidation.
 	ThumbnailVersion *string `json:"thumbnailVersion,omitempty"`
-	// Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
+	// Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner can trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
 	Trashed *bool `json:"trashed,omitempty"`
 	// The time that the item was trashed (RFC 3339 date-time). Only populated for items in shared drives.
 	TrashedTime *time.Time `json:"trashedTime,omitempty"`
@@ -310,11 +310,11 @@ type FileInput struct {
 	TrashingUser *User `json:"trashingUser,omitempty"`
 	// A monotonically increasing version number for the file. This reflects every change made to the file on the server, even those not visible to the user.
 	Version *string `json:"version,omitempty"`
-	// Additional metadata about video media. This may not be available immediately upon upload.
+	// Additional metadata about video media. This might not be available immediately upon upload.
 	VideoMediaMetadata *FileVideoMediaMetadata `json:"videoMediaMetadata,omitempty"`
-	// Whether the file has been viewed by this user.
+	// Whether this user has viewed the file.
 	ViewedByMe *bool `json:"viewedByMe,omitempty"`
-	// The last time the file was viewed by the user (RFC 3339 date-time).
+	// The last time the user viewed the file (RFC 3339 date-time).
 	ViewedByMeTime *time.Time `json:"viewedByMeTime,omitempty"`
 	// Deprecated - use copyRequiresWriterPermission instead.
 	ViewersCanCopyContent *bool `json:"viewersCanCopyContent,omitempty"`
@@ -328,10 +328,10 @@ type FileInput struct {
 
 // File - The metadata for a file.
 type File struct {
-	// A collection of arbitrary key-value pairs which are private to the requesting app.
-	// Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with a OAuth 2 client ID. You cannot use an API key to retrieve private properties.
+	// A collection of arbitrary key-value pairs that are private to the requesting app.
+	// Entries with null values are cleared in update and copy requests. These properties can only be retrieved using an authenticated request. An authenticated request uses an access token obtained with an OAuth 2 client ID. You cannot use an API key to retrieve private properties.
 	AppProperties map[string]string `json:"appProperties,omitempty"`
-	// Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+	// Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
 	Capabilities *FileCapabilities `json:"capabilities,omitempty"`
 	// Additional information about the content of the file. These fields are never populated in responses.
 	ContentHints *FileContentHints `json:"contentHints,omitempty"`
@@ -354,14 +354,14 @@ type File struct {
 	// The color for a folder or shortcut to a folder as an RGB hex string. The supported colors are published in the folderColorPalette field of the About resource.
 	// If an unsupported color is specified, the closest color in the palette will be used instead.
 	FolderColorRgb *string `json:"folderColorRgb,omitempty"`
-	// The full file extension extracted from the name field. May contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
-	// This is automatically updated when the name field changes, however it isn't cleared if the new name does not contain a valid extension.
+	// The full file extension extracted from the name field. Can contain multiple concatenated extensions, such as "tar.gz". This is only available for files with binary content in Google Drive.
+	// This is automatically updated when the name field changes, however it's not cleared if the new name does not contain a valid extension.
 	FullFileExtension *string `json:"fullFileExtension,omitempty"`
 	// Whether there are permissions directly on this file. This field is only populated for items in shared drives.
 	HasAugmentedPermissions *bool `json:"hasAugmentedPermissions,omitempty"`
 	// Whether this file has a thumbnail. This does not indicate whether the requesting app has access to the thumbnail. To check access, look for the presence of the thumbnailLink field.
 	HasThumbnail *bool `json:"hasThumbnail,omitempty"`
-	// The ID of the file's head revision. This is currently only available for files with binary content in Google Drive.
+	// The ID of the file's head revision. This is only available for files with binary content in Google Drive.
 	HeadRevisionID *string `json:"headRevisionId,omitempty"`
 	// A static, unauthenticated link to the file's icon.
 	IconLink *string `json:"iconLink,omitempty"`
@@ -369,7 +369,7 @@ type File struct {
 	ID *string `json:"id,omitempty"`
 	// Additional metadata about image media, if available.
 	ImageMediaMetadata *FileImageMediaMetadata `json:"imageMediaMetadata,omitempty"`
-	// Whether the file was created or opened by the requesting app.
+	// Whether the requesting app created or opened the file.
 	IsAppAuthorized *bool `json:"isAppAuthorized,omitempty"`
 	// Identifies what kind of resource this is. Value: the fixed string "drive#file".
 	Kind *string `json:"kind,omitempty"`
@@ -385,38 +385,38 @@ type File struct {
 	// Google Drive will attempt to automatically detect an appropriate value from uploaded content if no value is provided. The value cannot be changed unless a new revision is uploaded.
 	// If a file is created with a Google Doc MIME type, the uploaded content will be imported if possible. The supported import formats are published in the About resource.
 	MimeType *string `json:"mimeType,omitempty"`
-	// Whether the file has been modified by this user.
+	// Whether this user has modified the file.
 	ModifiedByMe *bool `json:"modifiedByMe,omitempty"`
-	// The last time the file was modified by the user (RFC 3339 date-time).
+	// The last time the user modified the file (RFC 3339 date-time).
 	ModifiedByMeTime *time.Time `json:"modifiedByMeTime,omitempty"`
-	// The last time the file was modified by anyone (RFC 3339 date-time).
+	// The last time anyone modified the file (RFC 3339 date-time).
 	// Note that setting modifiedTime will also update modifiedByMeTime for the user.
 	ModifiedTime *time.Time `json:"modifiedTime,omitempty"`
-	// The name of the file. This is not necessarily unique within a folder. Note that for immutable items such as the top level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
+	// The name of the file. This isn't necessarily unique within a folder. Note that for immutable items such as the top-level folders of shared drives, My Drive root folder, and Application Data folder the name is constant.
 	Name *string `json:"name,omitempty"`
 	// The original filename of the uploaded content if available, or else the original value of the name field. This is only available for files with binary content in Google Drive.
 	OriginalFilename *string `json:"originalFilename,omitempty"`
 	// Whether the user owns the file. Not populated for items in shared drives.
 	OwnedByMe *bool `json:"ownedByMe,omitempty"`
-	// The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives.
+	// The owner of this file. Only certain legacy files might have more than one owner. This field isn't populated for items in shared drives.
 	Owners []User `json:"owners,omitempty"`
-	// The IDs of the parent folders which contain the file.
+	// The IDs of the parent folders that contain the file.
 	// If not specified as part of a create request, the file will be placed directly in the user's My Drive folder. If not specified as part of a copy request, the file will inherit any discoverable parents of the source file. Update requests must use the addParents and removeParents parameters to modify the parents list.
 	Parents []string `json:"parents,omitempty"`
 	// List of permission IDs for users with access to this file.
 	PermissionIds []string `json:"permissionIds,omitempty"`
 	// The full list of permissions for the file. This is only available if the requesting user can share the file. Not populated for items in shared drives.
 	Permissions []Permission `json:"permissions,omitempty"`
-	// A collection of arbitrary key-value pairs which are visible to all apps.
+	// A collection of arbitrary key-value pairs that are visible to all apps.
 	// Entries with null values are cleared in update and copy requests.
 	Properties map[string]string `json:"properties,omitempty"`
 	// The number of storage quota bytes used by the file. This includes the head revision as well as previous revisions with keepForever enabled.
 	QuotaBytesUsed *string `json:"quotaBytesUsed,omitempty"`
 	// A key needed to access the item via a shared link.
 	ResourceKey *string `json:"resourceKey,omitempty"`
-	// The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+	// The SHA1 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
 	Sha1Checksum *string `json:"sha1Checksum,omitempty"`
-	// The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it isn't populated for Docs Editors or shortcut files.
+	// The SHA256 checksum associated with this file, if available. This field is only populated for files with content stored in Google Drive; it's not populated for Docs Editors or shortcut files.
 	Sha256Checksum *string `json:"sha256Checksum,omitempty"`
 	// Whether the file has been shared. Not populated for items in shared drives.
 	Shared *bool `json:"shared,omitempty"`
@@ -426,9 +426,9 @@ type File struct {
 	SharingUser *User `json:"sharingUser,omitempty"`
 	// Shortcut file details. Only populated for shortcut files, which have the mimeType field set to application/vnd.google-apps.shortcut.
 	ShortcutDetails *FileShortcutDetails `json:"shortcutDetails,omitempty"`
-	// The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it is not populated for shortcuts or folders.
+	// The size of the file's content in bytes. This field is populated for files with binary content stored in Google Drive and for Docs Editors files; it's not populated for shortcuts or folders.
 	Size *string `json:"size,omitempty"`
-	// The list of spaces which contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
+	// The list of spaces that contain the file. The currently supported values are 'drive', 'appDataFolder' and 'photos'.
 	Spaces []string `json:"spaces,omitempty"`
 	// Whether the user has starred the file.
 	Starred *bool `json:"starred,omitempty"`
@@ -438,7 +438,7 @@ type File struct {
 	ThumbnailLink *string `json:"thumbnailLink,omitempty"`
 	// The thumbnail version for use in thumbnail cache invalidation.
 	ThumbnailVersion *string `json:"thumbnailVersion,omitempty"`
-	// Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner may trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
+	// Whether the file has been trashed, either explicitly or from a trashed parent folder. Only the owner can trash a file. The trashed item is excluded from all files.list responses returned for any user who does not own the file. However, all users with access to the file can see the trashed item metadata in an API response. All users with access can copy, download, export, and share the file.
 	Trashed *bool `json:"trashed,omitempty"`
 	// The time that the item was trashed (RFC 3339 date-time). Only populated for items in shared drives.
 	TrashedTime *time.Time `json:"trashedTime,omitempty"`
@@ -446,11 +446,11 @@ type File struct {
 	TrashingUser *User `json:"trashingUser,omitempty"`
 	// A monotonically increasing version number for the file. This reflects every change made to the file on the server, even those not visible to the user.
 	Version *string `json:"version,omitempty"`
-	// Additional metadata about video media. This may not be available immediately upon upload.
+	// Additional metadata about video media. This might not be available immediately upon upload.
 	VideoMediaMetadata *FileVideoMediaMetadata `json:"videoMediaMetadata,omitempty"`
-	// Whether the file has been viewed by this user.
+	// Whether this user has viewed the file.
 	ViewedByMe *bool `json:"viewedByMe,omitempty"`
-	// The last time the file was viewed by the user (RFC 3339 date-time).
+	// The last time the user viewed the file (RFC 3339 date-time).
 	ViewedByMeTime *time.Time `json:"viewedByMeTime,omitempty"`
 	// Deprecated - use copyRequiresWriterPermission instead.
 	ViewersCanCopyContent *bool `json:"viewersCanCopyContent,omitempty"`

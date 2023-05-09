@@ -14,18 +14,22 @@ const (
 	SnapshotFilterNameEnumVolumeID     SnapshotFilterNameEnum = "volume-id"
 )
 
+func (e SnapshotFilterNameEnum) ToPointer() *SnapshotFilterNameEnum {
+	return &e
+}
+
 func (e *SnapshotFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file-system-id":
 		fallthrough
 	case "volume-id":
-		*e = SnapshotFilterNameEnum(s)
+		*e = SnapshotFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotFilterNameEnum: %v", v)
 	}
 }

@@ -2,43 +2,41 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx, operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest: &shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest{
             Links: []string{
                 "distinctio",
                 "quibusdam",
                 "unde",
             },
-            PageSize: 857946,
-            PageToken: "corrupti",
+            PageSize: sdk.Int(857946),
+            PageToken: sdk.String("corrupti"),
         },
-        AccessToken: "illum",
-        Alt: "media",
-        Callback: "error",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
+        AccessToken: sdk.String("illum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
         Parent: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DatalineageProjectsLocationsBatchSearchLinkProcesses(ctx, req, operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

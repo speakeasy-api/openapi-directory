@@ -15,17 +15,21 @@ const (
 	POSTActivateTypeActionEnumActivateType POSTActivateTypeActionEnum = "ActivateType"
 )
 
+func (e POSTActivateTypeActionEnum) ToPointer() *POSTActivateTypeActionEnum {
+	return &e
+}
+
 func (e *POSTActivateTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ActivateType":
-		*e = POSTActivateTypeActionEnum(s)
+		*e = POSTActivateTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTActivateTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTActivateTypeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTActivateTypeVersionEnumTwoThousandAndTen0515 POSTActivateTypeVersionEnum = "2010-05-15"
 )
 
+func (e POSTActivateTypeVersionEnum) ToPointer() *POSTActivateTypeVersionEnum {
+	return &e
+}
+
 func (e *POSTActivateTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTActivateTypeVersionEnum(s)
+		*e = POSTActivateTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTActivateTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTActivateTypeVersionEnum: %v", v)
 	}
 }
 

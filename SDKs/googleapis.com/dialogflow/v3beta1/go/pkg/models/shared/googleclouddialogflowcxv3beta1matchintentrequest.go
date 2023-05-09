@@ -6,7 +6,7 @@ package shared
 type GoogleCloudDialogflowCxV3beta1MatchIntentRequest struct {
 	// Persist session parameter changes from `query_params`.
 	PersistParameterChanges *bool `json:"persistParameterChanges,omitempty"`
-	// Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered.
+	// Represents the query input. It can contain one of: 1. A conversational query in the form of text. 2. An intent query that specifies which intent to trigger. 3. Natural language speech audio to be processed. 4. An event to be triggered. 5. DTMF digits to invoke an intent and fill in parameter value.
 	QueryInput *GoogleCloudDialogflowCxV3beta1QueryInput `json:"queryInput,omitempty"`
 	// Represents the parameters of a conversational query.
 	QueryParams *GoogleCloudDialogflowCxV3beta1QueryParameters `json:"queryParams,omitempty"`

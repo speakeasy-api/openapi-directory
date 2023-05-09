@@ -15,19 +15,23 @@ const (
 	UserAccountTypeEnumUserAccount   UserAccountTypeEnum = "userAccount"
 )
 
+func (e UserAccountTypeEnum) ToPointer() *UserAccountTypeEnum {
+	return &e
+}
+
 func (e *UserAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deviceAccount":
 		fallthrough
 	case "userAccount":
-		*e = UserAccountTypeEnum(s)
+		*e = UserAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserAccountTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	UserManagementTypeEnumEmmManaged    UserManagementTypeEnum = "emmManaged"
 )
 
+func (e UserManagementTypeEnum) ToPointer() *UserManagementTypeEnum {
+	return &e
+}
+
 func (e *UserManagementTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "googleManaged":
 		fallthrough
 	case "emmManaged":
-		*e = UserManagementTypeEnum(s)
+		*e = UserManagementTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserManagementTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserManagementTypeEnum: %v", v)
 	}
 }
 

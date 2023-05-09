@@ -16,21 +16,25 @@ const (
 	EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnumMatchAll                              EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum = "MATCH_ALL"
 )
 
+func (e EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum) ToPointer() *EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum {
+	return &e
+}
+
 func (e *EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED":
 		fallthrough
 	case "MATCH_ANY":
 		fallthrough
 	case "MATCH_ALL":
-		*e = EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum(s)
+		*e = EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	BackendAPIAuthTypeModeEnumOpenidConnect          BackendAPIAuthTypeModeEnum = "OPENID_CONNECT"
 )
 
+func (e BackendAPIAuthTypeModeEnum) ToPointer() *BackendAPIAuthTypeModeEnum {
+	return &e
+}
+
 func (e *BackendAPIAuthTypeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_KEY":
 		fallthrough
 	case "AWS_IAM":
@@ -30,10 +34,10 @@ func (e *BackendAPIAuthTypeModeEnum) UnmarshalJSON(data []byte) error {
 	case "AMAZON_COGNITO_USER_POOLS":
 		fallthrough
 	case "OPENID_CONNECT":
-		*e = BackendAPIAuthTypeModeEnum(s)
+		*e = BackendAPIAuthTypeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackendAPIAuthTypeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackendAPIAuthTypeModeEnum: %v", v)
 	}
 }
 

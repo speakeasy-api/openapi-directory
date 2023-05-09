@@ -14,18 +14,22 @@ const (
 	LambdaEventSourceTypeEnumIotCore LambdaEventSourceTypeEnum = "IOT_CORE"
 )
 
+func (e LambdaEventSourceTypeEnum) ToPointer() *LambdaEventSourceTypeEnum {
+	return &e
+}
+
 func (e *LambdaEventSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUB_SUB":
 		fallthrough
 	case "IOT_CORE":
-		*e = LambdaEventSourceTypeEnum(s)
+		*e = LambdaEventSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaEventSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaEventSourceTypeEnum: %v", v)
 	}
 }

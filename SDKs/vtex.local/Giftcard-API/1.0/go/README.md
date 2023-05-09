@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Giftcard-API/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,24 +29,22 @@ func main() {
         }),
     )
 
-    req := operations.CreateGiftCardRequest{
+    ctx := context.Background()
+    res, err := s.GiftCard.CreateGiftCard(ctx, operations.CreateGiftCardRequest{
         Accept: "corrupti",
         ContentType: "provident",
         CreateGiftCardRequest: shared.CreateGiftCardRequest{
             Caption: "rewards program",
             ExpiringDate: "2020-09-01T13:15:30Z",
-            MultipleCredits: false,
-            MultipleRedemptions: false,
+            MultipleCredits: sdk.Bool(false),
+            MultipleRedemptions: sdk.Bool(false),
             ProfileID: "1234",
             RelationName: "insert example here",
-            RestrictedToOwner: false,
+            RestrictedToOwner: sdk.Bool(false),
         },
         XVTEXAPIAppKey: "distinctio",
         XVTEXAPIAppToken: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GiftCard.CreateGiftCard(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -62,22 +60,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### GiftCard
+### [GiftCard](docs/giftcard/README.md)
 
-* `CreateGiftCard` - Create GiftCard
-* `GetGiftCardbyID` - Get GiftCard by ID
-* `GetGiftCardusingJSON` - Get GiftCard using JSON
+* [CreateGiftCard](docs/giftcard/README.md#creategiftcard) - Create GiftCard
+* [GetGiftCardbyID](docs/giftcard/README.md#getgiftcardbyid) - Get GiftCard by ID
+* [GetGiftCardusingJSON](docs/giftcard/README.md#getgiftcardusingjson) - Get GiftCard using JSON
 
-### Transaction
+### [Transaction](docs/transaction/README.md)
 
-* `CancelGiftCardTransaction` - Cancel GiftCard Transaction
-* `CreateGiftCardTransaction` - Create GiftCard Transaction
-* `GetGiftCardTransactionbyID` - Get GiftCard Transaction by ID
-* `GetGiftCardTransactions` - Get GiftCard Transactions
-* `GetTransactionAuthorizations` - Get Transaction Authorizations
-* `GetTransactionCancellations` - Get Transaction Cancellations
-* `GetTransactionSettlements` - Get Transaction Settlements
-* `SettleGiftCardTransaction` - Settle GiftCard Transaction
+* [CancelGiftCardTransaction](docs/transaction/README.md#cancelgiftcardtransaction) - Cancel GiftCard Transaction
+* [CreateGiftCardTransaction](docs/transaction/README.md#creategiftcardtransaction) - Create GiftCard Transaction
+* [GetGiftCardTransactionbyID](docs/transaction/README.md#getgiftcardtransactionbyid) - Get GiftCard Transaction by ID
+* [GetGiftCardTransactions](docs/transaction/README.md#getgiftcardtransactions) - Get GiftCard Transactions
+* [GetTransactionAuthorizations](docs/transaction/README.md#gettransactionauthorizations) - Get Transaction Authorizations
+* [GetTransactionCancellations](docs/transaction/README.md#gettransactioncancellations) - Get Transaction Cancellations
+* [GetTransactionSettlements](docs/transaction/README.md#gettransactionsettlements) - Get Transaction Settlements
+* [SettleGiftCardTransaction](docs/transaction/README.md#settlegiftcardtransaction) - Settle GiftCard Transaction
 <!-- End SDK Available Operations -->
 
 ### Maturity

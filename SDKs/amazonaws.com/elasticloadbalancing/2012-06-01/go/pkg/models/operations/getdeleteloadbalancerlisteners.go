@@ -15,17 +15,21 @@ const (
 	GETDeleteLoadBalancerListenersActionEnumDeleteLoadBalancerListeners GETDeleteLoadBalancerListenersActionEnum = "DeleteLoadBalancerListeners"
 )
 
+func (e GETDeleteLoadBalancerListenersActionEnum) ToPointer() *GETDeleteLoadBalancerListenersActionEnum {
+	return &e
+}
+
 func (e *GETDeleteLoadBalancerListenersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLoadBalancerListeners":
-		*e = GETDeleteLoadBalancerListenersActionEnum(s)
+		*e = GETDeleteLoadBalancerListenersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLoadBalancerListenersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLoadBalancerListenersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteLoadBalancerListenersVersionEnumTwoThousandAndTwelve0601 GETDeleteLoadBalancerListenersVersionEnum = "2012-06-01"
 )
 
+func (e GETDeleteLoadBalancerListenersVersionEnum) ToPointer() *GETDeleteLoadBalancerListenersVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteLoadBalancerListenersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETDeleteLoadBalancerListenersVersionEnum(s)
+		*e = GETDeleteLoadBalancerListenersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteLoadBalancerListenersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteLoadBalancerListenersVersionEnum: %v", v)
 	}
 }
 

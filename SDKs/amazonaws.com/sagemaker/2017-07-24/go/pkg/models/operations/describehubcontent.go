@@ -16,17 +16,21 @@ const (
 	DescribeHubContentXAmzTargetEnumSageMakerDescribeHubContent DescribeHubContentXAmzTargetEnum = "SageMaker.DescribeHubContent"
 )
 
+func (e DescribeHubContentXAmzTargetEnum) ToPointer() *DescribeHubContentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeHubContentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeHubContent":
-		*e = DescribeHubContentXAmzTargetEnum(s)
+		*e = DescribeHubContentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeHubContentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeHubContentXAmzTargetEnum: %v", v)
 	}
 }
 

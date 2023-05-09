@@ -17,21 +17,25 @@ const (
 	GetAddressesOutputFormatInterpolationEnumNone     GetAddressesOutputFormatInterpolationEnum = "none"
 )
 
+func (e GetAddressesOutputFormatInterpolationEnum) ToPointer() *GetAddressesOutputFormatInterpolationEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatInterpolationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adaptive":
 		fallthrough
 	case "linear":
 		fallthrough
 	case "none":
-		*e = GetAddressesOutputFormatInterpolationEnum(s)
+		*e = GetAddressesOutputFormatInterpolationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatInterpolationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatInterpolationEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GetAddressesOutputFormatLocationDescriptorEnumRoutingPoint   GetAddressesOutputFormatLocationDescriptorEnum = "routingPoint"
 )
 
+func (e GetAddressesOutputFormatLocationDescriptorEnum) ToPointer() *GetAddressesOutputFormatLocationDescriptorEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "accessPoint":
@@ -64,10 +72,10 @@ func (e *GetAddressesOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []by
 	case "rooftopPoint":
 		fallthrough
 	case "routingPoint":
-		*e = GetAddressesOutputFormatLocationDescriptorEnum(s)
+		*e = GetAddressesOutputFormatLocationDescriptorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatLocationDescriptorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatLocationDescriptorEnum: %v", v)
 	}
 }
 
@@ -86,12 +94,16 @@ const (
 	GetAddressesOutputFormatOutputFormatEnumShpz    GetAddressesOutputFormatOutputFormatEnum = "shpz"
 )
 
+func (e GetAddressesOutputFormatOutputFormatEnum) ToPointer() *GetAddressesOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "geojson":
@@ -105,52 +117,56 @@ func (e *GetAddressesOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) er
 	case "csv":
 		fallthrough
 	case "shpz":
-		*e = GetAddressesOutputFormatOutputFormatEnum(s)
+		*e = GetAddressesOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetAddressesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetAddressesOutputFormatOutputSrsEnum string
+type GetAddressesOutputFormatOutputSrsEnum int64
 
 const (
-	GetAddressesOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetAddressesOutputFormatOutputSrsEnum = "4326"
-	GetAddressesOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetAddressesOutputFormatOutputSrsEnum = "4269"
-	GetAddressesOutputFormatOutputSrsEnumThreeThousandAndFive                  GetAddressesOutputFormatOutputSrsEnum = "3005"
-	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetAddressesOutputFormatOutputSrsEnum = "26907"
-	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetAddressesOutputFormatOutputSrsEnum = "26908"
-	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetAddressesOutputFormatOutputSrsEnum = "26909"
-	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetAddressesOutputFormatOutputSrsEnum = "26910"
-	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetAddressesOutputFormatOutputSrsEnum = "26911"
+	GetAddressesOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetAddressesOutputFormatOutputSrsEnum = 4326
+	GetAddressesOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetAddressesOutputFormatOutputSrsEnum = 4269
+	GetAddressesOutputFormatOutputSrsEnumThreeThousandAndFive                  GetAddressesOutputFormatOutputSrsEnum = 3005
+	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetAddressesOutputFormatOutputSrsEnum = 26907
+	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetAddressesOutputFormatOutputSrsEnum = 26908
+	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetAddressesOutputFormatOutputSrsEnum = 26909
+	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetAddressesOutputFormatOutputSrsEnum = 26910
+	GetAddressesOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetAddressesOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetAddressesOutputFormatOutputSrsEnum) ToPointer() *GetAddressesOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetAddressesOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetAddressesOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 
@@ -171,12 +187,16 @@ const (
 	GetAddressesOutputFormatStreetDirectionEnumSw GetAddressesOutputFormatStreetDirectionEnum = "SW"
 )
 
+func (e GetAddressesOutputFormatStreetDirectionEnum) ToPointer() *GetAddressesOutputFormatStreetDirectionEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatStreetDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "N":
 		fallthrough
 	case "S":
@@ -198,10 +218,10 @@ func (e *GetAddressesOutputFormatStreetDirectionEnum) UnmarshalJSON(data []byte)
 	case "SO":
 		fallthrough
 	case "SW":
-		*e = GetAddressesOutputFormatStreetDirectionEnum(s)
+		*e = GetAddressesOutputFormatStreetDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatStreetDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatStreetDirectionEnum: %v", v)
 	}
 }
 
@@ -227,12 +247,16 @@ const (
 	GetAddressesOutputFormatUnitDesignatorEnumUppr  GetAddressesOutputFormatUnitDesignatorEnum = "UPPR"
 )
 
+func (e GetAddressesOutputFormatUnitDesignatorEnum) ToPointer() *GetAddressesOutputFormatUnitDesignatorEnum {
+	return &e
+}
+
 func (e *GetAddressesOutputFormatUnitDesignatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APT":
 		fallthrough
 	case "BLDG":
@@ -264,10 +288,10 @@ func (e *GetAddressesOutputFormatUnitDesignatorEnum) UnmarshalJSON(data []byte) 
 	case "UNIT":
 		fallthrough
 	case "UPPR":
-		*e = GetAddressesOutputFormatUnitDesignatorEnum(s)
+		*e = GetAddressesOutputFormatUnitDesignatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAddressesOutputFormatUnitDesignatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAddressesOutputFormatUnitDesignatorEnum: %v", v)
 	}
 }
 

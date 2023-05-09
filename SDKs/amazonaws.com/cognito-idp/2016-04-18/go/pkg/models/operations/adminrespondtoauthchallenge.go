@@ -16,17 +16,21 @@ const (
 	AdminRespondToAuthChallengeXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminRespondToAuthChallenge AdminRespondToAuthChallengeXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminRespondToAuthChallenge"
 )
 
+func (e AdminRespondToAuthChallengeXAmzTargetEnum) ToPointer() *AdminRespondToAuthChallengeXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminRespondToAuthChallengeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminRespondToAuthChallenge":
-		*e = AdminRespondToAuthChallengeXAmzTargetEnum(s)
+		*e = AdminRespondToAuthChallengeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminRespondToAuthChallengeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminRespondToAuthChallengeXAmzTargetEnum: %v", v)
 	}
 }
 

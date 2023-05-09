@@ -15,17 +15,21 @@ const (
 	GETGenerateServiceLastAccessedDetailsActionEnumGenerateServiceLastAccessedDetails GETGenerateServiceLastAccessedDetailsActionEnum = "GenerateServiceLastAccessedDetails"
 )
 
+func (e GETGenerateServiceLastAccessedDetailsActionEnum) ToPointer() *GETGenerateServiceLastAccessedDetailsActionEnum {
+	return &e
+}
+
 func (e *GETGenerateServiceLastAccessedDetailsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GenerateServiceLastAccessedDetails":
-		*e = GETGenerateServiceLastAccessedDetailsActionEnum(s)
+		*e = GETGenerateServiceLastAccessedDetailsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETGenerateServiceLastAccessedDetailsGranularityEnumActionLevel  GETGenerateServiceLastAccessedDetailsGranularityEnum = "ACTION_LEVEL"
 )
 
+func (e GETGenerateServiceLastAccessedDetailsGranularityEnum) ToPointer() *GETGenerateServiceLastAccessedDetailsGranularityEnum {
+	return &e
+}
+
 func (e *GETGenerateServiceLastAccessedDetailsGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_LEVEL":
 		fallthrough
 	case "ACTION_LEVEL":
-		*e = GETGenerateServiceLastAccessedDetailsGranularityEnum(s)
+		*e = GETGenerateServiceLastAccessedDetailsGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsGranularityEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETGenerateServiceLastAccessedDetailsVersionEnumTwoThousandAndTen0508 GETGenerateServiceLastAccessedDetailsVersionEnum = "2010-05-08"
 )
 
+func (e GETGenerateServiceLastAccessedDetailsVersionEnum) ToPointer() *GETGenerateServiceLastAccessedDetailsVersionEnum {
+	return &e
+}
+
 func (e *GETGenerateServiceLastAccessedDetailsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGenerateServiceLastAccessedDetailsVersionEnum(s)
+		*e = GETGenerateServiceLastAccessedDetailsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGenerateServiceLastAccessedDetailsVersionEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	VoiceCapabilityPaymentsGatewaysModeEnumLive VoiceCapabilityPaymentsGatewaysModeEnum = "live"
 )
 
+func (e VoiceCapabilityPaymentsGatewaysModeEnum) ToPointer() *VoiceCapabilityPaymentsGatewaysModeEnum {
+	return &e
+}
+
 func (e *VoiceCapabilityPaymentsGatewaysModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "test":
 		fallthrough
 	case "live":
-		*e = VoiceCapabilityPaymentsGatewaysModeEnum(s)
+		*e = VoiceCapabilityPaymentsGatewaysModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceCapabilityPaymentsGatewaysModeEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceCapabilityPaymentsGatewaysModeEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	VoiceCapabilityWebhooksAnswerURLHTTPMethodEnumPost VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum = "POST"
 )
 
+func (e VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum) ToPointer() *VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
-		*e = VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum(s)
+		*e = VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksAnswerURLHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -89,19 +97,23 @@ const (
 	VoiceCapabilityWebhooksEventURLHTTPMethodEnumPost VoiceCapabilityWebhooksEventURLHTTPMethodEnum = "POST"
 )
 
+func (e VoiceCapabilityWebhooksEventURLHTTPMethodEnum) ToPointer() *VoiceCapabilityWebhooksEventURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *VoiceCapabilityWebhooksEventURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
-		*e = VoiceCapabilityWebhooksEventURLHTTPMethodEnum(s)
+		*e = VoiceCapabilityWebhooksEventURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksEventURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksEventURLHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -125,19 +137,23 @@ const (
 	VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnumPost VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum = "POST"
 )
 
+func (e VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum) ToPointer() *VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum {
+	return &e
+}
+
 func (e *VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
-		*e = VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum(s)
+		*e = VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VoiceCapabilityWebhooksFallbackAnswerURLHTTPMethodEnum: %v", v)
 	}
 }
 

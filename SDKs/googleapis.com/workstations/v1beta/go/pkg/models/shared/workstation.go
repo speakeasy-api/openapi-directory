@@ -13,7 +13,9 @@ type WorkstationInput struct {
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Environment variables passed to the workstation container's entrypoint.
+	Env map[string]string `json:"env,omitempty"`
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Client-specified labels that are applied to the resource and that are also propagated to the underlying Compute Engine resources.
 	Labels map[string]string `json:"labels,omitempty"`
@@ -32,12 +34,16 @@ const (
 	WorkstationStateEnumStateStopped     WorkstationStateEnum = "STATE_STOPPED"
 )
 
+func (e WorkstationStateEnum) ToPointer() *WorkstationStateEnum {
+	return &e
+}
+
 func (e *WorkstationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STATE_STARTING":
@@ -47,10 +53,10 @@ func (e *WorkstationStateEnum) UnmarshalJSON(data []byte) error {
 	case "STATE_STOPPING":
 		fallthrough
 	case "STATE_STOPPED":
-		*e = WorkstationStateEnum(s)
+		*e = WorkstationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkstationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkstationStateEnum: %v", v)
 	}
 }
 
@@ -64,7 +70,9 @@ type Workstation struct {
 	DeleteTime *string `json:"deleteTime,omitempty"`
 	// Human-readable name for this resource.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Checksum computed by the server. May be sent on update and delete requests to ensure that the client has an up-to-date value before proceeding.
+	// Environment variables passed to the workstation container's entrypoint.
+	Env map[string]string `json:"env,omitempty"`
+	// Checksum computed by the server. May be sent on update and delete requests to make sure that the client has an up-to-date value before proceeding.
 	Etag *string `json:"etag,omitempty"`
 	// Output only. Host to which clients can send HTTPS traffic that will be received by the workstation. Authorized traffic will be received to the workstation as HTTP on port 80. To send traffic to a different port, clients may prefix the host with the destination port in the format `{port}-{host}`.
 	Host *string `json:"host,omitempty"`

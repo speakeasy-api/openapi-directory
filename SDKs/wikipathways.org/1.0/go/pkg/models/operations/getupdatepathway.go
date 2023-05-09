@@ -20,12 +20,16 @@ const (
 	GetUpdatePathwayFormatEnumPdf  GetUpdatePathwayFormatEnum = "pdf"
 )
 
+func (e GetUpdatePathwayFormatEnum) ToPointer() *GetUpdatePathwayFormatEnum {
+	return &e
+}
+
 func (e *GetUpdatePathwayFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -37,10 +41,10 @@ func (e *GetUpdatePathwayFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "pdf":
-		*e = GetUpdatePathwayFormatEnum(s)
+		*e = GetUpdatePathwayFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUpdatePathwayFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUpdatePathwayFormatEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListImportFailuresXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101ListImportFailures ListImportFailuresXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListImportFailures"
 )
 
+func (e ListImportFailuresXAmzTargetEnum) ToPointer() *ListImportFailuresXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListImportFailuresXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.ListImportFailures":
-		*e = ListImportFailuresXAmzTargetEnum(s)
+		*e = ListImportFailuresXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListImportFailuresXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListImportFailuresXAmzTargetEnum: %v", v)
 	}
 }
 

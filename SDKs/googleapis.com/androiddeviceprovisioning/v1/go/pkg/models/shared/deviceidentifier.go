@@ -16,21 +16,25 @@ const (
 	DeviceIdentifierDeviceTypeEnumDeviceTypeChromeOs    DeviceIdentifierDeviceTypeEnum = "DEVICE_TYPE_CHROME_OS"
 )
 
+func (e DeviceIdentifierDeviceTypeEnum) ToPointer() *DeviceIdentifierDeviceTypeEnum {
+	return &e
+}
+
 func (e *DeviceIdentifierDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_TYPE_ANDROID":
 		fallthrough
 	case "DEVICE_TYPE_CHROME_OS":
-		*e = DeviceIdentifierDeviceTypeEnum(s)
+		*e = DeviceIdentifierDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceIdentifierDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceIdentifierDeviceTypeEnum: %v", v)
 	}
 }
 

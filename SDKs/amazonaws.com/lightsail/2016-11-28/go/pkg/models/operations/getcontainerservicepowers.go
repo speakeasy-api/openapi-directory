@@ -16,17 +16,21 @@ const (
 	GetContainerServicePowersXAmzTargetEnumLightsail20161128GetContainerServicePowers GetContainerServicePowersXAmzTargetEnum = "Lightsail_20161128.GetContainerServicePowers"
 )
 
+func (e GetContainerServicePowersXAmzTargetEnum) ToPointer() *GetContainerServicePowersXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetContainerServicePowersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetContainerServicePowers":
-		*e = GetContainerServicePowersXAmzTargetEnum(s)
+		*e = GetContainerServicePowersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContainerServicePowersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContainerServicePowersXAmzTargetEnum: %v", v)
 	}
 }
 

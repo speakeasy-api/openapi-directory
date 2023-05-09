@@ -2,7 +2,7 @@
 
 package shared
 
-// AdditionalResources - The choice level additional resources.
+// AdditionalResources - <p>The choice level additional resources for a custom lens.</p> <p>This field does not apply to Amazon Web Services official lenses.</p>
 type AdditionalResources struct {
 	Content []ChoiceContent             `json:"Content,omitempty"`
 	Type    *AdditionalResourceTypeEnum `json:"Type,omitempty"`

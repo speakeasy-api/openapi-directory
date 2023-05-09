@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -99,4 +100,7 @@ pkg/models/shared/conferenceundeafresponse.go
 pkg/models/shared/conferenceundeafparameters.go
 pkg/models/shared/conferenceunmuteresponse.go
 pkg/models/shared/conferenceunmuteparameters.go
+docs/sdk/README.md
+docs/call/README.md
+docs/conference/README.md
 USAGE.md

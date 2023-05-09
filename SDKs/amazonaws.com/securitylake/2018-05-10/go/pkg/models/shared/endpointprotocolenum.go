@@ -14,18 +14,22 @@ const (
 	EndpointProtocolEnumSqs   EndpointProtocolEnum = "SQS"
 )
 
+func (e EndpointProtocolEnum) ToPointer() *EndpointProtocolEnum {
+	return &e
+}
+
 func (e *EndpointProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTPS":
 		fallthrough
 	case "SQS":
-		*e = EndpointProtocolEnum(s)
+		*e = EndpointProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointProtocolEnum: %v", v)
 	}
 }

@@ -37,7 +37,10 @@ func newMeterFolderInformation(defaultClient, securityClient HTTPClient, serverU
 // Beta: Gets the General Information for a Meter or a Folder
 func (s *meterFolderInformation) MeterFolderInformationGet(ctx context.Context, request operations.MeterFolderInformationGetRequest) (*operations.MeterFolderInformationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/MeterFolderInformation/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/MeterFolderInformation/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

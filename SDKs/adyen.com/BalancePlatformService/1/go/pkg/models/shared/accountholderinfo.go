@@ -10,7 +10,7 @@ type AccountHolderInfoInput struct {
 	ContactDetails *ContactDetails                         `json:"contactDetails,omitempty"`
 	// Your description for the account holder, maximum 300 characters.
 	Description *string `json:"description,omitempty"`
-	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
+	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
 	LegalEntityID string `json:"legalEntityId"`
 	// Your reference for the account holder, maximum 150 characters.
 	Reference *string `json:"reference,omitempty"`

@@ -2,7 +2,7 @@
 
 package shared
 
-// LandsatCloudCoverLandInput - <p/>
+// LandsatCloudCoverLandInput - The structure representing Land Cloud Cover property for Landsat data collection.
 type LandsatCloudCoverLandInput struct {
 	LowerBound float32 `json:"LowerBound"`
 	UpperBound float32 `json:"UpperBound"`

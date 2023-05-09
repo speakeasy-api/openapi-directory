@@ -85,7 +85,10 @@ func (s *task) ListTasks(ctx context.Context, request operations.ListTasksReques
 // Returns a Task object
 func (s *task) ShowTask(ctx context.Context, request operations.ShowTaskRequest) (*operations.ShowTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,7 +143,10 @@ func (s *task) ShowTask(ctx context.Context, request operations.ShowTaskRequest)
 // Updates a Task object
 func (s *task) UpdateTask(ctx context.Context, request operations.UpdateTaskRequest) (*operations.UpdateTaskResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tasks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskInput", "json")
 	if err != nil {

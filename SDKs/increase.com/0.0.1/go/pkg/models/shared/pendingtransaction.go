@@ -20,12 +20,16 @@ const (
 	PendingTransactionCurrencyEnumUsd PendingTransactionCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionCurrencyEnum) ToPointer() *PendingTransactionCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -37,10 +41,38 @@ func (e *PendingTransactionCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionCurrencyEnum(s)
+		*e = PendingTransactionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionCurrencyEnum: %v", v)
+	}
+}
+
+// PendingTransactionRouteTypeEnum - The type of the route this Pending Transaction came through.
+type PendingTransactionRouteTypeEnum string
+
+const (
+	PendingTransactionRouteTypeEnumAccountNumber PendingTransactionRouteTypeEnum = "account_number"
+	PendingTransactionRouteTypeEnumCard          PendingTransactionRouteTypeEnum = "card"
+)
+
+func (e PendingTransactionRouteTypeEnum) ToPointer() *PendingTransactionRouteTypeEnum {
+	return &e
+}
+
+func (e *PendingTransactionRouteTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "account_number":
+		fallthrough
+	case "card":
+		*e = PendingTransactionRouteTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PendingTransactionRouteTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +88,16 @@ const (
 	PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnumUsd PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -73,10 +109,10 @@ func (e *PendingTransactionPendingTransactionSourceAccountTransferInstructionCur
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceAccountTransferInstructionCurrencyEnum: %v", v)
 	}
 }
 
@@ -110,12 +146,16 @@ const (
 	PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnumUsd PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -127,10 +167,10 @@ func (e *PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum: %v", v)
 	}
 }
 
@@ -141,17 +181,21 @@ const (
 	PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnumVisa PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum = "visa"
 )
 
+func (e PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum) ToPointer() *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "visa":
-		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkEnum: %v", v)
 	}
 }
 
@@ -169,12 +213,16 @@ const (
 	PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnumNonSecureTransaction                                    PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum = "non_secure_transaction"
 )
 
+func (e PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum) ToPointer() *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mail_phone_order":
 		fallthrough
 	case "recurring":
@@ -190,10 +238,10 @@ func (e *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetai
 	case "non_authenticated_security_transaction":
 		fallthrough
 	case "non_secure_transaction":
-		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaElectronicCommerceIndicatorEnum: %v", v)
 	}
 }
 
@@ -212,12 +260,16 @@ const (
 	PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnumIntegratedCircuitCardNoCvv PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum = "integrated_circuit_card_no_cvv"
 )
 
+func (e PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum) ToPointer() *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manual":
 		fallthrough
 	case "magnetic_stripe_no_cvv":
@@ -235,10 +287,10 @@ func (e *PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetai
 	case "contactless_magnetic_stripe":
 		fallthrough
 	case "integrated_circuit_card_no_cvv":
-		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisaPointOfServiceEntryModeEnum: %v", v)
 	}
 }
 
@@ -256,6 +308,31 @@ type PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetails s
 	Visa PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetailsVisa `json:"visa"`
 }
 
+// PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum - A constant representing the object's type. For this resource it will always be `card_authorization`.
+type PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum string
+
+const (
+	PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnumCardAuthorization PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum = "card_authorization"
+)
+
+func (e PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum) ToPointer() *PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum {
+	return &e
+}
+
+func (e *PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "card_authorization":
+		*e = PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum: %v", v)
+	}
+}
+
 // PendingTransactionPendingTransactionSourceCardAuthorization - A Card Authorization object. This field will be present in the JSON response if and only if `category` is equal to `card_authorization`.
 type PendingTransactionPendingTransactionSourceCardAuthorization struct {
 	// The pending amount in the minor unit of the transaction's currency. For dollars, for example, this is cents.
@@ -264,6 +341,8 @@ type PendingTransactionPendingTransactionSourceCardAuthorization struct {
 	Currency PendingTransactionPendingTransactionSourceCardAuthorizationCurrencyEnum `json:"currency"`
 	// If the authorization was made via a Digital Wallet Token (such as an Apple Pay purchase), the identifier of the token that was used.
 	DigitalWalletTokenID string `json:"digital_wallet_token_id"`
+	// The Card Authorization identifier.
+	ID string `json:"id"`
 	// The merchant identifier (commonly abbreviated as MID) of the merchant the card is transacting with.
 	MerchantAcceptorID string `json:"merchant_acceptor_id"`
 	// The Merchant Category Code (commonly abbreviated as MCC) of the merchant the card is transacting with.
@@ -280,6 +359,8 @@ type PendingTransactionPendingTransactionSourceCardAuthorization struct {
 	NetworkDetails PendingTransactionPendingTransactionSourceCardAuthorizationNetworkDetails `json:"network_details"`
 	// The identifier of the Real-Time Decision sent to approve or decline this transaction.
 	RealTimeDecisionID string `json:"real_time_decision_id"`
+	// A constant representing the object's type. For this resource it will always be `card_authorization`.
+	Type PendingTransactionPendingTransactionSourceCardAuthorizationTypeEnum `json:"type"`
 }
 
 // PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction's currency.
@@ -294,12 +375,16 @@ const (
 	PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnumUsd PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -311,10 +396,10 @@ func (e *PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCu
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceDeprecatedCardAuthorizationCurrencyEnum: %v", v)
 	}
 }
 
@@ -349,12 +434,16 @@ const (
 	PendingTransactionPendingTransactionSourceCategoryEnumOther                               PendingTransactionPendingTransactionSourceCategoryEnum = "other"
 )
 
+func (e PendingTransactionPendingTransactionSourceCategoryEnum) ToPointer() *PendingTransactionPendingTransactionSourceCategoryEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_transfer_instruction":
 		fallthrough
 	case "ach_transfer_instruction":
@@ -376,10 +465,10 @@ func (e *PendingTransactionPendingTransactionSourceCategoryEnum) UnmarshalJSON(d
 	case "wire_transfer_instruction":
 		fallthrough
 	case "other":
-		*e = PendingTransactionPendingTransactionSourceCategoryEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCategoryEnum: %v", v)
 	}
 }
 
@@ -395,12 +484,16 @@ const (
 	PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnumUsd PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -412,10 +505,10 @@ func (e *PendingTransactionPendingTransactionSourceCheckDepositInstructionCurren
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCheckDepositInstructionCurrencyEnum: %v", v)
 	}
 }
 
@@ -445,12 +538,16 @@ const (
 	PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnumUsd PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -462,10 +559,10 @@ func (e *PendingTransactionPendingTransactionSourceCheckTransferInstructionCurre
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceCheckTransferInstructionCurrencyEnum: %v", v)
 	}
 }
 
@@ -491,12 +588,16 @@ const (
 	PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnumUsd PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum = "USD"
 )
 
+func (e PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum) ToPointer() *PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -508,10 +609,10 @@ func (e *PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum)
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum(s)
+		*e = PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum: %v", v)
 	}
 }
 
@@ -523,19 +624,23 @@ const (
 	PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnumComplete PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum = "complete"
 )
 
+func (e PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum) ToPointer() *PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum {
+	return &e
+}
+
 func (e *PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "held":
 		fallthrough
 	case "complete":
-		*e = PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum(s)
+		*e = PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum: %v", v)
 	}
 }
 
@@ -545,14 +650,26 @@ type PendingTransactionPendingTransactionSourceInboundFundsHold struct {
 	Amount int64 `json:"amount"`
 	// When the hold will be released automatically. Certain conditions may cause it to be released before this time.
 	AutomaticallyReleasesAt time.Time `json:"automatically_releases_at"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time at which the hold was created.
+	CreatedAt time.Time `json:"created_at"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the hold's currency.
 	Currency PendingTransactionPendingTransactionSourceInboundFundsHoldCurrencyEnum `json:"currency"`
 	// The ID of the Transaction for which funds were held.
 	HeldTransactionID string `json:"held_transaction_id"`
+	// The ID of the Pending Transaction representing the held funds.
+	PendingTransactionID string `json:"pending_transaction_id"`
 	// When the hold was released (if it has been released).
 	ReleasedAt time.Time `json:"released_at"`
 	// The status of the hold.
 	Status PendingTransactionPendingTransactionSourceInboundFundsHoldStatusEnum `json:"status"`
+}
+
+// PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction - A Real Time Payments Transfer Instruction object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_instruction`.
+type PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction struct {
+	// The pending amount in the minor unit of the transaction's currency. For dollars, for example, this is cents.
+	Amount int64 `json:"amount"`
+	// The identifier of the Real Time Payments Transfer that led to this Pending Transaction.
+	TransferID string `json:"transfer_id"`
 }
 
 // PendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction - A Wire Drawdown Payment Instruction object. This field will be present in the JSON response if and only if `category` is equal to `wire_drawdown_payment_instruction`.
@@ -592,6 +709,8 @@ type PendingTransactionPendingTransactionSource struct {
 	CheckTransferInstruction PendingTransactionPendingTransactionSourceCheckTransferInstruction `json:"check_transfer_instruction"`
 	// A Inbound Funds Hold object. This field will be present in the JSON response if and only if `category` is equal to `inbound_funds_hold`.
 	InboundFundsHold PendingTransactionPendingTransactionSourceInboundFundsHold `json:"inbound_funds_hold"`
+	// A Real Time Payments Transfer Instruction object. This field will be present in the JSON response if and only if `category` is equal to `real_time_payments_transfer_instruction`.
+	RealTimePaymentsTransferInstruction PendingTransactionPendingTransactionSourceRealTimePaymentsTransferInstruction `json:"real_time_payments_transfer_instruction"`
 	// A Wire Drawdown Payment Instruction object. This field will be present in the JSON response if and only if `category` is equal to `wire_drawdown_payment_instruction`.
 	WireDrawdownPaymentInstruction PendingTransactionPendingTransactionSourceWireDrawdownPaymentInstruction `json:"wire_drawdown_payment_instruction"`
 	// A Wire Transfer Instruction object. This field will be present in the JSON response if and only if `category` is equal to `wire_transfer_instruction`.
@@ -606,19 +725,23 @@ const (
 	PendingTransactionStatusEnumComplete PendingTransactionStatusEnum = "complete"
 )
 
+func (e PendingTransactionStatusEnum) ToPointer() *PendingTransactionStatusEnum {
+	return &e
+}
+
 func (e *PendingTransactionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "complete":
-		*e = PendingTransactionStatusEnum(s)
+		*e = PendingTransactionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionStatusEnum: %v", v)
 	}
 }
 
@@ -629,17 +752,21 @@ const (
 	PendingTransactionTypeEnumPendingTransaction PendingTransactionTypeEnum = "pending_transaction"
 )
 
+func (e PendingTransactionTypeEnum) ToPointer() *PendingTransactionTypeEnum {
+	return &e
+}
+
 func (e *PendingTransactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_transaction":
-		*e = PendingTransactionTypeEnum(s)
+		*e = PendingTransactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PendingTransactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PendingTransactionTypeEnum: %v", v)
 	}
 }
 
@@ -649,6 +776,8 @@ type PendingTransaction struct {
 	AccountID string `json:"account_id"`
 	// The Pending Transaction amount in the minor unit of its currency. For dollars, for example, this is cents.
 	Amount int64 `json:"amount"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date on which the Pending Transaction was completed.
+	CompletedAt time.Time `json:"completed_at"`
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date on which the Pending Transaction occured.
 	CreatedAt time.Time `json:"created_at"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the Pending Transaction's currency. This will match the currency on the Pending Transcation's Account.
@@ -660,7 +789,7 @@ type PendingTransaction struct {
 	// The identifier for the route this Pending Transaction came through. Routes are things like cards and ACH details.
 	RouteID string `json:"route_id"`
 	// The type of the route this Pending Transaction came through.
-	RouteType string `json:"route_type"`
+	RouteType PendingTransactionRouteTypeEnum `json:"route_type"`
 	// This is an object giving more details on the network-level event that caused the Pending Transaction. For example, for a card transaction this lists the merchant's industry and location.
 	Source PendingTransactionPendingTransactionSource `json:"source"`
 	// Whether the Pending Transaction has been confirmed and has an associated Transaction.

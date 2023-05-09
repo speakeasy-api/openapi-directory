@@ -16,17 +16,21 @@ const (
 	DescribeFlywheelXAmzTargetEnumComprehend20171127DescribeFlywheel DescribeFlywheelXAmzTargetEnum = "Comprehend_20171127.DescribeFlywheel"
 )
 
+func (e DescribeFlywheelXAmzTargetEnum) ToPointer() *DescribeFlywheelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFlywheelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeFlywheel":
-		*e = DescribeFlywheelXAmzTargetEnum(s)
+		*e = DescribeFlywheelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFlywheelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFlywheelXAmzTargetEnum: %v", v)
 	}
 }
 

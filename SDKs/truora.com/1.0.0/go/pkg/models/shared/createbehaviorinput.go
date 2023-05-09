@@ -27,12 +27,16 @@ const (
 	CreateBehaviorInputCountryEnumBr CreateBehaviorInputCountryEnum = "br"
 )
 
+func (e CreateBehaviorInputCountryEnum) ToPointer() *CreateBehaviorInputCountryEnum {
+	return &e
+}
+
 func (e *CreateBehaviorInputCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "co":
 		fallthrough
 	case "ve":
@@ -58,10 +62,10 @@ func (e *CreateBehaviorInputCountryEnum) UnmarshalJSON(data []byte) error {
 	case "pa":
 		fallthrough
 	case "br":
-		*e = CreateBehaviorInputCountryEnum(s)
+		*e = CreateBehaviorInputCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBehaviorInputCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBehaviorInputCountryEnum: %v", v)
 	}
 }
 
@@ -98,12 +102,16 @@ const (
 	CreateBehaviorInputDocumentTypeEnumRuc                    CreateBehaviorInputDocumentTypeEnum = "ruc"
 )
 
+func (e CreateBehaviorInputDocumentTypeEnum) ToPointer() *CreateBehaviorInputDocumentTypeEnum {
+	return &e
+}
+
 func (e *CreateBehaviorInputDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "national-id":
 		fallthrough
 	case "passport":
@@ -157,10 +165,10 @@ func (e *CreateBehaviorInputDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "driver-license":
 		fallthrough
 	case "ruc":
-		*e = CreateBehaviorInputDocumentTypeEnum(s)
+		*e = CreateBehaviorInputDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBehaviorInputDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBehaviorInputDocumentTypeEnum: %v", v)
 	}
 }
 
@@ -183,12 +191,16 @@ const (
 	CreateBehaviorInputReasonEnumGoodReputation        CreateBehaviorInputReasonEnum = "good-reputation"
 )
 
+func (e CreateBehaviorInputReasonEnum) ToPointer() *CreateBehaviorInputReasonEnum {
+	return &e
+}
+
 func (e *CreateBehaviorInputReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rape":
 		fallthrough
 	case "drug-dealer":
@@ -214,10 +226,10 @@ func (e *CreateBehaviorInputReasonEnum) UnmarshalJSON(data []byte) error {
 	case "confidentiality-breach":
 		fallthrough
 	case "good-reputation":
-		*e = CreateBehaviorInputReasonEnum(s)
+		*e = CreateBehaviorInputReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBehaviorInputReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBehaviorInputReasonEnum: %v", v)
 	}
 }
 

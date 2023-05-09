@@ -16,21 +16,25 @@ const (
 	GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnumSuspended             GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum = "SUSPENDED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaSuccessPolicyFinalStateEnum: %v", v)
 	}
 }
 

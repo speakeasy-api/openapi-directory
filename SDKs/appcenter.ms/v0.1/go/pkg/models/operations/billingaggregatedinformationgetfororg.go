@@ -21,21 +21,25 @@ const (
 	BillingAggregatedInformationGetForOrgPeriodEnumNext     BillingAggregatedInformationGetForOrgPeriodEnum = "Next"
 )
 
+func (e BillingAggregatedInformationGetForOrgPeriodEnum) ToPointer() *BillingAggregatedInformationGetForOrgPeriodEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrgPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Previous":
 		fallthrough
 	case "Current":
 		fallthrough
 	case "Next":
-		*e = BillingAggregatedInformationGetForOrgPeriodEnum(s)
+		*e = BillingAggregatedInformationGetForOrgPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgPeriodEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	BillingAggregatedInformationGetForOrgServiceEnumBuild BillingAggregatedInformationGetForOrgServiceEnum = "Build"
 )
 
+func (e BillingAggregatedInformationGetForOrgServiceEnum) ToPointer() *BillingAggregatedInformationGetForOrgServiceEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrgServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Test":
 		fallthrough
 	case "Build":
-		*e = BillingAggregatedInformationGetForOrgServiceEnum(s)
+		*e = BillingAggregatedInformationGetForOrgServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgServiceEnum: %v", v)
 	}
 }
 
@@ -75,29 +83,33 @@ type BillingAggregatedInformationGetForOrgRequest struct {
 }
 
 // BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum string
+type BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFourHundred         BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = "400"
-	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFourHundredAndThree BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = "403"
-	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFiveHundred         BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = "500"
+	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFourHundred         BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = 400
+	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFourHundredAndThree BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = 403
+	BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnumFiveHundred         BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum) ToPointer() *BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrgDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -122,21 +134,25 @@ const (
 	BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnumNotSet   BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum = "NotSet"
 )
 
+func (e BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum) ToPointer() *BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
 		fallthrough
 	case "NotSet":
-		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum(s)
+		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONAzureSubscriptionStateEnum: %v", v)
 	}
 }
 
@@ -150,12 +166,16 @@ const (
 	BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnumXtc       BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum = "Xtc"
 )
 
+func (e BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum) ToPointer() *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "AppCenter":
@@ -163,10 +183,10 @@ func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuil
 	case "GitHub":
 		fallthrough
 	case "Xtc":
-		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum(s)
+		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum: %v", v)
 	}
 }
 
@@ -178,19 +198,23 @@ const (
 	BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnumTest  BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum = "Test"
 )
 
+func (e BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum) ToPointer() *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Build":
 		fallthrough
 	case "Test":
-		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum(s)
+		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriodByAccountPlanServiceEnum: %v", v)
 	}
 }
 
@@ -251,12 +275,16 @@ const (
 	BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnumXtc       BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum = "Xtc"
 )
 
+func (e BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum) ToPointer() *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "AppCenter":
@@ -264,10 +292,10 @@ func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTest
 	case "GitHub":
 		fallthrough
 	case "Xtc":
-		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum(s)
+		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanPaymentSourceEnum: %v", v)
 	}
 }
 
@@ -279,19 +307,23 @@ const (
 	BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnumTest  BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum = "Test"
 )
 
+func (e BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum) ToPointer() *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum {
+	return &e
+}
+
 func (e *BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Build":
 		fallthrough
 	case "Test":
-		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum(s)
+		*e = BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingAggregatedInformationGetForOrg200ApplicationJSONBillingPlansTestServiceCurrentBillingPeriodByAccountPlanServiceEnum: %v", v)
 	}
 }
 

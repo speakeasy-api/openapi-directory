@@ -16,20 +16,24 @@ const (
 	NodeAssociationStatusEnumInProgress NodeAssociationStatusEnum = "IN_PROGRESS"
 )
 
+func (e NodeAssociationStatusEnum) ToPointer() *NodeAssociationStatusEnum {
+	return &e
+}
+
 func (e *NodeAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = NodeAssociationStatusEnum(s)
+		*e = NodeAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeAssociationStatusEnum: %v", v)
 	}
 }

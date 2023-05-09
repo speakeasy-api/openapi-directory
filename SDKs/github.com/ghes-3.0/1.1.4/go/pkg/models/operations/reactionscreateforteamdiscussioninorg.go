@@ -23,12 +23,16 @@ const (
 	ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnumEyes     ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum = "eyes"
 )
 
+func (e ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum) ToPointer() *ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum {
+	return &e
+}
+
 func (e *ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "+1":
 		fallthrough
 	case "-1":
@@ -44,10 +48,10 @@ func (e *ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum) UnmarshalJ
 	case "rocket":
 		fallthrough
 	case "eyes":
-		*e = ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum(s)
+		*e = ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum: %s", s)
+		return fmt.Errorf("invalid value for ReactionsCreateForTeamDiscussionInOrgRequestBodyContentEnum: %v", v)
 	}
 }
 

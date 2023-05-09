@@ -5,6 +5,7 @@ package shared
 // ModifyDBClusterMessage - <p/>
 type ModifyDBClusterMessage struct {
 	AllocatedStorage                   *int64
+	AllowEngineModeChange              *bool
 	AllowMajorVersionUpgrade           *bool
 	ApplyImmediately                   *bool
 	AutoMinorVersionUpgrade            *bool
@@ -23,6 +24,7 @@ type ModifyDBClusterMessage struct {
 	EnableHTTPEndpoint                 *bool
 	EnableIAMDatabaseAuthentication    *bool
 	EnablePerformanceInsights          *bool
+	EngineMode                         *string
 	EngineVersion                      *string
 	Iops                               *int64
 	ManageMasterUserPassword           *bool

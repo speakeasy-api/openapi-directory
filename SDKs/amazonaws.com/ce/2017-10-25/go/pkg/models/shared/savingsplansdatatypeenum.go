@@ -16,12 +16,16 @@ const (
 	SavingsPlansDataTypeEnumSavings             SavingsPlansDataTypeEnum = "SAVINGS"
 )
 
+func (e SavingsPlansDataTypeEnum) ToPointer() *SavingsPlansDataTypeEnum {
+	return &e
+}
+
 func (e *SavingsPlansDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTES":
 		fallthrough
 	case "UTILIZATION":
@@ -29,9 +33,9 @@ func (e *SavingsPlansDataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AMORTIZED_COMMITMENT":
 		fallthrough
 	case "SAVINGS":
-		*e = SavingsPlansDataTypeEnum(s)
+		*e = SavingsPlansDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlansDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlansDataTypeEnum: %v", v)
 	}
 }

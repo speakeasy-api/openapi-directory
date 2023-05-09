@@ -30,12 +30,16 @@ const (
 	RegistrationsChildrenListRegistrationAttributesCategoryEnumOther              RegistrationsChildrenListRegistrationAttributesCategoryEnum = "other"
 )
 
+func (e RegistrationsChildrenListRegistrationAttributesCategoryEnum) ToPointer() *RegistrationsChildrenListRegistrationAttributesCategoryEnum {
+	return &e
+}
+
 func (e *RegistrationsChildrenListRegistrationAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "analysis":
 		fallthrough
 	case "communication":
@@ -55,10 +59,10 @@ func (e *RegistrationsChildrenListRegistrationAttributesCategoryEnum) UnmarshalJ
 	case "software":
 		fallthrough
 	case "other":
-		*e = RegistrationsChildrenListRegistrationAttributesCategoryEnum(s)
+		*e = RegistrationsChildrenListRegistrationAttributesCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationsChildrenListRegistrationAttributesCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationsChildrenListRegistrationAttributesCategoryEnum: %v", v)
 	}
 }
 

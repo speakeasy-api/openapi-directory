@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openbanking.org.uk/v1.3/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAtmsRequest{
-        IfModifiedSince: "corrupti",
-        IfNoneMatch: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Atm.GetAtms(ctx, req)
+    res, err := s.Atm.GetAtms(ctx, operations.GetAtmsRequest{
+        IfModifiedSince: sdk.String("corrupti"),
+        IfNoneMatch: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,35 +43,35 @@ func main() {
 ## Available Resources and Operations
 
 
-### Atm
+### [Atm](docs/atm/README.md)
 
-* `GetAtms` - Gets a list of all `ATM` objects.
-* `HeadAtms` - Gets header information on the current set of `ATM` data
+* [GetAtms](docs/atm/README.md#getatms) - Gets a list of all `ATM` objects.
+* [HeadAtms](docs/atm/README.md#headatms) - Gets header information on the current set of `ATM` data
 
-### Bca
+### [Bca](docs/bca/README.md)
 
-* `GetBusinessCurrentAccounts` - Gets a list of all `Branch Current Account` objects.
-* `HeadBusinessCurrentAccounts` - Gets header information on the current set of `Business Current Account` data
+* [GetBusinessCurrentAccounts](docs/bca/README.md#getbusinesscurrentaccounts) - Gets a list of all `Branch Current Account` objects.
+* [HeadBusinessCurrentAccounts](docs/bca/README.md#headbusinesscurrentaccounts) - Gets header information on the current set of `Business Current Account` data
 
-### Branch
+### [Branch](docs/branch/README.md)
 
-* `GetBranches` - Gets a list of all `Branch` objects.
-* `HeadBranches` - Gets header information on the current set of `Branch` data
+* [GetBranches](docs/branch/README.md#getbranches) - Gets a list of all `Branch` objects.
+* [HeadBranches](docs/branch/README.md#headbranches) - Gets header information on the current set of `Branch` data
 
-### Ccc
+### [Ccc](docs/ccc/README.md)
 
-* `GetCommercialCreditCards` - Gets a list of all `Commerical Credit Card` objects.
-* `HeadCommercialCreditCards` - Gets header information on the current set of `Commerical Credit Card` data
+* [GetCommercialCreditCards](docs/ccc/README.md#getcommercialcreditcards) - Gets a list of all `Commerical Credit Card` objects.
+* [HeadCommercialCreditCards](docs/ccc/README.md#headcommercialcreditcards) - Gets header information on the current set of `Commerical Credit Card` data
 
-### Pca
+### [Pca](docs/pca/README.md)
 
-* `GetPersonalCurrentAccounts` - Gets a list of all `Personal Current Account` objects.
-* `HeadPersonalCurrentAccounts` - Gets header information on the current set of `Personal Current Account` data
+* [GetPersonalCurrentAccounts](docs/pca/README.md#getpersonalcurrentaccounts) - Gets a list of all `Personal Current Account` objects.
+* [HeadPersonalCurrentAccounts](docs/pca/README.md#headpersonalcurrentaccounts) - Gets header information on the current set of `Personal Current Account` data
 
-### Sme
+### [Sme](docs/sme/README.md)
 
-* `GetUnsecuredSmeLoans` - Gets a list of all `Unsercured SME Lending` objects.
-* `HeadUnsecuredSmeLoans` - Gets header information on the current set of `Unsercured SME Lending` data
+* [GetUnsecuredSmeLoans](docs/sme/README.md#getunsecuredsmeloans) - Gets a list of all `Unsercured SME Lending` objects.
+* [HeadUnsecuredSmeLoans](docs/sme/README.md#headunsecuredsmeloans) - Gets header information on the current set of `Unsercured SME Lending` data
 <!-- End SDK Available Operations -->
 
 ### Maturity

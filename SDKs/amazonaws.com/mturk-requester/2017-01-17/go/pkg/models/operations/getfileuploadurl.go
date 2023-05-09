@@ -16,17 +16,21 @@ const (
 	GetFileUploadURLXAmzTargetEnumMTurkRequesterServiceV20170117GetFileUploadURL GetFileUploadURLXAmzTargetEnum = "MTurkRequesterServiceV20170117.GetFileUploadURL"
 )
 
+func (e GetFileUploadURLXAmzTargetEnum) ToPointer() *GetFileUploadURLXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetFileUploadURLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.GetFileUploadURL":
-		*e = GetFileUploadURLXAmzTargetEnum(s)
+		*e = GetFileUploadURLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFileUploadURLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFileUploadURLXAmzTargetEnum: %v", v)
 	}
 }
 

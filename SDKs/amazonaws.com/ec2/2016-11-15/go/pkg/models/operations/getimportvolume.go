@@ -15,17 +15,21 @@ const (
 	GETImportVolumeActionEnumImportVolume GETImportVolumeActionEnum = "ImportVolume"
 )
 
+func (e GETImportVolumeActionEnum) ToPointer() *GETImportVolumeActionEnum {
+	return &e
+}
+
 func (e *GETImportVolumeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImportVolume":
-		*e = GETImportVolumeActionEnum(s)
+		*e = GETImportVolumeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportVolumeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportVolumeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETImportVolumeImageFormatEnumVhd  GETImportVolumeImageFormatEnum = "VHD"
 )
 
+func (e GETImportVolumeImageFormatEnum) ToPointer() *GETImportVolumeImageFormatEnum {
+	return &e
+}
+
 func (e *GETImportVolumeImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = GETImportVolumeImageFormatEnum(s)
+		*e = GETImportVolumeImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportVolumeImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportVolumeImageFormatEnum: %v", v)
 	}
 }
 
@@ -70,17 +78,21 @@ const (
 	GETImportVolumeVersionEnumTwoThousandAndSixteen1115 GETImportVolumeVersionEnum = "2016-11-15"
 )
 
+func (e GETImportVolumeVersionEnum) ToPointer() *GETImportVolumeVersionEnum {
+	return &e
+}
+
 func (e *GETImportVolumeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETImportVolumeVersionEnum(s)
+		*e = GETImportVolumeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETImportVolumeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETImportVolumeVersionEnum: %v", v)
 	}
 }
 

@@ -8,32 +8,36 @@ import (
 )
 
 // DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum - If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details.
-type DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum string
+type DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum int
 
 const (
-	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumZero  DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = "0"
-	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumOne   DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = "1"
-	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumTwo   DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = "2"
-	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumThree DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = "3"
+	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumZero  DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = 0
+	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumOne   DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = 1
+	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumTwo   DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = 2
+	DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnumThree DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum = 3
 )
 
+func (e DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum) ToPointer() *DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum {
+	return &e
+}
+
 func (e *DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum(s)
+	case 3:
+		*e = DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinyEntitiesItemsDestinyItemInstanceComponentBreakerTypeEnum: %v", v)
 	}
 }
 

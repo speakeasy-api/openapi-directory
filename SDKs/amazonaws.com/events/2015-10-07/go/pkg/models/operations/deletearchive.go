@@ -16,17 +16,21 @@ const (
 	DeleteArchiveXAmzTargetEnumAwsEventsDeleteArchive DeleteArchiveXAmzTargetEnum = "AWSEvents.DeleteArchive"
 )
 
+func (e DeleteArchiveXAmzTargetEnum) ToPointer() *DeleteArchiveXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteArchiveXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.DeleteArchive":
-		*e = DeleteArchiveXAmzTargetEnum(s)
+		*e = DeleteArchiveXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteArchiveXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteArchiveXAmzTargetEnum: %v", v)
 	}
 }
 

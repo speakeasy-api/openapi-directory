@@ -17,19 +17,23 @@ const (
 	AllStarsFormatEnumJSON AllStarsFormatEnum = "JSON"
 )
 
+func (e AllStarsFormatEnum) ToPointer() *AllStarsFormatEnum {
+	return &e
+}
+
 func (e *AllStarsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = AllStarsFormatEnum(s)
+		*e = AllStarsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllStarsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for AllStarsFormatEnum: %v", v)
 	}
 }
 

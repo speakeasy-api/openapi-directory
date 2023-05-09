@@ -16,17 +16,21 @@ const (
 	CreateDatasetExportJobXAmzTargetEnumAmazonPersonalizeCreateDatasetExportJob CreateDatasetExportJobXAmzTargetEnum = "AmazonPersonalize.CreateDatasetExportJob"
 )
 
+func (e CreateDatasetExportJobXAmzTargetEnum) ToPointer() *CreateDatasetExportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDatasetExportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.CreateDatasetExportJob":
-		*e = CreateDatasetExportJobXAmzTargetEnum(s)
+		*e = CreateDatasetExportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDatasetExportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDatasetExportJobXAmzTargetEnum: %v", v)
 	}
 }
 

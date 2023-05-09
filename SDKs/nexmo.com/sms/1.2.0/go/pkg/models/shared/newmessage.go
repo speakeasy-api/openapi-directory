@@ -8,32 +8,36 @@ import (
 )
 
 // NewMessageMessageClassEnum - **Advanced**: The Data Coding Scheme value of the message
-type NewMessageMessageClassEnum string
+type NewMessageMessageClassEnum int64
 
 const (
-	NewMessageMessageClassEnumZero  NewMessageMessageClassEnum = "0"
-	NewMessageMessageClassEnumOne   NewMessageMessageClassEnum = "1"
-	NewMessageMessageClassEnumTwo   NewMessageMessageClassEnum = "2"
-	NewMessageMessageClassEnumThree NewMessageMessageClassEnum = "3"
+	NewMessageMessageClassEnumZero  NewMessageMessageClassEnum = 0
+	NewMessageMessageClassEnumOne   NewMessageMessageClassEnum = 1
+	NewMessageMessageClassEnumTwo   NewMessageMessageClassEnum = 2
+	NewMessageMessageClassEnumThree NewMessageMessageClassEnum = 3
 )
 
+func (e NewMessageMessageClassEnum) ToPointer() *NewMessageMessageClassEnum {
+	return &e
+}
+
 func (e *NewMessageMessageClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = NewMessageMessageClassEnum(s)
+	case 3:
+		*e = NewMessageMessageClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NewMessageMessageClassEnum: %s", s)
+		return fmt.Errorf("invalid value for NewMessageMessageClassEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	NewMessageTypeEnumUnicode NewMessageTypeEnum = "unicode"
 )
 
+func (e NewMessageTypeEnum) ToPointer() *NewMessageTypeEnum {
+	return &e
+}
+
 func (e *NewMessageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "binary":
 		fallthrough
 	case "unicode":
-		*e = NewMessageTypeEnum(s)
+		*e = NewMessageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NewMessageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NewMessageTypeEnum: %v", v)
 	}
 }
 

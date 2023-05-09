@@ -15,17 +15,21 @@ const (
 	GetCapabilitiesRequestEnumGetCapabilities GetCapabilitiesRequestEnum = "GetCapabilities"
 )
 
+func (e GetCapabilitiesRequestEnum) ToPointer() *GetCapabilitiesRequestEnum {
+	return &e
+}
+
 func (e *GetCapabilitiesRequestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetCapabilities":
-		*e = GetCapabilitiesRequestEnum(s)
+		*e = GetCapabilitiesRequestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCapabilitiesRequestEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCapabilitiesRequestEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GetCapabilitiesServiceEnumWms GetCapabilitiesServiceEnum = "WMS"
 )
 
+func (e GetCapabilitiesServiceEnum) ToPointer() *GetCapabilitiesServiceEnum {
+	return &e
+}
+
 func (e *GetCapabilitiesServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WMS":
-		*e = GetCapabilitiesServiceEnum(s)
+		*e = GetCapabilitiesServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCapabilitiesServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCapabilitiesServiceEnum: %v", v)
 	}
 }
 
@@ -57,38 +65,46 @@ const (
 	GetCapabilitiesVersionEnumOne11 GetCapabilitiesVersionEnum = "1.1.1"
 )
 
+func (e GetCapabilitiesVersionEnum) ToPointer() *GetCapabilitiesVersionEnum {
+	return &e
+}
+
 func (e *GetCapabilitiesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1.1.1":
-		*e = GetCapabilitiesVersionEnum(s)
+		*e = GetCapabilitiesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCapabilitiesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCapabilitiesVersionEnum: %v", v)
 	}
 }
 
 // GetCapabilitiesVersionNumberEnum
-type GetCapabilitiesVersionNumberEnum string
+type GetCapabilitiesVersionNumberEnum int64
 
 const (
-	GetCapabilitiesVersionNumberEnumOne GetCapabilitiesVersionNumberEnum = "1"
+	GetCapabilitiesVersionNumberEnumOne GetCapabilitiesVersionNumberEnum = 1
 )
 
+func (e GetCapabilitiesVersionNumberEnum) ToPointer() *GetCapabilitiesVersionNumberEnum {
+	return &e
+}
+
 func (e *GetCapabilitiesVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetCapabilitiesVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetCapabilitiesVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCapabilitiesVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCapabilitiesVersionNumberEnum: %v", v)
 	}
 }
 

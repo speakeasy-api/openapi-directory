@@ -32,19 +32,23 @@ const (
 	AddUserAddUserRequestBodyRoleEnumAdmin AddUserAddUserRequestBodyRoleEnum = "admin"
 )
 
+func (e AddUserAddUserRequestBodyRoleEnum) ToPointer() *AddUserAddUserRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *AddUserAddUserRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "admin":
-		*e = AddUserAddUserRequestBodyRoleEnum(s)
+		*e = AddUserAddUserRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddUserAddUserRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AddUserAddUserRequestBodyRoleEnum: %v", v)
 	}
 }
 

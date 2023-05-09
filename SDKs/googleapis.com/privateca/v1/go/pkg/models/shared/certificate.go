@@ -16,21 +16,25 @@ const (
 	CertificateSubjectModeEnumReflectedSpiffe               CertificateSubjectModeEnum = "REFLECTED_SPIFFE"
 )
 
+func (e CertificateSubjectModeEnum) ToPointer() *CertificateSubjectModeEnum {
+	return &e
+}
+
 func (e *CertificateSubjectModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBJECT_REQUEST_MODE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
 		fallthrough
 	case "REFLECTED_SPIFFE":
-		*e = CertificateSubjectModeEnum(s)
+		*e = CertificateSubjectModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateSubjectModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateSubjectModeEnum: %v", v)
 	}
 }
 

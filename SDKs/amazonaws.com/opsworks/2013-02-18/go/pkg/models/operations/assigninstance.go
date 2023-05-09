@@ -16,17 +16,21 @@ const (
 	AssignInstanceXAmzTargetEnumOpsWorks20130218AssignInstance AssignInstanceXAmzTargetEnum = "OpsWorks_20130218.AssignInstance"
 )
 
+func (e AssignInstanceXAmzTargetEnum) ToPointer() *AssignInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssignInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.AssignInstance":
-		*e = AssignInstanceXAmzTargetEnum(s)
+		*e = AssignInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

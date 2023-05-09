@@ -34,7 +34,10 @@ func newDocument(defaultClient, securityClient HTTPClient, serverURL, language, 
 // The /document API allows you to retrieve actual documents from the BCLaws legislative repository. To retrieve a document from the repository you need the aspect identifier and two other specific pieces of information about the document: the index identifier and the document identifier. These unique identifiers can be retrieved from the /content API.
 func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentID(ctx context.Context, request operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDRequest) (*operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentID(ctx context.
 // The /document API allows you to retrieve actual documents from the BCLaws legislative repository. To retrieve a document from the repository you need the aspect identifier and two other specific pieces of information about the document: the index identifier and the document identifier. These unique identifiers can be retrieved from the /content API.
 func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchString(ctx context.Context, request operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringRequest) (*operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/search/{searchString}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/search/{searchString}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -106,7 +112,10 @@ func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchS
 // The /document API allows you to retrieve actual documents from the BCLaws legislative repository. To retrieve a document from the repository you need the aspect identifier and two other specific pieces of information about the document: the index identifier and the document identifier. These unique identifiers can be retrieved from the /content API.
 func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXML(ctx context.Context, request operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLRequest) (*operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +151,10 @@ func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXML(ctx conte
 // The /document API allows you to retrieve actual documents from the BCLaws legislative repository. To retrieve a document from the repository you need the aspect identifier and two other specific pieces of information about the document: the index identifier and the document identifier. These unique identifiers can be retrieved from the /content API.
 func (s *document) GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchString(ctx context.Context, request operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringRequest) (*operations.GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXMLSearchSearchStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml/search/{searchString}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml/search/{searchString}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

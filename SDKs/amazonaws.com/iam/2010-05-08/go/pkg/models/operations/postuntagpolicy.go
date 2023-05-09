@@ -15,17 +15,21 @@ const (
 	POSTUntagPolicyActionEnumUntagPolicy POSTUntagPolicyActionEnum = "UntagPolicy"
 )
 
+func (e POSTUntagPolicyActionEnum) ToPointer() *POSTUntagPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTUntagPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagPolicy":
-		*e = POSTUntagPolicyActionEnum(s)
+		*e = POSTUntagPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUntagPolicyVersionEnumTwoThousandAndTen0508 POSTUntagPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTUntagPolicyVersionEnum) ToPointer() *POSTUntagPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTUntagPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUntagPolicyVersionEnum(s)
+		*e = POSTUntagPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagPolicyVersionEnum: %v", v)
 	}
 }
 

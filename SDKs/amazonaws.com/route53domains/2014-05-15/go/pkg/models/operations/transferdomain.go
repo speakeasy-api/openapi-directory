@@ -16,17 +16,21 @@ const (
 	TransferDomainXAmzTargetEnumRoute53DomainsV20140515TransferDomain TransferDomainXAmzTargetEnum = "Route53Domains_v20140515.TransferDomain"
 )
 
+func (e TransferDomainXAmzTargetEnum) ToPointer() *TransferDomainXAmzTargetEnum {
+	return &e
+}
+
 func (e *TransferDomainXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Domains_v20140515.TransferDomain":
-		*e = TransferDomainXAmzTargetEnum(s)
+		*e = TransferDomainXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferDomainXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferDomainXAmzTargetEnum: %v", v)
 	}
 }
 

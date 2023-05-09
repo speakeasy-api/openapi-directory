@@ -16,21 +16,25 @@ const (
 	NullableCodespaceMachinePrebuildAvailabilityEnumInProgress NullableCodespaceMachinePrebuildAvailabilityEnum = "in_progress"
 )
 
+func (e NullableCodespaceMachinePrebuildAvailabilityEnum) ToPointer() *NullableCodespaceMachinePrebuildAvailabilityEnum {
+	return &e
+}
+
 func (e *NullableCodespaceMachinePrebuildAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "ready":
 		fallthrough
 	case "in_progress":
-		*e = NullableCodespaceMachinePrebuildAvailabilityEnum(s)
+		*e = NullableCodespaceMachinePrebuildAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NullableCodespaceMachinePrebuildAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for NullableCodespaceMachinePrebuildAvailabilityEnum: %v", v)
 	}
 }
 

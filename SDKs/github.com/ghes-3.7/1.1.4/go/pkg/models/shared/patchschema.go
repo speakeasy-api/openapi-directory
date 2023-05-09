@@ -15,21 +15,25 @@ const (
 	PatchSchemaOperationsOpEnumRemove  PatchSchemaOperationsOpEnum = "remove"
 )
 
+func (e PatchSchemaOperationsOpEnum) ToPointer() *PatchSchemaOperationsOpEnum {
+	return &e
+}
+
 func (e *PatchSchemaOperationsOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "replace":
 		fallthrough
 	case "remove":
-		*e = PatchSchemaOperationsOpEnum(s)
+		*e = PatchSchemaOperationsOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSchemaOperationsOpEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSchemaOperationsOpEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	PatchSchemaSchemasEnumUrnIetfParamsScimAPIMessages20PatchOp PatchSchemaSchemasEnum = "urn:ietf:params:scim:api:messages:2.0:PatchOp"
 )
 
+func (e PatchSchemaSchemasEnum) ToPointer() *PatchSchemaSchemasEnum {
+	return &e
+}
+
 func (e *PatchSchemaSchemasEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "urn:ietf:params:scim:api:messages:2.0:PatchOp":
-		*e = PatchSchemaSchemasEnum(s)
+		*e = PatchSchemaSchemasEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSchemaSchemasEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSchemaSchemasEnum: %v", v)
 	}
 }
 

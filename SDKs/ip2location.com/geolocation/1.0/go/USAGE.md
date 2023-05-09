@@ -2,32 +2,29 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetRequest{
+    ctx := context.Background()
+    res, err := s.Get(ctx, operations.GetRequest{
         Addon: []GetAddonEnum{
-            "geotargeting",
-            "country_groupings",
-            "country_groupings",
+            operations.GetAddonEnumGeotargeting,
+            operations.GetAddonEnumCountryGroupings,
+            operations.GetAddonEnumCountryGroupings,
         },
-        Format: "xml",
+        Format: operations.GetFormatEnumXML.ToPointer(),
         IP: "8.8.8.8",
         Key: "nulla",
-        Lang: "ja",
-        Package: "WS22",
-    }
-
-    ctx := context.Background()
-    res, err := s.Get(ctx, req)
+        Lang: operations.GetLangEnumJa.ToPointer(),
+        Package: operations.GetPackageEnumWs22.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }

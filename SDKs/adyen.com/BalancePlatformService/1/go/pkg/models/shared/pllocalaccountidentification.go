@@ -14,17 +14,21 @@ const (
 	PLLocalAccountIdentificationTypeEnumPlLocal PLLocalAccountIdentificationTypeEnum = "plLocal"
 )
 
+func (e PLLocalAccountIdentificationTypeEnum) ToPointer() *PLLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *PLLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "plLocal":
-		*e = PLLocalAccountIdentificationTypeEnum(s)
+		*e = PLLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PLLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PLLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

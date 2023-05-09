@@ -16,17 +16,21 @@ const (
 	GetDataflowGraphXAmzTargetEnumAwsGlueGetDataflowGraph GetDataflowGraphXAmzTargetEnum = "AWSGlue.GetDataflowGraph"
 )
 
+func (e GetDataflowGraphXAmzTargetEnum) ToPointer() *GetDataflowGraphXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDataflowGraphXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetDataflowGraph":
-		*e = GetDataflowGraphXAmzTargetEnum(s)
+		*e = GetDataflowGraphXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDataflowGraphXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDataflowGraphXAmzTargetEnum: %v", v)
 	}
 }
 

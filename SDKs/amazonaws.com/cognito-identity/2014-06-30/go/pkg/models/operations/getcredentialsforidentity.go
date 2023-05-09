@@ -16,17 +16,21 @@ const (
 	GetCredentialsForIdentityXAmzTargetEnumAwsCognitoIdentityServiceGetCredentialsForIdentity GetCredentialsForIdentityXAmzTargetEnum = "AWSCognitoIdentityService.GetCredentialsForIdentity"
 )
 
+func (e GetCredentialsForIdentityXAmzTargetEnum) ToPointer() *GetCredentialsForIdentityXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCredentialsForIdentityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityService.GetCredentialsForIdentity":
-		*e = GetCredentialsForIdentityXAmzTargetEnum(s)
+		*e = GetCredentialsForIdentityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCredentialsForIdentityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCredentialsForIdentityXAmzTargetEnum: %v", v)
 	}
 }
 

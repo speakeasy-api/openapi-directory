@@ -16,21 +16,25 @@ const (
 	MarketChangeMessageCtEnumHeartbeat  MarketChangeMessageCtEnum = "HEARTBEAT"
 )
 
+func (e MarketChangeMessageCtEnum) ToPointer() *MarketChangeMessageCtEnum {
+	return &e
+}
+
 func (e *MarketChangeMessageCtEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUB_IMAGE":
 		fallthrough
 	case "RESUB_DELTA":
 		fallthrough
 	case "HEARTBEAT":
-		*e = MarketChangeMessageCtEnum(s)
+		*e = MarketChangeMessageCtEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketChangeMessageCtEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketChangeMessageCtEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	MarketChangeMessageSegmentTypeEnumSegEnd   MarketChangeMessageSegmentTypeEnum = "SEG_END"
 )
 
+func (e MarketChangeMessageSegmentTypeEnum) ToPointer() *MarketChangeMessageSegmentTypeEnum {
+	return &e
+}
+
 func (e *MarketChangeMessageSegmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEG_START":
 		fallthrough
 	case "SEG":
 		fallthrough
 	case "SEG_END":
-		*e = MarketChangeMessageSegmentTypeEnum(s)
+		*e = MarketChangeMessageSegmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketChangeMessageSegmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketChangeMessageSegmentTypeEnum: %v", v)
 	}
 }
 

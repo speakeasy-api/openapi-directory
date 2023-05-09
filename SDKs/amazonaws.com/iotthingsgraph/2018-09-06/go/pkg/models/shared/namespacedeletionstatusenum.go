@@ -15,20 +15,24 @@ const (
 	NamespaceDeletionStatusEnumFailed     NamespaceDeletionStatusEnum = "FAILED"
 )
 
+func (e NamespaceDeletionStatusEnum) ToPointer() *NamespaceDeletionStatusEnum {
+	return &e
+}
+
 func (e *NamespaceDeletionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = NamespaceDeletionStatusEnum(s)
+		*e = NamespaceDeletionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamespaceDeletionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for NamespaceDeletionStatusEnum: %v", v)
 	}
 }

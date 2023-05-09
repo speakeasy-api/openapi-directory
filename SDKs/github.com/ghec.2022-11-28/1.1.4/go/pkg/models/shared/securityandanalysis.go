@@ -14,19 +14,23 @@ const (
 	SecurityAndAnalysisAdvancedSecurityStatusEnumDisabled SecurityAndAnalysisAdvancedSecurityStatusEnum = "disabled"
 )
 
+func (e SecurityAndAnalysisAdvancedSecurityStatusEnum) ToPointer() *SecurityAndAnalysisAdvancedSecurityStatusEnum {
+	return &e
+}
+
 func (e *SecurityAndAnalysisAdvancedSecurityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = SecurityAndAnalysisAdvancedSecurityStatusEnum(s)
+		*e = SecurityAndAnalysisAdvancedSecurityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityAndAnalysisAdvancedSecurityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityAndAnalysisAdvancedSecurityStatusEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	SecurityAndAnalysisSecretScanningStatusEnumDisabled SecurityAndAnalysisSecretScanningStatusEnum = "disabled"
 )
 
+func (e SecurityAndAnalysisSecretScanningStatusEnum) ToPointer() *SecurityAndAnalysisSecretScanningStatusEnum {
+	return &e
+}
+
 func (e *SecurityAndAnalysisSecretScanningStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = SecurityAndAnalysisSecretScanningStatusEnum(s)
+		*e = SecurityAndAnalysisSecretScanningStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityAndAnalysisSecretScanningStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityAndAnalysisSecretScanningStatusEnum: %v", v)
 	}
 }
 
@@ -68,19 +76,23 @@ const (
 	SecurityAndAnalysisSecretScanningPushProtectionStatusEnumDisabled SecurityAndAnalysisSecretScanningPushProtectionStatusEnum = "disabled"
 )
 
+func (e SecurityAndAnalysisSecretScanningPushProtectionStatusEnum) ToPointer() *SecurityAndAnalysisSecretScanningPushProtectionStatusEnum {
+	return &e
+}
+
 func (e *SecurityAndAnalysisSecretScanningPushProtectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = SecurityAndAnalysisSecretScanningPushProtectionStatusEnum(s)
+		*e = SecurityAndAnalysisSecretScanningPushProtectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SecurityAndAnalysisSecretScanningPushProtectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SecurityAndAnalysisSecretScanningPushProtectionStatusEnum: %v", v)
 	}
 }
 

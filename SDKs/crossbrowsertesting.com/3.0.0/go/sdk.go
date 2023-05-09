@@ -25,6 +25,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - What's in this version:
 //  1. Compare two screenshots for layout differences
 //  2. Compare a full screenshot test of browsers to a single baseline browser for layout differences.
@@ -99,7 +114,10 @@ func New(opts ...SDKOption) *SDK {
 // Get comparison results for all browsers in target screenshot test against the same browser in the base screenshot test. This is a good method for regression testing. For example, you've run a screenshot test against a set of browsers that is "good". Then, after some changes, you run a new screenshot test against the same set of browsers. This method will compare each of the same browsers against each other. For example, IE9 will be compared to IE9 from an earlier test. This is a many-to-many comparison where the OS/Browser/Resolution must match between the two test versions in order for the comparison to return results. The two versions can be from the same screenshot_test_id or not.
 func (s *SDK) GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionID(ctx context.Context, request operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDRequest, security operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDSecurity) (*operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/parallel/{base_version_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/parallel/{base_version_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +166,10 @@ func (s *SDK) GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParal
 // Get comparison results for all browsers in target screenshot test against a base screenshot result. The base result can be from the same test or from another test run at an earlier time. This is a one-to-many comparison.
 func (s *SDK) GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonBaseResultID(ctx context.Context, request operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonBaseResultIDRequest, security operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonBaseResultIDSecurity) (*operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonBaseResultIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/{base_result_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/comparison/{base_result_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,7 +218,10 @@ func (s *SDK) GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonBaseR
 // Get comparison results for a single target screenshot result against a base screenshot result. This is a one-to-one comparison.
 func (s *SDK) GetScreenshotsTargetScreenshotTestIDTargetVersionIDTargetResultIDComparisonBaseResultID(ctx context.Context, request operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDTargetResultIDComparisonBaseResultIDRequest, security operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDTargetResultIDComparisonBaseResultIDSecurity) (*operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDTargetResultIDComparisonBaseResultIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/{target_result_id}/comparison/{base_result_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/screenshots/{target_screenshot_test_id}/{target_version_id}/{target_result_id}/comparison/{base_result_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

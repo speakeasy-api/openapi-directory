@@ -19,12 +19,16 @@ const (
 	MembershipDeliverySettingEnumDisabled                   MembershipDeliverySettingEnum = "DISABLED"
 )
 
+func (e MembershipDeliverySettingEnum) ToPointer() *MembershipDeliverySettingEnum {
+	return &e
+}
+
 func (e *MembershipDeliverySettingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERY_SETTING_UNSPECIFIED":
 		fallthrough
 	case "ALL_MAIL":
@@ -36,10 +40,10 @@ func (e *MembershipDeliverySettingEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "DISABLED":
-		*e = MembershipDeliverySettingEnum(s)
+		*e = MembershipDeliverySettingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipDeliverySettingEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipDeliverySettingEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	MembershipTypeEnumOther           MembershipTypeEnum = "OTHER"
 )
 
+func (e MembershipTypeEnum) ToPointer() *MembershipTypeEnum {
+	return &e
+}
+
 func (e *MembershipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER":
@@ -72,10 +80,10 @@ func (e *MembershipTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SHARED_DRIVE":
 		fallthrough
 	case "OTHER":
-		*e = MembershipTypeEnum(s)
+		*e = MembershipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipTypeEnum: %v", v)
 	}
 }
 

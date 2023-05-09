@@ -18,12 +18,16 @@ const (
 	TaskRequestApprovalStatusEnumChangesRequested TaskRequestApprovalStatusEnum = "changes_requested"
 )
 
+func (e TaskRequestApprovalStatusEnum) ToPointer() *TaskRequestApprovalStatusEnum {
+	return &e
+}
+
 func (e *TaskRequestApprovalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "approved":
@@ -31,10 +35,10 @@ func (e *TaskRequestApprovalStatusEnum) UnmarshalJSON(data []byte) error {
 	case "rejected":
 		fallthrough
 	case "changes_requested":
-		*e = TaskRequestApprovalStatusEnum(s)
+		*e = TaskRequestApprovalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskRequestApprovalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskRequestApprovalStatusEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	TaskRequestAssigneeStatusEnumInbox    TaskRequestAssigneeStatusEnum = "inbox"
 )
 
+func (e TaskRequestAssigneeStatusEnum) ToPointer() *TaskRequestAssigneeStatusEnum {
+	return &e
+}
+
 func (e *TaskRequestAssigneeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "upcoming":
@@ -64,10 +72,10 @@ func (e *TaskRequestAssigneeStatusEnum) UnmarshalJSON(data []byte) error {
 	case "new":
 		fallthrough
 	case "inbox":
-		*e = TaskRequestAssigneeStatusEnum(s)
+		*e = TaskRequestAssigneeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskRequestAssigneeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskRequestAssigneeStatusEnum: %v", v)
 	}
 }
 
@@ -89,12 +97,16 @@ const (
 	TaskRequestResourceSubtypeEnumApproval    TaskRequestResourceSubtypeEnum = "approval"
 )
 
+func (e TaskRequestResourceSubtypeEnum) ToPointer() *TaskRequestResourceSubtypeEnum {
+	return &e
+}
+
 func (e *TaskRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default_task":
 		fallthrough
 	case "milestone":
@@ -102,10 +114,10 @@ func (e *TaskRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "section":
 		fallthrough
 	case "approval":
-		*e = TaskRequestResourceSubtypeEnum(s)
+		*e = TaskRequestResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskRequestResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskRequestResourceSubtypeEnum: %v", v)
 	}
 }
 

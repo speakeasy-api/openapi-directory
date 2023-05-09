@@ -16,21 +16,25 @@ const (
 	GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnumForecastedSpend  GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum = "FORECASTED_SPEND"
 )
 
+func (e GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum) ToPointer() *GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum {
+	return &e
+}
+
 func (e *GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIS_UNSPECIFIED":
 		fallthrough
 	case "CURRENT_SPEND":
 		fallthrough
 	case "FORECASTED_SPEND":
-		*e = GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum(s)
+		*e = GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum: %v", v)
 	}
 }
 

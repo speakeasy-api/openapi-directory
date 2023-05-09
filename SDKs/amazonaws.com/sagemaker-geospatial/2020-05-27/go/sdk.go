@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Provides APIs for creating and managing SageMaker geospatial resources.
 // https://docs.aws.amazon.com/sagemaker-geospatial/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteEarthObservationJob - Use this operation to delete an Earth Observation job.
 func (s *SDK) DeleteEarthObservationJob(ctx context.Context, request operations.DeleteEarthObservationJobRequest) (*operations.DeleteEarthObservationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -220,7 +238,10 @@ func (s *SDK) DeleteEarthObservationJob(ctx context.Context, request operations.
 // DeleteVectorEnrichmentJob - Use this operation to delete a Vector Enrichment job.
 func (s *SDK) DeleteVectorEnrichmentJob(ctx context.Context, request operations.DeleteVectorEnrichmentJobRequest) (*operations.DeleteVectorEnrichmentJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -323,7 +344,7 @@ func (s *SDK) DeleteVectorEnrichmentJob(ctx context.Context, request operations.
 	return res, nil
 }
 
-// ExportEarthObservationJob - Use this operation to export results of an Earth Observation job and optionally source images used as input to the EOJ to an S3 location.
+// ExportEarthObservationJob - Use this operation to export results of an Earth Observation job and optionally source images used as input to the EOJ to an Amazon S3 location.
 func (s *SDK) ExportEarthObservationJob(ctx context.Context, request operations.ExportEarthObservationJobRequest) (*operations.ExportEarthObservationJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export-earth-observation-job"
@@ -449,7 +470,7 @@ func (s *SDK) ExportEarthObservationJob(ctx context.Context, request operations.
 	return res, nil
 }
 
-// ExportVectorEnrichmentJob - Use this operation to copy results of a Vector Enrichment job to an S3 location.
+// ExportVectorEnrichmentJob - Use this operation to copy results of a Vector Enrichment job to an Amazon S3 location.
 func (s *SDK) ExportVectorEnrichmentJob(ctx context.Context, request operations.ExportVectorEnrichmentJobRequest) (*operations.ExportVectorEnrichmentJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/export-vector-enrichment-jobs"
@@ -578,7 +599,10 @@ func (s *SDK) ExportVectorEnrichmentJob(ctx context.Context, request operations.
 // GetEarthObservationJob - Get the details for a previously initiated Earth Observation job.
 func (s *SDK) GetEarthObservationJob(ctx context.Context, request operations.GetEarthObservationJobRequest) (*operations.GetEarthObservationJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/earth-observation-jobs/{Arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -674,7 +698,10 @@ func (s *SDK) GetEarthObservationJob(ctx context.Context, request operations.Get
 // GetRasterDataCollection - Use this operation to get details of a specific raster data collection.
 func (s *SDK) GetRasterDataCollection(ctx context.Context, request operations.GetRasterDataCollectionRequest) (*operations.GetRasterDataCollectionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/raster-data-collection/{Arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/raster-data-collection/{Arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -770,7 +797,10 @@ func (s *SDK) GetRasterDataCollection(ctx context.Context, request operations.Ge
 // GetTile - Gets a web mercator tile for the given Earth Observation job.
 func (s *SDK) GetTile(ctx context.Context, request operations.GetTileRequest) (*operations.GetTileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tile/{z}/{x}/{y}#Arn&ImageAssets&Target", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tile/{z}/{x}/{y}#Arn&ImageAssets&Target", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -870,7 +900,10 @@ func (s *SDK) GetTile(ctx context.Context, request operations.GetTileRequest) (*
 // GetVectorEnrichmentJob - Retrieves details of a Vector Enrichment Job for a given job Amazon Resource Name (ARN).
 func (s *SDK) GetVectorEnrichmentJob(ctx context.Context, request operations.GetVectorEnrichmentJobRequest) (*operations.GetVectorEnrichmentJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/vector-enrichment-jobs/{Arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1176,7 +1209,10 @@ func (s *SDK) ListRasterDataCollections(ctx context.Context, request operations.
 // ListTagsForResource - Lists the tags attached to the resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1976,7 +2012,10 @@ func (s *SDK) StopVectorEnrichmentJob(ctx context.Context, request operations.St
 // TagResource - The resource you want to tag.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2082,7 +2121,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - The resource you want to untag.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{ResourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

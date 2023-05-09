@@ -18,12 +18,16 @@ const (
 	ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnumAPIDeprecated  ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum = "API_DEPRECATED"
 )
 
+func (e ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum) ToPointer() *ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum {
+	return &e
+}
+
 func (e *ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "API_UNSPECIFIED":
 		fallthrough
 	case "API_PREVIEW":
@@ -33,10 +37,10 @@ func (e *ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleSt
 	case "API_CURRENT":
 		fallthrough
 	case "API_DEPRECATED":
-		*e = ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum(s)
+		*e = ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum: %s", s)
+		return fmt.Errorf("invalid value for ChromeCrosDpanelAutosettingsProtoPolicyAPILifecyclePolicyAPILifecycleStageEnum: %v", v)
 	}
 }
 

@@ -105,21 +105,25 @@ const (
 	NullableIssueStateReasonEnumNotPlanned NullableIssueStateReasonEnum = "not_planned"
 )
 
+func (e NullableIssueStateReasonEnum) ToPointer() *NullableIssueStateReasonEnum {
+	return &e
+}
+
 func (e *NullableIssueStateReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "completed":
 		fallthrough
 	case "reopened":
 		fallthrough
 	case "not_planned":
-		*e = NullableIssueStateReasonEnum(s)
+		*e = NullableIssueStateReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NullableIssueStateReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for NullableIssueStateReasonEnum: %v", v)
 	}
 }
 

@@ -24,19 +24,23 @@ const (
 	DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnumMarketplace DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum = "marketplace"
 )
 
+func (e DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum) ToPointer() *DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum {
+	return &e
+}
+
 func (e *DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "devpay":
 		fallthrough
 	case "marketplace":
-		*e = DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum(s)
+		*e = DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFpgaImagesResultFpgaImagesProductCodesProductCodeTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	DescribeFpgaImagesResultFpgaImagesStateCodeEnumUnavailable DescribeFpgaImagesResultFpgaImagesStateCodeEnum = "unavailable"
 )
 
+func (e DescribeFpgaImagesResultFpgaImagesStateCodeEnum) ToPointer() *DescribeFpgaImagesResultFpgaImagesStateCodeEnum {
+	return &e
+}
+
 func (e *DescribeFpgaImagesResultFpgaImagesStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "failed":
@@ -69,10 +77,10 @@ func (e *DescribeFpgaImagesResultFpgaImagesStateCodeEnum) UnmarshalJSON(data []b
 	case "available":
 		fallthrough
 	case "unavailable":
-		*e = DescribeFpgaImagesResultFpgaImagesStateCodeEnum(s)
+		*e = DescribeFpgaImagesResultFpgaImagesStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFpgaImagesResultFpgaImagesStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFpgaImagesResultFpgaImagesStateCodeEnum: %v", v)
 	}
 }
 

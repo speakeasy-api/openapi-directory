@@ -15,17 +15,21 @@ const (
 	GETDeleteIndexFieldActionEnumDeleteIndexField GETDeleteIndexFieldActionEnum = "DeleteIndexField"
 )
 
+func (e GETDeleteIndexFieldActionEnum) ToPointer() *GETDeleteIndexFieldActionEnum {
+	return &e
+}
+
 func (e *GETDeleteIndexFieldActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteIndexField":
-		*e = GETDeleteIndexFieldActionEnum(s)
+		*e = GETDeleteIndexFieldActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteIndexFieldActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteIndexFieldActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteIndexFieldVersionEnumTwoThousandAndThirteen0101 GETDeleteIndexFieldVersionEnum = "2013-01-01"
 )
 
+func (e GETDeleteIndexFieldVersionEnum) ToPointer() *GETDeleteIndexFieldVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteIndexFieldVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDeleteIndexFieldVersionEnum(s)
+		*e = GETDeleteIndexFieldVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteIndexFieldVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteIndexFieldVersionEnum: %v", v)
 	}
 }
 

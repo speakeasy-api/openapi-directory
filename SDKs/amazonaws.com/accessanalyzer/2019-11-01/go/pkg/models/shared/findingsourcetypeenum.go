@@ -16,12 +16,16 @@ const (
 	FindingSourceTypeEnumS3AccessPointAccount FindingSourceTypeEnum = "S3_ACCESS_POINT_ACCOUNT"
 )
 
+func (e FindingSourceTypeEnum) ToPointer() *FindingSourceTypeEnum {
+	return &e
+}
+
 func (e *FindingSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POLICY":
 		fallthrough
 	case "BUCKET_ACL":
@@ -29,9 +33,9 @@ func (e *FindingSourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "S3_ACCESS_POINT":
 		fallthrough
 	case "S3_ACCESS_POINT_ACCOUNT":
-		*e = FindingSourceTypeEnum(s)
+		*e = FindingSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingSourceTypeEnum: %v", v)
 	}
 }

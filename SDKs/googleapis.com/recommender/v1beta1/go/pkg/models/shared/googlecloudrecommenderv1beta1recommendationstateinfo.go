@@ -19,12 +19,16 @@ const (
 	GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnumDismissed        GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum = "DISMISSED"
 )
 
+func (e GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum) ToPointer() *GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -36,10 +40,10 @@ func (e *GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum) Unmarsha
 	case "FAILED":
 		fallthrough
 	case "DISMISSED":
-		*e = GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum(s)
+		*e = GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1RecommendationStateInfoStateEnum: %v", v)
 	}
 }
 

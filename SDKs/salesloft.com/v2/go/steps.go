@@ -87,7 +87,10 @@ func (s *steps) GetV2StepsJSON(ctx context.Context, request operations.GetV2Step
 // Fetches a step, by ID only.
 func (s *steps) GetV2StepsIDJSON(ctx context.Context, request operations.GetV2StepsIDJSONRequest) (*operations.GetV2StepsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/steps/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/steps/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -34,7 +34,10 @@ func newBusiness(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a batch of business transaction classification results.
 func (s *business) GetABatchOfBusinessTransactionClassificationResults(ctx context.Context, request operations.GetABatchOfBusinessTransactionClassificationResultsRequest) (*operations.GetABatchOfBusinessTransactionClassificationResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/classifier/business/batch/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/classifier/business/batch/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

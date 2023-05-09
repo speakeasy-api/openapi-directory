@@ -16,12 +16,16 @@ const (
 	RetentionIntervalUnitValuesEnumYears  RetentionIntervalUnitValuesEnum = "YEARS"
 )
 
+func (e RetentionIntervalUnitValuesEnum) ToPointer() *RetentionIntervalUnitValuesEnum {
+	return &e
+}
+
 func (e *RetentionIntervalUnitValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAYS":
 		fallthrough
 	case "WEEKS":
@@ -29,9 +33,9 @@ func (e *RetentionIntervalUnitValuesEnum) UnmarshalJSON(data []byte) error {
 	case "MONTHS":
 		fallthrough
 	case "YEARS":
-		*e = RetentionIntervalUnitValuesEnum(s)
+		*e = RetentionIntervalUnitValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetentionIntervalUnitValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for RetentionIntervalUnitValuesEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	DeleteResourceXAmzTargetEnumCloudAPIServiceDeleteResource DeleteResourceXAmzTargetEnum = "CloudApiService.DeleteResource"
 )
 
+func (e DeleteResourceXAmzTargetEnum) ToPointer() *DeleteResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudApiService.DeleteResource":
-		*e = DeleteResourceXAmzTargetEnum(s)
+		*e = DeleteResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourceXAmzTargetEnum: %v", v)
 	}
 }
 

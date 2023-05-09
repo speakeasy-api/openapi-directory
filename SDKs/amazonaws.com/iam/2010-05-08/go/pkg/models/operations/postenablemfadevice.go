@@ -15,17 +15,21 @@ const (
 	POSTEnableMFADeviceActionEnumEnableMfaDevice POSTEnableMFADeviceActionEnum = "EnableMFADevice"
 )
 
+func (e POSTEnableMFADeviceActionEnum) ToPointer() *POSTEnableMFADeviceActionEnum {
+	return &e
+}
+
 func (e *POSTEnableMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableMFADevice":
-		*e = POSTEnableMFADeviceActionEnum(s)
+		*e = POSTEnableMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableMFADeviceVersionEnumTwoThousandAndTen0508 POSTEnableMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e POSTEnableMFADeviceVersionEnum) ToPointer() *POSTEnableMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTEnableMFADeviceVersionEnum(s)
+		*e = POSTEnableMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableMFADeviceVersionEnum: %v", v)
 	}
 }
 

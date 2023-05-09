@@ -21,12 +21,16 @@ const (
 	AllowListStatusCodeEnumUnknownError         AllowListStatusCodeEnum = "UNKNOWN_ERROR"
 )
 
+func (e AllowListStatusCodeEnum) ToPointer() *AllowListStatusCodeEnum {
+	return &e
+}
+
 func (e *AllowListStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
 		fallthrough
 	case "S3_OBJECT_NOT_FOUND":
@@ -42,9 +46,9 @@ func (e *AllowListStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "S3_OBJECT_EMPTY":
 		fallthrough
 	case "UNKNOWN_ERROR":
-		*e = AllowListStatusCodeEnum(s)
+		*e = AllowListStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllowListStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AllowListStatusCodeEnum: %v", v)
 	}
 }

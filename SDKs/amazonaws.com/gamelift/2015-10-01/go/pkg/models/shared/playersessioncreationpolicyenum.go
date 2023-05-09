@@ -14,18 +14,22 @@ const (
 	PlayerSessionCreationPolicyEnumDenyAll   PlayerSessionCreationPolicyEnum = "DENY_ALL"
 )
 
+func (e PlayerSessionCreationPolicyEnum) ToPointer() *PlayerSessionCreationPolicyEnum {
+	return &e
+}
+
 func (e *PlayerSessionCreationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPT_ALL":
 		fallthrough
 	case "DENY_ALL":
-		*e = PlayerSessionCreationPolicyEnum(s)
+		*e = PlayerSessionCreationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerSessionCreationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerSessionCreationPolicyEnum: %v", v)
 	}
 }

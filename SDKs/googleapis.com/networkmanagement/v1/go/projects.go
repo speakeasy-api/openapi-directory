@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreate - Creates a new Connectivity Test. After you create a test, the reachability analysis is performed as part of the long running operation, which completes when the analysis completes. If the endpoint specifications in `ConnectivityTest` are invalid (for example, containing non-existent resources in the network, or you don't have read permissions to the network configurations of listed projects), then the reachability result returns a value of `UNKNOWN`. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result returns a value of AMBIGUOUS. For more information, see the Connectivity Test documentation.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreate(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectivityTests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectivityTests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectivityTestInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsCrea
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicy(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicyRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicySecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetI
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsList - Lists all Connectivity Tests owned by a project.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsList(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsListRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsListSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectivityTests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/connectivityTests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsList
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatch - Updates the configuration of an existing `ConnectivityTest`. After you update a test, the reachability analysis is performed as part of the long running operation, which completes when the analysis completes. The Reachability state in the test resource is updated with the new result. If the endpoint specifications in `ConnectivityTest` are invalid (for example, they contain non-existent resources in the network, or the user does not have read permissions to the network configurations of listed projects), then the reachability result returns a value of UNKNOWN. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest` for for more details.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatch(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatchRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatchSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ConnectivityTestInput", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsPatc
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerun - Rerun an existing `ConnectivityTest`. After the user triggers the rerun, the reachability analysis is performed as part of the long running operation, which completes when the analysis completes. Even though the test configuration remains the same, the reachability result may change due to underlying network configuration changes. If the endpoint specifications in `ConnectivityTest` become invalid (for example, specified resources are deleted in the network, or you lost read permissions to the network configurations of listed projects), then the reachability result returns a value of `UNKNOWN`.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerun(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsRerunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rerun", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rerun", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsReru
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetIamPolicy(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetIamPolicyRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetIamPolicySecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsSetI
 // NetworkmanagementProjectsLocationsGlobalConnectivityTestsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsTestIamPermissions(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsTestIamPermissionsRequest, security operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsTestIamPermissionsSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalConnectivityTestsTest
 // NetworkmanagementProjectsLocationsGlobalOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsCancel(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalOperationsCancelRequest, security operations.NetworkmanagementProjectsLocationsGlobalOperationsCancelSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsCancel(ctx 
 // NetworkmanagementProjectsLocationsGlobalOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsDelete(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalOperationsDeleteRequest, security operations.NetworkmanagementProjectsLocationsGlobalOperationsDeleteSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsDelete(ctx 
 // NetworkmanagementProjectsLocationsGlobalOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsGet(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalOperationsGetRequest, security operations.NetworkmanagementProjectsLocationsGlobalOperationsGetSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsGet(ctx con
 // NetworkmanagementProjectsLocationsGlobalOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsList(ctx context.Context, request operations.NetworkmanagementProjectsLocationsGlobalOperationsListRequest, security operations.NetworkmanagementProjectsLocationsGlobalOperationsListSecurity) (*operations.NetworkmanagementProjectsLocationsGlobalOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) NetworkmanagementProjectsLocationsGlobalOperationsList(ctx co
 // NetworkmanagementProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) NetworkmanagementProjectsLocationsList(ctx context.Context, request operations.NetworkmanagementProjectsLocationsListRequest, security operations.NetworkmanagementProjectsLocationsListSecurity) (*operations.NetworkmanagementProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnumFormattedString BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum = "FORMATTED_STRING"
 )
 
+func (e BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum) ToPointer() *BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum {
+	return &e
+}
+
 func (e *BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIAL_NUMBER":
 		fallthrough
 	case "FORMATTED_STRING":
-		*e = BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum(s)
+		*e = BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestDateTimeRenderOptionEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	BatchGetValuesByDataFilterRequestMajorDimensionEnumColumns              BatchGetValuesByDataFilterRequestMajorDimensionEnum = "COLUMNS"
 )
 
+func (e BatchGetValuesByDataFilterRequestMajorDimensionEnum) ToPointer() *BatchGetValuesByDataFilterRequestMajorDimensionEnum {
+	return &e
+}
+
 func (e *BatchGetValuesByDataFilterRequestMajorDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = BatchGetValuesByDataFilterRequestMajorDimensionEnum(s)
+		*e = BatchGetValuesByDataFilterRequestMajorDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestMajorDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestMajorDimensionEnum: %v", v)
 	}
 }
 
@@ -67,21 +75,25 @@ const (
 	BatchGetValuesByDataFilterRequestValueRenderOptionEnumFormula          BatchGetValuesByDataFilterRequestValueRenderOptionEnum = "FORMULA"
 )
 
+func (e BatchGetValuesByDataFilterRequestValueRenderOptionEnum) ToPointer() *BatchGetValuesByDataFilterRequestValueRenderOptionEnum {
+	return &e
+}
+
 func (e *BatchGetValuesByDataFilterRequestValueRenderOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMATTED_VALUE":
 		fallthrough
 	case "UNFORMATTED_VALUE":
 		fallthrough
 	case "FORMULA":
-		*e = BatchGetValuesByDataFilterRequestValueRenderOptionEnum(s)
+		*e = BatchGetValuesByDataFilterRequestValueRenderOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestValueRenderOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchGetValuesByDataFilterRequestValueRenderOptionEnum: %v", v)
 	}
 }
 

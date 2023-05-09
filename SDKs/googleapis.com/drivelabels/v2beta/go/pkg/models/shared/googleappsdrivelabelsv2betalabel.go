@@ -14,23 +14,30 @@ const (
 	GoogleAppsDriveLabelsV2betaLabelLabelTypeEnumLabelTypeUnspecified GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = "LABEL_TYPE_UNSPECIFIED"
 	GoogleAppsDriveLabelsV2betaLabelLabelTypeEnumShared               GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = "SHARED"
 	GoogleAppsDriveLabelsV2betaLabelLabelTypeEnumAdmin                GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = "ADMIN"
+	GoogleAppsDriveLabelsV2betaLabelLabelTypeEnumGoogleApp            GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum = "GOOGLE_APP"
 )
 
+func (e GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum) ToPointer() *GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SHARED":
 		fallthrough
 	case "ADMIN":
-		*e = GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum(s)
+		fallthrough
+	case "GOOGLE_APP":
+		*e = GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2betaLabelLabelTypeEnum: %v", v)
 	}
 }
 

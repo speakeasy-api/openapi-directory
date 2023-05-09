@@ -16,17 +16,21 @@ const (
 	DeleteTrialComponentXAmzTargetEnumSageMakerDeleteTrialComponent DeleteTrialComponentXAmzTargetEnum = "SageMaker.DeleteTrialComponent"
 )
 
+func (e DeleteTrialComponentXAmzTargetEnum) ToPointer() *DeleteTrialComponentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTrialComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteTrialComponent":
-		*e = DeleteTrialComponentXAmzTargetEnum(s)
+		*e = DeleteTrialComponentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTrialComponentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTrialComponentXAmzTargetEnum: %v", v)
 	}
 }
 

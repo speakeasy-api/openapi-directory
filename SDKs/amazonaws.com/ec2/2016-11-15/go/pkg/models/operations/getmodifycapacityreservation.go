@@ -16,17 +16,21 @@ const (
 	GETModifyCapacityReservationActionEnumModifyCapacityReservation GETModifyCapacityReservationActionEnum = "ModifyCapacityReservation"
 )
 
+func (e GETModifyCapacityReservationActionEnum) ToPointer() *GETModifyCapacityReservationActionEnum {
+	return &e
+}
+
 func (e *GETModifyCapacityReservationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyCapacityReservation":
-		*e = GETModifyCapacityReservationActionEnum(s)
+		*e = GETModifyCapacityReservationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCapacityReservationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCapacityReservationActionEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	GETModifyCapacityReservationEndDateTypeEnumLimited   GETModifyCapacityReservationEndDateTypeEnum = "limited"
 )
 
+func (e GETModifyCapacityReservationEndDateTypeEnum) ToPointer() *GETModifyCapacityReservationEndDateTypeEnum {
+	return &e
+}
+
 func (e *GETModifyCapacityReservationEndDateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unlimited":
 		fallthrough
 	case "limited":
-		*e = GETModifyCapacityReservationEndDateTypeEnum(s)
+		*e = GETModifyCapacityReservationEndDateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCapacityReservationEndDateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCapacityReservationEndDateTypeEnum: %v", v)
 	}
 }
 
@@ -61,17 +69,21 @@ const (
 	GETModifyCapacityReservationVersionEnumTwoThousandAndSixteen1115 GETModifyCapacityReservationVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyCapacityReservationVersionEnum) ToPointer() *GETModifyCapacityReservationVersionEnum {
+	return &e
+}
+
 func (e *GETModifyCapacityReservationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyCapacityReservationVersionEnum(s)
+		*e = GETModifyCapacityReservationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyCapacityReservationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyCapacityReservationVersionEnum: %v", v)
 	}
 }
 

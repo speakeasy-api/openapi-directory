@@ -16,17 +16,21 @@ const (
 	DescribeEndpointXAmzTargetEnumComprehend20171127DescribeEndpoint DescribeEndpointXAmzTargetEnum = "Comprehend_20171127.DescribeEndpoint"
 )
 
+func (e DescribeEndpointXAmzTargetEnum) ToPointer() *DescribeEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeEndpoint":
-		*e = DescribeEndpointXAmzTargetEnum(s)
+		*e = DescribeEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

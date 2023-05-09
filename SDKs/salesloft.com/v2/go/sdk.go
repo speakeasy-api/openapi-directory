@@ -21,6 +21,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - SalesLoft helps transform sales teams into modern sales organizations  - converting more target accounts into customer accounts
 type SDK struct {
 	// AccountStages - Account Stage Management
@@ -117,6 +132,8 @@ type SDK struct {
 	PhoneNumberAssignments *phoneNumberAssignments
 	// RecordingSettings - Recording Settings Information
 	RecordingSettings *recordingSettings
+	// Roles - Role Information
+	Roles *roles
 	// SavedListViews - Saved List Views
 	SavedListViews *savedListViews
 	// Steps - Steps
@@ -613,6 +630,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.RecordingSettings = newRecordingSettings(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Roles = newRoles(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

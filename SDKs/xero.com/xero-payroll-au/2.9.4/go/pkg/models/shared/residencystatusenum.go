@@ -15,20 +15,24 @@ const (
 	ResidencyStatusEnumWorkingholidaymaker ResidencyStatusEnum = "WORKINGHOLIDAYMAKER"
 )
 
+func (e ResidencyStatusEnum) ToPointer() *ResidencyStatusEnum {
+	return &e
+}
+
 func (e *ResidencyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUSTRALIANRESIDENT":
 		fallthrough
 	case "FOREIGNRESIDENT":
 		fallthrough
 	case "WORKINGHOLIDAYMAKER":
-		*e = ResidencyStatusEnum(s)
+		*e = ResidencyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResidencyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResidencyStatusEnum: %v", v)
 	}
 }

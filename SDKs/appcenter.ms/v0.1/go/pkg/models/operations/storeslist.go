@@ -50,12 +50,16 @@ const (
 	StoresList200ApplicationJSONTrackEnumTestflightExternal StoresList200ApplicationJSONTrackEnum = "testflight-external"
 )
 
+func (e StoresList200ApplicationJSONTrackEnum) ToPointer() *StoresList200ApplicationJSONTrackEnum {
+	return &e
+}
+
 func (e *StoresList200ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "production":
 		fallthrough
 	case "alpha":
@@ -65,10 +69,10 @@ func (e *StoresList200ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) error
 	case "testflight-internal":
 		fallthrough
 	case "testflight-external":
-		*e = StoresList200ApplicationJSONTrackEnum(s)
+		*e = StoresList200ApplicationJSONTrackEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresList200ApplicationJSONTrackEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresList200ApplicationJSONTrackEnum: %v", v)
 	}
 }
 

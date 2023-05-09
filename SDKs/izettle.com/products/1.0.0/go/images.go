@@ -35,7 +35,10 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Retrieves all library items images used by the organization, sorted by updated date
 func (s *images) GetAllImageUrls(ctx context.Context, request operations.GetAllImageUrlsRequest, security operations.GetAllImageUrlsSecurity) (*operations.GetAllImageUrlsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -10,32 +10,36 @@ import (
 )
 
 // OrderAPIGetArticleTitleSourceEnum - The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
-type OrderAPIGetArticleTitleSourceEnum string
+type OrderAPIGetArticleTitleSourceEnum int
 
 const (
-	OrderAPIGetArticleTitleSourceEnumZero  OrderAPIGetArticleTitleSourceEnum = "0"
-	OrderAPIGetArticleTitleSourceEnumOne   OrderAPIGetArticleTitleSourceEnum = "1"
-	OrderAPIGetArticleTitleSourceEnumTwo   OrderAPIGetArticleTitleSourceEnum = "2"
-	OrderAPIGetArticleTitleSourceEnumThree OrderAPIGetArticleTitleSourceEnum = "3"
+	OrderAPIGetArticleTitleSourceEnumZero  OrderAPIGetArticleTitleSourceEnum = 0
+	OrderAPIGetArticleTitleSourceEnumOne   OrderAPIGetArticleTitleSourceEnum = 1
+	OrderAPIGetArticleTitleSourceEnumTwo   OrderAPIGetArticleTitleSourceEnum = 2
+	OrderAPIGetArticleTitleSourceEnumThree OrderAPIGetArticleTitleSourceEnum = 3
 )
 
+func (e OrderAPIGetArticleTitleSourceEnum) ToPointer() *OrderAPIGetArticleTitleSourceEnum {
+	return &e
+}
+
 func (e *OrderAPIGetArticleTitleSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
-		*e = OrderAPIGetArticleTitleSourceEnum(s)
+	case 3:
+		*e = OrderAPIGetArticleTitleSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrderAPIGetArticleTitleSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for OrderAPIGetArticleTitleSourceEnum: %v", v)
 	}
 }
 

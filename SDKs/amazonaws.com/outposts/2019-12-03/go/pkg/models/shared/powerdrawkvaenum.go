@@ -16,12 +16,16 @@ const (
 	PowerDrawKvaEnumPower30Kva PowerDrawKvaEnum = "POWER_30_KVA"
 )
 
+func (e PowerDrawKvaEnum) ToPointer() *PowerDrawKvaEnum {
+	return &e
+}
+
 func (e *PowerDrawKvaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_5_KVA":
 		fallthrough
 	case "POWER_10_KVA":
@@ -29,9 +33,9 @@ func (e *PowerDrawKvaEnum) UnmarshalJSON(data []byte) error {
 	case "POWER_15_KVA":
 		fallthrough
 	case "POWER_30_KVA":
-		*e = PowerDrawKvaEnum(s)
+		*e = PowerDrawKvaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PowerDrawKvaEnum: %s", s)
+		return fmt.Errorf("invalid value for PowerDrawKvaEnum: %v", v)
 	}
 }

@@ -85,7 +85,10 @@ func (s *serviceCredential) ListServiceCredentials(ctx context.Context, request 
 // Returns a ServiceCredential object
 func (s *serviceCredential) ShowServiceCredential(ctx context.Context, request operations.ShowServiceCredentialRequest) (*operations.ShowServiceCredentialResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/service_credentials/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/service_credentials/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

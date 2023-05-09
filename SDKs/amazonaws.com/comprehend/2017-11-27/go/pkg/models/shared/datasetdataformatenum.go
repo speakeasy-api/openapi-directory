@@ -14,18 +14,22 @@ const (
 	DatasetDataFormatEnumAugmentedManifest DatasetDataFormatEnum = "AUGMENTED_MANIFEST"
 )
 
+func (e DatasetDataFormatEnum) ToPointer() *DatasetDataFormatEnum {
+	return &e
+}
+
 func (e *DatasetDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPREHEND_CSV":
 		fallthrough
 	case "AUGMENTED_MANIFEST":
-		*e = DatasetDataFormatEnum(s)
+		*e = DatasetDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasetDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasetDataFormatEnum: %v", v)
 	}
 }

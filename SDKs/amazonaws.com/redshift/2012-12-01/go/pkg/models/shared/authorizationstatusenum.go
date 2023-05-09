@@ -14,18 +14,22 @@ const (
 	AuthorizationStatusEnumRevoking   AuthorizationStatusEnum = "Revoking"
 )
 
+func (e AuthorizationStatusEnum) ToPointer() *AuthorizationStatusEnum {
+	return &e
+}
+
 func (e *AuthorizationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authorized":
 		fallthrough
 	case "Revoking":
-		*e = AuthorizationStatusEnum(s)
+		*e = AuthorizationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationStatusEnum: %v", v)
 	}
 }

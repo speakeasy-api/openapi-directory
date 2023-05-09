@@ -23,12 +23,16 @@ const (
 	Locationsv1GetV1LocationsGetOrderByLocationsOrderEnumRandom       Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum = "random"
 )
 
+func (e Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum) ToPointer() *Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum {
+	return &e
+}
+
 func (e *Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum) UnmarshalJSON(da
 	case "count":
 		fallthrough
 	case "random":
-		*e = Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum(s)
+		*e = Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for Locationsv1GetV1LocationsGetOrderByLocationsOrderEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	Locationsv1GetV1LocationsGetSortSortEnumDesc Locationsv1GetV1LocationsGetSortSortEnum = "desc"
 )
 
+func (e Locationsv1GetV1LocationsGetSortSortEnum) ToPointer() *Locationsv1GetV1LocationsGetSortSortEnum {
+	return &e
+}
+
 func (e *Locationsv1GetV1LocationsGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = Locationsv1GetV1LocationsGetSortSortEnum(s)
+		*e = Locationsv1GetV1LocationsGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locationsv1GetV1LocationsGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for Locationsv1GetV1LocationsGetSortSortEnum: %v", v)
 	}
 }
 

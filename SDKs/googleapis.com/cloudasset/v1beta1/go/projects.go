@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudassetProjectsBatchGetAssetsHistory - Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
 func (s *projects) CloudassetProjectsBatchGetAssetsHistory(ctx context.Context, request operations.CloudassetProjectsBatchGetAssetsHistoryRequest, security operations.CloudassetProjectsBatchGetAssetsHistorySecurity) (*operations.CloudassetProjectsBatchGetAssetsHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:batchGetAssetsHistory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:batchGetAssetsHistory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) CloudassetProjectsBatchGetAssetsHistory(ctx context.Context, 
 // CloudassetProjectsExportAssets - Exports assets with time and resource types to a given Cloud Storage location. The output format is newline-delimited JSON. This API implements the google.longrunning.Operation API allowing you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
 func (s *projects) CloudassetProjectsExportAssets(ctx context.Context, request operations.CloudassetProjectsExportAssetsRequest, security operations.CloudassetProjectsExportAssetsSecurity) (*operations.CloudassetProjectsExportAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:exportAssets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:exportAssets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportAssetsRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) CloudassetProjectsExportAssets(ctx context.Context, request o
 // CloudassetProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) CloudassetProjectsOperationsGet(ctx context.Context, request operations.CloudassetProjectsOperationsGetRequest, security operations.CloudassetProjectsOperationsGetSecurity) (*operations.CloudassetProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

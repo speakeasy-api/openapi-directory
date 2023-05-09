@@ -15,20 +15,24 @@ const (
 	ActionsSuppressedByEnumAlarm           ActionsSuppressedByEnum = "Alarm"
 )
 
+func (e ActionsSuppressedByEnum) ToPointer() *ActionsSuppressedByEnum {
+	return &e
+}
+
 func (e *ActionsSuppressedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WaitPeriod":
 		fallthrough
 	case "ExtensionPeriod":
 		fallthrough
 	case "Alarm":
-		*e = ActionsSuppressedByEnum(s)
+		*e = ActionsSuppressedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsSuppressedByEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsSuppressedByEnum: %v", v)
 	}
 }

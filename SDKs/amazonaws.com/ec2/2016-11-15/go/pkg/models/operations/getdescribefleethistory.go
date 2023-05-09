@@ -16,17 +16,21 @@ const (
 	GETDescribeFleetHistoryActionEnumDescribeFleetHistory GETDescribeFleetHistoryActionEnum = "DescribeFleetHistory"
 )
 
+func (e GETDescribeFleetHistoryActionEnum) ToPointer() *GETDescribeFleetHistoryActionEnum {
+	return &e
+}
+
 func (e *GETDescribeFleetHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeFleetHistory":
-		*e = GETDescribeFleetHistoryActionEnum(s)
+		*e = GETDescribeFleetHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFleetHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFleetHistoryActionEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ const (
 	GETDescribeFleetHistoryEventTypeEnumServiceError   GETDescribeFleetHistoryEventTypeEnum = "service-error"
 )
 
+func (e GETDescribeFleetHistoryEventTypeEnum) ToPointer() *GETDescribeFleetHistoryEventTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeFleetHistoryEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-change":
 		fallthrough
 	case "fleet-change":
 		fallthrough
 	case "service-error":
-		*e = GETDescribeFleetHistoryEventTypeEnum(s)
+		*e = GETDescribeFleetHistoryEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFleetHistoryEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFleetHistoryEventTypeEnum: %v", v)
 	}
 }
 
@@ -64,17 +72,21 @@ const (
 	GETDescribeFleetHistoryVersionEnumTwoThousandAndSixteen1115 GETDescribeFleetHistoryVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeFleetHistoryVersionEnum) ToPointer() *GETDescribeFleetHistoryVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeFleetHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeFleetHistoryVersionEnum(s)
+		*e = GETDescribeFleetHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeFleetHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeFleetHistoryVersionEnum: %v", v)
 	}
 }
 

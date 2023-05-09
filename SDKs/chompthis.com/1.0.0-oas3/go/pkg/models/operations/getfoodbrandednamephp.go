@@ -17,50 +17,54 @@ type GetFoodBrandedNamePhpSecurity struct {
 //
 // **Example**
 // > ```&limit=10```
-type GetFoodBrandedNamePhpLimitEnum string
+type GetFoodBrandedNamePhpLimitEnum int64
 
 const (
-	GetFoodBrandedNamePhpLimitEnumOne   GetFoodBrandedNamePhpLimitEnum = "1"
-	GetFoodBrandedNamePhpLimitEnumTwo   GetFoodBrandedNamePhpLimitEnum = "2"
-	GetFoodBrandedNamePhpLimitEnumThree GetFoodBrandedNamePhpLimitEnum = "3"
-	GetFoodBrandedNamePhpLimitEnumFour  GetFoodBrandedNamePhpLimitEnum = "4"
-	GetFoodBrandedNamePhpLimitEnumFive  GetFoodBrandedNamePhpLimitEnum = "5"
-	GetFoodBrandedNamePhpLimitEnumSix   GetFoodBrandedNamePhpLimitEnum = "6"
-	GetFoodBrandedNamePhpLimitEnumSeven GetFoodBrandedNamePhpLimitEnum = "7"
-	GetFoodBrandedNamePhpLimitEnumEight GetFoodBrandedNamePhpLimitEnum = "8"
-	GetFoodBrandedNamePhpLimitEnumNine  GetFoodBrandedNamePhpLimitEnum = "9"
-	GetFoodBrandedNamePhpLimitEnumTen   GetFoodBrandedNamePhpLimitEnum = "10"
+	GetFoodBrandedNamePhpLimitEnumOne   GetFoodBrandedNamePhpLimitEnum = 1
+	GetFoodBrandedNamePhpLimitEnumTwo   GetFoodBrandedNamePhpLimitEnum = 2
+	GetFoodBrandedNamePhpLimitEnumThree GetFoodBrandedNamePhpLimitEnum = 3
+	GetFoodBrandedNamePhpLimitEnumFour  GetFoodBrandedNamePhpLimitEnum = 4
+	GetFoodBrandedNamePhpLimitEnumFive  GetFoodBrandedNamePhpLimitEnum = 5
+	GetFoodBrandedNamePhpLimitEnumSix   GetFoodBrandedNamePhpLimitEnum = 6
+	GetFoodBrandedNamePhpLimitEnumSeven GetFoodBrandedNamePhpLimitEnum = 7
+	GetFoodBrandedNamePhpLimitEnumEight GetFoodBrandedNamePhpLimitEnum = 8
+	GetFoodBrandedNamePhpLimitEnumNine  GetFoodBrandedNamePhpLimitEnum = 9
+	GetFoodBrandedNamePhpLimitEnumTen   GetFoodBrandedNamePhpLimitEnum = 10
 )
 
+func (e GetFoodBrandedNamePhpLimitEnum) ToPointer() *GetFoodBrandedNamePhpLimitEnum {
+	return &e
+}
+
 func (e *GetFoodBrandedNamePhpLimitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
+	switch v {
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "7":
+	case 7:
 		fallthrough
-	case "8":
+	case 8:
 		fallthrough
-	case "9":
+	case 9:
 		fallthrough
-	case "10":
-		*e = GetFoodBrandedNamePhpLimitEnum(s)
+	case 10:
+		*e = GetFoodBrandedNamePhpLimitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFoodBrandedNamePhpLimitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFoodBrandedNamePhpLimitEnum: %v", v)
 	}
 }
 

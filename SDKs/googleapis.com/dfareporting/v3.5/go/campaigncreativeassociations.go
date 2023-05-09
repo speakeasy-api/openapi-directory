@@ -34,7 +34,10 @@ func newCampaignCreativeAssociations(defaultClient, securityClient HTTPClient, s
 // DfareportingCampaignCreativeAssociationsInsert - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
 func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsInsert(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsInsertRequest, security operations.DfareportingCampaignCreativeAssociationsInsertSecurity) (*operations.DfareportingCampaignCreativeAssociationsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CampaignCreativeAssociation", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsI
 // DfareportingCampaignCreativeAssociationsList - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
 func (s *campaignCreativeAssociations) DfareportingCampaignCreativeAssociationsList(ctx context.Context, request operations.DfareportingCampaignCreativeAssociationsListRequest, security operations.DfareportingCampaignCreativeAssociationsListSecurity) (*operations.DfareportingCampaignCreativeAssociationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/campaigns/{campaignId}/campaignCreativeAssociations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

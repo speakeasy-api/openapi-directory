@@ -16,17 +16,21 @@ const (
 	PollForThirdPartyJobsXAmzTargetEnumCodePipeline20150709PollForThirdPartyJobs PollForThirdPartyJobsXAmzTargetEnum = "CodePipeline_20150709.PollForThirdPartyJobs"
 )
 
+func (e PollForThirdPartyJobsXAmzTargetEnum) ToPointer() *PollForThirdPartyJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *PollForThirdPartyJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.PollForThirdPartyJobs":
-		*e = PollForThirdPartyJobsXAmzTargetEnum(s)
+		*e = PollForThirdPartyJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PollForThirdPartyJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PollForThirdPartyJobsXAmzTargetEnum: %v", v)
 	}
 }
 

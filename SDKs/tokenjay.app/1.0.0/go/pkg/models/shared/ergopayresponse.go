@@ -16,12 +16,16 @@ const (
 	ErgoPayResponseMessageSeverityEnumError       ErgoPayResponseMessageSeverityEnum = "ERROR"
 )
 
+func (e ErgoPayResponseMessageSeverityEnum) ToPointer() *ErgoPayResponseMessageSeverityEnum {
+	return &e
+}
+
 func (e *ErgoPayResponseMessageSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "INFORMATION":
@@ -29,10 +33,10 @@ func (e *ErgoPayResponseMessageSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = ErgoPayResponseMessageSeverityEnum(s)
+		*e = ErgoPayResponseMessageSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErgoPayResponseMessageSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for ErgoPayResponseMessageSeverityEnum: %v", v)
 	}
 }
 

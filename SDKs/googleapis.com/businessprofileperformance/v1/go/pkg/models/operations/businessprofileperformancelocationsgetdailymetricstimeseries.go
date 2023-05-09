@@ -27,12 +27,16 @@ const (
 	BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnumBusinessFoodMenuClicks           BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum = "BUSINESS_FOOD_MENU_CLICKS"
 )
 
+func (e BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum) ToPointer() *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum {
+	return &e
+}
+
 func (e *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY_METRIC_UNKNOWN":
 		fallthrough
 	case "BUSINESS_IMPRESSIONS_DESKTOP_MAPS":
@@ -56,14 +60,14 @@ func (e *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetric
 	case "BUSINESS_FOOD_ORDERS":
 		fallthrough
 	case "BUSINESS_FOOD_MENU_CLICKS":
-		*e = BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum(s)
+		*e = BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailyMetricEnum: %v", v)
 	}
 }
 
-// BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY.
+// BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
 type BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum string
 
 const (
@@ -77,12 +81,16 @@ const (
 	BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnumSunday               BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum = "SUNDAY"
 )
 
+func (e BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum) ToPointer() *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum {
+	return &e
+}
+
 func (e *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -98,10 +106,10 @@ func (e *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEnt
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum(s)
+		*e = BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -128,7 +136,7 @@ type BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest struct 
 	DailyRangeStartDateMonth *int64 `queryParam:"style=form,explode=true,name=dailyRange.startDate.month"`
 	// Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
 	DailyRangeStartDateYear *int64 `queryParam:"style=form,explode=true,name=dailyRange.startDate.year"`
-	// Represents the day of the week. Eg: MONDAY.
+	// Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
 	DailySubEntityTypeDayOfWeek *BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesDailySubEntityTypeDayOfWeekEnum `queryParam:"style=form,explode=true,name=dailySubEntityType.dayOfWeek"`
 	// Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 	DailySubEntityTypeTimeOfDayHours *int64 `queryParam:"style=form,explode=true,name=dailySubEntityType.timeOfDay.hours"`

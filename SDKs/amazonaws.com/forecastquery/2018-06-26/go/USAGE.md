@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,30 +17,28 @@ func main() {
         }),
     )
 
-    req := operations.QueryForecastRequest{
+    ctx := context.Background()
+    res, err := s.QueryForecast(ctx, operations.QueryForecastRequest{
         QueryForecastRequest: shared.QueryForecastRequest{
-            EndDate: "corrupti",
+            EndDate: sdk.String("corrupti"),
             Filters: map[string]string{
                 "distinctio": "quibusdam",
                 "unde": "nulla",
                 "corrupti": "illum",
             },
             ForecastArn: "vel",
-            NextToken: "error",
-            StartDate: "deserunt",
+            NextToken: sdk.String("error"),
+            StartDate: sdk.String("deserunt"),
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "AmazonForecastRuntime.QueryForecast",
-    }
-
-    ctx := context.Background()
-    res, err := s.QueryForecast(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.QueryForecastXAmzTargetEnumAmazonForecastRuntimeQueryForecast,
+    })
     if err != nil {
         log.Fatal(err)
     }

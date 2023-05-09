@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - This section provides documentation for the AWS RoboMaker API operations.
 // https://docs.aws.amazon.com/robomaker/ - Amazon Web Services documentation
 type SDK struct {
@@ -294,6 +309,8 @@ func (s *SDK) BatchDescribeSimulationJob(ctx context.Context, request operations
 }
 
 // CancelDeploymentJob - <p>Cancels the specified deployment job.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CancelDeploymentJob(ctx context.Context, request operations.CancelDeploymentJobRequest) (*operations.CancelDeploymentJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/cancelDeploymentJob"
@@ -774,6 +791,8 @@ func (s *SDK) CancelWorldGenerationJob(ctx context.Context, request operations.C
 }
 
 // CreateDeploymentJob - <p>Deploys a specific version of a robot application to robots in a fleet.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important> <p>The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new version, use <code>CreateRobotApplicationVersion</code> or see <a href="https://docs.aws.amazon.com/robomaker/latest/dg/create-robot-application-version.html">Creating a Robot Application Version</a>. </p> <note> <p>After 90 days, deployment jobs expire and will be deleted. They will no longer be accessible. </p> </note>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateDeploymentJob(ctx context.Context, request operations.CreateDeploymentJobRequest) (*operations.CreateDeploymentJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createDeploymentJob"
@@ -900,6 +919,8 @@ func (s *SDK) CreateDeploymentJob(ctx context.Context, request operations.Create
 }
 
 // CreateFleet - <p>Creates a fleet, a logical group of robots running the same robot application.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetRequest) (*operations.CreateFleetResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createFleet"
@@ -996,6 +1017,8 @@ func (s *SDK) CreateFleet(ctx context.Context, request operations.CreateFleetReq
 }
 
 // CreateRobot - <p>Creates a robot.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) CreateRobot(ctx context.Context, request operations.CreateRobotRequest) (*operations.CreateRobotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createRobot"
@@ -2030,6 +2053,8 @@ func (s *SDK) CreateWorldTemplate(ctx context.Context, request operations.Create
 }
 
 // DeleteFleet - <p>Deletes a fleet.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteFleet(ctx context.Context, request operations.DeleteFleetRequest) (*operations.DeleteFleetResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteFleet"
@@ -2116,6 +2141,8 @@ func (s *SDK) DeleteFleet(ctx context.Context, request operations.DeleteFleetReq
 }
 
 // DeleteRobot - <p>Deletes a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeleteRobot(ctx context.Context, request operations.DeleteRobotRequest) (*operations.DeleteRobotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deleteRobot"
@@ -2470,6 +2497,8 @@ func (s *SDK) DeleteWorldTemplate(ctx context.Context, request operations.Delete
 }
 
 // DeregisterRobot - <p>Deregisters a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DeregisterRobot(ctx context.Context, request operations.DeregisterRobotRequest) (*operations.DeregisterRobotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/deregisterRobot"
@@ -2566,6 +2595,8 @@ func (s *SDK) DeregisterRobot(ctx context.Context, request operations.Deregister
 }
 
 // DescribeDeploymentJob - <p>Describes a deployment job.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeDeploymentJob(ctx context.Context, request operations.DescribeDeploymentJobRequest) (*operations.DescribeDeploymentJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeDeploymentJob"
@@ -2662,6 +2693,8 @@ func (s *SDK) DescribeDeploymentJob(ctx context.Context, request operations.Desc
 }
 
 // DescribeFleet - <p>Describes a fleet.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeFleet(ctx context.Context, request operations.DescribeFleetRequest) (*operations.DescribeFleetResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeFleet"
@@ -2758,6 +2791,8 @@ func (s *SDK) DescribeFleet(ctx context.Context, request operations.DescribeFlee
 }
 
 // DescribeRobot - <p>Describes a robot.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) DescribeRobot(ctx context.Context, request operations.DescribeRobotRequest) (*operations.DescribeRobotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describeRobot"
@@ -3708,6 +3743,8 @@ func (s *SDK) GetWorldTemplateBody(ctx context.Context, request operations.GetWo
 }
 
 // ListDeploymentJobs - <p>Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListDeploymentJobs(ctx context.Context, request operations.ListDeploymentJobsRequest) (*operations.ListDeploymentJobsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listDeploymentJobs"
@@ -3808,6 +3845,8 @@ func (s *SDK) ListDeploymentJobs(ctx context.Context, request operations.ListDep
 }
 
 // ListFleets - <p>Returns a list of fleets. You can optionally provide filters to retrieve specific fleets.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListFleets(ctx context.Context, request operations.ListFleetsRequest) (*operations.ListFleetsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listFleets"
@@ -3998,6 +4037,8 @@ func (s *SDK) ListRobotApplications(ctx context.Context, request operations.List
 }
 
 // ListRobots - <p>Returns a list of robots. You can optionally provide filters to retrieve specific robots.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) ListRobots(ctx context.Context, request operations.ListRobotsRequest) (*operations.ListRobotsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listRobots"
@@ -4360,7 +4401,10 @@ func (s *SDK) ListSimulationJobs(ctx context.Context, request operations.ListSim
 // ListTagsForResource - Lists all tags on a AWS RoboMaker resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -4804,6 +4848,8 @@ func (s *SDK) ListWorlds(ctx context.Context, request operations.ListWorldsReque
 }
 
 // RegisterRobot - <p>Registers a robot with a fleet.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) RegisterRobot(ctx context.Context, request operations.RegisterRobotRequest) (*operations.RegisterRobotResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/registerRobot"
@@ -5122,6 +5168,8 @@ func (s *SDK) StartSimulationJobBatch(ctx context.Context, request operations.St
 }
 
 // SyncDeploymentJob - <p>Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *SDK) SyncDeploymentJob(ctx context.Context, request operations.SyncDeploymentJobRequest) (*operations.SyncDeploymentJobResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/syncDeploymentJob"
@@ -5250,7 +5298,10 @@ func (s *SDK) SyncDeploymentJob(ctx context.Context, request operations.SyncDepl
 // TagResource - <p>Adds or edits tags for a AWS RoboMaker resource.</p> <p>Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty strings. </p> <p>For information about the rules that apply to tag keys and tag values, see <a href="https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/allocation-tag-restrictions.html">User-Defined Tag Restrictions</a> in the <i>AWS Billing and Cost Management User Guide</i>. </p>
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -5346,7 +5397,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - <p>Removes the specified tags from the specified AWS RoboMaker resource.</p> <p>To remove a tag, specify the tag key. To change the tag value of an existing tag key, use <a href="https://docs.aws.amazon.com/robomaker/latest/dg/API_TagResource.html"> <code>TagResource</code> </a>. </p>
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

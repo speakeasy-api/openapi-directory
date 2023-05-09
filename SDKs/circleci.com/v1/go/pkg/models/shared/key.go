@@ -16,19 +16,23 @@ const (
 	KeyTypeEnumGithubUserKey KeyTypeEnum = "github-user-key"
 )
 
+func (e KeyTypeEnum) ToPointer() *KeyTypeEnum {
+	return &e
+}
+
 func (e *KeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deploy-key":
 		fallthrough
 	case "github-user-key":
-		*e = KeyTypeEnum(s)
+		*e = KeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyTypeEnum: %v", v)
 	}
 }
 

@@ -15,6 +15,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -69,4 +70,18 @@ pkg/models/shared/submissionv1.go
 pkg/models/shared/quotepreviewv1.go
 pkg/models/shared/applicationidv1.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/applications/README.md
+docs/auth/README.md
+docs/classifications/README.md
+docs/coverageparameters/README.md
+docs/files/README.md
+docs/institutions/README.md
+docs/policies/README.md
+docs/producers/README.md
+docs/products/README.md
+docs/quotes/README.md
+docs/riskparameters/README.md
+docs/submissions/README.md
+docs/welcomeandhealthcheck/README.md
 USAGE.md

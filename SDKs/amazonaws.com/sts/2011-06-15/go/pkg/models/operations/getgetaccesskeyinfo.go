@@ -15,17 +15,21 @@ const (
 	GETGETAccessKeyInfoActionEnumGetAccessKeyInfo GETGETAccessKeyInfoActionEnum = "GetAccessKeyInfo"
 )
 
+func (e GETGETAccessKeyInfoActionEnum) ToPointer() *GETGETAccessKeyInfoActionEnum {
+	return &e
+}
+
 func (e *GETGETAccessKeyInfoActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccessKeyInfo":
-		*e = GETGETAccessKeyInfoActionEnum(s)
+		*e = GETGETAccessKeyInfoActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccessKeyInfoActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccessKeyInfoActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAccessKeyInfoVersionEnumTwoThousandAndEleven0615 GETGETAccessKeyInfoVersionEnum = "2011-06-15"
 )
 
+func (e GETGETAccessKeyInfoVersionEnum) ToPointer() *GETGETAccessKeyInfoVersionEnum {
+	return &e
+}
+
 func (e *GETGETAccessKeyInfoVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-06-15":
-		*e = GETGETAccessKeyInfoVersionEnum(s)
+		*e = GETGETAccessKeyInfoVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAccessKeyInfoVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAccessKeyInfoVersionEnum: %v", v)
 	}
 }
 

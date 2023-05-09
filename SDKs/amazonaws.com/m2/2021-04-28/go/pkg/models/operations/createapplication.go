@@ -23,19 +23,23 @@ const (
 	CreateApplicationRequestBodyEngineTypeEnumBluage     CreateApplicationRequestBodyEngineTypeEnum = "bluage"
 )
 
+func (e CreateApplicationRequestBodyEngineTypeEnum) ToPointer() *CreateApplicationRequestBodyEngineTypeEnum {
+	return &e
+}
+
 func (e *CreateApplicationRequestBodyEngineTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "microfocus":
 		fallthrough
 	case "bluage":
-		*e = CreateApplicationRequestBodyEngineTypeEnum(s)
+		*e = CreateApplicationRequestBodyEngineTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateApplicationRequestBodyEngineTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateApplicationRequestBodyEngineTypeEnum: %v", v)
 	}
 }
 

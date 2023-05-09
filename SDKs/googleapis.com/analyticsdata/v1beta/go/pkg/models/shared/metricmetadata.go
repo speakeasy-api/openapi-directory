@@ -15,21 +15,25 @@ const (
 	MetricMetadataBlockedReasonsEnumNoCostMetrics            MetricMetadataBlockedReasonsEnum = "NO_COST_METRICS"
 )
 
+func (e MetricMetadataBlockedReasonsEnum) ToPointer() *MetricMetadataBlockedReasonsEnum {
+	return &e
+}
+
 func (e *MetricMetadataBlockedReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BLOCKED_REASON_UNSPECIFIED":
 		fallthrough
 	case "NO_REVENUE_METRICS":
 		fallthrough
 	case "NO_COST_METRICS":
-		*e = MetricMetadataBlockedReasonsEnum(s)
+		*e = MetricMetadataBlockedReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricMetadataBlockedReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricMetadataBlockedReasonsEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	MetricMetadataTypeEnumTypeKilometers        MetricMetadataTypeEnum = "TYPE_KILOMETERS"
 )
 
+func (e MetricMetadataTypeEnum) ToPointer() *MetricMetadataTypeEnum {
+	return &e
+}
+
 func (e *MetricMetadataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TYPE_INTEGER":
@@ -83,10 +91,10 @@ func (e *MetricMetadataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TYPE_METERS":
 		fallthrough
 	case "TYPE_KILOMETERS":
-		*e = MetricMetadataTypeEnum(s)
+		*e = MetricMetadataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricMetadataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricMetadataTypeEnum: %v", v)
 	}
 }
 

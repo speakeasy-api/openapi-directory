@@ -17,12 +17,16 @@ const (
 	BuyOnGoogleProgramStatusBusinessModelEnumOther                    BuyOnGoogleProgramStatusBusinessModelEnum = "OTHER"
 )
 
+func (e BuyOnGoogleProgramStatusBusinessModelEnum) ToPointer() *BuyOnGoogleProgramStatusBusinessModelEnum {
+	return &e
+}
+
 func (e *BuyOnGoogleProgramStatusBusinessModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUSINESS_MODEL_UNSPECIFIED":
 		fallthrough
 	case "MANUFACTURER":
@@ -32,10 +36,10 @@ func (e *BuyOnGoogleProgramStatusBusinessModelEnum) UnmarshalJSON(data []byte) e
 	case "RESELLER":
 		fallthrough
 	case "OTHER":
-		*e = BuyOnGoogleProgramStatusBusinessModelEnum(s)
+		*e = BuyOnGoogleProgramStatusBusinessModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusBusinessModelEnum: %s", s)
+		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusBusinessModelEnum: %v", v)
 	}
 }
 
@@ -48,21 +52,25 @@ const (
 	BuyOnGoogleProgramStatusOnlineSalesChannelEnumGoogleAndOtherWebsites        BuyOnGoogleProgramStatusOnlineSalesChannelEnum = "GOOGLE_AND_OTHER_WEBSITES"
 )
 
+func (e BuyOnGoogleProgramStatusOnlineSalesChannelEnum) ToPointer() *BuyOnGoogleProgramStatusOnlineSalesChannelEnum {
+	return &e
+}
+
 func (e *BuyOnGoogleProgramStatusOnlineSalesChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONLINE_SALES_CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_EXCLUSIVE":
 		fallthrough
 	case "GOOGLE_AND_OTHER_WEBSITES":
-		*e = BuyOnGoogleProgramStatusOnlineSalesChannelEnum(s)
+		*e = BuyOnGoogleProgramStatusOnlineSalesChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusOnlineSalesChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusOnlineSalesChannelEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	BuyOnGoogleProgramStatusParticipationStageEnumPaused                               BuyOnGoogleProgramStatusParticipationStageEnum = "PAUSED"
 )
 
+func (e BuyOnGoogleProgramStatusParticipationStageEnum) ToPointer() *BuyOnGoogleProgramStatusParticipationStageEnum {
+	return &e
+}
+
 func (e *BuyOnGoogleProgramStatusParticipationStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROGRAM_PARTICIPATION_STAGE_UNSPECIFIED":
 		fallthrough
 	case "NOT_ELIGIBLE":
@@ -118,10 +130,10 @@ func (e *BuyOnGoogleProgramStatusParticipationStageEnum) UnmarshalJSON(data []by
 	case "ACTIVE":
 		fallthrough
 	case "PAUSED":
-		*e = BuyOnGoogleProgramStatusParticipationStageEnum(s)
+		*e = BuyOnGoogleProgramStatusParticipationStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusParticipationStageEnum: %s", s)
+		return fmt.Errorf("invalid value for BuyOnGoogleProgramStatusParticipationStageEnum: %v", v)
 	}
 }
 

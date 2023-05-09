@@ -21,12 +21,16 @@ const (
 	ScoreLicenseEnumCcByNcNd  ScoreLicenseEnum = "cc-by-nc-nd"
 )
 
+func (e ScoreLicenseEnum) ToPointer() *ScoreLicenseEnum {
+	return &e
+}
+
 func (e *ScoreLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "copyright":
 		fallthrough
 	case "cc0":
@@ -42,9 +46,9 @@ func (e *ScoreLicenseEnum) UnmarshalJSON(data []byte) error {
 	case "cc-by-nc-sa":
 		fallthrough
 	case "cc-by-nc-nd":
-		*e = ScoreLicenseEnum(s)
+		*e = ScoreLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreLicenseEnum: %v", v)
 	}
 }

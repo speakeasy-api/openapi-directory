@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,72 +18,70 @@ func main() {
         }),
     )
 
-    req := operations.AddFacetToObjectRequest{
+    ctx := context.Background()
+    res, err := s.AddFacetToObject(ctx, operations.AddFacetToObjectRequest{
         RequestBody: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
                         FacetName: "provident",
-                        Name: "distinctio",
-                        SchemaArn: "quibusdam",
+                        Name: "Ellis Mitchell",
+                        SchemaArn: "illum",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "unde",
-                        BooleanValue: false,
-                        DatetimeValue: "2021-05-14T08:28:11.899Z",
-                        NumberValue: "illum",
-                        StringValue: "vel",
+                        BinaryValue: sdk.String("vel"),
+                        BooleanValue: sdk.Bool(false),
+                        DatetimeValue: types.MustTimeFromString("2021-09-16T11:56:06.019Z"),
+                        NumberValue: sdk.String("suscipit"),
+                        StringValue: sdk.String("iure"),
                     },
                 },
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "error",
-                        Name: "deserunt",
-                        SchemaArn: "suscipit",
-                    },
-                    Value: shared.TypedAttributeValue{
-                        BinaryValue: "iure",
-                        BooleanValue: false,
-                        DatetimeValue: "2022-02-09T12:04:06.508Z",
-                        NumberValue: "ipsa",
-                        StringValue: "delectus",
-                    },
-                },
-                shared.AttributeKeyAndValue{
-                    Key: shared.AttributeKey{
-                        FacetName: "tempora",
-                        Name: "suscipit",
+                        FacetName: "magnam",
+                        Name: "Larry Windler",
                         SchemaArn: "molestiae",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "minus",
-                        BooleanValue: false,
-                        DatetimeValue: "2021-05-31T20:38:28.793Z",
-                        NumberValue: "iusto",
-                        StringValue: "excepturi",
+                        BinaryValue: sdk.String("minus"),
+                        BooleanValue: sdk.Bool(false),
+                        DatetimeValue: types.MustTimeFromString("2021-05-31T20:38:28.793Z"),
+                        NumberValue: sdk.String("iusto"),
+                        StringValue: sdk.String("excepturi"),
+                    },
+                },
+                shared.AttributeKeyAndValue{
+                    Key: shared.AttributeKey{
+                        FacetName: "nisi",
+                        Name: "Jake Bernier MD",
+                        SchemaArn: "perferendis",
+                    },
+                    Value: shared.TypedAttributeValue{
+                        BinaryValue: sdk.String("ipsam"),
+                        BooleanValue: sdk.Bool(false),
+                        DatetimeValue: types.MustTimeFromString("2020-02-17T21:57:45.117Z"),
+                        NumberValue: sdk.String("quo"),
+                        StringValue: sdk.String("odit"),
                     },
                 },
             },
             ObjectReference: operations.AddFacetToObjectRequestBodyObjectReference{
-                Selector: "nisi",
+                Selector: sdk.String("at"),
             },
             SchemaFacet: operations.AddFacetToObjectRequestBodySchemaFacet{
-                FacetName: "recusandae",
-                SchemaArn: "temporibus",
+                FacetName: sdk.String("at"),
+                SchemaArn: sdk.String("maiores"),
             },
         },
-        XAmzAlgorithm: "ab",
-        XAmzContentSha256: "quis",
-        XAmzCredential: "veritatis",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "perferendis",
-        XAmzSignature: "ipsam",
-        XAmzSignedHeaders: "repellendus",
-        XAmzDataPartition: "sapiente",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddFacetToObject(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("quod"),
+        XAmzCredential: sdk.String("quod"),
+        XAmzDate: sdk.String("esse"),
+        XAmzSecurityToken: sdk.String("totam"),
+        XAmzSignature: sdk.String("porro"),
+        XAmzSignedHeaders: sdk.String("dolorum"),
+        XAmzDataPartition: "dicta",
+    })
     if err != nil {
         log.Fatal(err)
     }

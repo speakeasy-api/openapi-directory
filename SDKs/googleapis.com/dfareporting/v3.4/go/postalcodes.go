@@ -34,7 +34,10 @@ func newPostalCodes(defaultClient, securityClient HTTPClient, serverURL, languag
 // DfareportingPostalCodesGet - Gets one postal code by ID.
 func (s *postalCodes) DfareportingPostalCodesGet(ctx context.Context, request operations.DfareportingPostalCodesGetRequest, security operations.DfareportingPostalCodesGetSecurity) (*operations.DfareportingPostalCodesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/postalCodes/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/postalCodes/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *postalCodes) DfareportingPostalCodesGet(ctx context.Context, request op
 // DfareportingPostalCodesList - Retrieves a list of postal codes.
 func (s *postalCodes) DfareportingPostalCodesList(ctx context.Context, request operations.DfareportingPostalCodesListRequest, security operations.DfareportingPostalCodesListSecurity) (*operations.DfareportingPostalCodesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/postalCodes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/postalCodes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

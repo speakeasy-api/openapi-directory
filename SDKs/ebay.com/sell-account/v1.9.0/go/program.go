@@ -33,7 +33,7 @@ func newProgram(defaultClient, securityClient HTTPClient, serverURL, language, s
 }
 
 // GetOptedInPrograms - This method gets a list of the seller programs that the seller has opted-in to.
-func (s *program) GetOptedInPrograms(ctx context.Context) (*operations.GetOptedInProgramsResponse, error) {
+func (s *program) GetOptedInPrograms(ctx context.Context, security operations.GetOptedInProgramsSecurity) (*operations.GetOptedInProgramsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/program/get_opted_in_programs"
 
@@ -42,7 +42,7 @@ func (s *program) GetOptedInPrograms(ctx context.Context) (*operations.GetOptedI
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

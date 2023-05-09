@@ -14,18 +14,22 @@ const (
 	EgressFilterTypeEnumDropAll  EgressFilterTypeEnum = "DROP_ALL"
 )
 
+func (e EgressFilterTypeEnum) ToPointer() *EgressFilterTypeEnum {
+	return &e
+}
+
 func (e *EgressFilterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALLOW_ALL":
 		fallthrough
 	case "DROP_ALL":
-		*e = EgressFilterTypeEnum(s)
+		*e = EgressFilterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EgressFilterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EgressFilterTypeEnum: %v", v)
 	}
 }

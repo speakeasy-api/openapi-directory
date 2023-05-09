@@ -15,17 +15,21 @@ const (
 	POSTRegisterInstanceEventNotificationAttributesActionEnumRegisterInstanceEventNotificationAttributes POSTRegisterInstanceEventNotificationAttributesActionEnum = "RegisterInstanceEventNotificationAttributes"
 )
 
+func (e POSTRegisterInstanceEventNotificationAttributesActionEnum) ToPointer() *POSTRegisterInstanceEventNotificationAttributesActionEnum {
+	return &e
+}
+
 func (e *POSTRegisterInstanceEventNotificationAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RegisterInstanceEventNotificationAttributes":
-		*e = POSTRegisterInstanceEventNotificationAttributesActionEnum(s)
+		*e = POSTRegisterInstanceEventNotificationAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterInstanceEventNotificationAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterInstanceEventNotificationAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRegisterInstanceEventNotificationAttributesVersionEnumTwoThousandAndSixteen1115 POSTRegisterInstanceEventNotificationAttributesVersionEnum = "2016-11-15"
 )
 
+func (e POSTRegisterInstanceEventNotificationAttributesVersionEnum) ToPointer() *POSTRegisterInstanceEventNotificationAttributesVersionEnum {
+	return &e
+}
+
 func (e *POSTRegisterInstanceEventNotificationAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTRegisterInstanceEventNotificationAttributesVersionEnum(s)
+		*e = POSTRegisterInstanceEventNotificationAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRegisterInstanceEventNotificationAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRegisterInstanceEventNotificationAttributesVersionEnum: %v", v)
 	}
 }
 

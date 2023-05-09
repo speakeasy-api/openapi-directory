@@ -14,19 +14,23 @@ const (
 	AccountPermissionAccountProfilesEnumAccountProfileStandard AccountPermissionAccountProfilesEnum = "ACCOUNT_PROFILE_STANDARD"
 )
 
+func (e AccountPermissionAccountProfilesEnum) ToPointer() *AccountPermissionAccountProfilesEnum {
+	return &e
+}
+
 func (e *AccountPermissionAccountProfilesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_PROFILE_BASIC":
 		fallthrough
 	case "ACCOUNT_PROFILE_STANDARD":
-		*e = AccountPermissionAccountProfilesEnum(s)
+		*e = AccountPermissionAccountProfilesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPermissionAccountProfilesEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPermissionAccountProfilesEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	AccountPermissionLevelEnumAdministrator AccountPermissionLevelEnum = "ADMINISTRATOR"
 )
 
+func (e AccountPermissionLevelEnum) ToPointer() *AccountPermissionLevelEnum {
+	return &e
+}
+
 func (e *AccountPermissionLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "ADMINISTRATOR":
-		*e = AccountPermissionLevelEnum(s)
+		*e = AccountPermissionLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPermissionLevelEnum: %v", v)
 	}
 }
 

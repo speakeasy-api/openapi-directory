@@ -20,12 +20,16 @@ const (
 	ApigatewayAPIConfigStateEnumActivating       ApigatewayAPIConfigStateEnum = "ACTIVATING"
 )
 
+func (e ApigatewayAPIConfigStateEnum) ToPointer() *ApigatewayAPIConfigStateEnum {
+	return &e
+}
+
 func (e *ApigatewayAPIConfigStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -39,10 +43,10 @@ func (e *ApigatewayAPIConfigStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "ACTIVATING":
-		*e = ApigatewayAPIConfigStateEnum(s)
+		*e = ApigatewayAPIConfigStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApigatewayAPIConfigStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ApigatewayAPIConfigStateEnum: %v", v)
 	}
 }
 

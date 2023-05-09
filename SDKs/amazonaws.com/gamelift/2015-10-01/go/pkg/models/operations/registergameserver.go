@@ -16,17 +16,21 @@ const (
 	RegisterGameServerXAmzTargetEnumGameLiftRegisterGameServer RegisterGameServerXAmzTargetEnum = "GameLift.RegisterGameServer"
 )
 
+func (e RegisterGameServerXAmzTargetEnum) ToPointer() *RegisterGameServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterGameServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.RegisterGameServer":
-		*e = RegisterGameServerXAmzTargetEnum(s)
+		*e = RegisterGameServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterGameServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterGameServerXAmzTargetEnum: %v", v)
 	}
 }
 

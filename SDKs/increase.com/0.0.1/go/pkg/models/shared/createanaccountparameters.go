@@ -9,4 +9,6 @@ type CreateAnAccountParameters struct {
 	InformationalEntityID *string `json:"informational_entity_id,omitempty"`
 	// The name you choose for the Account.
 	Name string `json:"name"`
+	// The identifier for the Program that this Account falls under.
+	ProgramID *string `json:"program_id,omitempty"`
 }

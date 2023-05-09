@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/jumpseller.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteJsappsCodeJSONRequest{
+    ctx := context.Background()
+    res, err := s.Apps.DeleteJsappsCodeJSON(ctx, operations.DeleteJsappsCodeJSONRequest{
         Authtoken: "corrupti",
         Code: "provident",
         Login: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Apps.DeleteJsappsCodeJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,233 +44,233 @@ func main() {
 ## Available Resources and Operations
 
 
-### Apps
+### [Apps](docs/apps/README.md)
 
-* `DeleteJsappsCodeJSON` - Delete an existing JSApp.
-* `GetJsappsJSON` - Retrieve all the Store's JSApps.
-* `GetJsappsCodeJSON` - Retrieve a JSApp.
-* `PostJsappsJSON` - Create a Store JSApp.
+* [DeleteJsappsCodeJSON](docs/apps/README.md#deletejsappscodejson) - Delete an existing JSApp.
+* [GetJsappsJSON](docs/apps/README.md#getjsappsjson) - Retrieve all the Store's JSApps.
+* [GetJsappsCodeJSON](docs/apps/README.md#getjsappscodejson) - Retrieve a JSApp.
+* [PostJsappsJSON](docs/apps/README.md#postjsappsjson) - Create a Store JSApp.
 
-### Categories
+### [Categories](docs/categories/README.md)
 
-* `DeleteCategoriesIDJSON` - Delete an existing Category.
-* `GetCategoriesJSON` - Retrieve all Categories.
-* `GetCategoriesCountJSON` - Count all Categories.
-* `GetCategoriesIDJSON` - Retrieve a single Category.
-* `PostCategoriesJSON` - Create a new Category.
-* `PutCategoriesIDJSON` - Modify an existing Category.
+* [DeleteCategoriesIDJSON](docs/categories/README.md#deletecategoriesidjson) - Delete an existing Category.
+* [GetCategoriesJSON](docs/categories/README.md#getcategoriesjson) - Retrieve all Categories.
+* [GetCategoriesCountJSON](docs/categories/README.md#getcategoriescountjson) - Count all Categories.
+* [GetCategoriesIDJSON](docs/categories/README.md#getcategoriesidjson) - Retrieve a single Category.
+* [PostCategoriesJSON](docs/categories/README.md#postcategoriesjson) - Create a new Category.
+* [PutCategoriesIDJSON](docs/categories/README.md#putcategoriesidjson) - Modify an existing Category.
 
-### CheckoutCustomFields
+### [CheckoutCustomFields](docs/checkoutcustomfields/README.md)
 
-* `DeleteCheckoutCustomFieldsIDJSON` - Delete an existing CheckoutCustomField.
-* `GetCheckoutCustomFieldsJSON` - Retrieve all Checkout Custom Fields.
-* `GetCheckoutCustomFieldsIDJSON` - Retrieve a single CheckoutCustomField.
-* `PostCheckoutCustomFieldsJSON` - Create a new CheckoutCustomField.
-* `PutCheckoutCustomFieldsIDJSON` - Update a CheckoutCustomField.
+* [DeleteCheckoutCustomFieldsIDJSON](docs/checkoutcustomfields/README.md#deletecheckoutcustomfieldsidjson) - Delete an existing CheckoutCustomField.
+* [GetCheckoutCustomFieldsJSON](docs/checkoutcustomfields/README.md#getcheckoutcustomfieldsjson) - Retrieve all Checkout Custom Fields.
+* [GetCheckoutCustomFieldsIDJSON](docs/checkoutcustomfields/README.md#getcheckoutcustomfieldsidjson) - Retrieve a single CheckoutCustomField.
+* [PostCheckoutCustomFieldsJSON](docs/checkoutcustomfields/README.md#postcheckoutcustomfieldsjson) - Create a new CheckoutCustomField.
+* [PutCheckoutCustomFieldsIDJSON](docs/checkoutcustomfields/README.md#putcheckoutcustomfieldsidjson) - Update a CheckoutCustomField.
 
-### Countries
+### [Countries](docs/countries/README.md)
 
-* `GetCountriesJSON` - Retrieve all Countries.
-* `GetCountriesCountryCodeJSON` - Retrieve a single Country information.
-* `GetCountriesCountryCodeRegionsJSON` - Retrieve all Regions from a single Country.
-* `GetCountriesCountryCodeRegionsRegionCodeJSON` - Retrieve a single Region information object.
+* [GetCountriesJSON](docs/countries/README.md#getcountriesjson) - Retrieve all Countries.
+* [GetCountriesCountryCodeJSON](docs/countries/README.md#getcountriescountrycodejson) - Retrieve a single Country information.
+* [GetCountriesCountryCodeRegionsJSON](docs/countries/README.md#getcountriescountrycoderegionsjson) - Retrieve all Regions from a single Country.
+* [GetCountriesCountryCodeRegionsRegionCodeJSON](docs/countries/README.md#getcountriescountrycoderegionsregioncodejson) - Retrieve a single Region information object.
 
-### CustomFieldSelectOptions
+### [CustomFieldSelectOptions](docs/customfieldselectoptions/README.md)
 
-* `GetCustomFieldsIDSelectOptionsJSON` - Retrieve all Store's Custom Fields.
-* `GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Retrieve a single SelectOption from a CustomField.
-* `PostCustomFieldsIDSelectOptionsJSON` - Create a new Custom Field Select Option.
-* `PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Update a SelectOption from a CustomField.
+* [GetCustomFieldsIDSelectOptionsJSON](docs/customfieldselectoptions/README.md#getcustomfieldsidselectoptionsjson) - Retrieve all Store's Custom Fields.
+* [GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON](docs/customfieldselectoptions/README.md#getcustomfieldsidselectoptionscustomfieldselectoptionidjson) - Retrieve a single SelectOption from a CustomField.
+* [PostCustomFieldsIDSelectOptionsJSON](docs/customfieldselectoptions/README.md#postcustomfieldsidselectoptionsjson) - Create a new Custom Field Select Option.
+* [PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON](docs/customfieldselectoptions/README.md#putcustomfieldsidselectoptionscustomfieldselectoptionidjson) - Update a SelectOption from a CustomField.
 
-### CustomFields
+### [CustomFields](docs/customfields/README.md)
 
-* `DeleteCustomFieldsIDJSON` - Delete an existing CustomField.
-* `DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Delete an existing CustomFieldSelectOption.
-* `GetCustomFieldsJSON` - Retrieve all Store's Custom Fields.
-* `GetCustomFieldsIDJSON` - Retrieve a single CustomField.
-* `PostCustomFieldsJSON` - Create a new Custom Field.
-* `PutCustomFieldsIDJSON` - Update a CustomField.
+* [DeleteCustomFieldsIDJSON](docs/customfields/README.md#deletecustomfieldsidjson) - Delete an existing CustomField.
+* [DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON](docs/customfields/README.md#deletecustomfieldsidselectoptionscustomfieldselectoptionidjson) - Delete an existing CustomFieldSelectOption.
+* [GetCustomFieldsJSON](docs/customfields/README.md#getcustomfieldsjson) - Retrieve all Store's Custom Fields.
+* [GetCustomFieldsIDJSON](docs/customfields/README.md#getcustomfieldsidjson) - Retrieve a single CustomField.
+* [PostCustomFieldsJSON](docs/customfields/README.md#postcustomfieldsjson) - Create a new Custom Field.
+* [PutCustomFieldsIDJSON](docs/customfields/README.md#putcustomfieldsidjson) - Update a CustomField.
 
-### CustomerAdditionalFields
+### [CustomerAdditionalFields](docs/customeradditionalfields/README.md)
 
-* `DeleteCustomersIDFieldsFieldID` - Delete a Customer Additional Field.
-* `GetCustomersIDFields` - Retrieves the Customer Additional Field of a Customer.
-* `GetCustomersIDFieldsFieldID` - Retrieve a single Customer Additional Field.
-* `PostCustomersIDFields` - Adds Customer Additional Fields to a Customer.
-* `PutCustomersIDFieldsFieldID` - Update a Customer Additional Field.
+* [DeleteCustomersIDFieldsFieldID](docs/customeradditionalfields/README.md#deletecustomersidfieldsfieldid) - Delete a Customer Additional Field.
+* [GetCustomersIDFields](docs/customeradditionalfields/README.md#getcustomersidfields) - Retrieves the Customer Additional Field of a Customer.
+* [GetCustomersIDFieldsFieldID](docs/customeradditionalfields/README.md#getcustomersidfieldsfieldid) - Retrieve a single Customer Additional Field.
+* [PostCustomersIDFields](docs/customeradditionalfields/README.md#postcustomersidfields) - Adds Customer Additional Fields to a Customer.
+* [PutCustomersIDFieldsFieldID](docs/customeradditionalfields/README.md#putcustomersidfieldsfieldid) - Update a Customer Additional Field.
 
-### CustomerCategories
+### [CustomerCategories](docs/customercategories/README.md)
 
-* `DeleteCustomerCategoriesIDJSON` - Delete an existing CustomerCategory.
-* `DeleteCustomerCategoriesIDCustomersJSON` - Delete Customers from an existing CustomerCategory.
-* `GetCustomerCategoriesJSON` - Retrieve all Customer Categories.
-* `GetCustomerCategoriesIDJSON` - Retrieve a single CustomerCategory.
-* `GetCustomerCategoriesIDCustomersJSON` - Retrieves the customers in a CustomerCategory.
-* `PostCustomerCategoriesJSON` - Create a new CustomerCategory.
-* `PostCustomerCategoriesIDCustomersJSON` - Adds Customers to a CustomerCategory.
-* `PutCustomerCategoriesIDJSON` - Update a CustomerCategory.
+* [DeleteCustomerCategoriesIDJSON](docs/customercategories/README.md#deletecustomercategoriesidjson) - Delete an existing CustomerCategory.
+* [DeleteCustomerCategoriesIDCustomersJSON](docs/customercategories/README.md#deletecustomercategoriesidcustomersjson) - Delete Customers from an existing CustomerCategory.
+* [GetCustomerCategoriesJSON](docs/customercategories/README.md#getcustomercategoriesjson) - Retrieve all Customer Categories.
+* [GetCustomerCategoriesIDJSON](docs/customercategories/README.md#getcustomercategoriesidjson) - Retrieve a single CustomerCategory.
+* [GetCustomerCategoriesIDCustomersJSON](docs/customercategories/README.md#getcustomercategoriesidcustomersjson) - Retrieves the customers in a CustomerCategory.
+* [PostCustomerCategoriesJSON](docs/customercategories/README.md#postcustomercategoriesjson) - Create a new CustomerCategory.
+* [PostCustomerCategoriesIDCustomersJSON](docs/customercategories/README.md#postcustomercategoriesidcustomersjson) - Adds Customers to a CustomerCategory.
+* [PutCustomerCategoriesIDJSON](docs/customercategories/README.md#putcustomercategoriesidjson) - Update a CustomerCategory.
 
-### Customers
+### [Customers](docs/customers/README.md)
 
-* `DeleteCustomersIDJSON` - Delete an existing Customer.
-* `GetCustomersJSON` - Retrieve all Customers.
-* `GetCustomersCountJSON` - Count all Customers.
-* `GetCustomersEmailEmailJSON` - Retrieve a single Customer by email.
-* `GetCustomersIDJSON` - Retrieve a single Customer by id.
-* `PostCustomersJSON` - Create a new Customer.
-* `PutCustomersIDJSON` - Update a new Customer.
+* [DeleteCustomersIDJSON](docs/customers/README.md#deletecustomersidjson) - Delete an existing Customer.
+* [GetCustomersJSON](docs/customers/README.md#getcustomersjson) - Retrieve all Customers.
+* [GetCustomersCountJSON](docs/customers/README.md#getcustomerscountjson) - Count all Customers.
+* [GetCustomersEmailEmailJSON](docs/customers/README.md#getcustomersemailemailjson) - Retrieve a single Customer by email.
+* [GetCustomersIDJSON](docs/customers/README.md#getcustomersidjson) - Retrieve a single Customer by id.
+* [PostCustomersJSON](docs/customers/README.md#postcustomersjson) - Create a new Customer.
+* [PutCustomersIDJSON](docs/customers/README.md#putcustomersidjson) - Update a new Customer.
 
-### Fulfillments
+### [Fulfillments](docs/fulfillments/README.md)
 
-* `GetFulfillmentsJSON` - Retrieve all Fulfillments.
-* `GetFulfillmentsCountJSON` - Count all Fulfillments.
-* `GetFulfillmentsIDJSON` - Retrieve a single Fulfillment.
-* `GetOrderIDFulfillmentsJSON` - Retrieve the Fulfillments associated with the Order.
+* [GetFulfillmentsJSON](docs/fulfillments/README.md#getfulfillmentsjson) - Retrieve all Fulfillments.
+* [GetFulfillmentsCountJSON](docs/fulfillments/README.md#getfulfillmentscountjson) - Count all Fulfillments.
+* [GetFulfillmentsIDJSON](docs/fulfillments/README.md#getfulfillmentsidjson) - Retrieve a single Fulfillment.
+* [GetOrderIDFulfillmentsJSON](docs/fulfillments/README.md#getorderidfulfillmentsjson) - Retrieve the Fulfillments associated with the Order.
 
-### Hooks
+### [Hooks](docs/hooks/README.md)
 
-* `DeleteHooksIDJSON` - Delete an existing Hook.
-* `GetHooksJSON` - Retrieve all Hooks.
-* `GetHooksIDJSON` - Retrieve a single Hook.
-* `PostHooksJSON` - Create a new Hook.
-* `PutHooksIDJSON` - Update a Hook.
+* [DeleteHooksIDJSON](docs/hooks/README.md#deletehooksidjson) - Delete an existing Hook.
+* [GetHooksJSON](docs/hooks/README.md#gethooksjson) - Retrieve all Hooks.
+* [GetHooksIDJSON](docs/hooks/README.md#gethooksidjson) - Retrieve a single Hook.
+* [PostHooksJSON](docs/hooks/README.md#posthooksjson) - Create a new Hook.
+* [PutHooksIDJSON](docs/hooks/README.md#puthooksidjson) - Update a Hook.
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `GetOrdersJSON` - Retrieve all Orders.
-* `GetOrdersAfterIDJSON` - Retrieve orders filtered by Order Id.
-* `GetOrdersCountJSON` - Count all Orders.
-* `GetOrdersStatusStatusJSON` - Retrieve orders filtered by status.
-* `GetOrdersIDJSON` - Retrieve a single Order.
-* `GetOrdersIDHistoryJSON` - Retrieve all Order History.
-* `PostOrdersJSON` - Create a new Order.
-* `PostOrdersIDHistoryJSON` - Create a new Order History Entry.
-* `PutOrdersIDJSON` - Modify an existing Order.
+* [GetOrdersJSON](docs/orders/README.md#getordersjson) - Retrieve all Orders.
+* [GetOrdersAfterIDJSON](docs/orders/README.md#getordersafteridjson) - Retrieve orders filtered by Order Id.
+* [GetOrdersCountJSON](docs/orders/README.md#getorderscountjson) - Count all Orders.
+* [GetOrdersStatusStatusJSON](docs/orders/README.md#getordersstatusstatusjson) - Retrieve orders filtered by status.
+* [GetOrdersIDJSON](docs/orders/README.md#getordersidjson) - Retrieve a single Order.
+* [GetOrdersIDHistoryJSON](docs/orders/README.md#getordersidhistoryjson) - Retrieve all Order History.
+* [PostOrdersJSON](docs/orders/README.md#postordersjson) - Create a new Order.
+* [PostOrdersIDHistoryJSON](docs/orders/README.md#postordersidhistoryjson) - Create a new Order History Entry.
+* [PutOrdersIDJSON](docs/orders/README.md#putordersidjson) - Modify an existing Order.
 
-### Pages
+### [Pages](docs/pages/README.md)
 
-* `DeletePagesIDJSON` - Delete an existing Page.
-* `GetPagesJSON` - Retrieve all Pages.
-* `GetPagesCountJSON` - Count all Pages.
-* `GetPagesIDJSON` - Retrieve a single Page by id.
-* `PostPagesJSON` - Create a new Page.
-* `PutPagesIDJSON` - Update a Page.
+* [DeletePagesIDJSON](docs/pages/README.md#deletepagesidjson) - Delete an existing Page.
+* [GetPagesJSON](docs/pages/README.md#getpagesjson) - Retrieve all Pages.
+* [GetPagesCountJSON](docs/pages/README.md#getpagescountjson) - Count all Pages.
+* [GetPagesIDJSON](docs/pages/README.md#getpagesidjson) - Retrieve a single Page by id.
+* [PostPagesJSON](docs/pages/README.md#postpagesjson) - Create a new Page.
+* [PutPagesIDJSON](docs/pages/README.md#putpagesidjson) - Update a Page.
 
-### Partners
+### [Partners](docs/partners/README.md)
 
-* `GetPartnersStoresJSON` - Retrieve statistics.
-* `GetStoreCheckStatusJSON` - Retrive store creation status.
-* `PostStoreCreateJSON` - Create a Partnered Store
+* [GetPartnersStoresJSON](docs/partners/README.md#getpartnersstoresjson) - Retrieve statistics.
+* [GetStoreCheckStatusJSON](docs/partners/README.md#getstorecheckstatusjson) - Retrive store creation status.
+* [PostStoreCreateJSON](docs/partners/README.md#poststorecreatejson) - Create a Partnered Store
 
-### PaymentMethods
+### [PaymentMethods](docs/paymentmethods/README.md)
 
-* `GetPaymentMethodsJSON` - Retrieve all Store's Payment Methods.
-* `GetPaymentMethodsIDJSON` - Retrieve a single Payment Method.
+* [GetPaymentMethodsJSON](docs/paymentmethods/README.md#getpaymentmethodsjson) - Retrieve all Store's Payment Methods.
+* [GetPaymentMethodsIDJSON](docs/paymentmethods/README.md#getpaymentmethodsidjson) - Retrieve a single Payment Method.
 
-### ProductAttachments
+### [ProductAttachments](docs/productattachments/README.md)
 
-* `DeleteProductsIDAttachmentsAttachmentIDJSON` - Delete a Product Attachment.
-* `GetProductsIDAttachmentsJSON` - Retrieve all Product Attachments.
-* `GetProductsIDAttachmentsCountJSON` - Count all Product Attachments.
-* `GetProductsIDAttachmentsAttachmentIDJSON` - Retrieve a single Product Attachment.
-* `PostProductsIDAttachmentsJSON` - Create a new Product Attachment.
+* [DeleteProductsIDAttachmentsAttachmentIDJSON](docs/productattachments/README.md#deleteproductsidattachmentsattachmentidjson) - Delete a Product Attachment.
+* [GetProductsIDAttachmentsJSON](docs/productattachments/README.md#getproductsidattachmentsjson) - Retrieve all Product Attachments.
+* [GetProductsIDAttachmentsCountJSON](docs/productattachments/README.md#getproductsidattachmentscountjson) - Count all Product Attachments.
+* [GetProductsIDAttachmentsAttachmentIDJSON](docs/productattachments/README.md#getproductsidattachmentsattachmentidjson) - Retrieve a single Product Attachment.
+* [PostProductsIDAttachmentsJSON](docs/productattachments/README.md#postproductsidattachmentsjson) - Create a new Product Attachment.
 
-### ProductCustomFields
+### [ProductCustomFields](docs/productcustomfields/README.md)
 
-* `DeleteProductsProductIDFieldsFieldIDJSON` - Delete value of Product Custom Field
-* `GetProductsIDFieldsJSON` - Retrieve all Product Custom Fields
-* `GetProductsIDFieldsCountJSON` - Count all Product Custom Fields.
-* `PostProductsIDFieldsJSON` - Add an existing Custom Field to a Product.
-* `PutProductsProductIDFieldsFieldIDJSON` - Update value of Product Custom Field
+* [DeleteProductsProductIDFieldsFieldIDJSON](docs/productcustomfields/README.md#deleteproductsproductidfieldsfieldidjson) - Delete value of Product Custom Field
+* [GetProductsIDFieldsJSON](docs/productcustomfields/README.md#getproductsidfieldsjson) - Retrieve all Product Custom Fields
+* [GetProductsIDFieldsCountJSON](docs/productcustomfields/README.md#getproductsidfieldscountjson) - Count all Product Custom Fields.
+* [PostProductsIDFieldsJSON](docs/productcustomfields/README.md#postproductsidfieldsjson) - Add an existing Custom Field to a Product.
+* [PutProductsProductIDFieldsFieldIDJSON](docs/productcustomfields/README.md#putproductsproductidfieldsfieldidjson) - Update value of Product Custom Field
 
-### ProductDigitalProducts
+### [ProductDigitalProducts](docs/productdigitalproducts/README.md)
 
-* `DeleteProductsIDDigitalProductsDigitalProductIDJSON` - Delete a Product DigitalProduct.
-* `GetProductsIDDigitalProductsJSON` - Retrieve all Product DigitalProducts.
-* `GetProductsIDDigitalProductsCountJSON` - Count all Product DigitalProducts.
-* `GetProductsIDDigitalProductsDigitalProductIDJSON` - Retrieve a single Product DigitalProduct.
-* `PostProductsIDDigitalProductsJSON` - Create a new Product DigitalProduct.
+* [DeleteProductsIDDigitalProductsDigitalProductIDJSON](docs/productdigitalproducts/README.md#deleteproductsiddigitalproductsdigitalproductidjson) - Delete a Product DigitalProduct.
+* [GetProductsIDDigitalProductsJSON](docs/productdigitalproducts/README.md#getproductsiddigitalproductsjson) - Retrieve all Product DigitalProducts.
+* [GetProductsIDDigitalProductsCountJSON](docs/productdigitalproducts/README.md#getproductsiddigitalproductscountjson) - Count all Product DigitalProducts.
+* [GetProductsIDDigitalProductsDigitalProductIDJSON](docs/productdigitalproducts/README.md#getproductsiddigitalproductsdigitalproductidjson) - Retrieve a single Product DigitalProduct.
+* [PostProductsIDDigitalProductsJSON](docs/productdigitalproducts/README.md#postproductsiddigitalproductsjson) - Create a new Product DigitalProduct.
 
-### ProductImages
+### [ProductImages](docs/productimages/README.md)
 
-* `DeleteProductsIDImagesImageIDJSON` - Delete a Product Image.
-* `GetProductsIDImagesJSON` - Retrieve all Product Images.
-* `GetProductsIDImagesCountJSON` - Count all Product Images.
-* `GetProductsIDImagesImageIDJSON` - Retrieve a single Product Image.
-* `PostProductsIDImagesJSON` - Create a new Product Image.
+* [DeleteProductsIDImagesImageIDJSON](docs/productimages/README.md#deleteproductsidimagesimageidjson) - Delete a Product Image.
+* [GetProductsIDImagesJSON](docs/productimages/README.md#getproductsidimagesjson) - Retrieve all Product Images.
+* [GetProductsIDImagesCountJSON](docs/productimages/README.md#getproductsidimagescountjson) - Count all Product Images.
+* [GetProductsIDImagesImageIDJSON](docs/productimages/README.md#getproductsidimagesimageidjson) - Retrieve a single Product Image.
+* [PostProductsIDImagesJSON](docs/productimages/README.md#postproductsidimagesjson) - Create a new Product Image.
 
-### ProductOptionValues
+### [ProductOptionValues](docs/productoptionvalues/README.md)
 
-* `DeleteProductsIDOptionsOptionIDValuesValueIDJSON` - Delete a Product Option Value.
-* `GetProductsIDOptionsOptionIDValuesJSON` - Retrieve all Product Option Values.
-* `GetProductsIDOptionsOptionIDValuesCountJSON` - Count all Product Option Values.
-* `GetProductsIDOptionsOptionIDValuesValueIDJSON` - Retrieve a single Product Option Value.
-* `PostProductsIDOptionsOptionIDValuesJSON` - Create a new Product Option Value.
-* `PutProductsIDOptionsOptionIDValuesValueIDJSON` - Modify an existing Product Option Value.
+* [DeleteProductsIDOptionsOptionIDValuesValueIDJSON](docs/productoptionvalues/README.md#deleteproductsidoptionsoptionidvaluesvalueidjson) - Delete a Product Option Value.
+* [GetProductsIDOptionsOptionIDValuesJSON](docs/productoptionvalues/README.md#getproductsidoptionsoptionidvaluesjson) - Retrieve all Product Option Values.
+* [GetProductsIDOptionsOptionIDValuesCountJSON](docs/productoptionvalues/README.md#getproductsidoptionsoptionidvaluescountjson) - Count all Product Option Values.
+* [GetProductsIDOptionsOptionIDValuesValueIDJSON](docs/productoptionvalues/README.md#getproductsidoptionsoptionidvaluesvalueidjson) - Retrieve a single Product Option Value.
+* [PostProductsIDOptionsOptionIDValuesJSON](docs/productoptionvalues/README.md#postproductsidoptionsoptionidvaluesjson) - Create a new Product Option Value.
+* [PutProductsIDOptionsOptionIDValuesValueIDJSON](docs/productoptionvalues/README.md#putproductsidoptionsoptionidvaluesvalueidjson) - Modify an existing Product Option Value.
 
-### ProductOptions
+### [ProductOptions](docs/productoptions/README.md)
 
-* `DeleteProductsIDOptionsOptionIDJSON` - Delete a Product Option.
-* `GetProductsIDOptionsJSON` - Retrieve all Product Options.
-* `GetProductsIDOptionsCountJSON` - Count all Product Options.
-* `GetProductsIDOptionsOptionIDJSON` - Retrieve a single Product Option.
-* `PostProductsIDOptionsJSON` - Create a new Product Option.
-* `PutProductsIDOptionsOptionIDJSON` - Modify an existing Product Option.
+* [DeleteProductsIDOptionsOptionIDJSON](docs/productoptions/README.md#deleteproductsidoptionsoptionidjson) - Delete a Product Option.
+* [GetProductsIDOptionsJSON](docs/productoptions/README.md#getproductsidoptionsjson) - Retrieve all Product Options.
+* [GetProductsIDOptionsCountJSON](docs/productoptions/README.md#getproductsidoptionscountjson) - Count all Product Options.
+* [GetProductsIDOptionsOptionIDJSON](docs/productoptions/README.md#getproductsidoptionsoptionidjson) - Retrieve a single Product Option.
+* [PostProductsIDOptionsJSON](docs/productoptions/README.md#postproductsidoptionsjson) - Create a new Product Option.
+* [PutProductsIDOptionsOptionIDJSON](docs/productoptions/README.md#putproductsidoptionsoptionidjson) - Modify an existing Product Option.
 
-### ProductVariants
+### [ProductVariants](docs/productvariants/README.md)
 
-* `GetProductsIDVariantsJSON` - Retrieve all Product Variants.
-* `GetProductsIDVariantsCountJSON` - Count all Product Variants.
-* `GetProductsIDVariantsVariantIDJSON` - Retrieve a single Product Variant.
-* `PostProductsIDVariantsJSON` - Create a new Product Variant.
-* `PutProductsIDVariantsVariantIDJSON` - Modify an existing Product Variant.
+* [GetProductsIDVariantsJSON](docs/productvariants/README.md#getproductsidvariantsjson) - Retrieve all Product Variants.
+* [GetProductsIDVariantsCountJSON](docs/productvariants/README.md#getproductsidvariantscountjson) - Count all Product Variants.
+* [GetProductsIDVariantsVariantIDJSON](docs/productvariants/README.md#getproductsidvariantsvariantidjson) - Retrieve a single Product Variant.
+* [PostProductsIDVariantsJSON](docs/productvariants/README.md#postproductsidvariantsjson) - Create a new Product Variant.
+* [PutProductsIDVariantsVariantIDJSON](docs/productvariants/README.md#putproductsidvariantsvariantidjson) - Modify an existing Product Variant.
 
-### Products
+### [Products](docs/products/README.md)
 
-* `DeleteProductsIDJSON` - Delete an existing Product.
-* `GetProductsJSON` - Retrieve all Products.
-* `GetProductsAfterIDJSON` - Retrieves Products after the given id.
-* `GetProductsCategoryCategoryIDJSON` - Retrieve Products filtered by category.
-* `GetProductsCategoryCategoryIDCountJSON` - Count Products filtered by category.
-* `GetProductsCountJSON` - Count all Products.
-* `GetProductsSearchJSON` - Retrieve a Product List from a query.
-* `GetProductsStatusStatusJSON` - Retrieve Products filtered by status.
-* `GetProductsStatusStatusCountJSON` - Count Products filtered by status.
-* `GetProductsIDJSON` - Retrieve a single Product.
-* `PostProductsJSON` - Create a new Product.
-* `PutProductsIDJSON` - Modify an existing Product.
+* [DeleteProductsIDJSON](docs/products/README.md#deleteproductsidjson) - Delete an existing Product.
+* [GetProductsJSON](docs/products/README.md#getproductsjson) - Retrieve all Products.
+* [GetProductsAfterIDJSON](docs/products/README.md#getproductsafteridjson) - Retrieves Products after the given id.
+* [GetProductsCategoryCategoryIDJSON](docs/products/README.md#getproductscategorycategoryidjson) - Retrieve Products filtered by category.
+* [GetProductsCategoryCategoryIDCountJSON](docs/products/README.md#getproductscategorycategoryidcountjson) - Count Products filtered by category.
+* [GetProductsCountJSON](docs/products/README.md#getproductscountjson) - Count all Products.
+* [GetProductsSearchJSON](docs/products/README.md#getproductssearchjson) - Retrieve a Product List from a query.
+* [GetProductsStatusStatusJSON](docs/products/README.md#getproductsstatusstatusjson) - Retrieve Products filtered by status.
+* [GetProductsStatusStatusCountJSON](docs/products/README.md#getproductsstatusstatuscountjson) - Count Products filtered by status.
+* [GetProductsIDJSON](docs/products/README.md#getproductsidjson) - Retrieve a single Product.
+* [PostProductsJSON](docs/products/README.md#postproductsjson) - Create a new Product.
+* [PutProductsIDJSON](docs/products/README.md#putproductsidjson) - Modify an existing Product.
 
-### Promotions
+### [Promotions](docs/promotions/README.md)
 
-* `DeletePromotionsIDJSON` - Delete an existing Promotion.
-* `GetPromotionsJSON` - Retrieve all Promotions.
-* `GetPromotionsIDJSON` - Retrieve a single Promotion.
-* `PostPromotionsJSON` - Create a new Promotion.
-* `PutPromotionsIDJSON` - Update a Promotion.
+* [DeletePromotionsIDJSON](docs/promotions/README.md#deletepromotionsidjson) - Delete an existing Promotion.
+* [GetPromotionsJSON](docs/promotions/README.md#getpromotionsjson) - Retrieve all Promotions.
+* [GetPromotionsIDJSON](docs/promotions/README.md#getpromotionsidjson) - Retrieve a single Promotion.
+* [PostPromotionsJSON](docs/promotions/README.md#postpromotionsjson) - Create a new Promotion.
+* [PutPromotionsIDJSON](docs/promotions/README.md#putpromotionsidjson) - Update a Promotion.
 
-### Regions
+### [Regions](docs/regions/README.md)
 
-* `GetCountriesCountryCodeRegionsJSON` - Retrieve all Regions from a single Country.
-* `GetCountriesCountryCodeRegionsRegionCodeJSON` - Retrieve a single Region information object.
+* [GetCountriesCountryCodeRegionsJSON](docs/regions/README.md#getcountriescountrycoderegionsjson) - Retrieve all Regions from a single Country.
+* [GetCountriesCountryCodeRegionsRegionCodeJSON](docs/regions/README.md#getcountriescountrycoderegionsregioncodejson) - Retrieve a single Region information object.
 
-### ShippingMethods
+### [ShippingMethods](docs/shippingmethods/README.md)
 
-* `DeleteShippingMethodsIDJSON` - Delete an existing Shipping Method.
-* `GetShippingMethodsJSON` - Retrieve all Store's Shipping Methods.
-* `GetShippingMethodsIDJSON` - Retrieve a single Shipping Method.
-* `PostShippingMethodsJSON` - Creates a Shipping Method.
-* `PutShippingMethodsIDJSON` - Update a Shipping Method.
+* [DeleteShippingMethodsIDJSON](docs/shippingmethods/README.md#deleteshippingmethodsidjson) - Delete an existing Shipping Method.
+* [GetShippingMethodsJSON](docs/shippingmethods/README.md#getshippingmethodsjson) - Retrieve all Store's Shipping Methods.
+* [GetShippingMethodsIDJSON](docs/shippingmethods/README.md#getshippingmethodsidjson) - Retrieve a single Shipping Method.
+* [PostShippingMethodsJSON](docs/shippingmethods/README.md#postshippingmethodsjson) - Creates a Shipping Method.
+* [PutShippingMethodsIDJSON](docs/shippingmethods/README.md#putshippingmethodsidjson) - Update a Shipping Method.
 
-### Stores
+### [Stores](docs/stores/README.md)
 
-* `GetStoreInfoJSON` - Retrieve Store Information.
-* `GetStoreLanguagesJSON` - Retrieve Store Languages.
+* [GetStoreInfoJSON](docs/stores/README.md#getstoreinfojson) - Retrieve Store Information.
+* [GetStoreLanguagesJSON](docs/stores/README.md#getstorelanguagesjson) - Retrieve Store Languages.
 
-### Taxes
+### [Taxes](docs/taxes/README.md)
 
-* `GetTaxesJSON` - Retrieve all Taxes.
-* `GetTaxesIDJSON` - Retrieve a single Tax information.
-* `PostTaxesJSON` - Create a new Tax.
+* [GetTaxesJSON](docs/taxes/README.md#gettaxesjson) - Retrieve all Taxes.
+* [GetTaxesIDJSON](docs/taxes/README.md#gettaxesidjson) - Retrieve a single Tax information.
+* [PostTaxesJSON](docs/taxes/README.md#posttaxesjson) - Create a new Tax.
 <!-- End SDK Available Operations -->
 
 ### Maturity

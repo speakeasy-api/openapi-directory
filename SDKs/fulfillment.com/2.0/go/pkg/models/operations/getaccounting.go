@@ -19,17 +19,21 @@ const (
 	GetAccountingHydrateEnumItems GetAccountingHydrateEnum = "items"
 )
 
+func (e GetAccountingHydrateEnum) ToPointer() *GetAccountingHydrateEnum {
+	return &e
+}
+
 func (e *GetAccountingHydrateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "items":
-		*e = GetAccountingHydrateEnum(s)
+		*e = GetAccountingHydrateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAccountingHydrateEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAccountingHydrateEnum: %v", v)
 	}
 }
 

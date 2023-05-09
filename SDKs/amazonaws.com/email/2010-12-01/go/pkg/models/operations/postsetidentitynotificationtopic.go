@@ -15,17 +15,21 @@ const (
 	POSTSetIdentityNotificationTopicActionEnumSetIdentityNotificationTopic POSTSetIdentityNotificationTopicActionEnum = "SetIdentityNotificationTopic"
 )
 
+func (e POSTSetIdentityNotificationTopicActionEnum) ToPointer() *POSTSetIdentityNotificationTopicActionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityNotificationTopicActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityNotificationTopic":
-		*e = POSTSetIdentityNotificationTopicActionEnum(s)
+		*e = POSTSetIdentityNotificationTopicActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityNotificationTopicActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityNotificationTopicActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetIdentityNotificationTopicVersionEnumTwoThousandAndTen1201 POSTSetIdentityNotificationTopicVersionEnum = "2010-12-01"
 )
 
+func (e POSTSetIdentityNotificationTopicVersionEnum) ToPointer() *POSTSetIdentityNotificationTopicVersionEnum {
+	return &e
+}
+
 func (e *POSTSetIdentityNotificationTopicVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSetIdentityNotificationTopicVersionEnum(s)
+		*e = POSTSetIdentityNotificationTopicVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetIdentityNotificationTopicVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetIdentityNotificationTopicVersionEnum: %v", v)
 	}
 }
 

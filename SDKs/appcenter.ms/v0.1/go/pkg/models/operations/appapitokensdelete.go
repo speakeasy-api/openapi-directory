@@ -34,12 +34,16 @@ const (
 	AppAPITokensDelete404ApplicationJSONErrorCodeEnumTooManyRequests     AppAPITokensDelete404ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppAPITokensDelete404ApplicationJSONErrorCodeEnum) ToPointer() *AppAPITokensDelete404ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppAPITokensDelete404ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -53,10 +57,10 @@ func (e *AppAPITokensDelete404ApplicationJSONErrorCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppAPITokensDelete404ApplicationJSONErrorCodeEnum(s)
+		*e = AppAPITokensDelete404ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAPITokensDelete404ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAPITokensDelete404ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -82,12 +86,16 @@ const (
 	AppAPITokensDelete401ApplicationJSONErrorCodeEnumTooManyRequests     AppAPITokensDelete401ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppAPITokensDelete401ApplicationJSONErrorCodeEnum) ToPointer() *AppAPITokensDelete401ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppAPITokensDelete401ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -101,10 +109,10 @@ func (e *AppAPITokensDelete401ApplicationJSONErrorCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppAPITokensDelete401ApplicationJSONErrorCodeEnum(s)
+		*e = AppAPITokensDelete401ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAPITokensDelete401ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAPITokensDelete401ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -130,12 +138,16 @@ const (
 	AppAPITokensDelete400ApplicationJSONErrorCodeEnumTooManyRequests     AppAPITokensDelete400ApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppAPITokensDelete400ApplicationJSONErrorCodeEnum) ToPointer() *AppAPITokensDelete400ApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppAPITokensDelete400ApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -149,10 +161,10 @@ func (e *AppAPITokensDelete400ApplicationJSONErrorCodeEnum) UnmarshalJSON(data [
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppAPITokensDelete400ApplicationJSONErrorCodeEnum(s)
+		*e = AppAPITokensDelete400ApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAPITokensDelete400ApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAPITokensDelete400ApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

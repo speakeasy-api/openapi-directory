@@ -18,12 +18,16 @@ const (
 	BatchStatusEnumActive      BatchStatusEnum = "ACTIVE"
 )
 
+func (e BatchStatusEnum) ToPointer() *BatchStatusEnum {
+	return &e
+}
+
 func (e *BatchStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEW":
 		fallthrough
 	case "VALIDATING":
@@ -33,10 +37,10 @@ func (e *BatchStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_ERROR":
 		fallthrough
 	case "ACTIVE":
-		*e = BatchStatusEnum(s)
+		*e = BatchStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchStatusEnum: %v", v)
 	}
 }
 

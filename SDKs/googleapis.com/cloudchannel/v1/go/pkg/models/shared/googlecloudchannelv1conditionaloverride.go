@@ -16,21 +16,25 @@ const (
 	GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnumDirectCustomerCost        GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum = "DIRECT_CUSTOMER_COST"
 )
 
+func (e GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum) ToPointer() *GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REBILLING_BASIS_UNSPECIFIED":
 		fallthrough
 	case "COST_AT_LIST":
 		fallthrough
 	case "DIRECT_CUSTOMER_COST":
-		*e = GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum(s)
+		*e = GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum: %v", v)
 	}
 }
 

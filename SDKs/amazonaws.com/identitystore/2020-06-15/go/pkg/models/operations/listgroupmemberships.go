@@ -16,17 +16,21 @@ const (
 	ListGroupMembershipsXAmzTargetEnumAwsIdentityStoreListGroupMemberships ListGroupMembershipsXAmzTargetEnum = "AWSIdentityStore.ListGroupMemberships"
 )
 
+func (e ListGroupMembershipsXAmzTargetEnum) ToPointer() *ListGroupMembershipsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListGroupMembershipsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIdentityStore.ListGroupMemberships":
-		*e = ListGroupMembershipsXAmzTargetEnum(s)
+		*e = ListGroupMembershipsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGroupMembershipsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGroupMembershipsXAmzTargetEnum: %v", v)
 	}
 }
 

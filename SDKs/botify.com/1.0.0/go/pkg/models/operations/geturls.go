@@ -19,12 +19,16 @@ const (
 	GetUrlsAreaEnumSearchEnginesOrphans GetUrlsAreaEnum = "search_engines_orphans"
 )
 
+func (e GetUrlsAreaEnum) ToPointer() *GetUrlsAreaEnum {
+	return &e
+}
+
 func (e *GetUrlsAreaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "disappeared":
@@ -32,10 +36,10 @@ func (e *GetUrlsAreaEnum) UnmarshalJSON(data []byte) error {
 	case "new":
 		fallthrough
 	case "search_engines_orphans":
-		*e = GetUrlsAreaEnum(s)
+		*e = GetUrlsAreaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUrlsAreaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUrlsAreaEnum: %v", v)
 	}
 }
 

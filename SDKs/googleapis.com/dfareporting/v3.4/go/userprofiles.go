@@ -35,7 +35,10 @@ func newUserProfiles(defaultClient, securityClient HTTPClient, serverURL, langua
 // DfareportingUserProfilesGet - Gets one user profile by ID.
 func (s *userProfiles) DfareportingUserProfilesGet(ctx context.Context, request operations.DfareportingUserProfilesGetRequest, security operations.DfareportingUserProfilesGetSecurity) (*operations.DfareportingUserProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

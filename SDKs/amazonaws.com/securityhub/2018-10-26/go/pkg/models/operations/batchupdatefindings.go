@@ -32,12 +32,16 @@ const (
 	BatchUpdateFindingsRequestBodyVerificationStateEnumBenignPositive BatchUpdateFindingsRequestBodyVerificationStateEnum = "BENIGN_POSITIVE"
 )
 
+func (e BatchUpdateFindingsRequestBodyVerificationStateEnum) ToPointer() *BatchUpdateFindingsRequestBodyVerificationStateEnum {
+	return &e
+}
+
 func (e *BatchUpdateFindingsRequestBodyVerificationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "TRUE_POSITIVE":
@@ -45,10 +49,10 @@ func (e *BatchUpdateFindingsRequestBodyVerificationStateEnum) UnmarshalJSON(data
 	case "FALSE_POSITIVE":
 		fallthrough
 	case "BENIGN_POSITIVE":
-		*e = BatchUpdateFindingsRequestBodyVerificationStateEnum(s)
+		*e = BatchUpdateFindingsRequestBodyVerificationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchUpdateFindingsRequestBodyVerificationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchUpdateFindingsRequestBodyVerificationStateEnum: %v", v)
 	}
 }
 

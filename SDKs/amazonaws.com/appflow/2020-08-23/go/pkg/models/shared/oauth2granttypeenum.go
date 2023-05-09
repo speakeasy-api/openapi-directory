@@ -14,18 +14,22 @@ const (
 	OAuth2GrantTypeEnumAuthorizationCode OAuth2GrantTypeEnum = "AUTHORIZATION_CODE"
 )
 
+func (e OAuth2GrantTypeEnum) ToPointer() *OAuth2GrantTypeEnum {
+	return &e
+}
+
 func (e *OAuth2GrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_CREDENTIALS":
 		fallthrough
 	case "AUTHORIZATION_CODE":
-		*e = OAuth2GrantTypeEnum(s)
+		*e = OAuth2GrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OAuth2GrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OAuth2GrantTypeEnum: %v", v)
 	}
 }

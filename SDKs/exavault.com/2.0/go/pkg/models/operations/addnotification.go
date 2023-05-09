@@ -19,12 +19,16 @@ const (
 	AddNotificationAddNotificationRequestBodyActionEnumAll      AddNotificationAddNotificationRequestBodyActionEnum = "all"
 )
 
+func (e AddNotificationAddNotificationRequestBodyActionEnum) ToPointer() *AddNotificationAddNotificationRequestBodyActionEnum {
+	return &e
+}
+
 func (e *AddNotificationAddNotificationRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "upload":
 		fallthrough
 	case "download":
@@ -32,10 +36,10 @@ func (e *AddNotificationAddNotificationRequestBodyActionEnum) UnmarshalJSON(data
 	case "delete":
 		fallthrough
 	case "all":
-		*e = AddNotificationAddNotificationRequestBodyActionEnum(s)
+		*e = AddNotificationAddNotificationRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddNotificationAddNotificationRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for AddNotificationAddNotificationRequestBodyActionEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	AddNotificationAddNotificationRequestBodyTypeEnumFolder AddNotificationAddNotificationRequestBodyTypeEnum = "folder"
 )
 
+func (e AddNotificationAddNotificationRequestBodyTypeEnum) ToPointer() *AddNotificationAddNotificationRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *AddNotificationAddNotificationRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
 		fallthrough
 	case "folder":
-		*e = AddNotificationAddNotificationRequestBodyTypeEnum(s)
+		*e = AddNotificationAddNotificationRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddNotificationAddNotificationRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddNotificationAddNotificationRequestBodyTypeEnum: %v", v)
 	}
 }
 

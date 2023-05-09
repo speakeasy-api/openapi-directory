@@ -17,12 +17,16 @@ const (
 	StatusRequestDTOStatusEnumBillCreated StatusRequestDTOStatusEnum = "BILL_CREATED"
 )
 
+func (e StatusRequestDTOStatusEnum) ToPointer() *StatusRequestDTOStatusEnum {
+	return &e
+}
+
 func (e *StatusRequestDTOStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSTPONED":
 		fallthrough
 	case "TO_BE_SENT":
@@ -32,10 +36,10 @@ func (e *StatusRequestDTOStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CONFIRMED":
 		fallthrough
 	case "BILL_CREATED":
-		*e = StatusRequestDTOStatusEnum(s)
+		*e = StatusRequestDTOStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusRequestDTOStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusRequestDTOStatusEnum: %v", v)
 	}
 }
 

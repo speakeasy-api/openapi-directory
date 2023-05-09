@@ -17,20 +17,24 @@ const (
 	SslCertificateTypeEnumWildcard    SslCertificateTypeEnum = "wildcard"
 )
 
+func (e SslCertificateTypeEnum) ToPointer() *SslCertificateTypeEnum {
+	return &e
+}
+
 func (e *SslCertificateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "multi_domain":
 		fallthrough
 	case "wildcard":
-		*e = SslCertificateTypeEnum(s)
+		*e = SslCertificateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslCertificateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslCertificateTypeEnum: %v", v)
 	}
 }

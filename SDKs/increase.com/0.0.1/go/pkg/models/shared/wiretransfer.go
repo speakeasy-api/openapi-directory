@@ -13,12 +13,16 @@ import (
 type WireTransferTransferApproval struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was approved.
 	ApprovedAt time.Time `json:"approved_at"`
+	// If the Transfer was approved by a user in the dashboard, the email address of that user.
+	ApprovedBy string `json:"approved_by"`
 }
 
 // WireTransferTransferCancellation - If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
 type WireTransferTransferCancellation struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the Transfer was canceled.
 	CanceledAt time.Time `json:"canceled_at"`
+	// If the Transfer was canceled by a user in the dashboard, the email address of that user.
+	CanceledBy string `json:"canceled_by"`
 }
 
 // WireTransferCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transfer's currency. For wire transfers this is always equal to `usd`.
@@ -33,12 +37,16 @@ const (
 	WireTransferCurrencyEnumUsd WireTransferCurrencyEnum = "USD"
 )
 
+func (e WireTransferCurrencyEnum) ToPointer() *WireTransferCurrencyEnum {
+	return &e
+}
+
 func (e *WireTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -50,10 +58,10 @@ func (e *WireTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = WireTransferCurrencyEnum(s)
+		*e = WireTransferCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireTransferCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for WireTransferCurrencyEnum: %v", v)
 	}
 }
 
@@ -64,17 +72,21 @@ const (
 	WireTransferNetworkEnumWire WireTransferNetworkEnum = "wire"
 )
 
+func (e WireTransferNetworkEnum) ToPointer() *WireTransferNetworkEnum {
+	return &e
+}
+
 func (e *WireTransferNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wire":
-		*e = WireTransferNetworkEnum(s)
+		*e = WireTransferNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireTransferNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for WireTransferNetworkEnum: %v", v)
 	}
 }
 
@@ -82,6 +94,8 @@ func (e *WireTransferNetworkEnum) UnmarshalJSON(data []byte) error {
 type WireTransferInboundWireReversal struct {
 	// The amount that was reversed.
 	Amount int64 `json:"amount"`
+	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the reversal was created.
+	CreatedAt time.Time `json:"created_at"`
 	// The description on the reversal message from Fedwire.
 	Description string `json:"description"`
 	// Additional financial institution information included in the wire reversal.
@@ -104,6 +118,8 @@ type WireTransferInboundWireReversal struct {
 	PreviousMessageInputSource string `json:"previous_message_input_source"`
 	// Information included in the wire reversal for the receiving financial institution.
 	ReceiverFinancialInstitutionInformation string `json:"receiver_financial_institution_information"`
+	// The ID for the Transaction associated with the transfer reversal.
+	TransactionID string `json:"transaction_id"`
 }
 
 // WireTransferStatusEnum - The lifecycle status of the transfer.
@@ -119,12 +135,16 @@ const (
 	WireTransferStatusEnumPendingCreating   WireTransferStatusEnum = "pending_creating"
 )
 
+func (e WireTransferStatusEnum) ToPointer() *WireTransferStatusEnum {
+	return &e
+}
+
 func (e *WireTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "canceled":
 		fallthrough
 	case "requires_attention":
@@ -138,10 +158,10 @@ func (e *WireTransferStatusEnum) UnmarshalJSON(data []byte) error {
 	case "complete":
 		fallthrough
 	case "pending_creating":
-		*e = WireTransferStatusEnum(s)
+		*e = WireTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WireTransferStatusEnum: %v", v)
 	}
 }
 
@@ -160,17 +180,21 @@ const (
 	WireTransferTypeEnumWireTransfer WireTransferTypeEnum = "wire_transfer"
 )
 
+func (e WireTransferTypeEnum) ToPointer() *WireTransferTypeEnum {
+	return &e
+}
+
 func (e *WireTransferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wire_transfer":
-		*e = WireTransferTypeEnum(s)
+		*e = WireTransferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WireTransferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WireTransferTypeEnum: %v", v)
 	}
 }
 
@@ -214,8 +238,6 @@ type WireTransfer struct {
 	Status WireTransferStatusEnum `json:"status"`
 	// After the transfer is submitted to Fedwire, this will contain supplemental details.
 	Submission WireTransferWireTransferSubmission `json:"submission"`
-	// If the transfer was created from a template, this will be the template's ID.
-	TemplateID string `json:"template_id"`
 	// The ID for the transaction funding the transfer.
 	TransactionID string `json:"transaction_id"`
 	// A constant representing the object's type. For this resource it will always be `wire_transfer`.

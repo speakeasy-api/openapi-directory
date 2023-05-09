@@ -18,12 +18,16 @@ const (
 	DisplayStateEnumSuspended               DisplayStateEnum = "SUSPENDED"
 )
 
+func (e DisplayStateEnum) ToPointer() *DisplayStateEnum {
+	return &e
+}
+
 func (e *DisplayStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY_STATE_UNSPECIFIED":
 		fallthrough
 	case "OFF":
@@ -33,10 +37,10 @@ func (e *DisplayStateEnum) UnmarshalJSON(data []byte) error {
 	case "DOZE":
 		fallthrough
 	case "SUSPENDED":
-		*e = DisplayStateEnum(s)
+		*e = DisplayStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayStateEnum: %v", v)
 	}
 }
 

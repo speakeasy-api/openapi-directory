@@ -15,17 +15,21 @@ const (
 	GETSetLoadBalancerPoliciesForBackendServerActionEnumSetLoadBalancerPoliciesForBackendServer GETSetLoadBalancerPoliciesForBackendServerActionEnum = "SetLoadBalancerPoliciesForBackendServer"
 )
 
+func (e GETSetLoadBalancerPoliciesForBackendServerActionEnum) ToPointer() *GETSetLoadBalancerPoliciesForBackendServerActionEnum {
+	return &e
+}
+
 func (e *GETSetLoadBalancerPoliciesForBackendServerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetLoadBalancerPoliciesForBackendServer":
-		*e = GETSetLoadBalancerPoliciesForBackendServerActionEnum(s)
+		*e = GETSetLoadBalancerPoliciesForBackendServerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetLoadBalancerPoliciesForBackendServerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetLoadBalancerPoliciesForBackendServerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetLoadBalancerPoliciesForBackendServerVersionEnumTwoThousandAndTwelve0601 GETSetLoadBalancerPoliciesForBackendServerVersionEnum = "2012-06-01"
 )
 
+func (e GETSetLoadBalancerPoliciesForBackendServerVersionEnum) ToPointer() *GETSetLoadBalancerPoliciesForBackendServerVersionEnum {
+	return &e
+}
+
 func (e *GETSetLoadBalancerPoliciesForBackendServerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETSetLoadBalancerPoliciesForBackendServerVersionEnum(s)
+		*e = GETSetLoadBalancerPoliciesForBackendServerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetLoadBalancerPoliciesForBackendServerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetLoadBalancerPoliciesForBackendServerVersionEnum: %v", v)
 	}
 }
 

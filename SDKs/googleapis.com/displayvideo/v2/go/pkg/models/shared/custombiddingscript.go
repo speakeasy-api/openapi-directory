@@ -17,12 +17,16 @@ const (
 	CustomBiddingScriptStateEnumPending          CustomBiddingScriptStateEnum = "PENDING"
 )
 
+func (e CustomBiddingScriptStateEnum) ToPointer() *CustomBiddingScriptStateEnum {
+	return &e
+}
+
 func (e *CustomBiddingScriptStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACCEPTED":
@@ -30,10 +34,10 @@ func (e *CustomBiddingScriptStateEnum) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "PENDING":
-		*e = CustomBiddingScriptStateEnum(s)
+		*e = CustomBiddingScriptStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomBiddingScriptStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomBiddingScriptStateEnum: %v", v)
 	}
 }
 

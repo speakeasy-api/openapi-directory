@@ -15,17 +15,21 @@ const (
 	POSTPutManagedInsightRulesActionEnumPutManagedInsightRules POSTPutManagedInsightRulesActionEnum = "PutManagedInsightRules"
 )
 
+func (e POSTPutManagedInsightRulesActionEnum) ToPointer() *POSTPutManagedInsightRulesActionEnum {
+	return &e
+}
+
 func (e *POSTPutManagedInsightRulesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutManagedInsightRules":
-		*e = POSTPutManagedInsightRulesActionEnum(s)
+		*e = POSTPutManagedInsightRulesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutManagedInsightRulesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutManagedInsightRulesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPutManagedInsightRulesVersionEnumTwoThousandAndTen0801 POSTPutManagedInsightRulesVersionEnum = "2010-08-01"
 )
 
+func (e POSTPutManagedInsightRulesVersionEnum) ToPointer() *POSTPutManagedInsightRulesVersionEnum {
+	return &e
+}
+
 func (e *POSTPutManagedInsightRulesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTPutManagedInsightRulesVersionEnum(s)
+		*e = POSTPutManagedInsightRulesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPutManagedInsightRulesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPutManagedInsightRulesVersionEnum: %v", v)
 	}
 }
 

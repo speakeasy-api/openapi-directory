@@ -16,21 +16,25 @@ const (
 	FolderStateEnumDeleteRequested  FolderStateEnum = "DELETE_REQUESTED"
 )
 
+func (e FolderStateEnum) ToPointer() *FolderStateEnum {
+	return &e
+}
+
 func (e *FolderStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETE_REQUESTED":
-		*e = FolderStateEnum(s)
+		*e = FolderStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FolderStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FolderStateEnum: %v", v)
 	}
 }
 

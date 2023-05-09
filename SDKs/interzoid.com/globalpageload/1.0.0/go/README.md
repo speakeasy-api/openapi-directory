@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/globalpagel
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GlobalpageloadRequest{
+    ctx := context.Background()
+    res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, operations.GlobalpageloadRequest{
         License: "corrupti",
         Origin: "provident",
         URL: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### PageLoadPerformanceTime
+### [PageLoadPerformanceTime](docs/pageloadperformancetime/README.md)
 
-* `Globalpageload` - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
+* [Globalpageload](docs/pageloadperformancetime/README.md#globalpageload) - Gets page load (or an API call) performance from a specified global geography such as Paris, Tokyo, Virginia, Mumbai, Frankfurt, London, Seoul, California, Sao Paolo, and many more.
 <!-- End SDK Available Operations -->
 
 ### Maturity

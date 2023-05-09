@@ -40,7 +40,10 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Deleting an account will remove all connected people from that account.
 func (s *accounts) DeleteV2AccountsIDJSON(ctx context.Context, request operations.DeleteV2AccountsIDJSONRequest) (*operations.DeleteV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +129,10 @@ func (s *accounts) GetV2AccountsJSON(ctx context.Context, request operations.Get
 // Fetches an account, by ID only.
 func (s *accounts) GetV2AccountsIDJSON(ctx context.Context, request operations.GetV2AccountsIDJSONRequest) (*operations.GetV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -230,7 +236,10 @@ func (s *accounts) PostV2AccountsJSON(ctx context.Context, request operations.Po
 // "domain" must be unique on the current team.
 func (s *accounts) PutV2AccountsIDJSON(ctx context.Context, request operations.PutV2AccountsIDJSONRequest) (*operations.PutV2AccountsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/accounts/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

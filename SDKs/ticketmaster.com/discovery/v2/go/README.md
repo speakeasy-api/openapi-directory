@@ -13,18 +13,18 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ticketmaster.com/discover
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FindRequest{
+    ctx := context.Background()
+    res, err := s.Find(ctx, operations.FindRequest{
         ClassificationID: []interface{}{
             "provident",
             "distinctio",
@@ -35,20 +35,17 @@ func main() {
             "corrupti",
             "illum",
         },
-        ID: "vel",
-        IncludeLicensedContent: " no",
-        IncludeSpellcheck: " no",
-        IncludeTest: " no",
-        Keyword: "iure",
-        Locale: "magnam",
-        Page: "debitis",
-        Size: "ipsa",
-        Sort: "delectus",
-        Source: " universe",
-    }
-
-    ctx := context.Background()
-    res, err := s.Find(ctx, req)
+        ID: sdk.String("69a674e0-f467-4cc8-b96e-d151a05dfc2d"),
+        IncludeLicensedContent: operations.FindIncludeLicensedContentEnumNo.ToPointer(),
+        IncludeSpellcheck: operations.FindIncludeSpellcheckEnumNo.ToPointer(),
+        IncludeTest: operations.FindIncludeTestEnumNo.ToPointer(),
+        Keyword: sdk.String("quod"),
+        Locale: sdk.String("quod"),
+        Page: sdk.String("esse"),
+        Size: sdk.String("totam"),
+        Sort: sdk.String("porro"),
+        Source: operations.FindSourceEnumFrontgate.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -63,24 +60,24 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Find` - Attraction Search
-* `Get` - Get Attraction Details
-* `GetGenre` - Get Genre Details
-* `GetImages` - Get Event Images
-* `GetSegment` - Get Segment Details
-* `GetSubgenre` - Get Sub-Genre Details
-* `GetDiscoveryV2Classifications` - Classification Search
-* `GetDiscoveryV2ClassificationsID` - Get Classification Details
-* `GetDiscoveryV2Events` - Event Search
-* `GetDiscoveryV2EventsID` - Get Event Details
-* `GetDiscoveryV2Venues` - Venue Search
-* `GetDiscoveryV2VenuesID` - Get Venue Details
+* [Find](docs/sdk/README.md#find) - Attraction Search
+* [Get](docs/sdk/README.md#get) - Get Attraction Details
+* [GetGenre](docs/sdk/README.md#getgenre) - Get Genre Details
+* [GetImages](docs/sdk/README.md#getimages) - Get Event Images
+* [GetSegment](docs/sdk/README.md#getsegment) - Get Segment Details
+* [GetSubgenre](docs/sdk/README.md#getsubgenre) - Get Sub-Genre Details
+* [GetDiscoveryV2Classifications](docs/sdk/README.md#getdiscoveryv2classifications) - Classification Search
+* [GetDiscoveryV2ClassificationsID](docs/sdk/README.md#getdiscoveryv2classificationsid) - Get Classification Details
+* [GetDiscoveryV2Events](docs/sdk/README.md#getdiscoveryv2events) - Event Search
+* [GetDiscoveryV2EventsID](docs/sdk/README.md#getdiscoveryv2eventsid) - Get Event Details
+* [GetDiscoveryV2Venues](docs/sdk/README.md#getdiscoveryv2venues) - Venue Search
+* [GetDiscoveryV2VenuesID](docs/sdk/README.md#getdiscoveryv2venuesid) - Get Venue Details
 
-### V2
+### [V2](docs/v2/README.md)
 
-* `GetDiscoveryV2Suggest` - Find Suggest
+* [GetDiscoveryV2Suggest](docs/v2/README.md#getdiscoveryv2suggest) - Find Suggest
 <!-- End SDK Available Operations -->
 
 ### Maturity

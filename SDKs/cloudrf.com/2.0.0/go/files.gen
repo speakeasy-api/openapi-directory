@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -34,4 +35,8 @@ pkg/models/shared/antenna.go
 pkg/models/shared/point.go
 pkg/models/shared/feature.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/analyse/README.md
+docs/create/README.md
+docs/manage/README.md
 USAGE.md

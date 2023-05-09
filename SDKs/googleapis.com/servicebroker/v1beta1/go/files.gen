@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -51,4 +52,7 @@ pkg/models/shared/googletypeexpr.go
 pkg/models/shared/googleiamv1setiampolicyrequest.go
 pkg/models/shared/googleiamv1testiampermissionsresponse.go
 pkg/models/shared/googleiamv1testiampermissionsrequest.go
+docs/sdk/README.md
+docs/projects/README.md
+docs/v1beta1/README.md
 USAGE.md

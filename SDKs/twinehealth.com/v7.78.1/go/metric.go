@@ -144,7 +144,10 @@ func (s *metric) CreatePatientHealthMetric(ctx context.Context, request shared.C
 // Get the plan summary for a patient.
 func (s *metric) FetchPatientHealthMetric(ctx context.Context, request operations.FetchPatientHealthMetricRequest) (*operations.FetchPatientHealthMetricResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/patient_health_metric/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/patient_health_metric/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

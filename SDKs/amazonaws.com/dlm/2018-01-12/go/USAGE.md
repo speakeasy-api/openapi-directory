@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateLifecyclePolicyRequest{
+    ctx := context.Background()
+    res, err := s.CreateLifecyclePolicy(ctx, operations.CreateLifecyclePolicyRequest{
         RequestBody: operations.CreateLifecyclePolicyRequestBody{
             Description: "corrupti",
             ExecutionRoleArn: "provident",
@@ -27,308 +28,271 @@ func main() {
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "unde",
+                                    CmkArn: sdk.String("unde"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 857946,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: sdk.Int64(857946),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
                                 Target: "illum",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "vel",
+                                    CmkArn: sdk.String("vel"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 623564,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: sdk.Int64(623564),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
                                 Target: "suscipit",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "iure",
+                                    CmkArn: sdk.String("iure"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 297534,
-                                    IntervalUnit: "YEARS",
+                                    Interval: sdk.Int64(297534),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                                 },
                                 Target: "ipsa",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "delectus",
+                                    CmkArn: sdk.String("delectus"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 272656,
-                                    IntervalUnit: "WEEKS",
+                                    Interval: sdk.Int64(272656),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
                                 },
                                 Target: "molestiae",
                             },
                         },
-                        Name: "minus",
+                        Name: "Irving Lehner",
                     },
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "voluptatum",
+                                    CmkArn: sdk.String("recusandae"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 479977,
-                                    IntervalUnit: "MONTHS",
-                                },
-                                Target: "nisi",
-                            },
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "recusandae",
-                                    Encrypted: false,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 836079,
-                                    IntervalUnit: "DAYS",
+                                    Interval: sdk.Int64(836079),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
                                 },
                                 Target: "quis",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "veritatis",
+                                    CmkArn: sdk.String("veritatis"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 648172,
-                                    IntervalUnit: "DAYS",
+                                    Interval: sdk.Int64(648172),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
                                 },
                                 Target: "ipsam",
                             },
-                            shared.CrossRegionCopyAction{
-                                EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "repellendus",
-                                    Encrypted: false,
-                                },
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 957156,
-                                    IntervalUnit: "YEARS",
-                                },
-                                Target: "odit",
-                            },
                         },
-                        Name: "at",
+                        Name: "Timmy Satterfield",
                     },
                     shared.Action{
                         CrossRegionCopy: []shared.CrossRegionCopyAction{
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "maiores",
+                                    CmkArn: sdk.String("maiores"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 473608,
-                                    IntervalUnit: "YEARS",
+                                    Interval: sdk.Int64(473608),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                                 },
                                 Target: "quod",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "esse",
+                                    CmkArn: sdk.String("esse"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 520478,
-                                    IntervalUnit: "YEARS",
+                                    Interval: sdk.Int64(520478),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                                 },
                                 Target: "dolorum",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "dicta",
+                                    CmkArn: sdk.String("dicta"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 720633,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: sdk.Int64(720633),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
                                 Target: "occaecati",
                             },
                             shared.CrossRegionCopyAction{
                                 EncryptionConfiguration: shared.EncryptionConfiguration{
-                                    CmkArn: "fugit",
+                                    CmkArn: sdk.String("fugit"),
                                     Encrypted: false,
                                 },
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 537373,
-                                    IntervalUnit: "YEARS",
+                                    Interval: sdk.Int64(537373),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                                 },
                                 Target: "optio",
                             },
                         },
-                        Name: "totam",
+                        Name: "Jack Johns",
                     },
                 },
                 EventSource: &shared.EventSource{
                     Parameters: &shared.EventParameters{
-                        DescriptionRegex: "beatae",
-                        EventType: "shareSnapshot",
+                        DescriptionRegex: "qui",
+                        EventType: shared.EventTypeValuesEnumShareSnapshot,
                         SnapshotOwner: []string{
-                            "molestiae",
-                            "modi",
+                            "cum",
+                            "esse",
+                            "ipsum",
+                            "excepturi",
                         },
                     },
-                    Type: "MANAGED_CWE",
+                    Type: shared.EventSourceValuesEnumManagedCwe,
                 },
                 Parameters: &shared.Parameters{
-                    ExcludeBootVolume: false,
+                    ExcludeBootVolume: sdk.Bool(false),
                     ExcludeDataVolumeTags: []shared.Tag{
                         shared.Tag{
-                            Key: "impedit",
-                            Value: "cum",
+                            Key: "perferendis",
+                            Value: "ad",
                         },
                     },
-                    NoReboot: false,
+                    NoReboot: sdk.Bool(false),
                 },
-                PolicyType: "IMAGE_MANAGEMENT",
+                PolicyType: shared.PolicyTypeValuesEnumImageManagement.ToPointer(),
                 ResourceLocations: []shared.ResourceLocationValuesEnum{
-                    "OUTPOST",
+                    shared.ResourceLocationValuesEnumOutpost,
                 },
                 ResourceTypes: []shared.ResourceTypeValuesEnum{
-                    "VOLUME",
+                    shared.ResourceTypeValuesEnumInstance,
                 },
                 Schedules: []shared.Schedule{
                     shared.Schedule{
                         ArchiveRule: &shared.ArchiveRule{
                             RetainRule: shared.ArchiveRetainRule{
                                 RetentionArchiveTier: shared.RetentionArchiveTier{
-                                    Count: 617636,
-                                    Interval: 149675,
-                                    IntervalUnit: "MONTHS",
+                                    Count: sdk.Int64(943749),
+                                    Interval: sdk.Int64(902599),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
                             },
                         },
-                        CopyTags: false,
+                        CopyTags: sdk.Bool(false),
                         CreateRule: &shared.CreateRule{
-                            CronExpression: "dolor",
-                            Interval: 616934,
-                            IntervalUnit: "HOURS",
-                            Location: "CLOUD",
+                            CronExpression: sdk.String("in"),
+                            Interval: sdk.Int64(359508),
+                            IntervalUnit: shared.IntervalUnitValuesEnumHours.ToPointer(),
+                            Location: shared.LocationValuesEnumOutpostLocal.ToPointer(),
                             Times: []string{
                                 "saepe",
-                                "fuga",
-                                "in",
-                                "corporis",
+                                "quidem",
                             },
                         },
                         CrossRegionCopyRules: []shared.CrossRegionCopyRule{
                             shared.CrossRegionCopyRule{
-                                CmkArn: "iure",
-                                CopyTags: false,
+                                CmkArn: sdk.String("ipsa"),
+                                CopyTags: sdk.Bool(false),
                                 DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 902349,
-                                    IntervalUnit: "MONTHS",
+                                    Interval: sdk.Int64(969810),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
                                 Encrypted: false,
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 99280,
-                                    IntervalUnit: "DAYS",
+                                    Interval: sdk.Int64(653140),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumMonths.ToPointer(),
                                 },
-                                Target: "reiciendis",
-                                TargetRegion: "est",
-                            },
-                            shared.CrossRegionCopyRule{
-                                CmkArn: "mollitia",
-                                CopyTags: false,
-                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 670638,
-                                    IntervalUnit: "DAYS",
-                                },
-                                Encrypted: false,
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 210382,
-                                    IntervalUnit: "WEEKS",
-                                },
-                                Target: "explicabo",
-                                TargetRegion: "nobis",
-                            },
-                            shared.CrossRegionCopyRule{
-                                CmkArn: "enim",
-                                CopyTags: false,
-                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 607831,
-                                    IntervalUnit: "WEEKS",
-                                },
-                                Encrypted: false,
-                                RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 325047,
-                                    IntervalUnit: "MONTHS",
-                                },
-                                Target: "accusantium",
-                                TargetRegion: "iure",
+                                Target: sdk.String("dolores"),
+                                TargetRegion: sdk.String("dolorem"),
                             },
                         },
                         DeprecateRule: &shared.DeprecateRule{
-                            Count: 634274,
-                            Interval: 988374,
-                            IntervalUnit: "YEARS",
+                            Count: sdk.Int64(358152),
+                            Interval: sdk.Int64(128926),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                         },
                         FastRestoreRule: &shared.FastRestoreRule{
                             AvailabilityZones: []string{
-                                "mollitia",
+                                "omnis",
+                                "nemo",
                             },
-                            Count: 208876,
-                            Interval: 635059,
-                            IntervalUnit: "DAYS",
+                            Count: sdk.Int64(325047),
+                            Interval: sdk.Int64(570197),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
                         },
-                        Name: "repellat",
+                        Name: sdk.String("Cecilia Yundt MD"),
                         RetainRule: &shared.RetainRule{
-                            Count: 653108,
-                            Interval: 581850,
-                            IntervalUnit: "WEEKS",
+                            Count: sdk.Int64(208876),
+                            Interval: sdk.Int64(635059),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
                         },
                         ShareRules: []shared.ShareRule{
                             shared.ShareRule{
                                 TargetAccounts: []string{
-                                    "molestiae",
-                                    "velit",
+                                    "occaecati",
+                                    "numquam",
+                                    "commodi",
                                 },
-                                UnshareInterval: 623510,
-                                UnshareIntervalUnit: "DAYS",
+                                UnshareInterval: sdk.Int64(466311),
+                                UnshareIntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
                             },
                             shared.ShareRule{
                                 TargetAccounts: []string{
-                                    "vitae",
+                                    "error",
+                                },
+                                UnshareInterval: sdk.Int64(158969),
+                                UnshareIntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
+                            },
+                            shared.ShareRule{
+                                TargetAccounts: []string{
                                     "laborum",
                                 },
-                                UnshareInterval: 656330,
-                                UnshareIntervalUnit: "WEEKS",
+                                UnshareInterval: sdk.Int64(656330),
+                                UnshareIntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
+                            },
+                            shared.ShareRule{
+                                TargetAccounts: []string{
+                                    "quo",
+                                },
+                                UnshareInterval: sdk.Int64(196582),
+                                UnshareIntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                             },
                         },
                         TagsToAdd: []shared.Tag{
                             shared.Tag{
-                                Key: "quo",
-                                Value: "sequi",
+                                Key: "id",
+                                Value: "possimus",
+                            },
+                            shared.Tag{
+                                Key: "aut",
+                                Value: "quasi",
                             },
                         },
                         VariableTags: []shared.Tag{
                             shared.Tag{
-                                Key: "ipsam",
-                                Value: "id",
-                            },
-                            shared.Tag{
-                                Key: "possimus",
-                                Value: "aut",
+                                Key: "temporibus",
+                                Value: "laborum",
                             },
                             shared.Tag{
                                 Key: "quasi",
-                                Value: "error",
+                                Value: "reiciendis",
                             },
                             shared.Tag{
-                                Key: "temporibus",
-                                Value: "laborum",
+                                Key: "voluptatibus",
+                                Value: "vero",
                             },
                         },
                     },
@@ -336,130 +300,142 @@ func main() {
                         ArchiveRule: &shared.ArchiveRule{
                             RetainRule: shared.ArchiveRetainRule{
                                 RetentionArchiveTier: shared.RetentionArchiveTier{
-                                    Count: 96098,
-                                    Interval: 971945,
-                                    IntervalUnit: "YEARS",
+                                    Count: sdk.Int64(468651),
+                                    Interval: sdk.Int64(509624),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                                 },
                             },
                         },
-                        CopyTags: false,
+                        CopyTags: sdk.Bool(false),
                         CreateRule: &shared.CreateRule{
-                            CronExpression: "vero",
-                            Interval: 468651,
-                            IntervalUnit: "HOURS",
-                            Location: "OUTPOST_LOCAL",
+                            CronExpression: sdk.String("ipsa"),
+                            Interval: sdk.Int64(604846),
+                            IntervalUnit: shared.IntervalUnitValuesEnumHours.ToPointer(),
+                            Location: shared.LocationValuesEnumCloud.ToPointer(),
                             Times: []string{
-                                "ipsa",
-                                "omnis",
-                                "voluptate",
-                                "cum",
+                                "perferendis",
+                                "doloremque",
+                                "reprehenderit",
                             },
                         },
                         CrossRegionCopyRules: []shared.CrossRegionCopyRule{
                             shared.CrossRegionCopyRule{
-                                CmkArn: "doloremque",
-                                CopyTags: false,
+                                CmkArn: sdk.String("maiores"),
+                                CopyTags: sdk.Bool(false),
                                 DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
-                                    Interval: 441711,
-                                    IntervalUnit: "WEEKS",
+                                    Interval: sdk.Int64(120196),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
                                 },
                                 Encrypted: false,
                                 RetainRule: &shared.CrossRegionCopyRetainRule{
-                                    Interval: 979587,
-                                    IntervalUnit: "DAYS",
+                                    Interval: sdk.Int64(296140),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
                                 },
-                                Target: "corporis",
-                                TargetRegion: "dolore",
+                                Target: sdk.String("dicta"),
+                                TargetRegion: sdk.String("harum"),
+                            },
+                            shared.CrossRegionCopyRule{
+                                CmkArn: sdk.String("enim"),
+                                CopyTags: sdk.Bool(false),
+                                DeprecateRule: &shared.CrossRegionCopyDeprecateRule{
+                                    Interval: sdk.Int64(880476),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumWeeks.ToPointer(),
+                                },
+                                Encrypted: false,
+                                RetainRule: &shared.CrossRegionCopyRetainRule{
+                                    Interval: sdk.Int64(918236),
+                                    IntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
+                                },
+                                Target: sdk.String("ipsum"),
+                                TargetRegion: sdk.String("quidem"),
                             },
                         },
                         DeprecateRule: &shared.DeprecateRule{
-                            Count: 480894,
-                            Interval: 118727,
-                            IntervalUnit: "MONTHS",
+                            Count: sdk.Int64(565189),
+                            Interval: sdk.Int64(566602),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                         },
                         FastRestoreRule: &shared.FastRestoreRule{
                             AvailabilityZones: []string{
-                                "accusamus",
-                                "commodi",
+                                "praesentium",
+                                "rem",
                             },
-                            Count: 918236,
-                            Interval: 64147,
-                            IntervalUnit: "DAYS",
+                            Count: sdk.Int64(916723),
+                            Interval: sdk.Int64(93940),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                         },
-                        Name: "quidem",
+                        Name: sdk.String("Patrick Ward"),
                         RetainRule: &shared.RetainRule{
-                            Count: 565189,
-                            Interval: 566602,
-                            IntervalUnit: "YEARS",
+                            Count: sdk.Int64(9356),
+                            Interval: sdk.Int64(667411),
+                            IntervalUnit: shared.RetentionIntervalUnitValuesEnumYears.ToPointer(),
                         },
                         ShareRules: []shared.ShareRule{
                             shared.ShareRule{
                                 TargetAccounts: []string{
-                                    "rem",
-                                    "voluptates",
-                                    "quasi",
+                                    "distinctio",
+                                    "quibusdam",
+                                    "labore",
                                 },
-                                UnshareInterval: 921158,
-                                UnshareIntervalUnit: "MONTHS",
-                            },
-                            shared.ShareRule{
-                                TargetAccounts: []string{
-                                    "itaque",
-                                },
-                                UnshareInterval: 277718,
-                                UnshareIntervalUnit: "WEEKS",
+                                UnshareInterval: sdk.Int64(264730),
+                                UnshareIntervalUnit: shared.RetentionIntervalUnitValuesEnumDays.ToPointer(),
                             },
                         },
                         TagsToAdd: []shared.Tag{
                             shared.Tag{
-                                Key: "est",
-                                Value: "quibusdam",
+                                Key: "cupiditate",
+                                Value: "quos",
+                            },
+                            shared.Tag{
+                                Key: "perferendis",
+                                Value: "magni",
                             },
                         },
                         VariableTags: []shared.Tag{
                             shared.Tag{
-                                Key: "deserunt",
-                                Value: "distinctio",
+                                Key: "ipsam",
+                                Value: "alias",
+                            },
+                            shared.Tag{
+                                Key: "fugit",
+                                Value: "dolorum",
+                            },
+                            shared.Tag{
+                                Key: "excepturi",
+                                Value: "tempora",
+                            },
+                            shared.Tag{
+                                Key: "facilis",
+                                Value: "tempore",
                             },
                         },
                     },
                 },
                 TargetTags: []shared.Tag{
                     shared.Tag{
-                        Key: "labore",
-                        Value: "modi",
+                        Key: "delectus",
+                        Value: "eum",
                     },
                     shared.Tag{
-                        Key: "qui",
-                        Value: "aliquid",
-                    },
-                    shared.Tag{
-                        Key: "cupiditate",
-                        Value: "quos",
-                    },
-                    shared.Tag{
-                        Key: "perferendis",
-                        Value: "magni",
+                        Key: "non",
+                        Value: "eligendi",
                     },
                 },
             },
-            State: "DISABLED",
+            State: operations.CreateLifecyclePolicyRequestBodyStateEnumDisabled,
             Tags: map[string]string{
-                "alias": "fugit",
-                "dolorum": "excepturi",
+                "provident": "necessitatibus",
+                "sint": "officia",
             },
         },
-        XAmzAlgorithm: "tempora",
-        XAmzContentSha256: "facilis",
-        XAmzCredential: "tempore",
-        XAmzDate: "labore",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "eum",
-        XAmzSignedHeaders: "non",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateLifecyclePolicy(ctx, req)
+        XAmzAlgorithm: sdk.String("dolor"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("a"),
+        XAmzDate: sdk.String("dolorum"),
+        XAmzSecurityToken: sdk.String("in"),
+        XAmzSignature: sdk.String("in"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

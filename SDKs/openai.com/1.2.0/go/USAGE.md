@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CancelFineTuneRequest{
-        FineTuneID: "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
-    }
-
     ctx := context.Background()
-    res, err := s.OpenAI.CancelFineTune(ctx, req)
+    res, err := s.OpenAI.CancelFineTune(ctx, operations.CancelFineTuneRequest{
+        FineTuneID: "ft-AF1WoRqd3aJAHsqc9NY7iL8F",
+    })
     if err != nil {
         log.Fatal(err)
     }

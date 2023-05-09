@@ -35,7 +35,10 @@ func newCatalogue(defaultClient, securityClient HTTPClient, serverURL, language,
 // Return the content of the selected catalogue.
 func (s *catalogue) GetCatalogue(ctx context.Context, request operations.GetCatalogueRequest, security operations.GetCatalogueSecurity) (*operations.GetCatalogueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *catalogue) GetCatalogue(ctx context.Context, request operations.GetCata
 // Return the content of the selected catalogue.
 func (s *catalogue) GetCatalogueAsset(ctx context.Context, request operations.GetCatalogueAssetRequest, security operations.GetCatalogueAssetSecurity) (*operations.GetCatalogueAssetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *catalogue) GetCatalogueAsset(ctx context.Context, request operations.Ge
 // Return the content of the selected catalogue asset.
 func (s *catalogue) GetCatalogueAssetDetail(ctx context.Context, request operations.GetCatalogueAssetDetailRequest, security operations.GetCatalogueAssetDetailSecurity) (*operations.GetCatalogueAssetDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset/{assetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/catalogue/{catalogueId}/asset/{assetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -172,7 +181,7 @@ func (s *catalogue) GetCatalogueAssetDetail(ctx context.Context, request operati
 
 // ListCatalogues - Catalogue Collection
 // Return a collection of Catalogues.
-func (s *catalogue) ListCatalogues(ctx context.Context) (*operations.ListCataloguesResponse, error) {
+func (s *catalogue) ListCatalogues(ctx context.Context, security operations.ListCataloguesSecurity) (*operations.ListCataloguesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/catalogue"
 
@@ -181,7 +190,7 @@ func (s *catalogue) ListCatalogues(ctx context.Context) (*operations.ListCatalog
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

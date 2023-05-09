@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,27 +17,25 @@ func main() {
         }),
     )
 
-    req := operations.CreateHomeRegionControlRequest{
+    ctx := context.Background()
+    res, err := s.CreateHomeRegionControl(ctx, operations.CreateHomeRegionControlRequest{
         CreateHomeRegionControlRequest: shared.CreateHomeRegionControlRequest{
-            DryRun: false,
+            DryRun: sdk.Bool(false),
             HomeRegion: "corrupti",
             Target: shared.Target{
-                ID: "provident",
-                Type: "ACCOUNT",
+                ID: sdk.String("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+                Type: shared.TargetTypeEnumAccount,
             },
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateHomeRegionControl(ctx, req)
+        XAmzAlgorithm: sdk.String("perferendis"),
+        XAmzContentSha256: sdk.String("ipsam"),
+        XAmzCredential: sdk.String("repellendus"),
+        XAmzDate: sdk.String("sapiente"),
+        XAmzSecurityToken: sdk.String("quo"),
+        XAmzSignature: sdk.String("odit"),
+        XAmzSignedHeaders: sdk.String("at"),
+        XAmzTarget: operations.CreateHomeRegionControlXAmzTargetEnumAwsMigrationHubMultiAccountServiceCreateHomeRegionControl,
+    })
     if err != nil {
         log.Fatal(err)
     }

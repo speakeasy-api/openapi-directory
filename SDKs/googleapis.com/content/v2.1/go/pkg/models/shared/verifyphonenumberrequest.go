@@ -16,21 +16,25 @@ const (
 	VerifyPhoneNumberRequestPhoneVerificationMethodEnumPhoneCall                          VerifyPhoneNumberRequestPhoneVerificationMethodEnum = "PHONE_CALL"
 )
 
+func (e VerifyPhoneNumberRequestPhoneVerificationMethodEnum) ToPointer() *VerifyPhoneNumberRequestPhoneVerificationMethodEnum {
+	return &e
+}
+
 func (e *VerifyPhoneNumberRequestPhoneVerificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHONE_VERIFICATION_METHOD_UNSPECIFIED":
 		fallthrough
 	case "SMS":
 		fallthrough
 	case "PHONE_CALL":
-		*e = VerifyPhoneNumberRequestPhoneVerificationMethodEnum(s)
+		*e = VerifyPhoneNumberRequestPhoneVerificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VerifyPhoneNumberRequestPhoneVerificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for VerifyPhoneNumberRequestPhoneVerificationMethodEnum: %v", v)
 	}
 }
 

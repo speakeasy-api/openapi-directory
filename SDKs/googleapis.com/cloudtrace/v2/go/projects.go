@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudtraceProjectsTracesBatchWrite - Batch writes new spans to new or existing traces. You cannot update existing spans.
 func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, request operations.CloudtraceProjectsTracesBatchWriteRequest, security operations.CloudtraceProjectsTracesBatchWriteSecurity) (*operations.CloudtraceProjectsTracesBatchWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/traces:batchWrite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}/traces:batchWrite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchWriteSpansRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) CloudtraceProjectsTracesBatchWrite(ctx context.Context, reque
 // CloudtraceProjectsTracesSpansCreateSpan - Creates a new span.
 func (s *projects) CloudtraceProjectsTracesSpansCreateSpan(ctx context.Context, request operations.CloudtraceProjectsTracesSpansCreateSpanRequest, security operations.CloudtraceProjectsTracesSpansCreateSpanSecurity) (*operations.CloudtraceProjectsTracesSpansCreateSpanResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Span", "json")
 	if err != nil {

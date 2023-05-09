@@ -22,12 +22,16 @@ const (
 	UpdateWorkflowStepRequestBodyStatusEnumUserAttentionRequired UpdateWorkflowStepRequestBodyStatusEnum = "USER_ATTENTION_REQUIRED"
 )
 
+func (e UpdateWorkflowStepRequestBodyStatusEnum) ToPointer() *UpdateWorkflowStepRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *UpdateWorkflowStepRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWAITING_DEPENDENCIES":
 		fallthrough
 	case "READY":
@@ -41,10 +45,10 @@ func (e *UpdateWorkflowStepRequestBodyStatusEnum) UnmarshalJSON(data []byte) err
 	case "PAUSED":
 		fallthrough
 	case "USER_ATTENTION_REQUIRED":
-		*e = UpdateWorkflowStepRequestBodyStatusEnum(s)
+		*e = UpdateWorkflowStepRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkflowStepRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkflowStepRequestBodyStatusEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	UpdateWorkflowStepRequestBodyStepActionTypeEnumAutomated UpdateWorkflowStepRequestBodyStepActionTypeEnum = "AUTOMATED"
 )
 
+func (e UpdateWorkflowStepRequestBodyStepActionTypeEnum) ToPointer() *UpdateWorkflowStepRequestBodyStepActionTypeEnum {
+	return &e
+}
+
 func (e *UpdateWorkflowStepRequestBodyStepActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANUAL":
 		fallthrough
 	case "AUTOMATED":
-		*e = UpdateWorkflowStepRequestBodyStepActionTypeEnum(s)
+		*e = UpdateWorkflowStepRequestBodyStepActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkflowStepRequestBodyStepActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkflowStepRequestBodyStepActionTypeEnum: %v", v)
 	}
 }
 

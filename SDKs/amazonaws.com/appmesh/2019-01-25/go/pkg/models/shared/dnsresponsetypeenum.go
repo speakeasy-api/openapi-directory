@@ -14,18 +14,22 @@ const (
 	DNSResponseTypeEnumEndpoints    DNSResponseTypeEnum = "ENDPOINTS"
 )
 
+func (e DNSResponseTypeEnum) ToPointer() *DNSResponseTypeEnum {
+	return &e
+}
+
 func (e *DNSResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOADBALANCER":
 		fallthrough
 	case "ENDPOINTS":
-		*e = DNSResponseTypeEnum(s)
+		*e = DNSResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DNSResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DNSResponseTypeEnum: %v", v)
 	}
 }

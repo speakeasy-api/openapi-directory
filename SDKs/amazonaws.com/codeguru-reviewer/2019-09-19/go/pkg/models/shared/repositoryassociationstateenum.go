@@ -17,12 +17,16 @@ const (
 	RepositoryAssociationStateEnumDisassociated  RepositoryAssociationStateEnum = "Disassociated"
 )
 
+func (e RepositoryAssociationStateEnum) ToPointer() *RepositoryAssociationStateEnum {
+	return &e
+}
+
 func (e *RepositoryAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Associated":
 		fallthrough
 	case "Associating":
@@ -32,9 +36,9 @@ func (e *RepositoryAssociationStateEnum) UnmarshalJSON(data []byte) error {
 	case "Disassociating":
 		fallthrough
 	case "Disassociated":
-		*e = RepositoryAssociationStateEnum(s)
+		*e = RepositoryAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryAssociationStateEnum: %v", v)
 	}
 }

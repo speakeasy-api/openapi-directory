@@ -16,17 +16,21 @@ const (
 	DeprecateWorkflowTypeXAmzTargetEnumSimpleWorkflowServiceDeprecateWorkflowType DeprecateWorkflowTypeXAmzTargetEnum = "SimpleWorkflowService.DeprecateWorkflowType"
 )
 
+func (e DeprecateWorkflowTypeXAmzTargetEnum) ToPointer() *DeprecateWorkflowTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeprecateWorkflowTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SimpleWorkflowService.DeprecateWorkflowType":
-		*e = DeprecateWorkflowTypeXAmzTargetEnum(s)
+		*e = DeprecateWorkflowTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeprecateWorkflowTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeprecateWorkflowTypeXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
+// PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller.
 type PolicyControllerBundleInstallSpecManagementEnum string
 
 const (
@@ -15,26 +15,30 @@ const (
 	PolicyControllerBundleInstallSpecManagementEnumInstalled             PolicyControllerBundleInstallSpecManagementEnum = "INSTALLED"
 )
 
+func (e PolicyControllerBundleInstallSpecManagementEnum) ToPointer() *PolicyControllerBundleInstallSpecManagementEnum {
+	return &e
+}
+
 func (e *PolicyControllerBundleInstallSpecManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "INSTALLED":
-		*e = PolicyControllerBundleInstallSpecManagementEnum(s)
+		*e = PolicyControllerBundleInstallSpecManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerBundleInstallSpecManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerBundleInstallSpecManagementEnum: %v", v)
 	}
 }
 
 // PolicyControllerBundleInstallSpec - BundleInstallSpec is the specification configuration for a single managed bundle.
 type PolicyControllerBundleInstallSpec struct {
-	// the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
+	// the set of namespaces to be exempted from the bundle
 	ExemptedNamespaces []string `json:"exemptedNamespaces,omitempty"`
-	// Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
+	// Management specifies how the bundle will be managed by the controller.
 	Management *PolicyControllerBundleInstallSpecManagementEnum `json:"management,omitempty"`
 }

@@ -16,21 +16,25 @@ const (
 	MetadataExportDatabaseDumpTypeEnumAvro            MetadataExportDatabaseDumpTypeEnum = "AVRO"
 )
 
+func (e MetadataExportDatabaseDumpTypeEnum) ToPointer() *MetadataExportDatabaseDumpTypeEnum {
+	return &e
+}
+
 func (e *MetadataExportDatabaseDumpTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
 		fallthrough
 	case "AVRO":
-		*e = MetadataExportDatabaseDumpTypeEnum(s)
+		*e = MetadataExportDatabaseDumpTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetadataExportDatabaseDumpTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetadataExportDatabaseDumpTypeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	MetadataExportStateEnumCancelled        MetadataExportStateEnum = "CANCELLED"
 )
 
+func (e MetadataExportStateEnum) ToPointer() *MetadataExportStateEnum {
+	return &e
+}
+
 func (e *MetadataExportStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "RUNNING":
@@ -60,10 +68,10 @@ func (e *MetadataExportStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "CANCELLED":
-		*e = MetadataExportStateEnum(s)
+		*e = MetadataExportStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetadataExportStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MetadataExportStateEnum: %v", v)
 	}
 }
 

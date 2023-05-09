@@ -16,17 +16,21 @@ const (
 	RestoreTableFromBackupXAmzTargetEnumDynamoDb20120810RestoreTableFromBackup RestoreTableFromBackupXAmzTargetEnum = "DynamoDB_20120810.RestoreTableFromBackup"
 )
 
+func (e RestoreTableFromBackupXAmzTargetEnum) ToPointer() *RestoreTableFromBackupXAmzTargetEnum {
+	return &e
+}
+
 func (e *RestoreTableFromBackupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.RestoreTableFromBackup":
-		*e = RestoreTableFromBackupXAmzTargetEnum(s)
+		*e = RestoreTableFromBackupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RestoreTableFromBackupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RestoreTableFromBackupXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	DeviceInfoDeviceTypeEnumOther                 DeviceInfoDeviceTypeEnum = "OTHER"
 )
 
+func (e DeviceInfoDeviceTypeEnum) ToPointer() *DeviceInfoDeviceTypeEnum {
+	return &e
+}
+
 func (e *DeviceInfoDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WEB":
@@ -39,10 +43,10 @@ func (e *DeviceInfoDeviceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "BOT":
 		fallthrough
 	case "OTHER":
-		*e = DeviceInfoDeviceTypeEnum(s)
+		*e = DeviceInfoDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceInfoDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceInfoDeviceTypeEnum: %v", v)
 	}
 }
 

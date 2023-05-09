@@ -14,18 +14,22 @@ const (
 	SortPipelinesByEnumCreationTime SortPipelinesByEnum = "CreationTime"
 )
 
+func (e SortPipelinesByEnum) ToPointer() *SortPipelinesByEnum {
+	return &e
+}
+
 func (e *SortPipelinesByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
-		*e = SortPipelinesByEnum(s)
+		*e = SortPipelinesByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortPipelinesByEnum: %s", s)
+		return fmt.Errorf("invalid value for SortPipelinesByEnum: %v", v)
 	}
 }

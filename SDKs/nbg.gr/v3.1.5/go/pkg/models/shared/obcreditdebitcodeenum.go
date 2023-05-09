@@ -14,18 +14,22 @@ const (
 	OBCreditDebitCodeEnumDebit  OBCreditDebitCodeEnum = "Debit"
 )
 
+func (e OBCreditDebitCodeEnum) ToPointer() *OBCreditDebitCodeEnum {
+	return &e
+}
+
 func (e *OBCreditDebitCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Credit":
 		fallthrough
 	case "Debit":
-		*e = OBCreditDebitCodeEnum(s)
+		*e = OBCreditDebitCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBCreditDebitCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBCreditDebitCodeEnum: %v", v)
 	}
 }

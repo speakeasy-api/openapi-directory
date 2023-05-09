@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Reviews-and-Ra
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,14 +28,12 @@ func main() {
         }),
     )
 
-    req := operations.GetProductRatingRequest{
+    ctx := context.Background()
+    res, err := s.Rating.GetProductRating(ctx, operations.GetProductRatingRequest{
         Accept: "corrupti",
         ContentType: "provident",
         ProductID: "1",
-    }
-
-    ctx := context.Background()
-    res, err := s.Rating.GetProductRating(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,19 +49,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Rating
+### [Rating](docs/rating/README.md)
 
-* `GetProductRating` - Get Product Rating
+* [GetProductRating](docs/rating/README.md#getproductrating) - Get Product Rating
 
-### Review
+### [Review](docs/review/README.md)
 
-* `DeleteMultipleReviews` - Delete Multiple Reviews
-* `DeleteReview` - Delete Review
-* `EditReview` - Update a Review
-* `GetReviewbyReviewID` - Get Review by Review ID
-* `GetalistofReviews` - Get a list of Reviews
-* `SaveMultipleReviews` - Create Multiple Reviews
-* `SaveReview` - Create a Review
+* [DeleteMultipleReviews](docs/review/README.md#deletemultiplereviews) - Delete Multiple Reviews
+* [DeleteReview](docs/review/README.md#deletereview) - Delete Review
+* [EditReview](docs/review/README.md#editreview) - Update a Review
+* [GetReviewbyReviewID](docs/review/README.md#getreviewbyreviewid) - Get Review by Review ID
+* [GetalistofReviews](docs/review/README.md#getalistofreviews) - Get a list of Reviews
+* [SaveMultipleReviews](docs/review/README.md#savemultiplereviews) - Create Multiple Reviews
+* [SaveReview](docs/review/README.md#savereview) - Create a Review
 <!-- End SDK Available Operations -->
 
 ### Maturity

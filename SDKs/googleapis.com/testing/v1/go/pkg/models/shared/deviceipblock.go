@@ -17,12 +17,16 @@ const (
 	DeviceIPBlockFormEnumEmulator              DeviceIPBlockFormEnum = "EMULATOR"
 )
 
+func (e DeviceIPBlockFormEnum) ToPointer() *DeviceIPBlockFormEnum {
+	return &e
+}
+
 func (e *DeviceIPBlockFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_FORM_UNSPECIFIED":
 		fallthrough
 	case "VIRTUAL":
@@ -30,10 +34,10 @@ func (e *DeviceIPBlockFormEnum) UnmarshalJSON(data []byte) error {
 	case "PHYSICAL":
 		fallthrough
 	case "EMULATOR":
-		*e = DeviceIPBlockFormEnum(s)
+		*e = DeviceIPBlockFormEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceIPBlockFormEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceIPBlockFormEnum: %v", v)
 	}
 }
 

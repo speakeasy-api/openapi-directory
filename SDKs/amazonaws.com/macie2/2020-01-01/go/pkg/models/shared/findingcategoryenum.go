@@ -15,18 +15,22 @@ const (
 	FindingCategoryEnumPolicy         FindingCategoryEnum = "POLICY"
 )
 
+func (e FindingCategoryEnum) ToPointer() *FindingCategoryEnum {
+	return &e
+}
+
 func (e *FindingCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLASSIFICATION":
 		fallthrough
 	case "POLICY":
-		*e = FindingCategoryEnum(s)
+		*e = FindingCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingCategoryEnum: %v", v)
 	}
 }

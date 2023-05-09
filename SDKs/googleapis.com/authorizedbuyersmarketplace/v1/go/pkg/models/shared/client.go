@@ -17,12 +17,16 @@ const (
 	ClientRoleEnumClientDealApprover    ClientRoleEnum = "CLIENT_DEAL_APPROVER"
 )
 
+func (e ClientRoleEnum) ToPointer() *ClientRoleEnum {
+	return &e
+}
+
 func (e *ClientRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_ROLE_UNSPECIFIED":
 		fallthrough
 	case "CLIENT_DEAL_VIEWER":
@@ -30,10 +34,10 @@ func (e *ClientRoleEnum) UnmarshalJSON(data []byte) error {
 	case "CLIENT_DEAL_NEGOTIATOR":
 		fallthrough
 	case "CLIENT_DEAL_APPROVER":
-		*e = ClientRoleEnum(s)
+		*e = ClientRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientRoleEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ClientStateEnumInactive         ClientStateEnum = "INACTIVE"
 )
 
+func (e ClientStateEnum) ToPointer() *ClientStateEnum {
+	return &e
+}
+
 func (e *ClientStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = ClientStateEnum(s)
+		*e = ClientStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientStateEnum: %v", v)
 	}
 }
 

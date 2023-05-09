@@ -15,21 +15,25 @@ const (
 	UserSettingsInvoiceTemplateEnumTemplate2 UserSettingsInvoiceTemplateEnum = "Template2"
 )
 
+func (e UserSettingsInvoiceTemplateEnum) ToPointer() *UserSettingsInvoiceTemplateEnum {
+	return &e
+}
+
 func (e *UserSettingsInvoiceTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Default":
 		fallthrough
 	case "Template1":
 		fallthrough
 	case "Template2":
-		*e = UserSettingsInvoiceTemplateEnum(s)
+		*e = UserSettingsInvoiceTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserSettingsInvoiceTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for UserSettingsInvoiceTemplateEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	UserSettingsProfessionEnumIndividual                 UserSettingsProfessionEnum = "Individual"
 )
 
+func (e UserSettingsProfessionEnum) ToPointer() *UserSettingsProfessionEnum {
+	return &e
+}
+
 func (e *UserSettingsProfessionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Other":
 		fallthrough
 	case "DesignAndCreative":
@@ -73,10 +81,10 @@ func (e *UserSettingsProfessionEnum) UnmarshalJSON(data []byte) error {
 	case "ECommerce":
 		fallthrough
 	case "Individual":
-		*e = UserSettingsProfessionEnum(s)
+		*e = UserSettingsProfessionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserSettingsProfessionEnum: %s", s)
+		return fmt.Errorf("invalid value for UserSettingsProfessionEnum: %v", v)
 	}
 }
 
@@ -87,19 +95,23 @@ const (
 	UserSettingsReferralProgramEnumDisabled UserSettingsReferralProgramEnum = "Disabled"
 )
 
+func (e UserSettingsReferralProgramEnum) ToPointer() *UserSettingsReferralProgramEnum {
+	return &e
+}
+
 func (e *UserSettingsReferralProgramEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = UserSettingsReferralProgramEnum(s)
+		*e = UserSettingsReferralProgramEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserSettingsReferralProgramEnum: %s", s)
+		return fmt.Errorf("invalid value for UserSettingsReferralProgramEnum: %v", v)
 	}
 }
 
@@ -110,19 +122,23 @@ const (
 	UserSettingsStoreCheckoutFieldsEnumShowAllFields             UserSettingsStoreCheckoutFieldsEnum = "ShowAllFields"
 )
 
+func (e UserSettingsStoreCheckoutFieldsEnum) ToPointer() *UserSettingsStoreCheckoutFieldsEnum {
+	return &e
+}
+
 func (e *UserSettingsStoreCheckoutFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ShowMinimumRequiredFields":
 		fallthrough
 	case "ShowAllFields":
-		*e = UserSettingsStoreCheckoutFieldsEnum(s)
+		*e = UserSettingsStoreCheckoutFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserSettingsStoreCheckoutFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for UserSettingsStoreCheckoutFieldsEnum: %v", v)
 	}
 }
 

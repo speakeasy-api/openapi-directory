@@ -15,17 +15,21 @@ const (
 	GETDisableSerialConsoleAccessActionEnumDisableSerialConsoleAccess GETDisableSerialConsoleAccessActionEnum = "DisableSerialConsoleAccess"
 )
 
+func (e GETDisableSerialConsoleAccessActionEnum) ToPointer() *GETDisableSerialConsoleAccessActionEnum {
+	return &e
+}
+
 func (e *GETDisableSerialConsoleAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableSerialConsoleAccess":
-		*e = GETDisableSerialConsoleAccessActionEnum(s)
+		*e = GETDisableSerialConsoleAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableSerialConsoleAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableSerialConsoleAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableSerialConsoleAccessVersionEnumTwoThousandAndSixteen1115 GETDisableSerialConsoleAccessVersionEnum = "2016-11-15"
 )
 
+func (e GETDisableSerialConsoleAccessVersionEnum) ToPointer() *GETDisableSerialConsoleAccessVersionEnum {
+	return &e
+}
+
 func (e *GETDisableSerialConsoleAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisableSerialConsoleAccessVersionEnum(s)
+		*e = GETDisableSerialConsoleAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableSerialConsoleAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableSerialConsoleAccessVersionEnum: %v", v)
 	}
 }
 

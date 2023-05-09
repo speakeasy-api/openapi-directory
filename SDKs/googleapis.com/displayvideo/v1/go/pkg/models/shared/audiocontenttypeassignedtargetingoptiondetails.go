@@ -18,12 +18,16 @@ const (
 	AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnumAudioContentTypePodcast     AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum = "AUDIO_CONTENT_TYPE_PODCAST"
 )
 
+func (e AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum) ToPointer() *AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum {
+	return &e
+}
+
 func (e *AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIO_CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUDIO_CONTENT_TYPE_UNKNOWN":
@@ -33,10 +37,10 @@ func (e *AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum) Unm
 	case "AUDIO_CONTENT_TYPE_BROADCAST":
 		fallthrough
 	case "AUDIO_CONTENT_TYPE_PODCAST":
-		*e = AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum(s)
+		*e = AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AudioContentTypeAssignedTargetingOptionDetailsAudioContentTypeEnum: %v", v)
 	}
 }
 

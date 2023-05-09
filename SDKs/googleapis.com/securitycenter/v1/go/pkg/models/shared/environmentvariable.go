@@ -2,7 +2,7 @@
 
 package shared
 
-// EnvironmentVariable - EnvironmentVariable is a name-value pair to store environment variables for Process.
+// EnvironmentVariable - A name-value pair representing an environment variable used in an operating system process.
 type EnvironmentVariable struct {
 	// Environment variable name as a JSON encoded string.
 	Name *string `json:"name,omitempty"`

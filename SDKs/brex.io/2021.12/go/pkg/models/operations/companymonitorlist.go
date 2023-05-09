@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/types"
 )
 
+type CompanyMonitorListSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // CompanyMonitorListDefaultApplicationJSON - Detailed information about the error
 type CompanyMonitorListDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

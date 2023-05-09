@@ -17,42 +17,50 @@ const (
 	GetMapVersionNumberCopyrightsFormatFormatEnumXML   GetMapVersionNumberCopyrightsFormatFormatEnum = "xml"
 )
 
+func (e GetMapVersionNumberCopyrightsFormatFormatEnum) ToPointer() *GetMapVersionNumberCopyrightsFormatFormatEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
 		fallthrough
 	case "xml":
-		*e = GetMapVersionNumberCopyrightsFormatFormatEnum(s)
+		*e = GetMapVersionNumberCopyrightsFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsFormatFormatEnum: %v", v)
 	}
 }
 
 // GetMapVersionNumberCopyrightsFormatVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberCopyrightsFormatVersionNumberEnum string
+type GetMapVersionNumberCopyrightsFormatVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberCopyrightsFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsFormatVersionNumberEnum = "1"
+	GetMapVersionNumberCopyrightsFormatVersionNumberEnumOne GetMapVersionNumberCopyrightsFormatVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberCopyrightsFormatVersionNumberEnum) ToPointer() *GetMapVersionNumberCopyrightsFormatVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberCopyrightsFormatVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberCopyrightsFormatVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberCopyrightsFormatVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsFormatVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberCopyrightsFormatVersionNumberEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetDataCatalogXAmzTargetEnumAmazonAthenaGetDataCatalog GetDataCatalogXAmzTargetEnum = "AmazonAthena.GetDataCatalog"
 )
 
+func (e GetDataCatalogXAmzTargetEnum) ToPointer() *GetDataCatalogXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDataCatalogXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetDataCatalog":
-		*e = GetDataCatalogXAmzTargetEnum(s)
+		*e = GetDataCatalogXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDataCatalogXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDataCatalogXAmzTargetEnum: %v", v)
 	}
 }
 

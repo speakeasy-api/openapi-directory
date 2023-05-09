@@ -16,21 +16,25 @@ const (
 	UserRewardedContentTargetingOptionDetailsUserRewardedContentEnumUserRewardedContentNotUserRewarded UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum = "USER_REWARDED_CONTENT_NOT_USER_REWARDED"
 )
 
+func (e UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum) ToPointer() *UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum {
+	return &e
+}
+
 func (e *UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_REWARDED_CONTENT_UNSPECIFIED":
 		fallthrough
 	case "USER_REWARDED_CONTENT_USER_REWARDED":
 		fallthrough
 	case "USER_REWARDED_CONTENT_NOT_USER_REWARDED":
-		*e = UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum(s)
+		*e = UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum: %v", v)
 	}
 }
 

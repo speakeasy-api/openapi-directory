@@ -15,20 +15,24 @@ const (
 	ParquetCompressionEnumSnappy       ParquetCompressionEnum = "SNAPPY"
 )
 
+func (e ParquetCompressionEnum) ToPointer() *ParquetCompressionEnum {
+	return &e
+}
+
 func (e *ParquetCompressionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNCOMPRESSED":
 		fallthrough
 	case "GZIP":
 		fallthrough
 	case "SNAPPY":
-		*e = ParquetCompressionEnum(s)
+		*e = ParquetCompressionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ParquetCompressionEnum: %s", s)
+		return fmt.Errorf("invalid value for ParquetCompressionEnum: %v", v)
 	}
 }

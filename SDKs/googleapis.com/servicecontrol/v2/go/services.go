@@ -34,7 +34,10 @@ func newServices(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ServicecontrolServicesCheck - Private Preview. This feature is only available for approved services. This method provides admission control for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It checks whether an operation should be allowed based on the service configuration and relevant policies. It must be called before the operation is executed. For more information, see [Admission Control](https://cloud.google.com/service-infrastructure/docs/admission-control). NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must** not depend on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the caller must call the Check method multiple times. This method requires the `servicemanagement.services.check` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
 func (s *services) ServicecontrolServicesCheck(ctx context.Context, request operations.ServicecontrolServicesCheckRequest, security operations.ServicecontrolServicesCheckSecurity) (*operations.ServicecontrolServicesCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/services/{serviceName}:check", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/services/{serviceName}:check", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CheckRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *services) ServicecontrolServicesCheck(ctx context.Context, request oper
 // ServicecontrolServicesReport - Private Preview. This feature is only available for approved services. This method provides telemetry reporting for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It reports a list of operations that have occurred on a service. It must be called after the operations have been executed. For more information, see [Telemetry Reporting](https://cloud.google.com/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100 operations per call. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
 func (s *services) ServicecontrolServicesReport(ctx context.Context, request operations.ServicecontrolServicesReportRequest, security operations.ServicecontrolServicesReportSecurity) (*operations.ServicecontrolServicesReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/services/{serviceName}:report", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/services/{serviceName}:report", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportRequest", "json")
 	if err != nil {

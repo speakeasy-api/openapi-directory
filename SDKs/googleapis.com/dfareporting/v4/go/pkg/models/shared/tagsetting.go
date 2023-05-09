@@ -16,21 +16,25 @@ const (
 	TagSettingKeywordOptionEnumGenerateSeparateTagForEachKeyword TagSettingKeywordOptionEnum = "GENERATE_SEPARATE_TAG_FOR_EACH_KEYWORD"
 )
 
+func (e TagSettingKeywordOptionEnum) ToPointer() *TagSettingKeywordOptionEnum {
+	return &e
+}
+
 func (e *TagSettingKeywordOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEHOLDER_WITH_LIST_OF_KEYWORDS":
 		fallthrough
 	case "IGNORE":
 		fallthrough
 	case "GENERATE_SEPARATE_TAG_FOR_EACH_KEYWORD":
-		*e = TagSettingKeywordOptionEnum(s)
+		*e = TagSettingKeywordOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagSettingKeywordOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for TagSettingKeywordOptionEnum: %v", v)
 	}
 }
 

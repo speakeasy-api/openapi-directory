@@ -50,7 +50,10 @@ func newCommittee(defaultClient, securityClient HTTPClient, serverURL, language,
 // filer. Use the `committee_id` to find the most recent information about the committee.
 func (s *committee) GetCandidateCandidateIDCommittees(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesRequest) (*operations.GetCandidateCandidateIDCommitteesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -96,11 +99,13 @@ func (s *committee) GetCandidateCandidateIDCommittees(ctx context.Context, reque
 }
 
 // GetCandidateCandidateIDCommitteesHistory -
-// Explore a filer's characteristics over time. This can be particularly useful if the
-// committees change treasurers, designation, or `committee_type`.
+// Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCandidateCandidateIDCommitteesHistory(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesHistoryRequest) (*operations.GetCandidateCandidateIDCommitteesHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,11 +151,13 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistory(ctx context.Context
 }
 
 // GetCandidateCandidateIDCommitteesHistoryCycle -
-// Explore a filer's characteristics over time. This can be particularly useful if the
-// committees change treasurers, designation, or `committee_type`.
+// Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCandidateCandidateIDCommitteesHistoryCycle(ctx context.Context, request operations.GetCandidateCandidateIDCommitteesHistoryCycleRequest) (*operations.GetCandidateCandidateIDCommitteesHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/candidate/{candidate_id}/committees/history/{cycle}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -200,7 +207,10 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistoryCycle(ctx context.Co
 // filer. Use the `committee_id` to find the most recent information about the committee.
 func (s *committee) GetCommitteeCommitteeID(ctx context.Context, request operations.GetCommitteeCommitteeIDRequest) (*operations.GetCommitteeCommitteeIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -246,11 +256,13 @@ func (s *committee) GetCommitteeCommitteeID(ctx context.Context, request operati
 }
 
 // GetCommitteeCommitteeIDHistory -
-// Explore a filer's characteristics over time. This can be particularly useful if the
-// committees change treasurers, designation, or `committee_type`.
+// Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCommitteeCommitteeIDHistory(ctx context.Context, request operations.GetCommitteeCommitteeIDHistoryRequest) (*operations.GetCommitteeCommitteeIDHistoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,11 +308,13 @@ func (s *committee) GetCommitteeCommitteeIDHistory(ctx context.Context, request 
 }
 
 // GetCommitteeCommitteeIDHistoryCycle -
-// Explore a filer's characteristics over time. This can be particularly useful if the
-// committees change treasurers, designation, or `committee_type`.
+// Explore a filer's characteristics over time. This can be particularly useful if the committees change treasurers, designation, or `committee_type`.
 func (s *committee) GetCommitteeCommitteeIDHistoryCycle(ctx context.Context, request operations.GetCommitteeCommitteeIDHistoryCycleRequest) (*operations.GetCommitteeCommitteeIDHistoryCycleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/{cycle}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/history/{cycle}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -124,7 +124,10 @@ func (s *statusUpdates) CreateStatusForObject(ctx context.Context, request opera
 // Returns an empty data record.
 func (s *statusUpdates) DeleteStatus(ctx context.Context, request operations.DeleteStatusRequest) (*operations.DeleteStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *statusUpdates) DeleteStatus(ctx context.Context, request operations.Del
 // Returns the complete record for a single status update.
 func (s *statusUpdates) GetStatus(ctx context.Context, request operations.GetStatusRequest) (*operations.GetStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/status_updates/{status_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

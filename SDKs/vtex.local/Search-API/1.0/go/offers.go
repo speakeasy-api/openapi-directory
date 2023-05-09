@@ -34,7 +34,10 @@ func newOffers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Retrieves existing offers of a specific product.
 func (s *offers) GetAPICatalogSystemPubProductsOffersProductID(ctx context.Context, request operations.GetAPICatalogSystemPubProductsOffersProductIDRequest) (*operations.GetAPICatalogSystemPubProductsOffersProductIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/offers/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/offers/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +84,10 @@ func (s *offers) GetAPICatalogSystemPubProductsOffersProductID(ctx context.Conte
 // Retrieves existing offers of a specific SKU.
 func (s *offers) GetAPICatalogSystemPubProductsOffersProductIDSkuSkuID(ctx context.Context, request operations.GetAPICatalogSystemPubProductsOffersProductIDSkuSkuIDRequest) (*operations.GetAPICatalogSystemPubProductsOffersProductIDSkuSkuIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/offers/{productId}/sku/{skuId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/products/offers/{productId}/sku/{skuId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

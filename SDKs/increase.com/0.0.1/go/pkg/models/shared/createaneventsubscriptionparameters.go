@@ -24,6 +24,8 @@ const (
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumAchTransferUpdated                                   CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "ach_transfer.updated"
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardCreated                                          CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card.created"
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardUpdated                                          CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card.updated"
+	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardPaymentCreated                                   CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card_payment.created"
+	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardPaymentUpdated                                   CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card_payment.updated"
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardDisputeCreated                                   CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card_dispute.created"
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCardDisputeUpdated                                   CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "card_dispute.updated"
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumCheckDepositCreated                                  CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "check_deposit.created"
@@ -61,12 +63,16 @@ const (
 	CreateAnEventSubscriptionParametersSelectedEventCategoryEnumWireTransferUpdated                                  CreateAnEventSubscriptionParametersSelectedEventCategoryEnum = "wire_transfer.updated"
 )
 
+func (e CreateAnEventSubscriptionParametersSelectedEventCategoryEnum) ToPointer() *CreateAnEventSubscriptionParametersSelectedEventCategoryEnum {
+	return &e
+}
+
 func (e *CreateAnEventSubscriptionParametersSelectedEventCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account.created":
 		fallthrough
 	case "account.updated":
@@ -92,6 +98,10 @@ func (e *CreateAnEventSubscriptionParametersSelectedEventCategoryEnum) Unmarshal
 	case "card.created":
 		fallthrough
 	case "card.updated":
+		fallthrough
+	case "card_payment.created":
+		fallthrough
+	case "card_payment.updated":
 		fallthrough
 	case "card_dispute.created":
 		fallthrough
@@ -162,10 +172,10 @@ func (e *CreateAnEventSubscriptionParametersSelectedEventCategoryEnum) Unmarshal
 	case "wire_transfer.created":
 		fallthrough
 	case "wire_transfer.updated":
-		*e = CreateAnEventSubscriptionParametersSelectedEventCategoryEnum(s)
+		*e = CreateAnEventSubscriptionParametersSelectedEventCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnEventSubscriptionParametersSelectedEventCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnEventSubscriptionParametersSelectedEventCategoryEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ProtocolEnumMqttV5   ProtocolEnum = "MqttV5"
 )
 
+func (e ProtocolEnum) ToPointer() *ProtocolEnum {
+	return &e
+}
+
 func (e *ProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MqttV3_1_1":
 		fallthrough
 	case "MqttV5":
-		*e = ProtocolEnum(s)
+		*e = ProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtocolEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnumExpired          GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum = "EXPIRED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum) ToPointer() *GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "EXPIRED":
-		*e = GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaCertificateCertificateStatusEnum: %v", v)
 	}
 }
 

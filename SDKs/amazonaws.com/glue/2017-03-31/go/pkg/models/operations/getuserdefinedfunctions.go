@@ -16,17 +16,21 @@ const (
 	GetUserDefinedFunctionsXAmzTargetEnumAwsGlueGetUserDefinedFunctions GetUserDefinedFunctionsXAmzTargetEnum = "AWSGlue.GetUserDefinedFunctions"
 )
 
+func (e GetUserDefinedFunctionsXAmzTargetEnum) ToPointer() *GetUserDefinedFunctionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUserDefinedFunctionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetUserDefinedFunctions":
-		*e = GetUserDefinedFunctionsXAmzTargetEnum(s)
+		*e = GetUserDefinedFunctionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserDefinedFunctionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserDefinedFunctionsXAmzTargetEnum: %v", v)
 	}
 }
 

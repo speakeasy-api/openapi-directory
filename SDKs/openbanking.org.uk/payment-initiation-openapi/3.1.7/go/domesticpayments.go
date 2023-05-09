@@ -464,7 +464,10 @@ func (s *domesticPayments) CreateDomesticPaymentsRaw(ctx context.Context, reques
 // GetDomesticPaymentConsentsConsentID - Get Domestic Payment Consents
 func (s *domesticPayments) GetDomesticPaymentConsentsConsentID(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDRequest, security operations.GetDomesticPaymentConsentsConsentIDSecurity) (*operations.GetDomesticPaymentConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -559,7 +562,10 @@ func (s *domesticPayments) GetDomesticPaymentConsentsConsentID(ctx context.Conte
 // GetDomesticPaymentConsentsConsentIDFundsConfirmation - Get Domestic Payment Consents Funds Confirmation
 func (s *domesticPayments) GetDomesticPaymentConsentsConsentIDFundsConfirmation(ctx context.Context, request operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationRequest, security operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationSecurity) (*operations.GetDomesticPaymentConsentsConsentIDFundsConfirmationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-payment-consents/{ConsentId}/funds-confirmation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -654,7 +660,10 @@ func (s *domesticPayments) GetDomesticPaymentConsentsConsentIDFundsConfirmation(
 // GetDomesticPaymentsDomesticPaymentID - Get Domestic Payments
 func (s *domesticPayments) GetDomesticPaymentsDomesticPaymentID(ctx context.Context, request operations.GetDomesticPaymentsDomesticPaymentIDRequest, security operations.GetDomesticPaymentsDomesticPaymentIDSecurity) (*operations.GetDomesticPaymentsDomesticPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

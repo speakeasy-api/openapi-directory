@@ -17,12 +17,16 @@ const (
 	ExportOptionsRegionEnumEurope                  ExportOptionsRegionEnum = "EUROPE"
 )
 
+func (e ExportOptionsRegionEnum) ToPointer() *ExportOptionsRegionEnum {
+	return &e
+}
+
 func (e *ExportOptionsRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_REGION_UNSPECIFIED":
 		fallthrough
 	case "ANY":
@@ -30,10 +34,10 @@ func (e *ExportOptionsRegionEnum) UnmarshalJSON(data []byte) error {
 	case "US":
 		fallthrough
 	case "EUROPE":
-		*e = ExportOptionsRegionEnum(s)
+		*e = ExportOptionsRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportOptionsRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportOptionsRegionEnum: %v", v)
 	}
 }
 

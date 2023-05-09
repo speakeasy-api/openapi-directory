@@ -22,21 +22,25 @@ const (
 	UploadDatasetAsync1RequestBodyTypeEnumImageMultiLabel UploadDatasetAsync1RequestBodyTypeEnum = "image-multi-label"
 )
 
+func (e UploadDatasetAsync1RequestBodyTypeEnum) ToPointer() *UploadDatasetAsync1RequestBodyTypeEnum {
+	return &e
+}
+
 func (e *UploadDatasetAsync1RequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
 		fallthrough
 	case "image-detection":
 		fallthrough
 	case "image-multi-label":
-		*e = UploadDatasetAsync1RequestBodyTypeEnum(s)
+		*e = UploadDatasetAsync1RequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadDatasetAsync1RequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadDatasetAsync1RequestBodyTypeEnum: %v", v)
 	}
 }
 

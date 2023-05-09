@@ -26,12 +26,16 @@ const (
 	MetricNameEnumNetworkPacketsOutPerSecond MetricNameEnum = "NETWORK_PACKETS_OUT_PER_SECOND"
 )
 
+func (e MetricNameEnum) ToPointer() *MetricNameEnum {
+	return &e
+}
+
 func (e *MetricNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cpu":
 		fallthrough
 	case "Memory":
@@ -59,9 +63,9 @@ func (e *MetricNameEnum) UnmarshalJSON(data []byte) error {
 	case "NETWORK_PACKETS_IN_PER_SECOND":
 		fallthrough
 	case "NETWORK_PACKETS_OUT_PER_SECOND":
-		*e = MetricNameEnum(s)
+		*e = MetricNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricNameEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricNameEnum: %v", v)
 	}
 }

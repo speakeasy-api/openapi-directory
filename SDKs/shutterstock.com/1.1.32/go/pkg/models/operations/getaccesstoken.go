@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAccessTokenSecurity struct {
+	CustomerAccessCode string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type GetAccessTokenResponse struct {
 	// OK
 	AccessTokenDetails *shared.AccessTokenDetails

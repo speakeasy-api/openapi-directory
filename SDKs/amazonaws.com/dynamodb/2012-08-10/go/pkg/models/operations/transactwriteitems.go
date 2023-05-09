@@ -16,17 +16,21 @@ const (
 	TransactWriteItemsXAmzTargetEnumDynamoDb20120810TransactWriteItems TransactWriteItemsXAmzTargetEnum = "DynamoDB_20120810.TransactWriteItems"
 )
 
+func (e TransactWriteItemsXAmzTargetEnum) ToPointer() *TransactWriteItemsXAmzTargetEnum {
+	return &e
+}
+
 func (e *TransactWriteItemsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.TransactWriteItems":
-		*e = TransactWriteItemsXAmzTargetEnum(s)
+		*e = TransactWriteItemsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactWriteItemsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactWriteItemsXAmzTargetEnum: %v", v)
 	}
 }
 

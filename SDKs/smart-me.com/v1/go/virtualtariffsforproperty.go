@@ -36,7 +36,10 @@ func newVirtualTariffsForProperty(defaultClient, securityClient HTTPClient, serv
 // Gets all Virtual Tariffs for a property (folder)
 func (s *virtualTariffsForProperty) VirtualTariffsForPropertyGet(ctx context.Context, request operations.VirtualTariffsForPropertyGetRequest) (*operations.VirtualTariffsForPropertyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariffsForProperty/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariffsForProperty/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

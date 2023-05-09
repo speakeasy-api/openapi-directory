@@ -16,12 +16,16 @@ const (
 	HookStatusEnumHookFailed            HookStatusEnum = "HOOK_FAILED"
 )
 
+func (e HookStatusEnum) ToPointer() *HookStatusEnum {
+	return &e
+}
+
 func (e *HookStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOOK_IN_PROGRESS":
 		fallthrough
 	case "HOOK_COMPLETE_SUCCEEDED":
@@ -29,9 +33,9 @@ func (e *HookStatusEnum) UnmarshalJSON(data []byte) error {
 	case "HOOK_COMPLETE_FAILED":
 		fallthrough
 	case "HOOK_FAILED":
-		*e = HookStatusEnum(s)
+		*e = HookStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HookStatusEnum: %v", v)
 	}
 }

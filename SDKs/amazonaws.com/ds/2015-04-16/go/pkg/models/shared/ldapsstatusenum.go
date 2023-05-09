@@ -16,12 +16,16 @@ const (
 	LDAPSStatusEnumDisabled     LDAPSStatusEnum = "Disabled"
 )
 
+func (e LDAPSStatusEnum) ToPointer() *LDAPSStatusEnum {
+	return &e
+}
+
 func (e *LDAPSStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabling":
 		fallthrough
 	case "Enabled":
@@ -29,9 +33,9 @@ func (e *LDAPSStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EnableFailed":
 		fallthrough
 	case "Disabled":
-		*e = LDAPSStatusEnum(s)
+		*e = LDAPSStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LDAPSStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LDAPSStatusEnum: %v", v)
 	}
 }

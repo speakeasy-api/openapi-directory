@@ -16,12 +16,16 @@ const (
 	PriorityTypeEnumLocation    PriorityTypeEnum = "LOCATION"
 )
 
+func (e PriorityTypeEnum) ToPointer() *PriorityTypeEnum {
+	return &e
+}
+
 func (e *PriorityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LATENCY":
 		fallthrough
 	case "COST":
@@ -29,9 +33,9 @@ func (e *PriorityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DESTINATION":
 		fallthrough
 	case "LOCATION":
-		*e = PriorityTypeEnum(s)
+		*e = PriorityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriorityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PriorityTypeEnum: %v", v)
 	}
 }

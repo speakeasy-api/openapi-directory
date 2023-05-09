@@ -16,12 +16,16 @@ const (
 	ProfileSettingsFriendsListVisibilityEnumUnavailable                      ProfileSettingsFriendsListVisibilityEnum = "UNAVAILABLE"
 )
 
+func (e ProfileSettingsFriendsListVisibilityEnum) ToPointer() *ProfileSettingsFriendsListVisibilityEnum {
+	return &e
+}
+
 func (e *ProfileSettingsFriendsListVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FRIENDS_LIST_VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "VISIBLE":
@@ -29,10 +33,10 @@ func (e *ProfileSettingsFriendsListVisibilityEnum) UnmarshalJSON(data []byte) er
 	case "REQUEST_REQUIRED":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = ProfileSettingsFriendsListVisibilityEnum(s)
+		*e = ProfileSettingsFriendsListVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProfileSettingsFriendsListVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for ProfileSettingsFriendsListVisibilityEnum: %v", v)
 	}
 }
 

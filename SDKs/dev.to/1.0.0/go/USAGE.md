@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +16,20 @@ func main() {
         }),
     )
 
-    req := shared.Article{
-        Article: &shared.ArticleArticle{
-            BodyMarkdown: "corrupti",
-            CanonicalURL: "provident",
-            Description: "distinctio",
-            MainImage: "quibusdam",
-            OrganizationID: 602763,
-            Published: false,
-            Series: "nulla",
-            Tags: "corrupti",
-            Title: "Dr.",
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.Articles.CreateArticle(ctx, req)
+    res, err := s.Articles.CreateArticle(ctx, shared.Article{
+        Article: &shared.ArticleArticle{
+            BodyMarkdown: sdk.String("corrupti"),
+            CanonicalURL: sdk.String("provident"),
+            Description: sdk.String("distinctio"),
+            MainImage: sdk.String("quibusdam"),
+            OrganizationID: sdk.Int64(602763),
+            Published: sdk.Bool(false),
+            Series: sdk.String("nulla"),
+            Tags: sdk.String("corrupti"),
+            Title: sdk.String("Dr."),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

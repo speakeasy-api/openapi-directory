@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/billingo.hu/3.0.7/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,17 +27,15 @@ func main() {
         }),
     )
 
-    req := shared.BankAccountInput{
-        AccountNumber: "corrupti",
-        AccountNumberIban: "provident",
-        Currency: "PLN",
-        Name: "quibusdam",
-        NeedQr: false,
-        Swift: "unde",
-    }
-
     ctx := context.Background()
-    res, err := s.BankAccount.CreateBankAccount(ctx, req)
+    res, err := s.BankAccount.CreateBankAccount(ctx, shared.BankAccountInput{
+        AccountNumber: "corrupti",
+        AccountNumberIban: sdk.String("provident"),
+        Currency: shared.CurrencyEnumPln,
+        Name: "Stuart Stiedemann",
+        NeedQr: sdk.Bool(false),
+        Swift: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,60 +51,60 @@ func main() {
 ## Available Resources and Operations
 
 
-### BankAccount
+### [BankAccount](docs/bankaccount/README.md)
 
-* `CreateBankAccount` - Create a bank account
-* `DeleteBankAccount` - Delete a bank account
-* `GetBankAccount` - Retrieve a bank account
-* `ListBankAccount` - List all bank account
-* `UpdateBankAccount` - Update a bank account
+* [CreateBankAccount](docs/bankaccount/README.md#createbankaccount) - Create a bank account
+* [DeleteBankAccount](docs/bankaccount/README.md#deletebankaccount) - Delete a bank account
+* [GetBankAccount](docs/bankaccount/README.md#getbankaccount) - Retrieve a bank account
+* [ListBankAccount](docs/bankaccount/README.md#listbankaccount) - List all bank account
+* [UpdateBankAccount](docs/bankaccount/README.md#updatebankaccount) - Update a bank account
 
-### Currency
+### [Currency](docs/currency/README.md)
 
-* `GetConversionRate` - Get currencies exchange rate.
+* [GetConversionRate](docs/currency/README.md#getconversionrate) - Get currencies exchange rate.
 
-### Document
+### [Document](docs/document/README.md)
 
-* `CancelDocument` - Cancel a document
-* `CreateDocument` - Create a document
-* `CreateDocumentFromProforma` - Create a document from proforma.
-* `DeletePayment` - Delete all payment history on document
-* `DownloadDocument` - Download a document in PDF format.
-* `GetDocument` - Retrieve a document
-* `GetOnlineSzamlaStatus` - Retrieve a document Online Számla status
-* `GetPayment` - Retrieve a payment histroy
-* `GetPublicURL` - Retrieve a document download public url.
-* `ListDocument` - List all documents
-* `SendDocument` - Send invoice to given email adresses.
-* `UpdatePayment` - Update payment history
+* [CancelDocument](docs/document/README.md#canceldocument) - Cancel a document
+* [CreateDocument](docs/document/README.md#createdocument) - Create a document
+* [CreateDocumentFromProforma](docs/document/README.md#createdocumentfromproforma) - Create a document from proforma.
+* [DeletePayment](docs/document/README.md#deletepayment) - Delete all payment history on document
+* [DownloadDocument](docs/document/README.md#downloaddocument) - Download a document in PDF format.
+* [GetDocument](docs/document/README.md#getdocument) - Retrieve a document
+* [GetOnlineSzamlaStatus](docs/document/README.md#getonlineszamlastatus) - Retrieve a document Online Számla status
+* [GetPayment](docs/document/README.md#getpayment) - Retrieve a payment histroy
+* [GetPublicURL](docs/document/README.md#getpublicurl) - Retrieve a document download public url.
+* [ListDocument](docs/document/README.md#listdocument) - List all documents
+* [SendDocument](docs/document/README.md#senddocument) - Send invoice to given email adresses.
+* [UpdatePayment](docs/document/README.md#updatepayment) - Update payment history
 
-### DocumentBlock
+### [DocumentBlock](docs/documentblock/README.md)
 
-* `ListDocumentBlock` - List all document blocks
+* [ListDocumentBlock](docs/documentblock/README.md#listdocumentblock) - List all document blocks
 
-### Organization
+### [Organization](docs/organization/README.md)
 
-* `GetOrganizationData` - Retrieve a organization data.
+* [GetOrganizationData](docs/organization/README.md#getorganizationdata) - Retrieve a organization data.
 
-### Partner
+### [Partner](docs/partner/README.md)
 
-* `CreatePartner` - Create a partner
-* `DeletePartner` - Delete a partner
-* `GetPartner` - Retrieve a partner
-* `ListPartner` - List all partners
-* `UpdatePartner` - Update a partner
+* [CreatePartner](docs/partner/README.md#createpartner) - Create a partner
+* [DeletePartner](docs/partner/README.md#deletepartner) - Delete a partner
+* [GetPartner](docs/partner/README.md#getpartner) - Retrieve a partner
+* [ListPartner](docs/partner/README.md#listpartner) - List all partners
+* [UpdatePartner](docs/partner/README.md#updatepartner) - Update a partner
 
-### Product
+### [Product](docs/product/README.md)
 
-* `CreateProduct` - Create a product
-* `DeleteProduct` - Delete a product
-* `GetProduct` - Retrieve a product
-* `ListProduct` - List all product
-* `UpdateProduct` - Update a product
+* [CreateProduct](docs/product/README.md#createproduct) - Create a product
+* [DeleteProduct](docs/product/README.md#deleteproduct) - Delete a product
+* [GetProduct](docs/product/README.md#getproduct) - Retrieve a product
+* [ListProduct](docs/product/README.md#listproduct) - List all product
+* [UpdateProduct](docs/product/README.md#updateproduct) - Update a product
 
-### Util
+### [Util](docs/util/README.md)
 
-* `GetID` - Convert legacy ID to v3 ID.
+* [GetID](docs/util/README.md#getid) - Convert legacy ID to v3 ID.
 <!-- End SDK Available Operations -->
 
 ### Maturity

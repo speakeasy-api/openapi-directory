@@ -26,12 +26,16 @@ const (
 	NetworkReportSpecDimensionsEnumServingRestriction   NetworkReportSpecDimensionsEnum = "SERVING_RESTRICTION"
 )
 
+func (e NetworkReportSpecDimensionsEnum) ToPointer() *NetworkReportSpecDimensionsEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecDimensionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "DATE":
@@ -59,10 +63,10 @@ func (e *NetworkReportSpecDimensionsEnum) UnmarshalJSON(data []byte) error {
 	case "APP_VERSION_NAME":
 		fallthrough
 	case "SERVING_RESTRICTION":
-		*e = NetworkReportSpecDimensionsEnum(s)
+		*e = NetworkReportSpecDimensionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecDimensionsEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecDimensionsEnum: %v", v)
 	}
 }
 
@@ -81,12 +85,16 @@ const (
 	NetworkReportSpecMetricsEnumShowRate          NetworkReportSpecMetricsEnum = "SHOW_RATE"
 )
 
+func (e NetworkReportSpecMetricsEnum) ToPointer() *NetworkReportSpecMetricsEnum {
+	return &e
+}
+
 func (e *NetworkReportSpecMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "AD_REQUESTS":
@@ -106,10 +114,10 @@ func (e *NetworkReportSpecMetricsEnum) UnmarshalJSON(data []byte) error {
 	case "MATCH_RATE":
 		fallthrough
 	case "SHOW_RATE":
-		*e = NetworkReportSpecMetricsEnum(s)
+		*e = NetworkReportSpecMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkReportSpecMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkReportSpecMetricsEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1AssetResourceStatusStateEnumError            GoogleCloudDataplexV1AssetResourceStatusStateEnum = "ERROR"
 )
 
+func (e GoogleCloudDataplexV1AssetResourceStatusStateEnum) ToPointer() *GoogleCloudDataplexV1AssetResourceStatusStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1AssetResourceStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "READY":
 		fallthrough
 	case "ERROR":
-		*e = GoogleCloudDataplexV1AssetResourceStatusStateEnum(s)
+		*e = GoogleCloudDataplexV1AssetResourceStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetResourceStatusStateEnum: %v", v)
 	}
 }
 

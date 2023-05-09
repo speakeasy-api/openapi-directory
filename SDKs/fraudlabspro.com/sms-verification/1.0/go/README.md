@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fraudlabspro.com/sms-veri
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1VerificationResultRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.GetV1VerificationResult(ctx, operations.GetV1VerificationResultRequest{
+        Format: operations.GetV1VerificationResultFormatEnumXML.ToPointer(),
         Key: "provident",
         Otp: "distinctio",
         TranID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetV1VerificationResult(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,10 +44,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetV1VerificationResult` - Verify that an OTP sent by the Send SMS Verification API is valid.
-* `PostV1VerificationSend` - Send an SMS with verification code and a custom message for authentication purpose.
+* [GetV1VerificationResult](docs/sdk/README.md#getv1verificationresult) - Verify that an OTP sent by the Send SMS Verification API is valid.
+* [PostV1VerificationSend](docs/sdk/README.md#postv1verificationsend) - Send an SMS with verification code and a custom message for authentication purpose.
 <!-- End SDK Available Operations -->
 
 ### Maturity

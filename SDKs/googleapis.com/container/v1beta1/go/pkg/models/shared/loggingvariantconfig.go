@@ -16,21 +16,25 @@ const (
 	LoggingVariantConfigVariantEnumMaxThroughput      LoggingVariantConfigVariantEnum = "MAX_THROUGHPUT"
 )
 
+func (e LoggingVariantConfigVariantEnum) ToPointer() *LoggingVariantConfigVariantEnum {
+	return &e
+}
+
 func (e *LoggingVariantConfigVariantEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VARIANT_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
 		fallthrough
 	case "MAX_THROUGHPUT":
-		*e = LoggingVariantConfigVariantEnum(s)
+		*e = LoggingVariantConfigVariantEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingVariantConfigVariantEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingVariantConfigVariantEnum: %v", v)
 	}
 }
 

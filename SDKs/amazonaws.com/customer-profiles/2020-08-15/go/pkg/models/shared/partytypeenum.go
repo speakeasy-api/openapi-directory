@@ -15,20 +15,24 @@ const (
 	PartyTypeEnumOther      PartyTypeEnum = "OTHER"
 )
 
+func (e PartyTypeEnum) ToPointer() *PartyTypeEnum {
+	return &e
+}
+
 func (e *PartyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDIVIDUAL":
 		fallthrough
 	case "BUSINESS":
 		fallthrough
 	case "OTHER":
-		*e = PartyTypeEnum(s)
+		*e = PartyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartyTypeEnum: %v", v)
 	}
 }

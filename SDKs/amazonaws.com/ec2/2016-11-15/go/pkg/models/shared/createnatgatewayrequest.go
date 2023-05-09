@@ -98,12 +98,16 @@ const (
 	CreateNatGatewayRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateNatGatewayRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateNatGatewayRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateNatGatewayRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateNatGatewayRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateNatGatewayRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateNatGatewayRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateNatGatewayRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNatGatewayRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNatGatewayRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

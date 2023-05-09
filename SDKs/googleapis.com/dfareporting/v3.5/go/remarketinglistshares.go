@@ -34,7 +34,10 @@ func newRemarketingListShares(defaultClient, securityClient HTTPClient, serverUR
 // DfareportingRemarketingListSharesGet - Gets one remarketing list share by remarketing list ID.
 func (s *remarketingListShares) DfareportingRemarketingListSharesGet(ctx context.Context, request operations.DfareportingRemarketingListSharesGetRequest, security operations.DfareportingRemarketingListSharesGetSecurity) (*operations.DfareportingRemarketingListSharesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesGet(ctx context
 // DfareportingRemarketingListSharesPatch - Updates an existing remarketing list share. This method supports patch semantics.
 func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx context.Context, request operations.DfareportingRemarketingListSharesPatchRequest, security operations.DfareportingRemarketingListSharesPatchSecurity) (*operations.DfareportingRemarketingListSharesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingListShare", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *remarketingListShares) DfareportingRemarketingListSharesPatch(ctx conte
 // DfareportingRemarketingListSharesUpdate - Updates an existing remarketing list share.
 func (s *remarketingListShares) DfareportingRemarketingListSharesUpdate(ctx context.Context, request operations.DfareportingRemarketingListSharesUpdateRequest, security operations.DfareportingRemarketingListSharesUpdateSecurity) (*operations.DfareportingRemarketingListSharesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/remarketingListShares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemarketingListShare", "json")
 	if err != nil {

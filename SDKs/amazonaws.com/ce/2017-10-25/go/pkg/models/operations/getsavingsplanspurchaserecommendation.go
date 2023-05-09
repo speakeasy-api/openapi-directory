@@ -16,17 +16,21 @@ const (
 	GetSavingsPlansPurchaseRecommendationXAmzTargetEnumAwsInsightsIndexServiceGetSavingsPlansPurchaseRecommendation GetSavingsPlansPurchaseRecommendationXAmzTargetEnum = "AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation"
 )
 
+func (e GetSavingsPlansPurchaseRecommendationXAmzTargetEnum) ToPointer() *GetSavingsPlansPurchaseRecommendationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSavingsPlansPurchaseRecommendationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetSavingsPlansPurchaseRecommendation":
-		*e = GetSavingsPlansPurchaseRecommendationXAmzTargetEnum(s)
+		*e = GetSavingsPlansPurchaseRecommendationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSavingsPlansPurchaseRecommendationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSavingsPlansPurchaseRecommendationXAmzTargetEnum: %v", v)
 	}
 }
 

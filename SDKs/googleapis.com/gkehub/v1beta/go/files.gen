@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -14,6 +15,8 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/gkehubprojectslocationsfeaturescreate.go
 pkg/models/operations/gkehubprojectslocationsfeatureslist.go
+pkg/models/operations/gkehubprojectslocationsfleetscreate.go
+pkg/models/operations/gkehubprojectslocationsfleetslist.go
 pkg/models/operations/gkehubprojectslocationslist.go
 pkg/models/operations/gkehubprojectslocationsmembershipsbindingscreate.go
 pkg/models/operations/gkehubprojectslocationsmembershipsbindingslist.go
@@ -41,6 +44,9 @@ pkg/models/shared/appdevexperiencefeaturestate.go
 pkg/models/shared/status.go
 pkg/models/shared/commonfeaturespec.go
 pkg/models/shared/multiclusteringressfeaturespec.go
+pkg/models/shared/fleetobservabilityfeaturespec.go
+pkg/models/shared/fleetobservabilityloggingconfig.go
+pkg/models/shared/fleetobservabilityroutingconfig.go
 pkg/models/shared/anthosobservabilityfeaturespec.go
 pkg/models/shared/anthosobservabilitymembershipspec.go
 pkg/models/shared/featureresourcestate.go
@@ -67,6 +73,7 @@ pkg/models/shared/configmanagementpolicycontrollermonitoring.go
 pkg/models/shared/configmanagementhierarchycontrollerconfig.go
 pkg/models/shared/configmanagementconfigsync.go
 pkg/models/shared/configmanagementociconfig.go
+pkg/models/shared/configmanagementmanaged.go
 pkg/models/shared/configmanagementgitconfig.go
 pkg/models/shared/configmanagementbinauthzconfig.go
 pkg/models/shared/membershipspec.go
@@ -103,6 +110,9 @@ pkg/models/shared/configmanagementgroupversionkind.go
 pkg/models/shared/configmanagementconfigsyncdeploymentstate.go
 pkg/models/shared/configmanagementbinauthzstate.go
 pkg/models/shared/configmanagementbinauthzversion.go
+pkg/models/shared/fleet.go
+pkg/models/shared/listfleetsresponse.go
+pkg/models/shared/fleetlifecyclestate.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/membershipbinding.go
@@ -127,4 +137,6 @@ pkg/models/shared/listoperationsresponse.go
 pkg/models/shared/scope.go
 pkg/models/shared/scopelifecyclestate.go
 pkg/models/shared/listscopesresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -14,18 +14,22 @@ const (
 	Igmpv2SupportValueEnumDisable Igmpv2SupportValueEnum = "disable"
 )
 
+func (e Igmpv2SupportValueEnum) ToPointer() *Igmpv2SupportValueEnum {
+	return &e
+}
+
 func (e *Igmpv2SupportValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = Igmpv2SupportValueEnum(s)
+		*e = Igmpv2SupportValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Igmpv2SupportValueEnum: %s", s)
+		return fmt.Errorf("invalid value for Igmpv2SupportValueEnum: %v", v)
 	}
 }

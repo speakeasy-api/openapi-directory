@@ -17,12 +17,16 @@ const (
 	ContactSettingsPrivacyEnumRedactedContactData       ContactSettingsPrivacyEnum = "REDACTED_CONTACT_DATA"
 )
 
+func (e ContactSettingsPrivacyEnum) ToPointer() *ContactSettingsPrivacyEnum {
+	return &e
+}
+
 func (e *ContactSettingsPrivacyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTACT_PRIVACY_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC_CONTACT_DATA":
@@ -30,10 +34,10 @@ func (e *ContactSettingsPrivacyEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVATE_CONTACT_DATA":
 		fallthrough
 	case "REDACTED_CONTACT_DATA":
-		*e = ContactSettingsPrivacyEnum(s)
+		*e = ContactSettingsPrivacyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactSettingsPrivacyEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactSettingsPrivacyEnum: %v", v)
 	}
 }
 

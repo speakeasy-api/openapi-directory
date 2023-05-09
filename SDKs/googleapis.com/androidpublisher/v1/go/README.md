@@ -13,32 +13,30 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidpub
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AndroidpublisherPurchasesCancelRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        Key: "provident",
-        OauthToken: "distinctio",
+    ctx := context.Background()
+    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, operations.AndroidpublisherPurchasesCancelRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("provident"),
+        OauthToken: sdk.String("distinctio"),
         PackageName: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
         SubscriptionID: "nulla",
         Token: "corrupti",
-        UserIP: "illum",
-    }
-
-    ctx := context.Background()
-    res, err := s.Purchases.AndroidpublisherPurchasesCancel(ctx, req, operations.AndroidpublisherPurchasesCancelSecurity{
+        UserIP: sdk.String("illum"),
+    }, operations.AndroidpublisherPurchasesCancelSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -57,10 +55,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### Purchases
+### [Purchases](docs/purchases/README.md)
 
-* `AndroidpublisherPurchasesCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
-* `AndroidpublisherPurchasesGet` - Checks whether a user's subscription purchase is valid and returns its expiry time.
+* [AndroidpublisherPurchasesCancel](docs/purchases/README.md#androidpublisherpurchasescancel) - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.
+* [AndroidpublisherPurchasesGet](docs/purchases/README.md#androidpublisherpurchasesget) - Checks whether a user's subscription purchase is valid and returns its expiry time.
 <!-- End SDK Available Operations -->
 
 ### Maturity

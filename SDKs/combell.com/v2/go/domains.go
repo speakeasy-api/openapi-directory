@@ -38,7 +38,10 @@ func newDomains(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Allowed if the requesting user has the finance role.
 func (s *domains) ConfigureDomain(ctx context.Context, request operations.ConfigureDomainRequest) (*operations.ConfigureDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/renew", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/renew", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditDomainWillRenewRequest", "json")
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *domains) ConfigureDomain(ctx context.Context, request operations.Config
 // EditNameServers - Edit domain name servers
 func (s *domains) EditNameServers(ctx context.Context, request operations.EditNameServersRequest) (*operations.EditNameServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/nameservers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}/nameservers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditNameServers", "json")
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *domains) EditNameServers(ctx context.Context, request operations.EditNa
 // GetDomain - Details of a domain
 func (s *domains) GetDomain(ctx context.Context, request operations.GetDomainRequest) (*operations.GetDomainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

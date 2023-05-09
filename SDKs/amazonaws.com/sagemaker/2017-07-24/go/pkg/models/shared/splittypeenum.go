@@ -16,12 +16,16 @@ const (
 	SplitTypeEnumTfRecord SplitTypeEnum = "TFRecord"
 )
 
+func (e SplitTypeEnum) ToPointer() *SplitTypeEnum {
+	return &e
+}
+
 func (e *SplitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Line":
@@ -29,9 +33,9 @@ func (e *SplitTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RecordIO":
 		fallthrough
 	case "TFRecord":
-		*e = SplitTypeEnum(s)
+		*e = SplitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SplitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SplitTypeEnum: %v", v)
 	}
 }

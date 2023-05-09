@@ -6,6 +6,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -23,6 +24,7 @@ pkg/models/operations/imageocrphotorecognizereceipt.go
 pkg/models/operations/imageocrphotototext.go
 pkg/models/operations/imageocrphotowordswithlocation.go
 pkg/models/operations/imageocrpost.go
+pkg/models/operations/pdfocrgetasyncjobstatus.go
 pkg/models/operations/pdfocrpdftolineswithlocation.go
 pkg/models/operations/pdfocrpdftowordswithlocation.go
 pkg/models/operations/pdfocrpost.go
@@ -52,11 +54,16 @@ pkg/models/shared/receiptrecognitionresult.go
 pkg/models/shared/receiptlineitem.go
 pkg/models/shared/imagetotextresponse.go
 pkg/models/shared/phototowordswithlocationresult.go
+pkg/models/shared/pdftotextresponse.go
+pkg/models/shared/ocrpageresult.go
 pkg/models/shared/pdftolineswithlocationresult.go
 pkg/models/shared/ocrpageresultwithlineswithlocation.go
 pkg/models/shared/pdftowordswithlocationresult.go
 pkg/models/shared/ocrpageresultwithwordswithlocation.go
-pkg/models/shared/pdftotextresponse.go
-pkg/models/shared/ocrpageresult.go
 pkg/models/shared/getpageangleresult.go
+docs/sdk/README.md
+docs/imageocr/README.md
+docs/pdfocr/README.md
+docs/preprocessing/README.md
+docs/receipts/README.md
 USAGE.md

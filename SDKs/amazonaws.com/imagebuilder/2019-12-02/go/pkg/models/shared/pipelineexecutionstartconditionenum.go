@@ -14,18 +14,22 @@ const (
 	PipelineExecutionStartConditionEnumExpressionMatchAndDependencyUpdatesAvailable PipelineExecutionStartConditionEnum = "EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE"
 )
 
+func (e PipelineExecutionStartConditionEnum) ToPointer() *PipelineExecutionStartConditionEnum {
+	return &e
+}
+
 func (e *PipelineExecutionStartConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPRESSION_MATCH_ONLY":
 		fallthrough
 	case "EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE":
-		*e = PipelineExecutionStartConditionEnum(s)
+		*e = PipelineExecutionStartConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PipelineExecutionStartConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for PipelineExecutionStartConditionEnum: %v", v)
 	}
 }

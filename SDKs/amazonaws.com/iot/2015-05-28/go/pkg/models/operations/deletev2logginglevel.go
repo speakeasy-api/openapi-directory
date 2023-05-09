@@ -19,12 +19,16 @@ const (
 	DeleteV2LoggingLevelTargetTypeEnumPrincipalID DeleteV2LoggingLevelTargetTypeEnum = "PRINCIPAL_ID"
 )
 
+func (e DeleteV2LoggingLevelTargetTypeEnum) ToPointer() *DeleteV2LoggingLevelTargetTypeEnum {
+	return &e
+}
+
 func (e *DeleteV2LoggingLevelTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "THING_GROUP":
@@ -34,10 +38,10 @@ func (e *DeleteV2LoggingLevelTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SOURCE_IP":
 		fallthrough
 	case "PRINCIPAL_ID":
-		*e = DeleteV2LoggingLevelTargetTypeEnum(s)
+		*e = DeleteV2LoggingLevelTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteV2LoggingLevelTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteV2LoggingLevelTargetTypeEnum: %v", v)
 	}
 }
 

@@ -29,12 +29,16 @@ const (
 	MigrationJobStateEnumResuming         MigrationJobStateEnum = "RESUMING"
 )
 
+func (e MigrationJobStateEnum) ToPointer() *MigrationJobStateEnum {
+	return &e
+}
+
 func (e *MigrationJobStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "MAINTENANCE":
@@ -66,10 +70,10 @@ func (e *MigrationJobStateEnum) UnmarshalJSON(data []byte) error {
 	case "RESTARTING":
 		fallthrough
 	case "RESUMING":
-		*e = MigrationJobStateEnum(s)
+		*e = MigrationJobStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationJobStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationJobStateEnum: %v", v)
 	}
 }
 
@@ -82,21 +86,25 @@ const (
 	MigrationJobTypeEnumContinuous      MigrationJobTypeEnum = "CONTINUOUS"
 )
 
+func (e MigrationJobTypeEnum) ToPointer() *MigrationJobTypeEnum {
+	return &e
+}
+
 func (e *MigrationJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "ONE_TIME":
 		fallthrough
 	case "CONTINUOUS":
-		*e = MigrationJobTypeEnum(s)
+		*e = MigrationJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationJobTypeEnum: %v", v)
 	}
 }
 
@@ -150,12 +158,16 @@ const (
 	MigrationJobPhaseEnumPreparingTheDump             MigrationJobPhaseEnum = "PREPARING_THE_DUMP"
 )
 
+func (e MigrationJobPhaseEnum) ToPointer() *MigrationJobPhaseEnum {
+	return &e
+}
+
 func (e *MigrationJobPhaseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PHASE_UNSPECIFIED":
 		fallthrough
 	case "FULL_DUMP":
@@ -167,10 +179,10 @@ func (e *MigrationJobPhaseEnum) UnmarshalJSON(data []byte) error {
 	case "WAITING_FOR_SOURCE_WRITES_TO_STOP":
 		fallthrough
 	case "PREPARING_THE_DUMP":
-		*e = MigrationJobPhaseEnum(s)
+		*e = MigrationJobPhaseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationJobPhaseEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationJobPhaseEnum: %v", v)
 	}
 }
 

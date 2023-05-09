@@ -20,12 +20,16 @@ const (
 	GetTermsOfServiceDocumentRequestTypeEnumAdyenIssuing              GetTermsOfServiceDocumentRequestTypeEnum = "adyenIssuing"
 )
 
+func (e GetTermsOfServiceDocumentRequestTypeEnum) ToPointer() *GetTermsOfServiceDocumentRequestTypeEnum {
+	return &e
+}
+
 func (e *GetTermsOfServiceDocumentRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adyenAccount":
 		fallthrough
 	case "adyenCapital":
@@ -39,10 +43,10 @@ func (e *GetTermsOfServiceDocumentRequestTypeEnum) UnmarshalJSON(data []byte) er
 	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
-		*e = GetTermsOfServiceDocumentRequestTypeEnum(s)
+		*e = GetTermsOfServiceDocumentRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTermsOfServiceDocumentRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTermsOfServiceDocumentRequestTypeEnum: %v", v)
 	}
 }
 

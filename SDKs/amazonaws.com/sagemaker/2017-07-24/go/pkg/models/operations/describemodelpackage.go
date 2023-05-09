@@ -16,17 +16,21 @@ const (
 	DescribeModelPackageXAmzTargetEnumSageMakerDescribeModelPackage DescribeModelPackageXAmzTargetEnum = "SageMaker.DescribeModelPackage"
 )
 
+func (e DescribeModelPackageXAmzTargetEnum) ToPointer() *DescribeModelPackageXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeModelPackageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeModelPackage":
-		*e = DescribeModelPackageXAmzTargetEnum(s)
+		*e = DescribeModelPackageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeModelPackageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeModelPackageXAmzTargetEnum: %v", v)
 	}
 }
 

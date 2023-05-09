@@ -17,19 +17,23 @@ const (
 	DataPointsGetSortDirectionEnumDesc DataPointsGetSortDirectionEnum = "desc"
 )
 
+func (e DataPointsGetSortDirectionEnum) ToPointer() *DataPointsGetSortDirectionEnum {
+	return &e
+}
+
 func (e *DataPointsGetSortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = DataPointsGetSortDirectionEnum(s)
+		*e = DataPointsGetSortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetSortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetSortDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	DataPointsGetStatusEnumSpam    DataPointsGetStatusEnum = "spam"
 )
 
+func (e DataPointsGetStatusEnum) ToPointer() *DataPointsGetStatusEnum {
+	return &e
+}
+
 func (e *DataPointsGetStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -56,10 +64,10 @@ func (e *DataPointsGetStatusEnum) UnmarshalJSON(data []byte) error {
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = DataPointsGetStatusEnum(s)
+		*e = DataPointsGetStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetStatusEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	DataPointsGetTypeEnumTl DataPointsGetTypeEnum = "tl"
 )
 
+func (e DataPointsGetTypeEnum) ToPointer() *DataPointsGetTypeEnum {
+	return &e
+}
+
 func (e *DataPointsGetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = DataPointsGetTypeEnum(s)
+		*e = DataPointsGetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPointsGetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPointsGetTypeEnum: %v", v)
 	}
 }
 

@@ -16,12 +16,16 @@ const (
 	OrientationCorrectionEnumRotate270 OrientationCorrectionEnum = "ROTATE_270"
 )
 
+func (e OrientationCorrectionEnum) ToPointer() *OrientationCorrectionEnum {
+	return &e
+}
+
 func (e *OrientationCorrectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROTATE_0":
 		fallthrough
 	case "ROTATE_90":
@@ -29,9 +33,9 @@ func (e *OrientationCorrectionEnum) UnmarshalJSON(data []byte) error {
 	case "ROTATE_180":
 		fallthrough
 	case "ROTATE_270":
-		*e = OrientationCorrectionEnum(s)
+		*e = OrientationCorrectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrientationCorrectionEnum: %s", s)
+		return fmt.Errorf("invalid value for OrientationCorrectionEnum: %v", v)
 	}
 }

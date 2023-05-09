@@ -15,17 +15,21 @@ const (
 	POSTGetTransitGatewayPrefixListReferencesActionEnumGetTransitGatewayPrefixListReferences POSTGetTransitGatewayPrefixListReferencesActionEnum = "GetTransitGatewayPrefixListReferences"
 )
 
+func (e POSTGetTransitGatewayPrefixListReferencesActionEnum) ToPointer() *POSTGetTransitGatewayPrefixListReferencesActionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayPrefixListReferencesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetTransitGatewayPrefixListReferences":
-		*e = POSTGetTransitGatewayPrefixListReferencesActionEnum(s)
+		*e = POSTGetTransitGatewayPrefixListReferencesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayPrefixListReferencesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayPrefixListReferencesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetTransitGatewayPrefixListReferencesVersionEnumTwoThousandAndSixteen1115 POSTGetTransitGatewayPrefixListReferencesVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetTransitGatewayPrefixListReferencesVersionEnum) ToPointer() *POSTGetTransitGatewayPrefixListReferencesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetTransitGatewayPrefixListReferencesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetTransitGatewayPrefixListReferencesVersionEnum(s)
+		*e = POSTGetTransitGatewayPrefixListReferencesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetTransitGatewayPrefixListReferencesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetTransitGatewayPrefixListReferencesVersionEnum: %v", v)
 	}
 }
 

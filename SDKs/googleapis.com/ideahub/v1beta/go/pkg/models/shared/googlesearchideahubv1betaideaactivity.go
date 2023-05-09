@@ -18,12 +18,16 @@ const (
 	GoogleSearchIdeahubV1betaIdeaActivityTypeEnumPostUnpublished GoogleSearchIdeahubV1betaIdeaActivityTypeEnum = "POST_UNPUBLISHED"
 )
 
+func (e GoogleSearchIdeahubV1betaIdeaActivityTypeEnum) ToPointer() *GoogleSearchIdeahubV1betaIdeaActivityTypeEnum {
+	return &e
+}
+
 func (e *GoogleSearchIdeahubV1betaIdeaActivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "POST_DRAFTED":
@@ -33,10 +37,10 @@ func (e *GoogleSearchIdeahubV1betaIdeaActivityTypeEnum) UnmarshalJSON(data []byt
 	case "POST_DELETED":
 		fallthrough
 	case "POST_UNPUBLISHED":
-		*e = GoogleSearchIdeahubV1betaIdeaActivityTypeEnum(s)
+		*e = GoogleSearchIdeahubV1betaIdeaActivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSearchIdeahubV1betaIdeaActivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSearchIdeahubV1betaIdeaActivityTypeEnum: %v", v)
 	}
 }
 

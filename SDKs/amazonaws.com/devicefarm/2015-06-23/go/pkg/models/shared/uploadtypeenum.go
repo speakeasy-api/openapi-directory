@@ -44,12 +44,16 @@ const (
 	UploadTypeEnumXctestUITestSpec               UploadTypeEnum = "XCTEST_UI_TEST_SPEC"
 )
 
+func (e UploadTypeEnum) ToPointer() *UploadTypeEnum {
+	return &e
+}
+
 func (e *UploadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANDROID_APP":
 		fallthrough
 	case "IOS_APP":
@@ -113,9 +117,9 @@ func (e *UploadTypeEnum) UnmarshalJSON(data []byte) error {
 	case "INSTRUMENTATION_TEST_SPEC":
 		fallthrough
 	case "XCTEST_UI_TEST_SPEC":
-		*e = UploadTypeEnum(s)
+		*e = UploadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadTypeEnum: %v", v)
 	}
 }

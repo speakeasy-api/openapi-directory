@@ -15,17 +15,21 @@ const (
 	PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnumServer PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum = "server"
 )
 
+func (e PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum) ToPointer() *PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum {
+	return &e
+}
+
 func (e *PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
-		*e = PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum(s)
+		*e = PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsAssignAssignPrimaryIPRequestAssigneeTypeEnum: %v", v)
 	}
 }
 
@@ -66,21 +70,25 @@ const (
 	PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnumError   PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum = "error"
 )
 
+func (e PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum) ToPointer() *PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum(s)
+		*e = PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostPrimaryIpsIDActionsAssignActionResponseActionStatusEnum: %v", v)
 	}
 }
 

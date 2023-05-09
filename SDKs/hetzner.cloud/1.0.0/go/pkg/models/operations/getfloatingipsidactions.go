@@ -32,12 +32,16 @@ const (
 	GetFloatingIpsIDActionsSortParameterSortEnumFinishedDesc GetFloatingIpsIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetFloatingIpsIDActionsSortParameterSortEnum) ToPointer() *GetFloatingIpsIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetFloatingIpsIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetFloatingIpsIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetFloatingIpsIDActionsSortParameterSortEnum(s)
+		*e = GetFloatingIpsIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetFloatingIpsIDActionsStatusParameterStatusEnumError   GetFloatingIpsIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetFloatingIpsIDActionsStatusParameterStatusEnum) ToPointer() *GetFloatingIpsIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetFloatingIpsIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetFloatingIpsIDActionsStatusParameterStatusEnum(s)
+		*e = GetFloatingIpsIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIpsIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetFloatingIpsIDActions200ApplicationJSONActionStatusEnumError   GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum = "error"
 )
 
+func (e GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum) ToPointer() *GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum {
+	return &e
+}
+
 func (e *GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum(s)
+		*e = GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFloatingIpsIDActions200ApplicationJSONActionStatusEnum: %v", v)
 	}
 }
 

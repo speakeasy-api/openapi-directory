@@ -2,22 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudtasksAPIQueueUpdateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.API.CloudtasksAPIQueueUpdate(ctx, operations.CloudtasksAPIQueueUpdateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         HTTPBody: &shared.HTTPBody{
-            ContentType: "provident",
-            Data: "distinctio",
+            ContentType: sdk.String("provident"),
+            Data: sdk.String("distinctio"),
             Extensions: []map[string]interface{}{
                 map[string]interface{}{
                     "nulla": "corrupti",
@@ -40,21 +41,18 @@ func main() {
                 },
             },
         },
-        AccessToken: "veritatis",
-        Alt: "media",
-        AppID: "perferendis",
-        Callback: "ipsam",
-        Fields: "repellendus",
-        Key: "sapiente",
-        OauthToken: "quo",
-        PrettyPrint: false,
-        QuotaUser: "odit",
-        UploadType: "at",
-        UploadProtocol: "at",
-    }
-
-    ctx := context.Background()
-    res, err := s.API.CloudtasksAPIQueueUpdate(ctx, req, operations.CloudtasksAPIQueueUpdateSecurity{
+        AccessToken: sdk.String("veritatis"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        AppID: sdk.String("perferendis"),
+        Callback: sdk.String("ipsam"),
+        Fields: sdk.String("repellendus"),
+        Key: sdk.String("sapiente"),
+        OauthToken: sdk.String("quo"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("odit"),
+        UploadType: sdk.String("at"),
+        UploadProtocol: sdk.String("at"),
+    }, operations.CloudtasksAPIQueueUpdateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

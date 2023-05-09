@@ -19,21 +19,25 @@ const (
 	PostCompanyEmployeesRequestBodyEmployeeGenderEnumDiverse PostCompanyEmployeesRequestBodyEmployeeGenderEnum = "diverse"
 )
 
+func (e PostCompanyEmployeesRequestBodyEmployeeGenderEnum) ToPointer() *PostCompanyEmployeesRequestBodyEmployeeGenderEnum {
+	return &e
+}
+
 func (e *PostCompanyEmployeesRequestBodyEmployeeGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
 		fallthrough
 	case "diverse":
-		*e = PostCompanyEmployeesRequestBodyEmployeeGenderEnum(s)
+		*e = PostCompanyEmployeesRequestBodyEmployeeGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCompanyEmployeesRequestBodyEmployeeGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCompanyEmployeesRequestBodyEmployeeGenderEnum: %v", v)
 	}
 }
 

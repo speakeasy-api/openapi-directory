@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getemailinf
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetemailinfoRequest{
+    ctx := context.Background()
+    res, err := s.EmailAddressInformation.Getemailinfo(ctx, operations.GetemailinfoRequest{
         Email: "Larue_Rau85@yahoo.com",
         License: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.EmailAddressInformation.Getemailinfo(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### EmailAddressInformation
+### [EmailAddressInformation](docs/emailaddressinformation/README.md)
 
-* `Getemailinfo` - Gets email validation information for an email address
+* [Getemailinfo](docs/emailaddressinformation/README.md#getemailinfo) - Gets email validation information for an email address
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -15,20 +15,24 @@ const (
 	DatasetStatusMessageCodeEnumClientError  DatasetStatusMessageCodeEnum = "CLIENT_ERROR"
 )
 
+func (e DatasetStatusMessageCodeEnum) ToPointer() *DatasetStatusMessageCodeEnum {
+	return &e
+}
+
 func (e *DatasetStatusMessageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "SERVICE_ERROR":
 		fallthrough
 	case "CLIENT_ERROR":
-		*e = DatasetStatusMessageCodeEnum(s)
+		*e = DatasetStatusMessageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasetStatusMessageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasetStatusMessageCodeEnum: %v", v)
 	}
 }

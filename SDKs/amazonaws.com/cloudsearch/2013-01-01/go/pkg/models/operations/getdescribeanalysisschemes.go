@@ -15,17 +15,21 @@ const (
 	GETDescribeAnalysisSchemesActionEnumDescribeAnalysisSchemes GETDescribeAnalysisSchemesActionEnum = "DescribeAnalysisSchemes"
 )
 
+func (e GETDescribeAnalysisSchemesActionEnum) ToPointer() *GETDescribeAnalysisSchemesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAnalysisSchemesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAnalysisSchemes":
-		*e = GETDescribeAnalysisSchemesActionEnum(s)
+		*e = GETDescribeAnalysisSchemesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAnalysisSchemesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAnalysisSchemesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeAnalysisSchemesVersionEnumTwoThousandAndThirteen0101 GETDescribeAnalysisSchemesVersionEnum = "2013-01-01"
 )
 
+func (e GETDescribeAnalysisSchemesVersionEnum) ToPointer() *GETDescribeAnalysisSchemesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAnalysisSchemesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDescribeAnalysisSchemesVersionEnum(s)
+		*e = GETDescribeAnalysisSchemesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAnalysisSchemesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAnalysisSchemesVersionEnum: %v", v)
 	}
 }
 

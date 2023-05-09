@@ -15,17 +15,21 @@ const (
 	GETDescribeTrafficSourcesActionEnumDescribeTrafficSources GETDescribeTrafficSourcesActionEnum = "DescribeTrafficSources"
 )
 
+func (e GETDescribeTrafficSourcesActionEnum) ToPointer() *GETDescribeTrafficSourcesActionEnum {
+	return &e
+}
+
 func (e *GETDescribeTrafficSourcesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTrafficSources":
-		*e = GETDescribeTrafficSourcesActionEnum(s)
+		*e = GETDescribeTrafficSourcesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTrafficSourcesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTrafficSourcesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeTrafficSourcesVersionEnumTwoThousandAndEleven0101 GETDescribeTrafficSourcesVersionEnum = "2011-01-01"
 )
 
+func (e GETDescribeTrafficSourcesVersionEnum) ToPointer() *GETDescribeTrafficSourcesVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeTrafficSourcesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETDescribeTrafficSourcesVersionEnum(s)
+		*e = GETDescribeTrafficSourcesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTrafficSourcesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTrafficSourcesVersionEnum: %v", v)
 	}
 }
 
@@ -58,8 +66,8 @@ type GETDescribeTrafficSourcesRequest struct {
 	MaxRecords *int64 `queryParam:"style=form,explode=true,name=MaxRecords"`
 	// The token for the next set of items to return. (You received this token from a previous call.)
 	NextToken *string `queryParam:"style=form,explode=true,name=NextToken"`
-	// The type of traffic source you are describing. Currently, the only valid value is <code>vpc-lattice</code>.
-	TrafficSourceType string                               `queryParam:"style=form,explode=true,name=TrafficSourceType"`
+	// <p>The traffic source type that you want to describe.</p> <p>The following lists the valid values:</p> <ul> <li> <p> <code>elb</code> if the traffic source is a Classic Load Balancer.</p> </li> <li> <p> <code>elbv2</code> if the traffic source is a Application Load Balancer, Gateway Load Balancer, or Network Load Balancer.</p> </li> <li> <p> <code>vpc-lattice</code> if the traffic source is VPC Lattice.</p> </li> </ul>
+	TrafficSourceType *string                              `queryParam:"style=form,explode=true,name=TrafficSourceType"`
 	Version           GETDescribeTrafficSourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm     *string                              `header:"style=simple,explode=false,name=X-Amz-Algorithm"`
 	XAmzContentSha256 *string                              `header:"style=simple,explode=false,name=X-Amz-Content-Sha256"`

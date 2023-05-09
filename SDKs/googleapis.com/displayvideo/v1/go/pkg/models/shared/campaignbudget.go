@@ -16,21 +16,25 @@ const (
 	CampaignBudgetBudgetUnitEnumBudgetUnitImpressions CampaignBudgetBudgetUnitEnum = "BUDGET_UNIT_IMPRESSIONS"
 )
 
+func (e CampaignBudgetBudgetUnitEnum) ToPointer() *CampaignBudgetBudgetUnitEnum {
+	return &e
+}
+
 func (e *CampaignBudgetBudgetUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BUDGET_UNIT_UNSPECIFIED":
 		fallthrough
 	case "BUDGET_UNIT_CURRENCY":
 		fallthrough
 	case "BUDGET_UNIT_IMPRESSIONS":
-		*e = CampaignBudgetBudgetUnitEnum(s)
+		*e = CampaignBudgetBudgetUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignBudgetBudgetUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignBudgetBudgetUnitEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	CampaignBudgetExternalBudgetSourceEnumExternalBudgetSourceMediaOcean  CampaignBudgetExternalBudgetSourceEnum = "EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN"
 )
 
+func (e CampaignBudgetExternalBudgetSourceEnum) ToPointer() *CampaignBudgetExternalBudgetSourceEnum {
+	return &e
+}
+
 func (e *CampaignBudgetExternalBudgetSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXTERNAL_BUDGET_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "EXTERNAL_BUDGET_SOURCE_NONE":
 		fallthrough
 	case "EXTERNAL_BUDGET_SOURCE_MEDIA_OCEAN":
-		*e = CampaignBudgetExternalBudgetSourceEnum(s)
+		*e = CampaignBudgetExternalBudgetSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignBudgetExternalBudgetSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignBudgetExternalBudgetSourceEnum: %v", v)
 	}
 }
 

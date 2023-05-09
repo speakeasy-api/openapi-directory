@@ -16,17 +16,21 @@ const (
 	ListGroupsXAmzTargetEnumWorkMailServiceListGroups ListGroupsXAmzTargetEnum = "WorkMailService.ListGroups"
 )
 
+func (e ListGroupsXAmzTargetEnum) ToPointer() *ListGroupsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListGroupsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.ListGroups":
-		*e = ListGroupsXAmzTargetEnum(s)
+		*e = ListGroupsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGroupsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGroupsXAmzTargetEnum: %v", v)
 	}
 }
 

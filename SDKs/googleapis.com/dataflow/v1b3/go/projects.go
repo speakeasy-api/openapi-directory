@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DataflowProjectsDeleteSnapshots - Deletes a snapshot.
 func (s *projects) DataflowProjectsDeleteSnapshots(ctx context.Context, request operations.DataflowProjectsDeleteSnapshotsRequest, security operations.DataflowProjectsDeleteSnapshotsSecurity) (*operations.DataflowProjectsDeleteSnapshotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) DataflowProjectsDeleteSnapshots(ctx context.Context, request 
 // DataflowProjectsJobsAggregated - List the jobs of a project across all regions.
 func (s *projects) DataflowProjectsJobsAggregated(ctx context.Context, request operations.DataflowProjectsJobsAggregatedRequest, security operations.DataflowProjectsJobsAggregatedSecurity) (*operations.DataflowProjectsJobsAggregatedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs:aggregated", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs:aggregated", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) DataflowProjectsJobsAggregated(ctx context.Context, request o
 // DataflowProjectsJobsCreate - Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not enter confidential information when you supply string values using the API.
 func (s *projects) DataflowProjectsJobsCreate(ctx context.Context, request operations.DataflowProjectsJobsCreateRequest, security operations.DataflowProjectsJobsCreateSecurity) (*operations.DataflowProjectsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) DataflowProjectsJobsCreate(ctx context.Context, request opera
 // DataflowProjectsJobsDebugGetConfig - Get encoded debug configuration for component. Not cacheable.
 func (s *projects) DataflowProjectsJobsDebugGetConfig(ctx context.Context, request operations.DataflowProjectsJobsDebugGetConfigRequest, security operations.DataflowProjectsJobsDebugGetConfigSecurity) (*operations.DataflowProjectsJobsDebugGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/debug/getConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/debug/getConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetDebugConfigRequest", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DataflowProjectsJobsDebugGetConfig(ctx context.Context, reque
 // DataflowProjectsJobsDebugSendCapture - Send encoded debug capture data for component.
 func (s *projects) DataflowProjectsJobsDebugSendCapture(ctx context.Context, request operations.DataflowProjectsJobsDebugSendCaptureRequest, security operations.DataflowProjectsJobsDebugSendCaptureSecurity) (*operations.DataflowProjectsJobsDebugSendCaptureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/debug/sendCapture", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/debug/sendCapture", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendDebugCaptureRequest", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) DataflowProjectsJobsDebugSendCapture(ctx context.Context, req
 // DataflowProjectsJobsGet - Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsJobsGet(ctx context.Context, request operations.DataflowProjectsJobsGetRequest, security operations.DataflowProjectsJobsGetSecurity) (*operations.DataflowProjectsJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) DataflowProjectsJobsGet(ctx context.Context, request operatio
 // DataflowProjectsJobsGetMetrics - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsJobsGetMetrics(ctx context.Context, request operations.DataflowProjectsJobsGetMetricsRequest, security operations.DataflowProjectsJobsGetMetricsSecurity) (*operations.DataflowProjectsJobsGetMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/metrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/metrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) DataflowProjectsJobsGetMetrics(ctx context.Context, request o
 // DataflowProjectsJobsList - List the jobs of a project. To list the jobs of a project in a region, we recommend using `projects.locations.jobs.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsJobsList(ctx context.Context, request operations.DataflowProjectsJobsListRequest, security operations.DataflowProjectsJobsListSecurity) (*operations.DataflowProjectsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) DataflowProjectsJobsList(ctx context.Context, request operati
 // DataflowProjectsJobsMessagesList - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsJobsMessagesList(ctx context.Context, request operations.DataflowProjectsJobsMessagesListRequest, security operations.DataflowProjectsJobsMessagesListSecurity) (*operations.DataflowProjectsJobsMessagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -487,7 +514,10 @@ func (s *projects) DataflowProjectsJobsMessagesList(ctx context.Context, request
 // DataflowProjectsJobsSnapshot - Snapshot the state of a streaming job.
 func (s *projects) DataflowProjectsJobsSnapshot(ctx context.Context, request operations.DataflowProjectsJobsSnapshotRequest, security operations.DataflowProjectsJobsSnapshotSecurity) (*operations.DataflowProjectsJobsSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}:snapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}:snapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotJobRequest", "json")
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) DataflowProjectsJobsSnapshot(ctx context.Context, request ope
 // DataflowProjectsJobsUpdate - Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we recommend using `projects.locations.jobs.update` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsJobsUpdate(ctx context.Context, request operations.DataflowProjectsJobsUpdateRequest, security operations.DataflowProjectsJobsUpdateSecurity) (*operations.DataflowProjectsJobsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) DataflowProjectsJobsUpdate(ctx context.Context, request opera
 // DataflowProjectsJobsWorkItemsLease - Leases a dataflow WorkItem to run.
 func (s *projects) DataflowProjectsJobsWorkItemsLease(ctx context.Context, request operations.DataflowProjectsJobsWorkItemsLeaseRequest, security operations.DataflowProjectsJobsWorkItemsLeaseSecurity) (*operations.DataflowProjectsJobsWorkItemsLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/workItems:lease", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/workItems:lease", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaseWorkItemRequest", "json")
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) DataflowProjectsJobsWorkItemsLease(ctx context.Context, reque
 // DataflowProjectsJobsWorkItemsReportStatus - Reports the status of dataflow WorkItems leased by a worker.
 func (s *projects) DataflowProjectsJobsWorkItemsReportStatus(ctx context.Context, request operations.DataflowProjectsJobsWorkItemsReportStatusRequest, security operations.DataflowProjectsJobsWorkItemsReportStatusSecurity) (*operations.DataflowProjectsJobsWorkItemsReportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/workItems:reportStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/jobs/{jobId}/workItems:reportStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportWorkItemStatusRequest", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) DataflowProjectsJobsWorkItemsReportStatus(ctx context.Context
 // DataflowProjectsLocationsFlexTemplatesLaunch - Launch a job with a FlexTemplate.
 func (s *projects) DataflowProjectsLocationsFlexTemplatesLaunch(ctx context.Context, request operations.DataflowProjectsLocationsFlexTemplatesLaunchRequest, security operations.DataflowProjectsLocationsFlexTemplatesLaunchSecurity) (*operations.DataflowProjectsLocationsFlexTemplatesLaunchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/flexTemplates:launch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/flexTemplates:launch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LaunchFlexTemplateRequest", "json")
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) DataflowProjectsLocationsFlexTemplatesLaunch(ctx context.Cont
 // DataflowProjectsLocationsJobsCreate - Creates a Cloud Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not enter confidential information when you supply string values using the API.
 func (s *projects) DataflowProjectsLocationsJobsCreate(ctx context.Context, request operations.DataflowProjectsLocationsJobsCreateRequest, security operations.DataflowProjectsLocationsJobsCreateSecurity) (*operations.DataflowProjectsLocationsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -817,7 +862,10 @@ func (s *projects) DataflowProjectsLocationsJobsCreate(ctx context.Context, requ
 // DataflowProjectsLocationsJobsDebugGetConfig - Get encoded debug configuration for component. Not cacheable.
 func (s *projects) DataflowProjectsLocationsJobsDebugGetConfig(ctx context.Context, request operations.DataflowProjectsLocationsJobsDebugGetConfigRequest, security operations.DataflowProjectsLocationsJobsDebugGetConfigSecurity) (*operations.DataflowProjectsLocationsJobsDebugGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/debug/getConfig", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/debug/getConfig", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetDebugConfigRequest", "json")
 	if err != nil {
@@ -872,7 +920,10 @@ func (s *projects) DataflowProjectsLocationsJobsDebugGetConfig(ctx context.Conte
 // DataflowProjectsLocationsJobsDebugSendCapture - Send encoded debug capture data for component.
 func (s *projects) DataflowProjectsLocationsJobsDebugSendCapture(ctx context.Context, request operations.DataflowProjectsLocationsJobsDebugSendCaptureRequest, security operations.DataflowProjectsLocationsJobsDebugSendCaptureSecurity) (*operations.DataflowProjectsLocationsJobsDebugSendCaptureResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/debug/sendCapture", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/debug/sendCapture", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendDebugCaptureRequest", "json")
 	if err != nil {
@@ -927,7 +978,10 @@ func (s *projects) DataflowProjectsLocationsJobsDebugSendCapture(ctx context.Con
 // DataflowProjectsLocationsJobsGet - Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using `projects.locations.jobs.get` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get` is not recommended, as you can only get the state of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsLocationsJobsGet(ctx context.Context, request operations.DataflowProjectsLocationsJobsGetRequest, security operations.DataflowProjectsLocationsJobsGetSecurity) (*operations.DataflowProjectsLocationsJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -975,7 +1029,10 @@ func (s *projects) DataflowProjectsLocationsJobsGet(ctx context.Context, request
 // DataflowProjectsLocationsJobsGetExecutionDetails - Request detailed information about the execution status of the job. EXPERIMENTAL. This API is subject to change or removal without notice.
 func (s *projects) DataflowProjectsLocationsJobsGetExecutionDetails(ctx context.Context, request operations.DataflowProjectsLocationsJobsGetExecutionDetailsRequest, security operations.DataflowProjectsLocationsJobsGetExecutionDetailsSecurity) (*operations.DataflowProjectsLocationsJobsGetExecutionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/executionDetails", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/executionDetails", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) DataflowProjectsLocationsJobsGetExecutionDetails(ctx context.
 // DataflowProjectsLocationsJobsGetMetrics - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.getMetrics` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsLocationsJobsGetMetrics(ctx context.Context, request operations.DataflowProjectsLocationsJobsGetMetricsRequest, security operations.DataflowProjectsLocationsJobsGetMetricsSecurity) (*operations.DataflowProjectsLocationsJobsGetMetricsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/metrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/metrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) DataflowProjectsLocationsJobsGetMetrics(ctx context.Context, 
 // DataflowProjectsLocationsJobsList - List the jobs of a project. To list the jobs of a project in a region, we recommend using `projects.locations.jobs.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). To list the all jobs across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended, as you can only get the list of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsLocationsJobsList(ctx context.Context, request operations.DataflowProjectsLocationsJobsListRequest, security operations.DataflowProjectsLocationsJobsListSecurity) (*operations.DataflowProjectsLocationsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1119,7 +1182,10 @@ func (s *projects) DataflowProjectsLocationsJobsList(ctx context.Context, reques
 // DataflowProjectsLocationsJobsMessagesList - Request the job status. To request the status of a job, we recommend using `projects.locations.jobs.messages.list` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsLocationsJobsMessagesList(ctx context.Context, request operations.DataflowProjectsLocationsJobsMessagesListRequest, security operations.DataflowProjectsLocationsJobsMessagesListSecurity) (*operations.DataflowProjectsLocationsJobsMessagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1167,7 +1233,10 @@ func (s *projects) DataflowProjectsLocationsJobsMessagesList(ctx context.Context
 // DataflowProjectsLocationsJobsSnapshot - Snapshot the state of a streaming job.
 func (s *projects) DataflowProjectsLocationsJobsSnapshot(ctx context.Context, request operations.DataflowProjectsLocationsJobsSnapshotRequest, security operations.DataflowProjectsLocationsJobsSnapshotSecurity) (*operations.DataflowProjectsLocationsJobsSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}:snapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}:snapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SnapshotJobRequest", "json")
 	if err != nil {
@@ -1222,7 +1291,10 @@ func (s *projects) DataflowProjectsLocationsJobsSnapshot(ctx context.Context, re
 // DataflowProjectsLocationsJobsSnapshotsList - Lists snapshots.
 func (s *projects) DataflowProjectsLocationsJobsSnapshotsList(ctx context.Context, request operations.DataflowProjectsLocationsJobsSnapshotsListRequest, security operations.DataflowProjectsLocationsJobsSnapshotsListSecurity) (*operations.DataflowProjectsLocationsJobsSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1270,7 +1342,10 @@ func (s *projects) DataflowProjectsLocationsJobsSnapshotsList(ctx context.Contex
 // DataflowProjectsLocationsJobsStagesGetExecutionDetails - Request detailed information about the execution status of a stage of the job. EXPERIMENTAL. This API is subject to change or removal without notice.
 func (s *projects) DataflowProjectsLocationsJobsStagesGetExecutionDetails(ctx context.Context, request operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsRequest, security operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsSecurity) (*operations.DataflowProjectsLocationsJobsStagesGetExecutionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/stages/{stageId}/executionDetails", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/stages/{stageId}/executionDetails", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1318,7 +1393,10 @@ func (s *projects) DataflowProjectsLocationsJobsStagesGetExecutionDetails(ctx co
 // DataflowProjectsLocationsJobsUpdate - Updates the state of an existing Cloud Dataflow job. To update the state of an existing job, we recommend using `projects.locations.jobs.update` with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.update` is not recommended, as you can only update the state of jobs that are running in `us-central1`.
 func (s *projects) DataflowProjectsLocationsJobsUpdate(ctx context.Context, request operations.DataflowProjectsLocationsJobsUpdateRequest, security operations.DataflowProjectsLocationsJobsUpdateSecurity) (*operations.DataflowProjectsLocationsJobsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -1373,7 +1451,10 @@ func (s *projects) DataflowProjectsLocationsJobsUpdate(ctx context.Context, requ
 // DataflowProjectsLocationsJobsWorkItemsLease - Leases a dataflow WorkItem to run.
 func (s *projects) DataflowProjectsLocationsJobsWorkItemsLease(ctx context.Context, request operations.DataflowProjectsLocationsJobsWorkItemsLeaseRequest, security operations.DataflowProjectsLocationsJobsWorkItemsLeaseSecurity) (*operations.DataflowProjectsLocationsJobsWorkItemsLeaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/workItems:lease", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/workItems:lease", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LeaseWorkItemRequest", "json")
 	if err != nil {
@@ -1428,7 +1509,10 @@ func (s *projects) DataflowProjectsLocationsJobsWorkItemsLease(ctx context.Conte
 // DataflowProjectsLocationsJobsWorkItemsReportStatus - Reports the status of dataflow WorkItems leased by a worker.
 func (s *projects) DataflowProjectsLocationsJobsWorkItemsReportStatus(ctx context.Context, request operations.DataflowProjectsLocationsJobsWorkItemsReportStatusRequest, security operations.DataflowProjectsLocationsJobsWorkItemsReportStatusSecurity) (*operations.DataflowProjectsLocationsJobsWorkItemsReportStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/workItems:reportStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/workItems:reportStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReportWorkItemStatusRequest", "json")
 	if err != nil {
@@ -1483,7 +1567,10 @@ func (s *projects) DataflowProjectsLocationsJobsWorkItemsReportStatus(ctx contex
 // DataflowProjectsLocationsSnapshotsDelete - Deletes a snapshot.
 func (s *projects) DataflowProjectsLocationsSnapshotsDelete(ctx context.Context, request operations.DataflowProjectsLocationsSnapshotsDeleteRequest, security operations.DataflowProjectsLocationsSnapshotsDeleteSecurity) (*operations.DataflowProjectsLocationsSnapshotsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1531,7 +1618,10 @@ func (s *projects) DataflowProjectsLocationsSnapshotsDelete(ctx context.Context,
 // DataflowProjectsLocationsSnapshotsGet - Gets information about a snapshot.
 func (s *projects) DataflowProjectsLocationsSnapshotsGet(ctx context.Context, request operations.DataflowProjectsLocationsSnapshotsGetRequest, security operations.DataflowProjectsLocationsSnapshotsGetSecurity) (*operations.DataflowProjectsLocationsSnapshotsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots/{snapshotId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1579,7 +1669,10 @@ func (s *projects) DataflowProjectsLocationsSnapshotsGet(ctx context.Context, re
 // DataflowProjectsLocationsSnapshotsList - Lists snapshots.
 func (s *projects) DataflowProjectsLocationsSnapshotsList(ctx context.Context, request operations.DataflowProjectsLocationsSnapshotsListRequest, security operations.DataflowProjectsLocationsSnapshotsListSecurity) (*operations.DataflowProjectsLocationsSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1627,7 +1720,10 @@ func (s *projects) DataflowProjectsLocationsSnapshotsList(ctx context.Context, r
 // DataflowProjectsLocationsTemplatesCreate - Creates a Cloud Dataflow job from a template. Do not enter confidential information when you supply string values using the API.
 func (s *projects) DataflowProjectsLocationsTemplatesCreate(ctx context.Context, request operations.DataflowProjectsLocationsTemplatesCreateRequest, security operations.DataflowProjectsLocationsTemplatesCreateSecurity) (*operations.DataflowProjectsLocationsTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateJobFromTemplateRequest", "json")
 	if err != nil {
@@ -1682,7 +1778,10 @@ func (s *projects) DataflowProjectsLocationsTemplatesCreate(ctx context.Context,
 // DataflowProjectsLocationsTemplatesGet - Get the template associated with a template.
 func (s *projects) DataflowProjectsLocationsTemplatesGet(ctx context.Context, request operations.DataflowProjectsLocationsTemplatesGetRequest, security operations.DataflowProjectsLocationsTemplatesGetSecurity) (*operations.DataflowProjectsLocationsTemplatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates:get", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates:get", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1730,7 +1829,10 @@ func (s *projects) DataflowProjectsLocationsTemplatesGet(ctx context.Context, re
 // DataflowProjectsLocationsTemplatesLaunch - Launch a template.
 func (s *projects) DataflowProjectsLocationsTemplatesLaunch(ctx context.Context, request operations.DataflowProjectsLocationsTemplatesLaunchRequest, security operations.DataflowProjectsLocationsTemplatesLaunchSecurity) (*operations.DataflowProjectsLocationsTemplatesLaunchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates:launch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/templates:launch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LaunchTemplateParameters", "json")
 	if err != nil {
@@ -1785,7 +1887,10 @@ func (s *projects) DataflowProjectsLocationsTemplatesLaunch(ctx context.Context,
 // DataflowProjectsLocationsWorkerMessages - Send a worker_message to the service.
 func (s *projects) DataflowProjectsLocationsWorkerMessages(ctx context.Context, request operations.DataflowProjectsLocationsWorkerMessagesRequest, security operations.DataflowProjectsLocationsWorkerMessagesSecurity) (*operations.DataflowProjectsLocationsWorkerMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/WorkerMessages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/locations/{location}/WorkerMessages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendWorkerMessagesRequest", "json")
 	if err != nil {
@@ -1840,7 +1945,10 @@ func (s *projects) DataflowProjectsLocationsWorkerMessages(ctx context.Context, 
 // DataflowProjectsSnapshotsGet - Gets information about a snapshot.
 func (s *projects) DataflowProjectsSnapshotsGet(ctx context.Context, request operations.DataflowProjectsSnapshotsGetRequest, security operations.DataflowProjectsSnapshotsGetSecurity) (*operations.DataflowProjectsSnapshotsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots/{snapshotId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots/{snapshotId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1888,7 +1996,10 @@ func (s *projects) DataflowProjectsSnapshotsGet(ctx context.Context, request ope
 // DataflowProjectsSnapshotsList - Lists snapshots.
 func (s *projects) DataflowProjectsSnapshotsList(ctx context.Context, request operations.DataflowProjectsSnapshotsListRequest, security operations.DataflowProjectsSnapshotsListSecurity) (*operations.DataflowProjectsSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1936,7 +2047,10 @@ func (s *projects) DataflowProjectsSnapshotsList(ctx context.Context, request op
 // DataflowProjectsTemplatesCreate - Creates a Cloud Dataflow job from a template. Do not enter confidential information when you supply string values using the API.
 func (s *projects) DataflowProjectsTemplatesCreate(ctx context.Context, request operations.DataflowProjectsTemplatesCreateRequest, security operations.DataflowProjectsTemplatesCreateSecurity) (*operations.DataflowProjectsTemplatesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateJobFromTemplateRequest", "json")
 	if err != nil {
@@ -1991,7 +2105,10 @@ func (s *projects) DataflowProjectsTemplatesCreate(ctx context.Context, request 
 // DataflowProjectsTemplatesGet - Get the template associated with a template.
 func (s *projects) DataflowProjectsTemplatesGet(ctx context.Context, request operations.DataflowProjectsTemplatesGetRequest, security operations.DataflowProjectsTemplatesGetSecurity) (*operations.DataflowProjectsTemplatesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates:get", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates:get", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2039,7 +2156,10 @@ func (s *projects) DataflowProjectsTemplatesGet(ctx context.Context, request ope
 // DataflowProjectsTemplatesLaunch - Launch a template.
 func (s *projects) DataflowProjectsTemplatesLaunch(ctx context.Context, request operations.DataflowProjectsTemplatesLaunchRequest, security operations.DataflowProjectsTemplatesLaunchSecurity) (*operations.DataflowProjectsTemplatesLaunchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates:launch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/templates:launch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LaunchTemplateParameters", "json")
 	if err != nil {
@@ -2094,7 +2214,10 @@ func (s *projects) DataflowProjectsTemplatesLaunch(ctx context.Context, request 
 // DataflowProjectsWorkerMessages - Send a worker_message to the service.
 func (s *projects) DataflowProjectsWorkerMessages(ctx context.Context, request operations.DataflowProjectsWorkerMessagesRequest, security operations.DataflowProjectsWorkerMessagesSecurity) (*operations.DataflowProjectsWorkerMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/WorkerMessages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1b3/projects/{projectId}/WorkerMessages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendWorkerMessagesRequest", "json")
 	if err != nil {

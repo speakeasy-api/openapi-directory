@@ -20,12 +20,16 @@ const (
 	DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnumNuisanceIncentivizedMalwareClutter DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum = "NUISANCE_INCENTIVIZED_MALWARE_CLUTTER"
 )
 
+func (e DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum) ToPointer() *DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum {
+	return &e
+}
+
 func (e *DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIGHER_SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "ADULT_CONTENT_PORNOGRAPHY":
@@ -41,10 +45,10 @@ func (e *DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum) Unm
 	case "CRIMINAL_SKILLS":
 		fallthrough
 	case "NUISANCE_INCENTIVIZED_MALWARE_CLUTTER":
-		*e = DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum(s)
+		*e = DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyBrandSafetyCategoriesAvoidedHighSeverityCategoriesEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnumNegativeNewsPharmaceutical  DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum = "NEGATIVE_NEWS_PHARMACEUTICAL"
 )
 
+func (e DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum) ToPointer() *DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum {
+	return &e
+}
+
 func (e *DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDIUM_SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "AD_SERVERS":
@@ -121,10 +129,10 @@ func (e *DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum) U
 	case "INFLAMMATORY_POLITICS_AND_NEWS":
 		fallthrough
 	case "NEGATIVE_NEWS_PHARMACEUTICAL":
-		*e = DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum(s)
+		*e = DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyBrandSafetyCategoriesAvoidedMediumSeverityCategoriesEnum: %v", v)
 	}
 }
 

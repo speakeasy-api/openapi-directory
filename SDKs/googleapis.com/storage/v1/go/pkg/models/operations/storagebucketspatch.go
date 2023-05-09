@@ -35,12 +35,16 @@ const (
 	StorageBucketsPatchPredefinedACLEnumPublicReadWrite   StorageBucketsPatchPredefinedACLEnum = "publicReadWrite"
 )
 
+func (e StorageBucketsPatchPredefinedACLEnum) ToPointer() *StorageBucketsPatchPredefinedACLEnum {
+	return &e
+}
+
 func (e *StorageBucketsPatchPredefinedACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authenticatedRead":
 		fallthrough
 	case "private":
@@ -50,10 +54,10 @@ func (e *StorageBucketsPatchPredefinedACLEnum) UnmarshalJSON(data []byte) error 
 	case "publicRead":
 		fallthrough
 	case "publicReadWrite":
-		*e = StorageBucketsPatchPredefinedACLEnum(s)
+		*e = StorageBucketsPatchPredefinedACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageBucketsPatchPredefinedACLEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageBucketsPatchPredefinedACLEnum: %v", v)
 	}
 }
 
@@ -69,12 +73,16 @@ const (
 	StorageBucketsPatchPredefinedDefaultObjectACLEnumPublicRead             StorageBucketsPatchPredefinedDefaultObjectACLEnum = "publicRead"
 )
 
+func (e StorageBucketsPatchPredefinedDefaultObjectACLEnum) ToPointer() *StorageBucketsPatchPredefinedDefaultObjectACLEnum {
+	return &e
+}
+
 func (e *StorageBucketsPatchPredefinedDefaultObjectACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authenticatedRead":
 		fallthrough
 	case "bucketOwnerFullControl":
@@ -86,10 +94,10 @@ func (e *StorageBucketsPatchPredefinedDefaultObjectACLEnum) UnmarshalJSON(data [
 	case "projectPrivate":
 		fallthrough
 	case "publicRead":
-		*e = StorageBucketsPatchPredefinedDefaultObjectACLEnum(s)
+		*e = StorageBucketsPatchPredefinedDefaultObjectACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageBucketsPatchPredefinedDefaultObjectACLEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageBucketsPatchPredefinedDefaultObjectACLEnum: %v", v)
 	}
 }
 
@@ -101,19 +109,23 @@ const (
 	StorageBucketsPatchProjectionEnumNoACL StorageBucketsPatchProjectionEnum = "noAcl"
 )
 
+func (e StorageBucketsPatchProjectionEnum) ToPointer() *StorageBucketsPatchProjectionEnum {
+	return &e
+}
+
 func (e *StorageBucketsPatchProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "noAcl":
-		*e = StorageBucketsPatchProjectionEnum(s)
+		*e = StorageBucketsPatchProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageBucketsPatchProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageBucketsPatchProjectionEnum: %v", v)
 	}
 }
 

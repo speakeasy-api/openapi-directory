@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -67,4 +68,10 @@ pkg/models/shared/lettingslandlorddocument.go
 pkg/models/shared/landlordmaintenancecertificatemodel.go
 pkg/models/shared/landlordphotomodelresults.go
 pkg/models/shared/landlordphotomodel.go
+docs/sdk/README.md
+docs/branchcontroller/README.md
+docs/landlordcontroller/README.md
+docs/photocontroller/README.md
+docs/propertycontroller/README.md
+docs/sessioncontroller/README.md
 USAGE.md

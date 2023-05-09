@@ -15,17 +15,21 @@ const (
 	POSTDeleteEndpointAccessActionEnumDeleteEndpointAccess POSTDeleteEndpointAccessActionEnum = "DeleteEndpointAccess"
 )
 
+func (e POSTDeleteEndpointAccessActionEnum) ToPointer() *POSTDeleteEndpointAccessActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEndpointAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEndpointAccess":
-		*e = POSTDeleteEndpointAccessActionEnum(s)
+		*e = POSTDeleteEndpointAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEndpointAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEndpointAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteEndpointAccessVersionEnumTwoThousandAndTwelve1201 POSTDeleteEndpointAccessVersionEnum = "2012-12-01"
 )
 
+func (e POSTDeleteEndpointAccessVersionEnum) ToPointer() *POSTDeleteEndpointAccessVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDeleteEndpointAccessVersionEnum(s)
+		*e = POSTDeleteEndpointAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteEndpointAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteEndpointAccessVersionEnum: %v", v)
 	}
 }
 

@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type GetNumbersNodSecurity struct {
+	XMathtoolsAPISecret string `security:"scheme,type=apiKey,subtype=header,name=X-Mathtools-Api-Secret"`
+}
+
 type GetNumbersNodResponse struct {
 	ContentType string
 	StatusCode  int

@@ -16,21 +16,25 @@ const (
 	AdmissionRuleEnforcementModeEnumDryrunAuditLogOnly         AdmissionRuleEnforcementModeEnum = "DRYRUN_AUDIT_LOG_ONLY"
 )
 
+func (e AdmissionRuleEnforcementModeEnum) ToPointer() *AdmissionRuleEnforcementModeEnum {
+	return &e
+}
+
 func (e *AdmissionRuleEnforcementModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENFORCEMENT_MODE_UNSPECIFIED":
 		fallthrough
 	case "ENFORCED_BLOCK_AND_AUDIT_LOG":
 		fallthrough
 	case "DRYRUN_AUDIT_LOG_ONLY":
-		*e = AdmissionRuleEnforcementModeEnum(s)
+		*e = AdmissionRuleEnforcementModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdmissionRuleEnforcementModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdmissionRuleEnforcementModeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	AdmissionRuleEvaluationModeEnumAlwaysDeny                AdmissionRuleEvaluationModeEnum = "ALWAYS_DENY"
 )
 
+func (e AdmissionRuleEvaluationModeEnum) ToPointer() *AdmissionRuleEvaluationModeEnum {
+	return &e
+}
+
 func (e *AdmissionRuleEvaluationModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION_MODE_UNSPECIFIED":
 		fallthrough
 	case "ALWAYS_ALLOW":
@@ -57,10 +65,10 @@ func (e *AdmissionRuleEvaluationModeEnum) UnmarshalJSON(data []byte) error {
 	case "REQUIRE_ATTESTATION":
 		fallthrough
 	case "ALWAYS_DENY":
-		*e = AdmissionRuleEvaluationModeEnum(s)
+		*e = AdmissionRuleEvaluationModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdmissionRuleEvaluationModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdmissionRuleEvaluationModeEnum: %v", v)
 	}
 }
 

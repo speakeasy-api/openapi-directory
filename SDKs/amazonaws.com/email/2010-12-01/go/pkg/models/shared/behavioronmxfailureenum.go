@@ -14,18 +14,22 @@ const (
 	BehaviorOnMXFailureEnumRejectMessage   BehaviorOnMXFailureEnum = "RejectMessage"
 )
 
+func (e BehaviorOnMXFailureEnum) ToPointer() *BehaviorOnMXFailureEnum {
+	return &e
+}
+
 func (e *BehaviorOnMXFailureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UseDefaultValue":
 		fallthrough
 	case "RejectMessage":
-		*e = BehaviorOnMXFailureEnum(s)
+		*e = BehaviorOnMXFailureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BehaviorOnMXFailureEnum: %s", s)
+		return fmt.Errorf("invalid value for BehaviorOnMXFailureEnum: %v", v)
 	}
 }

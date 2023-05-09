@@ -82,7 +82,10 @@ func (s *sslCertificateRequests) AddSslCertificateRequest(ctx context.Context, r
 // GetSslCertificateRequest - Detail of a SSL certificate request
 func (s *sslCertificateRequests) GetSslCertificateRequest(ctx context.Context, request operations.GetSslCertificateRequestRequest) (*operations.GetSslCertificateRequestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +183,10 @@ func (s *sslCertificateRequests) GetSslCertificateRequests(ctx context.Context, 
 // VerifySslCertificateRequestDomainValidations - Verify the SSL certificate request domain validations
 func (s *sslCertificateRequests) VerifySslCertificateRequestDomainValidations(ctx context.Context, request operations.VerifySslCertificateRequestDomainValidationsRequest) (*operations.VerifySslCertificateRequestDomainValidationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sslcertificaterequests/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	StartTaskXAmzTargetEnumAmazonEc2ContainerServiceV20141113StartTask StartTaskXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.StartTask"
 )
 
+func (e StartTaskXAmzTargetEnum) ToPointer() *StartTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.StartTask":
-		*e = StartTaskXAmzTargetEnum(s)
+		*e = StartTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartTaskXAmzTargetEnum: %v", v)
 	}
 }
 

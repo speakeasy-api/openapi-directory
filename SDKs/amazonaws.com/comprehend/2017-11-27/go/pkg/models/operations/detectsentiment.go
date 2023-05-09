@@ -16,17 +16,21 @@ const (
 	DetectSentimentXAmzTargetEnumComprehend20171127DetectSentiment DetectSentimentXAmzTargetEnum = "Comprehend_20171127.DetectSentiment"
 )
 
+func (e DetectSentimentXAmzTargetEnum) ToPointer() *DetectSentimentXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectSentimentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DetectSentiment":
-		*e = DetectSentimentXAmzTargetEnum(s)
+		*e = DetectSentimentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectSentimentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectSentimentXAmzTargetEnum: %v", v)
 	}
 }
 

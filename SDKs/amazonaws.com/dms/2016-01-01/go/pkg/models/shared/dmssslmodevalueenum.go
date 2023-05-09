@@ -16,12 +16,16 @@ const (
 	DmsSslModeValueEnumVerifyFull DmsSslModeValueEnum = "verify-full"
 )
 
+func (e DmsSslModeValueEnum) ToPointer() *DmsSslModeValueEnum {
+	return &e
+}
+
 func (e *DmsSslModeValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "require":
@@ -29,9 +33,9 @@ func (e *DmsSslModeValueEnum) UnmarshalJSON(data []byte) error {
 	case "verify-ca":
 		fallthrough
 	case "verify-full":
-		*e = DmsSslModeValueEnum(s)
+		*e = DmsSslModeValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DmsSslModeValueEnum: %s", s)
+		return fmt.Errorf("invalid value for DmsSslModeValueEnum: %v", v)
 	}
 }

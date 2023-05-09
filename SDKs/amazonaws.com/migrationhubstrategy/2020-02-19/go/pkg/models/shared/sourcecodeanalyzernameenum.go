@@ -16,12 +16,16 @@ const (
 	SourceCodeAnalyzerNameEnumPortingAssistant SourceCodeAnalyzerNameEnum = "PORTING_ASSISTANT"
 )
 
+func (e SourceCodeAnalyzerNameEnum) ToPointer() *SourceCodeAnalyzerNameEnum {
+	return &e
+}
+
 func (e *SourceCodeAnalyzerNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSHARP_ANALYZER":
 		fallthrough
 	case "JAVA_ANALYZER":
@@ -29,9 +33,9 @@ func (e *SourceCodeAnalyzerNameEnum) UnmarshalJSON(data []byte) error {
 	case "BYTECODE_ANALYZER":
 		fallthrough
 	case "PORTING_ASSISTANT":
-		*e = SourceCodeAnalyzerNameEnum(s)
+		*e = SourceCodeAnalyzerNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SourceCodeAnalyzerNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SourceCodeAnalyzerNameEnum: %v", v)
 	}
 }

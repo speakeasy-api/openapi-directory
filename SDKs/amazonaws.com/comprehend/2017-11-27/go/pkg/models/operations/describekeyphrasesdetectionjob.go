@@ -16,17 +16,21 @@ const (
 	DescribeKeyPhrasesDetectionJobXAmzTargetEnumComprehend20171127DescribeKeyPhrasesDetectionJob DescribeKeyPhrasesDetectionJobXAmzTargetEnum = "Comprehend_20171127.DescribeKeyPhrasesDetectionJob"
 )
 
+func (e DescribeKeyPhrasesDetectionJobXAmzTargetEnum) ToPointer() *DescribeKeyPhrasesDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeKeyPhrasesDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.DescribeKeyPhrasesDetectionJob":
-		*e = DescribeKeyPhrasesDetectionJobXAmzTargetEnum(s)
+		*e = DescribeKeyPhrasesDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeKeyPhrasesDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeKeyPhrasesDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

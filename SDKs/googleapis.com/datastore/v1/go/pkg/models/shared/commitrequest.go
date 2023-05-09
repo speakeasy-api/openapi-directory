@@ -16,21 +16,25 @@ const (
 	CommitRequestModeEnumNonTransactional CommitRequestModeEnum = "NON_TRANSACTIONAL"
 )
 
+func (e CommitRequestModeEnum) ToPointer() *CommitRequestModeEnum {
+	return &e
+}
+
 func (e *CommitRequestModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "TRANSACTIONAL":
 		fallthrough
 	case "NON_TRANSACTIONAL":
-		*e = CommitRequestModeEnum(s)
+		*e = CommitRequestModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommitRequestModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CommitRequestModeEnum: %v", v)
 	}
 }
 

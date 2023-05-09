@@ -16,17 +16,21 @@ const (
 	DisassociateConnectorXAmzTargetEnumAwsServerMigrationServiceV20161024DisassociateConnector DisassociateConnectorXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.DisassociateConnector"
 )
 
+func (e DisassociateConnectorXAmzTargetEnum) ToPointer() *DisassociateConnectorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateConnectorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.DisassociateConnector":
-		*e = DisassociateConnectorXAmzTargetEnum(s)
+		*e = DisassociateConnectorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateConnectorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateConnectorXAmzTargetEnum: %v", v)
 	}
 }
 

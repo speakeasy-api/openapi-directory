@@ -34,7 +34,10 @@ func newAnalyticsReports(defaultClient, securityClient HTTPClient, serverURL, la
 // DeleteReportFilter - Delete the report filter
 func (s *analyticsReports) DeleteReportFilter(ctx context.Context, request operations.DeleteReportFilterRequest) (*operations.DeleteReportFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *analyticsReports) DeleteReportFilter(ctx context.Context, request opera
 // GetReportFilter - Get the report filter description
 func (s *analyticsReports) GetReportFilter(ctx context.Context, request operations.GetReportFilterRequest) (*operations.GetReportFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -139,7 +145,10 @@ func (s *analyticsReports) GetReportFilter(ctx context.Context, request operatio
 // GetReportFilters - Get report filter list for the given store
 func (s *analyticsReports) GetReportFilters(ctx context.Context, request operations.GetReportFiltersRequest) (*operations.GetReportFiltersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -195,7 +204,10 @@ func (s *analyticsReports) GetReportFilters(ctx context.Context, request operati
 // SaveReportFilter - Save the report filter
 func (s *analyticsReports) SaveReportFilter(ctx context.Context, request operations.SaveReportFilterRequest) (*operations.SaveReportFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/analytics/{storeId}/reports/filters/{reportFilterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveReportFilterRequest", "json")
 	if err != nil {

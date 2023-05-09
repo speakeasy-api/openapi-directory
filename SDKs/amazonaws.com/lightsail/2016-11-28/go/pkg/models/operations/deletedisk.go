@@ -16,17 +16,21 @@ const (
 	DeleteDiskXAmzTargetEnumLightsail20161128DeleteDisk DeleteDiskXAmzTargetEnum = "Lightsail_20161128.DeleteDisk"
 )
 
+func (e DeleteDiskXAmzTargetEnum) ToPointer() *DeleteDiskXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDiskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteDisk":
-		*e = DeleteDiskXAmzTargetEnum(s)
+		*e = DeleteDiskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDiskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDiskXAmzTargetEnum: %v", v)
 	}
 }
 

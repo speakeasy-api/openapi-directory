@@ -15,20 +15,24 @@ const (
 	NamespaceTypeEnumHTTP       NamespaceTypeEnum = "HTTP"
 )
 
+func (e NamespaceTypeEnum) ToPointer() *NamespaceTypeEnum {
+	return &e
+}
+
 func (e *NamespaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DNS_PUBLIC":
 		fallthrough
 	case "DNS_PRIVATE":
 		fallthrough
 	case "HTTP":
-		*e = NamespaceTypeEnum(s)
+		*e = NamespaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamespaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NamespaceTypeEnum: %v", v)
 	}
 }

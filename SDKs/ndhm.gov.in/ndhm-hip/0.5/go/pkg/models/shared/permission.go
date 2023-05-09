@@ -17,12 +17,16 @@ const (
 	PermissionAccessModeEnumStream PermissionAccessModeEnum = "STREAM"
 )
 
+func (e PermissionAccessModeEnum) ToPointer() *PermissionAccessModeEnum {
+	return &e
+}
+
 func (e *PermissionAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW":
 		fallthrough
 	case "STORE":
@@ -30,10 +34,10 @@ func (e *PermissionAccessModeEnum) UnmarshalJSON(data []byte) error {
 	case "QUERY":
 		fallthrough
 	case "STREAM":
-		*e = PermissionAccessModeEnum(s)
+		*e = PermissionAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionAccessModeEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	PermissionFrequencyUnitEnumYear  PermissionFrequencyUnitEnum = "YEAR"
 )
 
+func (e PermissionFrequencyUnitEnum) ToPointer() *PermissionFrequencyUnitEnum {
+	return &e
+}
+
 func (e *PermissionFrequencyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HOUR":
 		fallthrough
 	case "WEEK":
@@ -67,10 +75,10 @@ func (e *PermissionFrequencyUnitEnum) UnmarshalJSON(data []byte) error {
 	case "MONTH":
 		fallthrough
 	case "YEAR":
-		*e = PermissionFrequencyUnitEnum(s)
+		*e = PermissionFrequencyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionFrequencyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionFrequencyUnitEnum: %v", v)
 	}
 }
 

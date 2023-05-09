@@ -19,12 +19,16 @@ const (
 	HoldCorpusEnumVoice                 HoldCorpusEnum = "VOICE"
 )
 
+func (e HoldCorpusEnum) ToPointer() *HoldCorpusEnum {
+	return &e
+}
+
 func (e *HoldCorpusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CORPUS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DRIVE":
@@ -36,10 +40,10 @@ func (e *HoldCorpusEnum) UnmarshalJSON(data []byte) error {
 	case "HANGOUTS_CHAT":
 		fallthrough
 	case "VOICE":
-		*e = HoldCorpusEnum(s)
+		*e = HoldCorpusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HoldCorpusEnum: %s", s)
+		return fmt.Errorf("invalid value for HoldCorpusEnum: %v", v)
 	}
 }
 

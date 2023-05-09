@@ -15,19 +15,23 @@ const (
 	AdvertiserStatusEnumOnHold   AdvertiserStatusEnum = "ON_HOLD"
 )
 
+func (e AdvertiserStatusEnum) ToPointer() *AdvertiserStatusEnum {
+	return &e
+}
+
 func (e *AdvertiserStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVED":
 		fallthrough
 	case "ON_HOLD":
-		*e = AdvertiserStatusEnum(s)
+		*e = AdvertiserStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvertiserStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvertiserStatusEnum: %v", v)
 	}
 }
 

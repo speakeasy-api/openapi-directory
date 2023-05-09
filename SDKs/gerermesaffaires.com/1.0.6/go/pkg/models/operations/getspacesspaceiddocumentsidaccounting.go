@@ -29,12 +29,16 @@ const (
 	GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnumPermanent   GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum = "permanent"
 )
 
+func (e GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum) ToPointer() *GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -52,10 +56,10 @@ func (e *GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbo
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum(s)
+		*e = GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDDocumentsIDAccounting200ApplicationJSONAccountingWorkbookEnum: %v", v)
 	}
 }
 

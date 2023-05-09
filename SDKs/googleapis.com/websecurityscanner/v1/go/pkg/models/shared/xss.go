@@ -29,12 +29,16 @@ const (
 	XSSAttackVectorEnumUserControllableURL     XSSAttackVectorEnum = "USER_CONTROLLABLE_URL"
 )
 
+func (e XSSAttackVectorEnum) ToPointer() *XSSAttackVectorEnum {
+	return &e
+}
+
 func (e *XSSAttackVectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTACK_VECTOR_UNSPECIFIED":
 		fallthrough
 	case "LOCAL_STORAGE":
@@ -66,10 +70,10 @@ func (e *XSSAttackVectorEnum) UnmarshalJSON(data []byte) error {
 	case "SAME_ORIGIN":
 		fallthrough
 	case "USER_CONTROLLABLE_URL":
-		*e = XSSAttackVectorEnum(s)
+		*e = XSSAttackVectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for XSSAttackVectorEnum: %s", s)
+		return fmt.Errorf("invalid value for XSSAttackVectorEnum: %v", v)
 	}
 }
 

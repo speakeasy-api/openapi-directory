@@ -16,17 +16,21 @@ const (
 	CreateRotationXAmzTargetEnumSsmContactsCreateRotation CreateRotationXAmzTargetEnum = "SSMContacts.CreateRotation"
 )
 
+func (e CreateRotationXAmzTargetEnum) ToPointer() *CreateRotationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateRotationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.CreateRotation":
-		*e = CreateRotationXAmzTargetEnum(s)
+		*e = CreateRotationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRotationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRotationXAmzTargetEnum: %v", v)
 	}
 }
 

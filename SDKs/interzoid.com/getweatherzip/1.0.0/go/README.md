@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getweatherz
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetweatherzipcodeRequest{
+    ctx := context.Background()
+    res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, operations.GetweatherzipcodeRequest{
         License: "corrupti",
         Zip: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### WeatherByZipCode
+### [WeatherByZipCode](docs/weatherbyzipcode/README.md)
 
-* `Getweatherzipcode` - Gets current weather information for a US zip code
+* [Getweatherzipcode](docs/weatherbyzipcode/README.md#getweatherzipcode) - Gets current weather information for a US zip code
 <!-- End SDK Available Operations -->
 
 ### Maturity

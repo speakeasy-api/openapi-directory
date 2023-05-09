@@ -13,16 +13,20 @@ const (
 	ResetFpgaImageAttributeNameEnumLoadPermission ResetFpgaImageAttributeNameEnum = "loadPermission"
 )
 
+func (e ResetFpgaImageAttributeNameEnum) ToPointer() *ResetFpgaImageAttributeNameEnum {
+	return &e
+}
+
 func (e *ResetFpgaImageAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "loadPermission":
-		*e = ResetFpgaImageAttributeNameEnum(s)
+		*e = ResetFpgaImageAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResetFpgaImageAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ResetFpgaImageAttributeNameEnum: %v", v)
 	}
 }

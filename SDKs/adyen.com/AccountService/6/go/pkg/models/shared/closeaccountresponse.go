@@ -18,12 +18,16 @@ const (
 	CloseAccountResponseStatusEnumSuspended CloseAccountResponseStatusEnum = "Suspended"
 )
 
+func (e CloseAccountResponseStatusEnum) ToPointer() *CloseAccountResponseStatusEnum {
+	return &e
+}
+
 func (e *CloseAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Closed":
@@ -31,10 +35,10 @@ func (e *CloseAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Inactive":
 		fallthrough
 	case "Suspended":
-		*e = CloseAccountResponseStatusEnum(s)
+		*e = CloseAccountResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloseAccountResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CloseAccountResponseStatusEnum: %v", v)
 	}
 }
 

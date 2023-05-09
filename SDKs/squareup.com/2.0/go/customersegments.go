@@ -85,7 +85,10 @@ func (s *customerSegments) ListCustomerSegments(ctx context.Context, request ope
 // Retrieves a specific customer segment as identified by the `segment_id` value.
 func (s *customerSegments) RetrieveCustomerSegment(ctx context.Context, request operations.RetrieveCustomerSegmentRequest, security operations.RetrieveCustomerSegmentSecurity) (*operations.RetrieveCustomerSegmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customers/segments/{segment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customers/segments/{segment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -12,7 +12,7 @@ type ListResourceSharePermissionsRequestBody struct {
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
 	NextToken *string `json:"nextToken,omitempty"`
-	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource share for which you want to retrieve the associated permissions.
+	// Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of the resource share for which you want to retrieve the associated permissions.
 	ResourceShareArn string `json:"resourceShareArn"`
 }
 

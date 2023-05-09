@@ -16,5 +16,5 @@ type GetLogsResponse struct {
 	StatusCode                 int
 	RawResponse                *http.Response
 	// Returns the log file
-	GetLogs200TextPlainBinaryString *string
+	GetLogs200TextPlainBinaryString []byte
 }

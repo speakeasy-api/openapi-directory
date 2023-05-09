@@ -16,12 +16,16 @@ const (
 	NumberTypeEnumTenDlc    NumberTypeEnum = "TEN_DLC"
 )
 
+func (e NumberTypeEnum) ToPointer() *NumberTypeEnum {
+	return &e
+}
+
 func (e *NumberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SHORT_CODE":
 		fallthrough
 	case "LONG_CODE":
@@ -29,9 +33,9 @@ func (e *NumberTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TOLL_FREE":
 		fallthrough
 	case "TEN_DLC":
-		*e = NumberTypeEnum(s)
+		*e = NumberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberTypeEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	AxisScaleEnumLog10            AxisScaleEnum = "LOG10"
 )
 
+func (e AxisScaleEnum) ToPointer() *AxisScaleEnum {
+	return &e
+}
+
 func (e *AxisScaleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCALE_UNSPECIFIED":
 		fallthrough
 	case "LINEAR":
 		fallthrough
 	case "LOG10":
-		*e = AxisScaleEnum(s)
+		*e = AxisScaleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AxisScaleEnum: %s", s)
+		return fmt.Errorf("invalid value for AxisScaleEnum: %v", v)
 	}
 }
 

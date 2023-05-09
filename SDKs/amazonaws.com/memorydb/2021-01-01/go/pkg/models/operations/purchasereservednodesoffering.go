@@ -16,17 +16,21 @@ const (
 	PurchaseReservedNodesOfferingXAmzTargetEnumAmazonMemoryDbPurchaseReservedNodesOffering PurchaseReservedNodesOfferingXAmzTargetEnum = "AmazonMemoryDB.PurchaseReservedNodesOffering"
 )
 
+func (e PurchaseReservedNodesOfferingXAmzTargetEnum) ToPointer() *PurchaseReservedNodesOfferingXAmzTargetEnum {
+	return &e
+}
+
 func (e *PurchaseReservedNodesOfferingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.PurchaseReservedNodesOffering":
-		*e = PurchaseReservedNodesOfferingXAmzTargetEnum(s)
+		*e = PurchaseReservedNodesOfferingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PurchaseReservedNodesOfferingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PurchaseReservedNodesOfferingXAmzTargetEnum: %v", v)
 	}
 }
 

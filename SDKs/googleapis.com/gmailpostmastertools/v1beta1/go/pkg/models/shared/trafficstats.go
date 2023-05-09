@@ -18,12 +18,16 @@ const (
 	TrafficStatsDomainReputationEnumBad                           TrafficStatsDomainReputationEnum = "BAD"
 )
 
+func (e TrafficStatsDomainReputationEnum) ToPointer() *TrafficStatsDomainReputationEnum {
+	return &e
+}
+
 func (e *TrafficStatsDomainReputationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPUTATION_CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "HIGH":
@@ -33,10 +37,10 @@ func (e *TrafficStatsDomainReputationEnum) UnmarshalJSON(data []byte) error {
 	case "LOW":
 		fallthrough
 	case "BAD":
-		*e = TrafficStatsDomainReputationEnum(s)
+		*e = TrafficStatsDomainReputationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrafficStatsDomainReputationEnum: %s", s)
+		return fmt.Errorf("invalid value for TrafficStatsDomainReputationEnum: %v", v)
 	}
 }
 

@@ -22,19 +22,23 @@ const (
 	DfareportingCampaignCreativeAssociationsListSortOrderEnumDescending DfareportingCampaignCreativeAssociationsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingCampaignCreativeAssociationsListSortOrderEnum) ToPointer() *DfareportingCampaignCreativeAssociationsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingCampaignCreativeAssociationsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingCampaignCreativeAssociationsListSortOrderEnum(s)
+		*e = DfareportingCampaignCreativeAssociationsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCampaignCreativeAssociationsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCampaignCreativeAssociationsListSortOrderEnum: %v", v)
 	}
 }
 

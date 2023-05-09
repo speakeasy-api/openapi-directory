@@ -15,17 +15,21 @@ const (
 	GETApplySecurityGroupsToLoadBalancerActionEnumApplySecurityGroupsToLoadBalancer GETApplySecurityGroupsToLoadBalancerActionEnum = "ApplySecurityGroupsToLoadBalancer"
 )
 
+func (e GETApplySecurityGroupsToLoadBalancerActionEnum) ToPointer() *GETApplySecurityGroupsToLoadBalancerActionEnum {
+	return &e
+}
+
 func (e *GETApplySecurityGroupsToLoadBalancerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplySecurityGroupsToLoadBalancer":
-		*e = GETApplySecurityGroupsToLoadBalancerActionEnum(s)
+		*e = GETApplySecurityGroupsToLoadBalancerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplySecurityGroupsToLoadBalancerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplySecurityGroupsToLoadBalancerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETApplySecurityGroupsToLoadBalancerVersionEnumTwoThousandAndTwelve0601 GETApplySecurityGroupsToLoadBalancerVersionEnum = "2012-06-01"
 )
 
+func (e GETApplySecurityGroupsToLoadBalancerVersionEnum) ToPointer() *GETApplySecurityGroupsToLoadBalancerVersionEnum {
+	return &e
+}
+
 func (e *GETApplySecurityGroupsToLoadBalancerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = GETApplySecurityGroupsToLoadBalancerVersionEnum(s)
+		*e = GETApplySecurityGroupsToLoadBalancerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplySecurityGroupsToLoadBalancerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplySecurityGroupsToLoadBalancerVersionEnum: %v", v)
 	}
 }
 

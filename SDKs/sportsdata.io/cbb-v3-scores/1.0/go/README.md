@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/cbb-v3-scor
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreGamesInProgressRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, operations.AreGamesInProgressRequest{
+        Format: operations.AreGamesInProgressFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,24 +45,28 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreGamesInProgress` - Are Games In Progress
-* `CurrentSeason` - Current Season
-* `GamesByDate` - Games by Date
-* `InjuredPlayers` - Injured Players
-* `LeagueHierarchy` - League Hierarchy
-* `PlayerDetailsByActive` - Player Details by Active
-* `PlayerDetailsByPlayer` - Player Details by Player
-* `PlayerDetailsByTeam` - Player Details by Team
-* `Schedules` - Schedules
-* `Stadiums` - Stadiums
-* `TeamGameLogsBySeason` - Team Game Logs By Season
-* `TeamGameStatsByDate` - Team Game Stats by Date
-* `TeamSchedule` - Team Schedule
-* `TeamSeasonStats` - Team Season Stats
-* `Teams` - Teams
-* `TournamentHierarchy` - Tournament Hierarchy
+* [AreGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [CurrentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [GamesByDateBasic](docs/sdk/README.md#gamesbydatebasic) - Games by Date (Basic)
+* [InjuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [LeagueHierarchy](docs/sdk/README.md#leaguehierarchy) - League Hierarchy
+* [PlayerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details by Active
+* [PlayerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details by Player
+* [PlayerDetailsByTeam](docs/sdk/README.md#playerdetailsbyteam) - Player Details by Team
+* [PlayersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [Schedules](docs/sdk/README.md#schedules) - Schedules
+* [SchedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [Stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [TeamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [TeamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [TeamSchedule](docs/sdk/README.md#teamschedule) - Team Schedule
+* [TeamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [Teams](docs/sdk/README.md#teams) - Teams
+* [TeamsBasic](docs/sdk/README.md#teamsbasic) - Teams (Basic)
+* [TournamentHierarchy](docs/sdk/README.md#tournamenthierarchy) - Tournament Hierarchy
 <!-- End SDK Available Operations -->
 
 ### Maturity

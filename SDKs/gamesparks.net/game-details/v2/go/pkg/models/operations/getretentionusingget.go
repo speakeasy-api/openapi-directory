@@ -17,19 +17,23 @@ const (
 	GETRetentionUsingGETStageEnumPreview GETRetentionUsingGETStageEnum = "PREVIEW"
 )
 
+func (e GETRetentionUsingGETStageEnum) ToPointer() *GETRetentionUsingGETStageEnum {
+	return &e
+}
+
 func (e *GETRetentionUsingGETStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "PREVIEW":
-		*e = GETRetentionUsingGETStageEnum(s)
+		*e = GETRetentionUsingGETStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRetentionUsingGETStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRetentionUsingGETStageEnum: %v", v)
 	}
 }
 

@@ -650,14 +650,23 @@ const (
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g12xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.12xlarge"
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g16xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.16xlarge"
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7gMetal        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumC6inMetal       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "c6in.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM6inMetal       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m6in.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM6idnMetal      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m6idn.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR6inMetal       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r6in.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR6idnMetal      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum) ToPointer() *DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum {
+	return &e
+}
+
 func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1933,10 +1942,20 @@ func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum) Unmarsh
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -1950,12 +1969,16 @@ const (
 	DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnumWindowsAmazonVpc   DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum = "Windows (Amazon VPC)"
 )
 
+func (e DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum) ToPointer() *DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum {
+	return &e
+}
+
 func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Linux/UNIX (Amazon VPC)":
@@ -1963,10 +1986,10 @@ func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum) U
 	case "Windows":
 		fallthrough
 	case "Windows (Amazon VPC)":
-		*e = DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum(s)
+		*e = DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpotPriceHistoryResultSpotPriceHistoryProductDescriptionEnum: %v", v)
 	}
 }
 

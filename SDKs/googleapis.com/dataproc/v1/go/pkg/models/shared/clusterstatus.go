@@ -24,12 +24,16 @@ const (
 	ClusterStatusStateEnumRepairing        ClusterStatusStateEnum = "REPAIRING"
 )
 
+func (e ClusterStatusStateEnum) ToPointer() *ClusterStatusStateEnum {
+	return &e
+}
+
 func (e *ClusterStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "CREATING":
@@ -51,10 +55,10 @@ func (e *ClusterStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "STARTING":
 		fallthrough
 	case "REPAIRING":
-		*e = ClusterStatusStateEnum(s)
+		*e = ClusterStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStatusStateEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	ClusterStatusSubstateEnumStaleStatus ClusterStatusSubstateEnum = "STALE_STATUS"
 )
 
+func (e ClusterStatusSubstateEnum) ToPointer() *ClusterStatusSubstateEnum {
+	return &e
+}
+
 func (e *ClusterStatusSubstateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNHEALTHY":
 		fallthrough
 	case "STALE_STATUS":
-		*e = ClusterStatusSubstateEnum(s)
+		*e = ClusterStatusSubstateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterStatusSubstateEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterStatusSubstateEnum: %v", v)
 	}
 }
 

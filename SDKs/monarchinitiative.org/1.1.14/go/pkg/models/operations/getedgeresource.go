@@ -18,21 +18,25 @@ const (
 	GetEdgeResourceDirectionEnumBoth     GetEdgeResourceDirectionEnum = "BOTH"
 )
 
+func (e GetEdgeResourceDirectionEnum) ToPointer() *GetEdgeResourceDirectionEnum {
+	return &e
+}
+
 func (e *GetEdgeResourceDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCOMING":
 		fallthrough
 	case "OUTGOING":
 		fallthrough
 	case "BOTH":
-		*e = GetEdgeResourceDirectionEnum(s)
+		*e = GetEdgeResourceDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEdgeResourceDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEdgeResourceDirectionEnum: %v", v)
 	}
 }
 
@@ -44,19 +48,23 @@ const (
 	GetEdgeResourceGraphEnumOntology GetEdgeResourceGraphEnum = "ontology"
 )
 
+func (e GetEdgeResourceGraphEnum) ToPointer() *GetEdgeResourceGraphEnum {
+	return &e
+}
+
 func (e *GetEdgeResourceGraphEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "data":
 		fallthrough
 	case "ontology":
-		*e = GetEdgeResourceGraphEnum(s)
+		*e = GetEdgeResourceGraphEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEdgeResourceGraphEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEdgeResourceGraphEnum: %v", v)
 	}
 }
 

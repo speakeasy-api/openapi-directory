@@ -17,12 +17,16 @@ const (
 	AccountStateStatusEnumVerificationRequested    AccountStateStatusEnum = "VERIFICATION_REQUESTED"
 )
 
+func (e AccountStateStatusEnum) ToPointer() *AccountStateStatusEnum {
+	return &e
+}
+
 func (e *AccountStateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT_STATUS_UNSPECIFIED":
 		fallthrough
 	case "VERIFIED":
@@ -30,10 +34,10 @@ func (e *AccountStateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "UNVERIFIED":
 		fallthrough
 	case "VERIFICATION_REQUESTED":
-		*e = AccountStateStatusEnum(s)
+		*e = AccountStateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountStateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountStateStatusEnum: %v", v)
 	}
 }
 

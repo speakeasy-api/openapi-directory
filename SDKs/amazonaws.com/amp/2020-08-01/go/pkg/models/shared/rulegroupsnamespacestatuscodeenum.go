@@ -19,12 +19,16 @@ const (
 	RuleGroupsNamespaceStatusCodeEnumUpdateFailed   RuleGroupsNamespaceStatusCodeEnum = "UPDATE_FAILED"
 )
 
+func (e RuleGroupsNamespaceStatusCodeEnum) ToPointer() *RuleGroupsNamespaceStatusCodeEnum {
+	return &e
+}
+
 func (e *RuleGroupsNamespaceStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -36,9 +40,9 @@ func (e *RuleGroupsNamespaceStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "CREATION_FAILED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = RuleGroupsNamespaceStatusCodeEnum(s)
+		*e = RuleGroupsNamespaceStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleGroupsNamespaceStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleGroupsNamespaceStatusCodeEnum: %v", v)
 	}
 }

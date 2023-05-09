@@ -2,81 +2,82 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ApigatewayProjectsLocationsApisConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ApigatewayProjectsLocationsApisConfigsCreate(ctx, operations.ApigatewayProjectsLocationsApisConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ApigatewayAPIConfigInput: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "provident",
+            DisplayName: sdk.String("provident"),
             GatewayConfig: &shared.ApigatewayGatewayConfig{
                 BackendConfig: &shared.ApigatewayBackendConfig{
-                    GoogleServiceAccount: "distinctio",
+                    GoogleServiceAccount: sdk.String("distinctio"),
                 },
             },
-            GatewayServiceAccount: "quibusdam",
+            GatewayServiceAccount: sdk.String("quibusdam"),
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "nulla",
-                        Path: "corrupti",
+                        Contents: sdk.String("nulla"),
+                        Path: sdk.String("corrupti"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "vel",
-                            Path: "error",
+                            Contents: sdk.String("vel"),
+                            Path: sdk.String("error"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "deserunt",
-                            Path: "suscipit",
+                            Contents: sdk.String("deserunt"),
+                            Path: sdk.String("suscipit"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "iure",
-                            Path: "magnam",
+                            Contents: sdk.String("iure"),
+                            Path: sdk.String("magnam"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "debitis",
-                            Path: "ipsa",
+                            Contents: sdk.String("debitis"),
+                            Path: sdk.String("ipsa"),
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "delectus",
-                        Path: "tempora",
+                        Contents: sdk.String("delectus"),
+                        Path: sdk.String("tempora"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "molestiae",
-                            Path: "minus",
+                            Contents: sdk.String("molestiae"),
+                            Path: sdk.String("minus"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "placeat",
-                            Path: "voluptatum",
+                            Contents: sdk.String("placeat"),
+                            Path: sdk.String("voluptatum"),
                         },
                     },
                 },
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "iusto",
-                        Path: "excepturi",
+                        Contents: sdk.String("iusto"),
+                        Path: sdk.String("excepturi"),
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "recusandae",
-                            Path: "temporibus",
+                            Contents: sdk.String("recusandae"),
+                            Path: sdk.String("temporibus"),
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "ab",
-                            Path: "quis",
+                            Contents: sdk.String("ab"),
+                            Path: sdk.String("quis"),
                         },
                     },
                 },
@@ -86,57 +87,54 @@ func main() {
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "repellendus",
-                    Path: "sapiente",
+                    Contents: sdk.String("repellendus"),
+                    Path: sdk.String("sapiente"),
                 },
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "quo",
-                    Path: "odit",
+                    Contents: sdk.String("quo"),
+                    Path: sdk.String("odit"),
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "at",
-                        Path: "maiores",
+                        Contents: sdk.String("at"),
+                        Path: sdk.String("maiores"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "molestiae",
-                        Path: "quod",
+                        Contents: sdk.String("molestiae"),
+                        Path: sdk.String("quod"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "quod",
-                        Path: "esse",
+                        Contents: sdk.String("quod"),
+                        Path: sdk.String("esse"),
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "totam",
-                        Path: "porro",
+                        Contents: sdk.String("totam"),
+                        Path: sdk.String("porro"),
                     },
                 },
             },
         },
-        AccessToken: "dolorum",
-        Alt: "json",
-        APIConfigID: "nam",
-        Callback: "officia",
-        Fields: "occaecati",
-        Key: "fugit",
-        OauthToken: "deleniti",
+        AccessToken: sdk.String("dolorum"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        APIConfigID: sdk.String("nam"),
+        Callback: sdk.String("officia"),
+        Fields: sdk.String("occaecati"),
+        Key: sdk.String("fugit"),
+        OauthToken: sdk.String("deleniti"),
         Parent: "hic",
-        PrettyPrint: false,
-        QuotaUser: "optio",
-        UploadType: "totam",
-        UploadProtocol: "beatae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ApigatewayProjectsLocationsApisConfigsCreate(ctx, req, operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("optio"),
+        UploadType: sdk.String("totam"),
+        UploadProtocol: sdk.String("beatae"),
+    }, operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

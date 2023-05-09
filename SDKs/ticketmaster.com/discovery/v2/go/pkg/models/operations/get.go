@@ -16,19 +16,23 @@ const (
 	GetIncludeLicensedContentEnumNo  GetIncludeLicensedContentEnum = " no"
 )
 
+func (e GetIncludeLicensedContentEnum) ToPointer() *GetIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetIncludeLicensedContentEnum(s)
+		*e = GetIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIncludeLicensedContentEnum: %v", v)
 	}
 }
 

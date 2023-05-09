@@ -10,38 +10,42 @@ import (
 )
 
 // GetVariantSetsArchiveCollectionPerPageEnum - Results per page {error_msg}
-type GetVariantSetsArchiveCollectionPerPageEnum string
+type GetVariantSetsArchiveCollectionPerPageEnum int64
 
 const (
-	GetVariantSetsArchiveCollectionPerPageEnumTwo    GetVariantSetsArchiveCollectionPerPageEnum = "2"
-	GetVariantSetsArchiveCollectionPerPageEnumTen    GetVariantSetsArchiveCollectionPerPageEnum = "10"
-	GetVariantSetsArchiveCollectionPerPageEnumTwenty GetVariantSetsArchiveCollectionPerPageEnum = "20"
-	GetVariantSetsArchiveCollectionPerPageEnumThirty GetVariantSetsArchiveCollectionPerPageEnum = "30"
-	GetVariantSetsArchiveCollectionPerPageEnumForty  GetVariantSetsArchiveCollectionPerPageEnum = "40"
-	GetVariantSetsArchiveCollectionPerPageEnumFifty  GetVariantSetsArchiveCollectionPerPageEnum = "50"
+	GetVariantSetsArchiveCollectionPerPageEnumTwo    GetVariantSetsArchiveCollectionPerPageEnum = 2
+	GetVariantSetsArchiveCollectionPerPageEnumTen    GetVariantSetsArchiveCollectionPerPageEnum = 10
+	GetVariantSetsArchiveCollectionPerPageEnumTwenty GetVariantSetsArchiveCollectionPerPageEnum = 20
+	GetVariantSetsArchiveCollectionPerPageEnumThirty GetVariantSetsArchiveCollectionPerPageEnum = 30
+	GetVariantSetsArchiveCollectionPerPageEnumForty  GetVariantSetsArchiveCollectionPerPageEnum = 40
+	GetVariantSetsArchiveCollectionPerPageEnumFifty  GetVariantSetsArchiveCollectionPerPageEnum = 50
 )
 
+func (e GetVariantSetsArchiveCollectionPerPageEnum) ToPointer() *GetVariantSetsArchiveCollectionPerPageEnum {
+	return &e
+}
+
 func (e *GetVariantSetsArchiveCollectionPerPageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "2":
+	switch v {
+	case 2:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "20":
+	case 20:
 		fallthrough
-	case "30":
+	case 30:
 		fallthrough
-	case "40":
+	case 40:
 		fallthrough
-	case "50":
-		*e = GetVariantSetsArchiveCollectionPerPageEnum(s)
+	case 50:
+		*e = GetVariantSetsArchiveCollectionPerPageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVariantSetsArchiveCollectionPerPageEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVariantSetsArchiveCollectionPerPageEnum: %v", v)
 	}
 }
 

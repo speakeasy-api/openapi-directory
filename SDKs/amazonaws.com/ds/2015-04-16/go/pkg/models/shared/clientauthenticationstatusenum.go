@@ -14,18 +14,22 @@ const (
 	ClientAuthenticationStatusEnumDisabled ClientAuthenticationStatusEnum = "Disabled"
 )
 
+func (e ClientAuthenticationStatusEnum) ToPointer() *ClientAuthenticationStatusEnum {
+	return &e
+}
+
 func (e *ClientAuthenticationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = ClientAuthenticationStatusEnum(s)
+		*e = ClientAuthenticationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClientAuthenticationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ClientAuthenticationStatusEnum: %v", v)
 	}
 }

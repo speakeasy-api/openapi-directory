@@ -92,7 +92,10 @@ func (s *merchants) ListMerchants(ctx context.Context, request operations.ListMe
 // Retrieve a `Merchant` object for the given `merchant_id`.
 func (s *merchants) RetrieveMerchant(ctx context.Context, request operations.RetrieveMerchantRequest, security operations.RetrieveMerchantSecurity) (*operations.RetrieveMerchantResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/merchants/{merchant_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/merchants/{merchant_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

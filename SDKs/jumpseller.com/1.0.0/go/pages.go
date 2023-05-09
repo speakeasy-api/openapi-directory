@@ -36,7 +36,10 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeletePagesIDJSON - Delete an existing Page.
 func (s *pages) DeletePagesIDJSON(ctx context.Context, request operations.DeletePagesIDJSONRequest) (*operations.DeletePagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *pages) GetPagesCountJSON(ctx context.Context, request operations.GetPag
 // GetPagesIDJSON - Retrieve a single Page by id.
 func (s *pages) GetPagesIDJSON(ctx context.Context, request operations.GetPagesIDJSONRequest) (*operations.GetPagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -307,7 +313,10 @@ func (s *pages) PostPagesJSON(ctx context.Context, request operations.PostPagesJ
 // PutPagesIDJSON - Update a Page.
 func (s *pages) PutPagesIDJSON(ctx context.Context, request operations.PutPagesIDJSONRequest) (*operations.PutPagesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pages/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PageModify", "json")
 	if err != nil {

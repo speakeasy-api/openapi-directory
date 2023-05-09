@@ -17,12 +17,16 @@ const (
 	DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnumRevoking    DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum = "revoking"
 )
 
+func (e DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum) ToPointer() *DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum {
+	return &e
+}
+
 func (e *DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorizing":
 		fallthrough
 	case "active":
@@ -30,10 +34,10 @@ func (e *DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEn
 	case "failed":
 		fallthrough
 	case "revoking":
-		*e = DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum(s)
+		*e = DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientVpnAuthorizationRulesResultAuthorizationRulesStatusCodeEnum: %v", v)
 	}
 }
 

@@ -4,7 +4,9 @@ package shared
 
 // GceInstance - A runtime using a Compute Engine instance.
 type GceInstance struct {
-	// Size of the boot disk in GB.
+	// A list of the type and count of accelerator cards attached to the instance.
+	Accelerators []Accelerator `json:"accelerators,omitempty"`
+	// Size of the boot disk in GB. Defaults to 50.
 	BootDiskSizeGb *int `json:"bootDiskSizeGb,omitempty"`
 	// A set of Compute Engine Confidential VM instance options.
 	ConfidentialInstanceConfig *GceConfidentialInstanceConfig `json:"confidentialInstanceConfig,omitempty"`
@@ -12,9 +14,33 @@ type GceInstance struct {
 	DisablePublicIPAddresses *bool `json:"disablePublicIpAddresses,omitempty"`
 	// The name of a Compute Engine machine type.
 	MachineType *string `json:"machineType,omitempty"`
-	// Number of instances to pool for faster workstation starup.
+	// Number of instances to pool for faster workstation startup.
 	PoolSize *int `json:"poolSize,omitempty"`
-	// Email address of the service account that will be used on VM instances used to support this config. This service account must have permission to pull the specified container image. If not set, VMs will run without a service account, in which case the image must be publicly accessible.
+	// Output only. Number of instances currently available in the pool for faster workstation startup.
+	PooledInstances *int `json:"pooledInstances,omitempty"`
+	// Email address of the service account used on VM instances used to support this configuration. If not set, VMs run with a Google-managed service account. This service account must have permission to pull the specified container image; otherwise, the image must be publicly accessible.
+	ServiceAccount *string `json:"serviceAccount,omitempty"`
+	// A set of Compute Engine Shielded instance options.
+	ShieldedInstanceConfig *GceShieldedInstanceConfig `json:"shieldedInstanceConfig,omitempty"`
+	// Network tags to add to the Compute Engine machines backing the Workstations.
+	Tags []string `json:"tags,omitempty"`
+}
+
+// GceInstanceInput - A runtime using a Compute Engine instance.
+type GceInstanceInput struct {
+	// A list of the type and count of accelerator cards attached to the instance.
+	Accelerators []Accelerator `json:"accelerators,omitempty"`
+	// Size of the boot disk in GB. Defaults to 50.
+	BootDiskSizeGb *int `json:"bootDiskSizeGb,omitempty"`
+	// A set of Compute Engine Confidential VM instance options.
+	ConfidentialInstanceConfig *GceConfidentialInstanceConfig `json:"confidentialInstanceConfig,omitempty"`
+	// Whether instances have no public IP address.
+	DisablePublicIPAddresses *bool `json:"disablePublicIpAddresses,omitempty"`
+	// The name of a Compute Engine machine type.
+	MachineType *string `json:"machineType,omitempty"`
+	// Number of instances to pool for faster workstation startup.
+	PoolSize *int `json:"poolSize,omitempty"`
+	// Email address of the service account used on VM instances used to support this configuration. If not set, VMs run with a Google-managed service account. This service account must have permission to pull the specified container image; otherwise, the image must be publicly accessible.
 	ServiceAccount *string `json:"serviceAccount,omitempty"`
 	// A set of Compute Engine Shielded instance options.
 	ShieldedInstanceConfig *GceShieldedInstanceConfig `json:"shieldedInstanceConfig,omitempty"`

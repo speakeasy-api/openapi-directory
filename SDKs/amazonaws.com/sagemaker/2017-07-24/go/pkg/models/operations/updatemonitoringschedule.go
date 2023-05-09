@@ -16,17 +16,21 @@ const (
 	UpdateMonitoringScheduleXAmzTargetEnumSageMakerUpdateMonitoringSchedule UpdateMonitoringScheduleXAmzTargetEnum = "SageMaker.UpdateMonitoringSchedule"
 )
 
+func (e UpdateMonitoringScheduleXAmzTargetEnum) ToPointer() *UpdateMonitoringScheduleXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateMonitoringScheduleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateMonitoringSchedule":
-		*e = UpdateMonitoringScheduleXAmzTargetEnum(s)
+		*e = UpdateMonitoringScheduleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateMonitoringScheduleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateMonitoringScheduleXAmzTargetEnum: %v", v)
 	}
 }
 

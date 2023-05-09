@@ -16,19 +16,23 @@ const (
 	GetV1EmailDisposableFormatEnumXML  GetV1EmailDisposableFormatEnum = "xml"
 )
 
+func (e GetV1EmailDisposableFormatEnum) ToPointer() *GetV1EmailDisposableFormatEnum {
+	return &e
+}
+
 func (e *GetV1EmailDisposableFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetV1EmailDisposableFormatEnum(s)
+		*e = GetV1EmailDisposableFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetV1EmailDisposableFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetV1EmailDisposableFormatEnum: %v", v)
 	}
 }
 

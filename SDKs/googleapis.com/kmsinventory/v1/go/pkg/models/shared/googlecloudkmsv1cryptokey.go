@@ -18,12 +18,16 @@ const (
 	GoogleCloudKmsV1CryptoKeyPurposeEnumMac                         GoogleCloudKmsV1CryptoKeyPurposeEnum = "MAC"
 )
 
+func (e GoogleCloudKmsV1CryptoKeyPurposeEnum) ToPointer() *GoogleCloudKmsV1CryptoKeyPurposeEnum {
+	return &e
+}
+
 func (e *GoogleCloudKmsV1CryptoKeyPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRYPTO_KEY_PURPOSE_UNSPECIFIED":
 		fallthrough
 	case "ENCRYPT_DECRYPT":
@@ -33,10 +37,10 @@ func (e *GoogleCloudKmsV1CryptoKeyPurposeEnum) UnmarshalJSON(data []byte) error 
 	case "ASYMMETRIC_DECRYPT":
 		fallthrough
 	case "MAC":
-		*e = GoogleCloudKmsV1CryptoKeyPurposeEnum(s)
+		*e = GoogleCloudKmsV1CryptoKeyPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudKmsV1CryptoKeyPurposeEnum: %v", v)
 	}
 }
 

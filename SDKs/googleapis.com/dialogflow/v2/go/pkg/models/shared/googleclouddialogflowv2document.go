@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2DocumentKnowledgeTypesEnumAgentFacingSmartReply    GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum = "AGENT_FACING_SMART_REPLY"
 )
 
+func (e GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum) ToPointer() *GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWLEDGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FAQ":
@@ -32,10 +36,10 @@ func (e *GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum) UnmarshalJSON(data [
 	case "ARTICLE_SUGGESTION":
 		fallthrough
 	case "AGENT_FACING_SMART_REPLY":
-		*e = GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum(s)
+		*e = GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2DocumentKnowledgeTypesEnum: %v", v)
 	}
 }
 
@@ -73,12 +77,16 @@ const (
 	GoogleCloudDialogflowV2DocumentStateEnumDeleting         GoogleCloudDialogflowV2DocumentStateEnum = "DELETING"
 )
 
+func (e GoogleCloudDialogflowV2DocumentStateEnum) ToPointer() *GoogleCloudDialogflowV2DocumentStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2DocumentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -90,10 +98,10 @@ func (e *GoogleCloudDialogflowV2DocumentStateEnum) UnmarshalJSON(data []byte) er
 	case "RELOADING":
 		fallthrough
 	case "DELETING":
-		*e = GoogleCloudDialogflowV2DocumentStateEnum(s)
+		*e = GoogleCloudDialogflowV2DocumentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2DocumentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2DocumentStateEnum: %v", v)
 	}
 }
 

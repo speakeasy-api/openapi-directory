@@ -34,7 +34,10 @@ func newChangeLogs(defaultClient, securityClient HTTPClient, serverURL, language
 // DfareportingChangeLogsGet - Gets one change log by ID.
 func (s *changeLogs) DfareportingChangeLogsGet(ctx context.Context, request operations.DfareportingChangeLogsGetRequest, security operations.DfareportingChangeLogsGetSecurity) (*operations.DfareportingChangeLogsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/changeLogs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/changeLogs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *changeLogs) DfareportingChangeLogsGet(ctx context.Context, request oper
 // DfareportingChangeLogsList - Retrieves a list of change logs. This method supports paging.
 func (s *changeLogs) DfareportingChangeLogsList(ctx context.Context, request operations.DfareportingChangeLogsListRequest, security operations.DfareportingChangeLogsListSecurity) (*operations.DfareportingChangeLogsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/changeLogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/changeLogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

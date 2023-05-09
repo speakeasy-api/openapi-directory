@@ -16,17 +16,21 @@ const (
 	CreateProjectVersionXAmzTargetEnumRekognitionServiceCreateProjectVersion CreateProjectVersionXAmzTargetEnum = "RekognitionService.CreateProjectVersion"
 )
 
+func (e CreateProjectVersionXAmzTargetEnum) ToPointer() *CreateProjectVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProjectVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.CreateProjectVersion":
-		*e = CreateProjectVersionXAmzTargetEnum(s)
+		*e = CreateProjectVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProjectVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProjectVersionXAmzTargetEnum: %v", v)
 	}
 }
 

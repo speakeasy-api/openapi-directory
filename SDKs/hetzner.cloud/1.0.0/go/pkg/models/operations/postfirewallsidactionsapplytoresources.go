@@ -28,19 +28,23 @@ const (
 	PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnumLabelSelector PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum = "label_selector"
 )
 
+func (e PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum) ToPointer() *PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
-		*e = PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum(s)
+		*e = PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsApplyToResourcesApplyToResourcesRequestFirewallApplyToResourcesTypeEnum: %v", v)
 	}
 }
 
@@ -88,21 +92,25 @@ const (
 	PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnumError   PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum = "error"
 )
 
+func (e PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum) ToPointer() *PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum(s)
+		*e = PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsApplyToResourcesActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

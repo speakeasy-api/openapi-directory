@@ -16,17 +16,21 @@ const (
 	DeleteModelXAmzTargetEnumAwsLookoutEquipmentFrontendServiceDeleteModel DeleteModelXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.DeleteModel"
 )
 
+func (e DeleteModelXAmzTargetEnum) ToPointer() *DeleteModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.DeleteModel":
-		*e = DeleteModelXAmzTargetEnum(s)
+		*e = DeleteModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteModelXAmzTargetEnum: %v", v)
 	}
 }
 

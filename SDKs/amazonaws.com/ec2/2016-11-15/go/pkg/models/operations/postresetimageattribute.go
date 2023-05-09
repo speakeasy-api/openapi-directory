@@ -15,17 +15,21 @@ const (
 	POSTResetImageAttributeActionEnumResetImageAttribute POSTResetImageAttributeActionEnum = "ResetImageAttribute"
 )
 
+func (e POSTResetImageAttributeActionEnum) ToPointer() *POSTResetImageAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTResetImageAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetImageAttribute":
-		*e = POSTResetImageAttributeActionEnum(s)
+		*e = POSTResetImageAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetImageAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetImageAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetImageAttributeVersionEnumTwoThousandAndSixteen1115 POSTResetImageAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTResetImageAttributeVersionEnum) ToPointer() *POSTResetImageAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTResetImageAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTResetImageAttributeVersionEnum(s)
+		*e = POSTResetImageAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetImageAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetImageAttributeVersionEnum: %v", v)
 	}
 }
 

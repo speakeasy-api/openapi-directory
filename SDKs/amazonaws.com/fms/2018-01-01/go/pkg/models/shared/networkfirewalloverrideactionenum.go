@@ -13,16 +13,20 @@ const (
 	NetworkFirewallOverrideActionEnumDropToAlert NetworkFirewallOverrideActionEnum = "DROP_TO_ALERT"
 )
 
+func (e NetworkFirewallOverrideActionEnum) ToPointer() *NetworkFirewallOverrideActionEnum {
+	return &e
+}
+
 func (e *NetworkFirewallOverrideActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DROP_TO_ALERT":
-		*e = NetworkFirewallOverrideActionEnum(s)
+		*e = NetworkFirewallOverrideActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkFirewallOverrideActionEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkFirewallOverrideActionEnum: %v", v)
 	}
 }

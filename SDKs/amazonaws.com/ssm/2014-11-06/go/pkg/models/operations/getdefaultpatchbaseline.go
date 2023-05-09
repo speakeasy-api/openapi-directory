@@ -16,17 +16,21 @@ const (
 	GetDefaultPatchBaselineXAmzTargetEnumAmazonSsmGetDefaultPatchBaseline GetDefaultPatchBaselineXAmzTargetEnum = "AmazonSSM.GetDefaultPatchBaseline"
 )
 
+func (e GetDefaultPatchBaselineXAmzTargetEnum) ToPointer() *GetDefaultPatchBaselineXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDefaultPatchBaselineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetDefaultPatchBaseline":
-		*e = GetDefaultPatchBaselineXAmzTargetEnum(s)
+		*e = GetDefaultPatchBaselineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDefaultPatchBaselineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDefaultPatchBaselineXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	ValueRangeMajorDimensionEnumColumns              ValueRangeMajorDimensionEnum = "COLUMNS"
 )
 
+func (e ValueRangeMajorDimensionEnum) ToPointer() *ValueRangeMajorDimensionEnum {
+	return &e
+}
+
 func (e *ValueRangeMajorDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DIMENSION_UNSPECIFIED":
 		fallthrough
 	case "ROWS":
 		fallthrough
 	case "COLUMNS":
-		*e = ValueRangeMajorDimensionEnum(s)
+		*e = ValueRangeMajorDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValueRangeMajorDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for ValueRangeMajorDimensionEnum: %v", v)
 	}
 }
 

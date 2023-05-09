@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/audit/1.0.4/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetEventRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetEvent(ctx, req, operations.GetEventSecurity{
+    res, err := s.GetEvent(ctx, operations.GetEventRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.GetEventSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -47,11 +44,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetEvent` - Retrieve individual audit event
-* `GetEvents` - Retrieve audit events
-* `GetEventsOptions` - Retrieve audit event types
+* [GetEvent](docs/sdk/README.md#getevent) - Retrieve individual audit event
+* [GetEvents](docs/sdk/README.md#getevents) - Retrieve audit events
+* [GetEventsOptions](docs/sdk/README.md#geteventsoptions) - Retrieve audit event types
 <!-- End SDK Available Operations -->
 
 ### Maturity

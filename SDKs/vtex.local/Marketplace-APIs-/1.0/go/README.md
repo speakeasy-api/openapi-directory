@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Marketplace-AP
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,16 +28,14 @@ func main() {
         }),
     )
 
-    req := operations.GetSuggestionRequest{
+    ctx := context.Background()
+    res, err := s.GetSuggestions.GetSuggestion(ctx, operations.GetSuggestionRequest{
         Accept: "corrupti",
         ContentType: "provident",
         AccountName: "distinctio",
         SellerID: "quibusdam",
         SellerSkuID: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetSuggestions.GetSuggestion(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -54,35 +51,35 @@ func main() {
 ## Available Resources and Operations
 
 
-### GetSuggestions
+### [GetSuggestions](docs/getsuggestions/README.md)
 
-* `GetSuggestion` - Get SKU Suggestion by ID
-* `Getsuggestions` - Get all SKU suggestions
+* [GetSuggestion](docs/getsuggestions/README.md#getsuggestion) - Get SKU Suggestion by ID
+* [Getsuggestions](docs/getsuggestions/README.md#getsuggestions) - Get all SKU suggestions
 
-### GetVersions
+### [GetVersions](docs/getversions/README.md)
 
-* `GetSuggestionbyversion` - Get Version by ID
-* `GetVersions` - Get all Versions
+* [GetSuggestionbyversion](docs/getversions/README.md#getsuggestionbyversion) - Get Version by ID
+* [GetVersions](docs/getversions/README.md#getversions) - Get all Versions
 
-### ManageSuggestions
+### [ManageSuggestions](docs/managesuggestions/README.md)
 
-* `DeleteSuggestion` - Delete SKU Suggestion
-* `SaveSuggestion` - Send SKU Suggestion
+* [DeleteSuggestion](docs/managesuggestions/README.md#deletesuggestion) - Delete SKU Suggestion
+* [SaveSuggestion](docs/managesuggestions/README.md#savesuggestion) - Send SKU Suggestion
 
-### MatchReceivedSKUs
+### [MatchReceivedSKUs](docs/matchreceivedskus/README.md)
 
-* `Match` - Match Received SKUs individually
-* `MatchMultiple` - Match Multiple Received SKUs
+* [Match](docs/matchreceivedskus/README.md#match) - Match Received SKUs individually
+* [MatchMultiple](docs/matchreceivedskus/README.md#matchmultiple) - Match Multiple Received SKUs
 
-### SKUApprovalSettings
+### [SKUApprovalSettings](docs/skuapprovalsettings/README.md)
 
-* `Getaccountconfig` - Get Account's Approval Settings
-* `GetautoApprovevaluefromconfig` - Get autoApprove Status in Account Settings
-* `Getselleraccountconfig` - Get Seller's Approval Settings
-* `Putselleraccountconfig` - Save Seller's Approval Settings
-* `Saveaccountconfig` - Save Account's Approval Settings
-* `Saveautoapproveforaccount` - Activate autoApprove in Marketplace's Account
-* `Saveautoapproveforaccountseller` - Activate autoApprove Setting for a Seller
+* [Getaccountconfig](docs/skuapprovalsettings/README.md#getaccountconfig) - Get Account's Approval Settings
+* [GetautoApprovevaluefromconfig](docs/skuapprovalsettings/README.md#getautoapprovevaluefromconfig) - Get autoApprove Status in Account Settings
+* [Getselleraccountconfig](docs/skuapprovalsettings/README.md#getselleraccountconfig) - Get Seller's Approval Settings
+* [Putselleraccountconfig](docs/skuapprovalsettings/README.md#putselleraccountconfig) - Save Seller's Approval Settings
+* [Saveaccountconfig](docs/skuapprovalsettings/README.md#saveaccountconfig) - Save Account's Approval Settings
+* [Saveautoapproveforaccount](docs/skuapprovalsettings/README.md#saveautoapproveforaccount) - Activate autoApprove in Marketplace's Account
+* [Saveautoapproveforaccountseller](docs/skuapprovalsettings/README.md#saveautoapproveforaccountseller) - Activate autoApprove Setting for a Seller
 <!-- End SDK Available Operations -->
 
 ### Maturity

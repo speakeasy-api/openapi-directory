@@ -12,20 +12,27 @@ type LongTermPricingTypeEnum string
 const (
 	LongTermPricingTypeEnumOneYear   LongTermPricingTypeEnum = "OneYear"
 	LongTermPricingTypeEnumThreeYear LongTermPricingTypeEnum = "ThreeYear"
+	LongTermPricingTypeEnumOneMonth  LongTermPricingTypeEnum = "OneMonth"
 )
 
+func (e LongTermPricingTypeEnum) ToPointer() *LongTermPricingTypeEnum {
+	return &e
+}
+
 func (e *LongTermPricingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OneYear":
 		fallthrough
 	case "ThreeYear":
-		*e = LongTermPricingTypeEnum(s)
+		fallthrough
+	case "OneMonth":
+		*e = LongTermPricingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LongTermPricingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LongTermPricingTypeEnum: %v", v)
 	}
 }

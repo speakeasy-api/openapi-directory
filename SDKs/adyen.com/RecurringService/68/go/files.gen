@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -31,6 +32,7 @@ pkg/models/shared/disablerequest.go
 pkg/models/shared/disablepermitresult.go
 pkg/models/shared/disablepermitrequest.go
 pkg/models/shared/recurringdetailsresult.go
+pkg/models/shared/recurringdetailwrapper.go
 pkg/models/shared/recurringdetail.go
 pkg/models/shared/tokendetails.go
 pkg/models/shared/name.go
@@ -43,4 +45,6 @@ pkg/models/shared/notifyshopperresult.go
 pkg/models/shared/notifyshopperrequest.go
 pkg/models/shared/scheduleaccountupdaterresult.go
 pkg/models/shared/scheduleaccountupdaterrequest.go
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

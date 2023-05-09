@@ -21,12 +21,16 @@ const (
 	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeMeshMobileConnection PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_MeshMobileConnection"
 )
 
+func (e PicoChargingDataConnectionModeEnum) ToPointer() *PicoChargingDataConnectionModeEnum {
+	return &e
+}
+
 func (e *PicoChargingDataConnectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NetworkToCloudConnectionMode_NoConnection":
 		fallthrough
 	case "NetworkToCloudConnectionMode_DirectWiFiConnection":
@@ -40,10 +44,10 @@ func (e *PicoChargingDataConnectionModeEnum) UnmarshalJSON(data []byte) error {
 	case "NetworkToCloudConnectionMode_MeshWiFiConnection":
 		fallthrough
 	case "NetworkToCloudConnectionMode_MeshMobileConnection":
-		*e = PicoChargingDataConnectionModeEnum(s)
+		*e = PicoChargingDataConnectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PicoChargingDataConnectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PicoChargingDataConnectionModeEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	PicoChargingDataLastWarningOrErrorEnumPicoWarningHighTemperature PicoChargingDataLastWarningOrErrorEnum = "PicoWarningHighTemperature"
 )
 
+func (e PicoChargingDataLastWarningOrErrorEnum) ToPointer() *PicoChargingDataLastWarningOrErrorEnum {
+	return &e
+}
+
 func (e *PicoChargingDataLastWarningOrErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MeterDataloggerEvent":
 		fallthrough
 	case "MeterRestart":
@@ -124,10 +132,10 @@ func (e *PicoChargingDataLastWarningOrErrorEnum) UnmarshalJSON(data []byte) erro
 	case "PicoWarningOverload":
 		fallthrough
 	case "PicoWarningHighTemperature":
-		*e = PicoChargingDataLastWarningOrErrorEnum(s)
+		*e = PicoChargingDataLastWarningOrErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PicoChargingDataLastWarningOrErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for PicoChargingDataLastWarningOrErrorEnum: %v", v)
 	}
 }
 
@@ -141,12 +149,16 @@ const (
 	PicoChargingDataLoadSheddingStateEnumNoCurrent   PicoChargingDataLoadSheddingStateEnum = "NoCurrent"
 )
 
+func (e PicoChargingDataLoadSheddingStateEnum) ToPointer() *PicoChargingDataLoadSheddingStateEnum {
+	return &e
+}
+
 func (e *PicoChargingDataLoadSheddingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MaxCurrent":
 		fallthrough
 	case "HalfCurrent":
@@ -154,10 +166,10 @@ func (e *PicoChargingDataLoadSheddingStateEnum) UnmarshalJSON(data []byte) error
 	case "MinCurrent":
 		fallthrough
 	case "NoCurrent":
-		*e = PicoChargingDataLoadSheddingStateEnum(s)
+		*e = PicoChargingDataLoadSheddingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PicoChargingDataLoadSheddingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PicoChargingDataLoadSheddingStateEnum: %v", v)
 	}
 }
 
@@ -175,12 +187,16 @@ const (
 	PicoChargingDataStateEnumOffline             PicoChargingDataStateEnum = "Offline"
 )
 
+func (e PicoChargingDataStateEnum) ToPointer() *PicoChargingDataStateEnum {
+	return &e
+}
+
 func (e *PicoChargingDataStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Booting":
 		fallthrough
 	case "ReadyNoCarConnected":
@@ -196,10 +212,10 @@ func (e *PicoChargingDataStateEnum) UnmarshalJSON(data []byte) error {
 	case "Authorize":
 		fallthrough
 	case "Offline":
-		*e = PicoChargingDataStateEnum(s)
+		*e = PicoChargingDataStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PicoChargingDataStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PicoChargingDataStateEnum: %v", v)
 	}
 }
 
@@ -233,6 +249,9 @@ type PicoChargingData struct {
 	MaxStationCurrent *int `json:"MaxStationCurrent,omitempty"`
 	// Min. current of the station in A
 	MinStationCurrent *int `json:"MinStationCurrent,omitempty"`
+	// Received Signal Strength Indicator for the connection mode (wifi or mobile).
+	//             -127 (min) to 0 (Max)
+	Rssi *int `json:"RSSI,omitempty"`
 	// The state of the charging station
 	State *PicoChargingDataStateEnum `json:"State,omitempty"`
 	// The date of this values

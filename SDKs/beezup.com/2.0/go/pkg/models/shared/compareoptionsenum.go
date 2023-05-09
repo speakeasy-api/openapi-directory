@@ -20,12 +20,16 @@ const (
 	CompareOptionsEnumOrdinal           CompareOptionsEnum = "Ordinal"
 )
 
+func (e CompareOptionsEnum) ToPointer() *CompareOptionsEnum {
+	return &e
+}
+
 func (e *CompareOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "IgnoreCase":
@@ -39,9 +43,9 @@ func (e *CompareOptionsEnum) UnmarshalJSON(data []byte) error {
 	case "StringSort":
 		fallthrough
 	case "Ordinal":
-		*e = CompareOptionsEnum(s)
+		*e = CompareOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompareOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for CompareOptionsEnum: %v", v)
 	}
 }

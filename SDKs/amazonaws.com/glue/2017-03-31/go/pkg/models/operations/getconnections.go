@@ -16,17 +16,21 @@ const (
 	GetConnectionsXAmzTargetEnumAwsGlueGetConnections GetConnectionsXAmzTargetEnum = "AWSGlue.GetConnections"
 )
 
+func (e GetConnectionsXAmzTargetEnum) ToPointer() *GetConnectionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetConnectionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetConnections":
-		*e = GetConnectionsXAmzTargetEnum(s)
+		*e = GetConnectionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetConnectionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetConnectionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBInstanceAutomatedBackupsActionEnumDescribeDbInstanceAutomatedBackups POSTDescribeDBInstanceAutomatedBackupsActionEnum = "DescribeDBInstanceAutomatedBackups"
 )
 
+func (e POSTDescribeDBInstanceAutomatedBackupsActionEnum) ToPointer() *POSTDescribeDBInstanceAutomatedBackupsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBInstanceAutomatedBackupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBInstanceAutomatedBackups":
-		*e = POSTDescribeDBInstanceAutomatedBackupsActionEnum(s)
+		*e = POSTDescribeDBInstanceAutomatedBackupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBInstanceAutomatedBackupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBInstanceAutomatedBackupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBInstanceAutomatedBackupsVersionEnumTwoThousandAndFourteen1031 POSTDescribeDBInstanceAutomatedBackupsVersionEnum = "2014-10-31"
 )
 
+func (e POSTDescribeDBInstanceAutomatedBackupsVersionEnum) ToPointer() *POSTDescribeDBInstanceAutomatedBackupsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBInstanceAutomatedBackupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDescribeDBInstanceAutomatedBackupsVersionEnum(s)
+		*e = POSTDescribeDBInstanceAutomatedBackupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBInstanceAutomatedBackupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBInstanceAutomatedBackupsVersionEnum: %v", v)
 	}
 }
 

@@ -37,7 +37,10 @@ func newBusinessUnit(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get Business Units identified by `userId`. The `userId` refers to the user’s ID.
 func (s *businessUnit) GetBusinessUnitsV3BusinessUnitsUserUserID(ctx context.Context, request operations.GetBusinessUnitsV3BusinessUnitsUserUserIDRequest, security operations.GetBusinessUnitsV3BusinessUnitsUserUserIDSecurity) (*operations.GetBusinessUnitsV3BusinessUnitsUserUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/business-units/v3/business-units/user/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/business-units/v3/business-units/user/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

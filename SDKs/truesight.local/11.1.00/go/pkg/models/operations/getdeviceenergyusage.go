@@ -17,21 +17,25 @@ const (
 	GetDeviceEnergyUsageBasisEnumHourly  GetDeviceEnergyUsageBasisEnum = "HOURLY"
 )
 
+func (e GetDeviceEnergyUsageBasisEnum) ToPointer() *GetDeviceEnergyUsageBasisEnum {
+	return &e
+}
+
 func (e *GetDeviceEnergyUsageBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTHLY":
 		fallthrough
 	case "DAILY":
 		fallthrough
 	case "HOURLY":
-		*e = GetDeviceEnergyUsageBasisEnum(s)
+		*e = GetDeviceEnergyUsageBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDeviceEnergyUsageBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDeviceEnergyUsageBasisEnum: %v", v)
 	}
 }
 
@@ -46,12 +50,16 @@ const (
 	GetDeviceEnergyUsageRollPeriodEnumOneYear   GetDeviceEnergyUsageRollPeriodEnum = "ONE_YEAR"
 )
 
+func (e GetDeviceEnergyUsageRollPeriodEnum) ToPointer() *GetDeviceEnergyUsageRollPeriodEnum {
+	return &e
+}
+
 func (e *GetDeviceEnergyUsageRollPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE_DAY":
 		fallthrough
 	case "ONE_WEEK":
@@ -61,10 +69,10 @@ func (e *GetDeviceEnergyUsageRollPeriodEnum) UnmarshalJSON(data []byte) error {
 	case "SIX_MONTHS":
 		fallthrough
 	case "ONE_YEAR":
-		*e = GetDeviceEnergyUsageRollPeriodEnum(s)
+		*e = GetDeviceEnergyUsageRollPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDeviceEnergyUsageRollPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDeviceEnergyUsageRollPeriodEnum: %v", v)
 	}
 }
 

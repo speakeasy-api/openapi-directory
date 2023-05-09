@@ -13,16 +13,20 @@ const (
 	CredentialProviderTypeEnumSecretsManager CredentialProviderTypeEnum = "SECRETS_MANAGER"
 )
 
+func (e CredentialProviderTypeEnum) ToPointer() *CredentialProviderTypeEnum {
+	return &e
+}
+
 func (e *CredentialProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECRETS_MANAGER":
-		*e = CredentialProviderTypeEnum(s)
+		*e = CredentialProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CredentialProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CredentialProviderTypeEnum: %v", v)
 	}
 }

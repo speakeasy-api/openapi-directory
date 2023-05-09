@@ -16,17 +16,21 @@ const (
 	UpdateCommentXAmzTargetEnumCodeCommit20150413UpdateComment UpdateCommentXAmzTargetEnum = "CodeCommit_20150413.UpdateComment"
 )
 
+func (e UpdateCommentXAmzTargetEnum) ToPointer() *UpdateCommentXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateCommentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.UpdateComment":
-		*e = UpdateCommentXAmzTargetEnum(s)
+		*e = UpdateCommentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCommentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCommentXAmzTargetEnum: %v", v)
 	}
 }
 

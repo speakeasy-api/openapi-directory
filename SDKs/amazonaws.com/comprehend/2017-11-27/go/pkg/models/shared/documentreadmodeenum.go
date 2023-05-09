@@ -14,18 +14,22 @@ const (
 	DocumentReadModeEnumForceDocumentReadAction DocumentReadModeEnum = "FORCE_DOCUMENT_READ_ACTION"
 )
 
+func (e DocumentReadModeEnum) ToPointer() *DocumentReadModeEnum {
+	return &e
+}
+
 func (e *DocumentReadModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_DEFAULT":
 		fallthrough
 	case "FORCE_DOCUMENT_READ_ACTION":
-		*e = DocumentReadModeEnum(s)
+		*e = DocumentReadModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentReadModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentReadModeEnum: %v", v)
 	}
 }

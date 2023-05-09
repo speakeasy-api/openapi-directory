@@ -17,12 +17,16 @@ const (
 	WriteOperationTypeEnumDelete WriteOperationTypeEnum = "DELETE"
 )
 
+func (e WriteOperationTypeEnum) ToPointer() *WriteOperationTypeEnum {
+	return &e
+}
+
 func (e *WriteOperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSERT":
 		fallthrough
 	case "UPSERT":
@@ -30,9 +34,9 @@ func (e *WriteOperationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = WriteOperationTypeEnum(s)
+		*e = WriteOperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WriteOperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WriteOperationTypeEnum: %v", v)
 	}
 }

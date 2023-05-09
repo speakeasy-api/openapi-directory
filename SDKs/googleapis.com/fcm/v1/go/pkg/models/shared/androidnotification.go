@@ -19,12 +19,16 @@ const (
 	AndroidNotificationNotificationPriorityEnumPriorityMax         AndroidNotificationNotificationPriorityEnum = "PRIORITY_MAX"
 )
 
+func (e AndroidNotificationNotificationPriorityEnum) ToPointer() *AndroidNotificationNotificationPriorityEnum {
+	return &e
+}
+
 func (e *AndroidNotificationNotificationPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIORITY_UNSPECIFIED":
 		fallthrough
 	case "PRIORITY_MIN":
@@ -36,10 +40,44 @@ func (e *AndroidNotificationNotificationPriorityEnum) UnmarshalJSON(data []byte)
 	case "PRIORITY_HIGH":
 		fallthrough
 	case "PRIORITY_MAX":
-		*e = AndroidNotificationNotificationPriorityEnum(s)
+		*e = AndroidNotificationNotificationPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidNotificationNotificationPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidNotificationNotificationPriorityEnum: %v", v)
+	}
+}
+
+// AndroidNotificationProxyEnum - Setting to control when a notification may be proxied.
+type AndroidNotificationProxyEnum string
+
+const (
+	AndroidNotificationProxyEnumProxyUnspecified  AndroidNotificationProxyEnum = "PROXY_UNSPECIFIED"
+	AndroidNotificationProxyEnumAllow             AndroidNotificationProxyEnum = "ALLOW"
+	AndroidNotificationProxyEnumDeny              AndroidNotificationProxyEnum = "DENY"
+	AndroidNotificationProxyEnumIfPriorityLowered AndroidNotificationProxyEnum = "IF_PRIORITY_LOWERED"
+)
+
+func (e AndroidNotificationProxyEnum) ToPointer() *AndroidNotificationProxyEnum {
+	return &e
+}
+
+func (e *AndroidNotificationProxyEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "PROXY_UNSPECIFIED":
+		fallthrough
+	case "ALLOW":
+		fallthrough
+	case "DENY":
+		fallthrough
+	case "IF_PRIORITY_LOWERED":
+		*e = AndroidNotificationProxyEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AndroidNotificationProxyEnum: %v", v)
 	}
 }
 
@@ -53,12 +91,16 @@ const (
 	AndroidNotificationVisibilityEnumSecret                AndroidNotificationVisibilityEnum = "SECRET"
 )
 
+func (e AndroidNotificationVisibilityEnum) ToPointer() *AndroidNotificationVisibilityEnum {
+	return &e
+}
+
 func (e *AndroidNotificationVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE":
@@ -66,10 +108,10 @@ func (e *AndroidNotificationVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "PUBLIC":
 		fallthrough
 	case "SECRET":
-		*e = AndroidNotificationVisibilityEnum(s)
+		*e = AndroidNotificationVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidNotificationVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidNotificationVisibilityEnum: %v", v)
 	}
 }
 
@@ -109,6 +151,8 @@ type AndroidNotification struct {
 	NotificationCount *int `json:"notificationCount,omitempty"`
 	// Set the relative priority for this notification. Priority is an indication of how much of the user's attention should be consumed by this notification. Low-priority notifications may be hidden from the user in certain situations, while the user might be interrupted for a higher-priority notification. The effect of setting the same priorities may differ slightly on different platforms. Note this priority differs from `AndroidMessagePriority`. This priority is processed by the client after the message has been delivered, whereas [AndroidMessagePriority](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#androidmessagepriority) is an FCM concept that controls when the message is delivered.
 	NotificationPriority *AndroidNotificationNotificationPriorityEnum `json:"notificationPriority,omitempty"`
+	// Setting to control when a notification may be proxied.
+	Proxy *AndroidNotificationProxyEnum `json:"proxy,omitempty"`
 	// The sound to play when the device receives the notification. Supports "default" or the filename of a sound resource bundled in the app. Sound files must reside in /res/raw/.
 	Sound *string `json:"sound,omitempty"`
 	// When set to false or unset, the notification is automatically dismissed when the user clicks it in the panel. When set to true, the notification persists even when the user clicks it.

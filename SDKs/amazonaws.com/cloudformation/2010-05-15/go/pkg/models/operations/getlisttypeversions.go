@@ -15,17 +15,21 @@ const (
 	GETListTypeVersionsActionEnumListTypeVersions GETListTypeVersionsActionEnum = "ListTypeVersions"
 )
 
+func (e GETListTypeVersionsActionEnum) ToPointer() *GETListTypeVersionsActionEnum {
+	return &e
+}
+
 func (e *GETListTypeVersionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListTypeVersions":
-		*e = GETListTypeVersionsActionEnum(s)
+		*e = GETListTypeVersionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeVersionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeVersionsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETListTypeVersionsDeprecatedStatusEnumDeprecated GETListTypeVersionsDeprecatedStatusEnum = "DEPRECATED"
 )
 
+func (e GETListTypeVersionsDeprecatedStatusEnum) ToPointer() *GETListTypeVersionsDeprecatedStatusEnum {
+	return &e
+}
+
 func (e *GETListTypeVersionsDeprecatedStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIVE":
 		fallthrough
 	case "DEPRECATED":
-		*e = GETListTypeVersionsDeprecatedStatusEnum(s)
+		*e = GETListTypeVersionsDeprecatedStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeVersionsDeprecatedStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeVersionsDeprecatedStatusEnum: %v", v)
 	}
 }
 
@@ -62,21 +70,25 @@ const (
 	GETListTypeVersionsTypeEnumHook     GETListTypeVersionsTypeEnum = "HOOK"
 )
 
+func (e GETListTypeVersionsTypeEnum) ToPointer() *GETListTypeVersionsTypeEnum {
+	return &e
+}
+
 func (e *GETListTypeVersionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETListTypeVersionsTypeEnum(s)
+		*e = GETListTypeVersionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeVersionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeVersionsTypeEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	GETListTypeVersionsVersionEnumTwoThousandAndTen0515 GETListTypeVersionsVersionEnum = "2010-05-15"
 )
 
+func (e GETListTypeVersionsVersionEnum) ToPointer() *GETListTypeVersionsVersionEnum {
+	return &e
+}
+
 func (e *GETListTypeVersionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETListTypeVersionsVersionEnum(s)
+		*e = GETListTypeVersionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListTypeVersionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListTypeVersionsVersionEnum: %v", v)
 	}
 }
 

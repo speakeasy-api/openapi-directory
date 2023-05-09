@@ -13,16 +13,20 @@ const (
 	DimensionValueTypeEnumVarchar DimensionValueTypeEnum = "VARCHAR"
 )
 
+func (e DimensionValueTypeEnum) ToPointer() *DimensionValueTypeEnum {
+	return &e
+}
+
 func (e *DimensionValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VARCHAR":
-		*e = DimensionValueTypeEnum(s)
+		*e = DimensionValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionValueTypeEnum: %v", v)
 	}
 }

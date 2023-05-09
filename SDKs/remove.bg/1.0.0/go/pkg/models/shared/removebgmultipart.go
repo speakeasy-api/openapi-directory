@@ -20,19 +20,23 @@ const (
 	RemoveBgMultipartChannelsEnumAlpha RemoveBgMultipartChannelsEnum = "alpha"
 )
 
+func (e RemoveBgMultipartChannelsEnum) ToPointer() *RemoveBgMultipartChannelsEnum {
+	return &e
+}
+
 func (e *RemoveBgMultipartChannelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rgba":
 		fallthrough
 	case "alpha":
-		*e = RemoveBgMultipartChannelsEnum(s)
+		*e = RemoveBgMultipartChannelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgMultipartChannelsEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgMultipartChannelsEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	RemoveBgMultipartFormatEnumZip  RemoveBgMultipartFormatEnum = "zip"
 )
 
+func (e RemoveBgMultipartFormatEnum) ToPointer() *RemoveBgMultipartFormatEnum {
+	return &e
+}
+
 func (e *RemoveBgMultipartFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "png":
@@ -63,10 +71,10 @@ func (e *RemoveBgMultipartFormatEnum) UnmarshalJSON(data []byte) error {
 	case "jpg":
 		fallthrough
 	case "zip":
-		*e = RemoveBgMultipartFormatEnum(s)
+		*e = RemoveBgMultipartFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgMultipartFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgMultipartFormatEnum: %v", v)
 	}
 }
 
@@ -89,21 +97,25 @@ const (
 	RemoveBgMultipartSizeEnumAuto    RemoveBgMultipartSizeEnum = "auto"
 )
 
+func (e RemoveBgMultipartSizeEnum) ToPointer() *RemoveBgMultipartSizeEnum {
+	return &e
+}
+
 func (e *RemoveBgMultipartSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "full":
 		fallthrough
 	case "auto":
-		*e = RemoveBgMultipartSizeEnum(s)
+		*e = RemoveBgMultipartSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgMultipartSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgMultipartSizeEnum: %v", v)
 	}
 }
 
@@ -121,12 +133,16 @@ const (
 	RemoveBgMultipartTypeEnumCar     RemoveBgMultipartTypeEnum = "car"
 )
 
+func (e RemoveBgMultipartTypeEnum) ToPointer() *RemoveBgMultipartTypeEnum {
+	return &e
+}
+
 func (e *RemoveBgMultipartTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "person":
@@ -134,10 +150,10 @@ func (e *RemoveBgMultipartTypeEnum) UnmarshalJSON(data []byte) error {
 	case "product":
 		fallthrough
 	case "car":
-		*e = RemoveBgMultipartTypeEnum(s)
+		*e = RemoveBgMultipartTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgMultipartTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgMultipartTypeEnum: %v", v)
 	}
 }
 
@@ -155,12 +171,16 @@ const (
 	RemoveBgMultipartTypeLevelEnumLatest RemoveBgMultipartTypeLevelEnum = "latest"
 )
 
+func (e RemoveBgMultipartTypeLevelEnum) ToPointer() *RemoveBgMultipartTypeLevelEnum {
+	return &e
+}
+
 func (e *RemoveBgMultipartTypeLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "1":
@@ -168,10 +188,10 @@ func (e *RemoveBgMultipartTypeLevelEnum) UnmarshalJSON(data []byte) error {
 	case "2":
 		fallthrough
 	case "latest":
-		*e = RemoveBgMultipartTypeLevelEnum(s)
+		*e = RemoveBgMultipartTypeLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveBgMultipartTypeLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveBgMultipartTypeLevelEnum: %v", v)
 	}
 }
 

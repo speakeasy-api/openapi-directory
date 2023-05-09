@@ -16,19 +16,23 @@ const (
 	GetAreasFormatEnumXML  GetAreasFormatEnum = "xml"
 )
 
+func (e GetAreasFormatEnum) ToPointer() *GetAreasFormatEnum {
+	return &e
+}
+
 func (e *GetAreasFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = GetAreasFormatEnum(s)
+		*e = GetAreasFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAreasFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAreasFormatEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	PerAndroidVersionInfoDeviceCapacityEnumDeviceCapacityNone        PerAndroidVersionInfoDeviceCapacityEnum = "DEVICE_CAPACITY_NONE"
 )
 
+func (e PerAndroidVersionInfoDeviceCapacityEnum) ToPointer() *PerAndroidVersionInfoDeviceCapacityEnum {
+	return &e
+}
+
 func (e *PerAndroidVersionInfoDeviceCapacityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_CAPACITY_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_CAPACITY_HIGH":
@@ -33,10 +37,10 @@ func (e *PerAndroidVersionInfoDeviceCapacityEnum) UnmarshalJSON(data []byte) err
 	case "DEVICE_CAPACITY_LOW":
 		fallthrough
 	case "DEVICE_CAPACITY_NONE":
-		*e = PerAndroidVersionInfoDeviceCapacityEnum(s)
+		*e = PerAndroidVersionInfoDeviceCapacityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerAndroidVersionInfoDeviceCapacityEnum: %s", s)
+		return fmt.Errorf("invalid value for PerAndroidVersionInfoDeviceCapacityEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	OBExternalAccountType1CodeEnumPersonal OBExternalAccountType1CodeEnum = "Personal"
 )
 
+func (e OBExternalAccountType1CodeEnum) ToPointer() *OBExternalAccountType1CodeEnum {
+	return &e
+}
+
 func (e *OBExternalAccountType1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Personal":
-		*e = OBExternalAccountType1CodeEnum(s)
+		*e = OBExternalAccountType1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBExternalAccountType1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBExternalAccountType1CodeEnum: %v", v)
 	}
 }

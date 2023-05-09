@@ -16,17 +16,21 @@ const (
 	ListVirtualMachinesXAmzTargetEnumBackupOnPremisesV20210101ListVirtualMachines ListVirtualMachinesXAmzTargetEnum = "BackupOnPremises_v20210101.ListVirtualMachines"
 )
 
+func (e ListVirtualMachinesXAmzTargetEnum) ToPointer() *ListVirtualMachinesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListVirtualMachinesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.ListVirtualMachines":
-		*e = ListVirtualMachinesXAmzTargetEnum(s)
+		*e = ListVirtualMachinesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListVirtualMachinesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListVirtualMachinesXAmzTargetEnum: %v", v)
 	}
 }
 

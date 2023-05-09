@@ -16,21 +16,25 @@ const (
 	EventTriggerRetryPolicyEnumRetryPolicyRetry       EventTriggerRetryPolicyEnum = "RETRY_POLICY_RETRY"
 )
 
+func (e EventTriggerRetryPolicyEnum) ToPointer() *EventTriggerRetryPolicyEnum {
+	return &e
+}
+
 func (e *EventTriggerRetryPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETRY_POLICY_UNSPECIFIED":
 		fallthrough
 	case "RETRY_POLICY_DO_NOT_RETRY":
 		fallthrough
 	case "RETRY_POLICY_RETRY":
-		*e = EventTriggerRetryPolicyEnum(s)
+		*e = EventTriggerRetryPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTriggerRetryPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTriggerRetryPolicyEnum: %v", v)
 	}
 }
 

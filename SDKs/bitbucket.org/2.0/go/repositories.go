@@ -42,7 +42,10 @@ func newRepositories(defaultClient, securityClient HTTPClient, serverURL, langua
 // This does not affect its forks.
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -95,7 +98,10 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, 
 // repository.
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.C
 // HTTP/1.1 204
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -213,7 +222,10 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroup
 // ```
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -325,7 +337,10 @@ func (s *repositories) GetRepositories(ctx context.Context, request operations.G
 // [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request operations.GetRepositoriesWorkspaceRequest, security operations.GetRepositoriesWorkspaceSecurity) (*operations.GetRepositoriesWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -386,7 +401,10 @@ func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request ope
 // Returns the object describing this repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRequest, security operations.GetRepositoriesWorkspaceRepoSlugSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -494,7 +512,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 // by the commit made on 2011-05-16, and was previously named `README.txt`.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -554,7 +575,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugForksRequest, security operations.GetRepositoriesWorkspaceRepoSlugForksSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -603,7 +627,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context
 // Returns a paginated list of webhooks installed on this repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -661,7 +688,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -715,7 +745,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 // GetRepositoriesWorkspaceRepoSlugOverrideSettings - Retrieve the inheritance state for repository settings
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -819,7 +852,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx cont
 // ```
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +956,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(c
 // ```
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1027,7 +1066,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGr
 // ```
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1132,7 +1174,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ct
 // ```
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1198,7 +1243,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSel
 // To create new commits, [POST to this endpoint](#post)
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1464,7 +1512,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 // details.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest, security operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1526,7 +1577,10 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest, security operations.GetRepositoriesWorkspaceRepoSlugWatchersSecurity) (*operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/watchers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/watchers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1705,7 +1759,10 @@ func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, reque
 // and/or the repository name `hablanding` can be replaced by UUIDs.
 func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugRequest, security operations.PostRepositoriesWorkspaceRepoSlugSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1826,7 +1883,10 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, re
 // * full_name
 func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugForksRequest, security operations.PostRepositoriesWorkspaceRepoSlugForksSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1907,7 +1967,10 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Contex
 // internal, non-routed address.
 func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugHooksRequest, security operations.PostRepositoriesWorkspaceRepoSlugHooksSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2092,7 +2155,10 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 // subrepos / submodules.
 func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugSrcRequest, security operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity) (*operations.PostRepositoriesWorkspaceRepoSlugSrcResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/src", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2160,7 +2226,10 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context,
 // response.
 func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugRequest, security operations.PutRepositoriesWorkspaceRepoSlugSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2235,7 +2304,10 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 // * `events`
 func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugHooksUIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugHooksUIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks/{uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2291,7 +2363,10 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 // PutRepositoriesWorkspaceRepoSlugOverrideSettings - Set the inheritance state for repository settings
 func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest, security operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2385,7 +2460,10 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx cont
 // ```
 func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest, security operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2497,7 +2575,10 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGr
 // ```
 func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest, security operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDSecurity) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

@@ -16,21 +16,25 @@ const (
 	GoogleFirebaseAppcheckV1ServiceEnforcementModeEnumEnforced   GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum = "ENFORCED"
 )
 
+func (e GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum) ToPointer() *GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum {
+	return &e
+}
+
 func (e *GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFF":
 		fallthrough
 	case "UNENFORCED":
 		fallthrough
 	case "ENFORCED":
-		*e = GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum(s)
+		*e = GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleFirebaseAppcheckV1ServiceEnforcementModeEnum: %v", v)
 	}
 }
 

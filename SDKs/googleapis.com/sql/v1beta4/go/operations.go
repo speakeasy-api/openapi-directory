@@ -34,7 +34,10 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // SQLOperationsGet - Retrieves an instance operation that has been performed on an instance.
 func (s *operationsT) SQLOperationsGet(ctx context.Context, request operations.SQLOperationsGetRequest, security operations.SQLOperationsGetSecurity) (*operations.SQLOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/operations/{operation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/operations/{operation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *operationsT) SQLOperationsGet(ctx context.Context, request operations.S
 // SQLOperationsList - Lists all instance operations that have been performed on the given Cloud SQL instance in the reverse chronological order of the start time.
 func (s *operationsT) SQLOperationsList(ctx context.Context, request operations.SQLOperationsListRequest, security operations.SQLOperationsListSecurity) (*operations.SQLOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

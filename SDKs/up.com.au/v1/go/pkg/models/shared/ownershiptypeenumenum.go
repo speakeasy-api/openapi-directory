@@ -16,18 +16,22 @@ const (
 	OwnershipTypeEnumEnumJoint      OwnershipTypeEnumEnum = "JOINT"
 )
 
+func (e OwnershipTypeEnumEnum) ToPointer() *OwnershipTypeEnumEnum {
+	return &e
+}
+
 func (e *OwnershipTypeEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDIVIDUAL":
 		fallthrough
 	case "JOINT":
-		*e = OwnershipTypeEnumEnum(s)
+		*e = OwnershipTypeEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OwnershipTypeEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for OwnershipTypeEnumEnum: %v", v)
 	}
 }

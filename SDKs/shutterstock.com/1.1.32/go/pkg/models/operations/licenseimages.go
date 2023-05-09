@@ -21,19 +21,23 @@ const (
 	LicenseImagesFormatEnumJpg LicenseImagesFormatEnum = "jpg"
 )
 
+func (e LicenseImagesFormatEnum) ToPointer() *LicenseImagesFormatEnum {
+	return &e
+}
+
 func (e *LicenseImagesFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eps":
 		fallthrough
 	case "jpg":
-		*e = LicenseImagesFormatEnum(s)
+		*e = LicenseImagesFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImagesFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImagesFormatEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	LicenseImagesSizeEnumCustom LicenseImagesSizeEnum = "custom"
 )
 
+func (e LicenseImagesSizeEnum) ToPointer() *LicenseImagesSizeEnum {
+	return &e
+}
+
 func (e *LicenseImagesSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "small":
 		fallthrough
 	case "medium":
@@ -63,10 +71,10 @@ func (e *LicenseImagesSizeEnum) UnmarshalJSON(data []byte) error {
 	case "vector":
 		fallthrough
 	case "custom":
-		*e = LicenseImagesSizeEnum(s)
+		*e = LicenseImagesSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImagesSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImagesSizeEnum: %v", v)
 	}
 }
 
@@ -74,6 +82,8 @@ type LicenseImagesRequest struct {
 	// List of images to request licenses for and information about each license transaction; these values override the defaults in the query parameters
 	LicenseImageRequest shared.LicenseImageRequest `request:"mediaType=application/json"`
 	// (Deprecated) Image format
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Format *LicenseImagesFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// Search ID that was provided in the results of an image search
 	SearchID *string `queryParam:"style=form,explode=true,name=search_id"`

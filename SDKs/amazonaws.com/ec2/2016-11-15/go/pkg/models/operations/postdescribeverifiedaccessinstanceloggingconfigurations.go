@@ -15,17 +15,21 @@ const (
 	POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnumDescribeVerifiedAccessInstanceLoggingConfigurations POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum = "DescribeVerifiedAccessInstanceLoggingConfigurations"
 )
 
+func (e POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum) ToPointer() *POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeVerifiedAccessInstanceLoggingConfigurations":
-		*e = POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum(s)
+		*e = POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVerifiedAccessInstanceLoggingConfigurationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum) ToPointer() *POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum(s)
+		*e = POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeVerifiedAccessInstanceLoggingConfigurationsVersionEnum: %v", v)
 	}
 }
 

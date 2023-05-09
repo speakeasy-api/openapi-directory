@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // NetworksecurityProjectsLocationsAuthorizationPoliciesCreate - Creates a new AuthorizationPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizationPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizationPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthorizationPolicyInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(c
 // NetworksecurityProjectsLocationsAuthorizationPoliciesList - Lists AuthorizationPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListRequest, security operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsAuthorizationPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizationPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizationPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) NetworksecurityProjectsLocationsAuthorizationPoliciesList(ctx
 // NetworksecurityProjectsLocationsClientTLSPoliciesCreate - Creates a new ClientTlsPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsClientTLSPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientTLSPolicyInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesCreate(ctx c
 // NetworksecurityProjectsLocationsClientTLSPoliciesList - Lists ClientTlsPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsClientTLSPoliciesListRequest, security operations.NetworksecurityProjectsLocationsClientTLSPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsClientTLSPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clientTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -237,10 +249,231 @@ func (s *projects) NetworksecurityProjectsLocationsClientTLSPoliciesList(ctx con
 	return res, nil
 }
 
+// NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreate - Creates a new GatewaySecurityPolicy in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gatewaySecurityPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GatewaySecurityPolicyInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsGatewaySecurityPoliciesList - Lists GatewaySecurityPolicies in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/gatewaySecurityPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListGatewaySecurityPoliciesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListGatewaySecurityPoliciesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate - Creates a new GatewaySecurityPolicy in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GatewaySecurityPolicyRuleInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesList - Lists GatewaySecurityPolicyRules in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListRequest, security operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListSecurity) (*operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListGatewaySecurityPolicyRulesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListGatewaySecurityPolicyRulesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // NetworksecurityProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) NetworksecurityProjectsLocationsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsListRequest, security operations.NetworksecurityProjectsLocationsListSecurity) (*operations.NetworksecurityProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +521,10 @@ func (s *projects) NetworksecurityProjectsLocationsList(ctx context.Context, req
 // NetworksecurityProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) NetworksecurityProjectsLocationsOperationsCancel(ctx context.Context, request operations.NetworksecurityProjectsLocationsOperationsCancelRequest, security operations.NetworksecurityProjectsLocationsOperationsCancelSecurity) (*operations.NetworksecurityProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -343,7 +579,10 @@ func (s *projects) NetworksecurityProjectsLocationsOperationsCancel(ctx context.
 // NetworksecurityProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) NetworksecurityProjectsLocationsOperationsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsOperationsListRequest, security operations.NetworksecurityProjectsLocationsOperationsListSecurity) (*operations.NetworksecurityProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -391,7 +630,10 @@ func (s *projects) NetworksecurityProjectsLocationsOperationsList(ctx context.Co
 // NetworksecurityProjectsLocationsServerTLSPoliciesCreate - Creates a new ServerTlsPolicy in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/serverTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/serverTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServerTLSPolicyInput", "json")
 	if err != nil {
@@ -443,106 +685,13 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesCreate(ctx c
 	return res, nil
 }
 
-// NetworksecurityProjectsLocationsServerTLSPoliciesDelete - Deletes a single ServerTlsPolicy.
-func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesDelete(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesDeleteRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesDeleteSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesDeleteResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.NetworksecurityProjectsLocationsServerTLSPoliciesDeleteResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Operation
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Operation = out
-		}
-	}
-
-	return res, nil
-}
-
-// NetworksecurityProjectsLocationsServerTLSPoliciesGet - Gets details of a single ServerTlsPolicy.
-func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesGet(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ServerTLSPolicy
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ServerTLSPolicy = out
-		}
-	}
-
-	return res, nil
-}
-
 // NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicyRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicySecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -590,7 +739,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesGetIamPolicy
 // NetworksecurityProjectsLocationsServerTLSPoliciesList - Lists ServerTlsPolicies in a given project and location.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesListRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/serverTlsPolicies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/serverTlsPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -635,65 +787,13 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesList(ctx con
 	return res, nil
 }
 
-// NetworksecurityProjectsLocationsServerTLSPoliciesPatch - Updates the parameters of a single ServerTlsPolicy.
-func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesPatch(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesPatchRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesPatchSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesPatchResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServerTLSPolicyInput", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.NetworksecurityProjectsLocationsServerTLSPoliciesPatchResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Operation
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Operation = out
-		}
-	}
-
-	return res, nil
-}
-
 // NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicyRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicySecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1SetIamPolicyRequest", "json")
 	if err != nil {
@@ -748,7 +848,10 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy
 // NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions(ctx context.Context, request operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsRequest, security operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsSecurity) (*operations.NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleIamV1TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -794,6 +897,384 @@ func (s *projects) NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermi
 			}
 
 			res.GoogleIamV1TestIamPermissionsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsTLSInspectionPoliciesCreate - Creates a new TlsInspectionPolicy in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateRequest, security operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateSecurity) (*operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tlsInspectionPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TLSInspectionPolicyInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsTLSInspectionPoliciesList - Lists TlsInspectionPolicies in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsTLSInspectionPoliciesList(ctx context.Context, request operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListRequest, security operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListSecurity) (*operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/tlsInspectionPolicies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsTLSInspectionPoliciesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListTLSInspectionPoliciesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListTLSInspectionPoliciesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsURLListsCreate - Creates a new UrlList in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsURLListsCreate(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsCreateRequest, security operations.NetworksecurityProjectsLocationsURLListsCreateSecurity) (*operations.NetworksecurityProjectsLocationsURLListsCreateResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/urlLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLListInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsURLListsCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsURLListsDelete - Deletes a single UrlList.
+func (s *projects) NetworksecurityProjectsLocationsURLListsDelete(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsDeleteRequest, security operations.NetworksecurityProjectsLocationsURLListsDeleteSecurity) (*operations.NetworksecurityProjectsLocationsURLListsDeleteResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsURLListsDeleteResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsURLListsGet - Gets details of a single UrlList.
+func (s *projects) NetworksecurityProjectsLocationsURLListsGet(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsGetRequest, security operations.NetworksecurityProjectsLocationsURLListsGetSecurity) (*operations.NetworksecurityProjectsLocationsURLListsGetResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsURLListsGetResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.URLList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.URLList = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsURLListsList - Lists UrlLists in a given project and location.
+func (s *projects) NetworksecurityProjectsLocationsURLListsList(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsListRequest, security operations.NetworksecurityProjectsLocationsURLListsListSecurity) (*operations.NetworksecurityProjectsLocationsURLListsListResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/urlLists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsURLListsListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListURLListsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListURLListsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// NetworksecurityProjectsLocationsURLListsPatch - Updates the parameters of a single UrlList.
+func (s *projects) NetworksecurityProjectsLocationsURLListsPatch(ctx context.Context, request operations.NetworksecurityProjectsLocationsURLListsPatchRequest, security operations.NetworksecurityProjectsLocationsURLListsPatchSecurity) (*operations.NetworksecurityProjectsLocationsURLListsPatchResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "URLListInput", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.NetworksecurityProjectsLocationsURLListsPatchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
 		}
 	}
 

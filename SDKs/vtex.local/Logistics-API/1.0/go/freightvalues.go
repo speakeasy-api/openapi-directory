@@ -34,7 +34,10 @@ func newFreightValues(defaultClient, securityClient HTTPClient, serverURL, langu
 // Creates or updates the freight values of your store's carriers. Learn more in [Shipping rate template](https://help.vtex.com/en/tutorial/planilha-de-frete--tutorials_127#).
 func (s *freightValues) CreateUpdateFreightValues(ctx context.Context, request operations.CreateUpdateFreightValuesRequest) (*operations.CreateUpdateFreightValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/values/update", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/values/update", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *freightValues) CreateUpdateFreightValues(ctx context.Context, request o
 // Lists freight values apointed to your store's carriers, searching by carrier ID and postal code (`cep`).
 func (s *freightValues) FreightValues(ctx context.Context, request operations.FreightValuesRequest) (*operations.FreightValuesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/{cep}/values", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/freights/{carrierId}/{cep}/values", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	EnvironmentTargetingOptionDetailsEnvironmentEnumEnvironmentApp             EnvironmentTargetingOptionDetailsEnvironmentEnum = "ENVIRONMENT_APP"
 )
 
+func (e EnvironmentTargetingOptionDetailsEnvironmentEnum) ToPointer() *EnvironmentTargetingOptionDetailsEnvironmentEnum {
+	return &e
+}
+
 func (e *EnvironmentTargetingOptionDetailsEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "ENVIRONMENT_WEB_OPTIMIZED":
@@ -30,10 +34,10 @@ func (e *EnvironmentTargetingOptionDetailsEnvironmentEnum) UnmarshalJSON(data []
 	case "ENVIRONMENT_WEB_NOT_OPTIMIZED":
 		fallthrough
 	case "ENVIRONMENT_APP":
-		*e = EnvironmentTargetingOptionDetailsEnvironmentEnum(s)
+		*e = EnvironmentTargetingOptionDetailsEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentTargetingOptionDetailsEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentTargetingOptionDetailsEnvironmentEnum: %v", v)
 	}
 }
 

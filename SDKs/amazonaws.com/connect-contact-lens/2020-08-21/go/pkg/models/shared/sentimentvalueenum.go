@@ -15,20 +15,24 @@ const (
 	SentimentValueEnumNegative SentimentValueEnum = "NEGATIVE"
 )
 
+func (e SentimentValueEnum) ToPointer() *SentimentValueEnum {
+	return &e
+}
+
 func (e *SentimentValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSITIVE":
 		fallthrough
 	case "NEUTRAL":
 		fallthrough
 	case "NEGATIVE":
-		*e = SentimentValueEnum(s)
+		*e = SentimentValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SentimentValueEnum: %s", s)
+		return fmt.Errorf("invalid value for SentimentValueEnum: %v", v)
 	}
 }

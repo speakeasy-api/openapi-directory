@@ -14,18 +14,22 @@ const (
 	ModificationStateEnumEnumUpdateInProgress ModificationStateEnumEnum = "UPDATE_IN_PROGRESS"
 )
 
+func (e ModificationStateEnumEnum) ToPointer() *ModificationStateEnumEnum {
+	return &e
+}
+
 func (e *ModificationStateEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_INITIATED":
 		fallthrough
 	case "UPDATE_IN_PROGRESS":
-		*e = ModificationStateEnumEnum(s)
+		*e = ModificationStateEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModificationStateEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ModificationStateEnumEnum: %v", v)
 	}
 }

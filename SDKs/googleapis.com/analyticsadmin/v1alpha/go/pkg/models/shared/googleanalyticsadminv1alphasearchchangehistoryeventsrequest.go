@@ -16,12 +16,16 @@ const (
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnumDeleted               GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum = "DELETED"
 )
 
+func (e GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum) ToPointer() *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CREATED":
@@ -29,10 +33,10 @@ func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum) 
 	case "UPDATED":
 		fallthrough
 	case "DELETED":
-		*e = GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestActionEnum: %v", v)
 	}
 }
 
@@ -56,15 +60,22 @@ const (
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumDataStream                            GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "DATA_STREAM"
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumAttributionSettings                   GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "ATTRIBUTION_SETTINGS"
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumExpandedDataSet                       GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "EXPANDED_DATA_SET"
+	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumChannelGroup                          GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "CHANNEL_GROUP"
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumEnhancedMeasurementSettings           GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "ENHANCED_MEASUREMENT_SETTINGS"
+	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumAudience                              GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "AUDIENCE"
+	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumEventCreateRule                       GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "EVENT_CREATE_RULE"
 )
 
+func (e GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGE_HISTORY_RESOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ACCOUNT":
@@ -99,11 +110,17 @@ func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceType
 		fallthrough
 	case "EXPANDED_DATA_SET":
 		fallthrough
+	case "CHANNEL_GROUP":
+		fallthrough
 	case "ENHANCED_MEASUREMENT_SETTINGS":
-		*e = GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum(s)
+		fallthrough
+	case "AUDIENCE":
+		fallthrough
+	case "EVENT_CREATE_RULE":
+		*e = GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum: %v", v)
 	}
 }
 

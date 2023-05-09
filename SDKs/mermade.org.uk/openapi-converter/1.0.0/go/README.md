@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/mermade.org.uk/openapi-co
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConvertRequestBody{
-        Filename: "corrupti",
-        Source: "provident",
-        Validate: "on",
-    }
-
     ctx := context.Background()
-    res, err := s.Conversion.Convert(ctx, req)
+    res, err := s.Conversion.Convert(ctx, operations.ConvertRequestBody{
+        Filename: sdk.String("corrupti"),
+        Source: sdk.String("provident"),
+        Validate: operations.ConvertRequestBodyValidateEnumOn.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,20 +44,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Conversion
+### [Conversion](docs/conversion/README.md)
 
-* `Convert` - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
-* `ConvertURL` - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
+* [Convert](docs/conversion/README.md#convert) - Convert a Swagger 2.0 definition passed in the body to OpenAPI 3.0.x 
+* [ConvertURL](docs/conversion/README.md#converturl) - Convert a Swagger 2.0 definition to OpenAPI 3.0.x from a URL
 
-### Metadata
+### [Metadata](docs/metadata/README.md)
 
-* `GetStatus` - Get the status of the API
+* [GetStatus](docs/metadata/README.md#getstatus) - Get the status of the API
 
-### Validation
+### [Validation](docs/validation/README.md)
 
-* `GetBadge` - Return a redirect to a badge svg file depending on a source definition's validity
-* `Validate` - Validate an OpenAPI 3.0.x definition supplied in the body of the request
-* `ValidateURL` - Validate an OpenAPI 3.0.x definition
+* [GetBadge](docs/validation/README.md#getbadge) - Return a redirect to a badge svg file depending on a source definition's validity
+* [Validate](docs/validation/README.md#validate) - Validate an OpenAPI 3.0.x definition supplied in the body of the request
+* [ValidateURL](docs/validation/README.md#validateurl) - Validate an OpenAPI 3.0.x definition
 <!-- End SDK Available Operations -->
 
 ### Maturity

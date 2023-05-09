@@ -16,17 +16,21 @@ const (
 	DeleteVpcConnectorXAmzTargetEnumAppRunnerDeleteVpcConnector DeleteVpcConnectorXAmzTargetEnum = "AppRunner.DeleteVpcConnector"
 )
 
+func (e DeleteVpcConnectorXAmzTargetEnum) ToPointer() *DeleteVpcConnectorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVpcConnectorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DeleteVpcConnector":
-		*e = DeleteVpcConnectorXAmzTargetEnum(s)
+		*e = DeleteVpcConnectorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVpcConnectorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVpcConnectorXAmzTargetEnum: %v", v)
 	}
 }
 

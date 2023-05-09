@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,11 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.CreateSavingsPlanRequest{
+    ctx := context.Background()
+    res, err := s.CreateSavingsPlan(ctx, operations.CreateSavingsPlanRequest{
         RequestBody: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             Commitment: "provident",
-            PurchaseTime: "2021-04-24T16:27:50.833Z",
+            PurchaseTime: types.MustTimeFromString("2021-04-24T16:27:50.833Z"),
             SavingsPlanOfferingID: "unde",
             Tags: map[string]string{
                 "corrupti": "illum",
@@ -29,19 +30,16 @@ func main() {
                 "deserunt": "suscipit",
                 "iure": "magnam",
             },
-            UpfrontPaymentAmount: "debitis",
+            UpfrontPaymentAmount: sdk.String("debitis"),
         },
-        XAmzAlgorithm: "ipsa",
-        XAmzContentSha256: "delectus",
-        XAmzCredential: "tempora",
-        XAmzDate: "suscipit",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "minus",
-        XAmzSignedHeaders: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSavingsPlan(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+    })
     if err != nil {
         log.Fatal(err)
     }

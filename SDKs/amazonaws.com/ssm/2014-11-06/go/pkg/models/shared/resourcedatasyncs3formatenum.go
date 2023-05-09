@@ -13,16 +13,20 @@ const (
 	ResourceDataSyncS3FormatEnumJSONSerDe ResourceDataSyncS3FormatEnum = "JsonSerDe"
 )
 
+func (e ResourceDataSyncS3FormatEnum) ToPointer() *ResourceDataSyncS3FormatEnum {
+	return &e
+}
+
 func (e *ResourceDataSyncS3FormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JsonSerDe":
-		*e = ResourceDataSyncS3FormatEnum(s)
+		*e = ResourceDataSyncS3FormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceDataSyncS3FormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceDataSyncS3FormatEnum: %v", v)
 	}
 }

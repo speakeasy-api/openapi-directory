@@ -14,19 +14,23 @@ const (
 	SearchResponseChecksStatusEnumInvalid SearchResponseChecksStatusEnum = "INVALID"
 )
 
+func (e SearchResponseChecksStatusEnum) ToPointer() *SearchResponseChecksStatusEnum {
+	return &e
+}
+
 func (e *SearchResponseChecksStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALID":
 		fallthrough
 	case "INVALID":
-		*e = SearchResponseChecksStatusEnum(s)
+		*e = SearchResponseChecksStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResponseChecksStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResponseChecksStatusEnum: %v", v)
 	}
 }
 
@@ -47,19 +51,23 @@ const (
 	SearchResponseEventsTypeEnumSms SearchResponseEventsTypeEnum = "sms"
 )
 
+func (e SearchResponseEventsTypeEnum) ToPointer() *SearchResponseEventsTypeEnum {
+	return &e
+}
+
 func (e *SearchResponseEventsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tts":
 		fallthrough
 	case "sms":
-		*e = SearchResponseEventsTypeEnum(s)
+		*e = SearchResponseEventsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResponseEventsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResponseEventsTypeEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	SearchResponseStatusEnumCancelled  SearchResponseStatusEnum = "CANCELLED"
 )
 
+func (e SearchResponseStatusEnum) ToPointer() *SearchResponseStatusEnum {
+	return &e
+}
+
 func (e *SearchResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN PROGRESS":
 		fallthrough
 	case "SUCCESS":
@@ -100,10 +112,10 @@ func (e *SearchResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "EXPIRED":
 		fallthrough
 	case "CANCELLED":
-		*e = SearchResponseStatusEnum(s)
+		*e = SearchResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchResponseStatusEnum: %v", v)
 	}
 }
 

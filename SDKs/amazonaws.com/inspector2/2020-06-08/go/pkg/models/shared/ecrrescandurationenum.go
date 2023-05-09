@@ -15,20 +15,24 @@ const (
 	EcrRescanDurationEnumDays180  EcrRescanDurationEnum = "DAYS_180"
 )
 
+func (e EcrRescanDurationEnum) ToPointer() *EcrRescanDurationEnum {
+	return &e
+}
+
 func (e *EcrRescanDurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFETIME":
 		fallthrough
 	case "DAYS_30":
 		fallthrough
 	case "DAYS_180":
-		*e = EcrRescanDurationEnum(s)
+		*e = EcrRescanDurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcrRescanDurationEnum: %s", s)
+		return fmt.Errorf("invalid value for EcrRescanDurationEnum: %v", v)
 	}
 }

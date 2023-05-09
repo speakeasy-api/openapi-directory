@@ -24,19 +24,23 @@ const (
 	GetUpdatedEditorialImageSortEnumOldest GetUpdatedEditorialImageSortEnum = "oldest"
 )
 
+func (e GetUpdatedEditorialImageSortEnum) ToPointer() *GetUpdatedEditorialImageSortEnum {
+	return &e
+}
+
 func (e *GetUpdatedEditorialImageSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetUpdatedEditorialImageSortEnum(s)
+		*e = GetUpdatedEditorialImageSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUpdatedEditorialImageSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUpdatedEditorialImageSortEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	GetUpdatedEditorialImageTypeEnumAddition GetUpdatedEditorialImageTypeEnum = "addition"
 )
 
+func (e GetUpdatedEditorialImageTypeEnum) ToPointer() *GetUpdatedEditorialImageTypeEnum {
+	return &e
+}
+
 func (e *GetUpdatedEditorialImageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "edit":
 		fallthrough
 	case "addition":
-		*e = GetUpdatedEditorialImageTypeEnum(s)
+		*e = GetUpdatedEditorialImageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUpdatedEditorialImageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUpdatedEditorialImageTypeEnum: %v", v)
 	}
 }
 

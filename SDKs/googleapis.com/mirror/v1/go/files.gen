@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -62,4 +63,11 @@ pkg/models/shared/notificationconfig.go
 pkg/models/shared/menuitem.go
 pkg/models/shared/menuvalue.go
 pkg/models/shared/timelinelistresponse.go
+docs/sdk/README.md
+docs/accounts/README.md
+docs/contacts/README.md
+docs/locations/README.md
+docs/settings/README.md
+docs/subscriptions/README.md
+docs/timeline/README.md
 USAGE.md

@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -228,4 +229,8 @@ pkg/models/shared/googleprivacydlpv2bigqueryfield.go
 pkg/models/shared/googleprivacydlpv2createstoredinfotyperequest.go
 pkg/models/shared/googleprivacydlpv2liststoredinfotypesresponse.go
 pkg/models/shared/googleprivacydlpv2updatestoredinfotyperequest.go
+docs/sdk/README.md
+docs/infotypes/README.md
+docs/locations/README.md
+docs/projects/README.md
 USAGE.md

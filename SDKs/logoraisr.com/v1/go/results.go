@@ -35,7 +35,10 @@ func newResults(defaultClient, securityClient HTTPClient, serverURL, language, s
 // This GET-Method returns the URL where the result can downloaded from.
 func (s *results) ResultsRead(ctx context.Context, request operations.ResultsReadRequest) (*operations.ResultsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/results/{result_file_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/results/{result_file_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

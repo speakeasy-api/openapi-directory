@@ -14,18 +14,22 @@ const (
 	RuleOrderEnumStrictOrder        RuleOrderEnum = "STRICT_ORDER"
 )
 
+func (e RuleOrderEnum) ToPointer() *RuleOrderEnum {
+	return &e
+}
+
 func (e *RuleOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT_ACTION_ORDER":
 		fallthrough
 	case "STRICT_ORDER":
-		*e = RuleOrderEnum(s)
+		*e = RuleOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuleOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for RuleOrderEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	NodeUpdateInitiatedByEnumCustomer NodeUpdateInitiatedByEnum = "customer"
 )
 
+func (e NodeUpdateInitiatedByEnum) ToPointer() *NodeUpdateInitiatedByEnum {
+	return &e
+}
+
 func (e *NodeUpdateInitiatedByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "customer":
-		*e = NodeUpdateInitiatedByEnum(s)
+		*e = NodeUpdateInitiatedByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeUpdateInitiatedByEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeUpdateInitiatedByEnum: %v", v)
 	}
 }

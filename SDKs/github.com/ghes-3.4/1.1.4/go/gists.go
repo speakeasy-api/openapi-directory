@@ -37,7 +37,10 @@ func newGists(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#check-if-a-gist-is-starred - API method documentation
 func (s *gists) GistsCheckIsStarred(ctx context.Context, request operations.GistsCheckIsStarredRequest) (*operations.GistsCheckIsStarredResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +181,10 @@ func (s *gists) GistsCreate(ctx context.Context, request operations.GistsCreateR
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#create-a-gist-comment - API method documentation
 func (s *gists) GistsCreateComment(ctx context.Context, request operations.GistsCreateCommentRequest) (*operations.GistsCreateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -248,7 +254,10 @@ func (s *gists) GistsCreateComment(ctx context.Context, request operations.Gists
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#delete-a-gist - API method documentation
 func (s *gists) GistsDelete(ctx context.Context, request operations.GistsDeleteRequest) (*operations.GistsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -298,7 +307,10 @@ func (s *gists) GistsDelete(ctx context.Context, request operations.GistsDeleteR
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#delete-a-gist-comment - API method documentation
 func (s *gists) GistsDeleteComment(ctx context.Context, request operations.GistsDeleteCommentRequest) (*operations.GistsDeleteCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -348,7 +360,10 @@ func (s *gists) GistsDeleteComment(ctx context.Context, request operations.Gists
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#fork-a-gist - API method documentation
 func (s *gists) GistsFork(ctx context.Context, request operations.GistsForkRequest) (*operations.GistsForkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -418,7 +433,10 @@ func (s *gists) GistsFork(ctx context.Context, request operations.GistsForkReque
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#get-a-gist - API method documentation
 func (s *gists) GistsGet(ctx context.Context, request operations.GistsGetRequest) (*operations.GistsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -484,7 +502,10 @@ func (s *gists) GistsGet(ctx context.Context, request operations.GistsGetRequest
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#get-a-gist-comment - API method documentation
 func (s *gists) GistsGetComment(ctx context.Context, request operations.GistsGetCommentRequest) (*operations.GistsGetCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -550,7 +571,10 @@ func (s *gists) GistsGetComment(ctx context.Context, request operations.GistsGet
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#get-a-gist-revision - API method documentation
 func (s *gists) GistsGetRevision(ctx context.Context, request operations.GistsGetRevisionRequest) (*operations.GistsGetRevisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/{sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/{sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -680,7 +704,10 @@ func (s *gists) GistsList(ctx context.Context, request operations.GistsListReque
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#list-gist-comments - API method documentation
 func (s *gists) GistsListComments(ctx context.Context, request operations.GistsListCommentsRequest) (*operations.GistsListCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -744,7 +771,10 @@ func (s *gists) GistsListComments(ctx context.Context, request operations.GistsL
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#list-gist-commits - API method documentation
 func (s *gists) GistsListCommits(ctx context.Context, request operations.GistsListCommitsRequest) (*operations.GistsListCommitsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/commits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/commits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -809,7 +839,10 @@ func (s *gists) GistsListCommits(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#list-gists-for-a-user - API method documentation
 func (s *gists) GistsListForUser(ctx context.Context, request operations.GistsListForUserRequest) (*operations.GistsListForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/gists", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/gists", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -870,7 +903,10 @@ func (s *gists) GistsListForUser(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#list-gist-forks - API method documentation
 func (s *gists) GistsListForks(ctx context.Context, request operations.GistsListForksRequest) (*operations.GistsListForksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/forks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1075,7 +1111,10 @@ func (s *gists) GistsListStarred(ctx context.Context, request operations.GistsLi
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#star-a-gist - API method documentation
 func (s *gists) GistsStar(ctx context.Context, request operations.GistsStarRequest) (*operations.GistsStarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1125,7 +1164,10 @@ func (s *gists) GistsStar(ctx context.Context, request operations.GistsStarReque
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#unstar-a-gist - API method documentation
 func (s *gists) GistsUnstar(ctx context.Context, request operations.GistsUnstarRequest) (*operations.GistsUnstarResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/star", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1176,7 +1218,10 @@ func (s *gists) GistsUnstar(ctx context.Context, request operations.GistsUnstarR
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists/#update-a-gist - API method documentation
 func (s *gists) GistsUpdate(ctx context.Context, request operations.GistsUpdateRequest) (*operations.GistsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1251,7 +1296,10 @@ func (s *gists) GistsUpdate(ctx context.Context, request operations.GistsUpdateR
 // https://docs.github.com/enterprise-server@3.4/rest/reference/gists#update-a-gist-comment - API method documentation
 func (s *gists) GistsUpdateComment(ctx context.Context, request operations.GistsUpdateCommentRequest) (*operations.GistsUpdateCommentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/gists/{gist_id}/comments/{comment_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

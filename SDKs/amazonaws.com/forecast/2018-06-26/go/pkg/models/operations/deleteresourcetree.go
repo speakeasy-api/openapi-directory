@@ -16,17 +16,21 @@ const (
 	DeleteResourceTreeXAmzTargetEnumAmazonForecastDeleteResourceTree DeleteResourceTreeXAmzTargetEnum = "AmazonForecast.DeleteResourceTree"
 )
 
+func (e DeleteResourceTreeXAmzTargetEnum) ToPointer() *DeleteResourceTreeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourceTreeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DeleteResourceTree":
-		*e = DeleteResourceTreeXAmzTargetEnum(s)
+		*e = DeleteResourceTreeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourceTreeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourceTreeXAmzTargetEnum: %v", v)
 	}
 }
 

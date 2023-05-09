@@ -13,16 +13,20 @@ const (
 	As2TransportEnumHTTP As2TransportEnum = "HTTP"
 )
 
+func (e As2TransportEnum) ToPointer() *As2TransportEnum {
+	return &e
+}
+
 func (e *As2TransportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
-		*e = As2TransportEnum(s)
+		*e = As2TransportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for As2TransportEnum: %s", s)
+		return fmt.Errorf("invalid value for As2TransportEnum: %v", v)
 	}
 }

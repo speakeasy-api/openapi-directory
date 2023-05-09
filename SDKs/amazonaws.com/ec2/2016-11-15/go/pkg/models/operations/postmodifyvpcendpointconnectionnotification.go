@@ -15,17 +15,21 @@ const (
 	POSTModifyVpcEndpointConnectionNotificationActionEnumModifyVpcEndpointConnectionNotification POSTModifyVpcEndpointConnectionNotificationActionEnum = "ModifyVpcEndpointConnectionNotification"
 )
 
+func (e POSTModifyVpcEndpointConnectionNotificationActionEnum) ToPointer() *POSTModifyVpcEndpointConnectionNotificationActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpcEndpointConnectionNotificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVpcEndpointConnectionNotification":
-		*e = POSTModifyVpcEndpointConnectionNotificationActionEnum(s)
+		*e = POSTModifyVpcEndpointConnectionNotificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpcEndpointConnectionNotificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpcEndpointConnectionNotificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVpcEndpointConnectionNotificationVersionEnumTwoThousandAndSixteen1115 POSTModifyVpcEndpointConnectionNotificationVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVpcEndpointConnectionNotificationVersionEnum) ToPointer() *POSTModifyVpcEndpointConnectionNotificationVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVpcEndpointConnectionNotificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVpcEndpointConnectionNotificationVersionEnum(s)
+		*e = POSTModifyVpcEndpointConnectionNotificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVpcEndpointConnectionNotificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVpcEndpointConnectionNotificationVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	PutFileXAmzTargetEnumCodeCommit20150413PutFile PutFileXAmzTargetEnum = "CodeCommit_20150413.PutFile"
 )
 
+func (e PutFileXAmzTargetEnum) ToPointer() *PutFileXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutFileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.PutFile":
-		*e = PutFileXAmzTargetEnum(s)
+		*e = PutFileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutFileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutFileXAmzTargetEnum: %v", v)
 	}
 }
 

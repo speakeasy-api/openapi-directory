@@ -14,19 +14,23 @@ const (
 	AdvancedAuthAuthFlowTypeEnumOauth10 AdvancedAuthAuthFlowTypeEnum = "oauth1.0"
 )
 
+func (e AdvancedAuthAuthFlowTypeEnum) ToPointer() *AdvancedAuthAuthFlowTypeEnum {
+	return &e
+}
+
 func (e *AdvancedAuthAuthFlowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oauth2.0":
 		fallthrough
 	case "oauth1.0":
-		*e = AdvancedAuthAuthFlowTypeEnum(s)
+		*e = AdvancedAuthAuthFlowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedAuthAuthFlowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedAuthAuthFlowTypeEnum: %v", v)
 	}
 }
 

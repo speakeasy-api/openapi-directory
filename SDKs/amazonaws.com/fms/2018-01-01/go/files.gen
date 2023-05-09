@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -23,6 +24,7 @@ pkg/models/operations/deleteresourceset.go
 pkg/models/operations/disassociateadminaccount.go
 pkg/models/operations/disassociatethirdpartyfirewall.go
 pkg/models/operations/getadminaccount.go
+pkg/models/operations/getadminscope.go
 pkg/models/operations/getappslist.go
 pkg/models/operations/getcompliancedetail.go
 pkg/models/operations/getnotificationchannel.go
@@ -32,6 +34,8 @@ pkg/models/operations/getprotocolslist.go
 pkg/models/operations/getresourceset.go
 pkg/models/operations/getthirdpartyfirewallassociationstatus.go
 pkg/models/operations/getviolationdetails.go
+pkg/models/operations/listadminaccountsfororganization.go
+pkg/models/operations/listadminsmanagingaccount.go
 pkg/models/operations/listappslists.go
 pkg/models/operations/listcompliancestatus.go
 pkg/models/operations/listdiscoveredresources.go
@@ -42,6 +46,7 @@ pkg/models/operations/listresourcesetresources.go
 pkg/models/operations/listresourcesets.go
 pkg/models/operations/listtagsforresource.go
 pkg/models/operations/listthirdpartyfirewallfirewallpolicies.go
+pkg/models/operations/putadminaccount.go
 pkg/models/operations/putappslist.go
 pkg/models/operations/putnotificationchannel.go
 pkg/models/operations/putpolicy.go
@@ -68,6 +73,15 @@ pkg/models/shared/disassociatethirdpartyfirewallresponse.go
 pkg/models/shared/disassociatethirdpartyfirewallrequest.go
 pkg/models/shared/getadminaccountresponse.go
 pkg/models/shared/accountrolestatusenum.go
+pkg/models/shared/getadminscoperesponse.go
+pkg/models/shared/organizationstatusenum.go
+pkg/models/shared/adminscope.go
+pkg/models/shared/regionscope.go
+pkg/models/shared/policytypescope.go
+pkg/models/shared/securityservicetypeenum.go
+pkg/models/shared/organizationalunitscope.go
+pkg/models/shared/accountscope.go
+pkg/models/shared/getadminscoperequest.go
 pkg/models/shared/getappslistresponse.go
 pkg/models/shared/appslistdata.go
 pkg/models/shared/app.go
@@ -81,12 +95,12 @@ pkg/models/shared/getnotificationchannelresponse.go
 pkg/models/shared/getpolicyresponse.go
 pkg/models/shared/policy.go
 pkg/models/shared/securityservicepolicydata.go
-pkg/models/shared/securityservicetypeenum.go
 pkg/models/shared/policyoption.go
 pkg/models/shared/thirdpartyfirewallpolicy.go
 pkg/models/shared/firewalldeploymentmodelenum.go
 pkg/models/shared/networkfirewallpolicy.go
 pkg/models/shared/resourcetag.go
+pkg/models/shared/customerpolicystatusenum.go
 pkg/models/shared/getpolicyrequest.go
 pkg/models/shared/getprotectionstatusresponse.go
 pkg/models/shared/getprotectionstatusrequest.go
@@ -95,6 +109,7 @@ pkg/models/shared/protocolslistdata.go
 pkg/models/shared/getprotocolslistrequest.go
 pkg/models/shared/getresourcesetresponse.go
 pkg/models/shared/resourceset.go
+pkg/models/shared/resourcesetstatusenum.go
 pkg/models/shared/getresourcesetrequest.go
 pkg/models/shared/getthirdpartyfirewallassociationstatusresponse.go
 pkg/models/shared/marketplacesubscriptiononboardingstatusenum.go
@@ -154,6 +169,11 @@ pkg/models/shared/awsec2networkinterfaceviolation.go
 pkg/models/shared/awsec2instanceviolation.go
 pkg/models/shared/tag.go
 pkg/models/shared/getviolationdetailsrequest.go
+pkg/models/shared/listadminaccountsfororganizationresponse.go
+pkg/models/shared/adminaccountsummary.go
+pkg/models/shared/listadminaccountsfororganizationrequest.go
+pkg/models/shared/listadminsmanagingaccountresponse.go
+pkg/models/shared/listadminsmanagingaccountrequest.go
 pkg/models/shared/listappslistsresponse.go
 pkg/models/shared/appslistdatasummary.go
 pkg/models/shared/listappslistsrequest.go
@@ -184,6 +204,7 @@ pkg/models/shared/listtagsforresourcerequest.go
 pkg/models/shared/listthirdpartyfirewallfirewallpoliciesresponse.go
 pkg/models/shared/thirdpartyfirewallfirewallpolicy.go
 pkg/models/shared/listthirdpartyfirewallfirewallpoliciesrequest.go
+pkg/models/shared/putadminaccountrequest.go
 pkg/models/shared/putappslistresponse.go
 pkg/models/shared/putappslistrequest.go
 pkg/models/shared/putnotificationchannelrequest.go
@@ -196,4 +217,5 @@ pkg/models/shared/putresourcesetrequest.go
 pkg/models/shared/tagresourcerequest.go
 pkg/models/shared/untagresourcerequest.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

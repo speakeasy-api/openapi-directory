@@ -15,17 +15,21 @@ const (
 	POSTUntagInstanceProfileActionEnumUntagInstanceProfile POSTUntagInstanceProfileActionEnum = "UntagInstanceProfile"
 )
 
+func (e POSTUntagInstanceProfileActionEnum) ToPointer() *POSTUntagInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *POSTUntagInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagInstanceProfile":
-		*e = POSTUntagInstanceProfileActionEnum(s)
+		*e = POSTUntagInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUntagInstanceProfileVersionEnumTwoThousandAndTen0508 POSTUntagInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e POSTUntagInstanceProfileVersionEnum) ToPointer() *POSTUntagInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTUntagInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUntagInstanceProfileVersionEnum(s)
+		*e = POSTUntagInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUntagInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUntagInstanceProfileVersionEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newSessions(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Remove a session and dependant data.
 func (s *sessions) SessionIDDelete(ctx context.Context, request operations.SessionIDDeleteRequest) (*operations.SessionIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *sessions) SessionIDDelete(ctx context.Context, request operations.Sessi
 // Get session metadata
 func (s *sessions) SessionIDGet(ctx context.Context, request operations.SessionIDGetRequest) (*operations.SessionIDGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sessions/{session_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +154,10 @@ func (s *sessions) SessionIDGet(ctx context.Context, request operations.SessionI
 // Create a new session
 func (s *sessions) StoryIDSessionPost(ctx context.Context, request operations.StoryIDSessionPostRequest) (*operations.StoryIDSessionPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateSessionRequest", "json")
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *sessions) StoryIDSessionPost(ctx context.Context, request operations.St
 // Get a list of sessions asscoaited with this story
 func (s *sessions) StoryIDSessionsGet(ctx context.Context, request operations.StoryIDSessionsGetRequest) (*operations.StoryIDSessionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/sessions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

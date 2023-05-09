@@ -16,17 +16,21 @@ const (
 	CreateAnomalySubscriptionXAmzTargetEnumAwsInsightsIndexServiceCreateAnomalySubscription CreateAnomalySubscriptionXAmzTargetEnum = "AWSInsightsIndexService.CreateAnomalySubscription"
 )
 
+func (e CreateAnomalySubscriptionXAmzTargetEnum) ToPointer() *CreateAnomalySubscriptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAnomalySubscriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.CreateAnomalySubscription":
-		*e = CreateAnomalySubscriptionXAmzTargetEnum(s)
+		*e = CreateAnomalySubscriptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnomalySubscriptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnomalySubscriptionXAmzTargetEnum: %v", v)
 	}
 }
 

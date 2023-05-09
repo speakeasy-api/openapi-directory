@@ -34,7 +34,10 @@ func newInappproducts(defaultClient, securityClient HTTPClient, serverURL, langu
 // AndroidpublisherInappproductsDelete - Delete an in-app product for an app.
 func (s *inappproducts) AndroidpublisherInappproductsDelete(ctx context.Context, request operations.AndroidpublisherInappproductsDeleteRequest, security operations.AndroidpublisherInappproductsDeleteSecurity) (*operations.AndroidpublisherInappproductsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *inappproducts) AndroidpublisherInappproductsDelete(ctx context.Context,
 // AndroidpublisherInappproductsGet - Returns information about the in-app product specified.
 func (s *inappproducts) AndroidpublisherInappproductsGet(ctx context.Context, request operations.AndroidpublisherInappproductsGetRequest, security operations.AndroidpublisherInappproductsGetSecurity) (*operations.AndroidpublisherInappproductsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *inappproducts) AndroidpublisherInappproductsGet(ctx context.Context, re
 // AndroidpublisherInappproductsInsert - Creates a new in-app product for an app.
 func (s *inappproducts) AndroidpublisherInappproductsInsert(ctx context.Context, request operations.AndroidpublisherInappproductsInsertRequest, security operations.AndroidpublisherInappproductsInsertSecurity) (*operations.AndroidpublisherInappproductsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InAppProduct", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *inappproducts) AndroidpublisherInappproductsInsert(ctx context.Context,
 // AndroidpublisherInappproductsList - List all the in-app products for an Android app, both subscriptions and managed in-app products..
 func (s *inappproducts) AndroidpublisherInappproductsList(ctx context.Context, request operations.AndroidpublisherInappproductsListRequest, security operations.AndroidpublisherInappproductsListSecurity) (*operations.AndroidpublisherInappproductsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *inappproducts) AndroidpublisherInappproductsList(ctx context.Context, r
 // AndroidpublisherInappproductsPatch - Updates the details of an in-app product. This method supports patch semantics.
 func (s *inappproducts) AndroidpublisherInappproductsPatch(ctx context.Context, request operations.AndroidpublisherInappproductsPatchRequest, security operations.AndroidpublisherInappproductsPatchSecurity) (*operations.AndroidpublisherInappproductsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InAppProduct", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *inappproducts) AndroidpublisherInappproductsPatch(ctx context.Context, 
 // AndroidpublisherInappproductsUpdate - Updates the details of an in-app product.
 func (s *inappproducts) AndroidpublisherInappproductsUpdate(ctx context.Context, request operations.AndroidpublisherInappproductsUpdateRequest, security operations.AndroidpublisherInappproductsUpdateSecurity) (*operations.AndroidpublisherInappproductsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/inappproducts/{sku}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InAppProduct", "json")
 	if err != nil {

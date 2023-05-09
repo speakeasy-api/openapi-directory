@@ -15,17 +15,21 @@ const (
 	GETDeleteClusterSubnetGroupActionEnumDeleteClusterSubnetGroup GETDeleteClusterSubnetGroupActionEnum = "DeleteClusterSubnetGroup"
 )
 
+func (e GETDeleteClusterSubnetGroupActionEnum) ToPointer() *GETDeleteClusterSubnetGroupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteClusterSubnetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteClusterSubnetGroup":
-		*e = GETDeleteClusterSubnetGroupActionEnum(s)
+		*e = GETDeleteClusterSubnetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteClusterSubnetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteClusterSubnetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteClusterSubnetGroupVersionEnumTwoThousandAndTwelve1201 GETDeleteClusterSubnetGroupVersionEnum = "2012-12-01"
 )
 
+func (e GETDeleteClusterSubnetGroupVersionEnum) ToPointer() *GETDeleteClusterSubnetGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteClusterSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDeleteClusterSubnetGroupVersionEnum(s)
+		*e = GETDeleteClusterSubnetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteClusterSubnetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteClusterSubnetGroupVersionEnum: %v", v)
 	}
 }
 

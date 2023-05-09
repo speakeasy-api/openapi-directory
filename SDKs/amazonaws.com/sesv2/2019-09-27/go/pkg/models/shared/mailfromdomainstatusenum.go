@@ -17,12 +17,16 @@ const (
 	MailFromDomainStatusEnumTemporaryFailure MailFromDomainStatusEnum = "TEMPORARY_FAILURE"
 )
 
+func (e MailFromDomainStatusEnum) ToPointer() *MailFromDomainStatusEnum {
+	return &e
+}
+
 func (e *MailFromDomainStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "SUCCESS":
@@ -30,9 +34,9 @@ func (e *MailFromDomainStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "TEMPORARY_FAILURE":
-		*e = MailFromDomainStatusEnum(s)
+		*e = MailFromDomainStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailFromDomainStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailFromDomainStatusEnum: %v", v)
 	}
 }

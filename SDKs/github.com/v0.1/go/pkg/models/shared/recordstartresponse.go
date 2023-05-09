@@ -19,12 +19,16 @@ const (
 	RecordStartResponseMessageEnumRecordStartFailed                 RecordStartResponseMessageEnum = "RecordStart Failed"
 )
 
+func (e RecordStartResponseMessageEnum) ToPointer() *RecordStartResponseMessageEnum {
+	return &e
+}
+
 func (e *RecordStartResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RecordStart Executed":
 		fallthrough
 	case "CallUUID Parameter must be present":
@@ -36,10 +40,10 @@ func (e *RecordStartResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "RecordStart Failed -- Call not found":
 		fallthrough
 	case "RecordStart Failed":
-		*e = RecordStartResponseMessageEnum(s)
+		*e = RecordStartResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordStartResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordStartResponseMessageEnum: %v", v)
 	}
 }
 

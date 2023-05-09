@@ -16,17 +16,21 @@ const (
 	DetachCertificateFromDistributionXAmzTargetEnumLightsail20161128DetachCertificateFromDistribution DetachCertificateFromDistributionXAmzTargetEnum = "Lightsail_20161128.DetachCertificateFromDistribution"
 )
 
+func (e DetachCertificateFromDistributionXAmzTargetEnum) ToPointer() *DetachCertificateFromDistributionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetachCertificateFromDistributionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DetachCertificateFromDistribution":
-		*e = DetachCertificateFromDistributionXAmzTargetEnum(s)
+		*e = DetachCertificateFromDistributionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetachCertificateFromDistributionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetachCertificateFromDistributionXAmzTargetEnum: %v", v)
 	}
 }
 

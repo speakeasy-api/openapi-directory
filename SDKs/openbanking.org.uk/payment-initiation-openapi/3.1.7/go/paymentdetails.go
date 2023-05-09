@@ -35,7 +35,10 @@ func newPaymentDetails(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetDomesticPaymentsDomesticPaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetDomesticPaymentsDomesticPaymentIDPaymentDetails(ctx context.Context, request operations.GetDomesticPaymentsDomesticPaymentIDPaymentDetailsRequest, security operations.GetDomesticPaymentsDomesticPaymentIDPaymentDetailsSecurity) (*operations.GetDomesticPaymentsDomesticPaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-payments/{DomesticPaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,7 +135,10 @@ func (s *paymentDetails) GetDomesticPaymentsDomesticPaymentIDPaymentDetails(ctx 
 // GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails(ctx context.Context, request operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetailsRequest, security operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetailsSecurity) (*operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +235,10 @@ func (s *paymentDetails) GetDomesticScheduledPaymentsDomesticScheduledPaymentIDP
 // GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails(ctx context.Context, request operations.GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetailsRequest, security operations.GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetailsSecurity) (*operations.GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domestic-standing-orders/{DomesticStandingOrderId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -326,7 +335,10 @@ func (s *paymentDetails) GetDomesticStandingOrdersDomesticStandingOrderIDPayment
 // GetFilePaymentsFilePaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetFilePaymentsFilePaymentIDPaymentDetails(ctx context.Context, request operations.GetFilePaymentsFilePaymentIDPaymentDetailsRequest, security operations.GetFilePaymentsFilePaymentIDPaymentDetailsSecurity) (*operations.GetFilePaymentsFilePaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/file-payments/{FilePaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -423,7 +435,10 @@ func (s *paymentDetails) GetFilePaymentsFilePaymentIDPaymentDetails(ctx context.
 // GetInternationalPaymentsInternationalPaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetInternationalPaymentsInternationalPaymentIDPaymentDetails(ctx context.Context, request operations.GetInternationalPaymentsInternationalPaymentIDPaymentDetailsRequest, security operations.GetInternationalPaymentsInternationalPaymentIDPaymentDetailsSecurity) (*operations.GetInternationalPaymentsInternationalPaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-payments/{InternationalPaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -520,7 +535,10 @@ func (s *paymentDetails) GetInternationalPaymentsInternationalPaymentIDPaymentDe
 // GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails(ctx context.Context, request operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetailsRequest, security operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetailsSecurity) (*operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-scheduled-payments/{InternationalScheduledPaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -617,7 +635,10 @@ func (s *paymentDetails) GetInternationalScheduledPaymentsInternationalScheduled
 // GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails - Get Payment Details
 func (s *paymentDetails) GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails(ctx context.Context, request operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsRequest, security operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsSecurity) (*operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}/payment-details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

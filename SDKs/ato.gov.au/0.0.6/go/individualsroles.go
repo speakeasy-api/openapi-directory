@@ -54,7 +54,10 @@ func newIndividualsRoles(defaultClient, securityClient HTTPClient, serverURL, la
 // Delete a role
 func (s *individualsRoles) DeleteIndividualsPartyIDRolesRoleID(ctx context.Context, request operations.DeleteIndividualsPartyIDRolesRoleIDRequest) (*operations.DeleteIndividualsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -111,7 +114,10 @@ func (s *individualsRoles) DeleteIndividualsPartyIDRolesRoleID(ctx context.Conte
 // GetIndividualsPartyIDRoles - Retrieve a list of roles
 func (s *individualsRoles) GetIndividualsPartyIDRoles(ctx context.Context, request operations.GetIndividualsPartyIDRolesRequest) (*operations.GetIndividualsPartyIDRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +186,10 @@ func (s *individualsRoles) GetIndividualsPartyIDRoles(ctx context.Context, reque
 // Retrieve a role
 func (s *individualsRoles) GetIndividualsPartyIDRolesRoleID(ctx context.Context, request operations.GetIndividualsPartyIDRolesRoleIDRequest) (*operations.GetIndividualsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +256,10 @@ func (s *individualsRoles) GetIndividualsPartyIDRolesRoleID(ctx context.Context,
 // Create a role
 func (s *individualsRoles) PostIndividualsPartyIDRoles(ctx context.Context, request operations.PostIndividualsPartyIDRolesRequest) (*operations.PostIndividualsPartyIDRolesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartyRoleInput", "json")
 	if err != nil {
@@ -326,7 +338,10 @@ func (s *individualsRoles) PostIndividualsPartyIDRoles(ctx context.Context, requ
 // Update a role
 func (s *individualsRoles) PutIndividualsPartyIDRolesRoleID(ctx context.Context, request operations.PutIndividualsPartyIDRolesRoleIDRequest) (*operations.PutIndividualsPartyIDRolesRoleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/individuals/{partyId}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartyRoleInput", "json")
 	if err != nil {

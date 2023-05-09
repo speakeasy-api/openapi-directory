@@ -35,7 +35,10 @@ func newReport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Retrieves the Subscription's report status, filtering by its reportId.
 func (s *report) GetreportstatusbyID(ctx context.Context, request operations.GetreportstatusbyIDRequest) (*operations.GetreportstatusbyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/report/reportStatus/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/report/reportStatus/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -90,7 +90,10 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesCre
 // DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}:editCustomerMatchMembers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EditCustomerMatchMembersRequest", "json")
 	if err != nil {
@@ -145,7 +148,10 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesEdi
 // DisplayvideoFirstAndThirdPartyAudiencesGet - Gets a first and third party audience.
 func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesGet(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesGetRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesGetSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesLis
 // DisplayvideoFirstAndThirdPartyAudiencesPatch - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 func (s *firstAndThirdPartyAudiences) DisplayvideoFirstAndThirdPartyAudiencesPatch(ctx context.Context, request operations.DisplayvideoFirstAndThirdPartyAudiencesPatchRequest, security operations.DisplayvideoFirstAndThirdPartyAudiencesPatchSecurity) (*operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/firstAndThirdPartyAudiences/{firstAndThirdPartyAudienceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FirstAndThirdPartyAudienceInput", "json")
 	if err != nil {

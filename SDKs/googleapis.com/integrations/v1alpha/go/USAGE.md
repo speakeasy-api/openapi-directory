@@ -2,38 +2,36 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.IntegrationsCallbackGenerateTokenRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Code: "unde",
-        Fields: "nulla",
-        GcpProjectID: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        Product: "APIGEE",
-        QuotaUser: "deserunt",
-        RedirectURI: "suscipit",
-        State: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Callback.IntegrationsCallbackGenerateToken(ctx, req, operations.IntegrationsCallbackGenerateTokenSecurity{
+    res, err := s.Callback.IntegrationsCallbackGenerateToken(ctx, operations.IntegrationsCallbackGenerateTokenRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Code: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        GcpProjectID: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        Product: operations.IntegrationsCallbackGenerateTokenProductEnumApigee.ToPointer(),
+        QuotaUser: sdk.String("deserunt"),
+        RedirectURI: sdk.String("suscipit"),
+        State: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.IntegrationsCallbackGenerateTokenSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

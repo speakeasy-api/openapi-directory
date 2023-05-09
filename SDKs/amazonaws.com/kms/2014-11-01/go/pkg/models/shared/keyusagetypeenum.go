@@ -15,20 +15,24 @@ const (
 	KeyUsageTypeEnumGenerateVerifyMac KeyUsageTypeEnum = "GENERATE_VERIFY_MAC"
 )
 
+func (e KeyUsageTypeEnum) ToPointer() *KeyUsageTypeEnum {
+	return &e
+}
+
 func (e *KeyUsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SIGN_VERIFY":
 		fallthrough
 	case "ENCRYPT_DECRYPT":
 		fallthrough
 	case "GENERATE_VERIFY_MAC":
-		*e = KeyUsageTypeEnum(s)
+		*e = KeyUsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyUsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyUsageTypeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETStopDBInstanceAutomatedBackupsReplicationActionEnumStopDbInstanceAutomatedBackupsReplication GETStopDBInstanceAutomatedBackupsReplicationActionEnum = "StopDBInstanceAutomatedBackupsReplication"
 )
 
+func (e GETStopDBInstanceAutomatedBackupsReplicationActionEnum) ToPointer() *GETStopDBInstanceAutomatedBackupsReplicationActionEnum {
+	return &e
+}
+
 func (e *GETStopDBInstanceAutomatedBackupsReplicationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopDBInstanceAutomatedBackupsReplication":
-		*e = GETStopDBInstanceAutomatedBackupsReplicationActionEnum(s)
+		*e = GETStopDBInstanceAutomatedBackupsReplicationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopDBInstanceAutomatedBackupsReplicationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopDBInstanceAutomatedBackupsReplicationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStopDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GETStopDBInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
+func (e GETStopDBInstanceAutomatedBackupsReplicationVersionEnum) ToPointer() *GETStopDBInstanceAutomatedBackupsReplicationVersionEnum {
+	return &e
+}
+
 func (e *GETStopDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStopDBInstanceAutomatedBackupsReplicationVersionEnum(s)
+		*e = GETStopDBInstanceAutomatedBackupsReplicationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopDBInstanceAutomatedBackupsReplicationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopDBInstanceAutomatedBackupsReplicationVersionEnum: %v", v)
 	}
 }
 

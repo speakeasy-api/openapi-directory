@@ -14,18 +14,22 @@ const (
 	CostAllocationTagTypeEnumUserDefined  CostAllocationTagTypeEnum = "UserDefined"
 )
 
+func (e CostAllocationTagTypeEnum) ToPointer() *CostAllocationTagTypeEnum {
+	return &e
+}
+
 func (e *CostAllocationTagTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGenerated":
 		fallthrough
 	case "UserDefined":
-		*e = CostAllocationTagTypeEnum(s)
+		*e = CostAllocationTagTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CostAllocationTagTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CostAllocationTagTypeEnum: %v", v)
 	}
 }

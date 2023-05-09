@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -20,4 +21,8 @@ pkg/models/operations/getdeparturesbycrs.go
 pkg/models/operations/getfastestdeparturesbycrs.go
 pkg/models/operations/getnextdeparturesbycrs.go
 pkg/models/operations/getservicedetailsbyid.go
+docs/sdk/README.md
+docs/departuresandarrivals/README.md
+docs/fastestandnextdepartures/README.md
+docs/serviceinformation/README.md
 USAGE.md

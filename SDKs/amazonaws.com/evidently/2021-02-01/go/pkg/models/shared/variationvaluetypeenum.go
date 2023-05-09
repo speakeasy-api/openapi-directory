@@ -16,12 +16,16 @@ const (
 	VariationValueTypeEnumBoolean VariationValueTypeEnum = "BOOLEAN"
 )
 
+func (e VariationValueTypeEnum) ToPointer() *VariationValueTypeEnum {
+	return &e
+}
+
 func (e *VariationValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "LONG":
@@ -29,9 +33,9 @@ func (e *VariationValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DOUBLE":
 		fallthrough
 	case "BOOLEAN":
-		*e = VariationValueTypeEnum(s)
+		*e = VariationValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VariationValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VariationValueTypeEnum: %v", v)
 	}
 }

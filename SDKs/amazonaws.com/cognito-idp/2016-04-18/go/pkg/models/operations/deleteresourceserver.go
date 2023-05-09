@@ -16,17 +16,21 @@ const (
 	DeleteResourceServerXAmzTargetEnumAwsCognitoIdentityProviderServiceDeleteResourceServer DeleteResourceServerXAmzTargetEnum = "AWSCognitoIdentityProviderService.DeleteResourceServer"
 )
 
+func (e DeleteResourceServerXAmzTargetEnum) ToPointer() *DeleteResourceServerXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourceServerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.DeleteResourceServer":
-		*e = DeleteResourceServerXAmzTargetEnum(s)
+		*e = DeleteResourceServerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourceServerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourceServerXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -101,7 +101,10 @@ func (s *templates) Create(ctx context.Context, request shared.BodyCreate) (*ope
 // DeleteTemplatesIDDelete - Delete
 func (s *templates) DeleteTemplatesIDDelete(ctx context.Context, request operations.DeleteTemplatesIDDeleteRequest) (*operations.DeleteTemplatesIDDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -157,7 +160,10 @@ func (s *templates) DeleteTemplatesIDDelete(ctx context.Context, request operati
 // Fill - Fill
 func (s *templates) Fill(ctx context.Context, request operations.FillRequest) (*operations.FillResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/fill", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{id}/fill", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FillTemplateRequest", "json")
 	if err != nil {
@@ -223,7 +229,10 @@ func (s *templates) Fill(ctx context.Context, request operations.FillRequest) (*
 // Get - Get Template
 func (s *templates) Get(ctx context.Context, request operations.GetRequest) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +288,10 @@ func (s *templates) Get(ctx context.Context, request operations.GetRequest) (*op
 // GetFileTemplatesIDFileGet - Get File
 func (s *templates) GetFileTemplatesIDFileGet(ctx context.Context, request operations.GetFileTemplatesIDFileGetRequest) (*operations.GetFileTemplatesIDFileGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}/file", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{id}/file", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -395,7 +407,10 @@ func (s *templates) List(ctx context.Context, request operations.ListRequest) (*
 // Update - Update
 func (s *templates) Update(ctx context.Context, request operations.UpdateRequest) (*operations.UpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateTemplateRequest", "json")
 	if err != nil {

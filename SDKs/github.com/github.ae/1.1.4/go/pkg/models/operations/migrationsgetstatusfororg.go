@@ -16,17 +16,21 @@ const (
 	MigrationsGetStatusForOrgExcludeEnumRepositories MigrationsGetStatusForOrgExcludeEnum = "repositories"
 )
 
+func (e MigrationsGetStatusForOrgExcludeEnum) ToPointer() *MigrationsGetStatusForOrgExcludeEnum {
+	return &e
+}
+
 func (e *MigrationsGetStatusForOrgExcludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "repositories":
-		*e = MigrationsGetStatusForOrgExcludeEnum(s)
+		*e = MigrationsGetStatusForOrgExcludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationsGetStatusForOrgExcludeEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationsGetStatusForOrgExcludeEnum: %v", v)
 	}
 }
 

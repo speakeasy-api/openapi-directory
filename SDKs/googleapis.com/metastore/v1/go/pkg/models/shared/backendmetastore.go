@@ -15,19 +15,23 @@ const (
 	BackendMetastoreMetastoreTypeEnumDataprocMetastore        BackendMetastoreMetastoreTypeEnum = "DATAPROC_METASTORE"
 )
 
+func (e BackendMetastoreMetastoreTypeEnum) ToPointer() *BackendMetastoreMetastoreTypeEnum {
+	return &e
+}
+
 func (e *BackendMetastoreMetastoreTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METASTORE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DATAPROC_METASTORE":
-		*e = BackendMetastoreMetastoreTypeEnum(s)
+		*e = BackendMetastoreMetastoreTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BackendMetastoreMetastoreTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BackendMetastoreMetastoreTypeEnum: %v", v)
 	}
 }
 

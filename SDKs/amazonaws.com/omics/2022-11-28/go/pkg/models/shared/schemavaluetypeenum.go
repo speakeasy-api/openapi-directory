@@ -18,12 +18,16 @@ const (
 	SchemaValueTypeEnumBoolean SchemaValueTypeEnum = "BOOLEAN"
 )
 
+func (e SchemaValueTypeEnum) ToPointer() *SchemaValueTypeEnum {
+	return &e
+}
+
 func (e *SchemaValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LONG":
 		fallthrough
 	case "INT":
@@ -35,9 +39,9 @@ func (e *SchemaValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DOUBLE":
 		fallthrough
 	case "BOOLEAN":
-		*e = SchemaValueTypeEnum(s)
+		*e = SchemaValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchemaValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SchemaValueTypeEnum: %v", v)
 	}
 }

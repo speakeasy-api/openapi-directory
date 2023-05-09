@@ -15,17 +15,21 @@ const (
 	GETDeregisterTypeActionEnumDeregisterType GETDeregisterTypeActionEnum = "DeregisterType"
 )
 
+func (e GETDeregisterTypeActionEnum) ToPointer() *GETDeregisterTypeActionEnum {
+	return &e
+}
+
 func (e *GETDeregisterTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterType":
-		*e = GETDeregisterTypeActionEnum(s)
+		*e = GETDeregisterTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterTypeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDeregisterTypeTypeEnumHook     GETDeregisterTypeTypeEnum = "HOOK"
 )
 
+func (e GETDeregisterTypeTypeEnum) ToPointer() *GETDeregisterTypeTypeEnum {
+	return &e
+}
+
 func (e *GETDeregisterTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETDeregisterTypeTypeEnum(s)
+		*e = GETDeregisterTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterTypeTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDeregisterTypeVersionEnumTwoThousandAndTen0515 GETDeregisterTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETDeregisterTypeVersionEnum) ToPointer() *GETDeregisterTypeVersionEnum {
+	return &e
+}
+
 func (e *GETDeregisterTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDeregisterTypeVersionEnum(s)
+		*e = GETDeregisterTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeregisterTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeregisterTypeVersionEnum: %v", v)
 	}
 }
 

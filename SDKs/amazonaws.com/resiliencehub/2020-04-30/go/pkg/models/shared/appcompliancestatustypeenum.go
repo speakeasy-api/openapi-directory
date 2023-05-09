@@ -16,12 +16,16 @@ const (
 	AppComplianceStatusTypeEnumChangesDetected AppComplianceStatusTypeEnum = "ChangesDetected"
 )
 
+func (e AppComplianceStatusTypeEnum) ToPointer() *AppComplianceStatusTypeEnum {
+	return &e
+}
+
 func (e *AppComplianceStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PolicyBreached":
 		fallthrough
 	case "PolicyMet":
@@ -29,9 +33,9 @@ func (e *AppComplianceStatusTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NotAssessed":
 		fallthrough
 	case "ChangesDetected":
-		*e = AppComplianceStatusTypeEnum(s)
+		*e = AppComplianceStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppComplianceStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppComplianceStatusTypeEnum: %v", v)
 	}
 }

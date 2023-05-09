@@ -9,14 +9,6 @@ import (
 	"time"
 )
 
-// AccountBalances - The Account's balances in the minor unit of its currency. For dollars, for example, these values will represent cents.
-type AccountBalances struct {
-	// The Account's available balance, representing the current balance less any open Pending Transactions on the Account.
-	AvailableBalance int64 `json:"available_balance"`
-	// The Account's current balance, representing the sum of all posted Transactions on the Account.
-	CurrentBalance int64 `json:"current_balance"`
-}
-
 // AccountCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the Account currency.
 type AccountCurrencyEnum string
 
@@ -29,12 +21,16 @@ const (
 	AccountCurrencyEnumUsd AccountCurrencyEnum = "USD"
 )
 
+func (e AccountCurrencyEnum) ToPointer() *AccountCurrencyEnum {
+	return &e
+}
+
 func (e *AccountCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -46,10 +42,10 @@ func (e *AccountCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = AccountCurrencyEnum(s)
+		*e = AccountCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountCurrencyEnum: %v", v)
 	}
 }
 
@@ -61,19 +57,23 @@ const (
 	AccountStatusEnumClosed AccountStatusEnum = "closed"
 )
 
+func (e AccountStatusEnum) ToPointer() *AccountStatusEnum {
+	return &e
+}
+
 func (e *AccountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
-		*e = AccountStatusEnum(s)
+		*e = AccountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountStatusEnum: %v", v)
 	}
 }
 
@@ -84,24 +84,26 @@ const (
 	AccountTypeEnumAccount AccountTypeEnum = "account"
 )
 
+func (e AccountTypeEnum) ToPointer() *AccountTypeEnum {
+	return &e
+}
+
 func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account":
-		*e = AccountTypeEnum(s)
+		*e = AccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTypeEnum: %v", v)
 	}
 }
 
 // Account - Accounts are your bank accounts with Increase. They store money, receive transfers, and send payments. They earn interest and have depository insurance.
 type Account struct {
-	// The Account's balances in the minor unit of its currency. For dollars, for example, these values will represent cents.
-	Balances AccountBalances `json:"balances"`
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) time at which the Account was created.
 	CreatedAt time.Time `json:"created_at"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the Account currency.

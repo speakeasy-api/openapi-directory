@@ -108,7 +108,10 @@ func (s *licenseTemplate) CreateLicenseTemplate(ctx context.Context, request ope
 // Delete a License Template by 'number'.
 func (s *licenseTemplate) DeleteLicenseTemplate(ctx context.Context, request operations.DeleteLicenseTemplateRequest, security operations.DeleteLicenseTemplateSecurity) (*operations.DeleteLicenseTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -171,7 +174,10 @@ func (s *licenseTemplate) DeleteLicenseTemplate(ctx context.Context, request ope
 // Return a License Template by 'licenseTemplateNumber'
 func (s *licenseTemplate) GetLicenseTemplate(ctx context.Context, request operations.GetLicenseTemplateRequest, security operations.GetLicenseTemplateSecurity) (*operations.GetLicenseTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -228,7 +234,7 @@ func (s *licenseTemplate) GetLicenseTemplate(ctx context.Context, request operat
 
 // ListLicenseTemplates - List License Templates
 // Return a list of all License Templates for the current Vendor
-func (s *licenseTemplate) ListLicenseTemplates(ctx context.Context) (*operations.ListLicenseTemplatesResponse, error) {
+func (s *licenseTemplate) ListLicenseTemplates(ctx context.Context, security operations.ListLicenseTemplatesSecurity) (*operations.ListLicenseTemplatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/licensetemplate"
 
@@ -237,7 +243,7 @@ func (s *licenseTemplate) ListLicenseTemplates(ctx context.Context) (*operations
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -289,7 +295,10 @@ func (s *licenseTemplate) ListLicenseTemplates(ctx context.Context) (*operations
 // Sets the provided properties to a License Template. Return an updated License Template
 func (s *licenseTemplate) UpdateLicenseTemplate(ctx context.Context, request operations.UpdateLicenseTemplateRequest, security operations.UpdateLicenseTemplateSecurity) (*operations.UpdateLicenseTemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licensetemplate/{licenseTemplateNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

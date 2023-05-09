@@ -16,17 +16,21 @@ const (
 	DescribeTaskExecutionXAmzTargetEnumFmrsServiceDescribeTaskExecution DescribeTaskExecutionXAmzTargetEnum = "FmrsService.DescribeTaskExecution"
 )
 
+func (e DescribeTaskExecutionXAmzTargetEnum) ToPointer() *DescribeTaskExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTaskExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.DescribeTaskExecution":
-		*e = DescribeTaskExecutionXAmzTargetEnum(s)
+		*e = DescribeTaskExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTaskExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTaskExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

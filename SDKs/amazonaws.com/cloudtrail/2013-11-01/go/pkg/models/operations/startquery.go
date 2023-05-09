@@ -16,17 +16,21 @@ const (
 	StartQueryXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101StartQuery StartQueryXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartQuery"
 )
 
+func (e StartQueryXAmzTargetEnum) ToPointer() *StartQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.StartQuery":
-		*e = StartQueryXAmzTargetEnum(s)
+		*e = StartQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartQueryXAmzTargetEnum: %v", v)
 	}
 }
 

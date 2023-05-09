@@ -16,17 +16,21 @@ const (
 	AttachStaticIPXAmzTargetEnumLightsail20161128AttachStaticIP AttachStaticIPXAmzTargetEnum = "Lightsail_20161128.AttachStaticIp"
 )
 
+func (e AttachStaticIPXAmzTargetEnum) ToPointer() *AttachStaticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *AttachStaticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.AttachStaticIp":
-		*e = AttachStaticIPXAmzTargetEnum(s)
+		*e = AttachStaticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachStaticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachStaticIPXAmzTargetEnum: %v", v)
 	}
 }
 

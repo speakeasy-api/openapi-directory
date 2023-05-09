@@ -7,6 +7,12 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ClientSecurity struct {
+	ClientRegistrationToken *string `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	OauthCode               *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit           *string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type ClientResponse struct {
 	Body []byte
 	// A list of Client Objects.

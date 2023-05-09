@@ -34,7 +34,10 @@ func newSearchanalytics(defaultClient, securityClient HTTPClient, serverURL, lan
 // WebmastersSearchanalyticsQuery - Query your data with filters and parameters that you define. Returns zero or more rows grouped by the row keys that you define. You must define a date range of one or more days. When date is one of the group by values, any days without data are omitted from the result list. If you need to know which days have data, issue a broad date range query grouped by date for any metric, and see which day rows are returned.
 func (s *searchanalytics) WebmastersSearchanalyticsQuery(ctx context.Context, request operations.WebmastersSearchanalyticsQueryRequest, security operations.WebmastersSearchanalyticsQuerySecurity) (*operations.WebmastersSearchanalyticsQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/webmasters/v3/sites/{siteUrl}/searchAnalytics/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchAnalyticsQueryRequest", "json")
 	if err != nil {

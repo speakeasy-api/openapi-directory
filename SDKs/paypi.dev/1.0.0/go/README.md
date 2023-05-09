@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/paypi.dev/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.PostCheckCodeRequestBody{
-        Code: "corrupti",
-        Email: "Micheal_Sporer@yahoo.com",
-    }
-
     ctx := context.Background()
-    res, err := s.PostCheckCode(ctx, req)
+    res, err := s.PostCheckCode(ctx, operations.PostCheckCodeRequestBody{
+        Code: sdk.String("corrupti"),
+        Email: sdk.String("Micheal_Sporer@yahoo.com"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,10 +46,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostCheckCode` - Check verification code
-* `PostSendCode` - Send verification code
+* [PostCheckCode](docs/sdk/README.md#postcheckcode) - Check verification code
+* [PostSendCode](docs/sdk/README.md#postsendcode) - Send verification code
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -9,7 +9,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetResourceShareAssociationsRequestBodyAssociationStatusEnum - Specifies that you want to retrieve only associations with this status.
+// GetResourceShareAssociationsRequestBodyAssociationStatusEnum - Specifies that you want to retrieve only associations that have this status.
 type GetResourceShareAssociationsRequestBodyAssociationStatusEnum string
 
 const (
@@ -20,12 +20,16 @@ const (
 	GetResourceShareAssociationsRequestBodyAssociationStatusEnumDisassociated  GetResourceShareAssociationsRequestBodyAssociationStatusEnum = "DISASSOCIATED"
 )
 
+func (e GetResourceShareAssociationsRequestBodyAssociationStatusEnum) ToPointer() *GetResourceShareAssociationsRequestBodyAssociationStatusEnum {
+	return &e
+}
+
 func (e *GetResourceShareAssociationsRequestBodyAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSOCIATING":
 		fallthrough
 	case "ASSOCIATED":
@@ -35,14 +39,14 @@ func (e *GetResourceShareAssociationsRequestBodyAssociationStatusEnum) Unmarshal
 	case "DISASSOCIATING":
 		fallthrough
 	case "DISASSOCIATED":
-		*e = GetResourceShareAssociationsRequestBodyAssociationStatusEnum(s)
+		*e = GetResourceShareAssociationsRequestBodyAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceShareAssociationsRequestBodyAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceShareAssociationsRequestBodyAssociationStatusEnum: %v", v)
 	}
 }
 
-// GetResourceShareAssociationsRequestBodyAssociationTypeEnum - <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals that are associated with the specified resource share.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources that are associated with the specified resource share.</p> </li> </ul>
+// GetResourceShareAssociationsRequestBodyAssociationTypeEnum - <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals whose associations you want to see.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources whose associations you want to see.</p> </li> </ul>
 type GetResourceShareAssociationsRequestBodyAssociationTypeEnum string
 
 const (
@@ -50,34 +54,38 @@ const (
 	GetResourceShareAssociationsRequestBodyAssociationTypeEnumResource  GetResourceShareAssociationsRequestBodyAssociationTypeEnum = "RESOURCE"
 )
 
+func (e GetResourceShareAssociationsRequestBodyAssociationTypeEnum) ToPointer() *GetResourceShareAssociationsRequestBodyAssociationTypeEnum {
+	return &e
+}
+
 func (e *GetResourceShareAssociationsRequestBodyAssociationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRINCIPAL":
 		fallthrough
 	case "RESOURCE":
-		*e = GetResourceShareAssociationsRequestBodyAssociationTypeEnum(s)
+		*e = GetResourceShareAssociationsRequestBodyAssociationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceShareAssociationsRequestBodyAssociationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceShareAssociationsRequestBodyAssociationTypeEnum: %v", v)
 	}
 }
 
 type GetResourceShareAssociationsRequestBody struct {
-	// Specifies that you want to retrieve only associations with this status.
+	// Specifies that you want to retrieve only associations that have this status.
 	AssociationStatus *GetResourceShareAssociationsRequestBodyAssociationStatusEnum `json:"associationStatus,omitempty"`
-	// <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals that are associated with the specified resource share.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources that are associated with the specified resource share.</p> </li> </ul>
+	// <p>Specifies whether you want to retrieve the associations that involve a specified resource or principal.</p> <ul> <li> <p> <code>PRINCIPAL</code> – list the principals whose associations you want to see.</p> </li> <li> <p> <code>RESOURCE</code> – list the resources whose associations you want to see.</p> </li> </ul>
 	AssociationType GetResourceShareAssociationsRequestBodyAssociationTypeEnum `json:"associationType"`
 	// Specifies the total number of results that you want included on each page of the response. If you do not include this parameter, it defaults to a value that is specific to the operation. If additional items exist beyond the number you specify, the <code>NextToken</code> response element is returned with a value (not null). Include the specified value as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the results. Note that the service might return fewer results than the maximum even when there are more results available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the results.
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// Specifies that you want to receive the next page of results. Valid only if you received a <code>NextToken</code> response in the previous request. If you did, it indicates that more output is available. Set this parameter to the value provided by the previous call's <code>NextToken</code> response to request the next page of results.
 	NextToken *string `json:"nextToken,omitempty"`
-	// <p>Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of an individual IAM user or role.</p> <p>You cannot specify this parameter if the association type is <code>RESOURCE</code>.</p>
+	// <p>Specifies the ID of the principal whose resource shares you want to retrieve. This can be an Amazon Web Services account ID, an organization ID, an organizational unit ID, or the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of an individual IAM user or role.</p> <p>You cannot specify this parameter if the association type is <code>RESOURCE</code>.</p>
 	Principal *string `json:"principal,omitempty"`
-	// <p>Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resoure Name (ARN)</a> of the resource whose resource shares you want to retrieve.</p> <p>You cannot specify this parameter if the association type is <code>PRINCIPAL</code>.</p>
+	// <p>Specifies the <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Name (ARN)</a> of a resource whose resource shares you want to retrieve.</p> <p>You cannot specify this parameter if the association type is <code>PRINCIPAL</code>.</p>
 	ResourceArn *string `json:"resourceArn,omitempty"`
 	// Specifies a list of <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)</a> of the resource share whose associations you want to retrieve.
 	ResourceShareArns []string `json:"resourceShareArns,omitempty"`

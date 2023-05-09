@@ -16,17 +16,21 @@ const (
 	DeleteDatasetImportJobXAmzTargetEnumAmazonForecastDeleteDatasetImportJob DeleteDatasetImportJobXAmzTargetEnum = "AmazonForecast.DeleteDatasetImportJob"
 )
 
+func (e DeleteDatasetImportJobXAmzTargetEnum) ToPointer() *DeleteDatasetImportJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDatasetImportJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DeleteDatasetImportJob":
-		*e = DeleteDatasetImportJobXAmzTargetEnum(s)
+		*e = DeleteDatasetImportJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDatasetImportJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDatasetImportJobXAmzTargetEnum: %v", v)
 	}
 }
 

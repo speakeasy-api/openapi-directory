@@ -14,19 +14,23 @@ const (
 	CDDriveItemTypeEnumFolder CDDriveItemTypeEnum = "folder"
 )
 
+func (e CDDriveItemTypeEnum) ToPointer() *CDDriveItemTypeEnum {
+	return &e
+}
+
 func (e *CDDriveItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file":
 		fallthrough
 	case "folder":
-		*e = CDDriveItemTypeEnum(s)
+		*e = CDDriveItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CDDriveItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CDDriveItemTypeEnum: %v", v)
 	}
 }
 

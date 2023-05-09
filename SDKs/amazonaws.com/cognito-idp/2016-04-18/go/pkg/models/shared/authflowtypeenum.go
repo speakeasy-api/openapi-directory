@@ -19,12 +19,16 @@ const (
 	AuthFlowTypeEnumAdminUserPasswordAuth AuthFlowTypeEnum = "ADMIN_USER_PASSWORD_AUTH"
 )
 
+func (e AuthFlowTypeEnum) ToPointer() *AuthFlowTypeEnum {
+	return &e
+}
+
 func (e *AuthFlowTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_SRP_AUTH":
 		fallthrough
 	case "REFRESH_TOKEN_AUTH":
@@ -38,9 +42,9 @@ func (e *AuthFlowTypeEnum) UnmarshalJSON(data []byte) error {
 	case "USER_PASSWORD_AUTH":
 		fallthrough
 	case "ADMIN_USER_PASSWORD_AUTH":
-		*e = AuthFlowTypeEnum(s)
+		*e = AuthFlowTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthFlowTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthFlowTypeEnum: %v", v)
 	}
 }

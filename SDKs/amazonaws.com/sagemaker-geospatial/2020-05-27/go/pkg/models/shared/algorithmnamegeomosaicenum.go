@@ -26,12 +26,16 @@ const (
 	AlgorithmNameGeoMosaicEnumSum         AlgorithmNameGeoMosaicEnum = "SUM"
 )
 
+func (e AlgorithmNameGeoMosaicEnum) ToPointer() *AlgorithmNameGeoMosaicEnum {
+	return &e
+}
+
 func (e *AlgorithmNameGeoMosaicEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEAR":
 		fallthrough
 	case "BILINEAR":
@@ -59,9 +63,9 @@ func (e *AlgorithmNameGeoMosaicEnum) UnmarshalJSON(data []byte) error {
 	case "Q3":
 		fallthrough
 	case "SUM":
-		*e = AlgorithmNameGeoMosaicEnum(s)
+		*e = AlgorithmNameGeoMosaicEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlgorithmNameGeoMosaicEnum: %s", s)
+		return fmt.Errorf("invalid value for AlgorithmNameGeoMosaicEnum: %v", v)
 	}
 }

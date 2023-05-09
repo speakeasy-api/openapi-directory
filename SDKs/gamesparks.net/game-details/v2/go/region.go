@@ -36,7 +36,10 @@ func newRegion(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GETGameRegionOptionsUsingGET - getGameRegionOptions
 func (s *region) GETGameRegionOptionsUsingGET(ctx context.Context, request operations.GETGameRegionOptionsUsingGETRequest) (*operations.GETGameRegionOptionsUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{gameApiKey}/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{gameApiKey}/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -150,7 +153,10 @@ func (s *region) GETRegionOptionsUsingGET(ctx context.Context) (*operations.GETR
 // SetGameRegionUsingPOST - setGameRegion
 func (s *region) SetGameRegionUsingPOST(ctx context.Context, request operations.SetGameRegionUsingPOSTRequest) (*operations.SetGameRegionUsingPOSTResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{gameApiKey}/region/{regionCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{gameApiKey}/region/{regionCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

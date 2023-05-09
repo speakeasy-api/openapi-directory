@@ -22,19 +22,23 @@ const (
 	TokenRefreshRequestCookieTypeEnumPersistent TokenRefreshRequestCookieTypeEnum = "Persistent"
 )
 
+func (e TokenRefreshRequestCookieTypeEnum) ToPointer() *TokenRefreshRequestCookieTypeEnum {
+	return &e
+}
+
 func (e *TokenRefreshRequestCookieTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Session":
 		fallthrough
 	case "Persistent":
-		*e = TokenRefreshRequestCookieTypeEnum(s)
+		*e = TokenRefreshRequestCookieTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokenRefreshRequestCookieTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokenRefreshRequestCookieTypeEnum: %v", v)
 	}
 }
 

@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -118,4 +119,16 @@ pkg/models/shared/snapshot.go
 pkg/models/shared/snapshotimage.go
 pkg/models/shared/snapshotlistresponse.go
 pkg/models/shared/statsresponse.go
+docs/sdk/README.md
+docs/achievementdefinitions/README.md
+docs/achievements/README.md
+docs/applications/README.md
+docs/events/README.md
+docs/leaderboards/README.md
+docs/metagame/README.md
+docs/players/README.md
+docs/revisions/README.md
+docs/scores/README.md
+docs/snapshots/README.md
+docs/stats/README.md
 USAGE.md

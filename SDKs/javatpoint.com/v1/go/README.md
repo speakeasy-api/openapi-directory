@@ -13,85 +13,86 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/javatpoint.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FcmProjectsMessagesSendRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FcmProjectsMessagesSend(ctx, operations.FcmProjectsMessagesSendRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         SendMessageRequest: &shared.SendMessageRequest{
             Message: &shared.Message{
                 Android: &shared.AndroidConfig{
-                    CollapseKey: "provident",
+                    CollapseKey: sdk.String("provident"),
                     Data: map[string]string{
                         "quibusdam": "unde",
                         "nulla": "corrupti",
                         "illum": "vel",
                     },
-                    DirectBootOk: false,
+                    DirectBootOk: sdk.Bool(false),
                     FcmOptions: &shared.AndroidFcmOptions{
-                        AnalyticsLabel: "error",
+                        AnalyticsLabel: sdk.String("error"),
                     },
                     Notification: &shared.AndroidNotification{
-                        Body: "deserunt",
+                        Body: sdk.String("deserunt"),
                         BodyLocArgs: []string{
                             "iure",
                             "magnam",
                         },
-                        BodyLocKey: "debitis",
-                        BypassProxyNotification: false,
-                        ChannelID: "ipsa",
-                        ClickAction: "delectus",
-                        Color: "tempora",
-                        DefaultLightSettings: false,
-                        DefaultSound: false,
-                        DefaultVibrateTimings: false,
-                        EventTime: "suscipit",
-                        Icon: "molestiae",
-                        Image: "minus",
+                        BodyLocKey: sdk.String("debitis"),
+                        BypassProxyNotification: sdk.Bool(false),
+                        ChannelID: sdk.String("ipsa"),
+                        ClickAction: sdk.String("delectus"),
+                        Color: sdk.String("tempora"),
+                        DefaultLightSettings: sdk.Bool(false),
+                        DefaultSound: sdk.Bool(false),
+                        DefaultVibrateTimings: sdk.Bool(false),
+                        EventTime: sdk.String("suscipit"),
+                        Icon: sdk.String("molestiae"),
+                        Image: sdk.String("minus"),
                         LightSettings: &shared.LightSettings{
                             Color: &shared.Color{
-                                Alpha: 8121.69,
-                                Blue: 5288.95,
-                                Green: 4799.77,
-                                Red: 5680.45,
+                                Alpha: sdk.Float32(8121.69),
+                                Blue: sdk.Float32(5288.95),
+                                Green: sdk.Float32(4799.77),
+                                Red: sdk.Float32(5680.45),
                             },
-                            LightOffDuration: "nisi",
-                            LightOnDuration: "recusandae",
+                            LightOffDuration: sdk.String("nisi"),
+                            LightOnDuration: sdk.String("recusandae"),
                         },
-                        LocalOnly: false,
-                        NotificationCount: 836079,
-                        NotificationPriority: "PRIORITY_UNSPECIFIED",
-                        Sound: "quis",
-                        Sticky: false,
-                        Tag: "veritatis",
-                        Ticker: "deserunt",
-                        Title: "Mr.",
+                        LocalOnly: sdk.Bool(false),
+                        NotificationCount: sdk.Int(836079),
+                        NotificationPriority: shared.AndroidNotificationNotificationPriorityEnumPriorityUnspecified.ToPointer(),
+                        Sound: sdk.String("quis"),
+                        Sticky: sdk.Bool(false),
+                        Tag: sdk.String("veritatis"),
+                        Ticker: sdk.String("deserunt"),
+                        Title: sdk.String("Mr."),
                         TitleLocArgs: []string{
                             "repellendus",
                             "sapiente",
                         },
-                        TitleLocKey: "quo",
+                        TitleLocKey: sdk.String("quo"),
                         VibrateTimings: []string{
                             "at",
                         },
-                        Visibility: "SECRET",
+                        Visibility: shared.AndroidNotificationVisibilityEnumSecret.ToPointer(),
                     },
-                    Priority: "HIGH",
-                    RestrictedPackageName: "molestiae",
-                    TTL: "quod",
+                    Priority: shared.AndroidConfigPriorityEnumHigh.ToPointer(),
+                    RestrictedPackageName: sdk.String("molestiae"),
+                    TTL: sdk.String("quod"),
                 },
                 Apns: &shared.ApnsConfig{
                     FcmOptions: &shared.ApnsFcmOptions{
-                        AnalyticsLabel: "quod",
-                        Image: "esse",
+                        AnalyticsLabel: sdk.String("quod"),
+                        Image: sdk.String("esse"),
                     },
                     Headers: map[string]string{
                         "porro": "dolorum",
@@ -102,61 +103,58 @@ func main() {
                         "deleniti": "hic",
                     },
                 },
-                Condition: "optio",
+                Condition: sdk.String("optio"),
                 Data: map[string]string{
                     "beatae": "commodi",
                     "molestiae": "modi",
                     "qui": "impedit",
                 },
                 FcmOptions: &shared.FcmOptions{
-                    AnalyticsLabel: "cum",
+                    AnalyticsLabel: sdk.String("cum"),
                 },
-                Name: "esse",
+                Name: sdk.String("Edna Mante II"),
                 Notification: &shared.Notification{
-                    Body: "ipsum",
-                    Image: "excepturi",
-                    Title: "Mr.",
+                    Body: sdk.String("natus"),
+                    Image: sdk.String("sed"),
+                    Title: sdk.String("Miss"),
                 },
-                Token: "perferendis",
-                Topic: "ad",
+                Token: sdk.String("dolor"),
+                Topic: sdk.String("natus"),
                 Webpush: &shared.WebpushConfig{
                     Data: map[string]string{
-                        "sed": "iste",
-                        "dolor": "natus",
-                        "laboriosam": "hic",
+                        "hic": "saepe",
+                        "fuga": "in",
                     },
                     FcmOptions: &shared.WebpushFcmOptions{
-                        AnalyticsLabel: "saepe",
-                        Link: "fuga",
+                        AnalyticsLabel: sdk.String("corporis"),
+                        Link: sdk.String("iste"),
                     },
                     Headers: map[string]string{
-                        "corporis": "iste",
-                        "iure": "saepe",
+                        "saepe": "quidem",
+                        "architecto": "ipsa",
                     },
                     Notification: map[string]interface{}{
-                        "architecto": "ipsa",
-                        "reiciendis": "est",
-                        "mollitia": "laborum",
+                        "est": "mollitia",
+                        "laborum": "dolores",
+                        "dolorem": "corporis",
+                        "explicabo": "nobis",
                     },
                 },
             },
-            ValidateOnly: false,
+            ValidateOnly: sdk.Bool(false),
         },
-        AccessToken: "dolores",
-        Alt: "json",
-        Callback: "corporis",
-        Fields: "explicabo",
-        Key: "nobis",
-        OauthToken: "enim",
-        Parent: "omnis",
-        PrettyPrint: false,
-        QuotaUser: "nemo",
-        UploadType: "minima",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FcmProjectsMessagesSend(ctx, req, operations.FcmProjectsMessagesSendSecurity{
+        AccessToken: sdk.String("enim"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nemo"),
+        Fields: sdk.String("minima"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("accusantium"),
+        Parent: "iure",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("culpa"),
+        UploadType: sdk.String("doloribus"),
+        UploadProtocol: sdk.String("sapiente"),
+    }, operations.FcmProjectsMessagesSendSecurity{
         Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -177,9 +175,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `FcmProjectsMessagesSend` - Send a message to specified target (a registration token, topic or condition).
+* [FcmProjectsMessagesSend](docs/projects/README.md#fcmprojectsmessagessend) - Send a message to specified target (a registration token, topic or condition).
 <!-- End SDK Available Operations -->
 
 ### Maturity

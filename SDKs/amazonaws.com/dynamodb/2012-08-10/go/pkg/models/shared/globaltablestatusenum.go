@@ -16,12 +16,16 @@ const (
 	GlobalTableStatusEnumUpdating GlobalTableStatusEnum = "UPDATING"
 )
 
+func (e GlobalTableStatusEnum) ToPointer() *GlobalTableStatusEnum {
+	return &e
+}
+
 func (e *GlobalTableStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -29,9 +33,9 @@ func (e *GlobalTableStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UPDATING":
-		*e = GlobalTableStatusEnum(s)
+		*e = GlobalTableStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GlobalTableStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GlobalTableStatusEnum: %v", v)
 	}
 }

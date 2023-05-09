@@ -34,7 +34,10 @@ func newChromeosdevices(defaultClient, securityClient HTTPClient, serverURL, lan
 // DirectoryChromeosdevicesAction - Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will consume a device license. If you do not have sufficient licenses available when completing the re-enable action, you will receive an error. For more information about deprovisioning and disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
 func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, request operations.DirectoryChromeosdevicesActionRequest, security operations.DirectoryChromeosdevicesActionSecurity) (*operations.DirectoryChromeosdevicesActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDeviceAction", "json")
 	if err != nil {
@@ -80,7 +83,10 @@ func (s *chromeosdevices) DirectoryChromeosdevicesAction(ctx context.Context, re
 // DirectoryChromeosdevicesGet - Retrieves a Chrome OS device's properties.
 func (s *chromeosdevices) DirectoryChromeosdevicesGet(ctx context.Context, request operations.DirectoryChromeosdevicesGetRequest, security operations.DirectoryChromeosdevicesGetSecurity) (*operations.DirectoryChromeosdevicesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *chromeosdevices) DirectoryChromeosdevicesGet(ctx context.Context, reque
 // DirectoryChromeosdevicesList - Retrieves a paginated list of Chrome OS devices within an account.
 func (s *chromeosdevices) DirectoryChromeosdevicesList(ctx context.Context, request operations.DirectoryChromeosdevicesListRequest, security operations.DirectoryChromeosdevicesListSecurity) (*operations.DirectoryChromeosdevicesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *chromeosdevices) DirectoryChromeosdevicesList(ctx context.Context, requ
 // DirectoryChromeosdevicesMoveDevicesToOu - Moves or inserts multiple Chrome OS devices to an organizational unit. You can move up to 50 devices at once.
 func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Context, request operations.DirectoryChromeosdevicesMoveDevicesToOuRequest, security operations.DirectoryChromeosdevicesMoveDevicesToOuSecurity) (*operations.DirectoryChromeosdevicesMoveDevicesToOuResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/moveDevicesToOu", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsMoveDevicesToOu", "json")
 	if err != nil {
@@ -222,7 +234,10 @@ func (s *chromeosdevices) DirectoryChromeosdevicesMoveDevicesToOu(ctx context.Co
 // DirectoryChromeosdevicesPatch - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, request operations.DirectoryChromeosdevicesPatchRequest, security operations.DirectoryChromeosdevicesPatchSecurity) (*operations.DirectoryChromeosdevicesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDevice", "json")
 	if err != nil {
@@ -277,7 +292,10 @@ func (s *chromeosdevices) DirectoryChromeosdevicesPatch(ctx context.Context, req
 // DirectoryChromeosdevicesUpdate - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`.
 func (s *chromeosdevices) DirectoryChromeosdevicesUpdate(ctx context.Context, request operations.DirectoryChromeosdevicesUpdateRequest, security operations.DirectoryChromeosdevicesUpdateSecurity) (*operations.DirectoryChromeosdevicesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/devices/chromeos/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChromeOsDevice", "json")
 	if err != nil {

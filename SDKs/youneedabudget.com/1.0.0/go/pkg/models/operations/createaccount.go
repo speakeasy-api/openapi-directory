@@ -10,7 +10,7 @@ import (
 type CreateAccountRequest struct {
 	// The account to create.
 	PostAccountWrapper shared.PostAccountWrapper `request:"mediaType=application/json"`
-	// The id of the budget ("last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget)
+	// The id of the budget ("last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget)
 	BudgetID string `pathParam:"style=simple,explode=false,name=budget_id"`
 }
 

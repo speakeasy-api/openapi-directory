@@ -17,12 +17,16 @@ const (
 	NodeRemoveParameterNodeDeallocationOptionEnumRetaineddata   NodeRemoveParameterNodeDeallocationOptionEnum = "retaineddata"
 )
 
+func (e NodeRemoveParameterNodeDeallocationOptionEnum) ToPointer() *NodeRemoveParameterNodeDeallocationOptionEnum {
+	return &e
+}
+
 func (e *NodeRemoveParameterNodeDeallocationOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "requeue":
 		fallthrough
 	case "terminate":
@@ -30,10 +34,10 @@ func (e *NodeRemoveParameterNodeDeallocationOptionEnum) UnmarshalJSON(data []byt
 	case "taskcompletion":
 		fallthrough
 	case "retaineddata":
-		*e = NodeRemoveParameterNodeDeallocationOptionEnum(s)
+		*e = NodeRemoveParameterNodeDeallocationOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodeRemoveParameterNodeDeallocationOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for NodeRemoveParameterNodeDeallocationOptionEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	TeamsListDiscussionsDirectionEnumDesc TeamsListDiscussionsDirectionEnum = "desc"
 )
 
+func (e TeamsListDiscussionsDirectionEnum) ToPointer() *TeamsListDiscussionsDirectionEnum {
+	return &e
+}
+
 func (e *TeamsListDiscussionsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = TeamsListDiscussionsDirectionEnum(s)
+		*e = TeamsListDiscussionsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsListDiscussionsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsListDiscussionsDirectionEnum: %v", v)
 	}
 }
 

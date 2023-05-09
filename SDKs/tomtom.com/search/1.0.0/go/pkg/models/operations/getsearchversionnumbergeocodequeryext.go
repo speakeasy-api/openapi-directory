@@ -39,6 +39,8 @@ type GetSearchVersionNumberGeocodeQueryExtRequest struct {
 	// If radius <b>and</b> position are set, the results will be constrained to the defined area. The radius parameter is specified in meters.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// If the "storeResult" flag is set, the query will be interpreted as a stored geocode and will be billed according to the terms of use.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	StoreResult *bool `queryParam:"style=form,explode=true,name=storeResult"`
 	// Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
 	TopLeft *string `queryParam:"style=form,explode=true,name=topLeft"`

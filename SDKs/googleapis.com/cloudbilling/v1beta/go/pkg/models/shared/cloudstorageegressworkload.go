@@ -19,12 +19,16 @@ const (
 	CloudStorageEgressWorkloadDestinationContinentEnumDestinationContinentSouthAmerica CloudStorageEgressWorkloadDestinationContinentEnum = "DESTINATION_CONTINENT_SOUTH_AMERICA"
 )
 
+func (e CloudStorageEgressWorkloadDestinationContinentEnum) ToPointer() *CloudStorageEgressWorkloadDestinationContinentEnum {
+	return &e
+}
+
 func (e *CloudStorageEgressWorkloadDestinationContinentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESTINATION_CONTINENT_UNSPECIFIED":
 		fallthrough
 	case "DESTINATION_CONTINENT_ASIA_PACIFIC":
@@ -36,10 +40,10 @@ func (e *CloudStorageEgressWorkloadDestinationContinentEnum) UnmarshalJSON(data 
 	case "DESTINATION_CONTINENT_NORTH_AMERICA":
 		fallthrough
 	case "DESTINATION_CONTINENT_SOUTH_AMERICA":
-		*e = CloudStorageEgressWorkloadDestinationContinentEnum(s)
+		*e = CloudStorageEgressWorkloadDestinationContinentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudStorageEgressWorkloadDestinationContinentEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudStorageEgressWorkloadDestinationContinentEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	CloudStorageEgressWorkloadSourceContinentEnumSourceContinentSouthAmerica CloudStorageEgressWorkloadSourceContinentEnum = "SOURCE_CONTINENT_SOUTH_AMERICA"
 )
 
+func (e CloudStorageEgressWorkloadSourceContinentEnum) ToPointer() *CloudStorageEgressWorkloadSourceContinentEnum {
+	return &e
+}
+
 func (e *CloudStorageEgressWorkloadSourceContinentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_CONTINENT_UNSPECIFIED":
 		fallthrough
 	case "SOURCE_CONTINENT_ASIA_PACIFIC":
@@ -72,10 +80,10 @@ func (e *CloudStorageEgressWorkloadSourceContinentEnum) UnmarshalJSON(data []byt
 	case "SOURCE_CONTINENT_NORTH_AMERICA":
 		fallthrough
 	case "SOURCE_CONTINENT_SOUTH_AMERICA":
-		*e = CloudStorageEgressWorkloadSourceContinentEnum(s)
+		*e = CloudStorageEgressWorkloadSourceContinentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudStorageEgressWorkloadSourceContinentEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudStorageEgressWorkloadSourceContinentEnum: %v", v)
 	}
 }
 

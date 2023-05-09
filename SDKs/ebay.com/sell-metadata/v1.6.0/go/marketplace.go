@@ -34,7 +34,10 @@ func newMarketplace(defaultClient, securityClient HTTPClient, serverURL, languag
 // GetAutomotivePartsCompatibilityPolicies - This method returns the eBay policies that define how to list automotive-parts-compatibility items in the categories of a specific marketplace.  <br><br>By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the <b>filter</b> query parameter to specify only the category IDs you want to review.<br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetAutomotivePartsCompatibilityPolicies(ctx context.Context, request operations.GetAutomotivePartsCompatibilityPoliciesRequest, security operations.GetAutomotivePartsCompatibilityPoliciesSecurity) (*operations.GetAutomotivePartsCompatibilityPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_automotive_parts_compatibility_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_automotive_parts_compatibility_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *marketplace) GetAutomotivePartsCompatibilityPolicies(ctx context.Contex
 // GetExtendedProducerResponsibilityPolicies - This method returns the Extended Producer Responsibility policies for one, multiple, or all eBay categories in an eBay marketplace.<br /><br />The identifier of the eBay marketplace is passed in as a path parameter, and unless one or more eBay category IDs are passed in through the filter query parameter, this method will return metadata on every applicable category for the specified marketplace.<br /><br /><span class="tablenote"><span style="color:#004680"><strong>Note:</strong></span> Currently, the Extended Producer Responsibility policies are only applicable to a limited number of categories, and only in the EBAY_FR marketplace.</span><br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetExtendedProducerResponsibilityPolicies(ctx context.Context, request operations.GetExtendedProducerResponsibilityPoliciesRequest, security operations.GetExtendedProducerResponsibilityPoliciesSecurity) (*operations.GetExtendedProducerResponsibilityPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_extended_producer_responsibility_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_extended_producer_responsibility_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *marketplace) GetExtendedProducerResponsibilityPolicies(ctx context.Cont
 // GetHazardousMaterialsLabels - This method returns hazardous materials label information for the specified eBay marketplace. The information includes IDs, descriptions, and URLs (as applicable) for the available signal words, statements, and pictograms. The returned statements are localized for the default langauge of the marketplace. If a marketplace does not support hazardous materials label information, an error is returned.<p>This information is used by the seller to add hazardous materials label related information to their listings (see <a href='/api-docs/sell/static/metadata/feature-regulatorhazmatcontainer.html'>Specifying hazardous material related information</a>).</p>
 func (s *marketplace) GetHazardousMaterialsLabels(ctx context.Context, request operations.GetHazardousMaterialsLabelsRequest, security operations.GetHazardousMaterialsLabelsSecurity) (*operations.GetHazardousMaterialsLabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_hazardous_materials_labels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_hazardous_materials_labels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *marketplace) GetHazardousMaterialsLabels(ctx context.Context, request o
 // GetItemConditionPolicies - This method returns item condition metadata on one, multiple, or all eBay categories on an eBay marketplace. This metadata consists of the different item conditions (with IDs) that an eBay category supports, and a boolean to indicate if an eBay category requires an item condition. <br><br>The identifier of the eBay marketplace is passed in as a path parameter, and unless one or more eBay category IDs are passed in through the <b>filter</b> query parameter, this method will return metadata on every single category for the specified marketplace. If you only want to view item condition metadata for one eBay category or a select group of eBay categories, you can pass in up to 50 eBay category ID through the <b>filter</b> query parameter.<br /><br /><span class="tablenote"><span style="color:#FF0000"><strong>Important:</strong></span> <b>Certified - Refurbished</b>-eligible sellers, and sellers who are eligible to list with the new values (EXCELLENT_REFURBISHED, VERY_GOOD_REFURBISHED, and GOOD_REFURBISHED) must use an OAuth token created with the <a href="/api-docs/static/oauth-authorization-code-grant.html" target="_blank">authorization code grant flow</a> and <b>https://api.ebay.com/oauth/api_scope/sell.inventory</b> scope in order to retrieve the refurbished conditions for the relevant categories.<br/><br/>See the <a href="/api-docs/sell/static/metadata/condition-id-values.html#Category " target="_blank">eBay Refurbished Program - Category and marketplace support</a> topic for the categories and marketplaces that support these refurbished conditions<br/><br/>These restricted item conditions will not be returned if an OAuth token created with the <a href="/api-docs/static/oauth-client-credentials-grant.html" target="_blank">client credentials grant flow</a> and <b>https://api.ebay.com/oauth/api_scope</b> scope is used, or if any seller is not eligible to list with that item condition. <br/><br/> See the <a href="/api-docs/static/oauth-scopes.html" target="_blank">Specifying OAuth scopes</a> topic for more information about specifying scopes.</span><br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetItemConditionPolicies(ctx context.Context, request operations.GetItemConditionPoliciesRequest, security operations.GetItemConditionPoliciesSecurity) (*operations.GetItemConditionPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_item_condition_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_item_condition_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -248,7 +260,10 @@ func (s *marketplace) GetItemConditionPolicies(ctx context.Context, request oper
 // GetListingStructurePolicies - This method returns the eBay policies that define the allowed listing structures for the categories of a specific marketplace. The listing-structure policies currently pertain to whether or not you can list items with variations.  <br><br>By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the <b>filter</b> query parameter to specify only the category IDs you want to review.<br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetListingStructurePolicies(ctx context.Context, request operations.GetListingStructurePoliciesRequest, security operations.GetListingStructurePoliciesSecurity) (*operations.GetListingStructurePoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_listing_structure_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_listing_structure_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -303,7 +318,10 @@ func (s *marketplace) GetListingStructurePolicies(ctx context.Context, request o
 // GetNegotiatedPricePolicies - This method returns the eBay policies that define the supported negotiated price features (like "best offer") for the categories of a specific marketplace.  <br><br>By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the <b>filter</b> query parameter to specify only the category IDs you want to review.<br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetNegotiatedPricePolicies(ctx context.Context, request operations.GetNegotiatedPricePoliciesRequest, security operations.GetNegotiatedPricePoliciesSecurity) (*operations.GetNegotiatedPricePoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_negotiated_price_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_negotiated_price_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,7 +376,10 @@ func (s *marketplace) GetNegotiatedPricePolicies(ctx context.Context, request op
 // GetReturnPolicies - This method returns the eBay policies that define whether or not you must include a return policy for the items you list in the categories of a specific marketplace, plus the guidelines for creating domestic and international return policies in the different eBay categories.  <br><br>By default, this method returns the entire category tree for the specified marketplace. You can limit the size of the result set by using the <b>filter</b> query parameter to specify only the category IDs you want to review.<br /><br /><span class="tablenote"><span style="color:#478415"><strong>Tip:</strong></span> This method can potentially return a very large response payload. eBay recommends that the response payload be compressed by passing in the <b>Accept-Encoding</b> request header and setting the value to <code>application/gzip</code>.</span>
 func (s *marketplace) GetReturnPolicies(ctx context.Context, request operations.GetReturnPoliciesRequest, security operations.GetReturnPoliciesSecurity) (*operations.GetReturnPoliciesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_return_policies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/marketplace/{marketplace_id}/get_return_policies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

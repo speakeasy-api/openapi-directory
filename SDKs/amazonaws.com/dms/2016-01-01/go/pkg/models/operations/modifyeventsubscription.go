@@ -16,17 +16,21 @@ const (
 	ModifyEventSubscriptionXAmzTargetEnumAmazonDmSv20160101ModifyEventSubscription ModifyEventSubscriptionXAmzTargetEnum = "AmazonDMSv20160101.ModifyEventSubscription"
 )
 
+func (e ModifyEventSubscriptionXAmzTargetEnum) ToPointer() *ModifyEventSubscriptionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ModifyEventSubscriptionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.ModifyEventSubscription":
-		*e = ModifyEventSubscriptionXAmzTargetEnum(s)
+		*e = ModifyEventSubscriptionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyEventSubscriptionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyEventSubscriptionXAmzTargetEnum: %v", v)
 	}
 }
 

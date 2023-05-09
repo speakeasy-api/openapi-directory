@@ -47,7 +47,10 @@ func newPrimaryIPActions(defaultClient, securityClient HTTPClient, serverURL, la
 // | `server_has_ipv6`             | The server already has an ipv6 address                        |
 func (s *primaryIPActions) PostPrimaryIpsIDActionsAssign(ctx context.Context, request operations.PostPrimaryIpsIDActionsAssignRequest) (*operations.PostPrimaryIpsIDActionsAssignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/assign", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/assign", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *primaryIPActions) PostPrimaryIpsIDActionsAssign(ctx context.Context, re
 // Changes the hostname that will appear when getting the hostname belonging to this Primary IP.
 func (s *primaryIPActions) PostPrimaryIpsIDActionsChangeDNSPtr(ctx context.Context, request operations.PostPrimaryIpsIDActionsChangeDNSPtrRequest) (*operations.PostPrimaryIpsIDActionsChangeDNSPtrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/change_dns_ptr", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/change_dns_ptr", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *primaryIPActions) PostPrimaryIpsIDActionsChangeDNSPtr(ctx context.Conte
 // A Primary IP can only be delete protected if its `auto_delete` property is set to `false`.
 func (s *primaryIPActions) PostPrimaryIpsIDActionsChangeProtection(ctx context.Context, request operations.PostPrimaryIpsIDActionsChangeProtectionRequest) (*operations.PostPrimaryIpsIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/change_protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/change_protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -216,7 +225,10 @@ func (s *primaryIPActions) PostPrimaryIpsIDActionsChangeProtection(ctx context.C
 // | `server_is_load_balancer_target`  | The server ipv4 address is a loadbalancer target              |
 func (s *primaryIPActions) PostPrimaryIpsIDActionsUnassign(ctx context.Context, request operations.PostPrimaryIpsIDActionsUnassignRequest) (*operations.PostPrimaryIpsIDActionsUnassignResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/unassign", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/primary_ips/{id}/actions/unassign", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

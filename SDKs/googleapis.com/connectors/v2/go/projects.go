@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ConnectorsProjectsLocationsConnectionsActionsExecute - Executes an action with the name specified in the request. The input parameters for executing the action are passed through the body of the ExecuteAction request.
 func (s *projects) ConnectorsProjectsLocationsConnectionsActionsExecute(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest, security operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity) (*operations.ConnectorsProjectsLocationsConnectionsActionsExecuteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:execute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:execute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecuteActionRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsActionsExecute(ctx cont
 // ConnectorsProjectsLocationsConnectionsActionsList - Gets the schema of all the actions supported by the connector.
 func (s *projects) ConnectorsProjectsLocationsConnectionsActionsList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsActionsListRequest, security operations.ConnectorsProjectsLocationsConnectionsActionsListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsActionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsActionsList(ctx context
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreate - Creates a new entity row of the specified entity type in the external system. The field values for creating the row are contained in the body of the request. The response message contains a `Entity` message object returned as a response by the external system.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreate(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesCrea
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDelete - Deletes an existing entity row matching the entity type and entity id specified in the request.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDelete(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDele
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditions - Deletes entities based on conditions specified in the request and not on entity id.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditions(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDeleteEntitiesWithConditionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{entityType}/entities:deleteEntitiesWithConditions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{entityType}/entities:deleteEntitiesWithConditions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesDele
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGet - Gets a single entity row matching the entity type and entity id specified in the request.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGet(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesGet(
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesList - Lists entity rows of a particular entity type contained in the request. Note: 1. Currently, only max of one 'sort_by' column is supported. 2. If no 'sort_by' column is provided, the primary key of the table is used. If zero or more than one primary key is available, we default to the unpaginated list entities logic which only returns the first page. 3. The values of the 'sort_by' columns must uniquely identify an entity row, otherwise undefined behaviors may be observed during pagination. 4. Since transactions are not supported, any updates, inserts or deletes during pagination can lead to stale data being returned or other unexpected behaviors.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesList
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatch - Updates an existing entity row matching the entity type and entity id specified in the request. The fields in the entity row that need to be modified are contained in the body of the request. All unspecified fields are left unchanged. The response message contains a `Entity` message object returned as a response by the external system.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatch(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityInput", "json")
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesPatc
 // ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditions - Updates entities based on conditions specified in the request and not on entity id.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditions(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpdateEntitiesWithConditionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{entityType}/entities:updateEntitiesWithConditions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{entityType}/entities:updateEntitiesWithConditions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EntityInput", "json")
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesEntitiesUpda
 // ConnectorsProjectsLocationsConnectionsEntityTypesList - Lists metadata related to all entity types present in the external system.
 func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesList(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsEntityTypesListRequest, security operations.ConnectorsProjectsLocationsConnectionsEntityTypesListSecurity) (*operations.ConnectorsProjectsLocationsConnectionsEntityTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/entityTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) ConnectorsProjectsLocationsConnectionsEntityTypesList(ctx con
 // ConnectorsProjectsLocationsConnectionsExecuteSQLQuery - Executes a SQL statement specified in the body of the request. An example of this SQL statement in the case of Salesforce connector would be 'select * from Account a, Order o where a.Id = o.AccountId'.
 func (s *projects) ConnectorsProjectsLocationsConnectionsExecuteSQLQuery(ctx context.Context, request operations.ConnectorsProjectsLocationsConnectionsExecuteSQLQueryRequest, security operations.ConnectorsProjectsLocationsConnectionsExecuteSQLQuerySecurity) (*operations.ConnectorsProjectsLocationsConnectionsExecuteSQLQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{connection}:executeSqlQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{connection}:executeSqlQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExecuteSQLQueryRequest", "json")
 	if err != nil {

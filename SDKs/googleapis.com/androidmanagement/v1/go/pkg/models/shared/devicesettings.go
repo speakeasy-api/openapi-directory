@@ -20,12 +20,16 @@ const (
 	DeviceSettingsEncryptionStatusEnumActivePerUser               DeviceSettingsEncryptionStatusEnum = "ACTIVE_PER_USER"
 )
 
+func (e DeviceSettingsEncryptionStatusEnum) ToPointer() *DeviceSettingsEncryptionStatusEnum {
+	return &e
+}
+
 func (e *DeviceSettingsEncryptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_STATUS_UNSPECIFIED":
 		fallthrough
 	case "UNSUPPORTED":
@@ -39,10 +43,10 @@ func (e *DeviceSettingsEncryptionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE_DEFAULT_KEY":
 		fallthrough
 	case "ACTIVE_PER_USER":
-		*e = DeviceSettingsEncryptionStatusEnum(s)
+		*e = DeviceSettingsEncryptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceSettingsEncryptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceSettingsEncryptionStatusEnum: %v", v)
 	}
 }
 

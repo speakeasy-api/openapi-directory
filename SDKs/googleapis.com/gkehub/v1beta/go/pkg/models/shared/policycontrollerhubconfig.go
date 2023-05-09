@@ -17,12 +17,16 @@ const (
 	PolicyControllerHubConfigInstallSpecEnumInstallSpecSuspended    PolicyControllerHubConfigInstallSpecEnum = "INSTALL_SPEC_SUSPENDED"
 )
 
+func (e PolicyControllerHubConfigInstallSpecEnum) ToPointer() *PolicyControllerHubConfigInstallSpecEnum {
+	return &e
+}
+
 func (e *PolicyControllerHubConfigInstallSpecEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALL_SPEC_UNSPECIFIED":
 		fallthrough
 	case "INSTALL_SPEC_NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *PolicyControllerHubConfigInstallSpecEnum) UnmarshalJSON(data []byte) er
 	case "INSTALL_SPEC_ENABLED":
 		fallthrough
 	case "INSTALL_SPEC_SUSPENDED":
-		*e = PolicyControllerHubConfigInstallSpecEnum(s)
+		*e = PolicyControllerHubConfigInstallSpecEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyControllerHubConfigInstallSpecEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyControllerHubConfigInstallSpecEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type PolicyControllerHubConfig struct {
 	AuditIntervalSeconds *string `json:"auditIntervalSeconds,omitempty"`
 	// The maximum number of audit violations to be stored in a constraint. If not set, the internal default (currently 20) will be used.
 	ConstraintViolationLimit *string `json:"constraintViolationLimit,omitempty"`
-	// Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+	// Map of deployment configs to deployments ("admission", "audit", "mutation').
 	DeploymentConfigs map[string]PolicyControllerPolicyControllerDeploymentConfig `json:"deploymentConfigs,omitempty"`
 	// The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
 	ExemptableNamespaces []string `json:"exemptableNamespaces,omitempty"`

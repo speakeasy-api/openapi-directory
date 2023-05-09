@@ -34,6 +34,8 @@ func newVeteranConfirmationStatus(defaultClient, securityClient HTTPClient, serv
 }
 
 // GetVeteranStatus - Get confirmation about an individual's Veteran status according to the VA
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *veteranConfirmationStatus) GetVeteranStatus(ctx context.Context, request shared.VeteranStatusRequest, security operations.GetVeteranStatusSecurity) (*operations.GetVeteranStatusResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/status"

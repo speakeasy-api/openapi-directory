@@ -17,12 +17,16 @@ const (
 	EnvironmentTypeEnumDraft  EnvironmentTypeEnum = "draft"
 )
 
+func (e EnvironmentTypeEnum) ToPointer() *EnvironmentTypeEnum {
+	return &e
+}
+
 func (e *EnvironmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
 		fallthrough
 	case "live":
@@ -30,10 +34,10 @@ func (e *EnvironmentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "latest":
 		fallthrough
 	case "draft":
-		*e = EnvironmentTypeEnum(s)
+		*e = EnvironmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentTypeEnum: %v", v)
 	}
 }
 

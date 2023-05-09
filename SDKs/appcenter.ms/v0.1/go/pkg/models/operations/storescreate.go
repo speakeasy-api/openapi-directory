@@ -50,12 +50,16 @@ const (
 	StoresCreateRequestBodyTrackEnumTestflightExternal StoresCreateRequestBodyTrackEnum = "testflight-external"
 )
 
+func (e StoresCreateRequestBodyTrackEnum) ToPointer() *StoresCreateRequestBodyTrackEnum {
+	return &e
+}
+
 func (e *StoresCreateRequestBodyTrackEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "production":
 		fallthrough
 	case "alpha":
@@ -65,10 +69,10 @@ func (e *StoresCreateRequestBodyTrackEnum) UnmarshalJSON(data []byte) error {
 	case "testflight-internal":
 		fallthrough
 	case "testflight-external":
-		*e = StoresCreateRequestBodyTrackEnum(s)
+		*e = StoresCreateRequestBodyTrackEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresCreateRequestBodyTrackEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresCreateRequestBodyTrackEnum: %v", v)
 	}
 }
 
@@ -81,21 +85,25 @@ const (
 	StoresCreateRequestBodyTypeEnumIntune     StoresCreateRequestBodyTypeEnum = "intune"
 )
 
+func (e StoresCreateRequestBodyTypeEnum) ToPointer() *StoresCreateRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *StoresCreateRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "googleplay":
 		fallthrough
 	case "apple":
 		fallthrough
 	case "intune":
-		*e = StoresCreateRequestBodyTypeEnum(s)
+		*e = StoresCreateRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresCreateRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresCreateRequestBodyTypeEnum: %v", v)
 	}
 }
 
@@ -133,12 +141,16 @@ const (
 	StoresCreateDefaultApplicationJSONCodeEnumTooManyRequests     StoresCreateDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoresCreateDefaultApplicationJSONCodeEnum) ToPointer() *StoresCreateDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoresCreateDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -152,10 +164,10 @@ func (e *StoresCreateDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoresCreateDefaultApplicationJSONCodeEnum(s)
+		*e = StoresCreateDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresCreateDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresCreateDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -196,12 +208,16 @@ const (
 	StoresCreate201ApplicationJSONTrackEnumTestflightExternal StoresCreate201ApplicationJSONTrackEnum = "testflight-external"
 )
 
+func (e StoresCreate201ApplicationJSONTrackEnum) ToPointer() *StoresCreate201ApplicationJSONTrackEnum {
+	return &e
+}
+
 func (e *StoresCreate201ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "production":
 		fallthrough
 	case "alpha":
@@ -211,10 +227,10 @@ func (e *StoresCreate201ApplicationJSONTrackEnum) UnmarshalJSON(data []byte) err
 	case "testflight-internal":
 		fallthrough
 	case "testflight-external":
-		*e = StoresCreate201ApplicationJSONTrackEnum(s)
+		*e = StoresCreate201ApplicationJSONTrackEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoresCreate201ApplicationJSONTrackEnum: %s", s)
+		return fmt.Errorf("invalid value for StoresCreate201ApplicationJSONTrackEnum: %v", v)
 	}
 }
 

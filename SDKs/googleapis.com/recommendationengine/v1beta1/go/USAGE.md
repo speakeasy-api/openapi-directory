@@ -2,19 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate(ctx, operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudRecommendationengineV1beta1CatalogItem: &shared.GoogleCloudRecommendationengineV1beta1CatalogItem{
             CategoryHierarchies: []shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
@@ -39,117 +40,112 @@ func main() {
                     },
                 },
             },
-            Description: "debitis",
-            ID: "ipsa",
+            Description: sdk.String("debitis"),
+            ID: sdk.String("0f467cc8-796e-4d15-9a05-dfc2ddf7cc78"),
             ItemAttributes: &shared.GoogleCloudRecommendationengineV1beta1FeatureMap{
                 CategoricalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                    "tempora": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "dolorum": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
+                            "nam",
+                        },
+                    },
+                    "officia": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                        Value: []string{
+                            "fugit",
+                            "deleniti",
+                            "hic",
+                        },
+                    },
+                    "optio": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                        Value: []string{
+                            "beatae",
+                            "commodi",
                             "molestiae",
-                            "minus",
                         },
                     },
-                    "placeat": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "modi": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "iusto",
-                            "excepturi",
-                            "nisi",
-                        },
-                    },
-                    "recusandae": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                        Value: []string{
-                            "ab",
-                            "quis",
-                            "veritatis",
-                            "deserunt",
-                        },
-                    },
-                    "perferendis": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                        Value: []string{
-                            "repellendus",
-                            "sapiente",
+                            "impedit",
                         },
                     },
                 },
                 NumericalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                    "odit": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "esse": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            8700.88,
-                            9786.19,
-                            4736.08,
-                            7991.59,
+                            5684.34,
                         },
                     },
-                    "quod": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "aspernatur": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            5204.78,
-                            7805.29,
+                            3241.41,
                         },
                     },
-                    "dolorum": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "natus": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
-                            7206.33,
-                        },
-                    },
-                    "officia": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                        Value: []float32{
-                            1433.53,
-                            5373.73,
-                            9446.69,
+                            6120.96,
                         },
                     },
                 },
             },
-            ItemGroupID: "optio",
-            LanguageCode: "totam",
+            ItemGroupID: sdk.String("dolor"),
+            LanguageCode: sdk.String("natus"),
             ProductMetadata: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem{
-                AvailableQuantity: "beatae",
-                CanonicalProductURI: "commodi",
+                AvailableQuantity: sdk.String("laboriosam"),
+                CanonicalProductURI: sdk.String("hic"),
                 Costs: map[string]float32{
-                    "modi": 1863.32,
-                    "impedit": 7369.18,
+                    "fuga": 4499.5,
+                    "corporis": 6130.64,
+                    "iure": 9023.49,
+                    "quidem": 992.8,
                 },
-                CurrencyCode: "esse",
+                CurrencyCode: sdk.String("ipsa"),
                 ExactPrice: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice{
-                    DisplayPrice: 2165.5,
-                    OriginalPrice: 5684.34,
+                    DisplayPrice: sdk.Float32(9698.1),
+                    OriginalPrice: sdk.Float32(6667.67),
                 },
                 Images: []shared.GoogleCloudRecommendationengineV1beta1Image{
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 18789,
-                        URI: "http://perky-charset.name",
-                        Width: 222321,
+                        Height: sdk.Int(670638),
+                        URI: sdk.String("http://doting-footage.com"),
+                        Width: sdk.Int(750686),
+                    },
+                    shared.GoogleCloudRecommendationengineV1beta1Image{
+                        Height: sdk.Int(315428),
+                        URI: sdk.String("https://gummy-expedition.name"),
+                        Width: sdk.Int(38425),
+                    },
+                    shared.GoogleCloudRecommendationengineV1beta1Image{
+                        Height: sdk.Int(438601),
+                        URI: sdk.String("https://wrathful-violet.com"),
+                        Width: sdk.Int(652790),
                     },
                 },
                 PriceRange: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange{
-                    Max: 6169.34,
-                    Min: 3864.89,
+                    Max: sdk.Float32(2088.76),
+                    Min: sdk.Float32(6350.59),
                 },
-                StockState: "BACKORDER",
+                StockState: shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnumStockStateUnspecified.ToPointer(),
             },
             Tags: []string{
-                "fuga",
-                "in",
-                "corporis",
-                "iste",
+                "mollitia",
+                "occaecati",
+                "numquam",
+                "commodi",
             },
-            Title: "Ms.",
+            Title: sdk.String("Ms."),
         },
-        AccessToken: "saepe",
-        Alt: "proto",
-        Callback: "architecto",
-        Fields: "ipsa",
-        Key: "reiciendis",
-        OauthToken: "est",
-        Parent: "mollitia",
-        PrettyPrint: false,
-        QuotaUser: "laborum",
-        UploadType: "dolores",
-        UploadProtocol: "dolorem",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreate(ctx, req, operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("quia"),
+        Key: sdk.String("quis"),
+        OauthToken: sdk.String("vitae"),
+        Parent: "laborum",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("animi"),
+        UploadType: sdk.String("enim"),
+        UploadProtocol: sdk.String("odit"),
+    }, operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -7,6 +7,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -18,4 +19,10 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/getabatchofconsumertransactionclassificationresults.go
 pkg/models/operations/getabatchofbusinesstransactionclassificationresults.go
+docs/sdk/README.md
+docs/batch/README.md
+docs/batch1/README.md
+docs/business/README.md
+docs/classifier/README.md
+docs/consumer/README.md
 USAGE.md

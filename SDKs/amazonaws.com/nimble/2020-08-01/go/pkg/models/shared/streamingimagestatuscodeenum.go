@@ -20,12 +20,16 @@ const (
 	StreamingImageStatusCodeEnumAccessDenied                   StreamingImageStatusCodeEnum = "ACCESS_DENIED"
 )
 
+func (e StreamingImageStatusCodeEnum) ToPointer() *StreamingImageStatusCodeEnum {
+	return &e
+}
+
 func (e *StreamingImageStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STREAMING_IMAGE_CREATE_IN_PROGRESS":
 		fallthrough
 	case "STREAMING_IMAGE_READY":
@@ -39,9 +43,9 @@ func (e *StreamingImageStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INTERNAL_ERROR":
 		fallthrough
 	case "ACCESS_DENIED":
-		*e = StreamingImageStatusCodeEnum(s)
+		*e = StreamingImageStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamingImageStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamingImageStatusCodeEnum: %v", v)
 	}
 }

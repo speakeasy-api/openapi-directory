@@ -17,12 +17,16 @@ const (
 	AttemptFailureTypeEnumRefreshSchema      AttemptFailureTypeEnum = "refresh_schema"
 )
 
+func (e AttemptFailureTypeEnum) ToPointer() *AttemptFailureTypeEnum {
+	return &e
+}
+
 func (e *AttemptFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "config_error":
 		fallthrough
 	case "system_error":
@@ -30,9 +34,9 @@ func (e *AttemptFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "manual_cancellation":
 		fallthrough
 	case "refresh_schema":
-		*e = AttemptFailureTypeEnum(s)
+		*e = AttemptFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttemptFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttemptFailureTypeEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	AutoMountStatusEnumNotMounted AutoMountStatusEnum = "NotMounted"
 )
 
+func (e AutoMountStatusEnum) ToPointer() *AutoMountStatusEnum {
+	return &e
+}
+
 func (e *AutoMountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Failed":
 		fallthrough
 	case "Pending":
@@ -29,9 +33,9 @@ func (e *AutoMountStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Mounted":
 		fallthrough
 	case "NotMounted":
-		*e = AutoMountStatusEnum(s)
+		*e = AutoMountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMountStatusEnum: %v", v)
 	}
 }

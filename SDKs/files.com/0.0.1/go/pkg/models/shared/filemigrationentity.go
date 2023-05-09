@@ -17,12 +17,16 @@ const (
 	FileMigrationEntityOperationEnumRegionalMigration FileMigrationEntityOperationEnum = "regional_migration"
 )
 
+func (e FileMigrationEntityOperationEnum) ToPointer() *FileMigrationEntityOperationEnum {
+	return &e
+}
+
 func (e *FileMigrationEntityOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "delete":
 		fallthrough
 	case "move":
@@ -30,10 +34,10 @@ func (e *FileMigrationEntityOperationEnum) UnmarshalJSON(data []byte) error {
 	case "copy":
 		fallthrough
 	case "regional_migration":
-		*e = FileMigrationEntityOperationEnum(s)
+		*e = FileMigrationEntityOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileMigrationEntityOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for FileMigrationEntityOperationEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	FileMigrationEntityStatusEnumRemovingDeferredFolders      FileMigrationEntityStatusEnum = "removing_deferred_folders"
 )
 
+func (e FileMigrationEntityStatusEnum) ToPointer() *FileMigrationEntityStatusEnum {
+	return &e
+}
+
 func (e *FileMigrationEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "counting":
@@ -96,10 +104,10 @@ func (e *FileMigrationEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "processing_recursively":
 		fallthrough
 	case "removing_deferred_folders":
-		*e = FileMigrationEntityStatusEnum(s)
+		*e = FileMigrationEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileMigrationEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for FileMigrationEntityStatusEnum: %v", v)
 	}
 }
 

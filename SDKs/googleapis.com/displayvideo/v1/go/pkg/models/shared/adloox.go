@@ -21,12 +21,16 @@ const (
 	AdlooxExcludedAdlooxCategoriesEnumFraud                 AdlooxExcludedAdlooxCategoriesEnum = "FRAUD"
 )
 
+func (e AdlooxExcludedAdlooxCategoriesEnum) ToPointer() *AdlooxExcludedAdlooxCategoriesEnum {
+	return &e
+}
+
 func (e *AdlooxExcludedAdlooxCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADLOOX_UNSPECIFIED":
 		fallthrough
 	case "ADULT_CONTENT_HARD":
@@ -44,10 +48,10 @@ func (e *AdlooxExcludedAdlooxCategoriesEnum) UnmarshalJSON(data []byte) error {
 	case "LOW_VIEWABILITY_DOMAINS":
 		fallthrough
 	case "FRAUD":
-		*e = AdlooxExcludedAdlooxCategoriesEnum(s)
+		*e = AdlooxExcludedAdlooxCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdlooxExcludedAdlooxCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for AdlooxExcludedAdlooxCategoriesEnum: %v", v)
 	}
 }
 

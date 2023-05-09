@@ -26,12 +26,16 @@ const (
 	PostUsersIDAccountsRequestBodyTypeEnumOtherLiability PostUsersIDAccountsRequestBodyTypeEnum = "other_liability"
 )
 
+func (e PostUsersIDAccountsRequestBodyTypeEnum) ToPointer() *PostUsersIDAccountsRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PostUsersIDAccountsRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bank":
 		fallthrough
 	case "credits":
@@ -53,10 +57,10 @@ func (e *PostUsersIDAccountsRequestBodyTypeEnum) UnmarshalJSON(data []byte) erro
 	case "other_asset":
 		fallthrough
 	case "other_liability":
-		*e = PostUsersIDAccountsRequestBodyTypeEnum(s)
+		*e = PostUsersIDAccountsRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostUsersIDAccountsRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostUsersIDAccountsRequestBodyTypeEnum: %v", v)
 	}
 }
 

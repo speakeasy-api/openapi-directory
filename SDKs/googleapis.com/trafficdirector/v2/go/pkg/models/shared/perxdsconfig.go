@@ -17,12 +17,16 @@ const (
 	PerXdsConfigStatusEnumError   PerXdsConfigStatusEnum = "ERROR"
 )
 
+func (e PerXdsConfigStatusEnum) ToPointer() *PerXdsConfigStatusEnum {
+	return &e
+}
+
 func (e *PerXdsConfigStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "SYNCED":
@@ -32,10 +36,10 @@ func (e *PerXdsConfigStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STALE":
 		fallthrough
 	case "ERROR":
-		*e = PerXdsConfigStatusEnum(s)
+		*e = PerXdsConfigStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerXdsConfigStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PerXdsConfigStatusEnum: %v", v)
 	}
 }
 

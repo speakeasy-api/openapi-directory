@@ -27,12 +27,16 @@ const (
 	StatusDataSetEnumTaxesAndFinances          StatusDataSetEnum = "taxes_and_finances"
 )
 
+func (e StatusDataSetEnum) ToPointer() *StatusDataSetEnum {
+	return &e
+}
+
 func (e *StatusDataSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "affiliations_and_insurances":
 		fallthrough
 	case "alert_in_media":
@@ -60,10 +64,10 @@ func (e *StatusDataSetEnum) UnmarshalJSON(data []byte) error {
 	case "vehicle_permits":
 		fallthrough
 	case "taxes_and_finances":
-		*e = StatusDataSetEnum(s)
+		*e = StatusDataSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusDataSetEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusDataSetEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	StatusStatusEnumSkipped    StatusStatusEnum = "skipped"
 )
 
+func (e StatusStatusEnum) ToPointer() *StatusStatusEnum {
+	return &e
+}
+
 func (e *StatusStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_started":
 		fallthrough
 	case "completed":
@@ -96,10 +104,10 @@ func (e *StatusStatusEnum) UnmarshalJSON(data []byte) error {
 	case "delayed":
 		fallthrough
 	case "skipped":
-		*e = StatusStatusEnum(s)
+		*e = StatusStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusStatusEnum: %v", v)
 	}
 }
 

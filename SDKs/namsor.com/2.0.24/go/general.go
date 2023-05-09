@@ -35,7 +35,10 @@ func newGeneral(defaultClient, securityClient HTTPClient, serverURL, language, s
 // NameType - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
 func (s *general) NameType(ctx context.Context, request operations.NameTypeRequest, security operations.NameTypeSecurity) (*operations.NameTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameType/{properNoun}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/nameType/{properNoun}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *general) NameTypeBatch(ctx context.Context, request shared.BatchNameIn,
 // NameTypeGeo - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
 func (s *general) NameTypeGeo(ctx context.Context, request operations.NameTypeGeoRequest, security operations.NameTypeGeoSecurity) (*operations.NameTypeGeoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api2/json/nameTypeGeo/{properNoun}/{countryIso2}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	UpdateStreamProcessorXAmzTargetEnumRekognitionServiceUpdateStreamProcessor UpdateStreamProcessorXAmzTargetEnum = "RekognitionService.UpdateStreamProcessor"
 )
 
+func (e UpdateStreamProcessorXAmzTargetEnum) ToPointer() *UpdateStreamProcessorXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateStreamProcessorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.UpdateStreamProcessor":
-		*e = UpdateStreamProcessorXAmzTargetEnum(s)
+		*e = UpdateStreamProcessorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStreamProcessorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStreamProcessorXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -52,6 +56,8 @@ type UpdateStreamProcessorResponse struct {
 	InvalidParameterException interface{}
 	// ProvisionedThroughputExceededException
 	ProvisionedThroughputExceededException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// ResourceNotFoundException
 	ResourceNotFoundException interface{}
 	StatusCode                int

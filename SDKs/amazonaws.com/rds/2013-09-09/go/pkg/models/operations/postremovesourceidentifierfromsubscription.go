@@ -15,17 +15,21 @@ const (
 	POSTRemoveSourceIdentifierFromSubscriptionActionEnumRemoveSourceIdentifierFromSubscription POSTRemoveSourceIdentifierFromSubscriptionActionEnum = "RemoveSourceIdentifierFromSubscription"
 )
 
+func (e POSTRemoveSourceIdentifierFromSubscriptionActionEnum) ToPointer() *POSTRemoveSourceIdentifierFromSubscriptionActionEnum {
+	return &e
+}
+
 func (e *POSTRemoveSourceIdentifierFromSubscriptionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveSourceIdentifierFromSubscription":
-		*e = POSTRemoveSourceIdentifierFromSubscriptionActionEnum(s)
+		*e = POSTRemoveSourceIdentifierFromSubscriptionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveSourceIdentifierFromSubscriptionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveSourceIdentifierFromSubscriptionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRemoveSourceIdentifierFromSubscriptionVersionEnumTwoThousandAndThirteen0909 POSTRemoveSourceIdentifierFromSubscriptionVersionEnum = "2013-09-09"
 )
 
+func (e POSTRemoveSourceIdentifierFromSubscriptionVersionEnum) ToPointer() *POSTRemoveSourceIdentifierFromSubscriptionVersionEnum {
+	return &e
+}
+
 func (e *POSTRemoveSourceIdentifierFromSubscriptionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-09-09":
-		*e = POSTRemoveSourceIdentifierFromSubscriptionVersionEnum(s)
+		*e = POSTRemoveSourceIdentifierFromSubscriptionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRemoveSourceIdentifierFromSubscriptionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRemoveSourceIdentifierFromSubscriptionVersionEnum: %v", v)
 	}
 }
 

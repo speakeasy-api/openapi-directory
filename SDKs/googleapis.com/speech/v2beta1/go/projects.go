@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SpeechProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) SpeechProjectsLocationsOperationsGet(ctx context.Context, request operations.SpeechProjectsLocationsOperationsGetRequest, security operations.SpeechProjectsLocationsOperationsGetSecurity) (*operations.SpeechProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) SpeechProjectsLocationsOperationsGet(ctx context.Context, req
 // SpeechProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 func (s *projects) SpeechProjectsLocationsOperationsList(ctx context.Context, request operations.SpeechProjectsLocationsOperationsListRequest, security operations.SpeechProjectsLocationsOperationsListSecurity) (*operations.SpeechProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

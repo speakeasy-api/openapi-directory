@@ -16,17 +16,21 @@ const (
 	DeleteWebACLXAmzTargetEnumAwswaf20150824DeleteWebACL DeleteWebACLXAmzTargetEnum = "AWSWAF_20150824.DeleteWebACL"
 )
 
+func (e DeleteWebACLXAmzTargetEnum) ToPointer() *DeleteWebACLXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteWebACLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.DeleteWebACL":
-		*e = DeleteWebACLXAmzTargetEnum(s)
+		*e = DeleteWebACLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteWebACLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteWebACLXAmzTargetEnum: %v", v)
 	}
 }
 

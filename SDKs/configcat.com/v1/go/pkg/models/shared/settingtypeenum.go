@@ -16,12 +16,16 @@ const (
 	SettingTypeEnumDouble  SettingTypeEnum = "double"
 )
 
+func (e SettingTypeEnum) ToPointer() *SettingTypeEnum {
+	return &e
+}
+
 func (e *SettingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "boolean":
 		fallthrough
 	case "string":
@@ -29,9 +33,9 @@ func (e *SettingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "int":
 		fallthrough
 	case "double":
-		*e = SettingTypeEnum(s)
+		*e = SettingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SettingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SettingTypeEnum: %v", v)
 	}
 }

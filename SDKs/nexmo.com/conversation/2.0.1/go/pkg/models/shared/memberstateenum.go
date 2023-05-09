@@ -17,12 +17,16 @@ const (
 	MemberStateEnumUnknown MemberStateEnum = "unknown"
 )
 
+func (e MemberStateEnum) ToPointer() *MemberStateEnum {
+	return &e
+}
+
 func (e *MemberStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invited":
 		fallthrough
 	case "joined":
@@ -30,9 +34,9 @@ func (e *MemberStateEnum) UnmarshalJSON(data []byte) error {
 	case "left":
 		fallthrough
 	case "unknown":
-		*e = MemberStateEnum(s)
+		*e = MemberStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberStateEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberStateEnum: %v", v)
 	}
 }

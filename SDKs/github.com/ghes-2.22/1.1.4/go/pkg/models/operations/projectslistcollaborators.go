@@ -21,21 +21,25 @@ const (
 	ProjectsListCollaboratorsAffiliationEnumAll     ProjectsListCollaboratorsAffiliationEnum = "all"
 )
 
+func (e ProjectsListCollaboratorsAffiliationEnum) ToPointer() *ProjectsListCollaboratorsAffiliationEnum {
+	return &e
+}
+
 func (e *ProjectsListCollaboratorsAffiliationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "outside":
 		fallthrough
 	case "direct":
 		fallthrough
 	case "all":
-		*e = ProjectsListCollaboratorsAffiliationEnum(s)
+		*e = ProjectsListCollaboratorsAffiliationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectsListCollaboratorsAffiliationEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectsListCollaboratorsAffiliationEnum: %v", v)
 	}
 }
 

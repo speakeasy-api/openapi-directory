@@ -17,12 +17,16 @@ const (
 	AppPkgNotificationTypeEnumAppPackageDeleted   AppPkgNotificationTypeEnum = "AppPackageDeleted"
 )
 
+func (e AppPkgNotificationTypeEnum) ToPointer() *AppPkgNotificationTypeEnum {
+	return &e
+}
+
 func (e *AppPkgNotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppPackageOnBoarded":
 		fallthrough
 	case "AppPacakgeEnabled":
@@ -30,9 +34,9 @@ func (e *AppPkgNotificationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AppPacakgeDisabled":
 		fallthrough
 	case "AppPackageDeleted":
-		*e = AppPkgNotificationTypeEnum(s)
+		*e = AppPkgNotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppPkgNotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppPkgNotificationTypeEnum: %v", v)
 	}
 }

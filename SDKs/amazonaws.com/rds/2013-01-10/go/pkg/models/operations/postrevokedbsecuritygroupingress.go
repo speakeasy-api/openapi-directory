@@ -15,17 +15,21 @@ const (
 	POSTRevokeDBSecurityGroupIngressActionEnumRevokeDbSecurityGroupIngress POSTRevokeDBSecurityGroupIngressActionEnum = "RevokeDBSecurityGroupIngress"
 )
 
+func (e POSTRevokeDBSecurityGroupIngressActionEnum) ToPointer() *POSTRevokeDBSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *POSTRevokeDBSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RevokeDBSecurityGroupIngress":
-		*e = POSTRevokeDBSecurityGroupIngressActionEnum(s)
+		*e = POSTRevokeDBSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRevokeDBSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRevokeDBSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRevokeDBSecurityGroupIngressVersionEnumTwoThousandAndThirteen0110 POSTRevokeDBSecurityGroupIngressVersionEnum = "2013-01-10"
 )
 
+func (e POSTRevokeDBSecurityGroupIngressVersionEnum) ToPointer() *POSTRevokeDBSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *POSTRevokeDBSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = POSTRevokeDBSecurityGroupIngressVersionEnum(s)
+		*e = POSTRevokeDBSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRevokeDBSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRevokeDBSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

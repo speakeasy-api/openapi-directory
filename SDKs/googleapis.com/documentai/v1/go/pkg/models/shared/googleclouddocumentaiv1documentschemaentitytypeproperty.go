@@ -18,12 +18,16 @@ const (
 	GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnumRequiredMultiple          GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum = "REQUIRED_MULTIPLE"
 )
 
+func (e GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum) ToPointer() *GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OCCURRENCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "OPTIONAL_ONCE":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEn
 	case "REQUIRED_ONCE":
 		fallthrough
 	case "REQUIRED_MULTIPLE":
-		*e = GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum(s)
+		*e = GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1DocumentSchemaEntityTypePropertyOccurrenceTypeEnum: %v", v)
 	}
 }
 

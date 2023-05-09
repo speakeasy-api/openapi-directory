@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - This API reference provides descriptions, syntax, and other details about each of the actions and data types for AWS Migration Hub Orchestrator. he topic for each action shows the API request parameters and the response. Alternatively, you can use one of the AWS SDKs to access an API that is tailored to the programming language or platform that you're using.
 // https://docs.aws.amazon.com/migrationhub-orchestrator/ - Amazon Web Services documentation
 type SDK struct {
@@ -402,7 +417,10 @@ func (s *SDK) CreateWorkflowStepGroup(ctx context.Context, request operations.Cr
 // DeleteWorkflow - Delete a migration workflow. You must pause a running workflow in Migration Hub Orchestrator console to delete it.
 func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkflowRequest) (*operations.DeleteWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -498,7 +516,10 @@ func (s *SDK) DeleteWorkflow(ctx context.Context, request operations.DeleteWorkf
 // DeleteWorkflowStep - Delete a step in a migration workflow. Pause the workflow to delete a running step.
 func (s *SDK) DeleteWorkflowStep(ctx context.Context, request operations.DeleteWorkflowStepRequest) (*operations.DeleteWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#stepGroupId&workflowId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#stepGroupId&workflowId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -598,7 +619,10 @@ func (s *SDK) DeleteWorkflowStep(ctx context.Context, request operations.DeleteW
 // DeleteWorkflowStepGroup - Delete a step group in a migration workflow.
 func (s *SDK) DeleteWorkflowStepGroup(ctx context.Context, request operations.DeleteWorkflowStepGroupRequest) (*operations.DeleteWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -698,7 +722,10 @@ func (s *SDK) DeleteWorkflowStepGroup(ctx context.Context, request operations.De
 // GetTemplate - Get the template you want to use for creating a migration workflow.
 func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateRequest) (*operations.GetTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflowtemplate/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflowtemplate/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -784,7 +811,10 @@ func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateReq
 // GetTemplateStep - Get a specific step in a template.
 func (s *SDK) GetTemplateStep(ctx context.Context, request operations.GetTemplateStepRequest) (*operations.GetTemplateStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templatestep/{id}#templateId&stepGroupId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templatestep/{id}#templateId&stepGroupId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -884,7 +914,10 @@ func (s *SDK) GetTemplateStep(ctx context.Context, request operations.GetTemplat
 // GetTemplateStepGroup - Get a step group in a template.
 func (s *SDK) GetTemplateStepGroup(ctx context.Context, request operations.GetTemplateStepGroupRequest) (*operations.GetTemplateStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{templateId}/stepgroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{templateId}/stepgroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -980,7 +1013,10 @@ func (s *SDK) GetTemplateStepGroup(ctx context.Context, request operations.GetTe
 // GetWorkflow - Get migration workflow.
 func (s *SDK) GetWorkflow(ctx context.Context, request operations.GetWorkflowRequest) (*operations.GetWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1076,7 +1112,10 @@ func (s *SDK) GetWorkflow(ctx context.Context, request operations.GetWorkflowReq
 // GetWorkflowStep - Get a step in the migration workflow.
 func (s *SDK) GetWorkflowStep(ctx context.Context, request operations.GetWorkflowStepRequest) (*operations.GetWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#workflowId&stepGroupId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}#workflowId&stepGroupId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1166,7 +1205,10 @@ func (s *SDK) GetWorkflowStep(ctx context.Context, request operations.GetWorkflo
 // GetWorkflowStepGroup - Get the step group of a migration workflow.
 func (s *SDK) GetWorkflowStepGroup(ctx context.Context, request operations.GetWorkflowStepGroupRequest) (*operations.GetWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1346,7 +1388,10 @@ func (s *SDK) ListPlugins(ctx context.Context, request operations.ListPluginsReq
 // ListTagsForResource - List the tags added to a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1412,7 +1457,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTemplateStepGroups - List the step groups in a template.
 func (s *SDK) ListTemplateStepGroups(ctx context.Context, request operations.ListTemplateStepGroupsRequest) (*operations.ListTemplateStepGroupsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templatestepgroups/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templatestepgroups/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1782,7 +1830,10 @@ func (s *SDK) ListWorkflowStepGroups(ctx context.Context, request operations.Lis
 // ListWorkflowSteps - List the steps in a workflow.
 func (s *SDK) ListWorkflowSteps(ctx context.Context, request operations.ListWorkflowStepsRequest) (*operations.ListWorkflowStepsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflow/{workflowId}/workflowstepgroups/{stepGroupId}/workflowsteps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflow/{workflowId}/workflowstepgroups/{stepGroupId}/workflowsteps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1972,7 +2023,10 @@ func (s *SDK) ListWorkflows(ctx context.Context, request operations.ListWorkflow
 // RetryWorkflowStep - Retry a failed step in a migration workflow.
 func (s *SDK) RetryWorkflowStep(ctx context.Context, request operations.RetryWorkflowStepRequest) (*operations.RetryWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/retryworkflowstep/{id}#workflowId&stepGroupId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/retryworkflowstep/{id}#workflowId&stepGroupId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2062,7 +2116,10 @@ func (s *SDK) RetryWorkflowStep(ctx context.Context, request operations.RetryWor
 // StartWorkflow - Start a migration workflow.
 func (s *SDK) StartWorkflow(ctx context.Context, request operations.StartWorkflowRequest) (*operations.StartWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2158,7 +2215,10 @@ func (s *SDK) StartWorkflow(ctx context.Context, request operations.StartWorkflo
 // StopWorkflow - Stop an ongoing migration workflow.
 func (s *SDK) StopWorkflow(ctx context.Context, request operations.StopWorkflowRequest) (*operations.StopWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2254,7 +2314,10 @@ func (s *SDK) StopWorkflow(ctx context.Context, request operations.StopWorkflowR
 // TagResource - Tag a resource by specifying its Amazon Resource Name (ARN).
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2330,7 +2393,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deletes the tags for a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2400,7 +2466,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateWorkflow - Update a migration workflow.
 func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkflowRequest) (*operations.UpdateWorkflowResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/migrationworkflow/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2506,7 +2575,10 @@ func (s *SDK) UpdateWorkflow(ctx context.Context, request operations.UpdateWorkf
 // UpdateWorkflowStep - Update a step in a migration workflow.
 func (s *SDK) UpdateWorkflowStep(ctx context.Context, request operations.UpdateWorkflowStepRequest) (*operations.UpdateWorkflowStepResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstep/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2602,7 +2674,10 @@ func (s *SDK) UpdateWorkflowStep(ctx context.Context, request operations.UpdateW
 // UpdateWorkflowStepGroup - Update the step group in a migration workflow.
 func (s *SDK) UpdateWorkflowStepGroup(ctx context.Context, request operations.UpdateWorkflowStepGroupRequest) (*operations.UpdateWorkflowStepGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workflowstepgroup/{id}#workflowId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -14,17 +14,21 @@ const (
 	TwitterHandleEnumAtATwitterHandle TwitterHandleEnum = "@a Twitter handle"
 )
 
+func (e TwitterHandleEnum) ToPointer() *TwitterHandleEnum {
+	return &e
+}
+
 func (e *TwitterHandleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "@a Twitter handle":
-		*e = TwitterHandleEnum(s)
+		*e = TwitterHandleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TwitterHandleEnum: %s", s)
+		return fmt.Errorf("invalid value for TwitterHandleEnum: %v", v)
 	}
 }
 

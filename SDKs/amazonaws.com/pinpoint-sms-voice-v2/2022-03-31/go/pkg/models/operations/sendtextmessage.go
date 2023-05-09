@@ -16,17 +16,21 @@ const (
 	SendTextMessageXAmzTargetEnumPinpointSmsVoiceV2SendTextMessage SendTextMessageXAmzTargetEnum = "PinpointSMSVoiceV2.SendTextMessage"
 )
 
+func (e SendTextMessageXAmzTargetEnum) ToPointer() *SendTextMessageXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendTextMessageXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.SendTextMessage":
-		*e = SendTextMessageXAmzTargetEnum(s)
+		*e = SendTextMessageXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendTextMessageXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendTextMessageXAmzTargetEnum: %v", v)
 	}
 }
 

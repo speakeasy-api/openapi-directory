@@ -16,17 +16,21 @@ const (
 	DescribeMergeConflictsXAmzTargetEnumCodeCommit20150413DescribeMergeConflicts DescribeMergeConflictsXAmzTargetEnum = "CodeCommit_20150413.DescribeMergeConflicts"
 )
 
+func (e DescribeMergeConflictsXAmzTargetEnum) ToPointer() *DescribeMergeConflictsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeMergeConflictsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.DescribeMergeConflicts":
-		*e = DescribeMergeConflictsXAmzTargetEnum(s)
+		*e = DescribeMergeConflictsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeMergeConflictsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeMergeConflictsXAmzTargetEnum: %v", v)
 	}
 }
 

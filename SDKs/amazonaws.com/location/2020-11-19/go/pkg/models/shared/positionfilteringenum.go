@@ -15,20 +15,24 @@ const (
 	PositionFilteringEnumAccuracyBased PositionFilteringEnum = "AccuracyBased"
 )
 
+func (e PositionFilteringEnum) ToPointer() *PositionFilteringEnum {
+	return &e
+}
+
 func (e *PositionFilteringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimeBased":
 		fallthrough
 	case "DistanceBased":
 		fallthrough
 	case "AccuracyBased":
-		*e = PositionFilteringEnum(s)
+		*e = PositionFilteringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PositionFilteringEnum: %s", s)
+		return fmt.Errorf("invalid value for PositionFilteringEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newPartners(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptions - Bulk edits targeting options under a single partner. The operation will delete the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and then create the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
 func (s *partners) DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptions(ctx context.Context, request operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsRequest, security operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsSecurity) (*operations.DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}:bulkEditPartnerAssignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}:bulkEditPartnerAssignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditPartnerAssignedTargetingOptionsRequestInput", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *partners) DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptions(c
 // DisplayvideoPartnersChannelsCreate - Creates a new channel. Returns the newly created channel if successful.
 func (s *partners) DisplayvideoPartnersChannelsCreate(ctx context.Context, request operations.DisplayvideoPartnersChannelsCreateRequest, security operations.DisplayvideoPartnersChannelsCreateSecurity) (*operations.DisplayvideoPartnersChannelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *partners) DisplayvideoPartnersChannelsCreate(ctx context.Context, reque
 // DisplayvideoPartnersChannelsList - Lists channels for a partner or advertiser.
 func (s *partners) DisplayvideoPartnersChannelsList(ctx context.Context, request operations.DisplayvideoPartnersChannelsListRequest, security operations.DisplayvideoPartnersChannelsListSecurity) (*operations.DisplayvideoPartnersChannelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *partners) DisplayvideoPartnersChannelsList(ctx context.Context, request
 // DisplayvideoPartnersChannelsPatch - Updates a channel. Returns the updated channel if successful.
 func (s *partners) DisplayvideoPartnersChannelsPatch(ctx context.Context, request operations.DisplayvideoPartnersChannelsPatchRequest, security operations.DisplayvideoPartnersChannelsPatchSecurity) (*operations.DisplayvideoPartnersChannelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChannelInput", "json")
 	if err != nil {
@@ -248,7 +260,10 @@ func (s *partners) DisplayvideoPartnersChannelsPatch(ctx context.Context, reques
 // DisplayvideoPartnersChannelsSitesBulkEdit - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
 func (s *partners) DisplayvideoPartnersChannelsSitesBulkEdit(ctx context.Context, request operations.DisplayvideoPartnersChannelsSitesBulkEditRequest, security operations.DisplayvideoPartnersChannelsSitesBulkEditSecurity) (*operations.DisplayvideoPartnersChannelsSitesBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites:bulkEdit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites:bulkEdit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditSitesRequestInput", "json")
 	if err != nil {
@@ -303,7 +318,10 @@ func (s *partners) DisplayvideoPartnersChannelsSitesBulkEdit(ctx context.Context
 // DisplayvideoPartnersChannelsSitesDelete - Deletes a site from a channel.
 func (s *partners) DisplayvideoPartnersChannelsSitesDelete(ctx context.Context, request operations.DisplayvideoPartnersChannelsSitesDeleteRequest, security operations.DisplayvideoPartnersChannelsSitesDeleteSecurity) (*operations.DisplayvideoPartnersChannelsSitesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites/{urlOrAppId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites/{urlOrAppId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -351,7 +369,10 @@ func (s *partners) DisplayvideoPartnersChannelsSitesDelete(ctx context.Context, 
 // DisplayvideoPartnersChannelsSitesList - Lists sites in a channel.
 func (s *partners) DisplayvideoPartnersChannelsSitesList(ctx context.Context, request operations.DisplayvideoPartnersChannelsSitesListRequest, security operations.DisplayvideoPartnersChannelsSitesListSecurity) (*operations.DisplayvideoPartnersChannelsSitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -399,7 +420,10 @@ func (s *partners) DisplayvideoPartnersChannelsSitesList(ctx context.Context, re
 // DisplayvideoPartnersChannelsSitesReplace - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
 func (s *partners) DisplayvideoPartnersChannelsSitesReplace(ctx context.Context, request operations.DisplayvideoPartnersChannelsSitesReplaceRequest, security operations.DisplayvideoPartnersChannelsSitesReplaceSecurity) (*operations.DisplayvideoPartnersChannelsSitesReplaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites:replace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/channels/{channelId}/sites:replace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReplaceSitesRequestInput", "json")
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *partners) DisplayvideoPartnersChannelsSitesReplace(ctx context.Context,
 // DisplayvideoPartnersGet - Gets a partner.
 func (s *partners) DisplayvideoPartnersGet(ctx context.Context, request operations.DisplayvideoPartnersGetRequest, security operations.DisplayvideoPartnersGetSecurity) (*operations.DisplayvideoPartnersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -550,7 +577,10 @@ func (s *partners) DisplayvideoPartnersList(ctx context.Context, request operati
 // DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreate - Assigns a targeting option to a partner. Returns the assigned targeting option if successful.
 func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreate(ctx context.Context, request operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateRequest, security operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateSecurity) (*operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedTargetingOptionInput", "json")
 	if err != nil {
@@ -605,7 +635,10 @@ func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCre
 // DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDelete - Deletes an assigned targeting option from a partner.
 func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDelete(ctx context.Context, request operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteRequest, security operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteSecurity) (*operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -653,7 +686,10 @@ func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDel
 // DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet - Gets a single targeting option assigned to a partner.
 func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet(ctx context.Context, request operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetRequest, security operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetSecurity) (*operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,7 +737,10 @@ func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet
 // DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsList - Lists the targeting options assigned to a partner.
 func (s *partners) DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsList(ctx context.Context, request operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListRequest, security operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListSecurity) (*operations.DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/partners/{partnerId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

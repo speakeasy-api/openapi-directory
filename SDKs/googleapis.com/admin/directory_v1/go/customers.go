@@ -34,7 +34,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // AdminCustomersChromePrintServersBatchCreatePrintServers - Creates multiple print servers.
 func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchCreatePrintServersRequest, security operations.AdminCustomersChromePrintServersBatchCreatePrintServersSecurity) (*operations.AdminCustomersChromePrintServersBatchCreatePrintServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchCreatePrintServers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePrintServersRequestInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *customers) AdminCustomersChromePrintServersBatchCreatePrintServers(ctx 
 // AdminCustomersChromePrintServersBatchDeletePrintServers - Deletes multiple print servers.
 func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx context.Context, request operations.AdminCustomersChromePrintServersBatchDeletePrintServersRequest, security operations.AdminCustomersChromePrintServersBatchDeletePrintServersSecurity) (*operations.AdminCustomersChromePrintServersBatchDeletePrintServersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers:batchDeletePrintServers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePrintServersRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *customers) AdminCustomersChromePrintServersBatchDeletePrintServers(ctx 
 // AdminCustomersChromePrintServersCreate - Creates a print server.
 func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, request operations.AdminCustomersChromePrintServersCreateRequest, security operations.AdminCustomersChromePrintServersCreateSecurity) (*operations.AdminCustomersChromePrintServersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrintServerInput", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *customers) AdminCustomersChromePrintServersCreate(ctx context.Context, 
 // AdminCustomersChromePrintServersDelete - Deletes a print server.
 func (s *customers) AdminCustomersChromePrintServersDelete(ctx context.Context, request operations.AdminCustomersChromePrintServersDeleteRequest, security operations.AdminCustomersChromePrintServersDeleteSecurity) (*operations.AdminCustomersChromePrintServersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *customers) AdminCustomersChromePrintServersDelete(ctx context.Context, 
 // AdminCustomersChromePrintServersGet - Returns a print server's configuration.
 func (s *customers) AdminCustomersChromePrintServersGet(ctx context.Context, request operations.AdminCustomersChromePrintServersGetRequest, security operations.AdminCustomersChromePrintServersGetSecurity) (*operations.AdminCustomersChromePrintServersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *customers) AdminCustomersChromePrintServersGet(ctx context.Context, req
 // AdminCustomersChromePrintServersList - Lists print server configurations.
 func (s *customers) AdminCustomersChromePrintServersList(ctx context.Context, request operations.AdminCustomersChromePrintServersListRequest, security operations.AdminCustomersChromePrintServersListSecurity) (*operations.AdminCustomersChromePrintServersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printServers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *customers) AdminCustomersChromePrintServersList(ctx context.Context, re
 // AdminCustomersChromePrintServersPatch - Updates a print server's configuration.
 func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, request operations.AdminCustomersChromePrintServersPatchRequest, security operations.AdminCustomersChromePrintServersPatchSecurity) (*operations.AdminCustomersChromePrintServersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrintServerInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *customers) AdminCustomersChromePrintServersPatch(ctx context.Context, r
 // AdminCustomersChromePrintersBatchCreatePrinters - Creates printers under given Organization Unit.
 func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchCreatePrintersRequest, security operations.AdminCustomersChromePrintersBatchCreatePrintersSecurity) (*operations.AdminCustomersChromePrintersBatchCreatePrintersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchCreatePrinters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreatePrintersRequestInput", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *customers) AdminCustomersChromePrintersBatchCreatePrinters(ctx context.
 // AdminCustomersChromePrintersBatchDeletePrinters - Deletes printers in batch.
 func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.Context, request operations.AdminCustomersChromePrintersBatchDeletePrintersRequest, security operations.AdminCustomersChromePrintersBatchDeletePrintersSecurity) (*operations.AdminCustomersChromePrintersBatchDeletePrintersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:batchDeletePrinters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeletePrintersRequest", "json")
 	if err != nil {
@@ -508,7 +535,10 @@ func (s *customers) AdminCustomersChromePrintersBatchDeletePrinters(ctx context.
 // AdminCustomersChromePrintersCreate - Creates a printer under given Organization Unit.
 func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, request operations.AdminCustomersChromePrintersCreateRequest, security operations.AdminCustomersChromePrintersCreateSecurity) (*operations.AdminCustomersChromePrintersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PrinterInput", "json")
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *customers) AdminCustomersChromePrintersCreate(ctx context.Context, requ
 // AdminCustomersChromePrintersList - List printers configs.
 func (s *customers) AdminCustomersChromePrintersList(ctx context.Context, request operations.AdminCustomersChromePrintersListRequest, security operations.AdminCustomersChromePrintersListSecurity) (*operations.AdminCustomersChromePrintersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *customers) AdminCustomersChromePrintersList(ctx context.Context, reques
 // AdminCustomersChromePrintersListPrinterModels - Lists the supported printer models.
 func (s *customers) AdminCustomersChromePrintersListPrinterModels(ctx context.Context, request operations.AdminCustomersChromePrintersListPrinterModelsRequest, security operations.AdminCustomersChromePrintersListPrinterModelsSecurity) (*operations.AdminCustomersChromePrintersListPrinterModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/{parent}/chrome/printers:listPrinterModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *customers) AdminCustomersChromePrintersListPrinterModels(ctx context.Co
 // DirectoryCustomersGet - Retrieves a customer.
 func (s *customers) DirectoryCustomersGet(ctx context.Context, request operations.DirectoryCustomersGetRequest, security operations.DirectoryCustomersGetSecurity) (*operations.DirectoryCustomersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *customers) DirectoryCustomersGet(ctx context.Context, request operation
 // DirectoryCustomersPatch - Patches a customer.
 func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operations.DirectoryCustomersPatchRequest, security operations.DirectoryCustomersPatchSecurity) (*operations.DirectoryCustomersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *customers) DirectoryCustomersPatch(ctx context.Context, request operati
 // DirectoryCustomersUpdate - Updates a customer.
 func (s *customers) DirectoryCustomersUpdate(ctx context.Context, request operations.DirectoryCustomersUpdateRequest, security operations.DirectoryCustomersUpdateSecurity) (*operations.DirectoryCustomersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customers/{customerKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Customer", "json")
 	if err != nil {

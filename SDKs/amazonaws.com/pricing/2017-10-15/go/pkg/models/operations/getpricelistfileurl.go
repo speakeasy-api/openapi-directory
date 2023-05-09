@@ -16,17 +16,21 @@ const (
 	GetPriceListFileURLXAmzTargetEnumAwsPriceListServiceGetPriceListFileURL GetPriceListFileURLXAmzTargetEnum = "AWSPriceListService.GetPriceListFileUrl"
 )
 
+func (e GetPriceListFileURLXAmzTargetEnum) ToPointer() *GetPriceListFileURLXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPriceListFileURLXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPriceListService.GetPriceListFileUrl":
-		*e = GetPriceListFileURLXAmzTargetEnum(s)
+		*e = GetPriceListFileURLXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPriceListFileURLXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPriceListFileURLXAmzTargetEnum: %v", v)
 	}
 }
 

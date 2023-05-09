@@ -14,18 +14,22 @@ const (
 	OBEntryStatus1CodeEnumPending OBEntryStatus1CodeEnum = "Pending"
 )
 
+func (e OBEntryStatus1CodeEnum) ToPointer() *OBEntryStatus1CodeEnum {
+	return &e
+}
+
 func (e *OBEntryStatus1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Booked":
 		fallthrough
 	case "Pending":
-		*e = OBEntryStatus1CodeEnum(s)
+		*e = OBEntryStatus1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBEntryStatus1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBEntryStatus1CodeEnum: %v", v)
 	}
 }

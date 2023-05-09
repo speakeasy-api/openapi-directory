@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -82,4 +83,15 @@ pkg/models/shared/outline.go
 pkg/models/shared/fileupload.go
 pkg/models/shared/modifyinactivecollaborator.go
 pkg/models/shared/addnewcollaboratorrequest.go
+docs/sdk/README.md
+docs/cache/README.md
+docs/conversation/README.md
+docs/events/README.md
+docs/permissions/README.md
+docs/restricted/README.md
+docs/schemas/README.md
+docs/sessions/README.md
+docs/story/README.md
+docs/storycollaborators/README.md
+docs/views/README.md
 USAGE.md

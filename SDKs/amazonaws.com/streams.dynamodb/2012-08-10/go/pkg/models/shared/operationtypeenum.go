@@ -15,20 +15,24 @@ const (
 	OperationTypeEnumRemove OperationTypeEnum = "REMOVE"
 )
 
+func (e OperationTypeEnum) ToPointer() *OperationTypeEnum {
+	return &e
+}
+
 func (e *OperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSERT":
 		fallthrough
 	case "MODIFY":
 		fallthrough
 	case "REMOVE":
-		*e = OperationTypeEnum(s)
+		*e = OperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OperationTypeEnum: %v", v)
 	}
 }

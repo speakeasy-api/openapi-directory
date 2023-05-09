@@ -21,17 +21,21 @@ const (
 	OrganizationResourceTypeEnumOrganization OrganizationResourceTypeEnum = "organization"
 )
 
+func (e OrganizationResourceTypeEnum) ToPointer() *OrganizationResourceTypeEnum {
+	return &e
+}
+
 func (e *OrganizationResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "organization":
-		*e = OrganizationResourceTypeEnum(s)
+		*e = OrganizationResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationResourceTypeEnum: %v", v)
 	}
 }
 

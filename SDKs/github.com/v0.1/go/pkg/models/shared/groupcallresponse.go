@@ -24,12 +24,16 @@ const (
 	GroupCallResponseMessageEnumGroupCallRequestFailed                      GroupCallResponseMessageEnum = "GroupCall Request Failed"
 )
 
+func (e GroupCallResponseMessageEnum) ToPointer() *GroupCallResponseMessageEnum {
+	return &e
+}
+
 func (e *GroupCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GroupCall Request Executed":
 		fallthrough
 	case "Mandatory Parameters Missing":
@@ -51,10 +55,10 @@ func (e *GroupCallResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "Unknown Core UUID":
 		fallthrough
 	case "GroupCall Request Failed":
-		*e = GroupCallResponseMessageEnum(s)
+		*e = GroupCallResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupCallResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupCallResponseMessageEnum: %v", v)
 	}
 }
 

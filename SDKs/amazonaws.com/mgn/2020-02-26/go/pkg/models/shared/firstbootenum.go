@@ -16,12 +16,16 @@ const (
 	FirstBootEnumStopped   FirstBootEnum = "STOPPED"
 )
 
+func (e FirstBootEnum) ToPointer() *FirstBootEnum {
+	return &e
+}
+
 func (e *FirstBootEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WAITING":
 		fallthrough
 	case "SUCCEEDED":
@@ -29,9 +33,9 @@ func (e *FirstBootEnum) UnmarshalJSON(data []byte) error {
 	case "UNKNOWN":
 		fallthrough
 	case "STOPPED":
-		*e = FirstBootEnum(s)
+		*e = FirstBootEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirstBootEnum: %s", s)
+		return fmt.Errorf("invalid value for FirstBootEnum: %v", v)
 	}
 }

@@ -21,12 +21,16 @@ const (
 	DoubleVerifyAppStarRatingAvoidedStarRatingEnumAppStarRate4Point5Less DoubleVerifyAppStarRatingAvoidedStarRatingEnum = "APP_STAR_RATE_4_POINT_5_LESS"
 )
 
+func (e DoubleVerifyAppStarRatingAvoidedStarRatingEnum) ToPointer() *DoubleVerifyAppStarRatingAvoidedStarRatingEnum {
+	return &e
+}
+
 func (e *DoubleVerifyAppStarRatingAvoidedStarRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_STAR_RATE_UNSPECIFIED":
 		fallthrough
 	case "APP_STAR_RATE_1_POINT_5_LESS":
@@ -42,10 +46,10 @@ func (e *DoubleVerifyAppStarRatingAvoidedStarRatingEnum) UnmarshalJSON(data []by
 	case "APP_STAR_RATE_4_LESS":
 		fallthrough
 	case "APP_STAR_RATE_4_POINT_5_LESS":
-		*e = DoubleVerifyAppStarRatingAvoidedStarRatingEnum(s)
+		*e = DoubleVerifyAppStarRatingAvoidedStarRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyAppStarRatingAvoidedStarRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyAppStarRatingAvoidedStarRatingEnum: %v", v)
 	}
 }
 

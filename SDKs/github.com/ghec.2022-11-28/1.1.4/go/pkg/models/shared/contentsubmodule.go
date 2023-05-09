@@ -19,17 +19,21 @@ const (
 	ContentSubmoduleTypeEnumSubmodule ContentSubmoduleTypeEnum = "submodule"
 )
 
+func (e ContentSubmoduleTypeEnum) ToPointer() *ContentSubmoduleTypeEnum {
+	return &e
+}
+
 func (e *ContentSubmoduleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submodule":
-		*e = ContentSubmoduleTypeEnum(s)
+		*e = ContentSubmoduleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentSubmoduleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentSubmoduleTypeEnum: %v", v)
 	}
 }
 

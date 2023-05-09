@@ -15,20 +15,24 @@ const (
 	MonitoringProblemTypeEnumRegression               MonitoringProblemTypeEnum = "Regression"
 )
 
+func (e MonitoringProblemTypeEnum) ToPointer() *MonitoringProblemTypeEnum {
+	return &e
+}
+
 func (e *MonitoringProblemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BinaryClassification":
 		fallthrough
 	case "MulticlassClassification":
 		fallthrough
 	case "Regression":
-		*e = MonitoringProblemTypeEnum(s)
+		*e = MonitoringProblemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringProblemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringProblemTypeEnum: %v", v)
 	}
 }

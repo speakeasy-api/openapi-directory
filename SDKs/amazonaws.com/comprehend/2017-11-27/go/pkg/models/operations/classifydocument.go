@@ -16,17 +16,21 @@ const (
 	ClassifyDocumentXAmzTargetEnumComprehend20171127ClassifyDocument ClassifyDocumentXAmzTargetEnum = "Comprehend_20171127.ClassifyDocument"
 )
 
+func (e ClassifyDocumentXAmzTargetEnum) ToPointer() *ClassifyDocumentXAmzTargetEnum {
+	return &e
+}
+
 func (e *ClassifyDocumentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ClassifyDocument":
-		*e = ClassifyDocumentXAmzTargetEnum(s)
+		*e = ClassifyDocumentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassifyDocumentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassifyDocumentXAmzTargetEnum: %v", v)
 	}
 }
 

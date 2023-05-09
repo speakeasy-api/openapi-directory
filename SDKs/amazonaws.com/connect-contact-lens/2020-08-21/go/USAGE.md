@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,26 +16,24 @@ func main() {
         }),
     )
 
-    req := operations.ListRealtimeContactAnalysisSegmentsRequest{
-        MaxResults: "corrupti",
-        NextToken: "provident",
+    ctx := context.Background()
+    res, err := s.ListRealtimeContactAnalysisSegments(ctx, operations.ListRealtimeContactAnalysisSegmentsRequest{
+        MaxResults: sdk.String("corrupti"),
+        NextToken: sdk.String("provident"),
         RequestBody: operations.ListRealtimeContactAnalysisSegmentsRequestBody{
             ContactID: "distinctio",
             InstanceID: "quibusdam",
-            MaxResults: 602763,
-            NextToken: "nulla",
+            MaxResults: sdk.Int64(602763),
+            NextToken: sdk.String("nulla"),
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.ListRealtimeContactAnalysisSegments(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

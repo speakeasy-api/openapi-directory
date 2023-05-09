@@ -14,18 +14,22 @@ const (
 	ControlTypeEnumCustom   ControlTypeEnum = "Custom"
 )
 
+func (e ControlTypeEnum) ToPointer() *ControlTypeEnum {
+	return &e
+}
+
 func (e *ControlTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Standard":
 		fallthrough
 	case "Custom":
-		*e = ControlTypeEnum(s)
+		*e = ControlTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlTypeEnum: %v", v)
 	}
 }

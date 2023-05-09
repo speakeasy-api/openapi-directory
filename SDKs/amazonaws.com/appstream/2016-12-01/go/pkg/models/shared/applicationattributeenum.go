@@ -14,18 +14,22 @@ const (
 	ApplicationAttributeEnumWorkingDirectory ApplicationAttributeEnum = "WORKING_DIRECTORY"
 )
 
+func (e ApplicationAttributeEnum) ToPointer() *ApplicationAttributeEnum {
+	return &e
+}
+
 func (e *ApplicationAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_PARAMETERS":
 		fallthrough
 	case "WORKING_DIRECTORY":
-		*e = ApplicationAttributeEnum(s)
+		*e = ApplicationAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationAttributeEnum: %v", v)
 	}
 }

@@ -28,21 +28,25 @@ const (
 	PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnumMaximumEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum = "maximumEquicorrelationMatrix"
 )
 
+func (e PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum) ToPointer() *PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum {
+	return &e
+}
+
 func (e *PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimumEquicorrelationMatrix":
 		fallthrough
 	case "zeroEquicorrelationMatrix":
 		fallthrough
 	case "maximumEquicorrelationMatrix":
-		*e = PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum(s)
+		*e = PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum: %v", v)
 	}
 }
 

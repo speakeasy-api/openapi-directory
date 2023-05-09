@@ -16,12 +16,16 @@ const (
 	TieringPolicyNameEnumNone         TieringPolicyNameEnum = "NONE"
 )
 
+func (e TieringPolicyNameEnum) ToPointer() *TieringPolicyNameEnum {
+	return &e
+}
+
 func (e *TieringPolicyNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SNAPSHOT_ONLY":
 		fallthrough
 	case "AUTO":
@@ -29,9 +33,9 @@ func (e *TieringPolicyNameEnum) UnmarshalJSON(data []byte) error {
 	case "ALL":
 		fallthrough
 	case "NONE":
-		*e = TieringPolicyNameEnum(s)
+		*e = TieringPolicyNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TieringPolicyNameEnum: %s", s)
+		return fmt.Errorf("invalid value for TieringPolicyNameEnum: %v", v)
 	}
 }

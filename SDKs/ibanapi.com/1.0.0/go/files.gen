@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -22,4 +23,6 @@ pkg/models/shared/fourhundredandtwentytwo.go
 pkg/models/shared/balanceresponse.go
 pkg/models/shared/ibanresult.go
 pkg/models/shared/ibanresultbasic.go
+docs/sdk/README.md
+docs/ibanapi/README.md
 USAGE.md

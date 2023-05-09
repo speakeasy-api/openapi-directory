@@ -19,17 +19,21 @@ const (
 	AbsenceEntitlementValueTypeEnumTimeOffType AbsenceEntitlementValueTypeEnum = "TimeOffType"
 )
 
+func (e AbsenceEntitlementValueTypeEnum) ToPointer() *AbsenceEntitlementValueTypeEnum {
+	return &e
+}
+
 func (e *AbsenceEntitlementValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TimeOffType":
-		*e = AbsenceEntitlementValueTypeEnum(s)
+		*e = AbsenceEntitlementValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AbsenceEntitlementValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AbsenceEntitlementValueTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTModifyPrivateDNSNameOptionsActionEnumModifyPrivateDNSNameOptions POSTModifyPrivateDNSNameOptionsActionEnum = "ModifyPrivateDnsNameOptions"
 )
 
+func (e POSTModifyPrivateDNSNameOptionsActionEnum) ToPointer() *POSTModifyPrivateDNSNameOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTModifyPrivateDNSNameOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyPrivateDnsNameOptions":
-		*e = POSTModifyPrivateDNSNameOptionsActionEnum(s)
+		*e = POSTModifyPrivateDNSNameOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyPrivateDNSNameOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyPrivateDNSNameOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyPrivateDNSNameOptionsVersionEnumTwoThousandAndSixteen1115 POSTModifyPrivateDNSNameOptionsVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyPrivateDNSNameOptionsVersionEnum) ToPointer() *POSTModifyPrivateDNSNameOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyPrivateDNSNameOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyPrivateDNSNameOptionsVersionEnum(s)
+		*e = POSTModifyPrivateDNSNameOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyPrivateDNSNameOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyPrivateDNSNameOptionsVersionEnum: %v", v)
 	}
 }
 

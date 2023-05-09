@@ -16,17 +16,21 @@ const (
 	ConfirmDeviceXAmzTargetEnumAwsCognitoIdentityProviderServiceConfirmDevice ConfirmDeviceXAmzTargetEnum = "AWSCognitoIdentityProviderService.ConfirmDevice"
 )
 
+func (e ConfirmDeviceXAmzTargetEnum) ToPointer() *ConfirmDeviceXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConfirmDeviceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.ConfirmDevice":
-		*e = ConfirmDeviceXAmzTargetEnum(s)
+		*e = ConfirmDeviceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfirmDeviceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfirmDeviceXAmzTargetEnum: %v", v)
 	}
 }
 

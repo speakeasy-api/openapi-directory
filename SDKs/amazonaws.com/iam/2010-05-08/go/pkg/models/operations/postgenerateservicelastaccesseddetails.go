@@ -15,17 +15,21 @@ const (
 	POSTGenerateServiceLastAccessedDetailsActionEnumGenerateServiceLastAccessedDetails POSTGenerateServiceLastAccessedDetailsActionEnum = "GenerateServiceLastAccessedDetails"
 )
 
+func (e POSTGenerateServiceLastAccessedDetailsActionEnum) ToPointer() *POSTGenerateServiceLastAccessedDetailsActionEnum {
+	return &e
+}
+
 func (e *POSTGenerateServiceLastAccessedDetailsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GenerateServiceLastAccessedDetails":
-		*e = POSTGenerateServiceLastAccessedDetailsActionEnum(s)
+		*e = POSTGenerateServiceLastAccessedDetailsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGenerateServiceLastAccessedDetailsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGenerateServiceLastAccessedDetailsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGenerateServiceLastAccessedDetailsVersionEnumTwoThousandAndTen0508 POSTGenerateServiceLastAccessedDetailsVersionEnum = "2010-05-08"
 )
 
+func (e POSTGenerateServiceLastAccessedDetailsVersionEnum) ToPointer() *POSTGenerateServiceLastAccessedDetailsVersionEnum {
+	return &e
+}
+
 func (e *POSTGenerateServiceLastAccessedDetailsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGenerateServiceLastAccessedDetailsVersionEnum(s)
+		*e = POSTGenerateServiceLastAccessedDetailsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGenerateServiceLastAccessedDetailsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGenerateServiceLastAccessedDetailsVersionEnum: %v", v)
 	}
 }
 

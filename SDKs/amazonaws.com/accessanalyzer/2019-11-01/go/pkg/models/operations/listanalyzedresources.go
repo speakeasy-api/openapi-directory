@@ -28,12 +28,16 @@ const (
 	ListAnalyzedResourcesRequestBodyResourceTypeEnumAwsSnsTopic             ListAnalyzedResourcesRequestBodyResourceTypeEnum = "AWS::SNS::Topic"
 )
 
+func (e ListAnalyzedResourcesRequestBodyResourceTypeEnum) ToPointer() *ListAnalyzedResourcesRequestBodyResourceTypeEnum {
+	return &e
+}
+
 func (e *ListAnalyzedResourcesRequestBodyResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS::S3::Bucket":
 		fallthrough
 	case "AWS::IAM::Role":
@@ -59,10 +63,10 @@ func (e *ListAnalyzedResourcesRequestBodyResourceTypeEnum) UnmarshalJSON(data []
 	case "AWS::RDS::DBClusterSnapshot":
 		fallthrough
 	case "AWS::SNS::Topic":
-		*e = ListAnalyzedResourcesRequestBodyResourceTypeEnum(s)
+		*e = ListAnalyzedResourcesRequestBodyResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAnalyzedResourcesRequestBodyResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAnalyzedResourcesRequestBodyResourceTypeEnum: %v", v)
 	}
 }
 

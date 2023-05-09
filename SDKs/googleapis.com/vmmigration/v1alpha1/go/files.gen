@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -96,6 +97,7 @@ pkg/models/shared/migrationwarning.go
 pkg/models/shared/localizedmessage.go
 pkg/models/shared/link.go
 pkg/models/shared/listmigratingvmsresponse.go
+pkg/models/shared/cutoverforecast.go
 pkg/models/shared/listreplicationcyclesresponse.go
 pkg/models/shared/utilizationreport.go
 pkg/models/shared/vmutilizationinfo.go
@@ -103,4 +105,6 @@ pkg/models/shared/vmutilizationmetrics.go
 pkg/models/shared/listutilizationreportsresponse.go
 pkg/models/shared/targetproject.go
 pkg/models/shared/listtargetprojectsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

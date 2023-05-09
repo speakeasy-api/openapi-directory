@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnumSmartReplyBertModel        GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum = "SMART_REPLY_BERT_MODEL"
 )
 
+func (e GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum) ToPointer() *GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SMART_REPLY_DUAL_ENCODER_MODEL":
 		fallthrough
 	case "SMART_REPLY_BERT_MODEL":
-		*e = GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum(s)
+		*e = GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2SmartReplyModelMetadataTrainingModelTypeEnum: %v", v)
 	}
 }
 

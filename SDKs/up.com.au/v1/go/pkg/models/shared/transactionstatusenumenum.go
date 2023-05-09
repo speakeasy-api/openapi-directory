@@ -18,18 +18,22 @@ const (
 	TransactionStatusEnumEnumSettled TransactionStatusEnumEnum = "SETTLED"
 )
 
+func (e TransactionStatusEnumEnum) ToPointer() *TransactionStatusEnumEnum {
+	return &e
+}
+
 func (e *TransactionStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HELD":
 		fallthrough
 	case "SETTLED":
-		*e = TransactionStatusEnumEnum(s)
+		*e = TransactionStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionStatusEnumEnum: %v", v)
 	}
 }

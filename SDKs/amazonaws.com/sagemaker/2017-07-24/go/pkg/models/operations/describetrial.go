@@ -16,17 +16,21 @@ const (
 	DescribeTrialXAmzTargetEnumSageMakerDescribeTrial DescribeTrialXAmzTargetEnum = "SageMaker.DescribeTrial"
 )
 
+func (e DescribeTrialXAmzTargetEnum) ToPointer() *DescribeTrialXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTrialXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeTrial":
-		*e = DescribeTrialXAmzTargetEnum(s)
+		*e = DescribeTrialXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTrialXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTrialXAmzTargetEnum: %v", v)
 	}
 }
 

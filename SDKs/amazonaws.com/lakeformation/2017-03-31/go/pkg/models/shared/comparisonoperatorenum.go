@@ -23,12 +23,16 @@ const (
 	ComparisonOperatorEnumBetween     ComparisonOperatorEnum = "BETWEEN"
 )
 
+func (e ComparisonOperatorEnum) ToPointer() *ComparisonOperatorEnum {
+	return &e
+}
+
 func (e *ComparisonOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "NE":
@@ -50,9 +54,9 @@ func (e *ComparisonOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "IN":
 		fallthrough
 	case "BETWEEN":
-		*e = ComparisonOperatorEnum(s)
+		*e = ComparisonOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComparisonOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ComparisonOperatorEnum: %v", v)
 	}
 }

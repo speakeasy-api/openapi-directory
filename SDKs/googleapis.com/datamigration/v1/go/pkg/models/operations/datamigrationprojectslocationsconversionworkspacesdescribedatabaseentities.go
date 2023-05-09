@@ -24,12 +24,16 @@ const (
 	DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnumDestinationTree       DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum = "DESTINATION_TREE"
 )
 
+func (e DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum) ToPointer() *DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum {
+	return &e
+}
+
 func (e *DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DB_TREE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SOURCE_TREE":
@@ -37,10 +41,10 @@ func (e *DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntit
 	case "DRAFT_TREE":
 		fallthrough
 	case "DESTINATION_TREE":
-		*e = DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum(s)
+		*e = DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntitiesTreeEnum: %v", v)
 	}
 }
 

@@ -17,21 +17,25 @@ const (
 	EpisodeAttributesItunesTypeEnumTrailer EpisodeAttributesItunesTypeEnum = "trailer"
 )
 
+func (e EpisodeAttributesItunesTypeEnum) ToPointer() *EpisodeAttributesItunesTypeEnum {
+	return &e
+}
+
 func (e *EpisodeAttributesItunesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "bonus":
 		fallthrough
 	case "trailer":
-		*e = EpisodeAttributesItunesTypeEnum(s)
+		*e = EpisodeAttributesItunesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EpisodeAttributesItunesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EpisodeAttributesItunesTypeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	EpisodeAttributesPremiumStatusEnumForceInactive EpisodeAttributesPremiumStatusEnum = "force-inactive"
 )
 
+func (e EpisodeAttributesPremiumStatusEnum) ToPointer() *EpisodeAttributesPremiumStatusEnum {
+	return &e
+}
+
 func (e *EpisodeAttributesPremiumStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
@@ -58,10 +66,10 @@ func (e *EpisodeAttributesPremiumStatusEnum) UnmarshalJSON(data []byte) error {
 	case "force-active":
 		fallthrough
 	case "force-inactive":
-		*e = EpisodeAttributesPremiumStatusEnum(s)
+		*e = EpisodeAttributesPremiumStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EpisodeAttributesPremiumStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EpisodeAttributesPremiumStatusEnum: %v", v)
 	}
 }
 
@@ -73,19 +81,23 @@ const (
 	EpisodeAttributesStatusEnumInactive EpisodeAttributesStatusEnum = "inactive"
 )
 
+func (e EpisodeAttributesStatusEnum) ToPointer() *EpisodeAttributesStatusEnum {
+	return &e
+}
+
 func (e *EpisodeAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = EpisodeAttributesStatusEnum(s)
+		*e = EpisodeAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EpisodeAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EpisodeAttributesStatusEnum: %v", v)
 	}
 }
 

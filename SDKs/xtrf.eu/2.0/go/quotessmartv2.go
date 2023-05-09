@@ -37,7 +37,10 @@ func newQuotesSmartV2(defaultClient, securityClient HTTPClient, serverURL, langu
 // Adds files to the quote as added by PM. The files have to be uploaded beforehand (see "POST v2/quotes/{quoteId}/files/upload" operation). The following properties can be specified for each file:<ul><li>category (required, 400 Bad Request is returned otherwise)</li><li>languageIds – when the file category depends on a list of languages</li><li>languageCombinationIds – when the file category depends on a list of language combinations</li></ul>
 func (s *quotesSmartV2) AddFiles2(ctx context.Context, request operations.AddFiles2Request) (*operations.AddFiles2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files/add", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files/add", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeDTO", "json")
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *quotesSmartV2) Archive1(ctx context.Context, request shared.FilesDto) (
 // Changes quote status if possible (400 Bad Request is returned otherwise). The status has to be specified using one of the following keys: <ul><li>PENDING – available when the job has one of the following statuses: REQUESTED, REJECTED</li><li>SENT – available when the job has one of the following statuses: PENDING</li><li>APPROVED – available when the job has one of the following statuses: REQUESTED, PENDING, SENT, APPROVED_BY_CLIENT</li><li>REJECTED – available when the job has one of the following statuses: REQUESTED, PENDING, SENT</li></ul>
 func (s *quotesSmartV2) ChangeStatus3(ctx context.Context, request operations.ChangeStatus3Request) (*operations.ChangeStatus3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProjectStatusDTO", "json")
 	if err != nil {
@@ -184,7 +190,10 @@ func (s *quotesSmartV2) ChangeStatus3(ctx context.Context, request operations.Ch
 // Adds a payable to a quote.
 func (s *quotesSmartV2) CreatePayable3(ctx context.Context, request operations.CreatePayable3Request) (*operations.CreatePayable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableCreateDTO", "json")
 	if err != nil {
@@ -239,7 +248,10 @@ func (s *quotesSmartV2) CreatePayable3(ctx context.Context, request operations.C
 // Adds a receivable to a quote.
 func (s *quotesSmartV2) CreateReceivable3(ctx context.Context, request operations.CreateReceivable3Request) (*operations.CreateReceivable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableCreateDTO", "json")
 	if err != nil {
@@ -346,7 +358,10 @@ func (s *quotesSmartV2) Create7(ctx context.Context, request shared.QuoteCreateD
 // Deletes a payable.
 func (s *quotesSmartV2) DeletePayable3(ctx context.Context, request operations.DeletePayable3Request) (*operations.DeletePayable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -382,7 +397,10 @@ func (s *quotesSmartV2) DeletePayable3(ctx context.Context, request operations.D
 // Deletes a receivable.
 func (s *quotesSmartV2) DeleteReceivable3(ctx context.Context, request operations.DeleteReceivable3Request) (*operations.DeleteReceivable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -418,7 +436,10 @@ func (s *quotesSmartV2) DeleteReceivable3(ctx context.Context, request operation
 // Returns quote details. If the specified quote ID refers to Classic Quote, 400 Bad Request is returned instead.
 func (s *quotesSmartV2) GetByID10(ctx context.Context, request operations.GetByID10Request) (*operations.GetByID10Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -463,7 +484,10 @@ func (s *quotesSmartV2) GetByID10(ctx context.Context, request operations.GetByI
 // Returns Client Contacts information for a quote.
 func (s *quotesSmartV2) GetContacts3(ctx context.Context, request operations.GetContacts3Request) (*operations.GetContacts3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientContacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientContacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -508,7 +532,10 @@ func (s *quotesSmartV2) GetContacts3(ctx context.Context, request operations.Get
 // Returns a list of custom field keys and values for a project.
 func (s *quotesSmartV2) GetCustomFields9(ctx context.Context, request operations.GetCustomFields9Request) (*operations.GetCustomFields9Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -553,7 +580,10 @@ func (s *quotesSmartV2) GetCustomFields9(ctx context.Context, request operations
 // Returns details of a file.
 func (s *quotesSmartV2) GetFileByID3(ctx context.Context, request operations.GetFileByID3Request) (*operations.GetFileByID3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/files/{fileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/files/{fileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -598,7 +628,10 @@ func (s *quotesSmartV2) GetFileByID3(ctx context.Context, request operations.Get
 // Downloads a file content.
 func (s *quotesSmartV2) GetFileContentByID1(ctx context.Context, request operations.GetFileContentByID1Request) (*operations.GetFileContentByID1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/files/{fileId}/download/{fileName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/files/{fileId}/download/{fileName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -634,7 +667,10 @@ func (s *quotesSmartV2) GetFileContentByID1(ctx context.Context, request operati
 // Returns list of files in a quote. Only files added to the quote (i.e. files that have assigned category and languages) are listed.
 func (s *quotesSmartV2) GetFiles1(ctx context.Context, request operations.GetFiles1Request) (*operations.GetFiles1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -679,7 +715,10 @@ func (s *quotesSmartV2) GetFiles1(ctx context.Context, request operations.GetFil
 // Returns finance information for a quote.
 func (s *quotesSmartV2) GetFinance3(ctx context.Context, request operations.GetFinance3Request) (*operations.GetFinance3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -724,7 +763,10 @@ func (s *quotesSmartV2) GetFinance3(ctx context.Context, request operations.GetF
 // Returns list of jobs in a quote.
 func (s *quotesSmartV2) GetJobs1(ctx context.Context, request operations.GetJobs1Request) (*operations.GetJobs1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *quotesSmartV2) GetJobs1(ctx context.Context, request operations.GetJobs
 // Updates Business Days for a quote.
 func (s *quotesSmartV2) UpdateBusinessDays(ctx context.Context, request operations.UpdateBusinessDaysRequest) (*operations.UpdateBusinessDaysResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/businessDays", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/businessDays", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -815,7 +860,10 @@ func (s *quotesSmartV2) UpdateBusinessDays(ctx context.Context, request operatio
 // Updates Client Notes for a quote.
 func (s *quotesSmartV2) UpdateClientNotes1(ctx context.Context, request operations.UpdateClientNotes1Request) (*operations.UpdateClientNotes1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientNotes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientNotes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
@@ -861,7 +909,10 @@ func (s *quotesSmartV2) UpdateClientNotes1(ctx context.Context, request operatio
 // Updates Client Reference Number for a quote.
 func (s *quotesSmartV2) UpdateClientReferenceNumber1(ctx context.Context, request operations.UpdateClientReferenceNumber1Request) (*operations.UpdateClientReferenceNumber1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientReferenceNumber", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientReferenceNumber", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
@@ -907,7 +958,10 @@ func (s *quotesSmartV2) UpdateClientReferenceNumber1(ctx context.Context, reques
 // Updates Client Contacts for a quote.
 func (s *quotesSmartV2) UpdateContacts3(ctx context.Context, request operations.UpdateContacts3Request) (*operations.UpdateContacts3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientContacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/clientContacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SmartContactsDTO", "json")
 	if err != nil {
@@ -962,7 +1016,10 @@ func (s *quotesSmartV2) UpdateContacts3(ctx context.Context, request operations.
 // Updates a custom field with a specified key in a quote.
 func (s *quotesSmartV2) UpdateCustomField3(ctx context.Context, request operations.UpdateCustomField3Request) (*operations.UpdateCustomField3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/customFields/{key}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/customFields/{key}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SmartCustomFieldDTO", "json")
 	if err != nil {
@@ -1008,7 +1065,10 @@ func (s *quotesSmartV2) UpdateCustomField3(ctx context.Context, request operatio
 // Updates Expected Delivery Date for a quote.
 func (s *quotesSmartV2) UpdateExpectedDeliveryDate(ctx context.Context, request operations.UpdateExpectedDeliveryDateRequest) (*operations.UpdateExpectedDeliveryDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/expectedDeliveryDate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/expectedDeliveryDate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeDTO", "json")
 	if err != nil {
@@ -1054,7 +1114,10 @@ func (s *quotesSmartV2) UpdateExpectedDeliveryDate(ctx context.Context, request 
 // Updates Internal Notes for a quote.
 func (s *quotesSmartV2) UpdateInternalNotes1(ctx context.Context, request operations.UpdateInternalNotes1Request) (*operations.UpdateInternalNotes1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/internalNotes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/internalNotes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
@@ -1100,7 +1163,10 @@ func (s *quotesSmartV2) UpdateInternalNotes1(ctx context.Context, request operat
 // Updates a payable.
 func (s *quotesSmartV2) UpdatePayable3(ctx context.Context, request operations.UpdatePayable3Request) (*operations.UpdatePayable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/payables/{payableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PayableDTO", "json")
 	if err != nil {
@@ -1155,7 +1221,10 @@ func (s *quotesSmartV2) UpdatePayable3(ctx context.Context, request operations.U
 // Updates Quote Expiry Date for a quote.
 func (s *quotesSmartV2) UpdateQuoteExpiry(ctx context.Context, request operations.UpdateQuoteExpiryRequest) (*operations.UpdateQuoteExpiryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/quoteExpiry", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/quoteExpiry", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimeDTO", "json")
 	if err != nil {
@@ -1201,7 +1270,10 @@ func (s *quotesSmartV2) UpdateQuoteExpiry(ctx context.Context, request operation
 // Updates a receivable.
 func (s *quotesSmartV2) UpdateReceivable3(ctx context.Context, request operations.UpdateReceivable3Request) (*operations.UpdateReceivable3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/finance/receivables/{receivableId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ReceivableDTO", "json")
 	if err != nil {
@@ -1256,7 +1328,10 @@ func (s *quotesSmartV2) UpdateReceivable3(ctx context.Context, request operation
 // Updates source language for a quote.
 func (s *quotesSmartV2) UpdateSourceLanguage1(ctx context.Context, request operations.UpdateSourceLanguage1Request) (*operations.UpdateSourceLanguage1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/sourceLanguage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/sourceLanguage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SourceLanguageDTO", "json")
 	if err != nil {
@@ -1302,7 +1377,10 @@ func (s *quotesSmartV2) UpdateSourceLanguage1(ctx context.Context, request opera
 // Updates specialization for a quote.
 func (s *quotesSmartV2) UpdateSpecialization1(ctx context.Context, request operations.UpdateSpecialization1Request) (*operations.UpdateSpecialization1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/specialization", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/specialization", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SpecializationDTO", "json")
 	if err != nil {
@@ -1348,7 +1426,10 @@ func (s *quotesSmartV2) UpdateSpecialization1(ctx context.Context, request opera
 // Updates target languages for a quote.
 func (s *quotesSmartV2) UpdateTargetLanguages1(ctx context.Context, request operations.UpdateTargetLanguages1Request) (*operations.UpdateTargetLanguages1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/targetLanguages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/targetLanguages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetLanguagesDTO", "json")
 	if err != nil {
@@ -1394,7 +1475,10 @@ func (s *quotesSmartV2) UpdateTargetLanguages1(ctx context.Context, request oper
 // Updates instructions for all vendors performing the jobs in a quote. See also "PUT /jobs/{jobId}/instructions" for updating instructions for a specific job in a project or quote.
 func (s *quotesSmartV2) UpdateVendorInstructions1(ctx context.Context, request operations.UpdateVendorInstructions1Request) (*operations.UpdateVendorInstructions1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/vendorInstructions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/vendorInstructions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StringDTO", "json")
 	if err != nil {
@@ -1440,7 +1524,10 @@ func (s *quotesSmartV2) UpdateVendorInstructions1(ctx context.Context, request o
 // Updates volume for a quote.
 func (s *quotesSmartV2) UpdateVolume1(ctx context.Context, request operations.UpdateVolume1Request) (*operations.UpdateVolume1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/volume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/volume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BigDecimalDTO", "json")
 	if err != nil {
@@ -1486,7 +1573,10 @@ func (s *quotesSmartV2) UpdateVolume1(ctx context.Context, request operations.Up
 // Uploads file to the quote as a file uploaded by PM. Only one file can be uploaded at once. When the upload is finished the file has to be added by specifying its category and languages (see "PUT /v2/quotes/{quoteId}/files/add" operation).
 func (s *quotesSmartV2) UploadFile3(ctx context.Context, request operations.UploadFile3Request) (*operations.UploadFile3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/quotes/{quoteId}/files/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FileToUploadDto", "multipart")
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	ModifyIpamScopeResultIpamScopeIpamScopeTypeEnumPrivate ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum = "private"
 )
 
+func (e ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum) ToPointer() *ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum {
+	return &e
+}
+
 func (e *ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum(s)
+		*e = ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamScopeResultIpamScopeIpamScopeTypeEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ModifyIpamScopeResultIpamScopeStateEnumRestoreInProgress ModifyIpamScopeResultIpamScopeStateEnum = "restore-in-progress"
 )
 
+func (e ModifyIpamScopeResultIpamScopeStateEnum) ToPointer() *ModifyIpamScopeResultIpamScopeStateEnum {
+	return &e
+}
+
 func (e *ModifyIpamScopeResultIpamScopeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -78,10 +86,10 @@ func (e *ModifyIpamScopeResultIpamScopeStateEnum) UnmarshalJSON(data []byte) err
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = ModifyIpamScopeResultIpamScopeStateEnum(s)
+		*e = ModifyIpamScopeResultIpamScopeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamScopeResultIpamScopeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamScopeResultIpamScopeStateEnum: %v", v)
 	}
 }
 

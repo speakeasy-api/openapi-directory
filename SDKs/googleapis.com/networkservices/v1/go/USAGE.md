@@ -2,42 +2,43 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.NetworkservicesProjectsLocationsEndpointPoliciesCreate(ctx, operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         EndpointPolicyInput: &shared.EndpointPolicyInput{
-            AuthorizationPolicy: "provident",
-            ClientTLSPolicy: "distinctio",
-            Description: "quibusdam",
+            AuthorizationPolicy: sdk.String("provident"),
+            ClientTLSPolicy: sdk.String("distinctio"),
+            Description: sdk.String("quibusdam"),
             EndpointMatcher: &shared.EndpointMatcher{
                 MetadataLabelMatcher: &shared.EndpointMatcherMetadataLabelMatcher{
-                    MetadataLabelMatchCriteria: "MATCH_ANY",
+                    MetadataLabelMatchCriteria: shared.EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnumMatchAny.ToPointer(),
                     MetadataLabels: []shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "corrupti",
-                            LabelValue: "illum",
+                            LabelName: sdk.String("corrupti"),
+                            LabelValue: sdk.String("illum"),
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "vel",
-                            LabelValue: "error",
+                            LabelName: sdk.String("vel"),
+                            LabelValue: sdk.String("error"),
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "deserunt",
-                            LabelValue: "suscipit",
+                            LabelName: sdk.String("deserunt"),
+                            LabelValue: sdk.String("suscipit"),
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "iure",
-                            LabelValue: "magnam",
+                            LabelName: sdk.String("iure"),
+                            LabelValue: sdk.String("magnam"),
                         },
                     },
                 },
@@ -48,32 +49,29 @@ func main() {
                 "molestiae": "minus",
                 "placeat": "voluptatum",
             },
-            Name: "iusto",
-            ServerTLSPolicy: "excepturi",
+            Name: sdk.String("Miriam Huel"),
+            ServerTLSPolicy: sdk.String("ab"),
             TrafficPortSelector: &shared.TrafficPortSelector{
                 Ports: []string{
-                    "recusandae",
-                    "temporibus",
+                    "veritatis",
+                    "deserunt",
                 },
             },
-            Type: "ENDPOINT_POLICY_TYPE_UNSPECIFIED",
+            Type: shared.EndpointPolicyTypeEnumEndpointPolicyTypeUnspecified.ToPointer(),
         },
-        AccessToken: "quis",
-        Alt: "json",
-        Callback: "deserunt",
-        EndpointPolicyID: "perferendis",
-        Fields: "ipsam",
-        Key: "repellendus",
-        OauthToken: "sapiente",
-        Parent: "quo",
-        PrettyPrint: false,
-        QuotaUser: "odit",
-        UploadType: "at",
-        UploadProtocol: "at",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.NetworkservicesProjectsLocationsEndpointPoliciesCreate(ctx, req, operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
+        AccessToken: sdk.String("ipsam"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("sapiente"),
+        EndpointPolicyID: sdk.String("quo"),
+        Fields: sdk.String("odit"),
+        Key: sdk.String("at"),
+        OauthToken: sdk.String("at"),
+        Parent: "maiores",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

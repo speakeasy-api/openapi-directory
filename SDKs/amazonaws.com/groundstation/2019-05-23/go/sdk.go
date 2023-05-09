@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Welcome to the AWS Ground Station API Reference. AWS Ground Station is a fully managed service that enables you to control satellite communications, downlink and process satellite data, and scale your satellite operations efficiently and cost-effectively without having to build or manage your own ground station infrastructure.
 // https://docs.aws.amazon.com/groundstation/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CancelContact - Cancels a contact with a specified contact ID.
 func (s *SDK) CancelContact(ctx context.Context, request operations.CancelContactRequest) (*operations.CancelContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -544,7 +562,10 @@ func (s *SDK) CreateMissionProfile(ctx context.Context, request operations.Creat
 // DeleteConfig - Deletes a <code>Config</code>.
 func (s *SDK) DeleteConfig(ctx context.Context, request operations.DeleteConfigRequest) (*operations.DeleteConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -620,7 +641,10 @@ func (s *SDK) DeleteConfig(ctx context.Context, request operations.DeleteConfigR
 // DeleteDataflowEndpointGroup - Deletes a dataflow endpoint group.
 func (s *SDK) DeleteDataflowEndpointGroup(ctx context.Context, request operations.DeleteDataflowEndpointGroupRequest) (*operations.DeleteDataflowEndpointGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -696,7 +720,10 @@ func (s *SDK) DeleteDataflowEndpointGroup(ctx context.Context, request operation
 // DeleteEphemeris - Deletes an ephemeris
 func (s *SDK) DeleteEphemeris(ctx context.Context, request operations.DeleteEphemerisRequest) (*operations.DeleteEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -772,7 +799,10 @@ func (s *SDK) DeleteEphemeris(ctx context.Context, request operations.DeleteEphe
 // DeleteMissionProfile - Deletes a mission profile.
 func (s *SDK) DeleteMissionProfile(ctx context.Context, request operations.DeleteMissionProfileRequest) (*operations.DeleteMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -848,7 +878,10 @@ func (s *SDK) DeleteMissionProfile(ctx context.Context, request operations.Delet
 // DescribeContact - Describes an existing contact.
 func (s *SDK) DescribeContact(ctx context.Context, request operations.DescribeContactRequest) (*operations.DescribeContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/contact/{contactId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -924,7 +957,10 @@ func (s *SDK) DescribeContact(ctx context.Context, request operations.DescribeCo
 // DescribeEphemeris - Describes an existing ephemeris.
 func (s *SDK) DescribeEphemeris(ctx context.Context, request operations.DescribeEphemerisRequest) (*operations.DescribeEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -997,10 +1033,13 @@ func (s *SDK) DescribeEphemeris(ctx context.Context, request operations.Describe
 	return res, nil
 }
 
-// GetAgentConfiguration - Gets the latest configuration information for a registered agent.
+// GetAgentConfiguration - <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p>Gets the latest configuration information for a registered agent.</p>
 func (s *SDK) GetAgentConfiguration(ctx context.Context, request operations.GetAgentConfigurationRequest) (*operations.GetAgentConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}/configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}/configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1076,7 +1115,10 @@ func (s *SDK) GetAgentConfiguration(ctx context.Context, request operations.GetA
 // GetConfig - <p>Returns <code>Config</code> information.</p> <p>Only one <code>Config</code> response can be returned.</p>
 func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest) (*operations.GetConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1152,7 +1194,10 @@ func (s *SDK) GetConfig(ctx context.Context, request operations.GetConfigRequest
 // GetDataflowEndpointGroup - Returns the dataflow endpoint group.
 func (s *SDK) GetDataflowEndpointGroup(ctx context.Context, request operations.GetDataflowEndpointGroupRequest) (*operations.GetDataflowEndpointGroupResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dataflowEndpointGroup/{dataflowEndpointGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1314,7 +1359,10 @@ func (s *SDK) GetMinuteUsage(ctx context.Context, request operations.GetMinuteUs
 // GetMissionProfile - Returns a mission profile.
 func (s *SDK) GetMissionProfile(ctx context.Context, request operations.GetMissionProfileRequest) (*operations.GetMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1390,7 +1438,10 @@ func (s *SDK) GetMissionProfile(ctx context.Context, request operations.GetMissi
 // GetSatellite - Returns a satellite.
 func (s *SDK) GetSatellite(ctx context.Context, request operations.GetSatelliteRequest) (*operations.GetSatelliteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/satellite/{satelliteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/satellite/{satelliteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2046,7 +2097,10 @@ func (s *SDK) ListSatellites(ctx context.Context, request operations.ListSatelli
 // ListTagsForResource - Returns a list of tags for a specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2119,7 +2173,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	return res, nil
 }
 
-// RegisterAgent - Registers a new agent with AWS Groundstation.
+// RegisterAgent - <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p> Registers a new agent with AWS Ground Station. </p>
 func (s *SDK) RegisterAgent(ctx context.Context, request operations.RegisterAgentRequest) (*operations.RegisterAgentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/agent"
@@ -2294,7 +2348,10 @@ func (s *SDK) ReserveContact(ctx context.Context, request operations.ReserveCont
 // TagResource - Assigns a tag to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2380,7 +2437,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Deassigns a resource tag.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2457,10 +2517,13 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 	return res, nil
 }
 
-// UpdateAgentStatus - Update the status of the agent.
+// UpdateAgentStatus - <note> <p> For use by AWS Ground Station Agent and shouldn't be called directly.</p> </note> <p>Update the status of the agent.</p>
 func (s *SDK) UpdateAgentStatus(ctx context.Context, request operations.UpdateAgentStatusRequest) (*operations.UpdateAgentStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/agent/{agentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2546,7 +2609,10 @@ func (s *SDK) UpdateAgentStatus(ctx context.Context, request operations.UpdateAg
 // UpdateConfig - <p>Updates the <code>Config</code> used when scheduling contacts.</p> <p>Updating a <code>Config</code> will not update the execution parameters for existing future contacts scheduled with this <code>Config</code>.</p>
 func (s *SDK) UpdateConfig(ctx context.Context, request operations.UpdateConfigRequest) (*operations.UpdateConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/config/{configType}/{configId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2632,7 +2698,10 @@ func (s *SDK) UpdateConfig(ctx context.Context, request operations.UpdateConfigR
 // UpdateEphemeris - Updates an existing ephemeris
 func (s *SDK) UpdateEphemeris(ctx context.Context, request operations.UpdateEphemerisRequest) (*operations.UpdateEphemerisResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/ephemeris/{ephemerisId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2718,7 +2787,10 @@ func (s *SDK) UpdateEphemeris(ctx context.Context, request operations.UpdateEphe
 // UpdateMissionProfile - <p>Updates a mission profile.</p> <p>Updating a mission profile will not update the execution parameters for existing future contacts.</p>
 func (s *SDK) UpdateMissionProfile(ctx context.Context, request operations.UpdateMissionProfileRequest) (*operations.UpdateMissionProfileResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/missionprofile/{missionProfileId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

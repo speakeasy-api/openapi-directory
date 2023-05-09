@@ -17,12 +17,16 @@ const (
 	DescribeNetworkInterfaceAttributeRequestAttributeEnumAttachment      DescribeNetworkInterfaceAttributeRequestAttributeEnum = "attachment"
 )
 
+func (e DescribeNetworkInterfaceAttributeRequestAttributeEnum) ToPointer() *DescribeNetworkInterfaceAttributeRequestAttributeEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfaceAttributeRequestAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "description":
 		fallthrough
 	case "groupSet":
@@ -30,10 +34,10 @@ func (e *DescribeNetworkInterfaceAttributeRequestAttributeEnum) UnmarshalJSON(da
 	case "sourceDestCheck":
 		fallthrough
 	case "attachment":
-		*e = DescribeNetworkInterfaceAttributeRequestAttributeEnum(s)
+		*e = DescribeNetworkInterfaceAttributeRequestAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfaceAttributeRequestAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfaceAttributeRequestAttributeEnum: %v", v)
 	}
 }
 

@@ -21,21 +21,25 @@ const (
 	CreateRebalanceSwitchInstructionRequestTypeEnumPortfolio CreateRebalanceSwitchInstructionRequestTypeEnum = "portfolio"
 )
 
+func (e CreateRebalanceSwitchInstructionRequestTypeEnum) ToPointer() *CreateRebalanceSwitchInstructionRequestTypeEnum {
+	return &e
+}
+
 func (e *CreateRebalanceSwitchInstructionRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pot":
 		fallthrough
 	case "investor":
 		fallthrough
 	case "portfolio":
-		*e = CreateRebalanceSwitchInstructionRequestTypeEnum(s)
+		*e = CreateRebalanceSwitchInstructionRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRebalanceSwitchInstructionRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRebalanceSwitchInstructionRequestTypeEnum: %v", v)
 	}
 }
 
@@ -79,19 +83,23 @@ const (
 	CreateRebalance409ApplicationJSONStatusEnumComplete   CreateRebalance409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e CreateRebalance409ApplicationJSONStatusEnum) ToPointer() *CreateRebalance409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateRebalance409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = CreateRebalance409ApplicationJSONStatusEnum(s)
+		*e = CreateRebalance409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRebalance409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRebalance409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -146,21 +154,25 @@ const (
 	CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnumCompleted  CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum = "completed"
 )
 
+func (e CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum) ToPointer() *CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum {
+	return &e
+}
+
 func (e *CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "processing":
 		fallthrough
 	case "failed":
 		fallthrough
 	case "completed":
-		*e = CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum(s)
+		*e = CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRebalance201ApplicationJSONEachPotInstructionOfTheRebalanceRequestStatusEnum: %v", v)
 	}
 }
 
@@ -188,12 +200,16 @@ const (
 	CreateRebalance201ApplicationJSONStatusEnumFailed     CreateRebalance201ApplicationJSONStatusEnum = "failed"
 )
 
+func (e CreateRebalance201ApplicationJSONStatusEnum) ToPointer() *CreateRebalance201ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CreateRebalance201ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "processing":
 		fallthrough
 	case "in_progress":
@@ -201,10 +217,10 @@ func (e *CreateRebalance201ApplicationJSONStatusEnum) UnmarshalJSON(data []byte)
 	case "completed":
 		fallthrough
 	case "failed":
-		*e = CreateRebalance201ApplicationJSONStatusEnum(s)
+		*e = CreateRebalance201ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRebalance201ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRebalance201ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

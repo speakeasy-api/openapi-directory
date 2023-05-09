@@ -34,7 +34,10 @@ func newWebapps(defaultClient, securityClient HTTPClient, serverURL, language, s
 // AndroidenterpriseWebappsDelete - Deletes an existing web app.
 func (s *webapps) AndroidenterpriseWebappsDelete(ctx context.Context, request operations.AndroidenterpriseWebappsDeleteRequest, security operations.AndroidenterpriseWebappsDeleteSecurity) (*operations.AndroidenterpriseWebappsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *webapps) AndroidenterpriseWebappsDelete(ctx context.Context, request op
 // AndroidenterpriseWebappsGet - Gets an existing web app.
 func (s *webapps) AndroidenterpriseWebappsGet(ctx context.Context, request operations.AndroidenterpriseWebappsGetRequest, security operations.AndroidenterpriseWebappsGetSecurity) (*operations.AndroidenterpriseWebappsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *webapps) AndroidenterpriseWebappsGet(ctx context.Context, request opera
 // AndroidenterpriseWebappsInsert - Creates a new web app for the enterprise.
 func (s *webapps) AndroidenterpriseWebappsInsert(ctx context.Context, request operations.AndroidenterpriseWebappsInsertRequest, security operations.AndroidenterpriseWebappsInsertSecurity) (*operations.AndroidenterpriseWebappsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebApp", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *webapps) AndroidenterpriseWebappsInsert(ctx context.Context, request op
 // AndroidenterpriseWebappsList - Retrieves the details of all web apps for a given enterprise.
 func (s *webapps) AndroidenterpriseWebappsList(ctx context.Context, request operations.AndroidenterpriseWebappsListRequest, security operations.AndroidenterpriseWebappsListSecurity) (*operations.AndroidenterpriseWebappsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *webapps) AndroidenterpriseWebappsList(ctx context.Context, request oper
 // AndroidenterpriseWebappsUpdate - Updates an existing web app.
 func (s *webapps) AndroidenterpriseWebappsUpdate(ctx context.Context, request operations.AndroidenterpriseWebappsUpdateRequest, security operations.AndroidenterpriseWebappsUpdateSecurity) (*operations.AndroidenterpriseWebappsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/webApps/{webAppId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebApp", "json")
 	if err != nil {

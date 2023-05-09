@@ -16,17 +16,21 @@ const (
 	UpdateArtifactXAmzTargetEnumSageMakerUpdateArtifact UpdateArtifactXAmzTargetEnum = "SageMaker.UpdateArtifact"
 )
 
+func (e UpdateArtifactXAmzTargetEnum) ToPointer() *UpdateArtifactXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateArtifactXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.UpdateArtifact":
-		*e = UpdateArtifactXAmzTargetEnum(s)
+		*e = UpdateArtifactXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateArtifactXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateArtifactXAmzTargetEnum: %v", v)
 	}
 }
 

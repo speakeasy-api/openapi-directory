@@ -18,12 +18,16 @@ const (
 	CommentSnippetModerationStatusEnumRejected      CommentSnippetModerationStatusEnum = "rejected"
 )
 
+func (e CommentSnippetModerationStatusEnum) ToPointer() *CommentSnippetModerationStatusEnum {
+	return &e
+}
+
 func (e *CommentSnippetModerationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "published":
 		fallthrough
 	case "heldForReview":
@@ -31,10 +35,10 @@ func (e *CommentSnippetModerationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "likelySpam":
 		fallthrough
 	case "rejected":
-		*e = CommentSnippetModerationStatusEnum(s)
+		*e = CommentSnippetModerationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommentSnippetModerationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CommentSnippetModerationStatusEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	CommentSnippetViewerRatingEnumDislike CommentSnippetViewerRatingEnum = "dislike"
 )
 
+func (e CommentSnippetViewerRatingEnum) ToPointer() *CommentSnippetViewerRatingEnum {
+	return &e
+}
+
 func (e *CommentSnippetViewerRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "like":
 		fallthrough
 	case "dislike":
-		*e = CommentSnippetViewerRatingEnum(s)
+		*e = CommentSnippetViewerRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommentSnippetViewerRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for CommentSnippetViewerRatingEnum: %v", v)
 	}
 }
 

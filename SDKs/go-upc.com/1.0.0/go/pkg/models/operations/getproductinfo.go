@@ -22,21 +22,25 @@ const (
 	GetProductInfo200ApplicationJSONCodeTypeEnumIsbn GetProductInfo200ApplicationJSONCodeTypeEnum = "ISBN"
 )
 
+func (e GetProductInfo200ApplicationJSONCodeTypeEnum) ToPointer() *GetProductInfo200ApplicationJSONCodeTypeEnum {
+	return &e
+}
+
 func (e *GetProductInfo200ApplicationJSONCodeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPC":
 		fallthrough
 	case "EAN":
 		fallthrough
 	case "ISBN":
-		*e = GetProductInfo200ApplicationJSONCodeTypeEnum(s)
+		*e = GetProductInfo200ApplicationJSONCodeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProductInfo200ApplicationJSONCodeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProductInfo200ApplicationJSONCodeTypeEnum: %v", v)
 	}
 }
 

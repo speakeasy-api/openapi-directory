@@ -36,7 +36,10 @@ func newGit(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // https://docs.github.com/github-ae@latest/rest/reference/git#create-a-blob - API method documentation
 func (s *git) GitCreateBlob(ctx context.Context, request operations.GitCreateBlobRequest) (*operations.GitCreateBlobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/blobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/blobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -147,7 +150,10 @@ func (s *git) GitCreateBlob(ctx context.Context, request operations.GitCreateBlo
 // https://docs.github.com/github-ae@latest/rest/reference/git#create-a-commit - API method documentation
 func (s *git) GitCreateCommit(ctx context.Context, request operations.GitCreateCommitRequest) (*operations.GitCreateCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/commits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/commits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *git) GitCreateCommit(ctx context.Context, request operations.GitCreateC
 // https://docs.github.com/github-ae@latest/rest/reference/git#create-a-reference - API method documentation
 func (s *git) GitCreateRef(ctx context.Context, request operations.GitCreateRefRequest) (*operations.GitCreateRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -322,7 +331,10 @@ func (s *git) GitCreateRef(ctx context.Context, request operations.GitCreateRefR
 // https://docs.github.com/github-ae@latest/rest/reference/git#create-a-tag-object - API method documentation
 func (s *git) GitCreateTag(ctx context.Context, request operations.GitCreateTagRequest) (*operations.GitCreateTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -394,7 +406,10 @@ func (s *git) GitCreateTag(ctx context.Context, request operations.GitCreateTagR
 // https://docs.github.com/github-ae@latest/rest/reference/git#create-a-tree - API method documentation
 func (s *git) GitCreateTree(ctx context.Context, request operations.GitCreateTreeRequest) (*operations.GitCreateTreeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/trees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/trees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -473,7 +488,10 @@ func (s *git) GitCreateTree(ctx context.Context, request operations.GitCreateTre
 // https://docs.github.com/github-ae@latest/rest/reference/git#delete-a-reference - API method documentation
 func (s *git) GitDeleteRef(ctx context.Context, request operations.GitDeleteRefRequest) (*operations.GitDeleteRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -522,7 +540,10 @@ func (s *git) GitDeleteRef(ctx context.Context, request operations.GitDeleteRefR
 // https://docs.github.com/github-ae@latest/rest/reference/git#get-a-blob - API method documentation
 func (s *git) GitGetBlob(ctx context.Context, request operations.GitGetBlobRequest) (*operations.GitGetBlobResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/blobs/{file_sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/blobs/{file_sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -619,7 +640,10 @@ func (s *git) GitGetBlob(ctx context.Context, request operations.GitGetBlobReque
 // https://docs.github.com/github-ae@latest/rest/reference/git#get-a-commit - API method documentation
 func (s *git) GitGetCommit(ctx context.Context, request operations.GitGetCommitRequest) (*operations.GitGetCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/commits/{commit_sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/commits/{commit_sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -677,7 +701,10 @@ func (s *git) GitGetCommit(ctx context.Context, request operations.GitGetCommitR
 // https://docs.github.com/github-ae@latest/rest/reference/git#get-a-reference - API method documentation
 func (s *git) GitGetRef(ctx context.Context, request operations.GitGetRefRequest) (*operations.GitGetRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/ref/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/ref/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -760,7 +787,10 @@ func (s *git) GitGetRef(ctx context.Context, request operations.GitGetRefRequest
 // https://docs.github.com/github-ae@latest/rest/reference/git#get-a-tag - API method documentation
 func (s *git) GitGetTag(ctx context.Context, request operations.GitGetTagRequest) (*operations.GitGetTagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/tags/{tag_sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/tags/{tag_sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -820,7 +850,10 @@ func (s *git) GitGetTag(ctx context.Context, request operations.GitGetTagRequest
 // https://docs.github.com/github-ae@latest/rest/reference/git#get-a-tree - API method documentation
 func (s *git) GitGetTree(ctx context.Context, request operations.GitGetTreeRequest) (*operations.GitGetTreeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/trees/{tree_sha}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/trees/{tree_sha}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -896,7 +929,10 @@ func (s *git) GitGetTree(ctx context.Context, request operations.GitGetTreeReque
 // https://docs.github.com/github-ae@latest/rest/reference/git#list-matching-references - API method documentation
 func (s *git) GitListMatchingRefs(ctx context.Context, request operations.GitListMatchingRefsRequest) (*operations.GitListMatchingRefsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/matching-refs/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/matching-refs/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -943,7 +979,10 @@ func (s *git) GitListMatchingRefs(ctx context.Context, request operations.GitLis
 // https://docs.github.com/github-ae@latest/rest/reference/git#update-a-reference - API method documentation
 func (s *git) GitUpdateRef(ctx context.Context, request operations.GitUpdateRefRequest) (*operations.GitUpdateRefResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs/{ref}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/git/refs/{ref}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

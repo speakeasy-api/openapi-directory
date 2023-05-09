@@ -30,17 +30,21 @@ const (
 	LocerRequestBodyFormatEnumPdf LocerRequestBodyFormatEnum = "pdf"
 )
 
+func (e LocerRequestBodyFormatEnum) ToPointer() *LocerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *LocerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = LocerRequestBodyFormatEnum(s)
+		*e = LocerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LocerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -60,17 +64,21 @@ const (
 	Locer504ApplicationJSONErrorEnumGatewayTimeout Locer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Locer504ApplicationJSONErrorEnum) ToPointer() *Locer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Locer504ApplicationJSONErrorEnum(s)
+		*e = Locer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -80,17 +88,21 @@ const (
 	Locer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Locer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Locer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Locer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -106,17 +118,21 @@ const (
 	Locer503ApplicationJSONErrorEnumServiceUnavailable Locer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Locer503ApplicationJSONErrorEnum) ToPointer() *Locer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Locer503ApplicationJSONErrorEnum(s)
+		*e = Locer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -126,17 +142,21 @@ const (
 	Locer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Locer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Locer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Locer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -152,17 +172,21 @@ const (
 	Locer502ApplicationJSONErrorEnumBadGatewy Locer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Locer502ApplicationJSONErrorEnum) ToPointer() *Locer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Locer502ApplicationJSONErrorEnum(s)
+		*e = Locer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -172,17 +196,21 @@ const (
 	Locer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Locer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Locer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Locer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -198,17 +226,21 @@ const (
 	Locer500ApplicationJSONErrorEnumInternalServerError Locer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Locer500ApplicationJSONErrorEnum) ToPointer() *Locer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Locer500ApplicationJSONErrorEnum(s)
+		*e = Locer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -218,17 +250,21 @@ const (
 	Locer500ApplicationJSONErrorDescriptionEnumInternalServerError Locer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Locer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Locer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -245,19 +281,23 @@ const (
 	Locer404ApplicationJSONErrorEnumURLNotFound    Locer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Locer404ApplicationJSONErrorEnum) ToPointer() *Locer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Locer404ApplicationJSONErrorEnum(s)
+		*e = Locer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -268,19 +308,23 @@ const (
 	Locer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Locer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Locer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Locer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -297,19 +341,23 @@ const (
 	Locer401ApplicationJSONErrorEnumInvalidAuthorization  Locer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Locer401ApplicationJSONErrorEnum) ToPointer() *Locer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Locer401ApplicationJSONErrorEnum(s)
+		*e = Locer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -320,19 +368,23 @@ const (
 	Locer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Locer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Locer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Locer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -352,12 +404,16 @@ const (
 	Locer400ApplicationJSONErrorEnumInvalidConsentid Locer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Locer400ApplicationJSONErrorEnum) ToPointer() *Locer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Locer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -367,10 +423,10 @@ func (e *Locer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Locer400ApplicationJSONErrorEnum(s)
+		*e = Locer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -384,12 +440,16 @@ const (
 	Locer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Locer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Locer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Locer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Locer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -399,10 +459,10 @@ func (e *Locer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Locer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Locer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Locer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Locer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

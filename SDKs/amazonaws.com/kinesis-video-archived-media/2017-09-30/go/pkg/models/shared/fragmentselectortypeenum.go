@@ -14,18 +14,22 @@ const (
 	FragmentSelectorTypeEnumServerTimestamp   FragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
 )
 
+func (e FragmentSelectorTypeEnum) ToPointer() *FragmentSelectorTypeEnum {
+	return &e
+}
+
 func (e *FragmentSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCER_TIMESTAMP":
 		fallthrough
 	case "SERVER_TIMESTAMP":
-		*e = FragmentSelectorTypeEnum(s)
+		*e = FragmentSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FragmentSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FragmentSelectorTypeEnum: %v", v)
 	}
 }

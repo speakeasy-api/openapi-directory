@@ -17,19 +17,23 @@ const (
 	GetTruckOptimalDirectionsOutputFormatCriteriaEnumFastest  GetTruckOptimalDirectionsOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e GetTruckOptimalDirectionsOutputFormatCriteriaEnum) ToPointer() *GetTruckOptimalDirectionsOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *GetTruckOptimalDirectionsOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = GetTruckOptimalDirectionsOutputFormatCriteriaEnum(s)
+		*e = GetTruckOptimalDirectionsOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	GetTruckOptimalDirectionsOutputFormatDistanceUnitEnumMi GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum) ToPointer() *GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum(s)
+		*e = GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -66,63 +74,71 @@ const (
 	GetTruckOptimalDirectionsOutputFormatOutputFormatEnumHTML GetTruckOptimalDirectionsOutputFormatOutputFormatEnum = "html"
 )
 
+func (e GetTruckOptimalDirectionsOutputFormatOutputFormatEnum) ToPointer() *GetTruckOptimalDirectionsOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *GetTruckOptimalDirectionsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "kml":
 		fallthrough
 	case "html":
-		*e = GetTruckOptimalDirectionsOutputFormatOutputFormatEnum(s)
+		*e = GetTruckOptimalDirectionsOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // GetTruckOptimalDirectionsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type GetTruckOptimalDirectionsOutputFormatOutputSrsEnum string
+type GetTruckOptimalDirectionsOutputFormatOutputSrsEnum int64
 
 const (
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "4326"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "4269"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumThreeThousandAndFive                  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "3005"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "26907"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "26908"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "26909"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "26910"
-	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = "26911"
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 4326
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 4269
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumThreeThousandAndFive                  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 3005
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 26907
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 26908
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 26909
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 26910
+	GetTruckOptimalDirectionsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven GetTruckOptimalDirectionsOutputFormatOutputSrsEnum = 26911
 )
 
+func (e GetTruckOptimalDirectionsOutputFormatOutputSrsEnum) ToPointer() *GetTruckOptimalDirectionsOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *GetTruckOptimalDirectionsOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetTruckOptimalDirectionsOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = GetTruckOptimalDirectionsOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTruckOptimalDirectionsOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

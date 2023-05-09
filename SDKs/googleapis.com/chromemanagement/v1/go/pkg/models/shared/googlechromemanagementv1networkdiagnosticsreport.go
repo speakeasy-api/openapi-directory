@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1NetworkDiagnosticsReport - Network testing results to determine the health of the device's network connection, for example whether the HTTPS latency is high or normal.
+// GoogleChromeManagementV1NetworkDiagnosticsReport - Network testing results to determine the health of the device's network connection, for example whether the HTTPS latency is high or normal. * Granular permission needed: TELEMETRY_API_NETWORK_REPORT
 type GoogleChromeManagementV1NetworkDiagnosticsReport struct {
 	// Data that describes the result of the HTTPS latency diagnostics routine, with the HTTPS requests issued to Google websites.
 	HTTPSLatencyData *GoogleChromeManagementV1HTTPSLatencyRoutineData `json:"httpsLatencyData,omitempty"`

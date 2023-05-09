@@ -19,12 +19,16 @@ const (
 	GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnumDown             GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum = "DOWN"
 )
 
+func (e GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum) ToPointer() *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -36,10 +40,10 @@ func (e *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum) UnmarshalJ
 	case "DELETING":
 		fallthrough
 	case "DOWN":
-		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum(s)
+		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionStateEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnumTCPProxy        GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum = "TCP_PROXY"
 )
 
+func (e GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum) ToPointer() *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TCP_PROXY":
-		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum(s)
+		*e = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum: %v", v)
 	}
 }
 

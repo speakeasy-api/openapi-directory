@@ -14,18 +14,22 @@ const (
 	ProcessingS3InputModeEnumFile ProcessingS3InputModeEnum = "File"
 )
 
+func (e ProcessingS3InputModeEnum) ToPointer() *ProcessingS3InputModeEnum {
+	return &e
+}
+
 func (e *ProcessingS3InputModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pipe":
 		fallthrough
 	case "File":
-		*e = ProcessingS3InputModeEnum(s)
+		*e = ProcessingS3InputModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProcessingS3InputModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProcessingS3InputModeEnum: %v", v)
 	}
 }

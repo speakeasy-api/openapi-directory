@@ -16,21 +16,25 @@ const (
 	TelemetryConfigLogFormatEnumJSON                 TelemetryConfigLogFormatEnum = "JSON"
 )
 
+func (e TelemetryConfigLogFormatEnum) ToPointer() *TelemetryConfigLogFormatEnum {
+	return &e
+}
+
 func (e *TelemetryConfigLogFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "LEGACY":
 		fallthrough
 	case "JSON":
-		*e = TelemetryConfigLogFormatEnum(s)
+		*e = TelemetryConfigLogFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TelemetryConfigLogFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TelemetryConfigLogFormatEnum: %v", v)
 	}
 }
 

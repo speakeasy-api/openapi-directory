@@ -18,12 +18,16 @@ const (
 	GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnumTabResource                 GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum = "TAB_RESOURCE"
 )
 
+func (e GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum) ToPointer() *GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum {
+	return &e
+}
+
 func (e *GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_SOURCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MATCHING_URL":
@@ -33,10 +37,10 @@ func (e *GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum) UnmarshalJSO
 	case "TAB_REDIRECT":
 		fallthrough
 	case "TAB_RESOURCE":
-		*e = GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum(s)
+		*e = GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleSecuritySafebrowsingV4ThreatHitThreatSourceTypeEnum: %v", v)
 	}
 }
 

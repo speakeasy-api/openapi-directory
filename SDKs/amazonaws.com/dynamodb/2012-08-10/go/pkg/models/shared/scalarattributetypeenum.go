@@ -15,20 +15,24 @@ const (
 	ScalarAttributeTypeEnumB ScalarAttributeTypeEnum = "B"
 )
 
+func (e ScalarAttributeTypeEnum) ToPointer() *ScalarAttributeTypeEnum {
+	return &e
+}
+
 func (e *ScalarAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S":
 		fallthrough
 	case "N":
 		fallthrough
 	case "B":
-		*e = ScalarAttributeTypeEnum(s)
+		*e = ScalarAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalarAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalarAttributeTypeEnum: %v", v)
 	}
 }

@@ -106,7 +106,10 @@ func (s *rewardEarningFulfillment) CreateRewardEarningFulfillment(ctx context.Co
 // Get a reward earning fulfillment record by id.
 func (s *rewardEarningFulfillment) FetchRewardEarningFulfillment(ctx context.Context, request operations.FetchRewardEarningFulfillmentRequest) (*operations.FetchRewardEarningFulfillmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reward_earning_fulfillment/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reward_earning_fulfillment/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -34,7 +34,10 @@ func newCustomers(defaultClient, securityClient HTTPClient, serverURL, language,
 // Searchads360CustomersCustomColumnsList - Returns all the custom columns associated with the customer in full detail.
 func (s *customers) Searchads360CustomersCustomColumnsList(ctx context.Context, request operations.Searchads360CustomersCustomColumnsListRequest, security operations.Searchads360CustomersCustomColumnsListSecurity) (*operations.Searchads360CustomersCustomColumnsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/customers/{customerId}/customColumns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0/customers/{customerId}/customColumns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *customers) Searchads360CustomersCustomColumnsList(ctx context.Context, 
 // Searchads360CustomersSearchAds360Search - Returns all rows that match the search query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
 func (s *customers) Searchads360CustomersSearchAds360Search(ctx context.Context, request operations.Searchads360CustomersSearchAds360SearchRequest, security operations.Searchads360CustomersSearchAds360SearchSecurity) (*operations.Searchads360CustomersSearchAds360SearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/customers/{customerId}/searchAds360:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v0/customers/{customerId}/searchAds360:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAdsSearchads360V0ServicesSearchSearchAds360Request", "json")
 	if err != nil {
@@ -128,61 +134,6 @@ func (s *customers) Searchads360CustomersSearchAds360Search(ctx context.Context,
 			}
 
 			res.GoogleAdsSearchads360V0ServicesSearchSearchAds360Response = out
-		}
-	}
-
-	return res, nil
-}
-
-// Searchads360CustomersSearchAds360SearchStream - Returns all rows that match the search stream query. List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]() [InternalError]() [QueryError]() [QuotaError]() [RequestError]()
-func (s *customers) Searchads360CustomersSearchAds360SearchStream(ctx context.Context, request operations.Searchads360CustomersSearchAds360SearchStreamRequest, security operations.Searchads360CustomersSearchAds360SearchStreamSecurity) (*operations.Searchads360CustomersSearchAds360SearchStreamResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v0/customers/{customerId}/searchAds360:searchStream", request, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamRequest", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.Searchads360CustomersSearchAds360SearchStreamResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GoogleAdsSearchads360V0ServicesSearchSearchAds360StreamResponse = out
 		}
 	}
 

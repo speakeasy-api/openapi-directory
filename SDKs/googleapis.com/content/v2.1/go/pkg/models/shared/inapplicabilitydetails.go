@@ -22,12 +22,16 @@ const (
 	InapplicabilityDetailsInapplicableReasonEnumInvalidFloorConfig              InapplicabilityDetailsInapplicableReasonEnum = "INVALID_FLOOR_CONFIG"
 )
 
+func (e InapplicabilityDetailsInapplicableReasonEnum) ToPointer() *InapplicabilityDetailsInapplicableReasonEnum {
+	return &e
+}
+
 func (e *InapplicabilityDetailsInapplicableReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INAPPLICABLE_REASON_UNSPECIFIED":
 		fallthrough
 	case "CANNOT_BEAT_BUYBOX_WINNER":
@@ -45,10 +49,10 @@ func (e *InapplicabilityDetailsInapplicableReasonEnum) UnmarshalJSON(data []byte
 	case "INVALID_AUTO_PRICE_MIN":
 		fallthrough
 	case "INVALID_FLOOR_CONFIG":
-		*e = InapplicabilityDetailsInapplicableReasonEnum(s)
+		*e = InapplicabilityDetailsInapplicableReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InapplicabilityDetailsInapplicableReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for InapplicabilityDetailsInapplicableReasonEnum: %v", v)
 	}
 }
 

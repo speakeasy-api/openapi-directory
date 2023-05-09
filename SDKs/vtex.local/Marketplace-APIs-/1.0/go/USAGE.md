@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,16 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.GetSuggestionRequest{
+    ctx := context.Background()
+    res, err := s.GetSuggestions.GetSuggestion(ctx, operations.GetSuggestionRequest{
         Accept: "corrupti",
         ContentType: "provident",
         AccountName: "distinctio",
         SellerID: "quibusdam",
         SellerSkuID: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetSuggestions.GetSuggestion(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

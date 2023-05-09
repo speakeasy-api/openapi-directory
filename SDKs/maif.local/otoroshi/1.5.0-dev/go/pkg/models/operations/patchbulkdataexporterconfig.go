@@ -20,17 +20,21 @@ const (
 	PatchBulkDataExporterConfig200ApplicationJSONStatusEnumTwoHundred PatchBulkDataExporterConfig200ApplicationJSONStatusEnum = "200"
 )
 
+func (e PatchBulkDataExporterConfig200ApplicationJSONStatusEnum) ToPointer() *PatchBulkDataExporterConfig200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *PatchBulkDataExporterConfig200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "200":
-		*e = PatchBulkDataExporterConfig200ApplicationJSONStatusEnum(s)
+		*e = PatchBulkDataExporterConfig200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchBulkDataExporterConfig200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchBulkDataExporterConfig200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

@@ -20,12 +20,16 @@ const (
 	BeezUPCommonParameterInEnumBody   BeezUPCommonParameterInEnum = "body"
 )
 
+func (e BeezUPCommonParameterInEnum) ToPointer() *BeezUPCommonParameterInEnum {
+	return &e
+}
+
 func (e *BeezUPCommonParameterInEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "path":
 		fallthrough
 	case "header":
@@ -33,9 +37,9 @@ func (e *BeezUPCommonParameterInEnum) UnmarshalJSON(data []byte) error {
 	case "query":
 		fallthrough
 	case "body":
-		*e = BeezUPCommonParameterInEnum(s)
+		*e = BeezUPCommonParameterInEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BeezUPCommonParameterInEnum: %s", s)
+		return fmt.Errorf("invalid value for BeezUPCommonParameterInEnum: %v", v)
 	}
 }

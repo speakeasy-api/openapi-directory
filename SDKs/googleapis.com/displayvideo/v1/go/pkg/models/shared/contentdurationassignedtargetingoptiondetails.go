@@ -21,12 +21,16 @@ const (
 	ContentDurationAssignedTargetingOptionDetailsContentDurationEnumContentDurationOver60Min   ContentDurationAssignedTargetingOptionDetailsContentDurationEnum = "CONTENT_DURATION_OVER_60_MIN"
 )
 
+func (e ContentDurationAssignedTargetingOptionDetailsContentDurationEnum) ToPointer() *ContentDurationAssignedTargetingOptionDetailsContentDurationEnum {
+	return &e
+}
+
 func (e *ContentDurationAssignedTargetingOptionDetailsContentDurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_DURATION_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_DURATION_UNKNOWN":
@@ -42,10 +46,10 @@ func (e *ContentDurationAssignedTargetingOptionDetailsContentDurationEnum) Unmar
 	case "CONTENT_DURATION_30_TO_60_MIN":
 		fallthrough
 	case "CONTENT_DURATION_OVER_60_MIN":
-		*e = ContentDurationAssignedTargetingOptionDetailsContentDurationEnum(s)
+		*e = ContentDurationAssignedTargetingOptionDetailsContentDurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentDurationAssignedTargetingOptionDetailsContentDurationEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentDurationAssignedTargetingOptionDetailsContentDurationEnum: %v", v)
 	}
 }
 

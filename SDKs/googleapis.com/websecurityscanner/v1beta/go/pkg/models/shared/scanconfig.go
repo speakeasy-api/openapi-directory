@@ -16,21 +16,25 @@ const (
 	ScanConfigExportToSecurityCommandCenterEnumDisabled                                 ScanConfigExportToSecurityCommandCenterEnum = "DISABLED"
 )
 
+func (e ScanConfigExportToSecurityCommandCenterEnum) ToPointer() *ScanConfigExportToSecurityCommandCenterEnum {
+	return &e
+}
+
 func (e *ScanConfigExportToSecurityCommandCenterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXPORT_TO_SECURITY_COMMAND_CENTER_UNSPECIFIED":
 		fallthrough
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ScanConfigExportToSecurityCommandCenterEnum(s)
+		*e = ScanConfigExportToSecurityCommandCenterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanConfigExportToSecurityCommandCenterEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanConfigExportToSecurityCommandCenterEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ScanConfigRiskLevelEnumLow                  ScanConfigRiskLevelEnum = "LOW"
 )
 
+func (e ScanConfigRiskLevelEnum) ToPointer() *ScanConfigRiskLevelEnum {
+	return &e
+}
+
 func (e *ScanConfigRiskLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RISK_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "LOW":
-		*e = ScanConfigRiskLevelEnum(s)
+		*e = ScanConfigRiskLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanConfigRiskLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanConfigRiskLevelEnum: %v", v)
 	}
 }
 
@@ -71,12 +79,16 @@ const (
 	ScanConfigTargetPlatformsEnumCloudFunctions            ScanConfigTargetPlatformsEnum = "CLOUD_FUNCTIONS"
 )
 
+func (e ScanConfigTargetPlatformsEnum) ToPointer() *ScanConfigTargetPlatformsEnum {
+	return &e
+}
+
 func (e *ScanConfigTargetPlatformsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGET_PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "APP_ENGINE":
@@ -86,10 +98,10 @@ func (e *ScanConfigTargetPlatformsEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_RUN":
 		fallthrough
 	case "CLOUD_FUNCTIONS":
-		*e = ScanConfigTargetPlatformsEnum(s)
+		*e = ScanConfigTargetPlatformsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanConfigTargetPlatformsEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanConfigTargetPlatformsEnum: %v", v)
 	}
 }
 
@@ -103,12 +115,16 @@ const (
 	ScanConfigUserAgentEnumSafariIphone         ScanConfigUserAgentEnum = "SAFARI_IPHONE"
 )
 
+func (e ScanConfigUserAgentEnum) ToPointer() *ScanConfigUserAgentEnum {
+	return &e
+}
+
 func (e *ScanConfigUserAgentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_AGENT_UNSPECIFIED":
 		fallthrough
 	case "CHROME_LINUX":
@@ -116,10 +132,10 @@ func (e *ScanConfigUserAgentEnum) UnmarshalJSON(data []byte) error {
 	case "CHROME_ANDROID":
 		fallthrough
 	case "SAFARI_IPHONE":
-		*e = ScanConfigUserAgentEnum(s)
+		*e = ScanConfigUserAgentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanConfigUserAgentEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanConfigUserAgentEnum: %v", v)
 	}
 }
 

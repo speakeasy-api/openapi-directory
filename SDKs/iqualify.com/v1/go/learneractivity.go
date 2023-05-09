@@ -35,7 +35,10 @@ func newLearnerActivity(defaultClient, securityClient HTTPClient, serverURL, lan
 // Responds with all learner progress in the offering.
 func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsLearnersProgress(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsLearnersProgressRequest) (*operations.GetOfferingsOfferingIDAnalyticsLearnersProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/learners-progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/learners-progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsLearnersProgress(ctx co
 // Responds with all shared social notes in a specified offering.
 func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsSocialNotes(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsSocialNotesRequest) (*operations.GetOfferingsOfferingIDAnalyticsSocialNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/social-notes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/social-notes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsSocialNotes(ctx context
 // Responds with user reactions to units in a specified offering.
 func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsUnitReactions(ctx context.Context, request operations.GetOfferingsOfferingIDAnalyticsUnitReactionsRequest) (*operations.GetOfferingsOfferingIDAnalyticsUnitReactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/unit-reactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/offerings/{offeringId}/analytics/unit-reactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +221,10 @@ func (s *learnerActivity) GetOfferingsOfferingIDAnalyticsUnitReactions(ctx conte
 // Responds with the learner's progress in a specified offering.
 func (s *learnerActivity) GetUsersUserEmailOfferingsOfferingIDProgress(ctx context.Context, request operations.GetUsersUserEmailOfferingsOfferingIDProgressRequest) (*operations.GetUsersUserEmailOfferingsOfferingIDProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings/{offeringId}/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings/{offeringId}/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -273,7 +285,10 @@ func (s *learnerActivity) GetUsersUserEmailOfferingsOfferingIDProgress(ctx conte
 // Responds with the specified learner's progress in all offerings.
 func (s *learnerActivity) GetUsersUserEmailProgress(ctx context.Context, request operations.GetUsersUserEmailProgressRequest) (*operations.GetUsersUserEmailProgressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/progress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/progress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,12 +16,16 @@ const (
 	DocumentInsertTypeEnumProforma DocumentInsertTypeEnum = "proforma"
 )
 
+func (e DocumentInsertTypeEnum) ToPointer() *DocumentInsertTypeEnum {
+	return &e
+}
+
 func (e *DocumentInsertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "advance":
 		fallthrough
 	case "draft":
@@ -29,9 +33,9 @@ func (e *DocumentInsertTypeEnum) UnmarshalJSON(data []byte) error {
 	case "invoice":
 		fallthrough
 	case "proforma":
-		*e = DocumentInsertTypeEnum(s)
+		*e = DocumentInsertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentInsertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentInsertTypeEnum: %v", v)
 	}
 }

@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -48,4 +49,11 @@ pkg/models/operations/getsearch.go
 pkg/models/operations/gettherapeuticareas.go
 pkg/models/operations/getversion.go
 pkg/models/operations/postevidencebyid.go
+docs/sdk/README.md
+docs/filter/README.md
+docs/private/README.md
+docs/public/README.md
+docs/retrieve/README.md
+docs/search/README.md
+docs/utils/README.md
 USAGE.md

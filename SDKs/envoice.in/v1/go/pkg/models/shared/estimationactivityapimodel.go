@@ -62,12 +62,16 @@ const (
 	EstimationActivityAPIModelTypeEnumInvoiceDigitallySigned     EstimationActivityAPIModelTypeEnum = "InvoiceDigitallySigned"
 )
 
+func (e EstimationActivityAPIModelTypeEnum) ToPointer() *EstimationActivityAPIModelTypeEnum {
+	return &e
+}
+
 func (e *EstimationActivityAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Created":
 		fallthrough
 	case "Draft":
@@ -165,10 +169,10 @@ func (e *EstimationActivityAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EstimationDownloadedAsPdf":
 		fallthrough
 	case "InvoiceDigitallySigned":
-		*e = EstimationActivityAPIModelTypeEnum(s)
+		*e = EstimationActivityAPIModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EstimationActivityAPIModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EstimationActivityAPIModelTypeEnum: %v", v)
 	}
 }
 

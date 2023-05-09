@@ -17,15 +17,20 @@ const (
 	RepositoryFormatEnumNpm               RepositoryFormatEnum = "NPM"
 	RepositoryFormatEnumApt               RepositoryFormatEnum = "APT"
 	RepositoryFormatEnumYum               RepositoryFormatEnum = "YUM"
+	RepositoryFormatEnumGooget            RepositoryFormatEnum = "GOOGET"
 	RepositoryFormatEnumPython            RepositoryFormatEnum = "PYTHON"
 )
 
+func (e RepositoryFormatEnum) ToPointer() *RepositoryFormatEnum {
+	return &e
+}
+
 func (e *RepositoryFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_UNSPECIFIED":
 		fallthrough
 	case "DOCKER":
@@ -38,11 +43,13 @@ func (e *RepositoryFormatEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "YUM":
 		fallthrough
+	case "GOOGET":
+		fallthrough
 	case "PYTHON":
-		*e = RepositoryFormatEnum(s)
+		*e = RepositoryFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositoryFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositoryFormatEnum: %v", v)
 	}
 }
 

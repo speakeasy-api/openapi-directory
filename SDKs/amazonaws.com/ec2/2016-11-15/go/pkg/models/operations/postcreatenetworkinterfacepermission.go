@@ -15,17 +15,21 @@ const (
 	POSTCreateNetworkInterfacePermissionActionEnumCreateNetworkInterfacePermission POSTCreateNetworkInterfacePermissionActionEnum = "CreateNetworkInterfacePermission"
 )
 
+func (e POSTCreateNetworkInterfacePermissionActionEnum) ToPointer() *POSTCreateNetworkInterfacePermissionActionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkInterfacePermissionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateNetworkInterfacePermission":
-		*e = POSTCreateNetworkInterfacePermissionActionEnum(s)
+		*e = POSTCreateNetworkInterfacePermissionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkInterfacePermissionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkInterfacePermissionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateNetworkInterfacePermissionVersionEnumTwoThousandAndSixteen1115 POSTCreateNetworkInterfacePermissionVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateNetworkInterfacePermissionVersionEnum) ToPointer() *POSTCreateNetworkInterfacePermissionVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateNetworkInterfacePermissionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateNetworkInterfacePermissionVersionEnum(s)
+		*e = POSTCreateNetworkInterfacePermissionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateNetworkInterfacePermissionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateNetworkInterfacePermissionVersionEnum: %v", v)
 	}
 }
 

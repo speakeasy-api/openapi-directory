@@ -15,17 +15,21 @@ const (
 	POSTCreateVpcActionEnumCreateVpc POSTCreateVpcActionEnum = "CreateVpc"
 )
 
+func (e POSTCreateVpcActionEnum) ToPointer() *POSTCreateVpcActionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpcActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateVpc":
-		*e = POSTCreateVpcActionEnum(s)
+		*e = POSTCreateVpcActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpcActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpcActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateVpcVersionEnumTwoThousandAndSixteen1115 POSTCreateVpcVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateVpcVersionEnum) ToPointer() *POSTCreateVpcVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpcVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateVpcVersionEnum(s)
+		*e = POSTCreateVpcVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpcVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpcVersionEnum: %v", v)
 	}
 }
 

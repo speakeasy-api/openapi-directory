@@ -16,17 +16,21 @@ const (
 	DeleteCustomActionTypeXAmzTargetEnumCodePipeline20150709DeleteCustomActionType DeleteCustomActionTypeXAmzTargetEnum = "CodePipeline_20150709.DeleteCustomActionType"
 )
 
+func (e DeleteCustomActionTypeXAmzTargetEnum) ToPointer() *DeleteCustomActionTypeXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteCustomActionTypeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.DeleteCustomActionType":
-		*e = DeleteCustomActionTypeXAmzTargetEnum(s)
+		*e = DeleteCustomActionTypeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCustomActionTypeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCustomActionTypeXAmzTargetEnum: %v", v)
 	}
 }
 

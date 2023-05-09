@@ -16,17 +16,21 @@ const (
 	ListResourceTagsXAmzTargetEnumTrentServiceListResourceTags ListResourceTagsXAmzTargetEnum = "TrentService.ListResourceTags"
 )
 
+func (e ListResourceTagsXAmzTargetEnum) ToPointer() *ListResourceTagsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceTagsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.ListResourceTags":
-		*e = ListResourceTagsXAmzTargetEnum(s)
+		*e = ListResourceTagsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceTagsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceTagsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListSQLInjectionMatchSetsXAmzTargetEnumAwswafRegional20161128ListSQLInjectionMatchSets ListSQLInjectionMatchSetsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListSqlInjectionMatchSets"
 )
 
+func (e ListSQLInjectionMatchSetsXAmzTargetEnum) ToPointer() *ListSQLInjectionMatchSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSQLInjectionMatchSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.ListSqlInjectionMatchSets":
-		*e = ListSQLInjectionMatchSetsXAmzTargetEnum(s)
+		*e = ListSQLInjectionMatchSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSQLInjectionMatchSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSQLInjectionMatchSetsXAmzTargetEnum: %v", v)
 	}
 }
 

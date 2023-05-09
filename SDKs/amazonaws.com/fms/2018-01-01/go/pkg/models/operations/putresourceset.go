@@ -16,17 +16,21 @@ const (
 	PutResourceSetXAmzTargetEnumAwsfms20180101PutResourceSet PutResourceSetXAmzTargetEnum = "AWSFMS_20180101.PutResourceSet"
 )
 
+func (e PutResourceSetXAmzTargetEnum) ToPointer() *PutResourceSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutResourceSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.PutResourceSet":
-		*e = PutResourceSetXAmzTargetEnum(s)
+		*e = PutResourceSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutResourceSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutResourceSetXAmzTargetEnum: %v", v)
 	}
 }
 

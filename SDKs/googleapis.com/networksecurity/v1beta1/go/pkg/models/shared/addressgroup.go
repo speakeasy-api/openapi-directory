@@ -16,21 +16,25 @@ const (
 	AddressGroupTypeEnumIpv6            AddressGroupTypeEnum = "IPV6"
 )
 
+func (e AddressGroupTypeEnum) ToPointer() *AddressGroupTypeEnum {
+	return &e
+}
+
 func (e *AddressGroupTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "IPV4":
 		fallthrough
 	case "IPV6":
-		*e = AddressGroupTypeEnum(s)
+		*e = AddressGroupTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddressGroupTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AddressGroupTypeEnum: %v", v)
 	}
 }
 

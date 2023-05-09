@@ -14,17 +14,21 @@ const (
 	PatientAuthNotificationAcknowledgementAcknowledgementStatusEnumOk PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum = "OK"
 )
 
+func (e PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum) ToPointer() *PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum {
+	return &e
+}
+
 func (e *PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum(s)
+		*e = PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientAuthNotificationAcknowledgementAcknowledgementStatusEnum: %v", v)
 	}
 }
 

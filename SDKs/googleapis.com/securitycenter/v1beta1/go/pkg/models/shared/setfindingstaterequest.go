@@ -16,21 +16,25 @@ const (
 	SetFindingStateRequestStateEnumInactive         SetFindingStateRequestStateEnum = "INACTIVE"
 )
 
+func (e SetFindingStateRequestStateEnum) ToPointer() *SetFindingStateRequestStateEnum {
+	return &e
+}
+
 func (e *SetFindingStateRequestStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = SetFindingStateRequestStateEnum(s)
+		*e = SetFindingStateRequestStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetFindingStateRequestStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SetFindingStateRequestStateEnum: %v", v)
 	}
 }
 

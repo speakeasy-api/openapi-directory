@@ -35,7 +35,10 @@ func newApplications(defaultClient, securityClient HTTPClient, serverURL, langua
 // ApplicationGet - Gets information about the specified application.
 func (s *applications) ApplicationGet(ctx context.Context, request operations.ApplicationGetRequest) (*operations.ApplicationGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

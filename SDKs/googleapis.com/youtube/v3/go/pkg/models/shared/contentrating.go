@@ -23,12 +23,16 @@ const (
 	ContentRatingAcbRatingEnumAcbUnrated     ContentRatingAcbRatingEnum = "acbUnrated"
 )
 
+func (e ContentRatingAcbRatingEnum) ToPointer() *ContentRatingAcbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingAcbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "acbUnspecified":
 		fallthrough
 	case "acbE":
@@ -48,10 +52,10 @@ func (e *ContentRatingAcbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "acbR18plus":
 		fallthrough
 	case "acbUnrated":
-		*e = ContentRatingAcbRatingEnum(s)
+		*e = ContentRatingAcbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingAcbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingAcbRatingEnum: %v", v)
 	}
 }
 
@@ -66,12 +70,16 @@ const (
 	ContentRatingAgcomRatingEnumAgcomUnrated     ContentRatingAgcomRatingEnum = "agcomUnrated"
 )
 
+func (e ContentRatingAgcomRatingEnum) ToPointer() *ContentRatingAgcomRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingAgcomRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "agcomUnspecified":
 		fallthrough
 	case "agcomT":
@@ -81,10 +89,10 @@ func (e *ContentRatingAgcomRatingEnum) UnmarshalJSON(data []byte) error {
 	case "agcomVm18":
 		fallthrough
 	case "agcomUnrated":
-		*e = ContentRatingAgcomRatingEnum(s)
+		*e = ContentRatingAgcomRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingAgcomRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingAgcomRatingEnum: %v", v)
 	}
 }
 
@@ -103,12 +111,16 @@ const (
 	ContentRatingAnatelRatingEnumAnatelUnrated     ContentRatingAnatelRatingEnum = "anatelUnrated"
 )
 
+func (e ContentRatingAnatelRatingEnum) ToPointer() *ContentRatingAnatelRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingAnatelRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "anatelUnspecified":
 		fallthrough
 	case "anatelF":
@@ -126,10 +138,10 @@ func (e *ContentRatingAnatelRatingEnum) UnmarshalJSON(data []byte) error {
 	case "anatelA":
 		fallthrough
 	case "anatelUnrated":
-		*e = ContentRatingAnatelRatingEnum(s)
+		*e = ContentRatingAnatelRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingAnatelRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingAnatelRatingEnum: %v", v)
 	}
 }
 
@@ -148,12 +160,16 @@ const (
 	ContentRatingBbfcRatingEnumBbfcUnrated     ContentRatingBbfcRatingEnum = "bbfcUnrated"
 )
 
+func (e ContentRatingBbfcRatingEnum) ToPointer() *ContentRatingBbfcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingBbfcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bbfcUnspecified":
 		fallthrough
 	case "bbfcU":
@@ -171,10 +187,10 @@ func (e *ContentRatingBbfcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "bbfcR18":
 		fallthrough
 	case "bbfcUnrated":
-		*e = ContentRatingBbfcRatingEnum(s)
+		*e = ContentRatingBbfcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingBbfcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingBbfcRatingEnum: %v", v)
 	}
 }
 
@@ -193,12 +209,16 @@ const (
 	ContentRatingBfvcRatingEnumBfvcUnrated     ContentRatingBfvcRatingEnum = "bfvcUnrated"
 )
 
+func (e ContentRatingBfvcRatingEnum) ToPointer() *ContentRatingBfvcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingBfvcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bfvcUnspecified":
 		fallthrough
 	case "bfvcG":
@@ -216,10 +236,10 @@ func (e *ContentRatingBfvcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "bfvcB":
 		fallthrough
 	case "bfvcUnrated":
-		*e = ContentRatingBfvcRatingEnum(s)
+		*e = ContentRatingBfvcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingBfvcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingBfvcRatingEnum: %v", v)
 	}
 }
 
@@ -238,12 +258,16 @@ const (
 	ContentRatingBmukkRatingEnumBmukkUnrated     ContentRatingBmukkRatingEnum = "bmukkUnrated"
 )
 
+func (e ContentRatingBmukkRatingEnum) ToPointer() *ContentRatingBmukkRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingBmukkRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bmukkUnspecified":
 		fallthrough
 	case "bmukkAa":
@@ -261,10 +285,10 @@ func (e *ContentRatingBmukkRatingEnum) UnmarshalJSON(data []byte) error {
 	case "bmukk16":
 		fallthrough
 	case "bmukkUnrated":
-		*e = ContentRatingBmukkRatingEnum(s)
+		*e = ContentRatingBmukkRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingBmukkRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingBmukkRatingEnum: %v", v)
 	}
 }
 
@@ -283,12 +307,16 @@ const (
 	ContentRatingCatvRatingEnumCatvE           ContentRatingCatvRatingEnum = "catvE"
 )
 
+func (e ContentRatingCatvRatingEnum) ToPointer() *ContentRatingCatvRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCatvRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "catvUnspecified":
 		fallthrough
 	case "catvC":
@@ -306,10 +334,10 @@ func (e *ContentRatingCatvRatingEnum) UnmarshalJSON(data []byte) error {
 	case "catvUnrated":
 		fallthrough
 	case "catvE":
-		*e = ContentRatingCatvRatingEnum(s)
+		*e = ContentRatingCatvRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCatvRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCatvRatingEnum: %v", v)
 	}
 }
 
@@ -327,12 +355,16 @@ const (
 	ContentRatingCatvfrRatingEnumCatvfrE           ContentRatingCatvfrRatingEnum = "catvfrE"
 )
 
+func (e ContentRatingCatvfrRatingEnum) ToPointer() *ContentRatingCatvfrRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCatvfrRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "catvfrUnspecified":
 		fallthrough
 	case "catvfrG":
@@ -348,10 +380,10 @@ func (e *ContentRatingCatvfrRatingEnum) UnmarshalJSON(data []byte) error {
 	case "catvfrUnrated":
 		fallthrough
 	case "catvfrE":
-		*e = ContentRatingCatvfrRatingEnum(s)
+		*e = ContentRatingCatvfrRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCatvfrRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCatvfrRatingEnum: %v", v)
 	}
 }
 
@@ -370,12 +402,16 @@ const (
 	ContentRatingCbfcRatingEnumCbfcUnrated     ContentRatingCbfcRatingEnum = "cbfcUnrated"
 )
 
+func (e ContentRatingCbfcRatingEnum) ToPointer() *ContentRatingCbfcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCbfcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cbfcUnspecified":
 		fallthrough
 	case "cbfcU":
@@ -393,10 +429,10 @@ func (e *ContentRatingCbfcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cbfcS":
 		fallthrough
 	case "cbfcUnrated":
-		*e = ContentRatingCbfcRatingEnum(s)
+		*e = ContentRatingCbfcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCbfcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCbfcRatingEnum: %v", v)
 	}
 }
 
@@ -414,12 +450,16 @@ const (
 	ContentRatingCccRatingEnumCccUnrated     ContentRatingCccRatingEnum = "cccUnrated"
 )
 
+func (e ContentRatingCccRatingEnum) ToPointer() *ContentRatingCccRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCccRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cccUnspecified":
 		fallthrough
 	case "cccTe":
@@ -435,10 +475,10 @@ func (e *ContentRatingCccRatingEnum) UnmarshalJSON(data []byte) error {
 	case "ccc18s":
 		fallthrough
 	case "cccUnrated":
-		*e = ContentRatingCccRatingEnum(s)
+		*e = ContentRatingCccRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCccRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCccRatingEnum: %v", v)
 	}
 }
 
@@ -456,12 +496,16 @@ const (
 	ContentRatingCceRatingEnumCceM14         ContentRatingCceRatingEnum = "cceM14"
 )
 
+func (e ContentRatingCceRatingEnum) ToPointer() *ContentRatingCceRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCceRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cceUnspecified":
 		fallthrough
 	case "cceM4":
@@ -477,10 +521,10 @@ func (e *ContentRatingCceRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cceUnrated":
 		fallthrough
 	case "cceM14":
-		*e = ContentRatingCceRatingEnum(s)
+		*e = ContentRatingCceRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCceRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCceRatingEnum: %v", v)
 	}
 }
 
@@ -497,12 +541,16 @@ const (
 	ContentRatingChfilmRatingEnumChfilmUnrated     ContentRatingChfilmRatingEnum = "chfilmUnrated"
 )
 
+func (e ContentRatingChfilmRatingEnum) ToPointer() *ContentRatingChfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingChfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "chfilmUnspecified":
 		fallthrough
 	case "chfilm0":
@@ -516,10 +564,10 @@ func (e *ContentRatingChfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "chfilm18":
 		fallthrough
 	case "chfilmUnrated":
-		*e = ContentRatingChfilmRatingEnum(s)
+		*e = ContentRatingChfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingChfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingChfilmRatingEnum: %v", v)
 	}
 }
 
@@ -537,12 +585,16 @@ const (
 	ContentRatingChvrsRatingEnumChvrsUnrated     ContentRatingChvrsRatingEnum = "chvrsUnrated"
 )
 
+func (e ContentRatingChvrsRatingEnum) ToPointer() *ContentRatingChvrsRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingChvrsRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "chvrsUnspecified":
 		fallthrough
 	case "chvrsG":
@@ -558,10 +610,10 @@ func (e *ContentRatingChvrsRatingEnum) UnmarshalJSON(data []byte) error {
 	case "chvrsE":
 		fallthrough
 	case "chvrsUnrated":
-		*e = ContentRatingChvrsRatingEnum(s)
+		*e = ContentRatingChvrsRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingChvrsRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingChvrsRatingEnum: %v", v)
 	}
 }
 
@@ -576,12 +628,16 @@ const (
 	ContentRatingCicfRatingEnumCicfUnrated     ContentRatingCicfRatingEnum = "cicfUnrated"
 )
 
+func (e ContentRatingCicfRatingEnum) ToPointer() *ContentRatingCicfRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCicfRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cicfUnspecified":
 		fallthrough
 	case "cicfE":
@@ -591,10 +647,10 @@ func (e *ContentRatingCicfRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cicfKntEna":
 		fallthrough
 	case "cicfUnrated":
-		*e = ContentRatingCicfRatingEnum(s)
+		*e = ContentRatingCicfRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCicfRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCicfRatingEnum: %v", v)
 	}
 }
 
@@ -611,12 +667,16 @@ const (
 	ContentRatingCnaRatingEnumCnaUnrated     ContentRatingCnaRatingEnum = "cnaUnrated"
 )
 
+func (e ContentRatingCnaRatingEnum) ToPointer() *ContentRatingCnaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCnaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cnaUnspecified":
 		fallthrough
 	case "cnaAp":
@@ -630,10 +690,10 @@ func (e *ContentRatingCnaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cna18plus":
 		fallthrough
 	case "cnaUnrated":
-		*e = ContentRatingCnaRatingEnum(s)
+		*e = ContentRatingCnaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCnaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCnaRatingEnum: %v", v)
 	}
 }
 
@@ -652,12 +712,16 @@ const (
 	ContentRatingCncRatingEnumCncUnrated      ContentRatingCncRatingEnum = "cncUnrated"
 )
 
+func (e ContentRatingCncRatingEnum) ToPointer() *ContentRatingCncRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCncRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cncUnspecified":
 		fallthrough
 	case "cncT":
@@ -675,10 +739,10 @@ func (e *ContentRatingCncRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cncInterdiction":
 		fallthrough
 	case "cncUnrated":
-		*e = ContentRatingCncRatingEnum(s)
+		*e = ContentRatingCncRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCncRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCncRatingEnum: %v", v)
 	}
 }
 
@@ -696,12 +760,16 @@ const (
 	ContentRatingCsaRatingEnumCsaUnrated      ContentRatingCsaRatingEnum = "csaUnrated"
 )
 
+func (e ContentRatingCsaRatingEnum) ToPointer() *ContentRatingCsaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCsaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "csaUnspecified":
 		fallthrough
 	case "csaT":
@@ -717,10 +785,10 @@ func (e *ContentRatingCsaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "csaInterdiction":
 		fallthrough
 	case "csaUnrated":
-		*e = ContentRatingCsaRatingEnum(s)
+		*e = ContentRatingCsaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCsaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCsaRatingEnum: %v", v)
 	}
 }
 
@@ -739,12 +807,16 @@ const (
 	ContentRatingCscfRatingEnumCscfUnrated     ContentRatingCscfRatingEnum = "cscfUnrated"
 )
 
+func (e ContentRatingCscfRatingEnum) ToPointer() *ContentRatingCscfRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCscfRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cscfUnspecified":
 		fallthrough
 	case "cscfAl":
@@ -762,10 +834,10 @@ func (e *ContentRatingCscfRatingEnum) UnmarshalJSON(data []byte) error {
 	case "cscf18":
 		fallthrough
 	case "cscfUnrated":
-		*e = ContentRatingCscfRatingEnum(s)
+		*e = ContentRatingCscfRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCscfRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCscfRatingEnum: %v", v)
 	}
 }
 
@@ -781,12 +853,16 @@ const (
 	ContentRatingCzfilmRatingEnumCzfilmUnrated     ContentRatingCzfilmRatingEnum = "czfilmUnrated"
 )
 
+func (e ContentRatingCzfilmRatingEnum) ToPointer() *ContentRatingCzfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingCzfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "czfilmUnspecified":
 		fallthrough
 	case "czfilmU":
@@ -798,10 +874,10 @@ func (e *ContentRatingCzfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "czfilm18":
 		fallthrough
 	case "czfilmUnrated":
-		*e = ContentRatingCzfilmRatingEnum(s)
+		*e = ContentRatingCzfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingCzfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingCzfilmRatingEnum: %v", v)
 	}
 }
 
@@ -835,12 +911,16 @@ const (
 	ContentRatingDjctqRatingEnumDjctqUnrated     ContentRatingDjctqRatingEnum = "djctqUnrated"
 )
 
+func (e ContentRatingDjctqRatingEnum) ToPointer() *ContentRatingDjctqRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingDjctqRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "djctqUnspecified":
 		fallthrough
 	case "djctqL":
@@ -888,10 +968,10 @@ func (e *ContentRatingDjctqRatingEnum) UnmarshalJSON(data []byte) error {
 	case "djctq1618":
 		fallthrough
 	case "djctqUnrated":
-		*e = ContentRatingDjctqRatingEnum(s)
+		*e = ContentRatingDjctqRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingDjctqRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingDjctqRatingEnum: %v", v)
 	}
 }
 
@@ -913,12 +993,16 @@ const (
 	ContentRatingDjctqRatingReasonsEnumDjctqImpactingContent        ContentRatingDjctqRatingReasonsEnum = "djctqImpactingContent"
 )
 
+func (e ContentRatingDjctqRatingReasonsEnum) ToPointer() *ContentRatingDjctqRatingReasonsEnum {
+	return &e
+}
+
 func (e *ContentRatingDjctqRatingReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "djctqRatingReasonUnspecified":
 		fallthrough
 	case "djctqViolence":
@@ -944,10 +1028,10 @@ func (e *ContentRatingDjctqRatingReasonsEnum) UnmarshalJSON(data []byte) error {
 	case "djctqCriminalActs":
 		fallthrough
 	case "djctqImpactingContent":
-		*e = ContentRatingDjctqRatingReasonsEnum(s)
+		*e = ContentRatingDjctqRatingReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingDjctqRatingReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingDjctqRatingReasonsEnum: %v", v)
 	}
 }
 
@@ -967,12 +1051,16 @@ const (
 	ContentRatingEcbmctRatingEnumEcbmctUnrated     ContentRatingEcbmctRatingEnum = "ecbmctUnrated"
 )
 
+func (e ContentRatingEcbmctRatingEnum) ToPointer() *ContentRatingEcbmctRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingEcbmctRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ecbmctUnspecified":
 		fallthrough
 	case "ecbmctG":
@@ -992,10 +1080,10 @@ func (e *ContentRatingEcbmctRatingEnum) UnmarshalJSON(data []byte) error {
 	case "ecbmct18plus":
 		fallthrough
 	case "ecbmctUnrated":
-		*e = ContentRatingEcbmctRatingEnum(s)
+		*e = ContentRatingEcbmctRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingEcbmctRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingEcbmctRatingEnum: %v", v)
 	}
 }
 
@@ -1015,12 +1103,16 @@ const (
 	ContentRatingEefilmRatingEnumEefilmUnrated     ContentRatingEefilmRatingEnum = "eefilmUnrated"
 )
 
+func (e ContentRatingEefilmRatingEnum) ToPointer() *ContentRatingEefilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingEefilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eefilmUnspecified":
 		fallthrough
 	case "eefilmPere":
@@ -1040,10 +1132,10 @@ func (e *ContentRatingEefilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "eefilmK16":
 		fallthrough
 	case "eefilmUnrated":
-		*e = ContentRatingEefilmRatingEnum(s)
+		*e = ContentRatingEefilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingEefilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingEefilmRatingEnum: %v", v)
 	}
 }
 
@@ -1058,12 +1150,16 @@ const (
 	ContentRatingEgfilmRatingEnumEgfilmUnrated     ContentRatingEgfilmRatingEnum = "egfilmUnrated"
 )
 
+func (e ContentRatingEgfilmRatingEnum) ToPointer() *ContentRatingEgfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingEgfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "egfilmUnspecified":
 		fallthrough
 	case "egfilmGn":
@@ -1073,10 +1169,10 @@ func (e *ContentRatingEgfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "egfilmBn":
 		fallthrough
 	case "egfilmUnrated":
-		*e = ContentRatingEgfilmRatingEnum(s)
+		*e = ContentRatingEgfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingEgfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingEgfilmRatingEnum: %v", v)
 	}
 }
 
@@ -1092,12 +1188,16 @@ const (
 	ContentRatingEirinRatingEnumEirinUnrated     ContentRatingEirinRatingEnum = "eirinUnrated"
 )
 
+func (e ContentRatingEirinRatingEnum) ToPointer() *ContentRatingEirinRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingEirinRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "eirinUnspecified":
 		fallthrough
 	case "eirinG":
@@ -1109,10 +1209,10 @@ func (e *ContentRatingEirinRatingEnum) UnmarshalJSON(data []byte) error {
 	case "eirinR18plus":
 		fallthrough
 	case "eirinUnrated":
-		*e = ContentRatingEirinRatingEnum(s)
+		*e = ContentRatingEirinRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingEirinRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingEirinRatingEnum: %v", v)
 	}
 }
 
@@ -1132,12 +1232,16 @@ const (
 	ContentRatingFcbmRatingEnumFcbmUnrated     ContentRatingFcbmRatingEnum = "fcbmUnrated"
 )
 
+func (e ContentRatingFcbmRatingEnum) ToPointer() *ContentRatingFcbmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingFcbmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fcbmUnspecified":
 		fallthrough
 	case "fcbmU":
@@ -1157,10 +1261,10 @@ func (e *ContentRatingFcbmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "fcbm18pl":
 		fallthrough
 	case "fcbmUnrated":
-		*e = ContentRatingFcbmRatingEnum(s)
+		*e = ContentRatingFcbmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFcbmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFcbmRatingEnum: %v", v)
 	}
 }
 
@@ -1177,12 +1281,16 @@ const (
 	ContentRatingFcoRatingEnumFcoUnrated     ContentRatingFcoRatingEnum = "fcoUnrated"
 )
 
+func (e ContentRatingFcoRatingEnum) ToPointer() *ContentRatingFcoRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingFcoRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fcoUnspecified":
 		fallthrough
 	case "fcoI":
@@ -1196,10 +1304,10 @@ func (e *ContentRatingFcoRatingEnum) UnmarshalJSON(data []byte) error {
 	case "fcoIii":
 		fallthrough
 	case "fcoUnrated":
-		*e = ContentRatingFcoRatingEnum(s)
+		*e = ContentRatingFcoRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFcoRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFcoRatingEnum: %v", v)
 	}
 }
 
@@ -1217,12 +1325,16 @@ const (
 	ContentRatingFmocRatingEnumFmocUnrated     ContentRatingFmocRatingEnum = "fmocUnrated"
 )
 
+func (e ContentRatingFmocRatingEnum) ToPointer() *ContentRatingFmocRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingFmocRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fmocUnspecified":
 		fallthrough
 	case "fmocU":
@@ -1238,10 +1350,10 @@ func (e *ContentRatingFmocRatingEnum) UnmarshalJSON(data []byte) error {
 	case "fmocE":
 		fallthrough
 	case "fmocUnrated":
-		*e = ContentRatingFmocRatingEnum(s)
+		*e = ContentRatingFmocRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFmocRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFmocRatingEnum: %v", v)
 	}
 }
 
@@ -1263,12 +1375,16 @@ const (
 	ContentRatingFpbRatingEnumFpb10          ContentRatingFpbRatingEnum = "fpb10"
 )
 
+func (e ContentRatingFpbRatingEnum) ToPointer() *ContentRatingFpbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingFpbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fpbUnspecified":
 		fallthrough
 	case "fpbA":
@@ -1292,10 +1408,10 @@ func (e *ContentRatingFpbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "fpbUnrated":
 		fallthrough
 	case "fpb10":
-		*e = ContentRatingFpbRatingEnum(s)
+		*e = ContentRatingFpbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFpbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFpbRatingEnum: %v", v)
 	}
 }
 
@@ -1316,12 +1432,16 @@ const (
 	ContentRatingFpbRatingReasonsEnumFpbImitativeActsTechniques ContentRatingFpbRatingReasonsEnum = "fpbImitativeActsTechniques"
 )
 
+func (e ContentRatingFpbRatingReasonsEnum) ToPointer() *ContentRatingFpbRatingReasonsEnum {
+	return &e
+}
+
 func (e *ContentRatingFpbRatingReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fpbRatingReasonUnspecified":
 		fallthrough
 	case "fpbBlasphemy":
@@ -1345,10 +1465,10 @@ func (e *ContentRatingFpbRatingReasonsEnum) UnmarshalJSON(data []byte) error {
 	case "fpbCriminalTechniques":
 		fallthrough
 	case "fpbImitativeActsTechniques":
-		*e = ContentRatingFpbRatingReasonsEnum(s)
+		*e = ContentRatingFpbRatingReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFpbRatingReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFpbRatingReasonsEnum: %v", v)
 	}
 }
 
@@ -1365,12 +1485,16 @@ const (
 	ContentRatingFskRatingEnumFskUnrated     ContentRatingFskRatingEnum = "fskUnrated"
 )
 
+func (e ContentRatingFskRatingEnum) ToPointer() *ContentRatingFskRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingFskRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fskUnspecified":
 		fallthrough
 	case "fsk0":
@@ -1384,10 +1508,10 @@ func (e *ContentRatingFskRatingEnum) UnmarshalJSON(data []byte) error {
 	case "fsk18":
 		fallthrough
 	case "fskUnrated":
-		*e = ContentRatingFskRatingEnum(s)
+		*e = ContentRatingFskRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingFskRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingFskRatingEnum: %v", v)
 	}
 }
 
@@ -1406,12 +1530,16 @@ const (
 	ContentRatingGrfilmRatingEnumGrfilmUnrated     ContentRatingGrfilmRatingEnum = "grfilmUnrated"
 )
 
+func (e ContentRatingGrfilmRatingEnum) ToPointer() *ContentRatingGrfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingGrfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "grfilmUnspecified":
 		fallthrough
 	case "grfilmK":
@@ -1429,10 +1557,10 @@ func (e *ContentRatingGrfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "grfilmK18":
 		fallthrough
 	case "grfilmUnrated":
-		*e = ContentRatingGrfilmRatingEnum(s)
+		*e = ContentRatingGrfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingGrfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingGrfilmRatingEnum: %v", v)
 	}
 }
 
@@ -1451,12 +1579,16 @@ const (
 	ContentRatingIcaaRatingEnumIcaaUnrated     ContentRatingIcaaRatingEnum = "icaaUnrated"
 )
 
+func (e ContentRatingIcaaRatingEnum) ToPointer() *ContentRatingIcaaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingIcaaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "icaaUnspecified":
 		fallthrough
 	case "icaaApta":
@@ -1474,10 +1606,10 @@ func (e *ContentRatingIcaaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "icaaX":
 		fallthrough
 	case "icaaUnrated":
-		*e = ContentRatingIcaaRatingEnum(s)
+		*e = ContentRatingIcaaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingIcaaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingIcaaRatingEnum: %v", v)
 	}
 }
 
@@ -1497,12 +1629,16 @@ const (
 	ContentRatingIfcoRatingEnumIfcoUnrated     ContentRatingIfcoRatingEnum = "ifcoUnrated"
 )
 
+func (e ContentRatingIfcoRatingEnum) ToPointer() *ContentRatingIfcoRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingIfcoRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ifcoUnspecified":
 		fallthrough
 	case "ifcoG":
@@ -1522,10 +1658,10 @@ func (e *ContentRatingIfcoRatingEnum) UnmarshalJSON(data []byte) error {
 	case "ifco18":
 		fallthrough
 	case "ifcoUnrated":
-		*e = ContentRatingIfcoRatingEnum(s)
+		*e = ContentRatingIfcoRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingIfcoRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingIfcoRatingEnum: %v", v)
 	}
 }
 
@@ -1542,12 +1678,16 @@ const (
 	ContentRatingIlfilmRatingEnumIlfilmUnrated     ContentRatingIlfilmRatingEnum = "ilfilmUnrated"
 )
 
+func (e ContentRatingIlfilmRatingEnum) ToPointer() *ContentRatingIlfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingIlfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ilfilmUnspecified":
 		fallthrough
 	case "ilfilmAa":
@@ -1561,10 +1701,10 @@ func (e *ContentRatingIlfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "ilfilm18":
 		fallthrough
 	case "ilfilmUnrated":
-		*e = ContentRatingIlfilmRatingEnum(s)
+		*e = ContentRatingIlfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingIlfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingIlfilmRatingEnum: %v", v)
 	}
 }
 
@@ -1581,12 +1721,16 @@ const (
 	ContentRatingIncaaRatingEnumIncaaUnrated     ContentRatingIncaaRatingEnum = "incaaUnrated"
 )
 
+func (e ContentRatingIncaaRatingEnum) ToPointer() *ContentRatingIncaaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingIncaaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "incaaUnspecified":
 		fallthrough
 	case "incaaAtp":
@@ -1600,10 +1744,10 @@ func (e *ContentRatingIncaaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "incaaC":
 		fallthrough
 	case "incaaUnrated":
-		*e = ContentRatingIncaaRatingEnum(s)
+		*e = ContentRatingIncaaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingIncaaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingIncaaRatingEnum: %v", v)
 	}
 }
 
@@ -1619,12 +1763,16 @@ const (
 	ContentRatingKfcbRatingEnumKfcbUnrated     ContentRatingKfcbRatingEnum = "kfcbUnrated"
 )
 
+func (e ContentRatingKfcbRatingEnum) ToPointer() *ContentRatingKfcbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingKfcbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kfcbUnspecified":
 		fallthrough
 	case "kfcbG":
@@ -1636,10 +1784,10 @@ func (e *ContentRatingKfcbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "kfcbR":
 		fallthrough
 	case "kfcbUnrated":
-		*e = ContentRatingKfcbRatingEnum(s)
+		*e = ContentRatingKfcbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingKfcbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingKfcbRatingEnum: %v", v)
 	}
 }
 
@@ -1657,12 +1805,16 @@ const (
 	ContentRatingKijkwijzerRatingEnumKijkwijzerUnrated     ContentRatingKijkwijzerRatingEnum = "kijkwijzerUnrated"
 )
 
+func (e ContentRatingKijkwijzerRatingEnum) ToPointer() *ContentRatingKijkwijzerRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingKijkwijzerRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kijkwijzerUnspecified":
 		fallthrough
 	case "kijkwijzerAl":
@@ -1678,10 +1830,10 @@ func (e *ContentRatingKijkwijzerRatingEnum) UnmarshalJSON(data []byte) error {
 	case "kijkwijzer18":
 		fallthrough
 	case "kijkwijzerUnrated":
-		*e = ContentRatingKijkwijzerRatingEnum(s)
+		*e = ContentRatingKijkwijzerRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingKijkwijzerRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingKijkwijzerRatingEnum: %v", v)
 	}
 }
 
@@ -1698,12 +1850,16 @@ const (
 	ContentRatingKmrbRatingEnumKmrbUnrated     ContentRatingKmrbRatingEnum = "kmrbUnrated"
 )
 
+func (e ContentRatingKmrbRatingEnum) ToPointer() *ContentRatingKmrbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingKmrbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kmrbUnspecified":
 		fallthrough
 	case "kmrbAll":
@@ -1717,10 +1873,10 @@ func (e *ContentRatingKmrbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "kmrbR":
 		fallthrough
 	case "kmrbUnrated":
-		*e = ContentRatingKmrbRatingEnum(s)
+		*e = ContentRatingKmrbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingKmrbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingKmrbRatingEnum: %v", v)
 	}
 }
 
@@ -1740,12 +1896,16 @@ const (
 	ContentRatingLsfRatingEnumLsfUnrated     ContentRatingLsfRatingEnum = "lsfUnrated"
 )
 
+func (e ContentRatingLsfRatingEnum) ToPointer() *ContentRatingLsfRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingLsfRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lsfUnspecified":
 		fallthrough
 	case "lsfSu":
@@ -1765,10 +1925,10 @@ func (e *ContentRatingLsfRatingEnum) UnmarshalJSON(data []byte) error {
 	case "lsf21":
 		fallthrough
 	case "lsfUnrated":
-		*e = ContentRatingLsfRatingEnum(s)
+		*e = ContentRatingLsfRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingLsfRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingLsfRatingEnum: %v", v)
 	}
 }
 
@@ -1788,12 +1948,16 @@ const (
 	ContentRatingMccaaRatingEnumMccaaUnrated     ContentRatingMccaaRatingEnum = "mccaaUnrated"
 )
 
+func (e ContentRatingMccaaRatingEnum) ToPointer() *ContentRatingMccaaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMccaaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mccaaUnspecified":
 		fallthrough
 	case "mccaaU":
@@ -1813,10 +1977,10 @@ func (e *ContentRatingMccaaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mccaa18":
 		fallthrough
 	case "mccaaUnrated":
-		*e = ContentRatingMccaaRatingEnum(s)
+		*e = ContentRatingMccaaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMccaaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMccaaRatingEnum: %v", v)
 	}
 }
 
@@ -1832,12 +1996,16 @@ const (
 	ContentRatingMccypRatingEnumMccypUnrated     ContentRatingMccypRatingEnum = "mccypUnrated"
 )
 
+func (e ContentRatingMccypRatingEnum) ToPointer() *ContentRatingMccypRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMccypRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mccypUnspecified":
 		fallthrough
 	case "mccypA":
@@ -1849,10 +2017,10 @@ func (e *ContentRatingMccypRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mccyp15":
 		fallthrough
 	case "mccypUnrated":
-		*e = ContentRatingMccypRatingEnum(s)
+		*e = ContentRatingMccypRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMccypRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMccypRatingEnum: %v", v)
 	}
 }
 
@@ -1871,12 +2039,16 @@ const (
 	ContentRatingMcstRatingEnumMcstUnrated     ContentRatingMcstRatingEnum = "mcstUnrated"
 )
 
+func (e ContentRatingMcstRatingEnum) ToPointer() *ContentRatingMcstRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMcstRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mcstUnspecified":
 		fallthrough
 	case "mcstP":
@@ -1894,10 +2066,10 @@ func (e *ContentRatingMcstRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mcstGPg":
 		fallthrough
 	case "mcstUnrated":
-		*e = ContentRatingMcstRatingEnum(s)
+		*e = ContentRatingMcstRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMcstRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMcstRatingEnum: %v", v)
 	}
 }
 
@@ -1915,12 +2087,16 @@ const (
 	ContentRatingMdaRatingEnumMdaUnrated     ContentRatingMdaRatingEnum = "mdaUnrated"
 )
 
+func (e ContentRatingMdaRatingEnum) ToPointer() *ContentRatingMdaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMdaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mdaUnspecified":
 		fallthrough
 	case "mdaG":
@@ -1936,10 +2112,10 @@ func (e *ContentRatingMdaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mdaR21":
 		fallthrough
 	case "mdaUnrated":
-		*e = ContentRatingMdaRatingEnum(s)
+		*e = ContentRatingMdaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMdaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMdaRatingEnum: %v", v)
 	}
 }
 
@@ -1959,12 +2135,16 @@ const (
 	ContentRatingMedietilsynetRatingEnumMedietilsynetUnrated     ContentRatingMedietilsynetRatingEnum = "medietilsynetUnrated"
 )
 
+func (e ContentRatingMedietilsynetRatingEnum) ToPointer() *ContentRatingMedietilsynetRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMedietilsynetRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "medietilsynetUnspecified":
 		fallthrough
 	case "medietilsynetA":
@@ -1984,10 +2164,10 @@ func (e *ContentRatingMedietilsynetRatingEnum) UnmarshalJSON(data []byte) error 
 	case "medietilsynet18":
 		fallthrough
 	case "medietilsynetUnrated":
-		*e = ContentRatingMedietilsynetRatingEnum(s)
+		*e = ContentRatingMedietilsynetRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMedietilsynetRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMedietilsynetRatingEnum: %v", v)
 	}
 }
 
@@ -2004,12 +2184,16 @@ const (
 	ContentRatingMekuRatingEnumMekuUnrated     ContentRatingMekuRatingEnum = "mekuUnrated"
 )
 
+func (e ContentRatingMekuRatingEnum) ToPointer() *ContentRatingMekuRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMekuRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mekuUnspecified":
 		fallthrough
 	case "mekuS":
@@ -2023,10 +2207,10 @@ func (e *ContentRatingMekuRatingEnum) UnmarshalJSON(data []byte) error {
 	case "meku18":
 		fallthrough
 	case "mekuUnrated":
-		*e = ContentRatingMekuRatingEnum(s)
+		*e = ContentRatingMekuRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMekuRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMekuRatingEnum: %v", v)
 	}
 }
 
@@ -2042,12 +2226,16 @@ const (
 	ContentRatingMenaMpaaRatingEnumMenaMpaaUnrated     ContentRatingMenaMpaaRatingEnum = "menaMpaaUnrated"
 )
 
+func (e ContentRatingMenaMpaaRatingEnum) ToPointer() *ContentRatingMenaMpaaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMenaMpaaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "menaMpaaUnspecified":
 		fallthrough
 	case "menaMpaaG":
@@ -2059,10 +2247,10 @@ func (e *ContentRatingMenaMpaaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "menaMpaaR":
 		fallthrough
 	case "menaMpaaUnrated":
-		*e = ContentRatingMenaMpaaRatingEnum(s)
+		*e = ContentRatingMenaMpaaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMenaMpaaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMenaMpaaRatingEnum: %v", v)
 	}
 }
 
@@ -2081,12 +2269,16 @@ const (
 	ContentRatingMibacRatingEnumMibacUnrated     ContentRatingMibacRatingEnum = "mibacUnrated"
 )
 
+func (e ContentRatingMibacRatingEnum) ToPointer() *ContentRatingMibacRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMibacRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mibacUnspecified":
 		fallthrough
 	case "mibacT":
@@ -2104,10 +2296,10 @@ func (e *ContentRatingMibacRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mibacVm18":
 		fallthrough
 	case "mibacUnrated":
-		*e = ContentRatingMibacRatingEnum(s)
+		*e = ContentRatingMibacRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMibacRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMibacRatingEnum: %v", v)
 	}
 }
 
@@ -2127,12 +2319,16 @@ const (
 	ContentRatingMocRatingEnumMocUnrated     ContentRatingMocRatingEnum = "mocUnrated"
 )
 
+func (e ContentRatingMocRatingEnum) ToPointer() *ContentRatingMocRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMocRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mocUnspecified":
 		fallthrough
 	case "mocE":
@@ -2152,10 +2348,10 @@ func (e *ContentRatingMocRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mocBanned":
 		fallthrough
 	case "mocUnrated":
-		*e = ContentRatingMocRatingEnum(s)
+		*e = ContentRatingMocRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMocRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMocRatingEnum: %v", v)
 	}
 }
 
@@ -2173,12 +2369,16 @@ const (
 	ContentRatingMoctwRatingEnumMoctwR15         ContentRatingMoctwRatingEnum = "moctwR15"
 )
 
+func (e ContentRatingMoctwRatingEnum) ToPointer() *ContentRatingMoctwRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMoctwRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "moctwUnspecified":
 		fallthrough
 	case "moctwG":
@@ -2194,10 +2394,10 @@ func (e *ContentRatingMoctwRatingEnum) UnmarshalJSON(data []byte) error {
 	case "moctwR12":
 		fallthrough
 	case "moctwR15":
-		*e = ContentRatingMoctwRatingEnum(s)
+		*e = ContentRatingMoctwRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMoctwRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMoctwRatingEnum: %v", v)
 	}
 }
 
@@ -2215,12 +2415,16 @@ const (
 	ContentRatingMpaaRatingEnumMpaaUnrated     ContentRatingMpaaRatingEnum = "mpaaUnrated"
 )
 
+func (e ContentRatingMpaaRatingEnum) ToPointer() *ContentRatingMpaaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMpaaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mpaaUnspecified":
 		fallthrough
 	case "mpaaG":
@@ -2236,10 +2440,10 @@ func (e *ContentRatingMpaaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mpaaX":
 		fallthrough
 	case "mpaaUnrated":
-		*e = ContentRatingMpaaRatingEnum(s)
+		*e = ContentRatingMpaaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMpaaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMpaaRatingEnum: %v", v)
 	}
 }
 
@@ -2252,21 +2456,25 @@ const (
 	ContentRatingMpaatRatingEnumMpaatRb          ContentRatingMpaatRatingEnum = "mpaatRb"
 )
 
+func (e ContentRatingMpaatRatingEnum) ToPointer() *ContentRatingMpaatRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMpaatRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mpaatUnspecified":
 		fallthrough
 	case "mpaatGb":
 		fallthrough
 	case "mpaatRb":
-		*e = ContentRatingMpaatRatingEnum(s)
+		*e = ContentRatingMpaatRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMpaatRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMpaatRatingEnum: %v", v)
 	}
 }
 
@@ -2284,12 +2492,16 @@ const (
 	ContentRatingMtrcbRatingEnumMtrcbUnrated     ContentRatingMtrcbRatingEnum = "mtrcbUnrated"
 )
 
+func (e ContentRatingMtrcbRatingEnum) ToPointer() *ContentRatingMtrcbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingMtrcbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mtrcbUnspecified":
 		fallthrough
 	case "mtrcbG":
@@ -2305,10 +2517,10 @@ func (e *ContentRatingMtrcbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "mtrcbX":
 		fallthrough
 	case "mtrcbUnrated":
-		*e = ContentRatingMtrcbRatingEnum(s)
+		*e = ContentRatingMtrcbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingMtrcbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingMtrcbRatingEnum: %v", v)
 	}
 }
 
@@ -2327,12 +2539,16 @@ const (
 	ContentRatingNbcRatingEnumNbcUnrated     ContentRatingNbcRatingEnum = "nbcUnrated"
 )
 
+func (e ContentRatingNbcRatingEnum) ToPointer() *ContentRatingNbcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNbcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nbcUnspecified":
 		fallthrough
 	case "nbcG":
@@ -2350,10 +2566,10 @@ func (e *ContentRatingNbcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nbcPu":
 		fallthrough
 	case "nbcUnrated":
-		*e = ContentRatingNbcRatingEnum(s)
+		*e = ContentRatingNbcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNbcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNbcRatingEnum: %v", v)
 	}
 }
 
@@ -2370,12 +2586,16 @@ const (
 	ContentRatingNbcplRatingEnumNbcplUnrated     ContentRatingNbcplRatingEnum = "nbcplUnrated"
 )
 
+func (e ContentRatingNbcplRatingEnum) ToPointer() *ContentRatingNbcplRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNbcplRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nbcplUnspecified":
 		fallthrough
 	case "nbcplI":
@@ -2389,10 +2609,10 @@ func (e *ContentRatingNbcplRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nbcpl18plus":
 		fallthrough
 	case "nbcplUnrated":
-		*e = ContentRatingNbcplRatingEnum(s)
+		*e = ContentRatingNbcplRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNbcplRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNbcplRatingEnum: %v", v)
 	}
 }
 
@@ -2409,12 +2629,16 @@ const (
 	ContentRatingNfrcRatingEnumNfrcUnrated     ContentRatingNfrcRatingEnum = "nfrcUnrated"
 )
 
+func (e ContentRatingNfrcRatingEnum) ToPointer() *ContentRatingNfrcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNfrcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nfrcUnspecified":
 		fallthrough
 	case "nfrcA":
@@ -2428,10 +2652,10 @@ func (e *ContentRatingNfrcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nfrcX":
 		fallthrough
 	case "nfrcUnrated":
-		*e = ContentRatingNfrcRatingEnum(s)
+		*e = ContentRatingNfrcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNfrcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNfrcRatingEnum: %v", v)
 	}
 }
 
@@ -2450,12 +2674,16 @@ const (
 	ContentRatingNfvcbRatingEnumNfvcbUnrated     ContentRatingNfvcbRatingEnum = "nfvcbUnrated"
 )
 
+func (e ContentRatingNfvcbRatingEnum) ToPointer() *ContentRatingNfvcbRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNfvcbRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nfvcbUnspecified":
 		fallthrough
 	case "nfvcbG":
@@ -2473,10 +2701,10 @@ func (e *ContentRatingNfvcbRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nfvcbRe":
 		fallthrough
 	case "nfvcbUnrated":
-		*e = ContentRatingNfvcbRatingEnum(s)
+		*e = ContentRatingNfvcbRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNfvcbRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNfvcbRatingEnum: %v", v)
 	}
 }
 
@@ -2493,12 +2721,16 @@ const (
 	ContentRatingNkclvRatingEnumNkclvUnrated     ContentRatingNkclvRatingEnum = "nkclvUnrated"
 )
 
+func (e ContentRatingNkclvRatingEnum) ToPointer() *ContentRatingNkclvRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNkclvRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nkclvUnspecified":
 		fallthrough
 	case "nkclvU":
@@ -2512,10 +2744,10 @@ func (e *ContentRatingNkclvRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nkclv18plus":
 		fallthrough
 	case "nkclvUnrated":
-		*e = ContentRatingNkclvRatingEnum(s)
+		*e = ContentRatingNkclvRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNkclvRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNkclvRatingEnum: %v", v)
 	}
 }
 
@@ -2534,12 +2766,16 @@ const (
 	ContentRatingNmcRatingEnumNmcUnrated     ContentRatingNmcRatingEnum = "nmcUnrated"
 )
 
+func (e ContentRatingNmcRatingEnum) ToPointer() *ContentRatingNmcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingNmcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nmcUnspecified":
 		fallthrough
 	case "nmcG":
@@ -2557,10 +2793,10 @@ func (e *ContentRatingNmcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "nmc18tc":
 		fallthrough
 	case "nmcUnrated":
-		*e = ContentRatingNmcRatingEnum(s)
+		*e = ContentRatingNmcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingNmcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingNmcRatingEnum: %v", v)
 	}
 }
 
@@ -2582,12 +2818,16 @@ const (
 	ContentRatingOflcRatingEnumOflcRp18        ContentRatingOflcRatingEnum = "oflcRp18"
 )
 
+func (e ContentRatingOflcRatingEnum) ToPointer() *ContentRatingOflcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingOflcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oflcUnspecified":
 		fallthrough
 	case "oflcG":
@@ -2611,10 +2851,10 @@ func (e *ContentRatingOflcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "oflcRp16":
 		fallthrough
 	case "oflcRp18":
-		*e = ContentRatingOflcRatingEnum(s)
+		*e = ContentRatingOflcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingOflcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingOflcRatingEnum: %v", v)
 	}
 }
 
@@ -2630,12 +2870,16 @@ const (
 	ContentRatingPefilmRatingEnumPefilmUnrated     ContentRatingPefilmRatingEnum = "pefilmUnrated"
 )
 
+func (e ContentRatingPefilmRatingEnum) ToPointer() *ContentRatingPefilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingPefilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pefilmUnspecified":
 		fallthrough
 	case "pefilmPt":
@@ -2647,10 +2891,10 @@ func (e *ContentRatingPefilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "pefilm18":
 		fallthrough
 	case "pefilmUnrated":
-		*e = ContentRatingPefilmRatingEnum(s)
+		*e = ContentRatingPefilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingPefilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingPefilmRatingEnum: %v", v)
 	}
 }
 
@@ -2668,12 +2912,16 @@ const (
 	ContentRatingRcnofRatingEnumRcnofUnrated     ContentRatingRcnofRatingEnum = "rcnofUnrated"
 )
 
+func (e ContentRatingRcnofRatingEnum) ToPointer() *ContentRatingRcnofRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingRcnofRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rcnofUnspecified":
 		fallthrough
 	case "rcnofI":
@@ -2689,10 +2937,10 @@ func (e *ContentRatingRcnofRatingEnum) UnmarshalJSON(data []byte) error {
 	case "rcnofVi":
 		fallthrough
 	case "rcnofUnrated":
-		*e = ContentRatingRcnofRatingEnum(s)
+		*e = ContentRatingRcnofRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingRcnofRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingRcnofRatingEnum: %v", v)
 	}
 }
 
@@ -2709,12 +2957,16 @@ const (
 	ContentRatingResorteviolenciaRatingEnumResorteviolenciaUnrated     ContentRatingResorteviolenciaRatingEnum = "resorteviolenciaUnrated"
 )
 
+func (e ContentRatingResorteviolenciaRatingEnum) ToPointer() *ContentRatingResorteviolenciaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingResorteviolenciaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resorteviolenciaUnspecified":
 		fallthrough
 	case "resorteviolenciaA":
@@ -2728,10 +2980,10 @@ func (e *ContentRatingResorteviolenciaRatingEnum) UnmarshalJSON(data []byte) err
 	case "resorteviolenciaE":
 		fallthrough
 	case "resorteviolenciaUnrated":
-		*e = ContentRatingResorteviolenciaRatingEnum(s)
+		*e = ContentRatingResorteviolenciaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingResorteviolenciaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingResorteviolenciaRatingEnum: %v", v)
 	}
 }
 
@@ -2749,12 +3001,16 @@ const (
 	ContentRatingRtcRatingEnumRtcUnrated     ContentRatingRtcRatingEnum = "rtcUnrated"
 )
 
+func (e ContentRatingRtcRatingEnum) ToPointer() *ContentRatingRtcRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingRtcRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rtcUnspecified":
 		fallthrough
 	case "rtcAa":
@@ -2770,10 +3026,10 @@ func (e *ContentRatingRtcRatingEnum) UnmarshalJSON(data []byte) error {
 	case "rtcD":
 		fallthrough
 	case "rtcUnrated":
-		*e = ContentRatingRtcRatingEnum(s)
+		*e = ContentRatingRtcRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingRtcRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingRtcRatingEnum: %v", v)
 	}
 }
 
@@ -2789,12 +3045,16 @@ const (
 	ContentRatingRteRatingEnumRteUnrated     ContentRatingRteRatingEnum = "rteUnrated"
 )
 
+func (e ContentRatingRteRatingEnum) ToPointer() *ContentRatingRteRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingRteRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rteUnspecified":
 		fallthrough
 	case "rteGa":
@@ -2806,10 +3066,10 @@ func (e *ContentRatingRteRatingEnum) UnmarshalJSON(data []byte) error {
 	case "rteMa":
 		fallthrough
 	case "rteUnrated":
-		*e = ContentRatingRteRatingEnum(s)
+		*e = ContentRatingRteRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingRteRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingRteRatingEnum: %v", v)
 	}
 }
 
@@ -2826,12 +3086,16 @@ const (
 	ContentRatingRussiaRatingEnumRussiaUnrated     ContentRatingRussiaRatingEnum = "russiaUnrated"
 )
 
+func (e ContentRatingRussiaRatingEnum) ToPointer() *ContentRatingRussiaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingRussiaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "russiaUnspecified":
 		fallthrough
 	case "russia0":
@@ -2845,10 +3109,10 @@ func (e *ContentRatingRussiaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "russia18":
 		fallthrough
 	case "russiaUnrated":
-		*e = ContentRatingRussiaRatingEnum(s)
+		*e = ContentRatingRussiaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingRussiaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingRussiaRatingEnum: %v", v)
 	}
 }
 
@@ -2864,12 +3128,16 @@ const (
 	ContentRatingSkfilmRatingEnumSkfilmUnrated     ContentRatingSkfilmRatingEnum = "skfilmUnrated"
 )
 
+func (e ContentRatingSkfilmRatingEnum) ToPointer() *ContentRatingSkfilmRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingSkfilmRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "skfilmUnspecified":
 		fallthrough
 	case "skfilmG":
@@ -2881,10 +3149,10 @@ func (e *ContentRatingSkfilmRatingEnum) UnmarshalJSON(data []byte) error {
 	case "skfilmP8":
 		fallthrough
 	case "skfilmUnrated":
-		*e = ContentRatingSkfilmRatingEnum(s)
+		*e = ContentRatingSkfilmRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingSkfilmRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingSkfilmRatingEnum: %v", v)
 	}
 }
 
@@ -2902,12 +3170,16 @@ const (
 	ContentRatingSmaisRatingEnumSmaisUnrated     ContentRatingSmaisRatingEnum = "smaisUnrated"
 )
 
+func (e ContentRatingSmaisRatingEnum) ToPointer() *ContentRatingSmaisRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingSmaisRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "smaisUnspecified":
 		fallthrough
 	case "smaisL":
@@ -2923,10 +3195,10 @@ func (e *ContentRatingSmaisRatingEnum) UnmarshalJSON(data []byte) error {
 	case "smais18":
 		fallthrough
 	case "smaisUnrated":
-		*e = ContentRatingSmaisRatingEnum(s)
+		*e = ContentRatingSmaisRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingSmaisRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingSmaisRatingEnum: %v", v)
 	}
 }
 
@@ -2942,12 +3214,16 @@ const (
 	ContentRatingSmsaRatingEnumSmsaUnrated     ContentRatingSmsaRatingEnum = "smsaUnrated"
 )
 
+func (e ContentRatingSmsaRatingEnum) ToPointer() *ContentRatingSmsaRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingSmsaRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "smsaUnspecified":
 		fallthrough
 	case "smsaA":
@@ -2959,10 +3235,10 @@ func (e *ContentRatingSmsaRatingEnum) UnmarshalJSON(data []byte) error {
 	case "smsa15":
 		fallthrough
 	case "smsaUnrated":
-		*e = ContentRatingSmsaRatingEnum(s)
+		*e = ContentRatingSmsaRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingSmsaRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingSmsaRatingEnum: %v", v)
 	}
 }
 
@@ -2981,12 +3257,16 @@ const (
 	ContentRatingTvpgRatingEnumTvpgUnrated     ContentRatingTvpgRatingEnum = "tvpgUnrated"
 )
 
+func (e ContentRatingTvpgRatingEnum) ToPointer() *ContentRatingTvpgRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingTvpgRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tvpgUnspecified":
 		fallthrough
 	case "tvpgY":
@@ -3004,10 +3284,10 @@ func (e *ContentRatingTvpgRatingEnum) UnmarshalJSON(data []byte) error {
 	case "tvpgMa":
 		fallthrough
 	case "tvpgUnrated":
-		*e = ContentRatingTvpgRatingEnum(s)
+		*e = ContentRatingTvpgRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingTvpgRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingTvpgRatingEnum: %v", v)
 	}
 }
 
@@ -3019,19 +3299,23 @@ const (
 	ContentRatingYtRatingEnumYtAgeRestricted ContentRatingYtRatingEnum = "ytAgeRestricted"
 )
 
+func (e ContentRatingYtRatingEnum) ToPointer() *ContentRatingYtRatingEnum {
+	return &e
+}
+
 func (e *ContentRatingYtRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ytUnspecified":
 		fallthrough
 	case "ytAgeRestricted":
-		*e = ContentRatingYtRatingEnum(s)
+		*e = ContentRatingYtRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentRatingYtRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentRatingYtRatingEnum: %v", v)
 	}
 }
 

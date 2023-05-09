@@ -17,21 +17,25 @@ const (
 	DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnumAccepted DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum = "accepted"
 )
 
+func (e DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum) ToPointer() *DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum {
+	return &e
+}
+
 func (e *DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "accepted":
-		*e = DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum(s)
+		*e = DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAddressTransfersResultAddressTransfersAddressTransferStatusEnum: %v", v)
 	}
 }
 

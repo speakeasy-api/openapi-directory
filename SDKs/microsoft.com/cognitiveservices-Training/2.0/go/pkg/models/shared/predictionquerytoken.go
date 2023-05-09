@@ -16,21 +16,25 @@ const (
 	PredictionQueryTokenOrderByEnumSuggested PredictionQueryTokenOrderByEnum = "Suggested"
 )
 
+func (e PredictionQueryTokenOrderByEnum) ToPointer() *PredictionQueryTokenOrderByEnum {
+	return &e
+}
+
 func (e *PredictionQueryTokenOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Newest":
 		fallthrough
 	case "Oldest":
 		fallthrough
 	case "Suggested":
-		*e = PredictionQueryTokenOrderByEnum(s)
+		*e = PredictionQueryTokenOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredictionQueryTokenOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for PredictionQueryTokenOrderByEnum: %v", v)
 	}
 }
 

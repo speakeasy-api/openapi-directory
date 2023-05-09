@@ -16,17 +16,21 @@ const (
 	DescribeFHIRDatastoreXAmzTargetEnumHealthLakeDescribeFhirDatastore DescribeFHIRDatastoreXAmzTargetEnum = "HealthLake.DescribeFHIRDatastore"
 )
 
+func (e DescribeFHIRDatastoreXAmzTargetEnum) ToPointer() *DescribeFHIRDatastoreXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeFHIRDatastoreXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HealthLake.DescribeFHIRDatastore":
-		*e = DescribeFHIRDatastoreXAmzTargetEnum(s)
+		*e = DescribeFHIRDatastoreXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFHIRDatastoreXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFHIRDatastoreXAmzTargetEnum: %v", v)
 	}
 }
 

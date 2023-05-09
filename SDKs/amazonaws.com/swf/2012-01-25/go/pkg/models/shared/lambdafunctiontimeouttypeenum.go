@@ -13,16 +13,20 @@ const (
 	LambdaFunctionTimeoutTypeEnumStartToClose LambdaFunctionTimeoutTypeEnum = "START_TO_CLOSE"
 )
 
+func (e LambdaFunctionTimeoutTypeEnum) ToPointer() *LambdaFunctionTimeoutTypeEnum {
+	return &e
+}
+
 func (e *LambdaFunctionTimeoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_TO_CLOSE":
-		*e = LambdaFunctionTimeoutTypeEnum(s)
+		*e = LambdaFunctionTimeoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaFunctionTimeoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaFunctionTimeoutTypeEnum: %v", v)
 	}
 }

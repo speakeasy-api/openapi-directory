@@ -16,21 +16,25 @@ const (
 	PasswordPoliciesContextPasswordPolicyScopeEnumScopeProfile     PasswordPoliciesContextPasswordPolicyScopeEnum = "SCOPE_PROFILE"
 )
 
+func (e PasswordPoliciesContextPasswordPolicyScopeEnum) ToPointer() *PasswordPoliciesContextPasswordPolicyScopeEnum {
+	return &e
+}
+
 func (e *PasswordPoliciesContextPasswordPolicyScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCOPE_UNSPECIFIED":
 		fallthrough
 	case "SCOPE_DEVICE":
 		fallthrough
 	case "SCOPE_PROFILE":
-		*e = PasswordPoliciesContextPasswordPolicyScopeEnum(s)
+		*e = PasswordPoliciesContextPasswordPolicyScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordPoliciesContextPasswordPolicyScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordPoliciesContextPasswordPolicyScopeEnum: %v", v)
 	}
 }
 

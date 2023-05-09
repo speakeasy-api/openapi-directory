@@ -16,17 +16,21 @@ const (
 	GetBlueprintXAmzTargetEnumAwsGlueGetBlueprint GetBlueprintXAmzTargetEnum = "AWSGlue.GetBlueprint"
 )
 
+func (e GetBlueprintXAmzTargetEnum) ToPointer() *GetBlueprintXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetBlueprintXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetBlueprint":
-		*e = GetBlueprintXAmzTargetEnum(s)
+		*e = GetBlueprintXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBlueprintXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBlueprintXAmzTargetEnum: %v", v)
 	}
 }
 

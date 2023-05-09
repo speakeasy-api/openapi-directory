@@ -15,20 +15,24 @@ const (
 	AssociationExecutionFilterKeyEnumCreatedTime AssociationExecutionFilterKeyEnum = "CreatedTime"
 )
 
+func (e AssociationExecutionFilterKeyEnum) ToPointer() *AssociationExecutionFilterKeyEnum {
+	return &e
+}
+
 func (e *AssociationExecutionFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ExecutionId":
 		fallthrough
 	case "Status":
 		fallthrough
 	case "CreatedTime":
-		*e = AssociationExecutionFilterKeyEnum(s)
+		*e = AssociationExecutionFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociationExecutionFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociationExecutionFilterKeyEnum: %v", v)
 	}
 }

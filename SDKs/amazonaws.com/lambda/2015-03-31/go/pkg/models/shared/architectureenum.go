@@ -14,18 +14,22 @@ const (
 	ArchitectureEnumArm64 ArchitectureEnum = "arm64"
 )
 
+func (e ArchitectureEnum) ToPointer() *ArchitectureEnum {
+	return &e
+}
+
 func (e *ArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "x86_64":
 		fallthrough
 	case "arm64":
-		*e = ArchitectureEnum(s)
+		*e = ArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for ArchitectureEnum: %v", v)
 	}
 }

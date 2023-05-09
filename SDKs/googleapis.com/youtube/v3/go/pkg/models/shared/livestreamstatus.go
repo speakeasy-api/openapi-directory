@@ -17,12 +17,16 @@ const (
 	LiveStreamStatusStreamStatusEnumError    LiveStreamStatusStreamStatusEnum = "error"
 )
 
+func (e LiveStreamStatusStreamStatusEnum) ToPointer() *LiveStreamStatusStreamStatusEnum {
+	return &e
+}
+
 func (e *LiveStreamStatusStreamStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created":
 		fallthrough
 	case "ready":
@@ -32,10 +36,10 @@ func (e *LiveStreamStatusStreamStatusEnum) UnmarshalJSON(data []byte) error {
 	case "inactive":
 		fallthrough
 	case "error":
-		*e = LiveStreamStatusStreamStatusEnum(s)
+		*e = LiveStreamStatusStreamStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LiveStreamStatusStreamStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LiveStreamStatusStreamStatusEnum: %v", v)
 	}
 }
 

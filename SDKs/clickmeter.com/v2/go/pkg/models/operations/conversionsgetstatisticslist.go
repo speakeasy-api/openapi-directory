@@ -17,19 +17,23 @@ const (
 	ConversionsGetStatisticsListGroupByEnumMonth ConversionsGetStatisticsListGroupByEnum = "month"
 )
 
+func (e ConversionsGetStatisticsListGroupByEnum) ToPointer() *ConversionsGetStatisticsListGroupByEnum {
+	return &e
+}
+
 func (e *ConversionsGetStatisticsListGroupByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "week":
 		fallthrough
 	case "month":
-		*e = ConversionsGetStatisticsListGroupByEnum(s)
+		*e = ConversionsGetStatisticsListGroupByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConversionsGetStatisticsListGroupByEnum: %s", s)
+		return fmt.Errorf("invalid value for ConversionsGetStatisticsListGroupByEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	ConversionsGetStatisticsListTimeFrameEnumCustom        ConversionsGetStatisticsListTimeFrameEnum = "custom"
 )
 
+func (e ConversionsGetStatisticsListTimeFrameEnum) ToPointer() *ConversionsGetStatisticsListTimeFrameEnum {
+	return &e
+}
+
 func (e *ConversionsGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -89,10 +97,10 @@ func (e *ConversionsGetStatisticsListTimeFrameEnum) UnmarshalJSON(data []byte) e
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = ConversionsGetStatisticsListTimeFrameEnum(s)
+		*e = ConversionsGetStatisticsListTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConversionsGetStatisticsListTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for ConversionsGetStatisticsListTimeFrameEnum: %v", v)
 	}
 }
 

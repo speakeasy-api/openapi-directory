@@ -13,586 +13,587 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/transcoder
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TranscoderProjectsLocationsJobTemplatesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.TranscoderProjectsLocationsJobTemplatesCreate(ctx, operations.TranscoderProjectsLocationsJobTemplatesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         JobTemplate: &shared.JobTemplate{
             Config: &shared.JobConfig{
                 AdBreaks: []shared.AdBreak{
                     shared.AdBreak{
-                        StartTimeOffset: "distinctio",
+                        StartTimeOffset: sdk.String("distinctio"),
                     },
                     shared.AdBreak{
-                        StartTimeOffset: "quibusdam",
+                        StartTimeOffset: sdk.String("quibusdam"),
                     },
                     shared.AdBreak{
-                        StartTimeOffset: "unde",
+                        StartTimeOffset: sdk.String("unde"),
                     },
                 },
                 EditList: []shared.EditAtom{
                     shared.EditAtom{
-                        EndTimeOffset: "corrupti",
+                        EndTimeOffset: sdk.String("corrupti"),
                         Inputs: []string{
                             "vel",
                             "error",
                             "deserunt",
                             "suscipit",
                         },
-                        Key: "iure",
-                        StartTimeOffset: "magnam",
+                        Key: sdk.String("iure"),
+                        StartTimeOffset: sdk.String("magnam"),
                     },
                     shared.EditAtom{
-                        EndTimeOffset: "debitis",
+                        EndTimeOffset: sdk.String("debitis"),
                         Inputs: []string{
                             "delectus",
                         },
-                        Key: "tempora",
-                        StartTimeOffset: "suscipit",
+                        Key: sdk.String("tempora"),
+                        StartTimeOffset: sdk.String("suscipit"),
                     },
                     shared.EditAtom{
-                        EndTimeOffset: "molestiae",
+                        EndTimeOffset: sdk.String("molestiae"),
                         Inputs: []string{
                             "placeat",
                             "voluptatum",
                             "iusto",
                             "excepturi",
                         },
-                        Key: "nisi",
-                        StartTimeOffset: "recusandae",
+                        Key: sdk.String("nisi"),
+                        StartTimeOffset: sdk.String("recusandae"),
                     },
                     shared.EditAtom{
-                        EndTimeOffset: "temporibus",
+                        EndTimeOffset: sdk.String("temporibus"),
                         Inputs: []string{
                             "quis",
                         },
-                        Key: "veritatis",
-                        StartTimeOffset: "deserunt",
+                        Key: sdk.String("veritatis"),
+                        StartTimeOffset: sdk.String("deserunt"),
                     },
                 },
                 ElementaryStreams: []shared.ElementaryStream{
                     shared.ElementaryStream{
                         AudioStream: &shared.AudioStream{
-                            BitrateBps: 368241,
-                            ChannelCount: 832620,
+                            BitrateBps: sdk.Int(368241),
+                            ChannelCount: sdk.Int(832620),
                             ChannelLayout: []string{
                                 "quo",
                                 "odit",
                                 "at",
                                 "at",
                             },
-                            Codec: "maiores",
-                            DisplayName: "molestiae",
-                            LanguageCode: "quod",
+                            Codec: sdk.String("maiores"),
+                            DisplayName: sdk.String("molestiae"),
+                            LanguageCode: sdk.String("quod"),
                             Mapping: []shared.AudioMapping{
                                 shared.AudioMapping{
-                                    AtomKey: "esse",
-                                    GainDb: 5204.78,
-                                    InputChannel: 780529,
-                                    InputKey: "dolorum",
-                                    InputTrack: 118274,
-                                    OutputChannel: 720633,
+                                    AtomKey: sdk.String("esse"),
+                                    GainDb: sdk.Float64(5204.78),
+                                    InputChannel: sdk.Int(780529),
+                                    InputKey: sdk.String("dolorum"),
+                                    InputTrack: sdk.Int(118274),
+                                    OutputChannel: sdk.Int(720633),
                                 },
                                 shared.AudioMapping{
-                                    AtomKey: "officia",
-                                    GainDb: 5820.2,
-                                    InputChannel: 143353,
-                                    InputKey: "deleniti",
-                                    InputTrack: 944669,
-                                    OutputChannel: 758616,
+                                    AtomKey: sdk.String("officia"),
+                                    GainDb: sdk.Float64(5820.2),
+                                    InputChannel: sdk.Int(143353),
+                                    InputKey: sdk.String("deleniti"),
+                                    InputTrack: sdk.Int(944669),
+                                    OutputChannel: sdk.Int(758616),
                                 },
                                 shared.AudioMapping{
-                                    AtomKey: "totam",
-                                    GainDb: 1059.07,
-                                    InputChannel: 414662,
-                                    InputKey: "molestiae",
-                                    InputTrack: 264555,
-                                    OutputChannel: 186332,
+                                    AtomKey: sdk.String("totam"),
+                                    GainDb: sdk.Float64(1059.07),
+                                    InputChannel: sdk.Int(414662),
+                                    InputKey: sdk.String("molestiae"),
+                                    InputTrack: sdk.Int(264555),
+                                    OutputChannel: sdk.Int(186332),
                                 },
                                 shared.AudioMapping{
-                                    AtomKey: "impedit",
-                                    GainDb: 7369.18,
-                                    InputChannel: 456150,
-                                    InputKey: "ipsum",
-                                    InputTrack: 568434,
-                                    OutputChannel: 135218,
+                                    AtomKey: sdk.String("impedit"),
+                                    GainDb: sdk.Float64(7369.18),
+                                    InputChannel: sdk.Int(456150),
+                                    InputKey: sdk.String("ipsum"),
+                                    InputTrack: sdk.Int(568434),
+                                    OutputChannel: sdk.Int(135218),
                                 },
                             },
-                            SampleRateHertz: 18789,
+                            SampleRateHertz: sdk.Int(18789),
                         },
-                        Key: "ad",
+                        Key: sdk.String("ad"),
                         TextStream: &shared.TextStream{
-                            Codec: "natus",
-                            DisplayName: "sed",
-                            LanguageCode: "iste",
+                            Codec: sdk.String("natus"),
+                            DisplayName: sdk.String("sed"),
+                            LanguageCode: sdk.String("iste"),
                             Mapping: []shared.TextMapping{
                                 shared.TextMapping{
-                                    AtomKey: "natus",
-                                    InputKey: "laboriosam",
-                                    InputTrack: 943749,
+                                    AtomKey: sdk.String("natus"),
+                                    InputKey: sdk.String("laboriosam"),
+                                    InputTrack: sdk.Int(943749),
                                 },
                             },
                         },
                         VideoStream: &shared.VideoStream{
                             H264: &shared.H264CodecSettings{
-                                AllowOpenGop: false,
-                                AqStrength: 9025.99,
-                                BFrameCount: 681820,
-                                BPyramid: false,
-                                BitrateBps: 449950,
-                                CrfLevel: 359508,
-                                EnableTwoPass: false,
-                                EntropyCoder: "iste",
-                                FrameRate: 4370.32,
-                                GopDuration: "saepe",
-                                GopFrameCount: 697631,
-                                HeightPixels: 99280,
-                                PixelFormat: "ipsa",
-                                Preset: "reiciendis",
-                                Profile: "est",
-                                RateControlMode: "mollitia",
-                                Tune: "laborum",
-                                VbvFullnessBits: 170909,
-                                VbvSizeBits: 210382,
-                                WidthPixels: 358152,
+                                AllowOpenGop: sdk.Bool(false),
+                                AqStrength: sdk.Float64(9025.99),
+                                BFrameCount: sdk.Int(681820),
+                                BPyramid: sdk.Bool(false),
+                                BitrateBps: sdk.Int(449950),
+                                CrfLevel: sdk.Int(359508),
+                                EnableTwoPass: sdk.Bool(false),
+                                EntropyCoder: sdk.String("iste"),
+                                FrameRate: sdk.Float64(4370.32),
+                                GopDuration: sdk.String("saepe"),
+                                GopFrameCount: sdk.Int(697631),
+                                HeightPixels: sdk.Int(99280),
+                                PixelFormat: sdk.String("ipsa"),
+                                Preset: sdk.String("reiciendis"),
+                                Profile: sdk.String("est"),
+                                RateControlMode: sdk.String("mollitia"),
+                                Tune: sdk.String("laborum"),
+                                VbvFullnessBits: sdk.Int(170909),
+                                VbvSizeBits: sdk.Int(210382),
+                                WidthPixels: sdk.Int(358152),
                             },
                             H265: &shared.H265CodecSettings{
-                                AllowOpenGop: false,
-                                AqStrength: 1289.26,
-                                BFrameCount: 750686,
-                                BPyramid: false,
-                                BitrateBps: 315428,
-                                CrfLevel: 607831,
-                                EnableTwoPass: false,
-                                FrameRate: 3637.11,
-                                GopDuration: "minima",
-                                GopFrameCount: 570197,
-                                HeightPixels: 38425,
-                                PixelFormat: "iure",
-                                Preset: "culpa",
-                                Profile: "doloribus",
-                                RateControlMode: "sapiente",
-                                Tune: "architecto",
-                                VbvFullnessBits: 652790,
-                                VbvSizeBits: 208876,
-                                WidthPixels: 635059,
+                                AllowOpenGop: sdk.Bool(false),
+                                AqStrength: sdk.Float64(1289.26),
+                                BFrameCount: sdk.Int(750686),
+                                BPyramid: sdk.Bool(false),
+                                BitrateBps: sdk.Int(315428),
+                                CrfLevel: sdk.Int(607831),
+                                EnableTwoPass: sdk.Bool(false),
+                                FrameRate: sdk.Float64(3637.11),
+                                GopDuration: sdk.String("minima"),
+                                GopFrameCount: sdk.Int(570197),
+                                HeightPixels: sdk.Int(38425),
+                                PixelFormat: sdk.String("iure"),
+                                Preset: sdk.String("culpa"),
+                                Profile: sdk.String("doloribus"),
+                                RateControlMode: sdk.String("sapiente"),
+                                Tune: sdk.String("architecto"),
+                                VbvFullnessBits: sdk.Int(652790),
+                                VbvSizeBits: sdk.Int(208876),
+                                WidthPixels: sdk.Int(635059),
                             },
                             Vp9: &shared.Vp9CodecSettings{
-                                BitrateBps: 161309,
-                                CrfLevel: 995300,
-                                FrameRate: 6531.08,
-                                GopDuration: "occaecati",
-                                GopFrameCount: 253291,
-                                HeightPixels: 414369,
-                                PixelFormat: "quam",
-                                Profile: "molestiae",
-                                RateControlMode: "velit",
-                                WidthPixels: 623510,
+                                BitrateBps: sdk.Int(161309),
+                                CrfLevel: sdk.Int(995300),
+                                FrameRate: sdk.Float64(6531.08),
+                                GopDuration: sdk.String("occaecati"),
+                                GopFrameCount: sdk.Int(253291),
+                                HeightPixels: sdk.Int(414369),
+                                PixelFormat: sdk.String("quam"),
+                                Profile: sdk.String("molestiae"),
+                                RateControlMode: sdk.String("velit"),
+                                WidthPixels: sdk.Int(623510),
                             },
                         },
                     },
                 },
                 Inputs: []shared.Input{
                     shared.Input{
-                        Key: "quis",
+                        Key: sdk.String("quis"),
                         PreprocessingConfig: &shared.PreprocessingConfig{
                             Audio: &shared.Audio{
-                                HighBoost: false,
-                                LowBoost: false,
-                                Lufs: 1103.75,
+                                HighBoost: sdk.Bool(false),
+                                LowBoost: sdk.Bool(false),
+                                Lufs: sdk.Float64(1103.75),
                             },
                             Color: &shared.Color{
-                                Brightness: 6747.52,
-                                Contrast: 6563.3,
-                                Saturation: 3172.02,
+                                Brightness: sdk.Float64(6747.52),
+                                Contrast: sdk.Float64(6563.3),
+                                Saturation: sdk.Float64(3172.02),
                             },
                             Crop: &shared.Crop{
-                                BottomPixels: 138183,
-                                LeftPixels: 778346,
-                                RightPixels: 196582,
-                                TopPixels: 949572,
+                                BottomPixels: sdk.Int(138183),
+                                LeftPixels: sdk.Int(778346),
+                                RightPixels: sdk.Int(196582),
+                                TopPixels: sdk.Int(949572),
                             },
                             Deblock: &shared.Deblock{
-                                Enabled: false,
-                                Strength: 3687.25,
+                                Enabled: sdk.Bool(false),
+                                Strength: sdk.Float64(3687.25),
                             },
                             Deinterlace: &shared.Deinterlace{
                                 Bwdif: &shared.BwdifConfig{
-                                    DeinterlaceAllFrames: false,
-                                    Mode: "id",
-                                    Parity: "possimus",
+                                    DeinterlaceAllFrames: sdk.Bool(false),
+                                    Mode: sdk.String("id"),
+                                    Parity: sdk.String("possimus"),
                                 },
                                 Yadif: &shared.YadifConfig{
-                                    DeinterlaceAllFrames: false,
-                                    DisableSpatialInterlacing: false,
-                                    Mode: "aut",
-                                    Parity: "quasi",
+                                    DeinterlaceAllFrames: sdk.Bool(false),
+                                    DisableSpatialInterlacing: sdk.Bool(false),
+                                    Mode: sdk.String("aut"),
+                                    Parity: sdk.String("quasi"),
                                 },
                             },
                             Denoise: &shared.Denoise{
-                                Strength: 6228.46,
-                                Tune: "temporibus",
+                                Strength: sdk.Float64(6228.46),
+                                Tune: sdk.String("temporibus"),
                             },
                             Pad: &shared.Pad{
-                                BottomPixels: 673660,
-                                LeftPixels: 96098,
-                                RightPixels: 971945,
-                                TopPixels: 976460,
+                                BottomPixels: sdk.Int(673660),
+                                LeftPixels: sdk.Int(96098),
+                                RightPixels: sdk.Int(971945),
+                                TopPixels: sdk.Int(976460),
                             },
                         },
-                        URI: "https://klutzy-level.org",
+                        URI: sdk.String("https://klutzy-level.org"),
                     },
                 },
                 Manifests: []shared.Manifest{
                     shared.Manifest{
-                        FileName: "omnis",
+                        FileName: sdk.String("omnis"),
                         MuxStreams: []string{
                             "cum",
                             "perferendis",
                         },
-                        Type: "MANIFEST_TYPE_UNSPECIFIED",
+                        Type: shared.ManifestTypeEnumManifestTypeUnspecified.ToPointer(),
                     },
                 },
                 MuxStreams: []shared.MuxStream{
                     shared.MuxStream{
-                        Container: "ut",
+                        Container: sdk.String("ut"),
                         ElementaryStreams: []string{
                             "dicta",
                             "corporis",
                             "dolore",
                             "iusto",
                         },
-                        FileName: "dicta",
-                        Key: "harum",
+                        FileName: sdk.String("dicta"),
+                        Key: sdk.String("harum"),
                         SegmentSettings: &shared.SegmentSettings{
-                            IndividualSegments: false,
-                            SegmentDuration: "enim",
+                            IndividualSegments: sdk.Bool(false),
+                            SegmentDuration: sdk.String("enim"),
                         },
                     },
                     shared.MuxStream{
-                        Container: "accusamus",
+                        Container: sdk.String("accusamus"),
                         ElementaryStreams: []string{
                             "repudiandae",
                             "quae",
                         },
-                        FileName: "ipsum",
-                        Key: "quidem",
+                        FileName: sdk.String("ipsum"),
+                        Key: sdk.String("quidem"),
                         SegmentSettings: &shared.SegmentSettings{
-                            IndividualSegments: false,
-                            SegmentDuration: "molestias",
+                            IndividualSegments: sdk.Bool(false),
+                            SegmentDuration: sdk.String("molestias"),
                         },
                     },
                 },
                 Output: &shared.Output{
-                    URI: "https://treasured-dirt.name",
+                    URI: sdk.String("https://treasured-dirt.name"),
                 },
                 Overlays: []shared.Overlay{
                     shared.Overlay{
                         Animations: []shared.Animation{
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "quasi",
+                                    StartTimeOffset: sdk.String("quasi"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "repudiandae",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "veritatis",
+                                    EndTimeOffset: sdk.String("repudiandae"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("veritatis"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 9292.97,
-                                        Y: 2777.18,
+                                        X: sdk.Float64(9292.97),
+                                        Y: sdk.Float64(2777.18),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "enim",
+                                    StartTimeOffset: sdk.String("enim"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 93.56,
-                                        Y: 6674.11,
+                                        X: sdk.Float64(93.56),
+                                        Y: sdk.Float64(6674.11),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "quibusdam",
+                                    StartTimeOffset: sdk.String("quibusdam"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "explicabo",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "distinctio",
+                                    EndTimeOffset: sdk.String("explicabo"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("distinctio"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 8413.86,
-                                        Y: 2894.06,
+                                        X: sdk.Float64(8413.86),
+                                        Y: sdk.Float64(2894.06),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "modi",
+                                    StartTimeOffset: sdk.String("modi"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 1831.91,
-                                        Y: 3978.21,
+                                        X: sdk.Float64(1831.91),
+                                        Y: sdk.Float64(3978.21),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "cupiditate",
+                                    StartTimeOffset: sdk.String("cupiditate"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "quos",
-                                    FadeType: "FADE_TYPE_UNSPECIFIED",
-                                    StartTimeOffset: "magni",
+                                    EndTimeOffset: sdk.String("quos"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeTypeUnspecified.ToPointer(),
+                                    StartTimeOffset: sdk.String("magni"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 8289.4,
-                                        Y: 3698.08,
+                                        X: sdk.Float64(8289.4),
+                                        Y: sdk.Float64(3698.08),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "alias",
+                                    StartTimeOffset: sdk.String("alias"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 1464.41,
-                                        Y: 6778.17,
+                                        X: sdk.Float64(1464.41),
+                                        Y: sdk.Float64(6778.17),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "excepturi",
+                                    StartTimeOffset: sdk.String("excepturi"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "tempora",
-                                    FadeType: "FADE_OUT",
-                                    StartTimeOffset: "tempore",
+                                    EndTimeOffset: sdk.String("tempora"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeOut.ToPointer(),
+                                    StartTimeOffset: sdk.String("tempore"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 2884.76,
-                                        Y: 9621.89,
+                                        X: sdk.Float64(2884.76),
+                                        Y: sdk.Float64(9621.89),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "eum",
+                                    StartTimeOffset: sdk.String("eum"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 2487.53,
-                                        Y: 7561.07,
+                                        X: sdk.Float64(2487.53),
+                                        Y: sdk.Float64(7561.07),
                                     },
                                 },
                             },
                         },
                         Image: &shared.Image{
-                            Alpha: 5761.57,
+                            Alpha: sdk.Float64(5761.57),
                             Resolution: &shared.NormalizedCoordinate{
-                                X: 3960.98,
-                                Y: 5920.42,
+                                X: sdk.Float64(3960.98),
+                                Y: sdk.Float64(5920.42),
                             },
-                            URI: "https://nonstop-pate.biz",
+                            URI: sdk.String("https://nonstop-pate.biz"),
                         },
                     },
                     shared.Overlay{
                         Animations: []shared.Animation{
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "a",
+                                    StartTimeOffset: sdk.String("a"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "dolorum",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "in",
+                                    EndTimeOffset: sdk.String("dolorum"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("in"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 8464.09,
-                                        Y: 9785.71,
+                                        X: sdk.Float64(8464.09),
+                                        Y: sdk.Float64(9785.71),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "rerum",
+                                    StartTimeOffset: sdk.String("rerum"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 1162.02,
-                                        Y: 2974.37,
+                                        X: sdk.Float64(1162.02),
+                                        Y: sdk.Float64(2974.37),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "cumque",
+                                    StartTimeOffset: sdk.String("cumque"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "facere",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "aliquid",
+                                    EndTimeOffset: sdk.String("facere"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("aliquid"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 6754.39,
-                                        Y: 8811.04,
+                                        X: sdk.Float64(6754.39),
+                                        Y: sdk.Float64(8811.04),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "non",
+                                    StartTimeOffset: sdk.String("non"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 5812.73,
-                                        Y: 3132.18,
+                                        X: sdk.Float64(5812.73),
+                                        Y: sdk.Float64(3132.18),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "accusamus",
+                                    StartTimeOffset: sdk.String("accusamus"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "delectus",
-                                    FadeType: "FADE_OUT",
-                                    StartTimeOffset: "provident",
+                                    EndTimeOffset: sdk.String("delectus"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeOut.ToPointer(),
+                                    StartTimeOffset: sdk.String("provident"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 7252.55,
-                                        Y: 6596.69,
+                                        X: sdk.Float64(7252.55),
+                                        Y: sdk.Float64(6596.69),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "blanditiis",
+                                    StartTimeOffset: sdk.String("blanditiis"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 5332.06,
-                                        Y: 9560.84,
+                                        X: sdk.Float64(5332.06),
+                                        Y: sdk.Float64(9560.84),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "amet",
+                                    StartTimeOffset: sdk.String("amet"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "deserunt",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "vel",
+                                    EndTimeOffset: sdk.String("deserunt"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("vel"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 6188.09,
-                                        Y: 6063.93,
+                                        X: sdk.Float64(6188.09),
+                                        Y: sdk.Float64(6063.93),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "molestiae",
+                                    StartTimeOffset: sdk.String("molestiae"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 191.93,
-                                        Y: 4701.32,
+                                        X: sdk.Float64(191.93),
+                                        Y: sdk.Float64(4701.32),
                                     },
                                 },
                             },
                         },
                         Image: &shared.Image{
-                            Alpha: 3015.75,
+                            Alpha: sdk.Float64(3015.75),
                             Resolution: &shared.NormalizedCoordinate{
-                                X: 7160.75,
-                                Y: 6601.74,
+                                X: sdk.Float64(7160.75),
+                                Y: sdk.Float64(6601.74),
                             },
-                            URI: "http://flawed-gherkin.name",
+                            URI: sdk.String("http://flawed-gherkin.name"),
                         },
                     },
                     shared.Overlay{
                         Animations: []shared.Animation{
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "eum",
+                                    StartTimeOffset: sdk.String("eum"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "vero",
-                                    FadeType: "FADE_TYPE_UNSPECIFIED",
-                                    StartTimeOffset: "architecto",
+                                    EndTimeOffset: sdk.String("vero"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeTypeUnspecified.ToPointer(),
+                                    StartTimeOffset: sdk.String("architecto"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 2982.82,
-                                        Y: 923.73,
+                                        X: sdk.Float64(2982.82),
+                                        Y: sdk.Float64(923.73),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "excepturi",
+                                    StartTimeOffset: sdk.String("excepturi"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 3540.47,
-                                        Y: 5908.73,
+                                        X: sdk.Float64(3540.47),
+                                        Y: sdk.Float64(5908.73),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "quos",
+                                    StartTimeOffset: sdk.String("quos"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "sint",
-                                    FadeType: "FADE_TYPE_UNSPECIFIED",
-                                    StartTimeOffset: "mollitia",
+                                    EndTimeOffset: sdk.String("sint"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeTypeUnspecified.ToPointer(),
+                                    StartTimeOffset: sdk.String("mollitia"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 9689.62,
-                                        Y: 6521.03,
+                                        X: sdk.Float64(9689.62),
+                                        Y: sdk.Float64(6521.03),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "ad",
+                                    StartTimeOffset: sdk.String("ad"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 4314.18,
-                                        Y: 2212.62,
+                                        X: sdk.Float64(4314.18),
+                                        Y: sdk.Float64(2212.62),
                                     },
                                 },
                             },
                             shared.Animation{
                                 AnimationEnd: &shared.AnimationEnd{
-                                    StartTimeOffset: "necessitatibus",
+                                    StartTimeOffset: sdk.String("necessitatibus"),
                                 },
                                 AnimationFade: &shared.AnimationFade{
-                                    EndTimeOffset: "odit",
-                                    FadeType: "FADE_IN",
-                                    StartTimeOffset: "quasi",
+                                    EndTimeOffset: sdk.String("odit"),
+                                    FadeType: shared.AnimationFadeFadeTypeEnumFadeIn.ToPointer(),
+                                    StartTimeOffset: sdk.String("quasi"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 4358.65,
-                                        Y: 9840.43,
+                                        X: sdk.Float64(4358.65),
+                                        Y: sdk.Float64(9840.43),
                                     },
                                 },
                                 AnimationStatic: &shared.AnimationStatic{
-                                    StartTimeOffset: "debitis",
+                                    StartTimeOffset: sdk.String("debitis"),
                                     Xy: &shared.NormalizedCoordinate{
-                                        X: 2603.41,
-                                        Y: 8061.94,
+                                        X: sdk.Float64(2603.41),
+                                        Y: sdk.Float64(8061.94),
                                     },
                                 },
                             },
                         },
                         Image: &shared.Image{
-                            Alpha: 5370.23,
+                            Alpha: sdk.Float64(5370.23),
                             Resolution: &shared.NormalizedCoordinate{
-                                X: 7038.89,
-                                Y: 4479.26,
+                                X: sdk.Float64(7038.89),
+                                Y: sdk.Float64(4479.26),
                             },
-                            URI: "http://burly-trachoma.info",
+                            URI: sdk.String("http://burly-trachoma.info"),
                         },
                     },
                 },
                 PubsubDestination: &shared.PubsubDestination{
-                    Topic: "expedita",
+                    Topic: sdk.String("expedita"),
                 },
                 SpriteSheets: []shared.SpriteSheet{
                     shared.SpriteSheet{
-                        ColumnCount: 998848,
-                        EndTimeOffset: "quibusdam",
-                        FilePrefix: "sed",
-                        Format: "saepe",
-                        Interval: "pariatur",
-                        Quality: 37559,
-                        RowCount: 162493,
-                        SpriteHeightPixels: 508315,
-                        SpriteWidthPixels: 615560,
-                        StartTimeOffset: "magni",
-                        TotalCount: 123820,
+                        ColumnCount: sdk.Int(998848),
+                        EndTimeOffset: sdk.String("quibusdam"),
+                        FilePrefix: sdk.String("sed"),
+                        Format: sdk.String("saepe"),
+                        Interval: sdk.String("pariatur"),
+                        Quality: sdk.Int(37559),
+                        RowCount: sdk.Int(162493),
+                        SpriteHeightPixels: sdk.Int(508315),
+                        SpriteWidthPixels: sdk.Int(615560),
+                        StartTimeOffset: sdk.String("magni"),
+                        TotalCount: sdk.Int(123820),
                     },
                     shared.SpriteSheet{
-                        ColumnCount: 779051,
-                        EndTimeOffset: "illum",
-                        FilePrefix: "pariatur",
-                        Format: "maxime",
-                        Interval: "ea",
-                        Quality: 569101,
-                        RowCount: 139972,
-                        SpriteHeightPixels: 407183,
-                        SpriteWidthPixels: 33222,
-                        StartTimeOffset: "ab",
-                        TotalCount: 982575,
+                        ColumnCount: sdk.Int(779051),
+                        EndTimeOffset: sdk.String("illum"),
+                        FilePrefix: sdk.String("pariatur"),
+                        Format: sdk.String("maxime"),
+                        Interval: sdk.String("ea"),
+                        Quality: sdk.Int(569101),
+                        RowCount: sdk.Int(139972),
+                        SpriteHeightPixels: sdk.Int(407183),
+                        SpriteWidthPixels: sdk.Int(33222),
+                        StartTimeOffset: sdk.String("ab"),
+                        TotalCount: sdk.Int(982575),
                     },
                 },
             },
@@ -601,24 +602,21 @@ func main() {
                 "autem": "nam",
                 "eaque": "pariatur",
             },
-            Name: "nemo",
+            Name: sdk.String("Camille Armstrong"),
         },
-        AccessToken: "voluptatibus",
-        Alt: "json",
-        Callback: "fugiat",
-        Fields: "amet",
-        JobTemplateID: "aut",
-        Key: "cumque",
-        OauthToken: "corporis",
-        Parent: "hic",
-        PrettyPrint: false,
-        QuotaUser: "libero",
-        UploadType: "nobis",
-        UploadProtocol: "dolores",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.TranscoderProjectsLocationsJobTemplatesCreate(ctx, req, operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity{
+        AccessToken: sdk.String("aut"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("corporis"),
+        Fields: sdk.String("hic"),
+        JobTemplateID: sdk.String("libero"),
+        Key: sdk.String("nobis"),
+        OauthToken: sdk.String("dolores"),
+        Parent: "quis",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("totam"),
+        UploadType: sdk.String("dignissimos"),
+        UploadProtocol: sdk.String("eaque"),
+    }, operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -637,14 +635,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `TranscoderProjectsLocationsJobTemplatesCreate` - Creates a job template in the specified region.
-* `TranscoderProjectsLocationsJobTemplatesDelete` - Deletes a job template.
-* `TranscoderProjectsLocationsJobTemplatesGet` - Returns the job template data.
-* `TranscoderProjectsLocationsJobTemplatesList` - Lists job templates in the specified region.
-* `TranscoderProjectsLocationsJobsCreate` - Creates a job in the specified region.
-* `TranscoderProjectsLocationsJobsList` - Lists jobs in the specified region.
+* [TranscoderProjectsLocationsJobTemplatesCreate](docs/projects/README.md#transcoderprojectslocationsjobtemplatescreate) - Creates a job template in the specified region.
+* [TranscoderProjectsLocationsJobTemplatesDelete](docs/projects/README.md#transcoderprojectslocationsjobtemplatesdelete) - Deletes a job template.
+* [TranscoderProjectsLocationsJobTemplatesGet](docs/projects/README.md#transcoderprojectslocationsjobtemplatesget) - Returns the job template data.
+* [TranscoderProjectsLocationsJobTemplatesList](docs/projects/README.md#transcoderprojectslocationsjobtemplateslist) - Lists job templates in the specified region.
+* [TranscoderProjectsLocationsJobsCreate](docs/projects/README.md#transcoderprojectslocationsjobscreate) - Creates a job in the specified region.
+* [TranscoderProjectsLocationsJobsList](docs/projects/README.md#transcoderprojectslocationsjobslist) - Lists jobs in the specified region.
 <!-- End SDK Available Operations -->
 
 ### Maturity

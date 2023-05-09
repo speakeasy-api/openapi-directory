@@ -17,12 +17,16 @@ const (
 	KlarnaInfoRegionEnumAu KlarnaInfoRegionEnum = "AU"
 )
 
+func (e KlarnaInfoRegionEnum) ToPointer() *KlarnaInfoRegionEnum {
+	return &e
+}
+
 func (e *KlarnaInfoRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NA":
 		fallthrough
 	case "EU":
@@ -30,10 +34,10 @@ func (e *KlarnaInfoRegionEnum) UnmarshalJSON(data []byte) error {
 	case "CH":
 		fallthrough
 	case "AU":
-		*e = KlarnaInfoRegionEnum(s)
+		*e = KlarnaInfoRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KlarnaInfoRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for KlarnaInfoRegionEnum: %v", v)
 	}
 }
 

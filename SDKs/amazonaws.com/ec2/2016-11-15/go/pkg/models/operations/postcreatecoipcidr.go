@@ -15,17 +15,21 @@ const (
 	POSTCreateCoipCidrActionEnumCreateCoipCidr POSTCreateCoipCidrActionEnum = "CreateCoipCidr"
 )
 
+func (e POSTCreateCoipCidrActionEnum) ToPointer() *POSTCreateCoipCidrActionEnum {
+	return &e
+}
+
 func (e *POSTCreateCoipCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateCoipCidr":
-		*e = POSTCreateCoipCidrActionEnum(s)
+		*e = POSTCreateCoipCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateCoipCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateCoipCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateCoipCidrVersionEnumTwoThousandAndSixteen1115 POSTCreateCoipCidrVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateCoipCidrVersionEnum) ToPointer() *POSTCreateCoipCidrVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateCoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateCoipCidrVersionEnum(s)
+		*e = POSTCreateCoipCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateCoipCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateCoipCidrVersionEnum: %v", v)
 	}
 }
 

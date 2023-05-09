@@ -16,21 +16,25 @@ const (
 	FunctionEnvironmentEnumGen2                   FunctionEnvironmentEnum = "GEN_2"
 )
 
+func (e FunctionEnvironmentEnum) ToPointer() *FunctionEnvironmentEnum {
+	return &e
+}
+
 func (e *FunctionEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "GEN_1":
 		fallthrough
 	case "GEN_2":
-		*e = FunctionEnvironmentEnum(s)
+		*e = FunctionEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FunctionEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for FunctionEnvironmentEnum: %v", v)
 	}
 }
 
@@ -44,13 +48,13 @@ type FunctionInput struct {
 	Environment *FunctionEnvironmentEnum `json:"environment,omitempty"`
 	// Describes EventTrigger, used to request events to be sent from another service.
 	EventTrigger *EventTriggerInput `json:"eventTrigger,omitempty"`
-	// Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+	// [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
 	KmsKeyName *string `json:"kmsKeyName,omitempty"`
 	// Labels associated with this Cloud Function.
 	Labels map[string]string `json:"labels,omitempty"`
 	// A user-defined name of the function. Function names must be unique globally and match pattern `projects/*/locations/*/functions/*`
 	Name *string `json:"name,omitempty"`
-	// Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+	// Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
 	ServiceConfig *ServiceConfigInput `json:"serviceConfig,omitempty"`
 }
 
@@ -66,12 +70,16 @@ const (
 	FunctionStateEnumUnknown          FunctionStateEnum = "UNKNOWN"
 )
 
+func (e FunctionStateEnum) ToPointer() *FunctionStateEnum {
+	return &e
+}
+
 func (e *FunctionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -83,10 +91,10 @@ func (e *FunctionStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "UNKNOWN":
-		*e = FunctionStateEnum(s)
+		*e = FunctionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FunctionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for FunctionStateEnum: %v", v)
 	}
 }
 
@@ -100,13 +108,13 @@ type Function struct {
 	Environment *FunctionEnvironmentEnum `json:"environment,omitempty"`
 	// Describes EventTrigger, used to request events to be sent from another service.
 	EventTrigger *EventTrigger `json:"eventTrigger,omitempty"`
-	// Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+	// [Preview] Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
 	KmsKeyName *string `json:"kmsKeyName,omitempty"`
 	// Labels associated with this Cloud Function.
 	Labels map[string]string `json:"labels,omitempty"`
 	// A user-defined name of the function. Function names must be unique globally and match pattern `projects/*/locations/*/functions/*`
 	Name *string `json:"name,omitempty"`
-	// Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+	// Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
 	ServiceConfig *ServiceConfig `json:"serviceConfig,omitempty"`
 	// Output only. State of the function.
 	State *FunctionStateEnum `json:"state,omitempty"`
@@ -114,6 +122,4 @@ type Function struct {
 	StateMessages []GoogleCloudFunctionsV2betaStateMessage `json:"stateMessages,omitempty"`
 	// Output only. The last update timestamp of a Cloud Function.
 	UpdateTime *string `json:"updateTime,omitempty"`
-	// Output only. The deployed url for the function.
-	URL *string `json:"url,omitempty"`
 }

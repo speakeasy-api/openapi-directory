@@ -44,19 +44,23 @@ const (
 	DirectoryUsersAliasesListEventEnumDelete DirectoryUsersAliasesListEventEnum = "delete"
 )
 
+func (e DirectoryUsersAliasesListEventEnum) ToPointer() *DirectoryUsersAliasesListEventEnum {
+	return &e
+}
+
 func (e *DirectoryUsersAliasesListEventEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "delete":
-		*e = DirectoryUsersAliasesListEventEnum(s)
+		*e = DirectoryUsersAliasesListEventEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryUsersAliasesListEventEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryUsersAliasesListEventEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	VersionTypeEnumTypeGeneralAvailability VersionTypeEnum = "TYPE_GENERAL_AVAILABILITY"
 )
 
+func (e VersionTypeEnum) ToPointer() *VersionTypeEnum {
+	return &e
+}
+
 func (e *VersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TYPE_PREVIEW":
 		fallthrough
 	case "TYPE_GENERAL_AVAILABILITY":
-		*e = VersionTypeEnum(s)
+		*e = VersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionTypeEnum: %v", v)
 	}
 }
 

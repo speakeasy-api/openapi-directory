@@ -16,21 +16,25 @@ const (
 	OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnumDebSrc                 OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum = "DEB_SRC"
 )
 
+func (e OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum) ToPointer() *OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum {
+	return &e
+}
+
 func (e *OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEB":
 		fallthrough
 	case "DEB_SRC":
-		*e = OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum(s)
+		*e = OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum: %v", v)
 	}
 }
 

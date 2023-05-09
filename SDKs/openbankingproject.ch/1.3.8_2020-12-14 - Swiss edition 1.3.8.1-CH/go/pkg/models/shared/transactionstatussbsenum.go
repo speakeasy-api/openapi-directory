@@ -30,12 +30,16 @@ const (
 	TransactionStatusSBSEnumCanc TransactionStatusSBSEnum = "CANC"
 )
 
+func (e TransactionStatusSBSEnum) ToPointer() *TransactionStatusSBSEnum {
+	return &e
+}
+
 func (e *TransactionStatusSBSEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACSC":
 		fallthrough
 	case "ACTC":
@@ -47,9 +51,9 @@ func (e *TransactionStatusSBSEnum) UnmarshalJSON(data []byte) error {
 	case "RJCT":
 		fallthrough
 	case "CANC":
-		*e = TransactionStatusSBSEnum(s)
+		*e = TransactionStatusSBSEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionStatusSBSEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionStatusSBSEnum: %v", v)
 	}
 }

@@ -9,7 +9,8 @@ import (
 
 type PostAs2PartnersRequestBody struct {
 	// Id of As2Station for this partner
-	As2StationID int `multipartForm:"name=as2_station_id"`
+	As2StationID       int   `multipartForm:"name=as2_station_id"`
+	EnableDedicatedIps *bool `multipartForm:"name=enable_dedicated_ips"`
 	// AS2 Name
 	Name              string `multipartForm:"name=name"`
 	PublicCertificate string `multipartForm:"name=public_certificate"`

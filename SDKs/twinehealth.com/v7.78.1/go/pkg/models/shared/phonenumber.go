@@ -18,12 +18,16 @@ const (
 	PhoneNumberTypeEnumOther   PhoneNumberTypeEnum = "other"
 )
 
+func (e PhoneNumberTypeEnum) ToPointer() *PhoneNumberTypeEnum {
+	return &e
+}
+
 func (e *PhoneNumberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "home":
 		fallthrough
 	case "work":
@@ -35,10 +39,10 @@ func (e *PhoneNumberTypeEnum) UnmarshalJSON(data []byte) error {
 	case "work-fax":
 		fallthrough
 	case "other":
-		*e = PhoneNumberTypeEnum(s)
+		*e = PhoneNumberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhoneNumberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PhoneNumberTypeEnum: %v", v)
 	}
 }
 

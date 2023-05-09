@@ -16,12 +16,16 @@ const (
 	RoundEnumTen  RoundEnum = "ten"
 )
 
+func (e RoundEnum) ToPointer() *RoundEnum {
+	return &e
+}
+
 func (e *RoundEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "five":
 		fallthrough
 	case "none":
@@ -29,9 +33,9 @@ func (e *RoundEnum) UnmarshalJSON(data []byte) error {
 	case "one":
 		fallthrough
 	case "ten":
-		*e = RoundEnum(s)
+		*e = RoundEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RoundEnum: %s", s)
+		return fmt.Errorf("invalid value for RoundEnum: %v", v)
 	}
 }

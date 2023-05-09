@@ -15,17 +15,21 @@ const (
 	POSTCreateConfigurationSetEventDestinationActionEnumCreateConfigurationSetEventDestination POSTCreateConfigurationSetEventDestinationActionEnum = "CreateConfigurationSetEventDestination"
 )
 
+func (e POSTCreateConfigurationSetEventDestinationActionEnum) ToPointer() *POSTCreateConfigurationSetEventDestinationActionEnum {
+	return &e
+}
+
 func (e *POSTCreateConfigurationSetEventDestinationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateConfigurationSetEventDestination":
-		*e = POSTCreateConfigurationSetEventDestinationActionEnum(s)
+		*e = POSTCreateConfigurationSetEventDestinationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateConfigurationSetEventDestinationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateConfigurationSetEventDestinationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateConfigurationSetEventDestinationVersionEnumTwoThousandAndTen1201 POSTCreateConfigurationSetEventDestinationVersionEnum = "2010-12-01"
 )
 
+func (e POSTCreateConfigurationSetEventDestinationVersionEnum) ToPointer() *POSTCreateConfigurationSetEventDestinationVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateConfigurationSetEventDestinationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTCreateConfigurationSetEventDestinationVersionEnum(s)
+		*e = POSTCreateConfigurationSetEventDestinationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateConfigurationSetEventDestinationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateConfigurationSetEventDestinationVersionEnum: %v", v)
 	}
 }
 

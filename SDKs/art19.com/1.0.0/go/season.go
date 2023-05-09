@@ -102,7 +102,10 @@ func (s *season) GetSeasons(ctx context.Context, request operations.GetSeasonsRe
 // GetSeasonsID - Get a specific season
 func (s *season) GetSeasonsID(ctx context.Context, request operations.GetSeasonsIDRequest, security operations.GetSeasonsIDSecurity) (*operations.GetSeasonsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seasons/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seasons/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

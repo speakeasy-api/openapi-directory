@@ -47,21 +47,25 @@ const (
 	PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnumError   PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum = "error"
 )
 
+func (e PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum) ToPointer() *PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum(s)
+		*e = PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostLoadBalancersIDActionsChangeDNSPtrActionResponseActionStatusEnum: %v", v)
 	}
 }
 

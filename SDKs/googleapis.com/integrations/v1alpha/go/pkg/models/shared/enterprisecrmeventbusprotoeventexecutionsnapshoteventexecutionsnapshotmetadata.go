@@ -7,6 +7,8 @@ type EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetad
 	EventAttemptNum *int `json:"eventAttemptNum,omitempty"`
 	// the task attempt number this snapshot belongs to. Could be empty.
 	TaskAttemptNum *int `json:"taskAttemptNum,omitempty"`
+	// the task label associated with this snapshot. Could be empty.
+	TaskLabel *string `json:"taskLabel,omitempty"`
 	// the task name associated with this snapshot. Could be empty.
 	TaskName *string `json:"taskName,omitempty"`
 	// The task number associated with this snapshot. Could be empty.

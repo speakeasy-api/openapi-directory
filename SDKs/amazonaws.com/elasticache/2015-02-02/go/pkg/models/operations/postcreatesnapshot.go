@@ -15,17 +15,21 @@ const (
 	POSTCreateSnapshotActionEnumCreateSnapshot POSTCreateSnapshotActionEnum = "CreateSnapshot"
 )
 
+func (e POSTCreateSnapshotActionEnum) ToPointer() *POSTCreateSnapshotActionEnum {
+	return &e
+}
+
 func (e *POSTCreateSnapshotActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateSnapshot":
-		*e = POSTCreateSnapshotActionEnum(s)
+		*e = POSTCreateSnapshotActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateSnapshotActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateSnapshotActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateSnapshotVersionEnumTwoThousandAndFifteen0202 POSTCreateSnapshotVersionEnum = "2015-02-02"
 )
 
+func (e POSTCreateSnapshotVersionEnum) ToPointer() *POSTCreateSnapshotVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateSnapshotVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTCreateSnapshotVersionEnum(s)
+		*e = POSTCreateSnapshotVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateSnapshotVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateSnapshotVersionEnum: %v", v)
 	}
 }
 

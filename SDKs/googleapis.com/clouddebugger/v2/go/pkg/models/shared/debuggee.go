@@ -18,12 +18,16 @@ const (
 	DebuggeeCanaryModeEnumCanaryModeDefaultDisabled DebuggeeCanaryModeEnum = "CANARY_MODE_DEFAULT_DISABLED"
 )
 
+func (e DebuggeeCanaryModeEnum) ToPointer() *DebuggeeCanaryModeEnum {
+	return &e
+}
+
 func (e *DebuggeeCanaryModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANARY_MODE_UNSPECIFIED":
 		fallthrough
 	case "CANARY_MODE_ALWAYS_ENABLED":
@@ -33,10 +37,10 @@ func (e *DebuggeeCanaryModeEnum) UnmarshalJSON(data []byte) error {
 	case "CANARY_MODE_DEFAULT_ENABLED":
 		fallthrough
 	case "CANARY_MODE_DEFAULT_DISABLED":
-		*e = DebuggeeCanaryModeEnum(s)
+		*e = DebuggeeCanaryModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DebuggeeCanaryModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DebuggeeCanaryModeEnum: %v", v)
 	}
 }
 

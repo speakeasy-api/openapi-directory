@@ -18,12 +18,16 @@ const (
 	EventSeverityEnumFatal EventSeverityEnum = "FATAL"
 )
 
+func (e EventSeverityEnum) ToPointer() *EventSeverityEnum {
+	return &e
+}
+
 func (e *EventSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRACE":
 		fallthrough
 	case "DEBUG":
@@ -35,9 +39,9 @@ func (e *EventSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "FATAL":
-		*e = EventSeverityEnum(s)
+		*e = EventSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for EventSeverityEnum: %v", v)
 	}
 }

@@ -16,21 +16,25 @@ const (
 	CloudAuditOptionsLogNameEnumDataAccess         CloudAuditOptionsLogNameEnum = "DATA_ACCESS"
 )
 
+func (e CloudAuditOptionsLogNameEnum) ToPointer() *CloudAuditOptionsLogNameEnum {
+	return &e
+}
+
 func (e *CloudAuditOptionsLogNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_LOG_NAME":
 		fallthrough
 	case "ADMIN_ACTIVITY":
 		fallthrough
 	case "DATA_ACCESS":
-		*e = CloudAuditOptionsLogNameEnum(s)
+		*e = CloudAuditOptionsLogNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudAuditOptionsLogNameEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudAuditOptionsLogNameEnum: %v", v)
 	}
 }
 

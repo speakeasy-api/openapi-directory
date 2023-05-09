@@ -14,18 +14,22 @@ const (
 	ChildTypeEnumOrganizationalUnit ChildTypeEnum = "ORGANIZATIONAL_UNIT"
 )
 
+func (e ChildTypeEnum) ToPointer() *ChildTypeEnum {
+	return &e
+}
+
 func (e *ChildTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "ORGANIZATIONAL_UNIT":
-		*e = ChildTypeEnum(s)
+		*e = ChildTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChildTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChildTypeEnum: %v", v)
 	}
 }

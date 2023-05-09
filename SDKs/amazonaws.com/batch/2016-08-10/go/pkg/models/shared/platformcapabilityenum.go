@@ -14,18 +14,22 @@ const (
 	PlatformCapabilityEnumFargate PlatformCapabilityEnum = "FARGATE"
 )
 
+func (e PlatformCapabilityEnum) ToPointer() *PlatformCapabilityEnum {
+	return &e
+}
+
 func (e *PlatformCapabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2":
 		fallthrough
 	case "FARGATE":
-		*e = PlatformCapabilityEnum(s)
+		*e = PlatformCapabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformCapabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformCapabilityEnum: %v", v)
 	}
 }

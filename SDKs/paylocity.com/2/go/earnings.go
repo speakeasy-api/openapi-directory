@@ -35,7 +35,10 @@ func newEarnings(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Add/Update Earning API sends new or updated employee earnings information directly to Web Pay.
 func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request operations.AddOrUpdateAnEmployeeEarningRequest, security operations.AddOrUpdateAnEmployeeEarningSecurity) (*operations.AddOrUpdateAnEmployeeEarningResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Earning", "json")
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *earnings) AddOrUpdateAnEmployeeEarning(ctx context.Context, request ope
 // Delete Earning by Earning Code and Start Date
 func (s *earnings) DeleteEarningByEarningCodeAndStartDate(ctx context.Context, request operations.DeleteEarningByEarningCodeAndStartDateRequest, security operations.DeleteEarningByEarningCodeAndStartDateSecurity) (*operations.DeleteEarningByEarningCodeAndStartDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *earnings) DeleteEarningByEarningCodeAndStartDate(ctx context.Context, r
 // Get All Earnings returns all earnings for the selected employee.
 func (s *earnings) GetAllEarnings(ctx context.Context, request operations.GetAllEarningsRequest, security operations.GetAllEarningsSecurity) (*operations.GetAllEarningsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *earnings) GetAllEarnings(ctx context.Context, request operations.GetAll
 // Get Earnings returns the single earning with the provided earning code and start date for the selected employee.
 func (s *earnings) GetEarningByEarningCodeAndStartDate(ctx context.Context, request operations.GetEarningByEarningCodeAndStartDateRequest, security operations.GetEarningByEarningCodeAndStartDateSecurity) (*operations.GetEarningByEarningCodeAndStartDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}/{startDate}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +291,10 @@ func (s *earnings) GetEarningByEarningCodeAndStartDate(ctx context.Context, requ
 // Get Earnings returns all earnings with the provided earning code for the selected employee.
 func (s *earnings) GetEarningsByEarningCode(ctx context.Context, request operations.GetEarningsByEarningCodeRequest, security operations.GetEarningsByEarningCodeSecurity) (*operations.GetEarningsByEarningCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/earnings/{earningCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

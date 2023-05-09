@@ -16,17 +16,21 @@ const (
 	PutWorkflowRunPropertiesXAmzTargetEnumAwsGluePutWorkflowRunProperties PutWorkflowRunPropertiesXAmzTargetEnum = "AWSGlue.PutWorkflowRunProperties"
 )
 
+func (e PutWorkflowRunPropertiesXAmzTargetEnum) ToPointer() *PutWorkflowRunPropertiesXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutWorkflowRunPropertiesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.PutWorkflowRunProperties":
-		*e = PutWorkflowRunPropertiesXAmzTargetEnum(s)
+		*e = PutWorkflowRunPropertiesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutWorkflowRunPropertiesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutWorkflowRunPropertiesXAmzTargetEnum: %v", v)
 	}
 }
 

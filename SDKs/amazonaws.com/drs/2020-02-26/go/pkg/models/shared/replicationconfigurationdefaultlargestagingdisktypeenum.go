@@ -16,12 +16,16 @@ const (
 	ReplicationConfigurationDefaultLargeStagingDiskTypeEnumAuto ReplicationConfigurationDefaultLargeStagingDiskTypeEnum = "AUTO"
 )
 
+func (e ReplicationConfigurationDefaultLargeStagingDiskTypeEnum) ToPointer() *ReplicationConfigurationDefaultLargeStagingDiskTypeEnum {
+	return &e
+}
+
 func (e *ReplicationConfigurationDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP2":
 		fallthrough
 	case "GP3":
@@ -29,9 +33,9 @@ func (e *ReplicationConfigurationDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(
 	case "ST1":
 		fallthrough
 	case "AUTO":
-		*e = ReplicationConfigurationDefaultLargeStagingDiskTypeEnum(s)
+		*e = ReplicationConfigurationDefaultLargeStagingDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationConfigurationDefaultLargeStagingDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationConfigurationDefaultLargeStagingDiskTypeEnum: %v", v)
 	}
 }

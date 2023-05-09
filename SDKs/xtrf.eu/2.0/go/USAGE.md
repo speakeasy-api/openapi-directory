@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,15 +16,13 @@ func main() {
         }),
     )
 
-    req := operations.BrowseCSVRequest{
-        AdditionalOrder: "corrupti",
-        SecondarySeparator: "provident",
-        Separator: "distinctio",
-        ViewID: 844266,
-    }
-
     ctx := context.Background()
-    res, err := s.Browser.BrowseCSV(ctx, req)
+    res, err := s.Browser.BrowseCSV(ctx, operations.BrowseCSVRequest{
+        AdditionalOrder: sdk.String("corrupti"),
+        SecondarySeparator: sdk.String("provident"),
+        Separator: sdk.String("distinctio"),
+        ViewID: sdk.Int64(844266),
+    })
     if err != nil {
         log.Fatal(err)
     }

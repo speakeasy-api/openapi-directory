@@ -34,7 +34,10 @@ func newRoles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DirectoryRolesDelete - Deletes a role.
 func (s *roles) DirectoryRolesDelete(ctx context.Context, request operations.DirectoryRolesDeleteRequest, security operations.DirectoryRolesDeleteSecurity) (*operations.DirectoryRolesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *roles) DirectoryRolesDelete(ctx context.Context, request operations.Dir
 // DirectoryRolesGet - Retrieves a role.
 func (s *roles) DirectoryRolesGet(ctx context.Context, request operations.DirectoryRolesGetRequest, security operations.DirectoryRolesGetSecurity) (*operations.DirectoryRolesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *roles) DirectoryRolesGet(ctx context.Context, request operations.Direct
 // DirectoryRolesInsert - Creates a role.
 func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.DirectoryRolesInsertRequest, security operations.DirectoryRolesInsertSecurity) (*operations.DirectoryRolesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *roles) DirectoryRolesInsert(ctx context.Context, request operations.Dir
 // DirectoryRolesList - Retrieves a paginated list of all the roles in a domain.
 func (s *roles) DirectoryRolesList(ctx context.Context, request operations.DirectoryRolesListRequest, security operations.DirectoryRolesListSecurity) (*operations.DirectoryRolesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *roles) DirectoryRolesList(ctx context.Context, request operations.Direc
 // DirectoryRolesPatch - Patches a role.
 func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.DirectoryRolesPatchRequest, security operations.DirectoryRolesPatchSecurity) (*operations.DirectoryRolesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *roles) DirectoryRolesPatch(ctx context.Context, request operations.Dire
 // DirectoryRolesUpdate - Updates a role.
 func (s *roles) DirectoryRolesUpdate(ctx context.Context, request operations.DirectoryRolesUpdateRequest, security operations.DirectoryRolesUpdateSecurity) (*operations.DirectoryRolesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customer}/roles/{roleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Role", "json")
 	if err != nil {

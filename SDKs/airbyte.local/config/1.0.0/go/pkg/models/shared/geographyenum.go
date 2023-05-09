@@ -15,20 +15,24 @@ const (
 	GeographyEnumEu   GeographyEnum = "eu"
 )
 
+func (e GeographyEnum) ToPointer() *GeographyEnum {
+	return &e
+}
+
 func (e *GeographyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "us":
 		fallthrough
 	case "eu":
-		*e = GeographyEnum(s)
+		*e = GeographyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeographyEnum: %s", s)
+		return fmt.Errorf("invalid value for GeographyEnum: %v", v)
 	}
 }

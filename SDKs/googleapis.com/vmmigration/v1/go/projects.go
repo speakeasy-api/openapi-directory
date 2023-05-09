@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // VmmigrationProjectsLocationsGroupsAddGroupMigration - Adds a MigratingVm to a Group.
 func (s *projects) VmmigrationProjectsLocationsGroupsAddGroupMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest, security operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity) (*operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:addGroupMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{group}:addGroupMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddGroupMigrationRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) VmmigrationProjectsLocationsGroupsAddGroupMigration(ctx conte
 // VmmigrationProjectsLocationsGroupsCreate - Creates a new Group in a given project and location.
 func (s *projects) VmmigrationProjectsLocationsGroupsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsGroupsCreateRequest, security operations.VmmigrationProjectsLocationsGroupsCreateSecurity) (*operations.VmmigrationProjectsLocationsGroupsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GroupInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) VmmigrationProjectsLocationsGroupsCreate(ctx context.Context,
 // VmmigrationProjectsLocationsGroupsList - Lists Groups in a given project and location.
 func (s *projects) VmmigrationProjectsLocationsGroupsList(ctx context.Context, request operations.VmmigrationProjectsLocationsGroupsListRequest, security operations.VmmigrationProjectsLocationsGroupsListSecurity) (*operations.VmmigrationProjectsLocationsGroupsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) VmmigrationProjectsLocationsGroupsList(ctx context.Context, r
 // VmmigrationProjectsLocationsGroupsRemoveGroupMigration - Removes a MigratingVm from a Group.
 func (s *projects) VmmigrationProjectsLocationsGroupsRemoveGroupMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsGroupsRemoveGroupMigrationRequest, security operations.VmmigrationProjectsLocationsGroupsRemoveGroupMigrationSecurity) (*operations.VmmigrationProjectsLocationsGroupsRemoveGroupMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{group}:removeGroupMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{group}:removeGroupMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveGroupMigrationRequest", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) VmmigrationProjectsLocationsGroupsRemoveGroupMigration(ctx co
 // VmmigrationProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) VmmigrationProjectsLocationsList(ctx context.Context, request operations.VmmigrationProjectsLocationsListRequest, security operations.VmmigrationProjectsLocationsListSecurity) (*operations.VmmigrationProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) VmmigrationProjectsLocationsList(ctx context.Context, request
 // VmmigrationProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) VmmigrationProjectsLocationsOperationsList(ctx context.Context, request operations.VmmigrationProjectsLocationsOperationsListRequest, security operations.VmmigrationProjectsLocationsOperationsListSecurity) (*operations.VmmigrationProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *projects) VmmigrationProjectsLocationsOperationsList(ctx context.Contex
 // VmmigrationProjectsLocationsSourcesCreate - Creates a new Source in a given project and location.
 func (s *projects) VmmigrationProjectsLocationsSourcesCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesCreateRequest, security operations.VmmigrationProjectsLocationsSourcesCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SourceInput", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesCreate(ctx context.Context
 // VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreate - Creates a new DatacenterConnector in a given Source.
 func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreateRequest, security operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/datacenterConnectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/datacenterConnectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DatacenterConnectorInput", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsCreate
 // VmmigrationProjectsLocationsSourcesDatacenterConnectorsList - Lists DatacenterConnectors in a given Source.
 func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsListRequest, security operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsListSecurity) (*operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/datacenterConnectors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/datacenterConnectors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsList(c
 // VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgradeAppliance - Upgrades the appliance relate to this DatacenterConnector to the in-place updateable version.
 func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgradeAppliance(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgradeApplianceRequest, security operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgradeApplianceSecurity) (*operations.VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgradeApplianceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{datacenterConnector}:upgradeAppliance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{datacenterConnector}:upgradeAppliance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpgradeApplianceRequest", "json")
 	if err != nil {
@@ -556,7 +586,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesDatacenterConnectorsUpgrad
 // VmmigrationProjectsLocationsSourcesFetchInventory - List remote source's inventory of VMs. The remote source is the onprem vCenter (remote in the sense it's not in Compute Engine). The inventory describes the list of existing VMs in that source. Note that this operation lists the VMs on the remote source, as opposed to listing the MigratingVms resources in the vmmigration service.
 func (s *projects) VmmigrationProjectsLocationsSourcesFetchInventory(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesFetchInventoryRequest, security operations.VmmigrationProjectsLocationsSourcesFetchInventorySecurity) (*operations.VmmigrationProjectsLocationsSourcesFetchInventoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{source}:fetchInventory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{source}:fetchInventory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesFetchInventory(ctx context
 // VmmigrationProjectsLocationsSourcesList - Lists Sources in a given project and location.
 func (s *projects) VmmigrationProjectsLocationsSourcesList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesListRequest, security operations.VmmigrationProjectsLocationsSourcesListSecurity) (*operations.VmmigrationProjectsLocationsSourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/sources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -652,7 +688,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesList(ctx context.Context, 
 // VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreate - Initiates a Clone of a specific migrating VM.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreateRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cloneJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cloneJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CloneJobInput", "json")
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsCreat
 // VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsList - Lists CloneJobs of a given migrating VM.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsListRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsListSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cloneJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cloneJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCloneJobsList(
 // VmmigrationProjectsLocationsSourcesMigratingVmsCreate - Creates a new MigratingVm in a given Source.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCreateRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migratingVms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migratingVms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MigratingVMInput", "json")
 	if err != nil {
@@ -810,7 +855,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCreate(ctx con
 // VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCancel - Initiates the cancellation of a running cutover job.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCancel(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCancelRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCancelSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -865,7 +913,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCan
 // VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCreate - Initiates a Cutover of a specific migrating VM. The returned LRO is completed when the cutover job resource is created and the job is initiated.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCreateRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cutoverJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cutoverJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CutoverJobInput", "json")
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsCre
 // VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsList - Lists CutoverJobs of a given migrating VM.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cutoverJobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cutoverJobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -968,7 +1022,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsLis
 // VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigration - Marks a migration as completed, deleting migration resources that are no longer being used. Only applicable after cutover is done.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigrationRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigrationSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:finalizeMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:finalizeMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsFinalizeMigrat
 // VmmigrationProjectsLocationsSourcesMigratingVmsList - Lists MigratingVms in a given Source.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsListRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsListSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migratingVms", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/migratingVms", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsList(ctx conte
 // VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigration - Pauses a migration for a VM. If cycle tasks are running they will be cancelled, preserving source task data. Further replication cycles will not be triggered while the VM is paused.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigrationRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigrationSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:pauseMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:pauseMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1126,7 +1189,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsPauseMigration
 // VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyclesList - Lists ReplicationCycles in a given MigratingVM.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyclesList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyclesListRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyclesListSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyclesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/replicationCycles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/replicationCycles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1174,7 +1240,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsReplicationCyc
 // VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigration - Resumes a migration for a VM. When called on a paused migration, will start the process of uploading data and creating snapshots; when called on a completed cut-over migration, will update the migration to active state and start the process of uploading data and creating snapshots.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigrationRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigrationSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:resumeMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:resumeMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1229,7 +1298,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsResumeMigratio
 // VmmigrationProjectsLocationsSourcesMigratingVmsStartMigration - Starts migration for a VM. Starts the process of uploading data and creating snapshots, in replication cycles scheduled by the policy.
 func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsStartMigration(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationRequest, security operations.VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationSecurity) (*operations.VmmigrationProjectsLocationsSourcesMigratingVmsStartMigrationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:startMigration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{migratingVm}:startMigration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesMigratingVmsStartMigration
 // VmmigrationProjectsLocationsSourcesUtilizationReportsCreate - Creates a new UtilizationReport.
 func (s *projects) VmmigrationProjectsLocationsSourcesUtilizationReportsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesUtilizationReportsCreateRequest, security operations.VmmigrationProjectsLocationsSourcesUtilizationReportsCreateSecurity) (*operations.VmmigrationProjectsLocationsSourcesUtilizationReportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/utilizationReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/utilizationReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UtilizationReportInput", "json")
 	if err != nil {
@@ -1339,7 +1414,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesUtilizationReportsCreate(c
 // VmmigrationProjectsLocationsSourcesUtilizationReportsList - Lists Utilization Reports of the given Source.
 func (s *projects) VmmigrationProjectsLocationsSourcesUtilizationReportsList(ctx context.Context, request operations.VmmigrationProjectsLocationsSourcesUtilizationReportsListRequest, security operations.VmmigrationProjectsLocationsSourcesUtilizationReportsListSecurity) (*operations.VmmigrationProjectsLocationsSourcesUtilizationReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/utilizationReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/utilizationReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1387,7 +1465,10 @@ func (s *projects) VmmigrationProjectsLocationsSourcesUtilizationReportsList(ctx
 // VmmigrationProjectsLocationsTargetProjectsCreate - Creates a new TargetProject in a given project. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
 func (s *projects) VmmigrationProjectsLocationsTargetProjectsCreate(ctx context.Context, request operations.VmmigrationProjectsLocationsTargetProjectsCreateRequest, security operations.VmmigrationProjectsLocationsTargetProjectsCreateSecurity) (*operations.VmmigrationProjectsLocationsTargetProjectsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targetProjects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targetProjects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetProjectInput", "json")
 	if err != nil {
@@ -1442,7 +1523,10 @@ func (s *projects) VmmigrationProjectsLocationsTargetProjectsCreate(ctx context.
 // VmmigrationProjectsLocationsTargetProjectsDelete - Deletes a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
 func (s *projects) VmmigrationProjectsLocationsTargetProjectsDelete(ctx context.Context, request operations.VmmigrationProjectsLocationsTargetProjectsDeleteRequest, security operations.VmmigrationProjectsLocationsTargetProjectsDeleteSecurity) (*operations.VmmigrationProjectsLocationsTargetProjectsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1490,7 +1574,10 @@ func (s *projects) VmmigrationProjectsLocationsTargetProjectsDelete(ctx context.
 // VmmigrationProjectsLocationsTargetProjectsGet - Gets details of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
 func (s *projects) VmmigrationProjectsLocationsTargetProjectsGet(ctx context.Context, request operations.VmmigrationProjectsLocationsTargetProjectsGetRequest, security operations.VmmigrationProjectsLocationsTargetProjectsGetSecurity) (*operations.VmmigrationProjectsLocationsTargetProjectsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1538,7 +1625,10 @@ func (s *projects) VmmigrationProjectsLocationsTargetProjectsGet(ctx context.Con
 // VmmigrationProjectsLocationsTargetProjectsList - Lists TargetProjects in a given project. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
 func (s *projects) VmmigrationProjectsLocationsTargetProjectsList(ctx context.Context, request operations.VmmigrationProjectsLocationsTargetProjectsListRequest, security operations.VmmigrationProjectsLocationsTargetProjectsListSecurity) (*operations.VmmigrationProjectsLocationsTargetProjectsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targetProjects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/targetProjects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1586,7 +1676,10 @@ func (s *projects) VmmigrationProjectsLocationsTargetProjectsList(ctx context.Co
 // VmmigrationProjectsLocationsTargetProjectsPatch - Updates the parameters of a single TargetProject. NOTE: TargetProject is a global resource; hence the only supported value for location is `global`.
 func (s *projects) VmmigrationProjectsLocationsTargetProjectsPatch(ctx context.Context, request operations.VmmigrationProjectsLocationsTargetProjectsPatchRequest, security operations.VmmigrationProjectsLocationsTargetProjectsPatchSecurity) (*operations.VmmigrationProjectsLocationsTargetProjectsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TargetProjectInput", "json")
 	if err != nil {

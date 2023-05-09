@@ -20,12 +20,16 @@ const (
 	APIKeyEntityPermissionSetEnumMobileApp         APIKeyEntityPermissionSetEnum = "mobile_app"
 )
 
+func (e APIKeyEntityPermissionSetEnum) ToPointer() *APIKeyEntityPermissionSetEnum {
+	return &e
+}
+
 func (e *APIKeyEntityPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "full":
@@ -37,10 +41,10 @@ func (e *APIKeyEntityPermissionSetEnum) UnmarshalJSON(data []byte) error {
 	case "office_integration":
 		fallthrough
 	case "mobile_app":
-		*e = APIKeyEntityPermissionSetEnum(s)
+		*e = APIKeyEntityPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIKeyEntityPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for APIKeyEntityPermissionSetEnum: %v", v)
 	}
 }
 

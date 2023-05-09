@@ -2,112 +2,110 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DigitalassetlinksAssetlinksBulkCheckRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Assetlinks.DigitalassetlinksAssetlinksBulkCheck(ctx, operations.DigitalassetlinksAssetlinksBulkCheckRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BulkCheckRequest: &shared.BulkCheckRequest{
-            AllowGoogleInternalDataSources: false,
-            DefaultRelation: "provident",
+            AllowGoogleInternalDataSources: sdk.Bool(false),
+            DefaultRelation: sdk.String("provident"),
             DefaultSource: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "distinctio",
+                        Sha256Fingerprint: sdk.String("distinctio"),
                     },
-                    PackageName: "quibusdam",
+                    PackageName: sdk.String("quibusdam"),
                 },
                 Web: &shared.WebAsset{
-                    Site: "unde",
+                    Site: sdk.String("unde"),
                 },
             },
             DefaultTarget: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "nulla",
+                        Sha256Fingerprint: sdk.String("nulla"),
                     },
-                    PackageName: "corrupti",
+                    PackageName: sdk.String("corrupti"),
                 },
                 Web: &shared.WebAsset{
-                    Site: "illum",
+                    Site: sdk.String("illum"),
                 },
             },
-            SkipCacheLookup: false,
+            SkipCacheLookup: sdk.Bool(false),
             Statements: []shared.StatementTemplate{
                 shared.StatementTemplate{
-                    Relation: "error",
+                    Relation: sdk.String("error"),
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "deserunt",
+                                Sha256Fingerprint: sdk.String("deserunt"),
                             },
-                            PackageName: "suscipit",
+                            PackageName: sdk.String("suscipit"),
                         },
                         Web: &shared.WebAsset{
-                            Site: "iure",
+                            Site: sdk.String("iure"),
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "magnam",
+                                Sha256Fingerprint: sdk.String("magnam"),
                             },
-                            PackageName: "debitis",
+                            PackageName: sdk.String("debitis"),
                         },
                         Web: &shared.WebAsset{
-                            Site: "ipsa",
+                            Site: sdk.String("ipsa"),
                         },
                     },
                 },
                 shared.StatementTemplate{
-                    Relation: "delectus",
+                    Relation: sdk.String("delectus"),
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "tempora",
+                                Sha256Fingerprint: sdk.String("tempora"),
                             },
-                            PackageName: "suscipit",
+                            PackageName: sdk.String("suscipit"),
                         },
                         Web: &shared.WebAsset{
-                            Site: "molestiae",
+                            Site: sdk.String("molestiae"),
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "minus",
+                                Sha256Fingerprint: sdk.String("minus"),
                             },
-                            PackageName: "placeat",
+                            PackageName: sdk.String("placeat"),
                         },
                         Web: &shared.WebAsset{
-                            Site: "voluptatum",
+                            Site: sdk.String("voluptatum"),
                         },
                     },
                 },
             },
         },
-        AccessToken: "iusto",
-        Alt: "media",
-        Callback: "nisi",
-        Fields: "recusandae",
-        Key: "temporibus",
-        OauthToken: "ab",
-        PrettyPrint: false,
-        QuotaUser: "quis",
-        UploadType: "veritatis",
-        UploadProtocol: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.Assetlinks.DigitalassetlinksAssetlinksBulkCheck(ctx, req)
+        AccessToken: sdk.String("iusto"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nisi"),
+        Fields: sdk.String("recusandae"),
+        Key: sdk.String("temporibus"),
+        OauthToken: sdk.String("ab"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("quis"),
+        UploadType: sdk.String("veritatis"),
+        UploadProtocol: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }

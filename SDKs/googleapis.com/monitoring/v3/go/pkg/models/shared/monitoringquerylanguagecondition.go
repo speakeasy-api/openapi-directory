@@ -17,12 +17,16 @@ const (
 	MonitoringQueryLanguageConditionEvaluationMissingDataEnumEvaluationMissingDataNoOp        MonitoringQueryLanguageConditionEvaluationMissingDataEnum = "EVALUATION_MISSING_DATA_NO_OP"
 )
 
+func (e MonitoringQueryLanguageConditionEvaluationMissingDataEnum) ToPointer() *MonitoringQueryLanguageConditionEvaluationMissingDataEnum {
+	return &e
+}
+
 func (e *MonitoringQueryLanguageConditionEvaluationMissingDataEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EVALUATION_MISSING_DATA_UNSPECIFIED":
 		fallthrough
 	case "EVALUATION_MISSING_DATA_INACTIVE":
@@ -30,10 +34,10 @@ func (e *MonitoringQueryLanguageConditionEvaluationMissingDataEnum) UnmarshalJSO
 	case "EVALUATION_MISSING_DATA_ACTIVE":
 		fallthrough
 	case "EVALUATION_MISSING_DATA_NO_OP":
-		*e = MonitoringQueryLanguageConditionEvaluationMissingDataEnum(s)
+		*e = MonitoringQueryLanguageConditionEvaluationMissingDataEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringQueryLanguageConditionEvaluationMissingDataEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringQueryLanguageConditionEvaluationMissingDataEnum: %v", v)
 	}
 }
 

@@ -103,7 +103,10 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 // Returns a transaction.
 func (s *transactions) GetTransactionsID(ctx context.Context, request operations.GetTransactionsIDRequest, security operations.GetTransactionsIDSecurity) (*operations.GetTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

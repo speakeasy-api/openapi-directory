@@ -15,17 +15,21 @@ const (
 	GETDescribeSpotFleetRequestsActionEnumDescribeSpotFleetRequests GETDescribeSpotFleetRequestsActionEnum = "DescribeSpotFleetRequests"
 )
 
+func (e GETDescribeSpotFleetRequestsActionEnum) ToPointer() *GETDescribeSpotFleetRequestsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeSpotFleetRequestsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSpotFleetRequests":
-		*e = GETDescribeSpotFleetRequestsActionEnum(s)
+		*e = GETDescribeSpotFleetRequestsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeSpotFleetRequestsVersionEnumTwoThousandAndSixteen1115 GETDescribeSpotFleetRequestsVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeSpotFleetRequestsVersionEnum) ToPointer() *GETDescribeSpotFleetRequestsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeSpotFleetRequestsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeSpotFleetRequestsVersionEnum(s)
+		*e = GETDescribeSpotFleetRequestsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestsVersionEnum: %v", v)
 	}
 }
 

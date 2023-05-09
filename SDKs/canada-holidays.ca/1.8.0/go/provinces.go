@@ -36,7 +36,10 @@ func newProvinces(defaultClient, securityClient HTTPClient, serverURL, language,
 // Returns a Canadian province or territory with its associated holidays. Returns a 404 response for invalid abbreviations.
 func (s *provinces) Province(ctx context.Context, request operations.ProvinceRequest) (*operations.ProvinceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/provinces/{provinceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/provinces/{provinceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

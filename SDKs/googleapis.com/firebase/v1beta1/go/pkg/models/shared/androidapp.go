@@ -16,21 +16,25 @@ const (
 	AndroidAppStateEnumDeleted          AndroidAppStateEnum = "DELETED"
 )
 
+func (e AndroidAppStateEnum) ToPointer() *AndroidAppStateEnum {
+	return &e
+}
+
 func (e *AndroidAppStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = AndroidAppStateEnum(s)
+		*e = AndroidAppStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AndroidAppStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AndroidAppStateEnum: %v", v)
 	}
 }
 

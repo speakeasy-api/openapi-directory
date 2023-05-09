@@ -18,12 +18,16 @@ const (
 	NotebookInstanceAcceleratorTypeEnumMlEia2Xlarge NotebookInstanceAcceleratorTypeEnum = "ml.eia2.xlarge"
 )
 
+func (e NotebookInstanceAcceleratorTypeEnum) ToPointer() *NotebookInstanceAcceleratorTypeEnum {
+	return &e
+}
+
 func (e *NotebookInstanceAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ml.eia1.medium":
 		fallthrough
 	case "ml.eia1.large":
@@ -35,9 +39,9 @@ func (e *NotebookInstanceAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.eia2.large":
 		fallthrough
 	case "ml.eia2.xlarge":
-		*e = NotebookInstanceAcceleratorTypeEnum(s)
+		*e = NotebookInstanceAcceleratorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotebookInstanceAcceleratorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NotebookInstanceAcceleratorTypeEnum: %v", v)
 	}
 }

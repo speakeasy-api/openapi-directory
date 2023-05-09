@@ -15,17 +15,21 @@ const (
 	GETSetIPAddressTypeActionEnumSetIPAddressType GETSetIPAddressTypeActionEnum = "SetIpAddressType"
 )
 
+func (e GETSetIPAddressTypeActionEnum) ToPointer() *GETSetIPAddressTypeActionEnum {
+	return &e
+}
+
 func (e *GETSetIPAddressTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIpAddressType":
-		*e = GETSetIPAddressTypeActionEnum(s)
+		*e = GETSetIPAddressTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIPAddressTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIPAddressTypeActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETSetIPAddressTypeIPAddressTypeEnumDualstack GETSetIPAddressTypeIPAddressTypeEnum = "dualstack"
 )
 
+func (e GETSetIPAddressTypeIPAddressTypeEnum) ToPointer() *GETSetIPAddressTypeIPAddressTypeEnum {
+	return &e
+}
+
 func (e *GETSetIPAddressTypeIPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
-		*e = GETSetIPAddressTypeIPAddressTypeEnum(s)
+		*e = GETSetIPAddressTypeIPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIPAddressTypeIPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIPAddressTypeIPAddressTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETSetIPAddressTypeVersionEnumTwoThousandAndFifteen1201 GETSetIPAddressTypeVersionEnum = "2015-12-01"
 )
 
+func (e GETSetIPAddressTypeVersionEnum) ToPointer() *GETSetIPAddressTypeVersionEnum {
+	return &e
+}
+
 func (e *GETSetIPAddressTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETSetIPAddressTypeVersionEnum(s)
+		*e = GETSetIPAddressTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIPAddressTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIPAddressTypeVersionEnum: %v", v)
 	}
 }
 

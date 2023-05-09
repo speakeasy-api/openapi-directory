@@ -15,21 +15,25 @@ const (
 	ProvisioningProfileResponseProvisioningProfileTypeEnumOther      ProvisioningProfileResponseProvisioningProfileTypeEnum = "other"
 )
 
+func (e ProvisioningProfileResponseProvisioningProfileTypeEnum) ToPointer() *ProvisioningProfileResponseProvisioningProfileTypeEnum {
+	return &e
+}
+
 func (e *ProvisioningProfileResponseProvisioningProfileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "adhoc":
 		fallthrough
 	case "enterprise":
 		fallthrough
 	case "other":
-		*e = ProvisioningProfileResponseProvisioningProfileTypeEnum(s)
+		*e = ProvisioningProfileResponseProvisioningProfileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningProfileResponseProvisioningProfileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningProfileResponseProvisioningProfileTypeEnum: %v", v)
 	}
 }
 

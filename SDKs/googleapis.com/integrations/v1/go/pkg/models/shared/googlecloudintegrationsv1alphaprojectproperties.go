@@ -17,12 +17,16 @@ const (
 	GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnumIPEnablementStateApigeeEntitled GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum = "IP_ENABLEMENT_STATE_APIGEE_ENTITLED"
 )
 
+func (e GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum) ToPointer() *GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IP_ENABLEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "IP_ENABLEMENT_STATE_STANDALONE":
@@ -30,10 +34,10 @@ func (e *GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum) U
 	case "IP_ENABLEMENT_STATE_APIGEE":
 		fallthrough
 	case "IP_ENABLEMENT_STATE_APIGEE_ENTITLED":
-		*e = GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaProjectPropertiesIPEnablementStateEnum: %v", v)
 	}
 }
 

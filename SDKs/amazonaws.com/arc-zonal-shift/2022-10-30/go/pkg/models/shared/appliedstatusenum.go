@@ -14,18 +14,22 @@ const (
 	AppliedStatusEnumNotApplied AppliedStatusEnum = "NOT_APPLIED"
 )
 
+func (e AppliedStatusEnum) ToPointer() *AppliedStatusEnum {
+	return &e
+}
+
 func (e *AppliedStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLIED":
 		fallthrough
 	case "NOT_APPLIED":
-		*e = AppliedStatusEnum(s)
+		*e = AppliedStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppliedStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppliedStatusEnum: %v", v)
 	}
 }

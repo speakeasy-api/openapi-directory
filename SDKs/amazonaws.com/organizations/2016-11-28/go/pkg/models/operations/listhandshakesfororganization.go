@@ -16,17 +16,21 @@ const (
 	ListHandshakesForOrganizationXAmzTargetEnumAwsOrganizationsV20161128ListHandshakesForOrganization ListHandshakesForOrganizationXAmzTargetEnum = "AWSOrganizationsV20161128.ListHandshakesForOrganization"
 )
 
+func (e ListHandshakesForOrganizationXAmzTargetEnum) ToPointer() *ListHandshakesForOrganizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListHandshakesForOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.ListHandshakesForOrganization":
-		*e = ListHandshakesForOrganizationXAmzTargetEnum(s)
+		*e = ListHandshakesForOrganizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListHandshakesForOrganizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListHandshakesForOrganizationXAmzTargetEnum: %v", v)
 	}
 }
 

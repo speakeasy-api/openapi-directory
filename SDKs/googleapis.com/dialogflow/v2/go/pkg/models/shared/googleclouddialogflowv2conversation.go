@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2ConversationConversationStageEnumHumanAssistStage             GoogleCloudDialogflowV2ConversationConversationStageEnum = "HUMAN_ASSIST_STAGE"
 )
 
+func (e GoogleCloudDialogflowV2ConversationConversationStageEnum) ToPointer() *GoogleCloudDialogflowV2ConversationConversationStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ConversationConversationStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONVERSATION_STAGE_UNSPECIFIED":
 		fallthrough
 	case "VIRTUAL_AGENT_STAGE":
 		fallthrough
 	case "HUMAN_ASSIST_STAGE":
-		*e = GoogleCloudDialogflowV2ConversationConversationStageEnum(s)
+		*e = GoogleCloudDialogflowV2ConversationConversationStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationConversationStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationConversationStageEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDialogflowV2ConversationLifecycleStateEnumCompleted                 GoogleCloudDialogflowV2ConversationLifecycleStateEnum = "COMPLETED"
 )
 
+func (e GoogleCloudDialogflowV2ConversationLifecycleStateEnum) ToPointer() *GoogleCloudDialogflowV2ConversationLifecycleStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ConversationLifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIFECYCLE_STATE_UNSPECIFIED":
 		fallthrough
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETED":
-		*e = GoogleCloudDialogflowV2ConversationLifecycleStateEnum(s)
+		*e = GoogleCloudDialogflowV2ConversationLifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationLifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationLifecycleStateEnum: %v", v)
 	}
 }
 

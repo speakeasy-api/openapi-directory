@@ -25,12 +25,16 @@ const (
 	AssignedUserRoleUserRoleEnumCreativeAdmin          AssignedUserRoleUserRoleEnum = "CREATIVE_ADMIN"
 )
 
+func (e AssignedUserRoleUserRoleEnum) ToPointer() *AssignedUserRoleUserRoleEnum {
+	return &e
+}
+
 func (e *AssignedUserRoleUserRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_ROLE_UNSPECIFIED":
 		fallthrough
 	case "ADMIN":
@@ -54,10 +58,10 @@ func (e *AssignedUserRoleUserRoleEnum) UnmarshalJSON(data []byte) error {
 	case "CREATIVE":
 		fallthrough
 	case "CREATIVE_ADMIN":
-		*e = AssignedUserRoleUserRoleEnum(s)
+		*e = AssignedUserRoleUserRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignedUserRoleUserRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignedUserRoleUserRoleEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetUserIDXAmzTargetEnumAwsIdentityStoreGetUserID GetUserIDXAmzTargetEnum = "AWSIdentityStore.GetUserId"
 )
 
+func (e GetUserIDXAmzTargetEnum) ToPointer() *GetUserIDXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetUserIDXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSIdentityStore.GetUserId":
-		*e = GetUserIDXAmzTargetEnum(s)
+		*e = GetUserIDXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserIDXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserIDXAmzTargetEnum: %v", v)
 	}
 }
 

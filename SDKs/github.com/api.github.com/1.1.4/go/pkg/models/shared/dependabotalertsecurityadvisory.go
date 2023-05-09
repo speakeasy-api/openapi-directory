@@ -32,19 +32,23 @@ const (
 	DependabotAlertSecurityAdvisoryIdentifiersTypeEnumGhsa DependabotAlertSecurityAdvisoryIdentifiersTypeEnum = "GHSA"
 )
 
+func (e DependabotAlertSecurityAdvisoryIdentifiersTypeEnum) ToPointer() *DependabotAlertSecurityAdvisoryIdentifiersTypeEnum {
+	return &e
+}
+
 func (e *DependabotAlertSecurityAdvisoryIdentifiersTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CVE":
 		fallthrough
 	case "GHSA":
-		*e = DependabotAlertSecurityAdvisoryIdentifiersTypeEnum(s)
+		*e = DependabotAlertSecurityAdvisoryIdentifiersTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertSecurityAdvisoryIdentifiersTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertSecurityAdvisoryIdentifiersTypeEnum: %v", v)
 	}
 }
 
@@ -72,12 +76,16 @@ const (
 	DependabotAlertSecurityAdvisorySeverityEnumCritical DependabotAlertSecurityAdvisorySeverityEnum = "critical"
 )
 
+func (e DependabotAlertSecurityAdvisorySeverityEnum) ToPointer() *DependabotAlertSecurityAdvisorySeverityEnum {
+	return &e
+}
+
 func (e *DependabotAlertSecurityAdvisorySeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "low":
 		fallthrough
 	case "medium":
@@ -85,10 +93,10 @@ func (e *DependabotAlertSecurityAdvisorySeverityEnum) UnmarshalJSON(data []byte)
 	case "high":
 		fallthrough
 	case "critical":
-		*e = DependabotAlertSecurityAdvisorySeverityEnum(s)
+		*e = DependabotAlertSecurityAdvisorySeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DependabotAlertSecurityAdvisorySeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for DependabotAlertSecurityAdvisorySeverityEnum: %v", v)
 	}
 }
 

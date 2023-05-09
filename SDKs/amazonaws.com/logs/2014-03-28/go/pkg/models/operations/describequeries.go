@@ -16,17 +16,21 @@ const (
 	DescribeQueriesXAmzTargetEnumLogs20140328DescribeQueries DescribeQueriesXAmzTargetEnum = "Logs_20140328.DescribeQueries"
 )
 
+func (e DescribeQueriesXAmzTargetEnum) ToPointer() *DescribeQueriesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeQueriesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DescribeQueries":
-		*e = DescribeQueriesXAmzTargetEnum(s)
+		*e = DescribeQueriesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeQueriesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeQueriesXAmzTargetEnum: %v", v)
 	}
 }
 

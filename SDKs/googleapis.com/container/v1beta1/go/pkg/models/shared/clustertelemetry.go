@@ -17,12 +17,16 @@ const (
 	ClusterTelemetryTypeEnumSystemOnly  ClusterTelemetryTypeEnum = "SYSTEM_ONLY"
 )
 
+func (e ClusterTelemetryTypeEnum) ToPointer() *ClusterTelemetryTypeEnum {
+	return &e
+}
+
 func (e *ClusterTelemetryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
@@ -30,10 +34,10 @@ func (e *ClusterTelemetryTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLED":
 		fallthrough
 	case "SYSTEM_ONLY":
-		*e = ClusterTelemetryTypeEnum(s)
+		*e = ClusterTelemetryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterTelemetryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterTelemetryTypeEnum: %v", v)
 	}
 }
 

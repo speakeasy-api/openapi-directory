@@ -17,12 +17,16 @@ const (
 	PreferencesPostingDefaultVisibilityEnumDirect   PreferencesPostingDefaultVisibilityEnum = "direct"
 )
 
+func (e PreferencesPostingDefaultVisibilityEnum) ToPointer() *PreferencesPostingDefaultVisibilityEnum {
+	return &e
+}
+
 func (e *PreferencesPostingDefaultVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
@@ -30,10 +34,10 @@ func (e *PreferencesPostingDefaultVisibilityEnum) UnmarshalJSON(data []byte) err
 	case "private":
 		fallthrough
 	case "direct":
-		*e = PreferencesPostingDefaultVisibilityEnum(s)
+		*e = PreferencesPostingDefaultVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreferencesPostingDefaultVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PreferencesPostingDefaultVisibilityEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	PreferencesReadingExpandMediaEnumHideAll PreferencesReadingExpandMediaEnum = "hide_all"
 )
 
+func (e PreferencesReadingExpandMediaEnum) ToPointer() *PreferencesReadingExpandMediaEnum {
+	return &e
+}
+
 func (e *PreferencesReadingExpandMediaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "show_all":
 		fallthrough
 	case "hide_all":
-		*e = PreferencesReadingExpandMediaEnum(s)
+		*e = PreferencesReadingExpandMediaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PreferencesReadingExpandMediaEnum: %s", s)
+		return fmt.Errorf("invalid value for PreferencesReadingExpandMediaEnum: %v", v)
 	}
 }
 

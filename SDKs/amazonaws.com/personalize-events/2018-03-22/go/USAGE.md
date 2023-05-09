@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,74 +18,72 @@ func main() {
         }),
     )
 
-    req := operations.PutEventsRequest{
+    ctx := context.Background()
+    res, err := s.PutEvents(ctx, operations.PutEventsRequest{
         RequestBody: operations.PutEventsRequestBody{
             EventList: []shared.Event{
                 shared.Event{
-                    EventID: "provident",
+                    EventID: sdk.String("provident"),
                     EventType: "distinctio",
-                    EventValue: 8442.66,
+                    EventValue: sdk.Float32(8442.66),
                     Impression: []string{
                         "nulla",
                         "corrupti",
                         "illum",
                     },
-                    ItemID: "vel",
+                    ItemID: sdk.String("vel"),
                     MetricAttribution: &shared.MetricAttribution{
                         EventAttributionSource: "error",
                     },
-                    Properties: "deserunt",
-                    RecommendationID: "suscipit",
-                    SentAt: "2022-09-14T09:35:47.986Z",
+                    Properties: sdk.String("deserunt"),
+                    RecommendationID: sdk.String("suscipit"),
+                    SentAt: types.MustTimeFromString("2022-09-14T09:35:47.986Z"),
                 },
                 shared.Event{
-                    EventID: "debitis",
+                    EventID: sdk.String("debitis"),
                     EventType: "ipsa",
-                    EventValue: 9636.63,
+                    EventValue: sdk.Float32(9636.63),
                     Impression: []string{
                         "suscipit",
                         "molestiae",
                     },
-                    ItemID: "minus",
+                    ItemID: sdk.String("minus"),
                     MetricAttribution: &shared.MetricAttribution{
                         EventAttributionSource: "placeat",
                     },
-                    Properties: "voluptatum",
-                    RecommendationID: "iusto",
-                    SentAt: "2022-03-20T06:24:36.919Z",
+                    Properties: sdk.String("voluptatum"),
+                    RecommendationID: sdk.String("iusto"),
+                    SentAt: types.MustTimeFromString("2022-03-20T06:24:36.919Z"),
                 },
                 shared.Event{
-                    EventID: "recusandae",
+                    EventID: sdk.String("recusandae"),
                     EventType: "temporibus",
-                    EventValue: 710.36,
+                    EventValue: sdk.Float32(710.36),
                     Impression: []string{
                         "veritatis",
                         "deserunt",
                     },
-                    ItemID: "perferendis",
+                    ItemID: sdk.String("perferendis"),
                     MetricAttribution: &shared.MetricAttribution{
                         EventAttributionSource: "ipsam",
                     },
-                    Properties: "repellendus",
-                    RecommendationID: "sapiente",
-                    SentAt: "2022-07-31T07:34:52.790Z",
+                    Properties: sdk.String("repellendus"),
+                    RecommendationID: sdk.String("sapiente"),
+                    SentAt: types.MustTimeFromString("2022-07-31T07:34:52.790Z"),
                 },
             },
             SessionID: "at",
             TrackingID: "at",
-            UserID: "maiores",
+            UserID: sdk.String("maiores"),
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "quod",
-        XAmzCredential: "quod",
-        XAmzDate: "esse",
-        XAmzSecurityToken: "totam",
-        XAmzSignature: "porro",
-        XAmzSignedHeaders: "dolorum",
-    }
-
-    ctx := context.Background()
-    res, err := s.PutEvents(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("quod"),
+        XAmzCredential: sdk.String("quod"),
+        XAmzDate: sdk.String("esse"),
+        XAmzSecurityToken: sdk.String("totam"),
+        XAmzSignature: sdk.String("porro"),
+        XAmzSignedHeaders: sdk.String("dolorum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

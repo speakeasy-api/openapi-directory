@@ -32,12 +32,16 @@ const (
 	CodespaceWithFullRepositoryLocationEnumWestUs2       CodespaceWithFullRepositoryLocationEnum = "WestUs2"
 )
 
+func (e CodespaceWithFullRepositoryLocationEnum) ToPointer() *CodespaceWithFullRepositoryLocationEnum {
+	return &e
+}
+
 func (e *CodespaceWithFullRepositoryLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EastUs":
 		fallthrough
 	case "SouthEastAsia":
@@ -45,10 +49,10 @@ func (e *CodespaceWithFullRepositoryLocationEnum) UnmarshalJSON(data []byte) err
 	case "WestEurope":
 		fallthrough
 	case "WestUs2":
-		*e = CodespaceWithFullRepositoryLocationEnum(s)
+		*e = CodespaceWithFullRepositoryLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespaceWithFullRepositoryLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespaceWithFullRepositoryLocationEnum: %v", v)
 	}
 }
 
@@ -80,12 +84,16 @@ const (
 	CodespaceWithFullRepositoryStateEnumRebuilding   CodespaceWithFullRepositoryStateEnum = "Rebuilding"
 )
 
+func (e CodespaceWithFullRepositoryStateEnum) ToPointer() *CodespaceWithFullRepositoryStateEnum {
+	return &e
+}
+
 func (e *CodespaceWithFullRepositoryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unknown":
 		fallthrough
 	case "Created":
@@ -119,10 +127,10 @@ func (e *CodespaceWithFullRepositoryStateEnum) UnmarshalJSON(data []byte) error 
 	case "Updating":
 		fallthrough
 	case "Rebuilding":
-		*e = CodespaceWithFullRepositoryStateEnum(s)
+		*e = CodespaceWithFullRepositoryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CodespaceWithFullRepositoryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CodespaceWithFullRepositoryStateEnum: %v", v)
 	}
 }
 

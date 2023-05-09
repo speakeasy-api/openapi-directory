@@ -17,19 +17,23 @@ const (
 	LeagueHierarchyFormatEnumJSON LeagueHierarchyFormatEnum = "JSON"
 )
 
+func (e LeagueHierarchyFormatEnum) ToPointer() *LeagueHierarchyFormatEnum {
+	return &e
+}
+
 func (e *LeagueHierarchyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = LeagueHierarchyFormatEnum(s)
+		*e = LeagueHierarchyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeagueHierarchyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LeagueHierarchyFormatEnum: %v", v)
 	}
 }
 

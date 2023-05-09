@@ -21,12 +21,16 @@ const (
 	WeekDayMetricsDayEnumSunday               WeekDayMetricsDayEnum = "SUNDAY"
 )
 
+func (e WeekDayMetricsDayEnum) ToPointer() *WeekDayMetricsDayEnum {
+	return &e
+}
+
 func (e *WeekDayMetricsDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *WeekDayMetricsDayEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = WeekDayMetricsDayEnum(s)
+		*e = WeekDayMetricsDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WeekDayMetricsDayEnum: %s", s)
+		return fmt.Errorf("invalid value for WeekDayMetricsDayEnum: %v", v)
 	}
 }
 

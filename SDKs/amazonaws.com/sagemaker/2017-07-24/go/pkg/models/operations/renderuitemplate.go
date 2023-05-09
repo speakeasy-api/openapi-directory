@@ -16,17 +16,21 @@ const (
 	RenderUITemplateXAmzTargetEnumSageMakerRenderUITemplate RenderUITemplateXAmzTargetEnum = "SageMaker.RenderUiTemplate"
 )
 
+func (e RenderUITemplateXAmzTargetEnum) ToPointer() *RenderUITemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *RenderUITemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.RenderUiTemplate":
-		*e = RenderUITemplateXAmzTargetEnum(s)
+		*e = RenderUITemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenderUITemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RenderUITemplateXAmzTargetEnum: %v", v)
 	}
 }
 

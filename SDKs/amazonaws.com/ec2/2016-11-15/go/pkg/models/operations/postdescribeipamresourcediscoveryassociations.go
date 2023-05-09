@@ -15,17 +15,21 @@ const (
 	POSTDescribeIpamResourceDiscoveryAssociationsActionEnumDescribeIpamResourceDiscoveryAssociations POSTDescribeIpamResourceDiscoveryAssociationsActionEnum = "DescribeIpamResourceDiscoveryAssociations"
 )
 
+func (e POSTDescribeIpamResourceDiscoveryAssociationsActionEnum) ToPointer() *POSTDescribeIpamResourceDiscoveryAssociationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeIpamResourceDiscoveryAssociationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeIpamResourceDiscoveryAssociations":
-		*e = POSTDescribeIpamResourceDiscoveryAssociationsActionEnum(s)
+		*e = POSTDescribeIpamResourceDiscoveryAssociationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeIpamResourceDiscoveryAssociationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeIpamResourceDiscoveryAssociationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeIpamResourceDiscoveryAssociationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum) ToPointer() *POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum(s)
+		*e = POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeIpamResourceDiscoveryAssociationsVersionEnum: %v", v)
 	}
 }
 

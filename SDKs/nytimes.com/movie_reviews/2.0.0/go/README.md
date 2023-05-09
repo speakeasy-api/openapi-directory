@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/movie_reviews
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetCriticsResourceTypeJSONRequest{
-        ResourceType: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GetCriticsResourceTypeJSON(ctx, req)
+    res, err := s.GetCriticsResourceTypeJSON(ctx, operations.GetCriticsResourceTypeJSONRequest{
+        ResourceType: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,11 +45,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetCriticsResourceTypeJSON`
-* `GetReviewsSearchJSON`
-* `GetReviewsResourceTypeJSON`
+* [GetCriticsResourceTypeJSON](docs/sdk/README.md#getcriticsresourcetypejson)
+* [GetReviewsSearchJSON](docs/sdk/README.md#getreviewssearchjson)
+* [GetReviewsResourceTypeJSON](docs/sdk/README.md#getreviewsresourcetypejson)
 <!-- End SDK Available Operations -->
 
 ### Maturity

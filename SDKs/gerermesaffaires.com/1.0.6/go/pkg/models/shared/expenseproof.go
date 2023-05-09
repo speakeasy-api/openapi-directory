@@ -21,12 +21,16 @@ const (
 	ExpenseProofAccountEnumRes ExpenseProofAccountEnum = "RES"
 )
 
+func (e ExpenseProofAccountEnum) ToPointer() *ExpenseProofAccountEnum {
+	return &e
+}
+
 func (e *ExpenseProofAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAB":
 		fallthrough
 	case "IKM":
@@ -44,10 +48,10 @@ func (e *ExpenseProofAccountEnum) UnmarshalJSON(data []byte) error {
 	case "DIV":
 		fallthrough
 	case "RES":
-		*e = ExpenseProofAccountEnum(s)
+		*e = ExpenseProofAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExpenseProofAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for ExpenseProofAccountEnum: %v", v)
 	}
 }
 
@@ -59,21 +63,25 @@ const (
 	ExpenseProofStatusEnumW ExpenseProofStatusEnum = "W"
 )
 
+func (e ExpenseProofStatusEnum) ToPointer() *ExpenseProofStatusEnum {
+	return &e
+}
+
 func (e *ExpenseProofStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "R":
 		fallthrough
 	case "V":
 		fallthrough
 	case "W":
-		*e = ExpenseProofStatusEnum(s)
+		*e = ExpenseProofStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExpenseProofStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExpenseProofStatusEnum: %v", v)
 	}
 }
 

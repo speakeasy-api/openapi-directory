@@ -16,17 +16,21 @@ const (
 	CreateDocumentXAmzTargetEnumAmazonSsmCreateDocument CreateDocumentXAmzTargetEnum = "AmazonSSM.CreateDocument"
 )
 
+func (e CreateDocumentXAmzTargetEnum) ToPointer() *CreateDocumentXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDocumentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.CreateDocument":
-		*e = CreateDocumentXAmzTargetEnum(s)
+		*e = CreateDocumentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDocumentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDocumentXAmzTargetEnum: %v", v)
 	}
 }
 

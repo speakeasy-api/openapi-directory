@@ -15,17 +15,21 @@ const (
 	POSTGetInstanceProfileActionEnumGetInstanceProfile POSTGetInstanceProfileActionEnum = "GetInstanceProfile"
 )
 
+func (e POSTGetInstanceProfileActionEnum) ToPointer() *POSTGetInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetInstanceProfile":
-		*e = POSTGetInstanceProfileActionEnum(s)
+		*e = POSTGetInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetInstanceProfileVersionEnumTwoThousandAndTen0508 POSTGetInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetInstanceProfileVersionEnum) ToPointer() *POSTGetInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *POSTGetInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetInstanceProfileVersionEnum(s)
+		*e = POSTGetInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetInstanceProfileVersionEnum: %v", v)
 	}
 }
 

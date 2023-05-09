@@ -15,17 +15,21 @@ const (
 	GETDescribeInstanceAttributeActionEnumDescribeInstanceAttribute GETDescribeInstanceAttributeActionEnum = "DescribeInstanceAttribute"
 )
 
+func (e GETDescribeInstanceAttributeActionEnum) ToPointer() *GETDescribeInstanceAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeInstanceAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeInstanceAttribute":
-		*e = GETDescribeInstanceAttributeActionEnum(s)
+		*e = GETDescribeInstanceAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeActionEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GETDescribeInstanceAttributeAttributeEnumDisableAPIStop                    GETDescribeInstanceAttributeAttributeEnum = "disableApiStop"
 )
 
+func (e GETDescribeInstanceAttributeAttributeEnum) ToPointer() *GETDescribeInstanceAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeInstanceAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instanceType":
 		fallthrough
 	case "kernel":
@@ -88,10 +96,10 @@ func (e *GETDescribeInstanceAttributeAttributeEnum) UnmarshalJSON(data []byte) e
 	case "enclaveOptions":
 		fallthrough
 	case "disableApiStop":
-		*e = GETDescribeInstanceAttributeAttributeEnum(s)
+		*e = GETDescribeInstanceAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -102,17 +110,21 @@ const (
 	GETDescribeInstanceAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeInstanceAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeInstanceAttributeVersionEnum) ToPointer() *GETDescribeInstanceAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeInstanceAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeInstanceAttributeVersionEnum(s)
+		*e = GETDescribeInstanceAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeInstanceAttributeVersionEnum: %v", v)
 	}
 }
 

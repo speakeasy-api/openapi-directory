@@ -16,12 +16,16 @@ const (
 	MediaFileFormatsEnumExternal MediaFileFormatsEnum = "external"
 )
 
+func (e MediaFileFormatsEnum) ToPointer() *MediaFileFormatsEnum {
+	return &e
+}
+
 func (e *MediaFileFormatsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mp4":
 		fallthrough
 	case "mpd":
@@ -29,9 +33,9 @@ func (e *MediaFileFormatsEnum) UnmarshalJSON(data []byte) error {
 	case "hls":
 		fallthrough
 	case "external":
-		*e = MediaFileFormatsEnum(s)
+		*e = MediaFileFormatsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MediaFileFormatsEnum: %s", s)
+		return fmt.Errorf("invalid value for MediaFileFormatsEnum: %v", v)
 	}
 }

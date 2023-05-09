@@ -15,17 +15,21 @@ const (
 	GETDeleteIpamResourceDiscoveryActionEnumDeleteIpamResourceDiscovery GETDeleteIpamResourceDiscoveryActionEnum = "DeleteIpamResourceDiscovery"
 )
 
+func (e GETDeleteIpamResourceDiscoveryActionEnum) ToPointer() *GETDeleteIpamResourceDiscoveryActionEnum {
+	return &e
+}
+
 func (e *GETDeleteIpamResourceDiscoveryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteIpamResourceDiscovery":
-		*e = GETDeleteIpamResourceDiscoveryActionEnum(s)
+		*e = GETDeleteIpamResourceDiscoveryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteIpamResourceDiscoveryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteIpamResourceDiscoveryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteIpamResourceDiscoveryVersionEnumTwoThousandAndSixteen1115 GETDeleteIpamResourceDiscoveryVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteIpamResourceDiscoveryVersionEnum) ToPointer() *GETDeleteIpamResourceDiscoveryVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteIpamResourceDiscoveryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteIpamResourceDiscoveryVersionEnum(s)
+		*e = GETDeleteIpamResourceDiscoveryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteIpamResourceDiscoveryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteIpamResourceDiscoveryVersionEnum: %v", v)
 	}
 }
 

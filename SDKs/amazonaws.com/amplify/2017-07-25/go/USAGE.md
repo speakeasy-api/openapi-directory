@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,89 +17,89 @@ func main() {
         }),
     )
 
-    req := operations.CreateAppRequest{
+    ctx := context.Background()
+    res, err := s.CreateApp(ctx, operations.CreateAppRequest{
         RequestBody: operations.CreateAppRequestBody{
-            AccessToken: "corrupti",
+            AccessToken: sdk.String("corrupti"),
             AutoBranchCreationConfig: &operations.CreateAppRequestBodyAutoBranchCreationConfig{
-                BasicAuthCredentials: "provident",
-                BuildSpec: "distinctio",
-                EnableAutoBuild: false,
-                EnableBasicAuth: false,
-                EnablePerformanceMode: false,
-                EnablePullRequestPreview: false,
+                BasicAuthCredentials: sdk.String("provident"),
+                BuildSpec: sdk.String("distinctio"),
+                EnableAutoBuild: sdk.Bool(false),
+                EnableBasicAuth: sdk.Bool(false),
+                EnablePerformanceMode: sdk.Bool(false),
+                EnablePullRequestPreview: sdk.Bool(false),
                 EnvironmentVariables: map[string]string{
                     "unde": "nulla",
                     "corrupti": "illum",
                     "vel": "error",
                     "deserunt": "suscipit",
                 },
-                Framework: "iure",
-                PullRequestEnvironmentName: "magnam",
-                Stage: "PULL_REQUEST",
+                Framework: sdk.String("iure"),
+                PullRequestEnvironmentName: sdk.String("magnam"),
+                Stage: shared.StageEnumPullRequest.ToPointer(),
             },
             AutoBranchCreationPatterns: []string{
                 "delectus",
             },
-            BasicAuthCredentials: "tempora",
-            BuildSpec: "suscipit",
-            CustomHeaders: "molestiae",
+            BasicAuthCredentials: sdk.String("tempora"),
+            BuildSpec: sdk.String("suscipit"),
+            CustomHeaders: sdk.String("molestiae"),
             CustomRules: []shared.CustomRule{
                 shared.CustomRule{
-                    Condition: "placeat",
+                    Condition: sdk.String("placeat"),
                     Source: "voluptatum",
-                    Status: "iusto",
+                    Status: sdk.String("iusto"),
                     Target: "excepturi",
                 },
                 shared.CustomRule{
-                    Condition: "nisi",
+                    Condition: sdk.String("nisi"),
                     Source: "recusandae",
-                    Status: "temporibus",
+                    Status: sdk.String("temporibus"),
                     Target: "ab",
                 },
                 shared.CustomRule{
-                    Condition: "quis",
+                    Condition: sdk.String("quis"),
                     Source: "veritatis",
-                    Status: "deserunt",
+                    Status: sdk.String("deserunt"),
                     Target: "perferendis",
                 },
                 shared.CustomRule{
-                    Condition: "ipsam",
+                    Condition: sdk.String("ipsam"),
                     Source: "repellendus",
-                    Status: "sapiente",
+                    Status: sdk.String("sapiente"),
                     Target: "quo",
                 },
             },
-            Description: "odit",
-            EnableAutoBranchCreation: false,
-            EnableBasicAuth: false,
-            EnableBranchAutoBuild: false,
-            EnableBranchAutoDeletion: false,
+            Description: sdk.String("odit"),
+            EnableAutoBranchCreation: sdk.Bool(false),
+            EnableBasicAuth: sdk.Bool(false),
+            EnableBranchAutoBuild: sdk.Bool(false),
+            EnableBranchAutoDeletion: sdk.Bool(false),
             EnvironmentVariables: map[string]string{
                 "at": "maiores",
                 "molestiae": "quod",
                 "quod": "esse",
                 "totam": "porro",
             },
-            IamServiceRoleArn: "dolorum",
-            Name: "dicta",
-            OauthToken: "nam",
-            Platform: "WEB_DYNAMIC",
-            Repository: "occaecati",
+            IamServiceRoleArn: sdk.String("dolorum"),
+            Name: "Antoinette Nikolaus",
+            OauthToken: sdk.String("deleniti"),
+            Platform: operations.CreateAppRequestBodyPlatformEnumWebCompute.ToPointer(),
+            Repository: sdk.String("optio"),
             Tags: map[string]string{
-                "deleniti": "hic",
+                "beatae": "commodi",
+                "molestiae": "modi",
+                "qui": "impedit",
             },
         },
-        XAmzAlgorithm: "optio",
-        XAmzContentSha256: "totam",
-        XAmzCredential: "beatae",
-        XAmzDate: "commodi",
-        XAmzSecurityToken: "molestiae",
-        XAmzSignature: "modi",
-        XAmzSignedHeaders: "qui",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApp(ctx, req)
+        XAmzAlgorithm: sdk.String("cum"),
+        XAmzContentSha256: sdk.String("esse"),
+        XAmzCredential: sdk.String("ipsum"),
+        XAmzDate: sdk.String("excepturi"),
+        XAmzSecurityToken: sdk.String("aspernatur"),
+        XAmzSignature: sdk.String("perferendis"),
+        XAmzSignedHeaders: sdk.String("ad"),
+    })
     if err != nil {
         log.Fatal(err)
     }

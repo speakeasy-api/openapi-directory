@@ -34,7 +34,10 @@ func newLoadBalancerActions(defaultClient, securityClient HTTPClient, serverURL,
 // Returns all Action objects for a Load Balancer. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
 func (s *loadBalancerActions) GetLoadBalancersIDActions(ctx context.Context, request operations.GetLoadBalancersIDActionsRequest) (*operations.GetLoadBalancersIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *loadBalancerActions) GetLoadBalancersIDActions(ctx context.Context, req
 // Returns a specific Action for a Load Balancer.
 func (s *loadBalancerActions) GetLoadBalancersIDActionsActionID(ctx context.Context, request operations.GetLoadBalancersIDActionsActionIDRequest) (*operations.GetLoadBalancersIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/{action_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/{action_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -134,7 +140,10 @@ func (s *loadBalancerActions) GetLoadBalancersIDActionsActionID(ctx context.Cont
 // | `source_port_already_used` | The source port you are trying to add is already in use |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsAddService(ctx context.Context, request operations.PostLoadBalancersIDActionsAddServiceRequest) (*operations.PostLoadBalancersIDActionsAddServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/add_service", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/add_service", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -197,7 +206,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsAddService(ctx context.C
 // | `target_already_defined`                | The Load Balancer target you are trying to define is already defined                                  |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsAddTarget(ctx context.Context, request operations.PostLoadBalancersIDActionsAddTargetRequest) (*operations.PostLoadBalancersIDActionsAddTargetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/add_target", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/add_target", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -257,7 +269,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsAddTarget(ctx context.Co
 // | `no_subnet_available`            | No Subnet or IP is available for the Load Balancer within the network |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsAttachToNetwork(ctx context.Context, request operations.PostLoadBalancersIDActionsAttachToNetworkRequest) (*operations.PostLoadBalancersIDActionsAttachToNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/attach_to_network", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/attach_to_network", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsAttachToNetwork(ctx cont
 // Change the algorithm that determines to which target new requests are sent.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeAlgorithm(ctx context.Context, request operations.PostLoadBalancersIDActionsChangeAlgorithmRequest) (*operations.PostLoadBalancersIDActionsChangeAlgorithmResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_algorithm", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_algorithm", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -363,7 +381,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeAlgorithm(ctx cont
 // Floating IPs assigned to the Server are not affected by this.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeDNSPtr(ctx context.Context, request operations.PostLoadBalancersIDActionsChangeDNSPtrRequest) (*operations.PostLoadBalancersIDActionsChangeDNSPtrResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_dns_ptr", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_dns_ptr", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -415,7 +436,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeDNSPtr(ctx context
 // Changes the protection configuration of a Load Balancer.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeProtection(ctx context.Context, request operations.PostLoadBalancersIDActionsChangeProtectionRequest) (*operations.PostLoadBalancersIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -473,7 +497,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeProtection(ctx con
 // | `invalid_load_balancer_type` | The Load Balancer type does not fit for the given Load Balancer |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeType(ctx context.Context, request operations.PostLoadBalancersIDActionsChangeTypeRequest) (*operations.PostLoadBalancersIDActionsChangeTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_type", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/change_type", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -525,7 +552,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsChangeType(ctx context.C
 // Delete a service of a Load Balancer.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsDeleteService(ctx context.Context, request operations.PostLoadBalancersIDActionsDeleteServiceRequest) (*operations.PostLoadBalancersIDActionsDeleteServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/delete_service", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/delete_service", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -577,7 +607,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsDeleteService(ctx contex
 // Detaches a Load Balancer from a network.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsDetachFromNetwork(ctx context.Context, request operations.PostLoadBalancersIDActionsDetachFromNetworkRequest) (*operations.PostLoadBalancersIDActionsDetachFromNetworkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/detach_from_network", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/detach_from_network", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -636,7 +669,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsDetachFromNetwork(ctx co
 // | `targets_without_use_private_ip`          | The Load Balancer has targets that use the public IP instead of the private IP |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsDisablePublicInterface(ctx context.Context, request operations.PostLoadBalancersIDActionsDisablePublicInterfaceRequest) (*operations.PostLoadBalancersIDActionsDisablePublicInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/disable_public_interface", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/disable_public_interface", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -681,7 +717,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsDisablePublicInterface(c
 // Enable the public interface of a Load Balancer. The Load Balancer will be accessible from the internet via its public IPs.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsEnablePublicInterface(ctx context.Context, request operations.PostLoadBalancersIDActionsEnablePublicInterfaceRequest) (*operations.PostLoadBalancersIDActionsEnablePublicInterfaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/enable_public_interface", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/enable_public_interface", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -726,7 +765,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsEnablePublicInterface(ct
 // Removes a target from a Load Balancer.
 func (s *loadBalancerActions) PostLoadBalancersIDActionsRemoveTarget(ctx context.Context, request operations.PostLoadBalancersIDActionsRemoveTargetRequest) (*operations.PostLoadBalancersIDActionsRemoveTargetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/remove_target", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/remove_target", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -784,7 +826,10 @@ func (s *loadBalancerActions) PostLoadBalancersIDActionsRemoveTarget(ctx context
 // | `source_port_already_used` | The source port you are trying to add is already in use |
 func (s *loadBalancerActions) PostLoadBalancersIDActionsUpdateService(ctx context.Context, request operations.PostLoadBalancersIDActionsUpdateServiceRequest) (*operations.PostLoadBalancersIDActionsUpdateServiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/update_service", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/load_balancers/{id}/actions/update_service", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ato.gov.au/0.0.6/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetClassificationsAddressTypesRequest{
-        APIKey: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AddressTypes.GetClassificationsAddressTypes(ctx, req)
+    res, err := s.AddressTypes.GetClassificationsAddressTypes(ctx, operations.GetClassificationsAddressTypesRequest{
+        APIKey: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,157 +42,157 @@ func main() {
 ## Available Resources and Operations
 
 
-### AddressTypes
+### [AddressTypes](docs/addresstypes/README.md)
 
-* `GetClassificationsAddressTypes` - Retrieve a list of address types
+* [GetClassificationsAddressTypes](docs/addresstypes/README.md#getclassificationsaddresstypes) - Retrieve a list of address types
 
-### BusinessNameLifecycleStates
+### [BusinessNameLifecycleStates](docs/businessnamelifecyclestates/README.md)
 
-* `GetClassificationsBusinessNameLifecycleStates` - Retrieve a list of business name lifecycle states
+* [GetClassificationsBusinessNameLifecycleStates](docs/businessnamelifecyclestates/README.md#getclassificationsbusinessnamelifecyclestates) - Retrieve a list of business name lifecycle states
 
-### BusinessNames
+### [BusinessNames](docs/businessnames/README.md)
 
-* `GetBusinessNames` - Retrieve a list of business names
+* [GetBusinessNames](docs/businessnames/README.md#getbusinessnames) - Retrieve a list of business names
 
-### ElectronicAddressTypes
+### [ElectronicAddressTypes](docs/electronicaddresstypes/README.md)
 
-* `GetClassificationsElectronicAddressTypes` - Retrieve a list of electronic address types
+* [GetClassificationsElectronicAddressTypes](docs/electronicaddresstypes/README.md#getclassificationselectronicaddresstypes) - Retrieve a list of electronic address types
 
-### Genders
+### [Genders](docs/genders/README.md)
 
-* `GetClassificationsGenders` - Retrieve a list of genders
+* [GetClassificationsGenders](docs/genders/README.md#getclassificationsgenders) - Retrieve a list of genders
 
-### Individuals
+### [Individuals](docs/individuals/README.md)
 
-* `DeleteIndividualsPartyID` - Delete an individual
-* `GetIndividuals` - Retrieve a list of individuals
-* `GetIndividualsPartyID` - Retrieve an individual
-* `PostIndividuals` - Create an individual
-* `PutIndividualsPartyID` - Update an individual
+* [DeleteIndividualsPartyID](docs/individuals/README.md#deleteindividualspartyid) - Delete an individual
+* [GetIndividuals](docs/individuals/README.md#getindividuals) - Retrieve a list of individuals
+* [GetIndividualsPartyID](docs/individuals/README.md#getindividualspartyid) - Retrieve an individual
+* [PostIndividuals](docs/individuals/README.md#postindividuals) - Create an individual
+* [PutIndividualsPartyID](docs/individuals/README.md#putindividualspartyid) - Update an individual
 
-### IndividualsAddresses
+### [IndividualsAddresses](docs/individualsaddresses/README.md)
 
-* `DeleteIndividualsPartyIDAddressesAddressID` - Delete an address
-* `GetIndividualsPartyIDAddresses` - Retrieve a list of addresses
-* `GetIndividualsPartyIDAddressesAddressID` - Retrieve an address
-* `PostIndividualsPartyIDAddresses` - Create an address
-* `PutIndividualsPartyIDAddressesAddressID` - Update an address
+* [DeleteIndividualsPartyIDAddressesAddressID](docs/individualsaddresses/README.md#deleteindividualspartyidaddressesaddressid) - Delete an address
+* [GetIndividualsPartyIDAddresses](docs/individualsaddresses/README.md#getindividualspartyidaddresses) - Retrieve a list of addresses
+* [GetIndividualsPartyIDAddressesAddressID](docs/individualsaddresses/README.md#getindividualspartyidaddressesaddressid) - Retrieve an address
+* [PostIndividualsPartyIDAddresses](docs/individualsaddresses/README.md#postindividualspartyidaddresses) - Create an address
+* [PutIndividualsPartyIDAddressesAddressID](docs/individualsaddresses/README.md#putindividualspartyidaddressesaddressid) - Update an address
 
-### IndividualsBusinessNames
+### [IndividualsBusinessNames](docs/individualsbusinessnames/README.md)
 
-* `DeleteIndividualsPartyIDBusinessNamesProductID` - Delete a business name
-* `GetIndividualsPartyIDBusinessNames` - Retrieve a list of business names
-* `GetIndividualsPartyIDBusinessNamesProductID` - Retrieve a business name
-* `PostIndividualsPartyIDBusinessNames` - Create a business name
-* `PutIndividualsPartyIDBusinessNamesProductID` - Update a business name
+* [DeleteIndividualsPartyIDBusinessNamesProductID](docs/individualsbusinessnames/README.md#deleteindividualspartyidbusinessnamesproductid) - Delete a business name
+* [GetIndividualsPartyIDBusinessNames](docs/individualsbusinessnames/README.md#getindividualspartyidbusinessnames) - Retrieve a list of business names
+* [GetIndividualsPartyIDBusinessNamesProductID](docs/individualsbusinessnames/README.md#getindividualspartyidbusinessnamesproductid) - Retrieve a business name
+* [PostIndividualsPartyIDBusinessNames](docs/individualsbusinessnames/README.md#postindividualspartyidbusinessnames) - Create a business name
+* [PutIndividualsPartyIDBusinessNamesProductID](docs/individualsbusinessnames/README.md#putindividualspartyidbusinessnamesproductid) - Update a business name
 
-### IndividualsElectronicAddresses
+### [IndividualsElectronicAddresses](docs/individualselectronicaddresses/README.md)
 
-* `DeleteIndividualsPartyIDElectronicAddressesAddressID` - Delete an electronic address
-* `GetIndividualsPartyIDElectronicAddresses` - Retrieve a list of electronic addresses
-* `GetIndividualsPartyIDElectronicAddressesAddressID` - Retrieve an electronic address
-* `PostIndividualsPartyIDElectronicAddresses` - Create an electronic address
-* `PutIndividualsPartyIDElectronicAddressesAddressID` - Update an electronic address
+* [DeleteIndividualsPartyIDElectronicAddressesAddressID](docs/individualselectronicaddresses/README.md#deleteindividualspartyidelectronicaddressesaddressid) - Delete an electronic address
+* [GetIndividualsPartyIDElectronicAddresses](docs/individualselectronicaddresses/README.md#getindividualspartyidelectronicaddresses) - Retrieve a list of electronic addresses
+* [GetIndividualsPartyIDElectronicAddressesAddressID](docs/individualselectronicaddresses/README.md#getindividualspartyidelectronicaddressesaddressid) - Retrieve an electronic address
+* [PostIndividualsPartyIDElectronicAddresses](docs/individualselectronicaddresses/README.md#postindividualspartyidelectronicaddresses) - Create an electronic address
+* [PutIndividualsPartyIDElectronicAddressesAddressID](docs/individualselectronicaddresses/README.md#putindividualspartyidelectronicaddressesaddressid) - Update an electronic address
 
-### IndividualsLicenses
+### [IndividualsLicenses](docs/individualslicenses/README.md)
 
-* `DeleteIndividualsPartyIDLicensesProductID` - Delete a license
-* `GetIndividualsPartyIDLicenses` - Retrieve a list of licenses
-* `GetIndividualsPartyIDLicensesProductID` - Retrieve a license
-* `PostIndividualsPartyIDLicenses` - Create a license
-* `PutIndividualsPartyIDLicensesProductID` - Update a license
+* [DeleteIndividualsPartyIDLicensesProductID](docs/individualslicenses/README.md#deleteindividualspartyidlicensesproductid) - Delete a license
+* [GetIndividualsPartyIDLicenses](docs/individualslicenses/README.md#getindividualspartyidlicenses) - Retrieve a list of licenses
+* [GetIndividualsPartyIDLicensesProductID](docs/individualslicenses/README.md#getindividualspartyidlicensesproductid) - Retrieve a license
+* [PostIndividualsPartyIDLicenses](docs/individualslicenses/README.md#postindividualspartyidlicenses) - Create a license
+* [PutIndividualsPartyIDLicensesProductID](docs/individualslicenses/README.md#putindividualspartyidlicensesproductid) - Update a license
 
-### IndividualsRoles
+### [IndividualsRoles](docs/individualsroles/README.md)
 
-* `DeleteIndividualsPartyIDRolesRoleID` - Delete a role
-* `GetIndividualsPartyIDRoles` - Retrieve a list of roles
-* `GetIndividualsPartyIDRolesRoleID` - Retrieve a role
-* `PostIndividualsPartyIDRoles` - Create a role
-* `PutIndividualsPartyIDRolesRoleID` - Update a role
+* [DeleteIndividualsPartyIDRolesRoleID](docs/individualsroles/README.md#deleteindividualspartyidrolesroleid) - Delete a role
+* [GetIndividualsPartyIDRoles](docs/individualsroles/README.md#getindividualspartyidroles) - Retrieve a list of roles
+* [GetIndividualsPartyIDRolesRoleID](docs/individualsroles/README.md#getindividualspartyidrolesroleid) - Retrieve a role
+* [PostIndividualsPartyIDRoles](docs/individualsroles/README.md#postindividualspartyidroles) - Create a role
+* [PutIndividualsPartyIDRolesRoleID](docs/individualsroles/README.md#putindividualspartyidrolesroleid) - Update a role
 
-### LegalEntityTypes
+### [LegalEntityTypes](docs/legalentitytypes/README.md)
 
-* `GetClassificationsLegalEntityTypes` - Retrieve a list of legal entity types
+* [GetClassificationsLegalEntityTypes](docs/legalentitytypes/README.md#getclassificationslegalentitytypes) - Retrieve a list of legal entity types
 
-### LicenseLifecycleStates
+### [LicenseLifecycleStates](docs/licenselifecyclestates/README.md)
 
-* `GetClassificationsLicenseLifecycleStates` - Retrieve a list of license lifecycle states
+* [GetClassificationsLicenseLifecycleStates](docs/licenselifecyclestates/README.md#getclassificationslicenselifecyclestates) - Retrieve a list of license lifecycle states
 
-### LicenseTypes
+### [LicenseTypes](docs/licensetypes/README.md)
 
-* `GetClassificationsLicenseTypes` - Retrieve a list of license types
+* [GetClassificationsLicenseTypes](docs/licensetypes/README.md#getclassificationslicensetypes) - Retrieve a list of license types
 
-### Licenses
+### [Licenses](docs/licenses/README.md)
 
-* `GetLicenses` - Retrieve a list of licenses
+* [GetLicenses](docs/licenses/README.md#getlicenses) - Retrieve a list of licenses
 
-### NameDirections
+### [NameDirections](docs/namedirections/README.md)
 
-* `GetClassificationsNameDirections` - Retrieve a list of name directions
+* [GetClassificationsNameDirections](docs/namedirections/README.md#getclassificationsnamedirections) - Retrieve a list of name directions
 
-### NamePrefixes
+### [NamePrefixes](docs/nameprefixes/README.md)
 
-* `GetClassificationsNamePrefixes` - Retrieve a list of name prefixes
+* [GetClassificationsNamePrefixes](docs/nameprefixes/README.md#getclassificationsnameprefixes) - Retrieve a list of name prefixes
 
-### NameTypes
+### [NameTypes](docs/nametypes/README.md)
 
-* `GetClassificationsNameTypes` - Retrieve a list of name types
+* [GetClassificationsNameTypes](docs/nametypes/README.md#getclassificationsnametypes) - Retrieve a list of name types
 
-### Organisations
+### [Organisations](docs/organisations/README.md)
 
-* `DeleteOrganisationsPartyID` - Delete an organisation
-* `GetOrganisations` - Retrieve a list of organisations
-* `GetOrganisationsPartyID` - Retrieve an organisation
-* `PostOrganisations` - Create an organisation
-* `PutOrganisationsPartyID` - Update an organisation
+* [DeleteOrganisationsPartyID](docs/organisations/README.md#deleteorganisationspartyid) - Delete an organisation
+* [GetOrganisations](docs/organisations/README.md#getorganisations) - Retrieve a list of organisations
+* [GetOrganisationsPartyID](docs/organisations/README.md#getorganisationspartyid) - Retrieve an organisation
+* [PostOrganisations](docs/organisations/README.md#postorganisations) - Create an organisation
+* [PutOrganisationsPartyID](docs/organisations/README.md#putorganisationspartyid) - Update an organisation
 
-### OrganisationsAddresses
+### [OrganisationsAddresses](docs/organisationsaddresses/README.md)
 
-* `DeleteOrganisationsPartyIDAddressesAddressID` - Delete an address
-* `GetOrganisationsPartyIDAddresses` - Retrieve a list of addresses
-* `GetOrganisationsPartyIDAddressesAddressID` - Retrieve an address
-* `PostOrganisationsPartyIDAddresses` - Create an address
-* `PutOrganisationsPartyIDAddressesAddressID` - Update an address
+* [DeleteOrganisationsPartyIDAddressesAddressID](docs/organisationsaddresses/README.md#deleteorganisationspartyidaddressesaddressid) - Delete an address
+* [GetOrganisationsPartyIDAddresses](docs/organisationsaddresses/README.md#getorganisationspartyidaddresses) - Retrieve a list of addresses
+* [GetOrganisationsPartyIDAddressesAddressID](docs/organisationsaddresses/README.md#getorganisationspartyidaddressesaddressid) - Retrieve an address
+* [PostOrganisationsPartyIDAddresses](docs/organisationsaddresses/README.md#postorganisationspartyidaddresses) - Create an address
+* [PutOrganisationsPartyIDAddressesAddressID](docs/organisationsaddresses/README.md#putorganisationspartyidaddressesaddressid) - Update an address
 
-### OrganisationsBusinessNames
+### [OrganisationsBusinessNames](docs/organisationsbusinessnames/README.md)
 
-* `DeleteOrganisationsPartyIDBusinessNamesProductID` - Delete a business name
-* `GetOrganisationsPartyIDBusinessNames` - Retrieve a list of business names
-* `GetOrganisationsPartyIDBusinessNamesProductID` - Retrieve a business name
-* `PostOrganisationsPartyIDBusinessNames` - Create a business name
-* `PutOrganisationsPartyIDBusinessNamesProductID` - Update a business name
+* [DeleteOrganisationsPartyIDBusinessNamesProductID](docs/organisationsbusinessnames/README.md#deleteorganisationspartyidbusinessnamesproductid) - Delete a business name
+* [GetOrganisationsPartyIDBusinessNames](docs/organisationsbusinessnames/README.md#getorganisationspartyidbusinessnames) - Retrieve a list of business names
+* [GetOrganisationsPartyIDBusinessNamesProductID](docs/organisationsbusinessnames/README.md#getorganisationspartyidbusinessnamesproductid) - Retrieve a business name
+* [PostOrganisationsPartyIDBusinessNames](docs/organisationsbusinessnames/README.md#postorganisationspartyidbusinessnames) - Create a business name
+* [PutOrganisationsPartyIDBusinessNamesProductID](docs/organisationsbusinessnames/README.md#putorganisationspartyidbusinessnamesproductid) - Update a business name
 
-### OrganisationsElectronicAddresses
+### [OrganisationsElectronicAddresses](docs/organisationselectronicaddresses/README.md)
 
-* `DeleteOrganisationsPartyIDElectronicAddressesAddressID` - Delete an electronic address
-* `GetOrganisationsPartyIDElectronicAddresses` - Retrieve a list of electronic addresses
-* `GetOrganisationsPartyIDElectronicAddressesAddressID` - Retrieve an electronic address
-* `PostOrganisationsPartyIDElectronicAddresses` - Create an electronic address
-* `PutOrganisationsPartyIDElectronicAddressesAddressID` - Update an electronic address
+* [DeleteOrganisationsPartyIDElectronicAddressesAddressID](docs/organisationselectronicaddresses/README.md#deleteorganisationspartyidelectronicaddressesaddressid) - Delete an electronic address
+* [GetOrganisationsPartyIDElectronicAddresses](docs/organisationselectronicaddresses/README.md#getorganisationspartyidelectronicaddresses) - Retrieve a list of electronic addresses
+* [GetOrganisationsPartyIDElectronicAddressesAddressID](docs/organisationselectronicaddresses/README.md#getorganisationspartyidelectronicaddressesaddressid) - Retrieve an electronic address
+* [PostOrganisationsPartyIDElectronicAddresses](docs/organisationselectronicaddresses/README.md#postorganisationspartyidelectronicaddresses) - Create an electronic address
+* [PutOrganisationsPartyIDElectronicAddressesAddressID](docs/organisationselectronicaddresses/README.md#putorganisationspartyidelectronicaddressesaddressid) - Update an electronic address
 
-### OrganisationsLicenses
+### [OrganisationsLicenses](docs/organisationslicenses/README.md)
 
-* `DeleteOrganisationsPartyIDLicensesProductID` - Delete a license
-* `GetOrganisationsPartyIDLicenses` - Retrieve a list of licenses
-* `GetOrganisationsPartyIDLicensesProductID` - Retrieve a license
-* `PostOrganisationsPartyIDLicenses` - Create a license
-* `PutOrganisationsPartyIDLicensesProductID` - Update a license
+* [DeleteOrganisationsPartyIDLicensesProductID](docs/organisationslicenses/README.md#deleteorganisationspartyidlicensesproductid) - Delete a license
+* [GetOrganisationsPartyIDLicenses](docs/organisationslicenses/README.md#getorganisationspartyidlicenses) - Retrieve a list of licenses
+* [GetOrganisationsPartyIDLicensesProductID](docs/organisationslicenses/README.md#getorganisationspartyidlicensesproductid) - Retrieve a license
+* [PostOrganisationsPartyIDLicenses](docs/organisationslicenses/README.md#postorganisationspartyidlicenses) - Create a license
+* [PutOrganisationsPartyIDLicensesProductID](docs/organisationslicenses/README.md#putorganisationspartyidlicensesproductid) - Update a license
 
-### OrganisationsRoles
+### [OrganisationsRoles](docs/organisationsroles/README.md)
 
-* `DeleteOrganisationsPartyIDRolesRoleID` - Delete a role
-* `GetOrganisationsPartyIDRoles` - Retrieve a list of roles
-* `GetOrganisationsPartyIDRolesRoleID` - Retrieve a role
-* `PostOrganisationsPartyIDRoles` - Create a role
-* `PutOrganisationsPartyIDRolesRoleID` - Update a role
+* [DeleteOrganisationsPartyIDRolesRoleID](docs/organisationsroles/README.md#deleteorganisationspartyidrolesroleid) - Delete a role
+* [GetOrganisationsPartyIDRoles](docs/organisationsroles/README.md#getorganisationspartyidroles) - Retrieve a list of roles
+* [GetOrganisationsPartyIDRolesRoleID](docs/organisationsroles/README.md#getorganisationspartyidrolesroleid) - Retrieve a role
+* [PostOrganisationsPartyIDRoles](docs/organisationsroles/README.md#postorganisationspartyidroles) - Create a role
+* [PutOrganisationsPartyIDRolesRoleID](docs/organisationsroles/README.md#putorganisationspartyidrolesroleid) - Update a role
 
-### RegisteredIdentifierTypes
+### [RegisteredIdentifierTypes](docs/registeredidentifiertypes/README.md)
 
-* `GetClassificationsRegisteredIdentifierTypes` - Retrieve a list of registered identifier types
+* [GetClassificationsRegisteredIdentifierTypes](docs/registeredidentifiertypes/README.md#getclassificationsregisteredidentifiertypes) - Retrieve a list of registered identifier types
 
-### Roles
+### [Roles](docs/roles/README.md)
 
-* `GetClassificationsRoles` - Retrieve a list of roles
+* [GetClassificationsRoles](docs/roles/README.md#getclassificationsroles) - Retrieve a list of roles
 <!-- End SDK Available Operations -->
 
 ### Maturity

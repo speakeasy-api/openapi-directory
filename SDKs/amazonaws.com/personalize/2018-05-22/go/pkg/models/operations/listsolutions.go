@@ -16,17 +16,21 @@ const (
 	ListSolutionsXAmzTargetEnumAmazonPersonalizeListSolutions ListSolutionsXAmzTargetEnum = "AmazonPersonalize.ListSolutions"
 )
 
+func (e ListSolutionsXAmzTargetEnum) ToPointer() *ListSolutionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListSolutionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.ListSolutions":
-		*e = ListSolutionsXAmzTargetEnum(s)
+		*e = ListSolutionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListSolutionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListSolutionsXAmzTargetEnum: %v", v)
 	}
 }
 

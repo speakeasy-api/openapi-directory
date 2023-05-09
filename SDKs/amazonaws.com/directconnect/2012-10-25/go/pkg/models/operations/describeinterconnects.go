@@ -16,17 +16,21 @@ const (
 	DescribeInterconnectsXAmzTargetEnumOvertureServiceDescribeInterconnects DescribeInterconnectsXAmzTargetEnum = "OvertureService.DescribeInterconnects"
 )
 
+func (e DescribeInterconnectsXAmzTargetEnum) ToPointer() *DescribeInterconnectsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeInterconnectsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DescribeInterconnects":
-		*e = DescribeInterconnectsXAmzTargetEnum(s)
+		*e = DescribeInterconnectsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInterconnectsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInterconnectsXAmzTargetEnum: %v", v)
 	}
 }
 

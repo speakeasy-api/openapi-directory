@@ -16,17 +16,21 @@ const (
 	GetCatalogImportStatusXAmzTargetEnumAwsGlueGetCatalogImportStatus GetCatalogImportStatusXAmzTargetEnum = "AWSGlue.GetCatalogImportStatus"
 )
 
+func (e GetCatalogImportStatusXAmzTargetEnum) ToPointer() *GetCatalogImportStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCatalogImportStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetCatalogImportStatus":
-		*e = GetCatalogImportStatusXAmzTargetEnum(s)
+		*e = GetCatalogImportStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCatalogImportStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCatalogImportStatusXAmzTargetEnum: %v", v)
 	}
 }
 

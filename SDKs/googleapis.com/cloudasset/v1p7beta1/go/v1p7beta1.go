@@ -34,7 +34,10 @@ func newV1p7beta1(defaultClient, securityClient HTTPClient, serverURL, language,
 // CloudassetExportAssets - Exports assets with time and resource types to a given Cloud Storage location/BigQuery table. For Cloud Storage location destinations, the output format is newline-delimited JSON. Each line represents a google.cloud.asset.v1p7beta1.Asset in the JSON format; for BigQuery table destinations, the output table stores the fields in asset proto as columns. This API implements the google.longrunning.Operation API , which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
 func (s *v1p7beta1) CloudassetExportAssets(ctx context.Context, request operations.CloudassetExportAssetsRequest, security operations.CloudassetExportAssetsSecurity) (*operations.CloudassetExportAssetsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{parent}:exportAssets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{parent}:exportAssets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssetV1p7beta1ExportAssetsRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	POSTDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute POSTDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
 )
 
+func (e POSTDescribeSnapshotAttributeActionEnum) ToPointer() *POSTDescribeSnapshotAttributeActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSnapshotAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSnapshotAttribute":
-		*e = POSTDescribeSnapshotAttributeActionEnum(s)
+		*e = POSTDescribeSnapshotAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSnapshotAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSnapshotAttributeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 POSTDescribeSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeSnapshotAttributeVersionEnum) ToPointer() *POSTDescribeSnapshotAttributeVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeSnapshotAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeSnapshotAttributeVersionEnum(s)
+		*e = POSTDescribeSnapshotAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeSnapshotAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeSnapshotAttributeVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	RepositorySyncStatusEnumQueued     RepositorySyncStatusEnum = "QUEUED"
 )
 
+func (e RepositorySyncStatusEnum) ToPointer() *RepositorySyncStatusEnum {
+	return &e
+}
+
 func (e *RepositorySyncStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIATED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *RepositorySyncStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "QUEUED":
-		*e = RepositorySyncStatusEnum(s)
+		*e = RepositorySyncStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepositorySyncStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RepositorySyncStatusEnum: %v", v)
 	}
 }

@@ -3,8 +3,58 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"time"
 )
+
+type PicoChargingHistoryDataTransactionStopReasonEnum string
+
+const (
+	PicoChargingHistoryDataTransactionStopReasonEnumUnknown          PicoChargingHistoryDataTransactionStopReasonEnum = "Unknown"
+	PicoChargingHistoryDataTransactionStopReasonEnumCarDisconnected  PicoChargingHistoryDataTransactionStopReasonEnum = "CarDisconnected"
+	PicoChargingHistoryDataTransactionStopReasonEnumRemoteStop       PicoChargingHistoryDataTransactionStopReasonEnum = "RemoteStop"
+	PicoChargingHistoryDataTransactionStopReasonEnumErrorStop        PicoChargingHistoryDataTransactionStopReasonEnum = "ErrorStop"
+	PicoChargingHistoryDataTransactionStopReasonEnumInstallationMode PicoChargingHistoryDataTransactionStopReasonEnum = "InstallationMode"
+	PicoChargingHistoryDataTransactionStopReasonEnumCableError       PicoChargingHistoryDataTransactionStopReasonEnum = "CableError"
+	PicoChargingHistoryDataTransactionStopReasonEnumDiodeError       PicoChargingHistoryDataTransactionStopReasonEnum = "DiodeError"
+	PicoChargingHistoryDataTransactionStopReasonEnumRcdError         PicoChargingHistoryDataTransactionStopReasonEnum = "RcdError"
+	PicoChargingHistoryDataTransactionStopReasonEnumOverloadError    PicoChargingHistoryDataTransactionStopReasonEnum = "OverloadError"
+)
+
+func (e PicoChargingHistoryDataTransactionStopReasonEnum) ToPointer() *PicoChargingHistoryDataTransactionStopReasonEnum {
+	return &e
+}
+
+func (e *PicoChargingHistoryDataTransactionStopReasonEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "Unknown":
+		fallthrough
+	case "CarDisconnected":
+		fallthrough
+	case "RemoteStop":
+		fallthrough
+	case "ErrorStop":
+		fallthrough
+	case "InstallationMode":
+		fallthrough
+	case "CableError":
+		fallthrough
+	case "DiodeError":
+		fallthrough
+	case "RcdError":
+		fallthrough
+	case "OverloadError":
+		*e = PicoChargingHistoryDataTransactionStopReasonEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PicoChargingHistoryDataTransactionStopReasonEnum: %v", v)
+	}
+}
 
 // PicoChargingHistoryData - Api container for the charging station history
 type PicoChargingHistoryData struct {
@@ -13,5 +63,6 @@ type PicoChargingHistoryData struct {
 	// The energy used (in kWh)
 	EnergyUsed *float64 `json:"EnergyUsed,omitempty"`
 	// The starttime of the charging (in UTC)
-	StartTime *time.Time `json:"StartTime,omitempty"`
+	StartTime             *time.Time                                        `json:"StartTime,omitempty"`
+	TransactionStopReason *PicoChargingHistoryDataTransactionStopReasonEnum `json:"TransactionStopReason,omitempty"`
 }

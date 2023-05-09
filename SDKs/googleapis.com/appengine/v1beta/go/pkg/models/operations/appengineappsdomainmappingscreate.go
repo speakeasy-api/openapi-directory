@@ -23,21 +23,25 @@ const (
 	AppengineAppsDomainMappingsCreateOverrideStrategyEnumOverride                          AppengineAppsDomainMappingsCreateOverrideStrategyEnum = "OVERRIDE"
 )
 
+func (e AppengineAppsDomainMappingsCreateOverrideStrategyEnum) ToPointer() *AppengineAppsDomainMappingsCreateOverrideStrategyEnum {
+	return &e
+}
+
 func (e *AppengineAppsDomainMappingsCreateOverrideStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_DOMAIN_OVERRIDE_STRATEGY":
 		fallthrough
 	case "STRICT":
 		fallthrough
 	case "OVERRIDE":
-		*e = AppengineAppsDomainMappingsCreateOverrideStrategyEnum(s)
+		*e = AppengineAppsDomainMappingsCreateOverrideStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppengineAppsDomainMappingsCreateOverrideStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for AppengineAppsDomainMappingsCreateOverrideStrategyEnum: %v", v)
 	}
 }
 

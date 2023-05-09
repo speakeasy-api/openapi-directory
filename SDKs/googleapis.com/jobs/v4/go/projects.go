@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // JobsProjectsTenantsClientEventsCreate - Report events issued when end user interacts with customer's application that uses Cloud Talent Solution. You may inspect the created events in [self service tools](https://console.cloud.google.com/talent-solution/overview). [Learn more](https://cloud.google.com/talent-solution/docs/management-tools) about self service tools.
 func (s *projects) JobsProjectsTenantsClientEventsCreate(ctx context.Context, request operations.JobsProjectsTenantsClientEventsCreateRequest, security operations.JobsProjectsTenantsClientEventsCreateSecurity) (*operations.JobsProjectsTenantsClientEventsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/clientEvents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/clientEvents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientEvent", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) JobsProjectsTenantsClientEventsCreate(ctx context.Context, re
 // JobsProjectsTenantsCompaniesCreate - Creates a new company entity.
 func (s *projects) JobsProjectsTenantsCompaniesCreate(ctx context.Context, request operations.JobsProjectsTenantsCompaniesCreateRequest, security operations.JobsProjectsTenantsCompaniesCreateSecurity) (*operations.JobsProjectsTenantsCompaniesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/companies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/companies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompanyInput", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) JobsProjectsTenantsCompaniesCreate(ctx context.Context, reque
 // JobsProjectsTenantsCompaniesList - Lists all companies associated with the project.
 func (s *projects) JobsProjectsTenantsCompaniesList(ctx context.Context, request operations.JobsProjectsTenantsCompaniesListRequest, security operations.JobsProjectsTenantsCompaniesListSecurity) (*operations.JobsProjectsTenantsCompaniesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/companies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/companies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) JobsProjectsTenantsCompaniesList(ctx context.Context, request
 // JobsProjectsTenantsCompleteQuery - Completes the specified prefix with keyword suggestions. Intended for use by a job search auto-complete search box.
 func (s *projects) JobsProjectsTenantsCompleteQuery(ctx context.Context, request operations.JobsProjectsTenantsCompleteQueryRequest, security operations.JobsProjectsTenantsCompleteQuerySecurity) (*operations.JobsProjectsTenantsCompleteQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{tenant}:completeQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{tenant}:completeQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) JobsProjectsTenantsCompleteQuery(ctx context.Context, request
 // JobsProjectsTenantsCreate - Creates a new tenant entity.
 func (s *projects) JobsProjectsTenantsCreate(ctx context.Context, request operations.JobsProjectsTenantsCreateRequest, security operations.JobsProjectsTenantsCreateSecurity) (*operations.JobsProjectsTenantsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/tenants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/tenants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Tenant", "json")
 	if err != nil {
@@ -295,7 +310,10 @@ func (s *projects) JobsProjectsTenantsCreate(ctx context.Context, request operat
 // JobsProjectsTenantsJobsBatchCreate - Begins executing a batch create jobs operation.
 func (s *projects) JobsProjectsTenantsJobsBatchCreate(ctx context.Context, request operations.JobsProjectsTenantsJobsBatchCreateRequest, security operations.JobsProjectsTenantsJobsBatchCreateSecurity) (*operations.JobsProjectsTenantsJobsBatchCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchCreate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchCreate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchCreateJobsRequestInput", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) JobsProjectsTenantsJobsBatchCreate(ctx context.Context, reque
 // JobsProjectsTenantsJobsBatchDelete - Begins executing a batch delete jobs operation.
 func (s *projects) JobsProjectsTenantsJobsBatchDelete(ctx context.Context, request operations.JobsProjectsTenantsJobsBatchDeleteRequest, security operations.JobsProjectsTenantsJobsBatchDeleteSecurity) (*operations.JobsProjectsTenantsJobsBatchDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchDelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchDelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchDeleteJobsRequest", "json")
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) JobsProjectsTenantsJobsBatchDelete(ctx context.Context, reque
 // JobsProjectsTenantsJobsBatchUpdate - Begins executing a batch update jobs operation.
 func (s *projects) JobsProjectsTenantsJobsBatchUpdate(ctx context.Context, request operations.JobsProjectsTenantsJobsBatchUpdateRequest, security operations.JobsProjectsTenantsJobsBatchUpdateSecurity) (*operations.JobsProjectsTenantsJobsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateJobsRequestInput", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) JobsProjectsTenantsJobsBatchUpdate(ctx context.Context, reque
 // JobsProjectsTenantsJobsCreate - Creates a new job. Typically, the job becomes searchable within 10 seconds, but it may take up to 5 minutes.
 func (s *projects) JobsProjectsTenantsJobsCreate(ctx context.Context, request operations.JobsProjectsTenantsJobsCreateRequest, security operations.JobsProjectsTenantsJobsCreateSecurity) (*operations.JobsProjectsTenantsJobsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) JobsProjectsTenantsJobsCreate(ctx context.Context, request op
 // JobsProjectsTenantsJobsDelete - Deletes the specified job. Typically, the job becomes unsearchable within 10 seconds, but it may take up to 5 minutes.
 func (s *projects) JobsProjectsTenantsJobsDelete(ctx context.Context, request operations.JobsProjectsTenantsJobsDeleteRequest, security operations.JobsProjectsTenantsJobsDeleteSecurity) (*operations.JobsProjectsTenantsJobsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) JobsProjectsTenantsJobsDelete(ctx context.Context, request op
 // JobsProjectsTenantsJobsGet - Retrieves the specified job, whose status is OPEN or recently EXPIRED within the last 90 days.
 func (s *projects) JobsProjectsTenantsJobsGet(ctx context.Context, request operations.JobsProjectsTenantsJobsGetRequest, security operations.JobsProjectsTenantsJobsGetSecurity) (*operations.JobsProjectsTenantsJobsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) JobsProjectsTenantsJobsGet(ctx context.Context, request opera
 // JobsProjectsTenantsJobsList - Lists jobs by filter.
 func (s *projects) JobsProjectsTenantsJobsList(ctx context.Context, request operations.JobsProjectsTenantsJobsListRequest, security operations.JobsProjectsTenantsJobsListSecurity) (*operations.JobsProjectsTenantsJobsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) JobsProjectsTenantsJobsList(ctx context.Context, request oper
 // JobsProjectsTenantsJobsPatch - Updates specified job. Typically, updated contents become visible in search results within 10 seconds, but it may take up to 5 minutes.
 func (s *projects) JobsProjectsTenantsJobsPatch(ctx context.Context, request operations.JobsProjectsTenantsJobsPatchRequest, security operations.JobsProjectsTenantsJobsPatchSecurity) (*operations.JobsProjectsTenantsJobsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "JobInput", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) JobsProjectsTenantsJobsPatch(ctx context.Context, request ope
 // JobsProjectsTenantsJobsSearch - Searches for jobs using the provided SearchJobsRequest. This call constrains the visibility of jobs present in the database, and only returns jobs that the caller has permission to search against.
 func (s *projects) JobsProjectsTenantsJobsSearch(ctx context.Context, request operations.JobsProjectsTenantsJobsSearchRequest, security operations.JobsProjectsTenantsJobsSearchSecurity) (*operations.JobsProjectsTenantsJobsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchJobsRequest", "json")
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *projects) JobsProjectsTenantsJobsSearch(ctx context.Context, request op
 // JobsProjectsTenantsJobsSearchForAlert - Searches for jobs using the provided SearchJobsRequest. This API call is intended for the use case of targeting passive job seekers (for example, job seekers who have signed up to receive email alerts about potential job opportunities), it has different algorithmic adjustments that are designed to specifically target passive job seekers. This call constrains the visibility of jobs present in the database, and only returns jobs the caller has permission to search against.
 func (s *projects) JobsProjectsTenantsJobsSearchForAlert(ctx context.Context, request operations.JobsProjectsTenantsJobsSearchForAlertRequest, security operations.JobsProjectsTenantsJobsSearchForAlertSecurity) (*operations.JobsProjectsTenantsJobsSearchForAlertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:searchForAlert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/jobs:searchForAlert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchJobsRequest", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *projects) JobsProjectsTenantsJobsSearchForAlert(ctx context.Context, re
 // JobsProjectsTenantsList - Lists all tenants associated with the project.
 func (s *projects) JobsProjectsTenantsList(ctx context.Context, request operations.JobsProjectsTenantsListRequest, security operations.JobsProjectsTenantsListSecurity) (*operations.JobsProjectsTenantsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/tenants", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/{parent}/tenants", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

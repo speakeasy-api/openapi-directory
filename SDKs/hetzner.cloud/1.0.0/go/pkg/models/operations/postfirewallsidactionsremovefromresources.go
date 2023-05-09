@@ -28,19 +28,23 @@ const (
 	PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnumLabelSelector PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum = "label_selector"
 )
 
+func (e PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum) ToPointer() *PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "server":
 		fallthrough
 	case "label_selector":
-		*e = PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum(s)
+		*e = PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResourcesTypeEnum: %v", v)
 	}
 }
 
@@ -88,21 +92,25 @@ const (
 	PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnumError   PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum = "error"
 )
 
+func (e PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum) ToPointer() *PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum(s)
+		*e = PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostFirewallsIDActionsRemoveFromResourcesActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

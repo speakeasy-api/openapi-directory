@@ -19,12 +19,16 @@ const (
 	AmpURLErrorErrorCodeEnumURLIsInvalidAmp      AmpURLErrorErrorCodeEnum = "URL_IS_INVALID_AMP"
 )
 
+func (e AmpURLErrorErrorCodeEnum) ToPointer() *AmpURLErrorErrorCodeEnum {
+	return &e
+}
+
 func (e *AmpURLErrorErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "INPUT_URL_NOT_FOUND":
@@ -36,10 +40,10 @@ func (e *AmpURLErrorErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "URL_IS_VALID_AMP":
 		fallthrough
 	case "URL_IS_INVALID_AMP":
-		*e = AmpURLErrorErrorCodeEnum(s)
+		*e = AmpURLErrorErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpURLErrorErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpURLErrorErrorCodeEnum: %v", v)
 	}
 }
 

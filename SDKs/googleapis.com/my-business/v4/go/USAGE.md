@@ -2,71 +2,67 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MybusinessAccountsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Accounts.MybusinessAccountsCreate(ctx, operations.MybusinessAccountsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Account: &shared.Account{
-            AccountName: "provident",
-            AccountNumber: "distinctio",
-            Name: "quibusdam",
+            AccountName: sdk.String("provident"),
+            AccountNumber: sdk.String("distinctio"),
+            Name: sdk.String("Stuart Stiedemann"),
             OrganizationInfo: &shared.OrganizationInfo{
-                PhoneNumber: "unde",
+                PhoneNumber: sdk.String("vel"),
                 PostalAddress: &shared.PostalAddress{
                     AddressLines: []string{
-                        "corrupti",
-                        "illum",
-                        "vel",
-                        "error",
+                        "deserunt",
+                        "suscipit",
+                        "iure",
                     },
-                    AdministrativeArea: "deserunt",
-                    LanguageCode: "suscipit",
-                    Locality: "iure",
-                    Organization: "magnam",
-                    PostalCode: "09234-7854",
+                    AdministrativeArea: sdk.String("magnam"),
+                    LanguageCode: sdk.String("debitis"),
+                    Locality: sdk.String("ipsa"),
+                    Organization: sdk.String("delectus"),
+                    PostalCode: sdk.String("34785"),
                     Recipients: []string{
+                        "excepturi",
                         "nisi",
-                        "recusandae",
-                        "temporibus",
                     },
-                    RegionCode: "ab",
-                    Revision: 337396,
-                    SortingCode: "veritatis",
-                    Sublocality: "deserunt",
+                    RegionCode: sdk.String("recusandae"),
+                    Revision: sdk.Int(836079),
+                    SortingCode: sdk.String("ab"),
+                    Sublocality: sdk.String("quis"),
                 },
-                RegisteredDomain: "perferendis",
+                RegisteredDomain: sdk.String("veritatis"),
             },
-            PermissionLevel: "OWNER_LEVEL",
-            Role: "COMMUNITY_MANAGER",
+            PermissionLevel: shared.AccountPermissionLevelEnumOwnerLevel.ToPointer(),
+            Role: shared.AccountRoleEnumAccountRoleUnspecified.ToPointer(),
             State: &shared.AccountState{
-                Status: "VERIFICATION_REQUESTED",
+                Status: shared.AccountStateStatusEnumVerified.ToPointer(),
             },
-            Type: "USER_GROUP",
+            Type: shared.AccountTypeEnumOrganization.ToPointer(),
         },
-        AccessToken: "odit",
-        Alt: "proto",
-        Callback: "at",
-        Fields: "maiores",
-        Key: "molestiae",
-        OauthToken: "quod",
-        PrettyPrint: false,
-        PrimaryOwner: "quod",
-        QuotaUser: "esse",
-        UploadType: "totam",
-        UploadProtocol: "porro",
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.MybusinessAccountsCreate(ctx, req)
+        AccessToken: sdk.String("sapiente"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("odit"),
+        Fields: sdk.String("at"),
+        Key: sdk.String("at"),
+        OauthToken: sdk.String("maiores"),
+        PrettyPrint: sdk.Bool(false),
+        PrimaryOwner: sdk.String("molestiae"),
+        QuotaUser: sdk.String("quod"),
+        UploadType: sdk.String("quod"),
+        UploadProtocol: sdk.String("esse"),
+    })
     if err != nil {
         log.Fatal(err)
     }

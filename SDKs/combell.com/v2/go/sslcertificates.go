@@ -5,6 +5,7 @@ package sdk
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
@@ -37,7 +38,10 @@ func newSSLCertificates(defaultClient, securityClient HTTPClient, serverURL, lan
 // Returns the certifcate as binary data with the content-type and the filename information in the response headers.
 func (s *sslCertificates) DownloadCertificate(ctx context.Context, request operations.DownloadCertificateRequest) (*operations.DownloadCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}/download", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}/download", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -70,9 +74,9 @@ func (s *sslCertificates) DownloadCertificate(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []byte
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
 			res.DownloadCertificate200ApplicationJSONBinaryString = out
@@ -86,7 +90,10 @@ func (s *sslCertificates) DownloadCertificate(ctx context.Context, request opera
 // GetSslCertificate - Detail of a SSL certificate
 func (s *sslCertificates) GetSslCertificate(ctx context.Context, request operations.GetSslCertificateRequest) (*operations.GetSslCertificateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sslcertificates/{sha1Fingerprint}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

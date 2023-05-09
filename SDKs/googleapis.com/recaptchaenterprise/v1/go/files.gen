@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -37,6 +38,7 @@ pkg/models/shared/googlecloudrecaptchaenterprisev1privatepasswordleakverificatio
 pkg/models/shared/googlecloudrecaptchaenterprisev1fraudpreventionassessment.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1fraudpreventionassessmentstoleninstrumentverdict.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1fraudpreventionassessmentcardtestingverdict.go
+pkg/models/shared/googlecloudrecaptchaenterprisev1fraudpreventionassessmentbehavioraltrustverdict.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1firewallpolicyassessment.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1firewallpolicy.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1firewallaction.go
@@ -72,4 +74,6 @@ pkg/models/shared/googlecloudrecaptchaenterprisev1searchrelatedaccountgroupmembe
 pkg/models/shared/googlecloudrecaptchaenterprisev1listrelatedaccountgroupsresponse.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1relatedaccountgroup.go
 pkg/models/shared/googlecloudrecaptchaenterprisev1listrelatedaccountgroupmembershipsresponse.go
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -16,17 +16,21 @@ const (
 	ActivatePipelineXAmzTargetEnumDataPipelineActivatePipeline ActivatePipelineXAmzTargetEnum = "DataPipeline.ActivatePipeline"
 )
 
+func (e ActivatePipelineXAmzTargetEnum) ToPointer() *ActivatePipelineXAmzTargetEnum {
+	return &e
+}
+
 func (e *ActivatePipelineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.ActivatePipeline":
-		*e = ActivatePipelineXAmzTargetEnum(s)
+		*e = ActivatePipelineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivatePipelineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivatePipelineXAmzTargetEnum: %v", v)
 	}
 }
 

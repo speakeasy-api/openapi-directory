@@ -16,19 +16,23 @@ const (
 	UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnumDeny  UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum = "deny"
 )
 
+func (e UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum) ToPointer() *UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum {
+	return &e
+}
+
 func (e *UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "allow":
 		fallthrough
 	case "deny":
-		*e = UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum(s)
+		*e = UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkCellularFirewallRulesRequestBodyRulesPolicyEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnumUDP   UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum = "udp"
 )
 
+func (e UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum) ToPointer() *UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum {
+	return &e
+}
+
 func (e *UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "any":
 		fallthrough
 	case "icmp":
@@ -58,10 +66,10 @@ func (e *UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum) Unmarsh
 	case "tcp":
 		fallthrough
 	case "udp":
-		*e = UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum(s)
+		*e = UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkCellularFirewallRulesRequestBodyRulesProtocolEnum: %v", v)
 	}
 }
 

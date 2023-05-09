@@ -29,12 +29,16 @@ const (
 	LDAPSSettingsStateEnumFailed           LDAPSSettingsStateEnum = "FAILED"
 )
 
+func (e LDAPSSettingsStateEnum) ToPointer() *LDAPSSettingsStateEnum {
+	return &e
+}
+
 func (e *LDAPSSettingsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "UPDATING":
@@ -42,10 +46,10 @@ func (e *LDAPSSettingsStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = LDAPSSettingsStateEnum(s)
+		*e = LDAPSSettingsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LDAPSSettingsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LDAPSSettingsStateEnum: %v", v)
 	}
 }
 

@@ -13,36 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/art19.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetClassificationsRequest{
+    ctx := context.Background()
+    res, err := s.Classification.GetClassifications(ctx, operations.GetClassificationsRequest{
         Ids: []string{
             "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",
             "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
             "b7392059-2939-46fe-a759-6eb10faaa235",
         },
-        IsCountry: "explicabo",
-        PageNumber: 750686,
-        PageSize: 315428,
-        Q: "omnis",
+        IsCountry: sdk.String("explicabo"),
+        PageNumber: sdk.Int64(750686),
+        PageSize: sdk.Int64(315428),
+        Q: sdk.String("omnis"),
         Sort: []GetClassificationsSortEnum{
-            "created_at",
-            "updated_at",
+            operations.GetClassificationsSortEnumCreatedAt,
+            operations.GetClassificationsSortEnumUpdatedAt,
         },
-        Type: "AlternateFeedType",
-    }
-
-    ctx := context.Background()
-    res, err := s.Classification.GetClassifications(ctx, req, operations.GetClassificationsSecurity{
+        Type: operations.GetClassificationsTypeEnumAlternateFeedType.ToPointer(),
+    }, operations.GetClassificationsSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -60,57 +57,57 @@ func main() {
 ## Available Resources and Operations
 
 
-### Classification
+### [Classification](docs/classification/README.md)
 
-* `GetClassifications` - Get a list of classifications
-* `GetClassificationsID` - Get a specific classification
+* [GetClassifications](docs/classification/README.md#getclassifications) - Get a list of classifications
+* [GetClassificationsID](docs/classification/README.md#getclassificationsid) - Get a specific classification
 
-### ClassificationInclusion
+### [ClassificationInclusion](docs/classificationinclusion/README.md)
 
-* `GetClassificationInclusions` - Get ClassificationInclusion records
-* `GetClassificationInclusionsID` - Get a specific classification inclusion
+* [GetClassificationInclusions](docs/classificationinclusion/README.md#getclassificationinclusions) - Get ClassificationInclusion records
+* [GetClassificationInclusionsID](docs/classificationinclusion/README.md#getclassificationinclusionsid) - Get a specific classification inclusion
 
-### Credit
+### [Credit](docs/credit/README.md)
 
-* `GetCredits` - Get a list of credits
-* `GetCreditsID` - Get a specific credit
+* [GetCredits](docs/credit/README.md#getcredits) - Get a list of credits
+* [GetCreditsID](docs/credit/README.md#getcreditsid) - Get a specific credit
 
-### Episode
+### [Episode](docs/episode/README.md)
 
-* `GetEpisodes` - Get a list of episodes
-* `GetEpisodesID` - Get a specific episode
-* `GetEpisodesIDNextSibling` - Get the episode released right after the specified one
-* `GetEpisodesIDPreviousSibling` - Get the episode released right before the specified one
+* [GetEpisodes](docs/episode/README.md#getepisodes) - Get a list of episodes
+* [GetEpisodesID](docs/episode/README.md#getepisodesid) - Get a specific episode
+* [GetEpisodesIDNextSibling](docs/episode/README.md#getepisodesidnextsibling) - Get the episode released right after the specified one
+* [GetEpisodesIDPreviousSibling](docs/episode/README.md#getepisodesidprevioussibling) - Get the episode released right before the specified one
 
-### Image
+### [Image](docs/image/README.md)
 
-* `GetImages` - Get a list of images
-* `GetImagesID` - Get a specific image
+* [GetImages](docs/image/README.md#getimages) - Get a list of images
+* [GetImagesID](docs/image/README.md#getimagesid) - Get a specific image
 
-### MediaAsset
+### [MediaAsset](docs/mediaasset/README.md)
 
-* `GetMediaAssets` - Get a list of media assets
-* `GetMediaAssetsID` - Get a specific media asset
+* [GetMediaAssets](docs/mediaasset/README.md#getmediaassets) - Get a list of media assets
+* [GetMediaAssetsID](docs/mediaasset/README.md#getmediaassetsid) - Get a specific media asset
 
-### Network
+### [Network](docs/network/README.md)
 
-* `GetNetworks` - Get a list of networks
-* `GetNetworksID` - Get a specific network
+* [GetNetworks](docs/network/README.md#getnetworks) - Get a list of networks
+* [GetNetworksID](docs/network/README.md#getnetworksid) - Get a specific network
 
-### Person
+### [Person](docs/person/README.md)
 
-* `GetPeople` - Get a list of people
-* `GetPeopleID` - Get a specific person
+* [GetPeople](docs/person/README.md#getpeople) - Get a list of people
+* [GetPeopleID](docs/person/README.md#getpeopleid) - Get a specific person
 
-### Season
+### [Season](docs/season/README.md)
 
-* `GetSeasons` - Get a list of seasons
-* `GetSeasonsID` - Get a specific season
+* [GetSeasons](docs/season/README.md#getseasons) - Get a list of seasons
+* [GetSeasonsID](docs/season/README.md#getseasonsid) - Get a specific season
 
-### Series
+### [Series](docs/series/README.md)
 
-* `GetSeries` - Get a list of series
-* `GetSeriesID` - Get a specific series
+* [GetSeries](docs/series/README.md#getseries) - Get a list of series
+* [GetSeriesID](docs/series/README.md#getseriesid) - Get a specific series
 <!-- End SDK Available Operations -->
 
 ### Maturity

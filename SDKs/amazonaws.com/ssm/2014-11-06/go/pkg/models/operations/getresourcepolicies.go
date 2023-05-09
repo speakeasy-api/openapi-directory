@@ -16,17 +16,21 @@ const (
 	GetResourcePoliciesXAmzTargetEnumAmazonSsmGetResourcePolicies GetResourcePoliciesXAmzTargetEnum = "AmazonSSM.GetResourcePolicies"
 )
 
+func (e GetResourcePoliciesXAmzTargetEnum) ToPointer() *GetResourcePoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourcePoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetResourcePolicies":
-		*e = GetResourcePoliciesXAmzTargetEnum(s)
+		*e = GetResourcePoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourcePoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourcePoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

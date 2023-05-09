@@ -16,17 +16,21 @@ const (
 	DeleteAccessXAmzTargetEnumTransferServiceDeleteAccess DeleteAccessXAmzTargetEnum = "TransferService.DeleteAccess"
 )
 
+func (e DeleteAccessXAmzTargetEnum) ToPointer() *DeleteAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DeleteAccess":
-		*e = DeleteAccessXAmzTargetEnum(s)
+		*e = DeleteAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAccessXAmzTargetEnum: %v", v)
 	}
 }
 

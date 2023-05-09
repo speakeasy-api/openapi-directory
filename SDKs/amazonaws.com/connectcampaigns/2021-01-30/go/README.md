@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/connectcamp
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,7 +28,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateCampaignRequest{
+    ctx := context.Background()
+    res, err := s.CreateCampaign(ctx, operations.CreateCampaignRequest{
         RequestBody: operations.CreateCampaignRequestBody{
             ConnectInstanceID: "corrupti",
             DialerConfig: operations.CreateCampaignRequestBodyDialerConfig{
@@ -39,33 +40,28 @@ func main() {
                     BandwidthAllocation: 7151.9,
                 },
             },
-            Name: "quibusdam",
+            Name: "Stuart Stiedemann",
             OutboundCallConfig: operations.CreateCampaignRequestBodyOutboundCallConfig{
                 AnswerMachineDetectionConfig: &shared.AnswerMachineDetectionConfig{
                     EnableAnswerMachineDetection: false,
                 },
-                ConnectContactFlowID: "unde",
-                ConnectQueueID: "nulla",
-                ConnectSourcePhoneNumber: "corrupti",
+                ConnectContactFlowID: sdk.String("vel"),
+                ConnectQueueID: sdk.String("error"),
+                ConnectSourcePhoneNumber: sdk.String("deserunt"),
             },
             Tags: map[string]string{
-                "vel": "error",
-                "deserunt": "suscipit",
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
         },
-        XAmzAlgorithm: "delectus",
-        XAmzContentSha256: "tempora",
-        XAmzCredential: "suscipit",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "minus",
-        XAmzSignature: "placeat",
-        XAmzSignedHeaders: "voluptatum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateCampaign(ctx, req)
+        XAmzAlgorithm: sdk.String("delectus"),
+        XAmzContentSha256: sdk.String("tempora"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("molestiae"),
+        XAmzSecurityToken: sdk.String("minus"),
+        XAmzSignature: sdk.String("placeat"),
+        XAmzSignedHeaders: sdk.String("voluptatum"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -80,30 +76,30 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateCampaign` - Creates a campaign for the specified Amazon Connect account. This API is idempotent.
-* `DeleteCampaign` - Deletes a campaign from the specified Amazon Connect account.
-* `DeleteConnectInstanceConfig` - Deletes a connect instance config from the specified AWS account.
-* `DeleteInstanceOnboardingJob` - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
-* `DescribeCampaign` - Describes the specific campaign.
-* `GetCampaignState` - Get state of a campaign for the specified Amazon Connect account.
-* `GetCampaignStateBatch` - Get state of campaigns for the specified Amazon Connect account.
-* `GetConnectInstanceConfig` - Get the specific Connect instance config.
-* `GetInstanceOnboardingJobStatus` - Get the specific instance onboarding job status.
-* `ListCampaigns` - Provides summary information about the campaigns under the specified Amazon Connect account.
-* `ListTagsForResource` - List tags for a resource.
-* `PauseCampaign` - Pauses a campaign for the specified Amazon Connect account.
-* `PutDialRequestBatch` - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
-* `ResumeCampaign` - Stops a campaign for the specified Amazon Connect account.
-* `StartCampaign` - Starts a campaign for the specified Amazon Connect account.
-* `StartInstanceOnboardingJob` - Onboard the specific Amazon Connect instance to Connect Campaigns.
-* `StopCampaign` - Stops a campaign for the specified Amazon Connect account.
-* `TagResource` - Tag a resource.
-* `UntagResource` - Untag a resource.
-* `UpdateCampaignDialerConfig` - Updates the dialer config of a campaign. This API is idempotent.
-* `UpdateCampaignName` - Updates the name of a campaign. This API is idempotent.
-* `UpdateCampaignOutboundCallConfig` - Updates the outbound call config of a campaign. This API is idempotent.
+* [CreateCampaign](docs/sdk/README.md#createcampaign) - Creates a campaign for the specified Amazon Connect account. This API is idempotent.
+* [DeleteCampaign](docs/sdk/README.md#deletecampaign) - Deletes a campaign from the specified Amazon Connect account.
+* [DeleteConnectInstanceConfig](docs/sdk/README.md#deleteconnectinstanceconfig) - Deletes a connect instance config from the specified AWS account.
+* [DeleteInstanceOnboardingJob](docs/sdk/README.md#deleteinstanceonboardingjob) - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
+* [DescribeCampaign](docs/sdk/README.md#describecampaign) - Describes the specific campaign.
+* [GetCampaignState](docs/sdk/README.md#getcampaignstate) - Get state of a campaign for the specified Amazon Connect account.
+* [GetCampaignStateBatch](docs/sdk/README.md#getcampaignstatebatch) - Get state of campaigns for the specified Amazon Connect account.
+* [GetConnectInstanceConfig](docs/sdk/README.md#getconnectinstanceconfig) - Get the specific Connect instance config.
+* [GetInstanceOnboardingJobStatus](docs/sdk/README.md#getinstanceonboardingjobstatus) - Get the specific instance onboarding job status.
+* [ListCampaigns](docs/sdk/README.md#listcampaigns) - Provides summary information about the campaigns under the specified Amazon Connect account.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - List tags for a resource.
+* [PauseCampaign](docs/sdk/README.md#pausecampaign) - Pauses a campaign for the specified Amazon Connect account.
+* [PutDialRequestBatch](docs/sdk/README.md#putdialrequestbatch) - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
+* [ResumeCampaign](docs/sdk/README.md#resumecampaign) - Stops a campaign for the specified Amazon Connect account.
+* [StartCampaign](docs/sdk/README.md#startcampaign) - Starts a campaign for the specified Amazon Connect account.
+* [StartInstanceOnboardingJob](docs/sdk/README.md#startinstanceonboardingjob) - Onboard the specific Amazon Connect instance to Connect Campaigns.
+* [StopCampaign](docs/sdk/README.md#stopcampaign) - Stops a campaign for the specified Amazon Connect account.
+* [TagResource](docs/sdk/README.md#tagresource) - Tag a resource.
+* [UntagResource](docs/sdk/README.md#untagresource) - Untag a resource.
+* [UpdateCampaignDialerConfig](docs/sdk/README.md#updatecampaigndialerconfig) - Updates the dialer config of a campaign. This API is idempotent.
+* [UpdateCampaignName](docs/sdk/README.md#updatecampaignname) - Updates the name of a campaign. This API is idempotent.
+* [UpdateCampaignOutboundCallConfig](docs/sdk/README.md#updatecampaignoutboundcallconfig) - Updates the outbound call config of a campaign. This API is idempotent.
 <!-- End SDK Available Operations -->
 
 ### Maturity

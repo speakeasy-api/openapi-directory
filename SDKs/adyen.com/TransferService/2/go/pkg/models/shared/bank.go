@@ -34,12 +34,16 @@ const (
 	BankPriorityEnumWire        BankPriorityEnum = "wire"
 )
 
+func (e BankPriorityEnum) ToPointer() *BankPriorityEnum {
+	return &e
+}
+
 func (e *BankPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crossBorder":
 		fallthrough
 	case "directDebit":
@@ -53,10 +57,10 @@ func (e *BankPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "regular":
 		fallthrough
 	case "wire":
-		*e = BankPriorityEnum(s)
+		*e = BankPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BankPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for BankPriorityEnum: %v", v)
 	}
 }
 

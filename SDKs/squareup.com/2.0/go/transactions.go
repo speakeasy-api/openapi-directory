@@ -39,7 +39,10 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // for more information.
 func (s *transactions) CaptureTransaction(ctx context.Context, request operations.CaptureTransactionRequest, security operations.CaptureTransactionSecurity) (*operations.CaptureTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/capture", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -103,7 +106,10 @@ func (s *transactions) CaptureTransaction(ctx context.Context, request operation
 // field of each [Tender included](https://developer.squareup.com/reference/square_2021-08-18/objects/Tender) in the transaction.
 func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequest, security operations.ChargeSecurity) (*operations.ChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChargeRequest", "json")
 	if err != nil {
@@ -163,7 +169,10 @@ func (s *transactions) Charge(ctx context.Context, request operations.ChargeRequ
 // Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
 func (s *transactions) ListTransactions(ctx context.Context, request operations.ListTransactionsRequest, security operations.ListTransactionsSecurity) (*operations.ListTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +221,10 @@ func (s *transactions) ListTransactions(ctx context.Context, request operations.
 // Retrieves details for a single transaction.
 func (s *transactions) RetrieveTransaction(ctx context.Context, request operations.RetrieveTransactionRequest, security operations.RetrieveTransactionSecurity) (*operations.RetrieveTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -261,7 +273,10 @@ func (s *transactions) RetrieveTransaction(ctx context.Context, request operatio
 // for more information.
 func (s *transactions) VoidTransaction(ctx context.Context, request operations.VoidTransactionRequest, security operations.VoidTransactionSecurity) (*operations.VoidTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/void", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -315,7 +330,10 @@ func (s *transactions) VoidTransaction(ctx context.Context, request operations.V
 // Max results per [page](https://developer.squareup.com/docs/working-with-apis/pagination): 50
 func (s *transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, request operations.GetV2LocationsLocationIDRefundsRequest, security operations.GetV2LocationsLocationIDRefundsSecurity) (*operations.GetV2LocationsLocationIDRefundsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/refunds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/refunds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -372,7 +390,10 @@ func (s *transactions) GetV2LocationsLocationIDRefunds(ctx context.Context, requ
 // in-person (e.g., dipping the card using POS app).
 func (s *transactions) PostV2LocationsLocationIDTransactionsTransactionIDRefund(ctx context.Context, request operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundRequest, security operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundSecurity) (*operations.PostV2LocationsLocationIDTransactionsTransactionIDRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/locations/{location_id}/transactions/{transaction_id}/refund", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateRefundRequest", "json")
 	if err != nil {

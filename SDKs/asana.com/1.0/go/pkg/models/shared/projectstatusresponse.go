@@ -18,12 +18,16 @@ const (
 	ProjectStatusResponseColorEnumBlue   ProjectStatusResponseColorEnum = "blue"
 )
 
+func (e ProjectStatusResponseColorEnum) ToPointer() *ProjectStatusResponseColorEnum {
+	return &e
+}
+
 func (e *ProjectStatusResponseColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "green":
 		fallthrough
 	case "yellow":
@@ -31,10 +35,10 @@ func (e *ProjectStatusResponseColorEnum) UnmarshalJSON(data []byte) error {
 	case "red":
 		fallthrough
 	case "blue":
-		*e = ProjectStatusResponseColorEnum(s)
+		*e = ProjectStatusResponseColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProjectStatusResponseColorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProjectStatusResponseColorEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	UpdateElasticIPXAmzTargetEnumOpsWorks20130218UpdateElasticIP UpdateElasticIPXAmzTargetEnum = "OpsWorks_20130218.UpdateElasticIp"
 )
 
+func (e UpdateElasticIPXAmzTargetEnum) ToPointer() *UpdateElasticIPXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateElasticIPXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.UpdateElasticIp":
-		*e = UpdateElasticIPXAmzTargetEnum(s)
+		*e = UpdateElasticIPXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateElasticIPXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateElasticIPXAmzTargetEnum: %v", v)
 	}
 }
 

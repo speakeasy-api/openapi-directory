@@ -178,7 +178,10 @@ func (s *labor) CreateShift(ctx context.Context, request shared.CreateShiftReque
 // A `BreakType` can be deleted even if it is referenced from a `Shift`.
 func (s *labor) DeleteBreakType(ctx context.Context, request operations.DeleteBreakTypeRequest, security operations.DeleteBreakTypeSecurity) (*operations.DeleteBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -223,7 +226,10 @@ func (s *labor) DeleteBreakType(ctx context.Context, request operations.DeleteBr
 // Deletes a `Shift`.
 func (s *labor) DeleteShift(ctx context.Context, request operations.DeleteShiftRequest, security operations.DeleteShiftSecurity) (*operations.DeleteShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -268,7 +274,10 @@ func (s *labor) DeleteShift(ctx context.Context, request operations.DeleteShiftR
 // Returns a single `BreakType` specified by `id`.
 func (s *labor) GetBreakType(ctx context.Context, request operations.GetBreakTypeRequest, security operations.GetBreakTypeSecurity) (*operations.GetBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -313,7 +322,10 @@ func (s *labor) GetBreakType(ctx context.Context, request operations.GetBreakTyp
 // Returns a single `EmployeeWage` specified by `id`.
 func (s *labor) GetEmployeeWage(ctx context.Context, request operations.GetEmployeeWageRequest, security operations.GetEmployeeWageSecurity) (*operations.GetEmployeeWageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/employee-wages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/employee-wages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,7 +370,10 @@ func (s *labor) GetEmployeeWage(ctx context.Context, request operations.GetEmplo
 // Returns a single `Shift` specified by `id`.
 func (s *labor) GetShift(ctx context.Context, request operations.GetShiftRequest, security operations.GetShiftSecurity) (*operations.GetShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -403,7 +418,10 @@ func (s *labor) GetShift(ctx context.Context, request operations.GetShiftRequest
 // Returns a single `TeamMemberWage` specified by `id `.
 func (s *labor) GetTeamMemberWage(ctx context.Context, request operations.GetTeamMemberWageRequest, security operations.GetTeamMemberWageSecurity) (*operations.GetTeamMemberWageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/team-member-wages/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/team-member-wages/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -712,7 +730,10 @@ func (s *labor) SearchShifts(ctx context.Context, request shared.SearchShiftsReq
 // Updates an existing `BreakType`.
 func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBreakTypeRequest, security operations.UpdateBreakTypeSecurity) (*operations.UpdateBreakTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/break-types/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateBreakTypeRequest", "json")
 	if err != nil {
@@ -773,7 +794,10 @@ func (s *labor) UpdateBreakType(ctx context.Context, request operations.UpdateBr
 // set on each `Break`.
 func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftRequest, security operations.UpdateShiftSecurity) (*operations.UpdateShiftResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/shifts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateShiftRequest", "json")
 	if err != nil {
@@ -828,7 +852,10 @@ func (s *labor) UpdateShift(ctx context.Context, request operations.UpdateShiftR
 // Updates a `WorkweekConfig`.
 func (s *labor) UpdateWorkweekConfig(ctx context.Context, request operations.UpdateWorkweekConfigRequest, security operations.UpdateWorkweekConfigSecurity) (*operations.UpdateWorkweekConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/labor/workweek-configs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/labor/workweek-configs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateWorkweekConfigRequest", "json")
 	if err != nil {

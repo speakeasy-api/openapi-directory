@@ -19,12 +19,16 @@ const (
 	ChangeOpEnumTest    ChangeOpEnum = "test"
 )
 
+func (e ChangeOpEnum) ToPointer() *ChangeOpEnum {
+	return &e
+}
+
 func (e *ChangeOpEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "add":
 		fallthrough
 	case "remove":
@@ -36,10 +40,10 @@ func (e *ChangeOpEnum) UnmarshalJSON(data []byte) error {
 	case "copy":
 		fallthrough
 	case "test":
-		*e = ChangeOpEnum(s)
+		*e = ChangeOpEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeOpEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeOpEnum: %v", v)
 	}
 }
 

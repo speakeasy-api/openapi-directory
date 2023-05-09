@@ -2,9 +2,9 @@
 
 package shared
 
-// NodePool - Provides GKE Node Pool information.
+// NodePool - Provides GKE node pool information.
 type NodePool struct {
-	// Kubernetes Node pool name.
+	// Kubernetes node pool name.
 	Name *string `json:"name,omitempty"`
 	// Nodes associated with the finding.
 	Nodes []Node `json:"nodes,omitempty"`

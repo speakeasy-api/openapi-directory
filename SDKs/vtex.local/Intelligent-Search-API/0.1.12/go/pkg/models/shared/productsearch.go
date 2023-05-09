@@ -23,19 +23,23 @@ const (
 	ProductSearchOperatorEnumOr  ProductSearchOperatorEnum = "or"
 )
 
+func (e ProductSearchOperatorEnum) ToPointer() *ProductSearchOperatorEnum {
+	return &e
+}
+
 func (e *ProductSearchOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "and":
 		fallthrough
 	case "or":
-		*e = ProductSearchOperatorEnum(s)
+		*e = ProductSearchOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductSearchOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductSearchOperatorEnum: %v", v)
 	}
 }
 

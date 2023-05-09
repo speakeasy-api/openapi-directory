@@ -17,12 +17,16 @@ const (
 	PartOfSpeechAspectEnumProgressive   PartOfSpeechAspectEnum = "PROGRESSIVE"
 )
 
+func (e PartOfSpeechAspectEnum) ToPointer() *PartOfSpeechAspectEnum {
+	return &e
+}
+
 func (e *PartOfSpeechAspectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASPECT_UNKNOWN":
 		fallthrough
 	case "PERFECTIVE":
@@ -30,10 +34,10 @@ func (e *PartOfSpeechAspectEnum) UnmarshalJSON(data []byte) error {
 	case "IMPERFECTIVE":
 		fallthrough
 	case "PROGRESSIVE":
-		*e = PartOfSpeechAspectEnum(s)
+		*e = PartOfSpeechAspectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechAspectEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechAspectEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	PartOfSpeechCaseEnumVocative      PartOfSpeechCaseEnum = "VOCATIVE"
 )
 
+func (e PartOfSpeechCaseEnum) ToPointer() *PartOfSpeechCaseEnum {
+	return &e
+}
+
 func (e *PartOfSpeechCaseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CASE_UNKNOWN":
 		fallthrough
 	case "ACCUSATIVE":
@@ -93,10 +101,10 @@ func (e *PartOfSpeechCaseEnum) UnmarshalJSON(data []byte) error {
 	case "RELATIVE_CASE":
 		fallthrough
 	case "VOCATIVE":
-		*e = PartOfSpeechCaseEnum(s)
+		*e = PartOfSpeechCaseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechCaseEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechCaseEnum: %v", v)
 	}
 }
 
@@ -118,12 +126,16 @@ const (
 	PartOfSpeechFormEnumSpecific       PartOfSpeechFormEnum = "SPECIFIC"
 )
 
+func (e PartOfSpeechFormEnum) ToPointer() *PartOfSpeechFormEnum {
+	return &e
+}
+
 func (e *PartOfSpeechFormEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORM_UNKNOWN":
 		fallthrough
 	case "ADNOMIAL":
@@ -147,10 +159,10 @@ func (e *PartOfSpeechFormEnum) UnmarshalJSON(data []byte) error {
 	case "ORDER":
 		fallthrough
 	case "SPECIFIC":
-		*e = PartOfSpeechFormEnum(s)
+		*e = PartOfSpeechFormEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechFormEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechFormEnum: %v", v)
 	}
 }
 
@@ -164,12 +176,16 @@ const (
 	PartOfSpeechGenderEnumNeuter        PartOfSpeechGenderEnum = "NEUTER"
 )
 
+func (e PartOfSpeechGenderEnum) ToPointer() *PartOfSpeechGenderEnum {
+	return &e
+}
+
 func (e *PartOfSpeechGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENDER_UNKNOWN":
 		fallthrough
 	case "FEMININE":
@@ -177,10 +193,10 @@ func (e *PartOfSpeechGenderEnum) UnmarshalJSON(data []byte) error {
 	case "MASCULINE":
 		fallthrough
 	case "NEUTER":
-		*e = PartOfSpeechGenderEnum(s)
+		*e = PartOfSpeechGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechGenderEnum: %v", v)
 	}
 }
 
@@ -197,12 +213,16 @@ const (
 	PartOfSpeechMoodEnumSubjunctive     PartOfSpeechMoodEnum = "SUBJUNCTIVE"
 )
 
+func (e PartOfSpeechMoodEnum) ToPointer() *PartOfSpeechMoodEnum {
+	return &e
+}
+
 func (e *PartOfSpeechMoodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MOOD_UNKNOWN":
 		fallthrough
 	case "CONDITIONAL_MOOD":
@@ -216,10 +236,10 @@ func (e *PartOfSpeechMoodEnum) UnmarshalJSON(data []byte) error {
 	case "JUSSIVE":
 		fallthrough
 	case "SUBJUNCTIVE":
-		*e = PartOfSpeechMoodEnum(s)
+		*e = PartOfSpeechMoodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechMoodEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechMoodEnum: %v", v)
 	}
 }
 
@@ -233,12 +253,16 @@ const (
 	PartOfSpeechNumberEnumDual          PartOfSpeechNumberEnum = "DUAL"
 )
 
+func (e PartOfSpeechNumberEnum) ToPointer() *PartOfSpeechNumberEnum {
+	return &e
+}
+
 func (e *PartOfSpeechNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NUMBER_UNKNOWN":
 		fallthrough
 	case "SINGULAR":
@@ -246,10 +270,10 @@ func (e *PartOfSpeechNumberEnum) UnmarshalJSON(data []byte) error {
 	case "PLURAL":
 		fallthrough
 	case "DUAL":
-		*e = PartOfSpeechNumberEnum(s)
+		*e = PartOfSpeechNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechNumberEnum: %v", v)
 	}
 }
 
@@ -264,12 +288,16 @@ const (
 	PartOfSpeechPersonEnumReflexivePerson PartOfSpeechPersonEnum = "REFLEXIVE_PERSON"
 )
 
+func (e PartOfSpeechPersonEnum) ToPointer() *PartOfSpeechPersonEnum {
+	return &e
+}
+
 func (e *PartOfSpeechPersonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSON_UNKNOWN":
 		fallthrough
 	case "FIRST":
@@ -279,10 +307,10 @@ func (e *PartOfSpeechPersonEnum) UnmarshalJSON(data []byte) error {
 	case "THIRD":
 		fallthrough
 	case "REFLEXIVE_PERSON":
-		*e = PartOfSpeechPersonEnum(s)
+		*e = PartOfSpeechPersonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechPersonEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechPersonEnum: %v", v)
 	}
 }
 
@@ -295,21 +323,25 @@ const (
 	PartOfSpeechProperEnumNotProper     PartOfSpeechProperEnum = "NOT_PROPER"
 )
 
+func (e PartOfSpeechProperEnum) ToPointer() *PartOfSpeechProperEnum {
+	return &e
+}
+
 func (e *PartOfSpeechProperEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROPER_UNKNOWN":
 		fallthrough
 	case "PROPER":
 		fallthrough
 	case "NOT_PROPER":
-		*e = PartOfSpeechProperEnum(s)
+		*e = PartOfSpeechProperEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechProperEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechProperEnum: %v", v)
 	}
 }
 
@@ -322,21 +354,25 @@ const (
 	PartOfSpeechReciprocityEnumNonReciprocal      PartOfSpeechReciprocityEnum = "NON_RECIPROCAL"
 )
 
+func (e PartOfSpeechReciprocityEnum) ToPointer() *PartOfSpeechReciprocityEnum {
+	return &e
+}
+
 func (e *PartOfSpeechReciprocityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECIPROCITY_UNKNOWN":
 		fallthrough
 	case "RECIPROCAL":
 		fallthrough
 	case "NON_RECIPROCAL":
-		*e = PartOfSpeechReciprocityEnum(s)
+		*e = PartOfSpeechReciprocityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechReciprocityEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechReciprocityEnum: %v", v)
 	}
 }
 
@@ -360,12 +396,16 @@ const (
 	PartOfSpeechTagEnumAffix   PartOfSpeechTagEnum = "AFFIX"
 )
 
+func (e PartOfSpeechTagEnum) ToPointer() *PartOfSpeechTagEnum {
+	return &e
+}
+
 func (e *PartOfSpeechTagEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ADJ":
@@ -393,10 +433,10 @@ func (e *PartOfSpeechTagEnum) UnmarshalJSON(data []byte) error {
 	case "X":
 		fallthrough
 	case "AFFIX":
-		*e = PartOfSpeechTagEnum(s)
+		*e = PartOfSpeechTagEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechTagEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechTagEnum: %v", v)
 	}
 }
 
@@ -413,12 +453,16 @@ const (
 	PartOfSpeechTenseEnumPluperfect       PartOfSpeechTenseEnum = "PLUPERFECT"
 )
 
+func (e PartOfSpeechTenseEnum) ToPointer() *PartOfSpeechTenseEnum {
+	return &e
+}
+
 func (e *PartOfSpeechTenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TENSE_UNKNOWN":
 		fallthrough
 	case "CONDITIONAL_TENSE":
@@ -432,10 +476,10 @@ func (e *PartOfSpeechTenseEnum) UnmarshalJSON(data []byte) error {
 	case "IMPERFECT":
 		fallthrough
 	case "PLUPERFECT":
-		*e = PartOfSpeechTenseEnum(s)
+		*e = PartOfSpeechTenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechTenseEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechTenseEnum: %v", v)
 	}
 }
 
@@ -449,12 +493,16 @@ const (
 	PartOfSpeechVoiceEnumPassive      PartOfSpeechVoiceEnum = "PASSIVE"
 )
 
+func (e PartOfSpeechVoiceEnum) ToPointer() *PartOfSpeechVoiceEnum {
+	return &e
+}
+
 func (e *PartOfSpeechVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOICE_UNKNOWN":
 		fallthrough
 	case "ACTIVE":
@@ -462,10 +510,10 @@ func (e *PartOfSpeechVoiceEnum) UnmarshalJSON(data []byte) error {
 	case "CAUSATIVE":
 		fallthrough
 	case "PASSIVE":
-		*e = PartOfSpeechVoiceEnum(s)
+		*e = PartOfSpeechVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartOfSpeechVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for PartOfSpeechVoiceEnum: %v", v)
 	}
 }
 

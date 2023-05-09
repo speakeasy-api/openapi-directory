@@ -16,17 +16,21 @@ const (
 	ListRescoreExecutionPlansXAmzTargetEnumAwsKendraRerankingFrontendServiceListRescoreExecutionPlans ListRescoreExecutionPlansXAmzTargetEnum = "AWSKendraRerankingFrontendService.ListRescoreExecutionPlans"
 )
 
+func (e ListRescoreExecutionPlansXAmzTargetEnum) ToPointer() *ListRescoreExecutionPlansXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRescoreExecutionPlansXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraRerankingFrontendService.ListRescoreExecutionPlans":
-		*e = ListRescoreExecutionPlansXAmzTargetEnum(s)
+		*e = ListRescoreExecutionPlansXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRescoreExecutionPlansXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRescoreExecutionPlansXAmzTargetEnum: %v", v)
 	}
 }
 

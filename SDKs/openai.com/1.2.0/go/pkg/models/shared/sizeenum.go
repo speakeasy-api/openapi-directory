@@ -16,20 +16,24 @@ const (
 	SizeEnumOneThousandAndTwentyFourx1024 SizeEnum = "1024x1024"
 )
 
+func (e SizeEnum) ToPointer() *SizeEnum {
+	return &e
+}
+
 func (e *SizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "256x256":
 		fallthrough
 	case "512x512":
 		fallthrough
 	case "1024x1024":
-		*e = SizeEnum(s)
+		*e = SizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SizeEnum: %s", s)
+		return fmt.Errorf("invalid value for SizeEnum: %v", v)
 	}
 }

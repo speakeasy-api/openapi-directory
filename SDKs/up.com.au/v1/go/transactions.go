@@ -47,7 +47,10 @@ func newTransactions(defaultClient, securityClient HTTPClient, serverURL, langua
 // to oldest last.
 func (s *transactions) GetAccountsAccountIDTransactions(ctx context.Context, request operations.GetAccountsAccountIDTransactionsRequest) (*operations.GetAccountsAccountIDTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -151,7 +154,10 @@ func (s *transactions) GetTransactions(ctx context.Context, request operations.G
 // Retrieve a specific transaction by providing its unique identifier.
 func (s *transactions) GetTransactionsID(ctx context.Context, request operations.GetTransactionsIDRequest) (*operations.GetTransactionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

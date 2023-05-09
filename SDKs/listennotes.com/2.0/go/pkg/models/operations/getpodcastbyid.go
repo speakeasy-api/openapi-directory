@@ -17,19 +17,23 @@ const (
 	GetPodcastByIDSortEnumOldestFirst GetPodcastByIDSortEnum = "oldest_first"
 )
 
+func (e GetPodcastByIDSortEnum) ToPointer() *GetPodcastByIDSortEnum {
+	return &e
+}
+
 func (e *GetPodcastByIDSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "recent_first":
 		fallthrough
 	case "oldest_first":
-		*e = GetPodcastByIDSortEnum(s)
+		*e = GetPodcastByIDSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPodcastByIDSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPodcastByIDSortEnum: %v", v)
 	}
 }
 

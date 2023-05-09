@@ -13,31 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openpolicy.local/0.28.0/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostCompileRequest{
+    ctx := context.Background()
+    res, err := s.CompileAPI.PostCompile(ctx, operations.PostCompileRequest{
         RequestBody: map[string]interface{}{
             "provident": "distinctio",
             "quibusdam": "unde",
             "nulla": "corrupti",
         },
-        Explain: "illum",
-        Instrument: false,
-        Metrics: false,
-        Pretty: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.CompileAPI.PostCompile(ctx, req)
+        Explain: sdk.String("illum"),
+        Instrument: sdk.Bool(false),
+        Metrics: sdk.Bool(false),
+        Pretty: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -53,39 +50,39 @@ func main() {
 ## Available Resources and Operations
 
 
-### CompileAPI
+### [CompileAPI](docs/compileapi/README.md)
 
-* `PostCompile` - Compile
+* [PostCompile](docs/compileapi/README.md#postcompile) - Compile
 
-### ConfigAPI
+### [ConfigAPI](docs/configapi/README.md)
 
-* `GetConfig` - Get configurations
+* [GetConfig](docs/configapi/README.md#getconfig) - Get configurations
 
-### DataAPI
+### [DataAPI](docs/dataapi/README.md)
 
-* `DeleteDocument` - Delete a document
-* `GetDocument` - Get a document
-* `GetDocumentWithPath` - Get a document (with input)
-* `GetDocumentWithWebHook` - Get a document (with webhook)
-* `PatchDocument` - Update a document
-* `PutDocument` - Create or overwrite a document
+* [DeleteDocument](docs/dataapi/README.md#deletedocument) - Delete a document
+* [GetDocument](docs/dataapi/README.md#getdocument) - Get a document
+* [GetDocumentWithPath](docs/dataapi/README.md#getdocumentwithpath) - Get a document (with input)
+* [GetDocumentWithWebHook](docs/dataapi/README.md#getdocumentwithwebhook) - Get a document (with webhook)
+* [PatchDocument](docs/dataapi/README.md#patchdocument) - Update a document
+* [PutDocument](docs/dataapi/README.md#putdocument) - Create or overwrite a document
 
-### HealthAPI
+### [HealthAPI](docs/healthapi/README.md)
 
-* `GetHealth` - Health
+* [GetHealth](docs/healthapi/README.md#gethealth) - Health
 
-### PolicyAPI
+### [PolicyAPI](docs/policyapi/README.md)
 
-* `DeletePolicyModule` - Delete a policy module
-* `GetPolicies` - List policies
-* `GetPolicyModule` - Get a policy module
-* `PutPolicyModule` - Create or update a policy module
+* [DeletePolicyModule](docs/policyapi/README.md#deletepolicymodule) - Delete a policy module
+* [GetPolicies](docs/policyapi/README.md#getpolicies) - List policies
+* [GetPolicyModule](docs/policyapi/README.md#getpolicymodule) - Get a policy module
+* [PutPolicyModule](docs/policyapi/README.md#putpolicymodule) - Create or update a policy module
 
-### QueryAPI
+### [QueryAPI](docs/queryapi/README.md)
 
-* `GetQuery` - Execute an ad-hoc query (simple)
-* `PostQuery` - Execute an ad-hoc query (complex)
-* `PostSimpleQuery` - Execute a simple query
+* [GetQuery](docs/queryapi/README.md#getquery) - Execute an ad-hoc query (simple)
+* [PostQuery](docs/queryapi/README.md#postquery) - Execute an ad-hoc query (complex)
+* [PostSimpleQuery](docs/queryapi/README.md#postsimplequery) - Execute a simple query
 <!-- End SDK Available Operations -->
 
 ### Maturity

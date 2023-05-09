@@ -46,7 +46,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Keep in mind that we currently do not support batch uploads for custom check types. Background checks created by batch upload are processed with low priority.
 func (s *reports) BatchUpload(ctx context.Context, request operations.BatchUploadRequest, security operations.BatchUploadSecurity) (*operations.BatchUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUploadInput", "multipart")
 	if err != nil {
@@ -168,7 +171,10 @@ func (s *reports) CreateReport(ctx context.Context, request shared.CreateReportI
 // Returns a report with the given ID.
 func (s *reports) GetReport(ctx context.Context, request operations.GetReportRequest, security operations.GetReportSecurity) (*operations.GetReportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/reports/{report_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

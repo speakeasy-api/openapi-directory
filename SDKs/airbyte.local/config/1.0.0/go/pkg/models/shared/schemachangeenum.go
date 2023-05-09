@@ -15,20 +15,24 @@ const (
 	SchemaChangeEnumBreaking    SchemaChangeEnum = "breaking"
 )
 
+func (e SchemaChangeEnum) ToPointer() *SchemaChangeEnum {
+	return &e
+}
+
 func (e *SchemaChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no_change":
 		fallthrough
 	case "non_breaking":
 		fallthrough
 	case "breaking":
-		*e = SchemaChangeEnum(s)
+		*e = SchemaChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchemaChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for SchemaChangeEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	WebhookEventTypesEnumContactRemoved     WebhookEventTypesEnum = "contact-removed"
 )
 
+func (e WebhookEventTypesEnum) ToPointer() *WebhookEventTypesEnum {
+	return &e
+}
+
 func (e *WebhookEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "message-received":
 		fallthrough
 	case "message-status":
@@ -38,10 +42,10 @@ func (e *WebhookEventTypesEnum) UnmarshalJSON(data []byte) error {
 	case "contact-updated":
 		fallthrough
 	case "contact-removed":
-		*e = WebhookEventTypesEnum(s)
+		*e = WebhookEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookEventTypesEnum: %v", v)
 	}
 }
 

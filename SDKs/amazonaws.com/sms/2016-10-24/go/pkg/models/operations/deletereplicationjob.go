@@ -16,17 +16,21 @@ const (
 	DeleteReplicationJobXAmzTargetEnumAwsServerMigrationServiceV20161024DeleteReplicationJob DeleteReplicationJobXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.DeleteReplicationJob"
 )
 
+func (e DeleteReplicationJobXAmzTargetEnum) ToPointer() *DeleteReplicationJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteReplicationJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.DeleteReplicationJob":
-		*e = DeleteReplicationJobXAmzTargetEnum(s)
+		*e = DeleteReplicationJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteReplicationJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteReplicationJobXAmzTargetEnum: %v", v)
 	}
 }
 

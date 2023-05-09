@@ -49,12 +49,16 @@ const (
 	DayOfExecutionEnumThirtyOne   DayOfExecutionEnum = "31"
 )
 
+func (e DayOfExecutionEnum) ToPointer() *DayOfExecutionEnum {
+	return &e
+}
+
 func (e *DayOfExecutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1":
 		fallthrough
 	case "2":
@@ -116,9 +120,9 @@ func (e *DayOfExecutionEnum) UnmarshalJSON(data []byte) error {
 	case "30":
 		fallthrough
 	case "31":
-		*e = DayOfExecutionEnum(s)
+		*e = DayOfExecutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DayOfExecutionEnum: %s", s)
+		return fmt.Errorf("invalid value for DayOfExecutionEnum: %v", v)
 	}
 }

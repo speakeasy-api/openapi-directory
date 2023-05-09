@@ -15,19 +15,23 @@ const (
 	DomainRedirectTypeEnumMovedPermanently        DomainRedirectTypeEnum = "MOVED_PERMANENTLY"
 )
 
+func (e DomainRedirectTypeEnum) ToPointer() *DomainRedirectTypeEnum {
+	return &e
+}
+
 func (e *DomainRedirectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REDIRECT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MOVED_PERMANENTLY":
-		*e = DomainRedirectTypeEnum(s)
+		*e = DomainRedirectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainRedirectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainRedirectTypeEnum: %v", v)
 	}
 }
 

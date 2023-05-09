@@ -87,7 +87,10 @@ func (s *emailTemplates) GetV2EmailTemplatesJSON(ctx context.Context, request op
 // Fetches an email template, by ID only.
 func (s *emailTemplates) GetV2EmailTemplatesIDJSON(ctx context.Context, request operations.GetV2EmailTemplatesIDJSONRequest) (*operations.GetV2EmailTemplatesIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/email_templates/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/email_templates/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

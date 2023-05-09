@@ -16,20 +16,24 @@ const (
 	ListOrderByEnumDateAdded   ListOrderByEnum = "date-added"
 )
 
+func (e ListOrderByEnum) ToPointer() *ListOrderByEnum {
+	return &e
+}
+
 func (e *ListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a-z":
 		fallthrough
 	case "release-year":
 		fallthrough
 	case "date-added":
-		*e = ListOrderByEnum(s)
+		*e = ListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOrderByEnum: %v", v)
 	}
 }

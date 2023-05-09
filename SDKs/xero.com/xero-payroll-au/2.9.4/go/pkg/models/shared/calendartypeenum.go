@@ -18,12 +18,16 @@ const (
 	CalendarTypeEnumQuarterly    CalendarTypeEnum = "QUARTERLY"
 )
 
+func (e CalendarTypeEnum) ToPointer() *CalendarTypeEnum {
+	return &e
+}
+
 func (e *CalendarTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEEKLY":
 		fallthrough
 	case "FORTNIGHTLY":
@@ -35,9 +39,9 @@ func (e *CalendarTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TWICEMONTHLY":
 		fallthrough
 	case "QUARTERLY":
-		*e = CalendarTypeEnum(s)
+		*e = CalendarTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarTypeEnum: %v", v)
 	}
 }

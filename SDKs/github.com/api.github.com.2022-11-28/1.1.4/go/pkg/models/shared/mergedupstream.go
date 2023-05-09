@@ -15,21 +15,25 @@ const (
 	MergedUpstreamMergeTypeEnumNone        MergedUpstreamMergeTypeEnum = "none"
 )
 
+func (e MergedUpstreamMergeTypeEnum) ToPointer() *MergedUpstreamMergeTypeEnum {
+	return &e
+}
+
 func (e *MergedUpstreamMergeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "merge":
 		fallthrough
 	case "fast-forward":
 		fallthrough
 	case "none":
-		*e = MergedUpstreamMergeTypeEnum(s)
+		*e = MergedUpstreamMergeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MergedUpstreamMergeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MergedUpstreamMergeTypeEnum: %v", v)
 	}
 }
 

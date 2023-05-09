@@ -16,17 +16,21 @@ const (
 	CloneStackXAmzTargetEnumOpsWorks20130218CloneStack CloneStackXAmzTargetEnum = "OpsWorks_20130218.CloneStack"
 )
 
+func (e CloneStackXAmzTargetEnum) ToPointer() *CloneStackXAmzTargetEnum {
+	return &e
+}
+
 func (e *CloneStackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.CloneStack":
-		*e = CloneStackXAmzTargetEnum(s)
+		*e = CloneStackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloneStackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CloneStackXAmzTargetEnum: %v", v)
 	}
 }
 

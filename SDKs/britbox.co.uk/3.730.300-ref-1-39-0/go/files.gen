@@ -12,6 +12,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -288,4 +289,15 @@ pkg/models/shared/registrationrequest.go
 pkg/models/shared/passwordresetemailrequest.go
 pkg/models/shared/subscriptiondetails.go
 pkg/models/shared/passwordresetrequest.go
+docs/sdk/README.md
+docs/account/README.md
+docs/app/README.md
+docs/authorization/README.md
+docs/bt/README.md
+docs/content/README.md
+docs/ee/README.md
+docs/itv/README.md
+docs/profile/README.md
+docs/registration/README.md
+docs/support/README.md
 USAGE.md

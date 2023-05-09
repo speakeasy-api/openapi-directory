@@ -17,12 +17,16 @@ const (
 	StackSetDriftDetectionStatusEnumStopped        StackSetDriftDetectionStatusEnum = "STOPPED"
 )
 
+func (e StackSetDriftDetectionStatusEnum) ToPointer() *StackSetDriftDetectionStatusEnum {
+	return &e
+}
+
 func (e *StackSetDriftDetectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLETED":
 		fallthrough
 	case "FAILED":
@@ -32,9 +36,9 @@ func (e *StackSetDriftDetectionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IN_PROGRESS":
 		fallthrough
 	case "STOPPED":
-		*e = StackSetDriftDetectionStatusEnum(s)
+		*e = StackSetDriftDetectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackSetDriftDetectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackSetDriftDetectionStatusEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTSetSecurityTokenServicePreferencesActionEnumSetSecurityTokenServicePreferences POSTSetSecurityTokenServicePreferencesActionEnum = "SetSecurityTokenServicePreferences"
 )
 
+func (e POSTSetSecurityTokenServicePreferencesActionEnum) ToPointer() *POSTSetSecurityTokenServicePreferencesActionEnum {
+	return &e
+}
+
 func (e *POSTSetSecurityTokenServicePreferencesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetSecurityTokenServicePreferences":
-		*e = POSTSetSecurityTokenServicePreferencesActionEnum(s)
+		*e = POSTSetSecurityTokenServicePreferencesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetSecurityTokenServicePreferencesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetSecurityTokenServicePreferencesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSetSecurityTokenServicePreferencesVersionEnumTwoThousandAndTen0508 POSTSetSecurityTokenServicePreferencesVersionEnum = "2010-05-08"
 )
 
+func (e POSTSetSecurityTokenServicePreferencesVersionEnum) ToPointer() *POSTSetSecurityTokenServicePreferencesVersionEnum {
+	return &e
+}
+
 func (e *POSTSetSecurityTokenServicePreferencesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTSetSecurityTokenServicePreferencesVersionEnum(s)
+		*e = POSTSetSecurityTokenServicePreferencesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSetSecurityTokenServicePreferencesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSetSecurityTokenServicePreferencesVersionEnum: %v", v)
 	}
 }
 

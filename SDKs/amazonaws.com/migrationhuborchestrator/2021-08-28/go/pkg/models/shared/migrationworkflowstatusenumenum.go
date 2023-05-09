@@ -26,12 +26,16 @@ const (
 	MigrationWorkflowStatusEnumEnumCompleted             MigrationWorkflowStatusEnumEnum = "COMPLETED"
 )
 
+func (e MigrationWorkflowStatusEnumEnum) ToPointer() *MigrationWorkflowStatusEnumEnum {
+	return &e
+}
+
 func (e *MigrationWorkflowStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "NOT_STARTED":
@@ -59,9 +63,9 @@ func (e *MigrationWorkflowStatusEnumEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "COMPLETED":
-		*e = MigrationWorkflowStatusEnumEnum(s)
+		*e = MigrationWorkflowStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MigrationWorkflowStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for MigrationWorkflowStatusEnumEnum: %v", v)
 	}
 }

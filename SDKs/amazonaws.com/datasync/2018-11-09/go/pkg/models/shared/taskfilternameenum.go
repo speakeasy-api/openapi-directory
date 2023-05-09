@@ -14,18 +14,22 @@ const (
 	TaskFilterNameEnumCreationTime TaskFilterNameEnum = "CreationTime"
 )
 
+func (e TaskFilterNameEnum) ToPointer() *TaskFilterNameEnum {
+	return &e
+}
+
 func (e *TaskFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LocationId":
 		fallthrough
 	case "CreationTime":
-		*e = TaskFilterNameEnum(s)
+		*e = TaskFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskFilterNameEnum: %v", v)
 	}
 }

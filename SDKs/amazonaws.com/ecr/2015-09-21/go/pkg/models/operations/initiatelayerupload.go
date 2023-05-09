@@ -16,17 +16,21 @@ const (
 	InitiateLayerUploadXAmzTargetEnumAmazonEc2ContainerRegistryV20150921InitiateLayerUpload InitiateLayerUploadXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload"
 )
 
+func (e InitiateLayerUploadXAmzTargetEnum) ToPointer() *InitiateLayerUploadXAmzTargetEnum {
+	return &e
+}
+
 func (e *InitiateLayerUploadXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.InitiateLayerUpload":
-		*e = InitiateLayerUploadXAmzTargetEnum(s)
+		*e = InitiateLayerUploadXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InitiateLayerUploadXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InitiateLayerUploadXAmzTargetEnum: %v", v)
 	}
 }
 

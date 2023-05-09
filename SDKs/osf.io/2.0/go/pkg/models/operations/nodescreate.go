@@ -24,12 +24,16 @@ const (
 	NodesCreateNodeAttributesCategoryEnumOther              NodesCreateNodeAttributesCategoryEnum = "other"
 )
 
+func (e NodesCreateNodeAttributesCategoryEnum) ToPointer() *NodesCreateNodeAttributesCategoryEnum {
+	return &e
+}
+
 func (e *NodesCreateNodeAttributesCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "analysis":
 		fallthrough
 	case "communication":
@@ -49,10 +53,10 @@ func (e *NodesCreateNodeAttributesCategoryEnum) UnmarshalJSON(data []byte) error
 	case "software":
 		fallthrough
 	case "other":
-		*e = NodesCreateNodeAttributesCategoryEnum(s)
+		*e = NodesCreateNodeAttributesCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodesCreateNodeAttributesCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for NodesCreateNodeAttributesCategoryEnum: %v", v)
 	}
 }
 

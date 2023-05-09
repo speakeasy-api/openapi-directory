@@ -15,17 +15,21 @@ const (
 	POSTModifyVerifiedAccessEndpointPolicyActionEnumModifyVerifiedAccessEndpointPolicy POSTModifyVerifiedAccessEndpointPolicyActionEnum = "ModifyVerifiedAccessEndpointPolicy"
 )
 
+func (e POSTModifyVerifiedAccessEndpointPolicyActionEnum) ToPointer() *POSTModifyVerifiedAccessEndpointPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTModifyVerifiedAccessEndpointPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyVerifiedAccessEndpointPolicy":
-		*e = POSTModifyVerifiedAccessEndpointPolicyActionEnum(s)
+		*e = POSTModifyVerifiedAccessEndpointPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessEndpointPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessEndpointPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyVerifiedAccessEndpointPolicyVersionEnumTwoThousandAndSixteen1115 POSTModifyVerifiedAccessEndpointPolicyVersionEnum = "2016-11-15"
 )
 
+func (e POSTModifyVerifiedAccessEndpointPolicyVersionEnum) ToPointer() *POSTModifyVerifiedAccessEndpointPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyVerifiedAccessEndpointPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTModifyVerifiedAccessEndpointPolicyVersionEnum(s)
+		*e = POSTModifyVerifiedAccessEndpointPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessEndpointPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyVerifiedAccessEndpointPolicyVersionEnum: %v", v)
 	}
 }
 

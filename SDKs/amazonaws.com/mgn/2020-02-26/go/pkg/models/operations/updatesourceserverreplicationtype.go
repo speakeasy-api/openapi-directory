@@ -17,19 +17,23 @@ const (
 	UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnumSnapshotShipping UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum = "SNAPSHOT_SHIPPING"
 )
 
+func (e UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum) ToPointer() *UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum {
+	return &e
+}
+
 func (e *UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGENT_BASED":
 		fallthrough
 	case "SNAPSHOT_SHIPPING":
-		*e = UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum(s)
+		*e = UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSourceServerReplicationTypeRequestBodyReplicationTypeEnum: %v", v)
 	}
 }
 

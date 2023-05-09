@@ -35,7 +35,10 @@ func newLeaderboards(defaultClient, securityClient HTTPClient, serverURL, langua
 // GamesLeaderboardsGet - Retrieves the metadata of the leaderboard with the given ID.
 func (s *leaderboards) GamesLeaderboardsGet(ctx context.Context, request operations.GamesLeaderboardsGetRequest, security operations.GamesLeaderboardsGetSecurity) (*operations.GamesLeaderboardsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/leaderboards/{leaderboardId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

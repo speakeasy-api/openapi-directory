@@ -9,23 +9,27 @@ import (
 )
 
 // GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum - Version of the service to call. The current version is 1
-type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum string
+type GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum int64
 
 const (
-	GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnumOne GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum = "1"
+	GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnumOne GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum = 1
 )
 
+func (e GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum) ToPointer() *GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "1":
-		*e = GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum(s)
+	switch v {
+	case 1:
+		*e = GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLVersionNumberEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnumOne00 GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum = "1.0.0"
 )
 
+func (e GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum) ToPointer() *GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum {
+	return &e
+}
+
 func (e *GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1.0.0":
-		*e = GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum(s)
+		*e = GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXMLWMTSVersionEnum: %v", v)
 	}
 }
 

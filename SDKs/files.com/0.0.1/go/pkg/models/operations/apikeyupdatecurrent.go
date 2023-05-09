@@ -22,12 +22,16 @@ const (
 	APIKeyUpdateCurrentRequestBodyPermissionSetEnumMobileApp         APIKeyUpdateCurrentRequestBodyPermissionSetEnum = "mobile_app"
 )
 
+func (e APIKeyUpdateCurrentRequestBodyPermissionSetEnum) ToPointer() *APIKeyUpdateCurrentRequestBodyPermissionSetEnum {
+	return &e
+}
+
 func (e *APIKeyUpdateCurrentRequestBodyPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "full":
@@ -39,10 +43,10 @@ func (e *APIKeyUpdateCurrentRequestBodyPermissionSetEnum) UnmarshalJSON(data []b
 	case "office_integration":
 		fallthrough
 	case "mobile_app":
-		*e = APIKeyUpdateCurrentRequestBodyPermissionSetEnum(s)
+		*e = APIKeyUpdateCurrentRequestBodyPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIKeyUpdateCurrentRequestBodyPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for APIKeyUpdateCurrentRequestBodyPermissionSetEnum: %v", v)
 	}
 }
 

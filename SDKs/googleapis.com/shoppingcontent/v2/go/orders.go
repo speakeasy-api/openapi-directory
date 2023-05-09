@@ -35,7 +35,10 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ContentOrdersAcknowledge - Marks an order as acknowledged.
 func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operations.ContentOrdersAcknowledgeRequest, security operations.ContentOrdersAcknowledgeSecurity) (*operations.ContentOrdersAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/acknowledge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/acknowledge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersAcknowledgeRequest", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *orders) ContentOrdersAcknowledge(ctx context.Context, request operation
 // ContentOrdersAdvancetestorder - Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
 func (s *orders) ContentOrdersAdvancetestorder(ctx context.Context, request operations.ContentOrdersAdvancetestorderRequest, security operations.ContentOrdersAdvancetestorderSecurity) (*operations.ContentOrdersAdvancetestorderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/advance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/advance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -138,7 +144,10 @@ func (s *orders) ContentOrdersAdvancetestorder(ctx context.Context, request oper
 // ContentOrdersCancel - Cancels all line items in an order, making a full refund.
 func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.ContentOrdersCancelRequest, security operations.ContentOrdersCancelSecurity) (*operations.ContentOrdersCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelRequest", "json")
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *orders) ContentOrdersCancel(ctx context.Context, request operations.Con
 // ContentOrdersCancellineitem - Cancels a line item, making a full refund.
 func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operations.ContentOrdersCancellineitemRequest, security operations.ContentOrdersCancellineitemSecurity) (*operations.ContentOrdersCancellineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancelLineItem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/cancelLineItem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelLineItemRequest", "json")
 	if err != nil {
@@ -248,7 +260,10 @@ func (s *orders) ContentOrdersCancellineitem(ctx context.Context, request operat
 // ContentOrdersCanceltestorderbycustomer - Sandbox only. Cancels a test order for customer-initiated cancellation.
 func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, request operations.ContentOrdersCanceltestorderbycustomerRequest, security operations.ContentOrdersCanceltestorderbycustomerSecurity) (*operations.ContentOrdersCanceltestorderbycustomerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/cancelByCustomer", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders/{orderId}/cancelByCustomer", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCancelTestOrderByCustomerRequest", "json")
 	if err != nil {
@@ -303,7 +318,10 @@ func (s *orders) ContentOrdersCanceltestorderbycustomer(ctx context.Context, req
 // ContentOrdersCreatetestorder - Sandbox only. Creates a test order.
 func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request operations.ContentOrdersCreatetestorderRequest, security operations.ContentOrdersCreatetestorderSecurity) (*operations.ContentOrdersCreatetestorderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testorders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCreateTestOrderRequest", "json")
 	if err != nil {
@@ -358,7 +376,10 @@ func (s *orders) ContentOrdersCreatetestorder(ctx context.Context, request opera
 // ContentOrdersCreatetestreturn - Sandbox only. Creates a test return.
 func (s *orders) ContentOrdersCreatetestreturn(ctx context.Context, request operations.ContentOrdersCreatetestreturnRequest, security operations.ContentOrdersCreatetestreturnSecurity) (*operations.ContentOrdersCreatetestreturnResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/testreturn", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/testreturn", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersCreateTestReturnRequest", "json")
 	if err != nil {
@@ -468,7 +489,10 @@ func (s *orders) ContentOrdersCustombatch(ctx context.Context, request operation
 // ContentOrdersGet - Retrieves an order from your Merchant Center account.
 func (s *orders) ContentOrdersGet(ctx context.Context, request operations.ContentOrdersGetRequest, security operations.ContentOrdersGetSecurity) (*operations.ContentOrdersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -516,7 +540,10 @@ func (s *orders) ContentOrdersGet(ctx context.Context, request operations.Conten
 // ContentOrdersGetbymerchantorderid - Retrieves an order using merchant order ID.
 func (s *orders) ContentOrdersGetbymerchantorderid(ctx context.Context, request operations.ContentOrdersGetbymerchantorderidRequest, security operations.ContentOrdersGetbymerchantorderidSecurity) (*operations.ContentOrdersGetbymerchantorderidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordersbymerchantid/{merchantOrderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/ordersbymerchantid/{merchantOrderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -564,7 +591,10 @@ func (s *orders) ContentOrdersGetbymerchantorderid(ctx context.Context, request 
 // ContentOrdersGettestordertemplate - Sandbox only. Retrieves an order template that can be used to quickly create a new order in sandbox.
 func (s *orders) ContentOrdersGettestordertemplate(ctx context.Context, request operations.ContentOrdersGettestordertemplateRequest, security operations.ContentOrdersGettestordertemplateSecurity) (*operations.ContentOrdersGettestordertemplateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testordertemplates/{templateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/testordertemplates/{templateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -612,7 +642,10 @@ func (s *orders) ContentOrdersGettestordertemplate(ctx context.Context, request 
 // ContentOrdersInstorerefundlineitem - Deprecated. Notifies that item return and refund was handled directly by merchant outside of Google payments processing (e.g. cash refund done in store). Note: We recommend calling the returnrefundlineitem method to refund in-store returns. We will issue the refund directly to the customer. This helps to prevent possible differences arising between merchant and Google transaction records. We also recommend having the point of sale system communicate with Google to ensure that customers do not receive a double refund by first refunding via Google then via an in-store return.
 func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request operations.ContentOrdersInstorerefundlineitemRequest, security operations.ContentOrdersInstorerefundlineitemSecurity) (*operations.ContentOrdersInstorerefundlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/inStoreRefundLineItem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/inStoreRefundLineItem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersInStoreRefundLineItemRequest", "json")
 	if err != nil {
@@ -667,7 +700,10 @@ func (s *orders) ContentOrdersInstorerefundlineitem(ctx context.Context, request
 // ContentOrdersList - Lists the orders in your Merchant Center account.
 func (s *orders) ContentOrdersList(ctx context.Context, request operations.ContentOrdersListRequest, security operations.ContentOrdersListSecurity) (*operations.ContentOrdersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -715,7 +751,10 @@ func (s *orders) ContentOrdersList(ctx context.Context, request operations.Conte
 // ContentOrdersRefund - Deprecated, please use returnRefundLineItem instead.
 func (s *orders) ContentOrdersRefund(ctx context.Context, request operations.ContentOrdersRefundRequest, security operations.ContentOrdersRefundSecurity) (*operations.ContentOrdersRefundResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refund", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/refund", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersRefundRequest", "json")
 	if err != nil {
@@ -770,7 +809,10 @@ func (s *orders) ContentOrdersRefund(ctx context.Context, request operations.Con
 // ContentOrdersRejectreturnlineitem - Rejects return on an line item.
 func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request operations.ContentOrdersRejectreturnlineitemRequest, security operations.ContentOrdersRejectreturnlineitemSecurity) (*operations.ContentOrdersRejectreturnlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/rejectReturnLineItem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/rejectReturnLineItem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersRejectReturnLineItemRequest", "json")
 	if err != nil {
@@ -825,7 +867,10 @@ func (s *orders) ContentOrdersRejectreturnlineitem(ctx context.Context, request 
 // ContentOrdersReturnlineitem - Returns a line item.
 func (s *orders) ContentOrdersReturnlineitem(ctx context.Context, request operations.ContentOrdersReturnlineitemRequest, security operations.ContentOrdersReturnlineitemSecurity) (*operations.ContentOrdersReturnlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnLineItem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnLineItem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersReturnLineItemRequest", "json")
 	if err != nil {
@@ -880,7 +925,10 @@ func (s *orders) ContentOrdersReturnlineitem(ctx context.Context, request operat
 // ContentOrdersReturnrefundlineitem - Returns and refunds a line item. Note that this method can only be called on fully shipped orders. Please also note that the Orderreturns API is the preferred way to handle returns after you receive a return from a customer. You can use Orderreturns.list or Orderreturns.get to search for the return, and then use Orderreturns.processreturn to issue the refund. If the return cannot be found, then we recommend using this API to issue a refund.
 func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request operations.ContentOrdersReturnrefundlineitemRequest, security operations.ContentOrdersReturnrefundlineitemSecurity) (*operations.ContentOrdersReturnrefundlineitemResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnRefundLineItem", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/returnRefundLineItem", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersReturnRefundLineItemRequest", "json")
 	if err != nil {
@@ -935,7 +983,10 @@ func (s *orders) ContentOrdersReturnrefundlineitem(ctx context.Context, request 
 // ContentOrdersSetlineitemmetadata - Sets (or overrides if it already exists) merchant provided annotations in the form of key-value pairs. A common use case would be to supply us with additional structured information about a line item that cannot be provided via other methods. Submitted key-value pairs can be retrieved as part of the orders resource.
 func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request operations.ContentOrdersSetlineitemmetadataRequest, security operations.ContentOrdersSetlineitemmetadataSecurity) (*operations.ContentOrdersSetlineitemmetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/setLineItemMetadata", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/setLineItemMetadata", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersSetLineItemMetadataRequest", "json")
 	if err != nil {
@@ -990,7 +1041,10 @@ func (s *orders) ContentOrdersSetlineitemmetadata(ctx context.Context, request o
 // ContentOrdersShiplineitems - Marks line item(s) as shipped.
 func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operations.ContentOrdersShiplineitemsRequest, security operations.ContentOrdersShiplineitemsSecurity) (*operations.ContentOrdersShiplineitemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/shipLineItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/shipLineItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersShipLineItemsRequest", "json")
 	if err != nil {
@@ -1045,7 +1099,10 @@ func (s *orders) ContentOrdersShiplineitems(ctx context.Context, request operati
 // ContentOrdersUpdatelineitemshippingdetails - Updates ship by and delivery by dates for a line item.
 func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context, request operations.ContentOrdersUpdatelineitemshippingdetailsRequest, security operations.ContentOrdersUpdatelineitemshippingdetailsSecurity) (*operations.ContentOrdersUpdatelineitemshippingdetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateLineItemShippingDetails", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateLineItemShippingDetails", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateLineItemShippingDetailsRequest", "json")
 	if err != nil {
@@ -1100,7 +1157,10 @@ func (s *orders) ContentOrdersUpdatelineitemshippingdetails(ctx context.Context,
 // ContentOrdersUpdatemerchantorderid - Updates the merchant order ID for a given order.
 func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request operations.ContentOrdersUpdatemerchantorderidRequest, security operations.ContentOrdersUpdatemerchantorderidSecurity) (*operations.ContentOrdersUpdatemerchantorderidResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateMerchantOrderId", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateMerchantOrderId", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateMerchantOrderIDRequest", "json")
 	if err != nil {
@@ -1155,7 +1215,10 @@ func (s *orders) ContentOrdersUpdatemerchantorderid(ctx context.Context, request
 // ContentOrdersUpdateshipment - Updates a shipment's status, carrier, and/or tracking ID.
 func (s *orders) ContentOrdersUpdateshipment(ctx context.Context, request operations.ContentOrdersUpdateshipmentRequest, security operations.ContentOrdersUpdateshipmentSecurity) (*operations.ContentOrdersUpdateshipmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateShipment", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orders/{orderId}/updateShipment", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrdersUpdateShipmentRequest", "json")
 	if err != nil {

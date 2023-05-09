@@ -16,21 +16,25 @@ const (
 	CertificateReferenceStoreLocationEnumUnmapped     CertificateReferenceStoreLocationEnum = "unmapped"
 )
 
+func (e CertificateReferenceStoreLocationEnum) ToPointer() *CertificateReferenceStoreLocationEnum {
+	return &e
+}
+
 func (e *CertificateReferenceStoreLocationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "currentuser":
 		fallthrough
 	case "localmachine":
 		fallthrough
 	case "unmapped":
-		*e = CertificateReferenceStoreLocationEnum(s)
+		*e = CertificateReferenceStoreLocationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateReferenceStoreLocationEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateReferenceStoreLocationEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	CertificateReferenceVisibilityEnumUnmapped   CertificateReferenceVisibilityEnum = "unmapped"
 )
 
+func (e CertificateReferenceVisibilityEnum) ToPointer() *CertificateReferenceVisibilityEnum {
+	return &e
+}
+
 func (e *CertificateReferenceVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "starttask":
 		fallthrough
 	case "task":
@@ -56,10 +64,10 @@ func (e *CertificateReferenceVisibilityEnum) UnmarshalJSON(data []byte) error {
 	case "remoteuser":
 		fallthrough
 	case "unmapped":
-		*e = CertificateReferenceVisibilityEnum(s)
+		*e = CertificateReferenceVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateReferenceVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateReferenceVisibilityEnum: %v", v)
 	}
 }
 

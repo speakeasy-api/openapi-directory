@@ -96,7 +96,10 @@ func (s *transactionProcess) OneCreateanewtransaction(ctx context.Context, reque
 // The second step to create a new transaction. Here, you have the option to send the data in three diferent ways: doing a private request, a public request or a private request that uses a saved Credit Card.
 func (s *transactionProcess) TwoSendPaymentsPublic(ctx context.Context, request operations.TwoSendPaymentsPublicRequest) (*operations.TwoSendPaymentsPublicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pub/transactions/{transactionId}/payments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pub/transactions/{transactionId}/payments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *transactionProcess) TwoSendPaymentsPublic(ctx context.Context, request 
 // The second step to create a new transaction. Here, you have the option to send the data in three diferent ways: doing a private request, a public request or a private request that uses a saved Credit Card.
 func (s *transactionProcess) TwoSendPaymentsWithSavedCreditCard(ctx context.Context, request operations.TwoSendPaymentsWithSavedCreditCardRequest) (*operations.TwoSendPaymentsWithSavedCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/payments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/payments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -196,7 +202,10 @@ func (s *transactionProcess) TwoSendPaymentsWithSavedCreditCard(ctx context.Cont
 // The third step to create a new transaction. It will send the additional related data to the transaction, like billig and shipping adress.
 func (s *transactionProcess) ThreeSendAdditionalData(ctx context.Context, request operations.ThreeSendAdditionalDataRequest) (*operations.ThreeSendAdditionalDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/additional-data", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/additional-data", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -244,7 +253,10 @@ func (s *transactionProcess) ThreeSendAdditionalData(ctx context.Context, reques
 // The fouth and last step to create a new transaction. It will authorized the new transction creation acorrdint to the data previously informed in the latests requests.
 func (s *transactionProcess) FourDoauthorization(ctx context.Context, request operations.FourDoauthorizationRequest) (*operations.FourDoauthorizationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/authorization-request", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/authorization-request", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FourDoauthorizationRequest", "json")
 	if err != nil {
@@ -292,7 +304,10 @@ func (s *transactionProcess) FourDoauthorization(ctx context.Context, request op
 // Returns associated information details for the specified payment id.
 func (s *transactionProcess) PaymentDetails(ctx context.Context, request operations.PaymentDetailsRequest) (*operations.PaymentDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/payments/{paymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/payments/{paymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -341,7 +356,10 @@ func (s *transactionProcess) PaymentDetails(ctx context.Context, request operati
 // Returns associated data for the specified transaction id, like value and status, for exemple.
 func (s *transactionProcess) TransactionDetails(ctx context.Context, request operations.TransactionDetailsRequest) (*operations.TransactionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -390,7 +408,10 @@ func (s *transactionProcess) TransactionDetails(ctx context.Context, request ope
 // Returns associated settlements data for the specified transaction id.
 func (s *transactionProcess) TransactionSettlementDetails(ctx context.Context, request operations.TransactionSettlementDetailsRequest) (*operations.TransactionSettlementDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/settlements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/pvt/transactions/{transactionId}/settlements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

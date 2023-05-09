@@ -40,7 +40,10 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 //	See the format specification for further details.
 func (s *comments) GetCommentByID(ctx context.Context, request operations.GetCommentByIDRequest) (*operations.GetCommentByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/comments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/comments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

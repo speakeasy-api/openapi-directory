@@ -34,7 +34,10 @@ func newCities(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // DfareportingCitiesList - Retrieves a list of cities, possibly filtered.
 func (s *cities) DfareportingCitiesList(ctx context.Context, request operations.DfareportingCitiesListRequest, security operations.DfareportingCitiesListSecurity) (*operations.DfareportingCitiesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/cities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/cities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

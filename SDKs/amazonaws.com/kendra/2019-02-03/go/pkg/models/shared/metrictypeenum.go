@@ -18,12 +18,16 @@ const (
 	MetricTypeEnumTrendQueryDocMetrics    MetricTypeEnum = "TREND_QUERY_DOC_METRICS"
 )
 
+func (e MetricTypeEnum) ToPointer() *MetricTypeEnum {
+	return &e
+}
+
 func (e *MetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERIES_BY_COUNT":
 		fallthrough
 	case "QUERIES_BY_ZERO_CLICK_RATE":
@@ -35,9 +39,9 @@ func (e *MetricTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AGG_QUERY_DOC_METRICS":
 		fallthrough
 	case "TREND_QUERY_DOC_METRICS":
-		*e = MetricTypeEnum(s)
+		*e = MetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	FeatureStateCodeEnumError           FeatureStateCodeEnum = "ERROR"
 )
 
+func (e FeatureStateCodeEnum) ToPointer() *FeatureStateCodeEnum {
+	return &e
+}
+
 func (e *FeatureStateCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "OK":
@@ -30,10 +34,10 @@ func (e *FeatureStateCodeEnum) UnmarshalJSON(data []byte) error {
 	case "WARNING":
 		fallthrough
 	case "ERROR":
-		*e = FeatureStateCodeEnum(s)
+		*e = FeatureStateCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeatureStateCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeatureStateCodeEnum: %v", v)
 	}
 }
 

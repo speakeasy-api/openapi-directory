@@ -14,18 +14,22 @@ const (
 	DistanceUnitEnumMiles      DistanceUnitEnum = "Miles"
 )
 
+func (e DistanceUnitEnum) ToPointer() *DistanceUnitEnum {
+	return &e
+}
+
 func (e *DistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kilometers":
 		fallthrough
 	case "Miles":
-		*e = DistanceUnitEnum(s)
+		*e = DistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for DistanceUnitEnum: %v", v)
 	}
 }

@@ -15,19 +15,23 @@ const (
 	PicoSettingsDtoAuthenticationTypeEnumBackend PicoSettingsDtoAuthenticationTypeEnum = "Backend"
 )
 
+func (e PicoSettingsDtoAuthenticationTypeEnum) ToPointer() *PicoSettingsDtoAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *PicoSettingsDtoAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Backend":
-		*e = PicoSettingsDtoAuthenticationTypeEnum(s)
+		*e = PicoSettingsDtoAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PicoSettingsDtoAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PicoSettingsDtoAuthenticationTypeEnum: %v", v)
 	}
 }
 

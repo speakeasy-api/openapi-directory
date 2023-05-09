@@ -15,17 +15,21 @@ const (
 	GETStartDBInstanceAutomatedBackupsReplicationActionEnumStartDbInstanceAutomatedBackupsReplication GETStartDBInstanceAutomatedBackupsReplicationActionEnum = "StartDBInstanceAutomatedBackupsReplication"
 )
 
+func (e GETStartDBInstanceAutomatedBackupsReplicationActionEnum) ToPointer() *GETStartDBInstanceAutomatedBackupsReplicationActionEnum {
+	return &e
+}
+
 func (e *GETStartDBInstanceAutomatedBackupsReplicationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartDBInstanceAutomatedBackupsReplication":
-		*e = GETStartDBInstanceAutomatedBackupsReplicationActionEnum(s)
+		*e = GETStartDBInstanceAutomatedBackupsReplicationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartDBInstanceAutomatedBackupsReplicationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartDBInstanceAutomatedBackupsReplicationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStartDBInstanceAutomatedBackupsReplicationVersionEnumTwoThousandAndFourteen1031 GETStartDBInstanceAutomatedBackupsReplicationVersionEnum = "2014-10-31"
 )
 
+func (e GETStartDBInstanceAutomatedBackupsReplicationVersionEnum) ToPointer() *GETStartDBInstanceAutomatedBackupsReplicationVersionEnum {
+	return &e
+}
+
 func (e *GETStartDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStartDBInstanceAutomatedBackupsReplicationVersionEnum(s)
+		*e = GETStartDBInstanceAutomatedBackupsReplicationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartDBInstanceAutomatedBackupsReplicationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartDBInstanceAutomatedBackupsReplicationVersionEnum: %v", v)
 	}
 }
 

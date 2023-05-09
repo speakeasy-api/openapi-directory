@@ -35,7 +35,10 @@ func newPropertyController(defaultClient, securityClient HTTPClient, serverURL, 
 // PropertyControllerGetPropertiesPhotos - A collection showing all the photos linked to a specific block, property or room
 func (s *propertyController) PropertyControllerGetPropertiesPhotos(ctx context.Context, request operations.PropertyControllerGetPropertiesPhotosRequest) (*operations.PropertyControllerGetPropertiesPhotosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/property/{propertyID}/photos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/customer/{shortName}/property/{propertyID}/photos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

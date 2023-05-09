@@ -19,12 +19,16 @@ const (
 	ScalingConfigInstanceSizeEnumExtraLarge              ScalingConfigInstanceSizeEnum = "EXTRA_LARGE"
 )
 
+func (e ScalingConfigInstanceSizeEnum) ToPointer() *ScalingConfigInstanceSizeEnum {
+	return &e
+}
+
 func (e *ScalingConfigInstanceSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANCE_SIZE_UNSPECIFIED":
 		fallthrough
 	case "EXTRA_SMALL":
@@ -36,10 +40,10 @@ func (e *ScalingConfigInstanceSizeEnum) UnmarshalJSON(data []byte) error {
 	case "LARGE":
 		fallthrough
 	case "EXTRA_LARGE":
-		*e = ScalingConfigInstanceSizeEnum(s)
+		*e = ScalingConfigInstanceSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScalingConfigInstanceSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScalingConfigInstanceSizeEnum: %v", v)
 	}
 }
 

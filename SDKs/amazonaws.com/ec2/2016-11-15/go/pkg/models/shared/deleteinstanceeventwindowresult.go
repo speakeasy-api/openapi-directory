@@ -17,12 +17,16 @@ const (
 	DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnumDeleted  DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum = "deleted"
 )
 
+func (e DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum) ToPointer() *DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum {
+	return &e
+}
+
 func (e *DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "deleting":
@@ -30,10 +34,10 @@ func (e *DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum) Unmar
 	case "active":
 		fallthrough
 	case "deleted":
-		*e = DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum(s)
+		*e = DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteInstanceEventWindowResultInstanceEventWindowStateStateEnum: %v", v)
 	}
 }
 

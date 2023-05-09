@@ -25,12 +25,16 @@ const (
 	RouteInfoNextHopTypeEnumNextHopRouterAppliance RouteInfoNextHopTypeEnum = "NEXT_HOP_ROUTER_APPLIANCE"
 )
 
+func (e RouteInfoNextHopTypeEnum) ToPointer() *RouteInfoNextHopTypeEnum {
+	return &e
+}
+
 func (e *RouteInfoNextHopTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NEXT_HOP_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NEXT_HOP_IP":
@@ -54,10 +58,10 @@ func (e *RouteInfoNextHopTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NEXT_HOP_ILB":
 		fallthrough
 	case "NEXT_HOP_ROUTER_APPLIANCE":
-		*e = RouteInfoNextHopTypeEnum(s)
+		*e = RouteInfoNextHopTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteInfoNextHopTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteInfoNextHopTypeEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	RouteInfoRouteTypeEnumPolicyBased          RouteInfoRouteTypeEnum = "POLICY_BASED"
 )
 
+func (e RouteInfoRouteTypeEnum) ToPointer() *RouteInfoRouteTypeEnum {
+	return &e
+}
+
 func (e *RouteInfoRouteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROUTE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SUBNET":
@@ -96,10 +104,10 @@ func (e *RouteInfoRouteTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PEERING_DYNAMIC":
 		fallthrough
 	case "POLICY_BASED":
-		*e = RouteInfoRouteTypeEnum(s)
+		*e = RouteInfoRouteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RouteInfoRouteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RouteInfoRouteTypeEnum: %v", v)
 	}
 }
 

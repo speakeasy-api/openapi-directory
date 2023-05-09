@@ -103,7 +103,10 @@ func (s *directoryAPI) GetBestPodcasts(ctx context.Context, request operations.G
 // This endpoint returns same data as https://www.listennotes.com/curated-podcasts/
 func (s *directoryAPI) GetCuratedPodcastByID(ctx context.Context, request operations.GetCuratedPodcastByIDRequest) (*operations.GetCuratedPodcastByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/curated_podcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/curated_podcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +220,10 @@ func (s *directoryAPI) GetCuratedPodcasts(ctx context.Context, request operation
 // Fetch detailed meta data for a specific episode.
 func (s *directoryAPI) GetEpisodeByID(ctx context.Context, request operations.GetEpisodeByIDRequest) (*operations.GetEpisodeByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/episodes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -277,7 +283,10 @@ func (s *directoryAPI) GetEpisodeByID(ctx context.Context, request operations.Ge
 // Fetch up to 8 episode recommendations based on the given episode id.
 func (s *directoryAPI) GetEpisodeRecommendations(ctx context.Context, request operations.GetEpisodeRecommendationsRequest) (*operations.GetEpisodeRecommendationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/recommendations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/episodes/{id}/recommendations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -517,7 +526,10 @@ func (s *directoryAPI) GetLanguages(ctx context.Context, request operations.GetL
 // You can use the **next_episode_pub_date** parameter to do pagination and fetch more episodes.
 func (s *directoryAPI) GetPodcastByID(ctx context.Context, request operations.GetPodcastByIDRequest) (*operations.GetPodcastByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -577,7 +589,10 @@ func (s *directoryAPI) GetPodcastByID(ctx context.Context, request operations.Ge
 // Fetch up to 8 podcast recommendations based on the given podcast id.
 func (s *directoryAPI) GetPodcastRecommendations(ctx context.Context, request operations.GetPodcastRecommendationsRequest) (*operations.GetPodcastRecommendationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/recommendations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/podcasts/{id}/recommendations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

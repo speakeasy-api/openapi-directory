@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CorrelationRequest{
-        Limit: "1000",
-        Tokens: "3375, 3306",
-    }
-
     ctx := context.Background()
-    res, err := s.Correlation(ctx, req)
+    res, err := s.Correlation(ctx, operations.CorrelationRequest{
+        Limit: sdk.String("1000"),
+        Tokens: sdk.String("3375, 3306"),
+    })
     if err != nil {
         log.Fatal(err)
     }

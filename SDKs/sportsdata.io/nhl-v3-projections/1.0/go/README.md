@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nhl-v3-proj
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        Date: "corrupti",
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DfsSlatesByDate(ctx, operations.DfsSlatesByDateRequest{
+        Date: "corrupti",
+        Format: operations.DfsSlatesByDateFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,13 +46,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DfsSlatesByDate` - DFS Slates by Date
-* `InjuredPlayers` - Injured Players
-* `ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries` - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
-* `ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries` - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
-* `StartingGoaltendersByDate` - Starting Goaltenders by Date
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [InjuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewinjuriesdfssalaries) - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
+* [ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwinjuriesdfssalaries) - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
+* [StartingGoaltendersByDate](docs/sdk/README.md#startinggoaltendersbydate) - Starting Goaltenders by Date
 <!-- End SDK Available Operations -->
 
 ### Maturity

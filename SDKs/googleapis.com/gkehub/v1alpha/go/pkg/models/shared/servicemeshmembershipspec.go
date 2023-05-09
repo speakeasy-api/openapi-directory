@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// ServiceMeshMembershipSpecControlPlaneEnum - Enables automatic control plane management.
+// ServiceMeshMembershipSpecControlPlaneEnum - Deprecated: use `management` instead Enables automatic control plane management.
 type ServiceMeshMembershipSpecControlPlaneEnum string
 
 const (
@@ -16,21 +16,25 @@ const (
 	ServiceMeshMembershipSpecControlPlaneEnumManual                            ServiceMeshMembershipSpecControlPlaneEnum = "MANUAL"
 )
 
+func (e ServiceMeshMembershipSpecControlPlaneEnum) ToPointer() *ServiceMeshMembershipSpecControlPlaneEnum {
+	return &e
+}
+
 func (e *ServiceMeshMembershipSpecControlPlaneEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTROL_PLANE_MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "AUTOMATIC":
 		fallthrough
 	case "MANUAL":
-		*e = ServiceMeshMembershipSpecControlPlaneEnum(s)
+		*e = ServiceMeshMembershipSpecControlPlaneEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecControlPlaneEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecControlPlaneEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	ServiceMeshMembershipSpecDefaultChannelEnumStable             ServiceMeshMembershipSpecDefaultChannelEnum = "STABLE"
 )
 
+func (e ServiceMeshMembershipSpecDefaultChannelEnum) ToPointer() *ServiceMeshMembershipSpecDefaultChannelEnum {
+	return &e
+}
+
 func (e *ServiceMeshMembershipSpecDefaultChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "RAPID":
@@ -57,10 +65,10 @@ func (e *ServiceMeshMembershipSpecDefaultChannelEnum) UnmarshalJSON(data []byte)
 	case "REGULAR":
 		fallthrough
 	case "STABLE":
-		*e = ServiceMeshMembershipSpecDefaultChannelEnum(s)
+		*e = ServiceMeshMembershipSpecDefaultChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecDefaultChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecDefaultChannelEnum: %v", v)
 	}
 }
 
@@ -73,27 +81,31 @@ const (
 	ServiceMeshMembershipSpecManagementEnumManagementManual      ServiceMeshMembershipSpecManagementEnum = "MANAGEMENT_MANUAL"
 )
 
+func (e ServiceMeshMembershipSpecManagementEnum) ToPointer() *ServiceMeshMembershipSpecManagementEnum {
+	return &e
+}
+
 func (e *ServiceMeshMembershipSpecManagementEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_UNSPECIFIED":
 		fallthrough
 	case "MANAGEMENT_AUTOMATIC":
 		fallthrough
 	case "MANAGEMENT_MANUAL":
-		*e = ServiceMeshMembershipSpecManagementEnum(s)
+		*e = ServiceMeshMembershipSpecManagementEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecManagementEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceMeshMembershipSpecManagementEnum: %v", v)
 	}
 }
 
 // ServiceMeshMembershipSpec - **Service Mesh**: Spec for a single Membership for the servicemesh feature
 type ServiceMeshMembershipSpec struct {
-	// Enables automatic control plane management.
+	// Deprecated: use `management` instead Enables automatic control plane management.
 	ControlPlane *ServiceMeshMembershipSpecControlPlaneEnum `json:"controlPlane,omitempty"`
 	// Determines which release channel to use for default injection and service mesh APIs.
 	DefaultChannel *ServiceMeshMembershipSpecDefaultChannelEnum `json:"defaultChannel,omitempty"`

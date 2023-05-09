@@ -17,12 +17,16 @@ const (
 	GoogleAnalyticsAdminV1alphaDataStreamTypeEnumIosAppDataStream          GoogleAnalyticsAdminV1alphaDataStreamTypeEnum = "IOS_APP_DATA_STREAM"
 )
 
+func (e GoogleAnalyticsAdminV1alphaDataStreamTypeEnum) ToPointer() *GoogleAnalyticsAdminV1alphaDataStreamTypeEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaDataStreamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_STREAM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "WEB_DATA_STREAM":
@@ -30,10 +34,10 @@ func (e *GoogleAnalyticsAdminV1alphaDataStreamTypeEnum) UnmarshalJSON(data []byt
 	case "ANDROID_APP_DATA_STREAM":
 		fallthrough
 	case "IOS_APP_DATA_STREAM":
-		*e = GoogleAnalyticsAdminV1alphaDataStreamTypeEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaDataStreamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaDataStreamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaDataStreamTypeEnum: %v", v)
 	}
 }
 

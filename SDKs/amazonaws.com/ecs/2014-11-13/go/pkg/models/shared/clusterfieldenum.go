@@ -17,12 +17,16 @@ const (
 	ClusterFieldEnumTags           ClusterFieldEnum = "TAGS"
 )
 
+func (e ClusterFieldEnum) ToPointer() *ClusterFieldEnum {
+	return &e
+}
+
 func (e *ClusterFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTACHMENTS":
 		fallthrough
 	case "CONFIGURATIONS":
@@ -32,9 +36,9 @@ func (e *ClusterFieldEnum) UnmarshalJSON(data []byte) error {
 	case "STATISTICS":
 		fallthrough
 	case "TAGS":
-		*e = ClusterFieldEnum(s)
+		*e = ClusterFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterFieldEnum: %v", v)
 	}
 }

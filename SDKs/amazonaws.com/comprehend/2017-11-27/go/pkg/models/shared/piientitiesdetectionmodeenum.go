@@ -14,18 +14,22 @@ const (
 	PiiEntitiesDetectionModeEnumOnlyOffsets   PiiEntitiesDetectionModeEnum = "ONLY_OFFSETS"
 )
 
+func (e PiiEntitiesDetectionModeEnum) ToPointer() *PiiEntitiesDetectionModeEnum {
+	return &e
+}
+
 func (e *PiiEntitiesDetectionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONLY_REDACTION":
 		fallthrough
 	case "ONLY_OFFSETS":
-		*e = PiiEntitiesDetectionModeEnum(s)
+		*e = PiiEntitiesDetectionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PiiEntitiesDetectionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PiiEntitiesDetectionModeEnum: %v", v)
 	}
 }

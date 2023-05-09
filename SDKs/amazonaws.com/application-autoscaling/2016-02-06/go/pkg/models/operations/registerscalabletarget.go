@@ -16,17 +16,21 @@ const (
 	RegisterScalableTargetXAmzTargetEnumAnyScaleFrontendServiceRegisterScalableTarget RegisterScalableTargetXAmzTargetEnum = "AnyScaleFrontendService.RegisterScalableTarget"
 )
 
+func (e RegisterScalableTargetXAmzTargetEnum) ToPointer() *RegisterScalableTargetXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterScalableTargetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleFrontendService.RegisterScalableTarget":
-		*e = RegisterScalableTargetXAmzTargetEnum(s)
+		*e = RegisterScalableTargetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterScalableTargetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterScalableTargetXAmzTargetEnum: %v", v)
 	}
 }
 

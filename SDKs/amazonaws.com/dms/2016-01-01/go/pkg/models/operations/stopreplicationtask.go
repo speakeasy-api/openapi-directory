@@ -16,17 +16,21 @@ const (
 	StopReplicationTaskXAmzTargetEnumAmazonDmSv20160101StopReplicationTask StopReplicationTaskXAmzTargetEnum = "AmazonDMSv20160101.StopReplicationTask"
 )
 
+func (e StopReplicationTaskXAmzTargetEnum) ToPointer() *StopReplicationTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopReplicationTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.StopReplicationTask":
-		*e = StopReplicationTaskXAmzTargetEnum(s)
+		*e = StopReplicationTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopReplicationTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopReplicationTaskXAmzTargetEnum: %v", v)
 	}
 }
 

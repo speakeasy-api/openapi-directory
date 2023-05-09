@@ -35,12 +35,16 @@ const (
 	LifecycleStateEnumWarmedHibernated         LifecycleStateEnum = "Warmed:Hibernated"
 )
 
+func (e LifecycleStateEnum) ToPointer() *LifecycleStateEnum {
+	return &e
+}
+
 func (e *LifecycleStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Pending":
 		fallthrough
 	case "Pending:Wait":
@@ -86,9 +90,9 @@ func (e *LifecycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "Warmed:Running":
 		fallthrough
 	case "Warmed:Hibernated":
-		*e = LifecycleStateEnum(s)
+		*e = LifecycleStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LifecycleStateEnum: %s", s)
+		return fmt.Errorf("invalid value for LifecycleStateEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnumMonth                 EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum = "MONTH"
 )
 
+func (e EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum) ToPointer() *EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEED_PERIOD_UNSPECIFIED":
 		fallthrough
 	case "DAY":
@@ -29,10 +33,10 @@ func (e *EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum) UnmarshalJSON(data
 	case "WEEK":
 		fallthrough
 	case "MONTH":
-		*e = EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum(s)
+		*e = EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoLogSettingsSeedPeriodEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnumParamName            EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum = "PARAM_NAME"
 )
 
+func (e EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum) ToPointer() *EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum {
+	return &e
+}
+
 func (e *EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEED_SCOPE_UNSPECIFIED":
 		fallthrough
 	case "EVENT_NAME":
@@ -58,10 +66,10 @@ func (e *EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum) UnmarshalJSON(data 
 	case "TIME_PERIOD":
 		fallthrough
 	case "PARAM_NAME":
-		*e = EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum(s)
+		*e = EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for EnterpriseCrmEventbusProtoLogSettingsSeedScopeEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newBets(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer. If the customers monitor bets they can cash in a bet at any point before the event ends.
 func (s *bets) Cashin(ctx context.Context, request operations.CashinRequest) (*operations.CashinResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{betId}/cashin", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{betId}/cashin", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

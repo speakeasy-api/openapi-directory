@@ -14,18 +14,22 @@ const (
 	FilterLogicalOperatorEnumOr  FilterLogicalOperatorEnum = "OR"
 )
 
+func (e FilterLogicalOperatorEnum) ToPointer() *FilterLogicalOperatorEnum {
+	return &e
+}
+
 func (e *FilterLogicalOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "OR":
-		*e = FilterLogicalOperatorEnum(s)
+		*e = FilterLogicalOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterLogicalOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterLogicalOperatorEnum: %v", v)
 	}
 }

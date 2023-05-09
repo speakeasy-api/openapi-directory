@@ -40,7 +40,10 @@ func newTerminalOrdersMerchantLevel(defaultClient, securityClient HTTPClient, se
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDBillingEntities(ctx context.Context, request operations.GetMerchantsMerchantIDBillingEntitiesRequest, security operations.GetMerchantsMerchantIDBillingEntitiesSecurity) (*operations.GetMerchantsMerchantIDBillingEntitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/billingEntities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/billingEntities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -113,7 +116,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDBillingEntities(ctx 
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.GetMerchantsMerchantIDShippingLocationsRequest, security operations.GetMerchantsMerchantIDShippingLocationsSecurity) (*operations.GetMerchantsMerchantIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +191,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDShippingLocations(ct
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalModels(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalModelsRequest, security operations.GetMerchantsMerchantIDTerminalModelsSecurity) (*operations.GetMerchantsMerchantIDTerminalModelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalModels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalModels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -253,7 +262,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalModels(ctx c
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersRequest, security operations.GetMerchantsMerchantIDTerminalOrdersSecurity) (*operations.GetMerchantsMerchantIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -325,7 +337,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrders(ctx c
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalOrdersOrderIDRequest, security operations.GetMerchantsMerchantIDTerminalOrdersOrderIDSecurity) (*operations.GetMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -393,7 +408,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalOrdersOrderI
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalProducts(ctx context.Context, request operations.GetMerchantsMerchantIDTerminalProductsRequest, security operations.GetMerchantsMerchantIDTerminalProductsSecurity) (*operations.GetMerchantsMerchantIDTerminalProductsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalProducts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalProducts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -470,7 +488,10 @@ func (s *terminalOrdersMerchantLevel) GetMerchantsMerchantIDTerminalProducts(ctx
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrderID(ctx context.Context, request operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDRequest, security operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDSecurity) (*operations.PatchMerchantsMerchantIDTerminalOrdersOrderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
@@ -544,7 +565,10 @@ func (s *terminalOrdersMerchantLevel) PatchMerchantsMerchantIDTerminalOrdersOrde
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(ctx context.Context, request operations.PostMerchantsMerchantIDShippingLocationsRequest, security operations.PostMerchantsMerchantIDShippingLocationsSecurity) (*operations.PostMerchantsMerchantIDShippingLocationsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/shippingLocations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ShippingLocation", "json")
 	if err != nil {
@@ -618,7 +642,10 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDShippingLocations(c
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersRequest, security operations.PostMerchantsMerchantIDTerminalOrdersSecurity) (*operations.PostMerchantsMerchantIDTerminalOrdersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalOrderRequest", "json")
 	if err != nil {
@@ -694,7 +721,10 @@ func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrders(ctx 
 // * Management API—Terminal ordering read and write
 func (s *terminalOrdersMerchantLevel) PostMerchantsMerchantIDTerminalOrdersOrderIDCancel(ctx context.Context, request operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelRequest, security operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelSecurity) (*operations.PostMerchantsMerchantIDTerminalOrdersOrderIDCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/terminalOrders/{orderId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

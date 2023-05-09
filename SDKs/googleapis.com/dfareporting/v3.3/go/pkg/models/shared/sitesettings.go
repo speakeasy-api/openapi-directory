@@ -17,12 +17,16 @@ const (
 	SiteSettingsVpaidAdapterChoiceTemplateEnumBoth    SiteSettingsVpaidAdapterChoiceTemplateEnum = "BOTH"
 )
 
+func (e SiteSettingsVpaidAdapterChoiceTemplateEnum) ToPointer() *SiteSettingsVpaidAdapterChoiceTemplateEnum {
+	return &e
+}
+
 func (e *SiteSettingsVpaidAdapterChoiceTemplateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "FLASH":
@@ -30,10 +34,10 @@ func (e *SiteSettingsVpaidAdapterChoiceTemplateEnum) UnmarshalJSON(data []byte) 
 	case "HTML5":
 		fallthrough
 	case "BOTH":
-		*e = SiteSettingsVpaidAdapterChoiceTemplateEnum(s)
+		*e = SiteSettingsVpaidAdapterChoiceTemplateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SiteSettingsVpaidAdapterChoiceTemplateEnum: %s", s)
+		return fmt.Errorf("invalid value for SiteSettingsVpaidAdapterChoiceTemplateEnum: %v", v)
 	}
 }
 

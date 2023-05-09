@@ -20,12 +20,16 @@ const (
 	BundleEntityPermissionsEnumPreviewOnly BundleEntityPermissionsEnum = "preview_only"
 )
 
+func (e BundleEntityPermissionsEnum) ToPointer() *BundleEntityPermissionsEnum {
+	return &e
+}
+
 func (e *BundleEntityPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read":
 		fallthrough
 	case "write":
@@ -37,10 +41,10 @@ func (e *BundleEntityPermissionsEnum) UnmarshalJSON(data []byte) error {
 	case "none":
 		fallthrough
 	case "preview_only":
-		*e = BundleEntityPermissionsEnum(s)
+		*e = BundleEntityPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BundleEntityPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for BundleEntityPermissionsEnum: %v", v)
 	}
 }
 
@@ -76,7 +80,7 @@ type BundleEntity struct {
 	PasswordProtected *bool `json:"password_protected,omitempty"`
 	// Template for creating submission subfolders. Can use the uploader's name, email address, ip, company, and any custom form data.
 	PathTemplate *string `json:"path_template,omitempty"`
-	// A list of paths in this bundle
+	// A list of paths in this bundle.  For performance reasons, this is not provided when listing bundles.
 	Paths []string `json:"paths,omitempty"`
 	// Permissions that apply to Folders in this Share Link.
 	Permissions *BundleEntityPermissionsEnum `json:"permissions,omitempty"`

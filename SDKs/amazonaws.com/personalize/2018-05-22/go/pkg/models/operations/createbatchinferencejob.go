@@ -16,17 +16,21 @@ const (
 	CreateBatchInferenceJobXAmzTargetEnumAmazonPersonalizeCreateBatchInferenceJob CreateBatchInferenceJobXAmzTargetEnum = "AmazonPersonalize.CreateBatchInferenceJob"
 )
 
+func (e CreateBatchInferenceJobXAmzTargetEnum) ToPointer() *CreateBatchInferenceJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBatchInferenceJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.CreateBatchInferenceJob":
-		*e = CreateBatchInferenceJobXAmzTargetEnum(s)
+		*e = CreateBatchInferenceJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBatchInferenceJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBatchInferenceJobXAmzTargetEnum: %v", v)
 	}
 }
 

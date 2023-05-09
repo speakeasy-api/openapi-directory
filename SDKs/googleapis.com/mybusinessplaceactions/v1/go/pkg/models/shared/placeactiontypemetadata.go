@@ -21,12 +21,16 @@ const (
 	PlaceActionTypeMetadataPlaceActionTypeEnumShopOnline                 PlaceActionTypeMetadataPlaceActionTypeEnum = "SHOP_ONLINE"
 )
 
+func (e PlaceActionTypeMetadataPlaceActionTypeEnum) ToPointer() *PlaceActionTypeMetadataPlaceActionTypeEnum {
+	return &e
+}
+
 func (e *PlaceActionTypeMetadataPlaceActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACE_ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "APPOINTMENT":
@@ -42,10 +46,10 @@ func (e *PlaceActionTypeMetadataPlaceActionTypeEnum) UnmarshalJSON(data []byte) 
 	case "FOOD_TAKEOUT":
 		fallthrough
 	case "SHOP_ONLINE":
-		*e = PlaceActionTypeMetadataPlaceActionTypeEnum(s)
+		*e = PlaceActionTypeMetadataPlaceActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaceActionTypeMetadataPlaceActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaceActionTypeMetadataPlaceActionTypeEnum: %v", v)
 	}
 }
 

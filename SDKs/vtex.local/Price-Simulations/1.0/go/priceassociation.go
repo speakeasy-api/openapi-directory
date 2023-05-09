@@ -36,7 +36,10 @@ func newPriceAssociation(defaultClient, securityClient HTTPClient, serverURL, la
 // Disassociates a price association from a shopping scenario by its ID
 func (s *priceAssociation) DeleteVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.DeleteVCustomPricesRulesPriceAssociationIDRequest) (*operations.DeleteVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -84,7 +87,10 @@ func (s *priceAssociation) DeleteVCustomPricesRulesPriceAssociationID(ctx contex
 // Retrieves price association for a shopping scenario by its ID
 func (s *priceAssociation) GetVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.GetVCustomPricesRulesPriceAssociationIDRequest) (*operations.GetVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +191,10 @@ func (s *priceAssociation) PostVCustomPricesRules(ctx context.Context, request o
 // Updates a price association for a shopping scenario by its ID
 func (s *priceAssociation) PutVCustomPricesRulesPriceAssociationID(ctx context.Context, request operations.PutVCustomPricesRulesPriceAssociationIDRequest) (*operations.PutVCustomPricesRulesPriceAssociationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/_v/custom-prices/rules/{priceAssociationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

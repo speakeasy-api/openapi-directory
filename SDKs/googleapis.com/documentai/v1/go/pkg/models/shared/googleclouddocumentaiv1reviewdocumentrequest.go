@@ -15,23 +15,27 @@ const (
 	GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnumUrgent  GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum = "URGENT"
 )
 
+func (e GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum) ToPointer() *GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "URGENT":
-		*e = GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum(s)
+		*e = GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ReviewDocumentRequestPriorityEnum: %v", v)
 	}
 }
 
-// GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for review document method.
+// GoogleCloudDocumentaiV1ReviewDocumentRequest - Request message for the ReviewDocument method.
 type GoogleCloudDocumentaiV1ReviewDocumentRequest struct {
 	// The schema defines the output of the processed document by a processor.
 	DocumentSchema *GoogleCloudDocumentaiV1DocumentSchema `json:"documentSchema,omitempty"`

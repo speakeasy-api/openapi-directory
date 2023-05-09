@@ -21,19 +21,23 @@ const (
 	ErrorsErrorSearchOrderEnumAsc  ErrorsErrorSearchOrderEnum = "asc"
 )
 
+func (e ErrorsErrorSearchOrderEnum) ToPointer() *ErrorsErrorSearchOrderEnum {
+	return &e
+}
+
 func (e *ErrorsErrorSearchOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = ErrorsErrorSearchOrderEnum(s)
+		*e = ErrorsErrorSearchOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorSearchOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorSearchOrderEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	ErrorsErrorSearchSortEnumUserID             ErrorsErrorSearchSortEnum = "userId"
 )
 
+func (e ErrorsErrorSearchSortEnum) ToPointer() *ErrorsErrorSearchSortEnum {
+	return &e
+}
+
 func (e *ErrorsErrorSearchSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "timestamp":
 		fallthrough
 	case "errorGroupId":
@@ -78,10 +86,10 @@ func (e *ErrorsErrorSearchSortEnum) UnmarshalJSON(data []byte) error {
 	case "osVersion":
 		fallthrough
 	case "userId":
-		*e = ErrorsErrorSearchSortEnum(s)
+		*e = ErrorsErrorSearchSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorSearchSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorSearchSortEnum: %v", v)
 	}
 }
 
@@ -116,12 +124,16 @@ const (
 	ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -135,10 +147,10 @@ func (e *ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsErrorSearchDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

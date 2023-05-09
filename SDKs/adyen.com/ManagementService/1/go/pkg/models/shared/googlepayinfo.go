@@ -4,5 +4,7 @@ package shared
 
 type GooglePayInfo struct {
 	// Google Pay [Merchant ID](https://support.google.com/paymentscenter/answer/7163092?hl=en). Character length and limitations: 16 alphanumeric characters or 20 numeric characters.
-	MerchantID *string `json:"merchantId,omitempty"`
+	MerchantID string `json:"merchantId"`
+	// Indicates whether the Google Pay Merchant ID is used for several merchant accounts. Default value: **false**.
+	ReuseMerchantID *bool `json:"reuseMerchantId,omitempty"`
 }

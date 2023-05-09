@@ -16,17 +16,21 @@ const (
 	CreateIPGroupXAmzTargetEnumWorkspacesServiceCreateIPGroup CreateIPGroupXAmzTargetEnum = "WorkspacesService.CreateIpGroup"
 )
 
+func (e CreateIPGroupXAmzTargetEnum) ToPointer() *CreateIPGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateIPGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.CreateIpGroup":
-		*e = CreateIPGroupXAmzTargetEnum(s)
+		*e = CreateIPGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIPGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIPGroupXAmzTargetEnum: %v", v)
 	}
 }
 

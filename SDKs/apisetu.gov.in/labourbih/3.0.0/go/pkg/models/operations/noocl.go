@@ -28,17 +28,21 @@ const (
 	NooclRequestBodyFormatEnumPdf NooclRequestBodyFormatEnum = "pdf"
 )
 
+func (e NooclRequestBodyFormatEnum) ToPointer() *NooclRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *NooclRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = NooclRequestBodyFormatEnum(s)
+		*e = NooclRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NooclRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for NooclRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Noocl504ApplicationJSONErrorEnumGatewayTimeout Noocl504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Noocl504ApplicationJSONErrorEnum) ToPointer() *Noocl504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Noocl504ApplicationJSONErrorEnum(s)
+		*e = Noocl504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Noocl504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Noocl504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Noocl504ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Noocl504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Noocl503ApplicationJSONErrorEnumServiceUnavailable Noocl503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Noocl503ApplicationJSONErrorEnum) ToPointer() *Noocl503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Noocl503ApplicationJSONErrorEnum(s)
+		*e = Noocl503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Noocl503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Noocl503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Noocl503ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Noocl503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Noocl502ApplicationJSONErrorEnumBadGatewy Noocl502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Noocl502ApplicationJSONErrorEnum) ToPointer() *Noocl502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Noocl502ApplicationJSONErrorEnum(s)
+		*e = Noocl502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Noocl502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Noocl502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Noocl502ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Noocl502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Noocl500ApplicationJSONErrorEnumInternalServerError Noocl500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Noocl500ApplicationJSONErrorEnum) ToPointer() *Noocl500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Noocl500ApplicationJSONErrorEnum(s)
+		*e = Noocl500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Noocl500ApplicationJSONErrorDescriptionEnumInternalServerError Noocl500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Noocl500ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Noocl500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Noocl404ApplicationJSONErrorEnumURLNotFound    Noocl404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Noocl404ApplicationJSONErrorEnum) ToPointer() *Noocl404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Noocl404ApplicationJSONErrorEnum(s)
+		*e = Noocl404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Noocl404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Noocl404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Noocl404ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Noocl404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Noocl401ApplicationJSONErrorEnumInvalidAuthorization  Noocl401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Noocl401ApplicationJSONErrorEnum) ToPointer() *Noocl401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Noocl401ApplicationJSONErrorEnum(s)
+		*e = Noocl401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Noocl401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Noocl401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Noocl401ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Noocl401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Noocl400ApplicationJSONErrorEnumInvalidConsentid Noocl400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Noocl400ApplicationJSONErrorEnum) ToPointer() *Noocl400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Noocl400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Noocl400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Noocl400ApplicationJSONErrorEnum(s)
+		*e = Noocl400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Noocl400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Noocl400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Noocl400ApplicationJSONErrorDescriptionEnum) ToPointer() *Noocl400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Noocl400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Noocl400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Noocl400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Noocl400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Noocl400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Noocl400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

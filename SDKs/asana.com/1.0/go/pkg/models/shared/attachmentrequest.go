@@ -25,12 +25,16 @@ const (
 	AttachmentRequestResourceSubtypeEnumExternal AttachmentRequestResourceSubtypeEnum = "external"
 )
 
+func (e AttachmentRequestResourceSubtypeEnum) ToPointer() *AttachmentRequestResourceSubtypeEnum {
+	return &e
+}
+
 func (e *AttachmentRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asana":
 		fallthrough
 	case "dropbox":
@@ -44,10 +48,10 @@ func (e *AttachmentRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error 
 	case "vimeo":
 		fallthrough
 	case "external":
-		*e = AttachmentRequestResourceSubtypeEnum(s)
+		*e = AttachmentRequestResourceSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AttachmentRequestResourceSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AttachmentRequestResourceSubtypeEnum: %v", v)
 	}
 }
 

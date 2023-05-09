@@ -34,7 +34,10 @@ func newOrderreports(defaultClient, securityClient HTTPClient, serverURL, langua
 // ContentOrderreportsListdisbursements - Retrieves a report for disbursements from your Merchant Center account.
 func (s *orderreports) ContentOrderreportsListdisbursements(ctx context.Context, request operations.ContentOrderreportsListdisbursementsRequest, security operations.ContentOrderreportsListdisbursementsSecurity) (*operations.ContentOrderreportsListdisbursementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *orderreports) ContentOrderreportsListdisbursements(ctx context.Context,
 // ContentOrderreportsListtransactions - Retrieves a list of transactions for a disbursement from your Merchant Center account.
 func (s *orderreports) ContentOrderreportsListtransactions(ctx context.Context, request operations.ContentOrderreportsListtransactionsRequest, security operations.ContentOrderreportsListtransactionsSecurity) (*operations.ContentOrderreportsListtransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/orderreports/disbursements/{disbursementId}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

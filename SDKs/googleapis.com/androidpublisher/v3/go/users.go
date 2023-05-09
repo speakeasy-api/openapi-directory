@@ -34,7 +34,10 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AndroidpublisherUsersCreate - Grant access for a user to the given developer account.
 func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operations.AndroidpublisherUsersCreateRequest, security operations.AndroidpublisherUsersCreateSecurity) (*operations.AndroidpublisherUsersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *users) AndroidpublisherUsersCreate(ctx context.Context, request operati
 // AndroidpublisherUsersDelete - Removes all access for the user to the given developer account.
 func (s *users) AndroidpublisherUsersDelete(ctx context.Context, request operations.AndroidpublisherUsersDeleteRequest, security operations.AndroidpublisherUsersDeleteSecurity) (*operations.AndroidpublisherUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *users) AndroidpublisherUsersDelete(ctx context.Context, request operati
 // AndroidpublisherUsersList - Lists all users with access to a developer account.
 func (s *users) AndroidpublisherUsersList(ctx context.Context, request operations.AndroidpublisherUsersListRequest, security operations.AndroidpublisherUsersListSecurity) (*operations.AndroidpublisherUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{parent}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *users) AndroidpublisherUsersList(ctx context.Context, request operation
 // AndroidpublisherUsersPatch - Updates access for the user to the developer account.
 func (s *users) AndroidpublisherUsersPatch(ctx context.Context, request operations.AndroidpublisherUsersPatchRequest, security operations.AndroidpublisherUsersPatchSecurity) (*operations.AndroidpublisherUsersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UserInput", "json")
 	if err != nil {

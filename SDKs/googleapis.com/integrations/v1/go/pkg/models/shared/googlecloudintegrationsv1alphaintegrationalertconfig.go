@@ -24,12 +24,16 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnumTaskPercentileDuration  GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum = "TASK_PERCENTILE_DURATION"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EVENT_ERROR_RATE":
@@ -51,10 +55,10 @@ func (e *GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum) Unm
 	case "TASK_AVERAGE_DURATION":
 		fallthrough
 	case "TASK_PERCENTILE_DURATION":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationAlertConfigMetricTypeEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnumExpectedMax              GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum = "EXPECTED_MAX"
 )
 
+func (e GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THRESHOLD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "EXPECTED_MIN":
 		fallthrough
 	case "EXPECTED_MAX":
-		*e = GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdTypeEnum: %v", v)
 	}
 }
 

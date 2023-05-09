@@ -14,18 +14,22 @@ const (
 	CACertificateStatusEnumInactive CACertificateStatusEnum = "INACTIVE"
 )
 
+func (e CACertificateStatusEnum) ToPointer() *CACertificateStatusEnum {
+	return &e
+}
+
 func (e *CACertificateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
-		*e = CACertificateStatusEnum(s)
+		*e = CACertificateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CACertificateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CACertificateStatusEnum: %v", v)
 	}
 }

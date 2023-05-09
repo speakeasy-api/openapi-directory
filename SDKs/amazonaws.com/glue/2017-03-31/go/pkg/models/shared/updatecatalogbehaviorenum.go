@@ -14,18 +14,22 @@ const (
 	UpdateCatalogBehaviorEnumLog              UpdateCatalogBehaviorEnum = "LOG"
 )
 
+func (e UpdateCatalogBehaviorEnum) ToPointer() *UpdateCatalogBehaviorEnum {
+	return &e
+}
+
 func (e *UpdateCatalogBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPDATE_IN_DATABASE":
 		fallthrough
 	case "LOG":
-		*e = UpdateCatalogBehaviorEnum(s)
+		*e = UpdateCatalogBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCatalogBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCatalogBehaviorEnum: %v", v)
 	}
 }

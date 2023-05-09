@@ -16,12 +16,16 @@ const (
 	DocumentAttributeValueTypeEnumDateValue       DocumentAttributeValueTypeEnum = "DATE_VALUE"
 )
 
+func (e DocumentAttributeValueTypeEnum) ToPointer() *DocumentAttributeValueTypeEnum {
+	return &e
+}
+
 func (e *DocumentAttributeValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING_VALUE":
 		fallthrough
 	case "STRING_LIST_VALUE":
@@ -29,9 +33,9 @@ func (e *DocumentAttributeValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LONG_VALUE":
 		fallthrough
 	case "DATE_VALUE":
-		*e = DocumentAttributeValueTypeEnum(s)
+		*e = DocumentAttributeValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentAttributeValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentAttributeValueTypeEnum: %v", v)
 	}
 }

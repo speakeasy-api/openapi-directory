@@ -6,4 +6,6 @@ package shared
 type ProductViewItemIssueItemIssueType struct {
 	// Canonical attribute name for attribute-specific issues.
 	CanonicalAttribute *string `json:"canonicalAttribute,omitempty"`
+	// Error code of the issue.
+	Code *string `json:"code,omitempty"`
 }

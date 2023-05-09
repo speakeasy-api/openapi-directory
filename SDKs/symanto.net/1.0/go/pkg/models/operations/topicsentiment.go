@@ -19,12 +19,16 @@ const (
 	TopicSentimentDomainEnumRestaurant TopicSentimentDomainEnum = "Restaurant"
 )
 
+func (e TopicSentimentDomainEnum) ToPointer() *TopicSentimentDomainEnum {
+	return &e
+}
+
 func (e *TopicSentimentDomainEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Ecom":
 		fallthrough
 	case "Employee":
@@ -32,10 +36,10 @@ func (e *TopicSentimentDomainEnum) UnmarshalJSON(data []byte) error {
 	case "Hotel":
 		fallthrough
 	case "Restaurant":
-		*e = TopicSentimentDomainEnum(s)
+		*e = TopicSentimentDomainEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TopicSentimentDomainEnum: %s", s)
+		return fmt.Errorf("invalid value for TopicSentimentDomainEnum: %v", v)
 	}
 }
 

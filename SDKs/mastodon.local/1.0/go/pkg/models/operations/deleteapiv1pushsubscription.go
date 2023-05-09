@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type DeleteAPIV1PushSubscriptionSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type DeleteAPIV1PushSubscriptionResponse struct {
 	ContentType string
 	StatusCode  int

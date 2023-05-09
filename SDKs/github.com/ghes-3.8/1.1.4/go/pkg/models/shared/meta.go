@@ -15,19 +15,23 @@ const (
 	MetaResourceTypeEnumGroup MetaResourceTypeEnum = "Group"
 )
 
+func (e MetaResourceTypeEnum) ToPointer() *MetaResourceTypeEnum {
+	return &e
+}
+
 func (e *MetaResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "User":
 		fallthrough
 	case "Group":
-		*e = MetaResourceTypeEnum(s)
+		*e = MetaResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetaResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MetaResourceTypeEnum: %v", v)
 	}
 }
 

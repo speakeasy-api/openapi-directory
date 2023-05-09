@@ -15,17 +15,21 @@ const (
 	GETSetTypeDefaultVersionActionEnumSetTypeDefaultVersion GETSetTypeDefaultVersionActionEnum = "SetTypeDefaultVersion"
 )
 
+func (e GETSetTypeDefaultVersionActionEnum) ToPointer() *GETSetTypeDefaultVersionActionEnum {
+	return &e
+}
+
 func (e *GETSetTypeDefaultVersionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetTypeDefaultVersion":
-		*e = GETSetTypeDefaultVersionActionEnum(s)
+		*e = GETSetTypeDefaultVersionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETSetTypeDefaultVersionTypeEnumHook     GETSetTypeDefaultVersionTypeEnum = "HOOK"
 )
 
+func (e GETSetTypeDefaultVersionTypeEnum) ToPointer() *GETSetTypeDefaultVersionTypeEnum {
+	return &e
+}
+
 func (e *GETSetTypeDefaultVersionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETSetTypeDefaultVersionTypeEnum(s)
+		*e = GETSetTypeDefaultVersionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETSetTypeDefaultVersionVersionEnumTwoThousandAndTen0515 GETSetTypeDefaultVersionVersionEnum = "2010-05-15"
 )
 
+func (e GETSetTypeDefaultVersionVersionEnum) ToPointer() *GETSetTypeDefaultVersionVersionEnum {
+	return &e
+}
+
 func (e *GETSetTypeDefaultVersionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETSetTypeDefaultVersionVersionEnum(s)
+		*e = GETSetTypeDefaultVersionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetTypeDefaultVersionVersionEnum: %v", v)
 	}
 }
 

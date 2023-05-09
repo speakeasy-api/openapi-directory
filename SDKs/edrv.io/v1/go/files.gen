@@ -15,6 +15,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -84,4 +85,18 @@ pkg/models/operations/postcharge.go
 pkg/models/shared/sortorder1enum.go
 pkg/models/shared/schema1.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/chargestations/README.md
+docs/commands/README.md
+docs/configurations/README.md
+docs/connectors/README.md
+docs/drivers/README.md
+docs/locations/README.md
+docs/organizations/README.md
+docs/realtime/README.md
+docs/reservations/README.md
+docs/smartcharging/README.md
+docs/tokens/README.md
+docs/transactions/README.md
+docs/vehicles/README.md
 USAGE.md

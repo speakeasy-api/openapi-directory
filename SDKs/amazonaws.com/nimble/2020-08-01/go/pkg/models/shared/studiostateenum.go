@@ -20,12 +20,16 @@ const (
 	StudioStateEnumUpdateFailed     StudioStateEnum = "UPDATE_FAILED"
 )
 
+func (e StudioStateEnum) ToPointer() *StudioStateEnum {
+	return &e
+}
+
 func (e *StudioStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "READY":
@@ -41,9 +45,9 @@ func (e *StudioStateEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_FAILED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = StudioStateEnum(s)
+		*e = StudioStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioStateEnum: %v", v)
 	}
 }

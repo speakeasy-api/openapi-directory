@@ -56,19 +56,23 @@ const (
 	Area120tablesWorkspacesGetViewEnumColumnIDView    Area120tablesWorkspacesGetViewEnum = "COLUMN_ID_VIEW"
 )
 
+func (e Area120tablesWorkspacesGetViewEnum) ToPointer() *Area120tablesWorkspacesGetViewEnum {
+	return &e
+}
+
 func (e *Area120tablesWorkspacesGetViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_UNSPECIFIED":
 		fallthrough
 	case "COLUMN_ID_VIEW":
-		*e = Area120tablesWorkspacesGetViewEnum(s)
+		*e = Area120tablesWorkspacesGetViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Area120tablesWorkspacesGetViewEnum: %s", s)
+		return fmt.Errorf("invalid value for Area120tablesWorkspacesGetViewEnum: %v", v)
 	}
 }
 

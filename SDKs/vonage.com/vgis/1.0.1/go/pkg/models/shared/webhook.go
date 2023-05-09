@@ -13,17 +13,21 @@ const (
 	WebhookEventsEnumCall WebhookEventsEnum = "CALL"
 )
 
+func (e WebhookEventsEnum) ToPointer() *WebhookEventsEnum {
+	return &e
+}
+
 func (e *WebhookEventsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL":
-		*e = WebhookEventsEnum(s)
+		*e = WebhookEventsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookEventsEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookEventsEnum: %v", v)
 	}
 }
 
@@ -36,21 +40,25 @@ const (
 	WebhookMetadataPolicyEnumBody   WebhookMetadataPolicyEnum = "BODY"
 )
 
+func (e WebhookMetadataPolicyEnum) ToPointer() *WebhookMetadataPolicyEnum {
+	return &e
+}
+
 func (e *WebhookMetadataPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "HEADER":
 		fallthrough
 	case "BODY":
-		*e = WebhookMetadataPolicyEnum(s)
+		*e = WebhookMetadataPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookMetadataPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookMetadataPolicyEnum: %v", v)
 	}
 }
 
@@ -62,19 +70,23 @@ const (
 	WebhookSigningAlgoEnumNone       WebhookSigningAlgoEnum = "NONE"
 )
 
+func (e WebhookSigningAlgoEnum) ToPointer() *WebhookSigningAlgoEnum {
+	return &e
+}
+
 func (e *WebhookSigningAlgoEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HMAC_SHA256":
 		fallthrough
 	case "NONE":
-		*e = WebhookSigningAlgoEnum(s)
+		*e = WebhookSigningAlgoEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookSigningAlgoEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookSigningAlgoEnum: %v", v)
 	}
 }
 
@@ -97,19 +109,23 @@ const (
 	WebhookStatusEnumPaused WebhookStatusEnum = "PAUSED"
 )
 
+func (e WebhookStatusEnum) ToPointer() *WebhookStatusEnum {
+	return &e
+}
+
 func (e *WebhookStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "PAUSED":
-		*e = WebhookStatusEnum(s)
+		*e = WebhookStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookStatusEnum: %v", v)
 	}
 }
 

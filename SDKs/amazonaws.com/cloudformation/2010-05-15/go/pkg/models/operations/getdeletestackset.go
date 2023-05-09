@@ -15,17 +15,21 @@ const (
 	GETDeleteStackSetActionEnumDeleteStackSet GETDeleteStackSetActionEnum = "DeleteStackSet"
 )
 
+func (e GETDeleteStackSetActionEnum) ToPointer() *GETDeleteStackSetActionEnum {
+	return &e
+}
+
 func (e *GETDeleteStackSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteStackSet":
-		*e = GETDeleteStackSetActionEnum(s)
+		*e = GETDeleteStackSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteStackSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteStackSetActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETDeleteStackSetCallAsEnumDelegatedAdmin GETDeleteStackSetCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETDeleteStackSetCallAsEnum) ToPointer() *GETDeleteStackSetCallAsEnum {
+	return &e
+}
+
 func (e *GETDeleteStackSetCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETDeleteStackSetCallAsEnum(s)
+		*e = GETDeleteStackSetCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteStackSetCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteStackSetCallAsEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETDeleteStackSetVersionEnumTwoThousandAndTen0515 GETDeleteStackSetVersionEnum = "2010-05-15"
 )
 
+func (e GETDeleteStackSetVersionEnum) ToPointer() *GETDeleteStackSetVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteStackSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDeleteStackSetVersionEnum(s)
+		*e = GETDeleteStackSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteStackSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteStackSetVersionEnum: %v", v)
 	}
 }
 

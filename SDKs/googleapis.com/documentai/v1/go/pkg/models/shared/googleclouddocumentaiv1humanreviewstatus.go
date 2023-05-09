@@ -18,12 +18,16 @@ const (
 	GoogleCloudDocumentaiV1HumanReviewStatusStateEnumError            GoogleCloudDocumentaiV1HumanReviewStatusStateEnum = "ERROR"
 )
 
+func (e GoogleCloudDocumentaiV1HumanReviewStatusStateEnum) ToPointer() *GoogleCloudDocumentaiV1HumanReviewStatusStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1HumanReviewStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "SKIPPED":
@@ -33,16 +37,16 @@ func (e *GoogleCloudDocumentaiV1HumanReviewStatusStateEnum) UnmarshalJSON(data [
 	case "IN_PROGRESS":
 		fallthrough
 	case "ERROR":
-		*e = GoogleCloudDocumentaiV1HumanReviewStatusStateEnum(s)
+		*e = GoogleCloudDocumentaiV1HumanReviewStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1HumanReviewStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1HumanReviewStatusStateEnum: %v", v)
 	}
 }
 
 // GoogleCloudDocumentaiV1HumanReviewStatus - The status of human review on a processed document.
 type GoogleCloudDocumentaiV1HumanReviewStatus struct {
-	// The name of the operation triggered by the processed document. This field is populated only when the [state] is [HUMAN_REVIEW_IN_PROGRESS]. It has the same response type and metadata as the long running operation returned by [ReviewDocument] method.
+	// The name of the operation triggered by the processed document. This field is populated only when the state is `HUMAN_REVIEW_IN_PROGRESS`. It has the same response type and metadata as the long-running operation returned by ReviewDocument.
 	HumanReviewOperation *string `json:"humanReviewOperation,omitempty"`
 	// The state of human review on the processing request.
 	State *GoogleCloudDocumentaiV1HumanReviewStatusStateEnum `json:"state,omitempty"`

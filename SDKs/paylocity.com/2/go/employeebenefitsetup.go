@@ -35,7 +35,10 @@ func newEmployeeBenefitSetup(defaultClient, securityClient HTTPClient, serverURL
 // Sends new or updated employee benefit setup information directly to Web Pay.
 func (s *employeeBenefitSetup) UpdateOrAddEmployeeBenefitSetup(ctx context.Context, request operations.UpdateOrAddEmployeeBenefitSetupRequest, security operations.UpdateOrAddEmployeeBenefitSetupSecurity) (*operations.UpdateOrAddEmployeeBenefitSetupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/benefitSetup", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/benefitSetup", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BenefitSetup", "json")
 	if err != nil {

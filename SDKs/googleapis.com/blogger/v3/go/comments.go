@@ -34,7 +34,10 @@ func newComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BloggerCommentsApprove - Marks a comment as not spam by blog id, post id and comment id.
 func (s *comments) BloggerCommentsApprove(ctx context.Context, request operations.BloggerCommentsApproveRequest, security operations.BloggerCommentsApproveSecurity) (*operations.BloggerCommentsApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *comments) BloggerCommentsApprove(ctx context.Context, request operation
 // BloggerCommentsDelete - Deletes a comment by blog id, post id and comment id.
 func (s *comments) BloggerCommentsDelete(ctx context.Context, request operations.BloggerCommentsDeleteRequest, security operations.BloggerCommentsDeleteSecurity) (*operations.BloggerCommentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *comments) BloggerCommentsDelete(ctx context.Context, request operations
 // BloggerCommentsGet - Gets a comment by id.
 func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.BloggerCommentsGetRequest, security operations.BloggerCommentsGetSecurity) (*operations.BloggerCommentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *comments) BloggerCommentsGet(ctx context.Context, request operations.Bl
 // BloggerCommentsList - Lists comments.
 func (s *comments) BloggerCommentsList(ctx context.Context, request operations.BloggerCommentsListRequest, security operations.BloggerCommentsListSecurity) (*operations.BloggerCommentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +229,10 @@ func (s *comments) BloggerCommentsList(ctx context.Context, request operations.B
 // BloggerCommentsListByBlog - Lists comments by blog.
 func (s *comments) BloggerCommentsListByBlog(ctx context.Context, request operations.BloggerCommentsListByBlogRequest, security operations.BloggerCommentsListByBlogSecurity) (*operations.BloggerCommentsListByBlogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -265,7 +280,10 @@ func (s *comments) BloggerCommentsListByBlog(ctx context.Context, request operat
 // BloggerCommentsMarkAsSpam - Marks a comment as spam by blog id, post id and comment id.
 func (s *comments) BloggerCommentsMarkAsSpam(ctx context.Context, request operations.BloggerCommentsMarkAsSpamRequest, security operations.BloggerCommentsMarkAsSpamSecurity) (*operations.BloggerCommentsMarkAsSpamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -313,7 +331,10 @@ func (s *comments) BloggerCommentsMarkAsSpam(ctx context.Context, request operat
 // BloggerCommentsRemoveContent - Removes the content of a comment by blog id, post id and comment id.
 func (s *comments) BloggerCommentsRemoveContent(ctx context.Context, request operations.BloggerCommentsRemoveContentRequest, security operations.BloggerCommentsRemoveContentSecurity) (*operations.BloggerCommentsRemoveContentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

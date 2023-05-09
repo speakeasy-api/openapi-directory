@@ -13,17 +13,21 @@ const (
 	FourHundredAndOneUNAUTHORIZEDCodeEnumUnauthorized FourHundredAndOneUNAUTHORIZEDCodeEnum = "UNAUTHORIZED"
 )
 
+func (e FourHundredAndOneUNAUTHORIZEDCodeEnum) ToPointer() *FourHundredAndOneUNAUTHORIZEDCodeEnum {
+	return &e
+}
+
 func (e *FourHundredAndOneUNAUTHORIZEDCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNAUTHORIZED":
-		*e = FourHundredAndOneUNAUTHORIZEDCodeEnum(s)
+		*e = FourHundredAndOneUNAUTHORIZEDCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FourHundredAndOneUNAUTHORIZEDCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FourHundredAndOneUNAUTHORIZEDCodeEnum: %v", v)
 	}
 }
 
@@ -33,17 +37,21 @@ const (
 	FourHundredAndOneUNAUTHORIZEDMessageEnumInvalidAPIKey FourHundredAndOneUNAUTHORIZEDMessageEnum = "Invalid API key"
 )
 
+func (e FourHundredAndOneUNAUTHORIZEDMessageEnum) ToPointer() *FourHundredAndOneUNAUTHORIZEDMessageEnum {
+	return &e
+}
+
 func (e *FourHundredAndOneUNAUTHORIZEDMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Invalid API key":
-		*e = FourHundredAndOneUNAUTHORIZEDMessageEnum(s)
+		*e = FourHundredAndOneUNAUTHORIZEDMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FourHundredAndOneUNAUTHORIZEDMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for FourHundredAndOneUNAUTHORIZEDMessageEnum: %v", v)
 	}
 }
 

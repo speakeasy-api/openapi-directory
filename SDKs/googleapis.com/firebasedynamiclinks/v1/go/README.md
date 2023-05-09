@@ -13,89 +13,87 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/firebasedy
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         CreateManagedShortLinkRequest: &shared.CreateManagedShortLinkRequest{
             DynamicLinkInfo: &shared.DynamicLinkInfo{
                 AnalyticsInfo: &shared.AnalyticsInfo{
                     GooglePlayAnalytics: &shared.GooglePlayAnalytics{
-                        Gclid: "provident",
-                        UtmCampaign: "distinctio",
-                        UtmContent: "quibusdam",
-                        UtmMedium: "unde",
-                        UtmSource: "nulla",
-                        UtmTerm: "corrupti",
+                        Gclid: sdk.String("provident"),
+                        UtmCampaign: sdk.String("distinctio"),
+                        UtmContent: sdk.String("quibusdam"),
+                        UtmMedium: sdk.String("unde"),
+                        UtmSource: sdk.String("nulla"),
+                        UtmTerm: sdk.String("corrupti"),
                     },
                     ItunesConnectAnalytics: &shared.ITunesConnectAnalytics{
-                        At: "illum",
-                        Ct: "vel",
-                        Mt: "error",
-                        Pt: "deserunt",
+                        At: sdk.String("illum"),
+                        Ct: sdk.String("vel"),
+                        Mt: sdk.String("error"),
+                        Pt: sdk.String("deserunt"),
                     },
                 },
                 AndroidInfo: &shared.AndroidInfo{
-                    AndroidFallbackLink: "suscipit",
-                    AndroidLink: "iure",
-                    AndroidMinPackageVersionCode: "magnam",
-                    AndroidPackageName: "debitis",
+                    AndroidFallbackLink: sdk.String("suscipit"),
+                    AndroidLink: sdk.String("iure"),
+                    AndroidMinPackageVersionCode: sdk.String("magnam"),
+                    AndroidPackageName: sdk.String("debitis"),
                 },
                 DesktopInfo: &shared.DesktopInfo{
-                    DesktopFallbackLink: "ipsa",
+                    DesktopFallbackLink: sdk.String("ipsa"),
                 },
-                DomainURIPrefix: "delectus",
-                DynamicLinkDomain: "tempora",
+                DomainURIPrefix: sdk.String("delectus"),
+                DynamicLinkDomain: sdk.String("tempora"),
                 IosInfo: &shared.IosInfo{
-                    IosAppStoreID: "suscipit",
-                    IosBundleID: "molestiae",
-                    IosCustomScheme: "minus",
-                    IosFallbackLink: "placeat",
-                    IosIpadBundleID: "voluptatum",
-                    IosIpadFallbackLink: "iusto",
-                    IosMinimumVersion: "excepturi",
+                    IosAppStoreID: sdk.String("suscipit"),
+                    IosBundleID: sdk.String("molestiae"),
+                    IosCustomScheme: sdk.String("minus"),
+                    IosFallbackLink: sdk.String("placeat"),
+                    IosIpadBundleID: sdk.String("voluptatum"),
+                    IosIpadFallbackLink: sdk.String("iusto"),
+                    IosMinimumVersion: sdk.String("excepturi"),
                 },
-                Link: "nisi",
+                Link: sdk.String("nisi"),
                 NavigationInfo: &shared.NavigationInfo{
-                    EnableForcedRedirect: false,
+                    EnableForcedRedirect: sdk.Bool(false),
                 },
                 SocialMetaTagInfo: &shared.SocialMetaTagInfo{
-                    SocialDescription: "recusandae",
-                    SocialImageLink: "temporibus",
-                    SocialTitle: "ab",
+                    SocialDescription: sdk.String("recusandae"),
+                    SocialImageLink: sdk.String("temporibus"),
+                    SocialTitle: sdk.String("ab"),
                 },
             },
-            LongDynamicLink: "quis",
-            Name: "veritatis",
-            SDKVersion: "deserunt",
+            LongDynamicLink: sdk.String("quis"),
+            Name: sdk.String("Iris Aufderhar"),
+            SDKVersion: sdk.String("sapiente"),
             Suffix: &shared.Suffix{
-                CustomSuffix: "perferendis",
-                Option: "UNGUESSABLE",
+                CustomSuffix: sdk.String("quo"),
+                Option: shared.SuffixOptionEnumOptionUnspecified.ToPointer(),
             },
         },
-        AccessToken: "repellendus",
-        Alt: "proto",
-        Callback: "quo",
-        Fields: "odit",
-        Key: "at",
-        OauthToken: "at",
-        PrettyPrint: false,
-        QuotaUser: "maiores",
-        UploadType: "molestiae",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, req, operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
+        AccessToken: sdk.String("at"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("maiores"),
+        Fields: sdk.String("molestiae"),
+        Key: sdk.String("quod"),
+        OauthToken: sdk.String("quod"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("esse"),
+        UploadType: sdk.String("totam"),
+        UploadProtocol: sdk.String("porro"),
+    }, operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -114,19 +112,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### ManagedShortLinks
+### [ManagedShortLinks](docs/managedshortlinks/README.md)
 
-* `FirebasedynamiclinksManagedShortLinksCreate` - Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. This differs from CreateShortDynamicLink in the following ways: - The request will also contain a name for the link (non unique name for the front end). - The response must be authenticated with an auth token (generated with the admin service account). - The link will appear in the FDL list of links in the console front end. The Dynamic Link domain in the request must be owned by requester's Firebase project.
+* [FirebasedynamiclinksManagedShortLinksCreate](docs/managedshortlinks/README.md#firebasedynamiclinksmanagedshortlinkscreate) - Creates a managed short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. This differs from CreateShortDynamicLink in the following ways: - The request will also contain a name for the link (non unique name for the front end). - The response must be authenticated with an auth token (generated with the admin service account). - The link will appear in the FDL list of links in the console front end. The Dynamic Link domain in the request must be owned by requester's Firebase project.
 
-### ShortLinks
+### [ShortLinks](docs/shortlinks/README.md)
 
-* `FirebasedynamiclinksShortLinksCreate` - Creates a short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. Repeated calls with the same long Dynamic Link or Dynamic Link information will produce the same short Dynamic Link. The Dynamic Link domain in the request must be owned by requester's Firebase project.
+* [FirebasedynamiclinksShortLinksCreate](docs/shortlinks/README.md#firebasedynamiclinksshortlinkscreate) - Creates a short Dynamic Link given either a valid long Dynamic Link or details such as Dynamic Link domain, Android and iOS app information. The created short Dynamic Link will not expire. Repeated calls with the same long Dynamic Link or Dynamic Link information will produce the same short Dynamic Link. The Dynamic Link domain in the request must be owned by requester's Firebase project.
 
-### V1
+### [V1](docs/v1/README.md)
 
-* `FirebasedynamiclinksGetLinkStats` - Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
-* `FirebasedynamiclinksInstallAttribution` - Get iOS strong/weak-match info for post-install attribution.
-* `FirebasedynamiclinksReopenAttribution` - Get iOS reopen attribution for app universal link open deeplinking.
+* [FirebasedynamiclinksGetLinkStats](docs/v1/README.md#firebasedynamiclinksgetlinkstats) - Fetches analytics stats of a short Dynamic Link for a given duration. Metrics include number of clicks, redirects, installs, app first opens, and app reopens.
+* [FirebasedynamiclinksInstallAttribution](docs/v1/README.md#firebasedynamiclinksinstallattribution) - Get iOS strong/weak-match info for post-install attribution.
+* [FirebasedynamiclinksReopenAttribution](docs/v1/README.md#firebasedynamiclinksreopenattribution) - Get iOS reopen attribution for app universal link open deeplinking.
 <!-- End SDK Available Operations -->
 
 ### Maturity

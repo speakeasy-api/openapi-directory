@@ -15,17 +15,21 @@ const (
 	DeleteNotificationChannelXAmzTargetEnumAwsfms20180101DeleteNotificationChannel DeleteNotificationChannelXAmzTargetEnum = "AWSFMS_20180101.DeleteNotificationChannel"
 )
 
+func (e DeleteNotificationChannelXAmzTargetEnum) ToPointer() *DeleteNotificationChannelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteNotificationChannelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.DeleteNotificationChannel":
-		*e = DeleteNotificationChannelXAmzTargetEnum(s)
+		*e = DeleteNotificationChannelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteNotificationChannelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteNotificationChannelXAmzTargetEnum: %v", v)
 	}
 }
 

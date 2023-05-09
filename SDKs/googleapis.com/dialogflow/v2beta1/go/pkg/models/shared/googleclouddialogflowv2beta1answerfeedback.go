@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnumFullyCorrect                GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum = "FULLY_CORRECT"
 )
 
+func (e GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum) ToPointer() *GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CORRECTNESS_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "NOT_CORRECT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum) Unmarsh
 	case "PARTIALLY_CORRECT":
 		fallthrough
 	case "FULLY_CORRECT":
-		*e = GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type GoogleCloudDialogflowV2beta1AnswerFeedback struct {
 	AgentAssistantDetailFeedback *GoogleCloudDialogflowV2beta1AgentAssistantFeedback `json:"agentAssistantDetailFeedback,omitempty"`
 	// Time when the answer/item was clicked.
 	ClickTime *string `json:"clickTime,omitempty"`
-	// Indicates whether the answer/item was clicked by the human agent or not. Default to false.
+	// Indicates whether the answer/item was clicked by the human agent or not. Default to false. For knowledge search, the answer record is considered to be clicked if the answer was copied or any URI was clicked.
 	Clicked *bool `json:"clicked,omitempty"`
 	// The correctness level of the specific answer.
 	CorrectnessLevel *GoogleCloudDialogflowV2beta1AnswerFeedbackCorrectnessLevelEnum `json:"correctnessLevel,omitempty"`

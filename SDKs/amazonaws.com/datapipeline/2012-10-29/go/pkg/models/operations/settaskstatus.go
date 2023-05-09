@@ -16,17 +16,21 @@ const (
 	SetTaskStatusXAmzTargetEnumDataPipelineSetTaskStatus SetTaskStatusXAmzTargetEnum = "DataPipeline.SetTaskStatus"
 )
 
+func (e SetTaskStatusXAmzTargetEnum) ToPointer() *SetTaskStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *SetTaskStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.SetTaskStatus":
-		*e = SetTaskStatusXAmzTargetEnum(s)
+		*e = SetTaskStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SetTaskStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SetTaskStatusXAmzTargetEnum: %v", v)
 	}
 }
 

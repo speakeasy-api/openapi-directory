@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -49,4 +50,7 @@ pkg/models/shared/resourceid.go
 pkg/models/shared/getancestryresponse.go
 pkg/models/shared/ancestor.go
 pkg/models/shared/listprojectsresponse.go
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

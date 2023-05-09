@@ -16,17 +16,21 @@ const (
 	AssociateTrialComponentXAmzTargetEnumSageMakerAssociateTrialComponent AssociateTrialComponentXAmzTargetEnum = "SageMaker.AssociateTrialComponent"
 )
 
+func (e AssociateTrialComponentXAmzTargetEnum) ToPointer() *AssociateTrialComponentXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateTrialComponentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.AssociateTrialComponent":
-		*e = AssociateTrialComponentXAmzTargetEnum(s)
+		*e = AssociateTrialComponentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateTrialComponentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateTrialComponentXAmzTargetEnum: %v", v)
 	}
 }
 

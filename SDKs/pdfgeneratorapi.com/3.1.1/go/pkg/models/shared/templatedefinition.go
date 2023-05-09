@@ -27,21 +27,25 @@ const (
 	TemplateDefinitionLayoutFormatEnumCustom TemplateDefinitionLayoutFormatEnum = "custom"
 )
 
+func (e TemplateDefinitionLayoutFormatEnum) ToPointer() *TemplateDefinitionLayoutFormatEnum {
+	return &e
+}
+
 func (e *TemplateDefinitionLayoutFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A4":
 		fallthrough
 	case "letter":
 		fallthrough
 	case "custom":
-		*e = TemplateDefinitionLayoutFormatEnum(s)
+		*e = TemplateDefinitionLayoutFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateDefinitionLayoutFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateDefinitionLayoutFormatEnum: %v", v)
 	}
 }
 
@@ -61,19 +65,23 @@ const (
 	TemplateDefinitionLayoutOrientationEnumLandscape TemplateDefinitionLayoutOrientationEnum = "landscape"
 )
 
+func (e TemplateDefinitionLayoutOrientationEnum) ToPointer() *TemplateDefinitionLayoutOrientationEnum {
+	return &e
+}
+
 func (e *TemplateDefinitionLayoutOrientationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "portrait":
 		fallthrough
 	case "landscape":
-		*e = TemplateDefinitionLayoutOrientationEnum(s)
+		*e = TemplateDefinitionLayoutOrientationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateDefinitionLayoutOrientationEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateDefinitionLayoutOrientationEnum: %v", v)
 	}
 }
 
@@ -86,21 +94,25 @@ const (
 	TemplateDefinitionLayoutRepeatLayoutFormatEnumCustom TemplateDefinitionLayoutRepeatLayoutFormatEnum = "custom"
 )
 
+func (e TemplateDefinitionLayoutRepeatLayoutFormatEnum) ToPointer() *TemplateDefinitionLayoutRepeatLayoutFormatEnum {
+	return &e
+}
+
 func (e *TemplateDefinitionLayoutRepeatLayoutFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A4":
 		fallthrough
 	case "letter":
 		fallthrough
 	case "custom":
-		*e = TemplateDefinitionLayoutRepeatLayoutFormatEnum(s)
+		*e = TemplateDefinitionLayoutRepeatLayoutFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateDefinitionLayoutRepeatLayoutFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateDefinitionLayoutRepeatLayoutFormatEnum: %v", v)
 	}
 }
 
@@ -115,32 +127,36 @@ type TemplateDefinitionLayoutRepeatLayout struct {
 }
 
 // TemplateDefinitionLayoutRotationEnum - Page rotation in degrees
-type TemplateDefinitionLayoutRotationEnum string
+type TemplateDefinitionLayoutRotationEnum int64
 
 const (
-	TemplateDefinitionLayoutRotationEnumZero                 TemplateDefinitionLayoutRotationEnum = "0"
-	TemplateDefinitionLayoutRotationEnumNinety               TemplateDefinitionLayoutRotationEnum = "90"
-	TemplateDefinitionLayoutRotationEnumOneHundredAndEighty  TemplateDefinitionLayoutRotationEnum = "180"
-	TemplateDefinitionLayoutRotationEnumTwoHundredAndSeventy TemplateDefinitionLayoutRotationEnum = "270"
+	TemplateDefinitionLayoutRotationEnumZero                 TemplateDefinitionLayoutRotationEnum = 0
+	TemplateDefinitionLayoutRotationEnumNinety               TemplateDefinitionLayoutRotationEnum = 90
+	TemplateDefinitionLayoutRotationEnumOneHundredAndEighty  TemplateDefinitionLayoutRotationEnum = 180
+	TemplateDefinitionLayoutRotationEnumTwoHundredAndSeventy TemplateDefinitionLayoutRotationEnum = 270
 )
 
+func (e TemplateDefinitionLayoutRotationEnum) ToPointer() *TemplateDefinitionLayoutRotationEnum {
+	return &e
+}
+
 func (e *TemplateDefinitionLayoutRotationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "90":
+	case 90:
 		fallthrough
-	case "180":
+	case 180:
 		fallthrough
-	case "270":
-		*e = TemplateDefinitionLayoutRotationEnum(s)
+	case 270:
+		*e = TemplateDefinitionLayoutRotationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateDefinitionLayoutRotationEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateDefinitionLayoutRotationEnum: %v", v)
 	}
 }
 
@@ -152,19 +168,23 @@ const (
 	TemplateDefinitionLayoutUnitEnumIn TemplateDefinitionLayoutUnitEnum = "in"
 )
 
+func (e TemplateDefinitionLayoutUnitEnum) ToPointer() *TemplateDefinitionLayoutUnitEnum {
+	return &e
+}
+
 func (e *TemplateDefinitionLayoutUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cm":
 		fallthrough
 	case "in":
-		*e = TemplateDefinitionLayoutUnitEnum(s)
+		*e = TemplateDefinitionLayoutUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TemplateDefinitionLayoutUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for TemplateDefinitionLayoutUnitEnum: %v", v)
 	}
 }
 

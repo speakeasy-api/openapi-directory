@@ -10,6 +10,8 @@ type ConfigManagementConfigSync struct {
 	Enabled *bool `json:"enabled,omitempty"`
 	// Git repo configuration for a single cluster.
 	Git *ConfigManagementGitConfig `json:"git,omitempty"`
+	// Configuration for Managed Config Sync.
+	Managed *ConfigManagementManaged `json:"managed,omitempty"`
 	// OCI repo configuration for a single cluster
 	Oci *ConfigManagementOciConfig `json:"oci,omitempty"`
 	// Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`, disables the Config Sync admission webhook and does not prevent drifts.

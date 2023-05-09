@@ -15,20 +15,24 @@ const (
 	PricingModeEnumTieredBundle PricingModeEnum = "TIERED_BUNDLE"
 )
 
+func (e PricingModeEnum) ToPointer() *PricingModeEnum {
+	return &e
+}
+
 func (e *PricingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC":
 		fallthrough
 	case "STANDARD":
 		fallthrough
 	case "TIERED_BUNDLE":
-		*e = PricingModeEnum(s)
+		*e = PricingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingModeEnum: %v", v)
 	}
 }

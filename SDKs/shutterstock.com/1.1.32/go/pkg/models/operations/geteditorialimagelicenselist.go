@@ -23,21 +23,25 @@ const (
 	GetEditorialImageLicenseListDownloadAvailabilityEnumNonDownloadable GetEditorialImageLicenseListDownloadAvailabilityEnum = "non_downloadable"
 )
 
+func (e GetEditorialImageLicenseListDownloadAvailabilityEnum) ToPointer() *GetEditorialImageLicenseListDownloadAvailabilityEnum {
+	return &e
+}
+
 func (e *GetEditorialImageLicenseListDownloadAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "downloadable":
 		fallthrough
 	case "non_downloadable":
-		*e = GetEditorialImageLicenseListDownloadAvailabilityEnum(s)
+		*e = GetEditorialImageLicenseListDownloadAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorialImageLicenseListDownloadAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorialImageLicenseListDownloadAvailabilityEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	GetEditorialImageLicenseListSortEnumOldest GetEditorialImageLicenseListSortEnum = "oldest"
 )
 
+func (e GetEditorialImageLicenseListSortEnum) ToPointer() *GetEditorialImageLicenseListSortEnum {
+	return &e
+}
+
 func (e *GetEditorialImageLicenseListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetEditorialImageLicenseListSortEnum(s)
+		*e = GetEditorialImageLicenseListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEditorialImageLicenseListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEditorialImageLicenseListSortEnum: %v", v)
 	}
 }
 

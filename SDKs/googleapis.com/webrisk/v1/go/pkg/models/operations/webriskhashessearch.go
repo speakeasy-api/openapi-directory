@@ -24,12 +24,16 @@ const (
 	WebriskHashesSearchThreatTypesEnumSocialEngineeringExtendedCoverage WebriskHashesSearchThreatTypesEnum = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE"
 )
 
+func (e WebriskHashesSearchThreatTypesEnum) ToPointer() *WebriskHashesSearchThreatTypesEnum {
+	return &e
+}
+
 func (e *WebriskHashesSearchThreatTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "THREAT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MALWARE":
@@ -39,10 +43,10 @@ func (e *WebriskHashesSearchThreatTypesEnum) UnmarshalJSON(data []byte) error {
 	case "UNWANTED_SOFTWARE":
 		fallthrough
 	case "SOCIAL_ENGINEERING_EXTENDED_COVERAGE":
-		*e = WebriskHashesSearchThreatTypesEnum(s)
+		*e = WebriskHashesSearchThreatTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebriskHashesSearchThreatTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for WebriskHashesSearchThreatTypesEnum: %v", v)
 	}
 }
 

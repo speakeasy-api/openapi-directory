@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsToOnPremisesInstancesRequest{
+    ctx := context.Background()
+    res, err := s.AddTagsToOnPremisesInstances(ctx, operations.AddTagsToOnPremisesInstancesRequest{
         AddTagsToOnPremisesInstancesInput: shared.AddTagsToOnPremisesInstancesInput{
             InstanceNames: []string{
                 "provident",
@@ -26,31 +27,28 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "nulla",
-                    Value: "corrupti",
+                    Key: sdk.String("nulla"),
+                    Value: sdk.String("corrupti"),
                 },
                 shared.Tag{
-                    Key: "illum",
-                    Value: "vel",
+                    Key: sdk.String("illum"),
+                    Value: sdk.String("vel"),
                 },
                 shared.Tag{
-                    Key: "error",
-                    Value: "deserunt",
+                    Key: sdk.String("error"),
+                    Value: sdk.String("deserunt"),
                 },
             },
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-        XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTagsToOnPremisesInstances(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("iure"),
+        XAmzCredential: sdk.String("magnam"),
+        XAmzDate: sdk.String("debitis"),
+        XAmzSecurityToken: sdk.String("ipsa"),
+        XAmzSignature: sdk.String("delectus"),
+        XAmzSignedHeaders: sdk.String("tempora"),
+        XAmzTarget: operations.AddTagsToOnPremisesInstancesXAmzTargetEnumCodeDeploy20141006AddTagsToOnPremisesInstances,
+    })
     if err != nil {
         log.Fatal(err)
     }

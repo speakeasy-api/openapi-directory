@@ -30,29 +30,33 @@ type AnalyticsCrashGroupsTotalsRequest struct {
 }
 
 // AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum string
+type AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = "400"
-	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = "403"
-	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = "500"
+	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = 400
+	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = 403
+	AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	StopTrainingEntityRecognizerXAmzTargetEnumComprehend20171127StopTrainingEntityRecognizer StopTrainingEntityRecognizerXAmzTargetEnum = "Comprehend_20171127.StopTrainingEntityRecognizer"
 )
 
+func (e StopTrainingEntityRecognizerXAmzTargetEnum) ToPointer() *StopTrainingEntityRecognizerXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopTrainingEntityRecognizerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StopTrainingEntityRecognizer":
-		*e = StopTrainingEntityRecognizerXAmzTargetEnum(s)
+		*e = StopTrainingEntityRecognizerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopTrainingEntityRecognizerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopTrainingEntityRecognizerXAmzTargetEnum: %v", v)
 	}
 }
 

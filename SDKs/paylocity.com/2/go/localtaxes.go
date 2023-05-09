@@ -35,7 +35,10 @@ func newLocalTaxes(defaultClient, securityClient HTTPClient, serverURL, language
 // Sends new employee local tax information directly to Web Pay.
 func (s *localTaxes) AddLocalTax(ctx context.Context, request operations.AddLocalTaxRequest, security operations.AddLocalTaxSecurity) (*operations.AddLocalTaxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LocalTax", "json")
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *localTaxes) AddLocalTax(ctx context.Context, request operations.AddLoca
 // Delete local tax by tax code
 func (s *localTaxes) DeleteLocalTaxByTaxCode(ctx context.Context, request operations.DeleteLocalTaxByTaxCodeRequest, security operations.DeleteLocalTaxByTaxCodeSecurity) (*operations.DeleteLocalTaxByTaxCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -155,7 +161,10 @@ func (s *localTaxes) DeleteLocalTaxByTaxCode(ctx context.Context, request operat
 // Returns all local taxes for the selected employee.
 func (s *localTaxes) GetAllLocalTaxes(ctx context.Context, request operations.GetAllLocalTaxesRequest, security operations.GetAllLocalTaxesSecurity) (*operations.GetAllLocalTaxesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *localTaxes) GetAllLocalTaxes(ctx context.Context, request operations.Ge
 // Returns all local taxes with the provided tax code for the selected employee.
 func (s *localTaxes) GetLocalTaxByTaxCode(ctx context.Context, request operations.GetLocalTaxByTaxCodeRequest, security operations.GetLocalTaxByTaxCodeSecurity) (*operations.GetLocalTaxByTaxCodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

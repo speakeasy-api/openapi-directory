@@ -16,17 +16,21 @@ const (
 	UpdateTrustXAmzTargetEnumDirectoryService20150416UpdateTrust UpdateTrustXAmzTargetEnum = "DirectoryService_20150416.UpdateTrust"
 )
 
+func (e UpdateTrustXAmzTargetEnum) ToPointer() *UpdateTrustXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateTrustXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.UpdateTrust":
-		*e = UpdateTrustXAmzTargetEnum(s)
+		*e = UpdateTrustXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTrustXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTrustXAmzTargetEnum: %v", v)
 	}
 }
 

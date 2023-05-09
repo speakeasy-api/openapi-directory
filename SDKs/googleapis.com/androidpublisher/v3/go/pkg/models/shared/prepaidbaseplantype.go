@@ -16,21 +16,25 @@ const (
 	PrepaidBasePlanTypeTimeExtensionEnumTimeExtensionInactive    PrepaidBasePlanTypeTimeExtensionEnum = "TIME_EXTENSION_INACTIVE"
 )
 
+func (e PrepaidBasePlanTypeTimeExtensionEnum) ToPointer() *PrepaidBasePlanTypeTimeExtensionEnum {
+	return &e
+}
+
 func (e *PrepaidBasePlanTypeTimeExtensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_EXTENSION_UNSPECIFIED":
 		fallthrough
 	case "TIME_EXTENSION_ACTIVE":
 		fallthrough
 	case "TIME_EXTENSION_INACTIVE":
-		*e = PrepaidBasePlanTypeTimeExtensionEnum(s)
+		*e = PrepaidBasePlanTypeTimeExtensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrepaidBasePlanTypeTimeExtensionEnum: %s", s)
+		return fmt.Errorf("invalid value for PrepaidBasePlanTypeTimeExtensionEnum: %v", v)
 	}
 }
 

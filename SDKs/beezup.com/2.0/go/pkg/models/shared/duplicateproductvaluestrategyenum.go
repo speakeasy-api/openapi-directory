@@ -17,12 +17,16 @@ const (
 	DuplicateProductValueStrategyEnumFailImportationIfAnyDuplicateProduct DuplicateProductValueStrategyEnum = "FailImportationIfAnyDuplicateProduct"
 )
 
+func (e DuplicateProductValueStrategyEnum) ToPointer() *DuplicateProductValueStrategyEnum {
+	return &e
+}
+
 func (e *DuplicateProductValueStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "SkipAllDuplicateProducts":
@@ -30,9 +34,9 @@ func (e *DuplicateProductValueStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "KeepFirstDuplicateProductOnly":
 		fallthrough
 	case "FailImportationIfAnyDuplicateProduct":
-		*e = DuplicateProductValueStrategyEnum(s)
+		*e = DuplicateProductValueStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DuplicateProductValueStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for DuplicateProductValueStrategyEnum: %v", v)
 	}
 }

@@ -38,12 +38,16 @@ const (
 	GoogleCloudDataplexV1AssetStateEnumActionRequired   GoogleCloudDataplexV1AssetStateEnum = "ACTION_REQUIRED"
 )
 
+func (e GoogleCloudDataplexV1AssetStateEnum) ToPointer() *GoogleCloudDataplexV1AssetStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1AssetStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
@@ -53,10 +57,10 @@ func (e *GoogleCloudDataplexV1AssetStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "ACTION_REQUIRED":
-		*e = GoogleCloudDataplexV1AssetStateEnum(s)
+		*e = GoogleCloudDataplexV1AssetStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1AssetStateEnum: %v", v)
 	}
 }
 

@@ -24,12 +24,16 @@ const (
 	DfareportingPlacementsListActiveStatusEnumPlacementStatusPermanentlyArchived DfareportingPlacementsListActiveStatusEnum = "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED"
 )
 
+func (e DfareportingPlacementsListActiveStatusEnum) ToPointer() *DfareportingPlacementsListActiveStatusEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListActiveStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_STATUS_UNKNOWN":
 		fallthrough
 	case "PLACEMENT_STATUS_ACTIVE":
@@ -39,10 +43,10 @@ func (e *DfareportingPlacementsListActiveStatusEnum) UnmarshalJSON(data []byte) 
 	case "PLACEMENT_STATUS_ARCHIVED":
 		fallthrough
 	case "PLACEMENT_STATUS_PERMANENTLY_ARCHIVED":
-		*e = DfareportingPlacementsListActiveStatusEnum(s)
+		*e = DfareportingPlacementsListActiveStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListActiveStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListActiveStatusEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	DfareportingPlacementsListCompatibilitiesEnumInStreamAudio       DfareportingPlacementsListCompatibilitiesEnum = "IN_STREAM_AUDIO"
 )
 
+func (e DfareportingPlacementsListCompatibilitiesEnum) ToPointer() *DfareportingPlacementsListCompatibilitiesEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListCompatibilitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISPLAY":
 		fallthrough
 	case "DISPLAY_INTERSTITIAL":
@@ -74,10 +82,10 @@ func (e *DfareportingPlacementsListCompatibilitiesEnum) UnmarshalJSON(data []byt
 	case "IN_STREAM_VIDEO":
 		fallthrough
 	case "IN_STREAM_AUDIO":
-		*e = DfareportingPlacementsListCompatibilitiesEnum(s)
+		*e = DfareportingPlacementsListCompatibilitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListCompatibilitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListCompatibilitiesEnum: %v", v)
 	}
 }
 
@@ -89,19 +97,23 @@ const (
 	DfareportingPlacementsListPaymentSourceEnumPlacementPublisherPaid DfareportingPlacementsListPaymentSourceEnum = "PLACEMENT_PUBLISHER_PAID"
 )
 
+func (e DfareportingPlacementsListPaymentSourceEnum) ToPointer() *DfareportingPlacementsListPaymentSourceEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListPaymentSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACEMENT_AGENCY_PAID":
 		fallthrough
 	case "PLACEMENT_PUBLISHER_PAID":
-		*e = DfareportingPlacementsListPaymentSourceEnum(s)
+		*e = DfareportingPlacementsListPaymentSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListPaymentSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListPaymentSourceEnum: %v", v)
 	}
 }
 
@@ -116,12 +128,16 @@ const (
 	DfareportingPlacementsListPricingTypesEnumPricingTypeCpmActiveview       DfareportingPlacementsListPricingTypesEnum = "PRICING_TYPE_CPM_ACTIVEVIEW"
 )
 
+func (e DfareportingPlacementsListPricingTypesEnum) ToPointer() *DfareportingPlacementsListPricingTypesEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListPricingTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRICING_TYPE_CPM":
 		fallthrough
 	case "PRICING_TYPE_CPC":
@@ -133,10 +149,10 @@ func (e *DfareportingPlacementsListPricingTypesEnum) UnmarshalJSON(data []byte) 
 	case "PRICING_TYPE_FLAT_RATE_CLICKS":
 		fallthrough
 	case "PRICING_TYPE_CPM_ACTIVEVIEW":
-		*e = DfareportingPlacementsListPricingTypesEnum(s)
+		*e = DfareportingPlacementsListPricingTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListPricingTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListPricingTypesEnum: %v", v)
 	}
 }
 
@@ -148,19 +164,23 @@ const (
 	DfareportingPlacementsListSortFieldEnumName DfareportingPlacementsListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingPlacementsListSortFieldEnum) ToPointer() *DfareportingPlacementsListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingPlacementsListSortFieldEnum(s)
+		*e = DfareportingPlacementsListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListSortFieldEnum: %v", v)
 	}
 }
 
@@ -172,19 +192,23 @@ const (
 	DfareportingPlacementsListSortOrderEnumDescending DfareportingPlacementsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingPlacementsListSortOrderEnum) ToPointer() *DfareportingPlacementsListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingPlacementsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingPlacementsListSortOrderEnum(s)
+		*e = DfareportingPlacementsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingPlacementsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingPlacementsListSortOrderEnum: %v", v)
 	}
 }
 

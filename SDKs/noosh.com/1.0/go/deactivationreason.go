@@ -36,7 +36,10 @@ func newDeactivationReason(defaultClient, securityClient HTTPClient, serverURL, 
 // List all deactivation reasons
 func (s *deactivationReason) GetDeactivationReasonList(ctx context.Context, request operations.GetDeactivationReasonListRequest) (*operations.GetDeactivationReasonListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/deactivationReasons", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/deactivationReasons", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

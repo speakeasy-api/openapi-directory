@@ -22,12 +22,16 @@ const (
 	UserCipherUseEntityInterfaceEnumJsapi   UserCipherUseEntityInterfaceEnum = "jsapi"
 )
 
+func (e UserCipherUseEntityInterfaceEnum) ToPointer() *UserCipherUseEntityInterfaceEnum {
+	return &e
+}
+
 func (e *UserCipherUseEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "ftp":
@@ -43,10 +47,10 @@ func (e *UserCipherUseEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
 	case "robot":
 		fallthrough
 	case "jsapi":
-		*e = UserCipherUseEntityInterfaceEnum(s)
+		*e = UserCipherUseEntityInterfaceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserCipherUseEntityInterfaceEnum: %s", s)
+		return fmt.Errorf("invalid value for UserCipherUseEntityInterfaceEnum: %v", v)
 	}
 }
 

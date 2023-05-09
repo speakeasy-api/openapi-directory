@@ -36,7 +36,10 @@ func newJourney(defaultClient, securityClient HTTPClient, serverURL, language, s
 // JourneyJourneyResults - Perform a Journey Planner search from the parameters specified in simple types
 func (s *journey) JourneyJourneyResults(ctx context.Context, request operations.JourneyJourneyResultsRequest) (*operations.JourneyJourneyResultsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Journey/JourneyResults/{from}/to/{to}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Journey/JourneyResults/{from}/to/{to}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

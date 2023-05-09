@@ -16,17 +16,21 @@ const (
 	GetResourceRequestStatusXAmzTargetEnumCloudAPIServiceGetResourceRequestStatus GetResourceRequestStatusXAmzTargetEnum = "CloudApiService.GetResourceRequestStatus"
 )
 
+func (e GetResourceRequestStatusXAmzTargetEnum) ToPointer() *GetResourceRequestStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourceRequestStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudApiService.GetResourceRequestStatus":
-		*e = GetResourceRequestStatusXAmzTargetEnum(s)
+		*e = GetResourceRequestStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourceRequestStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourceRequestStatusXAmzTargetEnum: %v", v)
 	}
 }
 

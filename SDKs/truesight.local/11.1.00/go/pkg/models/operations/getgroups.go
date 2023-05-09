@@ -16,19 +16,23 @@ const (
 	GetGroupsDirectionEnumDesc GetGroupsDirectionEnum = "desc"
 )
 
+func (e GetGroupsDirectionEnum) ToPointer() *GetGroupsDirectionEnum {
+	return &e
+}
+
 func (e *GetGroupsDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GetGroupsDirectionEnum(s)
+		*e = GetGroupsDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGroupsDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGroupsDirectionEnum: %v", v)
 	}
 }
 

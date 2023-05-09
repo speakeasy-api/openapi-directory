@@ -16,21 +16,25 @@ const (
 	DeveloperMetadataLookupLocationMatchingStrategyEnumIntersectingLocation                                 DeveloperMetadataLookupLocationMatchingStrategyEnum = "INTERSECTING_LOCATION"
 )
 
+func (e DeveloperMetadataLookupLocationMatchingStrategyEnum) ToPointer() *DeveloperMetadataLookupLocationMatchingStrategyEnum {
+	return &e
+}
+
 func (e *DeveloperMetadataLookupLocationMatchingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_METADATA_LOCATION_MATCHING_STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "EXACT_LOCATION":
 		fallthrough
 	case "INTERSECTING_LOCATION":
-		*e = DeveloperMetadataLookupLocationMatchingStrategyEnum(s)
+		*e = DeveloperMetadataLookupLocationMatchingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeveloperMetadataLookupLocationMatchingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeveloperMetadataLookupLocationMatchingStrategyEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	DeveloperMetadataLookupLocationTypeEnumSpreadsheet                              DeveloperMetadataLookupLocationTypeEnum = "SPREADSHEET"
 )
 
+func (e DeveloperMetadataLookupLocationTypeEnum) ToPointer() *DeveloperMetadataLookupLocationTypeEnum {
+	return &e
+}
+
 func (e *DeveloperMetadataLookupLocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_METADATA_LOCATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ROW":
@@ -60,10 +68,10 @@ func (e *DeveloperMetadataLookupLocationTypeEnum) UnmarshalJSON(data []byte) err
 	case "SHEET":
 		fallthrough
 	case "SPREADSHEET":
-		*e = DeveloperMetadataLookupLocationTypeEnum(s)
+		*e = DeveloperMetadataLookupLocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeveloperMetadataLookupLocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeveloperMetadataLookupLocationTypeEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	DeveloperMetadataLookupVisibilityEnumProject                                DeveloperMetadataLookupVisibilityEnum = "PROJECT"
 )
 
+func (e DeveloperMetadataLookupVisibilityEnum) ToPointer() *DeveloperMetadataLookupVisibilityEnum {
+	return &e
+}
+
 func (e *DeveloperMetadataLookupVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_METADATA_VISIBILITY_UNSPECIFIED":
 		fallthrough
 	case "DOCUMENT":
 		fallthrough
 	case "PROJECT":
-		*e = DeveloperMetadataLookupVisibilityEnum(s)
+		*e = DeveloperMetadataLookupVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeveloperMetadataLookupVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for DeveloperMetadataLookupVisibilityEnum: %v", v)
 	}
 }
 

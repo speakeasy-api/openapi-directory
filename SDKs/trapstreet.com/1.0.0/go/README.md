@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/trapstreet.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAddressRequest{
-        Address: "5786 Little Streets",
-    }
-
     ctx := context.Background()
-    res, err := s.GetAddress(ctx, req)
+    res, err := s.GetAddress(ctx, operations.GetAddressRequest{
+        Address: "5786 Little Streets",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,9 +41,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetAddress`
+* [GetAddress](docs/sdk/README.md#getaddress)
 <!-- End SDK Available Operations -->
 
 ### Maturity

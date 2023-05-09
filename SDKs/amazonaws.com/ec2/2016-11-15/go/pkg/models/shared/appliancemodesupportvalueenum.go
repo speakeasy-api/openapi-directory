@@ -14,18 +14,22 @@ const (
 	ApplianceModeSupportValueEnumDisable ApplianceModeSupportValueEnum = "disable"
 )
 
+func (e ApplianceModeSupportValueEnum) ToPointer() *ApplianceModeSupportValueEnum {
+	return &e
+}
+
 func (e *ApplianceModeSupportValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = ApplianceModeSupportValueEnum(s)
+		*e = ApplianceModeSupportValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplianceModeSupportValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplianceModeSupportValueEnum: %v", v)
 	}
 }

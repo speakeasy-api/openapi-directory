@@ -16,17 +16,21 @@ const (
 	GetPlanXAmzTargetEnumAwsGlueGetPlan GetPlanXAmzTargetEnum = "AWSGlue.GetPlan"
 )
 
+func (e GetPlanXAmzTargetEnum) ToPointer() *GetPlanXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPlanXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetPlan":
-		*e = GetPlanXAmzTargetEnum(s)
+		*e = GetPlanXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPlanXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPlanXAmzTargetEnum: %v", v)
 	}
 }
 

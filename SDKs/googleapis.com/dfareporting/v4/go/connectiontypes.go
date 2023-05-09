@@ -34,7 +34,10 @@ func newConnectionTypes(defaultClient, securityClient HTTPClient, serverURL, lan
 // DfareportingConnectionTypesGet - Gets one connection type by ID.
 func (s *connectionTypes) DfareportingConnectionTypesGet(ctx context.Context, request operations.DfareportingConnectionTypesGetRequest, security operations.DfareportingConnectionTypesGetSecurity) (*operations.DfareportingConnectionTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *connectionTypes) DfareportingConnectionTypesGet(ctx context.Context, re
 // DfareportingConnectionTypesList - Retrieves a list of connection types.
 func (s *connectionTypes) DfareportingConnectionTypesList(ctx context.Context, request operations.DfareportingConnectionTypesListRequest, security operations.DfareportingConnectionTypesListSecurity) (*operations.DfareportingConnectionTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/connectionTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

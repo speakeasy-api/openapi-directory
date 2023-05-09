@@ -16,17 +16,21 @@ const (
 	PutKeywordXAmzTargetEnumPinpointSmsVoiceV2PutKeyword PutKeywordXAmzTargetEnum = "PinpointSMSVoiceV2.PutKeyword"
 )
 
+func (e PutKeywordXAmzTargetEnum) ToPointer() *PutKeywordXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutKeywordXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PinpointSMSVoiceV2.PutKeyword":
-		*e = PutKeywordXAmzTargetEnum(s)
+		*e = PutKeywordXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutKeywordXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutKeywordXAmzTargetEnum: %v", v)
 	}
 }
 

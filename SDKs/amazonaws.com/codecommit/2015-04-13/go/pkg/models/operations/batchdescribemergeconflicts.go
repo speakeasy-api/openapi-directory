@@ -16,17 +16,21 @@ const (
 	BatchDescribeMergeConflictsXAmzTargetEnumCodeCommit20150413BatchDescribeMergeConflicts BatchDescribeMergeConflictsXAmzTargetEnum = "CodeCommit_20150413.BatchDescribeMergeConflicts"
 )
 
+func (e BatchDescribeMergeConflictsXAmzTargetEnum) ToPointer() *BatchDescribeMergeConflictsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchDescribeMergeConflictsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.BatchDescribeMergeConflicts":
-		*e = BatchDescribeMergeConflictsXAmzTargetEnum(s)
+		*e = BatchDescribeMergeConflictsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchDescribeMergeConflictsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchDescribeMergeConflictsXAmzTargetEnum: %v", v)
 	}
 }
 

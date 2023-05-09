@@ -17,12 +17,16 @@ const (
 	ValidityPeriodTypeEnumYears    ValidityPeriodTypeEnum = "YEARS"
 )
 
+func (e ValidityPeriodTypeEnum) ToPointer() *ValidityPeriodTypeEnum {
+	return &e
+}
+
 func (e *ValidityPeriodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "END_DATE":
 		fallthrough
 	case "ABSOLUTE":
@@ -32,9 +36,9 @@ func (e *ValidityPeriodTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MONTHS":
 		fallthrough
 	case "YEARS":
-		*e = ValidityPeriodTypeEnum(s)
+		*e = ValidityPeriodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidityPeriodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidityPeriodTypeEnum: %v", v)
 	}
 }

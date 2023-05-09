@@ -18,12 +18,16 @@ const (
 	ConsumerInfoTypeEnumServiceSpecific         ConsumerInfoTypeEnum = "SERVICE_SPECIFIC"
 )
 
+func (e ConsumerInfoTypeEnum) ToPointer() *ConsumerInfoTypeEnum {
+	return &e
+}
+
 func (e *ConsumerInfoTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONSUMER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PROJECT":
@@ -33,10 +37,10 @@ func (e *ConsumerInfoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ORGANIZATION":
 		fallthrough
 	case "SERVICE_SPECIFIC":
-		*e = ConsumerInfoTypeEnum(s)
+		*e = ConsumerInfoTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConsumerInfoTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConsumerInfoTypeEnum: %v", v)
 	}
 }
 

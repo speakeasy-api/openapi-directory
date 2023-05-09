@@ -15,17 +15,21 @@ const (
 	GETGETAttributesActionEnumGetAttributes GETGETAttributesActionEnum = "GetAttributes"
 )
 
+func (e GETGETAttributesActionEnum) ToPointer() *GETGETAttributesActionEnum {
+	return &e
+}
+
 func (e *GETGETAttributesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAttributes":
-		*e = GETGETAttributesActionEnum(s)
+		*e = GETGETAttributesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAttributesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAttributesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETAttributesVersionEnumTwoThousandAndNine0415 GETGETAttributesVersionEnum = "2009-04-15"
 )
 
+func (e GETGETAttributesVersionEnum) ToPointer() *GETGETAttributesVersionEnum {
+	return &e
+}
+
 func (e *GETGETAttributesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2009-04-15":
-		*e = GETGETAttributesVersionEnum(s)
+		*e = GETGETAttributesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETAttributesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETAttributesVersionEnum: %v", v)
 	}
 }
 

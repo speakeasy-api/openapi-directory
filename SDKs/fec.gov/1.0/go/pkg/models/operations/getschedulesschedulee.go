@@ -19,12 +19,16 @@ const (
 	GetSchedulesScheduleECandidateOfficeEnumP       GetSchedulesScheduleECandidateOfficeEnum = "P"
 )
 
+func (e GetSchedulesScheduleECandidateOfficeEnum) ToPointer() *GetSchedulesScheduleECandidateOfficeEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleECandidateOfficeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "H":
@@ -32,10 +36,10 @@ func (e *GetSchedulesScheduleECandidateOfficeEnum) UnmarshalJSON(data []byte) er
 	case "S":
 		fallthrough
 	case "P":
-		*e = GetSchedulesScheduleECandidateOfficeEnum(s)
+		*e = GetSchedulesScheduleECandidateOfficeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleECandidateOfficeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleECandidateOfficeEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	GetSchedulesScheduleESupportOpposeIndicatorEnumO GetSchedulesScheduleESupportOpposeIndicatorEnum = "O"
 )
 
+func (e GetSchedulesScheduleESupportOpposeIndicatorEnum) ToPointer() *GetSchedulesScheduleESupportOpposeIndicatorEnum {
+	return &e
+}
+
 func (e *GetSchedulesScheduleESupportOpposeIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "S":
 		fallthrough
 	case "O":
-		*e = GetSchedulesScheduleESupportOpposeIndicatorEnum(s)
+		*e = GetSchedulesScheduleESupportOpposeIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchedulesScheduleESupportOpposeIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchedulesScheduleESupportOpposeIndicatorEnum: %v", v)
 	}
 }
 
@@ -68,6 +76,12 @@ type GetSchedulesScheduleERequest struct {
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID []string `queryParam:"style=form,explode=true,name=candidate_id"`
 	// Federal office candidate runs for: H, S or P

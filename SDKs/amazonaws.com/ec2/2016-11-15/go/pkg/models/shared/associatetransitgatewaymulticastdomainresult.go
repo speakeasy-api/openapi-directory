@@ -19,12 +19,16 @@ const (
 	AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnumTgwPeering           AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum = "tgw-peering"
 )
 
+func (e AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum) ToPointer() *AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum {
+	return &e
+}
+
 func (e *AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -36,10 +40,10 @@ func (e *AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnu
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum(s)
+		*e = AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateTransitGatewayMulticastDomainResultAssociationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -56,12 +60,16 @@ const (
 	AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnumFailed            AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum = "failed"
 )
 
+func (e AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum) ToPointer() *AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum {
+	return &e
+}
+
 func (e *AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pendingAcceptance":
 		fallthrough
 	case "associating":
@@ -75,10 +83,10 @@ func (e *AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnu
 	case "rejected":
 		fallthrough
 	case "failed":
-		*e = AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum(s)
+		*e = AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateTransitGatewayMulticastDomainResultAssociationsSubnetsStateEnum: %v", v)
 	}
 }
 

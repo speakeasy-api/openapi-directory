@@ -13,16 +13,20 @@ const (
 	LocaleEnumEnUs LocaleEnum = "EN_US"
 )
 
+func (e LocaleEnum) ToPointer() *LocaleEnum {
+	return &e
+}
+
 func (e *LocaleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EN_US":
-		*e = LocaleEnum(s)
+		*e = LocaleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocaleEnum: %s", s)
+		return fmt.Errorf("invalid value for LocaleEnum: %v", v)
 	}
 }

@@ -3,7 +3,7 @@
 package shared
 
 type EnterpriseCrmEventbusProtoCustomSuspensionRequest struct {
-	// Use this request to post all workflows associated with a given trigger id. Next available id: 10
+	// Use this request to post all workflows associated with a given trigger id. Next available id: 11
 	PostToQueueWithTriggerIDRequest *GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIDRequest `json:"postToQueueWithTriggerIdRequest,omitempty"`
 	// In the fired event, set the SuspensionInfo message as the value for this key.
 	SuspensionInfoEventParameterKey *string `json:"suspensionInfoEventParameterKey,omitempty"`

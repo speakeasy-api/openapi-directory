@@ -31,7 +31,7 @@ type DataplexProjectsLocationsDataScansListRequest struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// Optional. Order by fields (name or create_time) for the result. If not specified, the ordering is undefined.
 	OrderBy *string `queryParam:"style=form,explode=true,name=orderBy"`
-	// Optional. Maximum number of dataScans to return. The service may return fewer than this value. If unspecified, at most 10 scans will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+	// Optional. Maximum number of dataScans to return. The service may return fewer than this value. If unspecified, at most 500 scans will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. Page token received from a previous ListDataScans call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListDataScans must match the call that provided the page token.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`

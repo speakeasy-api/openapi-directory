@@ -32,19 +32,23 @@ const (
 	DeploymentmanagerDeploymentsDeleteDeletePolicyEnumAbandon DeploymentmanagerDeploymentsDeleteDeletePolicyEnum = "ABANDON"
 )
 
+func (e DeploymentmanagerDeploymentsDeleteDeletePolicyEnum) ToPointer() *DeploymentmanagerDeploymentsDeleteDeletePolicyEnum {
+	return &e
+}
+
 func (e *DeploymentmanagerDeploymentsDeleteDeletePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELETE":
 		fallthrough
 	case "ABANDON":
-		*e = DeploymentmanagerDeploymentsDeleteDeletePolicyEnum(s)
+		*e = DeploymentmanagerDeploymentsDeleteDeletePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsDeleteDeletePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentmanagerDeploymentsDeleteDeletePolicyEnum: %v", v)
 	}
 }
 

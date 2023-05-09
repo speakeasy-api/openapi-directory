@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/cloud9/2017
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,45 +28,39 @@ func main() {
         }),
     )
 
-    req := operations.CreateEnvironmentEc2Request{
+    ctx := context.Background()
+    res, err := s.CreateEnvironmentEc2(ctx, operations.CreateEnvironmentEc2Request{
         CreateEnvironmentEc2Request: shared.CreateEnvironmentEc2Request{
-            AutomaticStopTimeMinutes: 548814,
-            ClientRequestToken: "provident",
-            ConnectionType: "CONNECT_SSM",
-            Description: "quibusdam",
-            DryRun: false,
-            ImageID: "unde",
+            AutomaticStopTimeMinutes: sdk.Int64(548814),
+            ClientRequestToken: sdk.String("provident"),
+            ConnectionType: shared.ConnectionTypeEnumConnectSsm.ToPointer(),
+            Description: sdk.String("quibusdam"),
+            DryRun: sdk.Bool(false),
+            ImageID: sdk.String("unde"),
             InstanceType: "nulla",
-            Name: "corrupti",
-            OwnerArn: "illum",
-            SubnetID: "vel",
+            Name: "Dallas Kassulke",
+            OwnerArn: sdk.String("suscipit"),
+            SubnetID: sdk.String("iure"),
             Tags: []shared.Tag{
-                shared.Tag{
-                    Key: "deserunt",
-                    Value: "suscipit",
-                },
-                shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
-                },
                 shared.Tag{
                     Key: "debitis",
                     Value: "ipsa",
                 },
+                shared.Tag{
+                    Key: "delectus",
+                    Value: "tempora",
+                },
             },
         },
-        XAmzAlgorithm: "delectus",
-        XAmzContentSha256: "tempora",
-        XAmzCredential: "suscipit",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "minus",
-        XAmzSignature: "placeat",
-        XAmzSignedHeaders: "voluptatum",
-        XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateEnvironmentEc2(ctx, req)
+        XAmzAlgorithm: sdk.String("suscipit"),
+        XAmzContentSha256: sdk.String("molestiae"),
+        XAmzCredential: sdk.String("minus"),
+        XAmzDate: sdk.String("placeat"),
+        XAmzSecurityToken: sdk.String("voluptatum"),
+        XAmzSignature: sdk.String("iusto"),
+        XAmzSignedHeaders: sdk.String("excepturi"),
+        XAmzTarget: operations.CreateEnvironmentEc2XAmzTargetEnumAwsCloud9WorkspaceManagementServiceCreateEnvironmentEc2,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -81,21 +75,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateEnvironmentEc2` - Creates an Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then connects from the instance to the environment.
-* `CreateEnvironmentMembership` - Adds an environment member to an Cloud9 development environment.
-* `DeleteEnvironment` - Deletes an Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also terminates the instance.
-* `DeleteEnvironmentMembership` - Deletes an environment member from a development environment.
-* `DescribeEnvironmentMemberships` - Gets information about environment members for an Cloud9 development environment.
-* `DescribeEnvironmentStatus` - Gets status information for an Cloud9 development environment.
-* `DescribeEnvironments` - Gets information about Cloud9 development environments.
-* `ListEnvironments` - Gets a list of Cloud9 development environment identifiers.
-* `ListTagsForResource` - Gets a list of the tags associated with an Cloud9 development environment.
-* `TagResource` - <p>Adds tags to an Cloud9 development environment.</p> <important> <p>Tags that you add to an Cloud9 environment by using this method will NOT be automatically propagated to underlying resources.</p> </important>
-* `UntagResource` - Removes tags from an Cloud9 development environment.
-* `UpdateEnvironment` - Changes the settings of an existing Cloud9 development environment.
-* `UpdateEnvironmentMembership` - Changes the settings of an existing environment member for an Cloud9 development environment.
+* [CreateEnvironmentEc2](docs/sdk/README.md#createenvironmentec2) - Creates an Cloud9 development environment, launches an Amazon Elastic Compute Cloud (Amazon EC2) instance, and then connects from the instance to the environment.
+* [CreateEnvironmentMembership](docs/sdk/README.md#createenvironmentmembership) - Adds an environment member to an Cloud9 development environment.
+* [DeleteEnvironment](docs/sdk/README.md#deleteenvironment) - Deletes an Cloud9 development environment. If an Amazon EC2 instance is connected to the environment, also terminates the instance.
+* [DeleteEnvironmentMembership](docs/sdk/README.md#deleteenvironmentmembership) - Deletes an environment member from a development environment.
+* [DescribeEnvironmentMemberships](docs/sdk/README.md#describeenvironmentmemberships) - Gets information about environment members for an Cloud9 development environment.
+* [DescribeEnvironmentStatus](docs/sdk/README.md#describeenvironmentstatus) - Gets status information for an Cloud9 development environment.
+* [DescribeEnvironments](docs/sdk/README.md#describeenvironments) - Gets information about Cloud9 development environments.
+* [ListEnvironments](docs/sdk/README.md#listenvironments) - Gets a list of Cloud9 development environment identifiers.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Gets a list of the tags associated with an Cloud9 development environment.
+* [TagResource](docs/sdk/README.md#tagresource) - <p>Adds tags to an Cloud9 development environment.</p> <important> <p>Tags that you add to an Cloud9 environment by using this method will NOT be automatically propagated to underlying resources.</p> </important>
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes tags from an Cloud9 development environment.
+* [UpdateEnvironment](docs/sdk/README.md#updateenvironment) - Changes the settings of an existing Cloud9 development environment.
+* [UpdateEnvironmentMembership](docs/sdk/README.md#updateenvironmentmembership) - Changes the settings of an existing environment member for an Cloud9 development environment.
 <!-- End SDK Available Operations -->
 
 ### Maturity

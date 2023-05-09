@@ -16,17 +16,21 @@ const (
 	ReportTaskProgressXAmzTargetEnumDataPipelineReportTaskProgress ReportTaskProgressXAmzTargetEnum = "DataPipeline.ReportTaskProgress"
 )
 
+func (e ReportTaskProgressXAmzTargetEnum) ToPointer() *ReportTaskProgressXAmzTargetEnum {
+	return &e
+}
+
 func (e *ReportTaskProgressXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DataPipeline.ReportTaskProgress":
-		*e = ReportTaskProgressXAmzTargetEnum(s)
+		*e = ReportTaskProgressXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportTaskProgressXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportTaskProgressXAmzTargetEnum: %v", v)
 	}
 }
 

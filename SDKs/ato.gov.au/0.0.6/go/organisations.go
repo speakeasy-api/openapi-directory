@@ -41,7 +41,10 @@ func newOrganisations(defaultClient, securityClient HTTPClient, serverURL, langu
 // Delete an organisation with the specified identifier
 func (s *organisations) DeleteOrganisationsPartyID(ctx context.Context, request operations.DeleteOrganisationsPartyIDRequest) (*operations.DeleteOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -182,7 +185,10 @@ func (s *organisations) GetOrganisations(ctx context.Context, request operations
 // Retrieve an organisation with the specified identifier
 func (s *organisations) GetOrganisationsPartyID(ctx context.Context, request operations.GetOrganisationsPartyIDRequest) (*operations.GetOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,7 +334,10 @@ func (s *organisations) PostOrganisations(ctx context.Context, request operation
 // Update an organisation
 func (s *organisations) PutOrganisationsPartyID(ctx context.Context, request operations.PutOrganisationsPartyIDRequest) (*operations.PutOrganisationsPartyIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organisations/{partyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrganisationInput", "json")
 	if err != nil {

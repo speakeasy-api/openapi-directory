@@ -34,7 +34,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // ContentReportsSearch - Retrieves merchant performance mertrics matching the search query and optionally segmented by selected dimensions.
 func (s *reports) ContentReportsSearch(ctx context.Context, request operations.ContentReportsSearchRequest, security operations.ContentReportsSearchSecurity) (*operations.ContentReportsSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/reports/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/reports/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SearchRequest", "json")
 	if err != nil {

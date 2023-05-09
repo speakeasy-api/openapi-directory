@@ -16,21 +16,25 @@ const (
 	FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnumAutoscalingAlgorithmBasic   FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum = "AUTOSCALING_ALGORITHM_BASIC"
 )
 
+func (e FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum) ToPointer() *FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum {
+	return &e
+}
+
 func (e *FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOSCALING_ALGORITHM_UNKNOWN":
 		fallthrough
 	case "AUTOSCALING_ALGORITHM_NONE":
 		fallthrough
 	case "AUTOSCALING_ALGORITHM_BASIC":
-		*e = FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum(s)
+		*e = FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentAutoscalingAlgorithmEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	FlexTemplateRuntimeEnvironmentFlexrsGoalEnumFlexrsCostOptimized  FlexTemplateRuntimeEnvironmentFlexrsGoalEnum = "FLEXRS_COST_OPTIMIZED"
 )
 
+func (e FlexTemplateRuntimeEnvironmentFlexrsGoalEnum) ToPointer() *FlexTemplateRuntimeEnvironmentFlexrsGoalEnum {
+	return &e
+}
+
 func (e *FlexTemplateRuntimeEnvironmentFlexrsGoalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FLEXRS_UNSPECIFIED":
 		fallthrough
 	case "FLEXRS_SPEED_OPTIMIZED":
 		fallthrough
 	case "FLEXRS_COST_OPTIMIZED":
-		*e = FlexTemplateRuntimeEnvironmentFlexrsGoalEnum(s)
+		*e = FlexTemplateRuntimeEnvironmentFlexrsGoalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentFlexrsGoalEnum: %s", s)
+		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentFlexrsGoalEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	FlexTemplateRuntimeEnvironmentIPConfigurationEnumWorkerIPPrivate     FlexTemplateRuntimeEnvironmentIPConfigurationEnum = "WORKER_IP_PRIVATE"
 )
 
+func (e FlexTemplateRuntimeEnvironmentIPConfigurationEnum) ToPointer() *FlexTemplateRuntimeEnvironmentIPConfigurationEnum {
+	return &e
+}
+
 func (e *FlexTemplateRuntimeEnvironmentIPConfigurationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKER_IP_UNSPECIFIED":
 		fallthrough
 	case "WORKER_IP_PUBLIC":
 		fallthrough
 	case "WORKER_IP_PRIVATE":
-		*e = FlexTemplateRuntimeEnvironmentIPConfigurationEnum(s)
+		*e = FlexTemplateRuntimeEnvironmentIPConfigurationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentIPConfigurationEnum: %s", s)
+		return fmt.Errorf("invalid value for FlexTemplateRuntimeEnvironmentIPConfigurationEnum: %v", v)
 	}
 }
 

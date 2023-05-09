@@ -21,12 +21,16 @@ const (
 	GooglePrivacyDlpV2ConditionOperatorEnumExists                        GooglePrivacyDlpV2ConditionOperatorEnum = "EXISTS"
 )
 
+func (e GooglePrivacyDlpV2ConditionOperatorEnum) ToPointer() *GooglePrivacyDlpV2ConditionOperatorEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2ConditionOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIONAL_OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "EQUAL_TO":
@@ -42,10 +46,10 @@ func (e *GooglePrivacyDlpV2ConditionOperatorEnum) UnmarshalJSON(data []byte) err
 	case "LESS_THAN_OR_EQUALS":
 		fallthrough
 	case "EXISTS":
-		*e = GooglePrivacyDlpV2ConditionOperatorEnum(s)
+		*e = GooglePrivacyDlpV2ConditionOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ConditionOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2ConditionOperatorEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newBoxConsolidationController(defaultClient, securityClient HTTPClient, ser
 
 func (s *boxConsolidationController) EpConsolidate(ctx context.Context, request operations.EpConsolidateRequest) (*operations.EpConsolidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mosaik/boxconsolidation/consolidate/{p2pkaddress}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -118,6 +121,7 @@ func (s *boxConsolidationController) EpConsolidate(ctx context.Context, request 
 
 	return res, nil
 }
+
 func (s *boxConsolidationController) MainApp1(ctx context.Context) (*operations.MainApp1Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/boxconsolidation/"

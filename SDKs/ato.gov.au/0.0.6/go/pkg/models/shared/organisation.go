@@ -19,12 +19,16 @@ const (
 	OrganisationLegalEntityTypeEnumJointVenture OrganisationLegalEntityTypeEnum = "Joint Venture"
 )
 
+func (e OrganisationLegalEntityTypeEnum) ToPointer() *OrganisationLegalEntityTypeEnum {
+	return &e
+}
+
 func (e *OrganisationLegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Company":
 		fallthrough
 	case "Partnership":
@@ -32,10 +36,10 @@ func (e *OrganisationLegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Trust":
 		fallthrough
 	case "Joint Venture":
-		*e = OrganisationLegalEntityTypeEnum(s)
+		*e = OrganisationLegalEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganisationLegalEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganisationLegalEntityTypeEnum: %v", v)
 	}
 }
 

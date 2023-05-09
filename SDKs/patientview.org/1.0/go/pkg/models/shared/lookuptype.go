@@ -35,12 +35,16 @@ const (
 	LookupTypeTypeEnumLinkType                       LookupTypeTypeEnum = "LINK_TYPE"
 )
 
+func (e LookupTypeTypeEnum) ToPointer() *LookupTypeTypeEnum {
+	return &e
+}
+
 func (e *LookupTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GROUP":
 		fallthrough
 	case "MENU":
@@ -84,10 +88,10 @@ func (e *LookupTypeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "IBD_FAMILYHISTORY":
 		fallthrough
 	case "LINK_TYPE":
-		*e = LookupTypeTypeEnum(s)
+		*e = LookupTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LookupTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LookupTypeTypeEnum: %v", v)
 	}
 }
 

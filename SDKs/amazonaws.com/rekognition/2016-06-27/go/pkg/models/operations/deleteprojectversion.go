@@ -16,17 +16,21 @@ const (
 	DeleteProjectVersionXAmzTargetEnumRekognitionServiceDeleteProjectVersion DeleteProjectVersionXAmzTargetEnum = "RekognitionService.DeleteProjectVersion"
 )
 
+func (e DeleteProjectVersionXAmzTargetEnum) ToPointer() *DeleteProjectVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteProjectVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.DeleteProjectVersion":
-		*e = DeleteProjectVersionXAmzTargetEnum(s)
+		*e = DeleteProjectVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProjectVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProjectVersionXAmzTargetEnum: %v", v)
 	}
 }
 

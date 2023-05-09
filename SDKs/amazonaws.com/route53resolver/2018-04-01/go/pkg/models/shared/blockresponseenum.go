@@ -15,20 +15,24 @@ const (
 	BlockResponseEnumOverride BlockResponseEnum = "OVERRIDE"
 )
 
+func (e BlockResponseEnum) ToPointer() *BlockResponseEnum {
+	return &e
+}
+
 func (e *BlockResponseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NODATA":
 		fallthrough
 	case "NXDOMAIN":
 		fallthrough
 	case "OVERRIDE":
-		*e = BlockResponseEnum(s)
+		*e = BlockResponseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlockResponseEnum: %s", s)
+		return fmt.Errorf("invalid value for BlockResponseEnum: %v", v)
 	}
 }

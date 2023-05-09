@@ -15,20 +15,24 @@ const (
 	ImageLayerSortByEnumAll      ImageLayerSortByEnum = "ALL"
 )
 
+func (e ImageLayerSortByEnum) ToPointer() *ImageLayerSortByEnum {
+	return &e
+}
+
 func (e *ImageLayerSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
 		fallthrough
 	case "ALL":
-		*e = ImageLayerSortByEnum(s)
+		*e = ImageLayerSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageLayerSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageLayerSortByEnum: %v", v)
 	}
 }

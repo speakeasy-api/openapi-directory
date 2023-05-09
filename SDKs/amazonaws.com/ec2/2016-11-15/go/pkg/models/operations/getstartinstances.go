@@ -15,17 +15,21 @@ const (
 	GETStartInstancesActionEnumStartInstances GETStartInstancesActionEnum = "StartInstances"
 )
 
+func (e GETStartInstancesActionEnum) ToPointer() *GETStartInstancesActionEnum {
+	return &e
+}
+
 func (e *GETStartInstancesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartInstances":
-		*e = GETStartInstancesActionEnum(s)
+		*e = GETStartInstancesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartInstancesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartInstancesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStartInstancesVersionEnumTwoThousandAndSixteen1115 GETStartInstancesVersionEnum = "2016-11-15"
 )
 
+func (e GETStartInstancesVersionEnum) ToPointer() *GETStartInstancesVersionEnum {
+	return &e
+}
+
 func (e *GETStartInstancesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETStartInstancesVersionEnum(s)
+		*e = GETStartInstancesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartInstancesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartInstancesVersionEnum: %v", v)
 	}
 }
 

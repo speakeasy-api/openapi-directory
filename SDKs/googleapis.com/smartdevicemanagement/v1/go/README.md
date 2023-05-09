@@ -13,42 +13,40 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/smartdevic
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Enterprises.SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx, operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest: &shared.GoogleHomeEnterpriseSdmV1ExecuteDeviceCommandRequest{
-            Command: "provident",
+            Command: sdk.String("provident"),
             Params: map[string]interface{}{
                 "quibusdam": "unde",
                 "nulla": "corrupti",
                 "illum": "vel",
             },
         },
-        AccessToken: "error",
-        Alt: "media",
-        Callback: "suscipit",
-        Fields: "iure",
-        Key: "magnam",
-        Name: "debitis",
-        OauthToken: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Enterprises.SmartdevicemanagementEnterprisesDevicesExecuteCommand(ctx, req, operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity{
+        AccessToken: sdk.String("error"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("suscipit"),
+        Fields: sdk.String("iure"),
+        Key: sdk.String("magnam"),
+        Name: "Larry Windler",
+        OauthToken: sdk.String("molestiae"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("minus"),
+        UploadType: sdk.String("placeat"),
+        UploadProtocol: sdk.String("voluptatum"),
+    }, operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -67,13 +65,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### Enterprises
+### [Enterprises](docs/enterprises/README.md)
 
-* `SmartdevicemanagementEnterprisesDevicesExecuteCommand` - Executes a command to device managed by the enterprise.
-* `SmartdevicemanagementEnterprisesDevicesList` - Lists devices managed by the enterprise.
-* `SmartdevicemanagementEnterprisesStructuresList` - Lists structures managed by the enterprise.
-* `SmartdevicemanagementEnterprisesStructuresRoomsGet` - Gets a room managed by the enterprise.
-* `SmartdevicemanagementEnterprisesStructuresRoomsList` - Lists rooms managed by the enterprise.
+* [SmartdevicemanagementEnterprisesDevicesExecuteCommand](docs/enterprises/README.md#smartdevicemanagemententerprisesdevicesexecutecommand) - Executes a command to device managed by the enterprise.
+* [SmartdevicemanagementEnterprisesDevicesList](docs/enterprises/README.md#smartdevicemanagemententerprisesdeviceslist) - Lists devices managed by the enterprise.
+* [SmartdevicemanagementEnterprisesStructuresList](docs/enterprises/README.md#smartdevicemanagemententerprisesstructureslist) - Lists structures managed by the enterprise.
+* [SmartdevicemanagementEnterprisesStructuresRoomsGet](docs/enterprises/README.md#smartdevicemanagemententerprisesstructuresroomsget) - Gets a room managed by the enterprise.
+* [SmartdevicemanagementEnterprisesStructuresRoomsList](docs/enterprises/README.md#smartdevicemanagemententerprisesstructuresroomslist) - Lists rooms managed by the enterprise.
 <!-- End SDK Available Operations -->
 
 ### Maturity

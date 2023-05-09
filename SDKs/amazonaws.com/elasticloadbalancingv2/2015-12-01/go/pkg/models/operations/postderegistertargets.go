@@ -15,17 +15,21 @@ const (
 	POSTDeregisterTargetsActionEnumDeregisterTargets POSTDeregisterTargetsActionEnum = "DeregisterTargets"
 )
 
+func (e POSTDeregisterTargetsActionEnum) ToPointer() *POSTDeregisterTargetsActionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterTargetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeregisterTargets":
-		*e = POSTDeregisterTargetsActionEnum(s)
+		*e = POSTDeregisterTargetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterTargetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterTargetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeregisterTargetsVersionEnumTwoThousandAndFifteen1201 POSTDeregisterTargetsVersionEnum = "2015-12-01"
 )
 
+func (e POSTDeregisterTargetsVersionEnum) ToPointer() *POSTDeregisterTargetsVersionEnum {
+	return &e
+}
+
 func (e *POSTDeregisterTargetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = POSTDeregisterTargetsVersionEnum(s)
+		*e = POSTDeregisterTargetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeregisterTargetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeregisterTargetsVersionEnum: %v", v)
 	}
 }
 

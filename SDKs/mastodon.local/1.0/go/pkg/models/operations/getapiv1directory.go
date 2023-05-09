@@ -17,19 +17,23 @@ const (
 	GetAPIV1DirectoryOrderEnumNew    GetAPIV1DirectoryOrderEnum = "new"
 )
 
+func (e GetAPIV1DirectoryOrderEnum) ToPointer() *GetAPIV1DirectoryOrderEnum {
+	return &e
+}
+
 func (e *GetAPIV1DirectoryOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "new":
-		*e = GetAPIV1DirectoryOrderEnum(s)
+		*e = GetAPIV1DirectoryOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAPIV1DirectoryOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAPIV1DirectoryOrderEnum: %v", v)
 	}
 }
 

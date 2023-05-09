@@ -13,45 +13,43 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/admin/repo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ReportsActivitiesListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        ActorIPAddress: "distinctio",
-        Alt: "proto",
-        ApplicationName: "mobile",
-        Callback: "nulla",
-        CustomerID: "corrupti",
-        EndTime: "illum",
-        EventName: "vel",
-        Fields: "error",
-        Filters: "deserunt",
-        GroupIDFilter: "suscipit",
-        Key: "iure",
-        MaxResults: 297534,
-        OauthToken: "debitis",
-        OrgUnitID: "ipsa",
-        PageToken: "delectus",
-        PrettyPrint: false,
-        QuotaUser: "tempora",
-        StartTime: "suscipit",
-        UploadType: "molestiae",
-        UploadProtocol: "minus",
-        UserKey: "placeat",
-    }
-
     ctx := context.Background()
-    res, err := s.Activities.ReportsActivitiesList(ctx, req, operations.ReportsActivitiesListSecurity{
+    res, err := s.Activities.ReportsActivitiesList(ctx, operations.ReportsActivitiesListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        ActorIPAddress: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        ApplicationName: operations.ReportsActivitiesListApplicationNameEnumMobile,
+        Callback: sdk.String("nulla"),
+        CustomerID: sdk.String("corrupti"),
+        EndTime: sdk.String("illum"),
+        EventName: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Filters: sdk.String("deserunt"),
+        GroupIDFilter: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        MaxResults: sdk.Int64(297534),
+        OauthToken: sdk.String("debitis"),
+        OrgUnitID: sdk.String("ipsa"),
+        PageToken: sdk.String("delectus"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("tempora"),
+        StartTime: sdk.String("suscipit"),
+        UploadType: sdk.String("molestiae"),
+        UploadProtocol: sdk.String("minus"),
+        UserKey: "placeat",
+    }, operations.ReportsActivitiesListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -70,26 +68,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Activities
+### [Activities](docs/activities/README.md)
 
-* `ReportsActivitiesList` - Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for administrator and Google Drive activity reports. For more information about the activity report's parameters, see the activity parameters reference guides. 
-* `ReportsActivitiesWatch` - Start receiving notifications for account activities. For more information, see Receiving Push Notifications.
+* [ReportsActivitiesList](docs/activities/README.md#reportsactivitieslist) - Retrieves a list of activities for a specific customer's account and application such as the Admin console application or the Google Drive application. For more information, see the guides for administrator and Google Drive activity reports. For more information about the activity report's parameters, see the activity parameters reference guides. 
+* [ReportsActivitiesWatch](docs/activities/README.md#reportsactivitieswatch) - Start receiving notifications for account activities. For more information, see Receiving Push Notifications.
 
-### Channels
+### [Channels](docs/channels/README.md)
 
-* `AdminChannelsStop` - Stop watching resources through this channel.
+* [AdminChannelsStop](docs/channels/README.md#adminchannelsstop) - Stop watching resources through this channel.
 
-### CustomerUsageReports
+### [CustomerUsageReports](docs/customerusagereports/README.md)
 
-* `ReportsCustomerUsageReportsGet` - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides. 
+* [ReportsCustomerUsageReportsGet](docs/customerusagereports/README.md#reportscustomerusagereportsget) - Retrieves a report which is a collection of properties and statistics for a specific customer's account. For more information, see the Customers Usage Report guide. For more information about the customer report's parameters, see the Customers Usage parameters reference guides. 
 
-### EntityUsageReports
+### [EntityUsageReports](docs/entityusagereports/README.md)
 
-* `ReportsEntityUsageReportsGet` - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
+* [ReportsEntityUsageReportsGet](docs/entityusagereports/README.md#reportsentityusagereportsget) - Retrieves a report which is a collection of properties and statistics for entities used by users within the account. For more information, see the Entities Usage Report guide. For more information about the entities report's parameters, see the Entities Usage parameters reference guides.
 
-### UserUsageReport
+### [UserUsageReport](docs/userusagereport/README.md)
 
-* `ReportsUserUsageReportGet` - Retrieves a report which is a collection of properties and statistics for a set of users with the account. For more information, see the User Usage Report guide. For more information about the user report's parameters, see the Users Usage parameters reference guides.
+* [ReportsUserUsageReportGet](docs/userusagereport/README.md#reportsuserusagereportget) - Retrieves a report which is a collection of properties and statistics for a set of users with the account. For more information, see the User Usage Report guide. For more information about the user report's parameters, see the Users Usage parameters reference guides.
 <!-- End SDK Available Operations -->
 
 ### Maturity

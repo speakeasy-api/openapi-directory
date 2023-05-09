@@ -2,18 +2,18 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AirtravelCoordinatesRequest{
+    ctx := context.Background()
+    res, err := s.AirtravelCoordinates.AirtravelCoordinates(ctx, operations.AirtravelCoordinatesRequest{
         ContentType: "application/x-www-form-urlencoded",
         RequestBody: &operations.AirtravelCoordinatesRequestBody{
             APIKeyL1: "d95fead6-e8a6-4547-9fb9-7835101a3960",
@@ -26,10 +26,7 @@ func main() {
             TravelClass: "Economy",
             TravelMode: "round trip",
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.AirtravelCoordinates.AirtravelCoordinates(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

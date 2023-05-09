@@ -36,7 +36,7 @@ type CloudbillingBillingAccountsEstimateCostScenarioRequest struct {
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
-	// Resource name of the billing account for the cost estimate. The resource name has the form `billingAccounts/{billing_acount_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
+	// Resource name of the billing account for the cost estimate. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF` is the resource name for billing account `012345-567890-ABCDEF`. Must be specified.
 	BillingAccount string `pathParam:"style=simple,explode=false,name=billingAccount"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`

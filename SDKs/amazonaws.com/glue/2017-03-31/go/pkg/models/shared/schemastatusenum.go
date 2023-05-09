@@ -15,20 +15,24 @@ const (
 	SchemaStatusEnumDeleting  SchemaStatusEnum = "DELETING"
 )
 
+func (e SchemaStatusEnum) ToPointer() *SchemaStatusEnum {
+	return &e
+}
+
 func (e *SchemaStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "DELETING":
-		*e = SchemaStatusEnum(s)
+		*e = SchemaStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchemaStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SchemaStatusEnum: %v", v)
 	}
 }

@@ -22,19 +22,23 @@ const (
 	GetFeaturedImageCollectionListAssetHintEnumTwox GetFeaturedImageCollectionListAssetHintEnum = "2x"
 )
 
+func (e GetFeaturedImageCollectionListAssetHintEnum) ToPointer() *GetFeaturedImageCollectionListAssetHintEnum {
+	return &e
+}
+
 func (e *GetFeaturedImageCollectionListAssetHintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1x":
 		fallthrough
 	case "2x":
-		*e = GetFeaturedImageCollectionListAssetHintEnum(s)
+		*e = GetFeaturedImageCollectionListAssetHintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListAssetHintEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListAssetHintEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	GetFeaturedImageCollectionListEmbedEnumShareURL GetFeaturedImageCollectionListEmbedEnum = "share_url"
 )
 
+func (e GetFeaturedImageCollectionListEmbedEnum) ToPointer() *GetFeaturedImageCollectionListEmbedEnum {
+	return &e
+}
+
 func (e *GetFeaturedImageCollectionListEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share_url":
-		*e = GetFeaturedImageCollectionListEmbedEnum(s)
+		*e = GetFeaturedImageCollectionListEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListEmbedEnum: %v", v)
 	}
 }
 
@@ -67,21 +75,25 @@ const (
 	GetFeaturedImageCollectionListTypeEnumVector    GetFeaturedImageCollectionListTypeEnum = "vector"
 )
 
+func (e GetFeaturedImageCollectionListTypeEnum) ToPointer() *GetFeaturedImageCollectionListTypeEnum {
+	return &e
+}
+
 func (e *GetFeaturedImageCollectionListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "photo":
 		fallthrough
 	case "editorial":
 		fallthrough
 	case "vector":
-		*e = GetFeaturedImageCollectionListTypeEnum(s)
+		*e = GetFeaturedImageCollectionListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFeaturedImageCollectionListTypeEnum: %v", v)
 	}
 }
 

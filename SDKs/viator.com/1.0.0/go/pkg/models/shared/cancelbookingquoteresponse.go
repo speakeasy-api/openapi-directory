@@ -20,21 +20,25 @@ const (
 	CancelBookingQuoteResponseStatusEnumNotCancellable CancelBookingQuoteResponseStatusEnum = "NOT_CANCELLABLE"
 )
 
+func (e CancelBookingQuoteResponseStatusEnum) ToPointer() *CancelBookingQuoteResponseStatusEnum {
+	return &e
+}
+
 func (e *CancelBookingQuoteResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCELLABLE":
 		fallthrough
 	case "CANCELLED":
 		fallthrough
 	case "NOT_CANCELLABLE":
-		*e = CancelBookingQuoteResponseStatusEnum(s)
+		*e = CancelBookingQuoteResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBookingQuoteResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBookingQuoteResponseStatusEnum: %v", v)
 	}
 }
 

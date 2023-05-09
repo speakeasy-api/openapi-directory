@@ -15,19 +15,23 @@ const (
 	InstanceMemcacheVersionEnumMemcache15                 InstanceMemcacheVersionEnum = "MEMCACHE_1_5"
 )
 
+func (e InstanceMemcacheVersionEnum) ToPointer() *InstanceMemcacheVersionEnum {
+	return &e
+}
+
 func (e *InstanceMemcacheVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMCACHE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "MEMCACHE_1_5":
-		*e = InstanceMemcacheVersionEnum(s)
+		*e = InstanceMemcacheVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceMemcacheVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceMemcacheVersionEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	InstanceStateEnumPerformingMaintenance InstanceStateEnum = "PERFORMING_MAINTENANCE"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -85,10 +93,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "PERFORMING_MAINTENANCE":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	CreateResiliencyPolicyRequestBodyDataLocationConstraintEnumSameCountry   CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum = "SameCountry"
 )
 
+func (e CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum) ToPointer() *CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum {
+	return &e
+}
+
 func (e *CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyLocation":
 		fallthrough
 	case "SameContinent":
 		fallthrough
 	case "SameCountry":
-		*e = CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum(s)
+		*e = CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResiliencyPolicyRequestBodyDataLocationConstraintEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	CreateResiliencyPolicyRequestBodyTierEnumNonCritical     CreateResiliencyPolicyRequestBodyTierEnum = "NonCritical"
 )
 
+func (e CreateResiliencyPolicyRequestBodyTierEnum) ToPointer() *CreateResiliencyPolicyRequestBodyTierEnum {
+	return &e
+}
+
 func (e *CreateResiliencyPolicyRequestBodyTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MissionCritical":
 		fallthrough
 	case "Critical":
@@ -62,10 +70,10 @@ func (e *CreateResiliencyPolicyRequestBodyTierEnum) UnmarshalJSON(data []byte) e
 	case "CoreServices":
 		fallthrough
 	case "NonCritical":
-		*e = CreateResiliencyPolicyRequestBodyTierEnum(s)
+		*e = CreateResiliencyPolicyRequestBodyTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResiliencyPolicyRequestBodyTierEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResiliencyPolicyRequestBodyTierEnum: %v", v)
 	}
 }
 

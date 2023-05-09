@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateConnectorRequest{
+    ctx := context.Background()
+    res, err := s.CreateConnector(ctx, operations.CreateConnectorRequest{
         RequestBody: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
                 AutoScaling: &shared.AutoScaling{
@@ -42,7 +43,7 @@ func main() {
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            ConnectorDescription: "delectus",
+            ConnectorDescription: sdk.String("delectus"),
             ConnectorName: "tempora",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
@@ -61,26 +62,26 @@ func main() {
                 },
             },
             KafkaClusterClientAuthentication: operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication{
-                AuthenticationType: "IAM",
+                AuthenticationType: shared.KafkaClusterClientAuthenticationTypeEnumIam.ToPointer(),
             },
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
-                EncryptionType: "TLS",
+                EncryptionType: shared.KafkaClusterEncryptionInTransitTypeEnumTLS.ToPointer(),
             },
             KafkaConnectVersion: "ab",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
                         Enabled: false,
-                        LogGroup: "quis",
+                        LogGroup: sdk.String("quis"),
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "veritatis",
+                        DeliveryStream: sdk.String("veritatis"),
                         Enabled: false,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "deserunt",
+                        Bucket: sdk.String("deserunt"),
                         Enabled: false,
-                        Prefix: "perferendis",
+                        Prefix: sdk.String("perferendis"),
                     },
                 },
             },
@@ -100,21 +101,18 @@ func main() {
             },
             ServiceExecutionRoleArn: "at",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
-                Revision: 870088,
-                WorkerConfigurationArn: "maiores",
+                Revision: sdk.Int64(870088),
+                WorkerConfigurationArn: sdk.String("maiores"),
             },
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "quod",
-        XAmzCredential: "quod",
-        XAmzDate: "esse",
-        XAmzSecurityToken: "totam",
-        XAmzSignature: "porro",
-        XAmzSignedHeaders: "dolorum",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateConnector(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("quod"),
+        XAmzCredential: sdk.String("quod"),
+        XAmzDate: sdk.String("esse"),
+        XAmzSecurityToken: sdk.String("totam"),
+        XAmzSignature: sdk.String("porro"),
+        XAmzSignedHeaders: sdk.String("dolorum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

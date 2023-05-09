@@ -16,17 +16,21 @@ const (
 	PostCommentForComparedCommitXAmzTargetEnumCodeCommit20150413PostCommentForComparedCommit PostCommentForComparedCommitXAmzTargetEnum = "CodeCommit_20150413.PostCommentForComparedCommit"
 )
 
+func (e PostCommentForComparedCommitXAmzTargetEnum) ToPointer() *PostCommentForComparedCommitXAmzTargetEnum {
+	return &e
+}
+
 func (e *PostCommentForComparedCommitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.PostCommentForComparedCommit":
-		*e = PostCommentForComparedCommitXAmzTargetEnum(s)
+		*e = PostCommentForComparedCommitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostCommentForComparedCommitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostCommentForComparedCommitXAmzTargetEnum: %v", v)
 	}
 }
 

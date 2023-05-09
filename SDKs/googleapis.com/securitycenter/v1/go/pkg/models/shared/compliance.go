@@ -4,10 +4,10 @@ package shared
 
 // Compliance - Contains compliance information about a security standard indicating unmet recommendations.
 type Compliance struct {
-	// Policies within the standard/benchmark e.g. A.12.4.1
+	// Policies within the standard or benchmark, for example, A.12.4.1
 	Ids []string `json:"ids,omitempty"`
-	// Refers to industry wide standards or benchmarks e.g. "cis", "pci", "owasp", etc.
+	// Industry-wide compliance standards or benchmarks, such as CIS, PCI, and OWASP.
 	Standard *string `json:"standard,omitempty"`
-	// Version of the standard/benchmark e.g. 1.1
+	// Version of the standard or benchmark, for example, 1.1
 	Version *string `json:"version,omitempty"`
 }

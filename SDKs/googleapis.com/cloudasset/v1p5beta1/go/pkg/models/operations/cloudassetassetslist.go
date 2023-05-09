@@ -25,12 +25,16 @@ const (
 	CloudassetAssetsListContentTypeEnumAccessPolicy           CloudassetAssetsListContentTypeEnum = "ACCESS_POLICY"
 )
 
+func (e CloudassetAssetsListContentTypeEnum) ToPointer() *CloudassetAssetsListContentTypeEnum {
+	return &e
+}
+
 func (e *CloudassetAssetsListContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE":
@@ -40,10 +44,10 @@ func (e *CloudassetAssetsListContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ORG_POLICY":
 		fallthrough
 	case "ACCESS_POLICY":
-		*e = CloudassetAssetsListContentTypeEnum(s)
+		*e = CloudassetAssetsListContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudassetAssetsListContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudassetAssetsListContentTypeEnum: %v", v)
 	}
 }
 

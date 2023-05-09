@@ -17,12 +17,16 @@ const (
 	PatientVaccineRecordVaccinationStatusEnumPa PatientVaccineRecordVaccinationStatusEnum = "PA"
 )
 
+func (e PatientVaccineRecordVaccinationStatusEnum) ToPointer() *PatientVaccineRecordVaccinationStatusEnum {
+	return &e
+}
+
 func (e *PatientVaccineRecordVaccinationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CP":
 		fallthrough
 	case "RE":
@@ -30,10 +34,10 @@ func (e *PatientVaccineRecordVaccinationStatusEnum) UnmarshalJSON(data []byte) e
 	case "NA":
 		fallthrough
 	case "PA":
-		*e = PatientVaccineRecordVaccinationStatusEnum(s)
+		*e = PatientVaccineRecordVaccinationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientVaccineRecordVaccinationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientVaccineRecordVaccinationStatusEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	PatientVaccineRecordFundingEligibilityEnumV07 PatientVaccineRecordFundingEligibilityEnum = "V07"
 )
 
+func (e PatientVaccineRecordFundingEligibilityEnum) ToPointer() *PatientVaccineRecordFundingEligibilityEnum {
+	return &e
+}
+
 func (e *PatientVaccineRecordFundingEligibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "V01":
 		fallthrough
 	case "V02":
@@ -74,10 +82,10 @@ func (e *PatientVaccineRecordFundingEligibilityEnum) UnmarshalJSON(data []byte) 
 	case "V05":
 		fallthrough
 	case "V07":
-		*e = PatientVaccineRecordFundingEligibilityEnum(s)
+		*e = PatientVaccineRecordFundingEligibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientVaccineRecordFundingEligibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientVaccineRecordFundingEligibilityEnum: %v", v)
 	}
 }
 
@@ -109,12 +117,16 @@ const (
 	PatientVaccineRecordObservedImmunityEnumSixteenMillionFiveHundredAndFortyOneThousandAndOne                 PatientVaccineRecordObservedImmunityEnum = "16541001"
 )
 
+func (e PatientVaccineRecordObservedImmunityEnum) ToPointer() *PatientVaccineRecordObservedImmunityEnum {
+	return &e
+}
+
 func (e *PatientVaccineRecordObservedImmunityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "398102009":
 		fallthrough
 	case "409498004":
@@ -160,10 +172,10 @@ func (e *PatientVaccineRecordObservedImmunityEnum) UnmarshalJSON(data []byte) er
 	case "40468003":
 		fallthrough
 	case "16541001":
-		*e = PatientVaccineRecordObservedImmunityEnum(s)
+		*e = PatientVaccineRecordObservedImmunityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientVaccineRecordObservedImmunityEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientVaccineRecordObservedImmunityEnum: %v", v)
 	}
 }
 
@@ -181,12 +193,16 @@ const (
 	PatientVaccineRecordRecordTypeEnumEight PatientVaccineRecordRecordTypeEnum = "08"
 )
 
+func (e PatientVaccineRecordRecordTypeEnum) ToPointer() *PatientVaccineRecordRecordTypeEnum {
+	return &e
+}
+
 func (e *PatientVaccineRecordRecordTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "00":
 		fallthrough
 	case "01":
@@ -204,10 +220,10 @@ func (e *PatientVaccineRecordRecordTypeEnum) UnmarshalJSON(data []byte) error {
 	case "07":
 		fallthrough
 	case "08":
-		*e = PatientVaccineRecordRecordTypeEnum(s)
+		*e = PatientVaccineRecordRecordTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatientVaccineRecordRecordTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatientVaccineRecordRecordTypeEnum: %v", v)
 	}
 }
 

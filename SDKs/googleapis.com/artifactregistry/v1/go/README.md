@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/artifactre
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ArtifactregistryProjectsLocationsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        Name: "illum",
-        OauthToken: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.ArtifactregistryProjectsLocationsList(ctx, req, operations.ArtifactregistryProjectsLocationsListSecurity{
+    res, err := s.Projects.ArtifactregistryProjectsLocationsList(ctx, operations.ArtifactregistryProjectsLocationsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        Name: "Ben Mueller",
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.ArtifactregistryProjectsLocationsListSecurity{
         Option1: &operations.ArtifactregistryProjectsLocationsListSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -64,31 +62,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ArtifactregistryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport` - Imports Apt artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
-* `ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload` - Directly uploads an Apt artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
-* `ArtifactregistryProjectsLocationsRepositoriesCreate` - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
-* `ArtifactregistryProjectsLocationsRepositoriesDockerImagesList` - Lists docker images.
-* `ArtifactregistryProjectsLocationsRepositoriesFilesList` - Lists files.
-* `ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy` - Gets the IAM policy for a given resource.
-* `ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload` - Directly uploads a KFP artifact. The returned Operation will complete once the resource is uploaded. Package, Version, and File resources will be created based on the uploaded artifact. Uploaded artifacts that conflict with existing resources will be overwritten.
-* `ArtifactregistryProjectsLocationsRepositoriesList` - Lists repositories.
-* `ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList` - Lists maven artifacts.
-* `ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList` - Lists npm packages.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesList` - Lists packages.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate` - Creates a tag.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList` - Lists tags.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch` - Updates a tag.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete` - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
-* `ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList` - Lists versions.
-* `ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet` - Gets a python package.
-* `ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList` - Lists python packages.
-* `ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy` - Updates the IAM policy for a given resource.
-* `ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions` - Tests if the caller has a list of permissions on a resource.
-* `ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport` - Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
-* `ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload` - Directly uploads a Yum artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsList](docs/projects/README.md#artifactregistryprojectslocationslist) - Lists information about the supported locations for this service.
+* [ArtifactregistryProjectsLocationsRepositoriesAptArtifactsImport](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesaptartifactsimport) - Imports Apt artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsRepositoriesAptArtifactsUpload](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesaptartifactsupload) - Directly uploads an Apt artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsRepositoriesCreate](docs/projects/README.md#artifactregistryprojectslocationsrepositoriescreate) - Creates a repository. The returned Operation will finish once the repository has been created. Its response will be the created Repository.
+* [ArtifactregistryProjectsLocationsRepositoriesDockerImagesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesdockerimageslist) - Lists docker images.
+* [ArtifactregistryProjectsLocationsRepositoriesFilesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesfileslist) - Lists files.
+* [ArtifactregistryProjectsLocationsRepositoriesGetIamPolicy](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesgetiampolicy) - Gets the IAM policy for a given resource.
+* [ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsImport](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesgoogetartifactsimport) - Imports GooGet artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsRepositoriesGoogetArtifactsUpload](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesgoogetartifactsupload) - Directly uploads a GooGet artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsRepositoriesKfpArtifactsUpload](docs/projects/README.md#artifactregistryprojectslocationsrepositorieskfpartifactsupload) - Directly uploads a KFP artifact. The returned Operation will complete once the resource is uploaded. Package, Version, and File resources will be created based on the uploaded artifact. Uploaded artifacts that conflict with existing resources will be overwritten.
+* [ArtifactregistryProjectsLocationsRepositoriesList](docs/projects/README.md#artifactregistryprojectslocationsrepositorieslist) - Lists repositories.
+* [ArtifactregistryProjectsLocationsRepositoriesMavenArtifactsList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesmavenartifactslist) - Lists maven artifacts.
+* [ArtifactregistryProjectsLocationsRepositoriesNpmPackagesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesnpmpackageslist) - Lists npm packages.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackageslist) - Lists packages.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsCreate](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagscreate) - Creates a tag.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagslist) - Lists tags.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesTagsPatch](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagestagspatch) - Updates a tag.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsDelete](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagesversionsdelete) - Deletes a version and all of its content. The returned operation will complete once the version has been deleted.
+* [ArtifactregistryProjectsLocationsRepositoriesPackagesVersionsList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespackagesversionslist) - Lists versions.
+* [ArtifactregistryProjectsLocationsRepositoriesPythonPackagesGet](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespythonpackagesget) - Gets a python package.
+* [ArtifactregistryProjectsLocationsRepositoriesPythonPackagesList](docs/projects/README.md#artifactregistryprojectslocationsrepositoriespythonpackageslist) - Lists python packages.
+* [ArtifactregistryProjectsLocationsRepositoriesSetIamPolicy](docs/projects/README.md#artifactregistryprojectslocationsrepositoriessetiampolicy) - Updates the IAM policy for a given resource.
+* [ArtifactregistryProjectsLocationsRepositoriesTestIamPermissions](docs/projects/README.md#artifactregistryprojectslocationsrepositoriestestiampermissions) - Tests if the caller has a list of permissions on a resource.
+* [ArtifactregistryProjectsLocationsRepositoriesYumArtifactsImport](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesyumartifactsimport) - Imports Yum (RPM) artifacts. The returned Operation will complete once the resources are imported. Package, Version, and File resources are created based on the imported artifacts. Imported artifacts that conflict with existing resources are ignored.
+* [ArtifactregistryProjectsLocationsRepositoriesYumArtifactsUpload](docs/projects/README.md#artifactregistryprojectslocationsrepositoriesyumartifactsupload) - Directly uploads a Yum artifact. The returned Operation will complete once the resources are uploaded. Package, Version, and File resources are created based on the imported artifact. Imported artifacts that conflict with existing resources are ignored.
 <!-- End SDK Available Operations -->
 
 ### Maturity

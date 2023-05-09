@@ -15,17 +15,21 @@ const (
 	GetAvailableVendorsWithEnumUser GetAvailableVendorsWithEnum = "user"
 )
 
+func (e GetAvailableVendorsWithEnum) ToPointer() *GetAvailableVendorsWithEnum {
+	return &e
+}
+
 func (e *GetAvailableVendorsWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
-		*e = GetAvailableVendorsWithEnum(s)
+		*e = GetAvailableVendorsWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAvailableVendorsWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAvailableVendorsWithEnum: %v", v)
 	}
 }
 

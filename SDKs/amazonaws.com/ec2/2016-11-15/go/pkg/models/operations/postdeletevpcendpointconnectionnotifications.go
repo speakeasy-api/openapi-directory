@@ -15,17 +15,21 @@ const (
 	POSTDeleteVpcEndpointConnectionNotificationsActionEnumDeleteVpcEndpointConnectionNotifications POSTDeleteVpcEndpointConnectionNotificationsActionEnum = "DeleteVpcEndpointConnectionNotifications"
 )
 
+func (e POSTDeleteVpcEndpointConnectionNotificationsActionEnum) ToPointer() *POSTDeleteVpcEndpointConnectionNotificationsActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVpcEndpointConnectionNotificationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVpcEndpointConnectionNotifications":
-		*e = POSTDeleteVpcEndpointConnectionNotificationsActionEnum(s)
+		*e = POSTDeleteVpcEndpointConnectionNotificationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointConnectionNotificationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointConnectionNotificationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteVpcEndpointConnectionNotificationsVersionEnumTwoThousandAndSixteen1115 POSTDeleteVpcEndpointConnectionNotificationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteVpcEndpointConnectionNotificationsVersionEnum) ToPointer() *POSTDeleteVpcEndpointConnectionNotificationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVpcEndpointConnectionNotificationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteVpcEndpointConnectionNotificationsVersionEnum(s)
+		*e = POSTDeleteVpcEndpointConnectionNotificationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointConnectionNotificationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVpcEndpointConnectionNotificationsVersionEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	FieldNameStringEnumLastModified FieldNameStringEnum = "LAST_MODIFIED"
 )
 
+func (e FieldNameStringEnum) ToPointer() *FieldNameStringEnum {
+	return &e
+}
+
 func (e *FieldNameStringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_ARN":
 		fallthrough
 	case "ROLE_ARN":
 		fallthrough
 	case "LAST_MODIFIED":
-		*e = FieldNameStringEnum(s)
+		*e = FieldNameStringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldNameStringEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldNameStringEnum: %v", v)
 	}
 }

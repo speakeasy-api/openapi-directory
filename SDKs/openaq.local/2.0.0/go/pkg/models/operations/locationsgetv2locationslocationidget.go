@@ -23,12 +23,16 @@ const (
 	LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnumRandom       LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum = "random"
 )
 
+func (e LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum) ToPointer() *LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum {
+	return &e
+}
+
 func (e *LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "city":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum) Unmarsha
 	case "count":
 		fallthrough
 	case "random":
-		*e = LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum(s)
+		*e = LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationsGetV2LocationsLocationIDGetOrderByLocationsOrderEnum: %v", v)
 	}
 }
 
@@ -59,19 +63,23 @@ const (
 	LocationsGetV2LocationsLocationIDGetSortSortEnumDesc LocationsGetV2LocationsLocationIDGetSortSortEnum = "desc"
 )
 
+func (e LocationsGetV2LocationsLocationIDGetSortSortEnum) ToPointer() *LocationsGetV2LocationsLocationIDGetSortSortEnum {
+	return &e
+}
+
 func (e *LocationsGetV2LocationsLocationIDGetSortSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = LocationsGetV2LocationsLocationIDGetSortSortEnum(s)
+		*e = LocationsGetV2LocationsLocationIDGetSortSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationsGetV2LocationsLocationIDGetSortSortEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationsGetV2LocationsLocationIDGetSortSortEnum: %v", v)
 	}
 }
 

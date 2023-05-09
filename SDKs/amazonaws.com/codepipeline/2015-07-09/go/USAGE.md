@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,23 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.AcknowledgeJobRequest{
+    ctx := context.Background()
+    res, err := s.AcknowledgeJob(ctx, operations.AcknowledgeJobRequest{
         AcknowledgeJobInput: shared.AcknowledgeJobInput{
             JobID: "corrupti",
             Nonce: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "CodePipeline_20150709.AcknowledgeJob",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcknowledgeJob(ctx, req)
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+        XAmzTarget: operations.AcknowledgeJobXAmzTargetEnumCodePipeline20150709AcknowledgeJob,
+    })
     if err != nil {
         log.Fatal(err)
     }

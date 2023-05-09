@@ -15,17 +15,21 @@ const (
 	POSTReorderReceiptRuleSetActionEnumReorderReceiptRuleSet POSTReorderReceiptRuleSetActionEnum = "ReorderReceiptRuleSet"
 )
 
+func (e POSTReorderReceiptRuleSetActionEnum) ToPointer() *POSTReorderReceiptRuleSetActionEnum {
+	return &e
+}
+
 func (e *POSTReorderReceiptRuleSetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReorderReceiptRuleSet":
-		*e = POSTReorderReceiptRuleSetActionEnum(s)
+		*e = POSTReorderReceiptRuleSetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReorderReceiptRuleSetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReorderReceiptRuleSetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTReorderReceiptRuleSetVersionEnumTwoThousandAndTen1201 POSTReorderReceiptRuleSetVersionEnum = "2010-12-01"
 )
 
+func (e POSTReorderReceiptRuleSetVersionEnum) ToPointer() *POSTReorderReceiptRuleSetVersionEnum {
+	return &e
+}
+
 func (e *POSTReorderReceiptRuleSetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTReorderReceiptRuleSetVersionEnum(s)
+		*e = POSTReorderReceiptRuleSetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReorderReceiptRuleSetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReorderReceiptRuleSetVersionEnum: %v", v)
 	}
 }
 

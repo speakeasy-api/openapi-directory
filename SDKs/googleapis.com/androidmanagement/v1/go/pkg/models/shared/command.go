@@ -19,12 +19,16 @@ const (
 	CommandErrorCodeEnumUnsupported                 CommandErrorCodeEnum = "UNSUPPORTED"
 )
 
+func (e CommandErrorCodeEnum) ToPointer() *CommandErrorCodeEnum {
+	return &e
+}
+
 func (e *CommandErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMAND_ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -36,10 +40,10 @@ func (e *CommandErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "INVALID_VALUE":
 		fallthrough
 	case "UNSUPPORTED":
-		*e = CommandErrorCodeEnum(s)
+		*e = CommandErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommandErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CommandErrorCodeEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	CommandResetPasswordFlagsEnumLockNow                      CommandResetPasswordFlagsEnum = "LOCK_NOW"
 )
 
+func (e CommandResetPasswordFlagsEnum) ToPointer() *CommandResetPasswordFlagsEnum {
+	return &e
+}
+
 func (e *CommandResetPasswordFlagsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESET_PASSWORD_FLAG_UNSPECIFIED":
 		fallthrough
 	case "REQUIRE_ENTRY":
@@ -65,10 +73,10 @@ func (e *CommandResetPasswordFlagsEnum) UnmarshalJSON(data []byte) error {
 	case "DO_NOT_ASK_CREDENTIALS_ON_BOOT":
 		fallthrough
 	case "LOCK_NOW":
-		*e = CommandResetPasswordFlagsEnum(s)
+		*e = CommandResetPasswordFlagsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommandResetPasswordFlagsEnum: %s", s)
+		return fmt.Errorf("invalid value for CommandResetPasswordFlagsEnum: %v", v)
 	}
 }
 
@@ -84,12 +92,16 @@ const (
 	CommandTypeEnumClearAppData           CommandTypeEnum = "CLEAR_APP_DATA"
 )
 
+func (e CommandTypeEnum) ToPointer() *CommandTypeEnum {
+	return &e
+}
+
 func (e *CommandTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMAND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LOCK":
@@ -101,10 +113,10 @@ func (e *CommandTypeEnum) UnmarshalJSON(data []byte) error {
 	case "RELINQUISH_OWNERSHIP":
 		fallthrough
 	case "CLEAR_APP_DATA":
-		*e = CommandTypeEnum(s)
+		*e = CommandTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommandTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CommandTypeEnum: %v", v)
 	}
 }
 

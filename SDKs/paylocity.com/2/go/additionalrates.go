@@ -35,7 +35,10 @@ func newAdditionalRates(defaultClient, securityClient HTTPClient, serverURL, lan
 // Sends new or updated employee additional rates information directly to Web Pay.
 func (s *additionalRates) AddOrUpdateAdditionalRates(ctx context.Context, request operations.AddOrUpdateAdditionalRatesRequest, security operations.AddOrUpdateAdditionalRatesSecurity) (*operations.AddOrUpdateAdditionalRatesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/additionalRates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/companies/{companyId}/employees/{employeeId}/additionalRates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AdditionalRate", "json")
 	if err != nil {

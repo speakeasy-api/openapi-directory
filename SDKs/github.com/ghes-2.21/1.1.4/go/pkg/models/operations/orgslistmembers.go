@@ -19,19 +19,23 @@ const (
 	OrgsListMembersFilterEnumAll           OrgsListMembersFilterEnum = "all"
 )
 
+func (e OrgsListMembersFilterEnum) ToPointer() *OrgsListMembersFilterEnum {
+	return &e
+}
+
 func (e *OrgsListMembersFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2fa_disabled":
 		fallthrough
 	case "all":
-		*e = OrgsListMembersFilterEnum(s)
+		*e = OrgsListMembersFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListMembersFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListMembersFilterEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	OrgsListMembersRoleEnumMember OrgsListMembersRoleEnum = "member"
 )
 
+func (e OrgsListMembersRoleEnum) ToPointer() *OrgsListMembersRoleEnum {
+	return &e
+}
+
 func (e *OrgsListMembersRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "admin":
 		fallthrough
 	case "member":
-		*e = OrgsListMembersRoleEnum(s)
+		*e = OrgsListMembersRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrgsListMembersRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for OrgsListMembersRoleEnum: %v", v)
 	}
 }
 

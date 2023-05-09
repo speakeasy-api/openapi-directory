@@ -22,12 +22,16 @@ const (
 	ListServersRequestBodyServerCriteriaEnumErrorCategory  ListServersRequestBodyServerCriteriaEnum = "ERROR_CATEGORY"
 )
 
+func (e ListServersRequestBodyServerCriteriaEnum) ToPointer() *ListServersRequestBodyServerCriteriaEnum {
+	return &e
+}
+
 func (e *ListServersRequestBodyServerCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_DEFINED":
 		fallthrough
 	case "OS_NAME":
@@ -41,10 +45,10 @@ func (e *ListServersRequestBodyServerCriteriaEnum) UnmarshalJSON(data []byte) er
 	case "ANALYSIS_STATUS":
 		fallthrough
 	case "ERROR_CATEGORY":
-		*e = ListServersRequestBodyServerCriteriaEnum(s)
+		*e = ListServersRequestBodyServerCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServersRequestBodyServerCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServersRequestBodyServerCriteriaEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	ListServersRequestBodySortEnumDesc ListServersRequestBodySortEnum = "DESC"
 )
 
+func (e ListServersRequestBodySortEnum) ToPointer() *ListServersRequestBodySortEnum {
+	return &e
+}
+
 func (e *ListServersRequestBodySortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = ListServersRequestBodySortEnum(s)
+		*e = ListServersRequestBodySortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServersRequestBodySortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServersRequestBodySortEnum: %v", v)
 	}
 }
 

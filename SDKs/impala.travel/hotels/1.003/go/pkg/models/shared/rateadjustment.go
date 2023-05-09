@@ -14,17 +14,21 @@ const (
 	RateAdjustmentTypeEnumPercentage RateAdjustmentTypeEnum = "PERCENTAGE"
 )
 
+func (e RateAdjustmentTypeEnum) ToPointer() *RateAdjustmentTypeEnum {
+	return &e
+}
+
 func (e *RateAdjustmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERCENTAGE":
-		*e = RateAdjustmentTypeEnum(s)
+		*e = RateAdjustmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RateAdjustmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RateAdjustmentTypeEnum: %v", v)
 	}
 }
 

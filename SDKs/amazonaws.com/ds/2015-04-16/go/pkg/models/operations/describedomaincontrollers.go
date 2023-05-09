@@ -16,17 +16,21 @@ const (
 	DescribeDomainControllersXAmzTargetEnumDirectoryService20150416DescribeDomainControllers DescribeDomainControllersXAmzTargetEnum = "DirectoryService_20150416.DescribeDomainControllers"
 )
 
+func (e DescribeDomainControllersXAmzTargetEnum) ToPointer() *DescribeDomainControllersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDomainControllersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DescribeDomainControllers":
-		*e = DescribeDomainControllersXAmzTargetEnum(s)
+		*e = DescribeDomainControllersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDomainControllersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDomainControllersXAmzTargetEnum: %v", v)
 	}
 }
 

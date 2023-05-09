@@ -16,17 +16,21 @@ const (
 	DeleteIndexXAmzTargetEnumAwsKendraFrontendServiceDeleteIndex DeleteIndexXAmzTargetEnum = "AWSKendraFrontendService.DeleteIndex"
 )
 
+func (e DeleteIndexXAmzTargetEnum) ToPointer() *DeleteIndexXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteIndexXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.DeleteIndex":
-		*e = DeleteIndexXAmzTargetEnum(s)
+		*e = DeleteIndexXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteIndexXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteIndexXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -35,7 +35,10 @@ func newProject(defaultClient, securityClient HTTPClient, serverURL, language, s
 // List all analyses for a project
 func (s *project) GetProjectAnalyses(ctx context.Context, request operations.GetProjectAnalysesRequest) (*operations.GetProjectAnalysesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/analyses/{username}/{project_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *project) GetProjectAnalyses(ctx context.Context, request operations.Get
 // Project Query aggregator. It accepts multiple queries that will be executed on all completed analyses in the project
 func (s *project) GetProjectUrlsAggs(ctx context.Context, request operations.GetProjectUrlsAggsRequest) (*operations.GetProjectUrlsAggsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/urls/aggs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/urls/aggs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -160,7 +166,10 @@ func (s *project) GetProjectUrlsAggs(ctx context.Context, request operations.Get
 // Retrieves a specific saved filter's name, ID and filter value
 func (s *project) GetSavedFilter(ctx context.Context, request operations.GetSavedFilterRequest) (*operations.GetSavedFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/filters/{identifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/filters/{identifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +224,10 @@ func (s *project) GetSavedFilter(ctx context.Context, request operations.GetSave
 // List all the project's saved filters (each filter's name, ID and filter value)
 func (s *project) GetSavedFilters(ctx context.Context, request operations.GetSavedFiltersRequest) (*operations.GetSavedFiltersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/filters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/filters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,7 +286,10 @@ func (s *project) GetSavedFilters(ctx context.Context, request operations.GetSav
 // Match and replace parts of a URL based on rules passed in POST data.
 func (s *project) TestURLRewritingRules(ctx context.Context, request operations.TestURLRewritingRulesRequest) (*operations.TestURLRewritingRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/features/url_rewriting/rules_validator", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{username}/{project_slug}/features/url_rewriting/rules_validator", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

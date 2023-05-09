@@ -13,16 +13,20 @@ const (
 	BatchLoadDataFormatEnumCsv BatchLoadDataFormatEnum = "CSV"
 )
 
+func (e BatchLoadDataFormatEnum) ToPointer() *BatchLoadDataFormatEnum {
+	return &e
+}
+
 func (e *BatchLoadDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
-		*e = BatchLoadDataFormatEnum(s)
+		*e = BatchLoadDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchLoadDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchLoadDataFormatEnum: %v", v)
 	}
 }

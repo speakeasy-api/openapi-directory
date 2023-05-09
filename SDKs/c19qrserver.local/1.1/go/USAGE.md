@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.DeleteSigninSigninIDRequest{
-        SigninID: 1,
-    }
-
     ctx := context.Background()
-    res, err := s.AttendeesSignins.DeleteSigninSigninID(ctx, req)
+    res, err := s.AttendeesSignins.DeleteSigninSigninID(ctx, operations.DeleteSigninSigninIDRequest{
+        SigninID: 1,
+    })
     if err != nil {
         log.Fatal(err)
     }

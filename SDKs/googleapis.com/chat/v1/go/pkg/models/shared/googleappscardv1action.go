@@ -15,19 +15,23 @@ const (
 	GoogleAppsCardV1ActionInteractionEnumOpenDialog             GoogleAppsCardV1ActionInteractionEnum = "OPEN_DIALOG"
 )
 
+func (e GoogleAppsCardV1ActionInteractionEnum) ToPointer() *GoogleAppsCardV1ActionInteractionEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1ActionInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERACTION_UNSPECIFIED":
 		fallthrough
 	case "OPEN_DIALOG":
-		*e = GoogleAppsCardV1ActionInteractionEnum(s)
+		*e = GoogleAppsCardV1ActionInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1ActionInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1ActionInteractionEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	GoogleAppsCardV1ActionLoadIndicatorEnumNone    GoogleAppsCardV1ActionLoadIndicatorEnum = "NONE"
 )
 
+func (e GoogleAppsCardV1ActionLoadIndicatorEnum) ToPointer() *GoogleAppsCardV1ActionLoadIndicatorEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1ActionLoadIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPINNER":
 		fallthrough
 	case "NONE":
-		*e = GoogleAppsCardV1ActionLoadIndicatorEnum(s)
+		*e = GoogleAppsCardV1ActionLoadIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1ActionLoadIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1ActionLoadIndicatorEnum: %v", v)
 	}
 }
 

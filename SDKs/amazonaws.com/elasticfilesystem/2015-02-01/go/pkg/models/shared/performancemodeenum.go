@@ -14,18 +14,22 @@ const (
 	PerformanceModeEnumMaxIo          PerformanceModeEnum = "maxIO"
 )
 
+func (e PerformanceModeEnum) ToPointer() *PerformanceModeEnum {
+	return &e
+}
+
 func (e *PerformanceModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "generalPurpose":
 		fallthrough
 	case "maxIO":
-		*e = PerformanceModeEnum(s)
+		*e = PerformanceModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerformanceModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PerformanceModeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	InboundSsoAssignmentSsoModeEnumDomainWideSamlIfEnabled InboundSsoAssignmentSsoModeEnum = "DOMAIN_WIDE_SAML_IF_ENABLED"
 )
 
+func (e InboundSsoAssignmentSsoModeEnum) ToPointer() *InboundSsoAssignmentSsoModeEnum {
+	return &e
+}
+
 func (e *InboundSsoAssignmentSsoModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSO_MODE_UNSPECIFIED":
 		fallthrough
 	case "SSO_OFF":
@@ -30,10 +34,10 @@ func (e *InboundSsoAssignmentSsoModeEnum) UnmarshalJSON(data []byte) error {
 	case "SAML_SSO":
 		fallthrough
 	case "DOMAIN_WIDE_SAML_IF_ENABLED":
-		*e = InboundSsoAssignmentSsoModeEnum(s)
+		*e = InboundSsoAssignmentSsoModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InboundSsoAssignmentSsoModeEnum: %s", s)
+		return fmt.Errorf("invalid value for InboundSsoAssignmentSsoModeEnum: %v", v)
 	}
 }
 

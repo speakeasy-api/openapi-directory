@@ -19,12 +19,16 @@ const (
 	DeliveryReportDeliveryCategoryEnumDelivered DeliveryReportDeliveryCategoryEnum = "DELIVERED"
 )
 
+func (e DeliveryReportDeliveryCategoryEnum) ToPointer() *DeliveryReportDeliveryCategoryEnum {
+	return &e
+}
+
 func (e *DeliveryReportDeliveryCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_DATA":
 		fallthrough
 	case "OPTED_OUT":
@@ -34,10 +38,10 @@ func (e *DeliveryReportDeliveryCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "NO_CREDITS":
 		fallthrough
 	case "DELIVERED":
-		*e = DeliveryReportDeliveryCategoryEnum(s)
+		*e = DeliveryReportDeliveryCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryReportDeliveryCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryReportDeliveryCategoryEnum: %v", v)
 	}
 }
 
@@ -91,12 +95,16 @@ const (
 	DeliveryReportDeliveryStateEnumUnsentFreeTrial                 DeliveryReportDeliveryStateEnum = "UNSENT_FREE_TRIAL"
 )
 
+func (e DeliveryReportDeliveryStateEnum) ToPointer() *DeliveryReportDeliveryStateEnum {
+	return &e
+}
+
 func (e *DeliveryReportDeliveryStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERED":
 		fallthrough
 	case "UNSENT_OPTED_OUT_GLOBAL":
@@ -184,10 +192,10 @@ func (e *DeliveryReportDeliveryStateEnum) UnmarshalJSON(data []byte) error {
 	case "SEND_WITH_ADDITIONAL_SPID":
 		fallthrough
 	case "UNSENT_FREE_TRIAL":
-		*e = DeliveryReportDeliveryStateEnum(s)
+		*e = DeliveryReportDeliveryStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryReportDeliveryStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryReportDeliveryStateEnum: %v", v)
 	}
 }
 

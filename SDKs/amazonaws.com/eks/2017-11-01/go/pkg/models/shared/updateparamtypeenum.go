@@ -35,12 +35,16 @@ const (
 	UpdateParamTypeEnumMaxUnavailablePercentage UpdateParamTypeEnum = "MaxUnavailablePercentage"
 )
 
+func (e UpdateParamTypeEnum) ToPointer() *UpdateParamTypeEnum {
+	return &e
+}
+
 func (e *UpdateParamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Version":
 		fallthrough
 	case "PlatformVersion":
@@ -86,9 +90,9 @@ func (e *UpdateParamTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MaxUnavailable":
 		fallthrough
 	case "MaxUnavailablePercentage":
-		*e = UpdateParamTypeEnum(s)
+		*e = UpdateParamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateParamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateParamTypeEnum: %v", v)
 	}
 }

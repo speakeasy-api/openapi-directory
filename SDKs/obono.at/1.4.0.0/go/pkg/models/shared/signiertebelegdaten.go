@@ -15,21 +15,25 @@ const (
 	SignierteBelegdatenUnternehmenIDTypEnumGln          SignierteBelegdatenUnternehmenIDTypEnum = "gln"
 )
 
+func (e SignierteBelegdatenUnternehmenIDTypEnum) ToPointer() *SignierteBelegdatenUnternehmenIDTypEnum {
+	return &e
+}
+
 func (e *SignierteBelegdatenUnternehmenIDTypEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "steuernummer":
 		fallthrough
 	case "uid":
 		fallthrough
 	case "gln":
-		*e = SignierteBelegdatenUnternehmenIDTypEnum(s)
+		*e = SignierteBelegdatenUnternehmenIDTypEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignierteBelegdatenUnternehmenIDTypEnum: %s", s)
+		return fmt.Errorf("invalid value for SignierteBelegdatenUnternehmenIDTypEnum: %v", v)
 	}
 }
 

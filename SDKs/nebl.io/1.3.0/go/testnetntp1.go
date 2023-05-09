@@ -166,7 +166,10 @@ func (s *testnetNtp1) TestnetBurnToken(ctx context.Context, request shared.BurnT
 // Returns both NEBL and NTP1 token UTXOs held at the given address.
 func (s *testnetNtp1) TestnetGetAddressInfo(ctx context.Context, request operations.TestnetGetAddressInfoRequest) (*operations.TestnetGetAddressInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/addressinfo/{address}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/addressinfo/{address}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +224,10 @@ func (s *testnetNtp1) TestnetGetAddressInfo(ctx context.Context, request operati
 // Returns the the the addresses holding a token and how many tokens are held
 func (s *testnetNtp1) TestnetGetTokenHolders(ctx context.Context, request operations.TestnetGetTokenHoldersRequest) (*operations.TestnetGetTokenHoldersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/stakeholders/{tokenid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/stakeholders/{tokenid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -276,7 +282,10 @@ func (s *testnetNtp1) TestnetGetTokenHolders(ctx context.Context, request operat
 // Translates a token symbol to a tokenId if a token exists with that symbol on the network
 func (s *testnetNtp1) TestnetGetTokenID(ctx context.Context, request operations.TestnetGetTokenIDRequest) (*operations.TestnetGetTokenIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenid/{tokensymbol}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenid/{tokensymbol}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +330,10 @@ func (s *testnetNtp1) TestnetGetTokenID(ctx context.Context, request operations.
 // Returns the metadata associated with a token.
 func (s *testnetNtp1) TestnetGetTokenMetadata(ctx context.Context, request operations.TestnetGetTokenMetadataRequest) (*operations.TestnetGetTokenMetadataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -380,7 +392,10 @@ func (s *testnetNtp1) TestnetGetTokenMetadata(ctx context.Context, request opera
 // Returns the metadata associated with a token for that specific utxo instead of the issuance transaction.
 func (s *testnetNtp1) TestnetGetTokenMetadataOfUtxo(ctx context.Context, request operations.TestnetGetTokenMetadataOfUtxoRequest) (*operations.TestnetGetTokenMetadataOfUtxoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/tokenmetadata/{tokenid}/{utxo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -439,7 +454,10 @@ func (s *testnetNtp1) TestnetGetTokenMetadataOfUtxo(ctx context.Context, request
 // Returns detailed information regarding an NTP1 transaction.
 func (s *testnetNtp1) TestnetGetTransactionInfo(ctx context.Context, request operations.TestnetGetTransactionInfoRequest) (*operations.TestnetGetTransactionInfoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/transactioninfo/{txid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/testnet/ntp1/transactioninfo/{txid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

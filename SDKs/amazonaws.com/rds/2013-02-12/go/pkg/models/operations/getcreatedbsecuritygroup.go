@@ -15,17 +15,21 @@ const (
 	GETCreateDBSecurityGroupActionEnumCreateDbSecurityGroup GETCreateDBSecurityGroupActionEnum = "CreateDBSecurityGroup"
 )
 
+func (e GETCreateDBSecurityGroupActionEnum) ToPointer() *GETCreateDBSecurityGroupActionEnum {
+	return &e
+}
+
 func (e *GETCreateDBSecurityGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDBSecurityGroup":
-		*e = GETCreateDBSecurityGroupActionEnum(s)
+		*e = GETCreateDBSecurityGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBSecurityGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBSecurityGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDBSecurityGroupVersionEnumTwoThousandAndThirteen0212 GETCreateDBSecurityGroupVersionEnum = "2013-02-12"
 )
 
+func (e GETCreateDBSecurityGroupVersionEnum) ToPointer() *GETCreateDBSecurityGroupVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDBSecurityGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETCreateDBSecurityGroupVersionEnum(s)
+		*e = GETCreateDBSecurityGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDBSecurityGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDBSecurityGroupVersionEnum: %v", v)
 	}
 }
 

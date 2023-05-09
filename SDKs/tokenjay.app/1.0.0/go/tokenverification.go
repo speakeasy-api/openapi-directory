@@ -37,7 +37,10 @@ func newTokenVerification(defaultClient, securityClient HTTPClient, serverURL, l
 // CheckToken - Check a token verification
 func (s *tokenVerification) CheckToken(ctx context.Context, request operations.CheckTokenRequest) (*operations.CheckTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tokens/check/{tokenId}/{tokenName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tokens/check/{tokenId}/{tokenName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

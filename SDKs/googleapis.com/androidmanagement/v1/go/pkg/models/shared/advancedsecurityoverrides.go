@@ -16,21 +16,25 @@ const (
 	AdvancedSecurityOverridesCommonCriteriaModeEnumCommonCriteriaModeEnabled     AdvancedSecurityOverridesCommonCriteriaModeEnum = "COMMON_CRITERIA_MODE_ENABLED"
 )
 
+func (e AdvancedSecurityOverridesCommonCriteriaModeEnum) ToPointer() *AdvancedSecurityOverridesCommonCriteriaModeEnum {
+	return &e
+}
+
 func (e *AdvancedSecurityOverridesCommonCriteriaModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMON_CRITERIA_MODE_UNSPECIFIED":
 		fallthrough
 	case "COMMON_CRITERIA_MODE_DISABLED":
 		fallthrough
 	case "COMMON_CRITERIA_MODE_ENABLED":
-		*e = AdvancedSecurityOverridesCommonCriteriaModeEnum(s)
+		*e = AdvancedSecurityOverridesCommonCriteriaModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedSecurityOverridesCommonCriteriaModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedSecurityOverridesCommonCriteriaModeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	AdvancedSecurityOverridesDeveloperSettingsEnumDeveloperSettingsAllowed     AdvancedSecurityOverridesDeveloperSettingsEnum = "DEVELOPER_SETTINGS_ALLOWED"
 )
 
+func (e AdvancedSecurityOverridesDeveloperSettingsEnum) ToPointer() *AdvancedSecurityOverridesDeveloperSettingsEnum {
+	return &e
+}
+
 func (e *AdvancedSecurityOverridesDeveloperSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPER_SETTINGS_UNSPECIFIED":
 		fallthrough
 	case "DEVELOPER_SETTINGS_DISABLED":
 		fallthrough
 	case "DEVELOPER_SETTINGS_ALLOWED":
-		*e = AdvancedSecurityOverridesDeveloperSettingsEnum(s)
+		*e = AdvancedSecurityOverridesDeveloperSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedSecurityOverridesDeveloperSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedSecurityOverridesDeveloperSettingsEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnumVerifyAppsUserChoice                   AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum = "VERIFY_APPS_USER_CHOICE"
 )
 
+func (e AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum) ToPointer() *AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum {
+	return &e
+}
+
 func (e *AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GOOGLE_PLAY_PROTECT_VERIFY_APPS_UNSPECIFIED":
 		fallthrough
 	case "VERIFY_APPS_ENFORCED":
 		fallthrough
 	case "VERIFY_APPS_USER_CHOICE":
-		*e = AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum(s)
+		*e = AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedSecurityOverridesGooglePlayProtectVerifyAppsEnum: %v", v)
 	}
 }
 
@@ -98,12 +110,16 @@ const (
 	AdvancedSecurityOverridesUntrustedAppsPolicyEnumAllowInstallDeviceWide            AdvancedSecurityOverridesUntrustedAppsPolicyEnum = "ALLOW_INSTALL_DEVICE_WIDE"
 )
 
+func (e AdvancedSecurityOverridesUntrustedAppsPolicyEnum) ToPointer() *AdvancedSecurityOverridesUntrustedAppsPolicyEnum {
+	return &e
+}
+
 func (e *AdvancedSecurityOverridesUntrustedAppsPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNTRUSTED_APPS_POLICY_UNSPECIFIED":
 		fallthrough
 	case "DISALLOW_INSTALL":
@@ -111,10 +127,10 @@ func (e *AdvancedSecurityOverridesUntrustedAppsPolicyEnum) UnmarshalJSON(data []
 	case "ALLOW_INSTALL_IN_PERSONAL_PROFILE_ONLY":
 		fallthrough
 	case "ALLOW_INSTALL_DEVICE_WIDE":
-		*e = AdvancedSecurityOverridesUntrustedAppsPolicyEnum(s)
+		*e = AdvancedSecurityOverridesUntrustedAppsPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdvancedSecurityOverridesUntrustedAppsPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for AdvancedSecurityOverridesUntrustedAppsPolicyEnum: %v", v)
 	}
 }
 

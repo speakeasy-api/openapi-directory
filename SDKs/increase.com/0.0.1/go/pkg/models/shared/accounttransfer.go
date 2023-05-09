@@ -12,12 +12,16 @@ import (
 type AccountTransferTransferApproval struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was approved.
 	ApprovedAt time.Time `json:"approved_at"`
+	// If the Transfer was approved by a user in the dashboard, the email address of that user.
+	ApprovedBy string `json:"approved_by"`
 }
 
 // AccountTransferTransferCancellation - If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
 type AccountTransferTransferCancellation struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the Transfer was canceled.
 	CanceledAt time.Time `json:"canceled_at"`
+	// If the Transfer was canceled by a user in the dashboard, the email address of that user.
+	CanceledBy string `json:"canceled_by"`
 }
 
 // AccountTransferCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the destination account currency.
@@ -32,12 +36,16 @@ const (
 	AccountTransferCurrencyEnumUsd AccountTransferCurrencyEnum = "USD"
 )
 
+func (e AccountTransferCurrencyEnum) ToPointer() *AccountTransferCurrencyEnum {
+	return &e
+}
+
 func (e *AccountTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -49,10 +57,10 @@ func (e *AccountTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = AccountTransferCurrencyEnum(s)
+		*e = AccountTransferCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTransferCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTransferCurrencyEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	AccountTransferNetworkEnumAccount AccountTransferNetworkEnum = "account"
 )
 
+func (e AccountTransferNetworkEnum) ToPointer() *AccountTransferNetworkEnum {
+	return &e
+}
+
 func (e *AccountTransferNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account":
-		*e = AccountTransferNetworkEnum(s)
+		*e = AccountTransferNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTransferNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTransferNetworkEnum: %v", v)
 	}
 }
 
@@ -81,35 +93,30 @@ func (e *AccountTransferNetworkEnum) UnmarshalJSON(data []byte) error {
 type AccountTransferStatusEnum string
 
 const (
-	AccountTransferStatusEnumPendingSubmission AccountTransferStatusEnum = "pending_submission"
-	AccountTransferStatusEnumPendingApproval   AccountTransferStatusEnum = "pending_approval"
-	AccountTransferStatusEnumCanceled          AccountTransferStatusEnum = "canceled"
-	AccountTransferStatusEnumRequiresAttention AccountTransferStatusEnum = "requires_attention"
-	AccountTransferStatusEnumFlaggedByOperator AccountTransferStatusEnum = "flagged_by_operator"
-	AccountTransferStatusEnumComplete          AccountTransferStatusEnum = "complete"
+	AccountTransferStatusEnumPendingApproval AccountTransferStatusEnum = "pending_approval"
+	AccountTransferStatusEnumCanceled        AccountTransferStatusEnum = "canceled"
+	AccountTransferStatusEnumComplete        AccountTransferStatusEnum = "complete"
 )
 
+func (e AccountTransferStatusEnum) ToPointer() *AccountTransferStatusEnum {
+	return &e
+}
+
 func (e *AccountTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "pending_submission":
-		fallthrough
+	switch v {
 	case "pending_approval":
 		fallthrough
 	case "canceled":
 		fallthrough
-	case "requires_attention":
-		fallthrough
-	case "flagged_by_operator":
-		fallthrough
 	case "complete":
-		*e = AccountTransferStatusEnum(s)
+		*e = AccountTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTransferStatusEnum: %v", v)
 	}
 }
 
@@ -120,17 +127,21 @@ const (
 	AccountTransferTypeEnumAccountTransfer AccountTransferTypeEnum = "account_transfer"
 )
 
+func (e AccountTransferTypeEnum) ToPointer() *AccountTransferTypeEnum {
+	return &e
+}
+
 func (e *AccountTransferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account_transfer":
-		*e = AccountTransferTypeEnum(s)
+		*e = AccountTransferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTransferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTransferTypeEnum: %v", v)
 	}
 }
 
@@ -160,8 +171,6 @@ type AccountTransfer struct {
 	Network AccountTransferNetworkEnum `json:"network"`
 	// The lifecycle status of the transfer.
 	Status AccountTransferStatusEnum `json:"status"`
-	// If the transfer was created from a template, this will be the template's ID.
-	TemplateID string `json:"template_id"`
 	// The ID for the transaction funding the transfer.
 	TransactionID string `json:"transaction_id"`
 	// A constant representing the object's type. For this resource it will always be `account_transfer`.

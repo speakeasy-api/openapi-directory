@@ -16,21 +16,25 @@ const (
 	SQLOutOfDiskReportSQLOutOfDiskStateEnumSoftShutdown                 SQLOutOfDiskReportSQLOutOfDiskStateEnum = "SOFT_SHUTDOWN"
 )
 
+func (e SQLOutOfDiskReportSQLOutOfDiskStateEnum) ToPointer() *SQLOutOfDiskReportSQLOutOfDiskStateEnum {
+	return &e
+}
+
 func (e *SQLOutOfDiskReportSQLOutOfDiskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_OUT_OF_DISK_STATE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "SOFT_SHUTDOWN":
-		*e = SQLOutOfDiskReportSQLOutOfDiskStateEnum(s)
+		*e = SQLOutOfDiskReportSQLOutOfDiskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SQLOutOfDiskReportSQLOutOfDiskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SQLOutOfDiskReportSQLOutOfDiskStateEnum: %v", v)
 	}
 }
 

@@ -13,28 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/clickup.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateANewQuestionRequestBody{
+    ctx := context.Background()
+    res, err := s.CreateANewQuestion(ctx, operations.CreateANewQuestionRequestBody{
         Choices: []string{
             "provident",
             "distinctio",
             "quibusdam",
         },
-        Question: "unde",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateANewQuestion(ctx, req)
+        Question: sdk.String("unde"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,10 +46,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateANewQuestion` - Create a New Question
-* `ListAllQuestions` - List All Questions
+* [CreateANewQuestion](docs/sdk/README.md#createanewquestion) - Create a New Question
+* [ListAllQuestions](docs/sdk/README.md#listallquestions) - List All Questions
 <!-- End SDK Available Operations -->
 
 ### Maturity

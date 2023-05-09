@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/canada-holidays.ca/1.8.0/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.HolidayRequest{
-        HolidayID: 2,
-        Optional: "true",
-        Year: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.Holidays.Holiday(ctx, req)
+    res, err := s.Holidays.Holiday(ctx, operations.HolidayRequest{
+        HolidayID: 2,
+        Optional: operations.HolidayOptionalEnumTrue.ToPointer(),
+        Year: sdk.Int64(592845),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,20 +44,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Holidays
+### [Holidays](docs/holidays/README.md)
 
-* `Holiday` - Get a holiday by id
-* `Holidays` - Get all holidays
+* [Holiday](docs/holidays/README.md#holiday) - Get a holiday by id
+* [Holidays](docs/holidays/README.md#holidays) - Get all holidays
 
-### Info
+### [Info](docs/info/README.md)
 
-* `Root` - root
-* `Spec` - Get JSON schema
+* [Root](docs/info/README.md#root) - root
+* [Spec](docs/info/README.md#spec) - Get JSON schema
 
-### Provinces
+### [Provinces](docs/provinces/README.md)
 
-* `Province` - Get a province or territory by abbreviation
-* `Provinces` - Get all provinces
+* [Province](docs/provinces/README.md#province) - Get a province or territory by abbreviation
+* [Provinces](docs/provinces/README.md#provinces) - Get all provinces
 <!-- End SDK Available Operations -->
 
 ### Maturity

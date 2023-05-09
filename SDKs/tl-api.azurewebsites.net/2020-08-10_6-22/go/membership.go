@@ -34,7 +34,7 @@ func newMembership(defaultClient, securityClient HTTPClient, serverURL, language
 
 // MembershipGet - Get all of the members details
 // This will return all properties related to member entity
-func (s *membership) MembershipGet(ctx context.Context) (*operations.MembershipGetResponse, error) {
+func (s *membership) MembershipGet(ctx context.Context, security operations.MembershipGetSecurity) (*operations.MembershipGetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Membership"
 
@@ -43,7 +43,7 @@ func (s *membership) MembershipGet(ctx context.Context) (*operations.MembershipG
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

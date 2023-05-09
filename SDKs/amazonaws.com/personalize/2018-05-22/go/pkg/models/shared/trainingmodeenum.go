@@ -14,18 +14,22 @@ const (
 	TrainingModeEnumUpdate TrainingModeEnum = "UPDATE"
 )
 
+func (e TrainingModeEnum) ToPointer() *TrainingModeEnum {
+	return &e
+}
+
 func (e *TrainingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL":
 		fallthrough
 	case "UPDATE":
-		*e = TrainingModeEnum(s)
+		*e = TrainingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingModeEnum: %v", v)
 	}
 }

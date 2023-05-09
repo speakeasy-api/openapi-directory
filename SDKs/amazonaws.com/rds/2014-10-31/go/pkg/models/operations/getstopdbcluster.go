@@ -15,17 +15,21 @@ const (
 	GETStopDBClusterActionEnumStopDbCluster GETStopDBClusterActionEnum = "StopDBCluster"
 )
 
+func (e GETStopDBClusterActionEnum) ToPointer() *GETStopDBClusterActionEnum {
+	return &e
+}
+
 func (e *GETStopDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StopDBCluster":
-		*e = GETStopDBClusterActionEnum(s)
+		*e = GETStopDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStopDBClusterVersionEnumTwoThousandAndFourteen1031 GETStopDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e GETStopDBClusterVersionEnum) ToPointer() *GETStopDBClusterVersionEnum {
+	return &e
+}
+
 func (e *GETStopDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStopDBClusterVersionEnum(s)
+		*e = GETStopDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStopDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStopDBClusterVersionEnum: %v", v)
 	}
 }
 

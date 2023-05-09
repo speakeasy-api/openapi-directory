@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnumRelevant                   GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum = "RELEVANT"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANSWER_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "IRRELEVANT":
 		fallthrough
 	case "RELEVANT":
-		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnumCorrect                        GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum = "CORRECT"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOCUMENT_CORRECTNESS_UNSPECIFIED":
 		fallthrough
 	case "INCORRECT":
 		fallthrough
 	case "CORRECT":
-		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum: %v", v)
 	}
 }
 
@@ -70,21 +78,25 @@ const (
 	GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnumEfficient                     GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum = "EFFICIENT"
 )
 
+func (e GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum) ToPointer() *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOCUMENT_EFFICIENCY_UNSPECIFIED":
 		fallthrough
 	case "INEFFICIENT":
 		fallthrough
 	case "EFFICIENT":
-		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum(s)
+		*e = GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum: %v", v)
 	}
 }
 

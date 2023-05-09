@@ -25,29 +25,33 @@ type AnalyticsCrashGroupOperatingSystemCountsRequest struct {
 }
 
 // AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
-type AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum string
+type AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum int64
 
 const (
-	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = "400"
-	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = "403"
-	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = "500"
+	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFourHundred         AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = 400
+	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFourHundredAndThree AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = 403
+	AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnumFiveHundred         AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum = 500
 )
 
+func (e AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum) ToPointer() *AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "403":
+	case 403:
 		fallthrough
-	case "500":
-		*e = AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum(s)
+	case 500:
+		*e = AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

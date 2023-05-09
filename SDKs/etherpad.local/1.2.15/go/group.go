@@ -646,6 +646,7 @@ func (s *group) DeleteGroupUsingPOST(ctx context.Context, request operations.Del
 
 	return res, nil
 }
+
 func (s *group) ListAllGroupsUsingGET(ctx context.Context) (*operations.ListAllGroupsUsingGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listAllGroups"
@@ -718,6 +719,7 @@ func (s *group) ListAllGroupsUsingGET(ctx context.Context) (*operations.ListAllG
 
 	return res, nil
 }
+
 func (s *group) ListAllGroupsUsingPOST(ctx context.Context) (*operations.ListAllGroupsUsingPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listAllGroups"
@@ -946,6 +948,7 @@ func (s *group) ListPadsUsingPOST(ctx context.Context, request operations.ListPa
 
 	return res, nil
 }
+
 func (s *group) ListSessionsOfGroupUsingGET(ctx context.Context, request operations.ListSessionsOfGroupUsingGETRequest) (*operations.ListSessionsOfGroupUsingGETResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listSessionsOfGroup"
@@ -1022,6 +1025,7 @@ func (s *group) ListSessionsOfGroupUsingGET(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *group) ListSessionsOfGroupUsingPOST(ctx context.Context, request operations.ListSessionsOfGroupUsingPOSTRequest) (*operations.ListSessionsOfGroupUsingPOSTResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listSessionsOfGroup"

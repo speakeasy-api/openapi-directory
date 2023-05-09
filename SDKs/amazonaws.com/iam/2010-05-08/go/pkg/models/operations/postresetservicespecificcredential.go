@@ -15,17 +15,21 @@ const (
 	POSTResetServiceSpecificCredentialActionEnumResetServiceSpecificCredential POSTResetServiceSpecificCredentialActionEnum = "ResetServiceSpecificCredential"
 )
 
+func (e POSTResetServiceSpecificCredentialActionEnum) ToPointer() *POSTResetServiceSpecificCredentialActionEnum {
+	return &e
+}
+
 func (e *POSTResetServiceSpecificCredentialActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResetServiceSpecificCredential":
-		*e = POSTResetServiceSpecificCredentialActionEnum(s)
+		*e = POSTResetServiceSpecificCredentialActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetServiceSpecificCredentialActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetServiceSpecificCredentialActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTResetServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 POSTResetServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
+func (e POSTResetServiceSpecificCredentialVersionEnum) ToPointer() *POSTResetServiceSpecificCredentialVersionEnum {
+	return &e
+}
+
 func (e *POSTResetServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTResetServiceSpecificCredentialVersionEnum(s)
+		*e = POSTResetServiceSpecificCredentialVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTResetServiceSpecificCredentialVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTResetServiceSpecificCredentialVersionEnum: %v", v)
 	}
 }
 

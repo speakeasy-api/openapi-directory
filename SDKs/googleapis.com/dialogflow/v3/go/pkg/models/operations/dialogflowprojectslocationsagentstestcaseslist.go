@@ -33,21 +33,25 @@ const (
 	DialogflowProjectsLocationsAgentsTestCasesListViewEnumFull                    DialogflowProjectsLocationsAgentsTestCasesListViewEnum = "FULL"
 )
 
+func (e DialogflowProjectsLocationsAgentsTestCasesListViewEnum) ToPointer() *DialogflowProjectsLocationsAgentsTestCasesListViewEnum {
+	return &e
+}
+
 func (e *DialogflowProjectsLocationsAgentsTestCasesListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_CASE_VIEW_UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = DialogflowProjectsLocationsAgentsTestCasesListViewEnum(s)
+		*e = DialogflowProjectsLocationsAgentsTestCasesListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentsTestCasesListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DialogflowProjectsLocationsAgentsTestCasesListViewEnum: %v", v)
 	}
 }
 

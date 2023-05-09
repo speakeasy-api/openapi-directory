@@ -18,12 +18,16 @@ const (
 	BalanceTransferResponseStatusEnumTransferred      BalanceTransferResponseStatusEnum = "transferred"
 )
 
+func (e BalanceTransferResponseStatusEnum) ToPointer() *BalanceTransferResponseStatusEnum {
+	return &e
+}
+
 func (e *BalanceTransferResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "error":
 		fallthrough
 	case "failed":
@@ -31,10 +35,10 @@ func (e *BalanceTransferResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "notEnoughBalance":
 		fallthrough
 	case "transferred":
-		*e = BalanceTransferResponseStatusEnum(s)
+		*e = BalanceTransferResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalanceTransferResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BalanceTransferResponseStatusEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	BalanceTransferResponseTypeEnumAdjustment   BalanceTransferResponseTypeEnum = "adjustment"
 )
 
+func (e BalanceTransferResponseTypeEnum) ToPointer() *BalanceTransferResponseTypeEnum {
+	return &e
+}
+
 func (e *BalanceTransferResponseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tax":
 		fallthrough
 	case "fee":
@@ -67,10 +75,10 @@ func (e *BalanceTransferResponseTypeEnum) UnmarshalJSON(data []byte) error {
 	case "debit":
 		fallthrough
 	case "adjustment":
-		*e = BalanceTransferResponseTypeEnum(s)
+		*e = BalanceTransferResponseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BalanceTransferResponseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BalanceTransferResponseTypeEnum: %v", v)
 	}
 }
 

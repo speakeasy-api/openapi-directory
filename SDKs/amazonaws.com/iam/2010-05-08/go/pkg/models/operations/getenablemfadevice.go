@@ -15,17 +15,21 @@ const (
 	GETEnableMFADeviceActionEnumEnableMfaDevice GETEnableMFADeviceActionEnum = "EnableMFADevice"
 )
 
+func (e GETEnableMFADeviceActionEnum) ToPointer() *GETEnableMFADeviceActionEnum {
+	return &e
+}
+
 func (e *GETEnableMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableMFADevice":
-		*e = GETEnableMFADeviceActionEnum(s)
+		*e = GETEnableMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETEnableMFADeviceVersionEnumTwoThousandAndTen0508 GETEnableMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e GETEnableMFADeviceVersionEnum) ToPointer() *GETEnableMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *GETEnableMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETEnableMFADeviceVersionEnum(s)
+		*e = GETEnableMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableMFADeviceVersionEnum: %v", v)
 	}
 }
 

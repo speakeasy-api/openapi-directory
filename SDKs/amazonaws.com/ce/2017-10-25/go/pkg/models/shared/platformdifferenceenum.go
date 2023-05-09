@@ -17,12 +17,16 @@ const (
 	PlatformDifferenceEnumVirtualizationType        PlatformDifferenceEnum = "VIRTUALIZATION_TYPE"
 )
 
+func (e PlatformDifferenceEnum) ToPointer() *PlatformDifferenceEnum {
+	return &e
+}
+
 func (e *PlatformDifferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HYPERVISOR":
 		fallthrough
 	case "NETWORK_INTERFACE":
@@ -32,9 +36,9 @@ func (e *PlatformDifferenceEnum) UnmarshalJSON(data []byte) error {
 	case "INSTANCE_STORE_AVAILABILITY":
 		fallthrough
 	case "VIRTUALIZATION_TYPE":
-		*e = PlatformDifferenceEnum(s)
+		*e = PlatformDifferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformDifferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformDifferenceEnum: %v", v)
 	}
 }

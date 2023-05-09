@@ -648,14 +648,23 @@ const (
 	InstanceTypeEnumR7g12xlarge     InstanceTypeEnum = "r7g.12xlarge"
 	InstanceTypeEnumR7g16xlarge     InstanceTypeEnum = "r7g.16xlarge"
 	InstanceTypeEnumR7gMetal        InstanceTypeEnum = "r7g.metal"
+	InstanceTypeEnumC6inMetal       InstanceTypeEnum = "c6in.metal"
+	InstanceTypeEnumM6inMetal       InstanceTypeEnum = "m6in.metal"
+	InstanceTypeEnumM6idnMetal      InstanceTypeEnum = "m6idn.metal"
+	InstanceTypeEnumR6inMetal       InstanceTypeEnum = "r6in.metal"
+	InstanceTypeEnumR6idnMetal      InstanceTypeEnum = "r6idn.metal"
 )
 
+func (e InstanceTypeEnum) ToPointer() *InstanceTypeEnum {
+	return &e
+}
+
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1931,9 +1940,19 @@ func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = InstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = InstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceTypeEnum: %v", v)
 	}
 }

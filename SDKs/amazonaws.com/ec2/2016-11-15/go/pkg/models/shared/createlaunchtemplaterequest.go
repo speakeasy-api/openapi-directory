@@ -98,12 +98,16 @@ const (
 	CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum) Unmarshal
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLaunchTemplateRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

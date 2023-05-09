@@ -15,17 +15,21 @@ const (
 	POSTDescribeTrafficSourcesActionEnumDescribeTrafficSources POSTDescribeTrafficSourcesActionEnum = "DescribeTrafficSources"
 )
 
+func (e POSTDescribeTrafficSourcesActionEnum) ToPointer() *POSTDescribeTrafficSourcesActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrafficSourcesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeTrafficSources":
-		*e = POSTDescribeTrafficSourcesActionEnum(s)
+		*e = POSTDescribeTrafficSourcesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrafficSourcesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrafficSourcesActionEnum: %v", v)
 	}
 }
 
@@ -36,22 +40,30 @@ const (
 	POSTDescribeTrafficSourcesVersionEnumTwoThousandAndEleven0101 POSTDescribeTrafficSourcesVersionEnum = "2011-01-01"
 )
 
+func (e POSTDescribeTrafficSourcesVersionEnum) ToPointer() *POSTDescribeTrafficSourcesVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeTrafficSourcesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTDescribeTrafficSourcesVersionEnum(s)
+		*e = POSTDescribeTrafficSourcesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeTrafficSourcesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeTrafficSourcesVersionEnum: %v", v)
 	}
 }
 
 type POSTDescribeTrafficSourcesRequest struct {
-	Action            POSTDescribeTrafficSourcesActionEnum  `queryParam:"style=form,explode=true,name=Action"`
+	Action POSTDescribeTrafficSourcesActionEnum `queryParam:"style=form,explode=true,name=Action"`
+	// Pagination limit
+	MaxRecords *string `queryParam:"style=form,explode=true,name=MaxRecords"`
+	// Pagination token
+	NextToken         *string                               `queryParam:"style=form,explode=true,name=NextToken"`
 	RequestBody       []byte                                `request:"mediaType=text/xml"`
 	Version           POSTDescribeTrafficSourcesVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 	XAmzAlgorithm     *string                               `header:"style=simple,explode=false,name=X-Amz-Algorithm"`

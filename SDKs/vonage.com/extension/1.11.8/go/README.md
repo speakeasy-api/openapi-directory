@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vonage.com/extension/1.11
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ExtensionCtrlGetAccountExtensionByIDRequest{
+    ctx := context.Background()
+    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, operations.ExtensionCtrlGetAccountExtensionByIDRequest{
         AccountID: "corrupti",
         ExtensionNumber: 5928.45,
-    }
-
-    ctx := context.Background()
-    res, err := s.ExtensionCtrlGetAccountExtensionByID(ctx, req, operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
+    }, operations.ExtensionCtrlGetAccountExtensionByIDSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -47,10 +44,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `ExtensionCtrlGetAccountExtensionByID` - Get extension data by account ID and extension number
-* `ExtensionCtrlGetAccountExtensions` - Get account extensions data by account ID
+* [ExtensionCtrlGetAccountExtensionByID](docs/sdk/README.md#extensionctrlgetaccountextensionbyid) - Get extension data by account ID and extension number
+* [ExtensionCtrlGetAccountExtensions](docs/sdk/README.md#extensionctrlgetaccountextensions) - Get account extensions data by account ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

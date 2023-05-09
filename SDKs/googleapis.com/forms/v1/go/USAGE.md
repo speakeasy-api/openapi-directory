@@ -2,37 +2,38 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FormsFormsBatchUpdateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Forms.FormsFormsBatchUpdate(ctx, operations.FormsFormsBatchUpdateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         BatchUpdateFormRequestInput: &shared.BatchUpdateFormRequestInput{
-            IncludeFormInResponse: false,
+            IncludeFormInResponse: sdk.Bool(false),
             Requests: []shared.RequestInput{
                 shared.RequestInput{
                     CreateItem: &shared.CreateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "distinctio",
+                            Description: sdk.String("distinctio"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "quibusdam",
+                                    AltText: sdk.String("quibusdam"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 857946,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(857946),
                                     },
-                                    SourceURI: "corrupti",
+                                    SourceURI: sdk.String("corrupti"),
                                 },
                             },
-                            ItemID: "illum",
+                            ItemID: sdk.String("illum"),
                             PageBreakItem: map[string]interface{}{
                                 "error": "deserunt",
                                 "suscipit": "iure",
@@ -42,131 +43,131 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "ipsa",
+                                                GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                GoToSectionID: sdk.String("ipsa"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "delectus",
+                                                    AltText: sdk.String("delectus"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 383441,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(383441),
                                                     },
-                                                    SourceURI: "molestiae",
+                                                    SourceURI: sdk.String("molestiae"),
                                                 },
-                                                IsOther: false,
-                                                Value: "minus",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("minus"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "voluptatum",
+                                                GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                GoToSectionID: sdk.String("voluptatum"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "iusto",
+                                                    AltText: sdk.String("iusto"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 392785,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(392785),
                                                     },
-                                                    SourceURI: "recusandae",
+                                                    SourceURI: sdk.String("recusandae"),
                                                 },
-                                                IsOther: false,
-                                                Value: "temporibus",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("temporibus"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "CHOICE_TYPE_UNSPECIFIED",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "quis",
+                                    AltText: sdk.String("quis"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 648172,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(648172),
                                     },
-                                    SourceURI: "perferendis",
+                                    SourceURI: sdk.String("perferendis"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "quo",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("quo"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "odit",
+                                                        AltText: sdk.String("odit"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 870088,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(870088),
                                                         },
-                                                        SourceURI: "maiores",
+                                                        SourceURI: sdk.String("maiores"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "molestiae",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("molestiae"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "quod",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("quod"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "esse",
+                                                        AltText: sdk.String("esse"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 780529,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(780529),
                                                         },
-                                                        SourceURI: "dolorum",
+                                                        SourceURI: sdk.String("dolorum"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "dicta",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("dicta"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "officia",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("officia"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "occaecati",
+                                                        AltText: sdk.String("occaecati"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 537373,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(537373),
                                                         },
-                                                        SourceURI: "hic",
+                                                        SourceURI: sdk.String("hic"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "optio",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("optio"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "beatae",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("beatae"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "commodi",
+                                                        AltText: sdk.String("commodi"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 264555,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(264555),
                                                         },
-                                                        SourceURI: "qui",
+                                                        SourceURI: sdk.String("qui"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "impedit",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("impedit"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHECKBOX",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "esse",
-                                            MaxFileSize: "ipsum",
-                                            MaxFiles: 568434,
+                                            FolderID: sdk.String("esse"),
+                                            MaxFileSize: sdk.String("ipsum"),
+                                            MaxFiles: sdk.Int(568434),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "FILE_TYPE_UNSPECIFIED",
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "natus",
+                                                        Value: sdk.String("natus"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "sed",
+                                                        Value: sdk.String("sed"),
                                                     },
                                                 },
                                             },
@@ -174,203 +175,203 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dolor",
-                                                            URI: "https://hoarse-upper.org",
+                                                            DisplayText: sdk.String("dolor"),
+                                                            URI: sdk.String("https://hoarse-upper.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "fuga",
-                                                            YoutubeURI: "in",
+                                                            DisplayText: sdk.String("fuga"),
+                                                            YoutubeURI: sdk.String("in"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "https://innocent-thinking.net",
+                                                            DisplayText: sdk.String("corporis"),
+                                                            URI: sdk.String("https://innocent-thinking.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "architecto",
-                                                            YoutubeURI: "ipsa",
+                                                            DisplayText: sdk.String("architecto"),
+                                                            YoutubeURI: sdk.String("ipsa"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "reiciendis",
-                                                            URI: "https://prize-plier.biz",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            URI: sdk.String("https://prize-plier.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolorem",
-                                                            YoutubeURI: "corporis",
+                                                            DisplayText: sdk.String("dolorem"),
+                                                            YoutubeURI: sdk.String("corporis"),
                                                         },
                                                     },
                                                 },
-                                                Text: "explicabo",
+                                                Text: sdk.String("explicabo"),
                                             },
-                                            PointValue: 750686,
+                                            PointValue: sdk.Int(750686),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "omnis",
-                                                            URI: "http://general-mobster.com",
+                                                            DisplayText: sdk.String("omnis"),
+                                                            URI: sdk.String("http://general-mobster.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "iure",
-                                                            YoutubeURI: "culpa",
+                                                            DisplayText: sdk.String("iure"),
+                                                            YoutubeURI: sdk.String("culpa"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "doloribus",
-                                                            URI: "https://buttery-petitioner.biz",
+                                                            DisplayText: sdk.String("doloribus"),
+                                                            URI: sdk.String("https://buttery-petitioner.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "culpa",
-                                                            YoutubeURI: "consequuntur",
+                                                            DisplayText: sdk.String("culpa"),
+                                                            YoutubeURI: sdk.String("consequuntur"),
                                                         },
                                                     },
                                                 },
-                                                Text: "repellat",
+                                                Text: sdk.String("repellat"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "occaecati",
-                                                            URI: "http://immediate-instructor.info",
+                                                            DisplayText: sdk.String("occaecati"),
+                                                            URI: sdk.String("http://immediate-instructor.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "velit",
-                                                            YoutubeURI: "error",
+                                                            DisplayText: sdk.String("velit"),
+                                                            YoutubeURI: sdk.String("error"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quia",
-                                                            URI: "http://cautious-poker.name",
+                                                            DisplayText: sdk.String("quia"),
+                                                            URI: sdk.String("http://cautious-poker.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "enim",
-                                                            YoutubeURI: "odit",
+                                                            DisplayText: sdk.String("enim"),
+                                                            YoutubeURI: sdk.String("odit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quo",
-                                                            URI: "http://weary-fright.name",
+                                                            DisplayText: sdk.String("quo"),
+                                                            URI: sdk.String("http://weary-fright.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "possimus",
-                                                            YoutubeURI: "aut",
+                                                            DisplayText: sdk.String("possimus"),
+                                                            YoutubeURI: sdk.String("aut"),
                                                         },
                                                     },
                                                 },
-                                                Text: "quasi",
+                                                Text: sdk.String("quasi"),
                                             },
                                         },
-                                        QuestionID: "error",
-                                        Required: false,
+                                        QuestionID: sdk.String("error"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Dr.",
+                                            Title: sdk.String("Dr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 673660,
-                                            HighLabel: "quasi",
-                                            Low: 971945,
-                                            LowLabel: "voluptatibus",
+                                            High: sdk.Int(673660),
+                                            HighLabel: sdk.String("quasi"),
+                                            Low: sdk.Int(971945),
+                                            LowLabel: sdk.String("voluptatibus"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "praesentium",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("praesentium"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "voluptatibus",
+                                                        AltText: sdk.String("voluptatibus"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 604846,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(604846),
                                                         },
-                                                        SourceURI: "voluptate",
+                                                        SourceURI: sdk.String("voluptate"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "cum",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("cum"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "doloremque",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("doloremque"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "reprehenderit",
+                                                        AltText: sdk.String("reprehenderit"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 979587,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(979587),
                                                         },
-                                                        SourceURI: "dicta",
+                                                        SourceURI: sdk.String("dicta"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "corporis",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("corporis"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "iusto",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("iusto"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "dicta",
+                                                        AltText: sdk.String("dicta"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 317983,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(317983),
                                                         },
-                                                        SourceURI: "accusamus",
+                                                        SourceURI: sdk.String("accusamus"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "commodi",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("commodi"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "quae",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("quae"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "ipsum",
+                                                        AltText: sdk.String("ipsum"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 565189,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(565189),
                                                         },
-                                                        SourceURI: "excepturi",
+                                                        SourceURI: sdk.String("excepturi"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "pariatur",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("pariatur"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "RADIO",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumRadio.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "praesentium",
-                                            MaxFileSize: "rem",
-                                            MaxFiles: 916723,
+                                            FolderID: sdk.String("praesentium"),
+                                            MaxFileSize: sdk.String("rem"),
+                                            MaxFiles: sdk.Int(916723),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "AUDIO",
+                                                shared.FileUploadQuestionTypesEnumAudio,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "veritatis",
+                                                        Value: sdk.String("veritatis"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "itaque",
+                                                        Value: sdk.String("itaque"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "incidunt",
+                                                        Value: sdk.String("incidunt"),
                                                     },
                                                 },
                                             },
@@ -378,188 +379,188 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "consequatur",
-                                                            URI: "https://tender-carload.name",
+                                                            DisplayText: sdk.String("consequatur"),
+                                                            URI: sdk.String("https://tender-carload.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "distinctio",
-                                                            YoutubeURI: "quibusdam",
+                                                            DisplayText: sdk.String("distinctio"),
+                                                            YoutubeURI: sdk.String("quibusdam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "labore",
-                                                            URI: "http://delightful-graph.name",
+                                                            DisplayText: sdk.String("labore"),
+                                                            URI: sdk.String("http://delightful-graph.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quos",
-                                                            YoutubeURI: "perferendis",
+                                                            DisplayText: sdk.String("quos"),
+                                                            YoutubeURI: sdk.String("perferendis"),
                                                         },
                                                     },
                                                 },
-                                                Text: "magni",
+                                                Text: sdk.String("magni"),
                                             },
-                                            PointValue: 828940,
+                                            PointValue: sdk.Int(828940),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "alias",
-                                                            URI: "http://rapid-moat.biz",
+                                                            DisplayText: sdk.String("alias"),
+                                                            URI: sdk.String("http://rapid-moat.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "facilis",
-                                                            YoutubeURI: "tempore",
+                                                            DisplayText: sdk.String("facilis"),
+                                                            YoutubeURI: sdk.String("tempore"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "labore",
-                                                            URI: "https://infantile-demur.net",
+                                                            DisplayText: sdk.String("labore"),
+                                                            URI: sdk.String("https://infantile-demur.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "sint",
-                                                            YoutubeURI: "aliquid",
+                                                            DisplayText: sdk.String("sint"),
+                                                            YoutubeURI: sdk.String("aliquid"),
                                                         },
                                                     },
                                                 },
-                                                Text: "provident",
+                                                Text: sdk.String("provident"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sint",
-                                                            URI: "https://edible-tectonics.org",
+                                                            DisplayText: sdk.String("sint"),
+                                                            URI: sdk.String("https://edible-tectonics.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolorum",
-                                                            YoutubeURI: "in",
+                                                            DisplayText: sdk.String("dolorum"),
+                                                            YoutubeURI: sdk.String("in"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "in",
-                                                            URI: "https://wonderful-proof-reader.com",
+                                                            DisplayText: sdk.String("in"),
+                                                            URI: sdk.String("https://wonderful-proof-reader.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "magnam",
-                                                            YoutubeURI: "cumque",
+                                                            DisplayText: sdk.String("magnam"),
+                                                            YoutubeURI: sdk.String("cumque"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "facere",
-                                                            URI: "http://humming-police.org",
+                                                            DisplayText: sdk.String("facere"),
+                                                            URI: sdk.String("http://humming-police.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "non",
-                                                            YoutubeURI: "occaecati",
+                                                            DisplayText: sdk.String("non"),
+                                                            YoutubeURI: sdk.String("occaecati"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "enim",
-                                                            URI: "https://white-printing.name",
+                                                            DisplayText: sdk.String("enim"),
+                                                            URI: sdk.String("https://white-printing.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nam",
-                                                            YoutubeURI: "id",
+                                                            DisplayText: sdk.String("nam"),
+                                                            YoutubeURI: sdk.String("id"),
                                                         },
                                                     },
                                                 },
-                                                Text: "blanditiis",
+                                                Text: sdk.String("blanditiis"),
                                             },
                                         },
-                                        QuestionID: "deleniti",
-                                        Required: false,
+                                        QuestionID: sdk.String("deleniti"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Dr.",
+                                            Title: sdk.String("Dr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 230533,
-                                            HighLabel: "deserunt",
-                                            Low: 394869,
-                                            LowLabel: "vel",
+                                            High: sdk.Int(230533),
+                                            HighLabel: sdk.String("deserunt"),
+                                            Low: sdk.Int(394869),
+                                            LowLabel: sdk.String("vel"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "natus",
+                                    AltText: sdk.String("natus"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 474867,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(474867),
                                     },
-                                    SourceURI: "perferendis",
+                                    SourceURI: sdk.String("perferendis"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "distinctio",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("distinctio"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "id",
+                                                    AltText: sdk.String("id"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 290077,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(290077),
                                                     },
-                                                    SourceURI: "suscipit",
+                                                    SourceURI: sdk.String("suscipit"),
                                                 },
-                                                IsOther: false,
-                                                Value: "natus",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("natus"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "eum",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("eum"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "vero",
+                                                    AltText: sdk.String("vero"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 102863,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                        Width: sdk.Int(102863),
                                                     },
-                                                    SourceURI: "magnam",
+                                                    SourceURI: sdk.String("magnam"),
                                                 },
-                                                IsOther: false,
-                                                Value: "et",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("et"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "CHECKBOX",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "ullam",
-                                        MaxFileSize: "provident",
-                                        MaxFiles: 551816,
+                                        FolderID: sdk.String("ullam"),
+                                        MaxFileSize: sdk.String("provident"),
+                                        MaxFiles: sdk.Int(551816),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "FILE_TYPE_UNSPECIFIED",
-                                            "PDF",
-                                            "AUDIO",
+                                            shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
+                                            shared.FileUploadQuestionTypesEnumPdf,
+                                            shared.FileUploadQuestionTypesEnumAudio,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "ad",
+                                                    Value: sdk.String("ad"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "eum",
+                                                    Value: sdk.String("eum"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "dolor",
+                                                    Value: sdk.String("dolor"),
                                                 },
                                             },
                                         },
@@ -567,191 +568,191 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "odit",
-                                                        URI: "http://bumpy-hosiery.org",
+                                                        DisplayText: sdk.String("odit"),
+                                                        URI: sdk.String("http://bumpy-hosiery.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "debitis",
-                                                        YoutubeURI: "eius",
+                                                        DisplayText: sdk.String("debitis"),
+                                                        YoutubeURI: sdk.String("eius"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "maxime",
-                                                        URI: "https://rotating-identification.com",
+                                                        DisplayText: sdk.String("maxime"),
+                                                        URI: sdk.String("https://rotating-identification.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "architecto",
-                                                        YoutubeURI: "repudiandae",
+                                                        DisplayText: sdk.String("architecto"),
+                                                        YoutubeURI: sdk.String("repudiandae"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "ullam",
-                                                        URI: "https://knobby-zither.org",
+                                                        DisplayText: sdk.String("ullam"),
+                                                        URI: sdk.String("https://knobby-zither.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "sed",
-                                                        YoutubeURI: "saepe",
+                                                        DisplayText: sdk.String("sed"),
+                                                        YoutubeURI: sdk.String("saepe"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "pariatur",
-                                                        URI: "http://cute-lens.name",
+                                                        DisplayText: sdk.String("pariatur"),
+                                                        URI: sdk.String("http://cute-lens.name"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "magni",
-                                                        YoutubeURI: "sunt",
+                                                        DisplayText: sdk.String("magni"),
+                                                        YoutubeURI: sdk.String("sunt"),
                                                     },
                                                 },
                                             },
-                                            Text: "quo",
+                                            Text: sdk.String("quo"),
                                         },
-                                        PointValue: 848009,
+                                        PointValue: sdk.Int(848009),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "maxime",
-                                                        URI: "http://nimble-caution.info",
+                                                        DisplayText: sdk.String("maxime"),
+                                                        URI: sdk.String("http://nimble-caution.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "accusantium",
-                                                        YoutubeURI: "ab",
+                                                        DisplayText: sdk.String("accusantium"),
+                                                        YoutubeURI: sdk.String("ab"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "maiores",
-                                                        URI: "https://harmonious-in-joke.info",
+                                                        DisplayText: sdk.String("maiores"),
+                                                        URI: sdk.String("https://harmonious-in-joke.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "nam",
-                                                        YoutubeURI: "eaque",
+                                                        DisplayText: sdk.String("nam"),
+                                                        YoutubeURI: sdk.String("eaque"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "pariatur",
-                                                        URI: "http://wise-airbag.org",
+                                                        DisplayText: sdk.String("pariatur"),
+                                                        URI: sdk.String("http://wise-airbag.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "amet",
-                                                        YoutubeURI: "aut",
+                                                        DisplayText: sdk.String("amet"),
+                                                        YoutubeURI: sdk.String("aut"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "cumque",
-                                                        URI: "http://wasteful-rectangle.net",
+                                                        DisplayText: sdk.String("cumque"),
+                                                        URI: sdk.String("http://wasteful-rectangle.net"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "dolores",
-                                                        YoutubeURI: "quis",
+                                                        DisplayText: sdk.String("dolores"),
+                                                        YoutubeURI: sdk.String("quis"),
                                                     },
                                                 },
                                             },
-                                            Text: "totam",
+                                            Text: sdk.String("totam"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "eaque",
-                                                        URI: "http://disfigured-collapse.com",
+                                                        DisplayText: sdk.String("eaque"),
+                                                        URI: sdk.String("http://disfigured-collapse.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "dolores",
-                                                        YoutubeURI: "minus",
+                                                        DisplayText: sdk.String("dolores"),
+                                                        YoutubeURI: sdk.String("minus"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "quam",
-                                                        URI: "http://trusty-filter.org",
+                                                        DisplayText: sdk.String("quam"),
+                                                        URI: sdk.String("http://trusty-filter.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "recusandae",
-                                                        YoutubeURI: "omnis",
+                                                        DisplayText: sdk.String("recusandae"),
+                                                        YoutubeURI: sdk.String("omnis"),
                                                     },
                                                 },
                                             },
-                                            Text: "facilis",
+                                            Text: sdk.String("facilis"),
                                         },
                                     },
-                                    QuestionID: "perspiciatis",
-                                    Required: false,
+                                    QuestionID: sdk.String("perspiciatis"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Mr.",
+                                        Title: sdk.String("Mr."),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 783645,
-                                        HighLabel: "consequuntur",
-                                        Low: 500026,
-                                        LowLabel: "error",
+                                        High: sdk.Int(783645),
+                                        HighLabel: sdk.String("consequuntur"),
+                                        Low: sdk.Int(500026),
+                                        LowLabel: sdk.String("error"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
                                 "occaecati": "rerum",
                             },
-                            Title: "Mrs.",
+                            Title: sdk.String("Mrs."),
                             VideoItem: &shared.VideoItem{
-                                Caption: "asperiores",
+                                Caption: sdk.String("asperiores"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 267262,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                        Width: sdk.Int(267262),
                                     },
-                                    YoutubeURI: "iste",
+                                    YoutubeURI: sdk.String("iste"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 679091,
+                            Index: sdk.Int(679091),
                         },
                     },
                     DeleteItem: &shared.DeleteItemRequest{
                         Location: &shared.Location{
-                            Index: 535633,
+                            Index: sdk.Int(535633),
                         },
                     },
                     MoveItem: &shared.MoveItemRequest{
                         NewLocation: &shared.Location{
-                            Index: 864282,
+                            Index: sdk.Int(864282),
                         },
                         OriginalLocation: &shared.Location{
-                            Index: 589910,
+                            Index: sdk.Int(589910),
                         },
                     },
                     UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
                         Info: &shared.InfoInput{
-                            Description: "nobis",
-                            Title: "Miss",
+                            Description: sdk.String("nobis"),
+                            Title: sdk.String("Miss"),
                         },
-                        UpdateMask: "delectus",
+                        UpdateMask: sdk.String("delectus"),
                     },
                     UpdateItem: &shared.UpdateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "quaerat",
+                            Description: sdk.String("quaerat"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "quos",
+                                    AltText: sdk.String("quos"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 212390,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(212390),
                                     },
-                                    SourceURI: "dolorem",
+                                    SourceURI: sdk.String("dolorem"),
                                 },
                             },
-                            ItemID: "dolor",
+                            ItemID: sdk.String("dolor"),
                             PageBreakItem: map[string]interface{}{
                                 "ipsum": "hic",
                             },
@@ -760,131 +761,131 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "voluptate",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("voluptate"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "dignissimos",
+                                                    AltText: sdk.String("dignissimos"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 227414,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(227414),
                                                     },
-                                                    SourceURI: "dolorum",
+                                                    SourceURI: sdk.String("dolorum"),
                                                 },
-                                                IsOther: false,
-                                                Value: "numquam",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("numquam"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "ipsa",
+                                                GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                GoToSectionID: sdk.String("ipsa"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "ipsa",
+                                                    AltText: sdk.String("ipsa"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 487838,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(487838),
                                                     },
-                                                    SourceURI: "quaerat",
+                                                    SourceURI: sdk.String("quaerat"),
                                                 },
-                                                IsOther: false,
-                                                Value: "accusamus",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("accusamus"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "voluptatibus",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("voluptatibus"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "voluptas",
+                                                    AltText: sdk.String("voluptas"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 179603,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(179603),
                                                     },
-                                                    SourceURI: "atque",
+                                                    SourceURI: sdk.String("atque"),
                                                 },
-                                                IsOther: false,
-                                                Value: "sit",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("sit"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "ab",
+                                    AltText: sdk.String("ab"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 679393,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(679393),
                                     },
-                                    SourceURI: "iusto",
+                                    SourceURI: sdk.String("iusto"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "omnis",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("omnis"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "necessitatibus",
+                                                        AltText: sdk.String("necessitatibus"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 990339,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(990339),
                                                         },
-                                                        SourceURI: "nihil",
+                                                        SourceURI: sdk.String("nihil"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "ipsum",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("ipsum"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "id",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("id"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "saepe",
+                                                        AltText: sdk.String("saepe"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 137220,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(137220),
                                                         },
-                                                        SourceURI: "perferendis",
+                                                        SourceURI: sdk.String("perferendis"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "amet",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("amet"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "accusamus",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("accusamus"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "ad",
+                                                        AltText: sdk.String("ad"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 383464,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(383464),
                                                         },
-                                                        SourceURI: "deserunt",
+                                                        SourceURI: sdk.String("deserunt"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "provident",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("provident"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "RADIO",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumRadio.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "repellendus",
-                                            MaxFileSize: "totam",
-                                            MaxFiles: 628982,
+                                            FolderID: sdk.String("repellendus"),
+                                            MaxFileSize: sdk.String("totam"),
+                                            MaxFiles: sdk.Int(628982),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "VIDEO",
+                                                shared.FileUploadQuestionTypesEnumVideo,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "tempora",
+                                                        Value: sdk.String("tempora"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "vel",
+                                                        Value: sdk.String("vel"),
                                                     },
                                                 },
                                             },
@@ -892,172 +893,172 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "officiis",
-                                                            URI: "http://raw-venue.info",
+                                                            DisplayText: sdk.String("officiis"),
+                                                            URI: sdk.String("http://raw-venue.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "harum",
-                                                            YoutubeURI: "iusto",
+                                                            DisplayText: sdk.String("harum"),
+                                                            YoutubeURI: sdk.String("iusto"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "ipsum",
-                                                            URI: "https://wavy-cuisine.net",
+                                                            DisplayText: sdk.String("ipsum"),
+                                                            URI: sdk.String("https://wavy-cuisine.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "accusamus",
-                                                            YoutubeURI: "numquam",
+                                                            DisplayText: sdk.String("accusamus"),
+                                                            YoutubeURI: sdk.String("numquam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "enim",
-                                                            URI: "http://well-lit-literature.info",
+                                                            DisplayText: sdk.String("enim"),
+                                                            URI: sdk.String("http://well-lit-literature.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "sit",
-                                                            YoutubeURI: "expedita",
+                                                            DisplayText: sdk.String("sit"),
+                                                            YoutubeURI: sdk.String("expedita"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "neque",
-                                                            URI: "http://improbable-redhead.info",
+                                                            DisplayText: sdk.String("neque"),
+                                                            URI: sdk.String("http://improbable-redhead.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "deserunt",
-                                                            YoutubeURI: "quam",
+                                                            DisplayText: sdk.String("deserunt"),
+                                                            YoutubeURI: sdk.String("quam"),
                                                         },
                                                     },
                                                 },
-                                                Text: "ipsum",
+                                                Text: sdk.String("ipsum"),
                                             },
-                                            PointValue: 277628,
+                                            PointValue: sdk.Int(277628),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "cupiditate",
-                                                            URI: "https://tough-reunion.com",
+                                                            DisplayText: sdk.String("cupiditate"),
+                                                            URI: sdk.String("https://tough-reunion.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "laborum",
-                                                            YoutubeURI: "totam",
+                                                            DisplayText: sdk.String("laborum"),
+                                                            YoutubeURI: sdk.String("totam"),
                                                         },
                                                     },
                                                 },
-                                                Text: "incidunt",
+                                                Text: sdk.String("incidunt"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dolores",
-                                                            URI: "https://rotten-grandfather.info",
+                                                            DisplayText: sdk.String("dolores"),
+                                                            URI: sdk.String("https://rotten-grandfather.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "molestias",
-                                                            YoutubeURI: "temporibus",
+                                                            DisplayText: sdk.String("molestias"),
+                                                            YoutubeURI: sdk.String("temporibus"),
                                                         },
                                                     },
                                                 },
-                                                Text: "qui",
+                                                Text: sdk.String("qui"),
                                             },
                                         },
-                                        QuestionID: "neque",
-                                        Required: false,
+                                        QuestionID: sdk.String("neque"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mr.",
+                                            Title: sdk.String("Mr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 164959,
-                                            HighLabel: "odio",
-                                            Low: 124833,
-                                            LowLabel: "ullam",
+                                            High: sdk.Int(164959),
+                                            HighLabel: sdk.String("odio"),
+                                            Low: sdk.Int(124833),
+                                            LowLabel: sdk.String("ullam"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "voluptatem",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("voluptatem"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "cumque",
+                                                        AltText: sdk.String("cumque"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 748664,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(748664),
                                                         },
-                                                        SourceURI: "et",
+                                                        SourceURI: sdk.String("et"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "saepe",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("saepe"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "veritatis",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("veritatis"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "nobis",
+                                                        AltText: sdk.String("nobis"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 731694,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(731694),
                                                         },
-                                                        SourceURI: "cupiditate",
+                                                        SourceURI: sdk.String("cupiditate"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "aperiam",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("aperiam"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "dolorem",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("dolorem"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "dolore",
+                                                        AltText: sdk.String("dolore"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 240829,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(240829),
                                                         },
-                                                        SourceURI: "dolorum",
+                                                        SourceURI: sdk.String("dolorum"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "architecto",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("architecto"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "aut",
-                                            MaxFileSize: "quas",
-                                            MaxFiles: 929530,
+                                            FolderID: sdk.String("aut"),
+                                            MaxFileSize: sdk.String("quas"),
+                                            MaxFiles: sdk.Int(929530),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PDF",
+                                                shared.FileUploadQuestionTypesEnumPdf,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "porro",
+                                                        Value: sdk.String("porro"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "doloribus",
+                                                        Value: sdk.String("doloribus"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "ut",
+                                                        Value: sdk.String("ut"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "facilis",
+                                                        Value: sdk.String("facilis"),
                                                     },
                                                 },
                                             },
@@ -1065,207 +1066,207 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "qui",
-                                                            URI: "http://magnificent-kangaroo.name",
+                                                            DisplayText: sdk.String("qui"),
+                                                            URI: sdk.String("http://magnificent-kangaroo.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "voluptatibus",
-                                                            YoutubeURI: "quisquam",
+                                                            DisplayText: sdk.String("voluptatibus"),
+                                                            YoutubeURI: sdk.String("quisquam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "vero",
-                                                            URI: "https://glorious-crash.org",
+                                                            DisplayText: sdk.String("vero"),
+                                                            URI: sdk.String("https://glorious-crash.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "voluptate",
-                                                            YoutubeURI: "consectetur",
+                                                            DisplayText: sdk.String("voluptate"),
+                                                            YoutubeURI: sdk.String("consectetur"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "vero",
-                                                            URI: "https://liquid-underweight.net",
+                                                            DisplayText: sdk.String("vero"),
+                                                            URI: sdk.String("https://liquid-underweight.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quod",
-                                                            YoutubeURI: "odio",
+                                                            DisplayText: sdk.String("quod"),
+                                                            YoutubeURI: sdk.String("odio"),
                                                         },
                                                     },
                                                 },
-                                                Text: "similique",
+                                                Text: sdk.String("similique"),
                                             },
-                                            PointValue: 708548,
+                                            PointValue: sdk.Int(708548),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "ducimus",
-                                                            URI: "http://terrible-status.biz",
+                                                            DisplayText: sdk.String("ducimus"),
+                                                            URI: sdk.String("http://terrible-status.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "natus",
-                                                            YoutubeURI: "impedit",
+                                                            DisplayText: sdk.String("natus"),
+                                                            YoutubeURI: sdk.String("impedit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "https://grateful-stumbling.com",
+                                                            DisplayText: sdk.String("aut"),
+                                                            URI: sdk.String("https://grateful-stumbling.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "porro",
-                                                            YoutubeURI: "maiores",
+                                                            DisplayText: sdk.String("porro"),
+                                                            YoutubeURI: sdk.String("maiores"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "doloribus",
-                                                            URI: "http://silver-lanai.com",
+                                                            DisplayText: sdk.String("doloribus"),
+                                                            URI: sdk.String("http://silver-lanai.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "officia",
-                                                            YoutubeURI: "tempora",
+                                                            DisplayText: sdk.String("officia"),
+                                                            YoutubeURI: sdk.String("tempora"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "ipsam",
-                                                            URI: "http://concrete-hill.net",
+                                                            DisplayText: sdk.String("ipsam"),
+                                                            URI: sdk.String("http://concrete-hill.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "magnam",
-                                                            YoutubeURI: "ratione",
+                                                            DisplayText: sdk.String("magnam"),
+                                                            YoutubeURI: sdk.String("ratione"),
                                                         },
                                                     },
                                                 },
-                                                Text: "ex",
+                                                Text: sdk.String("ex"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dicta",
-                                                            URI: "http://wordy-bother.info",
+                                                            DisplayText: sdk.String("dicta"),
+                                                            URI: sdk.String("http://wordy-bother.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nulla",
-                                                            YoutubeURI: "excepturi",
+                                                            DisplayText: sdk.String("nulla"),
+                                                            YoutubeURI: sdk.String("excepturi"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptatibus",
-                                                            URI: "http://well-worn-sequence.org",
+                                                            DisplayText: sdk.String("voluptatibus"),
+                                                            URI: sdk.String("http://well-worn-sequence.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ea",
-                                                            YoutubeURI: "impedit",
+                                                            DisplayText: sdk.String("ea"),
+                                                            YoutubeURI: sdk.String("impedit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "http://husky-bid.biz",
+                                                            DisplayText: sdk.String("corporis"),
+                                                            URI: sdk.String("http://husky-bid.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ea",
-                                                            YoutubeURI: "quo",
+                                                            DisplayText: sdk.String("ea"),
+                                                            YoutubeURI: sdk.String("quo"),
                                                         },
                                                     },
                                                 },
-                                                Text: "consectetur",
+                                                Text: sdk.String("consectetur"),
                                             },
                                         },
-                                        QuestionID: "recusandae",
-                                        Required: false,
+                                        QuestionID: sdk.String("recusandae"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mr.",
+                                            Title: sdk.String("Mr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 325310,
-                                            HighLabel: "eaque",
-                                            Low: 952871,
-                                            LowLabel: "libero",
+                                            High: sdk.Int(325310),
+                                            HighLabel: sdk.String("eaque"),
+                                            Low: sdk.Int(952871),
+                                            LowLabel: sdk.String("libero"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "aut",
+                                    AltText: sdk.String("aut"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 533466,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(533466),
                                     },
-                                    SourceURI: "impedit",
+                                    SourceURI: sdk.String("impedit"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "accusamus",
+                                                GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                GoToSectionID: sdk.String("accusamus"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "inventore",
+                                                    AltText: sdk.String("inventore"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 89603,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(89603),
                                                     },
-                                                    SourceURI: "dolorum",
+                                                    SourceURI: sdk.String("dolorum"),
                                                 },
-                                                IsOther: false,
-                                                Value: "laborum",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("laborum"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "velit",
+                                                GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                GoToSectionID: sdk.String("velit"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "eum",
+                                                    AltText: sdk.String("eum"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 752135,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(752135),
                                                     },
-                                                    SourceURI: "quas",
+                                                    SourceURI: sdk.String("quas"),
                                                 },
-                                                IsOther: false,
-                                                Value: "assumenda",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("assumenda"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "voluptas",
-                                        MaxFileSize: "libero",
-                                        MaxFiles: 96549,
+                                        FolderID: sdk.String("voluptas"),
+                                        MaxFileSize: sdk.String("libero"),
+                                        MaxFiles: sdk.Int(96549),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "DOCUMENT",
-                                            "ANY",
+                                            shared.FileUploadQuestionTypesEnumDocument,
+                                            shared.FileUploadQuestionTypesEnumAny,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "ipsa",
+                                                    Value: sdk.String("ipsa"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "molestiae",
+                                                    Value: sdk.String("molestiae"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "magnam",
+                                                    Value: sdk.String("magnam"),
                                                 },
                                             },
                                         },
@@ -1273,75 +1274,75 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "eius",
-                                                        URI: "http://jolly-lord.net",
+                                                        DisplayText: sdk.String("eius"),
+                                                        URI: sdk.String("http://jolly-lord.net"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "reprehenderit",
-                                                        YoutubeURI: "quidem",
+                                                        DisplayText: sdk.String("reprehenderit"),
+                                                        YoutubeURI: sdk.String("quidem"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "fugiat",
-                                                        URI: "http://infantile-geek.net",
+                                                        DisplayText: sdk.String("fugiat"),
+                                                        URI: sdk.String("http://infantile-geek.net"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "eos",
-                                                        YoutubeURI: "praesentium",
+                                                        DisplayText: sdk.String("eos"),
+                                                        YoutubeURI: sdk.String("praesentium"),
                                                     },
                                                 },
                                             },
-                                            Text: "quisquam",
+                                            Text: sdk.String("quisquam"),
                                         },
-                                        PointValue: 86377,
+                                        PointValue: sdk.Int(86377),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "id",
-                                                        URI: "https://dishonest-screw.org",
+                                                        DisplayText: sdk.String("id"),
+                                                        URI: sdk.String("https://dishonest-screw.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "quo",
-                                                        YoutubeURI: "fuga",
+                                                        DisplayText: sdk.String("quo"),
+                                                        YoutubeURI: sdk.String("fuga"),
                                                     },
                                                 },
                                             },
-                                            Text: "eius",
+                                            Text: sdk.String("eius"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "voluptas",
-                                                        URI: "http://official-admin.biz",
+                                                        DisplayText: sdk.String("voluptas"),
+                                                        URI: sdk.String("http://official-admin.biz"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "debitis",
-                                                        YoutubeURI: "ipsam",
+                                                        DisplayText: sdk.String("debitis"),
+                                                        YoutubeURI: sdk.String("ipsam"),
                                                     },
                                                 },
                                             },
-                                            Text: "aspernatur",
+                                            Text: sdk.String("aspernatur"),
                                         },
                                     },
-                                    QuestionID: "sequi",
-                                    Required: false,
+                                    QuestionID: sdk.String("sequi"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Miss",
+                                        Title: sdk.String("Miss"),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 459856,
-                                        HighLabel: "recusandae",
-                                        Low: 44612,
-                                        LowLabel: "distinctio",
+                                        High: sdk.Int(459856),
+                                        HighLabel: sdk.String("recusandae"),
+                                        Low: sdk.Int(44612),
+                                        LowLabel: sdk.String("distinctio"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
@@ -1351,47 +1352,47 @@ func main() {
                                 "accusamus": "aliquam",
                                 "odio": "occaecati",
                             },
-                            Title: "Ms.",
+                            Title: sdk.String("Ms."),
                             VideoItem: &shared.VideoItem{
-                                Caption: "sapiente",
+                                Caption: sdk.String("sapiente"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 645570,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(645570),
                                     },
-                                    YoutubeURI: "molestiae",
+                                    YoutubeURI: sdk.String("molestiae"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 35362,
+                            Index: sdk.Int(35362),
                         },
-                        UpdateMask: "porro",
+                        UpdateMask: sdk.String("porro"),
                     },
                     UpdateSettings: &shared.UpdateSettingsRequest{
                         Settings: &shared.FormSettings{
                             QuizSettings: &shared.QuizSettings{
-                                IsQuiz: false,
+                                IsQuiz: sdk.Bool(false),
                             },
                         },
-                        UpdateMask: "eum",
+                        UpdateMask: sdk.String("eum"),
                     },
                 },
                 shared.RequestInput{
                     CreateItem: &shared.CreateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "quas",
+                            Description: sdk.String("quas"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "praesentium",
+                                    AltText: sdk.String("praesentium"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 536178,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(536178),
                                     },
-                                    SourceURI: "fugit",
+                                    SourceURI: sdk.String("fugit"),
                                 },
                             },
-                            ItemID: "fuga",
+                            ItemID: sdk.String("fuga"),
                             PageBreakItem: map[string]interface{}{
                                 "incidunt": "atque",
                                 "explicabo": "minima",
@@ -1402,137 +1403,137 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "ratione",
+                                                GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                GoToSectionID: sdk.String("ratione"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "explicabo",
+                                                    AltText: sdk.String("explicabo"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 578922,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(578922),
                                                     },
-                                                    SourceURI: "atque",
+                                                    SourceURI: sdk.String("atque"),
                                                 },
-                                                IsOther: false,
-                                                Value: "et",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("et"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "eveniet",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("eveniet"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "accusamus",
+                                                    AltText: sdk.String("accusamus"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 458604,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                        Width: sdk.Int(458604),
                                                     },
-                                                    SourceURI: "quod",
+                                                    SourceURI: sdk.String("quod"),
                                                 },
-                                                IsOther: false,
-                                                Value: "nam",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("nam"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "aliquid",
+                                                GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                GoToSectionID: sdk.String("aliquid"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "quasi",
+                                                    AltText: sdk.String("quasi"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 426306,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(426306),
                                                     },
-                                                    SourceURI: "harum",
+                                                    SourceURI: sdk.String("harum"),
                                                 },
-                                                IsOther: false,
-                                                Value: "molestiae",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("molestiae"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "occaecati",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("occaecati"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "minima",
+                                                    AltText: sdk.String("minima"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 756779,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(756779),
                                                     },
-                                                    SourceURI: "sit",
+                                                    SourceURI: sdk.String("sit"),
                                                 },
-                                                IsOther: false,
-                                                Value: "culpa",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("culpa"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "CHECKBOX",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "adipisci",
+                                    AltText: sdk.String("adipisci"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 160538,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                        Width: sdk.Int(160538),
                                     },
-                                    SourceURI: "consequatur",
+                                    SourceURI: sdk.String("consequatur"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "consectetur",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("consectetur"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "esse",
+                                                        AltText: sdk.String("esse"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 590984,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(590984),
                                                         },
-                                                        SourceURI: "a",
+                                                        SourceURI: sdk.String("a"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "nulla",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("nulla"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "esse",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("esse"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "quasi",
+                                                        AltText: sdk.String("quasi"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 621679,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(621679),
                                                         },
-                                                        SourceURI: "sint",
+                                                        SourceURI: sdk.String("sint"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "pariatur",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("pariatur"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "quia",
-                                            MaxFileSize: "eveniet",
-                                            MaxFiles: 992430,
+                                            FolderID: sdk.String("quia"),
+                                            MaxFileSize: sdk.String("eveniet"),
+                                            MaxFiles: sdk.Int(992430),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "FILE_TYPE_UNSPECIFIED",
-                                                "ANY",
-                                                "FILE_TYPE_UNSPECIFIED",
-                                                "PDF",
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
+                                                shared.FileUploadQuestionTypesEnumAny,
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
+                                                shared.FileUploadQuestionTypesEnumPdf,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "aliquid",
+                                                        Value: sdk.String("aliquid"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "tenetur",
+                                                        Value: sdk.String("tenetur"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "quae",
+                                                        Value: sdk.String("quae"),
                                                     },
                                                 },
                                             },
@@ -1540,149 +1541,149 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "vel",
-                                                            URI: "http://extra-small-recession.org",
+                                                            DisplayText: sdk.String("vel"),
+                                                            URI: sdk.String("http://extra-small-recession.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "soluta",
-                                                            YoutubeURI: "accusantium",
+                                                            DisplayText: sdk.String("soluta"),
+                                                            YoutubeURI: sdk.String("accusantium"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aliquam",
-                                                            URI: "https://clear-fly.info",
+                                                            DisplayText: sdk.String("aliquam"),
+                                                            URI: sdk.String("https://clear-fly.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ullam",
-                                                            YoutubeURI: "nisi",
+                                                            DisplayText: sdk.String("ullam"),
+                                                            YoutubeURI: sdk.String("nisi"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "https://dense-stallion.info",
+                                                            DisplayText: sdk.String("aut"),
+                                                            URI: sdk.String("https://dense-stallion.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "deleniti",
-                                                            YoutubeURI: "itaque",
+                                                            DisplayText: sdk.String("deleniti"),
+                                                            YoutubeURI: sdk.String("itaque"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dolorum",
-                                                            URI: "http://paltry-utensil.com",
+                                                            DisplayText: sdk.String("dolorum"),
+                                                            URI: sdk.String("http://paltry-utensil.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "at",
-                                                            YoutubeURI: "et",
+                                                            DisplayText: sdk.String("at"),
+                                                            YoutubeURI: sdk.String("et"),
                                                         },
                                                     },
                                                 },
-                                                Text: "voluptate",
+                                                Text: sdk.String("voluptate"),
                                             },
-                                            PointValue: 55965,
+                                            PointValue: sdk.Int(55965),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "veritatis",
-                                                            URI: "http://enormous-orator.org",
+                                                            DisplayText: sdk.String("veritatis"),
+                                                            URI: sdk.String("http://enormous-orator.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "accusantium",
-                                                            YoutubeURI: "rem",
+                                                            DisplayText: sdk.String("accusantium"),
+                                                            YoutubeURI: sdk.String("rem"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "https://inconsequential-performance.com",
+                                                            DisplayText: sdk.String("aut"),
+                                                            URI: sdk.String("https://inconsequential-performance.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "corrupti",
-                                                            YoutubeURI: "non",
+                                                            DisplayText: sdk.String("corrupti"),
+                                                            YoutubeURI: sdk.String("non"),
                                                         },
                                                     },
                                                 },
-                                                Text: "voluptatem",
+                                                Text: sdk.String("voluptatem"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "occaecati",
-                                                            URI: "http://sneaky-cardigan.info",
+                                                            DisplayText: sdk.String("occaecati"),
+                                                            URI: sdk.String("http://sneaky-cardigan.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "aut",
-                                                            YoutubeURI: "dignissimos",
+                                                            DisplayText: sdk.String("aut"),
+                                                            YoutubeURI: sdk.String("dignissimos"),
                                                         },
                                                     },
                                                 },
-                                                Text: "dicta",
+                                                Text: sdk.String("dicta"),
                                             },
                                         },
-                                        QuestionID: "maiores",
-                                        Required: false,
+                                        QuestionID: sdk.String("maiores"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Miss",
+                                            Title: sdk.String("Miss"),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 244651,
-                                            HighLabel: "voluptatibus",
-                                            Low: 374323,
-                                            LowLabel: "asperiores",
+                                            High: sdk.Int(244651),
+                                            HighLabel: sdk.String("voluptatibus"),
+                                            Low: sdk.Int(374323),
+                                            LowLabel: sdk.String("asperiores"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "quaerat",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("quaerat"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "consequuntur",
+                                                        AltText: sdk.String("consequuntur"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 638762,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(638762),
                                                         },
-                                                        SourceURI: "maxime",
+                                                        SourceURI: sdk.String("maxime"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "dignissimos",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("dignissimos"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHECKBOX",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "asperiores",
-                                            MaxFileSize: "nemo",
-                                            MaxFiles: 65304,
+                                            FolderID: sdk.String("asperiores"),
+                                            MaxFileSize: sdk.String("nemo"),
+                                            MaxFiles: sdk.Int(65304),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "IMAGE",
-                                                "VIDEO",
+                                                shared.FileUploadQuestionTypesEnumImage,
+                                                shared.FileUploadQuestionTypesEnumVideo,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "ab",
+                                                        Value: sdk.String("ab"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "adipisci",
+                                                        Value: sdk.String("adipisci"),
                                                     },
                                                 },
                                             },
@@ -1690,172 +1691,172 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "id",
-                                                            URI: "http://everlasting-parking.name",
+                                                            DisplayText: sdk.String("id"),
+                                                            URI: sdk.String("http://everlasting-parking.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "recusandae",
-                                                            YoutubeURI: "totam",
+                                                            DisplayText: sdk.String("recusandae"),
+                                                            YoutubeURI: sdk.String("totam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "fugiat",
-                                                            URI: "http://lonely-mentor.info",
+                                                            DisplayText: sdk.String("fugiat"),
+                                                            URI: sdk.String("http://lonely-mentor.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "labore",
-                                                            YoutubeURI: "possimus",
+                                                            DisplayText: sdk.String("labore"),
+                                                            YoutubeURI: sdk.String("possimus"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "facilis",
-                                                            URI: "https://immense-icing.info",
+                                                            DisplayText: sdk.String("facilis"),
+                                                            URI: sdk.String("https://immense-icing.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "reiciendis",
-                                                            YoutubeURI: "assumenda",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            YoutubeURI: sdk.String("assumenda"),
                                                         },
                                                     },
                                                 },
-                                                Text: "nemo",
+                                                Text: sdk.String("nemo"),
                                             },
-                                            PointValue: 924967,
+                                            PointValue: sdk.Int(924967),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aperiam",
-                                                            URI: "https://emotional-ignorant.info",
+                                                            DisplayText: sdk.String("aperiam"),
+                                                            URI: sdk.String("https://emotional-ignorant.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "earum",
-                                                            YoutubeURI: "facere",
+                                                            DisplayText: sdk.String("earum"),
+                                                            YoutubeURI: sdk.String("facere"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "numquam",
-                                                            URI: "https://helpless-warming.net",
+                                                            DisplayText: sdk.String("numquam"),
+                                                            URI: sdk.String("https://helpless-warming.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "saepe",
-                                                            YoutubeURI: "necessitatibus",
+                                                            DisplayText: sdk.String("saepe"),
+                                                            YoutubeURI: sdk.String("necessitatibus"),
                                                         },
                                                     },
                                                 },
-                                                Text: "dolore",
+                                                Text: sdk.String("dolore"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "asperiores",
-                                                            URI: "http://excellent-crystal.com",
+                                                            DisplayText: sdk.String("asperiores"),
+                                                            URI: sdk.String("http://excellent-crystal.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dignissimos",
-                                                            YoutubeURI: "a",
+                                                            DisplayText: sdk.String("dignissimos"),
+                                                            YoutubeURI: sdk.String("a"),
                                                         },
                                                     },
                                                 },
-                                                Text: "debitis",
+                                                Text: sdk.String("debitis"),
                                             },
                                         },
-                                        QuestionID: "consectetur",
-                                        Required: false,
+                                        QuestionID: sdk.String("consectetur"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mrs.",
+                                            Title: sdk.String("Mrs."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 689768,
-                                            HighLabel: "laboriosam",
-                                            Low: 58356,
-                                            LowLabel: "voluptates",
+                                            High: sdk.Int(689768),
+                                            HighLabel: sdk.String("laboriosam"),
+                                            Low: sdk.Int(58356),
+                                            LowLabel: sdk.String("voluptates"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "accusamus",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("accusamus"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "similique",
+                                                        AltText: sdk.String("similique"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 132815,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(132815),
                                                         },
-                                                        SourceURI: "voluptas",
+                                                        SourceURI: sdk.String("voluptas"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "voluptas",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("voluptas"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "minima",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("minima"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "nobis",
+                                                        AltText: sdk.String("nobis"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 237807,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(237807),
                                                         },
-                                                        SourceURI: "minus",
+                                                        SourceURI: sdk.String("minus"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "dolores",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("dolores"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "in",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("in"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "dolore",
+                                                        AltText: sdk.String("dolore"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 885963,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(885963),
                                                         },
-                                                        SourceURI: "temporibus",
+                                                        SourceURI: sdk.String("temporibus"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "ullam",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("ullam"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "cum",
-                                            MaxFileSize: "blanditiis",
-                                            MaxFiles: 555361,
+                                            FolderID: sdk.String("cum"),
+                                            MaxFileSize: sdk.String("blanditiis"),
+                                            MaxFiles: sdk.Int(555361),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DOCUMENT",
-                                                "PDF",
-                                                "DRAWING",
-                                                "VIDEO",
+                                                shared.FileUploadQuestionTypesEnumDocument,
+                                                shared.FileUploadQuestionTypesEnumPdf,
+                                                shared.FileUploadQuestionTypesEnumDrawing,
+                                                shared.FileUploadQuestionTypesEnumVideo,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "hic",
+                                                        Value: sdk.String("hic"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "exercitationem",
+                                                        Value: sdk.String("exercitationem"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "nobis",
+                                                        Value: sdk.String("nobis"),
                                                     },
                                                 },
                                             },
@@ -1863,158 +1864,158 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "rerum",
-                                                            URI: "http://wide-carnation.org",
+                                                            DisplayText: sdk.String("rerum"),
+                                                            URI: sdk.String("http://wide-carnation.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "facilis",
-                                                            YoutubeURI: "voluptate",
+                                                            DisplayText: sdk.String("facilis"),
+                                                            YoutubeURI: sdk.String("voluptate"),
                                                         },
                                                     },
                                                 },
-                                                Text: "expedita",
+                                                Text: sdk.String("expedita"),
                                             },
-                                            PointValue: 70869,
+                                            PointValue: sdk.Int(70869),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dolore",
-                                                            URI: "https://criminal-id.info",
+                                                            DisplayText: sdk.String("dolore"),
+                                                            URI: sdk.String("https://criminal-id.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quidem",
-                                                            YoutubeURI: "explicabo",
+                                                            DisplayText: sdk.String("quidem"),
+                                                            YoutubeURI: sdk.String("explicabo"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptas",
-                                                            URI: "https://burly-geometry.org",
+                                                            DisplayText: sdk.String("voluptas"),
+                                                            URI: sdk.String("https://burly-geometry.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "debitis",
-                                                            YoutubeURI: "illo",
+                                                            DisplayText: sdk.String("debitis"),
+                                                            YoutubeURI: sdk.String("illo"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "reiciendis",
-                                                            URI: "http://motionless-whisker.biz",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            URI: sdk.String("http://motionless-whisker.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "sed",
-                                                            YoutubeURI: "provident",
+                                                            DisplayText: sdk.String("sed"),
+                                                            YoutubeURI: sdk.String("provident"),
                                                         },
                                                     },
                                                 },
-                                                Text: "eius",
+                                                Text: sdk.String("eius"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "ipsum",
-                                                            URI: "http://obedient-medicine.org",
+                                                            DisplayText: sdk.String("ipsum"),
+                                                            URI: sdk.String("http://obedient-medicine.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "tempora",
-                                                            YoutubeURI: "tempora",
+                                                            DisplayText: sdk.String("tempora"),
+                                                            YoutubeURI: sdk.String("tempora"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptate",
-                                                            URI: "https://ideal-amendment.biz",
+                                                            DisplayText: sdk.String("voluptate"),
+                                                            URI: sdk.String("https://ideal-amendment.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "officiis",
-                                                            YoutubeURI: "praesentium",
+                                                            DisplayText: sdk.String("officiis"),
+                                                            YoutubeURI: sdk.String("praesentium"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "facilis",
-                                                            URI: "http://feline-futon.org",
+                                                            DisplayText: sdk.String("facilis"),
+                                                            URI: sdk.String("http://feline-futon.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "rem",
-                                                            YoutubeURI: "sit",
+                                                            DisplayText: sdk.String("rem"),
+                                                            YoutubeURI: sdk.String("sit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nobis",
-                                                            URI: "https://glass-eyelid.org",
+                                                            DisplayText: sdk.String("nobis"),
+                                                            URI: sdk.String("https://glass-eyelid.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "reiciendis",
-                                                            YoutubeURI: "nulla",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            YoutubeURI: sdk.String("nulla"),
                                                         },
                                                     },
                                                 },
-                                                Text: "magni",
+                                                Text: sdk.String("magni"),
                                             },
                                         },
-                                        QuestionID: "aperiam",
-                                        Required: false,
+                                        QuestionID: sdk.String("aperiam"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Dr.",
+                                            Title: sdk.String("Dr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 253642,
-                                            HighLabel: "veniam",
-                                            Low: 446135,
-                                            LowLabel: "officiis",
+                                            High: sdk.Int(253642),
+                                            HighLabel: sdk.String("veniam"),
+                                            Low: sdk.Int(446135),
+                                            LowLabel: sdk.String("officiis"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "exercitationem",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("exercitationem"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "praesentium",
+                                                        AltText: sdk.String("praesentium"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 386827,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(386827),
                                                         },
-                                                        SourceURI: "dolorum",
+                                                        SourceURI: sdk.String("dolorum"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "voluptatum",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("voluptatum"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHECKBOX",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "hic",
-                                            MaxFileSize: "expedita",
-                                            MaxFiles: 892863,
+                                            FolderID: sdk.String("hic"),
+                                            MaxFileSize: sdk.String("expedita"),
+                                            MaxFiles: sdk.Int(892863),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PDF",
+                                                shared.FileUploadQuestionTypesEnumPdf,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "officia",
+                                                        Value: sdk.String("officia"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "dolorum",
+                                                        Value: sdk.String("dolorum"),
                                                     },
                                                 },
                                             },
@@ -2022,175 +2023,175 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "accusamus",
-                                                            URI: "http://monthly-chapter.biz",
+                                                            DisplayText: sdk.String("accusamus"),
+                                                            URI: sdk.String("http://monthly-chapter.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "fugiat",
-                                                            YoutubeURI: "voluptatem",
+                                                            DisplayText: sdk.String("fugiat"),
+                                                            YoutubeURI: sdk.String("voluptatem"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "culpa",
-                                                            URI: "https://forceful-activity.info",
+                                                            DisplayText: sdk.String("culpa"),
+                                                            URI: sdk.String("https://forceful-activity.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ipsam",
-                                                            YoutubeURI: "sit",
+                                                            DisplayText: sdk.String("ipsam"),
+                                                            YoutubeURI: sdk.String("sit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptatum",
-                                                            URI: "https://valid-forestry.com",
+                                                            DisplayText: sdk.String("voluptatum"),
+                                                            URI: sdk.String("https://valid-forestry.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "blanditiis",
-                                                            YoutubeURI: "ex",
+                                                            DisplayText: sdk.String("blanditiis"),
+                                                            YoutubeURI: sdk.String("ex"),
                                                         },
                                                     },
                                                 },
-                                                Text: "sed",
+                                                Text: sdk.String("sed"),
                                             },
-                                            PointValue: 24313,
+                                            PointValue: sdk.Int(24313),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nostrum",
-                                                            URI: "https://phony-ad.biz",
+                                                            DisplayText: sdk.String("nostrum"),
+                                                            URI: sdk.String("https://phony-ad.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "reiciendis",
-                                                            YoutubeURI: "dolorem",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            YoutubeURI: sdk.String("dolorem"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "harum",
-                                                            URI: "http://burly-morsel.biz",
+                                                            DisplayText: sdk.String("harum"),
+                                                            URI: sdk.String("http://burly-morsel.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quidem",
-                                                            YoutubeURI: "atque",
+                                                            DisplayText: sdk.String("quidem"),
+                                                            YoutubeURI: sdk.String("atque"),
                                                         },
                                                     },
                                                 },
-                                                Text: "laborum",
+                                                Text: sdk.String("laborum"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "tenetur",
-                                                            URI: "http://adorable-cruelty.name",
+                                                            DisplayText: sdk.String("tenetur"),
+                                                            URI: sdk.String("http://adorable-cruelty.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "voluptate",
-                                                            YoutubeURI: "unde",
+                                                            DisplayText: sdk.String("voluptate"),
+                                                            YoutubeURI: sdk.String("unde"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "reiciendis",
-                                                            URI: "https://talkative-volcano.org",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            URI: sdk.String("https://talkative-volcano.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "perferendis",
-                                                            YoutubeURI: "est",
+                                                            DisplayText: sdk.String("perferendis"),
+                                                            YoutubeURI: sdk.String("est"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quidem",
-                                                            URI: "http://stupendous-pray.name",
+                                                            DisplayText: sdk.String("quidem"),
+                                                            URI: sdk.String("http://stupendous-pray.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "mollitia",
-                                                            YoutubeURI: "veniam",
+                                                            DisplayText: sdk.String("mollitia"),
+                                                            YoutubeURI: sdk.String("veniam"),
                                                         },
                                                     },
                                                 },
-                                                Text: "voluptatem",
+                                                Text: sdk.String("voluptatem"),
                                             },
                                         },
-                                        QuestionID: "quisquam",
-                                        Required: false,
+                                        QuestionID: sdk.String("quisquam"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Dr.",
+                                            Title: sdk.String("Dr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 97243,
-                                            HighLabel: "atque",
-                                            Low: 442036,
-                                            LowLabel: "asperiores",
+                                            High: sdk.Int(97243),
+                                            HighLabel: sdk.String("atque"),
+                                            Low: sdk.Int(442036),
+                                            LowLabel: sdk.String("asperiores"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "totam",
+                                    AltText: sdk.String("totam"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 693957,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(693957),
                                     },
-                                    SourceURI: "maxime",
+                                    SourceURI: sdk.String("maxime"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "amet",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("amet"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "assumenda",
+                                                    AltText: sdk.String("assumenda"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 539118,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(539118),
                                                     },
-                                                    SourceURI: "error",
+                                                    SourceURI: sdk.String("error"),
                                                 },
-                                                IsOther: false,
-                                                Value: "officiis",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("officiis"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "accusamus",
-                                        MaxFileSize: "natus",
-                                        MaxFiles: 328303,
+                                        FolderID: sdk.String("accusamus"),
+                                        MaxFileSize: sdk.String("natus"),
+                                        MaxFiles: sdk.Int(328303),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "SPREADSHEET",
+                                            shared.FileUploadQuestionTypesEnumSpreadsheet,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "corrupti",
+                                                    Value: sdk.String("corrupti"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "at",
+                                                    Value: sdk.String("at"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "error",
+                                                    Value: sdk.String("error"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "blanditiis",
+                                                    Value: sdk.String("blanditiis"),
                                                 },
                                             },
                                         },
@@ -2198,161 +2199,161 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "repudiandae",
-                                                        URI: "https://modest-cactus.org",
+                                                        DisplayText: sdk.String("repudiandae"),
+                                                        URI: sdk.String("https://modest-cactus.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "dolorum",
-                                                        YoutubeURI: "repellendus",
+                                                        DisplayText: sdk.String("dolorum"),
+                                                        YoutubeURI: sdk.String("repellendus"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "labore",
-                                                        URI: "https://arctic-tracking.com",
+                                                        DisplayText: sdk.String("labore"),
+                                                        URI: sdk.String("https://arctic-tracking.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "accusantium",
-                                                        YoutubeURI: "beatae",
+                                                        DisplayText: sdk.String("accusantium"),
+                                                        YoutubeURI: sdk.String("beatae"),
                                                     },
                                                 },
                                             },
-                                            Text: "dolores",
+                                            Text: sdk.String("dolores"),
                                         },
-                                        PointValue: 316488,
+                                        PointValue: sdk.Int(316488),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "velit",
-                                                        URI: "https://negative-election.org",
+                                                        DisplayText: sdk.String("velit"),
+                                                        URI: sdk.String("https://negative-election.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "consequuntur",
-                                                        YoutubeURI: "occaecati",
+                                                        DisplayText: sdk.String("consequuntur"),
+                                                        YoutubeURI: sdk.String("occaecati"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "officiis",
-                                                        URI: "https://international-dame.org",
+                                                        DisplayText: sdk.String("officiis"),
+                                                        URI: sdk.String("https://international-dame.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "occaecati",
-                                                        YoutubeURI: "consequuntur",
+                                                        DisplayText: sdk.String("occaecati"),
+                                                        YoutubeURI: sdk.String("consequuntur"),
                                                     },
                                                 },
                                             },
-                                            Text: "fugit",
+                                            Text: sdk.String("fugit"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "quis",
-                                                        URI: "http://pitiful-beginner.info",
+                                                        DisplayText: sdk.String("quis"),
+                                                        URI: sdk.String("http://pitiful-beginner.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "quidem",
-                                                        YoutubeURI: "eveniet",
+                                                        DisplayText: sdk.String("quidem"),
+                                                        YoutubeURI: sdk.String("eveniet"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "non",
-                                                        URI: "https://any-hope.com",
+                                                        DisplayText: sdk.String("non"),
+                                                        URI: sdk.String("https://any-hope.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "totam",
-                                                        YoutubeURI: "quae",
+                                                        DisplayText: sdk.String("totam"),
+                                                        YoutubeURI: sdk.String("quae"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "molestiae",
-                                                        URI: "https://delirious-representation.info",
+                                                        DisplayText: sdk.String("molestiae"),
+                                                        URI: sdk.String("https://delirious-representation.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "necessitatibus",
-                                                        YoutubeURI: "ratione",
+                                                        DisplayText: sdk.String("necessitatibus"),
+                                                        YoutubeURI: sdk.String("ratione"),
                                                     },
                                                 },
                                             },
-                                            Text: "laborum",
+                                            Text: sdk.String("laborum"),
                                         },
                                     },
-                                    QuestionID: "distinctio",
-                                    Required: false,
+                                    QuestionID: sdk.String("distinctio"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Ms.",
+                                        Title: sdk.String("Ms."),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 523006,
-                                        HighLabel: "aliquam",
-                                        Low: 320565,
-                                        LowLabel: "repellat",
+                                        High: sdk.Int(523006),
+                                        HighLabel: sdk.String("aliquam"),
+                                        Low: sdk.Int(320565),
+                                        LowLabel: sdk.String("repellat"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
                                 "corporis": "perspiciatis",
                             },
-                            Title: "Ms.",
+                            Title: sdk.String("Ms."),
                             VideoItem: &shared.VideoItem{
-                                Caption: "mollitia",
+                                Caption: sdk.String("mollitia"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 5189,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(5189),
                                     },
-                                    YoutubeURI: "maiores",
+                                    YoutubeURI: sdk.String("maiores"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 970222,
+                            Index: sdk.Int(970222),
                         },
                     },
                     DeleteItem: &shared.DeleteItemRequest{
                         Location: &shared.Location{
-                            Index: 174658,
+                            Index: sdk.Int(174658),
                         },
                     },
                     MoveItem: &shared.MoveItemRequest{
                         NewLocation: &shared.Location{
-                            Index: 663866,
+                            Index: sdk.Int(663866),
                         },
                         OriginalLocation: &shared.Location{
-                            Index: 327988,
+                            Index: sdk.Int(327988),
                         },
                     },
                     UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
                         Info: &shared.InfoInput{
-                            Description: "dolore",
-                            Title: "Miss",
+                            Description: sdk.String("dolore"),
+                            Title: sdk.String("Miss"),
                         },
-                        UpdateMask: "nesciunt",
+                        UpdateMask: sdk.String("nesciunt"),
                     },
                     UpdateItem: &shared.UpdateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "quae",
+                            Description: sdk.String("quae"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "recusandae",
+                                    AltText: sdk.String("recusandae"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 309251,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(309251),
                                     },
-                                    SourceURI: "molestiae",
+                                    SourceURI: sdk.String("molestiae"),
                                 },
                             },
-                            ItemID: "ex",
+                            ItemID: sdk.String("ex"),
                             PageBreakItem: map[string]interface{}{
                                 "culpa": "adipisci",
                                 "debitis": "laudantium",
@@ -2362,129 +2363,129 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "recusandae",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("recusandae"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "esse",
+                                                    AltText: sdk.String("esse"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 337477,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(337477),
                                                     },
-                                                    SourceURI: "eum",
+                                                    SourceURI: sdk.String("eum"),
                                                 },
-                                                IsOther: false,
-                                                Value: "reiciendis",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("reiciendis"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "aspernatur",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("aspernatur"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "ullam",
+                                                    AltText: sdk.String("ullam"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 657020,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                        Width: sdk.Int(657020),
                                                     },
-                                                    SourceURI: "nostrum",
+                                                    SourceURI: sdk.String("nostrum"),
                                                 },
-                                                IsOther: false,
-                                                Value: "mollitia",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("mollitia"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "CHECKBOX",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "possimus",
+                                    AltText: sdk.String("possimus"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 402767,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(402767),
                                     },
-                                    SourceURI: "aliquid",
+                                    SourceURI: sdk.String("aliquid"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "ullam",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("ullam"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "in",
+                                                        AltText: sdk.String("in"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 937636,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(937636),
                                                         },
-                                                        SourceURI: "officia",
+                                                        SourceURI: sdk.String("officia"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "laborum",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("laborum"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "modi",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("modi"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "voluptatibus",
+                                                        AltText: sdk.String("voluptatibus"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 889794,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(889794),
                                                         },
-                                                        SourceURI: "sapiente",
+                                                        SourceURI: sdk.String("sapiente"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "cumque",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("cumque"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "rerum",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("rerum"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "tempora",
+                                                        AltText: sdk.String("tempora"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 82057,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(82057),
                                                         },
-                                                        SourceURI: "fugit",
+                                                        SourceURI: sdk.String("fugit"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "cumque",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("cumque"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "perferendis",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("perferendis"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "velit",
+                                                        AltText: sdk.String("velit"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 432281,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(432281),
                                                         },
-                                                        SourceURI: "eius",
+                                                        SourceURI: sdk.String("eius"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "rem",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("rem"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "impedit",
-                                            MaxFileSize: "eos",
-                                            MaxFiles: 958741,
+                                            FolderID: sdk.String("impedit"),
+                                            MaxFileSize: sdk.String("eos"),
+                                            MaxFiles: sdk.Int(958741),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "ANY",
-                                                "PRESENTATION",
+                                                shared.FileUploadQuestionTypesEnumAny,
+                                                shared.FileUploadQuestionTypesEnumPresentation,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "cupiditate",
+                                                        Value: sdk.String("cupiditate"),
                                                     },
                                                 },
                                             },
@@ -2492,171 +2493,171 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "earum",
-                                                            URI: "https://warlike-station.com",
+                                                            DisplayText: sdk.String("earum"),
+                                                            URI: sdk.String("https://warlike-station.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "earum",
-                                                            YoutubeURI: "perspiciatis",
+                                                            DisplayText: sdk.String("earum"),
+                                                            YoutubeURI: sdk.String("perspiciatis"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "maiores",
-                                                            URI: "https://icky-seal.info",
+                                                            DisplayText: sdk.String("maiores"),
+                                                            URI: sdk.String("https://icky-seal.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolorem",
-                                                            YoutubeURI: "fugit",
+                                                            DisplayText: sdk.String("dolorem"),
+                                                            YoutubeURI: sdk.String("fugit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "cumque",
-                                                            URI: "https://deserted-piano.org",
+                                                            DisplayText: sdk.String("cumque"),
+                                                            URI: sdk.String("https://deserted-piano.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "nulla",
-                                                            YoutubeURI: "consequatur",
+                                                            DisplayText: sdk.String("nulla"),
+                                                            YoutubeURI: sdk.String("consequatur"),
                                                         },
                                                     },
                                                 },
-                                                Text: "quasi",
+                                                Text: sdk.String("quasi"),
                                             },
-                                            PointValue: 90233,
+                                            PointValue: sdk.Int(90233),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "natus",
-                                                            URI: "https://hidden-deal.com",
+                                                            DisplayText: sdk.String("natus"),
+                                                            URI: sdk.String("https://hidden-deal.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "magni",
-                                                            YoutubeURI: "doloribus",
+                                                            DisplayText: sdk.String("magni"),
+                                                            YoutubeURI: sdk.String("doloribus"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nulla",
-                                                            URI: "https://babyish-dissemination.info",
+                                                            DisplayText: sdk.String("nulla"),
+                                                            URI: sdk.String("https://babyish-dissemination.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "molestiae",
-                                                            YoutubeURI: "dicta",
+                                                            DisplayText: sdk.String("molestiae"),
+                                                            YoutubeURI: sdk.String("dicta"),
                                                         },
                                                     },
                                                 },
-                                                Text: "iusto",
+                                                Text: sdk.String("iusto"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "praesentium",
-                                                            URI: "https://wicked-hellcat.com",
+                                                            DisplayText: sdk.String("praesentium"),
+                                                            URI: sdk.String("https://wicked-hellcat.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "fugiat",
-                                                            YoutubeURI: "doloremque",
+                                                            DisplayText: sdk.String("fugiat"),
+                                                            YoutubeURI: sdk.String("doloremque"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "dicta",
-                                                            URI: "http://fat-infant.info",
+                                                            DisplayText: sdk.String("dicta"),
+                                                            URI: sdk.String("http://fat-infant.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "consectetur",
-                                                            YoutubeURI: "aliquid",
+                                                            DisplayText: sdk.String("consectetur"),
+                                                            YoutubeURI: sdk.String("aliquid"),
                                                         },
                                                     },
                                                 },
-                                                Text: "ipsa",
+                                                Text: sdk.String("ipsa"),
                                             },
                                         },
-                                        QuestionID: "laborum",
-                                        Required: false,
+                                        QuestionID: sdk.String("laborum"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mr.",
+                                            Title: sdk.String("Mr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 344718,
-                                            HighLabel: "fugiat",
-                                            Low: 713767,
-                                            LowLabel: "aliquid",
+                                            High: sdk.Int(344718),
+                                            HighLabel: sdk.String("fugiat"),
+                                            Low: sdk.Int(713767),
+                                            LowLabel: sdk.String("aliquid"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "officia",
+                                    AltText: sdk.String("officia"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 399161,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(399161),
                                     },
-                                    SourceURI: "perferendis",
+                                    SourceURI: sdk.String("perferendis"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "iste",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("iste"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "id",
+                                                    AltText: sdk.String("id"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 625358,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                        Width: sdk.Int(625358),
                                                     },
-                                                    SourceURI: "possimus",
+                                                    SourceURI: sdk.String("possimus"),
                                                 },
-                                                IsOther: false,
-                                                Value: "voluptates",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("voluptates"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "laborum",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("laborum"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "libero",
+                                                    AltText: sdk.String("libero"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 536923,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(536923),
                                                     },
-                                                    SourceURI: "enim",
+                                                    SourceURI: sdk.String("enim"),
                                                 },
-                                                IsOther: false,
-                                                Value: "vitae",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("vitae"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "ex",
-                                        MaxFileSize: "quo",
-                                        MaxFiles: 405373,
+                                        FolderID: sdk.String("ex"),
+                                        MaxFileSize: sdk.String("quo"),
+                                        MaxFiles: sdk.Int(405373),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "PRESENTATION",
-                                            "IMAGE",
+                                            shared.FileUploadQuestionTypesEnumPresentation,
+                                            shared.FileUploadQuestionTypesEnumImage,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "molestias",
+                                                    Value: sdk.String("molestias"),
                                                 },
                                             },
                                         },
@@ -2664,142 +2665,142 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "aliquid",
-                                                        URI: "http://messy-occupation.com",
+                                                        DisplayText: sdk.String("aliquid"),
+                                                        URI: sdk.String("http://messy-occupation.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "rerum",
-                                                        YoutubeURI: "est",
+                                                        DisplayText: sdk.String("rerum"),
+                                                        YoutubeURI: sdk.String("est"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "culpa",
-                                                        URI: "http://well-off-tax.com",
+                                                        DisplayText: sdk.String("culpa"),
+                                                        URI: sdk.String("http://well-off-tax.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "fuga",
-                                                        YoutubeURI: "pariatur",
+                                                        DisplayText: sdk.String("fuga"),
+                                                        YoutubeURI: sdk.String("pariatur"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "debitis",
-                                                        URI: "http://able-makeup.org",
+                                                        DisplayText: sdk.String("debitis"),
+                                                        URI: sdk.String("http://able-makeup.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "ex",
-                                                        YoutubeURI: "sapiente",
+                                                        DisplayText: sdk.String("ex"),
+                                                        YoutubeURI: sdk.String("sapiente"),
                                                     },
                                                 },
                                             },
-                                            Text: "rem",
+                                            Text: sdk.String("rem"),
                                         },
-                                        PointValue: 796320,
+                                        PointValue: sdk.Int(796320),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "asperiores",
-                                                        URI: "http://gross-album.org",
+                                                        DisplayText: sdk.String("asperiores"),
+                                                        URI: sdk.String("http://gross-album.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "totam",
-                                                        YoutubeURI: "impedit",
+                                                        DisplayText: sdk.String("totam"),
+                                                        YoutubeURI: sdk.String("impedit"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "quibusdam",
-                                                        URI: "https://harmonious-parenthesis.biz",
+                                                        DisplayText: sdk.String("quibusdam"),
+                                                        URI: sdk.String("https://harmonious-parenthesis.biz"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "aliquam",
-                                                        YoutubeURI: "inventore",
+                                                        DisplayText: sdk.String("aliquam"),
+                                                        YoutubeURI: sdk.String("inventore"),
                                                     },
                                                 },
                                             },
-                                            Text: "deleniti",
+                                            Text: sdk.String("deleniti"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "tempora",
-                                                        URI: "http://acidic-bower.com",
+                                                        DisplayText: sdk.String("tempora"),
+                                                        URI: sdk.String("http://acidic-bower.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "modi",
-                                                        YoutubeURI: "fugit",
+                                                        DisplayText: sdk.String("modi"),
+                                                        YoutubeURI: sdk.String("fugit"),
                                                     },
                                                 },
                                             },
-                                            Text: "ab",
+                                            Text: sdk.String("ab"),
                                         },
                                     },
-                                    QuestionID: "laudantium",
-                                    Required: false,
+                                    QuestionID: sdk.String("laudantium"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Mr.",
+                                        Title: sdk.String("Mr."),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 222658,
-                                        HighLabel: "fugiat",
-                                        Low: 369490,
-                                        LowLabel: "consequuntur",
+                                        High: sdk.Int(222658),
+                                        HighLabel: sdk.String("fugiat"),
+                                        Low: sdk.Int(369490),
+                                        LowLabel: sdk.String("consequuntur"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
                                 "quas": "eveniet",
                             },
-                            Title: "Miss",
+                            Title: sdk.String("Miss"),
                             VideoItem: &shared.VideoItem{
-                                Caption: "officiis",
+                                Caption: sdk.String("officiis"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 897277,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(897277),
                                     },
-                                    YoutubeURI: "sed",
+                                    YoutubeURI: sdk.String("sed"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 332191,
+                            Index: sdk.Int(332191),
                         },
-                        UpdateMask: "nesciunt",
+                        UpdateMask: sdk.String("nesciunt"),
                     },
                     UpdateSettings: &shared.UpdateSettingsRequest{
                         Settings: &shared.FormSettings{
                             QuizSettings: &shared.QuizSettings{
-                                IsQuiz: false,
+                                IsQuiz: sdk.Bool(false),
                             },
                         },
-                        UpdateMask: "expedita",
+                        UpdateMask: sdk.String("expedita"),
                     },
                 },
                 shared.RequestInput{
                     CreateItem: &shared.CreateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "eum",
+                            Description: sdk.String("eum"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "vel",
+                                    AltText: sdk.String("vel"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 301692,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(301692),
                                     },
-                                    SourceURI: "exercitationem",
+                                    SourceURI: sdk.String("exercitationem"),
                                 },
                             },
-                            ItemID: "ab",
+                            ItemID: sdk.String("ab"),
                             PageBreakItem: map[string]interface{}{
                                 "autem": "nobis",
                                 "laboriosam": "recusandae",
@@ -2811,108 +2812,108 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "at",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("at"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "vero",
+                                                    AltText: sdk.String("vero"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 690785,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(690785),
                                                     },
-                                                    SourceURI: "sequi",
+                                                    SourceURI: sdk.String("sequi"),
                                                 },
-                                                IsOther: false,
-                                                Value: "doloribus",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("doloribus"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "optio",
+                                    AltText: sdk.String("optio"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "RIGHT",
-                                        Width: 364544,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                        Width: sdk.Int(364544),
                                     },
-                                    SourceURI: "voluptate",
+                                    SourceURI: sdk.String("voluptate"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "numquam",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("numquam"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "nemo",
+                                                        AltText: sdk.String("nemo"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 260904,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(260904),
                                                         },
-                                                        SourceURI: "aspernatur",
+                                                        SourceURI: sdk.String("aspernatur"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "ducimus",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("ducimus"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "fuga",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("fuga"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "laudantium",
+                                                        AltText: sdk.String("laudantium"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 97493,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(97493),
                                                         },
-                                                        SourceURI: "rem",
+                                                        SourceURI: sdk.String("rem"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "fugiat",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("fugiat"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "nisi",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("nisi"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "consequuntur",
+                                                        AltText: sdk.String("consequuntur"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 46806,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(46806),
                                                         },
-                                                        SourceURI: "cupiditate",
+                                                        SourceURI: sdk.String("cupiditate"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "reiciendis",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("reiciendis"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHECKBOX",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumCheckbox.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "alias",
-                                            MaxFileSize: "omnis",
-                                            MaxFiles: 178580,
+                                            FolderID: sdk.String("alias"),
+                                            MaxFileSize: sdk.String("omnis"),
+                                            MaxFiles: sdk.Int(178580),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PDF",
-                                                "ANY",
-                                                "FILE_TYPE_UNSPECIFIED",
+                                                shared.FileUploadQuestionTypesEnumPdf,
+                                                shared.FileUploadQuestionTypesEnumAny,
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "accusamus",
+                                                        Value: sdk.String("accusamus"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "voluptatibus",
+                                                        Value: sdk.String("voluptatibus"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "distinctio",
+                                                        Value: sdk.String("distinctio"),
                                                     },
                                                 },
                                             },
@@ -2920,174 +2921,174 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "delectus",
-                                                            URI: "http://lumbering-sibling.biz",
+                                                            DisplayText: sdk.String("delectus"),
+                                                            URI: sdk.String("http://lumbering-sibling.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "temporibus",
-                                                            YoutubeURI: "quos",
+                                                            DisplayText: sdk.String("temporibus"),
+                                                            YoutubeURI: sdk.String("quos"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "commodi",
-                                                            URI: "https://impassioned-local.org",
+                                                            DisplayText: sdk.String("commodi"),
+                                                            URI: sdk.String("https://impassioned-local.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "modi",
-                                                            YoutubeURI: "nam",
+                                                            DisplayText: sdk.String("modi"),
+                                                            YoutubeURI: sdk.String("nam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "vero",
-                                                            URI: "http://harmful-heron.com",
+                                                            DisplayText: sdk.String("vero"),
+                                                            URI: sdk.String("http://harmful-heron.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quasi",
-                                                            YoutubeURI: "non",
+                                                            DisplayText: sdk.String("quasi"),
+                                                            YoutubeURI: sdk.String("non"),
                                                         },
                                                     },
                                                 },
-                                                Text: "maiores",
+                                                Text: sdk.String("maiores"),
                                             },
-                                            PointValue: 318233,
+                                            PointValue: sdk.Int(318233),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nulla",
-                                                            URI: "https://joyous-fourths.info",
+                                                            DisplayText: sdk.String("nulla"),
+                                                            URI: sdk.String("https://joyous-fourths.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "est",
-                                                            YoutubeURI: "quis",
+                                                            DisplayText: sdk.String("est"),
+                                                            YoutubeURI: sdk.String("quis"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sint",
-                                                            URI: "https://soggy-usher.org",
+                                                            DisplayText: sdk.String("sint"),
+                                                            URI: sdk.String("https://soggy-usher.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "asperiores",
-                                                            YoutubeURI: "ex",
+                                                            DisplayText: sdk.String("asperiores"),
+                                                            YoutubeURI: sdk.String("ex"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptas",
-                                                            URI: "https://whole-banyan.net",
+                                                            DisplayText: sdk.String("voluptas"),
+                                                            URI: sdk.String("https://whole-banyan.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "fuga",
-                                                            YoutubeURI: "laborum",
+                                                            DisplayText: sdk.String("fuga"),
+                                                            YoutubeURI: sdk.String("laborum"),
                                                         },
                                                     },
                                                 },
-                                                Text: "consectetur",
+                                                Text: sdk.String("consectetur"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "atque",
-                                                            URI: "http://sociable-class.net",
+                                                            DisplayText: sdk.String("atque"),
+                                                            URI: sdk.String("http://sociable-class.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "repudiandae",
-                                                            YoutubeURI: "nam",
+                                                            DisplayText: sdk.String("repudiandae"),
+                                                            YoutubeURI: sdk.String("nam"),
                                                         },
                                                     },
                                                 },
-                                                Text: "dolore",
+                                                Text: sdk.String("dolore"),
                                             },
                                         },
-                                        QuestionID: "iusto",
-                                        Required: false,
+                                        QuestionID: sdk.String("iusto"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Ms.",
+                                            Title: sdk.String("Ms."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 194023,
-                                            HighLabel: "dignissimos",
-                                            Low: 205566,
-                                            LowLabel: "quo",
+                                            High: sdk.Int(194023),
+                                            HighLabel: sdk.String("dignissimos"),
+                                            Low: sdk.Int(205566),
+                                            LowLabel: sdk.String("quo"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "iure",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("iure"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "odit",
+                                                        AltText: sdk.String("odit"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 426904,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(426904),
                                                         },
-                                                        SourceURI: "magnam",
+                                                        SourceURI: sdk.String("magnam"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "quibusdam",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("quibusdam"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "facere",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("facere"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "libero",
+                                                        AltText: sdk.String("libero"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 975425,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(975425),
                                                         },
-                                                        SourceURI: "quia",
+                                                        SourceURI: sdk.String("quia"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "porro",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("porro"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "velit",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("velit"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "illo",
+                                                        AltText: sdk.String("illo"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 424663,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(424663),
                                                         },
-                                                        SourceURI: "ea",
+                                                        SourceURI: sdk.String("ea"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "beatae",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("beatae"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "excepturi",
-                                            MaxFileSize: "eum",
-                                            MaxFiles: 246557,
+                                            FolderID: sdk.String("excepturi"),
+                                            MaxFileSize: sdk.String("eum"),
+                                            MaxFiles: sdk.Int(246557),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DRAWING",
-                                                "AUDIO",
+                                                shared.FileUploadQuestionTypesEnumDrawing,
+                                                shared.FileUploadQuestionTypesEnumAudio,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "impedit",
+                                                        Value: sdk.String("impedit"),
                                                     },
                                                 },
                                             },
@@ -3095,155 +3096,155 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "iste",
-                                                            URI: "https://adorable-goodbye.org",
+                                                            DisplayText: sdk.String("iste"),
+                                                            URI: sdk.String("https://adorable-goodbye.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "velit",
-                                                            YoutubeURI: "laborum",
+                                                            DisplayText: sdk.String("velit"),
+                                                            YoutubeURI: sdk.String("laborum"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "non",
-                                                            URI: "http://left-amber.com",
+                                                            DisplayText: sdk.String("non"),
+                                                            URI: sdk.String("http://left-amber.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "consequatur",
-                                                            YoutubeURI: "officia",
+                                                            DisplayText: sdk.String("consequatur"),
+                                                            YoutubeURI: sdk.String("officia"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "recusandae",
-                                                            URI: "http://required-gasket.net",
+                                                            DisplayText: sdk.String("recusandae"),
+                                                            URI: sdk.String("http://required-gasket.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "placeat",
-                                                            YoutubeURI: "perspiciatis",
+                                                            DisplayText: sdk.String("placeat"),
+                                                            YoutubeURI: sdk.String("perspiciatis"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "expedita",
-                                                            URI: "https://weird-income.info",
+                                                            DisplayText: sdk.String("expedita"),
+                                                            URI: sdk.String("https://weird-income.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "unde",
-                                                            YoutubeURI: "necessitatibus",
+                                                            DisplayText: sdk.String("unde"),
+                                                            YoutubeURI: sdk.String("necessitatibus"),
                                                         },
                                                     },
                                                 },
-                                                Text: "animi",
+                                                Text: sdk.String("animi"),
                                             },
-                                            PointValue: 769967,
+                                            PointValue: sdk.Int(769967),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "https://petty-indication.biz",
+                                                            DisplayText: sdk.String("corporis"),
+                                                            URI: sdk.String("https://petty-indication.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "veritatis",
-                                                            YoutubeURI: "vero",
+                                                            DisplayText: sdk.String("veritatis"),
+                                                            YoutubeURI: sdk.String("vero"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "consectetur",
-                                                            URI: "http://bogus-counsel.biz",
+                                                            DisplayText: sdk.String("consectetur"),
+                                                            URI: sdk.String("http://bogus-counsel.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "qui",
-                                                            YoutubeURI: "iste",
+                                                            DisplayText: sdk.String("qui"),
+                                                            YoutubeURI: sdk.String("iste"),
                                                         },
                                                     },
                                                 },
-                                                Text: "ex",
+                                                Text: sdk.String("ex"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "soluta",
-                                                            URI: "https://mellow-pony.info",
+                                                            DisplayText: sdk.String("soluta"),
+                                                            URI: sdk.String("https://mellow-pony.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "fugit",
-                                                            YoutubeURI: "alias",
+                                                            DisplayText: sdk.String("fugit"),
+                                                            YoutubeURI: sdk.String("alias"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "magni",
-                                                            URI: "http://belated-bandolier.biz",
+                                                            DisplayText: sdk.String("magni"),
+                                                            URI: sdk.String("http://belated-bandolier.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "neque",
-                                                            YoutubeURI: "exercitationem",
+                                                            DisplayText: sdk.String("neque"),
+                                                            YoutubeURI: sdk.String("exercitationem"),
                                                         },
                                                     },
                                                 },
-                                                Text: "itaque",
+                                                Text: sdk.String("itaque"),
                                             },
                                         },
-                                        QuestionID: "et",
-                                        Required: false,
+                                        QuestionID: sdk.String("et"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mrs.",
+                                            Title: sdk.String("Mrs."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 602229,
-                                            HighLabel: "nulla",
-                                            Low: 714376,
-                                            LowLabel: "maxime",
+                                            High: sdk.Int(602229),
+                                            HighLabel: sdk.String("nulla"),
+                                            Low: sdk.Int(714376),
+                                            LowLabel: sdk.String("maxime"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "nostrum",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("nostrum"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "omnis",
+                                                        AltText: sdk.String("omnis"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "RIGHT",
-                                                            Width: 115661,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                            Width: sdk.Int(115661),
                                                         },
-                                                        SourceURI: "id",
+                                                        SourceURI: sdk.String("id"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "libero",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("libero"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "officia",
-                                            MaxFileSize: "quos",
-                                            MaxFiles: 811939,
+                                            FolderID: sdk.String("officia"),
+                                            MaxFileSize: sdk.String("quos"),
+                                            MaxFiles: sdk.Int(811939),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "SPREADSHEET",
+                                                shared.FileUploadQuestionTypesEnumSpreadsheet,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "voluptates",
+                                                        Value: sdk.String("voluptates"),
                                                     },
                                                 },
                                             },
@@ -3251,202 +3252,202 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aperiam",
-                                                            URI: "https://flippant-robotics.net",
+                                                            DisplayText: sdk.String("aperiam"),
+                                                            URI: sdk.String("https://flippant-robotics.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "voluptatem",
-                                                            YoutubeURI: "autem",
+                                                            DisplayText: sdk.String("voluptatem"),
+                                                            YoutubeURI: sdk.String("autem"),
                                                         },
                                                     },
                                                 },
-                                                Text: "esse",
+                                                Text: sdk.String("esse"),
                                             },
-                                            PointValue: 172951,
+                                            PointValue: sdk.Int(172951),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "beatae",
-                                                            URI: "https://submissive-masterpiece.info",
+                                                            DisplayText: sdk.String("beatae"),
+                                                            URI: sdk.String("https://submissive-masterpiece.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "provident",
-                                                            YoutubeURI: "accusamus",
+                                                            DisplayText: sdk.String("provident"),
+                                                            YoutubeURI: sdk.String("accusamus"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "necessitatibus",
-                                                            URI: "https://noteworthy-halt.info",
+                                                            DisplayText: sdk.String("necessitatibus"),
+                                                            URI: sdk.String("https://noteworthy-halt.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ipsam",
-                                                            YoutubeURI: "rerum",
+                                                            DisplayText: sdk.String("ipsam"),
+                                                            YoutubeURI: sdk.String("rerum"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "laudantium",
-                                                            URI: "http://unhappy-waterspout.net",
+                                                            DisplayText: sdk.String("laudantium"),
+                                                            URI: sdk.String("http://unhappy-waterspout.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "at",
-                                                            YoutubeURI: "alias",
+                                                            DisplayText: sdk.String("at"),
+                                                            YoutubeURI: sdk.String("alias"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quia",
-                                                            URI: "https://realistic-trachoma.com",
+                                                            DisplayText: sdk.String("quia"),
+                                                            URI: sdk.String("https://realistic-trachoma.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "expedita",
-                                                            YoutubeURI: "officiis",
+                                                            DisplayText: sdk.String("expedita"),
+                                                            YoutubeURI: sdk.String("officiis"),
                                                         },
                                                     },
                                                 },
-                                                Text: "eos",
+                                                Text: sdk.String("eos"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "odio",
-                                                            URI: "https://constant-cap.info",
+                                                            DisplayText: sdk.String("odio"),
+                                                            URI: sdk.String("https://constant-cap.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "error",
-                                                            YoutubeURI: "earum",
+                                                            DisplayText: sdk.String("error"),
+                                                            YoutubeURI: sdk.String("earum"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "adipisci",
-                                                            URI: "https://pleasing-drapes.net",
+                                                            DisplayText: sdk.String("adipisci"),
+                                                            URI: sdk.String("https://pleasing-drapes.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quis",
-                                                            YoutubeURI: "beatae",
+                                                            DisplayText: sdk.String("quis"),
+                                                            YoutubeURI: sdk.String("beatae"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "unde",
-                                                            URI: "http://whimsical-mystery.com",
+                                                            DisplayText: sdk.String("unde"),
+                                                            URI: sdk.String("http://whimsical-mystery.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "numquam",
-                                                            YoutubeURI: "numquam",
+                                                            DisplayText: sdk.String("numquam"),
+                                                            YoutubeURI: sdk.String("numquam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nesciunt",
-                                                            URI: "https://popular-kitty.net",
+                                                            DisplayText: sdk.String("nesciunt"),
+                                                            URI: sdk.String("https://popular-kitty.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "necessitatibus",
-                                                            YoutubeURI: "corporis",
+                                                            DisplayText: sdk.String("necessitatibus"),
+                                                            YoutubeURI: sdk.String("corporis"),
                                                         },
                                                     },
                                                 },
-                                                Text: "qui",
+                                                Text: sdk.String("qui"),
                                             },
                                         },
-                                        QuestionID: "expedita",
-                                        Required: false,
+                                        QuestionID: sdk.String("expedita"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Ms.",
+                                            Title: sdk.String("Ms."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 587375,
-                                            HighLabel: "minima",
-                                            Low: 809594,
-                                            LowLabel: "enim",
+                                            High: sdk.Int(587375),
+                                            HighLabel: sdk.String("minima"),
+                                            Low: sdk.Int(809594),
+                                            LowLabel: sdk.String("enim"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "neque",
+                                    AltText: sdk.String("neque"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 796397,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(796397),
                                     },
-                                    SourceURI: "eum",
+                                    SourceURI: sdk.String("eum"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "magnam",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("magnam"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "voluptates",
+                                                    AltText: sdk.String("voluptates"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 731744,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(731744),
                                                     },
-                                                    SourceURI: "aperiam",
+                                                    SourceURI: sdk.String("aperiam"),
                                                 },
-                                                IsOther: false,
-                                                Value: "libero",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("libero"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "labore",
+                                                GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                GoToSectionID: sdk.String("labore"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "totam",
+                                                    AltText: sdk.String("totam"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "RIGHT",
-                                                        Width: 375994,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumRight.ToPointer(),
+                                                        Width: sdk.Int(375994),
                                                     },
-                                                    SourceURI: "quo",
+                                                    SourceURI: sdk.String("quo"),
                                                 },
-                                                IsOther: false,
-                                                Value: "velit",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("velit"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "fuga",
-                                        MaxFileSize: "nostrum",
-                                        MaxFiles: 669237,
+                                        FolderID: sdk.String("fuga"),
+                                        MaxFileSize: sdk.String("nostrum"),
+                                        MaxFiles: sdk.Int(669237),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "AUDIO",
-                                            "IMAGE",
-                                            "VIDEO",
-                                            "ANY",
+                                            shared.FileUploadQuestionTypesEnumAudio,
+                                            shared.FileUploadQuestionTypesEnumImage,
+                                            shared.FileUploadQuestionTypesEnumVideo,
+                                            shared.FileUploadQuestionTypesEnumAny,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "pariatur",
+                                                    Value: sdk.String("pariatur"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "nemo",
+                                                    Value: sdk.String("nemo"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "reprehenderit",
+                                                    Value: sdk.String("reprehenderit"),
                                                 },
                                                 shared.CorrectAnswer{
-                                                    Value: "aperiam",
+                                                    Value: sdk.String("aperiam"),
                                                 },
                                             },
                                         },
@@ -3454,181 +3455,181 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "minima",
-                                                        URI: "http://lone-mission.biz",
+                                                        DisplayText: sdk.String("minima"),
+                                                        URI: sdk.String("http://lone-mission.biz"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "error",
-                                                        YoutubeURI: "veritatis",
+                                                        DisplayText: sdk.String("error"),
+                                                        YoutubeURI: sdk.String("veritatis"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "ducimus",
-                                                        URI: "http://tragic-tuba.name",
+                                                        DisplayText: sdk.String("ducimus"),
+                                                        URI: sdk.String("http://tragic-tuba.name"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "optio",
-                                                        YoutubeURI: "ex",
+                                                        DisplayText: sdk.String("optio"),
+                                                        YoutubeURI: sdk.String("ex"),
                                                     },
                                                 },
                                             },
-                                            Text: "quaerat",
+                                            Text: sdk.String("quaerat"),
                                         },
-                                        PointValue: 416692,
+                                        PointValue: sdk.Int(416692),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "placeat",
-                                                        URI: "https://gray-innovation.biz",
+                                                        DisplayText: sdk.String("placeat"),
+                                                        URI: sdk.String("https://gray-innovation.biz"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "modi",
-                                                        YoutubeURI: "ipsa",
+                                                        DisplayText: sdk.String("modi"),
+                                                        YoutubeURI: sdk.String("ipsa"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "sint",
-                                                        URI: "https://diligent-tower.net",
+                                                        DisplayText: sdk.String("sint"),
+                                                        URI: sdk.String("https://diligent-tower.net"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "dicta",
-                                                        YoutubeURI: "earum",
+                                                        DisplayText: sdk.String("dicta"),
+                                                        YoutubeURI: sdk.String("earum"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "veniam",
-                                                        URI: "https://decisive-real.com",
+                                                        DisplayText: sdk.String("veniam"),
+                                                        URI: sdk.String("https://decisive-real.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "consequuntur",
-                                                        YoutubeURI: "necessitatibus",
+                                                        DisplayText: sdk.String("consequuntur"),
+                                                        YoutubeURI: sdk.String("necessitatibus"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "nobis",
-                                                        URI: "http://lone-wholesale.com",
+                                                        DisplayText: sdk.String("nobis"),
+                                                        URI: sdk.String("http://lone-wholesale.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "quasi",
-                                                        YoutubeURI: "laboriosam",
+                                                        DisplayText: sdk.String("quasi"),
+                                                        YoutubeURI: sdk.String("laboriosam"),
                                                     },
                                                 },
                                             },
-                                            Text: "pariatur",
+                                            Text: sdk.String("pariatur"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "excepturi",
-                                                        URI: "https://handy-encirclement.info",
+                                                        DisplayText: sdk.String("excepturi"),
+                                                        URI: sdk.String("https://handy-encirclement.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "doloribus",
-                                                        YoutubeURI: "eligendi",
+                                                        DisplayText: sdk.String("doloribus"),
+                                                        YoutubeURI: sdk.String("eligendi"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "sint",
-                                                        URI: "http://watchful-pickaxe.name",
+                                                        DisplayText: sdk.String("sint"),
+                                                        URI: sdk.String("http://watchful-pickaxe.name"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "totam",
-                                                        YoutubeURI: "molestias",
+                                                        DisplayText: sdk.String("totam"),
+                                                        YoutubeURI: sdk.String("molestias"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "odio",
-                                                        URI: "http://unselfish-breadfruit.name",
+                                                        DisplayText: sdk.String("odio"),
+                                                        URI: sdk.String("http://unselfish-breadfruit.name"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "iste",
-                                                        YoutubeURI: "assumenda",
+                                                        DisplayText: sdk.String("iste"),
+                                                        YoutubeURI: sdk.String("assumenda"),
                                                     },
                                                 },
                                             },
-                                            Text: "tempore",
+                                            Text: sdk.String("tempore"),
                                         },
                                     },
-                                    QuestionID: "libero",
-                                    Required: false,
+                                    QuestionID: sdk.String("libero"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Mrs.",
+                                        Title: sdk.String("Mrs."),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 38557,
-                                        HighLabel: "delectus",
-                                        Low: 773110,
-                                        LowLabel: "cum",
+                                        High: sdk.Int(38557),
+                                        HighLabel: sdk.String("delectus"),
+                                        Low: sdk.Int(773110),
+                                        LowLabel: sdk.String("cum"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
                             TextItem: map[string]interface{}{
                                 "adipisci": "saepe",
                             },
-                            Title: "Miss",
+                            Title: sdk.String("Miss"),
                             VideoItem: &shared.VideoItem{
-                                Caption: "doloremque",
+                                Caption: sdk.String("doloremque"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 333072,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(333072),
                                     },
-                                    YoutubeURI: "libero",
+                                    YoutubeURI: sdk.String("libero"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 99733,
+                            Index: sdk.Int(99733),
                         },
                     },
                     DeleteItem: &shared.DeleteItemRequest{
                         Location: &shared.Location{
-                            Index: 584593,
+                            Index: sdk.Int(584593),
                         },
                     },
                     MoveItem: &shared.MoveItemRequest{
                         NewLocation: &shared.Location{
-                            Index: 475589,
+                            Index: sdk.Int(475589),
                         },
                         OriginalLocation: &shared.Location{
-                            Index: 756654,
+                            Index: sdk.Int(756654),
                         },
                     },
                     UpdateFormInfo: &shared.UpdateFormInfoRequestInput{
                         Info: &shared.InfoInput{
-                            Description: "possimus",
-                            Title: "Mrs.",
+                            Description: sdk.String("possimus"),
+                            Title: sdk.String("Mrs."),
                         },
-                        UpdateMask: "magnam",
+                        UpdateMask: sdk.String("magnam"),
                     },
                     UpdateItem: &shared.UpdateItemRequestInput{
                         Item: &shared.ItemInput{
-                            Description: "itaque",
+                            Description: sdk.String("itaque"),
                             ImageItem: &shared.ImageItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "sed",
+                                    AltText: sdk.String("sed"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "CENTER",
-                                        Width: 330267,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                        Width: sdk.Int(330267),
                                     },
-                                    SourceURI: "consequuntur",
+                                    SourceURI: sdk.String("consequuntur"),
                                 },
                             },
-                            ItemID: "facere",
+                            ItemID: sdk.String("facere"),
                             PageBreakItem: map[string]interface{}{
                                 "odit": "pariatur",
                                 "amet": "exercitationem",
@@ -3639,139 +3640,139 @@ func main() {
                                     Columns: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "RESTART_FORM",
-                                                GoToSectionID: "nisi",
+                                                GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                GoToSectionID: sdk.String("nisi"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "voluptatibus",
+                                                    AltText: sdk.String("voluptatibus"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "LEFT",
-                                                        Width: 503748,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                        Width: sdk.Int(503748),
                                                     },
-                                                    SourceURI: "distinctio",
+                                                    SourceURI: sdk.String("distinctio"),
                                                 },
-                                                IsOther: false,
-                                                Value: "nisi",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("nisi"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "nisi",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("nisi"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "libero",
+                                                    AltText: sdk.String("libero"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 815200,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(815200),
                                                     },
-                                                    SourceURI: "facilis",
+                                                    SourceURI: sdk.String("facilis"),
                                                 },
-                                                IsOther: false,
-                                                Value: "ipsum",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("ipsum"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "voluptatibus",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("voluptatibus"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "voluptatibus",
+                                                    AltText: sdk.String("voluptatibus"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                        Width: 891581,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                        Width: sdk.Int(891581),
                                                     },
-                                                    SourceURI: "labore",
+                                                    SourceURI: sdk.String("labore"),
                                                 },
-                                                IsOther: false,
-                                                Value: "rerum",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("rerum"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "CHOICE_TYPE_UNSPECIFIED",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                     },
-                                    ShuffleQuestions: false,
+                                    ShuffleQuestions: sdk.Bool(false),
                                 },
                                 Image: &shared.ImageInput{
-                                    AltText: "reprehenderit",
+                                    AltText: sdk.String("reprehenderit"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "LEFT",
-                                        Width: 207296,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                        Width: sdk.Int(207296),
                                     },
-                                    SourceURI: "iusto",
+                                    SourceURI: sdk.String("iusto"),
                                 },
                                 Questions: []shared.QuestionInput{
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "fugiat",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("fugiat"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "unde",
+                                                        AltText: sdk.String("unde"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 495617,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(495617),
                                                         },
-                                                        SourceURI: "dolor",
+                                                        SourceURI: sdk.String("dolor"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "dicta",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("dicta"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "porro",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("porro"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "vitae",
+                                                        AltText: sdk.String("vitae"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 458970,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(458970),
                                                         },
-                                                        SourceURI: "fugiat",
+                                                        SourceURI: sdk.String("fugiat"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "ad",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("ad"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                    GoToSectionID: "enim",
+                                                    GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                    GoToSectionID: sdk.String("enim"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "delectus",
+                                                        AltText: sdk.String("delectus"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 491201,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(491201),
                                                         },
-                                                        SourceURI: "libero",
+                                                        SourceURI: sdk.String("libero"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "illo",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("illo"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "incidunt",
-                                            MaxFileSize: "accusamus",
-                                            MaxFiles: 902581,
+                                            FolderID: sdk.String("incidunt"),
+                                            MaxFileSize: sdk.String("accusamus"),
+                                            MaxFiles: sdk.Int(902581),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "PRESENTATION",
-                                                "ANY",
-                                                "AUDIO",
+                                                shared.FileUploadQuestionTypesEnumPresentation,
+                                                shared.FileUploadQuestionTypesEnumAny,
+                                                shared.FileUploadQuestionTypesEnumAudio,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "reprehenderit",
+                                                        Value: sdk.String("reprehenderit"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "praesentium",
+                                                        Value: sdk.String("praesentium"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "nemo",
+                                                        Value: sdk.String("nemo"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "repellat",
+                                                        Value: sdk.String("repellat"),
                                                     },
                                                 },
                                             },
@@ -3779,152 +3780,152 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sequi",
-                                                            URI: "http://minor-beech.biz",
+                                                            DisplayText: sdk.String("sequi"),
+                                                            URI: sdk.String("http://minor-beech.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "assumenda",
-                                                            YoutubeURI: "aliquam",
+                                                            DisplayText: sdk.String("assumenda"),
+                                                            YoutubeURI: sdk.String("aliquam"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quisquam",
-                                                            URI: "https://male-trailpatrol.com",
+                                                            DisplayText: sdk.String("quisquam"),
+                                                            URI: sdk.String("https://male-trailpatrol.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "maxime",
-                                                            YoutubeURI: "aspernatur",
+                                                            DisplayText: sdk.String("maxime"),
+                                                            YoutubeURI: sdk.String("aspernatur"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nam",
-                                                            URI: "https://nautical-nest.org",
+                                                            DisplayText: sdk.String("nam"),
+                                                            URI: sdk.String("https://nautical-nest.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "rerum",
-                                                            YoutubeURI: "dignissimos",
+                                                            DisplayText: sdk.String("rerum"),
+                                                            YoutubeURI: sdk.String("dignissimos"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "corporis",
-                                                            URI: "https://pleasant-spectrograph.info",
+                                                            DisplayText: sdk.String("corporis"),
+                                                            URI: sdk.String("https://pleasant-spectrograph.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "dolorem",
-                                                            YoutubeURI: "commodi",
+                                                            DisplayText: sdk.String("dolorem"),
+                                                            YoutubeURI: sdk.String("commodi"),
                                                         },
                                                     },
                                                 },
-                                                Text: "impedit",
+                                                Text: sdk.String("impedit"),
                                             },
-                                            PointValue: 415033,
+                                            PointValue: sdk.Int(415033),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "voluptatem",
-                                                            URI: "http://baggy-cultivar.org",
+                                                            DisplayText: sdk.String("voluptatem"),
+                                                            URI: sdk.String("http://baggy-cultivar.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "praesentium",
-                                                            YoutubeURI: "quidem",
+                                                            DisplayText: sdk.String("praesentium"),
+                                                            YoutubeURI: sdk.String("quidem"),
                                                         },
                                                     },
                                                 },
-                                                Text: "cum",
+                                                Text: sdk.String("cum"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quasi",
-                                                            URI: "http://male-argument.org",
+                                                            DisplayText: sdk.String("quasi"),
+                                                            URI: sdk.String("http://male-argument.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "iusto",
-                                                            YoutubeURI: "amet",
+                                                            DisplayText: sdk.String("iusto"),
+                                                            YoutubeURI: sdk.String("amet"),
                                                         },
                                                     },
                                                 },
-                                                Text: "provident",
+                                                Text: sdk.String("provident"),
                                             },
                                         },
-                                        QuestionID: "dolorum",
-                                        Required: false,
+                                        QuestionID: sdk.String("dolorum"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Dr.",
+                                            Title: sdk.String("Dr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 592880,
-                                            HighLabel: "repudiandae",
-                                            Low: 10063,
-                                            LowLabel: "nemo",
+                                            High: sdk.Int(592880),
+                                            HighLabel: sdk.String("repudiandae"),
+                                            Low: sdk.Int(10063),
+                                            LowLabel: sdk.String("nemo"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "SUBMIT_FORM",
-                                                    GoToSectionID: "facilis",
+                                                    GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("facilis"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "corrupti",
+                                                        AltText: sdk.String("corrupti"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 574092,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(574092),
                                                         },
-                                                        SourceURI: "accusamus",
+                                                        SourceURI: sdk.String("accusamus"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "eos",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("eos"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "dicta",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("dicta"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "voluptatem",
+                                                        AltText: sdk.String("voluptatem"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 224413,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(224413),
                                                         },
-                                                        SourceURI: "sunt",
+                                                        SourceURI: sdk.String("sunt"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "a",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("a"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "CHOICE_TYPE_UNSPECIFIED",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumChoiceTypeUnspecified.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "occaecati",
-                                            MaxFileSize: "atque",
-                                            MaxFiles: 107472,
+                                            FolderID: sdk.String("occaecati"),
+                                            MaxFileSize: sdk.String("atque"),
+                                            MaxFiles: sdk.Int(107472),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "DOCUMENT",
-                                                "IMAGE",
-                                                "SPREADSHEET",
-                                                "FILE_TYPE_UNSPECIFIED",
+                                                shared.FileUploadQuestionTypesEnumDocument,
+                                                shared.FileUploadQuestionTypesEnumImage,
+                                                shared.FileUploadQuestionTypesEnumSpreadsheet,
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "rerum",
+                                                        Value: sdk.String("rerum"),
                                                     },
                                                 },
                                             },
@@ -3932,178 +3933,178 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aperiam",
-                                                            URI: "http://zealous-decision-making.net",
+                                                            DisplayText: sdk.String("aperiam"),
+                                                            URI: sdk.String("http://zealous-decision-making.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "provident",
-                                                            YoutubeURI: "consectetur",
+                                                            DisplayText: sdk.String("provident"),
+                                                            YoutubeURI: sdk.String("consectetur"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "eligendi",
-                                                            URI: "http://energetic-response.name",
+                                                            DisplayText: sdk.String("eligendi"),
+                                                            URI: sdk.String("http://energetic-response.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "temporibus",
-                                                            YoutubeURI: "officia",
+                                                            DisplayText: sdk.String("temporibus"),
+                                                            YoutubeURI: sdk.String("officia"),
                                                         },
                                                     },
                                                 },
-                                                Text: "amet",
+                                                Text: sdk.String("amet"),
                                             },
-                                            PointValue: 948541,
+                                            PointValue: sdk.Int(948541),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "quo",
-                                                            URI: "https://these-pliers.info",
+                                                            DisplayText: sdk.String("quo"),
+                                                            URI: sdk.String("https://these-pliers.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "vero",
-                                                            YoutubeURI: "qui",
+                                                            DisplayText: sdk.String("vero"),
+                                                            YoutubeURI: sdk.String("qui"),
                                                         },
                                                     },
                                                 },
-                                                Text: "consectetur",
+                                                Text: sdk.String("consectetur"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "explicabo",
-                                                            URI: "http://green-interviewer.biz",
+                                                            DisplayText: sdk.String("explicabo"),
+                                                            URI: sdk.String("http://green-interviewer.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "ab",
-                                                            YoutubeURI: "illo",
+                                                            DisplayText: sdk.String("ab"),
+                                                            YoutubeURI: sdk.String("illo"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "hic",
-                                                            URI: "https://white-depth.net",
+                                                            DisplayText: sdk.String("hic"),
+                                                            URI: sdk.String("https://white-depth.net"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "in",
-                                                            YoutubeURI: "exercitationem",
+                                                            DisplayText: sdk.String("in"),
+                                                            YoutubeURI: sdk.String("exercitationem"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "labore",
-                                                            URI: "http://vain-dirt.info",
+                                                            DisplayText: sdk.String("labore"),
+                                                            URI: sdk.String("http://vain-dirt.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "explicabo",
-                                                            YoutubeURI: "accusamus",
+                                                            DisplayText: sdk.String("explicabo"),
+                                                            YoutubeURI: sdk.String("accusamus"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "rem",
-                                                            URI: "http://conventional-mallet.biz",
+                                                            DisplayText: sdk.String("rem"),
+                                                            URI: sdk.String("http://conventional-mallet.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "voluptate",
-                                                            YoutubeURI: "similique",
+                                                            DisplayText: sdk.String("voluptate"),
+                                                            YoutubeURI: sdk.String("similique"),
                                                         },
                                                     },
                                                 },
-                                                Text: "minima",
+                                                Text: sdk.String("minima"),
                                             },
                                         },
-                                        QuestionID: "libero",
-                                        Required: false,
+                                        QuestionID: sdk.String("libero"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mrs.",
+                                            Title: sdk.String("Mrs."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 24272,
-                                            HighLabel: "modi",
-                                            Low: 430116,
-                                            LowLabel: "nesciunt",
+                                            High: sdk.Int(24272),
+                                            HighLabel: sdk.String("modi"),
+                                            Low: sdk.Int(430116),
+                                            LowLabel: sdk.String("nesciunt"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                     shared.QuestionInput{
                                         ChoiceQuestion: &shared.ChoiceQuestionInput{
                                             Options: []shared.OptionInput{
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "fugiat",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("fugiat"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "nostrum",
+                                                        AltText: sdk.String("nostrum"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "LEFT",
-                                                            Width: 330600,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumLeft.ToPointer(),
+                                                            Width: sdk.Int(330600),
                                                         },
-                                                        SourceURI: "reiciendis",
+                                                        SourceURI: sdk.String("reiciendis"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "ab",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("ab"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "NEXT_SECTION",
-                                                    GoToSectionID: "aut",
+                                                    GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                    GoToSectionID: sdk.String("aut"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "aut",
+                                                        AltText: sdk.String("aut"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "CENTER",
-                                                            Width: 483753,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                            Width: sdk.Int(483753),
                                                         },
-                                                        SourceURI: "commodi",
+                                                        SourceURI: sdk.String("commodi"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "numquam",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("numquam"),
                                                 },
                                                 shared.OptionInput{
-                                                    GoToAction: "RESTART_FORM",
-                                                    GoToSectionID: "possimus",
+                                                    GoToAction: shared.OptionGoToActionEnumRestartForm.ToPointer(),
+                                                    GoToSectionID: sdk.String("possimus"),
                                                     Image: &shared.ImageInput{
-                                                        AltText: "voluptate",
+                                                        AltText: sdk.String("voluptate"),
                                                         Properties: &shared.MediaProperties{
-                                                            Alignment: "ALIGNMENT_UNSPECIFIED",
-                                                            Width: 200637,
+                                                            Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                                            Width: sdk.Int(200637),
                                                         },
-                                                        SourceURI: "quaerat",
+                                                        SourceURI: sdk.String("quaerat"),
                                                     },
-                                                    IsOther: false,
-                                                    Value: "itaque",
+                                                    IsOther: sdk.Bool(false),
+                                                    Value: sdk.String("itaque"),
                                                 },
                                             },
-                                            Shuffle: false,
-                                            Type: "DROP_DOWN",
+                                            Shuffle: sdk.Bool(false),
+                                            Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                         },
                                         DateQuestion: &shared.DateQuestion{
-                                            IncludeTime: false,
-                                            IncludeYear: false,
+                                            IncludeTime: sdk.Bool(false),
+                                            IncludeYear: sdk.Bool(false),
                                         },
                                         FileUploadQuestion: &shared.FileUploadQuestion{
-                                            FolderID: "sunt",
-                                            MaxFileSize: "distinctio",
-                                            MaxFiles: 481375,
+                                            FolderID: sdk.String("sunt"),
+                                            MaxFileSize: sdk.String("distinctio"),
+                                            MaxFiles: sdk.Int(481375),
                                             Types: []shared.FileUploadQuestionTypesEnum{
-                                                "FILE_TYPE_UNSPECIFIED",
-                                                "IMAGE",
-                                                "DOCUMENT",
+                                                shared.FileUploadQuestionTypesEnumFileTypeUnspecified,
+                                                shared.FileUploadQuestionTypesEnumImage,
+                                                shared.FileUploadQuestionTypesEnumDocument,
                                             },
                                         },
                                         Grading: &shared.Grading{
                                             CorrectAnswers: &shared.CorrectAnswers{
                                                 Answers: []shared.CorrectAnswer{
                                                     shared.CorrectAnswer{
-                                                        Value: "fuga",
+                                                        Value: sdk.String("fuga"),
                                                     },
                                                     shared.CorrectAnswer{
-                                                        Value: "alias",
+                                                        Value: sdk.String("alias"),
                                                     },
                                                 },
                                             },
@@ -4111,185 +4112,185 @@ func main() {
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "aut",
-                                                            URI: "https://mad-speaker.com",
+                                                            DisplayText: sdk.String("aut"),
+                                                            URI: sdk.String("https://mad-speaker.com"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "quae",
-                                                            YoutubeURI: "eaque",
+                                                            DisplayText: sdk.String("quae"),
+                                                            YoutubeURI: sdk.String("eaque"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "saepe",
-                                                            URI: "https://prime-strawman.name",
+                                                            DisplayText: sdk.String("saepe"),
+                                                            URI: sdk.String("https://prime-strawman.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "sed",
-                                                            YoutubeURI: "voluptatem",
+                                                            DisplayText: sdk.String("sed"),
+                                                            YoutubeURI: sdk.String("voluptatem"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "alias",
-                                                            URI: "https://warm-ancestor.biz",
+                                                            DisplayText: sdk.String("alias"),
+                                                            URI: sdk.String("https://warm-ancestor.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "qui",
-                                                            YoutubeURI: "qui",
+                                                            DisplayText: sdk.String("qui"),
+                                                            YoutubeURI: sdk.String("qui"),
                                                         },
                                                     },
                                                 },
-                                                Text: "necessitatibus",
+                                                Text: sdk.String("necessitatibus"),
                                             },
-                                            PointValue: 691508,
+                                            PointValue: sdk.Int(691508),
                                             WhenRight: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "beatae",
-                                                            URI: "http://familiar-ruckus.org",
+                                                            DisplayText: sdk.String("beatae"),
+                                                            URI: sdk.String("http://familiar-ruckus.org"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "molestias",
-                                                            YoutubeURI: "officia",
+                                                            DisplayText: sdk.String("molestias"),
+                                                            YoutubeURI: sdk.String("officia"),
                                                         },
                                                     },
                                                 },
-                                                Text: "libero",
+                                                Text: sdk.String("libero"),
                                             },
                                             WhenWrong: &shared.Feedback{
                                                 Material: []shared.ExtraMaterial{
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "sequi",
-                                                            URI: "http://imaginative-schema.info",
+                                                            DisplayText: sdk.String("sequi"),
+                                                            URI: sdk.String("http://imaginative-schema.info"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "odit",
-                                                            YoutubeURI: "velit",
+                                                            DisplayText: sdk.String("odit"),
+                                                            YoutubeURI: sdk.String("velit"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "reiciendis",
-                                                            URI: "https://tired-plot.name",
+                                                            DisplayText: sdk.String("reiciendis"),
+                                                            URI: sdk.String("https://tired-plot.name"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "accusamus",
-                                                            YoutubeURI: "doloremque",
+                                                            DisplayText: sdk.String("accusamus"),
+                                                            YoutubeURI: sdk.String("doloremque"),
                                                         },
                                                     },
                                                     shared.ExtraMaterial{
                                                         Link: &shared.TextLink{
-                                                            DisplayText: "nisi",
-                                                            URI: "https://vast-tomorrow.biz",
+                                                            DisplayText: sdk.String("nisi"),
+                                                            URI: sdk.String("https://vast-tomorrow.biz"),
                                                         },
                                                         Video: &shared.VideoLink{
-                                                            DisplayText: "rem",
-                                                            YoutubeURI: "quia",
+                                                            DisplayText: sdk.String("rem"),
+                                                            YoutubeURI: sdk.String("quia"),
                                                         },
                                                     },
                                                 },
-                                                Text: "ullam",
+                                                Text: sdk.String("ullam"),
                                             },
                                         },
-                                        QuestionID: "quisquam",
-                                        Required: false,
+                                        QuestionID: sdk.String("quisquam"),
+                                        Required: sdk.Bool(false),
                                         RowQuestion: &shared.RowQuestion{
-                                            Title: "Mr.",
+                                            Title: sdk.String("Mr."),
                                         },
                                         ScaleQuestion: &shared.ScaleQuestion{
-                                            High: 973017,
-                                            HighLabel: "eligendi",
-                                            Low: 62035,
-                                            LowLabel: "officiis",
+                                            High: sdk.Int(973017),
+                                            HighLabel: sdk.String("eligendi"),
+                                            Low: sdk.Int(62035),
+                                            LowLabel: sdk.String("officiis"),
                                         },
                                         TextQuestion: &shared.TextQuestion{
-                                            Paragraph: false,
+                                            Paragraph: sdk.Bool(false),
                                         },
                                         TimeQuestion: &shared.TimeQuestion{
-                                            Duration: false,
+                                            Duration: sdk.Bool(false),
                                         },
                                     },
                                 },
                             },
                             QuestionItem: &shared.QuestionItemInput{
                                 Image: &shared.ImageInput{
-                                    AltText: "architecto",
+                                    AltText: sdk.String("architecto"),
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 317898,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(317898),
                                     },
-                                    SourceURI: "optio",
+                                    SourceURI: sdk.String("optio"),
                                 },
                                 Question: &shared.QuestionInput{
                                     ChoiceQuestion: &shared.ChoiceQuestionInput{
                                         Options: []shared.OptionInput{
                                             shared.OptionInput{
-                                                GoToAction: "GO_TO_ACTION_UNSPECIFIED",
-                                                GoToSectionID: "facilis",
+                                                GoToAction: shared.OptionGoToActionEnumGoToActionUnspecified.ToPointer(),
+                                                GoToSectionID: sdk.String("facilis"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "reiciendis",
+                                                    AltText: sdk.String("reiciendis"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 615058,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(615058),
                                                     },
-                                                    SourceURI: "dicta",
+                                                    SourceURI: sdk.String("dicta"),
                                                 },
-                                                IsOther: false,
-                                                Value: "quos",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("quos"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "NEXT_SECTION",
-                                                GoToSectionID: "dolore",
+                                                GoToAction: shared.OptionGoToActionEnumNextSection.ToPointer(),
+                                                GoToSectionID: sdk.String("dolore"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "modi",
+                                                    AltText: sdk.String("modi"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 807419,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(807419),
                                                     },
-                                                    SourceURI: "modi",
+                                                    SourceURI: sdk.String("modi"),
                                                 },
-                                                IsOther: false,
-                                                Value: "consequuntur",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("consequuntur"),
                                             },
                                             shared.OptionInput{
-                                                GoToAction: "SUBMIT_FORM",
-                                                GoToSectionID: "vero",
+                                                GoToAction: shared.OptionGoToActionEnumSubmitForm.ToPointer(),
+                                                GoToSectionID: sdk.String("vero"),
                                                 Image: &shared.ImageInput{
-                                                    AltText: "doloribus",
+                                                    AltText: sdk.String("doloribus"),
                                                     Properties: &shared.MediaProperties{
-                                                        Alignment: "CENTER",
-                                                        Width: 783397,
+                                                        Alignment: shared.MediaPropertiesAlignmentEnumCenter.ToPointer(),
+                                                        Width: sdk.Int(783397),
                                                     },
-                                                    SourceURI: "accusamus",
+                                                    SourceURI: sdk.String("accusamus"),
                                                 },
-                                                IsOther: false,
-                                                Value: "totam",
+                                                IsOther: sdk.Bool(false),
+                                                Value: sdk.String("totam"),
                                             },
                                         },
-                                        Shuffle: false,
-                                        Type: "DROP_DOWN",
+                                        Shuffle: sdk.Bool(false),
+                                        Type: shared.ChoiceQuestionTypeEnumDropDown.ToPointer(),
                                     },
                                     DateQuestion: &shared.DateQuestion{
-                                        IncludeTime: false,
-                                        IncludeYear: false,
+                                        IncludeTime: sdk.Bool(false),
+                                        IncludeYear: sdk.Bool(false),
                                     },
                                     FileUploadQuestion: &shared.FileUploadQuestion{
-                                        FolderID: "ab",
-                                        MaxFileSize: "sint",
-                                        MaxFiles: 472414,
+                                        FolderID: sdk.String("ab"),
+                                        MaxFileSize: sdk.String("sint"),
+                                        MaxFiles: sdk.Int(472414),
                                         Types: []shared.FileUploadQuestionTypesEnum{
-                                            "SPREADSHEET",
-                                            "SPREADSHEET",
+                                            shared.FileUploadQuestionTypesEnumSpreadsheet,
+                                            shared.FileUploadQuestionTypesEnumSpreadsheet,
                                         },
                                     },
                                     Grading: &shared.Grading{
                                         CorrectAnswers: &shared.CorrectAnswers{
                                             Answers: []shared.CorrectAnswer{
                                                 shared.CorrectAnswer{
-                                                    Value: "debitis",
+                                                    Value: sdk.String("debitis"),
                                                 },
                                             },
                                         },
@@ -4297,95 +4298,95 @@ func main() {
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "neque",
-                                                        URI: "http://hateful-citron.name",
+                                                        DisplayText: sdk.String("neque"),
+                                                        URI: sdk.String("http://hateful-citron.name"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "reprehenderit",
-                                                        YoutubeURI: "distinctio",
+                                                        DisplayText: sdk.String("reprehenderit"),
+                                                        YoutubeURI: sdk.String("distinctio"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "eius",
-                                                        URI: "http://measly-whack.com",
+                                                        DisplayText: sdk.String("eius"),
+                                                        URI: sdk.String("http://measly-whack.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "veniam",
-                                                        YoutubeURI: "saepe",
+                                                        DisplayText: sdk.String("veniam"),
+                                                        YoutubeURI: sdk.String("saepe"),
                                                     },
                                                 },
                                             },
-                                            Text: "neque",
+                                            Text: sdk.String("neque"),
                                         },
-                                        PointValue: 816365,
+                                        PointValue: sdk.Int(816365),
                                         WhenRight: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "quos",
-                                                        URI: "https://this-platform.org",
+                                                        DisplayText: sdk.String("quos"),
+                                                        URI: sdk.String("https://this-platform.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "velit",
-                                                        YoutubeURI: "vitae",
+                                                        DisplayText: sdk.String("velit"),
+                                                        YoutubeURI: sdk.String("vitae"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "nesciunt",
-                                                        URI: "https://blank-zen.info",
+                                                        DisplayText: sdk.String("nesciunt"),
+                                                        URI: sdk.String("https://blank-zen.info"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "doloribus",
-                                                        YoutubeURI: "possimus",
+                                                        DisplayText: sdk.String("doloribus"),
+                                                        YoutubeURI: sdk.String("possimus"),
                                                     },
                                                 },
                                             },
-                                            Text: "unde",
+                                            Text: sdk.String("unde"),
                                         },
                                         WhenWrong: &shared.Feedback{
                                             Material: []shared.ExtraMaterial{
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "explicabo",
-                                                        URI: "http://obvious-rum.com",
+                                                        DisplayText: sdk.String("explicabo"),
+                                                        URI: sdk.String("http://obvious-rum.com"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "quidem",
-                                                        YoutubeURI: "nesciunt",
+                                                        DisplayText: sdk.String("quidem"),
+                                                        YoutubeURI: sdk.String("nesciunt"),
                                                     },
                                                 },
                                                 shared.ExtraMaterial{
                                                     Link: &shared.TextLink{
-                                                        DisplayText: "commodi",
-                                                        URI: "https://damp-face.org",
+                                                        DisplayText: sdk.String("commodi"),
+                                                        URI: sdk.String("https://damp-face.org"),
                                                     },
                                                     Video: &shared.VideoLink{
-                                                        DisplayText: "officia",
-                                                        YoutubeURI: "sint",
+                                                        DisplayText: sdk.String("officia"),
+                                                        YoutubeURI: sdk.String("sint"),
                                                     },
                                                 },
                                             },
-                                            Text: "ut",
+                                            Text: sdk.String("ut"),
                                         },
                                     },
-                                    QuestionID: "numquam",
-                                    Required: false,
+                                    QuestionID: sdk.String("numquam"),
+                                    Required: sdk.Bool(false),
                                     RowQuestion: &shared.RowQuestion{
-                                        Title: "Dr.",
+                                        Title: sdk.String("Dr."),
                                     },
                                     ScaleQuestion: &shared.ScaleQuestion{
-                                        High: 236790,
-                                        HighLabel: "libero",
-                                        Low: 448386,
-                                        LowLabel: "minima",
+                                        High: sdk.Int(236790),
+                                        HighLabel: sdk.String("libero"),
+                                        Low: sdk.Int(448386),
+                                        LowLabel: sdk.String("minima"),
                                     },
                                     TextQuestion: &shared.TextQuestion{
-                                        Paragraph: false,
+                                        Paragraph: sdk.Bool(false),
                                     },
                                     TimeQuestion: &shared.TimeQuestion{
-                                        Duration: false,
+                                        Duration: sdk.Bool(false),
                                     },
                                 },
                             },
@@ -4393,53 +4394,50 @@ func main() {
                                 "minus": "ab",
                                 "beatae": "hic",
                             },
-                            Title: "Mrs.",
+                            Title: sdk.String("Mrs."),
                             VideoItem: &shared.VideoItem{
-                                Caption: "quisquam",
+                                Caption: sdk.String("quisquam"),
                                 Video: &shared.Video{
                                     Properties: &shared.MediaProperties{
-                                        Alignment: "ALIGNMENT_UNSPECIFIED",
-                                        Width: 496548,
+                                        Alignment: shared.MediaPropertiesAlignmentEnumAlignmentUnspecified.ToPointer(),
+                                        Width: sdk.Int(496548),
                                     },
-                                    YoutubeURI: "fuga",
+                                    YoutubeURI: sdk.String("fuga"),
                                 },
                             },
                         },
                         Location: &shared.Location{
-                            Index: 326903,
+                            Index: sdk.Int(326903),
                         },
-                        UpdateMask: "architecto",
+                        UpdateMask: sdk.String("architecto"),
                     },
                     UpdateSettings: &shared.UpdateSettingsRequest{
                         Settings: &shared.FormSettings{
                             QuizSettings: &shared.QuizSettings{
-                                IsQuiz: false,
+                                IsQuiz: sdk.Bool(false),
                             },
                         },
-                        UpdateMask: "qui",
+                        UpdateMask: sdk.String("qui"),
                     },
                 },
             },
             WriteControl: &shared.WriteControl{
-                RequiredRevisionID: "aliquid",
-                TargetRevisionID: "magni",
+                RequiredRevisionID: sdk.String("aliquid"),
+                TargetRevisionID: sdk.String("magni"),
             },
         },
-        AccessToken: "incidunt",
-        Alt: "json",
-        Callback: "praesentium",
-        Fields: "dolor",
+        AccessToken: sdk.String("incidunt"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("praesentium"),
+        Fields: sdk.String("dolor"),
         FormID: "exercitationem",
-        Key: "expedita",
-        OauthToken: "facilis",
-        PrettyPrint: false,
-        QuotaUser: "impedit",
-        UploadType: "sit",
-        UploadProtocol: "nemo",
-    }
-
-    ctx := context.Background()
-    res, err := s.Forms.FormsFormsBatchUpdate(ctx, req, operations.FormsFormsBatchUpdateSecurity{
+        Key: sdk.String("expedita"),
+        OauthToken: sdk.String("facilis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("impedit"),
+        UploadType: sdk.String("sit"),
+        UploadProtocol: sdk.String("nemo"),
+    }, operations.FormsFormsBatchUpdateSecurity{
         Option1: &operations.FormsFormsBatchUpdateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

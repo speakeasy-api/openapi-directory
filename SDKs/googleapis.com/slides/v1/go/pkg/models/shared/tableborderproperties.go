@@ -20,12 +20,16 @@ const (
 	TableBorderPropertiesDashStyleEnumLongDashDot          TableBorderPropertiesDashStyleEnum = "LONG_DASH_DOT"
 )
 
+func (e TableBorderPropertiesDashStyleEnum) ToPointer() *TableBorderPropertiesDashStyleEnum {
+	return &e
+}
+
 func (e *TableBorderPropertiesDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -39,10 +43,10 @@ func (e *TableBorderPropertiesDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "LONG_DASH":
 		fallthrough
 	case "LONG_DASH_DOT":
-		*e = TableBorderPropertiesDashStyleEnum(s)
+		*e = TableBorderPropertiesDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableBorderPropertiesDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for TableBorderPropertiesDashStyleEnum: %v", v)
 	}
 }
 

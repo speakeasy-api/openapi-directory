@@ -15,17 +15,21 @@ const (
 	GETDescribeAddressTransfersActionEnumDescribeAddressTransfers GETDescribeAddressTransfersActionEnum = "DescribeAddressTransfers"
 )
 
+func (e GETDescribeAddressTransfersActionEnum) ToPointer() *GETDescribeAddressTransfersActionEnum {
+	return &e
+}
+
 func (e *GETDescribeAddressTransfersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeAddressTransfers":
-		*e = GETDescribeAddressTransfersActionEnum(s)
+		*e = GETDescribeAddressTransfersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAddressTransfersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAddressTransfersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeAddressTransfersVersionEnumTwoThousandAndSixteen1115 GETDescribeAddressTransfersVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeAddressTransfersVersionEnum) ToPointer() *GETDescribeAddressTransfersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeAddressTransfersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeAddressTransfersVersionEnum(s)
+		*e = GETDescribeAddressTransfersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeAddressTransfersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeAddressTransfersVersionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newAccessTokens(defaultClient, securityClient HTTPClient, serverURL, langua
 
 func (s *accessTokens) GetOauthV1AccessTokensTokenGet(ctx context.Context, request operations.GetOauthV1AccessTokensTokenGetRequest) (*operations.GetOauthV1AccessTokensTokenGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/access-tokens/{token}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/oauth/v1/access-tokens/{token}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

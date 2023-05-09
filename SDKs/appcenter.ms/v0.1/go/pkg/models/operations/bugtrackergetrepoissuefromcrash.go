@@ -22,32 +22,36 @@ type BugTrackerGetRepoIssueFromCrashRequest struct {
 }
 
 // BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum - The status code return by the API. It can be 400 or 404 or 409 or 500.
-type BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum string
+type BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum int64
 
 const (
-	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundred        BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = "400"
-	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundredAndFour BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = "404"
-	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundredAndNine BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = "409"
-	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFiveHundred        BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = "500"
+	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundred        BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = 400
+	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundredAndFour BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = 404
+	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFourHundredAndNine BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = 409
+	BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnumFiveHundred        BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum = 500
 )
 
+func (e BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum) ToPointer() *BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
+	switch v {
+	case 400:
 		fallthrough
-	case "404":
+	case 404:
 		fallthrough
-	case "409":
+	case 409:
 		fallthrough
-	case "500":
-		*e = BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum(s)
+	case 500:
+		*e = BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BugTrackerGetRepoIssueFromCrashDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -69,21 +73,25 @@ const (
 	BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnumJira   BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum = "jira"
 )
 
+func (e BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum) ToPointer() *BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum {
+	return &e
+}
+
 func (e *BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "github":
 		fallthrough
 	case "vsts":
 		fallthrough
 	case "jira":
-		*e = BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum(s)
+		*e = BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BugTrackerGetRepoIssueFromCrash200ApplicationJSONBugTrackerTypeEnum: %v", v)
 	}
 }
 

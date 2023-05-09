@@ -19,12 +19,16 @@ const (
 	WebTokenEnabledFeaturesEnumZeroTouchCustomerManagement WebTokenEnabledFeaturesEnum = "ZERO_TOUCH_CUSTOMER_MANAGEMENT"
 )
 
+func (e WebTokenEnabledFeaturesEnum) ToPointer() *WebTokenEnabledFeaturesEnum {
+	return &e
+}
+
 func (e *WebTokenEnabledFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEATURE_UNSPECIFIED":
 		fallthrough
 	case "PLAY_SEARCH":
@@ -38,10 +42,10 @@ func (e *WebTokenEnabledFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "MANAGED_CONFIGURATIONS":
 		fallthrough
 	case "ZERO_TOUCH_CUSTOMER_MANAGEMENT":
-		*e = WebTokenEnabledFeaturesEnum(s)
+		*e = WebTokenEnabledFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebTokenEnabledFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for WebTokenEnabledFeaturesEnum: %v", v)
 	}
 }
 
@@ -52,19 +56,23 @@ const (
 	WebTokenPermissionsEnumApproveApps                   WebTokenPermissionsEnum = "APPROVE_APPS"
 )
 
+func (e WebTokenPermissionsEnum) ToPointer() *WebTokenPermissionsEnum {
+	return &e
+}
+
 func (e *WebTokenPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEB_TOKEN_PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "APPROVE_APPS":
-		*e = WebTokenPermissionsEnum(s)
+		*e = WebTokenPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebTokenPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for WebTokenPermissionsEnum: %v", v)
 	}
 }
 

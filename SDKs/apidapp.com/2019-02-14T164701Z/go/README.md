@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apidapp.com/2019-02-14T16
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteKeyKeyRequest{
-        Key: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteKeyKey(ctx, req)
+    res, err := s.DeleteKeyKey(ctx, operations.DeleteKeyKeyRequest{
+        Key: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,62 +41,62 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteKeyKey`
-* `GetAccountID` - Get account balance
-* `GetBlock` - Access detailed block information
-* `GetBlockID` - Get information about particular block
-* `GetBlockIDTransaction` - Get transaction count within block
-* `GetBlockIDTransactionIndex` - Get information about particular transaction within block
-* `GetBlockchain` - Get a list of supported blockchains
-* `GetBlockchainID` - Get information about blockchain woth given id
-* `GetContractID` - Get contract balance
-* `GetErc20` - Get token information such as name, total amount in circulation, etc
-* `GetErc20Address` - Get information amout token balance in the account
-* `GetKey`
-* `GetTransactionHash` - Get information about transaction by the transaction hash value
-* `GetTransactionHashReceipt` - Get receipt detail information
-* `GetVersion` - Get API version info
-* `GetWallet` - Get current account balance
-* `GetWalletAccount`
-* `GetWalletAccountID` - Get account balance
-* `Options`
-* `OptionsAccount`
-* `OptionsAccountID`
-* `OptionsBlock`
-* `OptionsBlockID`
-* `OptionsBlockIDTransaction`
-* `OptionsBlockIDTransactionIndex`
-* `OptionsBlockchain`
-* `OptionsBlockchainID`
-* `OptionsContract`
-* `OptionsContractID`
-* `OptionsEcho`
-* `OptionsErc20`
-* `OptionsErc20Address`
-* `OptionsKey`
-* `OptionsKeyKey`
-* `OptionsTransaction`
-* `OptionsTransactionHash`
-* `OptionsTransactionHashReceipt`
-* `OptionsVersion`
-* `OptionsWallet`
-* `OptionsWalletAccount`
-* `OptionsWalletAccountID`
-* `OptionsWalletAccountIDPay`
-* `PostAccount` - Create new account
-* `PostContract` - Create a new smart contract
-* `PostContractID` - Call the contract
-* `PostErc20`
-* `PostErc20Address` - Transfer tokens to another account
-* `PostKey`
-* `PostTransaction` - Create a new transaction. Transfer Ether between accounts
-* `PostWallet` - Create personal wallet
-* `PostWalletAccount`
-* `PostWalletAccountIDContract`
-* `PostWalletAccountIDErc20`
-* `PostWalletAccountIDPay` - Send payment from the account held within the wallet
+* [DeleteKeyKey](docs/sdk/README.md#deletekeykey)
+* [GetAccountID](docs/sdk/README.md#getaccountid) - Get account balance
+* [GetBlock](docs/sdk/README.md#getblock) - Access detailed block information
+* [GetBlockID](docs/sdk/README.md#getblockid) - Get information about particular block
+* [GetBlockIDTransaction](docs/sdk/README.md#getblockidtransaction) - Get transaction count within block
+* [GetBlockIDTransactionIndex](docs/sdk/README.md#getblockidtransactionindex) - Get information about particular transaction within block
+* [GetBlockchain](docs/sdk/README.md#getblockchain) - Get a list of supported blockchains
+* [GetBlockchainID](docs/sdk/README.md#getblockchainid) - Get information about blockchain woth given id
+* [GetContractID](docs/sdk/README.md#getcontractid) - Get contract balance
+* [GetErc20](docs/sdk/README.md#geterc20) - Get token information such as name, total amount in circulation, etc
+* [GetErc20Address](docs/sdk/README.md#geterc20address) - Get information amout token balance in the account
+* [GetKey](docs/sdk/README.md#getkey)
+* [GetTransactionHash](docs/sdk/README.md#gettransactionhash) - Get information about transaction by the transaction hash value
+* [GetTransactionHashReceipt](docs/sdk/README.md#gettransactionhashreceipt) - Get receipt detail information
+* [GetVersion](docs/sdk/README.md#getversion) - Get API version info
+* [GetWallet](docs/sdk/README.md#getwallet) - Get current account balance
+* [GetWalletAccount](docs/sdk/README.md#getwalletaccount)
+* [GetWalletAccountID](docs/sdk/README.md#getwalletaccountid) - Get account balance
+* [Options](docs/sdk/README.md#options)
+* [OptionsAccount](docs/sdk/README.md#optionsaccount)
+* [OptionsAccountID](docs/sdk/README.md#optionsaccountid)
+* [OptionsBlock](docs/sdk/README.md#optionsblock)
+* [OptionsBlockID](docs/sdk/README.md#optionsblockid)
+* [OptionsBlockIDTransaction](docs/sdk/README.md#optionsblockidtransaction)
+* [OptionsBlockIDTransactionIndex](docs/sdk/README.md#optionsblockidtransactionindex)
+* [OptionsBlockchain](docs/sdk/README.md#optionsblockchain)
+* [OptionsBlockchainID](docs/sdk/README.md#optionsblockchainid)
+* [OptionsContract](docs/sdk/README.md#optionscontract)
+* [OptionsContractID](docs/sdk/README.md#optionscontractid)
+* [OptionsEcho](docs/sdk/README.md#optionsecho)
+* [OptionsErc20](docs/sdk/README.md#optionserc20)
+* [OptionsErc20Address](docs/sdk/README.md#optionserc20address)
+* [OptionsKey](docs/sdk/README.md#optionskey)
+* [OptionsKeyKey](docs/sdk/README.md#optionskeykey)
+* [OptionsTransaction](docs/sdk/README.md#optionstransaction)
+* [OptionsTransactionHash](docs/sdk/README.md#optionstransactionhash)
+* [OptionsTransactionHashReceipt](docs/sdk/README.md#optionstransactionhashreceipt)
+* [OptionsVersion](docs/sdk/README.md#optionsversion)
+* [OptionsWallet](docs/sdk/README.md#optionswallet)
+* [OptionsWalletAccount](docs/sdk/README.md#optionswalletaccount)
+* [OptionsWalletAccountID](docs/sdk/README.md#optionswalletaccountid)
+* [OptionsWalletAccountIDPay](docs/sdk/README.md#optionswalletaccountidpay)
+* [PostAccount](docs/sdk/README.md#postaccount) - Create new account
+* [PostContract](docs/sdk/README.md#postcontract) - Create a new smart contract
+* [PostContractID](docs/sdk/README.md#postcontractid) - Call the contract
+* [PostErc20](docs/sdk/README.md#posterc20)
+* [PostErc20Address](docs/sdk/README.md#posterc20address) - Transfer tokens to another account
+* [PostKey](docs/sdk/README.md#postkey)
+* [PostTransaction](docs/sdk/README.md#posttransaction) - Create a new transaction. Transfer Ether between accounts
+* [PostWallet](docs/sdk/README.md#postwallet) - Create personal wallet
+* [PostWalletAccount](docs/sdk/README.md#postwalletaccount)
+* [PostWalletAccountIDContract](docs/sdk/README.md#postwalletaccountidcontract)
+* [PostWalletAccountIDErc20](docs/sdk/README.md#postwalletaccountiderc20)
+* [PostWalletAccountIDPay](docs/sdk/README.md#postwalletaccountidpay) - Send payment from the account held within the wallet
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	BatchStartRecommendationsXAmzTargetEnumAmazonDmSv20160101BatchStartRecommendations BatchStartRecommendationsXAmzTargetEnum = "AmazonDMSv20160101.BatchStartRecommendations"
 )
 
+func (e BatchStartRecommendationsXAmzTargetEnum) ToPointer() *BatchStartRecommendationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchStartRecommendationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.BatchStartRecommendations":
-		*e = BatchStartRecommendationsXAmzTargetEnum(s)
+		*e = BatchStartRecommendationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchStartRecommendationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchStartRecommendationsXAmzTargetEnum: %v", v)
 	}
 }
 

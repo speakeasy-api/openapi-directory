@@ -16,21 +16,25 @@ const (
 	CreateAnExternalAccountParametersFundingEnumOther    CreateAnExternalAccountParametersFundingEnum = "other"
 )
 
+func (e CreateAnExternalAccountParametersFundingEnum) ToPointer() *CreateAnExternalAccountParametersFundingEnum {
+	return &e
+}
+
 func (e *CreateAnExternalAccountParametersFundingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "checking":
 		fallthrough
 	case "savings":
 		fallthrough
 	case "other":
-		*e = CreateAnExternalAccountParametersFundingEnum(s)
+		*e = CreateAnExternalAccountParametersFundingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnExternalAccountParametersFundingEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnExternalAccountParametersFundingEnum: %v", v)
 	}
 }
 

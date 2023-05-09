@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FirestoreProjectsDatabasesDocumentsBatchGet - Gets multiple documents. Documents returned by this method are not guaranteed to be returned in the same order that they were requested.
 func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchGetRequest, security operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBatchGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchGet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchGet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchGetDocumentsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchGet(ctx context.Conte
 // FirestoreProjectsDatabasesDocumentsBatchWrite - Applies a batch of write operations. The BatchWrite method does not apply the write operations atomically and can apply them out of order. Method does not allow more than one write per document. Each write succeeds or fails independently. See the BatchWriteResponse for the success status of each write. If you require an atomically applied set of writes, use Commit instead.
 func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBatchWriteRequest, security operations.FirestoreProjectsDatabasesDocumentsBatchWriteSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBatchWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchWrite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:batchWrite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchWriteRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBatchWrite(ctx context.Con
 // FirestoreProjectsDatabasesDocumentsBeginTransaction - Starts a new transaction.
 func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsBeginTransactionRequest, security operations.FirestoreProjectsDatabasesDocumentsBeginTransactionSecurity) (*operations.FirestoreProjectsDatabasesDocumentsBeginTransactionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:beginTransaction", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:beginTransaction", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BeginTransactionRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsBeginTransaction(ctx conte
 // FirestoreProjectsDatabasesDocumentsCommit - Commits a transaction, while optionally updating documents.
 func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCommitRequest, security operations.FirestoreProjectsDatabasesDocumentsCommitSecurity) (*operations.FirestoreProjectsDatabasesDocumentsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:commit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:commit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CommitRequest", "json")
 	if err != nil {
@@ -254,7 +266,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCommit(ctx context.Context
 // FirestoreProjectsDatabasesDocumentsCreateDocument - Creates a new document.
 func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsCreateDocumentRequest, security operations.FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity) (*operations.FirestoreProjectsDatabasesDocumentsCreateDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Document", "json")
 	if err != nil {
@@ -309,7 +324,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsCreateDocument(ctx context
 // FirestoreProjectsDatabasesDocumentsListCollectionIds - Lists all the collection IDs underneath a document.
 func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsRequest, security operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListCollectionIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:listCollectionIds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:listCollectionIds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListCollectionIdsRequest", "json")
 	if err != nil {
@@ -364,7 +382,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListCollectionIds(ctx cont
 // FirestoreProjectsDatabasesDocumentsListDocuments - Lists documents.
 func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListDocumentsRequest, security operations.FirestoreProjectsDatabasesDocumentsListDocumentsSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/{collectionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -412,7 +433,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.
 // FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListenRequest, security operations.FirestoreProjectsDatabasesDocumentsListenSecurity) (*operations.FirestoreProjectsDatabasesDocumentsListenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:listen", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:listen", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ListenRequest", "json")
 	if err != nil {
@@ -467,7 +491,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context
 // FirestoreProjectsDatabasesDocumentsPartitionQuery - Partitions a query by returning partition cursors that can be used to run the query in parallel. The returned partition cursors are split points that can be used by RunQuery as starting/end points for the query results.
 func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPartitionQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsPartitionQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:partitionQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:partitionQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PartitionQueryRequest", "json")
 	if err != nil {
@@ -522,7 +549,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPartitionQuery(ctx context
 // FirestoreProjectsDatabasesDocumentsPatch - Updates or inserts a document.
 func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsPatchRequest, security operations.FirestoreProjectsDatabasesDocumentsPatchSecurity) (*operations.FirestoreProjectsDatabasesDocumentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Document", "json")
 	if err != nil {
@@ -577,7 +607,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsPatch(ctx context.Context,
 // FirestoreProjectsDatabasesDocumentsRollback - Rolls back a transaction.
 func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRollbackRequest, security operations.FirestoreProjectsDatabasesDocumentsRollbackSecurity) (*operations.FirestoreProjectsDatabasesDocumentsRollbackResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:rollback", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:rollback", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RollbackRequest", "json")
 	if err != nil {
@@ -632,7 +665,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRollback(ctx context.Conte
 // FirestoreProjectsDatabasesDocumentsRunAggregationQuery - Runs an aggregation query. Rather than producing Document results like Firestore.RunQuery, this API allows running an aggregation to produce a series of AggregationResult server-side. High-Level Example: ``` -- Return the number of documents in table given a filter. SELECT COUNT(*) FROM ( SELECT * FROM k where a = true ); ```
 func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsRunAggregationQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsRunAggregationQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runAggregationQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runAggregationQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunAggregationQueryRequest", "json")
 	if err != nil {
@@ -687,7 +723,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunAggregationQuery(ctx co
 // FirestoreProjectsDatabasesDocumentsRunQuery - Runs a query.
 func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsRunQueryRequest, security operations.FirestoreProjectsDatabasesDocumentsRunQuerySecurity) (*operations.FirestoreProjectsDatabasesDocumentsRunQueryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runQuery", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}:runQuery", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RunQueryRequest", "json")
 	if err != nil {
@@ -742,7 +781,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Conte
 // FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsWriteRequest, security operations.FirestoreProjectsDatabasesDocumentsWriteSecurity) (*operations.FirestoreProjectsDatabasesDocumentsWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:write", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:write", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WriteRequest", "json")
 	if err != nil {
@@ -797,7 +839,10 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context,
 // FirestoreProjectsDatabasesExportDocuments - Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
 func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesExportDocumentsRequest, security operations.FirestoreProjectsDatabasesExportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesExportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportDocuments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:exportDocuments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1ExportDocumentsRequest", "json")
 	if err != nil {
@@ -852,7 +897,10 @@ func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context
 // FirestoreProjectsDatabasesImportDocuments - Imports documents into Google Cloud Firestore. Existing documents with the same name are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Firestore.
 func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesImportDocumentsRequest, security operations.FirestoreProjectsDatabasesImportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesImportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importDocuments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}:importDocuments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1ImportDocumentsRequest", "json")
 	if err != nil {
@@ -907,7 +955,10 @@ func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context
 // FirestoreProjectsDatabasesIndexesCreate - Creates the specified index. A newly created index's initial state is `CREATING`. On completion of the returned google.longrunning.Operation, the state will be `READY`. If the index already exists, the call will return an `ALREADY_EXISTS` status. During creation, the process could result in an error, in which case the index will move to the `ERROR` state. The process can be recovered by fixing the data that caused the error, removing the index with delete, then re-creating the index with create. Indexes with a single field cannot be created.
 func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesCreateRequest, security operations.FirestoreProjectsDatabasesIndexesCreateSecurity) (*operations.FirestoreProjectsDatabasesIndexesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta1Index", "json")
 	if err != nil {
@@ -962,7 +1013,10 @@ func (s *projects) FirestoreProjectsDatabasesIndexesCreate(ctx context.Context, 
 // FirestoreProjectsDatabasesIndexesDelete - Deletes an index.
 func (s *projects) FirestoreProjectsDatabasesIndexesDelete(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesDeleteRequest, security operations.FirestoreProjectsDatabasesIndexesDeleteSecurity) (*operations.FirestoreProjectsDatabasesIndexesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1010,7 +1064,10 @@ func (s *projects) FirestoreProjectsDatabasesIndexesDelete(ctx context.Context, 
 // FirestoreProjectsDatabasesIndexesGet - Gets an index.
 func (s *projects) FirestoreProjectsDatabasesIndexesGet(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesGetRequest, security operations.FirestoreProjectsDatabasesIndexesGetSecurity) (*operations.FirestoreProjectsDatabasesIndexesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1058,7 +1115,10 @@ func (s *projects) FirestoreProjectsDatabasesIndexesGet(ctx context.Context, req
 // FirestoreProjectsDatabasesIndexesList - Lists the indexes that match the specified filters.
 func (s *projects) FirestoreProjectsDatabasesIndexesList(ctx context.Context, request operations.FirestoreProjectsDatabasesIndexesListRequest, security operations.FirestoreProjectsDatabasesIndexesListSecurity) (*operations.FirestoreProjectsDatabasesIndexesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/indexes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

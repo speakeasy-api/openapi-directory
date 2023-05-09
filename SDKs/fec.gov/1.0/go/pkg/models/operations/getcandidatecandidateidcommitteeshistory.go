@@ -21,12 +21,16 @@ const (
 	GetCandidateCandidateIDCommitteesHistoryDesignationEnumD       GetCandidateCandidateIDCommitteesHistoryDesignationEnum = "D"
 )
 
+func (e GetCandidateCandidateIDCommitteesHistoryDesignationEnum) ToPointer() *GetCandidateCandidateIDCommitteesHistoryDesignationEnum {
+	return &e
+}
+
 func (e *GetCandidateCandidateIDCommitteesHistoryDesignationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -40,10 +44,10 @@ func (e *GetCandidateCandidateIDCommitteesHistoryDesignationEnum) UnmarshalJSON(
 	case "B":
 		fallthrough
 	case "D":
-		*e = GetCandidateCandidateIDCommitteesHistoryDesignationEnum(s)
+		*e = GetCandidateCandidateIDCommitteesHistoryDesignationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCandidateCandidateIDCommitteesHistoryDesignationEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCandidateCandidateIDCommitteesHistoryDesignationEnum: %v", v)
 	}
 }
 
@@ -53,6 +57,12 @@ type GetCandidateCandidateIDCommitteesHistoryRequest struct {
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
+	// First character indicates office - [P]residential, [H]ouse, [S]enate].
+	// Second character is the last digit of the two-year period the ID was created.
+	// Third and fourth is the candidate state. Presidential IDs don't have state.
+	// Fifth and sixth is the district when the candidate first ran. This does not change if the
+	// candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+	// The rest is sequence.
 	//
 	CandidateID string `pathParam:"style=simple,explode=false,name=candidate_id"`
 	// The one-letter designation code of the organization:

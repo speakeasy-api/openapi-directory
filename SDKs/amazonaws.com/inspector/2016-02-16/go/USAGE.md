@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,20 +17,21 @@ func main() {
         }),
     )
 
-    req := operations.AddAttributesToFindingsRequest{
+    ctx := context.Background()
+    res, err := s.AddAttributesToFindings(ctx, operations.AddAttributesToFindingsRequest{
         AddAttributesToFindingsRequest: shared.AddAttributesToFindingsRequest{
             Attributes: []shared.Attribute{
                 shared.Attribute{
                     Key: "provident",
-                    Value: "distinctio",
+                    Value: sdk.String("distinctio"),
                 },
                 shared.Attribute{
                     Key: "quibusdam",
-                    Value: "unde",
+                    Value: sdk.String("unde"),
                 },
                 shared.Attribute{
                     Key: "nulla",
-                    Value: "corrupti",
+                    Value: sdk.String("corrupti"),
                 },
             },
             FindingArns: []string{
@@ -40,18 +41,15 @@ func main() {
                 "suscipit",
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-        XAmzTarget: "InspectorService.AddAttributesToFindings",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddAttributesToFindings(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+        XAmzTarget: operations.AddAttributesToFindingsXAmzTargetEnumInspectorServiceAddAttributesToFindings,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,19 +15,23 @@ const (
 	SuggestedTagAndRegionQueryTokenSortByEnumUncertaintyDescending SuggestedTagAndRegionQueryTokenSortByEnum = "UncertaintyDescending"
 )
 
+func (e SuggestedTagAndRegionQueryTokenSortByEnum) ToPointer() *SuggestedTagAndRegionQueryTokenSortByEnum {
+	return &e
+}
+
 func (e *SuggestedTagAndRegionQueryTokenSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UncertaintyAscending":
 		fallthrough
 	case "UncertaintyDescending":
-		*e = SuggestedTagAndRegionQueryTokenSortByEnum(s)
+		*e = SuggestedTagAndRegionQueryTokenSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SuggestedTagAndRegionQueryTokenSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for SuggestedTagAndRegionQueryTokenSortByEnum: %v", v)
 	}
 }
 

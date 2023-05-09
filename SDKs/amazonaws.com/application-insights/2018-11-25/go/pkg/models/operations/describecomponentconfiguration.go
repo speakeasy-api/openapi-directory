@@ -16,17 +16,21 @@ const (
 	DescribeComponentConfigurationXAmzTargetEnumEc2WindowsBarleyServiceDescribeComponentConfiguration DescribeComponentConfigurationXAmzTargetEnum = "EC2WindowsBarleyService.DescribeComponentConfiguration"
 )
 
+func (e DescribeComponentConfigurationXAmzTargetEnum) ToPointer() *DescribeComponentConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeComponentConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.DescribeComponentConfiguration":
-		*e = DescribeComponentConfigurationXAmzTargetEnum(s)
+		*e = DescribeComponentConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeComponentConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeComponentConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

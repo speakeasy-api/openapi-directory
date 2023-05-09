@@ -15,21 +15,25 @@ const (
 	OtoroshiHealthDatastoreEnumUnreachable OtoroshiHealthDatastoreEnum = "unreachable"
 )
 
+func (e OtoroshiHealthDatastoreEnum) ToPointer() *OtoroshiHealthDatastoreEnum {
+	return &e
+}
+
 func (e *OtoroshiHealthDatastoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "healthy":
 		fallthrough
 	case "unhealthy":
 		fallthrough
 	case "unreachable":
-		*e = OtoroshiHealthDatastoreEnum(s)
+		*e = OtoroshiHealthDatastoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OtoroshiHealthDatastoreEnum: %s", s)
+		return fmt.Errorf("invalid value for OtoroshiHealthDatastoreEnum: %v", v)
 	}
 }
 
@@ -41,21 +45,25 @@ const (
 	OtoroshiHealthOtoroshiEnumDown      OtoroshiHealthOtoroshiEnum = "down"
 )
 
+func (e OtoroshiHealthOtoroshiEnum) ToPointer() *OtoroshiHealthOtoroshiEnum {
+	return &e
+}
+
 func (e *OtoroshiHealthOtoroshiEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "healthy":
 		fallthrough
 	case "unhealthy":
 		fallthrough
 	case "down":
-		*e = OtoroshiHealthOtoroshiEnum(s)
+		*e = OtoroshiHealthOtoroshiEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OtoroshiHealthOtoroshiEnum: %s", s)
+		return fmt.Errorf("invalid value for OtoroshiHealthOtoroshiEnum: %v", v)
 	}
 }
 

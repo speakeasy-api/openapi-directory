@@ -13,107 +13,104 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/openbanking.org.uk/paymen
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateDomesticPaymentConsentsJSONRequest{
+    ctx := context.Background()
+    res, err := s.DomesticPayments.CreateDomesticPaymentConsentsJSON(ctx, operations.CreateDomesticPaymentConsentsJSONRequest{
         Authorization: "corrupti",
         OBWriteDomesticConsent4: shared.OBWriteDomesticConsent4{
             Data: shared.OBWriteDomesticConsent4Data{
                 Authorisation: &shared.OBWriteDomesticConsent4DataAuthorisation{
-                    AuthorisationType: "Single",
-                    CompletionDateTime: "2021-04-24T16:27:50.833Z",
+                    AuthorisationType: shared.OBWriteDomesticConsent4DataAuthorisationAuthorisationTypeEnumSingle,
+                    CompletionDateTime: types.MustTimeFromString("2021-04-24T16:27:50.833Z"),
                 },
                 Initiation: shared.OBWriteDomesticConsent4DataInitiation{
                     CreditorAccount: shared.OBWriteDomesticConsent4DataInitiationCreditorAccount{
                         Identification: "unde",
-                        Name: "nulla",
-                        SchemeName: "corrupti",
-                        SecondaryIdentification: "illum",
+                        Name: "Johnnie Stamm",
+                        SchemeName: "deserunt",
+                        SecondaryIdentification: sdk.String("suscipit"),
                     },
                     CreditorPostalAddress: &shared.OBPostalAddress6{
                         AddressLine: []string{
-                            "error",
-                            "deserunt",
+                            "magnam",
+                            "debitis",
                         },
-                        AddressType: "MailTo",
-                        BuildingNumber: "iure",
-                        Country: "French Guiana",
-                        CountrySubDivision: "debitis",
-                        Department: "ipsa",
-                        PostCode: "23478-5453",
-                        StreetName: "recusandae",
-                        SubDepartment: "temporibus",
-                        TownName: "ab",
+                        AddressType: shared.OBAddressTypeCodeEnumBusiness.ToPointer(),
+                        BuildingNumber: sdk.String("delectus"),
+                        Country: sdk.String("Ethiopia"),
+                        CountrySubDivision: sdk.String("suscipit"),
+                        Department: sdk.String("molestiae"),
+                        PostCode: sdk.String("85453-9803"),
+                        StreetName: sdk.String("veritatis"),
+                        SubDepartment: sdk.String("deserunt"),
+                        TownName: sdk.String("perferendis"),
                     },
                     DebtorAccount: &shared.OBWriteDomesticConsent4DataInitiationDebtorAccount{
-                        Identification: "quis",
-                        Name: "veritatis",
-                        SchemeName: "deserunt",
-                        SecondaryIdentification: "perferendis",
+                        Identification: "ipsam",
+                        Name: sdk.String("Timmy Satterfield"),
+                        SchemeName: "at",
+                        SecondaryIdentification: sdk.String("maiores"),
                     },
-                    EndToEndIdentification: "ipsam",
+                    EndToEndIdentification: "molestiae",
                     InstructedAmount: shared.OBWriteDomesticConsent4DataInitiationInstructedAmount{
-                        Amount: "repellendus",
-                        Currency: "sapiente",
+                        Amount: "quod",
+                        Currency: "quod",
                     },
-                    InstructionIdentification: "quo",
-                    LocalInstrument: "odit",
+                    InstructionIdentification: "esse",
+                    LocalInstrument: sdk.String("totam"),
                     RemittanceInformation: &shared.OBWriteDomesticConsent4DataInitiationRemittanceInformation{
-                        Reference: "at",
-                        Unstructured: "at",
+                        Reference: sdk.String("porro"),
+                        Unstructured: sdk.String("dolorum"),
                     },
                     SupplementaryData: map[string]interface{}{
-                        "molestiae": "quod",
-                        "quod": "esse",
-                        "totam": "porro",
-                        "dolorum": "dicta",
+                        "nam": "officia",
                     },
                 },
-                ReadRefundAccount: "Yes",
+                ReadRefundAccount: shared.OBWriteDomesticConsent4DataReadRefundAccountEnumYes.ToPointer(),
                 SCASupportData: &shared.OBSCASupportData1{
-                    AppliedAuthenticationApproach: "SCA",
-                    ReferencePaymentOrderID: "occaecati",
-                    RequestedSCAExemptionType: "ContactlessTravel",
+                    AppliedAuthenticationApproach: shared.OBSCASupportData1AppliedAuthenticationApproachEnumCa.ToPointer(),
+                    ReferencePaymentOrderID: sdk.String("deleniti"),
+                    RequestedSCAExemptionType: shared.OBSCASupportData1RequestedSCAExemptionTypeEnumPartyToParty.ToPointer(),
                 },
             },
             Risk: shared.OBRisk1{
                 DeliveryAddress: &shared.OBRisk1DeliveryAddress{
                     AddressLine: []string{
-                        "hic",
-                        "optio",
                         "totam",
+                        "beatae",
+                        "commodi",
+                        "molestiae",
                     },
-                    BuildingNumber: "beatae",
-                    Country: "Iraq",
-                    CountrySubDivision: "molestiae",
-                    PostCode: "17742",
-                    StreetName: "excepturi",
-                    TownName: "aspernatur",
+                    BuildingNumber: sdk.String("modi"),
+                    Country: "Cocos (Keeling) Islands",
+                    CountrySubDivision: sdk.String("impedit"),
+                    PostCode: sdk.String("42510-3616"),
+                    StreetName: sdk.String("dolor"),
+                    TownName: "natus",
                 },
-                MerchantCategoryCode: "perferendis",
-                MerchantCustomerIdentification: "ad",
-                PaymentContextCode: "Other",
+                MerchantCategoryCode: sdk.String("laboriosam"),
+                MerchantCustomerIdentification: sdk.String("hic"),
+                PaymentContextCode: shared.OBRisk1PaymentContextCodeEnumPartyToParty.ToPointer(),
             },
         },
-        XCustomerUserAgent: "sed",
-        XFapiAuthDate: "iste",
-        XFapiCustomerIPAddress: "dolor",
-        XFapiInteractionID: "natus",
-        XIdempotencyKey: "laboriosam",
-        XJwsSignature: "hic",
-    }
-
-    ctx := context.Background()
-    res, err := s.DomesticPayments.CreateDomesticPaymentConsentsJSON(ctx, req, operations.CreateDomesticPaymentConsentsJSONSecurity{
+        XCustomerUserAgent: sdk.String("fuga"),
+        XFapiAuthDate: sdk.String("in"),
+        XFapiCustomerIPAddress: sdk.String("corporis"),
+        XFapiInteractionID: sdk.String("iste"),
+        XIdempotencyKey: "iure",
+        XJwsSignature: "saepe",
+    }, operations.CreateDomesticPaymentConsentsJSONSecurity{
         TPPOAuth2Security: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -131,85 +128,85 @@ func main() {
 ## Available Resources and Operations
 
 
-### DomesticPayments
+### [DomesticPayments](docs/domesticpayments/README.md)
 
-* `CreateDomesticPaymentConsentsJSON` - Create Domestic Payment Consents
-* `CreateDomesticPaymentConsentsRaw` - Create Domestic Payment Consents
-* `CreateDomesticPaymentsJSON` - Create Domestic Payments
-* `CreateDomesticPaymentsRaw` - Create Domestic Payments
-* `GetDomesticPaymentConsentsConsentID` - Get Domestic Payment Consents
-* `GetDomesticPaymentConsentsConsentIDFundsConfirmation` - Get Domestic Payment Consents Funds Confirmation
-* `GetDomesticPaymentsDomesticPaymentID` - Get Domestic Payments
+* [CreateDomesticPaymentConsentsJSON](docs/domesticpayments/README.md#createdomesticpaymentconsentsjson) - Create Domestic Payment Consents
+* [CreateDomesticPaymentConsentsRaw](docs/domesticpayments/README.md#createdomesticpaymentconsentsraw) - Create Domestic Payment Consents
+* [CreateDomesticPaymentsJSON](docs/domesticpayments/README.md#createdomesticpaymentsjson) - Create Domestic Payments
+* [CreateDomesticPaymentsRaw](docs/domesticpayments/README.md#createdomesticpaymentsraw) - Create Domestic Payments
+* [GetDomesticPaymentConsentsConsentID](docs/domesticpayments/README.md#getdomesticpaymentconsentsconsentid) - Get Domestic Payment Consents
+* [GetDomesticPaymentConsentsConsentIDFundsConfirmation](docs/domesticpayments/README.md#getdomesticpaymentconsentsconsentidfundsconfirmation) - Get Domestic Payment Consents Funds Confirmation
+* [GetDomesticPaymentsDomesticPaymentID](docs/domesticpayments/README.md#getdomesticpaymentsdomesticpaymentid) - Get Domestic Payments
 
-### DomesticScheduledPayments
+### [DomesticScheduledPayments](docs/domesticscheduledpayments/README.md)
 
-* `CreateDomesticScheduledPaymentConsentsJSON` - Create Domestic Scheduled Payment Consents
-* `CreateDomesticScheduledPaymentConsentsRaw` - Create Domestic Scheduled Payment Consents
-* `CreateDomesticScheduledPaymentsJSON` - Create Domestic Scheduled Payments
-* `CreateDomesticScheduledPaymentsRaw` - Create Domestic Scheduled Payments
-* `GetDomesticScheduledPaymentConsentsConsentID` - Get Domestic Scheduled Payment Consents
-* `GetDomesticScheduledPaymentsDomesticScheduledPaymentID` - Get Domestic Scheduled Payments
+* [CreateDomesticScheduledPaymentConsentsJSON](docs/domesticscheduledpayments/README.md#createdomesticscheduledpaymentconsentsjson) - Create Domestic Scheduled Payment Consents
+* [CreateDomesticScheduledPaymentConsentsRaw](docs/domesticscheduledpayments/README.md#createdomesticscheduledpaymentconsentsraw) - Create Domestic Scheduled Payment Consents
+* [CreateDomesticScheduledPaymentsJSON](docs/domesticscheduledpayments/README.md#createdomesticscheduledpaymentsjson) - Create Domestic Scheduled Payments
+* [CreateDomesticScheduledPaymentsRaw](docs/domesticscheduledpayments/README.md#createdomesticscheduledpaymentsraw) - Create Domestic Scheduled Payments
+* [GetDomesticScheduledPaymentConsentsConsentID](docs/domesticscheduledpayments/README.md#getdomesticscheduledpaymentconsentsconsentid) - Get Domestic Scheduled Payment Consents
+* [GetDomesticScheduledPaymentsDomesticScheduledPaymentID](docs/domesticscheduledpayments/README.md#getdomesticscheduledpaymentsdomesticscheduledpaymentid) - Get Domestic Scheduled Payments
 
-### DomesticStandingOrders
+### [DomesticStandingOrders](docs/domesticstandingorders/README.md)
 
-* `CreateDomesticStandingOrderConsentsJSON` - Create Domestic Standing Order Consents
-* `CreateDomesticStandingOrderConsentsRaw` - Create Domestic Standing Order Consents
-* `CreateDomesticStandingOrdersJSON` - Create Domestic Standing Orders
-* `CreateDomesticStandingOrdersRaw` - Create Domestic Standing Orders
-* `GetDomesticStandingOrderConsentsConsentID` - Get Domestic Standing Order Consents
-* `GetDomesticStandingOrdersDomesticStandingOrderID` - Get Domestic Standing Orders
+* [CreateDomesticStandingOrderConsentsJSON](docs/domesticstandingorders/README.md#createdomesticstandingorderconsentsjson) - Create Domestic Standing Order Consents
+* [CreateDomesticStandingOrderConsentsRaw](docs/domesticstandingorders/README.md#createdomesticstandingorderconsentsraw) - Create Domestic Standing Order Consents
+* [CreateDomesticStandingOrdersJSON](docs/domesticstandingorders/README.md#createdomesticstandingordersjson) - Create Domestic Standing Orders
+* [CreateDomesticStandingOrdersRaw](docs/domesticstandingorders/README.md#createdomesticstandingordersraw) - Create Domestic Standing Orders
+* [GetDomesticStandingOrderConsentsConsentID](docs/domesticstandingorders/README.md#getdomesticstandingorderconsentsconsentid) - Get Domestic Standing Order Consents
+* [GetDomesticStandingOrdersDomesticStandingOrderID](docs/domesticstandingorders/README.md#getdomesticstandingordersdomesticstandingorderid) - Get Domestic Standing Orders
 
-### FilePayments
+### [FilePayments](docs/filepayments/README.md)
 
-* `CreateFilePaymentConsentsConsentIDFileJSON` - Create File Payment Consents
-* `CreateFilePaymentConsentsConsentIDFileRaw` - Create File Payment Consents
-* `CreateFilePaymentConsentsJSON` - Create File Payment Consents
-* `CreateFilePaymentConsentsRaw` - Create File Payment Consents
-* `CreateFilePaymentsJSON` - Create File Payments
-* `CreateFilePaymentsRaw` - Create File Payments
-* `GetFilePaymentConsentsConsentID` - Get File Payment Consents
-* `GetFilePaymentConsentsConsentIDFile` - Get File Payment Consents
-* `GetFilePaymentsFilePaymentID` - Get File Payments
-* `GetFilePaymentsFilePaymentIDReportFile` - Get File Payments
+* [CreateFilePaymentConsentsConsentIDFileJSON](docs/filepayments/README.md#createfilepaymentconsentsconsentidfilejson) - Create File Payment Consents
+* [CreateFilePaymentConsentsConsentIDFileRaw](docs/filepayments/README.md#createfilepaymentconsentsconsentidfileraw) - Create File Payment Consents
+* [CreateFilePaymentConsentsJSON](docs/filepayments/README.md#createfilepaymentconsentsjson) - Create File Payment Consents
+* [CreateFilePaymentConsentsRaw](docs/filepayments/README.md#createfilepaymentconsentsraw) - Create File Payment Consents
+* [CreateFilePaymentsJSON](docs/filepayments/README.md#createfilepaymentsjson) - Create File Payments
+* [CreateFilePaymentsRaw](docs/filepayments/README.md#createfilepaymentsraw) - Create File Payments
+* [GetFilePaymentConsentsConsentID](docs/filepayments/README.md#getfilepaymentconsentsconsentid) - Get File Payment Consents
+* [GetFilePaymentConsentsConsentIDFile](docs/filepayments/README.md#getfilepaymentconsentsconsentidfile) - Get File Payment Consents
+* [GetFilePaymentsFilePaymentID](docs/filepayments/README.md#getfilepaymentsfilepaymentid) - Get File Payments
+* [GetFilePaymentsFilePaymentIDReportFile](docs/filepayments/README.md#getfilepaymentsfilepaymentidreportfile) - Get File Payments
 
-### InternationalPayments
+### [InternationalPayments](docs/internationalpayments/README.md)
 
-* `CreateInternationalPaymentConsentsJSON` - Create International Payment Consents
-* `CreateInternationalPaymentConsentsRaw` - Create International Payment Consents
-* `CreateInternationalPaymentsJSON` - Create International Payments
-* `CreateInternationalPaymentsRaw` - Create International Payments
-* `GetInternationalPaymentConsentsConsentID` - Get International Payment Consents
-* `GetInternationalPaymentConsentsConsentIDFundsConfirmation` - Get International Payment Consents Funds Confirmation
-* `GetInternationalPaymentsInternationalPaymentID` - Get International Payments
+* [CreateInternationalPaymentConsentsJSON](docs/internationalpayments/README.md#createinternationalpaymentconsentsjson) - Create International Payment Consents
+* [CreateInternationalPaymentConsentsRaw](docs/internationalpayments/README.md#createinternationalpaymentconsentsraw) - Create International Payment Consents
+* [CreateInternationalPaymentsJSON](docs/internationalpayments/README.md#createinternationalpaymentsjson) - Create International Payments
+* [CreateInternationalPaymentsRaw](docs/internationalpayments/README.md#createinternationalpaymentsraw) - Create International Payments
+* [GetInternationalPaymentConsentsConsentID](docs/internationalpayments/README.md#getinternationalpaymentconsentsconsentid) - Get International Payment Consents
+* [GetInternationalPaymentConsentsConsentIDFundsConfirmation](docs/internationalpayments/README.md#getinternationalpaymentconsentsconsentidfundsconfirmation) - Get International Payment Consents Funds Confirmation
+* [GetInternationalPaymentsInternationalPaymentID](docs/internationalpayments/README.md#getinternationalpaymentsinternationalpaymentid) - Get International Payments
 
-### InternationalScheduledPayments
+### [InternationalScheduledPayments](docs/internationalscheduledpayments/README.md)
 
-* `CreateInternationalScheduledPaymentConsentsJSON` - Create International Scheduled Payment Consents
-* `CreateInternationalScheduledPaymentConsentsRaw` - Create International Scheduled Payment Consents
-* `CreateInternationalScheduledPaymentsJSON` - Create International Scheduled Payments
-* `CreateInternationalScheduledPaymentsRaw` - Create International Scheduled Payments
-* `GetInternationalScheduledPaymentConsentsConsentID` - Get International Scheduled Payment Consents
-* `GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmation` - Get International Scheduled Payment Consents Funds Confirmation
-* `GetInternationalScheduledPaymentsInternationalScheduledPaymentID` - Get International Scheduled Payments
+* [CreateInternationalScheduledPaymentConsentsJSON](docs/internationalscheduledpayments/README.md#createinternationalscheduledpaymentconsentsjson) - Create International Scheduled Payment Consents
+* [CreateInternationalScheduledPaymentConsentsRaw](docs/internationalscheduledpayments/README.md#createinternationalscheduledpaymentconsentsraw) - Create International Scheduled Payment Consents
+* [CreateInternationalScheduledPaymentsJSON](docs/internationalscheduledpayments/README.md#createinternationalscheduledpaymentsjson) - Create International Scheduled Payments
+* [CreateInternationalScheduledPaymentsRaw](docs/internationalscheduledpayments/README.md#createinternationalscheduledpaymentsraw) - Create International Scheduled Payments
+* [GetInternationalScheduledPaymentConsentsConsentID](docs/internationalscheduledpayments/README.md#getinternationalscheduledpaymentconsentsconsentid) - Get International Scheduled Payment Consents
+* [GetInternationalScheduledPaymentConsentsConsentIDFundsConfirmation](docs/internationalscheduledpayments/README.md#getinternationalscheduledpaymentconsentsconsentidfundsconfirmation) - Get International Scheduled Payment Consents Funds Confirmation
+* [GetInternationalScheduledPaymentsInternationalScheduledPaymentID](docs/internationalscheduledpayments/README.md#getinternationalscheduledpaymentsinternationalscheduledpaymentid) - Get International Scheduled Payments
 
-### InternationalStandingOrders
+### [InternationalStandingOrders](docs/internationalstandingorders/README.md)
 
-* `CreateInternationalStandingOrderConsentsJSON` - Create International Standing Order Consents
-* `CreateInternationalStandingOrderConsentsRaw` - Create International Standing Order Consents
-* `CreateInternationalStandingOrdersJSON` - Create International Standing Orders
-* `CreateInternationalStandingOrdersRaw` - Create International Standing Orders
-* `GetInternationalStandingOrderConsentsConsentID` - Get International Standing Order Consents
-* `GetInternationalStandingOrdersInternationalStandingOrderPaymentID` - Get International Standing Orders
+* [CreateInternationalStandingOrderConsentsJSON](docs/internationalstandingorders/README.md#createinternationalstandingorderconsentsjson) - Create International Standing Order Consents
+* [CreateInternationalStandingOrderConsentsRaw](docs/internationalstandingorders/README.md#createinternationalstandingorderconsentsraw) - Create International Standing Order Consents
+* [CreateInternationalStandingOrdersJSON](docs/internationalstandingorders/README.md#createinternationalstandingordersjson) - Create International Standing Orders
+* [CreateInternationalStandingOrdersRaw](docs/internationalstandingorders/README.md#createinternationalstandingordersraw) - Create International Standing Orders
+* [GetInternationalStandingOrderConsentsConsentID](docs/internationalstandingorders/README.md#getinternationalstandingorderconsentsconsentid) - Get International Standing Order Consents
+* [GetInternationalStandingOrdersInternationalStandingOrderPaymentID](docs/internationalstandingorders/README.md#getinternationalstandingordersinternationalstandingorderpaymentid) - Get International Standing Orders
 
-### PaymentDetails
+### [PaymentDetails](docs/paymentdetails/README.md)
 
-* `GetDomesticPaymentsDomesticPaymentIDPaymentDetails` - Get Payment Details
-* `GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails` - Get Payment Details
-* `GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails` - Get Payment Details
-* `GetFilePaymentsFilePaymentIDPaymentDetails` - Get Payment Details
-* `GetInternationalPaymentsInternationalPaymentIDPaymentDetails` - Get Payment Details
-* `GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails` - Get Payment Details
-* `GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails` - Get Payment Details
+* [GetDomesticPaymentsDomesticPaymentIDPaymentDetails](docs/paymentdetails/README.md#getdomesticpaymentsdomesticpaymentidpaymentdetails) - Get Payment Details
+* [GetDomesticScheduledPaymentsDomesticScheduledPaymentIDPaymentDetails](docs/paymentdetails/README.md#getdomesticscheduledpaymentsdomesticscheduledpaymentidpaymentdetails) - Get Payment Details
+* [GetDomesticStandingOrdersDomesticStandingOrderIDPaymentDetails](docs/paymentdetails/README.md#getdomesticstandingordersdomesticstandingorderidpaymentdetails) - Get Payment Details
+* [GetFilePaymentsFilePaymentIDPaymentDetails](docs/paymentdetails/README.md#getfilepaymentsfilepaymentidpaymentdetails) - Get Payment Details
+* [GetInternationalPaymentsInternationalPaymentIDPaymentDetails](docs/paymentdetails/README.md#getinternationalpaymentsinternationalpaymentidpaymentdetails) - Get Payment Details
+* [GetInternationalScheduledPaymentsInternationalScheduledPaymentIDPaymentDetails](docs/paymentdetails/README.md#getinternationalscheduledpaymentsinternationalscheduledpaymentidpaymentdetails) - Get Payment Details
+* [GetInternationalStandingOrdersInternationalStandingOrderPaymentIDPaymentDetails](docs/paymentdetails/README.md#getinternationalstandingordersinternationalstandingorderpaymentidpaymentdetails) - Get Payment Details
 <!-- End SDK Available Operations -->
 
 ### Maturity

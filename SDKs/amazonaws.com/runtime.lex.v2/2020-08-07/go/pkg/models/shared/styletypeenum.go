@@ -15,20 +15,24 @@ const (
 	StyleTypeEnumSpellByWord   StyleTypeEnum = "SpellByWord"
 )
 
+func (e StyleTypeEnum) ToPointer() *StyleTypeEnum {
+	return &e
+}
+
 func (e *StyleTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Default":
 		fallthrough
 	case "SpellByLetter":
 		fallthrough
 	case "SpellByWord":
-		*e = StyleTypeEnum(s)
+		*e = StyleTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StyleTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StyleTypeEnum: %v", v)
 	}
 }

@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/papinet.io/order_status/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetOrdersRequest{
-        Limit: "corrupti",
-        Offset: "provident",
-        OrderStatus: "Completed",
-    }
-
     ctx := context.Background()
-    res, err := s.GetOrders(ctx, req)
+    res, err := s.GetOrders(ctx, operations.GetOrdersRequest{
+        Limit: sdk.String("corrupti"),
+        Offset: sdk.String("provident"),
+        OrderStatus: operations.GetOrdersOrderStatusEnumCompleted.ToPointer(),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,10 +43,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetOrders` - List `orders`
-* `GetOrdersOrderID` - Get an `order`
+* [GetOrders](docs/sdk/README.md#getorders) - List `orders`
+* [GetOrdersOrderID](docs/sdk/README.md#getordersorderid) - Get an `order`
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	ListReviewableHITsXAmzTargetEnumMTurkRequesterServiceV20170117ListReviewableHiTs ListReviewableHITsXAmzTargetEnum = "MTurkRequesterServiceV20170117.ListReviewableHITs"
 )
 
+func (e ListReviewableHITsXAmzTargetEnum) ToPointer() *ListReviewableHITsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListReviewableHITsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.ListReviewableHITs":
-		*e = ListReviewableHITsXAmzTargetEnum(s)
+		*e = ListReviewableHITsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListReviewableHITsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListReviewableHITsXAmzTargetEnum: %v", v)
 	}
 }
 

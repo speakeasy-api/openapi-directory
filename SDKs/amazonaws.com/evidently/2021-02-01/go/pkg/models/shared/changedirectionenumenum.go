@@ -14,18 +14,22 @@ const (
 	ChangeDirectionEnumEnumDecrease ChangeDirectionEnumEnum = "DECREASE"
 )
 
+func (e ChangeDirectionEnumEnum) ToPointer() *ChangeDirectionEnumEnum {
+	return &e
+}
+
 func (e *ChangeDirectionEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCREASE":
 		fallthrough
 	case "DECREASE":
-		*e = ChangeDirectionEnumEnum(s)
+		*e = ChangeDirectionEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChangeDirectionEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ChangeDirectionEnumEnum: %v", v)
 	}
 }

@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetApodRequest{
-        Date: "corrupti",
-        Hd: false,
-    }
-
     ctx := context.Background()
-    res, err := s.RequestTag.GetApod(ctx, req, operations.GetApodSecurity{
+    res, err := s.RequestTag.GetApod(ctx, operations.GetApodRequest{
+        Date: sdk.String("corrupti"),
+        Hd: sdk.Bool(false),
+    }, operations.GetApodSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {

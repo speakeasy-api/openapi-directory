@@ -13,30 +13,28 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/xero.com/xero_files/2.9.4
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateFileAssociationRequest{
+    ctx := context.Background()
+    res, err := s.Files.CreateFileAssociation(ctx, operations.CreateFileAssociationRequest{
         Association: &shared.Association{
-            FileID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-            ObjectGroup: "Overpayment",
-            ObjectID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
-            ObjectType: "Current",
+            FileID: sdk.String("89bd9d8d-69a6-474e-8f46-7cc8796ed151"),
+            ObjectGroup: shared.ObjectGroupEnumOverpayment.ToPointer(),
+            ObjectID: sdk.String("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
+            ObjectType: shared.ObjectTypeEnumCurrent.ToPointer(),
         },
         FileID: "4ff1e5cc-9835-40d5-bb18-09fdb118db9c",
         XeroTenantID: "esse",
-    }
-
-    ctx := context.Background()
-    res, err := s.Files.CreateFileAssociation(ctx, req, operations.CreateFileAssociationSecurity{
+    }, operations.CreateFileAssociationSecurity{
         OAuth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -54,24 +52,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Files
+### [Files](docs/files/README.md)
 
-* `CreateFileAssociation` - Creates a new file association
-* `CreateFolder` - Creates a new folder
-* `DeleteFile` - Deletes a specific file
-* `DeleteFileAssociation` - Deletes an existing file association
-* `DeleteFolder` - Deletes a folder
-* `GetAssociationsByObject` - Retrieves an association object using a unique object ID
-* `GetFile` - Retrieves a file by a unique file ID
-* `GetFileAssociations` - Retrieves a specific file associations
-* `GetFileContent` - Retrieves the content of a specific file
-* `GetFiles` - Retrieves files
-* `GetFolder` - Retrieves specific folder by using a unique folder ID
-* `GetFolders` - Retrieves folders
-* `GetInbox` - Retrieves inbox folder
-* `UpdateFile` - Update a file
-* `UpdateFolder` - Updates an existing folder
-* `UploadFile` - Uploads a File
+* [CreateFileAssociation](docs/files/README.md#createfileassociation) - Creates a new file association
+* [CreateFolder](docs/files/README.md#createfolder) - Creates a new folder
+* [DeleteFile](docs/files/README.md#deletefile) - Deletes a specific file
+* [DeleteFileAssociation](docs/files/README.md#deletefileassociation) - Deletes an existing file association
+* [DeleteFolder](docs/files/README.md#deletefolder) - Deletes a folder
+* [GetAssociationsByObject](docs/files/README.md#getassociationsbyobject) - Retrieves an association object using a unique object ID
+* [GetFile](docs/files/README.md#getfile) - Retrieves a file by a unique file ID
+* [GetFileAssociations](docs/files/README.md#getfileassociations) - Retrieves a specific file associations
+* [GetFileContent](docs/files/README.md#getfilecontent) - Retrieves the content of a specific file
+* [GetFiles](docs/files/README.md#getfiles) - Retrieves files
+* [GetFolder](docs/files/README.md#getfolder) - Retrieves specific folder by using a unique folder ID
+* [GetFolders](docs/files/README.md#getfolders) - Retrieves folders
+* [GetInbox](docs/files/README.md#getinbox) - Retrieves inbox folder
+* [UpdateFile](docs/files/README.md#updatefile) - Update a file
+* [UpdateFolder](docs/files/README.md#updatefolder) - Updates an existing folder
+* [UploadFile](docs/files/README.md#uploadfile) - Uploads a File
 <!-- End SDK Available Operations -->
 
 ### Maturity

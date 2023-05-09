@@ -38,7 +38,10 @@ func newSavedListViews(defaultClient, securityClient HTTPClient, serverURL, lang
 // This operation can be called multiple times successfully.
 func (s *savedListViews) DeleteV2SavedListViewsIDJSON(ctx context.Context, request operations.DeleteV2SavedListViewsIDJSONRequest) (*operations.DeleteV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -124,7 +127,10 @@ func (s *savedListViews) GetV2SavedListViewsJSON(ctx context.Context, request op
 // Fetches a saved list view, by ID only.
 func (s *savedListViews) GetV2SavedListViewsIDJSON(ctx context.Context, request operations.GetV2SavedListViewsIDJSONRequest) (*operations.GetV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *savedListViews) PostV2SavedListViewsJSON(ctx context.Context, request o
 // Updates a saved list view.
 func (s *savedListViews) PutV2SavedListViewsIDJSON(ctx context.Context, request operations.PutV2SavedListViewsIDJSONRequest) (*operations.PutV2SavedListViewsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/saved_list_views/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

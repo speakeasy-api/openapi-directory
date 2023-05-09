@@ -17,17 +17,21 @@ const (
 	NumberDetailsUpdateMessagesCallbackTypeEnumApp NumberDetailsUpdateMessagesCallbackTypeEnum = "app"
 )
 
+func (e NumberDetailsUpdateMessagesCallbackTypeEnum) ToPointer() *NumberDetailsUpdateMessagesCallbackTypeEnum {
+	return &e
+}
+
 func (e *NumberDetailsUpdateMessagesCallbackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "app":
-		*e = NumberDetailsUpdateMessagesCallbackTypeEnum(s)
+		*e = NumberDetailsUpdateMessagesCallbackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberDetailsUpdateMessagesCallbackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberDetailsUpdateMessagesCallbackTypeEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	NumberDetailsUpdateVoiceCallbackTypeEnumApp NumberDetailsUpdateVoiceCallbackTypeEnum = "app"
 )
 
+func (e NumberDetailsUpdateVoiceCallbackTypeEnum) ToPointer() *NumberDetailsUpdateVoiceCallbackTypeEnum {
+	return &e
+}
+
 func (e *NumberDetailsUpdateVoiceCallbackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sip":
 		fallthrough
 	case "tel":
 		fallthrough
 	case "app":
-		*e = NumberDetailsUpdateVoiceCallbackTypeEnum(s)
+		*e = NumberDetailsUpdateVoiceCallbackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NumberDetailsUpdateVoiceCallbackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for NumberDetailsUpdateVoiceCallbackTypeEnum: %v", v)
 	}
 }
 

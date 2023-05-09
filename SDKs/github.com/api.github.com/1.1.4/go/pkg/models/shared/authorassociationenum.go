@@ -21,12 +21,16 @@ const (
 	AuthorAssociationEnumOwner                AuthorAssociationEnum = "OWNER"
 )
 
+func (e AuthorAssociationEnum) ToPointer() *AuthorAssociationEnum {
+	return &e
+}
+
 func (e *AuthorAssociationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COLLABORATOR":
 		fallthrough
 	case "CONTRIBUTOR":
@@ -42,9 +46,9 @@ func (e *AuthorAssociationEnum) UnmarshalJSON(data []byte) error {
 	case "NONE":
 		fallthrough
 	case "OWNER":
-		*e = AuthorAssociationEnum(s)
+		*e = AuthorAssociationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorAssociationEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorAssociationEnum: %v", v)
 	}
 }

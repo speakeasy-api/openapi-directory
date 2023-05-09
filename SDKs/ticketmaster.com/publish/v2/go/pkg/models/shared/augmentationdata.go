@@ -16,21 +16,25 @@ const (
 	AugmentationDataRelatedEntityTypeEnumVenue      AugmentationDataRelatedEntityTypeEnum = "venue"
 )
 
+func (e AugmentationDataRelatedEntityTypeEnum) ToPointer() *AugmentationDataRelatedEntityTypeEnum {
+	return &e
+}
+
 func (e *AugmentationDataRelatedEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "event":
 		fallthrough
 	case "attraction":
 		fallthrough
 	case "venue":
-		*e = AugmentationDataRelatedEntityTypeEnum(s)
+		*e = AugmentationDataRelatedEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AugmentationDataRelatedEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AugmentationDataRelatedEntityTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTTagMFADeviceActionEnumTagMfaDevice POSTTagMFADeviceActionEnum = "TagMFADevice"
 )
 
+func (e POSTTagMFADeviceActionEnum) ToPointer() *POSTTagMFADeviceActionEnum {
+	return &e
+}
+
 func (e *POSTTagMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagMFADevice":
-		*e = POSTTagMFADeviceActionEnum(s)
+		*e = POSTTagMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTagMFADeviceVersionEnumTwoThousandAndTen0508 POSTTagMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e POSTTagMFADeviceVersionEnum) ToPointer() *POSTTagMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *POSTTagMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTTagMFADeviceVersionEnum(s)
+		*e = POSTTagMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagMFADeviceVersionEnum: %v", v)
 	}
 }
 

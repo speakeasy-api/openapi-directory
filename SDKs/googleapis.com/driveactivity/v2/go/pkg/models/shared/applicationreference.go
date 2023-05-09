@@ -16,21 +16,25 @@ const (
 	ApplicationReferenceTypeEnumDiscuss                  ApplicationReferenceTypeEnum = "DISCUSS"
 )
 
+func (e ApplicationReferenceTypeEnum) ToPointer() *ApplicationReferenceTypeEnum {
+	return &e
+}
+
 func (e *ApplicationReferenceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED_REFERENCE_TYPE":
 		fallthrough
 	case "LINK":
 		fallthrough
 	case "DISCUSS":
-		*e = ApplicationReferenceTypeEnum(s)
+		*e = ApplicationReferenceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationReferenceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationReferenceTypeEnum: %v", v)
 	}
 }
 

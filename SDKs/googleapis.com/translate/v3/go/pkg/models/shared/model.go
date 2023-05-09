@@ -8,8 +8,6 @@ type Model struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// The dataset from which the model is trained, in form of `projects/{project-number-or-id}/locations/{location_id}/datasets/{dataset_id}`
 	Dataset *string `json:"dataset,omitempty"`
-	// Output only. Timestamp when the model training finished and ready to be used for translation.
-	DeployTime *string `json:"deployTime,omitempty"`
 	// The name of the model to show in the interface. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores (_), and ASCII digits 0-9.
 	DisplayName *string `json:"displayName,omitempty"`
 	// The resource name of the model, in form of `projects/{project-number-or-id}/locations/{location_id}/models/{model_id}`

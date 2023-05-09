@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SecretmanagerProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) SecretmanagerProjectsLocationsList(ctx context.Context, request operations.SecretmanagerProjectsLocationsListRequest, security operations.SecretmanagerProjectsLocationsListSecurity) (*operations.SecretmanagerProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) SecretmanagerProjectsLocationsList(ctx context.Context, reque
 // SecretmanagerProjectsSecretsAddVersion - Creates a new SecretVersion containing secret data and attaches it to an existing Secret.
 func (s *projects) SecretmanagerProjectsSecretsAddVersion(ctx context.Context, request operations.SecretmanagerProjectsSecretsAddVersionRequest, security operations.SecretmanagerProjectsSecretsAddVersionSecurity) (*operations.SecretmanagerProjectsSecretsAddVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:addVersion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:addVersion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddSecretVersionRequest", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) SecretmanagerProjectsSecretsAddVersion(ctx context.Context, r
 // SecretmanagerProjectsSecretsCreate - Creates a new Secret containing no SecretVersions.
 func (s *projects) SecretmanagerProjectsSecretsCreate(ctx context.Context, request operations.SecretmanagerProjectsSecretsCreateRequest, security operations.SecretmanagerProjectsSecretsCreateSecurity) (*operations.SecretmanagerProjectsSecretsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SecretInput", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) SecretmanagerProjectsSecretsCreate(ctx context.Context, reque
 // SecretmanagerProjectsSecretsDelete - Deletes a Secret.
 func (s *projects) SecretmanagerProjectsSecretsDelete(ctx context.Context, request operations.SecretmanagerProjectsSecretsDeleteRequest, security operations.SecretmanagerProjectsSecretsDeleteSecurity) (*operations.SecretmanagerProjectsSecretsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) SecretmanagerProjectsSecretsDelete(ctx context.Context, reque
 // SecretmanagerProjectsSecretsGetIamPolicy - Gets the access control policy for a secret. Returns empty policy if the secret exists and does not have a policy set.
 func (s *projects) SecretmanagerProjectsSecretsGetIamPolicy(ctx context.Context, request operations.SecretmanagerProjectsSecretsGetIamPolicyRequest, security operations.SecretmanagerProjectsSecretsGetIamPolicySecurity) (*operations.SecretmanagerProjectsSecretsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) SecretmanagerProjectsSecretsGetIamPolicy(ctx context.Context,
 // SecretmanagerProjectsSecretsList - Lists Secrets.
 func (s *projects) SecretmanagerProjectsSecretsList(ctx context.Context, request operations.SecretmanagerProjectsSecretsListRequest, security operations.SecretmanagerProjectsSecretsListSecurity) (*operations.SecretmanagerProjectsSecretsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) SecretmanagerProjectsSecretsList(ctx context.Context, request
 // SecretmanagerProjectsSecretsPatch - Updates metadata of an existing Secret.
 func (s *projects) SecretmanagerProjectsSecretsPatch(ctx context.Context, request operations.SecretmanagerProjectsSecretsPatchRequest, security operations.SecretmanagerProjectsSecretsPatchSecurity) (*operations.SecretmanagerProjectsSecretsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SecretInput", "json")
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) SecretmanagerProjectsSecretsPatch(ctx context.Context, reques
 // SecretmanagerProjectsSecretsSetIamPolicy - Sets the access control policy on the specified secret. Replaces any existing policy. Permissions on SecretVersions are enforced according to the policy set on the associated Secret.
 func (s *projects) SecretmanagerProjectsSecretsSetIamPolicy(ctx context.Context, request operations.SecretmanagerProjectsSecretsSetIamPolicyRequest, security operations.SecretmanagerProjectsSecretsSetIamPolicySecurity) (*operations.SecretmanagerProjectsSecretsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) SecretmanagerProjectsSecretsSetIamPolicy(ctx context.Context,
 // SecretmanagerProjectsSecretsTestIamPermissions - Returns permissions that a caller has for the specified secret. If the secret does not exist, this call returns an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 func (s *projects) SecretmanagerProjectsSecretsTestIamPermissions(ctx context.Context, request operations.SecretmanagerProjectsSecretsTestIamPermissionsRequest, security operations.SecretmanagerProjectsSecretsTestIamPermissionsSecurity) (*operations.SecretmanagerProjectsSecretsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *projects) SecretmanagerProjectsSecretsTestIamPermissions(ctx context.Co
 // SecretmanagerProjectsSecretsVersionsAccess - Accesses a SecretVersion. This call returns the secret data. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
 func (s *projects) SecretmanagerProjectsSecretsVersionsAccess(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsAccessRequest, security operations.SecretmanagerProjectsSecretsVersionsAccessSecurity) (*operations.SecretmanagerProjectsSecretsVersionsAccessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:access", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:access", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *projects) SecretmanagerProjectsSecretsVersionsAccess(ctx context.Contex
 // SecretmanagerProjectsSecretsVersionsDestroy - Destroys a SecretVersion. Sets the state of the SecretVersion to DESTROYED and irrevocably destroys the secret data.
 func (s *projects) SecretmanagerProjectsSecretsVersionsDestroy(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsDestroyRequest, security operations.SecretmanagerProjectsSecretsVersionsDestroySecurity) (*operations.SecretmanagerProjectsSecretsVersionsDestroyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:destroy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:destroy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DestroySecretVersionRequest", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *projects) SecretmanagerProjectsSecretsVersionsDestroy(ctx context.Conte
 // SecretmanagerProjectsSecretsVersionsDisable - Disables a SecretVersion. Sets the state of the SecretVersion to DISABLED.
 func (s *projects) SecretmanagerProjectsSecretsVersionsDisable(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsDisableRequest, security operations.SecretmanagerProjectsSecretsVersionsDisableSecurity) (*operations.SecretmanagerProjectsSecretsVersionsDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DisableSecretVersionRequest", "json")
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) SecretmanagerProjectsSecretsVersionsDisable(ctx context.Conte
 // SecretmanagerProjectsSecretsVersionsEnable - Enables a SecretVersion. Sets the state of the SecretVersion to ENABLED.
 func (s *projects) SecretmanagerProjectsSecretsVersionsEnable(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsEnableRequest, security operations.SecretmanagerProjectsSecretsVersionsEnableSecurity) (*operations.SecretmanagerProjectsSecretsVersionsEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnableSecretVersionRequest", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) SecretmanagerProjectsSecretsVersionsEnable(ctx context.Contex
 // SecretmanagerProjectsSecretsVersionsGet - Gets metadata for a SecretVersion. `projects/*/secrets/*/versions/latest` is an alias to the most recently created SecretVersion.
 func (s *projects) SecretmanagerProjectsSecretsVersionsGet(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsGetRequest, security operations.SecretmanagerProjectsSecretsVersionsGetSecurity) (*operations.SecretmanagerProjectsSecretsVersionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) SecretmanagerProjectsSecretsVersionsGet(ctx context.Context, 
 // SecretmanagerProjectsSecretsVersionsList - Lists SecretVersions. This call does not return secret data.
 func (s *projects) SecretmanagerProjectsSecretsVersionsList(ctx context.Context, request operations.SecretmanagerProjectsSecretsVersionsListRequest, security operations.SecretmanagerProjectsSecretsVersionsListSecurity) (*operations.SecretmanagerProjectsSecretsVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -35,7 +35,10 @@ func newFollowedNetworks(defaultClient, securityClient HTTPClient, serverURL, la
 // DeleteUserFollowsNetworksNetworkID - Unfollow a network
 func (s *followedNetworks) DeleteUserFollowsNetworksNetworkID(ctx context.Context, request operations.DeleteUserFollowsNetworksNetworkIDRequest) (*operations.DeleteUserFollowsNetworksNetworkIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -120,7 +123,10 @@ func (s *followedNetworks) GetUserFollowsNetworks(ctx context.Context, request o
 // GetUserFollowsNetworksNetworkID - Check if a network is followed
 func (s *followedNetworks) GetUserFollowsNetworksNetworkID(ctx context.Context, request operations.GetUserFollowsNetworksNetworkIDRequest) (*operations.GetUserFollowsNetworksNetworkIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -165,7 +171,10 @@ func (s *followedNetworks) GetUserFollowsNetworksNetworkID(ctx context.Context, 
 // PutUserFollowsNetworksNetworkID - Follow a network
 func (s *followedNetworks) PutUserFollowsNetworksNetworkID(ctx context.Context, request operations.PutUserFollowsNetworksNetworkIDRequest) (*operations.PutUserFollowsNetworksNetworkIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/follows/networks/{network_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

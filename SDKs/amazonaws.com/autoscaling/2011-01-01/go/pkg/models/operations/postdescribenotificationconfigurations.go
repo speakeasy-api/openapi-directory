@@ -15,17 +15,21 @@ const (
 	POSTDescribeNotificationConfigurationsActionEnumDescribeNotificationConfigurations POSTDescribeNotificationConfigurationsActionEnum = "DescribeNotificationConfigurations"
 )
 
+func (e POSTDescribeNotificationConfigurationsActionEnum) ToPointer() *POSTDescribeNotificationConfigurationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNotificationConfigurationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeNotificationConfigurations":
-		*e = POSTDescribeNotificationConfigurationsActionEnum(s)
+		*e = POSTDescribeNotificationConfigurationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNotificationConfigurationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNotificationConfigurationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeNotificationConfigurationsVersionEnumTwoThousandAndEleven0101 POSTDescribeNotificationConfigurationsVersionEnum = "2011-01-01"
 )
 
+func (e POSTDescribeNotificationConfigurationsVersionEnum) ToPointer() *POSTDescribeNotificationConfigurationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeNotificationConfigurationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTDescribeNotificationConfigurationsVersionEnum(s)
+		*e = POSTDescribeNotificationConfigurationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeNotificationConfigurationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeNotificationConfigurationsVersionEnum: %v", v)
 	}
 }
 

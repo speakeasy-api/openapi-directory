@@ -16,20 +16,24 @@ const (
 	ProductStateFilterEnumDisabled ProductStateFilterEnum = "Disabled"
 )
 
+func (e ProductStateFilterEnum) ToPointer() *ProductStateFilterEnum {
+	return &e
+}
+
 func (e *ProductStateFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All":
 		fallthrough
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = ProductStateFilterEnum(s)
+		*e = ProductStateFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductStateFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductStateFilterEnum: %v", v)
 	}
 }

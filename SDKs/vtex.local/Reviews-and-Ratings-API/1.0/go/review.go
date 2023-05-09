@@ -89,7 +89,10 @@ func (s *review) DeleteMultipleReviews(ctx context.Context, request operations.D
 // Deletes an existing review.
 func (s *review) DeleteReview(ctx context.Context, request operations.DeleteReviewRequest) (*operations.DeleteReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -136,7 +139,10 @@ func (s *review) DeleteReview(ctx context.Context, request operations.DeleteRevi
 // Updates the information of a review.
 func (s *review) EditReview(ctx context.Context, request operations.EditReviewRequest) (*operations.EditReviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *review) EditReview(ctx context.Context, request operations.EditReviewRe
 // Retrieves information of a product review by its ID.
 func (s *review) GetReviewbyReviewID(ctx context.Context, request operations.GetReviewbyReviewIDRequest) (*operations.GetReviewbyReviewIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/review/{reviewId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

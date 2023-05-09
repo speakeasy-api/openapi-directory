@@ -2,38 +2,36 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Customer: "unde",
-        Fields: "nulla",
-        Key: "corrupti",
-        OauthToken: "illum",
-        OrderBy: "vel",
-        OrgUnitID: "error",
-        PageSize: 645894,
-        PageToken: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
     ctx := context.Background()
-    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, req, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
+    res, err := s.Customers.ChromemanagementCustomersAppsCountChromeAppRequests(ctx, operations.ChromemanagementCustomersAppsCountChromeAppRequestsRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Customer: "unde",
+        Fields: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        OauthToken: sdk.String("illum"),
+        OrderBy: sdk.String("vel"),
+        OrgUnitID: sdk.String("error"),
+        PageSize: sdk.Int64(645894),
+        PageToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.ChromemanagementCustomersAppsCountChromeAppRequestsSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

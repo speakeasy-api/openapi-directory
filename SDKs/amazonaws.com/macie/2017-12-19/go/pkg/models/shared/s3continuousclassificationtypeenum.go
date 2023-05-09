@@ -13,16 +13,20 @@ const (
 	S3ContinuousClassificationTypeEnumFull S3ContinuousClassificationTypeEnum = "FULL"
 )
 
+func (e S3ContinuousClassificationTypeEnum) ToPointer() *S3ContinuousClassificationTypeEnum {
+	return &e
+}
+
 func (e *S3ContinuousClassificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FULL":
-		*e = S3ContinuousClassificationTypeEnum(s)
+		*e = S3ContinuousClassificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3ContinuousClassificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for S3ContinuousClassificationTypeEnum: %v", v)
 	}
 }

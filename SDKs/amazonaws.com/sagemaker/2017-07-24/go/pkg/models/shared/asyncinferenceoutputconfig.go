@@ -6,5 +6,6 @@ package shared
 type AsyncInferenceOutputConfig struct {
 	KmsKeyID           *string                           `json:"KmsKeyId,omitempty"`
 	NotificationConfig *AsyncInferenceNotificationConfig `json:"NotificationConfig,omitempty"`
-	S3OutputPath       string                            `json:"S3OutputPath"`
+	S3FailurePath      *string                           `json:"S3FailurePath,omitempty"`
+	S3OutputPath       *string                           `json:"S3OutputPath,omitempty"`
 }

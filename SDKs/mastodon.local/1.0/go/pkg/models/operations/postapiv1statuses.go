@@ -25,12 +25,16 @@ const (
 	PostAPIV1StatusesRequestBodyVisibilityEnumDirect   PostAPIV1StatusesRequestBodyVisibilityEnum = "direct"
 )
 
+func (e PostAPIV1StatusesRequestBodyVisibilityEnum) ToPointer() *PostAPIV1StatusesRequestBodyVisibilityEnum {
+	return &e
+}
+
 func (e *PostAPIV1StatusesRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "unlisted":
@@ -38,10 +42,10 @@ func (e *PostAPIV1StatusesRequestBodyVisibilityEnum) UnmarshalJSON(data []byte) 
 	case "private":
 		fallthrough
 	case "direct":
-		*e = PostAPIV1StatusesRequestBodyVisibilityEnum(s)
+		*e = PostAPIV1StatusesRequestBodyVisibilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIV1StatusesRequestBodyVisibilityEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIV1StatusesRequestBodyVisibilityEnum: %v", v)
 	}
 }
 

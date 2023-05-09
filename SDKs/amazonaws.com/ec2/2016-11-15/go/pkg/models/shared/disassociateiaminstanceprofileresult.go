@@ -24,12 +24,16 @@ const (
 	DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnumDisassociated  DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum = "disassociated"
 )
 
+func (e DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum) ToPointer() *DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum {
+	return &e
+}
+
 func (e *DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -37,10 +41,10 @@ func (e *DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateE
 	case "disassociating":
 		fallthrough
 	case "disassociated":
-		*e = DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum(s)
+		*e = DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateIamInstanceProfileResultIamInstanceProfileAssociationStateEnum: %v", v)
 	}
 }
 

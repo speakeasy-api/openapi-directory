@@ -18,12 +18,16 @@ const (
 	LineItemPeriodUnitEnumOneTime    LineItemPeriodUnitEnum = "ONE_TIME"
 )
 
+func (e LineItemPeriodUnitEnum) ToPointer() *LineItemPeriodUnitEnum {
+	return &e
+}
+
 func (e *LineItemPeriodUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MONTH":
 		fallthrough
 	case "QUARTER":
@@ -33,10 +37,10 @@ func (e *LineItemPeriodUnitEnum) UnmarshalJSON(data []byte) error {
 	case "YEAR":
 		fallthrough
 	case "ONE_TIME":
-		*e = LineItemPeriodUnitEnum(s)
+		*e = LineItemPeriodUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LineItemPeriodUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for LineItemPeriodUnitEnum: %v", v)
 	}
 }
 

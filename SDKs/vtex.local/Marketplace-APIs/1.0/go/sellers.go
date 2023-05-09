@@ -78,7 +78,10 @@ func (s *sellers) GetListSellers(ctx context.Context, request operations.GetList
 // Marketplace operator may call this endpoint to retrieve information about a specific seller by filtering by ID. It is also possible to filter results by sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data)) through the `sc` query param.
 func (s *sellers) GetRetrieveSeller(ctx context.Context, request operations.GetRetrieveSellerRequest) (*operations.GetRetrieveSellerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -120,7 +123,10 @@ func (s *sellers) GetRetrieveSeller(ctx context.Context, request operations.GetR
 // This endpoint allows marketplace operators to update the information of sellers connected to their account. You can replace a path's value with another value in order to update that single information. There is no need to fill all the body params available, only the one you wish to update.
 func (s *sellers) UpdateSeller(ctx context.Context, request operations.UpdateSellerRequest) (*operations.UpdateSellerResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/seller-register/pvt/sellers/{sellerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

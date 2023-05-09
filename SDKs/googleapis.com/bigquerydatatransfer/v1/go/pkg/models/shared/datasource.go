@@ -17,12 +17,16 @@ const (
 	DataSourceAuthorizationTypeEnumFirstPartyOauth              DataSourceAuthorizationTypeEnum = "FIRST_PARTY_OAUTH"
 )
 
+func (e DataSourceAuthorizationTypeEnum) ToPointer() *DataSourceAuthorizationTypeEnum {
+	return &e
+}
+
 func (e *DataSourceAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZATION_CODE":
@@ -30,10 +34,10 @@ func (e *DataSourceAuthorizationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "GOOGLE_PLUS_AUTHORIZATION_CODE":
 		fallthrough
 	case "FIRST_PARTY_OAUTH":
-		*e = DataSourceAuthorizationTypeEnum(s)
+		*e = DataSourceAuthorizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceAuthorizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceAuthorizationTypeEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	DataSourceDataRefreshTypeEnumCustomSlidingWindow        DataSourceDataRefreshTypeEnum = "CUSTOM_SLIDING_WINDOW"
 )
 
+func (e DataSourceDataRefreshTypeEnum) ToPointer() *DataSourceDataRefreshTypeEnum {
+	return &e
+}
+
 func (e *DataSourceDataRefreshTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_REFRESH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SLIDING_WINDOW":
 		fallthrough
 	case "CUSTOM_SLIDING_WINDOW":
-		*e = DataSourceDataRefreshTypeEnum(s)
+		*e = DataSourceDataRefreshTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceDataRefreshTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceDataRefreshTypeEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	DataSourceTransferTypeEnumStreaming               DataSourceTransferTypeEnum = "STREAMING"
 )
 
+func (e DataSourceTransferTypeEnum) ToPointer() *DataSourceTransferTypeEnum {
+	return &e
+}
+
 func (e *DataSourceTransferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BATCH":
 		fallthrough
 	case "STREAMING":
-		*e = DataSourceTransferTypeEnum(s)
+		*e = DataSourceTransferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceTransferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceTransferTypeEnum: %v", v)
 	}
 }
 

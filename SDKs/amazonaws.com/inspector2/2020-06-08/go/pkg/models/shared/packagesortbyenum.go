@@ -15,20 +15,24 @@ const (
 	PackageSortByEnumAll      PackageSortByEnum = "ALL"
 )
 
+func (e PackageSortByEnum) ToPointer() *PackageSortByEnum {
+	return &e
+}
+
 func (e *PackageSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
 		fallthrough
 	case "ALL":
-		*e = PackageSortByEnum(s)
+		*e = PackageSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageSortByEnum: %v", v)
 	}
 }

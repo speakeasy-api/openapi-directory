@@ -14,18 +14,22 @@ const (
 	EncryptionModeEnumSseKms EncryptionModeEnum = "SSE_KMS"
 )
 
+func (e EncryptionModeEnum) ToPointer() *EncryptionModeEnum {
+	return &e
+}
+
 func (e *EncryptionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSE_S3":
 		fallthrough
 	case "SSE_KMS":
-		*e = EncryptionModeEnum(s)
+		*e = EncryptionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EncryptionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for EncryptionModeEnum: %v", v)
 	}
 }

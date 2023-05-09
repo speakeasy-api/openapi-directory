@@ -14,19 +14,23 @@ const (
 	SslConfigTemplateClientCertTypeEnumPem                 SslConfigTemplateClientCertTypeEnum = "PEM"
 )
 
+func (e SslConfigTemplateClientCertTypeEnum) ToPointer() *SslConfigTemplateClientCertTypeEnum {
+	return &e
+}
+
 func (e *SslConfigTemplateClientCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = SslConfigTemplateClientCertTypeEnum(s)
+		*e = SslConfigTemplateClientCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigTemplateClientCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigTemplateClientCertTypeEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	SslConfigTemplateServerCertTypeEnumPem                 SslConfigTemplateServerCertTypeEnum = "PEM"
 )
 
+func (e SslConfigTemplateServerCertTypeEnum) ToPointer() *SslConfigTemplateServerCertTypeEnum {
+	return &e
+}
+
 func (e *SslConfigTemplateServerCertTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PEM":
-		*e = SslConfigTemplateServerCertTypeEnum(s)
+		*e = SslConfigTemplateServerCertTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigTemplateServerCertTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigTemplateServerCertTypeEnum: %v", v)
 	}
 }
 
@@ -62,21 +70,25 @@ const (
 	SslConfigTemplateSslTypeEnumMtls               SslConfigTemplateSslTypeEnum = "MTLS"
 )
 
+func (e SslConfigTemplateSslTypeEnum) ToPointer() *SslConfigTemplateSslTypeEnum {
+	return &e
+}
+
 func (e *SslConfigTemplateSslTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TLS":
 		fallthrough
 	case "MTLS":
-		*e = SslConfigTemplateSslTypeEnum(s)
+		*e = SslConfigTemplateSslTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslConfigTemplateSslTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslConfigTemplateSslTypeEnum: %v", v)
 	}
 }
 

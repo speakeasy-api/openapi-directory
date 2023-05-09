@@ -16,17 +16,21 @@ const (
 	PutContactPolicyXAmzTargetEnumSsmContactsPutContactPolicy PutContactPolicyXAmzTargetEnum = "SSMContacts.PutContactPolicy"
 )
 
+func (e PutContactPolicyXAmzTargetEnum) ToPointer() *PutContactPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutContactPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSMContacts.PutContactPolicy":
-		*e = PutContactPolicyXAmzTargetEnum(s)
+		*e = PutContactPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutContactPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutContactPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

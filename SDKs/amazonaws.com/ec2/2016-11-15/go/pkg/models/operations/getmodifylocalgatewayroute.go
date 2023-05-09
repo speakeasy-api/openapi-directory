@@ -15,17 +15,21 @@ const (
 	GETModifyLocalGatewayRouteActionEnumModifyLocalGatewayRoute GETModifyLocalGatewayRouteActionEnum = "ModifyLocalGatewayRoute"
 )
 
+func (e GETModifyLocalGatewayRouteActionEnum) ToPointer() *GETModifyLocalGatewayRouteActionEnum {
+	return &e
+}
+
 func (e *GETModifyLocalGatewayRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyLocalGatewayRoute":
-		*e = GETModifyLocalGatewayRouteActionEnum(s)
+		*e = GETModifyLocalGatewayRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyLocalGatewayRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyLocalGatewayRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 GETModifyLocalGatewayRouteVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyLocalGatewayRouteVersionEnum) ToPointer() *GETModifyLocalGatewayRouteVersionEnum {
+	return &e
+}
+
 func (e *GETModifyLocalGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyLocalGatewayRouteVersionEnum(s)
+		*e = GETModifyLocalGatewayRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyLocalGatewayRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyLocalGatewayRouteVersionEnum: %v", v)
 	}
 }
 

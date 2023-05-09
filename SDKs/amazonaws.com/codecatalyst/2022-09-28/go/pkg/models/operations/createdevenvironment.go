@@ -19,12 +19,16 @@ const (
 	CreateDevEnvironmentRequestBodyInstanceTypeEnumDevStandard1Xlarge CreateDevEnvironmentRequestBodyInstanceTypeEnum = "dev.standard1.xlarge"
 )
 
+func (e CreateDevEnvironmentRequestBodyInstanceTypeEnum) ToPointer() *CreateDevEnvironmentRequestBodyInstanceTypeEnum {
+	return &e
+}
+
 func (e *CreateDevEnvironmentRequestBodyInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dev.standard1.small":
 		fallthrough
 	case "dev.standard1.medium":
@@ -32,10 +36,10 @@ func (e *CreateDevEnvironmentRequestBodyInstanceTypeEnum) UnmarshalJSON(data []b
 	case "dev.standard1.large":
 		fallthrough
 	case "dev.standard1.xlarge":
-		*e = CreateDevEnvironmentRequestBodyInstanceTypeEnum(s)
+		*e = CreateDevEnvironmentRequestBodyInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDevEnvironmentRequestBodyInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDevEnvironmentRequestBodyInstanceTypeEnum: %v", v)
 	}
 }
 

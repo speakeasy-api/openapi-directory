@@ -14,18 +14,22 @@ const (
 	DocumentClassifierDataFormatEnumAugmentedManifest DocumentClassifierDataFormatEnum = "AUGMENTED_MANIFEST"
 )
 
+func (e DocumentClassifierDataFormatEnum) ToPointer() *DocumentClassifierDataFormatEnum {
+	return &e
+}
+
 func (e *DocumentClassifierDataFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPREHEND_CSV":
 		fallthrough
 	case "AUGMENTED_MANIFEST":
-		*e = DocumentClassifierDataFormatEnum(s)
+		*e = DocumentClassifierDataFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentClassifierDataFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentClassifierDataFormatEnum: %v", v)
 	}
 }

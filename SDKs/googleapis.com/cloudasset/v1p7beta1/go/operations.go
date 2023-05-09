@@ -34,7 +34,10 @@ func newOperations(defaultClient, securityClient HTTPClient, serverURL, language
 // CloudassetOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *operationsT) CloudassetOperationsGet(ctx context.Context, request operations.CloudassetOperationsGetRequest, security operations.CloudassetOperationsGetSecurity) (*operations.CloudassetOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1p7beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

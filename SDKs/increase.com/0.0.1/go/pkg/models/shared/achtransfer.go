@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"openapi/pkg/types"
 	"time"
 )
 
@@ -12,12 +13,16 @@ import (
 type AchTransferTransferApproval struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the transfer was approved.
 	ApprovedAt time.Time `json:"approved_at"`
+	// If the Transfer was approved by a user in the dashboard, the email address of that user.
+	ApprovedBy string `json:"approved_by"`
 }
 
 // AchTransferTransferCancellation - If your account requires approvals for transfers and the transfer was not approved, this will contain details of the cancellation.
 type AchTransferTransferCancellation struct {
 	// The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date and time at which the Transfer was canceled.
 	CanceledAt time.Time `json:"canceled_at"`
+	// If the Transfer was canceled by a user in the dashboard, the email address of that user.
+	CanceledBy string `json:"canceled_by"`
 }
 
 // AchTransferCurrencyEnum - The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transfer's currency. For ACH transfers this is always equal to `usd`.
@@ -32,12 +37,16 @@ const (
 	AchTransferCurrencyEnumUsd AchTransferCurrencyEnum = "USD"
 )
 
+func (e AchTransferCurrencyEnum) ToPointer() *AchTransferCurrencyEnum {
+	return &e
+}
+
 func (e *AchTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAD":
 		fallthrough
 	case "CHF":
@@ -49,10 +58,10 @@ func (e *AchTransferCurrencyEnum) UnmarshalJSON(data []byte) error {
 	case "JPY":
 		fallthrough
 	case "USD":
-		*e = AchTransferCurrencyEnum(s)
+		*e = AchTransferCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferCurrencyEnum: %v", v)
 	}
 }
 
@@ -64,19 +73,23 @@ const (
 	AchTransferFundingEnumSavings  AchTransferFundingEnum = "savings"
 )
 
+func (e AchTransferFundingEnum) ToPointer() *AchTransferFundingEnum {
+	return &e
+}
+
 func (e *AchTransferFundingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "checking":
 		fallthrough
 	case "savings":
-		*e = AchTransferFundingEnum(s)
+		*e = AchTransferFundingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferFundingEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferFundingEnum: %v", v)
 	}
 }
 
@@ -87,21 +100,24 @@ const (
 	AchTransferNetworkEnumAch AchTransferNetworkEnum = "ach"
 )
 
+func (e AchTransferNetworkEnum) ToPointer() *AchTransferNetworkEnum {
+	return &e
+}
+
 func (e *AchTransferNetworkEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach":
-		*e = AchTransferNetworkEnum(s)
+		*e = AchTransferNetworkEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferNetworkEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferNetworkEnum: %v", v)
 	}
 }
 
-// ACHTransferACHNotificationOfChange - If the receiving bank accepts the transfer but notifies that future transfers should use different details, this will contain those details.
 type ACHTransferACHNotificationOfChange struct {
 	// The type of change that occurred.
 	ChangeCode string `json:"change_code"`
@@ -140,12 +156,16 @@ const (
 	ACHTransferACHTransferReturnReturnReasonCodeEnumOther                                                     ACHTransferACHTransferReturnReturnReasonCodeEnum = "other"
 )
 
+func (e ACHTransferACHTransferReturnReturnReasonCodeEnum) ToPointer() *ACHTransferACHTransferReturnReturnReasonCodeEnum {
+	return &e
+}
+
 func (e *ACHTransferACHTransferReturnReturnReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_fund":
 		fallthrough
 	case "no_account":
@@ -191,10 +211,10 @@ func (e *ACHTransferACHTransferReturnReturnReasonCodeEnum) UnmarshalJSON(data []
 	case "incorrectly_coded_outbound_international_payment":
 		fallthrough
 	case "other":
-		*e = ACHTransferACHTransferReturnReturnReasonCodeEnum(s)
+		*e = ACHTransferACHTransferReturnReturnReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ACHTransferACHTransferReturnReturnReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ACHTransferACHTransferReturnReturnReasonCodeEnum: %v", v)
 	}
 }
 
@@ -219,21 +239,25 @@ const (
 	AchTransferStandardEntryClassCodeEnumInternetInitiated             AchTransferStandardEntryClassCodeEnum = "internet_initiated"
 )
 
+func (e AchTransferStandardEntryClassCodeEnum) ToPointer() *AchTransferStandardEntryClassCodeEnum {
+	return &e
+}
+
 func (e *AchTransferStandardEntryClassCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "corporate_credit_or_debit":
 		fallthrough
 	case "prearranged_payments_and_deposit":
 		fallthrough
 	case "internet_initiated":
-		*e = AchTransferStandardEntryClassCodeEnum(s)
+		*e = AchTransferStandardEntryClassCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferStandardEntryClassCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferStandardEntryClassCodeEnum: %v", v)
 	}
 }
 
@@ -243,6 +267,7 @@ type AchTransferStatusEnum string
 const (
 	AchTransferStatusEnumPendingApproval   AchTransferStatusEnum = "pending_approval"
 	AchTransferStatusEnumCanceled          AchTransferStatusEnum = "canceled"
+	AchTransferStatusEnumPendingReviewing  AchTransferStatusEnum = "pending_reviewing"
 	AchTransferStatusEnumPendingSubmission AchTransferStatusEnum = "pending_submission"
 	AchTransferStatusEnumSubmitted         AchTransferStatusEnum = "submitted"
 	AchTransferStatusEnumReturned          AchTransferStatusEnum = "returned"
@@ -250,15 +275,21 @@ const (
 	AchTransferStatusEnumRejected          AchTransferStatusEnum = "rejected"
 )
 
+func (e AchTransferStatusEnum) ToPointer() *AchTransferStatusEnum {
+	return &e
+}
+
 func (e *AchTransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_approval":
 		fallthrough
 	case "canceled":
+		fallthrough
+	case "pending_reviewing":
 		fallthrough
 	case "pending_submission":
 		fallthrough
@@ -269,10 +300,10 @@ func (e *AchTransferStatusEnum) UnmarshalJSON(data []byte) error {
 	case "requires_attention":
 		fallthrough
 	case "rejected":
-		*e = AchTransferStatusEnum(s)
+		*e = AchTransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferStatusEnum: %v", v)
 	}
 }
 
@@ -291,17 +322,21 @@ const (
 	AchTransferTypeEnumAchTransfer AchTransferTypeEnum = "ach_transfer"
 )
 
+func (e AchTransferTypeEnum) ToPointer() *AchTransferTypeEnum {
+	return &e
+}
+
 func (e *AchTransferTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_transfer":
-		*e = AchTransferTypeEnum(s)
+		*e = AchTransferTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchTransferTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchTransferTypeEnum: %v", v)
 	}
 }
 
@@ -331,6 +366,8 @@ type AchTransfer struct {
 	CreatedAt time.Time `json:"created_at"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transfer's currency. For ACH transfers this is always equal to `usd`.
 	Currency AchTransferCurrencyEnum `json:"currency"`
+	// The transfer effective date in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+	EffectiveDate types.Date `json:"effective_date"`
 	// The identifier of the External Account the transfer was made to, if any.
 	ExternalAccountID string `json:"external_account_id"`
 	// The type of the account to which the transfer will be sent.
@@ -344,7 +381,7 @@ type AchTransfer struct {
 	// The transfer's network.
 	Network AchTransferNetworkEnum `json:"network"`
 	// If the receiving bank accepts the transfer but notifies that future transfers should use different details, this will contain those details.
-	NotificationOfChange ACHTransferACHNotificationOfChange `json:"notification_of_change"`
+	NotificationsOfChange []ACHTransferACHNotificationOfChange `json:"notifications_of_change"`
 	// If your transfer is returned, this will contain details of the return.
 	Return ACHTransferACHTransferReturn `json:"return"`
 	// The American Bankers' Association (ABA) Routing Transit Number (RTN).
@@ -357,8 +394,6 @@ type AchTransfer struct {
 	Status AchTransferStatusEnum `json:"status"`
 	// After the transfer is submitted to FedACH, this will contain supplemental details.
 	Submission ACHTransferACHTransferSubmission `json:"submission"`
-	// If the transfer was created from a template, this will be the template's ID.
-	TemplateID string `json:"template_id"`
 	// The ID for the transaction funding the transfer.
 	TransactionID string `json:"transaction_id"`
 	// A constant representing the object's type. For this resource it will always be `ach_transfer`.

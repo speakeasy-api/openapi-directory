@@ -36,7 +36,10 @@ func newProvisioningJobs(defaultClient, securityClient HTTPClient, serverURL, la
 // Do NOT retry provisioning until the job reports finished or cancelled.
 func (s *provisioningJobs) GetProvisioningjobsJobID(ctx context.Context, request operations.GetProvisioningjobsJobIDRequest) (*operations.GetProvisioningjobsJobIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/provisioningjobs/{jobId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/provisioningjobs/{jobId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

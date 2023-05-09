@@ -15,17 +15,21 @@ const (
 	POSTCreateLoadBalancerListenersActionEnumCreateLoadBalancerListeners POSTCreateLoadBalancerListenersActionEnum = "CreateLoadBalancerListeners"
 )
 
+func (e POSTCreateLoadBalancerListenersActionEnum) ToPointer() *POSTCreateLoadBalancerListenersActionEnum {
+	return &e
+}
+
 func (e *POSTCreateLoadBalancerListenersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateLoadBalancerListeners":
-		*e = POSTCreateLoadBalancerListenersActionEnum(s)
+		*e = POSTCreateLoadBalancerListenersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLoadBalancerListenersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLoadBalancerListenersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateLoadBalancerListenersVersionEnumTwoThousandAndTwelve0601 POSTCreateLoadBalancerListenersVersionEnum = "2012-06-01"
 )
 
+func (e POSTCreateLoadBalancerListenersVersionEnum) ToPointer() *POSTCreateLoadBalancerListenersVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateLoadBalancerListenersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTCreateLoadBalancerListenersVersionEnum(s)
+		*e = POSTCreateLoadBalancerListenersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateLoadBalancerListenersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateLoadBalancerListenersVersionEnum: %v", v)
 	}
 }
 

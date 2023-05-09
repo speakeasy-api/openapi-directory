@@ -16,17 +16,21 @@ const (
 	GetDistributionLatestCacheResetXAmzTargetEnumLightsail20161128GetDistributionLatestCacheReset GetDistributionLatestCacheResetXAmzTargetEnum = "Lightsail_20161128.GetDistributionLatestCacheReset"
 )
 
+func (e GetDistributionLatestCacheResetXAmzTargetEnum) ToPointer() *GetDistributionLatestCacheResetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDistributionLatestCacheResetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetDistributionLatestCacheReset":
-		*e = GetDistributionLatestCacheResetXAmzTargetEnum(s)
+		*e = GetDistributionLatestCacheResetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDistributionLatestCacheResetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDistributionLatestCacheResetXAmzTargetEnum: %v", v)
 	}
 }
 

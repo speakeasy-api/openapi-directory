@@ -15,20 +15,24 @@ const (
 	AdminFilterAttributeLevelEnumFilterAttributeLevelDocumentPart AdminFilterAttributeLevelEnum = "FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART"
 )
 
+func (e AdminFilterAttributeLevelEnum) ToPointer() *AdminFilterAttributeLevelEnum {
+	return &e
+}
+
 func (e *AdminFilterAttributeLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILTER_ATTRIBUTE_LEVEL__UNDEFINED":
 		fallthrough
 	case "FILTER_ATTRIBUTE_LEVEL__DOCUMENT":
 		fallthrough
 	case "FILTER_ATTRIBUTE_LEVEL__DOCUMENT_PART":
-		*e = AdminFilterAttributeLevelEnum(s)
+		*e = AdminFilterAttributeLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminFilterAttributeLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminFilterAttributeLevelEnum: %v", v)
 	}
 }

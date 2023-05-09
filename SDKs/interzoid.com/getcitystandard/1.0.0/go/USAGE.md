@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcitystandardRequest{
+    ctx := context.Background()
+    res, err := s.CityDataStandardization.Getcitystandard(ctx, operations.GetcitystandardRequest{
         City: "Laruecester",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CityDataStandardization.Getcitystandard(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

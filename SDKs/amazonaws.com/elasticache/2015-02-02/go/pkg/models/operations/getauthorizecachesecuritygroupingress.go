@@ -15,17 +15,21 @@ const (
 	GETAuthorizeCacheSecurityGroupIngressActionEnumAuthorizeCacheSecurityGroupIngress GETAuthorizeCacheSecurityGroupIngressActionEnum = "AuthorizeCacheSecurityGroupIngress"
 )
 
+func (e GETAuthorizeCacheSecurityGroupIngressActionEnum) ToPointer() *GETAuthorizeCacheSecurityGroupIngressActionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeCacheSecurityGroupIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeCacheSecurityGroupIngress":
-		*e = GETAuthorizeCacheSecurityGroupIngressActionEnum(s)
+		*e = GETAuthorizeCacheSecurityGroupIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeCacheSecurityGroupIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeCacheSecurityGroupIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAuthorizeCacheSecurityGroupIngressVersionEnumTwoThousandAndFifteen0202 GETAuthorizeCacheSecurityGroupIngressVersionEnum = "2015-02-02"
 )
 
+func (e GETAuthorizeCacheSecurityGroupIngressVersionEnum) ToPointer() *GETAuthorizeCacheSecurityGroupIngressVersionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeCacheSecurityGroupIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = GETAuthorizeCacheSecurityGroupIngressVersionEnum(s)
+		*e = GETAuthorizeCacheSecurityGroupIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeCacheSecurityGroupIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeCacheSecurityGroupIngressVersionEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	DatacenterConnectorStateEnumActive           DatacenterConnectorStateEnum = "ACTIVE"
 )
 
+func (e DatacenterConnectorStateEnum) ToPointer() *DatacenterConnectorStateEnum {
+	return &e
+}
+
 func (e *DatacenterConnectorStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -33,10 +37,10 @@ func (e *DatacenterConnectorStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ACTIVE":
-		*e = DatacenterConnectorStateEnum(s)
+		*e = DatacenterConnectorStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatacenterConnectorStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DatacenterConnectorStateEnum: %v", v)
 	}
 }
 

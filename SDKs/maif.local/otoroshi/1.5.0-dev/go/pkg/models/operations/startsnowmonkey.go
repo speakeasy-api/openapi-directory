@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type StartSnowMonkeySecurity struct {
+	Password string `security:"scheme,type=http,subtype=basic,name=password"`
+	Username string `security:"scheme,type=http,subtype=basic,name=username"`
+}
+
 type StartSnowMonkeyResponse struct {
 	ContentType string
 	// Successful operation

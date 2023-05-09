@@ -62,19 +62,23 @@ const (
 	DriveFilesListCorpusEnumUser   DriveFilesListCorpusEnum = "user"
 )
 
+func (e DriveFilesListCorpusEnum) ToPointer() *DriveFilesListCorpusEnum {
+	return &e
+}
+
 func (e *DriveFilesListCorpusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "domain":
 		fallthrough
 	case "user":
-		*e = DriveFilesListCorpusEnum(s)
+		*e = DriveFilesListCorpusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFilesListCorpusEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFilesListCorpusEnum: %v", v)
 	}
 }
 

@@ -118,9 +118,13 @@ func (s *babelFeeController) CheckForNotifications(ctx context.Context) (*operat
 
 	return res, nil
 }
+
 func (s *babelFeeController) ErgoPayCreateBabelBox1(ctx context.Context, request operations.ErgoPayCreateBabelBox1Request) (*operations.ErgoPayCreateBabelBox1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/cancelbabel/{boxId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/cancelbabel/{boxId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,6 +208,7 @@ func (s *babelFeeController) ErgoPayCreateBabelBox1(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *babelFeeController) GetBabelFeeOverview(ctx context.Context) (*operations.GetBabelFeeOverviewResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/mosaik/babelfee/"

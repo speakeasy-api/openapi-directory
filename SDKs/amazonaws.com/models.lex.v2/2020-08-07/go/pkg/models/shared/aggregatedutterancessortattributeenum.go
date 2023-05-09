@@ -14,18 +14,22 @@ const (
 	AggregatedUtterancesSortAttributeEnumMissedCount AggregatedUtterancesSortAttributeEnum = "MissedCount"
 )
 
+func (e AggregatedUtterancesSortAttributeEnum) ToPointer() *AggregatedUtterancesSortAttributeEnum {
+	return &e
+}
+
 func (e *AggregatedUtterancesSortAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HitCount":
 		fallthrough
 	case "MissedCount":
-		*e = AggregatedUtterancesSortAttributeEnum(s)
+		*e = AggregatedUtterancesSortAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedUtterancesSortAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedUtterancesSortAttributeEnum: %v", v)
 	}
 }

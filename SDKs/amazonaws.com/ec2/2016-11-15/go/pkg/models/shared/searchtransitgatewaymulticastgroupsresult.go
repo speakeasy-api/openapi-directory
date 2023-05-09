@@ -15,19 +15,23 @@ const (
 	SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnumIgmp   SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum = "igmp"
 )
 
+func (e SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum) ToPointer() *SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum {
+	return &e
+}
+
 func (e *SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "igmp":
-		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum(s)
+		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsMemberTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnumTgwPeering           SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum = "tgw-peering"
 )
 
+func (e SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum) ToPointer() *SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum {
+	return &e
+}
+
 func (e *SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "vpn":
@@ -60,10 +68,10 @@ func (e *SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnu
 	case "peering":
 		fallthrough
 	case "tgw-peering":
-		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum(s)
+		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -75,19 +83,23 @@ const (
 	SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnumIgmp   SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum = "igmp"
 )
 
+func (e SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum) ToPointer() *SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum {
+	return &e
+}
+
 func (e *SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "static":
 		fallthrough
 	case "igmp":
-		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum(s)
+		*e = SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchTransitGatewayMulticastGroupsResultMulticastGroupsSourceTypeEnum: %v", v)
 	}
 }
 

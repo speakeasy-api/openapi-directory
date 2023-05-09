@@ -50,17 +50,21 @@ const (
 	GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnumUniform GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum = "uniform"
 )
 
+func (e GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum) ToPointer() *GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum {
+	return &e
+}
+
 func (e *GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "uniform":
-		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum(s)
+		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionUniformTypeEnum: %v", v)
 	}
 }
 
@@ -77,17 +81,21 @@ const (
 	GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnumLognormal GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum = "lognormal"
 )
 
+func (e GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum) ToPointer() *GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum {
+	return &e
+}
+
 func (e *GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lognormal":
-		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum(s)
+		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseDelayDistributionLogNormalTypeEnum: %v", v)
 	}
 }
 
@@ -176,12 +184,16 @@ const (
 	GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnumRandomDataThenClose    GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum = "RANDOM_DATA_THEN_CLOSE"
 )
 
+func (e GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum) ToPointer() *GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum {
+	return &e
+}
+
 func (e *GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTION_RESET_BY_PEER":
 		fallthrough
 	case "EMPTY_RESPONSE":
@@ -189,10 +201,10 @@ func (e *GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum) Unmar
 	case "MALFORMED_RESPONSE_CHUNK":
 		fallthrough
 	case "RANDOM_DATA_THEN_CLOSE":
-		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum(s)
+		*e = GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAdminMappingsStubMappingID200ApplicationJSONResponseFaultEnum: %v", v)
 	}
 }
 

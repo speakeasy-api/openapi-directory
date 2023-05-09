@@ -16,17 +16,21 @@ const (
 	CancelReplicationTaskAssessmentRunXAmzTargetEnumAmazonDmSv20160101CancelReplicationTaskAssessmentRun CancelReplicationTaskAssessmentRunXAmzTargetEnum = "AmazonDMSv20160101.CancelReplicationTaskAssessmentRun"
 )
 
+func (e CancelReplicationTaskAssessmentRunXAmzTargetEnum) ToPointer() *CancelReplicationTaskAssessmentRunXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelReplicationTaskAssessmentRunXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.CancelReplicationTaskAssessmentRun":
-		*e = CancelReplicationTaskAssessmentRunXAmzTargetEnum(s)
+		*e = CancelReplicationTaskAssessmentRunXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelReplicationTaskAssessmentRunXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelReplicationTaskAssessmentRunXAmzTargetEnum: %v", v)
 	}
 }
 

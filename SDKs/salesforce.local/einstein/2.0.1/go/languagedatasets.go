@@ -37,7 +37,10 @@ func newLanguageDatasets(defaultClient, securityClient HTTPClient, serverURL, la
 // Deletes the specified dataset and associated labels and examples.
 func (s *languageDatasets) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest, security operations.DeleteDatasetSecurity) (*operations.DeleteDatasetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *languageDatasets) DeleteDataset(ctx context.Context, request operations
 // Returns the status of a language dataset or model deletion. When you delete a dataset or model, the deletion may not occur immediately. Use this call to find out when the deletion is complete.
 func (s *languageDatasets) Get(ctx context.Context, request operations.GetRequest, security operations.GetSecurity) (*operations.GetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/deletion/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/deletion/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -127,7 +133,10 @@ func (s *languageDatasets) Get(ctx context.Context, request operations.GetReques
 // Returns a single dataset.
 func (s *languageDatasets) GetDataset(ctx context.Context, request operations.GetDatasetRequest, security operations.GetDatasetSecurity) (*operations.GetDatasetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/language/datasets/{datasetId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

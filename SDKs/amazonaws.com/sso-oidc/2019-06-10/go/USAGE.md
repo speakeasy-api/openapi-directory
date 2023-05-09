@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,15 +16,16 @@ func main() {
         }),
     )
 
-    req := operations.CreateTokenRequest{
+    ctx := context.Background()
+    res, err := s.CreateToken(ctx, operations.CreateTokenRequest{
         RequestBody: operations.CreateTokenRequestBody{
             ClientID: "corrupti",
             ClientSecret: "provident",
-            Code: "distinctio",
-            DeviceCode: "quibusdam",
+            Code: sdk.String("distinctio"),
+            DeviceCode: sdk.String("quibusdam"),
             GrantType: "unde",
-            RedirectURI: "nulla",
-            RefreshToken: "corrupti",
+            RedirectURI: sdk.String("nulla"),
+            RefreshToken: sdk.String("corrupti"),
             Scope: []string{
                 "vel",
                 "error",
@@ -33,17 +33,14 @@ func main() {
                 "suscipit",
             },
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateToken(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

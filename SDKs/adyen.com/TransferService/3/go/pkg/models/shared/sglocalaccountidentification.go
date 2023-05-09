@@ -14,17 +14,21 @@ const (
 	SGLocalAccountIdentificationTypeEnumSgLocal SGLocalAccountIdentificationTypeEnum = "sgLocal"
 )
 
+func (e SGLocalAccountIdentificationTypeEnum) ToPointer() *SGLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *SGLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sgLocal":
-		*e = SGLocalAccountIdentificationTypeEnum(s)
+		*e = SGLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SGLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SGLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

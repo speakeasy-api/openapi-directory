@@ -4,6 +4,7 @@ package shared
 
 // ClusterStatus - The detailed status of the cluster.
 type ClusterStatus struct {
+	ErrorDetails      []ErrorDetail             `json:"ErrorDetails,omitempty"`
 	State             *ClusterStateEnum         `json:"State,omitempty"`
 	StateChangeReason *ClusterStateChangeReason `json:"StateChangeReason,omitempty"`
 	Timeline          *ClusterTimeline          `json:"Timeline,omitempty"`

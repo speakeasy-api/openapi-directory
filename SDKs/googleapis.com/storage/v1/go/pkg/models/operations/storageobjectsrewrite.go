@@ -42,12 +42,16 @@ const (
 	StorageObjectsRewriteDestinationPredefinedACLEnumPublicRead             StorageObjectsRewriteDestinationPredefinedACLEnum = "publicRead"
 )
 
+func (e StorageObjectsRewriteDestinationPredefinedACLEnum) ToPointer() *StorageObjectsRewriteDestinationPredefinedACLEnum {
+	return &e
+}
+
 func (e *StorageObjectsRewriteDestinationPredefinedACLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authenticatedRead":
 		fallthrough
 	case "bucketOwnerFullControl":
@@ -59,10 +63,10 @@ func (e *StorageObjectsRewriteDestinationPredefinedACLEnum) UnmarshalJSON(data [
 	case "projectPrivate":
 		fallthrough
 	case "publicRead":
-		*e = StorageObjectsRewriteDestinationPredefinedACLEnum(s)
+		*e = StorageObjectsRewriteDestinationPredefinedACLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsRewriteDestinationPredefinedACLEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsRewriteDestinationPredefinedACLEnum: %v", v)
 	}
 }
 
@@ -74,19 +78,23 @@ const (
 	StorageObjectsRewriteProjectionEnumNoACL StorageObjectsRewriteProjectionEnum = "noAcl"
 )
 
+func (e StorageObjectsRewriteProjectionEnum) ToPointer() *StorageObjectsRewriteProjectionEnum {
+	return &e
+}
+
 func (e *StorageObjectsRewriteProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "noAcl":
-		*e = StorageObjectsRewriteProjectionEnum(s)
+		*e = StorageObjectsRewriteProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StorageObjectsRewriteProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for StorageObjectsRewriteProjectionEnum: %v", v)
 	}
 }
 

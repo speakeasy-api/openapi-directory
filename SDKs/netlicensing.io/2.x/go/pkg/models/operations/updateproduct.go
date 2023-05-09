@@ -22,19 +22,23 @@ const (
 	UpdateProductRequestBodyVatModeEnumNet   UpdateProductRequestBodyVatModeEnum = "NET"
 )
 
+func (e UpdateProductRequestBodyVatModeEnum) ToPointer() *UpdateProductRequestBodyVatModeEnum {
+	return &e
+}
+
 func (e *UpdateProductRequestBodyVatModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GROSS":
 		fallthrough
 	case "NET":
-		*e = UpdateProductRequestBodyVatModeEnum(s)
+		*e = UpdateProductRequestBodyVatModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateProductRequestBodyVatModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateProductRequestBodyVatModeEnum: %v", v)
 	}
 }
 

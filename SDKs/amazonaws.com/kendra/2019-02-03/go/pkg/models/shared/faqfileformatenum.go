@@ -15,20 +15,24 @@ const (
 	FaqFileFormatEnumJSON          FaqFileFormatEnum = "JSON"
 )
 
+func (e FaqFileFormatEnum) ToPointer() *FaqFileFormatEnum {
+	return &e
+}
+
 func (e *FaqFileFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "CSV_WITH_HEADER":
 		fallthrough
 	case "JSON":
-		*e = FaqFileFormatEnum(s)
+		*e = FaqFileFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FaqFileFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for FaqFileFormatEnum: %v", v)
 	}
 }

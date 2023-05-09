@@ -14,18 +14,22 @@ const (
 	DatasetActionTypeEnumContainer DatasetActionTypeEnum = "CONTAINER"
 )
 
+func (e DatasetActionTypeEnum) ToPointer() *DatasetActionTypeEnum {
+	return &e
+}
+
 func (e *DatasetActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY":
 		fallthrough
 	case "CONTAINER":
-		*e = DatasetActionTypeEnum(s)
+		*e = DatasetActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatasetActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatasetActionTypeEnum: %v", v)
 	}
 }

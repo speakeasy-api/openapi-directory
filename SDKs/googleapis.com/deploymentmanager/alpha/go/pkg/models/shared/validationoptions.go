@@ -17,12 +17,16 @@ const (
 	ValidationOptionsSchemaValidationEnumFail               ValidationOptionsSchemaValidationEnum = "FAIL"
 )
 
+func (e ValidationOptionsSchemaValidationEnum) ToPointer() *ValidationOptionsSchemaValidationEnum {
+	return &e
+}
+
 func (e *ValidationOptionsSchemaValidationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "IGNORE":
@@ -30,10 +34,10 @@ func (e *ValidationOptionsSchemaValidationEnum) UnmarshalJSON(data []byte) error
 	case "IGNORE_WITH_WARNINGS":
 		fallthrough
 	case "FAIL":
-		*e = ValidationOptionsSchemaValidationEnum(s)
+		*e = ValidationOptionsSchemaValidationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidationOptionsSchemaValidationEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidationOptionsSchemaValidationEnum: %v", v)
 	}
 }
 
@@ -49,12 +53,16 @@ const (
 	ValidationOptionsUndeclaredPropertiesEnumFail                ValidationOptionsUndeclaredPropertiesEnum = "FAIL"
 )
 
+func (e ValidationOptionsUndeclaredPropertiesEnum) ToPointer() *ValidationOptionsUndeclaredPropertiesEnum {
+	return &e
+}
+
 func (e *ValidationOptionsUndeclaredPropertiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "INCLUDE":
@@ -66,10 +74,10 @@ func (e *ValidationOptionsUndeclaredPropertiesEnum) UnmarshalJSON(data []byte) e
 	case "IGNORE_WITH_WARNINGS":
 		fallthrough
 	case "FAIL":
-		*e = ValidationOptionsUndeclaredPropertiesEnum(s)
+		*e = ValidationOptionsUndeclaredPropertiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidationOptionsUndeclaredPropertiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidationOptionsUndeclaredPropertiesEnum: %v", v)
 	}
 }
 

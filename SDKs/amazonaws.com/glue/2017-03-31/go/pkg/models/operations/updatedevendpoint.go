@@ -16,17 +16,21 @@ const (
 	UpdateDevEndpointXAmzTargetEnumAwsGlueUpdateDevEndpoint UpdateDevEndpointXAmzTargetEnum = "AWSGlue.UpdateDevEndpoint"
 )
 
+func (e UpdateDevEndpointXAmzTargetEnum) ToPointer() *UpdateDevEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDevEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateDevEndpoint":
-		*e = UpdateDevEndpointXAmzTargetEnum(s)
+		*e = UpdateDevEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDevEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDevEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

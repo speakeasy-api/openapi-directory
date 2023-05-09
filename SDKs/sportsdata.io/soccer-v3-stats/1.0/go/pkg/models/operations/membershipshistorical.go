@@ -17,19 +17,23 @@ const (
 	MembershipsHistoricalFormatEnumJSON MembershipsHistoricalFormatEnum = "json"
 )
 
+func (e MembershipsHistoricalFormatEnum) ToPointer() *MembershipsHistoricalFormatEnum {
+	return &e
+}
+
 func (e *MembershipsHistoricalFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = MembershipsHistoricalFormatEnum(s)
+		*e = MembershipsHistoricalFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MembershipsHistoricalFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for MembershipsHistoricalFormatEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateAppXAmzTargetEnumOpsWorks20130218CreateApp CreateAppXAmzTargetEnum = "OpsWorks_20130218.CreateApp"
 )
 
+func (e CreateAppXAmzTargetEnum) ToPointer() *CreateAppXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAppXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpsWorks_20130218.CreateApp":
-		*e = CreateAppXAmzTargetEnum(s)
+		*e = CreateAppXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAppXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAppXAmzTargetEnum: %v", v)
 	}
 }
 

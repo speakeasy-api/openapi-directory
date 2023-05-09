@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.KeyRevokeRequest{
+    ctx := context.Background()
+    res, err := s.Delete.KeyRevoke(ctx, operations.KeyRevokeRequest{
         Pk: "corrupti",
         Secret: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.Delete.KeyRevoke(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

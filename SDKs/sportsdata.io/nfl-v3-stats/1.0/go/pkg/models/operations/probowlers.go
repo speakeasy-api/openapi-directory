@@ -17,19 +17,23 @@ const (
 	ProBowlersFormatEnumJSON ProBowlersFormatEnum = "JSON"
 )
 
+func (e ProBowlersFormatEnum) ToPointer() *ProBowlersFormatEnum {
+	return &e
+}
+
 func (e *ProBowlersFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = ProBowlersFormatEnum(s)
+		*e = ProBowlersFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProBowlersFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ProBowlersFormatEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDeleteIpamResourceDiscoveryActionEnumDeleteIpamResourceDiscovery POSTDeleteIpamResourceDiscoveryActionEnum = "DeleteIpamResourceDiscovery"
 )
 
+func (e POSTDeleteIpamResourceDiscoveryActionEnum) ToPointer() *POSTDeleteIpamResourceDiscoveryActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteIpamResourceDiscoveryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteIpamResourceDiscovery":
-		*e = POSTDeleteIpamResourceDiscoveryActionEnum(s)
+		*e = POSTDeleteIpamResourceDiscoveryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteIpamResourceDiscoveryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteIpamResourceDiscoveryActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteIpamResourceDiscoveryVersionEnumTwoThousandAndSixteen1115 POSTDeleteIpamResourceDiscoveryVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteIpamResourceDiscoveryVersionEnum) ToPointer() *POSTDeleteIpamResourceDiscoveryVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteIpamResourceDiscoveryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteIpamResourceDiscoveryVersionEnum(s)
+		*e = POSTDeleteIpamResourceDiscoveryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteIpamResourceDiscoveryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteIpamResourceDiscoveryVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	SelectResourceConfigXAmzTargetEnumStarlingDoveServiceSelectResourceConfig SelectResourceConfigXAmzTargetEnum = "StarlingDoveService.SelectResourceConfig"
 )
 
+func (e SelectResourceConfigXAmzTargetEnum) ToPointer() *SelectResourceConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *SelectResourceConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.SelectResourceConfig":
-		*e = SelectResourceConfigXAmzTargetEnum(s)
+		*e = SelectResourceConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SelectResourceConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SelectResourceConfigXAmzTargetEnum: %v", v)
 	}
 }
 

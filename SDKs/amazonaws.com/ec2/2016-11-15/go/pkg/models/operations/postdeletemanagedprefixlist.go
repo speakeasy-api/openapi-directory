@@ -15,17 +15,21 @@ const (
 	POSTDeleteManagedPrefixListActionEnumDeleteManagedPrefixList POSTDeleteManagedPrefixListActionEnum = "DeleteManagedPrefixList"
 )
 
+func (e POSTDeleteManagedPrefixListActionEnum) ToPointer() *POSTDeleteManagedPrefixListActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteManagedPrefixListActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteManagedPrefixList":
-		*e = POSTDeleteManagedPrefixListActionEnum(s)
+		*e = POSTDeleteManagedPrefixListActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteManagedPrefixListActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteManagedPrefixListActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteManagedPrefixListVersionEnumTwoThousandAndSixteen1115 POSTDeleteManagedPrefixListVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteManagedPrefixListVersionEnum) ToPointer() *POSTDeleteManagedPrefixListVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteManagedPrefixListVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteManagedPrefixListVersionEnum(s)
+		*e = POSTDeleteManagedPrefixListVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteManagedPrefixListVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteManagedPrefixListVersionEnum: %v", v)
 	}
 }
 

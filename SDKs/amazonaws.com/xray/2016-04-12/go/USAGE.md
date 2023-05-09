@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,27 +16,25 @@ func main() {
         }),
     )
 
-    req := operations.BatchGetTracesRequest{
-        NextToken: "corrupti",
+    ctx := context.Background()
+    res, err := s.BatchGetTraces(ctx, operations.BatchGetTracesRequest{
+        NextToken: sdk.String("corrupti"),
         RequestBody: operations.BatchGetTracesRequestBody{
-            NextToken: "provident",
+            NextToken: sdk.String("provident"),
             TraceIds: []string{
                 "quibusdam",
                 "unde",
                 "nulla",
             },
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchGetTraces(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

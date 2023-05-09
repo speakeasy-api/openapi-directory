@@ -16,17 +16,21 @@ const (
 	ListEventsDetectionJobsXAmzTargetEnumComprehend20171127ListEventsDetectionJobs ListEventsDetectionJobsXAmzTargetEnum = "Comprehend_20171127.ListEventsDetectionJobs"
 )
 
+func (e ListEventsDetectionJobsXAmzTargetEnum) ToPointer() *ListEventsDetectionJobsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListEventsDetectionJobsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.ListEventsDetectionJobs":
-		*e = ListEventsDetectionJobsXAmzTargetEnum(s)
+		*e = ListEventsDetectionJobsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventsDetectionJobsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventsDetectionJobsXAmzTargetEnum: %v", v)
 	}
 }
 

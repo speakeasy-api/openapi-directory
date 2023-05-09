@@ -15,17 +15,21 @@ const (
 	GETUntagInstanceProfileActionEnumUntagInstanceProfile GETUntagInstanceProfileActionEnum = "UntagInstanceProfile"
 )
 
+func (e GETUntagInstanceProfileActionEnum) ToPointer() *GETUntagInstanceProfileActionEnum {
+	return &e
+}
+
 func (e *GETUntagInstanceProfileActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UntagInstanceProfile":
-		*e = GETUntagInstanceProfileActionEnum(s)
+		*e = GETUntagInstanceProfileActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagInstanceProfileActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagInstanceProfileActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUntagInstanceProfileVersionEnumTwoThousandAndTen0508 GETUntagInstanceProfileVersionEnum = "2010-05-08"
 )
 
+func (e GETUntagInstanceProfileVersionEnum) ToPointer() *GETUntagInstanceProfileVersionEnum {
+	return &e
+}
+
 func (e *GETUntagInstanceProfileVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUntagInstanceProfileVersionEnum(s)
+		*e = GETUntagInstanceProfileVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUntagInstanceProfileVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUntagInstanceProfileVersionEnum: %v", v)
 	}
 }
 

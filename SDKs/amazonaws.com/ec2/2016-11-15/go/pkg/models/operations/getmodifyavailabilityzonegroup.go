@@ -15,17 +15,21 @@ const (
 	GETModifyAvailabilityZoneGroupActionEnumModifyAvailabilityZoneGroup GETModifyAvailabilityZoneGroupActionEnum = "ModifyAvailabilityZoneGroup"
 )
 
+func (e GETModifyAvailabilityZoneGroupActionEnum) ToPointer() *GETModifyAvailabilityZoneGroupActionEnum {
+	return &e
+}
+
 func (e *GETModifyAvailabilityZoneGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyAvailabilityZoneGroup":
-		*e = GETModifyAvailabilityZoneGroupActionEnum(s)
+		*e = GETModifyAvailabilityZoneGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETModifyAvailabilityZoneGroupOptInStatusEnumNotOptedIn GETModifyAvailabilityZoneGroupOptInStatusEnum = "not-opted-in"
 )
 
+func (e GETModifyAvailabilityZoneGroupOptInStatusEnum) ToPointer() *GETModifyAvailabilityZoneGroupOptInStatusEnum {
+	return &e
+}
+
 func (e *GETModifyAvailabilityZoneGroupOptInStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "opted-in":
 		fallthrough
 	case "not-opted-in":
-		*e = GETModifyAvailabilityZoneGroupOptInStatusEnum(s)
+		*e = GETModifyAvailabilityZoneGroupOptInStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupOptInStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupOptInStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETModifyAvailabilityZoneGroupVersionEnumTwoThousandAndSixteen1115 GETModifyAvailabilityZoneGroupVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyAvailabilityZoneGroupVersionEnum) ToPointer() *GETModifyAvailabilityZoneGroupVersionEnum {
+	return &e
+}
+
 func (e *GETModifyAvailabilityZoneGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyAvailabilityZoneGroupVersionEnum(s)
+		*e = GETModifyAvailabilityZoneGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyAvailabilityZoneGroupVersionEnum: %v", v)
 	}
 }
 

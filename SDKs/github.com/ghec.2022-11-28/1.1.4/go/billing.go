@@ -41,7 +41,10 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-actions-billing-for-an-enterprise - API method documentation
 func (s *billing) BillingGetGithubActionsBillingGhe(ctx context.Context, request operations.BillingGetGithubActionsBillingGheRequest) (*operations.BillingGetGithubActionsBillingGheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *billing) BillingGetGithubActionsBillingGhe(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-actions-billing-for-an-organization - API method documentation
 func (s *billing) BillingGetGithubActionsBillingOrg(ctx context.Context, request operations.BillingGetGithubActionsBillingOrgRequest) (*operations.BillingGetGithubActionsBillingOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -141,7 +147,10 @@ func (s *billing) BillingGetGithubActionsBillingOrg(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-actions-billing-for-a-user - API method documentation
 func (s *billing) BillingGetGithubActionsBillingUser(ctx context.Context, request operations.BillingGetGithubActionsBillingUserRequest) (*operations.BillingGetGithubActionsBillingUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +200,10 @@ func (s *billing) BillingGetGithubActionsBillingUser(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#export-advanced-security-active-committers-data-for-enterprise - API method documentation
 func (s *billing) BillingGetGithubAdvancedSecurityBillingGhe(ctx context.Context, request operations.BillingGetGithubAdvancedSecurityBillingGheRequest) (*operations.BillingGetGithubAdvancedSecurityBillingGheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/advanced-security", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/advanced-security", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -257,7 +269,10 @@ func (s *billing) BillingGetGithubAdvancedSecurityBillingGhe(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-advanced-security-active-committers-for-an-organization - API method documentation
 func (s *billing) BillingGetGithubAdvancedSecurityBillingOrg(ctx context.Context, request operations.BillingGetGithubAdvancedSecurityBillingOrgRequest) (*operations.BillingGetGithubAdvancedSecurityBillingOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/advanced-security", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/advanced-security", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -321,7 +336,10 @@ func (s *billing) BillingGetGithubAdvancedSecurityBillingOrg(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-packages-billing-for-an-enterprise - API method documentation
 func (s *billing) BillingGetGithubPackagesBillingGhe(ctx context.Context, request operations.BillingGetGithubPackagesBillingGheRequest) (*operations.BillingGetGithubPackagesBillingGheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -371,7 +389,10 @@ func (s *billing) BillingGetGithubPackagesBillingGhe(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-packages-billing-for-an-organization - API method documentation
 func (s *billing) BillingGetGithubPackagesBillingOrg(ctx context.Context, request operations.BillingGetGithubPackagesBillingOrgRequest) (*operations.BillingGetGithubPackagesBillingOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -421,7 +442,10 @@ func (s *billing) BillingGetGithubPackagesBillingOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-github-packages-billing-for-a-user - API method documentation
 func (s *billing) BillingGetGithubPackagesBillingUser(ctx context.Context, request operations.BillingGetGithubPackagesBillingUserRequest) (*operations.BillingGetGithubPackagesBillingUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/packages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/packages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -471,7 +495,10 @@ func (s *billing) BillingGetGithubPackagesBillingUser(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-shared-storage-billing-for-an-enterprise - API method documentation
 func (s *billing) BillingGetSharedStorageBillingGhe(ctx context.Context, request operations.BillingGetSharedStorageBillingGheRequest) (*operations.BillingGetSharedStorageBillingGheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/shared-storage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/shared-storage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -521,7 +548,10 @@ func (s *billing) BillingGetSharedStorageBillingGhe(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-shared-storage-billing-for-an-organization - API method documentation
 func (s *billing) BillingGetSharedStorageBillingOrg(ctx context.Context, request operations.BillingGetSharedStorageBillingOrgRequest) (*operations.BillingGetSharedStorageBillingOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/shared-storage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/shared-storage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -571,7 +601,10 @@ func (s *billing) BillingGetSharedStorageBillingOrg(ctx context.Context, request
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/billing#get-shared-storage-billing-for-a-user - API method documentation
 func (s *billing) BillingGetSharedStorageBillingUser(ctx context.Context, request operations.BillingGetSharedStorageBillingUserRequest) (*operations.BillingGetSharedStorageBillingUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/shared-storage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{username}/settings/billing/shared-storage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

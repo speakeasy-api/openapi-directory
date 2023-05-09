@@ -15,20 +15,24 @@ const (
 	ApplicationProtocolEnumGrpc  ApplicationProtocolEnum = "grpc"
 )
 
+func (e ApplicationProtocolEnum) ToPointer() *ApplicationProtocolEnum {
+	return &e
+}
+
 func (e *ApplicationProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http":
 		fallthrough
 	case "http2":
 		fallthrough
 	case "grpc":
-		*e = ApplicationProtocolEnum(s)
+		*e = ApplicationProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationProtocolEnum: %v", v)
 	}
 }

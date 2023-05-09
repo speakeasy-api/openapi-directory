@@ -34,12 +34,16 @@ const (
 	ResourceStatusEnumRollbackFailed           ResourceStatusEnum = "ROLLBACK_FAILED"
 )
 
+func (e ResourceStatusEnum) ToPointer() *ResourceStatusEnum {
+	return &e
+}
+
 func (e *ResourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_IN_PROGRESS":
 		fallthrough
 	case "CREATE_FAILED":
@@ -83,9 +87,9 @@ func (e *ResourceStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ROLLBACK_COMPLETE":
 		fallthrough
 	case "ROLLBACK_FAILED":
-		*e = ResourceStatusEnum(s)
+		*e = ResourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceStatusEnum: %v", v)
 	}
 }

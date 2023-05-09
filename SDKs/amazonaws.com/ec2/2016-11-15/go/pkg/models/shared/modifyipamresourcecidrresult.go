@@ -17,12 +17,16 @@ const (
 	ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnumIgnored      ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum = "ignored"
 )
 
+func (e ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum) ToPointer() *ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum {
+	return &e
+}
+
 func (e *ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "compliant":
 		fallthrough
 	case "noncompliant":
@@ -30,10 +34,10 @@ func (e *ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum) Unmar
 	case "unmanaged":
 		fallthrough
 	case "ignored":
-		*e = ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum(s)
+		*e = ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrComplianceStatusEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnumIgnored   ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum = "ignored"
 )
 
+func (e ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum) ToPointer() *ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum {
+	return &e
+}
+
 func (e *ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "managed":
 		fallthrough
 	case "unmanaged":
 		fallthrough
 	case "ignored":
-		*e = ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum(s)
+		*e = ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrManagementStateEnum: %v", v)
 	}
 }
 
@@ -73,21 +81,25 @@ const (
 	ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnumIgnored        ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum = "ignored"
 )
 
+func (e ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum) ToPointer() *ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum {
+	return &e
+}
+
 func (e *ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "overlapping":
 		fallthrough
 	case "nonoverlapping":
 		fallthrough
 	case "ignored":
-		*e = ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum(s)
+		*e = ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrOverlapStatusEnum: %v", v)
 	}
 }
 
@@ -108,12 +120,16 @@ const (
 	ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnumIpv6Pool       ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum = "ipv6-pool"
 )
 
+func (e ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum) ToPointer() *ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum {
+	return &e
+}
+
 func (e *ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vpc":
 		fallthrough
 	case "subnet":
@@ -123,10 +139,10 @@ func (e *ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum) Unmarshal
 	case "public-ipv4-pool":
 		fallthrough
 	case "ipv6-pool":
-		*e = ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum(s)
+		*e = ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyIpamResourceCidrResultIpamResourceCidrResourceTypeEnum: %v", v)
 	}
 }
 

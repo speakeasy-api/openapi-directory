@@ -21,12 +21,16 @@ const (
 	OfficeLevelsEnumSpecial             OfficeLevelsEnum = "special"
 )
 
+func (e OfficeLevelsEnum) ToPointer() *OfficeLevelsEnum {
+	return &e
+}
+
 func (e *OfficeLevelsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "international":
 		fallthrough
 	case "country":
@@ -44,10 +48,10 @@ func (e *OfficeLevelsEnum) UnmarshalJSON(data []byte) error {
 	case "subLocality2":
 		fallthrough
 	case "special":
-		*e = OfficeLevelsEnum(s)
+		*e = OfficeLevelsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OfficeLevelsEnum: %s", s)
+		return fmt.Errorf("invalid value for OfficeLevelsEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	OfficeRolesEnumOtherRole              OfficeRolesEnum = "otherRole"
 )
 
+func (e OfficeRolesEnum) ToPointer() *OfficeRolesEnum {
+	return &e
+}
+
 func (e *OfficeRolesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "headOfState":
 		fallthrough
 	case "headOfGovernment":
@@ -97,10 +105,10 @@ func (e *OfficeRolesEnum) UnmarshalJSON(data []byte) error {
 	case "specialPurposeOfficer":
 		fallthrough
 	case "otherRole":
-		*e = OfficeRolesEnum(s)
+		*e = OfficeRolesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OfficeRolesEnum: %s", s)
+		return fmt.Errorf("invalid value for OfficeRolesEnum: %v", v)
 	}
 }
 

@@ -24,19 +24,23 @@ const (
 	CalculateRouteRequestBodyDistanceUnitEnumMiles      CalculateRouteRequestBodyDistanceUnitEnum = "Miles"
 )
 
+func (e CalculateRouteRequestBodyDistanceUnitEnum) ToPointer() *CalculateRouteRequestBodyDistanceUnitEnum {
+	return &e
+}
+
 func (e *CalculateRouteRequestBodyDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kilometers":
 		fallthrough
 	case "Miles":
-		*e = CalculateRouteRequestBodyDistanceUnitEnum(s)
+		*e = CalculateRouteRequestBodyDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalculateRouteRequestBodyDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for CalculateRouteRequestBodyDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	CalculateRouteRequestBodyTravelModeEnumMotorcycle CalculateRouteRequestBodyTravelModeEnum = "Motorcycle"
 )
 
+func (e CalculateRouteRequestBodyTravelModeEnum) ToPointer() *CalculateRouteRequestBodyTravelModeEnum {
+	return &e
+}
+
 func (e *CalculateRouteRequestBodyTravelModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Car":
 		fallthrough
 	case "Truck":
@@ -66,10 +74,10 @@ func (e *CalculateRouteRequestBodyTravelModeEnum) UnmarshalJSON(data []byte) err
 	case "Bicycle":
 		fallthrough
 	case "Motorcycle":
-		*e = CalculateRouteRequestBodyTravelModeEnum(s)
+		*e = CalculateRouteRequestBodyTravelModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalculateRouteRequestBodyTravelModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CalculateRouteRequestBodyTravelModeEnum: %v", v)
 	}
 }
 

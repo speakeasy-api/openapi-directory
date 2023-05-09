@@ -90,7 +90,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsCreate(ctx 
 // DisplayvideoCustomBiddingAlgorithmsGet - Gets a custom bidding algorithm.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsGetRequest, security operations.DisplayvideoCustomBiddingAlgorithmsGetSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +189,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsList(ctx co
 // DisplayvideoCustomBiddingAlgorithmsPatch - Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if successful.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsPatchRequest, security operations.DisplayvideoCustomBiddingAlgorithmsPatchSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomBiddingAlgorithmInput", "json")
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsPatch(ctx c
 // DisplayvideoCustomBiddingAlgorithmsScriptsCreate - Creates a new custom bidding script. Returns the newly created script if successful.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCreate(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomBiddingScriptInput", "json")
 	if err != nil {
@@ -296,7 +305,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsCrea
 // DisplayvideoCustomBiddingAlgorithmsScriptsGet - Gets a custom bidding script.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsGet(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts/{customBiddingScriptId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -344,7 +356,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsGet(
 // DisplayvideoCustomBiddingAlgorithmsScriptsList - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsList(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsScriptsListRequest, security operations.DisplayvideoCustomBiddingAlgorithmsScriptsListSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsScriptsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}/scripts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -392,7 +407,10 @@ func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsScriptsList
 // DisplayvideoCustomBiddingAlgorithmsUploadScript - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
 func (s *customBiddingAlgorithms) DisplayvideoCustomBiddingAlgorithmsUploadScript(ctx context.Context, request operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptRequest, security operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptSecurity) (*operations.DisplayvideoCustomBiddingAlgorithmsUploadScriptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/customBiddingAlgorithms/{customBiddingAlgorithmId}:uploadScript", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

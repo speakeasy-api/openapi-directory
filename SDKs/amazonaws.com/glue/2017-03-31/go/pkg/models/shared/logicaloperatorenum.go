@@ -13,16 +13,20 @@ const (
 	LogicalOperatorEnumEquals LogicalOperatorEnum = "EQUALS"
 )
 
+func (e LogicalOperatorEnum) ToPointer() *LogicalOperatorEnum {
+	return &e
+}
+
 func (e *LogicalOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
-		*e = LogicalOperatorEnum(s)
+		*e = LogicalOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogicalOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for LogicalOperatorEnum: %v", v)
 	}
 }

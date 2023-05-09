@@ -70,12 +70,16 @@ const (
 	AppInstanceTypeEnumMlGeospatialInteractive AppInstanceTypeEnum = "ml.geospatial.interactive"
 )
 
+func (e AppInstanceTypeEnum) ToPointer() *AppInstanceTypeEnum {
+	return &e
+}
+
 func (e *AppInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "system":
 		fallthrough
 	case "ml.t3.micro":
@@ -191,9 +195,9 @@ func (e *AppInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ml.g5.48xlarge":
 		fallthrough
 	case "ml.geospatial.interactive":
-		*e = AppInstanceTypeEnum(s)
+		*e = AppInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInstanceTypeEnum: %v", v)
 	}
 }

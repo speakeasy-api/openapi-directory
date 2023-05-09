@@ -17,12 +17,16 @@ const (
 	ListJobsSortAttributeNameEnumJobType   ListJobsSortAttributeNameEnum = "jobType"
 )
 
+func (e ListJobsSortAttributeNameEnum) ToPointer() *ListJobsSortAttributeNameEnum {
+	return &e
+}
+
 func (e *ListJobsSortAttributeNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "createdAt":
 		fallthrough
 	case "jobStatus":
@@ -30,9 +34,9 @@ func (e *ListJobsSortAttributeNameEnum) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "jobType":
-		*e = ListJobsSortAttributeNameEnum(s)
+		*e = ListJobsSortAttributeNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListJobsSortAttributeNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ListJobsSortAttributeNameEnum: %v", v)
 	}
 }

@@ -40,12 +40,16 @@ const (
 	OcrLanguageEnumSk     OcrLanguageEnum = "sk"
 )
 
+func (e OcrLanguageEnum) ToPointer() *OcrLanguageEnum {
+	return &e
+}
+
 func (e *OcrLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unk":
 		fallthrough
 	case "zh-Hans":
@@ -99,9 +103,9 @@ func (e *OcrLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "sr-Latn":
 		fallthrough
 	case "sk":
-		*e = OcrLanguageEnum(s)
+		*e = OcrLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OcrLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for OcrLanguageEnum: %v", v)
 	}
 }

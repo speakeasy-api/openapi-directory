@@ -13,21 +13,17 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/wso2apistore.com/transfor
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
     s := sdk.New()
 
-    req := "corrupti"
-
     ctx := context.Background()
-    res, err := s.PostJsontoxml(ctx, req)
+    res, err := s.PostJsontoxml(ctx, "corrupti")
     if err != nil {
         log.Fatal(err)
     }
@@ -42,10 +38,10 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `PostJsontoxml`
-* `PostXmltojson`
+* [PostJsontoxml](docs/sdk/README.md#postjsontoxml)
+* [PostXmltojson](docs/sdk/README.md#postxmltojson)
 <!-- End SDK Available Operations -->
 
 ### Maturity

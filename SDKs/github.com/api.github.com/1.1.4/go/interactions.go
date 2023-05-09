@@ -85,7 +85,10 @@ func (s *interactions) InteractionsGetRestrictionsForAuthenticatedUser(ctx conte
 // https://docs.github.com/rest/reference/interactions#get-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsGetRestrictionsForOrg(ctx context.Context, request operations.InteractionsGetRestrictionsForOrgRequest) (*operations.InteractionsGetRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *interactions) InteractionsGetRestrictionsForOrg(ctx context.Context, re
 // https://docs.github.com/rest/reference/interactions#get-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsGetRestrictionsForRepo(ctx context.Context, request operations.InteractionsGetRestrictionsForRepoRequest) (*operations.InteractionsGetRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -214,7 +220,10 @@ func (s *interactions) InteractionsRemoveRestrictionsForAuthenticatedUser(ctx co
 // https://docs.github.com/rest/reference/interactions#remove-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsRemoveRestrictionsForOrg(ctx context.Context, request operations.InteractionsRemoveRestrictionsForOrgRequest) (*operations.InteractionsRemoveRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -251,7 +260,10 @@ func (s *interactions) InteractionsRemoveRestrictionsForOrg(ctx context.Context,
 // https://docs.github.com/rest/reference/interactions#remove-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsRemoveRestrictionsForRepo(ctx context.Context, request operations.InteractionsRemoveRestrictionsForRepoRequest) (*operations.InteractionsRemoveRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -356,7 +368,10 @@ func (s *interactions) InteractionsSetRestrictionsForAuthenticatedUser(ctx conte
 // https://docs.github.com/rest/reference/interactions#set-interaction-restrictions-for-an-organization - API method documentation
 func (s *interactions) InteractionsSetRestrictionsForOrg(ctx context.Context, request operations.InteractionsSetRestrictionsForOrgRequest) (*operations.InteractionsSetRestrictionsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InteractionLimit", "json")
 	if err != nil {
@@ -422,7 +437,10 @@ func (s *interactions) InteractionsSetRestrictionsForOrg(ctx context.Context, re
 // https://docs.github.com/rest/reference/interactions#set-interaction-restrictions-for-a-repository - API method documentation
 func (s *interactions) InteractionsSetRestrictionsForRepo(ctx context.Context, request operations.InteractionsSetRestrictionsForRepoRequest) (*operations.InteractionsSetRestrictionsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/interaction-limits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InteractionLimit", "json")
 	if err != nil {

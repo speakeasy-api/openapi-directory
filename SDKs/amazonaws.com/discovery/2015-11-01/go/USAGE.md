@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.AssociateConfigurationItemsToApplicationRequest{
+    ctx := context.Background()
+    res, err := s.AssociateConfigurationItemsToApplication(ctx, operations.AssociateConfigurationItemsToApplicationRequest{
         AssociateConfigurationItemsToApplicationRequest: shared.AssociateConfigurationItemsToApplicationRequest{
             ApplicationConfigurationID: "corrupti",
             ConfigurationIds: []string{
@@ -26,18 +27,15 @@ func main() {
                 "unde",
             },
         },
-        XAmzAlgorithm: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
-        XAmzTarget: "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateConfigurationItemsToApplication(ctx, req)
+        XAmzAlgorithm: sdk.String("nulla"),
+        XAmzContentSha256: sdk.String("corrupti"),
+        XAmzCredential: sdk.String("illum"),
+        XAmzDate: sdk.String("vel"),
+        XAmzSecurityToken: sdk.String("error"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+        XAmzTarget: operations.AssociateConfigurationItemsToApplicationXAmzTargetEnumAwsPoseidonServiceV20151101AssociateConfigurationItemsToApplication,
+    })
     if err != nil {
         log.Fatal(err)
     }

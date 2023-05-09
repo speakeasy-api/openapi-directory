@@ -42,12 +42,16 @@ const (
 	FleetErrorCodeEnumDomainJoinInternalServiceError                    FleetErrorCodeEnum = "DOMAIN_JOIN_INTERNAL_SERVICE_ERROR"
 )
 
+func (e FleetErrorCodeEnum) ToPointer() *FleetErrorCodeEnum {
+	return &e
+}
+
 func (e *FleetErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IAM_SERVICE_ROLE_MISSING_ENI_DESCRIBE_ACTION":
 		fallthrough
 	case "IAM_SERVICE_ROLE_MISSING_ENI_CREATE_ACTION":
@@ -107,9 +111,9 @@ func (e *FleetErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DOMAIN_JOIN_NERR_PASSWORD_EXPIRED":
 		fallthrough
 	case "DOMAIN_JOIN_INTERNAL_SERVICE_ERROR":
-		*e = FleetErrorCodeEnum(s)
+		*e = FleetErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FleetErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for FleetErrorCodeEnum: %v", v)
 	}
 }

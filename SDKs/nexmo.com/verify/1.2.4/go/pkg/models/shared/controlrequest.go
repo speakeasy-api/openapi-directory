@@ -15,19 +15,23 @@ const (
 	ControlRequestCmdEnumTriggerNextEvent ControlRequestCmdEnum = "trigger_next_event"
 )
 
+func (e ControlRequestCmdEnum) ToPointer() *ControlRequestCmdEnum {
+	return &e
+}
+
 func (e *ControlRequestCmdEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cancel":
 		fallthrough
 	case "trigger_next_event":
-		*e = ControlRequestCmdEnum(s)
+		*e = ControlRequestCmdEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ControlRequestCmdEnum: %s", s)
+		return fmt.Errorf("invalid value for ControlRequestCmdEnum: %v", v)
 	}
 }
 

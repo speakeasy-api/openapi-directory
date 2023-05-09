@@ -16,17 +16,21 @@ const (
 	InitializeClusterXAmzTargetEnumBaldrAPIServiceInitializeCluster InitializeClusterXAmzTargetEnum = "BaldrApiService.InitializeCluster"
 )
 
+func (e InitializeClusterXAmzTargetEnum) ToPointer() *InitializeClusterXAmzTargetEnum {
+	return &e
+}
+
 func (e *InitializeClusterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BaldrApiService.InitializeCluster":
-		*e = InitializeClusterXAmzTargetEnum(s)
+		*e = InitializeClusterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InitializeClusterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for InitializeClusterXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETDeleteAnalysisSchemeActionEnumDeleteAnalysisScheme GETDeleteAnalysisSchemeActionEnum = "DeleteAnalysisScheme"
 )
 
+func (e GETDeleteAnalysisSchemeActionEnum) ToPointer() *GETDeleteAnalysisSchemeActionEnum {
+	return &e
+}
+
 func (e *GETDeleteAnalysisSchemeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteAnalysisScheme":
-		*e = GETDeleteAnalysisSchemeActionEnum(s)
+		*e = GETDeleteAnalysisSchemeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAnalysisSchemeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAnalysisSchemeActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteAnalysisSchemeVersionEnumTwoThousandAndThirteen0101 GETDeleteAnalysisSchemeVersionEnum = "2013-01-01"
 )
 
+func (e GETDeleteAnalysisSchemeVersionEnum) ToPointer() *GETDeleteAnalysisSchemeVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteAnalysisSchemeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETDeleteAnalysisSchemeVersionEnum(s)
+		*e = GETDeleteAnalysisSchemeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteAnalysisSchemeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteAnalysisSchemeVersionEnum: %v", v)
 	}
 }
 

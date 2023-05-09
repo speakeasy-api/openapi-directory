@@ -32,19 +32,23 @@ const (
 	DirectoryOrgunitsListTypeEnumChildren DirectoryOrgunitsListTypeEnum = "children"
 )
 
+func (e DirectoryOrgunitsListTypeEnum) ToPointer() *DirectoryOrgunitsListTypeEnum {
+	return &e
+}
+
 func (e *DirectoryOrgunitsListTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "children":
-		*e = DirectoryOrgunitsListTypeEnum(s)
+		*e = DirectoryOrgunitsListTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryOrgunitsListTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryOrgunitsListTypeEnum: %v", v)
 	}
 }
 

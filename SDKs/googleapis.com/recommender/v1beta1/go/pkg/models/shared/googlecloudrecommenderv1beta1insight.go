@@ -20,12 +20,16 @@ const (
 	GoogleCloudRecommenderV1beta1InsightCategoryEnumReliability         GoogleCloudRecommenderV1beta1InsightCategoryEnum = "RELIABILITY"
 )
 
+func (e GoogleCloudRecommenderV1beta1InsightCategoryEnum) ToPointer() *GoogleCloudRecommenderV1beta1InsightCategoryEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1beta1InsightCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "COST":
@@ -39,10 +43,10 @@ func (e *GoogleCloudRecommenderV1beta1InsightCategoryEnum) UnmarshalJSON(data []
 	case "SUSTAINABILITY":
 		fallthrough
 	case "RELIABILITY":
-		*e = GoogleCloudRecommenderV1beta1InsightCategoryEnum(s)
+		*e = GoogleCloudRecommenderV1beta1InsightCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1InsightCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1InsightCategoryEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	GoogleCloudRecommenderV1beta1InsightSeverityEnumCritical            GoogleCloudRecommenderV1beta1InsightSeverityEnum = "CRITICAL"
 )
 
+func (e GoogleCloudRecommenderV1beta1InsightSeverityEnum) ToPointer() *GoogleCloudRecommenderV1beta1InsightSeverityEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1beta1InsightSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "LOW":
@@ -72,10 +80,10 @@ func (e *GoogleCloudRecommenderV1beta1InsightSeverityEnum) UnmarshalJSON(data []
 	case "HIGH":
 		fallthrough
 	case "CRITICAL":
-		*e = GoogleCloudRecommenderV1beta1InsightSeverityEnum(s)
+		*e = GoogleCloudRecommenderV1beta1InsightSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1InsightSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1beta1InsightSeverityEnum: %v", v)
 	}
 }
 

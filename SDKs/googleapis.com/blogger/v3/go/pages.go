@@ -34,7 +34,10 @@ func newPages(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // BloggerPagesDelete - Deletes a page by blog id and page id.
 func (s *pages) BloggerPagesDelete(ctx context.Context, request operations.BloggerPagesDeleteRequest, security operations.BloggerPagesDeleteSecurity) (*operations.BloggerPagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *pages) BloggerPagesDelete(ctx context.Context, request operations.Blogg
 // BloggerPagesGet - Gets a page by blog id and page id.
 func (s *pages) BloggerPagesGet(ctx context.Context, request operations.BloggerPagesGetRequest, security operations.BloggerPagesGetSecurity) (*operations.BloggerPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *pages) BloggerPagesGet(ctx context.Context, request operations.BloggerP
 // BloggerPagesInsert - Inserts a page.
 func (s *pages) BloggerPagesInsert(ctx context.Context, request operations.BloggerPagesInsertRequest, security operations.BloggerPagesInsertSecurity) (*operations.BloggerPagesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Page", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *pages) BloggerPagesInsert(ctx context.Context, request operations.Blogg
 // BloggerPagesList - Lists pages.
 func (s *pages) BloggerPagesList(ctx context.Context, request operations.BloggerPagesListRequest, security operations.BloggerPagesListSecurity) (*operations.BloggerPagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *pages) BloggerPagesList(ctx context.Context, request operations.Blogger
 // BloggerPagesPatch - Patches a page.
 func (s *pages) BloggerPagesPatch(ctx context.Context, request operations.BloggerPagesPatchRequest, security operations.BloggerPagesPatchSecurity) (*operations.BloggerPagesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Page", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *pages) BloggerPagesPatch(ctx context.Context, request operations.Blogge
 // BloggerPagesPublish - Publishes a page.
 func (s *pages) BloggerPagesPublish(ctx context.Context, request operations.BloggerPagesPublishRequest, security operations.BloggerPagesPublishSecurity) (*operations.BloggerPagesPublishResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -327,7 +345,10 @@ func (s *pages) BloggerPagesPublish(ctx context.Context, request operations.Blog
 // BloggerPagesRevert - Reverts a published or scheduled page to draft state.
 func (s *pages) BloggerPagesRevert(ctx context.Context, request operations.BloggerPagesRevertRequest, security operations.BloggerPagesRevertSecurity) (*operations.BloggerPagesRevertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}/revert", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}/revert", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -375,7 +396,10 @@ func (s *pages) BloggerPagesRevert(ctx context.Context, request operations.Blogg
 // BloggerPagesUpdate - Updates a page by blog id and page id.
 func (s *pages) BloggerPagesUpdate(ctx context.Context, request operations.BloggerPagesUpdateRequest, security operations.BloggerPagesUpdateSecurity) (*operations.BloggerPagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v3/blogs/{blogId}/pages/{pageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Page", "json")
 	if err != nil {

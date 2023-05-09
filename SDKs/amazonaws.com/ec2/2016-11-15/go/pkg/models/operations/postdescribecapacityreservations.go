@@ -15,17 +15,21 @@ const (
 	POSTDescribeCapacityReservationsActionEnumDescribeCapacityReservations POSTDescribeCapacityReservationsActionEnum = "DescribeCapacityReservations"
 )
 
+func (e POSTDescribeCapacityReservationsActionEnum) ToPointer() *POSTDescribeCapacityReservationsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeCapacityReservationsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeCapacityReservations":
-		*e = POSTDescribeCapacityReservationsActionEnum(s)
+		*e = POSTDescribeCapacityReservationsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeCapacityReservationsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeCapacityReservationsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeCapacityReservationsVersionEnumTwoThousandAndSixteen1115 POSTDescribeCapacityReservationsVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeCapacityReservationsVersionEnum) ToPointer() *POSTDescribeCapacityReservationsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeCapacityReservationsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeCapacityReservationsVersionEnum(s)
+		*e = POSTDescribeCapacityReservationsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeCapacityReservationsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeCapacityReservationsVersionEnum: %v", v)
 	}
 }
 

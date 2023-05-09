@@ -23,12 +23,16 @@ const (
 	StudioComponentStatusCodeEnumInternalError                   StudioComponentStatusCodeEnum = "INTERNAL_ERROR"
 )
 
+func (e StudioComponentStatusCodeEnum) ToPointer() *StudioComponentStatusCodeEnum {
+	return &e
+}
+
 func (e *StudioComponentStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_DIRECTORY_ALREADY_EXISTS":
 		fallthrough
 	case "STUDIO_COMPONENT_CREATED":
@@ -48,9 +52,9 @@ func (e *StudioComponentStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "STUDIO_COMPONENT_DELETE_IN_PROGRESS":
 		fallthrough
 	case "INTERNAL_ERROR":
-		*e = StudioComponentStatusCodeEnum(s)
+		*e = StudioComponentStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioComponentStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioComponentStatusCodeEnum: %v", v)
 	}
 }

@@ -18,12 +18,16 @@ const (
 	ErrorHandlerErrorCodeEnumErrorCodeTimeout      ErrorHandlerErrorCodeEnum = "ERROR_CODE_TIMEOUT"
 )
 
+func (e ErrorHandlerErrorCodeEnum) ToPointer() *ErrorHandlerErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorHandlerErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "ERROR_CODE_DEFAULT":
@@ -33,10 +37,10 @@ func (e *ErrorHandlerErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR_CODE_DOS_API_DENIAL":
 		fallthrough
 	case "ERROR_CODE_TIMEOUT":
-		*e = ErrorHandlerErrorCodeEnum(s)
+		*e = ErrorHandlerErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorHandlerErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorHandlerErrorCodeEnum: %v", v)
 	}
 }
 

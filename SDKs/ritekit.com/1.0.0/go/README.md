@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/ritekit.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AnimateImageRequest{
+    ctx := context.Background()
+    res, err := s.AnimateImage(ctx, operations.AnimateImageRequest{
         Type: "corrupti",
         URL: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.AnimateImage(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,21 +42,21 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AnimateImage` - Animate Image
-* `AutoEmojify` - Auto-Emojify
-* `AutoHashtag` - Auto-Hashtag
-* `CompanyLogo` - Company Logo
-* `EmojiSuggestions` - Emoji Suggestions
-* `HashtagHistory` - Hashtag History
-* `HashtagStats` - Hashtag Stats
-* `HashtagSuggestions` - Hashtag Suggestions
-* `HashtagsCleaner` - Hashtags cleaner
-* `ListOfCTAs` - List of CTAs
-* `ShortenLink` - Shorten Link
-* `TextToImage` - Text to Image
-* `TrendingHashtags` - Trending Hashtags
+* [AnimateImage](docs/sdk/README.md#animateimage) - Animate Image
+* [AutoEmojify](docs/sdk/README.md#autoemojify) - Auto-Emojify
+* [AutoHashtag](docs/sdk/README.md#autohashtag) - Auto-Hashtag
+* [CompanyLogo](docs/sdk/README.md#companylogo) - Company Logo
+* [EmojiSuggestions](docs/sdk/README.md#emojisuggestions) - Emoji Suggestions
+* [HashtagHistory](docs/sdk/README.md#hashtaghistory) - Hashtag History
+* [HashtagStats](docs/sdk/README.md#hashtagstats) - Hashtag Stats
+* [HashtagSuggestions](docs/sdk/README.md#hashtagsuggestions) - Hashtag Suggestions
+* [HashtagsCleaner](docs/sdk/README.md#hashtagscleaner) - Hashtags cleaner
+* [ListOfCTAs](docs/sdk/README.md#listofctas) - List of CTAs
+* [ShortenLink](docs/sdk/README.md#shortenlink) - Shorten Link
+* [TextToImage](docs/sdk/README.md#texttoimage) - Text to Image
+* [TrendingHashtags](docs/sdk/README.md#trendinghashtags) - Trending Hashtags
 <!-- End SDK Available Operations -->
 
 ### Maturity

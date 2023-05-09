@@ -15,19 +15,23 @@ const (
 	TeamMembershipRoleEnumMaintainer TeamMembershipRoleEnum = "maintainer"
 )
 
+func (e TeamMembershipRoleEnum) ToPointer() *TeamMembershipRoleEnum {
+	return &e
+}
+
 func (e *TeamMembershipRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "member":
 		fallthrough
 	case "maintainer":
-		*e = TeamMembershipRoleEnum(s)
+		*e = TeamMembershipRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamMembershipRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamMembershipRoleEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	TeamMembershipStateEnumPending TeamMembershipStateEnum = "pending"
 )
 
+func (e TeamMembershipStateEnum) ToPointer() *TeamMembershipStateEnum {
+	return &e
+}
+
 func (e *TeamMembershipStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
-		*e = TeamMembershipStateEnum(s)
+		*e = TeamMembershipStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamMembershipStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamMembershipStateEnum: %v", v)
 	}
 }
 

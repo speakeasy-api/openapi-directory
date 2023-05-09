@@ -17,21 +17,25 @@ const (
 	UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnumSecurity     UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum = "security"
 )
 
+func (e UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum) ToPointer() *UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "balanced":
 		fallthrough
 	case "connectivity":
 		fallthrough
 	case "security":
-		*e = UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum(s)
+		*e = UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSecurityIntrusionSettingsRequestBodyIdsRulesetsEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnumPrevention UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum = "prevention"
 )
 
+func (e UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum) ToPointer() *UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "detection":
 		fallthrough
 	case "disabled":
 		fallthrough
 	case "prevention":
-		*e = UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum(s)
+		*e = UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSecurityIntrusionSettingsRequestBodyModeEnum: %v", v)
 	}
 }
 

@@ -45,7 +45,10 @@ func newFirewalls(defaultClient, securityClient HTTPClient, serverURL, language,
 // | `resource_in_use`    | Firewall must not be in use to be deleted |
 func (s *firewalls) DeleteFirewallsID(ctx context.Context, request operations.DeleteFirewallsIDRequest) (*operations.DeleteFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -130,7 +133,10 @@ func (s *firewalls) GetFirewalls(ctx context.Context, request operations.GetFire
 // Gets a specific Firewall object.
 func (s *firewalls) GetFirewallsID(ctx context.Context, request operations.GetFirewallsIDRequest) (*operations.GetFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +245,10 @@ func (s *firewalls) PostFirewalls(ctx context.Context, request operations.PostFi
 // Note: if the Firewall object changes during the request, the response will be a “conflict” error.
 func (s *firewalls) PutFirewallsID(ctx context.Context, request operations.PutFirewallsIDRequest) (*operations.PutFirewallsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

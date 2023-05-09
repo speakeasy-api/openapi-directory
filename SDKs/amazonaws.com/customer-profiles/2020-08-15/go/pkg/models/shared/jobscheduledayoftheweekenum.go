@@ -19,12 +19,16 @@ const (
 	JobScheduleDayOfTheWeekEnumSaturday  JobScheduleDayOfTheWeekEnum = "SATURDAY"
 )
 
+func (e JobScheduleDayOfTheWeekEnum) ToPointer() *JobScheduleDayOfTheWeekEnum {
+	return &e
+}
+
 func (e *JobScheduleDayOfTheWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUNDAY":
 		fallthrough
 	case "MONDAY":
@@ -38,9 +42,9 @@ func (e *JobScheduleDayOfTheWeekEnum) UnmarshalJSON(data []byte) error {
 	case "FRIDAY":
 		fallthrough
 	case "SATURDAY":
-		*e = JobScheduleDayOfTheWeekEnum(s)
+		*e = JobScheduleDayOfTheWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobScheduleDayOfTheWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for JobScheduleDayOfTheWeekEnum: %v", v)
 	}
 }

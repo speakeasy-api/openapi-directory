@@ -35,7 +35,7 @@ func newIbanapi(defaultClient, securityClient HTTPClient, serverURL, language, s
 
 // GetBalance - Get Account Balance
 // Returns the account balance and expiry
-func (s *ibanapi) GetBalance(ctx context.Context) (*operations.GetBalanceResponse, error) {
+func (s *ibanapi) GetBalance(ctx context.Context, security operations.GetBalanceSecurity) (*operations.GetBalanceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/balance"
 
@@ -44,7 +44,7 @@ func (s *ibanapi) GetBalance(ctx context.Context) (*operations.GetBalanceRespons
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

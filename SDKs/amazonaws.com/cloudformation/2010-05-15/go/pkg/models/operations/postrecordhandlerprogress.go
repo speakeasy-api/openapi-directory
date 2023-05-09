@@ -15,17 +15,21 @@ const (
 	POSTRecordHandlerProgressActionEnumRecordHandlerProgress POSTRecordHandlerProgressActionEnum = "RecordHandlerProgress"
 )
 
+func (e POSTRecordHandlerProgressActionEnum) ToPointer() *POSTRecordHandlerProgressActionEnum {
+	return &e
+}
+
 func (e *POSTRecordHandlerProgressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RecordHandlerProgress":
-		*e = POSTRecordHandlerProgressActionEnum(s)
+		*e = POSTRecordHandlerProgressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRecordHandlerProgressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRecordHandlerProgressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRecordHandlerProgressVersionEnumTwoThousandAndTen0515 POSTRecordHandlerProgressVersionEnum = "2010-05-15"
 )
 
+func (e POSTRecordHandlerProgressVersionEnum) ToPointer() *POSTRecordHandlerProgressVersionEnum {
+	return &e
+}
+
 func (e *POSTRecordHandlerProgressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = POSTRecordHandlerProgressVersionEnum(s)
+		*e = POSTRecordHandlerProgressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRecordHandlerProgressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRecordHandlerProgressVersionEnum: %v", v)
 	}
 }
 

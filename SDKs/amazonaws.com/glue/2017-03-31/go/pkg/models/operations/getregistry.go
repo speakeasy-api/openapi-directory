@@ -16,17 +16,21 @@ const (
 	GetRegistryXAmzTargetEnumAwsGlueGetRegistry GetRegistryXAmzTargetEnum = "AWSGlue.GetRegistry"
 )
 
+func (e GetRegistryXAmzTargetEnum) ToPointer() *GetRegistryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRegistryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetRegistry":
-		*e = GetRegistryXAmzTargetEnum(s)
+		*e = GetRegistryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRegistryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRegistryXAmzTargetEnum: %v", v)
 	}
 }
 

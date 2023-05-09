@@ -14,18 +14,22 @@ const (
 	LoggerComponentEnumLambda           LoggerComponentEnum = "Lambda"
 )
 
+func (e LoggerComponentEnum) ToPointer() *LoggerComponentEnum {
+	return &e
+}
+
 func (e *LoggerComponentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GreengrassSystem":
 		fallthrough
 	case "Lambda":
-		*e = LoggerComponentEnum(s)
+		*e = LoggerComponentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggerComponentEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggerComponentEnum: %v", v)
 	}
 }

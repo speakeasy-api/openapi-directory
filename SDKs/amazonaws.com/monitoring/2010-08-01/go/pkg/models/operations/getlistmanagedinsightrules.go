@@ -15,17 +15,21 @@ const (
 	GETListManagedInsightRulesActionEnumListManagedInsightRules GETListManagedInsightRulesActionEnum = "ListManagedInsightRules"
 )
 
+func (e GETListManagedInsightRulesActionEnum) ToPointer() *GETListManagedInsightRulesActionEnum {
+	return &e
+}
+
 func (e *GETListManagedInsightRulesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListManagedInsightRules":
-		*e = GETListManagedInsightRulesActionEnum(s)
+		*e = GETListManagedInsightRulesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListManagedInsightRulesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListManagedInsightRulesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListManagedInsightRulesVersionEnumTwoThousandAndTen0801 GETListManagedInsightRulesVersionEnum = "2010-08-01"
 )
 
+func (e GETListManagedInsightRulesVersionEnum) ToPointer() *GETListManagedInsightRulesVersionEnum {
+	return &e
+}
+
 func (e *GETListManagedInsightRulesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = GETListManagedInsightRulesVersionEnum(s)
+		*e = GETListManagedInsightRulesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListManagedInsightRulesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListManagedInsightRulesVersionEnum: %v", v)
 	}
 }
 

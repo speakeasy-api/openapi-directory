@@ -35,7 +35,10 @@ func newNotifications(defaultClient, securityClient HTTPClient, serverURL, langu
 // GETGameSummaryUsingGET - getGameSummary
 func (s *notifications) GETGameSummaryUsingGET(ctx context.Context, request operations.GETGameSummaryUsingGETRequest) (*operations.GETGameSummaryUsingGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/notifications/summary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/restv2/game/{apiKey}/admin/notifications/summary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

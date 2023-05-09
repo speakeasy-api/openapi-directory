@@ -14,17 +14,21 @@ const (
 	LaunchPermissionListGroupEnumAll LaunchPermissionListGroupEnum = "all"
 )
 
+func (e LaunchPermissionListGroupEnum) ToPointer() *LaunchPermissionListGroupEnum {
+	return &e
+}
+
 func (e *LaunchPermissionListGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = LaunchPermissionListGroupEnum(s)
+		*e = LaunchPermissionListGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchPermissionListGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchPermissionListGroupEnum: %v", v)
 	}
 }
 

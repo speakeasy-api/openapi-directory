@@ -5,6 +5,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -17,4 +18,8 @@ pkg/utils/utils.go
 pkg/models/operations/emailvalidation.go
 pkg/models/operations/maliciousurlscanner.go
 pkg/models/operations/phonevalidation.go
+docs/sdk/README.md
+docs/emailvalidation/README.md
+docs/maliciousurlscanner/README.md
+docs/phonevalidation/README.md
 USAGE.md

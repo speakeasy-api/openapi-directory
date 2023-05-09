@@ -16,20 +16,24 @@ const (
 	DimensionValueSourceEnumLinkTag     DimensionValueSourceEnum = "LINK_TAG"
 )
 
+func (e DimensionValueSourceEnum) ToPointer() *DimensionValueSourceEnum {
+	return &e
+}
+
 func (e *DimensionValueSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MESSAGE_TAG":
 		fallthrough
 	case "EMAIL_HEADER":
 		fallthrough
 	case "LINK_TAG":
-		*e = DimensionValueSourceEnum(s)
+		*e = DimensionValueSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionValueSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionValueSourceEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	CancelWorkflowExecutionFailedCauseEnumOperationNotPermitted CancelWorkflowExecutionFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e CancelWorkflowExecutionFailedCauseEnum) ToPointer() *CancelWorkflowExecutionFailedCauseEnum {
+	return &e
+}
+
 func (e *CancelWorkflowExecutionFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNHANDLED_DECISION":
 		fallthrough
 	case "OPERATION_NOT_PERMITTED":
-		*e = CancelWorkflowExecutionFailedCauseEnum(s)
+		*e = CancelWorkflowExecutionFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelWorkflowExecutionFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelWorkflowExecutionFailedCauseEnum: %v", v)
 	}
 }

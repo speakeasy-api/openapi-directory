@@ -140,7 +140,10 @@ func (s *mocks) CreateMock(ctx context.Context, request operations.CreateMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) DeleteMock(ctx context.Context, request operations.DeleteMockRequest) (*operations.DeleteMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -187,7 +190,10 @@ func (s *mocks) DeleteMock(ctx context.Context, request operations.DeleteMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key ` request header or `apikey` URL query parameter.
 func (s *mocks) PublishMock(ctx context.Context, request operations.PublishMockRequest) (*operations.PublishMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/publish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/publish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *mocks) PublishMock(ctx context.Context, request operations.PublishMockR
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) SingleMock(ctx context.Context, request operations.SingleMockRequest) (*operations.SingleMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +290,10 @@ func (s *mocks) SingleMock(ctx context.Context, request operations.SingleMockReq
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key ` request header or `apikey` URL query parameter.
 func (s *mocks) UnpublishMock(ctx context.Context, request operations.UnpublishMockRequest) (*operations.UnpublishMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/unpublish", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}/unpublish", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -333,7 +345,10 @@ func (s *mocks) UnpublishMock(ctx context.Context, request operations.UnpublishM
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *mocks) UpdateMock(ctx context.Context, request operations.UpdateMockRequest) (*operations.UpdateMockResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mocks/{mock_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

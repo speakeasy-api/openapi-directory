@@ -16,17 +16,21 @@ const (
 	BatchAssociateResourceXAmzTargetEnumAwsfms20180101BatchAssociateResource BatchAssociateResourceXAmzTargetEnum = "AWSFMS_20180101.BatchAssociateResource"
 )
 
+func (e BatchAssociateResourceXAmzTargetEnum) ToPointer() *BatchAssociateResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *BatchAssociateResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.BatchAssociateResource":
-		*e = BatchAssociateResourceXAmzTargetEnum(s)
+		*e = BatchAssociateResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchAssociateResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchAssociateResourceXAmzTargetEnum: %v", v)
 	}
 }
 

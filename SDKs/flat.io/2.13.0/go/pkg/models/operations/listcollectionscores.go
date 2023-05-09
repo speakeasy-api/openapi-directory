@@ -21,19 +21,23 @@ const (
 	ListCollectionScoresDirectionEnumDesc ListCollectionScoresDirectionEnum = "desc"
 )
 
+func (e ListCollectionScoresDirectionEnum) ToPointer() *ListCollectionScoresDirectionEnum {
+	return &e
+}
+
 func (e *ListCollectionScoresDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = ListCollectionScoresDirectionEnum(s)
+		*e = ListCollectionScoresDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCollectionScoresDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCollectionScoresDirectionEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ListCollectionScoresSortEnumTitle            ListCollectionScoresSortEnum = "title"
 )
 
+func (e ListCollectionScoresSortEnum) ToPointer() *ListCollectionScoresSortEnum {
+	return &e
+}
+
 func (e *ListCollectionScoresSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creationDate":
 		fallthrough
 	case "modificationDate":
 		fallthrough
 	case "title":
-		*e = ListCollectionScoresSortEnum(s)
+		*e = ListCollectionScoresSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCollectionScoresSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCollectionScoresSortEnum: %v", v)
 	}
 }
 

@@ -36,12 +36,16 @@ const (
 	DeploymentJobErrorCodeEnumFleetDeploymentTimeout              DeploymentJobErrorCodeEnum = "FleetDeploymentTimeout"
 )
 
+func (e DeploymentJobErrorCodeEnum) ToPointer() *DeploymentJobErrorCodeEnum {
+	return &e
+}
+
 func (e *DeploymentJobErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceNotFound":
 		fallthrough
 	case "EnvironmentSetupError":
@@ -89,9 +93,9 @@ func (e *DeploymentJobErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "DeploymentFleetDoesNotExist":
 		fallthrough
 	case "FleetDeploymentTimeout":
-		*e = DeploymentJobErrorCodeEnum(s)
+		*e = DeploymentJobErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentJobErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentJobErrorCodeEnum: %v", v)
 	}
 }

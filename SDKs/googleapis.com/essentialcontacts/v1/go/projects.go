@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // EssentialcontactsProjectsContactsCompute - Lists all contacts for the resource that are subscribed to the specified notification categories, including contacts inherited from any parent resources.
 func (s *projects) EssentialcontactsProjectsContactsCompute(ctx context.Context, request operations.EssentialcontactsProjectsContactsComputeRequest, security operations.EssentialcontactsProjectsContactsComputeSecurity) (*operations.EssentialcontactsProjectsContactsComputeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts:compute", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts:compute", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) EssentialcontactsProjectsContactsCompute(ctx context.Context,
 // EssentialcontactsProjectsContactsCreate - Adds a new contact for a resource.
 func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, request operations.EssentialcontactsProjectsContactsCreateRequest, security operations.EssentialcontactsProjectsContactsCreateSecurity) (*operations.EssentialcontactsProjectsContactsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1ContactInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) EssentialcontactsProjectsContactsCreate(ctx context.Context, 
 // EssentialcontactsProjectsContactsDelete - Deletes a contact.
 func (s *projects) EssentialcontactsProjectsContactsDelete(ctx context.Context, request operations.EssentialcontactsProjectsContactsDeleteRequest, security operations.EssentialcontactsProjectsContactsDeleteSecurity) (*operations.EssentialcontactsProjectsContactsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) EssentialcontactsProjectsContactsDelete(ctx context.Context, 
 // EssentialcontactsProjectsContactsGet - Gets a single contact.
 func (s *projects) EssentialcontactsProjectsContactsGet(ctx context.Context, request operations.EssentialcontactsProjectsContactsGetRequest, security operations.EssentialcontactsProjectsContactsGetSecurity) (*operations.EssentialcontactsProjectsContactsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) EssentialcontactsProjectsContactsGet(ctx context.Context, req
 // EssentialcontactsProjectsContactsList - Lists the contacts that have been set on a resource.
 func (s *projects) EssentialcontactsProjectsContactsList(ctx context.Context, request operations.EssentialcontactsProjectsContactsListRequest, security operations.EssentialcontactsProjectsContactsListSecurity) (*operations.EssentialcontactsProjectsContactsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/contacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) EssentialcontactsProjectsContactsList(ctx context.Context, re
 // EssentialcontactsProjectsContactsPatch - Updates a contact. Note: A contact's email address cannot be changed.
 func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, request operations.EssentialcontactsProjectsContactsPatchRequest, security operations.EssentialcontactsProjectsContactsPatchSecurity) (*operations.EssentialcontactsProjectsContactsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1ContactInput", "json")
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) EssentialcontactsProjectsContactsPatch(ctx context.Context, r
 // EssentialcontactsProjectsContactsSendTestMessage - Allows a contact admin to send a test message to contact to verify that it has been configured correctly.
 func (s *projects) EssentialcontactsProjectsContactsSendTestMessage(ctx context.Context, request operations.EssentialcontactsProjectsContactsSendTestMessageRequest, security operations.EssentialcontactsProjectsContactsSendTestMessageSecurity) (*operations.EssentialcontactsProjectsContactsSendTestMessageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}/contacts:sendTestMessage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}/contacts:sendTestMessage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudEssentialcontactsV1SendTestMessageRequest", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETRemoveClientIDFromOpenIDConnectProviderActionEnumRemoveClientIDFromOpenIDConnectProvider GETRemoveClientIDFromOpenIDConnectProviderActionEnum = "RemoveClientIDFromOpenIDConnectProvider"
 )
 
+func (e GETRemoveClientIDFromOpenIDConnectProviderActionEnum) ToPointer() *GETRemoveClientIDFromOpenIDConnectProviderActionEnum {
+	return &e
+}
+
 func (e *GETRemoveClientIDFromOpenIDConnectProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveClientIDFromOpenIDConnectProvider":
-		*e = GETRemoveClientIDFromOpenIDConnectProviderActionEnum(s)
+		*e = GETRemoveClientIDFromOpenIDConnectProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveClientIDFromOpenIDConnectProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveClientIDFromOpenIDConnectProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRemoveClientIDFromOpenIDConnectProviderVersionEnumTwoThousandAndTen0508 GETRemoveClientIDFromOpenIDConnectProviderVersionEnum = "2010-05-08"
 )
 
+func (e GETRemoveClientIDFromOpenIDConnectProviderVersionEnum) ToPointer() *GETRemoveClientIDFromOpenIDConnectProviderVersionEnum {
+	return &e
+}
+
 func (e *GETRemoveClientIDFromOpenIDConnectProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETRemoveClientIDFromOpenIDConnectProviderVersionEnum(s)
+		*e = GETRemoveClientIDFromOpenIDConnectProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveClientIDFromOpenIDConnectProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveClientIDFromOpenIDConnectProviderVersionEnum: %v", v)
 	}
 }
 

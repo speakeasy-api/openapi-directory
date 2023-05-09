@@ -16,21 +16,25 @@ const (
 	ConfigVariableTemplateStateEnumDeprecated       ConfigVariableTemplateStateEnum = "DEPRECATED"
 )
 
+func (e ConfigVariableTemplateStateEnum) ToPointer() *ConfigVariableTemplateStateEnum {
+	return &e
+}
+
 func (e *ConfigVariableTemplateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "DEPRECATED":
-		*e = ConfigVariableTemplateStateEnum(s)
+		*e = ConfigVariableTemplateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigVariableTemplateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigVariableTemplateStateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ConfigVariableTemplateValueTypeEnumAuthorizationCode    ConfigVariableTemplateValueTypeEnum = "AUTHORIZATION_CODE"
 )
 
+func (e ConfigVariableTemplateValueTypeEnum) ToPointer() *ConfigVariableTemplateValueTypeEnum {
+	return &e
+}
+
 func (e *ConfigVariableTemplateValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "STRING":
@@ -66,10 +74,10 @@ func (e *ConfigVariableTemplateValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ENUM":
 		fallthrough
 	case "AUTHORIZATION_CODE":
-		*e = ConfigVariableTemplateValueTypeEnum(s)
+		*e = ConfigVariableTemplateValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigVariableTemplateValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigVariableTemplateValueTypeEnum: %v", v)
 	}
 }
 

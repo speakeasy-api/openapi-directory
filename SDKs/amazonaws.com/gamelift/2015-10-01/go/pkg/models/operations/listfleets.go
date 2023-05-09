@@ -16,17 +16,21 @@ const (
 	ListFleetsXAmzTargetEnumGameLiftListFleets ListFleetsXAmzTargetEnum = "GameLift.ListFleets"
 )
 
+func (e ListFleetsXAmzTargetEnum) ToPointer() *ListFleetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListFleetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.ListFleets":
-		*e = ListFleetsXAmzTargetEnum(s)
+		*e = ListFleetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFleetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFleetsXAmzTargetEnum: %v", v)
 	}
 }
 

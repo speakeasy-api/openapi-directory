@@ -83,7 +83,10 @@ func (s *developers) DevelopersList(ctx context.Context, request operations.Deve
 // DevelopersRead - Get details of the developer.
 func (s *developers) DevelopersRead(ctx context.Context, request operations.DevelopersReadRequest) (*operations.DevelopersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

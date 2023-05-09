@@ -18,12 +18,16 @@ const (
 	BillingProfileCptCodesNdcCodeUnitsEnumUn BillingProfileCptCodesNdcCodeUnitsEnum = "UN"
 )
 
+func (e BillingProfileCptCodesNdcCodeUnitsEnum) ToPointer() *BillingProfileCptCodesNdcCodeUnitsEnum {
+	return &e
+}
+
 func (e *BillingProfileCptCodesNdcCodeUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "F2":
 		fallthrough
 	case "GR":
@@ -33,10 +37,10 @@ func (e *BillingProfileCptCodesNdcCodeUnitsEnum) UnmarshalJSON(data []byte) erro
 	case "ML":
 		fallthrough
 	case "UN":
-		*e = BillingProfileCptCodesNdcCodeUnitsEnum(s)
+		*e = BillingProfileCptCodesNdcCodeUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingProfileCptCodesNdcCodeUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingProfileCptCodesNdcCodeUnitsEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	BillingProfileHcpcsCodesNdcCodeUnitsEnumUn BillingProfileHcpcsCodesNdcCodeUnitsEnum = "UN"
 )
 
+func (e BillingProfileHcpcsCodesNdcCodeUnitsEnum) ToPointer() *BillingProfileHcpcsCodesNdcCodeUnitsEnum {
+	return &e
+}
+
 func (e *BillingProfileHcpcsCodesNdcCodeUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "F2":
 		fallthrough
 	case "GR":
@@ -100,10 +108,10 @@ func (e *BillingProfileHcpcsCodesNdcCodeUnitsEnum) UnmarshalJSON(data []byte) er
 	case "ML":
 		fallthrough
 	case "UN":
-		*e = BillingProfileHcpcsCodesNdcCodeUnitsEnum(s)
+		*e = BillingProfileHcpcsCodesNdcCodeUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingProfileHcpcsCodesNdcCodeUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingProfileHcpcsCodesNdcCodeUnitsEnum: %v", v)
 	}
 }
 

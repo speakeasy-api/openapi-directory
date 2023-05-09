@@ -18,19 +18,23 @@ const (
 	GetTransactionsStatusEnumEnded   GetTransactionsStatusEnum = "Ended"
 )
 
+func (e GetTransactionsStatusEnum) ToPointer() *GetTransactionsStatusEnum {
+	return &e
+}
+
 func (e *GetTransactionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Started":
 		fallthrough
 	case "Ended":
-		*e = GetTransactionsStatusEnum(s)
+		*e = GetTransactionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTransactionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTransactionsStatusEnum: %v", v)
 	}
 }
 

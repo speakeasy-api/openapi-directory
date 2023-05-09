@@ -14,18 +14,22 @@ const (
 	VirtualizationTypeEnumHvm         VirtualizationTypeEnum = "hvm"
 )
 
+func (e VirtualizationTypeEnum) ToPointer() *VirtualizationTypeEnum {
+	return &e
+}
+
 func (e *VirtualizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "paravirtual":
 		fallthrough
 	case "hvm":
-		*e = VirtualizationTypeEnum(s)
+		*e = VirtualizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualizationTypeEnum: %v", v)
 	}
 }

@@ -2,7 +2,7 @@
 
 package shared
 
-// PropertyFilters - <p/>
+// PropertyFilters - A list of PropertyFilter objects.
 type PropertyFilters struct {
 	LogicalOperator *LogicalOperatorEnum `json:"LogicalOperator,omitempty"`
 	Properties      []PropertyFilter     `json:"Properties,omitempty"`

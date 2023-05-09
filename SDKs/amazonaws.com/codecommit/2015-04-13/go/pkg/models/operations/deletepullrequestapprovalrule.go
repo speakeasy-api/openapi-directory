@@ -16,17 +16,21 @@ const (
 	DeletePullRequestApprovalRuleXAmzTargetEnumCodeCommit20150413DeletePullRequestApprovalRule DeletePullRequestApprovalRuleXAmzTargetEnum = "CodeCommit_20150413.DeletePullRequestApprovalRule"
 )
 
+func (e DeletePullRequestApprovalRuleXAmzTargetEnum) ToPointer() *DeletePullRequestApprovalRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePullRequestApprovalRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.DeletePullRequestApprovalRule":
-		*e = DeletePullRequestApprovalRuleXAmzTargetEnum(s)
+		*e = DeletePullRequestApprovalRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePullRequestApprovalRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePullRequestApprovalRuleXAmzTargetEnum: %v", v)
 	}
 }
 

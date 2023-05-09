@@ -15,17 +15,21 @@ const (
 	GETRemoveTagsActionEnumRemoveTags GETRemoveTagsActionEnum = "RemoveTags"
 )
 
+func (e GETRemoveTagsActionEnum) ToPointer() *GETRemoveTagsActionEnum {
+	return &e
+}
+
 func (e *GETRemoveTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RemoveTags":
-		*e = GETRemoveTagsActionEnum(s)
+		*e = GETRemoveTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETRemoveTagsVersionEnumTwoThousandAndFifteen1201 GETRemoveTagsVersionEnum = "2015-12-01"
 )
 
+func (e GETRemoveTagsVersionEnum) ToPointer() *GETRemoveTagsVersionEnum {
+	return &e
+}
+
 func (e *GETRemoveTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-12-01":
-		*e = GETRemoveTagsVersionEnum(s)
+		*e = GETRemoveTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRemoveTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRemoveTagsVersionEnum: %v", v)
 	}
 }
 

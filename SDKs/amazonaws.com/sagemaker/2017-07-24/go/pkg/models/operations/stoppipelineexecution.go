@@ -16,17 +16,21 @@ const (
 	StopPipelineExecutionXAmzTargetEnumSageMakerStopPipelineExecution StopPipelineExecutionXAmzTargetEnum = "SageMaker.StopPipelineExecution"
 )
 
+func (e StopPipelineExecutionXAmzTargetEnum) ToPointer() *StopPipelineExecutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopPipelineExecutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.StopPipelineExecution":
-		*e = StopPipelineExecutionXAmzTargetEnum(s)
+		*e = StopPipelineExecutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopPipelineExecutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopPipelineExecutionXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnumUsed CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum = "used"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "used":
-		*e = CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationCapacityAllocationsAllocationTypeEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	CreateCapacityReservationResultCapacityReservationEndDateTypeEnumLimited   CreateCapacityReservationResultCapacityReservationEndDateTypeEnum = "limited"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationEndDateTypeEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationEndDateTypeEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationEndDateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unlimited":
 		fallthrough
 	case "limited":
-		*e = CreateCapacityReservationResultCapacityReservationEndDateTypeEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationEndDateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationEndDateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationEndDateTypeEnum: %v", v)
 	}
 }
 
@@ -67,19 +75,23 @@ const (
 	CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnumTargeted CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum = "targeted"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "targeted":
-		*e = CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationInstanceMatchCriteriaEnum: %v", v)
 	}
 }
 
@@ -106,12 +118,16 @@ const (
 	CreateCapacityReservationResultCapacityReservationInstancePlatformEnumRhelWithHaAndSQLServerEnterprise CreateCapacityReservationResultCapacityReservationInstancePlatformEnum = "RHEL with HA and SQL Server Enterprise"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationInstancePlatformEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationInstancePlatformEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationInstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Linux/UNIX":
 		fallthrough
 	case "Red Hat Enterprise Linux":
@@ -145,10 +161,10 @@ func (e *CreateCapacityReservationResultCapacityReservationInstancePlatformEnum)
 	case "RHEL with HA and SQL Server Standard":
 		fallthrough
 	case "RHEL with HA and SQL Server Enterprise":
-		*e = CreateCapacityReservationResultCapacityReservationInstancePlatformEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationInstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationInstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationInstancePlatformEnum: %v", v)
 	}
 }
 
@@ -163,12 +179,16 @@ const (
 	CreateCapacityReservationResultCapacityReservationStateEnumFailed    CreateCapacityReservationResultCapacityReservationStateEnum = "failed"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationStateEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationStateEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "expired":
@@ -178,10 +198,10 @@ func (e *CreateCapacityReservationResultCapacityReservationStateEnum) UnmarshalJ
 	case "pending":
 		fallthrough
 	case "failed":
-		*e = CreateCapacityReservationResultCapacityReservationStateEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationStateEnum: %v", v)
 	}
 }
 
@@ -199,19 +219,23 @@ const (
 	CreateCapacityReservationResultCapacityReservationTenancyEnumDedicated CreateCapacityReservationResultCapacityReservationTenancyEnum = "dedicated"
 )
 
+func (e CreateCapacityReservationResultCapacityReservationTenancyEnum) ToPointer() *CreateCapacityReservationResultCapacityReservationTenancyEnum {
+	return &e
+}
+
 func (e *CreateCapacityReservationResultCapacityReservationTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
-		*e = CreateCapacityReservationResultCapacityReservationTenancyEnum(s)
+		*e = CreateCapacityReservationResultCapacityReservationTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCapacityReservationResultCapacityReservationTenancyEnum: %v", v)
 	}
 }
 

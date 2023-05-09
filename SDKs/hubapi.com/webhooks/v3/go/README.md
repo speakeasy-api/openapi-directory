@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/webhooks/v3/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteWebhooksV3AppIDSettingsClearRequest{
-        AppID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Settings.DeleteWebhooksV3AppIDSettingsClear(ctx, req, operations.DeleteWebhooksV3AppIDSettingsClearSecurity{
+    res, err := s.Settings.DeleteWebhooksV3AppIDSettingsClear(ctx, operations.DeleteWebhooksV3AppIDSettingsClearRequest{
+        AppID: 548814,
+    }, operations.DeleteWebhooksV3AppIDSettingsClearSecurity{
         DeveloperHapikey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,20 +44,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### Settings
+### [Settings](docs/settings/README.md)
 
-* `DeleteWebhooksV3AppIDSettingsClear`
-* `GetWebhooksV3AppIDSettingsGetAll`
-* `PutWebhooksV3AppIDSettingsConfigure`
+* [DeleteWebhooksV3AppIDSettingsClear](docs/settings/README.md#deletewebhooksv3appidsettingsclear)
+* [GetWebhooksV3AppIDSettingsGetAll](docs/settings/README.md#getwebhooksv3appidsettingsgetall)
+* [PutWebhooksV3AppIDSettingsConfigure](docs/settings/README.md#putwebhooksv3appidsettingsconfigure)
 
-### Subscriptions
+### [Subscriptions](docs/subscriptions/README.md)
 
-* `DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchive`
-* `GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByID`
-* `GetWebhooksV3AppIDSubscriptionsGetAll`
-* `PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdate`
-* `PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatch`
-* `PostWebhooksV3AppIDSubscriptionsCreate`
+* [DeleteWebhooksV3AppIDSubscriptionsSubscriptionIDArchive](docs/subscriptions/README.md#deletewebhooksv3appidsubscriptionssubscriptionidarchive)
+* [GetWebhooksV3AppIDSubscriptionsSubscriptionIDGetByID](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionssubscriptionidgetbyid)
+* [GetWebhooksV3AppIDSubscriptionsGetAll](docs/subscriptions/README.md#getwebhooksv3appidsubscriptionsgetall)
+* [PatchWebhooksV3AppIDSubscriptionsSubscriptionIDUpdate](docs/subscriptions/README.md#patchwebhooksv3appidsubscriptionssubscriptionidupdate)
+* [PostWebhooksV3AppIDSubscriptionsBatchUpdateUpdateBatch](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionsbatchupdateupdatebatch)
+* [PostWebhooksV3AppIDSubscriptionsCreate](docs/subscriptions/README.md#postwebhooksv3appidsubscriptionscreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

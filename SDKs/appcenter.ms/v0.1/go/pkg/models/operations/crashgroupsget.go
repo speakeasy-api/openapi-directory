@@ -42,12 +42,16 @@ const (
 	CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnumUnknown      CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum = "Unknown"
 )
 
+func (e CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum) ToPointer() *CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum {
+	return &e
+}
+
 func (e *CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JavaScript":
 		fallthrough
 	case "CSharp":
@@ -65,10 +69,10 @@ func (e *CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum) UnmarshalJSON(
 	case "Java":
 		fallthrough
 	case "Unknown":
-		*e = CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum(s)
+		*e = CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsGet200ApplicationJSONReasonFrameLanguageEnum: %v", v)
 	}
 }
 
@@ -110,21 +114,25 @@ const (
 	CrashGroupsGet200ApplicationJSONStatusEnumIgnored CrashGroupsGet200ApplicationJSONStatusEnum = "ignored"
 )
 
+func (e CrashGroupsGet200ApplicationJSONStatusEnum) ToPointer() *CrashGroupsGet200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *CrashGroupsGet200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "closed":
 		fallthrough
 	case "ignored":
-		*e = CrashGroupsGet200ApplicationJSONStatusEnum(s)
+		*e = CrashGroupsGet200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CrashGroupsGet200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CrashGroupsGet200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

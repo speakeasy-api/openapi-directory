@@ -2,7 +2,7 @@
 
 package shared
 
-// MultiPolygonGeometryInput - <p/>
+// MultiPolygonGeometryInput - The structure representing Polygon Geometry based on the <a href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
 type MultiPolygonGeometryInput struct {
 	Coordinates [][][][]float64 `json:"Coordinates"`
 }

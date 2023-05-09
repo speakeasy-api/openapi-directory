@@ -16,12 +16,16 @@ const (
 	RenewalStatusEnumFailed             RenewalStatusEnum = "FAILED"
 )
 
+func (e RenewalStatusEnum) ToPointer() *RenewalStatusEnum {
+	return &e
+}
+
 func (e *RenewalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING_AUTO_RENEWAL":
 		fallthrough
 	case "PENDING_VALIDATION":
@@ -29,9 +33,9 @@ func (e *RenewalStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCESS":
 		fallthrough
 	case "FAILED":
-		*e = RenewalStatusEnum(s)
+		*e = RenewalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RenewalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RenewalStatusEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	UpdateExpirationForHITXAmzTargetEnumMTurkRequesterServiceV20170117UpdateExpirationForHit UpdateExpirationForHITXAmzTargetEnum = "MTurkRequesterServiceV20170117.UpdateExpirationForHIT"
 )
 
+func (e UpdateExpirationForHITXAmzTargetEnum) ToPointer() *UpdateExpirationForHITXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateExpirationForHITXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.UpdateExpirationForHIT":
-		*e = UpdateExpirationForHITXAmzTargetEnum(s)
+		*e = UpdateExpirationForHITXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateExpirationForHITXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateExpirationForHITXAmzTargetEnum: %v", v)
 	}
 }
 

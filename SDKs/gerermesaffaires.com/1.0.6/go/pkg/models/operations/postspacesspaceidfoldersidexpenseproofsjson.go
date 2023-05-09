@@ -28,12 +28,16 @@ const (
 	PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnumRes PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum = "RES"
 )
 
+func (e PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum) ToPointer() *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAB":
 		fallthrough
 	case "IKM":
@@ -51,10 +55,10 @@ func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum) Unm
 	case "DIV":
 		fallthrough
 	case "RES":
-		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountEnum: %v", v)
 	}
 }
 
@@ -72,12 +76,16 @@ const (
 	PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -95,10 +103,10 @@ func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbo
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2AccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -121,21 +129,25 @@ const (
 	PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnumW PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum = "W"
 )
 
+func (e PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum) ToPointer() *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "R":
 		fallthrough
 	case "V":
 		fallthrough
 	case "W":
-		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -172,12 +184,16 @@ const (
 	PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnumRes PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum = "RES"
 )
 
+func (e PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum) ToPointer() *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAB":
 		fallthrough
 	case "IKM":
@@ -195,10 +211,10 @@ func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum) Unm
 	case "DIV":
 		fallthrough
 	case "RES":
-		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1AccountEnum: %v", v)
 	}
 }
 
@@ -210,21 +226,25 @@ const (
 	PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnumW PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum = "W"
 )
 
+func (e PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum) ToPointer() *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "R":
 		fallthrough
 	case "V":
 		fallthrough
 	case "W":
-		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDExpenseProofsApplicationJSON1StatusEnum: %v", v)
 	}
 }
 

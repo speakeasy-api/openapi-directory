@@ -23,12 +23,16 @@ const (
 	ManufacturersAccountsProductsListIncludeEnumDestinationStatuses ManufacturersAccountsProductsListIncludeEnum = "DESTINATION_STATUSES"
 )
 
+func (e ManufacturersAccountsProductsListIncludeEnum) ToPointer() *ManufacturersAccountsProductsListIncludeEnum {
+	return &e
+}
+
 func (e *ManufacturersAccountsProductsListIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ATTRIBUTES":
@@ -36,10 +40,10 @@ func (e *ManufacturersAccountsProductsListIncludeEnum) UnmarshalJSON(data []byte
 	case "ISSUES":
 		fallthrough
 	case "DESTINATION_STATUSES":
-		*e = ManufacturersAccountsProductsListIncludeEnum(s)
+		*e = ManufacturersAccountsProductsListIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManufacturersAccountsProductsListIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for ManufacturersAccountsProductsListIncludeEnum: %v", v)
 	}
 }
 

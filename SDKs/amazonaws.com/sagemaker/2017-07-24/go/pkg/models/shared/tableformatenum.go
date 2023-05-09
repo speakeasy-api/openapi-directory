@@ -14,18 +14,22 @@ const (
 	TableFormatEnumIceberg TableFormatEnum = "Iceberg"
 )
 
+func (e TableFormatEnum) ToPointer() *TableFormatEnum {
+	return &e
+}
+
 func (e *TableFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Glue":
 		fallthrough
 	case "Iceberg":
-		*e = TableFormatEnum(s)
+		*e = TableFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for TableFormatEnum: %v", v)
 	}
 }

@@ -16,12 +16,16 @@ const (
 	NetworkModeEnumNone   NetworkModeEnum = "none"
 )
 
+func (e NetworkModeEnum) ToPointer() *NetworkModeEnum {
+	return &e
+}
+
 func (e *NetworkModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bridge":
 		fallthrough
 	case "host":
@@ -29,9 +33,9 @@ func (e *NetworkModeEnum) UnmarshalJSON(data []byte) error {
 	case "awsvpc":
 		fallthrough
 	case "none":
-		*e = NetworkModeEnum(s)
+		*e = NetworkModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NetworkModeEnum: %s", s)
+		return fmt.Errorf("invalid value for NetworkModeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	GETListConfigurationSetsActionEnumListConfigurationSets GETListConfigurationSetsActionEnum = "ListConfigurationSets"
 )
 
+func (e GETListConfigurationSetsActionEnum) ToPointer() *GETListConfigurationSetsActionEnum {
+	return &e
+}
+
 func (e *GETListConfigurationSetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListConfigurationSets":
-		*e = GETListConfigurationSetsActionEnum(s)
+		*e = GETListConfigurationSetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListConfigurationSetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListConfigurationSetsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListConfigurationSetsVersionEnumTwoThousandAndTen1201 GETListConfigurationSetsVersionEnum = "2010-12-01"
 )
 
+func (e GETListConfigurationSetsVersionEnum) ToPointer() *GETListConfigurationSetsVersionEnum {
+	return &e
+}
+
 func (e *GETListConfigurationSetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETListConfigurationSetsVersionEnum(s)
+		*e = GETListConfigurationSetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListConfigurationSetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListConfigurationSetsVersionEnum: %v", v)
 	}
 }
 

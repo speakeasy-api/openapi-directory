@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,14 +17,12 @@ func main() {
         }),
     )
 
-    req := operations.GetreportstatusbyIDRequest{
+    ctx := context.Background()
+    res, err := s.Report.GetreportstatusbyID(ctx, operations.GetreportstatusbyIDRequest{
         Accept: "corrupti",
         ContentType: "provident",
         ReportID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Report.GetreportstatusbyID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

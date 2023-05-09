@@ -16,17 +16,21 @@ const (
 	CreateCustomRoutingAcceleratorXAmzTargetEnumGlobalAcceleratorV20180706CreateCustomRoutingAccelerator CreateCustomRoutingAcceleratorXAmzTargetEnum = "GlobalAccelerator_V20180706.CreateCustomRoutingAccelerator"
 )
 
+func (e CreateCustomRoutingAcceleratorXAmzTargetEnum) ToPointer() *CreateCustomRoutingAcceleratorXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateCustomRoutingAcceleratorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.CreateCustomRoutingAccelerator":
-		*e = CreateCustomRoutingAcceleratorXAmzTargetEnum(s)
+		*e = CreateCustomRoutingAcceleratorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCustomRoutingAcceleratorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCustomRoutingAcceleratorXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ReconfigurationTypeEnumMerge     ReconfigurationTypeEnum = "MERGE"
 )
 
+func (e ReconfigurationTypeEnum) ToPointer() *ReconfigurationTypeEnum {
+	return &e
+}
+
 func (e *ReconfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OVERWRITE":
 		fallthrough
 	case "MERGE":
-		*e = ReconfigurationTypeEnum(s)
+		*e = ReconfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReconfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReconfigurationTypeEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	StepStatusEnumUserAttentionRequired StepStatusEnum = "USER_ATTENTION_REQUIRED"
 )
 
+func (e StepStatusEnum) ToPointer() *StepStatusEnum {
+	return &e
+}
+
 func (e *StepStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWAITING_DEPENDENCIES":
 		fallthrough
 	case "READY":
@@ -38,9 +42,9 @@ func (e *StepStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PAUSED":
 		fallthrough
 	case "USER_ATTENTION_REQUIRED":
-		*e = StepStatusEnum(s)
+		*e = StepStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StepStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StepStatusEnum: %v", v)
 	}
 }

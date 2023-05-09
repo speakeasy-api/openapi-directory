@@ -82,7 +82,10 @@ func (s *campaignAudiences) Getcampaignaudiences(ctx context.Context, request op
 // Retrieves a specific campaign audience configuration by its ID. This API uses the campaign ID, not the campaign name.
 func (s *campaignAudiences) Getcampaignconfiguration(ctx context.Context, request operations.GetcampaignconfigurationRequest) (*operations.GetcampaignconfigurationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/campaignConfiguration/{campaignId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/rnb/pvt/campaignConfiguration/{campaignId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

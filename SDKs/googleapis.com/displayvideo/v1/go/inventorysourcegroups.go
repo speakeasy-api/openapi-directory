@@ -35,7 +35,10 @@ func newInventorySourceGroups(defaultClient, securityClient HTTPClient, serverUR
 // DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEdit - Bulk edits multiple assignments between inventory sources and a single inventory source group. The operation will delete the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEdit(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditRequest, security operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditSecurity) (*operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEditResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources:bulkEdit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources:bulkEdit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BulkEditAssignedInventorySourcesRequestInput", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInvento
 // DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreate - Creates an assignment between an inventory source and an inventory source group.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreate(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateRequest, security operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateSecurity) (*operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AssignedInventorySourceInput", "json")
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInvento
 // DisplayvideoInventorySourceGroupsAssignedInventorySourcesDelete - Deletes the assignment between an inventory source and an inventory source group.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInventorySourcesDelete(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest, security operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteSecurity) (*operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources/{assignedInventorySourceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources/{assignedInventorySourceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -193,7 +202,10 @@ func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInvento
 // DisplayvideoInventorySourceGroupsAssignedInventorySourcesList - Lists inventory sources assigned to an inventory source group.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsAssignedInventorySourcesList(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListRequest, security operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListSecurity) (*operations.DisplayvideoInventorySourceGroupsAssignedInventorySourcesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}/assignedInventorySources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsCreate(ctx cont
 // DisplayvideoInventorySourceGroupsDelete - Deletes an inventory source group.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsDelete(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsDeleteRequest, security operations.DisplayvideoInventorySourceGroupsDeleteSecurity) (*operations.DisplayvideoInventorySourceGroupsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -344,7 +359,10 @@ func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsDelete(ctx cont
 // DisplayvideoInventorySourceGroupsGet - Gets an inventory source group.
 func (s *inventorySourceGroups) DisplayvideoInventorySourceGroupsGet(ctx context.Context, request operations.DisplayvideoInventorySourceGroupsGetRequest, security operations.DisplayvideoInventorySourceGroupsGetSecurity) (*operations.DisplayvideoInventorySourceGroupsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/inventorySourceGroups/{inventorySourceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

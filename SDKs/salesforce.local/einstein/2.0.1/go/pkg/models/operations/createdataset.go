@@ -21,19 +21,23 @@ const (
 	CreateDatasetRequestBodyTypeEnumImageMultiLabel CreateDatasetRequestBodyTypeEnum = "image-multi-label"
 )
 
+func (e CreateDatasetRequestBodyTypeEnum) ToPointer() *CreateDatasetRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateDatasetRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
 		fallthrough
 	case "image-multi-label":
-		*e = CreateDatasetRequestBodyTypeEnum(s)
+		*e = CreateDatasetRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDatasetRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDatasetRequestBodyTypeEnum: %v", v)
 	}
 }
 

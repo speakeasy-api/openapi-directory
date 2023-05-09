@@ -22,12 +22,16 @@ const (
 	PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnumPermanent   PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum = "permanent"
 )
 
+func (e PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum) ToPointer() *PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -45,10 +49,10 @@ func (e *PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum)
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum(s)
+		*e = PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDDocumentsDocumentIDRequestBodyAccountingWorkbookEnum: %v", v)
 	}
 }
 

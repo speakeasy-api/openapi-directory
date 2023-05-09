@@ -85,7 +85,10 @@ func (s *resourceGroups) GetConsumerV1Resourcegroups(ctx context.Context, reques
 // <p>Use this endpoint to return a <b>Resource Group</b> object. A valid <b>resourceGroup id</b> is required. Find resourceGroup id's by using the <i>GET /consumer/v1/resourceGroups</i> endpoint.</p>
 func (s *resourceGroups) GetConsumerV1ResourcegroupsID(ctx context.Context, request operations.GetConsumerV1ResourcegroupsIDRequest) (*operations.GetConsumerV1ResourcegroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resourcegroups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/consumer/v1/resourcegroups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

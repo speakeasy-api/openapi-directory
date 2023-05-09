@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/tokenjay.app/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CalcSigmaRsvExchangeRequest{
-        Amount: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.AgeUsd.CalcSigmaRsvExchange(ctx, req)
+    res, err := s.AgeUsd.CalcSigmaRsvExchange(ctx, operations.CalcSigmaRsvExchangeRequest{
+        Amount: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,59 +42,59 @@ func main() {
 ## Available Resources and Operations
 
 
-### AgeUsd
+### [AgeUsd](docs/ageusd/README.md)
 
-* `CalcSigmaRsvExchange` - Calculates SigRSV exchange
-* `CalcSigmaUsdExchange` - Calculates SigUSD exchange
-* `DoSigmaRsvExchange` - Builds ErgoPayRequest for SigRSV exchange
-* `DoSigmaUsdExchange` - Builds ErgoPayRequest for SigUSD exchange
-* `GetAgeUsdInfo` - Returns state of AgeUSD at this moment
-* `GetSigmaRsvPrice` - Lists price and available volume for SigmaRSV
-* `GetSigmaUsdPrice` - Lists price and available volume for SigmaUSD
+* [CalcSigmaRsvExchange](docs/ageusd/README.md#calcsigmarsvexchange) - Calculates SigRSV exchange
+* [CalcSigmaUsdExchange](docs/ageusd/README.md#calcsigmausdexchange) - Calculates SigUSD exchange
+* [DoSigmaRsvExchange](docs/ageusd/README.md#dosigmarsvexchange) - Builds ErgoPayRequest for SigRSV exchange
+* [DoSigmaUsdExchange](docs/ageusd/README.md#dosigmausdexchange) - Builds ErgoPayRequest for SigUSD exchange
+* [GetAgeUsdInfo](docs/ageusd/README.md#getageusdinfo) - Returns state of AgeUSD at this moment
+* [GetSigmaRsvPrice](docs/ageusd/README.md#getsigmarsvprice) - Lists price and available volume for SigmaRSV
+* [GetSigmaUsdPrice](docs/ageusd/README.md#getsigmausdprice) - Lists price and available volume for SigmaUSD
 
-### BabelFeeController
+### [BabelFeeController](docs/babelfeecontroller/README.md)
 
-* `CheckForNotifications`
-* `ErgoPayCreateBabelBox1`
-* `GetBabelFeeOverview`
+* [CheckForNotifications](docs/babelfeecontroller/README.md#checkfornotifications)
+* [ErgoPayCreateBabelBox1](docs/babelfeecontroller/README.md#ergopaycreatebabelbox1)
+* [GetBabelFeeOverview](docs/babelfeecontroller/README.md#getbabelfeeoverview)
 
-### BabelFeeNewOfferController
+### [BabelFeeNewOfferController](docs/babelfeenewoffercontroller/README.md)
 
-* `DoCreateBabelBox`
-* `ErgoPayCreateBabelBox`
-* `GetBabelFeeNewOffer`
-* `ReplaceTokenAmountInputFields`
+* [DoCreateBabelBox](docs/babelfeenewoffercontroller/README.md#docreatebabelbox)
+* [ErgoPayCreateBabelBox](docs/babelfeenewoffercontroller/README.md#ergopaycreatebabelbox)
+* [GetBabelFeeNewOffer](docs/babelfeenewoffercontroller/README.md#getbabelfeenewoffer)
+* [ReplaceTokenAmountInputFields](docs/babelfeenewoffercontroller/README.md#replacetokenamountinputfields)
 
-### BoxConsolidationController
+### [BoxConsolidationController](docs/boxconsolidationcontroller/README.md)
 
-* `EpConsolidate`
-* `MainApp1`
+* [EpConsolidate](docs/boxconsolidationcontroller/README.md#epconsolidate)
+* [MainApp1](docs/boxconsolidationcontroller/README.md#mainapp1)
 
-### PaymentPortal
+### [PaymentPortal](docs/paymentportal/README.md)
 
-* `AddPaymentRequest` - Creates a new payment request. Will return request id to check for transaction state and ergopay url to show the user as QR code
-* `GetPaymentState` - Returns the state of a payment request. Please note that payment requests are purged after some time, so persist the state at your side when needed
+* [AddPaymentRequest](docs/paymentportal/README.md#addpaymentrequest) - Creates a new payment request. Will return request id to check for transaction state and ergopay url to show the user as QR code
+* [GetPaymentState](docs/paymentportal/README.md#getpaymentstate) - Returns the state of a payment request. Please note that payment requests are purged after some time, so persist the state at your side when needed
 
-### PeerDetection
+### [PeerDetection](docs/peerdetection/README.md)
 
-* `GetPeersList` - Lists known peers sorted by block height
+* [GetPeersList](docs/peerdetection/README.md#getpeerslist) - Lists known peers sorted by block height
 
-### TokenBurnController
+### [TokenBurnController](docs/tokenburncontroller/README.md)
 
-* `GetBurningTransaction`
-* `MainApp`
-* `PrepareTransaction`
+* [GetBurningTransaction](docs/tokenburncontroller/README.md#getburningtransaction)
+* [MainApp](docs/tokenburncontroller/README.md#mainapp)
+* [PrepareTransaction](docs/tokenburncontroller/README.md#preparetransaction)
 
-### TokenPrices
+### [TokenPrices](docs/tokenprices/README.md)
 
-* `GetTokenPrice` - Lists price and available volume for a certain token
-* `GetTokenPrices` - Lists all token prices and available volume
+* [GetTokenPrice](docs/tokenprices/README.md#gettokenprice) - Lists price and available volume for a certain token
+* [GetTokenPrices](docs/tokenprices/README.md#gettokenprices) - Lists all token prices and available volume
 
-### TokenVerification
+### [TokenVerification](docs/tokenverification/README.md)
 
-* `CheckToken` - Check a token verification
-* `ListBlocked` - Lists all blocked tokens
-* `ListGenuine` - Lists all genuine tokens known
+* [CheckToken](docs/tokenverification/README.md#checktoken) - Check a token verification
+* [ListBlocked](docs/tokenverification/README.md#listblocked) - Lists all blocked tokens
+* [ListGenuine](docs/tokenverification/README.md#listgenuine) - Lists all genuine tokens known
 <!-- End SDK Available Operations -->
 
 ### Maturity

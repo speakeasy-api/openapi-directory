@@ -35,7 +35,10 @@ func newEmployeeStaging(defaultClient, securityClient HTTPClient, serverURL, lan
 // Add new employee to Web Link will send partially completed or potentially erroneous new hire record to Web Link, where it can be corrected and competed by company administrator or authorized Paylocity Service Bureau employee.
 func (s *employeeStaging) AddNewEmployeeToWebLink(ctx context.Context, request operations.AddNewEmployeeToWebLinkRequest, security operations.AddNewEmployeeToWebLinkSecurity) (*operations.AddNewEmployeeToWebLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/weblinkstaging/companies/{companyId}/employees/newemployees", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StagedEmployee", "json")
 	if err != nil {

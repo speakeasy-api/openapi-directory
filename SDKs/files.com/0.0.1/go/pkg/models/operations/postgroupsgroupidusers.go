@@ -22,12 +22,16 @@ const (
 	PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnumPasswordWithImportedHash PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum = "password_with_imported_hash"
 )
 
+func (e PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum) ToPointer() *PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum {
+	return &e
+}
+
 func (e *PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "password":
 		fallthrough
 	case "unused_former_ldap":
@@ -39,10 +43,10 @@ func (e *PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum) UnmarshalJSO
 	case "email_signup":
 		fallthrough
 	case "password_with_imported_hash":
-		*e = PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum(s)
+		*e = PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodyAuthenticationMethodEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	PostGroupsGroupIDUsersRequestBodyRequire2faEnumNeverRequire     PostGroupsGroupIDUsersRequestBodyRequire2faEnum = "never_require"
 )
 
+func (e PostGroupsGroupIDUsersRequestBodyRequire2faEnum) ToPointer() *PostGroupsGroupIDUsersRequestBodyRequire2faEnum {
+	return &e
+}
+
 func (e *PostGroupsGroupIDUsersRequestBodyRequire2faEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = PostGroupsGroupIDUsersRequestBodyRequire2faEnum(s)
+		*e = PostGroupsGroupIDUsersRequestBodyRequire2faEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodyRequire2faEnum: %s", s)
+		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodyRequire2faEnum: %v", v)
 	}
 }
 
@@ -87,21 +95,25 @@ const (
 	PostGroupsGroupIDUsersRequestBodySslRequiredEnumNeverRequire     PostGroupsGroupIDUsersRequestBodySslRequiredEnum = "never_require"
 )
 
+func (e PostGroupsGroupIDUsersRequestBodySslRequiredEnum) ToPointer() *PostGroupsGroupIDUsersRequestBodySslRequiredEnum {
+	return &e
+}
+
 func (e *PostGroupsGroupIDUsersRequestBodySslRequiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "use_system_setting":
 		fallthrough
 	case "always_require":
 		fallthrough
 	case "never_require":
-		*e = PostGroupsGroupIDUsersRequestBodySslRequiredEnum(s)
+		*e = PostGroupsGroupIDUsersRequestBodySslRequiredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodySslRequiredEnum: %s", s)
+		return fmt.Errorf("invalid value for PostGroupsGroupIDUsersRequestBodySslRequiredEnum: %v", v)
 	}
 }
 
@@ -140,7 +152,7 @@ type PostGroupsGroupIDUsersRequestBody struct {
 	Email *string `multipartForm:"name=email"`
 	// Can the user access with FTP/FTPS?
 	FtpPermission *bool `multipartForm:"name=ftp_permission"`
-	// Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, or `history`.
+	// Permission to grant on the user root.  Can be blank or `full`, `read`, `write`, `list`, `read+write`, or `list+write`
 	GrantPermission *string `multipartForm:"name=grant_permission"`
 	// A list of group ids to associate this user with.  Comma delimited.
 	GroupIds *string `multipartForm:"name=group_ids"`

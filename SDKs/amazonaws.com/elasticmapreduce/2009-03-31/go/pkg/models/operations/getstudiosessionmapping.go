@@ -16,17 +16,21 @@ const (
 	GetStudioSessionMappingXAmzTargetEnumElasticMapReduceGetStudioSessionMapping GetStudioSessionMappingXAmzTargetEnum = "ElasticMapReduce.GetStudioSessionMapping"
 )
 
+func (e GetStudioSessionMappingXAmzTargetEnum) ToPointer() *GetStudioSessionMappingXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetStudioSessionMappingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.GetStudioSessionMapping":
-		*e = GetStudioSessionMappingXAmzTargetEnum(s)
+		*e = GetStudioSessionMappingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStudioSessionMappingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStudioSessionMappingXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListRulesXAmzTargetEnumAwswafRegional20161128ListRules ListRulesXAmzTargetEnum = "AWSWAF_Regional_20161128.ListRules"
 )
 
+func (e ListRulesXAmzTargetEnum) ToPointer() *ListRulesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRulesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.ListRules":
-		*e = ListRulesXAmzTargetEnum(s)
+		*e = ListRulesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRulesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRulesXAmzTargetEnum: %v", v)
 	}
 }
 

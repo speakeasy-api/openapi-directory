@@ -16,12 +16,16 @@ const (
 	CheckFailureReasonEnumPremiumSupportRequired CheckFailureReasonEnum = "PREMIUM_SUPPORT_REQUIRED"
 )
 
+func (e CheckFailureReasonEnum) ToPointer() *CheckFailureReasonEnum {
+	return &e
+}
+
 func (e *CheckFailureReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSUME_ROLE_ERROR":
 		fallthrough
 	case "ACCESS_DENIED":
@@ -29,9 +33,9 @@ func (e *CheckFailureReasonEnum) UnmarshalJSON(data []byte) error {
 	case "UNKNOWN_ERROR":
 		fallthrough
 	case "PREMIUM_SUPPORT_REQUIRED":
-		*e = CheckFailureReasonEnum(s)
+		*e = CheckFailureReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckFailureReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckFailureReasonEnum: %v", v)
 	}
 }

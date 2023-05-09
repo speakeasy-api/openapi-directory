@@ -20,6 +20,8 @@ type Evaluation struct {
 	RuleNames []string `json:"ruleNames,omitempty"`
 	// Output only. [Output only] The updated rule ids if exist.
 	RuleVersions []string `json:"ruleVersions,omitempty"`
+	// crontab format schedule for scheduled evaluation, example: 0 */3 * * *
+	Schedule *string `json:"schedule,omitempty"`
 	// Output only. [Output only] Update time stamp
 	UpdateTime *string `json:"updateTime,omitempty"`
 }
@@ -38,4 +40,6 @@ type EvaluationInput struct {
 	ResourceStatus *ResourceStatus `json:"resourceStatus,omitempty"`
 	// the name of the rule
 	RuleNames []string `json:"ruleNames,omitempty"`
+	// crontab format schedule for scheduled evaluation, example: 0 */3 * * *
+	Schedule *string `json:"schedule,omitempty"`
 }

@@ -38,7 +38,10 @@ func newUploads(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Send chunked data for an **Upload**.
 func (s *uploads) ChunkedUpload(ctx context.Context, request operations.ChunkedUploadRequest, security operations.ChunkedUploadSecurity) (*operations.ChunkedUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -102,7 +105,10 @@ func (s *uploads) ChunkedUpload(ctx context.Context, request operations.ChunkedU
 // Check the status of an **Upload** by ID.
 func (s *uploads) FetchUploadStatusByID(ctx context.Context, request operations.FetchUploadStatusByIDRequest, security operations.FetchUploadStatusByIDSecurity) (*operations.FetchUploadStatusByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/uploads/{uploadId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

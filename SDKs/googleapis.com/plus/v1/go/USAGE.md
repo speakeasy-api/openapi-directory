@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PlusActivitiesGetRequest{
-        ActivityID: "corrupti",
-        Alt: "json",
-        Fields: "provident",
-        Key: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
-        UserIP: "nulla",
-    }
-
     ctx := context.Background()
-    res, err := s.Activities.PlusActivitiesGet(ctx, req, operations.PlusActivitiesGetSecurity{
+    res, err := s.Activities.PlusActivitiesGet(ctx, operations.PlusActivitiesGetRequest{
+        ActivityID: "corrupti",
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("provident"),
+        Key: sdk.String("distinctio"),
+        OauthToken: sdk.String("quibusdam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
+        UserIP: sdk.String("nulla"),
+    }, operations.PlusActivitiesGetSecurity{
         Option1: &operations.PlusActivitiesGetSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,17 +16,15 @@ func main() {
         }),
     )
 
-    req := operations.AccountsBalancesRetrieveRequest{
-        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.AccountsBalancesRetrieve(ctx, req)
+    res, err := s.Accounts.RetrieveAccountBalancesV2(ctx, operations.RetrieveAccountBalancesV2Request{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.RetrieveAccountBalancesV2200ApplicationJSONObject != nil {
         // handle response
     }
 }

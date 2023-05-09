@@ -108,7 +108,10 @@ func (s *license) CreateLicense(ctx context.Context, request operations.CreateLi
 // Delete License by a 'licenseNumber'
 func (s *license) DeleteLicense(ctx context.Context, request operations.DeleteLicenseRequest, security operations.DeleteLicenseSecurity) (*operations.DeleteLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -167,7 +170,10 @@ func (s *license) DeleteLicense(ctx context.Context, request operations.DeleteLi
 // Get License by a 'licenseNumber'
 func (s *license) GetLicense(ctx context.Context, request operations.GetLicenseRequest, security operations.GetLicenseSecurity) (*operations.GetLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,7 @@ func (s *license) GetLicense(ctx context.Context, request operations.GetLicenseR
 
 // ListLicenses - List Licenses
 // Return a list of all Licenses for the current Vendor
-func (s *license) ListLicenses(ctx context.Context) (*operations.ListLicensesResponse, error) {
+func (s *license) ListLicenses(ctx context.Context, security operations.ListLicensesSecurity) (*operations.ListLicensesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/license"
 
@@ -233,7 +239,7 @@ func (s *license) ListLicenses(ctx context.Context) (*operations.ListLicensesRes
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -285,7 +291,10 @@ func (s *license) ListLicenses(ctx context.Context) (*operations.ListLicensesRes
 // Update License by a 'licenseNumber'
 func (s *license) UpdateLicense(ctx context.Context, request operations.UpdateLicenseRequest, security operations.UpdateLicenseSecurity) (*operations.UpdateLicenseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/license/{licenseNumber}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

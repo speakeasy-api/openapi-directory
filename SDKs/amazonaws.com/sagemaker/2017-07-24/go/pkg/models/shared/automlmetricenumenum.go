@@ -25,12 +25,16 @@ const (
 	AutoMLMetricEnumEnumRecallMacro      AutoMLMetricEnumEnum = "RecallMacro"
 )
 
+func (e AutoMLMetricEnumEnum) ToPointer() *AutoMLMetricEnumEnum {
+	return &e
+}
+
 func (e *AutoMLMetricEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Accuracy":
 		fallthrough
 	case "MSE":
@@ -56,9 +60,9 @@ func (e *AutoMLMetricEnumEnum) UnmarshalJSON(data []byte) error {
 	case "Recall":
 		fallthrough
 	case "RecallMacro":
-		*e = AutoMLMetricEnumEnum(s)
+		*e = AutoMLMetricEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLMetricEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLMetricEnumEnum: %v", v)
 	}
 }

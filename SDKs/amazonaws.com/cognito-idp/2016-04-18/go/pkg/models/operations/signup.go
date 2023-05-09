@@ -16,17 +16,21 @@ const (
 	SignUpXAmzTargetEnumAwsCognitoIdentityProviderServiceSignUp SignUpXAmzTargetEnum = "AWSCognitoIdentityProviderService.SignUp"
 )
 
+func (e SignUpXAmzTargetEnum) ToPointer() *SignUpXAmzTargetEnum {
+	return &e
+}
+
 func (e *SignUpXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.SignUp":
-		*e = SignUpXAmzTargetEnum(s)
+		*e = SignUpXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SignUpXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SignUpXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	PutCorsPolicyXAmzTargetEnumMediaStore20170901PutCorsPolicy PutCorsPolicyXAmzTargetEnum = "MediaStore_20170901.PutCorsPolicy"
 )
 
+func (e PutCorsPolicyXAmzTargetEnum) ToPointer() *PutCorsPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutCorsPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.PutCorsPolicy":
-		*e = PutCorsPolicyXAmzTargetEnum(s)
+		*e = PutCorsPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCorsPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCorsPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

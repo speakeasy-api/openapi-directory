@@ -17,12 +17,16 @@ const (
 	GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumRestricted        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum = "RESTRICTED"
 )
 
+func (e GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum) ToPointer() *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum {
+	return &e
+}
+
 func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POLICY_UNSPECIFIED":
 		fallthrough
 	case "ALLOWED":
@@ -30,10 +34,10 @@ func (e *GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolic
 	case "FORBIDDEN":
 		fallthrough
 	case "RESTRICTED":
-		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum(s)
+		*e = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum: %v", v)
 	}
 }
 

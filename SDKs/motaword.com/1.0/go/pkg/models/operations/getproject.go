@@ -17,21 +17,25 @@ const (
 	GetProjectWithEnumScore  GetProjectWithEnum = "score"
 )
 
+func (e GetProjectWithEnum) ToPointer() *GetProjectWithEnum {
+	return &e
+}
+
 func (e *GetProjectWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "client":
 		fallthrough
 	case "vendor":
 		fallthrough
 	case "score":
-		*e = GetProjectWithEnum(s)
+		*e = GetProjectWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProjectWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProjectWithEnum: %v", v)
 	}
 }
 

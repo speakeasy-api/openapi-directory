@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DevicelistRequest{
-        AppType: "app_station",
-        DeviceID: "provident",
-        GetFavorites: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Deprecated.Devicelist(ctx, req, operations.DevicelistSecurity{
+    res, err := s.Deprecated.Devicelist(ctx, operations.DevicelistRequest{
+        AppType: operations.DevicelistAppTypeEnumAppStation.ToPointer(),
+        DeviceID: sdk.String("provident"),
+        GetFavorites: sdk.Bool(false),
+    }, operations.DevicelistSecurity{
         CodeOauth: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {

@@ -16,17 +16,21 @@ const (
 	DescribePendingMaintenanceActionsXAmzTargetEnumAmazonDmSv20160101DescribePendingMaintenanceActions DescribePendingMaintenanceActionsXAmzTargetEnum = "AmazonDMSv20160101.DescribePendingMaintenanceActions"
 )
 
+func (e DescribePendingMaintenanceActionsXAmzTargetEnum) ToPointer() *DescribePendingMaintenanceActionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribePendingMaintenanceActionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDMSv20160101.DescribePendingMaintenanceActions":
-		*e = DescribePendingMaintenanceActionsXAmzTargetEnum(s)
+		*e = DescribePendingMaintenanceActionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribePendingMaintenanceActionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribePendingMaintenanceActionsXAmzTargetEnum: %v", v)
 	}
 }
 

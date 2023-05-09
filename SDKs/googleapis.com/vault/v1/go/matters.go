@@ -35,7 +35,10 @@ func newMatters(defaultClient, securityClient HTTPClient, serverURL, language, s
 // VaultMattersAddPermissions - Adds an account as a matter collaborator.
 func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operations.VaultMattersAddPermissionsRequest, security operations.VaultMattersAddPermissionsSecurity) (*operations.VaultMattersAddPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:addPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:addPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddMatterPermissionsRequest", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *matters) VaultMattersAddPermissions(ctx context.Context, request operat
 // VaultMattersClose - Closes the specified matter. Returns the matter with updated state.
 func (s *matters) VaultMattersClose(ctx context.Context, request operations.VaultMattersCloseRequest, security operations.VaultMattersCloseSecurity) (*operations.VaultMattersCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:close", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:close", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -145,7 +151,10 @@ func (s *matters) VaultMattersClose(ctx context.Context, request operations.Vaul
 // VaultMattersCount - Counts the accounts processed by the specified query.
 func (s *matters) VaultMattersCount(ctx context.Context, request operations.VaultMattersCountRequest, security operations.VaultMattersCountSecurity) (*operations.VaultMattersCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CountArtifactsRequest", "json")
 	if err != nil {
@@ -255,7 +264,10 @@ func (s *matters) VaultMattersCreate(ctx context.Context, request operations.Vau
 // VaultMattersDelete - Deletes the specified matter. Returns the matter with updated state.
 func (s *matters) VaultMattersDelete(ctx context.Context, request operations.VaultMattersDeleteRequest, security operations.VaultMattersDeleteSecurity) (*operations.VaultMattersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -303,7 +315,10 @@ func (s *matters) VaultMattersDelete(ctx context.Context, request operations.Vau
 // VaultMattersExportsCreate - Creates an export.
 func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operations.VaultMattersExportsCreateRequest, security operations.VaultMattersExportsCreateSecurity) (*operations.VaultMattersExportsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Export", "json")
 	if err != nil {
@@ -358,7 +373,10 @@ func (s *matters) VaultMattersExportsCreate(ctx context.Context, request operati
 // VaultMattersExportsDelete - Deletes an export.
 func (s *matters) VaultMattersExportsDelete(ctx context.Context, request operations.VaultMattersExportsDeleteRequest, security operations.VaultMattersExportsDeleteSecurity) (*operations.VaultMattersExportsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -406,7 +424,10 @@ func (s *matters) VaultMattersExportsDelete(ctx context.Context, request operati
 // VaultMattersExportsGet - Gets an export.
 func (s *matters) VaultMattersExportsGet(ctx context.Context, request operations.VaultMattersExportsGetRequest, security operations.VaultMattersExportsGetSecurity) (*operations.VaultMattersExportsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports/{exportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -454,7 +475,10 @@ func (s *matters) VaultMattersExportsGet(ctx context.Context, request operations
 // VaultMattersExportsList - Lists details about the exports in the specified matter.
 func (s *matters) VaultMattersExportsList(ctx context.Context, request operations.VaultMattersExportsListRequest, security operations.VaultMattersExportsListSecurity) (*operations.VaultMattersExportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/exports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -502,7 +526,10 @@ func (s *matters) VaultMattersExportsList(ctx context.Context, request operation
 // VaultMattersGet - Gets the specified matter.
 func (s *matters) VaultMattersGet(ctx context.Context, request operations.VaultMattersGetRequest, security operations.VaultMattersGetSecurity) (*operations.VaultMattersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -550,7 +577,10 @@ func (s *matters) VaultMattersGet(ctx context.Context, request operations.VaultM
 // VaultMattersHoldsAccountsCreate - Adds an account to a hold. Accounts can be added only to a hold that does not have an organizational unit set. If you try to add an account to an organizational unit-based hold, an error is returned.
 func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request operations.VaultMattersHoldsAccountsCreateRequest, security operations.VaultMattersHoldsAccountsCreateSecurity) (*operations.VaultMattersHoldsAccountsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HeldAccount", "json")
 	if err != nil {
@@ -605,7 +635,10 @@ func (s *matters) VaultMattersHoldsAccountsCreate(ctx context.Context, request o
 // VaultMattersHoldsAccountsDelete - Removes an account from a hold.
 func (s *matters) VaultMattersHoldsAccountsDelete(ctx context.Context, request operations.VaultMattersHoldsAccountsDeleteRequest, security operations.VaultMattersHoldsAccountsDeleteSecurity) (*operations.VaultMattersHoldsAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -653,7 +686,10 @@ func (s *matters) VaultMattersHoldsAccountsDelete(ctx context.Context, request o
 // VaultMattersHoldsAccountsList - Lists the accounts covered by a hold. This can list only individually-specified accounts covered by the hold. If the hold covers an organizational unit, use the [Admin SDK](https://developers.google.com/admin-sdk/). to list the members of the organizational unit on hold.
 func (s *matters) VaultMattersHoldsAccountsList(ctx context.Context, request operations.VaultMattersHoldsAccountsListRequest, security operations.VaultMattersHoldsAccountsListSecurity) (*operations.VaultMattersHoldsAccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -701,7 +737,10 @@ func (s *matters) VaultMattersHoldsAccountsList(ctx context.Context, request ope
 // VaultMattersHoldsAddHeldAccounts - Adds accounts to a hold. Returns a list of accounts that have been successfully added. Accounts can be added only to an existing account-based hold.
 func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsAddHeldAccountsRequest, security operations.VaultMattersHoldsAddHeldAccountsSecurity) (*operations.VaultMattersHoldsAddHeldAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:addHeldAccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:addHeldAccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddHeldAccountsRequest", "json")
 	if err != nil {
@@ -756,7 +795,10 @@ func (s *matters) VaultMattersHoldsAddHeldAccounts(ctx context.Context, request 
 // VaultMattersHoldsCreate - Creates a hold in the specified matter.
 func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operations.VaultMattersHoldsCreateRequest, security operations.VaultMattersHoldsCreateSecurity) (*operations.VaultMattersHoldsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Hold", "json")
 	if err != nil {
@@ -811,7 +853,10 @@ func (s *matters) VaultMattersHoldsCreate(ctx context.Context, request operation
 // VaultMattersHoldsDelete - Removes the specified hold and releases the accounts or organizational unit covered by the hold. If the data is not preserved by another hold or retention rule, it might be purged.
 func (s *matters) VaultMattersHoldsDelete(ctx context.Context, request operations.VaultMattersHoldsDeleteRequest, security operations.VaultMattersHoldsDeleteSecurity) (*operations.VaultMattersHoldsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -859,7 +904,10 @@ func (s *matters) VaultMattersHoldsDelete(ctx context.Context, request operation
 // VaultMattersHoldsGet - Gets the specified hold.
 func (s *matters) VaultMattersHoldsGet(ctx context.Context, request operations.VaultMattersHoldsGetRequest, security operations.VaultMattersHoldsGetSecurity) (*operations.VaultMattersHoldsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -907,7 +955,10 @@ func (s *matters) VaultMattersHoldsGet(ctx context.Context, request operations.V
 // VaultMattersHoldsList - Lists the holds in a matter.
 func (s *matters) VaultMattersHoldsList(ctx context.Context, request operations.VaultMattersHoldsListRequest, security operations.VaultMattersHoldsListSecurity) (*operations.VaultMattersHoldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -955,7 +1006,10 @@ func (s *matters) VaultMattersHoldsList(ctx context.Context, request operations.
 // VaultMattersHoldsRemoveHeldAccounts - Removes the specified accounts from a hold. Returns a list of statuses in the same order as the request.
 func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, request operations.VaultMattersHoldsRemoveHeldAccountsRequest, security operations.VaultMattersHoldsRemoveHeldAccountsSecurity) (*operations.VaultMattersHoldsRemoveHeldAccountsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:removeHeldAccounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}:removeHeldAccounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveHeldAccountsRequest", "json")
 	if err != nil {
@@ -1010,7 +1064,10 @@ func (s *matters) VaultMattersHoldsRemoveHeldAccounts(ctx context.Context, reque
 // VaultMattersHoldsUpdate - Updates the scope (organizational unit or accounts) and query parameters of a hold. You cannot add accounts to a hold that covers an organizational unit, nor can you add organizational units to a hold that covers individual accounts. If you try, the unsupported values are ignored.
 func (s *matters) VaultMattersHoldsUpdate(ctx context.Context, request operations.VaultMattersHoldsUpdateRequest, security operations.VaultMattersHoldsUpdateSecurity) (*operations.VaultMattersHoldsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/holds/{holdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Hold", "json")
 	if err != nil {
@@ -1113,7 +1170,10 @@ func (s *matters) VaultMattersList(ctx context.Context, request operations.Vault
 // VaultMattersRemovePermissions - Removes an account as a matter collaborator.
 func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request operations.VaultMattersRemovePermissionsRequest, security operations.VaultMattersRemovePermissionsSecurity) (*operations.VaultMattersRemovePermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:removePermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:removePermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveMatterPermissionsRequest", "json")
 	if err != nil {
@@ -1168,7 +1228,10 @@ func (s *matters) VaultMattersRemovePermissions(ctx context.Context, request ope
 // VaultMattersReopen - Reopens the specified matter. Returns the matter with updated state.
 func (s *matters) VaultMattersReopen(ctx context.Context, request operations.VaultMattersReopenRequest, security operations.VaultMattersReopenSecurity) (*operations.VaultMattersReopenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:reopen", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:reopen", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1223,7 +1286,10 @@ func (s *matters) VaultMattersReopen(ctx context.Context, request operations.Vau
 // VaultMattersSavedQueriesCreate - Creates a saved query.
 func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request operations.VaultMattersSavedQueriesCreateRequest, security operations.VaultMattersSavedQueriesCreateSecurity) (*operations.VaultMattersSavedQueriesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SavedQuery", "json")
 	if err != nil {
@@ -1278,7 +1344,10 @@ func (s *matters) VaultMattersSavedQueriesCreate(ctx context.Context, request op
 // VaultMattersSavedQueriesDelete - Deletes the specified saved query.
 func (s *matters) VaultMattersSavedQueriesDelete(ctx context.Context, request operations.VaultMattersSavedQueriesDeleteRequest, security operations.VaultMattersSavedQueriesDeleteSecurity) (*operations.VaultMattersSavedQueriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1326,7 +1395,10 @@ func (s *matters) VaultMattersSavedQueriesDelete(ctx context.Context, request op
 // VaultMattersSavedQueriesGet - Retrieves the specified saved query.
 func (s *matters) VaultMattersSavedQueriesGet(ctx context.Context, request operations.VaultMattersSavedQueriesGetRequest, security operations.VaultMattersSavedQueriesGetSecurity) (*operations.VaultMattersSavedQueriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries/{savedQueryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1374,7 +1446,10 @@ func (s *matters) VaultMattersSavedQueriesGet(ctx context.Context, request opera
 // VaultMattersSavedQueriesList - Lists the saved queries in a matter.
 func (s *matters) VaultMattersSavedQueriesList(ctx context.Context, request operations.VaultMattersSavedQueriesListRequest, security operations.VaultMattersSavedQueriesListSecurity) (*operations.VaultMattersSavedQueriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}/savedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1422,7 +1497,10 @@ func (s *matters) VaultMattersSavedQueriesList(ctx context.Context, request oper
 // VaultMattersUndelete - Undeletes the specified matter. Returns the matter with updated state.
 func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.VaultMattersUndeleteRequest, security operations.VaultMattersUndeleteSecurity) (*operations.VaultMattersUndeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:undelete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}:undelete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1477,7 +1555,10 @@ func (s *matters) VaultMattersUndelete(ctx context.Context, request operations.V
 // VaultMattersUpdate - Updates the specified matter. This updates only the name and description of the matter, identified by matter ID. Changes to any other fields are ignored. Returns the default view of the matter.
 func (s *matters) VaultMattersUpdate(ctx context.Context, request operations.VaultMattersUpdateRequest, security operations.VaultMattersUpdateSecurity) (*operations.VaultMattersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/matters/{matterId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Matter", "json")
 	if err != nil {

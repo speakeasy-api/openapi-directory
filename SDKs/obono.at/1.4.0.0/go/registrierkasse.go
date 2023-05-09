@@ -35,7 +35,10 @@ func newRegistrierkasse(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetDEP - Generates a DEP file.
 func (s *registrierkasse) GetDEP(ctx context.Context, request operations.GetDEPRequest) (*operations.GetDEPResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/dep", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/dep", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *registrierkasse) GetDEP(ctx context.Context, request operations.GetDEPR
 // GetRegistrierkasse - Returns information about a particular `Registrierkasse`.
 func (s *registrierkasse) GetRegistrierkasse(ctx context.Context, request operations.GetRegistrierkasseRequest) (*operations.GetRegistrierkasseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

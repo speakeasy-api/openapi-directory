@@ -649,14 +649,23 @@ const (
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g12xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.12xlarge"
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g16xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.16xlarge"
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7gMetal        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumC6inMetal       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "c6in.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM6inMetal       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m6in.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM6idnMetal      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m6idn.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR6inMetal       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r6in.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR6idnMetal      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum) ToPointer() *ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum {
+	return &e
+}
+
 func (e *ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -1932,10 +1941,20 @@ func (e *ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum) Unm
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -1947,19 +1966,23 @@ const (
 	ModifyReservedInstancesRequestTargetConfigurationsScopeEnumRegion           ModifyReservedInstancesRequestTargetConfigurationsScopeEnum = "Region"
 )
 
+func (e ModifyReservedInstancesRequestTargetConfigurationsScopeEnum) ToPointer() *ModifyReservedInstancesRequestTargetConfigurationsScopeEnum {
+	return &e
+}
+
 func (e *ModifyReservedInstancesRequestTargetConfigurationsScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Availability Zone":
 		fallthrough
 	case "Region":
-		*e = ModifyReservedInstancesRequestTargetConfigurationsScopeEnum(s)
+		*e = ModifyReservedInstancesRequestTargetConfigurationsScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyReservedInstancesRequestTargetConfigurationsScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyReservedInstancesRequestTargetConfigurationsScopeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTAssignPrivateNatGatewayAddressActionEnumAssignPrivateNatGatewayAddress POSTAssignPrivateNatGatewayAddressActionEnum = "AssignPrivateNatGatewayAddress"
 )
 
+func (e POSTAssignPrivateNatGatewayAddressActionEnum) ToPointer() *POSTAssignPrivateNatGatewayAddressActionEnum {
+	return &e
+}
+
 func (e *POSTAssignPrivateNatGatewayAddressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssignPrivateNatGatewayAddress":
-		*e = POSTAssignPrivateNatGatewayAddressActionEnum(s)
+		*e = POSTAssignPrivateNatGatewayAddressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssignPrivateNatGatewayAddressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssignPrivateNatGatewayAddressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssignPrivateNatGatewayAddressVersionEnumTwoThousandAndSixteen1115 POSTAssignPrivateNatGatewayAddressVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssignPrivateNatGatewayAddressVersionEnum) ToPointer() *POSTAssignPrivateNatGatewayAddressVersionEnum {
+	return &e
+}
+
 func (e *POSTAssignPrivateNatGatewayAddressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssignPrivateNatGatewayAddressVersionEnum(s)
+		*e = POSTAssignPrivateNatGatewayAddressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssignPrivateNatGatewayAddressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssignPrivateNatGatewayAddressVersionEnum: %v", v)
 	}
 }
 

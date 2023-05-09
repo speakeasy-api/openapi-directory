@@ -15,17 +15,21 @@ const (
 	GETDescribeEnvironmentManagedActionsActionEnumDescribeEnvironmentManagedActions GETDescribeEnvironmentManagedActionsActionEnum = "DescribeEnvironmentManagedActions"
 )
 
+func (e GETDescribeEnvironmentManagedActionsActionEnum) ToPointer() *GETDescribeEnvironmentManagedActionsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentManagedActionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeEnvironmentManagedActions":
-		*e = GETDescribeEnvironmentManagedActionsActionEnum(s)
+		*e = GETDescribeEnvironmentManagedActionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsActionEnum: %v", v)
 	}
 }
 
@@ -39,12 +43,16 @@ const (
 	GETDescribeEnvironmentManagedActionsStatusEnumUnknown   GETDescribeEnvironmentManagedActionsStatusEnum = "Unknown"
 )
 
+func (e GETDescribeEnvironmentManagedActionsStatusEnum) ToPointer() *GETDescribeEnvironmentManagedActionsStatusEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentManagedActionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scheduled":
 		fallthrough
 	case "Pending":
@@ -52,10 +60,10 @@ func (e *GETDescribeEnvironmentManagedActionsStatusEnum) UnmarshalJSON(data []by
 	case "Running":
 		fallthrough
 	case "Unknown":
-		*e = GETDescribeEnvironmentManagedActionsStatusEnum(s)
+		*e = GETDescribeEnvironmentManagedActionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsStatusEnum: %v", v)
 	}
 }
 
@@ -66,17 +74,21 @@ const (
 	GETDescribeEnvironmentManagedActionsVersionEnumTwoThousandAndTen1201 GETDescribeEnvironmentManagedActionsVersionEnum = "2010-12-01"
 )
 
+func (e GETDescribeEnvironmentManagedActionsVersionEnum) ToPointer() *GETDescribeEnvironmentManagedActionsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeEnvironmentManagedActionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETDescribeEnvironmentManagedActionsVersionEnum(s)
+		*e = GETDescribeEnvironmentManagedActionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeEnvironmentManagedActionsVersionEnum: %v", v)
 	}
 }
 

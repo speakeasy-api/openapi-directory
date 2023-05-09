@@ -16,17 +16,21 @@ const (
 	StopContinuousExportXAmzTargetEnumAwsPoseidonServiceV20151101StopContinuousExport StopContinuousExportXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.StopContinuousExport"
 )
 
+func (e StopContinuousExportXAmzTargetEnum) ToPointer() *StopContinuousExportXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopContinuousExportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.StopContinuousExport":
-		*e = StopContinuousExportXAmzTargetEnum(s)
+		*e = StopContinuousExportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopContinuousExportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopContinuousExportXAmzTargetEnum: %v", v)
 	}
 }
 

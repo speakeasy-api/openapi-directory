@@ -16,21 +16,25 @@ const (
 	ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnumContentOnDemand              ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum = "CONTENT_ON_DEMAND"
 )
 
+func (e ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum) ToPointer() *ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum {
+	return &e
+}
+
 func (e *ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_STREAM_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CONTENT_LIVE_STREAM":
 		fallthrough
 	case "CONTENT_ON_DEMAND":
-		*e = ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum(s)
+		*e = ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum: %v", v)
 	}
 }
 

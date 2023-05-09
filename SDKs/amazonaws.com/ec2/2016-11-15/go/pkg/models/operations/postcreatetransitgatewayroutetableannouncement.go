@@ -15,17 +15,21 @@ const (
 	POSTCreateTransitGatewayRouteTableAnnouncementActionEnumCreateTransitGatewayRouteTableAnnouncement POSTCreateTransitGatewayRouteTableAnnouncementActionEnum = "CreateTransitGatewayRouteTableAnnouncement"
 )
 
+func (e POSTCreateTransitGatewayRouteTableAnnouncementActionEnum) ToPointer() *POSTCreateTransitGatewayRouteTableAnnouncementActionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayRouteTableAnnouncementActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTransitGatewayRouteTableAnnouncement":
-		*e = POSTCreateTransitGatewayRouteTableAnnouncementActionEnum(s)
+		*e = POSTCreateTransitGatewayRouteTableAnnouncementActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteTableAnnouncementActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteTableAnnouncementActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateTransitGatewayRouteTableAnnouncementVersionEnumTwoThousandAndSixteen1115 POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum) ToPointer() *POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum(s)
+		*e = POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayRouteTableAnnouncementVersionEnum: %v", v)
 	}
 }
 

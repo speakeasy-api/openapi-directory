@@ -15,17 +15,21 @@ const (
 	GETResyncMFADeviceActionEnumResyncMfaDevice GETResyncMFADeviceActionEnum = "ResyncMFADevice"
 )
 
+func (e GETResyncMFADeviceActionEnum) ToPointer() *GETResyncMFADeviceActionEnum {
+	return &e
+}
+
 func (e *GETResyncMFADeviceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResyncMFADevice":
-		*e = GETResyncMFADeviceActionEnum(s)
+		*e = GETResyncMFADeviceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResyncMFADeviceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResyncMFADeviceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETResyncMFADeviceVersionEnumTwoThousandAndTen0508 GETResyncMFADeviceVersionEnum = "2010-05-08"
 )
 
+func (e GETResyncMFADeviceVersionEnum) ToPointer() *GETResyncMFADeviceVersionEnum {
+	return &e
+}
+
 func (e *GETResyncMFADeviceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETResyncMFADeviceVersionEnum(s)
+		*e = GETResyncMFADeviceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETResyncMFADeviceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETResyncMFADeviceVersionEnum: %v", v)
 	}
 }
 

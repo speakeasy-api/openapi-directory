@@ -19,12 +19,16 @@ const (
 	GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnumWhitespace                     GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum = "WHITESPACE"
 )
 
+func (e GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum) ToPointer() *GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum {
+	return &e
+}
+
 func (e *GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMON_CHARS_TO_IGNORE_UNSPECIFIED":
 		fallthrough
 	case "NUMERIC":
@@ -36,10 +40,10 @@ func (e *GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum) UnmarshalJ
 	case "PUNCTUATION":
 		fallthrough
 	case "WHITESPACE":
-		*e = GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum(s)
+		*e = GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum: %s", s)
+		return fmt.Errorf("invalid value for GooglePrivacyDlpV2CharsToIgnoreCommonCharactersToIgnoreEnum: %v", v)
 	}
 }
 

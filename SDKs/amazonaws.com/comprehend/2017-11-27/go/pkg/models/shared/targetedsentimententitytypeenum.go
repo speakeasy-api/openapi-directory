@@ -29,12 +29,16 @@ const (
 	TargetedSentimentEntityTypeEnumOther          TargetedSentimentEntityTypeEnum = "OTHER"
 )
 
+func (e TargetedSentimentEntityTypeEnum) ToPointer() *TargetedSentimentEntityTypeEnum {
+	return &e
+}
+
 func (e *TargetedSentimentEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERSON":
 		fallthrough
 	case "LOCATION":
@@ -68,9 +72,9 @@ func (e *TargetedSentimentEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ATTRIBUTE":
 		fallthrough
 	case "OTHER":
-		*e = TargetedSentimentEntityTypeEnum(s)
+		*e = TargetedSentimentEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetedSentimentEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetedSentimentEntityTypeEnum: %v", v)
 	}
 }

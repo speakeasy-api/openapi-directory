@@ -2,30 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.TranslateRequest{
-        From: "corrupti",
+    ctx := context.Background()
+    res, err := s.Language.Translate(ctx, shared.TranslateRequest{
+        From: sdk.String("corrupti"),
         Text: []string{
             "distinctio",
             "quibusdam",
             "unde",
         },
-        To: "nulla",
-        TranslationContext: "corrupti",
-    }
-
-    ctx := context.Background()
-    res, err := s.Language.Translate(ctx, req, operations.TranslateSecurity{
+        To: sdk.String("nulla"),
+        TranslationContext: sdk.String("corrupti"),
+    }, operations.TranslateSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

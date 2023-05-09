@@ -284,7 +284,10 @@ func (s *rebalance) EvaluateRebalance(ctx context.Context, request operations.Ev
 // Retrieve details of a rebalace request using the `rebalance_request_id`.
 func (s *rebalance) GetRebalanceDetails(ctx context.Context, request operations.GetRebalanceDetailsRequest, security operations.GetRebalanceDetailsSecurity) (*operations.GetRebalanceDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/rebalance/{rebalance_request_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/rebalance/{rebalance_request_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

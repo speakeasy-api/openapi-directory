@@ -13,18 +13,19 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/hubapi.com/marketing/v3/g
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest{
+    ctx := context.Background()
+    res, err := s.AttendanceSubscriberStateChanges.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateRequest{
         BatchInputMarketingEventSubscriber: shared.BatchInputMarketingEventSubscriber{
             Inputs: []shared.MarketingEventSubscriber{
                 shared.MarketingEventSubscriber{
@@ -34,7 +35,7 @@ func main() {
                         "nulla": "corrupti",
                         "illum": "vel",
                     },
-                    Vid: 623564,
+                    Vid: sdk.Int(623564),
                 },
                 shared.MarketingEventSubscriber{
                     InteractionDateTime: 645894,
@@ -42,7 +43,7 @@ func main() {
                         "iure": "magnam",
                         "debitis": "ipsa",
                     },
-                    Vid: 963663,
+                    Vid: sdk.Int(963663),
                 },
                 shared.MarketingEventSubscriber{
                     InteractionDateTime: 272656,
@@ -50,17 +51,14 @@ func main() {
                         "molestiae": "minus",
                         "placeat": "voluptatum",
                     },
-                    Vid: 479977,
+                    Vid: sdk.Int(479977),
                 },
             },
         },
-        ExternalAccountID: "excepturi",
+        ExternalAccountID: sdk.String("excepturi"),
         ExternalEventID: "nisi",
         SubscriberState: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AttendanceSubscriberStateChanges.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate(ctx, req, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity{
+    }, operations.PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreateSecurity{
         Oauth2Legacy: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
     })
     if err != nil {
@@ -78,33 +76,33 @@ func main() {
 ## Available Resources and Operations
 
 
-### AttendanceSubscriberStateChanges
+### [AttendanceSubscriberStateChanges](docs/attendancesubscriberstatechanges/README.md)
 
-* `PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate` - Record
-* `PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail` - Record
+* [PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateCreateCreate](docs/attendancesubscriberstatechanges/README.md#postmarketingv3marketingeventsattendanceexternaleventidsubscriberstatecreatecreate) - Record
+* [PostMarketingV3MarketingEventsAttendanceExternalEventIDSubscriberStateEmailCreateCreateByEmail](docs/attendancesubscriberstatechanges/README.md#postmarketingv3marketingeventsattendanceexternaleventidsubscriberstateemailcreatecreatebyemail) - Record
 
-### MarketingEventsExternal
+### [MarketingEventsExternal](docs/marketingeventsexternal/README.md)
 
-* `DeleteMarketingV3MarketingEventsEventsExternalEventIDArchive`
-* `GetMarketingV3MarketingEventsEventsExternalEventIDGetByID`
-* `PatchMarketingV3MarketingEventsEventsExternalEventIDUpdate`
-* `PostMarketingV3MarketingEventsEventsDeleteArchiveBatch`
-* `PostMarketingV3MarketingEventsEventsUpsertDoUpsert`
-* `PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancel`
-* `PostMarketingV3MarketingEventsEventsExternalEventIDCompleteComplete`
-* `PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByID`
-* `PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByID`
-* `PostMarketingV3MarketingEventsEventsCreate`
-* `PutMarketingV3MarketingEventsEventsExternalEventIDReplace`
+* [DeleteMarketingV3MarketingEventsEventsExternalEventIDArchive](docs/marketingeventsexternal/README.md#deletemarketingv3marketingeventseventsexternaleventidarchive)
+* [GetMarketingV3MarketingEventsEventsExternalEventIDGetByID](docs/marketingeventsexternal/README.md#getmarketingv3marketingeventseventsexternaleventidgetbyid)
+* [PatchMarketingV3MarketingEventsEventsExternalEventIDUpdate](docs/marketingeventsexternal/README.md#patchmarketingv3marketingeventseventsexternaleventidupdate)
+* [PostMarketingV3MarketingEventsEventsDeleteArchiveBatch](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsdeletearchivebatch)
+* [PostMarketingV3MarketingEventsEventsUpsertDoUpsert](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsupsertdoupsert)
+* [PostMarketingV3MarketingEventsEventsExternalEventIDCancelDoCancel](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidcanceldocancel)
+* [PostMarketingV3MarketingEventsEventsExternalEventIDCompleteComplete](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidcompletecomplete)
+* [PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateEmailUpsertDoEmailUpsertByID](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidsubscriberstateemailupsertdoemailupsertbyid)
+* [PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByID](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventsexternaleventidsubscriberstateupsertdoupsertbyid)
+* [PostMarketingV3MarketingEventsEventsCreate](docs/marketingeventsexternal/README.md#postmarketingv3marketingeventseventscreate)
+* [PutMarketingV3MarketingEventsEventsExternalEventIDReplace](docs/marketingeventsexternal/README.md#putmarketingv3marketingeventseventsexternaleventidreplace)
 
-### Search
+### [Search](docs/search/README.md)
 
-* `GetMarketingV3MarketingEventsEventsSearchDoSearch` - Search for marketing events
+* [GetMarketingV3MarketingEventsEventsSearchDoSearch](docs/search/README.md#getmarketingv3marketingeventseventssearchdosearch) - Search for marketing events
 
-### SettingsExternal
+### [SettingsExternal](docs/settingsexternal/README.md)
 
-* `GetMarketingV3MarketingEventsAppIDSettingsGetAll`
-* `PostMarketingV3MarketingEventsAppIDSettingsCreate`
+* [GetMarketingV3MarketingEventsAppIDSettingsGetAll](docs/settingsexternal/README.md#getmarketingv3marketingeventsappidsettingsgetall)
+* [PostMarketingV3MarketingEventsAppIDSettingsCreate](docs/settingsexternal/README.md#postmarketingv3marketingeventsappidsettingscreate)
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcitystan
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcitystandardRequest{
+    ctx := context.Background()
+    res, err := s.CityDataStandardization.Getcitystandard(ctx, operations.GetcitystandardRequest{
         City: "Laruecester",
         License: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.CityDataStandardization.Getcitystandard(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CityDataStandardization
+### [CityDataStandardization](docs/citydatastandardization/README.md)
 
-* `Getcitystandard` - Gets a city name standard for US and international cities
+* [Getcitystandard](docs/citydatastandardization/README.md#getcitystandard) - Gets a city name standard for US and international cities
 <!-- End SDK Available Operations -->
 
 ### Maturity

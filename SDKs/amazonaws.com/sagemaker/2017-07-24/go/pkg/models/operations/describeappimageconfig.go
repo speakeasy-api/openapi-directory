@@ -16,17 +16,21 @@ const (
 	DescribeAppImageConfigXAmzTargetEnumSageMakerDescribeAppImageConfig DescribeAppImageConfigXAmzTargetEnum = "SageMaker.DescribeAppImageConfig"
 )
 
+func (e DescribeAppImageConfigXAmzTargetEnum) ToPointer() *DescribeAppImageConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAppImageConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeAppImageConfig":
-		*e = DescribeAppImageConfigXAmzTargetEnum(s)
+		*e = DescribeAppImageConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAppImageConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAppImageConfigXAmzTargetEnum: %v", v)
 	}
 }
 

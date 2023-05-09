@@ -19,12 +19,16 @@ const (
 	UpdateDevEnvironmentRequestBodyInstanceTypeEnumDevStandard1Xlarge UpdateDevEnvironmentRequestBodyInstanceTypeEnum = "dev.standard1.xlarge"
 )
 
+func (e UpdateDevEnvironmentRequestBodyInstanceTypeEnum) ToPointer() *UpdateDevEnvironmentRequestBodyInstanceTypeEnum {
+	return &e
+}
+
 func (e *UpdateDevEnvironmentRequestBodyInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dev.standard1.small":
 		fallthrough
 	case "dev.standard1.medium":
@@ -32,10 +36,10 @@ func (e *UpdateDevEnvironmentRequestBodyInstanceTypeEnum) UnmarshalJSON(data []b
 	case "dev.standard1.large":
 		fallthrough
 	case "dev.standard1.xlarge":
-		*e = UpdateDevEnvironmentRequestBodyInstanceTypeEnum(s)
+		*e = UpdateDevEnvironmentRequestBodyInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDevEnvironmentRequestBodyInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDevEnvironmentRequestBodyInstanceTypeEnum: %v", v)
 	}
 }
 

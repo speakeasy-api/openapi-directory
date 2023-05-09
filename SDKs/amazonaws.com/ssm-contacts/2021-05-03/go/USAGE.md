@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,27 +17,25 @@ func main() {
         }),
     )
 
-    req := operations.AcceptPageRequest{
+    ctx := context.Background()
+    res, err := s.AcceptPage(ctx, operations.AcceptPageRequest{
         AcceptPageRequest: shared.AcceptPageRequest{
             AcceptCode: "corrupti",
-            AcceptCodeValidation: "ENFORCE",
-            AcceptType: "READ",
-            ContactChannelID: "quibusdam",
-            Note: "unde",
+            AcceptCodeValidation: shared.AcceptCodeValidationEnumEnforce.ToPointer(),
+            AcceptType: shared.AcceptTypeEnumRead,
+            ContactChannelID: sdk.String("quibusdam"),
+            Note: sdk.String("unde"),
             PageID: "nulla",
         },
-        XAmzAlgorithm: "corrupti",
-        XAmzContentSha256: "illum",
-        XAmzCredential: "vel",
-        XAmzDate: "error",
-        XAmzSecurityToken: "deserunt",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "iure",
-        XAmzTarget: "SSMContacts.AcceptPage",
-    }
-
-    ctx := context.Background()
-    res, err := s.AcceptPage(ctx, req)
+        XAmzAlgorithm: sdk.String("corrupti"),
+        XAmzContentSha256: sdk.String("illum"),
+        XAmzCredential: sdk.String("vel"),
+        XAmzDate: sdk.String("error"),
+        XAmzSecurityToken: sdk.String("deserunt"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("iure"),
+        XAmzTarget: operations.AcceptPageXAmzTargetEnumSsmContactsAcceptPage,
+    })
     if err != nil {
         log.Fatal(err)
     }

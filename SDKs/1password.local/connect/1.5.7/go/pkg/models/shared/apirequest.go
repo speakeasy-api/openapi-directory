@@ -17,12 +17,16 @@ const (
 	APIRequestActionEnumDelete APIRequestActionEnum = "DELETE"
 )
 
+func (e APIRequestActionEnum) ToPointer() *APIRequestActionEnum {
+	return &e
+}
+
 func (e *APIRequestActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "READ":
 		fallthrough
 	case "CREATE":
@@ -30,10 +34,10 @@ func (e *APIRequestActionEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = APIRequestActionEnum(s)
+		*e = APIRequestActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIRequestActionEnum: %s", s)
+		return fmt.Errorf("invalid value for APIRequestActionEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	APIRequestResourceTypeEnumVault APIRequestResourceTypeEnum = "VAULT"
 )
 
+func (e APIRequestResourceTypeEnum) ToPointer() *APIRequestResourceTypeEnum {
+	return &e
+}
+
 func (e *APIRequestResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ITEM":
 		fallthrough
 	case "VAULT":
-		*e = APIRequestResourceTypeEnum(s)
+		*e = APIRequestResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIRequestResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APIRequestResourceTypeEnum: %v", v)
 	}
 }
 
@@ -90,19 +98,23 @@ const (
 	APIRequestResultEnumDeny    APIRequestResultEnum = "DENY"
 )
 
+func (e APIRequestResultEnum) ToPointer() *APIRequestResultEnum {
+	return &e
+}
+
 func (e *APIRequestResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "DENY":
-		*e = APIRequestResultEnum(s)
+		*e = APIRequestResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIRequestResultEnum: %s", s)
+		return fmt.Errorf("invalid value for APIRequestResultEnum: %v", v)
 	}
 }
 

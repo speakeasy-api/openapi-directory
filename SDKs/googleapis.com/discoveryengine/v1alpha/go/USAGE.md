@@ -2,47 +2,46 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(ctx, operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudDiscoveryengineV1alphaDocument: &shared.GoogleCloudDiscoveryengineV1alphaDocument{
-            ID: "provident",
-            JSONData: "distinctio",
-            Name: "quibusdam",
-            ParentDocumentID: "unde",
-            SchemaID: "nulla",
+            ID: sdk.String("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+            JSONData: sdk.String("perferendis"),
+            Name: sdk.String("Estelle Will"),
+            ParentDocumentID: sdk.String("at"),
+            SchemaID: sdk.String("at"),
             StructData: map[string]interface{}{
-                "illum": "vel",
-                "error": "deserunt",
-                "suscipit": "iure",
+                "molestiae": "quod",
+                "quod": "esse",
+                "totam": "porro",
+                "dolorum": "dicta",
             },
         },
-        AccessToken: "magnam",
-        Alt: "proto",
-        Callback: "ipsa",
-        DocumentID: "delectus",
-        Fields: "tempora",
-        Key: "suscipit",
-        OauthToken: "molestiae",
-        Parent: "minus",
-        PrettyPrint: false,
-        QuotaUser: "placeat",
-        UploadType: "voluptatum",
-        UploadProtocol: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(ctx, req, operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity{
+        AccessToken: sdk.String("nam"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("occaecati"),
+        DocumentID: sdk.String("fugit"),
+        Fields: sdk.String("deleniti"),
+        Key: sdk.String("hic"),
+        OauthToken: sdk.String("optio"),
+        Parent: "totam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("beatae"),
+        UploadType: sdk.String("commodi"),
+        UploadProtocol: sdk.String("molestiae"),
+    }, operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -76,9 +76,13 @@ func (s *incidents) GETVersionIncidentsFormat(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *incidents) GETVersionIncidentsIDFormat(ctx context.Context, request operations.GETVersionIncidentsIDFormatRequest) (*operations.GETVersionIncidentsIDFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/incidents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/incidents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

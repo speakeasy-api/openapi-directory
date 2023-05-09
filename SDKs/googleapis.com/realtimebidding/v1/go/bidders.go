@@ -35,7 +35,10 @@ func newBidders(defaultClient, securityClient HTTPClient, serverURL, language, s
 // RealtimebiddingBiddersCreativesWatch - Watches all creatives pertaining to a bidder. It is sufficient to invoke this endpoint once per bidder. A Pub/Sub topic will be created and notifications will be pushed to the topic when any of the bidder's creatives change status. All of the bidder's service accounts will have access to read from the topic. Subsequent invocations of this method will return the existing Pub/Sub configuration.
 func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, request operations.RealtimebiddingBiddersCreativesWatchRequest, security operations.RealtimebiddingBiddersCreativesWatchSecurity) (*operations.RealtimebiddingBiddersCreativesWatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives:watch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/creatives:watch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *bidders) RealtimebiddingBiddersCreativesWatch(ctx context.Context, requ
 // RealtimebiddingBiddersEndpointsList - Lists all the bidder's endpoints.
 func (s *bidders) RealtimebiddingBiddersEndpointsList(ctx context.Context, request operations.RealtimebiddingBiddersEndpointsListRequest, security operations.RealtimebiddingBiddersEndpointsListSecurity) (*operations.RealtimebiddingBiddersEndpointsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/endpoints", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *bidders) RealtimebiddingBiddersList(ctx context.Context, request operat
 // RealtimebiddingBiddersPretargetingConfigsActivate - Activates a pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsActivateRequest, security operations.RealtimebiddingBiddersPretargetingConfigsActivateSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -241,7 +250,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsActivate(ctx context.
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedApps - Adds targeted apps to the pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedAppsRequest", "json")
 	if err != nil {
@@ -296,7 +308,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedApps(ctx c
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers - Adds targeted publishers to the pretargeting config.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedPublishers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedPublishers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedPublishersRequest", "json")
 	if err != nil {
@@ -351,7 +366,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedPublishers
 // RealtimebiddingBiddersPretargetingConfigsAddTargetedSites - Adds targeted sites to the pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesRequest, security operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsAddTargetedSitesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedSites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:addTargetedSites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddTargetedSitesRequest", "json")
 	if err != nil {
@@ -406,7 +424,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsAddTargetedSites(ctx 
 // RealtimebiddingBiddersPretargetingConfigsCreate - Creates a pretargeting configuration. A pretargeting configuration's state (PretargetingConfig.state) is active upon creation, and it will start to affect traffic shortly after. A bidder may create a maximum of 10 pretargeting configurations. Attempts to exceed this maximum results in a 400 bad request error.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsCreateRequest, security operations.RealtimebiddingBiddersPretargetingConfigsCreateSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PretargetingConfigInput", "json")
 	if err != nil {
@@ -461,7 +482,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsCreate(ctx context.Co
 // RealtimebiddingBiddersPretargetingConfigsDelete - Deletes a pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsDelete(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsDeleteRequest, security operations.RealtimebiddingBiddersPretargetingConfigsDeleteSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -509,7 +533,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsDelete(ctx context.Co
 // RealtimebiddingBiddersPretargetingConfigsList - Lists all pretargeting configurations for a single bidder.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsList(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsListRequest, security operations.RealtimebiddingBiddersPretargetingConfigsListSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/pretargetingConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -557,7 +584,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsList(ctx context.Cont
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps - Removes targeted apps from the pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedAppsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedApps", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedApps", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedAppsRequest", "json")
 	if err != nil {
@@ -612,7 +642,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedApps(ct
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers - Removes targeted publishers from the pretargeting config.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishers(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublishersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedPublishers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedPublishers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedPublishersRequest", "json")
 	if err != nil {
@@ -667,7 +700,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedPublish
 // RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites - Removes targeted sites from the pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesRequest, security operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSitesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedSites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{pretargetingConfig}:removeTargetedSites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RemoveTargetedSitesRequest", "json")
 	if err != nil {
@@ -722,7 +758,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsRemoveTargetedSites(c
 // RealtimebiddingBiddersPretargetingConfigsSuspend - Suspends a pretargeting configuration.
 func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.Context, request operations.RealtimebiddingBiddersPretargetingConfigsSuspendRequest, security operations.RealtimebiddingBiddersPretargetingConfigsSuspendSecurity) (*operations.RealtimebiddingBiddersPretargetingConfigsSuspendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:suspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:suspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -777,7 +816,10 @@ func (s *bidders) RealtimebiddingBiddersPretargetingConfigsSuspend(ctx context.C
 // RealtimebiddingBiddersPublisherConnectionsBatchApprove - Batch approves multiple publisher connections.
 func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveRequest, security operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchApproveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchApprove", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchApprove", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchApprovePublisherConnectionsRequest", "json")
 	if err != nil {
@@ -832,7 +874,10 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchApprove(ctx con
 // RealtimebiddingBiddersPublisherConnectionsBatchReject - Batch rejects multiple publisher connections.
 func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectRequest, security operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsBatchRejectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchReject", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections:batchReject", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRejectPublisherConnectionsRequest", "json")
 	if err != nil {
@@ -887,7 +932,10 @@ func (s *bidders) RealtimebiddingBiddersPublisherConnectionsBatchReject(ctx cont
 // RealtimebiddingBiddersPublisherConnectionsList - Lists publisher connections for a given bidder.
 func (s *bidders) RealtimebiddingBiddersPublisherConnectionsList(ctx context.Context, request operations.RealtimebiddingBiddersPublisherConnectionsListRequest, security operations.RealtimebiddingBiddersPublisherConnectionsListSecurity) (*operations.RealtimebiddingBiddersPublisherConnectionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherConnections", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,50 +8,54 @@ import (
 	"time"
 )
 
-type TokensPartnerOfferHistoryResponseMembershipTypeEnum string
+type TokensPartnerOfferHistoryResponseMembershipTypeEnum int
 
 const (
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumZero                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = "0"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumOne                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = "1"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumTwo                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = "2"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumThree                  TokensPartnerOfferHistoryResponseMembershipTypeEnum = "3"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumFour                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = "4"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumFive                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = "5"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumSix                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = "6"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumTen                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = "10"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumTwoHundredAndFiftyFour TokensPartnerOfferHistoryResponseMembershipTypeEnum = "254"
-	TokensPartnerOfferHistoryResponseMembershipTypeEnumMinus1                 TokensPartnerOfferHistoryResponseMembershipTypeEnum = "-1"
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumZero                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = 0
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumOne                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = 1
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumTwo                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = 2
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumThree                  TokensPartnerOfferHistoryResponseMembershipTypeEnum = 3
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumFour                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = 4
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumFive                   TokensPartnerOfferHistoryResponseMembershipTypeEnum = 5
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumSix                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = 6
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumTen                    TokensPartnerOfferHistoryResponseMembershipTypeEnum = 10
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumTwoHundredAndFiftyFour TokensPartnerOfferHistoryResponseMembershipTypeEnum = 254
+	TokensPartnerOfferHistoryResponseMembershipTypeEnumMinus1                 TokensPartnerOfferHistoryResponseMembershipTypeEnum = -1
 )
 
+func (e TokensPartnerOfferHistoryResponseMembershipTypeEnum) ToPointer() *TokensPartnerOfferHistoryResponseMembershipTypeEnum {
+	return &e
+}
+
 func (e *TokensPartnerOfferHistoryResponseMembershipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
+	case 2:
 		fallthrough
-	case "3":
+	case 3:
 		fallthrough
-	case "4":
+	case 4:
 		fallthrough
-	case "5":
+	case 5:
 		fallthrough
-	case "6":
+	case 6:
 		fallthrough
-	case "10":
+	case 10:
 		fallthrough
-	case "254":
+	case 254:
 		fallthrough
-	case "-1":
-		*e = TokensPartnerOfferHistoryResponseMembershipTypeEnum(s)
+	case -1:
+		*e = TokensPartnerOfferHistoryResponseMembershipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokensPartnerOfferHistoryResponseMembershipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TokensPartnerOfferHistoryResponseMembershipTypeEnum: %v", v)
 	}
 }
 

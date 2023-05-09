@@ -15,20 +15,24 @@ const (
 	EntityStateEnumDeleted  EntityStateEnum = "DELETED"
 )
 
+func (e EntityStateEnum) ToPointer() *EntityStateEnum {
+	return &e
+}
+
 func (e *EntityStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "DELETED":
-		*e = EntityStateEnum(s)
+		*e = EntityStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityStateEnum: %v", v)
 	}
 }

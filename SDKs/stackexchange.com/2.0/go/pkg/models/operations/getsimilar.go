@@ -16,19 +16,23 @@ const (
 	GetSimilarOrderEnumAsc  GetSimilarOrderEnum = "asc"
 )
 
+func (e GetSimilarOrderEnum) ToPointer() *GetSimilarOrderEnum {
+	return &e
+}
+
 func (e *GetSimilarOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetSimilarOrderEnum(s)
+		*e = GetSimilarOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSimilarOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSimilarOrderEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetSimilarSortEnumRelevance GetSimilarSortEnum = "relevance"
 )
 
+func (e GetSimilarSortEnum) ToPointer() *GetSimilarSortEnum {
+	return &e
+}
+
 func (e *GetSimilarSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activity":
 		fallthrough
 	case "creation":
@@ -55,10 +63,10 @@ func (e *GetSimilarSortEnum) UnmarshalJSON(data []byte) error {
 	case "votes":
 		fallthrough
 	case "relevance":
-		*e = GetSimilarSortEnum(s)
+		*e = GetSimilarSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSimilarSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSimilarSortEnum: %v", v)
 	}
 }
 

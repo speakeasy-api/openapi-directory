@@ -35,6 +35,8 @@ func newDeprecatedServices(defaultClient, securityClient HTTPClient, serverURL, 
 // MerchantCancellation - /merchant/cancellation
 // Cancel a booking
 // **Note**: This service has been replaced by the [cancellationReasons](#operation/cancellationReasons), [bookingQuote](#operation/bookingQuote) and [cancelBooking](#operation/cancelBooking) endpoints
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *deprecatedServices) MerchantCancellation(ctx context.Context, request operations.MerchantCancellationRequest) (*operations.MerchantCancellationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/merchant/cancellation"

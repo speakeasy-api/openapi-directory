@@ -35,7 +35,10 @@ func newSavedadstyles(defaultClient, securityClient HTTPClient, serverURL, langu
 // AdsenseSavedadstylesGet - Get a specific saved ad style from the user's account.
 func (s *savedadstyles) AdsenseSavedadstylesGet(ctx context.Context, request operations.AdsenseSavedadstylesGetRequest, security operations.AdsenseSavedadstylesGetSecurity) (*operations.AdsenseSavedadstylesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/savedadstyles/{savedAdStyleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/savedadstyles/{savedAdStyleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

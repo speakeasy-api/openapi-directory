@@ -16,12 +16,16 @@ const (
 	AnomalyDetectorFailureTypeEnumDeactivationFailure       AnomalyDetectorFailureTypeEnum = "DEACTIVATION_FAILURE"
 )
 
+func (e AnomalyDetectorFailureTypeEnum) ToPointer() *AnomalyDetectorFailureTypeEnum {
+	return &e
+}
+
 func (e *AnomalyDetectorFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVATION_FAILURE":
 		fallthrough
 	case "BACK_TEST_ACTIVATION_FAILURE":
@@ -29,9 +33,9 @@ func (e *AnomalyDetectorFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DELETION_FAILURE":
 		fallthrough
 	case "DEACTIVATION_FAILURE":
-		*e = AnomalyDetectorFailureTypeEnum(s)
+		*e = AnomalyDetectorFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnomalyDetectorFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnomalyDetectorFailureTypeEnum: %v", v)
 	}
 }

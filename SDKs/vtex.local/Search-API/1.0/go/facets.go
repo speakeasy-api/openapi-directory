@@ -380,7 +380,10 @@ func newFacets(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // ```
 func (s *facets) Facetscategory(ctx context.Context, request operations.FacetscategoryRequest) (*operations.FacetscategoryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/search/{term}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/search/{term}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +454,10 @@ func (s *facets) Facetscategory(ctx context.Context, request operations.Facetsca
 // ```
 func (s *facets) GetAPICatalogSystemPubFacetsCategoryCategoryID(ctx context.Context, request operations.GetAPICatalogSystemPubFacetsCategoryCategoryIDRequest) (*operations.GetAPICatalogSystemPubFacetsCategoryCategoryIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/category/{categoryId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/catalog_system/pub/facets/category/{categoryId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

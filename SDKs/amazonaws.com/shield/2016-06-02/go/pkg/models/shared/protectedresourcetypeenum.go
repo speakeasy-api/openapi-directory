@@ -18,12 +18,16 @@ const (
 	ProtectedResourceTypeEnumGlobalAccelerator       ProtectedResourceTypeEnum = "GLOBAL_ACCELERATOR"
 )
 
+func (e ProtectedResourceTypeEnum) ToPointer() *ProtectedResourceTypeEnum {
+	return &e
+}
+
 func (e *ProtectedResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOUDFRONT_DISTRIBUTION":
 		fallthrough
 	case "ROUTE_53_HOSTED_ZONE":
@@ -35,9 +39,9 @@ func (e *ProtectedResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "APPLICATION_LOAD_BALANCER":
 		fallthrough
 	case "GLOBAL_ACCELERATOR":
-		*e = ProtectedResourceTypeEnum(s)
+		*e = ProtectedResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtectedResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtectedResourceTypeEnum: %v", v)
 	}
 }

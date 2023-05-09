@@ -17,12 +17,16 @@ const (
 	BlogPerUserInfoRoleEnumAdmin               BlogPerUserInfoRoleEnum = "ADMIN"
 )
 
+func (e BlogPerUserInfoRoleEnum) ToPointer() *BlogPerUserInfoRoleEnum {
+	return &e
+}
+
 func (e *BlogPerUserInfoRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIEW_TYPE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -30,10 +34,10 @@ func (e *BlogPerUserInfoRoleEnum) UnmarshalJSON(data []byte) error {
 	case "AUTHOR":
 		fallthrough
 	case "ADMIN":
-		*e = BlogPerUserInfoRoleEnum(s)
+		*e = BlogPerUserInfoRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BlogPerUserInfoRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for BlogPerUserInfoRoleEnum: %v", v)
 	}
 }
 

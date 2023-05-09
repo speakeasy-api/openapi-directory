@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,32 +16,29 @@ func main() {
         }),
     )
 
-    req := operations.CreateAssistantRequest{
+    ctx := context.Background()
+    res, err := s.CreateAssistant(ctx, operations.CreateAssistantRequest{
         RequestBody: operations.CreateAssistantRequestBody{
-            ClientToken: "corrupti",
-            Description: "provident",
-            Name: "distinctio",
+            ClientToken: sdk.String("corrupti"),
+            Description: sdk.String("provident"),
+            Name: "Ellis Mitchell",
             ServerSideEncryptionConfiguration: &operations.CreateAssistantRequestBodyServerSideEncryptionConfiguration{
-                KmsKeyID: "quibusdam",
+                KmsKeyID: sdk.String("illum"),
             },
             Tags: map[string]string{
-                "nulla": "corrupti",
-                "illum": "vel",
                 "error": "deserunt",
+                "suscipit": "iure",
             },
-            Type: "AGENT",
+            Type: operations.CreateAssistantRequestBodyTypeEnumAgent,
         },
-        XAmzAlgorithm: "suscipit",
-        XAmzContentSha256: "iure",
-        XAmzCredential: "magnam",
-        XAmzDate: "debitis",
-        XAmzSecurityToken: "ipsa",
-        XAmzSignature: "delectus",
-        XAmzSignedHeaders: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAssistant(ctx, req)
+        XAmzAlgorithm: sdk.String("magnam"),
+        XAmzContentSha256: sdk.String("debitis"),
+        XAmzCredential: sdk.String("ipsa"),
+        XAmzDate: sdk.String("delectus"),
+        XAmzSecurityToken: sdk.String("tempora"),
+        XAmzSignature: sdk.String("suscipit"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

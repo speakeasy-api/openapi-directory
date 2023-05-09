@@ -17,12 +17,16 @@ const (
 	CancelScheduledHangupResponseMessageEnumScheduledHangupCancelationFailed           CancelScheduledHangupResponseMessageEnum = "Scheduled Hangup Cancelation Failed"
 )
 
+func (e CancelScheduledHangupResponseMessageEnum) ToPointer() *CancelScheduledHangupResponseMessageEnum {
+	return &e
+}
+
 func (e *CancelScheduledHangupResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scheduled Hangup Cancelation Executed":
 		fallthrough
 	case "SchedHangupId Parameter must be present":
@@ -30,10 +34,10 @@ func (e *CancelScheduledHangupResponseMessageEnum) UnmarshalJSON(data []byte) er
 	case "Scheduled Hangup Cancelation Failed -- ID not found":
 		fallthrough
 	case "Scheduled Hangup Cancelation Failed":
-		*e = CancelScheduledHangupResponseMessageEnum(s)
+		*e = CancelScheduledHangupResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelScheduledHangupResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelScheduledHangupResponseMessageEnum: %v", v)
 	}
 }
 

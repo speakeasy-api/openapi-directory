@@ -39,12 +39,16 @@ const (
 	ResourceTypeFilterEnumStepFunctionsStateMachine          ResourceTypeFilterEnum = "STEP_FUNCTIONS_STATE_MACHINE"
 )
 
+func (e ResourceTypeFilterEnum) ToPointer() *ResourceTypeFilterEnum {
+	return &e
+}
+
 func (e *ResourceTypeFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_GROUPS":
 		fallthrough
 	case "CLOUDFRONT_DISTRIBUTION":
@@ -98,9 +102,9 @@ func (e *ResourceTypeFilterEnum) UnmarshalJSON(data []byte) error {
 	case "STEP_FUNCTIONS_ACTIVITY":
 		fallthrough
 	case "STEP_FUNCTIONS_STATE_MACHINE":
-		*e = ResourceTypeFilterEnum(s)
+		*e = ResourceTypeFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceTypeFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceTypeFilterEnum: %v", v)
 	}
 }

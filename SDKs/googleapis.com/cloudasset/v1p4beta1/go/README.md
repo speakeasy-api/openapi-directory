@@ -13,21 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudasset
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetAnalyzeIamPolicyRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
+    ctx := context.Background()
+    res, err := s.V1p4beta1.CloudassetAnalyzeIamPolicy(ctx, operations.CloudassetAnalyzeIamPolicyRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
         AnalysisQueryAccessSelectorPermissions: []string{
             "unde",
             "nulla",
@@ -38,28 +39,25 @@ func main() {
             "error",
             "deserunt",
         },
-        AnalysisQueryIdentitySelectorIdentity: "suscipit",
-        AnalysisQueryResourceSelectorFullResourceName: "iure",
-        Callback: "magnam",
-        Fields: "debitis",
-        Key: "ipsa",
-        OauthToken: "delectus",
-        OptionsAnalyzeServiceAccountImpersonation: false,
-        OptionsExecutionTimeout: "tempora",
-        OptionsExpandGroups: false,
-        OptionsExpandResources: false,
-        OptionsExpandRoles: false,
-        OptionsOutputGroupEdges: false,
-        OptionsOutputResourceEdges: false,
+        AnalysisQueryIdentitySelectorIdentity: sdk.String("suscipit"),
+        AnalysisQueryResourceSelectorFullResourceName: sdk.String("iure"),
+        Callback: sdk.String("magnam"),
+        Fields: sdk.String("debitis"),
+        Key: sdk.String("ipsa"),
+        OauthToken: sdk.String("delectus"),
+        OptionsAnalyzeServiceAccountImpersonation: sdk.Bool(false),
+        OptionsExecutionTimeout: sdk.String("tempora"),
+        OptionsExpandGroups: sdk.Bool(false),
+        OptionsExpandResources: sdk.Bool(false),
+        OptionsExpandRoles: sdk.Bool(false),
+        OptionsOutputGroupEdges: sdk.Bool(false),
+        OptionsOutputResourceEdges: sdk.Bool(false),
         Parent: "suscipit",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "minus",
-        UploadProtocol: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.V1p4beta1.CloudassetAnalyzeIamPolicy(ctx, req, operations.CloudassetAnalyzeIamPolicySecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.CloudassetAnalyzeIamPolicySecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -78,10 +76,10 @@ func main() {
 ## Available Resources and Operations
 
 
-### V1p4beta1
+### [V1p4beta1](docs/v1p4beta1/README.md)
 
-* `CloudassetAnalyzeIamPolicy` - Analyzes IAM policies to answer which identities have what accesses on which resources.
-* `CloudassetExportIamPolicyAnalysis` - Exports the answers of which identities have what accesses on which resources to a Google Cloud Storage destination. The output format is the JSON format that represents a AnalyzeIamPolicyResponse in the JSON format. This method implements the google.longrunning.Operation, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. The metadata contains the request to help callers to map responses to requests.
+* [CloudassetAnalyzeIamPolicy](docs/v1p4beta1/README.md#cloudassetanalyzeiampolicy) - Analyzes IAM policies to answer which identities have what accesses on which resources.
+* [CloudassetExportIamPolicyAnalysis](docs/v1p4beta1/README.md#cloudassetexportiampolicyanalysis) - Exports the answers of which identities have what accesses on which resources to a Google Cloud Storage destination. The output format is the JSON format that represents a AnalyzeIamPolicyResponse in the JSON format. This method implements the google.longrunning.Operation, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. The metadata contains the request to help callers to map responses to requests.
 <!-- End SDK Available Operations -->
 
 ### Maturity

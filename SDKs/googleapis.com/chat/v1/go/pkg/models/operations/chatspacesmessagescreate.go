@@ -39,21 +39,25 @@ const (
 	ChatSpacesMessagesCreateMessageReplyOptionEnumReplyMessageOrFail              ChatSpacesMessagesCreateMessageReplyOptionEnum = "REPLY_MESSAGE_OR_FAIL"
 )
 
+func (e ChatSpacesMessagesCreateMessageReplyOptionEnum) ToPointer() *ChatSpacesMessagesCreateMessageReplyOptionEnum {
+	return &e
+}
+
 func (e *ChatSpacesMessagesCreateMessageReplyOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MESSAGE_REPLY_OPTION_UNSPECIFIED":
 		fallthrough
 	case "REPLY_MESSAGE_FALLBACK_TO_NEW_THREAD":
 		fallthrough
 	case "REPLY_MESSAGE_OR_FAIL":
-		*e = ChatSpacesMessagesCreateMessageReplyOptionEnum(s)
+		*e = ChatSpacesMessagesCreateMessageReplyOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChatSpacesMessagesCreateMessageReplyOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ChatSpacesMessagesCreateMessageReplyOptionEnum: %v", v)
 	}
 }
 

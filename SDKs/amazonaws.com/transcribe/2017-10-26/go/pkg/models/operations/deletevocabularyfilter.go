@@ -16,17 +16,21 @@ const (
 	DeleteVocabularyFilterXAmzTargetEnumTranscribeDeleteVocabularyFilter DeleteVocabularyFilterXAmzTargetEnum = "Transcribe.DeleteVocabularyFilter"
 )
 
+func (e DeleteVocabularyFilterXAmzTargetEnum) ToPointer() *DeleteVocabularyFilterXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVocabularyFilterXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.DeleteVocabularyFilter":
-		*e = DeleteVocabularyFilterXAmzTargetEnum(s)
+		*e = DeleteVocabularyFilterXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVocabularyFilterXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVocabularyFilterXAmzTargetEnum: %v", v)
 	}
 }
 

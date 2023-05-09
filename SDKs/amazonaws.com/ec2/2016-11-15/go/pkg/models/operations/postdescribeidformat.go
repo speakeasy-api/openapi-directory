@@ -15,17 +15,21 @@ const (
 	POSTDescribeIDFormatActionEnumDescribeIDFormat POSTDescribeIDFormatActionEnum = "DescribeIdFormat"
 )
 
+func (e POSTDescribeIDFormatActionEnum) ToPointer() *POSTDescribeIDFormatActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeIDFormatActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeIdFormat":
-		*e = POSTDescribeIDFormatActionEnum(s)
+		*e = POSTDescribeIDFormatActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeIDFormatActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeIDFormatActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeIDFormatVersionEnumTwoThousandAndSixteen1115 POSTDescribeIDFormatVersionEnum = "2016-11-15"
 )
 
+func (e POSTDescribeIDFormatVersionEnum) ToPointer() *POSTDescribeIDFormatVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeIDFormatVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDescribeIDFormatVersionEnum(s)
+		*e = POSTDescribeIDFormatVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeIDFormatVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeIDFormatVersionEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	StandingsFormatEnumJSON StandingsFormatEnum = "JSON"
 )
 
+func (e StandingsFormatEnum) ToPointer() *StandingsFormatEnum {
+	return &e
+}
+
 func (e *StandingsFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = StandingsFormatEnum(s)
+		*e = StandingsFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StandingsFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for StandingsFormatEnum: %v", v)
 	}
 }
 

@@ -13,22 +13,29 @@ const (
 	ProvisioningArtifactTypeEnumCloudFormationTemplate ProvisioningArtifactTypeEnum = "CLOUD_FORMATION_TEMPLATE"
 	ProvisioningArtifactTypeEnumMarketplaceAmi         ProvisioningArtifactTypeEnum = "MARKETPLACE_AMI"
 	ProvisioningArtifactTypeEnumMarketplaceCar         ProvisioningArtifactTypeEnum = "MARKETPLACE_CAR"
+	ProvisioningArtifactTypeEnumTerraformOpenSource    ProvisioningArtifactTypeEnum = "TERRAFORM_OPEN_SOURCE"
 )
 
+func (e ProvisioningArtifactTypeEnum) ToPointer() *ProvisioningArtifactTypeEnum {
+	return &e
+}
+
 func (e *ProvisioningArtifactTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLOUD_FORMATION_TEMPLATE":
 		fallthrough
 	case "MARKETPLACE_AMI":
 		fallthrough
 	case "MARKETPLACE_CAR":
-		*e = ProvisioningArtifactTypeEnum(s)
+		fallthrough
+	case "TERRAFORM_OPEN_SOURCE":
+		*e = ProvisioningArtifactTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvisioningArtifactTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvisioningArtifactTypeEnum: %v", v)
 	}
 }

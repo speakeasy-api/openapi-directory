@@ -15,17 +15,21 @@ const (
 	POSTTagResourceActionEnumTagResource POSTTagResourceActionEnum = "TagResource"
 )
 
+func (e POSTTagResourceActionEnum) ToPointer() *POSTTagResourceActionEnum {
+	return &e
+}
+
 func (e *POSTTagResourceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TagResource":
-		*e = POSTTagResourceActionEnum(s)
+		*e = POSTTagResourceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagResourceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagResourceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTTagResourceVersionEnumTwoThousandAndTen0801 POSTTagResourceVersionEnum = "2010-08-01"
 )
 
+func (e POSTTagResourceVersionEnum) ToPointer() *POSTTagResourceVersionEnum {
+	return &e
+}
+
 func (e *POSTTagResourceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-08-01":
-		*e = POSTTagResourceVersionEnum(s)
+		*e = POSTTagResourceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTTagResourceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTTagResourceVersionEnum: %v", v)
 	}
 }
 

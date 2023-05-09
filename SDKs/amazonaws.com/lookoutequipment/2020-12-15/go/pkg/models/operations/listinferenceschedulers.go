@@ -16,17 +16,21 @@ const (
 	ListInferenceSchedulersXAmzTargetEnumAwsLookoutEquipmentFrontendServiceListInferenceSchedulers ListInferenceSchedulersXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.ListInferenceSchedulers"
 )
 
+func (e ListInferenceSchedulersXAmzTargetEnum) ToPointer() *ListInferenceSchedulersXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListInferenceSchedulersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.ListInferenceSchedulers":
-		*e = ListInferenceSchedulersXAmzTargetEnum(s)
+		*e = ListInferenceSchedulersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListInferenceSchedulersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListInferenceSchedulersXAmzTargetEnum: %v", v)
 	}
 }
 

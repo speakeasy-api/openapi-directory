@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,31 +17,29 @@ func main() {
         }),
     )
 
-    req := operations.DeleteRecommendationPreferencesRequest{
+    ctx := context.Background()
+    res, err := s.DeleteRecommendationPreferences(ctx, operations.DeleteRecommendationPreferencesRequest{
         DeleteRecommendationPreferencesRequest: shared.DeleteRecommendationPreferencesRequest{
             RecommendationPreferenceNames: []shared.RecommendationPreferenceNameEnum{
-                "InferredWorkloadTypes",
-                "ExternalMetricsPreference",
-                "ExternalMetricsPreference",
+                shared.RecommendationPreferenceNameEnumInferredWorkloadTypes,
+                shared.RecommendationPreferenceNameEnumExternalMetricsPreference,
+                shared.RecommendationPreferenceNameEnumExternalMetricsPreference,
             },
-            ResourceType: "LambdaFunction",
+            ResourceType: shared.ResourceTypeEnumLambdaFunction,
             Scope: &shared.Scope{
-                Name: "ResourceArn",
-                Value: "corrupti",
+                Name: shared.ScopeNameEnumResourceArn.ToPointer(),
+                Value: sdk.String("corrupti"),
             },
         },
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-        XAmzTarget: "ComputeOptimizerService.DeleteRecommendationPreferences",
-    }
-
-    ctx := context.Background()
-    res, err := s.DeleteRecommendationPreferences(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+        XAmzTarget: operations.DeleteRecommendationPreferencesXAmzTargetEnumComputeOptimizerServiceDeleteRecommendationPreferences,
+    })
     if err != nil {
         log.Fatal(err)
     }

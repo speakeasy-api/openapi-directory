@@ -16,17 +16,21 @@ const (
 	RunTaskXAmzTargetEnumAmazonEc2ContainerServiceV20141113RunTask RunTaskXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.RunTask"
 )
 
+func (e RunTaskXAmzTargetEnum) ToPointer() *RunTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *RunTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.RunTask":
-		*e = RunTaskXAmzTargetEnum(s)
+		*e = RunTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RunTaskXAmzTargetEnum: %v", v)
 	}
 }
 

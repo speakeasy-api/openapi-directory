@@ -16,17 +16,21 @@ const (
 	DeleteSourceCredentialsXAmzTargetEnumCodeBuild20161006DeleteSourceCredentials DeleteSourceCredentialsXAmzTargetEnum = "CodeBuild_20161006.DeleteSourceCredentials"
 )
 
+func (e DeleteSourceCredentialsXAmzTargetEnum) ToPointer() *DeleteSourceCredentialsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSourceCredentialsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.DeleteSourceCredentials":
-		*e = DeleteSourceCredentialsXAmzTargetEnum(s)
+		*e = DeleteSourceCredentialsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSourceCredentialsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSourceCredentialsXAmzTargetEnum: %v", v)
 	}
 }
 

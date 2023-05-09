@@ -16,17 +16,21 @@ const (
 	DeleteAppReplicationConfigurationXAmzTargetEnumAwsServerMigrationServiceV20161024DeleteAppReplicationConfiguration DeleteAppReplicationConfigurationXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration"
 )
 
+func (e DeleteAppReplicationConfigurationXAmzTargetEnum) ToPointer() *DeleteAppReplicationConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAppReplicationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.DeleteAppReplicationConfiguration":
-		*e = DeleteAppReplicationConfigurationXAmzTargetEnum(s)
+		*e = DeleteAppReplicationConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAppReplicationConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAppReplicationConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

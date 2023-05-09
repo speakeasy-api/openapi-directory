@@ -16,17 +16,21 @@ const (
 	ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnumSageMakerListTrainingJobsForHyperParameterTuningJob ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum = "SageMaker.ListTrainingJobsForHyperParameterTuningJob"
 )
 
+func (e ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum) ToPointer() *ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListTrainingJobsForHyperParameterTuningJob":
-		*e = ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum(s)
+		*e = ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListTrainingJobsForHyperParameterTuningJobXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -29,12 +29,16 @@ const (
 	GoogleCloudDataplexV1SchemaPartitionFieldTypeEnumNull            GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum = "NULL"
 )
 
+func (e GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum) ToPointer() *GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOLEAN":
@@ -66,10 +70,10 @@ func (e *GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum) UnmarshalJSON(data [
 	case "RECORD":
 		fallthrough
 	case "NULL":
-		*e = GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum(s)
+		*e = GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1SchemaPartitionFieldTypeEnum: %v", v)
 	}
 }
 

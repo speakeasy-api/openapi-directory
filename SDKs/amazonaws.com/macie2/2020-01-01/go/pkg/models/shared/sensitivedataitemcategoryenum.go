@@ -17,12 +17,16 @@ const (
 	SensitiveDataItemCategoryEnumCustomIdentifier     SensitiveDataItemCategoryEnum = "CUSTOM_IDENTIFIER"
 )
 
+func (e SensitiveDataItemCategoryEnum) ToPointer() *SensitiveDataItemCategoryEnum {
+	return &e
+}
+
 func (e *SensitiveDataItemCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FINANCIAL_INFORMATION":
 		fallthrough
 	case "PERSONAL_INFORMATION":
@@ -30,9 +34,9 @@ func (e *SensitiveDataItemCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "CREDENTIALS":
 		fallthrough
 	case "CUSTOM_IDENTIFIER":
-		*e = SensitiveDataItemCategoryEnum(s)
+		*e = SensitiveDataItemCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SensitiveDataItemCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SensitiveDataItemCategoryEnum: %v", v)
 	}
 }

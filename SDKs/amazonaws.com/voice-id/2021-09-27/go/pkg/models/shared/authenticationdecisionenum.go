@@ -19,12 +19,16 @@ const (
 	AuthenticationDecisionEnumSpeakerExpired       AuthenticationDecisionEnum = "SPEAKER_EXPIRED"
 )
 
+func (e AuthenticationDecisionEnum) ToPointer() *AuthenticationDecisionEnum {
+	return &e
+}
+
 func (e *AuthenticationDecisionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPT":
 		fallthrough
 	case "REJECT":
@@ -38,9 +42,9 @@ func (e *AuthenticationDecisionEnum) UnmarshalJSON(data []byte) error {
 	case "SPEAKER_ID_NOT_PROVIDED":
 		fallthrough
 	case "SPEAKER_EXPIRED":
-		*e = AuthenticationDecisionEnum(s)
+		*e = AuthenticationDecisionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthenticationDecisionEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthenticationDecisionEnum: %v", v)
 	}
 }

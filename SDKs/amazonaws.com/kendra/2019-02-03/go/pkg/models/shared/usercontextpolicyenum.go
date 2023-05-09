@@ -14,18 +14,22 @@ const (
 	UserContextPolicyEnumUserToken       UserContextPolicyEnum = "USER_TOKEN"
 )
 
+func (e UserContextPolicyEnum) ToPointer() *UserContextPolicyEnum {
+	return &e
+}
+
 func (e *UserContextPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_FILTER":
 		fallthrough
 	case "USER_TOKEN":
-		*e = UserContextPolicyEnum(s)
+		*e = UserContextPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserContextPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for UserContextPolicyEnum: %v", v)
 	}
 }

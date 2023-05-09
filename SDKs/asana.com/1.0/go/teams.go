@@ -39,7 +39,10 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Returns the complete team membership record for the newly added user.
 func (s *teams) AddUserForTeam(ctx context.Context, request operations.AddUserForTeamRequest) (*operations.AddUserForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/addUser", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/addUser", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -193,7 +196,10 @@ func (s *teams) CreateTeam(ctx context.Context, request operations.CreateTeamReq
 // Returns the full record for a single team.
 func (s *teams) GetTeam(ctx context.Context, request operations.GetTeamRequest) (*operations.GetTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -260,7 +266,10 @@ func (s *teams) GetTeam(ctx context.Context, request operations.GetTeamRequest) 
 // Returns the compact records for all teams to which the given user is assigned.
 func (s *teams) GetTeamsForUser(ctx context.Context, request operations.GetTeamsForUserRequest) (*operations.GetTeamsForUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{user_gid}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -327,7 +336,10 @@ func (s *teams) GetTeamsForUser(ctx context.Context, request operations.GetTeams
 // Returns the compact records for all teams in the workspace visible to the authorized user.
 func (s *teams) GetTeamsForWorkspace(ctx context.Context, request operations.GetTeamsForWorkspaceRequest) (*operations.GetTeamsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -394,7 +406,10 @@ func (s *teams) GetTeamsForWorkspace(ctx context.Context, request operations.Get
 // The user making this call must be a member of the team in order to remove themselves or others.
 func (s *teams) RemoveUserForTeam(ctx context.Context, request operations.RemoveUserForTeamRequest) (*operations.RemoveUserForTeamResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/removeUser", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/removeUser", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

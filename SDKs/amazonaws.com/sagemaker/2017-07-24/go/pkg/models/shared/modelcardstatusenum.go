@@ -16,12 +16,16 @@ const (
 	ModelCardStatusEnumArchived      ModelCardStatusEnum = "Archived"
 )
 
+func (e ModelCardStatusEnum) ToPointer() *ModelCardStatusEnum {
+	return &e
+}
+
 func (e *ModelCardStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Draft":
 		fallthrough
 	case "PendingReview":
@@ -29,9 +33,9 @@ func (e *ModelCardStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Approved":
 		fallthrough
 	case "Archived":
-		*e = ModelCardStatusEnum(s)
+		*e = ModelCardStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelCardStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelCardStatusEnum: %v", v)
 	}
 }

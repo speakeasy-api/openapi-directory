@@ -21,19 +21,23 @@ const (
 	ErrorsCountsPerDayErrorTypeEnumHandledError   ErrorsCountsPerDayErrorTypeEnum = "handledError"
 )
 
+func (e ErrorsCountsPerDayErrorTypeEnum) ToPointer() *ErrorsCountsPerDayErrorTypeEnum {
+	return &e
+}
+
 func (e *ErrorsCountsPerDayErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unhandledError":
 		fallthrough
 	case "handledError":
-		*e = ErrorsCountsPerDayErrorTypeEnum(s)
+		*e = ErrorsCountsPerDayErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsCountsPerDayErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsCountsPerDayErrorTypeEnum: %v", v)
 	}
 }
 
@@ -65,12 +69,16 @@ const (
 	ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -84,10 +92,10 @@ func (e *ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(da
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsCountsPerDayDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

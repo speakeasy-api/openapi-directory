@@ -16,21 +16,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnumUncompromised               GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum = "UNCOMPROMISED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPROMISED_STATE_UNSPECIFIED":
 		fallthrough
 	case "COMPROMISED":
 		fallthrough
 	case "UNCOMPROMISED":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceCompromisedStateEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnumChromeOs              GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum = "CHROME_OS"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANDROID":
@@ -69,10 +77,10 @@ func (e *GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum) UnmarshalJSON(dat
 	case "LINUX":
 		fallthrough
 	case "CHROME_OS":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceDeviceTypeEnum: %v", v)
 	}
 }
 
@@ -86,12 +94,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnumNotEncrypted               GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum = "NOT_ENCRYPTED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENCRYPTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "UNSUPPORTED_BY_DEVICE":
@@ -99,10 +111,10 @@ func (e *GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum) UnmarshalJSO
 	case "ENCRYPTED":
 		fallthrough
 	case "NOT_ENCRYPTED":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceEncryptionStateEnum: %v", v)
 	}
 }
 
@@ -119,12 +131,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnumWiped                      GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum = "WIPED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "APPROVED":
@@ -138,10 +154,10 @@ func (e *GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum) UnmarshalJSO
 	case "WIPING":
 		fallthrough
 	case "WIPED":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceManagementStateEnum: %v", v)
 	}
 }
 
@@ -154,21 +170,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnumByod                       GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum = "BYOD"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_OWNERSHIP_UNSPECIFIED":
 		fallthrough
 	case "COMPANY":
 		fallthrough
 	case "BYOD":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceOwnerTypeEnum: %v", v)
 	}
 }
 

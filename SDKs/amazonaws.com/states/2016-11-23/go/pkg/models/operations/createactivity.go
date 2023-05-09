@@ -16,17 +16,21 @@ const (
 	CreateActivityXAmzTargetEnumAwsStepFunctionsCreateActivity CreateActivityXAmzTargetEnum = "AWSStepFunctions.CreateActivity"
 )
 
+func (e CreateActivityXAmzTargetEnum) ToPointer() *CreateActivityXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateActivityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.CreateActivity":
-		*e = CreateActivityXAmzTargetEnum(s)
+		*e = CreateActivityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateActivityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateActivityXAmzTargetEnum: %v", v)
 	}
 }
 

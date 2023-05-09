@@ -17,19 +17,23 @@ const (
 	ListInstalledComponentsTopologyFilterEnumRoot ListInstalledComponentsTopologyFilterEnum = "ROOT"
 )
 
+func (e ListInstalledComponentsTopologyFilterEnum) ToPointer() *ListInstalledComponentsTopologyFilterEnum {
+	return &e
+}
+
 func (e *ListInstalledComponentsTopologyFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ROOT":
-		*e = ListInstalledComponentsTopologyFilterEnum(s)
+		*e = ListInstalledComponentsTopologyFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListInstalledComponentsTopologyFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for ListInstalledComponentsTopologyFilterEnum: %v", v)
 	}
 }
 

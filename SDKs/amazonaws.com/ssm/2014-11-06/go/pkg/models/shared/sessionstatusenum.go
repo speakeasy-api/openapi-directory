@@ -18,12 +18,16 @@ const (
 	SessionStatusEnumFailed       SessionStatusEnum = "Failed"
 )
 
+func (e SessionStatusEnum) ToPointer() *SessionStatusEnum {
+	return &e
+}
+
 func (e *SessionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Connected":
 		fallthrough
 	case "Connecting":
@@ -35,9 +39,9 @@ func (e *SessionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Terminating":
 		fallthrough
 	case "Failed":
-		*e = SessionStatusEnum(s)
+		*e = SessionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SessionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SessionStatusEnum: %v", v)
 	}
 }

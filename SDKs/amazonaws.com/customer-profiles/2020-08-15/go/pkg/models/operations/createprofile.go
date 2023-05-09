@@ -46,21 +46,25 @@ const (
 	CreateProfileRequestBodyGenderEnumUnspecified CreateProfileRequestBodyGenderEnum = "UNSPECIFIED"
 )
 
+func (e CreateProfileRequestBodyGenderEnum) ToPointer() *CreateProfileRequestBodyGenderEnum {
+	return &e
+}
+
 func (e *CreateProfileRequestBodyGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE":
 		fallthrough
 	case "FEMALE":
 		fallthrough
 	case "UNSPECIFIED":
-		*e = CreateProfileRequestBodyGenderEnum(s)
+		*e = CreateProfileRequestBodyGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProfileRequestBodyGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProfileRequestBodyGenderEnum: %v", v)
 	}
 }
 
@@ -87,21 +91,25 @@ const (
 	CreateProfileRequestBodyPartyTypeEnumOther      CreateProfileRequestBodyPartyTypeEnum = "OTHER"
 )
 
+func (e CreateProfileRequestBodyPartyTypeEnum) ToPointer() *CreateProfileRequestBodyPartyTypeEnum {
+	return &e
+}
+
 func (e *CreateProfileRequestBodyPartyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INDIVIDUAL":
 		fallthrough
 	case "BUSINESS":
 		fallthrough
 	case "OTHER":
-		*e = CreateProfileRequestBodyPartyTypeEnum(s)
+		*e = CreateProfileRequestBodyPartyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProfileRequestBodyPartyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProfileRequestBodyPartyTypeEnum: %v", v)
 	}
 }
 

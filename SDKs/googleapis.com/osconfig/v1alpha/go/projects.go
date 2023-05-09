@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList - List OS policies compliance data for all Compute Engine VM instances in the specified zone.
 func (s *projects) OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest, security operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity) (*operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/instanceOSPoliciesCompliances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ct
 // OsconfigProjectsLocationsInstancesInventoriesList - List inventory data for all VM instances in the specified zone.
 func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesInventoriesListRequest, security operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity) (*operations.OsconfigProjectsLocationsInstancesInventoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/inventories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/inventories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) OsconfigProjectsLocationsInstancesInventoriesList(ctx context
 // OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
 func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListRequest, security operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *projects) OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsL
 // OsconfigProjectsLocationsInstancesVulnerabilityReportsList - List vulnerability reports for all VM instances in the specified zone.
 func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ctx context.Context, request operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListRequest, security operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListSecurity) (*operations.OsconfigProjectsLocationsInstancesVulnerabilityReportsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/vulnerabilityReports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/vulnerabilityReports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +238,10 @@ func (s *projects) OsconfigProjectsLocationsInstancesVulnerabilityReportsList(ct
 // OsconfigProjectsLocationsOsPolicyAssignmentsCreate - Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OSPolicyAssignmentInput", "json")
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsCreate(ctx contex
 // OsconfigProjectsLocationsOsPolicyAssignmentsDelete - Delete the OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. If the LRO completes and is not cancelled, all revisions associated with the OS policy assignment are deleted. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsDelete(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsDelete(ctx contex
 // OsconfigProjectsLocationsOsPolicyAssignmentsList - List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/osPolicyAssignments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +398,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsList(ctx context.
 // OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions - List the OS policy assignment revisions for a given OS policy assignment.
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsListRevisionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:listRevisions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:listRevisions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -425,7 +449,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsListRevisions(ctx
 // OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -480,7 +507,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel(
 // OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -528,7 +558,10 @@ func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet(ctx
 // OsconfigProjectsLocationsOsPolicyAssignmentsPatch - Update an existing OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
 func (s *projects) OsconfigProjectsLocationsOsPolicyAssignmentsPatch(ctx context.Context, request operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchRequest, security operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchSecurity) (*operations.OsconfigProjectsLocationsOsPolicyAssignmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OSPolicyAssignmentInput", "json")
 	if err != nil {

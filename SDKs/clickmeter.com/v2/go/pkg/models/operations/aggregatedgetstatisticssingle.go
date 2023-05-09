@@ -30,12 +30,16 @@ const (
 	AggregatedGetStatisticsSingleTimeFrameEnumCustom        AggregatedGetStatisticsSingleTimeFrameEnum = "custom"
 )
 
+func (e AggregatedGetStatisticsSingleTimeFrameEnum) ToPointer() *AggregatedGetStatisticsSingleTimeFrameEnum {
+	return &e
+}
+
 func (e *AggregatedGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -65,10 +69,10 @@ func (e *AggregatedGetStatisticsSingleTimeFrameEnum) UnmarshalJSON(data []byte) 
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = AggregatedGetStatisticsSingleTimeFrameEnum(s)
+		*e = AggregatedGetStatisticsSingleTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedGetStatisticsSingleTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedGetStatisticsSingleTimeFrameEnum: %v", v)
 	}
 }
 

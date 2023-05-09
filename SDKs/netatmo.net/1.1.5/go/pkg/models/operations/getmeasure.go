@@ -35,12 +35,16 @@ const (
 	GetmeasureScaleEnumOnemonth   GetmeasureScaleEnum = "1month"
 )
 
+func (e GetmeasureScaleEnum) ToPointer() *GetmeasureScaleEnum {
+	return &e
+}
+
 func (e *GetmeasureScaleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "max":
 		fallthrough
 	case "30min":
@@ -54,10 +58,10 @@ func (e *GetmeasureScaleEnum) UnmarshalJSON(data []byte) error {
 	case "1week":
 		fallthrough
 	case "1month":
-		*e = GetmeasureScaleEnum(s)
+		*e = GetmeasureScaleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetmeasureScaleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetmeasureScaleEnum: %v", v)
 	}
 }
 
@@ -101,12 +105,16 @@ const (
 	GetmeasureTypeEnumSumBoilerOff    GetmeasureTypeEnum = "sum_boiler_off"
 )
 
+func (e GetmeasureTypeEnum) ToPointer() *GetmeasureTypeEnum {
+	return &e
+}
+
 func (e *GetmeasureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Temperature":
 		fallthrough
 	case "CO2":
@@ -176,10 +184,10 @@ func (e *GetmeasureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sum_boiler_on":
 		fallthrough
 	case "sum_boiler_off":
-		*e = GetmeasureTypeEnum(s)
+		*e = GetmeasureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetmeasureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetmeasureTypeEnum: %v", v)
 	}
 }
 

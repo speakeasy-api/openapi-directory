@@ -16,21 +16,25 @@ const (
 	PackageOccurrenceArchitectureEnumX64                     PackageOccurrenceArchitectureEnum = "X64"
 )
 
+func (e PackageOccurrenceArchitectureEnum) ToPointer() *PackageOccurrenceArchitectureEnum {
+	return &e
+}
+
 func (e *PackageOccurrenceArchitectureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ARCHITECTURE_UNSPECIFIED":
 		fallthrough
 	case "X86":
 		fallthrough
 	case "X64":
-		*e = PackageOccurrenceArchitectureEnum(s)
+		*e = PackageOccurrenceArchitectureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PackageOccurrenceArchitectureEnum: %s", s)
+		return fmt.Errorf("invalid value for PackageOccurrenceArchitectureEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	SchemaDiffTypeEnumSyntaxDiff SchemaDiffTypeEnum = "SYNTAX_DIFF"
 )
 
+func (e SchemaDiffTypeEnum) ToPointer() *SchemaDiffTypeEnum {
+	return &e
+}
+
 func (e *SchemaDiffTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYNTAX_DIFF":
-		*e = SchemaDiffTypeEnum(s)
+		*e = SchemaDiffTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchemaDiffTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SchemaDiffTypeEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	ListProjectPoliciesXAmzTargetEnumRekognitionServiceListProjectPolicies ListProjectPoliciesXAmzTargetEnum = "RekognitionService.ListProjectPolicies"
 )
 
+func (e ListProjectPoliciesXAmzTargetEnum) ToPointer() *ListProjectPoliciesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListProjectPoliciesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.ListProjectPolicies":
-		*e = ListProjectPoliciesXAmzTargetEnum(s)
+		*e = ListProjectPoliciesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListProjectPoliciesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListProjectPoliciesXAmzTargetEnum: %v", v)
 	}
 }
 

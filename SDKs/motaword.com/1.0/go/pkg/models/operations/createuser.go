@@ -15,6 +15,8 @@ type CreateUserRequest struct {
 
 type CreateUserResponse struct {
 	ContentType string
+	// Invalid information given for user!
+	Error       *shared.Error
 	StatusCode  int
 	RawResponse *http.Response
 	// Created user

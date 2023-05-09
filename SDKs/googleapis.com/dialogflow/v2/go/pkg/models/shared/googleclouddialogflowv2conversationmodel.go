@@ -22,12 +22,16 @@ const (
 	GoogleCloudDialogflowV2ConversationModelStateEnumPending          GoogleCloudDialogflowV2ConversationModelStateEnum = "PENDING"
 )
 
+func (e GoogleCloudDialogflowV2ConversationModelStateEnum) ToPointer() *GoogleCloudDialogflowV2ConversationModelStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2ConversationModelStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -45,10 +49,10 @@ func (e *GoogleCloudDialogflowV2ConversationModelStateEnum) UnmarshalJSON(data [
 	case "FAILED":
 		fallthrough
 	case "PENDING":
-		*e = GoogleCloudDialogflowV2ConversationModelStateEnum(s)
+		*e = GoogleCloudDialogflowV2ConversationModelStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationModelStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2ConversationModelStateEnum: %v", v)
 	}
 }
 

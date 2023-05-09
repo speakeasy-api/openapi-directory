@@ -12,13 +12,13 @@ import (
 	"strings"
 )
 
-// financial - Fetch key information about a committee's Form 3, Form 3X, or Form 3P financial reports.
+// financial - Fetch key information about a committee's Form 3, Form 3X, Form 13, or Form 3P financial reports.
 //
 //	Most committees are required to summarize their financial activity in each filing; those summaries are included in these files. Generally, committees file reports on a quarterly or monthly basis, but some must also submit a report 12 days before primary elections. Therefore, during the primary season, the period covered by this file may be different for different committees. These totals also incorporate any changes made by committees, if any report covering the period is amended.
 //
 //	Information is made available on the API as soon as it's processed. Keep in mind, complex paper filings take longer to process.
 //
-//	The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
+//	The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; [Form 13](https://www.fec.gov/pdf/forms/fecfrm13.pdf) for inaugural committees; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
 type financial struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -57,7 +57,10 @@ func newFinancial(defaultClient, securityClient HTTPClient, serverURL, language,
 // label these fields while conveying clear meaning to ensure accessibility for all users.
 func (s *financial) GetCommitteeCommitteeIDReports(ctx context.Context, request operations.GetCommitteeCommitteeIDReportsRequest) (*operations.GetCommitteeCommitteeIDReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/reports/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/reports/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -113,7 +116,10 @@ func (s *financial) GetCommitteeCommitteeIDReports(ctx context.Context, request 
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *financial) GetCommitteeCommitteeIDTotals(ctx context.Context, request operations.GetCommitteeCommitteeIDTotalsRequest) (*operations.GetCommitteeCommitteeIDTotalsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/totals/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/committee/{committee_id}/totals/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -335,7 +341,10 @@ func (s *financial) GetElectionsSummary(ctx context.Context, request operations.
 // label these fields while conveying clear meaning to ensure accessibility for all users.
 func (s *financial) GetReportsEntityType(ctx context.Context, request operations.GetReportsEntityTypeRequest) (*operations.GetReportsEntityTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{entity_type}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{entity_type}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -431,6 +440,56 @@ func (s *financial) GetTotalsByEntity(ctx context.Context, request operations.Ge
 	return res, nil
 }
 
+// GetTotalsInauguralCommitteesByContributor -
+// This endpoint provides information about an inaugural committee's Form 13 report of donations accepted.
+// The data is aggregated by the contributor and the two-year period. We refer to two-year periods as a `cycle`.
+func (s *financial) GetTotalsInauguralCommitteesByContributor(ctx context.Context, request operations.GetTotalsInauguralCommitteesByContributorRequest) (*operations.GetTotalsInauguralCommitteesByContributorResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/totals/inaugural_committees/by_contributor/"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTotalsInauguralCommitteesByContributorResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InauguralDonationsPage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InauguralDonationsPage = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetTotalsEntityType -
 // This endpoint provides information about a committee's Form 3, Form 3X, or Form 3P financial reports,
 // which are aggregated by two-year period. We refer to two-year periods as a `cycle`.
@@ -442,7 +501,10 @@ func (s *financial) GetTotalsByEntity(ctx context.Context, request operations.Ge
 // For presidential and Senate candidates, multiple two-year cycles exist between elections.
 func (s *financial) GetTotalsEntityType(ctx context.Context, request operations.GetTotalsEntityTypeRequest) (*operations.GetTotalsEntityTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/totals/{entity_type}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/totals/{entity_type}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -37,7 +37,10 @@ func newAnnouncements(defaultClient, securityClient HTTPClient, serverURL, langu
 // DeleteCustomersAccountAnnouncementsAnnouncementID - Delete an announcement audio file
 func (s *announcements) DeleteCustomersAccountAnnouncementsAnnouncementID(ctx context.Context, request operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest) (*operations.DeleteCustomersAccountAnnouncementsAnnouncementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -134,7 +137,10 @@ func (s *announcements) GetAnnouncements(ctx context.Context) (*operations.GetAn
 // GetCustomersAccountAnnouncements - List of announcement audio files
 func (s *announcements) GetCustomersAccountAnnouncements(ctx context.Context, request operations.GetCustomersAccountAnnouncementsRequest) (*operations.GetCustomersAccountAnnouncementsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -188,7 +194,10 @@ func (s *announcements) GetCustomersAccountAnnouncements(ctx context.Context, re
 // GetCustomersAccountAnnouncementsAnnouncementID - Represents an announcement audio file
 func (s *announcements) GetCustomersAccountAnnouncementsAnnouncementID(ctx context.Context, request operations.GetCustomersAccountAnnouncementsAnnouncementIDRequest) (*operations.GetCustomersAccountAnnouncementsAnnouncementIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{account}/announcements/{announcement_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,19 +17,23 @@ const (
 	DescribeVoicesEngineEnumNeural   DescribeVoicesEngineEnum = "neural"
 )
 
+func (e DescribeVoicesEngineEnum) ToPointer() *DescribeVoicesEngineEnum {
+	return &e
+}
+
 func (e *DescribeVoicesEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "neural":
-		*e = DescribeVoicesEngineEnum(s)
+		*e = DescribeVoicesEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVoicesEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVoicesEngineEnum: %v", v)
 	}
 }
 
@@ -75,12 +79,16 @@ const (
 	DescribeVoicesLanguageCodeEnumFiFi    DescribeVoicesLanguageCodeEnum = "fi-FI"
 )
 
+func (e DescribeVoicesLanguageCodeEnum) ToPointer() *DescribeVoicesLanguageCodeEnum {
+	return &e
+}
+
 func (e *DescribeVoicesLanguageCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "arb":
 		fallthrough
 	case "cmn-CN":
@@ -152,10 +160,10 @@ func (e *DescribeVoicesLanguageCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ar-AE":
 		fallthrough
 	case "fi-FI":
-		*e = DescribeVoicesLanguageCodeEnum(s)
+		*e = DescribeVoicesLanguageCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVoicesLanguageCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVoicesLanguageCodeEnum: %v", v)
 	}
 }
 

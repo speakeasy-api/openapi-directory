@@ -13,73 +13,74 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/videointel
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VideointelligenceVideosAnnotateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Videos.VideointelligenceVideosAnnotate(ctx, operations.VideointelligenceVideosAnnotateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest: &shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest{
             Features: []shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum{
-                "OBJECT_TRACKING",
-                "LOGO_RECOGNITION",
-                "TEXT_DETECTION",
+                shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnumObjectTracking,
+                shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnumLogoRecognition,
+                shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnumTextDetection,
             },
-            InputContent: "nulla",
-            InputURI: "corrupti",
-            LocationID: "illum",
-            OutputURI: "vel",
+            InputContent: sdk.String("nulla"),
+            InputURI: sdk.String("corrupti"),
+            LocationID: sdk.String("illum"),
+            OutputURI: sdk.String("vel"),
             VideoContext: &shared.GoogleCloudVideointelligenceV1p2beta1VideoContext{
                 ExplicitContentDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig{
-                    Model: "error",
+                    Model: sdk.String("error"),
                 },
                 FaceDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig{
-                    IncludeAttributes: false,
-                    IncludeBoundingBoxes: false,
-                    Model: "deserunt",
+                    IncludeAttributes: sdk.Bool(false),
+                    IncludeBoundingBoxes: sdk.Bool(false),
+                    Model: sdk.String("deserunt"),
                 },
                 LabelDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig{
-                    FrameConfidenceThreshold: 3843.82,
-                    LabelDetectionMode: "SHOT_MODE",
-                    Model: "magnam",
-                    StationaryCamera: false,
-                    VideoConfidenceThreshold: 8917.73,
+                    FrameConfidenceThreshold: sdk.Float32(3843.82),
+                    LabelDetectionMode: shared.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfigLabelDetectionModeEnumShotMode.ToPointer(),
+                    Model: sdk.String("magnam"),
+                    StationaryCamera: sdk.Bool(false),
+                    VideoConfidenceThreshold: sdk.Float32(8917.73),
                 },
                 ObjectTrackingConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig{
-                    Model: "ipsa",
+                    Model: sdk.String("ipsa"),
                 },
                 PersonDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig{
-                    IncludeAttributes: false,
-                    IncludeBoundingBoxes: false,
-                    IncludePoseLandmarks: false,
+                    IncludeAttributes: sdk.Bool(false),
+                    IncludeBoundingBoxes: sdk.Bool(false),
+                    IncludePoseLandmarks: sdk.Bool(false),
                 },
                 Segments: []shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "tempora",
-                        StartTimeOffset: "suscipit",
+                        EndTimeOffset: sdk.String("tempora"),
+                        StartTimeOffset: sdk.String("suscipit"),
                     },
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "molestiae",
-                        StartTimeOffset: "minus",
+                        EndTimeOffset: sdk.String("molestiae"),
+                        StartTimeOffset: sdk.String("minus"),
                     },
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "placeat",
-                        StartTimeOffset: "voluptatum",
+                        EndTimeOffset: sdk.String("placeat"),
+                        StartTimeOffset: sdk.String("voluptatum"),
                     },
                     shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment{
-                        EndTimeOffset: "iusto",
-                        StartTimeOffset: "excepturi",
+                        EndTimeOffset: sdk.String("iusto"),
+                        StartTimeOffset: sdk.String("excepturi"),
                     },
                 },
                 ShotChangeDetectionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig{
-                    Model: "nisi",
+                    Model: sdk.String("nisi"),
                 },
                 SpeechTranscriptionConfig: &shared.GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig{
                     AudioTracks: []int{
@@ -88,13 +89,13 @@ func main() {
                         337396,
                         87129,
                     },
-                    DiarizationSpeakerCount: 648172,
-                    EnableAutomaticPunctuation: false,
-                    EnableSpeakerDiarization: false,
-                    EnableWordConfidence: false,
-                    FilterProfanity: false,
-                    LanguageCode: "perferendis",
-                    MaxAlternatives: 368241,
+                    DiarizationSpeakerCount: sdk.Int(648172),
+                    EnableAutomaticPunctuation: sdk.Bool(false),
+                    EnableSpeakerDiarization: sdk.Bool(false),
+                    EnableWordConfidence: sdk.Bool(false),
+                    FilterProfanity: sdk.Bool(false),
+                    LanguageCode: sdk.String("perferendis"),
+                    MaxAlternatives: sdk.Int(368241),
                     SpeechContexts: []shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                         shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext{
                             Phrases: []string{
@@ -134,24 +135,21 @@ func main() {
                         "optio",
                         "totam",
                     },
-                    Model: "beatae",
+                    Model: sdk.String("beatae"),
                 },
             },
         },
-        AccessToken: "commodi",
-        Alt: "media",
-        Callback: "modi",
-        Fields: "qui",
-        Key: "impedit",
-        OauthToken: "cum",
-        PrettyPrint: false,
-        QuotaUser: "esse",
-        UploadType: "ipsum",
-        UploadProtocol: "excepturi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Videos.VideointelligenceVideosAnnotate(ctx, req, operations.VideointelligenceVideosAnnotateSecurity{
+        AccessToken: sdk.String("commodi"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("modi"),
+        Fields: sdk.String("qui"),
+        Key: sdk.String("impedit"),
+        OauthToken: sdk.String("cum"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("esse"),
+        UploadType: sdk.String("ipsum"),
+        UploadProtocol: sdk.String("excepturi"),
+    }, operations.VideointelligenceVideosAnnotateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -170,9 +168,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Videos
+### [Videos](docs/videos/README.md)
 
-* `VideointelligenceVideosAnnotate` - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
+* [VideointelligenceVideosAnnotate](docs/videos/README.md#videointelligencevideosannotate) - Performs asynchronous video annotation. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `AnnotateVideoProgress` (progress). `Operation.response` contains `AnnotateVideoResponse` (results).
 <!-- End SDK Available Operations -->
 
 ### Maturity

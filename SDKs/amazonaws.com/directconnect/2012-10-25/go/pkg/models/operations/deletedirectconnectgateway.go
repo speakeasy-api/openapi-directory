@@ -16,17 +16,21 @@ const (
 	DeleteDirectConnectGatewayXAmzTargetEnumOvertureServiceDeleteDirectConnectGateway DeleteDirectConnectGatewayXAmzTargetEnum = "OvertureService.DeleteDirectConnectGateway"
 )
 
+func (e DeleteDirectConnectGatewayXAmzTargetEnum) ToPointer() *DeleteDirectConnectGatewayXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDirectConnectGatewayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DeleteDirectConnectGateway":
-		*e = DeleteDirectConnectGatewayXAmzTargetEnum(s)
+		*e = DeleteDirectConnectGatewayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDirectConnectGatewayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDirectConnectGatewayXAmzTargetEnum: %v", v)
 	}
 }
 

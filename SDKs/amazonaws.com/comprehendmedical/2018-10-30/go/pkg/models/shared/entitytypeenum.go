@@ -19,12 +19,16 @@ const (
 	EntityTypeEnumBehavioralEnvironmentalSocial EntityTypeEnum = "BEHAVIORAL_ENVIRONMENTAL_SOCIAL"
 )
 
+func (e EntityTypeEnum) ToPointer() *EntityTypeEnum {
+	return &e
+}
+
 func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDICATION":
 		fallthrough
 	case "MEDICAL_CONDITION":
@@ -38,9 +42,9 @@ func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIME_EXPRESSION":
 		fallthrough
 	case "BEHAVIORAL_ENVIRONMENTAL_SOCIAL":
-		*e = EntityTypeEnum(s)
+		*e = EntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTypeEnum: %v", v)
 	}
 }

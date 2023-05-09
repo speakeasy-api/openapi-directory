@@ -32,19 +32,23 @@ const (
 	MirrorTimelineListOrderByEnumWriteTime   MirrorTimelineListOrderByEnum = "writeTime"
 )
 
+func (e MirrorTimelineListOrderByEnum) ToPointer() *MirrorTimelineListOrderByEnum {
+	return &e
+}
+
 func (e *MirrorTimelineListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "displayTime":
 		fallthrough
 	case "writeTime":
-		*e = MirrorTimelineListOrderByEnum(s)
+		*e = MirrorTimelineListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MirrorTimelineListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for MirrorTimelineListOrderByEnum: %v", v)
 	}
 }
 

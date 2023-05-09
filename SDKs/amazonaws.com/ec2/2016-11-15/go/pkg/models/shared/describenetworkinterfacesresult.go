@@ -40,12 +40,16 @@ const (
 	DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnumDetached  DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum = "detached"
 )
 
+func (e DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum) ToPointer() *DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -53,10 +57,10 @@ func (e *DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum) U
 	case "detaching":
 		fallthrough
 	case "detached":
-		*e = DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum(s)
+		*e = DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesAttachmentStatusEnum: %v", v)
 	}
 }
 
@@ -102,12 +106,16 @@ const (
 	DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnumAwsCodestarConnectionsManaged DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum = "aws_codestar_connections_managed"
 )
 
+func (e DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum) ToPointer() *DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "interface":
 		fallthrough
 	case "natGateway":
@@ -141,10 +149,10 @@ func (e *DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum) Unma
 	case "iot_rules_managed":
 		fallthrough
 	case "aws_codestar_connections_managed":
-		*e = DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum(s)
+		*e = DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesInterfaceTypeEnum: %v", v)
 	}
 }
 
@@ -193,12 +201,16 @@ const (
 	DescribeNetworkInterfacesResultNetworkInterfacesStatusEnumDetaching  DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum = "detaching"
 )
 
+func (e DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum) ToPointer() *DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "associated":
@@ -208,10 +220,10 @@ func (e *DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum) UnmarshalJS
 	case "in-use":
 		fallthrough
 	case "detaching":
-		*e = DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum(s)
+		*e = DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInterfacesResultNetworkInterfacesStatusEnum: %v", v)
 	}
 }
 

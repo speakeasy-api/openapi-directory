@@ -16,17 +16,21 @@ const (
 	CreateDataQualityRulesetXAmzTargetEnumAwsGlueCreateDataQualityRuleset CreateDataQualityRulesetXAmzTargetEnum = "AWSGlue.CreateDataQualityRuleset"
 )
 
+func (e CreateDataQualityRulesetXAmzTargetEnum) ToPointer() *CreateDataQualityRulesetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateDataQualityRulesetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.CreateDataQualityRuleset":
-		*e = CreateDataQualityRulesetXAmzTargetEnum(s)
+		*e = CreateDataQualityRulesetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDataQualityRulesetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDataQualityRulesetXAmzTargetEnum: %v", v)
 	}
 }
 

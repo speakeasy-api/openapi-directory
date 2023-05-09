@@ -16,17 +16,21 @@ const (
 	CreateAccessControlConfigurationXAmzTargetEnumAwsKendraFrontendServiceCreateAccessControlConfiguration CreateAccessControlConfigurationXAmzTargetEnum = "AWSKendraFrontendService.CreateAccessControlConfiguration"
 )
 
+func (e CreateAccessControlConfigurationXAmzTargetEnum) ToPointer() *CreateAccessControlConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateAccessControlConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSKendraFrontendService.CreateAccessControlConfiguration":
-		*e = CreateAccessControlConfigurationXAmzTargetEnum(s)
+		*e = CreateAccessControlConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAccessControlConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAccessControlConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

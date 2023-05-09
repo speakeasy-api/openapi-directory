@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - With Amazon Connect Cases, your agents can track and manage customer issues that require multiple interactions, follow-up tasks, and teams in your contact center. A case represents a customer issue. It records the issue, the steps and interactions taken to resolve the issue, and the outcome. For more information, see <a href="https://docs.aws.amazon.com/connect/latest/adminguide/cases.html">Amazon Connect Cases</a> in the <i>Amazon Connect Administrator Guide</i>.
 // https://docs.aws.amazon.com/cases/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // BatchGetField - Returns the description for the list of fields in the request parameters.
 func (s *SDK) BatchGetField(ctx context.Context, request operations.BatchGetFieldRequest) (*operations.BatchGetFieldResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields-batch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields-batch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -220,7 +238,10 @@ func (s *SDK) BatchGetField(ctx context.Context, request operations.BatchGetFiel
 // BatchPutFieldOptions - Creates and updates a set of field options for a single select field in a Cases domain.
 func (s *SDK) BatchPutFieldOptions(ctx context.Context, request operations.BatchPutFieldOptionsRequest) (*operations.BatchPutFieldOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}/options", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}/options", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -336,7 +357,10 @@ func (s *SDK) BatchPutFieldOptions(ctx context.Context, request operations.Batch
 // CreateCase - <p>Creates a case in the specified Cases domain. Case system and custom fields are taken as an array id/value pairs with a declared data types.</p> <note> <p>The following fields are required when creating a case:</p> <pre><code> &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;customer_id&lt;/code&gt; - You must provide the full customer profile ARN in this format: &lt;code&gt;arn:aws:profile:your AWS Region:your AWS account ID:domains/profiles domain name/profiles/profile ID&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;title&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;/note&gt; </code></pre>
 func (s *SDK) CreateCase(ctx context.Context, request operations.CreateCaseRequest) (*operations.CreateCaseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -568,7 +592,10 @@ func (s *SDK) CreateDomain(ctx context.Context, request operations.CreateDomainR
 // CreateField - Creates a field in the Cases domain. This field is used to define the case object model (that is, defines what data can be captured on cases) in a Cases domain.
 func (s *SDK) CreateField(ctx context.Context, request operations.CreateFieldRequest) (*operations.CreateFieldResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -694,7 +721,10 @@ func (s *SDK) CreateField(ctx context.Context, request operations.CreateFieldReq
 // CreateLayout - <p>Creates a layout in the Cases domain. Layouts define the following configuration in the top section and More Info tab of the Cases user interface:</p> <ul> <li> <p>Fields to display to the users</p> </li> <li> <p>Field ordering</p> </li> </ul> <note> <p>Title and Status fields cannot be part of layouts since they are not configurable.</p> </note>
 func (s *SDK) CreateLayout(ctx context.Context, request operations.CreateLayoutRequest) (*operations.CreateLayoutResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -820,7 +850,10 @@ func (s *SDK) CreateLayout(ctx context.Context, request operations.CreateLayoutR
 // CreateRelatedItem - <p>Creates a related item (comments, tasks, and contacts) and associates it with a case.</p> <note> <p>A Related Item is a resource that is associated with a case. It may or may not have an external identifier linking it to an external resource (for example, a <code>contactArn</code>). All Related Items have their own internal identifier, the <code>relatedItemArn</code>. Examples of related items include <code>comments</code> and <code>contacts</code>.</p> </note>
 func (s *SDK) CreateRelatedItem(ctx context.Context, request operations.CreateRelatedItemRequest) (*operations.CreateRelatedItemResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}/related-items/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}/related-items/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -936,7 +969,10 @@ func (s *SDK) CreateRelatedItem(ctx context.Context, request operations.CreateRe
 // CreateTemplate - Creates a template in the Cases domain. This template is used to define the case object model (that is, to define what data can be captured on cases) in a Cases domain. A template must have a unique name within a domain, and it must reference existing field IDs and layout IDs. Additionally, multiple fields with same IDs are not allowed within the same Template. A template can be either Active or Inactive, as indicated by its status. Inactive templates cannot be used to create cases.
 func (s *SDK) CreateTemplate(ctx context.Context, request operations.CreateTemplateRequest) (*operations.CreateTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1062,7 +1098,10 @@ func (s *SDK) CreateTemplate(ctx context.Context, request operations.CreateTempl
 // DeleteDomain - Deletes a domain.
 func (s *SDK) DeleteDomain(ctx context.Context, request operations.DeleteDomainRequest) (*operations.DeleteDomainResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1168,7 +1207,10 @@ func (s *SDK) DeleteDomain(ctx context.Context, request operations.DeleteDomainR
 // GetCase - Returns information about a specific case if it exists.
 func (s *SDK) GetCase(ctx context.Context, request operations.GetCaseRequest) (*operations.GetCaseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1278,7 +1320,10 @@ func (s *SDK) GetCase(ctx context.Context, request operations.GetCaseRequest) (*
 // GetCaseEventConfiguration - Returns the case event publishing configuration.
 func (s *SDK) GetCaseEventConfiguration(ctx context.Context, request operations.GetCaseEventConfigurationRequest) (*operations.GetCaseEventConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/case-event-configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/case-event-configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1374,7 +1419,10 @@ func (s *SDK) GetCaseEventConfiguration(ctx context.Context, request operations.
 // GetDomain - Returns information about a specific domain if it exists.
 func (s *SDK) GetDomain(ctx context.Context, request operations.GetDomainRequest) (*operations.GetDomainResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1470,7 +1518,10 @@ func (s *SDK) GetDomain(ctx context.Context, request operations.GetDomainRequest
 // GetLayout - Returns the details for the requested layout.
 func (s *SDK) GetLayout(ctx context.Context, request operations.GetLayoutRequest) (*operations.GetLayoutResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts/{layoutId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts/{layoutId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1566,7 +1617,10 @@ func (s *SDK) GetLayout(ctx context.Context, request operations.GetLayoutRequest
 // GetTemplate - Returns the details for the requested template.
 func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateRequest) (*operations.GetTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1662,7 +1716,10 @@ func (s *SDK) GetTemplate(ctx context.Context, request operations.GetTemplateReq
 // ListCasesForContact - Lists cases for a given contact.
 func (s *SDK) ListCasesForContact(ctx context.Context, request operations.ListCasesForContactRequest) (*operations.ListCasesForContactResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/list-cases-for-contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/list-cases-for-contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1862,7 +1919,10 @@ func (s *SDK) ListDomains(ctx context.Context, request operations.ListDomainsReq
 // ListFieldOptions - Lists all of the field options for a field identifier in the domain.
 func (s *SDK) ListFieldOptions(ctx context.Context, request operations.ListFieldOptionsRequest) (*operations.ListFieldOptionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}/options-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}/options-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1962,7 +2022,10 @@ func (s *SDK) ListFieldOptions(ctx context.Context, request operations.ListField
 // ListFields - Lists all fields in a Cases domain.
 func (s *SDK) ListFields(ctx context.Context, request operations.ListFieldsRequest) (*operations.ListFieldsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2062,7 +2125,10 @@ func (s *SDK) ListFields(ctx context.Context, request operations.ListFieldsReque
 // ListLayouts - Lists all layouts in the given cases domain. Each list item is a condensed summary object of the layout.
 func (s *SDK) ListLayouts(ctx context.Context, request operations.ListLayoutsRequest) (*operations.ListLayoutsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2162,7 +2228,10 @@ func (s *SDK) ListLayouts(ctx context.Context, request operations.ListLayoutsReq
 // ListTagsForResource - Lists tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2258,7 +2327,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // ListTemplates - Lists all of the templates in a Cases domain. Each list item is a condensed summary object of the template.
 func (s *SDK) ListTemplates(ctx context.Context, request operations.ListTemplatesRequest) (*operations.ListTemplatesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates-list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates-list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2358,7 +2430,10 @@ func (s *SDK) ListTemplates(ctx context.Context, request operations.ListTemplate
 // PutCaseEventConfiguration - API for adding case event publishing configuration
 func (s *SDK) PutCaseEventConfiguration(ctx context.Context, request operations.PutCaseEventConfigurationRequest) (*operations.PutCaseEventConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/case-event-configuration", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/case-event-configuration", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2464,7 +2539,10 @@ func (s *SDK) PutCaseEventConfiguration(ctx context.Context, request operations.
 // SearchCases - <p>Searches for cases within their associated Cases domain. Search results are returned as a paginated list of abridged case documents.</p> <note> <p>For <code>customer_id</code> you must provide the full customer profile ARN in this format: <code> arn:aws:profile:your AWS Region:your AWS account ID:domains/profiles domain name/profiles/profile ID</code>. </p> </note>
 func (s *SDK) SearchCases(ctx context.Context, request operations.SearchCasesRequest) (*operations.SearchCasesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases-search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases-search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2574,7 +2652,10 @@ func (s *SDK) SearchCases(ctx context.Context, request operations.SearchCasesReq
 // SearchRelatedItems - <p>Searches for related items that are associated with a case.</p> <note> <p>If no filters are provided, this returns all related items associated with a case.</p> </note>
 func (s *SDK) SearchRelatedItems(ctx context.Context, request operations.SearchRelatedItemsRequest) (*operations.SearchRelatedItemsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}/related-items-search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}/related-items-search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2684,7 +2765,10 @@ func (s *SDK) SearchRelatedItems(ctx context.Context, request operations.SearchR
 // TagResource - Adds tags to a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2781,7 +2865,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Untags a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2872,7 +2959,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCase - <p>Updates the values of fields on a case. Fields to be updated are received as an array of id/value pairs identical to the <code>CreateCase</code> input .</p> <p>If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.</p>
 func (s *SDK) UpdateCase(ctx context.Context, request operations.UpdateCaseRequest) (*operations.UpdateCaseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/cases/{caseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2978,7 +3068,10 @@ func (s *SDK) UpdateCase(ctx context.Context, request operations.UpdateCaseReque
 // UpdateField - Updates the properties of an existing field.
 func (s *SDK) UpdateField(ctx context.Context, request operations.UpdateFieldRequest) (*operations.UpdateFieldResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/fields/{fieldId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3094,7 +3187,10 @@ func (s *SDK) UpdateField(ctx context.Context, request operations.UpdateFieldReq
 // UpdateLayout - <p>Updates the attributes of an existing layout.</p> <p>If the action is successful, the service sends back an HTTP 200 response with an empty HTTP body.</p> <p>A <code>ValidationException</code> is returned when you add non-existent <code>fieldIds</code> to a layout.</p> <note> <p>Title and Status fields cannot be part of layouts because they are not configurable.</p> </note>
 func (s *SDK) UpdateLayout(ctx context.Context, request operations.UpdateLayoutRequest) (*operations.UpdateLayoutResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts/{layoutId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/layouts/{layoutId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3220,7 +3316,10 @@ func (s *SDK) UpdateLayout(ctx context.Context, request operations.UpdateLayoutR
 // UpdateTemplate - Updates the attributes of an existing template. The template attributes that can be modified include <code>name</code>, <code>description</code>, <code>layoutConfiguration</code>, <code>requiredFields</code>, and <code>status</code>. At least one of these attributes must not be null. If a null value is provided for a given attribute, that attribute is ignored and its current value is preserved.
 func (s *SDK) UpdateTemplate(ctx context.Context, request operations.UpdateTemplateRequest) (*operations.UpdateTemplateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates/{templateId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{domainId}/templates/{templateId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

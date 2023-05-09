@@ -2,7 +2,7 @@
 
 package shared
 
-// PolygonGeometryInput - <p/>
+// PolygonGeometryInput - The structure representing Polygon Geometry based on the <a href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6">GeoJson spec</a>.
 type PolygonGeometryInput struct {
 	Coordinates [][][]float64 `json:"Coordinates"`
 }

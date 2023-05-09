@@ -22,12 +22,16 @@ const (
 	GetEarlyDayMotionsListParametersOrderByEnumSignatureCountDesc GetEarlyDayMotionsListParametersOrderByEnum = "SignatureCountDesc"
 )
 
+func (e GetEarlyDayMotionsListParametersOrderByEnum) ToPointer() *GetEarlyDayMotionsListParametersOrderByEnum {
+	return &e
+}
+
 func (e *GetEarlyDayMotionsListParametersOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DateTabledAsc":
 		fallthrough
 	case "DateTabledDesc":
@@ -39,10 +43,10 @@ func (e *GetEarlyDayMotionsListParametersOrderByEnum) UnmarshalJSON(data []byte)
 	case "SignatureCountAsc":
 		fallthrough
 	case "SignatureCountDesc":
-		*e = GetEarlyDayMotionsListParametersOrderByEnum(s)
+		*e = GetEarlyDayMotionsListParametersOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEarlyDayMotionsListParametersOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEarlyDayMotionsListParametersOrderByEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	GetEarlyDayMotionsListParametersStatusesEnumWithdrawn GetEarlyDayMotionsListParametersStatusesEnum = "Withdrawn"
 )
 
+func (e GetEarlyDayMotionsListParametersStatusesEnum) ToPointer() *GetEarlyDayMotionsListParametersStatusesEnum {
+	return &e
+}
+
 func (e *GetEarlyDayMotionsListParametersStatusesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Published":
 		fallthrough
 	case "Withdrawn":
-		*e = GetEarlyDayMotionsListParametersStatusesEnum(s)
+		*e = GetEarlyDayMotionsListParametersStatusesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEarlyDayMotionsListParametersStatusesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEarlyDayMotionsListParametersStatusesEnum: %v", v)
 	}
 }
 

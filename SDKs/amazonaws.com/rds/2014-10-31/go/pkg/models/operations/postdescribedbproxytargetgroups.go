@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBProxyTargetGroupsActionEnumDescribeDbProxyTargetGroups POSTDescribeDBProxyTargetGroupsActionEnum = "DescribeDBProxyTargetGroups"
 )
 
+func (e POSTDescribeDBProxyTargetGroupsActionEnum) ToPointer() *POSTDescribeDBProxyTargetGroupsActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBProxyTargetGroupsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBProxyTargetGroups":
-		*e = POSTDescribeDBProxyTargetGroupsActionEnum(s)
+		*e = POSTDescribeDBProxyTargetGroupsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBProxyTargetGroupsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBProxyTargetGroupsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBProxyTargetGroupsVersionEnumTwoThousandAndFourteen1031 POSTDescribeDBProxyTargetGroupsVersionEnum = "2014-10-31"
 )
 
+func (e POSTDescribeDBProxyTargetGroupsVersionEnum) ToPointer() *POSTDescribeDBProxyTargetGroupsVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBProxyTargetGroupsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDescribeDBProxyTargetGroupsVersionEnum(s)
+		*e = POSTDescribeDBProxyTargetGroupsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBProxyTargetGroupsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBProxyTargetGroupsVersionEnum: %v", v)
 	}
 }
 

@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>Welcome to the <i>AWS Clean Rooms API Reference</i>.</p> <p>AWS Clean Rooms is an AWS service that helps multiple parties to join their data together in a secure collaboration workspace. In the collaboration, members who can query and receive results can get insights into the collective datasets without either party getting access to the other party's raw data.</p> <p>To learn more about AWS Clean Rooms concepts, procedures, and best practices, see the <a href="https://docs.aws.amazon.com/clean-rooms/latest/userguide/what-is.html">AWS Clean Rooms User Guide</a>.</p>
 // https://docs.aws.amazon.com/cleanrooms/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // BatchGetSchema - Retrieves multiple schemas by their identifiers.
 func (s *SDK) BatchGetSchema(ctx context.Context, request operations.BatchGetSchemaRequest) (*operations.BatchGetSchemaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/batch-schema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/batch-schema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -452,7 +470,10 @@ func (s *SDK) CreateConfiguredTable(ctx context.Context, request operations.Crea
 // CreateConfiguredTableAnalysisRule - Creates a new analysis rule for a configured table. Currently, only one analysis rule can be created for a given configured table.
 func (s *SDK) CreateConfiguredTableAnalysisRule(ctx context.Context, request operations.CreateConfiguredTableAnalysisRuleRequest) (*operations.CreateConfiguredTableAnalysisRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -568,7 +589,10 @@ func (s *SDK) CreateConfiguredTableAnalysisRule(ctx context.Context, request ope
 // CreateConfiguredTableAssociation - Creates a configured table association. A configured table association links a configured table with a collaboration.
 func (s *SDK) CreateConfiguredTableAssociation(ctx context.Context, request operations.CreateConfiguredTableAssociationRequest) (*operations.CreateConfiguredTableAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -820,7 +844,10 @@ func (s *SDK) CreateMembership(ctx context.Context, request operations.CreateMem
 // DeleteCollaboration - Deletes a collaboration. It can only be called by the collaboration owner.
 func (s *SDK) DeleteCollaboration(ctx context.Context, request operations.DeleteCollaborationRequest) (*operations.DeleteCollaborationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -906,7 +933,10 @@ func (s *SDK) DeleteCollaboration(ctx context.Context, request operations.Delete
 // DeleteConfiguredTable - Deletes a configured table.
 func (s *SDK) DeleteConfiguredTable(ctx context.Context, request operations.DeleteConfiguredTableRequest) (*operations.DeleteConfiguredTableResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1012,7 +1042,10 @@ func (s *SDK) DeleteConfiguredTable(ctx context.Context, request operations.Dele
 // DeleteConfiguredTableAnalysisRule - Deletes a configured table analysis rule.
 func (s *SDK) DeleteConfiguredTableAnalysisRule(ctx context.Context, request operations.DeleteConfiguredTableAnalysisRuleRequest) (*operations.DeleteConfiguredTableAnalysisRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1118,7 +1151,10 @@ func (s *SDK) DeleteConfiguredTableAnalysisRule(ctx context.Context, request ope
 // DeleteConfiguredTableAssociation - Deletes a configured table association.
 func (s *SDK) DeleteConfiguredTableAssociation(ctx context.Context, request operations.DeleteConfiguredTableAssociationRequest) (*operations.DeleteConfiguredTableAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1224,7 +1260,10 @@ func (s *SDK) DeleteConfiguredTableAssociation(ctx context.Context, request oper
 // DeleteMember - Removes the specified member from a collaboration. The removed member is placed in the Removed status and can't interact with the collaboration. The removed member's data is inaccessible to active members of the collaboration.
 func (s *SDK) DeleteMember(ctx context.Context, request operations.DeleteMemberRequest) (*operations.DeleteMemberResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/member/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/member/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1330,7 +1369,10 @@ func (s *SDK) DeleteMember(ctx context.Context, request operations.DeleteMemberR
 // DeleteMembership - Deletes a specified membership. All resources under a membership must be deleted.
 func (s *SDK) DeleteMembership(ctx context.Context, request operations.DeleteMembershipRequest) (*operations.DeleteMembershipResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1436,7 +1478,10 @@ func (s *SDK) DeleteMembership(ctx context.Context, request operations.DeleteMem
 // GetCollaboration - Returns metadata about a collaboration.
 func (s *SDK) GetCollaboration(ctx context.Context, request operations.GetCollaborationRequest) (*operations.GetCollaborationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1522,7 +1567,10 @@ func (s *SDK) GetCollaboration(ctx context.Context, request operations.GetCollab
 // GetConfiguredTable - Retrieves a configured table.
 func (s *SDK) GetConfiguredTable(ctx context.Context, request operations.GetConfiguredTableRequest) (*operations.GetConfiguredTableResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1618,7 +1666,10 @@ func (s *SDK) GetConfiguredTable(ctx context.Context, request operations.GetConf
 // GetConfiguredTableAnalysisRule - Retrieves a configured table analysis rule.
 func (s *SDK) GetConfiguredTableAnalysisRule(ctx context.Context, request operations.GetConfiguredTableAnalysisRuleRequest) (*operations.GetConfiguredTableAnalysisRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1714,7 +1765,10 @@ func (s *SDK) GetConfiguredTableAnalysisRule(ctx context.Context, request operat
 // GetConfiguredTableAssociation - Retrieves a configured table association.
 func (s *SDK) GetConfiguredTableAssociation(ctx context.Context, request operations.GetConfiguredTableAssociationRequest) (*operations.GetConfiguredTableAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1810,7 +1864,10 @@ func (s *SDK) GetConfiguredTableAssociation(ctx context.Context, request operati
 // GetMembership - Retrieves a specified membership for an identifier.
 func (s *SDK) GetMembership(ctx context.Context, request operations.GetMembershipRequest) (*operations.GetMembershipResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1906,7 +1963,10 @@ func (s *SDK) GetMembership(ctx context.Context, request operations.GetMembershi
 // GetProtectedQuery - Returns query processing metadata.
 func (s *SDK) GetProtectedQuery(ctx context.Context, request operations.GetProtectedQueryRequest) (*operations.GetProtectedQueryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries/{protectedQueryIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries/{protectedQueryIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2002,7 +2062,10 @@ func (s *SDK) GetProtectedQuery(ctx context.Context, request operations.GetProte
 // GetSchema - Retrieves the schema for a relation within a collaboration.
 func (s *SDK) GetSchema(ctx context.Context, request operations.GetSchemaRequest) (*operations.GetSchemaResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2098,7 +2161,10 @@ func (s *SDK) GetSchema(ctx context.Context, request operations.GetSchemaRequest
 // GetSchemaAnalysisRule - Retrieves a schema analysis rule.
 func (s *SDK) GetSchemaAnalysisRule(ctx context.Context, request operations.GetSchemaAnalysisRuleRequest) (*operations.GetSchemaAnalysisRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas/{name}/analysisRule/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas/{name}/analysisRule/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2284,7 +2350,10 @@ func (s *SDK) ListCollaborations(ctx context.Context, request operations.ListCol
 // ListConfiguredTableAssociations - Lists configured table associations for a membership.
 func (s *SDK) ListConfiguredTableAssociations(ctx context.Context, request operations.ListConfiguredTableAssociationsRequest) (*operations.ListConfiguredTableAssociationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2474,7 +2543,10 @@ func (s *SDK) ListConfiguredTables(ctx context.Context, request operations.ListC
 // ListMembers - Lists all members within a collaboration.
 func (s *SDK) ListMembers(ctx context.Context, request operations.ListMembersRequest) (*operations.ListMembersResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2664,7 +2736,10 @@ func (s *SDK) ListMemberships(ctx context.Context, request operations.ListMember
 // ListProtectedQueries - Lists protected queries, sorted by the most recent query.
 func (s *SDK) ListProtectedQueries(ctx context.Context, request operations.ListProtectedQueriesRequest) (*operations.ListProtectedQueriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2764,7 +2839,10 @@ func (s *SDK) ListProtectedQueries(ctx context.Context, request operations.ListP
 // ListSchemas - Lists the schemas for relations within a collaboration.
 func (s *SDK) ListSchemas(ctx context.Context, request operations.ListSchemasRequest) (*operations.ListSchemasResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}/schemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2864,7 +2942,10 @@ func (s *SDK) ListSchemas(ctx context.Context, request operations.ListSchemasReq
 // ListTagsForResource - Lists all of the tags that have been added to a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2930,7 +3011,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartProtectedQuery - Creates a protected query that is started by AWS Clean Rooms.
 func (s *SDK) StartProtectedQuery(ctx context.Context, request operations.StartProtectedQueryRequest) (*operations.StartProtectedQueryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3046,7 +3130,10 @@ func (s *SDK) StartProtectedQuery(ctx context.Context, request operations.StartP
 // TagResource - Tags a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3122,7 +3209,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes a tag or list of tags from a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3192,7 +3282,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCollaboration - Updates collaboration metadata and can only be called by the collaboration owner.
 func (s *SDK) UpdateCollaboration(ctx context.Context, request operations.UpdateCollaborationRequest) (*operations.UpdateCollaborationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/collaborations/{collaborationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3288,7 +3381,10 @@ func (s *SDK) UpdateCollaboration(ctx context.Context, request operations.Update
 // UpdateConfiguredTable - Updates a configured table.
 func (s *SDK) UpdateConfiguredTable(ctx context.Context, request operations.UpdateConfiguredTableRequest) (*operations.UpdateConfiguredTableResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3404,7 +3500,10 @@ func (s *SDK) UpdateConfiguredTable(ctx context.Context, request operations.Upda
 // UpdateConfiguredTableAnalysisRule - Updates a configured table analysis rule.
 func (s *SDK) UpdateConfiguredTableAnalysisRule(ctx context.Context, request operations.UpdateConfiguredTableAnalysisRuleRequest) (*operations.UpdateConfiguredTableAnalysisRuleResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/configuredTables/{configuredTableIdentifier}/analysisRule/{analysisRuleType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3520,7 +3619,10 @@ func (s *SDK) UpdateConfiguredTableAnalysisRule(ctx context.Context, request ope
 // UpdateConfiguredTableAssociation - Updates a configured table association.
 func (s *SDK) UpdateConfiguredTableAssociation(ctx context.Context, request operations.UpdateConfiguredTableAssociationRequest) (*operations.UpdateConfiguredTableAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/configuredTableAssociations/{configuredTableAssociationIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3636,7 +3738,10 @@ func (s *SDK) UpdateConfiguredTableAssociation(ctx context.Context, request oper
 // UpdateMembership - Updates a membership.
 func (s *SDK) UpdateMembership(ctx context.Context, request operations.UpdateMembershipRequest) (*operations.UpdateMembershipResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3752,7 +3857,10 @@ func (s *SDK) UpdateMembership(ctx context.Context, request operations.UpdateMem
 // UpdateProtectedQuery - Updates the processing of a currently running query.
 func (s *SDK) UpdateProtectedQuery(ctx context.Context, request operations.UpdateProtectedQueryRequest) (*operations.UpdateProtectedQueryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries/{protectedQueryIdentifier}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/memberships/{membershipIdentifier}/protectedQueries/{protectedQueryIdentifier}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

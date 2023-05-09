@@ -15,17 +15,21 @@ const (
 	GETUpdateJobActionEnumUpdateJob GETUpdateJobActionEnum = "UpdateJob"
 )
 
+func (e GETUpdateJobActionEnum) ToPointer() *GETUpdateJobActionEnum {
+	return &e
+}
+
 func (e *GETUpdateJobActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateJob":
-		*e = GETUpdateJobActionEnum(s)
+		*e = GETUpdateJobActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateJobActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateJobActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETUpdateJobJobTypeEnumExport GETUpdateJobJobTypeEnum = "Export"
 )
 
+func (e GETUpdateJobJobTypeEnum) ToPointer() *GETUpdateJobJobTypeEnum {
+	return &e
+}
+
 func (e *GETUpdateJobJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Import":
 		fallthrough
 	case "Export":
-		*e = GETUpdateJobJobTypeEnum(s)
+		*e = GETUpdateJobJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateJobJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateJobJobTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETUpdateJobOperationEnumUpdateJob GETUpdateJobOperationEnum = "UpdateJob"
 )
 
+func (e GETUpdateJobOperationEnum) ToPointer() *GETUpdateJobOperationEnum {
+	return &e
+}
+
 func (e *GETUpdateJobOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateJob":
-		*e = GETUpdateJobOperationEnum(s)
+		*e = GETUpdateJobOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateJobOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateJobOperationEnum: %v", v)
 	}
 }
 
@@ -81,17 +93,21 @@ const (
 	GETUpdateJobVersionEnumTwoThousandAndTen0601 GETUpdateJobVersionEnum = "2010-06-01"
 )
 
+func (e GETUpdateJobVersionEnum) ToPointer() *GETUpdateJobVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateJobVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-06-01":
-		*e = GETUpdateJobVersionEnum(s)
+		*e = GETUpdateJobVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateJobVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateJobVersionEnum: %v", v)
 	}
 }
 

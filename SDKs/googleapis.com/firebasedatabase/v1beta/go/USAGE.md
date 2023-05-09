@@ -2,40 +2,38 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest{
-        DollarXgafv: "2",
-        DatabaseInstanceInput: &shared.DatabaseInstanceInput{
-            Name: "provident",
-            Type: "USER_DATABASE",
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        DatabaseID: "corrupti",
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        Parent: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-        ValidateOnly: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.FirebasedatabaseProjectsLocationsInstancesCreate(ctx, req, operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity{
+    res, err := s.Projects.FirebasedatabaseProjectsLocationsInstancesCreate(ctx, operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        DatabaseInstanceInput: &shared.DatabaseInstanceInput{
+            Name: sdk.String("Kelvin Sporer"),
+            Type: shared.DatabaseInstanceTypeEnumDefaultDatabase.ToPointer(),
+        },
+        AccessToken: sdk.String("illum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        DatabaseID: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        Parent: "debitis",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity{
         Option1: &operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

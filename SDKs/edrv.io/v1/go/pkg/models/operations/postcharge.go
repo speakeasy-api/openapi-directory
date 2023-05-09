@@ -15,19 +15,23 @@ const (
 	PostChargeRequestBodyActionEnumStop  PostChargeRequestBodyActionEnum = "STOP"
 )
 
+func (e PostChargeRequestBodyActionEnum) ToPointer() *PostChargeRequestBodyActionEnum {
+	return &e
+}
+
 func (e *PostChargeRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START":
 		fallthrough
 	case "STOP":
-		*e = PostChargeRequestBodyActionEnum(s)
+		*e = PostChargeRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostChargeRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for PostChargeRequestBodyActionEnum: %v", v)
 	}
 }
 

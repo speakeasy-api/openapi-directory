@@ -25,12 +25,16 @@ const (
 	LicenseTrackLicenseEnumAssetAllMusic        LicenseTrackLicenseEnum = "asset_all_music"
 )
 
+func (e LicenseTrackLicenseEnum) ToPointer() *LicenseTrackLicenseEnum {
+	return &e
+}
+
 func (e *LicenseTrackLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio_platform":
 		fallthrough
 	case "premier_music_basic":
@@ -42,10 +46,10 @@ func (e *LicenseTrackLicenseEnum) UnmarshalJSON(data []byte) error {
 	case "premier_music_comp":
 		fallthrough
 	case "asset_all_music":
-		*e = LicenseTrackLicenseEnum(s)
+		*e = LicenseTrackLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseTrackLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseTrackLicenseEnum: %v", v)
 	}
 }
 

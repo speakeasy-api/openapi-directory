@@ -16,21 +16,25 @@ const (
 	DataSourceTableColumnSelectionTypeEnumSyncAll                                       DataSourceTableColumnSelectionTypeEnum = "SYNC_ALL"
 )
 
+func (e DataSourceTableColumnSelectionTypeEnum) ToPointer() *DataSourceTableColumnSelectionTypeEnum {
+	return &e
+}
+
 func (e *DataSourceTableColumnSelectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_SOURCE_TABLE_COLUMN_SELECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SELECTED":
 		fallthrough
 	case "SYNC_ALL":
-		*e = DataSourceTableColumnSelectionTypeEnum(s)
+		*e = DataSourceTableColumnSelectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataSourceTableColumnSelectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataSourceTableColumnSelectionTypeEnum: %v", v)
 	}
 }
 

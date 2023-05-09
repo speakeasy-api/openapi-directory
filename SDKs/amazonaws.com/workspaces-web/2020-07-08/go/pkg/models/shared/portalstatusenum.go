@@ -15,20 +15,24 @@ const (
 	PortalStatusEnumActive     PortalStatusEnum = "Active"
 )
 
+func (e PortalStatusEnum) ToPointer() *PortalStatusEnum {
+	return &e
+}
+
 func (e *PortalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Incomplete":
 		fallthrough
 	case "Pending":
 		fallthrough
 	case "Active":
-		*e = PortalStatusEnum(s)
+		*e = PortalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PortalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PortalStatusEnum: %v", v)
 	}
 }

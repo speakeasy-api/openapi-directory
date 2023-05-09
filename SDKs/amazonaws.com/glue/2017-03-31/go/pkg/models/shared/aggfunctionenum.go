@@ -27,12 +27,16 @@ const (
 	AggFunctionEnumVarPop        AggFunctionEnum = "var_pop"
 )
 
+func (e AggFunctionEnum) ToPointer() *AggFunctionEnum {
+	return &e
+}
+
 func (e *AggFunctionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "avg":
 		fallthrough
 	case "countDistinct":
@@ -62,9 +66,9 @@ func (e *AggFunctionEnum) UnmarshalJSON(data []byte) error {
 	case "var_samp":
 		fallthrough
 	case "var_pop":
-		*e = AggFunctionEnum(s)
+		*e = AggFunctionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggFunctionEnum: %s", s)
+		return fmt.Errorf("invalid value for AggFunctionEnum: %v", v)
 	}
 }

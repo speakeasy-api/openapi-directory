@@ -16,17 +16,21 @@ const (
 	UpdatePipelineXAmzTargetEnumCodePipeline20150709UpdatePipeline UpdatePipelineXAmzTargetEnum = "CodePipeline_20150709.UpdatePipeline"
 )
 
+func (e UpdatePipelineXAmzTargetEnum) ToPointer() *UpdatePipelineXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdatePipelineXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodePipeline_20150709.UpdatePipeline":
-		*e = UpdatePipelineXAmzTargetEnum(s)
+		*e = UpdatePipelineXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePipelineXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePipelineXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,39 +17,37 @@ func main() {
         }),
     )
 
-    req := operations.CompareFacesRequest{
+    ctx := context.Background()
+    res, err := s.CompareFaces(ctx, operations.CompareFacesRequest{
         CompareFacesRequest: shared.CompareFacesRequest{
-            QualityFilter: "LOW",
-            SimilarityThreshold: 5928.45,
+            QualityFilter: shared.QualityFilterEnumLow.ToPointer(),
+            SimilarityThreshold: sdk.Float32(5928.45),
             SourceImage: shared.Image{
-                Bytes: "distinctio",
+                Bytes: sdk.String("distinctio"),
                 S3Object: &shared.S3Object{
-                    Bucket: "quibusdam",
-                    Name: "unde",
-                    Version: "nulla",
+                    Bucket: sdk.String("quibusdam"),
+                    Name: sdk.String("Ismael Little"),
+                    Version: sdk.String("error"),
                 },
             },
             TargetImage: shared.Image{
-                Bytes: "corrupti",
+                Bytes: sdk.String("deserunt"),
                 S3Object: &shared.S3Object{
-                    Bucket: "illum",
-                    Name: "vel",
-                    Version: "error",
+                    Bucket: sdk.String("suscipit"),
+                    Name: sdk.String("Dr. Valerie Toy"),
+                    Version: sdk.String("suscipit"),
                 },
             },
         },
-        XAmzAlgorithm: "deserunt",
-        XAmzContentSha256: "suscipit",
-        XAmzCredential: "iure",
-        XAmzDate: "magnam",
-        XAmzSecurityToken: "debitis",
-        XAmzSignature: "ipsa",
-        XAmzSignedHeaders: "delectus",
-        XAmzTarget: "RekognitionService.CompareFaces",
-    }
-
-    ctx := context.Background()
-    res, err := s.CompareFaces(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("minus"),
+        XAmzCredential: sdk.String("placeat"),
+        XAmzDate: sdk.String("voluptatum"),
+        XAmzSecurityToken: sdk.String("iusto"),
+        XAmzSignature: sdk.String("excepturi"),
+        XAmzSignedHeaders: sdk.String("nisi"),
+        XAmzTarget: operations.CompareFacesXAmzTargetEnumRekognitionServiceCompareFaces,
+    })
     if err != nil {
         log.Fatal(err)
     }

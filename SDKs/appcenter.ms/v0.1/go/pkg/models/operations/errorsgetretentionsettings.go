@@ -31,12 +31,16 @@ const (
 	ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum) Unmarsha
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGetRetentionSettingsDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -67,23 +71,27 @@ type ErrorsGetRetentionSettingsDefaultApplicationJSON struct {
 	Error ErrorsGetRetentionSettingsDefaultApplicationJSONError `json:"error"`
 }
 
-type ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum string
+type ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum int64
 
 const (
-	ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnumTwentyEight ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum = "28"
+	ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnumTwentyEight ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum = 28
 )
 
+func (e ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum) ToPointer() *ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum {
+	return &e
+}
+
 func (e *ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "28":
-		*e = ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum(s)
+	switch v {
+	case 28:
+		*e = ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsGetRetentionSettings200ApplicationJSONRetentionInDaysEnum: %v", v)
 	}
 }
 

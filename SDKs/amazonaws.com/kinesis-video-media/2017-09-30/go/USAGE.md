@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,28 +18,26 @@ func main() {
         }),
     )
 
-    req := operations.GetMediaRequest{
+    ctx := context.Background()
+    res, err := s.GetMedia(ctx, operations.GetMediaRequest{
         RequestBody: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "corrupti",
-                ContinuationToken: "provident",
-                StartSelectorType: "EARLIEST",
-                StartTimestamp: "2021-03-11T23:22:42.658Z",
+                AfterFragmentNumber: sdk.String("corrupti"),
+                ContinuationToken: sdk.String("provident"),
+                StartSelectorType: shared.StartSelectorTypeEnumEarliest.ToPointer(),
+                StartTimestamp: types.MustTimeFromString("2021-03-11T23:22:42.658Z"),
             },
-            StreamARN: "nulla",
-            StreamName: "corrupti",
+            StreamARN: sdk.String("nulla"),
+            StreamName: sdk.String("corrupti"),
         },
-        XAmzAlgorithm: "illum",
-        XAmzContentSha256: "vel",
-        XAmzCredential: "error",
-        XAmzDate: "deserunt",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "iure",
-        XAmzSignedHeaders: "magnam",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetMedia(ctx, req)
+        XAmzAlgorithm: sdk.String("illum"),
+        XAmzContentSha256: sdk.String("vel"),
+        XAmzCredential: sdk.String("error"),
+        XAmzDate: sdk.String("deserunt"),
+        XAmzSecurityToken: sdk.String("suscipit"),
+        XAmzSignature: sdk.String("iure"),
+        XAmzSignedHeaders: sdk.String("magnam"),
+    })
     if err != nil {
         log.Fatal(err)
     }

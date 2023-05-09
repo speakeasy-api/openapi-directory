@@ -6,5 +6,7 @@ package shared
 type EndpointDetails struct {
 	AwsGroundStationAgentEndpoint *AwsGroundStationAgentEndpoint `json:"awsGroundStationAgentEndpoint,omitempty"`
 	Endpoint                      *DataflowEndpoint              `json:"endpoint,omitempty"`
+	HealthReasons                 []CapabilityHealthReasonEnum   `json:"healthReasons,omitempty"`
+	HealthStatus                  *CapabilityHealthEnum          `json:"healthStatus,omitempty"`
 	SecurityDetails               *SecurityDetails               `json:"securityDetails,omitempty"`
 }

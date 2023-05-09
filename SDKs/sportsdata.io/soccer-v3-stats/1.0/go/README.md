@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/soccer-v3-s
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreasCountriesRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.AreasCountries(ctx, req)
+    res, err := s.AreasCountries(ctx, operations.AreasCountriesRequest{
+        Format: operations.AreasCountriesFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,43 +45,43 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreasCountries` - Areas (Countries)
-* `BoxScore` - Box Score
-* `BoxScoresByDate` - Box Scores by Date
-* `BoxScoresByDateByCompetition` - Box Scores by Date by Competition
-* `BoxScoresByDateDelta` - Box Scores by Date Delta
-* `BoxScoresDeltaByDateByCompetition` - Box Scores Delta by Date by Competition
-* `CompetitionFixturesLeagueDetails` - Competition Fixtures (League Details)
-* `CompetitionHierarchyLeagueHierarchy` - Competition Hierarchy (League Hierarchy)
-* `CompetitionsLeagues` - Competitions (Leagues)
-* `DfsSlatesByDate` - Dfs Slates By Date
-* `GamesByDate` - Games by Date
-* `MembershipsActive` - Memberships (Active)
-* `MembershipsByCompetitionActive` - Memberships by Competition (Active)
-* `MembershipsByCompetitionHistorical` - Memberships by Competition (Historical)
-* `MembershipsByTeamActive` - Memberships by Team (Active)
-* `MembershipsByTeamHistorical` - Memberships by Team (Historical)
-* `MembershipsHistorical` - Memberships (Historical)
-* `MembershipsRecentlyChanged` - Memberships (Recently Changed)
-* `Player` - Player
-* `PlayerGameStatsByDate` - Player Game Stats by Date
-* `PlayerGameStatsByPlayer` - Player Game Stats by Player
-* `PlayerSeasonStats` - Player Season Stats
-* `PlayerSeasonStatsByPlayer` - Player Season Stats by Player
-* `PlayerSeasonStatsByTeam` - Player Season Stats by Team
-* `Players` - Players
-* `PlayersByTeam` - Players by Team
-* `Schedule` - Schedule
-* `SeasonTeams` - Season Teams
-* `Standings` - Standings
-* `TeamGameStatsByDate` - Team Game Stats by Date
-* `TeamSeasonStats` - Team Season Stats
-* `Teams` - Teams
-* `UpcomingDfsSlatesByCompetition` - Upcoming Dfs Slates By Competition
-* `UpcomingScheduleByPlayer` - Upcoming Schedule By Player
-* `Venues` - Venues
+* [AreasCountries](docs/sdk/README.md#areascountries) - Areas (Countries)
+* [BoxScore](docs/sdk/README.md#boxscore) - Box Score
+* [BoxScoresByDate](docs/sdk/README.md#boxscoresbydate) - Box Scores by Date
+* [BoxScoresByDateByCompetition](docs/sdk/README.md#boxscoresbydatebycompetition) - Box Scores by Date by Competition
+* [BoxScoresByDateDelta](docs/sdk/README.md#boxscoresbydatedelta) - Box Scores by Date Delta
+* [BoxScoresDeltaByDateByCompetition](docs/sdk/README.md#boxscoresdeltabydatebycompetition) - Box Scores Delta by Date by Competition
+* [CompetitionFixturesLeagueDetails](docs/sdk/README.md#competitionfixturesleaguedetails) - Competition Fixtures (League Details)
+* [CompetitionHierarchyLeagueHierarchy](docs/sdk/README.md#competitionhierarchyleaguehierarchy) - Competition Hierarchy (League Hierarchy)
+* [CompetitionsLeagues](docs/sdk/README.md#competitionsleagues) - Competitions (Leagues)
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [MembershipsActive](docs/sdk/README.md#membershipsactive) - Memberships (Active)
+* [MembershipsByCompetitionActive](docs/sdk/README.md#membershipsbycompetitionactive) - Memberships by Competition (Active)
+* [MembershipsByCompetitionHistorical](docs/sdk/README.md#membershipsbycompetitionhistorical) - Memberships by Competition (Historical)
+* [MembershipsByTeamActive](docs/sdk/README.md#membershipsbyteamactive) - Memberships by Team (Active)
+* [MembershipsByTeamHistorical](docs/sdk/README.md#membershipsbyteamhistorical) - Memberships by Team (Historical)
+* [MembershipsHistorical](docs/sdk/README.md#membershipshistorical) - Memberships (Historical)
+* [MembershipsRecentlyChanged](docs/sdk/README.md#membershipsrecentlychanged) - Memberships (Recently Changed)
+* [Player](docs/sdk/README.md#player) - Player
+* [PlayerGameStatsByDate](docs/sdk/README.md#playergamestatsbydate) - Player Game Stats by Date
+* [PlayerGameStatsByPlayer](docs/sdk/README.md#playergamestatsbyplayer) - Player Game Stats by Player
+* [PlayerSeasonStats](docs/sdk/README.md#playerseasonstats) - Player Season Stats
+* [PlayerSeasonStatsByPlayer](docs/sdk/README.md#playerseasonstatsbyplayer) - Player Season Stats by Player
+* [PlayerSeasonStatsByTeam](docs/sdk/README.md#playerseasonstatsbyteam) - Player Season Stats by Team
+* [Players](docs/sdk/README.md#players) - Players
+* [PlayersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [Schedule](docs/sdk/README.md#schedule) - Schedule
+* [SeasonTeams](docs/sdk/README.md#seasonteams) - Season Teams
+* [Standings](docs/sdk/README.md#standings) - Standings
+* [TeamGameStatsByDate](docs/sdk/README.md#teamgamestatsbydate) - Team Game Stats by Date
+* [TeamSeasonStats](docs/sdk/README.md#teamseasonstats) - Team Season Stats
+* [Teams](docs/sdk/README.md#teams) - Teams
+* [UpcomingDfsSlatesByCompetition](docs/sdk/README.md#upcomingdfsslatesbycompetition) - Upcoming Dfs Slates By Competition
+* [UpcomingScheduleByPlayer](docs/sdk/README.md#upcomingschedulebyplayer) - Upcoming Schedule By Player
+* [Venues](docs/sdk/README.md#venues) - Venues
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -16,17 +16,21 @@ const (
 	DeleteFileCacheXAmzTargetEnumAwsSimbaAPIServiceV20180301DeleteFileCache DeleteFileCacheXAmzTargetEnum = "AWSSimbaAPIService_v20180301.DeleteFileCache"
 )
 
+func (e DeleteFileCacheXAmzTargetEnum) ToPointer() *DeleteFileCacheXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteFileCacheXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSimbaAPIService_v20180301.DeleteFileCache":
-		*e = DeleteFileCacheXAmzTargetEnum(s)
+		*e = DeleteFileCacheXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteFileCacheXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteFileCacheXAmzTargetEnum: %v", v)
 	}
 }
 

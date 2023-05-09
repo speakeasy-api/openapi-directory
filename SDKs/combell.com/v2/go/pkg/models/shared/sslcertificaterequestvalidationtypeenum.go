@@ -16,20 +16,24 @@ const (
 	SslCertificateRequestValidationTypeEnumEmail SslCertificateRequestValidationTypeEnum = "email"
 )
 
+func (e SslCertificateRequestValidationTypeEnum) ToPointer() *SslCertificateRequestValidationTypeEnum {
+	return &e
+}
+
 func (e *SslCertificateRequestValidationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dns":
 		fallthrough
 	case "file":
 		fallthrough
 	case "email":
-		*e = SslCertificateRequestValidationTypeEnum(s)
+		*e = SslCertificateRequestValidationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SslCertificateRequestValidationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SslCertificateRequestValidationTypeEnum: %v", v)
 	}
 }

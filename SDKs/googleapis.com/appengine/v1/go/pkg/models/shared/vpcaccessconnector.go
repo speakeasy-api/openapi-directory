@@ -16,21 +16,25 @@ const (
 	VpcAccessConnectorEgressSettingEnumPrivateIPRanges          VpcAccessConnectorEgressSettingEnum = "PRIVATE_IP_RANGES"
 )
 
+func (e VpcAccessConnectorEgressSettingEnum) ToPointer() *VpcAccessConnectorEgressSettingEnum {
+	return &e
+}
+
 func (e *VpcAccessConnectorEgressSettingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EGRESS_SETTING_UNSPECIFIED":
 		fallthrough
 	case "ALL_TRAFFIC":
 		fallthrough
 	case "PRIVATE_IP_RANGES":
-		*e = VpcAccessConnectorEgressSettingEnum(s)
+		*e = VpcAccessConnectorEgressSettingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VpcAccessConnectorEgressSettingEnum: %s", s)
+		return fmt.Errorf("invalid value for VpcAccessConnectorEgressSettingEnum: %v", v)
 	}
 }
 

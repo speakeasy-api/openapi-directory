@@ -22,21 +22,25 @@ const (
 	ListGroupUsersSourceEnumClever          ListGroupUsersSourceEnum = "clever"
 )
 
+func (e ListGroupUsersSourceEnum) ToPointer() *ListGroupUsersSourceEnum {
+	return &e
+}
+
 func (e *ListGroupUsersSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "googleClassroom":
 		fallthrough
 	case "microsoftGraph":
 		fallthrough
 	case "clever":
-		*e = ListGroupUsersSourceEnum(s)
+		*e = ListGroupUsersSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListGroupUsersSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ListGroupUsersSourceEnum: %v", v)
 	}
 }
 

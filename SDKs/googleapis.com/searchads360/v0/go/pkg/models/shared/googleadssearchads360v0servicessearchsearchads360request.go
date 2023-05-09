@@ -18,12 +18,16 @@ const (
 	GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnumSummaryRowOnly        GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum = "SUMMARY_ROW_ONLY"
 )
 
+func (e GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum) ToPointer() *GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -33,10 +37,10 @@ func (e *GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSetti
 	case "SUMMARY_ROW_WITH_RESULTS":
 		fallthrough
 	case "SUMMARY_ROW_ONLY":
-		*e = GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum(s)
+		*e = GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ServicesSearchSearchAds360RequestSummaryRowSettingEnum: %v", v)
 	}
 }
 

@@ -32,12 +32,16 @@ const (
 	GetVolumesIDActionsSortParameterSortEnumFinishedDesc GetVolumesIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetVolumesIDActionsSortParameterSortEnum) ToPointer() *GetVolumesIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetVolumesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetVolumesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) er
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetVolumesIDActionsSortParameterSortEnum(s)
+		*e = GetVolumesIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetVolumesIDActionsStatusParameterStatusEnumError   GetVolumesIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetVolumesIDActionsStatusParameterStatusEnum) ToPointer() *GetVolumesIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetVolumesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetVolumesIDActionsStatusParameterStatusEnum(s)
+		*e = GetVolumesIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetVolumesIDActionsActionsResponseActionStatusEnumError   GetVolumesIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetVolumesIDActionsActionsResponseActionStatusEnum) ToPointer() *GetVolumesIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetVolumesIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetVolumesIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetVolumesIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVolumesIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVolumesIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

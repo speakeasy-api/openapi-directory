@@ -16,21 +16,25 @@ const (
 	CVSSv3AttackComplexityEnumAttackComplexityHigh        CVSSv3AttackComplexityEnum = "ATTACK_COMPLEXITY_HIGH"
 )
 
+func (e CVSSv3AttackComplexityEnum) ToPointer() *CVSSv3AttackComplexityEnum {
+	return &e
+}
+
 func (e *CVSSv3AttackComplexityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTACK_COMPLEXITY_UNSPECIFIED":
 		fallthrough
 	case "ATTACK_COMPLEXITY_LOW":
 		fallthrough
 	case "ATTACK_COMPLEXITY_HIGH":
-		*e = CVSSv3AttackComplexityEnum(s)
+		*e = CVSSv3AttackComplexityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3AttackComplexityEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3AttackComplexityEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	CVSSv3AttackVectorEnumAttackVectorPhysical    CVSSv3AttackVectorEnum = "ATTACK_VECTOR_PHYSICAL"
 )
 
+func (e CVSSv3AttackVectorEnum) ToPointer() *CVSSv3AttackVectorEnum {
+	return &e
+}
+
 func (e *CVSSv3AttackVectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTACK_VECTOR_UNSPECIFIED":
 		fallthrough
 	case "ATTACK_VECTOR_NETWORK":
@@ -60,10 +68,10 @@ func (e *CVSSv3AttackVectorEnum) UnmarshalJSON(data []byte) error {
 	case "ATTACK_VECTOR_LOCAL":
 		fallthrough
 	case "ATTACK_VECTOR_PHYSICAL":
-		*e = CVSSv3AttackVectorEnum(s)
+		*e = CVSSv3AttackVectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3AttackVectorEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3AttackVectorEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	CVSSv3AvailabilityImpactEnumImpactNone        CVSSv3AvailabilityImpactEnum = "IMPACT_NONE"
 )
 
+func (e CVSSv3AvailabilityImpactEnum) ToPointer() *CVSSv3AvailabilityImpactEnum {
+	return &e
+}
+
 func (e *CVSSv3AvailabilityImpactEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPACT_UNSPECIFIED":
 		fallthrough
 	case "IMPACT_HIGH":
@@ -90,10 +102,10 @@ func (e *CVSSv3AvailabilityImpactEnum) UnmarshalJSON(data []byte) error {
 	case "IMPACT_LOW":
 		fallthrough
 	case "IMPACT_NONE":
-		*e = CVSSv3AvailabilityImpactEnum(s)
+		*e = CVSSv3AvailabilityImpactEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3AvailabilityImpactEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3AvailabilityImpactEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	CVSSv3ConfidentialityImpactEnumImpactNone        CVSSv3ConfidentialityImpactEnum = "IMPACT_NONE"
 )
 
+func (e CVSSv3ConfidentialityImpactEnum) ToPointer() *CVSSv3ConfidentialityImpactEnum {
+	return &e
+}
+
 func (e *CVSSv3ConfidentialityImpactEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPACT_UNSPECIFIED":
 		fallthrough
 	case "IMPACT_HIGH":
@@ -120,10 +136,10 @@ func (e *CVSSv3ConfidentialityImpactEnum) UnmarshalJSON(data []byte) error {
 	case "IMPACT_LOW":
 		fallthrough
 	case "IMPACT_NONE":
-		*e = CVSSv3ConfidentialityImpactEnum(s)
+		*e = CVSSv3ConfidentialityImpactEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3ConfidentialityImpactEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3ConfidentialityImpactEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	CVSSv3IntegrityImpactEnumImpactNone        CVSSv3IntegrityImpactEnum = "IMPACT_NONE"
 )
 
+func (e CVSSv3IntegrityImpactEnum) ToPointer() *CVSSv3IntegrityImpactEnum {
+	return &e
+}
+
 func (e *CVSSv3IntegrityImpactEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPACT_UNSPECIFIED":
 		fallthrough
 	case "IMPACT_HIGH":
@@ -150,10 +170,10 @@ func (e *CVSSv3IntegrityImpactEnum) UnmarshalJSON(data []byte) error {
 	case "IMPACT_LOW":
 		fallthrough
 	case "IMPACT_NONE":
-		*e = CVSSv3IntegrityImpactEnum(s)
+		*e = CVSSv3IntegrityImpactEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3IntegrityImpactEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3IntegrityImpactEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	CVSSv3PrivilegesRequiredEnumPrivilegesRequiredHigh        CVSSv3PrivilegesRequiredEnum = "PRIVILEGES_REQUIRED_HIGH"
 )
 
+func (e CVSSv3PrivilegesRequiredEnum) ToPointer() *CVSSv3PrivilegesRequiredEnum {
+	return &e
+}
+
 func (e *CVSSv3PrivilegesRequiredEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVILEGES_REQUIRED_UNSPECIFIED":
 		fallthrough
 	case "PRIVILEGES_REQUIRED_NONE":
@@ -180,10 +204,10 @@ func (e *CVSSv3PrivilegesRequiredEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVILEGES_REQUIRED_LOW":
 		fallthrough
 	case "PRIVILEGES_REQUIRED_HIGH":
-		*e = CVSSv3PrivilegesRequiredEnum(s)
+		*e = CVSSv3PrivilegesRequiredEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3PrivilegesRequiredEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3PrivilegesRequiredEnum: %v", v)
 	}
 }
 
@@ -196,21 +220,25 @@ const (
 	CVSSv3ScopeEnumScopeChanged     CVSSv3ScopeEnum = "SCOPE_CHANGED"
 )
 
+func (e CVSSv3ScopeEnum) ToPointer() *CVSSv3ScopeEnum {
+	return &e
+}
+
 func (e *CVSSv3ScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCOPE_UNSPECIFIED":
 		fallthrough
 	case "SCOPE_UNCHANGED":
 		fallthrough
 	case "SCOPE_CHANGED":
-		*e = CVSSv3ScopeEnum(s)
+		*e = CVSSv3ScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3ScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3ScopeEnum: %v", v)
 	}
 }
 
@@ -223,21 +251,25 @@ const (
 	CVSSv3UserInteractionEnumUserInteractionRequired    CVSSv3UserInteractionEnum = "USER_INTERACTION_REQUIRED"
 )
 
+func (e CVSSv3UserInteractionEnum) ToPointer() *CVSSv3UserInteractionEnum {
+	return &e
+}
+
 func (e *CVSSv3UserInteractionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER_INTERACTION_UNSPECIFIED":
 		fallthrough
 	case "USER_INTERACTION_NONE":
 		fallthrough
 	case "USER_INTERACTION_REQUIRED":
-		*e = CVSSv3UserInteractionEnum(s)
+		*e = CVSSv3UserInteractionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CVSSv3UserInteractionEnum: %s", s)
+		return fmt.Errorf("invalid value for CVSSv3UserInteractionEnum: %v", v)
 	}
 }
 

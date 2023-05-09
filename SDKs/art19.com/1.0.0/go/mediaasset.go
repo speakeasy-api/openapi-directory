@@ -191,7 +191,10 @@ func (s *mediaAsset) GetMediaAssets(ctx context.Context, request operations.GetM
 //   - `waveform_data`: The generated BBC Audiowaveform data in JSON or binary format.
 func (s *mediaAsset) GetMediaAssetsID(ctx context.Context, request operations.GetMediaAssetsIDRequest, security operations.GetMediaAssetsIDSecurity) (*operations.GetMediaAssetsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/media_assets/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/media_assets/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

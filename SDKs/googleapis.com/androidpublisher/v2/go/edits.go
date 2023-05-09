@@ -34,7 +34,10 @@ func newEdits(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AndroidpublisherEditsApklistingsDelete - Deletes the APK-specific localized listing for a specified APK and language code.
 func (s *edits) AndroidpublisherEditsApklistingsDelete(ctx context.Context, request operations.AndroidpublisherEditsApklistingsDeleteRequest, security operations.AndroidpublisherEditsApklistingsDeleteSecurity) (*operations.AndroidpublisherEditsApklistingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *edits) AndroidpublisherEditsApklistingsDelete(ctx context.Context, requ
 // AndroidpublisherEditsApklistingsDeleteall - Deletes all the APK-specific localized listings for a specified APK.
 func (s *edits) AndroidpublisherEditsApklistingsDeleteall(ctx context.Context, request operations.AndroidpublisherEditsApklistingsDeleteallRequest, security operations.AndroidpublisherEditsApklistingsDeleteallSecurity) (*operations.AndroidpublisherEditsApklistingsDeleteallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -112,7 +118,10 @@ func (s *edits) AndroidpublisherEditsApklistingsDeleteall(ctx context.Context, r
 // AndroidpublisherEditsApklistingsGet - Fetches the APK-specific localized listing for a specified APK and language code.
 func (s *edits) AndroidpublisherEditsApklistingsGet(ctx context.Context, request operations.AndroidpublisherEditsApklistingsGetRequest, security operations.AndroidpublisherEditsApklistingsGetSecurity) (*operations.AndroidpublisherEditsApklistingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -160,7 +169,10 @@ func (s *edits) AndroidpublisherEditsApklistingsGet(ctx context.Context, request
 // AndroidpublisherEditsApklistingsList - Lists all the APK-specific localized listings for a specified APK.
 func (s *edits) AndroidpublisherEditsApklistingsList(ctx context.Context, request operations.AndroidpublisherEditsApklistingsListRequest, security operations.AndroidpublisherEditsApklistingsListSecurity) (*operations.AndroidpublisherEditsApklistingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -208,7 +220,10 @@ func (s *edits) AndroidpublisherEditsApklistingsList(ctx context.Context, reques
 // AndroidpublisherEditsApklistingsPatch - Updates or creates the APK-specific localized listing for a specified APK and language code. This method supports patch semantics.
 func (s *edits) AndroidpublisherEditsApklistingsPatch(ctx context.Context, request operations.AndroidpublisherEditsApklistingsPatchRequest, security operations.AndroidpublisherEditsApklistingsPatchSecurity) (*operations.AndroidpublisherEditsApklistingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApkListing", "json")
 	if err != nil {
@@ -263,7 +278,10 @@ func (s *edits) AndroidpublisherEditsApklistingsPatch(ctx context.Context, reque
 // AndroidpublisherEditsApklistingsUpdate - Updates or creates the APK-specific localized listing for a specified APK and language code.
 func (s *edits) AndroidpublisherEditsApklistingsUpdate(ctx context.Context, request operations.AndroidpublisherEditsApklistingsUpdateRequest, security operations.AndroidpublisherEditsApklistingsUpdateSecurity) (*operations.AndroidpublisherEditsApklistingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApkListing", "json")
 	if err != nil {
@@ -318,7 +336,10 @@ func (s *edits) AndroidpublisherEditsApklistingsUpdate(ctx context.Context, requ
 // AndroidpublisherEditsApksAddexternallyhosted - Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a specified URL. This function is only available to enterprises using Google Play for Work whose application is configured to restrict distribution to the enterprise domain.
 func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context, request operations.AndroidpublisherEditsApksAddexternallyhostedRequest, security operations.AndroidpublisherEditsApksAddexternallyhostedSecurity) (*operations.AndroidpublisherEditsApksAddexternallyhostedResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/externallyHosted", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/externallyHosted", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ApksAddExternallyHostedRequest", "json")
 	if err != nil {
@@ -369,9 +390,13 @@ func (s *edits) AndroidpublisherEditsApksAddexternallyhosted(ctx context.Context
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsApksList(ctx context.Context, request operations.AndroidpublisherEditsApksListRequest, security operations.AndroidpublisherEditsApksListSecurity) (*operations.AndroidpublisherEditsApksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -415,9 +440,13 @@ func (s *edits) AndroidpublisherEditsApksList(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsApksUpload(ctx context.Context, request operations.AndroidpublisherEditsApksUploadRequest, security operations.AndroidpublisherEditsApksUploadSecurity) (*operations.AndroidpublisherEditsApksUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -461,9 +490,13 @@ func (s *edits) AndroidpublisherEditsApksUpload(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsBundlesList(ctx context.Context, request operations.AndroidpublisherEditsBundlesListRequest, security operations.AndroidpublisherEditsBundlesListSecurity) (*operations.AndroidpublisherEditsBundlesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/bundles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/bundles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -511,7 +544,10 @@ func (s *edits) AndroidpublisherEditsBundlesList(ctx context.Context, request op
 // AndroidpublisherEditsBundlesUpload - Uploads a new Android App Bundle to this edit. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See: https://developers.google.com/api-client-library/java/google-api-java-client/errors for an example in java.
 func (s *edits) AndroidpublisherEditsBundlesUpload(ctx context.Context, request operations.AndroidpublisherEditsBundlesUploadRequest, security operations.AndroidpublisherEditsBundlesUploadSecurity) (*operations.AndroidpublisherEditsBundlesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/bundles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/bundles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -559,7 +595,10 @@ func (s *edits) AndroidpublisherEditsBundlesUpload(ctx context.Context, request 
 // AndroidpublisherEditsCommit - Commits/applies the changes made in this edit back to the app.
 func (s *edits) AndroidpublisherEditsCommit(ctx context.Context, request operations.AndroidpublisherEditsCommitRequest, security operations.AndroidpublisherEditsCommitSecurity) (*operations.AndroidpublisherEditsCommitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}:commit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}:commit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -607,7 +646,10 @@ func (s *edits) AndroidpublisherEditsCommit(ctx context.Context, request operati
 // AndroidpublisherEditsDelete - Deletes an edit for an app. Creating a new edit will automatically delete any of your previous edits so this method need only be called if you want to preemptively abandon an edit.
 func (s *edits) AndroidpublisherEditsDelete(ctx context.Context, request operations.AndroidpublisherEditsDeleteRequest, security operations.AndroidpublisherEditsDeleteSecurity) (*operations.AndroidpublisherEditsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -646,7 +688,10 @@ func (s *edits) AndroidpublisherEditsDelete(ctx context.Context, request operati
 // AndroidpublisherEditsDeobfuscationfilesUpload - Uploads the deobfuscation file of the specified APK. If a deobfuscation or symbolication file already exists, it will be replaced. See https://developer.android.com/studio/build/shrink-code to learn more about deobfuscation files.
 func (s *edits) AndroidpublisherEditsDeobfuscationfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsDeobfuscationfilesUploadRequest, security operations.AndroidpublisherEditsDeobfuscationfilesUploadSecurity) (*operations.AndroidpublisherEditsDeobfuscationfilesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/deobfuscationFiles/{deobfuscationFileType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -694,7 +739,10 @@ func (s *edits) AndroidpublisherEditsDeobfuscationfilesUpload(ctx context.Contex
 // AndroidpublisherEditsDetailsGet - Fetches app details for this edit. This includes the default language and developer support contact information.
 func (s *edits) AndroidpublisherEditsDetailsGet(ctx context.Context, request operations.AndroidpublisherEditsDetailsGetRequest, security operations.AndroidpublisherEditsDetailsGetSecurity) (*operations.AndroidpublisherEditsDetailsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -742,7 +790,10 @@ func (s *edits) AndroidpublisherEditsDetailsGet(ctx context.Context, request ope
 // AndroidpublisherEditsDetailsPatch - Updates app details for this edit. This method supports patch semantics.
 func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request operations.AndroidpublisherEditsDetailsPatchRequest, security operations.AndroidpublisherEditsDetailsPatchSecurity) (*operations.AndroidpublisherEditsDetailsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppDetails", "json")
 	if err != nil {
@@ -797,7 +848,10 @@ func (s *edits) AndroidpublisherEditsDetailsPatch(ctx context.Context, request o
 // AndroidpublisherEditsDetailsUpdate - Updates app details for this edit.
 func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request operations.AndroidpublisherEditsDetailsUpdateRequest, security operations.AndroidpublisherEditsDetailsUpdateSecurity) (*operations.AndroidpublisherEditsDetailsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppDetails", "json")
 	if err != nil {
@@ -852,7 +906,10 @@ func (s *edits) AndroidpublisherEditsDetailsUpdate(ctx context.Context, request 
 // AndroidpublisherEditsExpansionfilesGet - Fetches the Expansion File configuration for the APK specified.
 func (s *edits) AndroidpublisherEditsExpansionfilesGet(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesGetRequest, security operations.AndroidpublisherEditsExpansionfilesGetSecurity) (*operations.AndroidpublisherEditsExpansionfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -900,7 +957,10 @@ func (s *edits) AndroidpublisherEditsExpansionfilesGet(ctx context.Context, requ
 // AndroidpublisherEditsExpansionfilesPatch - Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method. This method supports patch semantics.
 func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesPatchRequest, security operations.AndroidpublisherEditsExpansionfilesPatchSecurity) (*operations.AndroidpublisherEditsExpansionfilesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExpansionFile", "json")
 	if err != nil {
@@ -955,7 +1015,10 @@ func (s *edits) AndroidpublisherEditsExpansionfilesPatch(ctx context.Context, re
 // AndroidpublisherEditsExpansionfilesUpdate - Updates the APK's Expansion File configuration to reference another APK's Expansion Files. To add a new Expansion File use the Upload method.
 func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUpdateRequest, security operations.AndroidpublisherEditsExpansionfilesUpdateSecurity) (*operations.AndroidpublisherEditsExpansionfilesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExpansionFile", "json")
 	if err != nil {
@@ -1010,7 +1073,10 @@ func (s *edits) AndroidpublisherEditsExpansionfilesUpdate(ctx context.Context, r
 // AndroidpublisherEditsExpansionfilesUpload - Uploads and attaches a new Expansion File to the APK specified.
 func (s *edits) AndroidpublisherEditsExpansionfilesUpload(ctx context.Context, request operations.AndroidpublisherEditsExpansionfilesUploadRequest, security operations.AndroidpublisherEditsExpansionfilesUploadSecurity) (*operations.AndroidpublisherEditsExpansionfilesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/apks/{apkVersionCode}/expansionFiles/{expansionFileType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1058,7 +1124,10 @@ func (s *edits) AndroidpublisherEditsExpansionfilesUpload(ctx context.Context, r
 // AndroidpublisherEditsGet - Returns information about the edit specified. Calls will fail if the edit is no long active (e.g. has been deleted, superseded or expired).
 func (s *edits) AndroidpublisherEditsGet(ctx context.Context, request operations.AndroidpublisherEditsGetRequest, security operations.AndroidpublisherEditsGetSecurity) (*operations.AndroidpublisherEditsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1106,7 +1175,10 @@ func (s *edits) AndroidpublisherEditsGet(ctx context.Context, request operations
 // AndroidpublisherEditsImagesDelete - Deletes the image (specified by id) from the edit.
 func (s *edits) AndroidpublisherEditsImagesDelete(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteRequest, security operations.AndroidpublisherEditsImagesDeleteSecurity) (*operations.AndroidpublisherEditsImagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}/{imageId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1145,7 +1217,10 @@ func (s *edits) AndroidpublisherEditsImagesDelete(ctx context.Context, request o
 // AndroidpublisherEditsImagesDeleteall - Deletes all images for the specified language and image type.
 func (s *edits) AndroidpublisherEditsImagesDeleteall(ctx context.Context, request operations.AndroidpublisherEditsImagesDeleteallRequest, security operations.AndroidpublisherEditsImagesDeleteallSecurity) (*operations.AndroidpublisherEditsImagesDeleteallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1193,7 +1268,10 @@ func (s *edits) AndroidpublisherEditsImagesDeleteall(ctx context.Context, reques
 // AndroidpublisherEditsImagesList - Lists all images for the specified language and image type.
 func (s *edits) AndroidpublisherEditsImagesList(ctx context.Context, request operations.AndroidpublisherEditsImagesListRequest, security operations.AndroidpublisherEditsImagesListSecurity) (*operations.AndroidpublisherEditsImagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1241,7 +1319,10 @@ func (s *edits) AndroidpublisherEditsImagesList(ctx context.Context, request ope
 // AndroidpublisherEditsImagesUpload - Uploads a new image and adds it to the list of images for the specified language and image type.
 func (s *edits) AndroidpublisherEditsImagesUpload(ctx context.Context, request operations.AndroidpublisherEditsImagesUploadRequest, security operations.AndroidpublisherEditsImagesUploadSecurity) (*operations.AndroidpublisherEditsImagesUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}/{imageType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1289,7 +1370,10 @@ func (s *edits) AndroidpublisherEditsImagesUpload(ctx context.Context, request o
 // AndroidpublisherEditsInsert - Creates a new edit for an app, populated with the app's current state.
 func (s *edits) AndroidpublisherEditsInsert(ctx context.Context, request operations.AndroidpublisherEditsInsertRequest, security operations.AndroidpublisherEditsInsertSecurity) (*operations.AndroidpublisherEditsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AppEdit", "json")
 	if err != nil {
@@ -1344,7 +1428,10 @@ func (s *edits) AndroidpublisherEditsInsert(ctx context.Context, request operati
 // AndroidpublisherEditsListingsDelete - Deletes the specified localized store listing from an edit.
 func (s *edits) AndroidpublisherEditsListingsDelete(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteRequest, security operations.AndroidpublisherEditsListingsDeleteSecurity) (*operations.AndroidpublisherEditsListingsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1383,7 +1470,10 @@ func (s *edits) AndroidpublisherEditsListingsDelete(ctx context.Context, request
 // AndroidpublisherEditsListingsDeleteall - Deletes all localized listings from an edit.
 func (s *edits) AndroidpublisherEditsListingsDeleteall(ctx context.Context, request operations.AndroidpublisherEditsListingsDeleteallRequest, security operations.AndroidpublisherEditsListingsDeleteallSecurity) (*operations.AndroidpublisherEditsListingsDeleteallResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1422,7 +1512,10 @@ func (s *edits) AndroidpublisherEditsListingsDeleteall(ctx context.Context, requ
 // AndroidpublisherEditsListingsGet - Fetches information about a localized store listing.
 func (s *edits) AndroidpublisherEditsListingsGet(ctx context.Context, request operations.AndroidpublisherEditsListingsGetRequest, security operations.AndroidpublisherEditsListingsGetSecurity) (*operations.AndroidpublisherEditsListingsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1470,7 +1563,10 @@ func (s *edits) AndroidpublisherEditsListingsGet(ctx context.Context, request op
 // AndroidpublisherEditsListingsList - Returns all of the localized store listings attached to this edit.
 func (s *edits) AndroidpublisherEditsListingsList(ctx context.Context, request operations.AndroidpublisherEditsListingsListRequest, security operations.AndroidpublisherEditsListingsListSecurity) (*operations.AndroidpublisherEditsListingsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1518,7 +1614,10 @@ func (s *edits) AndroidpublisherEditsListingsList(ctx context.Context, request o
 // AndroidpublisherEditsListingsPatch - Creates or updates a localized store listing. This method supports patch semantics.
 func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request operations.AndroidpublisherEditsListingsPatchRequest, security operations.AndroidpublisherEditsListingsPatchSecurity) (*operations.AndroidpublisherEditsListingsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Listing", "json")
 	if err != nil {
@@ -1573,7 +1672,10 @@ func (s *edits) AndroidpublisherEditsListingsPatch(ctx context.Context, request 
 // AndroidpublisherEditsListingsUpdate - Creates or updates a localized store listing.
 func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request operations.AndroidpublisherEditsListingsUpdateRequest, security operations.AndroidpublisherEditsListingsUpdateSecurity) (*operations.AndroidpublisherEditsListingsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/listings/{language}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Listing", "json")
 	if err != nil {
@@ -1624,9 +1726,13 @@ func (s *edits) AndroidpublisherEditsListingsUpdate(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsTestersGet(ctx context.Context, request operations.AndroidpublisherEditsTestersGetRequest, security operations.AndroidpublisherEditsTestersGetSecurity) (*operations.AndroidpublisherEditsTestersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1670,9 +1776,13 @@ func (s *edits) AndroidpublisherEditsTestersGet(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request operations.AndroidpublisherEditsTestersPatchRequest, security operations.AndroidpublisherEditsTestersPatchSecurity) (*operations.AndroidpublisherEditsTestersPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Testers", "json")
 	if err != nil {
@@ -1723,9 +1833,13 @@ func (s *edits) AndroidpublisherEditsTestersPatch(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request operations.AndroidpublisherEditsTestersUpdateRequest, security operations.AndroidpublisherEditsTestersUpdateSecurity) (*operations.AndroidpublisherEditsTestersUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/testers/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Testers", "json")
 	if err != nil {
@@ -1780,7 +1894,10 @@ func (s *edits) AndroidpublisherEditsTestersUpdate(ctx context.Context, request 
 // AndroidpublisherEditsTracksGet - Fetches the track configuration for the specified track type. Includes the APK version codes that are in this track.
 func (s *edits) AndroidpublisherEditsTracksGet(ctx context.Context, request operations.AndroidpublisherEditsTracksGetRequest, security operations.AndroidpublisherEditsTracksGetSecurity) (*operations.AndroidpublisherEditsTracksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1828,7 +1945,10 @@ func (s *edits) AndroidpublisherEditsTracksGet(ctx context.Context, request oper
 // AndroidpublisherEditsTracksList - Lists all the track configurations for this edit.
 func (s *edits) AndroidpublisherEditsTracksList(ctx context.Context, request operations.AndroidpublisherEditsTracksListRequest, security operations.AndroidpublisherEditsTracksListSecurity) (*operations.AndroidpublisherEditsTracksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1876,7 +1996,10 @@ func (s *edits) AndroidpublisherEditsTracksList(ctx context.Context, request ope
 // AndroidpublisherEditsTracksPatch - Updates the track configuration for the specified track type. This method supports patch semantics.
 func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request operations.AndroidpublisherEditsTracksPatchRequest, security operations.AndroidpublisherEditsTracksPatchSecurity) (*operations.AndroidpublisherEditsTracksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Track1", "json")
 	if err != nil {
@@ -1931,7 +2054,10 @@ func (s *edits) AndroidpublisherEditsTracksPatch(ctx context.Context, request op
 // AndroidpublisherEditsTracksUpdate - Updates the track configuration for the specified track type.
 func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request operations.AndroidpublisherEditsTracksUpdateRequest, security operations.AndroidpublisherEditsTracksUpdateSecurity) (*operations.AndroidpublisherEditsTracksUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}/tracks/{track}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Track1", "json")
 	if err != nil {
@@ -1986,7 +2112,10 @@ func (s *edits) AndroidpublisherEditsTracksUpdate(ctx context.Context, request o
 // AndroidpublisherEditsValidate - Checks that the edit can be successfully committed. The edit's changes are not applied to the live app.
 func (s *edits) AndroidpublisherEditsValidate(ctx context.Context, request operations.AndroidpublisherEditsValidateRequest, security operations.AndroidpublisherEditsValidateSecurity) (*operations.AndroidpublisherEditsValidateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}:validate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{packageName}/edits/{editId}:validate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

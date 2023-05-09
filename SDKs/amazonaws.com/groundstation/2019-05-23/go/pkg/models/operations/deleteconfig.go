@@ -22,12 +22,16 @@ const (
 	DeleteConfigConfigTypeEnumS3Recording                DeleteConfigConfigTypeEnum = "s3-recording"
 )
 
+func (e DeleteConfigConfigTypeEnum) ToPointer() *DeleteConfigConfigTypeEnum {
+	return &e
+}
+
 func (e *DeleteConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "antenna-downlink":
 		fallthrough
 	case "antenna-downlink-demod-decode":
@@ -41,10 +45,10 @@ func (e *DeleteConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uplink-echo":
 		fallthrough
 	case "s3-recording":
-		*e = DeleteConfigConfigTypeEnum(s)
+		*e = DeleteConfigConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteConfigConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteConfigConfigTypeEnum: %v", v)
 	}
 }
 

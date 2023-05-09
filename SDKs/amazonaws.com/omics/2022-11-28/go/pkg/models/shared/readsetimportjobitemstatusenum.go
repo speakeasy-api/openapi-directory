@@ -16,12 +16,16 @@ const (
 	ReadSetImportJobItemStatusEnumFailed     ReadSetImportJobItemStatusEnum = "FAILED"
 )
 
+func (e ReadSetImportJobItemStatusEnum) ToPointer() *ReadSetImportJobItemStatusEnum {
+	return &e
+}
+
 func (e *ReadSetImportJobItemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -29,9 +33,9 @@ func (e *ReadSetImportJobItemStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FINISHED":
 		fallthrough
 	case "FAILED":
-		*e = ReadSetImportJobItemStatusEnum(s)
+		*e = ReadSetImportJobItemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReadSetImportJobItemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ReadSetImportJobItemStatusEnum: %v", v)
 	}
 }

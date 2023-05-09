@@ -7,6 +7,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type ListExposedActionsSecurity struct {
+	AccessPointAPIKeyHeader *string `security:"scheme,type=apiKey,subtype=header,name=X-API-Key"`
+	AccessPointAPIKeyQuery  *string `security:"scheme,type=apiKey,subtype=query,name=api_key"`
+	AccessPointOAuth        *string `security:"scheme,type=oauth2,name=Authorization"`
+	SessionAuth             *string `security:"scheme,type=apiKey,subtype=cookie,name=sessionid"`
+}
+
 type ListExposedActionsResponse struct {
 	ContentType string
 	// OK

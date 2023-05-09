@@ -24,12 +24,16 @@ const (
 	GamesScoresListWindowCollectionEnumFriends                    GamesScoresListWindowCollectionEnum = "FRIENDS"
 )
 
+func (e GamesScoresListWindowCollectionEnum) ToPointer() *GamesScoresListWindowCollectionEnum {
+	return &e
+}
+
 func (e *GamesScoresListWindowCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_COLLECTION_UNSPECIFIED":
 		fallthrough
 	case "PUBLIC":
@@ -37,10 +41,10 @@ func (e *GamesScoresListWindowCollectionEnum) UnmarshalJSON(data []byte) error {
 	case "SOCIAL":
 		fallthrough
 	case "FRIENDS":
-		*e = GamesScoresListWindowCollectionEnum(s)
+		*e = GamesScoresListWindowCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresListWindowCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresListWindowCollectionEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GamesScoresListWindowTimeSpanEnumDaily                    GamesScoresListWindowTimeSpanEnum = "DAILY"
 )
 
+func (e GamesScoresListWindowTimeSpanEnum) ToPointer() *GamesScoresListWindowTimeSpanEnum {
+	return &e
+}
+
 func (e *GamesScoresListWindowTimeSpanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_TIME_SPAN_UNSPECIFIED":
 		fallthrough
 	case "ALL_TIME":
@@ -67,10 +75,10 @@ func (e *GamesScoresListWindowTimeSpanEnum) UnmarshalJSON(data []byte) error {
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = GamesScoresListWindowTimeSpanEnum(s)
+		*e = GamesScoresListWindowTimeSpanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesScoresListWindowTimeSpanEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesScoresListWindowTimeSpanEnum: %v", v)
 	}
 }
 

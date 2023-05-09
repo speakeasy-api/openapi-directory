@@ -95,6 +95,7 @@ func (s *account) AccountLogin(ctx context.Context) (*operations.AccountLoginRes
 
 	return res, nil
 }
+
 func (s *account) PostAPIAccountLogin(ctx context.Context) (*operations.PostAPIAccountLoginResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/Account/login"

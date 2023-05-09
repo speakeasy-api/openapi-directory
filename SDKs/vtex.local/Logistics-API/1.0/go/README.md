@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Logistics-API/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -29,14 +28,12 @@ func main() {
         }),
     )
 
-    req := operations.ActivateDockRequest{
+    ctx := context.Background()
+    res, err := s.Docks.ActivateDock(ctx, operations.ActivateDockRequest{
         Accept: "corrupti",
         ContentType: "provident",
         DockID: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.Docks.ActivateDock(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,91 +49,91 @@ func main() {
 ## Available Resources and Operations
 
 
-### Docks
+### [Docks](docs/docks/README.md)
 
-* `ActivateDock` - Activate dock
-* `AllDocks` - List all  docks
-* `CreateUpdateDock` - Create/update dock
-* `DeactivateDock` - Deactivate dock
-* `Dock` - Delete dock
-* `DockByID` - List dock by ID
+* [ActivateDock](docs/docks/README.md#activatedock) - Activate dock
+* [AllDocks](docs/docks/README.md#alldocks) - List all  docks
+* [CreateUpdateDock](docs/docks/README.md#createupdatedock) - Create/update dock
+* [DeactivateDock](docs/docks/README.md#deactivatedock) - Deactivate dock
+* [Dock](docs/docks/README.md#dock) - Delete dock
+* [DockByID](docs/docks/README.md#dockbyid) - List dock by ID
 
-### FreightValues
+### [FreightValues](docs/freightvalues/README.md)
 
-* `CreateUpdateFreightValues` - Create/update freight values
-* `FreightValues` - List freight values
+* [CreateUpdateFreightValues](docs/freightvalues/README.md#createupdatefreightvalues) - Create/update freight values
+* [FreightValues](docs/freightvalues/README.md#freightvalues) - List freight values
 
-### Holidays
+### [Holidays](docs/holidays/README.md)
 
-* `AllHolidays` - List all holidays
-* `CreateUpdateHoliday` - Create/update holiday
-* `Holiday` - Delete holiday
-* `HolidayByID` - List holiday by ID
+* [AllHolidays](docs/holidays/README.md#allholidays) - List all holidays
+* [CreateUpdateHoliday](docs/holidays/README.md#createupdateholiday) - Create/update holiday
+* [Holiday](docs/holidays/README.md#holiday) - Delete holiday
+* [HolidayByID](docs/holidays/README.md#holidaybyid) - List holiday by ID
 
-### Inventory
+### [Inventory](docs/inventory/README.md)
 
-* `GetSupplyLots` - List supply lots
-* `Getinventorywithdispatchedreservations` - List inventory with dispatched reservations
-* `InventoryBySku` - List inventory by SKU
-* `Inventoryperdock` - List inventory per dock
-* `Inventoryperdockandwarehouse` - List inventory per dock and warehouse
-* `Inventoryperwarehouse` - List inventory per warehouse
-* `SaveSupplyLot` - Save supply lot
-* `TransferSupplyLot` - Transfer supply lot
-* `UpdateInventoryBySkuandWarehouse` - Update inventory by SKU and warehouse
+* [GetSupplyLots](docs/inventory/README.md#getsupplylots) - List supply lots
+* [Getinventorywithdispatchedreservations](docs/inventory/README.md#getinventorywithdispatchedreservations) - List inventory with dispatched reservations
+* [InventoryBySku](docs/inventory/README.md#inventorybysku) - List inventory by SKU
+* [Inventoryperdock](docs/inventory/README.md#inventoryperdock) - List inventory per dock
+* [Inventoryperdockandwarehouse](docs/inventory/README.md#inventoryperdockandwarehouse) - List inventory per dock and warehouse
+* [Inventoryperwarehouse](docs/inventory/README.md#inventoryperwarehouse) - List inventory per warehouse
+* [SaveSupplyLot](docs/inventory/README.md#savesupplylot) - Save supply lot
+* [TransferSupplyLot](docs/inventory/README.md#transfersupplylot) - Transfer supply lot
+* [UpdateInventoryBySkuandWarehouse](docs/inventory/README.md#updateinventorybyskuandwarehouse) - Update inventory by SKU and warehouse
 
-### PickupPoints
+### [PickupPoints](docs/pickuppoints/README.md)
 
-* `CreateUpdatePickupPoint` - Create/Update Pickup Point
-* `Delete` - Delete Pickup Point
-* `GetByID` - List Pickup Point By ID
-* `Getpaged` - List paged Pickup Points
-* `ListAllPickupPpoints` - List all pickup points
+* [CreateUpdatePickupPoint](docs/pickuppoints/README.md#createupdatepickuppoint) - Create/Update Pickup Point
+* [Delete](docs/pickuppoints/README.md#delete) - Delete Pickup Point
+* [GetByID](docs/pickuppoints/README.md#getbyid) - List Pickup Point By ID
+* [Getpaged](docs/pickuppoints/README.md#getpaged) - List paged Pickup Points
+* [ListAllPickupPpoints](docs/pickuppoints/README.md#listallpickupppoints) - List all pickup points
 
-### Polygons
+### [Polygons](docs/polygons/README.md)
 
-* `CreateUpdatePolygon` - Create/update polygon
-* `DeletePolygon` - Delete polygon
-* `PagedPolygons` - List paged polygons
-* `PolygonbyID` - List polygon by ID
+* [CreateUpdatePolygon](docs/polygons/README.md#createupdatepolygon) - Create/update polygon
+* [DeletePolygon](docs/polygons/README.md#deletepolygon) - Delete polygon
+* [PagedPolygons](docs/polygons/README.md#pagedpolygons) - List paged polygons
+* [PolygonbyID](docs/polygons/README.md#polygonbyid) - List polygon by ID
 
-### Reservations
+### [Reservations](docs/reservations/README.md)
 
-* `AcknowledgmentReservation` - Acknowledgment reservation
-* `CancelReservation` - Cancel reservation
-* `ConfirmReservation` - Confirm reservation
-* `CreateReservation` - Create reservation
-* `ReservationByID` - List reservation by ID
-* `ReservationbyWarehouseandSku` - List reservation by warehouse and SKU
+* [AcknowledgmentReservation](docs/reservations/README.md#acknowledgmentreservation) - Acknowledgment reservation
+* [CancelReservation](docs/reservations/README.md#cancelreservation) - Cancel reservation
+* [ConfirmReservation](docs/reservations/README.md#confirmreservation) - Confirm reservation
+* [CreateReservation](docs/reservations/README.md#createreservation) - Create reservation
+* [ReservationByID](docs/reservations/README.md#reservationbyid) - List reservation by ID
+* [ReservationbyWarehouseandSku](docs/reservations/README.md#reservationbywarehouseandsku) - List reservation by warehouse and SKU
 
-### SLA
+### [SLA](docs/sla/README.md)
 
-* `CalculateSLA` - Calculate SLA
+* [CalculateSLA](docs/sla/README.md#calculatesla) - Calculate SLA
 
-### ScheduledDelivery
+### [ScheduledDelivery](docs/scheduleddelivery/README.md)
 
-* `AddBlockedDeliveryWindows` - Add blocked delivery windows
-* `RemoveBlockedDeliveryWindows` - Remove blocked delivery windows
-* `RetrieveBlockedDeliveryWindows` - Retrieve blocked delivery windows
-* `GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFrames` - Search capacity reservations in time range
-* `GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTime` - Get capacity reservation usage by window
+* [AddBlockedDeliveryWindows](docs/scheduleddelivery/README.md#addblockeddeliverywindows) - Add blocked delivery windows
+* [RemoveBlockedDeliveryWindows](docs/scheduleddelivery/README.md#removeblockeddeliverywindows) - Remove blocked delivery windows
+* [RetrieveBlockedDeliveryWindows](docs/scheduleddelivery/README.md#retrieveblockeddeliverywindows) - Retrieve blocked delivery windows
+* [GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFrames](docs/scheduleddelivery/README.md#getapilogisticscapacityresourcescarrieratcapacitytypeatshippingpolicyidtimeframes) - Search capacity reservations in time range
+* [GetAPILogisticsCapacityResourcesCarrierAtCapacityTypeAtShippingPolicyIDTimeFramesWindowDayFWindowStartTimeTWindowEndTime](docs/scheduleddelivery/README.md#getapilogisticscapacityresourcescarrieratcapacitytypeatshippingpolicyidtimeframeswindowdayfwindowstarttimetwindowendtime) - Get capacity reservation usage by window
 
-### ShippingPolicies
+### [ShippingPolicies](docs/shippingpolicies/README.md)
 
-* `DeleteAPILogisticsPvtShippingPoliciesID` - Delete shipping policies by ID
-* `GetAPILogisticsPvtShippingPolicies` - List shipping policies
-* `GetAPILogisticsPvtShippingPoliciesID` - Retrieve shipping policy by ID
-* `PostAPILogisticsPvtShippingPolicies` - Create shipping policy
-* `PutAPILogisticsPvtShippingPoliciesID` - Update shipping policy
+* [DeleteAPILogisticsPvtShippingPoliciesID](docs/shippingpolicies/README.md#deleteapilogisticspvtshippingpoliciesid) - Delete shipping policies by ID
+* [GetAPILogisticsPvtShippingPolicies](docs/shippingpolicies/README.md#getapilogisticspvtshippingpolicies) - List shipping policies
+* [GetAPILogisticsPvtShippingPoliciesID](docs/shippingpolicies/README.md#getapilogisticspvtshippingpoliciesid) - Retrieve shipping policy by ID
+* [PostAPILogisticsPvtShippingPolicies](docs/shippingpolicies/README.md#postapilogisticspvtshippingpolicies) - Create shipping policy
+* [PutAPILogisticsPvtShippingPoliciesID](docs/shippingpolicies/README.md#putapilogisticspvtshippingpoliciesid) - Update shipping policy
 
-### Warehouses
+### [Warehouses](docs/warehouses/README.md)
 
-* `ActivateWarehouse` - Activate warehouse
-* `AllWarehouses` - List all warehouses
-* `CreateUpdateWarehouse` - Create/update warehouse
-* `DeactivateWarehouse` - Deactivate warehouse
-* `RemoveWarehouse` - Remove warehouse
-* `WarehouseByID` - List warehouse by ID
+* [ActivateWarehouse](docs/warehouses/README.md#activatewarehouse) - Activate warehouse
+* [AllWarehouses](docs/warehouses/README.md#allwarehouses) - List all warehouses
+* [CreateUpdateWarehouse](docs/warehouses/README.md#createupdatewarehouse) - Create/update warehouse
+* [DeactivateWarehouse](docs/warehouses/README.md#deactivatewarehouse) - Deactivate warehouse
+* [RemoveWarehouse](docs/warehouses/README.md#removewarehouse) - Remove warehouse
+* [WarehouseByID](docs/warehouses/README.md#warehousebyid) - List warehouse by ID
 <!-- End SDK Available Operations -->
 
 ### Maturity

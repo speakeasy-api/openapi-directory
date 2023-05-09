@@ -17,18 +17,22 @@ const (
 	PurposeCodeEnumPens PurposeCodeEnum = "PENS"
 )
 
+func (e PurposeCodeEnum) ToPointer() *PurposeCodeEnum {
+	return &e
+}
+
 func (e *PurposeCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SALA":
 		fallthrough
 	case "PENS":
-		*e = PurposeCodeEnum(s)
+		*e = PurposeCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PurposeCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for PurposeCodeEnum: %v", v)
 	}
 }

@@ -16,20 +16,24 @@ const (
 	ActionsCacheListSortEnumSizeInBytes    ActionsCacheListSortEnum = "size_in_bytes"
 )
 
+func (e ActionsCacheListSortEnum) ToPointer() *ActionsCacheListSortEnum {
+	return &e
+}
+
 func (e *ActionsCacheListSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "last_accessed_at":
 		fallthrough
 	case "size_in_bytes":
-		*e = ActionsCacheListSortEnum(s)
+		*e = ActionsCacheListSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionsCacheListSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionsCacheListSortEnum: %v", v)
 	}
 }

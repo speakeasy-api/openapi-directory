@@ -16,17 +16,21 @@ const (
 	GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnumServiceQuotasV20190624GetServiceQuotaIncreaseRequestFromTemplate GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum = "ServiceQuotasV20190624.GetServiceQuotaIncreaseRequestFromTemplate"
 )
 
+func (e GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum) ToPointer() *GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ServiceQuotasV20190624.GetServiceQuotaIncreaseRequestFromTemplate":
-		*e = GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum(s)
+		*e = GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServiceQuotaIncreaseRequestFromTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

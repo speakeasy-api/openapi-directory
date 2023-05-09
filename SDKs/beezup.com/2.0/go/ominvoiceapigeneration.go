@@ -130,7 +130,10 @@ func (s *omInvoiceAPIGeneration) GenerateBatchOrderInvoice(ctx context.Context, 
 // GenerateOrderInvoice - Generate an Order Invoice
 func (s *omInvoiceAPIGeneration) GenerateOrderInvoice(ctx context.Context, request operations.GenerateOrderInvoiceRequest) (*operations.GenerateOrderInvoiceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GenerateOrderInvoiceRequest", "json")
 	if err != nil {
@@ -283,7 +286,10 @@ func (s *omInvoiceAPIGeneration) GetOrderInvoicePdf(ctx context.Context, request
 // GetOrderInvoicePreview - View a preview an Order Invoice
 func (s *omInvoiceAPIGeneration) GetOrderInvoicePreview(ctx context.Context, request operations.GetOrderInvoicePreviewRequest) (*operations.GetOrderInvoicePreviewResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/preview", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/user/marketplaces/orders/invoices/{marketplaceTechnicalCode}/{accountId}/{beezUPOrderUUID}/preview", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PreviewOrderInvoiceRequest", "json")
 	if err != nil {

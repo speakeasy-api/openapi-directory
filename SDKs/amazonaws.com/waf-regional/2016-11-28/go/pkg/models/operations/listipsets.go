@@ -16,17 +16,21 @@ const (
 	ListIPSetsXAmzTargetEnumAwswafRegional20161128ListIPSets ListIPSetsXAmzTargetEnum = "AWSWAF_Regional_20161128.ListIPSets"
 )
 
+func (e ListIPSetsXAmzTargetEnum) ToPointer() *ListIPSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListIPSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.ListIPSets":
-		*e = ListIPSetsXAmzTargetEnum(s)
+		*e = ListIPSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListIPSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListIPSetsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETPutRolePolicyActionEnumPutRolePolicy GETPutRolePolicyActionEnum = "PutRolePolicy"
 )
 
+func (e GETPutRolePolicyActionEnum) ToPointer() *GETPutRolePolicyActionEnum {
+	return &e
+}
+
 func (e *GETPutRolePolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PutRolePolicy":
-		*e = GETPutRolePolicyActionEnum(s)
+		*e = GETPutRolePolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutRolePolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutRolePolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPutRolePolicyVersionEnumTwoThousandAndTen0508 GETPutRolePolicyVersionEnum = "2010-05-08"
 )
 
+func (e GETPutRolePolicyVersionEnum) ToPointer() *GETPutRolePolicyVersionEnum {
+	return &e
+}
+
 func (e *GETPutRolePolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETPutRolePolicyVersionEnum(s)
+		*e = GETPutRolePolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPutRolePolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPutRolePolicyVersionEnum: %v", v)
 	}
 }
 

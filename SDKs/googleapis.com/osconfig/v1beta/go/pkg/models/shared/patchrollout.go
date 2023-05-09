@@ -16,21 +16,25 @@ const (
 	PatchRolloutModeEnumConcurrentZones PatchRolloutModeEnum = "CONCURRENT_ZONES"
 )
 
+func (e PatchRolloutModeEnum) ToPointer() *PatchRolloutModeEnum {
+	return &e
+}
+
 func (e *PatchRolloutModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODE_UNSPECIFIED":
 		fallthrough
 	case "ZONE_BY_ZONE":
 		fallthrough
 	case "CONCURRENT_ZONES":
-		*e = PatchRolloutModeEnum(s)
+		*e = PatchRolloutModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchRolloutModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchRolloutModeEnum: %v", v)
 	}
 }
 

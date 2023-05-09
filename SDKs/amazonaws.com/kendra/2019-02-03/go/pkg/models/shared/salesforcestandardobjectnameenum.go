@@ -29,12 +29,16 @@ const (
 	SalesforceStandardObjectNameEnumUser        SalesforceStandardObjectNameEnum = "USER"
 )
 
+func (e SalesforceStandardObjectNameEnum) ToPointer() *SalesforceStandardObjectNameEnum {
+	return &e
+}
+
 func (e *SalesforceStandardObjectNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCOUNT":
 		fallthrough
 	case "CAMPAIGN":
@@ -68,9 +72,9 @@ func (e *SalesforceStandardObjectNameEnum) UnmarshalJSON(data []byte) error {
 	case "TASK":
 		fallthrough
 	case "USER":
-		*e = SalesforceStandardObjectNameEnum(s)
+		*e = SalesforceStandardObjectNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SalesforceStandardObjectNameEnum: %s", s)
+		return fmt.Errorf("invalid value for SalesforceStandardObjectNameEnum: %v", v)
 	}
 }

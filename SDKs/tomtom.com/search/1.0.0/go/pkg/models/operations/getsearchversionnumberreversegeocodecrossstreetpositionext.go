@@ -21,6 +21,8 @@ type GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest struct {
 	// The maximum distance in meters from the specified position for the reverse geocoder to consider.
 	Radius *int64 `queryParam:"style=form,explode=true,name=radius"`
 	// If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	SpatialKeys *bool `queryParam:"style=form,explode=true,name=spatialKeys"`
 	// Service version number. The current value is 2.
 	VersionNumber shared.VersionNumberEnum `pathParam:"style=simple,explode=false,name=versionNumber"`

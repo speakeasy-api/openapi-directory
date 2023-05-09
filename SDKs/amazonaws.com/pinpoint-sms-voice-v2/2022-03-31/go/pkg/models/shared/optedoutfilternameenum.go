@@ -13,16 +13,20 @@ const (
 	OptedOutFilterNameEnumEndUserOptedOut OptedOutFilterNameEnum = "end-user-opted-out"
 )
 
+func (e OptedOutFilterNameEnum) ToPointer() *OptedOutFilterNameEnum {
+	return &e
+}
+
 func (e *OptedOutFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "end-user-opted-out":
-		*e = OptedOutFilterNameEnum(s)
+		*e = OptedOutFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OptedOutFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for OptedOutFilterNameEnum: %v", v)
 	}
 }

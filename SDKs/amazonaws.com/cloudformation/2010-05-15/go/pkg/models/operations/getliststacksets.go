@@ -15,17 +15,21 @@ const (
 	GETListStackSetsActionEnumListStackSets GETListStackSetsActionEnum = "ListStackSets"
 )
 
+func (e GETListStackSetsActionEnum) ToPointer() *GETListStackSetsActionEnum {
+	return &e
+}
+
 func (e *GETListStackSetsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListStackSets":
-		*e = GETListStackSetsActionEnum(s)
+		*e = GETListStackSetsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListStackSetsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListStackSetsActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETListStackSetsCallAsEnumDelegatedAdmin GETListStackSetsCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETListStackSetsCallAsEnum) ToPointer() *GETListStackSetsCallAsEnum {
+	return &e
+}
+
 func (e *GETListStackSetsCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETListStackSetsCallAsEnum(s)
+		*e = GETListStackSetsCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListStackSetsCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListStackSetsCallAsEnum: %v", v)
 	}
 }
 
@@ -61,19 +69,23 @@ const (
 	GETListStackSetsStatusEnumDeleted GETListStackSetsStatusEnum = "DELETED"
 )
 
+func (e GETListStackSetsStatusEnum) ToPointer() *GETListStackSetsStatusEnum {
+	return &e
+}
+
 func (e *GETListStackSetsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DELETED":
-		*e = GETListStackSetsStatusEnum(s)
+		*e = GETListStackSetsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListStackSetsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListStackSetsStatusEnum: %v", v)
 	}
 }
 
@@ -84,17 +96,21 @@ const (
 	GETListStackSetsVersionEnumTwoThousandAndTen0515 GETListStackSetsVersionEnum = "2010-05-15"
 )
 
+func (e GETListStackSetsVersionEnum) ToPointer() *GETListStackSetsVersionEnum {
+	return &e
+}
+
 func (e *GETListStackSetsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETListStackSetsVersionEnum(s)
+		*e = GETListStackSetsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListStackSetsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListStackSetsVersionEnum: %v", v)
 	}
 }
 

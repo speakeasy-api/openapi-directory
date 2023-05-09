@@ -15,17 +15,21 @@ const (
 	GETDeleteEndpointAccessActionEnumDeleteEndpointAccess GETDeleteEndpointAccessActionEnum = "DeleteEndpointAccess"
 )
 
+func (e GETDeleteEndpointAccessActionEnum) ToPointer() *GETDeleteEndpointAccessActionEnum {
+	return &e
+}
+
 func (e *GETDeleteEndpointAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteEndpointAccess":
-		*e = GETDeleteEndpointAccessActionEnum(s)
+		*e = GETDeleteEndpointAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEndpointAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEndpointAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteEndpointAccessVersionEnumTwoThousandAndTwelve1201 GETDeleteEndpointAccessVersionEnum = "2012-12-01"
 )
 
+func (e GETDeleteEndpointAccessVersionEnum) ToPointer() *GETDeleteEndpointAccessVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteEndpointAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETDeleteEndpointAccessVersionEnum(s)
+		*e = GETDeleteEndpointAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteEndpointAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteEndpointAccessVersionEnum: %v", v)
 	}
 }
 

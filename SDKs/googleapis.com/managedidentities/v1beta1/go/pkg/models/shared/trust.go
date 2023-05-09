@@ -17,12 +17,16 @@ const (
 	TrustTrustDirectionEnumBidirectional             TrustTrustDirectionEnum = "BIDIRECTIONAL"
 )
 
+func (e TrustTrustDirectionEnum) ToPointer() *TrustTrustDirectionEnum {
+	return &e
+}
+
 func (e *TrustTrustDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUST_DIRECTION_UNSPECIFIED":
 		fallthrough
 	case "INBOUND":
@@ -30,10 +34,10 @@ func (e *TrustTrustDirectionEnum) UnmarshalJSON(data []byte) error {
 	case "OUTBOUND":
 		fallthrough
 	case "BIDIRECTIONAL":
-		*e = TrustTrustDirectionEnum(s)
+		*e = TrustTrustDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustTrustDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustTrustDirectionEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	TrustTrustTypeEnumExternal             TrustTrustTypeEnum = "EXTERNAL"
 )
 
+func (e TrustTrustTypeEnum) ToPointer() *TrustTrustTypeEnum {
+	return &e
+}
+
 func (e *TrustTrustTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRUST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FOREST":
 		fallthrough
 	case "EXTERNAL":
-		*e = TrustTrustTypeEnum(s)
+		*e = TrustTrustTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustTrustTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustTrustTypeEnum: %v", v)
 	}
 }
 
@@ -92,12 +100,16 @@ const (
 	TrustStateEnumDisconnected     TrustStateEnum = "DISCONNECTED"
 )
 
+func (e TrustStateEnum) ToPointer() *TrustStateEnum {
+	return &e
+}
+
 func (e *TrustStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -109,10 +121,10 @@ func (e *TrustStateEnum) UnmarshalJSON(data []byte) error {
 	case "CONNECTED":
 		fallthrough
 	case "DISCONNECTED":
-		*e = TrustStateEnum(s)
+		*e = TrustStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrustStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TrustStateEnum: %v", v)
 	}
 }
 

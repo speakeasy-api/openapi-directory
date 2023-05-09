@@ -21,12 +21,16 @@ const (
 	AssignmentSubtypeEnumReassigned         AssignmentSubtypeEnum = "REASSIGNED"
 )
 
+func (e AssignmentSubtypeEnum) ToPointer() *AssignmentSubtypeEnum {
+	return &e
+}
+
 func (e *AssignmentSubtypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBTYPE_UNSPECIFIED":
 		fallthrough
 	case "ADDED":
@@ -42,10 +46,10 @@ func (e *AssignmentSubtypeEnum) UnmarshalJSON(data []byte) error {
 	case "REOPENED":
 		fallthrough
 	case "REASSIGNED":
-		*e = AssignmentSubtypeEnum(s)
+		*e = AssignmentSubtypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentSubtypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentSubtypeEnum: %v", v)
 	}
 }
 

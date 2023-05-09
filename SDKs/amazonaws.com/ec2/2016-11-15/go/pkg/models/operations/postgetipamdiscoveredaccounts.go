@@ -15,17 +15,21 @@ const (
 	POSTGetIpamDiscoveredAccountsActionEnumGetIpamDiscoveredAccounts POSTGetIpamDiscoveredAccountsActionEnum = "GetIpamDiscoveredAccounts"
 )
 
+func (e POSTGetIpamDiscoveredAccountsActionEnum) ToPointer() *POSTGetIpamDiscoveredAccountsActionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamDiscoveredAccountsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetIpamDiscoveredAccounts":
-		*e = POSTGetIpamDiscoveredAccountsActionEnum(s)
+		*e = POSTGetIpamDiscoveredAccountsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredAccountsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredAccountsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetIpamDiscoveredAccountsVersionEnumTwoThousandAndSixteen1115 POSTGetIpamDiscoveredAccountsVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetIpamDiscoveredAccountsVersionEnum) ToPointer() *POSTGetIpamDiscoveredAccountsVersionEnum {
+	return &e
+}
+
 func (e *POSTGetIpamDiscoveredAccountsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetIpamDiscoveredAccountsVersionEnum(s)
+		*e = POSTGetIpamDiscoveredAccountsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredAccountsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetIpamDiscoveredAccountsVersionEnum: %v", v)
 	}
 }
 

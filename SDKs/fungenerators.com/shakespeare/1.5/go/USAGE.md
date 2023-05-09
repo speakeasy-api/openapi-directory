@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetShakespeareGenerateInsultRequest{
-        Limit: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, req, operations.GetShakespeareGenerateInsultSecurity{
+    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, operations.GetShakespeareGenerateInsultRequest{
+        Limit: sdk.Int64(548814),
+    }, operations.GetShakespeareGenerateInsultSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {

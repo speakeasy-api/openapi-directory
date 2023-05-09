@@ -15,20 +15,24 @@ const (
 	PolicyTypeValuesEnumEventBasedPolicy      PolicyTypeValuesEnum = "EVENT_BASED_POLICY"
 )
 
+func (e PolicyTypeValuesEnum) ToPointer() *PolicyTypeValuesEnum {
+	return &e
+}
+
 func (e *PolicyTypeValuesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EBS_SNAPSHOT_MANAGEMENT":
 		fallthrough
 	case "IMAGE_MANAGEMENT":
 		fallthrough
 	case "EVENT_BASED_POLICY":
-		*e = PolicyTypeValuesEnum(s)
+		*e = PolicyTypeValuesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolicyTypeValuesEnum: %s", s)
+		return fmt.Errorf("invalid value for PolicyTypeValuesEnum: %v", v)
 	}
 }

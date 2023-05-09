@@ -17,12 +17,16 @@ const (
 	GatewayConfigGatewayAuthMethodEnumAssociationAndDeviceAuthToken GatewayConfigGatewayAuthMethodEnum = "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"
 )
 
+func (e GatewayConfigGatewayAuthMethodEnum) ToPointer() *GatewayConfigGatewayAuthMethodEnum {
+	return &e
+}
+
 func (e *GatewayConfigGatewayAuthMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GATEWAY_AUTH_METHOD_UNSPECIFIED":
 		fallthrough
 	case "ASSOCIATION_ONLY":
@@ -30,10 +34,10 @@ func (e *GatewayConfigGatewayAuthMethodEnum) UnmarshalJSON(data []byte) error {
 	case "DEVICE_AUTH_TOKEN_ONLY":
 		fallthrough
 	case "ASSOCIATION_AND_DEVICE_AUTH_TOKEN":
-		*e = GatewayConfigGatewayAuthMethodEnum(s)
+		*e = GatewayConfigGatewayAuthMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GatewayConfigGatewayAuthMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for GatewayConfigGatewayAuthMethodEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	GatewayConfigGatewayTypeEnumNonGateway             GatewayConfigGatewayTypeEnum = "NON_GATEWAY"
 )
 
+func (e GatewayConfigGatewayTypeEnum) ToPointer() *GatewayConfigGatewayTypeEnum {
+	return &e
+}
+
 func (e *GatewayConfigGatewayTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GATEWAY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GATEWAY":
 		fallthrough
 	case "NON_GATEWAY":
-		*e = GatewayConfigGatewayTypeEnum(s)
+		*e = GatewayConfigGatewayTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GatewayConfigGatewayTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GatewayConfigGatewayTypeEnum: %v", v)
 	}
 }
 

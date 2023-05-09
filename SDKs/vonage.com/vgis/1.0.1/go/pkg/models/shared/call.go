@@ -16,19 +16,23 @@ const (
 	CallDirectionEnumOutbound CallDirectionEnum = "OUTBOUND"
 )
 
+func (e CallDirectionEnum) ToPointer() *CallDirectionEnum {
+	return &e
+}
+
 func (e *CallDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INBOUND":
 		fallthrough
 	case "OUTBOUND":
-		*e = CallDirectionEnum(s)
+		*e = CallDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CallDirectionEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	CallStateEnumMissed       CallStateEnum = "MISSED"
 )
 
+func (e CallStateEnum) ToPointer() *CallStateEnum {
+	return &e
+}
+
 func (e *CallStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INITIALIZING":
 		fallthrough
 	case "RINGING":
@@ -73,10 +81,10 @@ func (e *CallStateEnum) UnmarshalJSON(data []byte) error {
 	case "ANSWERED":
 		fallthrough
 	case "MISSED":
-		*e = CallStateEnum(s)
+		*e = CallStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CallStateEnum: %v", v)
 	}
 }
 
@@ -87,17 +95,21 @@ const (
 	CallTypeEnumCall CallTypeEnum = "CALL"
 )
 
+func (e CallTypeEnum) ToPointer() *CallTypeEnum {
+	return &e
+}
+
 func (e *CallTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CALL":
-		*e = CallTypeEnum(s)
+		*e = CallTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CallTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CallTypeEnum: %v", v)
 	}
 }
 

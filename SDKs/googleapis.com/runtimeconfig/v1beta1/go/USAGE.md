@@ -2,39 +2,37 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RuntimeconfigProjectsConfigsCreateRequest{
-        DollarXgafv: "2",
-        RuntimeConfig: &shared.RuntimeConfig{
-            Description: "provident",
-            Name: "distinctio",
-        },
-        AccessToken: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        RequestID: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.RuntimeconfigProjectsConfigsCreate(ctx, req, operations.RuntimeconfigProjectsConfigsCreateSecurity{
+    res, err := s.Projects.RuntimeconfigProjectsConfigsCreate(ctx, operations.RuntimeconfigProjectsConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        RuntimeConfig: &shared.RuntimeConfig{
+            Description: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
+        },
+        AccessToken: sdk.String("illum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
+        Parent: "magnam",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        RequestID: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.RuntimeconfigProjectsConfigsCreateSecurity{
         Option1: &operations.RuntimeconfigProjectsConfigsCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

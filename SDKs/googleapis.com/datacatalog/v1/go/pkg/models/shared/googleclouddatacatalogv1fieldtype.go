@@ -19,12 +19,16 @@ const (
 	GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnumRichtext                 GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum = "RICHTEXT"
 )
 
+func (e GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum) ToPointer() *GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIMITIVE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOUBLE":
@@ -36,10 +40,10 @@ func (e *GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum) UnmarshalJSON(data 
 	case "TIMESTAMP":
 		fallthrough
 	case "RICHTEXT":
-		*e = GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum(s)
+		*e = GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatacatalogV1FieldTypePrimitiveTypeEnum: %v", v)
 	}
 }
 

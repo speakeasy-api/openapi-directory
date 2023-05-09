@@ -15,17 +15,21 @@ const (
 	POSTGetDefaultCreditSpecificationActionEnumGetDefaultCreditSpecification POSTGetDefaultCreditSpecificationActionEnum = "GetDefaultCreditSpecification"
 )
 
+func (e POSTGetDefaultCreditSpecificationActionEnum) ToPointer() *POSTGetDefaultCreditSpecificationActionEnum {
+	return &e
+}
+
 func (e *POSTGetDefaultCreditSpecificationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetDefaultCreditSpecification":
-		*e = POSTGetDefaultCreditSpecificationActionEnum(s)
+		*e = POSTGetDefaultCreditSpecificationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetDefaultCreditSpecificationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetDefaultCreditSpecificationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetDefaultCreditSpecificationVersionEnumTwoThousandAndSixteen1115 POSTGetDefaultCreditSpecificationVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetDefaultCreditSpecificationVersionEnum) ToPointer() *POSTGetDefaultCreditSpecificationVersionEnum {
+	return &e
+}
+
 func (e *POSTGetDefaultCreditSpecificationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetDefaultCreditSpecificationVersionEnum(s)
+		*e = POSTGetDefaultCreditSpecificationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetDefaultCreditSpecificationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetDefaultCreditSpecificationVersionEnum: %v", v)
 	}
 }
 

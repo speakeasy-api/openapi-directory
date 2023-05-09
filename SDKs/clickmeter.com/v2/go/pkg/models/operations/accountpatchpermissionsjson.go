@@ -17,19 +17,23 @@ const (
 	AccountPatchPermissionsJSONTypeEnumGroup     AccountPatchPermissionsJSONTypeEnum = "group"
 )
 
+func (e AccountPatchPermissionsJSONTypeEnum) ToPointer() *AccountPatchPermissionsJSONTypeEnum {
+	return &e
+}
+
 func (e *AccountPatchPermissionsJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "datapoint":
 		fallthrough
 	case "group":
-		*e = AccountPatchPermissionsJSONTypeEnum(s)
+		*e = AccountPatchPermissionsJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPatchPermissionsJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPatchPermissionsJSONTypeEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,46 +17,48 @@ func main() {
         }),
     )
 
-    req := operations.CreateParallelDataRequest{
+    ctx := context.Background()
+    res, err := s.CreateParallelData(ctx, operations.CreateParallelDataRequest{
         CreateParallelDataRequest: shared.CreateParallelDataRequest{
             ClientToken: "corrupti",
-            Description: "provident",
+            Description: sdk.String("provident"),
             EncryptionKey: &shared.EncryptionKey{
-                ID: "distinctio",
-                Type: "KMS",
+                ID: "bd9d8d69-a674-4e0f-867c-c8796ed151a0",
+                Type: shared.EncryptionKeyTypeEnumKms,
             },
-            Name: "quibusdam",
+            Name: "Estelle Will",
             ParallelDataConfig: shared.ParallelDataConfig{
-                Format: "CSV",
-                S3URI: "nulla",
+                Format: shared.ParallelDataFormatEnumTmx,
+                S3URI: "at",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "illum",
-                    Value: "vel",
+                    Key: "molestiae",
+                    Value: "quod",
                 },
                 shared.Tag{
-                    Key: "error",
-                    Value: "deserunt",
+                    Key: "quod",
+                    Value: "esse",
                 },
                 shared.Tag{
-                    Key: "suscipit",
-                    Value: "iure",
+                    Key: "totam",
+                    Value: "porro",
+                },
+                shared.Tag{
+                    Key: "dolorum",
+                    Value: "dicta",
                 },
             },
         },
-        XAmzAlgorithm: "magnam",
-        XAmzContentSha256: "debitis",
-        XAmzCredential: "ipsa",
-        XAmzDate: "delectus",
-        XAmzSecurityToken: "tempora",
-        XAmzSignature: "suscipit",
-        XAmzSignedHeaders: "molestiae",
-        XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateParallelData(ctx, req)
+        XAmzAlgorithm: sdk.String("nam"),
+        XAmzContentSha256: sdk.String("officia"),
+        XAmzCredential: sdk.String("occaecati"),
+        XAmzDate: sdk.String("fugit"),
+        XAmzSecurityToken: sdk.String("deleniti"),
+        XAmzSignature: sdk.String("hic"),
+        XAmzSignedHeaders: sdk.String("optio"),
+        XAmzTarget: operations.CreateParallelDataXAmzTargetEnumAwsShineFrontendService20170701CreateParallelData,
+    })
     if err != nil {
         log.Fatal(err)
     }

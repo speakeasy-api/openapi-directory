@@ -17,19 +17,23 @@ const (
 	UpdateGlobalRuleConfigRuleEnumCompatibility UpdateGlobalRuleConfigRuleEnum = "COMPATIBILITY"
 )
 
+func (e UpdateGlobalRuleConfigRuleEnum) ToPointer() *UpdateGlobalRuleConfigRuleEnum {
+	return &e
+}
+
 func (e *UpdateGlobalRuleConfigRuleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDITY":
 		fallthrough
 	case "COMPATIBILITY":
-		*e = UpdateGlobalRuleConfigRuleEnum(s)
+		*e = UpdateGlobalRuleConfigRuleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGlobalRuleConfigRuleEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGlobalRuleConfigRuleEnum: %v", v)
 	}
 }
 

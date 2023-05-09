@@ -4,6 +4,7 @@ package shared
 
 // SectionalElement - Stores the configuration information for a visual helper element for a form. A sectional element can be a header, a text block, or a divider. These elements are static and not associated with any data.
 type SectionalElement struct {
+	Excluded    *bool          `json:"excluded,omitempty"`
 	Level       *int64         `json:"level,omitempty"`
 	Orientation *string        `json:"orientation,omitempty"`
 	Position    *FieldPosition `json:"position,omitempty"`

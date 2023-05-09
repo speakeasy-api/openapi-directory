@@ -14,18 +14,22 @@ const (
 	CanaryRunStateReasonCodeEnumExecutionFailure CanaryRunStateReasonCodeEnum = "EXECUTION_FAILURE"
 )
 
+func (e CanaryRunStateReasonCodeEnum) ToPointer() *CanaryRunStateReasonCodeEnum {
+	return &e
+}
+
 func (e *CanaryRunStateReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANARY_FAILURE":
 		fallthrough
 	case "EXECUTION_FAILURE":
-		*e = CanaryRunStateReasonCodeEnum(s)
+		*e = CanaryRunStateReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CanaryRunStateReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CanaryRunStateReasonCodeEnum: %v", v)
 	}
 }

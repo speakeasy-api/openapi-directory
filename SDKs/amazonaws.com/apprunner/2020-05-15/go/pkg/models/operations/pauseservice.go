@@ -16,17 +16,21 @@ const (
 	PauseServiceXAmzTargetEnumAppRunnerPauseService PauseServiceXAmzTargetEnum = "AppRunner.PauseService"
 )
 
+func (e PauseServiceXAmzTargetEnum) ToPointer() *PauseServiceXAmzTargetEnum {
+	return &e
+}
+
 func (e *PauseServiceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.PauseService":
-		*e = PauseServiceXAmzTargetEnum(s)
+		*e = PauseServiceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PauseServiceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PauseServiceXAmzTargetEnum: %v", v)
 	}
 }
 

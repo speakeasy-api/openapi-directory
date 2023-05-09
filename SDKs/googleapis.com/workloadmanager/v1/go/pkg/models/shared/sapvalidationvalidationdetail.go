@@ -19,12 +19,16 @@ const (
 	SapValidationValidationDetailSapValidationTypeEnumNetweaver                    SapValidationValidationDetailSapValidationTypeEnum = "NETWEAVER"
 )
 
+func (e SapValidationValidationDetailSapValidationTypeEnum) ToPointer() *SapValidationValidationDetailSapValidationTypeEnum {
+	return &e
+}
+
 func (e *SapValidationValidationDetailSapValidationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAP_VALIDATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SYSTEM":
@@ -36,10 +40,10 @@ func (e *SapValidationValidationDetailSapValidationTypeEnum) UnmarshalJSON(data 
 	case "HANA":
 		fallthrough
 	case "NETWEAVER":
-		*e = SapValidationValidationDetailSapValidationTypeEnum(s)
+		*e = SapValidationValidationDetailSapValidationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SapValidationValidationDetailSapValidationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SapValidationValidationDetailSapValidationTypeEnum: %v", v)
 	}
 }
 

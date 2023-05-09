@@ -34,7 +34,10 @@ func newClientRegistrationPolicy(defaultClient, securityClient HTTPClient, serve
 // GetRealmClientRegistrationPolicyProviders - Base path for retrieve providers with the configProperties properly filled
 func (s *clientRegistrationPolicy) GetRealmClientRegistrationPolicyProviders(ctx context.Context, request operations.GetRealmClientRegistrationPolicyProvidersRequest) (*operations.GetRealmClientRegistrationPolicyProvidersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/client-registration-policy/providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/client-registration-policy/providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

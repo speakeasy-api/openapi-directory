@@ -15,20 +15,24 @@ const (
 	ECSServiceRecommendationFindingEnumOverprovisioned  ECSServiceRecommendationFindingEnum = "Overprovisioned"
 )
 
+func (e ECSServiceRecommendationFindingEnum) ToPointer() *ECSServiceRecommendationFindingEnum {
+	return &e
+}
+
 func (e *ECSServiceRecommendationFindingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Optimized":
 		fallthrough
 	case "Underprovisioned":
 		fallthrough
 	case "Overprovisioned":
-		*e = ECSServiceRecommendationFindingEnum(s)
+		*e = ECSServiceRecommendationFindingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ECSServiceRecommendationFindingEnum: %s", s)
+		return fmt.Errorf("invalid value for ECSServiceRecommendationFindingEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newBaggage(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Retrieve passenger trip, contact and baggage details. This service is only accessible for LH privileged partners
 func (s *baggage) BaggageTripAndContact(ctx context.Context, request operations.BaggageTripAndContactRequest, security operations.BaggageTripAndContactSecurity) (*operations.BaggageTripAndContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/baggage/baggagetripandcontact/{searchID}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/baggage/baggagetripandcontact/{searchID}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

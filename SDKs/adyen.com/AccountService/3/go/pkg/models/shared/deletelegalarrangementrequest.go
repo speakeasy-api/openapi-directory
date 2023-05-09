@@ -6,5 +6,5 @@ type DeleteLegalArrangementRequest struct {
 	// The code of the account holder.
 	AccountHolderCode string `json:"accountHolderCode"`
 	// List of legal arrangements.
-	LegalArrangements []LegalArrangementRequest `json:"legalArrangements"`
+	LegalArrangements []LegalArrangementRequestWrapper `json:"legalArrangements"`
 }

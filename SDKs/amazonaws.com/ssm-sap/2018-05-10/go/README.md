@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/ssm-sap/201
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,23 +27,21 @@ func main() {
         }),
     )
 
-    req := operations.DeleteResourcePermissionRequest{
-        RequestBody: operations.DeleteResourcePermissionRequestBody{
-            ActionType: "RESTORE",
-            ResourceArn: "corrupti",
-            SourceResourceArn: "provident",
-        },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteResourcePermission(ctx, req)
+    res, err := s.DeleteResourcePermission(ctx, operations.DeleteResourcePermissionRequest{
+        RequestBody: operations.DeleteResourcePermissionRequestBody{
+            ActionType: operations.DeleteResourcePermissionRequestBodyActionTypeEnumRestore.ToPointer(),
+            ResourceArn: "corrupti",
+            SourceResourceArn: sdk.String("provident"),
+        },
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -59,25 +56,25 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteResourcePermission` - Removes permissions associated with the target database.
-* `DeregisterApplication` - Deregister an SAP application with AWS Systems Manager for SAP. This action does not aﬀect the existing setup of your SAP workloads on Amazon EC2.
-* `GetApplication` - Gets an application registered with AWS Systems Manager for SAP. It also returns the components of the application.
-* `GetComponent` - Gets the component of an application registered with AWS Systems Manager for SAP.
-* `GetDatabase` - Gets the SAP HANA database of an application registered with AWS Systems Manager for SAP.
-* `GetOperation` - Gets the details of an operation by specifying the operation ID.
-* `GetResourcePermission` - Gets permissions associated with the target database.
-* `ListApplications` - Lists all the applications registered with AWS Systems Manager for SAP.
-* `ListComponents` - Lists all the components registered with AWS Systems Manager for SAP.
-* `ListDatabases` - Lists the SAP HANA databases of an application registered with AWS Systems Manager for SAP.
-* `ListOperations` - Lists the operations performed by AWS Systems Manager for SAP.
-* `ListTagsForResource` - Lists all tags on an SAP HANA application and/or database registered with AWS Systems Manager for SAP.
-* `PutResourcePermission` - Adds permissions to the target database.
-* `RegisterApplication` - <p>Register an SAP application with AWS Systems Manager for SAP. You must meet the following requirements before registering. </p> <p>The SAP application you want to register with AWS Systems Manager for SAP is running on Amazon EC2.</p> <p>AWS Systems Manager Agent must be setup on an Amazon EC2 instance along with the required IAM permissions.</p> <p>Amazon EC2 instance(s) must have access to the secrets created in AWS Secrets Manager to manage SAP applications and components.</p>
-* `TagResource` - Creates tag for a resource by specifying the ARN.
-* `UntagResource` - Delete the tags for a resource.
-* `UpdateApplicationSettings` - Updates the settings of an application registered with AWS Systems Manager for SAP.
+* [DeleteResourcePermission](docs/sdk/README.md#deleteresourcepermission) - Removes permissions associated with the target database.
+* [DeregisterApplication](docs/sdk/README.md#deregisterapplication) - Deregister an SAP application with AWS Systems Manager for SAP. This action does not aﬀect the existing setup of your SAP workloads on Amazon EC2.
+* [GetApplication](docs/sdk/README.md#getapplication) - Gets an application registered with AWS Systems Manager for SAP. It also returns the components of the application.
+* [GetComponent](docs/sdk/README.md#getcomponent) - Gets the component of an application registered with AWS Systems Manager for SAP.
+* [GetDatabase](docs/sdk/README.md#getdatabase) - Gets the SAP HANA database of an application registered with AWS Systems Manager for SAP.
+* [GetOperation](docs/sdk/README.md#getoperation) - Gets the details of an operation by specifying the operation ID.
+* [GetResourcePermission](docs/sdk/README.md#getresourcepermission) - Gets permissions associated with the target database.
+* [ListApplications](docs/sdk/README.md#listapplications) - Lists all the applications registered with AWS Systems Manager for SAP.
+* [ListComponents](docs/sdk/README.md#listcomponents) - Lists all the components registered with AWS Systems Manager for SAP.
+* [ListDatabases](docs/sdk/README.md#listdatabases) - Lists the SAP HANA databases of an application registered with AWS Systems Manager for SAP.
+* [ListOperations](docs/sdk/README.md#listoperations) - Lists the operations performed by AWS Systems Manager for SAP.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists all tags on an SAP HANA application and/or database registered with AWS Systems Manager for SAP.
+* [PutResourcePermission](docs/sdk/README.md#putresourcepermission) - Adds permissions to the target database.
+* [RegisterApplication](docs/sdk/README.md#registerapplication) - <p>Register an SAP application with AWS Systems Manager for SAP. You must meet the following requirements before registering. </p> <p>The SAP application you want to register with AWS Systems Manager for SAP is running on Amazon EC2.</p> <p>AWS Systems Manager Agent must be setup on an Amazon EC2 instance along with the required IAM permissions.</p> <p>Amazon EC2 instance(s) must have access to the secrets created in AWS Secrets Manager to manage SAP applications and components.</p>
+* [TagResource](docs/sdk/README.md#tagresource) - Creates tag for a resource by specifying the ARN.
+* [UntagResource](docs/sdk/README.md#untagresource) - Delete the tags for a resource.
+* [UpdateApplicationSettings](docs/sdk/README.md#updateapplicationsettings) - Updates the settings of an application registered with AWS Systems Manager for SAP.
 <!-- End SDK Available Operations -->
 
 ### Maturity

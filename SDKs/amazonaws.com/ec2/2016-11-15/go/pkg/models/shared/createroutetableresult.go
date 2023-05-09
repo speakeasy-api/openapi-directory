@@ -18,12 +18,16 @@ const (
 	CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnumFailed         CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum = "failed"
 )
 
+func (e CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum) ToPointer() *CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum {
+	return &e
+}
+
 func (e *CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associating":
 		fallthrough
 	case "associated":
@@ -33,10 +37,10 @@ func (e *CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum) 
 	case "disassociated":
 		fallthrough
 	case "failed":
-		*e = CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum(s)
+		*e = CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableAssociationsAssociationStateStateEnum: %v", v)
 	}
 }
 
@@ -70,21 +74,25 @@ const (
 	CreateRouteTableResultRouteTableRoutesOriginEnumEnableVgwRoutePropagation CreateRouteTableResultRouteTableRoutesOriginEnum = "EnableVgwRoutePropagation"
 )
 
+func (e CreateRouteTableResultRouteTableRoutesOriginEnum) ToPointer() *CreateRouteTableResultRouteTableRoutesOriginEnum {
+	return &e
+}
+
 func (e *CreateRouteTableResultRouteTableRoutesOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateRouteTable":
 		fallthrough
 	case "CreateRoute":
 		fallthrough
 	case "EnableVgwRoutePropagation":
-		*e = CreateRouteTableResultRouteTableRoutesOriginEnum(s)
+		*e = CreateRouteTableResultRouteTableRoutesOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableRoutesOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableRoutesOriginEnum: %v", v)
 	}
 }
 
@@ -96,19 +104,23 @@ const (
 	CreateRouteTableResultRouteTableRoutesStateEnumBlackhole CreateRouteTableResultRouteTableRoutesStateEnum = "blackhole"
 )
 
+func (e CreateRouteTableResultRouteTableRoutesStateEnum) ToPointer() *CreateRouteTableResultRouteTableRoutesStateEnum {
+	return &e
+}
+
 func (e *CreateRouteTableResultRouteTableRoutesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "blackhole":
-		*e = CreateRouteTableResultRouteTableRoutesStateEnum(s)
+		*e = CreateRouteTableResultRouteTableRoutesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableRoutesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateRouteTableResultRouteTableRoutesStateEnum: %v", v)
 	}
 }
 

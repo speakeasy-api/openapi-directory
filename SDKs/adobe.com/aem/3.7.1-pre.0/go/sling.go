@@ -35,7 +35,10 @@ func newSling(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 func (s *sling) DeleteAgent(ctx context.Context, request operations.DeleteAgentRequest) (*operations.DeleteAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -66,9 +69,13 @@ func (s *sling) DeleteAgent(ctx context.Context, request operations.DeleteAgentR
 
 	return res, nil
 }
+
 func (s *sling) DeleteNode(ctx context.Context, request operations.DeleteNodeRequest) (*operations.DeleteNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -99,9 +106,13 @@ func (s *sling) DeleteNode(ctx context.Context, request operations.DeleteNodeReq
 
 	return res, nil
 }
+
 func (s *sling) GetAgent(ctx context.Context, request operations.GetAgentRequest) (*operations.GetAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -132,9 +143,13 @@ func (s *sling) GetAgent(ctx context.Context, request operations.GetAgentRequest
 
 	return res, nil
 }
+
 func (s *sling) GetAgents(ctx context.Context, request operations.GetAgentsRequest) (*operations.GetAgentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}.-1.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}.-1.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -175,9 +190,13 @@ func (s *sling) GetAgents(ctx context.Context, request operations.GetAgentsReque
 
 	return res, nil
 }
+
 func (s *sling) GetAuthorizableKeystore(ctx context.Context, request operations.GetAuthorizableKeystoreRequest) (*operations.GetAuthorizableKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,9 +248,13 @@ func (s *sling) GetAuthorizableKeystore(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *sling) GetKeystore(ctx context.Context, request operations.GetKeystoreRequest) (*operations.GetKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}/keystore/store.p12", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}/keystore/store.p12", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,9 +294,13 @@ func (s *sling) GetKeystore(ctx context.Context, request operations.GetKeystoreR
 
 	return res, nil
 }
+
 func (s *sling) GetNode(ctx context.Context, request operations.GetNodeRequest) (*operations.GetNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -304,9 +331,13 @@ func (s *sling) GetNode(ctx context.Context, request operations.GetNodeRequest) 
 
 	return res, nil
 }
+
 func (s *sling) GetPackage(ctx context.Context, request operations.GetPackageRequest) (*operations.GetPackageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,9 +377,13 @@ func (s *sling) GetPackage(ctx context.Context, request operations.GetPackageReq
 
 	return res, nil
 }
+
 func (s *sling) GetPackageFilter(ctx context.Context, request operations.GetPackageFilterRequest) (*operations.GetPackageFilterResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/packages/{group}/{name}-{version}.zip/jcr:content/vlt:definition/filter.tidy.2.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -389,6 +424,7 @@ func (s *sling) GetPackageFilter(ctx context.Context, request operations.GetPack
 
 	return res, nil
 }
+
 func (s *sling) GetQuery(ctx context.Context, request operations.GetQueryRequest) (*operations.GetQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bin/querybuilder.json"
@@ -436,6 +472,7 @@ func (s *sling) GetQuery(ctx context.Context, request operations.GetQueryRequest
 
 	return res, nil
 }
+
 func (s *sling) GetTruststore(ctx context.Context) (*operations.GetTruststoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/etc/truststore/truststore.p12"
@@ -478,6 +515,7 @@ func (s *sling) GetTruststore(ctx context.Context) (*operations.GetTruststoreRes
 
 	return res, nil
 }
+
 func (s *sling) GetTruststoreInfo(ctx context.Context) (*operations.GetTruststoreInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/granite/security/truststore.json"
@@ -531,9 +569,13 @@ func (s *sling) GetTruststoreInfo(ctx context.Context) (*operations.GetTruststor
 
 	return res, nil
 }
+
 func (s *sling) PostAgent(ctx context.Context, request operations.PostAgentRequest) (*operations.PostAgentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/etc/replication/agents.{runmode}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -568,9 +610,13 @@ func (s *sling) PostAgent(ctx context.Context, request operations.PostAgentReque
 
 	return res, nil
 }
+
 func (s *sling) PostAuthorizableKeystore(ctx context.Context, request operations.PostAuthorizableKeystoreRequest) (*operations.PostAuthorizableKeystoreResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.html", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{intermediatePath}/{authorizableId}.ks.html", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -633,6 +679,7 @@ func (s *sling) PostAuthorizableKeystore(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *sling) PostAuthorizables(ctx context.Context, request operations.PostAuthorizablesRequest) (*operations.PostAuthorizablesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/granite/security/post/authorizables"
@@ -680,6 +727,7 @@ func (s *sling) PostAuthorizables(ctx context.Context, request operations.PostAu
 
 	return res, nil
 }
+
 func (s *sling) PostConfigAdobeGraniteSamlAuthenticationHandler(ctx context.Context, request operations.PostConfigAdobeGraniteSamlAuthenticationHandlerRequest) (*operations.PostConfigAdobeGraniteSamlAuthenticationHandlerResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/com.adobe.granite.auth.saml.SamlAuthenticationHandler.config"
@@ -717,6 +765,7 @@ func (s *sling) PostConfigAdobeGraniteSamlAuthenticationHandler(ctx context.Cont
 
 	return res, nil
 }
+
 func (s *sling) PostConfigApacheFelixJettyBasedHTTPService(ctx context.Context, request operations.PostConfigApacheFelixJettyBasedHTTPServiceRequest) (*operations.PostConfigApacheFelixJettyBasedHTTPServiceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/org.apache.felix.http"
@@ -754,6 +803,7 @@ func (s *sling) PostConfigApacheFelixJettyBasedHTTPService(ctx context.Context, 
 
 	return res, nil
 }
+
 func (s *sling) PostConfigApacheHTTPComponentsProxyConfiguration(ctx context.Context, request operations.PostConfigApacheHTTPComponentsProxyConfigurationRequest) (*operations.PostConfigApacheHTTPComponentsProxyConfigurationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/org.apache.http.proxyconfigurator.config"
@@ -791,6 +841,7 @@ func (s *sling) PostConfigApacheHTTPComponentsProxyConfiguration(ctx context.Con
 
 	return res, nil
 }
+
 func (s *sling) PostConfigApacheSlingDavExServlet(ctx context.Context, request operations.PostConfigApacheSlingDavExServletRequest) (*operations.PostConfigApacheSlingDavExServletResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet"
@@ -828,6 +879,7 @@ func (s *sling) PostConfigApacheSlingDavExServlet(ctx context.Context, request o
 
 	return res, nil
 }
+
 func (s *sling) PostConfigApacheSlingGetServlet(ctx context.Context, request operations.PostConfigApacheSlingGetServletRequest) (*operations.PostConfigApacheSlingGetServletResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/org.apache.sling.servlets.get.DefaultGetServlet"
@@ -865,6 +917,7 @@ func (s *sling) PostConfigApacheSlingGetServlet(ctx context.Context, request ope
 
 	return res, nil
 }
+
 func (s *sling) PostConfigApacheSlingReferrerFilter(ctx context.Context, request operations.PostConfigApacheSlingReferrerFilterRequest) (*operations.PostConfigApacheSlingReferrerFilterResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/apps/system/config/org.apache.sling.security.impl.ReferrerFilter"
@@ -902,9 +955,13 @@ func (s *sling) PostConfigApacheSlingReferrerFilter(ctx context.Context, request
 
 	return res, nil
 }
+
 func (s *sling) PostConfigProperty(ctx context.Context, request operations.PostConfigPropertyRequest) (*operations.PostConfigPropertyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/apps/system/config/{configNodeName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/apps/system/config/{configNodeName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -935,9 +992,13 @@ func (s *sling) PostConfigProperty(ctx context.Context, request operations.PostC
 
 	return res, nil
 }
+
 func (s *sling) PostNode(ctx context.Context, request operations.PostNodeRequest) (*operations.PostNodeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{path}/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -979,9 +1040,13 @@ func (s *sling) PostNode(ctx context.Context, request operations.PostNodeRequest
 
 	return res, nil
 }
+
 func (s *sling) PostNodeRw(ctx context.Context, request operations.PostNodeRwRequest) (*operations.PostNodeRwResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/{name}.rw.html", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{path}/{name}.rw.html", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1016,9 +1081,13 @@ func (s *sling) PostNodeRw(ctx context.Context, request operations.PostNodeRwReq
 
 	return res, nil
 }
+
 func (s *sling) PostPath(ctx context.Context, request operations.PostPathRequest) (*operations.PostPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{path}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{path}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1053,6 +1122,7 @@ func (s *sling) PostPath(ctx context.Context, request operations.PostPathRequest
 
 	return res, nil
 }
+
 func (s *sling) PostQuery(ctx context.Context, request operations.PostQueryRequest) (*operations.PostQueryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/bin/querybuilder.json"
@@ -1100,6 +1170,7 @@ func (s *sling) PostQuery(ctx context.Context, request operations.PostQueryReque
 
 	return res, nil
 }
+
 func (s *sling) PostTreeActivation(ctx context.Context, request operations.PostTreeActivationRequest) (*operations.PostTreeActivationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/replication/treeactivation.html"
@@ -1137,6 +1208,7 @@ func (s *sling) PostTreeActivation(ctx context.Context, request operations.PostT
 
 	return res, nil
 }
+
 func (s *sling) PostTruststore(ctx context.Context, request operations.PostTruststoreRequest) (*operations.PostTruststoreResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/libs/granite/security/post/truststore"
@@ -1191,6 +1263,7 @@ func (s *sling) PostTruststore(ctx context.Context, request operations.PostTrust
 
 	return res, nil
 }
+
 func (s *sling) PostTruststorePkcs12(ctx context.Context, request operations.PostTruststorePkcs12RequestBody) (*operations.PostTruststorePkcs12Response, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/etc/truststore"

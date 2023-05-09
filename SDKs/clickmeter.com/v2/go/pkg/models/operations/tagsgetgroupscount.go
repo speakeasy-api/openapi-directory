@@ -17,19 +17,23 @@ const (
 	TagsGetGroupsCountStatusEnumActive  TagsGetGroupsCountStatusEnum = "active"
 )
 
+func (e TagsGetGroupsCountStatusEnum) ToPointer() *TagsGetGroupsCountStatusEnum {
+	return &e
+}
+
 func (e *TagsGetGroupsCountStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
-		*e = TagsGetGroupsCountStatusEnum(s)
+		*e = TagsGetGroupsCountStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagsGetGroupsCountStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TagsGetGroupsCountStatusEnum: %v", v)
 	}
 }
 

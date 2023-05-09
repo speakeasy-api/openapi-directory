@@ -16,21 +16,25 @@ const (
 	ValidationResultValidatorEnumCrossProjectPermission   ValidationResultValidatorEnum = "CROSS_PROJECT_PERMISSION"
 )
 
+func (e ValidationResultValidatorEnum) ToPointer() *ValidationResultValidatorEnum {
+	return &e
+}
+
 func (e *ValidationResultValidatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MEMBERSHIP_ID":
 		fallthrough
 	case "CROSS_PROJECT_PERMISSION":
-		*e = ValidationResultValidatorEnum(s)
+		*e = ValidationResultValidatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValidationResultValidatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ValidationResultValidatorEnum: %v", v)
 	}
 }
 

@@ -21,21 +21,25 @@ const (
 	AppInvitationsCreateByEmailRequestBodyRoleEnumMember       AppInvitationsCreateByEmailRequestBodyRoleEnum = "member"
 )
 
+func (e AppInvitationsCreateByEmailRequestBodyRoleEnum) ToPointer() *AppInvitationsCreateByEmailRequestBodyRoleEnum {
+	return &e
+}
+
 func (e *AppInvitationsCreateByEmailRequestBodyRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "admin":
 		fallthrough
 	case "collaborator":
 		fallthrough
 	case "member":
-		*e = AppInvitationsCreateByEmailRequestBodyRoleEnum(s)
+		*e = AppInvitationsCreateByEmailRequestBodyRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsCreateByEmailRequestBodyRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsCreateByEmailRequestBodyRoleEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -87,10 +95,10 @@ func (e *AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum) Unmarsh
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppInvitationsCreateByEmailDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

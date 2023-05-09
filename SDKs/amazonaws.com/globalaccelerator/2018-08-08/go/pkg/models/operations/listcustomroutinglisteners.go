@@ -16,17 +16,21 @@ const (
 	ListCustomRoutingListenersXAmzTargetEnumGlobalAcceleratorV20180706ListCustomRoutingListeners ListCustomRoutingListenersXAmzTargetEnum = "GlobalAccelerator_V20180706.ListCustomRoutingListeners"
 )
 
+func (e ListCustomRoutingListenersXAmzTargetEnum) ToPointer() *ListCustomRoutingListenersXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCustomRoutingListenersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.ListCustomRoutingListeners":
-		*e = ListCustomRoutingListenersXAmzTargetEnum(s)
+		*e = ListCustomRoutingListenersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCustomRoutingListenersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCustomRoutingListenersXAmzTargetEnum: %v", v)
 	}
 }
 

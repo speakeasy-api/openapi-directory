@@ -16,17 +16,21 @@ const (
 	GetPullRequestOverrideStateXAmzTargetEnumCodeCommit20150413GetPullRequestOverrideState GetPullRequestOverrideStateXAmzTargetEnum = "CodeCommit_20150413.GetPullRequestOverrideState"
 )
 
+func (e GetPullRequestOverrideStateXAmzTargetEnum) ToPointer() *GetPullRequestOverrideStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetPullRequestOverrideStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.GetPullRequestOverrideState":
-		*e = GetPullRequestOverrideStateXAmzTargetEnum(s)
+		*e = GetPullRequestOverrideStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPullRequestOverrideStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPullRequestOverrideStateXAmzTargetEnum: %v", v)
 	}
 }
 

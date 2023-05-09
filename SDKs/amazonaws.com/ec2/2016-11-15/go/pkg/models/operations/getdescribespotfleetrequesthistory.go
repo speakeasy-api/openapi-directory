@@ -16,17 +16,21 @@ const (
 	GETDescribeSpotFleetRequestHistoryActionEnumDescribeSpotFleetRequestHistory GETDescribeSpotFleetRequestHistoryActionEnum = "DescribeSpotFleetRequestHistory"
 )
 
+func (e GETDescribeSpotFleetRequestHistoryActionEnum) ToPointer() *GETDescribeSpotFleetRequestHistoryActionEnum {
+	return &e
+}
+
 func (e *GETDescribeSpotFleetRequestHistoryActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSpotFleetRequestHistory":
-		*e = GETDescribeSpotFleetRequestHistoryActionEnum(s)
+		*e = GETDescribeSpotFleetRequestHistoryActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryActionEnum: %v", v)
 	}
 }
 
@@ -40,12 +44,16 @@ const (
 	GETDescribeSpotFleetRequestHistoryEventTypeEnumInformation        GETDescribeSpotFleetRequestHistoryEventTypeEnum = "information"
 )
 
+func (e GETDescribeSpotFleetRequestHistoryEventTypeEnum) ToPointer() *GETDescribeSpotFleetRequestHistoryEventTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeSpotFleetRequestHistoryEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instanceChange":
 		fallthrough
 	case "fleetRequestChange":
@@ -53,10 +61,10 @@ func (e *GETDescribeSpotFleetRequestHistoryEventTypeEnum) UnmarshalJSON(data []b
 	case "error":
 		fallthrough
 	case "information":
-		*e = GETDescribeSpotFleetRequestHistoryEventTypeEnum(s)
+		*e = GETDescribeSpotFleetRequestHistoryEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryEventTypeEnum: %v", v)
 	}
 }
 
@@ -67,17 +75,21 @@ const (
 	GETDescribeSpotFleetRequestHistoryVersionEnumTwoThousandAndSixteen1115 GETDescribeSpotFleetRequestHistoryVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeSpotFleetRequestHistoryVersionEnum) ToPointer() *GETDescribeSpotFleetRequestHistoryVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeSpotFleetRequestHistoryVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeSpotFleetRequestHistoryVersionEnum(s)
+		*e = GETDescribeSpotFleetRequestHistoryVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSpotFleetRequestHistoryVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETCreateCoipCidrActionEnumCreateCoipCidr GETCreateCoipCidrActionEnum = "CreateCoipCidr"
 )
 
+func (e GETCreateCoipCidrActionEnum) ToPointer() *GETCreateCoipCidrActionEnum {
+	return &e
+}
+
 func (e *GETCreateCoipCidrActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateCoipCidr":
-		*e = GETCreateCoipCidrActionEnum(s)
+		*e = GETCreateCoipCidrActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateCoipCidrActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateCoipCidrActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateCoipCidrVersionEnumTwoThousandAndSixteen1115 GETCreateCoipCidrVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateCoipCidrVersionEnum) ToPointer() *GETCreateCoipCidrVersionEnum {
+	return &e
+}
+
 func (e *GETCreateCoipCidrVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateCoipCidrVersionEnum(s)
+		*e = GETCreateCoipCidrVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateCoipCidrVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateCoipCidrVersionEnum: %v", v)
 	}
 }
 

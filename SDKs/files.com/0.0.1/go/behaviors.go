@@ -37,7 +37,10 @@ func newBehaviors(defaultClient, securityClient HTTPClient, serverURL, language,
 // List Behaviors by path
 func (s *behaviors) BehaviorListForPath(ctx context.Context, request operations.BehaviorListForPathRequest) (*operations.BehaviorListForPathResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/folders/{path}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/behaviors/folders/{path}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,7 +108,10 @@ func (s *behaviors) BehaviorListForPath(ctx context.Context, request operations.
 // Delete Behavior
 func (s *behaviors) DeleteBehaviorsID(ctx context.Context, request operations.DeleteBehaviorsIDRequest) (*operations.DeleteBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -229,7 +235,10 @@ func (s *behaviors) GetBehaviors(ctx context.Context, request operations.GetBeha
 // Show Behavior
 func (s *behaviors) GetBehaviorsID(ctx context.Context, request operations.GetBehaviorsIDRequest) (*operations.GetBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -293,7 +302,10 @@ func (s *behaviors) GetBehaviorsID(ctx context.Context, request operations.GetBe
 // Update Behavior
 func (s *behaviors) PatchBehaviorsID(ctx context.Context, request operations.PatchBehaviorsIDRequest) (*operations.PatchBehaviorsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/behaviors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

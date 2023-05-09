@@ -105,7 +105,10 @@ func (s *invoices) GetInvoices(ctx context.Context, request operations.GetInvoic
 // Show Invoice
 func (s *invoices) GetInvoicesID(ctx context.Context, request operations.GetInvoicesIDRequest) (*operations.GetInvoicesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/invoices/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/invoices/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

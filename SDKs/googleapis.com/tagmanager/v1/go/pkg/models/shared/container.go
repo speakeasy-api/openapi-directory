@@ -117,12 +117,16 @@ const (
 	ContainerEnabledBuiltInVariableEnumElementVisibilityRecentTime                         ContainerEnabledBuiltInVariableEnum = "elementVisibilityRecentTime"
 )
 
+func (e ContainerEnabledBuiltInVariableEnum) ToPointer() *ContainerEnabledBuiltInVariableEnum {
+	return &e
+}
+
 func (e *ContainerEnabledBuiltInVariableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pageUrl":
 		fallthrough
 	case "pageHostname":
@@ -332,10 +336,10 @@ func (e *ContainerEnabledBuiltInVariableEnum) UnmarshalJSON(data []byte) error {
 	case "elementVisibilityFirstTime":
 		fallthrough
 	case "elementVisibilityRecentTime":
-		*e = ContainerEnabledBuiltInVariableEnum(s)
+		*e = ContainerEnabledBuiltInVariableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerEnabledBuiltInVariableEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerEnabledBuiltInVariableEnum: %v", v)
 	}
 }
 
@@ -350,12 +354,16 @@ const (
 	ContainerUsageContextEnumAmp         ContainerUsageContextEnum = "amp"
 )
 
+func (e ContainerUsageContextEnum) ToPointer() *ContainerUsageContextEnum {
+	return &e
+}
+
 func (e *ContainerUsageContextEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "web":
 		fallthrough
 	case "android":
@@ -367,10 +375,10 @@ func (e *ContainerUsageContextEnum) UnmarshalJSON(data []byte) error {
 	case "iosSdk5":
 		fallthrough
 	case "amp":
-		*e = ContainerUsageContextEnum(s)
+		*e = ContainerUsageContextEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerUsageContextEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerUsageContextEnum: %v", v)
 	}
 }
 

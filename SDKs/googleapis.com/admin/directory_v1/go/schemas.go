@@ -34,7 +34,10 @@ func newSchemas(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DirectorySchemasDelete - Deletes a schema.
 func (s *schemas) DirectorySchemasDelete(ctx context.Context, request operations.DirectorySchemasDeleteRequest, security operations.DirectorySchemasDeleteSecurity) (*operations.DirectorySchemasDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *schemas) DirectorySchemasDelete(ctx context.Context, request operations
 // DirectorySchemasGet - Retrieves a schema.
 func (s *schemas) DirectorySchemasGet(ctx context.Context, request operations.DirectorySchemasGetRequest, security operations.DirectorySchemasGetSecurity) (*operations.DirectorySchemasGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *schemas) DirectorySchemasGet(ctx context.Context, request operations.Di
 // DirectorySchemasInsert - Creates a schema.
 func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations.DirectorySchemasInsertRequest, security operations.DirectorySchemasInsertSecurity) (*operations.DirectorySchemasInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *schemas) DirectorySchemasInsert(ctx context.Context, request operations
 // DirectorySchemasList - Retrieves all schemas for a customer.
 func (s *schemas) DirectorySchemasList(ctx context.Context, request operations.DirectorySchemasListRequest, security operations.DirectorySchemasListSecurity) (*operations.DirectorySchemasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *schemas) DirectorySchemasList(ctx context.Context, request operations.D
 // DirectorySchemasPatch - Patches a schema.
 func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.DirectorySchemasPatchRequest, security operations.DirectorySchemasPatchSecurity) (*operations.DirectorySchemasPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *schemas) DirectorySchemasPatch(ctx context.Context, request operations.
 // DirectorySchemasUpdate - Updates a schema.
 func (s *schemas) DirectorySchemasUpdate(ctx context.Context, request operations.DirectorySchemasUpdateRequest, security operations.DirectorySchemasUpdateSecurity) (*operations.DirectorySchemasUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/admin/directory/v1/customer/{customerId}/schemas/{schemaKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Schema", "json")
 	if err != nil {

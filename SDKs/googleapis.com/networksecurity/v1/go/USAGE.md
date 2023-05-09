@@ -2,137 +2,107 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx, operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AuthorizationPolicyInput: &shared.AuthorizationPolicyInput{
-            Action: "ALLOW",
-            Description: "distinctio",
+            Action: shared.AuthorizationPolicyActionEnumAllow.ToPointer(),
+            Description: sdk.String("distinctio"),
             Labels: map[string]string{
                 "unde": "nulla",
                 "corrupti": "illum",
                 "vel": "error",
                 "deserunt": "suscipit",
             },
-            Name: "iure",
+            Name: sdk.String("Dr. Valerie Toy"),
             Rules: []shared.Rule{
                 shared.Rule{
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "delectus",
+                                "placeat",
+                                "voluptatum",
+                                "iusto",
+                                "excepturi",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "tempora",
-                                RegexMatch: "suscipit",
+                                HeaderName: sdk.String("nisi"),
+                                RegexMatch: sdk.String("recusandae"),
                             },
                             Methods: []string{
-                                "minus",
-                                "placeat",
-                            },
-                            Ports: []int64{
-                                479977,
-                                568045,
-                                392785,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "temporibus",
                                 "ab",
                                 "quis",
                                 "veritatis",
+                                "deserunt",
                             },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "deserunt",
-                                RegexMatch: "perferendis",
+                            Ports: []int64{
+                                368241,
                             },
-                            Methods: []string{
-                                "repellendus",
+                        },
+                        shared.Destination{
+                            Hosts: []string{
                                 "sapiente",
+                                "quo",
+                                "odit",
+                                "at",
                             },
-                            Ports: []int64{
-                                140350,
-                                870013,
-                                870088,
-                                978619,
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: sdk.String("at"),
+                                RegexMatch: sdk.String("maiores"),
                             },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
+                            Methods: []string{
                                 "quod",
                                 "quod",
                             },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "esse",
-                                RegexMatch: "totam",
-                            },
-                            Methods: []string{
-                                "dolorum",
-                                "dicta",
-                                "nam",
-                                "officia",
-                            },
                             Ports: []int64{
-                                143353,
-                                537373,
-                                944669,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "totam",
-                                "beatae",
-                                "commodi",
-                                "molestiae",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "modi",
-                                RegexMatch: "qui",
-                            },
-                            Methods: []string{
-                                "cum",
-                                "esse",
-                                "ipsum",
-                                "excepturi",
-                            },
-                            Ports: []int64{
-                                18789,
+                                520478,
+                                780529,
                             },
                         },
                     },
                     Sources: []shared.Source{
                         shared.Source{
                             IPBlocks: []string{
-                                "sed",
-                                "iste",
-                                "dolor",
+                                "nam",
                             },
                             Principals: []string{
-                                "laboriosam",
-                                "hic",
-                                "saepe",
+                                "occaecati",
+                                "fugit",
+                                "deleniti",
                             },
                         },
                         shared.Source{
                             IPBlocks: []string{
-                                "in",
-                                "corporis",
-                                "iste",
+                                "optio",
+                                "totam",
+                                "beatae",
+                                "commodi",
                             },
                             Principals: []string{
-                                "saepe",
-                                "quidem",
+                                "modi",
+                                "qui",
+                            },
+                        },
+                        shared.Source{
+                            IPBlocks: []string{
+                                "cum",
+                                "esse",
+                                "ipsum",
+                                "excepturi",
+                            },
+                            Principals: []string{
+                                "perferendis",
                             },
                         },
                     },
@@ -141,18 +111,41 @@ func main() {
                     Destinations: []shared.Destination{
                         shared.Destination{
                             Hosts: []string{
-                                "reiciendis",
+                                "sed",
+                                "iste",
+                                "dolor",
                             },
                             HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "est",
-                                RegexMatch: "mollitia",
+                                HeaderName: sdk.String("natus"),
+                                RegexMatch: sdk.String("laboriosam"),
                             },
                             Methods: []string{
-                                "dolores",
-                                "dolorem",
+                                "saepe",
+                                "fuga",
+                                "in",
                                 "corporis",
                             },
                             Ports: []int64{
+                                437032,
+                                902349,
+                                697631,
+                            },
+                        },
+                        shared.Destination{
+                            Hosts: []string{
+                                "ipsa",
+                            },
+                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
+                                HeaderName: sdk.String("reiciendis"),
+                                RegexMatch: sdk.String("est"),
+                            },
+                            Methods: []string{
+                                "laborum",
+                                "dolores",
+                                "dolorem",
+                            },
+                            Ports: []int64{
+                                128926,
                                 750686,
                             },
                         },
@@ -184,22 +177,19 @@ func main() {
                 },
             },
         },
-        AccessToken: "repellat",
-        Alt: "media",
-        AuthorizationPolicyID: "occaecati",
-        Callback: "numquam",
-        Fields: "commodi",
-        Key: "quam",
-        OauthToken: "molestiae",
+        AccessToken: sdk.String("repellat"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        AuthorizationPolicyID: sdk.String("occaecati"),
+        Callback: sdk.String("numquam"),
+        Fields: sdk.String("commodi"),
+        Key: sdk.String("quam"),
+        OauthToken: sdk.String("molestiae"),
         Parent: "velit",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "quia",
-        UploadProtocol: "quis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx, req, operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("quia"),
+        UploadProtocol: sdk.String("quis"),
+    }, operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

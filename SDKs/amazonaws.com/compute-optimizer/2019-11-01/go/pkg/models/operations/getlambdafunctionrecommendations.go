@@ -16,17 +16,21 @@ const (
 	GetLambdaFunctionRecommendationsXAmzTargetEnumComputeOptimizerServiceGetLambdaFunctionRecommendations GetLambdaFunctionRecommendationsXAmzTargetEnum = "ComputeOptimizerService.GetLambdaFunctionRecommendations"
 )
 
+func (e GetLambdaFunctionRecommendationsXAmzTargetEnum) ToPointer() *GetLambdaFunctionRecommendationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLambdaFunctionRecommendationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ComputeOptimizerService.GetLambdaFunctionRecommendations":
-		*e = GetLambdaFunctionRecommendationsXAmzTargetEnum(s)
+		*e = GetLambdaFunctionRecommendationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLambdaFunctionRecommendationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLambdaFunctionRecommendationsXAmzTargetEnum: %v", v)
 	}
 }
 

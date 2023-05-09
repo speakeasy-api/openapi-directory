@@ -36,7 +36,10 @@ func newTransactionRules(defaultClient, securityClient HTTPClient, serverURL, la
 // Deletes a transaction rule.
 func (s *transactionRules) DeleteTransactionRulesTransactionRuleID(ctx context.Context, request operations.DeleteTransactionRulesTransactionRuleIDRequest, security operations.DeleteTransactionRulesTransactionRuleIDSecurity) (*operations.DeleteTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -99,7 +102,10 @@ func (s *transactionRules) DeleteTransactionRulesTransactionRuleID(ctx context.C
 // Returns the details of a transaction rule.
 func (s *transactionRules) GetTransactionRulesTransactionRuleID(ctx context.Context, request operations.GetTransactionRulesTransactionRuleIDRequest, security operations.GetTransactionRulesTransactionRuleIDSecurity) (*operations.GetTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +172,10 @@ func (s *transactionRules) GetTransactionRulesTransactionRuleID(ctx context.Cont
 // * When updating any other parameter, you need to send all existing resource parameters. If you omit a parameter in the request, that parameter is removed from the resource.
 func (s *transactionRules) PatchTransactionRulesTransactionRuleID(ctx context.Context, request operations.PatchTransactionRulesTransactionRuleIDRequest, security operations.PatchTransactionRulesTransactionRuleIDSecurity) (*operations.PatchTransactionRulesTransactionRuleIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/transactionRules/{transactionRuleId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TransactionRuleInfo", "json")
 	if err != nil {

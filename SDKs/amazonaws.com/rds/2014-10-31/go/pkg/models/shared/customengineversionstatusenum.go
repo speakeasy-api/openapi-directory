@@ -15,20 +15,24 @@ const (
 	CustomEngineVersionStatusEnumInactiveExceptRestore CustomEngineVersionStatusEnum = "inactive-except-restore"
 )
 
+func (e CustomEngineVersionStatusEnum) ToPointer() *CustomEngineVersionStatusEnum {
+	return &e
+}
+
 func (e *CustomEngineVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "inactive":
 		fallthrough
 	case "inactive-except-restore":
-		*e = CustomEngineVersionStatusEnum(s)
+		*e = CustomEngineVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomEngineVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomEngineVersionStatusEnum: %v", v)
 	}
 }

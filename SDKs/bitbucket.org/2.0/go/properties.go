@@ -34,7 +34,10 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 // Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) DeleteCommitHostedPropertyValue(ctx context.Context, request operations.DeleteCommitHostedPropertyValueRequest) (*operations.DeleteCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *properties) DeleteCommitHostedPropertyValue(ctx context.Context, reques
 // Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) DeletePullRequestHostedPropertyValue(ctx context.Context, request operations.DeletePullRequestHostedPropertyValueRequest) (*operations.DeletePullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -106,7 +112,10 @@ func (s *properties) DeletePullRequestHostedPropertyValue(ctx context.Context, r
 // Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) DeleteRepositoryHostedPropertyValue(ctx context.Context, request operations.DeleteRepositoryHostedPropertyValueRequest) (*operations.DeleteRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -142,7 +151,10 @@ func (s *properties) DeleteRepositoryHostedPropertyValue(ctx context.Context, re
 // Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) DeleteUserHostedPropertyValue(ctx context.Context, request operations.DeleteUserHostedPropertyValueRequest) (*operations.DeleteUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -178,7 +190,10 @@ func (s *properties) DeleteUserHostedPropertyValue(ctx context.Context, request 
 // Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) GetCommitHostedPropertyValue(ctx context.Context, request operations.GetCommitHostedPropertyValueRequest) (*operations.GetCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -223,7 +238,10 @@ func (s *properties) GetCommitHostedPropertyValue(ctx context.Context, request o
 // Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) GetPullRequestHostedPropertyValue(ctx context.Context, request operations.GetPullRequestHostedPropertyValueRequest) (*operations.GetPullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -268,7 +286,10 @@ func (s *properties) GetPullRequestHostedPropertyValue(ctx context.Context, requ
 // Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) GetRepositoryHostedPropertyValue(ctx context.Context, request operations.GetRepositoryHostedPropertyValueRequest) (*operations.GetRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -313,7 +334,10 @@ func (s *properties) GetRepositoryHostedPropertyValue(ctx context.Context, reque
 // Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) RetrieveUserHostedPropertyValue(ctx context.Context, request operations.RetrieveUserHostedPropertyValueRequest) (*operations.RetrieveUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -358,7 +382,10 @@ func (s *properties) RetrieveUserHostedPropertyValue(ctx context.Context, reques
 // Update an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) UpdateCommitHostedPropertyValue(ctx context.Context, request operations.UpdateCommitHostedPropertyValueRequest) (*operations.UpdateCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -404,7 +431,10 @@ func (s *properties) UpdateCommitHostedPropertyValue(ctx context.Context, reques
 // Update an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) UpdatePullRequestHostedPropertyValue(ctx context.Context, request operations.UpdatePullRequestHostedPropertyValueRequest) (*operations.UpdatePullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -450,7 +480,10 @@ func (s *properties) UpdatePullRequestHostedPropertyValue(ctx context.Context, r
 // Update an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) UpdateRepositoryHostedPropertyValue(ctx context.Context, request operations.UpdateRepositoryHostedPropertyValueRequest) (*operations.UpdateRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -496,7 +529,10 @@ func (s *properties) UpdateRepositoryHostedPropertyValue(ctx context.Context, re
 // Update an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) UpdateUserHostedPropertyValue(ctx context.Context, request operations.UpdateUserHostedPropertyValueRequest) (*operations.UpdateUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

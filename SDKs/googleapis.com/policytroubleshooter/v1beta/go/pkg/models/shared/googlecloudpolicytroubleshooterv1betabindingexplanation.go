@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnumUnknownInfoDenied      GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum = "UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum) Unma
 	case "UNKNOWN_CONDITIONAL":
 		fallthrough
 	case "UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationAccessEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnumHigh                          GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRelevanceEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnumRolePermissionUnknownInfoDenied GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum = "ROLE_PERMISSION_UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "ROLE_PERMISSION_INCLUDED":
@@ -90,10 +102,10 @@ func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEn
 	case "ROLE_PERMISSION_NOT_INCLUDED":
 		fallthrough
 	case "ROLE_PERMISSION_UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionEnum: %v", v)
 	}
 }
 
@@ -106,21 +118,25 @@ const (
 	GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnumHigh                          GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1betaBindingExplanationRolePermissionRelevanceEnum: %v", v)
 	}
 }
 

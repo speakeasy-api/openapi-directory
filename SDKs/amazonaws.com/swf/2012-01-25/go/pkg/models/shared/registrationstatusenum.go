@@ -14,18 +14,22 @@ const (
 	RegistrationStatusEnumDeprecated RegistrationStatusEnum = "DEPRECATED"
 )
 
+func (e RegistrationStatusEnum) ToPointer() *RegistrationStatusEnum {
+	return &e
+}
+
 func (e *RegistrationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGISTERED":
 		fallthrough
 	case "DEPRECATED":
-		*e = RegistrationStatusEnum(s)
+		*e = RegistrationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegistrationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RegistrationStatusEnum: %v", v)
 	}
 }

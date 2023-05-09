@@ -34,7 +34,10 @@ func newBidders(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Adexchangebuyer2BiddersFilterSetsBidMetricsList - Lists all metrics that are measured in terms of number of bids.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidMetricsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsBidMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidMetricsList(ctx context.Co
 // Adexchangebuyer2BiddersFilterSetsBidResponseErrorsList - List all errors that occurred in bid responses, with the number of bid responses affected for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidResponseErrorsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsBidResponseErrorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidResponseErrors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidResponseErrors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidResponseErrorsList(ctx con
 // Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList - List all reasons for which bid responses were considered to have no applicable bids, with the number of bid responses affected for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidResponsesWithoutBids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/bidResponsesWithoutBids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList(c
 // Adexchangebuyer2BiddersFilterSetsCreate - Creates the specified filter set for the account with the given account ID.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsCreate(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsCreateRequest, security operations.Adexchangebuyer2BiddersFilterSetsCreateSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{ownerName}/filterSets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{ownerName}/filterSets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FilterSet", "json")
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsCreate(ctx context.Context, r
 // Adexchangebuyer2BiddersFilterSetsDelete - Deletes the requested filter set from the account with the given account ID.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsDelete(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsDeleteRequest, security operations.Adexchangebuyer2BiddersFilterSetsDeleteSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsDelete(ctx context.Context, r
 // Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList - List all reasons that caused a bid request not to be sent for an impression, with the number of bid requests not sent for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBidRequests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBidRequests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList(ctx c
 // Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList - List all creatives associated with a specific reason for which bids were filtered, with the number of bids filtered for each creative.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListRequest, security operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/creatives", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/creatives", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -377,7 +398,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList(ctx
 // Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList - List all details associated with a specific reason for which bids were filtered, with the number of bids filtered for each detail.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids/{creativeStatusId}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -425,7 +449,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList(ctx c
 // Adexchangebuyer2BiddersFilterSetsFilteredBidsList - List all reasons for which bids were filtered, with the number of bids filtered for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsFilteredBidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/filteredBids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -473,7 +500,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsFilteredBidsList(ctx context.
 // Adexchangebuyer2BiddersFilterSetsGet - Retrieves the requested filter set for the account with the given account ID.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsGet(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsGetRequest, security operations.Adexchangebuyer2BiddersFilterSetsGetSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -521,7 +551,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsGet(ctx context.Context, requ
 // Adexchangebuyer2BiddersFilterSetsImpressionMetricsList - Lists all metrics that are measured in terms of number of impressions.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsImpressionMetricsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsImpressionMetricsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/impressionMetrics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/impressionMetrics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +602,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsImpressionMetricsList(ctx con
 // Adexchangebuyer2BiddersFilterSetsList - Lists all filter sets for the account with the given account ID.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{ownerName}/filterSets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{ownerName}/filterSets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -617,7 +653,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsList(ctx context.Context, req
 // Adexchangebuyer2BiddersFilterSetsLosingBidsList - List all reasons for which bids lost in the auction, with the number of bids that lost for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsLosingBidsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsLosingBidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/losingBids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/losingBids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -665,7 +704,10 @@ func (s *bidders) Adexchangebuyer2BiddersFilterSetsLosingBidsList(ctx context.Co
 // Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList - List all reasons for which winning bids were not billable, with the number of bids not billed for each reason.
 func (s *bidders) Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList(ctx context.Context, request operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListRequest, security operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListSecurity) (*operations.Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/nonBillableWinningBids", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{filterSetName}/nonBillableWinningBids", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

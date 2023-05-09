@@ -16,17 +16,21 @@ const (
 	StopTrainingDocumentClassifierXAmzTargetEnumComprehend20171127StopTrainingDocumentClassifier StopTrainingDocumentClassifierXAmzTargetEnum = "Comprehend_20171127.StopTrainingDocumentClassifier"
 )
 
+func (e StopTrainingDocumentClassifierXAmzTargetEnum) ToPointer() *StopTrainingDocumentClassifierXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopTrainingDocumentClassifierXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StopTrainingDocumentClassifier":
-		*e = StopTrainingDocumentClassifierXAmzTargetEnum(s)
+		*e = StopTrainingDocumentClassifierXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopTrainingDocumentClassifierXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopTrainingDocumentClassifierXAmzTargetEnum: %v", v)
 	}
 }
 

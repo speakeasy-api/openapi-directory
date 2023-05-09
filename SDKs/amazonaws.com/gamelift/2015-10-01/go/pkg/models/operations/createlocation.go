@@ -16,17 +16,21 @@ const (
 	CreateLocationXAmzTargetEnumGameLiftCreateLocation CreateLocationXAmzTargetEnum = "GameLift.CreateLocation"
 )
 
+func (e CreateLocationXAmzTargetEnum) ToPointer() *CreateLocationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLocationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateLocation":
-		*e = CreateLocationXAmzTargetEnum(s)
+		*e = CreateLocationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLocationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLocationXAmzTargetEnum: %v", v)
 	}
 }
 

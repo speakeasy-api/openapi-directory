@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fungenerators.com/shakesp
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetShakespeareGenerateInsultRequest{
-        Limit: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, req, operations.GetShakespeareGenerateInsultSecurity{
+    res, err := s.Generation.GetShakespeareGenerateInsult(ctx, operations.GetShakespeareGenerateInsultRequest{
+        Limit: sdk.Int64(548814),
+    }, operations.GetShakespeareGenerateInsultSecurity{
         XFungeneratorsAPISecret: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -47,19 +44,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Generation
+### [Generation](docs/generation/README.md)
 
-* `GetShakespeareGenerateInsult` - Generate random Shakespeare style insults.
-* `GetShakespeareGenerateLoremIpsum` - Generate Shakespeare lorem ipsum.
-* `GetShakespeareGenerateName` - Generate random Shakespearen names.
+* [GetShakespeareGenerateInsult](docs/generation/README.md#getshakespearegenerateinsult) - Generate random Shakespeare style insults.
+* [GetShakespeareGenerateLoremIpsum](docs/generation/README.md#getshakespearegenerateloremipsum) - Generate Shakespeare lorem ipsum.
+* [GetShakespeareGenerateName](docs/generation/README.md#getshakespearegeneratename) - Generate random Shakespearen names.
 
-### Translation
+### [Translation](docs/translation/README.md)
 
-* `GetShakespeareTranslate` - Translate from English to Shakespeare English.
+* [GetShakespeareTranslate](docs/translation/README.md#getshakespearetranslate) - Translate from English to Shakespeare English.
 
-### Works
+### [Works](docs/works/README.md)
 
-* `GetShakespeareQuote` - Get a random Shakespeare quote.
+* [GetShakespeareQuote](docs/works/README.md#getshakespearequote) - Get a random Shakespeare quote.
 <!-- End SDK Available Operations -->
 
 ### Maturity

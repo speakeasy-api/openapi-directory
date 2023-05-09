@@ -2,55 +2,56 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.TrafficdirectorDiscoveryClientStatusRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Discovery.TrafficdirectorDiscoveryClientStatus(ctx, operations.TrafficdirectorDiscoveryClientStatusRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ClientStatusRequest: &shared.ClientStatusRequest{
             NodeMatchers: []shared.NodeMatcher{
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "distinctio",
-                        IgnoreCase: false,
-                        Prefix: "quibusdam",
-                        Regex: "unde",
+                        Exact: sdk.String("distinctio"),
+                        IgnoreCase: sdk.Bool(false),
+                        Prefix: sdk.String("quibusdam"),
+                        Regex: sdk.String("unde"),
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 857946,
+                                MaxProgramSize: sdk.Int64(857946),
                             },
-                            Regex: "corrupti",
+                            Regex: sdk.String("corrupti"),
                         },
-                        Suffix: "illum",
+                        Suffix: sdk.String("illum"),
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "deserunt",
+                                    Key: sdk.String("deserunt"),
                                 },
                                 shared.PathSegment{
-                                    Key: "suscipit",
+                                    Key: sdk.String("suscipit"),
                                 },
                                 shared.PathSegment{
-                                    Key: "iure",
+                                    Key: sdk.String("iure"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 2975.34,
+                                    Exact: sdk.Float64(2975.34),
                                     Range: &shared.DoubleRange{
-                                        End: 8917.73,
-                                        Start: 567.13,
+                                        End: sdk.Float64(8917.73),
+                                        Start: sdk.Float64(567.13),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -62,41 +63,41 @@ func main() {
                                     "placeat": "voluptatum",
                                     "iusto": "excepturi",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "nisi",
-                                    IgnoreCase: false,
-                                    Prefix: "recusandae",
-                                    Regex: "temporibus",
+                                    Exact: sdk.String("nisi"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("recusandae"),
+                                    Regex: sdk.String("temporibus"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 71036,
+                                            MaxProgramSize: sdk.Int64(71036),
                                         },
-                                        Regex: "quis",
+                                        Regex: sdk.String("quis"),
                                     },
-                                    Suffix: "veritatis",
+                                    Suffix: sdk.String("veritatis"),
                                 },
                             },
                         },
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "perferendis",
+                                    Key: sdk.String("perferendis"),
                                 },
                                 shared.PathSegment{
-                                    Key: "ipsam",
+                                    Key: sdk.String("ipsam"),
                                 },
                                 shared.PathSegment{
-                                    Key: "repellendus",
+                                    Key: sdk.String("repellendus"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 9571.56,
+                                    Exact: sdk.Float64(9571.56),
                                     Range: &shared.DoubleRange{
-                                        End: 7781.57,
-                                        Start: 1403.5,
+                                        End: sdk.Float64(7781.57),
+                                        Start: sdk.Float64(1403.5),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -108,19 +109,19 @@ func main() {
                                     "quod": "esse",
                                     "totam": "porro",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "dolorum",
-                                    IgnoreCase: false,
-                                    Prefix: "dicta",
-                                    Regex: "nam",
+                                    Exact: sdk.String("dolorum"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("dicta"),
+                                    Regex: sdk.String("nam"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 639921,
+                                            MaxProgramSize: sdk.Int64(639921),
                                         },
-                                        Regex: "occaecati",
+                                        Regex: sdk.String("occaecati"),
                                     },
-                                    Suffix: "fugit",
+                                    Suffix: sdk.String("fugit"),
                                 },
                             },
                         },
@@ -128,35 +129,35 @@ func main() {
                 },
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "deleniti",
-                        IgnoreCase: false,
-                        Prefix: "hic",
-                        Regex: "optio",
+                        Exact: sdk.String("deleniti"),
+                        IgnoreCase: sdk.Bool(false),
+                        Prefix: sdk.String("hic"),
+                        Regex: sdk.String("optio"),
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 521848,
+                                MaxProgramSize: sdk.Int64(521848),
                             },
-                            Regex: "beatae",
+                            Regex: sdk.String("beatae"),
                         },
-                        Suffix: "commodi",
+                        Suffix: sdk.String("commodi"),
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "qui",
+                                    Key: sdk.String("qui"),
                                 },
                                 shared.PathSegment{
-                                    Key: "impedit",
+                                    Key: sdk.String("impedit"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 7369.18,
+                                    Exact: sdk.Float64(7369.18),
                                     Range: &shared.DoubleRange{
-                                        End: 4561.5,
-                                        Start: 2165.5,
+                                        End: sdk.Float64(4561.5),
+                                        Start: sdk.Float64(2165.5),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -167,38 +168,38 @@ func main() {
                                     "ad": "natus",
                                     "sed": "iste",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "dolor",
-                                    IgnoreCase: false,
-                                    Prefix: "natus",
-                                    Regex: "laboriosam",
+                                    Exact: sdk.String("dolor"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("natus"),
+                                    Regex: sdk.String("laboriosam"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 943749,
+                                            MaxProgramSize: sdk.Int64(943749),
                                         },
-                                        Regex: "saepe",
+                                        Regex: sdk.String("saepe"),
                                     },
-                                    Suffix: "fuga",
+                                    Suffix: sdk.String("fuga"),
                                 },
                             },
                         },
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "corporis",
+                                    Key: sdk.String("corporis"),
                                 },
                                 shared.PathSegment{
-                                    Key: "iste",
+                                    Key: sdk.String("iste"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 4370.32,
+                                    Exact: sdk.Float64(4370.32),
                                     Range: &shared.DoubleRange{
-                                        End: 9023.49,
-                                        Start: 6976.31,
+                                        End: sdk.Float64(9023.49),
+                                        Start: sdk.Float64(6976.31),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -207,19 +208,19 @@ func main() {
                                 NullMatch: map[string]interface{}{
                                     "ipsa": "reiciendis",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "est",
-                                    IgnoreCase: false,
-                                    Prefix: "mollitia",
-                                    Regex: "laborum",
+                                    Exact: sdk.String("est"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("mollitia"),
+                                    Regex: sdk.String("laborum"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 170909,
+                                            MaxProgramSize: sdk.Int64(170909),
                                         },
-                                        Regex: "dolorem",
+                                        Regex: sdk.String("dolorem"),
                                     },
-                                    Suffix: "corporis",
+                                    Suffix: sdk.String("corporis"),
                                 },
                             },
                         },
@@ -227,32 +228,32 @@ func main() {
                 },
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "explicabo",
-                        IgnoreCase: false,
-                        Prefix: "nobis",
-                        Regex: "enim",
+                        Exact: sdk.String("explicabo"),
+                        IgnoreCase: sdk.Bool(false),
+                        Prefix: sdk.String("nobis"),
+                        Regex: sdk.String("enim"),
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 607831,
+                                MaxProgramSize: sdk.Int64(607831),
                             },
-                            Regex: "nemo",
+                            Regex: sdk.String("nemo"),
                         },
-                        Suffix: "minima",
+                        Suffix: sdk.String("minima"),
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "iure",
+                                    Key: sdk.String("iure"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 6342.74,
+                                    Exact: sdk.Float64(6342.74),
                                     Range: &shared.DoubleRange{
-                                        End: 9883.74,
-                                        Start: 9589.5,
+                                        End: sdk.Float64(9883.74),
+                                        Start: sdk.Float64(9589.5),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -261,38 +262,38 @@ func main() {
                                 NullMatch: map[string]interface{}{
                                     "mollitia": "dolorem",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "culpa",
-                                    IgnoreCase: false,
-                                    Prefix: "consequuntur",
-                                    Regex: "repellat",
+                                    Exact: sdk.String("culpa"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("consequuntur"),
+                                    Regex: sdk.String("repellat"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 653108,
+                                            MaxProgramSize: sdk.Int64(653108),
                                         },
-                                        Regex: "occaecati",
+                                        Regex: sdk.String("occaecati"),
                                     },
-                                    Suffix: "numquam",
+                                    Suffix: sdk.String("numquam"),
                                 },
                             },
                         },
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "quam",
+                                    Key: sdk.String("quam"),
                                 },
                                 shared.PathSegment{
-                                    Key: "molestiae",
+                                    Key: sdk.String("molestiae"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 2444.25,
+                                    Exact: sdk.Float64(2444.25),
                                     Range: &shared.DoubleRange{
-                                        End: 6235.1,
-                                        Start: 1589.69,
+                                        End: sdk.Float64(6235.1),
+                                        Start: sdk.Float64(1589.69),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -302,44 +303,44 @@ func main() {
                                     "vitae": "laborum",
                                     "animi": "enim",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "odit",
-                                    IgnoreCase: false,
-                                    Prefix: "quo",
-                                    Regex: "sequi",
+                                    Exact: sdk.String("odit"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("quo"),
+                                    Regex: sdk.String("sequi"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 949572,
+                                            MaxProgramSize: sdk.Int64(949572),
                                         },
-                                        Regex: "ipsam",
+                                        Regex: sdk.String("ipsam"),
                                     },
-                                    Suffix: "id",
+                                    Suffix: sdk.String("id"),
                                 },
                             },
                         },
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "aut",
+                                    Key: sdk.String("aut"),
                                 },
                                 shared.PathSegment{
-                                    Key: "quasi",
+                                    Key: sdk.String("quasi"),
                                 },
                                 shared.PathSegment{
-                                    Key: "error",
+                                    Key: sdk.String("error"),
                                 },
                                 shared.PathSegment{
-                                    Key: "temporibus",
+                                    Key: sdk.String("temporibus"),
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: false,
+                                BoolMatch: sdk.Bool(false),
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 6736.6,
+                                    Exact: sdk.Float64(6736.6),
                                     Range: &shared.DoubleRange{
-                                        End: 960.98,
-                                        Start: 9719.45,
+                                        End: sdk.Float64(960.98),
+                                        Start: sdk.Float64(9719.45),
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
@@ -351,19 +352,19 @@ func main() {
                                     "ipsa": "omnis",
                                     "voluptate": "cum",
                                 },
-                                PresentMatch: false,
+                                PresentMatch: sdk.Bool(false),
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "perferendis",
-                                    IgnoreCase: false,
-                                    Prefix: "doloremque",
-                                    Regex: "reprehenderit",
+                                    Exact: sdk.String("perferendis"),
+                                    IgnoreCase: sdk.Bool(false),
+                                    Prefix: sdk.String("doloremque"),
+                                    Regex: sdk.String("reprehenderit"),
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 282807,
+                                            MaxProgramSize: sdk.Int64(282807),
                                         },
-                                        Regex: "maiores",
+                                        Regex: sdk.String("maiores"),
                                     },
-                                    Suffix: "dicta",
+                                    Suffix: sdk.String("dicta"),
                                 },
                             },
                         },
@@ -371,20 +372,17 @@ func main() {
                 },
             },
         },
-        AccessToken: "corporis",
-        Alt: "json",
-        Callback: "iusto",
-        Fields: "dicta",
-        Key: "harum",
-        OauthToken: "enim",
-        PrettyPrint: false,
-        QuotaUser: "accusamus",
-        UploadType: "commodi",
-        UploadProtocol: "repudiandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Discovery.TrafficdirectorDiscoveryClientStatus(ctx, req, operations.TrafficdirectorDiscoveryClientStatusSecurity{
+        AccessToken: sdk.String("corporis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("iusto"),
+        Fields: sdk.String("dicta"),
+        Key: sdk.String("harum"),
+        OauthToken: sdk.String("enim"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("accusamus"),
+        UploadType: sdk.String("commodi"),
+        UploadProtocol: sdk.String("repudiandae"),
+    }, operations.TrafficdirectorDiscoveryClientStatusSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -14,18 +14,22 @@ const (
 	DirectionalityEnumMulti DirectionalityEnum = "MULTI"
 )
 
+func (e DirectionalityEnum) ToPointer() *DirectionalityEnum {
+	return &e
+}
+
 func (e *DirectionalityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNI":
 		fallthrough
 	case "MULTI":
-		*e = DirectionalityEnum(s)
+		*e = DirectionalityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectionalityEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectionalityEnum: %v", v)
 	}
 }

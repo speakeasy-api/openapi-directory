@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/civicinfo/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CivicinfoDivisionsSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PrettyPrint: false,
-        Query: "illum",
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Divisions.CivicinfoDivisionsSearch(ctx, req)
+    res, err := s.Divisions.CivicinfoDivisionsSearch(ctx, operations.CivicinfoDivisionsSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PrettyPrint: sdk.Bool(false),
+        Query: sdk.String("illum"),
+        QuotaUser: sdk.String("vel"),
+        UploadType: sdk.String("error"),
+        UploadProtocol: sdk.String("deserunt"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,19 +54,19 @@ func main() {
 ## Available Resources and Operations
 
 
-### Divisions
+### [Divisions](docs/divisions/README.md)
 
-* `CivicinfoDivisionsSearch` - Searches for political divisions by their natural name or OCD ID.
+* [CivicinfoDivisionsSearch](docs/divisions/README.md#civicinfodivisionssearch) - Searches for political divisions by their natural name or OCD ID.
 
-### Elections
+### [Elections](docs/elections/README.md)
 
-* `CivicinfoElectionsElectionQuery` - List of available elections to query.
-* `CivicinfoElectionsVoterInfoQuery` - Looks up information relevant to a voter based on the voter's registered address.
+* [CivicinfoElectionsElectionQuery](docs/elections/README.md#civicinfoelectionselectionquery) - List of available elections to query.
+* [CivicinfoElectionsVoterInfoQuery](docs/elections/README.md#civicinfoelectionsvoterinfoquery) - Looks up information relevant to a voter based on the voter's registered address.
 
-### Representatives
+### [Representatives](docs/representatives/README.md)
 
-* `CivicinfoRepresentativesRepresentativeInfoByAddress` - Looks up political geography and representative information for a single address.
-* `CivicinfoRepresentativesRepresentativeInfoByDivision` - Looks up representative information for a single geographic division.
+* [CivicinfoRepresentativesRepresentativeInfoByAddress](docs/representatives/README.md#civicinforepresentativesrepresentativeinfobyaddress) - Looks up political geography and representative information for a single address.
+* [CivicinfoRepresentativesRepresentativeInfoByDivision](docs/representatives/README.md#civicinforepresentativesrepresentativeinfobydivision) - Looks up representative information for a single geographic division.
 <!-- End SDK Available Operations -->
 
 ### Maturity

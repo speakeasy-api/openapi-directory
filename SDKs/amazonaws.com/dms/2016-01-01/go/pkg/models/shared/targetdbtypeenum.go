@@ -14,18 +14,22 @@ const (
 	TargetDbTypeEnumMultipleDatabases TargetDbTypeEnum = "multiple-databases"
 )
 
+func (e TargetDbTypeEnum) ToPointer() *TargetDbTypeEnum {
+	return &e
+}
+
 func (e *TargetDbTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "specific-database":
 		fallthrough
 	case "multiple-databases":
-		*e = TargetDbTypeEnum(s)
+		*e = TargetDbTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TargetDbTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TargetDbTypeEnum: %v", v)
 	}
 }

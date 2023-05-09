@@ -16,17 +16,21 @@ const (
 	DeletePortfolioShareXAmzTargetEnumAws242ServiceCatalogServiceDeletePortfolioShare DeletePortfolioShareXAmzTargetEnum = "AWS242ServiceCatalogService.DeletePortfolioShare"
 )
 
+func (e DeletePortfolioShareXAmzTargetEnum) ToPointer() *DeletePortfolioShareXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeletePortfolioShareXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DeletePortfolioShare":
-		*e = DeletePortfolioShareXAmzTargetEnum(s)
+		*e = DeletePortfolioShareXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeletePortfolioShareXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeletePortfolioShareXAmzTargetEnum: %v", v)
 	}
 }
 

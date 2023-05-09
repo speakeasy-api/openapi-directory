@@ -14,18 +14,22 @@ const (
 	ChannelTypeEnumFullMesh     ChannelTypeEnum = "FULL_MESH"
 )
 
+func (e ChannelTypeEnum) ToPointer() *ChannelTypeEnum {
+	return &e
+}
+
 func (e *ChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_MASTER":
 		fallthrough
 	case "FULL_MESH":
-		*e = ChannelTypeEnum(s)
+		*e = ChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelTypeEnum: %v", v)
 	}
 }

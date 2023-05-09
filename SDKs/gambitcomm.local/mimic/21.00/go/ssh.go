@@ -37,7 +37,10 @@ func newSSH(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ssh) ProtocolSSHGetArgs(ctx context.Context, request operations.ProtocolSSHGetArgsRequest) (*operations.ProtocolSSHGetArgsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/args", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/args", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *ssh) ProtocolSSHGetArgs(ctx context.Context, request operations.Protoco
 // Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ssh) ProtocolSSHGetConfig(ctx context.Context, request operations.ProtocolSSHGetConfigRequest) (*operations.ProtocolSSHGetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +135,10 @@ func (s *ssh) ProtocolSSHGetConfig(ctx context.Context, request operations.Proto
 // Statistics of fields indicated in the headers
 func (s *ssh) ProtocolSSHGetStatistics(ctx context.Context, request operations.ProtocolSSHGetStatisticsRequest) (*operations.ProtocolSSHGetStatisticsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/statistics", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/statistics", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -221,7 +230,10 @@ func (s *ssh) ProtocolSSHGetStatsHdr(ctx context.Context) (*operations.ProtocolS
 // Trace 1 means enabled, 0 means not
 func (s *ssh) ProtocolSSHGetTrace(ctx context.Context, request operations.ProtocolSSHGetTraceRequest) (*operations.ProtocolSSHGetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/trace", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/get/trace", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -267,7 +279,10 @@ func (s *ssh) ProtocolSSHGetTrace(ctx context.Context, request operations.Protoc
 // By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *ssh) ProtocolSSHIpaliasDisable(ctx context.Context, request operations.ProtocolSSHIpaliasDisableRequest) (*operations.ProtocolSSHIpaliasDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/disable/{ipaddress}/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/disable/{ipaddress}/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -314,7 +329,10 @@ func (s *ssh) ProtocolSSHIpaliasDisable(ctx context.Context, request operations.
 // By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *ssh) ProtocolSSHIpaliasEnable(ctx context.Context, request operations.ProtocolSSHIpaliasEnableRequest) (*operations.ProtocolSSHIpaliasEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/enable/{ipaddress}/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/enable/{ipaddress}/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -361,7 +379,10 @@ func (s *ssh) ProtocolSSHIpaliasEnable(ctx context.Context, request operations.P
 // By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *ssh) ProtocolSSHIpaliasIsenabled(ctx context.Context, request operations.ProtocolSSHIpaliasIsenabledRequest) (*operations.ProtocolSSHIpaliasIsenabledResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/isenabled/{ipaddress}/{port}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/isenabled/{ipaddress}/{port}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +429,10 @@ func (s *ssh) ProtocolSSHIpaliasIsenabled(ctx context.Context, request operation
 // By default, the MIMIC SSH server listens on all the IP addresses (aliases) that are configured for an agent
 func (s *ssh) ProtocolSSHIpaliasList(ctx context.Context, request operations.ProtocolSSHIpaliasListRequest) (*operations.ProtocolSSHIpaliasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/list", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/ipalias/list", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -454,7 +478,10 @@ func (s *ssh) ProtocolSSHIpaliasList(ctx context.Context, request operations.Pro
 // Agent's SSH configuration with port,rule,prompt,paging_prompt,userdb,keymap
 func (s *ssh) ProtocolSSHSetConfig(ctx context.Context, request operations.ProtocolSSHSetConfigRequest) (*operations.ProtocolSSHSetConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/config/{argument}/{value}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/config/{argument}/{value}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *ssh) ProtocolSSHSetConfig(ctx context.Context, request operations.Proto
 // 1 to enable, 0 to disable
 func (s *ssh) ProtocolSSHSetTrace(ctx context.Context, request operations.ProtocolSSHSetTraceRequest) (*operations.ProtocolSSHSetTraceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/trace/{enableOrNot}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mimic/agent/{agentNum}/protocol/msg/ssh/set/trace/{enableOrNot}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

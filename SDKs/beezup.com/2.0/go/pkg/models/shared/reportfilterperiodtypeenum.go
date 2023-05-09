@@ -23,12 +23,16 @@ const (
 	ReportFilterPeriodTypeEnumLast3Months ReportFilterPeriodTypeEnum = "Last3Months"
 )
 
+func (e ReportFilterPeriodTypeEnum) ToPointer() *ReportFilterPeriodTypeEnum {
+	return &e
+}
+
 func (e *ReportFilterPeriodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Custom":
 		fallthrough
 	case "Yesterday":
@@ -48,9 +52,9 @@ func (e *ReportFilterPeriodTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Last90Days":
 		fallthrough
 	case "Last3Months":
-		*e = ReportFilterPeriodTypeEnum(s)
+		*e = ReportFilterPeriodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFilterPeriodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFilterPeriodTypeEnum: %v", v)
 	}
 }

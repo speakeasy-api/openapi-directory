@@ -14,18 +14,22 @@ const (
 	S3SseAlgorithmEnumKms    S3SseAlgorithmEnum = "KMS"
 )
 
+func (e S3SseAlgorithmEnum) ToPointer() *S3SseAlgorithmEnum {
+	return &e
+}
+
 func (e *S3SseAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES256":
 		fallthrough
 	case "KMS":
-		*e = S3SseAlgorithmEnum(s)
+		*e = S3SseAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3SseAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for S3SseAlgorithmEnum: %v", v)
 	}
 }

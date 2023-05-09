@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -325,4 +326,5 @@ pkg/models/shared/updatefindingsfilterresponse.go
 pkg/models/shared/suppressdataidentifier.go
 pkg/models/shared/updaterevealconfigurationresponse.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

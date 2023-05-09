@@ -16,17 +16,21 @@ const (
 	DeleteDestinationXAmzTargetEnumLogs20140328DeleteDestination DeleteDestinationXAmzTargetEnum = "Logs_20140328.DeleteDestination"
 )
 
+func (e DeleteDestinationXAmzTargetEnum) ToPointer() *DeleteDestinationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDestinationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DeleteDestination":
-		*e = DeleteDestinationXAmzTargetEnum(s)
+		*e = DeleteDestinationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDestinationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDestinationXAmzTargetEnum: %v", v)
 	}
 }
 

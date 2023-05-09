@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/impala.travel/hotels/1.00
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.CancelBookingRequest{
-        BookingID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Bookings.CancelBooking(ctx, req)
+    res, err := s.Bookings.CancelBooking(ctx, operations.CancelBookingRequest{
+        BookingID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,24 +46,24 @@ func main() {
 ## Available Resources and Operations
 
 
-### Bookings
+### [Bookings](docs/bookings/README.md)
 
-* `CancelBooking` - Cancel a booking
-* `CreateBooking` - Create a booking
-* `ListBookings` - List all bookings
-* `RetrieveBooking` - Retrieve a booking
-* `UpdateBooking` - Change a booking
-* `UpdateBookingContact` - Change a booking contact
+* [CancelBooking](docs/bookings/README.md#cancelbooking) - Cancel a booking
+* [CreateBooking](docs/bookings/README.md#createbooking) - Create a booking
+* [ListBookings](docs/bookings/README.md#listbookings) - List all bookings
+* [RetrieveBooking](docs/bookings/README.md#retrievebooking) - Retrieve a booking
+* [UpdateBooking](docs/bookings/README.md#updatebooking) - Change a booking
+* [UpdateBookingContact](docs/bookings/README.md#updatebookingcontact) - Change a booking contact
 
-### Hotels
+### [Hotels](docs/hotels/README.md)
 
-* `ListHotels` - List all hotels
-* `RetrieveHotel` - Retrieve a hotel
+* [ListHotels](docs/hotels/README.md#listhotels) - List all hotels
+* [RetrieveHotel](docs/hotels/README.md#retrievehotel) - Retrieve a hotel
 
-### RateCalendar
+### [RateCalendar](docs/ratecalendar/README.md)
 
-* `ListRatePlanForHotelForRatePlanID` - List a rate plan (rate calendar) for a hotel (Beta endpoint).
-* `ListRatePlansForHotel` - List all rate plans (rate calendar) for a hotel (Beta endpoint)
+* [ListRatePlanForHotelForRatePlanID](docs/ratecalendar/README.md#listrateplanforhotelforrateplanid) - List a rate plan (rate calendar) for a hotel (Beta endpoint).
+* [ListRatePlansForHotel](docs/ratecalendar/README.md#listrateplansforhotel) - List all rate plans (rate calendar) for a hotel (Beta endpoint)
 <!-- End SDK Available Operations -->
 
 ### Maturity

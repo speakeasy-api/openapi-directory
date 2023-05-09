@@ -22,12 +22,16 @@ const (
 	GetTotalsEntityTypeEntityTypeEnumIeOnly       GetTotalsEntityTypeEntityTypeEnum = "ie-only"
 )
 
+func (e GetTotalsEntityTypeEntityTypeEnum) ToPointer() *GetTotalsEntityTypeEntityTypeEnum {
+	return &e
+}
+
 func (e *GetTotalsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "presidential":
 		fallthrough
 	case "pac":
@@ -39,10 +43,10 @@ func (e *GetTotalsEntityTypeEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "house-senate":
 		fallthrough
 	case "ie-only":
-		*e = GetTotalsEntityTypeEntityTypeEnum(s)
+		*e = GetTotalsEntityTypeEntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTotalsEntityTypeEntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTotalsEntityTypeEntityTypeEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	GetTotalsEntityTypeFilingFrequencyEnumMinusT  GetTotalsEntityTypeFilingFrequencyEnum = "-T"
 )
 
+func (e GetTotalsEntityTypeFilingFrequencyEnum) ToPointer() *GetTotalsEntityTypeFilingFrequencyEnum {
+	return &e
+}
+
 func (e *GetTotalsEntityTypeFilingFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "A":
@@ -83,10 +91,10 @@ func (e *GetTotalsEntityTypeFilingFrequencyEnum) UnmarshalJSON(data []byte) erro
 	case "-A":
 		fallthrough
 	case "-T":
-		*e = GetTotalsEntityTypeFilingFrequencyEnum(s)
+		*e = GetTotalsEntityTypeFilingFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTotalsEntityTypeFilingFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTotalsEntityTypeFilingFrequencyEnum: %v", v)
 	}
 }
 
@@ -102,12 +110,16 @@ const (
 	GetTotalsEntityTypeOrganizationTypeEnumW       GetTotalsEntityTypeOrganizationTypeEnum = "W"
 )
 
+func (e GetTotalsEntityTypeOrganizationTypeEnum) ToPointer() *GetTotalsEntityTypeOrganizationTypeEnum {
+	return &e
+}
+
 func (e *GetTotalsEntityTypeOrganizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "C":
@@ -121,10 +133,10 @@ func (e *GetTotalsEntityTypeOrganizationTypeEnum) UnmarshalJSON(data []byte) err
 	case "V":
 		fallthrough
 	case "W":
-		*e = GetTotalsEntityTypeOrganizationTypeEnum(s)
+		*e = GetTotalsEntityTypeOrganizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTotalsEntityTypeOrganizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTotalsEntityTypeOrganizationTypeEnum: %v", v)
 	}
 }
 
@@ -232,8 +244,7 @@ type GetTotalsEntityTypeRequest struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
+	// A unique identifier assigned to each candidate registered with the FEC. If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
 	//
 	SponsorCandidateID []string `queryParam:"style=form,explode=true,name=sponsor_candidate_id"`
 	// Name of the Committee's treasurer. If multiple treasurers for the committee, the most recent treasurer will be shown.

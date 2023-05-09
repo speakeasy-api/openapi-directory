@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCityRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.GetCity(ctx, operations.GetCityRequest{
+        Format: operations.GetCityFormatEnumXML.ToPointer(),
         Key: "provident",
         Lat: 7151.9,
         Lng: 8442.66,
-    }
-
-    ctx := context.Background()
-    res, err := s.GetCity(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

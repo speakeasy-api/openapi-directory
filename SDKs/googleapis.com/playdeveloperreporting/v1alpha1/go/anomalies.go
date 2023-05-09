@@ -34,7 +34,10 @@ func newAnomalies(defaultClient, securityClient HTTPClient, serverURL, language,
 // PlaydeveloperreportingAnomaliesList - Lists anomalies in any of the datasets.
 func (s *anomalies) PlaydeveloperreportingAnomaliesList(ctx context.Context, request operations.PlaydeveloperreportingAnomaliesListRequest, security operations.PlaydeveloperreportingAnomaliesListSecurity) (*operations.PlaydeveloperreportingAnomaliesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/anomalies", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/anomalies", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

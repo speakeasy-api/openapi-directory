@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/License-Manage
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -46,32 +44,32 @@ func main() {
 ## Available Resources and Operations
 
 
-### Account
+### [Account](docs/account/README.md)
 
-* `GetAccount` - Get information about account
+* [GetAccount](docs/account/README.md#getaccount) - Get information about account
 
-### AppKeys
+### [AppKeys](docs/appkeys/README.md)
 
-* `Createnewappkey` - Create new appkey
-* `Getappkeysfromaccount` - Get appKeys from account
-* `Updateappkey` - Update appkey
+* [Createnewappkey](docs/appkeys/README.md#createnewappkey) - Create new appkey
+* [Getappkeysfromaccount](docs/appkeys/README.md#getappkeysfromaccount) - Get appKeys from account
+* [Updateappkey](docs/appkeys/README.md#updateappkey) - Update appkey
 
-### Roles
+### [Roles](docs/roles/README.md)
 
-* `GetListRoles` - Get List of Roles
-* `GetRolesbyUser` - Get Roles by User/appKey
-* `PutRolesinUser` - Put Roles in User/appKey
-* `RemoveRolefromUser` - Remove Role from User/appKey
+* [GetListRoles](docs/roles/README.md#getlistroles) - Get List of Roles
+* [GetRolesbyUser](docs/roles/README.md#getrolesbyuser) - Get Roles by User/appKey
+* [PutRolesinUser](docs/roles/README.md#putrolesinuser) - Put Roles in User/appKey
+* [RemoveRolefromUser](docs/roles/README.md#removerolefromuser) - Remove Role from User/appKey
 
-### Store
+### [Store](docs/store/README.md)
 
-* `GetByAccount` - Get Stores
+* [GetByAccount](docs/store/README.md#getbyaccount) - Get Stores
 
-### User
+### [User](docs/user/README.md)
 
-* `CreateUser` - Create User
-* `GetListUsers` - Get List of Users
-* `GetUser` - Get User
+* [CreateUser](docs/user/README.md#createuser) - Create User
+* [GetListUsers](docs/user/README.md#getlistusers) - Get List of Users
+* [GetUser](docs/user/README.md#getuser) - Get User
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -14,18 +14,22 @@ const (
 	PredictiveScalingModeEnumForecastOnly     PredictiveScalingModeEnum = "ForecastOnly"
 )
 
+func (e PredictiveScalingModeEnum) ToPointer() *PredictiveScalingModeEnum {
+	return &e
+}
+
 func (e *PredictiveScalingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ForecastAndScale":
 		fallthrough
 	case "ForecastOnly":
-		*e = PredictiveScalingModeEnum(s)
+		*e = PredictiveScalingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PredictiveScalingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for PredictiveScalingModeEnum: %v", v)
 	}
 }

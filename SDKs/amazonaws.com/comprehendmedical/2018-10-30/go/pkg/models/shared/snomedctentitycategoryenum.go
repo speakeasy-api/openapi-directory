@@ -15,20 +15,24 @@ const (
 	SNOMEDCTEntityCategoryEnumTestTreatmentProcedure SNOMEDCTEntityCategoryEnum = "TEST_TREATMENT_PROCEDURE"
 )
 
+func (e SNOMEDCTEntityCategoryEnum) ToPointer() *SNOMEDCTEntityCategoryEnum {
+	return &e
+}
+
 func (e *SNOMEDCTEntityCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEDICAL_CONDITION":
 		fallthrough
 	case "ANATOMY":
 		fallthrough
 	case "TEST_TREATMENT_PROCEDURE":
-		*e = SNOMEDCTEntityCategoryEnum(s)
+		*e = SNOMEDCTEntityCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SNOMEDCTEntityCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for SNOMEDCTEntityCategoryEnum: %v", v)
 	}
 }

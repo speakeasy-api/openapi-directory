@@ -13,42 +13,40 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/localservi
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LocalservicesAccountReportsSearchRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        EndDateDay: 602763,
-        EndDateMonth: 857946,
-        EndDateYear: 544883,
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        PageSize: 645894,
-        PageToken: "suscipit",
-        PrettyPrint: false,
-        Query: "iure",
-        QuotaUser: "magnam",
-        StartDateDay: 891773,
-        StartDateMonth: 56713,
-        StartDateYear: 963663,
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.AccountReports.LocalservicesAccountReportsSearch(ctx, req, operations.LocalservicesAccountReportsSearchSecurity{
+    res, err := s.AccountReports.LocalservicesAccountReportsSearch(ctx, operations.LocalservicesAccountReportsSearchRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        EndDateDay: sdk.Int64(602763),
+        EndDateMonth: sdk.Int64(857946),
+        EndDateYear: sdk.Int64(544883),
+        Fields: sdk.String("illum"),
+        Key: sdk.String("vel"),
+        OauthToken: sdk.String("error"),
+        PageSize: sdk.Int64(645894),
+        PageToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        Query: sdk.String("iure"),
+        QuotaUser: sdk.String("magnam"),
+        StartDateDay: sdk.Int64(891773),
+        StartDateMonth: sdk.Int64(56713),
+        StartDateYear: sdk.Int64(963663),
+        UploadType: sdk.String("tempora"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.LocalservicesAccountReportsSearchSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -67,13 +65,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccountReports
+### [AccountReports](docs/accountreports/README.md)
 
-* `LocalservicesAccountReportsSearch` - Get account reports containing aggregate account data of all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
+* [LocalservicesAccountReportsSearch](docs/accountreports/README.md#localservicesaccountreportssearch) - Get account reports containing aggregate account data of all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
 
-### DetailedLeadReports
+### [DetailedLeadReports](docs/detailedleadreports/README.md)
 
-* `LocalservicesDetailedLeadReportsSearch` - Get detailed lead reports containing leads that have been received by all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
+* [LocalservicesDetailedLeadReportsSearch](docs/detailedleadreports/README.md#localservicesdetailedleadreportssearch) - Get detailed lead reports containing leads that have been received by all linked GLS accounts. Caller needs to provide their manager customer id and the associated auth credential that allows them read permissions on their linked accounts.
 <!-- End SDK Available Operations -->
 
 ### Maturity

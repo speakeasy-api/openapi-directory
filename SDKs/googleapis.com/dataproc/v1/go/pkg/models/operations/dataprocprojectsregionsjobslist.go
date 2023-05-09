@@ -23,21 +23,25 @@ const (
 	DataprocProjectsRegionsJobsListJobStateMatcherEnumNonActive DataprocProjectsRegionsJobsListJobStateMatcherEnum = "NON_ACTIVE"
 )
 
+func (e DataprocProjectsRegionsJobsListJobStateMatcherEnum) ToPointer() *DataprocProjectsRegionsJobsListJobStateMatcherEnum {
+	return &e
+}
+
 func (e *DataprocProjectsRegionsJobsListJobStateMatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "ACTIVE":
 		fallthrough
 	case "NON_ACTIVE":
-		*e = DataprocProjectsRegionsJobsListJobStateMatcherEnum(s)
+		*e = DataprocProjectsRegionsJobsListJobStateMatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataprocProjectsRegionsJobsListJobStateMatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for DataprocProjectsRegionsJobsListJobStateMatcherEnum: %v", v)
 	}
 }
 

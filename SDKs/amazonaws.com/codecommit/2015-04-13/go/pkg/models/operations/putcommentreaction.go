@@ -16,17 +16,21 @@ const (
 	PutCommentReactionXAmzTargetEnumCodeCommit20150413PutCommentReaction PutCommentReactionXAmzTargetEnum = "CodeCommit_20150413.PutCommentReaction"
 )
 
+func (e PutCommentReactionXAmzTargetEnum) ToPointer() *PutCommentReactionXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutCommentReactionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.PutCommentReaction":
-		*e = PutCommentReactionXAmzTargetEnum(s)
+		*e = PutCommentReactionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutCommentReactionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutCommentReactionXAmzTargetEnum: %v", v)
 	}
 }
 

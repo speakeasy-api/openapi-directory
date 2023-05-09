@@ -14,19 +14,23 @@ const (
 	SynthesizeSpeechRequestEnableTimePointingEnumSsmlMark                 SynthesizeSpeechRequestEnableTimePointingEnum = "SSML_MARK"
 )
 
+func (e SynthesizeSpeechRequestEnableTimePointingEnum) ToPointer() *SynthesizeSpeechRequestEnableTimePointingEnum {
+	return &e
+}
+
 func (e *SynthesizeSpeechRequestEnableTimePointingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIMEPOINT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SSML_MARK":
-		*e = SynthesizeSpeechRequestEnableTimePointingEnum(s)
+		*e = SynthesizeSpeechRequestEnableTimePointingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SynthesizeSpeechRequestEnableTimePointingEnum: %s", s)
+		return fmt.Errorf("invalid value for SynthesizeSpeechRequestEnableTimePointingEnum: %v", v)
 	}
 }
 

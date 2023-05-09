@@ -14,18 +14,22 @@ const (
 	TimePointGranularityEnumSpecific TimePointGranularityEnum = "SPECIFIC"
 )
 
+func (e TimePointGranularityEnum) ToPointer() *TimePointGranularityEnum {
+	return &e
+}
+
 func (e *TimePointGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "SPECIFIC":
-		*e = TimePointGranularityEnum(s)
+		*e = TimePointGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimePointGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for TimePointGranularityEnum: %v", v)
 	}
 }

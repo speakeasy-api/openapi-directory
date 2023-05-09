@@ -117,7 +117,10 @@ func (s *layers) GetV4LayersAsApplied(ctx context.Context, request operations.Ge
 // Retrieve an individual application activity by id.  Ids are retrieved via the  /layers/asApplied route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
 func (s *layers) GetV4LayersAsAppliedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsAppliedActivityIDContentsRequest, security operations.GetV4LayersAsAppliedActivityIDContentsSecurity) (*operations.GetV4LayersAsAppliedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asApplied/{activityId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/asApplied/{activityId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -283,7 +286,10 @@ func (s *layers) GetV4LayersAsHarvested(ctx context.Context, request operations.
 // Retrieve an individual harvest activity by id.  Ids are retrieved via the  /layers/asHarvested route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
 func (s *layers) GetV4LayersAsHarvestedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsHarvestedActivityIDContentsRequest, security operations.GetV4LayersAsHarvestedActivityIDContentsSecurity) (*operations.GetV4LayersAsHarvestedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asHarvested/{activityId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/asHarvested/{activityId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -449,7 +455,10 @@ func (s *layers) GetV4LayersAsPlanted(ctx context.Context, request operations.Ge
 // Retrieve an individual planting activity by id.  Ids are retrieved via the  /layers/asPlanted route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).  The data is compressed using .zip format.
 func (s *layers) GetV4LayersAsPlantedActivityIDContents(ctx context.Context, request operations.GetV4LayersAsPlantedActivityIDContentsRequest, security operations.GetV4LayersAsPlantedActivityIDContentsSecurity) (*operations.GetV4LayersAsPlantedActivityIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/asPlanted/{activityId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/asPlanted/{activityId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -615,7 +624,10 @@ func (s *layers) GetV4LayersScoutingObservations(ctx context.Context, request op
 // Retrieve an individual scouting observation by id.  Ids are retrieved via the /layers/scoutingObservations route.
 func (s *layers) GetV4LayersScoutingObservationsScoutingObservationID(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -678,7 +690,10 @@ func (s *layers) GetV4LayersScoutingObservationsScoutingObservationID(ctx contex
 // Retrieve attachments associated with a given scouting observation. Photos added to scouting notes in the FieldView app are capped to 20MB, and we won’t store photos larger than that in a scouting note.
 func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -765,7 +780,10 @@ func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments
 // Photos added to scouting notes in the FieldView app are capped to `20MiB` (`20971520 bytes`), and we won’t store photos larger than that in a scouting note. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB` (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).
 func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents(ctx context.Context, request operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsRequest, security operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsSecurity) (*operations.GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

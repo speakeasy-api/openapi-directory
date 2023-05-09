@@ -18,12 +18,16 @@ const (
 	OrganizationExportResponseStateEnumError    OrganizationExportResponseStateEnum = "error"
 )
 
+func (e OrganizationExportResponseStateEnum) ToPointer() *OrganizationExportResponseStateEnum {
+	return &e
+}
+
 func (e *OrganizationExportResponseStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "started":
@@ -31,10 +35,10 @@ func (e *OrganizationExportResponseStateEnum) UnmarshalJSON(data []byte) error {
 	case "finished":
 		fallthrough
 	case "error":
-		*e = OrganizationExportResponseStateEnum(s)
+		*e = OrganizationExportResponseStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationExportResponseStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationExportResponseStateEnum: %v", v)
 	}
 }
 

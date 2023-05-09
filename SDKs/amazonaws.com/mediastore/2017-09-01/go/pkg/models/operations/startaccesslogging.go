@@ -16,17 +16,21 @@ const (
 	StartAccessLoggingXAmzTargetEnumMediaStore20170901StartAccessLogging StartAccessLoggingXAmzTargetEnum = "MediaStore_20170901.StartAccessLogging"
 )
 
+func (e StartAccessLoggingXAmzTargetEnum) ToPointer() *StartAccessLoggingXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartAccessLoggingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MediaStore_20170901.StartAccessLogging":
-		*e = StartAccessLoggingXAmzTargetEnum(s)
+		*e = StartAccessLoggingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartAccessLoggingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartAccessLoggingXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -86,10 +86,8 @@ type PointPointDailyAllDayData struct {
 	// Temperature 2 metres above ground. (allday avg)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	Temperature *float64 `json:"temperature,omitempty"`
-	// Temperature 2 metres above ground. (allday max)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	TemperatureMax *float64 `json:"temperature_max,omitempty"`
-	// Temperature 2 metres above ground. (allday min)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	TemperatureMin *float64 `json:"temperature_min,omitempty"`
 	// Visibility. (allday avg)
@@ -101,10 +99,8 @@ type PointPointDailyAllDayData struct {
 	// Temperature 2 metres above ground. (allday avg)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	WindChill *float64 `json:"wind_chill,omitempty"`
-	// Temperature 2 metres above ground. (allday max)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	WindChillMax *float64 `json:"wind_chill_max,omitempty"`
-	// Temperature 2 metres above ground. (allday min)
 	// Units: metric = °C, us = °F, uk = °C, ca = °C
 	WindChillMin *float64 `json:"wind_chill_min,omitempty"`
 }

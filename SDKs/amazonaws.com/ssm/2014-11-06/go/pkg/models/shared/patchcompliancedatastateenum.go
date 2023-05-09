@@ -19,12 +19,16 @@ const (
 	PatchComplianceDataStateEnumFailed                 PatchComplianceDataStateEnum = "FAILED"
 )
 
+func (e PatchComplianceDataStateEnum) ToPointer() *PatchComplianceDataStateEnum {
+	return &e
+}
+
 func (e *PatchComplianceDataStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTALLED":
 		fallthrough
 	case "INSTALLED_OTHER":
@@ -38,9 +42,9 @@ func (e *PatchComplianceDataStateEnum) UnmarshalJSON(data []byte) error {
 	case "NOT_APPLICABLE":
 		fallthrough
 	case "FAILED":
-		*e = PatchComplianceDataStateEnum(s)
+		*e = PatchComplianceDataStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchComplianceDataStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchComplianceDataStateEnum: %v", v)
 	}
 }

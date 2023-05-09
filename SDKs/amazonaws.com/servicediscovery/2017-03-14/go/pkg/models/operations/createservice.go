@@ -16,17 +16,21 @@ const (
 	CreateServiceXAmzTargetEnumRoute53AutoNamingV20170314CreateService CreateServiceXAmzTargetEnum = "Route53AutoNaming_v20170314.CreateService"
 )
 
+func (e CreateServiceXAmzTargetEnum) ToPointer() *CreateServiceXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateServiceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53AutoNaming_v20170314.CreateService":
-		*e = CreateServiceXAmzTargetEnum(s)
+		*e = CreateServiceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateServiceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateServiceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	FieldContentTypeEnumName         FieldContentTypeEnum = "NAME"
 )
 
+func (e FieldContentTypeEnum) ToPointer() *FieldContentTypeEnum {
+	return &e
+}
+
 func (e *FieldContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "NUMBER":
@@ -32,9 +36,9 @@ func (e *FieldContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EMAIL_ADDRESS":
 		fallthrough
 	case "NAME":
-		*e = FieldContentTypeEnum(s)
+		*e = FieldContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FieldContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FieldContentTypeEnum: %v", v)
 	}
 }

@@ -14,19 +14,23 @@ const (
 	TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnumNight   TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum = "Night"
 )
 
+func (e TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum) ToPointer() *TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum {
+	return &e
+}
+
 func (e *TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Regular":
 		fallthrough
 	case "Night":
-		*e = TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum(s)
+		*e = TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TflAPIPresentationEntitiesStopPointSequenceServiceTypeEnum: %v", v)
 	}
 }
 

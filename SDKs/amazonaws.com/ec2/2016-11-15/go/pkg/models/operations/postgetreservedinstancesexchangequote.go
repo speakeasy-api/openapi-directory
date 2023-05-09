@@ -15,17 +15,21 @@ const (
 	POSTGetReservedInstancesExchangeQuoteActionEnumGetReservedInstancesExchangeQuote POSTGetReservedInstancesExchangeQuoteActionEnum = "GetReservedInstancesExchangeQuote"
 )
 
+func (e POSTGetReservedInstancesExchangeQuoteActionEnum) ToPointer() *POSTGetReservedInstancesExchangeQuoteActionEnum {
+	return &e
+}
+
 func (e *POSTGetReservedInstancesExchangeQuoteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetReservedInstancesExchangeQuote":
-		*e = POSTGetReservedInstancesExchangeQuoteActionEnum(s)
+		*e = POSTGetReservedInstancesExchangeQuoteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetReservedInstancesExchangeQuoteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetReservedInstancesExchangeQuoteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetReservedInstancesExchangeQuoteVersionEnumTwoThousandAndSixteen1115 POSTGetReservedInstancesExchangeQuoteVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetReservedInstancesExchangeQuoteVersionEnum) ToPointer() *POSTGetReservedInstancesExchangeQuoteVersionEnum {
+	return &e
+}
+
 func (e *POSTGetReservedInstancesExchangeQuoteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetReservedInstancesExchangeQuoteVersionEnum(s)
+		*e = POSTGetReservedInstancesExchangeQuoteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetReservedInstancesExchangeQuoteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetReservedInstancesExchangeQuoteVersionEnum: %v", v)
 	}
 }
 

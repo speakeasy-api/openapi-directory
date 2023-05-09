@@ -36,7 +36,10 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteProductsIDJSON - Delete an existing Product.
 func (s *products) DeleteProductsIDJSON(ctx context.Context, request operations.DeleteProductsIDJSONRequest) (*operations.DeleteProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *products) GetProductsJSON(ctx context.Context, request operations.GetPr
 // GetProductsAfterIDJSON - Retrieves Products after the given id.
 func (s *products) GetProductsAfterIDJSON(ctx context.Context, request operations.GetProductsAfterIDJSONRequest) (*operations.GetProductsAfterIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/after/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/after/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +207,10 @@ func (s *products) GetProductsAfterIDJSON(ctx context.Context, request operation
 // GetProductsCategoryCategoryIDJSON - Retrieve Products filtered by category.
 func (s *products) GetProductsCategoryCategoryIDJSON(ctx context.Context, request operations.GetProductsCategoryCategoryIDJSONRequest) (*operations.GetProductsCategoryCategoryIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -259,7 +268,10 @@ func (s *products) GetProductsCategoryCategoryIDJSON(ctx context.Context, reques
 // GetProductsCategoryCategoryIDCountJSON - Count Products filtered by category.
 func (s *products) GetProductsCategoryCategoryIDCountJSON(ctx context.Context, request operations.GetProductsCategoryCategoryIDCountJSONRequest) (*operations.GetProductsCategoryCategoryIDCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}/count.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/category/{category_id}/count.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +440,10 @@ func (s *products) GetProductsSearchJSON(ctx context.Context, request operations
 // GetProductsStatusStatusJSON - Retrieve Products filtered by status.
 func (s *products) GetProductsStatusStatusJSON(ctx context.Context, request operations.GetProductsStatusStatusJSONRequest) (*operations.GetProductsStatusStatusJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/status/{status}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -486,7 +501,10 @@ func (s *products) GetProductsStatusStatusJSON(ctx context.Context, request oper
 // GetProductsStatusStatusCountJSON - Count Products filtered by status.
 func (s *products) GetProductsStatusStatusCountJSON(ctx context.Context, request operations.GetProductsStatusStatusCountJSONRequest) (*operations.GetProductsStatusStatusCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/status/{status}/count.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/status/{status}/count.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -544,7 +562,10 @@ func (s *products) GetProductsStatusStatusCountJSON(ctx context.Context, request
 // GetProductsIDJSON - Retrieve a single Product.
 func (s *products) GetProductsIDJSON(ctx context.Context, request operations.GetProductsIDJSONRequest) (*operations.GetProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -660,7 +681,10 @@ func (s *products) PostProductsJSON(ctx context.Context, request operations.Post
 // PutProductsIDJSON - Modify an existing Product.
 func (s *products) PutProductsIDJSON(ctx context.Context, request operations.PutProductsIDJSONRequest) (*operations.PutProductsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductEdit", "json")
 	if err != nil {

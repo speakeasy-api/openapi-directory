@@ -19,12 +19,16 @@ const (
 	UserRolePermissionAvailabilityEnumUserProfileOnly               UserRolePermissionAvailabilityEnum = "USER_PROFILE_ONLY"
 )
 
+func (e UserRolePermissionAvailabilityEnum) ToPointer() *UserRolePermissionAvailabilityEnum {
+	return &e
+}
+
 func (e *UserRolePermissionAvailabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_AVAILABLE_BY_DEFAULT":
 		fallthrough
 	case "ACCOUNT_BY_DEFAULT":
@@ -36,10 +40,10 @@ func (e *UserRolePermissionAvailabilityEnum) UnmarshalJSON(data []byte) error {
 	case "SUBACCOUNT_AND_ACCOUNT_ALWAYS":
 		fallthrough
 	case "USER_PROFILE_ONLY":
-		*e = UserRolePermissionAvailabilityEnum(s)
+		*e = UserRolePermissionAvailabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRolePermissionAvailabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRolePermissionAvailabilityEnum: %v", v)
 	}
 }
 

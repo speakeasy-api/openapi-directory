@@ -15,20 +15,24 @@ const (
 	PricingOptionsFareTypeEnumCorporate  PricingOptionsFareTypeEnum = "CORPORATE"
 )
 
+func (e PricingOptionsFareTypeEnum) ToPointer() *PricingOptionsFareTypeEnum {
+	return &e
+}
+
 func (e *PricingOptionsFareTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLISHED":
 		fallthrough
 	case "NEGOTIATED":
 		fallthrough
 	case "CORPORATE":
-		*e = PricingOptionsFareTypeEnum(s)
+		*e = PricingOptionsFareTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PricingOptionsFareTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PricingOptionsFareTypeEnum: %v", v)
 	}
 }

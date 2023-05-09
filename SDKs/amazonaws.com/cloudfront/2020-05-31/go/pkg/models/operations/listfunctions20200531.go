@@ -16,19 +16,23 @@ const (
 	ListFunctions20200531StageEnumLive        ListFunctions20200531StageEnum = "LIVE"
 )
 
+func (e ListFunctions20200531StageEnum) ToPointer() *ListFunctions20200531StageEnum {
+	return &e
+}
+
 func (e *ListFunctions20200531StageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPMENT":
 		fallthrough
 	case "LIVE":
-		*e = ListFunctions20200531StageEnum(s)
+		*e = ListFunctions20200531StageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFunctions20200531StageEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFunctions20200531StageEnum: %v", v)
 	}
 }
 

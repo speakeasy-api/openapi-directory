@@ -2,46 +2,43 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AddUserToAccountRequestBody{
+    ctx := context.Background()
+    res, err := s.Accounts.AddUserToAccount(ctx, operations.AddUserToAccountRequestBody{
         Account: operations.AddUserToAccountRequestBodyAccount{
-            AccountID: "corrupti",
-            Domain: "provident",
+            AccountID: sdk.String("corrupti"),
+            Domain: sdk.String("provident"),
         },
         Users: []AddUserToAccountRequestBodyUsers{
             operations.AddUserToAccountRequestBodyUsers{
                 Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                    Email: "Leda_Stiedemann@hotmail.com",
-                    UserID: "vel",
+                    Email: sdk.String("Leda_Stiedemann@hotmail.com"),
+                    UserID: sdk.String("vel"),
                 },
             },
             operations.AddUserToAccountRequestBodyUsers{
                 Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                    Email: "Luna.Hoppe@yahoo.com",
-                    UserID: "debitis",
+                    Email: sdk.String("Luna.Hoppe@yahoo.com"),
+                    UserID: sdk.String("debitis"),
                 },
             },
             operations.AddUserToAccountRequestBodyUsers{
                 Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                    Email: "Vincenzo.Goldner@gmail.com",
-                    UserID: "minus",
+                    Email: sdk.String("Vincenzo.Goldner@gmail.com"),
+                    UserID: sdk.String("minus"),
                 },
             },
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounts.AddUserToAccount(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

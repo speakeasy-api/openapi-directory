@@ -34,7 +34,10 @@ func newPDFGeneration(defaultClient, securityClient HTTPClient, serverURL, langu
 // Compile a PDF document from a specific template
 func (s *pdfGeneration) Compile(ctx context.Context, request operations.CompileRequest) (*operations.CompileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/templates/{template-token}/compile", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/templates/{template-token}/compile", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

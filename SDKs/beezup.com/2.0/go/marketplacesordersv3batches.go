@@ -37,7 +37,10 @@ func newMarketplacesOrdersV3Batches(defaultClient, securityClient HTTPClient, se
 // Max 100 items per call.
 func (s *marketplacesOrdersV3Batches) ChangeOrderListV2(ctx context.Context, request operations.ChangeOrderListV2Request) (*operations.ChangeOrderListV2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/v3/batches/changeOrders/{changeOrderType}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/v3/batches/changeOrders/{changeOrderType}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ChangeOrderListRequestV2", "json")
 	if err != nil {

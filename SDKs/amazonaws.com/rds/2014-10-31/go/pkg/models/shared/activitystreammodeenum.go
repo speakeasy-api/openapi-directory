@@ -14,18 +14,22 @@ const (
 	ActivityStreamModeEnumAsync ActivityStreamModeEnum = "async"
 )
 
+func (e ActivityStreamModeEnum) ToPointer() *ActivityStreamModeEnum {
+	return &e
+}
+
 func (e *ActivityStreamModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sync":
 		fallthrough
 	case "async":
-		*e = ActivityStreamModeEnum(s)
+		*e = ActivityStreamModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivityStreamModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActivityStreamModeEnum: %v", v)
 	}
 }

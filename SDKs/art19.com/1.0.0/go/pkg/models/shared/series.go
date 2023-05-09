@@ -16,19 +16,23 @@ const (
 	SeriesAttributesStatusEnumInactive SeriesAttributesStatusEnum = "inactive"
 )
 
+func (e SeriesAttributesStatusEnum) ToPointer() *SeriesAttributesStatusEnum {
+	return &e
+}
+
 func (e *SeriesAttributesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = SeriesAttributesStatusEnum(s)
+		*e = SeriesAttributesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SeriesAttributesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SeriesAttributesStatusEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,27 @@ const (
 	SeriesAttributesTypeEnumSeries SeriesAttributesTypeEnum = "Series"
 )
 
+func (e SeriesAttributesTypeEnum) ToPointer() *SeriesAttributesTypeEnum {
+	return &e
+}
+
 func (e *SeriesAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Series":
-		*e = SeriesAttributesTypeEnum(s)
+		*e = SeriesAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SeriesAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SeriesAttributesTypeEnum: %v", v)
 	}
 }
 
 type SeriesAttributes struct {
+	// If `null` or `true`, the ART19 web player will render an Amazon subscription badge
+	AmazonSubscriptionBadgeEnabled *bool `json:"amazon_subscription_badge_enabled,omitempty"`
 	// The Amazon Music subscription URL
 	AmazonSubscriptionURL *string `json:"amazon_subscription_url,omitempty"`
 	// The CastBox subscription URL

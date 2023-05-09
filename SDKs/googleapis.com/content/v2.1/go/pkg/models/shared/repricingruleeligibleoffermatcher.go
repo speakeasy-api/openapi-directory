@@ -17,12 +17,16 @@ const (
 	RepricingRuleEligibleOfferMatcherMatcherOptionEnumMatcherOptionAllProducts      RepricingRuleEligibleOfferMatcherMatcherOptionEnum = "MATCHER_OPTION_ALL_PRODUCTS"
 )
 
+func (e RepricingRuleEligibleOfferMatcherMatcherOptionEnum) ToPointer() *RepricingRuleEligibleOfferMatcherMatcherOptionEnum {
+	return &e
+}
+
 func (e *RepricingRuleEligibleOfferMatcherMatcherOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MATCHER_OPTION_UNSPECIFIED":
 		fallthrough
 	case "MATCHER_OPTION_CUSTOM_FILTER":
@@ -30,10 +34,10 @@ func (e *RepricingRuleEligibleOfferMatcherMatcherOptionEnum) UnmarshalJSON(data 
 	case "MATCHER_OPTION_USE_FEED_ATTRIBUTE":
 		fallthrough
 	case "MATCHER_OPTION_ALL_PRODUCTS":
-		*e = RepricingRuleEligibleOfferMatcherMatcherOptionEnum(s)
+		*e = RepricingRuleEligibleOfferMatcherMatcherOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RepricingRuleEligibleOfferMatcherMatcherOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for RepricingRuleEligibleOfferMatcherMatcherOptionEnum: %v", v)
 	}
 }
 

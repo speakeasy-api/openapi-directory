@@ -16,17 +16,21 @@ const (
 	DeleteMaintenanceWindowXAmzTargetEnumAmazonSsmDeleteMaintenanceWindow DeleteMaintenanceWindowXAmzTargetEnum = "AmazonSSM.DeleteMaintenanceWindow"
 )
 
+func (e DeleteMaintenanceWindowXAmzTargetEnum) ToPointer() *DeleteMaintenanceWindowXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMaintenanceWindowXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeleteMaintenanceWindow":
-		*e = DeleteMaintenanceWindowXAmzTargetEnum(s)
+		*e = DeleteMaintenanceWindowXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMaintenanceWindowXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMaintenanceWindowXAmzTargetEnum: %v", v)
 	}
 }
 

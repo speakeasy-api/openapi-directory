@@ -22,19 +22,23 @@ const (
 	GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnumPerson        GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum = "Person"
 )
 
+func (e GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum) ToPointer() *GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum {
+	return &e
+}
+
 func (e *GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CompanyEntity":
 		fallthrough
 	case "Person":
-		*e = GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum(s)
+		*e = GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesSpaceIDFoldersIDLegalEntity200ApplicationJSONClassEnum: %v", v)
 	}
 }
 

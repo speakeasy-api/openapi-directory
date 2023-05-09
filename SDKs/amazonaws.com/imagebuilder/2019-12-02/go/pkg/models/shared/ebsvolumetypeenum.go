@@ -19,12 +19,16 @@ const (
 	EbsVolumeTypeEnumSt1      EbsVolumeTypeEnum = "st1"
 )
 
+func (e EbsVolumeTypeEnum) ToPointer() *EbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *EbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -38,9 +42,9 @@ func (e *EbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sc1":
 		fallthrough
 	case "st1":
-		*e = EbsVolumeTypeEnum(s)
+		*e = EbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EbsVolumeTypeEnum: %v", v)
 	}
 }

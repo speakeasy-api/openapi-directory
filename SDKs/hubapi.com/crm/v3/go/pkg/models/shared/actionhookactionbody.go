@@ -21,12 +21,16 @@ const (
 	ActionHookActionBodyHTTPMethodEnumTrace   ActionHookActionBodyHTTPMethodEnum = "TRACE"
 )
 
+func (e ActionHookActionBodyHTTPMethodEnum) ToPointer() *ActionHookActionBodyHTTPMethodEnum {
+	return &e
+}
+
 func (e *ActionHookActionBodyHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECT":
 		fallthrough
 	case "DELETE":
@@ -44,10 +48,10 @@ func (e *ActionHookActionBodyHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PUT":
 		fallthrough
 	case "TRACE":
-		*e = ActionHookActionBodyHTTPMethodEnum(s)
+		*e = ActionHookActionBodyHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionHookActionBodyHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionHookActionBodyHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -57,17 +61,21 @@ const (
 	ActionHookActionBodyTypeEnumActionHook ActionHookActionBodyTypeEnum = "ACTION_HOOK"
 )
 
+func (e ActionHookActionBodyTypeEnum) ToPointer() *ActionHookActionBodyTypeEnum {
+	return &e
+}
+
 func (e *ActionHookActionBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTION_HOOK":
-		*e = ActionHookActionBodyTypeEnum(s)
+		*e = ActionHookActionBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionHookActionBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionHookActionBodyTypeEnum: %v", v)
 	}
 }
 

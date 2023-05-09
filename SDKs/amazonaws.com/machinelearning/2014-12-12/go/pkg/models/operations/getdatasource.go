@@ -16,17 +16,21 @@ const (
 	GetDataSourceXAmzTargetEnumAmazonMl20141212GetDataSource GetDataSourceXAmzTargetEnum = "AmazonML_20141212.GetDataSource"
 )
 
+func (e GetDataSourceXAmzTargetEnum) ToPointer() *GetDataSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetDataSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.GetDataSource":
-		*e = GetDataSourceXAmzTargetEnum(s)
+		*e = GetDataSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDataSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDataSourceXAmzTargetEnum: %v", v)
 	}
 }
 

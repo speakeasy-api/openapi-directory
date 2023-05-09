@@ -16,17 +16,21 @@ const (
 	CreateConnectionXAmzTargetEnumComAmazonawsCodestarConnectionsCodeStarConnections20191201CreateConnection CreateConnectionXAmzTargetEnum = "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection"
 )
 
+func (e CreateConnectionXAmzTargetEnum) ToPointer() *CreateConnectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateConnectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection":
-		*e = CreateConnectionXAmzTargetEnum(s)
+		*e = CreateConnectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateConnectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateConnectionXAmzTargetEnum: %v", v)
 	}
 }
 

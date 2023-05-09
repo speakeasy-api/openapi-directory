@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,35 +17,33 @@ func main() {
         }),
     )
 
-    req := operations.BatchExecuteStatementRequest{
+    ctx := context.Background()
+    res, err := s.BatchExecuteStatement(ctx, operations.BatchExecuteStatementRequest{
         BatchExecuteStatementInput: shared.BatchExecuteStatementInput{
-            ClientToken: "corrupti",
-            ClusterIdentifier: "provident",
+            ClientToken: sdk.String("corrupti"),
+            ClusterIdentifier: sdk.String("provident"),
             Database: "distinctio",
-            DbUser: "quibusdam",
-            SecretArn: "unde",
+            DbUser: sdk.String("quibusdam"),
+            SecretArn: sdk.String("unde"),
             Sqls: []string{
                 "corrupti",
                 "illum",
                 "vel",
                 "error",
             },
-            StatementName: "deserunt",
-            WithEvent: false,
-            WorkgroupName: "suscipit",
+            StatementName: sdk.String("deserunt"),
+            WithEvent: sdk.Bool(false),
+            WorkgroupName: sdk.String("suscipit"),
         },
-        XAmzAlgorithm: "iure",
-        XAmzContentSha256: "magnam",
-        XAmzCredential: "debitis",
-        XAmzDate: "ipsa",
-        XAmzSecurityToken: "delectus",
-        XAmzSignature: "tempora",
-        XAmzSignedHeaders: "suscipit",
-        XAmzTarget: "RedshiftData.BatchExecuteStatement",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchExecuteStatement(ctx, req)
+        XAmzAlgorithm: sdk.String("iure"),
+        XAmzContentSha256: sdk.String("magnam"),
+        XAmzCredential: sdk.String("debitis"),
+        XAmzDate: sdk.String("ipsa"),
+        XAmzSecurityToken: sdk.String("delectus"),
+        XAmzSignature: sdk.String("tempora"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+        XAmzTarget: operations.BatchExecuteStatementXAmzTargetEnumRedshiftDataBatchExecuteStatement,
+    })
     if err != nil {
         log.Fatal(err)
     }

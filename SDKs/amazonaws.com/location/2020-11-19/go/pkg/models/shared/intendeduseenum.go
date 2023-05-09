@@ -14,18 +14,22 @@ const (
 	IntendedUseEnumStorage   IntendedUseEnum = "Storage"
 )
 
+func (e IntendedUseEnum) ToPointer() *IntendedUseEnum {
+	return &e
+}
+
 func (e *IntendedUseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SingleUse":
 		fallthrough
 	case "Storage":
-		*e = IntendedUseEnum(s)
+		*e = IntendedUseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntendedUseEnum: %s", s)
+		return fmt.Errorf("invalid value for IntendedUseEnum: %v", v)
 	}
 }

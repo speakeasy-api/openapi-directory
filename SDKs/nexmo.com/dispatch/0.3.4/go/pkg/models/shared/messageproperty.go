@@ -28,12 +28,16 @@ const (
 	MessagePropertyContentTypeEnumCustom   MessagePropertyContentTypeEnum = "custom"
 )
 
+func (e MessagePropertyContentTypeEnum) ToPointer() *MessagePropertyContentTypeEnum {
+	return &e
+}
+
 func (e *MessagePropertyContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "text":
 		fallthrough
 	case "image":
@@ -47,10 +51,10 @@ func (e *MessagePropertyContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "template":
 		fallthrough
 	case "custom":
-		*e = MessagePropertyContentTypeEnum(s)
+		*e = MessagePropertyContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagePropertyContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagePropertyContentTypeEnum: %v", v)
 	}
 }
 
@@ -91,21 +95,25 @@ const (
 	MessagePropertyMessengerCategoryEnumMessageTag MessagePropertyMessengerCategoryEnum = "message_tag"
 )
 
+func (e MessagePropertyMessengerCategoryEnum) ToPointer() *MessagePropertyMessengerCategoryEnum {
+	return &e
+}
+
 func (e *MessagePropertyMessengerCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "response":
 		fallthrough
 	case "update":
 		fallthrough
 	case "message_tag":
-		*e = MessagePropertyMessengerCategoryEnum(s)
+		*e = MessagePropertyMessengerCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagePropertyMessengerCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagePropertyMessengerCategoryEnum: %v", v)
 	}
 }
 
@@ -124,19 +132,23 @@ const (
 	MessagePropertyViberServiceMsgCategoryEnumPromotion   MessagePropertyViberServiceMsgCategoryEnum = "promotion"
 )
 
+func (e MessagePropertyViberServiceMsgCategoryEnum) ToPointer() *MessagePropertyViberServiceMsgCategoryEnum {
+	return &e
+}
+
 func (e *MessagePropertyViberServiceMsgCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "promotion":
-		*e = MessagePropertyViberServiceMsgCategoryEnum(s)
+		*e = MessagePropertyViberServiceMsgCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagePropertyViberServiceMsgCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagePropertyViberServiceMsgCategoryEnum: %v", v)
 	}
 }
 
@@ -155,19 +167,23 @@ const (
 	MessagePropertyWhatsappPolicyEnumDeterministic MessagePropertyWhatsappPolicyEnum = "deterministic"
 )
 
+func (e MessagePropertyWhatsappPolicyEnum) ToPointer() *MessagePropertyWhatsappPolicyEnum {
+	return &e
+}
+
 func (e *MessagePropertyWhatsappPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fallback":
 		fallthrough
 	case "deterministic":
-		*e = MessagePropertyWhatsappPolicyEnum(s)
+		*e = MessagePropertyWhatsappPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessagePropertyWhatsappPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for MessagePropertyWhatsappPolicyEnum: %v", v)
 	}
 }
 

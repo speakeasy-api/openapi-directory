@@ -16,17 +16,21 @@ const (
 	CreateResolverEndpointXAmzTargetEnumRoute53ResolverCreateResolverEndpoint CreateResolverEndpointXAmzTargetEnum = "Route53Resolver.CreateResolverEndpoint"
 )
 
+func (e CreateResolverEndpointXAmzTargetEnum) ToPointer() *CreateResolverEndpointXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateResolverEndpointXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.CreateResolverEndpoint":
-		*e = CreateResolverEndpointXAmzTargetEnum(s)
+		*e = CreateResolverEndpointXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateResolverEndpointXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateResolverEndpointXAmzTargetEnum: %v", v)
 	}
 }
 

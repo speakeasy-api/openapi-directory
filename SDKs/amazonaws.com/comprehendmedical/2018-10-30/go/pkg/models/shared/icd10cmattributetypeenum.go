@@ -19,12 +19,16 @@ const (
 	Icd10CMAttributeTypeEnumTimeExpression  Icd10CMAttributeTypeEnum = "TIME_EXPRESSION"
 )
 
+func (e Icd10CMAttributeTypeEnum) ToPointer() *Icd10CMAttributeTypeEnum {
+	return &e
+}
+
 func (e *Icd10CMAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACUITY":
 		fallthrough
 	case "DIRECTION":
@@ -38,9 +42,9 @@ func (e *Icd10CMAttributeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIME_TO_DX_NAME":
 		fallthrough
 	case "TIME_EXPRESSION":
-		*e = Icd10CMAttributeTypeEnum(s)
+		*e = Icd10CMAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Icd10CMAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Icd10CMAttributeTypeEnum: %v", v)
 	}
 }

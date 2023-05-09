@@ -19,12 +19,16 @@ const (
 	OutcomeSummaryEnumFlaky        OutcomeSummaryEnum = "flaky"
 )
 
+func (e OutcomeSummaryEnum) ToPointer() *OutcomeSummaryEnum {
+	return &e
+}
+
 func (e *OutcomeSummaryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unset":
 		fallthrough
 	case "success":
@@ -36,10 +40,10 @@ func (e *OutcomeSummaryEnum) UnmarshalJSON(data []byte) error {
 	case "skipped":
 		fallthrough
 	case "flaky":
-		*e = OutcomeSummaryEnum(s)
+		*e = OutcomeSummaryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutcomeSummaryEnum: %s", s)
+		return fmt.Errorf("invalid value for OutcomeSummaryEnum: %v", v)
 	}
 }
 

@@ -20,17 +20,21 @@ const (
 	PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnumRadiodns PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum = "radiodns"
 )
 
+func (e PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum) ToPointer() *PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "radiodns":
-		*e = PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum(s)
+		*e = PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIV2MetapubProgramInformationBatchRequestBodyFormatEnum: %v", v)
 	}
 }
 

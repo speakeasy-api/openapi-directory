@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/iqualify.com/v1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -45,134 +43,134 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIInfo
+### [APIInfo](docs/apiinfo/README.md)
 
-* `Get` - List supported endpoints URLs
+* [Get](docs/apiinfo/README.md#get) - List supported endpoints URLs
 
-### AssessmentData
+### [AssessmentData](docs/assessmentdata/README.md)
 
-* `GetOfferingsOfferingIDAnalyticsActivitiesResponses` - Find open response activity attempts
-* `GetOfferingsOfferingIDAnalyticsMarksAssignments` - Find assessment marks
-* `GetOfferingsOfferingIDAnalyticsMarksQuizzes` - Find quiz marks
-* `GetOfferingsOfferingIDAnalyticsSubmissionsAssignments` - Find submissions to assessments, including marks if any
-* `GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentID` - Find submissions to a specified open response assessment, including marks if any
-* `GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentID` - Find a learner's submission to a specified assessment, including marks if any
+* [GetOfferingsOfferingIDAnalyticsActivitiesResponses](docs/assessmentdata/README.md#getofferingsofferingidanalyticsactivitiesresponses) - Find open response activity attempts
+* [GetOfferingsOfferingIDAnalyticsMarksAssignments](docs/assessmentdata/README.md#getofferingsofferingidanalyticsmarksassignments) - Find assessment marks
+* [GetOfferingsOfferingIDAnalyticsMarksQuizzes](docs/assessmentdata/README.md#getofferingsofferingidanalyticsmarksquizzes) - Find quiz marks
+* [GetOfferingsOfferingIDAnalyticsSubmissionsAssignments](docs/assessmentdata/README.md#getofferingsofferingidanalyticssubmissionsassignments) - Find submissions to assessments, including marks if any
+* [GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentID](docs/assessmentdata/README.md#getofferingsofferingidanalyticssubmissionsopenresponseassessmentid) - Find submissions to a specified open response assessment, including marks if any
+* [GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentID](docs/assessmentdata/README.md#getofferingsofferingidanalyticssubmissionsuseremailassignmentsassessmentid) - Find a learner's submission to a specified assessment, including marks if any
 
-### AssessmentGroups
+### [AssessmentGroups](docs/assessmentgroups/README.md)
 
-* `DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmail` - Remove a learner from an assessment group
-* `GetOfferingsOfferingIDGroups` - Find assessment groups
-* `GetOfferingsOfferingIDGroupsGroupIDLearners` - Find learners in an assessment group
-* `PostOfferingsOfferingIDGroups` - Add an assessment group
-* `PostOfferingsOfferingIDGroupsGroupIDLearners` - Add a learner to an assessment group
+* [DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmail](docs/assessmentgroups/README.md#deleteofferingsofferingidgroupsgroupidlearnersuseremail) - Remove a learner from an assessment group
+* [GetOfferingsOfferingIDGroups](docs/assessmentgroups/README.md#getofferingsofferingidgroups) - Find assessment groups
+* [GetOfferingsOfferingIDGroupsGroupIDLearners](docs/assessmentgroups/README.md#getofferingsofferingidgroupsgroupidlearners) - Find learners in an assessment group
+* [PostOfferingsOfferingIDGroups](docs/assessmentgroups/README.md#postofferingsofferingidgroups) - Add an assessment group
+* [PostOfferingsOfferingIDGroupsGroupIDLearners](docs/assessmentgroups/README.md#postofferingsofferingidgroupsgroupidlearners) - Add a learner to an assessment group
 
-### AssessmentManagement
+### [AssessmentManagement](docs/assessmentmanagement/README.md)
 
-* `DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentID` - Remove assessment document
-* `DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentID` - Reset user's assessment to draft state
-* `GetOfferingsOfferingIDActivitiesOpenresponse` - Find offering's activities
-* `GetOfferingsOfferingIDAssessments` - Find offering's assessments
-* `GetOfferingsOfferingIDLearnersPendingSubmission` - Find learners with assessments pending x days before due date within the specified offeringId
-* `GetOfferingsOfferingIDUsersUserEmailSubmissionsOpenResponse` - Find learner's open response assessment submissions
-* `PatchOfferingsOfferingIDAssessmentsAssessmentID` - Update assessment details
-* `PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmail` - Update the due dates for a learner's quiz attempt
+* [DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentID](docs/assessmentmanagement/README.md#deleteofferingsofferingidassessmentsassessmentiddocumentsdocumentid) - Remove assessment document
+* [DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentID](docs/assessmentmanagement/README.md#deleteofferingsofferingidusersuseremailassessmentsassessmentid) - Reset user's assessment to draft state
+* [GetOfferingsOfferingIDActivitiesOpenresponse](docs/assessmentmanagement/README.md#getofferingsofferingidactivitiesopenresponse) - Find offering's activities
+* [GetOfferingsOfferingIDAssessments](docs/assessmentmanagement/README.md#getofferingsofferingidassessments) - Find offering's assessments
+* [GetOfferingsOfferingIDLearnersPendingSubmission](docs/assessmentmanagement/README.md#getofferingsofferingidlearnerspendingsubmission) - Find learners with assessments pending x days before due date within the specified offeringId
+* [GetOfferingsOfferingIDUsersUserEmailSubmissionsOpenResponse](docs/assessmentmanagement/README.md#getofferingsofferingidusersuseremailsubmissionsopenresponse) - Find learner's open response assessment submissions
+* [PatchOfferingsOfferingIDAssessmentsAssessmentID](docs/assessmentmanagement/README.md#patchofferingsofferingidassessmentsassessmentid) - Update assessment details
+* [PatchOfferingsOfferingIDAssessmentsAssessmentIDUserEmail](docs/assessmentmanagement/README.md#patchofferingsofferingidassessmentsassessmentiduseremail) - Update the due dates for a learner's quiz attempt
 
-### Badges
+### [Badges](docs/badges/README.md)
 
-* `GetOfferingsOfferingIDBadges` - Find offering badges
-* `GetUsersUserEmailBadges` - Find user's badges
-* `PostOfferingsOfferingIDUsersUserEmailBadgesAward` - Award badge
+* [GetOfferingsOfferingIDBadges](docs/badges/README.md#getofferingsofferingidbadges) - Find offering badges
+* [GetUsersUserEmailBadges](docs/badges/README.md#getusersuseremailbadges) - Find user's badges
+* [PostOfferingsOfferingIDUsersUserEmailBadgesAward](docs/badges/README.md#postofferingsofferingidusersuseremailbadgesaward) - Award badge
 
-### Channels
+### [Channels](docs/channels/README.md)
 
-* `DeleteOfferingsOfferingIDChannelsChannelIDLearners` - Remove learners from a group channel
-* `GetOfferingsOfferingIDAnalyticsChannelsChannelIDComments` - Find comments
-* `GetOfferingsOfferingIDAnalyticsChannelsChannelIDPosts` - Find posts
-* `GetOfferingsOfferingIDAnalyticsChannelsChannelIDReplies` - Find replies
-* `GetOfferingsOfferingIDChannels` - Find channels
-* `GetOfferingsOfferingIDChannelsChannelIDLearners` - Find learners in a group channel
-* `PatchOfferingsOfferingIDChannelsChannelID` - Update channel
-* `PostOfferingsOfferingIDChannels` - Add channel
-* `PostOfferingsOfferingIDChannelsChannelIDLearners` - Add learners to a group channel
+* [DeleteOfferingsOfferingIDChannelsChannelIDLearners](docs/channels/README.md#deleteofferingsofferingidchannelschannelidlearners) - Remove learners from a group channel
+* [GetOfferingsOfferingIDAnalyticsChannelsChannelIDComments](docs/channels/README.md#getofferingsofferingidanalyticschannelschannelidcomments) - Find comments
+* [GetOfferingsOfferingIDAnalyticsChannelsChannelIDPosts](docs/channels/README.md#getofferingsofferingidanalyticschannelschannelidposts) - Find posts
+* [GetOfferingsOfferingIDAnalyticsChannelsChannelIDReplies](docs/channels/README.md#getofferingsofferingidanalyticschannelschannelidreplies) - Find replies
+* [GetOfferingsOfferingIDChannels](docs/channels/README.md#getofferingsofferingidchannels) - Find channels
+* [GetOfferingsOfferingIDChannelsChannelIDLearners](docs/channels/README.md#getofferingsofferingidchannelschannelidlearners) - Find learners in a group channel
+* [PatchOfferingsOfferingIDChannelsChannelID](docs/channels/README.md#patchofferingsofferingidchannelschannelid) - Update channel
+* [PostOfferingsOfferingIDChannels](docs/channels/README.md#postofferingsofferingidchannels) - Add channel
+* [PostOfferingsOfferingIDChannelsChannelIDLearners](docs/channels/README.md#postofferingsofferingidchannelschannelidlearners) - Add learners to a group channel
 
-### CourseMappings
+### [CourseMappings](docs/coursemappings/README.md)
 
-* `DeleteCourseMappingsOfferingIDExternalCourseID` - Remove course mapping
-* `GetCourseMappings` - Find course mappings
-* `GetCourseMappingsExternalcourseExternalCourseID` - Find course mappings by externalCourseId
-* `GetCourseMappingsOfferingID` - Find course mappings by offeringId
-* `PutCourseMappingsOfferingIDExternalCourseID` - Add course mapping
+* [DeleteCourseMappingsOfferingIDExternalCourseID](docs/coursemappings/README.md#deletecoursemappingsofferingidexternalcourseid) - Remove course mapping
+* [GetCourseMappings](docs/coursemappings/README.md#getcoursemappings) - Find course mappings
+* [GetCourseMappingsExternalcourseExternalCourseID](docs/coursemappings/README.md#getcoursemappingsexternalcourseexternalcourseid) - Find course mappings by externalCourseId
+* [GetCourseMappingsOfferingID](docs/coursemappings/README.md#getcoursemappingsofferingid) - Find course mappings by offeringId
+* [PutCourseMappingsOfferingIDExternalCourseID](docs/coursemappings/README.md#putcoursemappingsofferingidexternalcourseid) - Add course mapping
 
-### CourseMetadata
+### [CourseMetadata](docs/coursemetadata/README.md)
 
-* `PutCoursesContentIDMetadataCategory` - Update course category
-* `PutCoursesContentIDMetadataLevel` - Update course level
-* `PutCoursesContentIDMetadataTags` - Update course tags
-* `PutCoursesContentIDMetadataTopic` - Update course topic
+* [PutCoursesContentIDMetadataCategory](docs/coursemetadata/README.md#putcoursescontentidmetadatacategory) - Update course category
+* [PutCoursesContentIDMetadataLevel](docs/coursemetadata/README.md#putcoursescontentidmetadatalevel) - Update course level
+* [PutCoursesContentIDMetadataTags](docs/coursemetadata/README.md#putcoursescontentidmetadatatags) - Update course tags
+* [PutCoursesContentIDMetadataTopic](docs/coursemetadata/README.md#putcoursescontentidmetadatatopic) - Update course topic
 
-### Courses
+### [Courses](docs/courses/README.md)
 
-* `GetCourses` - Find courses
-* `GetCoursesContentID` - Find course by contentId
-* `GetCoursesContentIDActivations` - Find activations for a contentId
-* `GetCoursesContentIDPermissions` - Find users who have access to the contentId provided
-* `PostCoursesRootContentIDPermissionsUserEmail` - Update course access
+* [GetCourses](docs/courses/README.md#getcourses) - Find courses
+* [GetCoursesContentID](docs/courses/README.md#getcoursescontentid) - Find course by contentId
+* [GetCoursesContentIDActivations](docs/courses/README.md#getcoursescontentidactivations) - Find activations for a contentId
+* [GetCoursesContentIDPermissions](docs/courses/README.md#getcoursescontentidpermissions) - Find users who have access to the contentId provided
+* [PostCoursesRootContentIDPermissionsUserEmail](docs/courses/README.md#postcoursesrootcontentidpermissionsuseremail) - Update course access
 
-### LearnerActivity
+### [LearnerActivity](docs/learneractivity/README.md)
 
-* `GetOfferingsOfferingIDAnalyticsLearnersProgress` - Find learner progress in a specified offering
-* `GetOfferingsOfferingIDAnalyticsSocialNotes` - Find shared social notes in an offering
-* `GetOfferingsOfferingIDAnalyticsUnitReactions` - Find unit reactions
-* `GetUsersUserEmailOfferingsOfferingIDProgress` - Find learner's progress in a specified offering
-* `GetUsersUserEmailProgress` - Find learner's progress in offerings
+* [GetOfferingsOfferingIDAnalyticsLearnersProgress](docs/learneractivity/README.md#getofferingsofferingidanalyticslearnersprogress) - Find learner progress in a specified offering
+* [GetOfferingsOfferingIDAnalyticsSocialNotes](docs/learneractivity/README.md#getofferingsofferingidanalyticssocialnotes) - Find shared social notes in an offering
+* [GetOfferingsOfferingIDAnalyticsUnitReactions](docs/learneractivity/README.md#getofferingsofferingidanalyticsunitreactions) - Find unit reactions
+* [GetUsersUserEmailOfferingsOfferingIDProgress](docs/learneractivity/README.md#getusersuseremailofferingsofferingidprogress) - Find learner's progress in a specified offering
+* [GetUsersUserEmailProgress](docs/learneractivity/README.md#getusersuseremailprogress) - Find learner's progress in offerings
 
-### OfferingLearners
+### [OfferingLearners](docs/offeringlearners/README.md)
 
-* `DeleteOfferingsOfferingIDUsersMarkerEmailMarks` - Remove learners from coach's marking list
-* `DeleteOfferingsOfferingIDUsersUserEmail` - Removes user from the offering
-* `GetOfferingsOfferingIDUsers` - Find offering's users
-* `GetOfferingsOfferingIDUsersMarkerEmailMarks` - Find Learners marked by a coach
-* `PatchUsersUserEmailTransfer` - Transfer a user between offerings
-* `PostOfferingsOfferingIDUsers` - Adds user to the offering
-* `PostOfferingsOfferingIDUsersMarkerEmailMarks` - Add learners to be marked by a coach
+* [DeleteOfferingsOfferingIDUsersMarkerEmailMarks](docs/offeringlearners/README.md#deleteofferingsofferingidusersmarkeremailmarks) - Remove learners from coach's marking list
+* [DeleteOfferingsOfferingIDUsersUserEmail](docs/offeringlearners/README.md#deleteofferingsofferingidusersuseremail) - Removes user from the offering
+* [GetOfferingsOfferingIDUsers](docs/offeringlearners/README.md#getofferingsofferingidusers) - Find offering's users
+* [GetOfferingsOfferingIDUsersMarkerEmailMarks](docs/offeringlearners/README.md#getofferingsofferingidusersmarkeremailmarks) - Find Learners marked by a coach
+* [PatchUsersUserEmailTransfer](docs/offeringlearners/README.md#patchusersuseremailtransfer) - Transfer a user between offerings
+* [PostOfferingsOfferingIDUsers](docs/offeringlearners/README.md#postofferingsofferingidusers) - Adds user to the offering
+* [PostOfferingsOfferingIDUsersMarkerEmailMarks](docs/offeringlearners/README.md#postofferingsofferingidusersmarkeremailmarks) - Add learners to be marked by a coach
 
-### OfferingMetadata
+### [OfferingMetadata](docs/offeringmetadata/README.md)
 
-* `PutOfferingsOfferingIDMetadataCategory` - Update offering category metadata
-* `PutOfferingsOfferingIDMetadataLevel` - Update offering level metadata
-* `PutOfferingsOfferingIDMetadataTags` - Update offering tags metadata
-* `PutOfferingsOfferingIDMetadataTopic` - Update offering topic metadata
+* [PutOfferingsOfferingIDMetadataCategory](docs/offeringmetadata/README.md#putofferingsofferingidmetadatacategory) - Update offering category metadata
+* [PutOfferingsOfferingIDMetadataLevel](docs/offeringmetadata/README.md#putofferingsofferingidmetadatalevel) - Update offering level metadata
+* [PutOfferingsOfferingIDMetadataTags](docs/offeringmetadata/README.md#putofferingsofferingidmetadatatags) - Update offering tags metadata
+* [PutOfferingsOfferingIDMetadataTopic](docs/offeringmetadata/README.md#putofferingsofferingidmetadatatopic) - Update offering topic metadata
 
-### Offerings
+### [Offerings](docs/offerings/README.md)
 
-* `GetOfferings` - Find current, past and future offerings
-* `GetOfferingsCurrent` - Find active offerings
-* `GetOfferingsFuture` - Find scheduled offerings
-* `GetOfferingsInfoTextPattern` - Find offerings where info field matches the specified textPattern
-* `GetOfferingsPast` - Find past offerings
-* `GetOfferingsOfferingID` - Find offering by ID
-* `PatchOfferingsOfferingID` - Update offering
-* `PostOfferings` - Create offering
+* [GetOfferings](docs/offerings/README.md#getofferings) - Find current, past and future offerings
+* [GetOfferingsCurrent](docs/offerings/README.md#getofferingscurrent) - Find active offerings
+* [GetOfferingsFuture](docs/offerings/README.md#getofferingsfuture) - Find scheduled offerings
+* [GetOfferingsInfoTextPattern](docs/offerings/README.md#getofferingsinfotextpattern) - Find offerings where info field matches the specified textPattern
+* [GetOfferingsPast](docs/offerings/README.md#getofferingspast) - Find past offerings
+* [GetOfferingsOfferingID](docs/offerings/README.md#getofferingsofferingid) - Find offering by ID
+* [PatchOfferingsOfferingID](docs/offerings/README.md#patchofferingsofferingid) - Update offering
+* [PostOfferings](docs/offerings/README.md#postofferings) - Create offering
 
-### Organisation
+### [Organisation](docs/organisation/README.md)
 
-* `GetOrg` - Gets the current organisation
+* [GetOrg](docs/organisation/README.md#getorg) - Gets the current organisation
 
-### Pulses
+### [Pulses](docs/pulses/README.md)
 
-* `GetOfferingsOfferingIDAnalyticsPulses` - Find all pulse IDs in the specified offering
-* `GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponses` - Find pulses by offeringId and pulseId
+* [GetOfferingsOfferingIDAnalyticsPulses](docs/pulses/README.md#getofferingsofferingidanalyticspulses) - Find all pulse IDs in the specified offering
+* [GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponses](docs/pulses/README.md#getofferingsofferingidanalyticspulsespulseidresponses) - Find pulses by offeringId and pulseId
 
-### UsersInIQualify
+### [UsersInIQualify](docs/usersiniqualify/README.md)
 
-* `GetUsersUserEmail` - Find user by email
-* `GetUsersUserEmailOfferings` - Find user's offerings
-* `PatchUsersUserEmail` - Update user
-* `PostUsers` - Add new user
-* `PostUsersUserEmailInviteEmail` - Resend invitation email
-* `PostUsersUserEmailOfferings` - Adds the user to the specified offerings as a learner
-* `PostUsersUserEmailPermissionsPermissionName` - Add permission to user
-* `PutUsersUserEmailSuspend` - Suspend user
+* [GetUsersUserEmail](docs/usersiniqualify/README.md#getusersuseremail) - Find user by email
+* [GetUsersUserEmailOfferings](docs/usersiniqualify/README.md#getusersuseremailofferings) - Find user's offerings
+* [PatchUsersUserEmail](docs/usersiniqualify/README.md#patchusersuseremail) - Update user
+* [PostUsers](docs/usersiniqualify/README.md#postusers) - Add new user
+* [PostUsersUserEmailInviteEmail](docs/usersiniqualify/README.md#postusersuseremailinviteemail) - Resend invitation email
+* [PostUsersUserEmailOfferings](docs/usersiniqualify/README.md#postusersuseremailofferings) - Adds the user to the specified offerings as a learner
+* [PostUsersUserEmailPermissionsPermissionName](docs/usersiniqualify/README.md#postusersuseremailpermissionspermissionname) - Add permission to user
+* [PutUsersUserEmailSuspend](docs/usersiniqualify/README.md#putusersuseremailsuspend) - Suspend user
 <!-- End SDK Available Operations -->
 
 ### Maturity

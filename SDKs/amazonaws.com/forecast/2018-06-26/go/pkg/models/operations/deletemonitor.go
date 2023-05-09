@@ -16,17 +16,21 @@ const (
 	DeleteMonitorXAmzTargetEnumAmazonForecastDeleteMonitor DeleteMonitorXAmzTargetEnum = "AmazonForecast.DeleteMonitor"
 )
 
+func (e DeleteMonitorXAmzTargetEnum) ToPointer() *DeleteMonitorXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteMonitorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonForecast.DeleteMonitor":
-		*e = DeleteMonitorXAmzTargetEnum(s)
+		*e = DeleteMonitorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteMonitorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteMonitorXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,81 +2,70 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BinaryauthorizationProjectsAttestorsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, operations.BinaryauthorizationProjectsAttestorsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AttestorInput: &shared.AttestorInput{
-            Description: "provident",
-            Etag: "distinctio",
-            Name: "quibusdam",
+            Description: sdk.String("provident"),
+            Etag: sdk.String("distinctio"),
+            Name: sdk.String("Stuart Stiedemann"),
             UserOwnedDrydockNote: &shared.UserOwnedDrydockNoteInput{
-                NoteReference: "unde",
+                NoteReference: sdk.String("vel"),
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "corrupti",
-                        Comment: "illum",
-                        ID: "vel",
+                        ASCIIArmoredPgpPublicKey: sdk.String("deserunt"),
+                        Comment: sdk.String("suscipit"),
+                        ID: sdk.String("74e0f467-cc87-496e-9151-a05dfc2ddf7c"),
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "error",
-                            SignatureAlgorithm: "RSA_SIGN_PKCS1_4096_SHA512",
+                            PublicKeyPem: sdk.String("quod"),
+                            SignatureAlgorithm: shared.PkixPublicKeySignatureAlgorithmEnumRsaSignPss4096Sha512.ToPointer(),
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "suscipit",
-                        Comment: "iure",
-                        ID: "magnam",
+                        ASCIIArmoredPgpPublicKey: sdk.String("totam"),
+                        Comment: sdk.String("porro"),
+                        ID: sdk.String("a1ba928f-c816-4742-8b73-9205929396fe"),
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "debitis",
-                            SignatureAlgorithm: "RSA_PSS_2048_SHA256",
+                            PublicKeyPem: sdk.String("fuga"),
+                            SignatureAlgorithm: shared.PkixPublicKeySignatureAlgorithmEnumRsaSignPss4096Sha512.ToPointer(),
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "delectus",
-                        Comment: "tempora",
-                        ID: "suscipit",
+                        ASCIIArmoredPgpPublicKey: sdk.String("corporis"),
+                        Comment: sdk.String("iste"),
+                        ID: sdk.String("6eb10faa-a235-42c5-9559-07aff1a3a2fa"),
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "molestiae",
-                            SignatureAlgorithm: "ECDSA_P384_SHA384",
-                        },
-                    },
-                    shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "placeat",
-                        Comment: "voluptatum",
-                        ID: "iusto",
-                        PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "excepturi",
-                            SignatureAlgorithm: "RSA_PSS_4096_SHA512",
+                            PublicKeyPem: sdk.String("occaecati"),
+                            SignatureAlgorithm: shared.PkixPublicKeySignatureAlgorithmEnumRsaSignPss3072Sha256.ToPointer(),
                         },
                     },
                 },
             },
         },
-        AccessToken: "recusandae",
-        Alt: "proto",
-        AttestorID: "ab",
-        Callback: "quis",
-        Fields: "veritatis",
-        Key: "deserunt",
-        OauthToken: "perferendis",
-        Parent: "ipsam",
-        PrettyPrint: false,
-        QuotaUser: "repellendus",
-        UploadType: "sapiente",
-        UploadProtocol: "quo",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, req, operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
+        AccessToken: sdk.String("commodi"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        AttestorID: sdk.String("molestiae"),
+        Callback: sdk.String("velit"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("quia"),
+        OauthToken: sdk.String("quis"),
+        Parent: "vitae",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("laborum"),
+        UploadType: sdk.String("animi"),
+        UploadProtocol: sdk.String("enim"),
+    }, operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

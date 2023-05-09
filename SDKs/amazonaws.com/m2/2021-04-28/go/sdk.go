@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Web Services Mainframe Modernization provides tools and resources to help you plan and implement migration and modernization from mainframes to Amazon Web Services managed runtime environments. It provides tools for analyzing existing mainframe applications, developing or updating mainframe applications using COBOL or PL/I, and implementing an automated pipeline for continuous integration and continuous delivery (CI/CD) of the applications.
 // https://docs.aws.amazon.com/m2/ - Amazon Web Services documentation
 type SDK struct {
@@ -114,7 +129,10 @@ func New(opts ...SDKOption) *SDK {
 // CancelBatchJobExecution - Cancels the running of a specific batch job execution.
 func (s *SDK) CancelBatchJobExecution(ctx context.Context, request operations.CancelBatchJobExecutionRequest) (*operations.CancelBatchJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions/{executionId}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions/{executionId}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 // CreateDataSetImportTask - Starts a data set import task for a specific application.
 func (s *SDK) CreateDataSetImportTask(ctx context.Context, request operations.CreateDataSetImportTaskRequest) (*operations.CreateDataSetImportTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-task", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-task", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -462,7 +483,10 @@ func (s *SDK) CreateDataSetImportTask(ctx context.Context, request operations.Cr
 // CreateDeployment - Creates and starts a deployment to deploy an application into a runtime environment.
 func (s *SDK) CreateDeployment(ctx context.Context, request operations.CreateDeploymentRequest) (*operations.CreateDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -704,7 +728,10 @@ func (s *SDK) CreateEnvironment(ctx context.Context, request operations.CreateEn
 // DeleteApplication - Deletes a specific application. You cannot delete a running application.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -800,7 +827,10 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 // DeleteApplicationFromEnvironment - Deletes a specific application from the specific runtime environment where it was previously deployed. You cannot delete a runtime environment using DeleteEnvironment if any application has ever been deployed to it. This API removes the association of the application with the runtime environment so you can delete the environment smoothly.
 func (s *SDK) DeleteApplicationFromEnvironment(ctx context.Context, request operations.DeleteApplicationFromEnvironmentRequest) (*operations.DeleteApplicationFromEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/environment/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/environment/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -906,7 +936,10 @@ func (s *SDK) DeleteApplicationFromEnvironment(ctx context.Context, request oper
 // DeleteEnvironment - Deletes a specific runtime environment. The environment cannot contain deployed applications. If it does, you must delete those applications before you delete the environment.
 func (s *SDK) DeleteEnvironment(ctx context.Context, request operations.DeleteEnvironmentRequest) (*operations.DeleteEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1002,7 +1035,10 @@ func (s *SDK) DeleteEnvironment(ctx context.Context, request operations.DeleteEn
 // GetApplication - Describes the details of a specific application.
 func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1098,7 +1134,10 @@ func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicat
 // GetApplicationVersion - Returns details about a specific version of a specific application.
 func (s *SDK) GetApplicationVersion(ctx context.Context, request operations.GetApplicationVersionRequest) (*operations.GetApplicationVersionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/versions/{applicationVersion}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/versions/{applicationVersion}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1194,7 +1233,10 @@ func (s *SDK) GetApplicationVersion(ctx context.Context, request operations.GetA
 // GetBatchJobExecution - Gets the details of a specific batch job execution for a specific application.
 func (s *SDK) GetBatchJobExecution(ctx context.Context, request operations.GetBatchJobExecutionRequest) (*operations.GetBatchJobExecutionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions/{executionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions/{executionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1290,7 +1332,10 @@ func (s *SDK) GetBatchJobExecution(ctx context.Context, request operations.GetBa
 // GetDataSetDetails - Gets the details of a specific data set.
 func (s *SDK) GetDataSetDetails(ctx context.Context, request operations.GetDataSetDetailsRequest) (*operations.GetDataSetDetailsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/datasets/{dataSetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/datasets/{dataSetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1386,7 +1431,10 @@ func (s *SDK) GetDataSetDetails(ctx context.Context, request operations.GetDataS
 // GetDataSetImportTask - Gets the status of a data set import task initiated with the <a>CreateDataSetImportTask</a> operation.
 func (s *SDK) GetDataSetImportTask(ctx context.Context, request operations.GetDataSetImportTaskRequest) (*operations.GetDataSetImportTaskResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1482,7 +1530,10 @@ func (s *SDK) GetDataSetImportTask(ctx context.Context, request operations.GetDa
 // GetDeployment - Gets details of a specific deployment with a given deployment identifier.
 func (s *SDK) GetDeployment(ctx context.Context, request operations.GetDeploymentRequest) (*operations.GetDeploymentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments/{deploymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments/{deploymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1578,7 +1629,10 @@ func (s *SDK) GetDeployment(ctx context.Context, request operations.GetDeploymen
 // GetEnvironment - Describes a specific runtime environment.
 func (s *SDK) GetEnvironment(ctx context.Context, request operations.GetEnvironmentRequest) (*operations.GetEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1674,7 +1728,10 @@ func (s *SDK) GetEnvironment(ctx context.Context, request operations.GetEnvironm
 // ListApplicationVersions - Returns a list of the application versions for a specific application.
 func (s *SDK) ListApplicationVersions(ctx context.Context, request operations.ListApplicationVersionsRequest) (*operations.ListApplicationVersionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/versions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/versions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1864,7 +1921,10 @@ func (s *SDK) ListApplications(ctx context.Context, request operations.ListAppli
 // ListBatchJobDefinitions - Lists all the available batch job definitions based on the batch job resources uploaded during the application creation. You can use the batch job definitions in the list to start a batch job.
 func (s *SDK) ListBatchJobDefinitions(ctx context.Context, request operations.ListBatchJobDefinitionsRequest) (*operations.ListBatchJobDefinitionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-definitions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-definitions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1964,7 +2024,10 @@ func (s *SDK) ListBatchJobDefinitions(ctx context.Context, request operations.Li
 // ListBatchJobExecutions - Lists historical, current, and scheduled batch job executions for a specific application.
 func (s *SDK) ListBatchJobExecutions(ctx context.Context, request operations.ListBatchJobExecutionsRequest) (*operations.ListBatchJobExecutionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job-executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2064,7 +2127,10 @@ func (s *SDK) ListBatchJobExecutions(ctx context.Context, request operations.Lis
 // ListDataSetImportHistory - Lists the data set imports for the specified application.
 func (s *SDK) ListDataSetImportHistory(ctx context.Context, request operations.ListDataSetImportHistoryRequest) (*operations.ListDataSetImportHistoryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/dataset-import-tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2164,7 +2230,10 @@ func (s *SDK) ListDataSetImportHistory(ctx context.Context, request operations.L
 // ListDataSets - Lists the data sets imported for a specific application. In Amazon Web Services Mainframe Modernization, data sets are associated with applications deployed on runtime environments. This is known as importing data sets. Currently, Amazon Web Services Mainframe Modernization can import data sets into catalogs using <a href="https://docs.aws.amazon.com/m2/latest/APIReference/API_CreateDataSetImportTask.html">CreateDataSetImportTask</a>.
 func (s *SDK) ListDataSets(ctx context.Context, request operations.ListDataSetsRequest) (*operations.ListDataSetsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/datasets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/datasets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2264,7 +2333,10 @@ func (s *SDK) ListDataSets(ctx context.Context, request operations.ListDataSetsR
 // ListDeployments - Returns a list of all deployments of a specific application. A deployment is a combination of a specific application and a specific version of that application. Each deployment is mapped to a particular application version.
 func (s *SDK) ListDeployments(ctx context.Context, request operations.ListDeploymentsRequest) (*operations.ListDeploymentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/deployments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2544,7 +2616,10 @@ func (s *SDK) ListEnvironments(ctx context.Context, request operations.ListEnvir
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2640,7 +2715,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // StartApplication - Starts an application that is currently stopped.
 func (s *SDK) StartApplication(ctx context.Context, request operations.StartApplicationRequest) (*operations.StartApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2746,7 +2824,10 @@ func (s *SDK) StartApplication(ctx context.Context, request operations.StartAppl
 // StartBatchJob - Starts a batch job and returns the unique identifier of this execution of the batch job. The associated application must be running in order to start the batch job.
 func (s *SDK) StartBatchJob(ctx context.Context, request operations.StartBatchJobRequest) (*operations.StartBatchJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/batch-job", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2862,7 +2943,10 @@ func (s *SDK) StartBatchJob(ctx context.Context, request operations.StartBatchJo
 // StopApplication - Stops a running application.
 func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplicationRequest) (*operations.StopApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2978,7 +3062,10 @@ func (s *SDK) StopApplication(ctx context.Context, request operations.StopApplic
 // TagResource - Adds one or more tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3094,7 +3181,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes one or more tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3194,7 +3284,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateApplication - Updates an application and creates a new version.
 func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateApplicationRequest) (*operations.UpdateApplicationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/applications/{applicationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3310,7 +3403,10 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 // UpdateEnvironment - Updates the configuration details for a specific runtime environment.
 func (s *SDK) UpdateEnvironment(ctx context.Context, request operations.UpdateEnvironmentRequest) (*operations.UpdateEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

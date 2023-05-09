@@ -15,17 +15,21 @@ const (
 	DeleteOrganizationXAmzTargetEnumAwsOrganizationsV20161128DeleteOrganization DeleteOrganizationXAmzTargetEnum = "AWSOrganizationsV20161128.DeleteOrganization"
 )
 
+func (e DeleteOrganizationXAmzTargetEnum) ToPointer() *DeleteOrganizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.DeleteOrganization":
-		*e = DeleteOrganizationXAmzTargetEnum(s)
+		*e = DeleteOrganizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteOrganizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteOrganizationXAmzTargetEnum: %v", v)
 	}
 }
 

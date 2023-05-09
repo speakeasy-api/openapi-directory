@@ -38,7 +38,10 @@ func newBankAccounts(defaultClient, securityClient HTTPClient, serverURL, langua
 // Update an existing Bank Account. WealthOS will update only the fields sent in the request.
 func (s *bankAccounts) UpdateBankAccount(ctx context.Context, request operations.UpdateBankAccountRequest, security operations.UpdateBankAccountSecurity) (*operations.UpdateBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -407,7 +410,10 @@ func (s *bankAccounts) GetAllBankAccounts(ctx context.Context, request operation
 // GetBankAccount - Retrieve existing bank account from bank account id
 func (s *bankAccounts) GetBankAccount(ctx context.Context, request operations.GetBankAccountRequest, security operations.GetBankAccountSecurity) (*operations.GetBankAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/bank-accounts/v1/{bank_account_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

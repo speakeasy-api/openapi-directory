@@ -16,12 +16,16 @@ const (
 	StackResourceDriftStatusEnumNotChecked StackResourceDriftStatusEnum = "NOT_CHECKED"
 )
 
+func (e StackResourceDriftStatusEnum) ToPointer() *StackResourceDriftStatusEnum {
+	return &e
+}
+
 func (e *StackResourceDriftStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_SYNC":
 		fallthrough
 	case "MODIFIED":
@@ -29,9 +33,9 @@ func (e *StackResourceDriftStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETED":
 		fallthrough
 	case "NOT_CHECKED":
-		*e = StackResourceDriftStatusEnum(s)
+		*e = StackResourceDriftStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackResourceDriftStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackResourceDriftStatusEnum: %v", v)
 	}
 }

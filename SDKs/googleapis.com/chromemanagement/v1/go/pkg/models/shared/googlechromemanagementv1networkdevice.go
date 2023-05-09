@@ -17,12 +17,16 @@ const (
 	GoogleChromeManagementV1NetworkDeviceTypeEnumWifiDevice                   GoogleChromeManagementV1NetworkDeviceTypeEnum = "WIFI_DEVICE"
 )
 
+func (e GoogleChromeManagementV1NetworkDeviceTypeEnum) ToPointer() *GoogleChromeManagementV1NetworkDeviceTypeEnum {
+	return &e
+}
+
 func (e *GoogleChromeManagementV1NetworkDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_DEVICE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CELLULAR_DEVICE":
@@ -30,10 +34,10 @@ func (e *GoogleChromeManagementV1NetworkDeviceTypeEnum) UnmarshalJSON(data []byt
 	case "ETHERNET_DEVICE":
 		fallthrough
 	case "WIFI_DEVICE":
-		*e = GoogleChromeManagementV1NetworkDeviceTypeEnum(s)
+		*e = GoogleChromeManagementV1NetworkDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleChromeManagementV1NetworkDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleChromeManagementV1NetworkDeviceTypeEnum: %v", v)
 	}
 }
 

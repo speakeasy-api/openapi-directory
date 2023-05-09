@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,24 +16,22 @@ func main() {
         }),
     )
 
-    req := operations.AssociateAssetsRequest{
+    ctx := context.Background()
+    res, err := s.AssociateAssets(ctx, operations.AssociateAssetsRequest{
         RequestBody: operations.AssociateAssetsRequestBody{
             ChildAssetID: "corrupti",
-            ClientToken: "provident",
+            ClientToken: sdk.String("provident"),
             HierarchyID: "distinctio",
         },
-        XAmzAlgorithm: "quibusdam",
-        XAmzContentSha256: "unde",
-        XAmzCredential: "nulla",
-        XAmzDate: "corrupti",
-        XAmzSecurityToken: "illum",
-        XAmzSignature: "vel",
-        XAmzSignedHeaders: "error",
+        XAmzAlgorithm: sdk.String("quibusdam"),
+        XAmzContentSha256: sdk.String("unde"),
+        XAmzCredential: sdk.String("nulla"),
+        XAmzDate: sdk.String("corrupti"),
+        XAmzSecurityToken: sdk.String("illum"),
+        XAmzSignature: sdk.String("vel"),
+        XAmzSignedHeaders: sdk.String("error"),
         AssetID: "deserunt",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateAssets(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

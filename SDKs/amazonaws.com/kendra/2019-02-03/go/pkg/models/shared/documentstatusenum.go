@@ -18,12 +18,16 @@ const (
 	DocumentStatusEnumUpdateFailed DocumentStatusEnum = "UPDATE_FAILED"
 )
 
+func (e DocumentStatusEnum) ToPointer() *DocumentStatusEnum {
+	return &e
+}
+
 func (e *DocumentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_FOUND":
 		fallthrough
 	case "PROCESSING":
@@ -35,9 +39,9 @@ func (e *DocumentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "UPDATE_FAILED":
-		*e = DocumentStatusEnum(s)
+		*e = DocumentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DocumentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DocumentStatusEnum: %v", v)
 	}
 }

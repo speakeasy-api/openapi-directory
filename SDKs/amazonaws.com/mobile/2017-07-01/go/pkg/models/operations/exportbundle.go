@@ -22,12 +22,16 @@ const (
 	ExportBundlePlatformEnumJavascript ExportBundlePlatformEnum = "JAVASCRIPT"
 )
 
+func (e ExportBundlePlatformEnum) ToPointer() *ExportBundlePlatformEnum {
+	return &e
+}
+
 func (e *ExportBundlePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OSX":
 		fallthrough
 	case "WINDOWS":
@@ -41,10 +45,10 @@ func (e *ExportBundlePlatformEnum) UnmarshalJSON(data []byte) error {
 	case "ANDROID":
 		fallthrough
 	case "JAVASCRIPT":
-		*e = ExportBundlePlatformEnum(s)
+		*e = ExportBundlePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportBundlePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportBundlePlatformEnum: %v", v)
 	}
 }
 

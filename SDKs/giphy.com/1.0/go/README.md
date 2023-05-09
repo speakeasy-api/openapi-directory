@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/giphy.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetGifByIDRequest{
-        GifID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.Gifs.GetGifByID(ctx, req)
+    res, err := s.Gifs.GetGifByID(ctx, operations.GetGifByIDRequest{
+        GifID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,21 +46,21 @@ func main() {
 ## Available Resources and Operations
 
 
-### Gifs
+### [Gifs](docs/gifs/README.md)
 
-* `GetGifByID` - Get GIF by Id
-* `GetGifsByID` - Get GIFs by ID
-* `RandomGif` - Random GIF
-* `SearchGifs` - Search GIFs
-* `TranslateGif` - Translate phrase to GIF
-* `TrendingGifs` - Trending GIFs
+* [GetGifByID](docs/gifs/README.md#getgifbyid) - Get GIF by Id
+* [GetGifsByID](docs/gifs/README.md#getgifsbyid) - Get GIFs by ID
+* [RandomGif](docs/gifs/README.md#randomgif) - Random GIF
+* [SearchGifs](docs/gifs/README.md#searchgifs) - Search GIFs
+* [TranslateGif](docs/gifs/README.md#translategif) - Translate phrase to GIF
+* [TrendingGifs](docs/gifs/README.md#trendinggifs) - Trending GIFs
 
-### Stickers
+### [Stickers](docs/stickers/README.md)
 
-* `RandomSticker` - Random Sticker
-* `SearchStickers` - Search Stickers
-* `TranslateSticker` - Translate phrase to Sticker
-* `TrendingStickers` - Trending Stickers
+* [RandomSticker](docs/stickers/README.md#randomsticker) - Random Sticker
+* [SearchStickers](docs/stickers/README.md#searchstickers) - Search Stickers
+* [TranslateSticker](docs/stickers/README.md#translatesticker) - Translate phrase to Sticker
+* [TrendingStickers](docs/stickers/README.md#trendingstickers) - Trending Stickers
 <!-- End SDK Available Operations -->
 
 ### Maturity

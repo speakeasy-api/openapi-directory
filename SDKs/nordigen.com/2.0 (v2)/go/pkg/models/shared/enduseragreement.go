@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// EndUserAgreement - EndUserAgreement.
+// EndUserAgreement - Represents an end-user agreement.
 type EndUserAgreement struct {
 	// The date & time at which the end user accepted the agreement.
 	Accepted *time.Time `json:"accepted,omitempty"`

@@ -17,12 +17,16 @@ const (
 	PlatformStatusEnumDeleted  PlatformStatusEnum = "Deleted"
 )
 
+func (e PlatformStatusEnum) ToPointer() *PlatformStatusEnum {
+	return &e
+}
+
 func (e *PlatformStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Failed":
@@ -32,9 +36,9 @@ func (e *PlatformStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Deleting":
 		fallthrough
 	case "Deleted":
-		*e = PlatformStatusEnum(s)
+		*e = PlatformStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformStatusEnum: %v", v)
 	}
 }

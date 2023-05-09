@@ -17,12 +17,16 @@ const (
 	DomainPermissionEnumNone                  DomainPermissionEnum = "NONE"
 )
 
+func (e DomainPermissionEnum) ToPointer() *DomainPermissionEnum {
+	return &e
+}
+
 func (e *DomainPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERMISSION_UNSPECIFIED":
 		fallthrough
 	case "OWNER":
@@ -30,10 +34,10 @@ func (e *DomainPermissionEnum) UnmarshalJSON(data []byte) error {
 	case "READER":
 		fallthrough
 	case "NONE":
-		*e = DomainPermissionEnum(s)
+		*e = DomainPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DomainPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for DomainPermissionEnum: %v", v)
 	}
 }
 

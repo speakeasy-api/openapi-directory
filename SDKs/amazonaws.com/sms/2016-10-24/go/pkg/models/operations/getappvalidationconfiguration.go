@@ -16,17 +16,21 @@ const (
 	GetAppValidationConfigurationXAmzTargetEnumAwsServerMigrationServiceV20161024GetAppValidationConfiguration GetAppValidationConfigurationXAmzTargetEnum = "AWSServerMigrationService_V2016_10_24.GetAppValidationConfiguration"
 )
 
+func (e GetAppValidationConfigurationXAmzTargetEnum) ToPointer() *GetAppValidationConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAppValidationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSServerMigrationService_V2016_10_24.GetAppValidationConfiguration":
-		*e = GetAppValidationConfigurationXAmzTargetEnum(s)
+		*e = GetAppValidationConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAppValidationConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAppValidationConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

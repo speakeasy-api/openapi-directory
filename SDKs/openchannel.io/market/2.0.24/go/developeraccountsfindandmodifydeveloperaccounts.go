@@ -35,7 +35,10 @@ func newDeveloperAccountsFindAndModifyDeveloperAccounts(defaultClient, securityC
 // DeleteDeveloperAccountsDeveloperAccountID - Removes the developer account
 func (s *developerAccountsFindAndModifyDeveloperAccounts) DeleteDeveloperAccountsDeveloperAccountID(ctx context.Context, request operations.DeleteDeveloperAccountsDeveloperAccountIDRequest) (*operations.DeleteDeveloperAccountsDeveloperAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -122,7 +125,10 @@ func (s *developerAccountsFindAndModifyDeveloperAccounts) GetDeveloperAccounts(c
 // GetDeveloperAccountsDeveloperAccountID - Returns a single developer account
 func (s *developerAccountsFindAndModifyDeveloperAccounts) GetDeveloperAccountsDeveloperAccountID(ctx context.Context, request operations.GetDeveloperAccountsDeveloperAccountIDRequest) (*operations.GetDeveloperAccountsDeveloperAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +175,10 @@ func (s *developerAccountsFindAndModifyDeveloperAccounts) GetDeveloperAccountsDe
 // PatchDeveloperAccountsDeveloperAccountID - Updates the developer account fields
 func (s *developerAccountsFindAndModifyDeveloperAccounts) PatchDeveloperAccountsDeveloperAccountID(ctx context.Context, request operations.PatchDeveloperAccountsDeveloperAccountIDRequest) (*operations.PatchDeveloperAccountsDeveloperAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, nil)
 	if err != nil {
@@ -220,7 +229,10 @@ func (s *developerAccountsFindAndModifyDeveloperAccounts) PatchDeveloperAccounts
 // PostDeveloperAccountsDeveloperAccountID - Updates the developer account or adds the developer account if it doesn't exist
 func (s *developerAccountsFindAndModifyDeveloperAccounts) PostDeveloperAccountsDeveloperAccountID(ctx context.Context, request operations.PostDeveloperAccountsDeveloperAccountIDRequest) (*operations.PostDeveloperAccountsDeveloperAccountIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/developerAccounts/{developerAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

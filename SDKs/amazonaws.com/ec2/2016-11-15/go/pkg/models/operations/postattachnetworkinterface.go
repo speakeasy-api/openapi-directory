@@ -15,17 +15,21 @@ const (
 	POSTAttachNetworkInterfaceActionEnumAttachNetworkInterface POSTAttachNetworkInterfaceActionEnum = "AttachNetworkInterface"
 )
 
+func (e POSTAttachNetworkInterfaceActionEnum) ToPointer() *POSTAttachNetworkInterfaceActionEnum {
+	return &e
+}
+
 func (e *POSTAttachNetworkInterfaceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AttachNetworkInterface":
-		*e = POSTAttachNetworkInterfaceActionEnum(s)
+		*e = POSTAttachNetworkInterfaceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAttachNetworkInterfaceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAttachNetworkInterfaceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAttachNetworkInterfaceVersionEnumTwoThousandAndSixteen1115 POSTAttachNetworkInterfaceVersionEnum = "2016-11-15"
 )
 
+func (e POSTAttachNetworkInterfaceVersionEnum) ToPointer() *POSTAttachNetworkInterfaceVersionEnum {
+	return &e
+}
+
 func (e *POSTAttachNetworkInterfaceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAttachNetworkInterfaceVersionEnum(s)
+		*e = POSTAttachNetworkInterfaceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAttachNetworkInterfaceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAttachNetworkInterfaceVersionEnum: %v", v)
 	}
 }
 

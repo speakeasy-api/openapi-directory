@@ -16,12 +16,16 @@ const (
 	ObjectTypeEnumIndex    ObjectTypeEnum = "INDEX"
 )
 
+func (e ObjectTypeEnum) ToPointer() *ObjectTypeEnum {
+	return &e
+}
+
 func (e *ObjectTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NODE":
 		fallthrough
 	case "LEAF_NODE":
@@ -29,9 +33,9 @@ func (e *ObjectTypeEnum) UnmarshalJSON(data []byte) error {
 	case "POLICY":
 		fallthrough
 	case "INDEX":
-		*e = ObjectTypeEnum(s)
+		*e = ObjectTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ObjectTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ObjectTypeEnum: %v", v)
 	}
 }

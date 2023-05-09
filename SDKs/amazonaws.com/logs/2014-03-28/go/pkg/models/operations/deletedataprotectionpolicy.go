@@ -16,17 +16,21 @@ const (
 	DeleteDataProtectionPolicyXAmzTargetEnumLogs20140328DeleteDataProtectionPolicy DeleteDataProtectionPolicyXAmzTargetEnum = "Logs_20140328.DeleteDataProtectionPolicy"
 )
 
+func (e DeleteDataProtectionPolicyXAmzTargetEnum) ToPointer() *DeleteDataProtectionPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDataProtectionPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DeleteDataProtectionPolicy":
-		*e = DeleteDataProtectionPolicyXAmzTargetEnum(s)
+		*e = DeleteDataProtectionPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDataProtectionPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDataProtectionPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

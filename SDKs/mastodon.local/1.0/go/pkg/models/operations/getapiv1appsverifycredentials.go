@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetAPIV1AppsVerifyCredentialsSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type GetAPIV1AppsVerifyCredentialsResponse struct {
 	// If the Authorization header was provided with a valid token, you should see your app returned as an Application entity.
 	Application *shared.Application

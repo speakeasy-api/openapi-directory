@@ -41,7 +41,10 @@ func newBilling(defaultClient, securityClient HTTPClient, serverURL, language, s
 // https://docs.github.com/enterprise-server@3.6/rest/reference/billing#export-advanced-security-active-committers-data-for-enterprise - API method documentation
 func (s *billing) BillingGetGithubAdvancedSecurityBillingGhe(ctx context.Context, request operations.BillingGetGithubAdvancedSecurityBillingGheRequest) (*operations.BillingGetGithubAdvancedSecurityBillingGheResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/advanced-security", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/enterprises/{enterprise}/settings/billing/advanced-security", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -107,7 +110,10 @@ func (s *billing) BillingGetGithubAdvancedSecurityBillingGhe(ctx context.Context
 // https://docs.github.com/enterprise-server@3.6/rest/reference/billing#get-github-advanced-security-active-committers-for-an-organization - API method documentation
 func (s *billing) BillingGetGithubAdvancedSecurityBillingOrg(ctx context.Context, request operations.BillingGetGithubAdvancedSecurityBillingOrgRequest) (*operations.BillingGetGithubAdvancedSecurityBillingOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/advanced-security", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/settings/billing/advanced-security", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

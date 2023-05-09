@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// AppAppApprovalStateEnum - Output only. The approval state for the app.
+// AppAppApprovalStateEnum - Output only. The approval state for the app. The field is read-only.
 type AppAppApprovalStateEnum string
 
 const (
@@ -17,12 +17,16 @@ const (
 	AppAppApprovalStateEnumApproved                    AppAppApprovalStateEnum = "APPROVED"
 )
 
+func (e AppAppApprovalStateEnum) ToPointer() *AppAppApprovalStateEnum {
+	return &e
+}
+
 func (e *AppAppApprovalStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APP_APPROVAL_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACTION_REQUIRED":
@@ -30,16 +34,16 @@ func (e *AppAppApprovalStateEnum) UnmarshalJSON(data []byte) error {
 	case "IN_REVIEW":
 		fallthrough
 	case "APPROVED":
-		*e = AppAppApprovalStateEnum(s)
+		*e = AppAppApprovalStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppAppApprovalStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AppAppApprovalStateEnum: %v", v)
 	}
 }
 
 // App - Describes an AdMob app for a specific platform (For example: Android or iOS).
 type App struct {
-	// Output only. The approval state for the app.
+	// Output only. The approval state for the app. The field is read-only.
 	AppApprovalState *AppAppApprovalStateEnum `json:"appApprovalState,omitempty"`
 	// The externally visible ID of the app which can be used to integrate with the AdMob SDK. This is a read only property. Example: ca-app-pub-9876543210987654~0123456789
 	AppID *string `json:"appId,omitempty"`

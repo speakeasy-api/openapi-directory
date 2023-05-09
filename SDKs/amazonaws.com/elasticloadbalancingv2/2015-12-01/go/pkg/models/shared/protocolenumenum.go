@@ -19,12 +19,16 @@ const (
 	ProtocolEnumEnumGeneve ProtocolEnumEnum = "GENEVE"
 )
 
+func (e ProtocolEnumEnum) ToPointer() *ProtocolEnumEnum {
+	return &e
+}
+
 func (e *ProtocolEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
@@ -38,9 +42,9 @@ func (e *ProtocolEnumEnum) UnmarshalJSON(data []byte) error {
 	case "TCP_UDP":
 		fallthrough
 	case "GENEVE":
-		*e = ProtocolEnumEnum(s)
+		*e = ProtocolEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProtocolEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ProtocolEnumEnum: %v", v)
 	}
 }

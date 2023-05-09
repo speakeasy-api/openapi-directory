@@ -31,21 +31,25 @@ const (
 	EnvironmentApprovalsStateEnumPending  EnvironmentApprovalsStateEnum = "pending"
 )
 
+func (e EnvironmentApprovalsStateEnum) ToPointer() *EnvironmentApprovalsStateEnum {
+	return &e
+}
+
 func (e *EnvironmentApprovalsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "rejected":
 		fallthrough
 	case "pending":
-		*e = EnvironmentApprovalsStateEnum(s)
+		*e = EnvironmentApprovalsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentApprovalsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentApprovalsStateEnum: %v", v)
 	}
 }
 

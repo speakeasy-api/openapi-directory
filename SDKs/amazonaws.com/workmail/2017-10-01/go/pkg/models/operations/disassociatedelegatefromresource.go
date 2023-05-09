@@ -16,17 +16,21 @@ const (
 	DisassociateDelegateFromResourceXAmzTargetEnumWorkMailServiceDisassociateDelegateFromResource DisassociateDelegateFromResourceXAmzTargetEnum = "WorkMailService.DisassociateDelegateFromResource"
 )
 
+func (e DisassociateDelegateFromResourceXAmzTargetEnum) ToPointer() *DisassociateDelegateFromResourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateDelegateFromResourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.DisassociateDelegateFromResource":
-		*e = DisassociateDelegateFromResourceXAmzTargetEnum(s)
+		*e = DisassociateDelegateFromResourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateDelegateFromResourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateDelegateFromResourceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	UserDefinedVariableConfigurationDataTypeEnumNumber UserDefinedVariableConfigurationDataTypeEnum = "NUMBER"
 )
 
+func (e UserDefinedVariableConfigurationDataTypeEnum) ToPointer() *UserDefinedVariableConfigurationDataTypeEnum {
+	return &e
+}
+
 func (e *UserDefinedVariableConfigurationDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRING":
 		fallthrough
 	case "NUMBER":
-		*e = UserDefinedVariableConfigurationDataTypeEnum(s)
+		*e = UserDefinedVariableConfigurationDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserDefinedVariableConfigurationDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserDefinedVariableConfigurationDataTypeEnum: %v", v)
 	}
 }
 
@@ -137,12 +141,16 @@ const (
 	UserDefinedVariableConfigurationVariableTypeEnumU100 UserDefinedVariableConfigurationVariableTypeEnum = "U100"
 )
 
+func (e UserDefinedVariableConfigurationVariableTypeEnum) ToPointer() *UserDefinedVariableConfigurationVariableTypeEnum {
+	return &e
+}
+
 func (e *UserDefinedVariableConfigurationVariableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "U1":
 		fallthrough
 	case "U2":
@@ -342,10 +350,10 @@ func (e *UserDefinedVariableConfigurationVariableTypeEnum) UnmarshalJSON(data []
 	case "U99":
 		fallthrough
 	case "U100":
-		*e = UserDefinedVariableConfigurationVariableTypeEnum(s)
+		*e = UserDefinedVariableConfigurationVariableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserDefinedVariableConfigurationVariableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserDefinedVariableConfigurationVariableTypeEnum: %v", v)
 	}
 }
 

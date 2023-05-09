@@ -15,20 +15,24 @@ const (
 	FindingChangeTypeEnumUnchanged FindingChangeTypeEnum = "UNCHANGED"
 )
 
+func (e FindingChangeTypeEnum) ToPointer() *FindingChangeTypeEnum {
+	return &e
+}
+
 func (e *FindingChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHANGED":
 		fallthrough
 	case "NEW":
 		fallthrough
 	case "UNCHANGED":
-		*e = FindingChangeTypeEnum(s)
+		*e = FindingChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FindingChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FindingChangeTypeEnum: %v", v)
 	}
 }

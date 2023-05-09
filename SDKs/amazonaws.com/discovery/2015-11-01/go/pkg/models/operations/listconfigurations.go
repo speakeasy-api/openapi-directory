@@ -16,17 +16,21 @@ const (
 	ListConfigurationsXAmzTargetEnumAwsPoseidonServiceV20151101ListConfigurations ListConfigurationsXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.ListConfigurations"
 )
 
+func (e ListConfigurationsXAmzTargetEnum) ToPointer() *ListConfigurationsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListConfigurationsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.ListConfigurations":
-		*e = ListConfigurationsXAmzTargetEnum(s)
+		*e = ListConfigurationsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListConfigurationsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListConfigurationsXAmzTargetEnum: %v", v)
 	}
 }
 

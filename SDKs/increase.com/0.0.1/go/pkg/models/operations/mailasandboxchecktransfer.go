@@ -13,23 +13,27 @@ type MailASandboxCheckTransferRequest struct {
 	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum = "429"
+	MailASandboxCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON13TypeEnumRateLimitedError MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON13 struct {
 	Type       MailASandboxCheckTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum = "403"
+	MailASandboxCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON12 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum = "404"
+	MailASandboxCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON11 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON10StatusEnumFourHundred MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum = "400"
+	MailASandboxCheckTransferDefaultApplicationJSON10StatusEnumFourHundred MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON10TypeEnumMalformedRequestError MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON10 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON9StatusEnumFourHundred MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum = "400"
+	MailASandboxCheckTransferDefaultApplicationJSON9StatusEnumFourHundred MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON9TypeEnumInvalidParametersError MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type MailASandboxCheckTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                   `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                   `json:"errors"`
 	Status MailASandboxCheckTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                     `json:"title"`
 	Type   MailASandboxCheckTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum = "409"
+	MailASandboxCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON8TypeEnumInvalidOperationError MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON8 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum = "401"
+	MailASandboxCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON7 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum = "500"
+	MailASandboxCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON6TypeEnumInternalServerError MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON6 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum = "403"
+	MailASandboxCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON5 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum = "422"
+	MailASandboxCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON4 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum = "409"
+	MailASandboxCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON3 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum = "403"
+	MailASandboxCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type MailASandboxCheckTransferDefaultApplicationJSON2 struct {
 	Type   MailASandboxCheckTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum string
+type MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	MailASandboxCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum = "404"
+	MailASandboxCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	MailASandboxCheckTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum) ToPointer() *MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for MailASandboxCheckTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -20,14 +20,12 @@ func main() {
         }),
     )
 
-    req := operations.SmsConversionRequest{
-        Delivered: "0",
+    ctx := context.Background()
+    res, err := s.SMSConversion.SmsConversion(ctx, operations.SmsConversionRequest{
+        Delivered: shared.DeliveredEnumZero,
         MessageID: "provident",
         Timestamp: "distinctio",
-    }
-
-    ctx := context.Background()
-    res, err := s.SMSConversion.SmsConversion(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

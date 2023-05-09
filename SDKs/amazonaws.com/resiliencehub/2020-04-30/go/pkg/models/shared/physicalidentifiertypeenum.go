@@ -14,18 +14,22 @@ const (
 	PhysicalIdentifierTypeEnumNative PhysicalIdentifierTypeEnum = "Native"
 )
 
+func (e PhysicalIdentifierTypeEnum) ToPointer() *PhysicalIdentifierTypeEnum {
+	return &e
+}
+
 func (e *PhysicalIdentifierTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Arn":
 		fallthrough
 	case "Native":
-		*e = PhysicalIdentifierTypeEnum(s)
+		*e = PhysicalIdentifierTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PhysicalIdentifierTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PhysicalIdentifierTypeEnum: %v", v)
 	}
 }

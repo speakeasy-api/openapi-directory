@@ -13,34 +13,32 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/abusiveexp
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AbusiveexperiencereportSitesGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        UploadType: "error",
-        UploadProtocol: "deserunt",
-    }
-
     ctx := context.Background()
-    res, err := s.Sites.AbusiveexperiencereportSitesGet(ctx, req)
+    res, err := s.Sites.AbusiveexperiencereportSitesGet(ctx, operations.AbusiveexperiencereportSitesGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -56,13 +54,13 @@ func main() {
 ## Available Resources and Operations
 
 
-### Sites
+### [Sites](docs/sites/README.md)
 
-* `AbusiveexperiencereportSitesGet` - Gets a site's Abusive Experience Report summary.
+* [AbusiveexperiencereportSitesGet](docs/sites/README.md#abusiveexperiencereportsitesget) - Gets a site's Abusive Experience Report summary.
 
-### ViolatingSites
+### [ViolatingSites](docs/violatingsites/README.md)
 
-* `AbusiveexperiencereportViolatingSitesList` - Lists sites that are failing in the Abusive Experience Report.
+* [AbusiveexperiencereportViolatingSitesList](docs/violatingsites/README.md#abusiveexperiencereportviolatingsiteslist) - Lists sites that are failing in the Abusive Experience Report.
 <!-- End SDK Available Operations -->
 
 ### Maturity

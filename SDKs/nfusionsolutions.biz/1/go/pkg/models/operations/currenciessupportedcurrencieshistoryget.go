@@ -16,19 +16,23 @@ const (
 	CurrenciesSupportedCurrenciesHistoryGETFormatEnumXML  CurrenciesSupportedCurrenciesHistoryGETFormatEnum = "xml"
 )
 
+func (e CurrenciesSupportedCurrenciesHistoryGETFormatEnum) ToPointer() *CurrenciesSupportedCurrenciesHistoryGETFormatEnum {
+	return &e
+}
+
 func (e *CurrenciesSupportedCurrenciesHistoryGETFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
-		*e = CurrenciesSupportedCurrenciesHistoryGETFormatEnum(s)
+		*e = CurrenciesSupportedCurrenciesHistoryGETFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CurrenciesSupportedCurrenciesHistoryGETFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CurrenciesSupportedCurrenciesHistoryGETFormatEnum: %v", v)
 	}
 }
 

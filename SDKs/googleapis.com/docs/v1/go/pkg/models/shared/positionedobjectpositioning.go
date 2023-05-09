@@ -20,12 +20,16 @@ const (
 	PositionedObjectPositioningLayoutEnumBehindText                        PositionedObjectPositioningLayoutEnum = "BEHIND_TEXT"
 )
 
+func (e PositionedObjectPositioningLayoutEnum) ToPointer() *PositionedObjectPositioningLayoutEnum {
+	return &e
+}
+
 func (e *PositionedObjectPositioningLayoutEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POSITIONED_OBJECT_LAYOUT_UNSPECIFIED":
 		fallthrough
 	case "WRAP_TEXT":
@@ -39,10 +43,10 @@ func (e *PositionedObjectPositioningLayoutEnum) UnmarshalJSON(data []byte) error
 	case "IN_FRONT_OF_TEXT":
 		fallthrough
 	case "BEHIND_TEXT":
-		*e = PositionedObjectPositioningLayoutEnum(s)
+		*e = PositionedObjectPositioningLayoutEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PositionedObjectPositioningLayoutEnum: %s", s)
+		return fmt.Errorf("invalid value for PositionedObjectPositioningLayoutEnum: %v", v)
 	}
 }
 

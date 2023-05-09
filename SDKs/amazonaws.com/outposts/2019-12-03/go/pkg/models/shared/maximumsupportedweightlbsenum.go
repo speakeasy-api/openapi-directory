@@ -17,12 +17,16 @@ const (
 	MaximumSupportedWeightLbsEnumMax2000Lbs MaximumSupportedWeightLbsEnum = "MAX_2000_LBS"
 )
 
+func (e MaximumSupportedWeightLbsEnum) ToPointer() *MaximumSupportedWeightLbsEnum {
+	return &e
+}
+
 func (e *MaximumSupportedWeightLbsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_LIMIT":
 		fallthrough
 	case "MAX_1400_LBS":
@@ -32,9 +36,9 @@ func (e *MaximumSupportedWeightLbsEnum) UnmarshalJSON(data []byte) error {
 	case "MAX_1800_LBS":
 		fallthrough
 	case "MAX_2000_LBS":
-		*e = MaximumSupportedWeightLbsEnum(s)
+		*e = MaximumSupportedWeightLbsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MaximumSupportedWeightLbsEnum: %s", s)
+		return fmt.Errorf("invalid value for MaximumSupportedWeightLbsEnum: %v", v)
 	}
 }

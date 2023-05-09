@@ -16,17 +16,21 @@ const (
 	DescribeContainerInstancesXAmzTargetEnumAmazonEc2ContainerServiceV20141113DescribeContainerInstances DescribeContainerInstancesXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.DescribeContainerInstances"
 )
 
+func (e DescribeContainerInstancesXAmzTargetEnum) ToPointer() *DescribeContainerInstancesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeContainerInstancesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.DescribeContainerInstances":
-		*e = DescribeContainerInstancesXAmzTargetEnum(s)
+		*e = DescribeContainerInstancesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeContainerInstancesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeContainerInstancesXAmzTargetEnum: %v", v)
 	}
 }
 

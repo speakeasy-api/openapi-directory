@@ -16,17 +16,21 @@ const (
 	GetLoggingConfigurationXAmzTargetEnumAwswaf20150824GetLoggingConfiguration GetLoggingConfigurationXAmzTargetEnum = "AWSWAF_20150824.GetLoggingConfiguration"
 )
 
+func (e GetLoggingConfigurationXAmzTargetEnum) ToPointer() *GetLoggingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLoggingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetLoggingConfiguration":
-		*e = GetLoggingConfigurationXAmzTargetEnum(s)
+		*e = GetLoggingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLoggingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLoggingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,21 +18,25 @@ const (
 	GetPreviewImageSizeEnumLarge  GetPreviewImageSizeEnum = "large"
 )
 
+func (e GetPreviewImageSizeEnum) ToPointer() *GetPreviewImageSizeEnum {
+	return &e
+}
+
 func (e *GetPreviewImageSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "small":
 		fallthrough
 	case "medium":
 		fallthrough
 	case "large":
-		*e = GetPreviewImageSizeEnum(s)
+		*e = GetPreviewImageSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPreviewImageSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPreviewImageSizeEnum: %v", v)
 	}
 }
 

@@ -14,17 +14,21 @@ const (
 	UpdateCallRequestUnmuteActionEnumMute UpdateCallRequestUnmuteActionEnum = "mute"
 )
 
+func (e UpdateCallRequestUnmuteActionEnum) ToPointer() *UpdateCallRequestUnmuteActionEnum {
+	return &e
+}
+
 func (e *UpdateCallRequestUnmuteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mute":
-		*e = UpdateCallRequestUnmuteActionEnum(s)
+		*e = UpdateCallRequestUnmuteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateCallRequestUnmuteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateCallRequestUnmuteActionEnum: %v", v)
 	}
 }
 

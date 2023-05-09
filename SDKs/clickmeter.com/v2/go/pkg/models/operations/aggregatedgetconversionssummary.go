@@ -17,19 +17,23 @@ const (
 	AggregatedGetConversionsSummarySortDirectionEnumDesc AggregatedGetConversionsSummarySortDirectionEnum = "desc"
 )
 
+func (e AggregatedGetConversionsSummarySortDirectionEnum) ToPointer() *AggregatedGetConversionsSummarySortDirectionEnum {
+	return &e
+}
+
 func (e *AggregatedGetConversionsSummarySortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = AggregatedGetConversionsSummarySortDirectionEnum(s)
+		*e = AggregatedGetConversionsSummarySortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedGetConversionsSummarySortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedGetConversionsSummarySortDirectionEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	AggregatedGetConversionsSummaryStatusEnumActive  AggregatedGetConversionsSummaryStatusEnum = "active"
 )
 
+func (e AggregatedGetConversionsSummaryStatusEnum) ToPointer() *AggregatedGetConversionsSummaryStatusEnum {
+	return &e
+}
+
 func (e *AggregatedGetConversionsSummaryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
-		*e = AggregatedGetConversionsSummaryStatusEnum(s)
+		*e = AggregatedGetConversionsSummaryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedGetConversionsSummaryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedGetConversionsSummaryStatusEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	AggregatedGetConversionsSummaryTimeFrameEnumCustom        AggregatedGetConversionsSummaryTimeFrameEnum = "custom"
 )
 
+func (e AggregatedGetConversionsSummaryTimeFrameEnum) ToPointer() *AggregatedGetConversionsSummaryTimeFrameEnum {
+	return &e
+}
+
 func (e *AggregatedGetConversionsSummaryTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -113,10 +125,10 @@ func (e *AggregatedGetConversionsSummaryTimeFrameEnum) UnmarshalJSON(data []byte
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = AggregatedGetConversionsSummaryTimeFrameEnum(s)
+		*e = AggregatedGetConversionsSummaryTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregatedGetConversionsSummaryTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregatedGetConversionsSummaryTimeFrameEnum: %v", v)
 	}
 }
 

@@ -17,19 +17,23 @@ const (
 	CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnumPublicIP  CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum = "PUBLIC_IP"
 )
 
+func (e CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) ToPointer() *CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum {
+	return &e
+}
+
 func (e *CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_IP":
 		fallthrough
 	case "PUBLIC_IP":
-		*e = CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(s)
+		*e = CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyDataPlaneRoutingEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnumAuto CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum = "AUTO"
 )
 
+func (e CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) ToPointer() *CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum {
+	return &e
+}
+
 func (e *CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GP2":
 		fallthrough
 	case "GP3":
@@ -56,10 +64,10 @@ func (e *CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDis
 	case "ST1":
 		fallthrough
 	case "AUTO":
-		*e = CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(s)
+		*e = CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyDefaultLargeStagingDiskTypeEnum: %v", v)
 	}
 }
 
@@ -71,25 +79,31 @@ const (
 	CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnumCustom  CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum = "CUSTOM"
 )
 
+func (e CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) ToPointer() *CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum {
+	return &e
+}
+
 func (e *CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "CUSTOM":
-		*e = CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(s)
+		*e = CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplicationConfigurationTemplateRequestBodyEbsEncryptionEnum: %v", v)
 	}
 }
 
 type CreateReplicationConfigurationTemplateRequestBody struct {
 	// Whether to associate the default Elastic Disaster Recovery Security group with the Replication Configuration Template.
 	AssociateDefaultSecurityGroup bool `json:"associateDefaultSecurityGroup"`
+	// Whether to allow the AWS replication agent to automatically replicate newly added disks.
+	AutoReplicateNewDisks *bool `json:"autoReplicateNewDisks,omitempty"`
 	// Configure bandwidth throttling for the outbound data transfer rate of the Source Server in Mbps.
 	BandwidthThrottling int64 `json:"bandwidthThrottling"`
 	// Whether to create a Public IP for the Recovery Instance by default.

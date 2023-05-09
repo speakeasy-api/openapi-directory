@@ -17,21 +17,25 @@ const (
 	DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnumUnknown DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum = "unknown"
 )
 
+func (e DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum) ToPointer() *DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
 		fallthrough
 	case "unknown":
-		*e = DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum(s)
+		*e = DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesFindingsFoundEnum: %v", v)
 	}
 }
 
@@ -44,21 +48,25 @@ const (
 	DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnumFailed    DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum = "failed"
 )
 
+func (e DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum) ToPointer() *DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum {
+	return &e
+}
+
 func (e *DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "succeeded":
 		fallthrough
 	case "failed":
-		*e = DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum(s)
+		*e = DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeNetworkInsightsAccessScopeAnalysesResultNetworkInsightsAccessScopeAnalysesStatusEnum: %v", v)
 	}
 }
 

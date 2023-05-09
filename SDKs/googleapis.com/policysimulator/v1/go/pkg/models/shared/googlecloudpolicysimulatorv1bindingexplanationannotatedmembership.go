@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnumMembershipUnknownUnsupported GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum = "MEMBERSHIP_UNKNOWN_UNSUPPORTED"
 )
 
+func (e GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum) ToPointer() *GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MEMBERSHIP_UNSPECIFIED":
 		fallthrough
 	case "MEMBERSHIP_INCLUDED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMember
 	case "MEMBERSHIP_UNKNOWN_INFO_DENIED":
 		fallthrough
 	case "MEMBERSHIP_UNKNOWN_UNSUPPORTED":
-		*e = GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum(s)
+		*e = GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipMembershipEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnumHigh                          GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum) ToPointer() *GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum(s)
+		*e = GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicysimulatorV1BindingExplanationAnnotatedMembershipRelevanceEnum: %v", v)
 	}
 }
 

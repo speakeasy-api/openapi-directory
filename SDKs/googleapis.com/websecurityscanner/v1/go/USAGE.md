@@ -2,33 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ScanConfig: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "provident",
-                    Password: "distinctio",
-                    Username: "Rosalinda_Mitchell84",
+                    LoginURL: sdk.String("provident"),
+                    Password: sdk.String("distinctio"),
+                    Username: sdk.String("Rosalinda_Mitchell84"),
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "vel",
-                    Username: "Linda.Oberbrunner",
+                    Password: sdk.String("vel"),
+                    Username: sdk.String("Linda.Oberbrunner"),
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "magnam",
+                        TargetAudienceClientID: sdk.String("magnam"),
                     },
                 },
             },
@@ -38,41 +39,35 @@ func main() {
                 "tempora",
                 "suscipit",
             },
-            DisplayName: "molestiae",
-            ExportToSecurityCommandCenter: "DISABLED",
-            IgnoreHTTPStatusErrors: false,
-            ManagedScan: false,
-            MaxQPS: 812169,
-            Name: "voluptatum",
-            RiskLevel: "NORMAL",
+            DisplayName: sdk.String("molestiae"),
+            ExportToSecurityCommandCenter: shared.ScanConfigExportToSecurityCommandCenterEnumDisabled.ToPointer(),
+            IgnoreHTTPStatusErrors: sdk.Bool(false),
+            ManagedScan: sdk.Bool(false),
+            MaxQPS: sdk.Int(812169),
+            Name: sdk.String("Ted Mante"),
+            RiskLevel: shared.ScanConfigRiskLevelEnumLow.ToPointer(),
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 568045,
-                ScheduleTime: "nisi",
+                IntervalDurationDays: sdk.Int(71036),
+                ScheduleTime: sdk.String("quis"),
             },
             StartingUrls: []string{
-                "temporibus",
-                "ab",
-                "quis",
-                "veritatis",
+                "deserunt",
             },
-            StaticIPScan: false,
-            UserAgent: "CHROME_ANDROID",
+            StaticIPScan: sdk.Bool(false),
+            UserAgent: shared.ScanConfigUserAgentEnumUserAgentUnspecified.ToPointer(),
         },
-        AccessToken: "perferendis",
-        Alt: "media",
-        Callback: "repellendus",
-        Fields: "sapiente",
-        Key: "quo",
-        OauthToken: "odit",
+        AccessToken: sdk.String("ipsam"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("sapiente"),
+        Fields: sdk.String("quo"),
+        Key: sdk.String("odit"),
+        OauthToken: sdk.String("at"),
         Parent: "at",
-        PrettyPrint: false,
-        QuotaUser: "at",
-        UploadType: "maiores",
-        UploadProtocol: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("maiores"),
+        UploadType: sdk.String("molestiae"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

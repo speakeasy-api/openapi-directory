@@ -46,12 +46,16 @@ const (
 	DataflowProjectsJobsAggregatedFilterEnumActive     DataflowProjectsJobsAggregatedFilterEnum = "ACTIVE"
 )
 
+func (e DataflowProjectsJobsAggregatedFilterEnum) ToPointer() *DataflowProjectsJobsAggregatedFilterEnum {
+	return &e
+}
+
 func (e *DataflowProjectsJobsAggregatedFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "ALL":
@@ -59,10 +63,10 @@ func (e *DataflowProjectsJobsAggregatedFilterEnum) UnmarshalJSON(data []byte) er
 	case "TERMINATED":
 		fallthrough
 	case "ACTIVE":
-		*e = DataflowProjectsJobsAggregatedFilterEnum(s)
+		*e = DataflowProjectsJobsAggregatedFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsJobsAggregatedFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsJobsAggregatedFilterEnum: %v", v)
 	}
 }
 
@@ -76,12 +80,16 @@ const (
 	DataflowProjectsJobsAggregatedViewEnumJobViewDescription DataflowProjectsJobsAggregatedViewEnum = "JOB_VIEW_DESCRIPTION"
 )
 
+func (e DataflowProjectsJobsAggregatedViewEnum) ToPointer() *DataflowProjectsJobsAggregatedViewEnum {
+	return &e
+}
+
 func (e *DataflowProjectsJobsAggregatedViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_VIEW_UNKNOWN":
 		fallthrough
 	case "JOB_VIEW_SUMMARY":
@@ -89,10 +97,10 @@ func (e *DataflowProjectsJobsAggregatedViewEnum) UnmarshalJSON(data []byte) erro
 	case "JOB_VIEW_ALL":
 		fallthrough
 	case "JOB_VIEW_DESCRIPTION":
-		*e = DataflowProjectsJobsAggregatedViewEnum(s)
+		*e = DataflowProjectsJobsAggregatedViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataflowProjectsJobsAggregatedViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DataflowProjectsJobsAggregatedViewEnum: %v", v)
 	}
 }
 

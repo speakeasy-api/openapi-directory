@@ -16,17 +16,21 @@ const (
 	CreateTaskXAmzTargetEnumFmrsServiceCreateTask CreateTaskXAmzTargetEnum = "FmrsService.CreateTask"
 )
 
+func (e CreateTaskXAmzTargetEnum) ToPointer() *CreateTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FmrsService.CreateTask":
-		*e = CreateTaskXAmzTargetEnum(s)
+		*e = CreateTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTaskXAmzTargetEnum: %v", v)
 	}
 }
 

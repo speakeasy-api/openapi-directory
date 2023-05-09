@@ -48,12 +48,16 @@ const (
 	ScaStatusEnumExempted          ScaStatusEnum = "exempted"
 )
 
+func (e ScaStatusEnum) ToPointer() *ScaStatusEnum {
+	return &e
+}
+
 func (e *ScaStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "received":
 		fallthrough
 	case "psuIdentified":
@@ -71,9 +75,9 @@ func (e *ScaStatusEnum) UnmarshalJSON(data []byte) error {
 	case "failed":
 		fallthrough
 	case "exempted":
-		*e = ScaStatusEnum(s)
+		*e = ScaStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScaStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ScaStatusEnum: %v", v)
 	}
 }

@@ -17,19 +17,23 @@ const (
 	CreateFileSystemRequestBodyPerformanceModeEnumMaxIo          CreateFileSystemRequestBodyPerformanceModeEnum = "maxIO"
 )
 
+func (e CreateFileSystemRequestBodyPerformanceModeEnum) ToPointer() *CreateFileSystemRequestBodyPerformanceModeEnum {
+	return &e
+}
+
 func (e *CreateFileSystemRequestBodyPerformanceModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "generalPurpose":
 		fallthrough
 	case "maxIO":
-		*e = CreateFileSystemRequestBodyPerformanceModeEnum(s)
+		*e = CreateFileSystemRequestBodyPerformanceModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFileSystemRequestBodyPerformanceModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFileSystemRequestBodyPerformanceModeEnum: %v", v)
 	}
 }
 
@@ -42,21 +46,25 @@ const (
 	CreateFileSystemRequestBodyThroughputModeEnumElastic     CreateFileSystemRequestBodyThroughputModeEnum = "elastic"
 )
 
+func (e CreateFileSystemRequestBodyThroughputModeEnum) ToPointer() *CreateFileSystemRequestBodyThroughputModeEnum {
+	return &e
+}
+
 func (e *CreateFileSystemRequestBodyThroughputModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bursting":
 		fallthrough
 	case "provisioned":
 		fallthrough
 	case "elastic":
-		*e = CreateFileSystemRequestBodyThroughputModeEnum(s)
+		*e = CreateFileSystemRequestBodyThroughputModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFileSystemRequestBodyThroughputModeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFileSystemRequestBodyThroughputModeEnum: %v", v)
 	}
 }
 

@@ -13,16 +13,20 @@ const (
 	RunExportEnumDefinition RunExportEnum = "DEFINITION"
 )
 
+func (e RunExportEnum) ToPointer() *RunExportEnum {
+	return &e
+}
+
 func (e *RunExportEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFINITION":
-		*e = RunExportEnum(s)
+		*e = RunExportEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunExportEnum: %s", s)
+		return fmt.Errorf("invalid value for RunExportEnum: %v", v)
 	}
 }

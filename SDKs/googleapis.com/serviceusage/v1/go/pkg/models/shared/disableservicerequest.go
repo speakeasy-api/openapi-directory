@@ -16,21 +16,25 @@ const (
 	DisableServiceRequestCheckIfServiceHasUsageEnumCheck                             DisableServiceRequestCheckIfServiceHasUsageEnum = "CHECK"
 )
 
+func (e DisableServiceRequestCheckIfServiceHasUsageEnum) ToPointer() *DisableServiceRequestCheckIfServiceHasUsageEnum {
+	return &e
+}
+
 func (e *DisableServiceRequestCheckIfServiceHasUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHECK_IF_SERVICE_HAS_USAGE_UNSPECIFIED":
 		fallthrough
 	case "SKIP":
 		fallthrough
 	case "CHECK":
-		*e = DisableServiceRequestCheckIfServiceHasUsageEnum(s)
+		*e = DisableServiceRequestCheckIfServiceHasUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableServiceRequestCheckIfServiceHasUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableServiceRequestCheckIfServiceHasUsageEnum: %v", v)
 	}
 }
 

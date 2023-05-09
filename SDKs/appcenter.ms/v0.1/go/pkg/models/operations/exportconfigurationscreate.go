@@ -21,12 +21,16 @@ const (
 	ExportConfigurationsCreateRequestBodyExportEntitiesEnumNoLogs      ExportConfigurationsCreateRequestBodyExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsCreateRequestBodyExportEntitiesEnum) ToPointer() *ExportConfigurationsCreateRequestBodyExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreateRequestBodyExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -34,10 +38,10 @@ func (e *ExportConfigurationsCreateRequestBodyExportEntitiesEnum) UnmarshalJSON(
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsCreateRequestBodyExportEntitiesEnum(s)
+		*e = ExportConfigurationsCreateRequestBodyExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreateRequestBodyExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreateRequestBodyExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	ExportConfigurationsCreateRequestBodyTypeEnumApplicationInsightsLinkedSubscription ExportConfigurationsCreateRequestBodyTypeEnum = "application_insights_linked_subscription"
 )
 
+func (e ExportConfigurationsCreateRequestBodyTypeEnum) ToPointer() *ExportConfigurationsCreateRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreateRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob_storage_connection_string":
 		fallthrough
 	case "application_insights_instrumentation_key":
@@ -64,10 +72,10 @@ func (e *ExportConfigurationsCreateRequestBodyTypeEnum) UnmarshalJSON(data []byt
 	case "blob_storage_linked_subscription":
 		fallthrough
 	case "application_insights_linked_subscription":
-		*e = ExportConfigurationsCreateRequestBodyTypeEnum(s)
+		*e = ExportConfigurationsCreateRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreateRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreateRequestBodyTypeEnum: %v", v)
 	}
 }
 
@@ -105,12 +113,16 @@ const (
 	ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnumTooManyRequests     ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum) ToPointer() *ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -124,10 +136,10 @@ func (e *ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum) Unmarsha
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -150,12 +162,16 @@ const (
 	ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnumNoLogs      ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum) ToPointer() *ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -163,10 +179,10 @@ func (e *ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEn
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum(s)
+		*e = ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportConfigurationExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -180,12 +196,16 @@ const (
 	ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnumApplicationInsightsLinkedSubscription ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum = "application_insights_linked_subscription"
 )
 
+func (e ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum) ToPointer() *ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "blob_storage_connection_string":
 		fallthrough
 	case "application_insights_instrumentation_key":
@@ -193,10 +213,10 @@ func (e *ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum
 	case "blob_storage_linked_subscription":
 		fallthrough
 	case "application_insights_linked_subscription":
-		*e = ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum(s)
+		*e = ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportConfigurationTypeEnum: %v", v)
 	}
 }
 
@@ -222,12 +242,16 @@ const (
 	ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnumNoLogs      ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum = "no_logs"
 )
 
+func (e ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum) ToPointer() *ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crashes":
 		fallthrough
 	case "errors":
@@ -235,10 +259,10 @@ func (e *ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum) Unmarsh
 	case "attachments":
 		fallthrough
 	case "no_logs":
-		*e = ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum(s)
+		*e = ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportEntitiesEnum: %v", v)
 	}
 }
 
@@ -250,19 +274,23 @@ const (
 	ExportConfigurationsCreate202ApplicationJSONExportTypeEnumAppInsights ExportConfigurationsCreate202ApplicationJSONExportTypeEnum = "AppInsights"
 )
 
+func (e ExportConfigurationsCreate202ApplicationJSONExportTypeEnum) ToPointer() *ExportConfigurationsCreate202ApplicationJSONExportTypeEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreate202ApplicationJSONExportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BlobStorage":
 		fallthrough
 	case "AppInsights":
-		*e = ExportConfigurationsCreate202ApplicationJSONExportTypeEnum(s)
+		*e = ExportConfigurationsCreate202ApplicationJSONExportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONExportTypeEnum: %v", v)
 	}
 }
 
@@ -277,12 +305,16 @@ const (
 	ExportConfigurationsCreate202ApplicationJSONStateEnumInvalid  ExportConfigurationsCreate202ApplicationJSONStateEnum = "Invalid"
 )
 
+func (e ExportConfigurationsCreate202ApplicationJSONStateEnum) ToPointer() *ExportConfigurationsCreate202ApplicationJSONStateEnum {
+	return &e
+}
+
 func (e *ExportConfigurationsCreate202ApplicationJSONStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
@@ -292,10 +324,10 @@ func (e *ExportConfigurationsCreate202ApplicationJSONStateEnum) UnmarshalJSON(da
 	case "Deleted":
 		fallthrough
 	case "Invalid":
-		*e = ExportConfigurationsCreate202ApplicationJSONStateEnum(s)
+		*e = ExportConfigurationsCreate202ApplicationJSONStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportConfigurationsCreate202ApplicationJSONStateEnum: %v", v)
 	}
 }
 

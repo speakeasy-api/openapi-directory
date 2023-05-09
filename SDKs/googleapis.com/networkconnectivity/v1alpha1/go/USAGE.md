@@ -2,48 +2,46 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         HubInput: &shared.HubInput{
-            CreateTime: "provident",
-            Description: "distinctio",
+            CreateTime: sdk.String("provident"),
+            Description: sdk.String("distinctio"),
             Labels: map[string]string{
                 "unde": "nulla",
                 "corrupti": "illum",
                 "vel": "error",
                 "deserunt": "suscipit",
             },
-            Name: "iure",
-            UpdateTime: "magnam",
+            Name: sdk.String("Dr. Valerie Toy"),
+            UpdateTime: sdk.String("suscipit"),
         },
-        AccessToken: "debitis",
-        Alt: "json",
-        Callback: "delectus",
-        Fields: "tempora",
-        HubID: "suscipit",
-        Key: "molestiae",
-        OauthToken: "minus",
-        Parent: "placeat",
-        PrettyPrint: false,
-        QuotaUser: "voluptatum",
-        RequestID: "iusto",
-        UploadType: "excepturi",
-        UploadProtocol: "nisi",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("placeat"),
+        Fields: sdk.String("voluptatum"),
+        HubID: sdk.String("iusto"),
+        Key: sdk.String("excepturi"),
+        OauthToken: sdk.String("nisi"),
+        Parent: "recusandae",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("temporibus"),
+        RequestID: sdk.String("ab"),
+        UploadType: sdk.String("quis"),
+        UploadProtocol: sdk.String("veritatis"),
+    }, operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

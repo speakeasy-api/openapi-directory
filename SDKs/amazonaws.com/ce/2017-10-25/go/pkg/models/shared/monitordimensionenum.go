@@ -13,16 +13,20 @@ const (
 	MonitorDimensionEnumService MonitorDimensionEnum = "SERVICE"
 )
 
+func (e MonitorDimensionEnum) ToPointer() *MonitorDimensionEnum {
+	return &e
+}
+
 func (e *MonitorDimensionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE":
-		*e = MonitorDimensionEnum(s)
+		*e = MonitorDimensionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitorDimensionEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitorDimensionEnum: %v", v)
 	}
 }

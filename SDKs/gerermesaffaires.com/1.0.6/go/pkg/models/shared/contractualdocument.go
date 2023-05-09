@@ -19,12 +19,16 @@ const (
 	ContractualDocumentTypeEnumOther            ContractualDocumentTypeEnum = "other"
 )
 
+func (e ContractualDocumentTypeEnum) ToPointer() *ContractualDocumentTypeEnum {
+	return &e
+}
+
 func (e *ContractualDocumentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contract":
 		fallthrough
 	case "engagement-letter":
@@ -38,10 +42,10 @@ func (e *ContractualDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "quotation":
 		fallthrough
 	case "other":
-		*e = ContractualDocumentTypeEnum(s)
+		*e = ContractualDocumentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContractualDocumentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContractualDocumentTypeEnum: %v", v)
 	}
 }
 

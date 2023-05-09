@@ -35,7 +35,10 @@ func newVehicle(defaultClient, securityClient HTTPClient, serverURL, language, s
 // VehicleGet - Gets the predictions for a given list of vehicle Id's.
 func (s *vehicle) VehicleGet(ctx context.Context, request operations.VehicleGetRequest) (*operations.VehicleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Vehicle/{ids}/Arrivals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Vehicle/{ids}/Arrivals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

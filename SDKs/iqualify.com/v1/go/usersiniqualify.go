@@ -36,7 +36,10 @@ func newUsersInIQualify(defaultClient, securityClient HTTPClient, serverURL, lan
 // Responds with a user matching the specified email.
 func (s *usersInIQualify) GetUsersUserEmail(ctx context.Context, request operations.GetUsersUserEmailRequest) (*operations.GetUsersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *usersInIQualify) GetUsersUserEmail(ctx context.Context, request operati
 // Responds with all offerings that the user in.
 func (s *usersInIQualify) GetUsersUserEmailOfferings(ctx context.Context, request operations.GetUsersUserEmailOfferingsRequest) (*operations.GetUsersUserEmailOfferingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -158,7 +164,10 @@ func (s *usersInIQualify) GetUsersUserEmailOfferings(ctx context.Context, reques
 // Updates the specified user by email.
 func (s *usersInIQualify) PatchUsersUserEmail(ctx context.Context, request operations.PatchUsersUserEmailRequest) (*operations.PatchUsersUserEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "User", "json")
 	if err != nil {
@@ -297,7 +306,10 @@ func (s *usersInIQualify) PostUsers(ctx context.Context, request shared.User) (*
 // Re-sends an invitation e-mail to the specified user.
 func (s *usersInIQualify) PostUsersUserEmailInviteEmail(ctx context.Context, request operations.PostUsersUserEmailInviteEmailRequest) (*operations.PostUsersUserEmailInviteEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/invite-email", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/invite-email", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -347,7 +359,10 @@ func (s *usersInIQualify) PostUsersUserEmailInviteEmail(ctx context.Context, req
 // Adds a user to an array of offerings by offeringId.
 func (s *usersInIQualify) PostUsersUserEmailOfferings(ctx context.Context, request operations.PostUsersUserEmailOfferingsRequest) (*operations.PostUsersUserEmailOfferingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/offerings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -418,7 +433,10 @@ func (s *usersInIQualify) PostUsersUserEmailOfferings(ctx context.Context, reque
 // Adds additional permissions to the specified user.
 func (s *usersInIQualify) PostUsersUserEmailPermissionsPermissionName(ctx context.Context, request operations.PostUsersUserEmailPermissionsPermissionNameRequest) (*operations.PostUsersUserEmailPermissionsPermissionNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/permissions/{permissionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/permissions/{permissionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -479,7 +497,10 @@ func (s *usersInIQualify) PostUsersUserEmailPermissionsPermissionName(ctx contex
 // Suspends the specified user's account.
 func (s *usersInIQualify) PutUsersUserEmailSuspend(ctx context.Context, request operations.PutUsersUserEmailSuspendRequest) (*operations.PutUsersUserEmailSuspendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/suspend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{userEmail}/suspend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuspendedRequest", "json")
 	if err != nil {

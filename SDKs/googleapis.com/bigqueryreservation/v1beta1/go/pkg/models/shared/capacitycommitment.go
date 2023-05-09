@@ -18,12 +18,16 @@ const (
 	CapacityCommitmentPlanEnumAnnual                    CapacityCommitmentPlanEnum = "ANNUAL"
 )
 
+func (e CapacityCommitmentPlanEnum) ToPointer() *CapacityCommitmentPlanEnum {
+	return &e
+}
+
 func (e *CapacityCommitmentPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMITMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "FLEX":
@@ -33,10 +37,10 @@ func (e *CapacityCommitmentPlanEnum) UnmarshalJSON(data []byte) error {
 	case "MONTHLY":
 		fallthrough
 	case "ANNUAL":
-		*e = CapacityCommitmentPlanEnum(s)
+		*e = CapacityCommitmentPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityCommitmentPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityCommitmentPlanEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	CapacityCommitmentRenewalPlanEnumAnnual                    CapacityCommitmentRenewalPlanEnum = "ANNUAL"
 )
 
+func (e CapacityCommitmentRenewalPlanEnum) ToPointer() *CapacityCommitmentRenewalPlanEnum {
+	return &e
+}
+
 func (e *CapacityCommitmentRenewalPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMITMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "FLEX":
@@ -66,10 +74,10 @@ func (e *CapacityCommitmentRenewalPlanEnum) UnmarshalJSON(data []byte) error {
 	case "MONTHLY":
 		fallthrough
 	case "ANNUAL":
-		*e = CapacityCommitmentRenewalPlanEnum(s)
+		*e = CapacityCommitmentRenewalPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityCommitmentRenewalPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityCommitmentRenewalPlanEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	CapacityCommitmentStateEnumFailed           CapacityCommitmentStateEnum = "FAILED"
 )
 
+func (e CapacityCommitmentStateEnum) ToPointer() *CapacityCommitmentStateEnum {
+	return &e
+}
+
 func (e *CapacityCommitmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -96,10 +108,10 @@ func (e *CapacityCommitmentStateEnum) UnmarshalJSON(data []byte) error {
 	case "ACTIVE":
 		fallthrough
 	case "FAILED":
-		*e = CapacityCommitmentStateEnum(s)
+		*e = CapacityCommitmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityCommitmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityCommitmentStateEnum: %v", v)
 	}
 }
 

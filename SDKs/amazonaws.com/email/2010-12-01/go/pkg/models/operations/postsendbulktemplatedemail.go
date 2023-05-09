@@ -15,17 +15,21 @@ const (
 	POSTSendBulkTemplatedEmailActionEnumSendBulkTemplatedEmail POSTSendBulkTemplatedEmailActionEnum = "SendBulkTemplatedEmail"
 )
 
+func (e POSTSendBulkTemplatedEmailActionEnum) ToPointer() *POSTSendBulkTemplatedEmailActionEnum {
+	return &e
+}
+
 func (e *POSTSendBulkTemplatedEmailActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SendBulkTemplatedEmail":
-		*e = POSTSendBulkTemplatedEmailActionEnum(s)
+		*e = POSTSendBulkTemplatedEmailActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSendBulkTemplatedEmailActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSendBulkTemplatedEmailActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTSendBulkTemplatedEmailVersionEnumTwoThousandAndTen1201 POSTSendBulkTemplatedEmailVersionEnum = "2010-12-01"
 )
 
+func (e POSTSendBulkTemplatedEmailVersionEnum) ToPointer() *POSTSendBulkTemplatedEmailVersionEnum {
+	return &e
+}
+
 func (e *POSTSendBulkTemplatedEmailVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTSendBulkTemplatedEmailVersionEnum(s)
+		*e = POSTSendBulkTemplatedEmailVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTSendBulkTemplatedEmailVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTSendBulkTemplatedEmailVersionEnum: %v", v)
 	}
 }
 

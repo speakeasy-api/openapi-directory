@@ -16,17 +16,21 @@ const (
 	DeleteLoggingConfigurationXAmzTargetEnumAwswafRegional20161128DeleteLoggingConfiguration DeleteLoggingConfigurationXAmzTargetEnum = "AWSWAF_Regional_20161128.DeleteLoggingConfiguration"
 )
 
+func (e DeleteLoggingConfigurationXAmzTargetEnum) ToPointer() *DeleteLoggingConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLoggingConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_Regional_20161128.DeleteLoggingConfiguration":
-		*e = DeleteLoggingConfigurationXAmzTargetEnum(s)
+		*e = DeleteLoggingConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLoggingConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLoggingConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

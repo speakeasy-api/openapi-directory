@@ -16,17 +16,21 @@ const (
 	GetQueryRuntimeStatisticsXAmzTargetEnumAmazonAthenaGetQueryRuntimeStatistics GetQueryRuntimeStatisticsXAmzTargetEnum = "AmazonAthena.GetQueryRuntimeStatistics"
 )
 
+func (e GetQueryRuntimeStatisticsXAmzTargetEnum) ToPointer() *GetQueryRuntimeStatisticsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetQueryRuntimeStatisticsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetQueryRuntimeStatistics":
-		*e = GetQueryRuntimeStatisticsXAmzTargetEnum(s)
+		*e = GetQueryRuntimeStatisticsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQueryRuntimeStatisticsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQueryRuntimeStatisticsXAmzTargetEnum: %v", v)
 	}
 }
 

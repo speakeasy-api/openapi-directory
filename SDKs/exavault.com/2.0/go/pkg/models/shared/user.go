@@ -14,17 +14,21 @@ const (
 	UserRelationshipsHomeResourceDataTypeEnumResource UserRelationshipsHomeResourceDataTypeEnum = "resource"
 )
 
+func (e UserRelationshipsHomeResourceDataTypeEnum) ToPointer() *UserRelationshipsHomeResourceDataTypeEnum {
+	return &e
+}
+
 func (e *UserRelationshipsHomeResourceDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "resource":
-		*e = UserRelationshipsHomeResourceDataTypeEnum(s)
+		*e = UserRelationshipsHomeResourceDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRelationshipsHomeResourceDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRelationshipsHomeResourceDataTypeEnum: %v", v)
 	}
 }
 
@@ -46,17 +50,21 @@ const (
 	UserRelationshipsOwnerAccountDataTypeEnumAccount UserRelationshipsOwnerAccountDataTypeEnum = "account"
 )
 
+func (e UserRelationshipsOwnerAccountDataTypeEnum) ToPointer() *UserRelationshipsOwnerAccountDataTypeEnum {
+	return &e
+}
+
 func (e *UserRelationshipsOwnerAccountDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account":
-		*e = UserRelationshipsOwnerAccountDataTypeEnum(s)
+		*e = UserRelationshipsOwnerAccountDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRelationshipsOwnerAccountDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRelationshipsOwnerAccountDataTypeEnum: %v", v)
 	}
 }
 

@@ -26,17 +26,21 @@ const (
 	DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnumOk DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum = "OK"
 )
 
+func (e DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum) ToPointer() *DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum(s)
+		*e = DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProjectUsernameProjectEnvvarName200ApplicationJSONMessageEnum: %v", v)
 	}
 }
 

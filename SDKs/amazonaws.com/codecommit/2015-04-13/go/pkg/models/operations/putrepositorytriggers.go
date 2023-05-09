@@ -16,17 +16,21 @@ const (
 	PutRepositoryTriggersXAmzTargetEnumCodeCommit20150413PutRepositoryTriggers PutRepositoryTriggersXAmzTargetEnum = "CodeCommit_20150413.PutRepositoryTriggers"
 )
 
+func (e PutRepositoryTriggersXAmzTargetEnum) ToPointer() *PutRepositoryTriggersXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutRepositoryTriggersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.PutRepositoryTriggers":
-		*e = PutRepositoryTriggersXAmzTargetEnum(s)
+		*e = PutRepositoryTriggersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutRepositoryTriggersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutRepositoryTriggersXAmzTargetEnum: %v", v)
 	}
 }
 

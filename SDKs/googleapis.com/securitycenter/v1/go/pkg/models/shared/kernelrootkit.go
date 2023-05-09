@@ -4,22 +4,22 @@ package shared
 
 // KernelRootkit - Kernel mode rootkit signatures.
 type KernelRootkit struct {
-	// Rootkit name when available.
+	// Rootkit name, when available.
 	Name *string `json:"name,omitempty"`
-	// True when unexpected modifications of kernel code memory are present.
+	// True if unexpected modifications of kernel code memory are present.
 	UnexpectedCodeModification *bool `json:"unexpectedCodeModification,omitempty"`
-	// True when `ftrace` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
+	// True if `ftrace` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
 	UnexpectedFtraceHandler *bool `json:"unexpectedFtraceHandler,omitempty"`
-	// True when interrupt handlers that are are not in the expected kernel or module code regions are present.
+	// True if interrupt handlers that are are not in the expected kernel or module code regions are present.
 	UnexpectedInterruptHandler *bool `json:"unexpectedInterruptHandler,omitempty"`
-	// True when kernel code pages that are not in the expected kernel or module code regions are present.
+	// True if kernel code pages that are not in the expected kernel or module code regions are present.
 	UnexpectedKernelCodePages *bool `json:"unexpectedKernelCodePages,omitempty"`
-	// True when `kprobe` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
+	// True if `kprobe` points are present with callbacks pointing to regions that are not in the expected kernel or module code range.
 	UnexpectedKprobeHandler *bool `json:"unexpectedKprobeHandler,omitempty"`
-	// True when unexpected processes in the scheduler run queue are present. Such processes are in the run queue, but not in the process task list.
+	// True if unexpected processes in the scheduler run queue are present. Such processes are in the run queue, but not in the process task list.
 	UnexpectedProcessesInRunqueue *bool `json:"unexpectedProcessesInRunqueue,omitempty"`
-	// True when unexpected modifications of kernel read-only data memory are present.
+	// True if unexpected modifications of kernel read-only data memory are present.
 	UnexpectedReadOnlyDataModification *bool `json:"unexpectedReadOnlyDataModification,omitempty"`
-	// True when system call handlers that are are not in the expected kernel or module code regions are present.
+	// True if system call handlers that are are not in the expected kernel or module code regions are present.
 	UnexpectedSystemCallHandler *bool `json:"unexpectedSystemCallHandler,omitempty"`
 }

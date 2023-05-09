@@ -21,12 +21,16 @@ const (
 	GoogleCloudMlV1HyperparameterOutputStateEnumCancelled        GoogleCloudMlV1HyperparameterOutputStateEnum = "CANCELLED"
 )
 
+func (e GoogleCloudMlV1HyperparameterOutputStateEnum) ToPointer() *GoogleCloudMlV1HyperparameterOutputStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudMlV1HyperparameterOutputStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -42,10 +46,10 @@ func (e *GoogleCloudMlV1HyperparameterOutputStateEnum) UnmarshalJSON(data []byte
 	case "CANCELLING":
 		fallthrough
 	case "CANCELLED":
-		*e = GoogleCloudMlV1HyperparameterOutputStateEnum(s)
+		*e = GoogleCloudMlV1HyperparameterOutputStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterOutputStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudMlV1HyperparameterOutputStateEnum: %v", v)
 	}
 }
 

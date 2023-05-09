@@ -32,6 +32,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Amazon CloudFront</fullname> <p>This is the <i>Amazon CloudFront API Reference</i>. This guide is for developers who need detailed information about the CloudFront API actions, data types, and errors. For detailed information about CloudFront features and their associated API calls, see the <i>Amazon CloudFront Developer Guide</i>.</p>
 // https://docs.aws.amazon.com/cloudfront/ - Amazon Web Services documentation
 type SDK struct {
@@ -449,7 +464,10 @@ func (s *SDK) CreateDistributionWithTags20161125(ctx context.Context, request op
 // CreateInvalidation20161125 - Create a new invalidation.
 func (s *SDK) CreateInvalidation20161125(ctx context.Context, request operations.CreateInvalidation20161125Request) (*operations.CreateInvalidation20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -685,7 +703,10 @@ func (s *SDK) CreateStreamingDistributionWithTags20161125(ctx context.Context, r
 // DeleteCloudFrontOriginAccessIdentity20161125 - Delete an origin access identity.
 func (s *SDK) DeleteCloudFrontOriginAccessIdentity20161125(ctx context.Context, request operations.DeleteCloudFrontOriginAccessIdentity20161125Request) (*operations.DeleteCloudFrontOriginAccessIdentity20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -740,7 +761,10 @@ func (s *SDK) DeleteCloudFrontOriginAccessIdentity20161125(ctx context.Context, 
 // DeleteDistribution20161125 - Delete a distribution.
 func (s *SDK) DeleteDistribution20161125(ctx context.Context, request operations.DeleteDistribution20161125Request) (*operations.DeleteDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -795,7 +819,10 @@ func (s *SDK) DeleteDistribution20161125(ctx context.Context, request operations
 // DeleteStreamingDistribution20161125 - <p>Delete a streaming distribution. To delete an RTMP distribution using the CloudFront API, perform the following steps.</p> <p> <b>To delete an RTMP distribution using the CloudFront API</b>:</p> <ol> <li> <p>Disable the RTMP distribution.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to get the current configuration and the <code>Etag</code> header for the distribution. </p> </li> <li> <p>Update the XML document that was returned in the response to your <code>GET Streaming Distribution Config</code> request to change the value of <code>Enabled</code> to <code>false</code>.</p> </li> <li> <p>Submit a <code>PUT Streaming Distribution Config</code> request to update the configuration for your distribution. In the request body, include the XML document that you updated in Step 3. Then set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to the <code>PUT Streaming Distribution Config</code> request to confirm that the distribution was successfully disabled.</p> </li> <li> <p>Submit a <code>GET Streaming Distribution Config</code> request to confirm that your changes have propagated. When propagation is complete, the value of <code>Status</code> is <code>Deployed</code>.</p> </li> <li> <p>Submit a <code>DELETE Streaming Distribution</code> request. Set the value of the HTTP <code>If-Match</code> header to the value of the <code>ETag</code> header that CloudFront returned when you submitted the <code>GET Streaming Distribution Config</code> request in Step 2.</p> </li> <li> <p>Review the response to your <code>DELETE Streaming Distribution</code> request to confirm that the distribution was successfully deleted.</p> </li> </ol> <p>For information about deleting a distribution using the CloudFront console, see <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowToDeleteDistribution.html">Deleting a Distribution</a> in the <i>Amazon CloudFront Developer Guide</i>.</p>
 func (s *SDK) DeleteStreamingDistribution20161125(ctx context.Context, request operations.DeleteStreamingDistribution20161125Request) (*operations.DeleteStreamingDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -850,7 +877,10 @@ func (s *SDK) DeleteStreamingDistribution20161125(ctx context.Context, request o
 // GetCloudFrontOriginAccessIdentity20161125 - Get the information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentity20161125(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentity20161125Request) (*operations.GetCloudFrontOriginAccessIdentity20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -900,7 +930,10 @@ func (s *SDK) GetCloudFrontOriginAccessIdentity20161125(ctx context.Context, req
 // GetCloudFrontOriginAccessIdentityConfig20161125 - Get the configuration information about an origin access identity.
 func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20161125(ctx context.Context, request operations.GetCloudFrontOriginAccessIdentityConfig20161125Request) (*operations.GetCloudFrontOriginAccessIdentityConfig20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -950,7 +983,10 @@ func (s *SDK) GetCloudFrontOriginAccessIdentityConfig20161125(ctx context.Contex
 // GetDistribution20161125 - Get the information about a distribution.
 func (s *SDK) GetDistribution20161125(ctx context.Context, request operations.GetDistribution20161125Request) (*operations.GetDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1000,7 +1036,10 @@ func (s *SDK) GetDistribution20161125(ctx context.Context, request operations.Ge
 // GetDistributionConfig20161125 - Get the configuration information about a distribution.
 func (s *SDK) GetDistributionConfig20161125(ctx context.Context, request operations.GetDistributionConfig20161125Request) (*operations.GetDistributionConfig20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1050,7 +1089,10 @@ func (s *SDK) GetDistributionConfig20161125(ctx context.Context, request operati
 // GetInvalidation20161125 - Get the information about an invalidation.
 func (s *SDK) GetInvalidation20161125(ctx context.Context, request operations.GetInvalidation20161125Request) (*operations.GetInvalidation20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1102,7 +1144,10 @@ func (s *SDK) GetInvalidation20161125(ctx context.Context, request operations.Ge
 // GetStreamingDistribution20161125 - Gets information about a specified RTMP distribution, including the distribution configuration.
 func (s *SDK) GetStreamingDistribution20161125(ctx context.Context, request operations.GetStreamingDistribution20161125Request) (*operations.GetStreamingDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1152,7 +1197,10 @@ func (s *SDK) GetStreamingDistribution20161125(ctx context.Context, request oper
 // GetStreamingDistributionConfig20161125 - Get the configuration information about a streaming distribution.
 func (s *SDK) GetStreamingDistributionConfig20161125(ctx context.Context, request operations.GetStreamingDistributionConfig20161125Request) (*operations.GetStreamingDistributionConfig20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1306,7 +1354,10 @@ func (s *SDK) ListDistributions20161125(ctx context.Context, request operations.
 // ListDistributionsByWebACLId20161125 - List the distributions that are associated with a specified AWS WAF web ACL.
 func (s *SDK) ListDistributionsByWebACLId20161125(ctx context.Context, request operations.ListDistributionsByWebACLId20161125Request) (*operations.ListDistributionsByWebACLId20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distributionsByWebACLId/{WebACLId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distributionsByWebACLId/{WebACLId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1360,7 +1411,10 @@ func (s *SDK) ListDistributionsByWebACLId20161125(ctx context.Context, request o
 // ListInvalidations20161125 - Lists invalidation batches.
 func (s *SDK) ListInvalidations20161125(ctx context.Context, request operations.ListInvalidations20161125Request) (*operations.ListInvalidations20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{DistributionId}/invalidation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1660,7 +1714,10 @@ func (s *SDK) UntagResource20161125(ctx context.Context, request operations.Unta
 // UpdateCloudFrontOriginAccessIdentity20161125 - Update an origin access identity.
 func (s *SDK) UpdateCloudFrontOriginAccessIdentity20161125(ctx context.Context, request operations.UpdateCloudFrontOriginAccessIdentity20161125Request) (*operations.UpdateCloudFrontOriginAccessIdentity20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/origin-access-identity/cloudfront/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1732,7 +1789,10 @@ func (s *SDK) UpdateCloudFrontOriginAccessIdentity20161125(ctx context.Context, 
 // UpdateDistribution20161125 - Update a distribution.
 func (s *SDK) UpdateDistribution20161125(ctx context.Context, request operations.UpdateDistribution20161125Request) (*operations.UpdateDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1864,7 +1924,10 @@ func (s *SDK) UpdateDistribution20161125(ctx context.Context, request operations
 // UpdateStreamingDistribution20161125 - Update a streaming distribution.
 func (s *SDK) UpdateStreamingDistribution20161125(ctx context.Context, request operations.UpdateStreamingDistribution20161125Request) (*operations.UpdateStreamingDistribution20161125Response, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/2016-11-25/streaming-distribution/{Id}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	GetGatewayXAmzTargetEnumBackupOnPremisesV20210101GetGateway GetGatewayXAmzTargetEnum = "BackupOnPremises_v20210101.GetGateway"
 )
 
+func (e GetGatewayXAmzTargetEnum) ToPointer() *GetGatewayXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetGatewayXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.GetGateway":
-		*e = GetGatewayXAmzTargetEnum(s)
+		*e = GetGatewayXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetGatewayXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetGatewayXAmzTargetEnum: %v", v)
 	}
 }
 

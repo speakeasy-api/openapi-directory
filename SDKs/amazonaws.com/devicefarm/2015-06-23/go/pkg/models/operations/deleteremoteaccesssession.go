@@ -16,17 +16,21 @@ const (
 	DeleteRemoteAccessSessionXAmzTargetEnumDeviceFarm20150623DeleteRemoteAccessSession DeleteRemoteAccessSessionXAmzTargetEnum = "DeviceFarm_20150623.DeleteRemoteAccessSession"
 )
 
+func (e DeleteRemoteAccessSessionXAmzTargetEnum) ToPointer() *DeleteRemoteAccessSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteRemoteAccessSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeviceFarm_20150623.DeleteRemoteAccessSession":
-		*e = DeleteRemoteAccessSessionXAmzTargetEnum(s)
+		*e = DeleteRemoteAccessSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteRemoteAccessSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteRemoteAccessSessionXAmzTargetEnum: %v", v)
 	}
 }
 

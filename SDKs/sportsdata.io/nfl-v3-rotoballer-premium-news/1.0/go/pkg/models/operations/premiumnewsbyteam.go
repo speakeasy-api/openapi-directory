@@ -17,19 +17,23 @@ const (
 	PremiumNewsByTeamFormatEnumJSON PremiumNewsByTeamFormatEnum = "json"
 )
 
+func (e PremiumNewsByTeamFormatEnum) ToPointer() *PremiumNewsByTeamFormatEnum {
+	return &e
+}
+
 func (e *PremiumNewsByTeamFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xml":
 		fallthrough
 	case "json":
-		*e = PremiumNewsByTeamFormatEnum(s)
+		*e = PremiumNewsByTeamFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PremiumNewsByTeamFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PremiumNewsByTeamFormatEnum: %v", v)
 	}
 }
 

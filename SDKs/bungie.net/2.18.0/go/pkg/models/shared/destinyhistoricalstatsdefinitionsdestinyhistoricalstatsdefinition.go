@@ -8,29 +8,33 @@ import (
 )
 
 // DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum - Optional icon for the statistic
-type DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum string
+type DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum int
 
 const (
-	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumZero DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = "0"
-	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumOne  DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = "1"
-	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumTwo  DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = "2"
+	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumZero DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = 0
+	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumOne  DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = 1
+	DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnumTwo  DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum = 2
 )
 
+func (e DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum) ToPointer() *DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum {
+	return &e
+}
+
 func (e *DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
-		*e = DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum(s)
+	case 2:
+		*e = DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum: %v", v)
 	}
 }
 

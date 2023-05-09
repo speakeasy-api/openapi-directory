@@ -16,17 +16,21 @@ const (
 	CancelResourceRequestXAmzTargetEnumCloudAPIServiceCancelResourceRequest CancelResourceRequestXAmzTargetEnum = "CloudApiService.CancelResourceRequest"
 )
 
+func (e CancelResourceRequestXAmzTargetEnum) ToPointer() *CancelResourceRequestXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelResourceRequestXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CloudApiService.CancelResourceRequest":
-		*e = CancelResourceRequestXAmzTargetEnum(s)
+		*e = CancelResourceRequestXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelResourceRequestXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelResourceRequestXAmzTargetEnum: %v", v)
 	}
 }
 

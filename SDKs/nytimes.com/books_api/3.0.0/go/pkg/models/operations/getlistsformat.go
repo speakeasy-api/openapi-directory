@@ -21,19 +21,23 @@ const (
 	GETListsFormatFormatEnumJsonp GETListsFormatFormatEnum = "jsonp"
 )
 
+func (e GETListsFormatFormatEnum) ToPointer() *GETListsFormatFormatEnum {
+	return &e
+}
+
 func (e *GETListsFormatFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
-		*e = GETListsFormatFormatEnum(s)
+		*e = GETListsFormatFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListsFormatFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListsFormatFormatEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	GETListsFormatSortOrderEnumDesc GETListsFormatSortOrderEnum = "DESC"
 )
 
+func (e GETListsFormatSortOrderEnum) ToPointer() *GETListsFormatSortOrderEnum {
+	return &e
+}
+
 func (e *GETListsFormatSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASC":
 		fallthrough
 	case "DESC":
-		*e = GETListsFormatSortOrderEnum(s)
+		*e = GETListsFormatSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListsFormatSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListsFormatSortOrderEnum: %v", v)
 	}
 }
 

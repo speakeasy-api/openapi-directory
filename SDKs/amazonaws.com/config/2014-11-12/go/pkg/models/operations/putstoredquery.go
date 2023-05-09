@@ -16,17 +16,21 @@ const (
 	PutStoredQueryXAmzTargetEnumStarlingDoveServicePutStoredQuery PutStoredQueryXAmzTargetEnum = "StarlingDoveService.PutStoredQuery"
 )
 
+func (e PutStoredQueryXAmzTargetEnum) ToPointer() *PutStoredQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutStoredQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutStoredQuery":
-		*e = PutStoredQueryXAmzTargetEnum(s)
+		*e = PutStoredQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutStoredQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutStoredQueryXAmzTargetEnum: %v", v)
 	}
 }
 

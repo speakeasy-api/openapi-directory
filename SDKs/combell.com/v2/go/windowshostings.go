@@ -36,7 +36,10 @@ func newWindowsHostings(defaultClient, securityClient HTTPClient, serverURL, lan
 // GetWindowsHosting - Windows hosting detail
 func (s *windowsHostings) GetWindowsHosting(ctx context.Context, request operations.GetWindowsHostingRequest) (*operations.GetWindowsHostingResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/windowshostings/{domainName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/windowshostings/{domainName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

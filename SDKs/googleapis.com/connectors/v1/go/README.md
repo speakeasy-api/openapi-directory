@@ -13,39 +13,37 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/connectors
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh(ctx, operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         RequestBody: map[string]interface{}{
             "distinctio": "quibusdam",
             "unde": "nulla",
             "corrupti": "illum",
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        Name: "magnam",
-        OauthToken: "debitis",
-        PrettyPrint: false,
-        QuotaUser: "ipsa",
-        UploadType: "delectus",
-        UploadProtocol: "tempora",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh(ctx, req, operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        Name: "Raquel Bednar",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("molestiae"),
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefreshSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -64,25 +62,29 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh` - Refresh runtime schema of a connection.
-* `ConnectorsProjectsLocationsConnectionsCreate` - Creates a new Connection in a given project and location.
-* `ConnectorsProjectsLocationsConnectionsList` - Lists Connections in a given project and location.
-* `ConnectorsProjectsLocationsConnectionsPatch` - Updates the parameters of a single Connection.
-* `ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasList` - List schema of a runtime actions filtered by action name.
-* `ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasList` - List schema of a runtime entities filtered by entity name.
-* `ConnectorsProjectsLocationsList` - Lists information about the supported locations for this service.
-* `ConnectorsProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `ConnectorsProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `ConnectorsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `ConnectorsProjectsLocationsProvidersConnectorsList` - Lists Connectors in a given project and location.
-* `ConnectorsProjectsLocationsProvidersConnectorsVersionsGet` - Gets details of a single connector version.
-* `ConnectorsProjectsLocationsProvidersConnectorsVersionsList` - Lists Connector Versions in a given project and location.
-* `ConnectorsProjectsLocationsProvidersGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `ConnectorsProjectsLocationsProvidersList` - Lists Providers in a given project and location.
-* `ConnectorsProjectsLocationsProvidersSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `ConnectorsProjectsLocationsProvidersTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [ConnectorsProjectsLocationsConnectionsConnectionSchemaMetadataRefresh](docs/projects/README.md#connectorsprojectslocationsconnectionsconnectionschemametadatarefresh) - Refresh runtime schema of a connection.
+* [ConnectorsProjectsLocationsConnectionsCreate](docs/projects/README.md#connectorsprojectslocationsconnectionscreate) - Creates a new Connection in a given project and location.
+* [ConnectorsProjectsLocationsConnectionsList](docs/projects/README.md#connectorsprojectslocationsconnectionslist) - Lists Connections in a given project and location.
+* [ConnectorsProjectsLocationsConnectionsRuntimeActionSchemasList](docs/projects/README.md#connectorsprojectslocationsconnectionsruntimeactionschemaslist) - List schema of a runtime actions filtered by action name.
+* [ConnectorsProjectsLocationsConnectionsRuntimeEntitySchemasList](docs/projects/README.md#connectorsprojectslocationsconnectionsruntimeentityschemaslist) - List schema of a runtime entities filtered by entity name.
+* [ConnectorsProjectsLocationsEndpointAttachmentsCreate](docs/projects/README.md#connectorsprojectslocationsendpointattachmentscreate) - Creates a new EndpointAttachment in a given project and location.
+* [ConnectorsProjectsLocationsEndpointAttachmentsList](docs/projects/README.md#connectorsprojectslocationsendpointattachmentslist) - List EndpointAttachments in a given project
+* [ConnectorsProjectsLocationsGlobalManagedZonesCreate](docs/projects/README.md#connectorsprojectslocationsglobalmanagedzonescreate) - Creates a new ManagedZone in a given project and location.
+* [ConnectorsProjectsLocationsGlobalManagedZonesList](docs/projects/README.md#connectorsprojectslocationsglobalmanagedzoneslist) - List ManagedZones in a given project
+* [ConnectorsProjectsLocationsGlobalManagedZonesPatch](docs/projects/README.md#connectorsprojectslocationsglobalmanagedzonespatch) - Updates the parameters of a single ManagedZone.
+* [ConnectorsProjectsLocationsList](docs/projects/README.md#connectorsprojectslocationslist) - Lists information about the supported locations for this service.
+* [ConnectorsProjectsLocationsOperationsCancel](docs/projects/README.md#connectorsprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [ConnectorsProjectsLocationsOperationsDelete](docs/projects/README.md#connectorsprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [ConnectorsProjectsLocationsOperationsList](docs/projects/README.md#connectorsprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [ConnectorsProjectsLocationsProvidersConnectorsList](docs/projects/README.md#connectorsprojectslocationsprovidersconnectorslist) - Lists Connectors in a given project and location.
+* [ConnectorsProjectsLocationsProvidersConnectorsVersionsGet](docs/projects/README.md#connectorsprojectslocationsprovidersconnectorsversionsget) - Gets details of a single connector version.
+* [ConnectorsProjectsLocationsProvidersConnectorsVersionsList](docs/projects/README.md#connectorsprojectslocationsprovidersconnectorsversionslist) - Lists Connector Versions in a given project and location.
+* [ConnectorsProjectsLocationsProvidersGetIamPolicy](docs/projects/README.md#connectorsprojectslocationsprovidersgetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [ConnectorsProjectsLocationsProvidersList](docs/projects/README.md#connectorsprojectslocationsproviderslist) - Lists Providers in a given project and location.
+* [ConnectorsProjectsLocationsProvidersSetIamPolicy](docs/projects/README.md#connectorsprojectslocationsproviderssetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [ConnectorsProjectsLocationsProvidersTestIamPermissions](docs/projects/README.md#connectorsprojectslocationsproviderstestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
 ### Maturity

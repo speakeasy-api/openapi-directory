@@ -10,6 +10,8 @@ type GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata st
 	Task *string `json:"task,omitempty"`
 	// the task attempt number this snapshot belongs to.
 	TaskAttempt *int `json:"taskAttempt,omitempty"`
+	// the task label associated with this snapshot. Could be empty.
+	TaskLabel *string `json:"taskLabel,omitempty"`
 	// The task number associated with this snapshot.
 	TaskNumber *string `json:"taskNumber,omitempty"`
 }

@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,27 +17,25 @@ func main() {
         }),
     )
 
-    req := operations.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
+    ctx := context.Background()
+    res, err := s.AttachCustomerManagedPolicyReferenceToPermissionSet(ctx, operations.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
         AttachCustomerManagedPolicyReferenceToPermissionSetRequest: shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
             CustomerManagedPolicyReference: shared.CustomerManagedPolicyReference{
-                Name: "corrupti",
-                Path: "provident",
+                Name: "Terrence Rau",
+                Path: sdk.String("nulla"),
             },
-            InstanceArn: "distinctio",
-            PermissionSetArn: "quibusdam",
+            InstanceArn: "corrupti",
+            PermissionSetArn: "illum",
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet",
-    }
-
-    ctx := context.Background()
-    res, err := s.AttachCustomerManagedPolicyReferenceToPermissionSet(ctx, req)
+        XAmzAlgorithm: sdk.String("vel"),
+        XAmzContentSha256: sdk.String("error"),
+        XAmzCredential: sdk.String("deserunt"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("iure"),
+        XAmzSignature: sdk.String("magnam"),
+        XAmzSignedHeaders: sdk.String("debitis"),
+        XAmzTarget: operations.AttachCustomerManagedPolicyReferenceToPermissionSetXAmzTargetEnumSwbExternalServiceAttachCustomerManagedPolicyReferenceToPermissionSet,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	GetAssignmentXAmzTargetEnumMTurkRequesterServiceV20170117GetAssignment GetAssignmentXAmzTargetEnum = "MTurkRequesterServiceV20170117.GetAssignment"
 )
 
+func (e GetAssignmentXAmzTargetEnum) ToPointer() *GetAssignmentXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAssignmentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MTurkRequesterServiceV20170117.GetAssignment":
-		*e = GetAssignmentXAmzTargetEnum(s)
+		*e = GetAssignmentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssignmentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssignmentXAmzTargetEnum: %v", v)
 	}
 }
 

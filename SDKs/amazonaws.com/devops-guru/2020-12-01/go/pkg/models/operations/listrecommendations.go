@@ -26,12 +26,16 @@ const (
 	ListRecommendationsRequestBodyLocaleEnumZhTw ListRecommendationsRequestBodyLocaleEnum = "ZH_TW"
 )
 
+func (e ListRecommendationsRequestBodyLocaleEnum) ToPointer() *ListRecommendationsRequestBodyLocaleEnum {
+	return &e
+}
+
 func (e *ListRecommendationsRequestBodyLocaleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DE_DE":
 		fallthrough
 	case "EN_US":
@@ -53,10 +57,10 @@ func (e *ListRecommendationsRequestBodyLocaleEnum) UnmarshalJSON(data []byte) er
 	case "ZH_CN":
 		fallthrough
 	case "ZH_TW":
-		*e = ListRecommendationsRequestBodyLocaleEnum(s)
+		*e = ListRecommendationsRequestBodyLocaleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRecommendationsRequestBodyLocaleEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRecommendationsRequestBodyLocaleEnum: %v", v)
 	}
 }
 

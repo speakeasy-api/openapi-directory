@@ -23,21 +23,25 @@ const (
 	BooksVolumesRecommendedRateRatingEnumNotInterested   BooksVolumesRecommendedRateRatingEnum = "NOT_INTERESTED"
 )
 
+func (e BooksVolumesRecommendedRateRatingEnum) ToPointer() *BooksVolumesRecommendedRateRatingEnum {
+	return &e
+}
+
 func (e *BooksVolumesRecommendedRateRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RATING_UNDEFINED":
 		fallthrough
 	case "HAVE_IT":
 		fallthrough
 	case "NOT_INTERESTED":
-		*e = BooksVolumesRecommendedRateRatingEnum(s)
+		*e = BooksVolumesRecommendedRateRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BooksVolumesRecommendedRateRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for BooksVolumesRecommendedRateRatingEnum: %v", v)
 	}
 }
 

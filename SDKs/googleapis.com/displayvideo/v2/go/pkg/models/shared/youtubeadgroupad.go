@@ -19,12 +19,16 @@ const (
 	YoutubeAdGroupAdEntityStatusEnumEntityStatusScheduledForDeletion YoutubeAdGroupAdEntityStatusEnum = "ENTITY_STATUS_SCHEDULED_FOR_DELETION"
 )
 
+func (e YoutubeAdGroupAdEntityStatusEnum) ToPointer() *YoutubeAdGroupAdEntityStatusEnum {
+	return &e
+}
+
 func (e *YoutubeAdGroupAdEntityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENTITY_STATUS_UNSPECIFIED":
 		fallthrough
 	case "ENTITY_STATUS_ACTIVE":
@@ -36,10 +40,10 @@ func (e *YoutubeAdGroupAdEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENTITY_STATUS_PAUSED":
 		fallthrough
 	case "ENTITY_STATUS_SCHEDULED_FOR_DELETION":
-		*e = YoutubeAdGroupAdEntityStatusEnum(s)
+		*e = YoutubeAdGroupAdEntityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeAdGroupAdEntityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeAdGroupAdEntityStatusEnum: %v", v)
 	}
 }
 

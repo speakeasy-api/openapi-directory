@@ -37,7 +37,10 @@ func newDefinitions(defaultClient, securityClient HTTPClient, serverURL, languag
 // Archives a single custom workflow action with the specified ID. Workflows that currently use this custom action will stop attempting to execute the action, and all future executions will be marked as a failure.
 func (s *definitions) DeleteAutomationV4ActionsAppIDDefinitionIDArchive(ctx context.Context, request operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveRequest, security operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveSecurity) (*operations.DeleteAutomationV4ActionsAppIDDefinitionIDArchiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *definitions) DeleteAutomationV4ActionsAppIDDefinitionIDArchive(ctx cont
 // Returns a single custom workflow action with the specified ID.
 func (s *definitions) GetAutomationV4ActionsAppIDDefinitionIDGetByID(ctx context.Context, request operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDRequest, security operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDSecurity) (*operations.GetAutomationV4ActionsAppIDDefinitionIDGetByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -142,7 +148,10 @@ func (s *definitions) GetAutomationV4ActionsAppIDDefinitionIDGetByID(ctx context
 // Returns a list of all custom workflow actions.
 func (s *definitions) GetAutomationV4ActionsAppIDGetPage(ctx context.Context, request operations.GetAutomationV4ActionsAppIDGetPageRequest, security operations.GetAutomationV4ActionsAppIDGetPageSecurity) (*operations.GetAutomationV4ActionsAppIDGetPageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +210,10 @@ func (s *definitions) GetAutomationV4ActionsAppIDGetPage(ctx context.Context, re
 // Updates a custom workflow action with new values for the specified fields.
 func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx context.Context, request operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateRequest, security operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateSecurity) (*operations.PatchAutomationV4ActionsAppIDDefinitionIDUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}/{definitionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtensionActionDefinitionPatch", "json")
 	if err != nil {
@@ -266,7 +278,10 @@ func (s *definitions) PatchAutomationV4ActionsAppIDDefinitionIDUpdate(ctx contex
 // Creates a new custom workflow action.
 func (s *definitions) PostAutomationV4ActionsAppIDCreate(ctx context.Context, request operations.PostAutomationV4ActionsAppIDCreateRequest, security operations.PostAutomationV4ActionsAppIDCreateSecurity) (*operations.PostAutomationV4ActionsAppIDCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/automation/v4/actions/{appId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExtensionActionDefinitionInput", "json")
 	if err != nil {

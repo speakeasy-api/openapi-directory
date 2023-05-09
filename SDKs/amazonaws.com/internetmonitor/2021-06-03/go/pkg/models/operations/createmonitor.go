@@ -7,17 +7,26 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// CreateMonitorRequestBodyInternetMeasurementsLogDelivery - Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+type CreateMonitorRequestBodyInternetMeasurementsLogDelivery struct {
+	S3Config *shared.S3Config `json:"S3Config,omitempty"`
+}
+
 type CreateMonitorRequestBody struct {
 	// A unique, case-sensitive string of up to 64 ASCII characters that you specify to make an idempotent API request. Don't reuse the same client token for other API requests.
 	ClientToken *string `json:"ClientToken,omitempty"`
-	// The maximum number of city-network combinations (that is, combinations of a city location and network, such as an ISP) to be monitored for your resources.
-	MaxCityNetworksToMonitor int64 `json:"MaxCityNetworksToMonitor"`
+	// Publish internet measurements to an Amazon S3 bucket in addition to CloudWatch Logs.
+	InternetMeasurementsLogDelivery *CreateMonitorRequestBodyInternetMeasurementsLogDelivery `json:"InternetMeasurementsLogDelivery,omitempty"`
+	// <p>The maximum number of city-networks to monitor for your resources. A city-network is the location (city) where clients access your application resources from and the network or ASN, such as an internet service provider (ISP), that clients access the resources through. This limit helps control billing costs.</p> <p>To learn more, see <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html">Choosing a city-network maximum value </a> in the Amazon CloudWatch Internet Monitor section of the <i>CloudWatch User Guide</i>.</p>
+	MaxCityNetworksToMonitor *int64 `json:"MaxCityNetworksToMonitor,omitempty"`
 	// The name of the monitor.
 	MonitorName string `json:"MonitorName"`
 	// <p>The resources to include in a monitor, which you provide as a set of Amazon Resource Names (ARNs).</p> <p>You can add a combination of Amazon Virtual Private Clouds (VPCs) and Amazon CloudFront distributions, or you can add Amazon WorkSpaces directories. You can't add all three types of resources.</p> <note> <p>If you add only VPC resources, at least one VPC must have an Internet Gateway attached to it, to make sure that it has internet connectivity.</p> </note>
 	Resources []string `json:"Resources,omitempty"`
 	// The tags for a monitor. You can add a maximum of 50 tags in Internet Monitor.
 	Tags map[string]string `json:"Tags,omitempty"`
+	// The percentage of the internet-facing traffic for your application that you want to monitor with this monitor.
+	TrafficPercentageToMonitor *int64 `json:"TrafficPercentageToMonitor,omitempty"`
 }
 
 type CreateMonitorRequest struct {

@@ -36,7 +36,10 @@ func newTexts(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Allows adding an extra batches to an already created text broadcast campaign. The batches which being  added pass the CallFire validation process (unlike in the recipients version of this API). That is why using of a scrubDuplicates flag remove duplicates from your batch. Batches may be added as a contact list id, a list of contact ids, or a list of numbers
 func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.AddTextBroadcastBatchRequest, security operations.AddTextBroadcastBatchSecurity) (*operations.AddTextBroadcastBatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchRequest", "json")
 	if err != nil {
@@ -110,7 +113,10 @@ func (s *texts) AddTextBroadcastBatch(ctx context.Context, request operations.Ad
 // Use this API to add recipients to a text broadcast which is already created. Post a list of Recipient objects to be immediately added to the text broadcast campaign. These contacts will not go through validation process, and will be acted upon as they are added. Recipients may be added as a list of contact ids, or list of numbers
 func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operations.AddTextBroadcastRecipientsRequest, security operations.AddTextBroadcastRecipientsSecurity) (*operations.AddTextBroadcastRecipientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/recipients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/recipients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -184,7 +190,10 @@ func (s *texts) AddTextBroadcastRecipients(ctx context.Context, request operatio
 // Archives a text broadcast (and hides it in the search results)
 func (s *texts) ArchiveTextBroadcast(ctx context.Context, request operations.ArchiveTextBroadcastRequest, security operations.ArchiveTextBroadcastSecurity) (*operations.ArchiveTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -381,7 +390,10 @@ func (s *texts) CreateTextBroadcast(ctx context.Context, request operations.Crea
 // Deletes a text auto reply and removes the configuration. Can not delete a TextAutoReply which is currently active for a campaign
 func (s *texts) DeleteTextAutoReply(ctx context.Context, request operations.DeleteTextAutoReplyRequest, security operations.DeleteTextAutoReplySecurity) (*operations.DeleteTextAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -635,7 +647,10 @@ func (s *texts) FindTexts(ctx context.Context, request operations.FindTextsReque
 // Returns a single Text instance for a given text id
 func (s *texts) GetText(ctx context.Context, request operations.GetTextRequest, security operations.GetTextSecurity) (*operations.GetTextResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -702,7 +717,10 @@ func (s *texts) GetText(ctx context.Context, request operations.GetTextRequest, 
 // Returns a single TextAutoReply instance for a given text auto reply id
 func (s *texts) GetTextAutoReply(ctx context.Context, request operations.GetTextAutoReplyRequest, security operations.GetTextAutoReplySecurity) (*operations.GetTextAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/auto-replys/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +787,10 @@ func (s *texts) GetTextAutoReply(ctx context.Context, request operations.GetText
 // Returns a single TextBroadcast instance for a given text broadcast id
 func (s *texts) GetTextBroadcast(ctx context.Context, request operations.GetTextBroadcastRequest, security operations.GetTextBroadcastSecurity) (*operations.GetTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -836,7 +857,10 @@ func (s *texts) GetTextBroadcast(ctx context.Context, request operations.GetText
 // This endpoint will enable the user to page through all of the batches for a particular text broadcast campaign
 func (s *texts) GetTextBroadcastBatches(ctx context.Context, request operations.GetTextBroadcastBatchesRequest, security operations.GetTextBroadcastBatchesSecurity) (*operations.GetTextBroadcastBatchesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/batches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -903,7 +927,10 @@ func (s *texts) GetTextBroadcastBatches(ctx context.Context, request operations.
 // Returns the broadcast statistics. Example: total number of the sent/received actions, total cost, number of remaining outbound actions, error count, etc
 func (s *texts) GetTextBroadcastStats(ctx context.Context, request operations.GetTextBroadcastStatsRequest, security operations.GetTextBroadcastStatsSecurity) (*operations.GetTextBroadcastStatsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stats", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stats", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -970,7 +997,10 @@ func (s *texts) GetTextBroadcastStats(ctx context.Context, request operations.Ge
 // This endpoint will enable the user to page through all of the texts for a particular text broadcast campaign
 func (s *texts) GetTextBroadcastTexts(ctx context.Context, request operations.GetTextBroadcastTextsRequest, security operations.GetTextBroadcastTextsSecurity) (*operations.GetTextBroadcastTextsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/texts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/texts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1111,7 +1141,10 @@ func (s *texts) SendTexts(ctx context.Context, request operations.SendTextsReque
 // Starts a text broadcast
 func (s *texts) StartTextBroadcast(ctx context.Context, request operations.StartTextBroadcastRequest, security operations.StartTextBroadcastSecurity) (*operations.StartTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1164,7 +1197,10 @@ func (s *texts) StartTextBroadcast(ctx context.Context, request operations.Start
 // Stops a text broadcast
 func (s *texts) StopTextBroadcast(ctx context.Context, request operations.StopTextBroadcastRequest, security operations.StopTextBroadcastSecurity) (*operations.StopTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1217,7 +1253,10 @@ func (s *texts) StopTextBroadcast(ctx context.Context, request operations.StopTe
 // This operation lets the user to disable/enable undialed contacts in created broadcast
 func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request operations.ToggleTextBroadcastRecipientsStatusRequest, security operations.ToggleTextBroadcastRecipientsStatusSecurity) (*operations.ToggleTextBroadcastRecipientsStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/toggleRecipientsStatus", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}/toggleRecipientsStatus", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1281,7 +1320,10 @@ func (s *texts) ToggleTextBroadcastRecipientsStatus(ctx context.Context, request
 // Allows modifying the configuration of existing text broadcast campaign. See TextBroadcast for more information on what can/can't be updated on this API
 func (s *texts) UpdateTextBroadcast(ctx context.Context, request operations.UpdateTextBroadcastRequest, security operations.UpdateTextBroadcastSecurity) (*operations.UpdateTextBroadcastResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/texts/broadcasts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TextBroadcastInput", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	ReconnectEnumEnumDisabled ReconnectEnumEnum = "DISABLED"
 )
 
+func (e ReconnectEnumEnum) ToPointer() *ReconnectEnumEnum {
+	return &e
+}
+
 func (e *ReconnectEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = ReconnectEnumEnum(s)
+		*e = ReconnectEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReconnectEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ReconnectEnumEnum: %v", v)
 	}
 }

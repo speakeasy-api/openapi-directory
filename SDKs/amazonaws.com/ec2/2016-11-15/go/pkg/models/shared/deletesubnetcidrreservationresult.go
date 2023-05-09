@@ -15,19 +15,23 @@ const (
 	DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnumExplicit DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum = "explicit"
 )
 
+func (e DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum) ToPointer() *DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum {
+	return &e
+}
+
 func (e *DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "prefix":
 		fallthrough
 	case "explicit":
-		*e = DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum(s)
+		*e = DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSubnetCidrReservationResultDeletedSubnetCidrReservationReservationTypeEnum: %v", v)
 	}
 }
 

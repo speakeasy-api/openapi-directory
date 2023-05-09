@@ -36,12 +36,16 @@ const (
 	TestingTestEnvironmentCatalogGetEnvironmentTypeEnumDeviceIPBlocks             TestingTestEnvironmentCatalogGetEnvironmentTypeEnum = "DEVICE_IP_BLOCKS"
 )
 
+func (e TestingTestEnvironmentCatalogGetEnvironmentTypeEnum) ToPointer() *TestingTestEnvironmentCatalogGetEnvironmentTypeEnum {
+	return &e
+}
+
 func (e *TestingTestEnvironmentCatalogGetEnvironmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "ANDROID":
@@ -53,10 +57,10 @@ func (e *TestingTestEnvironmentCatalogGetEnvironmentTypeEnum) UnmarshalJSON(data
 	case "PROVIDED_SOFTWARE":
 		fallthrough
 	case "DEVICE_IP_BLOCKS":
-		*e = TestingTestEnvironmentCatalogGetEnvironmentTypeEnum(s)
+		*e = TestingTestEnvironmentCatalogGetEnvironmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestingTestEnvironmentCatalogGetEnvironmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TestingTestEnvironmentCatalogGetEnvironmentTypeEnum: %v", v)
 	}
 }
 

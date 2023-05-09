@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // KmsinventoryProjectsCryptoKeysList - Returns cryptographic keys managed by Cloud KMS in a given Cloud project. Note that this data is sourced from snapshots, meaning it may not completely reflect the actual state of key metadata at call time.
 func (s *projects) KmsinventoryProjectsCryptoKeysList(ctx context.Context, request operations.KmsinventoryProjectsCryptoKeysListRequest, security operations.KmsinventoryProjectsCryptoKeysListSecurity) (*operations.KmsinventoryProjectsCryptoKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/cryptoKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) KmsinventoryProjectsCryptoKeysList(ctx context.Context, reque
 // KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummary - Returns aggregate information about the resources protected by the given Cloud KMS CryptoKey. Only resources within the same Cloud organization as the key will be returned. The project that holds the key must be part of an organization in order for this call to succeed.
 func (s *projects) KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummary(ctx context.Context, request operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryRequest, security operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummarySecurity) (*operations.KmsinventoryProjectsLocationsKeyRingsCryptoKeysGetProtectedResourcesSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/protectedResourcesSummary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/protectedResourcesSummary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

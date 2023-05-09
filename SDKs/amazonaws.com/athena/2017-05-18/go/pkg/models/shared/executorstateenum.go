@@ -18,12 +18,16 @@ const (
 	ExecutorStateEnumFailed      ExecutorStateEnum = "FAILED"
 )
 
+func (e ExecutorStateEnum) ToPointer() *ExecutorStateEnum {
+	return &e
+}
+
 func (e *ExecutorStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATED":
@@ -35,9 +39,9 @@ func (e *ExecutorStateEnum) UnmarshalJSON(data []byte) error {
 	case "TERMINATED":
 		fallthrough
 	case "FAILED":
-		*e = ExecutorStateEnum(s)
+		*e = ExecutorStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutorStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutorStateEnum: %v", v)
 	}
 }

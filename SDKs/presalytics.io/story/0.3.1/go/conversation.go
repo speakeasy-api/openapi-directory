@@ -35,7 +35,10 @@ func newConversation(defaultClient, securityClient HTTPClient, serverURL, langua
 // Get a list of messages that have been send in this story
 func (s *conversation) StoryIDMessagesGet(ctx context.Context, request operations.StoryIDMessagesGetRequest) (*operations.StoryIDMessagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -90,7 +93,10 @@ func (s *conversation) StoryIDMessagesGet(ctx context.Context, request operation
 // Add a message to the Story's conversation
 func (s *conversation) StoryIDMessagesPost(ctx context.Context, request operations.StoryIDMessagesPostRequest) (*operations.StoryIDMessagesPostResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{id}/messages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{id}/messages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "string")
 	if err != nil {

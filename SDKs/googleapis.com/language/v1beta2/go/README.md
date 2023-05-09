@@ -13,44 +13,42 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/language/v
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LanguageDocumentsAnalyzeEntitiesRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, operations.LanguageDocumentsAnalyzeEntitiesRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         AnalyzeEntitiesRequest: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                BoilerplateHandling: "SKIP_BOILERPLATE",
-                Content: "distinctio",
-                GcsContentURI: "quibusdam",
-                Language: "unde",
-                ReferenceWebURI: "nulla",
-                Type: "PLAIN_TEXT",
+                BoilerplateHandling: shared.DocumentBoilerplateHandlingEnumSkipBoilerplate.ToPointer(),
+                Content: sdk.String("distinctio"),
+                GcsContentURI: sdk.String("quibusdam"),
+                Language: sdk.String("unde"),
+                ReferenceWebURI: sdk.String("nulla"),
+                Type: shared.DocumentTypeEnumPlainText.ToPointer(),
             },
-            EncodingType: "UTF32",
+            EncodingType: shared.AnalyzeEntitiesRequestEncodingTypeEnumUtf32.ToPointer(),
         },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
-    ctx := context.Background()
-    res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, req, operations.LanguageDocumentsAnalyzeEntitiesSecurity{
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    }, operations.LanguageDocumentsAnalyzeEntitiesSecurity{
         Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
@@ -71,14 +69,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `LanguageDocumentsAnalyzeEntities` - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-* `LanguageDocumentsAnalyzeEntitySentiment` - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
-* `LanguageDocumentsAnalyzeSentiment` - Analyzes the sentiment of the provided text.
-* `LanguageDocumentsAnalyzeSyntax` - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-* `LanguageDocumentsAnnotateText` - A convenience method that provides all syntax, sentiment, entity, and classification features in one call.
-* `LanguageDocumentsClassifyText` - Classifies a document into categories.
+* [LanguageDocumentsAnalyzeEntities](docs/documents/README.md#languagedocumentsanalyzeentities) - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
+* [LanguageDocumentsAnalyzeEntitySentiment](docs/documents/README.md#languagedocumentsanalyzeentitysentiment) - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
+* [LanguageDocumentsAnalyzeSentiment](docs/documents/README.md#languagedocumentsanalyzesentiment) - Analyzes the sentiment of the provided text.
+* [LanguageDocumentsAnalyzeSyntax](docs/documents/README.md#languagedocumentsanalyzesyntax) - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
+* [LanguageDocumentsAnnotateText](docs/documents/README.md#languagedocumentsannotatetext) - A convenience method that provides all syntax, sentiment, entity, and classification features in one call.
+* [LanguageDocumentsClassifyText](docs/documents/README.md#languagedocumentsclassifytext) - Classifies a document into categories.
 <!-- End SDK Available Operations -->
 
 ### Maturity

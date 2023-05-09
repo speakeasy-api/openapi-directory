@@ -14,17 +14,21 @@ const (
 	MessageStatusViberChannelEnumViberService MessageStatusViberChannelEnum = "viber_service"
 )
 
+func (e MessageStatusViberChannelEnum) ToPointer() *MessageStatusViberChannelEnum {
+	return &e
+}
+
 func (e *MessageStatusViberChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "viber_service":
-		*e = MessageStatusViberChannelEnum(s)
+		*e = MessageStatusViberChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusViberChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusViberChannelEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	MessageStatusViberStatusEnumRead          MessageStatusViberStatusEnum = "read"
 )
 
+func (e MessageStatusViberStatusEnum) ToPointer() *MessageStatusViberStatusEnum {
+	return &e
+}
+
 func (e *MessageStatusViberStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "delivered":
@@ -65,10 +73,10 @@ func (e *MessageStatusViberStatusEnum) UnmarshalJSON(data []byte) error {
 	case "undeliverable":
 		fallthrough
 	case "read":
-		*e = MessageStatusViberStatusEnum(s)
+		*e = MessageStatusViberStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusViberStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusViberStatusEnum: %v", v)
 	}
 }
 
@@ -79,17 +87,21 @@ const (
 	MessageStatusViberUsageCurrencyEnumEur MessageStatusViberUsageCurrencyEnum = "EUR"
 )
 
+func (e MessageStatusViberUsageCurrencyEnum) ToPointer() *MessageStatusViberUsageCurrencyEnum {
+	return &e
+}
+
 func (e *MessageStatusViberUsageCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EUR":
-		*e = MessageStatusViberUsageCurrencyEnum(s)
+		*e = MessageStatusViberUsageCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageStatusViberUsageCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageStatusViberUsageCurrencyEnum: %v", v)
 	}
 }
 

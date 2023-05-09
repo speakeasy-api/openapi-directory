@@ -2,7 +2,7 @@
 
 package shared
 
-// ReverseGeocodingConfig - <p/>
+// ReverseGeocodingConfig - The input structure for Reverse Geocoding operation type.
 type ReverseGeocodingConfig struct {
 	XAttributeName string `json:"XAttributeName"`
 	YAttributeName string `json:"YAttributeName"`

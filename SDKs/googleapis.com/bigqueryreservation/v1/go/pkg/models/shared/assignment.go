@@ -18,12 +18,16 @@ const (
 	AssignmentJobTypeEnumBackground         AssignmentJobTypeEnum = "BACKGROUND"
 )
 
+func (e AssignmentJobTypeEnum) ToPointer() *AssignmentJobTypeEnum {
+	return &e
+}
+
 func (e *AssignmentJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JOB_TYPE_UNSPECIFIED":
 		fallthrough
 	case "PIPELINE":
@@ -33,10 +37,10 @@ func (e *AssignmentJobTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ML_EXTERNAL":
 		fallthrough
 	case "BACKGROUND":
-		*e = AssignmentJobTypeEnum(s)
+		*e = AssignmentJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentJobTypeEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	AssignmentStateEnumActive           AssignmentStateEnum = "ACTIVE"
 )
 
+func (e AssignmentStateEnum) ToPointer() *AssignmentStateEnum {
+	return &e
+}
+
 func (e *AssignmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
 		fallthrough
 	case "ACTIVE":
-		*e = AssignmentStateEnum(s)
+		*e = AssignmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentStateEnum: %v", v)
 	}
 }
 

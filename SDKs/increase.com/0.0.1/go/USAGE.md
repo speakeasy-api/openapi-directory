@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,30 +17,28 @@ func main() {
         }),
     )
 
-    req := operations.ActionARealTimeDecisionRequest{
+    ctx := context.Background()
+    res, err := s.ActionARealTimeDecision(ctx, operations.ActionARealTimeDecisionRequest{
         ActionARealTimeDecisionParameters: shared.ActionARealTimeDecisionParameters{
             CardAuthorization: &shared.ActionARealTimeDecisionParametersCardAuthorization{
-                Decision: "decline",
+                Decision: shared.ActionARealTimeDecisionParametersCardAuthorizationDecisionEnumDecline,
             },
             DigitalWalletAuthentication: &shared.ActionARealTimeDecisionParametersDigitalWalletAuthentication{
-                Result: "failure",
+                Result: shared.ActionARealTimeDecisionParametersDigitalWalletAuthenticationResultEnumFailure,
             },
             DigitalWalletToken: &shared.ActionARealTimeDecisionParametersDigitalWalletToken{
                 Approval: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenApproval{
                     CardProfileID: "distinctio",
-                    Email: "Leda_Stiedemann@hotmail.com",
-                    Phone: "1-663-528-0923 x478",
+                    Email: sdk.String("Leda_Stiedemann@hotmail.com"),
+                    Phone: sdk.String("1-663-528-0923 x478"),
                 },
                 Decline: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenDecline{
-                    Reason: "voluptatum",
+                    Reason: sdk.String("voluptatum"),
                 },
             },
         },
         RealTimeDecisionID: "iusto",
-    }
-
-    ctx := context.Background()
-    res, err := s.ActionARealTimeDecision(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

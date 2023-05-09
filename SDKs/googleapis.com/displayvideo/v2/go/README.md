@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/displayvid
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DisplayvideoAdvertisersAssetsUploadRequest{
-        DollarXgafv: "2",
-        RequestBody: []byte("provident"),
-        AccessToken: "distinctio",
-        AdvertiserID: "quibusdam",
-        Alt: "media",
-        Callback: "nulla",
-        Fields: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Advertisers.DisplayvideoAdvertisersAssetsUpload(ctx, req, operations.DisplayvideoAdvertisersAssetsUploadSecurity{
+    res, err := s.Advertisers.DisplayvideoAdvertisersAssetsUpload(ctx, operations.DisplayvideoAdvertisersAssetsUploadRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        RequestBody: []byte("provident"),
+        AccessToken: sdk.String("distinctio"),
+        AdvertiserID: "quibusdam",
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("nulla"),
+        Fields: sdk.String("corrupti"),
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.DisplayvideoAdvertisersAssetsUploadSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -60,201 +58,201 @@ func main() {
 ## Available Resources and Operations
 
 
-### Advertisers
+### [Advertisers](docs/advertisers/README.md)
 
-* `DisplayvideoAdvertisersAssetsUpload` - Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
-* `DisplayvideoAdvertisersAudit` - Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
-* `DisplayvideoAdvertisersCampaignsCreate` - Creates a new campaign. Returns the newly created campaign if successful.
-* `DisplayvideoAdvertisersCampaignsDelete` - Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-* `DisplayvideoAdvertisersCampaignsGet` - Gets a campaign.
-* `DisplayvideoAdvertisersCampaignsList` - Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoAdvertisersCampaignsListAssignedTargetingOptions` - Lists assigned targeting options of a campaign across targeting types.
-* `DisplayvideoAdvertisersCampaignsPatch` - Updates an existing campaign. Returns the updated campaign if successful.
-* `DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to a campaign.
-* `DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to a campaign for a specified targeting type.
-* `DisplayvideoAdvertisersChannelsCreate` - Creates a new channel. Returns the newly created channel if successful.
-* `DisplayvideoAdvertisersChannelsList` - Lists channels for a partner or advertiser.
-* `DisplayvideoAdvertisersChannelsPatch` - Updates a channel. Returns the updated channel if successful.
-* `DisplayvideoAdvertisersChannelsSitesBulkEdit` - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
-* `DisplayvideoAdvertisersChannelsSitesDelete` - Deletes a site from a channel.
-* `DisplayvideoAdvertisersChannelsSitesList` - Lists sites in a channel.
-* `DisplayvideoAdvertisersChannelsSitesReplace` - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
-* `DisplayvideoAdvertisersCreate` - Creates a new advertiser. Returns the newly created advertiser if successful. This method can take up to 180 seconds to complete.
-* `DisplayvideoAdvertisersCreativesCreate` - Creates a new creative. Returns the newly created creative if successful.
-* `DisplayvideoAdvertisersCreativesDelete` - Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be deleted.
-* `DisplayvideoAdvertisersCreativesGet` - Gets a creative.
-* `DisplayvideoAdvertisersCreativesList` - Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoAdvertisersCreativesPatch` - Updates an existing creative. Returns the updated creative if successful.
-* `DisplayvideoAdvertisersDelete` - Deletes an advertiser. Deleting an advertiser will delete all of its child resources, for example, campaigns, insertion orders and line items. A deleted advertiser cannot be recovered.
-* `DisplayvideoAdvertisersEditAssignedTargetingOptions` - Edits targeting options under a single advertiser. The operation will delete the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.create_requests .
-* `DisplayvideoAdvertisersGet` - Gets an advertiser.
-* `DisplayvideoAdvertisersInsertionOrdersCreate` - Creates a new insertion order. Returns the newly created insertion order if successful.
-* `DisplayvideoAdvertisersInsertionOrdersDelete` - Deletes an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist. The insertion order should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-* `DisplayvideoAdvertisersInsertionOrdersGet` - Gets an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist.
-* `DisplayvideoAdvertisersInsertionOrdersList` - Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions` - Lists assigned targeting options of an insertion order across targeting types.
-* `DisplayvideoAdvertisersInsertionOrdersPatch` - Updates an existing insertion order. Returns the updated insertion order if successful.
-* `DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate` - Assigns a targeting option to an insertion order. Returns the assigned targeting option if successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
-* `DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete` - Deletes an assigned targeting option from an insertion order. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
-* `DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to an insertion order.
-* `DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to an insertion order.
-* `DisplayvideoAdvertisersInvoicesList` - Lists invoices posted for an advertiser in a given month. Invoices generated by billing profiles with a "Partner" invoice level are not retrievable through this method.
-* `DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency` - Retrieves the invoice currency used by an advertiser in a given month.
-* `DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions` - Bulk edits targeting options under multiple line items. The operation will delete the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
-* `DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions` - Lists assigned targeting options for multiple line items across targeting types.
-* `DisplayvideoAdvertisersLineItemsBulkUpdate` - Updates multiple line items. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
-* `DisplayvideoAdvertisersLineItemsCreate` - Creates a new line item. Returns the newly created line item if successful.
-* `DisplayvideoAdvertisersLineItemsDelete` - Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
-* `DisplayvideoAdvertisersLineItemsDuplicate` - Duplicates a line item. Returns the ID of the created line item if successful.
-* `DisplayvideoAdvertisersLineItemsGenerateDefault` - Creates a new line item with settings (including targeting) inherited from the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful. There are default values based on the three fields: * The insertion order's insertion_order_type * The insertion order's automation_type * The given line_item_type
-* `DisplayvideoAdvertisersLineItemsGet` - Gets a line item.
-* `DisplayvideoAdvertisersLineItemsList` - Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoAdvertisersLineItemsPatch` - Updates an existing line item. Returns the updated line item if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
-* `DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate` - Assigns a targeting option to a line item. Returns the assigned targeting option if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * DeleteLineItemAssignedTargetingOption
-* `DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete` - Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption
-* `DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to a line item.
-* `DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to a line item.
-* `DisplayvideoAdvertisersList` - Lists advertisers that are accessible to the current user. The order is defined by the order_by parameter. A single partner_id is required. Cross-partner listing is not supported.
-* `DisplayvideoAdvertisersListAssignedTargetingOptions` - Lists assigned targeting options of an advertiser across targeting types.
-* `DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit` - Bulk edits multiple assignments between locations and a single location list. The operation will delete the assigned locations provided in BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
-* `DisplayvideoAdvertisersLocationListsAssignedLocationsCreate` - Creates an assignment between a location and a location list.
-* `DisplayvideoAdvertisersLocationListsAssignedLocationsDelete` - Deletes the assignment between a location and a location list.
-* `DisplayvideoAdvertisersLocationListsAssignedLocationsList` - Lists locations assigned to a location list.
-* `DisplayvideoAdvertisersLocationListsCreate` - Creates a new location list. Returns the newly created location list if successful.
-* `DisplayvideoAdvertisersLocationListsList` - Lists location lists based on a given advertiser id.
-* `DisplayvideoAdvertisersLocationListsPatch` - Updates a location list. Returns the updated location list if successful.
-* `DisplayvideoAdvertisersManualTriggersActivate` - Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
-* `DisplayvideoAdvertisersManualTriggersCreate` - Creates a new manual trigger. Returns the newly created manual trigger if successful.
-* `DisplayvideoAdvertisersManualTriggersDeactivate` - Deactivates a manual trigger.
-* `DisplayvideoAdvertisersManualTriggersGet` - Gets a manual trigger.
-* `DisplayvideoAdvertisersManualTriggersList` - Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
-* `DisplayvideoAdvertisersManualTriggersPatch` - Updates a manual trigger. Returns the updated manual trigger if successful.
-* `DisplayvideoAdvertisersNegativeKeywordListsCreate` - Creates a new negative keyword list. Returns the newly created negative keyword list if successful.
-* `DisplayvideoAdvertisersNegativeKeywordListsList` - Lists negative keyword lists based on a given advertiser id.
-* `DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit` - Bulk edits negative keywords in a single negative keyword list. The operation will delete the negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords provided in BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be atomic and will never result in a partial success or partial failure.
-* `DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete` - Deletes a negative keyword from a negative keyword list.
-* `DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList` - Lists negative keywords in a negative keyword list.
-* `DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace` - Replaces all negative keywords in a single negative keyword list. The operation will replace the keywords in a negative keyword list with keywords provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
-* `DisplayvideoAdvertisersNegativeKeywordListsPatch` - Updates a negative keyword list. Returns the updated negative keyword list if successful.
-* `DisplayvideoAdvertisersPatch` - Updates an existing advertiser. Returns the updated advertiser if successful.
-* `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate` - Assigns a targeting option to an advertiser. Returns the assigned targeting option if successful.
-* `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete` - Deletes an assigned targeting option from an advertiser.
-* `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to an advertiser.
-* `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to an advertiser.
-* `DisplayvideoAdvertisersYoutubeAdGroupAdsGet` - Gets a YouTube ad group ad.
-* `DisplayvideoAdvertisersYoutubeAdGroupAdsList` - Lists YouTube ad group ads.
-* `DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions` - Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherieted assigned targeting options are not included.
-* `DisplayvideoAdvertisersYoutubeAdGroupsGet` - Gets a YouTube ad group.
-* `DisplayvideoAdvertisersYoutubeAdGroupsList` - Lists YouTube ad groups.
-* `DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to a YouTube ad group. Inherited assigned targeting options are not included.
-* `DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to a YouTube ad group. Inherited assigned targeting options are not included.
+* [DisplayvideoAdvertisersAssetsUpload](docs/advertisers/README.md#displayvideoadvertisersassetsupload) - Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
+* [DisplayvideoAdvertisersAudit](docs/advertisers/README.md#displayvideoadvertisersaudit) - Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
+* [DisplayvideoAdvertisersCampaignsCreate](docs/advertisers/README.md#displayvideoadvertiserscampaignscreate) - Creates a new campaign. Returns the newly created campaign if successful.
+* [DisplayvideoAdvertisersCampaignsDelete](docs/advertisers/README.md#displayvideoadvertiserscampaignsdelete) - Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
+* [DisplayvideoAdvertisersCampaignsGet](docs/advertisers/README.md#displayvideoadvertiserscampaignsget) - Gets a campaign.
+* [DisplayvideoAdvertisersCampaignsList](docs/advertisers/README.md#displayvideoadvertiserscampaignslist) - Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoAdvertisersCampaignsListAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertiserscampaignslistassignedtargetingoptions) - Lists assigned targeting options of a campaign across targeting types.
+* [DisplayvideoAdvertisersCampaignsPatch](docs/advertisers/README.md#displayvideoadvertiserscampaignspatch) - Updates an existing campaign. Returns the updated campaign if successful.
+* [DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet](docs/advertisers/README.md#displayvideoadvertiserscampaignstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to a campaign.
+* [DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList](docs/advertisers/README.md#displayvideoadvertiserscampaignstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to a campaign for a specified targeting type.
+* [DisplayvideoAdvertisersChannelsCreate](docs/advertisers/README.md#displayvideoadvertiserschannelscreate) - Creates a new channel. Returns the newly created channel if successful.
+* [DisplayvideoAdvertisersChannelsList](docs/advertisers/README.md#displayvideoadvertiserschannelslist) - Lists channels for a partner or advertiser.
+* [DisplayvideoAdvertisersChannelsPatch](docs/advertisers/README.md#displayvideoadvertiserschannelspatch) - Updates a channel. Returns the updated channel if successful.
+* [DisplayvideoAdvertisersChannelsSitesBulkEdit](docs/advertisers/README.md#displayvideoadvertiserschannelssitesbulkedit) - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
+* [DisplayvideoAdvertisersChannelsSitesDelete](docs/advertisers/README.md#displayvideoadvertiserschannelssitesdelete) - Deletes a site from a channel.
+* [DisplayvideoAdvertisersChannelsSitesList](docs/advertisers/README.md#displayvideoadvertiserschannelssiteslist) - Lists sites in a channel.
+* [DisplayvideoAdvertisersChannelsSitesReplace](docs/advertisers/README.md#displayvideoadvertiserschannelssitesreplace) - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
+* [DisplayvideoAdvertisersCreate](docs/advertisers/README.md#displayvideoadvertiserscreate) - Creates a new advertiser. Returns the newly created advertiser if successful. This method can take up to 180 seconds to complete.
+* [DisplayvideoAdvertisersCreativesCreate](docs/advertisers/README.md#displayvideoadvertiserscreativescreate) - Creates a new creative. Returns the newly created creative if successful.
+* [DisplayvideoAdvertisersCreativesDelete](docs/advertisers/README.md#displayvideoadvertiserscreativesdelete) - Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be deleted.
+* [DisplayvideoAdvertisersCreativesGet](docs/advertisers/README.md#displayvideoadvertiserscreativesget) - Gets a creative.
+* [DisplayvideoAdvertisersCreativesList](docs/advertisers/README.md#displayvideoadvertiserscreativeslist) - Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoAdvertisersCreativesPatch](docs/advertisers/README.md#displayvideoadvertiserscreativespatch) - Updates an existing creative. Returns the updated creative if successful.
+* [DisplayvideoAdvertisersDelete](docs/advertisers/README.md#displayvideoadvertisersdelete) - Deletes an advertiser. Deleting an advertiser will delete all of its child resources, for example, campaigns, insertion orders and line items. A deleted advertiser cannot be recovered.
+* [DisplayvideoAdvertisersEditAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertiserseditassignedtargetingoptions) - Edits targeting options under a single advertiser. The operation will delete the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.create_requests .
+* [DisplayvideoAdvertisersGet](docs/advertisers/README.md#displayvideoadvertisersget) - Gets an advertiser.
+* [DisplayvideoAdvertisersInsertionOrdersCreate](docs/advertisers/README.md#displayvideoadvertisersinsertionorderscreate) - Creates a new insertion order. Returns the newly created insertion order if successful.
+* [DisplayvideoAdvertisersInsertionOrdersDelete](docs/advertisers/README.md#displayvideoadvertisersinsertionordersdelete) - Deletes an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist. The insertion order should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
+* [DisplayvideoAdvertisersInsertionOrdersGet](docs/advertisers/README.md#displayvideoadvertisersinsertionordersget) - Gets an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist.
+* [DisplayvideoAdvertisersInsertionOrdersList](docs/advertisers/README.md#displayvideoadvertisersinsertionorderslist) - Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertisersinsertionorderslistassignedtargetingoptions) - Lists assigned targeting options of an insertion order across targeting types.
+* [DisplayvideoAdvertisersInsertionOrdersPatch](docs/advertisers/README.md#displayvideoadvertisersinsertionorderspatch) - Updates an existing insertion order. Returns the updated insertion order if successful.
+* [DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate](docs/advertisers/README.md#displayvideoadvertisersinsertionorderstargetingtypesassignedtargetingoptionscreate) - Assigns a targeting option to an insertion order. Returns the assigned targeting option if successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+* [DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete](docs/advertisers/README.md#displayvideoadvertisersinsertionorderstargetingtypesassignedtargetingoptionsdelete) - Deletes an assigned targeting option from an insertion order. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
+* [DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet](docs/advertisers/README.md#displayvideoadvertisersinsertionorderstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to an insertion order.
+* [DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList](docs/advertisers/README.md#displayvideoadvertisersinsertionorderstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to an insertion order.
+* [DisplayvideoAdvertisersInvoicesList](docs/advertisers/README.md#displayvideoadvertisersinvoiceslist) - Lists invoices posted for an advertiser in a given month. Invoices generated by billing profiles with a "Partner" invoice level are not retrievable through this method.
+* [DisplayvideoAdvertisersInvoicesLookupInvoiceCurrency](docs/advertisers/README.md#displayvideoadvertisersinvoiceslookupinvoicecurrency) - Retrieves the invoice currency used by an advertiser in a given month.
+* [DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertiserslineitemsbulkeditassignedtargetingoptions) - Bulk edits targeting options under multiple line items. The operation will delete the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+* [DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertiserslineitemsbulklistassignedtargetingoptions) - Lists assigned targeting options for multiple line items across targeting types.
+* [DisplayvideoAdvertisersLineItemsBulkUpdate](docs/advertisers/README.md#displayvideoadvertiserslineitemsbulkupdate) - Updates multiple line items. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+* [DisplayvideoAdvertisersLineItemsCreate](docs/advertisers/README.md#displayvideoadvertiserslineitemscreate) - Creates a new line item. Returns the newly created line item if successful.
+* [DisplayvideoAdvertisersLineItemsDelete](docs/advertisers/README.md#displayvideoadvertiserslineitemsdelete) - Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
+* [DisplayvideoAdvertisersLineItemsDuplicate](docs/advertisers/README.md#displayvideoadvertiserslineitemsduplicate) - Duplicates a line item. Returns the ID of the created line item if successful.
+* [DisplayvideoAdvertisersLineItemsGenerateDefault](docs/advertisers/README.md#displayvideoadvertiserslineitemsgeneratedefault) - Creates a new line item with settings (including targeting) inherited from the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful. There are default values based on the three fields: * The insertion order's insertion_order_type * The insertion order's automation_type * The given line_item_type
+* [DisplayvideoAdvertisersLineItemsGet](docs/advertisers/README.md#displayvideoadvertiserslineitemsget) - Gets a line item.
+* [DisplayvideoAdvertisersLineItemsList](docs/advertisers/README.md#displayvideoadvertiserslineitemslist) - Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoAdvertisersLineItemsPatch](docs/advertisers/README.md#displayvideoadvertiserslineitemspatch) - Updates an existing line item. Returns the updated line item if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
+* [DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate](docs/advertisers/README.md#displayvideoadvertiserslineitemstargetingtypesassignedtargetingoptionscreate) - Assigns a targeting option to a line item. Returns the assigned targeting option if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * DeleteLineItemAssignedTargetingOption
+* [DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete](docs/advertisers/README.md#displayvideoadvertiserslineitemstargetingtypesassignedtargetingoptionsdelete) - Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption
+* [DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet](docs/advertisers/README.md#displayvideoadvertiserslineitemstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to a line item.
+* [DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList](docs/advertisers/README.md#displayvideoadvertiserslineitemstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to a line item.
+* [DisplayvideoAdvertisersList](docs/advertisers/README.md#displayvideoadvertiserslist) - Lists advertisers that are accessible to the current user. The order is defined by the order_by parameter. A single partner_id is required. Cross-partner listing is not supported.
+* [DisplayvideoAdvertisersListAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertiserslistassignedtargetingoptions) - Lists assigned targeting options of an advertiser across targeting types.
+* [DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEdit](docs/advertisers/README.md#displayvideoadvertiserslocationlistsassignedlocationsbulkedit) - Bulk edits multiple assignments between locations and a single location list. The operation will delete the assigned locations provided in BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
+* [DisplayvideoAdvertisersLocationListsAssignedLocationsCreate](docs/advertisers/README.md#displayvideoadvertiserslocationlistsassignedlocationscreate) - Creates an assignment between a location and a location list.
+* [DisplayvideoAdvertisersLocationListsAssignedLocationsDelete](docs/advertisers/README.md#displayvideoadvertiserslocationlistsassignedlocationsdelete) - Deletes the assignment between a location and a location list.
+* [DisplayvideoAdvertisersLocationListsAssignedLocationsList](docs/advertisers/README.md#displayvideoadvertiserslocationlistsassignedlocationslist) - Lists locations assigned to a location list.
+* [DisplayvideoAdvertisersLocationListsCreate](docs/advertisers/README.md#displayvideoadvertiserslocationlistscreate) - Creates a new location list. Returns the newly created location list if successful.
+* [DisplayvideoAdvertisersLocationListsList](docs/advertisers/README.md#displayvideoadvertiserslocationlistslist) - Lists location lists based on a given advertiser id.
+* [DisplayvideoAdvertisersLocationListsPatch](docs/advertisers/README.md#displayvideoadvertiserslocationlistspatch) - Updates a location list. Returns the updated location list if successful.
+* [DisplayvideoAdvertisersManualTriggersActivate](docs/advertisers/README.md#displayvideoadvertisersmanualtriggersactivate) - Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersManualTriggersCreate](docs/advertisers/README.md#displayvideoadvertisersmanualtriggerscreate) - Creates a new manual trigger. Returns the newly created manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersManualTriggersDeactivate](docs/advertisers/README.md#displayvideoadvertisersmanualtriggersdeactivate) - Deactivates a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersManualTriggersGet](docs/advertisers/README.md#displayvideoadvertisersmanualtriggersget) - Gets a manual trigger. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersManualTriggersList](docs/advertisers/README.md#displayvideoadvertisersmanualtriggerslist) - Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersManualTriggersPatch](docs/advertisers/README.md#displayvideoadvertisersmanualtriggerspatch) - Updates a manual trigger. Returns the updated manual trigger if successful. **Warning:** Line Items using manual triggers will stop serving in Display & Video 360 on **May 17, 2023**. Read our [feature deprecation announcement](/display-video/api/deprecations#features.manual_triggers) for more information.
+* [DisplayvideoAdvertisersNegativeKeywordListsCreate](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistscreate) - Creates a new negative keyword list. Returns the newly created negative keyword list if successful.
+* [DisplayvideoAdvertisersNegativeKeywordListsList](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistslist) - Lists negative keyword lists based on a given advertiser id.
+* [DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistsnegativekeywordsbulkedit) - Bulk edits negative keywords in a single negative keyword list. The operation will delete the negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords provided in BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be atomic and will never result in a partial success or partial failure.
+* [DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistsnegativekeywordsdelete) - Deletes a negative keyword from a negative keyword list.
+* [DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistsnegativekeywordslist) - Lists negative keywords in a negative keyword list.
+* [DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistsnegativekeywordsreplace) - Replaces all negative keywords in a single negative keyword list. The operation will replace the keywords in a negative keyword list with keywords provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
+* [DisplayvideoAdvertisersNegativeKeywordListsPatch](docs/advertisers/README.md#displayvideoadvertisersnegativekeywordlistspatch) - Updates a negative keyword list. Returns the updated negative keyword list if successful.
+* [DisplayvideoAdvertisersPatch](docs/advertisers/README.md#displayvideoadvertiserspatch) - Updates an existing advertiser. Returns the updated advertiser if successful.
+* [DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate](docs/advertisers/README.md#displayvideoadvertiserstargetingtypesassignedtargetingoptionscreate) - Assigns a targeting option to an advertiser. Returns the assigned targeting option if successful.
+* [DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete](docs/advertisers/README.md#displayvideoadvertiserstargetingtypesassignedtargetingoptionsdelete) - Deletes an assigned targeting option from an advertiser.
+* [DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet](docs/advertisers/README.md#displayvideoadvertiserstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to an advertiser.
+* [DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList](docs/advertisers/README.md#displayvideoadvertiserstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to an advertiser.
+* [DisplayvideoAdvertisersYoutubeAdGroupAdsGet](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupadsget) - Gets a YouTube ad group ad.
+* [DisplayvideoAdvertisersYoutubeAdGroupAdsList](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupadslist) - Lists YouTube ad group ads.
+* [DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupsbulklistadgroupassignedtargetingoptions) - Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherieted assigned targeting options are not included.
+* [DisplayvideoAdvertisersYoutubeAdGroupsGet](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupsget) - Gets a YouTube ad group.
+* [DisplayvideoAdvertisersYoutubeAdGroupsList](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupslist) - Lists YouTube ad groups.
+* [DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to a YouTube ad group. Inherited assigned targeting options are not included.
+* [DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList](docs/advertisers/README.md#displayvideoadvertisersyoutubeadgroupstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to a YouTube ad group. Inherited assigned targeting options are not included.
 
-### CombinedAudiences
+### [CombinedAudiences](docs/combinedaudiences/README.md)
 
-* `DisplayvideoCombinedAudiencesGet` - Gets a combined audience.
-* `DisplayvideoCombinedAudiencesList` - Lists combined audiences. The order is defined by the order_by parameter.
+* [DisplayvideoCombinedAudiencesGet](docs/combinedaudiences/README.md#displayvideocombinedaudiencesget) - Gets a combined audience.
+* [DisplayvideoCombinedAudiencesList](docs/combinedaudiences/README.md#displayvideocombinedaudienceslist) - Lists combined audiences. The order is defined by the order_by parameter.
 
-### CustomBiddingAlgorithms
+### [CustomBiddingAlgorithms](docs/custombiddingalgorithms/README.md)
 
-* `DisplayvideoCustomBiddingAlgorithmsCreate` - Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
-* `DisplayvideoCustomBiddingAlgorithmsGet` - Gets a custom bidding algorithm.
-* `DisplayvideoCustomBiddingAlgorithmsList` - Lists custom bidding algorithms that are accessible to the current user and can be used in bidding stratgies. The order is defined by the order_by parameter.
-* `DisplayvideoCustomBiddingAlgorithmsPatch` - Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if successful.
-* `DisplayvideoCustomBiddingAlgorithmsScriptsCreate` - Creates a new custom bidding script. Returns the newly created script if successful.
-* `DisplayvideoCustomBiddingAlgorithmsScriptsGet` - Gets a custom bidding script.
-* `DisplayvideoCustomBiddingAlgorithmsScriptsList` - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
-* `DisplayvideoCustomBiddingAlgorithmsUploadScript` - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
+* [DisplayvideoCustomBiddingAlgorithmsCreate](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmscreate) - Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
+* [DisplayvideoCustomBiddingAlgorithmsGet](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmsget) - Gets a custom bidding algorithm.
+* [DisplayvideoCustomBiddingAlgorithmsList](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmslist) - Lists custom bidding algorithms that are accessible to the current user and can be used in bidding stratgies. The order is defined by the order_by parameter.
+* [DisplayvideoCustomBiddingAlgorithmsPatch](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmspatch) - Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if successful.
+* [DisplayvideoCustomBiddingAlgorithmsScriptsCreate](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmsscriptscreate) - Creates a new custom bidding script. Returns the newly created script if successful.
+* [DisplayvideoCustomBiddingAlgorithmsScriptsGet](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmsscriptsget) - Gets a custom bidding script.
+* [DisplayvideoCustomBiddingAlgorithmsScriptsList](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmsscriptslist) - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
+* [DisplayvideoCustomBiddingAlgorithmsUploadScript](docs/custombiddingalgorithms/README.md#displayvideocustombiddingalgorithmsuploadscript) - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
 
-### CustomLists
+### [CustomLists](docs/customlists/README.md)
 
-* `DisplayvideoCustomListsGet` - Gets a custom list.
-* `DisplayvideoCustomListsList` - Lists custom lists. The order is defined by the order_by parameter.
+* [DisplayvideoCustomListsGet](docs/customlists/README.md#displayvideocustomlistsget) - Gets a custom list.
+* [DisplayvideoCustomListsList](docs/customlists/README.md#displayvideocustomlistslist) - Lists custom lists. The order is defined by the order_by parameter.
 
-### FirstAndThirdPartyAudiences
+### [FirstAndThirdPartyAudiences](docs/firstandthirdpartyaudiences/README.md)
 
-* `DisplayvideoFirstAndThirdPartyAudiencesCreate` - Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
-* `DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers` - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
-* `DisplayvideoFirstAndThirdPartyAudiencesGet` - Gets a first and third party audience.
-* `DisplayvideoFirstAndThirdPartyAudiencesList` - Lists first and third party audiences. The order is defined by the order_by parameter.
-* `DisplayvideoFirstAndThirdPartyAudiencesPatch` - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+* [DisplayvideoFirstAndThirdPartyAudiencesCreate](docs/firstandthirdpartyaudiences/README.md#displayvideofirstandthirdpartyaudiencescreate) - Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+* [DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers](docs/firstandthirdpartyaudiences/README.md#displayvideofirstandthirdpartyaudienceseditcustomermatchmembers) - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+* [DisplayvideoFirstAndThirdPartyAudiencesGet](docs/firstandthirdpartyaudiences/README.md#displayvideofirstandthirdpartyaudiencesget) - Gets a first and third party audience.
+* [DisplayvideoFirstAndThirdPartyAudiencesList](docs/firstandthirdpartyaudiences/README.md#displayvideofirstandthirdpartyaudienceslist) - Lists first and third party audiences. The order is defined by the order_by parameter.
+* [DisplayvideoFirstAndThirdPartyAudiencesPatch](docs/firstandthirdpartyaudiences/README.md#displayvideofirstandthirdpartyaudiencespatch) - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 
-### FloodlightGroups
+### [FloodlightGroups](docs/floodlightgroups/README.md)
 
-* `DisplayvideoFloodlightGroupsGet` - Gets a Floodlight group.
+* [DisplayvideoFloodlightGroupsGet](docs/floodlightgroups/README.md#displayvideofloodlightgroupsget) - Gets a Floodlight group.
 
-### GoogleAudiences
+### [GoogleAudiences](docs/googleaudiences/README.md)
 
-* `DisplayvideoGoogleAudiencesGet` - Gets a Google audience.
-* `DisplayvideoGoogleAudiencesList` - Lists Google audiences. The order is defined by the order_by parameter.
+* [DisplayvideoGoogleAudiencesGet](docs/googleaudiences/README.md#displayvideogoogleaudiencesget) - Gets a Google audience.
+* [DisplayvideoGoogleAudiencesList](docs/googleaudiences/README.md#displayvideogoogleaudienceslist) - Lists Google audiences. The order is defined by the order_by parameter.
 
-### GuaranteedOrders
+### [GuaranteedOrders](docs/guaranteedorders/README.md)
 
-* `DisplayvideoGuaranteedOrdersCreate` - Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
-* `DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors` - Edits read advertisers of a guaranteed order.
-* `DisplayvideoGuaranteedOrdersGet` - Gets a guaranteed order.
-* `DisplayvideoGuaranteedOrdersList` - Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoGuaranteedOrdersPatch` - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
+* [DisplayvideoGuaranteedOrdersCreate](docs/guaranteedorders/README.md#displayvideoguaranteedorderscreate) - Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
+* [DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors](docs/guaranteedorders/README.md#displayvideoguaranteedorderseditguaranteedorderreadaccessors) - Edits read advertisers of a guaranteed order.
+* [DisplayvideoGuaranteedOrdersGet](docs/guaranteedorders/README.md#displayvideoguaranteedordersget) - Gets a guaranteed order.
+* [DisplayvideoGuaranteedOrdersList](docs/guaranteedorders/README.md#displayvideoguaranteedorderslist) - Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoGuaranteedOrdersPatch](docs/guaranteedorders/README.md#displayvideoguaranteedorderspatch) - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
 
-### InventorySourceGroups
+### [InventorySourceGroups](docs/inventorysourcegroups/README.md)
 
-* `DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEdit` - Bulk edits multiple assignments between inventory sources and a single inventory source group. The operation will delete the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
-* `DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreate` - Creates an assignment between an inventory source and an inventory source group.
-* `DisplayvideoInventorySourceGroupsAssignedInventorySourcesDelete` - Deletes the assignment between an inventory source and an inventory source group.
-* `DisplayvideoInventorySourceGroupsAssignedInventorySourcesList` - Lists inventory sources assigned to an inventory source group.
-* `DisplayvideoInventorySourceGroupsCreate` - Creates a new inventory source group. Returns the newly created inventory source group if successful.
-* `DisplayvideoInventorySourceGroupsDelete` - Deletes an inventory source group.
-* `DisplayvideoInventorySourceGroupsGet` - Gets an inventory source group.
-* `DisplayvideoInventorySourceGroupsList` - Lists inventory source groups that are accessible to the current user. The order is defined by the order_by parameter.
+* [DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEdit](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsassignedinventorysourcesbulkedit) - Bulk edits multiple assignments between inventory sources and a single inventory source group. The operation will delete the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
+* [DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreate](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsassignedinventorysourcescreate) - Creates an assignment between an inventory source and an inventory source group.
+* [DisplayvideoInventorySourceGroupsAssignedInventorySourcesDelete](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsassignedinventorysourcesdelete) - Deletes the assignment between an inventory source and an inventory source group.
+* [DisplayvideoInventorySourceGroupsAssignedInventorySourcesList](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsassignedinventorysourceslist) - Lists inventory sources assigned to an inventory source group.
+* [DisplayvideoInventorySourceGroupsCreate](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupscreate) - Creates a new inventory source group. Returns the newly created inventory source group if successful.
+* [DisplayvideoInventorySourceGroupsDelete](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsdelete) - Deletes an inventory source group.
+* [DisplayvideoInventorySourceGroupsGet](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupsget) - Gets an inventory source group.
+* [DisplayvideoInventorySourceGroupsList](docs/inventorysourcegroups/README.md#displayvideoinventorysourcegroupslist) - Lists inventory source groups that are accessible to the current user. The order is defined by the order_by parameter.
 
-### InventorySources
+### [InventorySources](docs/inventorysources/README.md)
 
-* `DisplayvideoInventorySourcesCreate` - Creates a new inventory source. Returns the newly created inventory source if successful.
-* `DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors` - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
-* `DisplayvideoInventorySourcesGet` - Gets an inventory source.
-* `DisplayvideoInventorySourcesList` - Lists inventory sources that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
-* `DisplayvideoInventorySourcesPatch` - Updates an existing inventory source. Returns the updated inventory source if successful.
+* [DisplayvideoInventorySourcesCreate](docs/inventorysources/README.md#displayvideoinventorysourcescreate) - Creates a new inventory source. Returns the newly created inventory source if successful.
+* [DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors](docs/inventorysources/README.md#displayvideoinventorysourceseditinventorysourcereadwriteaccessors) - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
+* [DisplayvideoInventorySourcesGet](docs/inventorysources/README.md#displayvideoinventorysourcesget) - Gets an inventory source.
+* [DisplayvideoInventorySourcesList](docs/inventorysources/README.md#displayvideoinventorysourceslist) - Lists inventory sources that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
+* [DisplayvideoInventorySourcesPatch](docs/inventorysources/README.md#displayvideoinventorysourcespatch) - Updates an existing inventory source. Returns the updated inventory source if successful.
 
-### Media
+### [Media](docs/media/README.md)
 
-* `DisplayvideoMediaDownload` - Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.` **Note**: Download requests will not be successful without including `alt=media` query string.
-* `DisplayvideoMediaUpload` - Uploads media. Upload is supported on the URI `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be successful without including `upload_type=media` query string.
+* [DisplayvideoMediaDownload](docs/media/README.md#displayvideomediadownload) - Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.` **Note**: Download requests will not be successful without including `alt=media` query string.
+* [DisplayvideoMediaUpload](docs/media/README.md#displayvideomediaupload) - Uploads media. Upload is supported on the URI `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be successful without including `upload_type=media` query string.
 
-### Partners
+### [Partners](docs/partners/README.md)
 
-* `DisplayvideoPartnersChannelsCreate` - Creates a new channel. Returns the newly created channel if successful.
-* `DisplayvideoPartnersChannelsList` - Lists channels for a partner or advertiser.
-* `DisplayvideoPartnersChannelsPatch` - Updates a channel. Returns the updated channel if successful.
-* `DisplayvideoPartnersChannelsSitesBulkEdit` - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
-* `DisplayvideoPartnersChannelsSitesDelete` - Deletes a site from a channel.
-* `DisplayvideoPartnersChannelsSitesList` - Lists sites in a channel.
-* `DisplayvideoPartnersChannelsSitesReplace` - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
-* `DisplayvideoPartnersEditAssignedTargetingOptions` - Edits targeting options under a single partner. The operation will delete the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and then create the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
-* `DisplayvideoPartnersGet` - Gets a partner.
-* `DisplayvideoPartnersList` - Lists partners that are accessible to the current user. The order is defined by the order_by parameter.
-* `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreate` - Assigns a targeting option to a partner. Returns the assigned targeting option if successful.
-* `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDelete` - Deletes an assigned targeting option from a partner.
-* `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to a partner.
-* `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to a partner.
+* [DisplayvideoPartnersChannelsCreate](docs/partners/README.md#displayvideopartnerschannelscreate) - Creates a new channel. Returns the newly created channel if successful.
+* [DisplayvideoPartnersChannelsList](docs/partners/README.md#displayvideopartnerschannelslist) - Lists channels for a partner or advertiser.
+* [DisplayvideoPartnersChannelsPatch](docs/partners/README.md#displayvideopartnerschannelspatch) - Updates a channel. Returns the updated channel if successful.
+* [DisplayvideoPartnersChannelsSitesBulkEdit](docs/partners/README.md#displayvideopartnerschannelssitesbulkedit) - Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
+* [DisplayvideoPartnersChannelsSitesDelete](docs/partners/README.md#displayvideopartnerschannelssitesdelete) - Deletes a site from a channel.
+* [DisplayvideoPartnersChannelsSitesList](docs/partners/README.md#displayvideopartnerschannelssiteslist) - Lists sites in a channel.
+* [DisplayvideoPartnersChannelsSitesReplace](docs/partners/README.md#displayvideopartnerschannelssitesreplace) - Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
+* [DisplayvideoPartnersEditAssignedTargetingOptions](docs/partners/README.md#displayvideopartnerseditassignedtargetingoptions) - Edits targeting options under a single partner. The operation will delete the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and then create the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
+* [DisplayvideoPartnersGet](docs/partners/README.md#displayvideopartnersget) - Gets a partner.
+* [DisplayvideoPartnersList](docs/partners/README.md#displayvideopartnerslist) - Lists partners that are accessible to the current user. The order is defined by the order_by parameter.
+* [DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsCreate](docs/partners/README.md#displayvideopartnerstargetingtypesassignedtargetingoptionscreate) - Assigns a targeting option to a partner. Returns the assigned targeting option if successful.
+* [DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsDelete](docs/partners/README.md#displayvideopartnerstargetingtypesassignedtargetingoptionsdelete) - Deletes an assigned targeting option from a partner.
+* [DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet](docs/partners/README.md#displayvideopartnerstargetingtypesassignedtargetingoptionsget) - Gets a single targeting option assigned to a partner.
+* [DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsList](docs/partners/README.md#displayvideopartnerstargetingtypesassignedtargetingoptionslist) - Lists the targeting options assigned to a partner.
 
-### Sdfdownloadtasks
+### [Sdfdownloadtasks](docs/sdfdownloadtasks/README.md)
 
-* `DisplayvideoSdfdownloadtasksCreate` - Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running, asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the operation is SdfDownloadTask. The response will not include the download files, which must be retrieved with media.download. The state of operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the error.message. Note that error.details is expected to be empty.
-* `DisplayvideoSdfdownloadtasksOperationsGet` - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
+* [DisplayvideoSdfdownloadtasksCreate](docs/sdfdownloadtasks/README.md#displayvideosdfdownloadtaskscreate) - Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running, asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the operation is SdfDownloadTask. The response will not include the download files, which must be retrieved with media.download. The state of operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the error.message. Note that error.details is expected to be empty.
+* [DisplayvideoSdfdownloadtasksOperationsGet](docs/sdfdownloadtasks/README.md#displayvideosdfdownloadtasksoperationsget) - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
 
-### TargetingTypes
+### [TargetingTypes](docs/targetingtypes/README.md)
 
-* `DisplayvideoTargetingTypesTargetingOptionsGet` - Gets a single targeting option.
-* `DisplayvideoTargetingTypesTargetingOptionsList` - Lists targeting options of a given type.
-* `DisplayvideoTargetingTypesTargetingOptionsSearch` - Searches for targeting options of a given type based on the given search terms.
+* [DisplayvideoTargetingTypesTargetingOptionsGet](docs/targetingtypes/README.md#displayvideotargetingtypestargetingoptionsget) - Gets a single targeting option.
+* [DisplayvideoTargetingTypesTargetingOptionsList](docs/targetingtypes/README.md#displayvideotargetingtypestargetingoptionslist) - Lists targeting options of a given type.
+* [DisplayvideoTargetingTypesTargetingOptionsSearch](docs/targetingtypes/README.md#displayvideotargetingtypestargetingoptionssearch) - Searches for targeting options of a given type based on the given search terms.
 
-### Users
+### [Users](docs/users/README.md)
 
-* `DisplayvideoUsersBulkEditAssignedUserRoles` - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
-* `DisplayvideoUsersCreate` - Creates a new user. Returns the newly created user if successful.
-* `DisplayvideoUsersDelete` - Deletes a user.
-* `DisplayvideoUsersGet` - Gets a user.
-* `DisplayvideoUsersList` - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
-* `DisplayvideoUsersPatch` - Updates an existing user. Returns the updated user if successful.
+* [DisplayvideoUsersBulkEditAssignedUserRoles](docs/users/README.md#displayvideousersbulkeditassigneduserroles) - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
+* [DisplayvideoUsersCreate](docs/users/README.md#displayvideouserscreate) - Creates a new user. Returns the newly created user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
+* [DisplayvideoUsersDelete](docs/users/README.md#displayvideousersdelete) - Deletes a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
+* [DisplayvideoUsersGet](docs/users/README.md#displayvideousersget) - Gets a user. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
+* [DisplayvideoUsersList](docs/users/README.md#displayvideouserslist) - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
+* [DisplayvideoUsersPatch](docs/users/README.md#displayvideouserspatch) - Updates an existing user. Returns the updated user if successful. This method has unique authentication requirements. Read the prerequisites in our [Managing Users guide](/display-video/api/guides/users/overview#prerequisites) before using this method. The "Try this method" feature does not work for this method.
 <!-- End SDK Available Operations -->
 
 ### Maturity

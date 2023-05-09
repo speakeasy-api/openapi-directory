@@ -24,21 +24,25 @@ const (
 	DescribeFleetHistoryResultHistoryRecordsEventTypeEnumServiceError   DescribeFleetHistoryResultHistoryRecordsEventTypeEnum = "service-error"
 )
 
+func (e DescribeFleetHistoryResultHistoryRecordsEventTypeEnum) ToPointer() *DescribeFleetHistoryResultHistoryRecordsEventTypeEnum {
+	return &e
+}
+
 func (e *DescribeFleetHistoryResultHistoryRecordsEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "instance-change":
 		fallthrough
 	case "fleet-change":
 		fallthrough
 	case "service-error":
-		*e = DescribeFleetHistoryResultHistoryRecordsEventTypeEnum(s)
+		*e = DescribeFleetHistoryResultHistoryRecordsEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFleetHistoryResultHistoryRecordsEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFleetHistoryResultHistoryRecordsEventTypeEnum: %v", v)
 	}
 }
 

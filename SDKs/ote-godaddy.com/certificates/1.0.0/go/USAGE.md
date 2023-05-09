@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CertificateActionRetrieveRequest{
-        CertificateID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.V1.CertificateActionRetrieve(ctx, req)
+    res, err := s.V1.CertificateActionRetrieve(ctx, operations.CertificateActionRetrieveRequest{
+        CertificateID: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

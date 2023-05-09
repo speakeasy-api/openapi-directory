@@ -16,17 +16,21 @@ const (
 	AddInstanceFleetXAmzTargetEnumElasticMapReduceAddInstanceFleet AddInstanceFleetXAmzTargetEnum = "ElasticMapReduce.AddInstanceFleet"
 )
 
+func (e AddInstanceFleetXAmzTargetEnum) ToPointer() *AddInstanceFleetXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddInstanceFleetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ElasticMapReduce.AddInstanceFleet":
-		*e = AddInstanceFleetXAmzTargetEnum(s)
+		*e = AddInstanceFleetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddInstanceFleetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddInstanceFleetXAmzTargetEnum: %v", v)
 	}
 }
 

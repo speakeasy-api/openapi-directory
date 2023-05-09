@@ -16,17 +16,21 @@ const (
 	UpdateUserDefinedFunctionXAmzTargetEnumAwsGlueUpdateUserDefinedFunction UpdateUserDefinedFunctionXAmzTargetEnum = "AWSGlue.UpdateUserDefinedFunction"
 )
 
+func (e UpdateUserDefinedFunctionXAmzTargetEnum) ToPointer() *UpdateUserDefinedFunctionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateUserDefinedFunctionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.UpdateUserDefinedFunction":
-		*e = UpdateUserDefinedFunctionXAmzTargetEnum(s)
+		*e = UpdateUserDefinedFunctionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateUserDefinedFunctionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateUserDefinedFunctionXAmzTargetEnum: %v", v)
 	}
 }
 

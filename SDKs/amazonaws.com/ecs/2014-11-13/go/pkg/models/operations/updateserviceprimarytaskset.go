@@ -16,17 +16,21 @@ const (
 	UpdateServicePrimaryTaskSetXAmzTargetEnumAmazonEc2ContainerServiceV20141113UpdateServicePrimaryTaskSet UpdateServicePrimaryTaskSetXAmzTargetEnum = "AmazonEC2ContainerServiceV20141113.UpdateServicePrimaryTaskSet"
 )
 
+func (e UpdateServicePrimaryTaskSetXAmzTargetEnum) ToPointer() *UpdateServicePrimaryTaskSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateServicePrimaryTaskSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerServiceV20141113.UpdateServicePrimaryTaskSet":
-		*e = UpdateServicePrimaryTaskSetXAmzTargetEnum(s)
+		*e = UpdateServicePrimaryTaskSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateServicePrimaryTaskSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateServicePrimaryTaskSetXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -31,19 +31,23 @@ const (
 	ListAttachedIndicesXAmzConsistencyLevelEnumEventual     ListAttachedIndicesXAmzConsistencyLevelEnum = "EVENTUAL"
 )
 
+func (e ListAttachedIndicesXAmzConsistencyLevelEnum) ToPointer() *ListAttachedIndicesXAmzConsistencyLevelEnum {
+	return &e
+}
+
 func (e *ListAttachedIndicesXAmzConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIALIZABLE":
 		fallthrough
 	case "EVENTUAL":
-		*e = ListAttachedIndicesXAmzConsistencyLevelEnum(s)
+		*e = ListAttachedIndicesXAmzConsistencyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAttachedIndicesXAmzConsistencyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAttachedIndicesXAmzConsistencyLevelEnum: %v", v)
 	}
 }
 

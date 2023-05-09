@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,23 +16,21 @@ func main() {
         }),
     )
 
-    req := operations.CreateAlertManagerDefinitionRequest{
+    ctx := context.Background()
+    res, err := s.CreateAlertManagerDefinition(ctx, operations.CreateAlertManagerDefinitionRequest{
         RequestBody: operations.CreateAlertManagerDefinitionRequestBody{
-            ClientToken: "corrupti",
+            ClientToken: sdk.String("corrupti"),
             Data: "provident",
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
+        XAmzAlgorithm: sdk.String("distinctio"),
+        XAmzContentSha256: sdk.String("quibusdam"),
+        XAmzCredential: sdk.String("unde"),
+        XAmzDate: sdk.String("nulla"),
+        XAmzSecurityToken: sdk.String("corrupti"),
+        XAmzSignature: sdk.String("illum"),
+        XAmzSignedHeaders: sdk.String("vel"),
         WorkspaceID: "error",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAlertManagerDefinition(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

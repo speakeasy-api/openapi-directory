@@ -35,12 +35,16 @@ const (
 	CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnumZxr CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum = "ZXR"
 )
 
+func (e CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum) ToPointer() *CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum {
+	return &e
+}
+
 func (e *CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAN":
 		fallthrough
 	case "FCO":
@@ -74,10 +78,10 @@ func (e *CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnu
 	case "ZXF":
 		fallthrough
 	case "ZXR":
-		*e = CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum(s)
+		*e = CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum: %v", v)
 	}
 }
 

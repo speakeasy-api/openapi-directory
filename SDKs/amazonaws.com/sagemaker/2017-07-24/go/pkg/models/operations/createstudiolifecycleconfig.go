@@ -16,17 +16,21 @@ const (
 	CreateStudioLifecycleConfigXAmzTargetEnumSageMakerCreateStudioLifecycleConfig CreateStudioLifecycleConfigXAmzTargetEnum = "SageMaker.CreateStudioLifecycleConfig"
 )
 
+func (e CreateStudioLifecycleConfigXAmzTargetEnum) ToPointer() *CreateStudioLifecycleConfigXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateStudioLifecycleConfigXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.CreateStudioLifecycleConfig":
-		*e = CreateStudioLifecycleConfigXAmzTargetEnum(s)
+		*e = CreateStudioLifecycleConfigXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStudioLifecycleConfigXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStudioLifecycleConfigXAmzTargetEnum: %v", v)
 	}
 }
 

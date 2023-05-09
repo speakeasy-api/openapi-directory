@@ -24,12 +24,16 @@ const (
 	SearchCatalogAssetTypeEnumEditorialVideo SearchCatalogAssetTypeEnum = "editorial-video"
 )
 
+func (e SearchCatalogAssetTypeEnum) ToPointer() *SearchCatalogAssetTypeEnum {
+	return &e
+}
+
 func (e *SearchCatalogAssetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
 		fallthrough
 	case "video":
@@ -41,10 +45,10 @@ func (e *SearchCatalogAssetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "editorial-image":
 		fallthrough
 	case "editorial-video":
-		*e = SearchCatalogAssetTypeEnum(s)
+		*e = SearchCatalogAssetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCatalogAssetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCatalogAssetTypeEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	SearchCatalogSortEnumOldest SearchCatalogSortEnum = "oldest"
 )
 
+func (e SearchCatalogSortEnum) ToPointer() *SearchCatalogSortEnum {
+	return &e
+}
+
 func (e *SearchCatalogSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = SearchCatalogSortEnum(s)
+		*e = SearchCatalogSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchCatalogSortEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchCatalogSortEnum: %v", v)
 	}
 }
 

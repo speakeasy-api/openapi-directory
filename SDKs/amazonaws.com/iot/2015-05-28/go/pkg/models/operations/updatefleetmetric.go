@@ -48,12 +48,16 @@ const (
 	UpdateFleetMetricRequestBodyUnitEnumNone            UpdateFleetMetricRequestBodyUnitEnum = "None"
 )
 
+func (e UpdateFleetMetricRequestBodyUnitEnum) ToPointer() *UpdateFleetMetricRequestBodyUnitEnum {
+	return &e
+}
+
 func (e *UpdateFleetMetricRequestBodyUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Seconds":
 		fallthrough
 	case "Microseconds":
@@ -107,10 +111,10 @@ func (e *UpdateFleetMetricRequestBodyUnitEnum) UnmarshalJSON(data []byte) error 
 	case "Count/Second":
 		fallthrough
 	case "None":
-		*e = UpdateFleetMetricRequestBodyUnitEnum(s)
+		*e = UpdateFleetMetricRequestBodyUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFleetMetricRequestBodyUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFleetMetricRequestBodyUnitEnum: %v", v)
 	}
 }
 

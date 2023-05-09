@@ -16,17 +16,21 @@ const (
 	GetCredentialsXAmzTargetEnumRedshiftServerlessGetCredentials GetCredentialsXAmzTargetEnum = "RedshiftServerless.GetCredentials"
 )
 
+func (e GetCredentialsXAmzTargetEnum) ToPointer() *GetCredentialsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCredentialsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RedshiftServerless.GetCredentials":
-		*e = GetCredentialsXAmzTargetEnum(s)
+		*e = GetCredentialsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCredentialsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCredentialsXAmzTargetEnum: %v", v)
 	}
 }
 

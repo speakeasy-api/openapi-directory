@@ -16,17 +16,21 @@ const (
 	RemoveTargetsXAmzTargetEnumAwsEventsRemoveTargets RemoveTargetsXAmzTargetEnum = "AWSEvents.RemoveTargets"
 )
 
+func (e RemoveTargetsXAmzTargetEnum) ToPointer() *RemoveTargetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *RemoveTargetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.RemoveTargets":
-		*e = RemoveTargetsXAmzTargetEnum(s)
+		*e = RemoveTargetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoveTargetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoveTargetsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	CustomerFieldsWithPasswordNoIDStatusEnumDisabled CustomerFieldsWithPasswordNoIDStatusEnum = "disabled"
 )
 
+func (e CustomerFieldsWithPasswordNoIDStatusEnum) ToPointer() *CustomerFieldsWithPasswordNoIDStatusEnum {
+	return &e
+}
+
 func (e *CustomerFieldsWithPasswordNoIDStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "approved":
 		fallthrough
 	case "pending":
 		fallthrough
 	case "disabled":
-		*e = CustomerFieldsWithPasswordNoIDStatusEnum(s)
+		*e = CustomerFieldsWithPasswordNoIDStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomerFieldsWithPasswordNoIDStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomerFieldsWithPasswordNoIDStatusEnum: %v", v)
 	}
 }
 

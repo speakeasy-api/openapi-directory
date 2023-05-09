@@ -10,7 +10,7 @@ type Feature struct {
 	DeleteTime *string `json:"deleteTime,omitempty"`
 	// CommonFleetDefaultMemberConfigSpec contains default configuration information for memberships of a fleet
 	FleetDefaultMemberConfig map[string]interface{} `json:"fleetDefaultMemberConfig,omitempty"`
-	// GCP labels for this Feature.
+	// Labels for this Feature.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
 	MembershipSpecs map[string]MembershipFeatureSpec `json:"membershipSpecs,omitempty"`
@@ -36,7 +36,7 @@ type Feature struct {
 type FeatureInput struct {
 	// CommonFleetDefaultMemberConfigSpec contains default configuration information for memberships of a fleet
 	FleetDefaultMemberConfig map[string]interface{} `json:"fleetDefaultMemberConfig,omitempty"`
-	// GCP labels for this Feature.
+	// Labels for this Feature.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Optional. Membership-specific configuration for this Feature. If this Feature does not support any per-Membership configuration, this field may be unused. The keys indicate which Membership the configuration is for, in the form: `projects/{p}/locations/{l}/memberships/{m}` Where {p} is the project, {l} is a valid location and {m} is a valid Membership in this project at that location. {p} WILL match the Feature's project. {p} will always be returned as the project number, but the project ID is also accepted during input. If the same Membership is specified in the map twice (using the project ID form, and the project number form), exactly ONE of the entries will be saved, with no guarantees as to which. For this reason, it is recommended the same format be used for all entries when mutating a Feature.
 	MembershipSpecs map[string]MembershipFeatureSpecInput `json:"membershipSpecs,omitempty"`

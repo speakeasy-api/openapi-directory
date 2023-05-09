@@ -8,6 +8,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -50,4 +51,11 @@ pkg/models/operations/putadminmappingsstubmappingid.go
 pkg/models/operations/postadminreset.go
 pkg/models/operations/postadminsettings.go
 pkg/models/operations/postadminshutdown.go
+docs/sdk/README.md
+docs/nearmisses/README.md
+docs/recordings/README.md
+docs/requests/README.md
+docs/scenarios/README.md
+docs/stubmappings/README.md
+docs/system/README.md
 USAGE.md

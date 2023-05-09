@@ -16,17 +16,21 @@ const (
 	DeleteEvaluationXAmzTargetEnumAmazonMl20141212DeleteEvaluation DeleteEvaluationXAmzTargetEnum = "AmazonML_20141212.DeleteEvaluation"
 )
 
+func (e DeleteEvaluationXAmzTargetEnum) ToPointer() *DeleteEvaluationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteEvaluationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DeleteEvaluation":
-		*e = DeleteEvaluationXAmzTargetEnum(s)
+		*e = DeleteEvaluationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteEvaluationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteEvaluationXAmzTargetEnum: %v", v)
 	}
 }
 

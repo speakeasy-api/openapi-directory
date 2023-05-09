@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +17,20 @@ func main() {
         }),
     )
 
-    req := operations.DeleteReportDefinitionRequest{
-        DeleteReportDefinitionRequest: shared.DeleteReportDefinitionRequest{
-            ReportName: "corrupti",
-        },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "AWSOrigamiServiceGatewayService.DeleteReportDefinition",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteReportDefinition(ctx, req)
+    res, err := s.DeleteReportDefinition(ctx, operations.DeleteReportDefinitionRequest{
+        DeleteReportDefinitionRequest: shared.DeleteReportDefinitionRequest{
+            ReportName: sdk.String("corrupti"),
+        },
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        XAmzTarget: operations.DeleteReportDefinitionXAmzTargetEnumAwsOrigamiServiceGatewayServiceDeleteReportDefinition,
+    })
     if err != nil {
         log.Fatal(err)
     }

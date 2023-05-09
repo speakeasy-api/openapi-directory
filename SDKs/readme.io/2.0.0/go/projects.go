@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
+	"openapi/pkg/utils"
 	"strings"
 )
 
@@ -32,7 +33,7 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 
 // GetProject - Get metadata about the current project
 // Returns project data for API key
-func (s *projects) GetProject(ctx context.Context) (*operations.GetProjectResponse, error) {
+func (s *projects) GetProject(ctx context.Context, security operations.GetProjectSecurity) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
 
@@ -41,7 +42,7 @@ func (s *projects) GetProject(ctx context.Context) (*operations.GetProjectRespon
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

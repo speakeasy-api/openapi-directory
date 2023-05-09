@@ -25,12 +25,16 @@ const (
 	CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnumFailedDetached CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum = "failed-detached"
 )
 
+func (e CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum) ToPointer() *CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum {
+	return &e
+}
+
 func (e *CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "in-progress":
@@ -42,10 +46,10 @@ func (e *CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum) Un
 	case "failed":
 		fallthrough
 	case "failed-detached":
-		*e = CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum(s)
+		*e = CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReplaceRootVolumeTaskResultReplaceRootVolumeTaskTaskStateEnum: %v", v)
 	}
 }
 

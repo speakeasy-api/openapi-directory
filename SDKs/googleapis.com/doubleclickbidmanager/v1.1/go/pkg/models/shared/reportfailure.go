@@ -31,12 +31,16 @@ const (
 	ReportFailureErrorCodeEnumReportingInvalidQueryMissingPartnerAndAdvertiserFilters ReportFailureErrorCodeEnum = "REPORTING_INVALID_QUERY_MISSING_PARTNER_AND_ADVERTISER_FILTERS"
 )
 
+func (e ReportFailureErrorCodeEnum) ToPointer() *ReportFailureErrorCodeEnum {
+	return &e
+}
+
 func (e *ReportFailureErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHENTICATION_ERROR":
 		fallthrough
 	case "UNAUTHORIZED_API_ACCESS":
@@ -72,10 +76,10 @@ func (e *ReportFailureErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "REPORTING_INVALID_QUERY_TITLE_MISSING":
 		fallthrough
 	case "REPORTING_INVALID_QUERY_MISSING_PARTNER_AND_ADVERTISER_FILTERS":
-		*e = ReportFailureErrorCodeEnum(s)
+		*e = ReportFailureErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportFailureErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportFailureErrorCodeEnum: %v", v)
 	}
 }
 

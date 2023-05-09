@@ -98,12 +98,16 @@ const (
 	CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum) ToPointer() *CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum) Un
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum(s)
+		*e = CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateSubnetCidrReservationRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

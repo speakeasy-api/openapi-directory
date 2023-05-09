@@ -22,12 +22,16 @@ const (
 	RevokeCertificateRequestReasonEnumAttributeAuthorityCompromise   RevokeCertificateRequestReasonEnum = "ATTRIBUTE_AUTHORITY_COMPROMISE"
 )
 
+func (e RevokeCertificateRequestReasonEnum) ToPointer() *RevokeCertificateRequestReasonEnum {
+	return &e
+}
+
 func (e *RevokeCertificateRequestReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVOCATION_REASON_UNSPECIFIED":
 		fallthrough
 	case "KEY_COMPROMISE":
@@ -45,10 +49,10 @@ func (e *RevokeCertificateRequestReasonEnum) UnmarshalJSON(data []byte) error {
 	case "PRIVILEGE_WITHDRAWN":
 		fallthrough
 	case "ATTRIBUTE_AUTHORITY_COMPROMISE":
-		*e = RevokeCertificateRequestReasonEnum(s)
+		*e = RevokeCertificateRequestReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevokeCertificateRequestReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for RevokeCertificateRequestReasonEnum: %v", v)
 	}
 }
 

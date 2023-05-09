@@ -36,7 +36,10 @@ func newSubUser(defaultClient, securityClient HTTPClient, serverURL, language, s
 // SubUserDelete - Delete a subuser
 func (s *subUser) SubUserDelete(ctx context.Context, request operations.SubUserDeleteRequest) (*operations.SubUserDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -71,7 +74,10 @@ func (s *subUser) SubUserDelete(ctx context.Context, request operations.SubUserD
 // SubUserGet - Get a sub user. The user must be assigend to the user that makes this call.
 func (s *subUser) SubUserGet(ctx context.Context, request operations.SubUserGetRequest) (*operations.SubUserGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/SubUser/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

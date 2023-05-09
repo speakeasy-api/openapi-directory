@@ -37,7 +37,10 @@ func newCoach(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get a coach record by id.
 func (s *coach) FetchCoach(ctx context.Context, request operations.FetchCoachRequest) (*operations.FetchCoachResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/coach/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/coach/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

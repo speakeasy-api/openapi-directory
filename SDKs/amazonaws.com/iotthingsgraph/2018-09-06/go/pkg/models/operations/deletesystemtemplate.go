@@ -16,17 +16,21 @@ const (
 	DeleteSystemTemplateXAmzTargetEnumIotThingsGraphFrontEndServiceDeleteSystemTemplate DeleteSystemTemplateXAmzTargetEnum = "IotThingsGraphFrontEndService.DeleteSystemTemplate"
 )
 
+func (e DeleteSystemTemplateXAmzTargetEnum) ToPointer() *DeleteSystemTemplateXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSystemTemplateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.DeleteSystemTemplate":
-		*e = DeleteSystemTemplateXAmzTargetEnum(s)
+		*e = DeleteSystemTemplateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSystemTemplateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSystemTemplateXAmzTargetEnum: %v", v)
 	}
 }
 

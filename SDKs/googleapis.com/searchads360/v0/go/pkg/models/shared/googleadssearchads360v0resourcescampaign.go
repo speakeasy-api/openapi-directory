@@ -20,12 +20,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnumUnavailable        GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum = "UNAVAILABLE"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -39,10 +43,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum
 	case "ROTATE_INDEFINITELY":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdServingOptimizationStatusEnum: %v", v)
 	}
 }
 
@@ -70,14 +74,19 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnumVideoSequence                 GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum = "VIDEO_SEQUENCE"
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnumAppCampaignForPreRegistration GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum = "APP_CAMPAIGN_FOR_PRE_REGISTRATION"
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnumVideoReachTargetFrequency     GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum = "VIDEO_REACH_TARGET_FREQUENCY"
+	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnumTravelActivities              GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum = "TRAVEL_ACTIVITIES"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -117,10 +126,12 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum) 
 	case "APP_CAMPAIGN_FOR_PRE_REGISTRATION":
 		fallthrough
 	case "VIDEO_REACH_TARGET_FREQUENCY":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum(s)
+		fallthrough
+	case "TRAVEL_ACTIVITIES":
+		*e = GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelSubTypeEnum: %v", v)
 	}
 }
 
@@ -141,14 +152,19 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnumPerformanceMax GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum = "PERFORMANCE_MAX"
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnumLocalServices  GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum = "LOCAL_SERVICES"
 	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnumDiscovery      GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum = "DISCOVERY"
+	GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnumTravel         GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum = "TRAVEL"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -174,10 +190,12 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum) Unm
 	case "LOCAL_SERVICES":
 		fallthrough
 	case "DISCOVERY":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum(s)
+		fallthrough
+	case "TRAVEL":
+		*e = GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignAdvertisingChannelTypeEnum: %v", v)
 	}
 }
 
@@ -214,12 +232,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnumMultiple                        GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum = "MULTIPLE"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -273,10 +295,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum
 	case "MULTIPLE_MISCONFIGURED":
 		fallthrough
 	case "MULTIPLE":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategySystemStatusEnum: %v", v)
 	}
 }
 
@@ -305,12 +327,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnumTargetSpend             GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum = "TARGET_SPEND"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -348,10 +374,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum) Unmars
 	case "TARGET_ROAS":
 		fallthrough
 	case "TARGET_SPEND":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum: %v", v)
 	}
 }
 
@@ -385,14 +411,20 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnumVideo                  GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum = "VIDEO"
 	GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnumCallToActionSelection  GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum = "CALL_TO_ACTION_SELECTION"
 	GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnumAdImage                GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum = "AD_IMAGE"
+	GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnumBusinessLogo           GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum = "BUSINESS_LOGO"
+	GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnumHotelProperty          GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum = "HOTEL_PROPERTY"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -446,10 +478,14 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEn
 	case "CALL_TO_ACTION_SELECTION":
 		fallthrough
 	case "AD_IMAGE":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum(s)
+		fallthrough
+	case "BUSINESS_LOGO":
+		fallthrough
+	case "HOTEL_PROPERTY":
+		*e = GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignExcludedParentAssetFieldTypesEnum: %v", v)
 	}
 }
 
@@ -466,12 +502,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnumSuspended   GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum = "SUSPENDED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -485,10 +525,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum) UnmarshalJSO
 	case "PENDING":
 		fallthrough
 	case "SUSPENDED":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignServingStatusEnum: %v", v)
 	}
 }
 
@@ -503,12 +543,16 @@ const (
 	GoogleAdsSearchads360V0ResourcesCampaignStatusEnumRemoved     GoogleAdsSearchads360V0ResourcesCampaignStatusEnum = "REMOVED"
 )
 
+func (e GoogleAdsSearchads360V0ResourcesCampaignStatusEnum) ToPointer() *GoogleAdsSearchads360V0ResourcesCampaignStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0ResourcesCampaignStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -518,10 +562,10 @@ func (e *GoogleAdsSearchads360V0ResourcesCampaignStatusEnum) UnmarshalJSON(data 
 	case "PAUSED":
 		fallthrough
 	case "REMOVED":
-		*e = GoogleAdsSearchads360V0ResourcesCampaignStatusEnum(s)
+		*e = GoogleAdsSearchads360V0ResourcesCampaignStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0ResourcesCampaignStatusEnum: %v", v)
 	}
 }
 
@@ -541,8 +585,10 @@ type GoogleAdsSearchads360V0ResourcesCampaign struct {
 	BiddingStrategyType *GoogleAdsSearchads360V0ResourcesCampaignBiddingStrategyTypeEnum `json:"biddingStrategyType,omitempty"`
 	// The budget of the campaign.
 	CampaignBudget *string `json:"campaignBudget,omitempty"`
-	// Output only. Timestamp of the campaign's creation time, formatted in ISO 8601.
+	// Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format. create_time will be deprecated in v1. Use creation_time instead.
 	CreateTime *string `json:"createTime,omitempty"`
+	// Output only. The timestamp when this campaign was created. The timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss" format.
+	CreationTime *string `json:"creationTime,omitempty"`
 	// The setting for controlling Dynamic Search Ads (DSA).
 	DynamicSearchAdsSetting *GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting `json:"dynamicSearchAdsSetting,omitempty"`
 	// The last day of the campaign in serving customer's timezone in YYYY-MM-DD format. On create, defaults to 2037-12-30, which means the campaign will run indefinitely. To set an existing campaign to run indefinitely, set this field to 2037-12-30.

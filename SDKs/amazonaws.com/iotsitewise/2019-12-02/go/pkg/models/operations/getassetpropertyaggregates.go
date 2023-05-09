@@ -18,19 +18,23 @@ const (
 	GetAssetPropertyAggregatesTimeOrderingEnumDescending GetAssetPropertyAggregatesTimeOrderingEnum = "DESCENDING"
 )
 
+func (e GetAssetPropertyAggregatesTimeOrderingEnum) ToPointer() *GetAssetPropertyAggregatesTimeOrderingEnum {
+	return &e
+}
+
 func (e *GetAssetPropertyAggregatesTimeOrderingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = GetAssetPropertyAggregatesTimeOrderingEnum(s)
+		*e = GetAssetPropertyAggregatesTimeOrderingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAssetPropertyAggregatesTimeOrderingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAssetPropertyAggregatesTimeOrderingEnum: %v", v)
 	}
 }
 

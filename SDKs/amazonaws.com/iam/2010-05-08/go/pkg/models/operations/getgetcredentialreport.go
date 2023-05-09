@@ -15,17 +15,21 @@ const (
 	GETGETCredentialReportActionEnumGetCredentialReport GETGETCredentialReportActionEnum = "GetCredentialReport"
 )
 
+func (e GETGETCredentialReportActionEnum) ToPointer() *GETGETCredentialReportActionEnum {
+	return &e
+}
+
 func (e *GETGETCredentialReportActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetCredentialReport":
-		*e = GETGETCredentialReportActionEnum(s)
+		*e = GETGETCredentialReportActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETCredentialReportActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETCredentialReportActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETCredentialReportVersionEnumTwoThousandAndTen0508 GETGETCredentialReportVersionEnum = "2010-05-08"
 )
 
+func (e GETGETCredentialReportVersionEnum) ToPointer() *GETGETCredentialReportVersionEnum {
+	return &e
+}
+
 func (e *GETGETCredentialReportVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETGETCredentialReportVersionEnum(s)
+		*e = GETGETCredentialReportVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETCredentialReportVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETCredentialReportVersionEnum: %v", v)
 	}
 }
 

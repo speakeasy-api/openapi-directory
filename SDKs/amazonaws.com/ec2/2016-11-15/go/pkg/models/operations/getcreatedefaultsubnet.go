@@ -15,17 +15,21 @@ const (
 	GETCreateDefaultSubnetActionEnumCreateDefaultSubnet GETCreateDefaultSubnetActionEnum = "CreateDefaultSubnet"
 )
 
+func (e GETCreateDefaultSubnetActionEnum) ToPointer() *GETCreateDefaultSubnetActionEnum {
+	return &e
+}
+
 func (e *GETCreateDefaultSubnetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateDefaultSubnet":
-		*e = GETCreateDefaultSubnetActionEnum(s)
+		*e = GETCreateDefaultSubnetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDefaultSubnetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDefaultSubnetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCreateDefaultSubnetVersionEnumTwoThousandAndSixteen1115 GETCreateDefaultSubnetVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateDefaultSubnetVersionEnum) ToPointer() *GETCreateDefaultSubnetVersionEnum {
+	return &e
+}
+
 func (e *GETCreateDefaultSubnetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateDefaultSubnetVersionEnum(s)
+		*e = GETCreateDefaultSubnetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateDefaultSubnetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateDefaultSubnetVersionEnum: %v", v)
 	}
 }
 

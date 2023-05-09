@@ -17,12 +17,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnumError                      ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -30,10 +34,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum) Unmarsha
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateGitSyncEnumError                      ConfigManagementConfigSyncDeploymentStateGitSyncEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateGitSyncEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateGitSyncEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateGitSyncEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -60,10 +68,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateGitSyncEnum) UnmarshalJSON(dat
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateGitSyncEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateGitSyncEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateGitSyncEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateGitSyncEnum: %v", v)
 	}
 }
 
@@ -77,12 +85,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateImporterEnumError                      ConfigManagementConfigSyncDeploymentStateImporterEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateImporterEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateImporterEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateImporterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -90,10 +102,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateImporterEnum) UnmarshalJSON(da
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateImporterEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateImporterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateImporterEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateImporterEnum: %v", v)
 	}
 }
 
@@ -107,12 +119,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateMonitorEnumError                      ConfigManagementConfigSyncDeploymentStateMonitorEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateMonitorEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateMonitorEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateMonitorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -120,10 +136,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateMonitorEnum) UnmarshalJSON(dat
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateMonitorEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateMonitorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateMonitorEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateMonitorEnum: %v", v)
 	}
 }
 
@@ -137,12 +153,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnumError                      ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -150,10 +170,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum) Unmarsh
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum: %v", v)
 	}
 }
 
@@ -167,12 +187,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateRootReconcilerEnumError                      ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -180,10 +204,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum) UnmarshalJ
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum: %v", v)
 	}
 }
 
@@ -197,12 +221,16 @@ const (
 	ConfigManagementConfigSyncDeploymentStateSyncerEnumError                      ConfigManagementConfigSyncDeploymentStateSyncerEnum = "ERROR"
 )
 
+func (e ConfigManagementConfigSyncDeploymentStateSyncerEnum) ToPointer() *ConfigManagementConfigSyncDeploymentStateSyncerEnum {
+	return &e
+}
+
 func (e *ConfigManagementConfigSyncDeploymentStateSyncerEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOYMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "NOT_INSTALLED":
@@ -210,10 +238,10 @@ func (e *ConfigManagementConfigSyncDeploymentStateSyncerEnum) UnmarshalJSON(data
 	case "INSTALLED":
 		fallthrough
 	case "ERROR":
-		*e = ConfigManagementConfigSyncDeploymentStateSyncerEnum(s)
+		*e = ConfigManagementConfigSyncDeploymentStateSyncerEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateSyncerEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigManagementConfigSyncDeploymentStateSyncerEnum: %v", v)
 	}
 }
 

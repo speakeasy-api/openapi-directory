@@ -18,12 +18,16 @@ const (
 	VideoFileDetailsVideoStreamRotationEnumOther            VideoFileDetailsVideoStreamRotationEnum = "other"
 )
 
+func (e VideoFileDetailsVideoStreamRotationEnum) ToPointer() *VideoFileDetailsVideoStreamRotationEnum {
+	return &e
+}
+
 func (e *VideoFileDetailsVideoStreamRotationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "clockwise":
@@ -33,10 +37,10 @@ func (e *VideoFileDetailsVideoStreamRotationEnum) UnmarshalJSON(data []byte) err
 	case "counterClockwise":
 		fallthrough
 	case "other":
-		*e = VideoFileDetailsVideoStreamRotationEnum(s)
+		*e = VideoFileDetailsVideoStreamRotationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoFileDetailsVideoStreamRotationEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoFileDetailsVideoStreamRotationEnum: %v", v)
 	}
 }
 

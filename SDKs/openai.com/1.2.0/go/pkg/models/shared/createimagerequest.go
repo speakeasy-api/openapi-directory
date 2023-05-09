@@ -15,19 +15,23 @@ const (
 	CreateImageRequestResponseFormatEnumB64JSON CreateImageRequestResponseFormatEnum = "b64_json"
 )
 
+func (e CreateImageRequestResponseFormatEnum) ToPointer() *CreateImageRequestResponseFormatEnum {
+	return &e
+}
+
 func (e *CreateImageRequestResponseFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "url":
 		fallthrough
 	case "b64_json":
-		*e = CreateImageRequestResponseFormatEnum(s)
+		*e = CreateImageRequestResponseFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageRequestResponseFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageRequestResponseFormatEnum: %v", v)
 	}
 }
 
@@ -40,21 +44,25 @@ const (
 	CreateImageRequestSizeEnumOneThousandAndTwentyFourx1024 CreateImageRequestSizeEnum = "1024x1024"
 )
 
+func (e CreateImageRequestSizeEnum) ToPointer() *CreateImageRequestSizeEnum {
+	return &e
+}
+
 func (e *CreateImageRequestSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "256x256":
 		fallthrough
 	case "512x512":
 		fallthrough
 	case "1024x1024":
-		*e = CreateImageRequestSizeEnum(s)
+		*e = CreateImageRequestSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateImageRequestSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateImageRequestSizeEnum: %v", v)
 	}
 }
 

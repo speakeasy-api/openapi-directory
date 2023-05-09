@@ -2,12 +2,13 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
@@ -17,15 +18,16 @@ func main() {
         }),
     )
 
-    req := operations.BatchMeterUsageRequest{
+    ctx := context.Background()
+    res, err := s.BatchMeterUsage(ctx, operations.BatchMeterUsageRequest{
         BatchMeterUsageRequest: shared.BatchMeterUsageRequest{
             ProductCode: "corrupti",
             UsageRecords: []shared.UsageRecord{
                 shared.UsageRecord{
                     CustomerIdentifier: "distinctio",
                     Dimension: "quibusdam",
-                    Quantity: 602763,
-                    Timestamp: "2021-05-14T08:28:11.899Z",
+                    Quantity: sdk.Int64(602763),
+                    Timestamp: types.MustTimeFromString("2021-05-14T08:28:11.899Z"),
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 423655,
@@ -88,8 +90,8 @@ func main() {
                 shared.UsageRecord{
                     CustomerIdentifier: "repellendus",
                     Dimension: "sapiente",
-                    Quantity: 778157,
-                    Timestamp: "2022-02-17T10:41:36.857Z",
+                    Quantity: sdk.Int64(778157),
+                    Timestamp: types.MustTimeFromString("2022-02-17T10:41:36.857Z"),
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 978619,
@@ -156,8 +158,8 @@ func main() {
                 shared.UsageRecord{
                     CustomerIdentifier: "perferendis",
                     Dimension: "ad",
-                    Quantity: 617636,
-                    Timestamp: "2022-05-22T14:02:28.908Z",
+                    Quantity: sdk.Int64(617636),
+                    Timestamp: types.MustTimeFromString("2022-05-22T14:02:28.908Z"),
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 616934,
@@ -176,18 +178,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "corporis",
-        XAmzContentSha256: "iste",
-        XAmzCredential: "iure",
-        XAmzDate: "saepe",
-        XAmzSecurityToken: "quidem",
-        XAmzSignature: "architecto",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "AWSMPMeteringService.BatchMeterUsage",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchMeterUsage(ctx, req)
+        XAmzAlgorithm: sdk.String("corporis"),
+        XAmzContentSha256: sdk.String("iste"),
+        XAmzCredential: sdk.String("iure"),
+        XAmzDate: sdk.String("saepe"),
+        XAmzSecurityToken: sdk.String("quidem"),
+        XAmzSignature: sdk.String("architecto"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+        XAmzTarget: operations.BatchMeterUsageXAmzTargetEnumAwsmpMeteringServiceBatchMeterUsage,
+    })
     if err != nil {
         log.Fatal(err)
     }

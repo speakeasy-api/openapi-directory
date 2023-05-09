@@ -22,21 +22,25 @@ const (
 	DfareportingMobileAppsListDirectoriesEnumGooglePlayStore DfareportingMobileAppsListDirectoriesEnum = "GOOGLE_PLAY_STORE"
 )
 
+func (e DfareportingMobileAppsListDirectoriesEnum) ToPointer() *DfareportingMobileAppsListDirectoriesEnum {
+	return &e
+}
+
 func (e *DfareportingMobileAppsListDirectoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "APPLE_APP_STORE":
 		fallthrough
 	case "GOOGLE_PLAY_STORE":
-		*e = DfareportingMobileAppsListDirectoriesEnum(s)
+		*e = DfareportingMobileAppsListDirectoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingMobileAppsListDirectoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingMobileAppsListDirectoriesEnum: %v", v)
 	}
 }
 

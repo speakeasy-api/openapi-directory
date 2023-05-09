@@ -15,19 +15,23 @@ const (
 	ExternalURLNameEnumHotelsCom  ExternalURLNameEnum = "HOTELS.COM"
 )
 
+func (e ExternalURLNameEnum) ToPointer() *ExternalURLNameEnum {
+	return &e
+}
+
 func (e *ExternalURLNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BOOKING.COM":
 		fallthrough
 	case "HOTELS.COM":
-		*e = ExternalURLNameEnum(s)
+		*e = ExternalURLNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalURLNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalURLNameEnum: %v", v)
 	}
 }
 

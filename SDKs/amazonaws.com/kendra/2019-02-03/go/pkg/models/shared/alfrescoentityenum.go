@@ -15,20 +15,24 @@ const (
 	AlfrescoEntityEnumDocumentLibrary AlfrescoEntityEnum = "documentLibrary"
 )
 
+func (e AlfrescoEntityEnum) ToPointer() *AlfrescoEntityEnum {
+	return &e
+}
+
 func (e *AlfrescoEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "wiki":
 		fallthrough
 	case "blog":
 		fallthrough
 	case "documentLibrary":
-		*e = AlfrescoEntityEnum(s)
+		*e = AlfrescoEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlfrescoEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for AlfrescoEntityEnum: %v", v)
 	}
 }

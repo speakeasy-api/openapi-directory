@@ -36,7 +36,10 @@ func newHooks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeleteHooksIDJSON - Delete an existing Hook.
 func (s *hooks) DeleteHooksIDJSON(ctx context.Context, request operations.DeleteHooksIDJSONRequest) (*operations.DeleteHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *hooks) GetHooksJSON(ctx context.Context, request operations.GetHooksJSO
 // GetHooksIDJSON - Retrieve a single Hook.
 func (s *hooks) GetHooksIDJSON(ctx context.Context, request operations.GetHooksIDJSONRequest) (*operations.GetHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +275,10 @@ func (s *hooks) PostHooksJSON(ctx context.Context, request operations.PostHooksJ
 // PutHooksIDJSON - Update a Hook.
 func (s *hooks) PutHooksIDJSON(ctx context.Context, request operations.PutHooksIDJSONRequest) (*operations.PutHooksIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/hooks/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "HookEdit", "json")
 	if err != nil {

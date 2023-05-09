@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryDevice - Telemetry data collected from a managed device.
+// GoogleChromeManagementV1TelemetryDevice - Telemetry data collected from a managed device. * Granular permission needed: TELEMETRY_API_DEVICE
 type GoogleChromeManagementV1TelemetryDevice struct {
 	// Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
 	AudioStatusReport []GoogleChromeManagementV1AudioStatusReport `json:"audioStatusReport,omitempty"`
@@ -20,11 +20,11 @@ type GoogleChromeManagementV1TelemetryDevice struct {
 	Customer *string `json:"customer,omitempty"`
 	// Output only. The unique Directory API ID of the device. This value is the same as the Admin Console's Directory API ID in the ChromeOS Devices tab
 	DeviceID *string `json:"deviceId,omitempty"`
-	// Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+	// Information of the graphics subsystem. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportDeviceGraphicsStatus](https://chromeenterprise.google/policies/#ReportDeviceGraphicsStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_GRAPHICS_INFO
 	GraphicsInfo *GoogleChromeManagementV1GraphicsInfo `json:"graphicsInfo,omitempty"`
 	// Output only. Graphics reports collected periodically.
 	GraphicsStatusReport []GoogleChromeManagementV1GraphicsStatusReport `json:"graphicsStatusReport,omitempty"`
-	// Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A
+	// Memory information of a device. * This field has both telemetry and device information: - `totalRamBytes` - Device information - `availableRamBytes` - Telemetry information - `totalMemoryEncryption` - Device information * Data for this field is controlled via policy: [ReportDeviceMemoryInfo](https://chromeenterprise.google/policies/#ReportDeviceMemoryInfo) * Data Collection Frequency: - `totalRamBytes` - Only at upload - `availableRamBytes` - Every 10 minutes - `totalMemoryEncryption` - at device startup * Default Data Reporting Frequency: - `totalRamBytes` - 3 hours - `availableRamBytes` - 3 hours - `totalMemoryEncryption` - at device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: only for `totalMemoryEncryption` * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_MEMORY_INFO
 	MemoryInfo *GoogleChromeManagementV1MemoryInfo `json:"memoryInfo,omitempty"`
 	// Output only. Memory status reports collected periodically sorted decreasing by report_time.
 	MemoryStatusReport []GoogleChromeManagementV1MemoryStatusReport `json:"memoryStatusReport,omitempty"`
@@ -32,7 +32,7 @@ type GoogleChromeManagementV1TelemetryDevice struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. Network diagnostics collected periodically.
 	NetworkDiagnosticsReport []GoogleChromeManagementV1NetworkDiagnosticsReport `json:"networkDiagnosticsReport,omitempty"`
-	// Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A
+	// Network device information. * This field provides device information, which is static and will not change over time. * Data for this field is controlled via policy: [ReportNetworkDeviceConfiguration](https://chromeenterprise.google/policies/#ReportNetworkDeviceConfiguration) * Data Collection Frequency: At device startup * Default Data Reporting Frequency: At device startup - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: Yes * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_NETWORK_INFO
 	NetworkInfo *GoogleChromeManagementV1NetworkInfo `json:"networkInfo,omitempty"`
 	// Output only. Network specs collected periodically.
 	NetworkStatusReport []GoogleChromeManagementV1NetworkStatusReport `json:"networkStatusReport,omitempty"`
@@ -44,7 +44,7 @@ type GoogleChromeManagementV1TelemetryDevice struct {
 	PeripheralsReport []GoogleChromeManagementV1PeripheralsReport `json:"peripheralsReport,omitempty"`
 	// Output only. Device serial number. This value is the same as the Admin Console's Serial Number in the ChromeOS Devices tab.
 	SerialNumber *string `json:"serialNumber,omitempty"`
-	// Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+	// Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_STORAGE_INFO
 	StorageInfo *GoogleChromeManagementV1StorageInfo `json:"storageInfo,omitempty"`
 	// Output only. Storage reports collected periodically.
 	StorageStatusReport []GoogleChromeManagementV1StorageStatusReport `json:"storageStatusReport,omitempty"`

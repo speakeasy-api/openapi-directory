@@ -15,21 +15,25 @@ const (
 	MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnumPut  MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum = "PUT"
 )
 
+func (e MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum) ToPointer() *MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum {
+	return &e
+}
+
 func (e *MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum(s)
+		*e = MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksRecordingChangedHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnumPut  MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum = "PUT"
 )
 
+func (e MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum) ToPointer() *MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum {
+	return &e
+}
+
 func (e *MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum(s)
+		*e = MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksRoomChangedHTTPMethodEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnumPut  MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum = "PUT"
 )
 
+func (e MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum) ToPointer() *MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum {
+	return &e
+}
+
 func (e *MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum(s)
+		*e = MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for MeetingsCapabilityWebhooksSessionChangedHTTPMethodEnum: %v", v)
 	}
 }
 

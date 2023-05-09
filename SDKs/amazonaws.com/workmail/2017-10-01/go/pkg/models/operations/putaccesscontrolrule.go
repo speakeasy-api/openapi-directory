@@ -16,17 +16,21 @@ const (
 	PutAccessControlRuleXAmzTargetEnumWorkMailServicePutAccessControlRule PutAccessControlRuleXAmzTargetEnum = "WorkMailService.PutAccessControlRule"
 )
 
+func (e PutAccessControlRuleXAmzTargetEnum) ToPointer() *PutAccessControlRuleXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutAccessControlRuleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkMailService.PutAccessControlRule":
-		*e = PutAccessControlRuleXAmzTargetEnum(s)
+		*e = PutAccessControlRuleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutAccessControlRuleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutAccessControlRuleXAmzTargetEnum: %v", v)
 	}
 }
 

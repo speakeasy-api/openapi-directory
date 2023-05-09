@@ -50,12 +50,16 @@ const (
 	CreativeAttributesEnumOmsdk10                             CreativeAttributesEnum = "OMSDK_1_0"
 )
 
+func (e CreativeAttributesEnum) ToPointer() *CreativeAttributesEnum {
+	return &e
+}
+
 func (e *CreativeAttributesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ATTRIBUTE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_RICH_MEDIA":
@@ -131,10 +135,10 @@ func (e *CreativeAttributesEnum) UnmarshalJSON(data []byte) error {
 	case "RENDERING_SIZELESS_ADX":
 		fallthrough
 	case "OMSDK_1_0":
-		*e = CreativeAttributesEnum(s)
+		*e = CreativeAttributesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeAttributesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeAttributesEnum: %v", v)
 	}
 }
 
@@ -151,12 +155,16 @@ const (
 	CreativeDealsStatusEnumStatusTypeUnspecified CreativeDealsStatusEnum = "STATUS_TYPE_UNSPECIFIED"
 )
 
+func (e CreativeDealsStatusEnum) ToPointer() *CreativeDealsStatusEnum {
+	return &e
+}
+
 func (e *CreativeDealsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "NOT_CHECKED":
@@ -170,10 +178,10 @@ func (e *CreativeDealsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_REVIEW":
 		fallthrough
 	case "STATUS_TYPE_UNSPECIFIED":
-		*e = CreativeDealsStatusEnum(s)
+		*e = CreativeDealsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeDealsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeDealsStatusEnum: %v", v)
 	}
 }
 
@@ -190,12 +198,16 @@ const (
 	CreativeOpenAuctionStatusEnumStatusTypeUnspecified CreativeOpenAuctionStatusEnum = "STATUS_TYPE_UNSPECIFIED"
 )
 
+func (e CreativeOpenAuctionStatusEnum) ToPointer() *CreativeOpenAuctionStatusEnum {
+	return &e
+}
+
 func (e *CreativeOpenAuctionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATUS_UNSPECIFIED":
 		fallthrough
 	case "NOT_CHECKED":
@@ -209,10 +221,10 @@ func (e *CreativeOpenAuctionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_REVIEW":
 		fallthrough
 	case "STATUS_TYPE_UNSPECIFIED":
-		*e = CreativeOpenAuctionStatusEnum(s)
+		*e = CreativeOpenAuctionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeOpenAuctionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeOpenAuctionStatusEnum: %v", v)
 	}
 }
 
@@ -223,19 +235,23 @@ const (
 	CreativeRestrictedCategoriesEnumAlcohol                CreativeRestrictedCategoriesEnum = "ALCOHOL"
 )
 
+func (e CreativeRestrictedCategoriesEnum) ToPointer() *CreativeRestrictedCategoriesEnum {
+	return &e
+}
+
 func (e *CreativeRestrictedCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_RESTRICTED_CATEGORIES":
 		fallthrough
 	case "ALCOHOL":
-		*e = CreativeRestrictedCategoriesEnum(s)
+		*e = CreativeRestrictedCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreativeRestrictedCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreativeRestrictedCategoriesEnum: %v", v)
 	}
 }
 

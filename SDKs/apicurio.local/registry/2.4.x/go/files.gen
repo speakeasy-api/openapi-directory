@@ -13,6 +13,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -76,7 +77,8 @@ pkg/models/operations/deleteartifactversionmetadata.go
 pkg/models/operations/getartifactmetadata.go
 pkg/models/operations/getartifactowner.go
 pkg/models/operations/getartifactversionmetadata.go
-pkg/models/operations/getartifactversionmetadatabycontent.go
+pkg/models/operations/getartifactversionmetadatabycontentjson.go
+pkg/models/operations/getartifactversionmetadatabycontentraw.go
 pkg/models/operations/updateartifactmetadata.go
 pkg/models/operations/updateartifactowner.go
 pkg/models/operations/updateartifactversionmetadata.go
@@ -85,6 +87,7 @@ pkg/models/operations/getsysteminfo.go
 pkg/models/operations/getcurrentuserinfo.go
 pkg/models/operations/createartifactversionjson.go
 pkg/models/operations/createartifactversionraw.go
+pkg/models/operations/deleteartifactversion.go
 pkg/models/operations/getartifactversion.go
 pkg/models/operations/getartifactversionreferences.go
 pkg/models/operations/listartifactversions.go
@@ -108,7 +111,7 @@ pkg/models/shared/artifactmetadata.go
 pkg/models/shared/artifactstateenum.go
 pkg/models/shared/artifactreference.go
 pkg/models/shared/ifexistsenum.go
-pkg/models/shared/contentcreaterequest.go
+pkg/models/shared/artifactcontent.go
 pkg/models/shared/artifactsearchresults.go
 pkg/models/shared/searchedartifact.go
 pkg/models/shared/sortbyenum.go
@@ -126,4 +129,16 @@ pkg/models/shared/systeminfo.go
 pkg/models/shared/userinfo.go
 pkg/models/shared/versionsearchresults.go
 pkg/models/shared/searchedversion.go
+docs/sdk/README.md
+docs/admin/README.md
+docs/artifacttype/README.md
+docs/artifactrules/README.md
+docs/artifacts/README.md
+docs/globalrules/README.md
+docs/groups/README.md
+docs/metadata/README.md
+docs/search/README.md
+docs/system/README.md
+docs/users/README.md
+docs/versions/README.md
 USAGE.md

@@ -30,12 +30,16 @@ const (
 	CreateIpamResultIpamStateEnumRestoreInProgress CreateIpamResultIpamStateEnum = "restore-in-progress"
 )
 
+func (e CreateIpamResultIpamStateEnum) ToPointer() *CreateIpamResultIpamStateEnum {
+	return &e
+}
+
 func (e *CreateIpamResultIpamStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "create-in-progress":
 		fallthrough
 	case "create-complete":
@@ -59,10 +63,10 @@ func (e *CreateIpamResultIpamStateEnum) UnmarshalJSON(data []byte) error {
 	case "isolate-complete":
 		fallthrough
 	case "restore-in-progress":
-		*e = CreateIpamResultIpamStateEnum(s)
+		*e = CreateIpamResultIpamStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIpamResultIpamStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIpamResultIpamStateEnum: %v", v)
 	}
 }
 

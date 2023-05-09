@@ -18,12 +18,16 @@ const (
 	SubtaskInformationPreviousStateEnumCompleted SubtaskInformationPreviousStateEnum = "completed"
 )
 
+func (e SubtaskInformationPreviousStateEnum) ToPointer() *SubtaskInformationPreviousStateEnum {
+	return &e
+}
+
 func (e *SubtaskInformationPreviousStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "preparing":
@@ -31,10 +35,10 @@ func (e *SubtaskInformationPreviousStateEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = SubtaskInformationPreviousStateEnum(s)
+		*e = SubtaskInformationPreviousStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubtaskInformationPreviousStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SubtaskInformationPreviousStateEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	SubtaskInformationStateEnumCompleted SubtaskInformationStateEnum = "completed"
 )
 
+func (e SubtaskInformationStateEnum) ToPointer() *SubtaskInformationStateEnum {
+	return &e
+}
+
 func (e *SubtaskInformationStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "preparing":
@@ -61,10 +69,10 @@ func (e *SubtaskInformationStateEnum) UnmarshalJSON(data []byte) error {
 	case "running":
 		fallthrough
 	case "completed":
-		*e = SubtaskInformationStateEnum(s)
+		*e = SubtaskInformationStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubtaskInformationStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SubtaskInformationStateEnum: %v", v)
 	}
 }
 

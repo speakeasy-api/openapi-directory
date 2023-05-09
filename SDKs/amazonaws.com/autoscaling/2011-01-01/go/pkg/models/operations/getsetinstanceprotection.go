@@ -15,17 +15,21 @@ const (
 	GETSetInstanceProtectionActionEnumSetInstanceProtection GETSetInstanceProtectionActionEnum = "SetInstanceProtection"
 )
 
+func (e GETSetInstanceProtectionActionEnum) ToPointer() *GETSetInstanceProtectionActionEnum {
+	return &e
+}
+
 func (e *GETSetInstanceProtectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetInstanceProtection":
-		*e = GETSetInstanceProtectionActionEnum(s)
+		*e = GETSetInstanceProtectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetInstanceProtectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetInstanceProtectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETSetInstanceProtectionVersionEnumTwoThousandAndEleven0101 GETSetInstanceProtectionVersionEnum = "2011-01-01"
 )
 
+func (e GETSetInstanceProtectionVersionEnum) ToPointer() *GETSetInstanceProtectionVersionEnum {
+	return &e
+}
+
 func (e *GETSetInstanceProtectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETSetInstanceProtectionVersionEnum(s)
+		*e = GETSetInstanceProtectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetInstanceProtectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetInstanceProtectionVersionEnum: %v", v)
 	}
 }
 

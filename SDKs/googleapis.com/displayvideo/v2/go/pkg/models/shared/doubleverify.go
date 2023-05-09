@@ -19,12 +19,16 @@ const (
 	DoubleVerifyAvoidedAgeRatingsEnumAppAgeRate18Plus     DoubleVerifyAvoidedAgeRatingsEnum = "APP_AGE_RATE_18_PLUS"
 )
 
+func (e DoubleVerifyAvoidedAgeRatingsEnum) ToPointer() *DoubleVerifyAvoidedAgeRatingsEnum {
+	return &e
+}
+
 func (e *DoubleVerifyAvoidedAgeRatingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AGE_RATING_UNSPECIFIED":
 		fallthrough
 	case "APP_AGE_RATE_UNKNOWN":
@@ -38,10 +42,10 @@ func (e *DoubleVerifyAvoidedAgeRatingsEnum) UnmarshalJSON(data []byte) error {
 	case "APP_AGE_RATE_17_PLUS":
 		fallthrough
 	case "APP_AGE_RATE_18_PLUS":
-		*e = DoubleVerifyAvoidedAgeRatingsEnum(s)
+		*e = DoubleVerifyAvoidedAgeRatingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DoubleVerifyAvoidedAgeRatingsEnum: %s", s)
+		return fmt.Errorf("invalid value for DoubleVerifyAvoidedAgeRatingsEnum: %v", v)
 	}
 }
 

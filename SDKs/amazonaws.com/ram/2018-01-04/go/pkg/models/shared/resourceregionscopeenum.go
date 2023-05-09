@@ -14,18 +14,22 @@ const (
 	ResourceRegionScopeEnumGlobal   ResourceRegionScopeEnum = "GLOBAL"
 )
 
+func (e ResourceRegionScopeEnum) ToPointer() *ResourceRegionScopeEnum {
+	return &e
+}
+
 func (e *ResourceRegionScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REGIONAL":
 		fallthrough
 	case "GLOBAL":
-		*e = ResourceRegionScopeEnum(s)
+		*e = ResourceRegionScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceRegionScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceRegionScopeEnum: %v", v)
 	}
 }

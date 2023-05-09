@@ -15,17 +15,21 @@ const (
 	GETGETNetworkInsightsAccessScopeContentActionEnumGetNetworkInsightsAccessScopeContent GETGETNetworkInsightsAccessScopeContentActionEnum = "GetNetworkInsightsAccessScopeContent"
 )
 
+func (e GETGETNetworkInsightsAccessScopeContentActionEnum) ToPointer() *GETGETNetworkInsightsAccessScopeContentActionEnum {
+	return &e
+}
+
 func (e *GETGETNetworkInsightsAccessScopeContentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetNetworkInsightsAccessScopeContent":
-		*e = GETGETNetworkInsightsAccessScopeContentActionEnum(s)
+		*e = GETGETNetworkInsightsAccessScopeContentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeContentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeContentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETNetworkInsightsAccessScopeContentVersionEnumTwoThousandAndSixteen1115 GETGETNetworkInsightsAccessScopeContentVersionEnum = "2016-11-15"
 )
 
+func (e GETGETNetworkInsightsAccessScopeContentVersionEnum) ToPointer() *GETGETNetworkInsightsAccessScopeContentVersionEnum {
+	return &e
+}
+
 func (e *GETGETNetworkInsightsAccessScopeContentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETNetworkInsightsAccessScopeContentVersionEnum(s)
+		*e = GETGETNetworkInsightsAccessScopeContentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeContentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETNetworkInsightsAccessScopeContentVersionEnum: %v", v)
 	}
 }
 

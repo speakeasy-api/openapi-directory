@@ -13,26 +13,23 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/geodatasource.com/1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCityRequest{
-        Format: "xml",
+    ctx := context.Background()
+    res, err := s.GetCity(ctx, operations.GetCityRequest{
+        Format: operations.GetCityFormatEnumXML.ToPointer(),
         Key: "provident",
         Lat: 7151.9,
         Lng: 8442.66,
-    }
-
-    ctx := context.Background()
-    res, err := s.GetCity(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -47,9 +44,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetCity` - Get City name by using latitude and longitude
+* [GetCity](docs/sdk/README.md#getcity) - Get City name by using latitude and longitude
 <!-- End SDK Available Operations -->
 
 ### Maturity

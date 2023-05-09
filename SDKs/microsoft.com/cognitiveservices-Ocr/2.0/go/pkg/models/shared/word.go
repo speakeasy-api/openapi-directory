@@ -15,19 +15,23 @@ const (
 	WordConfidenceEnumLow  WordConfidenceEnum = "Low"
 )
 
+func (e WordConfidenceEnum) ToPointer() *WordConfidenceEnum {
+	return &e
+}
+
 func (e *WordConfidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "High":
 		fallthrough
 	case "Low":
-		*e = WordConfidenceEnum(s)
+		*e = WordConfidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WordConfidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for WordConfidenceEnum: %v", v)
 	}
 }
 

@@ -13,27 +13,24 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amadeus.com/amadeus-fligh
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetItineraryPriceMetricsRequest{
-        CurrencyCode: "corrupti",
+    ctx := context.Background()
+    res, err := s.PriceMetrics.GetItineraryPriceMetrics(ctx, operations.GetItineraryPriceMetricsRequest{
+        CurrencyCode: sdk.String("corrupti"),
         DepartureDate: "provident",
         DestinationIataCode: "distinctio",
-        OneWay: false,
+        OneWay: sdk.Bool(false),
         OriginIataCode: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.PriceMetrics.GetItineraryPriceMetrics(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,9 +46,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### PriceMetrics
+### [PriceMetrics](docs/pricemetrics/README.md)
 
-* `GetItineraryPriceMetrics` - GET itinerary price metric
+* [GetItineraryPriceMetrics](docs/pricemetrics/README.md#getitinerarypricemetrics) - GET itinerary price metric
 <!-- End SDK Available Operations -->
 
 ### Maturity

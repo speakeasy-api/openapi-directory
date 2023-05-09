@@ -29,12 +29,16 @@ const (
 	MessageCode401PISEnumRequiredKidMissing    MessageCode401PISEnum = "REQUIRED_KID_MISSING"
 )
 
+func (e MessageCode401PISEnum) ToPointer() *MessageCode401PISEnum {
+	return &e
+}
+
 func (e *MessageCode401PISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CERTIFICATE_INVALID":
 		fallthrough
 	case "ROLE_INVALID":
@@ -66,9 +70,9 @@ func (e *MessageCode401PISEnum) UnmarshalJSON(data []byte) error {
 	case "TOKEN_EXPIRED":
 		fallthrough
 	case "REQUIRED_KID_MISSING":
-		*e = MessageCode401PISEnum(s)
+		*e = MessageCode401PISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode401PISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode401PISEnum: %v", v)
 	}
 }

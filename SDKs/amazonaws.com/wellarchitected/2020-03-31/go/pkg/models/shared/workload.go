@@ -41,7 +41,7 @@ type Workload struct {
 	ReviewOwner *string `json:"ReviewOwner,omitempty"`
 	// The date and time recorded.
 	ReviewRestrictionDate *time.Time `json:"ReviewRestrictionDate,omitempty"`
-	// A map from risk names to the count of how questions have that rating.
+	// A map from risk names to the count of how many questions have that rating.
 	RiskCounts        map[string]int64  `json:"RiskCounts,omitempty"`
 	ShareInvitationID *string           `json:"ShareInvitationId,omitempty"`
 	Tags              map[string]string `json:"Tags,omitempty"`

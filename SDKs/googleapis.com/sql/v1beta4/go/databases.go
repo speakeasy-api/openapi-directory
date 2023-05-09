@@ -34,7 +34,10 @@ func newDatabases(defaultClient, securityClient HTTPClient, serverURL, language,
 // SQLDatabasesDelete - Deletes a database from a Cloud SQL instance.
 func (s *databases) SQLDatabasesDelete(ctx context.Context, request operations.SQLDatabasesDeleteRequest, security operations.SQLDatabasesDeleteSecurity) (*operations.SQLDatabasesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *databases) SQLDatabasesDelete(ctx context.Context, request operations.S
 // SQLDatabasesGet - Retrieves a resource containing information about a database inside a Cloud SQL instance.
 func (s *databases) SQLDatabasesGet(ctx context.Context, request operations.SQLDatabasesGetRequest, security operations.SQLDatabasesGetSecurity) (*operations.SQLDatabasesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -127,10 +133,13 @@ func (s *databases) SQLDatabasesGet(ctx context.Context, request operations.SQLD
 	return res, nil
 }
 
-// SQLDatabasesInsert - Inserts a resource containing information about a database inside a Cloud SQL instance.
+// SQLDatabasesInsert - Inserts a resource containing information about a database inside a Cloud SQL instance. **Note:** You can't modify the default character set and collation.
 func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.SQLDatabasesInsertRequest, security operations.SQLDatabasesInsertSecurity) (*operations.SQLDatabasesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database", "json")
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *databases) SQLDatabasesInsert(ctx context.Context, request operations.S
 // SQLDatabasesList - Lists databases in the specified Cloud SQL instance.
 func (s *databases) SQLDatabasesList(ctx context.Context, request operations.SQLDatabasesListRequest, security operations.SQLDatabasesListSecurity) (*operations.SQLDatabasesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *databases) SQLDatabasesList(ctx context.Context, request operations.SQL
 // SQLDatabasesPatch - Partially updates a resource containing information about a database inside a Cloud SQL instance. This method supports patch semantics.
 func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQLDatabasesPatchRequest, security operations.SQLDatabasesPatchSecurity) (*operations.SQLDatabasesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database1", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *databases) SQLDatabasesPatch(ctx context.Context, request operations.SQ
 // SQLDatabasesUpdate - Updates a resource containing information about a database inside a Cloud SQL instance.
 func (s *databases) SQLDatabasesUpdate(ctx context.Context, request operations.SQLDatabasesUpdateRequest, security operations.SQLDatabasesUpdateSecurity) (*operations.SQLDatabasesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/databases/{database}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Database1", "json")
 	if err != nil {

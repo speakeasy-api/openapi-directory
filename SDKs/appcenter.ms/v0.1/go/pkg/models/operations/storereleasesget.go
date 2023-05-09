@@ -35,12 +35,16 @@ const (
 	StoreReleasesGetDefaultApplicationJSONCodeEnumTooManyRequests     StoreReleasesGetDefaultApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e StoreReleasesGetDefaultApplicationJSONCodeEnum) ToPointer() *StoreReleasesGetDefaultApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *StoreReleasesGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -54,10 +58,10 @@ func (e *StoreReleasesGetDefaultApplicationJSONCodeEnum) UnmarshalJSON(data []by
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = StoreReleasesGetDefaultApplicationJSONCodeEnum(s)
+		*e = StoreReleasesGetDefaultApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGetDefaultApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGetDefaultApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -75,19 +79,23 @@ const (
 	StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnumGoogleplay StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum = "googleplay"
 )
 
+func (e StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum) ToPointer() *StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum {
+	return &e
+}
+
 func (e *StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
-		*e = StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum(s)
+		*e = StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONDistributionStoresTypeEnum: %v", v)
 	}
 }
 
@@ -110,19 +118,23 @@ const (
 	StoreReleasesGet200ApplicationJSONInstallURLEnumStore StoreReleasesGet200ApplicationJSONInstallURLEnum = "store"
 )
 
+func (e StoreReleasesGet200ApplicationJSONInstallURLEnum) ToPointer() *StoreReleasesGet200ApplicationJSONInstallURLEnum {
+	return &e
+}
+
 func (e *StoreReleasesGet200ApplicationJSONInstallURLEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
-		*e = StoreReleasesGet200ApplicationJSONInstallURLEnum(s)
+		*e = StoreReleasesGet200ApplicationJSONInstallURLEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONInstallURLEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONInstallURLEnum: %v", v)
 	}
 }
 
@@ -137,19 +149,23 @@ const (
 	StoreReleasesGet200ApplicationJSONStatusEnumUnavailable StoreReleasesGet200ApplicationJSONStatusEnum = "unavailable"
 )
 
+func (e StoreReleasesGet200ApplicationJSONStatusEnum) ToPointer() *StoreReleasesGet200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *StoreReleasesGet200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "unavailable":
-		*e = StoreReleasesGet200ApplicationJSONStatusEnum(s)
+		*e = StoreReleasesGet200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StoreReleasesGet200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

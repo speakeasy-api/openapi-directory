@@ -17,12 +17,16 @@ const (
 	BasicPerfSampleSeriesPerfMetricTypeEnumGraphics                  BasicPerfSampleSeriesPerfMetricTypeEnum = "graphics"
 )
 
+func (e BasicPerfSampleSeriesPerfMetricTypeEnum) ToPointer() *BasicPerfSampleSeriesPerfMetricTypeEnum {
+	return &e
+}
+
 func (e *BasicPerfSampleSeriesPerfMetricTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "perfMetricTypeUnspecified":
 		fallthrough
 	case "memory":
@@ -32,10 +36,10 @@ func (e *BasicPerfSampleSeriesPerfMetricTypeEnum) UnmarshalJSON(data []byte) err
 	case "network":
 		fallthrough
 	case "graphics":
-		*e = BasicPerfSampleSeriesPerfMetricTypeEnum(s)
+		*e = BasicPerfSampleSeriesPerfMetricTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicPerfSampleSeriesPerfMetricTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicPerfSampleSeriesPerfMetricTypeEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	BasicPerfSampleSeriesPerfUnitEnumByte                BasicPerfSampleSeriesPerfUnitEnum = "byte"
 )
 
+func (e BasicPerfSampleSeriesPerfUnitEnum) ToPointer() *BasicPerfSampleSeriesPerfUnitEnum {
+	return &e
+}
+
 func (e *BasicPerfSampleSeriesPerfUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "perfUnitUnspecified":
 		fallthrough
 	case "kibibyte":
@@ -67,10 +75,10 @@ func (e *BasicPerfSampleSeriesPerfUnitEnum) UnmarshalJSON(data []byte) error {
 	case "framesPerSecond":
 		fallthrough
 	case "byte":
-		*e = BasicPerfSampleSeriesPerfUnitEnum(s)
+		*e = BasicPerfSampleSeriesPerfUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicPerfSampleSeriesPerfUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicPerfSampleSeriesPerfUnitEnum: %v", v)
 	}
 }
 
@@ -92,12 +100,16 @@ const (
 	BasicPerfSampleSeriesSampleSeriesLabelEnumGraphicsFrameRate           BasicPerfSampleSeriesSampleSeriesLabelEnum = "graphicsFrameRate"
 )
 
+func (e BasicPerfSampleSeriesSampleSeriesLabelEnum) ToPointer() *BasicPerfSampleSeriesSampleSeriesLabelEnum {
+	return &e
+}
+
 func (e *BasicPerfSampleSeriesSampleSeriesLabelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sampleSeriesTypeUnspecified":
 		fallthrough
 	case "memoryRssPrivate":
@@ -123,10 +135,10 @@ func (e *BasicPerfSampleSeriesSampleSeriesLabelEnum) UnmarshalJSON(data []byte) 
 	case "networkReceived":
 		fallthrough
 	case "graphicsFrameRate":
-		*e = BasicPerfSampleSeriesSampleSeriesLabelEnum(s)
+		*e = BasicPerfSampleSeriesSampleSeriesLabelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicPerfSampleSeriesSampleSeriesLabelEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicPerfSampleSeriesSampleSeriesLabelEnum: %v", v)
 	}
 }
 

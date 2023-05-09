@@ -16,17 +16,21 @@ const (
 	GetChangeTokenXAmzTargetEnumAwswaf20150824GetChangeToken GetChangeTokenXAmzTargetEnum = "AWSWAF_20150824.GetChangeToken"
 )
 
+func (e GetChangeTokenXAmzTargetEnum) ToPointer() *GetChangeTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetChangeTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetChangeToken":
-		*e = GetChangeTokenXAmzTargetEnum(s)
+		*e = GetChangeTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetChangeTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetChangeTokenXAmzTargetEnum: %v", v)
 	}
 }
 

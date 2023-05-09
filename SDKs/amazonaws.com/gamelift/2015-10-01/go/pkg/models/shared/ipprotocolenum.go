@@ -14,18 +14,22 @@ const (
 	IPProtocolEnumUDP IPProtocolEnum = "UDP"
 )
 
+func (e IPProtocolEnum) ToPointer() *IPProtocolEnum {
+	return &e
+}
+
 func (e *IPProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TCP":
 		fallthrough
 	case "UDP":
-		*e = IPProtocolEnum(s)
+		*e = IPProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IPProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for IPProtocolEnum: %v", v)
 	}
 }

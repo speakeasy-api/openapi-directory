@@ -14,18 +14,22 @@ const (
 	TableClassEnumStandardInfrequentAccess TableClassEnum = "STANDARD_INFREQUENT_ACCESS"
 )
 
+func (e TableClassEnum) ToPointer() *TableClassEnum {
+	return &e
+}
+
 func (e *TableClassEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STANDARD":
 		fallthrough
 	case "STANDARD_INFREQUENT_ACCESS":
-		*e = TableClassEnum(s)
+		*e = TableClassEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableClassEnum: %s", s)
+		return fmt.Errorf("invalid value for TableClassEnum: %v", v)
 	}
 }

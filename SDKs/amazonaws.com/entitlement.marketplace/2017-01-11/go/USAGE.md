@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.GetEntitlementsRequest{
+    ctx := context.Background()
+    res, err := s.GetEntitlements(ctx, operations.GetEntitlementsRequest{
         GetEntitlementsRequest: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
                 "provident": []string{
@@ -36,22 +37,19 @@ func main() {
                     "ipsa",
                 },
             },
-            MaxResults: 963663,
-            NextToken: "tempora",
+            MaxResults: sdk.Int64(963663),
+            NextToken: sdk.String("tempora"),
             ProductCode: "suscipit",
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "minus",
-        XAmzCredential: "placeat",
-        XAmzDate: "voluptatum",
-        XAmzSecurityToken: "iusto",
-        XAmzSignature: "excepturi",
-        XAmzSignedHeaders: "nisi",
-        XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetEntitlements(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("minus"),
+        XAmzCredential: sdk.String("placeat"),
+        XAmzDate: sdk.String("voluptatum"),
+        XAmzSecurityToken: sdk.String("iusto"),
+        XAmzSignature: sdk.String("excepturi"),
+        XAmzSignedHeaders: sdk.String("nisi"),
+        XAmzTarget: operations.GetEntitlementsXAmzTargetEnumAwsmpEntitlementServiceGetEntitlements,
+    })
     if err != nil {
         log.Fatal(err)
     }

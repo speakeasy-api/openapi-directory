@@ -19,12 +19,16 @@ const (
 	DescribeVolumesResultVolumesAttachmentsStateEnumBusy      DescribeVolumesResultVolumesAttachmentsStateEnum = "busy"
 )
 
+func (e DescribeVolumesResultVolumesAttachmentsStateEnum) ToPointer() *DescribeVolumesResultVolumesAttachmentsStateEnum {
+	return &e
+}
+
 func (e *DescribeVolumesResultVolumesAttachmentsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "attaching":
 		fallthrough
 	case "attached":
@@ -34,10 +38,10 @@ func (e *DescribeVolumesResultVolumesAttachmentsStateEnum) UnmarshalJSON(data []
 	case "detached":
 		fallthrough
 	case "busy":
-		*e = DescribeVolumesResultVolumesAttachmentsStateEnum(s)
+		*e = DescribeVolumesResultVolumesAttachmentsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesAttachmentsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesAttachmentsStateEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	DescribeVolumesResultVolumesStateEnumError     DescribeVolumesResultVolumesStateEnum = "error"
 )
 
+func (e DescribeVolumesResultVolumesStateEnum) ToPointer() *DescribeVolumesResultVolumesStateEnum {
+	return &e
+}
+
 func (e *DescribeVolumesResultVolumesStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "creating":
 		fallthrough
 	case "available":
@@ -80,10 +88,10 @@ func (e *DescribeVolumesResultVolumesStateEnum) UnmarshalJSON(data []byte) error
 	case "deleted":
 		fallthrough
 	case "error":
-		*e = DescribeVolumesResultVolumesStateEnum(s)
+		*e = DescribeVolumesResultVolumesStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesStateEnum: %v", v)
 	}
 }
 
@@ -106,12 +114,16 @@ const (
 	DescribeVolumesResultVolumesVolumeTypeEnumGp3      DescribeVolumesResultVolumesVolumeTypeEnum = "gp3"
 )
 
+func (e DescribeVolumesResultVolumesVolumeTypeEnum) ToPointer() *DescribeVolumesResultVolumesVolumeTypeEnum {
+	return &e
+}
+
 func (e *DescribeVolumesResultVolumesVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -125,10 +137,10 @@ func (e *DescribeVolumesResultVolumesVolumeTypeEnum) UnmarshalJSON(data []byte) 
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = DescribeVolumesResultVolumesVolumeTypeEnum(s)
+		*e = DescribeVolumesResultVolumesVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVolumesResultVolumesVolumeTypeEnum: %v", v)
 	}
 }
 

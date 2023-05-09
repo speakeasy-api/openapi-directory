@@ -17,12 +17,16 @@ const (
 	StudioComponentTypeEnumCustom           StudioComponentTypeEnum = "CUSTOM"
 )
 
+func (e StudioComponentTypeEnum) ToPointer() *StudioComponentTypeEnum {
+	return &e
+}
+
 func (e *StudioComponentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE_DIRECTORY":
 		fallthrough
 	case "SHARED_FILE_SYSTEM":
@@ -32,9 +36,9 @@ func (e *StudioComponentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LICENSE_SERVICE":
 		fallthrough
 	case "CUSTOM":
-		*e = StudioComponentTypeEnum(s)
+		*e = StudioComponentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StudioComponentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StudioComponentTypeEnum: %v", v)
 	}
 }

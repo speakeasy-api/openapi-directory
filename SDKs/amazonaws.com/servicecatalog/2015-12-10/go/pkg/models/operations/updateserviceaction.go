@@ -16,17 +16,21 @@ const (
 	UpdateServiceActionXAmzTargetEnumAws242ServiceCatalogServiceUpdateServiceAction UpdateServiceActionXAmzTargetEnum = "AWS242ServiceCatalogService.UpdateServiceAction"
 )
 
+func (e UpdateServiceActionXAmzTargetEnum) ToPointer() *UpdateServiceActionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateServiceActionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.UpdateServiceAction":
-		*e = UpdateServiceActionXAmzTargetEnum(s)
+		*e = UpdateServiceActionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateServiceActionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateServiceActionXAmzTargetEnum: %v", v)
 	}
 }
 

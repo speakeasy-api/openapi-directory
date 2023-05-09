@@ -17,14 +17,20 @@ const (
 	ListOTAUpdatesOTAUpdateStatusEnumCreateInProgress ListOTAUpdatesOTAUpdateStatusEnum = "CREATE_IN_PROGRESS"
 	ListOTAUpdatesOTAUpdateStatusEnumCreateComplete   ListOTAUpdatesOTAUpdateStatusEnum = "CREATE_COMPLETE"
 	ListOTAUpdatesOTAUpdateStatusEnumCreateFailed     ListOTAUpdatesOTAUpdateStatusEnum = "CREATE_FAILED"
+	ListOTAUpdatesOTAUpdateStatusEnumDeleteInProgress ListOTAUpdatesOTAUpdateStatusEnum = "DELETE_IN_PROGRESS"
+	ListOTAUpdatesOTAUpdateStatusEnumDeleteFailed     ListOTAUpdatesOTAUpdateStatusEnum = "DELETE_FAILED"
 )
 
+func (e ListOTAUpdatesOTAUpdateStatusEnum) ToPointer() *ListOTAUpdatesOTAUpdateStatusEnum {
+	return &e
+}
+
 func (e *ListOTAUpdatesOTAUpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE_PENDING":
 		fallthrough
 	case "CREATE_IN_PROGRESS":
@@ -32,10 +38,14 @@ func (e *ListOTAUpdatesOTAUpdateStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CREATE_COMPLETE":
 		fallthrough
 	case "CREATE_FAILED":
-		*e = ListOTAUpdatesOTAUpdateStatusEnum(s)
+		fallthrough
+	case "DELETE_IN_PROGRESS":
+		fallthrough
+	case "DELETE_FAILED":
+		*e = ListOTAUpdatesOTAUpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListOTAUpdatesOTAUpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListOTAUpdatesOTAUpdateStatusEnum: %v", v)
 	}
 }
 

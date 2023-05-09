@@ -14,18 +14,22 @@ const (
 	JoinSourceEnumNone  JoinSourceEnum = "None"
 )
 
+func (e JoinSourceEnum) ToPointer() *JoinSourceEnum {
+	return &e
+}
+
 func (e *JoinSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Input":
 		fallthrough
 	case "None":
-		*e = JoinSourceEnum(s)
+		*e = JoinSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JoinSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for JoinSourceEnum: %v", v)
 	}
 }

@@ -25,12 +25,16 @@ const (
 	PostUsersUseridLinkRequestBodyVendorEnumNissan     PostUsersUseridLinkRequestBodyVendorEnum = "NISSAN"
 )
 
+func (e PostUsersUseridLinkRequestBodyVendorEnum) ToPointer() *PostUsersUseridLinkRequestBodyVendorEnum {
+	return &e
+}
+
 func (e *PostUsersUseridLinkRequestBodyVendorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TESLA":
 		fallthrough
 	case "BMW":
@@ -44,10 +48,10 @@ func (e *PostUsersUseridLinkRequestBodyVendorEnum) UnmarshalJSON(data []byte) er
 	case "PEUGEOT":
 		fallthrough
 	case "NISSAN":
-		*e = PostUsersUseridLinkRequestBodyVendorEnum(s)
+		*e = PostUsersUseridLinkRequestBodyVendorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostUsersUseridLinkRequestBodyVendorEnum: %s", s)
+		return fmt.Errorf("invalid value for PostUsersUseridLinkRequestBodyVendorEnum: %v", v)
 	}
 }
 

@@ -15,19 +15,23 @@ const (
 	ExportClientVpnClientCertificateRevocationListResultStatusCodeEnumActive  ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum = "active"
 )
 
+func (e ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum) ToPointer() *ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum {
+	return &e
+}
+
 func (e *ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
-		*e = ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum(s)
+		*e = ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportClientVpnClientCertificateRevocationListResultStatusCodeEnum: %v", v)
 	}
 }
 

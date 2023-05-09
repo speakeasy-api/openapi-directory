@@ -21,12 +21,16 @@ const (
 	GetPublicationsPublicationTypesEnumPublishPricingEnum       GetPublicationsPublicationTypesEnum = "PublishPricingEnum"
 )
 
+func (e GetPublicationsPublicationTypesEnum) ToPointer() *GetPublicationsPublicationTypesEnum {
+	return &e
+}
+
 func (e *GetPublicationsPublicationTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PublishProducts":
 		fallthrough
 	case "PublishOffers":
@@ -40,10 +44,10 @@ func (e *GetPublicationsPublicationTypesEnum) UnmarshalJSON(data []byte) error {
 	case "PublishInventoryEnum":
 		fallthrough
 	case "PublishPricingEnum":
-		*e = GetPublicationsPublicationTypesEnum(s)
+		*e = GetPublicationsPublicationTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPublicationsPublicationTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPublicationsPublicationTypesEnum: %v", v)
 	}
 }
 

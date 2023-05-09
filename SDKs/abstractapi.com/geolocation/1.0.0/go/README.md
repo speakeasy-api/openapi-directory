@@ -13,25 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/abstractapi.com/geolocati
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1Request{
-        APIKey: "corrupti",
-        Fields: "country,city,timezone",
-        IPAddress: "195.154.25.40",
-    }
-
     ctx := context.Background()
-    res, err := s.GetV1(ctx, req)
+    res, err := s.GetV1(ctx, operations.GetV1Request{
+        APIKey: "corrupti",
+        Fields: sdk.String("country,city,timezone"),
+        IPAddress: sdk.String("195.154.25.40"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetV1` - Retrieve the location of an IP address
+* [GetV1](docs/sdk/README.md#getv1) - Retrieve the location of an IP address
 <!-- End SDK Available Operations -->
 
 ### Maturity

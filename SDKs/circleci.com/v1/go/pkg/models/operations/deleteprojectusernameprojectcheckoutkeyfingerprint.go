@@ -26,17 +26,21 @@ const (
 	DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnumOk DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum = "OK"
 )
 
+func (e DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum) ToPointer() *DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum {
+	return &e
+}
+
 func (e *DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OK":
-		*e = DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum(s)
+		*e = DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteProjectUsernameProjectCheckoutKeyFingerprint200ApplicationJSONMessageEnum: %v", v)
 	}
 }
 

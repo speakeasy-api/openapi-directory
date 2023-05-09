@@ -37,7 +37,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Removes a report.
 func (s *reports) Delete11(ctx context.Context, request operations.Delete11Request) (*operations.Delete11Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *reports) Delete11(ctx context.Context, request operations.Delete11Reque
 // Duplicates a report.
 func (s *reports) Duplicate1(ctx context.Context, request operations.Duplicate1Request) (*operations.Duplicate1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/duplicate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/duplicate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -164,7 +170,10 @@ func (s *reports) ExportToXML(ctx context.Context, request shared.ExportRequestD
 // Generates CSV content for a report.
 func (s *reports) GenerateCSV(ctx context.Context, request operations.GenerateCSVRequest) (*operations.GenerateCSVResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/csv", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/csv", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -209,7 +218,10 @@ func (s *reports) GenerateCSV(ctx context.Context, request operations.GenerateCS
 // Generates printer friendly content for a report.
 func (s *reports) GeneratePrinterFriendly(ctx context.Context, request operations.GeneratePrinterFriendlyRequest) (*operations.GeneratePrinterFriendlyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/printerFriendly", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/result/printerFriendly", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -309,7 +321,10 @@ func (s *reports) ImportFromXML(ctx context.Context, request shared.ImportReques
 // Marks report as preferred or not.
 func (s *reports) SetPreferred(ctx context.Context, request operations.SetPreferredRequest) (*operations.SetPreferredResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/preferred", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/reports/{reportId}/preferred", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PreferredRequestDTO", "json")
 	if err != nil {

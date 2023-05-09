@@ -14,18 +14,22 @@ const (
 	ArtifactPackagingEnumZip  ArtifactPackagingEnum = "ZIP"
 )
 
+func (e ArtifactPackagingEnum) ToPointer() *ArtifactPackagingEnum {
+	return &e
+}
+
 func (e *ArtifactPackagingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "ZIP":
-		*e = ArtifactPackagingEnum(s)
+		*e = ArtifactPackagingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ArtifactPackagingEnum: %s", s)
+		return fmt.Errorf("invalid value for ArtifactPackagingEnum: %v", v)
 	}
 }

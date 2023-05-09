@@ -14,18 +14,22 @@ const (
 	RecordingModeEnumInterval RecordingModeEnum = "INTERVAL"
 )
 
+func (e RecordingModeEnum) ToPointer() *RecordingModeEnum {
+	return &e
+}
+
 func (e *RecordingModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "INTERVAL":
-		*e = RecordingModeEnum(s)
+		*e = RecordingModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordingModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordingModeEnum: %v", v)
 	}
 }

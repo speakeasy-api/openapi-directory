@@ -32,12 +32,16 @@ const (
 	GetImagesIDActionsSortParameterSortEnumFinishedDesc GetImagesIDActionsSortParameterSortEnum = "finished:desc"
 )
 
+func (e GetImagesIDActionsSortParameterSortEnum) ToPointer() *GetImagesIDActionsSortParameterSortEnum {
+	return &e
+}
+
 func (e *GetImagesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "id:asc":
@@ -73,10 +77,10 @@ func (e *GetImagesIDActionsSortParameterSortEnum) UnmarshalJSON(data []byte) err
 	case "finished:asc":
 		fallthrough
 	case "finished:desc":
-		*e = GetImagesIDActionsSortParameterSortEnum(s)
+		*e = GetImagesIDActionsSortParameterSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesIDActionsSortParameterSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesIDActionsSortParameterSortEnum: %v", v)
 	}
 }
 
@@ -89,21 +93,25 @@ const (
 	GetImagesIDActionsStatusParameterStatusEnumError   GetImagesIDActionsStatusParameterStatusEnum = "error"
 )
 
+func (e GetImagesIDActionsStatusParameterStatusEnum) ToPointer() *GetImagesIDActionsStatusParameterStatusEnum {
+	return &e
+}
+
 func (e *GetImagesIDActionsStatusParameterStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "running":
 		fallthrough
 	case "success":
 		fallthrough
 	case "error":
-		*e = GetImagesIDActionsStatusParameterStatusEnum(s)
+		*e = GetImagesIDActionsStatusParameterStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesIDActionsStatusParameterStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesIDActionsStatusParameterStatusEnum: %v", v)
 	}
 }
 
@@ -140,21 +148,25 @@ const (
 	GetImagesIDActionsActionsResponseActionStatusEnumError   GetImagesIDActionsActionsResponseActionStatusEnum = "error"
 )
 
+func (e GetImagesIDActionsActionsResponseActionStatusEnum) ToPointer() *GetImagesIDActionsActionsResponseActionStatusEnum {
+	return &e
+}
+
 func (e *GetImagesIDActionsActionsResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = GetImagesIDActionsActionsResponseActionStatusEnum(s)
+		*e = GetImagesIDActionsActionsResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetImagesIDActionsActionsResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetImagesIDActionsActionsResponseActionStatusEnum: %v", v)
 	}
 }
 

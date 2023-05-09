@@ -18,12 +18,16 @@ const (
 	DigitalWalletTokenStatusEnumDeactivated DigitalWalletTokenStatusEnum = "deactivated"
 )
 
+func (e DigitalWalletTokenStatusEnum) ToPointer() *DigitalWalletTokenStatusEnum {
+	return &e
+}
+
 func (e *DigitalWalletTokenStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
@@ -31,10 +35,10 @@ func (e *DigitalWalletTokenStatusEnum) UnmarshalJSON(data []byte) error {
 	case "suspended":
 		fallthrough
 	case "deactivated":
-		*e = DigitalWalletTokenStatusEnum(s)
+		*e = DigitalWalletTokenStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DigitalWalletTokenStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DigitalWalletTokenStatusEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DigitalWalletTokenTokenRequestorEnumGooglePay DigitalWalletTokenTokenRequestorEnum = "google_pay"
 )
 
+func (e DigitalWalletTokenTokenRequestorEnum) ToPointer() *DigitalWalletTokenTokenRequestorEnum {
+	return &e
+}
+
 func (e *DigitalWalletTokenTokenRequestorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "apple_pay":
 		fallthrough
 	case "google_pay":
-		*e = DigitalWalletTokenTokenRequestorEnum(s)
+		*e = DigitalWalletTokenTokenRequestorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DigitalWalletTokenTokenRequestorEnum: %s", s)
+		return fmt.Errorf("invalid value for DigitalWalletTokenTokenRequestorEnum: %v", v)
 	}
 }
 
@@ -69,17 +77,21 @@ const (
 	DigitalWalletTokenTypeEnumDigitalWalletToken DigitalWalletTokenTypeEnum = "digital_wallet_token"
 )
 
+func (e DigitalWalletTokenTypeEnum) ToPointer() *DigitalWalletTokenTypeEnum {
+	return &e
+}
+
 func (e *DigitalWalletTokenTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "digital_wallet_token":
-		*e = DigitalWalletTokenTypeEnum(s)
+		*e = DigitalWalletTokenTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DigitalWalletTokenTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DigitalWalletTokenTypeEnum: %v", v)
 	}
 }
 

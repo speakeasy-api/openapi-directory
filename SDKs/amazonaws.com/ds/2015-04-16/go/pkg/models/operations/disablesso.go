@@ -16,17 +16,21 @@ const (
 	DisableSsoXAmzTargetEnumDirectoryService20150416DisableSso DisableSsoXAmzTargetEnum = "DirectoryService_20150416.DisableSso"
 )
 
+func (e DisableSsoXAmzTargetEnum) ToPointer() *DisableSsoXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableSsoXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DisableSso":
-		*e = DisableSsoXAmzTargetEnum(s)
+		*e = DisableSsoXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableSsoXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableSsoXAmzTargetEnum: %v", v)
 	}
 }
 

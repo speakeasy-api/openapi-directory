@@ -15,17 +15,21 @@ const (
 	GETModifyDBSubnetGroupActionEnumModifyDbSubnetGroup GETModifyDBSubnetGroupActionEnum = "ModifyDBSubnetGroup"
 )
 
+func (e GETModifyDBSubnetGroupActionEnum) ToPointer() *GETModifyDBSubnetGroupActionEnum {
+	return &e
+}
+
 func (e *GETModifyDBSubnetGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyDBSubnetGroup":
-		*e = GETModifyDBSubnetGroupActionEnum(s)
+		*e = GETModifyDBSubnetGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBSubnetGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBSubnetGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETModifyDBSubnetGroupVersionEnumTwoThousandAndThirteen0110 GETModifyDBSubnetGroupVersionEnum = "2013-01-10"
 )
 
+func (e GETModifyDBSubnetGroupVersionEnum) ToPointer() *GETModifyDBSubnetGroupVersionEnum {
+	return &e
+}
+
 func (e *GETModifyDBSubnetGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-10":
-		*e = GETModifyDBSubnetGroupVersionEnum(s)
+		*e = GETModifyDBSubnetGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyDBSubnetGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyDBSubnetGroupVersionEnum: %v", v)
 	}
 }
 

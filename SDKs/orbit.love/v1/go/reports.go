@@ -33,7 +33,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GetWorkspaceSlugReports - Get a workspace stats
 func (s *reports) GetWorkspaceSlugReports(ctx context.Context, request operations.GetWorkspaceSlugReportsRequest, security operations.GetWorkspaceSlugReportsSecurity) (*operations.GetWorkspaceSlugReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/reports", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/reports", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

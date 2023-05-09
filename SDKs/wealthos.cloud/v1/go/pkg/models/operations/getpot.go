@@ -69,21 +69,25 @@ const (
 	GetPot200ApplicationJSONPotCurrencyEnumUsd GetPot200ApplicationJSONPotCurrencyEnum = "USD"
 )
 
+func (e GetPot200ApplicationJSONPotCurrencyEnum) ToPointer() *GetPot200ApplicationJSONPotCurrencyEnum {
+	return &e
+}
+
 func (e *GetPot200ApplicationJSONPotCurrencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GBP":
 		fallthrough
 	case "CAD":
 		fallthrough
 	case "USD":
-		*e = GetPot200ApplicationJSONPotCurrencyEnum(s)
+		*e = GetPot200ApplicationJSONPotCurrencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPot200ApplicationJSONPotCurrencyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPot200ApplicationJSONPotCurrencyEnum: %v", v)
 	}
 }
 
@@ -94,19 +98,23 @@ const (
 	GetPot200ApplicationJSONStatusEnumInactive GetPot200ApplicationJSONStatusEnum = "inactive"
 )
 
+func (e GetPot200ApplicationJSONStatusEnum) ToPointer() *GetPot200ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *GetPot200ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = GetPot200ApplicationJSONStatusEnum(s)
+		*e = GetPot200ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetPot200ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetPot200ApplicationJSONStatusEnum: %v", v)
 	}
 }
 

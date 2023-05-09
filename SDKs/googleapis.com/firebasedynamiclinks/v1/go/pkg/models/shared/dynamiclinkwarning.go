@@ -42,12 +42,16 @@ const (
 	DynamicLinkWarningWarningCodeEnumNotMatchingIosBundleIDAndStoreID    DynamicLinkWarningWarningCodeEnum = "NOT_MATCHING_IOS_BUNDLE_ID_AND_STORE_ID"
 )
 
+func (e DynamicLinkWarningWarningCodeEnum) ToPointer() *DynamicLinkWarningWarningCodeEnum {
+	return &e
+}
+
 func (e *DynamicLinkWarningWarningCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "NOT_IN_PROJECT_ANDROID_PACKAGE_NAME":
@@ -105,10 +109,10 @@ func (e *DynamicLinkWarningWarningCodeEnum) UnmarshalJSON(data []byte) error {
 	case "LINK_WITH_FRAGMENTS":
 		fallthrough
 	case "NOT_MATCHING_IOS_BUNDLE_ID_AND_STORE_ID":
-		*e = DynamicLinkWarningWarningCodeEnum(s)
+		*e = DynamicLinkWarningWarningCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DynamicLinkWarningWarningCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DynamicLinkWarningWarningCodeEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnumAcquisitionConversionEventLookbackWindow30Days      GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum = "ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED":
 		fallthrough
 	case "ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_7_DAYS":
 		fallthrough
 	case "ACQUISITION_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS":
-		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsAcquisitionConversionEventLookbackWindowEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnumOtherConversionEventLookbackWindow90Days      GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum = "OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_UNSPECIFIED":
 		fallthrough
 	case "OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_30_DAYS":
@@ -57,10 +65,10 @@ func (e *GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookb
 	case "OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_60_DAYS":
 		fallthrough
 	case "OTHER_CONVERSION_EVENT_LOOKBACK_WINDOW_90_DAYS":
-		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsOtherConversionEventLookbackWindowEnum: %v", v)
 	}
 }
 
@@ -78,12 +86,16 @@ const (
 	GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnumAdsPreferredLastClick                GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum = "ADS_PREFERRED_LAST_CLICK"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORTING_ATTRIBUTION_MODEL_UNSPECIFIED":
 		fallthrough
 	case "CROSS_CHANNEL_DATA_DRIVEN":
@@ -99,10 +111,10 @@ func (e *GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModel
 	case "CROSS_CHANNEL_TIME_DECAY":
 		fallthrough
 	case "ADS_PREFERRED_LAST_CLICK":
-		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAttributionSettingsReportingAttributionModelEnum: %v", v)
 	}
 }
 

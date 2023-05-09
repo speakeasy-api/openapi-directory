@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device.
+// GoogleChromeManagementV1TelemetryUserDevice - Telemetry data collected for a managed user and device. * Granular permission needed: TELEMETRY_API_DEVICE
 type GoogleChromeManagementV1TelemetryUserDevice struct {
 	// Output only. Audio reports collected periodically sorted in a decreasing order of report_time.
 	AudioStatusReport []GoogleChromeManagementV1AudioStatusReport `json:"audioStatusReport,omitempty"`

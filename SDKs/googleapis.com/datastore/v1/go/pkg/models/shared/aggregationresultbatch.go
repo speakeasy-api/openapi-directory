@@ -18,12 +18,16 @@ const (
 	AggregationResultBatchMoreResultsEnumNoMoreResults              AggregationResultBatchMoreResultsEnum = "NO_MORE_RESULTS"
 )
 
+func (e AggregationResultBatchMoreResultsEnum) ToPointer() *AggregationResultBatchMoreResultsEnum {
+	return &e
+}
+
 func (e *AggregationResultBatchMoreResultsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MORE_RESULTS_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FINISHED":
@@ -33,10 +37,10 @@ func (e *AggregationResultBatchMoreResultsEnum) UnmarshalJSON(data []byte) error
 	case "MORE_RESULTS_AFTER_CURSOR":
 		fallthrough
 	case "NO_MORE_RESULTS":
-		*e = AggregationResultBatchMoreResultsEnum(s)
+		*e = AggregationResultBatchMoreResultsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregationResultBatchMoreResultsEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregationResultBatchMoreResultsEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateBranchXAmzTargetEnumCodeCommit20150413CreateBranch CreateBranchXAmzTargetEnum = "CodeCommit_20150413.CreateBranch"
 )
 
+func (e CreateBranchXAmzTargetEnum) ToPointer() *CreateBranchXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBranchXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.CreateBranch":
-		*e = CreateBranchXAmzTargetEnum(s)
+		*e = CreateBranchXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBranchXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBranchXAmzTargetEnum: %v", v)
 	}
 }
 

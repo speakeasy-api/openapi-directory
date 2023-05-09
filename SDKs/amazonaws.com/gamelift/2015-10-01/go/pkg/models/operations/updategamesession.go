@@ -16,17 +16,21 @@ const (
 	UpdateGameSessionXAmzTargetEnumGameLiftUpdateGameSession UpdateGameSessionXAmzTargetEnum = "GameLift.UpdateGameSession"
 )
 
+func (e UpdateGameSessionXAmzTargetEnum) ToPointer() *UpdateGameSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateGameSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.UpdateGameSession":
-		*e = UpdateGameSessionXAmzTargetEnum(s)
+		*e = UpdateGameSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGameSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGameSessionXAmzTargetEnum: %v", v)
 	}
 }
 

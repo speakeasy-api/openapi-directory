@@ -27,11 +27,11 @@ type DocumentaiProjectsLocationsProcessorTypesListRequest struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// The maximum number of processor types to return. If unspecified, at most 100 processor types will be returned. The maximum value is 500; values above 500 will be coerced to 500.
+	// The maximum number of processor types to return. If unspecified, at most `100` processor types will be returned. The maximum value is `500`. Values above `500` will be coerced to `500`.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Used to retrieve the next page of results, empty if at the end of the list.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
-	// Required. The location of processor type to list. The available processor types may depend on the allow-listing on projects. Format: `projects/{project}/locations/{location}`
+	// Required. The location of processor types to list. Format: `projects/{project}/locations/{location}`.
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`

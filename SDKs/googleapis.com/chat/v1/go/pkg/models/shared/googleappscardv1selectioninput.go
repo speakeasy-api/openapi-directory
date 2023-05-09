@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// GoogleAppsCardV1SelectionInputTypeEnum - The way that an option appears to users. Different options support different types of interactions. For example, users can enable multiple check boxes, but can only select one value from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes and switches, for example, is not supported.
+// GoogleAppsCardV1SelectionInputTypeEnum - The type of items that are displayed to users in a `SelectionInput` widget. Selection types support different types of interactions. For example, users can select one or more checkboxes, but they can only select one value from a dropdown menu.
 type GoogleAppsCardV1SelectionInputTypeEnum string
 
 const (
@@ -17,12 +17,16 @@ const (
 	GoogleAppsCardV1SelectionInputTypeEnumDropdown    GoogleAppsCardV1SelectionInputTypeEnum = "DROPDOWN"
 )
 
+func (e GoogleAppsCardV1SelectionInputTypeEnum) ToPointer() *GoogleAppsCardV1SelectionInputTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1SelectionInputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHECK_BOX":
 		fallthrough
 	case "RADIO_BUTTON":
@@ -30,23 +34,23 @@ func (e *GoogleAppsCardV1SelectionInputTypeEnum) UnmarshalJSON(data []byte) erro
 	case "SWITCH":
 		fallthrough
 	case "DROPDOWN":
-		*e = GoogleAppsCardV1SelectionInputTypeEnum(s)
+		*e = GoogleAppsCardV1SelectionInputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1SelectionInputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1SelectionInputTypeEnum: %v", v)
 	}
 }
 
-// GoogleAppsCardV1SelectionInput - A widget that creates a UI item with options for users to select. For example, a dropdown menu or check list. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect data from users that matches options you set, use a selection input. To collect abstract data from users, use the text input widget instead.
+// GoogleAppsCardV1SelectionInput - A widget that creates one or more UI items that users can select. For example, a dropdown menu or checkboxes. You can use this widget to collect data that can be predicted or enumerated. Chat apps can process the value of items that users select or input. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). To collect undefined or abstract data from users, use the TextInput widget.
 type GoogleAppsCardV1SelectionInput struct {
-	// An array of the selected items. For example, all the selected check boxes.
+	// An array of selectable items. For example, an array of radio buttons or checkboxes. Supports up to 100 items.
 	Items []GoogleAppsCardV1SelectionItem `json:"items,omitempty"`
 	// The text that appears above the selection input field in the user interface. Specify text that helps the user enter the information your app needs. For example, if users are selecting the urgency of a work ticket from a drop-down menu, the label might be "Urgency" or "Select urgency".
 	Label *string `json:"label,omitempty"`
-	// The name by which the selection input is identified in a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
+	// The name that identifies the selection input in a form input event. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs).
 	Name *string `json:"name,omitempty"`
 	// An action that describes the behavior when the form is submitted. For example, an Apps Script can be invoked to handle the form. If the action is triggered, the form values are sent to the server.
 	OnChangeAction *GoogleAppsCardV1Action `json:"onChangeAction,omitempty"`
-	// The way that an option appears to users. Different options support different types of interactions. For example, users can enable multiple check boxes, but can only select one value from a dropdown menu. Each selection input supports one type of selection. Mixing check boxes and switches, for example, is not supported.
+	// The type of items that are displayed to users in a `SelectionInput` widget. Selection types support different types of interactions. For example, users can select one or more checkboxes, but they can only select one value from a dropdown menu.
 	Type *GoogleAppsCardV1SelectionInputTypeEnum `json:"type,omitempty"`
 }

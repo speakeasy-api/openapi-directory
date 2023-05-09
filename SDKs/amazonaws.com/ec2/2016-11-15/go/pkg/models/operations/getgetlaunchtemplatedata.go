@@ -15,17 +15,21 @@ const (
 	GETGETLaunchTemplateDataActionEnumGetLaunchTemplateData GETGETLaunchTemplateDataActionEnum = "GetLaunchTemplateData"
 )
 
+func (e GETGETLaunchTemplateDataActionEnum) ToPointer() *GETGETLaunchTemplateDataActionEnum {
+	return &e
+}
+
 func (e *GETGETLaunchTemplateDataActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetLaunchTemplateData":
-		*e = GETGETLaunchTemplateDataActionEnum(s)
+		*e = GETGETLaunchTemplateDataActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETLaunchTemplateDataActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETLaunchTemplateDataActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETLaunchTemplateDataVersionEnumTwoThousandAndSixteen1115 GETGETLaunchTemplateDataVersionEnum = "2016-11-15"
 )
 
+func (e GETGETLaunchTemplateDataVersionEnum) ToPointer() *GETGETLaunchTemplateDataVersionEnum {
+	return &e
+}
+
 func (e *GETGETLaunchTemplateDataVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETLaunchTemplateDataVersionEnum(s)
+		*e = GETGETLaunchTemplateDataVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETLaunchTemplateDataVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETLaunchTemplateDataVersionEnum: %v", v)
 	}
 }
 

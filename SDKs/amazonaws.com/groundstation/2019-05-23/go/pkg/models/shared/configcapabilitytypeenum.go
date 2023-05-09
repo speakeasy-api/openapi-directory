@@ -19,12 +19,16 @@ const (
 	ConfigCapabilityTypeEnumS3Recording                ConfigCapabilityTypeEnum = "s3-recording"
 )
 
+func (e ConfigCapabilityTypeEnum) ToPointer() *ConfigCapabilityTypeEnum {
+	return &e
+}
+
 func (e *ConfigCapabilityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "antenna-downlink":
 		fallthrough
 	case "antenna-downlink-demod-decode":
@@ -38,9 +42,9 @@ func (e *ConfigCapabilityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uplink-echo":
 		fallthrough
 	case "s3-recording":
-		*e = ConfigCapabilityTypeEnum(s)
+		*e = ConfigCapabilityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfigCapabilityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfigCapabilityTypeEnum: %v", v)
 	}
 }

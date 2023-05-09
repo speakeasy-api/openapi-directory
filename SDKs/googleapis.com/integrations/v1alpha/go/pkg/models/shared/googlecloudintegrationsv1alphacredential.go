@@ -25,12 +25,16 @@ const (
 	GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnumOidcToken                      GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum = "OIDC_TOKEN"
 )
 
+func (e GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum) ToPointer() *GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDENTIAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USERNAME_AND_PASSWORD":
@@ -54,10 +58,10 @@ func (e *GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum) UnmarshalJS
 	case "CLIENT_CERTIFICATE_ONLY":
 		fallthrough
 	case "OIDC_TOKEN":
-		*e = GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum(s)
+		*e = GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudIntegrationsV1alphaCredentialCredentialTypeEnum: %v", v)
 	}
 }
 

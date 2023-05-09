@@ -15,17 +15,21 @@ const (
 	POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnumDeleteNetworkInsightsAccessScopeAnalysis POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum = "DeleteNetworkInsightsAccessScopeAnalysis"
 )
 
+func (e POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum) ToPointer() *POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkInsightsAccessScopeAnalysis":
-		*e = POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum(s)
+		*e = POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAccessScopeAnalysisActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnumTwoThousandAndSixteen1115 POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum) ToPointer() *POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum(s)
+		*e = POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteNetworkInsightsAccessScopeAnalysisVersionEnum: %v", v)
 	}
 }
 

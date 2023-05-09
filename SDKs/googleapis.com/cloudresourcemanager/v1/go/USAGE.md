@@ -2,45 +2,43 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudresourcemanagerLiensCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, operations.CloudresourcemanagerLiensCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         Lien: &shared.Lien{
-            CreateTime: "provident",
-            Name: "distinctio",
-            Origin: "quibusdam",
-            Parent: "unde",
-            Reason: "nulla",
+            CreateTime: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
+            Origin: sdk.String("illum"),
+            Parent: sdk.String("vel"),
+            Reason: sdk.String("error"),
             Restrictions: []string{
-                "illum",
-                "vel",
-                "error",
+                "suscipit",
+                "iure",
+                "magnam",
             },
         },
-        AccessToken: "deserunt",
-        Alt: "media",
-        Callback: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        OauthToken: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, req, operations.CloudresourcemanagerLiensCreateSecurity{
+        AccessToken: sdk.String("debitis"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("delectus"),
+        Fields: sdk.String("tempora"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("molestiae"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("minus"),
+        UploadType: sdk.String("placeat"),
+        UploadProtocol: sdk.String("voluptatum"),
+    }, operations.CloudresourcemanagerLiensCreateSecurity{
         Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

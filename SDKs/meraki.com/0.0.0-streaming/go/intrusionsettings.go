@@ -34,7 +34,10 @@ func newIntrusionSettings(defaultClient, securityClient HTTPClient, serverURL, l
 // Returns all supported intrusion settings for an MX network
 func (s *intrusionSettings) GetNetworkSecurityIntrusionSettings(ctx context.Context, request operations.GetNetworkSecurityIntrusionSettingsRequest) (*operations.GetNetworkSecurityIntrusionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/security/intrusionSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/security/intrusionSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *intrusionSettings) GetNetworkSecurityIntrusionSettings(ctx context.Cont
 // Returns all supported intrusion settings for an organization
 func (s *intrusionSettings) GetOrganizationSecurityIntrusionSettings(ctx context.Context, request operations.GetOrganizationSecurityIntrusionSettingsRequest) (*operations.GetOrganizationSecurityIntrusionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/security/intrusionSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/security/intrusionSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -124,7 +130,10 @@ func (s *intrusionSettings) GetOrganizationSecurityIntrusionSettings(ctx context
 // Set the supported intrusion settings for an MX network
 func (s *intrusionSettings) UpdateNetworkSecurityIntrusionSettings(ctx context.Context, request operations.UpdateNetworkSecurityIntrusionSettingsRequest) (*operations.UpdateNetworkSecurityIntrusionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/security/intrusionSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/security/intrusionSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *intrusionSettings) UpdateNetworkSecurityIntrusionSettings(ctx context.C
 // Sets supported intrusion settings for an organization
 func (s *intrusionSettings) UpdateOrganizationSecurityIntrusionSettings(ctx context.Context, request operations.UpdateOrganizationSecurityIntrusionSettingsRequest) (*operations.UpdateOrganizationSecurityIntrusionSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/security/intrusionSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationId}/security/intrusionSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

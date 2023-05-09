@@ -16,17 +16,21 @@ const (
 	PutReplicationConfigurationXAmzTargetEnumAmazonEc2ContainerRegistryV20150921PutReplicationConfiguration PutReplicationConfigurationXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.PutReplicationConfiguration"
 )
 
+func (e PutReplicationConfigurationXAmzTargetEnum) ToPointer() *PutReplicationConfigurationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutReplicationConfigurationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.PutReplicationConfiguration":
-		*e = PutReplicationConfigurationXAmzTargetEnum(s)
+		*e = PutReplicationConfigurationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutReplicationConfigurationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutReplicationConfigurationXAmzTargetEnum: %v", v)
 	}
 }
 

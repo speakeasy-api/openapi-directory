@@ -26,19 +26,23 @@ const (
 	GetAPIResponseProtocolTypeEnumHTTP      GetAPIResponseProtocolTypeEnum = "HTTP"
 )
 
+func (e GetAPIResponseProtocolTypeEnum) ToPointer() *GetAPIResponseProtocolTypeEnum {
+	return &e
+}
+
 func (e *GetAPIResponseProtocolTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEBSOCKET":
 		fallthrough
 	case "HTTP":
-		*e = GetAPIResponseProtocolTypeEnum(s)
+		*e = GetAPIResponseProtocolTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAPIResponseProtocolTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAPIResponseProtocolTypeEnum: %v", v)
 	}
 }
 

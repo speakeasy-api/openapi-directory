@@ -15,17 +15,21 @@ const (
 	GETApplyEnvironmentManagedActionActionEnumApplyEnvironmentManagedAction GETApplyEnvironmentManagedActionActionEnum = "ApplyEnvironmentManagedAction"
 )
 
+func (e GETApplyEnvironmentManagedActionActionEnum) ToPointer() *GETApplyEnvironmentManagedActionActionEnum {
+	return &e
+}
+
 func (e *GETApplyEnvironmentManagedActionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplyEnvironmentManagedAction":
-		*e = GETApplyEnvironmentManagedActionActionEnum(s)
+		*e = GETApplyEnvironmentManagedActionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplyEnvironmentManagedActionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplyEnvironmentManagedActionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETApplyEnvironmentManagedActionVersionEnumTwoThousandAndTen1201 GETApplyEnvironmentManagedActionVersionEnum = "2010-12-01"
 )
 
+func (e GETApplyEnvironmentManagedActionVersionEnum) ToPointer() *GETApplyEnvironmentManagedActionVersionEnum {
+	return &e
+}
+
 func (e *GETApplyEnvironmentManagedActionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETApplyEnvironmentManagedActionVersionEnum(s)
+		*e = GETApplyEnvironmentManagedActionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplyEnvironmentManagedActionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplyEnvironmentManagedActionVersionEnum: %v", v)
 	}
 }
 

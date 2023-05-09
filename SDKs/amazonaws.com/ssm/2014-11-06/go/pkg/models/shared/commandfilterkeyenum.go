@@ -17,12 +17,16 @@ const (
 	CommandFilterKeyEnumDocumentName   CommandFilterKeyEnum = "DocumentName"
 )
 
+func (e CommandFilterKeyEnum) ToPointer() *CommandFilterKeyEnum {
+	return &e
+}
+
 func (e *CommandFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InvokedAfter":
 		fallthrough
 	case "InvokedBefore":
@@ -32,9 +36,9 @@ func (e *CommandFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "ExecutionStage":
 		fallthrough
 	case "DocumentName":
-		*e = CommandFilterKeyEnum(s)
+		*e = CommandFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CommandFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for CommandFilterKeyEnum: %v", v)
 	}
 }

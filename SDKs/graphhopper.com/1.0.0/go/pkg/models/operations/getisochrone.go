@@ -17,19 +17,23 @@ const (
 	GetIsochroneWeightingEnumShortest GetIsochroneWeightingEnum = "shortest"
 )
 
+func (e GetIsochroneWeightingEnum) ToPointer() *GetIsochroneWeightingEnum {
+	return &e
+}
+
 func (e *GetIsochroneWeightingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fastest":
 		fallthrough
 	case "shortest":
-		*e = GetIsochroneWeightingEnum(s)
+		*e = GetIsochroneWeightingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetIsochroneWeightingEnum: %s", s)
+		return fmt.Errorf("invalid value for GetIsochroneWeightingEnum: %v", v)
 	}
 }
 

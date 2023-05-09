@@ -36,7 +36,10 @@ func newV1Product(defaultClient, securityClient HTTPClient, serverURL, language,
 // Check availability and valid options for a particular product for a particular company identfied by its id
 func (s *v1Product) ProductAvailability(ctx context.Context, request operations.ProductAvailabilityRequest, security operations.ProductAvailabilitySecurity) (*operations.ProductAvailabilityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/availability/{sku}/{subjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/availability/{sku}/{subjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -91,7 +94,10 @@ func (s *v1Product) ProductAvailability(ctx context.Context, request operations.
 // Returns a catalog of purchasable products available with some metadata for a particular country
 func (s *v1Product) ProductCatalog(ctx context.Context, request operations.ProductCatalogRequest, security operations.ProductCatalogSecurity) (*operations.ProductCatalogResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/catalog/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/catalog/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +152,10 @@ func (s *v1Product) ProductCatalog(ctx context.Context, request operations.Produ
 // Queries and returns all metadata associated with a notifier identified by its notifer id
 func (s *v1Product) ProductNotifier(ctx context.Context, request operations.ProductNotifierRequest, security operations.ProductNotifierSecurity) (*operations.ProductNotifierResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/notifier/{notifierId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/notifier/{notifierId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +210,10 @@ func (s *v1Product) ProductNotifier(ctx context.Context, request operations.Prod
 // Create a notifier for a particular order. Parameters can be supplied in the path
 func (s *v1Product) ProductNotifierCreate(ctx context.Context, request operations.ProductNotifierCreateRequest, security operations.ProductNotifierCreateSecurity) (*operations.ProductNotifierCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/notifier/{orderId}/{type}/{uri}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/notifier/{orderId}/{type}/{uri}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -256,7 +268,10 @@ func (s *v1Product) ProductNotifierCreate(ctx context.Context, request operation
 // Place an order for a particular product identified by its SKU for a particular company identified by its id
 func (s *v1Product) ProductOrder(ctx context.Context, request operations.ProductOrderRequest, security operations.ProductOrderSecurity) (*operations.ProductOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/order/{sku}/{subjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/order/{sku}/{subjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -435,7 +450,10 @@ func (s *v1Product) ProductOrderUbo(ctx context.Context, request operations.Prod
 // Place an order for a particular product identified by its SKU with a particular option for a particular company identified by its id
 func (s *v1Product) ProductOrderWithOption(ctx context.Context, request operations.ProductOrderWithOptionRequest, security operations.ProductOrderWithOptionSecurity) (*operations.ProductOrderWithOptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/order/{sku}/{option}/{subjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/order/{sku}/{option}/{subjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -490,7 +508,10 @@ func (s *v1Product) ProductOrderWithOption(ctx context.Context, request operatio
 // Retrieves the document or structured data associated with a completed order identified with its order id
 func (s *v1Product) ProductRetrieve(ctx context.Context, request operations.ProductRetrieveRequest, security operations.ProductRetrieveSecurity) (*operations.ProductRetrieveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -545,7 +566,10 @@ func (s *v1Product) ProductRetrieve(ctx context.Context, request operations.Prod
 // Search for possible products for a particular company identified by its id
 func (s *v1Product) ProductSearch(ctx context.Context, request operations.ProductSearchRequest, security operations.ProductSearchSecurity) (*operations.ProductSearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/search/{subjectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/search/{subjectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -600,7 +624,10 @@ func (s *v1Product) ProductSearch(ctx context.Context, request operations.Produc
 // Retrieve the current status of an order identified by its order id
 func (s *v1Product) ProductStatus(ctx context.Context, request operations.ProductStatusRequest, security operations.ProductStatusSecurity) (*operations.ProductStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/status/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/status/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -655,7 +682,10 @@ func (s *v1Product) ProductStatus(ctx context.Context, request operations.Produc
 // Update an existing order identified by its order id
 func (s *v1Product) ProductUpdateAction(ctx context.Context, request operations.ProductUpdateActionRequest, security operations.ProductUpdateActionSecurity) (*operations.ProductUpdateActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/product/update/{action}/{orderId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/product/update/{action}/{orderId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

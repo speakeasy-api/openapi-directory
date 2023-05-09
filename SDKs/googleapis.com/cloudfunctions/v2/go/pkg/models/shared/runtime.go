@@ -16,21 +16,25 @@ const (
 	RuntimeEnvironmentEnumGen2                   RuntimeEnvironmentEnum = "GEN_2"
 )
 
+func (e RuntimeEnvironmentEnum) ToPointer() *RuntimeEnvironmentEnum {
+	return &e
+}
+
 func (e *RuntimeEnvironmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENVIRONMENT_UNSPECIFIED":
 		fallthrough
 	case "GEN_1":
 		fallthrough
 	case "GEN_2":
-		*e = RuntimeEnvironmentEnum(s)
+		*e = RuntimeEnvironmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeEnvironmentEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeEnvironmentEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	RuntimeStageEnumDecommissioned          RuntimeStageEnum = "DECOMMISSIONED"
 )
 
+func (e RuntimeStageEnum) ToPointer() *RuntimeStageEnum {
+	return &e
+}
+
 func (e *RuntimeStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RUNTIME_STAGE_UNSPECIFIED":
 		fallthrough
 	case "DEVELOPMENT":
@@ -66,10 +74,10 @@ func (e *RuntimeStageEnum) UnmarshalJSON(data []byte) error {
 	case "DEPRECATED":
 		fallthrough
 	case "DECOMMISSIONED":
-		*e = RuntimeStageEnum(s)
+		*e = RuntimeStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeStageEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeStageEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	HTTPCheckContentTypeEnumUserProvided    HTTPCheckContentTypeEnum = "USER_PROVIDED"
 )
 
+func (e HTTPCheckContentTypeEnum) ToPointer() *HTTPCheckContentTypeEnum {
+	return &e
+}
+
 func (e *HTTPCheckContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "URL_ENCODED":
 		fallthrough
 	case "USER_PROVIDED":
-		*e = HTTPCheckContentTypeEnum(s)
+		*e = HTTPCheckContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPCheckContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPCheckContentTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	HTTPCheckRequestMethodEnumPost              HTTPCheckRequestMethodEnum = "POST"
 )
 
+func (e HTTPCheckRequestMethodEnum) ToPointer() *HTTPCheckRequestMethodEnum {
+	return &e
+}
+
 func (e *HTTPCheckRequestMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_UNSPECIFIED":
 		fallthrough
 	case "GET":
 		fallthrough
 	case "POST":
-		*e = HTTPCheckRequestMethodEnum(s)
+		*e = HTTPCheckRequestMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPCheckRequestMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPCheckRequestMethodEnum: %v", v)
 	}
 }
 

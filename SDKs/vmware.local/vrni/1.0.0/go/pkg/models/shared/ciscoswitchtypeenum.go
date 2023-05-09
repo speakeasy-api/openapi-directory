@@ -18,12 +18,16 @@ const (
 	CiscoSwitchTypeEnumNexus9K      CiscoSwitchTypeEnum = "NEXUS_9K"
 )
 
+func (e CiscoSwitchTypeEnum) ToPointer() *CiscoSwitchTypeEnum {
+	return &e
+}
+
 func (e *CiscoSwitchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATALYST_3000":
 		fallthrough
 	case "CATALYST_4500":
@@ -35,9 +39,9 @@ func (e *CiscoSwitchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "NEXUS_7K":
 		fallthrough
 	case "NEXUS_9K":
-		*e = CiscoSwitchTypeEnum(s)
+		*e = CiscoSwitchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CiscoSwitchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CiscoSwitchTypeEnum: %v", v)
 	}
 }

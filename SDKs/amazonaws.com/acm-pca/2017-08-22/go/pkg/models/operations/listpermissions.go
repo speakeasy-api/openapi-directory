@@ -16,17 +16,21 @@ const (
 	ListPermissionsXAmzTargetEnumAcmPrivateCaListPermissions ListPermissionsXAmzTargetEnum = "ACMPrivateCA.ListPermissions"
 )
 
+func (e ListPermissionsXAmzTargetEnum) ToPointer() *ListPermissionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListPermissionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACMPrivateCA.ListPermissions":
-		*e = ListPermissionsXAmzTargetEnum(s)
+		*e = ListPermissionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPermissionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPermissionsXAmzTargetEnum: %v", v)
 	}
 }
 

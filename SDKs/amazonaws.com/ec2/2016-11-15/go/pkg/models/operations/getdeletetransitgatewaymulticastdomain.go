@@ -15,17 +15,21 @@ const (
 	GETDeleteTransitGatewayMulticastDomainActionEnumDeleteTransitGatewayMulticastDomain GETDeleteTransitGatewayMulticastDomainActionEnum = "DeleteTransitGatewayMulticastDomain"
 )
 
+func (e GETDeleteTransitGatewayMulticastDomainActionEnum) ToPointer() *GETDeleteTransitGatewayMulticastDomainActionEnum {
+	return &e
+}
+
 func (e *GETDeleteTransitGatewayMulticastDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTransitGatewayMulticastDomain":
-		*e = GETDeleteTransitGatewayMulticastDomainActionEnum(s)
+		*e = GETDeleteTransitGatewayMulticastDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTransitGatewayMulticastDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTransitGatewayMulticastDomainActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteTransitGatewayMulticastDomainVersionEnumTwoThousandAndSixteen1115 GETDeleteTransitGatewayMulticastDomainVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteTransitGatewayMulticastDomainVersionEnum) ToPointer() *GETDeleteTransitGatewayMulticastDomainVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteTransitGatewayMulticastDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteTransitGatewayMulticastDomainVersionEnum(s)
+		*e = GETDeleteTransitGatewayMulticastDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteTransitGatewayMulticastDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteTransitGatewayMulticastDomainVersionEnum: %v", v)
 	}
 }
 

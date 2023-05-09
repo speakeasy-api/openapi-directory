@@ -13,37 +13,35 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/servicedir
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ServicedirectoryProjectsLocationsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Filter: "nulla",
-        Key: "corrupti",
-        Name: "illum",
-        OauthToken: "vel",
-        PageSize: 623564,
-        PageToken: "deserunt",
-        PrettyPrint: false,
-        QuotaUser: "suscipit",
-        UploadType: "iure",
-        UploadProtocol: "magnam",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.ServicedirectoryProjectsLocationsList(ctx, req, operations.ServicedirectoryProjectsLocationsListSecurity{
+    res, err := s.Projects.ServicedirectoryProjectsLocationsList(ctx, operations.ServicedirectoryProjectsLocationsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Filter: sdk.String("nulla"),
+        Key: sdk.String("corrupti"),
+        Name: "Ben Mueller",
+        OauthToken: sdk.String("iure"),
+        PageSize: sdk.Int64(297534),
+        PageToken: sdk.String("debitis"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("ipsa"),
+        UploadType: sdk.String("delectus"),
+        UploadProtocol: sdk.String("tempora"),
+    }, operations.ServicedirectoryProjectsLocationsListSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -62,22 +60,22 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `ServicedirectoryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `ServicedirectoryProjectsLocationsNamespacesCreate` - Creates a namespace, and returns the new namespace.
-* `ServicedirectoryProjectsLocationsNamespacesList` - Lists all namespaces.
-* `ServicedirectoryProjectsLocationsNamespacesServicesCreate` - Creates a service, and returns the new service.
-* `ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate` - Creates an endpoint, and returns the new endpoint.
-* `ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete` - Deletes an endpoint.
-* `ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGet` - Gets an endpoint.
-* `ServicedirectoryProjectsLocationsNamespacesServicesEndpointsList` - Lists all endpoints.
-* `ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch` - Updates an endpoint.
-* `ServicedirectoryProjectsLocationsNamespacesServicesList` - Lists all services belonging to a namespace.
-* `ServicedirectoryProjectsLocationsNamespacesServicesResolve` - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
-* `ServicedirectoryProjectsLocationsRegistrationPoliciesGetIamPolicy` - Gets the IAM Policy for a resource
-* `ServicedirectoryProjectsLocationsRegistrationPoliciesSetIamPolicy` - Sets the IAM Policy for a resource
-* `ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissions` - Tests IAM permissions for a resource (namespace, service or service workload only).
+* [ServicedirectoryProjectsLocationsList](docs/projects/README.md#servicedirectoryprojectslocationslist) - Lists information about the supported locations for this service.
+* [ServicedirectoryProjectsLocationsNamespacesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacescreate) - Creates a namespace, and returns the new namespace.
+* [ServicedirectoryProjectsLocationsNamespacesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespaceslist) - Lists all namespaces.
+* [ServicedirectoryProjectsLocationsNamespacesServicesCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicescreate) - Creates a service, and returns the new service.
+* [ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreate](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointscreate) - Creates an endpoint, and returns the new endpoint.
+* [ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDelete](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsdelete) - Deletes an endpoint.
+* [ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGet](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointsget) - Gets an endpoint.
+* [ServicedirectoryProjectsLocationsNamespacesServicesEndpointsList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointslist) - Lists all endpoints.
+* [ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatch](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesendpointspatch) - Updates an endpoint.
+* [ServicedirectoryProjectsLocationsNamespacesServicesList](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesserviceslist) - Lists all services belonging to a namespace.
+* [ServicedirectoryProjectsLocationsNamespacesServicesResolve](docs/projects/README.md#servicedirectoryprojectslocationsnamespacesservicesresolve) - Returns a service and its associated endpoints. Resolving a service is not considered an active developer method.
+* [ServicedirectoryProjectsLocationsRegistrationPoliciesGetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciesgetiampolicy) - Gets the IAM Policy for a resource
+* [ServicedirectoryProjectsLocationsRegistrationPoliciesSetIamPolicy](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciessetiampolicy) - Sets the IAM Policy for a resource
+* [ServicedirectoryProjectsLocationsRegistrationPoliciesTestIamPermissions](docs/projects/README.md#servicedirectoryprojectslocationsregistrationpoliciestestiampermissions) - Tests IAM permissions for a resource (namespace, service or service workload only).
 <!-- End SDK Available Operations -->
 
 ### Maturity

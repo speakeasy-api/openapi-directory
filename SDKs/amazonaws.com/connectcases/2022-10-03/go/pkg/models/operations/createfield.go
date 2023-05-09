@@ -20,12 +20,16 @@ const (
 	CreateFieldRequestBodyTypeEnumSingleSelect CreateFieldRequestBodyTypeEnum = "SingleSelect"
 )
 
+func (e CreateFieldRequestBodyTypeEnum) ToPointer() *CreateFieldRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateFieldRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Text":
 		fallthrough
 	case "Number":
@@ -35,10 +39,10 @@ func (e *CreateFieldRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DateTime":
 		fallthrough
 	case "SingleSelect":
-		*e = CreateFieldRequestBodyTypeEnum(s)
+		*e = CreateFieldRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFieldRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFieldRequestBodyTypeEnum: %v", v)
 	}
 }
 

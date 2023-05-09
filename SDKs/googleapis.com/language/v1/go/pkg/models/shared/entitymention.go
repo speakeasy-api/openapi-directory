@@ -16,21 +16,25 @@ const (
 	EntityMentionTypeEnumCommon      EntityMentionTypeEnum = "COMMON"
 )
 
+func (e EntityMentionTypeEnum) ToPointer() *EntityMentionTypeEnum {
+	return &e
+}
+
 func (e *EntityMentionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNKNOWN":
 		fallthrough
 	case "PROPER":
 		fallthrough
 	case "COMMON":
-		*e = EntityMentionTypeEnum(s)
+		*e = EntityMentionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityMentionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityMentionTypeEnum: %v", v)
 	}
 }
 

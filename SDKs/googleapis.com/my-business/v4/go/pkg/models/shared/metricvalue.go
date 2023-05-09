@@ -29,12 +29,16 @@ const (
 	MetricValueMetricEnumLocalPostActionsCallToAction MetricValueMetricEnum = "LOCAL_POST_ACTIONS_CALL_TO_ACTION"
 )
 
+func (e MetricValueMetricEnum) ToPointer() *MetricValueMetricEnum {
+	return &e
+}
+
 func (e *MetricValueMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_UNSPECIFIED":
 		fallthrough
 	case "ALL":
@@ -66,10 +70,10 @@ func (e *MetricValueMetricEnum) UnmarshalJSON(data []byte) error {
 	case "LOCAL_POST_VIEWS_SEARCH":
 		fallthrough
 	case "LOCAL_POST_ACTIONS_CALL_TO_ACTION":
-		*e = MetricValueMetricEnum(s)
+		*e = MetricValueMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetricValueMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for MetricValueMetricEnum: %v", v)
 	}
 }
 

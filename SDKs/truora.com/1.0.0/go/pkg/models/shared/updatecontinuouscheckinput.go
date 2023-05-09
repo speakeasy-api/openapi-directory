@@ -15,19 +15,23 @@ const (
 	UpdateContinuousCheckInputStatusEnumDisabled UpdateContinuousCheckInputStatusEnum = "disabled"
 )
 
+func (e UpdateContinuousCheckInputStatusEnum) ToPointer() *UpdateContinuousCheckInputStatusEnum {
+	return &e
+}
+
 func (e *UpdateContinuousCheckInputStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = UpdateContinuousCheckInputStatusEnum(s)
+		*e = UpdateContinuousCheckInputStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateContinuousCheckInputStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateContinuousCheckInputStatusEnum: %v", v)
 	}
 }
 

@@ -82,7 +82,10 @@ func (s *dictionaries) GetActive(ctx context.Context) (*operations.GetActiveResp
 // Returns active values from a given dictionary.
 func (s *dictionaries) GetActiveByType(ctx context.Context, request operations.GetActiveByTypeRequest) (*operations.GetActiveByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/active", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/active", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -180,7 +183,10 @@ func (s *dictionaries) GetAllActive(ctx context.Context, request operations.GetA
 // Returns all values (both active and not active) from a given dictionary.
 func (s *dictionaries) GetAllByType(ctx context.Context, request operations.GetAllByTypeRequest) (*operations.GetAllByTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/all", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/all", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -353,7 +359,10 @@ func (s *dictionaries) GetAll3(ctx context.Context, request operations.GetAll3Re
 // Returns specific value from a given dictionary.
 func (s *dictionaries) GetByTypeAndID(ctx context.Context, request operations.GetByTypeAndIDRequest) (*operations.GetByTypeAndIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dictionaries/{type}/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

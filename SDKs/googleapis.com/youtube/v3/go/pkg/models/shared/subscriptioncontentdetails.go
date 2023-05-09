@@ -16,21 +16,25 @@ const (
 	SubscriptionContentDetailsActivityTypeEnumUploads                             SubscriptionContentDetailsActivityTypeEnum = "uploads"
 )
 
+func (e SubscriptionContentDetailsActivityTypeEnum) ToPointer() *SubscriptionContentDetailsActivityTypeEnum {
+	return &e
+}
+
 func (e *SubscriptionContentDetailsActivityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "subscriptionActivityTypeUnspecified":
 		fallthrough
 	case "all":
 		fallthrough
 	case "uploads":
-		*e = SubscriptionContentDetailsActivityTypeEnum(s)
+		*e = SubscriptionContentDetailsActivityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionContentDetailsActivityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionContentDetailsActivityTypeEnum: %v", v)
 	}
 }
 

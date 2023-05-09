@@ -31,12 +31,16 @@ const (
 	AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(dat
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUserDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -91,12 +95,16 @@ const (
 	AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnumTester    AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum) ToPointer() *AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -104,10 +112,10 @@ func (e *AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum(s)
+		*e = AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -120,21 +128,25 @@ const (
 	AppsGetForOrgUser200ApplicationJSONOriginEnumCodepush  AppsGetForOrgUser200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsGetForOrgUser200ApplicationJSONOriginEnum) ToPointer() *AppsGetForOrgUser200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUser200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsGetForOrgUser200ApplicationJSONOriginEnum(s)
+		*e = AppsGetForOrgUser200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	AppsGetForOrgUser200ApplicationJSONOsEnumCustom  AppsGetForOrgUser200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e AppsGetForOrgUser200ApplicationJSONOsEnum) ToPointer() *AppsGetForOrgUser200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUser200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -173,10 +189,10 @@ func (e *AppsGetForOrgUser200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) e
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = AppsGetForOrgUser200ApplicationJSONOsEnum(s)
+		*e = AppsGetForOrgUser200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -188,19 +204,23 @@ const (
 	AppsGetForOrgUser200ApplicationJSONOwnerTypeEnumUser AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum) ToPointer() *AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum(s)
+		*e = AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -238,12 +258,16 @@ const (
 	AppsGetForOrgUser200ApplicationJSONPlatformEnumCustom          AppsGetForOrgUser200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e AppsGetForOrgUser200ApplicationJSONPlatformEnum) ToPointer() *AppsGetForOrgUser200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *AppsGetForOrgUser200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -267,10 +291,10 @@ func (e *AppsGetForOrgUser200ApplicationJSONPlatformEnum) UnmarshalJSON(data []b
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = AppsGetForOrgUser200ApplicationJSONPlatformEnum(s)
+		*e = AppsGetForOrgUser200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsGetForOrgUser200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 

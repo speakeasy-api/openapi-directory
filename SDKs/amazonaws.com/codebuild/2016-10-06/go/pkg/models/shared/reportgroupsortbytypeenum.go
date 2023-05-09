@@ -15,20 +15,24 @@ const (
 	ReportGroupSortByTypeEnumLastModifiedTime ReportGroupSortByTypeEnum = "LAST_MODIFIED_TIME"
 )
 
+func (e ReportGroupSortByTypeEnum) ToPointer() *ReportGroupSortByTypeEnum {
+	return &e
+}
+
 func (e *ReportGroupSortByTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NAME":
 		fallthrough
 	case "CREATED_TIME":
 		fallthrough
 	case "LAST_MODIFIED_TIME":
-		*e = ReportGroupSortByTypeEnum(s)
+		*e = ReportGroupSortByTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReportGroupSortByTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReportGroupSortByTypeEnum: %v", v)
 	}
 }

@@ -14,18 +14,22 @@ const (
 	ConditionalOperatorEnumOr  ConditionalOperatorEnum = "OR"
 )
 
+func (e ConditionalOperatorEnum) ToPointer() *ConditionalOperatorEnum {
+	return &e
+}
+
 func (e *ConditionalOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AND":
 		fallthrough
 	case "OR":
-		*e = ConditionalOperatorEnum(s)
+		*e = ConditionalOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionalOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionalOperatorEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	AssociateAdminAccountXAmzTargetEnumAwsfms20180101AssociateAdminAccount AssociateAdminAccountXAmzTargetEnum = "AWSFMS_20180101.AssociateAdminAccount"
 )
 
+func (e AssociateAdminAccountXAmzTargetEnum) ToPointer() *AssociateAdminAccountXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateAdminAccountXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.AssociateAdminAccount":
-		*e = AssociateAdminAccountXAmzTargetEnum(s)
+		*e = AssociateAdminAccountXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateAdminAccountXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateAdminAccountXAmzTargetEnum: %v", v)
 	}
 }
 

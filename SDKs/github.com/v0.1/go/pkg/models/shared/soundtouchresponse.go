@@ -28,12 +28,16 @@ const (
 	SoundTouchResponseMessageEnumSoundTouchFailed                            SoundTouchResponseMessageEnum = "SoundTouch Failed"
 )
 
+func (e SoundTouchResponseMessageEnum) ToPointer() *SoundTouchResponseMessageEnum {
+	return &e
+}
+
 func (e *SoundTouchResponseMessageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SoundTouch Executed":
 		fallthrough
 	case "CallUUID Parameter Missing":
@@ -63,10 +67,10 @@ func (e *SoundTouchResponseMessageEnum) UnmarshalJSON(data []byte) error {
 	case "SoundTouch Failed -- Call not found":
 		fallthrough
 	case "SoundTouch Failed":
-		*e = SoundTouchResponseMessageEnum(s)
+		*e = SoundTouchResponseMessageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoundTouchResponseMessageEnum: %s", s)
+		return fmt.Errorf("invalid value for SoundTouchResponseMessageEnum: %v", v)
 	}
 }
 

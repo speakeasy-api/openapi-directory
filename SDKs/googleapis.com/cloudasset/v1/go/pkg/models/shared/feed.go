@@ -20,12 +20,16 @@ const (
 	FeedContentTypeEnumRelationship           FeedContentTypeEnum = "RELATIONSHIP"
 )
 
+func (e FeedContentTypeEnum) ToPointer() *FeedContentTypeEnum {
+	return &e
+}
+
 func (e *FeedContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONTENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "RESOURCE":
@@ -39,10 +43,10 @@ func (e *FeedContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "OS_INVENTORY":
 		fallthrough
 	case "RELATIONSHIP":
-		*e = FeedContentTypeEnum(s)
+		*e = FeedContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedContentTypeEnum: %v", v)
 	}
 }
 

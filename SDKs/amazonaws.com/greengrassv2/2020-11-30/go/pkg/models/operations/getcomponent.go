@@ -17,19 +17,23 @@ const (
 	GetComponentRecipeOutputFormatEnumYaml GetComponentRecipeOutputFormatEnum = "YAML"
 )
 
+func (e GetComponentRecipeOutputFormatEnum) ToPointer() *GetComponentRecipeOutputFormatEnum {
+	return &e
+}
+
 func (e *GetComponentRecipeOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "YAML":
-		*e = GetComponentRecipeOutputFormatEnum(s)
+		*e = GetComponentRecipeOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetComponentRecipeOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetComponentRecipeOutputFormatEnum: %v", v)
 	}
 }
 

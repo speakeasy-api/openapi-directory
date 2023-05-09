@@ -16,17 +16,21 @@ const (
 	StartPersonTrackingXAmzTargetEnumRekognitionServiceStartPersonTracking StartPersonTrackingXAmzTargetEnum = "RekognitionService.StartPersonTracking"
 )
 
+func (e StartPersonTrackingXAmzTargetEnum) ToPointer() *StartPersonTrackingXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartPersonTrackingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartPersonTracking":
-		*e = StartPersonTrackingXAmzTargetEnum(s)
+		*e = StartPersonTrackingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartPersonTrackingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartPersonTrackingXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,17 +16,15 @@ func main() {
         }),
     )
 
-    req := shared.BankAccountInput{
-        AccountNumber: "corrupti",
-        AccountNumberIban: "provident",
-        Currency: "PLN",
-        Name: "quibusdam",
-        NeedQr: false,
-        Swift: "unde",
-    }
-
     ctx := context.Background()
-    res, err := s.BankAccount.CreateBankAccount(ctx, req)
+    res, err := s.BankAccount.CreateBankAccount(ctx, shared.BankAccountInput{
+        AccountNumber: "corrupti",
+        AccountNumberIban: sdk.String("provident"),
+        Currency: shared.CurrencyEnumPln,
+        Name: "Stuart Stiedemann",
+        NeedQr: sdk.Bool(false),
+        Swift: sdk.String("vel"),
+    })
     if err != nil {
         log.Fatal(err)
     }

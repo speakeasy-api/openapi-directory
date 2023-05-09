@@ -16,19 +16,23 @@ const (
 	AccessTokenTypeEnumUserProfile AccessTokenTypeEnum = "UserProfile"
 )
 
+func (e AccessTokenTypeEnum) ToPointer() *AccessTokenTypeEnum {
+	return &e
+}
+
 func (e *AccessTokenTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UserAccount":
 		fallthrough
 	case "UserProfile":
-		*e = AccessTokenTypeEnum(s)
+		*e = AccessTokenTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccessTokenTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccessTokenTypeEnum: %v", v)
 	}
 }
 

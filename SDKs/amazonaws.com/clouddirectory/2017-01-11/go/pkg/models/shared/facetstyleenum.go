@@ -14,18 +14,22 @@ const (
 	FacetStyleEnumDynamic FacetStyleEnum = "DYNAMIC"
 )
 
+func (e FacetStyleEnum) ToPointer() *FacetStyleEnum {
+	return &e
+}
+
 func (e *FacetStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATIC":
 		fallthrough
 	case "DYNAMIC":
-		*e = FacetStyleEnum(s)
+		*e = FacetStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FacetStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for FacetStyleEnum: %v", v)
 	}
 }

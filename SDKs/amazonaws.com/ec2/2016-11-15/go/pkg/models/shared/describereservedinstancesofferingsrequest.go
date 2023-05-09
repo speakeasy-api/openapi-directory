@@ -22,21 +22,25 @@ const (
 	DescribeReservedInstancesOfferingsRequestInstanceTenancyEnumHost      DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum = "host"
 )
 
+func (e DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum) ToPointer() *DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum(s)
+		*e = DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesOfferingsRequestInstanceTenancyEnum: %v", v)
 	}
 }
 
@@ -52,12 +56,16 @@ const (
 	DescribeReservedInstancesOfferingsRequestOfferingTypeEnumAllUpfront        DescribeReservedInstancesOfferingsRequestOfferingTypeEnum = "All Upfront"
 )
 
+func (e DescribeReservedInstancesOfferingsRequestOfferingTypeEnum) ToPointer() *DescribeReservedInstancesOfferingsRequestOfferingTypeEnum {
+	return &e
+}
+
 func (e *DescribeReservedInstancesOfferingsRequestOfferingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Heavy Utilization":
 		fallthrough
 	case "Medium Utilization":
@@ -69,10 +77,10 @@ func (e *DescribeReservedInstancesOfferingsRequestOfferingTypeEnum) UnmarshalJSO
 	case "Partial Upfront":
 		fallthrough
 	case "All Upfront":
-		*e = DescribeReservedInstancesOfferingsRequestOfferingTypeEnum(s)
+		*e = DescribeReservedInstancesOfferingsRequestOfferingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeReservedInstancesOfferingsRequestOfferingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeReservedInstancesOfferingsRequestOfferingTypeEnum: %v", v)
 	}
 }
 

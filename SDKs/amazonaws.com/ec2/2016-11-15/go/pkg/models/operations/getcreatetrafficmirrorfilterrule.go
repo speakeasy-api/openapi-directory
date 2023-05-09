@@ -15,17 +15,21 @@ const (
 	GETCreateTrafficMirrorFilterRuleActionEnumCreateTrafficMirrorFilterRule GETCreateTrafficMirrorFilterRuleActionEnum = "CreateTrafficMirrorFilterRule"
 )
 
+func (e GETCreateTrafficMirrorFilterRuleActionEnum) ToPointer() *GETCreateTrafficMirrorFilterRuleActionEnum {
+	return &e
+}
+
 func (e *GETCreateTrafficMirrorFilterRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTrafficMirrorFilterRule":
-		*e = GETCreateTrafficMirrorFilterRuleActionEnum(s)
+		*e = GETCreateTrafficMirrorFilterRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleActionEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	GETCreateTrafficMirrorFilterRuleRuleActionEnumReject GETCreateTrafficMirrorFilterRuleRuleActionEnum = "reject"
 )
 
+func (e GETCreateTrafficMirrorFilterRuleRuleActionEnum) ToPointer() *GETCreateTrafficMirrorFilterRuleRuleActionEnum {
+	return &e
+}
+
 func (e *GETCreateTrafficMirrorFilterRuleRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = GETCreateTrafficMirrorFilterRuleRuleActionEnum(s)
+		*e = GETCreateTrafficMirrorFilterRuleRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleRuleActionEnum: %v", v)
 	}
 }
 
@@ -73,19 +81,23 @@ const (
 	GETCreateTrafficMirrorFilterRuleTrafficDirectionEnumEgress  GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum = "egress"
 )
 
+func (e GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum) ToPointer() *GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum {
+	return &e
+}
+
 func (e *GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum(s)
+		*e = GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleTrafficDirectionEnum: %v", v)
 	}
 }
 
@@ -96,17 +108,21 @@ const (
 	GETCreateTrafficMirrorFilterRuleVersionEnumTwoThousandAndSixteen1115 GETCreateTrafficMirrorFilterRuleVersionEnum = "2016-11-15"
 )
 
+func (e GETCreateTrafficMirrorFilterRuleVersionEnum) ToPointer() *GETCreateTrafficMirrorFilterRuleVersionEnum {
+	return &e
+}
+
 func (e *GETCreateTrafficMirrorFilterRuleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCreateTrafficMirrorFilterRuleVersionEnum(s)
+		*e = GETCreateTrafficMirrorFilterRuleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTrafficMirrorFilterRuleVersionEnum: %v", v)
 	}
 }
 

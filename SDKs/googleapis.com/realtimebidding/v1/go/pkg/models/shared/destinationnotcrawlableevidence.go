@@ -18,12 +18,16 @@ const (
 	DestinationNotCrawlableEvidenceReasonEnumUnknown           DestinationNotCrawlableEvidenceReasonEnum = "UNKNOWN"
 )
 
+func (e DestinationNotCrawlableEvidenceReasonEnum) ToPointer() *DestinationNotCrawlableEvidenceReasonEnum {
+	return &e
+}
+
 func (e *DestinationNotCrawlableEvidenceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REASON_UNSPECIFIED":
 		fallthrough
 	case "UNREACHABLE_ROBOTS":
@@ -33,10 +37,10 @@ func (e *DestinationNotCrawlableEvidenceReasonEnum) UnmarshalJSON(data []byte) e
 	case "ROBOTED_DENIED":
 		fallthrough
 	case "UNKNOWN":
-		*e = DestinationNotCrawlableEvidenceReasonEnum(s)
+		*e = DestinationNotCrawlableEvidenceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DestinationNotCrawlableEvidenceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DestinationNotCrawlableEvidenceReasonEnum: %v", v)
 	}
 }
 

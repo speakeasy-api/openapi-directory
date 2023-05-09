@@ -16,12 +16,16 @@ const (
 	ProductAvailableTracksEnumAlpha               ProductAvailableTracksEnum = "alpha"
 )
 
+func (e ProductAvailableTracksEnum) ToPointer() *ProductAvailableTracksEnum {
+	return &e
+}
+
 func (e *ProductAvailableTracksEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appTrackUnspecified":
 		fallthrough
 	case "production":
@@ -29,10 +33,10 @@ func (e *ProductAvailableTracksEnum) UnmarshalJSON(data []byte) error {
 	case "beta":
 		fallthrough
 	case "alpha":
-		*e = ProductAvailableTracksEnum(s)
+		*e = ProductAvailableTracksEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductAvailableTracksEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductAvailableTracksEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ProductContentRatingEnumMature        ProductContentRatingEnum = "mature"
 )
 
+func (e ProductContentRatingEnum) ToPointer() *ProductContentRatingEnum {
+	return &e
+}
+
 func (e *ProductContentRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ratingUnknown":
 		fallthrough
 	case "all":
@@ -62,10 +70,10 @@ func (e *ProductContentRatingEnum) UnmarshalJSON(data []byte) error {
 	case "teen":
 		fallthrough
 	case "mature":
-		*e = ProductContentRatingEnum(s)
+		*e = ProductContentRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductContentRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductContentRatingEnum: %v", v)
 	}
 }
 
@@ -78,21 +86,25 @@ const (
 	ProductDistributionChannelEnumPrivateSelfHosted   ProductDistributionChannelEnum = "privateSelfHosted"
 )
 
+func (e ProductDistributionChannelEnum) ToPointer() *ProductDistributionChannelEnum {
+	return &e
+}
+
 func (e *ProductDistributionChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "publicGoogleHosted":
 		fallthrough
 	case "privateGoogleHosted":
 		fallthrough
 	case "privateSelfHosted":
-		*e = ProductDistributionChannelEnum(s)
+		*e = ProductDistributionChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductDistributionChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductDistributionChannelEnum: %v", v)
 	}
 }
 
@@ -103,19 +115,23 @@ const (
 	ProductFeaturesEnumVpnApp         ProductFeaturesEnum = "vpnApp"
 )
 
+func (e ProductFeaturesEnum) ToPointer() *ProductFeaturesEnum {
+	return &e
+}
+
 func (e *ProductFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "featureUnknown":
 		fallthrough
 	case "vpnApp":
-		*e = ProductFeaturesEnum(s)
+		*e = ProductFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductFeaturesEnum: %v", v)
 	}
 }
 
@@ -129,12 +145,16 @@ const (
 	ProductProductPricingEnumPaid                  ProductProductPricingEnum = "paid"
 )
 
+func (e ProductProductPricingEnum) ToPointer() *ProductProductPricingEnum {
+	return &e
+}
+
 func (e *ProductProductPricingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "unknown":
 		fallthrough
 	case "free":
@@ -142,10 +162,10 @@ func (e *ProductProductPricingEnum) UnmarshalJSON(data []byte) error {
 	case "freeWithInAppPurchase":
 		fallthrough
 	case "paid":
-		*e = ProductProductPricingEnum(s)
+		*e = ProductProductPricingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductProductPricingEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductProductPricingEnum: %v", v)
 	}
 }
 

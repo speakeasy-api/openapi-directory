@@ -168,7 +168,10 @@ func (s *monitors) CreateMonitor(ctx context.Context, request operations.CreateM
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *monitors) DeleteMonitor(ctx context.Context, request operations.DeleteMonitorRequest) (*operations.DeleteMonitorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -225,7 +228,10 @@ func (s *monitors) DeleteMonitor(ctx context.Context, request operations.DeleteM
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *monitors) RunAMonitor(ctx context.Context, request operations.RunAMonitorRequest) (*operations.RunAMonitorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}/run", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}/run", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -272,7 +278,10 @@ func (s *monitors) RunAMonitor(ctx context.Context, request operations.RunAMonit
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *monitors) SingleMonitor(ctx context.Context, request operations.SingleMonitorRequest) (*operations.SingleMonitorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -345,7 +354,10 @@ func (s *monitors) SingleMonitor(ctx context.Context, request operations.SingleM
 // > Requires <a href="#authentication">API Key</a> as `X-Api-Key` request header or `apikey` URL query parameter.
 func (s *monitors) UpdateMonitor(ctx context.Context, request operations.UpdateMonitorRequest) (*operations.UpdateMonitorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/monitors/{monitor_uid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

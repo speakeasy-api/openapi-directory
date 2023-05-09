@@ -26,12 +26,16 @@ const (
 	GetEpisodesSortEnumUpdatedAt           GetEpisodesSortEnum = "updated_at"
 )
 
+func (e GetEpisodesSortEnum) ToPointer() *GetEpisodesSortEnum {
+	return &e
+}
+
 func (e *GetEpisodesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "created_at":
 		fallthrough
 	case "earliest_released_at":
@@ -45,10 +49,10 @@ func (e *GetEpisodesSortEnum) UnmarshalJSON(data []byte) error {
 	case "title":
 		fallthrough
 	case "updated_at":
-		*e = GetEpisodesSortEnum(s)
+		*e = GetEpisodesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetEpisodesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetEpisodesSortEnum: %v", v)
 	}
 }
 

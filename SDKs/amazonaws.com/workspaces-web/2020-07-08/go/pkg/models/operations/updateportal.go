@@ -17,19 +17,23 @@ const (
 	UpdatePortalRequestBodyAuthenticationTypeEnumIamIdentityCenter UpdatePortalRequestBodyAuthenticationTypeEnum = "IAM_Identity_Center"
 )
 
+func (e UpdatePortalRequestBodyAuthenticationTypeEnum) ToPointer() *UpdatePortalRequestBodyAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *UpdatePortalRequestBodyAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Standard":
 		fallthrough
 	case "IAM_Identity_Center":
-		*e = UpdatePortalRequestBodyAuthenticationTypeEnum(s)
+		*e = UpdatePortalRequestBodyAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdatePortalRequestBodyAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdatePortalRequestBodyAuthenticationTypeEnum: %v", v)
 	}
 }
 

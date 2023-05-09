@@ -21,12 +21,16 @@ const (
 	BasicChartSpecChartTypeEnumSteppedArea               BasicChartSpecChartTypeEnum = "STEPPED_AREA"
 )
 
+func (e BasicChartSpecChartTypeEnum) ToPointer() *BasicChartSpecChartTypeEnum {
+	return &e
+}
+
 func (e *BasicChartSpecChartTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BAR":
@@ -42,10 +46,10 @@ func (e *BasicChartSpecChartTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COMBO":
 		fallthrough
 	case "STEPPED_AREA":
-		*e = BasicChartSpecChartTypeEnum(s)
+		*e = BasicChartSpecChartTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSpecChartTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSpecChartTypeEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	BasicChartSpecCompareModeEnumCategory                         BasicChartSpecCompareModeEnum = "CATEGORY"
 )
 
+func (e BasicChartSpecCompareModeEnum) ToPointer() *BasicChartSpecCompareModeEnum {
+	return &e
+}
+
 func (e *BasicChartSpecCompareModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_COMPARE_MODE_UNSPECIFIED":
 		fallthrough
 	case "DATUM":
 		fallthrough
 	case "CATEGORY":
-		*e = BasicChartSpecCompareModeEnum(s)
+		*e = BasicChartSpecCompareModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSpecCompareModeEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSpecCompareModeEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	BasicChartSpecLegendPositionEnumNoLegend                            BasicChartSpecLegendPositionEnum = "NO_LEGEND"
 )
 
+func (e BasicChartSpecLegendPositionEnum) ToPointer() *BasicChartSpecLegendPositionEnum {
+	return &e
+}
+
 func (e *BasicChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_LEGEND_POSITION_UNSPECIFIED":
 		fallthrough
 	case "BOTTOM_LEGEND":
@@ -105,10 +117,10 @@ func (e *BasicChartSpecLegendPositionEnum) UnmarshalJSON(data []byte) error {
 	case "TOP_LEGEND":
 		fallthrough
 	case "NO_LEGEND":
-		*e = BasicChartSpecLegendPositionEnum(s)
+		*e = BasicChartSpecLegendPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSpecLegendPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSpecLegendPositionEnum: %v", v)
 	}
 }
 
@@ -122,12 +134,16 @@ const (
 	BasicChartSpecStackedTypeEnumPercentStacked                   BasicChartSpecStackedTypeEnum = "PERCENT_STACKED"
 )
 
+func (e BasicChartSpecStackedTypeEnum) ToPointer() *BasicChartSpecStackedTypeEnum {
+	return &e
+}
+
 func (e *BasicChartSpecStackedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BASIC_CHART_STACKED_TYPE_UNSPECIFIED":
 		fallthrough
 	case "NOT_STACKED":
@@ -135,10 +151,10 @@ func (e *BasicChartSpecStackedTypeEnum) UnmarshalJSON(data []byte) error {
 	case "STACKED":
 		fallthrough
 	case "PERCENT_STACKED":
-		*e = BasicChartSpecStackedTypeEnum(s)
+		*e = BasicChartSpecStackedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BasicChartSpecStackedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BasicChartSpecStackedTypeEnum: %v", v)
 	}
 }
 

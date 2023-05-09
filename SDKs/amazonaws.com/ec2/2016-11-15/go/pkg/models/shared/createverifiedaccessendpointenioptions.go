@@ -2,7 +2,7 @@
 
 package shared
 
-// CreateVerifiedAccessEndpointEniOptions - Options for a network interface-type endpoint.
+// CreateVerifiedAccessEndpointEniOptions - Describes the network interface options when creating an Amazon Web Services Verified Access endpoint using the <code>network-interface</code> type.
 type CreateVerifiedAccessEndpointEniOptions struct {
 	NetworkInterfaceID *string
 	Port               *int64

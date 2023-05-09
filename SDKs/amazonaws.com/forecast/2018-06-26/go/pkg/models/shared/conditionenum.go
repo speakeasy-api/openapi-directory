@@ -16,12 +16,16 @@ const (
 	ConditionEnumGreaterThan ConditionEnum = "GREATER_THAN"
 )
 
+func (e ConditionEnum) ToPointer() *ConditionEnum {
+	return &e
+}
+
 func (e *ConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "NOT_EQUALS":
@@ -29,9 +33,9 @@ func (e *ConditionEnum) UnmarshalJSON(data []byte) error {
 	case "LESS_THAN":
 		fallthrough
 	case "GREATER_THAN":
-		*e = ConditionEnum(s)
+		*e = ConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for ConditionEnum: %v", v)
 	}
 }

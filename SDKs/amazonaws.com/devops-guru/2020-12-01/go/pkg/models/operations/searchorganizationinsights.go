@@ -34,19 +34,23 @@ const (
 	SearchOrganizationInsightsRequestBodyTypeEnumProactive SearchOrganizationInsightsRequestBodyTypeEnum = "PROACTIVE"
 )
 
+func (e SearchOrganizationInsightsRequestBodyTypeEnum) ToPointer() *SearchOrganizationInsightsRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *SearchOrganizationInsightsRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REACTIVE":
 		fallthrough
 	case "PROACTIVE":
-		*e = SearchOrganizationInsightsRequestBodyTypeEnum(s)
+		*e = SearchOrganizationInsightsRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchOrganizationInsightsRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchOrganizationInsightsRequestBodyTypeEnum: %v", v)
 	}
 }
 

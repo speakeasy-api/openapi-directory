@@ -21,19 +21,23 @@ const (
 	CreateTokenIncludeEnumOrganization CreateTokenIncludeEnum = "organization"
 )
 
+func (e CreateTokenIncludeEnum) ToPointer() *CreateTokenIncludeEnum {
+	return &e
+}
+
 func (e *CreateTokenIncludeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "groups":
 		fallthrough
 	case "organization":
-		*e = CreateTokenIncludeEnum(s)
+		*e = CreateTokenIncludeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTokenIncludeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTokenIncludeEnum: %v", v)
 	}
 }
 

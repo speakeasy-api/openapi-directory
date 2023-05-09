@@ -34,12 +34,16 @@ const (
 	OBExternalPermissions1CodeEnumReadTransactionsDetail      OBExternalPermissions1CodeEnum = "ReadTransactionsDetail"
 )
 
+func (e OBExternalPermissions1CodeEnum) ToPointer() *OBExternalPermissions1CodeEnum {
+	return &e
+}
+
 func (e *OBExternalPermissions1CodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReadAccountsBasic":
 		fallthrough
 	case "ReadAccountsDetail":
@@ -81,9 +85,9 @@ func (e *OBExternalPermissions1CodeEnum) UnmarshalJSON(data []byte) error {
 	case "ReadTransactionsDebits":
 		fallthrough
 	case "ReadTransactionsDetail":
-		*e = OBExternalPermissions1CodeEnum(s)
+		*e = OBExternalPermissions1CodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OBExternalPermissions1CodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OBExternalPermissions1CodeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	OsUpdateStatusStateEnumUpdateStateNeedReboot         OsUpdateStatusStateEnum = "updateStateNeedReboot"
 )
 
+func (e OsUpdateStatusStateEnum) ToPointer() *OsUpdateStatusStateEnum {
+	return &e
+}
+
 func (e *OsUpdateStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "updateStateUnspecified":
 		fallthrough
 	case "updateStateNotStarted":
@@ -30,10 +34,10 @@ func (e *OsUpdateStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "updateStateDownloadInProgress":
 		fallthrough
 	case "updateStateNeedReboot":
-		*e = OsUpdateStatusStateEnum(s)
+		*e = OsUpdateStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OsUpdateStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OsUpdateStatusStateEnum: %v", v)
 	}
 }
 

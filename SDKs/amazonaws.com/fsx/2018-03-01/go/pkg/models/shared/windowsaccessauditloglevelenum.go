@@ -16,12 +16,16 @@ const (
 	WindowsAccessAuditLogLevelEnumSuccessAndFailure WindowsAccessAuditLogLevelEnum = "SUCCESS_AND_FAILURE"
 )
 
+func (e WindowsAccessAuditLogLevelEnum) ToPointer() *WindowsAccessAuditLogLevelEnum {
+	return &e
+}
+
 func (e *WindowsAccessAuditLogLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "SUCCESS_ONLY":
@@ -29,9 +33,9 @@ func (e *WindowsAccessAuditLogLevelEnum) UnmarshalJSON(data []byte) error {
 	case "FAILURE_ONLY":
 		fallthrough
 	case "SUCCESS_AND_FAILURE":
-		*e = WindowsAccessAuditLogLevelEnum(s)
+		*e = WindowsAccessAuditLogLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WindowsAccessAuditLogLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for WindowsAccessAuditLogLevelEnum: %v", v)
 	}
 }

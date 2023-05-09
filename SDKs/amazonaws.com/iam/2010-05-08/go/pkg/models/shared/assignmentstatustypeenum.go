@@ -15,20 +15,24 @@ const (
 	AssignmentStatusTypeEnumAny        AssignmentStatusTypeEnum = "Any"
 )
 
+func (e AssignmentStatusTypeEnum) ToPointer() *AssignmentStatusTypeEnum {
+	return &e
+}
+
 func (e *AssignmentStatusTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Assigned":
 		fallthrough
 	case "Unassigned":
 		fallthrough
 	case "Any":
-		*e = AssignmentStatusTypeEnum(s)
+		*e = AssignmentStatusTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentStatusTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentStatusTypeEnum: %v", v)
 	}
 }

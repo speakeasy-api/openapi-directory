@@ -16,17 +16,21 @@ const (
 	CreateProductXAmzTargetEnumAws242ServiceCatalogServiceCreateProduct CreateProductXAmzTargetEnum = "AWS242ServiceCatalogService.CreateProduct"
 )
 
+func (e CreateProductXAmzTargetEnum) ToPointer() *CreateProductXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProductXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.CreateProduct":
-		*e = CreateProductXAmzTargetEnum(s)
+		*e = CreateProductXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProductXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProductXAmzTargetEnum: %v", v)
 	}
 }
 

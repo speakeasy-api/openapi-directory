@@ -19,12 +19,16 @@ const (
 	PostAPIReactionsToggleCategoryEnumFire          PostAPIReactionsToggleCategoryEnum = "fire"
 )
 
+func (e PostAPIReactionsToggleCategoryEnum) ToPointer() *PostAPIReactionsToggleCategoryEnum {
+	return &e
+}
+
 func (e *PostAPIReactionsToggleCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "like":
 		fallthrough
 	case "unicorn":
@@ -34,10 +38,10 @@ func (e *PostAPIReactionsToggleCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "raised_hands":
 		fallthrough
 	case "fire":
-		*e = PostAPIReactionsToggleCategoryEnum(s)
+		*e = PostAPIReactionsToggleCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIReactionsToggleCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIReactionsToggleCategoryEnum: %v", v)
 	}
 }
 
@@ -50,21 +54,25 @@ const (
 	PostAPIReactionsToggleReactableTypeEnumUser    PostAPIReactionsToggleReactableTypeEnum = "User"
 )
 
+func (e PostAPIReactionsToggleReactableTypeEnum) ToPointer() *PostAPIReactionsToggleReactableTypeEnum {
+	return &e
+}
+
 func (e *PostAPIReactionsToggleReactableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comment":
 		fallthrough
 	case "Article":
 		fallthrough
 	case "User":
-		*e = PostAPIReactionsToggleReactableTypeEnum(s)
+		*e = PostAPIReactionsToggleReactableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIReactionsToggleReactableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIReactionsToggleReactableTypeEnum: %v", v)
 	}
 }
 

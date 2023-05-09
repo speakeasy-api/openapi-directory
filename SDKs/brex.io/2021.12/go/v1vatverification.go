@@ -35,7 +35,10 @@ func newV1VatVerification(defaultClient, securityClient HTTPClient, serverURL, l
 // Basic verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.
 func (s *v1VatVerification) VatBasic(ctx context.Context, request operations.VatBasicRequest, security operations.VatBasicSecurity) (*operations.VatBasicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/basic-check/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/basic-check/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -100,7 +103,10 @@ func (s *v1VatVerification) VatBasic(ctx context.Context, request operations.Vat
 // Extended verification of given VAT number against VIES. Optional parameters may help to build a better confidence score.
 func (s *v1VatVerification) VatComprehensive(ctx context.Context, request operations.VatComprehensiveRequest, security operations.VatComprehensiveSecurity) (*operations.VatComprehensiveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/comprehensive-check/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/comprehensive-check/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -165,7 +171,10 @@ func (s *v1VatVerification) VatComprehensive(ctx context.Context, request operat
 // Second Level Verification of VAT number against BMF Austria. Optional confirmation parameter can be provided to order a Confirmation Report.
 func (s *v1VatVerification) VatLevelTwo(ctx context.Context, request operations.VatLevelTwoRequest, security operations.VatLevelTwoSecurity) (*operations.VatLevelTwoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/leveltwo-check/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/leveltwo-check/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {
@@ -230,7 +239,10 @@ func (s *v1VatVerification) VatLevelTwo(ctx context.Context, request operations.
 // Reverse VAT Lookup: Search for companies and their VAT numbers by company name. Search is forwarded to a provider.
 func (s *v1VatVerification) VatLookup(ctx context.Context, request operations.VatLookupRequest, security operations.VatLookupSecurity) (*operations.VatLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/lookup/{country}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/vat-verification/lookup/{country}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "form")
 	if err != nil {

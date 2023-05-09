@@ -83,7 +83,10 @@ func (s *creators) CreatorsList(ctx context.Context, request operations.Creators
 // CreatorsRead - Get details of the creator.
 func (s *creators) CreatorsRead(ctx context.Context, request operations.CreatorsReadRequest) (*operations.CreatorsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/creators/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/creators/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

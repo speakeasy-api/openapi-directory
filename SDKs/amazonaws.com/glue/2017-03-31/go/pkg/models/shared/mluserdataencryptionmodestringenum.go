@@ -14,18 +14,22 @@ const (
 	MLUserDataEncryptionModeStringEnumSseKms   MLUserDataEncryptionModeStringEnum = "SSE-KMS"
 )
 
+func (e MLUserDataEncryptionModeStringEnum) ToPointer() *MLUserDataEncryptionModeStringEnum {
+	return &e
+}
+
 func (e *MLUserDataEncryptionModeStringEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISABLED":
 		fallthrough
 	case "SSE-KMS":
-		*e = MLUserDataEncryptionModeStringEnum(s)
+		*e = MLUserDataEncryptionModeStringEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MLUserDataEncryptionModeStringEnum: %s", s)
+		return fmt.Errorf("invalid value for MLUserDataEncryptionModeStringEnum: %v", v)
 	}
 }

@@ -16,27 +16,31 @@ const (
 	EndpointNetworkTypeEnumNonGcpNetwork          EndpointNetworkTypeEnum = "NON_GCP_NETWORK"
 )
 
+func (e EndpointNetworkTypeEnum) ToPointer() *EndpointNetworkTypeEnum {
+	return &e
+}
+
 func (e *EndpointNetworkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NETWORK_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GCP_NETWORK":
 		fallthrough
 	case "NON_GCP_NETWORK":
-		*e = EndpointNetworkTypeEnum(s)
+		*e = EndpointNetworkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointNetworkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointNetworkTypeEnum: %v", v)
 	}
 }
 
 // EndpointInput - Source or destination of the Connectivity Test.
 type EndpointInput struct {
-	// Wrapper for app engine service version attributes.
+	// Wrapper for the App Engine service version attributes.
 	AppEngineVersion *AppEngineVersionEndpoint `json:"appEngineVersion,omitempty"`
 	// Wrapper for Cloud Function attributes.
 	CloudFunction *CloudFunctionEndpoint `json:"cloudFunction,omitempty"`
@@ -58,7 +62,7 @@ type EndpointInput struct {
 	NetworkType *EndpointNetworkTypeEnum `json:"networkType,omitempty"`
 	// The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
 	Port *int `json:"port,omitempty"`
-	// Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+	// Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a Google Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
 	ProjectID *string `json:"projectId,omitempty"`
 }
 
@@ -73,12 +77,16 @@ const (
 	EndpointForwardingRuleTargetEnumPsc                             EndpointForwardingRuleTargetEnum = "PSC"
 )
 
+func (e EndpointForwardingRuleTargetEnum) ToPointer() *EndpointForwardingRuleTargetEnum {
+	return &e
+}
+
 func (e *EndpointForwardingRuleTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORWARDING_RULE_TARGET_UNSPECIFIED":
 		fallthrough
 	case "INSTANCE":
@@ -88,10 +96,10 @@ func (e *EndpointForwardingRuleTargetEnum) UnmarshalJSON(data []byte) error {
 	case "VPN_GATEWAY":
 		fallthrough
 	case "PSC":
-		*e = EndpointForwardingRuleTargetEnum(s)
+		*e = EndpointForwardingRuleTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointForwardingRuleTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointForwardingRuleTargetEnum: %v", v)
 	}
 }
 
@@ -112,12 +120,16 @@ const (
 	EndpointLoadBalancerTypeEnumTCPUDPInternalLoadBalancer   EndpointLoadBalancerTypeEnum = "TCP_UDP_INTERNAL_LOAD_BALANCER"
 )
 
+func (e EndpointLoadBalancerTypeEnum) ToPointer() *EndpointLoadBalancerTypeEnum {
+	return &e
+}
+
 func (e *EndpointLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOAD_BALANCER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HTTPS_ADVANCED_LOAD_BALANCER":
@@ -139,16 +151,16 @@ func (e *EndpointLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LEGACY_NETWORK_LOAD_BALANCER":
 		fallthrough
 	case "TCP_UDP_INTERNAL_LOAD_BALANCER":
-		*e = EndpointLoadBalancerTypeEnum(s)
+		*e = EndpointLoadBalancerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointLoadBalancerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointLoadBalancerTypeEnum: %v", v)
 	}
 }
 
 // Endpoint - Source or destination of the Connectivity Test.
 type Endpoint struct {
-	// Wrapper for app engine service version attributes.
+	// Wrapper for the App Engine service version attributes.
 	AppEngineVersion *AppEngineVersionEndpoint `json:"appEngineVersion,omitempty"`
 	// Wrapper for Cloud Function attributes.
 	CloudFunction *CloudFunctionEndpoint `json:"cloudFunction,omitempty"`
@@ -176,6 +188,6 @@ type Endpoint struct {
 	NetworkType *EndpointNetworkTypeEnum `json:"networkType,omitempty"`
 	// The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
 	Port *int `json:"port,omitempty"`
-	// Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+	// Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a Google Cloud project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
 	ProjectID *string `json:"projectId,omitempty"`
 }

@@ -2,23 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAccountHoldersIDRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AccountHolders.GetAccountHoldersID(ctx, req, operations.GetAccountHoldersIDSecurity{
+    res, err := s.AccountHolders.GetAccountHoldersID(ctx, operations.GetAccountHoldersIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.GetAccountHoldersIDSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {

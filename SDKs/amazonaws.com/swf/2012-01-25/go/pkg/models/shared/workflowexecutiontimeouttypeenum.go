@@ -13,16 +13,20 @@ const (
 	WorkflowExecutionTimeoutTypeEnumStartToClose WorkflowExecutionTimeoutTypeEnum = "START_TO_CLOSE"
 )
 
+func (e WorkflowExecutionTimeoutTypeEnum) ToPointer() *WorkflowExecutionTimeoutTypeEnum {
+	return &e
+}
+
 func (e *WorkflowExecutionTimeoutTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "START_TO_CLOSE":
-		*e = WorkflowExecutionTimeoutTypeEnum(s)
+		*e = WorkflowExecutionTimeoutTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WorkflowExecutionTimeoutTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for WorkflowExecutionTimeoutTypeEnum: %v", v)
 	}
 }

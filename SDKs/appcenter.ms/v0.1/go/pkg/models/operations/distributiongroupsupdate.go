@@ -43,12 +43,16 @@ const (
 	DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnumTooManyRequests     DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum) ToPointer() *DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -62,10 +66,10 @@ func (e *DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum) UnmarshalJ
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum(s)
+		*e = DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsUpdateDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -87,19 +91,23 @@ const (
 	DistributionGroupsUpdate200ApplicationJSONOriginEnumHockeyapp DistributionGroupsUpdate200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e DistributionGroupsUpdate200ApplicationJSONOriginEnum) ToPointer() *DistributionGroupsUpdate200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *DistributionGroupsUpdate200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = DistributionGroupsUpdate200ApplicationJSONOriginEnum(s)
+		*e = DistributionGroupsUpdate200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DistributionGroupsUpdate200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for DistributionGroupsUpdate200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

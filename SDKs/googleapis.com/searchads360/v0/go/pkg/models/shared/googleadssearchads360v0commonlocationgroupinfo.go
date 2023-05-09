@@ -18,12 +18,16 @@ const (
 	GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnumMilliMiles  GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum = "MILLI_MILES"
 )
 
+func (e GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum) ToPointer() *GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum {
+	return &e
+}
+
 func (e *GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "UNKNOWN":
@@ -33,10 +37,10 @@ func (e *GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum) Unmarsha
 	case "MILES":
 		fallthrough
 	case "MILLI_MILES":
-		*e = GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum(s)
+		*e = GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsSearchads360V0CommonLocationGroupInfoRadiusUnitsEnum: %v", v)
 	}
 }
 

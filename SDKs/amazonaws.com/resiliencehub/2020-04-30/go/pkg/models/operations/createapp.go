@@ -17,19 +17,23 @@ const (
 	CreateAppRequestBodyAssessmentScheduleEnumDaily    CreateAppRequestBodyAssessmentScheduleEnum = "Daily"
 )
 
+func (e CreateAppRequestBodyAssessmentScheduleEnum) ToPointer() *CreateAppRequestBodyAssessmentScheduleEnum {
+	return &e
+}
+
 func (e *CreateAppRequestBodyAssessmentScheduleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Disabled":
 		fallthrough
 	case "Daily":
-		*e = CreateAppRequestBodyAssessmentScheduleEnum(s)
+		*e = CreateAppRequestBodyAssessmentScheduleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAppRequestBodyAssessmentScheduleEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAppRequestBodyAssessmentScheduleEnum: %v", v)
 	}
 }
 

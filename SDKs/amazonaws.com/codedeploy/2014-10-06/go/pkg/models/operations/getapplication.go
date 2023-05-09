@@ -16,17 +16,21 @@ const (
 	GetApplicationXAmzTargetEnumCodeDeploy20141006GetApplication GetApplicationXAmzTargetEnum = "CodeDeploy_20141006.GetApplication"
 )
 
+func (e GetApplicationXAmzTargetEnum) ToPointer() *GetApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeDeploy_20141006.GetApplication":
-		*e = GetApplicationXAmzTargetEnum(s)
+		*e = GetApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

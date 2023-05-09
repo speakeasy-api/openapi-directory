@@ -23,12 +23,16 @@ const (
 	CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnumFirehose  CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum = "FIREHOSE"
 )
 
+func (e CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum) ToPointer() *CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum {
+	return &e
+}
+
 func (e *CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
@@ -46,10 +50,10 @@ func (e *CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum
 	case "APP":
 		fallthrough
 	case "FIREHOSE":
-		*e = CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum(s)
+		*e = CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateDatalakeExceptionsSubscriptionRequestBodySubscriptionProtocolEnum: %v", v)
 	}
 }
 

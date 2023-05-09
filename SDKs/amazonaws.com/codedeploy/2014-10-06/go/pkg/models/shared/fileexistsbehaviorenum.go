@@ -15,20 +15,24 @@ const (
 	FileExistsBehaviorEnumRetain    FileExistsBehaviorEnum = "RETAIN"
 )
 
+func (e FileExistsBehaviorEnum) ToPointer() *FileExistsBehaviorEnum {
+	return &e
+}
+
 func (e *FileExistsBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISALLOW":
 		fallthrough
 	case "OVERWRITE":
 		fallthrough
 	case "RETAIN":
-		*e = FileExistsBehaviorEnum(s)
+		*e = FileExistsBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileExistsBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for FileExistsBehaviorEnum: %v", v)
 	}
 }

@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Etherpad is a real-time collaborative editor scalable to thousands of simultaneous real time users. It provides full data export capabilities, and runs on your server, under your control.
 type SDK struct {
 	Author  *author
@@ -220,6 +235,7 @@ func (s *SDK) AppendTextUsingGET(ctx context.Context, request operations.AppendT
 
 	return res, nil
 }
+
 func (s *SDK) AppendTextUsingPOST(ctx context.Context, request operations.AppendTextUsingPOSTRequest) (*operations.AppendTextUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/appendText"
@@ -296,6 +312,7 @@ func (s *SDK) AppendTextUsingPOST(ctx context.Context, request operations.Append
 
 	return res, nil
 }
+
 func (s *SDK) CopyPadUsingGET(ctx context.Context, request operations.CopyPadUsingGETRequest) (*operations.CopyPadUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/copyPad"
@@ -372,6 +389,7 @@ func (s *SDK) CopyPadUsingGET(ctx context.Context, request operations.CopyPadUsi
 
 	return res, nil
 }
+
 func (s *SDK) CopyPadUsingPOST(ctx context.Context, request operations.CopyPadUsingPOSTRequest) (*operations.CopyPadUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/copyPad"
@@ -448,6 +466,7 @@ func (s *SDK) CopyPadUsingPOST(ctx context.Context, request operations.CopyPadUs
 
 	return res, nil
 }
+
 func (s *SDK) CopyPadWithoutHistoryUsingGET(ctx context.Context, request operations.CopyPadWithoutHistoryUsingGETRequest) (*operations.CopyPadWithoutHistoryUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/copyPadWithoutHistory"
@@ -524,6 +543,7 @@ func (s *SDK) CopyPadWithoutHistoryUsingGET(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *SDK) CopyPadWithoutHistoryUsingPOST(ctx context.Context, request operations.CopyPadWithoutHistoryUsingPOSTRequest) (*operations.CopyPadWithoutHistoryUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/copyPadWithoutHistory"
@@ -600,6 +620,7 @@ func (s *SDK) CopyPadWithoutHistoryUsingPOST(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) GETAttributePoolUsingGET(ctx context.Context, request operations.GETAttributePoolUsingGETRequest) (*operations.GETAttributePoolUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getAttributePool"
@@ -676,6 +697,7 @@ func (s *SDK) GETAttributePoolUsingGET(ctx context.Context, request operations.G
 
 	return res, nil
 }
+
 func (s *SDK) GetAttributePoolUsingPOST(ctx context.Context, request operations.GetAttributePoolUsingPOSTRequest) (*operations.GetAttributePoolUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getAttributePool"
@@ -752,6 +774,7 @@ func (s *SDK) GetAttributePoolUsingPOST(ctx context.Context, request operations.
 
 	return res, nil
 }
+
 func (s *SDK) GETPadIDUsingGET(ctx context.Context, request operations.GETPadIDUsingGETRequest) (*operations.GETPadIDUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getPadID"
@@ -828,6 +851,7 @@ func (s *SDK) GETPadIDUsingGET(ctx context.Context, request operations.GETPadIDU
 
 	return res, nil
 }
+
 func (s *SDK) GetPadIDUsingPOST(ctx context.Context, request operations.GetPadIDUsingPOSTRequest) (*operations.GetPadIDUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getPadID"
@@ -904,6 +928,7 @@ func (s *SDK) GetPadIDUsingPOST(ctx context.Context, request operations.GetPadID
 
 	return res, nil
 }
+
 func (s *SDK) GETRevisionChangesetUsingGET(ctx context.Context, request operations.GETRevisionChangesetUsingGETRequest) (*operations.GETRevisionChangesetUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getRevisionChangeset"
@@ -980,6 +1005,7 @@ func (s *SDK) GETRevisionChangesetUsingGET(ctx context.Context, request operatio
 
 	return res, nil
 }
+
 func (s *SDK) GetRevisionChangesetUsingPOST(ctx context.Context, request operations.GetRevisionChangesetUsingPOSTRequest) (*operations.GetRevisionChangesetUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getRevisionChangeset"
@@ -1056,6 +1082,7 @@ func (s *SDK) GetRevisionChangesetUsingPOST(ctx context.Context, request operati
 
 	return res, nil
 }
+
 func (s *SDK) GETSavedRevisionsCountUsingGET(ctx context.Context, request operations.GETSavedRevisionsCountUsingGETRequest) (*operations.GETSavedRevisionsCountUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getSavedRevisionsCount"
@@ -1132,6 +1159,7 @@ func (s *SDK) GETSavedRevisionsCountUsingGET(ctx context.Context, request operat
 
 	return res, nil
 }
+
 func (s *SDK) GetSavedRevisionsCountUsingPOST(ctx context.Context, request operations.GetSavedRevisionsCountUsingPOSTRequest) (*operations.GetSavedRevisionsCountUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getSavedRevisionsCount"
@@ -1208,6 +1236,7 @@ func (s *SDK) GetSavedRevisionsCountUsingPOST(ctx context.Context, request opera
 
 	return res, nil
 }
+
 func (s *SDK) GETStatsUsingGET(ctx context.Context) (*operations.GETStatsUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getStats"
@@ -1280,6 +1309,7 @@ func (s *SDK) GETStatsUsingGET(ctx context.Context) (*operations.GETStatsUsingGE
 
 	return res, nil
 }
+
 func (s *SDK) GetStatsUsingPOST(ctx context.Context) (*operations.GetStatsUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/getStats"
@@ -1352,6 +1382,7 @@ func (s *SDK) GetStatsUsingPOST(ctx context.Context) (*operations.GetStatsUsingP
 
 	return res, nil
 }
+
 func (s *SDK) ListSavedRevisionsUsingGET(ctx context.Context, request operations.ListSavedRevisionsUsingGETRequest) (*operations.ListSavedRevisionsUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listSavedRevisions"
@@ -1428,6 +1459,7 @@ func (s *SDK) ListSavedRevisionsUsingGET(ctx context.Context, request operations
 
 	return res, nil
 }
+
 func (s *SDK) ListSavedRevisionsUsingPOST(ctx context.Context, request operations.ListSavedRevisionsUsingPOSTRequest) (*operations.ListSavedRevisionsUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/listSavedRevisions"
@@ -1504,6 +1536,7 @@ func (s *SDK) ListSavedRevisionsUsingPOST(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) MovePadUsingGET(ctx context.Context, request operations.MovePadUsingGETRequest) (*operations.MovePadUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/movePad"
@@ -1580,6 +1613,7 @@ func (s *SDK) MovePadUsingGET(ctx context.Context, request operations.MovePadUsi
 
 	return res, nil
 }
+
 func (s *SDK) MovePadUsingPOST(ctx context.Context, request operations.MovePadUsingPOSTRequest) (*operations.MovePadUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/movePad"
@@ -1656,6 +1690,7 @@ func (s *SDK) MovePadUsingPOST(ctx context.Context, request operations.MovePadUs
 
 	return res, nil
 }
+
 func (s *SDK) RestoreRevisionUsingGET(ctx context.Context, request operations.RestoreRevisionUsingGETRequest) (*operations.RestoreRevisionUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/restoreRevision"
@@ -1732,6 +1767,7 @@ func (s *SDK) RestoreRevisionUsingGET(ctx context.Context, request operations.Re
 
 	return res, nil
 }
+
 func (s *SDK) RestoreRevisionUsingPOST(ctx context.Context, request operations.RestoreRevisionUsingPOSTRequest) (*operations.RestoreRevisionUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/restoreRevision"
@@ -1808,6 +1844,7 @@ func (s *SDK) RestoreRevisionUsingPOST(ctx context.Context, request operations.R
 
 	return res, nil
 }
+
 func (s *SDK) SaveRevisionUsingGET(ctx context.Context, request operations.SaveRevisionUsingGETRequest) (*operations.SaveRevisionUsingGETResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/saveRevision"
@@ -1884,6 +1921,7 @@ func (s *SDK) SaveRevisionUsingGET(ctx context.Context, request operations.SaveR
 
 	return res, nil
 }
+
 func (s *SDK) SaveRevisionUsingPOST(ctx context.Context, request operations.SaveRevisionUsingPOSTRequest) (*operations.SaveRevisionUsingPOSTResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/saveRevision"

@@ -16,21 +16,25 @@ const (
 	JSONPathMatcherJSONMatcherEnumRegexMatch                       JSONPathMatcherJSONMatcherEnum = "REGEX_MATCH"
 )
 
+func (e JSONPathMatcherJSONMatcherEnum) ToPointer() *JSONPathMatcherJSONMatcherEnum {
+	return &e
+}
+
 func (e *JSONPathMatcherJSONMatcherEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON_PATH_MATCHER_OPTION_UNSPECIFIED":
 		fallthrough
 	case "EXACT_MATCH":
 		fallthrough
 	case "REGEX_MATCH":
-		*e = JSONPathMatcherJSONMatcherEnum(s)
+		*e = JSONPathMatcherJSONMatcherEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JSONPathMatcherJSONMatcherEnum: %s", s)
+		return fmt.Errorf("invalid value for JSONPathMatcherJSONMatcherEnum: %v", v)
 	}
 }
 

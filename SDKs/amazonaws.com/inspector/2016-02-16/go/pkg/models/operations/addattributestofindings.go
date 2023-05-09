@@ -16,17 +16,21 @@ const (
 	AddAttributesToFindingsXAmzTargetEnumInspectorServiceAddAttributesToFindings AddAttributesToFindingsXAmzTargetEnum = "InspectorService.AddAttributesToFindings"
 )
 
+func (e AddAttributesToFindingsXAmzTargetEnum) ToPointer() *AddAttributesToFindingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddAttributesToFindingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InspectorService.AddAttributesToFindings":
-		*e = AddAttributesToFindingsXAmzTargetEnum(s)
+		*e = AddAttributesToFindingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddAttributesToFindingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddAttributesToFindingsXAmzTargetEnum: %v", v)
 	}
 }
 

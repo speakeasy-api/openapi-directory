@@ -16,21 +16,25 @@ const (
 	AutoscalingSettingsAlgorithmEnumAutoscalingAlgorithmBasic   AutoscalingSettingsAlgorithmEnum = "AUTOSCALING_ALGORITHM_BASIC"
 )
 
+func (e AutoscalingSettingsAlgorithmEnum) ToPointer() *AutoscalingSettingsAlgorithmEnum {
+	return &e
+}
+
 func (e *AutoscalingSettingsAlgorithmEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTOSCALING_ALGORITHM_UNKNOWN":
 		fallthrough
 	case "AUTOSCALING_ALGORITHM_NONE":
 		fallthrough
 	case "AUTOSCALING_ALGORITHM_BASIC":
-		*e = AutoscalingSettingsAlgorithmEnum(s)
+		*e = AutoscalingSettingsAlgorithmEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoscalingSettingsAlgorithmEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoscalingSettingsAlgorithmEnum: %v", v)
 	}
 }
 

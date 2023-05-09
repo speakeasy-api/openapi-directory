@@ -14,16 +14,20 @@ const (
 	MessageCode405PISEnumServiceInvalid MessageCode405PISEnum = "SERVICE_INVALID"
 )
 
+func (e MessageCode405PISEnum) ToPointer() *MessageCode405PISEnum {
+	return &e
+}
+
 func (e *MessageCode405PISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERVICE_INVALID":
-		*e = MessageCode405PISEnum(s)
+		*e = MessageCode405PISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode405PISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode405PISEnum: %v", v)
 	}
 }

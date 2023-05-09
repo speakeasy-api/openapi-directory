@@ -30,12 +30,16 @@ const (
 	AssetAssociationRoleEnumAssetRoleCoverImage     AssetAssociationRoleEnum = "ASSET_ROLE_COVER_IMAGE"
 )
 
+func (e AssetAssociationRoleEnum) ToPointer() *AssetAssociationRoleEnum {
+	return &e
+}
+
 func (e *AssetAssociationRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSET_ROLE_UNSPECIFIED":
 		fallthrough
 	case "ASSET_ROLE_MAIN":
@@ -69,10 +73,10 @@ func (e *AssetAssociationRoleEnum) UnmarshalJSON(data []byte) error {
 	case "ASSET_ROLE_ICON":
 		fallthrough
 	case "ASSET_ROLE_COVER_IMAGE":
-		*e = AssetAssociationRoleEnum(s)
+		*e = AssetAssociationRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetAssociationRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetAssociationRoleEnum: %v", v)
 	}
 }
 

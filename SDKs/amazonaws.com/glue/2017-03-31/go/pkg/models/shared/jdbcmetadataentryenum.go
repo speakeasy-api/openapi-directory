@@ -14,18 +14,22 @@ const (
 	JdbcMetadataEntryEnumRawtypes JdbcMetadataEntryEnum = "RAWTYPES"
 )
 
+func (e JdbcMetadataEntryEnum) ToPointer() *JdbcMetadataEntryEnum {
+	return &e
+}
+
 func (e *JdbcMetadataEntryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMMENTS":
 		fallthrough
 	case "RAWTYPES":
-		*e = JdbcMetadataEntryEnum(s)
+		*e = JdbcMetadataEntryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JdbcMetadataEntryEnum: %s", s)
+		return fmt.Errorf("invalid value for JdbcMetadataEntryEnum: %v", v)
 	}
 }

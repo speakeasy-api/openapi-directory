@@ -16,21 +16,25 @@ const (
 	ServiceDatabaseTypeEnumSpanner                 ServiceDatabaseTypeEnum = "SPANNER"
 )
 
+func (e ServiceDatabaseTypeEnum) ToPointer() *ServiceDatabaseTypeEnum {
+	return &e
+}
+
 func (e *ServiceDatabaseTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATABASE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MYSQL":
 		fallthrough
 	case "SPANNER":
-		*e = ServiceDatabaseTypeEnum(s)
+		*e = ServiceDatabaseTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceDatabaseTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceDatabaseTypeEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	ServiceReleaseChannelEnumStable                    ServiceReleaseChannelEnum = "STABLE"
 )
 
+func (e ServiceReleaseChannelEnum) ToPointer() *ServiceReleaseChannelEnum {
+	return &e
+}
+
 func (e *ServiceReleaseChannelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELEASE_CHANNEL_UNSPECIFIED":
 		fallthrough
 	case "CANARY":
 		fallthrough
 	case "STABLE":
-		*e = ServiceReleaseChannelEnum(s)
+		*e = ServiceReleaseChannelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceReleaseChannelEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceReleaseChannelEnum: %v", v)
 	}
 }
 
@@ -75,12 +83,16 @@ const (
 	ServiceStateEnumError            ServiceStateEnum = "ERROR"
 )
 
+func (e ServiceStateEnum) ToPointer() *ServiceStateEnum {
+	return &e
+}
+
 func (e *ServiceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -96,10 +108,10 @@ func (e *ServiceStateEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "ERROR":
-		*e = ServiceStateEnum(s)
+		*e = ServiceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceStateEnum: %v", v)
 	}
 }
 
@@ -112,21 +124,25 @@ const (
 	ServiceTierEnumEnterprise      ServiceTierEnum = "ENTERPRISE"
 )
 
+func (e ServiceTierEnum) ToPointer() *ServiceTierEnum {
+	return &e
+}
+
 func (e *ServiceTierEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIER_UNSPECIFIED":
 		fallthrough
 	case "DEVELOPER":
 		fallthrough
 	case "ENTERPRISE":
-		*e = ServiceTierEnum(s)
+		*e = ServiceTierEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceTierEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceTierEnum: %v", v)
 	}
 }
 

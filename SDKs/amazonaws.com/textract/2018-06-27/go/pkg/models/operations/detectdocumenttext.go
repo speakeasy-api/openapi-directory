@@ -16,17 +16,21 @@ const (
 	DetectDocumentTextXAmzTargetEnumTextractDetectDocumentText DetectDocumentTextXAmzTargetEnum = "Textract.DetectDocumentText"
 )
 
+func (e DetectDocumentTextXAmzTargetEnum) ToPointer() *DetectDocumentTextXAmzTargetEnum {
+	return &e
+}
+
 func (e *DetectDocumentTextXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Textract.DetectDocumentText":
-		*e = DetectDocumentTextXAmzTargetEnum(s)
+		*e = DetectDocumentTextXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetectDocumentTextXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DetectDocumentTextXAmzTargetEnum: %v", v)
 	}
 }
 

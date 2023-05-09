@@ -17,12 +17,16 @@ const (
 	TableCellBorderDashStyleEnumDash                 TableCellBorderDashStyleEnum = "DASH"
 )
 
+func (e TableCellBorderDashStyleEnum) ToPointer() *TableCellBorderDashStyleEnum {
+	return &e
+}
+
 func (e *TableCellBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DASH_STYLE_UNSPECIFIED":
 		fallthrough
 	case "SOLID":
@@ -30,10 +34,10 @@ func (e *TableCellBorderDashStyleEnum) UnmarshalJSON(data []byte) error {
 	case "DOT":
 		fallthrough
 	case "DASH":
-		*e = TableCellBorderDashStyleEnum(s)
+		*e = TableCellBorderDashStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TableCellBorderDashStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for TableCellBorderDashStyleEnum: %v", v)
 	}
 }
 

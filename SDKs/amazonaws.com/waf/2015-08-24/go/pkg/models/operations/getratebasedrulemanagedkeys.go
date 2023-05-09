@@ -16,17 +16,21 @@ const (
 	GetRateBasedRuleManagedKeysXAmzTargetEnumAwswaf20150824GetRateBasedRuleManagedKeys GetRateBasedRuleManagedKeysXAmzTargetEnum = "AWSWAF_20150824.GetRateBasedRuleManagedKeys"
 )
 
+func (e GetRateBasedRuleManagedKeysXAmzTargetEnum) ToPointer() *GetRateBasedRuleManagedKeysXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRateBasedRuleManagedKeysXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.GetRateBasedRuleManagedKeys":
-		*e = GetRateBasedRuleManagedKeysXAmzTargetEnum(s)
+		*e = GetRateBasedRuleManagedKeysXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRateBasedRuleManagedKeysXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRateBasedRuleManagedKeysXAmzTargetEnum: %v", v)
 	}
 }
 

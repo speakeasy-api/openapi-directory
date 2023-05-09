@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Amazon Connect Wisdom delivers agents the information they need to solve customer issues as they're actively speaking with customers. Agents can search across connected repositories from within their agent desktop to find answers quickly. Use Amazon Connect Wisdom to create an assistant and a knowledge base, for example, or manage content by uploading custom files.
 // https://docs.aws.amazon.com/wisdom/ - Amazon Web Services documentation
 type SDK struct {
@@ -210,7 +225,10 @@ func (s *SDK) CreateAssistant(ctx context.Context, request operations.CreateAssi
 // CreateAssistantAssociation - Creates an association between an Amazon Connect Wisdom assistant and another resource. Currently, the only supported association is with a knowledge base. An assistant can have only a single association.
 func (s *SDK) CreateAssistantAssociation(ctx context.Context, request operations.CreateAssistantAssociationRequest) (*operations.CreateAssistantAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -316,7 +334,10 @@ func (s *SDK) CreateAssistantAssociation(ctx context.Context, request operations
 // CreateContent - Creates Wisdom content. Before to calling this API, use <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_StartContentUpload.html">StartContentUpload</a> to upload an asset.
 func (s *SDK) CreateContent(ctx context.Context, request operations.CreateContentRequest) (*operations.CreateContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -518,7 +539,10 @@ func (s *SDK) CreateKnowledgeBase(ctx context.Context, request operations.Create
 // CreateSession - Creates a session. A session is a contextual container used for generating recommendations. Amazon Connect creates a new Wisdom session for each contact on which Wisdom is enabled.
 func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessionRequest) (*operations.CreateSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -604,7 +628,10 @@ func (s *SDK) CreateSession(ctx context.Context, request operations.CreateSessio
 // DeleteAssistant - Deletes an assistant.
 func (s *SDK) DeleteAssistant(ctx context.Context, request operations.DeleteAssistantRequest) (*operations.DeleteAssistantResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -680,7 +707,10 @@ func (s *SDK) DeleteAssistant(ctx context.Context, request operations.DeleteAssi
 // DeleteAssistantAssociation - Deletes an assistant association.
 func (s *SDK) DeleteAssistantAssociation(ctx context.Context, request operations.DeleteAssistantAssociationRequest) (*operations.DeleteAssistantAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations/{assistantAssociationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations/{assistantAssociationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -756,7 +786,10 @@ func (s *SDK) DeleteAssistantAssociation(ctx context.Context, request operations
 // DeleteContent - Deletes the content.
 func (s *SDK) DeleteContent(ctx context.Context, request operations.DeleteContentRequest) (*operations.DeleteContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -832,7 +865,10 @@ func (s *SDK) DeleteContent(ctx context.Context, request operations.DeleteConten
 // DeleteKnowledgeBase - <p>Deletes the knowledge base.</p> <note> <p>When you use this API to delete an external knowledge base such as Salesforce or ServiceNow, you must also delete the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/Welcome.html">Amazon AppIntegrations</a> DataIntegration. This is because you can't reuse the DataIntegration after it's been associated with an external knowledge base. However, you can delete and recreate it. See <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DeleteDataIntegration.html">DeleteDataIntegration</a> and <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> in the <i>Amazon AppIntegrations API Reference</i>.</p> </note>
 func (s *SDK) DeleteKnowledgeBase(ctx context.Context, request operations.DeleteKnowledgeBaseRequest) (*operations.DeleteKnowledgeBaseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -918,7 +954,10 @@ func (s *SDK) DeleteKnowledgeBase(ctx context.Context, request operations.Delete
 // GetAssistant - Retrieves information about an assistant.
 func (s *SDK) GetAssistant(ctx context.Context, request operations.GetAssistantRequest) (*operations.GetAssistantResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -994,7 +1033,10 @@ func (s *SDK) GetAssistant(ctx context.Context, request operations.GetAssistantR
 // GetAssistantAssociation - Retrieves information about an assistant association.
 func (s *SDK) GetAssistantAssociation(ctx context.Context, request operations.GetAssistantAssociationRequest) (*operations.GetAssistantAssociationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations/{assistantAssociationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations/{assistantAssociationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1070,7 +1112,10 @@ func (s *SDK) GetAssistantAssociation(ctx context.Context, request operations.Ge
 // GetContent - Retrieves content, including a pre-signed URL to download the content.
 func (s *SDK) GetContent(ctx context.Context, request operations.GetContentRequest) (*operations.GetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1146,7 +1191,10 @@ func (s *SDK) GetContent(ctx context.Context, request operations.GetContentReque
 // GetContentSummary - Retrieves summary information about the content.
 func (s *SDK) GetContentSummary(ctx context.Context, request operations.GetContentSummaryRequest) (*operations.GetContentSummaryResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}/summary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}/summary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1222,7 +1270,10 @@ func (s *SDK) GetContentSummary(ctx context.Context, request operations.GetConte
 // GetKnowledgeBase - Retrieves information about the knowledge base.
 func (s *SDK) GetKnowledgeBase(ctx context.Context, request operations.GetKnowledgeBaseRequest) (*operations.GetKnowledgeBaseResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1298,7 +1349,10 @@ func (s *SDK) GetKnowledgeBase(ctx context.Context, request operations.GetKnowle
 // GetRecommendations - Retrieves recommendations for the specified session. To avoid retrieving the same recommendations in subsequent calls, use <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_NotifyRecommendationsReceived.html">NotifyRecommendationsReceived</a>. This API supports long-polling behavior with the <code>waitTimeSeconds</code> parameter. Short poll is the default behavior and only returns recommendations already available. To perform a manual query against an assistant, use <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QueryAssistant.html">QueryAssistant</a>.
 func (s *SDK) GetRecommendations(ctx context.Context, request operations.GetRecommendationsRequest) (*operations.GetRecommendationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}/recommendations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}/recommendations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1378,7 +1432,10 @@ func (s *SDK) GetRecommendations(ctx context.Context, request operations.GetReco
 // GetSession - Retrieves information for a specified session.
 func (s *SDK) GetSession(ctx context.Context, request operations.GetSessionRequest) (*operations.GetSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1454,7 +1511,10 @@ func (s *SDK) GetSession(ctx context.Context, request operations.GetSessionReque
 // ListAssistantAssociations - Lists information about assistant associations.
 func (s *SDK) ListAssistantAssociations(ctx context.Context, request operations.ListAssistantAssociationsRequest) (*operations.ListAssistantAssociationsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/associations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1604,7 +1664,10 @@ func (s *SDK) ListAssistants(ctx context.Context, request operations.ListAssista
 // ListContents - Lists the content.
 func (s *SDK) ListContents(ctx context.Context, request operations.ListContentsRequest) (*operations.ListContentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1754,7 +1817,10 @@ func (s *SDK) ListKnowledgeBases(ctx context.Context, request operations.ListKno
 // ListTagsForResource - Lists the tags for the specified resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1810,7 +1876,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // NotifyRecommendationsReceived - Removes the specified recommendations from the specified assistant's queue of newly available recommendations. You can use this API in conjunction with <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a> and a <code>waitTimeSeconds</code> input for long-polling behavior and avoiding duplicate recommendations.
 func (s *SDK) NotifyRecommendationsReceived(ctx context.Context, request operations.NotifyRecommendationsReceivedRequest) (*operations.NotifyRecommendationsReceivedResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}/recommendations/notify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/sessions/{sessionId}/recommendations/notify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1896,7 +1965,10 @@ func (s *SDK) NotifyRecommendationsReceived(ctx context.Context, request operati
 // QueryAssistant - Performs a manual search against the specified assistant. To retrieve recommendations for an assistant, use <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetRecommendations.html">GetRecommendations</a>.
 func (s *SDK) QueryAssistant(ctx context.Context, request operations.QueryAssistantRequest) (*operations.QueryAssistantResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/query", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/query", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1986,7 +2058,10 @@ func (s *SDK) QueryAssistant(ctx context.Context, request operations.QueryAssist
 // RemoveKnowledgeBaseTemplateURI - Removes a URI template from a knowledge base.
 func (s *SDK) RemoveKnowledgeBaseTemplateURI(ctx context.Context, request operations.RemoveKnowledgeBaseTemplateURIRequest) (*operations.RemoveKnowledgeBaseTemplateURIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/templateUri", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/templateUri", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2062,7 +2137,10 @@ func (s *SDK) RemoveKnowledgeBaseTemplateURI(ctx context.Context, request operat
 // SearchContent - Searches for content in a specified knowledge base. Can be used to get a specific content resource by its name.
 func (s *SDK) SearchContent(ctx context.Context, request operations.SearchContentRequest) (*operations.SearchContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/search", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/search", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2152,7 +2230,10 @@ func (s *SDK) SearchContent(ctx context.Context, request operations.SearchConten
 // SearchSessions - Searches for sessions.
 func (s *SDK) SearchSessions(ctx context.Context, request operations.SearchSessionsRequest) (*operations.SearchSessionsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/searchSessions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/assistants/{assistantId}/searchSessions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2242,7 +2323,10 @@ func (s *SDK) SearchSessions(ctx context.Context, request operations.SearchSessi
 // StartContentUpload - Get a URL to upload content to a knowledge base. To upload content, first make a PUT request to the returned URL with your file, making sure to include the required headers. Then use <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_CreateContent.html">CreateContent</a> to finalize the content creation process or <a href="https://docs.aws.amazon.com/wisdom/latest/APIReference/API_UpdateContent.html">UpdateContent</a> to modify an existing resource. You can only upload content to a knowledge base of type CUSTOM.
 func (s *SDK) StartContentUpload(ctx context.Context, request operations.StartContentUploadRequest) (*operations.StartContentUploadResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2328,7 +2412,10 @@ func (s *SDK) StartContentUpload(ctx context.Context, request operations.StartCo
 // TagResource - Adds the specified tags to the specified resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2404,7 +2491,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Removes the specified tags from the specified resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2464,7 +2554,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateContent - Updates information about the content.
 func (s *SDK) UpdateContent(ctx context.Context, request operations.UpdateContentRequest) (*operations.UpdateContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/contents/{contentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2560,7 +2653,10 @@ func (s *SDK) UpdateContent(ctx context.Context, request operations.UpdateConten
 // UpdateKnowledgeBaseTemplateURI - Updates the template URI of a knowledge base. This is only supported for knowledge bases of type EXTERNAL. Include a single variable in <code>${variable}</code> format; this interpolated by Wisdom using ingested content. For example, if you ingest a Salesforce article, it has an <code>Id</code> value, and you can set the template URI to <code>https://myInstanceName.lightning.force.com/lightning/r/Knowledge__kav/*${Id}*/view</code>.
 func (s *SDK) UpdateKnowledgeBaseTemplateURI(ctx context.Context, request operations.UpdateKnowledgeBaseTemplateURIRequest) (*operations.UpdateKnowledgeBaseTemplateURIResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/templateUri", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/knowledgeBases/{knowledgeBaseId}/templateUri", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

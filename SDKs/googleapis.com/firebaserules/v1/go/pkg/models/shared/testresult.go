@@ -16,21 +16,25 @@ const (
 	TestResultStateEnumFailure          TestResultStateEnum = "FAILURE"
 )
 
+func (e TestResultStateEnum) ToPointer() *TestResultStateEnum {
+	return &e
+}
+
 func (e *TestResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS":
 		fallthrough
 	case "FAILURE":
-		*e = TestResultStateEnum(s)
+		*e = TestResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TestResultStateEnum: %v", v)
 	}
 }
 

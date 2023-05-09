@@ -14,18 +14,22 @@ const (
 	FraudDetectionReasonEnumVoiceSpoofing  FraudDetectionReasonEnum = "VOICE_SPOOFING"
 )
 
+func (e FraudDetectionReasonEnum) ToPointer() *FraudDetectionReasonEnum {
+	return &e
+}
+
 func (e *FraudDetectionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KNOWN_FRAUDSTER":
 		fallthrough
 	case "VOICE_SPOOFING":
-		*e = FraudDetectionReasonEnum(s)
+		*e = FraudDetectionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FraudDetectionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for FraudDetectionReasonEnum: %v", v)
 	}
 }

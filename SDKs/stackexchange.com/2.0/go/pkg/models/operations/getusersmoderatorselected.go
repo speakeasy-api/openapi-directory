@@ -16,19 +16,23 @@ const (
 	GetUsersModeratorsElectedOrderEnumAsc  GetUsersModeratorsElectedOrderEnum = "asc"
 )
 
+func (e GetUsersModeratorsElectedOrderEnum) ToPointer() *GetUsersModeratorsElectedOrderEnum {
+	return &e
+}
+
 func (e *GetUsersModeratorsElectedOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetUsersModeratorsElectedOrderEnum(s)
+		*e = GetUsersModeratorsElectedOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersModeratorsElectedOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersModeratorsElectedOrderEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetUsersModeratorsElectedSortEnumModified   GetUsersModeratorsElectedSortEnum = "modified"
 )
 
+func (e GetUsersModeratorsElectedSortEnum) ToPointer() *GetUsersModeratorsElectedSortEnum {
+	return &e
+}
+
 func (e *GetUsersModeratorsElectedSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "reputation":
 		fallthrough
 	case "creation":
@@ -55,10 +63,10 @@ func (e *GetUsersModeratorsElectedSortEnum) UnmarshalJSON(data []byte) error {
 	case "name":
 		fallthrough
 	case "modified":
-		*e = GetUsersModeratorsElectedSortEnum(s)
+		*e = GetUsersModeratorsElectedSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersModeratorsElectedSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersModeratorsElectedSortEnum: %v", v)
 	}
 }
 

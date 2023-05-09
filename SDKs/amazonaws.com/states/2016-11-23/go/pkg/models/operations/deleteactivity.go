@@ -16,17 +16,21 @@ const (
 	DeleteActivityXAmzTargetEnumAwsStepFunctionsDeleteActivity DeleteActivityXAmzTargetEnum = "AWSStepFunctions.DeleteActivity"
 )
 
+func (e DeleteActivityXAmzTargetEnum) ToPointer() *DeleteActivityXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteActivityXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSStepFunctions.DeleteActivity":
-		*e = DeleteActivityXAmzTargetEnum(s)
+		*e = DeleteActivityXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteActivityXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteActivityXAmzTargetEnum: %v", v)
 	}
 }
 

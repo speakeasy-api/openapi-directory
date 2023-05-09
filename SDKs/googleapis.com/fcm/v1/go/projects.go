@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FcmProjectsMessagesSend - Send a message to specified target (a registration token, topic or condition).
 func (s *projects) FcmProjectsMessagesSend(ctx context.Context, request operations.FcmProjectsMessagesSendRequest, security operations.FcmProjectsMessagesSendSecurity) (*operations.FcmProjectsMessagesSendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/messages:send", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/messages:send", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendMessageRequest", "json")
 	if err != nil {

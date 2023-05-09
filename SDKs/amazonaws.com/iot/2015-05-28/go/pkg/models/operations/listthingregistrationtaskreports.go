@@ -17,19 +17,23 @@ const (
 	ListThingRegistrationTaskReportsReportTypeEnumResults ListThingRegistrationTaskReportsReportTypeEnum = "RESULTS"
 )
 
+func (e ListThingRegistrationTaskReportsReportTypeEnum) ToPointer() *ListThingRegistrationTaskReportsReportTypeEnum {
+	return &e
+}
+
 func (e *ListThingRegistrationTaskReportsReportTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERRORS":
 		fallthrough
 	case "RESULTS":
-		*e = ListThingRegistrationTaskReportsReportTypeEnum(s)
+		*e = ListThingRegistrationTaskReportsReportTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListThingRegistrationTaskReportsReportTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListThingRegistrationTaskReportsReportTypeEnum: %v", v)
 	}
 }
 

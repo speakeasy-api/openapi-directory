@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3TestCaseResultTestResultEnumFailed                GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum = "FAILED"
 )
 
+func (e GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum) ToPointer() *GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEST_RESULT_UNSPECIFIED":
 		fallthrough
 	case "PASSED":
 		fallthrough
 	case "FAILED":
-		*e = GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum(s)
+		*e = GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3TestCaseResultTestResultEnum: %v", v)
 	}
 }
 

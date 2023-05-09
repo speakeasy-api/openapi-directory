@@ -15,17 +15,21 @@ const (
 	POSTDisassociateGlobalReplicationGroupActionEnumDisassociateGlobalReplicationGroup POSTDisassociateGlobalReplicationGroupActionEnum = "DisassociateGlobalReplicationGroup"
 )
 
+func (e POSTDisassociateGlobalReplicationGroupActionEnum) ToPointer() *POSTDisassociateGlobalReplicationGroupActionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateGlobalReplicationGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisassociateGlobalReplicationGroup":
-		*e = POSTDisassociateGlobalReplicationGroupActionEnum(s)
+		*e = POSTDisassociateGlobalReplicationGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateGlobalReplicationGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateGlobalReplicationGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisassociateGlobalReplicationGroupVersionEnumTwoThousandAndFifteen0202 POSTDisassociateGlobalReplicationGroupVersionEnum = "2015-02-02"
 )
 
+func (e POSTDisassociateGlobalReplicationGroupVersionEnum) ToPointer() *POSTDisassociateGlobalReplicationGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTDisassociateGlobalReplicationGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTDisassociateGlobalReplicationGroupVersionEnum(s)
+		*e = POSTDisassociateGlobalReplicationGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisassociateGlobalReplicationGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisassociateGlobalReplicationGroupVersionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetHypervisorPropertyMappingsXAmzTargetEnumBackupOnPremisesV20210101GetHypervisorPropertyMappings GetHypervisorPropertyMappingsXAmzTargetEnum = "BackupOnPremises_v20210101.GetHypervisorPropertyMappings"
 )
 
+func (e GetHypervisorPropertyMappingsXAmzTargetEnum) ToPointer() *GetHypervisorPropertyMappingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetHypervisorPropertyMappingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BackupOnPremises_v20210101.GetHypervisorPropertyMappings":
-		*e = GetHypervisorPropertyMappingsXAmzTargetEnum(s)
+		*e = GetHypervisorPropertyMappingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHypervisorPropertyMappingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHypervisorPropertyMappingsXAmzTargetEnum: %v", v)
 	}
 }
 

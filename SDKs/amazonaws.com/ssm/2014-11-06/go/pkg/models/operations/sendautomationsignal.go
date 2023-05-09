@@ -16,17 +16,21 @@ const (
 	SendAutomationSignalXAmzTargetEnumAmazonSsmSendAutomationSignal SendAutomationSignalXAmzTargetEnum = "AmazonSSM.SendAutomationSignal"
 )
 
+func (e SendAutomationSignalXAmzTargetEnum) ToPointer() *SendAutomationSignalXAmzTargetEnum {
+	return &e
+}
+
 func (e *SendAutomationSignalXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.SendAutomationSignal":
-		*e = SendAutomationSignalXAmzTargetEnum(s)
+		*e = SendAutomationSignalXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SendAutomationSignalXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SendAutomationSignalXAmzTargetEnum: %v", v)
 	}
 }
 

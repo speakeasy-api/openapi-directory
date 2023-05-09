@@ -22,12 +22,16 @@ const (
 	LeagueLeadersBySeasonColumnEnumTouchdowns    LeagueLeadersBySeasonColumnEnum = "Touchdowns"
 )
 
+func (e LeagueLeadersBySeasonColumnEnum) ToPointer() *LeagueLeadersBySeasonColumnEnum {
+	return &e
+}
+
 func (e *LeagueLeadersBySeasonColumnEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FantasyPoints":
 		fallthrough
 	case "PassingYards":
@@ -41,10 +45,10 @@ func (e *LeagueLeadersBySeasonColumnEnum) UnmarshalJSON(data []byte) error {
 	case "Interceptions":
 		fallthrough
 	case "Touchdowns":
-		*e = LeagueLeadersBySeasonColumnEnum(s)
+		*e = LeagueLeadersBySeasonColumnEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeagueLeadersBySeasonColumnEnum: %s", s)
+		return fmt.Errorf("invalid value for LeagueLeadersBySeasonColumnEnum: %v", v)
 	}
 }
 
@@ -56,19 +60,23 @@ const (
 	LeagueLeadersBySeasonFormatEnumJSON LeagueLeadersBySeasonFormatEnum = "JSON"
 )
 
+func (e LeagueLeadersBySeasonFormatEnum) ToPointer() *LeagueLeadersBySeasonFormatEnum {
+	return &e
+}
+
 func (e *LeagueLeadersBySeasonFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = LeagueLeadersBySeasonFormatEnum(s)
+		*e = LeagueLeadersBySeasonFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeagueLeadersBySeasonFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LeagueLeadersBySeasonFormatEnum: %v", v)
 	}
 }
 
@@ -89,12 +97,16 @@ const (
 	LeagueLeadersBySeasonPositionEnumK       LeagueLeadersBySeasonPositionEnum = "K"
 )
 
+func (e LeagueLeadersBySeasonPositionEnum) ToPointer() *LeagueLeadersBySeasonPositionEnum {
+	return &e
+}
+
 func (e *LeagueLeadersBySeasonPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "OFFENSE":
@@ -116,10 +128,10 @@ func (e *LeagueLeadersBySeasonPositionEnum) UnmarshalJSON(data []byte) error {
 	case "DB":
 		fallthrough
 	case "K":
-		*e = LeagueLeadersBySeasonPositionEnum(s)
+		*e = LeagueLeadersBySeasonPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LeagueLeadersBySeasonPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for LeagueLeadersBySeasonPositionEnum: %v", v)
 	}
 }
 

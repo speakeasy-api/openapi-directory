@@ -16,17 +16,21 @@ const (
 	GETModifyInstanceEventStartTimeActionEnumModifyInstanceEventStartTime GETModifyInstanceEventStartTimeActionEnum = "ModifyInstanceEventStartTime"
 )
 
+func (e GETModifyInstanceEventStartTimeActionEnum) ToPointer() *GETModifyInstanceEventStartTimeActionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceEventStartTimeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyInstanceEventStartTime":
-		*e = GETModifyInstanceEventStartTimeActionEnum(s)
+		*e = GETModifyInstanceEventStartTimeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceEventStartTimeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceEventStartTimeActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETModifyInstanceEventStartTimeVersionEnumTwoThousandAndSixteen1115 GETModifyInstanceEventStartTimeVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyInstanceEventStartTimeVersionEnum) ToPointer() *GETModifyInstanceEventStartTimeVersionEnum {
+	return &e
+}
+
 func (e *GETModifyInstanceEventStartTimeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyInstanceEventStartTimeVersionEnum(s)
+		*e = GETModifyInstanceEventStartTimeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyInstanceEventStartTimeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyInstanceEventStartTimeVersionEnum: %v", v)
 	}
 }
 

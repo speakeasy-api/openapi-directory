@@ -16,12 +16,16 @@ const (
 	ExecutionTypeEnumResetBudgetAction   ExecutionTypeEnum = "RESET_BUDGET_ACTION"
 )
 
+func (e ExecutionTypeEnum) ToPointer() *ExecutionTypeEnum {
+	return &e
+}
+
 func (e *ExecutionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPROVE_BUDGET_ACTION":
 		fallthrough
 	case "RETRY_BUDGET_ACTION":
@@ -29,9 +33,9 @@ func (e *ExecutionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "REVERSE_BUDGET_ACTION":
 		fallthrough
 	case "RESET_BUDGET_ACTION":
-		*e = ExecutionTypeEnum(s)
+		*e = ExecutionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionTypeEnum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newContentCategories(defaultClient, securityClient HTTPClient, serverURL, l
 // DfareportingContentCategoriesDelete - Deletes an existing content category.
 func (s *contentCategories) DfareportingContentCategoriesDelete(ctx context.Context, request operations.DfareportingContentCategoriesDeleteRequest, security operations.DfareportingContentCategoriesDeleteSecurity) (*operations.DfareportingContentCategoriesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *contentCategories) DfareportingContentCategoriesDelete(ctx context.Cont
 // DfareportingContentCategoriesGet - Gets one content category by ID.
 func (s *contentCategories) DfareportingContentCategoriesGet(ctx context.Context, request operations.DfareportingContentCategoriesGetRequest, security operations.DfareportingContentCategoriesGetSecurity) (*operations.DfareportingContentCategoriesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *contentCategories) DfareportingContentCategoriesGet(ctx context.Context
 // DfareportingContentCategoriesInsert - Inserts a new content category.
 func (s *contentCategories) DfareportingContentCategoriesInsert(ctx context.Context, request operations.DfareportingContentCategoriesInsertRequest, security operations.DfareportingContentCategoriesInsertSecurity) (*operations.DfareportingContentCategoriesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCategory", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *contentCategories) DfareportingContentCategoriesInsert(ctx context.Cont
 // DfareportingContentCategoriesList - Retrieves a list of content categories, possibly filtered. This method supports paging.
 func (s *contentCategories) DfareportingContentCategoriesList(ctx context.Context, request operations.DfareportingContentCategoriesListRequest, security operations.DfareportingContentCategoriesListSecurity) (*operations.DfareportingContentCategoriesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *contentCategories) DfareportingContentCategoriesList(ctx context.Contex
 // DfareportingContentCategoriesPatch - Updates an existing content category. This method supports patch semantics.
 func (s *contentCategories) DfareportingContentCategoriesPatch(ctx context.Context, request operations.DfareportingContentCategoriesPatchRequest, security operations.DfareportingContentCategoriesPatchSecurity) (*operations.DfareportingContentCategoriesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCategory", "json")
 	if err != nil {
@@ -279,7 +294,10 @@ func (s *contentCategories) DfareportingContentCategoriesPatch(ctx context.Conte
 // DfareportingContentCategoriesUpdate - Updates an existing content category.
 func (s *contentCategories) DfareportingContentCategoriesUpdate(ctx context.Context, request operations.DfareportingContentCategoriesUpdateRequest, security operations.DfareportingContentCategoriesUpdateSecurity) (*operations.DfareportingContentCategoriesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/contentCategories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContentCategory", "json")
 	if err != nil {

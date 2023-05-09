@@ -17,12 +17,16 @@ const (
 	DeliveryStreamStatusEnumActive         DeliveryStreamStatusEnum = "ACTIVE"
 )
 
+func (e DeliveryStreamStatusEnum) ToPointer() *DeliveryStreamStatusEnum {
+	return &e
+}
+
 func (e *DeliveryStreamStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "CREATING_FAILED":
@@ -32,9 +36,9 @@ func (e *DeliveryStreamStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING_FAILED":
 		fallthrough
 	case "ACTIVE":
-		*e = DeliveryStreamStatusEnum(s)
+		*e = DeliveryStreamStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeliveryStreamStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DeliveryStreamStatusEnum: %v", v)
 	}
 }

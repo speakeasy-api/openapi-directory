@@ -18,12 +18,16 @@ const (
 	StageExecutionStatusEnumSucceeded  StageExecutionStatusEnum = "Succeeded"
 )
 
+func (e StageExecutionStatusEnum) ToPointer() *StageExecutionStatusEnum {
+	return &e
+}
+
 func (e *StageExecutionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Cancelled":
 		fallthrough
 	case "InProgress":
@@ -35,9 +39,9 @@ func (e *StageExecutionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Stopping":
 		fallthrough
 	case "Succeeded":
-		*e = StageExecutionStatusEnum(s)
+		*e = StageExecutionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StageExecutionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StageExecutionStatusEnum: %v", v)
 	}
 }

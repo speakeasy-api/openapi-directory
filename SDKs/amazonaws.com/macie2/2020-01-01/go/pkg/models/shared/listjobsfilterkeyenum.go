@@ -17,12 +17,16 @@ const (
 	ListJobsFilterKeyEnumName      ListJobsFilterKeyEnum = "name"
 )
 
+func (e ListJobsFilterKeyEnum) ToPointer() *ListJobsFilterKeyEnum {
+	return &e
+}
+
 func (e *ListJobsFilterKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jobType":
 		fallthrough
 	case "jobStatus":
@@ -30,9 +34,9 @@ func (e *ListJobsFilterKeyEnum) UnmarshalJSON(data []byte) error {
 	case "createdAt":
 		fallthrough
 	case "name":
-		*e = ListJobsFilterKeyEnum(s)
+		*e = ListJobsFilterKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListJobsFilterKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for ListJobsFilterKeyEnum: %v", v)
 	}
 }

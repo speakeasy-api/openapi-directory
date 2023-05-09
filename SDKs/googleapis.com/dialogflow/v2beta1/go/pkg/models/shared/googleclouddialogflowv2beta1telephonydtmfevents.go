@@ -29,12 +29,16 @@ const (
 	GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnumDtmfPound                GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum = "DTMF_POUND"
 )
 
+func (e GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum) ToPointer() *GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TELEPHONY_DTMF_UNSPECIFIED":
 		fallthrough
 	case "DTMF_ONE":
@@ -68,10 +72,10 @@ func (e *GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum) Unmarsha
 	case "DTMF_STAR":
 		fallthrough
 	case "DTMF_POUND":
-		*e = GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum(s)
+		*e = GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1TelephonyDtmfEventsDtmfEventsEnum: %v", v)
 	}
 }
 

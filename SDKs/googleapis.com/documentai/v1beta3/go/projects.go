@@ -31,10 +31,13 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// DocumentaiProjectsLocationsFetchProcessorTypes - Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
+// DocumentaiProjectsLocationsFetchProcessorTypes - Fetches processor types. Note that we don't use ListProcessorTypes here, because it isn't paginated.
 func (s *projects) DocumentaiProjectsLocationsFetchProcessorTypes(ctx context.Context, request operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest, security operations.DocumentaiProjectsLocationsFetchProcessorTypesSecurity) (*operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}:fetchProcessorTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}:fetchProcessorTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) DocumentaiProjectsLocationsFetchProcessorTypes(ctx context.Co
 // DocumentaiProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) DocumentaiProjectsLocationsList(ctx context.Context, request operations.DocumentaiProjectsLocationsListRequest, security operations.DocumentaiProjectsLocationsListSecurity) (*operations.DocumentaiProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) DocumentaiProjectsLocationsList(ctx context.Context, request 
 // DocumentaiProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) DocumentaiProjectsLocationsOperationsCancel(ctx context.Context, request operations.DocumentaiProjectsLocationsOperationsCancelRequest, security operations.DocumentaiProjectsLocationsOperationsCancelSecurity) (*operations.DocumentaiProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *projects) DocumentaiProjectsLocationsOperationsCancel(ctx context.Conte
 // DocumentaiProjectsLocationsProcessorTypesGet - Gets a processor type detail.
 func (s *projects) DocumentaiProjectsLocationsProcessorTypesGet(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorTypesGetRequest, security operations.DocumentaiProjectsLocationsProcessorTypesGetSecurity) (*operations.DocumentaiProjectsLocationsProcessorTypesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -226,7 +238,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorTypesGet(ctx context.Cont
 // DocumentaiProjectsLocationsProcessorTypesList - Lists the processor types that exist.
 func (s *projects) DocumentaiProjectsLocationsProcessorTypesList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorTypesListRequest, security operations.DocumentaiProjectsLocationsProcessorTypesListSecurity) (*operations.DocumentaiProjectsLocationsProcessorTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorTypes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorTypes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -271,10 +286,13 @@ func (s *projects) DocumentaiProjectsLocationsProcessorTypesList(ctx context.Con
 	return res, nil
 }
 
-// DocumentaiProjectsLocationsProcessorsCreate - Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
+// DocumentaiProjectsLocationsProcessorsCreate - Creates a processor from the ProcessorType provided. The processor will be at `ENABLED` state by default after its creation.
 func (s *projects) DocumentaiProjectsLocationsProcessorsCreate(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsCreateRequest, security operations.DocumentaiProjectsLocationsProcessorsCreateSecurity) (*operations.DocumentaiProjectsLocationsProcessorsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3ProcessorInput", "json")
 	if err != nil {
@@ -329,7 +347,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsCreate(ctx context.Conte
 // DocumentaiProjectsLocationsProcessorsDisable - Disables a processor
 func (s *projects) DocumentaiProjectsLocationsProcessorsDisable(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsDisableRequest, security operations.DocumentaiProjectsLocationsProcessorsDisableSecurity) (*operations.DocumentaiProjectsLocationsProcessorsDisableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:disable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:disable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsDisable(ctx context.Cont
 // DocumentaiProjectsLocationsProcessorsEnable - Enables a processor
 func (s *projects) DocumentaiProjectsLocationsProcessorsEnable(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsEnableRequest, security operations.DocumentaiProjectsLocationsProcessorsEnableSecurity) (*operations.DocumentaiProjectsLocationsProcessorsEnableResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:enable", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:enable", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsEnable(ctx context.Conte
 // DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument - Send a document for Human Review. The input document should be processed by the specified processor.
 func (s *projects) DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest, security operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity) (*operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{humanReviewConfig}:reviewDocument", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{humanReviewConfig}:reviewDocument", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3ReviewDocumentRequest", "json")
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewD
 // DocumentaiProjectsLocationsProcessorsList - Lists all processors which belong to this project.
 func (s *projects) DocumentaiProjectsLocationsProcessorsList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsListRequest, security operations.DocumentaiProjectsLocationsProcessorsListSecurity) (*operations.DocumentaiProjectsLocationsProcessorsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processors", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processors", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +572,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsList(ctx context.Context
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess - LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:batchProcess", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:batchProcess", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3BatchProcessRequest", "json")
 	if err != nil {
@@ -597,7 +630,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchPr
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsDelete - Deletes the processor version, all artifacts under the processor version will be deleted.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsDelete(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -645,7 +681,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsDelete(
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploy - Deploys the processor version.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploy(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploySecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:deploy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:deploy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -700,7 +739,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploy(
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion - Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{processorVersion}:evaluateProcessorVersion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{processorVersion}:evaluateProcessorVersion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3EvaluateProcessorVersionRequest", "json")
 	if err != nil {
@@ -755,7 +797,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluat
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList - Retrieves a set of evaluations for a given processor version.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/evaluations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/evaluations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -803,7 +848,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluat
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion - Imports a processor version from source processor version.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions:importProcessorVersion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions:importProcessorVersion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3ImportProcessorVersionRequest", "json")
 	if err != nil {
@@ -858,7 +906,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsImportP
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsList - Lists all versions of a processor.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -906,7 +957,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsList(ct
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsProcess - Processes a single document.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsProcess(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:process", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:process", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3ProcessRequest", "json")
 	if err != nil {
@@ -958,10 +1012,13 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsProcess
 	return res, nil
 }
 
-// DocumentaiProjectsLocationsProcessorsProcessorVersionsTrain - Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.
+// DocumentaiProjectsLocationsProcessorsProcessorVersionsTrain - Trains a new processor version. Operation metadata is returned as TrainProcessorVersionMetadata.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsTrain(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainSecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions:train", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions:train", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest", "json")
 	if err != nil {
@@ -1016,7 +1073,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsTrain(c
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeploy - Undeploys the processor version.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeploy(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployRequest, security operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeploySecurity) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:undeploy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}:undeploy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeplo
 // DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersion - Set the default (active) version of a Processor that will be used in ProcessDocument and BatchProcessDocuments.
 func (s *projects) DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersion(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionRequest, security operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionSecurity) (*operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{processor}:setDefaultProcessorVersion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta3/{processor}:setDefaultProcessorVersion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDocumentaiV1beta3SetDefaultProcessorVersionRequest", "json")
 	if err != nil {

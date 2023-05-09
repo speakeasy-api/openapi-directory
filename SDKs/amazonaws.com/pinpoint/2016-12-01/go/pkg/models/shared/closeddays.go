@@ -2,7 +2,7 @@
 
 package shared
 
-// ClosedDays - The time when journey will stop sending messages.
+// ClosedDays - The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should be set to true.
 type ClosedDays struct {
 	Custom []ClosedDaysRule `json:"CUSTOM,omitempty"`
 	Email  []ClosedDaysRule `json:"EMAIL,omitempty"`

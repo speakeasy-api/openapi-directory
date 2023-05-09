@@ -16,14 +16,21 @@ const (
 	PublishingOrganizationEnumAds                                  PublishingOrganizationEnum = "ADS"
 	PublishingOrganizationEnumPhotos                               PublishingOrganizationEnum = "PHOTOS"
 	PublishingOrganizationEnumStreetView                           PublishingOrganizationEnum = "STREET_VIEW"
+	PublishingOrganizationEnumShopping                             PublishingOrganizationEnum = "SHOPPING"
+	PublishingOrganizationEnumGeo                                  PublishingOrganizationEnum = "GEO"
+	PublishingOrganizationEnumGenerativeAi                         PublishingOrganizationEnum = "GENERATIVE_AI"
 )
 
+func (e PublishingOrganizationEnum) ToPointer() *PublishingOrganizationEnum {
+	return &e
+}
+
 func (e *PublishingOrganizationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIED":
 		fallthrough
 	case "CLOUD":
@@ -33,10 +40,16 @@ func (e *PublishingOrganizationEnum) UnmarshalJSON(data []byte) error {
 	case "PHOTOS":
 		fallthrough
 	case "STREET_VIEW":
-		*e = PublishingOrganizationEnum(s)
+		fallthrough
+	case "SHOPPING":
+		fallthrough
+	case "GEO":
+		fallthrough
+	case "GENERATIVE_AI":
+		*e = PublishingOrganizationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublishingOrganizationEnum: %s", s)
+		return fmt.Errorf("invalid value for PublishingOrganizationEnum: %v", v)
 	}
 }
 
@@ -56,7 +69,7 @@ type Publishing struct {
 	LibrarySettings []ClientLibrarySettings `json:"librarySettings,omitempty"`
 	// A list of API method settings, e.g. the behavior for methods that use the long-running operation pattern.
 	MethodSettings []MethodSettings `json:"methodSettings,omitempty"`
-	// Link to a place that API users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&template=1161103
+	// Link to a *public* URI where users can report issues. Example: https://issuetracker.google.com/issues/new?component=190865&template=1161103
 	NewIssueURI *string `json:"newIssueUri,omitempty"`
 	// For whom the client library is being published.
 	Organization *PublishingOrganizationEnum `json:"organization,omitempty"`

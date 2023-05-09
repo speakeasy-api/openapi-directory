@@ -16,21 +16,25 @@ const (
 	DataLeakPreventionChangeTypeEnumCleared         DataLeakPreventionChangeTypeEnum = "CLEARED"
 )
 
+func (e DataLeakPreventionChangeTypeEnum) ToPointer() *DataLeakPreventionChangeTypeEnum {
+	return &e
+}
+
 func (e *DataLeakPreventionChangeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "FLAGGED":
 		fallthrough
 	case "CLEARED":
-		*e = DataLeakPreventionChangeTypeEnum(s)
+		*e = DataLeakPreventionChangeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataLeakPreventionChangeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataLeakPreventionChangeTypeEnum: %v", v)
 	}
 }
 

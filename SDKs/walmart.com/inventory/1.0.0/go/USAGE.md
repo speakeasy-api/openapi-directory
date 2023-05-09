@@ -2,28 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetInventoryRequest{
-        WmConsumerChannelType: "corrupti",
+    ctx := context.Background()
+    res, err := s.Inventory.GetInventory(ctx, operations.GetInventoryRequest{
+        WmConsumerChannelType: sdk.String("corrupti"),
         WmQosCorrelationID: "provident",
         WmSecAccessToken: "distinctio",
         WmSvcName: "quibusdam",
-        ShipNode: "unde",
+        ShipNode: sdk.String("unde"),
         Sku: "nulla",
-    }
-
-    ctx := context.Background()
-    res, err := s.Inventory.GetInventory(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

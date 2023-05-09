@@ -15,17 +15,21 @@ const (
 	POSTUpdateSynonymOptionsActionEnumUpdateSynonymOptions POSTUpdateSynonymOptionsActionEnum = "UpdateSynonymOptions"
 )
 
+func (e POSTUpdateSynonymOptionsActionEnum) ToPointer() *POSTUpdateSynonymOptionsActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSynonymOptionsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSynonymOptions":
-		*e = POSTUpdateSynonymOptionsActionEnum(s)
+		*e = POSTUpdateSynonymOptionsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSynonymOptionsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSynonymOptionsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateSynonymOptionsVersionEnumTwoThousandAndEleven0201 POSTUpdateSynonymOptionsVersionEnum = "2011-02-01"
 )
 
+func (e POSTUpdateSynonymOptionsVersionEnum) ToPointer() *POSTUpdateSynonymOptionsVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSynonymOptionsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-02-01":
-		*e = POSTUpdateSynonymOptionsVersionEnum(s)
+		*e = POSTUpdateSynonymOptionsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSynonymOptionsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSynonymOptionsVersionEnum: %v", v)
 	}
 }
 

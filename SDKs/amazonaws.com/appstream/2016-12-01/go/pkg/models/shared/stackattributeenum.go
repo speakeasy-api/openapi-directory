@@ -24,12 +24,16 @@ const (
 	StackAttributeEnumStreamingExperienceSettings StackAttributeEnum = "STREAMING_EXPERIENCE_SETTINGS"
 )
 
+func (e StackAttributeEnum) ToPointer() *StackAttributeEnum {
+	return &e
+}
+
 func (e *StackAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_CONNECTORS":
 		fallthrough
 	case "STORAGE_CONNECTOR_HOMEFOLDERS":
@@ -53,9 +57,9 @@ func (e *StackAttributeEnum) UnmarshalJSON(data []byte) error {
 	case "ACCESS_ENDPOINTS":
 		fallthrough
 	case "STREAMING_EXPERIENCE_SETTINGS":
-		*e = StackAttributeEnum(s)
+		*e = StackAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for StackAttributeEnum: %v", v)
 	}
 }

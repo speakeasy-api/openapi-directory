@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"openapi/pkg/types"
 )
 
 // PartyIdentification2TypeEnum - The type of entity that owns the bank account.
@@ -18,32 +19,46 @@ const (
 	PartyIdentification2TypeEnumUnknown      PartyIdentification2TypeEnum = "unknown"
 )
 
+func (e PartyIdentification2TypeEnum) ToPointer() *PartyIdentification2TypeEnum {
+	return &e
+}
+
 func (e *PartyIdentification2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "individual":
 		fallthrough
 	case "organization":
 		fallthrough
 	case "unknown":
-		*e = PartyIdentification2TypeEnum(s)
+		*e = PartyIdentification2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PartyIdentification2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PartyIdentification2TypeEnum: %v", v)
 	}
 }
 
 type PartyIdentification2 struct {
 	Address *Address2 `json:"address,omitempty"`
-	// First name of the individual. Required when `type` is **individual**.
+	// The date of birth of the individual in [ISO-8601](https://www.w3.org/TR/NOTE-datetime) format. For example, **YYYY-MM-DD**.
+	//
+	// Allowed only when `type` is **individual**.
+	DateOfBirth *types.Date `json:"dateOfBirth,omitempty"`
+	// First name of the individual.
+	//
+	// Allowed only when `type` is **individual**.
 	FirstName *string `json:"firstName,omitempty"`
 	// The name of the entity.
 	FullName string `json:"fullName"`
-	// Last name of the individual. Required when `type` is **individual**.
+	// Last name of the individual.
+	//
+	// Allowed only when `type` is **individual**.
 	LastName *string `json:"lastName,omitempty"`
+	// Your unique reference of the party. This should be consistent for all transfers initiated to/from the same party/counterparty. e.g Your client's unique wallet or payee ID
+	Reference *string `json:"reference,omitempty"`
 	// The type of entity that owns the bank account.
 	//
 	//  Possible values: **individual**, **organization**, or **unknown**.

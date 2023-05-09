@@ -14,18 +14,22 @@ const (
 	LambdaInputPayloadEncodingTypeEnumBinary LambdaInputPayloadEncodingTypeEnum = "binary"
 )
 
+func (e LambdaInputPayloadEncodingTypeEnum) ToPointer() *LambdaInputPayloadEncodingTypeEnum {
+	return &e
+}
+
 func (e *LambdaInputPayloadEncodingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "binary":
-		*e = LambdaInputPayloadEncodingTypeEnum(s)
+		*e = LambdaInputPayloadEncodingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LambdaInputPayloadEncodingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LambdaInputPayloadEncodingTypeEnum: %v", v)
 	}
 }

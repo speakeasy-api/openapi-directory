@@ -2,7 +2,7 @@
 
 package shared
 
-// DocumentClassifierOutputDataConfig - Provides output results configuration parameters for custom classifier jobs.
+// DocumentClassifierOutputDataConfig - Provide the location for output data from a custom classifier job. This field is mandatory if you are training a native classifier model.
 type DocumentClassifierOutputDataConfig struct {
 	FlywheelStatsS3Prefix *string `json:"FlywheelStatsS3Prefix,omitempty"`
 	KmsKeyID              *string `json:"KmsKeyId,omitempty"`

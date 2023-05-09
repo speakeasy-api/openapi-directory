@@ -37,7 +37,10 @@ func newImageAPI(defaultClient, securityClient HTTPClient, serverURL, language, 
 // There is a limit of 64 entries in the batch.
 func (s *imageAPI) CreateImageRegionsForm(ctx context.Context, request operations.CreateImageRegionsFormRequest) (*operations.CreateImageRegionsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageRegionCreateBatch", "form")
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *imageAPI) CreateImageRegionsForm(ctx context.Context, request operation
 // There is a limit of 64 entries in the batch.
 func (s *imageAPI) CreateImageRegionsJSON(ctx context.Context, request operations.CreateImageRegionsJSONRequest) (*operations.CreateImageRegionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageRegionCreateBatch", "json")
 	if err != nil {
@@ -225,7 +231,10 @@ func (s *imageAPI) CreateImageRegionsJSON(ctx context.Context, request operation
 // There is a limit of 64 entries in the batch.
 func (s *imageAPI) CreateImageRegionsRaw(ctx context.Context, request operations.CreateImageRegionsRawRequest) (*operations.CreateImageRegionsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -317,7 +326,10 @@ func (s *imageAPI) CreateImageRegionsRaw(ctx context.Context, request operations
 // CreateImageTagsForm - Associate a set of images with a set of tags.
 func (s *imageAPI) CreateImageTagsForm(ctx context.Context, request operations.CreateImageTagsFormRequest) (*operations.CreateImageTagsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageTagCreateBatch", "form")
 	if err != nil {
@@ -409,7 +421,10 @@ func (s *imageAPI) CreateImageTagsForm(ctx context.Context, request operations.C
 // CreateImageTagsJSON - Associate a set of images with a set of tags.
 func (s *imageAPI) CreateImageTagsJSON(ctx context.Context, request operations.CreateImageTagsJSONRequest) (*operations.CreateImageTagsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageTagCreateBatch", "json")
 	if err != nil {
@@ -501,7 +516,10 @@ func (s *imageAPI) CreateImageTagsJSON(ctx context.Context, request operations.C
 // CreateImageTagsRaw - Associate a set of images with a set of tags.
 func (s *imageAPI) CreateImageTagsRaw(ctx context.Context, request operations.CreateImageTagsRawRequest) (*operations.CreateImageTagsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -595,7 +613,10 @@ func (s *imageAPI) CreateImageTagsRaw(ctx context.Context, request operations.Cr
 // multiple image files can be sent at once, with a maximum of 64 files
 func (s *imageAPI) CreateImagesFromData(ctx context.Context, request operations.CreateImagesFromDataRequest) (*operations.CreateImagesFromDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {
@@ -692,7 +713,10 @@ func (s *imageAPI) CreateImagesFromData(ctx context.Context, request operations.
 // This API accepts a batch of files, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromFilesForm(ctx context.Context, request operations.CreateImagesFromFilesFormRequest) (*operations.CreateImagesFromFilesFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageFileCreateBatch", "form")
 	if err != nil {
@@ -785,7 +809,10 @@ func (s *imageAPI) CreateImagesFromFilesForm(ctx context.Context, request operat
 // This API accepts a batch of files, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromFilesJSON(ctx context.Context, request operations.CreateImagesFromFilesJSONRequest) (*operations.CreateImagesFromFilesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageFileCreateBatch", "json")
 	if err != nil {
@@ -878,7 +905,10 @@ func (s *imageAPI) CreateImagesFromFilesJSON(ctx context.Context, request operat
 // This API accepts a batch of files, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromFilesRaw(ctx context.Context, request operations.CreateImagesFromFilesRawRequest) (*operations.CreateImagesFromFilesRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/files", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -971,7 +1001,10 @@ func (s *imageAPI) CreateImagesFromFilesRaw(ctx context.Context, request operati
 // This API creates a batch of images from predicted images specified. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromPredictionsForm(ctx context.Context, request operations.CreateImagesFromPredictionsFormRequest) (*operations.CreateImagesFromPredictionsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageIDCreateBatch", "form")
 	if err != nil {
@@ -1064,7 +1097,10 @@ func (s *imageAPI) CreateImagesFromPredictionsForm(ctx context.Context, request 
 // This API creates a batch of images from predicted images specified. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromPredictionsJSON(ctx context.Context, request operations.CreateImagesFromPredictionsJSONRequest) (*operations.CreateImagesFromPredictionsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageIDCreateBatch", "json")
 	if err != nil {
@@ -1157,7 +1193,10 @@ func (s *imageAPI) CreateImagesFromPredictionsJSON(ctx context.Context, request 
 // This API creates a batch of images from predicted images specified. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromPredictionsRaw(ctx context.Context, request operations.CreateImagesFromPredictionsRawRequest) (*operations.CreateImagesFromPredictionsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/predictions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1250,7 +1289,10 @@ func (s *imageAPI) CreateImagesFromPredictionsRaw(ctx context.Context, request o
 // This API accepts a batch of urls, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromUrlsForm(ctx context.Context, request operations.CreateImagesFromUrlsFormRequest) (*operations.CreateImagesFromUrlsFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURLCreateBatch", "form")
 	if err != nil {
@@ -1343,7 +1385,10 @@ func (s *imageAPI) CreateImagesFromUrlsForm(ctx context.Context, request operati
 // This API accepts a batch of urls, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromUrlsJSON(ctx context.Context, request operations.CreateImagesFromUrlsJSONRequest) (*operations.CreateImagesFromUrlsJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImageURLCreateBatch", "json")
 	if err != nil {
@@ -1436,7 +1481,10 @@ func (s *imageAPI) CreateImagesFromUrlsJSON(ctx context.Context, request operati
 // This API accepts a batch of urls, and optionally tags, to create images. There is a limit of 64 images and 20 tags.
 func (s *imageAPI) CreateImagesFromUrlsRaw(ctx context.Context, request operations.CreateImagesFromUrlsRawRequest) (*operations.CreateImagesFromUrlsRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/urls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1528,7 +1576,10 @@ func (s *imageAPI) CreateImagesFromUrlsRaw(ctx context.Context, request operatio
 // DeleteImageRegions - Delete a set of image regions.
 func (s *imageAPI) DeleteImageRegions(ctx context.Context, request operations.DeleteImageRegionsRequest) (*operations.DeleteImageRegionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/regions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1577,7 +1628,10 @@ func (s *imageAPI) DeleteImageRegions(ctx context.Context, request operations.De
 // DeleteImageTags - Remove a set of tags from a set of images.
 func (s *imageAPI) DeleteImageTags(ctx context.Context, request operations.DeleteImageTagsRequest) (*operations.DeleteImageTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1626,7 +1680,10 @@ func (s *imageAPI) DeleteImageTags(ctx context.Context, request operations.Delet
 // DeleteImages - Delete images from the set of training images.
 func (s *imageAPI) DeleteImages(ctx context.Context, request operations.DeleteImagesRequest) (*operations.DeleteImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1693,7 +1750,10 @@ func (s *imageAPI) DeleteImages(ctx context.Context, request operations.DeleteIm
 // current workspace is used.
 func (s *imageAPI) GetImagesByIds(ctx context.Context, request operations.GetImagesByIdsRequest) (*operations.GetImagesByIdsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/id", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/id", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1781,7 +1841,10 @@ func (s *imageAPI) GetImagesByIds(ctx context.Context, request operations.GetIma
 // "Cat" tags, then only images tagged with Dog and/or Cat will be returned
 func (s *imageAPI) GetTaggedImageCount(ctx context.Context, request operations.GetTaggedImageCountRequest) (*operations.GetTaggedImageCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tagged/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tagged/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1871,7 +1934,10 @@ func (s *imageAPI) GetTaggedImageCount(ctx context.Context, request operations.G
 // "Cat" tags, then only images tagged with Dog and/or Cat will be returned
 func (s *imageAPI) GetTaggedImages(ctx context.Context, request operations.GetTaggedImagesRequest) (*operations.GetTaggedImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tagged", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/tagged", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1959,7 +2025,10 @@ func (s *imageAPI) GetTaggedImages(ctx context.Context, request operations.GetTa
 // current workspace is used.
 func (s *imageAPI) GetUntaggedImageCount(ctx context.Context, request operations.GetUntaggedImageCountRequest) (*operations.GetUntaggedImageCountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/untagged/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/untagged/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2047,7 +2116,10 @@ func (s *imageAPI) GetUntaggedImageCount(ctx context.Context, request operations
 // Use the {take} and {skip} parameters to control how many images to return in a given batch.
 func (s *imageAPI) GetUntaggedImages(ctx context.Context, request operations.GetUntaggedImagesRequest) (*operations.GetUntaggedImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/untagged", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/untagged", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2134,7 +2206,10 @@ func (s *imageAPI) GetUntaggedImages(ctx context.Context, request operations.Get
 // This API takes in tagIds to get count of untagged images per suggested tags for a given threshold.
 func (s *imageAPI) QuerySuggestedImageCountForm(ctx context.Context, request operations.QuerySuggestedImageCountFormRequest) (*operations.QuerySuggestedImageCountFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagFilter", "form")
 	if err != nil {
@@ -2231,7 +2306,10 @@ func (s *imageAPI) QuerySuggestedImageCountForm(ctx context.Context, request ope
 // This API takes in tagIds to get count of untagged images per suggested tags for a given threshold.
 func (s *imageAPI) QuerySuggestedImageCountJSON(ctx context.Context, request operations.QuerySuggestedImageCountJSONRequest) (*operations.QuerySuggestedImageCountJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TagFilter", "json")
 	if err != nil {
@@ -2328,7 +2406,10 @@ func (s *imageAPI) QuerySuggestedImageCountJSON(ctx context.Context, request ope
 // This API takes in tagIds to get count of untagged images per suggested tags for a given threshold.
 func (s *imageAPI) QuerySuggestedImageCountRaw(ctx context.Context, request operations.QuerySuggestedImageCountRawRequest) (*operations.QuerySuggestedImageCountRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested/count", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2425,7 +2506,10 @@ func (s *imageAPI) QuerySuggestedImageCountRaw(ctx context.Context, request oper
 // This API will fetch untagged images filtered by suggested tags Ids. It returns an empty array if no images are found.
 func (s *imageAPI) QuerySuggestedImagesForm(ctx context.Context, request operations.QuerySuggestedImagesFormRequest) (*operations.QuerySuggestedImagesFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuggestedTagAndRegionQueryToken", "form")
 	if err != nil {
@@ -2522,7 +2606,10 @@ func (s *imageAPI) QuerySuggestedImagesForm(ctx context.Context, request operati
 // This API will fetch untagged images filtered by suggested tags Ids. It returns an empty array if no images are found.
 func (s *imageAPI) QuerySuggestedImagesJSON(ctx context.Context, request operations.QuerySuggestedImagesJSONRequest) (*operations.QuerySuggestedImagesJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SuggestedTagAndRegionQueryToken", "json")
 	if err != nil {
@@ -2619,7 +2706,10 @@ func (s *imageAPI) QuerySuggestedImagesJSON(ctx context.Context, request operati
 // This API will fetch untagged images filtered by suggested tags Ids. It returns an empty array if no images are found.
 func (s *imageAPI) QuerySuggestedImagesRaw(ctx context.Context, request operations.QuerySuggestedImagesRawRequest) (*operations.QuerySuggestedImagesRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/images/suggested", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

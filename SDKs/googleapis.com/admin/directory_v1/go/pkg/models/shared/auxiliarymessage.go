@@ -17,12 +17,16 @@ const (
 	AuxiliaryMessageSeverityEnumSeverityError       AuxiliaryMessageSeverityEnum = "SEVERITY_ERROR"
 )
 
+func (e AuxiliaryMessageSeverityEnum) ToPointer() *AuxiliaryMessageSeverityEnum {
+	return &e
+}
+
 func (e *AuxiliaryMessageSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SEVERITY_UNSPECIFIED":
 		fallthrough
 	case "SEVERITY_INFO":
@@ -30,10 +34,10 @@ func (e *AuxiliaryMessageSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "SEVERITY_WARNING":
 		fallthrough
 	case "SEVERITY_ERROR":
-		*e = AuxiliaryMessageSeverityEnum(s)
+		*e = AuxiliaryMessageSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuxiliaryMessageSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for AuxiliaryMessageSeverityEnum: %v", v)
 	}
 }
 

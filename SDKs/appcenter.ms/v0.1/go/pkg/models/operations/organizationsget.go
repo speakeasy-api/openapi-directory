@@ -29,12 +29,16 @@ const (
 	OrganizationsGetDefaultApplicationJSONErrorCodeEnumTooManyRequests     OrganizationsGetDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e OrganizationsGetDefaultApplicationJSONErrorCodeEnum) ToPointer() *OrganizationsGetDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *OrganizationsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -48,10 +52,10 @@ func (e *OrganizationsGetDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = OrganizationsGetDefaultApplicationJSONErrorCodeEnum(s)
+		*e = OrganizationsGetDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsGetDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsGetDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -73,19 +77,23 @@ const (
 	OrganizationsGet200ApplicationJSONOriginEnumHockeyapp OrganizationsGet200ApplicationJSONOriginEnum = "hockeyapp"
 )
 
+func (e OrganizationsGet200ApplicationJSONOriginEnum) ToPointer() *OrganizationsGet200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *OrganizationsGet200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
-		*e = OrganizationsGet200ApplicationJSONOriginEnum(s)
+		*e = OrganizationsGet200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationsGet200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationsGet200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CapacityReservationPreferenceEnumNone CapacityReservationPreferenceEnum = "none"
 )
 
+func (e CapacityReservationPreferenceEnum) ToPointer() *CapacityReservationPreferenceEnum {
+	return &e
+}
+
 func (e *CapacityReservationPreferenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "open":
 		fallthrough
 	case "none":
-		*e = CapacityReservationPreferenceEnum(s)
+		*e = CapacityReservationPreferenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CapacityReservationPreferenceEnum: %s", s)
+		return fmt.Errorf("invalid value for CapacityReservationPreferenceEnum: %v", v)
 	}
 }

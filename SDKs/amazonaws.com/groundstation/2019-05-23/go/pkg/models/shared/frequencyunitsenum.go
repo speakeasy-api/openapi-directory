@@ -15,20 +15,24 @@ const (
 	FrequencyUnitsEnumKHz FrequencyUnitsEnum = "kHz"
 )
 
+func (e FrequencyUnitsEnum) ToPointer() *FrequencyUnitsEnum {
+	return &e
+}
+
 func (e *FrequencyUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GHz":
 		fallthrough
 	case "MHz":
 		fallthrough
 	case "kHz":
-		*e = FrequencyUnitsEnum(s)
+		*e = FrequencyUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FrequencyUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for FrequencyUnitsEnum: %v", v)
 	}
 }

@@ -16,20 +16,24 @@ const (
 	AntiSpamTypesEnumBasic    AntiSpamTypesEnum = "basic"
 )
 
+func (e AntiSpamTypesEnum) ToPointer() *AntiSpamTypesEnum {
+	return &e
+}
+
 func (e *AntiSpamTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "advanced":
 		fallthrough
 	case "basic":
-		*e = AntiSpamTypesEnum(s)
+		*e = AntiSpamTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AntiSpamTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for AntiSpamTypesEnum: %v", v)
 	}
 }

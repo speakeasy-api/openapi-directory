@@ -33,7 +33,22 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - <note> <p> <b>Amazon CodeCatalyst is in preview release and subject to change.</b> </p> </note> <p>Welcome to the Amazon CodeCatalyst API reference. This reference provides descriptions of operations and data types for Amazon CodeCatalyst. You can use the Amazon CodeCatalyst API to work with the following objects. </p> <p>Dev Environments and the Amazon Web Services Toolkits, by calling the following:</p> <ul> <li> <p> <a>CreateAccessToken</a>, which creates a personal access token (PAT) for the current user.</p> </li> <li> <p> <a>CreateDevEnvironment</a>, which creates a Dev Environment, where you can quickly work on the code stored in the source repositories of your project.</p> </li> <li> <p> <a>CreateProject</a> which creates a project in a specified space.</p> </li> <li> <p> <a>CreateSourceRepositoryBranch</a>, which creates a branch in a specified repository where you can work on code.</p> </li> <li> <p> <a>DeleteDevEnvironment</a>, which deletes a Dev Environment.</p> </li> <li> <p> <a>GetDevEnvironment</a>, which returns information about a Dev Environment.</p> </li> <li> <p> <a>GetProject</a>, which returns information about a project.</p> </li> <li> <p> <a>GetSourceRepositoryCloneUrls</a>, which returns information about the URLs that can be used with a Git client to clone a source repository.</p> </li> <li> <p> <a>GetSubscription</a>, which returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.</p> </li> <li> <p> <a>GetUserDetails</a>, which returns information about a user in Amazon CodeCatalyst.</p> </li> <li> <p> <a>ListDevEnvironments</a>, which retrives a list of Dev Environments in a project.</p> </li> <li> <p> <a>ListProjects</a>, which retrieves a list of projects in a space.</p> </li> <li> <p> <a>ListSourceRepositories</a>, which retrieves a list of source repositories in a project.</p> </li> <li> <p> <a>ListSourceRepositoryBranches</a>, which retrieves a list of branches in a source repository.</p> </li> <li> <p> <a>ListSpaces</a>, which retrieves a list of spaces.</p> </li> <li> <p> <a>StartDevEnvironment</a>, which starts a specified Dev Environment and puts it into an active state.</p> </li> <li> <p> <a>StartDevEnvironmentSession</a>, which starts a session to a specified Dev Environment.</p> </li> <li> <p> <a>StopDevEnvironment</a>, which stops a specified Dev Environment and puts it into an stopped state.</p> </li> <li> <p> <a>StopDevEnvironmentSession</a>, which stops a session for a specified Dev Environment.</p> </li> <li> <p> <a>UpdateDevEnvironment</a>, which changes one or more values for a Dev Environment.</p> </li> <li> <p> <a>VerifySession</a>, which verifies whether the calling user has a valid Amazon CodeCatalyst login and session.</p> </li> </ul> <p>Security, activity, and resource management in Amazon CodeCatalyst, by calling the following:</p> <ul> <li> <p> <a>DeleteAccessToken</a>, which deletes a specified personal access token (PAT).</p> </li> <li> <p> <a>ListAccessTokens</a>, which lists all personal access tokens (PATs) associated with a user.</p> </li> <li> <p> <a>ListEventLogs</a>, which retrieves a list of events that occurred during a specified time period in a space.</p> </li> </ul>
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
+// SDK - <p>Welcome to the Amazon CodeCatalyst API reference. This reference provides descriptions of operations and data types for Amazon CodeCatalyst. You can use the Amazon CodeCatalyst API to work with the following objects. </p> <p>Dev Environments and the Amazon Web Services Toolkits, by calling the following:</p> <ul> <li> <p> <a>CreateAccessToken</a>, which creates a personal access token (PAT) for the current user.</p> </li> <li> <p> <a>CreateDevEnvironment</a>, which creates a Dev Environment, where you can quickly work on the code stored in the source repositories of your project.</p> </li> <li> <p> <a>CreateProject</a> which creates a project in a specified space.</p> </li> <li> <p> <a>CreateSourceRepositoryBranch</a>, which creates a branch in a specified repository where you can work on code.</p> </li> <li> <p> <a>DeleteDevEnvironment</a>, which deletes a Dev Environment.</p> </li> <li> <p> <a>GetDevEnvironment</a>, which returns information about a Dev Environment.</p> </li> <li> <p> <a>GetProject</a>, which returns information about a project.</p> </li> <li> <p> <a>GetSourceRepositoryCloneUrls</a>, which returns information about the URLs that can be used with a Git client to clone a source repository.</p> </li> <li> <p> <a>GetSpace</a>, which returns information about a space.</p> </li> <li> <p> <a>GetSubscription</a>, which returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.</p> </li> <li> <p> <a>GetUserDetails</a>, which returns information about a user in Amazon CodeCatalyst.</p> </li> <li> <p> <a>ListDevEnvironments</a>, which retrieves a list of Dev Environments in a project.</p> </li> <li> <p> <a>ListProjects</a>, which retrieves a list of projects in a space.</p> </li> <li> <p> <a>ListSourceRepositories</a>, which retrieves a list of source repositories in a project.</p> </li> <li> <p> <a>ListSourceRepositoryBranches</a>, which retrieves a list of branches in a source repository.</p> </li> <li> <p> <a>ListSpaces</a>, which retrieves a list of spaces.</p> </li> <li> <p> <a>StartDevEnvironment</a>, which starts a specified Dev Environment and puts it into an active state.</p> </li> <li> <p> <a>StartDevEnvironmentSession</a>, which starts a session to a specified Dev Environment.</p> </li> <li> <p> <a>StopDevEnvironment</a>, which stops a specified Dev Environment and puts it into an stopped state.</p> </li> <li> <p> <a>StopDevEnvironmentSession</a>, which stops a session for a specified Dev Environment.</p> </li> <li> <p> <a>UpdateDevEnvironment</a>, which changes one or more values for a Dev Environment.</p> </li> <li> <p> <a>VerifySession</a>, which verifies whether the calling user has a valid Amazon CodeCatalyst login and session.</p> </li> </ul> <p>Security, activity, and resource management in Amazon CodeCatalyst, by calling the following:</p> <ul> <li> <p> <a>DeleteAccessToken</a>, which deletes a specified personal access token (PAT).</p> </li> <li> <p> <a>ListAccessTokens</a>, which lists all personal access tokens (PATs) associated with a user.</p> </li> <li> <p> <a>ListEventLogs</a>, which retrieves a list of events that occurred during a specified time period in a space.</p> </li> </ul> <note> <p>If you are using the Amazon CodeCatalyst APIs with an SDK or the CLI, you must configure your computer to work with Amazon CodeCatalyst and single sign-on (SSO). For more information, see <a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/set-up-cli.html">Setting up to use the CLI with Amazon CodeCatalyst</a> and the SSO documentation for your SDK.</p> </note>
 // https://docs.aws.amazon.com/codecatalyst/ - Amazon Web Services documentation
 type SDK struct {
 
@@ -111,7 +126,7 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-// CreateAccessToken - Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user account. You use PATs to access Amazon CodeCatalyst resources such as source repositories from third-party applications like Git and integrated development environments (IDEs). For more information, see <a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html">Managing personal access tokens in Amazon CodeCatalyst</a>.
+// CreateAccessToken - Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user identity for use across all spaces and projects in Amazon CodeCatalyst. You use PATs to access CodeCatalyst from resources that include integrated development environments (IDEs) and Git-based source repositories. PATs represent you in Amazon CodeCatalyst and you can manage them in your user settings.For more information, see <a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html">Managing personal access tokens in Amazon CodeCatalyst</a>.
 func (s *SDK) CreateAccessToken(ctx context.Context, request operations.CreateAccessTokenRequestBody) (*operations.CreateAccessTokenResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessTokens"
@@ -225,10 +240,13 @@ func (s *SDK) CreateAccessToken(ctx context.Context, request operations.CreateAc
 	return res, nil
 }
 
-// CreateDevEnvironment - <p>Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development Dev Environment that you can use to quickly work on the code stored in the source repositories of your project. </p> <note> <p>When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.</p> </note>
+// CreateDevEnvironment - <p>Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development environment that you can use to quickly work on the code stored in the source repositories of your project. </p> <note> <p>When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.</p> </note>
 func (s *SDK) CreateDevEnvironment(ctx context.Context, request operations.CreateDevEnvironmentRequest) (*operations.CreateDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -342,7 +360,10 @@ func (s *SDK) CreateDevEnvironment(ctx context.Context, request operations.Creat
 // CreateProject - Creates a project in a specified space.
 func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjectRequest) (*operations.CreateProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -456,7 +477,10 @@ func (s *SDK) CreateProject(ctx context.Context, request operations.CreateProjec
 // CreateSourceRepositoryBranch - <p>Creates a branch in a specified source repository in Amazon CodeCatalyst. </p> <note> <p>This API only creates a branch in a source repository hosted in Amazon CodeCatalyst. You cannot use this API to create a branch in a linked repository.</p> </note>
 func (s *SDK) CreateSourceRepositoryBranch(ctx context.Context, request operations.CreateSourceRepositoryBranchRequest) (*operations.CreateSourceRepositoryBranchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -570,7 +594,10 @@ func (s *SDK) CreateSourceRepositoryBranch(ctx context.Context, request operatio
 // DeleteAccessToken - Deletes a specified personal access token (PAT). A personal access token can only be deleted by the user who created it.
 func (s *SDK) DeleteAccessToken(ctx context.Context, request operations.DeleteAccessTokenRequest) (*operations.DeleteAccessTokenResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accessTokens/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accessTokens/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -674,7 +701,10 @@ func (s *SDK) DeleteAccessToken(ctx context.Context, request operations.DeleteAc
 // DeleteDevEnvironment - Deletes a Dev Environment.
 func (s *SDK) DeleteDevEnvironment(ctx context.Context, request operations.DeleteDevEnvironmentRequest) (*operations.DeleteDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -778,7 +808,10 @@ func (s *SDK) DeleteDevEnvironment(ctx context.Context, request operations.Delet
 // GetDevEnvironment - Returns information about a Dev Environment for a source repository in a project. Dev Environments are specific to the user who creates them.
 func (s *SDK) GetDevEnvironment(ctx context.Context, request operations.GetDevEnvironmentRequest) (*operations.GetDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -882,7 +915,10 @@ func (s *SDK) GetDevEnvironment(ctx context.Context, request operations.GetDevEn
 // GetProject - Returns information about a project.
 func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -986,7 +1022,10 @@ func (s *SDK) GetProject(ctx context.Context, request operations.GetProjectReque
 // GetSourceRepositoryCloneUrls - Returns information about the URLs that can be used with a Git client to clone a source repository.
 func (s *SDK) GetSourceRepositoryCloneUrls(ctx context.Context, request operations.GetSourceRepositoryCloneUrlsRequest) (*operations.GetSourceRepositoryCloneUrlsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/cloneUrls", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/cloneUrls", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1090,7 +1129,10 @@ func (s *SDK) GetSourceRepositoryCloneUrls(ctx context.Context, request operatio
 // GetSpace - Returns information about an space.
 func (s *SDK) GetSpace(ctx context.Context, request operations.GetSpaceRequest) (*operations.GetSpaceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1194,7 +1236,10 @@ func (s *SDK) GetSpace(ctx context.Context, request operations.GetSpaceRequest) 
 // GetSubscription - Returns information about the Amazon Web Services account used for billing purposes and the billing plan for the space.
 func (s *SDK) GetSubscription(ctx context.Context, request operations.GetSubscriptionRequest) (*operations.GetSubscriptionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/subscription", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/subscription", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1403,7 +1448,7 @@ func (s *SDK) GetUserDetails(ctx context.Context, request operations.GetUserDeta
 	return res, nil
 }
 
-// ListAccessTokens - Lists all personal access tokens (PATs) associated with the user who calls the API. You can only list PATs associated with your user account.
+// ListAccessTokens - Lists all personal access tokens (PATs) associated with the user who calls the API. You can only list PATs associated with your Amazon Web Services Builder ID.
 func (s *SDK) ListAccessTokens(ctx context.Context, request operations.ListAccessTokensRequest) (*operations.ListAccessTokensResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/accessTokens"
@@ -1521,10 +1566,13 @@ func (s *SDK) ListAccessTokens(ctx context.Context, request operations.ListAcces
 	return res, nil
 }
 
-// ListDevEnvironments - Retrives a list of Dev Environments in a project.
+// ListDevEnvironments - Retrieves a list of Dev Environments in a project.
 func (s *SDK) ListDevEnvironments(ctx context.Context, request operations.ListDevEnvironmentsRequest) (*operations.ListDevEnvironmentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1642,7 +1690,10 @@ func (s *SDK) ListDevEnvironments(ctx context.Context, request operations.ListDe
 // ListEventLogs - Retrieves a list of events that occurred during a specified time period in a space. You can use these events to audit user and system activity in a space.
 func (s *SDK) ListEventLogs(ctx context.Context, request operations.ListEventLogsRequest) (*operations.ListEventLogsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/eventLogs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/eventLogs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1760,7 +1811,10 @@ func (s *SDK) ListEventLogs(ctx context.Context, request operations.ListEventLog
 // ListProjects - Retrieves a list of projects.
 func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsRequest) (*operations.ListProjectsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1878,7 +1932,10 @@ func (s *SDK) ListProjects(ctx context.Context, request operations.ListProjectsR
 // ListSourceRepositories - Retrieves a list of source repositories in a project.
 func (s *SDK) ListSourceRepositories(ctx context.Context, request operations.ListSourceRepositoriesRequest) (*operations.ListSourceRepositoriesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1996,7 +2053,10 @@ func (s *SDK) ListSourceRepositories(ctx context.Context, request operations.Lis
 // ListSourceRepositoryBranches - Retrieves a list of branches in a specified source repository.
 func (s *SDK) ListSourceRepositoryBranches(ctx context.Context, request operations.ListSourceRepositoryBranchesRequest) (*operations.ListSourceRepositoryBranchesResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/sourceRepositories/{sourceRepositoryName}/branches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2232,7 +2292,10 @@ func (s *SDK) ListSpaces(ctx context.Context, request operations.ListSpacesReque
 // StartDevEnvironment - Starts a specified Dev Environment and puts it into an active state.
 func (s *SDK) StartDevEnvironment(ctx context.Context, request operations.StartDevEnvironmentRequest) (*operations.StartDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2346,7 +2409,10 @@ func (s *SDK) StartDevEnvironment(ctx context.Context, request operations.StartD
 // StartDevEnvironmentSession - Starts a session for a specified Dev Environment.
 func (s *SDK) StartDevEnvironmentSession(ctx context.Context, request operations.StartDevEnvironmentSessionRequest) (*operations.StartDevEnvironmentSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2460,7 +2526,10 @@ func (s *SDK) StartDevEnvironmentSession(ctx context.Context, request operations
 // StopDevEnvironment - Pauses a specified Dev Environment and places it in a non-running state. Stopped Dev Environments do not consume compute minutes.
 func (s *SDK) StopDevEnvironment(ctx context.Context, request operations.StopDevEnvironmentRequest) (*operations.StopDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -2564,7 +2633,10 @@ func (s *SDK) StopDevEnvironment(ctx context.Context, request operations.StopDev
 // StopDevEnvironmentSession - Stops a session for a specified Dev Environment.
 func (s *SDK) StopDevEnvironmentSession(ctx context.Context, request operations.StopDevEnvironmentSessionRequest) (*operations.StopDevEnvironmentSessionResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session/{sessionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}/session/{sessionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2668,7 +2740,10 @@ func (s *SDK) StopDevEnvironmentSession(ctx context.Context, request operations.
 // UpdateDevEnvironment - Changes one or more values for a Dev Environment. Updating certain values of the Dev Environment will cause a restart.
 func (s *SDK) UpdateDevEnvironment(ctx context.Context, request operations.UpdateDevEnvironmentRequest) (*operations.UpdateDevEnvironmentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/spaces/{spaceName}/projects/{projectName}/devEnvironments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETContinueUpdateRollbackActionEnumContinueUpdateRollback GETContinueUpdateRollbackActionEnum = "ContinueUpdateRollback"
 )
 
+func (e GETContinueUpdateRollbackActionEnum) ToPointer() *GETContinueUpdateRollbackActionEnum {
+	return &e
+}
+
 func (e *GETContinueUpdateRollbackActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ContinueUpdateRollback":
-		*e = GETContinueUpdateRollbackActionEnum(s)
+		*e = GETContinueUpdateRollbackActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETContinueUpdateRollbackActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETContinueUpdateRollbackActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETContinueUpdateRollbackVersionEnumTwoThousandAndTen0515 GETContinueUpdateRollbackVersionEnum = "2010-05-15"
 )
 
+func (e GETContinueUpdateRollbackVersionEnum) ToPointer() *GETContinueUpdateRollbackVersionEnum {
+	return &e
+}
+
 func (e *GETContinueUpdateRollbackVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETContinueUpdateRollbackVersionEnum(s)
+		*e = GETContinueUpdateRollbackVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETContinueUpdateRollbackVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETContinueUpdateRollbackVersionEnum: %v", v)
 	}
 }
 

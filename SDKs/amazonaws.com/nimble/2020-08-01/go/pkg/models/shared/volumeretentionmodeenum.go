@@ -14,18 +14,22 @@ const (
 	VolumeRetentionModeEnumDelete VolumeRetentionModeEnum = "DELETE"
 )
 
+func (e VolumeRetentionModeEnum) ToPointer() *VolumeRetentionModeEnum {
+	return &e
+}
+
 func (e *VolumeRetentionModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RETAIN":
 		fallthrough
 	case "DELETE":
-		*e = VolumeRetentionModeEnum(s)
+		*e = VolumeRetentionModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeRetentionModeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeRetentionModeEnum: %v", v)
 	}
 }

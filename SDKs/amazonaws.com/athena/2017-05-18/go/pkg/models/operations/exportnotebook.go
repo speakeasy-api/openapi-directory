@@ -16,17 +16,21 @@ const (
 	ExportNotebookXAmzTargetEnumAmazonAthenaExportNotebook ExportNotebookXAmzTargetEnum = "AmazonAthena.ExportNotebook"
 )
 
+func (e ExportNotebookXAmzTargetEnum) ToPointer() *ExportNotebookXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportNotebookXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.ExportNotebook":
-		*e = ExportNotebookXAmzTargetEnum(s)
+		*e = ExportNotebookXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportNotebookXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportNotebookXAmzTargetEnum: %v", v)
 	}
 }
 

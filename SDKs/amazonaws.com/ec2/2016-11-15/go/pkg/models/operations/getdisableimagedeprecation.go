@@ -15,17 +15,21 @@ const (
 	GETDisableImageDeprecationActionEnumDisableImageDeprecation GETDisableImageDeprecationActionEnum = "DisableImageDeprecation"
 )
 
+func (e GETDisableImageDeprecationActionEnum) ToPointer() *GETDisableImageDeprecationActionEnum {
+	return &e
+}
+
 func (e *GETDisableImageDeprecationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableImageDeprecation":
-		*e = GETDisableImageDeprecationActionEnum(s)
+		*e = GETDisableImageDeprecationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableImageDeprecationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableImageDeprecationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableImageDeprecationVersionEnumTwoThousandAndSixteen1115 GETDisableImageDeprecationVersionEnum = "2016-11-15"
 )
 
+func (e GETDisableImageDeprecationVersionEnum) ToPointer() *GETDisableImageDeprecationVersionEnum {
+	return &e
+}
+
 func (e *GETDisableImageDeprecationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisableImageDeprecationVersionEnum(s)
+		*e = GETDisableImageDeprecationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableImageDeprecationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableImageDeprecationVersionEnum: %v", v)
 	}
 }
 

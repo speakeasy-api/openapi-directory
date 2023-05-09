@@ -15,17 +15,21 @@ const (
 	GETDescribeReservedDBInstancesOfferingsActionEnumDescribeReservedDbInstancesOfferings GETDescribeReservedDBInstancesOfferingsActionEnum = "DescribeReservedDBInstancesOfferings"
 )
 
+func (e GETDescribeReservedDBInstancesOfferingsActionEnum) ToPointer() *GETDescribeReservedDBInstancesOfferingsActionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedDBInstancesOfferingsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeReservedDBInstancesOfferings":
-		*e = GETDescribeReservedDBInstancesOfferingsActionEnum(s)
+		*e = GETDescribeReservedDBInstancesOfferingsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesOfferingsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesOfferingsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeReservedDBInstancesOfferingsVersionEnumTwoThousandAndThirteen0212 GETDescribeReservedDBInstancesOfferingsVersionEnum = "2013-02-12"
 )
 
+func (e GETDescribeReservedDBInstancesOfferingsVersionEnum) ToPointer() *GETDescribeReservedDBInstancesOfferingsVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeReservedDBInstancesOfferingsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETDescribeReservedDBInstancesOfferingsVersionEnum(s)
+		*e = GETDescribeReservedDBInstancesOfferingsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesOfferingsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeReservedDBInstancesOfferingsVersionEnum: %v", v)
 	}
 }
 

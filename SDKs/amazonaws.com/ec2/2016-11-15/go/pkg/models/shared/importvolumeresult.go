@@ -14,17 +14,21 @@ const (
 	ImportVolumeResultConversionTaskImportInstancePlatformEnumWindows ImportVolumeResultConversionTaskImportInstancePlatformEnum = "Windows"
 )
 
+func (e ImportVolumeResultConversionTaskImportInstancePlatformEnum) ToPointer() *ImportVolumeResultConversionTaskImportInstancePlatformEnum {
+	return &e
+}
+
 func (e *ImportVolumeResultConversionTaskImportInstancePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
-		*e = ImportVolumeResultConversionTaskImportInstancePlatformEnum(s)
+		*e = ImportVolumeResultConversionTaskImportInstancePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportInstancePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportInstancePlatformEnum: %v", v)
 	}
 }
 
@@ -37,21 +41,25 @@ const (
 	ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnumVhd  ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum = "VHD"
 )
 
+func (e ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum) ToPointer() *ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum {
+	return &e
+}
+
 func (e *ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum(s)
+		*e = ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum: %v", v)
 	}
 }
 
@@ -97,21 +105,25 @@ const (
 	ImportVolumeResultConversionTaskImportVolumeImageFormatEnumVhd  ImportVolumeResultConversionTaskImportVolumeImageFormatEnum = "VHD"
 )
 
+func (e ImportVolumeResultConversionTaskImportVolumeImageFormatEnum) ToPointer() *ImportVolumeResultConversionTaskImportVolumeImageFormatEnum {
+	return &e
+}
+
 func (e *ImportVolumeResultConversionTaskImportVolumeImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VMDK":
 		fallthrough
 	case "RAW":
 		fallthrough
 	case "VHD":
-		*e = ImportVolumeResultConversionTaskImportVolumeImageFormatEnum(s)
+		*e = ImportVolumeResultConversionTaskImportVolumeImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportVolumeImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskImportVolumeImageFormatEnum: %v", v)
 	}
 }
 
@@ -148,12 +160,16 @@ const (
 	ImportVolumeResultConversionTaskStateEnumCompleted  ImportVolumeResultConversionTaskStateEnum = "completed"
 )
 
+func (e ImportVolumeResultConversionTaskStateEnum) ToPointer() *ImportVolumeResultConversionTaskStateEnum {
+	return &e
+}
+
 func (e *ImportVolumeResultConversionTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "cancelling":
@@ -161,10 +177,10 @@ func (e *ImportVolumeResultConversionTaskStateEnum) UnmarshalJSON(data []byte) e
 	case "cancelled":
 		fallthrough
 	case "completed":
-		*e = ImportVolumeResultConversionTaskStateEnum(s)
+		*e = ImportVolumeResultConversionTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportVolumeResultConversionTaskStateEnum: %v", v)
 	}
 }
 

@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+type HealthCheckSecurity struct {
+	UserKey string `security:"scheme,type=apiKey,subtype=header,name=user_key"`
+}
+
 // HealthCheckDefaultApplicationJSON - Detailed information about the error
 type HealthCheckDefaultApplicationJSON struct {
 	Code    int     `json:"code"`

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/goog.io/0.1.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.CrawlRequest{
-        Query: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Crawl(ctx, req)
+    res, err := s.Crawl(ctx, operations.CrawlRequest{
+        Query: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,14 +45,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Crawl` - Crawl
-* `GetTheStatusOfTheAPIService` - Status
-* `Images` - Images
-* `News` - News
-* `Search` - Search
-* `Serp` - SERP
+* [Crawl](docs/sdk/README.md#crawl) - Crawl
+* [GetTheStatusOfTheAPIService](docs/sdk/README.md#getthestatusoftheapiservice) - Status
+* [Images](docs/sdk/README.md#images) - Images
+* [News](docs/sdk/README.md#news) - News
+* [Search](docs/sdk/README.md#search) - Search
+* [Serp](docs/sdk/README.md#serp) - SERP
 <!-- End SDK Available Operations -->
 
 ### Maturity

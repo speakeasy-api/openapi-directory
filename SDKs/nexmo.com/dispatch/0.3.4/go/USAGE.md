@@ -2,28 +2,28 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/callbacks"
+	"net/http"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.CreateWorkflow{
-        Template: "failover",
+    ctx := context.Background()
+    res, err := s.CreateWorkflow(ctx, shared.CreateWorkflow{
+        Template: shared.CreateWorkflowTemplateEnumFailover.ToPointer(),
         Workflow: []shared.CreateWorkflowWorkflow{
             shared.CreateWorkflowWorkflow{},
             shared.CreateWorkflowWorkflow{},
             shared.CreateWorkflowWorkflow{},
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateWorkflow(ctx, req, operations.CreateWorkflowSecurity{
+    }, operations.CreateWorkflowSecurity{
         BasicAuth: &shared.SchemeBasicAuth{
             Password: "YOUR_PASSWORD_HERE",
             Username: "YOUR_USERNAME_HERE",

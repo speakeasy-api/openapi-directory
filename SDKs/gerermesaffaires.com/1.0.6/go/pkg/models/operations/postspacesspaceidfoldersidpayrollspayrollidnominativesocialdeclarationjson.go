@@ -28,12 +28,16 @@ const (
 	PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -51,10 +55,10 @@ func (e *PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationA
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDPayrollsPayrollIDNominativeSocialDeclarationApplicationJSON2AccountingWorkbookEnum: %v", v)
 	}
 }
 

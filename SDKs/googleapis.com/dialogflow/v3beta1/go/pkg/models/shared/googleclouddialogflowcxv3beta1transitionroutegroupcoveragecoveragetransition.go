@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition - A transition coverage in a transition route group.
 type GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition struct {
-	// Whether or not the transition route is covered by at least one of the agent's test cases.
+	// Whether the transition route is covered by at least one of the agent's test cases.
 	Covered *bool `json:"covered,omitempty"`
 	// A transition route specifies a intent that can be matched and/or a data condition that can be evaluated during a session. When a specified transition is matched, the following actions are taken in order: * If there is a `trigger_fulfillment` associated with the transition, it will be called. * If there is a `target_page` associated with the transition, the session will transition into the specified page. * If there is a `target_flow` associated with the transition, the session will transition into the specified flow.
 	TransitionRoute *GoogleCloudDialogflowCxV3beta1TransitionRoute `json:"transitionRoute,omitempty"`

@@ -35,7 +35,10 @@ func newActivity(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Get a list of real-time activities in the project, such as translation suggestion and translation approval.
 func (s *activity) GetActivities(ctx context.Context, request operations.GetActivitiesRequest) (*operations.GetActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *activity) GetActivities(ctx context.Context, request operations.GetActi
 // View the details of an activity in the project.
 func (s *activity) GetActivity(ctx context.Context, request operations.GetActivityRequest) (*operations.GetActivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -149,7 +155,10 @@ func (s *activity) GetActivity(ctx context.Context, request operations.GetActivi
 // View a list of comments added to this activity.
 func (s *activity) GetActivityComments(ctx context.Context, request operations.GetActivityCommentsRequest) (*operations.GetActivityCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +213,10 @@ func (s *activity) GetActivityComments(ctx context.Context, request operations.G
 // View a list of activity comments in the project.
 func (s *activity) GetComments(ctx context.Context, request operations.GetCommentsRequest) (*operations.GetCommentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +274,10 @@ func (s *activity) GetComments(ctx context.Context, request operations.GetCommen
 // GetSalesActivities - Get sales activities for a project
 func (s *activity) GetSalesActivities(ctx context.Context, request operations.GetSalesActivitiesRequest) (*operations.GetSalesActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/sales/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/sales/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -320,7 +335,10 @@ func (s *activity) GetSalesActivities(ctx context.Context, request operations.Ge
 // InsertSalesActivity - Insert sales activity for a project
 func (s *activity) InsertSalesActivity(ctx context.Context, request operations.InsertSalesActivityRequest) (*operations.InsertSalesActivityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/sales/activities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{id}/sales/activities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NewSalesActivity", "json")
 	if err != nil {
@@ -382,7 +400,10 @@ func (s *activity) InsertSalesActivity(ctx context.Context, request operations.I
 // Submit a comment to an activity in the project, such as translation or editing.
 func (s *activity) SubmitCommentJSON(ctx context.Context, request operations.SubmitCommentJSONRequest) (*operations.SubmitCommentJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment", "json")
 	if err != nil {
@@ -444,7 +465,10 @@ func (s *activity) SubmitCommentJSON(ctx context.Context, request operations.Sub
 // Submit a comment to an activity in the project, such as translation or editing.
 func (s *activity) SubmitCommentMultipart(ctx context.Context, request operations.SubmitCommentMultipartRequest) (*operations.SubmitCommentMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Comment1", "multipart")
 	if err != nil {

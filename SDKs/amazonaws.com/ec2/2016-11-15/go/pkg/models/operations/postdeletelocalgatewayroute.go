@@ -15,17 +15,21 @@ const (
 	POSTDeleteLocalGatewayRouteActionEnumDeleteLocalGatewayRoute POSTDeleteLocalGatewayRouteActionEnum = "DeleteLocalGatewayRoute"
 )
 
+func (e POSTDeleteLocalGatewayRouteActionEnum) ToPointer() *POSTDeleteLocalGatewayRouteActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteLocalGatewayRoute":
-		*e = POSTDeleteLocalGatewayRouteActionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteLocalGatewayRouteVersionEnumTwoThousandAndSixteen1115 POSTDeleteLocalGatewayRouteVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteLocalGatewayRouteVersionEnum) ToPointer() *POSTDeleteLocalGatewayRouteVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteLocalGatewayRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteLocalGatewayRouteVersionEnum(s)
+		*e = POSTDeleteLocalGatewayRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteLocalGatewayRouteVersionEnum: %v", v)
 	}
 }
 

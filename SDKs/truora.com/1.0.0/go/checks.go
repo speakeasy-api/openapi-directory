@@ -183,7 +183,10 @@ func (s *checks) CreateCheck(ctx context.Context, request operations.CreateCheck
 // Keep in mind that results from the API vary depending on the country, check type and the inputs entered on check creation.
 func (s *checks) GetCheck(ctx context.Context, request operations.GetCheckRequest, security operations.GetCheckSecurity) (*operations.GetCheckResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -238,7 +241,10 @@ func (s *checks) GetCheck(ctx context.Context, request operations.GetCheckReques
 // Lists all details associated with a Check. It can be paginated.
 func (s *checks) ListCheckDetails(ctx context.Context, request operations.ListCheckDetailsRequest, security operations.ListCheckDetailsSecurity) (*operations.ListCheckDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/details", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/checks/{check_id}/details", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

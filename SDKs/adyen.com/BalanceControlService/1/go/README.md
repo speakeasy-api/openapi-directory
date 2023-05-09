@@ -13,31 +13,29 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/BalanceControlS
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.BalanceTransferRequest{
+    ctx := context.Background()
+    res, err := s.General.PostBalanceTransfer(ctx, shared.BalanceTransferRequest{
         Amount: shared.Amount{
             Currency: "corrupti",
             Value: 592845,
         },
-        Description: "distinctio",
+        Description: sdk.String("distinctio"),
         FromMerchant: "quibusdam",
-        Reference: "unde",
+        Reference: sdk.String("unde"),
         ToMerchant: "nulla",
-        Type: "credit",
-    }
-
-    ctx := context.Background()
-    res, err := s.General.PostBalanceTransfer(ctx, req, operations.PostBalanceTransferSecurity{
+        Type: shared.BalanceTransferRequestTypeEnumCredit,
+    }, operations.PostBalanceTransferSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -55,9 +53,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### General
+### [General](docs/general/README.md)
 
-* `PostBalanceTransfer` - Start a balance transfer
+* [PostBalanceTransfer](docs/general/README.md#postbalancetransfer) - Start a balance transfer
 <!-- End SDK Available Operations -->
 
 ### Maturity

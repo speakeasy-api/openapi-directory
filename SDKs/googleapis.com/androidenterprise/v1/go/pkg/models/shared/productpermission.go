@@ -15,19 +15,23 @@ const (
 	ProductPermissionStateEnumAccepted ProductPermissionStateEnum = "accepted"
 )
 
+func (e ProductPermissionStateEnum) ToPointer() *ProductPermissionStateEnum {
+	return &e
+}
+
 func (e *ProductPermissionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "required":
 		fallthrough
 	case "accepted":
-		*e = ProductPermissionStateEnum(s)
+		*e = ProductPermissionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductPermissionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductPermissionStateEnum: %v", v)
 	}
 }
 

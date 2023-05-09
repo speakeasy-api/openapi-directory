@@ -17,12 +17,16 @@ const (
 	TimeSeriesMetricKindEnumCumulative            TimeSeriesMetricKindEnum = "CUMULATIVE"
 )
 
+func (e TimeSeriesMetricKindEnum) ToPointer() *TimeSeriesMetricKindEnum {
+	return &e
+}
+
 func (e *TimeSeriesMetricKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_KIND_UNSPECIFIED":
 		fallthrough
 	case "GAUGE":
@@ -30,10 +34,10 @@ func (e *TimeSeriesMetricKindEnum) UnmarshalJSON(data []byte) error {
 	case "DELTA":
 		fallthrough
 	case "CUMULATIVE":
-		*e = TimeSeriesMetricKindEnum(s)
+		*e = TimeSeriesMetricKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeSeriesMetricKindEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeSeriesMetricKindEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	TimeSeriesValueTypeEnumMoney                TimeSeriesValueTypeEnum = "MONEY"
 )
 
+func (e TimeSeriesValueTypeEnum) ToPointer() *TimeSeriesValueTypeEnum {
+	return &e
+}
+
 func (e *TimeSeriesValueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALUE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOOL":
@@ -69,10 +77,10 @@ func (e *TimeSeriesValueTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DISTRIBUTION":
 		fallthrough
 	case "MONEY":
-		*e = TimeSeriesValueTypeEnum(s)
+		*e = TimeSeriesValueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimeSeriesValueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TimeSeriesValueTypeEnum: %v", v)
 	}
 }
 

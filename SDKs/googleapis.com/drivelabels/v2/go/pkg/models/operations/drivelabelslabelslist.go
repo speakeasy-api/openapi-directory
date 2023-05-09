@@ -20,12 +20,16 @@ const (
 	DrivelabelsLabelsListMinimumRoleEnumEditor               DrivelabelsLabelsListMinimumRoleEnum = "EDITOR"
 )
 
+func (e DrivelabelsLabelsListMinimumRoleEnum) ToPointer() *DrivelabelsLabelsListMinimumRoleEnum {
+	return &e
+}
+
 func (e *DrivelabelsLabelsListMinimumRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_ROLE_UNSPECIFIED":
 		fallthrough
 	case "READER":
@@ -35,10 +39,10 @@ func (e *DrivelabelsLabelsListMinimumRoleEnum) UnmarshalJSON(data []byte) error 
 	case "ORGANIZER":
 		fallthrough
 	case "EDITOR":
-		*e = DrivelabelsLabelsListMinimumRoleEnum(s)
+		*e = DrivelabelsLabelsListMinimumRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DrivelabelsLabelsListMinimumRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for DrivelabelsLabelsListMinimumRoleEnum: %v", v)
 	}
 }
 
@@ -50,19 +54,23 @@ const (
 	DrivelabelsLabelsListViewEnumLabelViewFull  DrivelabelsLabelsListViewEnum = "LABEL_VIEW_FULL"
 )
 
+func (e DrivelabelsLabelsListViewEnum) ToPointer() *DrivelabelsLabelsListViewEnum {
+	return &e
+}
+
 func (e *DrivelabelsLabelsListViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_VIEW_BASIC":
 		fallthrough
 	case "LABEL_VIEW_FULL":
-		*e = DrivelabelsLabelsListViewEnum(s)
+		*e = DrivelabelsLabelsListViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DrivelabelsLabelsListViewEnum: %s", s)
+		return fmt.Errorf("invalid value for DrivelabelsLabelsListViewEnum: %v", v)
 	}
 }
 

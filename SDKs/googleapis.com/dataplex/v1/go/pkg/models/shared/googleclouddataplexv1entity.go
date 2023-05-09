@@ -16,21 +16,25 @@ const (
 	GoogleCloudDataplexV1EntitySystemEnumBigquery                 GoogleCloudDataplexV1EntitySystemEnum = "BIGQUERY"
 )
 
+func (e GoogleCloudDataplexV1EntitySystemEnum) ToPointer() *GoogleCloudDataplexV1EntitySystemEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1EntitySystemEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STORAGE_SYSTEM_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_STORAGE":
 		fallthrough
 	case "BIGQUERY":
-		*e = GoogleCloudDataplexV1EntitySystemEnum(s)
+		*e = GoogleCloudDataplexV1EntitySystemEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EntitySystemEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EntitySystemEnum: %v", v)
 	}
 }
 
@@ -43,21 +47,25 @@ const (
 	GoogleCloudDataplexV1EntityTypeEnumFileset         GoogleCloudDataplexV1EntityTypeEnum = "FILESET"
 )
 
+func (e GoogleCloudDataplexV1EntityTypeEnum) ToPointer() *GoogleCloudDataplexV1EntityTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1EntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TABLE":
 		fallthrough
 	case "FILESET":
-		*e = GoogleCloudDataplexV1EntityTypeEnum(s)
+		*e = GoogleCloudDataplexV1EntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1EntityTypeEnum: %v", v)
 	}
 }
 
@@ -77,7 +85,7 @@ type GoogleCloudDataplexV1EntityInput struct {
 	Etag *string `json:"etag,omitempty"`
 	// Describes the format of the data within its storage location.
 	Format *GoogleCloudDataplexV1StorageFormatInput `json:"format,omitempty"`
-	// Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter and consist of 256 or fewer characters.
+	// Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores, and consist of 256 or fewer characters.
 	ID *string `json:"id,omitempty"`
 	// Schema information describing the structure and layout of the data.
 	Schema *GoogleCloudDataplexV1Schema `json:"schema,omitempty"`
@@ -111,7 +119,7 @@ type GoogleCloudDataplexV1Entity struct {
 	Etag *string `json:"etag,omitempty"`
 	// Describes the format of the data within its storage location.
 	Format *GoogleCloudDataplexV1StorageFormat `json:"format,omitempty"`
-	// Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores. Must begin with a letter and consist of 256 or fewer characters.
+	// Required. A user-provided entity ID. It is mutable, and will be used as the published table name. Specifying a new ID in an update entity request will override the existing value. The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores, and consist of 256 or fewer characters.
 	ID *string `json:"id,omitempty"`
 	// Output only. The resource name of the entity, of the form: projects/{project_number}/locations/{location_id}/lakes/{lake_id}/zones/{zone_id}/entities/{id}.
 	Name *string `json:"name,omitempty"`

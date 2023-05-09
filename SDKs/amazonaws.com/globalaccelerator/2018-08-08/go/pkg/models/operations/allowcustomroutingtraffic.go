@@ -16,17 +16,21 @@ const (
 	AllowCustomRoutingTrafficXAmzTargetEnumGlobalAcceleratorV20180706AllowCustomRoutingTraffic AllowCustomRoutingTrafficXAmzTargetEnum = "GlobalAccelerator_V20180706.AllowCustomRoutingTraffic"
 )
 
+func (e AllowCustomRoutingTrafficXAmzTargetEnum) ToPointer() *AllowCustomRoutingTrafficXAmzTargetEnum {
+	return &e
+}
+
 func (e *AllowCustomRoutingTrafficXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GlobalAccelerator_V20180706.AllowCustomRoutingTraffic":
-		*e = AllowCustomRoutingTrafficXAmzTargetEnum(s)
+		*e = AllowCustomRoutingTrafficXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AllowCustomRoutingTrafficXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AllowCustomRoutingTrafficXAmzTargetEnum: %v", v)
 	}
 }
 

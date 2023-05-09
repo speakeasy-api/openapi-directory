@@ -14,18 +14,22 @@ const (
 	GoogleAnalyticsConnectorOperatorEnumBetween    GoogleAnalyticsConnectorOperatorEnum = "BETWEEN"
 )
 
+func (e GoogleAnalyticsConnectorOperatorEnum) ToPointer() *GoogleAnalyticsConnectorOperatorEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "BETWEEN":
-		*e = GoogleAnalyticsConnectorOperatorEnum(s)
+		*e = GoogleAnalyticsConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsConnectorOperatorEnum: %v", v)
 	}
 }

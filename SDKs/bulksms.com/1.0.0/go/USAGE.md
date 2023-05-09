@@ -2,24 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.PreSignRequest{
-        FileExtension: "pdf",
-        MediaType: "application/pdf",
-    }
-
     ctx := context.Background()
-    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, req, operations.PostRmmPreSignAttachmentSecurity{
+    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, shared.PreSignRequest{
+        FileExtension: sdk.String("pdf"),
+        MediaType: sdk.String("application/pdf"),
+    }, operations.PostRmmPreSignAttachmentSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })

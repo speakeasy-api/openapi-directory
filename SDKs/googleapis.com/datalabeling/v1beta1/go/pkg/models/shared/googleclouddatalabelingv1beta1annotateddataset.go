@@ -15,19 +15,23 @@ const (
 	GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnumOperator                    GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum = "OPERATOR"
 )
 
+func (e GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum) ToPointer() *GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_SOURCE_UNSPECIFIED":
 		fallthrough
 	case "OPERATOR":
-		*e = GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationSourceEnum: %v", v)
 	}
 }
 
@@ -51,12 +55,16 @@ const (
 	GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnumGeneralClassificationAnnotation    GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum = "GENERAL_CLASSIFICATION_ANNOTATION"
 )
 
+func (e GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum) ToPointer() *GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANNOTATION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "IMAGE_CLASSIFICATION_ANNOTATION":
@@ -84,10 +92,10 @@ func (e *GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum) Unmar
 	case "TEXT_ENTITY_EXTRACTION_ANNOTATION":
 		fallthrough
 	case "GENERAL_CLASSIFICATION_ANNOTATION":
-		*e = GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum(s)
+		*e = GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDatalabelingV1beta1AnnotatedDatasetAnnotationTypeEnum: %v", v)
 	}
 }
 

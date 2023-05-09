@@ -19,12 +19,16 @@ const (
 	ReasonEnumLowFaceQuality   ReasonEnum = "LOW_FACE_QUALITY"
 )
 
+func (e ReasonEnum) ToPointer() *ReasonEnum {
+	return &e
+}
+
 func (e *ReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXCEEDS_MAX_FACES":
 		fallthrough
 	case "EXTREME_POSE":
@@ -38,9 +42,9 @@ func (e *ReasonEnum) UnmarshalJSON(data []byte) error {
 	case "SMALL_BOUNDING_BOX":
 		fallthrough
 	case "LOW_FACE_QUALITY":
-		*e = ReasonEnum(s)
+		*e = ReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for ReasonEnum: %v", v)
 	}
 }

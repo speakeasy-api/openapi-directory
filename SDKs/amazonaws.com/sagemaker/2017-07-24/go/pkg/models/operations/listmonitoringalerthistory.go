@@ -16,17 +16,21 @@ const (
 	ListMonitoringAlertHistoryXAmzTargetEnumSageMakerListMonitoringAlertHistory ListMonitoringAlertHistoryXAmzTargetEnum = "SageMaker.ListMonitoringAlertHistory"
 )
 
+func (e ListMonitoringAlertHistoryXAmzTargetEnum) ToPointer() *ListMonitoringAlertHistoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListMonitoringAlertHistoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListMonitoringAlertHistory":
-		*e = ListMonitoringAlertHistoryXAmzTargetEnum(s)
+		*e = ListMonitoringAlertHistoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListMonitoringAlertHistoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListMonitoringAlertHistoryXAmzTargetEnum: %v", v)
 	}
 }
 

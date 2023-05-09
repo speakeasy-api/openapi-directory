@@ -14,18 +14,22 @@ const (
 	HTTPVersionEnumHttp2  HTTPVersionEnum = "http2"
 )
 
+func (e HTTPVersionEnum) ToPointer() *HTTPVersionEnum {
+	return &e
+}
+
 func (e *HTTPVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "http1.1":
 		fallthrough
 	case "http2":
-		*e = HTTPVersionEnum(s)
+		*e = HTTPVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for HTTPVersionEnum: %v", v)
 	}
 }

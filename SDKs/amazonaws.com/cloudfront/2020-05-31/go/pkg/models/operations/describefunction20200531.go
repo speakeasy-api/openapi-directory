@@ -16,19 +16,23 @@ const (
 	DescribeFunction20200531StageEnumLive        DescribeFunction20200531StageEnum = "LIVE"
 )
 
+func (e DescribeFunction20200531StageEnum) ToPointer() *DescribeFunction20200531StageEnum {
+	return &e
+}
+
 func (e *DescribeFunction20200531StageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPMENT":
 		fallthrough
 	case "LIVE":
-		*e = DescribeFunction20200531StageEnum(s)
+		*e = DescribeFunction20200531StageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeFunction20200531StageEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeFunction20200531StageEnum: %v", v)
 	}
 }
 

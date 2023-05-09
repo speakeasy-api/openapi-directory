@@ -15,17 +15,21 @@ const (
 	POSTEnableFastLaunchActionEnumEnableFastLaunch POSTEnableFastLaunchActionEnum = "EnableFastLaunch"
 )
 
+func (e POSTEnableFastLaunchActionEnum) ToPointer() *POSTEnableFastLaunchActionEnum {
+	return &e
+}
+
 func (e *POSTEnableFastLaunchActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableFastLaunch":
-		*e = POSTEnableFastLaunchActionEnum(s)
+		*e = POSTEnableFastLaunchActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableFastLaunchActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableFastLaunchActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTEnableFastLaunchVersionEnumTwoThousandAndSixteen1115 POSTEnableFastLaunchVersionEnum = "2016-11-15"
 )
 
+func (e POSTEnableFastLaunchVersionEnum) ToPointer() *POSTEnableFastLaunchVersionEnum {
+	return &e
+}
+
 func (e *POSTEnableFastLaunchVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTEnableFastLaunchVersionEnum(s)
+		*e = POSTEnableFastLaunchVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTEnableFastLaunchVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTEnableFastLaunchVersionEnum: %v", v)
 	}
 }
 

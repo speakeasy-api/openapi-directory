@@ -18,12 +18,16 @@ const (
 	AmpInspectionResultAmpIndexStatusVerdictEnumNeutral            AmpInspectionResultAmpIndexStatusVerdictEnum = "NEUTRAL"
 )
 
+func (e AmpInspectionResultAmpIndexStatusVerdictEnum) ToPointer() *AmpInspectionResultAmpIndexStatusVerdictEnum {
+	return &e
+}
+
 func (e *AmpInspectionResultAmpIndexStatusVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERDICT_UNSPECIFIED":
 		fallthrough
 	case "PASS":
@@ -33,10 +37,10 @@ func (e *AmpInspectionResultAmpIndexStatusVerdictEnum) UnmarshalJSON(data []byte
 	case "FAIL":
 		fallthrough
 	case "NEUTRAL":
-		*e = AmpInspectionResultAmpIndexStatusVerdictEnum(s)
+		*e = AmpInspectionResultAmpIndexStatusVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpInspectionResultAmpIndexStatusVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpInspectionResultAmpIndexStatusVerdictEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	AmpInspectionResultIndexingStateEnumBlockedDueToExpiredUnavailableAfter AmpInspectionResultIndexingStateEnum = "BLOCKED_DUE_TO_EXPIRED_UNAVAILABLE_AFTER"
 )
 
+func (e AmpInspectionResultIndexingStateEnum) ToPointer() *AmpInspectionResultIndexingStateEnum {
+	return &e
+}
+
 func (e *AmpInspectionResultIndexingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AMP_INDEXING_STATE_UNSPECIFIED":
 		fallthrough
 	case "AMP_INDEXING_ALLOWED":
@@ -63,10 +71,10 @@ func (e *AmpInspectionResultIndexingStateEnum) UnmarshalJSON(data []byte) error 
 	case "BLOCKED_DUE_TO_NOINDEX":
 		fallthrough
 	case "BLOCKED_DUE_TO_EXPIRED_UNAVAILABLE_AFTER":
-		*e = AmpInspectionResultIndexingStateEnum(s)
+		*e = AmpInspectionResultIndexingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpInspectionResultIndexingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpInspectionResultIndexingStateEnum: %v", v)
 	}
 }
 
@@ -88,12 +96,16 @@ const (
 	AmpInspectionResultPageFetchStateEnumInvalidURL                AmpInspectionResultPageFetchStateEnum = "INVALID_URL"
 )
 
+func (e AmpInspectionResultPageFetchStateEnum) ToPointer() *AmpInspectionResultPageFetchStateEnum {
+	return &e
+}
+
 func (e *AmpInspectionResultPageFetchStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAGE_FETCH_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCESSFUL":
@@ -117,10 +129,10 @@ func (e *AmpInspectionResultPageFetchStateEnum) UnmarshalJSON(data []byte) error
 	case "INTERNAL_CRAWL_ERROR":
 		fallthrough
 	case "INVALID_URL":
-		*e = AmpInspectionResultPageFetchStateEnum(s)
+		*e = AmpInspectionResultPageFetchStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpInspectionResultPageFetchStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpInspectionResultPageFetchStateEnum: %v", v)
 	}
 }
 
@@ -133,21 +145,25 @@ const (
 	AmpInspectionResultRobotsTxtStateEnumDisallowed                AmpInspectionResultRobotsTxtStateEnum = "DISALLOWED"
 )
 
+func (e AmpInspectionResultRobotsTxtStateEnum) ToPointer() *AmpInspectionResultRobotsTxtStateEnum {
+	return &e
+}
+
 func (e *AmpInspectionResultRobotsTxtStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROBOTS_TXT_STATE_UNSPECIFIED":
 		fallthrough
 	case "ALLOWED":
 		fallthrough
 	case "DISALLOWED":
-		*e = AmpInspectionResultRobotsTxtStateEnum(s)
+		*e = AmpInspectionResultRobotsTxtStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpInspectionResultRobotsTxtStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpInspectionResultRobotsTxtStateEnum: %v", v)
 	}
 }
 
@@ -162,12 +178,16 @@ const (
 	AmpInspectionResultVerdictEnumNeutral            AmpInspectionResultVerdictEnum = "NEUTRAL"
 )
 
+func (e AmpInspectionResultVerdictEnum) ToPointer() *AmpInspectionResultVerdictEnum {
+	return &e
+}
+
 func (e *AmpInspectionResultVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERDICT_UNSPECIFIED":
 		fallthrough
 	case "PASS":
@@ -177,10 +197,10 @@ func (e *AmpInspectionResultVerdictEnum) UnmarshalJSON(data []byte) error {
 	case "FAIL":
 		fallthrough
 	case "NEUTRAL":
-		*e = AmpInspectionResultVerdictEnum(s)
+		*e = AmpInspectionResultVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AmpInspectionResultVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for AmpInspectionResultVerdictEnum: %v", v)
 	}
 }
 

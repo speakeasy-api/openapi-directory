@@ -22,19 +22,23 @@ const (
 	DevicelistAppTypeEnumAppStation    DevicelistAppTypeEnum = "app_station"
 )
 
+func (e DevicelistAppTypeEnum) ToPointer() *DevicelistAppTypeEnum {
+	return &e
+}
+
 func (e *DevicelistAppTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "app_thermostat":
 		fallthrough
 	case "app_station":
-		*e = DevicelistAppTypeEnum(s)
+		*e = DevicelistAppTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevicelistAppTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DevicelistAppTypeEnum: %v", v)
 	}
 }
 

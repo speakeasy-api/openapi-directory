@@ -15,17 +15,21 @@ const (
 	GETUpdateOpenIDConnectProviderThumbprintActionEnumUpdateOpenIDConnectProviderThumbprint GETUpdateOpenIDConnectProviderThumbprintActionEnum = "UpdateOpenIDConnectProviderThumbprint"
 )
 
+func (e GETUpdateOpenIDConnectProviderThumbprintActionEnum) ToPointer() *GETUpdateOpenIDConnectProviderThumbprintActionEnum {
+	return &e
+}
+
 func (e *GETUpdateOpenIDConnectProviderThumbprintActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateOpenIDConnectProviderThumbprint":
-		*e = GETUpdateOpenIDConnectProviderThumbprintActionEnum(s)
+		*e = GETUpdateOpenIDConnectProviderThumbprintActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateOpenIDConnectProviderThumbprintActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateOpenIDConnectProviderThumbprintActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateOpenIDConnectProviderThumbprintVersionEnumTwoThousandAndTen0508 GETUpdateOpenIDConnectProviderThumbprintVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateOpenIDConnectProviderThumbprintVersionEnum) ToPointer() *GETUpdateOpenIDConnectProviderThumbprintVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateOpenIDConnectProviderThumbprintVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateOpenIDConnectProviderThumbprintVersionEnum(s)
+		*e = GETUpdateOpenIDConnectProviderThumbprintVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateOpenIDConnectProviderThumbprintVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateOpenIDConnectProviderThumbprintVersionEnum: %v", v)
 	}
 }
 

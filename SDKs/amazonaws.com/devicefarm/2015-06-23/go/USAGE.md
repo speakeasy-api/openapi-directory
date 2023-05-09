@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,42 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.CreateDevicePoolRequest{
+    ctx := context.Background()
+    res, err := s.CreateDevicePool(ctx, operations.CreateDevicePoolRequest{
         CreateDevicePoolRequest: shared.CreateDevicePoolRequest{
-            Description: "corrupti",
-            MaxDevices: 592845,
-            Name: "distinctio",
-            ProjectArn: "quibusdam",
+            Description: sdk.String("corrupti"),
+            MaxDevices: sdk.Int64(592845),
+            Name: "Ellis Mitchell",
+            ProjectArn: "illum",
             Rules: []shared.Rule{
                 shared.Rule{
-                    Attribute: "MODEL",
-                    Operator: "GREATER_THAN_OR_EQUALS",
-                    Value: "illum",
+                    Attribute: shared.DeviceAttributeEnumInstanceLabels.ToPointer(),
+                    Operator: shared.RuleOperatorEnumIn.ToPointer(),
+                    Value: sdk.String("suscipit"),
                 },
                 shared.Rule{
-                    Attribute: "REMOTE_DEBUG_ENABLED",
-                    Operator: "GREATER_THAN_OR_EQUALS",
-                    Value: "deserunt",
-                },
-                shared.Rule{
-                    Attribute: "REMOTE_ACCESS_ENABLED",
-                    Operator: "GREATER_THAN",
-                    Value: "magnam",
+                    Attribute: shared.DeviceAttributeEnumRemoteDebugEnabled.ToPointer(),
+                    Operator: shared.RuleOperatorEnumLessThanOrEquals.ToPointer(),
+                    Value: sdk.String("debitis"),
                 },
             },
         },
-        XAmzAlgorithm: "debitis",
-        XAmzContentSha256: "ipsa",
-        XAmzCredential: "delectus",
-        XAmzDate: "tempora",
-        XAmzSecurityToken: "suscipit",
-        XAmzSignature: "molestiae",
-        XAmzSignedHeaders: "minus",
-        XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateDevicePool(ctx, req)
+        XAmzAlgorithm: sdk.String("ipsa"),
+        XAmzContentSha256: sdk.String("delectus"),
+        XAmzCredential: sdk.String("tempora"),
+        XAmzDate: sdk.String("suscipit"),
+        XAmzSecurityToken: sdk.String("molestiae"),
+        XAmzSignature: sdk.String("minus"),
+        XAmzSignedHeaders: sdk.String("placeat"),
+        XAmzTarget: operations.CreateDevicePoolXAmzTargetEnumDeviceFarm20150623CreateDevicePool,
+    })
     if err != nil {
         log.Fatal(err)
     }

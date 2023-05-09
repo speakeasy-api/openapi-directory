@@ -15,20 +15,24 @@ const (
 	MonitoringExecutionSortKeyEnumStatus        MonitoringExecutionSortKeyEnum = "Status"
 )
 
+func (e MonitoringExecutionSortKeyEnum) ToPointer() *MonitoringExecutionSortKeyEnum {
+	return &e
+}
+
 func (e *MonitoringExecutionSortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
 		fallthrough
 	case "ScheduledTime":
 		fallthrough
 	case "Status":
-		*e = MonitoringExecutionSortKeyEnum(s)
+		*e = MonitoringExecutionSortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringExecutionSortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringExecutionSortKeyEnum: %v", v)
 	}
 }

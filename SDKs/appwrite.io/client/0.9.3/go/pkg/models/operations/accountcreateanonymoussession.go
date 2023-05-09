@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type AccountCreateAnonymousSessionSecurity struct {
+	Project string `security:"scheme,type=apiKey,subtype=header,name=X-Appwrite-Project"`
+}
+
 type AccountCreateAnonymousSessionResponse struct {
 	ContentType string
 	StatusCode  int

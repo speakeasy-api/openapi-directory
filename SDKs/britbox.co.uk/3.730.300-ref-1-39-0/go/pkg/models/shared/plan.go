@@ -18,12 +18,16 @@ const (
 	PlanBillingPeriodTypeEnumNone  PlanBillingPeriodTypeEnum = "none"
 )
 
+func (e PlanBillingPeriodTypeEnum) ToPointer() *PlanBillingPeriodTypeEnum {
+	return &e
+}
+
 func (e *PlanBillingPeriodTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "day":
 		fallthrough
 	case "week":
@@ -33,10 +37,10 @@ func (e *PlanBillingPeriodTypeEnum) UnmarshalJSON(data []byte) error {
 	case "year":
 		fallthrough
 	case "none":
-		*e = PlanBillingPeriodTypeEnum(s)
+		*e = PlanBillingPeriodTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanBillingPeriodTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanBillingPeriodTypeEnum: %v", v)
 	}
 }
 
@@ -48,19 +52,23 @@ const (
 	PlanRevenueTypeEnumSvod PlanRevenueTypeEnum = "SVOD"
 )
 
+func (e PlanRevenueTypeEnum) ToPointer() *PlanRevenueTypeEnum {
+	return &e
+}
+
 func (e *PlanRevenueTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TVOD":
 		fallthrough
 	case "SVOD":
-		*e = PlanRevenueTypeEnum(s)
+		*e = PlanRevenueTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanRevenueTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanRevenueTypeEnum: %v", v)
 	}
 }
 
@@ -72,19 +80,23 @@ const (
 	PlanTypeEnumSubscription PlanTypeEnum = "Subscription"
 )
 
+func (e PlanTypeEnum) ToPointer() *PlanTypeEnum {
+	return &e
+}
+
 func (e *PlanTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Free":
 		fallthrough
 	case "Subscription":
-		*e = PlanTypeEnum(s)
+		*e = PlanTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlanTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlanTypeEnum: %v", v)
 	}
 }
 

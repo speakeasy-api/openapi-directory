@@ -15,17 +15,21 @@ const (
 	POSTDescribeLifecycleHooksActionEnumDescribeLifecycleHooks POSTDescribeLifecycleHooksActionEnum = "DescribeLifecycleHooks"
 )
 
+func (e POSTDescribeLifecycleHooksActionEnum) ToPointer() *POSTDescribeLifecycleHooksActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLifecycleHooksActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeLifecycleHooks":
-		*e = POSTDescribeLifecycleHooksActionEnum(s)
+		*e = POSTDescribeLifecycleHooksActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLifecycleHooksActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLifecycleHooksActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeLifecycleHooksVersionEnumTwoThousandAndEleven0101 POSTDescribeLifecycleHooksVersionEnum = "2011-01-01"
 )
 
+func (e POSTDescribeLifecycleHooksVersionEnum) ToPointer() *POSTDescribeLifecycleHooksVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeLifecycleHooksVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = POSTDescribeLifecycleHooksVersionEnum(s)
+		*e = POSTDescribeLifecycleHooksVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeLifecycleHooksVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeLifecycleHooksVersionEnum: %v", v)
 	}
 }
 

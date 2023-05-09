@@ -16,21 +16,25 @@ const (
 	SubscriptionPurchaseV2AcknowledgementStateEnumAcknowledgementStateAcknowledged SubscriptionPurchaseV2AcknowledgementStateEnum = "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED"
 )
 
+func (e SubscriptionPurchaseV2AcknowledgementStateEnum) ToPointer() *SubscriptionPurchaseV2AcknowledgementStateEnum {
+	return &e
+}
+
 func (e *SubscriptionPurchaseV2AcknowledgementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACKNOWLEDGEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "ACKNOWLEDGEMENT_STATE_PENDING":
 		fallthrough
 	case "ACKNOWLEDGEMENT_STATE_ACKNOWLEDGED":
-		*e = SubscriptionPurchaseV2AcknowledgementStateEnum(s)
+		*e = SubscriptionPurchaseV2AcknowledgementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPurchaseV2AcknowledgementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPurchaseV2AcknowledgementStateEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	SubscriptionPurchaseV2SubscriptionStateEnumSubscriptionStateExpired       SubscriptionPurchaseV2SubscriptionStateEnum = "SUBSCRIPTION_STATE_EXPIRED"
 )
 
+func (e SubscriptionPurchaseV2SubscriptionStateEnum) ToPointer() *SubscriptionPurchaseV2SubscriptionStateEnum {
+	return &e
+}
+
 func (e *SubscriptionPurchaseV2SubscriptionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUBSCRIPTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUBSCRIPTION_STATE_PENDING":
@@ -69,10 +77,10 @@ func (e *SubscriptionPurchaseV2SubscriptionStateEnum) UnmarshalJSON(data []byte)
 	case "SUBSCRIPTION_STATE_CANCELED":
 		fallthrough
 	case "SUBSCRIPTION_STATE_EXPIRED":
-		*e = SubscriptionPurchaseV2SubscriptionStateEnum(s)
+		*e = SubscriptionPurchaseV2SubscriptionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionPurchaseV2SubscriptionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionPurchaseV2SubscriptionStateEnum: %v", v)
 	}
 }
 

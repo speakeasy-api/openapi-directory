@@ -26,12 +26,16 @@ const (
 	DeleteCustomTypeCountryEnumAll DeleteCustomTypeCountryEnum = "ALL"
 )
 
+func (e DeleteCustomTypeCountryEnum) ToPointer() *DeleteCustomTypeCountryEnum {
+	return &e
+}
+
 func (e *DeleteCustomTypeCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BR":
 		fallthrough
 	case "CL":
@@ -47,10 +51,10 @@ func (e *DeleteCustomTypeCountryEnum) UnmarshalJSON(data []byte) error {
 	case "PE":
 		fallthrough
 	case "ALL":
-		*e = DeleteCustomTypeCountryEnum(s)
+		*e = DeleteCustomTypeCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteCustomTypeCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteCustomTypeCountryEnum: %v", v)
 	}
 }
 

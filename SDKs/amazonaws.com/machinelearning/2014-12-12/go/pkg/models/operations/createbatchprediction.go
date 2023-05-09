@@ -16,17 +16,21 @@ const (
 	CreateBatchPredictionXAmzTargetEnumAmazonMl20141212CreateBatchPrediction CreateBatchPredictionXAmzTargetEnum = "AmazonML_20141212.CreateBatchPrediction"
 )
 
+func (e CreateBatchPredictionXAmzTargetEnum) ToPointer() *CreateBatchPredictionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateBatchPredictionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.CreateBatchPrediction":
-		*e = CreateBatchPredictionXAmzTargetEnum(s)
+		*e = CreateBatchPredictionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateBatchPredictionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateBatchPredictionXAmzTargetEnum: %v", v)
 	}
 }
 

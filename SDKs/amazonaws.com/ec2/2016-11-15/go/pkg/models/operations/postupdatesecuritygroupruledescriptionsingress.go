@@ -15,17 +15,21 @@ const (
 	POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnumUpdateSecurityGroupRuleDescriptionsIngress POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum = "UpdateSecurityGroupRuleDescriptionsIngress"
 )
 
+func (e POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum) ToPointer() *POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateSecurityGroupRuleDescriptionsIngress":
-		*e = POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum(s)
+		*e = POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsIngressActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnumTwoThousandAndSixteen1115 POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum = "2016-11-15"
 )
 
+func (e POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum) ToPointer() *POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum(s)
+		*e = POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateSecurityGroupRuleDescriptionsIngressVersionEnum: %v", v)
 	}
 }
 

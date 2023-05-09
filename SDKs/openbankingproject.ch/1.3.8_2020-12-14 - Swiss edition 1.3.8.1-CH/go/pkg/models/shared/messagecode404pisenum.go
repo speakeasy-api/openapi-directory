@@ -15,18 +15,22 @@ const (
 	MessageCode404PISEnumProductUnknown  MessageCode404PISEnum = "PRODUCT_UNKNOWN"
 )
 
+func (e MessageCode404PISEnum) ToPointer() *MessageCode404PISEnum {
+	return &e
+}
+
 func (e *MessageCode404PISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_UNKNOWN":
 		fallthrough
 	case "PRODUCT_UNKNOWN":
-		*e = MessageCode404PISEnum(s)
+		*e = MessageCode404PISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode404PISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode404PISEnum: %v", v)
 	}
 }

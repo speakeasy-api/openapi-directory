@@ -2,23 +2,24 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput{
             ApplicationEndpoint: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint{
-                Host: "provident",
-                Port: 715190,
+                Host: sdk.String("provident"),
+                Port: sdk.Int(715190),
             },
             Connectors: []string{
                 "unde",
@@ -26,36 +27,33 @@ func main() {
                 "corrupti",
                 "illum",
             },
-            DisplayName: "vel",
+            DisplayName: sdk.String("vel"),
             Gateway: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput{
-                AppGateway: "error",
-                Type: "GCP_REGIONAL_MIG",
+                AppGateway: sdk.String("error"),
+                Type: shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayTypeEnumGcpRegionalMig.ToPointer(),
             },
             Labels: map[string]string{
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            Name: "delectus",
-            Type: "TYPE_UNSPECIFIED",
+            Name: sdk.String("Ricky Hoppe"),
+            Type: shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnumTCPProxy.ToPointer(),
         },
-        AccessToken: "suscipit",
-        Alt: "media",
-        AppConnectionID: "minus",
-        Callback: "placeat",
-        Fields: "voluptatum",
-        Key: "iusto",
-        OauthToken: "excepturi",
-        Parent: "nisi",
-        PrettyPrint: false,
-        QuotaUser: "recusandae",
-        RequestID: "temporibus",
-        UploadType: "ab",
-        UploadProtocol: "quis",
-        ValidateOnly: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, req, operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
+        AccessToken: sdk.String("voluptatum"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        AppConnectionID: sdk.String("excepturi"),
+        Callback: sdk.String("nisi"),
+        Fields: sdk.String("recusandae"),
+        Key: sdk.String("temporibus"),
+        OauthToken: sdk.String("ab"),
+        Parent: "quis",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("veritatis"),
+        RequestID: sdk.String("deserunt"),
+        UploadType: sdk.String("perferendis"),
+        UploadProtocol: sdk.String("ipsam"),
+        ValidateOnly: sdk.Bool(false),
+    }, operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -16,17 +16,21 @@ const (
 	ListStageDevicesXAmzTargetEnumSageMakerListStageDevices ListStageDevicesXAmzTargetEnum = "SageMaker.ListStageDevices"
 )
 
+func (e ListStageDevicesXAmzTargetEnum) ToPointer() *ListStageDevicesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListStageDevicesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ListStageDevices":
-		*e = ListStageDevicesXAmzTargetEnum(s)
+		*e = ListStageDevicesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListStageDevicesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListStageDevicesXAmzTargetEnum: %v", v)
 	}
 }
 

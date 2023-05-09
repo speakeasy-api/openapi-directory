@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/okta.local/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ClearUserSessionsRequest{
+    ctx := context.Background()
+    res, err := s.ClearUserSessions(ctx, operations.ClearUserSessionsRequest{
         RequestBody: []byte("corrupti"),
         UserID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.ClearUserSessions(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,36 +42,36 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `ClearUserSessions` - Clear User Sessions
-* `FindUser` - Find User
-* `GetAssignedAppLinks` - Get Assigned App Links
-* `GetCurrentUser` - Get Current User
-* `GetGroupsForUser` - Get Groups for User
-* `GetUser` - Get User
-* `ResetFactors` - Reset Factors
+* [ClearUserSessions](docs/sdk/README.md#clearusersessions) - Clear User Sessions
+* [FindUser](docs/sdk/README.md#finduser) - Find User
+* [GetAssignedAppLinks](docs/sdk/README.md#getassignedapplinks) - Get Assigned App Links
+* [GetCurrentUser](docs/sdk/README.md#getcurrentuser) - Get Current User
+* [GetGroupsForUser](docs/sdk/README.md#getgroupsforuser) - Get Groups for User
+* [GetUser](docs/sdk/README.md#getuser) - Get User
+* [ResetFactors](docs/sdk/README.md#resetfactors) - Reset Factors
 
-### CreateUser
+### [CreateUser](docs/createuser/README.md)
 
-* `CreateUserInGroup` - Create User in Group
+* [CreateUserInGroup](docs/createuser/README.md#createuseringroup) - Create User in Group
 
-### CredentialOperations
+### [CredentialOperations](docs/credentialoperations/README.md)
 
-* `ChangePassword` - Change Password
-* `ChangeRecoveryQuestion` - Change Recovery Question
-* `ForgotPasswordOneTimeCode` - Forgot Password (One Time Code)
-* `SetRecoveryCredential` - Set Recovery Credential
+* [ChangePassword](docs/credentialoperations/README.md#changepassword) - Change Password
+* [ChangeRecoveryQuestion](docs/credentialoperations/README.md#changerecoveryquestion) - Change Recovery Question
+* [ForgotPasswordOneTimeCode](docs/credentialoperations/README.md#forgotpasswordonetimecode) - Forgot Password (One Time Code)
+* [SetRecoveryCredential](docs/credentialoperations/README.md#setrecoverycredential) - Set Recovery Credential
 
-### LifecycleOperations
+### [LifecycleOperations](docs/lifecycleoperations/README.md)
 
-* `ActivateUser` - Activate User
-* `DeactivateUser` - Deactivate User
-* `ResetPassword` - Reset Password
-* `SetTempPassword` - Set Temp Password
-* `SuspendUser` - Suspend User
-* `UnlockUser` - Unlock User
-* `UnsuspendUser` - Unsuspend User
+* [ActivateUser](docs/lifecycleoperations/README.md#activateuser) - Activate User
+* [DeactivateUser](docs/lifecycleoperations/README.md#deactivateuser) - Deactivate User
+* [ResetPassword](docs/lifecycleoperations/README.md#resetpassword) - Reset Password
+* [SetTempPassword](docs/lifecycleoperations/README.md#settemppassword) - Set Temp Password
+* [SuspendUser](docs/lifecycleoperations/README.md#suspenduser) - Suspend User
+* [UnlockUser](docs/lifecycleoperations/README.md#unlockuser) - Unlock User
+* [UnsuspendUser](docs/lifecycleoperations/README.md#unsuspenduser) - Unsuspend User
 <!-- End SDK Available Operations -->
 
 ### Maturity

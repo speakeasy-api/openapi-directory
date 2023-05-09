@@ -24,12 +24,16 @@ const (
 	PSUHTTPMethodEnumDelete PSUHTTPMethodEnum = "DELETE"
 )
 
+func (e PSUHTTPMethodEnum) ToPointer() *PSUHTTPMethodEnum {
+	return &e
+}
+
 func (e *PSUHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
@@ -39,9 +43,9 @@ func (e *PSUHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 	case "PATCH":
 		fallthrough
 	case "DELETE":
-		*e = PSUHTTPMethodEnum(s)
+		*e = PSUHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PSUHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for PSUHTTPMethodEnum: %v", v)
 	}
 }

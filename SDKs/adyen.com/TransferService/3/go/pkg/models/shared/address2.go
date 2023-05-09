@@ -5,8 +5,7 @@ package shared
 type Address2 struct {
 	// The name of the city.
 	City *string `json:"city,omitempty"`
-	// The two-character ISO 3166-1 alpha-2 country code. For example, **US**.
-	// >If you don't know the country or are not collecting the country from the shopper, provide `country` as `ZZ`.
+	// The two-character ISO 3166-1 alpha-2 country code. For example, **US**, **NL**, or **GB**.
 	Country string `json:"country"`
 	// First line of the street address.
 	Line1 *string `json:"line1,omitempty"`

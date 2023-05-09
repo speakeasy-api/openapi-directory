@@ -20,12 +20,16 @@ const (
 	ActionEnumEnumImportEvidence ActionEnumEnum = "IMPORT_EVIDENCE"
 )
 
+func (e ActionEnumEnum) ToPointer() *ActionEnumEnum {
+	return &e
+}
+
 func (e *ActionEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE":
 		fallthrough
 	case "UPDATE_METADATA":
@@ -41,9 +45,9 @@ func (e *ActionEnumEnum) UnmarshalJSON(data []byte) error {
 	case "REVIEWED":
 		fallthrough
 	case "IMPORT_EVIDENCE":
-		*e = ActionEnumEnum(s)
+		*e = ActionEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEnumEnum: %v", v)
 	}
 }

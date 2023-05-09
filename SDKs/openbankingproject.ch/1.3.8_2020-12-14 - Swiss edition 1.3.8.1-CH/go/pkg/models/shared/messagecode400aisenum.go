@@ -26,12 +26,16 @@ const (
 	MessageCode400AISEnumSessionsNotSupported   MessageCode400AISEnum = "SESSIONS_NOT_SUPPORTED"
 )
 
+func (e MessageCode400AISEnum) ToPointer() *MessageCode400AISEnum {
+	return &e
+}
+
 func (e *MessageCode400AISEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FORMAT_ERROR":
 		fallthrough
 	case "PARAMETER_NOT_CONSISTENT":
@@ -57,9 +61,9 @@ func (e *MessageCode400AISEnum) UnmarshalJSON(data []byte) error {
 	case "CONSENT_UNKNOWN":
 		fallthrough
 	case "SESSIONS_NOT_SUPPORTED":
-		*e = MessageCode400AISEnum(s)
+		*e = MessageCode400AISEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MessageCode400AISEnum: %s", s)
+		return fmt.Errorf("invalid value for MessageCode400AISEnum: %v", v)
 	}
 }

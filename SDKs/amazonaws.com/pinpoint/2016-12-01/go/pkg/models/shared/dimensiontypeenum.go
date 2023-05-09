@@ -14,18 +14,22 @@ const (
 	DimensionTypeEnumExclusive DimensionTypeEnum = "EXCLUSIVE"
 )
 
+func (e DimensionTypeEnum) ToPointer() *DimensionTypeEnum {
+	return &e
+}
+
 func (e *DimensionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INCLUSIVE":
 		fallthrough
 	case "EXCLUSIVE":
-		*e = DimensionTypeEnum(s)
+		*e = DimensionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionTypeEnum: %v", v)
 	}
 }

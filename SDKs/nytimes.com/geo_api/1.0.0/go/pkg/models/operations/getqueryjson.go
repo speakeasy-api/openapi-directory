@@ -10,26 +10,30 @@ import (
 )
 
 // GetQueryJSONFacetsEnum - When facets is set to 1, a count of all facets will be included in the response.
-type GetQueryJSONFacetsEnum string
+type GetQueryJSONFacetsEnum int64
 
 const (
-	GetQueryJSONFacetsEnumZero GetQueryJSONFacetsEnum = "0"
-	GetQueryJSONFacetsEnumOne  GetQueryJSONFacetsEnum = "1"
+	GetQueryJSONFacetsEnumZero GetQueryJSONFacetsEnum = 0
+	GetQueryJSONFacetsEnumOne  GetQueryJSONFacetsEnum = 1
 )
 
+func (e GetQueryJSONFacetsEnum) ToPointer() *GetQueryJSONFacetsEnum {
+	return &e
+}
+
 func (e *GetQueryJSONFacetsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetQueryJSONFacetsEnum(s)
+	case 1:
+		*e = GetQueryJSONFacetsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetQueryJSONFacetsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetQueryJSONFacetsEnum: %v", v)
 	}
 }
 

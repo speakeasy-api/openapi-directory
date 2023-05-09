@@ -16,12 +16,16 @@ const (
 	InstanceRequirementsRequestAcceleratorManufacturersEnumXilinx            InstanceRequirementsRequestAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e InstanceRequirementsRequestAcceleratorManufacturersEnum) ToPointer() *InstanceRequirementsRequestAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -29,10 +33,10 @@ func (e *InstanceRequirementsRequestAcceleratorManufacturersEnum) UnmarshalJSON(
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = InstanceRequirementsRequestAcceleratorManufacturersEnum(s)
+		*e = InstanceRequirementsRequestAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	InstanceRequirementsRequestAcceleratorNamesEnumK520          InstanceRequirementsRequestAcceleratorNamesEnum = "k520"
 )
 
+func (e InstanceRequirementsRequestAcceleratorNamesEnum) ToPointer() *InstanceRequirementsRequestAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -73,10 +81,10 @@ func (e *InstanceRequirementsRequestAcceleratorNamesEnum) UnmarshalJSON(data []b
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = InstanceRequirementsRequestAcceleratorNamesEnum(s)
+		*e = InstanceRequirementsRequestAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -88,21 +96,25 @@ const (
 	InstanceRequirementsRequestAcceleratorTypesEnumInference InstanceRequirementsRequestAcceleratorTypesEnum = "inference"
 )
 
+func (e InstanceRequirementsRequestAcceleratorTypesEnum) ToPointer() *InstanceRequirementsRequestAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = InstanceRequirementsRequestAcceleratorTypesEnum(s)
+		*e = InstanceRequirementsRequestAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -114,21 +126,25 @@ const (
 	InstanceRequirementsRequestCPUManufacturersEnumAmazonWebServices InstanceRequirementsRequestCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e InstanceRequirementsRequestCPUManufacturersEnum) ToPointer() *InstanceRequirementsRequestCPUManufacturersEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = InstanceRequirementsRequestCPUManufacturersEnum(s)
+		*e = InstanceRequirementsRequestCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -139,19 +155,23 @@ const (
 	InstanceRequirementsRequestInstanceGenerationsEnumPrevious InstanceRequirementsRequestInstanceGenerationsEnum = "previous"
 )
 
+func (e InstanceRequirementsRequestInstanceGenerationsEnum) ToPointer() *InstanceRequirementsRequestInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = InstanceRequirementsRequestInstanceGenerationsEnum(s)
+		*e = InstanceRequirementsRequestInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -162,19 +182,23 @@ const (
 	InstanceRequirementsRequestLocalStorageTypesEnumSsd InstanceRequirementsRequestLocalStorageTypesEnum = "ssd"
 )
 
+func (e InstanceRequirementsRequestLocalStorageTypesEnum) ToPointer() *InstanceRequirementsRequestLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *InstanceRequirementsRequestLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = InstanceRequirementsRequestLocalStorageTypesEnum(s)
+		*e = InstanceRequirementsRequestLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRequirementsRequestLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRequirementsRequestLocalStorageTypesEnum: %v", v)
 	}
 }
 

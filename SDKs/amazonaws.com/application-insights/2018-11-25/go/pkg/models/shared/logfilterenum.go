@@ -15,20 +15,24 @@ const (
 	LogFilterEnumInfo  LogFilterEnum = "INFO"
 )
 
+func (e LogFilterEnum) ToPointer() *LogFilterEnum {
+	return &e
+}
+
 func (e *LogFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR":
 		fallthrough
 	case "WARN":
 		fallthrough
 	case "INFO":
-		*e = LogFilterEnum(s)
+		*e = LogFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for LogFilterEnum: %v", v)
 	}
 }

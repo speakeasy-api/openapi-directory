@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,8 +16,9 @@ func main() {
         }),
     )
 
-    req := operations.GetPersonasRequest{
-        Count: 548814,
+    ctx := context.Background()
+    res, err := s.Persona.GetPersonas(ctx, operations.GetPersonasRequest{
+        Count: sdk.Int64(548814),
         Expand: []string{
             "distinctio",
             "quibusdam",
@@ -30,12 +30,9 @@ func main() {
             "vel",
             "error",
         },
-        Name: "deserunt",
-        Page: 384382,
-    }
-
-    ctx := context.Background()
-    res, err := s.Persona.GetPersonas(ctx, req)
+        Name: sdk.String("Rick Kertzmann"),
+        Page: sdk.Int64(56713),
+    })
     if err != nil {
         log.Fatal(err)
     }

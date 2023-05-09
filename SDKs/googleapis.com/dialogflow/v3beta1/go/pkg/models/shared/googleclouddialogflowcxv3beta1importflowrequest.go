@@ -16,21 +16,25 @@ const (
 	GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnumFallback                GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum = "FALLBACK"
 )
 
+func (e GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum) ToPointer() *GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMPORT_OPTION_UNSPECIFIED":
 		fallthrough
 	case "KEEP":
 		fallthrough
 	case "FALLBACK":
-		*e = GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum(s)
+		*e = GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3beta1ImportFlowRequestImportOptionEnum: %v", v)
 	}
 }
 

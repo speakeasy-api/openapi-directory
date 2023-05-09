@@ -23,21 +23,25 @@ const (
 	GamesPlayersListCollectionEnumFriendsAll GamesPlayersListCollectionEnum = "FRIENDS_ALL"
 )
 
+func (e GamesPlayersListCollectionEnum) ToPointer() *GamesPlayersListCollectionEnum {
+	return &e
+}
+
 func (e *GamesPlayersListCollectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONNECTED":
 		fallthrough
 	case "VISIBLE":
 		fallthrough
 	case "FRIENDS_ALL":
-		*e = GamesPlayersListCollectionEnum(s)
+		*e = GamesPlayersListCollectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GamesPlayersListCollectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GamesPlayersListCollectionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTConfigureHealthCheckActionEnumConfigureHealthCheck POSTConfigureHealthCheckActionEnum = "ConfigureHealthCheck"
 )
 
+func (e POSTConfigureHealthCheckActionEnum) ToPointer() *POSTConfigureHealthCheckActionEnum {
+	return &e
+}
+
 func (e *POSTConfigureHealthCheckActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ConfigureHealthCheck":
-		*e = POSTConfigureHealthCheckActionEnum(s)
+		*e = POSTConfigureHealthCheckActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTConfigureHealthCheckActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTConfigureHealthCheckActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTConfigureHealthCheckVersionEnumTwoThousandAndTwelve0601 POSTConfigureHealthCheckVersionEnum = "2012-06-01"
 )
 
+func (e POSTConfigureHealthCheckVersionEnum) ToPointer() *POSTConfigureHealthCheckVersionEnum {
+	return &e
+}
+
 func (e *POSTConfigureHealthCheckVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-06-01":
-		*e = POSTConfigureHealthCheckVersionEnum(s)
+		*e = POSTConfigureHealthCheckVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTConfigureHealthCheckVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTConfigureHealthCheckVersionEnum: %v", v)
 	}
 }
 

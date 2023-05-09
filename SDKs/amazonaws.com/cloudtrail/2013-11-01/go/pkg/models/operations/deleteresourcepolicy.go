@@ -16,17 +16,21 @@ const (
 	DeleteResourcePolicyXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101DeleteResourcePolicy DeleteResourcePolicyXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteResourcePolicy"
 )
 
+func (e DeleteResourcePolicyXAmzTargetEnum) ToPointer() *DeleteResourcePolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourcePolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.DeleteResourcePolicy":
-		*e = DeleteResourcePolicyXAmzTargetEnum(s)
+		*e = DeleteResourcePolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourcePolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourcePolicyXAmzTargetEnum: %v", v)
 	}
 }
 

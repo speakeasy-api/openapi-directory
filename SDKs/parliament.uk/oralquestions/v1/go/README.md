@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/parliament.uk/oralquestio
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PublishedEarlyDayMotionGetRequest{
-        ID: 548814,
-    }
-
     ctx := context.Background()
-    res, err := s.EarlyDayMotions.PublishedEarlyDayMotionGet(ctx, req)
+    res, err := s.EarlyDayMotions.PublishedEarlyDayMotionGet(ctx, operations.PublishedEarlyDayMotionGetRequest{
+        ID: 548814,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -45,18 +42,18 @@ func main() {
 ## Available Resources and Operations
 
 
-### EarlyDayMotions
+### [EarlyDayMotions](docs/earlydaymotions/README.md)
 
-* `PublishedEarlyDayMotionGet` - Returns a single Early Day Motion by ID
-* `GetEarlyDayMotionsList` - Returns a list of Early Day Motions
+* [PublishedEarlyDayMotionGet](docs/earlydaymotions/README.md#publishedearlydaymotionget) - Returns a single Early Day Motion by ID
+* [GetEarlyDayMotionsList](docs/earlydaymotions/README.md#getearlydaymotionslist) - Returns a list of Early Day Motions
 
-### OralQuestionTimes
+### [OralQuestionTimes](docs/oralquestiontimes/README.md)
 
-* `PublishedOralQuestionTimeGet` - Returns a list of oral question times
+* [PublishedOralQuestionTimeGet](docs/oralquestiontimes/README.md#publishedoralquestiontimeget) - Returns a list of oral question times
 
-### OralQuestions
+### [OralQuestions](docs/oralquestions/README.md)
 
-* `PublishedOralQuestionGet` - Returns a list of oral questions
+* [PublishedOralQuestionGet](docs/oralquestions/README.md#publishedoralquestionget) - Returns a list of oral questions
 <!-- End SDK Available Operations -->
 
 ### Maturity

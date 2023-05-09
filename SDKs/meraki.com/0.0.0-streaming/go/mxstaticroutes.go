@@ -34,7 +34,10 @@ func newMXStaticRoutes(defaultClient, securityClient HTTPClient, serverURL, lang
 // Add a static route for an MX or teleworker network
 func (s *mxStaticRoutes) CreateNetworkStaticRoute(ctx context.Context, request operations.CreateNetworkStaticRouteRequest) (*operations.CreateNetworkStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *mxStaticRoutes) CreateNetworkStaticRoute(ctx context.Context, request o
 // Delete a static route from an MX or teleworker network
 func (s *mxStaticRoutes) DeleteNetworkStaticRoute(ctx context.Context, request operations.DeleteNetworkStaticRouteRequest) (*operations.DeleteNetworkStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -125,7 +131,10 @@ func (s *mxStaticRoutes) DeleteNetworkStaticRoute(ctx context.Context, request o
 // Return a static route for an MX or teleworker network
 func (s *mxStaticRoutes) GetNetworkStaticRoute(ctx context.Context, request operations.GetNetworkStaticRouteRequest) (*operations.GetNetworkStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -170,7 +179,10 @@ func (s *mxStaticRoutes) GetNetworkStaticRoute(ctx context.Context, request oper
 // List the static routes for an MX or teleworker network
 func (s *mxStaticRoutes) GetNetworkStaticRoutes(ctx context.Context, request operations.GetNetworkStaticRoutesRequest) (*operations.GetNetworkStaticRoutesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -215,7 +227,10 @@ func (s *mxStaticRoutes) GetNetworkStaticRoutes(ctx context.Context, request ope
 // Update a static route for an MX or teleworker network
 func (s *mxStaticRoutes) UpdateNetworkStaticRoute(ctx context.Context, request operations.UpdateNetworkStaticRouteRequest) (*operations.UpdateNetworkStaticRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/staticRoutes/{staticRouteId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

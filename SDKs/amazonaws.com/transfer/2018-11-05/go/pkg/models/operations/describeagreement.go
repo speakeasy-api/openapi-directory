@@ -16,17 +16,21 @@ const (
 	DescribeAgreementXAmzTargetEnumTransferServiceDescribeAgreement DescribeAgreementXAmzTargetEnum = "TransferService.DescribeAgreement"
 )
 
+func (e DescribeAgreementXAmzTargetEnum) ToPointer() *DescribeAgreementXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeAgreementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.DescribeAgreement":
-		*e = DescribeAgreementXAmzTargetEnum(s)
+		*e = DescribeAgreementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeAgreementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeAgreementXAmzTargetEnum: %v", v)
 	}
 }
 

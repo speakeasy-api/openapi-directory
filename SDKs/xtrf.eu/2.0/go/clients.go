@@ -156,7 +156,10 @@ func (s *clients) Create3(ctx context.Context, request shared.CustomerDTO) (*ope
 // Removes a person.
 func (s *clients) Delete3(ctx context.Context, request operations.Delete3Request) (*operations.Delete3Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -192,7 +195,10 @@ func (s *clients) Delete3(ctx context.Context, request operations.Delete3Request
 // Removes a customer price list.
 func (s *clients) Delete4(ctx context.Context, request operations.Delete4Request) (*operations.Delete4Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/priceLists/{priceListId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/priceLists/{priceListId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -228,7 +234,10 @@ func (s *clients) Delete4(ctx context.Context, request operations.Delete4Request
 // Removes a client.
 func (s *clients) Delete5(ctx context.Context, request operations.Delete5Request) (*operations.Delete5Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -319,7 +328,10 @@ func (s *clients) GenerateSingleUseSignInToken(ctx context.Context, request shar
 // Returns address of a given client.
 func (s *clients) GetAddress(ctx context.Context, request operations.GetAddressRequest) (*operations.GetAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -511,7 +523,10 @@ func (s *clients) GetAllNamesWithIds(ctx context.Context, request operations.Get
 // Returns person details.
 func (s *clients) GetByID1(ctx context.Context, request operations.GetByID1Request) (*operations.GetByID1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +571,10 @@ func (s *clients) GetByID1(ctx context.Context, request operations.GetByID1Reque
 // Returns client details.
 func (s *clients) GetByID2(ctx context.Context, request operations.GetByID2Request) (*operations.GetByID2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -605,7 +623,10 @@ func (s *clients) GetByID2(ctx context.Context, request operations.GetByID2Reque
 // Returns categories of a given client.
 func (s *clients) GetCategories(ctx context.Context, request operations.GetCategoriesRequest) (*operations.GetCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -650,7 +671,10 @@ func (s *clients) GetCategories(ctx context.Context, request operations.GetCateg
 // Returns contact of a given person.
 func (s *clients) GetContact(ctx context.Context, request operations.GetContactRequest) (*operations.GetContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -695,7 +719,10 @@ func (s *clients) GetContact(ctx context.Context, request operations.GetContactR
 // Returns contact of a given client.
 func (s *clients) GetContact1(ctx context.Context, request operations.GetContact1Request) (*operations.GetContact1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -740,7 +767,10 @@ func (s *clients) GetContact1(ctx context.Context, request operations.GetContact
 // Returns correspondence address of a given client.
 func (s *clients) GetCorrespondenceAddress(ctx context.Context, request operations.GetCorrespondenceAddressRequest) (*operations.GetCorrespondenceAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -785,7 +815,10 @@ func (s *clients) GetCorrespondenceAddress(ctx context.Context, request operatio
 // Returns custom field of a given client.
 func (s *clients) GetCustomField(ctx context.Context, request operations.GetCustomFieldRequest) (*operations.GetCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -830,7 +863,10 @@ func (s *clients) GetCustomField(ctx context.Context, request operations.GetCust
 // Returns custom fields of a given person.
 func (s *clients) GetCustomFields(ctx context.Context, request operations.GetCustomFieldsRequest) (*operations.GetCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -875,7 +911,10 @@ func (s *clients) GetCustomFields(ctx context.Context, request operations.GetCus
 // Returns custom fields of a given client.
 func (s *clients) GetCustomFields1(ctx context.Context, request operations.GetCustomFields1Request) (*operations.GetCustomFields1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +959,10 @@ func (s *clients) GetCustomFields1(ctx context.Context, request operations.GetCu
 // Returns industries of a given client.
 func (s *clients) GetIndustries(ctx context.Context, request operations.GetIndustriesRequest) (*operations.GetIndustriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -965,7 +1007,10 @@ func (s *clients) GetIndustries(ctx context.Context, request operations.GetIndus
 // Updates address of a given client.
 func (s *clients) UpdateAddress(ctx context.Context, request operations.UpdateAddressRequest) (*operations.UpdateAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/address", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressDTO", "json")
 	if err != nil {
@@ -1020,7 +1065,10 @@ func (s *clients) UpdateAddress(ctx context.Context, request operations.UpdateAd
 // Updates categories of a given client.
 func (s *clients) UpdateCategories(ctx context.Context, request operations.UpdateCategoriesRequest) (*operations.UpdateCategoriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/categories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1075,7 +1123,10 @@ func (s *clients) UpdateCategories(ctx context.Context, request operations.Updat
 // Updates contact of a given person. Sets that this person uses specific address and contact (not the one from customer).
 func (s *clients) UpdateContact(ctx context.Context, request operations.UpdateContactRequest) (*operations.UpdateContactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PersonContactDTO", "json")
 	if err != nil {
@@ -1130,7 +1181,10 @@ func (s *clients) UpdateContact(ctx context.Context, request operations.UpdateCo
 // Updates contact of a given client.
 func (s *clients) UpdateContact1(ctx context.Context, request operations.UpdateContact1Request) (*operations.UpdateContact1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/contact", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ContactDTO", "json")
 	if err != nil {
@@ -1185,7 +1239,10 @@ func (s *clients) UpdateContact1(ctx context.Context, request operations.UpdateC
 // Updates correspondence address of a given client.
 func (s *clients) UpdateCorrespondenceAddress(ctx context.Context, request operations.UpdateCorrespondenceAddressRequest) (*operations.UpdateCorrespondenceAddressResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/correspondenceAddress", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddressDTO", "json")
 	if err != nil {
@@ -1240,7 +1297,10 @@ func (s *clients) UpdateCorrespondenceAddress(ctx context.Context, request opera
 // Updates given custom field of a given client.
 func (s *clients) UpdateCustomField(ctx context.Context, request operations.UpdateCustomFieldRequest) (*operations.UpdateCustomFieldResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields/{customFieldKey}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomFieldDTO", "json")
 	if err != nil {
@@ -1295,7 +1355,10 @@ func (s *clients) UpdateCustomField(ctx context.Context, request operations.Upda
 // Updates custom fields of a given person.
 func (s *clients) UpdateCustomFields(ctx context.Context, request operations.UpdateCustomFieldsRequest) (*operations.UpdateCustomFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1350,7 +1413,10 @@ func (s *clients) UpdateCustomFields(ctx context.Context, request operations.Upd
 // Updates custom fields of a given client.
 func (s *clients) UpdateCustomFields1(ctx context.Context, request operations.UpdateCustomFields1Request) (*operations.UpdateCustomFields1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/customFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1405,7 +1471,10 @@ func (s *clients) UpdateCustomFields1(ctx context.Context, request operations.Up
 // Updates industries of a given client.
 func (s *clients) UpdateIndustries(ctx context.Context, request operations.UpdateIndustriesRequest) (*operations.UpdateIndustriesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}/industries", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1460,7 +1529,10 @@ func (s *clients) UpdateIndustries(ctx context.Context, request operations.Updat
 // Only specified fields will be changed. One may not specify embeddable fields here - use separate API calls for updating them.
 func (s *clients) Update1(ctx context.Context, request operations.Update1Request) (*operations.Update1Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/persons/{personId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerPersonDTO", "json")
 	if err != nil {
@@ -1515,7 +1587,10 @@ func (s *clients) Update1(ctx context.Context, request operations.Update1Request
 // Only specified fields will be changed (id is required). One may not specify embeddable fields here - use separate API calls for updating them.
 func (s *clients) Update2(ctx context.Context, request operations.Update2Request) (*operations.Update2Response, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{customerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerDTO", "json")
 	if err != nil {

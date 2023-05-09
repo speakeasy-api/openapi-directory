@@ -17,19 +17,23 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnumMultiMode  UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum = "MULTI_MODE"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_MODE":
 		fallthrough
 	case "MULTI_MODE":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyFiberOpticCableTypeEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnumMax2000Lbs UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum = "MAX_2000_LBS"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_LIMIT":
 		fallthrough
 	case "MAX_1400_LBS":
@@ -59,10 +67,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnu
 	case "MAX_1800_LBS":
 		fallthrough
 	case "MAX_2000_LBS":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyMaximumSupportedWeightLbsEnum: %v", v)
 	}
 }
 
@@ -85,12 +93,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnumOptic1000BaseSx     UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum = "OPTIC_1000BASE_SX"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPTIC_10GBASE_SR":
 		fallthrough
 	case "OPTIC_10GBASE_IR":
@@ -116,10 +128,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum) Unmarsh
 	case "OPTIC_1000BASE_LX":
 		fallthrough
 	case "OPTIC_1000BASE_SX":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyOpticalStandardEnum: %v", v)
 	}
 }
 
@@ -133,12 +145,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnumAh532P6W UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum = "AH532P6W"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "L6_30P":
 		fallthrough
 	case "IEC309":
@@ -146,10 +162,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum) Unmarsha
 	case "AH530P7W":
 		fallthrough
 	case "AH532P6W":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerConnectorEnum: %v", v)
 	}
 }
 
@@ -163,12 +179,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnumPower30Kva UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum = "POWER_30_KVA"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POWER_5_KVA":
 		fallthrough
 	case "POWER_10_KVA":
@@ -176,10 +196,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum) UnmarshalJ
 	case "POWER_15_KVA":
 		fallthrough
 	case "POWER_30_KVA":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerDrawKvaEnum: %v", v)
 	}
 }
 
@@ -191,19 +211,23 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnumBelowRack UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum = "BELOW_RACK"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ABOVE_RACK":
 		fallthrough
 	case "BELOW_RACK":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerFeedDropEnum: %v", v)
 	}
 }
 
@@ -215,19 +239,23 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnumThreePhase  UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum = "THREE_PHASE"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SINGLE_PHASE":
 		fallthrough
 	case "THREE_PHASE":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyPowerPhaseEnum: %v", v)
 	}
 }
 
@@ -247,12 +275,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnumUplinkCount16 UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum = "UPLINK_COUNT_16"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPLINK_COUNT_1":
 		fallthrough
 	case "UPLINK_COUNT_2":
@@ -272,10 +304,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum) UnmarshalJS
 	case "UPLINK_COUNT_12":
 		fallthrough
 	case "UPLINK_COUNT_16":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyUplinkCountEnum: %v", v)
 	}
 }
 
@@ -289,12 +321,16 @@ const (
 	UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnumUplink100G UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum = "UPLINK_100G"
 )
 
+func (e UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum) ToPointer() *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum {
+	return &e
+}
+
 func (e *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPLINK_1G":
 		fallthrough
 	case "UPLINK_10G":
@@ -302,10 +338,10 @@ func (e *UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum) UnmarshalJSO
 	case "UPLINK_40G":
 		fallthrough
 	case "UPLINK_100G":
-		*e = UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum(s)
+		*e = UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSiteRackPhysicalPropertiesRequestBodyUplinkGbpsEnum: %v", v)
 	}
 }
 

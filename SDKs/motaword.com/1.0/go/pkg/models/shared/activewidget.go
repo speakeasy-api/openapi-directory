@@ -8,6 +8,8 @@ import (
 
 // ActiveWidget - Updated widget details
 type ActiveWidget struct {
+	// Is the Active Widget in admin mode? This changes a couple of behaviors in the widget to configure some rules like elements, sections, pages, etc.
+	AdminMode *bool `json:"admin_mode,omitempty"`
 	// When true, hash params are included in filenames. When false, params are ignored.
 	AllowHashInURL *bool `json:"allow_hash_in_url,omitempty"`
 	// When true, query params are included in filenames. When false, params are ignored.
@@ -16,13 +18,17 @@ type ActiveWidget struct {
 	AutoDetectSourceLanguage *bool `json:"auto_detect_source_language,omitempty"`
 	// the date-time notation as defined by RFC 3339, section 5.6, for example, 2017-07-21T17:32:28Z
 	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// When true, Active ecosystem will print debug-level logs from all Active modules.
+	DebugMode *bool `json:"debug_mode,omitempty"`
 	// Continuous project exclusive elements and rules
 	Elements *string `json:"elements,omitempty"`
 	// Specify whether we should follow the user around in your website and automatically translate pages.
 	FollowUser *bool `json:"follow_user,omitempty"`
 	// Determines whether to force-refresh local browser cache of your translations in certain period of times, no matter if there is a new activity in the project.
-	ForceCacheRefreshInterval *bool  `json:"force_cache_refresh_interval,omitempty"`
-	ID                        *int64 `json:"id,omitempty"`
+	ForceCacheRefreshInterval *bool `json:"force_cache_refresh_interval,omitempty"`
+	// When true, Active ecosystem will collect all strings on TMS no matter if the translation is present in the cache.
+	HitBackendForExisting *bool  `json:"hit_backend_for_existing,omitempty"`
+	ID                    *int64 `json:"id,omitempty"`
 	// Continuous project language mappings
 	LanguageMappings *string `json:"language_mappings,omitempty"`
 	// Whether ActiveJS should be considered live in an embedded site. Use `false` if you are still testing Active. Go to your Active dashboard and follow links to your website to actually test Active.

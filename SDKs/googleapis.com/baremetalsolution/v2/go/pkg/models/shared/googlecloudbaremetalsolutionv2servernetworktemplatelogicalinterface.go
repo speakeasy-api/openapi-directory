@@ -16,21 +16,25 @@ const (
 	GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnumNic                      GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum = "NIC"
 )
 
+func (e GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum) ToPointer() *GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum {
+	return &e
+}
+
 func (e *GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERFACE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "BOND":
 		fallthrough
 	case "NIC":
-		*e = GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum(s)
+		*e = GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterfaceTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ProvideAnomalyFeedbackXAmzTargetEnumAwsInsightsIndexServiceProvideAnomalyFeedback ProvideAnomalyFeedbackXAmzTargetEnum = "AWSInsightsIndexService.ProvideAnomalyFeedback"
 )
 
+func (e ProvideAnomalyFeedbackXAmzTargetEnum) ToPointer() *ProvideAnomalyFeedbackXAmzTargetEnum {
+	return &e
+}
+
 func (e *ProvideAnomalyFeedbackXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.ProvideAnomalyFeedback":
-		*e = ProvideAnomalyFeedbackXAmzTargetEnum(s)
+		*e = ProvideAnomalyFeedbackXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProvideAnomalyFeedbackXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ProvideAnomalyFeedbackXAmzTargetEnum: %v", v)
 	}
 }
 

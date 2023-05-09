@@ -39,19 +39,23 @@ const (
 	UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnumActive   UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum = "active"
 )
 
+func (e UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum) ToPointer() *UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum(s)
+		*e = UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorDealingStatusEnum: %v", v)
 	}
 }
 
@@ -70,12 +74,16 @@ const (
 	UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnumOther                   UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum = "other"
 )
 
+func (e UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum) ToPointer() *UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "employed":
 		fallthrough
 	case "self_employed":
@@ -93,10 +101,10 @@ func (e *UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum) Unmarsh
 	case "caring_for_a_person_under_16":
 		fallthrough
 	case "other":
-		*e = UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum(s)
+		*e = UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorEmploymentStatusEnum: %v", v)
 	}
 }
 
@@ -147,12 +155,16 @@ const (
 	UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnumNotStarted     UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum = "not_started"
 )
 
+func (e UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum) ToPointer() *UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "kyc_failed_error":
@@ -162,10 +174,10 @@ func (e *UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum) UnmarshalJS
 	case "clear":
 		fallthrough
 	case "not_started":
-		*e = UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum(s)
+		*e = UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorKycAmlStatusEnum: %v", v)
 	}
 }
 
@@ -182,12 +194,16 @@ const (
 	UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnumIp16     UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum = "ip16"
 )
 
+func (e UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) ToPointer() *UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum {
+	return &e
+}
+
 func (e *UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "primary":
 		fallthrough
 	case "enhanced":
@@ -201,10 +217,10 @@ func (e *UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtec
 	case "fp16":
 		fallthrough
 	case "ip16":
-		*e = UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(s)
+		*e = UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %v", v)
 	}
 }
 
@@ -231,12 +247,16 @@ const (
 	UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnumGbWls UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum = "GB-WLS"
 )
 
+func (e UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum) ToPointer() *UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum {
+	return &e
+}
+
 func (e *UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GB-ENG":
 		fallthrough
 	case "GB-NIR":
@@ -244,10 +264,10 @@ func (e *UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum) UnmarshalJS
 	case "GB-SCT":
 		fallthrough
 	case "GB-WLS":
-		*e = UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum(s)
+		*e = UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorUpdateRequestBodyForInvestorTaxResidenceEnum: %v", v)
 	}
 }
 
@@ -321,19 +341,23 @@ const (
 	UpdateInvestor409ApplicationJSONStatusEnumComplete   UpdateInvestor409ApplicationJSONStatusEnum = "COMPLETE"
 )
 
+func (e UpdateInvestor409ApplicationJSONStatusEnum) ToPointer() *UpdateInvestor409ApplicationJSONStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestor409ApplicationJSONStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROCESSING":
 		fallthrough
 	case "COMPLETE":
-		*e = UpdateInvestor409ApplicationJSONStatusEnum(s)
+		*e = UpdateInvestor409ApplicationJSONStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestor409ApplicationJSONStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestor409ApplicationJSONStatusEnum: %v", v)
 	}
 }
 
@@ -405,19 +429,23 @@ const (
 	UpdateInvestorRootTypeForInvestorDealingStatusEnumActive   UpdateInvestorRootTypeForInvestorDealingStatusEnum = "active"
 )
 
+func (e UpdateInvestorRootTypeForInvestorDealingStatusEnum) ToPointer() *UpdateInvestorRootTypeForInvestorDealingStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorDealingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = UpdateInvestorRootTypeForInvestorDealingStatusEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorDealingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorDealingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorDealingStatusEnum: %v", v)
 	}
 }
 
@@ -436,12 +464,16 @@ const (
 	UpdateInvestorRootTypeForInvestorEmploymentStatusEnumOther                   UpdateInvestorRootTypeForInvestorEmploymentStatusEnum = "other"
 )
 
+func (e UpdateInvestorRootTypeForInvestorEmploymentStatusEnum) ToPointer() *UpdateInvestorRootTypeForInvestorEmploymentStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorEmploymentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "employed":
 		fallthrough
 	case "self_employed":
@@ -459,10 +491,10 @@ func (e *UpdateInvestorRootTypeForInvestorEmploymentStatusEnum) UnmarshalJSON(da
 	case "caring_for_a_person_under_16":
 		fallthrough
 	case "other":
-		*e = UpdateInvestorRootTypeForInvestorEmploymentStatusEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorEmploymentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorEmploymentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorEmploymentStatusEnum: %v", v)
 	}
 }
 
@@ -509,12 +541,16 @@ const (
 	UpdateInvestorRootTypeForInvestorKycAmlStatusEnumNotStarted     UpdateInvestorRootTypeForInvestorKycAmlStatusEnum = "not_started"
 )
 
+func (e UpdateInvestorRootTypeForInvestorKycAmlStatusEnum) ToPointer() *UpdateInvestorRootTypeForInvestorKycAmlStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorKycAmlStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "submitted":
 		fallthrough
 	case "kyc_failed_error":
@@ -524,10 +560,10 @@ func (e *UpdateInvestorRootTypeForInvestorKycAmlStatusEnum) UnmarshalJSON(data [
 	case "clear":
 		fallthrough
 	case "not_started":
-		*e = UpdateInvestorRootTypeForInvestorKycAmlStatusEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorKycAmlStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorKycAmlStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorKycAmlStatusEnum: %v", v)
 	}
 }
 
@@ -543,12 +579,16 @@ const (
 	UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnumIp16     UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum = "ip16"
 )
 
+func (e UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) ToPointer() *UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "primary":
 		fallthrough
 	case "enhanced":
@@ -562,10 +602,10 @@ func (e *UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeE
 	case "fp16":
 		fallthrough
 	case "ip16":
-		*e = UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum: %v", v)
 	}
 }
 
@@ -590,12 +630,16 @@ const (
 	UpdateInvestorRootTypeForInvestorStatusEnumActive     UpdateInvestorRootTypeForInvestorStatusEnum = "active"
 )
 
+func (e UpdateInvestorRootTypeForInvestorStatusEnum) ToPointer() *UpdateInvestorRootTypeForInvestorStatusEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "kyc_pending":
 		fallthrough
 	case "kyc_failed":
@@ -603,10 +647,10 @@ func (e *UpdateInvestorRootTypeForInvestorStatusEnum) UnmarshalJSON(data []byte)
 	case "inactive":
 		fallthrough
 	case "active":
-		*e = UpdateInvestorRootTypeForInvestorStatusEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorStatusEnum: %v", v)
 	}
 }
 
@@ -620,12 +664,16 @@ const (
 	UpdateInvestorRootTypeForInvestorTaxResidenceEnumGbWls UpdateInvestorRootTypeForInvestorTaxResidenceEnum = "GB-WLS"
 )
 
+func (e UpdateInvestorRootTypeForInvestorTaxResidenceEnum) ToPointer() *UpdateInvestorRootTypeForInvestorTaxResidenceEnum {
+	return &e
+}
+
 func (e *UpdateInvestorRootTypeForInvestorTaxResidenceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GB-ENG":
 		fallthrough
 	case "GB-NIR":
@@ -633,10 +681,10 @@ func (e *UpdateInvestorRootTypeForInvestorTaxResidenceEnum) UnmarshalJSON(data [
 	case "GB-SCT":
 		fallthrough
 	case "GB-WLS":
-		*e = UpdateInvestorRootTypeForInvestorTaxResidenceEnum(s)
+		*e = UpdateInvestorRootTypeForInvestorTaxResidenceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorTaxResidenceEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateInvestorRootTypeForInvestorTaxResidenceEnum: %v", v)
 	}
 }
 

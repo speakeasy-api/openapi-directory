@@ -134,7 +134,10 @@ func (s *product) CreateProduct(ctx context.Context, request shared.ProductInput
 // Delete an existing product.
 func (s *product) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -202,7 +205,10 @@ func (s *product) DeleteProduct(ctx context.Context, request operations.DeletePr
 // Retrieves the details of an existing product.
 func (s *product) GetProduct(ctx context.Context, request operations.GetProductRequest) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -378,7 +384,10 @@ func (s *product) ListProduct(ctx context.Context, request operations.ListProduc
 // Update an existing product. Returns a product object if the update is succeded.
 func (s *product) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/products/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProductInput", "json")
 	if err != nil {

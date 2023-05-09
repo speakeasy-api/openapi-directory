@@ -23,21 +23,25 @@ const (
 	CloudchannelOperationsListFilterEnumFull        CloudchannelOperationsListFilterEnum = "FULL"
 )
 
+func (e CloudchannelOperationsListFilterEnum) ToPointer() *CloudchannelOperationsListFilterEnum {
+	return &e
+}
+
 func (e *CloudchannelOperationsListFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNSPECIFIED":
 		fallthrough
 	case "BASIC":
 		fallthrough
 	case "FULL":
-		*e = CloudchannelOperationsListFilterEnum(s)
+		*e = CloudchannelOperationsListFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CloudchannelOperationsListFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for CloudchannelOperationsListFilterEnum: %v", v)
 	}
 }
 

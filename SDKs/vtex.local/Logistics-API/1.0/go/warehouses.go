@@ -35,7 +35,10 @@ func newWarehouses(defaultClient, securityClient HTTPClient, serverURL, language
 // Activates a given warehouse, by warehouse ID.
 func (s *warehouses) ActivateWarehouse(ctx context.Context, request operations.ActivateWarehouseRequest) (*operations.ActivateWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}/activation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}/activation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +173,10 @@ func (s *warehouses) CreateUpdateWarehouse(ctx context.Context, request operatio
 // Deactivates a given warehouse by warehouse ID.
 func (s *warehouses) DeactivateWarehouse(ctx context.Context, request operations.DeactivateWarehouseRequest) (*operations.DeactivateWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}/deactivation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}/deactivation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -208,7 +214,10 @@ func (s *warehouses) DeactivateWarehouse(ctx context.Context, request operations
 // Deletes given warehouse by warehouse ID.
 func (s *warehouses) RemoveWarehouse(ctx context.Context, request operations.RemoveWarehouseRequest) (*operations.RemoveWarehouseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -246,7 +255,10 @@ func (s *warehouses) RemoveWarehouse(ctx context.Context, request operations.Rem
 // Lists the information of a given warehouse, searching by warehouse ID.
 func (s *warehouses) WarehouseByID(ctx context.Context, request operations.WarehouseByIDRequest) (*operations.WarehouseByIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/logistics/pvt/configuration/warehouses/{warehouseId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

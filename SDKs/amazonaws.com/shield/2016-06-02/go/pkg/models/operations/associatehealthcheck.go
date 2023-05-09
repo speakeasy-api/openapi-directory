@@ -16,17 +16,21 @@ const (
 	AssociateHealthCheckXAmzTargetEnumAwsShield20160616AssociateHealthCheck AssociateHealthCheckXAmzTargetEnum = "AWSShield_20160616.AssociateHealthCheck"
 )
 
+func (e AssociateHealthCheckXAmzTargetEnum) ToPointer() *AssociateHealthCheckXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateHealthCheckXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.AssociateHealthCheck":
-		*e = AssociateHealthCheckXAmzTargetEnum(s)
+		*e = AssociateHealthCheckXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateHealthCheckXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateHealthCheckXAmzTargetEnum: %v", v)
 	}
 }
 

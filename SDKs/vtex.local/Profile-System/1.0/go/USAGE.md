@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,12 +18,13 @@ func main() {
         }),
     )
 
-    req := operations.CreateClientAddressRequest{
+    ctx := context.Background()
+    res, err := s.Addresses.CreateClientAddress(ctx, operations.CreateClientAddressRequest{
         Accept: "application/json",
         ContentType: "application/json",
         Address: &shared.Address{
             AdministrativeAreaLevel1: "RJ",
-            CountryCode: "BR",
+            CountryCode: sdk.String("BR"),
             CountryName: "Brasil",
             Locality: "Locality",
             LocalityAreaLevel1: "Locality area",
@@ -31,12 +32,9 @@ func main() {
             Route: "51",
             StreetNumber: "999",
         },
-        AlternativeKey: "email",
+        AlternativeKey: sdk.String("email"),
         ProfileID: "70caf394-8534-447e-a0ca-1803c669c771",
-    }
-
-    ctx := context.Background()
-    res, err := s.Addresses.CreateClientAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -16,17 +16,21 @@ const (
 	GetKeyspaceXAmzTargetEnumKeyspacesServiceGetKeyspace GetKeyspaceXAmzTargetEnum = "KeyspacesService.GetKeyspace"
 )
 
+func (e GetKeyspaceXAmzTargetEnum) ToPointer() *GetKeyspaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetKeyspaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "KeyspacesService.GetKeyspace":
-		*e = GetKeyspaceXAmzTargetEnum(s)
+		*e = GetKeyspaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetKeyspaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetKeyspaceXAmzTargetEnum: %v", v)
 	}
 }
 

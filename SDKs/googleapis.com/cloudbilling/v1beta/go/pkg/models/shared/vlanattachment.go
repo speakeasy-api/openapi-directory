@@ -26,12 +26,16 @@ const (
 	VlanAttachmentBandwidthEnumBandwidthBps50G      VlanAttachmentBandwidthEnum = "BANDWIDTH_BPS_50G"
 )
 
+func (e VlanAttachmentBandwidthEnum) ToPointer() *VlanAttachmentBandwidthEnum {
+	return &e
+}
+
 func (e *VlanAttachmentBandwidthEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BANDWIDTH_UNSPECIFIED":
 		fallthrough
 	case "BANDWIDTH_BPS_50M":
@@ -57,10 +61,10 @@ func (e *VlanAttachmentBandwidthEnum) UnmarshalJSON(data []byte) error {
 	case "BANDWIDTH_BPS_20G":
 		fallthrough
 	case "BANDWIDTH_BPS_50G":
-		*e = VlanAttachmentBandwidthEnum(s)
+		*e = VlanAttachmentBandwidthEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VlanAttachmentBandwidthEnum: %s", s)
+		return fmt.Errorf("invalid value for VlanAttachmentBandwidthEnum: %v", v)
 	}
 }
 

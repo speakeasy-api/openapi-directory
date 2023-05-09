@@ -34,7 +34,10 @@ func newParents(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DriveParentsDelete - Removes a parent from a file.
 func (s *parents) DriveParentsDelete(ctx context.Context, request operations.DriveParentsDeleteRequest, security operations.DriveParentsDeleteSecurity) (*operations.DriveParentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *parents) DriveParentsDelete(ctx context.Context, request operations.Dri
 // DriveParentsGet - Gets a specific parent reference.
 func (s *parents) DriveParentsGet(ctx context.Context, request operations.DriveParentsGetRequest, security operations.DriveParentsGetSecurity) (*operations.DriveParentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents/{parentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *parents) DriveParentsGet(ctx context.Context, request operations.DriveP
 // DriveParentsInsert - Adds a parent folder for a file.
 func (s *parents) DriveParentsInsert(ctx context.Context, request operations.DriveParentsInsertRequest, security operations.DriveParentsInsertSecurity) (*operations.DriveParentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ParentReference", "json")
 	if err != nil {
@@ -176,7 +185,10 @@ func (s *parents) DriveParentsInsert(ctx context.Context, request operations.Dri
 // DriveParentsList - Lists a file's parents.
 func (s *parents) DriveParentsList(ctx context.Context, request operations.DriveParentsListRequest, security operations.DriveParentsListSecurity) (*operations.DriveParentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/parents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

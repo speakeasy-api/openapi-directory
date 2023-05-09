@@ -19,12 +19,16 @@ const (
 	DeployJobRunFailureCauseEnumCloudBuildRequestFailed   DeployJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
+func (e DeployJobRunFailureCauseEnum) ToPointer() *DeployJobRunFailureCauseEnum {
+	return &e
+}
+
 func (e *DeployJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILURE_CAUSE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_BUILD_UNAVAILABLE":
@@ -36,15 +40,17 @@ func (e *DeployJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
 	case "MISSING_RESOURCES_FOR_CANARY":
 		fallthrough
 	case "CLOUD_BUILD_REQUEST_FAILED":
-		*e = DeployJobRunFailureCauseEnum(s)
+		*e = DeployJobRunFailureCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeployJobRunFailureCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for DeployJobRunFailureCauseEnum: %v", v)
 	}
 }
 
 // DeployJobRun - DeployJobRun contains information specific to a deploy `JobRun`.
 type DeployJobRun struct {
+	// The artifacts produced by a deploy operation.
+	Artifact *DeployArtifact `json:"artifact,omitempty"`
 	// Output only. The resource name of the Cloud Build `Build` object that is used to deploy. Format is projects/{project}/locations/{location}/builds/{build}.
 	Build *string `json:"build,omitempty"`
 	// Output only. The reason the deploy failed. This will always be unspecified while the deploy is in progress or if it succeeded.

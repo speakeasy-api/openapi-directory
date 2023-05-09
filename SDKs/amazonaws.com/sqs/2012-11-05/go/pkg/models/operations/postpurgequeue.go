@@ -15,17 +15,21 @@ const (
 	POSTPurgeQueueActionEnumPurgeQueue POSTPurgeQueueActionEnum = "PurgeQueue"
 )
 
+func (e POSTPurgeQueueActionEnum) ToPointer() *POSTPurgeQueueActionEnum {
+	return &e
+}
+
 func (e *POSTPurgeQueueActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PurgeQueue":
-		*e = POSTPurgeQueueActionEnum(s)
+		*e = POSTPurgeQueueActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurgeQueueActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurgeQueueActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTPurgeQueueVersionEnumTwoThousandAndTwelve1105 POSTPurgeQueueVersionEnum = "2012-11-05"
 )
 
+func (e POSTPurgeQueueVersionEnum) ToPointer() *POSTPurgeQueueVersionEnum {
+	return &e
+}
+
 func (e *POSTPurgeQueueVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-11-05":
-		*e = POSTPurgeQueueVersionEnum(s)
+		*e = POSTPurgeQueueVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTPurgeQueueVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTPurgeQueueVersionEnum: %v", v)
 	}
 }
 

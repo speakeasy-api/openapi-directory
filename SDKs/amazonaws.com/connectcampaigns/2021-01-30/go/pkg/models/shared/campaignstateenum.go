@@ -18,12 +18,16 @@ const (
 	CampaignStateEnumFailed      CampaignStateEnum = "Failed"
 )
 
+func (e CampaignStateEnum) ToPointer() *CampaignStateEnum {
+	return &e
+}
+
 func (e *CampaignStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Initialized":
 		fallthrough
 	case "Running":
@@ -33,9 +37,9 @@ func (e *CampaignStateEnum) UnmarshalJSON(data []byte) error {
 	case "Stopped":
 		fallthrough
 	case "Failed":
-		*e = CampaignStateEnum(s)
+		*e = CampaignStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignStateEnum: %v", v)
 	}
 }

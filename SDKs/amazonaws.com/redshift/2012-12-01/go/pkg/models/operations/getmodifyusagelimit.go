@@ -15,17 +15,21 @@ const (
 	GETModifyUsageLimitActionEnumModifyUsageLimit GETModifyUsageLimitActionEnum = "ModifyUsageLimit"
 )
 
+func (e GETModifyUsageLimitActionEnum) ToPointer() *GETModifyUsageLimitActionEnum {
+	return &e
+}
+
 func (e *GETModifyUsageLimitActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyUsageLimit":
-		*e = GETModifyUsageLimitActionEnum(s)
+		*e = GETModifyUsageLimitActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyUsageLimitActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyUsageLimitActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETModifyUsageLimitBreachActionEnumDisable    GETModifyUsageLimitBreachActionEnum = "disable"
 )
 
+func (e GETModifyUsageLimitBreachActionEnum) ToPointer() *GETModifyUsageLimitBreachActionEnum {
+	return &e
+}
+
 func (e *GETModifyUsageLimitBreachActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "log":
 		fallthrough
 	case "emit-metric":
 		fallthrough
 	case "disable":
-		*e = GETModifyUsageLimitBreachActionEnum(s)
+		*e = GETModifyUsageLimitBreachActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyUsageLimitBreachActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyUsageLimitBreachActionEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETModifyUsageLimitVersionEnumTwoThousandAndTwelve1201 GETModifyUsageLimitVersionEnum = "2012-12-01"
 )
 
+func (e GETModifyUsageLimitVersionEnum) ToPointer() *GETModifyUsageLimitVersionEnum {
+	return &e
+}
+
 func (e *GETModifyUsageLimitVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETModifyUsageLimitVersionEnum(s)
+		*e = GETModifyUsageLimitVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyUsageLimitVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyUsageLimitVersionEnum: %v", v)
 	}
 }
 

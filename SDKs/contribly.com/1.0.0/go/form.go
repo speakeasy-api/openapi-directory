@@ -36,7 +36,10 @@ func newForm(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 // DeleteFormsID - Delete this form and all of it's responses.
 func (s *form) DeleteFormsID(ctx context.Context, request operations.DeleteFormsIDRequest) (*operations.DeleteFormsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *form) GetFormResponses(ctx context.Context, request operations.GetFormR
 // GetFormResponsesID - Get a single form response by id
 func (s *form) GetFormResponsesID(ctx context.Context, request operations.GetFormResponsesIDRequest) (*operations.GetFormResponsesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/form-responses/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/form-responses/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +224,10 @@ func (s *form) GetForms(ctx context.Context, request operations.GetFormsRequest)
 // GetFormsID - Get a single form by id
 func (s *form) GetFormsID(ctx context.Context, request operations.GetFormsIDRequest) (*operations.GetFormsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/forms/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

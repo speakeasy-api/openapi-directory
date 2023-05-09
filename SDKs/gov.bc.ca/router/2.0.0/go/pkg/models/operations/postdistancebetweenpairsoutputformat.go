@@ -17,19 +17,23 @@ const (
 	PostDistanceBetweenPairsOutputFormatCriteriaEnumFastest  PostDistanceBetweenPairsOutputFormatCriteriaEnum = "fastest"
 )
 
+func (e PostDistanceBetweenPairsOutputFormatCriteriaEnum) ToPointer() *PostDistanceBetweenPairsOutputFormatCriteriaEnum {
+	return &e
+}
+
 func (e *PostDistanceBetweenPairsOutputFormatCriteriaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shortest":
 		fallthrough
 	case "fastest":
-		*e = PostDistanceBetweenPairsOutputFormatCriteriaEnum(s)
+		*e = PostDistanceBetweenPairsOutputFormatCriteriaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatCriteriaEnum: %s", s)
+		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatCriteriaEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	PostDistanceBetweenPairsOutputFormatDistanceUnitEnumMi PostDistanceBetweenPairsOutputFormatDistanceUnitEnum = "mi"
 )
 
+func (e PostDistanceBetweenPairsOutputFormatDistanceUnitEnum) ToPointer() *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum {
+	return &e
+}
+
 func (e *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "km":
 		fallthrough
 	case "mi":
-		*e = PostDistanceBetweenPairsOutputFormatDistanceUnitEnum(s)
+		*e = PostDistanceBetweenPairsOutputFormatDistanceUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatDistanceUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatDistanceUnitEnum: %v", v)
 	}
 }
 
@@ -65,61 +73,69 @@ const (
 	PostDistanceBetweenPairsOutputFormatOutputFormatEnumHTML PostDistanceBetweenPairsOutputFormatOutputFormatEnum = "html"
 )
 
+func (e PostDistanceBetweenPairsOutputFormatOutputFormatEnum) ToPointer() *PostDistanceBetweenPairsOutputFormatOutputFormatEnum {
+	return &e
+}
+
 func (e *PostDistanceBetweenPairsOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "html":
-		*e = PostDistanceBetweenPairsOutputFormatOutputFormatEnum(s)
+		*e = PostDistanceBetweenPairsOutputFormatOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputFormatEnum: %v", v)
 	}
 }
 
 // PostDistanceBetweenPairsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
-type PostDistanceBetweenPairsOutputFormatOutputSrsEnum string
+type PostDistanceBetweenPairsOutputFormatOutputSrsEnum int64
 
 const (
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "4326"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "4269"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumThreeThousandAndFive                  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "3005"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "26907"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "26908"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "26909"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "26910"
-	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven PostDistanceBetweenPairsOutputFormatOutputSrsEnum = "26911"
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandThreeHundredAndTwentySix  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 4326
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumFourThousandTwoHundredAndSixtyNine    PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 4269
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumThreeThousandAndFive                  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 3005
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndSeven  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 26907
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEight  PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 26908
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndNine   PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 26909
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndTen    PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 26910
+	PostDistanceBetweenPairsOutputFormatOutputSrsEnumTwentySixThousandNineHundredAndEleven PostDistanceBetweenPairsOutputFormatOutputSrsEnum = 26911
 )
 
+func (e PostDistanceBetweenPairsOutputFormatOutputSrsEnum) ToPointer() *PostDistanceBetweenPairsOutputFormatOutputSrsEnum {
+	return &e
+}
+
 func (e *PostDistanceBetweenPairsOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = PostDistanceBetweenPairsOutputFormatOutputSrsEnum(s)
+	case 26911:
+		*e = PostDistanceBetweenPairsOutputFormatOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for PostDistanceBetweenPairsOutputFormatOutputSrsEnum: %v", v)
 	}
 }
 

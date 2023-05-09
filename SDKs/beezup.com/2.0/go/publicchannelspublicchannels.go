@@ -35,7 +35,10 @@ func newPublicChannelsPublicChannels(defaultClient, securityClient HTTPClient, s
 // GetChannels - The channel list for one country
 func (s *publicChannelsPublicChannels) GetChannels(ctx context.Context, request operations.GetChannelsRequest) (*operations.GetChannelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/public/channels/{countryIsoCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/public/channels/{countryIsoCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -17,12 +17,16 @@ const (
 	ScoreTrackTypeEnumVimeo      ScoreTrackTypeEnum = "vimeo"
 )
 
+func (e ScoreTrackTypeEnum) ToPointer() *ScoreTrackTypeEnum {
+	return &e
+}
+
 func (e *ScoreTrackTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio":
 		fallthrough
 	case "soundcloud":
@@ -30,9 +34,9 @@ func (e *ScoreTrackTypeEnum) UnmarshalJSON(data []byte) error {
 	case "youtube":
 		fallthrough
 	case "vimeo":
-		*e = ScoreTrackTypeEnum(s)
+		*e = ScoreTrackTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScoreTrackTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScoreTrackTypeEnum: %v", v)
 	}
 }

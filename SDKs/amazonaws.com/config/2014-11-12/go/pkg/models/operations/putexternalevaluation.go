@@ -16,17 +16,21 @@ const (
 	PutExternalEvaluationXAmzTargetEnumStarlingDoveServicePutExternalEvaluation PutExternalEvaluationXAmzTargetEnum = "StarlingDoveService.PutExternalEvaluation"
 )
 
+func (e PutExternalEvaluationXAmzTargetEnum) ToPointer() *PutExternalEvaluationXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutExternalEvaluationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutExternalEvaluation":
-		*e = PutExternalEvaluationXAmzTargetEnum(s)
+		*e = PutExternalEvaluationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutExternalEvaluationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutExternalEvaluationXAmzTargetEnum: %v", v)
 	}
 }
 

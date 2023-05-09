@@ -14,17 +14,21 @@ const (
 	ValueNullValueEnumNullValue ValueNullValueEnum = "NULL_VALUE"
 )
 
+func (e ValueNullValueEnum) ToPointer() *ValueNullValueEnum {
+	return &e
+}
+
 func (e *ValueNullValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NULL_VALUE":
-		*e = ValueNullValueEnum(s)
+		*e = ValueNullValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ValueNullValueEnum: %s", s)
+		return fmt.Errorf("invalid value for ValueNullValueEnum: %v", v)
 	}
 }
 

@@ -16,19 +16,23 @@ const (
 	NotificationConfigurationDetailsMessageFormatEnumSoap NotificationConfigurationDetailsMessageFormatEnum = "SOAP"
 )
 
+func (e NotificationConfigurationDetailsMessageFormatEnum) ToPointer() *NotificationConfigurationDetailsMessageFormatEnum {
+	return &e
+}
+
 func (e *NotificationConfigurationDetailsMessageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "JSON":
 		fallthrough
 	case "SOAP":
-		*e = NotificationConfigurationDetailsMessageFormatEnum(s)
+		*e = NotificationConfigurationDetailsMessageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationConfigurationDetailsMessageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationConfigurationDetailsMessageFormatEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	NotificationConfigurationDetailsSslProtocolEnumTlSv13 NotificationConfigurationDetailsSslProtocolEnum = "TLSv13"
 )
 
+func (e NotificationConfigurationDetailsSslProtocolEnum) ToPointer() *NotificationConfigurationDetailsSslProtocolEnum {
+	return &e
+}
+
 func (e *NotificationConfigurationDetailsSslProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TLSv12":
 		fallthrough
 	case "TLSv13":
-		*e = NotificationConfigurationDetailsSslProtocolEnum(s)
+		*e = NotificationConfigurationDetailsSslProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NotificationConfigurationDetailsSslProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for NotificationConfigurationDetailsSslProtocolEnum: %v", v)
 	}
 }
 
@@ -65,7 +73,7 @@ type NotificationConfigurationDetails struct {
 	// A description of the notification subscription configuration.
 	Description *string `json:"description,omitempty"`
 	// Contains objects that define event types and their subscription settings.
-	EventConfigs []NotificationEventConfiguration `json:"eventConfigs,omitempty"`
+	EventConfigs []NotificationEventConfigurationWrapper `json:"eventConfigs,omitempty"`
 	// The data format of the notification to be sent.
 	// >Permitted values: `JSON`, `SOAP`.
 	MessageFormat *NotificationConfigurationDetailsMessageFormatEnum `json:"messageFormat,omitempty"`

@@ -20,12 +20,16 @@ const (
 	RunnerDefinitionStatusEnumPlaced        RunnerDefinitionStatusEnum = "PLACED"
 )
 
+func (e RunnerDefinitionStatusEnum) ToPointer() *RunnerDefinitionStatusEnum {
+	return &e
+}
+
 func (e *RunnerDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "WINNER":
@@ -39,10 +43,10 @@ func (e *RunnerDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "HIDDEN":
 		fallthrough
 	case "PLACED":
-		*e = RunnerDefinitionStatusEnum(s)
+		*e = RunnerDefinitionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunnerDefinitionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RunnerDefinitionStatusEnum: %v", v)
 	}
 }
 

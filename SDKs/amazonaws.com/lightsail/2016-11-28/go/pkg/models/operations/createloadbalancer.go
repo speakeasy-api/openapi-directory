@@ -16,17 +16,21 @@ const (
 	CreateLoadBalancerXAmzTargetEnumLightsail20161128CreateLoadBalancer CreateLoadBalancerXAmzTargetEnum = "Lightsail_20161128.CreateLoadBalancer"
 )
 
+func (e CreateLoadBalancerXAmzTargetEnum) ToPointer() *CreateLoadBalancerXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLoadBalancerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.CreateLoadBalancer":
-		*e = CreateLoadBalancerXAmzTargetEnum(s)
+		*e = CreateLoadBalancerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLoadBalancerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLoadBalancerXAmzTargetEnum: %v", v)
 	}
 }
 

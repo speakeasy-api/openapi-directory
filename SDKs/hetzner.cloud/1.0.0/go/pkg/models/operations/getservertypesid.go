@@ -13,6 +13,34 @@ type GetServerTypesIDRequest struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum - Type of cpu architecture
+type GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum string
+
+const (
+	GetServerTypesID200ApplicationJSONServerTypeArchitectureEnumX86 GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum = "x86"
+	GetServerTypesID200ApplicationJSONServerTypeArchitectureEnumArm GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum = "arm"
+)
+
+func (e GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum) ToPointer() *GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum {
+	return &e
+}
+
+func (e *GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "x86":
+		fallthrough
+	case "arm":
+		*e = GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum: %v", v)
+	}
+}
+
 // GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum - Type of cpu
 type GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum string
 
@@ -21,19 +49,23 @@ const (
 	GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnumDedicated GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum = "dedicated"
 )
 
+func (e GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum) ToPointer() *GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum {
+	return &e
+}
+
 func (e *GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "shared":
 		fallthrough
 	case "dedicated":
-		*e = GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum(s)
+		*e = GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServerTypesID200ApplicationJSONServerTypeCPUTypeEnum: %v", v)
 	}
 }
 
@@ -70,23 +102,29 @@ const (
 	GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnumNetwork GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum = "network"
 )
 
+func (e GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum) ToPointer() *GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum {
+	return &e
+}
+
 func (e *GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "local":
 		fallthrough
 	case "network":
-		*e = GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum(s)
+		*e = GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServerTypesID200ApplicationJSONServerTypeStorageTypeEnum: %v", v)
 	}
 }
 
 type GetServerTypesID200ApplicationJSONServerType struct {
+	// Type of cpu architecture
+	Architecture GetServerTypesID200ApplicationJSONServerTypeArchitectureEnum `json:"architecture"`
 	// Number of cpu cores a Server of this type will have
 	Cores float64 `json:"cores"`
 	// Type of cpu

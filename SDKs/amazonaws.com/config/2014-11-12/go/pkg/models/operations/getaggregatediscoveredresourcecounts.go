@@ -16,17 +16,21 @@ const (
 	GetAggregateDiscoveredResourceCountsXAmzTargetEnumStarlingDoveServiceGetAggregateDiscoveredResourceCounts GetAggregateDiscoveredResourceCountsXAmzTargetEnum = "StarlingDoveService.GetAggregateDiscoveredResourceCounts"
 )
 
+func (e GetAggregateDiscoveredResourceCountsXAmzTargetEnum) ToPointer() *GetAggregateDiscoveredResourceCountsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAggregateDiscoveredResourceCountsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.GetAggregateDiscoveredResourceCounts":
-		*e = GetAggregateDiscoveredResourceCountsXAmzTargetEnum(s)
+		*e = GetAggregateDiscoveredResourceCountsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAggregateDiscoveredResourceCountsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAggregateDiscoveredResourceCountsXAmzTargetEnum: %v", v)
 	}
 }
 

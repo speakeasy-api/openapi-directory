@@ -16,17 +16,21 @@ const (
 	StopConfigurationRecorderXAmzTargetEnumStarlingDoveServiceStopConfigurationRecorder StopConfigurationRecorderXAmzTargetEnum = "StarlingDoveService.StopConfigurationRecorder"
 )
 
+func (e StopConfigurationRecorderXAmzTargetEnum) ToPointer() *StopConfigurationRecorderXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopConfigurationRecorderXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.StopConfigurationRecorder":
-		*e = StopConfigurationRecorderXAmzTargetEnum(s)
+		*e = StopConfigurationRecorderXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopConfigurationRecorderXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopConfigurationRecorderXAmzTargetEnum: %v", v)
 	}
 }
 

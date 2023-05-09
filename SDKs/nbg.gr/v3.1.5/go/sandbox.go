@@ -36,7 +36,10 @@ func newSandbox(defaultClient, securityClient HTTPClient, serverURL, language, s
 // Delete Sandbox
 func (s *sandbox) DeleteSandboxSandboxID(ctx context.Context, request operations.DeleteSandboxSandboxIDRequest, security operations.DeleteSandboxSandboxIDSecurity) (*operations.DeleteSandboxSandboxIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *sandbox) DeleteSandboxSandboxID(ctx context.Context, request operations
 // Export Sandbox
 func (s *sandbox) GetSandboxSandboxID(ctx context.Context, request operations.GetSandboxSandboxIDRequest, security operations.GetSandboxSandboxIDSecurity) (*operations.GetSandboxSandboxIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sandbox/{sandboxId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

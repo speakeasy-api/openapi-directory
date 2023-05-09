@@ -16,19 +16,23 @@ const (
 	PostOauthV1TokenCreateRequestBodyGrantTypeEnumRefreshToken      PostOauthV1TokenCreateRequestBodyGrantTypeEnum = "refresh_token"
 )
 
+func (e PostOauthV1TokenCreateRequestBodyGrantTypeEnum) ToPointer() *PostOauthV1TokenCreateRequestBodyGrantTypeEnum {
+	return &e
+}
+
 func (e *PostOauthV1TokenCreateRequestBodyGrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorization_code":
 		fallthrough
 	case "refresh_token":
-		*e = PostOauthV1TokenCreateRequestBodyGrantTypeEnum(s)
+		*e = PostOauthV1TokenCreateRequestBodyGrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostOauthV1TokenCreateRequestBodyGrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostOauthV1TokenCreateRequestBodyGrantTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteBucketXAmzTargetEnumLightsail20161128DeleteBucket DeleteBucketXAmzTargetEnum = "Lightsail_20161128.DeleteBucket"
 )
 
+func (e DeleteBucketXAmzTargetEnum) ToPointer() *DeleteBucketXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteBucketXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteBucket":
-		*e = DeleteBucketXAmzTargetEnum(s)
+		*e = DeleteBucketXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteBucketXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteBucketXAmzTargetEnum: %v", v)
 	}
 }
 

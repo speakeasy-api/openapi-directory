@@ -34,7 +34,10 @@ func newSslCerts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SQLSslCertsCreateEphemeral - Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
 func (s *sslCerts) SQLSslCertsCreateEphemeral(ctx context.Context, request operations.SQLSslCertsCreateEphemeralRequest, security operations.SQLSslCertsCreateEphemeralSecurity) (*operations.SQLSslCertsCreateEphemeralResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/createEphemeral", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/createEphemeral", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SslCertsCreateEphemeralRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *sslCerts) SQLSslCertsCreateEphemeral(ctx context.Context, request opera
 // SQLSslCertsDelete - Deletes the SSL certificate. For First Generation instances, the certificate remains valid until the instance is restarted.
 func (s *sslCerts) SQLSslCertsDelete(ctx context.Context, request operations.SQLSslCertsDeleteRequest, security operations.SQLSslCertsDeleteSecurity) (*operations.SQLSslCertsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *sslCerts) SQLSslCertsDelete(ctx context.Context, request operations.SQL
 // SQLSslCertsGet - Retrieves a particular SSL certificate. Does not include the private key (required for usage). The private key must be saved from the response to initial creation.
 func (s *sslCerts) SQLSslCertsGet(ctx context.Context, request operations.SQLSslCertsGetRequest, security operations.SQLSslCertsGetSecurity) (*operations.SQLSslCertsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts/{sha1Fingerprint}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *sslCerts) SQLSslCertsGet(ctx context.Context, request operations.SQLSsl
 // SQLSslCertsInsert - Creates an SSL certificate and returns it along with the private key and server certificate authority. The new certificate will not be usable until the instance is restarted.
 func (s *sslCerts) SQLSslCertsInsert(ctx context.Context, request operations.SQLSslCertsInsertRequest, security operations.SQLSslCertsInsertSecurity) (*operations.SQLSslCertsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SslCertsInsertRequest", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *sslCerts) SQLSslCertsInsert(ctx context.Context, request operations.SQL
 // SQLSslCertsList - Lists all of the current SSL certificates for the instance.
 func (s *sslCerts) SQLSslCertsList(ctx context.Context, request operations.SQLSslCertsListRequest, security operations.SQLSslCertsListSecurity) (*operations.SQLSslCertsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/sslCerts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

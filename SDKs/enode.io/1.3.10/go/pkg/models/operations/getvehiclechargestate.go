@@ -21,23 +21,27 @@ type GetVehicleChargestateRequest struct {
 type GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum string
 
 const (
-	GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnumUnknown GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum = ""
-	GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnumDefault GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum = "DEFAULT"
+	GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnumLessThanNilGreaterThan GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum = "<nil>"
+	GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnumDefault                GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum = "DEFAULT"
 )
 
+func (e GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum) ToPointer() *GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum {
+	return &e
+}
+
 func (e *GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "":
+	switch v {
+	case "<nil>":
 		fallthrough
 	case "DEFAULT":
-		*e = GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum(s)
+		*e = GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetVehicleChargestate200ApplicationJSONIsChargingReasonsEnum: %v", v)
 	}
 }
 

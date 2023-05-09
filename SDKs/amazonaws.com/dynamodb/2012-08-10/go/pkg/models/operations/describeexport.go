@@ -16,17 +16,21 @@ const (
 	DescribeExportXAmzTargetEnumDynamoDb20120810DescribeExport DescribeExportXAmzTargetEnum = "DynamoDB_20120810.DescribeExport"
 )
 
+func (e DescribeExportXAmzTargetEnum) ToPointer() *DescribeExportXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeExportXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.DescribeExport":
-		*e = DescribeExportXAmzTargetEnum(s)
+		*e = DescribeExportXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeExportXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeExportXAmzTargetEnum: %v", v)
 	}
 }
 

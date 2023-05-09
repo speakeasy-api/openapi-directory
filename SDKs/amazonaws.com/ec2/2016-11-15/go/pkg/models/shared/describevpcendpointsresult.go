@@ -24,12 +24,16 @@ const (
 	DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnumServiceDefined DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum = "service-defined"
 )
 
+func (e DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum) ToPointer() *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
@@ -37,10 +41,10 @@ func (e *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum) Un
 	case "ipv6":
 		fallthrough
 	case "service-defined":
-		*e = DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum(s)
+		*e = DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum: %v", v)
 	}
 }
 
@@ -65,21 +69,25 @@ const (
 	DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnumIpv6      DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum = "ipv6"
 )
 
+func (e DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum) ToPointer() *DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ipv4":
 		fallthrough
 	case "dualstack":
 		fallthrough
 	case "ipv6":
-		*e = DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum(s)
+		*e = DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsIPAddressTypeEnum: %v", v)
 	}
 }
 
@@ -103,12 +111,16 @@ const (
 	DescribeVpcEndpointsResultVpcEndpointsStateEnumExpired           DescribeVpcEndpointsResultVpcEndpointsStateEnum = "Expired"
 )
 
+func (e DescribeVpcEndpointsResultVpcEndpointsStateEnum) ToPointer() *DescribeVpcEndpointsResultVpcEndpointsStateEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointsResultVpcEndpointsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PendingAcceptance":
 		fallthrough
 	case "Pending":
@@ -124,10 +136,10 @@ func (e *DescribeVpcEndpointsResultVpcEndpointsStateEnum) UnmarshalJSON(data []b
 	case "Failed":
 		fallthrough
 	case "Expired":
-		*e = DescribeVpcEndpointsResultVpcEndpointsStateEnum(s)
+		*e = DescribeVpcEndpointsResultVpcEndpointsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsStateEnum: %v", v)
 	}
 }
 
@@ -146,21 +158,25 @@ const (
 	DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnumGatewayLoadBalancer DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum = "GatewayLoadBalancer"
 )
 
+func (e DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum) ToPointer() *DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum {
+	return &e
+}
+
 func (e *DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Interface":
 		fallthrough
 	case "Gateway":
 		fallthrough
 	case "GatewayLoadBalancer":
-		*e = DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum(s)
+		*e = DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum: %v", v)
 	}
 }
 

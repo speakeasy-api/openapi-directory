@@ -13,16 +13,20 @@ const (
 	DeploymentTypeEnumModel DeploymentTypeEnum = "Model"
 )
 
+func (e DeploymentTypeEnum) ToPointer() *DeploymentTypeEnum {
+	return &e
+}
+
 func (e *DeploymentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Model":
-		*e = DeploymentTypeEnum(s)
+		*e = DeploymentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentTypeEnum: %v", v)
 	}
 }

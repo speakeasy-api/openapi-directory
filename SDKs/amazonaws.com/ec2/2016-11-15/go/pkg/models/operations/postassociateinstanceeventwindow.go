@@ -15,17 +15,21 @@ const (
 	POSTAssociateInstanceEventWindowActionEnumAssociateInstanceEventWindow POSTAssociateInstanceEventWindowActionEnum = "AssociateInstanceEventWindow"
 )
 
+func (e POSTAssociateInstanceEventWindowActionEnum) ToPointer() *POSTAssociateInstanceEventWindowActionEnum {
+	return &e
+}
+
 func (e *POSTAssociateInstanceEventWindowActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateInstanceEventWindow":
-		*e = POSTAssociateInstanceEventWindowActionEnum(s)
+		*e = POSTAssociateInstanceEventWindowActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateInstanceEventWindowActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateInstanceEventWindowActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssociateInstanceEventWindowVersionEnumTwoThousandAndSixteen1115 POSTAssociateInstanceEventWindowVersionEnum = "2016-11-15"
 )
 
+func (e POSTAssociateInstanceEventWindowVersionEnum) ToPointer() *POSTAssociateInstanceEventWindowVersionEnum {
+	return &e
+}
+
 func (e *POSTAssociateInstanceEventWindowVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAssociateInstanceEventWindowVersionEnum(s)
+		*e = POSTAssociateInstanceEventWindowVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssociateInstanceEventWindowVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssociateInstanceEventWindowVersionEnum: %v", v)
 	}
 }
 

@@ -99,7 +99,10 @@ func (s *customerProfiles) CreateNewCustomerProfilev2(ctx context.Context, reque
 // Deletes a customer profile.
 func (s *customerProfiles) DeleteCustomerProfile(ctx context.Context, request operations.DeleteCustomerProfileRequest) (*operations.DeleteCustomerProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Client/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Client/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *customerProfiles) DeleteCustomerProfile(ctx context.Context, request op
 // > You can use this request to update customer profiles according to any `CL` schema. Because of this, you are not restricted to using the fields exemplified below in your requests. But you should be aware of the fields allowed or required for the schemas you are using. Learn more about how to use [Master Data v2 schemas](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle).
 func (s *customerProfiles) UpdateCustomerProfile(ctx context.Context, request operations.UpdateCustomerProfileRequest) (*operations.UpdateCustomerProfileResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Client/documents/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/Client/documents/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateUpdateProfileRequests", "json")
 	if err != nil {

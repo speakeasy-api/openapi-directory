@@ -3,6 +3,7 @@
 package shared
 
 type UpdateServiceInstanceInput struct {
+	ClientToken          *string                  `json:"clientToken,omitempty"`
 	DeploymentType       DeploymentUpdateTypeEnum `json:"deploymentType"`
 	Name                 string                   `json:"name"`
 	ServiceName          string                   `json:"serviceName"`

@@ -19,12 +19,16 @@ const (
 	CancelSurveyResultReasonEnumCancelSurveyReasonOthers          CancelSurveyResultReasonEnum = "CANCEL_SURVEY_REASON_OTHERS"
 )
 
+func (e CancelSurveyResultReasonEnum) ToPointer() *CancelSurveyResultReasonEnum {
+	return &e
+}
+
 func (e *CancelSurveyResultReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CANCEL_SURVEY_REASON_UNSPECIFIED":
 		fallthrough
 	case "CANCEL_SURVEY_REASON_NOT_ENOUGH_USAGE":
@@ -36,10 +40,10 @@ func (e *CancelSurveyResultReasonEnum) UnmarshalJSON(data []byte) error {
 	case "CANCEL_SURVEY_REASON_FOUND_BETTER_APP":
 		fallthrough
 	case "CANCEL_SURVEY_REASON_OTHERS":
-		*e = CancelSurveyResultReasonEnum(s)
+		*e = CancelSurveyResultReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelSurveyResultReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelSurveyResultReasonEnum: %v", v)
 	}
 }
 

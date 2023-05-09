@@ -22,21 +22,25 @@ const (
 	GetProductSearchFacetsSimulationBehaviorEnumOnly1P  GetProductSearchFacetsSimulationBehaviorEnum = "only1P"
 )
 
+func (e GetProductSearchFacetsSimulationBehaviorEnum) ToPointer() *GetProductSearchFacetsSimulationBehaviorEnum {
+	return &e
+}
+
 func (e *GetProductSearchFacetsSimulationBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "skip":
 		fallthrough
 	case "only1P":
-		*e = GetProductSearchFacetsSimulationBehaviorEnum(s)
+		*e = GetProductSearchFacetsSimulationBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProductSearchFacetsSimulationBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProductSearchFacetsSimulationBehaviorEnum: %v", v)
 	}
 }
 
@@ -53,12 +57,16 @@ const (
 	GetProductSearchFacetsSortEnumDiscountDesc GetProductSearchFacetsSortEnum = "discount:desc"
 )
 
+func (e GetProductSearchFacetsSortEnum) ToPointer() *GetProductSearchFacetsSortEnum {
+	return &e
+}
+
 func (e *GetProductSearchFacetsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "price:desc":
 		fallthrough
 	case "price:asc":
@@ -72,10 +80,10 @@ func (e *GetProductSearchFacetsSortEnum) UnmarshalJSON(data []byte) error {
 	case "release:desc":
 		fallthrough
 	case "discount:desc":
-		*e = GetProductSearchFacetsSortEnum(s)
+		*e = GetProductSearchFacetsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProductSearchFacetsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProductSearchFacetsSortEnum: %v", v)
 	}
 }
 

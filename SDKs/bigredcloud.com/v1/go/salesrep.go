@@ -35,7 +35,10 @@ func newSalesRep(defaultClient, securityClient HTTPClient, serverURL, language, 
 // SalesRepDelete - Removes an existing Sale Rep.
 func (s *salesRep) SalesRepDelete(ctx context.Context, request operations.SalesRepDeleteRequest) (*operations.SalesRepDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *salesRep) SalesRepProcessBatch(ctx context.Context, request []shared.Ba
 // SalesRepPut - Updates an existing Sale Rep.
 func (s *salesRep) SalesRepPut(ctx context.Context, request operations.SalesRepPutRequest) (*operations.SalesRepPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaleRepsDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *salesRep) SalesRepPut(ctx context.Context, request operations.SalesRepP
 // GetV1SalesRepsID - Returns information about a single SaleRep.
 func (s *salesRep) GetV1SalesRepsID(ctx context.Context, request operations.GetV1SalesRepsIDRequest) (*operations.GetV1SalesRepsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/salesReps/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

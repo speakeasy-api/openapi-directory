@@ -21,12 +21,16 @@ const (
 	OpenSearchSortKeysEnumUpdatedDesc          OpenSearchSortKeysEnum = "updated,,desc"
 )
 
+func (e OpenSearchSortKeysEnum) ToPointer() *OpenSearchSortKeysEnum {
+	return &e
+}
+
 func (e *OpenSearchSortKeysEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "score,,desc":
 		fallthrough
 	case "spatial_area,,asc":
@@ -38,10 +42,10 @@ func (e *OpenSearchSortKeysEnum) UnmarshalJSON(data []byte) error {
 	case "temporal_duration,,desc":
 		fallthrough
 	case "updated,,desc":
-		*e = OpenSearchSortKeysEnum(s)
+		*e = OpenSearchSortKeysEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenSearchSortKeysEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenSearchSortKeysEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	OpenSearchSourceEnumAde   OpenSearchSourceEnum = "ADE"
 )
 
+func (e OpenSearchSourceEnum) ToPointer() *OpenSearchSourceEnum {
+	return &e
+}
+
 func (e *OpenSearchSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NSIDC":
 		fallthrough
 	case "ADE":
-		*e = OpenSearchSourceEnum(s)
+		*e = OpenSearchSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OpenSearchSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for OpenSearchSourceEnum: %v", v)
 	}
 }
 

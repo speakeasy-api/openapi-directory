@@ -15,20 +15,24 @@ const (
 	ComponentUpdateTypeEnumDelete ComponentUpdateTypeEnum = "DELETE"
 )
 
+func (e ComponentUpdateTypeEnum) ToPointer() *ComponentUpdateTypeEnum {
+	return &e
+}
+
 func (e *ComponentUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATE":
 		fallthrough
 	case "UPDATE":
 		fallthrough
 	case "DELETE":
-		*e = ComponentUpdateTypeEnum(s)
+		*e = ComponentUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComponentUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ComponentUpdateTypeEnum: %v", v)
 	}
 }

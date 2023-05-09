@@ -16,17 +16,21 @@ const (
 	DeleteDataSourceXAmzTargetEnumAmazonMl20141212DeleteDataSource DeleteDataSourceXAmzTargetEnum = "AmazonML_20141212.DeleteDataSource"
 )
 
+func (e DeleteDataSourceXAmzTargetEnum) ToPointer() *DeleteDataSourceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteDataSourceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonML_20141212.DeleteDataSource":
-		*e = DeleteDataSourceXAmzTargetEnum(s)
+		*e = DeleteDataSourceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteDataSourceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteDataSourceXAmzTargetEnum: %v", v)
 	}
 }
 

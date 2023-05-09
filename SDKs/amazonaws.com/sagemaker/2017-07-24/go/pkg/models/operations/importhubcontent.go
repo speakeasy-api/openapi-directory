@@ -16,17 +16,21 @@ const (
 	ImportHubContentXAmzTargetEnumSageMakerImportHubContent ImportHubContentXAmzTargetEnum = "SageMaker.ImportHubContent"
 )
 
+func (e ImportHubContentXAmzTargetEnum) ToPointer() *ImportHubContentXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportHubContentXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.ImportHubContent":
-		*e = ImportHubContentXAmzTargetEnum(s)
+		*e = ImportHubContentXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportHubContentXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportHubContentXAmzTargetEnum: %v", v)
 	}
 }
 

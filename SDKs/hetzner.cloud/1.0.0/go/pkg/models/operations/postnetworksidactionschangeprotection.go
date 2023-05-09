@@ -43,21 +43,25 @@ const (
 	PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnumError   PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum = "error"
 )
 
+func (e PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum) ToPointer() *PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum {
+	return &e
+}
+
 func (e *PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "success":
 		fallthrough
 	case "running":
 		fallthrough
 	case "error":
-		*e = PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum(s)
+		*e = PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PostNetworksIDActionsChangeProtectionActionResponseActionStatusEnum: %v", v)
 	}
 }
 

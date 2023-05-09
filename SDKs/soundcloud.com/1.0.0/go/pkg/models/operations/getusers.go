@@ -23,6 +23,8 @@ type GetUsersRequest struct {
 	// Returns paginated collection of items (recommended, returning a list without pagination is deprecated and should not be used)
 	LinkedPartitioning *bool `queryParam:"style=form,explode=true,name=linked_partitioning"`
 	// Offset of first result. Deprecated, use `linked_partitioning` instead.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	Offset *int64 `queryParam:"style=form,explode=true,name=offset"`
 	// search
 	Q string `queryParam:"style=form,explode=true,name=q"`

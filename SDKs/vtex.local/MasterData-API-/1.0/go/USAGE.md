@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -18,15 +17,13 @@ func main() {
         }),
     )
 
-    req := operations.RetrieveattachmentRequest{
+    ctx := context.Background()
+    res, err := s.Attachments.Retrieveattachment(ctx, operations.RetrieveattachmentRequest{
         Acronym: "corrupti",
         Field: "provident",
         FileName: "distinctio",
-        ID: "quibusdam",
-    }
-
-    ctx := context.Background()
-    res, err := s.Attachments.Retrieveattachment(ctx, req)
+        ID: "d9d8d69a-674e-40f4-a7cc-8796ed151a05",
+    })
     if err != nil {
         log.Fatal(err)
     }

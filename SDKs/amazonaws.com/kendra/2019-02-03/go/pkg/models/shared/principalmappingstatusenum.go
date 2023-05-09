@@ -17,12 +17,16 @@ const (
 	PrincipalMappingStatusEnumDeleted    PrincipalMappingStatusEnum = "DELETED"
 )
 
+func (e PrincipalMappingStatusEnum) ToPointer() *PrincipalMappingStatusEnum {
+	return &e
+}
+
 func (e *PrincipalMappingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
@@ -32,9 +36,9 @@ func (e *PrincipalMappingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = PrincipalMappingStatusEnum(s)
+		*e = PrincipalMappingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PrincipalMappingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PrincipalMappingStatusEnum: %v", v)
 	}
 }

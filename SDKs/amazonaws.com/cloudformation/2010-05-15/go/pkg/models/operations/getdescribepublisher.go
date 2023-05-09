@@ -15,17 +15,21 @@ const (
 	GETDescribePublisherActionEnumDescribePublisher GETDescribePublisherActionEnum = "DescribePublisher"
 )
 
+func (e GETDescribePublisherActionEnum) ToPointer() *GETDescribePublisherActionEnum {
+	return &e
+}
+
 func (e *GETDescribePublisherActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribePublisher":
-		*e = GETDescribePublisherActionEnum(s)
+		*e = GETDescribePublisherActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePublisherActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePublisherActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribePublisherVersionEnumTwoThousandAndTen0515 GETDescribePublisherVersionEnum = "2010-05-15"
 )
 
+func (e GETDescribePublisherVersionEnum) ToPointer() *GETDescribePublisherVersionEnum {
+	return &e
+}
+
 func (e *GETDescribePublisherVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDescribePublisherVersionEnum(s)
+		*e = GETDescribePublisherVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribePublisherVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribePublisherVersionEnum: %v", v)
 	}
 }
 

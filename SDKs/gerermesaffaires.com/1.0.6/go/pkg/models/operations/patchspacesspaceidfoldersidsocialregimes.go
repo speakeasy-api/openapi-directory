@@ -16,21 +16,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnumPublic       PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum = "public"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyLevelEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnumNull       PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum = "null"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "monthly":
 		fallthrough
 	case "quarterly":
@@ -59,10 +67,10 @@ func (e *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum) Unm
 	case "annual":
 		fallthrough
 	case "null":
-		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyPeriodicityEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnumNull      PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum = "null"
 )
 
+func (e PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum) ToPointer() *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "mandatory":
 		fallthrough
 	case "optional":
 		fallthrough
 	case "null":
-		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum(s)
+		*e = PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersIDSocialRegimesRequestBodyTypeEnum: %v", v)
 	}
 }
 

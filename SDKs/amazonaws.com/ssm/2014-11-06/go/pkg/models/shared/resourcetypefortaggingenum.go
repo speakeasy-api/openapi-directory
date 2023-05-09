@@ -21,12 +21,16 @@ const (
 	ResourceTypeForTaggingEnumAssociation       ResourceTypeForTaggingEnum = "Association"
 )
 
+func (e ResourceTypeForTaggingEnum) ToPointer() *ResourceTypeForTaggingEnum {
+	return &e
+}
+
 func (e *ResourceTypeForTaggingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Document":
 		fallthrough
 	case "ManagedInstance":
@@ -44,9 +48,9 @@ func (e *ResourceTypeForTaggingEnum) UnmarshalJSON(data []byte) error {
 	case "Automation":
 		fallthrough
 	case "Association":
-		*e = ResourceTypeForTaggingEnum(s)
+		*e = ResourceTypeForTaggingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceTypeForTaggingEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceTypeForTaggingEnum: %v", v)
 	}
 }

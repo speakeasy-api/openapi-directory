@@ -16,12 +16,16 @@ const (
 	SubscriptionStatusEnumReady       SubscriptionStatusEnum = "READY"
 )
 
+func (e SubscriptionStatusEnum) ToPointer() *SubscriptionStatusEnum {
+	return &e
+}
+
 func (e *SubscriptionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "DEACTIVATED":
@@ -29,9 +33,9 @@ func (e *SubscriptionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING":
 		fallthrough
 	case "READY":
-		*e = SubscriptionStatusEnum(s)
+		*e = SubscriptionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SubscriptionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SubscriptionStatusEnum: %v", v)
 	}
 }

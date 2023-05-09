@@ -17,19 +17,23 @@ const (
 	CreateFilterRequestBodyActionEnumSuppress CreateFilterRequestBodyActionEnum = "SUPPRESS"
 )
 
+func (e CreateFilterRequestBodyActionEnum) ToPointer() *CreateFilterRequestBodyActionEnum {
+	return &e
+}
+
 func (e *CreateFilterRequestBodyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "SUPPRESS":
-		*e = CreateFilterRequestBodyActionEnum(s)
+		*e = CreateFilterRequestBodyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateFilterRequestBodyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateFilterRequestBodyActionEnum: %v", v)
 	}
 }
 

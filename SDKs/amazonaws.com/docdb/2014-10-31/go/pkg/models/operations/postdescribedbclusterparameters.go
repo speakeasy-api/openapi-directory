@@ -15,17 +15,21 @@ const (
 	POSTDescribeDBClusterParametersActionEnumDescribeDbClusterParameters POSTDescribeDBClusterParametersActionEnum = "DescribeDBClusterParameters"
 )
 
+func (e POSTDescribeDBClusterParametersActionEnum) ToPointer() *POSTDescribeDBClusterParametersActionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBClusterParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBClusterParameters":
-		*e = POSTDescribeDBClusterParametersActionEnum(s)
+		*e = POSTDescribeDBClusterParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBClusterParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBClusterParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDescribeDBClusterParametersVersionEnumTwoThousandAndFourteen1031 POSTDescribeDBClusterParametersVersionEnum = "2014-10-31"
 )
 
+func (e POSTDescribeDBClusterParametersVersionEnum) ToPointer() *POSTDescribeDBClusterParametersVersionEnum {
+	return &e
+}
+
 func (e *POSTDescribeDBClusterParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTDescribeDBClusterParametersVersionEnum(s)
+		*e = POSTDescribeDBClusterParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDescribeDBClusterParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDescribeDBClusterParametersVersionEnum: %v", v)
 	}
 }
 

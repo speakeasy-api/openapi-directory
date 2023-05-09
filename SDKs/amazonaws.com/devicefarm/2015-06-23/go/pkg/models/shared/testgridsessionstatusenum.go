@@ -15,20 +15,24 @@ const (
 	TestGridSessionStatusEnumErrored TestGridSessionStatusEnum = "ERRORED"
 )
 
+func (e TestGridSessionStatusEnum) ToPointer() *TestGridSessionStatusEnum {
+	return &e
+}
+
 func (e *TestGridSessionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "CLOSED":
 		fallthrough
 	case "ERRORED":
-		*e = TestGridSessionStatusEnum(s)
+		*e = TestGridSessionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestGridSessionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TestGridSessionStatusEnum: %v", v)
 	}
 }

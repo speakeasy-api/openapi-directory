@@ -15,17 +15,21 @@ const (
 	POSTGetVpnConnectionDeviceTypesActionEnumGetVpnConnectionDeviceTypes POSTGetVpnConnectionDeviceTypesActionEnum = "GetVpnConnectionDeviceTypes"
 )
 
+func (e POSTGetVpnConnectionDeviceTypesActionEnum) ToPointer() *POSTGetVpnConnectionDeviceTypesActionEnum {
+	return &e
+}
+
 func (e *POSTGetVpnConnectionDeviceTypesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetVpnConnectionDeviceTypes":
-		*e = POSTGetVpnConnectionDeviceTypesActionEnum(s)
+		*e = POSTGetVpnConnectionDeviceTypesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceTypesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceTypesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetVpnConnectionDeviceTypesVersionEnumTwoThousandAndSixteen1115 POSTGetVpnConnectionDeviceTypesVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetVpnConnectionDeviceTypesVersionEnum) ToPointer() *POSTGetVpnConnectionDeviceTypesVersionEnum {
+	return &e
+}
+
 func (e *POSTGetVpnConnectionDeviceTypesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetVpnConnectionDeviceTypesVersionEnum(s)
+		*e = POSTGetVpnConnectionDeviceTypesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceTypesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetVpnConnectionDeviceTypesVersionEnum: %v", v)
 	}
 }
 

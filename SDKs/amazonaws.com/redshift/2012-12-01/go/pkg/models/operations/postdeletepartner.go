@@ -15,17 +15,21 @@ const (
 	POSTDeletePartnerActionEnumDeletePartner POSTDeletePartnerActionEnum = "DeletePartner"
 )
 
+func (e POSTDeletePartnerActionEnum) ToPointer() *POSTDeletePartnerActionEnum {
+	return &e
+}
+
 func (e *POSTDeletePartnerActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeletePartner":
-		*e = POSTDeletePartnerActionEnum(s)
+		*e = POSTDeletePartnerActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeletePartnerActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeletePartnerActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeletePartnerVersionEnumTwoThousandAndTwelve1201 POSTDeletePartnerVersionEnum = "2012-12-01"
 )
 
+func (e POSTDeletePartnerVersionEnum) ToPointer() *POSTDeletePartnerVersionEnum {
+	return &e
+}
+
 func (e *POSTDeletePartnerVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDeletePartnerVersionEnum(s)
+		*e = POSTDeletePartnerVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeletePartnerVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeletePartnerVersionEnum: %v", v)
 	}
 }
 

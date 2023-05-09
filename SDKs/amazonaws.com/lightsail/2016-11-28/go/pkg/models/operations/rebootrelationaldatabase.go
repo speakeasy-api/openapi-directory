@@ -16,17 +16,21 @@ const (
 	RebootRelationalDatabaseXAmzTargetEnumLightsail20161128RebootRelationalDatabase RebootRelationalDatabaseXAmzTargetEnum = "Lightsail_20161128.RebootRelationalDatabase"
 )
 
+func (e RebootRelationalDatabaseXAmzTargetEnum) ToPointer() *RebootRelationalDatabaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *RebootRelationalDatabaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.RebootRelationalDatabase":
-		*e = RebootRelationalDatabaseXAmzTargetEnum(s)
+		*e = RebootRelationalDatabaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RebootRelationalDatabaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RebootRelationalDatabaseXAmzTargetEnum: %v", v)
 	}
 }
 

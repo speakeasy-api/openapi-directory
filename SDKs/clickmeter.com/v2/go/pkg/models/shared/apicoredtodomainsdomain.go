@@ -16,12 +16,16 @@ const (
 	APICoreDtoDomainsDomainTypeEnumPersonal  APICoreDtoDomainsDomainTypeEnum = "Personal"
 )
 
+func (e APICoreDtoDomainsDomainTypeEnum) ToPointer() *APICoreDtoDomainsDomainTypeEnum {
+	return &e
+}
+
 func (e *APICoreDtoDomainsDomainTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "System":
 		fallthrough
 	case "Go":
@@ -29,10 +33,10 @@ func (e *APICoreDtoDomainsDomainTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Dedicated":
 		fallthrough
 	case "Personal":
-		*e = APICoreDtoDomainsDomainTypeEnum(s)
+		*e = APICoreDtoDomainsDomainTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APICoreDtoDomainsDomainTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for APICoreDtoDomainsDomainTypeEnum: %v", v)
 	}
 }
 

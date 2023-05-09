@@ -6,6 +6,7 @@ package shared
 type ChannelSummary struct {
 	Arn                       *string                 `json:"arn,omitempty"`
 	Authorized                *bool                   `json:"authorized,omitempty"`
+	InsecureIngest            *bool                   `json:"insecureIngest,omitempty"`
 	LatencyMode               *ChannelLatencyModeEnum `json:"latencyMode,omitempty"`
 	Name                      *string                 `json:"name,omitempty"`
 	RecordingConfigurationArn *string                 `json:"recordingConfigurationArn,omitempty"`

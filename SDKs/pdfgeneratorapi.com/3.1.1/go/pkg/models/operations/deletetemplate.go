@@ -31,12 +31,16 @@ const (
 	DeleteTemplate422ApplicationJSONErrorEnumRequiredParameterMissingTemplateNotDefined           DeleteTemplate422ApplicationJSONErrorEnum = "Required parameter missing: template not defined"
 )
 
+func (e DeleteTemplate422ApplicationJSONErrorEnum) ToPointer() *DeleteTemplate422ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *DeleteTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Unable to parse JSON, please check formatting":
 		fallthrough
 	case "Required parameter missing":
@@ -44,10 +48,10 @@ func (e *DeleteTemplate422ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) e
 	case "Required parameter missing: template definition not defined":
 		fallthrough
 	case "Required parameter missing: template not defined":
-		*e = DeleteTemplate422ApplicationJSONErrorEnum(s)
+		*e = DeleteTemplate422ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTemplate422ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTemplate422ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -68,21 +72,25 @@ const (
 	DeleteTemplate404ApplicationJSONErrorEnumNoneOfTheTemplatesIsAvailableForTheWorkspace DeleteTemplate404ApplicationJSONErrorEnum = "None of the templates is available for the workspace."
 )
 
+func (e DeleteTemplate404ApplicationJSONErrorEnum) ToPointer() *DeleteTemplate404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *DeleteTemplate404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Entity not found":
 		fallthrough
 	case "Resource not found":
 		fallthrough
 	case "None of the templates is available for the workspace.":
-		*e = DeleteTemplate404ApplicationJSONErrorEnum(s)
+		*e = DeleteTemplate404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTemplate404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTemplate404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -101,17 +109,21 @@ const (
 	DeleteTemplate403ApplicationJSONErrorEnumYourAccountHasExceededTheMonthlyDocumentGenerationLimit DeleteTemplate403ApplicationJSONErrorEnum = "Your account has exceeded the monthly document generation limit."
 )
 
+func (e DeleteTemplate403ApplicationJSONErrorEnum) ToPointer() *DeleteTemplate403ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *DeleteTemplate403ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Your account has exceeded the monthly document generation limit.":
-		*e = DeleteTemplate403ApplicationJSONErrorEnum(s)
+		*e = DeleteTemplate403ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTemplate403ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTemplate403ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -139,12 +151,16 @@ const (
 	DeleteTemplate401ApplicationJSONErrorEnumAuthenticationFailed                                      DeleteTemplate401ApplicationJSONErrorEnum = "Authentication failed"
 )
 
+func (e DeleteTemplate401ApplicationJSONErrorEnum) ToPointer() *DeleteTemplate401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *DeleteTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed: request expired":
 		fallthrough
 	case "Authentication failed: signature or secret missing":
@@ -164,10 +180,10 @@ func (e *DeleteTemplate401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) e
 	case "Authentication failed: incorrect signature":
 		fallthrough
 	case "Authentication failed":
-		*e = DeleteTemplate401ApplicationJSONErrorEnum(s)
+		*e = DeleteTemplate401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTemplate401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTemplate401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 

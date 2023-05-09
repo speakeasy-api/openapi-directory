@@ -277,7 +277,10 @@ func (s *accountInformationServiceAIS) CreateConsent(ctx context.Context, reques
 // The TPP can delete an account information consent object if needed.
 func (s *accountInformationServiceAIS) DeleteConsent(ctx context.Context, request operations.DeleteConsentRequest, security operations.DeleteConsentSecurity) (*operations.DeleteConsentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -712,7 +715,10 @@ func (s *accountInformationServiceAIS) GetAccountList(ctx context.Context, reque
 // The account-id is constant at least throughout the lifecycle of a given consent.
 func (s *accountInformationServiceAIS) GetBalances(ctx context.Context, request operations.GetBalancesRequest, security operations.GetBalancesSecurity) (*operations.GetBalancesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/balances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/balances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -924,7 +930,10 @@ func (s *accountInformationServiceAIS) GetBalances(ctx context.Context, request 
 // This function returns an array of hyperlinks to all generated authorisation sub-resources.
 func (s *accountInformationServiceAIS) GetConsentAuthorisation(ctx context.Context, request operations.GetConsentAuthorisationRequest, security operations.GetConsentAuthorisationSecurity) (*operations.GetConsentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1136,7 +1145,10 @@ func (s *accountInformationServiceAIS) GetConsentAuthorisation(ctx context.Conte
 // where the consent was directly managed between ASPSP and PSU e.g. in a redirect SCA Approach.
 func (s *accountInformationServiceAIS) GetConsentInformation(ctx context.Context, request operations.GetConsentInformationRequest, security operations.GetConsentInformationSecurity) (*operations.GetConsentInformationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1346,7 +1358,10 @@ func (s *accountInformationServiceAIS) GetConsentInformation(ctx context.Context
 // This method returns the SCA status of a consent initiation's authorisation sub-resource.
 func (s *accountInformationServiceAIS) GetConsentScaStatus(ctx context.Context, request operations.GetConsentScaStatusRequest, security operations.GetConsentScaStatusSecurity) (*operations.GetConsentScaStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1556,7 +1571,10 @@ func (s *accountInformationServiceAIS) GetConsentScaStatus(ctx context.Context, 
 // Read the status of an account information consent resource.
 func (s *accountInformationServiceAIS) GetConsentStatus(ctx context.Context, request operations.GetConsentStatusRequest, security operations.GetConsentStatusSecurity) (*operations.GetConsentStatusResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/status", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/status", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1770,7 +1788,10 @@ func (s *accountInformationServiceAIS) GetConsentStatus(ctx context.Context, req
 // "Read Transaction List" call within the _links subfield.
 func (s *accountInformationServiceAIS) GetTransactionDetails(ctx context.Context, request operations.GetTransactionDetailsRequest, security operations.GetTransactionDetailsSecurity) (*operations.GetTransactionDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/transactions/{transactionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1984,7 +2005,10 @@ func (s *accountInformationServiceAIS) GetTransactionDetails(ctx context.Context
 // The ASPSP might add balance information, if transaction lists without balances are not supported.
 func (s *accountInformationServiceAIS) GetTransactionList(ctx context.Context, request operations.GetTransactionListRequest, security operations.GetTransactionListSecurity) (*operations.GetTransactionListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2224,7 +2248,10 @@ func (s *accountInformationServiceAIS) GetTransactionList(ctx context.Context, r
 // Give detailed information about the addressed account together with balance information
 func (s *accountInformationServiceAIS) ReadAccountDetails(ctx context.Context, request operations.ReadAccountDetailsRequest, security operations.ReadAccountDetailsSecurity) (*operations.ReadAccountDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{account-id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2469,7 +2496,10 @@ func (s *accountInformationServiceAIS) ReadAccountDetails(ctx context.Context, r
 //   - The signing basket needs to be authorised yet.
 func (s *accountInformationServiceAIS) StartConsentAuthorisation(ctx context.Context, request operations.StartConsentAuthorisationRequest, security operations.StartConsentAuthorisationSecurity) (*operations.StartConsentAuthorisationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2723,7 +2753,10 @@ func (s *accountInformationServiceAIS) StartConsentAuthorisation(ctx context.Con
 //     Maybe in a later version the access path will change.
 func (s *accountInformationServiceAIS) UpdateConsentsPsuData(ctx context.Context, request operations.UpdateConsentsPsuDataRequest, security operations.UpdateConsentsPsuDataSecurity) (*operations.UpdateConsentsPsuDataResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/consents/{consentId}/authorisations/{authorisationId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -2,60 +2,61 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DoubleclickbidmanagerQueriesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Queries.DoubleclickbidmanagerQueriesCreate(ctx, operations.DoubleclickbidmanagerQueriesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         QueryInput: &shared.QueryInput{
             Metadata: &shared.QueryMetadata{
                 DataRange: &shared.DataRange{
                     CustomEndDate: &shared.Date{
-                        Day: 592845,
-                        Month: 715190,
-                        Year: 844266,
+                        Day: sdk.Int(592845),
+                        Month: sdk.Int(715190),
+                        Year: sdk.Int(844266),
                     },
                     CustomStartDate: &shared.Date{
-                        Day: 602763,
-                        Month: 857946,
-                        Year: 544883,
+                        Day: sdk.Int(602763),
+                        Month: sdk.Int(857946),
+                        Year: sdk.Int(544883),
                     },
-                    Range: "ALL_TIME",
+                    Range: shared.DataRangeRangeEnumAllTime.ToPointer(),
                 },
-                Format: "CSV",
-                SendNotification: false,
+                Format: shared.QueryMetadataFormatEnumCsv.ToPointer(),
+                SendNotification: sdk.Bool(false),
                 ShareEmailAddress: []string{
                     "deserunt",
                     "suscipit",
                     "iure",
                 },
-                Title: "Mrs.",
+                Title: sdk.String("Mrs."),
             },
             Params: &shared.Parameters{
                 Filters: []shared.FilterPair{
                     shared.FilterPair{
-                        Type: "ipsa",
-                        Value: "delectus",
+                        Type: sdk.String("ipsa"),
+                        Value: sdk.String("delectus"),
                     },
                     shared.FilterPair{
-                        Type: "tempora",
-                        Value: "suscipit",
+                        Type: sdk.String("tempora"),
+                        Value: sdk.String("suscipit"),
                     },
                     shared.FilterPair{
-                        Type: "molestiae",
-                        Value: "minus",
+                        Type: sdk.String("molestiae"),
+                        Value: sdk.String("minus"),
                     },
                     shared.FilterPair{
-                        Type: "placeat",
-                        Value: "voluptatum",
+                        Type: sdk.String("placeat"),
+                        Value: sdk.String("voluptatum"),
                     },
                 },
                 GroupBys: []string{
@@ -69,11 +70,11 @@ func main() {
                     "veritatis",
                 },
                 Options: &shared.Options{
-                    IncludeOnlyTargetedUserLists: false,
+                    IncludeOnlyTargetedUserLists: sdk.Bool(false),
                     PathQueryOptions: &shared.PathQueryOptions{
                         ChannelGrouping: &shared.ChannelGrouping{
-                            FallbackName: "deserunt",
-                            Name: "perferendis",
+                            FallbackName: sdk.String("deserunt"),
+                            Name: sdk.String("Roberta Sipes"),
                             Rules: []shared.Rule{
                                 shared.Rule{
                                     DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
@@ -81,55 +82,43 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "quo",
-                                                        Match: "UNKNOWN",
+                                                        Filter: sdk.String("maiores"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumPartial.ToPointer(),
                                                         Values: []string{
-                                                            "at",
-                                                            "maiores",
-                                                            "molestiae",
                                                             "quod",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "quod",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
+                                                            "esse",
+                                                            "totam",
                                                             "porro",
-                                                            "dolorum",
-                                                            "dicta",
                                                         },
                                                     },
                                                 },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "nam",
-                                                        Match: "BEGINS_WITH",
+                                                        Filter: sdk.String("dolorum"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumUnknown.ToPointer(),
                                                         Values: []string{
+                                                            "officia",
+                                                            "occaecati",
                                                             "fugit",
-                                                            "deleniti",
-                                                            "hic",
                                                         },
                                                     },
                                                 },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "optio",
-                                                        Match: "PARTIAL",
+                                                        Filter: sdk.String("deleniti"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumWildcardExpression.ToPointer(),
                                                         Values: []string{
+                                                            "totam",
+                                                            "beatae",
                                                             "commodi",
+                                                            "molestiae",
                                                         },
                                                     },
                                                 },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "modi",
-                                                        Match: "UNKNOWN",
+                                                        Filter: sdk.String("modi"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumUnknown.ToPointer(),
                                                         Values: []string{
                                                             "cum",
                                                             "esse",
@@ -138,46 +127,18 @@ func main() {
                                                         },
                                                     },
                                                 },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "aspernatur",
-                                                        Match: "UNKNOWN",
+                                                        Filter: sdk.String("perferendis"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumExact.ToPointer(),
                                                         Values: []string{
-                                                            "natus",
                                                             "sed",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "dolor",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "hic",
-                                                            "saepe",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "fuga",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
                                                             "iste",
-                                                            "iure",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "saepe",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "ipsa",
+                                                            "dolor",
                                                         },
                                                     },
                                                 },
@@ -187,8 +148,31 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "est",
-                                                        Match: "BEGINS_WITH",
+                                                        Filter: sdk.String("laboriosam"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumWildcardExpression.ToPointer(),
+                                                        Values: []string{
+                                                            "fuga",
+                                                            "in",
+                                                            "corporis",
+                                                            "iste",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: sdk.String("iure"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumWildcardExpression.ToPointer(),
+                                                        Values: []string{
+                                                            "architecto",
+                                                            "ipsa",
+                                                            "reiciendis",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: sdk.String("est"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumBeginsWith.ToPointer(),
                                                         Values: []string{
                                                             "dolores",
                                                             "dolorem",
@@ -196,144 +180,25 @@ func main() {
                                                         },
                                                     },
                                                 },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "explicabo",
-                                                        Match: "BEGINS_WITH",
+                                                        Filter: sdk.String("nobis"),
+                                                        Match: shared.PathQueryOptionsFilterMatchEnumExact.ToPointer(),
                                                         Values: []string{
-                                                            "omnis",
                                                             "nemo",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "minima",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
-                                                            "iure",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "culpa",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "architecto",
-                                                            "mollitia",
-                                                            "dolorem",
-                                                            "culpa",
+                                                            "minima",
+                                                            "excepturi",
                                                         },
                                                     },
                                                 },
                                             },
                                         },
                                     },
-                                    Name: "consequuntur",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "occaecati",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "quam",
-                                                            "molestiae",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "velit",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "quis",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "vitae",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "enim",
-                                                            "odit",
-                                                            "quo",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "tenetur",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "possimus",
-                                                            "aut",
-                                                            "quasi",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "temporibus",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "reiciendis",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "voluptatibus",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "praesentium",
-                                                            "voluptatibus",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "ipsa",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "cum",
-                                                            "perferendis",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "reprehenderit",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "dicta",
-                                                            "corporis",
-                                                            "dolore",
-                                                            "iusto",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "dicta",
+                                    Name: sdk.String("Charlene Nicolas"),
                                 },
                             },
                         },
@@ -342,103 +207,68 @@ func main() {
                                 EventFilters: []shared.EventFilter{
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "accusamus",
-                                            Match: "PARTIAL",
+                                            Filter: sdk.String("dolorem"),
+                                            Match: shared.PathQueryOptionsFilterMatchEnumBeginsWith.ToPointer(),
                                             Values: []string{
-                                                "quae",
-                                                "ipsum",
-                                                "quidem",
-                                                "molestias",
+                                                "repellat",
                                             },
                                         },
                                     },
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "excepturi",
-                                            Match: "WILDCARD_EXPRESSION",
+                                            Filter: sdk.String("mollitia"),
+                                            Match: shared.PathQueryOptionsFilterMatchEnumPartial.ToPointer(),
                                             Values: []string{
-                                                "praesentium",
-                                                "rem",
+                                                "commodi",
+                                                "quam",
+                                            },
+                                        },
+                                    },
+                                    shared.EventFilter{
+                                        DimensionFilter: &shared.PathQueryOptionsFilter{
+                                            Filter: sdk.String("molestiae"),
+                                            Match: shared.PathQueryOptionsFilterMatchEnumExact.ToPointer(),
+                                            Values: []string{
+                                                "quia",
+                                                "quis",
+                                                "vitae",
                                             },
                                         },
                                     },
                                 },
-                                PathMatchPosition: "LAST",
-                            },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "repudiandae",
-                                            Match: "PARTIAL",
-                                            Values: []string{
-                                                "itaque",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "ANY",
-                            },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "consequatur",
-                                            Match: "BEGINS_WITH",
-                                            Values: []string{
-                                                "explicabo",
-                                                "deserunt",
-                                                "distinctio",
-                                                "quibusdam",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "labore",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "aliquid",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "FIRST",
+                                PathMatchPosition: shared.PathFilterPathMatchPositionEnumFirst.ToPointer(),
                             },
                         },
                     },
                 },
-                Type: "GRP",
+                Type: shared.ParametersTypeEnumYoutubeProgrammaticGuaranteed.ToPointer(),
             },
             Schedule: &shared.QuerySchedule{
                 EndDate: &shared.Date{
-                    Day: 20107,
-                    Month: 164940,
-                    Year: 828940,
+                    Day: sdk.Int(317202),
+                    Month: sdk.Int(138183),
+                    Year: sdk.Int(778346),
                 },
-                Frequency: "DAILY",
-                NextRunTimezoneCode: "alias",
+                Frequency: shared.QueryScheduleFrequencyEnumOneTime.ToPointer(),
+                NextRunTimezoneCode: sdk.String("tenetur"),
                 StartDate: &shared.Date{
-                    Day: 146441,
-                    Month: 677817,
-                    Year: 569618,
+                    Day: sdk.Int(368725),
+                    Month: sdk.Int(662527),
+                    Year: sdk.Int(820994),
                 },
             },
         },
-        AccessToken: "tempora",
-        Alt: "proto",
-        Callback: "tempore",
-        Fields: "labore",
-        Key: "delectus",
-        OauthToken: "eum",
-        PrettyPrint: false,
-        QuotaUser: "non",
-        UploadType: "eligendi",
-        UploadProtocol: "sint",
-    }
-
-    ctx := context.Background()
-    res, err := s.Queries.DoubleclickbidmanagerQueriesCreate(ctx, req, operations.DoubleclickbidmanagerQueriesCreateSecurity{
+        AccessToken: sdk.String("aut"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("error"),
+        Fields: sdk.String("temporibus"),
+        Key: sdk.String("laborum"),
+        OauthToken: sdk.String("quasi"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("reiciendis"),
+        UploadType: sdk.String("voluptatibus"),
+        UploadProtocol: sdk.String("vero"),
+    }, operations.DoubleclickbidmanagerQueriesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

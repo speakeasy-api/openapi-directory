@@ -16,12 +16,16 @@ const (
 	PlayerScoreResponseBeatenScoreTimeSpansEnumDaily                    PlayerScoreResponseBeatenScoreTimeSpansEnum = "DAILY"
 )
 
+func (e PlayerScoreResponseBeatenScoreTimeSpansEnum) ToPointer() *PlayerScoreResponseBeatenScoreTimeSpansEnum {
+	return &e
+}
+
 func (e *PlayerScoreResponseBeatenScoreTimeSpansEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SCORE_TIME_SPAN_UNSPECIFIED":
 		fallthrough
 	case "ALL_TIME":
@@ -29,10 +33,10 @@ func (e *PlayerScoreResponseBeatenScoreTimeSpansEnum) UnmarshalJSON(data []byte)
 	case "WEEKLY":
 		fallthrough
 	case "DAILY":
-		*e = PlayerScoreResponseBeatenScoreTimeSpansEnum(s)
+		*e = PlayerScoreResponseBeatenScoreTimeSpansEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayerScoreResponseBeatenScoreTimeSpansEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayerScoreResponseBeatenScoreTimeSpansEnum: %v", v)
 	}
 }
 

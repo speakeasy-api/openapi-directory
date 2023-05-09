@@ -20,12 +20,16 @@ const (
 	ReposAddCollaboratorRequestBodyPermissionEnumTriage   ReposAddCollaboratorRequestBodyPermissionEnum = "triage"
 )
 
+func (e ReposAddCollaboratorRequestBodyPermissionEnum) ToPointer() *ReposAddCollaboratorRequestBodyPermissionEnum {
+	return &e
+}
+
 func (e *ReposAddCollaboratorRequestBodyPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "push":
@@ -35,10 +39,10 @@ func (e *ReposAddCollaboratorRequestBodyPermissionEnum) UnmarshalJSON(data []byt
 	case "maintain":
 		fallthrough
 	case "triage":
-		*e = ReposAddCollaboratorRequestBodyPermissionEnum(s)
+		*e = ReposAddCollaboratorRequestBodyPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReposAddCollaboratorRequestBodyPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReposAddCollaboratorRequestBodyPermissionEnum: %v", v)
 	}
 }
 

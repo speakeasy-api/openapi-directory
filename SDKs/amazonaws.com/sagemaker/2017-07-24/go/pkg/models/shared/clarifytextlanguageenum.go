@@ -72,12 +72,16 @@ const (
 	ClarifyTextLanguageEnumXx  ClarifyTextLanguageEnum = "xx"
 )
 
+func (e ClarifyTextLanguageEnum) ToPointer() *ClarifyTextLanguageEnum {
+	return &e
+}
+
 func (e *ClarifyTextLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "af":
 		fallthrough
 	case "sq":
@@ -197,9 +201,9 @@ func (e *ClarifyTextLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "lij":
 		fallthrough
 	case "xx":
-		*e = ClarifyTextLanguageEnum(s)
+		*e = ClarifyTextLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClarifyTextLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for ClarifyTextLanguageEnum: %v", v)
 	}
 }

@@ -35,7 +35,10 @@ func newIdentifierMapper(defaultClient, securityClient HTTPClient, serverURL, la
 // GetIdentifierMapper - TODO maps a list of identifiers from a source to a target
 func (s *identifierMapper) GetIdentifierMapper(ctx context.Context, request operations.GetIdentifierMapperRequest) (*operations.GetIdentifierMapperResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/identifier/mapper/{source}/{target}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/identifier/mapper/{source}/{target}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

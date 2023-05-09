@@ -19,12 +19,16 @@ const (
 	PlayMediaControlSchemeEnumAdvertisement PlayMediaControlSchemeEnum = "advertisement"
 )
 
+func (e PlayMediaControlSchemeEnum) ToPointer() *PlayMediaControlSchemeEnum {
+	return &e
+}
+
 func (e *PlayMediaControlSchemeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "custom":
 		fallthrough
 	case "onDemand":
@@ -38,9 +42,9 @@ func (e *PlayMediaControlSchemeEnum) UnmarshalJSON(data []byte) error {
 	case "podcast":
 		fallthrough
 	case "advertisement":
-		*e = PlayMediaControlSchemeEnum(s)
+		*e = PlayMediaControlSchemeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlayMediaControlSchemeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlayMediaControlSchemeEnum: %v", v)
 	}
 }

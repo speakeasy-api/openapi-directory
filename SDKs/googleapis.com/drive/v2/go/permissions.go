@@ -34,7 +34,10 @@ func newPermissions(defaultClient, securityClient HTTPClient, serverURL, languag
 // DrivePermissionsDelete - Deletes a permission from a file or shared drive.
 func (s *permissions) DrivePermissionsDelete(ctx context.Context, request operations.DrivePermissionsDeleteRequest, security operations.DrivePermissionsDeleteSecurity) (*operations.DrivePermissionsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *permissions) DrivePermissionsDelete(ctx context.Context, request operat
 // DrivePermissionsGet - Gets a permission by ID.
 func (s *permissions) DrivePermissionsGet(ctx context.Context, request operations.DrivePermissionsGetRequest, security operations.DrivePermissionsGetSecurity) (*operations.DrivePermissionsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -121,7 +127,10 @@ func (s *permissions) DrivePermissionsGet(ctx context.Context, request operation
 // DrivePermissionsGetIDForEmail - Returns the permission ID for an email address.
 func (s *permissions) DrivePermissionsGetIDForEmail(ctx context.Context, request operations.DrivePermissionsGetIDForEmailRequest, security operations.DrivePermissionsGetIDForEmailSecurity) (*operations.DrivePermissionsGetIDForEmailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/permissionIds/{email}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/permissionIds/{email}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -169,7 +178,10 @@ func (s *permissions) DrivePermissionsGetIDForEmail(ctx context.Context, request
 // DrivePermissionsInsert - Inserts a permission for a file or shared drive.
 func (s *permissions) DrivePermissionsInsert(ctx context.Context, request operations.DrivePermissionsInsertRequest, security operations.DrivePermissionsInsertSecurity) (*operations.DrivePermissionsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionInput", "json")
 	if err != nil {
@@ -224,7 +236,10 @@ func (s *permissions) DrivePermissionsInsert(ctx context.Context, request operat
 // DrivePermissionsList - Lists a file's or shared drive's permissions.
 func (s *permissions) DrivePermissionsList(ctx context.Context, request operations.DrivePermissionsListRequest, security operations.DrivePermissionsListSecurity) (*operations.DrivePermissionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +287,10 @@ func (s *permissions) DrivePermissionsList(ctx context.Context, request operatio
 // DrivePermissionsPatch - Updates a permission using patch semantics.
 func (s *permissions) DrivePermissionsPatch(ctx context.Context, request operations.DrivePermissionsPatchRequest, security operations.DrivePermissionsPatchSecurity) (*operations.DrivePermissionsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionInput", "json")
 	if err != nil {
@@ -327,7 +345,10 @@ func (s *permissions) DrivePermissionsPatch(ctx context.Context, request operati
 // DrivePermissionsUpdate - Updates a permission.
 func (s *permissions) DrivePermissionsUpdate(ctx context.Context, request operations.DrivePermissionsUpdateRequest, security operations.DrivePermissionsUpdateSecurity) (*operations.DrivePermissionsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/permissions/{permissionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PermissionInput", "json")
 	if err != nil {

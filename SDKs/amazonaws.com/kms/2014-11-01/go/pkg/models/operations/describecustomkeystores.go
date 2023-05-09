@@ -16,17 +16,21 @@ const (
 	DescribeCustomKeyStoresXAmzTargetEnumTrentServiceDescribeCustomKeyStores DescribeCustomKeyStoresXAmzTargetEnum = "TrentService.DescribeCustomKeyStores"
 )
 
+func (e DescribeCustomKeyStoresXAmzTargetEnum) ToPointer() *DescribeCustomKeyStoresXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCustomKeyStoresXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.DescribeCustomKeyStores":
-		*e = DescribeCustomKeyStoresXAmzTargetEnum(s)
+		*e = DescribeCustomKeyStoresXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCustomKeyStoresXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCustomKeyStoresXAmzTargetEnum: %v", v)
 	}
 }
 

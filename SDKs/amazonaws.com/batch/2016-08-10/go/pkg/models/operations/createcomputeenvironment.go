@@ -44,19 +44,23 @@ const (
 	CreateComputeEnvironmentRequestBodyStateEnumDisabled CreateComputeEnvironmentRequestBodyStateEnum = "DISABLED"
 )
 
+func (e CreateComputeEnvironmentRequestBodyStateEnum) ToPointer() *CreateComputeEnvironmentRequestBodyStateEnum {
+	return &e
+}
+
 func (e *CreateComputeEnvironmentRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = CreateComputeEnvironmentRequestBodyStateEnum(s)
+		*e = CreateComputeEnvironmentRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateComputeEnvironmentRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateComputeEnvironmentRequestBodyStateEnum: %v", v)
 	}
 }
 
@@ -68,19 +72,23 @@ const (
 	CreateComputeEnvironmentRequestBodyTypeEnumUnmanaged CreateComputeEnvironmentRequestBodyTypeEnum = "UNMANAGED"
 )
 
+func (e CreateComputeEnvironmentRequestBodyTypeEnum) ToPointer() *CreateComputeEnvironmentRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *CreateComputeEnvironmentRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGED":
 		fallthrough
 	case "UNMANAGED":
-		*e = CreateComputeEnvironmentRequestBodyTypeEnum(s)
+		*e = CreateComputeEnvironmentRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateComputeEnvironmentRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateComputeEnvironmentRequestBodyTypeEnum: %v", v)
 	}
 }
 

@@ -32,17 +32,21 @@ const (
 	EgcerRequestBodyFormatEnumPdf EgcerRequestBodyFormatEnum = "pdf"
 )
 
+func (e EgcerRequestBodyFormatEnum) ToPointer() *EgcerRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *EgcerRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = EgcerRequestBodyFormatEnum(s)
+		*e = EgcerRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EgcerRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for EgcerRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -62,17 +66,21 @@ const (
 	Egcer504ApplicationJSONErrorEnumGatewayTimeout Egcer504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Egcer504ApplicationJSONErrorEnum) ToPointer() *Egcer504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Egcer504ApplicationJSONErrorEnum(s)
+		*e = Egcer504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -82,17 +90,21 @@ const (
 	Egcer504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Egcer504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Egcer504ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Egcer504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -108,17 +120,21 @@ const (
 	Egcer503ApplicationJSONErrorEnumServiceUnavailable Egcer503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Egcer503ApplicationJSONErrorEnum) ToPointer() *Egcer503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Egcer503ApplicationJSONErrorEnum(s)
+		*e = Egcer503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -128,17 +144,21 @@ const (
 	Egcer503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Egcer503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Egcer503ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Egcer503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -154,17 +174,21 @@ const (
 	Egcer502ApplicationJSONErrorEnumBadGatewy Egcer502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Egcer502ApplicationJSONErrorEnum) ToPointer() *Egcer502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Egcer502ApplicationJSONErrorEnum(s)
+		*e = Egcer502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -174,17 +198,21 @@ const (
 	Egcer502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Egcer502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Egcer502ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Egcer502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -200,17 +228,21 @@ const (
 	Egcer500ApplicationJSONErrorEnumInternalServerError Egcer500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Egcer500ApplicationJSONErrorEnum) ToPointer() *Egcer500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Egcer500ApplicationJSONErrorEnum(s)
+		*e = Egcer500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -220,17 +252,21 @@ const (
 	Egcer500ApplicationJSONErrorDescriptionEnumInternalServerError Egcer500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Egcer500ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Egcer500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -247,19 +283,23 @@ const (
 	Egcer404ApplicationJSONErrorEnumURLNotFound    Egcer404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Egcer404ApplicationJSONErrorEnum) ToPointer() *Egcer404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Egcer404ApplicationJSONErrorEnum(s)
+		*e = Egcer404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -270,19 +310,23 @@ const (
 	Egcer404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Egcer404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Egcer404ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Egcer404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -299,19 +343,23 @@ const (
 	Egcer401ApplicationJSONErrorEnumInvalidAuthorization  Egcer401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Egcer401ApplicationJSONErrorEnum) ToPointer() *Egcer401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Egcer401ApplicationJSONErrorEnum(s)
+		*e = Egcer401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -322,19 +370,23 @@ const (
 	Egcer401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Egcer401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Egcer401ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Egcer401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -354,12 +406,16 @@ const (
 	Egcer400ApplicationJSONErrorEnumInvalidConsentid Egcer400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Egcer400ApplicationJSONErrorEnum) ToPointer() *Egcer400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Egcer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -369,10 +425,10 @@ func (e *Egcer400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Egcer400ApplicationJSONErrorEnum(s)
+		*e = Egcer400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -386,12 +442,16 @@ const (
 	Egcer400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Egcer400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Egcer400ApplicationJSONErrorDescriptionEnum) ToPointer() *Egcer400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Egcer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -401,10 +461,10 @@ func (e *Egcer400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Egcer400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Egcer400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Egcer400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Egcer400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

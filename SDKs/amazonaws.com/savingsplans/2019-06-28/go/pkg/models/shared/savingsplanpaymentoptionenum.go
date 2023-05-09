@@ -15,20 +15,24 @@ const (
 	SavingsPlanPaymentOptionEnumNoUpfront      SavingsPlanPaymentOptionEnum = "No Upfront"
 )
 
+func (e SavingsPlanPaymentOptionEnum) ToPointer() *SavingsPlanPaymentOptionEnum {
+	return &e
+}
+
 func (e *SavingsPlanPaymentOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All Upfront":
 		fallthrough
 	case "Partial Upfront":
 		fallthrough
 	case "No Upfront":
-		*e = SavingsPlanPaymentOptionEnum(s)
+		*e = SavingsPlanPaymentOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SavingsPlanPaymentOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for SavingsPlanPaymentOptionEnum: %v", v)
 	}
 }

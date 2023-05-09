@@ -16,17 +16,21 @@ const (
 	DescribeSpaceXAmzTargetEnumSageMakerDescribeSpace DescribeSpaceXAmzTargetEnum = "SageMaker.DescribeSpace"
 )
 
+func (e DescribeSpaceXAmzTargetEnum) ToPointer() *DescribeSpaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSpaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DescribeSpace":
-		*e = DescribeSpaceXAmzTargetEnum(s)
+		*e = DescribeSpaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSpaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSpaceXAmzTargetEnum: %v", v)
 	}
 }
 

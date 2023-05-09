@@ -14,18 +14,22 @@ const (
 	MonitoringAlertHistorySortKeyEnumStatus       MonitoringAlertHistorySortKeyEnum = "Status"
 )
 
+func (e MonitoringAlertHistorySortKeyEnum) ToPointer() *MonitoringAlertHistorySortKeyEnum {
+	return &e
+}
+
 func (e *MonitoringAlertHistorySortKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreationTime":
 		fallthrough
 	case "Status":
-		*e = MonitoringAlertHistorySortKeyEnum(s)
+		*e = MonitoringAlertHistorySortKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MonitoringAlertHistorySortKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for MonitoringAlertHistorySortKeyEnum: %v", v)
 	}
 }

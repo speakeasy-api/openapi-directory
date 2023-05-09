@@ -16,17 +16,21 @@ const (
 	RegisterWorkspaceDirectoryXAmzTargetEnumWorkspacesServiceRegisterWorkspaceDirectory RegisterWorkspaceDirectoryXAmzTargetEnum = "WorkspacesService.RegisterWorkspaceDirectory"
 )
 
+func (e RegisterWorkspaceDirectoryXAmzTargetEnum) ToPointer() *RegisterWorkspaceDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *RegisterWorkspaceDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.RegisterWorkspaceDirectory":
-		*e = RegisterWorkspaceDirectoryXAmzTargetEnum(s)
+		*e = RegisterWorkspaceDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RegisterWorkspaceDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for RegisterWorkspaceDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

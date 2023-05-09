@@ -17,19 +17,23 @@ const (
 	ImportVMImageRequestBodyPlatformEnumLinux   ImportVMImageRequestBodyPlatformEnum = "Linux"
 )
 
+func (e ImportVMImageRequestBodyPlatformEnum) ToPointer() *ImportVMImageRequestBodyPlatformEnum {
+	return &e
+}
+
 func (e *ImportVMImageRequestBodyPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Windows":
 		fallthrough
 	case "Linux":
-		*e = ImportVMImageRequestBodyPlatformEnum(s)
+		*e = ImportVMImageRequestBodyPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportVMImageRequestBodyPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportVMImageRequestBodyPlatformEnum: %v", v)
 	}
 }
 

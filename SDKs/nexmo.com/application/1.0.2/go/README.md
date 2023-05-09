@@ -13,34 +13,31 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/application/1.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreateApplicationRequestBody{
-        AnswerMethod: "GET",
-        AnswerURL: "https://example.com/webhooks/answer",
+    ctx := context.Background()
+    res, err := s.CreateApplication(ctx, operations.CreateApplicationRequestBody{
+        AnswerMethod: sdk.String("GET"),
+        AnswerURL: sdk.String("https://example.com/webhooks/answer"),
         APIKey: "ap1k3y",
         APISecret: "230e6cf0709417176df1b4fc1e083adc",
-        EventMethod: "POST",
-        EventURL: "https://example.com/webhooks/event",
-        InboundMethod: "POST",
-        InboundURL: "https://example.com/webhooks/inbound",
+        EventMethod: sdk.String("POST"),
+        EventURL: sdk.String("https://example.com/webhooks/event"),
+        InboundMethod: sdk.String("POST"),
+        InboundURL: sdk.String("https://example.com/webhooks/inbound"),
         Name: "My Application",
-        StatusMethod: "POST",
-        StatusURL: "https://example.com/webhooks/status",
-        Type: "voice",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateApplication(ctx, req)
+        StatusMethod: sdk.String("POST"),
+        StatusURL: sdk.String("https://example.com/webhooks/status"),
+        Type: operations.CreateApplicationRequestBodyTypeEnumVoice,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,13 +52,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateApplication` - Create Application
-* `DeleteApplication` - Destroy Application
-* `RetrieveApplication` - Retrieve Application
-* `RetrieveApplications` - Retrieve all Applications
-* `UpdateApplication` - Update Application
+* [CreateApplication](docs/sdk/README.md#createapplication) - Create Application
+* [DeleteApplication](docs/sdk/README.md#deleteapplication) - Destroy Application
+* [RetrieveApplication](docs/sdk/README.md#retrieveapplication) - Retrieve Application
+* [RetrieveApplications](docs/sdk/README.md#retrieveapplications) - Retrieve all Applications
+* [UpdateApplication](docs/sdk/README.md#updateapplication) - Update Application
 <!-- End SDK Available Operations -->
 
 ### Maturity

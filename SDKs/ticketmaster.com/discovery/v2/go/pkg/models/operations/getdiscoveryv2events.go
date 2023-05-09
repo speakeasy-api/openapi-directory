@@ -16,19 +16,23 @@ const (
 	GetDiscoveryV2EventsIncludeLicensedContentEnumNo  GetDiscoveryV2EventsIncludeLicensedContentEnum = " no"
 )
 
+func (e GetDiscoveryV2EventsIncludeLicensedContentEnum) ToPointer() *GetDiscoveryV2EventsIncludeLicensedContentEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIncludeLicensedContentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2EventsIncludeLicensedContentEnum(s)
+		*e = GetDiscoveryV2EventsIncludeLicensedContentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeLicensedContentEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeLicensedContentEnum: %v", v)
 	}
 }
 
@@ -40,19 +44,23 @@ const (
 	GetDiscoveryV2EventsIncludeSpellcheckEnumNo  GetDiscoveryV2EventsIncludeSpellcheckEnum = " no"
 )
 
+func (e GetDiscoveryV2EventsIncludeSpellcheckEnum) ToPointer() *GetDiscoveryV2EventsIncludeSpellcheckEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIncludeSpellcheckEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
-		*e = GetDiscoveryV2EventsIncludeSpellcheckEnum(s)
+		*e = GetDiscoveryV2EventsIncludeSpellcheckEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeSpellcheckEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeSpellcheckEnum: %v", v)
 	}
 }
 
@@ -65,21 +73,25 @@ const (
 	GetDiscoveryV2EventsIncludeTbaEnumOnly GetDiscoveryV2EventsIncludeTbaEnum = " only"
 )
 
+func (e GetDiscoveryV2EventsIncludeTbaEnum) ToPointer() *GetDiscoveryV2EventsIncludeTbaEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIncludeTbaEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2EventsIncludeTbaEnum(s)
+		*e = GetDiscoveryV2EventsIncludeTbaEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTbaEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTbaEnum: %v", v)
 	}
 }
 
@@ -92,21 +104,25 @@ const (
 	GetDiscoveryV2EventsIncludeTbdEnumOnly GetDiscoveryV2EventsIncludeTbdEnum = " only"
 )
 
+func (e GetDiscoveryV2EventsIncludeTbdEnum) ToPointer() *GetDiscoveryV2EventsIncludeTbdEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIncludeTbdEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2EventsIncludeTbdEnum(s)
+		*e = GetDiscoveryV2EventsIncludeTbdEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTbdEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTbdEnum: %v", v)
 	}
 }
 
@@ -119,21 +135,25 @@ const (
 	GetDiscoveryV2EventsIncludeTestEnumOnly GetDiscoveryV2EventsIncludeTestEnum = " only"
 )
 
+func (e GetDiscoveryV2EventsIncludeTestEnum) ToPointer() *GetDiscoveryV2EventsIncludeTestEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsIncludeTestEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "yes":
 		fallthrough
 	case " no":
 		fallthrough
 	case " only":
-		*e = GetDiscoveryV2EventsIncludeTestEnum(s)
+		*e = GetDiscoveryV2EventsIncludeTestEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTestEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsIncludeTestEnum: %v", v)
 	}
 }
 
@@ -147,12 +167,16 @@ const (
 	GetDiscoveryV2EventsSourceEnumTmr          GetDiscoveryV2EventsSourceEnum = " tmr"
 )
 
+func (e GetDiscoveryV2EventsSourceEnum) ToPointer() *GetDiscoveryV2EventsSourceEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ticketmaster":
 		fallthrough
 	case " universe":
@@ -160,10 +184,10 @@ func (e *GetDiscoveryV2EventsSourceEnum) UnmarshalJSON(data []byte) error {
 	case " frontgate":
 		fallthrough
 	case " tmr":
-		*e = GetDiscoveryV2EventsSourceEnum(s)
+		*e = GetDiscoveryV2EventsSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsSourceEnum: %v", v)
 	}
 }
 
@@ -175,19 +199,23 @@ const (
 	GetDiscoveryV2EventsUnitEnumKm    GetDiscoveryV2EventsUnitEnum = "km"
 )
 
+func (e GetDiscoveryV2EventsUnitEnum) ToPointer() *GetDiscoveryV2EventsUnitEnum {
+	return &e
+}
+
 func (e *GetDiscoveryV2EventsUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "miles":
 		fallthrough
 	case "km":
-		*e = GetDiscoveryV2EventsUnitEnum(s)
+		*e = GetDiscoveryV2EventsUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetDiscoveryV2EventsUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for GetDiscoveryV2EventsUnitEnum: %v", v)
 	}
 }
 

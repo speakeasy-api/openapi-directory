@@ -17,12 +17,16 @@ const (
 	RemoteServerEntityAuthStatusEnumReauthenticate RemoteServerEntityAuthStatusEnum = "reauthenticate"
 )
 
+func (e RemoteServerEntityAuthStatusEnum) ToPointer() *RemoteServerEntityAuthStatusEnum {
+	return &e
+}
+
 func (e *RemoteServerEntityAuthStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "not_applicable":
 		fallthrough
 	case "in_setup":
@@ -30,10 +34,10 @@ func (e *RemoteServerEntityAuthStatusEnum) UnmarshalJSON(data []byte) error {
 	case "complete":
 		fallthrough
 	case "reauthenticate":
-		*e = RemoteServerEntityAuthStatusEnum(s)
+		*e = RemoteServerEntityAuthStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntityAuthStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntityAuthStatusEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	RemoteServerEntityFilesAgentPermissionSetEnumWriteOnly RemoteServerEntityFilesAgentPermissionSetEnum = "write_only"
 )
 
+func (e RemoteServerEntityFilesAgentPermissionSetEnum) ToPointer() *RemoteServerEntityFilesAgentPermissionSetEnum {
+	return &e
+}
+
 func (e *RemoteServerEntityFilesAgentPermissionSetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "read_write":
 		fallthrough
 	case "read_only":
 		fallthrough
 	case "write_only":
-		*e = RemoteServerEntityFilesAgentPermissionSetEnum(s)
+		*e = RemoteServerEntityFilesAgentPermissionSetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntityFilesAgentPermissionSetEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntityFilesAgentPermissionSetEnum: %v", v)
 	}
 }
 
@@ -72,19 +80,23 @@ const (
 	RemoteServerEntityOneDriveAccountTypeEnumBusinessOther RemoteServerEntityOneDriveAccountTypeEnum = "business_other"
 )
 
+func (e RemoteServerEntityOneDriveAccountTypeEnum) ToPointer() *RemoteServerEntityOneDriveAccountTypeEnum {
+	return &e
+}
+
 func (e *RemoteServerEntityOneDriveAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "personal":
 		fallthrough
 	case "business_other":
-		*e = RemoteServerEntityOneDriveAccountTypeEnum(s)
+		*e = RemoteServerEntityOneDriveAccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntityOneDriveAccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntityOneDriveAccountTypeEnum: %v", v)
 	}
 }
 
@@ -96,19 +108,23 @@ const (
 	RemoteServerEntityServerCertificateEnumAllowAny     RemoteServerEntityServerCertificateEnum = "allow_any"
 )
 
+func (e RemoteServerEntityServerCertificateEnum) ToPointer() *RemoteServerEntityServerCertificateEnum {
+	return &e
+}
+
 func (e *RemoteServerEntityServerCertificateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "require_match":
 		fallthrough
 	case "allow_any":
-		*e = RemoteServerEntityServerCertificateEnum(s)
+		*e = RemoteServerEntityServerCertificateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntityServerCertificateEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntityServerCertificateEnum: %v", v)
 	}
 }
 
@@ -136,12 +152,16 @@ const (
 	RemoteServerEntityServerTypeEnumFilebase           RemoteServerEntityServerTypeEnum = "filebase"
 )
 
+func (e RemoteServerEntityServerTypeEnum) ToPointer() *RemoteServerEntityServerTypeEnum {
+	return &e
+}
+
 func (e *RemoteServerEntityServerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ftp":
 		fallthrough
 	case "sftp":
@@ -177,10 +197,10 @@ func (e *RemoteServerEntityServerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "files_agent":
 		fallthrough
 	case "filebase":
-		*e = RemoteServerEntityServerTypeEnum(s)
+		*e = RemoteServerEntityServerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntityServerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntityServerTypeEnum: %v", v)
 	}
 }
 
@@ -194,12 +214,16 @@ const (
 	RemoteServerEntitySslEnumNever           RemoteServerEntitySslEnum = "never"
 )
 
+func (e RemoteServerEntitySslEnum) ToPointer() *RemoteServerEntitySslEnum {
+	return &e
+}
+
 func (e *RemoteServerEntitySslEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "if_available":
 		fallthrough
 	case "require":
@@ -207,10 +231,10 @@ func (e *RemoteServerEntitySslEnum) UnmarshalJSON(data []byte) error {
 	case "require_implicit":
 		fallthrough
 	case "never":
-		*e = RemoteServerEntitySslEnum(s)
+		*e = RemoteServerEntitySslEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RemoteServerEntitySslEnum: %s", s)
+		return fmt.Errorf("invalid value for RemoteServerEntitySslEnum: %v", v)
 	}
 }
 

@@ -23,4 +23,6 @@ type DeleteEUAByIDV2Response struct {
 	DeleteEUAByIDV2403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	DeleteEUAByIDV2404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	DeleteEUAByIDV2429ApplicationJSONObject map[string]interface{}
 }

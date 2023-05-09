@@ -13,18 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/apisetu.gov.in/edistricta
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.BrlcsRequestBody{
+    ctx := context.Background()
+    res, err := s.APIs.Brlcs(ctx, operations.BrlcsRequestBody{
         CertificateParameters: &operations.BrlcsRequestBodyCertificateParameters{
             CertificateNumber: "20190101IN00098",
         },
@@ -32,47 +34,44 @@ func main() {
             Consent: shared.ConsentArtifactSchemaConsent{
                 ConsentID: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
                 Data: shared.ConsentArtifactSchemaConsentData{
-                    ID: "corrupti",
+                    ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
                 },
                 DataConsumer: shared.ConsentArtifactSchemaConsentDataConsumer{
-                    ID: "provident",
+                    ID: "a05dfc2d-df7c-4c78-8a1b-a928fc816742",
                 },
                 DataProvider: shared.ConsentArtifactSchemaConsentDataProvider{
-                    ID: "distinctio",
+                    ID: "cb739205-9293-496f-aa75-96eb10faaa23",
                 },
                 Permission: shared.ConsentArtifactSchemaConsentPermission{
-                    Access: "quibusdam",
+                    Access: "corporis",
                     DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
-                        From: "2021-04-14T16:47:33.722Z",
-                        To: "2021-04-22T12:08:58.275Z",
+                        From: types.MustTimeFromString("2022-04-01T23:59:21.675Z"),
+                        To: types.MustTimeFromString("2022-05-24T03:24:11.703Z"),
                     },
                     Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
-                        Repeats: 4236.55,
-                        Unit: "error",
-                        Value: 6458.94,
+                        Repeats: 3637.11,
+                        Unit: "minima",
+                        Value: 5701.97,
                     },
                 },
                 Purpose: shared.ConsentArtifactSchemaConsentPurpose{
-                    Description: "suscipit",
+                    Description: "accusantium",
                 },
-                Timestamp: "2022-09-14T09:35:47.986Z",
+                Timestamp: types.MustTimeFromString("2022-05-14T11:45:33.094Z"),
                 User: shared.ConsentArtifactSchemaConsentUser{
-                    Email: "Anahi38@hotmail.com",
-                    IDNumber: "molestiae",
-                    IDType: "minus",
-                    Mobile: "645-598-0306 x03897",
+                    Email: "Veronica.Brakus@hotmail.com",
+                    IDNumber: "culpa",
+                    IDType: "consequuntur",
+                    Mobile: "752.544.2613 x16631",
                 },
             },
             Signature: shared.ConsentArtifactSchemaSignature{
-                Signature: "odit",
+                Signature: "quo",
             },
         },
-        Format: "pdf",
+        Format: operations.BrlcsRequestBodyFormatEnumPdf,
         TxnID: "f7f1469c-29b0-4325-9dfc-c567200a70f7",
-    }
-
-    ctx := context.Background()
-    res, err := s.APIs.Brlcs(ctx, req, operations.BrlcsSecurity{
+    }, operations.BrlcsSecurity{
         APIKey: "YOUR_API_KEY_HERE",
         ClientID: "YOUR_API_KEY_HERE",
     })
@@ -91,20 +90,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### APIs
+### [APIs](docs/apis/README.md)
 
-* `Brlcs` - Bar License
-* `Dpcer` - Dependency Certificate
-* `Fmcer` - Family Membership Certificate
-* `Incer` - Income Certificate
-* `Lccep` - Local Candidate/ Status Certificate
-* `Ndcer` - No Dues/ Objection Certificate
-* `Obcer` - OBC Certificate
-* `Rmcer` - Marriage Certificate
-* `Rscer` - Residence Certificate
-* `Rucer` - Regional Language(s) Certificate
-* `Sicrd` - Senior Citizen Identity Card/ Certificate
-* `Vlcer` - Valuation Certificate
+* [Brlcs](docs/apis/README.md#brlcs) - Bar License
+* [Dpcer](docs/apis/README.md#dpcer) - Dependency Certificate
+* [Fmcer](docs/apis/README.md#fmcer) - Family Membership Certificate
+* [Incer](docs/apis/README.md#incer) - Income Certificate
+* [Lccep](docs/apis/README.md#lccep) - Local Candidate/ Status Certificate
+* [Ndcer](docs/apis/README.md#ndcer) - No Dues/ Objection Certificate
+* [Obcer](docs/apis/README.md#obcer) - OBC Certificate
+* [Rmcer](docs/apis/README.md#rmcer) - Marriage Certificate
+* [Rscer](docs/apis/README.md#rscer) - Residence Certificate
+* [Rucer](docs/apis/README.md#rucer) - Regional Language(s) Certificate
+* [Sicrd](docs/apis/README.md#sicrd) - Senior Citizen Identity Card/ Certificate
+* [Vlcer](docs/apis/README.md#vlcer) - Valuation Certificate
 <!-- End SDK Available Operations -->
 
 ### Maturity

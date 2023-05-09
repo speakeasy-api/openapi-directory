@@ -32,12 +32,16 @@ const (
 	GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnumCart       GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum = "cart"
 )
 
+func (e GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) ToPointer() *GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum {
+	return &e
+}
+
 func (e *GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "shop":
@@ -45,10 +49,10 @@ func (e *GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum) UnmarshalJSON(
 	case "thanks_page":
 		fallthrough
 	case "cart":
-		*e = GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(s)
+		*e = GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScriptTag200ApplicationJSONScriptTagDisplayScopeEnum: %v", v)
 	}
 }
 

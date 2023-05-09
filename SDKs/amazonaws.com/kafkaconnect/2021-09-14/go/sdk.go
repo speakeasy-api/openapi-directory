@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p/>
 // https://docs.aws.amazon.com/kafkaconnect/ - Amazon Web Services documentation
 type SDK struct {
@@ -522,7 +537,10 @@ func (s *SDK) CreateWorkerConfiguration(ctx context.Context, request operations.
 // DeleteConnector - Deletes the specified connector.
 func (s *SDK) DeleteConnector(ctx context.Context, request operations.DeleteConnectorRequest) (*operations.DeleteConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -642,7 +660,10 @@ func (s *SDK) DeleteConnector(ctx context.Context, request operations.DeleteConn
 // DeleteCustomPlugin - Deletes a custom plugin.
 func (s *SDK) DeleteCustomPlugin(ctx context.Context, request operations.DeleteCustomPluginRequest) (*operations.DeleteCustomPluginResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -758,7 +779,10 @@ func (s *SDK) DeleteCustomPlugin(ctx context.Context, request operations.DeleteC
 // DescribeConnector - Returns summary information about the connector.
 func (s *SDK) DescribeConnector(ctx context.Context, request operations.DescribeConnectorRequest) (*operations.DescribeConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -874,7 +898,10 @@ func (s *SDK) DescribeConnector(ctx context.Context, request operations.Describe
 // DescribeCustomPlugin - A summary description of the custom plugin.
 func (s *SDK) DescribeCustomPlugin(ctx context.Context, request operations.DescribeCustomPluginRequest) (*operations.DescribeCustomPluginResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/custom-plugins/{customPluginArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -990,7 +1017,10 @@ func (s *SDK) DescribeCustomPlugin(ctx context.Context, request operations.Descr
 // DescribeWorkerConfiguration - Returns information about a worker configuration.
 func (s *SDK) DescribeWorkerConfiguration(ctx context.Context, request operations.DescribeWorkerConfigurationRequest) (*operations.DescribeWorkerConfigurationResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/worker-configurations/{workerConfigurationArn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/worker-configurations/{workerConfigurationArn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1466,7 +1496,10 @@ func (s *SDK) ListWorkerConfigurations(ctx context.Context, request operations.L
 // UpdateConnector - Updates the specified connector.
 func (s *SDK) UpdateConnector(ctx context.Context, request operations.UpdateConnectorRequest) (*operations.UpdateConnectorResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}#currentVersion", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{connectorArn}#currentVersion", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

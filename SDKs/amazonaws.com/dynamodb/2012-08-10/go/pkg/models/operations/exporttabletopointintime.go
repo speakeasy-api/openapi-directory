@@ -16,17 +16,21 @@ const (
 	ExportTableToPointInTimeXAmzTargetEnumDynamoDb20120810ExportTableToPointInTime ExportTableToPointInTimeXAmzTargetEnum = "DynamoDB_20120810.ExportTableToPointInTime"
 )
 
+func (e ExportTableToPointInTimeXAmzTargetEnum) ToPointer() *ExportTableToPointInTimeXAmzTargetEnum {
+	return &e
+}
+
 func (e *ExportTableToPointInTimeXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.ExportTableToPointInTime":
-		*e = ExportTableToPointInTimeXAmzTargetEnum(s)
+		*e = ExportTableToPointInTimeXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportTableToPointInTimeXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportTableToPointInTimeXAmzTargetEnum: %v", v)
 	}
 }
 

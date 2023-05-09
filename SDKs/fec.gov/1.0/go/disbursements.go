@@ -361,7 +361,10 @@ func (s *disbursements) GetSchedulesScheduleBEfile(ctx context.Context, request 
 // large result sets are approximate; you will want to page through the records until no records are returned.
 func (s *disbursements) GetSchedulesScheduleBSubID(ctx context.Context, request operations.GetSchedulesScheduleBSubIDRequest) (*operations.GetSchedulesScheduleBSubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_b/{sub_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_b/{sub_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	ImportMigrationTaskXAmzTargetEnumAwsMigrationHubImportMigrationTask ImportMigrationTaskXAmzTargetEnum = "AWSMigrationHub.ImportMigrationTask"
 )
 
+func (e ImportMigrationTaskXAmzTargetEnum) ToPointer() *ImportMigrationTaskXAmzTargetEnum {
+	return &e
+}
+
 func (e *ImportMigrationTaskXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHub.ImportMigrationTask":
-		*e = ImportMigrationTaskXAmzTargetEnum(s)
+		*e = ImportMigrationTaskXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportMigrationTaskXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ImportMigrationTaskXAmzTargetEnum: %v", v)
 	}
 }
 

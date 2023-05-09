@@ -13,16 +13,20 @@ const (
 	RecordMarkerFailedCauseEnumOperationNotPermitted RecordMarkerFailedCauseEnum = "OPERATION_NOT_PERMITTED"
 )
 
+func (e RecordMarkerFailedCauseEnum) ToPointer() *RecordMarkerFailedCauseEnum {
+	return &e
+}
+
 func (e *RecordMarkerFailedCauseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPERATION_NOT_PERMITTED":
-		*e = RecordMarkerFailedCauseEnum(s)
+		*e = RecordMarkerFailedCauseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordMarkerFailedCauseEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordMarkerFailedCauseEnum: %v", v)
 	}
 }

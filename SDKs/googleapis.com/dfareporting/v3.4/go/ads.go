@@ -34,7 +34,10 @@ func newAds(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 // DfareportingAdsGet - Gets one ad by ID.
 func (s *ads) DfareportingAdsGet(ctx context.Context, request operations.DfareportingAdsGetRequest, security operations.DfareportingAdsGetSecurity) (*operations.DfareportingAdsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *ads) DfareportingAdsGet(ctx context.Context, request operations.Dfarepo
 // DfareportingAdsInsert - Inserts a new ad.
 func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.DfareportingAdsInsertRequest, security operations.DfareportingAdsInsertSecurity) (*operations.DfareportingAdsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *ads) DfareportingAdsInsert(ctx context.Context, request operations.Dfar
 // DfareportingAdsList - Retrieves a list of ads, possibly filtered. This method supports paging.
 func (s *ads) DfareportingAdsList(ctx context.Context, request operations.DfareportingAdsListRequest, security operations.DfareportingAdsListSecurity) (*operations.DfareportingAdsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *ads) DfareportingAdsList(ctx context.Context, request operations.Dfarep
 // DfareportingAdsPatch - Updates an existing ad. This method supports patch semantics.
 func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.DfareportingAdsPatchRequest, security operations.DfareportingAdsPatchSecurity) (*operations.DfareportingAdsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *ads) DfareportingAdsPatch(ctx context.Context, request operations.Dfare
 // DfareportingAdsUpdate - Updates an existing ad.
 func (s *ads) DfareportingAdsUpdate(ctx context.Context, request operations.DfareportingAdsUpdateRequest, security operations.DfareportingAdsUpdateSecurity) (*operations.DfareportingAdsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/ads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Ad", "json")
 	if err != nil {

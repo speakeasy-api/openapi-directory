@@ -16,17 +16,21 @@ const (
 	UpdateTableXAmzTargetEnumTimestream20181101UpdateTable UpdateTableXAmzTargetEnum = "Timestream_20181101.UpdateTable"
 )
 
+func (e UpdateTableXAmzTargetEnum) ToPointer() *UpdateTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Timestream_20181101.UpdateTable":
-		*e = UpdateTableXAmzTargetEnum(s)
+		*e = UpdateTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTableXAmzTargetEnum: %v", v)
 	}
 }
 

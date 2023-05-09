@@ -85,7 +85,10 @@ func (s *privateMessages) CreateTopicPostPM(ctx context.Context, request operati
 // GetUserSentPrivateMessages - Get a list of private messages sent for a user
 func (s *privateMessages) GetUserSentPrivateMessages(ctx context.Context, request operations.GetUserSentPrivateMessagesRequest) (*operations.GetUserSentPrivateMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages-sent/{username}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/topics/private-messages-sent/{username}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -129,7 +132,10 @@ func (s *privateMessages) GetUserSentPrivateMessages(ctx context.Context, reques
 // ListUserPrivateMessages - Get a list of private messages for a user
 func (s *privateMessages) ListUserPrivateMessages(ctx context.Context, request operations.ListUserPrivateMessagesRequest) (*operations.ListUserPrivateMessagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/topics/private-messages/{username}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/topics/private-messages/{username}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

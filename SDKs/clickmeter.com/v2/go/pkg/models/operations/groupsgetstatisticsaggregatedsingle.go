@@ -17,19 +17,23 @@ const (
 	GroupsGetStatisticsAggregatedSingleStatusEnumActive  GroupsGetStatisticsAggregatedSingleStatusEnum = "active"
 )
 
+func (e GroupsGetStatisticsAggregatedSingleStatusEnum) ToPointer() *GroupsGetStatisticsAggregatedSingleStatusEnum {
+	return &e
+}
+
 func (e *GroupsGetStatisticsAggregatedSingleStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
-		*e = GroupsGetStatisticsAggregatedSingleStatusEnum(s)
+		*e = GroupsGetStatisticsAggregatedSingleStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetStatisticsAggregatedSingleStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetStatisticsAggregatedSingleStatusEnum: %v", v)
 	}
 }
 
@@ -54,12 +58,16 @@ const (
 	GroupsGetStatisticsAggregatedSingleTimeFrameEnumCustom        GroupsGetStatisticsAggregatedSingleTimeFrameEnum = "custom"
 )
 
+func (e GroupsGetStatisticsAggregatedSingleTimeFrameEnum) ToPointer() *GroupsGetStatisticsAggregatedSingleTimeFrameEnum {
+	return &e
+}
+
 func (e *GroupsGetStatisticsAggregatedSingleTimeFrameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "today":
 		fallthrough
 	case "yesterday":
@@ -89,10 +97,10 @@ func (e *GroupsGetStatisticsAggregatedSingleTimeFrameEnum) UnmarshalJSON(data []
 	case "beginning":
 		fallthrough
 	case "custom":
-		*e = GroupsGetStatisticsAggregatedSingleTimeFrameEnum(s)
+		*e = GroupsGetStatisticsAggregatedSingleTimeFrameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetStatisticsAggregatedSingleTimeFrameEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetStatisticsAggregatedSingleTimeFrameEnum: %v", v)
 	}
 }
 

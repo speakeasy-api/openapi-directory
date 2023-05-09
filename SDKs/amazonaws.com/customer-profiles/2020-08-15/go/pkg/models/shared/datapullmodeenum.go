@@ -14,18 +14,22 @@ const (
 	DataPullModeEnumComplete    DataPullModeEnum = "Complete"
 )
 
+func (e DataPullModeEnum) ToPointer() *DataPullModeEnum {
+	return &e
+}
+
 func (e *DataPullModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Incremental":
 		fallthrough
 	case "Complete":
-		*e = DataPullModeEnum(s)
+		*e = DataPullModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DataPullModeEnum: %s", s)
+		return fmt.Errorf("invalid value for DataPullModeEnum: %v", v)
 	}
 }

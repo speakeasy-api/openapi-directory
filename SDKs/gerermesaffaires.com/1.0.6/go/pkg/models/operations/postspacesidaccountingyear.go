@@ -20,21 +20,25 @@ const (
 	PostSpacesIDAccountingYearRequestBodyLevelEnumPublic       PostSpacesIDAccountingYearRequestBodyLevelEnum = "public"
 )
 
+func (e PostSpacesIDAccountingYearRequestBodyLevelEnum) ToPointer() *PostSpacesIDAccountingYearRequestBodyLevelEnum {
+	return &e
+}
+
 func (e *PostSpacesIDAccountingYearRequestBodyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "confidential":
 		fallthrough
 	case "regular":
 		fallthrough
 	case "public":
-		*e = PostSpacesIDAccountingYearRequestBodyLevelEnum(s)
+		*e = PostSpacesIDAccountingYearRequestBodyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesIDAccountingYearRequestBodyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesIDAccountingYearRequestBodyLevelEnum: %v", v)
 	}
 }
 

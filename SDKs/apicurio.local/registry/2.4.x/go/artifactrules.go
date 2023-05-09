@@ -46,7 +46,10 @@ func newArtifactRules(defaultClient, securityClient HTTPClient, serverURL, langu
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) CreateArtifactRule(ctx context.Context, request operations.CreateArtifactRuleRequest) (*operations.CreateArtifactRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rule", "json")
 	if err != nil {
@@ -116,7 +119,10 @@ func (s *artifactRules) CreateArtifactRule(ctx context.Context, request operatio
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) DeleteArtifactRule(ctx context.Context, request operations.DeleteArtifactRuleRequest) (*operations.DeleteArtifactRuleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -170,7 +176,10 @@ func (s *artifactRules) DeleteArtifactRule(ctx context.Context, request operatio
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) DeleteArtifactRules(ctx context.Context, request operations.DeleteArtifactRulesRequest) (*operations.DeleteArtifactRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -226,7 +235,10 @@ func (s *artifactRules) DeleteArtifactRules(ctx context.Context, request operati
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) GetArtifactRuleConfig(ctx context.Context, request operations.GetArtifactRuleConfigRequest) (*operations.GetArtifactRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -291,7 +303,10 @@ func (s *artifactRules) GetArtifactRuleConfig(ctx context.Context, request opera
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) ListArtifactRules(ctx context.Context, request operations.ListArtifactRulesRequest) (*operations.ListArtifactRulesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -367,7 +382,10 @@ func (s *artifactRules) ListArtifactRules(ctx context.Context, request operation
 // artifact (or the global rules if no artifact rules are enabled).
 func (s *artifactRules) TestUpdateArtifact(ctx context.Context, request operations.TestUpdateArtifactRequest) (*operations.TestUpdateArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/test", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/test", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -444,7 +462,10 @@ func (s *artifactRules) TestUpdateArtifact(ctx context.Context, request operatio
 // * A server error occurred (HTTP error `500`)
 func (s *artifactRules) UpdateArtifactRuleConfig(ctx context.Context, request operations.UpdateArtifactRuleConfigRequest) (*operations.UpdateArtifactRuleConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Rule1", "json")
 	if err != nil {

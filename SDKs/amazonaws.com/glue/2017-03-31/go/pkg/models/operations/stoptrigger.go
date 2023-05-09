@@ -16,17 +16,21 @@ const (
 	StopTriggerXAmzTargetEnumAwsGlueStopTrigger StopTriggerXAmzTargetEnum = "AWSGlue.StopTrigger"
 )
 
+func (e StopTriggerXAmzTargetEnum) ToPointer() *StopTriggerXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopTriggerXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.StopTrigger":
-		*e = StopTriggerXAmzTargetEnum(s)
+		*e = StopTriggerXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopTriggerXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopTriggerXAmzTargetEnum: %v", v)
 	}
 }
 

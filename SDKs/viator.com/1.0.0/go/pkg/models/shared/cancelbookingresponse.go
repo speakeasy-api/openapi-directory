@@ -14,19 +14,23 @@ const (
 	CancelBookingResponseReasonEnumNotCancellable   CancelBookingResponseReasonEnum = "NOT_CANCELLABLE"
 )
 
+func (e CancelBookingResponseReasonEnum) ToPointer() *CancelBookingResponseReasonEnum {
+	return &e
+}
+
 func (e *CancelBookingResponseReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALREADY_CANCELLED":
 		fallthrough
 	case "NOT_CANCELLABLE":
-		*e = CancelBookingResponseReasonEnum(s)
+		*e = CancelBookingResponseReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBookingResponseReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBookingResponseReasonEnum: %v", v)
 	}
 }
 
@@ -41,19 +45,23 @@ const (
 	CancelBookingResponseStatusEnumDeclined CancelBookingResponseStatusEnum = "DECLINED"
 )
 
+func (e CancelBookingResponseStatusEnum) ToPointer() *CancelBookingResponseStatusEnum {
+	return &e
+}
+
 func (e *CancelBookingResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCEPTED":
 		fallthrough
 	case "DECLINED":
-		*e = CancelBookingResponseStatusEnum(s)
+		*e = CancelBookingResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelBookingResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelBookingResponseStatusEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ScaleDownBehaviorEnumTerminateAtTaskCompletion ScaleDownBehaviorEnum = "TERMINATE_AT_TASK_COMPLETION"
 )
 
+func (e ScaleDownBehaviorEnum) ToPointer() *ScaleDownBehaviorEnum {
+	return &e
+}
+
 func (e *ScaleDownBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERMINATE_AT_INSTANCE_HOUR":
 		fallthrough
 	case "TERMINATE_AT_TASK_COMPLETION":
-		*e = ScaleDownBehaviorEnum(s)
+		*e = ScaleDownBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScaleDownBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ScaleDownBehaviorEnum: %v", v)
 	}
 }

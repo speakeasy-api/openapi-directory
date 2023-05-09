@@ -13,16 +13,20 @@ const (
 	ReplicationScopeEnumDomain ReplicationScopeEnum = "Domain"
 )
 
+func (e ReplicationScopeEnum) ToPointer() *ReplicationScopeEnum {
+	return &e
+}
+
 func (e *ReplicationScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Domain":
-		*e = ReplicationScopeEnum(s)
+		*e = ReplicationScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationScopeEnum: %v", v)
 	}
 }

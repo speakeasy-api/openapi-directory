@@ -21,12 +21,16 @@ const (
 	CreateAnAchReturnParametersReasonEnumCorporateCustomerAdvisedNotAuthorized                       CreateAnAchReturnParametersReasonEnum = "corporate_customer_advised_not_authorized"
 )
 
+func (e CreateAnAchReturnParametersReasonEnum) ToPointer() *CreateAnAchReturnParametersReasonEnum {
+	return &e
+}
+
 func (e *CreateAnAchReturnParametersReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "authorization_revoked_by_customer":
 		fallthrough
 	case "payment_stopped":
@@ -42,10 +46,10 @@ func (e *CreateAnAchReturnParametersReasonEnum) UnmarshalJSON(data []byte) error
 	case "duplicate_entry":
 		fallthrough
 	case "corporate_customer_advised_not_authorized":
-		*e = CreateAnAchReturnParametersReasonEnum(s)
+		*e = CreateAnAchReturnParametersReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnAchReturnParametersReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnAchReturnParametersReasonEnum: %v", v)
 	}
 }
 

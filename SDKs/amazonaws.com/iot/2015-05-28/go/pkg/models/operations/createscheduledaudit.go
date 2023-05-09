@@ -22,12 +22,16 @@ const (
 	CreateScheduledAuditRequestBodyDayOfWeekEnumSat CreateScheduledAuditRequestBodyDayOfWeekEnum = "SAT"
 )
 
+func (e CreateScheduledAuditRequestBodyDayOfWeekEnum) ToPointer() *CreateScheduledAuditRequestBodyDayOfWeekEnum {
+	return &e
+}
+
 func (e *CreateScheduledAuditRequestBodyDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUN":
 		fallthrough
 	case "MON":
@@ -41,10 +45,10 @@ func (e *CreateScheduledAuditRequestBodyDayOfWeekEnum) UnmarshalJSON(data []byte
 	case "FRI":
 		fallthrough
 	case "SAT":
-		*e = CreateScheduledAuditRequestBodyDayOfWeekEnum(s)
+		*e = CreateScheduledAuditRequestBodyDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateScheduledAuditRequestBodyDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateScheduledAuditRequestBodyDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -58,12 +62,16 @@ const (
 	CreateScheduledAuditRequestBodyFrequencyEnumMonthly  CreateScheduledAuditRequestBodyFrequencyEnum = "MONTHLY"
 )
 
+func (e CreateScheduledAuditRequestBodyFrequencyEnum) ToPointer() *CreateScheduledAuditRequestBodyFrequencyEnum {
+	return &e
+}
+
 func (e *CreateScheduledAuditRequestBodyFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAILY":
 		fallthrough
 	case "WEEKLY":
@@ -71,10 +79,10 @@ func (e *CreateScheduledAuditRequestBodyFrequencyEnum) UnmarshalJSON(data []byte
 	case "BIWEEKLY":
 		fallthrough
 	case "MONTHLY":
-		*e = CreateScheduledAuditRequestBodyFrequencyEnum(s)
+		*e = CreateScheduledAuditRequestBodyFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateScheduledAuditRequestBodyFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateScheduledAuditRequestBodyFrequencyEnum: %v", v)
 	}
 }
 

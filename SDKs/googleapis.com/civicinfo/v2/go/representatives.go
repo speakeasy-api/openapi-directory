@@ -83,7 +83,10 @@ func (s *representatives) CivicinfoRepresentativesRepresentativeInfoByAddress(ct
 // CivicinfoRepresentativesRepresentativeInfoByDivision - Looks up representative information for a single geographic division.
 func (s *representatives) CivicinfoRepresentativesRepresentativeInfoByDivision(ctx context.Context, request operations.CivicinfoRepresentativesRepresentativeInfoByDivisionRequest) (*operations.CivicinfoRepresentativesRepresentativeInfoByDivisionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/civicinfo/v2/representatives/{ocdId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/civicinfo/v2/representatives/{ocdId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

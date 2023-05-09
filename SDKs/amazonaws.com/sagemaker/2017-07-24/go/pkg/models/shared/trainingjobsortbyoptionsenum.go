@@ -16,12 +16,16 @@ const (
 	TrainingJobSortByOptionsEnumFinalObjectiveMetricValue TrainingJobSortByOptionsEnum = "FinalObjectiveMetricValue"
 )
 
+func (e TrainingJobSortByOptionsEnum) ToPointer() *TrainingJobSortByOptionsEnum {
+	return &e
+}
+
 func (e *TrainingJobSortByOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Name":
 		fallthrough
 	case "CreationTime":
@@ -29,9 +33,9 @@ func (e *TrainingJobSortByOptionsEnum) UnmarshalJSON(data []byte) error {
 	case "Status":
 		fallthrough
 	case "FinalObjectiveMetricValue":
-		*e = TrainingJobSortByOptionsEnum(s)
+		*e = TrainingJobSortByOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrainingJobSortByOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for TrainingJobSortByOptionsEnum: %v", v)
 	}
 }

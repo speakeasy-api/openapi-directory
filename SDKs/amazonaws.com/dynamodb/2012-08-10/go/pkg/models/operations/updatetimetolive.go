@@ -16,17 +16,21 @@ const (
 	UpdateTimeToLiveXAmzTargetEnumDynamoDb20120810UpdateTimeToLive UpdateTimeToLiveXAmzTargetEnum = "DynamoDB_20120810.UpdateTimeToLive"
 )
 
+func (e UpdateTimeToLiveXAmzTargetEnum) ToPointer() *UpdateTimeToLiveXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateTimeToLiveXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.UpdateTimeToLive":
-		*e = UpdateTimeToLiveXAmzTargetEnum(s)
+		*e = UpdateTimeToLiveXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateTimeToLiveXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateTimeToLiveXAmzTargetEnum: %v", v)
 	}
 }
 

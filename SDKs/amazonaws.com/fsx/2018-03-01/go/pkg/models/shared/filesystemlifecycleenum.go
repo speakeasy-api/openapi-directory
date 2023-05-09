@@ -20,12 +20,16 @@ const (
 	FileSystemLifecycleEnumMisconfiguredUnavailable FileSystemLifecycleEnum = "MISCONFIGURED_UNAVAILABLE"
 )
 
+func (e FileSystemLifecycleEnum) ToPointer() *FileSystemLifecycleEnum {
+	return &e
+}
+
 func (e *FileSystemLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "CREATING":
@@ -39,9 +43,9 @@ func (e *FileSystemLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATING":
 		fallthrough
 	case "MISCONFIGURED_UNAVAILABLE":
-		*e = FileSystemLifecycleEnum(s)
+		*e = FileSystemLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileSystemLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for FileSystemLifecycleEnum: %v", v)
 	}
 }

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.AreGamesInProgressRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, operations.AreGamesInProgressRequest{
+        Format: operations.AreGamesInProgressFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }

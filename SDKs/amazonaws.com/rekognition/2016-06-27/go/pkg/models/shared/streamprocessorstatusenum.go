@@ -18,12 +18,16 @@ const (
 	StreamProcessorStatusEnumUpdating StreamProcessorStatusEnum = "UPDATING"
 )
 
+func (e StreamProcessorStatusEnum) ToPointer() *StreamProcessorStatusEnum {
+	return &e
+}
+
 func (e *StreamProcessorStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STOPPED":
 		fallthrough
 	case "STARTING":
@@ -35,9 +39,9 @@ func (e *StreamProcessorStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "UPDATING":
-		*e = StreamProcessorStatusEnum(s)
+		*e = StreamProcessorStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StreamProcessorStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StreamProcessorStatusEnum: %v", v)
 	}
 }

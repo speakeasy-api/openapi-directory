@@ -14,18 +14,22 @@ const (
 	AutoMLJobObjectiveTypeEnumMinimize AutoMLJobObjectiveTypeEnum = "Minimize"
 )
 
+func (e AutoMLJobObjectiveTypeEnum) ToPointer() *AutoMLJobObjectiveTypeEnum {
+	return &e
+}
+
 func (e *AutoMLJobObjectiveTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Maximize":
 		fallthrough
 	case "Minimize":
-		*e = AutoMLJobObjectiveTypeEnum(s)
+		*e = AutoMLJobObjectiveTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLJobObjectiveTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLJobObjectiveTypeEnum: %v", v)
 	}
 }

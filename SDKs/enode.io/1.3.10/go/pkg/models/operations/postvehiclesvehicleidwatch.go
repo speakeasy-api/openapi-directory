@@ -27,12 +27,16 @@ const (
 	PostVehiclesVehicleidWatchRequestBodyPropertiesEnumLocation          PostVehiclesVehicleidWatchRequestBodyPropertiesEnum = "LOCATION"
 )
 
+func (e PostVehiclesVehicleidWatchRequestBodyPropertiesEnum) ToPointer() *PostVehiclesVehicleidWatchRequestBodyPropertiesEnum {
+	return &e
+}
+
 func (e *PostVehiclesVehicleidWatchRequestBodyPropertiesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BATTERY_LEVEL":
 		fallthrough
 	case "RANGE":
@@ -44,10 +48,10 @@ func (e *PostVehiclesVehicleidWatchRequestBodyPropertiesEnum) UnmarshalJSON(data
 	case "IS_CHARGING_REASONS":
 		fallthrough
 	case "LOCATION":
-		*e = PostVehiclesVehicleidWatchRequestBodyPropertiesEnum(s)
+		*e = PostVehiclesVehicleidWatchRequestBodyPropertiesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostVehiclesVehicleidWatchRequestBodyPropertiesEnum: %s", s)
+		return fmt.Errorf("invalid value for PostVehiclesVehicleidWatchRequestBodyPropertiesEnum: %v", v)
 	}
 }
 

@@ -50,12 +50,16 @@ const (
 	CheckErrorCodeEnumInjectedError                          CheckErrorCodeEnum = "INJECTED_ERROR"
 )
 
+func (e CheckErrorCodeEnum) ToPointer() *CheckErrorCodeEnum {
+	return &e
+}
+
 func (e *CheckErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ERROR_CODE_UNSPECIFIED":
 		fallthrough
 	case "NOT_FOUND":
@@ -129,10 +133,10 @@ func (e *CheckErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "LOCATION_POLICY_BACKEND_UNAVAILABLE":
 		fallthrough
 	case "INJECTED_ERROR":
-		*e = CheckErrorCodeEnum(s)
+		*e = CheckErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CheckErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CheckErrorCodeEnum: %v", v)
 	}
 }
 

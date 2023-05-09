@@ -15,20 +15,24 @@ const (
 	EnvironmentAccountConnectionStatusEnumRejected  EnvironmentAccountConnectionStatusEnum = "REJECTED"
 )
 
+func (e EnvironmentAccountConnectionStatusEnum) ToPointer() *EnvironmentAccountConnectionStatusEnum {
+	return &e
+}
+
 func (e *EnvironmentAccountConnectionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "CONNECTED":
 		fallthrough
 	case "REJECTED":
-		*e = EnvironmentAccountConnectionStatusEnum(s)
+		*e = EnvironmentAccountConnectionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentAccountConnectionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentAccountConnectionStatusEnum: %v", v)
 	}
 }

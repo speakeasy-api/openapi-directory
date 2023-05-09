@@ -2,42 +2,40 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.StsTokenRequest{
-        DollarXgafv: "2",
-        GoogleIdentityStsV1betaExchangeTokenRequest: &shared.GoogleIdentityStsV1betaExchangeTokenRequest{
-            Audience: "provident",
-            GrantType: "distinctio",
-            Options: "quibusdam",
-            RequestedTokenType: "unde",
-            Scope: "nulla",
-            SubjectToken: "corrupti",
-            SubjectTokenType: "illum",
-        },
-        AccessToken: "vel",
-        Alt: "media",
-        Callback: "deserunt",
-        Fields: "suscipit",
-        Key: "iure",
-        OauthToken: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        UploadType: "ipsa",
-        UploadProtocol: "delectus",
-    }
-
     ctx := context.Background()
-    res, err := s.V1beta.StsToken(ctx, req)
+    res, err := s.V1beta.StsToken(ctx, operations.StsTokenRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        GoogleIdentityStsV1betaExchangeTokenRequest: &shared.GoogleIdentityStsV1betaExchangeTokenRequest{
+            Audience: sdk.String("provident"),
+            GrantType: sdk.String("distinctio"),
+            Options: sdk.String("quibusdam"),
+            RequestedTokenType: sdk.String("unde"),
+            Scope: sdk.String("nulla"),
+            SubjectToken: sdk.String("corrupti"),
+            SubjectTokenType: sdk.String("illum"),
+        },
+        AccessToken: sdk.String("vel"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("deserunt"),
+        Fields: sdk.String("suscipit"),
+        Key: sdk.String("iure"),
+        OauthToken: sdk.String("magnam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        UploadType: sdk.String("ipsa"),
+        UploadProtocol: sdk.String("delectus"),
+    })
     if err != nil {
         log.Fatal(err)
     }

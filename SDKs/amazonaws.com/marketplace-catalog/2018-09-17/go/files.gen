@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -12,11 +13,14 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/cancelchangeset.go
+pkg/models/operations/deleteresourcepolicy.go
 pkg/models/operations/describechangeset.go
 pkg/models/operations/describeentity.go
+pkg/models/operations/getresourcepolicy.go
 pkg/models/operations/listchangesets.go
 pkg/models/operations/listentities.go
 pkg/models/operations/listtagsforresource.go
+pkg/models/operations/putresourcepolicy.go
 pkg/models/operations/startchangeset.go
 pkg/models/operations/tagresource.go
 pkg/models/operations/untagresource.go
@@ -28,6 +32,7 @@ pkg/models/shared/changesummary.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/entity.go
 pkg/models/shared/describeentityresponse.go
+pkg/models/shared/getresourcepolicyresponse.go
 pkg/models/shared/listchangesetsresponse.go
 pkg/models/shared/changesetsummarylistitem.go
 pkg/models/shared/sortorderenum.go
@@ -39,4 +44,5 @@ pkg/models/shared/tag.go
 pkg/models/shared/startchangesetresponse.go
 pkg/models/shared/change.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

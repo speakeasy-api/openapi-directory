@@ -17,12 +17,16 @@ const (
 	AnalyzeSyntaxRequestEncodingTypeEnumUtf32 AnalyzeSyntaxRequestEncodingTypeEnum = "UTF32"
 )
 
+func (e AnalyzeSyntaxRequestEncodingTypeEnum) ToPointer() *AnalyzeSyntaxRequestEncodingTypeEnum {
+	return &e
+}
+
 func (e *AnalyzeSyntaxRequestEncodingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "UTF8":
@@ -30,10 +34,10 @@ func (e *AnalyzeSyntaxRequestEncodingTypeEnum) UnmarshalJSON(data []byte) error 
 	case "UTF16":
 		fallthrough
 	case "UTF32":
-		*e = AnalyzeSyntaxRequestEncodingTypeEnum(s)
+		*e = AnalyzeSyntaxRequestEncodingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyzeSyntaxRequestEncodingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyzeSyntaxRequestEncodingTypeEnum: %v", v)
 	}
 }
 

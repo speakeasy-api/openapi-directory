@@ -16,17 +16,21 @@ const (
 	ListRootsXAmzTargetEnumAwsOrganizationsV20161128ListRoots ListRootsXAmzTargetEnum = "AWSOrganizationsV20161128.ListRoots"
 )
 
+func (e ListRootsXAmzTargetEnum) ToPointer() *ListRootsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListRootsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSOrganizationsV20161128.ListRoots":
-		*e = ListRootsXAmzTargetEnum(s)
+		*e = ListRootsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRootsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRootsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ServiceConfigIngressSettingsEnumAllowInternalAndGclb       ServiceConfigIngressSettingsEnum = "ALLOW_INTERNAL_AND_GCLB"
 )
 
+func (e ServiceConfigIngressSettingsEnum) ToPointer() *ServiceConfigIngressSettingsEnum {
+	return &e
+}
+
 func (e *ServiceConfigIngressSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INGRESS_SETTINGS_UNSPECIFIED":
 		fallthrough
 	case "ALLOW_ALL":
@@ -30,10 +34,10 @@ func (e *ServiceConfigIngressSettingsEnum) UnmarshalJSON(data []byte) error {
 	case "ALLOW_INTERNAL_ONLY":
 		fallthrough
 	case "ALLOW_INTERNAL_AND_GCLB":
-		*e = ServiceConfigIngressSettingsEnum(s)
+		*e = ServiceConfigIngressSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceConfigIngressSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceConfigIngressSettingsEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	ServiceConfigSecurityLevelEnumSecureOptional           ServiceConfigSecurityLevelEnum = "SECURE_OPTIONAL"
 )
 
+func (e ServiceConfigSecurityLevelEnum) ToPointer() *ServiceConfigSecurityLevelEnum {
+	return &e
+}
+
 func (e *ServiceConfigSecurityLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SECURITY_LEVEL_UNSPECIFIED":
 		fallthrough
 	case "SECURE_ALWAYS":
 		fallthrough
 	case "SECURE_OPTIONAL":
-		*e = ServiceConfigSecurityLevelEnum(s)
+		*e = ServiceConfigSecurityLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceConfigSecurityLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceConfigSecurityLevelEnum: %v", v)
 	}
 }
 
@@ -73,29 +81,33 @@ const (
 	ServiceConfigVpcConnectorEgressSettingsEnumAllTraffic                            ServiceConfigVpcConnectorEgressSettingsEnum = "ALL_TRAFFIC"
 )
 
+func (e ServiceConfigVpcConnectorEgressSettingsEnum) ToPointer() *ServiceConfigVpcConnectorEgressSettingsEnum {
+	return &e
+}
+
 func (e *ServiceConfigVpcConnectorEgressSettingsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED":
 		fallthrough
 	case "PRIVATE_RANGES_ONLY":
 		fallthrough
 	case "ALL_TRAFFIC":
-		*e = ServiceConfigVpcConnectorEgressSettingsEnum(s)
+		*e = ServiceConfigVpcConnectorEgressSettingsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceConfigVpcConnectorEgressSettingsEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceConfigVpcConnectorEgressSettingsEnum: %v", v)
 	}
 }
 
-// ServiceConfigInput - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+// ServiceConfigInput - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
 type ServiceConfigInput struct {
 	// Whether 100% of traffic is routed to the latest revision. On CreateFunction and UpdateFunction, when set to true, the revision being deployed will serve 100% of traffic, ignoring any traffic split settings, if any. On GetFunction, true will be returned if the latest revision is serving 100% of traffic.
 	AllTrafficOnLatestRevision *bool `json:"allTrafficOnLatestRevision,omitempty"`
-	// The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
+	// [Preview] The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
 	AvailableCPU *string `json:"availableCpu,omitempty"`
 	// The amount of memory available for a function. Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is supplied the value is interpreted as bytes. See https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go a full description.
 	AvailableMemory *string `json:"availableMemory,omitempty"`
@@ -105,7 +117,7 @@ type ServiceConfigInput struct {
 	IngressSettings *ServiceConfigIngressSettingsEnum `json:"ingressSettings,omitempty"`
 	// The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
 	MaxInstanceCount *int `json:"maxInstanceCount,omitempty"`
-	// Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+	// [Preview] Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
 	MaxInstanceRequestConcurrency *int `json:"maxInstanceRequestConcurrency,omitempty"`
 	// The limit on the minimum number of function instances that may coexist at a given time. Function instances are kept in idle state for a short period after they finished executing the request to reduce cold start time for subsequent requests. Setting a minimum instance count will ensure that the given number of instances are kept running in idle state always. This can help with cold start times when jump in incoming request count occurs after the idle instance would have been stopped in the default case.
 	MinInstanceCount *int `json:"minInstanceCount,omitempty"`
@@ -125,11 +137,11 @@ type ServiceConfigInput struct {
 	VpcConnectorEgressSettings *ServiceConfigVpcConnectorEgressSettingsEnum `json:"vpcConnectorEgressSettings,omitempty"`
 }
 
-// ServiceConfig - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed). Next tag: 23
+// ServiceConfig - Describes the Service being deployed. Currently Supported : Cloud Run (fully managed).
 type ServiceConfig struct {
 	// Whether 100% of traffic is routed to the latest revision. On CreateFunction and UpdateFunction, when set to true, the revision being deployed will serve 100% of traffic, ignoring any traffic split settings, if any. On GetFunction, true will be returned if the latest revision is serving 100% of traffic.
 	AllTrafficOnLatestRevision *bool `json:"allTrafficOnLatestRevision,omitempty"`
-	// The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
+	// [Preview] The number of CPUs used in a single container instance. Default value is calculated from available memory. Supports the same values as Cloud Run, see https://cloud.google.com/run/docs/reference/rest/v1/Container#resourcerequirements Example: "1" indicates 1 vCPU
 	AvailableCPU *string `json:"availableCpu,omitempty"`
 	// The amount of memory available for a function. Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is supplied the value is interpreted as bytes. See https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apimachinery/pkg/api/resource/quantity.go a full description.
 	AvailableMemory *string `json:"availableMemory,omitempty"`
@@ -139,7 +151,7 @@ type ServiceConfig struct {
 	IngressSettings *ServiceConfigIngressSettingsEnum `json:"ingressSettings,omitempty"`
 	// The limit on the maximum number of function instances that may coexist at a given time. In some cases, such as rapid traffic surges, Cloud Functions may, for a short period of time, create more instances than the specified max instances limit. If your function cannot tolerate this temporary behavior, you may want to factor in a safety margin and set a lower max instances value than your function can tolerate. See the [Max Instances](https://cloud.google.com/functions/docs/max-instances) Guide for more details.
 	MaxInstanceCount *int `json:"maxInstanceCount,omitempty"`
-	// Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
+	// [Preview] Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
 	MaxInstanceRequestConcurrency *int `json:"maxInstanceRequestConcurrency,omitempty"`
 	// The limit on the minimum number of function instances that may coexist at a given time. Function instances are kept in idle state for a short period after they finished executing the request to reduce cold start time for subsequent requests. Setting a minimum instance count will ensure that the given number of instances are kept running in idle state always. This can help with cold start times when jump in incoming request count occurs after the idle instance would have been stopped in the default case.
 	MinInstanceCount *int `json:"minInstanceCount,omitempty"`

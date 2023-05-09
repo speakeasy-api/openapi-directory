@@ -18,12 +18,16 @@ const (
 	TaskFileDTOCategoryEnumLogFile    TaskFileDTOCategoryEnum = "LOG_FILE"
 )
 
+func (e TaskFileDTOCategoryEnum) ToPointer() *TaskFileDTOCategoryEnum {
+	return &e
+}
+
 func (e *TaskFileDTOCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKFILE":
 		fallthrough
 	case "TM":
@@ -33,10 +37,10 @@ func (e *TaskFileDTOCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "REF":
 		fallthrough
 	case "LOG_FILE":
-		*e = TaskFileDTOCategoryEnum(s)
+		*e = TaskFileDTOCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskFileDTOCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskFileDTOCategoryEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	WarmPoolStateEnumHibernated WarmPoolStateEnum = "Hibernated"
 )
 
+func (e WarmPoolStateEnum) ToPointer() *WarmPoolStateEnum {
+	return &e
+}
+
 func (e *WarmPoolStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Stopped":
 		fallthrough
 	case "Running":
 		fallthrough
 	case "Hibernated":
-		*e = WarmPoolStateEnum(s)
+		*e = WarmPoolStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WarmPoolStateEnum: %s", s)
+		return fmt.Errorf("invalid value for WarmPoolStateEnum: %v", v)
 	}
 }

@@ -15,20 +15,24 @@ const (
 	InstanceFleetTypeEnumTask   InstanceFleetTypeEnum = "TASK"
 )
 
+func (e InstanceFleetTypeEnum) ToPointer() *InstanceFleetTypeEnum {
+	return &e
+}
+
 func (e *InstanceFleetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MASTER":
 		fallthrough
 	case "CORE":
 		fallthrough
 	case "TASK":
-		*e = InstanceFleetTypeEnum(s)
+		*e = InstanceFleetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceFleetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceFleetTypeEnum: %v", v)
 	}
 }

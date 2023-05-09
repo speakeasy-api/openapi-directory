@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateUrlsExportRequest{
+    ctx := context.Background()
+    res, err := s.Analysis.CreateUrlsExport(ctx, operations.CreateUrlsExportRequest{
         UrlsQuery: &shared.UrlsQuery{
             Fields: []string{
                 "provident",
@@ -41,13 +42,10 @@ func main() {
             },
         },
         AnalysisSlug: "voluptatum",
-        Area: "disappeared",
+        Area: operations.CreateUrlsExportAreaEnumDisappeared.ToPointer(),
         ProjectSlug: "excepturi",
         Username: "Glen.Walsh33",
-    }
-
-    ctx := context.Background()
-    res, err := s.Analysis.CreateUrlsExport(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

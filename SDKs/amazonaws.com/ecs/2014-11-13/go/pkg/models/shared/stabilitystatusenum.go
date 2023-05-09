@@ -14,18 +14,22 @@ const (
 	StabilityStatusEnumStabilizing StabilityStatusEnum = "STABILIZING"
 )
 
+func (e StabilityStatusEnum) ToPointer() *StabilityStatusEnum {
+	return &e
+}
+
 func (e *StabilityStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STEADY_STATE":
 		fallthrough
 	case "STABILIZING":
-		*e = StabilityStatusEnum(s)
+		*e = StabilityStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StabilityStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StabilityStatusEnum: %v", v)
 	}
 }

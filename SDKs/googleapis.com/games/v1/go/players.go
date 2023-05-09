@@ -35,7 +35,10 @@ func newPlayers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // GamesPlayersGet - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
 func (s *players) GamesPlayersGet(ctx context.Context, request operations.GamesPlayersGetRequest, security operations.GamesPlayersGetSecurity) (*operations.GamesPlayersGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/{playerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -179,7 +182,10 @@ func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request op
 // GamesPlayersList - Get the collection of players for the currently authenticated user.
 func (s *players) GamesPlayersList(ctx context.Context, request operations.GamesPlayersListRequest, security operations.GamesPlayersListSecurity) (*operations.GamesPlayersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/games/v1/players/me/players/{collection}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/games/v1/players/me/players/{collection}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

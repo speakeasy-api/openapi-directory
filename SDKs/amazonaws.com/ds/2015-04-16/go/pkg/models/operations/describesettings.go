@@ -16,17 +16,21 @@ const (
 	DescribeSettingsXAmzTargetEnumDirectoryService20150416DescribeSettings DescribeSettingsXAmzTargetEnum = "DirectoryService_20150416.DescribeSettings"
 )
 
+func (e DescribeSettingsXAmzTargetEnum) ToPointer() *DescribeSettingsXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeSettingsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DescribeSettings":
-		*e = DescribeSettingsXAmzTargetEnum(s)
+		*e = DescribeSettingsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeSettingsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeSettingsXAmzTargetEnum: %v", v)
 	}
 }
 

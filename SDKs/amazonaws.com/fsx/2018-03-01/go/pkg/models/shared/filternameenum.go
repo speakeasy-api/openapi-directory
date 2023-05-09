@@ -20,12 +20,16 @@ const (
 	FilterNameEnumFileCacheType      FilterNameEnum = "file-cache-type"
 )
 
+func (e FilterNameEnum) ToPointer() *FilterNameEnum {
+	return &e
+}
+
 func (e *FilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "file-system-id":
 		fallthrough
 	case "backup-type":
@@ -39,9 +43,9 @@ func (e *FilterNameEnum) UnmarshalJSON(data []byte) error {
 	case "file-cache-id":
 		fallthrough
 	case "file-cache-type":
-		*e = FilterNameEnum(s)
+		*e = FilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterNameEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	GetModelPackageGroupPolicyXAmzTargetEnumSageMakerGetModelPackageGroupPolicy GetModelPackageGroupPolicyXAmzTargetEnum = "SageMaker.GetModelPackageGroupPolicy"
 )
 
+func (e GetModelPackageGroupPolicyXAmzTargetEnum) ToPointer() *GetModelPackageGroupPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetModelPackageGroupPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.GetModelPackageGroupPolicy":
-		*e = GetModelPackageGroupPolicyXAmzTargetEnum(s)
+		*e = GetModelPackageGroupPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetModelPackageGroupPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetModelPackageGroupPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -18,12 +18,16 @@ const (
 	OutcomeEnumSuccess            OutcomeEnum = "success"
 )
 
+func (e OutcomeEnum) ToPointer() *OutcomeEnum {
+	return &e
+}
+
 func (e *OutcomeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "canceled":
 		fallthrough
 	case "infrastructure_fail":
@@ -35,9 +39,9 @@ func (e *OutcomeEnum) UnmarshalJSON(data []byte) error {
 	case "no_tests":
 		fallthrough
 	case "success":
-		*e = OutcomeEnum(s)
+		*e = OutcomeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutcomeEnum: %s", s)
+		return fmt.Errorf("invalid value for OutcomeEnum: %v", v)
 	}
 }

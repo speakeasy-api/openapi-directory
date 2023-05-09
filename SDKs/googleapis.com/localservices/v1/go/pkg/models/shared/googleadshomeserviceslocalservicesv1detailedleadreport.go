@@ -16,21 +16,25 @@ const (
 	GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnumNotCharged              GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum = "NOT_CHARGED"
 )
 
+func (e GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum) ToPointer() *GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum {
+	return &e
+}
+
 func (e *GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHARGE_STATUS_UNSPECIFIED":
 		fallthrough
 	case "CHARGED":
 		fallthrough
 	case "NOT_CHARGED":
-		*e = GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum(s)
+		*e = GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportChargeStatusEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnumBooking             GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum = "BOOKING"
 )
 
+func (e GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum) ToPointer() *GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum {
+	return &e
+}
+
 func (e *GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEAD_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MESSAGE":
@@ -57,10 +65,10 @@ func (e *GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum) Unm
 	case "PHONE_CALL":
 		fallthrough
 	case "BOOKING":
-		*e = GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum(s)
+		*e = GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAdsHomeservicesLocalservicesV1DetailedLeadReportLeadTypeEnum: %v", v)
 	}
 }
 

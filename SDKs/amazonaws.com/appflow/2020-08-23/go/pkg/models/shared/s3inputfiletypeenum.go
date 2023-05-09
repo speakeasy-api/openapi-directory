@@ -14,18 +14,22 @@ const (
 	S3InputFileTypeEnumJSON S3InputFileTypeEnum = "JSON"
 )
 
+func (e S3InputFileTypeEnum) ToPointer() *S3InputFileTypeEnum {
+	return &e
+}
+
 func (e *S3InputFileTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CSV":
 		fallthrough
 	case "JSON":
-		*e = S3InputFileTypeEnum(s)
+		*e = S3InputFileTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for S3InputFileTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for S3InputFileTypeEnum: %v", v)
 	}
 }

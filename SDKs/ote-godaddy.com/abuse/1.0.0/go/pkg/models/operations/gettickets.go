@@ -23,12 +23,16 @@ const (
 	GetTicketsTypeEnumSpam         GetTicketsTypeEnum = "SPAM"
 )
 
+func (e GetTicketsTypeEnum) ToPointer() *GetTicketsTypeEnum {
+	return &e
+}
+
 func (e *GetTicketsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "A_RECORD":
 		fallthrough
 	case "CHILD_ABUSE":
@@ -46,10 +50,10 @@ func (e *GetTicketsTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PHISHING":
 		fallthrough
 	case "SPAM":
-		*e = GetTicketsTypeEnum(s)
+		*e = GetTicketsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTicketsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTicketsTypeEnum: %v", v)
 	}
 }
 

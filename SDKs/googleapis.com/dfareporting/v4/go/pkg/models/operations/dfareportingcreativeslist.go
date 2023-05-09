@@ -22,19 +22,23 @@ const (
 	DfareportingCreativesListSortFieldEnumName DfareportingCreativesListSortFieldEnum = "NAME"
 )
 
+func (e DfareportingCreativesListSortFieldEnum) ToPointer() *DfareportingCreativesListSortFieldEnum {
+	return &e
+}
+
 func (e *DfareportingCreativesListSortFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ID":
 		fallthrough
 	case "NAME":
-		*e = DfareportingCreativesListSortFieldEnum(s)
+		*e = DfareportingCreativesListSortFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCreativesListSortFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCreativesListSortFieldEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	DfareportingCreativesListSortOrderEnumDescending DfareportingCreativesListSortOrderEnum = "DESCENDING"
 )
 
+func (e DfareportingCreativesListSortOrderEnum) ToPointer() *DfareportingCreativesListSortOrderEnum {
+	return &e
+}
+
 func (e *DfareportingCreativesListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DfareportingCreativesListSortOrderEnum(s)
+		*e = DfareportingCreativesListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCreativesListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCreativesListSortOrderEnum: %v", v)
 	}
 }
 
@@ -92,12 +100,16 @@ const (
 	DfareportingCreativesListTypesEnumInstreamAudio                             DfareportingCreativesListTypesEnum = "INSTREAM_AUDIO"
 )
 
+func (e DfareportingCreativesListTypesEnum) ToPointer() *DfareportingCreativesListTypesEnum {
+	return &e
+}
+
 func (e *DfareportingCreativesListTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE":
 		fallthrough
 	case "DISPLAY_REDIRECT":
@@ -147,10 +159,10 @@ func (e *DfareportingCreativesListTypesEnum) UnmarshalJSON(data []byte) error {
 	case "BRAND_SAFE_DEFAULT_INSTREAM_VIDEO":
 		fallthrough
 	case "INSTREAM_AUDIO":
-		*e = DfareportingCreativesListTypesEnum(s)
+		*e = DfareportingCreativesListTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DfareportingCreativesListTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for DfareportingCreativesListTypesEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	ApplicationVersionStatusEnumBuilding    ApplicationVersionStatusEnum = "Building"
 )
 
+func (e ApplicationVersionStatusEnum) ToPointer() *ApplicationVersionStatusEnum {
+	return &e
+}
+
 func (e *ApplicationVersionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Processed":
 		fallthrough
 	case "Unprocessed":
@@ -32,9 +36,9 @@ func (e *ApplicationVersionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Processing":
 		fallthrough
 	case "Building":
-		*e = ApplicationVersionStatusEnum(s)
+		*e = ApplicationVersionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationVersionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationVersionStatusEnum: %v", v)
 	}
 }

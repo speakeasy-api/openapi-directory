@@ -17,12 +17,16 @@ const (
 	OriginRequestPolicyHeaderBehaviorEnumAllExcept                       OriginRequestPolicyHeaderBehaviorEnum = "allExcept"
 )
 
+func (e OriginRequestPolicyHeaderBehaviorEnum) ToPointer() *OriginRequestPolicyHeaderBehaviorEnum {
+	return &e
+}
+
 func (e *OriginRequestPolicyHeaderBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "whitelist":
@@ -32,9 +36,9 @@ func (e *OriginRequestPolicyHeaderBehaviorEnum) UnmarshalJSON(data []byte) error
 	case "allViewerAndWhitelistCloudFront":
 		fallthrough
 	case "allExcept":
-		*e = OriginRequestPolicyHeaderBehaviorEnum(s)
+		*e = OriginRequestPolicyHeaderBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OriginRequestPolicyHeaderBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for OriginRequestPolicyHeaderBehaviorEnum: %v", v)
 	}
 }

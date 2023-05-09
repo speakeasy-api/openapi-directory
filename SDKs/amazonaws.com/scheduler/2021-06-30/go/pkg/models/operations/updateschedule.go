@@ -24,19 +24,23 @@ const (
 	UpdateScheduleRequestBodyStateEnumDisabled UpdateScheduleRequestBodyStateEnum = "DISABLED"
 )
 
+func (e UpdateScheduleRequestBodyStateEnum) ToPointer() *UpdateScheduleRequestBodyStateEnum {
+	return &e
+}
+
 func (e *UpdateScheduleRequestBodyStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
-		*e = UpdateScheduleRequestBodyStateEnum(s)
+		*e = UpdateScheduleRequestBodyStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateScheduleRequestBodyStateEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateScheduleRequestBodyStateEnum: %v", v)
 	}
 }
 

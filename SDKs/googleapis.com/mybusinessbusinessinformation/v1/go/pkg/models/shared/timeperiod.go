@@ -21,12 +21,16 @@ const (
 	TimePeriodCloseDayEnumSunday               TimePeriodCloseDayEnum = "SUNDAY"
 )
 
+func (e TimePeriodCloseDayEnum) ToPointer() *TimePeriodCloseDayEnum {
+	return &e
+}
+
 func (e *TimePeriodCloseDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *TimePeriodCloseDayEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = TimePeriodCloseDayEnum(s)
+		*e = TimePeriodCloseDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimePeriodCloseDayEnum: %s", s)
+		return fmt.Errorf("invalid value for TimePeriodCloseDayEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	TimePeriodOpenDayEnumSunday               TimePeriodOpenDayEnum = "SUNDAY"
 )
 
+func (e TimePeriodOpenDayEnum) ToPointer() *TimePeriodOpenDayEnum {
+	return &e
+}
+
 func (e *TimePeriodOpenDayEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -84,10 +92,10 @@ func (e *TimePeriodOpenDayEnum) UnmarshalJSON(data []byte) error {
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = TimePeriodOpenDayEnum(s)
+		*e = TimePeriodOpenDayEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TimePeriodOpenDayEnum: %s", s)
+		return fmt.Errorf("invalid value for TimePeriodOpenDayEnum: %v", v)
 	}
 }
 

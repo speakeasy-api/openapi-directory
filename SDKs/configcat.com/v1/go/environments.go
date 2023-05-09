@@ -39,7 +39,10 @@ func newEnvironments(defaultClient, securityClient HTTPClient, serverURL, langua
 // identified by the `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *environments) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequest) (*operations.CreateEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateEnvironmentModel", "json")
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *environments) CreateEnvironment(ctx context.Context, request operations
 // This endpoint removes an Environment identified by the `environmentId` parameter.
 func (s *environments) DeleteEnvironment(ctx context.Context, request operations.DeleteEnvironmentRequest) (*operations.DeleteEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -153,7 +159,10 @@ func (s *environments) DeleteEnvironment(ctx context.Context, request operations
 // identified by the `environmentId`.
 func (s *environments) GetEnvironment(ctx context.Context, request operations.GetEnvironmentRequest) (*operations.GetEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +222,10 @@ func (s *environments) GetEnvironment(ctx context.Context, request operations.Ge
 // `productId` parameter, which can be obtained from the [List Products](#operation/get-products) endpoint.
 func (s *environments) GetEnvironments(ctx context.Context, request operations.GetEnvironmentsRequest) (*operations.GetEnvironmentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/products/{productId}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -272,7 +284,10 @@ func (s *environments) GetEnvironments(ctx context.Context, request operations.G
 // This endpoint updates an Environment identified by the `environmentId` parameter.
 func (s *environments) UpdateEnvironment(ctx context.Context, request operations.UpdateEnvironmentRequest) (*operations.UpdateEnvironmentResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateEnvironmentModel", "json")
 	if err != nil {

@@ -14,18 +14,22 @@ const (
 	PatchOperationTypeEnumInstall PatchOperationTypeEnum = "Install"
 )
 
+func (e PatchOperationTypeEnum) ToPointer() *PatchOperationTypeEnum {
+	return &e
+}
+
 func (e *PatchOperationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scan":
 		fallthrough
 	case "Install":
-		*e = PatchOperationTypeEnum(s)
+		*e = PatchOperationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchOperationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchOperationTypeEnum: %v", v)
 	}
 }

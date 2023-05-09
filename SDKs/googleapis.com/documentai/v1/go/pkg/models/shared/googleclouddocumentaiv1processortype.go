@@ -21,12 +21,16 @@ const (
 	GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnumDeprecated             GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum = "DEPRECATED"
 )
 
+func (e GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum) ToPointer() *GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum {
+	return &e
+}
+
 func (e *GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LAUNCH_STAGE_UNSPECIFIED":
 		fallthrough
 	case "UNIMPLEMENTED":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum) UnmarshalJSON(data
 	case "GA":
 		fallthrough
 	case "DEPRECATED":
-		*e = GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum(s)
+		*e = GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDocumentaiV1ProcessorTypeLaunchStageEnum: %v", v)
 	}
 }
 
@@ -63,6 +67,6 @@ type GoogleCloudDocumentaiV1ProcessorType struct {
 	Name *string `json:"name,omitempty"`
 	// A set of Cloud Storage URIs of sample documents for this processor.
 	SampleDocumentUris []string `json:"sampleDocumentUris,omitempty"`
-	// The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+	// The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
 	Type *string `json:"type,omitempty"`
 }

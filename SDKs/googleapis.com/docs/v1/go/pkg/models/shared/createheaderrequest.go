@@ -15,19 +15,23 @@ const (
 	CreateHeaderRequestTypeEnumDefault                     CreateHeaderRequestTypeEnum = "DEFAULT"
 )
 
+func (e CreateHeaderRequestTypeEnum) ToPointer() *CreateHeaderRequestTypeEnum {
+	return &e
+}
+
 func (e *CreateHeaderRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEADER_FOOTER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DEFAULT":
-		*e = CreateHeaderRequestTypeEnum(s)
+		*e = CreateHeaderRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateHeaderRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateHeaderRequestTypeEnum: %v", v)
 	}
 }
 

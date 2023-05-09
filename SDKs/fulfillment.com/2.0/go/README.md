@@ -13,42 +13,39 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/fulfillment.com/2.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAccountingRequest{
+    ctx := context.Background()
+    res, err := s.Accounting.GetAccounting(ctx, operations.GetAccountingRequest{
         FromDate: "corrupti",
         Hydrate: []GetAccountingHydrateEnum{
-            "items",
-            "items",
-            "items",
+            operations.GetAccountingHydrateEnumItems,
+            operations.GetAccountingHydrateEnumItems,
+            operations.GetAccountingHydrateEnumItems,
         },
-        Limit: 715190,
+        Limit: sdk.Int64(715190),
         OrderIds: []int64{
             602763,
             857946,
             544883,
             847252,
         },
-        Page: 423655,
+        Page: sdk.Int64(423655),
         ToDate: "error",
         WarehouseIds: []int64{
             384382,
             437587,
             297534,
         },
-    }
-
-    ctx := context.Background()
-    res, err := s.Accounting.GetAccounting(ctx, req, operations.GetAccountingSecurity{
+    }, operations.GetAccountingSecurity{
         FdcAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {
@@ -66,42 +63,42 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounting
+### [Accounting](docs/accounting/README.md)
 
-* `GetAccounting` - List Order Accounting
+* [GetAccounting](docs/accounting/README.md#getaccounting) - List Order Accounting
 
-### Auth
+### [Auth](docs/auth/README.md)
 
-* `PostOauthAccessToken` - Generate an Access Token
+* [PostOauthAccessToken](docs/auth/README.md#postoauthaccesstoken) - Generate an Access Token
 
-### Inventory
+### [Inventory](docs/inventory/README.md)
 
-* `GetInventory` - List of Item Inventories
+* [GetInventory](docs/inventory/README.md#getinventory) - List of Item Inventories
 
-### Orders
+### [Orders](docs/orders/README.md)
 
-* `DeleteOrdersID` - Cancel an Order
-* `GetOrders` - List of Orders
-* `GetOrder` - Order Details
-* `PostOrders` - New Order
+* [DeleteOrdersID](docs/orders/README.md#deleteordersid) - Cancel an Order
+* [GetOrders](docs/orders/README.md#getorders) - List of Orders
+* [GetOrder](docs/orders/README.md#getorder) - Order Details
+* [PostOrders](docs/orders/README.md#postorders) - New Order
 
-### Partners
+### [Partners](docs/partners/README.md)
 
-* `PutOrdersIDShip` - Ship an Order
-* `PutOrdersIDStatus` - Update Order Status
+* [PutOrdersIDShip](docs/partners/README.md#putordersidship) - Ship an Order
+* [PutOrdersIDStatus](docs/partners/README.md#putordersidstatus) - Update Order Status
 
-### Returns
+### [Returns](docs/returns/README.md)
 
-* `GetReturns` - List Returns
-* `PutReturns` - Inform us of an RMA
+* [GetReturns](docs/returns/README.md#getreturns) - List Returns
+* [PutReturns](docs/returns/README.md#putreturns) - Inform us of an RMA
 
-### Tracking
+### [Tracking](docs/tracking/README.md)
 
-* `GetTrack` - Tracking
+* [GetTrack](docs/tracking/README.md#gettrack) - Tracking
 
-### Users
+### [Users](docs/users/README.md)
 
-* `GetUsersMe` - About Me
+* [GetUsersMe](docs/users/README.md#getusersme) - About Me
 <!-- End SDK Available Operations -->
 
 ### Maturity

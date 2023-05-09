@@ -17,14 +17,19 @@ const (
 	StatusEventTaskStateEnumRunning          StatusEventTaskStateEnum = "RUNNING"
 	StatusEventTaskStateEnumFailed           StatusEventTaskStateEnum = "FAILED"
 	StatusEventTaskStateEnumSucceeded        StatusEventTaskStateEnum = "SUCCEEDED"
+	StatusEventTaskStateEnumUnexecuted       StatusEventTaskStateEnum = "UNEXECUTED"
 )
 
+func (e StatusEventTaskStateEnum) ToPointer() *StatusEventTaskStateEnum {
+	return &e
+}
+
 func (e *StatusEventTaskStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -36,10 +41,12 @@ func (e *StatusEventTaskStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
-		*e = StatusEventTaskStateEnum(s)
+		fallthrough
+	case "UNEXECUTED":
+		*e = StatusEventTaskStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StatusEventTaskStateEnum: %s", s)
+		return fmt.Errorf("invalid value for StatusEventTaskStateEnum: %v", v)
 	}
 }
 

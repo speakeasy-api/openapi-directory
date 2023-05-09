@@ -15,17 +15,21 @@ const (
 	POSTCreateHsmClientCertificateActionEnumCreateHsmClientCertificate POSTCreateHsmClientCertificateActionEnum = "CreateHsmClientCertificate"
 )
 
+func (e POSTCreateHsmClientCertificateActionEnum) ToPointer() *POSTCreateHsmClientCertificateActionEnum {
+	return &e
+}
+
 func (e *POSTCreateHsmClientCertificateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateHsmClientCertificate":
-		*e = POSTCreateHsmClientCertificateActionEnum(s)
+		*e = POSTCreateHsmClientCertificateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateHsmClientCertificateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateHsmClientCertificateActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateHsmClientCertificateVersionEnumTwoThousandAndTwelve1201 POSTCreateHsmClientCertificateVersionEnum = "2012-12-01"
 )
 
+func (e POSTCreateHsmClientCertificateVersionEnum) ToPointer() *POSTCreateHsmClientCertificateVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateHsmClientCertificateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCreateHsmClientCertificateVersionEnum(s)
+		*e = POSTCreateHsmClientCertificateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateHsmClientCertificateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateHsmClientCertificateVersionEnum: %v", v)
 	}
 }
 

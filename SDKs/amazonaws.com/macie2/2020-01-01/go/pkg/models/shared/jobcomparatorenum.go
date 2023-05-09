@@ -21,12 +21,16 @@ const (
 	JobComparatorEnumStartsWith JobComparatorEnum = "STARTS_WITH"
 )
 
+func (e JobComparatorEnum) ToPointer() *JobComparatorEnum {
+	return &e
+}
+
 func (e *JobComparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQ":
 		fallthrough
 	case "GT":
@@ -42,9 +46,9 @@ func (e *JobComparatorEnum) UnmarshalJSON(data []byte) error {
 	case "CONTAINS":
 		fallthrough
 	case "STARTS_WITH":
-		*e = JobComparatorEnum(s)
+		*e = JobComparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for JobComparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for JobComparatorEnum: %v", v)
 	}
 }

@@ -16,17 +16,21 @@ const (
 	TerminateSessionXAmzTargetEnumAmazonSsmTerminateSession TerminateSessionXAmzTargetEnum = "AmazonSSM.TerminateSession"
 )
 
+func (e TerminateSessionXAmzTargetEnum) ToPointer() *TerminateSessionXAmzTargetEnum {
+	return &e
+}
+
 func (e *TerminateSessionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.TerminateSession":
-		*e = TerminateSessionXAmzTargetEnum(s)
+		*e = TerminateSessionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TerminateSessionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for TerminateSessionXAmzTargetEnum: %v", v)
 	}
 }
 

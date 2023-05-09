@@ -28,7 +28,7 @@ type TexttospeechProjectsLocationsSynthesizeLongAudioRequest struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// The resource states of the request in the form of `projects/*/locations/*/voices/*`.
+	// The resource states of the request in the form of `projects/*/locations/*`.
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`

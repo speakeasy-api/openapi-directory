@@ -13,16 +13,20 @@ const (
 	AuthorizationProviderTypeEnumSaml AuthorizationProviderTypeEnum = "SAML"
 )
 
+func (e AuthorizationProviderTypeEnum) ToPointer() *AuthorizationProviderTypeEnum {
+	return &e
+}
+
 func (e *AuthorizationProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SAML":
-		*e = AuthorizationProviderTypeEnum(s)
+		*e = AuthorizationProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizationProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizationProviderTypeEnum: %v", v)
 	}
 }

@@ -25,12 +25,16 @@ const (
 	BrandDisplayNameStateEnumRejected               BrandDisplayNameStateEnum = "REJECTED"
 )
 
+func (e BrandDisplayNameStateEnum) ToPointer() *BrandDisplayNameStateEnum {
+	return &e
+}
+
 func (e *BrandDisplayNameStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATE_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATE_NEW":
@@ -38,10 +42,10 @@ func (e *BrandDisplayNameStateEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVED":
 		fallthrough
 	case "REJECTED":
-		*e = BrandDisplayNameStateEnum(s)
+		*e = BrandDisplayNameStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BrandDisplayNameStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BrandDisplayNameStateEnum: %v", v)
 	}
 }
 
@@ -57,12 +61,16 @@ const (
 	BrandIconDisapprovalReasonsEnumTextTooSmall                      BrandIconDisapprovalReasonsEnum = "TEXT_TOO_SMALL"
 )
 
+func (e BrandIconDisapprovalReasonsEnum) ToPointer() *BrandIconDisapprovalReasonsEnum {
+	return &e
+}
+
 func (e *BrandIconDisapprovalReasonsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_DISAPPROVAL_REASON_UNSPECIFIED":
 		fallthrough
 	case "NOT_LIKE_SITE":
@@ -76,10 +84,10 @@ func (e *BrandIconDisapprovalReasonsEnum) UnmarshalJSON(data []byte) error {
 	case "BAD_BACKGROUND":
 		fallthrough
 	case "TEXT_TOO_SMALL":
-		*e = BrandIconDisapprovalReasonsEnum(s)
+		*e = BrandIconDisapprovalReasonsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BrandIconDisapprovalReasonsEnum: %s", s)
+		return fmt.Errorf("invalid value for BrandIconDisapprovalReasonsEnum: %v", v)
 	}
 }
 
@@ -93,12 +101,16 @@ const (
 	BrandIconStateEnumRejected               BrandIconStateEnum = "REJECTED"
 )
 
+func (e BrandIconStateEnum) ToPointer() *BrandIconStateEnum {
+	return &e
+}
+
 func (e *BrandIconStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_STATE_UNSPECIFIED":
 		fallthrough
 	case "REVIEW_STATE_NEW":
@@ -106,10 +118,10 @@ func (e *BrandIconStateEnum) UnmarshalJSON(data []byte) error {
 	case "APPROVED":
 		fallthrough
 	case "REJECTED":
-		*e = BrandIconStateEnum(s)
+		*e = BrandIconStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BrandIconStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BrandIconStateEnum: %v", v)
 	}
 }
 

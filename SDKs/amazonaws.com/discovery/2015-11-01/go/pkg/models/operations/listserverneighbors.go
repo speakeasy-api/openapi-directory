@@ -16,17 +16,21 @@ const (
 	ListServerNeighborsXAmzTargetEnumAwsPoseidonServiceV20151101ListServerNeighbors ListServerNeighborsXAmzTargetEnum = "AWSPoseidonService_V2015_11_01.ListServerNeighbors"
 )
 
+func (e ListServerNeighborsXAmzTargetEnum) ToPointer() *ListServerNeighborsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListServerNeighborsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSPoseidonService_V2015_11_01.ListServerNeighbors":
-		*e = ListServerNeighborsXAmzTargetEnum(s)
+		*e = ListServerNeighborsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListServerNeighborsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListServerNeighborsXAmzTargetEnum: %v", v)
 	}
 }
 

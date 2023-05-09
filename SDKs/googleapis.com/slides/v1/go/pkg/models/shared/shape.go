@@ -156,12 +156,16 @@ const (
 	ShapeShapeTypeEnumCustom                     ShapeShapeTypeEnum = "CUSTOM"
 )
 
+func (e ShapeShapeTypeEnum) ToPointer() *ShapeShapeTypeEnum {
+	return &e
+}
+
 func (e *ShapeShapeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "TEXT_BOX":
@@ -447,10 +451,10 @@ func (e *ShapeShapeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CLOUD_CALLOUT":
 		fallthrough
 	case "CUSTOM":
-		*e = ShapeShapeTypeEnum(s)
+		*e = ShapeShapeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShapeShapeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ShapeShapeTypeEnum: %v", v)
 	}
 }
 

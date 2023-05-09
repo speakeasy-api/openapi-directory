@@ -9,26 +9,30 @@ import (
 )
 
 // GetNamesDecisionsYearEmbedEnum - A flag to indicate whether to embed the corresponding 'feature' into each matching name
-type GetNamesDecisionsYearEmbedEnum string
+type GetNamesDecisionsYearEmbedEnum int64
 
 const (
-	GetNamesDecisionsYearEmbedEnumZero GetNamesDecisionsYearEmbedEnum = "0"
-	GetNamesDecisionsYearEmbedEnumOne  GetNamesDecisionsYearEmbedEnum = "1"
+	GetNamesDecisionsYearEmbedEnumZero GetNamesDecisionsYearEmbedEnum = 0
+	GetNamesDecisionsYearEmbedEnumOne  GetNamesDecisionsYearEmbedEnum = 1
 )
 
+func (e GetNamesDecisionsYearEmbedEnum) ToPointer() *GetNamesDecisionsYearEmbedEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsYearEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
-		*e = GetNamesDecisionsYearEmbedEnum(s)
+	case 1:
+		*e = GetNamesDecisionsYearEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsYearEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsYearEmbedEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetNamesDecisionsYearOutputFormatEnumCsv  GetNamesDecisionsYearOutputFormatEnum = "csv"
 )
 
+func (e GetNamesDecisionsYearOutputFormatEnum) ToPointer() *GetNamesDecisionsYearOutputFormatEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsYearOutputFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "xml":
@@ -55,55 +63,59 @@ func (e *GetNamesDecisionsYearOutputFormatEnum) UnmarshalJSON(data []byte) error
 	case "kml":
 		fallthrough
 	case "csv":
-		*e = GetNamesDecisionsYearOutputFormatEnum(s)
+		*e = GetNamesDecisionsYearOutputFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputFormatEnum: %v", v)
 	}
 }
 
 // GetNamesDecisionsYearOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries.
-type GetNamesDecisionsYearOutputSrsEnum string
+type GetNamesDecisionsYearOutputSrsEnum int64
 
 const (
-	GetNamesDecisionsYearOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesDecisionsYearOutputSrsEnum = "4326"
-	GetNamesDecisionsYearOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesDecisionsYearOutputSrsEnum = "4269"
-	GetNamesDecisionsYearOutputSrsEnumThreeThousandAndFive                   GetNamesDecisionsYearOutputSrsEnum = "3005"
-	GetNamesDecisionsYearOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesDecisionsYearOutputSrsEnum = "3857"
-	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesDecisionsYearOutputSrsEnum = "26907"
-	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesDecisionsYearOutputSrsEnum = "26908"
-	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesDecisionsYearOutputSrsEnum = "26909"
-	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesDecisionsYearOutputSrsEnum = "26910"
-	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesDecisionsYearOutputSrsEnum = "26911"
+	GetNamesDecisionsYearOutputSrsEnumFourThousandThreeHundredAndTwentySix   GetNamesDecisionsYearOutputSrsEnum = 4326
+	GetNamesDecisionsYearOutputSrsEnumFourThousandTwoHundredAndSixtyNine     GetNamesDecisionsYearOutputSrsEnum = 4269
+	GetNamesDecisionsYearOutputSrsEnumThreeThousandAndFive                   GetNamesDecisionsYearOutputSrsEnum = 3005
+	GetNamesDecisionsYearOutputSrsEnumThreeThousandEightHundredAndFiftySeven GetNamesDecisionsYearOutputSrsEnum = 3857
+	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndSeven   GetNamesDecisionsYearOutputSrsEnum = 26907
+	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndEight   GetNamesDecisionsYearOutputSrsEnum = 26908
+	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndNine    GetNamesDecisionsYearOutputSrsEnum = 26909
+	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndTen     GetNamesDecisionsYearOutputSrsEnum = 26910
+	GetNamesDecisionsYearOutputSrsEnumTwentySixThousandNineHundredAndEleven  GetNamesDecisionsYearOutputSrsEnum = 26911
 )
 
+func (e GetNamesDecisionsYearOutputSrsEnum) ToPointer() *GetNamesDecisionsYearOutputSrsEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsYearOutputSrsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "4326":
+	switch v {
+	case 4326:
 		fallthrough
-	case "4269":
+	case 4269:
 		fallthrough
-	case "3005":
+	case 3005:
 		fallthrough
-	case "3857":
+	case 3857:
 		fallthrough
-	case "26907":
+	case 26907:
 		fallthrough
-	case "26908":
+	case 26908:
 		fallthrough
-	case "26909":
+	case 26909:
 		fallthrough
-	case "26910":
+	case 26910:
 		fallthrough
-	case "26911":
-		*e = GetNamesDecisionsYearOutputSrsEnum(s)
+	case 26911:
+		*e = GetNamesDecisionsYearOutputSrsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputSrsEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputSrsEnum: %v", v)
 	}
 }
 
@@ -115,19 +127,23 @@ const (
 	GetNamesDecisionsYearOutputStyleEnumDetail  GetNamesDecisionsYearOutputStyleEnum = "detail"
 )
 
+func (e GetNamesDecisionsYearOutputStyleEnum) ToPointer() *GetNamesDecisionsYearOutputStyleEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsYearOutputStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "summary":
 		fallthrough
 	case "detail":
-		*e = GetNamesDecisionsYearOutputStyleEnum(s)
+		*e = GetNamesDecisionsYearOutputStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsYearOutputStyleEnum: %v", v)
 	}
 }
 
@@ -140,21 +156,25 @@ const (
 	GetNamesDecisionsYearSortByEnumDecisionDate GetNamesDecisionsYearSortByEnum = "decisionDate"
 )
 
+func (e GetNamesDecisionsYearSortByEnum) ToPointer() *GetNamesDecisionsYearSortByEnum {
+	return &e
+}
+
 func (e *GetNamesDecisionsYearSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "name":
 		fallthrough
 	case "featureType":
 		fallthrough
 	case "decisionDate":
-		*e = GetNamesDecisionsYearSortByEnum(s)
+		*e = GetNamesDecisionsYearSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetNamesDecisionsYearSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetNamesDecisionsYearSortByEnum: %v", v)
 	}
 }
 

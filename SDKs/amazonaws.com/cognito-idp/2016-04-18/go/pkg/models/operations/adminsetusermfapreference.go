@@ -16,17 +16,21 @@ const (
 	AdminSetUserMFAPreferenceXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminSetUserMfaPreference AdminSetUserMFAPreferenceXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminSetUserMFAPreference"
 )
 
+func (e AdminSetUserMFAPreferenceXAmzTargetEnum) ToPointer() *AdminSetUserMFAPreferenceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminSetUserMFAPreferenceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminSetUserMFAPreference":
-		*e = AdminSetUserMFAPreferenceXAmzTargetEnum(s)
+		*e = AdminSetUserMFAPreferenceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminSetUserMFAPreferenceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminSetUserMFAPreferenceXAmzTargetEnum: %v", v)
 	}
 }
 

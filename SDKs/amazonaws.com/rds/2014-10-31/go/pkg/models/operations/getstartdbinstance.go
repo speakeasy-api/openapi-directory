@@ -15,17 +15,21 @@ const (
 	GETStartDBInstanceActionEnumStartDbInstance GETStartDBInstanceActionEnum = "StartDBInstance"
 )
 
+func (e GETStartDBInstanceActionEnum) ToPointer() *GETStartDBInstanceActionEnum {
+	return &e
+}
+
 func (e *GETStartDBInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartDBInstance":
-		*e = GETStartDBInstanceActionEnum(s)
+		*e = GETStartDBInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartDBInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartDBInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETStartDBInstanceVersionEnumTwoThousandAndFourteen1031 GETStartDBInstanceVersionEnum = "2014-10-31"
 )
 
+func (e GETStartDBInstanceVersionEnum) ToPointer() *GETStartDBInstanceVersionEnum {
+	return &e
+}
+
 func (e *GETStartDBInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETStartDBInstanceVersionEnum(s)
+		*e = GETStartDBInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETStartDBInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETStartDBInstanceVersionEnum: %v", v)
 	}
 }
 

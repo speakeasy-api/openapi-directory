@@ -15,19 +15,23 @@ const (
 	VideoContentDetailsCaptionEnumFalse VideoContentDetailsCaptionEnum = "false"
 )
 
+func (e VideoContentDetailsCaptionEnum) ToPointer() *VideoContentDetailsCaptionEnum {
+	return &e
+}
+
 func (e *VideoContentDetailsCaptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "true":
 		fallthrough
 	case "false":
-		*e = VideoContentDetailsCaptionEnum(s)
+		*e = VideoContentDetailsCaptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoContentDetailsCaptionEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoContentDetailsCaptionEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	VideoContentDetailsDefinitionEnumHd VideoContentDetailsDefinitionEnum = "hd"
 )
 
+func (e VideoContentDetailsDefinitionEnum) ToPointer() *VideoContentDetailsDefinitionEnum {
+	return &e
+}
+
 func (e *VideoContentDetailsDefinitionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "sd":
 		fallthrough
 	case "hd":
-		*e = VideoContentDetailsDefinitionEnum(s)
+		*e = VideoContentDetailsDefinitionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoContentDetailsDefinitionEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoContentDetailsDefinitionEnum: %v", v)
 	}
 }
 
@@ -63,19 +71,23 @@ const (
 	VideoContentDetailsProjectionEnumThreeHundredAndSixty VideoContentDetailsProjectionEnum = "360"
 )
 
+func (e VideoContentDetailsProjectionEnum) ToPointer() *VideoContentDetailsProjectionEnum {
+	return &e
+}
+
 func (e *VideoContentDetailsProjectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rectangular":
 		fallthrough
 	case "360":
-		*e = VideoContentDetailsProjectionEnum(s)
+		*e = VideoContentDetailsProjectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoContentDetailsProjectionEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoContentDetailsProjectionEnum: %v", v)
 	}
 }
 

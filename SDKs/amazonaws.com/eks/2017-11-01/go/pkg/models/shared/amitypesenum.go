@@ -24,12 +24,16 @@ const (
 	AMITypesEnumWindowsFull2022X8664    AMITypesEnum = "WINDOWS_FULL_2022_x86_64"
 )
 
+func (e AMITypesEnum) ToPointer() *AMITypesEnum {
+	return &e
+}
+
 func (e *AMITypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AL2_x86_64":
 		fallthrough
 	case "AL2_x86_64_GPU":
@@ -53,9 +57,9 @@ func (e *AMITypesEnum) UnmarshalJSON(data []byte) error {
 	case "WINDOWS_CORE_2022_x86_64":
 		fallthrough
 	case "WINDOWS_FULL_2022_x86_64":
-		*e = AMITypesEnum(s)
+		*e = AMITypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AMITypesEnum: %s", s)
+		return fmt.Errorf("invalid value for AMITypesEnum: %v", v)
 	}
 }

@@ -20,12 +20,16 @@ const (
 	ScanStatusEnumFindingsUnavailable    ScanStatusEnum = "FINDINGS_UNAVAILABLE"
 )
 
+func (e ScanStatusEnum) ToPointer() *ScanStatusEnum {
+	return &e
+}
+
 func (e *ScanStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "COMPLETE":
@@ -41,9 +45,9 @@ func (e *ScanStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SCAN_ELIGIBILITY_EXPIRED":
 		fallthrough
 	case "FINDINGS_UNAVAILABLE":
-		*e = ScanStatusEnum(s)
+		*e = ScanStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanStatusEnum: %v", v)
 	}
 }

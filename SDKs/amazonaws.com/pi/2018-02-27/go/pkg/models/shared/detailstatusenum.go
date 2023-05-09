@@ -15,20 +15,24 @@ const (
 	DetailStatusEnumUnavailable DetailStatusEnum = "UNAVAILABLE"
 )
 
+func (e DetailStatusEnum) ToPointer() *DetailStatusEnum {
+	return &e
+}
+
 func (e *DetailStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "PROCESSING":
 		fallthrough
 	case "UNAVAILABLE":
-		*e = DetailStatusEnum(s)
+		*e = DetailStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DetailStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DetailStatusEnum: %v", v)
 	}
 }

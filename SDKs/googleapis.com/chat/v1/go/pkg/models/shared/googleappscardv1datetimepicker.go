@@ -16,21 +16,25 @@ const (
 	GoogleAppsCardV1DateTimePickerTypeEnumTimeOnly    GoogleAppsCardV1DateTimePickerTypeEnum = "TIME_ONLY"
 )
 
+func (e GoogleAppsCardV1DateTimePickerTypeEnum) ToPointer() *GoogleAppsCardV1DateTimePickerTypeEnum {
+	return &e
+}
+
 func (e *GoogleAppsCardV1DateTimePickerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATE_AND_TIME":
 		fallthrough
 	case "DATE_ONLY":
 		fallthrough
 	case "TIME_ONLY":
-		*e = GoogleAppsCardV1DateTimePickerTypeEnum(s)
+		*e = GoogleAppsCardV1DateTimePickerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCardV1DateTimePickerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCardV1DateTimePickerTypeEnum: %v", v)
 	}
 }
 

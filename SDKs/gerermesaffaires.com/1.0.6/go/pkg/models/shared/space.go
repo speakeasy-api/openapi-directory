@@ -21,12 +21,16 @@ const (
 	SpaceTypeEnumAssociation SpaceTypeEnum = "association"
 )
 
+func (e SpaceTypeEnum) ToPointer() *SpaceTypeEnum {
+	return &e
+}
+
 func (e *SpaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "enterprise":
@@ -34,10 +38,10 @@ func (e *SpaceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "company":
 		fallthrough
 	case "association":
-		*e = SpaceTypeEnum(s)
+		*e = SpaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SpaceTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	TaskTemplateDefaultPriorityEnumForty  TaskTemplateDefaultPriorityEnum = "40"
 )
 
+func (e TaskTemplateDefaultPriorityEnum) ToPointer() *TaskTemplateDefaultPriorityEnum {
+	return &e
+}
+
 func (e *TaskTemplateDefaultPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "10":
 		fallthrough
 	case "20":
@@ -30,10 +34,10 @@ func (e *TaskTemplateDefaultPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "30":
 		fallthrough
 	case "40":
-		*e = TaskTemplateDefaultPriorityEnum(s)
+		*e = TaskTemplateDefaultPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskTemplateDefaultPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskTemplateDefaultPriorityEnum: %v", v)
 	}
 }
 

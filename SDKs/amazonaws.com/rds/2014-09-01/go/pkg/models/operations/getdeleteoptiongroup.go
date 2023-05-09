@@ -15,17 +15,21 @@ const (
 	GETDeleteOptionGroupActionEnumDeleteOptionGroup GETDeleteOptionGroupActionEnum = "DeleteOptionGroup"
 )
 
+func (e GETDeleteOptionGroupActionEnum) ToPointer() *GETDeleteOptionGroupActionEnum {
+	return &e
+}
+
 func (e *GETDeleteOptionGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteOptionGroup":
-		*e = GETDeleteOptionGroupActionEnum(s)
+		*e = GETDeleteOptionGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteOptionGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteOptionGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteOptionGroupVersionEnumTwoThousandAndFourteen0901 GETDeleteOptionGroupVersionEnum = "2014-09-01"
 )
 
+func (e GETDeleteOptionGroupVersionEnum) ToPointer() *GETDeleteOptionGroupVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteOptionGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-09-01":
-		*e = GETDeleteOptionGroupVersionEnum(s)
+		*e = GETDeleteOptionGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteOptionGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteOptionGroupVersionEnum: %v", v)
 	}
 }
 

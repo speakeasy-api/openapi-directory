@@ -15,19 +15,23 @@ const (
 	PasswordValidationPolicyComplexityEnumComplexityDefault     PasswordValidationPolicyComplexityEnum = "COMPLEXITY_DEFAULT"
 )
 
+func (e PasswordValidationPolicyComplexityEnum) ToPointer() *PasswordValidationPolicyComplexityEnum {
+	return &e
+}
+
 func (e *PasswordValidationPolicyComplexityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPLEXITY_UNSPECIFIED":
 		fallthrough
 	case "COMPLEXITY_DEFAULT":
-		*e = PasswordValidationPolicyComplexityEnum(s)
+		*e = PasswordValidationPolicyComplexityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PasswordValidationPolicyComplexityEnum: %s", s)
+		return fmt.Errorf("invalid value for PasswordValidationPolicyComplexityEnum: %v", v)
 	}
 }
 

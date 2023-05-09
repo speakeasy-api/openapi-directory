@@ -16,17 +16,21 @@ const (
 	DescribeCopyProductStatusXAmzTargetEnumAws242ServiceCatalogServiceDescribeCopyProductStatus DescribeCopyProductStatusXAmzTargetEnum = "AWS242ServiceCatalogService.DescribeCopyProductStatus"
 )
 
+func (e DescribeCopyProductStatusXAmzTargetEnum) ToPointer() *DescribeCopyProductStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeCopyProductStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS242ServiceCatalogService.DescribeCopyProductStatus":
-		*e = DescribeCopyProductStatusXAmzTargetEnum(s)
+		*e = DescribeCopyProductStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeCopyProductStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeCopyProductStatusXAmzTargetEnum: %v", v)
 	}
 }
 

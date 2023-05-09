@@ -34,7 +34,10 @@ func newBuyers(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // AuthorizedbuyersmarketplaceBuyersAuctionPackagesList - List the auction packages subscribed by a buyer and its clients.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListRequest, security operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/auctionPackages", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/auctionPackages", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesList(ctx contex
 // AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribe - Subscribe to the auction package for the specified buyer. Once subscribed, the bidder will receive a call out for inventory matching the auction package targeting criteria with the auction package deal ID and the specified buyer.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribe(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeRequest, security operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:subscribe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:subscribe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribe(ctx c
 // AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClients - Subscribe the specified clients of the buyer to the auction package. If a client in the list does not belong to the buyer, an error response will be returned, and all of the following clients in the list will not be subscribed. Subscribing an already subscribed client will have no effect.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClients(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsRequest, security operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{auctionPackage}:subscribeClients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{auctionPackage}:subscribeClients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubscribeClientsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesSubscribeClient
 // AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribe - Unsubscribe from the auction package for the specified buyer. Once unsubscribed, the bidder will no longer receive a call out for the auction package deal ID and the specified buyer.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribe(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeRequest, security operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:unsubscribe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:unsubscribe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribe(ctx
 // AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClients - Unsubscribe from the auction package for the specified clients of the buyer. Unsubscribing a client that is not subscribed will have no effect.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClients(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsRequest, security operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClientsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{auctionPackage}:unsubscribeClients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{auctionPackage}:unsubscribeClients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnsubscribeClientsRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersAuctionPackagesUnsubscribeClie
 // AuthorizedbuyersmarketplaceBuyersClientsCreate - Creates a new client.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsCreate(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsCreateRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsCreateSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientInput", "json")
 	if err != nil {
@@ -357,7 +375,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsCreate(ctx context.Cont
 // AuthorizedbuyersmarketplaceBuyersClientsList - Lists all the clients for the current buyer.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsListRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clients", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/clients", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsList(ctx context.Contex
 // AuthorizedbuyersmarketplaceBuyersClientsUsersActivate - Activates an existing client user. The state of the client user will be updated from "INACTIVE" to "ACTIVE". This method has no effect if the client user is already in "ACTIVE" state. An error will be returned if the client user to activate is still in "INVITED" state.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersActivate(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsUsersActivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:activate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersActivate(ctx conte
 // AuthorizedbuyersmarketplaceBuyersClientsUsersCreate - Creates a new client user in "INVITED" state. An email invitation will be sent to the new user, once accepted the user will become active.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersCreate(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsUsersCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ClientUserInput", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersCreate(ctx context
 // AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivate - Deactivates an existing client user. The state of the client user will be updated from "ACTIVE" to "INACTIVE". This method has no effect if the client user is already in "INACTIVE" state. An error will be returned if the client user to deactivate is still in "INVITED" state.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivate(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deactivate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:deactivate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -570,7 +600,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersDeactivate(ctx con
 // AuthorizedbuyersmarketplaceBuyersClientsUsersDelete - Deletes an existing client user. The client user will lose access to the Authorized Buyers UI. Note that if a client user is deleted, the user's access to the UI can't be restored unless a new client user is created and activated.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersDelete(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsUsersDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -618,7 +651,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersDelete(ctx context
 // AuthorizedbuyersmarketplaceBuyersClientsUsersList - Lists all client users for a specified client.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListRequest, security operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersClientsUsersListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -666,7 +702,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersClientsUsersList(ctx context.C
 // AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreative - Add creative to be used in the bidding process for a finalized deal. For programmatic guaranteed deals, it's recommended that you associate at least one approved creative with the deal before calling SetReadyToServe, to help reduce the number of bid responses filtered because they don't contain approved creatives. Creatives successfully added to a deal can be found in the Realtime-bidding Creatives API creative.deal_ids. This method only applies to programmatic guaranteed deals. Maximum number of 1000 creatives can be added to a finalized deal.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreative(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeRequest, security operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreativeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{deal}:addCreative", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{deal}:addCreative", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddCreativeRequest", "json")
 	if err != nil {
@@ -721,7 +760,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsAddCreative(ctx 
 // AuthorizedbuyersmarketplaceBuyersFinalizedDealsList - Lists finalized deals. Use the URL path "/v1/buyers/{accountId}/finalizedDeals" to list finalized deals for the current buyer and its clients. Bidders can use the URL path "/v1/bidders/{accountId}/finalizedDeals" to list finalized deals for the bidder, its buyers and all their clients.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListRequest, security operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/finalizedDeals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/finalizedDeals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -769,7 +811,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsList(ctx context
 // AuthorizedbuyersmarketplaceBuyersFinalizedDealsPause - Pauses serving of the given finalized deal. This call only pauses the serving status, and does not affect other fields of the finalized deal. Calling this method for an already paused deal has no effect. This method only applies to programmatic guaranteed deals.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsPause(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseRequest, security operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsPauseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:pause", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PauseFinalizedDealRequest", "json")
 	if err != nil {
@@ -824,7 +869,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsPause(ctx contex
 // AuthorizedbuyersmarketplaceBuyersFinalizedDealsResume - Resumes serving of the given finalized deal. Calling this method for an running deal has no effect. If a deal is initially paused by the seller, calling this method will not resume serving of the deal until the seller also resumes the deal. This method only applies to programmatic guaranteed deals.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsResume(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeRequest, security operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsResumeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -879,7 +927,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsResume(ctx conte
 // AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServe - Sets the given finalized deal as ready to serve. By default, deals are set as ready to serve as soon as they're finalized. If you want to opt out of the default behavior, and manually indicate that deals are ready to serve, ask your Technical Account Manager to add you to the allowlist. If you choose to use this method, finalized deals belonging to the bidder and its child seats don't start serving until after you call `setReadyToServe`, and after the deals become active. For example, you can use this method to delay receiving bid requests until your creative is ready. This method only applies to programmatic guaranteed deals.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServe(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeRequest, security operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{deal}:setReadyToServe", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{deal}:setReadyToServe", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -934,7 +985,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersFinalizedDealsSetReadyToServe(
 // AuthorizedbuyersmarketplaceBuyersProposalsAccept - Accepts the proposal at the given revision number. If the revision number in the request is behind the latest from the server, an error message will be returned. This call updates the Proposal.state from `BUYER_ACCEPTANCE_REQUESTED` to `FINALIZED`; it has no side effect if the Proposal.state is already `FINALIZED` and throws exception if the Proposal.state is not either `BUYER_ACCEPTANCE_REQUESTED` or `FINALIZED`. Accepting a proposal means the buyer understands and accepts the Proposal.terms_and_conditions proposed by the seller.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsAccept(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsAcceptResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:accept", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AcceptProposalRequest", "json")
 	if err != nil {
@@ -989,7 +1043,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsAccept(ctx context.Co
 // AuthorizedbuyersmarketplaceBuyersProposalsAddNote - Creates a note for this proposal and sends to the seller.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsAddNote(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsAddNoteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{proposal}:addNote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{proposal}:addNote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AddNoteRequestInput", "json")
 	if err != nil {
@@ -1044,7 +1101,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsAddNote(ctx context.C
 // AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiation - Cancels an ongoing negotiation on a proposal. This does not cancel or end serving for the deals if the proposal has been finalized. If the proposal has not been finalized before, calling this method will set the Proposal.state to `TERMINATED` and increment the Proposal.proposal_revision. If the proposal has been finalized before and is under renegotiation now, calling this method will reset the Proposal.state to `FINALIZED` and increment the Proposal.proposal_revision. This method does not support private auction proposals whose Proposal.deal_type is 'PRIVATE_AUCTION'.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiation(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{proposal}:cancelNegotiation", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{proposal}:cancelNegotiation", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1099,7 +1159,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsCancelNegotiation(ctx
 // AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdate - Batch updates multiple deals in the same proposal.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdate(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deals:batchUpdate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deals:batchUpdate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "BatchUpdateDealsRequestInput", "json")
 	if err != nil {
@@ -1154,7 +1217,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsBatchUpdate(ctx 
 // AuthorizedbuyersmarketplaceBuyersProposalsDealsList - Lists all deals in a proposal. To retrieve only the finalized revision deals regardless if a deal is being renegotiated, see the FinalizedDeals resource.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/deals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1202,7 +1268,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsList(ctx context
 // AuthorizedbuyersmarketplaceBuyersProposalsDealsPatch - Updates the given deal at the buyer known revision number. If the server revision has advanced since the passed-in proposal.proposal_revision an ABORTED error message will be returned. The revision number is incremented by the server whenever the proposal or its constituent deals are updated. Note: The revision number is kept at a proposal level. The buyer of the API is expected to keep track of the revision number after the last update operation and send it in as part of the next update request. This way, if there are further changes on the server (for example, seller making new updates), then the server can detect conflicts and reject the proposed changes.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsPatch(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsDealsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DealInput", "json")
 	if err != nil {
@@ -1257,7 +1326,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsDealsPatch(ctx contex
 // AuthorizedbuyersmarketplaceBuyersProposalsList - Lists proposals. A filter expression (list filter syntax) may be specified to filter the results. This will not list finalized versions of proposals that are being renegotiated; to retrieve these use the finalizedProposals resource.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsListRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/proposals", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/proposals", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1305,7 +1377,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsList(ctx context.Cont
 // AuthorizedbuyersmarketplaceBuyersProposalsSendRfp - Sends a request for proposal (RFP) to a publisher to initiate the negotiation regarding certain inventory. In the RFP, buyers can specify the deal type, deal terms, start and end dates, targeting, and a message to the publisher. Once the RFP is sent, a proposal in `SELLER_REVIEW_REQUESTED` state will be created and returned in the response. The publisher may review your request and respond with detailed deals in the proposal.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsSendRfp(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpRequest, security operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersProposalsSendRfpResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{buyer}/proposals:sendRfp", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{buyer}/proposals:sendRfp", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SendRfpRequest", "json")
 	if err != nil {
@@ -1360,7 +1435,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersProposalsSendRfp(ctx context.C
 // AuthorizedbuyersmarketplaceBuyersPublisherProfilesGet - Gets the requested publisher profile by name.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersPublisherProfilesGet(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetRequest, security operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1408,7 +1486,10 @@ func (s *buyers) AuthorizedbuyersmarketplaceBuyersPublisherProfilesGet(ctx conte
 // AuthorizedbuyersmarketplaceBuyersPublisherProfilesList - Lists publisher profiles. The returned publisher profiles aren't in any defined order. The order of the results might change. A new publisher profile can appear in any place in the list of returned results.
 func (s *buyers) AuthorizedbuyersmarketplaceBuyersPublisherProfilesList(ctx context.Context, request operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListRequest, security operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListSecurity) (*operations.AuthorizedbuyersmarketplaceBuyersPublisherProfilesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherProfiles", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/publisherProfiles", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

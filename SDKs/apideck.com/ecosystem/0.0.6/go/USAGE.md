@@ -2,25 +2,22 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CategoriesAllRequest{
-        Cursor: "corrupti",
-        EcosystemID: "provident",
-        Limit: 715190,
-    }
-
     ctx := context.Background()
-    res, err := s.Category.CategoriesAll(ctx, req)
+    res, err := s.Category.CategoriesAll(ctx, operations.CategoriesAllRequest{
+        Cursor: sdk.String("corrupti"),
+        EcosystemID: "provident",
+        Limit: sdk.Int64(715190),
+    })
     if err != nil {
         log.Fatal(err)
     }

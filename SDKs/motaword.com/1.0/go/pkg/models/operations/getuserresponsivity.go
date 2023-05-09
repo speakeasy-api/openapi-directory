@@ -21,19 +21,23 @@ const (
 	GetUserResponsivityPeriodEnumWeekly  GetUserResponsivityPeriodEnum = "weekly"
 )
 
+func (e GetUserResponsivityPeriodEnum) ToPointer() *GetUserResponsivityPeriodEnum {
+	return &e
+}
+
 func (e *GetUserResponsivityPeriodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "monthly":
 		fallthrough
 	case "weekly":
-		*e = GetUserResponsivityPeriodEnum(s)
+		*e = GetUserResponsivityPeriodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUserResponsivityPeriodEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUserResponsivityPeriodEnum: %v", v)
 	}
 }
 

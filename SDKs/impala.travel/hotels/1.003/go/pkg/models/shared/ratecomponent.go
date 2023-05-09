@@ -18,12 +18,16 @@ const (
 	RateComponentTypeEnumAllInclusive    RateComponentTypeEnum = "ALL_INCLUSIVE"
 )
 
+func (e RateComponentTypeEnum) ToPointer() *RateComponentTypeEnum {
+	return &e
+}
+
 func (e *RateComponentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BREAKFAST":
 		fallthrough
 	case "LUNCH":
@@ -33,10 +37,10 @@ func (e *RateComponentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "WELCOME_BEVERAGE":
 		fallthrough
 	case "ALL_INCLUSIVE":
-		*e = RateComponentTypeEnum(s)
+		*e = RateComponentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RateComponentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RateComponentTypeEnum: %v", v)
 	}
 }
 

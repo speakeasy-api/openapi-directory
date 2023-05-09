@@ -35,7 +35,10 @@ func newAccidentStats(defaultClient, securityClient HTTPClient, serverURL, langu
 // AccidentStatsGet - Gets all accident details for accidents occuring in the specified year
 func (s *accidentStats) AccidentStatsGet(ctx context.Context, request operations.AccidentStatsGetRequest) (*operations.AccidentStatsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/AccidentStats/{year}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/AccidentStats/{year}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

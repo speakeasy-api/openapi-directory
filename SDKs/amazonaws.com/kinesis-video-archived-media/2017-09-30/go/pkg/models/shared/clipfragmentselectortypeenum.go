@@ -14,18 +14,22 @@ const (
 	ClipFragmentSelectorTypeEnumServerTimestamp   ClipFragmentSelectorTypeEnum = "SERVER_TIMESTAMP"
 )
 
+func (e ClipFragmentSelectorTypeEnum) ToPointer() *ClipFragmentSelectorTypeEnum {
+	return &e
+}
+
 func (e *ClipFragmentSelectorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRODUCER_TIMESTAMP":
 		fallthrough
 	case "SERVER_TIMESTAMP":
-		*e = ClipFragmentSelectorTypeEnum(s)
+		*e = ClipFragmentSelectorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClipFragmentSelectorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClipFragmentSelectorTypeEnum: %v", v)
 	}
 }

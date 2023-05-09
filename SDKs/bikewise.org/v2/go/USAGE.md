@@ -2,30 +2,27 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETVersionIncidentsFormatRequest{
-        IncidentType: "unconfirmed",
-        OccurredAfter: 592845,
-        OccurredBefore: 715190,
-        Page: 844266,
-        PerPage: 602763,
-        Proximity: "nulla",
-        ProximitySquare: 544883,
-        Query: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.Incidents.GETVersionIncidentsFormat(ctx, req)
+    res, err := s.Incidents.GETVersionIncidentsFormat(ctx, operations.GETVersionIncidentsFormatRequest{
+        IncidentType: operations.GETVersionIncidentsFormatIncidentTypeEnumUnconfirmed.ToPointer(),
+        OccurredAfter: sdk.Int(592845),
+        OccurredBefore: sdk.Int(715190),
+        Page: sdk.Int(844266),
+        PerPage: sdk.Int(602763),
+        Proximity: sdk.String("nulla"),
+        ProximitySquare: sdk.Int(544883),
+        Query: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

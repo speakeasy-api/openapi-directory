@@ -14,18 +14,22 @@ const (
 	CachePolicyHeaderBehaviorEnumWhitelist CachePolicyHeaderBehaviorEnum = "whitelist"
 )
 
+func (e CachePolicyHeaderBehaviorEnum) ToPointer() *CachePolicyHeaderBehaviorEnum {
+	return &e
+}
+
 func (e *CachePolicyHeaderBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "whitelist":
-		*e = CachePolicyHeaderBehaviorEnum(s)
+		*e = CachePolicyHeaderBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CachePolicyHeaderBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for CachePolicyHeaderBehaviorEnum: %v", v)
 	}
 }

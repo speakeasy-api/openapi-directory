@@ -21,12 +21,16 @@ const (
 	DeploymentStatusStateEnumInProgress DeploymentStatusStateEnum = "in_progress"
 )
 
+func (e DeploymentStatusStateEnum) ToPointer() *DeploymentStatusStateEnum {
+	return &e
+}
+
 func (e *DeploymentStatusStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "error":
 		fallthrough
 	case "failure":
@@ -40,10 +44,10 @@ func (e *DeploymentStatusStateEnum) UnmarshalJSON(data []byte) error {
 	case "queued":
 		fallthrough
 	case "in_progress":
-		*e = DeploymentStatusStateEnum(s)
+		*e = DeploymentStatusStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentStatusStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentStatusStateEnum: %v", v)
 	}
 }
 

@@ -22,12 +22,16 @@ const (
 	PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnumRes PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum = "RES"
 )
 
+func (e PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum) ToPointer() *PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAB":
 		fallthrough
 	case "IKM":
@@ -45,10 +49,10 @@ func (e *PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAcco
 	case "DIV":
 		fallthrough
 	case "RES":
-		*e = PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum(s)
+		*e = PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyAccountEnum: %v", v)
 	}
 }
 
@@ -60,21 +64,25 @@ const (
 	PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnumW PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum = "W"
 )
 
+func (e PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum) ToPointer() *PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "R":
 		fallthrough
 	case "V":
 		fallthrough
 	case "W":
-		*e = PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum(s)
+		*e = PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDExpenseProofsDocumentIDRequestBodyStatusEnum: %v", v)
 	}
 }
 

@@ -19,12 +19,16 @@ const (
 	AuthConfigTemplateAuthTypeEnumOauth2AuthCodeFlow      AuthConfigTemplateAuthTypeEnum = "OAUTH2_AUTH_CODE_FLOW"
 )
 
+func (e AuthConfigTemplateAuthTypeEnum) ToPointer() *AuthConfigTemplateAuthTypeEnum {
+	return &e
+}
+
 func (e *AuthConfigTemplateAuthTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTH_TYPE_UNSPECIFIED":
 		fallthrough
 	case "USER_PASSWORD":
@@ -36,15 +40,17 @@ func (e *AuthConfigTemplateAuthTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SSH_PUBLIC_KEY":
 		fallthrough
 	case "OAUTH2_AUTH_CODE_FLOW":
-		*e = AuthConfigTemplateAuthTypeEnum(s)
+		*e = AuthConfigTemplateAuthTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthConfigTemplateAuthTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthConfigTemplateAuthTypeEnum: %v", v)
 	}
 }
 
 // AuthConfigTemplate - AuthConfigTemplate defines required field over an authentication type.
 type AuthConfigTemplate struct {
+	// Identifier key for auth config
+	AuthKey *string `json:"authKey,omitempty"`
 	// The type of authentication configured.
 	AuthType *AuthConfigTemplateAuthTypeEnum `json:"authType,omitempty"`
 	// Config variables to describe an `AuthConfig` for a `Connection`.

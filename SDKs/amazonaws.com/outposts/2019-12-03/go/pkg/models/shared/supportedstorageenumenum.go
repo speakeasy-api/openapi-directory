@@ -14,18 +14,22 @@ const (
 	SupportedStorageEnumEnumS3  SupportedStorageEnumEnum = "S3"
 )
 
+func (e SupportedStorageEnumEnum) ToPointer() *SupportedStorageEnumEnum {
+	return &e
+}
+
 func (e *SupportedStorageEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EBS":
 		fallthrough
 	case "S3":
-		*e = SupportedStorageEnumEnum(s)
+		*e = SupportedStorageEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SupportedStorageEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for SupportedStorageEnumEnum: %v", v)
 	}
 }

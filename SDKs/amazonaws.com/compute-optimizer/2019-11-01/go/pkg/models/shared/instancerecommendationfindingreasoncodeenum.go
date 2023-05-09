@@ -28,12 +28,16 @@ const (
 	InstanceRecommendationFindingReasonCodeEnumDiskThroughputUnderprovisioned   InstanceRecommendationFindingReasonCodeEnum = "DiskThroughputUnderprovisioned"
 )
 
+func (e InstanceRecommendationFindingReasonCodeEnum) ToPointer() *InstanceRecommendationFindingReasonCodeEnum {
+	return &e
+}
+
 func (e *InstanceRecommendationFindingReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CPUOverprovisioned":
 		fallthrough
 	case "CPUUnderprovisioned":
@@ -65,9 +69,9 @@ func (e *InstanceRecommendationFindingReasonCodeEnum) UnmarshalJSON(data []byte)
 	case "DiskThroughputOverprovisioned":
 		fallthrough
 	case "DiskThroughputUnderprovisioned":
-		*e = InstanceRecommendationFindingReasonCodeEnum(s)
+		*e = InstanceRecommendationFindingReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceRecommendationFindingReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceRecommendationFindingReasonCodeEnum: %v", v)
 	}
 }

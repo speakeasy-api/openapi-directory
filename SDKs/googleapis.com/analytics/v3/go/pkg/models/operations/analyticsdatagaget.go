@@ -32,19 +32,23 @@ const (
 	AnalyticsDataGaGetOutputEnumJSON      AnalyticsDataGaGetOutputEnum = "json"
 )
 
+func (e AnalyticsDataGaGetOutputEnum) ToPointer() *AnalyticsDataGaGetOutputEnum {
+	return &e
+}
+
 func (e *AnalyticsDataGaGetOutputEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "dataTable":
 		fallthrough
 	case "json":
-		*e = AnalyticsDataGaGetOutputEnum(s)
+		*e = AnalyticsDataGaGetOutputEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsDataGaGetOutputEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsDataGaGetOutputEnum: %v", v)
 	}
 }
 
@@ -57,21 +61,25 @@ const (
 	AnalyticsDataGaGetSamplingLevelEnumHigherPrecision AnalyticsDataGaGetSamplingLevelEnum = "HIGHER_PRECISION"
 )
 
+func (e AnalyticsDataGaGetSamplingLevelEnum) ToPointer() *AnalyticsDataGaGetSamplingLevelEnum {
+	return &e
+}
+
 func (e *AnalyticsDataGaGetSamplingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "FASTER":
 		fallthrough
 	case "HIGHER_PRECISION":
-		*e = AnalyticsDataGaGetSamplingLevelEnum(s)
+		*e = AnalyticsDataGaGetSamplingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnalyticsDataGaGetSamplingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for AnalyticsDataGaGetSamplingLevelEnum: %v", v)
 	}
 }
 

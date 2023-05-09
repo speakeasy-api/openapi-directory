@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateAutoPredictorRequest{
+    ctx := context.Background()
+    res, err := s.CreateAutoPredictor(ctx, operations.CreateAutoPredictorRequest{
         CreateAutoPredictorRequest: shared.CreateAutoPredictorRequest{
             DataConfig: &shared.DataConfig{
                 AdditionalDatasets: []shared.AdditionalDataset{
@@ -41,62 +42,52 @@ func main() {
                                 "suscipit",
                             },
                         },
-                        Name: "molestiae",
+                        Name: "Alexandra Schulist",
                     },
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "placeat": []string{
-                                "iusto",
-                                "excepturi",
-                                "nisi",
-                            },
-                            "recusandae": []string{
+                            "nisi": []string{
+                                "temporibus",
                                 "ab",
                                 "quis",
                                 "veritatis",
-                                "deserunt",
                             },
-                            "perferendis": []string{
-                                "repellendus",
-                                "sapiente",
+                            "deserunt": []string{
+                                "ipsam",
                             },
-                            "quo": []string{
+                            "repellendus": []string{
+                                "quo",
+                                "odit",
+                                "at",
                                 "at",
                             },
                         },
-                        Name: "at",
+                        Name: "Javier Schmidt",
                     },
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "molestiae": []string{
-                                "quod",
-                                "esse",
-                                "totam",
-                                "porro",
-                            },
-                            "dolorum": []string{
+                            "porro": []string{
+                                "dicta",
                                 "nam",
+                                "officia",
                             },
-                            "officia": []string{
-                                "fugit",
+                            "occaecati": []string{
                                 "deleniti",
-                                "hic",
                             },
-                            "optio": []string{
+                            "hic": []string{
+                                "totam",
                                 "beatae",
                                 "commodi",
                                 "molestiae",
                             },
                         },
-                        Name: "modi",
+                        Name: "Norma Ryan",
                     },
                 },
                 AttributeConfigs: []shared.AttributeConfig{
                     shared.AttributeConfig{
-                        AttributeName: "impedit",
+                        AttributeName: "excepturi",
                         Transformations: map[string]string{
-                            "esse": "ipsum",
-                            "excepturi": "aspernatur",
                             "perferendis": "ad",
                         },
                     },
@@ -107,12 +98,12 @@ func main() {
                 KMSKeyArn: "sed",
                 RoleArn: "iste",
             },
-            ExplainPredictor: false,
+            ExplainPredictor: sdk.Bool(false),
             ForecastDimensions: []string{
                 "natus",
             },
-            ForecastFrequency: "laboriosam",
-            ForecastHorizon: 943749,
+            ForecastFrequency: sdk.String("laboriosam"),
+            ForecastHorizon: sdk.Int64(943749),
             ForecastTypes: []string{
                 "fuga",
                 "in",
@@ -122,9 +113,9 @@ func main() {
             MonitorConfig: &shared.MonitorConfig{
                 MonitorName: "iure",
             },
-            OptimizationMetric: "MAPE",
+            OptimizationMetric: shared.OptimizationMetricEnumMape.ToPointer(),
             PredictorName: "quidem",
-            ReferencePredictorArn: "architecto",
+            ReferencePredictorArn: sdk.String("architecto"),
             Tags: []shared.Tag{
                 shared.Tag{
                     Key: "reiciendis",
@@ -132,24 +123,21 @@ func main() {
                 },
             },
             TimeAlignmentBoundary: &shared.TimeAlignmentBoundary{
-                DayOfMonth: 653140,
-                DayOfWeek: "FRIDAY",
-                Hour: 170909,
-                Month: "MARCH",
+                DayOfMonth: sdk.Int64(653140),
+                DayOfWeek: shared.DayOfWeekEnumFriday.ToPointer(),
+                Hour: sdk.Int64(170909),
+                Month: shared.MonthEnumMarch.ToPointer(),
             },
         },
-        XAmzAlgorithm: "corporis",
-        XAmzContentSha256: "explicabo",
-        XAmzCredential: "nobis",
-        XAmzDate: "enim",
-        XAmzSecurityToken: "omnis",
-        XAmzSignature: "nemo",
-        XAmzSignedHeaders: "minima",
-        XAmzTarget: "AmazonForecast.CreateAutoPredictor",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateAutoPredictor(ctx, req)
+        XAmzAlgorithm: sdk.String("corporis"),
+        XAmzContentSha256: sdk.String("explicabo"),
+        XAmzCredential: sdk.String("nobis"),
+        XAmzDate: sdk.String("enim"),
+        XAmzSecurityToken: sdk.String("omnis"),
+        XAmzSignature: sdk.String("nemo"),
+        XAmzSignedHeaders: sdk.String("minima"),
+        XAmzTarget: operations.CreateAutoPredictorXAmzTargetEnumAmazonForecastCreateAutoPredictor,
+    })
     if err != nil {
         log.Fatal(err)
     }

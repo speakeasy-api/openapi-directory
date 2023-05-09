@@ -36,7 +36,10 @@ func newIdentity(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Override the base server url that include version
 func (s *identity) DeleteConnection(ctx context.Context, request operations.DeleteConnectionRequest, security operations.DeleteConnectionSecurity) (*operations.DeleteConnectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/Connections/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/Connections/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

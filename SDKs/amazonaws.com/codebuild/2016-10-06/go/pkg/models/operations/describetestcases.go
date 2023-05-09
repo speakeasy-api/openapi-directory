@@ -16,17 +16,21 @@ const (
 	DescribeTestCasesXAmzTargetEnumCodeBuild20161006DescribeTestCases DescribeTestCasesXAmzTargetEnum = "CodeBuild_20161006.DescribeTestCases"
 )
 
+func (e DescribeTestCasesXAmzTargetEnum) ToPointer() *DescribeTestCasesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTestCasesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeBuild_20161006.DescribeTestCases":
-		*e = DescribeTestCasesXAmzTargetEnum(s)
+		*e = DescribeTestCasesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTestCasesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTestCasesXAmzTargetEnum: %v", v)
 	}
 }
 

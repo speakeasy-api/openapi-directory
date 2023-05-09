@@ -19,12 +19,16 @@ const (
 	ElectronicAddressElectronicAddressTypeEnumWebsite  ElectronicAddressElectronicAddressTypeEnum = "Website"
 )
 
+func (e ElectronicAddressElectronicAddressTypeEnum) ToPointer() *ElectronicAddressElectronicAddressTypeEnum {
+	return &e
+}
+
 func (e *ElectronicAddressElectronicAddressTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Email":
 		fallthrough
 	case "Fax":
@@ -34,10 +38,10 @@ func (e *ElectronicAddressElectronicAddressTypeEnum) UnmarshalJSON(data []byte) 
 	case "Mobile":
 		fallthrough
 	case "Website":
-		*e = ElectronicAddressElectronicAddressTypeEnum(s)
+		*e = ElectronicAddressElectronicAddressTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElectronicAddressElectronicAddressTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ElectronicAddressElectronicAddressTypeEnum: %v", v)
 	}
 }
 

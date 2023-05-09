@@ -15,20 +15,24 @@ const (
 	ConfirmationStatusEnumDenied    ConfirmationStatusEnum = "Denied"
 )
 
+func (e ConfirmationStatusEnum) ToPointer() *ConfirmationStatusEnum {
+	return &e
+}
+
 func (e *ConfirmationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Confirmed":
 		fallthrough
 	case "Denied":
-		*e = ConfirmationStatusEnum(s)
+		*e = ConfirmationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConfirmationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ConfirmationStatusEnum: %v", v)
 	}
 }

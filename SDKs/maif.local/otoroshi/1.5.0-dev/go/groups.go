@@ -35,7 +35,7 @@ func newGroups(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AllServiceGroups - Get all service groups
 // Get all service groups
-func (s *groups) AllServiceGroups(ctx context.Context) (*operations.AllServiceGroupsResponse, error) {
+func (s *groups) AllServiceGroups(ctx context.Context, security operations.AllServiceGroupsSecurity) (*operations.AllServiceGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/api/groups"
 
@@ -44,7 +44,7 @@ func (s *groups) AllServiceGroups(ctx context.Context) (*operations.AllServiceGr
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -144,7 +144,10 @@ func (s *groups) CreateGroup(ctx context.Context, request shared.Group, security
 // Delete a service group
 func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroupRequest, security operations.DeleteGroupSecurity) (*operations.DeleteGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -194,7 +197,10 @@ func (s *groups) DeleteGroup(ctx context.Context, request operations.DeleteGroup
 // Update a service group with a diff
 func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRequest, security operations.PatchGroupSecurity) (*operations.PatchGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -251,7 +257,10 @@ func (s *groups) PatchGroup(ctx context.Context, request operations.PatchGroupRe
 // Get a service group
 func (s *groups) ServiceGroup(ctx context.Context, request operations.ServiceGroupRequest, security operations.ServiceGroupSecurity) (*operations.ServiceGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -301,7 +310,10 @@ func (s *groups) ServiceGroup(ctx context.Context, request operations.ServiceGro
 // Update a service group
 func (s *groups) UpdateGroup(ctx context.Context, request operations.UpdateGroupRequest, security operations.UpdateGroupSecurity) (*operations.UpdateGroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/groups/{serviceGroupId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Group", "json")
 	if err != nil {

@@ -21,12 +21,16 @@ const (
 	PermissionRoleEnumPublishedViewer PermissionRoleEnum = "PUBLISHED_VIEWER"
 )
 
+func (e PermissionRoleEnum) ToPointer() *PermissionRoleEnum {
+	return &e
+}
+
 func (e *PermissionRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "OWNER":
@@ -42,10 +46,10 @@ func (e *PermissionRoleEnum) UnmarshalJSON(data []byte) error {
 	case "VIEWER":
 		fallthrough
 	case "PUBLISHED_VIEWER":
-		*e = PermissionRoleEnum(s)
+		*e = PermissionRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PermissionRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for PermissionRoleEnum: %v", v)
 	}
 }
 

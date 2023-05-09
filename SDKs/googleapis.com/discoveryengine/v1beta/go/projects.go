@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate - Creates a Document.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreate(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaDocument", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCr
 // DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDelete - Deletes a Document.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDelete(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsDe
 // DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImport - Bulk import of multiple Documents. Request processing may be synchronous. Non-existing items will be created. Note: It is possible for a subset of the Documents to be successfully updated.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImport(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaImportDocumentsRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsIm
 // DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsList - Gets a list of Documents.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsList(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsLi
 // DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatch - Updates a Document.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatch(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaDocument", "json")
 	if err != nil {
@@ -292,10 +307,71 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPa
 	return res, nil
 }
 
+// DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurge - Permanently deletes all selected Documents under a branch. This process is asynchronous. If the request is valid, the removal will be enquired and processed offlines. Depending on the number of Documents, this operation could take hours to complete. Before the operation completes, some Documents may still be returned by DocumentService.GetDocument or DocumentService.ListDocuments. To get a sample of Documents that would be deleted, set PurgeDocumentsRequest.force to false.
+func (s *projects) DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurge(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeRequest, security operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse, error) {
+	baseURL := s.serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/documents:purge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsPurgeResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleLongrunningOperation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleLongrunningOperation = out
+		}
+	}
+
+	return res, nil
+}
+
 // DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommend - Makes a recommendation, which requires a contextual user event.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommend(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendRequest, security operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresServingConfigsRecommendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{servingConfig}:recommend", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{servingConfig}:recommend", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaRecommendRequest", "json")
 	if err != nil {
@@ -350,7 +426,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresServingConfigsRecom
 // DiscoveryengineProjectsLocationsDataStoresUserEventsCollect - Writes a single user event from the browser. This uses a GET request to due to browser restriction of POST-ing to a 3rd party domain. This method is used only by the Discovery Engine API JavaScript pixel and Google Tag Manager. Users should not call this method directly.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsCollect(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectRequest, security operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresUserEventsCollectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:collect", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:collect", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +477,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsCollect(c
 // DiscoveryengineProjectsLocationsDataStoresUserEventsImport - Bulk import of User events. Request processing might be synchronous. Events that already exist are skipped. Use this method for backfilling historical user events. Operation.response is of type ImportResponse. Note that it is possible for a subset of the items to be successfully inserted. Operation.metadata is of type ImportMetadata.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsImport(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportRequest, security operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresUserEventsImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaImportUserEventsRequest", "json")
 	if err != nil {
@@ -453,7 +535,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsImport(ct
 // DiscoveryengineProjectsLocationsDataStoresUserEventsWrite - Writes a single user event.
 func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsWrite(ctx context.Context, request operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteRequest, security operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteSecurity) (*operations.DiscoveryengineProjectsLocationsDataStoresUserEventsWriteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:write", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/userEvents:write", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudDiscoveryengineV1betaUserEvent", "json")
 	if err != nil {
@@ -508,7 +593,10 @@ func (s *projects) DiscoveryengineProjectsLocationsDataStoresUserEventsWrite(ctx
 // DiscoveryengineProjectsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) DiscoveryengineProjectsOperationsGet(ctx context.Context, request operations.DiscoveryengineProjectsOperationsGetRequest, security operations.DiscoveryengineProjectsOperationsGetSecurity) (*operations.DiscoveryengineProjectsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -556,7 +644,10 @@ func (s *projects) DiscoveryengineProjectsOperationsGet(ctx context.Context, req
 // DiscoveryengineProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) DiscoveryengineProjectsOperationsList(ctx context.Context, request operations.DiscoveryengineProjectsOperationsListRequest, security operations.DiscoveryengineProjectsOperationsListSecurity) (*operations.DiscoveryengineProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

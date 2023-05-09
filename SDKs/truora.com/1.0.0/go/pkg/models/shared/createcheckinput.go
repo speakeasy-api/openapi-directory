@@ -23,12 +23,16 @@ const (
 	CreateCheckInputCountryEnumAr  CreateCheckInputCountryEnum = "AR"
 )
 
+func (e CreateCheckInputCountryEnum) ToPointer() *CreateCheckInputCountryEnum {
+	return &e
+}
+
 func (e *CreateCheckInputCountryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "BR":
@@ -46,10 +50,10 @@ func (e *CreateCheckInputCountryEnum) UnmarshalJSON(data []byte) error {
 	case "PE":
 		fallthrough
 	case "AR":
-		*e = CreateCheckInputCountryEnum(s)
+		*e = CreateCheckInputCountryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCheckInputCountryEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCheckInputCountryEnum: %v", v)
 	}
 }
 
@@ -86,12 +90,16 @@ const (
 	CreateCheckInputRegionEnumTo CreateCheckInputRegionEnum = "TO"
 )
 
+func (e CreateCheckInputRegionEnum) ToPointer() *CreateCheckInputRegionEnum {
+	return &e
+}
+
 func (e *CreateCheckInputRegionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DF":
 		fallthrough
 	case "AC":
@@ -145,10 +153,10 @@ func (e *CreateCheckInputRegionEnum) UnmarshalJSON(data []byte) error {
 	case "SE":
 		fallthrough
 	case "TO":
-		*e = CreateCheckInputRegionEnum(s)
+		*e = CreateCheckInputRegionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCheckInputRegionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCheckInputRegionEnum: %v", v)
 	}
 }
 
@@ -162,12 +170,16 @@ const (
 	CreateCheckInputTypeEnumCustomTypeName CreateCheckInputTypeEnum = "custom_type_name"
 )
 
+func (e CreateCheckInputTypeEnum) ToPointer() *CreateCheckInputTypeEnum {
+	return &e
+}
+
 func (e *CreateCheckInputTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "person":
 		fallthrough
 	case "vehicle":
@@ -175,10 +187,10 @@ func (e *CreateCheckInputTypeEnum) UnmarshalJSON(data []byte) error {
 	case "company":
 		fallthrough
 	case "custom_type_name":
-		*e = CreateCheckInputTypeEnum(s)
+		*e = CreateCheckInputTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateCheckInputTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateCheckInputTypeEnum: %v", v)
 	}
 }
 

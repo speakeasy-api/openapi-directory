@@ -16,21 +16,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnumNotCompromised              GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum = "NOT_COMPROMISED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "COMPROMISED_STATE_UNSPECIFIED":
 		fallthrough
 	case "COMPROMISED":
 		fallthrough
 	case "NOT_COMPROMISED":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserCompromisedStateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnumUnenrolled                 GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum = "UNENROLLED"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANAGEMENT_STATE_UNSPECIFIED":
 		fallthrough
 	case "WIPING":
@@ -66,10 +74,10 @@ func (e *GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum) Unmarsha
 	case "PENDING_APPROVAL":
 		fallthrough
 	case "UNENROLLED":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserManagementStateEnum: %v", v)
 	}
 }
 
@@ -82,21 +90,25 @@ const (
 	GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnumPasswordNotSet           GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum = "PASSWORD_NOT_SET"
 )
 
+func (e GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum) ToPointer() *GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum {
+	return &e
+}
+
 func (e *GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASSWORD_STATE_UNSPECIFIED":
 		fallthrough
 	case "PASSWORD_SET":
 		fallthrough
 	case "PASSWORD_NOT_SET":
-		*e = GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum(s)
+		*e = GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsCloudidentityDevicesV1DeviceUserPasswordStateEnum: %v", v)
 	}
 }
 

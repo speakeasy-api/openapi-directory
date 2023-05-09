@@ -16,17 +16,21 @@ const (
 	GetSnapshotLimitsXAmzTargetEnumDirectoryService20150416GetSnapshotLimits GetSnapshotLimitsXAmzTargetEnum = "DirectoryService_20150416.GetSnapshotLimits"
 )
 
+func (e GetSnapshotLimitsXAmzTargetEnum) ToPointer() *GetSnapshotLimitsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSnapshotLimitsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.GetSnapshotLimits":
-		*e = GetSnapshotLimitsXAmzTargetEnum(s)
+		*e = GetSnapshotLimitsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSnapshotLimitsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSnapshotLimitsXAmzTargetEnum: %v", v)
 	}
 }
 

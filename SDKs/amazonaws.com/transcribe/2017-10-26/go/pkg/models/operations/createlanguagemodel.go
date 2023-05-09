@@ -16,17 +16,21 @@ const (
 	CreateLanguageModelXAmzTargetEnumTranscribeCreateLanguageModel CreateLanguageModelXAmzTargetEnum = "Transcribe.CreateLanguageModel"
 )
 
+func (e CreateLanguageModelXAmzTargetEnum) ToPointer() *CreateLanguageModelXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateLanguageModelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Transcribe.CreateLanguageModel":
-		*e = CreateLanguageModelXAmzTargetEnum(s)
+		*e = CreateLanguageModelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateLanguageModelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateLanguageModelXAmzTargetEnum: %v", v)
 	}
 }
 

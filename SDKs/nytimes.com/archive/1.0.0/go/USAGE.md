@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,13 +16,11 @@ func main() {
         }),
     )
 
-    req := operations.GetYearMonthJSONRequest{
+    ctx := context.Background()
+    res, err := s.Archive.GetYearMonthJSON(ctx, operations.GetYearMonthJSONRequest{
         Month: 548814,
         Year: 592845,
-    }
-
-    ctx := context.Background()
-    res, err := s.Archive.GetYearMonthJSON(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

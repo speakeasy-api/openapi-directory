@@ -17,12 +17,16 @@ const (
 	BGPPeerStateEnumDeleted   BGPPeerStateEnum = "deleted"
 )
 
+func (e BGPPeerStateEnum) ToPointer() *BGPPeerStateEnum {
+	return &e
+}
+
 func (e *BGPPeerStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "verifying":
 		fallthrough
 	case "pending":
@@ -32,9 +36,9 @@ func (e *BGPPeerStateEnum) UnmarshalJSON(data []byte) error {
 	case "deleting":
 		fallthrough
 	case "deleted":
-		*e = BGPPeerStateEnum(s)
+		*e = BGPPeerStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BGPPeerStateEnum: %s", s)
+		return fmt.Errorf("invalid value for BGPPeerStateEnum: %v", v)
 	}
 }

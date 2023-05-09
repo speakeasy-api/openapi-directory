@@ -2,7 +2,7 @@
 
 package shared
 
-// AreaOfInterest - <p/>
+// AreaOfInterest - The geographic extent of the Earth Observation job.
 type AreaOfInterest struct {
 	AreaOfInterestGeometry *AreaOfInterestGeometry `json:"AreaOfInterestGeometry,omitempty"`
 }

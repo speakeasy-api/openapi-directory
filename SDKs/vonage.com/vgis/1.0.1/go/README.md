@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vonage.com/vgis/1.0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,40 +39,40 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `GetAccount` - Account info
+* [GetAccount](docs/accounts/README.md#getaccount) - Account info
 
-### Calls
+### [Calls](docs/calls/README.md)
 
-* `CallAnswer` - Answer call (On supported devices)
-* `CallHold` - Put call on hold
-* `CallTransfer` - Transfer call
-* `CallUnold` - Unhold
-* `CallVMTransfer` - Send call to voicemail
-* `CreateCall` - Place a call
-* `DestroyCall` - End a call
-* `GetCallsCount` - Get calls count
-* `GetRoles` - Get a call
-* `ListCalls` - List active calls
+* [CallAnswer](docs/calls/README.md#callanswer) - Answer call (On supported devices)
+* [CallHold](docs/calls/README.md#callhold) - Put call on hold
+* [CallTransfer](docs/calls/README.md#calltransfer) - Transfer call
+* [CallUnold](docs/calls/README.md#callunold) - Unhold
+* [CallVMTransfer](docs/calls/README.md#callvmtransfer) - Send call to voicemail
+* [CreateCall](docs/calls/README.md#createcall) - Place a call
+* [DestroyCall](docs/calls/README.md#destroycall) - End a call
+* [GetCallsCount](docs/calls/README.md#getcallscount) - Get calls count
+* [GetRoles](docs/calls/README.md#getroles) - Get a call
+* [ListCalls](docs/calls/README.md#listcalls) - List active calls
 
-### Events
+### [Events](docs/events/README.md)
 
-* `GetEvent` - Get event
-* `GetEventsCount` - Get events count
-* `ListEvents` - List events
+* [GetEvent](docs/events/README.md#getevent) - Get event
+* [GetEventsCount](docs/events/README.md#geteventscount) - Get events count
+* [ListEvents](docs/events/README.md#listevents) - List events
 
-### Users
+### [Users](docs/users/README.md)
 
-* `GetUser` - User info
+* [GetUser](docs/users/README.md#getuser) - User info
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `CreateWebhook` - Create a new webhook subscription
-* `DestroyWebhook` - Remove a web hook
-* `ListWebhooks` - List web hooks
-* `RenewWebhook` - Renews a web hook
-* `ViewWebhook` - Get web hook details
+* [CreateWebhook](docs/webhooks/README.md#createwebhook) - Create a new webhook subscription
+* [DestroyWebhook](docs/webhooks/README.md#destroywebhook) - Remove a web hook
+* [ListWebhooks](docs/webhooks/README.md#listwebhooks) - List web hooks
+* [RenewWebhook](docs/webhooks/README.md#renewwebhook) - Renews a web hook
+* [ViewWebhook](docs/webhooks/README.md#viewwebhook) - Get web hook details
 <!-- End SDK Available Operations -->
 
 ### Maturity

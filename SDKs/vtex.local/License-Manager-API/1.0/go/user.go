@@ -152,7 +152,10 @@ func (s *user) GetListUsers(ctx context.Context, request operations.GetListUsers
 // Allows you to get a user from the database, using the `userId` as the identifier.
 func (s *user) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/license-manager/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

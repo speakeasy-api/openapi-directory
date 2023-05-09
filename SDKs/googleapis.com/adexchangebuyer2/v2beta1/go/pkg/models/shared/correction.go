@@ -25,12 +25,16 @@ const (
 	CorrectionTypeEnumVideoInSnippetAttributeAdded CorrectionTypeEnum = "VIDEO_IN_SNIPPET_ATTRIBUTE_ADDED"
 )
 
+func (e CorrectionTypeEnum) ToPointer() *CorrectionTypeEnum {
+	return &e
+}
+
 func (e *CorrectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CORRECTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "VENDOR_IDS_ADDED":
@@ -54,10 +58,10 @@ func (e *CorrectionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FLASH_ATTRIBUTE_REMOVED":
 		fallthrough
 	case "VIDEO_IN_SNIPPET_ATTRIBUTE_ADDED":
-		*e = CorrectionTypeEnum(s)
+		*e = CorrectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CorrectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CorrectionTypeEnum: %v", v)
 	}
 }
 

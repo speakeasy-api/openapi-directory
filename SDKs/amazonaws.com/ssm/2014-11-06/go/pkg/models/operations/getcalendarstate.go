@@ -16,17 +16,21 @@ const (
 	GetCalendarStateXAmzTargetEnumAmazonSsmGetCalendarState GetCalendarStateXAmzTargetEnum = "AmazonSSM.GetCalendarState"
 )
 
+func (e GetCalendarStateXAmzTargetEnum) ToPointer() *GetCalendarStateXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCalendarStateXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetCalendarState":
-		*e = GetCalendarStateXAmzTargetEnum(s)
+		*e = GetCalendarStateXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCalendarStateXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCalendarStateXAmzTargetEnum: %v", v)
 	}
 }
 

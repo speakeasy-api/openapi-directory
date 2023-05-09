@@ -15,17 +15,21 @@ const (
 	POSTReplaceRouteActionEnumReplaceRoute POSTReplaceRouteActionEnum = "ReplaceRoute"
 )
 
+func (e POSTReplaceRouteActionEnum) ToPointer() *POSTReplaceRouteActionEnum {
+	return &e
+}
+
 func (e *POSTReplaceRouteActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ReplaceRoute":
-		*e = POSTReplaceRouteActionEnum(s)
+		*e = POSTReplaceRouteActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReplaceRouteActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReplaceRouteActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTReplaceRouteVersionEnumTwoThousandAndSixteen1115 POSTReplaceRouteVersionEnum = "2016-11-15"
 )
 
+func (e POSTReplaceRouteVersionEnum) ToPointer() *POSTReplaceRouteVersionEnum {
+	return &e
+}
+
 func (e *POSTReplaceRouteVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTReplaceRouteVersionEnum(s)
+		*e = POSTReplaceRouteVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTReplaceRouteVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTReplaceRouteVersionEnum: %v", v)
 	}
 }
 

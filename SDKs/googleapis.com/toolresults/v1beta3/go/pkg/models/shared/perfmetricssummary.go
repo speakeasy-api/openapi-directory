@@ -17,12 +17,16 @@ const (
 	PerfMetricsSummaryPerfMetricsEnumGraphics                  PerfMetricsSummaryPerfMetricsEnum = "graphics"
 )
 
+func (e PerfMetricsSummaryPerfMetricsEnum) ToPointer() *PerfMetricsSummaryPerfMetricsEnum {
+	return &e
+}
+
 func (e *PerfMetricsSummaryPerfMetricsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "perfMetricTypeUnspecified":
 		fallthrough
 	case "memory":
@@ -32,10 +36,10 @@ func (e *PerfMetricsSummaryPerfMetricsEnum) UnmarshalJSON(data []byte) error {
 	case "network":
 		fallthrough
 	case "graphics":
-		*e = PerfMetricsSummaryPerfMetricsEnum(s)
+		*e = PerfMetricsSummaryPerfMetricsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PerfMetricsSummaryPerfMetricsEnum: %s", s)
+		return fmt.Errorf("invalid value for PerfMetricsSummaryPerfMetricsEnum: %v", v)
 	}
 }
 

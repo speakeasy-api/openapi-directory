@@ -16,21 +16,25 @@ const (
 	AccountPayoutSpeedEnumStandard AccountPayoutSpeedEnum = "STANDARD"
 )
 
+func (e AccountPayoutSpeedEnum) ToPointer() *AccountPayoutSpeedEnum {
+	return &e
+}
+
 func (e *AccountPayoutSpeedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INSTANT":
 		fallthrough
 	case "SAME_DAY":
 		fallthrough
 	case "STANDARD":
-		*e = AccountPayoutSpeedEnum(s)
+		*e = AccountPayoutSpeedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountPayoutSpeedEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountPayoutSpeedEnum: %v", v)
 	}
 }
 

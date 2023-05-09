@@ -16,17 +16,21 @@ const (
 	SearchGameSessionsXAmzTargetEnumGameLiftSearchGameSessions SearchGameSessionsXAmzTargetEnum = "GameLift.SearchGameSessions"
 )
 
+func (e SearchGameSessionsXAmzTargetEnum) ToPointer() *SearchGameSessionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *SearchGameSessionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.SearchGameSessions":
-		*e = SearchGameSessionsXAmzTargetEnum(s)
+		*e = SearchGameSessionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SearchGameSessionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for SearchGameSessionsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -22,8 +23,8 @@ pkg/models/operations/update.go
 pkg/models/operations/createtemplatedesignertemplatespost.go
 pkg/models/operations/deletedesignertemplatesiddelete.go
 pkg/models/operations/generatepdfdesignertemplatesidgeneratepost.go
-pkg/models/operations/listtemplatesdesignertemplatesget.go
 pkg/models/operations/listtemplatesdesignertemplatesidget.go
+pkg/models/operations/listtemplatesdesignertemplatesget.go
 pkg/models/operations/previewdesignertemplatespreviewpost.go
 pkg/models/operations/updatetemplatedesignertemplatesidput.go
 pkg/models/shared/responseoktemplate.go
@@ -43,6 +44,7 @@ pkg/models/shared/updatetemplaterequest.go
 pkg/models/shared/responseokdesignertemplate.go
 pkg/models/shared/designertemplate.go
 pkg/models/shared/orientationenum.go
+pkg/models/shared/margin.go
 pkg/models/shared/formatenum.go
 pkg/models/shared/createorupdatetemplaterequest.go
 pkg/models/shared/generatepdfpayload.go
@@ -51,4 +53,6 @@ pkg/models/shared/responseokpreviewresponse.go
 pkg/models/shared/previewresponse.go
 pkg/models/shared/previewmodel.go
 pkg/models/shared/security.go
+docs/sdk/README.md
+docs/templates/README.md
 USAGE.md

@@ -16,19 +16,23 @@ const (
 	TestFunction20200531RequestBodyStageEnumLive        TestFunction20200531RequestBodyStageEnum = "LIVE"
 )
 
+func (e TestFunction20200531RequestBodyStageEnum) ToPointer() *TestFunction20200531RequestBodyStageEnum {
+	return &e
+}
+
 func (e *TestFunction20200531RequestBodyStageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVELOPMENT":
 		fallthrough
 	case "LIVE":
-		*e = TestFunction20200531RequestBodyStageEnum(s)
+		*e = TestFunction20200531RequestBodyStageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TestFunction20200531RequestBodyStageEnum: %s", s)
+		return fmt.Errorf("invalid value for TestFunction20200531RequestBodyStageEnum: %v", v)
 	}
 }
 

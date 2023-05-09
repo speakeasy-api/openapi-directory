@@ -36,7 +36,10 @@ func newPromotions(defaultClient, securityClient HTTPClient, serverURL, language
 // DeletePromotionsIDJSON - Delete an existing Promotion.
 func (s *promotions) DeletePromotionsIDJSON(ctx context.Context, request operations.DeletePromotionsIDJSONRequest) (*operations.DeletePromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -143,7 +146,10 @@ func (s *promotions) GetPromotionsJSON(ctx context.Context, request operations.G
 // GetPromotionsIDJSON - Retrieve a single Promotion.
 func (s *promotions) GetPromotionsIDJSON(ctx context.Context, request operations.GetPromotionsIDJSONRequest) (*operations.GetPromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -269,7 +275,10 @@ func (s *promotions) PostPromotionsJSON(ctx context.Context, request operations.
 // PutPromotionsIDJSON - Update a Promotion.
 func (s *promotions) PutPromotionsIDJSON(ctx context.Context, request operations.PutPromotionsIDJSONRequest) (*operations.PutPromotionsIDJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/promotions/{id}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PromotionEdit", "json")
 	if err != nil {

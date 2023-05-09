@@ -19,12 +19,16 @@ const (
 	QueryStatusEnumUnknown   QueryStatusEnum = "Unknown"
 )
 
+func (e QueryStatusEnum) ToPointer() *QueryStatusEnum {
+	return &e
+}
+
 func (e *QueryStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Scheduled":
 		fallthrough
 	case "Running":
@@ -38,9 +42,9 @@ func (e *QueryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Timeout":
 		fallthrough
 	case "Unknown":
-		*e = QueryStatusEnum(s)
+		*e = QueryStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for QueryStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for QueryStatusEnum: %v", v)
 	}
 }

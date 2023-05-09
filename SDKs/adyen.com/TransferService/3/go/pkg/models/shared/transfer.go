@@ -27,12 +27,16 @@ const (
 	TransferCategoryEnumPlatformPayment TransferCategoryEnum = "platformPayment"
 )
 
+func (e TransferCategoryEnum) ToPointer() *TransferCategoryEnum {
+	return &e
+}
+
 func (e *TransferCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bank":
 		fallthrough
 	case "internal":
@@ -40,10 +44,10 @@ func (e *TransferCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "issuedCard":
 		fallthrough
 	case "platformPayment":
-		*e = TransferCategoryEnum(s)
+		*e = TransferCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferCategoryEnum: %v", v)
 	}
 }
 
@@ -57,19 +61,23 @@ const (
 	TransferDirectionEnumOutgoing TransferDirectionEnum = "outgoing"
 )
 
+func (e TransferDirectionEnum) ToPointer() *TransferDirectionEnum {
+	return &e
+}
+
 func (e *TransferDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "incoming":
 		fallthrough
 	case "outgoing":
-		*e = TransferDirectionEnum(s)
+		*e = TransferDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferDirectionEnum: %v", v)
 	}
 }
 
@@ -100,12 +108,16 @@ const (
 	TransferPriorityEnumWire        TransferPriorityEnum = "wire"
 )
 
+func (e TransferPriorityEnum) ToPointer() *TransferPriorityEnum {
+	return &e
+}
+
 func (e *TransferPriorityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "crossBorder":
 		fallthrough
 	case "directDebit":
@@ -119,10 +131,10 @@ func (e *TransferPriorityEnum) UnmarshalJSON(data []byte) error {
 	case "regular":
 		fallthrough
 	case "wire":
-		*e = TransferPriorityEnum(s)
+		*e = TransferPriorityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferPriorityEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferPriorityEnum: %v", v)
 	}
 }
 
@@ -130,7 +142,7 @@ func (e *TransferPriorityEnum) UnmarshalJSON(data []byte) error {
 type TransferReasonEnum string
 
 const (
-	TransferReasonEnumAmountLimitExceded          TransferReasonEnum = "amountLimitExceded"
+	TransferReasonEnumAmountLimitExceeded         TransferReasonEnum = "amountLimitExceeded"
 	TransferReasonEnumApproved                    TransferReasonEnum = "approved"
 	TransferReasonEnumCounterpartyAccountBlocked  TransferReasonEnum = "counterpartyAccountBlocked"
 	TransferReasonEnumCounterpartyAccountClosed   TransferReasonEnum = "counterpartyAccountClosed"
@@ -145,13 +157,17 @@ const (
 	TransferReasonEnumUnknown                     TransferReasonEnum = "unknown"
 )
 
+func (e TransferReasonEnum) ToPointer() *TransferReasonEnum {
+	return &e
+}
+
 func (e *TransferReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "amountLimitExceded":
+	switch v {
+	case "amountLimitExceeded":
 		fallthrough
 	case "approved":
 		fallthrough
@@ -176,10 +192,10 @@ func (e *TransferReasonEnum) UnmarshalJSON(data []byte) error {
 	case "routeNotFound":
 		fallthrough
 	case "unknown":
-		*e = TransferReasonEnum(s)
+		*e = TransferReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferReasonEnum: %v", v)
 	}
 }
 
@@ -189,6 +205,7 @@ func (e *TransferReasonEnum) UnmarshalJSON(data []byte) error {
 type TransferStatusEnum string
 
 const (
+	TransferStatusEnumApprovalPending              TransferStatusEnum = "approvalPending"
 	TransferStatusEnumAtmWithdrawal                TransferStatusEnum = "atmWithdrawal"
 	TransferStatusEnumAtmWithdrawalReversalPending TransferStatusEnum = "atmWithdrawalReversalPending"
 	TransferStatusEnumAtmWithdrawalReversed        TransferStatusEnum = "atmWithdrawalReversed"
@@ -251,12 +268,18 @@ const (
 	TransferStatusEnumUndefined                    TransferStatusEnum = "undefined"
 )
 
+func (e TransferStatusEnum) ToPointer() *TransferStatusEnum {
+	return &e
+}
+
 func (e *TransferStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
+	case "approvalPending":
+		fallthrough
 	case "atmWithdrawal":
 		fallthrough
 	case "atmWithdrawalReversalPending":
@@ -376,16 +399,18 @@ func (e *TransferStatusEnum) UnmarshalJSON(data []byte) error {
 	case "secondChargebackPending":
 		fallthrough
 	case "undefined":
-		*e = TransferStatusEnum(s)
+		*e = TransferStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferStatusEnum: %v", v)
 	}
 }
 
 // Transfer - OK - the request has succeeded.
 type Transfer struct {
-	Amount Amount `json:"amount"`
+	AccountHolder  *ResourceReference `json:"accountHolder,omitempty"`
+	Amount         Amount             `json:"amount"`
+	BalanceAccount *ResourceReference `json:"balanceAccount,omitempty"`
 	// The unique identifier of the source [balance account](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id).
 	BalanceAccountID *string `json:"balanceAccountId,omitempty"`
 	// The type of transfer.
@@ -401,15 +426,20 @@ type Transfer struct {
 	// - **platformPayment**: Fund movements related to payments that are acquired for your users.
 	Category     TransferCategoryEnum `json:"category"`
 	Counterparty CounterpartyV3       `json:"counterparty"`
-	// A human-readable description for the transfer. You can use alphanumeric characters and hyphens. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+	// Your description for the transfer. It is used by most banks as the transfer description. We recommend sending a maximum of 140 characters, otherwise the description may be truncated.
+	//
+	// Supported characters: **[a-z] [A-Z] [0-9] / - ?** **: ( ) . , ' + Space**
+	//
+	// Supported characters for **regular** and **fast** transfers to a US counterparty: **[a-z] [A-Z] [0-9] & $ % # @** **~ = + - _ ' " ! ?**
 	Description *string `json:"description,omitempty"`
 	// The direction of the transfer.
 	//
 	// Possible values: **incoming**, **outgoing**.
 	Direction *TransferDirectionEnum `json:"direction,omitempty"`
 	// The ID of the resource.
-	ID *string `json:"id,omitempty"`
-	// The unique identifier of the source [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/paymentInstruments__resParam_id).
+	ID                *string            `json:"id,omitempty"`
+	PaymentInstrument *PaymentInstrument `json:"paymentInstrument,omitempty"`
+	// The unique identifier of the [payment instrument](https://docs.adyen.com/api-explorer/#/balanceplatform/latest/post/balanceAccounts__resParam_id) used in the transfer.
 	PaymentInstrumentID *string `json:"paymentInstrumentId,omitempty"`
 	// The priority for the bank transfer. This sets the speed at which the transfer is sent and the fees that you have to pay. Required for transfers with `category` **bank**.
 	//

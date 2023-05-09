@@ -20,12 +20,16 @@ const (
 	ClassificationAttributesTypeEnumMediaRating       ClassificationAttributesTypeEnum = "MediaRating"
 )
 
+func (e ClassificationAttributesTypeEnum) ToPointer() *ClassificationAttributesTypeEnum {
+	return &e
+}
+
 func (e *ClassificationAttributesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AlternateFeedType":
 		fallthrough
 	case "Genre":
@@ -35,10 +39,10 @@ func (e *ClassificationAttributesTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Language":
 		fallthrough
 	case "MediaRating":
-		*e = ClassificationAttributesTypeEnum(s)
+		*e = ClassificationAttributesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClassificationAttributesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClassificationAttributesTypeEnum: %v", v)
 	}
 }
 

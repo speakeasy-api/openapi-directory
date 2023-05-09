@@ -82,7 +82,7 @@ func (s *partner) Getmeasure(ctx context.Context, request operations.GetmeasureR
 }
 
 // Partnerdevices - The method partnerdevices returns the list of device_id to which your partner application has access to.
-func (s *partner) Partnerdevices(ctx context.Context) (*operations.PartnerdevicesResponse, error) {
+func (s *partner) Partnerdevices(ctx context.Context, security operations.PartnerdevicesSecurity) (*operations.PartnerdevicesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/partnerdevices"
 
@@ -91,7 +91,7 @@ func (s *partner) Partnerdevices(ctx context.Context) (*operations.Partnerdevice
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

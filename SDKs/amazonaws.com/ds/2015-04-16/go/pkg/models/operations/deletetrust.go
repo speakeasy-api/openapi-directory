@@ -16,17 +16,21 @@ const (
 	DeleteTrustXAmzTargetEnumDirectoryService20150416DeleteTrust DeleteTrustXAmzTargetEnum = "DirectoryService_20150416.DeleteTrust"
 )
 
+func (e DeleteTrustXAmzTargetEnum) ToPointer() *DeleteTrustXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteTrustXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.DeleteTrust":
-		*e = DeleteTrustXAmzTargetEnum(s)
+		*e = DeleteTrustXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteTrustXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteTrustXAmzTargetEnum: %v", v)
 	}
 }
 

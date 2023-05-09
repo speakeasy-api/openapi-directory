@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nexmo.com/numbers/1.0.20/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,14 +28,12 @@ func main() {
         }),
     )
 
-    req := shared.NumberDetails{
+    ctx := context.Background()
+    res, err := s.BuyANumber(ctx, shared.NumberDetails{
         Country: "GB",
         Msisdn: "447700900000",
-        TargetAPIKey: "1a2345b7",
-    }
-
-    ctx := context.Background()
-    res, err := s.BuyANumber(ctx, req)
+        TargetAPIKey: sdk.String("1a2345b7"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -51,13 +48,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `BuyANumber` - Buy a number
-* `CancelANumber` - Cancel a number
-* `GetAvailableNumbers` - Search available numbers
-* `GetOwnedNumbers` - List the numbers you own
-* `UpdateANumber` - Update a number
+* [BuyANumber](docs/sdk/README.md#buyanumber) - Buy a number
+* [CancelANumber](docs/sdk/README.md#cancelanumber) - Cancel a number
+* [GetAvailableNumbers](docs/sdk/README.md#getavailablenumbers) - Search available numbers
+* [GetOwnedNumbers](docs/sdk/README.md#getownednumbers) - List the numbers you own
+* [UpdateANumber](docs/sdk/README.md#updateanumber) - Update a number
 <!-- End SDK Available Operations -->
 
 ### Maturity

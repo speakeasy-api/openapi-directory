@@ -15,17 +15,21 @@ const (
 	GETSignalResourceActionEnumSignalResource GETSignalResourceActionEnum = "SignalResource"
 )
 
+func (e GETSignalResourceActionEnum) ToPointer() *GETSignalResourceActionEnum {
+	return &e
+}
+
 func (e *GETSignalResourceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SignalResource":
-		*e = GETSignalResourceActionEnum(s)
+		*e = GETSignalResourceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSignalResourceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSignalResourceActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETSignalResourceStatusEnumFailure GETSignalResourceStatusEnum = "FAILURE"
 )
 
+func (e GETSignalResourceStatusEnum) ToPointer() *GETSignalResourceStatusEnum {
+	return &e
+}
+
 func (e *GETSignalResourceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "FAILURE":
-		*e = GETSignalResourceStatusEnum(s)
+		*e = GETSignalResourceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSignalResourceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSignalResourceStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETSignalResourceVersionEnumTwoThousandAndTen0515 GETSignalResourceVersionEnum = "2010-05-15"
 )
 
+func (e GETSignalResourceVersionEnum) ToPointer() *GETSignalResourceVersionEnum {
+	return &e
+}
+
 func (e *GETSignalResourceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETSignalResourceVersionEnum(s)
+		*e = GETSignalResourceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSignalResourceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSignalResourceVersionEnum: %v", v)
 	}
 }
 

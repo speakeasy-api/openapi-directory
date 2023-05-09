@@ -16,12 +16,16 @@ const (
 	UIDEnumBoth     UIDEnum = "BOTH"
 )
 
+func (e UIDEnum) ToPointer() *UIDEnum {
+	return &e
+}
+
 func (e *UIDEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "INT_VALUE":
@@ -29,9 +33,9 @@ func (e *UIDEnum) UnmarshalJSON(data []byte) error {
 	case "NAME":
 		fallthrough
 	case "BOTH":
-		*e = UIDEnum(s)
+		*e = UIDEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UIDEnum: %s", s)
+		return fmt.Errorf("invalid value for UIDEnum: %v", v)
 	}
 }

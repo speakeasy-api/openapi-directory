@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/cfb-v3-scor
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreGamesInProgressRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.AreGamesInProgress(ctx, req)
+    res, err := s.AreGamesInProgress(ctx, operations.AreGamesInProgressRequest{
+        Format: operations.AreGamesInProgressFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,26 +45,30 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreGamesInProgress` - Are Games In Progress
-* `ConferenceHierarchyWithTeams` - Conference Hierarchy (with Teams)
-* `CurrentSeason` - Current Season
-* `CurrentSeasonDetails` - Current Season Details
-* `CurrentSeasontype` - Current SeasonType
-* `CurrentWeek` - Current Week
-* `GamesByDate` - Games by Date
-* `GamesByWeek` - Games by Week
-* `InjuredPlayers` - Injured Players
-* `PlayerDetailsByActive` - Player Details By Active
-* `PlayerDetailsByPlayer` - Player Details By Player
-* `PlayerDetailsByTeam` - Player Details by Team
-* `Schedules` - Schedules
-* `Stadiums` - Stadiums
-* `TeamGameLogsBySeason` - Team Game Logs By Season
-* `TeamGameStatsByWeek` - Team Game Stats by Week
-* `TeamSeasonStatsStandings` - Team Season Stats & Standings
-* `Teams` - Teams
+* [AreGamesInProgress](docs/sdk/README.md#aregamesinprogress) - Are Games In Progress
+* [ConferenceHierarchyWithTeams](docs/sdk/README.md#conferencehierarchywithteams) - Conference Hierarchy (with Teams)
+* [CurrentSeason](docs/sdk/README.md#currentseason) - Current Season
+* [CurrentSeasonDetails](docs/sdk/README.md#currentseasondetails) - Current Season Details
+* [CurrentSeasontype](docs/sdk/README.md#currentseasontype) - Current SeasonType
+* [CurrentWeek](docs/sdk/README.md#currentweek) - Current Week
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [GamesByWeek](docs/sdk/README.md#gamesbyweek) - Games by Week
+* [GamesByWeekBasic](docs/sdk/README.md#gamesbyweekbasic) - Games by Week (Basic)
+* [InjuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [PlayerDetailsByActive](docs/sdk/README.md#playerdetailsbyactive) - Player Details By Active
+* [PlayerDetailsByPlayer](docs/sdk/README.md#playerdetailsbyplayer) - Player Details By Player
+* [PlayerDetailsByTeam](docs/sdk/README.md#playerdetailsbyteam) - Player Details by Team
+* [PlayersByTeamBasic](docs/sdk/README.md#playersbyteambasic) - Players by Team (Basic)
+* [Schedules](docs/sdk/README.md#schedules) - Schedules
+* [SchedulesBasic](docs/sdk/README.md#schedulesbasic) - Schedules (Basic)
+* [Stadiums](docs/sdk/README.md#stadiums) - Stadiums
+* [TeamGameLogsBySeason](docs/sdk/README.md#teamgamelogsbyseason) - Team Game Logs By Season
+* [TeamGameStatsByWeek](docs/sdk/README.md#teamgamestatsbyweek) - Team Game Stats by Week
+* [TeamSeasonStatsStandings](docs/sdk/README.md#teamseasonstatsstandings) - Team Season Stats & Standings
+* [Teams](docs/sdk/README.md#teams) - Teams
+* [TeamsBasic](docs/sdk/README.md#teamsbasic) - Teams (Basic)
 <!-- End SDK Available Operations -->
 
 ### Maturity

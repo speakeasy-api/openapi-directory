@@ -34,7 +34,10 @@ func newTasks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // TaskAdd - Adds a task to the specified job.
 func (s *tasks) TaskAdd(ctx context.Context, request operations.TaskAddRequest) (*operations.TaskAddResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskAddParameter", "json")
 	if err != nil {
@@ -97,7 +100,10 @@ func (s *tasks) TaskAdd(ctx context.Context, request operations.TaskAddRequest) 
 // TaskDelete - Deletes a task from the specified job.
 func (s *tasks) TaskDelete(ctx context.Context, request operations.TaskDeleteRequest) (*operations.TaskDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +156,10 @@ func (s *tasks) TaskDelete(ctx context.Context, request operations.TaskDeleteReq
 // TaskGet - Gets information about the specified task.
 func (s *tasks) TaskGet(ctx context.Context, request operations.TaskGetRequest) (*operations.TaskGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -212,7 +221,10 @@ func (s *tasks) TaskGet(ctx context.Context, request operations.TaskGetRequest) 
 // TaskList - Lists all of the tasks that are associated with the specified job.
 func (s *tasks) TaskList(ctx context.Context, request operations.TaskListRequest) (*operations.TaskListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -274,7 +286,10 @@ func (s *tasks) TaskList(ctx context.Context, request operations.TaskListRequest
 // TaskListSubtasks - Lists all of the subtasks that are associated with the specified multi-instance task.
 func (s *tasks) TaskListSubtasks(ctx context.Context, request operations.TaskListSubtasksRequest) (*operations.TaskListSubtasksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/subtasksinfo", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/subtasksinfo", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +351,10 @@ func (s *tasks) TaskListSubtasks(ctx context.Context, request operations.TaskLis
 // TaskTerminate - Terminates the specified task.
 func (s *tasks) TaskTerminate(ctx context.Context, request operations.TaskTerminateRequest) (*operations.TaskTerminateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/terminate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}/terminate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -389,7 +407,10 @@ func (s *tasks) TaskTerminate(ctx context.Context, request operations.TaskTermin
 // TaskUpdate - Updates the properties of the specified task.
 func (s *tasks) TaskUpdate(ctx context.Context, request operations.TaskUpdateRequest) (*operations.TaskUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/jobs/{jobId}/tasks/{taskId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TaskUpdateParameter", "json")
 	if err != nil {

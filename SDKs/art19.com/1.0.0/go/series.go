@@ -103,7 +103,10 @@ func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequ
 // GetSeriesID - Get a specific series
 func (s *series) GetSeriesID(ctx context.Context, request operations.GetSeriesIDRequest, security operations.GetSeriesIDSecurity) (*operations.GetSeriesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/series/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/series/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

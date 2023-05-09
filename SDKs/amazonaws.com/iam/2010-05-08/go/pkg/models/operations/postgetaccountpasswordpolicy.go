@@ -15,17 +15,21 @@ const (
 	POSTGetAccountPasswordPolicyActionEnumGetAccountPasswordPolicy POSTGetAccountPasswordPolicyActionEnum = "GetAccountPasswordPolicy"
 )
 
+func (e POSTGetAccountPasswordPolicyActionEnum) ToPointer() *POSTGetAccountPasswordPolicyActionEnum {
+	return &e
+}
+
 func (e *POSTGetAccountPasswordPolicyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetAccountPasswordPolicy":
-		*e = POSTGetAccountPasswordPolicyActionEnum(s)
+		*e = POSTGetAccountPasswordPolicyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccountPasswordPolicyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccountPasswordPolicyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetAccountPasswordPolicyVersionEnumTwoThousandAndTen0508 POSTGetAccountPasswordPolicyVersionEnum = "2010-05-08"
 )
 
+func (e POSTGetAccountPasswordPolicyVersionEnum) ToPointer() *POSTGetAccountPasswordPolicyVersionEnum {
+	return &e
+}
+
 func (e *POSTGetAccountPasswordPolicyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTGetAccountPasswordPolicyVersionEnum(s)
+		*e = POSTGetAccountPasswordPolicyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetAccountPasswordPolicyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetAccountPasswordPolicyVersionEnum: %v", v)
 	}
 }
 

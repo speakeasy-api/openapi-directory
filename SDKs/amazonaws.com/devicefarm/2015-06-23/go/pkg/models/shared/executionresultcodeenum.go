@@ -14,18 +14,22 @@ const (
 	ExecutionResultCodeEnumVpcEndpointSetupFailed ExecutionResultCodeEnum = "VPC_ENDPOINT_SETUP_FAILED"
 )
 
+func (e ExecutionResultCodeEnum) ToPointer() *ExecutionResultCodeEnum {
+	return &e
+}
+
 func (e *ExecutionResultCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PARSING_FAILED":
 		fallthrough
 	case "VPC_ENDPOINT_SETUP_FAILED":
-		*e = ExecutionResultCodeEnum(s)
+		*e = ExecutionResultCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExecutionResultCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ExecutionResultCodeEnum: %v", v)
 	}
 }

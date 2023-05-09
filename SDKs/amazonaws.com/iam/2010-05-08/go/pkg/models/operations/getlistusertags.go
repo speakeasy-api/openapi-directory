@@ -15,17 +15,21 @@ const (
 	GETListUserTagsActionEnumListUserTags GETListUserTagsActionEnum = "ListUserTags"
 )
 
+func (e GETListUserTagsActionEnum) ToPointer() *GETListUserTagsActionEnum {
+	return &e
+}
+
 func (e *GETListUserTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListUserTags":
-		*e = GETListUserTagsActionEnum(s)
+		*e = GETListUserTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListUserTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListUserTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListUserTagsVersionEnumTwoThousandAndTen0508 GETListUserTagsVersionEnum = "2010-05-08"
 )
 
+func (e GETListUserTagsVersionEnum) ToPointer() *GETListUserTagsVersionEnum {
+	return &e
+}
+
 func (e *GETListUserTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListUserTagsVersionEnum(s)
+		*e = GETListUserTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListUserTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListUserTagsVersionEnum: %v", v)
 	}
 }
 

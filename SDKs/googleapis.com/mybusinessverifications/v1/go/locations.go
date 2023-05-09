@@ -34,7 +34,10 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 // MybusinessverificationsLocationsFetchVerificationOptions - Reports all eligible verification options for a location in a specific language.
 func (s *locations) MybusinessverificationsLocationsFetchVerificationOptions(ctx context.Context, request operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest) (*operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}:fetchVerificationOptions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{location}:fetchVerificationOptions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FetchVerificationOptionsRequest", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *locations) MybusinessverificationsLocationsFetchVerificationOptions(ctx
 // MybusinessverificationsLocationsGetVoiceOfMerchantState - Gets the VoiceOfMerchant state.
 func (s *locations) MybusinessverificationsLocationsGetVoiceOfMerchantState(ctx context.Context, request operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateRequest) (*operations.MybusinessverificationsLocationsGetVoiceOfMerchantStateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/VoiceOfMerchantState", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/VoiceOfMerchantState", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *locations) MybusinessverificationsLocationsGetVoiceOfMerchantState(ctx 
 // MybusinessverificationsLocationsVerificationsComplete - Completes a `PENDING` verification. It is only necessary for non `AUTO` verification methods. `AUTO` verification request is instantly `VERIFIED` upon creation.
 func (s *locations) MybusinessverificationsLocationsVerificationsComplete(ctx context.Context, request operations.MybusinessverificationsLocationsVerificationsCompleteRequest) (*operations.MybusinessverificationsLocationsVerificationsCompleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:complete", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:complete", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompleteVerificationRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *locations) MybusinessverificationsLocationsVerificationsComplete(ctx co
 // MybusinessverificationsLocationsVerificationsList - List verifications of a location, ordered by create time.
 func (s *locations) MybusinessverificationsLocationsVerificationsList(ctx context.Context, request operations.MybusinessverificationsLocationsVerificationsListRequest) (*operations.MybusinessverificationsLocationsVerificationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/verifications", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/verifications", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *locations) MybusinessverificationsLocationsVerificationsList(ctx contex
 // MybusinessverificationsLocationsVerify - Starts the verification process for a location.
 func (s *locations) MybusinessverificationsLocationsVerify(ctx context.Context, request operations.MybusinessverificationsLocationsVerifyRequest) (*operations.MybusinessverificationsLocationsVerifyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:verify", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:verify", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyLocationRequest", "json")
 	if err != nil {

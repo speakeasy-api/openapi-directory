@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnumOgg                    GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum = "OGG"
 )
 
+func (e GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum) ToPointer() *GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIO_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "MULAW":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormat
 	case "MP3":
 		fallthrough
 	case "OGG":
-		*e = GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum(s)
+		*e = GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettingsAudioFormatEnum: %v", v)
 	}
 }
 

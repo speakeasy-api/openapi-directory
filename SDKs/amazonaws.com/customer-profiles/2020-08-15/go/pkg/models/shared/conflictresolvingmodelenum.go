@@ -14,18 +14,22 @@ const (
 	ConflictResolvingModelEnumSource  ConflictResolvingModelEnum = "SOURCE"
 )
 
+func (e ConflictResolvingModelEnum) ToPointer() *ConflictResolvingModelEnum {
+	return &e
+}
+
 func (e *ConflictResolvingModelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RECENCY":
 		fallthrough
 	case "SOURCE":
-		*e = ConflictResolvingModelEnum(s)
+		*e = ConflictResolvingModelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConflictResolvingModelEnum: %s", s)
+		return fmt.Errorf("invalid value for ConflictResolvingModelEnum: %v", v)
 	}
 }

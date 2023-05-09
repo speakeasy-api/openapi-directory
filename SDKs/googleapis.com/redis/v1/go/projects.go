@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // RedisProjectsLocationsInstancesCreate - Creates a Redis instance based on the specified tier and memory size. By default, the instance is accessible from the project's [default network](https://cloud.google.com/vpc/docs/vpc). The creation is executed asynchronously and callers may check the returned operation to track its progress. Once the operation is completed the Redis instance will be fully functional. Completed longrunning.Operation will contain the new instance object in the response field. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
 func (s *projects) RedisProjectsLocationsInstancesCreate(ctx context.Context, request operations.RedisProjectsLocationsInstancesCreateRequest, security operations.RedisProjectsLocationsInstancesCreateSecurity) (*operations.RedisProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) RedisProjectsLocationsInstancesCreate(ctx context.Context, re
 // RedisProjectsLocationsInstancesExport - Export Redis instance data into a Redis RDB format file in Cloud Storage. Redis will continue serving during this operation. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
 func (s *projects) RedisProjectsLocationsInstancesExport(ctx context.Context, request operations.RedisProjectsLocationsInstancesExportRequest, security operations.RedisProjectsLocationsInstancesExportSecurity) (*operations.RedisProjectsLocationsInstancesExportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:export", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:export", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ExportInstanceRequest", "json")
 	if err != nil {
@@ -144,7 +150,10 @@ func (s *projects) RedisProjectsLocationsInstancesExport(ctx context.Context, re
 // RedisProjectsLocationsInstancesFailover - Initiates a failover of the primary node to current replica node for a specific STANDARD tier Cloud Memorystore for Redis instance.
 func (s *projects) RedisProjectsLocationsInstancesFailover(ctx context.Context, request operations.RedisProjectsLocationsInstancesFailoverRequest, security operations.RedisProjectsLocationsInstancesFailoverSecurity) (*operations.RedisProjectsLocationsInstancesFailoverResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:failover", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:failover", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "FailoverInstanceRequest", "json")
 	if err != nil {
@@ -199,7 +208,10 @@ func (s *projects) RedisProjectsLocationsInstancesFailover(ctx context.Context, 
 // RedisProjectsLocationsInstancesGetAuthString - Gets the AUTH string for a Redis instance. If AUTH is not enabled for the instance the response will be empty. This information is not included in the details returned to GetInstance.
 func (s *projects) RedisProjectsLocationsInstancesGetAuthString(ctx context.Context, request operations.RedisProjectsLocationsInstancesGetAuthStringRequest, security operations.RedisProjectsLocationsInstancesGetAuthStringSecurity) (*operations.RedisProjectsLocationsInstancesGetAuthStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/authString", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/authString", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) RedisProjectsLocationsInstancesGetAuthString(ctx context.Cont
 // RedisProjectsLocationsInstancesImport - Import a Redis RDB snapshot file from Cloud Storage into a Redis instance. Redis may stop serving during this operation. Instance state will be IMPORTING for entire operation. When complete, the instance will contain only data from the imported file. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
 func (s *projects) RedisProjectsLocationsInstancesImport(ctx context.Context, request operations.RedisProjectsLocationsInstancesImportRequest, security operations.RedisProjectsLocationsInstancesImportSecurity) (*operations.RedisProjectsLocationsInstancesImportResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:import", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:import", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ImportInstanceRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) RedisProjectsLocationsInstancesImport(ctx context.Context, re
 // RedisProjectsLocationsInstancesList - Lists all Redis instances owned by a project in either the specified location (region) or all locations. The location should have the following format: * `projects/{project_id}/locations/{location_id}` If `location_id` is specified as `-` (wildcard), then all regions available to the project are queried, and the results are aggregated.
 func (s *projects) RedisProjectsLocationsInstancesList(ctx context.Context, request operations.RedisProjectsLocationsInstancesListRequest, security operations.RedisProjectsLocationsInstancesListSecurity) (*operations.RedisProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) RedisProjectsLocationsInstancesList(ctx context.Context, requ
 // RedisProjectsLocationsInstancesPatch - Updates the metadata and configuration of a specific Redis instance. Completed longrunning.Operation will contain the new instance object in the response field. The returned operation is automatically deleted after a few hours, so there is no need to call DeleteOperation.
 func (s *projects) RedisProjectsLocationsInstancesPatch(ctx context.Context, request operations.RedisProjectsLocationsInstancesPatchRequest, security operations.RedisProjectsLocationsInstancesPatchSecurity) (*operations.RedisProjectsLocationsInstancesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) RedisProjectsLocationsInstancesPatch(ctx context.Context, req
 // RedisProjectsLocationsInstancesRescheduleMaintenance - Reschedule maintenance for a given instance in a given project and location.
 func (s *projects) RedisProjectsLocationsInstancesRescheduleMaintenance(ctx context.Context, request operations.RedisProjectsLocationsInstancesRescheduleMaintenanceRequest, security operations.RedisProjectsLocationsInstancesRescheduleMaintenanceSecurity) (*operations.RedisProjectsLocationsInstancesRescheduleMaintenanceResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rescheduleMaintenance", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:rescheduleMaintenance", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RescheduleMaintenanceRequest", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) RedisProjectsLocationsInstancesRescheduleMaintenance(ctx cont
 // RedisProjectsLocationsInstancesUpgrade - Upgrades Redis instance to the newer Redis version specified in the request.
 func (s *projects) RedisProjectsLocationsInstancesUpgrade(ctx context.Context, request operations.RedisProjectsLocationsInstancesUpgradeRequest, security operations.RedisProjectsLocationsInstancesUpgradeSecurity) (*operations.RedisProjectsLocationsInstancesUpgradeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgrade", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:upgrade", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpgradeInstanceRequest", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) RedisProjectsLocationsInstancesUpgrade(ctx context.Context, r
 // RedisProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) RedisProjectsLocationsList(ctx context.Context, request operations.RedisProjectsLocationsListRequest, security operations.RedisProjectsLocationsListSecurity) (*operations.RedisProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) RedisProjectsLocationsList(ctx context.Context, request opera
 // RedisProjectsLocationsOperationsCancel - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 func (s *projects) RedisProjectsLocationsOperationsCancel(ctx context.Context, request operations.RedisProjectsLocationsOperationsCancelRequest, security operations.RedisProjectsLocationsOperationsCancelSecurity) (*operations.RedisProjectsLocationsOperationsCancelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) RedisProjectsLocationsOperationsCancel(ctx context.Context, r
 // RedisProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) RedisProjectsLocationsOperationsDelete(ctx context.Context, request operations.RedisProjectsLocationsOperationsDeleteRequest, security operations.RedisProjectsLocationsOperationsDeleteSecurity) (*operations.RedisProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) RedisProjectsLocationsOperationsDelete(ctx context.Context, r
 // RedisProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) RedisProjectsLocationsOperationsGet(ctx context.Context, request operations.RedisProjectsLocationsOperationsGetRequest, security operations.RedisProjectsLocationsOperationsGetSecurity) (*operations.RedisProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -707,7 +746,10 @@ func (s *projects) RedisProjectsLocationsOperationsGet(ctx context.Context, requ
 // RedisProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) RedisProjectsLocationsOperationsList(ctx context.Context, request operations.RedisProjectsLocationsOperationsListRequest, security operations.RedisProjectsLocationsOperationsListSecurity) (*operations.RedisProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

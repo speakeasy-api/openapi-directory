@@ -23,12 +23,16 @@ const (
 	LayoutTextSegmentTypeEnumTableCell                  LayoutTextSegmentTypeEnum = "TABLE_CELL"
 )
 
+func (e LayoutTextSegmentTypeEnum) ToPointer() *LayoutTextSegmentTypeEnum {
+	return &e
+}
+
 func (e *LayoutTextSegmentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TEXT_SEGMENT_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TOKEN":
@@ -48,10 +52,10 @@ func (e *LayoutTextSegmentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TABLE_ROW":
 		fallthrough
 	case "TABLE_CELL":
-		*e = LayoutTextSegmentTypeEnum(s)
+		*e = LayoutTextSegmentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LayoutTextSegmentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LayoutTextSegmentTypeEnum: %v", v)
 	}
 }
 

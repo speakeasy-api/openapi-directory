@@ -17,12 +17,16 @@ const (
 	AppStatusEnumPending   AppStatusEnum = "Pending"
 )
 
+func (e AppStatusEnum) ToPointer() *AppStatusEnum {
+	return &e
+}
+
 func (e *AppStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Deleted":
 		fallthrough
 	case "Deleting":
@@ -32,9 +36,9 @@ func (e *AppStatusEnum) UnmarshalJSON(data []byte) error {
 	case "InService":
 		fallthrough
 	case "Pending":
-		*e = AppStatusEnum(s)
+		*e = AppStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AppStatusEnum: %v", v)
 	}
 }

@@ -19,12 +19,16 @@ const (
 	TransferableEnumPremiumDomain          TransferableEnum = "PREMIUM_DOMAIN"
 )
 
+func (e TransferableEnum) ToPointer() *TransferableEnum {
+	return &e
+}
+
 func (e *TransferableEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFERABLE":
 		fallthrough
 	case "UNTRANSFERABLE":
@@ -36,9 +40,9 @@ func (e *TransferableEnum) UnmarshalJSON(data []byte) error {
 	case "DOMAIN_IN_ANOTHER_ACCOUNT":
 		fallthrough
 	case "PREMIUM_DOMAIN":
-		*e = TransferableEnum(s)
+		*e = TransferableEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransferableEnum: %s", s)
+		return fmt.Errorf("invalid value for TransferableEnum: %v", v)
 	}
 }

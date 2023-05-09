@@ -13,17 +13,21 @@ const (
 	BoundaryTypeEnumFeature BoundaryTypeEnum = "Feature"
 )
 
+func (e BoundaryTypeEnum) ToPointer() *BoundaryTypeEnum {
+	return &e
+}
+
 func (e *BoundaryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Feature":
-		*e = BoundaryTypeEnum(s)
+		*e = BoundaryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BoundaryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BoundaryTypeEnum: %v", v)
 	}
 }
 

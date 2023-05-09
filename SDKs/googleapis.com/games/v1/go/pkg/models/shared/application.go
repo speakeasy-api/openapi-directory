@@ -14,19 +14,23 @@ const (
 	ApplicationEnabledFeaturesEnumSnapshots                     ApplicationEnabledFeaturesEnum = "SNAPSHOTS"
 )
 
+func (e ApplicationEnabledFeaturesEnum) ToPointer() *ApplicationEnabledFeaturesEnum {
+	return &e
+}
+
 func (e *ApplicationEnabledFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "APPLICATION_FEATURE_UNSPECIFIED":
 		fallthrough
 	case "SNAPSHOTS":
-		*e = ApplicationEnabledFeaturesEnum(s)
+		*e = ApplicationEnabledFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ApplicationEnabledFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for ApplicationEnabledFeaturesEnum: %v", v)
 	}
 }
 

@@ -24,21 +24,25 @@ const (
 	ContactsCreateJSONMergeStrategyEnumRemove ContactsCreateJSONMergeStrategyEnum = "remove"
 )
 
+func (e ContactsCreateJSONMergeStrategyEnum) ToPointer() *ContactsCreateJSONMergeStrategyEnum {
+	return &e
+}
+
 func (e *ContactsCreateJSONMergeStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "append":
 		fallthrough
 	case "core":
 		fallthrough
 	case "remove":
-		*e = ContactsCreateJSONMergeStrategyEnum(s)
+		*e = ContactsCreateJSONMergeStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactsCreateJSONMergeStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactsCreateJSONMergeStrategyEnum: %v", v)
 	}
 }
 

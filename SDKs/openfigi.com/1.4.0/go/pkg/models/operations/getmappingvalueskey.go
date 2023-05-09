@@ -21,12 +21,16 @@ const (
 	GetMappingValuesKeyKeyEnumSecurityType2 GetMappingValuesKeyKeyEnum = "securityType2"
 )
 
+func (e GetMappingValuesKeyKeyEnum) ToPointer() *GetMappingValuesKeyKeyEnum {
+	return &e
+}
+
 func (e *GetMappingValuesKeyKeyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idType":
 		fallthrough
 	case "exchCode":
@@ -40,10 +44,10 @@ func (e *GetMappingValuesKeyKeyEnum) UnmarshalJSON(data []byte) error {
 	case "securityType":
 		fallthrough
 	case "securityType2":
-		*e = GetMappingValuesKeyKeyEnum(s)
+		*e = GetMappingValuesKeyKeyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetMappingValuesKeyKeyEnum: %s", s)
+		return fmt.Errorf("invalid value for GetMappingValuesKeyKeyEnum: %v", v)
 	}
 }
 

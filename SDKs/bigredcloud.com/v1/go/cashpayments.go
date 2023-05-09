@@ -35,7 +35,10 @@ func newCashPayments(defaultClient, securityClient HTTPClient, serverURL, langua
 // CashPaymentsDelete - Removes an existing Cash Payment.
 func (s *cashPayments) CashPaymentsDelete(ctx context.Context, request operations.CashPaymentsDeleteRequest) (*operations.CashPaymentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +240,10 @@ func (s *cashPayments) CashPaymentsProcessBatch(ctx context.Context, request []s
 // CashPaymentsPut - Updates an existing Cash Payment.
 func (s *cashPayments) CashPaymentsPut(ctx context.Context, request operations.CashPaymentsPutRequest) (*operations.CashPaymentsPutResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CashPaymentDto", "json")
 	if err != nil {
@@ -291,7 +297,10 @@ func (s *cashPayments) CashPaymentsPut(ctx context.Context, request operations.C
 // GetV1CashPaymentsID - Returns information about a single Cash Payment.
 func (s *cashPayments) GetV1CashPaymentsID(ctx context.Context, request operations.GetV1CashPaymentsIDRequest) (*operations.GetV1CashPaymentsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/cashPayments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

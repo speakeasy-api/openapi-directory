@@ -25,12 +25,16 @@ const (
 	ListBatchJobExecutionsStatusEnumSucceededWithWarning ListBatchJobExecutionsStatusEnum = "Succeeded With Warning"
 )
 
+func (e ListBatchJobExecutionsStatusEnum) ToPointer() *ListBatchJobExecutionsStatusEnum {
+	return &e
+}
+
 func (e *ListBatchJobExecutionsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Submitting":
 		fallthrough
 	case "Holding":
@@ -48,10 +52,10 @@ func (e *ListBatchJobExecutionsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Succeeded With Warning":
-		*e = ListBatchJobExecutionsStatusEnum(s)
+		*e = ListBatchJobExecutionsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListBatchJobExecutionsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListBatchJobExecutionsStatusEnum: %v", v)
 	}
 }
 

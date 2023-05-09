@@ -21,12 +21,16 @@ const (
 	InstanceStateEnumShutdown         InstanceStateEnum = "SHUTDOWN"
 )
 
+func (e InstanceStateEnum) ToPointer() *InstanceStateEnum {
+	return &e
+}
+
 func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PROVISIONING":
@@ -42,10 +46,10 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "SHUTDOWN":
-		*e = InstanceStateEnum(s)
+		*e = InstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceStateEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	InstanceWorkloadProfileEnumWorkloadProfileHana        InstanceWorkloadProfileEnum = "WORKLOAD_PROFILE_HANA"
 )
 
+func (e InstanceWorkloadProfileEnum) ToPointer() *InstanceWorkloadProfileEnum {
+	return &e
+}
+
 func (e *InstanceWorkloadProfileEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WORKLOAD_PROFILE_UNSPECIFIED":
 		fallthrough
 	case "WORKLOAD_PROFILE_GENERIC":
 		fallthrough
 	case "WORKLOAD_PROFILE_HANA":
-		*e = InstanceWorkloadProfileEnum(s)
+		*e = InstanceWorkloadProfileEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InstanceWorkloadProfileEnum: %s", s)
+		return fmt.Errorf("invalid value for InstanceWorkloadProfileEnum: %v", v)
 	}
 }
 

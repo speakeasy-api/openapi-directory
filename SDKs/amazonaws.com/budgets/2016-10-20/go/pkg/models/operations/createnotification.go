@@ -16,17 +16,21 @@ const (
 	CreateNotificationXAmzTargetEnumAwsBudgetServiceGatewayCreateNotification CreateNotificationXAmzTargetEnum = "AWSBudgetServiceGateway.CreateNotification"
 )
 
+func (e CreateNotificationXAmzTargetEnum) ToPointer() *CreateNotificationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateNotificationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSBudgetServiceGateway.CreateNotification":
-		*e = CreateNotificationXAmzTargetEnum(s)
+		*e = CreateNotificationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateNotificationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateNotificationXAmzTargetEnum: %v", v)
 	}
 }
 

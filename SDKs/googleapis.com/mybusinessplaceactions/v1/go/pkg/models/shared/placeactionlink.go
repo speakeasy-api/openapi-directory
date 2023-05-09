@@ -21,12 +21,16 @@ const (
 	PlaceActionLinkPlaceActionTypeEnumShopOnline                 PlaceActionLinkPlaceActionTypeEnum = "SHOP_ONLINE"
 )
 
+func (e PlaceActionLinkPlaceActionTypeEnum) ToPointer() *PlaceActionLinkPlaceActionTypeEnum {
+	return &e
+}
+
 func (e *PlaceActionLinkPlaceActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLACE_ACTION_TYPE_UNSPECIFIED":
 		fallthrough
 	case "APPOINTMENT":
@@ -42,10 +46,10 @@ func (e *PlaceActionLinkPlaceActionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "FOOD_TAKEOUT":
 		fallthrough
 	case "SHOP_ONLINE":
-		*e = PlaceActionLinkPlaceActionTypeEnum(s)
+		*e = PlaceActionLinkPlaceActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaceActionLinkPlaceActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaceActionLinkPlaceActionTypeEnum: %v", v)
 	}
 }
 
@@ -70,21 +74,25 @@ const (
 	PlaceActionLinkProviderTypeEnumAggregator3P            PlaceActionLinkProviderTypeEnum = "AGGREGATOR_3P"
 )
 
+func (e PlaceActionLinkProviderTypeEnum) ToPointer() *PlaceActionLinkProviderTypeEnum {
+	return &e
+}
+
 func (e *PlaceActionLinkProviderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROVIDER_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MERCHANT":
 		fallthrough
 	case "AGGREGATOR_3P":
-		*e = PlaceActionLinkProviderTypeEnum(s)
+		*e = PlaceActionLinkProviderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlaceActionLinkProviderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlaceActionLinkProviderTypeEnum: %v", v)
 	}
 }
 

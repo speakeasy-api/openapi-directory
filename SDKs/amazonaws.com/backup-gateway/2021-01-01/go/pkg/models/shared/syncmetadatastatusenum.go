@@ -17,12 +17,16 @@ const (
 	SyncMetadataStatusEnumSucceeded       SyncMetadataStatusEnum = "SUCCEEDED"
 )
 
+func (e SyncMetadataStatusEnum) ToPointer() *SyncMetadataStatusEnum {
+	return &e
+}
+
 func (e *SyncMetadataStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "RUNNING":
@@ -32,9 +36,9 @@ func (e *SyncMetadataStatusEnum) UnmarshalJSON(data []byte) error {
 	case "PARTIALLY_FAILED":
 		fallthrough
 	case "SUCCEEDED":
-		*e = SyncMetadataStatusEnum(s)
+		*e = SyncMetadataStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SyncMetadataStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SyncMetadataStatusEnum: %v", v)
 	}
 }

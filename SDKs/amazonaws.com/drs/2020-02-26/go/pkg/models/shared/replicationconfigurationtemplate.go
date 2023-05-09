@@ -6,6 +6,7 @@ package shared
 type ReplicationConfigurationTemplate struct {
 	Arn                                 *string                                                  `json:"arn,omitempty"`
 	AssociateDefaultSecurityGroup       *bool                                                    `json:"associateDefaultSecurityGroup,omitempty"`
+	AutoReplicateNewDisks               *bool                                                    `json:"autoReplicateNewDisks,omitempty"`
 	BandwidthThrottling                 *int64                                                   `json:"bandwidthThrottling,omitempty"`
 	CreatePublicIP                      *bool                                                    `json:"createPublicIP,omitempty"`
 	DataPlaneRouting                    *ReplicationConfigurationDataPlaneRoutingEnum            `json:"dataPlaneRouting,omitempty"`

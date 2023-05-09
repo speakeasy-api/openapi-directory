@@ -17,12 +17,16 @@ const (
 	ResolverQueryLogConfigAssociationStatusEnumFailed       ResolverQueryLogConfigAssociationStatusEnum = "FAILED"
 )
 
+func (e ResolverQueryLogConfigAssociationStatusEnum) ToPointer() *ResolverQueryLogConfigAssociationStatusEnum {
+	return &e
+}
+
 func (e *ResolverQueryLogConfigAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "ACTIVE":
@@ -32,9 +36,9 @@ func (e *ResolverQueryLogConfigAssociationStatusEnum) UnmarshalJSON(data []byte)
 	case "DELETING":
 		fallthrough
 	case "FAILED":
-		*e = ResolverQueryLogConfigAssociationStatusEnum(s)
+		*e = ResolverQueryLogConfigAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverQueryLogConfigAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverQueryLogConfigAssociationStatusEnum: %v", v)
 	}
 }

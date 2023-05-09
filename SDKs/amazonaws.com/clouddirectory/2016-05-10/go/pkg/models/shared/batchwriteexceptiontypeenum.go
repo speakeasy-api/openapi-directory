@@ -30,12 +30,16 @@ const (
 	BatchWriteExceptionTypeEnumUnsupportedIndexTypeException    BatchWriteExceptionTypeEnum = "UnsupportedIndexTypeException"
 )
 
+func (e BatchWriteExceptionTypeEnum) ToPointer() *BatchWriteExceptionTypeEnum {
+	return &e
+}
+
 func (e *BatchWriteExceptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InternalServiceException":
 		fallthrough
 	case "ValidationException":
@@ -71,9 +75,9 @@ func (e *BatchWriteExceptionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LimitExceededException":
 		fallthrough
 	case "UnsupportedIndexTypeException":
-		*e = BatchWriteExceptionTypeEnum(s)
+		*e = BatchWriteExceptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchWriteExceptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchWriteExceptionTypeEnum: %v", v)
 	}
 }

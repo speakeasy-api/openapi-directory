@@ -2,24 +2,25 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RemotebuildexecutionProjectsInstancesCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.RemotebuildexecutionProjectsInstancesCreate(ctx, operations.RemotebuildexecutionProjectsInstancesCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput{
             Instance: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput{
                 FeaturePolicy: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy{
-                    ActionHermeticity: "ACTION_HERMETICITY_ENFORCED",
-                    ActionIsolation: "ACTION_ISOLATION_ENFORCED",
+                    ActionHermeticity: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnumActionHermeticityEnforced.ToPointer(),
+                    ActionIsolation: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnumActionIsolationEnforced.ToPointer(),
                     ContainerImageSources: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
                             "unde",
@@ -27,7 +28,7 @@ func main() {
                             "corrupti",
                             "illum",
                         },
-                        Policy: "ALLOWED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumAllowed.ToPointer(),
                     },
                     DockerAddCapabilities: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -35,7 +36,7 @@ func main() {
                             "suscipit",
                             "iure",
                         },
-                        Policy: "ALLOWED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumAllowed.ToPointer(),
                     },
                     DockerChrootPath: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -44,7 +45,7 @@ func main() {
                             "tempora",
                             "suscipit",
                         },
-                        Policy: "ALLOWED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumAllowed.ToPointer(),
                     },
                     DockerNetwork: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -53,7 +54,7 @@ func main() {
                             "iusto",
                             "excepturi",
                         },
-                        Policy: "ALLOWED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumAllowed.ToPointer(),
                     },
                     DockerPrivileged: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -62,13 +63,13 @@ func main() {
                             "quis",
                             "veritatis",
                         },
-                        Policy: "FORBIDDEN",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumForbidden.ToPointer(),
                     },
                     DockerRunAsContainerProvidedUser: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
                             "ipsam",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumRestricted.ToPointer(),
                     },
                     DockerRunAsRoot: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -77,14 +78,14 @@ func main() {
                             "at",
                             "at",
                         },
-                        Policy: "RESTRICTED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumRestricted.ToPointer(),
                     },
                     DockerRuntime: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
                             "quod",
                             "quod",
                         },
-                        Policy: "ALLOWED",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumAllowed.ToPointer(),
                     },
                     DockerSiblingContainers: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
@@ -92,37 +93,34 @@ func main() {
                             "dolorum",
                             "dicta",
                         },
-                        Policy: "FORBIDDEN",
+                        Policy: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnumForbidden.ToPointer(),
                     },
-                    LinuxExecution: "LINUX_EXECUTION_HARDENED_GVISOR",
-                    LinuxIsolation: "GVISOR",
-                    MacExecution: "MAC_EXECUTION_UNSPECIFIED",
-                    VMVerification: "VM_VERIFICATION_GCP_TOKEN",
-                    WindowsExecution: "WINDOWS_EXECUTION_TERMINAL",
+                    LinuxExecution: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnumLinuxExecutionHardenedGvisor.ToPointer(),
+                    LinuxIsolation: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnumGvisor.ToPointer(),
+                    MacExecution: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnumMacExecutionUnspecified.ToPointer(),
+                    VMVerification: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVMVerificationEnumVMVerificationGcpToken.ToPointer(),
+                    WindowsExecution: shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnumWindowsExecutionTerminal.ToPointer(),
                 },
-                Location: "optio",
+                Location: sdk.String("optio"),
                 SchedulerNotificationConfig: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig{
-                    Topic: "totam",
+                    Topic: sdk.String("totam"),
                 },
             },
-            InstanceID: "beatae",
-            Parent: "commodi",
+            InstanceID: sdk.String("beatae"),
+            Parent: sdk.String("commodi"),
         },
-        AccessToken: "molestiae",
-        Alt: "json",
-        Callback: "qui",
-        Fields: "impedit",
-        Key: "cum",
-        OauthToken: "esse",
+        AccessToken: sdk.String("molestiae"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("qui"),
+        Fields: sdk.String("impedit"),
+        Key: sdk.String("cum"),
+        OauthToken: sdk.String("esse"),
         Parent: "ipsum",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        UploadType: "aspernatur",
-        UploadProtocol: "perferendis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.RemotebuildexecutionProjectsInstancesCreate(ctx, req, operations.RemotebuildexecutionProjectsInstancesCreateSecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("excepturi"),
+        UploadType: sdk.String("aspernatur"),
+        UploadProtocol: sdk.String("perferendis"),
+    }, operations.RemotebuildexecutionProjectsInstancesCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

@@ -39,21 +39,25 @@ const (
 	AssignmentStateEnumArchived AssignmentStateEnum = "archived"
 )
 
+func (e AssignmentStateEnum) ToPointer() *AssignmentStateEnum {
+	return &e
+}
+
 func (e *AssignmentStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "draft":
 		fallthrough
 	case "active":
 		fallthrough
 	case "archived":
-		*e = AssignmentStateEnum(s)
+		*e = AssignmentStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssignmentStateEnum: %s", s)
+		return fmt.Errorf("invalid value for AssignmentStateEnum: %v", v)
 	}
 }
 

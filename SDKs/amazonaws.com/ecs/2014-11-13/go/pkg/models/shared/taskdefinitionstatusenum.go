@@ -15,20 +15,24 @@ const (
 	TaskDefinitionStatusEnumDeleteInProgress TaskDefinitionStatusEnum = "DELETE_IN_PROGRESS"
 )
 
+func (e TaskDefinitionStatusEnum) ToPointer() *TaskDefinitionStatusEnum {
+	return &e
+}
+
 func (e *TaskDefinitionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "INACTIVE":
 		fallthrough
 	case "DELETE_IN_PROGRESS":
-		*e = TaskDefinitionStatusEnum(s)
+		*e = TaskDefinitionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskDefinitionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskDefinitionStatusEnum: %v", v)
 	}
 }

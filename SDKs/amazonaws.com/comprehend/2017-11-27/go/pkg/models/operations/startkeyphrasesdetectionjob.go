@@ -16,17 +16,21 @@ const (
 	StartKeyPhrasesDetectionJobXAmzTargetEnumComprehend20171127StartKeyPhrasesDetectionJob StartKeyPhrasesDetectionJobXAmzTargetEnum = "Comprehend_20171127.StartKeyPhrasesDetectionJob"
 )
 
+func (e StartKeyPhrasesDetectionJobXAmzTargetEnum) ToPointer() *StartKeyPhrasesDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartKeyPhrasesDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StartKeyPhrasesDetectionJob":
-		*e = StartKeyPhrasesDetectionJobXAmzTargetEnum(s)
+		*e = StartKeyPhrasesDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartKeyPhrasesDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartKeyPhrasesDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 
@@ -50,6 +54,8 @@ type StartKeyPhrasesDetectionJobResponse struct {
 	InvalidRequestException interface{}
 	// KmsKeyValidationException
 	KmsKeyValidationException interface{}
+	// ResourceInUseException
+	ResourceInUseException interface{}
 	// Success
 	StartKeyPhrasesDetectionJobResponse *shared.StartKeyPhrasesDetectionJobResponse
 	StatusCode                          int

@@ -36,7 +36,10 @@ func newAvatars(defaultClient, securityClient HTTPClient, serverURL, language, s
 // You can use this endpoint to show different browser icons to your users. The code argument receives the browser code as it appears in your user /account/sessions endpoint. Use width, height and quality arguments to change the output settings.
 func (s *avatars) AvatarsGetBrowser(ctx context.Context, request operations.AvatarsGetBrowserRequest, security operations.AvatarsGetBrowserSecurity) (*operations.AvatarsGetBrowserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/browsers/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/avatars/browsers/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -76,7 +79,10 @@ func (s *avatars) AvatarsGetBrowser(ctx context.Context, request operations.Avat
 // The credit card endpoint will return you the icon of the credit card provider you need. Use width, height and quality arguments to change the output settings.
 func (s *avatars) AvatarsGetCreditCard(ctx context.Context, request operations.AvatarsGetCreditCardRequest, security operations.AvatarsGetCreditCardSecurity) (*operations.AvatarsGetCreditCardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/credit-cards/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/avatars/credit-cards/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -156,7 +162,10 @@ func (s *avatars) AvatarsGetFavicon(ctx context.Context, request operations.Avat
 // You can use this endpoint to show different country flags icons to your users. The code argument receives the 2 letter country code. Use width, height and quality arguments to change the output settings.
 func (s *avatars) AvatarsGetFlag(ctx context.Context, request operations.AvatarsGetFlagRequest, security operations.AvatarsGetFlagSecurity) (*operations.AvatarsGetFlagResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/avatars/flags/{code}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/avatars/flags/{code}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

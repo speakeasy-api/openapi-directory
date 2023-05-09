@@ -21,12 +21,16 @@ const (
 	DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnumSunday               DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum = "SUNDAY"
 )
 
+func (e DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum) ToPointer() *DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum {
+	return &e
+}
+
 func (e *DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DAY_OF_WEEK_UNSPECIFIED":
 		fallthrough
 	case "MONDAY":
@@ -42,10 +46,10 @@ func (e *DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum) UnmarshalJSON(da
 	case "SATURDAY":
 		fallthrough
 	case "SUNDAY":
-		*e = DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum(s)
+		*e = DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum: %s", s)
+		return fmt.Errorf("invalid value for DayAndTimeAssignedTargetingOptionDetailsDayOfWeekEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnumTimeZoneResolutionAdvertiser  DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum = "TIME_ZONE_RESOLUTION_ADVERTISER"
 )
 
+func (e DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum) ToPointer() *DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum {
+	return &e
+}
+
 func (e *DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TIME_ZONE_RESOLUTION_UNSPECIFIED":
 		fallthrough
 	case "TIME_ZONE_RESOLUTION_END_USER":
 		fallthrough
 	case "TIME_ZONE_RESOLUTION_ADVERTISER":
-		*e = DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum(s)
+		*e = DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum: %s", s)
+		return fmt.Errorf("invalid value for DayAndTimeAssignedTargetingOptionDetailsTimeZoneResolutionEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteSpaceXAmzTargetEnumSageMakerDeleteSpace DeleteSpaceXAmzTargetEnum = "SageMaker.DeleteSpace"
 )
 
+func (e DeleteSpaceXAmzTargetEnum) ToPointer() *DeleteSpaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSpaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.DeleteSpace":
-		*e = DeleteSpaceXAmzTargetEnum(s)
+		*e = DeleteSpaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSpaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSpaceXAmzTargetEnum: %v", v)
 	}
 }
 

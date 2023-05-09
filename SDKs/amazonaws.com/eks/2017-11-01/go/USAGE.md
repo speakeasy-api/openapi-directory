@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,13 +17,14 @@ func main() {
         }),
     )
 
-    req := operations.AssociateEncryptionConfigRequest{
+    ctx := context.Background()
+    res, err := s.AssociateEncryptionConfig(ctx, operations.AssociateEncryptionConfigRequest{
         RequestBody: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "corrupti",
+            ClientRequestToken: sdk.String("corrupti"),
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "distinctio",
+                        KeyArn: sdk.String("distinctio"),
                     },
                     Resources: []string{
                         "unde",
@@ -34,7 +35,7 @@ func main() {
                 },
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "vel",
+                        KeyArn: sdk.String("vel"),
                     },
                     Resources: []string{
                         "deserunt",
@@ -44,7 +45,7 @@ func main() {
                 },
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "magnam",
+                        KeyArn: sdk.String("magnam"),
                     },
                     Resources: []string{
                         "ipsa",
@@ -55,18 +56,15 @@ func main() {
                 },
             },
         },
-        XAmzAlgorithm: "molestiae",
-        XAmzContentSha256: "minus",
-        XAmzCredential: "placeat",
-        XAmzDate: "voluptatum",
-        XAmzSecurityToken: "iusto",
-        XAmzSignature: "excepturi",
-        XAmzSignedHeaders: "nisi",
-        Name: "recusandae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AssociateEncryptionConfig(ctx, req)
+        XAmzAlgorithm: sdk.String("molestiae"),
+        XAmzContentSha256: sdk.String("minus"),
+        XAmzCredential: sdk.String("placeat"),
+        XAmzDate: sdk.String("voluptatum"),
+        XAmzSecurityToken: sdk.String("iusto"),
+        XAmzSignature: sdk.String("excepturi"),
+        XAmzSignedHeaders: sdk.String("nisi"),
+        Name: "Jake Bernier MD",
+    })
     if err != nil {
         log.Fatal(err)
     }

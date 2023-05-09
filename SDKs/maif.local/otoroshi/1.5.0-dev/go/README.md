@@ -13,19 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/maif.local/otoroshi/1.5.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Apikeys.AllAPIKeys(ctx)
+    res, err := s.Apikeys.AllAPIKeys(ctx, operations.AllAPIKeysSecurity{
+        Password: "YOUR_PASSWORD_HERE",
+        Username: "YOUR_USERNAME_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -41,155 +43,155 @@ func main() {
 ## Available Resources and Operations
 
 
-### Apikeys
+### [Apikeys](docs/apikeys/README.md)
 
-* `AllAPIKeys` - Get all api keys
-* `APIKey` - Get an api key
-* `APIKeyFromGroup` - Get an api key
-* `APIKeyFromGroupQuotas` - Get the quota state of an api key
-* `APIKeyGroup` - Get the group of an api key
-* `APIKeyQuotas` - Get the quota state of an api key
-* `APIKeys` - Get all api keys for the group of a service
-* `APIKeysFromGroup` - Get all api keys for the group of a service
-* `CreateAPIKey` - Create a new api key for a service
-* `CreateAPIKeyFromGroup` - Create a new api key for a group
-* `DeleteAPIKey` - Delete an api key
-* `DeleteAPIKeyFromGroup` - Delete an api key
-* `PatchAPIKey` - Update an api key with a diff
-* `PatchAPIKeyFromGroup` - Update an api key with a diff
-* `ResetAPIKeyFromGroupQuotas` - Reset the quota state of an api key
-* `ResetAPIKeyQuotas` - Reset the quota state of an api key
-* `UpdateAPIKey` - Update an api key
-* `UpdateAPIKeyFromGroup` - Update an api key
+* [AllAPIKeys](docs/apikeys/README.md#allapikeys) - Get all api keys
+* [APIKey](docs/apikeys/README.md#apikey) - Get an api key
+* [APIKeyFromGroup](docs/apikeys/README.md#apikeyfromgroup) - Get an api key
+* [APIKeyFromGroupQuotas](docs/apikeys/README.md#apikeyfromgroupquotas) - Get the quota state of an api key
+* [APIKeyGroup](docs/apikeys/README.md#apikeygroup) - Get the group of an api key
+* [APIKeyQuotas](docs/apikeys/README.md#apikeyquotas) - Get the quota state of an api key
+* [APIKeys](docs/apikeys/README.md#apikeys) - Get all api keys for the group of a service
+* [APIKeysFromGroup](docs/apikeys/README.md#apikeysfromgroup) - Get all api keys for the group of a service
+* [CreateAPIKey](docs/apikeys/README.md#createapikey) - Create a new api key for a service
+* [CreateAPIKeyFromGroup](docs/apikeys/README.md#createapikeyfromgroup) - Create a new api key for a group
+* [DeleteAPIKey](docs/apikeys/README.md#deleteapikey) - Delete an api key
+* [DeleteAPIKeyFromGroup](docs/apikeys/README.md#deleteapikeyfromgroup) - Delete an api key
+* [PatchAPIKey](docs/apikeys/README.md#patchapikey) - Update an api key with a diff
+* [PatchAPIKeyFromGroup](docs/apikeys/README.md#patchapikeyfromgroup) - Update an api key with a diff
+* [ResetAPIKeyFromGroupQuotas](docs/apikeys/README.md#resetapikeyfromgroupquotas) - Reset the quota state of an api key
+* [ResetAPIKeyQuotas](docs/apikeys/README.md#resetapikeyquotas) - Reset the quota state of an api key
+* [UpdateAPIKey](docs/apikeys/README.md#updateapikey) - Update an api key
+* [UpdateAPIKeyFromGroup](docs/apikeys/README.md#updateapikeyfromgroup) - Update an api key
 
-### AuthConfig
+### [AuthConfig](docs/authconfig/README.md)
 
-* `CreateGlobalAuthModule` - Create one global auth. module config
-* `DeleteGlobalAuthModule` - Delete one global auth. module config
-* `FindAllGlobalAuthModules` - Get all global auth. module configs
-* `FindGlobalAuthModuleByID` - Get one global auth. module configs
-* `PatchGlobalAuthModule` - Update one global auth. module config
-* `UpdateGlobalAuthModule` - Update one global auth. module config
+* [CreateGlobalAuthModule](docs/authconfig/README.md#createglobalauthmodule) - Create one global auth. module config
+* [DeleteGlobalAuthModule](docs/authconfig/README.md#deleteglobalauthmodule) - Delete one global auth. module config
+* [FindAllGlobalAuthModules](docs/authconfig/README.md#findallglobalauthmodules) - Get all global auth. module configs
+* [FindGlobalAuthModuleByID](docs/authconfig/README.md#findglobalauthmodulebyid) - Get one global auth. module configs
+* [PatchGlobalAuthModule](docs/authconfig/README.md#patchglobalauthmodule) - Update one global auth. module config
+* [UpdateGlobalAuthModule](docs/authconfig/README.md#updateglobalauthmodule) - Update one global auth. module config
 
-### Certificates
+### [Certificates](docs/certificates/README.md)
 
-* `AllCerts` - Get all certificates
-* `CreateCert` - Create one certificate
-* `DeleteCert` - Delete one certificate by id
-* `OneCert` - Get one certificate by id
-* `PatchCert` - Update one certificate by id
-* `PutCert` - Update one certificate by id
+* [AllCerts](docs/certificates/README.md#allcerts) - Get all certificates
+* [CreateCert](docs/certificates/README.md#createcert) - Create one certificate
+* [DeleteCert](docs/certificates/README.md#deletecert) - Delete one certificate by id
+* [OneCert](docs/certificates/README.md#onecert) - Get one certificate by id
+* [PatchCert](docs/certificates/README.md#patchcert) - Update one certificate by id
+* [PutCert](docs/certificates/README.md#putcert) - Update one certificate by id
 
-### Configuration
+### [Configuration](docs/configuration/README.md)
 
-* `GlobalConfig` - Get the full configuration of Otoroshi
-* `PatchGlobalConfig` - Update the global configuration with a diff
-* `PutGlobalConfig` - Update the global configuration
+* [GlobalConfig](docs/configuration/README.md#globalconfig) - Get the full configuration of Otoroshi
+* [PatchGlobalConfig](docs/configuration/README.md#patchglobalconfig) - Update the global configuration with a diff
+* [PutGlobalConfig](docs/configuration/README.md#putglobalconfig) - Update the global configuration
 
-### DataExporterConfigs
+### [DataExporterConfigs](docs/dataexporterconfigs/README.md)
 
-* `DataExporterTemplate` - Get all data exporter configs
-* `CreateBulkDataExporterConfigs` - Create a new data exporter configs
-* `CreateDataExporterConfig` - Create a new data exporter config
-* `DeleteDataExporterConfig` - Delete a data exporter config
-* `DeletebulkDataExporterConfig` - Delete a data exporter config
-* `FindAllDataExporters` - Get all data exporter configs
-* `FindDataExporterConfigByID` - Get a data exporter config
-* `PatchBulkDataExporterConfig` - Update a data exporter configs with a diff
-* `PatchDataExporterConfig` - Update a data exporter config with a diff
-* `UpdateBulkDataExporterConfig` - Update a data exporter configs
-* `UpdateDataExporterConfig` - Update a data exporter config
+* [DataExporterTemplate](docs/dataexporterconfigs/README.md#dataexportertemplate) - Get all data exporter configs
+* [CreateBulkDataExporterConfigs](docs/dataexporterconfigs/README.md#createbulkdataexporterconfigs) - Create a new data exporter configs
+* [CreateDataExporterConfig](docs/dataexporterconfigs/README.md#createdataexporterconfig) - Create a new data exporter config
+* [DeleteDataExporterConfig](docs/dataexporterconfigs/README.md#deletedataexporterconfig) - Delete a data exporter config
+* [DeletebulkDataExporterConfig](docs/dataexporterconfigs/README.md#deletebulkdataexporterconfig) - Delete a data exporter config
+* [FindAllDataExporters](docs/dataexporterconfigs/README.md#findalldataexporters) - Get all data exporter configs
+* [FindDataExporterConfigByID](docs/dataexporterconfigs/README.md#finddataexporterconfigbyid) - Get a data exporter config
+* [PatchBulkDataExporterConfig](docs/dataexporterconfigs/README.md#patchbulkdataexporterconfig) - Update a data exporter configs with a diff
+* [PatchDataExporterConfig](docs/dataexporterconfigs/README.md#patchdataexporterconfig) - Update a data exporter config with a diff
+* [UpdateBulkDataExporterConfig](docs/dataexporterconfigs/README.md#updatebulkdataexporterconfig) - Update a data exporter configs
+* [UpdateDataExporterConfig](docs/dataexporterconfigs/README.md#updatedataexporterconfig) - Update a data exporter config
 
-### Environments
+### [Environments](docs/environments/README.md)
 
-* `AllLines` - Get all environments
-* `ServicesForALine` - Get all services for an environment
+* [AllLines](docs/environments/README.md#alllines) - Get all environments
+* [ServicesForALine](docs/environments/README.md#servicesforaline) - Get all services for an environment
 
-### Groups
+### [Groups](docs/groups/README.md)
 
-* `AllServiceGroups` - Get all service groups
-* `CreateGroup` - Create a new service group
-* `DeleteGroup` - Delete a service group
-* `PatchGroup` - Update a service group with a diff
-* `ServiceGroup` - Get a service group
-* `UpdateGroup` - Update a service group
+* [AllServiceGroups](docs/groups/README.md#allservicegroups) - Get all service groups
+* [CreateGroup](docs/groups/README.md#creategroup) - Create a new service group
+* [DeleteGroup](docs/groups/README.md#deletegroup) - Delete a service group
+* [PatchGroup](docs/groups/README.md#patchgroup) - Update a service group with a diff
+* [ServiceGroup](docs/groups/README.md#servicegroup) - Get a service group
+* [UpdateGroup](docs/groups/README.md#updategroup) - Update a service group
 
-### Health
+### [Health](docs/health/README.md)
 
-* `Health` - Return current Otoroshi health
+* [Health](docs/health/README.md#health) - Return current Otoroshi health
 
-### Import
+### [Import](docs/import/README.md)
 
-* `FullExport` - Export the full state of Otoroshi
-* `FullImport` - Import the full state of Otoroshi
-* `FullImportFromFile` - Import the full state of Otoroshi as a file
+* [FullExport](docs/import/README.md#fullexport) - Export the full state of Otoroshi
+* [FullImport](docs/import/README.md#fullimport) - Import the full state of Otoroshi
+* [FullImportFromFile](docs/import/README.md#fullimportfromfile) - Import the full state of Otoroshi as a file
 
-### JwtVerifiers
+### [JwtVerifiers](docs/jwtverifiers/README.md)
 
-* `CreateGlobalJwtVerifier` - Create one global JWT verifiers
-* `DeleteGlobalJwtVerifier` - Delete one global JWT verifiers
-* `FindAllGlobalJwtVerifiers` - Get all global JWT verifiers
-* `FindGlobalJwtVerifiersByID` - Get one global JWT verifiers
-* `PatchGlobalJwtVerifier` - Update one global JWT verifiers
-* `UpdateGlobalJwtVerifier` - Update one global JWT verifiers
+* [CreateGlobalJwtVerifier](docs/jwtverifiers/README.md#createglobaljwtverifier) - Create one global JWT verifiers
+* [DeleteGlobalJwtVerifier](docs/jwtverifiers/README.md#deleteglobaljwtverifier) - Delete one global JWT verifiers
+* [FindAllGlobalJwtVerifiers](docs/jwtverifiers/README.md#findallglobaljwtverifiers) - Get all global JWT verifiers
+* [FindGlobalJwtVerifiersByID](docs/jwtverifiers/README.md#findglobaljwtverifiersbyid) - Get one global JWT verifiers
+* [PatchGlobalJwtVerifier](docs/jwtverifiers/README.md#patchglobaljwtverifier) - Update one global JWT verifiers
+* [UpdateGlobalJwtVerifier](docs/jwtverifiers/README.md#updateglobaljwtverifier) - Update one global JWT verifiers
 
-### Scripts
+### [Scripts](docs/scripts/README.md)
 
-* `CompileScript` - Compile a script
-* `CreateScript` - Create a new script
-* `DeleteScript` - Delete a script
-* `FindAllScripts` - Get all scripts
-* `FindScriptByID` - Get a script
-* `PatchScript` - Update a script with a diff
-* `UpdateScript` - Update a script
+* [CompileScript](docs/scripts/README.md#compilescript) - Compile a script
+* [CreateScript](docs/scripts/README.md#createscript) - Create a new script
+* [DeleteScript](docs/scripts/README.md#deletescript) - Delete a script
+* [FindAllScripts](docs/scripts/README.md#findallscripts) - Get all scripts
+* [FindScriptByID](docs/scripts/README.md#findscriptbyid) - Get a script
+* [PatchScript](docs/scripts/README.md#patchscript) - Update a script with a diff
+* [UpdateScript](docs/scripts/README.md#updatescript) - Update a script
 
-### Services
+### [Services](docs/services/README.md)
 
-* `AllServices` - Get all services
-* `CreateService` - Create a new service descriptor
-* `CreateServiceTemplate` - Create a service descriptor error template
-* `DeleteService` - Delete a service descriptor
-* `DeleteServiceTemplate` - Delete a service descriptor error template
-* `PatchService` - Update a service descriptor with a diff
-* `Service` - Get a service descriptor
-* `ServiceAddTarget` - Add a target to a service descriptor
-* `ServiceDeleteTarget` - Delete a service descriptor target
-* `ServiceGroupServices` - Get all services descriptor for a group
-* `ServiceTargets` - Get a service descriptor targets
-* `ServiceTemplate` - Get a service descriptor error template
-* `UpdateService` - Update a service descriptor
-* `UpdateServiceTargets` - Update a service descriptor targets
-* `UpdateServiceTemplate` - Update an error template to a service descriptor
+* [AllServices](docs/services/README.md#allservices) - Get all services
+* [CreateService](docs/services/README.md#createservice) - Create a new service descriptor
+* [CreateServiceTemplate](docs/services/README.md#createservicetemplate) - Create a service descriptor error template
+* [DeleteService](docs/services/README.md#deleteservice) - Delete a service descriptor
+* [DeleteServiceTemplate](docs/services/README.md#deleteservicetemplate) - Delete a service descriptor error template
+* [PatchService](docs/services/README.md#patchservice) - Update a service descriptor with a diff
+* [Service](docs/services/README.md#service) - Get a service descriptor
+* [ServiceAddTarget](docs/services/README.md#serviceaddtarget) - Add a target to a service descriptor
+* [ServiceDeleteTarget](docs/services/README.md#servicedeletetarget) - Delete a service descriptor target
+* [ServiceGroupServices](docs/services/README.md#servicegroupservices) - Get all services descriptor for a group
+* [ServiceTargets](docs/services/README.md#servicetargets) - Get a service descriptor targets
+* [ServiceTemplate](docs/services/README.md#servicetemplate) - Get a service descriptor error template
+* [UpdateService](docs/services/README.md#updateservice) - Update a service descriptor
+* [UpdateServiceTargets](docs/services/README.md#updateservicetargets) - Update a service descriptor targets
+* [UpdateServiceTemplate](docs/services/README.md#updateservicetemplate) - Update an error template to a service descriptor
 
-### Snowmonkey
+### [Snowmonkey](docs/snowmonkey/README.md)
 
-* `GetSnowMonkeyConfig` - Get current Snow Monkey config
-* `GetSnowMonkeyOutages` - Get all current Snow Monkey ourages
-* `PatchSnowMonkey` - Update current Snow Monkey config
-* `ResetSnowMonkey` - Reset Snow Monkey Outages for the day
-* `StartSnowMonkey` - Start the Snow Monkey
-* `StopSnowMonkey` - Stop the Snow Monkey
-* `UpdateSnowMonkey` - Update current Snow Monkey config
+* [GetSnowMonkeyConfig](docs/snowmonkey/README.md#getsnowmonkeyconfig) - Get current Snow Monkey config
+* [GetSnowMonkeyOutages](docs/snowmonkey/README.md#getsnowmonkeyoutages) - Get all current Snow Monkey ourages
+* [PatchSnowMonkey](docs/snowmonkey/README.md#patchsnowmonkey) - Update current Snow Monkey config
+* [ResetSnowMonkey](docs/snowmonkey/README.md#resetsnowmonkey) - Reset Snow Monkey Outages for the day
+* [StartSnowMonkey](docs/snowmonkey/README.md#startsnowmonkey) - Start the Snow Monkey
+* [StopSnowMonkey](docs/snowmonkey/README.md#stopsnowmonkey) - Stop the Snow Monkey
+* [UpdateSnowMonkey](docs/snowmonkey/README.md#updatesnowmonkey) - Update current Snow Monkey config
 
-### Stats
+### [Stats](docs/stats/README.md)
 
-* `GlobalLiveStats` - Get global otoroshi stats
-* `ServiceLiveStats` - Get live feed of otoroshi stats
+* [GlobalLiveStats](docs/stats/README.md#globallivestats) - Get global otoroshi stats
+* [ServiceLiveStats](docs/stats/README.md#servicelivestats) - Get live feed of otoroshi stats
 
-### Templates
+### [Templates](docs/templates/README.md)
 
-* `InitiateAPIKey` - Get a template of an Otoroshi Api Key
-* `InitiateService` - Get a template of an Otoroshi service descriptor
-* `InitiateServiceGroup` - Get a template of an Otoroshi service group
+* [InitiateAPIKey](docs/templates/README.md#initiateapikey) - Get a template of an Otoroshi Api Key
+* [InitiateService](docs/templates/README.md#initiateservice) - Get a template of an Otoroshi service descriptor
+* [InitiateServiceGroup](docs/templates/README.md#initiateservicegroup) - Get a template of an Otoroshi service group
 
-### ValidationAuthorities
+### [ValidationAuthorities](docs/validationauthorities/README.md)
 
-* `CreateClientValidator` - Create one validation authorities
-* `DeleteClientValidator` - Delete one validation authorities by id
-* `FindAllClientValidators` - Get all validation authoritiess
-* `FindClientValidatorByID` - Get one validation authorities by id
-* `PatchClientValidator` - Update one validation authorities by id
-* `UpdateClientValidator` - Update one validation authorities by id
+* [CreateClientValidator](docs/validationauthorities/README.md#createclientvalidator) - Create one validation authorities
+* [DeleteClientValidator](docs/validationauthorities/README.md#deleteclientvalidator) - Delete one validation authorities by id
+* [FindAllClientValidators](docs/validationauthorities/README.md#findallclientvalidators) - Get all validation authoritiess
+* [FindClientValidatorByID](docs/validationauthorities/README.md#findclientvalidatorbyid) - Get one validation authorities by id
+* [PatchClientValidator](docs/validationauthorities/README.md#patchclientvalidator) - Update one validation authorities by id
+* [UpdateClientValidator](docs/validationauthorities/README.md#updateclientvalidator) - Update one validation authorities by id
 <!-- End SDK Available Operations -->
 
 ### Maturity

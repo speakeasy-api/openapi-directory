@@ -20,12 +20,16 @@ const (
 	DeviceDetailsFormFactorEnumEmbedded DeviceDetailsFormFactorEnum = "embedded"
 )
 
+func (e DeviceDetailsFormFactorEnum) ToPointer() *DeviceDetailsFormFactorEnum {
+	return &e
+}
+
 func (e *DeviceDetailsFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "phone":
 		fallthrough
 	case "tablet":
@@ -39,10 +43,10 @@ func (e *DeviceDetailsFormFactorEnum) UnmarshalJSON(data []byte) error {
 	case "car":
 		fallthrough
 	case "embedded":
-		*e = DeviceDetailsFormFactorEnum(s)
+		*e = DeviceDetailsFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDetailsFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDetailsFormFactorEnum: %v", v)
 	}
 }
 
@@ -54,19 +58,23 @@ const (
 	DeviceDetailsPlatformEnumAndroid DeviceDetailsPlatformEnum = "android"
 )
 
+func (e DeviceDetailsPlatformEnum) ToPointer() *DeviceDetailsPlatformEnum {
+	return &e
+}
+
 func (e *DeviceDetailsPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ios":
 		fallthrough
 	case "android":
-		*e = DeviceDetailsPlatformEnum(s)
+		*e = DeviceDetailsPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDetailsPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDetailsPlatformEnum: %v", v)
 	}
 }
 
@@ -79,21 +87,25 @@ const (
 	DeviceDetailsPushStateEnumFailed  DeviceDetailsPushStateEnum = "Failed"
 )
 
+func (e DeviceDetailsPushStateEnum) ToPointer() *DeviceDetailsPushStateEnum {
+	return &e
+}
+
 func (e *DeviceDetailsPushStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Failing":
 		fallthrough
 	case "Failed":
-		*e = DeviceDetailsPushStateEnum(s)
+		*e = DeviceDetailsPushStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceDetailsPushStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceDetailsPushStateEnum: %v", v)
 	}
 }
 

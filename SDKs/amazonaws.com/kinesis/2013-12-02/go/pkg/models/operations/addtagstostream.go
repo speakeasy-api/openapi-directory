@@ -16,17 +16,21 @@ const (
 	AddTagsToStreamXAmzTargetEnumKinesis20131202AddTagsToStream AddTagsToStreamXAmzTargetEnum = "Kinesis_20131202.AddTagsToStream"
 )
 
+func (e AddTagsToStreamXAmzTargetEnum) ToPointer() *AddTagsToStreamXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddTagsToStreamXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Kinesis_20131202.AddTagsToStream":
-		*e = AddTagsToStreamXAmzTargetEnum(s)
+		*e = AddTagsToStreamXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddTagsToStreamXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddTagsToStreamXAmzTargetEnum: %v", v)
 	}
 }
 

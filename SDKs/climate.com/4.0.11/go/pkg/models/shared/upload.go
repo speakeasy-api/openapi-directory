@@ -30,12 +30,16 @@ const (
 	UploadContentTypeEnumApplicationVndClimateAsHarvestedZip       UploadContentTypeEnum = "application/vnd.climate.as-harvested.zip"
 )
 
+func (e UploadContentTypeEnum) ToPointer() *UploadContentTypeEnum {
+	return &e
+}
+
 func (e *UploadContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image/vnd.climate.thermal.geotiff":
 		fallthrough
 	case "image/vnd.climate.ndvi.geotiff":
@@ -69,10 +73,10 @@ func (e *UploadContentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "application/vnd.climate.as-planted.zip":
 		fallthrough
 	case "application/vnd.climate.as-harvested.zip":
-		*e = UploadContentTypeEnum(s)
+		*e = UploadContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadContentTypeEnum: %v", v)
 	}
 }
 

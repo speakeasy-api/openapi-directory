@@ -16,21 +16,25 @@ const (
 	GoogleAPIServiceusageV1ServiceStateEnumEnabled          GoogleAPIServiceusageV1ServiceStateEnum = "ENABLED"
 )
 
+func (e GoogleAPIServiceusageV1ServiceStateEnum) ToPointer() *GoogleAPIServiceusageV1ServiceStateEnum {
+	return &e
+}
+
 func (e *GoogleAPIServiceusageV1ServiceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "DISABLED":
 		fallthrough
 	case "ENABLED":
-		*e = GoogleAPIServiceusageV1ServiceStateEnum(s)
+		*e = GoogleAPIServiceusageV1ServiceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAPIServiceusageV1ServiceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAPIServiceusageV1ServiceStateEnum: %v", v)
 	}
 }
 

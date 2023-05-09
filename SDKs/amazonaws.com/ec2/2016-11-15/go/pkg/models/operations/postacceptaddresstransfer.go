@@ -15,17 +15,21 @@ const (
 	POSTAcceptAddressTransferActionEnumAcceptAddressTransfer POSTAcceptAddressTransferActionEnum = "AcceptAddressTransfer"
 )
 
+func (e POSTAcceptAddressTransferActionEnum) ToPointer() *POSTAcceptAddressTransferActionEnum {
+	return &e
+}
+
 func (e *POSTAcceptAddressTransferActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AcceptAddressTransfer":
-		*e = POSTAcceptAddressTransferActionEnum(s)
+		*e = POSTAcceptAddressTransferActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAcceptAddressTransferActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAcceptAddressTransferActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAcceptAddressTransferVersionEnumTwoThousandAndSixteen1115 POSTAcceptAddressTransferVersionEnum = "2016-11-15"
 )
 
+func (e POSTAcceptAddressTransferVersionEnum) ToPointer() *POSTAcceptAddressTransferVersionEnum {
+	return &e
+}
+
 func (e *POSTAcceptAddressTransferVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTAcceptAddressTransferVersionEnum(s)
+		*e = POSTAcceptAddressTransferVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAcceptAddressTransferVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAcceptAddressTransferVersionEnum: %v", v)
 	}
 }
 

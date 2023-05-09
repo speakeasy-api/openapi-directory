@@ -15,17 +15,21 @@ const (
 	POSTCreateVpcPeeringConnectionActionEnumCreateVpcPeeringConnection POSTCreateVpcPeeringConnectionActionEnum = "CreateVpcPeeringConnection"
 )
 
+func (e POSTCreateVpcPeeringConnectionActionEnum) ToPointer() *POSTCreateVpcPeeringConnectionActionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpcPeeringConnectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateVpcPeeringConnection":
-		*e = POSTCreateVpcPeeringConnectionActionEnum(s)
+		*e = POSTCreateVpcPeeringConnectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpcPeeringConnectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpcPeeringConnectionActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateVpcPeeringConnectionVersionEnumTwoThousandAndSixteen1115 POSTCreateVpcPeeringConnectionVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateVpcPeeringConnectionVersionEnum) ToPointer() *POSTCreateVpcPeeringConnectionVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateVpcPeeringConnectionVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateVpcPeeringConnectionVersionEnum(s)
+		*e = POSTCreateVpcPeeringConnectionVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateVpcPeeringConnectionVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateVpcPeeringConnectionVersionEnum: %v", v)
 	}
 }
 

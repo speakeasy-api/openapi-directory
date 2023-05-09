@@ -15,17 +15,21 @@ const (
 	GETDeleteNetworkACLActionEnumDeleteNetworkACL GETDeleteNetworkACLActionEnum = "DeleteNetworkAcl"
 )
 
+func (e GETDeleteNetworkACLActionEnum) ToPointer() *GETDeleteNetworkACLActionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkACLActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteNetworkAcl":
-		*e = GETDeleteNetworkACLActionEnum(s)
+		*e = GETDeleteNetworkACLActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkACLActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkACLActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteNetworkACLVersionEnumTwoThousandAndSixteen1115 GETDeleteNetworkACLVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteNetworkACLVersionEnum) ToPointer() *GETDeleteNetworkACLVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteNetworkACLVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteNetworkACLVersionEnum(s)
+		*e = GETDeleteNetworkACLVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteNetworkACLVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteNetworkACLVersionEnum: %v", v)
 	}
 }
 

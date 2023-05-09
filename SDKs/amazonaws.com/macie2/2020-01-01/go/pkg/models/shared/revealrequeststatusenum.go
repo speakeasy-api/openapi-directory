@@ -16,20 +16,24 @@ const (
 	RevealRequestStatusEnumError      RevealRequestStatusEnum = "ERROR"
 )
 
+func (e RevealRequestStatusEnum) ToPointer() *RevealRequestStatusEnum {
+	return &e
+}
+
 func (e *RevealRequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUCCESS":
 		fallthrough
 	case "PROCESSING":
 		fallthrough
 	case "ERROR":
-		*e = RevealRequestStatusEnum(s)
+		*e = RevealRequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RevealRequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RevealRequestStatusEnum: %v", v)
 	}
 }

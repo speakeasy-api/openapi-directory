@@ -29,12 +29,16 @@ const (
 	PatchJobInstanceDetailsStateEnumNoAgentDetected         PatchJobInstanceDetailsStateEnum = "NO_AGENT_DETECTED"
 )
 
+func (e PatchJobInstanceDetailsStateEnum) ToPointer() *PatchJobInstanceDetailsStateEnum {
+	return &e
+}
+
 func (e *PatchJobInstanceDetailsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PATCH_STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -66,10 +70,10 @@ func (e *PatchJobInstanceDetailsStateEnum) UnmarshalJSON(data []byte) error {
 	case "RUNNING_POST_PATCH_STEP":
 		fallthrough
 	case "NO_AGENT_DETECTED":
-		*e = PatchJobInstanceDetailsStateEnum(s)
+		*e = PatchJobInstanceDetailsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchJobInstanceDetailsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchJobInstanceDetailsStateEnum: %v", v)
 	}
 }
 

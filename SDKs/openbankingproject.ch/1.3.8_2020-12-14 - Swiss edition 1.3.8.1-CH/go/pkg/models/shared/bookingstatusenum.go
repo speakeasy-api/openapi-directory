@@ -25,12 +25,16 @@ const (
 	BookingStatusEnumBoth        BookingStatusEnum = "both"
 )
 
+func (e BookingStatusEnum) ToPointer() *BookingStatusEnum {
+	return &e
+}
+
 func (e *BookingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "information":
 		fallthrough
 	case "booked":
@@ -38,9 +42,9 @@ func (e *BookingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "pending":
 		fallthrough
 	case "both":
-		*e = BookingStatusEnum(s)
+		*e = BookingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BookingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BookingStatusEnum: %v", v)
 	}
 }

@@ -72,7 +72,10 @@ func (s *authentication) DeleteAuthToken(ctx context.Context) (*operations.Delet
 // This endpoint deletes the user.<br><br>
 func (s *authentication) DeleteUsersIDUser(ctx context.Context, request operations.DeleteUsersIDUserRequest) (*operations.DeleteUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -165,7 +168,10 @@ func (s *authentication) GetAuthTokenCode(ctx context.Context) (*operations.GetA
 // GetCertificateType - Get the latest certificate of a type
 func (s *authentication) GetCertificateType(ctx context.Context, request operations.GetCertificateTypeRequest) (*operations.GetCertificateTypeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/certificate/{type}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/certificate/{type}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +219,10 @@ func (s *authentication) GetCertificateType(ctx context.Context, request operati
 // GetUsersIDUser - Get a user
 func (s *authentication) GetUsersIDUser(ctx context.Context, request operations.GetUsersIDUserRequest) (*operations.GetUsersIDUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -564,7 +573,10 @@ func (s *authentication) PostAuthTokenAccess(ctx context.Context, request operat
 // Create an access_token for this user and get it.<br><br>
 func (s *authentication) PostUsersIDUserToken(ctx context.Context, request operations.PostUsersIDUserTokenRequest) (*operations.PostUsersIDUserTokenResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id_user}/token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "multipart")
 	if err != nil {

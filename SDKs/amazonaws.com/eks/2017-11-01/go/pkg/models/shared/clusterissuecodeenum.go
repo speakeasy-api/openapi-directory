@@ -18,12 +18,16 @@ const (
 	ClusterIssueCodeEnumResourceNotFound      ClusterIssueCodeEnum = "ResourceNotFound"
 )
 
+func (e ClusterIssueCodeEnum) ToPointer() *ClusterIssueCodeEnum {
+	return &e
+}
+
 func (e *ClusterIssueCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccessDenied":
 		fallthrough
 	case "ClusterUnreachable":
@@ -35,9 +39,9 @@ func (e *ClusterIssueCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ResourceLimitExceeded":
 		fallthrough
 	case "ResourceNotFound":
-		*e = ClusterIssueCodeEnum(s)
+		*e = ClusterIssueCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterIssueCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterIssueCodeEnum: %v", v)
 	}
 }

@@ -15,17 +15,21 @@ const (
 	POSTGetCoipPoolUsageActionEnumGetCoipPoolUsage POSTGetCoipPoolUsageActionEnum = "GetCoipPoolUsage"
 )
 
+func (e POSTGetCoipPoolUsageActionEnum) ToPointer() *POSTGetCoipPoolUsageActionEnum {
+	return &e
+}
+
 func (e *POSTGetCoipPoolUsageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetCoipPoolUsage":
-		*e = POSTGetCoipPoolUsageActionEnum(s)
+		*e = POSTGetCoipPoolUsageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetCoipPoolUsageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetCoipPoolUsageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetCoipPoolUsageVersionEnumTwoThousandAndSixteen1115 POSTGetCoipPoolUsageVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetCoipPoolUsageVersionEnum) ToPointer() *POSTGetCoipPoolUsageVersionEnum {
+	return &e
+}
+
 func (e *POSTGetCoipPoolUsageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetCoipPoolUsageVersionEnum(s)
+		*e = POSTGetCoipPoolUsageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetCoipPoolUsageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetCoipPoolUsageVersionEnum: %v", v)
 	}
 }
 

@@ -15,20 +15,24 @@ const (
 	UploadStatusEnumFailed     UploadStatusEnum = "FAILED"
 )
 
+func (e UploadStatusEnum) ToPointer() *UploadStatusEnum {
+	return &e
+}
+
 func (e *UploadStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IN_PROGRESS":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
-		*e = UploadStatusEnum(s)
+		*e = UploadStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UploadStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UploadStatusEnum: %v", v)
 	}
 }

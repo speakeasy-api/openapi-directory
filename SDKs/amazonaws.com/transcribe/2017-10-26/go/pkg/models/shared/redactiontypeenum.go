@@ -13,16 +13,20 @@ const (
 	RedactionTypeEnumPii RedactionTypeEnum = "PII"
 )
 
+func (e RedactionTypeEnum) ToPointer() *RedactionTypeEnum {
+	return &e
+}
+
 func (e *RedactionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PII":
-		*e = RedactionTypeEnum(s)
+		*e = RedactionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RedactionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RedactionTypeEnum: %v", v)
 	}
 }

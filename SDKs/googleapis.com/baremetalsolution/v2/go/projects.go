@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch - Get instance provisioning settings for a given project. This is hidden method used by UI only.
 func (s *projects) BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest, security operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity) (*operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{location}/instanceProvisioningSettings:fetch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{location}/instanceProvisioningSettings:fetch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstanceProvisioningSetting
 // BaremetalsolutionProjectsLocationsInstancesCreate - Create an Instance.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesCreate(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest, security operations.BaremetalsolutionProjectsLocationsInstancesCreateSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "InstanceInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesCreate(ctx context
 // BaremetalsolutionProjectsLocationsInstancesDetachLun - Detach LUN from Instance.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesDetachLun(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest, security operations.BaremetalsolutionProjectsLocationsInstancesDetachLunSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{instance}:detachLun", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{instance}:detachLun", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DetachLunRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesDetachLun(ctx cont
 // BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole - Disable the interactive serial console feature on an instance.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest, security operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:disableInteractiveSerialConsole", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:disableInteractiveSerialConsole", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesDisableInteractive
 // BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole - Enable the interactive serial console feature on an instance.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest, security operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:enableInteractiveSerialConsole", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:enableInteractiveSerialConsole", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesEnableInteractiveS
 // BaremetalsolutionProjectsLocationsInstancesList - List servers in a given project and location.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesListRequest, security operations.BaremetalsolutionProjectsLocationsInstancesListSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/instances", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesList(ctx context.C
 // BaremetalsolutionProjectsLocationsInstancesReset - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesReset(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesResetRequest, security operations.BaremetalsolutionProjectsLocationsInstancesResetSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesResetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:reset", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:reset", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -405,7 +426,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesReset(ctx context.
 // BaremetalsolutionProjectsLocationsInstancesStart - Starts a server that was shutdown.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesStart(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesStartRequest, security operations.BaremetalsolutionProjectsLocationsInstancesStartSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesStartResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -460,7 +484,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesStart(ctx context.
 // BaremetalsolutionProjectsLocationsInstancesStop - Stop a running server.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesStop(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesStopRequest, security operations.BaremetalsolutionProjectsLocationsInstancesStopSecurity) (*operations.BaremetalsolutionProjectsLocationsInstancesStopResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -515,7 +542,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesStop(ctx context.C
 // BaremetalsolutionProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) BaremetalsolutionProjectsLocationsList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsListRequest, security operations.BaremetalsolutionProjectsLocationsListSecurity) (*operations.BaremetalsolutionProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -563,7 +593,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsList(ctx context.Context, r
 // BaremetalsolutionProjectsLocationsNetworksList - List network in a given project and location.
 func (s *projects) BaremetalsolutionProjectsLocationsNetworksList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsNetworksListRequest, security operations.BaremetalsolutionProjectsLocationsNetworksListSecurity) (*operations.BaremetalsolutionProjectsLocationsNetworksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/networks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/networks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -611,7 +644,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsNetworksList(ctx context.Co
 // BaremetalsolutionProjectsLocationsNetworksListNetworkUsage - List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
 func (s *projects) BaremetalsolutionProjectsLocationsNetworksListNetworkUsage(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest, security operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageSecurity) (*operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{location}/networks:listNetworkUsage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{location}/networks:listNetworkUsage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +695,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsNetworksListNetworkUsage(ct
 // BaremetalsolutionProjectsLocationsNfsSharesCreate - Create an NFS share.
 func (s *projects) BaremetalsolutionProjectsLocationsNfsSharesCreate(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest, security operations.BaremetalsolutionProjectsLocationsNfsSharesCreateSecurity) (*operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/nfsShares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/nfsShares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "NfsShareInput", "json")
 	if err != nil {
@@ -714,7 +753,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsNfsSharesCreate(ctx context
 // BaremetalsolutionProjectsLocationsNfsSharesList - List NFS shares.
 func (s *projects) BaremetalsolutionProjectsLocationsNfsSharesList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest, security operations.BaremetalsolutionProjectsLocationsNfsSharesListSecurity) (*operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/nfsShares", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/nfsShares", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -762,7 +804,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsNfsSharesList(ctx context.C
 // BaremetalsolutionProjectsLocationsProvisioningConfigsCreate - Create new ProvisioningConfig.
 func (s *projects) BaremetalsolutionProjectsLocationsProvisioningConfigsCreate(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest, security operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateSecurity) (*operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningConfigs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningConfigs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ProvisioningConfigInput", "json")
 	if err != nil {
@@ -817,7 +862,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsProvisioningConfigsCreate(c
 // BaremetalsolutionProjectsLocationsProvisioningConfigsSubmit - Submit a provisiong configuration for a given project.
 func (s *projects) BaremetalsolutionProjectsLocationsProvisioningConfigsSubmit(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest, security operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitSecurity) (*operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningConfigs:submit", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningConfigs:submit", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SubmitProvisioningConfigRequestInput", "json")
 	if err != nil {
@@ -872,7 +920,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsProvisioningConfigsSubmit(c
 // BaremetalsolutionProjectsLocationsProvisioningQuotasList - List the budget details to provision resources on a given project.
 func (s *projects) BaremetalsolutionProjectsLocationsProvisioningQuotasList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest, security operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListSecurity) (*operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningQuotas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/provisioningQuotas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -920,7 +971,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsProvisioningQuotasList(ctx 
 // BaremetalsolutionProjectsLocationsSSHKeysCreate - Register a public SSH key in the specified project for use with the interactive serial console feature.
 func (s *projects) BaremetalsolutionProjectsLocationsSSHKeysCreate(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsSSHKeysCreateRequest, security operations.BaremetalsolutionProjectsLocationsSSHKeysCreateSecurity) (*operations.BaremetalsolutionProjectsLocationsSSHKeysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sshKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sshKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SSHKeyInput", "json")
 	if err != nil {
@@ -975,7 +1029,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsSSHKeysCreate(ctx context.C
 // BaremetalsolutionProjectsLocationsSSHKeysList - Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
 func (s *projects) BaremetalsolutionProjectsLocationsSSHKeysList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsSSHKeysListRequest, security operations.BaremetalsolutionProjectsLocationsSSHKeysListSecurity) (*operations.BaremetalsolutionProjectsLocationsSSHKeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sshKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/sshKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1023,7 +1080,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsSSHKeysList(ctx context.Con
 // BaremetalsolutionProjectsLocationsVolumesList - List storage volumes in a given project and location.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesListRequest, security operations.BaremetalsolutionProjectsLocationsVolumesListSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/volumes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/volumes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1071,7 +1131,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesList(ctx context.Con
 // BaremetalsolutionProjectsLocationsVolumesLunsEvict - Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesLunsEvict(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest, security operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:evict", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:evict", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1126,7 +1189,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesLunsEvict(ctx contex
 // BaremetalsolutionProjectsLocationsVolumesLunsList - List storage volume luns for given storage volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesLunsList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest, security operations.BaremetalsolutionProjectsLocationsVolumesLunsListSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/luns", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/luns", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1174,7 +1240,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesLunsList(ctx context
 // BaremetalsolutionProjectsLocationsVolumesPatch - Update details of a single storage volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesPatch(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest, security operations.BaremetalsolutionProjectsLocationsVolumesPatchSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VolumeInput", "json")
 	if err != nil {
@@ -1229,7 +1298,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesPatch(ctx context.Co
 // BaremetalsolutionProjectsLocationsVolumesRename - RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesRename(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest, security operations.BaremetalsolutionProjectsLocationsVolumesRenameSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:rename", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}:rename", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RenameVolumeRequest", "json")
 	if err != nil {
@@ -1284,7 +1356,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesRename(ctx context.C
 // BaremetalsolutionProjectsLocationsVolumesResize - Emergency Volume resize.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesResize(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest, security operations.BaremetalsolutionProjectsLocationsVolumesResizeSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{volume}:resize", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{volume}:resize", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ResizeVolumeRequest", "json")
 	if err != nil {
@@ -1339,7 +1414,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesResize(ctx context.C
 // BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate - Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest, security operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VolumeSnapshotInput", "json")
 	if err != nil {
@@ -1394,7 +1472,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate(ctx 
 // BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete - Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest, security operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1442,7 +1523,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete(ctx 
 // BaremetalsolutionProjectsLocationsVolumesSnapshotsGet - Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsGet(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest, security operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1490,7 +1574,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsGet(ctx con
 // BaremetalsolutionProjectsLocationsVolumesSnapshotsList - Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsList(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest, security operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/snapshots", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{parent}/snapshots", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1538,7 +1625,10 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsList(ctx co
 // BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot - Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
 func (s *projects) BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest, security operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotSecurity) (*operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{volumeSnapshot}:restoreVolumeSnapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/{volumeSnapshot}:restoreVolumeSnapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

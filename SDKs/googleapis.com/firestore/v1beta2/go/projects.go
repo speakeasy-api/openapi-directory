@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FirestoreProjectsDatabasesCollectionGroupsFieldsList - Lists the field configuration and metadata for this database. Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to `indexConfig.usesAncestorConfig:false`.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsFieldsList(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsFieldsList(ctx cont
 // FirestoreProjectsDatabasesCollectionGroupsFieldsPatch - Updates a field configuration. Currently, field updates apply only to single field index configuration. However, calls to FirestoreAdmin.UpdateField should provide a field mask to avoid changing any configuration that the caller isn't aware of. The field mask should be specified as: `{ paths: "index_config" }`. This call returns a google.longrunning.Operation which may be used to track the status of the field update. The metadata for the operation will be the type FieldOperationMetadata. To configure the default field settings for the database, use the special `Field` with resource name: `projects/{project_id}/databases/{database_id}/collectionGroups/__default__/fields/*`.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsFieldsPatch(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsFieldsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta2Field", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsFieldsPatch(ctx con
 // FirestoreProjectsDatabasesCollectionGroupsIndexesCreate - Creates a composite index. This returns a google.longrunning.Operation which may be used to track the status of the creation. The metadata for the operation will be the type IndexOperationMetadata.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesCreate(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsIndexesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/indexes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/indexes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta2Index", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesCreate(ctx c
 // FirestoreProjectsDatabasesCollectionGroupsIndexesDelete - Deletes a composite index.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesDelete(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsIndexesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -240,7 +252,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesDelete(ctx c
 // FirestoreProjectsDatabasesCollectionGroupsIndexesGet - Gets a composite index.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesGet(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsIndexesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesGet(ctx cont
 // FirestoreProjectsDatabasesCollectionGroupsIndexesList - Lists composite indexes.
 func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesList(ctx context.Context, request operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListRequest, security operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListSecurity) (*operations.FirestoreProjectsDatabasesCollectionGroupsIndexesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/indexes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{parent}/indexes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *projects) FirestoreProjectsDatabasesCollectionGroupsIndexesList(ctx con
 // FirestoreProjectsDatabasesExportDocuments - Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage.
 func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesExportDocumentsRequest, security operations.FirestoreProjectsDatabasesExportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesExportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:exportDocuments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:exportDocuments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta2ExportDocumentsRequest", "json")
 	if err != nil {
@@ -391,7 +412,10 @@ func (s *projects) FirestoreProjectsDatabasesExportDocuments(ctx context.Context
 // FirestoreProjectsDatabasesImportDocuments - Imports documents into Google Cloud Firestore. Existing documents with the same name are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Firestore.
 func (s *projects) FirestoreProjectsDatabasesImportDocuments(ctx context.Context, request operations.FirestoreProjectsDatabasesImportDocumentsRequest, security operations.FirestoreProjectsDatabasesImportDocumentsSecurity) (*operations.FirestoreProjectsDatabasesImportDocumentsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:importDocuments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta2/{name}:importDocuments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFirestoreAdminV1beta2ImportDocumentsRequest", "json")
 	if err != nil {

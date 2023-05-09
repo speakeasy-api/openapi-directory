@@ -35,7 +35,7 @@ func newTimeMachineHistoricalWeather(defaultClient, securityClient HTTPClient, s
 // TimeMachineTimeMachineGet - Returns weather data for a single location and given day in the past
 // ## Actual weather data for a single location and day in the past
 //
-// The output contains actual weather data for each day up to 8 years in the past, and long-term statistics of selected weather variables aggregated over 40 years.
+// The output contains actual weather data for each day up to 20 years in the past, and long-term statistics of selected weather variables aggregated over 40 years.
 //
 // ### Location specification
 // The location of the weather data must be specified. There are two ways to do this:

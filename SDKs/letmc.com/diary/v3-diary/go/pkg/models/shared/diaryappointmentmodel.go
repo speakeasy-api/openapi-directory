@@ -31,12 +31,16 @@ const (
 	DiaryAppointmentModelRemindBeforeEnumNoReminder DiaryAppointmentModelRemindBeforeEnum = "NoReminder"
 )
 
+func (e DiaryAppointmentModelRemindBeforeEnum) ToPointer() *DiaryAppointmentModelRemindBeforeEnum {
+	return &e
+}
+
 func (e *DiaryAppointmentModelRemindBeforeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Min":
 		fallthrough
 	case "Min2":
@@ -70,10 +74,10 @@ func (e *DiaryAppointmentModelRemindBeforeEnum) UnmarshalJSON(data []byte) error
 	case "Week":
 		fallthrough
 	case "NoReminder":
-		*e = DiaryAppointmentModelRemindBeforeEnum(s)
+		*e = DiaryAppointmentModelRemindBeforeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DiaryAppointmentModelRemindBeforeEnum: %s", s)
+		return fmt.Errorf("invalid value for DiaryAppointmentModelRemindBeforeEnum: %v", v)
 	}
 }
 
@@ -93,6 +97,8 @@ type DiaryAppointmentModel struct {
 	ETag *string `json:"ETag,omitempty"`
 	// The end date/time of this appointment.
 	End *time.Time `json:"End,omitempty"`
+	// Linked Guest Model:-
+	LinkedGuest []LinkedGuestModel `json:"LinkedGuest,omitempty"`
 	// A collection of properties linked to the appointment:-
 	LinkedProperties []LinkedPropertiesModel `json:"LinkedProperties,omitempty"`
 	// Date appointment next repeats:-

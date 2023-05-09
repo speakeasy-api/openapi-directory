@@ -15,17 +15,21 @@ const (
 	POSTGetCapacityReservationUsageActionEnumGetCapacityReservationUsage POSTGetCapacityReservationUsageActionEnum = "GetCapacityReservationUsage"
 )
 
+func (e POSTGetCapacityReservationUsageActionEnum) ToPointer() *POSTGetCapacityReservationUsageActionEnum {
+	return &e
+}
+
 func (e *POSTGetCapacityReservationUsageActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetCapacityReservationUsage":
-		*e = POSTGetCapacityReservationUsageActionEnum(s)
+		*e = POSTGetCapacityReservationUsageActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetCapacityReservationUsageActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetCapacityReservationUsageActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTGetCapacityReservationUsageVersionEnumTwoThousandAndSixteen1115 POSTGetCapacityReservationUsageVersionEnum = "2016-11-15"
 )
 
+func (e POSTGetCapacityReservationUsageVersionEnum) ToPointer() *POSTGetCapacityReservationUsageVersionEnum {
+	return &e
+}
+
 func (e *POSTGetCapacityReservationUsageVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTGetCapacityReservationUsageVersionEnum(s)
+		*e = POSTGetCapacityReservationUsageVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTGetCapacityReservationUsageVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTGetCapacityReservationUsageVersionEnum: %v", v)
 	}
 }
 

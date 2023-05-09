@@ -14,18 +14,22 @@ const (
 	Ipv6SupportValueEnumDisable Ipv6SupportValueEnum = "disable"
 )
 
+func (e Ipv6SupportValueEnum) ToPointer() *Ipv6SupportValueEnum {
+	return &e
+}
+
 func (e *Ipv6SupportValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enable":
 		fallthrough
 	case "disable":
-		*e = Ipv6SupportValueEnum(s)
+		*e = Ipv6SupportValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ipv6SupportValueEnum: %s", s)
+		return fmt.Errorf("invalid value for Ipv6SupportValueEnum: %v", v)
 	}
 }

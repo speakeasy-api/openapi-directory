@@ -35,7 +35,10 @@ func newValuesInPastMultiple(defaultClient, securityClient HTTPClient, serverURL
 // ValuesInPastMultipleGet - Gets multiple values of a device. This call needs a smart-me professional licence.
 func (s *valuesInPastMultiple) ValuesInPastMultipleGet(ctx context.Context, request operations.ValuesInPastMultipleGetRequest) (*operations.ValuesInPastMultipleGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/ValuesInPastMultiple/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/ValuesInPastMultiple/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

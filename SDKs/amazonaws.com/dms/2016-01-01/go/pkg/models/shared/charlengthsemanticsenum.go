@@ -15,20 +15,24 @@ const (
 	CharLengthSemanticsEnumByte    CharLengthSemanticsEnum = "byte"
 )
 
+func (e CharLengthSemanticsEnum) ToPointer() *CharLengthSemanticsEnum {
+	return &e
+}
+
 func (e *CharLengthSemanticsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "char":
 		fallthrough
 	case "byte":
-		*e = CharLengthSemanticsEnum(s)
+		*e = CharLengthSemanticsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CharLengthSemanticsEnum: %s", s)
+		return fmt.Errorf("invalid value for CharLengthSemanticsEnum: %v", v)
 	}
 }

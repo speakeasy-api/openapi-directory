@@ -16,17 +16,21 @@ const (
 	GETRestoreDBInstanceToPointInTimeActionEnumRestoreDbInstanceToPointInTime GETRestoreDBInstanceToPointInTimeActionEnum = "RestoreDBInstanceToPointInTime"
 )
 
+func (e GETRestoreDBInstanceToPointInTimeActionEnum) ToPointer() *GETRestoreDBInstanceToPointInTimeActionEnum {
+	return &e
+}
+
 func (e *GETRestoreDBInstanceToPointInTimeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RestoreDBInstanceToPointInTime":
-		*e = GETRestoreDBInstanceToPointInTimeActionEnum(s)
+		*e = GETRestoreDBInstanceToPointInTimeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreDBInstanceToPointInTimeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreDBInstanceToPointInTimeActionEnum: %v", v)
 	}
 }
 
@@ -37,17 +41,21 @@ const (
 	GETRestoreDBInstanceToPointInTimeVersionEnumTwoThousandAndThirteen0212 GETRestoreDBInstanceToPointInTimeVersionEnum = "2013-02-12"
 )
 
+func (e GETRestoreDBInstanceToPointInTimeVersionEnum) ToPointer() *GETRestoreDBInstanceToPointInTimeVersionEnum {
+	return &e
+}
+
 func (e *GETRestoreDBInstanceToPointInTimeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETRestoreDBInstanceToPointInTimeVersionEnum(s)
+		*e = GETRestoreDBInstanceToPointInTimeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETRestoreDBInstanceToPointInTimeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETRestoreDBInstanceToPointInTimeVersionEnum: %v", v)
 	}
 }
 

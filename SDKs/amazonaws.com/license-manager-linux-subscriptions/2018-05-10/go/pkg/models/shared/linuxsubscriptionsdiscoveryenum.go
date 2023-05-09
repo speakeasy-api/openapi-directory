@@ -14,18 +14,22 @@ const (
 	LinuxSubscriptionsDiscoveryEnumDisabled LinuxSubscriptionsDiscoveryEnum = "Disabled"
 )
 
+func (e LinuxSubscriptionsDiscoveryEnum) ToPointer() *LinuxSubscriptionsDiscoveryEnum {
+	return &e
+}
+
 func (e *LinuxSubscriptionsDiscoveryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Enabled":
 		fallthrough
 	case "Disabled":
-		*e = LinuxSubscriptionsDiscoveryEnum(s)
+		*e = LinuxSubscriptionsDiscoveryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LinuxSubscriptionsDiscoveryEnum: %s", s)
+		return fmt.Errorf("invalid value for LinuxSubscriptionsDiscoveryEnum: %v", v)
 	}
 }

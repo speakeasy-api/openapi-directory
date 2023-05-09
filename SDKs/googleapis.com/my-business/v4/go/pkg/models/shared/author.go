@@ -17,12 +17,16 @@ const (
 	AuthorTypeEnumMerchant              AuthorTypeEnum = "MERCHANT"
 )
 
+func (e AuthorTypeEnum) ToPointer() *AuthorTypeEnum {
+	return &e
+}
+
 func (e *AuthorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHOR_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REGULAR_USER":
@@ -30,10 +34,10 @@ func (e *AuthorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LOCAL_GUIDE":
 		fallthrough
 	case "MERCHANT":
-		*e = AuthorTypeEnum(s)
+		*e = AuthorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorTypeEnum: %v", v)
 	}
 }
 

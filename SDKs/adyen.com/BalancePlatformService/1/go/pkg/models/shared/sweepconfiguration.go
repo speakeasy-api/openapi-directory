@@ -91,19 +91,23 @@ const (
 	SweepConfigurationStatusEnumInactive SweepConfigurationStatusEnum = "inactive"
 )
 
+func (e SweepConfigurationStatusEnum) ToPointer() *SweepConfigurationStatusEnum {
+	return &e
+}
+
 func (e *SweepConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = SweepConfigurationStatusEnum(s)
+		*e = SweepConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SweepConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for SweepConfigurationStatusEnum: %v", v)
 	}
 }
 
@@ -121,19 +125,23 @@ const (
 	SweepConfigurationTypeEnumPush SweepConfigurationTypeEnum = "push"
 )
 
+func (e SweepConfigurationTypeEnum) ToPointer() *SweepConfigurationTypeEnum {
+	return &e
+}
+
 func (e *SweepConfigurationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "push":
-		*e = SweepConfigurationTypeEnum(s)
+		*e = SweepConfigurationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SweepConfigurationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for SweepConfigurationTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteSolutionXAmzTargetEnumAmazonPersonalizeDeleteSolution DeleteSolutionXAmzTargetEnum = "AmazonPersonalize.DeleteSolution"
 )
 
+func (e DeleteSolutionXAmzTargetEnum) ToPointer() *DeleteSolutionXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteSolutionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonPersonalize.DeleteSolution":
-		*e = DeleteSolutionXAmzTargetEnum(s)
+		*e = DeleteSolutionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteSolutionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteSolutionXAmzTargetEnum: %v", v)
 	}
 }
 

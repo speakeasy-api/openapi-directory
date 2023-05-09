@@ -15,17 +15,21 @@ const (
 	POSTStartDBClusterActionEnumStartDbCluster POSTStartDBClusterActionEnum = "StartDBCluster"
 )
 
+func (e POSTStartDBClusterActionEnum) ToPointer() *POSTStartDBClusterActionEnum {
+	return &e
+}
+
 func (e *POSTStartDBClusterActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StartDBCluster":
-		*e = POSTStartDBClusterActionEnum(s)
+		*e = POSTStartDBClusterActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBClusterActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBClusterActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTStartDBClusterVersionEnumTwoThousandAndFourteen1031 POSTStartDBClusterVersionEnum = "2014-10-31"
 )
 
+func (e POSTStartDBClusterVersionEnum) ToPointer() *POSTStartDBClusterVersionEnum {
+	return &e
+}
+
 func (e *POSTStartDBClusterVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = POSTStartDBClusterVersionEnum(s)
+		*e = POSTStartDBClusterVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTStartDBClusterVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTStartDBClusterVersionEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTDeleteVerifiedAccessTrustProviderActionEnumDeleteVerifiedAccessTrustProvider POSTDeleteVerifiedAccessTrustProviderActionEnum = "DeleteVerifiedAccessTrustProvider"
 )
 
+func (e POSTDeleteVerifiedAccessTrustProviderActionEnum) ToPointer() *POSTDeleteVerifiedAccessTrustProviderActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVerifiedAccessTrustProviderActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteVerifiedAccessTrustProvider":
-		*e = POSTDeleteVerifiedAccessTrustProviderActionEnum(s)
+		*e = POSTDeleteVerifiedAccessTrustProviderActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVerifiedAccessTrustProviderActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVerifiedAccessTrustProviderActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteVerifiedAccessTrustProviderVersionEnumTwoThousandAndSixteen1115 POSTDeleteVerifiedAccessTrustProviderVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteVerifiedAccessTrustProviderVersionEnum) ToPointer() *POSTDeleteVerifiedAccessTrustProviderVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteVerifiedAccessTrustProviderVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteVerifiedAccessTrustProviderVersionEnum(s)
+		*e = POSTDeleteVerifiedAccessTrustProviderVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteVerifiedAccessTrustProviderVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteVerifiedAccessTrustProviderVersionEnum: %v", v)
 	}
 }
 

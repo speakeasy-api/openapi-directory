@@ -16,17 +16,21 @@ const (
 	CreateParameterGroupXAmzTargetEnumAmazonDaxv3CreateParameterGroup CreateParameterGroupXAmzTargetEnum = "AmazonDAXV3.CreateParameterGroup"
 )
 
+func (e CreateParameterGroupXAmzTargetEnum) ToPointer() *CreateParameterGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateParameterGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.CreateParameterGroup":
-		*e = CreateParameterGroupXAmzTargetEnum(s)
+		*e = CreateParameterGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateParameterGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateParameterGroupXAmzTargetEnum: %v", v)
 	}
 }
 

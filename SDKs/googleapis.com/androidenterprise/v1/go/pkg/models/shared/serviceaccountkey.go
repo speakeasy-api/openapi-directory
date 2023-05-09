@@ -15,19 +15,23 @@ const (
 	ServiceAccountKeyTypeEnumPkcs12            ServiceAccountKeyTypeEnum = "pkcs12"
 )
 
+func (e ServiceAccountKeyTypeEnum) ToPointer() *ServiceAccountKeyTypeEnum {
+	return &e
+}
+
 func (e *ServiceAccountKeyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "googleCredentials":
 		fallthrough
 	case "pkcs12":
-		*e = ServiceAccountKeyTypeEnum(s)
+		*e = ServiceAccountKeyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ServiceAccountKeyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ServiceAccountKeyTypeEnum: %v", v)
 	}
 }
 

@@ -69,12 +69,16 @@ const (
 	DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnumTargetingTypeSessionPosition              DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum = "TARGETING_TYPE_SESSION_POSITION"
 )
 
+func (e DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum) ToPointer() *DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum {
+	return &e
+}
+
 func (e *DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TARGETING_TYPE_UNSPECIFIED":
 		fallthrough
 	case "TARGETING_TYPE_CHANNEL":
@@ -172,10 +176,10 @@ func (e *DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum) Unma
 	case "TARGETING_TYPE_YOUTUBE_CHANNEL":
 		fallthrough
 	case "TARGETING_TYPE_SESSION_POSITION":
-		*e = DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum(s)
+		*e = DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DisplayvideoTargetingTypesTargetingOptionsSearchTargetingTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnumTall              GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum = "TALL"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEIGHT_UNSPECIFIED":
 		fallthrough
 	case "SHORT":
@@ -30,10 +34,10 @@ func (e *GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEn
 	case "MEDIUM":
 		fallthrough
 	case "TALL":
-		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaHeightEnum: %v", v)
 	}
 }
 

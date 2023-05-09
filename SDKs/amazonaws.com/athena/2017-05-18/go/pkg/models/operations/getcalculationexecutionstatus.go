@@ -16,17 +16,21 @@ const (
 	GetCalculationExecutionStatusXAmzTargetEnumAmazonAthenaGetCalculationExecutionStatus GetCalculationExecutionStatusXAmzTargetEnum = "AmazonAthena.GetCalculationExecutionStatus"
 )
 
+func (e GetCalculationExecutionStatusXAmzTargetEnum) ToPointer() *GetCalculationExecutionStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCalculationExecutionStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonAthena.GetCalculationExecutionStatus":
-		*e = GetCalculationExecutionStatusXAmzTargetEnum(s)
+		*e = GetCalculationExecutionStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCalculationExecutionStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCalculationExecutionStatusXAmzTargetEnum: %v", v)
 	}
 }
 

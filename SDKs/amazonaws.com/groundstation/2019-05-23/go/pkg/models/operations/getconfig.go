@@ -22,12 +22,16 @@ const (
 	GetConfigConfigTypeEnumS3Recording                GetConfigConfigTypeEnum = "s3-recording"
 )
 
+func (e GetConfigConfigTypeEnum) ToPointer() *GetConfigConfigTypeEnum {
+	return &e
+}
+
 func (e *GetConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "antenna-downlink":
 		fallthrough
 	case "antenna-downlink-demod-decode":
@@ -41,10 +45,10 @@ func (e *GetConfigConfigTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uplink-echo":
 		fallthrough
 	case "s3-recording":
-		*e = GetConfigConfigTypeEnum(s)
+		*e = GetConfigConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetConfigConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetConfigConfigTypeEnum: %v", v)
 	}
 }
 

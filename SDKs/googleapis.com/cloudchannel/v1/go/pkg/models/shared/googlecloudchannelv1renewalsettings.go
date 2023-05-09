@@ -19,12 +19,16 @@ const (
 	GoogleCloudChannelV1RenewalSettingsPaymentPlanEnumOffline                GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum = "OFFLINE"
 )
 
+func (e GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum) ToPointer() *GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum {
+	return &e
+}
+
 func (e *GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAYMENT_PLAN_UNSPECIFIED":
 		fallthrough
 	case "COMMITMENT":
@@ -36,10 +40,10 @@ func (e *GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum) UnmarshalJSON(data 
 	case "TRIAL":
 		fallthrough
 	case "OFFLINE":
-		*e = GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum(s)
+		*e = GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum: %v", v)
 	}
 }
 

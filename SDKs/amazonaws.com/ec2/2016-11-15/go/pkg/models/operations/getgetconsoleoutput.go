@@ -15,17 +15,21 @@ const (
 	GETGETConsoleOutputActionEnumGetConsoleOutput GETGETConsoleOutputActionEnum = "GetConsoleOutput"
 )
 
+func (e GETGETConsoleOutputActionEnum) ToPointer() *GETGETConsoleOutputActionEnum {
+	return &e
+}
+
 func (e *GETGETConsoleOutputActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GetConsoleOutput":
-		*e = GETGETConsoleOutputActionEnum(s)
+		*e = GETGETConsoleOutputActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETConsoleOutputActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETConsoleOutputActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETGETConsoleOutputVersionEnumTwoThousandAndSixteen1115 GETGETConsoleOutputVersionEnum = "2016-11-15"
 )
 
+func (e GETGETConsoleOutputVersionEnum) ToPointer() *GETGETConsoleOutputVersionEnum {
+	return &e
+}
+
 func (e *GETGETConsoleOutputVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETGETConsoleOutputVersionEnum(s)
+		*e = GETGETConsoleOutputVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETGETConsoleOutputVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETGETConsoleOutputVersionEnum: %v", v)
 	}
 }
 

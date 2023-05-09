@@ -15,17 +15,21 @@ const (
 	GETDescribeDBParametersActionEnumDescribeDbParameters GETDescribeDBParametersActionEnum = "DescribeDBParameters"
 )
 
+func (e GETDescribeDBParametersActionEnum) ToPointer() *GETDescribeDBParametersActionEnum {
+	return &e
+}
+
 func (e *GETDescribeDBParametersActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeDBParameters":
-		*e = GETDescribeDBParametersActionEnum(s)
+		*e = GETDescribeDBParametersActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDBParametersActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDBParametersActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDescribeDBParametersVersionEnumTwoThousandAndThirteen0212 GETDescribeDBParametersVersionEnum = "2013-02-12"
 )
 
+func (e GETDescribeDBParametersVersionEnum) ToPointer() *GETDescribeDBParametersVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeDBParametersVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-02-12":
-		*e = GETDescribeDBParametersVersionEnum(s)
+		*e = GETDescribeDBParametersVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeDBParametersVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeDBParametersVersionEnum: %v", v)
 	}
 }
 

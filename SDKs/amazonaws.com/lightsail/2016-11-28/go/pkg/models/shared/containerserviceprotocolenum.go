@@ -16,12 +16,16 @@ const (
 	ContainerServiceProtocolEnumUDP   ContainerServiceProtocolEnum = "UDP"
 )
 
+func (e ContainerServiceProtocolEnum) ToPointer() *ContainerServiceProtocolEnum {
+	return &e
+}
+
 func (e *ContainerServiceProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HTTP":
 		fallthrough
 	case "HTTPS":
@@ -29,9 +33,9 @@ func (e *ContainerServiceProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "TCP":
 		fallthrough
 	case "UDP":
-		*e = ContainerServiceProtocolEnum(s)
+		*e = ContainerServiceProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContainerServiceProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ContainerServiceProtocolEnum: %v", v)
 	}
 }

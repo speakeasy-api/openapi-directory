@@ -18,21 +18,25 @@ const (
 	UpdateGeofenceCollectionRequestBodyPricingPlanEnumMobileAssetManagement UpdateGeofenceCollectionRequestBodyPricingPlanEnum = "MobileAssetManagement"
 )
 
+func (e UpdateGeofenceCollectionRequestBodyPricingPlanEnum) ToPointer() *UpdateGeofenceCollectionRequestBodyPricingPlanEnum {
+	return &e
+}
+
 func (e *UpdateGeofenceCollectionRequestBodyPricingPlanEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestBasedUsage":
 		fallthrough
 	case "MobileAssetTracking":
 		fallthrough
 	case "MobileAssetManagement":
-		*e = UpdateGeofenceCollectionRequestBodyPricingPlanEnum(s)
+		*e = UpdateGeofenceCollectionRequestBodyPricingPlanEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGeofenceCollectionRequestBodyPricingPlanEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGeofenceCollectionRequestBodyPricingPlanEnum: %v", v)
 	}
 }
 

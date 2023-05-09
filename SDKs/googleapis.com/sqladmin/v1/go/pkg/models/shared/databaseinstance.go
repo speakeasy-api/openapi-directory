@@ -17,12 +17,16 @@ const (
 	DatabaseInstanceBackendTypeEnumExternal                  DatabaseInstanceBackendTypeEnum = "EXTERNAL"
 )
 
+func (e DatabaseInstanceBackendTypeEnum) ToPointer() *DatabaseInstanceBackendTypeEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceBackendTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_BACKEND_TYPE_UNSPECIFIED":
 		fallthrough
 	case "FIRST_GEN":
@@ -30,10 +34,10 @@ func (e *DatabaseInstanceBackendTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SECOND_GEN":
 		fallthrough
 	case "EXTERNAL":
-		*e = DatabaseInstanceBackendTypeEnum(s)
+		*e = DatabaseInstanceBackendTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceBackendTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceBackendTypeEnum: %v", v)
 	}
 }
 
@@ -56,6 +60,7 @@ const (
 	DatabaseInstanceDatabaseVersionEnumPostgres12                    DatabaseInstanceDatabaseVersionEnum = "POSTGRES_12"
 	DatabaseInstanceDatabaseVersionEnumPostgres13                    DatabaseInstanceDatabaseVersionEnum = "POSTGRES_13"
 	DatabaseInstanceDatabaseVersionEnumPostgres14                    DatabaseInstanceDatabaseVersionEnum = "POSTGRES_14"
+	DatabaseInstanceDatabaseVersionEnumPostgres15                    DatabaseInstanceDatabaseVersionEnum = "POSTGRES_15"
 	DatabaseInstanceDatabaseVersionEnumMysql80                       DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0"
 	DatabaseInstanceDatabaseVersionEnumMysql8018                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_18"
 	DatabaseInstanceDatabaseVersionEnumMysql8026                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_26"
@@ -65,18 +70,26 @@ const (
 	DatabaseInstanceDatabaseVersionEnumMysql8030                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_30"
 	DatabaseInstanceDatabaseVersionEnumMysql8031                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_31"
 	DatabaseInstanceDatabaseVersionEnumMysql8032                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_32"
+	DatabaseInstanceDatabaseVersionEnumMysql8033                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_33"
+	DatabaseInstanceDatabaseVersionEnumMysql8034                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_34"
+	DatabaseInstanceDatabaseVersionEnumMysql8035                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_35"
+	DatabaseInstanceDatabaseVersionEnumMysql8036                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_36"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Standard         DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_STANDARD"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Enterprise       DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_ENTERPRISE"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Express          DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_EXPRESS"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Web              DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_WEB"
 )
 
+func (e DatabaseInstanceDatabaseVersionEnum) ToPointer() *DatabaseInstanceDatabaseVersionEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_DATABASE_VERSION_UNSPECIFIED":
 		fallthrough
 	case "MYSQL_5_1":
@@ -107,6 +120,8 @@ func (e *DatabaseInstanceDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "POSTGRES_14":
 		fallthrough
+	case "POSTGRES_15":
+		fallthrough
 	case "MYSQL_8_0":
 		fallthrough
 	case "MYSQL_8_0_18":
@@ -125,6 +140,14 @@ func (e *DatabaseInstanceDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "MYSQL_8_0_32":
 		fallthrough
+	case "MYSQL_8_0_33":
+		fallthrough
+	case "MYSQL_8_0_34":
+		fallthrough
+	case "MYSQL_8_0_35":
+		fallthrough
+	case "MYSQL_8_0_36":
+		fallthrough
 	case "SQLSERVER_2019_STANDARD":
 		fallthrough
 	case "SQLSERVER_2019_ENTERPRISE":
@@ -132,10 +155,10 @@ func (e *DatabaseInstanceDatabaseVersionEnum) UnmarshalJSON(data []byte) error {
 	case "SQLSERVER_2019_EXPRESS":
 		fallthrough
 	case "SQLSERVER_2019_WEB":
-		*e = DatabaseInstanceDatabaseVersionEnum(s)
+		*e = DatabaseInstanceDatabaseVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceDatabaseVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceDatabaseVersionEnum: %v", v)
 	}
 }
 
@@ -157,12 +180,16 @@ const (
 	DatabaseInstanceInstanceTypeEnumReadReplicaInstance        DatabaseInstanceInstanceTypeEnum = "READ_REPLICA_INSTANCE"
 )
 
+func (e DatabaseInstanceInstanceTypeEnum) ToPointer() *DatabaseInstanceInstanceTypeEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_INSTANCE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CLOUD_SQL_INSTANCE":
@@ -170,10 +197,10 @@ func (e *DatabaseInstanceInstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ON_PREMISES_INSTANCE":
 		fallthrough
 	case "READ_REPLICA_INSTANCE":
-		*e = DatabaseInstanceInstanceTypeEnum(s)
+		*e = DatabaseInstanceInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -191,12 +218,16 @@ const (
 	DatabaseInstanceStateEnumOnlineMaintenance           DatabaseInstanceStateEnum = "ONLINE_MAINTENANCE"
 )
 
+func (e DatabaseInstanceStateEnum) ToPointer() *DatabaseInstanceStateEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_INSTANCE_STATE_UNSPECIFIED":
 		fallthrough
 	case "RUNNABLE":
@@ -212,10 +243,10 @@ func (e *DatabaseInstanceStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ONLINE_MAINTENANCE":
-		*e = DatabaseInstanceStateEnum(s)
+		*e = DatabaseInstanceStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceStateEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceStateEnum: %v", v)
 	}
 }
 
@@ -229,12 +260,16 @@ const (
 	DatabaseInstanceSuspensionReasonEnumKmsKeyIssue                    DatabaseInstanceSuspensionReasonEnum = "KMS_KEY_ISSUE"
 )
 
+func (e DatabaseInstanceSuspensionReasonEnum) ToPointer() *DatabaseInstanceSuspensionReasonEnum {
+	return &e
+}
+
 func (e *DatabaseInstanceSuspensionReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SQL_SUSPENSION_REASON_UNSPECIFIED":
 		fallthrough
 	case "BILLING_ISSUE":
@@ -244,17 +279,15 @@ func (e *DatabaseInstanceSuspensionReasonEnum) UnmarshalJSON(data []byte) error 
 	case "OPERATIONAL_ISSUE":
 		fallthrough
 	case "KMS_KEY_ISSUE":
-		*e = DatabaseInstanceSuspensionReasonEnum(s)
+		*e = DatabaseInstanceSuspensionReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatabaseInstanceSuspensionReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for DatabaseInstanceSuspensionReasonEnum: %v", v)
 	}
 }
 
 // DatabaseInstanceInput - A Cloud SQL instance resource.
 type DatabaseInstanceInput struct {
-	// List all maintenance versions applicable on the instance
-	AvailableMaintenanceVersions []string `json:"availableMaintenanceVersions,omitempty"`
 	// The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
 	BackendType *DatabaseInstanceBackendTypeEnum `json:"backendType,omitempty"`
 	// Connection name of the Cloud SQL instance used in connection strings.
@@ -325,7 +358,7 @@ type DatabaseInstanceInput struct {
 
 // DatabaseInstance - A Cloud SQL instance resource.
 type DatabaseInstance struct {
-	// List all maintenance versions applicable on the instance
+	// Output only. List all maintenance versions applicable on the instance
 	AvailableMaintenanceVersions []string `json:"availableMaintenanceVersions,omitempty"`
 	// The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
 	BackendType *DatabaseInstanceBackendTypeEnum `json:"backendType,omitempty"`

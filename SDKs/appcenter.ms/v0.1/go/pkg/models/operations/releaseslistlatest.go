@@ -40,21 +40,25 @@ const (
 	ReleasesListLatest200ApplicationJSONDestinationTypeEnumTester ReleasesListLatest200ApplicationJSONDestinationTypeEnum = "tester"
 )
 
+func (e ReleasesListLatest200ApplicationJSONDestinationTypeEnum) ToPointer() *ReleasesListLatest200ApplicationJSONDestinationTypeEnum {
+	return &e
+}
+
 func (e *ReleasesListLatest200ApplicationJSONDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
 		fallthrough
 	case "tester":
-		*e = ReleasesListLatest200ApplicationJSONDestinationTypeEnum(s)
+		*e = ReleasesListLatest200ApplicationJSONDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -67,21 +71,25 @@ const (
 	ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnumTester ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum = "tester"
 )
 
+func (e ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum) ToPointer() *ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum {
+	return &e
+}
+
 func (e *ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "group":
 		fallthrough
 	case "store":
 		fallthrough
 	case "tester":
-		*e = ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum(s)
+		*e = ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationsDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -95,12 +103,16 @@ const (
 	ReleasesListLatest200ApplicationJSONDestinationsTypeEnumNone       ReleasesListLatest200ApplicationJSONDestinationsTypeEnum = "none"
 )
 
+func (e ReleasesListLatest200ApplicationJSONDestinationsTypeEnum) ToPointer() *ReleasesListLatest200ApplicationJSONDestinationsTypeEnum {
+	return &e
+}
+
 func (e *ReleasesListLatest200ApplicationJSONDestinationsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
@@ -108,10 +120,10 @@ func (e *ReleasesListLatest200ApplicationJSONDestinationsTypeEnum) UnmarshalJSON
 	case "apple":
 		fallthrough
 	case "none":
-		*e = ReleasesListLatest200ApplicationJSONDestinationsTypeEnum(s)
+		*e = ReleasesListLatest200ApplicationJSONDestinationsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDestinationsTypeEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnumNone       ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum = "none"
 )
 
+func (e ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum) ToPointer() *ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum {
+	return &e
+}
+
 func (e *ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intune":
 		fallthrough
 	case "googleplay":
@@ -165,10 +181,10 @@ func (e *ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum) Unmarsh
 	case "apple":
 		fallthrough
 	case "none":
-		*e = ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum(s)
+		*e = ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONDistributionStoresTypeEnum: %v", v)
 	}
 }
 
@@ -193,19 +209,23 @@ const (
 	ReleasesListLatest200ApplicationJSONOriginEnumAppcenter ReleasesListLatest200ApplicationJSONOriginEnum = "appcenter"
 )
 
+func (e ReleasesListLatest200ApplicationJSONOriginEnum) ToPointer() *ReleasesListLatest200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *ReleasesListLatest200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hockeyapp":
 		fallthrough
 	case "appcenter":
-		*e = ReleasesListLatest200ApplicationJSONOriginEnum(s)
+		*e = ReleasesListLatest200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesListLatest200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 

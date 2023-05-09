@@ -14,18 +14,22 @@ const (
 	ShutdownBehaviorEnumTerminate ShutdownBehaviorEnum = "terminate"
 )
 
+func (e ShutdownBehaviorEnum) ToPointer() *ShutdownBehaviorEnum {
+	return &e
+}
+
 func (e *ShutdownBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = ShutdownBehaviorEnum(s)
+		*e = ShutdownBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShutdownBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for ShutdownBehaviorEnum: %v", v)
 	}
 }

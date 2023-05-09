@@ -472,7 +472,10 @@ func (s *internationalStandingOrders) CreateInternationalStandingOrdersRaw(ctx c
 // GetInternationalStandingOrderConsentsConsentID - Get International Standing Order Consents
 func (s *internationalStandingOrders) GetInternationalStandingOrderConsentsConsentID(ctx context.Context, request operations.GetInternationalStandingOrderConsentsConsentIDRequest, security operations.GetInternationalStandingOrderConsentsConsentIDSecurity) (*operations.GetInternationalStandingOrderConsentsConsentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-standing-order-consents/{ConsentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-standing-order-consents/{ConsentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -569,7 +572,10 @@ func (s *internationalStandingOrders) GetInternationalStandingOrderConsentsConse
 // GetInternationalStandingOrdersInternationalStandingOrderPaymentID - Get International Standing Orders
 func (s *internationalStandingOrders) GetInternationalStandingOrdersInternationalStandingOrderPaymentID(ctx context.Context, request operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDRequest, security operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDSecurity) (*operations.GetInternationalStandingOrdersInternationalStandingOrderPaymentIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/international-standing-orders/{InternationalStandingOrderPaymentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

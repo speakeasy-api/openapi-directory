@@ -16,17 +16,21 @@ const (
 	GetAutoSnapshotsXAmzTargetEnumLightsail20161128GetAutoSnapshots GetAutoSnapshotsXAmzTargetEnum = "Lightsail_20161128.GetAutoSnapshots"
 )
 
+func (e GetAutoSnapshotsXAmzTargetEnum) ToPointer() *GetAutoSnapshotsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAutoSnapshotsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetAutoSnapshots":
-		*e = GetAutoSnapshotsXAmzTargetEnum(s)
+		*e = GetAutoSnapshotsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAutoSnapshotsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAutoSnapshotsXAmzTargetEnum: %v", v)
 	}
 }
 

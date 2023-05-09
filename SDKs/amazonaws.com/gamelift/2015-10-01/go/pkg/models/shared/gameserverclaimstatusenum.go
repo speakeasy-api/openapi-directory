@@ -13,16 +13,20 @@ const (
 	GameServerClaimStatusEnumClaimed GameServerClaimStatusEnum = "CLAIMED"
 )
 
+func (e GameServerClaimStatusEnum) ToPointer() *GameServerClaimStatusEnum {
+	return &e
+}
+
 func (e *GameServerClaimStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLAIMED":
-		*e = GameServerClaimStatusEnum(s)
+		*e = GameServerClaimStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GameServerClaimStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GameServerClaimStatusEnum: %v", v)
 	}
 }

@@ -16,19 +16,23 @@ const (
 	GetUsersIdsFavoritesOrderEnumAsc  GetUsersIdsFavoritesOrderEnum = "asc"
 )
 
+func (e GetUsersIdsFavoritesOrderEnum) ToPointer() *GetUsersIdsFavoritesOrderEnum {
+	return &e
+}
+
 func (e *GetUsersIdsFavoritesOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = GetUsersIdsFavoritesOrderEnum(s)
+		*e = GetUsersIdsFavoritesOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIdsFavoritesOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIdsFavoritesOrderEnum: %v", v)
 	}
 }
 
@@ -42,12 +46,16 @@ const (
 	GetUsersIdsFavoritesSortEnumAdded    GetUsersIdsFavoritesSortEnum = "added"
 )
 
+func (e GetUsersIdsFavoritesSortEnum) ToPointer() *GetUsersIdsFavoritesSortEnum {
+	return &e
+}
+
 func (e *GetUsersIdsFavoritesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "activity":
 		fallthrough
 	case "creation":
@@ -55,10 +63,10 @@ func (e *GetUsersIdsFavoritesSortEnum) UnmarshalJSON(data []byte) error {
 	case "votes":
 		fallthrough
 	case "added":
-		*e = GetUsersIdsFavoritesSortEnum(s)
+		*e = GetUsersIdsFavoritesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUsersIdsFavoritesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUsersIdsFavoritesSortEnum: %v", v)
 	}
 }
 

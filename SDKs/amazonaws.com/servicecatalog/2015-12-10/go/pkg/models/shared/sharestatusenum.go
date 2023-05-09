@@ -17,12 +17,16 @@ const (
 	ShareStatusEnumError               ShareStatusEnum = "ERROR"
 )
 
+func (e ShareStatusEnum) ToPointer() *ShareStatusEnum {
+	return &e
+}
+
 func (e *ShareStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -32,9 +36,9 @@ func (e *ShareStatusEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLETED_WITH_ERRORS":
 		fallthrough
 	case "ERROR":
-		*e = ShareStatusEnum(s)
+		*e = ShareStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ShareStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ShareStatusEnum: %v", v)
 	}
 }

@@ -55,12 +55,16 @@ const (
 	ScanConfigErrorCodeEnumUnsupportedURLScheme                        ScanConfigErrorCodeEnum = "UNSUPPORTED_URL_SCHEME"
 )
 
+func (e ScanConfigErrorCodeEnum) ToPointer() *ScanConfigErrorCodeEnum {
+	return &e
+}
+
 func (e *ScanConfigErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CODE_UNSPECIFIED":
 		fallthrough
 	case "OK":
@@ -144,10 +148,10 @@ func (e *ScanConfigErrorCodeEnum) UnmarshalJSON(data []byte) error {
 	case "UNSUPPORTED_FINDING_TYPE":
 		fallthrough
 	case "UNSUPPORTED_URL_SCHEME":
-		*e = ScanConfigErrorCodeEnum(s)
+		*e = ScanConfigErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanConfigErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanConfigErrorCodeEnum: %v", v)
 	}
 }
 

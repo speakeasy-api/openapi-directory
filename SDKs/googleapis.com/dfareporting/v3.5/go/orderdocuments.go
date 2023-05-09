@@ -34,7 +34,10 @@ func newOrderDocuments(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingOrderDocumentsGet - Gets one order document by ID.
 func (s *orderDocuments) DfareportingOrderDocumentsGet(ctx context.Context, request operations.DfareportingOrderDocumentsGetRequest, security operations.DfareportingOrderDocumentsGetSecurity) (*operations.DfareportingOrderDocumentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orderDocuments/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *orderDocuments) DfareportingOrderDocumentsGet(ctx context.Context, requ
 // DfareportingOrderDocumentsList - Retrieves a list of order documents, possibly filtered. This method supports paging.
 func (s *orderDocuments) DfareportingOrderDocumentsList(ctx context.Context, request operations.DfareportingOrderDocumentsListRequest, security operations.DfareportingOrderDocumentsListSecurity) (*operations.DfareportingOrderDocumentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orderDocuments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/projects/{projectId}/orderDocuments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

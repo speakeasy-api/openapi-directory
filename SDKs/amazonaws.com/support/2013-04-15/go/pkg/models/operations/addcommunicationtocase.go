@@ -16,17 +16,21 @@ const (
 	AddCommunicationToCaseXAmzTargetEnumAwsSupport20130415AddCommunicationToCase AddCommunicationToCaseXAmzTargetEnum = "AWSSupport_20130415.AddCommunicationToCase"
 )
 
+func (e AddCommunicationToCaseXAmzTargetEnum) ToPointer() *AddCommunicationToCaseXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddCommunicationToCaseXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.AddCommunicationToCase":
-		*e = AddCommunicationToCaseXAmzTargetEnum(s)
+		*e = AddCommunicationToCaseXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddCommunicationToCaseXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddCommunicationToCaseXAmzTargetEnum: %v", v)
 	}
 }
 

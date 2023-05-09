@@ -18,12 +18,16 @@ const (
 	GetTimestagsFilterEnumPer GetTimestagsFilterEnum = "Per"
 )
 
+func (e GetTimestagsFilterEnum) ToPointer() *GetTimestagsFilterEnum {
+	return &e
+}
+
 func (e *GetTimestagsFilterEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Des":
 		fallthrough
 	case "Geo":
@@ -31,10 +35,10 @@ func (e *GetTimestagsFilterEnum) UnmarshalJSON(data []byte) error {
 	case "Org":
 		fallthrough
 	case "Per":
-		*e = GetTimestagsFilterEnum(s)
+		*e = GetTimestagsFilterEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTimestagsFilterEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTimestagsFilterEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // PolicysimulatorProjectsLocationsReplaysCreate - Creates and starts a Replay using the given ReplayConfig.
 func (s *projects) PolicysimulatorProjectsLocationsReplaysCreate(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysCreateRequest, security operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity) (*operations.PolicysimulatorProjectsLocationsReplaysCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/replays", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/replays", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudPolicysimulatorV1ReplayInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) PolicysimulatorProjectsLocationsReplaysCreate(ctx context.Con
 // PolicysimulatorProjectsLocationsReplaysOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) PolicysimulatorProjectsLocationsReplaysOperationsList(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest, security operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity) (*operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) PolicysimulatorProjectsLocationsReplaysOperationsList(ctx con
 // PolicysimulatorProjectsLocationsReplaysResultsList - Lists the results of running a Replay.
 func (s *projects) PolicysimulatorProjectsLocationsReplaysResultsList(ctx context.Context, request operations.PolicysimulatorProjectsLocationsReplaysResultsListRequest, security operations.PolicysimulatorProjectsLocationsReplaysResultsListSecurity) (*operations.PolicysimulatorProjectsLocationsReplaysResultsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/results", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/results", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

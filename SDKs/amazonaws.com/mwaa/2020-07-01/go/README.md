@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/mwaa/2020-0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,19 +27,17 @@ func main() {
         }),
     )
 
-    req := operations.CreateCliTokenRequest{
-        Name: "corrupti",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.CreateCliToken(ctx, req)
+    res, err := s.CreateCliToken(ctx, operations.CreateCliTokenRequest{
+        Name: "Terrence Rau",
+        XAmzAlgorithm: sdk.String("nulla"),
+        XAmzContentSha256: sdk.String("corrupti"),
+        XAmzCredential: sdk.String("illum"),
+        XAmzDate: sdk.String("vel"),
+        XAmzSecurityToken: sdk.String("error"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -55,19 +52,19 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateCliToken` - Creates a CLI token for the Airflow CLI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-cli.html">Creating an Apache Airflow CLI token</a>.
-* `CreateEnvironment` - Creates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
-* `CreateWebLoginToken` - Creates a web login token for the Airflow Web UI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-web.html">Creating an Apache Airflow web login token</a>.
-* `DeleteEnvironment` - Deletes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
-* `GetEnvironment` - Describes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
-* `ListEnvironments` - Lists the Amazon Managed Workflows for Apache Airflow (MWAA) environments.
-* `ListTagsForResource` - Lists the key-value tag pairs associated to the Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>. 
-* `PublishMetrics` -  <b>Internal only</b>. Publishes environment health metrics to Amazon CloudWatch.
-* `TagResource` - Associates key-value tag pairs to your Amazon Managed Workflows for Apache Airflow (MWAA) environment. 
-* `UntagResource` - Removes key-value tag pairs associated to your Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>.
-* `UpdateEnvironment` - Updates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+* [CreateCliToken](docs/sdk/README.md#createclitoken) - Creates a CLI token for the Airflow CLI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-cli.html">Creating an Apache Airflow CLI token</a>.
+* [CreateEnvironment](docs/sdk/README.md#createenvironment) - Creates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+* [CreateWebLoginToken](docs/sdk/README.md#createweblogintoken) - Creates a web login token for the Airflow Web UI. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/call-mwaa-apis-web.html">Creating an Apache Airflow web login token</a>.
+* [DeleteEnvironment](docs/sdk/README.md#deleteenvironment) - Deletes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+* [GetEnvironment](docs/sdk/README.md#getenvironment) - Describes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+* [ListEnvironments](docs/sdk/README.md#listenvironments) - Lists the Amazon Managed Workflows for Apache Airflow (MWAA) environments.
+* [ListTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the key-value tag pairs associated to the Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>. 
+* [PublishMetrics](docs/sdk/README.md#publishmetrics) -  <b>Internal only</b>. Publishes environment health metrics to Amazon CloudWatch.
+* [TagResource](docs/sdk/README.md#tagresource) - Associates key-value tag pairs to your Amazon Managed Workflows for Apache Airflow (MWAA) environment. 
+* [UntagResource](docs/sdk/README.md#untagresource) - Removes key-value tag pairs associated to your Amazon Managed Workflows for Apache Airflow (MWAA) environment. For example, <code>"Environment": "Staging"</code>.
+* [UpdateEnvironment](docs/sdk/README.md#updateenvironment) - Updates an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
 <!-- End SDK Available Operations -->
 
 ### Maturity

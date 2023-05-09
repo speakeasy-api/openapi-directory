@@ -14,17 +14,21 @@ const (
 	LicenseImageFormatEnumJpg LicenseImageFormatEnum = "jpg"
 )
 
+func (e LicenseImageFormatEnum) ToPointer() *LicenseImageFormatEnum {
+	return &e
+}
+
 func (e *LicenseImageFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "jpg":
-		*e = LicenseImageFormatEnum(s)
+		*e = LicenseImageFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImageFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImageFormatEnum: %v", v)
 	}
 }
 
@@ -38,12 +42,16 @@ const (
 	LicenseImageSizeEnumCustom LicenseImageSizeEnum = "custom"
 )
 
+func (e LicenseImageSizeEnum) ToPointer() *LicenseImageSizeEnum {
+	return &e
+}
+
 func (e *LicenseImageSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "small":
 		fallthrough
 	case "medium":
@@ -51,10 +59,10 @@ func (e *LicenseImageSizeEnum) UnmarshalJSON(data []byte) error {
 	case "huge":
 		fallthrough
 	case "custom":
-		*e = LicenseImageSizeEnum(s)
+		*e = LicenseImageSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseImageSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseImageSizeEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	CalendarStateEnumClosed CalendarStateEnum = "CLOSED"
 )
 
+func (e CalendarStateEnum) ToPointer() *CalendarStateEnum {
+	return &e
+}
+
 func (e *CalendarStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OPEN":
 		fallthrough
 	case "CLOSED":
-		*e = CalendarStateEnum(s)
+		*e = CalendarStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CalendarStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CalendarStateEnum: %v", v)
 	}
 }

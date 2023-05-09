@@ -83,7 +83,10 @@ func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operatio
 // ContentAccountsClaimwebsite - Claims the website of a Merchant Center sub-account. Merchant accounts with approved third-party CSSs aren't required to claim a website.
 func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request operations.ContentAccountsClaimwebsiteRequest, security operations.ContentAccountsClaimwebsiteSecurity) (*operations.ContentAccountsClaimwebsiteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/claimwebsite", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/claimwebsite", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -131,7 +134,10 @@ func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request oper
 // ContentAccountsCredentialsCreate - Uploads credentials for the Merchant Center account. If credentials already exist for this Merchant Center account and purpose, this method updates them.
 func (s *accounts) ContentAccountsCredentialsCreate(ctx context.Context, request operations.ContentAccountsCredentialsCreateRequest, security operations.ContentAccountsCredentialsCreateSecurity) (*operations.ContentAccountsCredentialsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/credentials", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/credentials", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountCredentials", "json")
 	if err != nil {
@@ -241,7 +247,10 @@ func (s *accounts) ContentAccountsCustombatch(ctx context.Context, request opera
 // ContentAccountsDelete - Deletes a Merchant Center sub-account.
 func (s *accounts) ContentAccountsDelete(ctx context.Context, request operations.ContentAccountsDeleteRequest, security operations.ContentAccountsDeleteSecurity) (*operations.ContentAccountsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -280,7 +289,10 @@ func (s *accounts) ContentAccountsDelete(ctx context.Context, request operations
 // ContentAccountsGet - Retrieves a Merchant Center account.
 func (s *accounts) ContentAccountsGet(ctx context.Context, request operations.ContentAccountsGetRequest, security operations.ContentAccountsGetSecurity) (*operations.ContentAccountsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -328,7 +340,10 @@ func (s *accounts) ContentAccountsGet(ctx context.Context, request operations.Co
 // ContentAccountsInsert - Creates a Merchant Center sub-account.
 func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations.ContentAccountsInsertRequest, security operations.ContentAccountsInsertSecurity) (*operations.ContentAccountsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountInput", "json")
 	if err != nil {
@@ -383,7 +398,10 @@ func (s *accounts) ContentAccountsInsert(ctx context.Context, request operations
 // ContentAccountsLabelsCreate - Creates a new label, not assigned to any account.
 func (s *accounts) ContentAccountsLabelsCreate(ctx context.Context, request operations.ContentAccountsLabelsCreateRequest, security operations.ContentAccountsLabelsCreateSecurity) (*operations.ContentAccountsLabelsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountLabelInput", "json")
 	if err != nil {
@@ -438,7 +456,10 @@ func (s *accounts) ContentAccountsLabelsCreate(ctx context.Context, request oper
 // ContentAccountsLabelsDelete - Deletes a label and removes it from all accounts to which it was assigned.
 func (s *accounts) ContentAccountsLabelsDelete(ctx context.Context, request operations.ContentAccountsLabelsDeleteRequest, security operations.ContentAccountsLabelsDeleteSecurity) (*operations.ContentAccountsLabelsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels/{labelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels/{labelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -477,7 +498,10 @@ func (s *accounts) ContentAccountsLabelsDelete(ctx context.Context, request oper
 // ContentAccountsLabelsList - Lists the labels assigned to an account.
 func (s *accounts) ContentAccountsLabelsList(ctx context.Context, request operations.ContentAccountsLabelsListRequest, security operations.ContentAccountsLabelsListSecurity) (*operations.ContentAccountsLabelsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -525,7 +549,10 @@ func (s *accounts) ContentAccountsLabelsList(ctx context.Context, request operat
 // ContentAccountsLabelsPatch - Updates a label.
 func (s *accounts) ContentAccountsLabelsPatch(ctx context.Context, request operations.ContentAccountsLabelsPatchRequest, security operations.ContentAccountsLabelsPatchSecurity) (*operations.ContentAccountsLabelsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels/{labelId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/labels/{labelId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountLabelInput", "json")
 	if err != nil {
@@ -580,7 +607,10 @@ func (s *accounts) ContentAccountsLabelsPatch(ctx context.Context, request opera
 // ContentAccountsLink - Performs an action on a link between two Merchant Center accounts, namely accountId and linkedAccountId.
 func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.ContentAccountsLinkRequest, security operations.ContentAccountsLinkSecurity) (*operations.ContentAccountsLinkResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/link", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/link", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountsLinkRequest", "json")
 	if err != nil {
@@ -635,7 +665,10 @@ func (s *accounts) ContentAccountsLink(ctx context.Context, request operations.C
 // ContentAccountsList - Lists the sub-accounts in your Merchant Center account.
 func (s *accounts) ContentAccountsList(ctx context.Context, request operations.ContentAccountsListRequest, security operations.ContentAccountsListSecurity) (*operations.ContentAccountsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -683,7 +716,10 @@ func (s *accounts) ContentAccountsList(ctx context.Context, request operations.C
 // ContentAccountsListlinks - Returns the list of accounts linked to your Merchant Center account.
 func (s *accounts) ContentAccountsListlinks(ctx context.Context, request operations.ContentAccountsListlinksRequest, security operations.ContentAccountsListlinksSecurity) (*operations.ContentAccountsListlinksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/listlinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/listlinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -731,7 +767,10 @@ func (s *accounts) ContentAccountsListlinks(ctx context.Context, request operati
 // ContentAccountsRequestphoneverification - Request verification code to start phone verification.
 func (s *accounts) ContentAccountsRequestphoneverification(ctx context.Context, request operations.ContentAccountsRequestphoneverificationRequest, security operations.ContentAccountsRequestphoneverificationSecurity) (*operations.ContentAccountsRequestphoneverificationResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/requestphoneverification", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/requestphoneverification", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestPhoneVerificationRequest", "json")
 	if err != nil {
@@ -786,7 +825,10 @@ func (s *accounts) ContentAccountsRequestphoneverification(ctx context.Context, 
 // ContentAccountsReturncarrierCreate - Links return carrier to a merchant account.
 func (s *accounts) ContentAccountsReturncarrierCreate(ctx context.Context, request operations.ContentAccountsReturncarrierCreateRequest, security operations.ContentAccountsReturncarrierCreateSecurity) (*operations.ContentAccountsReturncarrierCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountReturnCarrierInput", "json")
 	if err != nil {
@@ -841,7 +883,10 @@ func (s *accounts) ContentAccountsReturncarrierCreate(ctx context.Context, reque
 // ContentAccountsReturncarrierDelete - Delete a return carrier in the merchant account.
 func (s *accounts) ContentAccountsReturncarrierDelete(ctx context.Context, request operations.ContentAccountsReturncarrierDeleteRequest, security operations.ContentAccountsReturncarrierDeleteSecurity) (*operations.ContentAccountsReturncarrierDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier/{carrierAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier/{carrierAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -880,7 +925,10 @@ func (s *accounts) ContentAccountsReturncarrierDelete(ctx context.Context, reque
 // ContentAccountsReturncarrierList - Lists available return carriers in the merchant account.
 func (s *accounts) ContentAccountsReturncarrierList(ctx context.Context, request operations.ContentAccountsReturncarrierListRequest, security operations.ContentAccountsReturncarrierListSecurity) (*operations.ContentAccountsReturncarrierListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -928,7 +976,10 @@ func (s *accounts) ContentAccountsReturncarrierList(ctx context.Context, request
 // ContentAccountsReturncarrierPatch - Updates a return carrier in the merchant account.
 func (s *accounts) ContentAccountsReturncarrierPatch(ctx context.Context, request operations.ContentAccountsReturncarrierPatchRequest, security operations.ContentAccountsReturncarrierPatchSecurity) (*operations.ContentAccountsReturncarrierPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier/{carrierAccountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/returncarrier/{carrierAccountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountReturnCarrierInput", "json")
 	if err != nil {
@@ -983,7 +1034,10 @@ func (s *accounts) ContentAccountsReturncarrierPatch(ctx context.Context, reques
 // ContentAccountsUpdate - Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.
 func (s *accounts) ContentAccountsUpdate(ctx context.Context, request operations.ContentAccountsUpdateRequest, security operations.ContentAccountsUpdateSecurity) (*operations.ContentAccountsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountInput", "json")
 	if err != nil {
@@ -1038,7 +1092,10 @@ func (s *accounts) ContentAccountsUpdate(ctx context.Context, request operations
 // ContentAccountsUpdatelabels - Updates labels that are assigned to the Merchant Center account by CSS user.
 func (s *accounts) ContentAccountsUpdatelabels(ctx context.Context, request operations.ContentAccountsUpdatelabelsRequest, security operations.ContentAccountsUpdatelabelsSecurity) (*operations.ContentAccountsUpdatelabelsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/updatelabels", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/updatelabels", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AccountsUpdateLabelsRequest", "json")
 	if err != nil {
@@ -1093,7 +1150,10 @@ func (s *accounts) ContentAccountsUpdatelabels(ctx context.Context, request oper
 // ContentAccountsVerifyphonenumber - Validates verification code to verify phone number for the account. If successful this will overwrite the value of `accounts.businessinformation.phoneNumber`. Only verified phone number will replace an existing verified phone number.
 func (s *accounts) ContentAccountsVerifyphonenumber(ctx context.Context, request operations.ContentAccountsVerifyphonenumberRequest, security operations.ContentAccountsVerifyphonenumberSecurity) (*operations.ContentAccountsVerifyphonenumberResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/verifyphonenumber", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/verifyphonenumber", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "VerifyPhoneNumberRequest", "json")
 	if err != nil {

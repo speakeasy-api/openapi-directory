@@ -19,12 +19,16 @@ const (
 	TaskStatusEnumFailed    TaskStatusEnum = "FAILED"
 )
 
+func (e TaskStatusEnum) ToPointer() *TaskStatusEnum {
+	return &e
+}
+
 func (e *TaskStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "STARTING":
@@ -38,9 +42,9 @@ func (e *TaskStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "FAILED":
-		*e = TaskStatusEnum(s)
+		*e = TaskStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TaskStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TaskStatusEnum: %v", v)
 	}
 }

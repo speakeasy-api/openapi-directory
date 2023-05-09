@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // FirebasestorageProjectsBucketsAddFirebase - Links a Google Cloud Storage bucket to a Firebase project.
 func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsAddFirebaseRequest, security operations.FirebasestorageProjectsBucketsAddFirebaseSecurity) (*operations.FirebasestorageProjectsBucketsAddFirebaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:addFirebase", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:addFirebase", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) FirebasestorageProjectsBucketsAddFirebase(ctx context.Context
 // FirebasestorageProjectsBucketsGet - Gets a single linked storage bucket.
 func (s *projects) FirebasestorageProjectsBucketsGet(ctx context.Context, request operations.FirebasestorageProjectsBucketsGetRequest, security operations.FirebasestorageProjectsBucketsGetSecurity) (*operations.FirebasestorageProjectsBucketsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) FirebasestorageProjectsBucketsGet(ctx context.Context, reques
 // FirebasestorageProjectsBucketsList - Lists the linked storage buckets for a project.
 func (s *projects) FirebasestorageProjectsBucketsList(ctx context.Context, request operations.FirebasestorageProjectsBucketsListRequest, security operations.FirebasestorageProjectsBucketsListSecurity) (*operations.FirebasestorageProjectsBucketsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/buckets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{parent}/buckets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) FirebasestorageProjectsBucketsList(ctx context.Context, reque
 // FirebasestorageProjectsBucketsRemoveFirebase - Unlinks a linked Google Cloud Storage bucket from a Firebase project.
 func (s *projects) FirebasestorageProjectsBucketsRemoveFirebase(ctx context.Context, request operations.FirebasestorageProjectsBucketsRemoveFirebaseRequest, security operations.FirebasestorageProjectsBucketsRemoveFirebaseSecurity) (*operations.FirebasestorageProjectsBucketsRemoveFirebaseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:removeFirebase", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1beta/{bucket}:removeFirebase", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

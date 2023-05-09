@@ -13,34 +13,31 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vonage.com/reports/1.0.1/
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetCallLogsRequest{
+    ctx := context.Background()
+    res, err := s.GetCallLogs(ctx, operations.GetCallLogsRequest{
         AccountID: "corrupti",
-        DestinationUser: "provident",
-        Direction: "Outbound",
-        EndGte: "quibusdam",
-        EndLte: "unde",
-        From: "nulla",
+        DestinationUser: sdk.String("provident"),
+        Direction: operations.GetCallLogsDirectionEnumOutbound.ToPointer(),
+        EndGte: sdk.String("quibusdam"),
+        EndLte: sdk.String("unde"),
+        From: sdk.String("nulla"),
         Page: 5448.83,
         PageSize: 8472.52,
-        SourceUser: "vel",
+        SourceUser: sdk.String("vel"),
         StartGte: "error",
         StartLte: "deserunt",
-        To: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.GetCallLogs(ctx, req, operations.GetCallLogsSecurity{
+        To: sdk.String("suscipit"),
+    }, operations.GetCallLogsSecurity{
         BearerAuth: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -57,9 +54,9 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GetCallLogs` - Retrieve call logs for your account
+* [GetCallLogs](docs/sdk/README.md#getcalllogs) - Retrieve call logs for your account
 <!-- End SDK Available Operations -->
 
 ### Maturity

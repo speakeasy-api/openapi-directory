@@ -19,12 +19,16 @@ const (
 	ConnectionProtocolEnumEsp                 ConnectionProtocolEnum = "ESP"
 )
 
+func (e ConnectionProtocolEnum) ToPointer() *ConnectionProtocolEnum {
+	return &e
+}
+
 func (e *ConnectionProtocolEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROTOCOL_UNSPECIFIED":
 		fallthrough
 	case "ICMP":
@@ -36,10 +40,10 @@ func (e *ConnectionProtocolEnum) UnmarshalJSON(data []byte) error {
 	case "GRE":
 		fallthrough
 	case "ESP":
-		*e = ConnectionProtocolEnum(s)
+		*e = ConnectionProtocolEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionProtocolEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionProtocolEnum: %v", v)
 	}
 }
 

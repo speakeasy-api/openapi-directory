@@ -22,12 +22,16 @@ const (
 	PostAPIV1AdminAccountsIDActionRequestBodyTypeEnumSuspend PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum = "suspend"
 )
 
+func (e PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum) ToPointer() *PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum {
+	return &e
+}
+
 func (e *PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "disable":
@@ -35,10 +39,10 @@ func (e *PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum) UnmarshalJSON(data [
 	case "silence":
 		fallthrough
 	case "suspend":
-		*e = PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum(s)
+		*e = PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAPIV1AdminAccountsIDActionRequestBodyTypeEnum: %v", v)
 	}
 }
 

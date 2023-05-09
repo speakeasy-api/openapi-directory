@@ -19,12 +19,16 @@ const (
 	VolumeRestoreStateEnumDeleting         VolumeRestoreStateEnum = "DELETING"
 )
 
+func (e VolumeRestoreStateEnum) ToPointer() *VolumeRestoreStateEnum {
+	return &e
+}
+
 func (e *VolumeRestoreStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -36,10 +40,10 @@ func (e *VolumeRestoreStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETING":
-		*e = VolumeRestoreStateEnum(s)
+		*e = VolumeRestoreStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeRestoreStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeRestoreStateEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	VolumeRestoreVolumeTypeEnumGcePersistentDisk     VolumeRestoreVolumeTypeEnum = "GCE_PERSISTENT_DISK"
 )
 
+func (e VolumeRestoreVolumeTypeEnum) ToPointer() *VolumeRestoreVolumeTypeEnum {
+	return &e
+}
+
 func (e *VolumeRestoreVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_TYPE_UNSPECIFIED":
 		fallthrough
 	case "GCE_PERSISTENT_DISK":
-		*e = VolumeRestoreVolumeTypeEnum(s)
+		*e = VolumeRestoreVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeRestoreVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeRestoreVolumeTypeEnum: %v", v)
 	}
 }
 

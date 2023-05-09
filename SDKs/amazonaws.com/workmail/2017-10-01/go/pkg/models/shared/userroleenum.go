@@ -15,20 +15,24 @@ const (
 	UserRoleEnumSystemUser UserRoleEnum = "SYSTEM_USER"
 )
 
+func (e UserRoleEnum) ToPointer() *UserRoleEnum {
+	return &e
+}
+
 func (e *UserRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USER":
 		fallthrough
 	case "RESOURCE":
 		fallthrough
 	case "SYSTEM_USER":
-		*e = UserRoleEnum(s)
+		*e = UserRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UserRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for UserRoleEnum: %v", v)
 	}
 }

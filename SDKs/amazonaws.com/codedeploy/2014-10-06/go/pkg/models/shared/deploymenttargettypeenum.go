@@ -16,12 +16,16 @@ const (
 	DeploymentTargetTypeEnumCloudFormationTarget DeploymentTargetTypeEnum = "CloudFormationTarget"
 )
 
+func (e DeploymentTargetTypeEnum) ToPointer() *DeploymentTargetTypeEnum {
+	return &e
+}
+
 func (e *DeploymentTargetTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "InstanceTarget":
 		fallthrough
 	case "LambdaTarget":
@@ -29,9 +33,9 @@ func (e *DeploymentTargetTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ECSTarget":
 		fallthrough
 	case "CloudFormationTarget":
-		*e = DeploymentTargetTypeEnum(s)
+		*e = DeploymentTargetTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentTargetTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentTargetTypeEnum: %v", v)
 	}
 }

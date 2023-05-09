@@ -28,12 +28,16 @@ const (
 	ListAdvisorySystemsSortEnumStale          ListAdvisorySystemsSortEnum = "stale"
 )
 
+func (e ListAdvisorySystemsSortEnum) ToPointer() *ListAdvisorySystemsSortEnum {
+	return &e
+}
+
 func (e *ListAdvisorySystemsSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "display_name":
@@ -51,10 +55,10 @@ func (e *ListAdvisorySystemsSortEnum) UnmarshalJSON(data []byte) error {
 	case "other_count":
 		fallthrough
 	case "stale":
-		*e = ListAdvisorySystemsSortEnum(s)
+		*e = ListAdvisorySystemsSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAdvisorySystemsSortEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAdvisorySystemsSortEnum: %v", v)
 	}
 }
 

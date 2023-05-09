@@ -13,23 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/nytimes.com/community/3.0
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GETUserContentByDateJSONRequest{
-        Date: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.GETUserContentByDateJSON(ctx, req, operations.GETUserContentByDateJSONSecurity{
+    res, err := s.GETUserContentByDateJSON(ctx, operations.GETUserContentByDateJSONRequest{
+        Date: sdk.String("corrupti"),
+    }, operations.GETUserContentByDateJSONSecurity{
         APIKey: "YOUR_API_KEY_HERE",
     })
     if err != nil {
@@ -46,12 +43,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `GETUserContentByDateJSON` - Comments by Date
-* `GETUserContentRecentJSON` - Recent User Comments
-* `GETUserContentURLJSON` - Comments by URL
-* `GETUserContentUserJSON` - Comments by User
+* [GETUserContentByDateJSON](docs/sdk/README.md#getusercontentbydatejson) - Comments by Date
+* [GETUserContentRecentJSON](docs/sdk/README.md#getusercontentrecentjson) - Recent User Comments
+* [GETUserContentURLJSON](docs/sdk/README.md#getusercontenturljson) - Comments by URL
+* [GETUserContentUserJSON](docs/sdk/README.md#getusercontentuserjson) - Comments by User
 <!-- End SDK Available Operations -->
 
 ### Maturity

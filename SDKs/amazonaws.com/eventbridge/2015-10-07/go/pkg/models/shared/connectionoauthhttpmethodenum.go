@@ -15,20 +15,24 @@ const (
 	ConnectionOAuthHTTPMethodEnumPut  ConnectionOAuthHTTPMethodEnum = "PUT"
 )
 
+func (e ConnectionOAuthHTTPMethodEnum) ToPointer() *ConnectionOAuthHTTPMethodEnum {
+	return &e
+}
+
 func (e *ConnectionOAuthHTTPMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GET":
 		fallthrough
 	case "POST":
 		fallthrough
 	case "PUT":
-		*e = ConnectionOAuthHTTPMethodEnum(s)
+		*e = ConnectionOAuthHTTPMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectionOAuthHTTPMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectionOAuthHTTPMethodEnum: %v", v)
 	}
 }

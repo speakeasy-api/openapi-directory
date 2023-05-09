@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/nascar-v2/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,13 +27,11 @@ func main() {
         }),
     )
 
-    req := operations.DriverDetailsRequest{
-        Driverid: "corrupti",
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.DriverDetails(ctx, req)
+    res, err := s.DriverDetails(ctx, operations.DriverDetailsRequest{
+        Driverid: "corrupti",
+        Format: operations.DriverDetailsFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,14 +46,14 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DriverDetails` - Driver Details
-* `DriverRaceProjectionsEntryList` - Driver Race Projections (Entry List)
-* `Drivers` - Drivers
-* `RaceResults` - Race Results
-* `RacesSchedule` - Races / Schedule
-* `Series` - Series
+* [DriverDetails](docs/sdk/README.md#driverdetails) - Driver Details
+* [DriverRaceProjectionsEntryList](docs/sdk/README.md#driverraceprojectionsentrylist) - Driver Race Projections (Entry List)
+* [Drivers](docs/sdk/README.md#drivers) - Drivers
+* [RaceResults](docs/sdk/README.md#raceresults) - Race Results
+* [RacesSchedule](docs/sdk/README.md#racesschedule) - Races / Schedule
+* [Series](docs/sdk/README.md#series) - Series
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -30,12 +30,16 @@ const (
 	RuntimeHealthStateEnumAgentNotRunning        RuntimeHealthStateEnum = "AGENT_NOT_RUNNING"
 )
 
+func (e RuntimeHealthStateEnum) ToPointer() *RuntimeHealthStateEnum {
+	return &e
+}
+
 func (e *RuntimeHealthStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEALTH_STATE_UNSPECIFIED":
 		fallthrough
 	case "HEALTHY":
@@ -45,10 +49,10 @@ func (e *RuntimeHealthStateEnum) UnmarshalJSON(data []byte) error {
 	case "AGENT_NOT_INSTALLED":
 		fallthrough
 	case "AGENT_NOT_RUNNING":
-		*e = RuntimeHealthStateEnum(s)
+		*e = RuntimeHealthStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeHealthStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeHealthStateEnum: %v", v)
 	}
 }
 
@@ -67,12 +71,16 @@ const (
 	RuntimeStateEnumInitializing     RuntimeStateEnum = "INITIALIZING"
 )
 
+func (e RuntimeStateEnum) ToPointer() *RuntimeStateEnum {
+	return &e
+}
+
 func (e *RuntimeStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "STARTING":
@@ -90,10 +98,10 @@ func (e *RuntimeStateEnum) UnmarshalJSON(data []byte) error {
 	case "UPGRADING":
 		fallthrough
 	case "INITIALIZING":
-		*e = RuntimeStateEnum(s)
+		*e = RuntimeStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RuntimeStateEnum: %s", s)
+		return fmt.Errorf("invalid value for RuntimeStateEnum: %v", v)
 	}
 }
 

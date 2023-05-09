@@ -18,12 +18,16 @@ const (
 	FilterOperatorEnumNe FilterOperatorEnum = "NE"
 )
 
+func (e FilterOperatorEnum) ToPointer() *FilterOperatorEnum {
+	return &e
+}
+
 func (e *FilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GT":
 		fallthrough
 	case "GE":
@@ -35,9 +39,9 @@ func (e *FilterOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "EQ":
 		fallthrough
 	case "NE":
-		*e = FilterOperatorEnum(s)
+		*e = FilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for FilterOperatorEnum: %v", v)
 	}
 }

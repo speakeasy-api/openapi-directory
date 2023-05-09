@@ -17,12 +17,16 @@ const (
 	DimensionValueMatchTypeEnumWildcardExpression DimensionValueMatchTypeEnum = "WILDCARD_EXPRESSION"
 )
 
+func (e DimensionValueMatchTypeEnum) ToPointer() *DimensionValueMatchTypeEnum {
+	return &e
+}
+
 func (e *DimensionValueMatchTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXACT":
 		fallthrough
 	case "BEGINS_WITH":
@@ -30,10 +34,10 @@ func (e *DimensionValueMatchTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CONTAINS":
 		fallthrough
 	case "WILDCARD_EXPRESSION":
-		*e = DimensionValueMatchTypeEnum(s)
+		*e = DimensionValueMatchTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DimensionValueMatchTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DimensionValueMatchTypeEnum: %v", v)
 	}
 }
 

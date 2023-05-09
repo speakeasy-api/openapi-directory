@@ -17,12 +17,16 @@ const (
 	EnvironmentLifecycleEnumUpdating  EnvironmentLifecycleEnum = "Updating"
 )
 
+func (e EnvironmentLifecycleEnum) ToPointer() *EnvironmentLifecycleEnum {
+	return &e
+}
+
 func (e *EnvironmentLifecycleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Creating":
 		fallthrough
 	case "Available":
@@ -32,9 +36,9 @@ func (e *EnvironmentLifecycleEnum) UnmarshalJSON(data []byte) error {
 	case "Failed":
 		fallthrough
 	case "Updating":
-		*e = EnvironmentLifecycleEnum(s)
+		*e = EnvironmentLifecycleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EnvironmentLifecycleEnum: %s", s)
+		return fmt.Errorf("invalid value for EnvironmentLifecycleEnum: %v", v)
 	}
 }

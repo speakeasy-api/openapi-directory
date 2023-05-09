@@ -14,18 +14,22 @@ const (
 	ClusterEndpointEncryptionTypeEnumTLS  ClusterEndpointEncryptionTypeEnum = "TLS"
 )
 
+func (e ClusterEndpointEncryptionTypeEnum) ToPointer() *ClusterEndpointEncryptionTypeEnum {
+	return &e
+}
+
 func (e *ClusterEndpointEncryptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NONE":
 		fallthrough
 	case "TLS":
-		*e = ClusterEndpointEncryptionTypeEnum(s)
+		*e = ClusterEndpointEncryptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ClusterEndpointEncryptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ClusterEndpointEncryptionTypeEnum: %v", v)
 	}
 }

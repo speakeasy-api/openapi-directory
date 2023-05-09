@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -20,4 +21,5 @@ pkg/models/operations/getdatasets.go
 pkg/models/operations/getquestions.go
 pkg/models/operations/getsuggestions.go
 pkg/models/operations/getvaluesforvariables.go
+docs/sdk/README.md
 USAGE.md

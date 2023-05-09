@@ -16,17 +16,21 @@ const (
 	CreateVpcPeeringAuthorizationXAmzTargetEnumGameLiftCreateVpcPeeringAuthorization CreateVpcPeeringAuthorizationXAmzTargetEnum = "GameLift.CreateVpcPeeringAuthorization"
 )
 
+func (e CreateVpcPeeringAuthorizationXAmzTargetEnum) ToPointer() *CreateVpcPeeringAuthorizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateVpcPeeringAuthorizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateVpcPeeringAuthorization":
-		*e = CreateVpcPeeringAuthorizationXAmzTargetEnum(s)
+		*e = CreateVpcPeeringAuthorizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVpcPeeringAuthorizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVpcPeeringAuthorizationXAmzTargetEnum: %v", v)
 	}
 }
 

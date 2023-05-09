@@ -29,21 +29,25 @@ const (
 	CreateAnnotationStoreRequestBodyStoreFormatEnumVcf CreateAnnotationStoreRequestBodyStoreFormatEnum = "VCF"
 )
 
+func (e CreateAnnotationStoreRequestBodyStoreFormatEnum) ToPointer() *CreateAnnotationStoreRequestBodyStoreFormatEnum {
+	return &e
+}
+
 func (e *CreateAnnotationStoreRequestBodyStoreFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GFF":
 		fallthrough
 	case "TSV":
 		fallthrough
 	case "VCF":
-		*e = CreateAnnotationStoreRequestBodyStoreFormatEnum(s)
+		*e = CreateAnnotationStoreRequestBodyStoreFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAnnotationStoreRequestBodyStoreFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAnnotationStoreRequestBodyStoreFormatEnum: %v", v)
 	}
 }
 

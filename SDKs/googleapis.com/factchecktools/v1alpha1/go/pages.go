@@ -90,7 +90,10 @@ func (s *pages) FactchecktoolsPagesCreate(ctx context.Context, request operation
 // FactchecktoolsPagesDelete - Delete all `ClaimReview` markup on a page.
 func (s *pages) FactchecktoolsPagesDelete(ctx context.Context, request operations.FactchecktoolsPagesDeleteRequest, security operations.FactchecktoolsPagesDeleteSecurity) (*operations.FactchecktoolsPagesDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *pages) FactchecktoolsPagesDelete(ctx context.Context, request operation
 // FactchecktoolsPagesGet - Get all `ClaimReview` markup on a page.
 func (s *pages) FactchecktoolsPagesGet(ctx context.Context, request operations.FactchecktoolsPagesGetRequest, security operations.FactchecktoolsPagesGetSecurity) (*operations.FactchecktoolsPagesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -234,7 +240,10 @@ func (s *pages) FactchecktoolsPagesList(ctx context.Context, request operations.
 // FactchecktoolsPagesUpdate - Update for all `ClaimReview` markup on a page Note that this is a full update. To retain the existing `ClaimReview` markup on a page, first perform a Get operation, then modify the returned markup, and finally call Update with the entire `ClaimReview` markup as the body.
 func (s *pages) FactchecktoolsPagesUpdate(ctx context.Context, request operations.FactchecktoolsPagesUpdateRequest, security operations.FactchecktoolsPagesUpdateSecurity) (*operations.FactchecktoolsPagesUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage", "json")
 	if err != nil {

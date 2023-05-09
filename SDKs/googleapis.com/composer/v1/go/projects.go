@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ComposerProjectsLocationsEnvironmentsCreate - Create a new environment.
 func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsCreateRequest, security operations.ComposerProjectsLocationsEnvironmentsCreateSecurity) (*operations.ComposerProjectsLocationsEnvironmentsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnvironmentInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsCreate(ctx context.Conte
 // ComposerProjectsLocationsEnvironmentsList - List environments.
 func (s *projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsListRequest, security operations.ComposerProjectsLocationsEnvironmentsListSecurity) (*operations.ComposerProjectsLocationsEnvironmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/environments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsList(ctx context.Context
 // ComposerProjectsLocationsEnvironmentsLoadSnapshot - Loads a snapshot of a Cloud Composer environment. As a result of this operation, a snapshot of environment's specified in LoadSnapshotRequest is loaded into the environment.
 func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotRequest, security operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotSecurity) (*operations.ComposerProjectsLocationsEnvironmentsLoadSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:loadSnapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:loadSnapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "LoadSnapshotRequest", "json")
 	if err != nil {
@@ -192,7 +201,10 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsLoadSnapshot(ctx context
 // ComposerProjectsLocationsEnvironmentsPatch - Update an environment.
 func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsPatchRequest, security operations.ComposerProjectsLocationsEnvironmentsPatchSecurity) (*operations.ComposerProjectsLocationsEnvironmentsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "EnvironmentInput", "json")
 	if err != nil {
@@ -247,7 +259,10 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsPatch(ctx context.Contex
 // ComposerProjectsLocationsEnvironmentsSaveSnapshot - Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of environment's state is stored in a location specified in the SaveSnapshotRequest.
 func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context.Context, request operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotRequest, security operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotSecurity) (*operations.ComposerProjectsLocationsEnvironmentsSaveSnapshotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:saveSnapshot", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{environment}:saveSnapshot", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SaveSnapshotRequest", "json")
 	if err != nil {
@@ -302,7 +317,10 @@ func (s *projects) ComposerProjectsLocationsEnvironmentsSaveSnapshot(ctx context
 // ComposerProjectsLocationsImageVersionsList - List ImageVersions for provided location.
 func (s *projects) ComposerProjectsLocationsImageVersionsList(ctx context.Context, request operations.ComposerProjectsLocationsImageVersionsListRequest, security operations.ComposerProjectsLocationsImageVersionsListSecurity) (*operations.ComposerProjectsLocationsImageVersionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/imageVersions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/imageVersions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *projects) ComposerProjectsLocationsImageVersionsList(ctx context.Contex
 // ComposerProjectsLocationsOperationsDelete - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 func (s *projects) ComposerProjectsLocationsOperationsDelete(ctx context.Context, request operations.ComposerProjectsLocationsOperationsDeleteRequest, security operations.ComposerProjectsLocationsOperationsDeleteSecurity) (*operations.ComposerProjectsLocationsOperationsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *projects) ComposerProjectsLocationsOperationsDelete(ctx context.Context
 // ComposerProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) ComposerProjectsLocationsOperationsGet(ctx context.Context, request operations.ComposerProjectsLocationsOperationsGetRequest, security operations.ComposerProjectsLocationsOperationsGetSecurity) (*operations.ComposerProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -446,7 +470,10 @@ func (s *projects) ComposerProjectsLocationsOperationsGet(ctx context.Context, r
 // ComposerProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ComposerProjectsLocationsOperationsList(ctx context.Context, request operations.ComposerProjectsLocationsOperationsListRequest, security operations.ComposerProjectsLocationsOperationsListSecurity) (*operations.ComposerProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

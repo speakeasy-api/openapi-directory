@@ -15,17 +15,21 @@ const (
 	GETListMFADeviceTagsActionEnumListMfaDeviceTags GETListMFADeviceTagsActionEnum = "ListMFADeviceTags"
 )
 
+func (e GETListMFADeviceTagsActionEnum) ToPointer() *GETListMFADeviceTagsActionEnum {
+	return &e
+}
+
 func (e *GETListMFADeviceTagsActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListMFADeviceTags":
-		*e = GETListMFADeviceTagsActionEnum(s)
+		*e = GETListMFADeviceTagsActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListMFADeviceTagsActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListMFADeviceTagsActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETListMFADeviceTagsVersionEnumTwoThousandAndTen0508 GETListMFADeviceTagsVersionEnum = "2010-05-08"
 )
 
+func (e GETListMFADeviceTagsVersionEnum) ToPointer() *GETListMFADeviceTagsVersionEnum {
+	return &e
+}
+
 func (e *GETListMFADeviceTagsVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETListMFADeviceTagsVersionEnum(s)
+		*e = GETListMFADeviceTagsVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListMFADeviceTagsVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListMFADeviceTagsVersionEnum: %v", v)
 	}
 }
 

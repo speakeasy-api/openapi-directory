@@ -14,13 +14,15 @@ type RetrieveInstitutionRequest struct {
 type RetrieveInstitutionResponse struct {
 	ContentType string
 	// Retrieve institution by id
-	Integration *shared.Integration
-	StatusCode  int
-	RawResponse *http.Response
+	IntegrationRetrieve *shared.IntegrationRetrieve
+	StatusCode          int
+	RawResponse         *http.Response
 	// Invalid token
 	RetrieveInstitution401ApplicationJSONObject map[string]interface{}
 	// IP Access denied
 	RetrieveInstitution403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RetrieveInstitution404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RetrieveInstitution429ApplicationJSONObject map[string]interface{}
 }

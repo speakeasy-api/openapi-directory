@@ -17,12 +17,16 @@ const (
 	EcosystemMenuPositionEnumHidden EcosystemMenuPositionEnum = "HIDDEN"
 )
 
+func (e EcosystemMenuPositionEnum) ToPointer() *EcosystemMenuPositionEnum {
+	return &e
+}
+
 func (e *EcosystemMenuPositionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TOP":
 		fallthrough
 	case "LEFT":
@@ -30,10 +34,10 @@ func (e *EcosystemMenuPositionEnum) UnmarshalJSON(data []byte) error {
 	case "RIGHT":
 		fallthrough
 	case "HIDDEN":
-		*e = EcosystemMenuPositionEnum(s)
+		*e = EcosystemMenuPositionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcosystemMenuPositionEnum: %s", s)
+		return fmt.Errorf("invalid value for EcosystemMenuPositionEnum: %v", v)
 	}
 }
 
@@ -45,21 +49,25 @@ const (
 	EcosystemMenuStyleEnumFilter EcosystemMenuStyleEnum = "FILTER"
 )
 
+func (e EcosystemMenuStyleEnum) ToPointer() *EcosystemMenuStyleEnum {
+	return &e
+}
+
 func (e *EcosystemMenuStyleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LIST":
 		fallthrough
 	case "PILL":
 		fallthrough
 	case "FILTER":
-		*e = EcosystemMenuStyleEnum(s)
+		*e = EcosystemMenuStyleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcosystemMenuStyleEnum: %s", s)
+		return fmt.Errorf("invalid value for EcosystemMenuStyleEnum: %v", v)
 	}
 }
 
@@ -70,19 +78,23 @@ const (
 	EcosystemNavigationMobileMenuTypeEnumText EcosystemNavigationMobileMenuTypeEnum = "TEXT"
 )
 
+func (e EcosystemNavigationMobileMenuTypeEnum) ToPointer() *EcosystemNavigationMobileMenuTypeEnum {
+	return &e
+}
+
 func (e *EcosystemNavigationMobileMenuTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ICON":
 		fallthrough
 	case "TEXT":
-		*e = EcosystemNavigationMobileMenuTypeEnum(s)
+		*e = EcosystemNavigationMobileMenuTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EcosystemNavigationMobileMenuTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EcosystemNavigationMobileMenuTypeEnum: %v", v)
 	}
 }
 

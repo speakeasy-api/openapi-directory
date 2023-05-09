@@ -33,7 +33,10 @@ func newSearch(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // GetSearchAspectIDFullsearch - A listing of metadata available for the specified aspect and search term from the BCLaws legislative repository
 func (s *search) GetSearchAspectIDFullsearch(ctx context.Context, request operations.GetSearchAspectIDFullsearchRequest) (*operations.GetSearchAspectIDFullsearchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{aspectId}/fullsearch", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{aspectId}/fullsearch", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

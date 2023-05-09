@@ -129,7 +129,10 @@ func (s *status) GetMetadataOfAllChannels(ctx context.Context, request operation
 // Get metadata of a channel
 func (s *status) GetMetadataOfChannel(ctx context.Context, request operations.GetMetadataOfChannelRequest) (*operations.GetMetadataOfChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -204,7 +207,10 @@ func (s *status) GetMetadataOfChannel(ctx context.Context, request operations.Ge
 // Get presence on a channel
 func (s *status) GetPresenceOfChannel(ctx context.Context, request operations.GetPresenceOfChannelRequest) (*operations.GetPresenceOfChannelResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/presence", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channel_id}/presence", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

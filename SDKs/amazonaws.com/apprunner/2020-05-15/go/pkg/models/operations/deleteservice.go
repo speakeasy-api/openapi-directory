@@ -16,17 +16,21 @@ const (
 	DeleteServiceXAmzTargetEnumAppRunnerDeleteService DeleteServiceXAmzTargetEnum = "AppRunner.DeleteService"
 )
 
+func (e DeleteServiceXAmzTargetEnum) ToPointer() *DeleteServiceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteServiceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AppRunner.DeleteService":
-		*e = DeleteServiceXAmzTargetEnum(s)
+		*e = DeleteServiceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteServiceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteServiceXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -36,7 +36,10 @@ func newMyInfo(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // List current user's automatic invitations info
 func (s *myInfo) GetAutomaticInvitationList(ctx context.Context, request operations.GetAutomaticInvitationListRequest) (*operations.GetAutomaticInvitationListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/automaticInvitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/automaticInvitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +192,10 @@ func (s *myInfo) GetAutomaticInvitationList(ctx context.Context, request operati
 // Get current user's team template detal info
 func (s *myInfo) GetTeamTemplateDetail(ctx context.Context, request operations.GetTeamTemplateDetailRequest) (*operations.GetTeamTemplateDetailResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/teamTemplates/{team_template_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/teamTemplates/{team_template_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,7 +348,10 @@ func (s *myInfo) GetTeamTemplateDetail(ctx context.Context, request operations.G
 // List current user's team templates info
 func (s *myInfo) GetTeamTemplateList(ctx context.Context, request operations.GetTeamTemplateListRequest) (*operations.GetTeamTemplateListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/teamTemplates", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/teamTemplates", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -495,7 +504,10 @@ func (s *myInfo) GetTeamTemplateList(ctx context.Context, request operations.Get
 // Upload Profile Image.  A multipart/form-data request with a name "file"
 func (s *myInfo) UploadProfileImage(ctx context.Context, request operations.UploadProfileImageRequest) (*operations.UploadProfileImageResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/profileImage", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/profileImage", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

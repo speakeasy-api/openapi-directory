@@ -17,12 +17,16 @@ const (
 	RequestStatusEnumCaseClosed RequestStatusEnum = "CASE_CLOSED"
 )
 
+func (e RequestStatusEnum) ToPointer() *RequestStatusEnum {
+	return &e
+}
+
 func (e *RequestStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "CASE_OPENED":
@@ -32,9 +36,9 @@ func (e *RequestStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DENIED":
 		fallthrough
 	case "CASE_CLOSED":
-		*e = RequestStatusEnum(s)
+		*e = RequestStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestStatusEnum: %v", v)
 	}
 }

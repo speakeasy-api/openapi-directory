@@ -13,23 +13,27 @@ type DepositASandboxCheckTransferRequest struct {
 	CheckTransferID string `pathParam:"style=simple,explode=false,name=check_transfer_id"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum = "429"
+	DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnumRateLimitedError DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON13 struct {
 	Type       DepositASandboxCheckTransferDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum = "403"
+	DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnumPrivateFeatureError DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON12 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum = "404"
+	DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnumFourHundredAndFour DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnumObjectNotFoundError DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON11 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnumFourHundred DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum = "400"
+	DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnumFourHundred DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnumMalformedRequestError DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON10 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnumFourHundred DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum = "400"
+	DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnumFourHundred DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnumInvalidParametersError DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type DepositASandboxCheckTransferDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                                      `json:"errors,omitempty"`
+	Errors []map[string]interface{}                                      `json:"errors"`
 	Status DepositASandboxCheckTransferDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                                        `json:"title"`
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum = "409"
+	DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnumFourHundredAndNine DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnumInvalidOperationError DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON8 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum = "401"
+	DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnumFourHundredAndOne DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnumInvalidAPIKeyError DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON7 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum = "500"
+	DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnumFiveHundred DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnumInternalServerError DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON6 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum = "403"
+	DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnumInsufficientPermissionsError DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON5 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum = "422"
+	DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON4 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum = "409"
+	DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnumFourHundredAndNine DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnumIdempotencyConflictError DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON3 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum = "403"
+	DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnumFourHundredAndThree DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnumEnvironmentMismatchError DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type DepositASandboxCheckTransferDefaultApplicationJSON2 struct {
 	Type   DepositASandboxCheckTransferDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum string
+type DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum int64
 
 const (
-	DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum = "404"
+	DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnumFourHundredAndFour DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum) ToPointer() *DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum(s)
+		*e = DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DepositASandboxCheckTransferDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

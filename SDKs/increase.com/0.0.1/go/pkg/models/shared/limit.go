@@ -19,12 +19,16 @@ const (
 	LimitIntervalEnumAllTime     LimitIntervalEnum = "all_time"
 )
 
+func (e LimitIntervalEnum) ToPointer() *LimitIntervalEnum {
+	return &e
+}
+
 func (e *LimitIntervalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "transaction":
 		fallthrough
 	case "day":
@@ -36,10 +40,10 @@ func (e *LimitIntervalEnum) UnmarshalJSON(data []byte) error {
 	case "year":
 		fallthrough
 	case "all_time":
-		*e = LimitIntervalEnum(s)
+		*e = LimitIntervalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LimitIntervalEnum: %s", s)
+		return fmt.Errorf("invalid value for LimitIntervalEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	LimitMetricEnumVolume LimitMetricEnum = "volume"
 )
 
+func (e LimitMetricEnum) ToPointer() *LimitMetricEnum {
+	return &e
+}
+
 func (e *LimitMetricEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "count":
 		fallthrough
 	case "volume":
-		*e = LimitMetricEnum(s)
+		*e = LimitMetricEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LimitMetricEnum: %s", s)
+		return fmt.Errorf("invalid value for LimitMetricEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	LimitModelTypeEnumCard          LimitModelTypeEnum = "card"
 )
 
+func (e LimitModelTypeEnum) ToPointer() *LimitModelTypeEnum {
+	return &e
+}
+
 func (e *LimitModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account":
 		fallthrough
 	case "account_number":
 		fallthrough
 	case "card":
-		*e = LimitModelTypeEnum(s)
+		*e = LimitModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LimitModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LimitModelTypeEnum: %v", v)
 	}
 }
 
@@ -102,19 +114,23 @@ const (
 	LimitStatusEnumInactive LimitStatusEnum = "inactive"
 )
 
+func (e LimitStatusEnum) ToPointer() *LimitStatusEnum {
+	return &e
+}
+
 func (e *LimitStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "inactive":
-		*e = LimitStatusEnum(s)
+		*e = LimitStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LimitStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LimitStatusEnum: %v", v)
 	}
 }
 
@@ -125,17 +141,21 @@ const (
 	LimitTypeEnumLimit LimitTypeEnum = "limit"
 )
 
+func (e LimitTypeEnum) ToPointer() *LimitTypeEnum {
+	return &e
+}
+
 func (e *LimitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "limit":
-		*e = LimitTypeEnum(s)
+		*e = LimitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LimitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LimitTypeEnum: %v", v)
 	}
 }
 

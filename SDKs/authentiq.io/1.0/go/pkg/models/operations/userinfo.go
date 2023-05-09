@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type UserInfoSecurity struct {
+	OauthCode     *string `security:"scheme,type=oauth2,name=Authorization"`
+	OauthImplicit *string `security:"scheme,type=oauth2,name=Authorization"`
+}
+
 type UserInfoResponse struct {
 	Body        []byte
 	ContentType string

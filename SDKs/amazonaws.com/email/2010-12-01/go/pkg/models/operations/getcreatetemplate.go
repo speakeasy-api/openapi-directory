@@ -15,17 +15,21 @@ const (
 	GETCreateTemplateActionEnumCreateTemplate GETCreateTemplateActionEnum = "CreateTemplate"
 )
 
+func (e GETCreateTemplateActionEnum) ToPointer() *GETCreateTemplateActionEnum {
+	return &e
+}
+
 func (e *GETCreateTemplateActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTemplate":
-		*e = GETCreateTemplateActionEnum(s)
+		*e = GETCreateTemplateActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTemplateActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTemplateActionEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	GETCreateTemplateVersionEnumTwoThousandAndTen1201 GETCreateTemplateVersionEnum = "2010-12-01"
 )
 
+func (e GETCreateTemplateVersionEnum) ToPointer() *GETCreateTemplateVersionEnum {
+	return &e
+}
+
 func (e *GETCreateTemplateVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETCreateTemplateVersionEnum(s)
+		*e = GETCreateTemplateVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCreateTemplateVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCreateTemplateVersionEnum: %v", v)
 	}
 }
 

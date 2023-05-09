@@ -22,4 +22,8 @@ type GoogleCloudContactcenterinsightsV1AnnotatorSelector struct {
 	RunSentimentAnnotator *bool `json:"runSentimentAnnotator,omitempty"`
 	// Whether to run the silence annotator.
 	RunSilenceAnnotator *bool `json:"runSilenceAnnotator,omitempty"`
+	// Whether to run the summarization annotator.
+	RunSummarizationAnnotator *bool `json:"runSummarizationAnnotator,omitempty"`
+	// Configuration for summarization.
+	SummarizationConfig *GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig `json:"summarizationConfig,omitempty"`
 }

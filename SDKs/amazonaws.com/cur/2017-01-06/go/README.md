@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/cur/2017-01
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,22 +28,20 @@ func main() {
         }),
     )
 
-    req := operations.DeleteReportDefinitionRequest{
-        DeleteReportDefinitionRequest: shared.DeleteReportDefinitionRequest{
-            ReportName: "corrupti",
-        },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "AWSOrigamiServiceGatewayService.DeleteReportDefinition",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteReportDefinition(ctx, req)
+    res, err := s.DeleteReportDefinition(ctx, operations.DeleteReportDefinitionRequest{
+        DeleteReportDefinitionRequest: shared.DeleteReportDefinitionRequest{
+            ReportName: sdk.String("corrupti"),
+        },
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        XAmzTarget: operations.DeleteReportDefinitionXAmzTargetEnumAwsOrigamiServiceGatewayServiceDeleteReportDefinition,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,12 +56,12 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DeleteReportDefinition` - Deletes the specified report.
-* `DescribeReportDefinitions` - Lists the AWS Cost and Usage reports available to this account.
-* `ModifyReportDefinition` - Allows you to programatically update your report preferences.
-* `PutReportDefinition` - Creates a new report using the description that you provide.
+* [DeleteReportDefinition](docs/sdk/README.md#deletereportdefinition) - Deletes the specified report.
+* [DescribeReportDefinitions](docs/sdk/README.md#describereportdefinitions) - Lists the AWS Cost and Usage reports available to this account.
+* [ModifyReportDefinition](docs/sdk/README.md#modifyreportdefinition) - Allows you to programatically update your report preferences.
+* [PutReportDefinition](docs/sdk/README.md#putreportdefinition) - Creates a new report using the description that you provide.
 <!-- End SDK Available Operations -->
 
 ### Maturity

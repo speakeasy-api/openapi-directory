@@ -17,19 +17,23 @@ const (
 	GroupsGetDatapointsSortDirectionEnumDesc GroupsGetDatapointsSortDirectionEnum = "desc"
 )
 
+func (e GroupsGetDatapointsSortDirectionEnum) ToPointer() *GroupsGetDatapointsSortDirectionEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsSortDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = GroupsGetDatapointsSortDirectionEnum(s)
+		*e = GroupsGetDatapointsSortDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsSortDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsSortDirectionEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	GroupsGetDatapointsStatusEnumSpam    GroupsGetDatapointsStatusEnum = "spam"
 )
 
+func (e GroupsGetDatapointsStatusEnum) ToPointer() *GroupsGetDatapointsStatusEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "deleted":
 		fallthrough
 	case "active":
@@ -56,10 +64,10 @@ func (e *GroupsGetDatapointsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "paused":
 		fallthrough
 	case "spam":
-		*e = GroupsGetDatapointsStatusEnum(s)
+		*e = GroupsGetDatapointsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsStatusEnum: %v", v)
 	}
 }
 
@@ -71,19 +79,23 @@ const (
 	GroupsGetDatapointsTypeEnumTl GroupsGetDatapointsTypeEnum = "tl"
 )
 
+func (e GroupsGetDatapointsTypeEnum) ToPointer() *GroupsGetDatapointsTypeEnum {
+	return &e
+}
+
 func (e *GroupsGetDatapointsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "tp":
 		fallthrough
 	case "tl":
-		*e = GroupsGetDatapointsTypeEnum(s)
+		*e = GroupsGetDatapointsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupsGetDatapointsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupsGetDatapointsTypeEnum: %v", v)
 	}
 }
 

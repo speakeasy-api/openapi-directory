@@ -14,18 +14,22 @@ const (
 	IntentFilterOperatorEnumEq IntentFilterOperatorEnum = "EQ"
 )
 
+func (e IntentFilterOperatorEnum) ToPointer() *IntentFilterOperatorEnum {
+	return &e
+}
+
 func (e *IntentFilterOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CO":
 		fallthrough
 	case "EQ":
-		*e = IntentFilterOperatorEnum(s)
+		*e = IntentFilterOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntentFilterOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for IntentFilterOperatorEnum: %v", v)
 	}
 }

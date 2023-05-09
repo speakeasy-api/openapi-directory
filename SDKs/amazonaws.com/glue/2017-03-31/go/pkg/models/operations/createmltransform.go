@@ -16,17 +16,21 @@ const (
 	CreateMLTransformXAmzTargetEnumAwsGlueCreateMlTransform CreateMLTransformXAmzTargetEnum = "AWSGlue.CreateMLTransform"
 )
 
+func (e CreateMLTransformXAmzTargetEnum) ToPointer() *CreateMLTransformXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateMLTransformXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.CreateMLTransform":
-		*e = CreateMLTransformXAmzTargetEnum(s)
+		*e = CreateMLTransformXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMLTransformXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMLTransformXAmzTargetEnum: %v", v)
 	}
 }
 

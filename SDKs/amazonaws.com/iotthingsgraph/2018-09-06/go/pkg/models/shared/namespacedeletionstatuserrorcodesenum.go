@@ -13,16 +13,20 @@ const (
 	NamespaceDeletionStatusErrorCodesEnumValidationFailed NamespaceDeletionStatusErrorCodesEnum = "VALIDATION_FAILED"
 )
 
+func (e NamespaceDeletionStatusErrorCodesEnum) ToPointer() *NamespaceDeletionStatusErrorCodesEnum {
+	return &e
+}
+
 func (e *NamespaceDeletionStatusErrorCodesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATION_FAILED":
-		*e = NamespaceDeletionStatusErrorCodesEnum(s)
+		*e = NamespaceDeletionStatusErrorCodesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NamespaceDeletionStatusErrorCodesEnum: %s", s)
+		return fmt.Errorf("invalid value for NamespaceDeletionStatusErrorCodesEnum: %v", v)
 	}
 }

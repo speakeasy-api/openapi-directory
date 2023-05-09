@@ -87,12 +87,16 @@ const (
 	ReleasesUpdate404ApplicationJSONCodeEnumTooManyRequests     ReleasesUpdate404ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesUpdate404ApplicationJSONCodeEnum) ToPointer() *ReleasesUpdate404ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesUpdate404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -106,10 +110,10 @@ func (e *ReleasesUpdate404ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) er
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesUpdate404ApplicationJSONCodeEnum(s)
+		*e = ReleasesUpdate404ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesUpdate404ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesUpdate404ApplicationJSONCodeEnum: %v", v)
 	}
 }
 
@@ -131,12 +135,16 @@ const (
 	ReleasesUpdate400ApplicationJSONCodeEnumTooManyRequests     ReleasesUpdate400ApplicationJSONCodeEnum = "TooManyRequests"
 )
 
+func (e ReleasesUpdate400ApplicationJSONCodeEnum) ToPointer() *ReleasesUpdate400ApplicationJSONCodeEnum {
+	return &e
+}
+
 func (e *ReleasesUpdate400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -150,10 +158,10 @@ func (e *ReleasesUpdate400ApplicationJSONCodeEnum) UnmarshalJSON(data []byte) er
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ReleasesUpdate400ApplicationJSONCodeEnum(s)
+		*e = ReleasesUpdate400ApplicationJSONCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReleasesUpdate400ApplicationJSONCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReleasesUpdate400ApplicationJSONCodeEnum: %v", v)
 	}
 }
 

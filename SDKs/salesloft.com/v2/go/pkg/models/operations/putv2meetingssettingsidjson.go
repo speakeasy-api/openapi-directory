@@ -37,6 +37,8 @@ type PutV2MeetingsSettingsIDJSONRequestBody struct {
 	PrimaryCalendarID *string `form:"name=primary_calendar_id"`
 	// Display name of the primary calendar
 	PrimaryCalendarName *string `form:"name=primary_calendar_name"`
+	// Determines if a user enabled reschedule meetings feature
+	RescheduleMeetingsEnabled *bool `form:"name=reschedule_meetings_enabled"`
 	// Determines if meetings are scheduled with a 15 minute buffer between them
 	ScheduleBufferEnabled *bool `form:"name=schedule_buffer_enabled"`
 	// The number of hours in advance a user requires someone to a book a meeting with them

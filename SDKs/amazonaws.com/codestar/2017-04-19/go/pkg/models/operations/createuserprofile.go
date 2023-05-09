@@ -16,17 +16,21 @@ const (
 	CreateUserProfileXAmzTargetEnumCodeStar20170419CreateUserProfile CreateUserProfileXAmzTargetEnum = "CodeStar_20170419.CreateUserProfile"
 )
 
+func (e CreateUserProfileXAmzTargetEnum) ToPointer() *CreateUserProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateUserProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeStar_20170419.CreateUserProfile":
-		*e = CreateUserProfileXAmzTargetEnum(s)
+		*e = CreateUserProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateUserProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateUserProfileXAmzTargetEnum: %v", v)
 	}
 }
 

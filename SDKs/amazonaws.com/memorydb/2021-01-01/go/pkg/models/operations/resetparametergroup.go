@@ -16,17 +16,21 @@ const (
 	ResetParameterGroupXAmzTargetEnumAmazonMemoryDbResetParameterGroup ResetParameterGroupXAmzTargetEnum = "AmazonMemoryDB.ResetParameterGroup"
 )
 
+func (e ResetParameterGroupXAmzTargetEnum) ToPointer() *ResetParameterGroupXAmzTargetEnum {
+	return &e
+}
+
 func (e *ResetParameterGroupXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonMemoryDB.ResetParameterGroup":
-		*e = ResetParameterGroupXAmzTargetEnum(s)
+		*e = ResetParameterGroupXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResetParameterGroupXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ResetParameterGroupXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -46,12 +46,16 @@ const (
 	YoutubeSubscriptionsListOrderEnumAlphabetical                 YoutubeSubscriptionsListOrderEnum = "alphabetical"
 )
 
+func (e YoutubeSubscriptionsListOrderEnum) ToPointer() *YoutubeSubscriptionsListOrderEnum {
+	return &e
+}
+
 func (e *YoutubeSubscriptionsListOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "subscriptionOrderUnspecified":
 		fallthrough
 	case "relevance":
@@ -59,10 +63,10 @@ func (e *YoutubeSubscriptionsListOrderEnum) UnmarshalJSON(data []byte) error {
 	case "unread":
 		fallthrough
 	case "alphabetical":
-		*e = YoutubeSubscriptionsListOrderEnum(s)
+		*e = YoutubeSubscriptionsListOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for YoutubeSubscriptionsListOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for YoutubeSubscriptionsListOrderEnum: %v", v)
 	}
 }
 

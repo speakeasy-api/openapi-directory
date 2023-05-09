@@ -2,37 +2,35 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest{
-        DollarXgafv: "2",
-        AddGroupMigrationRequest: &shared.AddGroupMigrationRequest{
-            MigratingVM: "provident",
-        },
-        AccessToken: "distinctio",
-        Alt: "proto",
-        Callback: "unde",
-        Fields: "nulla",
-        Group: "corrupti",
-        Key: "illum",
-        OauthToken: "vel",
-        PrettyPrint: false,
-        QuotaUser: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Projects.VmmigrationProjectsLocationsGroupsAddGroupMigration(ctx, req, operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity{
+    res, err := s.Projects.VmmigrationProjectsLocationsGroupsAddGroupMigration(ctx, operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AddGroupMigrationRequest: &shared.AddGroupMigrationRequest{
+            MigratingVM: sdk.String("provident"),
+        },
+        AccessToken: sdk.String("distinctio"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("unde"),
+        Fields: sdk.String("nulla"),
+        Group: "corrupti",
+        Key: sdk.String("illum"),
+        OauthToken: sdk.String("vel"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("error"),
+        UploadType: sdk.String("deserunt"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

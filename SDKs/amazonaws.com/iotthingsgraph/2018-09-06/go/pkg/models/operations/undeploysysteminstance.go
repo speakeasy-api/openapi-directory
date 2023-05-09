@@ -16,17 +16,21 @@ const (
 	UndeploySystemInstanceXAmzTargetEnumIotThingsGraphFrontEndServiceUndeploySystemInstance UndeploySystemInstanceXAmzTargetEnum = "IotThingsGraphFrontEndService.UndeploySystemInstance"
 )
 
+func (e UndeploySystemInstanceXAmzTargetEnum) ToPointer() *UndeploySystemInstanceXAmzTargetEnum {
+	return &e
+}
+
 func (e *UndeploySystemInstanceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IotThingsGraphFrontEndService.UndeploySystemInstance":
-		*e = UndeploySystemInstanceXAmzTargetEnum(s)
+		*e = UndeploySystemInstanceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UndeploySystemInstanceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UndeploySystemInstanceXAmzTargetEnum: %v", v)
 	}
 }
 

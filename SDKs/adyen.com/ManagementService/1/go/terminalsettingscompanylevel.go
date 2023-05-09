@@ -42,7 +42,10 @@ func newTerminalSettingsCompanyLevel(defaultClient, securityClient HTTPClient, s
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalLogosRequest, security operations.GetCompaniesCompanyIDTerminalLogosSecurity) (*operations.GetCompaniesCompanyIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -116,7 +119,10 @@ func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalLogos(ctx co
 // * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.GetCompaniesCompanyIDTerminalSettingsRequest, security operations.GetCompaniesCompanyIDTerminalSettingsSecurity) (*operations.GetCompaniesCompanyIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +191,10 @@ func (s *terminalSettingsCompanyLevel) GetCompaniesCompanyIDTerminalSettings(ctx
 // * Management API—Terminal settings read and write
 func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalLogosRequest, security operations.PatchCompaniesCompanyIDTerminalLogosSecurity) (*operations.PatchCompaniesCompanyIDTerminalLogosResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalLogos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Logo", "json")
 	if err != nil {
@@ -264,9 +273,15 @@ func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalLogos(ctx 
 //
 // To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
 // * Management API—Terminal settings read and write
+//
+// For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+// * Management API—Terminal settings Advanced read and write
 func (s *terminalSettingsCompanyLevel) PatchCompaniesCompanyIDTerminalSettings(ctx context.Context, request operations.PatchCompaniesCompanyIDTerminalSettingsRequest, security operations.PatchCompaniesCompanyIDTerminalSettingsSecurity) (*operations.PatchCompaniesCompanyIDTerminalSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/terminalSettings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TerminalSettings", "json")
 	if err != nil {

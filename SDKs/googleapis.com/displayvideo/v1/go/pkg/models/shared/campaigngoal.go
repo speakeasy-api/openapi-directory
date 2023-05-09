@@ -18,12 +18,16 @@ const (
 	CampaignGoalCampaignGoalTypeEnumCampaignGoalTypeOnlineAction   CampaignGoalCampaignGoalTypeEnum = "CAMPAIGN_GOAL_TYPE_ONLINE_ACTION"
 )
 
+func (e CampaignGoalCampaignGoalTypeEnum) ToPointer() *CampaignGoalCampaignGoalTypeEnum {
+	return &e
+}
+
 func (e *CampaignGoalCampaignGoalTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CAMPAIGN_GOAL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "CAMPAIGN_GOAL_TYPE_APP_INSTALL":
@@ -33,10 +37,10 @@ func (e *CampaignGoalCampaignGoalTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CAMPAIGN_GOAL_TYPE_OFFLINE_ACTION":
 		fallthrough
 	case "CAMPAIGN_GOAL_TYPE_ONLINE_ACTION":
-		*e = CampaignGoalCampaignGoalTypeEnum(s)
+		*e = CampaignGoalCampaignGoalTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CampaignGoalCampaignGoalTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CampaignGoalCampaignGoalTypeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	DriveFolderTypeEnumStandardFolder  DriveFolderTypeEnum = "STANDARD_FOLDER"
 )
 
+func (e DriveFolderTypeEnum) ToPointer() *DriveFolderTypeEnum {
+	return &e
+}
+
 func (e *DriveFolderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TYPE_UNSPECIFIED":
 		fallthrough
 	case "MY_DRIVE_ROOT":
@@ -30,10 +34,10 @@ func (e *DriveFolderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SHARED_DRIVE_ROOT":
 		fallthrough
 	case "STANDARD_FOLDER":
-		*e = DriveFolderTypeEnum(s)
+		*e = DriveFolderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DriveFolderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for DriveFolderTypeEnum: %v", v)
 	}
 }
 

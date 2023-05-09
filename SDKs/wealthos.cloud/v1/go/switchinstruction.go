@@ -162,7 +162,10 @@ func (s *switchInstruction) ExecuteSwitchTrasaction(ctx context.Context, request
 // Retrieve the status of an existing switch instruction from the `switch_transaction_id`. If the status of the individual buy/sell transactions are required, you must send the request with include_details = `true`.
 func (s *switchInstruction) GetSwitch(ctx context.Context, request operations.GetSwitchRequest, security operations.GetSwitchSecurity) (*operations.GetSwitchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/switch/{switch_transaction_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/transactions/v1/switch/{switch_transaction_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

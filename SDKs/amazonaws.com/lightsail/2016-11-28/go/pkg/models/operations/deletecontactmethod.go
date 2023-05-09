@@ -16,17 +16,21 @@ const (
 	DeleteContactMethodXAmzTargetEnumLightsail20161128DeleteContactMethod DeleteContactMethodXAmzTargetEnum = "Lightsail_20161128.DeleteContactMethod"
 )
 
+func (e DeleteContactMethodXAmzTargetEnum) ToPointer() *DeleteContactMethodXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteContactMethodXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteContactMethod":
-		*e = DeleteContactMethodXAmzTargetEnum(s)
+		*e = DeleteContactMethodXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteContactMethodXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteContactMethodXAmzTargetEnum: %v", v)
 	}
 }
 

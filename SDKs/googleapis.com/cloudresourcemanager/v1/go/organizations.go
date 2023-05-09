@@ -35,7 +35,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // CloudresourcemanagerOrganizationsGet - Fetches an Organization resource identified by the specified resource name.
 func (s *organizations) CloudresourcemanagerOrganizationsGet(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetRequest, security operations.CloudresourcemanagerOrganizationsGetSecurity) (*operations.CloudresourcemanagerOrganizationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *organizations) CloudresourcemanagerOrganizationsGet(ctx context.Context
 // CloudresourcemanagerOrganizationsGetIamPolicy - Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123". Authorization requires the Google IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization
 func (s *organizations) CloudresourcemanagerOrganizationsGetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsGetIamPolicyRequest, security operations.CloudresourcemanagerOrganizationsGetIamPolicySecurity) (*operations.CloudresourcemanagerOrganizationsGetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GetIamPolicyRequest", "json")
 	if err != nil {
@@ -193,7 +199,10 @@ func (s *organizations) CloudresourcemanagerOrganizationsSearch(ctx context.Cont
 // CloudresourcemanagerOrganizationsSetIamPolicy - Sets the access control policy on an Organization resource. Replaces any existing policy. The `resource` field should be the organization's resource name, e.g. "organizations/123". Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy` on the specified organization
 func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx context.Context, request operations.CloudresourcemanagerOrganizationsSetIamPolicyRequest, security operations.CloudresourcemanagerOrganizationsSetIamPolicySecurity) (*operations.CloudresourcemanagerOrganizationsSetIamPolicyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "SetIamPolicyRequest", "json")
 	if err != nil {
@@ -248,7 +257,10 @@ func (s *organizations) CloudresourcemanagerOrganizationsSetIamPolicy(ctx contex
 // CloudresourcemanagerOrganizationsTestIamPermissions - Returns permissions that a caller has on the specified Organization. The `resource` field should be the organization's resource name, e.g. "organizations/123". There are no permissions required for making this API call.
 func (s *organizations) CloudresourcemanagerOrganizationsTestIamPermissions(ctx context.Context, request operations.CloudresourcemanagerOrganizationsTestIamPermissionsRequest, security operations.CloudresourcemanagerOrganizationsTestIamPermissionsSecurity) (*operations.CloudresourcemanagerOrganizationsTestIamPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TestIamPermissionsRequest", "json")
 	if err != nil {

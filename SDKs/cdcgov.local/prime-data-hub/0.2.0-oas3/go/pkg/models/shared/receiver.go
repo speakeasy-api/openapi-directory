@@ -17,12 +17,16 @@ const (
 	ReceiverJurisdictionalFiltersMatchFieldsEnumAbnormalValue            ReceiverJurisdictionalFiltersMatchFieldsEnum = "ABNORMAL_VALUE"
 )
 
+func (e ReceiverJurisdictionalFiltersMatchFieldsEnum) ToPointer() *ReceiverJurisdictionalFiltersMatchFieldsEnum {
+	return &e
+}
+
 func (e *ReceiverJurisdictionalFiltersMatchFieldsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FACILITY_OR_PATIENT_ADDRESS":
 		fallthrough
 	case "FACILITY_ADDRESS":
@@ -30,10 +34,10 @@ func (e *ReceiverJurisdictionalFiltersMatchFieldsEnum) UnmarshalJSON(data []byte
 	case "FACILITY_NAME":
 		fallthrough
 	case "ABNORMAL_VALUE":
-		*e = ReceiverJurisdictionalFiltersMatchFieldsEnum(s)
+		*e = ReceiverJurisdictionalFiltersMatchFieldsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceiverJurisdictionalFiltersMatchFieldsEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceiverJurisdictionalFiltersMatchFieldsEnum: %v", v)
 	}
 }
 
@@ -56,21 +60,25 @@ const (
 	ReceiverTimingFrequencyEnumDaily    ReceiverTimingFrequencyEnum = "DAILY"
 )
 
+func (e ReceiverTimingFrequencyEnum) ToPointer() *ReceiverTimingFrequencyEnum {
+	return &e
+}
+
 func (e *ReceiverTimingFrequencyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REAL_TIME":
 		fallthrough
 	case "HOURLY":
 		fallthrough
 	case "DAILY":
-		*e = ReceiverTimingFrequencyEnum(s)
+		*e = ReceiverTimingFrequencyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReceiverTimingFrequencyEnum: %s", s)
+		return fmt.Errorf("invalid value for ReceiverTimingFrequencyEnum: %v", v)
 	}
 }
 

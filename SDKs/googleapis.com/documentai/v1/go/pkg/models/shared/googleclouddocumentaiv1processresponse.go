@@ -2,7 +2,7 @@
 
 package shared
 
-// GoogleCloudDocumentaiV1ProcessResponse - Response message for the process document method.
+// GoogleCloudDocumentaiV1ProcessResponse - Response message for the ProcessDocument method.
 type GoogleCloudDocumentaiV1ProcessResponse struct {
 	// Document represents the canonical document resource in Document AI. It is an interchange format that provides insights into documents and allows for collaboration between users and Document AI to iterate and optimize for quality.
 	Document *GoogleCloudDocumentaiV1Document `json:"document,omitempty"`

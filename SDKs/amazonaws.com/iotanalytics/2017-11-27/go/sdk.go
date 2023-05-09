@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <p>IoT Analytics allows you to collect large amounts of device data, process messages, and store them. You can then query the data and run sophisticated analytics on it. IoT Analytics enables advanced data exploration through integration with Jupyter Notebooks and data visualization through integration with Amazon QuickSight.</p> <p>Traditional analytics and business intelligence tools are designed to process structured data. IoT data often comes from devices that record noisy processes (such as temperature, motion, or sound). As a result the data from these devices can have significant gaps, corrupted messages, and false readings that must be cleaned up before analysis can occur. Also, IoT data is often only meaningful in the context of other data from external sources. </p> <p>IoT Analytics automates the steps required to analyze data from IoT devices. IoT Analytics filters, transforms, and enriches IoT data before storing it in a time-series data store for analysis. You can set up the service to collect only the data you need from your devices, apply mathematical transforms to process the data, and enrich the data with device-specific metadata such as device type and location before storing it. Then, you can analyze your data by running queries using the built-in SQL query engine, or perform more complex analytics and machine learning inference. IoT Analytics includes pre-built models for common IoT use cases so you can answer questions like which devices are about to fail or which customers are at risk of abandoning their wearable devices.</p>
 // https://docs.aws.amazon.com/iotanalytics/ - Amazon Web Services documentation
 type SDK struct {
@@ -220,7 +235,10 @@ func (s *SDK) BatchPutMessage(ctx context.Context, request operations.BatchPutMe
 // CancelPipelineReprocessing - Cancels the reprocessing of data through the pipeline.
 func (s *SDK) CancelPipelineReprocessing(ctx context.Context, request operations.CancelPipelineReprocessingRequest) (*operations.CancelPipelineReprocessingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing/{reprocessingId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing/{reprocessingId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -548,7 +566,10 @@ func (s *SDK) CreateDataset(ctx context.Context, request operations.CreateDatase
 // CreateDatasetContent - Creates the content of a dataset by applying a <code>queryAction</code> (a SQL query) or a <code>containerAction</code> (executing a containerized application).
 func (s *SDK) CreateDatasetContent(ctx context.Context, request operations.CreateDatasetContentRequest) (*operations.CreateDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -886,7 +907,10 @@ func (s *SDK) CreatePipeline(ctx context.Context, request operations.CreatePipel
 // DeleteChannel - Deletes the specified channel.
 func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChannelRequest) (*operations.DeleteChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -973,7 +997,10 @@ func (s *SDK) DeleteChannel(ctx context.Context, request operations.DeleteChanne
 // DeleteDataset - <p>Deletes the specified dataset.</p> <p>You do not have to delete the content of the dataset before you perform this operation.</p>
 func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatasetRequest) (*operations.DeleteDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1060,7 +1087,10 @@ func (s *SDK) DeleteDataset(ctx context.Context, request operations.DeleteDatase
 // DeleteDatasetContent - Deletes the content of the specified dataset.
 func (s *SDK) DeleteDatasetContent(ctx context.Context, request operations.DeleteDatasetContentRequest) (*operations.DeleteDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1151,7 +1181,10 @@ func (s *SDK) DeleteDatasetContent(ctx context.Context, request operations.Delet
 // DeleteDatastore - Deletes the specified data store.
 func (s *SDK) DeleteDatastore(ctx context.Context, request operations.DeleteDatastoreRequest) (*operations.DeleteDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1238,7 +1271,10 @@ func (s *SDK) DeleteDatastore(ctx context.Context, request operations.DeleteData
 // DeletePipeline - Deletes the specified pipeline.
 func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipelineRequest) (*operations.DeletePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1325,7 +1361,10 @@ func (s *SDK) DeletePipeline(ctx context.Context, request operations.DeletePipel
 // DescribeChannel - Retrieves information about a channel.
 func (s *SDK) DescribeChannel(ctx context.Context, request operations.DescribeChannelRequest) (*operations.DescribeChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1425,7 +1464,10 @@ func (s *SDK) DescribeChannel(ctx context.Context, request operations.DescribeCh
 // DescribeDataset - Retrieves information about a dataset.
 func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDatasetRequest) (*operations.DescribeDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1521,7 +1563,10 @@ func (s *SDK) DescribeDataset(ctx context.Context, request operations.DescribeDa
 // DescribeDatastore - Retrieves information about a data store.
 func (s *SDK) DescribeDatastore(ctx context.Context, request operations.DescribeDatastoreRequest) (*operations.DescribeDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1717,7 +1762,10 @@ func (s *SDK) DescribeLoggingOptions(ctx context.Context, request operations.Des
 // DescribePipeline - Retrieves information about a pipeline.
 func (s *SDK) DescribePipeline(ctx context.Context, request operations.DescribePipelineRequest) (*operations.DescribePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1813,7 +1861,10 @@ func (s *SDK) DescribePipeline(ctx context.Context, request operations.DescribeP
 // GetDatasetContent - Retrieves the contents of a dataset as presigned URIs.
 func (s *SDK) GetDatasetContent(ctx context.Context, request operations.GetDatasetContentRequest) (*operations.GetDatasetContentResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/content", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2003,7 +2054,10 @@ func (s *SDK) ListChannels(ctx context.Context, request operations.ListChannelsR
 // ListDatasetContents - Lists information about dataset contents that have been created.
 func (s *SDK) ListDatasetContents(ctx context.Context, request operations.ListDatasetContentsRequest) (*operations.ListDatasetContentsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/contents", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}/contents", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2666,7 +2720,10 @@ func (s *SDK) RunPipelineActivity(ctx context.Context, request operations.RunPip
 // SampleChannelData - Retrieves a sample of messages from the specified channel ingested during the specified timeframe. Up to 10 messages can be retrieved.
 func (s *SDK) SampleChannelData(ctx context.Context, request operations.SampleChannelDataRequest) (*operations.SampleChannelDataResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}/sample", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}/sample", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2766,7 +2823,10 @@ func (s *SDK) SampleChannelData(ctx context.Context, request operations.SampleCh
 // StartPipelineReprocessing - Starts the reprocessing of raw message data through the pipeline.
 func (s *SDK) StartPipelineReprocessing(ctx context.Context, request operations.StartPipelineReprocessingRequest) (*operations.StartPipelineReprocessingResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}/reprocessing", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3112,7 +3172,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateChannel - Used to update the settings of a channel.
 func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChannelRequest) (*operations.UpdateChannelResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/channels/{channelName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3209,7 +3272,10 @@ func (s *SDK) UpdateChannel(ctx context.Context, request operations.UpdateChanne
 // UpdateDataset - Updates the settings of a dataset.
 func (s *SDK) UpdateDataset(ctx context.Context, request operations.UpdateDatasetRequest) (*operations.UpdateDatasetResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datasets/{datasetName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3306,7 +3372,10 @@ func (s *SDK) UpdateDataset(ctx context.Context, request operations.UpdateDatase
 // UpdateDatastore - Used to update the settings of a data store.
 func (s *SDK) UpdateDatastore(ctx context.Context, request operations.UpdateDatastoreRequest) (*operations.UpdateDatastoreResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/datastores/{datastoreName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3403,7 +3472,10 @@ func (s *SDK) UpdateDatastore(ctx context.Context, request operations.UpdateData
 // UpdatePipeline - Updates the settings of a pipeline. You must specify both a <code>channel</code> and a <code>datastore</code> activity and, optionally, as many as 23 additional activities in the <code>pipelineActivities</code> array.
 func (s *SDK) UpdatePipeline(ctx context.Context, request operations.UpdatePipelineRequest) (*operations.UpdatePipelineResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/pipelines/{pipelineName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

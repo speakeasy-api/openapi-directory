@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // AppengineProjectsLocationsGet - Gets information about a location.
 func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request operations.AppengineProjectsLocationsGetRequest, security operations.AppengineProjectsLocationsGetSecurity) (*operations.AppengineProjectsLocationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *projects) AppengineProjectsLocationsGet(ctx context.Context, request op
 // AppengineProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request operations.AppengineProjectsLocationsListRequest, security operations.AppengineProjectsLocationsListSecurity) (*operations.AppengineProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *projects) AppengineProjectsLocationsList(ctx context.Context, request o
 // AppengineProjectsLocationsOperationsGet - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, request operations.AppengineProjectsLocationsOperationsGetRequest, security operations.AppengineProjectsLocationsOperationsGetSecurity) (*operations.AppengineProjectsLocationsOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations/{operationsId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *projects) AppengineProjectsLocationsOperationsGet(ctx context.Context, 
 // AppengineProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 func (s *projects) AppengineProjectsLocationsOperationsList(ctx context.Context, request operations.AppengineProjectsLocationsOperationsListRequest, security operations.AppengineProjectsLocationsOperationsListSecurity) (*operations.AppengineProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/projects/{projectsId}/locations/{locationsId}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

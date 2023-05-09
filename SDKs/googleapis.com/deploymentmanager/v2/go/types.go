@@ -34,7 +34,10 @@ func newTypes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // DeploymentmanagerTypesList - Lists all resource types for Deployment Manager.
 func (s *types) DeploymentmanagerTypesList(ctx context.Context, request operations.DeploymentmanagerTypesListRequest, security operations.DeploymentmanagerTypesListSecurity) (*operations.DeploymentmanagerTypesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/types", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/deploymentmanager/v2/projects/{project}/global/types", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

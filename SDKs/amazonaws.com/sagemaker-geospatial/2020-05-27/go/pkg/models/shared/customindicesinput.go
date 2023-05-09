@@ -2,7 +2,7 @@
 
 package shared
 
-// CustomIndicesInput - <p/>
+// CustomIndicesInput - Input object defining the custom BandMath indices to compute.
 type CustomIndicesInput struct {
 	Operations []Operation `json:"Operations,omitempty"`
 }

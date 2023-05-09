@@ -17,12 +17,16 @@ const (
 	DeviceIntegrityDeviceRecognitionVerdictEnumMeetsVirtualIntegrity DeviceIntegrityDeviceRecognitionVerdictEnum = "MEETS_VIRTUAL_INTEGRITY"
 )
 
+func (e DeviceIntegrityDeviceRecognitionVerdictEnum) ToPointer() *DeviceIntegrityDeviceRecognitionVerdictEnum {
+	return &e
+}
+
 func (e *DeviceIntegrityDeviceRecognitionVerdictEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "MEETS_BASIC_INTEGRITY":
@@ -32,10 +36,10 @@ func (e *DeviceIntegrityDeviceRecognitionVerdictEnum) UnmarshalJSON(data []byte)
 	case "MEETS_STRONG_INTEGRITY":
 		fallthrough
 	case "MEETS_VIRTUAL_INTEGRITY":
-		*e = DeviceIntegrityDeviceRecognitionVerdictEnum(s)
+		*e = DeviceIntegrityDeviceRecognitionVerdictEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeviceIntegrityDeviceRecognitionVerdictEnum: %s", s)
+		return fmt.Errorf("invalid value for DeviceIntegrityDeviceRecognitionVerdictEnum: %v", v)
 	}
 }
 

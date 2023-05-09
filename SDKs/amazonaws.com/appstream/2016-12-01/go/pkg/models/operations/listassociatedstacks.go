@@ -16,17 +16,21 @@ const (
 	ListAssociatedStacksXAmzTargetEnumPhotonAdminProxyServiceListAssociatedStacks ListAssociatedStacksXAmzTargetEnum = "PhotonAdminProxyService.ListAssociatedStacks"
 )
 
+func (e ListAssociatedStacksXAmzTargetEnum) ToPointer() *ListAssociatedStacksXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListAssociatedStacksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PhotonAdminProxyService.ListAssociatedStacks":
-		*e = ListAssociatedStacksXAmzTargetEnum(s)
+		*e = ListAssociatedStacksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListAssociatedStacksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListAssociatedStacksXAmzTargetEnum: %v", v)
 	}
 }
 

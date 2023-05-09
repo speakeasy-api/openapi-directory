@@ -16,17 +16,21 @@ const (
 	ListCustomEntityTypesXAmzTargetEnumAwsGlueListCustomEntityTypes ListCustomEntityTypesXAmzTargetEnum = "AWSGlue.ListCustomEntityTypes"
 )
 
+func (e ListCustomEntityTypesXAmzTargetEnum) ToPointer() *ListCustomEntityTypesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListCustomEntityTypesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.ListCustomEntityTypes":
-		*e = ListCustomEntityTypesXAmzTargetEnum(s)
+		*e = ListCustomEntityTypesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListCustomEntityTypesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListCustomEntityTypesXAmzTargetEnum: %v", v)
 	}
 }
 

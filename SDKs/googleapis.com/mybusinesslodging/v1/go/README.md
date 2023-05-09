@@ -13,35 +13,33 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/mybusiness
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.MybusinesslodgingLocationsGetLodgingRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        Name: "corrupti",
-        OauthToken: "illum",
-        PrettyPrint: false,
-        QuotaUser: "vel",
-        ReadMask: "error",
-        UploadType: "deserunt",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Locations.MybusinesslodgingLocationsGetLodging(ctx, req)
+    res, err := s.Locations.MybusinesslodgingLocationsGetLodging(ctx, operations.MybusinesslodgingLocationsGetLodgingRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        Name: "Dallas Kassulke",
+        OauthToken: sdk.String("suscipit"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        ReadMask: sdk.String("magnam"),
+        UploadType: sdk.String("debitis"),
+        UploadProtocol: sdk.String("ipsa"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -57,11 +55,11 @@ func main() {
 ## Available Resources and Operations
 
 
-### Locations
+### [Locations](docs/locations/README.md)
 
-* `MybusinesslodgingLocationsGetLodging` - Returns the Lodging of a specific location.
-* `MybusinesslodgingLocationsLodgingGetGoogleUpdated` - Returns the Google updated Lodging of a specific location.
-* `MybusinesslodgingLocationsUpdateLodging` - Updates the Lodging of a specific location.
+* [MybusinesslodgingLocationsGetLodging](docs/locations/README.md#mybusinesslodginglocationsgetlodging) - Returns the Lodging of a specific location.
+* [MybusinesslodgingLocationsLodgingGetGoogleUpdated](docs/locations/README.md#mybusinesslodginglocationslodginggetgoogleupdated) - Returns the Google updated Lodging of a specific location.
+* [MybusinesslodgingLocationsUpdateLodging](docs/locations/README.md#mybusinesslodginglocationsupdatelodging) - Updates the Lodging of a specific location.
 <!-- End SDK Available Operations -->
 
 ### Maturity

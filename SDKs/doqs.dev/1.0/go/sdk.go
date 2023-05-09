@@ -26,6 +26,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 type SDK struct {
 	Templates *templates
 
@@ -115,7 +130,7 @@ func New(opts ...SDKOption) *SDK {
 // CreateTemplateDesignerTemplatesPost - Create Template
 func (s *SDK) CreateTemplateDesignerTemplatesPost(ctx context.Context, request shared.CreateOrUpdateTemplateRequest) (*operations.CreateTemplateDesignerTemplatesPostResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates/"
+	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -181,7 +196,10 @@ func (s *SDK) CreateTemplateDesignerTemplatesPost(ctx context.Context, request s
 // DeleteDesignerTemplatesIDDelete - Delete
 func (s *SDK) DeleteDesignerTemplatesIDDelete(ctx context.Context, request operations.DeleteDesignerTemplatesIDDeleteRequest) (*operations.DeleteDesignerTemplatesIDDeleteResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -237,7 +255,10 @@ func (s *SDK) DeleteDesignerTemplatesIDDelete(ctx context.Context, request opera
 // GeneratePdfDesignerTemplatesIDGeneratePost - Generate Pdf
 func (s *SDK) GeneratePdfDesignerTemplatesIDGeneratePost(ctx context.Context, request operations.GeneratePdfDesignerTemplatesIDGeneratePostRequest) (*operations.GeneratePdfDesignerTemplatesIDGeneratePostResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}/generate", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}/generate", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GeneratePDFPayload", "json")
 	if err != nil {
@@ -300,10 +321,69 @@ func (s *SDK) GeneratePdfDesignerTemplatesIDGeneratePost(ctx context.Context, re
 	return res, nil
 }
 
+// ListTemplatesDesignerTemplatesIDGet - List Templates
+func (s *SDK) ListTemplatesDesignerTemplatesIDGet(ctx context.Context, request operations.ListTemplatesDesignerTemplatesIDGetRequest) (*operations.ListTemplatesDesignerTemplatesIDGetResponse, error) {
+	baseURL := s._serverURL
+	url, err := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListTemplatesDesignerTemplatesIDGetResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ResponseOkDesignerTemplate
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResponseOkDesignerTemplate = out
+		}
+	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
+		fallthrough
+	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ResponseError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResponseError = out
+		}
+	}
+
+	return res, nil
+}
+
 // ListTemplatesDesignerTemplatesGet - List Templates
 func (s *SDK) ListTemplatesDesignerTemplatesGet(ctx context.Context, request operations.ListTemplatesDesignerTemplatesGetRequest) (*operations.ListTemplatesDesignerTemplatesGetResponse, error) {
 	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates/"
+	url := strings.TrimSuffix(baseURL, "/") + "/designer/templates"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -342,62 +422,6 @@ func (s *SDK) ListTemplatesDesignerTemplatesGet(ctx context.Context, request ope
 			}
 
 			res.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate = out
-		}
-	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
-		fallthrough
-	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ResponseError
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ResponseError = out
-		}
-	}
-
-	return res, nil
-}
-
-// ListTemplatesDesignerTemplatesIDGet - List Templates
-func (s *SDK) ListTemplatesDesignerTemplatesIDGet(ctx context.Context, request operations.ListTemplatesDesignerTemplatesIDGetRequest) (*operations.ListTemplatesDesignerTemplatesIDGetResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s._securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.ListTemplatesDesignerTemplatesIDGetResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ResponseOkDesignerTemplate
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ResponseOkDesignerTemplate = out
 		}
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
@@ -485,7 +509,10 @@ func (s *SDK) PreviewDesignerTemplatesPreviewPost(ctx context.Context, request s
 // UpdateTemplateDesignerTemplatesIDPut - Update Template
 func (s *SDK) UpdateTemplateDesignerTemplatesIDPut(ctx context.Context, request operations.UpdateTemplateDesignerTemplatesIDPutRequest) (*operations.UpdateTemplateDesignerTemplatesIDPutResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/designer/templates/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateOrUpdateTemplateRequest", "json")
 	if err != nil {

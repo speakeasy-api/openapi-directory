@@ -18,12 +18,16 @@ const (
 	CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnumPending   CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum = "pending"
 )
 
+func (e CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum) ToPointer() *CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum {
+	return &e
+}
+
 func (e *CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "available":
 		fallthrough
 	case "sold":
@@ -31,10 +35,10 @@ func (e *CancelReservedInstancesListingResultReservedInstancesListingsInstanceCo
 	case "cancelled":
 		fallthrough
 	case "pending":
-		*e = CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum(s)
+		*e = CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum: %v", v)
 	}
 }
 
@@ -51,17 +55,21 @@ const (
 	CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnumUsd CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum = "USD"
 )
 
+func (e CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum) ToPointer() *CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum {
+	return &e
+}
+
 func (e *CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum(s)
+		*e = CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsPriceSchedulesCurrencyCodeEnum: %v", v)
 	}
 }
 
@@ -83,12 +91,16 @@ const (
 	CancelReservedInstancesListingResultReservedInstancesListingsStatusEnumClosed    CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum = "closed"
 )
 
+func (e CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum) ToPointer() *CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum {
+	return &e
+}
+
 func (e *CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
@@ -96,10 +108,10 @@ func (e *CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum
 	case "cancelled":
 		fallthrough
 	case "closed":
-		*e = CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum(s)
+		*e = CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelReservedInstancesListingResultReservedInstancesListingsStatusEnum: %v", v)
 	}
 }
 

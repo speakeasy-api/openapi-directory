@@ -18,12 +18,16 @@ const (
 	CashPaymentLogActionEnumA CashPaymentLogActionEnum = "A"
 )
 
+func (e CashPaymentLogActionEnum) ToPointer() *CashPaymentLogActionEnum {
+	return &e
+}
+
 func (e *CashPaymentLogActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "C":
 		fallthrough
 	case "U":
@@ -33,10 +37,10 @@ func (e *CashPaymentLogActionEnum) UnmarshalJSON(data []byte) error {
 	case "F":
 		fallthrough
 	case "A":
-		*e = CashPaymentLogActionEnum(s)
+		*e = CashPaymentLogActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CashPaymentLogActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CashPaymentLogActionEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	CashPaymentLogPaymentMethodEnumOthr CashPaymentLogPaymentMethodEnum = "OTHR"
 )
 
+func (e CashPaymentLogPaymentMethodEnum) ToPointer() *CashPaymentLogPaymentMethodEnum {
+	return &e
+}
+
 func (e *CashPaymentLogPaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CASH":
 		fallthrough
 	case "CHCK":
@@ -90,10 +98,10 @@ func (e *CashPaymentLogPaymentMethodEnum) UnmarshalJSON(data []byte) error {
 	case "ONPT":
 		fallthrough
 	case "OTHR":
-		*e = CashPaymentLogPaymentMethodEnum(s)
+		*e = CashPaymentLogPaymentMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CashPaymentLogPaymentMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for CashPaymentLogPaymentMethodEnum: %v", v)
 	}
 }
 

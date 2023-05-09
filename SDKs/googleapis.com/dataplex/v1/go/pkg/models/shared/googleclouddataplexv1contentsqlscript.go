@@ -15,19 +15,23 @@ const (
 	GoogleCloudDataplexV1ContentSQLScriptEngineEnumSpark                  GoogleCloudDataplexV1ContentSQLScriptEngineEnum = "SPARK"
 )
 
+func (e GoogleCloudDataplexV1ContentSQLScriptEngineEnum) ToPointer() *GoogleCloudDataplexV1ContentSQLScriptEngineEnum {
+	return &e
+}
+
 func (e *GoogleCloudDataplexV1ContentSQLScriptEngineEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "QUERY_ENGINE_UNSPECIFIED":
 		fallthrough
 	case "SPARK":
-		*e = GoogleCloudDataplexV1ContentSQLScriptEngineEnum(s)
+		*e = GoogleCloudDataplexV1ContentSQLScriptEngineEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ContentSQLScriptEngineEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDataplexV1ContentSQLScriptEngineEnum: %v", v)
 	}
 }
 

@@ -4,6 +4,6 @@ package shared
 
 // AssetList - Lists the asset IDs of all assets.
 type AssetList struct {
-	// A list of asset IDs
+	// Required. A list of asset IDs
 	AssetIds []string `json:"assetIds,omitempty"`
 }

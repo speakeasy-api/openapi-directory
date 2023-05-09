@@ -13,36 +13,27 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/trashnothing.com/1.3/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
-    s := sdk.New(
-        sdk.WithSecurity(shared.Security{
-            Oauth2Code: sdk.String("Bearer YOUR_ACCESS_TOKEN_HERE"),
-        }),
-    )
-
-    req := operations.ContactModeratorsRequest{
-        RequestBody: operations.ContactModeratorsRequestBody{
-            Message: "corrupti",
-            Subject: "provident",
-        },
-        GroupID: "distinctio",
-    }
+    s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Groups.ContactModerators(ctx, req)
+    res, err := s.Groups.GetGroup(ctx, operations.GetGroupRequest{
+        GroupID: "corrupti",
+    }, operations.GetGroupSecurity{
+        APIKey: "YOUR_API_KEY_HERE",
+    })
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.Group != nil {
         // handle response
     }
 }
@@ -53,102 +44,26 @@ func main() {
 ## Available Resources and Operations
 
 
-### Groups
+### [Groups](docs/groups/README.md)
 
-* `ContactModerators` - Contact group moderators
-* `GetGroup` - Retrieve a group
-* `GetGroupsByIds` - Retrieve multiple groups
-* `JoinGroups` - Join groups
-* `LeaveGroup` - Leave a group
-* `SearchGroups` - Search groups
-* `SubmitAnswers` - Submit group answers
+* [GetGroup](docs/groups/README.md#getgroup) - Retrieve a group
+* [GetGroupsByIds](docs/groups/README.md#getgroupsbyids) - Retrieve multiple groups
+* [SearchGroups](docs/groups/README.md#searchgroups) - Search groups
 
-### Messages
+### [Posts](docs/posts/README.md)
 
-* `ArchiveAllConversations` - Archive all conversations
-* `ArchiveConversation` - Archive conversation
-* `BlockConversation` - Block conversation
-* `DeleteConversation` - Delete conversation
-* `GetConversationMessages` - List conversation messages
-* `GetConversations` - List conversations
-* `MarkAllConversationsRead` - Mark all conversations as read
-* `MarkConversationRead` - Mark conversation as read
-* `ReplyToConversation` - Reply to conversation
-* `ReportConversation` - Report conversation
-* `SearchConversations` - Search conversations
-* `UnarchiveConversation` - Unarchive conversation
-* `UnblockConversation` - Unblock conversation
+* [GetAllPosts](docs/posts/README.md#getallposts) - List all posts
+* [GetAllPostsChanges](docs/posts/README.md#getallpostschanges) - List all post changes
+* [GetPost](docs/posts/README.md#getpost) - Retrieve a post
+* [GetPostAndRelatedData](docs/posts/README.md#getpostandrelateddata) - Retrieve post display data
+* [GetPosts](docs/posts/README.md#getposts) - List posts
+* [GetPostsByIds](docs/posts/README.md#getpostsbyids) - Retrieve multiple posts
+* [SearchPosts](docs/posts/README.md#searchposts) - Search posts
 
-### Misc
+### [Users](docs/users/README.md)
 
-* `SendFeedback` - Send feedback
-
-### Photos
-
-* `DeletePhoto` - Delete a photo
-* `GetPhotosByIds` - Retrieve multiple photos
-* `RotatePhoto` - Rotate a photo
-* `UploadPhoto` - Create a photo
-
-### Posts
-
-* `BookmarkPost` - Bookmark a post
-* `DeleteBookmark` - Delete a post bookmark
-* `DeletePost` - Delete a post
-* `GetAllPosts` - List all posts
-* `GetAllPostsChanges` - List all post changes
-* `GetPost` - Retrieve a post
-* `GetPostAndRelatedData` - Retrieve post display data
-* `GetPosts` - List posts
-* `GetPostsByIds` - Retrieve multiple posts
-* `PromisePost` - Promise an offer post
-* `ReplyToPost` - Reply to a post
-* `ReportPost` - Report a post
-* `SatisfyPost` - Satisfy a post
-* `SearchPosts` - Search posts
-* `SharePost` - Share a post
-* `SubmitPost` - Submit a post
-* `UnpromisePost` - Unpromise an offer post
-* `UpdatePost` - Update a post
-* `WithdrawPost` - Withdraw a post
-
-### Stories
-
-* `GetStories` - List stories
-* `GetStory` - Retrieve a story
-* `LikeStory` - Like a story
-* `SubmitStory` - Submit a story
-* `UnlikeStory` - Unlike a story
-* `ViewedStory` - Record story viewed
-
-### Users
-
-* `ChangeEmail` - Change email address
-* `CreateAlert` - Create an email alert
-* `DeleteAlert` - Delete an email alert
-* `GetAlerts` - List current users' email alerts
-* `GetCurrentUser` - Retrieve current user
-* `GetCurrentUserGroups` - List current users' groups
-* `GetCurrentUserPosts` - List current users' posts
-* `GetPostLocations` - List current users' post locations
-* `GetProfileImageFile` - Retrieve a users' profile image
-* `GetProfileImages` - List current users' profile images
-* `GetUser` - Retrieve a user
-* `GetUserAndRelatedData` - Retrieve user display info
-* `GetUserGroupNotices` - List current users' group notices
-* `GetUserPosts` - List posts by a user
-* `RemoveUserFeedback` - Remove feedback on a user
-* `ReportUser` - Report a user
-* `ResendAccountVerificationEmail` - Resend account verification email
-* `SavePostLocation` - Save a post location for the current user
-* `SearchCurrentUserPosts` - Search current users' posts
-* `SearchUserPosts` - Search posts by a user
-* `SendPasswordResetEmail` - Send password reset email
-* `SetEmailNotBouncing` - Set users' email address as not bouncing
-* `SetProfileImage` - Set a profile image
-* `SubmitUserFeedback` - Submit feedback on a user
-* `UpdateCurrentUser` - Update current user
-* `UpdateLocation` - Update location
+* [GetUserPosts](docs/users/README.md#getuserposts) - List posts by a user
+* [SearchUserPosts](docs/users/README.md#searchuserposts) - Search posts by a user
 <!-- End SDK Available Operations -->
 
 ### Maturity

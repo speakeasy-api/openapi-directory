@@ -13,45 +13,43 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/adexchange
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.Adexchangebuyer2AccountsClientsCreateRequest{
-        DollarXgafv: "2",
-        Client: &shared.Client{
-            ClientAccountID: "provident",
-            ClientName: "distinctio",
-            EntityID: "quibusdam",
-            EntityName: "unde",
-            EntityType: "ENTITY_TYPE_UNCLASSIFIED",
-            PartnerClientID: "corrupti",
-            Role: "CLIENT_DEAL_APPROVER",
-            Status: "DISABLED",
-            VisibleToSeller: false,
-        },
-        AccessToken: "error",
-        AccountID: "deserunt",
-        Alt: "media",
-        Callback: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        OauthToken: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
     ctx := context.Background()
-    res, err := s.Accounts.Adexchangebuyer2AccountsClientsCreate(ctx, req, operations.Adexchangebuyer2AccountsClientsCreateSecurity{
+    res, err := s.Accounts.Adexchangebuyer2AccountsClientsCreate(ctx, operations.Adexchangebuyer2AccountsClientsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        Client: &shared.Client{
+            ClientAccountID: sdk.String("provident"),
+            ClientName: sdk.String("distinctio"),
+            EntityID: sdk.String("quibusdam"),
+            EntityName: sdk.String("unde"),
+            EntityType: shared.ClientEntityTypeEnumEntityTypeUnclassified.ToPointer(),
+            PartnerClientID: sdk.String("corrupti"),
+            Role: shared.ClientRoleEnumClientDealApprover.ToPointer(),
+            Status: shared.ClientStatusEnumDisabled.ToPointer(),
+            VisibleToSeller: sdk.Bool(false),
+        },
+        AccessToken: sdk.String("error"),
+        AccountID: "deserunt",
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("iure"),
+        Fields: sdk.String("magnam"),
+        Key: sdk.String("debitis"),
+        OauthToken: sdk.String("ipsa"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
+        UploadType: sdk.String("tempora"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.Adexchangebuyer2AccountsClientsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -70,61 +68,61 @@ func main() {
 ## Available Resources and Operations
 
 
-### Accounts
+### [Accounts](docs/accounts/README.md)
 
-* `Adexchangebuyer2AccountsClientsCreate` - Creates a new client buyer.
-* `Adexchangebuyer2AccountsClientsGet` - Gets a client buyer with a given client account ID.
-* `Adexchangebuyer2AccountsClientsInvitationsCreate` - Creates and sends out an email invitation to access an Ad Exchange client buyer account.
-* `Adexchangebuyer2AccountsClientsInvitationsGet` - Retrieves an existing client user invitation.
-* `Adexchangebuyer2AccountsClientsInvitationsList` - Lists all the client users invitations for a client with a given account ID.
-* `Adexchangebuyer2AccountsClientsList` - Lists all the clients for the current sponsor buyer.
-* `Adexchangebuyer2AccountsClientsUpdate` - Updates an existing client buyer.
-* `Adexchangebuyer2AccountsClientsUsersGet` - Retrieves an existing client user.
-* `Adexchangebuyer2AccountsClientsUsersList` - Lists all the known client users for a specified sponsor buyer account ID.
-* `Adexchangebuyer2AccountsClientsUsersUpdate` - Updates an existing client user. Only the user status can be changed on update.
-* `Adexchangebuyer2AccountsCreativesCreate` - Creates a creative.
-* `Adexchangebuyer2AccountsCreativesDealAssociationsAdd` - Associate an existing deal with a creative.
-* `Adexchangebuyer2AccountsCreativesDealAssociationsList` - List all creative-deal associations.
-* `Adexchangebuyer2AccountsCreativesDealAssociationsRemove` - Remove the association between a deal and a creative.
-* `Adexchangebuyer2AccountsCreativesGet` - Gets a creative.
-* `Adexchangebuyer2AccountsCreativesList` - Lists creatives.
-* `Adexchangebuyer2AccountsCreativesStopWatching` - Stops watching a creative. Will stop push notifications being sent to the topics when the creative changes status.
-* `Adexchangebuyer2AccountsCreativesUpdate` - Updates a creative.
-* `Adexchangebuyer2AccountsCreativesWatch` - Watches a creative. Will result in push notifications being sent to the topic when the creative changes status.
-* `Adexchangebuyer2AccountsFinalizedProposalsList` - List finalized proposals, regardless if a proposal is being renegotiated. A filter expression (PQL query) may be specified to filter the results. The notes will not be returned.
-* `Adexchangebuyer2AccountsFinalizedProposalsPause` - Update given deals to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.pause endpoint. It is a no-op to pause already-paused deals. It is an error to call PauseProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
-* `Adexchangebuyer2AccountsFinalizedProposalsResume` - Update given deals to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.resume endpoint. It is a no-op to resume running deals or deals paused by the other party. It is an error to call ResumeProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
-* `Adexchangebuyer2AccountsProductsGet` - Gets the requested product by ID.
-* `Adexchangebuyer2AccountsProductsList` - List all products visible to the buyer (optionally filtered by the specified PQL query).
-* `Adexchangebuyer2AccountsProposalsAccept` - Mark the proposal as accepted at the given revision number. If the number does not match the server's revision number an `ABORTED` error message will be returned. This call updates the proposal_state from `PROPOSED` to `BUYER_ACCEPTED`, or from `SELLER_ACCEPTED` to `FINALIZED`. Upon calling this endpoint, the buyer implicitly agrees to the terms and conditions optionally set within the proposal by the publisher.
-* `Adexchangebuyer2AccountsProposalsAddNote` - Create a new note and attach it to the proposal. The note is assigned a unique ID by the server. The proposal revision number will not increase when associated with a new note.
-* `Adexchangebuyer2AccountsProposalsCancelNegotiation` - Cancel an ongoing negotiation on a proposal. This does not cancel or end serving for the deals if the proposal has been finalized, but only cancels a negotiation unilaterally.
-* `Adexchangebuyer2AccountsProposalsCompleteSetup` - You can opt-in to manually update proposals to indicate that setup is complete. By default, proposal setup is automatically completed after their deals are finalized. Contact your Technical Account Manager to opt in. Buyers can call this method when the proposal has been finalized, and all the required creatives have been uploaded using the Creatives API. This call updates the `is_setup_completed` field on the deals in the proposal, and notifies the seller. The server then advances the revision number of the most recent proposal. To mark an individual deal as ready to serve, call `buyers.finalizedDeals.setReadyToServe` in the Marketplace API.
-* `Adexchangebuyer2AccountsProposalsCreate` - Create the given proposal. Each created proposal and any deals it contains are assigned a unique ID by the server.
-* `Adexchangebuyer2AccountsProposalsGet` - Gets a proposal given its ID. The proposal is returned at its head revision.
-* `Adexchangebuyer2AccountsProposalsList` - List proposals. A filter expression (PQL query) may be specified to filter the results. To retrieve all finalized proposals, regardless if a proposal is being renegotiated, see the FinalizedProposals resource. Note that Bidder/ChildSeat relationships differ from the usual behavior. A Bidder account can only see its child seats' proposals by specifying the ChildSeat's accountId in the request path.
-* `Adexchangebuyer2AccountsProposalsPause` - Update the given proposal to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the proposal. It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a proposal that is not finalized or renegotiating.
-* `Adexchangebuyer2AccountsProposalsResume` - Update the given proposal to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the proposal. Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller also resumes. It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for a proposal that is not finalized or renegotiating.
-* `Adexchangebuyer2AccountsProposalsUpdate` - Update the given proposal at the client known revision number. If the server revision has advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be returned. Only the buyer-modifiable fields of the proposal will be updated. Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal with a `deal_id` not present at head.
-* `Adexchangebuyer2AccountsPublisherProfilesGet` - Gets the requested publisher profile by id.
-* `Adexchangebuyer2AccountsPublisherProfilesList` - List all publisher profiles visible to the buyer
+* [Adexchangebuyer2AccountsClientsCreate](docs/accounts/README.md#adexchangebuyer2accountsclientscreate) - Creates a new client buyer.
+* [Adexchangebuyer2AccountsClientsGet](docs/accounts/README.md#adexchangebuyer2accountsclientsget) - Gets a client buyer with a given client account ID.
+* [Adexchangebuyer2AccountsClientsInvitationsCreate](docs/accounts/README.md#adexchangebuyer2accountsclientsinvitationscreate) - Creates and sends out an email invitation to access an Ad Exchange client buyer account.
+* [Adexchangebuyer2AccountsClientsInvitationsGet](docs/accounts/README.md#adexchangebuyer2accountsclientsinvitationsget) - Retrieves an existing client user invitation.
+* [Adexchangebuyer2AccountsClientsInvitationsList](docs/accounts/README.md#adexchangebuyer2accountsclientsinvitationslist) - Lists all the client users invitations for a client with a given account ID.
+* [Adexchangebuyer2AccountsClientsList](docs/accounts/README.md#adexchangebuyer2accountsclientslist) - Lists all the clients for the current sponsor buyer.
+* [Adexchangebuyer2AccountsClientsUpdate](docs/accounts/README.md#adexchangebuyer2accountsclientsupdate) - Updates an existing client buyer.
+* [Adexchangebuyer2AccountsClientsUsersGet](docs/accounts/README.md#adexchangebuyer2accountsclientsusersget) - Retrieves an existing client user.
+* [Adexchangebuyer2AccountsClientsUsersList](docs/accounts/README.md#adexchangebuyer2accountsclientsuserslist) - Lists all the known client users for a specified sponsor buyer account ID.
+* [Adexchangebuyer2AccountsClientsUsersUpdate](docs/accounts/README.md#adexchangebuyer2accountsclientsusersupdate) - Updates an existing client user. Only the user status can be changed on update.
+* [Adexchangebuyer2AccountsCreativesCreate](docs/accounts/README.md#adexchangebuyer2accountscreativescreate) - Creates a creative.
+* [Adexchangebuyer2AccountsCreativesDealAssociationsAdd](docs/accounts/README.md#adexchangebuyer2accountscreativesdealassociationsadd) - Associate an existing deal with a creative.
+* [Adexchangebuyer2AccountsCreativesDealAssociationsList](docs/accounts/README.md#adexchangebuyer2accountscreativesdealassociationslist) - List all creative-deal associations.
+* [Adexchangebuyer2AccountsCreativesDealAssociationsRemove](docs/accounts/README.md#adexchangebuyer2accountscreativesdealassociationsremove) - Remove the association between a deal and a creative.
+* [Adexchangebuyer2AccountsCreativesGet](docs/accounts/README.md#adexchangebuyer2accountscreativesget) - Gets a creative.
+* [Adexchangebuyer2AccountsCreativesList](docs/accounts/README.md#adexchangebuyer2accountscreativeslist) - Lists creatives.
+* [Adexchangebuyer2AccountsCreativesStopWatching](docs/accounts/README.md#adexchangebuyer2accountscreativesstopwatching) - Stops watching a creative. Will stop push notifications being sent to the topics when the creative changes status.
+* [Adexchangebuyer2AccountsCreativesUpdate](docs/accounts/README.md#adexchangebuyer2accountscreativesupdate) - Updates a creative.
+* [Adexchangebuyer2AccountsCreativesWatch](docs/accounts/README.md#adexchangebuyer2accountscreativeswatch) - Watches a creative. Will result in push notifications being sent to the topic when the creative changes status.
+* [Adexchangebuyer2AccountsFinalizedProposalsList](docs/accounts/README.md#adexchangebuyer2accountsfinalizedproposalslist) - List finalized proposals, regardless if a proposal is being renegotiated. A filter expression (PQL query) may be specified to filter the results. The notes will not be returned.
+* [Adexchangebuyer2AccountsFinalizedProposalsPause](docs/accounts/README.md#adexchangebuyer2accountsfinalizedproposalspause) - Update given deals to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.pause endpoint. It is a no-op to pause already-paused deals. It is an error to call PauseProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
+* [Adexchangebuyer2AccountsFinalizedProposalsResume](docs/accounts/README.md#adexchangebuyer2accountsfinalizedproposalsresume) - Update given deals to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all listed deals in the request. Currently, this method only applies to PG and PD deals. For PA deals, call accounts.proposals.resume endpoint. It is a no-op to resume running deals or deals paused by the other party. It is an error to call ResumeProposalDeals for deals which are not part of the proposal of proposal_id or which are not finalized or renegotiating.
+* [Adexchangebuyer2AccountsProductsGet](docs/accounts/README.md#adexchangebuyer2accountsproductsget) - Gets the requested product by ID.
+* [Adexchangebuyer2AccountsProductsList](docs/accounts/README.md#adexchangebuyer2accountsproductslist) - List all products visible to the buyer (optionally filtered by the specified PQL query).
+* [Adexchangebuyer2AccountsProposalsAccept](docs/accounts/README.md#adexchangebuyer2accountsproposalsaccept) - Mark the proposal as accepted at the given revision number. If the number does not match the server's revision number an `ABORTED` error message will be returned. This call updates the proposal_state from `PROPOSED` to `BUYER_ACCEPTED`, or from `SELLER_ACCEPTED` to `FINALIZED`. Upon calling this endpoint, the buyer implicitly agrees to the terms and conditions optionally set within the proposal by the publisher.
+* [Adexchangebuyer2AccountsProposalsAddNote](docs/accounts/README.md#adexchangebuyer2accountsproposalsaddnote) - Create a new note and attach it to the proposal. The note is assigned a unique ID by the server. The proposal revision number will not increase when associated with a new note.
+* [Adexchangebuyer2AccountsProposalsCancelNegotiation](docs/accounts/README.md#adexchangebuyer2accountsproposalscancelnegotiation) - Cancel an ongoing negotiation on a proposal. This does not cancel or end serving for the deals if the proposal has been finalized, but only cancels a negotiation unilaterally.
+* [Adexchangebuyer2AccountsProposalsCompleteSetup](docs/accounts/README.md#adexchangebuyer2accountsproposalscompletesetup) - You can opt-in to manually update proposals to indicate that setup is complete. By default, proposal setup is automatically completed after their deals are finalized. Contact your Technical Account Manager to opt in. Buyers can call this method when the proposal has been finalized, and all the required creatives have been uploaded using the Creatives API. This call updates the `is_setup_completed` field on the deals in the proposal, and notifies the seller. The server then advances the revision number of the most recent proposal. To mark an individual deal as ready to serve, call `buyers.finalizedDeals.setReadyToServe` in the Marketplace API.
+* [Adexchangebuyer2AccountsProposalsCreate](docs/accounts/README.md#adexchangebuyer2accountsproposalscreate) - Create the given proposal. Each created proposal and any deals it contains are assigned a unique ID by the server.
+* [Adexchangebuyer2AccountsProposalsGet](docs/accounts/README.md#adexchangebuyer2accountsproposalsget) - Gets a proposal given its ID. The proposal is returned at its head revision.
+* [Adexchangebuyer2AccountsProposalsList](docs/accounts/README.md#adexchangebuyer2accountsproposalslist) - List proposals. A filter expression (PQL query) may be specified to filter the results. To retrieve all finalized proposals, regardless if a proposal is being renegotiated, see the FinalizedProposals resource. Note that Bidder/ChildSeat relationships differ from the usual behavior. A Bidder account can only see its child seats' proposals by specifying the ChildSeat's accountId in the request path.
+* [Adexchangebuyer2AccountsProposalsPause](docs/accounts/README.md#adexchangebuyer2accountsproposalspause) - Update the given proposal to pause serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to true for all deals in the proposal. It is a no-op to pause an already-paused proposal. It is an error to call PauseProposal for a proposal that is not finalized or renegotiating.
+* [Adexchangebuyer2AccountsProposalsResume](docs/accounts/README.md#adexchangebuyer2accountsproposalsresume) - Update the given proposal to resume serving. This method will set the `DealServingMetadata.DealPauseStatus.has_buyer_paused` bit to false for all deals in the proposal. Note that if the `has_seller_paused` bit is also set, serving will not resume until the seller also resumes. It is a no-op to resume an already-running proposal. It is an error to call ResumeProposal for a proposal that is not finalized or renegotiating.
+* [Adexchangebuyer2AccountsProposalsUpdate](docs/accounts/README.md#adexchangebuyer2accountsproposalsupdate) - Update the given proposal at the client known revision number. If the server revision has advanced since the passed-in `proposal.proposal_revision`, an `ABORTED` error message will be returned. Only the buyer-modifiable fields of the proposal will be updated. Note that the deals in the proposal will be updated to match the passed-in copy. If a passed-in deal does not have a `deal_id`, the server will assign a new unique ID and create the deal. If passed-in deal has a `deal_id`, it will be updated to match the passed-in copy. Any existing deals not present in the passed-in proposal will be deleted. It is an error to pass in a deal with a `deal_id` not present at head.
+* [Adexchangebuyer2AccountsPublisherProfilesGet](docs/accounts/README.md#adexchangebuyer2accountspublisherprofilesget) - Gets the requested publisher profile by id.
+* [Adexchangebuyer2AccountsPublisherProfilesList](docs/accounts/README.md#adexchangebuyer2accountspublisherprofileslist) - List all publisher profiles visible to the buyer
 
-### Bidders
+### [Bidders](docs/bidders/README.md)
 
-* `Adexchangebuyer2BiddersFilterSetsBidMetricsList` - Lists all metrics that are measured in terms of number of bids.
-* `Adexchangebuyer2BiddersFilterSetsBidResponseErrorsList` - List all errors that occurred in bid responses, with the number of bid responses affected for each reason.
-* `Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList` - List all reasons for which bid responses were considered to have no applicable bids, with the number of bid responses affected for each reason.
-* `Adexchangebuyer2BiddersFilterSetsCreate` - Creates the specified filter set for the account with the given account ID.
-* `Adexchangebuyer2BiddersFilterSetsDelete` - Deletes the requested filter set from the account with the given account ID.
-* `Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList` - List all reasons that caused a bid request not to be sent for an impression, with the number of bid requests not sent for each reason.
-* `Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList` - List all creatives associated with a specific reason for which bids were filtered, with the number of bids filtered for each creative.
-* `Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList` - List all details associated with a specific reason for which bids were filtered, with the number of bids filtered for each detail.
-* `Adexchangebuyer2BiddersFilterSetsFilteredBidsList` - List all reasons for which bids were filtered, with the number of bids filtered for each reason.
-* `Adexchangebuyer2BiddersFilterSetsGet` - Retrieves the requested filter set for the account with the given account ID.
-* `Adexchangebuyer2BiddersFilterSetsImpressionMetricsList` - Lists all metrics that are measured in terms of number of impressions.
-* `Adexchangebuyer2BiddersFilterSetsList` - Lists all filter sets for the account with the given account ID.
-* `Adexchangebuyer2BiddersFilterSetsLosingBidsList` - List all reasons for which bids lost in the auction, with the number of bids that lost for each reason.
-* `Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList` - List all reasons for which winning bids were not billable, with the number of bids not billed for each reason.
+* [Adexchangebuyer2BiddersFilterSetsBidMetricsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsbidmetricslist) - Lists all metrics that are measured in terms of number of bids.
+* [Adexchangebuyer2BiddersFilterSetsBidResponseErrorsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsbidresponseerrorslist) - List all errors that occurred in bid responses, with the number of bid responses affected for each reason.
+* [Adexchangebuyer2BiddersFilterSetsBidResponsesWithoutBidsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsbidresponseswithoutbidslist) - List all reasons for which bid responses were considered to have no applicable bids, with the number of bid responses affected for each reason.
+* [Adexchangebuyer2BiddersFilterSetsCreate](docs/bidders/README.md#adexchangebuyer2biddersfiltersetscreate) - Creates the specified filter set for the account with the given account ID.
+* [Adexchangebuyer2BiddersFilterSetsDelete](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsdelete) - Deletes the requested filter set from the account with the given account ID.
+* [Adexchangebuyer2BiddersFilterSetsFilteredBidRequestsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsfilteredbidrequestslist) - List all reasons that caused a bid request not to be sent for an impression, with the number of bid requests not sent for each reason.
+* [Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsfilteredbidscreativeslist) - List all creatives associated with a specific reason for which bids were filtered, with the number of bids filtered for each creative.
+* [Adexchangebuyer2BiddersFilterSetsFilteredBidsDetailsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsfilteredbidsdetailslist) - List all details associated with a specific reason for which bids were filtered, with the number of bids filtered for each detail.
+* [Adexchangebuyer2BiddersFilterSetsFilteredBidsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsfilteredbidslist) - List all reasons for which bids were filtered, with the number of bids filtered for each reason.
+* [Adexchangebuyer2BiddersFilterSetsGet](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsget) - Retrieves the requested filter set for the account with the given account ID.
+* [Adexchangebuyer2BiddersFilterSetsImpressionMetricsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsimpressionmetricslist) - Lists all metrics that are measured in terms of number of impressions.
+* [Adexchangebuyer2BiddersFilterSetsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetslist) - Lists all filter sets for the account with the given account ID.
+* [Adexchangebuyer2BiddersFilterSetsLosingBidsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetslosingbidslist) - List all reasons for which bids lost in the auction, with the number of bids that lost for each reason.
+* [Adexchangebuyer2BiddersFilterSetsNonBillableWinningBidsList](docs/bidders/README.md#adexchangebuyer2biddersfiltersetsnonbillablewinningbidslist) - List all reasons for which winning bids were not billable, with the number of bids not billed for each reason.
 <!-- End SDK Available Operations -->
 
 ### Maturity

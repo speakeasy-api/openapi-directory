@@ -15,17 +15,21 @@ const (
 	GETUpdateServiceAccessPoliciesActionEnumUpdateServiceAccessPolicies GETUpdateServiceAccessPoliciesActionEnum = "UpdateServiceAccessPolicies"
 )
 
+func (e GETUpdateServiceAccessPoliciesActionEnum) ToPointer() *GETUpdateServiceAccessPoliciesActionEnum {
+	return &e
+}
+
 func (e *GETUpdateServiceAccessPoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateServiceAccessPolicies":
-		*e = GETUpdateServiceAccessPoliciesActionEnum(s)
+		*e = GETUpdateServiceAccessPoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateServiceAccessPoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateServiceAccessPoliciesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETUpdateServiceAccessPoliciesVersionEnumTwoThousandAndThirteen0101 GETUpdateServiceAccessPoliciesVersionEnum = "2013-01-01"
 )
 
+func (e GETUpdateServiceAccessPoliciesVersionEnum) ToPointer() *GETUpdateServiceAccessPoliciesVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateServiceAccessPoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2013-01-01":
-		*e = GETUpdateServiceAccessPoliciesVersionEnum(s)
+		*e = GETUpdateServiceAccessPoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateServiceAccessPoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateServiceAccessPoliciesVersionEnum: %v", v)
 	}
 }
 

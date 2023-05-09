@@ -2,7 +2,7 @@
 
 package shared
 
-// EojDataSourceConfigInput - <p/>
+// EojDataSourceConfigInput - Union representing different data sources to be used as input for an Earth Observation job.
 type EojDataSourceConfigInput struct {
 	S3Data *S3DataInput `json:"S3Data,omitempty"`
 }

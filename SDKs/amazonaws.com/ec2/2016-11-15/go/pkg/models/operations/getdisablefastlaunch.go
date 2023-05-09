@@ -15,17 +15,21 @@ const (
 	GETDisableFastLaunchActionEnumDisableFastLaunch GETDisableFastLaunchActionEnum = "DisableFastLaunch"
 )
 
+func (e GETDisableFastLaunchActionEnum) ToPointer() *GETDisableFastLaunchActionEnum {
+	return &e
+}
+
 func (e *GETDisableFastLaunchActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableFastLaunch":
-		*e = GETDisableFastLaunchActionEnum(s)
+		*e = GETDisableFastLaunchActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableFastLaunchActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableFastLaunchActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDisableFastLaunchVersionEnumTwoThousandAndSixteen1115 GETDisableFastLaunchVersionEnum = "2016-11-15"
 )
 
+func (e GETDisableFastLaunchVersionEnum) ToPointer() *GETDisableFastLaunchVersionEnum {
+	return &e
+}
+
 func (e *GETDisableFastLaunchVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDisableFastLaunchVersionEnum(s)
+		*e = GETDisableFastLaunchVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDisableFastLaunchVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDisableFastLaunchVersionEnum: %v", v)
 	}
 }
 

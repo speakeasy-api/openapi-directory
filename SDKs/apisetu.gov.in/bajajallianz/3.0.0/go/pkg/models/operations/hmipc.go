@@ -28,17 +28,21 @@ const (
 	HmipcRequestBodyFormatEnumPdf HmipcRequestBodyFormatEnum = "pdf"
 )
 
+func (e HmipcRequestBodyFormatEnum) ToPointer() *HmipcRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *HmipcRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = HmipcRequestBodyFormatEnum(s)
+		*e = HmipcRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HmipcRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for HmipcRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Hmipc504ApplicationJSONErrorEnumGatewayTimeout Hmipc504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Hmipc504ApplicationJSONErrorEnum) ToPointer() *Hmipc504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Hmipc504ApplicationJSONErrorEnum(s)
+		*e = Hmipc504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Hmipc504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Hmipc504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Hmipc504ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Hmipc504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Hmipc503ApplicationJSONErrorEnumServiceUnavailable Hmipc503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Hmipc503ApplicationJSONErrorEnum) ToPointer() *Hmipc503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Hmipc503ApplicationJSONErrorEnum(s)
+		*e = Hmipc503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Hmipc503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Hmipc503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Hmipc503ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Hmipc503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Hmipc502ApplicationJSONErrorEnumBadGatewy Hmipc502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Hmipc502ApplicationJSONErrorEnum) ToPointer() *Hmipc502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Hmipc502ApplicationJSONErrorEnum(s)
+		*e = Hmipc502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Hmipc502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Hmipc502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Hmipc502ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Hmipc502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Hmipc500ApplicationJSONErrorEnumInternalServerError Hmipc500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Hmipc500ApplicationJSONErrorEnum) ToPointer() *Hmipc500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Hmipc500ApplicationJSONErrorEnum(s)
+		*e = Hmipc500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Hmipc500ApplicationJSONErrorDescriptionEnumInternalServerError Hmipc500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Hmipc500ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Hmipc500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Hmipc404ApplicationJSONErrorEnumURLNotFound    Hmipc404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Hmipc404ApplicationJSONErrorEnum) ToPointer() *Hmipc404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Hmipc404ApplicationJSONErrorEnum(s)
+		*e = Hmipc404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Hmipc404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Hmipc404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Hmipc404ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Hmipc404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Hmipc401ApplicationJSONErrorEnumInvalidAuthorization  Hmipc401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Hmipc401ApplicationJSONErrorEnum) ToPointer() *Hmipc401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Hmipc401ApplicationJSONErrorEnum(s)
+		*e = Hmipc401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Hmipc401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Hmipc401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Hmipc401ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Hmipc401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Hmipc400ApplicationJSONErrorEnumInvalidConsentid Hmipc400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Hmipc400ApplicationJSONErrorEnum) ToPointer() *Hmipc400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Hmipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Hmipc400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Hmipc400ApplicationJSONErrorEnum(s)
+		*e = Hmipc400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Hmipc400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Hmipc400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Hmipc400ApplicationJSONErrorDescriptionEnum) ToPointer() *Hmipc400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Hmipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Hmipc400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Hmipc400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Hmipc400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Hmipc400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Hmipc400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

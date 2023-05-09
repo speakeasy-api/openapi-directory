@@ -19,12 +19,16 @@ const (
 	ActionEnumDomainSmartCardSignin        ActionEnum = "DOMAIN_SMART_CARD_SIGNIN"
 )
 
+func (e ActionEnum) ToPointer() *ActionEnum {
+	return &e
+}
+
 func (e *ActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CLIPBOARD_COPY_FROM_LOCAL_DEVICE":
 		fallthrough
 	case "CLIPBOARD_COPY_TO_LOCAL_DEVICE":
@@ -38,9 +42,9 @@ func (e *ActionEnum) UnmarshalJSON(data []byte) error {
 	case "DOMAIN_PASSWORD_SIGNIN":
 		fallthrough
 	case "DOMAIN_SMART_CARD_SIGNIN":
-		*e = ActionEnum(s)
+		*e = ActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionEnum: %v", v)
 	}
 }

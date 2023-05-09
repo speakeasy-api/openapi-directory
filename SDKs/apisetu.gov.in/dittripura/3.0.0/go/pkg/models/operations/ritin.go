@@ -28,17 +28,21 @@ const (
 	RitinRequestBodyFormatEnumPdf RitinRequestBodyFormatEnum = "pdf"
 )
 
+func (e RitinRequestBodyFormatEnum) ToPointer() *RitinRequestBodyFormatEnum {
+	return &e
+}
+
 func (e *RitinRequestBodyFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pdf":
-		*e = RitinRequestBodyFormatEnum(s)
+		*e = RitinRequestBodyFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RitinRequestBodyFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for RitinRequestBodyFormatEnum: %v", v)
 	}
 }
 
@@ -58,17 +62,21 @@ const (
 	Ritin504ApplicationJSONErrorEnumGatewayTimeout Ritin504ApplicationJSONErrorEnum = "gateway_timeout"
 )
 
+func (e Ritin504ApplicationJSONErrorEnum) ToPointer() *Ritin504ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin504ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gateway_timeout":
-		*e = Ritin504ApplicationJSONErrorEnum(s)
+		*e = Ritin504ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin504ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin504ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -78,17 +86,21 @@ const (
 	Ritin504ApplicationJSONErrorDescriptionEnumPublisherServiceDidNotRespondInTime Ritin504ApplicationJSONErrorDescriptionEnum = "Publisher service did not respond in time"
 )
 
+func (e Ritin504ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin504ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin504ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service did not respond in time":
-		*e = Ritin504ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin504ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin504ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin504ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -104,17 +116,21 @@ const (
 	Ritin503ApplicationJSONErrorEnumServiceUnavailable Ritin503ApplicationJSONErrorEnum = "service_unavailable"
 )
 
+func (e Ritin503ApplicationJSONErrorEnum) ToPointer() *Ritin503ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin503ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "service_unavailable":
-		*e = Ritin503ApplicationJSONErrorEnum(s)
+		*e = Ritin503ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin503ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin503ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -124,17 +140,21 @@ const (
 	Ritin503ApplicationJSONErrorDescriptionEnumPublisherServiceIsTemporarilyUnavailable Ritin503ApplicationJSONErrorDescriptionEnum = "Publisher service is temporarily unavailable"
 )
 
+func (e Ritin503ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin503ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin503ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service is temporarily unavailable":
-		*e = Ritin503ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin503ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin503ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin503ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -150,17 +170,21 @@ const (
 	Ritin502ApplicationJSONErrorEnumBadGatewy Ritin502ApplicationJSONErrorEnum = "bad_gatewy"
 )
 
+func (e Ritin502ApplicationJSONErrorEnum) ToPointer() *Ritin502ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin502ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "bad_gatewy":
-		*e = Ritin502ApplicationJSONErrorEnum(s)
+		*e = Ritin502ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin502ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin502ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -170,17 +194,21 @@ const (
 	Ritin502ApplicationJSONErrorDescriptionEnumPublisherServiceReturnedAnInvalidResponse Ritin502ApplicationJSONErrorDescriptionEnum = "Publisher service returned an invalid response"
 )
 
+func (e Ritin502ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin502ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin502ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Publisher service returned an invalid response":
-		*e = Ritin502ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin502ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin502ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin502ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -196,17 +224,21 @@ const (
 	Ritin500ApplicationJSONErrorEnumInternalServerError Ritin500ApplicationJSONErrorEnum = "internal_server_error"
 )
 
+func (e Ritin500ApplicationJSONErrorEnum) ToPointer() *Ritin500ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin500ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = Ritin500ApplicationJSONErrorEnum(s)
+		*e = Ritin500ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin500ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin500ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -216,17 +248,21 @@ const (
 	Ritin500ApplicationJSONErrorDescriptionEnumInternalServerError Ritin500ApplicationJSONErrorDescriptionEnum = "Internal server error"
 )
 
+func (e Ritin500ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin500ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin500ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Internal server error":
-		*e = Ritin500ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin500ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin500ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin500ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -243,19 +279,23 @@ const (
 	Ritin404ApplicationJSONErrorEnumURLNotFound    Ritin404ApplicationJSONErrorEnum = "url_not_found"
 )
 
+func (e Ritin404ApplicationJSONErrorEnum) ToPointer() *Ritin404ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin404ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "record_not_found":
 		fallthrough
 	case "url_not_found":
-		*e = Ritin404ApplicationJSONErrorEnum(s)
+		*e = Ritin404ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin404ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin404ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -266,19 +306,23 @@ const (
 	Ritin404ApplicationJSONErrorDescriptionEnumYourAPIURLOrPathIsIncorrect Ritin404ApplicationJSONErrorDescriptionEnum = "Your API url or path is incorrect"
 )
 
+func (e Ritin404ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin404ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin404ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "No record found":
 		fallthrough
 	case "Your API url or path is incorrect":
-		*e = Ritin404ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin404ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin404ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin404ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -295,19 +339,23 @@ const (
 	Ritin401ApplicationJSONErrorEnumInvalidAuthorization  Ritin401ApplicationJSONErrorEnum = "invalid_authorization"
 )
 
+func (e Ritin401ApplicationJSONErrorEnum) ToPointer() *Ritin401ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin401ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_authentication":
 		fallthrough
 	case "invalid_authorization":
-		*e = Ritin401ApplicationJSONErrorEnum(s)
+		*e = Ritin401ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin401ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin401ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -318,19 +366,23 @@ const (
 	Ritin401ApplicationJSONErrorDescriptionEnumYouAreNotAuthorizedToUseThisAPI Ritin401ApplicationJSONErrorDescriptionEnum = "You are not authorized to use this API"
 )
 
+func (e Ritin401ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin401ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin401ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Authentication failed":
 		fallthrough
 	case "You are not authorized to use this API":
-		*e = Ritin401ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin401ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin401ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin401ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 
@@ -350,12 +402,16 @@ const (
 	Ritin400ApplicationJSONErrorEnumInvalidConsentid Ritin400ApplicationJSONErrorEnum = "invalid_consentid"
 )
 
+func (e Ritin400ApplicationJSONErrorEnum) ToPointer() *Ritin400ApplicationJSONErrorEnum {
+	return &e
+}
+
 func (e *Ritin400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing_parameter":
 		fallthrough
 	case "invalid_parameter":
@@ -365,10 +421,10 @@ func (e *Ritin400ApplicationJSONErrorEnum) UnmarshalJSON(data []byte) error {
 	case "invalid_txnid":
 		fallthrough
 	case "invalid_consentid":
-		*e = Ritin400ApplicationJSONErrorEnum(s)
+		*e = Ritin400ApplicationJSONErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin400ApplicationJSONErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin400ApplicationJSONErrorEnum: %v", v)
 	}
 }
 
@@ -382,12 +438,16 @@ const (
 	Ritin400ApplicationJSONErrorDescriptionEnumTheConsentIDParameterMustBeInUUIDFormat Ritin400ApplicationJSONErrorDescriptionEnum = "The consentId parameter must be in UUID format"
 )
 
+func (e Ritin400ApplicationJSONErrorDescriptionEnum) ToPointer() *Ritin400ApplicationJSONErrorDescriptionEnum {
+	return &e
+}
+
 func (e *Ritin400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Please provide all mandatory parameters":
 		fallthrough
 	case "Bad request":
@@ -397,10 +457,10 @@ func (e *Ritin400ApplicationJSONErrorDescriptionEnum) UnmarshalJSON(data []byte)
 	case "The txnId parameter must be in UUID format":
 		fallthrough
 	case "The consentId parameter must be in UUID format":
-		*e = Ritin400ApplicationJSONErrorDescriptionEnum(s)
+		*e = Ritin400ApplicationJSONErrorDescriptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Ritin400ApplicationJSONErrorDescriptionEnum: %s", s)
+		return fmt.Errorf("invalid value for Ritin400ApplicationJSONErrorDescriptionEnum: %v", v)
 	}
 }
 

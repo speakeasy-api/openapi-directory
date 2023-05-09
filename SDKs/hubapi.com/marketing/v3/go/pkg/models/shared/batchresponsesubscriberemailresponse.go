@@ -17,12 +17,16 @@ const (
 	BatchResponseSubscriberEmailResponseStatusEnumComplete   BatchResponseSubscriberEmailResponseStatusEnum = "COMPLETE"
 )
 
+func (e BatchResponseSubscriberEmailResponseStatusEnum) ToPointer() *BatchResponseSubscriberEmailResponseStatusEnum {
+	return &e
+}
+
 func (e *BatchResponseSubscriberEmailResponseStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "PROCESSING":
@@ -30,10 +34,10 @@ func (e *BatchResponseSubscriberEmailResponseStatusEnum) UnmarshalJSON(data []by
 	case "CANCELED":
 		fallthrough
 	case "COMPLETE":
-		*e = BatchResponseSubscriberEmailResponseStatusEnum(s)
+		*e = BatchResponseSubscriberEmailResponseStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchResponseSubscriberEmailResponseStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchResponseSubscriberEmailResponseStatusEnum: %v", v)
 	}
 }
 

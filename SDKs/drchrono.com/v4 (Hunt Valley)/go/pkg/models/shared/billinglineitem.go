@@ -33,12 +33,16 @@ const (
 	BillingLineItemBillingStatusEnumEraDenied              BillingLineItemBillingStatusEnum = "ERA Denied"
 )
 
+func (e BillingLineItemBillingStatusEnum) ToPointer() *BillingLineItemBillingStatusEnum {
+	return &e
+}
+
 func (e *BillingLineItemBillingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "":
 		fallthrough
 	case "Incomplete Information":
@@ -78,10 +82,10 @@ func (e *BillingLineItemBillingStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ERA Received":
 		fallthrough
 	case "ERA Denied":
-		*e = BillingLineItemBillingStatusEnum(s)
+		*e = BillingLineItemBillingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingLineItemBillingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingLineItemBillingStatusEnum: %v", v)
 	}
 }
 
@@ -95,12 +99,16 @@ const (
 	BillingLineItemProcedureTypeEnumS BillingLineItemProcedureTypeEnum = "S"
 )
 
+func (e BillingLineItemProcedureTypeEnum) ToPointer() *BillingLineItemProcedureTypeEnum {
+	return &e
+}
+
 func (e *BillingLineItemProcedureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "C":
 		fallthrough
 	case "H":
@@ -108,10 +116,10 @@ func (e *BillingLineItemProcedureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "U":
 		fallthrough
 	case "S":
-		*e = BillingLineItemProcedureTypeEnum(s)
+		*e = BillingLineItemProcedureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BillingLineItemProcedureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BillingLineItemProcedureTypeEnum: %v", v)
 	}
 }
 

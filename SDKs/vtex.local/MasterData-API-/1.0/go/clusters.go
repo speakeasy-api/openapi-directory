@@ -34,7 +34,10 @@ func newClusters(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ValidateDocumentbyClusters - Validate Document by Clusters
 func (s *clusters) ValidateDocumentbyClusters(ctx context.Context, request operations.ValidateDocumentbyClustersRequest) (*operations.ValidateDocumentbyClustersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/clusters", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/dataentities/{acronym}/documents/{id}/clusters", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

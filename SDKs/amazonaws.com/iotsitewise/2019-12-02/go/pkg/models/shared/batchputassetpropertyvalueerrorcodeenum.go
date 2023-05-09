@@ -21,12 +21,16 @@ const (
 	BatchPutAssetPropertyValueErrorCodeEnumAccessDeniedException         BatchPutAssetPropertyValueErrorCodeEnum = "AccessDeniedException"
 )
 
+func (e BatchPutAssetPropertyValueErrorCodeEnum) ToPointer() *BatchPutAssetPropertyValueErrorCodeEnum {
+	return &e
+}
+
 func (e *BatchPutAssetPropertyValueErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ResourceNotFoundException":
 		fallthrough
 	case "InvalidRequestException":
@@ -44,9 +48,9 @@ func (e *BatchPutAssetPropertyValueErrorCodeEnum) UnmarshalJSON(data []byte) err
 	case "TimestampOutOfRangeException":
 		fallthrough
 	case "AccessDeniedException":
-		*e = BatchPutAssetPropertyValueErrorCodeEnum(s)
+		*e = BatchPutAssetPropertyValueErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BatchPutAssetPropertyValueErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for BatchPutAssetPropertyValueErrorCodeEnum: %v", v)
 	}
 }

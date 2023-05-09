@@ -16,21 +16,25 @@ const (
 	ManifestTypeEnumDash                    ManifestTypeEnum = "DASH"
 )
 
+func (e ManifestTypeEnum) ToPointer() *ManifestTypeEnum {
+	return &e
+}
+
 func (e *ManifestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MANIFEST_TYPE_UNSPECIFIED":
 		fallthrough
 	case "HLS":
 		fallthrough
 	case "DASH":
-		*e = ManifestTypeEnum(s)
+		*e = ManifestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManifestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ManifestTypeEnum: %v", v)
 	}
 }
 

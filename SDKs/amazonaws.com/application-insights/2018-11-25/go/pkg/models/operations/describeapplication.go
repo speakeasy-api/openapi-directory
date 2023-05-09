@@ -16,17 +16,21 @@ const (
 	DescribeApplicationXAmzTargetEnumEc2WindowsBarleyServiceDescribeApplication DescribeApplicationXAmzTargetEnum = "EC2WindowsBarleyService.DescribeApplication"
 )
 
+func (e DescribeApplicationXAmzTargetEnum) ToPointer() *DescribeApplicationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeApplicationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EC2WindowsBarleyService.DescribeApplication":
-		*e = DescribeApplicationXAmzTargetEnum(s)
+		*e = DescribeApplicationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeApplicationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeApplicationXAmzTargetEnum: %v", v)
 	}
 }
 

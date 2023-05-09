@@ -16,17 +16,21 @@ const (
 	GetResourcesSummaryXAmzTargetEnumAwsProton20200720GetResourcesSummary GetResourcesSummaryXAmzTargetEnum = "AwsProton20200720.GetResourcesSummary"
 )
 
+func (e GetResourcesSummaryXAmzTargetEnum) ToPointer() *GetResourcesSummaryXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetResourcesSummaryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AwsProton20200720.GetResourcesSummary":
-		*e = GetResourcesSummaryXAmzTargetEnum(s)
+		*e = GetResourcesSummaryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetResourcesSummaryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetResourcesSummaryXAmzTargetEnum: %v", v)
 	}
 }
 

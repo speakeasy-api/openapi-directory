@@ -90,7 +90,10 @@ func (s *productstatuses) ContentProductstatusesCustombatch(ctx context.Context,
 // ContentProductstatusesGet - Gets the status of a product from your Merchant Center account.
 func (s *productstatuses) ContentProductstatusesGet(ctx context.Context, request operations.ContentProductstatusesGetRequest, security operations.ContentProductstatusesGetSecurity) (*operations.ContentProductstatusesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses/{productId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -138,7 +141,10 @@ func (s *productstatuses) ContentProductstatusesGet(ctx context.Context, request
 // ContentProductstatusesList - Lists the statuses of the products in your Merchant Center account.
 func (s *productstatuses) ContentProductstatusesList(ctx context.Context, request operations.ContentProductstatusesListRequest, security operations.ContentProductstatusesListSecurity) (*operations.ContentProductstatusesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/productstatuses", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

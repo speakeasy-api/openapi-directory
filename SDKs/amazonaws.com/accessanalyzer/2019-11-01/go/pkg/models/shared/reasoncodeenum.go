@@ -16,12 +16,16 @@ const (
 	ReasonCodeEnumServiceLinkedRoleCreationFailed    ReasonCodeEnum = "SERVICE_LINKED_ROLE_CREATION_FAILED"
 )
 
+func (e ReasonCodeEnum) ToPointer() *ReasonCodeEnum {
+	return &e
+}
+
 func (e *ReasonCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS_SERVICE_ACCESS_DISABLED":
 		fallthrough
 	case "DELEGATED_ADMINISTRATOR_DEREGISTERED":
@@ -29,9 +33,9 @@ func (e *ReasonCodeEnum) UnmarshalJSON(data []byte) error {
 	case "ORGANIZATION_DELETED":
 		fallthrough
 	case "SERVICE_LINKED_ROLE_CREATION_FAILED":
-		*e = ReasonCodeEnum(s)
+		*e = ReasonCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReasonCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReasonCodeEnum: %v", v)
 	}
 }

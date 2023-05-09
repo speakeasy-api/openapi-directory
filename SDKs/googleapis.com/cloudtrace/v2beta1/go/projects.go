@@ -34,7 +34,10 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudtraceProjectsTraceSinksCreate - Creates a sink that exports trace spans to a destination. The export of newly-ingested traces begins immediately, unless the sink's `writer_identity` is not permitted to write to the destination. A sink can export traces only from the resource owning the sink (the 'parent').
 func (s *projects) CloudtraceProjectsTraceSinksCreate(ctx context.Context, request operations.CloudtraceProjectsTraceSinksCreateRequest, security operations.CloudtraceProjectsTraceSinksCreateSecurity) (*operations.CloudtraceProjectsTraceSinksCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{parent}/traceSinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{parent}/traceSinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TraceSinkInput", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *projects) CloudtraceProjectsTraceSinksCreate(ctx context.Context, reque
 // CloudtraceProjectsTraceSinksDelete - Deletes a sink.
 func (s *projects) CloudtraceProjectsTraceSinksDelete(ctx context.Context, request operations.CloudtraceProjectsTraceSinksDeleteRequest, security operations.CloudtraceProjectsTraceSinksDeleteSecurity) (*operations.CloudtraceProjectsTraceSinksDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *projects) CloudtraceProjectsTraceSinksDelete(ctx context.Context, reque
 // CloudtraceProjectsTraceSinksGet - Get a trace sink by name under the parent resource (GCP project).
 func (s *projects) CloudtraceProjectsTraceSinksGet(ctx context.Context, request operations.CloudtraceProjectsTraceSinksGetRequest, security operations.CloudtraceProjectsTraceSinksGetSecurity) (*operations.CloudtraceProjectsTraceSinksGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *projects) CloudtraceProjectsTraceSinksGet(ctx context.Context, request 
 // CloudtraceProjectsTraceSinksList - List all sinks for the parent resource (GCP project).
 func (s *projects) CloudtraceProjectsTraceSinksList(ctx context.Context, request operations.CloudtraceProjectsTraceSinksListRequest, security operations.CloudtraceProjectsTraceSinksListSecurity) (*operations.CloudtraceProjectsTraceSinksListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{parent}/traceSinks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{parent}/traceSinks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *projects) CloudtraceProjectsTraceSinksList(ctx context.Context, request
 // CloudtraceProjectsTraceSinksPatch - Updates a sink. This method updates fields in the existing sink according to the provided update mask. The sink's name cannot be changed nor any output-only fields (e.g. the writer_identity).
 func (s *projects) CloudtraceProjectsTraceSinksPatch(ctx context.Context, request operations.CloudtraceProjectsTraceSinksPatchRequest, security operations.CloudtraceProjectsTraceSinksPatchSecurity) (*operations.CloudtraceProjectsTraceSinksPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2beta1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TraceSinkInput", "json")
 	if err != nil {

@@ -95,7 +95,10 @@ func (s *administrative) DoctorsList(ctx context.Context, request operations.Doc
 // DoctorsRead - Retrieve an existing dcotor
 func (s *administrative) DoctorsRead(ctx context.Context, request operations.DoctorsReadRequest, security operations.DoctorsReadSecurity) (*operations.DoctorsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/doctors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/doctors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +216,10 @@ func (s *administrative) UserGroupsList(ctx context.Context, request operations.
 // UserGroupsRead - Retrieve an existing user group
 func (s *administrative) UserGroupsRead(ctx context.Context, request operations.UserGroupsReadRequest, security operations.UserGroupsReadSecurity) (*operations.UserGroupsReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/user_groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/user_groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -331,7 +337,10 @@ func (s *administrative) UsersList(ctx context.Context, request operations.Users
 // UsersRead - Retrieve an existing user, `/api/users/current` can be used to identify logged in user, it will redirect to `/api/users/{current_user_id}`
 func (s *administrative) UsersRead(ctx context.Context, request operations.UsersReadRequest, security operations.UsersReadSecurity) (*operations.UsersReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/users/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

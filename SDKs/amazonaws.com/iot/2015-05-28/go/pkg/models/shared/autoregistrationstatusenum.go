@@ -14,18 +14,22 @@ const (
 	AutoRegistrationStatusEnumDisable AutoRegistrationStatusEnum = "DISABLE"
 )
 
+func (e AutoRegistrationStatusEnum) ToPointer() *AutoRegistrationStatusEnum {
+	return &e
+}
+
 func (e *AutoRegistrationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
-		*e = AutoRegistrationStatusEnum(s)
+		*e = AutoRegistrationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoRegistrationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoRegistrationStatusEnum: %v", v)
 	}
 }

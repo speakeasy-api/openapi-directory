@@ -16,21 +16,25 @@ const (
 	GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnumAudienceMembershipRenewed GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum = "AUDIENCE_MEMBERSHIP_RENEWED"
 )
 
+func (e GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum) ToPointer() *GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum {
+	return &e
+}
+
 func (e *GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOG_CONDITION_UNSPECIFIED":
 		fallthrough
 	case "AUDIENCE_JOINED":
 		fallthrough
 	case "AUDIENCE_MEMBERSHIP_RENEWED":
-		*e = GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum(s)
+		*e = GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAnalyticsAdminV1alphaAudienceEventTriggerLogConditionEnum: %v", v)
 	}
 }
 

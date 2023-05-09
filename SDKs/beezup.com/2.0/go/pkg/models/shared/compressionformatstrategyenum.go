@@ -19,12 +19,16 @@ const (
 	CompressionFormatStrategyEnumRar   CompressionFormatStrategyEnum = "Rar"
 )
 
+func (e CompressionFormatStrategyEnum) ToPointer() *CompressionFormatStrategyEnum {
+	return &e
+}
+
 func (e *CompressionFormatStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "None":
 		fallthrough
 	case "Zip":
@@ -36,9 +40,9 @@ func (e *CompressionFormatStrategyEnum) UnmarshalJSON(data []byte) error {
 	case "Bzip2":
 		fallthrough
 	case "Rar":
-		*e = CompressionFormatStrategyEnum(s)
+		*e = CompressionFormatStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompressionFormatStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CompressionFormatStrategyEnum: %v", v)
 	}
 }

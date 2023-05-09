@@ -16,21 +16,25 @@ const (
 	CustomEventEventTypeEnumAnnotate CustomEventEventTypeEnum = "ANNOTATE"
 )
 
+func (e CustomEventEventTypeEnum) ToPointer() *CustomEventEventTypeEnum {
+	return &e
+}
+
 func (e *CustomEventEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN":
 		fallthrough
 	case "INSERT":
 		fallthrough
 	case "ANNOTATE":
-		*e = CustomEventEventTypeEnum(s)
+		*e = CustomEventEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CustomEventEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CustomEventEventTypeEnum: %v", v)
 	}
 }
 

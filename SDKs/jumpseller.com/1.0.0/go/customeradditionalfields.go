@@ -35,7 +35,10 @@ func newCustomerAdditionalFields(defaultClient, securityClient HTTPClient, serve
 // DeleteCustomersIDFieldsFieldID - Delete a Customer Additional Field.
 func (s *customerAdditionalFields) DeleteCustomersIDFieldsFieldID(ctx context.Context, request operations.DeleteCustomersIDFieldsFieldIDRequest) (*operations.DeleteCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -94,7 +97,10 @@ func (s *customerAdditionalFields) DeleteCustomersIDFieldsFieldID(ctx context.Co
 // GetCustomersIDFields - Retrieves the Customer Additional Field of a Customer.
 func (s *customerAdditionalFields) GetCustomersIDFields(ctx context.Context, request operations.GetCustomersIDFieldsRequest) (*operations.GetCustomersIDFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *customerAdditionalFields) GetCustomersIDFields(ctx context.Context, req
 // GetCustomersIDFieldsFieldID - Retrieve a single Customer Additional Field.
 func (s *customerAdditionalFields) GetCustomersIDFieldsFieldID(ctx context.Context, request operations.GetCustomersIDFieldsFieldIDRequest) (*operations.GetCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *customerAdditionalFields) GetCustomersIDFieldsFieldID(ctx context.Conte
 // PostCustomersIDFields - Adds Customer Additional Fields to a Customer.
 func (s *customerAdditionalFields) PostCustomersIDFields(ctx context.Context, request operations.PostCustomersIDFieldsRequest) (*operations.PostCustomersIDFieldsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAdditionalFieldEdit", "json")
 	if err != nil {
@@ -278,7 +290,10 @@ func (s *customerAdditionalFields) PostCustomersIDFields(ctx context.Context, re
 // PutCustomersIDFieldsFieldID - Update a Customer Additional Field.
 func (s *customerAdditionalFields) PutCustomersIDFieldsFieldID(ctx context.Context, request operations.PutCustomersIDFieldsFieldIDRequest) (*operations.PutCustomersIDFieldsFieldIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/customers/{id}/fields/{field_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CustomerAdditionalFieldEdit", "json")
 	if err != nil {

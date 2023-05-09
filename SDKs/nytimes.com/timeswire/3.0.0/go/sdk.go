@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - With the Times Newswire API, you can get links and metadata for Times articles and blog posts as soon as they are published on NYTimes.com. The Times Newswire API provides an up-to-the-minute stream of published items.
 // http://developer.nytimes.com/
 type SDK struct {
@@ -151,9 +166,13 @@ func (s *SDK) GetContentJSON(ctx context.Context, request operations.GetContentJ
 
 	return res, nil
 }
+
 func (s *SDK) GetContentSourceSectionJSON(ctx context.Context, request operations.GetContentSourceSectionJSONRequest) (*operations.GetContentSourceSectionJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -197,9 +216,13 @@ func (s *SDK) GetContentSourceSectionJSON(ctx context.Context, request operation
 
 	return res, nil
 }
+
 func (s *SDK) GetContentSourceSectionTimePeriodJSON(ctx context.Context, request operations.GetContentSourceSectionTimePeriodJSONRequest) (*operations.GetContentSourceSectionTimePeriodJSONResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}/{time-period}.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/content/{source}/{section}/{time-period}.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

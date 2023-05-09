@@ -34,7 +34,10 @@ func newVirtualTariffsStatusForProperty(defaultClient, securityClient HTTPClient
 // VirtualTariffsStatusForPropertyGet - Gets the calculation status for a virtual tariff property
 func (s *virtualTariffsStatusForProperty) VirtualTariffsStatusForPropertyGet(ctx context.Context, request operations.VirtualTariffsStatusForPropertyGetRequest) (*operations.VirtualTariffsStatusForPropertyGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariffsStatusForProperty/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/VirtualTariffsStatusForProperty/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

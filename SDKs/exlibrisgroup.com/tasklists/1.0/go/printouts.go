@@ -98,7 +98,10 @@ func (s *printouts) GetAlmawsV1TaskListsPrintouts(ctx context.Context, request o
 // This Web service returns a Printout given a Printout ID.
 func (s *printouts) GetAlmawsV1TaskListsPrintoutsPrintoutID(ctx context.Context, request operations.GetAlmawsV1TaskListsPrintoutsPrintoutIDRequest) (*operations.GetAlmawsV1TaskListsPrintoutsPrintoutIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -216,7 +219,10 @@ func (s *printouts) PostAlmawsV1TaskListsPrintouts(ctx context.Context, request 
 // This API operates on an printout. given a Printout ID.
 func (s *printouts) PostAlmawsV1TaskListsPrintoutsPrintoutID(ctx context.Context, request operations.PostAlmawsV1TaskListsPrintoutsPrintoutIDRequest) (*operations.PostAlmawsV1TaskListsPrintoutsPrintoutIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/almaws/v1/task-lists/printouts/{printout_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

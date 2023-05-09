@@ -21,21 +21,25 @@ const (
 	BuildsListToolsetsToolsEnumNode    BuildsListToolsetsToolsEnum = "node"
 )
 
+func (e BuildsListToolsetsToolsEnum) ToPointer() *BuildsListToolsetsToolsEnum {
+	return &e
+}
+
 func (e *BuildsListToolsetsToolsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "xamarin":
 		fallthrough
 	case "xcode":
 		fallthrough
 	case "node":
-		*e = BuildsListToolsetsToolsEnum(s)
+		*e = BuildsListToolsetsToolsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BuildsListToolsetsToolsEnum: %s", s)
+		return fmt.Errorf("invalid value for BuildsListToolsetsToolsEnum: %v", v)
 	}
 }
 

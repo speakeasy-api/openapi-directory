@@ -32,12 +32,16 @@ const (
 	GetTerminalDetailsResponseTerminalStatusEnumSwitchedOff                        GetTerminalDetailsResponseTerminalStatusEnum = "SwitchedOff"
 )
 
+func (e GetTerminalDetailsResponseTerminalStatusEnum) ToPointer() *GetTerminalDetailsResponseTerminalStatusEnum {
+	return &e
+}
+
 func (e *GetTerminalDetailsResponseTerminalStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OnlineLast1Day":
 		fallthrough
 	case "OnlineLast2Days":
@@ -61,10 +65,10 @@ func (e *GetTerminalDetailsResponseTerminalStatusEnum) UnmarshalJSON(data []byte
 	case "ReAssignToStorePending":
 		fallthrough
 	case "SwitchedOff":
-		*e = GetTerminalDetailsResponseTerminalStatusEnum(s)
+		*e = GetTerminalDetailsResponseTerminalStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTerminalDetailsResponseTerminalStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTerminalDetailsResponseTerminalStatusEnum: %v", v)
 	}
 }
 

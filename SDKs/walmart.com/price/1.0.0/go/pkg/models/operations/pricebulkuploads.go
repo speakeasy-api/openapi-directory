@@ -27,19 +27,23 @@ const (
 	PriceBulkUploadsFeedTypeEnumCptSellerEligibility PriceBulkUploadsFeedTypeEnum = "CPT_SELLER_ELIGIBILITY"
 )
 
+func (e PriceBulkUploadsFeedTypeEnum) ToPointer() *PriceBulkUploadsFeedTypeEnum {
+	return &e
+}
+
 func (e *PriceBulkUploadsFeedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "price":
 		fallthrough
 	case "CPT_SELLER_ELIGIBILITY":
-		*e = PriceBulkUploadsFeedTypeEnum(s)
+		*e = PriceBulkUploadsFeedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PriceBulkUploadsFeedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PriceBulkUploadsFeedTypeEnum: %v", v)
 	}
 }
 

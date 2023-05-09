@@ -38,7 +38,10 @@ func newAPIKeyMerchantLevel(defaultClient, securityClient HTTPClient, serverURL,
 // * Management API—API credentials read and write
 func (s *apiKeyMerchantLevel) PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateAPIKey(ctx context.Context, request operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateAPIKeyRequest, security operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateAPIKeySecurity) (*operations.PostMerchantsMerchantIDAPICredentialsAPICredentialIDGenerateAPIKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/merchants/{merchantId}/apiCredentials/{apiCredentialId}/generateApiKey", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {

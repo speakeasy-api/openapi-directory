@@ -17,12 +17,16 @@ const (
 	RangeModeEnumExclusive               RangeModeEnum = "EXCLUSIVE"
 )
 
+func (e RangeModeEnum) ToPointer() *RangeModeEnum {
+	return &e
+}
+
 func (e *RangeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FIRST":
 		fallthrough
 	case "LAST":
@@ -32,9 +36,9 @@ func (e *RangeModeEnum) UnmarshalJSON(data []byte) error {
 	case "INCLUSIVE":
 		fallthrough
 	case "EXCLUSIVE":
-		*e = RangeModeEnum(s)
+		*e = RangeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RangeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for RangeModeEnum: %v", v)
 	}
 }

@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - <fullname>Glue</fullname> <p>Defines the public endpoint for the Glue service.</p>
 // https://docs.aws.amazon.com/glue/ - Amazon Web Services documentation
 type SDK struct {
@@ -1247,6 +1262,26 @@ func (s *SDK) BatchGetPartition(ctx context.Context, request operations.BatchGet
 			}
 
 			res.InvalidStateException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
 		}
 	}
 
@@ -2853,6 +2888,16 @@ func (s *SDK) CreateDatabase(ctx context.Context, request operations.CreateDatab
 			}
 
 			res.ConcurrentModificationException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederatedResourceAlreadyExistsException = out
 		}
 	}
 
@@ -8848,6 +8893,16 @@ func (s *SDK) GetDatabase(ctx context.Context, request operations.GetDatabaseReq
 
 			res.GlueEncryptionException = out
 		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
 	}
 
 	return res, nil
@@ -10322,6 +10377,26 @@ func (s *SDK) GetPartition(ctx context.Context, request operations.GetPartitionR
 
 			res.GlueEncryptionException = out
 		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
+		}
 	}
 
 	return res, nil
@@ -10561,6 +10636,26 @@ func (s *SDK) GetPartitions(ctx context.Context, request operations.GetPartition
 			}
 
 			res.ResourceNotReadyException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 488:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
 		}
 	}
 
@@ -11858,6 +11953,26 @@ func (s *SDK) GetTable(ctx context.Context, request operations.GetTableRequest) 
 
 			res.ResourceNotReadyException = out
 		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
+		}
 	}
 
 	return res, nil
@@ -12183,6 +12298,26 @@ func (s *SDK) GetTables(ctx context.Context, request operations.GetTablesRequest
 			}
 
 			res.GlueEncryptionException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
 		}
 	}
 
@@ -12592,6 +12727,26 @@ func (s *SDK) GetUnfilteredPartitionMetadata(ctx context.Context, request operat
 
 			res.PermissionTypeMismatchException = out
 		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
+		}
 	}
 
 	return res, nil
@@ -12712,6 +12867,26 @@ func (s *SDK) GetUnfilteredPartitionsMetadata(ctx context.Context, request opera
 
 			res.PermissionTypeMismatchException = out
 		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
+		}
 	}
 
 	return res, nil
@@ -12827,6 +13002,26 @@ func (s *SDK) GetUnfilteredTableMetadata(ctx context.Context, request operations
 			}
 
 			res.PermissionTypeMismatchException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceException = out
+		}
+	case httpRes.StatusCode == 487:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FederationSourceRetryableException = out
 		}
 	}
 

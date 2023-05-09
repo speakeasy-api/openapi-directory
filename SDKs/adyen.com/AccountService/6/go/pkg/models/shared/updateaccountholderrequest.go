@@ -24,12 +24,16 @@ const (
 	UpdateAccountHolderRequestLegalEntityEnumPublicCompany UpdateAccountHolderRequestLegalEntityEnum = "PublicCompany"
 )
 
+func (e UpdateAccountHolderRequestLegalEntityEnum) ToPointer() *UpdateAccountHolderRequestLegalEntityEnum {
+	return &e
+}
+
 func (e *UpdateAccountHolderRequestLegalEntityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Business":
 		fallthrough
 	case "Individual":
@@ -39,10 +43,10 @@ func (e *UpdateAccountHolderRequestLegalEntityEnum) UnmarshalJSON(data []byte) e
 	case "Partnership":
 		fallthrough
 	case "PublicCompany":
-		*e = UpdateAccountHolderRequestLegalEntityEnum(s)
+		*e = UpdateAccountHolderRequestLegalEntityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateAccountHolderRequestLegalEntityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateAccountHolderRequestLegalEntityEnum: %v", v)
 	}
 }
 

@@ -71,7 +71,10 @@ func (s *requests) DeleteAdminRequests(ctx context.Context) (*operations.DeleteA
 // DeleteAdminRequestsRequestID - Delete request by ID
 func (s *requests) DeleteAdminRequestsRequestID(ctx context.Context, request operations.DeleteAdminRequestsRequestIDRequest) (*operations.DeleteAdminRequestsRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -181,7 +184,10 @@ func (s *requests) GetAdminRequestsUnmatched(ctx context.Context) (*operations.G
 // GetAdminRequestsRequestID - Get request by ID
 func (s *requests) GetAdminRequestsRequestID(ctx context.Context, request operations.GetAdminRequestsRequestIDRequest) (*operations.GetAdminRequestsRequestIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/__admin/requests/{requestId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -405,6 +411,8 @@ func (s *requests) PostAdminRequestsRemoveByMetadata(ctx context.Context, reques
 }
 
 // PostAdminRequestsReset - Empty the request journal
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *requests) PostAdminRequestsReset(ctx context.Context) (*operations.PostAdminRequestsResetResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/__admin/requests/reset"

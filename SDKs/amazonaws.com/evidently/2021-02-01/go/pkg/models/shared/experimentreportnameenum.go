@@ -13,16 +13,20 @@ const (
 	ExperimentReportNameEnumBayesianInference ExperimentReportNameEnum = "BayesianInference"
 )
 
+func (e ExperimentReportNameEnum) ToPointer() *ExperimentReportNameEnum {
+	return &e
+}
+
 func (e *ExperimentReportNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BayesianInference":
-		*e = ExperimentReportNameEnum(s)
+		*e = ExperimentReportNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExperimentReportNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ExperimentReportNameEnum: %v", v)
 	}
 }

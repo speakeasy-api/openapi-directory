@@ -16,17 +16,21 @@ const (
 	GetShardIteratorXAmzTargetEnumDynamoDbStreams20120810GetShardIterator GetShardIteratorXAmzTargetEnum = "DynamoDBStreams_20120810.GetShardIterator"
 )
 
+func (e GetShardIteratorXAmzTargetEnum) ToPointer() *GetShardIteratorXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetShardIteratorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDBStreams_20120810.GetShardIterator":
-		*e = GetShardIteratorXAmzTargetEnum(s)
+		*e = GetShardIteratorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetShardIteratorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetShardIteratorXAmzTargetEnum: %v", v)
 	}
 }
 

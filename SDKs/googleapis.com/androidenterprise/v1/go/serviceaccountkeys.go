@@ -34,7 +34,10 @@ func newServiceaccountkeys(defaultClient, securityClient HTTPClient, serverURL, 
 // AndroidenterpriseServiceaccountkeysDelete - Removes and invalidates the specified credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
 func (s *serviceaccountkeys) AndroidenterpriseServiceaccountkeysDelete(ctx context.Context, request operations.AndroidenterpriseServiceaccountkeysDeleteRequest, security operations.AndroidenterpriseServiceaccountkeysDeleteSecurity) (*operations.AndroidenterpriseServiceaccountkeysDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys/{keyId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys/{keyId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -73,7 +76,10 @@ func (s *serviceaccountkeys) AndroidenterpriseServiceaccountkeysDelete(ctx conte
 // AndroidenterpriseServiceaccountkeysInsert - Generates new credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount. Only the type of the key should be populated in the resource to be inserted.
 func (s *serviceaccountkeys) AndroidenterpriseServiceaccountkeysInsert(ctx context.Context, request operations.AndroidenterpriseServiceaccountkeysInsertRequest, security operations.AndroidenterpriseServiceaccountkeysInsertSecurity) (*operations.AndroidenterpriseServiceaccountkeysInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "ServiceAccountKey", "json")
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *serviceaccountkeys) AndroidenterpriseServiceaccountkeysInsert(ctx conte
 // AndroidenterpriseServiceaccountkeysList - Lists all active credentials for the service account associated with this enterprise. Only the ID and key type are returned. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
 func (s *serviceaccountkeys) AndroidenterpriseServiceaccountkeysList(ctx context.Context, request operations.AndroidenterpriseServiceaccountkeysListRequest, security operations.AndroidenterpriseServiceaccountkeysListSecurity) (*operations.AndroidenterpriseServiceaccountkeysListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/serviceAccountKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

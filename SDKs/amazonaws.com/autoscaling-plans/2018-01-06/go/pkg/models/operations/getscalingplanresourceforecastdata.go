@@ -16,17 +16,21 @@ const (
 	GetScalingPlanResourceForecastDataXAmzTargetEnumAnyScaleScalingPlannerFrontendServiceGetScalingPlanResourceForecastData GetScalingPlanResourceForecastDataXAmzTargetEnum = "AnyScaleScalingPlannerFrontendService.GetScalingPlanResourceForecastData"
 )
 
+func (e GetScalingPlanResourceForecastDataXAmzTargetEnum) ToPointer() *GetScalingPlanResourceForecastDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetScalingPlanResourceForecastDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AnyScaleScalingPlannerFrontendService.GetScalingPlanResourceForecastData":
-		*e = GetScalingPlanResourceForecastDataXAmzTargetEnum(s)
+		*e = GetScalingPlanResourceForecastDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetScalingPlanResourceForecastDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetScalingPlanResourceForecastDataXAmzTargetEnum: %v", v)
 	}
 }
 

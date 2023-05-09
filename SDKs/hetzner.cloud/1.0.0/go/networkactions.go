@@ -34,7 +34,10 @@ func newNetworkActions(defaultClient, securityClient HTTPClient, serverURL, lang
 // Returns all Action objects for a Network. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
 func (s *networkActions) GetNetworksIDActions(ctx context.Context, request operations.GetNetworksIDActionsRequest) (*operations.GetNetworksIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *networkActions) GetNetworksIDActions(ctx context.Context, request opera
 // Returns a specific Action for a Network.
 func (s *networkActions) GetNetworksIDActionsActionID(ctx context.Context, request operations.GetNetworksIDActionsActionIDRequest) (*operations.GetNetworksIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/{action_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/{action_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *networkActions) GetNetworksIDActionsActionID(ctx context.Context, reque
 // Note: if the Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsAddRoute(ctx context.Context, request operations.PostNetworksIDActionsAddRouteRequest) (*operations.PostNetworksIDActionsAddRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/add_route", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/add_route", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -184,7 +193,10 @@ func (s *networkActions) PostNetworksIDActionsAddRoute(ctx context.Context, requ
 // Note: if the parent Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsAddSubnet(ctx context.Context, request operations.PostNetworksIDActionsAddSubnetRequest) (*operations.PostNetworksIDActionsAddSubnetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/add_subnet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/add_subnet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -242,7 +254,10 @@ func (s *networkActions) PostNetworksIDActionsAddSubnet(ctx context.Context, req
 // Note: if the Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsChangeIPRange(ctx context.Context, request operations.PostNetworksIDActionsChangeIPRangeRequest) (*operations.PostNetworksIDActionsChangeIPRangeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/change_ip_range", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/change_ip_range", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -296,7 +311,10 @@ func (s *networkActions) PostNetworksIDActionsChangeIPRange(ctx context.Context,
 // Note: if the Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsChangeProtection(ctx context.Context, request operations.PostNetworksIDActionsChangeProtectionRequest) (*operations.PostNetworksIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/change_protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/change_protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -350,7 +368,10 @@ func (s *networkActions) PostNetworksIDActionsChangeProtection(ctx context.Conte
 // Note: if the Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsDeleteRoute(ctx context.Context, request operations.PostNetworksIDActionsDeleteRouteRequest) (*operations.PostNetworksIDActionsDeleteRouteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/delete_route", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/delete_route", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -404,7 +425,10 @@ func (s *networkActions) PostNetworksIDActionsDeleteRoute(ctx context.Context, r
 // Note: if the Network object changes during the request, the response will be a “conflict” error.
 func (s *networkActions) PostNetworksIDActionsDeleteSubnet(ctx context.Context, request operations.PostNetworksIDActionsDeleteSubnetRequest) (*operations.PostNetworksIDActionsDeleteSubnetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/delete_subnet", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{id}/actions/delete_subnet", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

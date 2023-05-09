@@ -16,17 +16,21 @@ const (
 	PutResolverQueryLogConfigPolicyXAmzTargetEnumRoute53ResolverPutResolverQueryLogConfigPolicy PutResolverQueryLogConfigPolicyXAmzTargetEnum = "Route53Resolver.PutResolverQueryLogConfigPolicy"
 )
 
+func (e PutResolverQueryLogConfigPolicyXAmzTargetEnum) ToPointer() *PutResolverQueryLogConfigPolicyXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutResolverQueryLogConfigPolicyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Route53Resolver.PutResolverQueryLogConfigPolicy":
-		*e = PutResolverQueryLogConfigPolicyXAmzTargetEnum(s)
+		*e = PutResolverQueryLogConfigPolicyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutResolverQueryLogConfigPolicyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutResolverQueryLogConfigPolicyXAmzTargetEnum: %v", v)
 	}
 }
 

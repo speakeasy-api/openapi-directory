@@ -14,17 +14,21 @@ const (
 	CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnumUsd CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum = "USD"
 )
 
+func (e CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum) ToPointer() *CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum {
+	return &e
+}
+
 func (e *CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "USD":
-		*e = CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum(s)
+		*e = CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateReservedInstancesListingRequestPriceSchedulesCurrencyCodeEnum: %v", v)
 	}
 }
 

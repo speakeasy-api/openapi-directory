@@ -15,17 +15,21 @@ const (
 	POSTCreateTransitGatewayPrefixListReferenceActionEnumCreateTransitGatewayPrefixListReference POSTCreateTransitGatewayPrefixListReferenceActionEnum = "CreateTransitGatewayPrefixListReference"
 )
 
+func (e POSTCreateTransitGatewayPrefixListReferenceActionEnum) ToPointer() *POSTCreateTransitGatewayPrefixListReferenceActionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayPrefixListReferenceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateTransitGatewayPrefixListReference":
-		*e = POSTCreateTransitGatewayPrefixListReferenceActionEnum(s)
+		*e = POSTCreateTransitGatewayPrefixListReferenceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayPrefixListReferenceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayPrefixListReferenceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateTransitGatewayPrefixListReferenceVersionEnumTwoThousandAndSixteen1115 POSTCreateTransitGatewayPrefixListReferenceVersionEnum = "2016-11-15"
 )
 
+func (e POSTCreateTransitGatewayPrefixListReferenceVersionEnum) ToPointer() *POSTCreateTransitGatewayPrefixListReferenceVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateTransitGatewayPrefixListReferenceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTCreateTransitGatewayPrefixListReferenceVersionEnum(s)
+		*e = POSTCreateTransitGatewayPrefixListReferenceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateTransitGatewayPrefixListReferenceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateTransitGatewayPrefixListReferenceVersionEnum: %v", v)
 	}
 }
 

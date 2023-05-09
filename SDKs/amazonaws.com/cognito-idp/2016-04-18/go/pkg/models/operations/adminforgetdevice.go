@@ -16,17 +16,21 @@ const (
 	AdminForgetDeviceXAmzTargetEnumAwsCognitoIdentityProviderServiceAdminForgetDevice AdminForgetDeviceXAmzTargetEnum = "AWSCognitoIdentityProviderService.AdminForgetDevice"
 )
 
+func (e AdminForgetDeviceXAmzTargetEnum) ToPointer() *AdminForgetDeviceXAmzTargetEnum {
+	return &e
+}
+
 func (e *AdminForgetDeviceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AdminForgetDevice":
-		*e = AdminForgetDeviceXAmzTargetEnum(s)
+		*e = AdminForgetDeviceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AdminForgetDeviceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AdminForgetDeviceXAmzTargetEnum: %v", v)
 	}
 }
 

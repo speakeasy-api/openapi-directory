@@ -17,19 +17,23 @@ const (
 	GetV2Scim20UsersSortOrderEnumDescending GetV2Scim20UsersSortOrderEnum = "descending"
 )
 
+func (e GetV2Scim20UsersSortOrderEnum) ToPointer() *GetV2Scim20UsersSortOrderEnum {
+	return &e
+}
+
 func (e *GetV2Scim20UsersSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ascending":
 		fallthrough
 	case "descending":
-		*e = GetV2Scim20UsersSortOrderEnum(s)
+		*e = GetV2Scim20UsersSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetV2Scim20UsersSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetV2Scim20UsersSortOrderEnum: %v", v)
 	}
 }
 

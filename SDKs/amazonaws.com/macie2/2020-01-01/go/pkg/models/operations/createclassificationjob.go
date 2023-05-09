@@ -17,19 +17,23 @@ const (
 	CreateClassificationJobRequestBodyJobTypeEnumScheduled CreateClassificationJobRequestBodyJobTypeEnum = "SCHEDULED"
 )
 
+func (e CreateClassificationJobRequestBodyJobTypeEnum) ToPointer() *CreateClassificationJobRequestBodyJobTypeEnum {
+	return &e
+}
+
 func (e *CreateClassificationJobRequestBodyJobTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONE_TIME":
 		fallthrough
 	case "SCHEDULED":
-		*e = CreateClassificationJobRequestBodyJobTypeEnum(s)
+		*e = CreateClassificationJobRequestBodyJobTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateClassificationJobRequestBodyJobTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateClassificationJobRequestBodyJobTypeEnum: %v", v)
 	}
 }
 
@@ -43,12 +47,16 @@ const (
 	CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnumNone    CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum = "NONE"
 )
 
+func (e CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum) ToPointer() *CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum {
+	return &e
+}
+
 func (e *CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALL":
 		fallthrough
 	case "EXCLUDE":
@@ -56,10 +64,10 @@ func (e *CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum) Un
 	case "INCLUDE":
 		fallthrough
 	case "NONE":
-		*e = CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum(s)
+		*e = CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateClassificationJobRequestBodyManagedDataIdentifierSelectorEnum: %v", v)
 	}
 }
 

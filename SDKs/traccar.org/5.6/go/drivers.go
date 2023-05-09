@@ -36,7 +36,10 @@ func newDrivers(defaultClient, securityClient HTTPClient, serverURL, language, s
 // DeleteDriversID - Delete a Driver
 func (s *drivers) DeleteDriversID(ctx context.Context, request operations.DeleteDriversIDRequest) (*operations.DeleteDriversIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +177,10 @@ func (s *drivers) PostDrivers(ctx context.Context, request shared.Driver) (*oper
 // PutDriversID - Update a Driver
 func (s *drivers) PutDriversID(ctx context.Context, request operations.PutDriversIDRequest) (*operations.PutDriversIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/drivers/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Driver", "json")
 	if err != nil {

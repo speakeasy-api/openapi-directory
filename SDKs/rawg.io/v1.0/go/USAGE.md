@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CreatorRolesListRequest{
-        Page: 548814,
-        PageSize: 592845,
-    }
-
     ctx := context.Background()
-    res, err := s.CreatorRoles.CreatorRolesList(ctx, req)
+    res, err := s.CreatorRoles.CreatorRolesList(ctx, operations.CreatorRolesListRequest{
+        Page: sdk.Int64(548814),
+        PageSize: sdk.Int64(592845),
+    })
     if err != nil {
         log.Fatal(err)
     }

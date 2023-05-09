@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,21 +16,19 @@ func main() {
         }),
     )
 
-    req := operations.GETDeleteListenerRequest{
-        Action: "DeleteListener",
-        ListenerArn: "corrupti",
-        Version: "2015-12-01",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GETDeleteListener(ctx, req)
+    res, err := s.GETDeleteListener(ctx, operations.GETDeleteListenerRequest{
+        Action: operations.GETDeleteListenerActionEnumDeleteListener,
+        ListenerArn: "corrupti",
+        Version: operations.GETDeleteListenerVersionEnumTwoThousandAndFifteen1201,
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

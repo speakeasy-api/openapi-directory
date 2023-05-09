@@ -16,17 +16,21 @@ const (
 	UpdateWorkspaceBundleXAmzTargetEnumWorkspacesServiceUpdateWorkspaceBundle UpdateWorkspaceBundleXAmzTargetEnum = "WorkspacesService.UpdateWorkspaceBundle"
 )
 
+func (e UpdateWorkspaceBundleXAmzTargetEnum) ToPointer() *UpdateWorkspaceBundleXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateWorkspaceBundleXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.UpdateWorkspaceBundle":
-		*e = UpdateWorkspaceBundleXAmzTargetEnum(s)
+		*e = UpdateWorkspaceBundleXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateWorkspaceBundleXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateWorkspaceBundleXAmzTargetEnum: %v", v)
 	}
 }
 

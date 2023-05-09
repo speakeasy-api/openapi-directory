@@ -16,12 +16,16 @@ const (
 	ChannelCatalogMarketplaceSettingDiscriminatorTypeEnumChannelCatalogMarketplaceNumberSetting  ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum = "channelCatalogMarketplaceNumberSetting"
 )
 
+func (e ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum) ToPointer() *ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum {
+	return &e
+}
+
 func (e *ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "channelCatalogMarketplaceStringSetting":
 		fallthrough
 	case "channelCatalogMarketplaceIntegerSetting":
@@ -29,9 +33,9 @@ func (e *ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum) UnmarshalJSON(da
 	case "channelCatalogMarketplaceBooleanSetting":
 		fallthrough
 	case "channelCatalogMarketplaceNumberSetting":
-		*e = ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum(s)
+		*e = ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum: %v", v)
 	}
 }

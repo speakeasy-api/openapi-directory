@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,12 +16,10 @@ func main() {
         }),
     )
 
-    req := operations.DeleteCacheRequest{
-        Key: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.DeleteCache(ctx, req)
+    res, err := s.DeleteCache(ctx, operations.DeleteCacheRequest{
+        Key: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -13,16 +13,20 @@ const (
 	MetadataProviderEnumPlanetOrder MetadataProviderEnum = "PLANET_ORDER"
 )
 
+func (e MetadataProviderEnum) ToPointer() *MetadataProviderEnum {
+	return &e
+}
+
 func (e *MetadataProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLANET_ORDER":
-		*e = MetadataProviderEnum(s)
+		*e = MetadataProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MetadataProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for MetadataProviderEnum: %v", v)
 	}
 }

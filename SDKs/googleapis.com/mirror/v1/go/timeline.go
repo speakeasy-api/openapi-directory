@@ -35,7 +35,10 @@ func newTimeline(defaultClient, securityClient HTTPClient, serverURL, language, 
 // MirrorTimelineAttachmentsDelete - Deletes an attachment from a timeline item.
 func (s *timeline) MirrorTimelineAttachmentsDelete(ctx context.Context, request operations.MirrorTimelineAttachmentsDeleteRequest, security operations.MirrorTimelineAttachmentsDeleteSecurity) (*operations.MirrorTimelineAttachmentsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -74,7 +77,10 @@ func (s *timeline) MirrorTimelineAttachmentsDelete(ctx context.Context, request 
 // MirrorTimelineAttachmentsGet - Retrieves an attachment on a timeline item by item ID and attachment ID.
 func (s *timeline) MirrorTimelineAttachmentsGet(ctx context.Context, request operations.MirrorTimelineAttachmentsGetRequest, security operations.MirrorTimelineAttachmentsGetSecurity) (*operations.MirrorTimelineAttachmentsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments/{attachmentId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -122,7 +128,10 @@ func (s *timeline) MirrorTimelineAttachmentsGet(ctx context.Context, request ope
 // MirrorTimelineAttachmentsInsert - Adds a new attachment to a timeline item.
 func (s *timeline) MirrorTimelineAttachmentsInsert(ctx context.Context, request operations.MirrorTimelineAttachmentsInsertRequest, security operations.MirrorTimelineAttachmentsInsertSecurity) (*operations.MirrorTimelineAttachmentsInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -170,7 +179,10 @@ func (s *timeline) MirrorTimelineAttachmentsInsert(ctx context.Context, request 
 // MirrorTimelineAttachmentsList - Returns a list of attachments for a timeline item.
 func (s *timeline) MirrorTimelineAttachmentsList(ctx context.Context, request operations.MirrorTimelineAttachmentsListRequest, security operations.MirrorTimelineAttachmentsListSecurity) (*operations.MirrorTimelineAttachmentsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{itemId}/attachments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +230,10 @@ func (s *timeline) MirrorTimelineAttachmentsList(ctx context.Context, request op
 // MirrorTimelineDelete - Deletes a timeline item.
 func (s *timeline) MirrorTimelineDelete(ctx context.Context, request operations.MirrorTimelineDeleteRequest, security operations.MirrorTimelineDeleteSecurity) (*operations.MirrorTimelineDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -257,7 +272,10 @@ func (s *timeline) MirrorTimelineDelete(ctx context.Context, request operations.
 // MirrorTimelineGet - Gets a single timeline item by ID.
 func (s *timeline) MirrorTimelineGet(ctx context.Context, request operations.MirrorTimelineGetRequest, security operations.MirrorTimelineGetSecurity) (*operations.MirrorTimelineGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -408,7 +426,10 @@ func (s *timeline) MirrorTimelineList(ctx context.Context, request operations.Mi
 // MirrorTimelinePatch - Updates a timeline item in place. This method supports patch semantics.
 func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.MirrorTimelinePatchRequest, security operations.MirrorTimelinePatchSecurity) (*operations.MirrorTimelinePatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "TimelineItem", "json")
 	if err != nil {
@@ -463,7 +484,10 @@ func (s *timeline) MirrorTimelinePatch(ctx context.Context, request operations.M
 // MirrorTimelineUpdate - Updates a timeline item in place.
 func (s *timeline) MirrorTimelineUpdate(ctx context.Context, request operations.MirrorTimelineUpdateRequest, security operations.MirrorTimelineUpdateSecurity) (*operations.MirrorTimelineUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/timeline/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

@@ -14,17 +14,21 @@ const (
 	UKLocalAccountIdentificationTypeEnumUkLocal UKLocalAccountIdentificationTypeEnum = "ukLocal"
 )
 
+func (e UKLocalAccountIdentificationTypeEnum) ToPointer() *UKLocalAccountIdentificationTypeEnum {
+	return &e
+}
+
 func (e *UKLocalAccountIdentificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ukLocal":
-		*e = UKLocalAccountIdentificationTypeEnum(s)
+		*e = UKLocalAccountIdentificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UKLocalAccountIdentificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UKLocalAccountIdentificationTypeEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	POSTRequestEnvironmentInfoActionEnumRequestEnvironmentInfo POSTRequestEnvironmentInfoActionEnum = "RequestEnvironmentInfo"
 )
 
+func (e POSTRequestEnvironmentInfoActionEnum) ToPointer() *POSTRequestEnvironmentInfoActionEnum {
+	return &e
+}
+
 func (e *POSTRequestEnvironmentInfoActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RequestEnvironmentInfo":
-		*e = POSTRequestEnvironmentInfoActionEnum(s)
+		*e = POSTRequestEnvironmentInfoActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRequestEnvironmentInfoActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRequestEnvironmentInfoActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTRequestEnvironmentInfoVersionEnumTwoThousandAndTen1201 POSTRequestEnvironmentInfoVersionEnum = "2010-12-01"
 )
 
+func (e POSTRequestEnvironmentInfoVersionEnum) ToPointer() *POSTRequestEnvironmentInfoVersionEnum {
+	return &e
+}
+
 func (e *POSTRequestEnvironmentInfoVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTRequestEnvironmentInfoVersionEnum(s)
+		*e = POSTRequestEnvironmentInfoVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTRequestEnvironmentInfoVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTRequestEnvironmentInfoVersionEnum: %v", v)
 	}
 }
 

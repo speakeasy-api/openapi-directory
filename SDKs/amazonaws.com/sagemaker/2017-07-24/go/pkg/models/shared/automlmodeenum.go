@@ -15,20 +15,24 @@ const (
 	AutoMLModeEnumHyperparameterTuning AutoMLModeEnum = "HYPERPARAMETER_TUNING"
 )
 
+func (e AutoMLModeEnum) ToPointer() *AutoMLModeEnum {
+	return &e
+}
+
 func (e *AutoMLModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTO":
 		fallthrough
 	case "ENSEMBLING":
 		fallthrough
 	case "HYPERPARAMETER_TUNING":
-		*e = AutoMLModeEnum(s)
+		*e = AutoMLModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AutoMLModeEnum: %s", s)
+		return fmt.Errorf("invalid value for AutoMLModeEnum: %v", v)
 	}
 }

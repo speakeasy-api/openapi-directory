@@ -21,12 +21,16 @@ const (
 	GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnumAudioEncodingSpeexWithHeaderByte GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum = "AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE"
 )
 
+func (e GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum) ToPointer() *GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUDIO_ENCODING_UNSPECIFIED":
 		fallthrough
 	case "AUDIO_ENCODING_LINEAR_16":
@@ -42,10 +46,10 @@ func (e *GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum) UnmarshalJSON
 	case "AUDIO_ENCODING_OGG_OPUS":
 		fallthrough
 	case "AUDIO_ENCODING_SPEEX_WITH_HEADER_BYTE":
-		*e = GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum(s)
+		*e = GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum: %v", v)
 	}
 }
 
@@ -59,12 +63,16 @@ const (
 	GoogleCloudDialogflowV2InputAudioConfigModelVariantEnumUseEnhanced                   GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum = "USE_ENHANCED"
 )
 
+func (e GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum) ToPointer() *GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SPEECH_MODEL_VARIANT_UNSPECIFIED":
 		fallthrough
 	case "USE_BEST_AVAILABLE":
@@ -72,10 +80,10 @@ func (e *GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum) UnmarshalJSON(
 	case "USE_STANDARD":
 		fallthrough
 	case "USE_ENHANCED":
-		*e = GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum(s)
+		*e = GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2InputAudioConfigModelVariantEnum: %v", v)
 	}
 }
 
@@ -85,6 +93,8 @@ type GoogleCloudDialogflowV2InputAudioConfig struct {
 	AudioEncoding *GoogleCloudDialogflowV2InputAudioConfigAudioEncodingEnum `json:"audioEncoding,omitempty"`
 	// Only used in Participants.AnalyzeContent and Participants.StreamingAnalyzeContent. If `false` and recognition doesn't return any result, trigger `NO_SPEECH_RECOGNIZED` event to Dialogflow agent.
 	DisableNoSpeechRecognizedEvent *bool `json:"disableNoSpeechRecognizedEvent,omitempty"`
+	// Enable automatic punctuation option at the speech backend.
+	EnableAutomaticPunctuation *bool `json:"enableAutomaticPunctuation,omitempty"`
 	// If `true`, Dialogflow returns SpeechWordInfo in StreamingRecognitionResult with information about the recognized speech words, e.g. start and end time offsets. If false or unspecified, Speech doesn't return any word-level information.
 	EnableWordInfo *bool `json:"enableWordInfo,omitempty"`
 	// Required. The language of the supplied audio. Dialogflow does not do translations. See [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.

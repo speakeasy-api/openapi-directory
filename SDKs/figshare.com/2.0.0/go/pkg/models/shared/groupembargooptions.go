@@ -16,21 +16,25 @@ const (
 	GroupEmbargoOptionsTypeEnumAdministrator GroupEmbargoOptionsTypeEnum = "administrator"
 )
 
+func (e GroupEmbargoOptionsTypeEnum) ToPointer() *GroupEmbargoOptionsTypeEnum {
+	return &e
+}
+
 func (e *GroupEmbargoOptionsTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "logged_in":
 		fallthrough
 	case "ip_range":
 		fallthrough
 	case "administrator":
-		*e = GroupEmbargoOptionsTypeEnum(s)
+		*e = GroupEmbargoOptionsTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupEmbargoOptionsTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GroupEmbargoOptionsTypeEnum: %v", v)
 	}
 }
 

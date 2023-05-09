@@ -13,36 +13,34 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/versionhis
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.VersionhistoryPlatformsChannelsListRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        Fields: "unde",
-        Key: "nulla",
-        OauthToken: "corrupti",
-        PageSize: 847252,
-        PageToken: "vel",
-        Parent: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.Platforms.VersionhistoryPlatformsChannelsList(ctx, req)
+    res, err := s.Platforms.VersionhistoryPlatformsChannelsList(ctx, operations.VersionhistoryPlatformsChannelsListRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        Fields: sdk.String("unde"),
+        Key: sdk.String("nulla"),
+        OauthToken: sdk.String("corrupti"),
+        PageSize: sdk.Int64(847252),
+        PageToken: sdk.String("vel"),
+        Parent: "error",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -58,12 +56,12 @@ func main() {
 ## Available Resources and Operations
 
 
-### Platforms
+### [Platforms](docs/platforms/README.md)
 
-* `VersionhistoryPlatformsChannelsList` - Returns list of channels that are available for a given platform.
-* `VersionhistoryPlatformsChannelsVersionsList` - Returns list of version for the given platform/channel.
-* `VersionhistoryPlatformsChannelsVersionsReleasesList` - Returns list of releases of the given version.
-* `VersionhistoryPlatformsList` - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
+* [VersionhistoryPlatformsChannelsList](docs/platforms/README.md#versionhistoryplatformschannelslist) - Returns list of channels that are available for a given platform.
+* [VersionhistoryPlatformsChannelsVersionsList](docs/platforms/README.md#versionhistoryplatformschannelsversionslist) - Returns list of version for the given platform/channel.
+* [VersionhistoryPlatformsChannelsVersionsReleasesList](docs/platforms/README.md#versionhistoryplatformschannelsversionsreleaseslist) - Returns list of releases of the given version.
+* [VersionhistoryPlatformsList](docs/platforms/README.md#versionhistoryplatformslist) - Returns list of platforms that are available for a given product. The resource "product" has no resource name in its name.
 <!-- End SDK Available Operations -->
 
 ### Maturity

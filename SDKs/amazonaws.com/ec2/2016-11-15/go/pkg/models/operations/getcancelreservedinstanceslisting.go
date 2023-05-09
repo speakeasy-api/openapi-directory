@@ -15,17 +15,21 @@ const (
 	GETCancelReservedInstancesListingActionEnumCancelReservedInstancesListing GETCancelReservedInstancesListingActionEnum = "CancelReservedInstancesListing"
 )
 
+func (e GETCancelReservedInstancesListingActionEnum) ToPointer() *GETCancelReservedInstancesListingActionEnum {
+	return &e
+}
+
 func (e *GETCancelReservedInstancesListingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CancelReservedInstancesListing":
-		*e = GETCancelReservedInstancesListingActionEnum(s)
+		*e = GETCancelReservedInstancesListingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelReservedInstancesListingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelReservedInstancesListingActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETCancelReservedInstancesListingVersionEnumTwoThousandAndSixteen1115 GETCancelReservedInstancesListingVersionEnum = "2016-11-15"
 )
 
+func (e GETCancelReservedInstancesListingVersionEnum) ToPointer() *GETCancelReservedInstancesListingVersionEnum {
+	return &e
+}
+
 func (e *GETCancelReservedInstancesListingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETCancelReservedInstancesListingVersionEnum(s)
+		*e = GETCancelReservedInstancesListingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETCancelReservedInstancesListingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETCancelReservedInstancesListingVersionEnum: %v", v)
 	}
 }
 

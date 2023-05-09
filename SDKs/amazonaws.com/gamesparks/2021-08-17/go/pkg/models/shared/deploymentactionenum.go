@@ -14,18 +14,22 @@ const (
 	DeploymentActionEnumUndeploy DeploymentActionEnum = "UNDEPLOY"
 )
 
+func (e DeploymentActionEnum) ToPointer() *DeploymentActionEnum {
+	return &e
+}
+
 func (e *DeploymentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEPLOY":
 		fallthrough
 	case "UNDEPLOY":
-		*e = DeploymentActionEnum(s)
+		*e = DeploymentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeploymentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for DeploymentActionEnum: %v", v)
 	}
 }

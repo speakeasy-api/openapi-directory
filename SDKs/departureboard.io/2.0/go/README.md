@@ -13,30 +13,27 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/departureboard.io/2.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetArrivalsAndDeparturesByCRSRequest{
+    ctx := context.Background()
+    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCRS(ctx, operations.GetArrivalsAndDeparturesByCRSRequest{
         Crs: "corrupti",
         APIKey: "provident",
-        FilterStation: "distinctio",
-        FilterType: "quibusdam",
-        NumServices: 602763,
-        ServiceDetails: false,
-        TimeOffset: 857946,
-        TimeWindow: 544883,
-    }
-
-    ctx := context.Background()
-    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCRS(ctx, req)
+        FilterStation: sdk.String("distinctio"),
+        FilterType: sdk.String("quibusdam"),
+        NumServices: sdk.Int64(602763),
+        ServiceDetails: sdk.Bool(false),
+        TimeOffset: sdk.Int64(857946),
+        TimeWindow: sdk.Int64(544883),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -52,20 +49,20 @@ func main() {
 ## Available Resources and Operations
 
 
-### DeparturesAndArrivals
+### [DeparturesAndArrivals](docs/departuresandarrivals/README.md)
 
-* `GetArrivalsAndDeparturesByCRS` - getArrivalsAndDeparturesByCRS is used to get a list of services arriving to and departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
-* `GetArrivalsByCRS` - getArrivalsByCRS is used to get a list of services arriving to a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
-* `GetDeparturesByCRS` - getDeparturesByCRS is used to get a list of services departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
+* [GetArrivalsAndDeparturesByCRS](docs/departuresandarrivals/README.md#getarrivalsanddeparturesbycrs) - getArrivalsAndDeparturesByCRS is used to get a list of services arriving to and departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
+* [GetArrivalsByCRS](docs/departuresandarrivals/README.md#getarrivalsbycrs) - getArrivalsByCRS is used to get a list of services arriving to a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
+* [GetDeparturesByCRS](docs/departuresandarrivals/README.md#getdeparturesbycrs) - getDeparturesByCRS is used to get a list of services departing from a UK train station by the CRS (Computer Reservation System) code. This will typically return a list of train services, but will also return any replacement bus or ferry services that are in place.
 
-### FastestAndNextDepartures
+### [FastestAndNextDepartures](docs/fastestandnextdepartures/README.md)
 
-* `GetFastestDeparturesByCRS` - getFastestDeparturesByCRS is used to get the fastest next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place.
-* `GetNextDeparturesByCRS` - getNextDeparturesByCRS is used to get the next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place. This will return the next departures for each of the filterList stations specified. It may not return the fastest next service. To get the fastest next service use the getFastestDeparturesByCRS endpoint.
+* [GetFastestDeparturesByCRS](docs/fastestandnextdepartures/README.md#getfastestdeparturesbycrs) - getFastestDeparturesByCRS is used to get the fastest next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place.
+* [GetNextDeparturesByCRS](docs/fastestandnextdepartures/README.md#getnextdeparturesbycrs) - getNextDeparturesByCRS is used to get the next service running between two stations. Multiple destinations can be specified. This will typically return a single train service, but will also return a replacement bus or ferry service if in place. This will return the next departures for each of the filterList stations specified. It may not return the fastest next service. To get the fastest next service use the getFastestDeparturesByCRS endpoint.
 
-### ServiceInformation
+### [ServiceInformation](docs/serviceinformation/README.md)
 
-* `GetServiceDetailsByID` - getServiceDetailsByID is used to get information on a service, by the Service ID. This will typically return a train service, but will also return a bus and ferry services. The Service ID must be provided in the serviceIDUrlSafe format that is provided in the response for Arrival and Departure Boards. A service ID is specific to a station, and can only be looked up for a short time after a train/bus/ferry arrives at, or departs from a station. This is a National Rail limitation.
+* [GetServiceDetailsByID](docs/serviceinformation/README.md#getservicedetailsbyid) - getServiceDetailsByID is used to get information on a service, by the Service ID. This will typically return a train service, but will also return a bus and ferry services. The Service ID must be provided in the serviceIDUrlSafe format that is provided in the response for Arrival and Departure Boards. A service ID is specific to a station, and can only be looked up for a short time after a train/bus/ferry arrives at, or departs from a station. This is a National Rail limitation.
 <!-- End SDK Available Operations -->
 
 ### Maturity

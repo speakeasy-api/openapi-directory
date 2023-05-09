@@ -42,7 +42,10 @@ func newMovieCast(defaultClient, securityClient HTTPClient, serverURL, language,
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *movieCast) MovieCastSearchRead(ctx context.Context, request operations.MovieCastSearchReadRequest) (*operations.MovieCastSearchReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/movie-cast/search/{movie_title}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/movie-cast/search/{movie_title}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *movieCast) MovieCastSearchRead(ctx context.Context, request operations.
 // [ref]: https://etmdb.com/en/movie-list/-updated_date
 func (s *movieCast) MovieCastSearchallRead(ctx context.Context, request operations.MovieCastSearchallReadRequest) (*operations.MovieCastSearchallReadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v1/movie-cast/searchall/{param}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v1/movie-cast/searchall/{param}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

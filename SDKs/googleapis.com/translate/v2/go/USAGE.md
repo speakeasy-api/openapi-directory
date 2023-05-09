@@ -2,19 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LanguageDetectionsDetectRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Detections.LanguageDetectionsDetect(ctx, operations.LanguageDetectionsDetectRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         DetectLanguageRequest: &shared.DetectLanguageRequest{
             Q: []string{
                 "distinctio",
@@ -22,22 +23,19 @@ func main() {
                 "unde",
             },
         },
-        AccessToken: "nulla",
-        Alt: "media",
-        BearerToken: "illum",
-        Callback: "vel",
-        Fields: "error",
-        Key: "deserunt",
-        OauthToken: "suscipit",
-        Pp: false,
-        PrettyPrint: false,
-        QuotaUser: "iure",
-        UploadType: "magnam",
-        UploadProtocol: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Detections.LanguageDetectionsDetect(ctx, req, operations.LanguageDetectionsDetectSecurity{
+        AccessToken: sdk.String("nulla"),
+        Alt: shared.AltEnumMedia.ToPointer(),
+        BearerToken: sdk.String("illum"),
+        Callback: sdk.String("vel"),
+        Fields: sdk.String("error"),
+        Key: sdk.String("deserunt"),
+        OauthToken: sdk.String("suscipit"),
+        Pp: sdk.Bool(false),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("iure"),
+        UploadType: sdk.String("magnam"),
+        UploadProtocol: sdk.String("debitis"),
+    }, operations.LanguageDetectionsDetectSecurity{
         Option1: &operations.LanguageDetectionsDetectSecurityOption1{
             Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
             Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",

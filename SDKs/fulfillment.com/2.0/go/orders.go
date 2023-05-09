@@ -37,7 +37,10 @@ func newOrders(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Request an order is canceled to prevent shipment.
 func (s *orders) DeleteOrdersID(ctx context.Context, request operations.DeleteOrdersIDRequest, security operations.DeleteOrdersIDSecurity) (*operations.DeleteOrdersIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -152,7 +155,10 @@ func (s *orders) GetOrders(ctx context.Context, request operations.GetOrdersRequ
 // For the fastest results use the FDC provided `id` however you can use your `merchantOrderId` as the `id`.
 func (s *orders) GetOrder(ctx context.Context, request operations.GetOrderRequest, security operations.GetOrderSecurity) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orders/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

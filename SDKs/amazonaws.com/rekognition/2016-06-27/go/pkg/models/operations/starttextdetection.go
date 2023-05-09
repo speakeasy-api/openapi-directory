@@ -16,17 +16,21 @@ const (
 	StartTextDetectionXAmzTargetEnumRekognitionServiceStartTextDetection StartTextDetectionXAmzTargetEnum = "RekognitionService.StartTextDetection"
 )
 
+func (e StartTextDetectionXAmzTargetEnum) ToPointer() *StartTextDetectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *StartTextDetectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.StartTextDetection":
-		*e = StartTextDetectionXAmzTargetEnum(s)
+		*e = StartTextDetectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartTextDetectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StartTextDetectionXAmzTargetEnum: %v", v)
 	}
 }
 

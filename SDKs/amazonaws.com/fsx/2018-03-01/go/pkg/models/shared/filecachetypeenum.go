@@ -13,16 +13,20 @@ const (
 	FileCacheTypeEnumLustre FileCacheTypeEnum = "LUSTRE"
 )
 
+func (e FileCacheTypeEnum) ToPointer() *FileCacheTypeEnum {
+	return &e
+}
+
 func (e *FileCacheTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LUSTRE":
-		*e = FileCacheTypeEnum(s)
+		*e = FileCacheTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FileCacheTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FileCacheTypeEnum: %v", v)
 	}
 }

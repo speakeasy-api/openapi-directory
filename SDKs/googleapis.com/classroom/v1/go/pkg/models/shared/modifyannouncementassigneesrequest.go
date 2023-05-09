@@ -16,21 +16,25 @@ const (
 	ModifyAnnouncementAssigneesRequestAssigneeModeEnumIndividualStudents      ModifyAnnouncementAssigneesRequestAssigneeModeEnum = "INDIVIDUAL_STUDENTS"
 )
 
+func (e ModifyAnnouncementAssigneesRequestAssigneeModeEnum) ToPointer() *ModifyAnnouncementAssigneesRequestAssigneeModeEnum {
+	return &e
+}
+
 func (e *ModifyAnnouncementAssigneesRequestAssigneeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASSIGNEE_MODE_UNSPECIFIED":
 		fallthrough
 	case "ALL_STUDENTS":
 		fallthrough
 	case "INDIVIDUAL_STUDENTS":
-		*e = ModifyAnnouncementAssigneesRequestAssigneeModeEnum(s)
+		*e = ModifyAnnouncementAssigneesRequestAssigneeModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModifyAnnouncementAssigneesRequestAssigneeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModifyAnnouncementAssigneesRequestAssigneeModeEnum: %v", v)
 	}
 }
 

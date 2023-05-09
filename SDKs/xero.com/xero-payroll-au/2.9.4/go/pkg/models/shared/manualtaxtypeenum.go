@@ -17,12 +17,16 @@ const (
 	ManualTaxTypeEnumSchedule5Stslmanual ManualTaxTypeEnum = "SCHEDULE5STSLMANUAL"
 )
 
+func (e ManualTaxTypeEnum) ToPointer() *ManualTaxTypeEnum {
+	return &e
+}
+
 func (e *ManualTaxTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PAYGMANUAL":
 		fallthrough
 	case "ETPOMANUAL":
@@ -32,9 +36,9 @@ func (e *ManualTaxTypeEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULE5MANUAL":
 		fallthrough
 	case "SCHEDULE5STSLMANUAL":
-		*e = ManualTaxTypeEnum(s)
+		*e = ManualTaxTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManualTaxTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ManualTaxTypeEnum: %v", v)
 	}
 }

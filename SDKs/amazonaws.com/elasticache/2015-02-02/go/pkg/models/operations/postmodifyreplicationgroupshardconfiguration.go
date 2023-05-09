@@ -15,17 +15,21 @@ const (
 	POSTModifyReplicationGroupShardConfigurationActionEnumModifyReplicationGroupShardConfiguration POSTModifyReplicationGroupShardConfigurationActionEnum = "ModifyReplicationGroupShardConfiguration"
 )
 
+func (e POSTModifyReplicationGroupShardConfigurationActionEnum) ToPointer() *POSTModifyReplicationGroupShardConfigurationActionEnum {
+	return &e
+}
+
 func (e *POSTModifyReplicationGroupShardConfigurationActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyReplicationGroupShardConfiguration":
-		*e = POSTModifyReplicationGroupShardConfigurationActionEnum(s)
+		*e = POSTModifyReplicationGroupShardConfigurationActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyReplicationGroupShardConfigurationActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyReplicationGroupShardConfigurationActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTModifyReplicationGroupShardConfigurationVersionEnumTwoThousandAndFifteen0202 POSTModifyReplicationGroupShardConfigurationVersionEnum = "2015-02-02"
 )
 
+func (e POSTModifyReplicationGroupShardConfigurationVersionEnum) ToPointer() *POSTModifyReplicationGroupShardConfigurationVersionEnum {
+	return &e
+}
+
 func (e *POSTModifyReplicationGroupShardConfigurationVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2015-02-02":
-		*e = POSTModifyReplicationGroupShardConfigurationVersionEnum(s)
+		*e = POSTModifyReplicationGroupShardConfigurationVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTModifyReplicationGroupShardConfigurationVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTModifyReplicationGroupShardConfigurationVersionEnum: %v", v)
 	}
 }
 

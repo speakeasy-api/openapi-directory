@@ -4,7 +4,14 @@ package operations
 
 import (
 	"net/http"
+	"openapi/pkg/models/shared"
 )
+
+type GetAddonLinkersSecurity struct {
+	APIKey *string             `security:"scheme,type=apiKey,subtype=header,name=Authorization"`
+	Basic  *shared.SchemeBasic `security:"scheme,type=http,subtype=basic"`
+	Oauth2 *string             `security:"scheme,type=oauth2,name=Authorization"`
+}
 
 type GetAddonLinkersResponse struct {
 	ContentType string

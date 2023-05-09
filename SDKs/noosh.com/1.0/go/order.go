@@ -36,7 +36,10 @@ func newOrder(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Get a specific buy order
 func (s *order) GetBuyOrder(ctx context.Context, request operations.GetBuyOrderRequest) (*operations.GetBuyOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *order) GetBuyOrder(ctx context.Context, request operations.GetBuyOrderR
 // List the buy orders
 func (s *order) GetBuyOrderList(ctx context.Context, request operations.GetBuyOrderListRequest) (*operations.GetBuyOrderListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -346,7 +352,10 @@ func (s *order) GetBuyOrderList(ctx context.Context, request operations.GetBuyOr
 // List the buy orders of workgroup
 func (s *order) GetBuyOrderListOfWorkgroup(ctx context.Context, request operations.GetBuyOrderListOfWorkgroupRequest) (*operations.GetBuyOrderListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/buyOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/buyOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +510,10 @@ func (s *order) GetBuyOrderListOfWorkgroup(ctx context.Context, request operatio
 // Get a specific buy order of workgroup
 func (s *order) GetBuyOrderOfWorkgroup(ctx context.Context, request operations.GetBuyOrderOfWorkgroupRequest) (*operations.GetBuyOrderOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/buyOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/buyOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -656,7 +668,10 @@ func (s *order) GetBuyOrderOfWorkgroup(ctx context.Context, request operations.G
 // Get a specific buy/sell order
 func (s *order) GetOrder(ctx context.Context, request operations.GetOrderRequest) (*operations.GetOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/orders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/orders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -811,7 +826,10 @@ func (s *order) GetOrder(ctx context.Context, request operations.GetOrderRequest
 // Get a specific sell order
 func (s *order) GetSellOrder(ctx context.Context, request operations.GetSellOrderRequest) (*operations.GetSellOrderResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -966,7 +984,10 @@ func (s *order) GetSellOrder(ctx context.Context, request operations.GetSellOrde
 // List the sell orders
 func (s *order) GetSellOrderList(ctx context.Context, request operations.GetSellOrderListRequest) (*operations.GetSellOrderListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1121,7 +1142,10 @@ func (s *order) GetSellOrderList(ctx context.Context, request operations.GetSell
 // List the sell orders of workgrop
 func (s *order) GetSellOrderListOfWorkgroup(ctx context.Context, request operations.GetSellOrderListOfWorkgroupRequest) (*operations.GetSellOrderListOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/sellOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/sellOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1276,7 +1300,10 @@ func (s *order) GetSellOrderListOfWorkgroup(ctx context.Context, request operati
 // Get a specific sell order
 func (s *order) GetSellOrderOfWorkgroup(ctx context.Context, request operations.GetSellOrderOfWorkgroupRequest) (*operations.GetSellOrderOfWorkgroupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/sellOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/sellOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1431,7 +1458,10 @@ func (s *order) GetSellOrderOfWorkgroup(ctx context.Context, request operations.
 // Create a quick buy order
 func (s *order) PostBuyOrderJSON(ctx context.Context, request operations.PostBuyOrderJSONRequest) (*operations.PostBuyOrderJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderPO", "json")
 	if err != nil {
@@ -1593,7 +1623,10 @@ func (s *order) PostBuyOrderJSON(ctx context.Context, request operations.PostBuy
 // Create a quick buy order
 func (s *order) PostBuyOrderRaw(ctx context.Context, request operations.PostBuyOrderRawRequest) (*operations.PostBuyOrderRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -1755,7 +1788,10 @@ func (s *order) PostBuyOrderRaw(ctx context.Context, request operations.PostBuyO
 // Update a specific buy order
 func (s *order) PutBuyOrderJSON(ctx context.Context, request operations.PutBuyOrderJSONRequest) (*operations.PutBuyOrderJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderUpdPersistVO", "json")
 	if err != nil {
@@ -1917,7 +1953,10 @@ func (s *order) PutBuyOrderJSON(ctx context.Context, request operations.PutBuyOr
 // Update a specific buy order
 func (s *order) PutBuyOrderRaw(ctx context.Context, request operations.PutBuyOrderRawRequest) (*operations.PutBuyOrderRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/buyOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -2079,7 +2118,10 @@ func (s *order) PutBuyOrderRaw(ctx context.Context, request operations.PutBuyOrd
 // Update / Accept or Reject a specific sell order
 func (s *order) PutSellOrderJSON(ctx context.Context, request operations.PutSellOrderJSONRequest) (*operations.PutSellOrderJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "OrderUpdPersistVO", "json")
 	if err != nil {
@@ -2241,7 +2283,10 @@ func (s *order) PutSellOrderJSON(ctx context.Context, request operations.PutSell
 // Update / Accept or Reject a specific sell order
 func (s *order) PutSellOrderRaw(ctx context.Context, request operations.PutSellOrderRawRequest) (*operations.PutSellOrderRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projects/{project_id}/sellOrders/{order_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {

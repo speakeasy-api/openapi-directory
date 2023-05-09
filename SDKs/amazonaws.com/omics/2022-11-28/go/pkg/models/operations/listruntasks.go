@@ -22,12 +22,16 @@ const (
 	ListRunTasksStatusEnumFailed    ListRunTasksStatusEnum = "FAILED"
 )
 
+func (e ListRunTasksStatusEnum) ToPointer() *ListRunTasksStatusEnum {
+	return &e
+}
+
 func (e *ListRunTasksStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "STARTING":
@@ -41,10 +45,10 @@ func (e *ListRunTasksStatusEnum) UnmarshalJSON(data []byte) error {
 	case "CANCELLED":
 		fallthrough
 	case "FAILED":
-		*e = ListRunTasksStatusEnum(s)
+		*e = ListRunTasksStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListRunTasksStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ListRunTasksStatusEnum: %v", v)
 	}
 }
 

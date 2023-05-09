@@ -14,18 +14,22 @@ const (
 	PeriodAlignmentEnumStartTime PeriodAlignmentEnum = "START_TIME"
 )
 
+func (e PeriodAlignmentEnum) ToPointer() *PeriodAlignmentEnum {
+	return &e
+}
+
 func (e *PeriodAlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "END_TIME":
 		fallthrough
 	case "START_TIME":
-		*e = PeriodAlignmentEnum(s)
+		*e = PeriodAlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PeriodAlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for PeriodAlignmentEnum: %v", v)
 	}
 }

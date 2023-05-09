@@ -16,17 +16,21 @@ const (
 	DeleteLabelXAmzTargetEnumAwsLookoutEquipmentFrontendServiceDeleteLabel DeleteLabelXAmzTargetEnum = "AWSLookoutEquipmentFrontendService.DeleteLabel"
 )
 
+func (e DeleteLabelXAmzTargetEnum) ToPointer() *DeleteLabelXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteLabelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLookoutEquipmentFrontendService.DeleteLabel":
-		*e = DeleteLabelXAmzTargetEnum(s)
+		*e = DeleteLabelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteLabelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteLabelXAmzTargetEnum: %v", v)
 	}
 }
 

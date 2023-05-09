@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type SnowExportAssetsJSONSecurity struct {
+	BearerAuth string `security:"scheme,type=http,subtype=bearer,name=Authorization"`
+}
+
 type SnowExportAssetsJSONResponse struct {
 	// filtered asset results
 	AssetServiceNows []shared.AssetServiceNow

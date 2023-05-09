@@ -25,12 +25,16 @@ const (
 	PagespeedonlinePagespeedapiRunpagespeedCategoryEnumSeo                 PagespeedonlinePagespeedapiRunpagespeedCategoryEnum = "SEO"
 )
 
+func (e PagespeedonlinePagespeedapiRunpagespeedCategoryEnum) ToPointer() *PagespeedonlinePagespeedapiRunpagespeedCategoryEnum {
+	return &e
+}
+
 func (e *PagespeedonlinePagespeedapiRunpagespeedCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "ACCESSIBILITY":
@@ -42,10 +46,10 @@ func (e *PagespeedonlinePagespeedapiRunpagespeedCategoryEnum) UnmarshalJSON(data
 	case "PWA":
 		fallthrough
 	case "SEO":
-		*e = PagespeedonlinePagespeedapiRunpagespeedCategoryEnum(s)
+		*e = PagespeedonlinePagespeedapiRunpagespeedCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PagespeedonlinePagespeedapiRunpagespeedCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PagespeedonlinePagespeedapiRunpagespeedCategoryEnum: %v", v)
 	}
 }
 
@@ -58,21 +62,25 @@ const (
 	PagespeedonlinePagespeedapiRunpagespeedStrategyEnumMobile              PagespeedonlinePagespeedapiRunpagespeedStrategyEnum = "MOBILE"
 )
 
+func (e PagespeedonlinePagespeedapiRunpagespeedStrategyEnum) ToPointer() *PagespeedonlinePagespeedapiRunpagespeedStrategyEnum {
+	return &e
+}
+
 func (e *PagespeedonlinePagespeedapiRunpagespeedStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STRATEGY_UNSPECIFIED":
 		fallthrough
 	case "DESKTOP":
 		fallthrough
 	case "MOBILE":
-		*e = PagespeedonlinePagespeedapiRunpagespeedStrategyEnum(s)
+		*e = PagespeedonlinePagespeedapiRunpagespeedStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PagespeedonlinePagespeedapiRunpagespeedStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for PagespeedonlinePagespeedapiRunpagespeedStrategyEnum: %v", v)
 	}
 }
 

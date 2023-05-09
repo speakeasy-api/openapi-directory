@@ -16,12 +16,16 @@ const (
 	TransactionStatusEnumCommitInProgress TransactionStatusEnum = "COMMIT_IN_PROGRESS"
 )
 
+func (e TransactionStatusEnum) ToPointer() *TransactionStatusEnum {
+	return &e
+}
+
 func (e *TransactionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACTIVE":
 		fallthrough
 	case "COMMITTED":
@@ -29,9 +33,9 @@ func (e *TransactionStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ABORTED":
 		fallthrough
 	case "COMMIT_IN_PROGRESS":
-		*e = TransactionStatusEnum(s)
+		*e = TransactionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransactionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for TransactionStatusEnum: %v", v)
 	}
 }

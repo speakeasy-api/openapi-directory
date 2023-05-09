@@ -16,12 +16,16 @@ const (
 	AuditFindingSeverityEnumLow      AuditFindingSeverityEnum = "LOW"
 )
 
+func (e AuditFindingSeverityEnum) ToPointer() *AuditFindingSeverityEnum {
+	return &e
+}
+
 func (e *AuditFindingSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "HIGH":
@@ -29,9 +33,9 @@ func (e *AuditFindingSeverityEnum) UnmarshalJSON(data []byte) error {
 	case "MEDIUM":
 		fallthrough
 	case "LOW":
-		*e = AuditFindingSeverityEnum(s)
+		*e = AuditFindingSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditFindingSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditFindingSeverityEnum: %v", v)
 	}
 }

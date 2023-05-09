@@ -13,71 +13,66 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/firebaseml
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.FirebasemlProjectsModelsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Projects.FirebasemlProjectsModelsCreate(ctx, operations.FirebasemlProjectsModelsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         ModelInput: &shared.ModelInput{
-            DisplayName: "provident",
-            Name: "distinctio",
+            DisplayName: sdk.String("provident"),
+            Name: sdk.String("Ellis Mitchell"),
             State: &shared.ModelState{
-                Published: false,
+                Published: sdk.Bool(false),
                 ValidationError: &shared.Status{
-                    Code: 844266,
+                    Code: sdk.Int(847252),
                     Details: []map[string]interface{}{
                         map[string]interface{}{
-                            "corrupti": "illum",
-                            "vel": "error",
                             "deserunt": "suscipit",
                             "iure": "magnam",
+                            "debitis": "ipsa",
                         },
                         map[string]interface{}{
-                            "ipsa": "delectus",
                             "tempora": "suscipit",
                             "molestiae": "minus",
                             "placeat": "voluptatum",
-                        },
-                        map[string]interface{}{
-                            "excepturi": "nisi",
-                            "recusandae": "temporibus",
+                            "iusto": "excepturi",
                         },
                     },
-                    Message: "ab",
+                    Message: sdk.String("nisi"),
                 },
             },
             Tags: []string{
+                "temporibus",
+                "ab",
+                "quis",
                 "veritatis",
-                "deserunt",
             },
             TfliteModel: &shared.TfLiteModelInput{
-                AutomlModel: "perferendis",
-                GcsTfliteURI: "ipsam",
+                AutomlModel: sdk.String("deserunt"),
+                GcsTfliteURI: sdk.String("perferendis"),
             },
         },
-        AccessToken: "repellendus",
-        Alt: "proto",
-        Callback: "quo",
-        Fields: "odit",
-        Key: "at",
-        OauthToken: "at",
-        Parent: "maiores",
-        PrettyPrint: false,
-        QuotaUser: "molestiae",
-        UploadType: "quod",
-        UploadProtocol: "quod",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.FirebasemlProjectsModelsCreate(ctx, req, operations.FirebasemlProjectsModelsCreateSecurity{
+        AccessToken: sdk.String("ipsam"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("sapiente"),
+        Fields: sdk.String("quo"),
+        Key: sdk.String("odit"),
+        OauthToken: sdk.String("at"),
+        Parent: "at",
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("maiores"),
+        UploadType: sdk.String("molestiae"),
+        UploadProtocol: sdk.String("quod"),
+    }, operations.FirebasemlProjectsModelsCreateSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -96,14 +91,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Projects
+### [Projects](docs/projects/README.md)
 
-* `FirebasemlProjectsModelsCreate` - Creates a model in Firebase ML. The longrunning operation will eventually return a Model
-* `FirebasemlProjectsModelsDelete` - Deletes a model
-* `FirebasemlProjectsModelsDownload` - Gets Download information for a model. This is meant for downloading model resources onto devices. It gives very limited information about the model.
-* `FirebasemlProjectsModelsList` - Lists the models
-* `FirebasemlProjectsModelsPatch` - Updates a model. The longrunning operation will eventually return a Model.
-* `FirebasemlProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [FirebasemlProjectsModelsCreate](docs/projects/README.md#firebasemlprojectsmodelscreate) - Creates a model in Firebase ML. The longrunning operation will eventually return a Model
+* [FirebasemlProjectsModelsDelete](docs/projects/README.md#firebasemlprojectsmodelsdelete) - Deletes a model
+* [FirebasemlProjectsModelsDownload](docs/projects/README.md#firebasemlprojectsmodelsdownload) - Gets Download information for a model. This is meant for downloading model resources onto devices. It gives very limited information about the model.
+* [FirebasemlProjectsModelsList](docs/projects/README.md#firebasemlprojectsmodelslist) - Lists the models
+* [FirebasemlProjectsModelsPatch](docs/projects/README.md#firebasemlprojectsmodelspatch) - Updates a model. The longrunning operation will eventually return a Model.
+* [FirebasemlProjectsOperationsGet](docs/projects/README.md#firebasemlprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

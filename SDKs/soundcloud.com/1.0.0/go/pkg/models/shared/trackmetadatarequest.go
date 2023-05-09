@@ -16,21 +16,25 @@ const (
 	TrackMetadataRequestTrackEmbeddableByEnumNone TrackMetadataRequestTrackEmbeddableByEnum = "none"
 )
 
+func (e TrackMetadataRequestTrackEmbeddableByEnum) ToPointer() *TrackMetadataRequestTrackEmbeddableByEnum {
+	return &e
+}
+
 func (e *TrackMetadataRequestTrackEmbeddableByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "me":
 		fallthrough
 	case "none":
-		*e = TrackMetadataRequestTrackEmbeddableByEnum(s)
+		*e = TrackMetadataRequestTrackEmbeddableByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackMetadataRequestTrackEmbeddableByEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackMetadataRequestTrackEmbeddableByEnum: %v", v)
 	}
 }
 
@@ -48,12 +52,16 @@ const (
 	TrackMetadataRequestTrackLicenseEnumCcByNcSa          TrackMetadataRequestTrackLicenseEnum = "cc-by-nc-sa"
 )
 
+func (e TrackMetadataRequestTrackLicenseEnum) ToPointer() *TrackMetadataRequestTrackLicenseEnum {
+	return &e
+}
+
 func (e *TrackMetadataRequestTrackLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "no-rights-reserved":
 		fallthrough
 	case "all-rights-reserved":
@@ -69,10 +77,10 @@ func (e *TrackMetadataRequestTrackLicenseEnum) UnmarshalJSON(data []byte) error 
 	case "cc-by-nc-nd":
 		fallthrough
 	case "cc-by-nc-sa":
-		*e = TrackMetadataRequestTrackLicenseEnum(s)
+		*e = TrackMetadataRequestTrackLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackMetadataRequestTrackLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackMetadataRequestTrackLicenseEnum: %v", v)
 	}
 }
 
@@ -83,19 +91,23 @@ const (
 	TrackMetadataRequestTrackSharingEnumPrivate TrackMetadataRequestTrackSharingEnum = "private"
 )
 
+func (e TrackMetadataRequestTrackSharingEnum) ToPointer() *TrackMetadataRequestTrackSharingEnum {
+	return &e
+}
+
 func (e *TrackMetadataRequestTrackSharingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "public":
 		fallthrough
 	case "private":
-		*e = TrackMetadataRequestTrackSharingEnum(s)
+		*e = TrackMetadataRequestTrackSharingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TrackMetadataRequestTrackSharingEnum: %s", s)
+		return fmt.Errorf("invalid value for TrackMetadataRequestTrackSharingEnum: %v", v)
 	}
 }
 

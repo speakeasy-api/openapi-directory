@@ -38,7 +38,10 @@ func newMigrations(defaultClient, securityClient HTTPClient, serverURL, language
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#delete-an-organization-migration-archive - API method documentation
 func (s *migrations) MigrationsDeleteArchiveForOrg(ctx context.Context, request operations.MigrationsDeleteArchiveForOrgRequest) (*operations.MigrationsDeleteArchiveForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -85,7 +88,10 @@ func (s *migrations) MigrationsDeleteArchiveForOrg(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#download-an-organization-migration-archive - API method documentation
 func (s *migrations) MigrationsDownloadArchiveForOrg(ctx context.Context, request operations.MigrationsDownloadArchiveForOrgRequest) (*operations.MigrationsDownloadArchiveForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -152,7 +158,10 @@ func (s *migrations) MigrationsDownloadArchiveForOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/users#download-a-user-migration-archive - API method documentation
 func (s *migrations) MigrationsGetArchiveForAuthenticatedUser(ctx context.Context, request operations.MigrationsGetArchiveForAuthenticatedUserRequest) (*operations.MigrationsGetArchiveForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/archive", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -210,7 +219,10 @@ func (s *migrations) MigrationsGetArchiveForAuthenticatedUser(ctx context.Contex
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#get-an-organization-migration-status - API method documentation
 func (s *migrations) MigrationsGetStatusForOrg(ctx context.Context, request operations.MigrationsGetStatusForOrgRequest) (*operations.MigrationsGetStatusForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -337,7 +349,10 @@ func (s *migrations) MigrationsListForAuthenticatedUser(ctx context.Context, req
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#list-organization-migrations - API method documentation
 func (s *migrations) MigrationsListForOrg(ctx context.Context, request operations.MigrationsListForOrgRequest) (*operations.MigrationsListForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -389,7 +404,10 @@ func (s *migrations) MigrationsListForOrg(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/users#list-repositories-for-a-user-migration - API method documentation
 func (s *migrations) MigrationsListReposForAuthenticatedUser(ctx context.Context, request operations.MigrationsListReposForAuthenticatedUserRequest) (*operations.MigrationsListReposForAuthenticatedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/user/migrations/{migration_id}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -451,7 +469,10 @@ func (s *migrations) MigrationsListReposForAuthenticatedUser(ctx context.Context
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#list-repositories-in-an-organization-migration - API method documentation
 func (s *migrations) MigrationsListReposForOrg(ctx context.Context, request operations.MigrationsListReposForOrgRequest) (*operations.MigrationsListReposForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -592,7 +613,10 @@ func (s *migrations) MigrationsStartForAuthenticatedUser(ctx context.Context, re
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#start-an-organization-migration - API method documentation
 func (s *migrations) MigrationsStartForOrg(ctx context.Context, request operations.MigrationsStartForOrgRequest) (*operations.MigrationsStartForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -668,7 +692,10 @@ func (s *migrations) MigrationsStartForOrg(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@3.5/rest/migrations/orgs#unlock-an-organization-repository - API method documentation
 func (s *migrations) MigrationsUnlockRepoForOrg(ctx context.Context, request operations.MigrationsUnlockRepoForOrgRequest) (*operations.MigrationsUnlockRepoForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/migrations/{migration_id}/repos/{repo_name}/lock", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

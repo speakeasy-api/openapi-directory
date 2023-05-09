@@ -15,17 +15,21 @@ const (
 	GETPromoteReadReplicaActionEnumPromoteReadReplica GETPromoteReadReplicaActionEnum = "PromoteReadReplica"
 )
 
+func (e GETPromoteReadReplicaActionEnum) ToPointer() *GETPromoteReadReplicaActionEnum {
+	return &e
+}
+
 func (e *GETPromoteReadReplicaActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PromoteReadReplica":
-		*e = GETPromoteReadReplicaActionEnum(s)
+		*e = GETPromoteReadReplicaActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPromoteReadReplicaActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPromoteReadReplicaActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETPromoteReadReplicaVersionEnumTwoThousandAndFourteen1031 GETPromoteReadReplicaVersionEnum = "2014-10-31"
 )
 
+func (e GETPromoteReadReplicaVersionEnum) ToPointer() *GETPromoteReadReplicaVersionEnum {
+	return &e
+}
+
 func (e *GETPromoteReadReplicaVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2014-10-31":
-		*e = GETPromoteReadReplicaVersionEnum(s)
+		*e = GETPromoteReadReplicaVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETPromoteReadReplicaVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETPromoteReadReplicaVersionEnum: %v", v)
 	}
 }
 

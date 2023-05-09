@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -18,16 +18,17 @@ func main() {
         }),
     )
 
-    req := operations.InvoiceNotification2Request{
+    ctx := context.Background()
+    res, err := s.Invoice.InvoiceNotification2(ctx, operations.InvoiceNotification2Request{
         Accept: "application/json",
         ContentType: "application/json",
         InvoiceNotificationRequest: shared.InvoiceNotificationRequest{
-            Cfop: "6.104",
-            Courier: "corrupti",
-            ExtraValue: 100,
-            InvoiceKey: "provident",
+            Cfop: sdk.String("6.104"),
+            Courier: sdk.String("corrupti"),
+            ExtraValue: sdk.Int64(100),
+            InvoiceKey: sdk.String("provident"),
             InvoiceNumber: "123456789",
-            InvoiceURL: "distinctio",
+            InvoiceURL: sdk.String("distinctio"),
             InvoiceValue: "2499",
             IssuedDate: "2020-07-15",
             Items: []shared.Item1{
@@ -52,16 +53,13 @@ func main() {
                     Quantity: 3,
                 },
             },
-            TrackingNumber: "unde",
-            TrackingURL: "nulla",
+            TrackingNumber: sdk.String("unde"),
+            TrackingURL: sdk.String("nulla"),
             Type: "Output",
-            Volumes: 3,
+            Volumes: sdk.Int64(3),
         },
         OrderID: "70caf3941s6df1",
-    }
-
-    ctx := context.Background()
-    res, err := s.Invoice.InvoiceNotification2(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

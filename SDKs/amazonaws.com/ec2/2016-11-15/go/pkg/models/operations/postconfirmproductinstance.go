@@ -15,17 +15,21 @@ const (
 	POSTConfirmProductInstanceActionEnumConfirmProductInstance POSTConfirmProductInstanceActionEnum = "ConfirmProductInstance"
 )
 
+func (e POSTConfirmProductInstanceActionEnum) ToPointer() *POSTConfirmProductInstanceActionEnum {
+	return &e
+}
+
 func (e *POSTConfirmProductInstanceActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ConfirmProductInstance":
-		*e = POSTConfirmProductInstanceActionEnum(s)
+		*e = POSTConfirmProductInstanceActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTConfirmProductInstanceActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTConfirmProductInstanceActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTConfirmProductInstanceVersionEnumTwoThousandAndSixteen1115 POSTConfirmProductInstanceVersionEnum = "2016-11-15"
 )
 
+func (e POSTConfirmProductInstanceVersionEnum) ToPointer() *POSTConfirmProductInstanceVersionEnum {
+	return &e
+}
+
 func (e *POSTConfirmProductInstanceVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTConfirmProductInstanceVersionEnum(s)
+		*e = POSTConfirmProductInstanceVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTConfirmProductInstanceVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTConfirmProductInstanceVersionEnum: %v", v)
 	}
 }
 

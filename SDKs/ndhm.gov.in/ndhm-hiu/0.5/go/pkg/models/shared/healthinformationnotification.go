@@ -15,19 +15,23 @@ const (
 	HealthInformationNotificationNotificationNotifierTypeEnumHip HealthInformationNotificationNotificationNotifierTypeEnum = "HIP"
 )
 
+func (e HealthInformationNotificationNotificationNotifierTypeEnum) ToPointer() *HealthInformationNotificationNotificationNotifierTypeEnum {
+	return &e
+}
+
 func (e *HealthInformationNotificationNotificationNotifierTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIU":
 		fallthrough
 	case "HIP":
-		*e = HealthInformationNotificationNotificationNotifierTypeEnum(s)
+		*e = HealthInformationNotificationNotificationNotifierTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationNotifierTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationNotifierTypeEnum: %v", v)
 	}
 }
 
@@ -43,19 +47,23 @@ const (
 	HealthInformationNotificationNotificationStatusNotificationSessionStatusEnumFailed      HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum = "FAILED"
 )
 
+func (e HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum) ToPointer() *HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum {
+	return &e
+}
+
 func (e *HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRANSFERRED":
 		fallthrough
 	case "FAILED":
-		*e = HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum(s)
+		*e = HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationStatusNotificationSessionStatusEnum: %v", v)
 	}
 }
 
@@ -67,21 +75,25 @@ const (
 	HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnumErrored   HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum = "ERRORED"
 )
 
+func (e HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum) ToPointer() *HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum {
+	return &e
+}
+
 func (e *HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERED":
 		fallthrough
 	case "OK":
 		fallthrough
 	case "ERRORED":
-		*e = HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum(s)
+		*e = HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HealthInformationNotificationNotificationStatusNotificationStatusResponsesHiStatusEnum: %v", v)
 	}
 }
 

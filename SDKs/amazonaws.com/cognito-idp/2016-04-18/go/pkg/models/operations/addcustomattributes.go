@@ -16,17 +16,21 @@ const (
 	AddCustomAttributesXAmzTargetEnumAwsCognitoIdentityProviderServiceAddCustomAttributes AddCustomAttributesXAmzTargetEnum = "AWSCognitoIdentityProviderService.AddCustomAttributes"
 )
 
+func (e AddCustomAttributesXAmzTargetEnum) ToPointer() *AddCustomAttributesXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddCustomAttributesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSCognitoIdentityProviderService.AddCustomAttributes":
-		*e = AddCustomAttributesXAmzTargetEnum(s)
+		*e = AddCustomAttributesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddCustomAttributesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddCustomAttributesXAmzTargetEnum: %v", v)
 	}
 }
 

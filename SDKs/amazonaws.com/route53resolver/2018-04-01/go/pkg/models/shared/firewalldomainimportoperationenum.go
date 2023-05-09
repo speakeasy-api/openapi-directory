@@ -13,16 +13,20 @@ const (
 	FirewallDomainImportOperationEnumReplace FirewallDomainImportOperationEnum = "REPLACE"
 )
 
+func (e FirewallDomainImportOperationEnum) ToPointer() *FirewallDomainImportOperationEnum {
+	return &e
+}
+
 func (e *FirewallDomainImportOperationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPLACE":
-		*e = FirewallDomainImportOperationEnum(s)
+		*e = FirewallDomainImportOperationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FirewallDomainImportOperationEnum: %s", s)
+		return fmt.Errorf("invalid value for FirewallDomainImportOperationEnum: %v", v)
 	}
 }

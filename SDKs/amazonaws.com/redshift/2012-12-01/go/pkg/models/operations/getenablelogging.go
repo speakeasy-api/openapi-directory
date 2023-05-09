@@ -15,17 +15,21 @@ const (
 	GETEnableLoggingActionEnumEnableLogging GETEnableLoggingActionEnum = "EnableLogging"
 )
 
+func (e GETEnableLoggingActionEnum) ToPointer() *GETEnableLoggingActionEnum {
+	return &e
+}
+
 func (e *GETEnableLoggingActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EnableLogging":
-		*e = GETEnableLoggingActionEnum(s)
+		*e = GETEnableLoggingActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableLoggingActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableLoggingActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETEnableLoggingLogDestinationTypeEnumCloudwatch GETEnableLoggingLogDestinationTypeEnum = "cloudwatch"
 )
 
+func (e GETEnableLoggingLogDestinationTypeEnum) ToPointer() *GETEnableLoggingLogDestinationTypeEnum {
+	return &e
+}
+
 func (e *GETEnableLoggingLogDestinationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "s3":
 		fallthrough
 	case "cloudwatch":
-		*e = GETEnableLoggingLogDestinationTypeEnum(s)
+		*e = GETEnableLoggingLogDestinationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableLoggingLogDestinationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableLoggingLogDestinationTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETEnableLoggingVersionEnumTwoThousandAndTwelve1201 GETEnableLoggingVersionEnum = "2012-12-01"
 )
 
+func (e GETEnableLoggingVersionEnum) ToPointer() *GETEnableLoggingVersionEnum {
+	return &e
+}
+
 func (e *GETEnableLoggingVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETEnableLoggingVersionEnum(s)
+		*e = GETEnableLoggingVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETEnableLoggingVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETEnableLoggingVersionEnum: %v", v)
 	}
 }
 

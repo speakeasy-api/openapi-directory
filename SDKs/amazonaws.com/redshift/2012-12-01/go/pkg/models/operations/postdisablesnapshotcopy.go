@@ -15,17 +15,21 @@ const (
 	POSTDisableSnapshotCopyActionEnumDisableSnapshotCopy POSTDisableSnapshotCopyActionEnum = "DisableSnapshotCopy"
 )
 
+func (e POSTDisableSnapshotCopyActionEnum) ToPointer() *POSTDisableSnapshotCopyActionEnum {
+	return &e
+}
+
 func (e *POSTDisableSnapshotCopyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DisableSnapshotCopy":
-		*e = POSTDisableSnapshotCopyActionEnum(s)
+		*e = POSTDisableSnapshotCopyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableSnapshotCopyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableSnapshotCopyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDisableSnapshotCopyVersionEnumTwoThousandAndTwelve1201 POSTDisableSnapshotCopyVersionEnum = "2012-12-01"
 )
 
+func (e POSTDisableSnapshotCopyVersionEnum) ToPointer() *POSTDisableSnapshotCopyVersionEnum {
+	return &e
+}
+
 func (e *POSTDisableSnapshotCopyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTDisableSnapshotCopyVersionEnum(s)
+		*e = POSTDisableSnapshotCopyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDisableSnapshotCopyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDisableSnapshotCopyVersionEnum: %v", v)
 	}
 }
 

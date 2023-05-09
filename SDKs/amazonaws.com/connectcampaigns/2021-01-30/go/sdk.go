@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Provide APIs to create and manage Amazon Connect Campaigns.
 // https://docs.aws.amazon.com/connect-campaigns/ - Amazon Web Services documentation
 type SDK struct {
@@ -240,7 +255,10 @@ func (s *SDK) CreateCampaign(ctx context.Context, request operations.CreateCampa
 // DeleteCampaign - Deletes a campaign from the specified Amazon Connect account.
 func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampaignRequest) (*operations.DeleteCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -317,7 +335,10 @@ func (s *SDK) DeleteCampaign(ctx context.Context, request operations.DeleteCampa
 // DeleteConnectInstanceConfig - Deletes a connect instance config from the specified AWS account.
 func (s *SDK) DeleteConnectInstanceConfig(ctx context.Context, request operations.DeleteConnectInstanceConfigRequest) (*operations.DeleteConnectInstanceConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -414,7 +435,10 @@ func (s *SDK) DeleteConnectInstanceConfig(ctx context.Context, request operation
 // DeleteInstanceOnboardingJob - Delete the Connect Campaigns onboarding job for the specified Amazon Connect instance.
 func (s *SDK) DeleteInstanceOnboardingJob(ctx context.Context, request operations.DeleteInstanceOnboardingJobRequest) (*operations.DeleteInstanceOnboardingJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -501,7 +525,10 @@ func (s *SDK) DeleteInstanceOnboardingJob(ctx context.Context, request operation
 // DescribeCampaign - Describes the specific campaign.
 func (s *SDK) DescribeCampaign(ctx context.Context, request operations.DescribeCampaignRequest) (*operations.DescribeCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -587,7 +614,10 @@ func (s *SDK) DescribeCampaign(ctx context.Context, request operations.DescribeC
 // GetCampaignState - Get state of a campaign for the specified Amazon Connect account.
 func (s *SDK) GetCampaignState(ctx context.Context, request operations.GetCampaignStateRequest) (*operations.GetCampaignStateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -779,7 +809,10 @@ func (s *SDK) GetCampaignStateBatch(ctx context.Context, request operations.GetC
 // GetConnectInstanceConfig - Get the specific Connect instance config.
 func (s *SDK) GetConnectInstanceConfig(ctx context.Context, request operations.GetConnectInstanceConfigRequest) (*operations.GetConnectInstanceConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -865,7 +898,10 @@ func (s *SDK) GetConnectInstanceConfig(ctx context.Context, request operations.G
 // GetInstanceOnboardingJobStatus - Get the specific instance onboarding job status.
 func (s *SDK) GetInstanceOnboardingJobStatus(ctx context.Context, request operations.GetInstanceOnboardingJobStatusRequest) (*operations.GetInstanceOnboardingJobStatusResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1041,7 +1077,10 @@ func (s *SDK) ListCampaigns(ctx context.Context, request operations.ListCampaign
 // ListTagsForResource - List tags for a resource.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1137,7 +1176,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 // PauseCampaign - Pauses a campaign for the specified Amazon Connect account.
 func (s *SDK) PauseCampaign(ctx context.Context, request operations.PauseCampaignRequest) (*operations.PauseCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/pause", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/pause", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1244,7 +1286,10 @@ func (s *SDK) PauseCampaign(ctx context.Context, request operations.PauseCampaig
 // PutDialRequestBatch - Creates dials requests for the specified campaign Amazon Connect account. This API is idempotent.
 func (s *SDK) PutDialRequestBatch(ctx context.Context, request operations.PutDialRequestBatchRequest) (*operations.PutDialRequestBatchResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dial-requests", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dial-requests", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1370,7 +1415,10 @@ func (s *SDK) PutDialRequestBatch(ctx context.Context, request operations.PutDia
 // ResumeCampaign - Stops a campaign for the specified Amazon Connect account.
 func (s *SDK) ResumeCampaign(ctx context.Context, request operations.ResumeCampaignRequest) (*operations.ResumeCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/resume", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/resume", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1477,7 +1525,10 @@ func (s *SDK) ResumeCampaign(ctx context.Context, request operations.ResumeCampa
 // StartCampaign - Starts a campaign for the specified Amazon Connect account.
 func (s *SDK) StartCampaign(ctx context.Context, request operations.StartCampaignRequest) (*operations.StartCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/start", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/start", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1584,7 +1635,10 @@ func (s *SDK) StartCampaign(ctx context.Context, request operations.StartCampaig
 // StartInstanceOnboardingJob - Onboard the specific Amazon Connect instance to Connect Campaigns.
 func (s *SDK) StartInstanceOnboardingJob(ctx context.Context, request operations.StartInstanceOnboardingJobRequest) (*operations.StartInstanceOnboardingJobResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/connect-instance/{connectInstanceId}/onboarding", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1700,7 +1754,10 @@ func (s *SDK) StartInstanceOnboardingJob(ctx context.Context, request operations
 // StopCampaign - Stops a campaign for the specified Amazon Connect account.
 func (s *SDK) StopCampaign(ctx context.Context, request operations.StopCampaignRequest) (*operations.StopCampaignResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/stop", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/stop", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1807,7 +1864,10 @@ func (s *SDK) StopCampaign(ctx context.Context, request operations.StopCampaignR
 // TagResource - Tag a resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1904,7 +1964,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UntagResource - Untag a resource.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{arn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1995,7 +2058,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 // UpdateCampaignDialerConfig - Updates the dialer config of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignDialerConfig(ctx context.Context, request operations.UpdateCampaignDialerConfigRequest) (*operations.UpdateCampaignDialerConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dialer-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/dialer-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2092,7 +2158,10 @@ func (s *SDK) UpdateCampaignDialerConfig(ctx context.Context, request operations
 // UpdateCampaignName - Updates the name of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignName(ctx context.Context, request operations.UpdateCampaignNameRequest) (*operations.UpdateCampaignNameResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/name", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/name", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2189,7 +2258,10 @@ func (s *SDK) UpdateCampaignName(ctx context.Context, request operations.UpdateC
 // UpdateCampaignOutboundCallConfig - Updates the outbound call config of a campaign. This API is idempotent.
 func (s *SDK) UpdateCampaignOutboundCallConfig(ctx context.Context, request operations.UpdateCampaignOutboundCallConfigRequest) (*operations.UpdateCampaignOutboundCallConfigResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/outbound-call-config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/campaigns/{id}/outbound-call-config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -92,7 +92,10 @@ func (s *accounts) GetAccounts(ctx context.Context, request operations.GetAccoun
 // Retrieve a specific account by providing its unique identifier.
 func (s *accounts) GetAccountsID(ctx context.Context, request operations.GetAccountsIDRequest) (*operations.GetAccountsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/accounts/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

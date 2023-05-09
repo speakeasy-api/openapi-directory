@@ -14,18 +14,22 @@ const (
 	ImageErrorEnumMediaError ImageErrorEnum = "MEDIA_ERROR"
 )
 
+func (e ImageErrorEnum) ToPointer() *ImageErrorEnum {
+	return &e
+}
+
 func (e *ImageErrorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_MEDIA":
 		fallthrough
 	case "MEDIA_ERROR":
-		*e = ImageErrorEnum(s)
+		*e = ImageErrorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageErrorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageErrorEnum: %v", v)
 	}
 }

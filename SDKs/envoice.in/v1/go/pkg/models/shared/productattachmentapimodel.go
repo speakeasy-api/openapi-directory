@@ -15,19 +15,23 @@ const (
 	ProductAttachmentAPIModelTypeEnumUploaded ProductAttachmentAPIModelTypeEnum = "Uploaded"
 )
 
+func (e ProductAttachmentAPIModelTypeEnum) ToPointer() *ProductAttachmentAPIModelTypeEnum {
+	return &e
+}
+
 func (e *ProductAttachmentAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "External":
 		fallthrough
 	case "Uploaded":
-		*e = ProductAttachmentAPIModelTypeEnum(s)
+		*e = ProductAttachmentAPIModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductAttachmentAPIModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductAttachmentAPIModelTypeEnum: %v", v)
 	}
 }
 

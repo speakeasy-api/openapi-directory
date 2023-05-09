@@ -27,6 +27,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - API for reading and writing personnel data incl. data about attendances and absences
 type SDK struct {
 
@@ -96,7 +111,10 @@ func New(opts ...SDKOption) *SDK {
 // DeleteCompanyAttendancesID - This endpoint is responsible for deleting attendance data for the company employees.
 func (s *SDK) DeleteCompanyAttendancesID(ctx context.Context, request operations.DeleteCompanyAttendancesIDRequest) (*operations.DeleteCompanyAttendancesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -150,7 +168,10 @@ func (s *SDK) DeleteCompanyAttendancesID(ctx context.Context, request operations
 // DeleteCompanyTimeOffsID - This endpoint is responsible for deleting absence period data for the company employees.
 func (s *SDK) DeleteCompanyTimeOffsID(ctx context.Context, request operations.DeleteCompanyTimeOffsIDRequest) (*operations.DeleteCompanyTimeOffsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -296,7 +317,10 @@ func (s *SDK) GetCompanyEmployees(ctx context.Context) (*operations.GetCompanyEm
 // GetCompanyEmployeesEmployeeID - Show employee by ID
 func (s *SDK) GetCompanyEmployeesEmployeeID(ctx context.Context, request operations.GetCompanyEmployeesEmployeeIDRequest) (*operations.GetCompanyEmployeesEmployeeIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -340,7 +364,10 @@ func (s *SDK) GetCompanyEmployeesEmployeeID(ctx context.Context, request operati
 // GetCompanyEmployeesEmployeeIDProfilePictureWidth - Show employee profile picture
 func (s *SDK) GetCompanyEmployeesEmployeeIDProfilePictureWidth(ctx context.Context, request operations.GetCompanyEmployeesEmployeeIDProfilePictureWidthRequest) (*operations.GetCompanyEmployeesEmployeeIDProfilePictureWidthResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}/profile-picture/{width}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/employees/{employee_id}/profile-picture/{width}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -480,7 +507,10 @@ func (s *SDK) GetCompanyTimeOffs(ctx context.Context, request operations.GetComp
 // GetCompanyTimeOffsID - Absence Period
 func (s *SDK) GetCompanyTimeOffsID(ctx context.Context, request operations.GetCompanyTimeOffsIDRequest) (*operations.GetCompanyTimeOffsIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/time-offs/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -524,7 +554,10 @@ func (s *SDK) GetCompanyTimeOffsID(ctx context.Context, request operations.GetCo
 // PatchCompanyAttendancesID - This endpoint is responsible for updating attendance data for the company employees. Attributes are not required and if not specified, the current value will be used. It is not possible to change the employee id.
 func (s *SDK) PatchCompanyAttendancesID(ctx context.Context, request operations.PatchCompanyAttendancesIDRequest) (*operations.PatchCompanyAttendancesIDResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/company/attendances/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateAttendancePeriodRequest", "json")
 	if err != nil {

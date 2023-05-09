@@ -26,12 +26,16 @@ const (
 	PointPointGetLanguageLanguageEnumPt PointPointGetLanguageLanguageEnum = "pt"
 )
 
+func (e PointPointGetLanguageLanguageEnum) ToPointer() *PointPointGetLanguageLanguageEnum {
+	return &e
+}
+
 func (e *PointPointGetLanguageLanguageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cs":
 		fallthrough
 	case "en":
@@ -45,10 +49,10 @@ func (e *PointPointGetLanguageLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "pl":
 		fallthrough
 	case "pt":
-		*e = PointPointGetLanguageLanguageEnum(s)
+		*e = PointPointGetLanguageLanguageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PointPointGetLanguageLanguageEnum: %s", s)
+		return fmt.Errorf("invalid value for PointPointGetLanguageLanguageEnum: %v", v)
 	}
 }
 
@@ -63,12 +67,16 @@ const (
 	PointPointGetUnitsUnitsEnumCa     PointPointGetUnitsUnitsEnum = "ca"
 )
 
+func (e PointPointGetUnitsUnitsEnum) ToPointer() *PointPointGetUnitsUnitsEnum {
+	return &e
+}
+
 func (e *PointPointGetUnitsUnitsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "auto":
 		fallthrough
 	case "metric":
@@ -78,10 +86,10 @@ func (e *PointPointGetUnitsUnitsEnum) UnmarshalJSON(data []byte) error {
 	case "uk":
 		fallthrough
 	case "ca":
-		*e = PointPointGetUnitsUnitsEnum(s)
+		*e = PointPointGetUnitsUnitsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PointPointGetUnitsUnitsEnum: %s", s)
+		return fmt.Errorf("invalid value for PointPointGetUnitsUnitsEnum: %v", v)
 	}
 }
 

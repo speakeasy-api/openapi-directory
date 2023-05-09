@@ -16,17 +16,21 @@ const (
 	AssociateThirdPartyFirewallXAmzTargetEnumAwsfms20180101AssociateThirdPartyFirewall AssociateThirdPartyFirewallXAmzTargetEnum = "AWSFMS_20180101.AssociateThirdPartyFirewall"
 )
 
+func (e AssociateThirdPartyFirewallXAmzTargetEnum) ToPointer() *AssociateThirdPartyFirewallXAmzTargetEnum {
+	return &e
+}
+
 func (e *AssociateThirdPartyFirewallXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSFMS_20180101.AssociateThirdPartyFirewall":
-		*e = AssociateThirdPartyFirewallXAmzTargetEnum(s)
+		*e = AssociateThirdPartyFirewallXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssociateThirdPartyFirewallXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AssociateThirdPartyFirewallXAmzTargetEnum: %v", v)
 	}
 }
 

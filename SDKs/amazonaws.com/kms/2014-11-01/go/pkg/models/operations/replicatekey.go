@@ -16,17 +16,21 @@ const (
 	ReplicateKeyXAmzTargetEnumTrentServiceReplicateKey ReplicateKeyXAmzTargetEnum = "TrentService.ReplicateKey"
 )
 
+func (e ReplicateKeyXAmzTargetEnum) ToPointer() *ReplicateKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *ReplicateKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.ReplicateKey":
-		*e = ReplicateKeyXAmzTargetEnum(s)
+		*e = ReplicateKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicateKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicateKeyXAmzTargetEnum: %v", v)
 	}
 }
 

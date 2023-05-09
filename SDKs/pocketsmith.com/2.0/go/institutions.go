@@ -35,7 +35,10 @@ func newInstitutions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Deletes an institution and all data within. Alternatively, another institution can be provided to merge the data into to avoid losing it.
 func (s *institutions) DeleteInstitutionsID(ctx context.Context, request operations.DeleteInstitutionsIDRequest) (*operations.DeleteInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *institutions) DeleteInstitutionsID(ctx context.Context, request operati
 // Gets an institution by its ID.
 func (s *institutions) GetInstitutionsID(ctx context.Context, request operations.GetInstitutionsIDRequest) (*operations.GetInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -146,7 +152,10 @@ func (s *institutions) GetInstitutionsID(ctx context.Context, request operations
 // Lists all the institutions belonging to the user.
 func (s *institutions) GetUsersIDInstitutions(ctx context.Context, request operations.GetUsersIDInstitutionsRequest) (*operations.GetUsersIDInstitutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -203,7 +212,10 @@ func (s *institutions) GetUsersIDInstitutions(ctx context.Context, request opera
 // Creates an institution belonging to a user.
 func (s *institutions) PostUsersIDInstitutions(ctx context.Context, request operations.PostUsersIDInstitutionsRequest) (*operations.PostUsersIDInstitutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/users/{id}/institutions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -269,7 +281,10 @@ func (s *institutions) PostUsersIDInstitutions(ctx context.Context, request oper
 // Updates the title and currency code for an institution.
 func (s *institutions) PutInstitutionsID(ctx context.Context, request operations.PutInstitutionsIDRequest) (*operations.PutInstitutionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/institutions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

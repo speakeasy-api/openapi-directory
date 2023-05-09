@@ -18,12 +18,16 @@ const (
 	AchievementUpdateRequestUpdateTypeEnumSetStepsAtLeast                  AchievementUpdateRequestUpdateTypeEnum = "SET_STEPS_AT_LEAST"
 )
 
+func (e AchievementUpdateRequestUpdateTypeEnum) ToPointer() *AchievementUpdateRequestUpdateTypeEnum {
+	return &e
+}
+
 func (e *AchievementUpdateRequestUpdateTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACHIEVEMENT_UPDATE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "REVEAL":
@@ -33,10 +37,10 @@ func (e *AchievementUpdateRequestUpdateTypeEnum) UnmarshalJSON(data []byte) erro
 	case "INCREMENT":
 		fallthrough
 	case "SET_STEPS_AT_LEAST":
-		*e = AchievementUpdateRequestUpdateTypeEnum(s)
+		*e = AchievementUpdateRequestUpdateTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchievementUpdateRequestUpdateTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchievementUpdateRequestUpdateTypeEnum: %v", v)
 	}
 }
 

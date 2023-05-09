@@ -16,17 +16,21 @@ const (
 	GetCommentsForComparedCommitXAmzTargetEnumCodeCommit20150413GetCommentsForComparedCommit GetCommentsForComparedCommitXAmzTargetEnum = "CodeCommit_20150413.GetCommentsForComparedCommit"
 )
 
+func (e GetCommentsForComparedCommitXAmzTargetEnum) ToPointer() *GetCommentsForComparedCommitXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetCommentsForComparedCommitXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CodeCommit_20150413.GetCommentsForComparedCommit":
-		*e = GetCommentsForComparedCommitXAmzTargetEnum(s)
+		*e = GetCommentsForComparedCommitXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetCommentsForComparedCommitXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetCommentsForComparedCommitXAmzTargetEnum: %v", v)
 	}
 }
 

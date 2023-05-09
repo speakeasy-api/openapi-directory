@@ -17,12 +17,16 @@ const (
 	OwnershipOwnershipStatusEnumCancelled   OwnershipOwnershipStatusEnum = "cancelled"
 )
 
+func (e OwnershipOwnershipStatusEnum) ToPointer() *OwnershipOwnershipStatusEnum {
+	return &e
+}
+
 func (e *OwnershipOwnershipStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending":
 		fallthrough
 	case "active":
@@ -30,10 +34,10 @@ func (e *OwnershipOwnershipStatusEnum) UnmarshalJSON(data []byte) error {
 	case "uninstalled":
 		fallthrough
 	case "cancelled":
-		*e = OwnershipOwnershipStatusEnum(s)
+		*e = OwnershipOwnershipStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OwnershipOwnershipStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for OwnershipOwnershipStatusEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	OwnershipOwnershipTypeEnumTrial        OwnershipOwnershipTypeEnum = "trial"
 )
 
+func (e OwnershipOwnershipTypeEnum) ToPointer() *OwnershipOwnershipTypeEnum {
+	return &e
+}
+
 func (e *OwnershipOwnershipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "full":
 		fallthrough
 	case "subscription":
 		fallthrough
 	case "trial":
-		*e = OwnershipOwnershipTypeEnum(s)
+		*e = OwnershipOwnershipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OwnershipOwnershipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OwnershipOwnershipTypeEnum: %v", v)
 	}
 }
 

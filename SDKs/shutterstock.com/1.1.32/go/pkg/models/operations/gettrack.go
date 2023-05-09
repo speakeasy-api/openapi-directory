@@ -22,19 +22,23 @@ const (
 	GetTrackViewEnumFull    GetTrackViewEnum = "full"
 )
 
+func (e GetTrackViewEnum) ToPointer() *GetTrackViewEnum {
+	return &e
+}
+
 func (e *GetTrackViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "minimal":
 		fallthrough
 	case "full":
-		*e = GetTrackViewEnum(s)
+		*e = GetTrackViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackViewEnum: %v", v)
 	}
 }
 

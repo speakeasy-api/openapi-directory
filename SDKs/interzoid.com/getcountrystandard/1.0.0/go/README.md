@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getcountrys
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetcountrystandardRequest{
+    ctx := context.Background()
+    res, err := s.CountryNameStandardization.Getcountrystandard(ctx, operations.GetcountrystandardRequest{
         Country: "Malta",
         License: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.CountryNameStandardization.Getcountrystandard(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### CountryNameStandardization
+### [CountryNameStandardization](docs/countrynamestandardization/README.md)
 
-* `Getcountrystandard` - Gets country name standard
+* [Getcountrystandard](docs/countrynamestandardization/README.md#getcountrystandard) - Gets country name standard
 <!-- End SDK Available Operations -->
 
 ### Maturity

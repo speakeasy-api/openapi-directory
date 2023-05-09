@@ -17,21 +17,25 @@ const (
 	CardInfoFormFactorEnumVirtual  CardInfoFormFactorEnum = "virtual"
 )
 
+func (e CardInfoFormFactorEnum) ToPointer() *CardInfoFormFactorEnum {
+	return &e
+}
+
 func (e *CardInfoFormFactorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "physical":
 		fallthrough
 	case "unknown":
 		fallthrough
 	case "virtual":
-		*e = CardInfoFormFactorEnum(s)
+		*e = CardInfoFormFactorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CardInfoFormFactorEnum: %s", s)
+		return fmt.Errorf("invalid value for CardInfoFormFactorEnum: %v", v)
 	}
 }
 

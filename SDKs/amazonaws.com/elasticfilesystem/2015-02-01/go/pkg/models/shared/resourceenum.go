@@ -15,18 +15,22 @@ const (
 	ResourceEnumMountTarget ResourceEnum = "MOUNT_TARGET"
 )
 
+func (e ResourceEnum) ToPointer() *ResourceEnum {
+	return &e
+}
+
 func (e *ResourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FILE_SYSTEM":
 		fallthrough
 	case "MOUNT_TARGET":
-		*e = ResourceEnum(s)
+		*e = ResourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ResourceEnum: %v", v)
 	}
 }

@@ -16,19 +16,23 @@ const (
 	SeasonLastCompletedFormatEnumJSON SeasonLastCompletedFormatEnum = "JSON"
 )
 
+func (e SeasonLastCompletedFormatEnum) ToPointer() *SeasonLastCompletedFormatEnum {
+	return &e
+}
+
 func (e *SeasonLastCompletedFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "XML":
 		fallthrough
 	case "JSON":
-		*e = SeasonLastCompletedFormatEnum(s)
+		*e = SeasonLastCompletedFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SeasonLastCompletedFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for SeasonLastCompletedFormatEnum: %v", v)
 	}
 }
 

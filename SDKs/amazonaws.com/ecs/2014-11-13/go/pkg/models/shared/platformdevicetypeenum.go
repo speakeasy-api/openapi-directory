@@ -13,16 +13,20 @@ const (
 	PlatformDeviceTypeEnumGpu PlatformDeviceTypeEnum = "GPU"
 )
 
+func (e PlatformDeviceTypeEnum) ToPointer() *PlatformDeviceTypeEnum {
+	return &e
+}
+
 func (e *PlatformDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GPU":
-		*e = PlatformDeviceTypeEnum(s)
+		*e = PlatformDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PlatformDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PlatformDeviceTypeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	ResponseFormatEnumHTML    ResponseFormatEnum = "html"
 )
 
+func (e ResponseFormatEnum) ToPointer() *ResponseFormatEnum {
+	return &e
+}
+
 func (e *ResponseFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "json":
 		fallthrough
 	case "jsonp":
@@ -30,9 +34,9 @@ func (e *ResponseFormatEnum) UnmarshalJSON(data []byte) error {
 	case "msgpack":
 		fallthrough
 	case "html":
-		*e = ResponseFormatEnum(s)
+		*e = ResponseFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResponseFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for ResponseFormatEnum: %v", v)
 	}
 }

@@ -25,12 +25,16 @@ const (
 	ContactStatusEnumScheduling       ContactStatusEnum = "SCHEDULING"
 )
 
+func (e ContactStatusEnum) ToPointer() *ContactStatusEnum {
+	return &e
+}
+
 func (e *ContactStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AVAILABLE":
 		fallthrough
 	case "AWS_CANCELLED":
@@ -56,9 +60,9 @@ func (e *ContactStatusEnum) UnmarshalJSON(data []byte) error {
 	case "SCHEDULED":
 		fallthrough
 	case "SCHEDULING":
-		*e = ContactStatusEnum(s)
+		*e = ContactStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContactStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ContactStatusEnum: %v", v)
 	}
 }

@@ -25,12 +25,16 @@ const (
 	PutTemplateActionRequestBodyCategoryEnumOther                  PutTemplateActionRequestBodyCategoryEnum = "OTHER"
 )
 
+func (e PutTemplateActionRequestBodyCategoryEnum) ToPointer() *PutTemplateActionRequestBodyCategoryEnum {
+	return &e
+}
+
 func (e *PutTemplateActionRequestBodyCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DISASTER_RECOVERY":
 		fallthrough
 	case "OPERATING_SYSTEM":
@@ -50,10 +54,10 @@ func (e *PutTemplateActionRequestBodyCategoryEnum) UnmarshalJSON(data []byte) er
 	case "BACKUP":
 		fallthrough
 	case "OTHER":
-		*e = PutTemplateActionRequestBodyCategoryEnum(s)
+		*e = PutTemplateActionRequestBodyCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutTemplateActionRequestBodyCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PutTemplateActionRequestBodyCategoryEnum: %v", v)
 	}
 }
 

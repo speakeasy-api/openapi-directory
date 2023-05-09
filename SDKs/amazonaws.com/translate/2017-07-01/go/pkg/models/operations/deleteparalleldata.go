@@ -16,17 +16,21 @@ const (
 	DeleteParallelDataXAmzTargetEnumAwsShineFrontendService20170701DeleteParallelData DeleteParallelDataXAmzTargetEnum = "AWSShineFrontendService_20170701.DeleteParallelData"
 )
 
+func (e DeleteParallelDataXAmzTargetEnum) ToPointer() *DeleteParallelDataXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteParallelDataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShineFrontendService_20170701.DeleteParallelData":
-		*e = DeleteParallelDataXAmzTargetEnum(s)
+		*e = DeleteParallelDataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteParallelDataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteParallelDataXAmzTargetEnum: %v", v)
 	}
 }
 

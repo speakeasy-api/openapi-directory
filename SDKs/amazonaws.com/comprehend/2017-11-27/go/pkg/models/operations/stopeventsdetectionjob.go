@@ -16,17 +16,21 @@ const (
 	StopEventsDetectionJobXAmzTargetEnumComprehend20171127StopEventsDetectionJob StopEventsDetectionJobXAmzTargetEnum = "Comprehend_20171127.StopEventsDetectionJob"
 )
 
+func (e StopEventsDetectionJobXAmzTargetEnum) ToPointer() *StopEventsDetectionJobXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopEventsDetectionJobXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.StopEventsDetectionJob":
-		*e = StopEventsDetectionJobXAmzTargetEnum(s)
+		*e = StopEventsDetectionJobXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopEventsDetectionJobXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopEventsDetectionJobXAmzTargetEnum: %v", v)
 	}
 }
 

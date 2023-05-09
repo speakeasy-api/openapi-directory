@@ -38,7 +38,10 @@ func newActions(defaultClient, securityClient HTTPClient, serverURL, language, s
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#add-repository-acess-to-a-self-hosted-runner-group-in-an-organization - API method documentation
 func (s *actions) ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, request operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest) (*operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -75,7 +78,10 @@ func (s *actions) ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.C
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#add-selected-repository-to-an-organization-secret - API method documentation
 func (s *actions) ActionsAddSelectedRepoToOrgSecret(ctx context.Context, request operations.ActionsAddSelectedRepoToOrgSecretRequest) (*operations.ActionsAddSelectedRepoToOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -115,7 +121,10 @@ func (s *actions) ActionsAddSelectedRepoToOrgSecret(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#add-a-self-hosted-runner-to-a-group-for-an-organization - API method documentation
 func (s *actions) ActionsAddSelfHostedRunnerToGroupForOrg(ctx context.Context, request operations.ActionsAddSelfHostedRunnerToGroupForOrgRequest) (*operations.ActionsAddSelfHostedRunnerToGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -152,7 +161,10 @@ func (s *actions) ActionsAddSelfHostedRunnerToGroupForOrg(ctx context.Context, r
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#cancel-a-workflow-run - API method documentation
 func (s *actions) ActionsCancelWorkflowRun(ctx context.Context, request operations.ActionsCancelWorkflowRunRequest) (*operations.ActionsCancelWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -273,7 +285,10 @@ func (s *actions) ActionsCancelWorkflowRun(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-or-update-an-organization-secret - API method documentation
 func (s *actions) ActionsCreateOrUpdateOrgSecret(ctx context.Context, request operations.ActionsCreateOrUpdateOrgSecretRequest) (*operations.ActionsCreateOrUpdateOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -405,7 +420,10 @@ func (s *actions) ActionsCreateOrUpdateOrgSecret(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-or-update-a-repository-secret - API method documentation
 func (s *actions) ActionsCreateOrUpdateRepoSecret(ctx context.Context, request operations.ActionsCreateOrUpdateRepoSecretRequest) (*operations.ActionsCreateOrUpdateRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -472,7 +490,10 @@ func (s *actions) ActionsCreateOrUpdateRepoSecret(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-registration-token-for-an-organization - API method documentation
 func (s *actions) ActionsCreateRegistrationTokenForOrg(ctx context.Context, request operations.ActionsCreateRegistrationTokenForOrgRequest) (*operations.ActionsCreateRegistrationTokenForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/registration-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/registration-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -527,7 +548,10 @@ func (s *actions) ActionsCreateRegistrationTokenForOrg(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-registration-token-for-a-repository - API method documentation
 func (s *actions) ActionsCreateRegistrationTokenForRepo(ctx context.Context, request operations.ActionsCreateRegistrationTokenForRepoRequest) (*operations.ActionsCreateRegistrationTokenForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/registration-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/registration-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -584,7 +608,10 @@ func (s *actions) ActionsCreateRegistrationTokenForRepo(ctx context.Context, req
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-remove-token-for-an-organization - API method documentation
 func (s *actions) ActionsCreateRemoveTokenForOrg(ctx context.Context, request operations.ActionsCreateRemoveTokenForOrgRequest) (*operations.ActionsCreateRemoveTokenForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/remove-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/remove-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -639,7 +666,10 @@ func (s *actions) ActionsCreateRemoveTokenForOrg(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-remove-token-for-a-repository - API method documentation
 func (s *actions) ActionsCreateRemoveTokenForRepo(ctx context.Context, request operations.ActionsCreateRemoveTokenForRepoRequest) (*operations.ActionsCreateRemoveTokenForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/remove-token", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/remove-token", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -689,7 +719,10 @@ func (s *actions) ActionsCreateRemoveTokenForRepo(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-self-hosted-runner-group-for-an-organization - API method documentation
 func (s *actions) ActionsCreateSelfHostedRunnerGroupForOrg(ctx context.Context, request operations.ActionsCreateSelfHostedRunnerGroupForOrgRequest) (*operations.ActionsCreateSelfHostedRunnerGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -749,7 +782,10 @@ func (s *actions) ActionsCreateSelfHostedRunnerGroupForOrg(ctx context.Context, 
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#create-a-workflow-dispatch-event - API method documentation
 func (s *actions) ActionsCreateWorkflowDispatch(ctx context.Context, request operations.ActionsCreateWorkflowDispatchRequest) (*operations.ActionsCreateWorkflowDispatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -796,7 +832,10 @@ func (s *actions) ActionsCreateWorkflowDispatch(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-an-artifact - API method documentation
 func (s *actions) ActionsDeleteArtifact(ctx context.Context, request operations.ActionsDeleteArtifactRequest) (*operations.ActionsDeleteArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -833,7 +872,10 @@ func (s *actions) ActionsDeleteArtifact(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-an-organization-secret - API method documentation
 func (s *actions) ActionsDeleteOrgSecret(ctx context.Context, request operations.ActionsDeleteOrgSecretRequest) (*operations.ActionsDeleteOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -870,7 +912,10 @@ func (s *actions) ActionsDeleteOrgSecret(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-a-repository-secret - API method documentation
 func (s *actions) ActionsDeleteRepoSecret(ctx context.Context, request operations.ActionsDeleteRepoSecretRequest) (*operations.ActionsDeleteRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -909,7 +954,10 @@ func (s *actions) ActionsDeleteRepoSecret(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-a-self-hosted-runner-from-an-organization - API method documentation
 func (s *actions) ActionsDeleteSelfHostedRunnerFromOrg(ctx context.Context, request operations.ActionsDeleteSelfHostedRunnerFromOrgRequest) (*operations.ActionsDeleteSelfHostedRunnerFromOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -949,7 +997,10 @@ func (s *actions) ActionsDeleteSelfHostedRunnerFromOrg(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-a-self-hosted-runner-from-a-repository - API method documentation
 func (s *actions) ActionsDeleteSelfHostedRunnerFromRepo(ctx context.Context, request operations.ActionsDeleteSelfHostedRunnerFromRepoRequest) (*operations.ActionsDeleteSelfHostedRunnerFromRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -987,7 +1038,10 @@ func (s *actions) ActionsDeleteSelfHostedRunnerFromRepo(ctx context.Context, req
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-a-self-hosted-runner-group-from-an-organization - API method documentation
 func (s *actions) ActionsDeleteSelfHostedRunnerGroupFromOrg(ctx context.Context, request operations.ActionsDeleteSelfHostedRunnerGroupFromOrgRequest) (*operations.ActionsDeleteSelfHostedRunnerGroupFromOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1026,7 +1080,10 @@ func (s *actions) ActionsDeleteSelfHostedRunnerGroupFromOrg(ctx context.Context,
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-a-workflow-run - API method documentation
 func (s *actions) ActionsDeleteWorkflowRun(ctx context.Context, request operations.ActionsDeleteWorkflowRunRequest) (*operations.ActionsDeleteWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1063,7 +1120,10 @@ func (s *actions) ActionsDeleteWorkflowRun(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#delete-workflow-run-logs - API method documentation
 func (s *actions) ActionsDeleteWorkflowRunLogs(ctx context.Context, request operations.ActionsDeleteWorkflowRunLogsRequest) (*operations.ActionsDeleteWorkflowRunLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1103,7 +1163,10 @@ func (s *actions) ActionsDeleteWorkflowRunLogs(ctx context.Context, request oper
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#download-an-artifact - API method documentation
 func (s *actions) ActionsDownloadArtifact(ctx context.Context, request operations.ActionsDownloadArtifactRequest) (*operations.ActionsDownloadArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1144,7 +1207,10 @@ func (s *actions) ActionsDownloadArtifact(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#download-job-logs-for-a-workflow-run - API method documentation
 func (s *actions) ActionsDownloadJobLogsForWorkflowRun(ctx context.Context, request operations.ActionsDownloadJobLogsForWorkflowRunRequest) (*operations.ActionsDownloadJobLogsForWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/jobs/{job_id}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/jobs/{job_id}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1185,7 +1251,10 @@ func (s *actions) ActionsDownloadJobLogsForWorkflowRun(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#download-workflow-run-logs - API method documentation
 func (s *actions) ActionsDownloadWorkflowRunLogs(ctx context.Context, request operations.ActionsDownloadWorkflowRunLogsRequest) (*operations.ActionsDownloadWorkflowRunLogsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/logs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1223,7 +1292,10 @@ func (s *actions) ActionsDownloadWorkflowRunLogs(ctx context.Context, request op
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-an-artifact - API method documentation
 func (s *actions) ActionsGetArtifact(ctx context.Context, request operations.ActionsGetArtifactRequest) (*operations.ActionsGetArtifactResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1269,7 +1341,10 @@ func (s *actions) ActionsGetArtifact(ctx context.Context, request operations.Act
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-job-for-a-workflow-run - API method documentation
 func (s *actions) ActionsGetJobForWorkflowRun(ctx context.Context, request operations.ActionsGetJobForWorkflowRunRequest) (*operations.ActionsGetJobForWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/jobs/{job_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/jobs/{job_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1315,7 +1390,10 @@ func (s *actions) ActionsGetJobForWorkflowRun(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-an-organization-public-key - API method documentation
 func (s *actions) ActionsGetOrgPublicKey(ctx context.Context, request operations.ActionsGetOrgPublicKeyRequest) (*operations.ActionsGetOrgPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1361,7 +1439,10 @@ func (s *actions) ActionsGetOrgPublicKey(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-an-organization-secret - API method documentation
 func (s *actions) ActionsGetOrgSecret(ctx context.Context, request operations.ActionsGetOrgSecretRequest) (*operations.ActionsGetOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1407,7 +1488,10 @@ func (s *actions) ActionsGetOrgSecret(ctx context.Context, request operations.Ac
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-repository-public-key - API method documentation
 func (s *actions) ActionsGetRepoPublicKey(ctx context.Context, request operations.ActionsGetRepoPublicKeyRequest) (*operations.ActionsGetRepoPublicKeyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/public-key", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/public-key", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1453,7 +1537,10 @@ func (s *actions) ActionsGetRepoPublicKey(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-repository-secret - API method documentation
 func (s *actions) ActionsGetRepoSecret(ctx context.Context, request operations.ActionsGetRepoSecretRequest) (*operations.ActionsGetRepoSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets/{secret_name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1501,7 +1588,10 @@ func (s *actions) ActionsGetRepoSecret(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-self-hosted-runner-for-an-organization - API method documentation
 func (s *actions) ActionsGetSelfHostedRunnerForOrg(ctx context.Context, request operations.ActionsGetSelfHostedRunnerForOrgRequest) (*operations.ActionsGetSelfHostedRunnerForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1550,7 +1640,10 @@ func (s *actions) ActionsGetSelfHostedRunnerForOrg(ctx context.Context, request 
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-self-hosted-runner-for-a-repository - API method documentation
 func (s *actions) ActionsGetSelfHostedRunnerForRepo(ctx context.Context, request operations.ActionsGetSelfHostedRunnerForRepoRequest) (*operations.ActionsGetSelfHostedRunnerForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1597,7 +1690,10 @@ func (s *actions) ActionsGetSelfHostedRunnerForRepo(ctx context.Context, request
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-self-hosted-runner-group-for-an-organization - API method documentation
 func (s *actions) ActionsGetSelfHostedRunnerGroupForOrg(ctx context.Context, request operations.ActionsGetSelfHostedRunnerGroupForOrgRequest) (*operations.ActionsGetSelfHostedRunnerGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1643,7 +1739,10 @@ func (s *actions) ActionsGetSelfHostedRunnerGroupForOrg(ctx context.Context, req
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-workflow - API method documentation
 func (s *actions) ActionsGetWorkflow(ctx context.Context, request operations.ActionsGetWorkflowRequest) (*operations.ActionsGetWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1689,7 +1788,10 @@ func (s *actions) ActionsGetWorkflow(ctx context.Context, request operations.Act
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#get-a-workflow-run - API method documentation
 func (s *actions) ActionsGetWorkflowRun(ctx context.Context, request operations.ActionsGetWorkflowRunRequest) (*operations.ActionsGetWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1739,7 +1841,10 @@ func (s *actions) ActionsGetWorkflowRun(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-artifacts-for-a-repository - API method documentation
 func (s *actions) ActionsListArtifactsForRepo(ctx context.Context, request operations.ActionsListArtifactsForRepoRequest) (*operations.ActionsListArtifactsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1791,7 +1896,10 @@ func (s *actions) ActionsListArtifactsForRepo(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-jobs-for-a-workflow-run - API method documentation
 func (s *actions) ActionsListJobsForWorkflowRun(ctx context.Context, request operations.ActionsListJobsForWorkflowRunRequest) (*operations.ActionsListJobsForWorkflowRunResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/jobs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/jobs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1843,7 +1951,10 @@ func (s *actions) ActionsListJobsForWorkflowRun(ctx context.Context, request ope
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-organization-secrets - API method documentation
 func (s *actions) ActionsListOrgSecrets(ctx context.Context, request operations.ActionsListOrgSecretsRequest) (*operations.ActionsListOrgSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1899,7 +2010,10 @@ func (s *actions) ActionsListOrgSecrets(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-repository-access-to-a-self-hosted-runner-group-in-an-organization - API method documentation
 func (s *actions) ActionsListRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, request operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgRequest) (*operations.ActionsListRepoAccessToSelfHostedRunnerGroupInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1949,7 +2063,10 @@ func (s *actions) ActionsListRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-repository-secrets - API method documentation
 func (s *actions) ActionsListRepoSecrets(ctx context.Context, request operations.ActionsListRepoSecretsRequest) (*operations.ActionsListRepoSecretsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/secrets", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2001,7 +2118,10 @@ func (s *actions) ActionsListRepoSecrets(ctx context.Context, request operations
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-repository-workflows - API method documentation
 func (s *actions) ActionsListRepoWorkflows(ctx context.Context, request operations.ActionsListRepoWorkflowsRequest) (*operations.ActionsListRepoWorkflowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2055,7 +2175,10 @@ func (s *actions) ActionsListRepoWorkflows(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-runner-applications-for-an-organization - API method documentation
 func (s *actions) ActionsListRunnerApplicationsForOrg(ctx context.Context, request operations.ActionsListRunnerApplicationsForOrgRequest) (*operations.ActionsListRunnerApplicationsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2103,7 +2226,10 @@ func (s *actions) ActionsListRunnerApplicationsForOrg(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-runner-applications-for-a-repository - API method documentation
 func (s *actions) ActionsListRunnerApplicationsForRepo(ctx context.Context, request operations.ActionsListRunnerApplicationsForRepoRequest) (*operations.ActionsListRunnerApplicationsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/downloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners/downloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2149,7 +2275,10 @@ func (s *actions) ActionsListRunnerApplicationsForRepo(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-selected-repositories-for-an-organization-secret - API method documentation
 func (s *actions) ActionsListSelectedReposForOrgSecret(ctx context.Context, request operations.ActionsListSelectedReposForOrgSecretRequest) (*operations.ActionsListSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2200,7 +2329,10 @@ func (s *actions) ActionsListSelectedReposForOrgSecret(ctx context.Context, requ
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-self-hosted-runner-groups-for-an-organization - API method documentation
 func (s *actions) ActionsListSelfHostedRunnerGroupsForOrg(ctx context.Context, request operations.ActionsListSelfHostedRunnerGroupsForOrgRequest) (*operations.ActionsListSelfHostedRunnerGroupsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2252,7 +2384,10 @@ func (s *actions) ActionsListSelfHostedRunnerGroupsForOrg(ctx context.Context, r
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-self-hosted-runners-for-an-organization - API method documentation
 func (s *actions) ActionsListSelfHostedRunnersForOrg(ctx context.Context, request operations.ActionsListSelfHostedRunnersForOrgRequest) (*operations.ActionsListSelfHostedRunnersForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2304,7 +2439,10 @@ func (s *actions) ActionsListSelfHostedRunnersForOrg(ctx context.Context, reques
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-self-hosted-runners-for-a-repository - API method documentation
 func (s *actions) ActionsListSelfHostedRunnersForRepo(ctx context.Context, request operations.ActionsListSelfHostedRunnersForRepoRequest) (*operations.ActionsListSelfHostedRunnersForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2357,7 +2495,10 @@ func (s *actions) ActionsListSelfHostedRunnersForRepo(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-self-hosted-runners-in-a-group-for-an-organization - API method documentation
 func (s *actions) ActionsListSelfHostedRunnersInGroupForOrg(ctx context.Context, request operations.ActionsListSelfHostedRunnersInGroupForOrgRequest) (*operations.ActionsListSelfHostedRunnersInGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2409,7 +2550,10 @@ func (s *actions) ActionsListSelfHostedRunnersInGroupForOrg(ctx context.Context,
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-workflow-run-artifacts - API method documentation
 func (s *actions) ActionsListWorkflowRunArtifacts(ctx context.Context, request operations.ActionsListWorkflowRunArtifactsRequest) (*operations.ActionsListWorkflowRunArtifactsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2463,7 +2607,10 @@ func (s *actions) ActionsListWorkflowRunArtifacts(ctx context.Context, request o
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-workflow-runs - API method documentation
 func (s *actions) ActionsListWorkflowRuns(ctx context.Context, request operations.ActionsListWorkflowRunsRequest) (*operations.ActionsListWorkflowRunsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2517,7 +2664,10 @@ func (s *actions) ActionsListWorkflowRuns(ctx context.Context, request operation
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#list-workflow-runs-for-a-repository - API method documentation
 func (s *actions) ActionsListWorkflowRunsForRepo(ctx context.Context, request operations.ActionsListWorkflowRunsForRepoRequest) (*operations.ActionsListWorkflowRunsForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2567,9 +2717,14 @@ func (s *actions) ActionsListWorkflowRunsForRepo(ctx context.Context, request op
 // ActionsReRunWorkflow - Re-run a workflow
 // Re-runs your workflow run using its `id`. You must authenticate using an access token with the `repo` scope to use this endpoint. GitHub Apps must have the `actions:write` permission to use this endpoint.
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#re-run-a-workflow - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *actions) ActionsReRunWorkflow(ctx context.Context, request operations.ActionsReRunWorkflowRequest) (*operations.ActionsReRunWorkflowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/actions/runs/{run_id}/rerun", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -2616,7 +2771,10 @@ func (s *actions) ActionsReRunWorkflow(ctx context.Context, request operations.A
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#remove-repository-access-to-a-self-hosted-runner-group-in-an-organization - API method documentation
 func (s *actions) ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, request operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgRequest) (*operations.ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2653,7 +2811,10 @@ func (s *actions) ActionsRemoveRepoAccessToSelfHostedRunnerGroupInOrg(ctx contex
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#remove-selected-repository-from-an-organization-secret - API method documentation
 func (s *actions) ActionsRemoveSelectedRepoFromOrgSecret(ctx context.Context, request operations.ActionsRemoveSelectedRepoFromOrgSecretRequest) (*operations.ActionsRemoveSelectedRepoFromOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2693,7 +2854,10 @@ func (s *actions) ActionsRemoveSelectedRepoFromOrgSecret(ctx context.Context, re
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#remove-a-self-hosted-runner-from-a-group-for-an-organization - API method documentation
 func (s *actions) ActionsRemoveSelfHostedRunnerFromGroupForOrg(ctx context.Context, request operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgRequest) (*operations.ActionsRemoveSelfHostedRunnerFromGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -2731,7 +2895,10 @@ func (s *actions) ActionsRemoveSelfHostedRunnerFromGroupForOrg(ctx context.Conte
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#set-repository-access-to-a-self-hosted-runner-group-in-an-organization - API method documentation
 func (s *actions) ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.Context, request operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequest) (*operations.ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2778,7 +2945,10 @@ func (s *actions) ActionsSetRepoAccessToSelfHostedRunnerGroupInOrg(ctx context.C
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#set-selected-repositories-for-an-organization-secret - API method documentation
 func (s *actions) ActionsSetSelectedReposForOrgSecret(ctx context.Context, request operations.ActionsSetSelectedReposForOrgSecretRequest) (*operations.ActionsSetSelectedReposForOrgSecretResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/secrets/{secret_name}/repositories", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2826,7 +2996,10 @@ func (s *actions) ActionsSetSelectedReposForOrgSecret(ctx context.Context, reque
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#set-self-hosted-runners-in-a-group-for-an-organization - API method documentation
 func (s *actions) ActionsSetSelfHostedRunnersInGroupForOrg(ctx context.Context, request operations.ActionsSetSelfHostedRunnersInGroupForOrgRequest) (*operations.ActionsSetSelfHostedRunnersInGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -2874,7 +3047,10 @@ func (s *actions) ActionsSetSelfHostedRunnersInGroupForOrg(ctx context.Context, 
 // https://docs.github.com/enterprise-server@2.22/rest/reference/actions#update-a-self-hosted-runner-group-for-an-organization - API method documentation
 func (s *actions) ActionsUpdateSelfHostedRunnerGroupForOrg(ctx context.Context, request operations.ActionsUpdateSelfHostedRunnerGroupForOrgRequest) (*operations.ActionsUpdateSelfHostedRunnerGroupForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/actions/runner-groups/{runner_group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

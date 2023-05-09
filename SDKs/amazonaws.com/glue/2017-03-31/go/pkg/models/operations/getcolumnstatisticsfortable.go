@@ -16,17 +16,21 @@ const (
 	GetColumnStatisticsForTableXAmzTargetEnumAwsGlueGetColumnStatisticsForTable GetColumnStatisticsForTableXAmzTargetEnum = "AWSGlue.GetColumnStatisticsForTable"
 )
 
+func (e GetColumnStatisticsForTableXAmzTargetEnum) ToPointer() *GetColumnStatisticsForTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetColumnStatisticsForTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetColumnStatisticsForTable":
-		*e = GetColumnStatisticsForTableXAmzTargetEnum(s)
+		*e = GetColumnStatisticsForTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetColumnStatisticsForTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetColumnStatisticsForTableXAmzTargetEnum: %v", v)
 	}
 }
 

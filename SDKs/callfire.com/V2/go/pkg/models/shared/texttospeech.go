@@ -18,12 +18,16 @@ const (
 	TextToSpeechVoiceEnumFrenchcanadian1 TextToSpeechVoiceEnum = "FRENCHCANADIAN1"
 )
 
+func (e TextToSpeechVoiceEnum) ToPointer() *TextToSpeechVoiceEnum {
+	return &e
+}
+
 func (e *TextToSpeechVoiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MALE1":
 		fallthrough
 	case "FEMALE1":
@@ -33,10 +37,10 @@ func (e *TextToSpeechVoiceEnum) UnmarshalJSON(data []byte) error {
 	case "SPANISH1":
 		fallthrough
 	case "FRENCHCANADIAN1":
-		*e = TextToSpeechVoiceEnum(s)
+		*e = TextToSpeechVoiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TextToSpeechVoiceEnum: %s", s)
+		return fmt.Errorf("invalid value for TextToSpeechVoiceEnum: %v", v)
 	}
 }
 

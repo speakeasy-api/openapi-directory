@@ -13,16 +13,20 @@ const (
 	ModelInfrastructureTypeEnumRealTimeInference ModelInfrastructureTypeEnum = "RealTimeInference"
 )
 
+func (e ModelInfrastructureTypeEnum) ToPointer() *ModelInfrastructureTypeEnum {
+	return &e
+}
+
 func (e *ModelInfrastructureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RealTimeInference":
-		*e = ModelInfrastructureTypeEnum(s)
+		*e = ModelInfrastructureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelInfrastructureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelInfrastructureTypeEnum: %v", v)
 	}
 }

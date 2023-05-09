@@ -13,19 +13,20 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/zapier.com/nla/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
     ctx := context.Background()
-    res, err := s.Check(ctx)
+    res, err := s.Check(ctx, operations.CheckSecurity{
+        AccessPointAPIKeyHeader: sdk.String("YOUR_API_KEY_HERE"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -40,12 +41,13 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `Check` - Check
-* `ExecuteAppActionEndpoint` - Execute App Action Endpoint
-* `GetConfigurationLink` - Get Configuration Link
-* `ListExposedActions` - List Exposed Actions
+* [Check](docs/sdk/README.md#check) - Check
+* [ExecuteAppActionEndpoint](docs/sdk/README.md#executeappactionendpoint) - Execute App Action Endpoint
+* [GetConfigurationLink](docs/sdk/README.md#getconfigurationlink) - Get Configuration Link
+* [GetExecutionLogEndpoint](docs/sdk/README.md#getexecutionlogendpoint) - Get Execution Log Endpoint
+* [ListExposedActions](docs/sdk/README.md#listexposedactions) - List Exposed Actions
 <!-- End SDK Available Operations -->
 
 ### Maturity

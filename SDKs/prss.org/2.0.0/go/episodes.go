@@ -98,7 +98,10 @@ func (s *episodes) GetAPIV2Episodes(ctx context.Context, request operations.GetA
 // GetAPIV2EpisodesID - Returns the episode matching the given ID.
 func (s *episodes) GetAPIV2EpisodesID(ctx context.Context, request operations.GetAPIV2EpisodesIDRequest, security operations.GetAPIV2EpisodesIDSecurity) (*operations.GetAPIV2EpisodesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v2/episodes/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/v2/episodes/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,20 +15,24 @@ const (
 	ComputePlatformEnumEcs    ComputePlatformEnum = "ECS"
 )
 
+func (e ComputePlatformEnum) ToPointer() *ComputePlatformEnum {
+	return &e
+}
+
 func (e *ComputePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Server":
 		fallthrough
 	case "Lambda":
 		fallthrough
 	case "ECS":
-		*e = ComputePlatformEnum(s)
+		*e = ComputePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComputePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for ComputePlatformEnum: %v", v)
 	}
 }

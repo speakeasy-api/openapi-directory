@@ -17,12 +17,16 @@ const (
 	UsageTypeEnumAutomatedObjectMonitoring       UsageTypeEnum = "AUTOMATED_OBJECT_MONITORING"
 )
 
+func (e UsageTypeEnum) ToPointer() *UsageTypeEnum {
+	return &e
+}
+
 func (e *UsageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DATA_INVENTORY_EVALUATION":
 		fallthrough
 	case "SENSITIVE_DATA_DISCOVERY":
@@ -30,9 +34,9 @@ func (e *UsageTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AUTOMATED_SENSITIVE_DATA_DISCOVERY":
 		fallthrough
 	case "AUTOMATED_OBJECT_MONITORING":
-		*e = UsageTypeEnum(s)
+		*e = UsageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UsageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UsageTypeEnum: %v", v)
 	}
 }

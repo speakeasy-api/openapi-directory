@@ -37,21 +37,25 @@ const (
 	MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnumAvailable MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum = "available"
 )
 
+func (e MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum) ToPointer() *MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum {
+	return &e
+}
+
 func (e *MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "missing":
 		fallthrough
 	case "ignored":
 		fallthrough
 	case "available":
-		*e = MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum(s)
+		*e = MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MissingSymbolGroupsList200ApplicationJSONGroupsMissingSymbolsStatusEnum: %v", v)
 	}
 }
 
@@ -76,21 +80,25 @@ const (
 	MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnumClosed  MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum = "closed"
 )
 
+func (e MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum) ToPointer() *MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum {
+	return &e
+}
+
 func (e *MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "pending":
 		fallthrough
 	case "closed":
-		*e = MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum(s)
+		*e = MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MissingSymbolGroupsList200ApplicationJSONGroupsStatusEnum: %v", v)
 	}
 }
 

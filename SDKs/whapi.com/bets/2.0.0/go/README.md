@@ -13,28 +13,25 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/whapi.com/bets/2.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CashinRequest{
+    ctx := context.Background()
+    res, err := s.Bets.Cashin(ctx, operations.CashinRequest{
         APIKey: "corrupti",
         APISecret: "provident",
         APITicket: "distinctio",
         BetID: "quibusdam",
         CashInValue: 6027.63,
         CashinBetDelayID: "nulla",
-    }
-
-    ctx := context.Background()
-    res, err := s.Bets.Cashin(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -50,14 +47,14 @@ func main() {
 ## Available Resources and Operations
 
 
-### Bets
+### [Bets](docs/bets/README.md)
 
-* `Cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
-* `GetBetHistory` - Retrieves the customer’s bet history.
-* `GetFreeBets` - Returns available free bets
-* `PlaceComplexBet` - Places a multiple or a complex bet.
-* `PlaceSingleBet` - Places a single bet
-* `ValidateBetslip` - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
+* [Cashin](docs/bets/README.md#cashin) - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
+* [GetBetHistory](docs/bets/README.md#getbethistory) - Retrieves the customer’s bet history.
+* [GetFreeBets](docs/bets/README.md#getfreebets) - Returns available free bets
+* [PlaceComplexBet](docs/bets/README.md#placecomplexbet) - Places a multiple or a complex bet.
+* [PlaceSingleBet](docs/bets/README.md#placesinglebet) - Places a single bet
+* [ValidateBetslip](docs/bets/README.md#validatebetslip) - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
 <!-- End SDK Available Operations -->
 
 ### Maturity

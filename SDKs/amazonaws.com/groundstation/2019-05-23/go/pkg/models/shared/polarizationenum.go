@@ -15,20 +15,24 @@ const (
 	PolarizationEnumRightHand PolarizationEnum = "RIGHT_HAND"
 )
 
+func (e PolarizationEnum) ToPointer() *PolarizationEnum {
+	return &e
+}
+
 func (e *PolarizationEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT_HAND":
 		fallthrough
 	case "NONE":
 		fallthrough
 	case "RIGHT_HAND":
-		*e = PolarizationEnum(s)
+		*e = PolarizationEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PolarizationEnum: %s", s)
+		return fmt.Errorf("invalid value for PolarizationEnum: %v", v)
 	}
 }

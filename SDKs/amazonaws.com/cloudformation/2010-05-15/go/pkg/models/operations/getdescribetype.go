@@ -15,17 +15,21 @@ const (
 	GETDescribeTypeActionEnumDescribeType GETDescribeTypeActionEnum = "DescribeType"
 )
 
+func (e GETDescribeTypeActionEnum) ToPointer() *GETDescribeTypeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeTypeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeType":
-		*e = GETDescribeTypeActionEnum(s)
+		*e = GETDescribeTypeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTypeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTypeActionEnum: %v", v)
 	}
 }
 
@@ -38,21 +42,25 @@ const (
 	GETDescribeTypeTypeEnumHook     GETDescribeTypeTypeEnum = "HOOK"
 )
 
+func (e GETDescribeTypeTypeEnum) ToPointer() *GETDescribeTypeTypeEnum {
+	return &e
+}
+
 func (e *GETDescribeTypeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE":
 		fallthrough
 	case "MODULE":
 		fallthrough
 	case "HOOK":
-		*e = GETDescribeTypeTypeEnum(s)
+		*e = GETDescribeTypeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTypeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTypeTypeEnum: %v", v)
 	}
 }
 
@@ -63,17 +71,21 @@ const (
 	GETDescribeTypeVersionEnumTwoThousandAndTen0515 GETDescribeTypeVersionEnum = "2010-05-15"
 )
 
+func (e GETDescribeTypeVersionEnum) ToPointer() *GETDescribeTypeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeTypeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDescribeTypeVersionEnum(s)
+		*e = GETDescribeTypeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeTypeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeTypeVersionEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	LogDeliveryConfigurationStatusEnumError     LogDeliveryConfigurationStatusEnum = "error"
 )
 
+func (e LogDeliveryConfigurationStatusEnum) ToPointer() *LogDeliveryConfigurationStatusEnum {
+	return &e
+}
+
 func (e *LogDeliveryConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "active":
 		fallthrough
 	case "enabling":
@@ -32,9 +36,9 @@ func (e *LogDeliveryConfigurationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "disabling":
 		fallthrough
 	case "error":
-		*e = LogDeliveryConfigurationStatusEnum(s)
+		*e = LogDeliveryConfigurationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LogDeliveryConfigurationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for LogDeliveryConfigurationStatusEnum: %v", v)
 	}
 }

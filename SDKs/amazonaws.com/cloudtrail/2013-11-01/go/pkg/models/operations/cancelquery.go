@@ -16,17 +16,21 @@ const (
 	CancelQueryXAmzTargetEnumComAmazonawsCloudtrailV20131101CloudTrail20131101CancelQuery CancelQueryXAmzTargetEnum = "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CancelQuery"
 )
 
+func (e CancelQueryXAmzTargetEnum) ToPointer() *CancelQueryXAmzTargetEnum {
+	return &e
+}
+
 func (e *CancelQueryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.CancelQuery":
-		*e = CancelQueryXAmzTargetEnum(s)
+		*e = CancelQueryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CancelQueryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CancelQueryXAmzTargetEnum: %v", v)
 	}
 }
 

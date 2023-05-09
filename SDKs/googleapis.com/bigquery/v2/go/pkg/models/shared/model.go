@@ -38,6 +38,7 @@ const (
 	ModelModelTypeEnumDnnClassifier               ModelModelTypeEnum = "DNN_CLASSIFIER"
 	ModelModelTypeEnumTensorflow                  ModelModelTypeEnum = "TENSORFLOW"
 	ModelModelTypeEnumDnnRegressor                ModelModelTypeEnum = "DNN_REGRESSOR"
+	ModelModelTypeEnumXgboost                     ModelModelTypeEnum = "XGBOOST"
 	ModelModelTypeEnumBoostedTreeRegressor        ModelModelTypeEnum = "BOOSTED_TREE_REGRESSOR"
 	ModelModelTypeEnumBoostedTreeClassifier       ModelModelTypeEnum = "BOOSTED_TREE_CLASSIFIER"
 	ModelModelTypeEnumArima                       ModelModelTypeEnum = "ARIMA"
@@ -48,16 +49,23 @@ const (
 	ModelModelTypeEnumDnnLinearCombinedRegressor  ModelModelTypeEnum = "DNN_LINEAR_COMBINED_REGRESSOR"
 	ModelModelTypeEnumAutoencoder                 ModelModelTypeEnum = "AUTOENCODER"
 	ModelModelTypeEnumArimaPlus                   ModelModelTypeEnum = "ARIMA_PLUS"
+	ModelModelTypeEnumArimaPlusXreg               ModelModelTypeEnum = "ARIMA_PLUS_XREG"
 	ModelModelTypeEnumRandomForestRegressor       ModelModelTypeEnum = "RANDOM_FOREST_REGRESSOR"
 	ModelModelTypeEnumRandomForestClassifier      ModelModelTypeEnum = "RANDOM_FOREST_CLASSIFIER"
+	ModelModelTypeEnumTensorflowLite              ModelModelTypeEnum = "TENSORFLOW_LITE"
+	ModelModelTypeEnumOnnx                        ModelModelTypeEnum = "ONNX"
 )
 
+func (e ModelModelTypeEnum) ToPointer() *ModelModelTypeEnum {
+	return &e
+}
+
 func (e *ModelModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MODEL_TYPE_UNSPECIFIED":
 		fallthrough
 	case "LINEAR_REGRESSION":
@@ -73,6 +81,8 @@ func (e *ModelModelTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TENSORFLOW":
 		fallthrough
 	case "DNN_REGRESSOR":
+		fallthrough
+	case "XGBOOST":
 		fallthrough
 	case "BOOSTED_TREE_REGRESSOR":
 		fallthrough
@@ -94,13 +104,19 @@ func (e *ModelModelTypeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "ARIMA_PLUS":
 		fallthrough
+	case "ARIMA_PLUS_XREG":
+		fallthrough
 	case "RANDOM_FOREST_REGRESSOR":
 		fallthrough
 	case "RANDOM_FOREST_CLASSIFIER":
-		*e = ModelModelTypeEnum(s)
+		fallthrough
+	case "TENSORFLOW_LITE":
+		fallthrough
+	case "ONNX":
+		*e = ModelModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelModelTypeEnum: %v", v)
 	}
 }
 
@@ -140,6 +156,8 @@ type Model struct {
 	ModelType *ModelModelTypeEnum `json:"modelType,omitempty"`
 	// Output only. For single-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview) models, it only contains the best trial. For multi-objective [hyperparameter tuning](/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-hp-tuning-overview) models, it contains all Pareto optimal trials sorted by trial_id.
 	OptimalTrialIds []string `json:"optimalTrialIds,omitempty"`
+	// Remote Model Info
+	RemoteModelInfo *RemoteModelInfo `json:"remoteModelInfo,omitempty"`
 	// Information for all training runs in increasing order of start_time.
 	TrainingRuns []TrainingRun `json:"trainingRuns,omitempty"`
 }

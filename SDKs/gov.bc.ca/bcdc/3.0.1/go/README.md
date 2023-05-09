@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/gov.bc.ca/bcdc/3.0.1/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.GetActionOrganizationActivityListRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.Action.GetActionOrganizationActivityList(ctx, req)
+    res, err := s.Action.GetActionOrganizationActivityList(ctx, operations.GetActionOrganizationActivityListRequest{
+        ID: sdk.String("89bd9d8d-69a6-474e-8f46-7cc8796ed151"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -49,30 +46,30 @@ func main() {
 ## Available Resources and Operations
 
 
-### Action
+### [Action](docs/action/README.md)
 
-* `GetActionOrganizationActivityList` - Get the activity stream of an organization
-* `GetActionOrganizationActivityListHTML` - Get the activity stream of an organization, HTML format
-* `GetActionOrganizationAutocomplete` - Get names of organizations that match a query string
-* `GetActionOrganizationFollowerCount` - Get number of followers of an organization
-* `GetActionOrganizationFollowerList` - Get users following an organization
-* `GetActionOrganizationList` - Get names of all organizations
-* `GetActionOrganizationListForUser` - Get organizations that a user has a given permission for
-* `GetActionOrganizationRevisionList` - Get organization revisions
-* `GetActionOrganizationShow` - Get details of a specific organization
-* `GetActionPackageActivityList` - Get the activity stream of a package (dataset)
-* `GetActionPackageActivityListHTML` - Get the activity stream of a package (dataset), HTML format
-* `GetActionPackageAutocomplete` - Find packages (datasets) matching a query
-* `GetActionPackageList` - Get a list of all packages (datasets)
-* `GetActionPackageRelationshipsList` - Get package (dataset) relationships
-* `GetActionPackageRevisionList` - Get list of revisions for a package (dataset)
-* `GetActionPackageSearch` - Find packages (datasets) matching query terms
-* `GetActionPackageShow` - Get metadata about one specific package (dataset)
-* `GetActionRelatedList` - Gets items related to a package (dataset)
-* `GetActionResourceSearch` - Find resources
-* `GetActionResourceShow` - Get metadata for a specific resource
-* `GetActionStatusShow` - Get the site status
-* `GetActionTagList` - Get a list of tags
+* [GetActionOrganizationActivityList](docs/action/README.md#getactionorganizationactivitylist) - Get the activity stream of an organization
+* [GetActionOrganizationActivityListHTML](docs/action/README.md#getactionorganizationactivitylisthtml) - Get the activity stream of an organization, HTML format
+* [GetActionOrganizationAutocomplete](docs/action/README.md#getactionorganizationautocomplete) - Get names of organizations that match a query string
+* [GetActionOrganizationFollowerCount](docs/action/README.md#getactionorganizationfollowercount) - Get number of followers of an organization
+* [GetActionOrganizationFollowerList](docs/action/README.md#getactionorganizationfollowerlist) - Get users following an organization
+* [GetActionOrganizationList](docs/action/README.md#getactionorganizationlist) - Get names of all organizations
+* [GetActionOrganizationListForUser](docs/action/README.md#getactionorganizationlistforuser) - Get organizations that a user has a given permission for
+* [GetActionOrganizationRevisionList](docs/action/README.md#getactionorganizationrevisionlist) - Get organization revisions
+* [GetActionOrganizationShow](docs/action/README.md#getactionorganizationshow) - Get details of a specific organization
+* [GetActionPackageActivityList](docs/action/README.md#getactionpackageactivitylist) - Get the activity stream of a package (dataset)
+* [GetActionPackageActivityListHTML](docs/action/README.md#getactionpackageactivitylisthtml) - Get the activity stream of a package (dataset), HTML format
+* [GetActionPackageAutocomplete](docs/action/README.md#getactionpackageautocomplete) - Find packages (datasets) matching a query
+* [GetActionPackageList](docs/action/README.md#getactionpackagelist) - Get a list of all packages (datasets)
+* [GetActionPackageRelationshipsList](docs/action/README.md#getactionpackagerelationshipslist) - Get package (dataset) relationships
+* [GetActionPackageRevisionList](docs/action/README.md#getactionpackagerevisionlist) - Get list of revisions for a package (dataset)
+* [GetActionPackageSearch](docs/action/README.md#getactionpackagesearch) - Find packages (datasets) matching query terms
+* [GetActionPackageShow](docs/action/README.md#getactionpackageshow) - Get metadata about one specific package (dataset)
+* [GetActionRelatedList](docs/action/README.md#getactionrelatedlist) - Gets items related to a package (dataset)
+* [GetActionResourceSearch](docs/action/README.md#getactionresourcesearch) - Find resources
+* [GetActionResourceShow](docs/action/README.md#getactionresourceshow) - Get metadata for a specific resource
+* [GetActionStatusShow](docs/action/README.md#getactionstatusshow) - Get the site status
+* [GetActionTagList](docs/action/README.md#getactiontaglist) - Get a list of tags
 <!-- End SDK Available Operations -->
 
 ### Maturity

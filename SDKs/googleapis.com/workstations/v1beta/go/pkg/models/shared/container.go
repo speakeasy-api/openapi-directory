@@ -8,9 +8,9 @@ type Container struct {
 	Args []string `json:"args,omitempty"`
 	// If set, overrides the default ENTRYPOINT specified by the image.
 	Command []string `json:"command,omitempty"`
-	// Environment variables passed to the container.
+	// Environment variables passed to the container's entrypoint.
 	Env map[string]string `json:"env,omitempty"`
-	// Docker image defining the container. This image must be accessible by the config's service account.
+	// Docker image defining the container. This image must be accessible by the service account specified in the workstation configuration.
 	Image *string `json:"image,omitempty"`
 	// If set, overrides the USER specified in the image with the given uid.
 	RunAsUser *int `json:"runAsUser,omitempty"`

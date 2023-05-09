@@ -46,7 +46,10 @@ func newLibrary(defaultClient, securityClient HTTPClient, serverURL, language, s
 // If eventLogUuid is provided, the response will only include events affecting the library since that event. Such responses are normally quite small and would be a preferred method for most fat clients after retrieving the initial full library.
 func (s *library) GetLibrary(ctx context.Context, request operations.GetLibraryRequest, security operations.GetLibrarySecurity) (*operations.GetLibraryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/library", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/library", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

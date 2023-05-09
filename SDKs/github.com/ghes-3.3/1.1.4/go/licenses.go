@@ -37,7 +37,10 @@ func newLicenses(defaultClient, securityClient HTTPClient, serverURL, language, 
 // https://docs.github.com/enterprise-server@3.3/rest/reference/licenses#get-a-license - API method documentation
 func (s *licenses) LicensesGet(ctx context.Context, request operations.LicensesGetRequest) (*operations.LicensesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/licenses/{license}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/licenses/{license}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -148,7 +151,10 @@ func (s *licenses) LicensesGetAllCommonlyUsed(ctx context.Context, request opera
 // https://docs.github.com/enterprise-server@3.3/rest/reference/licenses/#get-the-license-for-a-repository - API method documentation
 func (s *licenses) LicensesGetForRepo(ctx context.Context, request operations.LicensesGetForRepoRequest) (*operations.LicensesGetForRepoResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/license", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/repos/{owner}/{repo}/license", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

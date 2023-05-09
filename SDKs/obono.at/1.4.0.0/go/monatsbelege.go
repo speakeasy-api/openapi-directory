@@ -34,7 +34,10 @@ func newMonatsbelege(defaultClient, securityClient HTTPClient, serverURL, langua
 // GetMonatsbelege - Returns a list of `Monatsbelege`.
 func (s *monatsbelege) GetMonatsbelege(ctx context.Context, request operations.GetMonatsbelegeRequest) (*operations.GetMonatsbelegeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/monatsbelege", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/registrierkassen/{registrierkasseUuid}/monatsbelege", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -8,8 +8,9 @@ import (
 
 // ResourceSetSummary - Summarizes the resource sets used in a policy.
 type ResourceSetSummary struct {
-	Description    *string    `json:"Description,omitempty"`
-	ID             *string    `json:"Id,omitempty"`
-	LastUpdateTime *time.Time `json:"LastUpdateTime,omitempty"`
-	Name           *string    `json:"Name,omitempty"`
+	Description       *string                `json:"Description,omitempty"`
+	ID                *string                `json:"Id,omitempty"`
+	LastUpdateTime    *time.Time             `json:"LastUpdateTime,omitempty"`
+	Name              *string                `json:"Name,omitempty"`
+	ResourceSetStatus *ResourceSetStatusEnum `json:"ResourceSetStatus,omitempty"`
 }

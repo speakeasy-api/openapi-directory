@@ -22,19 +22,23 @@ const (
 	GetFeaturedImageCollectionAssetHintEnumTwox GetFeaturedImageCollectionAssetHintEnum = "2x"
 )
 
+func (e GetFeaturedImageCollectionAssetHintEnum) ToPointer() *GetFeaturedImageCollectionAssetHintEnum {
+	return &e
+}
+
 func (e *GetFeaturedImageCollectionAssetHintEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1x":
 		fallthrough
 	case "2x":
-		*e = GetFeaturedImageCollectionAssetHintEnum(s)
+		*e = GetFeaturedImageCollectionAssetHintEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFeaturedImageCollectionAssetHintEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFeaturedImageCollectionAssetHintEnum: %v", v)
 	}
 }
 
@@ -45,17 +49,21 @@ const (
 	GetFeaturedImageCollectionEmbedEnumShareURL GetFeaturedImageCollectionEmbedEnum = "share_url"
 )
 
+func (e GetFeaturedImageCollectionEmbedEnum) ToPointer() *GetFeaturedImageCollectionEmbedEnum {
+	return &e
+}
+
 func (e *GetFeaturedImageCollectionEmbedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "share_url":
-		*e = GetFeaturedImageCollectionEmbedEnum(s)
+		*e = GetFeaturedImageCollectionEmbedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetFeaturedImageCollectionEmbedEnum: %s", s)
+		return fmt.Errorf("invalid value for GetFeaturedImageCollectionEmbedEnum: %v", v)
 	}
 }
 

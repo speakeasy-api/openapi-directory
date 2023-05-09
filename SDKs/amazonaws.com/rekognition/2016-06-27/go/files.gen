@@ -2,6 +2,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -15,6 +16,7 @@ pkg/models/operations/comparefaces.go
 pkg/models/operations/copyprojectversion.go
 pkg/models/operations/createcollection.go
 pkg/models/operations/createdataset.go
+pkg/models/operations/createfacelivenesssession.go
 pkg/models/operations/createproject.go
 pkg/models/operations/createprojectversion.go
 pkg/models/operations/createstreamprocessor.go
@@ -41,6 +43,7 @@ pkg/models/operations/getcelebrityinfo.go
 pkg/models/operations/getcelebrityrecognition.go
 pkg/models/operations/getcontentmoderation.go
 pkg/models/operations/getfacedetection.go
+pkg/models/operations/getfacelivenesssessionresults.go
 pkg/models/operations/getfacesearch.go
 pkg/models/operations/getlabeldetection.go
 pkg/models/operations/getpersontracking.go
@@ -101,6 +104,10 @@ pkg/models/shared/createdatasetrequest.go
 pkg/models/shared/datasettypeenum.go
 pkg/models/shared/datasetsource.go
 pkg/models/shared/groundtruthmanifest.go
+pkg/models/shared/createfacelivenesssessionresponse.go
+pkg/models/shared/createfacelivenesssessionrequest.go
+pkg/models/shared/createfacelivenesssessionrequestsettings.go
+pkg/models/shared/livenessoutputconfig.go
 pkg/models/shared/createprojectresponse.go
 pkg/models/shared/createprojectrequest.go
 pkg/models/shared/createprojectversionresponse.go
@@ -235,6 +242,10 @@ pkg/models/shared/contentmoderationsortbyenum.go
 pkg/models/shared/getfacedetectionresponse.go
 pkg/models/shared/facedetection.go
 pkg/models/shared/getfacedetectionrequest.go
+pkg/models/shared/getfacelivenesssessionresultsresponse.go
+pkg/models/shared/livenesssessionstatusenum.go
+pkg/models/shared/auditimage.go
+pkg/models/shared/getfacelivenesssessionresultsrequest.go
 pkg/models/shared/getfacesearchresponse.go
 pkg/models/shared/personmatch.go
 pkg/models/shared/persondetail.go
@@ -340,4 +351,5 @@ pkg/models/shared/streamprocessorsettingsforupdate.go
 pkg/models/shared/connectedhomesettingsforupdate.go
 pkg/models/shared/streamprocessorparametertodeleteenum.go
 pkg/models/shared/security.go
+docs/sdk/README.md
 USAGE.md

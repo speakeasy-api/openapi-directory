@@ -18,12 +18,16 @@ const (
 	ResolverEndpointStatusEnumDeleting       ResolverEndpointStatusEnum = "DELETING"
 )
 
+func (e ResolverEndpointStatusEnum) ToPointer() *ResolverEndpointStatusEnum {
+	return &e
+}
+
 func (e *ResolverEndpointStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATING":
 		fallthrough
 	case "OPERATIONAL":
@@ -35,9 +39,9 @@ func (e *ResolverEndpointStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ACTION_NEEDED":
 		fallthrough
 	case "DELETING":
-		*e = ResolverEndpointStatusEnum(s)
+		*e = ResolverEndpointStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ResolverEndpointStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ResolverEndpointStatusEnum: %v", v)
 	}
 }

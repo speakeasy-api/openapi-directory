@@ -16,20 +16,24 @@ const (
 	VendorProjectRoleEnumBoth        VendorProjectRoleEnum = "both"
 )
 
+func (e VendorProjectRoleEnum) ToPointer() *VendorProjectRoleEnum {
+	return &e
+}
+
 func (e *VendorProjectRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "translator":
 		fallthrough
 	case "proofreader":
 		fallthrough
 	case "both":
-		*e = VendorProjectRoleEnum(s)
+		*e = VendorProjectRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VendorProjectRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for VendorProjectRoleEnum: %v", v)
 	}
 }

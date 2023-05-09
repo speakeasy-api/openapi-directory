@@ -16,19 +16,23 @@ const (
 	AchPrenotificationCreditDebitIndicatorEnumDebit  AchPrenotificationCreditDebitIndicatorEnum = "debit"
 )
 
+func (e AchPrenotificationCreditDebitIndicatorEnum) ToPointer() *AchPrenotificationCreditDebitIndicatorEnum {
+	return &e
+}
+
 func (e *AchPrenotificationCreditDebitIndicatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "credit":
 		fallthrough
 	case "debit":
-		*e = AchPrenotificationCreditDebitIndicatorEnum(s)
+		*e = AchPrenotificationCreditDebitIndicatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchPrenotificationCreditDebitIndicatorEnum: %s", s)
+		return fmt.Errorf("invalid value for AchPrenotificationCreditDebitIndicatorEnum: %v", v)
 	}
 }
 
@@ -50,12 +54,16 @@ const (
 	AchPrenotificationStatusEnumSubmitted         AchPrenotificationStatusEnum = "submitted"
 )
 
+func (e AchPrenotificationStatusEnum) ToPointer() *AchPrenotificationStatusEnum {
+	return &e
+}
+
 func (e *AchPrenotificationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pending_submitting":
 		fallthrough
 	case "requires_attention":
@@ -63,10 +71,10 @@ func (e *AchPrenotificationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "returned":
 		fallthrough
 	case "submitted":
-		*e = AchPrenotificationStatusEnum(s)
+		*e = AchPrenotificationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchPrenotificationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AchPrenotificationStatusEnum: %v", v)
 	}
 }
 
@@ -77,17 +85,21 @@ const (
 	AchPrenotificationTypeEnumAchPrenotification AchPrenotificationTypeEnum = "ach_prenotification"
 )
 
+func (e AchPrenotificationTypeEnum) ToPointer() *AchPrenotificationTypeEnum {
+	return &e
+}
+
 func (e *AchPrenotificationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ach_prenotification":
-		*e = AchPrenotificationTypeEnum(s)
+		*e = AchPrenotificationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AchPrenotificationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AchPrenotificationTypeEnum: %v", v)
 	}
 }
 

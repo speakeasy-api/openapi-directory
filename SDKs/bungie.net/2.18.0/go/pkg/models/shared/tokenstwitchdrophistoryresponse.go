@@ -8,29 +8,33 @@ import (
 	"time"
 )
 
-type TokensTwitchDropHistoryResponseClaimStateEnum string
+type TokensTwitchDropHistoryResponseClaimStateEnum int64
 
 const (
-	TokensTwitchDropHistoryResponseClaimStateEnumZero TokensTwitchDropHistoryResponseClaimStateEnum = "0"
-	TokensTwitchDropHistoryResponseClaimStateEnumOne  TokensTwitchDropHistoryResponseClaimStateEnum = "1"
-	TokensTwitchDropHistoryResponseClaimStateEnumTwo  TokensTwitchDropHistoryResponseClaimStateEnum = "2"
+	TokensTwitchDropHistoryResponseClaimStateEnumZero TokensTwitchDropHistoryResponseClaimStateEnum = 0
+	TokensTwitchDropHistoryResponseClaimStateEnumOne  TokensTwitchDropHistoryResponseClaimStateEnum = 1
+	TokensTwitchDropHistoryResponseClaimStateEnumTwo  TokensTwitchDropHistoryResponseClaimStateEnum = 2
 )
 
+func (e TokensTwitchDropHistoryResponseClaimStateEnum) ToPointer() *TokensTwitchDropHistoryResponseClaimStateEnum {
+	return &e
+}
+
 func (e *TokensTwitchDropHistoryResponseClaimStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "0":
+	switch v {
+	case 0:
 		fallthrough
-	case "1":
+	case 1:
 		fallthrough
-	case "2":
-		*e = TokensTwitchDropHistoryResponseClaimStateEnum(s)
+	case 2:
+		*e = TokensTwitchDropHistoryResponseClaimStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TokensTwitchDropHistoryResponseClaimStateEnum: %s", s)
+		return fmt.Errorf("invalid value for TokensTwitchDropHistoryResponseClaimStateEnum: %v", v)
 	}
 }
 

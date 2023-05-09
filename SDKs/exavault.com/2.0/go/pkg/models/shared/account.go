@@ -13,17 +13,21 @@ const (
 	AccountMasterUserMasterUserDataTypeEnumUser AccountMasterUserMasterUserDataTypeEnum = "user"
 )
 
+func (e AccountMasterUserMasterUserDataTypeEnum) ToPointer() *AccountMasterUserMasterUserDataTypeEnum {
+	return &e
+}
+
 func (e *AccountMasterUserMasterUserDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "user":
-		*e = AccountMasterUserMasterUserDataTypeEnum(s)
+		*e = AccountMasterUserMasterUserDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountMasterUserMasterUserDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountMasterUserMasterUserDataTypeEnum: %v", v)
 	}
 }
 
@@ -48,17 +52,21 @@ const (
 	AccountTypeEnumAccount AccountTypeEnum = "account"
 )
 
+func (e AccountTypeEnum) ToPointer() *AccountTypeEnum {
+	return &e
+}
+
 func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "account":
-		*e = AccountTypeEnum(s)
+		*e = AccountTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AccountTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AccountTypeEnum: %v", v)
 	}
 }
 

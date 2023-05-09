@@ -22,12 +22,16 @@ const (
 	GetSpacesID200ApplicationJSONTypeEnumAssociation GetSpacesID200ApplicationJSONTypeEnum = "association"
 )
 
+func (e GetSpacesID200ApplicationJSONTypeEnum) ToPointer() *GetSpacesID200ApplicationJSONTypeEnum {
+	return &e
+}
+
 func (e *GetSpacesID200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private":
 		fallthrough
 	case "enterprise":
@@ -35,10 +39,10 @@ func (e *GetSpacesID200ApplicationJSONTypeEnum) UnmarshalJSON(data []byte) error
 	case "company":
 		fallthrough
 	case "association":
-		*e = GetSpacesID200ApplicationJSONTypeEnum(s)
+		*e = GetSpacesID200ApplicationJSONTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSpacesID200ApplicationJSONTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSpacesID200ApplicationJSONTypeEnum: %v", v)
 	}
 }
 

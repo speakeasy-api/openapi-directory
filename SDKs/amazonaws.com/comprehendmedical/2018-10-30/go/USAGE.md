@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,22 +17,20 @@ func main() {
         }),
     )
 
-    req := operations.DescribeEntitiesDetectionV2JobRequest{
+    ctx := context.Background()
+    res, err := s.DescribeEntitiesDetectionV2Job(ctx, operations.DescribeEntitiesDetectionV2JobRequest{
         DescribeEntitiesDetectionV2JobRequest: shared.DescribeEntitiesDetectionV2JobRequest{
             JobID: "corrupti",
         },
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-        XAmzTarget: "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
-    }
-
-    ctx := context.Background()
-    res, err := s.DescribeEntitiesDetectionV2Job(ctx, req)
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+        XAmzTarget: operations.DescribeEntitiesDetectionV2JobXAmzTargetEnumComprehendMedical20181030DescribeEntitiesDetectionV2Job,
+    })
     if err != nil {
         log.Fatal(err)
     }

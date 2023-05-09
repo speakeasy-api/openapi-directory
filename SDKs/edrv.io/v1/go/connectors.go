@@ -34,7 +34,10 @@ func newConnectors(defaultClient, securityClient HTTPClient, serverURL, language
 // DeleteConnector - Delete a connector
 func (s *connectors) DeleteConnector(ctx context.Context, request operations.DeleteConnectorRequest) (*operations.DeleteConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +72,10 @@ func (s *connectors) DeleteConnector(ctx context.Context, request operations.Del
 // GetConnector - Get a connector
 func (s *connectors) GetConnector(ctx context.Context, request operations.GetConnectorRequest) (*operations.GetConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -147,7 +153,10 @@ func (s *connectors) GetConnectors(ctx context.Context, request operations.GetCo
 // PatchConnector - Update a connector's data
 func (s *connectors) PatchConnector(ctx context.Context, request operations.PatchConnectorRequest) (*operations.PatchConnectorResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/connectors/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

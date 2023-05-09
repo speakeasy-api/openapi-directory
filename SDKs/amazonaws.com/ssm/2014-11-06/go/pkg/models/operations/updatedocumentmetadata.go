@@ -16,17 +16,21 @@ const (
 	UpdateDocumentMetadataXAmzTargetEnumAmazonSsmUpdateDocumentMetadata UpdateDocumentMetadataXAmzTargetEnum = "AmazonSSM.UpdateDocumentMetadata"
 )
 
+func (e UpdateDocumentMetadataXAmzTargetEnum) ToPointer() *UpdateDocumentMetadataXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateDocumentMetadataXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.UpdateDocumentMetadata":
-		*e = UpdateDocumentMetadataXAmzTargetEnum(s)
+		*e = UpdateDocumentMetadataXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateDocumentMetadataXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateDocumentMetadataXAmzTargetEnum: %v", v)
 	}
 }
 

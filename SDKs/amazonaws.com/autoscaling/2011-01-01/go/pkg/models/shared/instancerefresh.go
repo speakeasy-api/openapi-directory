@@ -14,11 +14,10 @@ type InstanceRefresh struct {
 	InstanceRefreshID    *string
 	InstancesToUpdate    *int64
 	PercentageComplete   *int64
-	// Describes the preferences for an instance refresh.
-	Preferences     *RefreshPreferences
-	ProgressDetails *InstanceRefreshProgressDetails
-	RollbackDetails *RollbackDetails
-	StartTime       *time.Time
-	Status          *InstanceRefreshStatusEnum
-	StatusReason    *string
+	Preferences          *RefreshPreferences
+	ProgressDetails      *InstanceRefreshProgressDetails
+	RollbackDetails      *RollbackDetails
+	StartTime            *time.Time
+	Status               *InstanceRefreshStatusEnum
+	StatusReason         *string
 }

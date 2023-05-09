@@ -16,17 +16,21 @@ const (
 	GetSchemaVersionXAmzTargetEnumAwsGlueGetSchemaVersion GetSchemaVersionXAmzTargetEnum = "AWSGlue.GetSchemaVersion"
 )
 
+func (e GetSchemaVersionXAmzTargetEnum) ToPointer() *GetSchemaVersionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSchemaVersionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetSchemaVersion":
-		*e = GetSchemaVersionXAmzTargetEnum(s)
+		*e = GetSchemaVersionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSchemaVersionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSchemaVersionXAmzTargetEnum: %v", v)
 	}
 }
 

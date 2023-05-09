@@ -2,26 +2,23 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.DisableRequest{
-        Contract: "corrupti",
-        MerchantAccount: "provident",
-        RecurringDetailReference: "distinctio",
-        ShopperReference: "quibusdam",
-    }
-
     ctx := context.Background()
-    res, err := s.PostDisable(ctx, req)
+    res, err := s.PostDisable(ctx, shared.DisableRequest{
+        Contract: sdk.String("corrupti"),
+        MerchantAccount: "provident",
+        RecurringDetailReference: sdk.String("distinctio"),
+        ShopperReference: "quibusdam",
+    })
     if err != nil {
         log.Fatal(err)
     }

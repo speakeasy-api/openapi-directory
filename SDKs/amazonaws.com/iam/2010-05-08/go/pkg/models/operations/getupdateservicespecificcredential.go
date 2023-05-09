@@ -15,17 +15,21 @@ const (
 	GETUpdateServiceSpecificCredentialActionEnumUpdateServiceSpecificCredential GETUpdateServiceSpecificCredentialActionEnum = "UpdateServiceSpecificCredential"
 )
 
+func (e GETUpdateServiceSpecificCredentialActionEnum) ToPointer() *GETUpdateServiceSpecificCredentialActionEnum {
+	return &e
+}
+
 func (e *GETUpdateServiceSpecificCredentialActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateServiceSpecificCredential":
-		*e = GETUpdateServiceSpecificCredentialActionEnum(s)
+		*e = GETUpdateServiceSpecificCredentialActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETUpdateServiceSpecificCredentialStatusEnumInactive GETUpdateServiceSpecificCredentialStatusEnum = "Inactive"
 )
 
+func (e GETUpdateServiceSpecificCredentialStatusEnum) ToPointer() *GETUpdateServiceSpecificCredentialStatusEnum {
+	return &e
+}
+
 func (e *GETUpdateServiceSpecificCredentialStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Active":
 		fallthrough
 	case "Inactive":
-		*e = GETUpdateServiceSpecificCredentialStatusEnum(s)
+		*e = GETUpdateServiceSpecificCredentialStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialStatusEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETUpdateServiceSpecificCredentialVersionEnumTwoThousandAndTen0508 GETUpdateServiceSpecificCredentialVersionEnum = "2010-05-08"
 )
 
+func (e GETUpdateServiceSpecificCredentialVersionEnum) ToPointer() *GETUpdateServiceSpecificCredentialVersionEnum {
+	return &e
+}
+
 func (e *GETUpdateServiceSpecificCredentialVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = GETUpdateServiceSpecificCredentialVersionEnum(s)
+		*e = GETUpdateServiceSpecificCredentialVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETUpdateServiceSpecificCredentialVersionEnum: %v", v)
 	}
 }
 

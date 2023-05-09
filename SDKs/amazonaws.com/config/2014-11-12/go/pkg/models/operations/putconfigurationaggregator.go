@@ -16,17 +16,21 @@ const (
 	PutConfigurationAggregatorXAmzTargetEnumStarlingDoveServicePutConfigurationAggregator PutConfigurationAggregatorXAmzTargetEnum = "StarlingDoveService.PutConfigurationAggregator"
 )
 
+func (e PutConfigurationAggregatorXAmzTargetEnum) ToPointer() *PutConfigurationAggregatorXAmzTargetEnum {
+	return &e
+}
+
 func (e *PutConfigurationAggregatorXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "StarlingDoveService.PutConfigurationAggregator":
-		*e = PutConfigurationAggregatorXAmzTargetEnum(s)
+		*e = PutConfigurationAggregatorXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PutConfigurationAggregatorXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PutConfigurationAggregatorXAmzTargetEnum: %v", v)
 	}
 }
 

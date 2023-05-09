@@ -22,21 +22,25 @@ const (
 	ErrorsAppBuildsListErrorTypeEnumHandledError   ErrorsAppBuildsListErrorTypeEnum = "handledError"
 )
 
+func (e ErrorsAppBuildsListErrorTypeEnum) ToPointer() *ErrorsAppBuildsListErrorTypeEnum {
+	return &e
+}
+
 func (e *ErrorsAppBuildsListErrorTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "unhandledError":
 		fallthrough
 	case "handledError":
-		*e = ErrorsAppBuildsListErrorTypeEnum(s)
+		*e = ErrorsAppBuildsListErrorTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsAppBuildsListErrorTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsAppBuildsListErrorTypeEnum: %v", v)
 	}
 }
 
@@ -68,12 +72,16 @@ const (
 	ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnumTooManyRequests     ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum) ToPointer() *ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -87,10 +95,10 @@ func (e *ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(d
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum(s)
+		*e = ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for ErrorsAppBuildsListDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 

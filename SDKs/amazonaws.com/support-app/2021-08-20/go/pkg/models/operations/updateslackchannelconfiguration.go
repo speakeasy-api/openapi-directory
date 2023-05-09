@@ -18,21 +18,25 @@ const (
 	UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnumHigh UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum = "high"
 )
 
+func (e UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum) ToPointer() *UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum {
+	return &e
+}
+
 func (e *UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "none":
 		fallthrough
 	case "all":
 		fallthrough
 	case "high":
-		*e = UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum(s)
+		*e = UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnum: %v", v)
 	}
 }
 

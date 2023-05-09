@@ -34,7 +34,10 @@ func newSites(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // AbusiveexperiencereportSitesGet - Gets a site's Abusive Experience Report summary.
 func (s *sites) AbusiveexperiencereportSitesGet(ctx context.Context, request operations.AbusiveexperiencereportSitesGetRequest) (*operations.AbusiveexperiencereportSitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

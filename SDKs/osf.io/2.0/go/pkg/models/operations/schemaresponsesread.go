@@ -23,12 +23,16 @@ const (
 	SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnumPendingModeration SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum = "pending_moderation"
 )
 
+func (e SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum) ToPointer() *SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum {
+	return &e
+}
+
 func (e *SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "initial":
 		fallthrough
 	case "in_progress":
@@ -36,10 +40,10 @@ func (e *SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum) Unmarshal
 	case "approved":
 		fallthrough
 	case "pending_moderation":
-		*e = SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum(s)
+		*e = SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum: %s", s)
+		return fmt.Errorf("invalid value for SchemaResponsesReadSchemaResponsesAttributesReviewsStateEnum: %v", v)
 	}
 }
 

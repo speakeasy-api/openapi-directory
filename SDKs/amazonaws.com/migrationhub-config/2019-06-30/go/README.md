@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/migrationhu
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -28,27 +28,25 @@ func main() {
         }),
     )
 
-    req := operations.CreateHomeRegionControlRequest{
+    ctx := context.Background()
+    res, err := s.CreateHomeRegionControl(ctx, operations.CreateHomeRegionControlRequest{
         CreateHomeRegionControlRequest: shared.CreateHomeRegionControlRequest{
-            DryRun: false,
+            DryRun: sdk.Bool(false),
             HomeRegion: "corrupti",
             Target: shared.Target{
-                ID: "provident",
-                Type: "ACCOUNT",
+                ID: sdk.String("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+                Type: shared.TargetTypeEnumAccount,
             },
         },
-        XAmzAlgorithm: "distinctio",
-        XAmzContentSha256: "quibusdam",
-        XAmzCredential: "unde",
-        XAmzDate: "nulla",
-        XAmzSecurityToken: "corrupti",
-        XAmzSignature: "illum",
-        XAmzSignedHeaders: "vel",
-        XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateHomeRegionControl(ctx, req)
+        XAmzAlgorithm: sdk.String("perferendis"),
+        XAmzContentSha256: sdk.String("ipsam"),
+        XAmzCredential: sdk.String("repellendus"),
+        XAmzDate: sdk.String("sapiente"),
+        XAmzSecurityToken: sdk.String("quo"),
+        XAmzSignature: sdk.String("odit"),
+        XAmzSignedHeaders: sdk.String("at"),
+        XAmzTarget: operations.CreateHomeRegionControlXAmzTargetEnumAwsMigrationHubMultiAccountServiceCreateHomeRegionControl,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -63,11 +61,11 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `CreateHomeRegionControl` - This API sets up the home region for the calling account only.
-* `DescribeHomeRegionControls` - This API permits filtering on the <code>ControlId</code> and <code>HomeRegion</code> fields.
-* `GetHomeRegion` - Returns the calling account’s home region, if configured. This API is used by other AWS services to determine the regional endpoint for calling AWS Application Discovery Service and Migration Hub. You must call <code>GetHomeRegion</code> at least once before you call any other AWS Application Discovery Service and AWS Migration Hub APIs, to obtain the account's Migration Hub home region.
+* [CreateHomeRegionControl](docs/sdk/README.md#createhomeregioncontrol) - This API sets up the home region for the calling account only.
+* [DescribeHomeRegionControls](docs/sdk/README.md#describehomeregioncontrols) - This API permits filtering on the <code>ControlId</code> and <code>HomeRegion</code> fields.
+* [GetHomeRegion](docs/sdk/README.md#gethomeregion) - Returns the calling account’s home region, if configured. This API is used by other AWS services to determine the regional endpoint for calling AWS Application Discovery Service and Migration Hub. You must call <code>GetHomeRegion</code> at least once before you call any other AWS Application Discovery Service and AWS Migration Hub APIs, to obtain the account's Migration Hub home region.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -46,9 +46,14 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 //
 // Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#http-verbs)."
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.TeamsAddMemberLegacyRequest) (*operations.TeamsAddMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -109,7 +114,10 @@ func (s *teams) TeamsAddMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.Context, request operations.TeamsAddOrUpdateMembershipForUserInOrgRequest) (*operations.TeamsAddOrUpdateMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -173,9 +181,14 @@ func (s *teams) TeamsAddOrUpdateMembershipForUserInOrg(ctx context.Context, requ
 //
 // If the user is already a member of the team, this endpoint will update the role of the team member's role. To update the membership of a team member, the authenticated user must be an organization owner or a team maintainer.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-membership-for-a-user-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.Context, request operations.TeamsAddOrUpdateMembershipForUserLegacyRequest) (*operations.TeamsAddOrUpdateMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -243,7 +256,10 @@ func (s *teams) TeamsAddOrUpdateMembershipForUserLegacy(ctx context.Context, req
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-project-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.Context, request operations.TeamsAddOrUpdateProjectPermissionsInOrgRequest) (*operations.TeamsAddOrUpdateProjectPermissionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -297,9 +313,14 @@ func (s *teams) TeamsAddOrUpdateProjectPermissionsInOrg(ctx context.Context, req
 //
 // Adds an organization project to a team. To add a project to a team or update the team's permission on a project, the authenticated user must have `admin` permissions for the project. The project and team must be part of the same organization.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#add-or-update-team-project-permissions-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context.Context, request operations.TeamsAddOrUpdateProjectPermissionsLegacyRequest) (*operations.TeamsAddOrUpdateProjectPermissionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -377,7 +398,10 @@ func (s *teams) TeamsAddOrUpdateProjectPermissionsLegacy(ctx context.Context, re
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#add-or-update-team-repository-permissions - API method documentation
 func (s *teams) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Context, request operations.TeamsAddOrUpdateRepoPermissionsInOrgRequest) (*operations.TeamsAddOrUpdateRepoPermissionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -423,9 +447,14 @@ func (s *teams) TeamsAddOrUpdateRepoPermissionsInOrg(ctx context.Context, reques
 //
 // Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#http-verbs)."
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#add-or-update-team-repository-permissions-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Context, request operations.TeamsAddOrUpdateRepoPermissionsLegacyRequest) (*operations.TeamsAddOrUpdateRepoPermissionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -491,7 +520,10 @@ func (s *teams) TeamsAddOrUpdateRepoPermissionsLegacy(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#check-team-permissions-for-a-project - API method documentation
 func (s *teams) TeamsCheckPermissionsForProjectInOrg(ctx context.Context, request operations.TeamsCheckPermissionsForProjectInOrgRequest) (*operations.TeamsCheckPermissionsForProjectInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -538,9 +570,14 @@ func (s *teams) TeamsCheckPermissionsForProjectInOrg(ctx context.Context, reques
 //
 // Checks whether a team has `read`, `write`, or `admin` permissions for an organization project. The response includes projects inherited from a parent team.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-project-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsCheckPermissionsForProjectLegacy(ctx context.Context, request operations.TeamsCheckPermissionsForProjectLegacyRequest) (*operations.TeamsCheckPermissionsForProjectLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -593,7 +630,10 @@ func (s *teams) TeamsCheckPermissionsForProjectLegacy(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-repository - API method documentation
 func (s *teams) TeamsCheckPermissionsForRepoInOrg(ctx context.Context, request operations.TeamsCheckPermissionsForRepoInOrgRequest) (*operations.TeamsCheckPermissionsForRepoInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -644,9 +684,14 @@ func (s *teams) TeamsCheckPermissionsForRepoInOrg(ctx context.Context, request o
 //
 // You can also get information about the specified repository, including what permissions the team grants on it, by passing the following custom [media type](https://docs.github.com/enterprise-cloud@latest//rest/overview/media-types/) via the `Accept` header:
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#check-team-permissions-for-a-repository-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsCheckPermissionsForRepoLegacy(ctx context.Context, request operations.TeamsCheckPermissionsForRepoLegacyRequest) (*operations.TeamsCheckPermissionsForRepoLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -697,7 +742,10 @@ func (s *teams) TeamsCheckPermissionsForRepoLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-team - API method documentation
 func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateRequest) (*operations.TeamsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -777,7 +825,10 @@ func (s *teams) TeamsCreate(ctx context.Context, request operations.TeamsCreateR
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-comment - API method documentation
 func (s *teams) TeamsCreateDiscussionCommentInOrg(ctx context.Context, request operations.TeamsCreateDiscussionCommentInOrgRequest) (*operations.TeamsCreateDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -835,9 +886,14 @@ func (s *teams) TeamsCreateDiscussionCommentInOrg(ctx context.Context, request o
 //
 // This endpoint triggers [notifications](https://docs.github.com/enterprise-cloud@latest//github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary rate limits](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary rate limits](https://docs.github.com/enterprise-cloud@latest//rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-comment-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsCreateDiscussionCommentLegacy(ctx context.Context, request operations.TeamsCreateDiscussionCommentLegacyRequest) (*operations.TeamsCreateDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -897,7 +953,10 @@ func (s *teams) TeamsCreateDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion - API method documentation
 func (s *teams) TeamsCreateDiscussionInOrg(ctx context.Context, request operations.TeamsCreateDiscussionInOrgRequest) (*operations.TeamsCreateDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -955,9 +1014,14 @@ func (s *teams) TeamsCreateDiscussionInOrg(ctx context.Context, request operatio
 //
 // This endpoint triggers [notifications](https://docs.github.com/enterprise-cloud@latest//github/managing-subscriptions-and-notifications-on-github/about-notifications). Creating content too quickly using this endpoint may result in secondary rate limiting. See "[Secondary rate limits](https://docs.github.com/enterprise-cloud@latest//rest/overview/resources-in-the-rest-api#secondary-rate-limits)" and "[Dealing with secondary rate limits](https://docs.github.com/enterprise-cloud@latest//rest/guides/best-practices-for-integrators#dealing-with-secondary-rate-limits)" for details.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-discussion-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsCreateDiscussionLegacy(ctx context.Context, request operations.TeamsCreateDiscussionLegacyRequest) (*operations.TeamsCreateDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1017,7 +1081,10 @@ func (s *teams) TeamsCreateDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-or-update-idp-group-connections - API method documentation
 func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsInOrg(ctx context.Context, request operations.TeamsCreateOrUpdateIdpGroupConnectionsInOrgRequest) (*operations.TeamsCreateOrUpdateIdpGroupConnectionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1075,9 +1142,14 @@ func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsInOrg(ctx context.Context,
 //
 // Creates, updates, or removes a connection between a team and an IdP group. When adding groups to a team, you must include all new and existing groups to avoid replacing existing groups with the new ones. Specifying an empty `groups` array will remove all connections for a team.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-or-update-idp-group-connections-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx context.Context, request operations.TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest) (*operations.TeamsCreateOrUpdateIdpGroupConnectionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1155,7 +1227,10 @@ func (s *teams) TeamsCreateOrUpdateIdpGroupConnectionsLegacy(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-comment - API method documentation
 func (s *teams) TeamsDeleteDiscussionCommentInOrg(ctx context.Context, request operations.TeamsDeleteDiscussionCommentInOrgRequest) (*operations.TeamsDeleteDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1192,9 +1267,14 @@ func (s *teams) TeamsDeleteDiscussionCommentInOrg(ctx context.Context, request o
 //
 // Deletes a comment on a team discussion. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-comment-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsDeleteDiscussionCommentLegacy(ctx context.Context, request operations.TeamsDeleteDiscussionCommentLegacyRequest) (*operations.TeamsDeleteDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1233,7 +1313,10 @@ func (s *teams) TeamsDeleteDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion - API method documentation
 func (s *teams) TeamsDeleteDiscussionInOrg(ctx context.Context, request operations.TeamsDeleteDiscussionInOrgRequest) (*operations.TeamsDeleteDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1270,9 +1353,14 @@ func (s *teams) TeamsDeleteDiscussionInOrg(ctx context.Context, request operatio
 //
 // Delete a discussion from a team's page. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-discussion-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsDeleteDiscussionLegacy(ctx context.Context, request operations.TeamsDeleteDiscussionLegacyRequest) (*operations.TeamsDeleteDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1313,7 +1401,10 @@ func (s *teams) TeamsDeleteDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#delete-a-team - API method documentation
 func (s *teams) TeamsDeleteInOrg(ctx context.Context, request operations.TeamsDeleteInOrgRequest) (*operations.TeamsDeleteInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1352,9 +1443,14 @@ func (s *teams) TeamsDeleteInOrg(ctx context.Context, request operations.TeamsDe
 //
 // If you are an organization owner, deleting a parent team will delete all of its child teams as well.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#delete-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsDeleteLegacy(ctx context.Context, request operations.TeamsDeleteLegacyRequest) (*operations.TeamsDeleteLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1413,7 +1509,10 @@ func (s *teams) TeamsDeleteLegacy(ctx context.Context, request operations.TeamsD
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#external-idp-group-info-for-an-organization - API method documentation
 func (s *teams) TeamsExternalIdpGroupInfoForOrg(ctx context.Context, request operations.TeamsExternalIdpGroupInfoForOrgRequest) (*operations.TeamsExternalIdpGroupInfoForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-group/{group_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-group/{group_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1461,7 +1560,10 @@ func (s *teams) TeamsExternalIdpGroupInfoForOrg(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-team-by-name - API method documentation
 func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetByNameRequest) (*operations.TeamsGetByNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1519,7 +1621,10 @@ func (s *teams) TeamsGetByName(ctx context.Context, request operations.TeamsGetB
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-comment - API method documentation
 func (s *teams) TeamsGetDiscussionCommentInOrg(ctx context.Context, request operations.TeamsGetDiscussionCommentInOrgRequest) (*operations.TeamsGetDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1565,9 +1670,14 @@ func (s *teams) TeamsGetDiscussionCommentInOrg(ctx context.Context, request oper
 //
 // Get a specific comment on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-comment-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetDiscussionCommentLegacy(ctx context.Context, request operations.TeamsGetDiscussionCommentLegacyRequest) (*operations.TeamsGetDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1615,7 +1725,10 @@ func (s *teams) TeamsGetDiscussionCommentLegacy(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion - API method documentation
 func (s *teams) TeamsGetDiscussionInOrg(ctx context.Context, request operations.TeamsGetDiscussionInOrgRequest) (*operations.TeamsGetDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1661,9 +1774,14 @@ func (s *teams) TeamsGetDiscussionInOrg(ctx context.Context, request operations.
 //
 // Get a specific discussion on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-discussion-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetDiscussionLegacy(ctx context.Context, request operations.TeamsGetDiscussionLegacyRequest) (*operations.TeamsGetDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1707,9 +1825,14 @@ func (s *teams) TeamsGetDiscussionLegacy(ctx context.Context, request operations
 // TeamsGetLegacy - Get a team (Legacy)
 // **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the [Get a team by name](https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-a-team-by-name) endpoint.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#get-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetLegacy(ctx context.Context, request operations.TeamsGetLegacyRequest) (*operations.TeamsGetLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1767,9 +1890,14 @@ func (s *teams) TeamsGetLegacy(ctx context.Context, request operations.TeamsGetL
 //
 // To list members in a team, the team must be visible to the authenticated user.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.TeamsGetMemberLegacyRequest) (*operations.TeamsGetMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1817,7 +1945,10 @@ func (s *teams) TeamsGetMemberLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsGetMembershipForUserInOrg(ctx context.Context, request operations.TeamsGetMembershipForUserInOrgRequest) (*operations.TeamsGetMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1871,9 +2002,14 @@ func (s *teams) TeamsGetMembershipForUserInOrg(ctx context.Context, request oper
 //
 // The `role` for organization owners is set to `maintainer`. For more information about `maintainer` roles, see [Create a team](https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#create-a-team).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#get-team-membership-for-a-user-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsGetMembershipForUserLegacy(ctx context.Context, request operations.TeamsGetMembershipForUserLegacyRequest) (*operations.TeamsGetMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -1931,7 +2067,10 @@ func (s *teams) TeamsGetMembershipForUserLegacy(ctx context.Context, request ope
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#link-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsLinkExternalIdpGroupToTeamForOrg(ctx context.Context, request operations.TeamsLinkExternalIdpGroupToTeamForOrgRequest) (*operations.TeamsLinkExternalIdpGroupToTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1987,7 +2126,10 @@ func (s *teams) TeamsLinkExternalIdpGroupToTeamForOrg(ctx context.Context, reque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-teams - API method documentation
 func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListRequest) (*operations.TeamsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2051,7 +2193,10 @@ func (s *teams) TeamsList(ctx context.Context, request operations.TeamsListReque
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-child-teams - API method documentation
 func (s *teams) TeamsListChildInOrg(ctx context.Context, request operations.TeamsListChildInOrgRequest) (*operations.TeamsListChildInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2101,9 +2246,14 @@ func (s *teams) TeamsListChildInOrg(ctx context.Context, request operations.Team
 // TeamsListChildLegacy - List child teams (Legacy)
 // **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [`List child teams`](https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-child-teams) endpoint.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-child-teams-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListChildLegacy(ctx context.Context, request operations.TeamsListChildLegacyRequest) (*operations.TeamsListChildLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/teams", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2179,7 +2329,10 @@ func (s *teams) TeamsListChildLegacy(ctx context.Context, request operations.Tea
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussion-comments - API method documentation
 func (s *teams) TeamsListDiscussionCommentsInOrg(ctx context.Context, request operations.TeamsListDiscussionCommentsInOrgRequest) (*operations.TeamsListDiscussionCommentsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2231,9 +2384,14 @@ func (s *teams) TeamsListDiscussionCommentsInOrg(ctx context.Context, request op
 //
 // List all comments on a team discussion. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussion-comments-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListDiscussionCommentsLegacy(ctx context.Context, request operations.TeamsListDiscussionCommentsLegacyRequest) (*operations.TeamsListDiscussionCommentsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2287,7 +2445,10 @@ func (s *teams) TeamsListDiscussionCommentsLegacy(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussions - API method documentation
 func (s *teams) TeamsListDiscussionsInOrg(ctx context.Context, request operations.TeamsListDiscussionsInOrgRequest) (*operations.TeamsListDiscussionsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2339,9 +2500,14 @@ func (s *teams) TeamsListDiscussionsInOrg(ctx context.Context, request operation
 //
 // List all discussions on a team's page. OAuth access tokens require the `read:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-discussions-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListDiscussionsLegacy(ctx context.Context, request operations.TeamsListDiscussionsLegacyRequest) (*operations.TeamsListDiscussionsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2395,7 +2561,10 @@ func (s *teams) TeamsListDiscussionsLegacy(ctx context.Context, request operatio
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-external-idp-groups-for-an-organization - API method documentation
 func (s *teams) TeamsListExternalIdpGroupsForOrg(ctx context.Context, request operations.TeamsListExternalIdpGroupsForOrgRequest) (*operations.TeamsListExternalIdpGroupsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/external-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2514,9 +2683,14 @@ func (s *teams) TeamsListForAuthenticatedUser(ctx context.Context, request opera
 //
 // List IdP groups connected to a team on GitHub Enterprise Cloud.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListIdpGroupsForLegacy(ctx context.Context, request operations.TeamsListIdpGroupsForLegacyRequest) (*operations.TeamsListIdpGroupsForLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/team-sync/group-mappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2574,7 +2748,10 @@ func (s *teams) TeamsListIdpGroupsForLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-an-organization - API method documentation
 func (s *teams) TeamsListIdpGroupsForOrg(ctx context.Context, request operations.TeamsListIdpGroupsForOrgRequest) (*operations.TeamsListIdpGroupsForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/team-sync/groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/team-sync/groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2630,7 +2807,10 @@ func (s *teams) TeamsListIdpGroupsForOrg(ctx context.Context, request operations
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-idp-groups-for-a-team - API method documentation
 func (s *teams) TeamsListIdpGroupsInOrg(ctx context.Context, request operations.TeamsListIdpGroupsInOrgRequest) (*operations.TeamsListIdpGroupsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2678,7 +2858,10 @@ func (s *teams) TeamsListIdpGroupsInOrg(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsListLinkedExternalIdpGroupsToTeamForOrg(ctx context.Context, request operations.TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest) (*operations.TeamsListLinkedExternalIdpGroupsToTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2726,7 +2909,10 @@ func (s *teams) TeamsListLinkedExternalIdpGroupsToTeamForOrg(ctx context.Context
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-members - API method documentation
 func (s *teams) TeamsListMembersInOrg(ctx context.Context, request operations.TeamsListMembersInOrgRequest) (*operations.TeamsListMembersInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2778,9 +2964,14 @@ func (s *teams) TeamsListMembersInOrg(ctx context.Context, request operations.Te
 //
 // Team members will include the members of child teams.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-members-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListMembersLegacy(ctx context.Context, request operations.TeamsListMembersLegacyRequest) (*operations.TeamsListMembersLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2844,7 +3035,10 @@ func (s *teams) TeamsListMembersLegacy(ctx context.Context, request operations.T
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-pending-team-invitations - API method documentation
 func (s *teams) TeamsListPendingInvitationsInOrg(ctx context.Context, request operations.TeamsListPendingInvitationsInOrgRequest) (*operations.TeamsListPendingInvitationsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2896,9 +3090,14 @@ func (s *teams) TeamsListPendingInvitationsInOrg(ctx context.Context, request op
 //
 // The return hash contains a `role` field which refers to the Organization Invitation role and will be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or `reinstate`. If the invitee is not a GitHub Enterprise Cloud member, the `login` field in the return hash will be `null`.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-pending-team-invitations-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListPendingInvitationsLegacy(ctx context.Context, request operations.TeamsListPendingInvitationsLegacyRequest) (*operations.TeamsListPendingInvitationsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/invitations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/invitations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -2952,7 +3151,10 @@ func (s *teams) TeamsListPendingInvitationsLegacy(ctx context.Context, request o
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-projects - API method documentation
 func (s *teams) TeamsListProjectsInOrg(ctx context.Context, request operations.TeamsListProjectsInOrgRequest) (*operations.TeamsListProjectsInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3004,9 +3206,14 @@ func (s *teams) TeamsListProjectsInOrg(ctx context.Context, request operations.T
 //
 // Lists the organization projects for a team.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-team-projects-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListProjectsLegacy(ctx context.Context, request operations.TeamsListProjectsLegacyRequest) (*operations.TeamsListProjectsLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3070,7 +3277,10 @@ func (s *teams) TeamsListProjectsLegacy(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-repositories - API method documentation
 func (s *teams) TeamsListReposInOrg(ctx context.Context, request operations.TeamsListReposInOrgRequest) (*operations.TeamsListReposInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3120,9 +3330,14 @@ func (s *teams) TeamsListReposInOrg(ctx context.Context, request operations.Team
 // TeamsListReposLegacy - List team repositories (Legacy)
 // **Deprecation Notice:** This endpoint route is deprecated and will be removed from the Teams API. We recommend migrating your existing code to use the new [List team repositories](https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#list-team-repositories) endpoint.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#list-team-repositories-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsListReposLegacy(ctx context.Context, request operations.TeamsListReposLegacyRequest) (*operations.TeamsListReposLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -3190,9 +3405,14 @@ func (s *teams) TeamsListReposLegacy(ctx context.Context, request operations.Tea
 //
 // **Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub Enterprise Cloud team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest//articles/synchronizing-teams-between-your-identity-provider-and-github/)."
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-member-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.TeamsRemoveMemberLegacyRequest) (*operations.TeamsRemoveMemberLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/members/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3237,7 +3457,10 @@ func (s *teams) TeamsRemoveMemberLegacy(ctx context.Context, request operations.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-membership-for-a-user - API method documentation
 func (s *teams) TeamsRemoveMembershipForUserInOrg(ctx context.Context, request operations.TeamsRemoveMembershipForUserInOrgRequest) (*operations.TeamsRemoveMembershipForUserInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3280,9 +3503,14 @@ func (s *teams) TeamsRemoveMembershipForUserInOrg(ctx context.Context, request o
 //
 // **Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub Enterprise Cloud team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub Enterprise Cloud](https://docs.github.com/enterprise-cloud@latest//articles/synchronizing-teams-between-your-identity-provider-and-github/)."
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-team-membership-for-a-user-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsRemoveMembershipForUserLegacy(ctx context.Context, request operations.TeamsRemoveMembershipForUserLegacyRequest) (*operations.TeamsRemoveMembershipForUserLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/memberships/{username}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3323,7 +3551,10 @@ func (s *teams) TeamsRemoveMembershipForUserLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#remove-a-project-from-a-team - API method documentation
 func (s *teams) TeamsRemoveProjectInOrg(ctx context.Context, request operations.TeamsRemoveProjectInOrgRequest) (*operations.TeamsRemoveProjectInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3360,9 +3591,14 @@ func (s *teams) TeamsRemoveProjectInOrg(ctx context.Context, request operations.
 //
 // Removes an organization project from a team. An organization owner or a team maintainer can remove any project from the team. To remove a project from a team as an organization member, the authenticated user must have `read` access to both the team and project, or `admin` access to the team or project. **Note:** This endpoint removes the project from the team, but does not delete it.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-project-from-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsRemoveProjectLegacy(ctx context.Context, request operations.TeamsRemoveProjectLegacyRequest) (*operations.TeamsRemoveProjectLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/projects/{project_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3421,7 +3657,10 @@ func (s *teams) TeamsRemoveProjectLegacy(ctx context.Context, request operations
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-repository-from-a-team - API method documentation
 func (s *teams) TeamsRemoveRepoInOrg(ctx context.Context, request operations.TeamsRemoveRepoInOrgRequest) (*operations.TeamsRemoveRepoInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3458,9 +3697,14 @@ func (s *teams) TeamsRemoveRepoInOrg(ctx context.Context, request operations.Tea
 //
 // If the authenticated user is an organization owner or a team maintainer, they can remove any repositories from the team. To remove a repository from a team as an organization member, the authenticated user must have admin access to the repository and must be able to see the team. NOTE: This does not delete the repository, it just removes it from the team.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#remove-a-repository-from-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsRemoveRepoLegacy(ctx context.Context, request operations.TeamsRemoveRepoLegacyRequest) (*operations.TeamsRemoveRepoLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/repos/{owner}/{repo}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3499,7 +3743,10 @@ func (s *teams) TeamsRemoveRepoLegacy(ctx context.Context, request operations.Te
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#unlink-external-idp-group-team-connection - API method documentation
 func (s *teams) TeamsUnlinkExternalIdpGroupFromTeamForOrg(ctx context.Context, request operations.TeamsUnlinkExternalIdpGroupFromTeamForOrgRequest) (*operations.TeamsUnlinkExternalIdpGroupFromTeamForOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/external-groups", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -3538,7 +3785,10 @@ func (s *teams) TeamsUnlinkExternalIdpGroupFromTeamForOrg(ctx context.Context, r
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-comment - API method documentation
 func (s *teams) TeamsUpdateDiscussionCommentInOrg(ctx context.Context, request operations.TeamsUpdateDiscussionCommentInOrgRequest) (*operations.TeamsUpdateDiscussionCommentInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3594,9 +3844,14 @@ func (s *teams) TeamsUpdateDiscussionCommentInOrg(ctx context.Context, request o
 //
 // Edits the body text of a discussion comment. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-comment-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsUpdateDiscussionCommentLegacy(ctx context.Context, request operations.TeamsUpdateDiscussionCommentLegacyRequest) (*operations.TeamsUpdateDiscussionCommentLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3654,7 +3909,10 @@ func (s *teams) TeamsUpdateDiscussionCommentLegacy(ctx context.Context, request 
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion - API method documentation
 func (s *teams) TeamsUpdateDiscussionInOrg(ctx context.Context, request operations.TeamsUpdateDiscussionInOrgRequest) (*operations.TeamsUpdateDiscussionInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3707,9 +3965,14 @@ func (s *teams) TeamsUpdateDiscussionInOrg(ctx context.Context, request operatio
 //
 // Edits the title and body text of a discussion post. Only the parameters you provide are updated. OAuth access tokens require the `write:discussion` [scope](https://docs.github.com/enterprise-cloud@latest//apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-discussion-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsUpdateDiscussionLegacy(ctx context.Context, request operations.TeamsUpdateDiscussionLegacyRequest) (*operations.TeamsUpdateDiscussionLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}/discussions/{discussion_number}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3764,7 +4027,10 @@ func (s *teams) TeamsUpdateDiscussionLegacy(ctx context.Context, request operati
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams#update-a-team - API method documentation
 func (s *teams) TeamsUpdateInOrg(ctx context.Context, request operations.TeamsUpdateInOrgRequest) (*operations.TeamsUpdateInOrgResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/orgs/{org}/teams/{team_slug}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -3843,9 +4109,14 @@ func (s *teams) TeamsUpdateInOrg(ctx context.Context, request operations.TeamsUp
 //
 // **Note:** With nested teams, the `privacy` for parent teams cannot be `secret`.
 // https://docs.github.com/enterprise-cloud@latest//rest/reference/teams/#update-a-team-legacy - API method documentation
+//
+// Deprecated: this method will be removed in a future release, please migrate away from it as soon as possible.
 func (s *teams) TeamsUpdateLegacy(ctx context.Context, request operations.TeamsUpdateLegacyRequest) (*operations.TeamsUpdateLegacyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/teams/{team_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

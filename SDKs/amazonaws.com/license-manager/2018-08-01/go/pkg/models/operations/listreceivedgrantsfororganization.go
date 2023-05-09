@@ -16,17 +16,21 @@ const (
 	ListReceivedGrantsForOrganizationXAmzTargetEnumAwsLicenseManagerListReceivedGrantsForOrganization ListReceivedGrantsForOrganizationXAmzTargetEnum = "AWSLicenseManager.ListReceivedGrantsForOrganization"
 )
 
+func (e ListReceivedGrantsForOrganizationXAmzTargetEnum) ToPointer() *ListReceivedGrantsForOrganizationXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListReceivedGrantsForOrganizationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.ListReceivedGrantsForOrganization":
-		*e = ListReceivedGrantsForOrganizationXAmzTargetEnum(s)
+		*e = ListReceivedGrantsForOrganizationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListReceivedGrantsForOrganizationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListReceivedGrantsForOrganizationXAmzTargetEnum: %v", v)
 	}
 }
 

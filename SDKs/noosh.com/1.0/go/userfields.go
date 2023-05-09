@@ -36,7 +36,10 @@ func newUserFields(defaultClient, securityClient HTTPClient, serverURL, language
 // List projec home user fields of client workgroup
 func (s *userFields) GetProjectHomeUserFieldListOfClient(ctx context.Context, request operations.GetProjectHomeUserFieldListOfClientRequest) (*operations.GetProjectHomeUserFieldListOfClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectHomeUserFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectHomeUserFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *userFields) GetProjectHomeUserFieldListOfClient(ctx context.Context, re
 // List projec home user fields
 func (s *userFields) GetProjectHomeUserFieldsList(ctx context.Context, request operations.GetProjectHomeUserFieldsListRequest) (*operations.GetProjectHomeUserFieldsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectHomeUserFields", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectHomeUserFields", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

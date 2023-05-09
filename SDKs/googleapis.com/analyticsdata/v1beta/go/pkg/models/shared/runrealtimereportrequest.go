@@ -17,12 +17,16 @@ const (
 	RunRealtimeReportRequestMetricAggregationsEnumCount                        RunRealtimeReportRequestMetricAggregationsEnum = "COUNT"
 )
 
+func (e RunRealtimeReportRequestMetricAggregationsEnum) ToPointer() *RunRealtimeReportRequestMetricAggregationsEnum {
+	return &e
+}
+
 func (e *RunRealtimeReportRequestMetricAggregationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METRIC_AGGREGATION_UNSPECIFIED":
 		fallthrough
 	case "TOTAL":
@@ -32,10 +36,10 @@ func (e *RunRealtimeReportRequestMetricAggregationsEnum) UnmarshalJSON(data []by
 	case "MAXIMUM":
 		fallthrough
 	case "COUNT":
-		*e = RunRealtimeReportRequestMetricAggregationsEnum(s)
+		*e = RunRealtimeReportRequestMetricAggregationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RunRealtimeReportRequestMetricAggregationsEnum: %s", s)
+		return fmt.Errorf("invalid value for RunRealtimeReportRequestMetricAggregationsEnum: %v", v)
 	}
 }
 
@@ -45,7 +49,7 @@ type RunRealtimeReportRequest struct {
 	DimensionFilter *FilterExpression `json:"dimensionFilter,omitempty"`
 	// The dimensions requested and displayed.
 	Dimensions []Dimension `json:"dimensions,omitempty"`
-	// The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value.
+	// The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 250,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value.
 	Limit *string `json:"limit,omitempty"`
 	// Aggregation of metrics. Aggregated metric values will be shown in rows where the dimension_values are set to "RESERVED_(MetricAggregation)".
 	MetricAggregations []RunRealtimeReportRequestMetricAggregationsEnum `json:"metricAggregations,omitempty"`

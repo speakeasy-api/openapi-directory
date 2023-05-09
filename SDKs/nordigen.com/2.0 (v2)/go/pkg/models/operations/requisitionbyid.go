@@ -15,9 +15,9 @@ type RequisitionByIDRequest struct {
 type RequisitionByIDResponse struct {
 	ContentType string
 	// Get requisition by ID
-	RequisitionV2 *shared.RequisitionV2
-	StatusCode    int
-	RawResponse   *http.Response
+	Requisition *shared.Requisition
+	StatusCode  int
+	RawResponse *http.Response
 	// Invalid ID
 	RequisitionByID400ApplicationJSONObject map[string]interface{}
 	// Invalid token
@@ -26,4 +26,6 @@ type RequisitionByIDResponse struct {
 	RequisitionByID403ApplicationJSONObject map[string]interface{}
 	// Not found error
 	RequisitionByID404ApplicationJSONObject map[string]interface{}
+	// Nordigen rate limit exceeded
+	RequisitionByID429ApplicationJSONObject map[string]interface{}
 }

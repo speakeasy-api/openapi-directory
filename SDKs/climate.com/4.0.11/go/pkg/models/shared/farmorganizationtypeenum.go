@@ -14,16 +14,20 @@ const (
 	FarmOrganizationTypeEnumFarm FarmOrganizationTypeEnum = "farm"
 )
 
+func (e FarmOrganizationTypeEnum) ToPointer() *FarmOrganizationTypeEnum {
+	return &e
+}
+
 func (e *FarmOrganizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "farm":
-		*e = FarmOrganizationTypeEnum(s)
+		*e = FarmOrganizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FarmOrganizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FarmOrganizationTypeEnum: %v", v)
 	}
 }

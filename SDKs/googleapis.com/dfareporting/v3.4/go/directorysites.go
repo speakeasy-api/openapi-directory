@@ -34,7 +34,10 @@ func newDirectorySites(defaultClient, securityClient HTTPClient, serverURL, lang
 // DfareportingDirectorySitesGet - Gets one directory site by ID.
 func (s *directorySites) DfareportingDirectorySitesGet(ctx context.Context, request operations.DfareportingDirectorySitesGetRequest, security operations.DfareportingDirectorySitesGetSecurity) (*operations.DfareportingDirectorySitesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *directorySites) DfareportingDirectorySitesGet(ctx context.Context, requ
 // DfareportingDirectorySitesInsert - Inserts a new directory site.
 func (s *directorySites) DfareportingDirectorySitesInsert(ctx context.Context, request operations.DfareportingDirectorySitesInsertRequest, security operations.DfareportingDirectorySitesInsertSecurity) (*operations.DfareportingDirectorySitesInsertResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DirectorySite", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *directorySites) DfareportingDirectorySitesInsert(ctx context.Context, r
 // DfareportingDirectorySitesList - Retrieves a list of directory sites, possibly filtered. This method supports paging.
 func (s *directorySites) DfareportingDirectorySitesList(ctx context.Context, request operations.DfareportingDirectorySitesListRequest, security operations.DfareportingDirectorySitesListSecurity) (*operations.DfareportingDirectorySitesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/userprofiles/{profileId}/directorySites", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

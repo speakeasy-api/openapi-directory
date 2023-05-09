@@ -13,12 +13,12 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Profile-System
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -29,12 +29,13 @@ func main() {
         }),
     )
 
-    req := operations.CreateClientAddressRequest{
+    ctx := context.Background()
+    res, err := s.Addresses.CreateClientAddress(ctx, operations.CreateClientAddressRequest{
         Accept: "application/json",
         ContentType: "application/json",
         Address: &shared.Address{
             AdministrativeAreaLevel1: "RJ",
-            CountryCode: "BR",
+            CountryCode: sdk.String("BR"),
             CountryName: "Brasil",
             Locality: "Locality",
             LocalityAreaLevel1: "Locality area",
@@ -42,12 +43,9 @@ func main() {
             Route: "51",
             StreetNumber: "999",
         },
-        AlternativeKey: "email",
+        AlternativeKey: sdk.String("email"),
         ProfileID: "70caf394-8534-447e-a0ca-1803c669c771",
-    }
-
-    ctx := context.Background()
-    res, err := s.Addresses.CreateClientAddress(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -63,47 +61,47 @@ func main() {
 ## Available Resources and Operations
 
 
-### Addresses
+### [Addresses](docs/addresses/README.md)
 
-* `CreateClientAddress` - Create client address
-* `DeleteAddress` - Delete address
-* `GetAddress` - Get address
-* `GetAddressByVersion` - Get address by version
-* `GetClientAddresses` - Get client addresses
-* `GetUnmaskedAddress` - Get unmasked address
-* `GetUnmaskedAddressByVersion` - Get unmasked address by version
-* `GetUnmaskedClientAddresses` - Get unmasked client addresses
-* `UpdateClientAddress` - Update client address
+* [CreateClientAddress](docs/addresses/README.md#createclientaddress) - Create client address
+* [DeleteAddress](docs/addresses/README.md#deleteaddress) - Delete address
+* [GetAddress](docs/addresses/README.md#getaddress) - Get address
+* [GetAddressByVersion](docs/addresses/README.md#getaddressbyversion) - Get address by version
+* [GetClientAddresses](docs/addresses/README.md#getclientaddresses) - Get client addresses
+* [GetUnmaskedAddress](docs/addresses/README.md#getunmaskedaddress) - Get unmasked address
+* [GetUnmaskedAddressByVersion](docs/addresses/README.md#getunmaskedaddressbyversion) - Get unmasked address by version
+* [GetUnmaskedClientAddresses](docs/addresses/README.md#getunmaskedclientaddresses) - Get unmasked client addresses
+* [UpdateClientAddress](docs/addresses/README.md#updateclientaddress) - Update client address
 
-### Profiles
+### [Profiles](docs/profiles/README.md)
 
-* `CreateClientProfile` - Create client profile
-* `DeleteClientProfile` - Delete client profile
-* `GetProfile` - Get profile
-* `GetProfileByVersion` - Get profile by version
-* `GetUnmaskedProfile` - Get unmasked profile
-* `GetUnmaskedProfileByVersion` - Get unmasked profile by version
-* `UpdateClientProfile` - Updates client profile
+* [CreateClientProfile](docs/profiles/README.md#createclientprofile) - Create client profile
+* [DeleteClientProfile](docs/profiles/README.md#deleteclientprofile) - Delete client profile
+* [GetProfile](docs/profiles/README.md#getprofile) - Get profile
+* [GetProfileByVersion](docs/profiles/README.md#getprofilebyversion) - Get profile by version
+* [GetUnmaskedProfile](docs/profiles/README.md#getunmaskedprofile) - Get unmasked profile
+* [GetUnmaskedProfileByVersion](docs/profiles/README.md#getunmaskedprofilebyversion) - Get unmasked profile by version
+* [UpdateClientProfile](docs/profiles/README.md#updateclientprofile) - Updates client profile
 
-### Prospects
+### [Prospects](docs/prospects/README.md)
 
-* `CreateProspect` - Create prospect
-* `DeleteProspect` - Delete prospect
-* `GetProspect` - Get prospect
-* `GetUnmaskedProspect` - Get unmasked prospect
-* `UpdateProspect` - Update prospect
+* [CreateProspect](docs/prospects/README.md#createprospect) - Create prospect
+* [DeleteProspect](docs/prospects/README.md#deleteprospect) - Delete prospect
+* [GetProspect](docs/prospects/README.md#getprospect) - Get prospect
+* [GetUnmaskedProspect](docs/prospects/README.md#getunmaskedprospect) - Get unmasked prospect
+* [UpdateProspect](docs/prospects/README.md#updateprospect) - Update prospect
 
-### PurchaseInformation
+### [PurchaseInformation](docs/purchaseinformation/README.md)
 
-* `CreatePurchaseInformation` - Create purchase information
-* `DeletePurchaseInformation` - Delete purchase information
-* `GetPurchaseInformation` - Get purchase information
-* `GetUnmaskedPurchaseInformation` - Get unmasked purchase information
-* `UpdatePurchaseInformation` - Update purchase information
+* [CreatePurchaseInformation](docs/purchaseinformation/README.md#createpurchaseinformation) - Create purchase information
+* [DeletePurchaseInformation](docs/purchaseinformation/README.md#deletepurchaseinformation) - Delete purchase information
+* [GetPurchaseInformation](docs/purchaseinformation/README.md#getpurchaseinformation) - Get purchase information
+* [GetUnmaskedPurchaseInformation](docs/purchaseinformation/README.md#getunmaskedpurchaseinformation) - Get unmasked purchase information
+* [UpdatePurchaseInformation](docs/purchaseinformation/README.md#updatepurchaseinformation) - Update purchase information
 
-### Schemas
+### [Schemas](docs/schemas/README.md)
 
-* `CreateOrUpdateProfileSchema` - Create or update profile schema
+* [CreateOrUpdateProfileSchema](docs/schemas/README.md#createorupdateprofileschema) - Create or update profile schema
 <!-- End SDK Available Operations -->
 
 ### Maturity

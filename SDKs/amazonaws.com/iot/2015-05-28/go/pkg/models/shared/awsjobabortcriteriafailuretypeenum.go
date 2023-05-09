@@ -16,12 +16,16 @@ const (
 	AwsJobAbortCriteriaFailureTypeEnumAll      AwsJobAbortCriteriaFailureTypeEnum = "ALL"
 )
 
+func (e AwsJobAbortCriteriaFailureTypeEnum) ToPointer() *AwsJobAbortCriteriaFailureTypeEnum {
+	return &e
+}
+
 func (e *AwsJobAbortCriteriaFailureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "REJECTED":
@@ -29,9 +33,9 @@ func (e *AwsJobAbortCriteriaFailureTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TIMED_OUT":
 		fallthrough
 	case "ALL":
-		*e = AwsJobAbortCriteriaFailureTypeEnum(s)
+		*e = AwsJobAbortCriteriaFailureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AwsJobAbortCriteriaFailureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AwsJobAbortCriteriaFailureTypeEnum: %v", v)
 	}
 }

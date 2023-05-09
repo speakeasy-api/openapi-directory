@@ -16,17 +16,21 @@ const (
 	GetRelationalDatabaseLogEventsXAmzTargetEnumLightsail20161128GetRelationalDatabaseLogEvents GetRelationalDatabaseLogEventsXAmzTargetEnum = "Lightsail_20161128.GetRelationalDatabaseLogEvents"
 )
 
+func (e GetRelationalDatabaseLogEventsXAmzTargetEnum) ToPointer() *GetRelationalDatabaseLogEventsXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRelationalDatabaseLogEventsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetRelationalDatabaseLogEvents":
-		*e = GetRelationalDatabaseLogEventsXAmzTargetEnum(s)
+		*e = GetRelationalDatabaseLogEventsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRelationalDatabaseLogEventsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRelationalDatabaseLogEventsXAmzTargetEnum: %v", v)
 	}
 }
 

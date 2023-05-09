@@ -34,7 +34,10 @@ func newSettlementtransactions(defaultClient, securityClient HTTPClient, serverU
 // ContentSettlementtransactionsList - Retrieves a list of transactions for the settlement.
 func (s *settlementtransactions) ContentSettlementtransactionsList(ctx context.Context, request operations.ContentSettlementtransactionsListRequest, security operations.ContentSettlementtransactionsListSecurity) (*operations.ContentSettlementtransactionsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}/transactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{merchantId}/settlementreports/{settlementId}/transactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

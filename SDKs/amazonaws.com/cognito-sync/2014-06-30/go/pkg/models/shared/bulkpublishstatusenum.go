@@ -16,12 +16,16 @@ const (
 	BulkPublishStatusEnumSucceeded  BulkPublishStatusEnum = "SUCCEEDED"
 )
 
+func (e BulkPublishStatusEnum) ToPointer() *BulkPublishStatusEnum {
+	return &e
+}
+
 func (e *BulkPublishStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOT_STARTED":
 		fallthrough
 	case "IN_PROGRESS":
@@ -29,9 +33,9 @@ func (e *BulkPublishStatusEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
-		*e = BulkPublishStatusEnum(s)
+		*e = BulkPublishStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BulkPublishStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for BulkPublishStatusEnum: %v", v)
 	}
 }

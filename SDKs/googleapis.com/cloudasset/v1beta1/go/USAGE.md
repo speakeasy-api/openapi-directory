@@ -2,43 +2,41 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
+    ctx := context.Background()
+    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
         AssetNames: []string{
             "unde",
             "nulla",
             "corrupti",
             "illum",
         },
-        Callback: "vel",
-        ContentType: "RESOURCE",
-        Fields: "deserunt",
-        Key: "suscipit",
-        OauthToken: "iure",
+        Callback: sdk.String("vel"),
+        ContentType: operations.CloudassetProjectsBatchGetAssetsHistoryContentTypeEnumResource.ToPointer(),
+        Fields: sdk.String("deserunt"),
+        Key: sdk.String("suscipit"),
+        OauthToken: sdk.String("iure"),
         Parent: "magnam",
-        PrettyPrint: false,
-        QuotaUser: "debitis",
-        ReadTimeWindowEndTime: "ipsa",
-        ReadTimeWindowStartTime: "delectus",
-        UploadType: "tempora",
-        UploadProtocol: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, req, operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("debitis"),
+        ReadTimeWindowEndTime: sdk.String("ipsa"),
+        ReadTimeWindowStartTime: sdk.String("delectus"),
+        UploadType: sdk.String("tempora"),
+        UploadProtocol: sdk.String("suscipit"),
+    }, operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })

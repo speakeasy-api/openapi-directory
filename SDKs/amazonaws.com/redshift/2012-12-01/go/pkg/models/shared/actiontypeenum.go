@@ -15,20 +15,24 @@ const (
 	ActionTypeEnumResizeCluster       ActionTypeEnum = "resize-cluster"
 )
 
+func (e ActionTypeEnum) ToPointer() *ActionTypeEnum {
+	return &e
+}
+
 func (e *ActionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "restore-cluster":
 		fallthrough
 	case "recommend-node-config":
 		fallthrough
 	case "resize-cluster":
-		*e = ActionTypeEnum(s)
+		*e = ActionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ActionTypeEnum: %v", v)
 	}
 }

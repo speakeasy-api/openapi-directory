@@ -16,17 +16,21 @@ const (
 	ListLicenseConversionTasksXAmzTargetEnumAwsLicenseManagerListLicenseConversionTasks ListLicenseConversionTasksXAmzTargetEnum = "AWSLicenseManager.ListLicenseConversionTasks"
 )
 
+func (e ListLicenseConversionTasksXAmzTargetEnum) ToPointer() *ListLicenseConversionTasksXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListLicenseConversionTasksXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSLicenseManager.ListLicenseConversionTasks":
-		*e = ListLicenseConversionTasksXAmzTargetEnum(s)
+		*e = ListLicenseConversionTasksXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListLicenseConversionTasksXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListLicenseConversionTasksXAmzTargetEnum: %v", v)
 	}
 }
 

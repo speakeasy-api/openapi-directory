@@ -13,24 +13,22 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/bulksms.com/1.0.0/go
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := shared.PreSignRequest{
-        FileExtension: "pdf",
-        MediaType: "application/pdf",
-    }
-
     ctx := context.Background()
-    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, req, operations.PostRmmPreSignAttachmentSecurity{
+    res, err := s.Attachments.PostRmmPreSignAttachment(ctx, shared.PreSignRequest{
+        FileExtension: sdk.String("pdf"),
+        MediaType: sdk.String("application/pdf"),
+    }, operations.PostRmmPreSignAttachmentSecurity{
         Password: "YOUR_PASSWORD_HERE",
         Username: "YOUR_USERNAME_HERE",
     })
@@ -49,38 +47,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### Attachments
+### [Attachments](docs/attachments/README.md)
 
-* `PostRmmPreSignAttachment` - Upload an attachment via a signed URL
+* [PostRmmPreSignAttachment](docs/attachments/README.md#postrmmpresignattachment) - Upload an attachment via a signed URL
 
-### BlockedNumbers
+### [BlockedNumbers](docs/blockednumbers/README.md)
 
-* `GetBlockedNumbers` - List blocked numbers
-* `PostBlockedNumbers` - Create a blocked number
+* [GetBlockedNumbers](docs/blockednumbers/README.md#getblockednumbers) - List blocked numbers
+* [PostBlockedNumbers](docs/blockednumbers/README.md#postblockednumbers) - Create a blocked number
 
-### Credits
+### [Credits](docs/credits/README.md)
 
-* `PostCreditTransfer` - Transfer credits to another account
+* [PostCreditTransfer](docs/credits/README.md#postcredittransfer) - Transfer credits to another account
 
-### Message
+### [Message](docs/message/README.md)
 
-* `GetMessages` - Retrieve Messages
-* `GetMessagesSend` - Send message by simple GET or POST
-* `GetMessagesID` - Show Message
-* `GetMessagesIDRelatedReceivedMessages` - List Related Messages
-* `PostMessages` - Send Messages
+* [GetMessages](docs/message/README.md#getmessages) - Retrieve Messages
+* [GetMessagesSend](docs/message/README.md#getmessagessend) - Send message by simple GET or POST
+* [GetMessagesID](docs/message/README.md#getmessagesid) - Show Message
+* [GetMessagesIDRelatedReceivedMessages](docs/message/README.md#getmessagesidrelatedreceivedmessages) - List Related Messages
+* [PostMessages](docs/message/README.md#postmessages) - Send Messages
 
-### Profile
+### [Profile](docs/profile/README.md)
 
-* `GetProfile` - Get profile
+* [GetProfile](docs/profile/README.md#getprofile) - Get profile
 
-### Webhooks
+### [Webhooks](docs/webhooks/README.md)
 
-* `DeleteWebhooksID` - Delete a webhook
-* `GetWebhooks` - List webhooks
-* `GetWebhooksID` - Read a webhook
-* `PostWebhooks` - Create a webhook
-* `PostWebhooksID` - Update a webhook
+* [DeleteWebhooksID](docs/webhooks/README.md#deletewebhooksid) - Delete a webhook
+* [GetWebhooks](docs/webhooks/README.md#getwebhooks) - List webhooks
+* [GetWebhooksID](docs/webhooks/README.md#getwebhooksid) - Read a webhook
+* [PostWebhooks](docs/webhooks/README.md#postwebhooks) - Create a webhook
+* [PostWebhooksID](docs/webhooks/README.md#postwebhooksid) - Update a webhook
 <!-- End SDK Available Operations -->
 
 ### Maturity

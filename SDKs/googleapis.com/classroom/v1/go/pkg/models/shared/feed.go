@@ -17,12 +17,16 @@ const (
 	FeedFeedTypeEnumCourseWorkChanges   FeedFeedTypeEnum = "COURSE_WORK_CHANGES"
 )
 
+func (e FeedFeedTypeEnum) ToPointer() *FeedFeedTypeEnum {
+	return &e
+}
+
 func (e *FeedFeedTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FEED_TYPE_UNSPECIFIED":
 		fallthrough
 	case "DOMAIN_ROSTER_CHANGES":
@@ -30,10 +34,10 @@ func (e *FeedFeedTypeEnum) UnmarshalJSON(data []byte) error {
 	case "COURSE_ROSTER_CHANGES":
 		fallthrough
 	case "COURSE_WORK_CHANGES":
-		*e = FeedFeedTypeEnum(s)
+		*e = FeedFeedTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FeedFeedTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FeedFeedTypeEnum: %v", v)
 	}
 }
 

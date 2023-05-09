@@ -15,17 +15,21 @@ const (
 	DisableProactiveEngagementXAmzTargetEnumAwsShield20160616DisableProactiveEngagement DisableProactiveEngagementXAmzTargetEnum = "AWSShield_20160616.DisableProactiveEngagement"
 )
 
+func (e DisableProactiveEngagementXAmzTargetEnum) ToPointer() *DisableProactiveEngagementXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableProactiveEngagementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.DisableProactiveEngagement":
-		*e = DisableProactiveEngagementXAmzTargetEnum(s)
+		*e = DisableProactiveEngagementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableProactiveEngagementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableProactiveEngagementXAmzTargetEnum: %v", v)
 	}
 }
 

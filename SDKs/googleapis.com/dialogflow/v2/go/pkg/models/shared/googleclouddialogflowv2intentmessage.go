@@ -23,12 +23,16 @@ const (
 	GoogleCloudDialogflowV2IntentMessagePlatformEnumGoogleHangouts      GoogleCloudDialogflowV2IntentMessagePlatformEnum = "GOOGLE_HANGOUTS"
 )
 
+func (e GoogleCloudDialogflowV2IntentMessagePlatformEnum) ToPointer() *GoogleCloudDialogflowV2IntentMessagePlatformEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2IntentMessagePlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "FACEBOOK":
@@ -48,10 +52,10 @@ func (e *GoogleCloudDialogflowV2IntentMessagePlatformEnum) UnmarshalJSON(data []
 	case "ACTIONS_ON_GOOGLE":
 		fallthrough
 	case "GOOGLE_HANGOUTS":
-		*e = GoogleCloudDialogflowV2IntentMessagePlatformEnum(s)
+		*e = GoogleCloudDialogflowV2IntentMessagePlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessagePlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessagePlatformEnum: %v", v)
 	}
 }
 

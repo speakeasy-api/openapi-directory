@@ -15,20 +15,24 @@ const (
 	LocationTypeEnumAvailabilityZoneID LocationTypeEnum = "availability-zone-id"
 )
 
+func (e LocationTypeEnum) ToPointer() *LocationTypeEnum {
+	return &e
+}
+
 func (e *LocationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "region":
 		fallthrough
 	case "availability-zone":
 		fallthrough
 	case "availability-zone-id":
-		*e = LocationTypeEnum(s)
+		*e = LocationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LocationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LocationTypeEnum: %v", v)
 	}
 }

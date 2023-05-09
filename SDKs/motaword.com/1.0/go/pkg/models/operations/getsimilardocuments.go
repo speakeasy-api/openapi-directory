@@ -16,19 +16,23 @@ const (
 	GetSimilarDocumentsWithEnumEditors GetSimilarDocumentsWithEnum = "editors"
 )
 
+func (e GetSimilarDocumentsWithEnum) ToPointer() *GetSimilarDocumentsWithEnum {
+	return &e
+}
+
 func (e *GetSimilarDocumentsWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "preview":
 		fallthrough
 	case "editors":
-		*e = GetSimilarDocumentsWithEnum(s)
+		*e = GetSimilarDocumentsWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSimilarDocumentsWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSimilarDocumentsWithEnum: %v", v)
 	}
 }
 

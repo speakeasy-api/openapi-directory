@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.SendCommandRequest{
+    ctx := context.Background()
+    res, err := s.SendCommand(ctx, operations.SendCommandRequest{
         SendCommandRequest: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
                 "provident": "distinctio",
@@ -36,20 +37,20 @@ func main() {
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "tempora",
-                        IonText: "suscipit",
+                        IonBinary: sdk.String("tempora"),
+                        IonText: sdk.String("suscipit"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "molestiae",
-                        IonText: "minus",
+                        IonBinary: sdk.String("molestiae"),
+                        IonText: sdk.String("minus"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "placeat",
-                        IonText: "voluptatum",
+                        IonBinary: sdk.String("placeat"),
+                        IonText: sdk.String("voluptatum"),
                     },
                     shared.ValueHolder{
-                        IonBinary: "iusto",
-                        IonText: "excepturi",
+                        IonBinary: sdk.String("iusto"),
+                        IonText: sdk.String("excepturi"),
                     },
                 },
                 Statement: "nisi",
@@ -59,7 +60,7 @@ func main() {
                 NextPageToken: "temporibus",
                 TransactionID: "ab",
             },
-            SessionToken: "quis",
+            SessionToken: sdk.String("quis"),
             StartSession: &shared.StartSessionRequest{
                 LedgerName: "veritatis",
             },
@@ -69,18 +70,15 @@ func main() {
                 "quo": "odit",
             },
         },
-        XAmzAlgorithm: "at",
-        XAmzContentSha256: "at",
-        XAmzCredential: "maiores",
-        XAmzDate: "molestiae",
-        XAmzSecurityToken: "quod",
-        XAmzSignature: "quod",
-        XAmzSignedHeaders: "esse",
-        XAmzTarget: "QLDBSession.SendCommand",
-    }
-
-    ctx := context.Background()
-    res, err := s.SendCommand(ctx, req)
+        XAmzAlgorithm: sdk.String("at"),
+        XAmzContentSha256: sdk.String("at"),
+        XAmzCredential: sdk.String("maiores"),
+        XAmzDate: sdk.String("molestiae"),
+        XAmzSecurityToken: sdk.String("quod"),
+        XAmzSignature: sdk.String("quod"),
+        XAmzSignedHeaders: sdk.String("esse"),
+        XAmzTarget: operations.SendCommandXAmzTargetEnumQldbSessionSendCommand,
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,19 +15,23 @@ const (
 	TagKeyPurposeEnumGceFirewall        TagKeyPurposeEnum = "GCE_FIREWALL"
 )
 
+func (e TagKeyPurposeEnum) ToPointer() *TagKeyPurposeEnum {
+	return &e
+}
+
 func (e *TagKeyPurposeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PURPOSE_UNSPECIFIED":
 		fallthrough
 	case "GCE_FIREWALL":
-		*e = TagKeyPurposeEnum(s)
+		*e = TagKeyPurposeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TagKeyPurposeEnum: %s", s)
+		return fmt.Errorf("invalid value for TagKeyPurposeEnum: %v", v)
 	}
 }
 
@@ -43,7 +47,7 @@ type TagKey struct {
 	Name *string `json:"name,omitempty"`
 	// Output only. Immutable. Namespaced name of the TagKey.
 	NamespacedName *string `json:"namespacedName,omitempty"`
-	// Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
+	// Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an Organization or a Project. For a TagKey parented by an Organization, its parent must be in the form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the form `projects/{project_id}` or `projects/{project_number}`.
 	Parent *string `json:"parent,omitempty"`
 	// Optional. A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. A purpose does not grant a policy engine exclusive rights to the Tag, and it may be referenced by other policy engines. A purpose cannot be changed once set.
 	Purpose *TagKeyPurposeEnum `json:"purpose,omitempty"`
@@ -63,7 +67,7 @@ type TagKeyInput struct {
 	Etag *string `json:"etag,omitempty"`
 	// Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
 	Name *string `json:"name,omitempty"`
-	// Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
+	// Immutable. The resource name of the TagKey's parent. A TagKey can be parented by an Organization or a Project. For a TagKey parented by an Organization, its parent must be in the form `organizations/{org_id}`. For a TagKey parented by a Project, its parent can be in the form `projects/{project_id}` or `projects/{project_number}`.
 	Parent *string `json:"parent,omitempty"`
 	// Optional. A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. A purpose does not grant a policy engine exclusive rights to the Tag, and it may be referenced by other policy engines. A purpose cannot be changed once set.
 	Purpose *TagKeyPurposeEnum `json:"purpose,omitempty"`

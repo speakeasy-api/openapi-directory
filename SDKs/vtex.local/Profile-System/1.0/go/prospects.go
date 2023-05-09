@@ -95,7 +95,10 @@ func (s *prospects) CreateProspect(ctx context.Context, request operations.Creat
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) DeleteProspect(ctx context.Context, request operations.DeleteProspectRequest) (*operations.DeleteProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -137,7 +140,10 @@ func (s *prospects) DeleteProspect(ctx context.Context, request operations.Delet
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) GetProspect(ctx context.Context, request operations.GetProspectRequest) (*operations.GetProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -186,7 +192,10 @@ func (s *prospects) GetProspect(ctx context.Context, request operations.GetProsp
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) GetUnmaskedProspect(ctx context.Context, request operations.GetUnmaskedProspectRequest) (*operations.GetUnmaskedProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}/unmask", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}/unmask", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -239,7 +248,10 @@ func (s *prospects) GetUnmaskedProspect(ctx context.Context, request operations.
 // > Learn more about the [Profile System](https://developers.vtex.com/vtex-rest-api/docs/profile-system) and its other API endpoints.
 func (s *prospects) UpdateProspect(ctx context.Context, request operations.UpdateProspectRequest) (*operations.UpdateProspectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/storage/profile-system/prospects/{prospectId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

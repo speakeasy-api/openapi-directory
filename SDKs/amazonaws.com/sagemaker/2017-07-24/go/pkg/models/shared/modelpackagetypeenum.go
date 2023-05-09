@@ -15,20 +15,24 @@ const (
 	ModelPackageTypeEnumBoth        ModelPackageTypeEnum = "Both"
 )
 
+func (e ModelPackageTypeEnum) ToPointer() *ModelPackageTypeEnum {
+	return &e
+}
+
 func (e *ModelPackageTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Versioned":
 		fallthrough
 	case "Unversioned":
 		fallthrough
 	case "Both":
-		*e = ModelPackageTypeEnum(s)
+		*e = ModelPackageTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ModelPackageTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ModelPackageTypeEnum: %v", v)
 	}
 }

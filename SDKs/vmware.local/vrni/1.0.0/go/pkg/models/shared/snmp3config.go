@@ -15,21 +15,25 @@ const (
 	Snmp3ConfigAuthenticationTypeEnumSha    Snmp3ConfigAuthenticationTypeEnum = "SHA"
 )
 
+func (e Snmp3ConfigAuthenticationTypeEnum) ToPointer() *Snmp3ConfigAuthenticationTypeEnum {
+	return &e
+}
+
 func (e *Snmp3ConfigAuthenticationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_AUTH":
 		fallthrough
 	case "MD5":
 		fallthrough
 	case "SHA":
-		*e = Snmp3ConfigAuthenticationTypeEnum(s)
+		*e = Snmp3ConfigAuthenticationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Snmp3ConfigAuthenticationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Snmp3ConfigAuthenticationTypeEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	Snmp3ConfigPrivacyTypeEnumNoPriv   Snmp3ConfigPrivacyTypeEnum = "NO_PRIV"
 )
 
+func (e Snmp3ConfigPrivacyTypeEnum) ToPointer() *Snmp3ConfigPrivacyTypeEnum {
+	return &e
+}
+
 func (e *Snmp3ConfigPrivacyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AES":
 		fallthrough
 	case "DES":
@@ -64,10 +72,10 @@ func (e *Snmp3ConfigPrivacyTypeEnum) UnmarshalJSON(data []byte) error {
 	case "3DES":
 		fallthrough
 	case "NO_PRIV":
-		*e = Snmp3ConfigPrivacyTypeEnum(s)
+		*e = Snmp3ConfigPrivacyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for Snmp3ConfigPrivacyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for Snmp3ConfigPrivacyTypeEnum: %v", v)
 	}
 }
 

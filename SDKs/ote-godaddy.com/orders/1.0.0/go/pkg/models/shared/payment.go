@@ -20,12 +20,16 @@ const (
 	PaymentCategoryEnumPrepaid       PaymentCategoryEnum = "PREPAID"
 )
 
+func (e PaymentCategoryEnum) ToPointer() *PaymentCategoryEnum {
+	return &e
+}
+
 func (e *PaymentCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREDIT_CARD":
 		fallthrough
 	case "PAYPAL":
@@ -37,10 +41,10 @@ func (e *PaymentCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "IN_STORE_CREDIT":
 		fallthrough
 	case "PREPAID":
-		*e = PaymentCategoryEnum(s)
+		*e = PaymentCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentCategoryEnum: %v", v)
 	}
 }
 
@@ -61,12 +65,16 @@ const (
 	PaymentSubcategoryEnumUnionpay         PaymentSubcategoryEnum = "UNIONPAY"
 )
 
+func (e PaymentSubcategoryEnum) ToPointer() *PaymentSubcategoryEnum {
+	return &e
+}
+
 func (e *PaymentSubcategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CHECKING_PERSONAL":
 		fallthrough
 	case "CHECKING_BUSINESS":
@@ -80,10 +88,10 @@ func (e *PaymentSubcategoryEnum) UnmarshalJSON(data []byte) error {
 	case "JCB":
 		fallthrough
 	case "UNIONPAY":
-		*e = PaymentSubcategoryEnum(s)
+		*e = PaymentSubcategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaymentSubcategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for PaymentSubcategoryEnum: %v", v)
 	}
 }
 

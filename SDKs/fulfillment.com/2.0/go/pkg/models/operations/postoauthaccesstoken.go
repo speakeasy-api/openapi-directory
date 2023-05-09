@@ -19,19 +19,23 @@ const (
 	PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnumRefreshToken PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum = "refresh_token"
 )
 
+func (e PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum) ToPointer() *PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum {
+	return &e
+}
+
 func (e *PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "password":
 		fallthrough
 	case "refresh_token":
-		*e = PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum(s)
+		*e = PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2GrantTypeEnum: %v", v)
 	}
 }
 
@@ -42,17 +46,21 @@ const (
 	PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnumOms PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum = "oms"
 )
 
+func (e PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum) ToPointer() *PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum {
+	return &e
+}
+
 func (e *PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "oms":
-		*e = PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum(s)
+		*e = PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostOauthAccessTokenAccessTokenRequestV2AccessTokenRequestBaseV2ScopeEnum: %v", v)
 	}
 }
 

@@ -17,12 +17,16 @@ const (
 	LicenseEditorialVideoContentLicenseEnumPremierEditorialVideoComp                    LicenseEditorialVideoContentLicenseEnum = "premier_editorial_video_comp"
 )
 
+func (e LicenseEditorialVideoContentLicenseEnum) ToPointer() *LicenseEditorialVideoContentLicenseEnum {
+	return &e
+}
+
 func (e *LicenseEditorialVideoContentLicenseEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "premier_editorial_video_digital_only":
 		fallthrough
 	case "premier_editorial_video_all_media":
@@ -30,10 +34,10 @@ func (e *LicenseEditorialVideoContentLicenseEnum) UnmarshalJSON(data []byte) err
 	case "premier_editorial_video_all_media_single_territory":
 		fallthrough
 	case "premier_editorial_video_comp":
-		*e = LicenseEditorialVideoContentLicenseEnum(s)
+		*e = LicenseEditorialVideoContentLicenseEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseEditorialVideoContentLicenseEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseEditorialVideoContentLicenseEnum: %v", v)
 	}
 }
 
@@ -44,17 +48,21 @@ const (
 	LicenseEditorialVideoContentSizeEnumOriginal LicenseEditorialVideoContentSizeEnum = "original"
 )
 
+func (e LicenseEditorialVideoContentSizeEnum) ToPointer() *LicenseEditorialVideoContentSizeEnum {
+	return &e
+}
+
 func (e *LicenseEditorialVideoContentSizeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "original":
-		*e = LicenseEditorialVideoContentSizeEnum(s)
+		*e = LicenseEditorialVideoContentSizeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LicenseEditorialVideoContentSizeEnum: %s", s)
+		return fmt.Errorf("invalid value for LicenseEditorialVideoContentSizeEnum: %v", v)
 	}
 }
 

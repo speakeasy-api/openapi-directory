@@ -16,17 +16,21 @@ const (
 	ListByteMatchSetsXAmzTargetEnumAwswaf20150824ListByteMatchSets ListByteMatchSetsXAmzTargetEnum = "AWSWAF_20150824.ListByteMatchSets"
 )
 
+func (e ListByteMatchSetsXAmzTargetEnum) ToPointer() *ListByteMatchSetsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListByteMatchSetsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.ListByteMatchSets":
-		*e = ListByteMatchSetsXAmzTargetEnum(s)
+		*e = ListByteMatchSetsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListByteMatchSetsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListByteMatchSetsXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	CreateGlobalTableXAmzTargetEnumDynamoDb20120810CreateGlobalTable CreateGlobalTableXAmzTargetEnum = "DynamoDB_20120810.CreateGlobalTable"
 )
 
+func (e CreateGlobalTableXAmzTargetEnum) ToPointer() *CreateGlobalTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateGlobalTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20120810.CreateGlobalTable":
-		*e = CreateGlobalTableXAmzTargetEnum(s)
+		*e = CreateGlobalTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateGlobalTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateGlobalTableXAmzTargetEnum: %v", v)
 	}
 }
 

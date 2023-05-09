@@ -37,12 +37,16 @@ const (
 	FolderMenuItemFolderTypeEnumGridPhotovoltaicPowerSystem FolderMenuItemFolderTypeEnum = "GridPhotovoltaicPowerSystem"
 )
 
+func (e FolderMenuItemFolderTypeEnum) ToPointer() *FolderMenuItemFolderTypeEnum {
+	return &e
+}
+
 func (e *FolderMenuItemFolderTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Folder":
 		fallthrough
 	case "Location":
@@ -90,10 +94,10 @@ func (e *FolderMenuItemFolderTypeEnum) UnmarshalJSON(data []byte) error {
 	case "Trash":
 		fallthrough
 	case "GridPhotovoltaicPowerSystem":
-		*e = FolderMenuItemFolderTypeEnum(s)
+		*e = FolderMenuItemFolderTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FolderMenuItemFolderTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for FolderMenuItemFolderTypeEnum: %v", v)
 	}
 }
 

@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,21 +16,19 @@ func main() {
         }),
     )
 
-    req := operations.GETDecodeAuthorizationMessageRequest{
-        Action: "DecodeAuthorizationMessage",
-        EncodedMessage: "corrupti",
-        Version: "2011-06-15",
-        XAmzAlgorithm: "provident",
-        XAmzContentSha256: "distinctio",
-        XAmzCredential: "quibusdam",
-        XAmzDate: "unde",
-        XAmzSecurityToken: "nulla",
-        XAmzSignature: "corrupti",
-        XAmzSignedHeaders: "illum",
-    }
-
     ctx := context.Background()
-    res, err := s.GETDecodeAuthorizationMessage(ctx, req)
+    res, err := s.GETDecodeAuthorizationMessage(ctx, operations.GETDecodeAuthorizationMessageRequest{
+        Action: operations.GETDecodeAuthorizationMessageActionEnumDecodeAuthorizationMessage,
+        EncodedMessage: "corrupti",
+        Version: operations.GETDecodeAuthorizationMessageVersionEnumTwoThousandAndEleven0615,
+        XAmzAlgorithm: sdk.String("provident"),
+        XAmzContentSha256: sdk.String("distinctio"),
+        XAmzCredential: sdk.String("quibusdam"),
+        XAmzDate: sdk.String("unde"),
+        XAmzSecurityToken: sdk.String("nulla"),
+        XAmzSignature: sdk.String("corrupti"),
+        XAmzSignedHeaders: sdk.String("illum"),
+    })
     if err != nil {
         log.Fatal(err)
     }

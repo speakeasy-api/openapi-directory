@@ -15,17 +15,21 @@ const (
 	GETAuthorizeSnapshotAccessActionEnumAuthorizeSnapshotAccess GETAuthorizeSnapshotAccessActionEnum = "AuthorizeSnapshotAccess"
 )
 
+func (e GETAuthorizeSnapshotAccessActionEnum) ToPointer() *GETAuthorizeSnapshotAccessActionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeSnapshotAccessActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AuthorizeSnapshotAccess":
-		*e = GETAuthorizeSnapshotAccessActionEnum(s)
+		*e = GETAuthorizeSnapshotAccessActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeSnapshotAccessActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeSnapshotAccessActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAuthorizeSnapshotAccessVersionEnumTwoThousandAndTwelve1201 GETAuthorizeSnapshotAccessVersionEnum = "2012-12-01"
 )
 
+func (e GETAuthorizeSnapshotAccessVersionEnum) ToPointer() *GETAuthorizeSnapshotAccessVersionEnum {
+	return &e
+}
+
 func (e *GETAuthorizeSnapshotAccessVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = GETAuthorizeSnapshotAccessVersionEnum(s)
+		*e = GETAuthorizeSnapshotAccessVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAuthorizeSnapshotAccessVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAuthorizeSnapshotAccessVersionEnum: %v", v)
 	}
 }
 

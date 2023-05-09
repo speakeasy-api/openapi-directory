@@ -15,17 +15,21 @@ const (
 	POSTUpdateConfigurationSetReputationMetricsEnabledActionEnumUpdateConfigurationSetReputationMetricsEnabled POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum = "UpdateConfigurationSetReputationMetricsEnabled"
 )
 
+func (e POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum) ToPointer() *POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateConfigurationSetReputationMetricsEnabled":
-		*e = POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum(s)
+		*e = POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetReputationMetricsEnabledActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnumTwoThousandAndTen1201 POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum = "2010-12-01"
 )
 
+func (e POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum) ToPointer() *POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum(s)
+		*e = POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateConfigurationSetReputationMetricsEnabledVersionEnum: %v", v)
 	}
 }
 

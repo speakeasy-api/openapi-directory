@@ -15,17 +15,21 @@ const (
 	POSTCreateClusterParameterGroupActionEnumCreateClusterParameterGroup POSTCreateClusterParameterGroupActionEnum = "CreateClusterParameterGroup"
 )
 
+func (e POSTCreateClusterParameterGroupActionEnum) ToPointer() *POSTCreateClusterParameterGroupActionEnum {
+	return &e
+}
+
 func (e *POSTCreateClusterParameterGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CreateClusterParameterGroup":
-		*e = POSTCreateClusterParameterGroupActionEnum(s)
+		*e = POSTCreateClusterParameterGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateClusterParameterGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateClusterParameterGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTCreateClusterParameterGroupVersionEnumTwoThousandAndTwelve1201 POSTCreateClusterParameterGroupVersionEnum = "2012-12-01"
 )
 
+func (e POSTCreateClusterParameterGroupVersionEnum) ToPointer() *POSTCreateClusterParameterGroupVersionEnum {
+	return &e
+}
+
 func (e *POSTCreateClusterParameterGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2012-12-01":
-		*e = POSTCreateClusterParameterGroupVersionEnum(s)
+		*e = POSTCreateClusterParameterGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTCreateClusterParameterGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTCreateClusterParameterGroupVersionEnum: %v", v)
 	}
 }
 

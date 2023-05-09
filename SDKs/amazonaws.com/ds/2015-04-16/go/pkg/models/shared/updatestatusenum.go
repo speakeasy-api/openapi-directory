@@ -15,20 +15,24 @@ const (
 	UpdateStatusEnumUpdateFailed UpdateStatusEnum = "UpdateFailed"
 )
 
+func (e UpdateStatusEnum) ToPointer() *UpdateStatusEnum {
+	return &e
+}
+
 func (e *UpdateStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Updated":
 		fallthrough
 	case "Updating":
 		fallthrough
 	case "UpdateFailed":
-		*e = UpdateStatusEnum(s)
+		*e = UpdateStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateStatusEnum: %v", v)
 	}
 }

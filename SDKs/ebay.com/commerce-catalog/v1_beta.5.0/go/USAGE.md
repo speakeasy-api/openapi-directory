@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetProductRequest{
-        XEbayCMarketplaceID: "corrupti",
-        Epid: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.Product.GetProduct(ctx, req, operations.GetProductSecurity{
+    res, err := s.Product.GetProduct(ctx, operations.GetProductRequest{
+        XEbayCMarketplaceID: sdk.String("corrupti"),
+        Epid: "provident",
+    }, operations.GetProductSecurity{
         APIAuth: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
     if err != nil {

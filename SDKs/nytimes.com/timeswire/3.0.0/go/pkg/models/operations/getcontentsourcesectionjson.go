@@ -22,21 +22,25 @@ const (
 	GetContentSourceSectionJSONSourceEnumIht GetContentSourceSectionJSONSourceEnum = "iht"
 )
 
+func (e GetContentSourceSectionJSONSourceEnum) ToPointer() *GetContentSourceSectionJSONSourceEnum {
+	return &e
+}
+
 func (e *GetContentSourceSectionJSONSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "nyt":
 		fallthrough
 	case "iht":
-		*e = GetContentSourceSectionJSONSourceEnum(s)
+		*e = GetContentSourceSectionJSONSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetContentSourceSectionJSONSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetContentSourceSectionJSONSourceEnum: %v", v)
 	}
 }
 

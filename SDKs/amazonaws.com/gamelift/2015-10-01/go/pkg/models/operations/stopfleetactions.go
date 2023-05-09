@@ -16,17 +16,21 @@ const (
 	StopFleetActionsXAmzTargetEnumGameLiftStopFleetActions StopFleetActionsXAmzTargetEnum = "GameLift.StopFleetActions"
 )
 
+func (e StopFleetActionsXAmzTargetEnum) ToPointer() *StopFleetActionsXAmzTargetEnum {
+	return &e
+}
+
 func (e *StopFleetActionsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.StopFleetActions":
-		*e = StopFleetActionsXAmzTargetEnum(s)
+		*e = StopFleetActionsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StopFleetActionsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for StopFleetActionsXAmzTargetEnum: %v", v)
 	}
 }
 

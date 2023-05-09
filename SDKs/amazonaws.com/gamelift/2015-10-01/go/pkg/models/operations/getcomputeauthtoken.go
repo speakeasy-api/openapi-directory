@@ -16,17 +16,21 @@ const (
 	GetComputeAuthTokenXAmzTargetEnumGameLiftGetComputeAuthToken GetComputeAuthTokenXAmzTargetEnum = "GameLift.GetComputeAuthToken"
 )
 
+func (e GetComputeAuthTokenXAmzTargetEnum) ToPointer() *GetComputeAuthTokenXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetComputeAuthTokenXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.GetComputeAuthToken":
-		*e = GetComputeAuthTokenXAmzTargetEnum(s)
+		*e = GetComputeAuthTokenXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetComputeAuthTokenXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetComputeAuthTokenXAmzTargetEnum: %v", v)
 	}
 }
 

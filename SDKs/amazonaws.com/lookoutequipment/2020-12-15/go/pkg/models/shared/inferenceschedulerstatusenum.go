@@ -16,12 +16,16 @@ const (
 	InferenceSchedulerStatusEnumStopped  InferenceSchedulerStatusEnum = "STOPPED"
 )
 
+func (e InferenceSchedulerStatusEnum) ToPointer() *InferenceSchedulerStatusEnum {
+	return &e
+}
+
 func (e *InferenceSchedulerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "RUNNING":
@@ -29,9 +33,9 @@ func (e *InferenceSchedulerStatusEnum) UnmarshalJSON(data []byte) error {
 	case "STOPPING":
 		fallthrough
 	case "STOPPED":
-		*e = InferenceSchedulerStatusEnum(s)
+		*e = InferenceSchedulerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InferenceSchedulerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for InferenceSchedulerStatusEnum: %v", v)
 	}
 }

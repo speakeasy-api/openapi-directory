@@ -16,12 +16,16 @@ const (
 	LaunchProfileValidationTypeEnumValidateSecurityGroupAssociation       LaunchProfileValidationTypeEnum = "VALIDATE_SECURITY_GROUP_ASSOCIATION"
 )
 
+func (e LaunchProfileValidationTypeEnum) ToPointer() *LaunchProfileValidationTypeEnum {
+	return &e
+}
+
 func (e *LaunchProfileValidationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VALIDATE_ACTIVE_DIRECTORY_STUDIO_COMPONENT":
 		fallthrough
 	case "VALIDATE_SUBNET_ASSOCIATION":
@@ -29,9 +33,9 @@ func (e *LaunchProfileValidationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NETWORK_ACL_ASSOCIATION":
 		fallthrough
 	case "VALIDATE_SECURITY_GROUP_ASSOCIATION":
-		*e = LaunchProfileValidationTypeEnum(s)
+		*e = LaunchProfileValidationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LaunchProfileValidationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for LaunchProfileValidationTypeEnum: %v", v)
 	}
 }

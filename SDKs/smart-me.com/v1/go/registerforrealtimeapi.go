@@ -37,7 +37,10 @@ func newRegisterForRealtimeAPI(defaultClient, securityClient HTTPClient, serverU
 // Deletes a realtime API registration.
 func (s *registerForRealtimeAPI) RegisterForRealtimeAPIDelete(ctx context.Context, request operations.RegisterForRealtimeAPIDeleteRequest) (*operations.RegisterForRealtimeAPIDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/RegisterForRealtimeApi/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/api/RegisterForRealtimeApi/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

@@ -18,12 +18,16 @@ const (
 	ListFindingsResultStateChangeEnumRemoved   ListFindingsResultStateChangeEnum = "REMOVED"
 )
 
+func (e ListFindingsResultStateChangeEnum) ToPointer() *ListFindingsResultStateChangeEnum {
+	return &e
+}
+
 func (e *ListFindingsResultStateChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNUSED":
 		fallthrough
 	case "CHANGED":
@@ -33,10 +37,10 @@ func (e *ListFindingsResultStateChangeEnum) UnmarshalJSON(data []byte) error {
 	case "ADDED":
 		fallthrough
 	case "REMOVED":
-		*e = ListFindingsResultStateChangeEnum(s)
+		*e = ListFindingsResultStateChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListFindingsResultStateChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListFindingsResultStateChangeEnum: %v", v)
 	}
 }
 

@@ -13,45 +13,43 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/doubleclic
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DoubleclicksearchConversionGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        AdGroupID: "distinctio",
-        AdID: "quibusdam",
+    ctx := context.Background()
+    res, err := s.Conversion.DoubleclicksearchConversionGet(ctx, operations.DoubleclicksearchConversionGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        AdGroupID: sdk.String("distinctio"),
+        AdID: sdk.String("quibusdam"),
         AdvertiserID: "unde",
         AgencyID: "nulla",
-        Alt: "media",
-        Callback: "illum",
-        CampaignID: "vel",
-        CriterionID: "error",
-        CustomerID: "deserunt",
+        Alt: shared.AltEnumMedia.ToPointer(),
+        Callback: sdk.String("illum"),
+        CampaignID: sdk.String("vel"),
+        CriterionID: sdk.String("error"),
+        CustomerID: sdk.String("deserunt"),
         EndDate: 384382,
         EngineAccountID: "iure",
-        Fields: "magnam",
-        Key: "debitis",
-        OauthToken: "ipsa",
-        PrettyPrint: false,
-        QuotaUser: "delectus",
+        Fields: sdk.String("magnam"),
+        Key: sdk.String("debitis"),
+        OauthToken: sdk.String("ipsa"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("delectus"),
         RowCount: 272656,
         StartDate: 383441,
         StartRow: 477665,
-        UploadType: "minus",
-        UploadProtocol: "placeat",
-    }
-
-    ctx := context.Background()
-    res, err := s.Conversion.DoubleclicksearchConversionGet(ctx, req, operations.DoubleclicksearchConversionGetSecurity{
+        UploadType: sdk.String("minus"),
+        UploadProtocol: sdk.String("placeat"),
+    }, operations.DoubleclicksearchConversionGetSecurity{
         Oauth2: "Bearer YOUR_ACCESS_TOKEN_HERE",
         Oauth2c: "Bearer YOUR_ACCESS_TOKEN_HERE",
     })
@@ -70,25 +68,25 @@ func main() {
 ## Available Resources and Operations
 
 
-### Conversion
+### [Conversion](docs/conversion/README.md)
 
-* `DoubleclicksearchConversionGet` - Retrieves a list of conversions from a DoubleClick Search engine account.
-* `DoubleclicksearchConversionGetByCustomerID` - Retrieves a list of conversions from a DoubleClick Search engine account.
-* `DoubleclicksearchConversionInsert` - Inserts a batch of new conversions into DoubleClick Search.
-* `DoubleclicksearchConversionUpdate` - Updates a batch of conversions in DoubleClick Search.
-* `DoubleclicksearchConversionUpdateAvailability` - Updates the availabilities of a batch of floodlight activities in DoubleClick Search.
+* [DoubleclicksearchConversionGet](docs/conversion/README.md#doubleclicksearchconversionget) - Retrieves a list of conversions from a DoubleClick Search engine account.
+* [DoubleclicksearchConversionGetByCustomerID](docs/conversion/README.md#doubleclicksearchconversiongetbycustomerid) - Retrieves a list of conversions from a DoubleClick Search engine account.
+* [DoubleclicksearchConversionInsert](docs/conversion/README.md#doubleclicksearchconversioninsert) - Inserts a batch of new conversions into DoubleClick Search.
+* [DoubleclicksearchConversionUpdate](docs/conversion/README.md#doubleclicksearchconversionupdate) - Updates a batch of conversions in DoubleClick Search.
+* [DoubleclicksearchConversionUpdateAvailability](docs/conversion/README.md#doubleclicksearchconversionupdateavailability) - Updates the availabilities of a batch of floodlight activities in DoubleClick Search.
 
-### Reports
+### [Reports](docs/reports/README.md)
 
-* `DoubleclicksearchReportsGenerate` - Generates and returns a report immediately.
-* `DoubleclicksearchReportsGet` - Polls for the status of a report request.
-* `DoubleclicksearchReportsGetFile` - Downloads a report file encoded in UTF-8.
-* `DoubleclicksearchReportsGetIDMappingFile` - Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new SA360. The file includes all children entities of the given advertiser(e.g. engine accounts, campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
-* `DoubleclicksearchReportsRequest` - Inserts a report request into the reporting system.
+* [DoubleclicksearchReportsGenerate](docs/reports/README.md#doubleclicksearchreportsgenerate) - Generates and returns a report immediately.
+* [DoubleclicksearchReportsGet](docs/reports/README.md#doubleclicksearchreportsget) - Polls for the status of a report request.
+* [DoubleclicksearchReportsGetFile](docs/reports/README.md#doubleclicksearchreportsgetfile) - Downloads a report file encoded in UTF-8.
+* [DoubleclicksearchReportsGetIDMappingFile](docs/reports/README.md#doubleclicksearchreportsgetidmappingfile) - Downloads a csv file(encoded in UTF-8) that contains ID mappings between legacy SA360 and new SA360. The file includes all children entities of the given advertiser(e.g. engine accounts, campaigns, ad groups, etc.) that exist in both legacy SA360 and new SA360.
+* [DoubleclicksearchReportsRequest](docs/reports/README.md#doubleclicksearchreportsrequest) - Inserts a report request into the reporting system.
 
-### SavedColumns
+### [SavedColumns](docs/savedcolumns/README.md)
 
-* `DoubleclicksearchSavedColumnsList` - Retrieve the list of saved columns for a specified advertiser.
+* [DoubleclicksearchSavedColumnsList](docs/savedcolumns/README.md#doubleclicksearchsavedcolumnslist) - Retrieve the list of saved columns for a specified advertiser.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -20,12 +20,16 @@ const (
 	PublicUpdateSubscriptionStatusRequestLegalBasisEnumLegitimateInterestOther  PublicUpdateSubscriptionStatusRequestLegalBasisEnum = "LEGITIMATE_INTEREST_OTHER"
 )
 
+func (e PublicUpdateSubscriptionStatusRequestLegalBasisEnum) ToPointer() *PublicUpdateSubscriptionStatusRequestLegalBasisEnum {
+	return &e
+}
+
 func (e *PublicUpdateSubscriptionStatusRequestLegalBasisEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEGITIMATE_INTEREST_PQL":
 		fallthrough
 	case "LEGITIMATE_INTEREST_CLIENT":
@@ -39,10 +43,10 @@ func (e *PublicUpdateSubscriptionStatusRequestLegalBasisEnum) UnmarshalJSON(data
 	case "PROCESS_AND_STORE":
 		fallthrough
 	case "LEGITIMATE_INTEREST_OTHER":
-		*e = PublicUpdateSubscriptionStatusRequestLegalBasisEnum(s)
+		*e = PublicUpdateSubscriptionStatusRequestLegalBasisEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublicUpdateSubscriptionStatusRequestLegalBasisEnum: %s", s)
+		return fmt.Errorf("invalid value for PublicUpdateSubscriptionStatusRequestLegalBasisEnum: %v", v)
 	}
 }
 

@@ -14,18 +14,22 @@ const (
 	ReplicationConfigurationEbsEncryptionEnumCustom  ReplicationConfigurationEbsEncryptionEnum = "CUSTOM"
 )
 
+func (e ReplicationConfigurationEbsEncryptionEnum) ToPointer() *ReplicationConfigurationEbsEncryptionEnum {
+	return &e
+}
+
 func (e *ReplicationConfigurationEbsEncryptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "CUSTOM":
-		*e = ReplicationConfigurationEbsEncryptionEnum(s)
+		*e = ReplicationConfigurationEbsEncryptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReplicationConfigurationEbsEncryptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ReplicationConfigurationEbsEncryptionEnum: %v", v)
 	}
 }

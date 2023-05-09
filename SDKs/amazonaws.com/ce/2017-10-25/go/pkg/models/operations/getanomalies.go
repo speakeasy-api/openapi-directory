@@ -16,17 +16,21 @@ const (
 	GetAnomaliesXAmzTargetEnumAwsInsightsIndexServiceGetAnomalies GetAnomaliesXAmzTargetEnum = "AWSInsightsIndexService.GetAnomalies"
 )
 
+func (e GetAnomaliesXAmzTargetEnum) ToPointer() *GetAnomaliesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetAnomaliesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSInsightsIndexService.GetAnomalies":
-		*e = GetAnomaliesXAmzTargetEnum(s)
+		*e = GetAnomaliesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAnomaliesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAnomaliesXAmzTargetEnum: %v", v)
 	}
 }
 

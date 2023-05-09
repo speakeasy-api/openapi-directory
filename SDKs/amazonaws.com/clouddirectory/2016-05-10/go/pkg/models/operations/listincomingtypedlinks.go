@@ -17,19 +17,23 @@ const (
 	ListIncomingTypedLinksRequestBodyConsistencyLevelEnumEventual     ListIncomingTypedLinksRequestBodyConsistencyLevelEnum = "EVENTUAL"
 )
 
+func (e ListIncomingTypedLinksRequestBodyConsistencyLevelEnum) ToPointer() *ListIncomingTypedLinksRequestBodyConsistencyLevelEnum {
+	return &e
+}
+
 func (e *ListIncomingTypedLinksRequestBodyConsistencyLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SERIALIZABLE":
 		fallthrough
 	case "EVENTUAL":
-		*e = ListIncomingTypedLinksRequestBodyConsistencyLevelEnum(s)
+		*e = ListIncomingTypedLinksRequestBodyConsistencyLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListIncomingTypedLinksRequestBodyConsistencyLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for ListIncomingTypedLinksRequestBodyConsistencyLevelEnum: %v", v)
 	}
 }
 

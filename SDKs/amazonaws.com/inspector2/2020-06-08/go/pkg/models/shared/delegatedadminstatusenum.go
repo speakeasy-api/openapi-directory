@@ -14,18 +14,22 @@ const (
 	DelegatedAdminStatusEnumDisableInProgress DelegatedAdminStatusEnum = "DISABLE_IN_PROGRESS"
 )
 
+func (e DelegatedAdminStatusEnum) ToPointer() *DelegatedAdminStatusEnum {
+	return &e
+}
+
 func (e *DelegatedAdminStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ENABLED":
 		fallthrough
 	case "DISABLE_IN_PROGRESS":
-		*e = DelegatedAdminStatusEnum(s)
+		*e = DelegatedAdminStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DelegatedAdminStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DelegatedAdminStatusEnum: %v", v)
 	}
 }

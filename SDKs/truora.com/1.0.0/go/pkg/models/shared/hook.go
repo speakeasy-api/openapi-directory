@@ -15,19 +15,23 @@ const (
 	HookEventTypeEnumCheck HookEventTypeEnum = "check"
 )
 
+func (e HookEventTypeEnum) ToPointer() *HookEventTypeEnum {
+	return &e
+}
+
 func (e *HookEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
 		fallthrough
 	case "check":
-		*e = HookEventTypeEnum(s)
+		*e = HookEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for HookEventTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	HookStatusEnumDisabled HookStatusEnum = "disabled"
 )
 
+func (e HookStatusEnum) ToPointer() *HookStatusEnum {
+	return &e
+}
+
 func (e *HookStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "enabled":
 		fallthrough
 	case "disabled":
-		*e = HookStatusEnum(s)
+		*e = HookStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HookStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for HookStatusEnum: %v", v)
 	}
 }
 

@@ -96,12 +96,16 @@ const (
 	GetTrackTrackingResponseFeatureGeometryTypeEnumMultiPolygon    GetTrackTrackingResponseFeatureGeometryTypeEnum = "MultiPolygon"
 )
 
+func (e GetTrackTrackingResponseFeatureGeometryTypeEnum) ToPointer() *GetTrackTrackingResponseFeatureGeometryTypeEnum {
+	return &e
+}
+
 func (e *GetTrackTrackingResponseFeatureGeometryTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Point":
 		fallthrough
 	case "LineString":
@@ -113,10 +117,10 @@ func (e *GetTrackTrackingResponseFeatureGeometryTypeEnum) UnmarshalJSON(data []b
 	case "MultiLineString":
 		fallthrough
 	case "MultiPolygon":
-		*e = GetTrackTrackingResponseFeatureGeometryTypeEnum(s)
+		*e = GetTrackTrackingResponseFeatureGeometryTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackTrackingResponseFeatureGeometryTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackTrackingResponseFeatureGeometryTypeEnum: %v", v)
 	}
 }
 
@@ -138,17 +142,21 @@ const (
 	GetTrackTrackingResponseFeatureTypeEnumFeature GetTrackTrackingResponseFeatureTypeEnum = "Feature"
 )
 
+func (e GetTrackTrackingResponseFeatureTypeEnum) ToPointer() *GetTrackTrackingResponseFeatureTypeEnum {
+	return &e
+}
+
 func (e *GetTrackTrackingResponseFeatureTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Feature":
-		*e = GetTrackTrackingResponseFeatureTypeEnum(s)
+		*e = GetTrackTrackingResponseFeatureTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackTrackingResponseFeatureTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackTrackingResponseFeatureTypeEnum: %v", v)
 	}
 }
 
@@ -173,19 +181,23 @@ const (
 	GetTrackTrackingResponseTrackingEventV2EventSourceEnumInternal GetTrackTrackingResponseTrackingEventV2EventSourceEnum = "internal"
 )
 
+func (e GetTrackTrackingResponseTrackingEventV2EventSourceEnum) ToPointer() *GetTrackTrackingResponseTrackingEventV2EventSourceEnum {
+	return &e
+}
+
 func (e *GetTrackTrackingResponseTrackingEventV2EventSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "carrier":
 		fallthrough
 	case "internal":
-		*e = GetTrackTrackingResponseTrackingEventV2EventSourceEnum(s)
+		*e = GetTrackTrackingResponseTrackingEventV2EventSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetTrackTrackingResponseTrackingEventV2EventSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for GetTrackTrackingResponseTrackingEventV2EventSourceEnum: %v", v)
 	}
 }
 

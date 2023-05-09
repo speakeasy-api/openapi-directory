@@ -15,20 +15,24 @@ const (
 	SnapshotAttributeToSortByEnumCreateTime SnapshotAttributeToSortByEnum = "CREATE_TIME"
 )
 
+func (e SnapshotAttributeToSortByEnum) ToPointer() *SnapshotAttributeToSortByEnum {
+	return &e
+}
+
 func (e *SnapshotAttributeToSortByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SOURCE_TYPE":
 		fallthrough
 	case "TOTAL_SIZE":
 		fallthrough
 	case "CREATE_TIME":
-		*e = SnapshotAttributeToSortByEnum(s)
+		*e = SnapshotAttributeToSortByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SnapshotAttributeToSortByEnum: %s", s)
+		return fmt.Errorf("invalid value for SnapshotAttributeToSortByEnum: %v", v)
 	}
 }

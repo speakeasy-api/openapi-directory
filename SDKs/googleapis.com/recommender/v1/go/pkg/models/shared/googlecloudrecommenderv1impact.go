@@ -20,12 +20,16 @@ const (
 	GoogleCloudRecommenderV1ImpactCategoryEnumReliability         GoogleCloudRecommenderV1ImpactCategoryEnum = "RELIABILITY"
 )
 
+func (e GoogleCloudRecommenderV1ImpactCategoryEnum) ToPointer() *GoogleCloudRecommenderV1ImpactCategoryEnum {
+	return &e
+}
+
 func (e *GoogleCloudRecommenderV1ImpactCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CATEGORY_UNSPECIFIED":
 		fallthrough
 	case "COST":
@@ -39,10 +43,10 @@ func (e *GoogleCloudRecommenderV1ImpactCategoryEnum) UnmarshalJSON(data []byte) 
 	case "SUSTAINABILITY":
 		fallthrough
 	case "RELIABILITY":
-		*e = GoogleCloudRecommenderV1ImpactCategoryEnum(s)
+		*e = GoogleCloudRecommenderV1ImpactCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1ImpactCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudRecommenderV1ImpactCategoryEnum: %v", v)
 	}
 }
 

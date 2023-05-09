@@ -3,6 +3,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -21,6 +22,7 @@ pkg/models/operations/postupdatenotificationconfiguration.go
 pkg/models/shared/serviceerror.go
 pkg/models/shared/getnotificationconfigurationresponse.go
 pkg/models/shared/notificationconfigurationdetails.go
+pkg/models/shared/notificationeventconfigurationwrapper.go
 pkg/models/shared/notificationeventconfiguration.go
 pkg/models/shared/createnotificationconfigurationrequest.go
 pkg/models/shared/security.go
@@ -28,8 +30,12 @@ pkg/models/shared/genericresponse.go
 pkg/models/shared/deletenotificationconfigurationrequest.go
 pkg/models/shared/getnotificationconfigurationrequest.go
 pkg/models/shared/getnotificationconfigurationlistresponse.go
+pkg/models/shared/notificationconfigurationdetailswrapper.go
 pkg/models/shared/testnotificationconfigurationresponse.go
+pkg/models/shared/exchangemessagewrapper.go
 pkg/models/shared/exchangemessage.go
 pkg/models/shared/testnotificationconfigurationrequest.go
 pkg/models/shared/updatenotificationconfigurationrequest.go
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

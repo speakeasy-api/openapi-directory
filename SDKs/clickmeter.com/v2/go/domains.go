@@ -108,7 +108,10 @@ func (s *domains) DomainsCount(ctx context.Context, request operations.DomainsCo
 // DomainsDelete - Delete a domain
 func (s *domains) DomainsDelete(ctx context.Context, request operations.DomainsDeleteRequest) (*operations.DomainsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -468,7 +471,10 @@ func (s *domains) DomainsPutRaw(ctx context.Context, request []byte) (*operation
 // DomainsUpdateForm - Update a domain
 func (s *domains) DomainsUpdateForm(ctx context.Context, request operations.DomainsUpdateFormRequest) (*operations.DomainsUpdateFormResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDomainsDomain", "form")
 	if err != nil {
@@ -546,7 +552,10 @@ func (s *domains) DomainsUpdateForm(ctx context.Context, request operations.Doma
 // DomainsUpdateJSON - Update a domain
 func (s *domains) DomainsUpdateJSON(ctx context.Context, request operations.DomainsUpdateJSONRequest) (*operations.DomainsUpdateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "APICoreDtoDomainsDomain", "json")
 	if err != nil {
@@ -624,7 +633,10 @@ func (s *domains) DomainsUpdateJSON(ctx context.Context, request operations.Doma
 // DomainsUpdateRaw - Update a domain
 func (s *domains) DomainsUpdateRaw(ctx context.Context, request operations.DomainsUpdateRawRequest) (*operations.DomainsUpdateRawResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "raw")
 	if err != nil {
@@ -702,7 +714,10 @@ func (s *domains) DomainsUpdateRaw(ctx context.Context, request operations.Domai
 // GetDomainsID - Get a domain
 func (s *domains) GetDomainsID(ctx context.Context, request operations.GetDomainsIDRequest) (*operations.GetDomainsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

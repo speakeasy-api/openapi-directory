@@ -16,17 +16,21 @@ const (
 	ConnectDirectoryXAmzTargetEnumDirectoryService20150416ConnectDirectory ConnectDirectoryXAmzTargetEnum = "DirectoryService_20150416.ConnectDirectory"
 )
 
+func (e ConnectDirectoryXAmzTargetEnum) ToPointer() *ConnectDirectoryXAmzTargetEnum {
+	return &e
+}
+
 func (e *ConnectDirectoryXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DirectoryService_20150416.ConnectDirectory":
-		*e = ConnectDirectoryXAmzTargetEnum(s)
+		*e = ConnectDirectoryXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ConnectDirectoryXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ConnectDirectoryXAmzTargetEnum: %v", v)
 	}
 }
 

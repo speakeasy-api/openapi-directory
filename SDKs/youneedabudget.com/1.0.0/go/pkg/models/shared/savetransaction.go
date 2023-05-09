@@ -17,21 +17,25 @@ const (
 	SaveTransactionClearedEnumReconciled SaveTransactionClearedEnum = "reconciled"
 )
 
+func (e SaveTransactionClearedEnum) ToPointer() *SaveTransactionClearedEnum {
+	return &e
+}
+
 func (e *SaveTransactionClearedEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "cleared":
 		fallthrough
 	case "uncleared":
 		fallthrough
 	case "reconciled":
-		*e = SaveTransactionClearedEnum(s)
+		*e = SaveTransactionClearedEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SaveTransactionClearedEnum: %s", s)
+		return fmt.Errorf("invalid value for SaveTransactionClearedEnum: %v", v)
 	}
 }
 
@@ -39,21 +43,25 @@ func (e *SaveTransactionClearedEnum) UnmarshalJSON(data []byte) error {
 type SaveTransactionFlagColorEnum string
 
 const (
-	SaveTransactionFlagColorEnumRed    SaveTransactionFlagColorEnum = "red"
-	SaveTransactionFlagColorEnumOrange SaveTransactionFlagColorEnum = "orange"
-	SaveTransactionFlagColorEnumYellow SaveTransactionFlagColorEnum = "yellow"
-	SaveTransactionFlagColorEnumGreen  SaveTransactionFlagColorEnum = "green"
-	SaveTransactionFlagColorEnumBlue   SaveTransactionFlagColorEnum = "blue"
-	SaveTransactionFlagColorEnumPurple SaveTransactionFlagColorEnum = "purple"
-	SaveTransactionFlagColorEnumNull   SaveTransactionFlagColorEnum = "null"
+	SaveTransactionFlagColorEnumRed                    SaveTransactionFlagColorEnum = "red"
+	SaveTransactionFlagColorEnumOrange                 SaveTransactionFlagColorEnum = "orange"
+	SaveTransactionFlagColorEnumYellow                 SaveTransactionFlagColorEnum = "yellow"
+	SaveTransactionFlagColorEnumGreen                  SaveTransactionFlagColorEnum = "green"
+	SaveTransactionFlagColorEnumBlue                   SaveTransactionFlagColorEnum = "blue"
+	SaveTransactionFlagColorEnumPurple                 SaveTransactionFlagColorEnum = "purple"
+	SaveTransactionFlagColorEnumLessThanNilGreaterThan SaveTransactionFlagColorEnum = "<nil>"
 )
 
+func (e SaveTransactionFlagColorEnum) ToPointer() *SaveTransactionFlagColorEnum {
+	return &e
+}
+
 func (e *SaveTransactionFlagColorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "red":
 		fallthrough
 	case "orange":
@@ -66,11 +74,11 @@ func (e *SaveTransactionFlagColorEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "purple":
 		fallthrough
-	case "null":
-		*e = SaveTransactionFlagColorEnum(s)
+	case "<nil>":
+		*e = SaveTransactionFlagColorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SaveTransactionFlagColorEnum: %s", s)
+		return fmt.Errorf("invalid value for SaveTransactionFlagColorEnum: %v", v)
 	}
 }
 

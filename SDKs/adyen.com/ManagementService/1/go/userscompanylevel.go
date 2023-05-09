@@ -38,7 +38,10 @@ func newUsersCompanyLevel(defaultClient, securityClient HTTPClient, serverURL, l
 // * Management API—Users read and write
 func (s *usersCompanyLevel) GetCompaniesCompanyIDUsers(ctx context.Context, request operations.GetCompaniesCompanyIDUsersRequest, security operations.GetCompaniesCompanyIDUsersSecurity) (*operations.GetCompaniesCompanyIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -108,7 +111,10 @@ func (s *usersCompanyLevel) GetCompaniesCompanyIDUsers(ctx context.Context, requ
 // * Management API—Users read and write
 func (s *usersCompanyLevel) GetCompaniesCompanyIDUsersUserID(ctx context.Context, request operations.GetCompaniesCompanyIDUsersUserIDRequest, security operations.GetCompaniesCompanyIDUsersUserIDSecurity) (*operations.GetCompaniesCompanyIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -174,7 +180,10 @@ func (s *usersCompanyLevel) GetCompaniesCompanyIDUsersUserID(ctx context.Context
 // * Management API—Users read and write
 func (s *usersCompanyLevel) PatchCompaniesCompanyIDUsersUserID(ctx context.Context, request operations.PatchCompaniesCompanyIDUsersUserIDRequest, security operations.PatchCompaniesCompanyIDUsersUserIDSecurity) (*operations.PatchCompaniesCompanyIDUsersUserIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users/{userId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users/{userId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateCompanyUserRequest", "json")
 	if err != nil {
@@ -247,7 +256,10 @@ func (s *usersCompanyLevel) PatchCompaniesCompanyIDUsersUserID(ctx context.Conte
 // * Management API—Users read and write
 func (s *usersCompanyLevel) PostCompaniesCompanyIDUsers(ctx context.Context, request operations.PostCompaniesCompanyIDUsersRequest, security operations.PostCompaniesCompanyIDUsersSecurity) (*operations.PostCompaniesCompanyIDUsersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/companies/{companyId}/users", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CreateCompanyUserRequest", "json")
 	if err != nil {

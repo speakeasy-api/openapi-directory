@@ -17,18 +17,22 @@ const (
 	AuditLogOrderEnumAsc  AuditLogOrderEnum = "asc"
 )
 
+func (e AuditLogOrderEnum) ToPointer() *AuditLogOrderEnum {
+	return &e
+}
+
 func (e *AuditLogOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "desc":
 		fallthrough
 	case "asc":
-		*e = AuditLogOrderEnum(s)
+		*e = AuditLogOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuditLogOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for AuditLogOrderEnum: %v", v)
 	}
 }

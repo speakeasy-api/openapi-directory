@@ -17,12 +17,16 @@ const (
 	PublisherConnectionBiddingStateEnumApproved         PublisherConnectionBiddingStateEnum = "APPROVED"
 )
 
+func (e PublisherConnectionBiddingStateEnum) ToPointer() *PublisherConnectionBiddingStateEnum {
+	return &e
+}
+
 func (e *PublisherConnectionBiddingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "PENDING":
@@ -30,10 +34,10 @@ func (e *PublisherConnectionBiddingStateEnum) UnmarshalJSON(data []byte) error {
 	case "REJECTED":
 		fallthrough
 	case "APPROVED":
-		*e = PublisherConnectionBiddingStateEnum(s)
+		*e = PublisherConnectionBiddingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublisherConnectionBiddingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for PublisherConnectionBiddingStateEnum: %v", v)
 	}
 }
 
@@ -46,21 +50,25 @@ const (
 	PublisherConnectionPublisherPlatformEnumAdmob                        PublisherConnectionPublisherPlatformEnum = "ADMOB"
 )
 
+func (e PublisherConnectionPublisherPlatformEnum) ToPointer() *PublisherConnectionPublisherPlatformEnum {
+	return &e
+}
+
 func (e *PublisherConnectionPublisherPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PUBLISHER_PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "GOOGLE_AD_MANAGER":
 		fallthrough
 	case "ADMOB":
-		*e = PublisherConnectionPublisherPlatformEnum(s)
+		*e = PublisherConnectionPublisherPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PublisherConnectionPublisherPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for PublisherConnectionPublisherPlatformEnum: %v", v)
 	}
 }
 

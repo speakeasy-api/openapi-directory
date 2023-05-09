@@ -16,17 +16,21 @@ const (
 	GetInstanceAccessXAmzTargetEnumGameLiftGetInstanceAccess GetInstanceAccessXAmzTargetEnum = "GameLift.GetInstanceAccess"
 )
 
+func (e GetInstanceAccessXAmzTargetEnum) ToPointer() *GetInstanceAccessXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetInstanceAccessXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.GetInstanceAccess":
-		*e = GetInstanceAccessXAmzTargetEnum(s)
+		*e = GetInstanceAccessXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetInstanceAccessXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetInstanceAccessXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	GetHomeRegionXAmzTargetEnumAwsMigrationHubMultiAccountServiceGetHomeRegion GetHomeRegionXAmzTargetEnum = "AWSMigrationHubMultiAccountService.GetHomeRegion"
 )
 
+func (e GetHomeRegionXAmzTargetEnum) ToPointer() *GetHomeRegionXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetHomeRegionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSMigrationHubMultiAccountService.GetHomeRegion":
-		*e = GetHomeRegionXAmzTargetEnum(s)
+		*e = GetHomeRegionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetHomeRegionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetHomeRegionXAmzTargetEnum: %v", v)
 	}
 }
 

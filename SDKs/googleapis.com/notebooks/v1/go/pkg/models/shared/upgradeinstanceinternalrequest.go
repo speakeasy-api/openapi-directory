@@ -18,12 +18,16 @@ const (
 	UpgradeInstanceInternalRequestTypeEnumUpgradeAll             UpgradeInstanceInternalRequestTypeEnum = "UPGRADE_ALL"
 )
 
+func (e UpgradeInstanceInternalRequestTypeEnum) ToPointer() *UpgradeInstanceInternalRequestTypeEnum {
+	return &e
+}
+
 func (e *UpgradeInstanceInternalRequestTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UPGRADE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "UPGRADE_FRAMEWORK":
@@ -33,10 +37,10 @@ func (e *UpgradeInstanceInternalRequestTypeEnum) UnmarshalJSON(data []byte) erro
 	case "UPGRADE_CUDA":
 		fallthrough
 	case "UPGRADE_ALL":
-		*e = UpgradeInstanceInternalRequestTypeEnum(s)
+		*e = UpgradeInstanceInternalRequestTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpgradeInstanceInternalRequestTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpgradeInstanceInternalRequestTypeEnum: %v", v)
 	}
 }
 

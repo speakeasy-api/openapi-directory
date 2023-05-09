@@ -16,17 +16,21 @@ const (
 	ListDatasetLabelsXAmzTargetEnumRekognitionServiceListDatasetLabels ListDatasetLabelsXAmzTargetEnum = "RekognitionService.ListDatasetLabels"
 )
 
+func (e ListDatasetLabelsXAmzTargetEnum) ToPointer() *ListDatasetLabelsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListDatasetLabelsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RekognitionService.ListDatasetLabels":
-		*e = ListDatasetLabelsXAmzTargetEnum(s)
+		*e = ListDatasetLabelsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListDatasetLabelsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListDatasetLabelsXAmzTargetEnum: %v", v)
 	}
 }
 

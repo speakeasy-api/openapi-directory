@@ -23,12 +23,16 @@ const (
 	GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnumGoogleHangouts      GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum = "GOOGLE_HANGOUTS"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PLATFORM_UNSPECIFIED":
 		fallthrough
 	case "FACEBOOK":
@@ -50,10 +54,10 @@ func (e *GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum) Unmarsh
 	case "TELEPHONY":
 		fallthrough
 	case "GOOGLE_HANGOUTS":
-		*e = GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentDefaultResponsePlatformsEnum: %v", v)
 	}
 }
 
@@ -66,21 +70,25 @@ const (
 	GoogleCloudDialogflowV2beta1IntentWebhookStateEnumWebhookStateEnabledForSlotFilling GoogleCloudDialogflowV2beta1IntentWebhookStateEnum = "WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING"
 )
 
+func (e GoogleCloudDialogflowV2beta1IntentWebhookStateEnum) ToPointer() *GoogleCloudDialogflowV2beta1IntentWebhookStateEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2beta1IntentWebhookStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WEBHOOK_STATE_UNSPECIFIED":
 		fallthrough
 	case "WEBHOOK_STATE_ENABLED":
 		fallthrough
 	case "WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING":
-		*e = GoogleCloudDialogflowV2beta1IntentWebhookStateEnum(s)
+		*e = GoogleCloudDialogflowV2beta1IntentWebhookStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentWebhookStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2beta1IntentWebhookStateEnum: %v", v)
 	}
 }
 

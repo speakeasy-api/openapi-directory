@@ -19,12 +19,16 @@ const (
 	GetProjectsOrderByEnumPrice    GetProjectsOrderByEnum = "price"
 )
 
+func (e GetProjectsOrderByEnum) ToPointer() *GetProjectsOrderByEnum {
+	return &e
+}
+
 func (e *GetProjectsOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "id":
 		fallthrough
 	case "status":
@@ -32,10 +36,10 @@ func (e *GetProjectsOrderByEnum) UnmarshalJSON(data []byte) error {
 	case "delivery":
 		fallthrough
 	case "price":
-		*e = GetProjectsOrderByEnum(s)
+		*e = GetProjectsOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProjectsOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProjectsOrderByEnum: %v", v)
 	}
 }
 
@@ -46,19 +50,23 @@ const (
 	GetProjectsWithEnumVendor GetProjectsWithEnum = "vendor"
 )
 
+func (e GetProjectsWithEnum) ToPointer() *GetProjectsWithEnum {
+	return &e
+}
+
 func (e *GetProjectsWithEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "client":
 		fallthrough
 	case "vendor":
-		*e = GetProjectsWithEnum(s)
+		*e = GetProjectsWithEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetProjectsWithEnum: %s", s)
+		return fmt.Errorf("invalid value for GetProjectsWithEnum: %v", v)
 	}
 }
 
@@ -72,10 +80,16 @@ type GetProjectsRequest struct {
 	// Include detailed information. Possible values 'client', 'vendor'
 	With []GetProjectsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
 	// deprecated. use `status[]` param.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	WithCompleted *bool `queryParam:"style=form,explode=true,name=with_completed"`
 	// deprecated. use `status[]` param.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	WithPending *bool `queryParam:"style=form,explode=true,name=with_pending"`
 	// deprecated. use `status[]` param.
+	//
+	// Deprecated: this field will be removed in a future release, please migrate away from it as soon as possible.
 	WithStarted *bool `queryParam:"style=form,explode=true,name=with_started"`
 }
 

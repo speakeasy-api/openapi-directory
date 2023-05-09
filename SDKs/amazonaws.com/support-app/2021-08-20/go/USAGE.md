@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -17,28 +16,26 @@ func main() {
         }),
     )
 
-    req := operations.CreateSlackChannelConfigurationRequest{
+    ctx := context.Background()
+    res, err := s.CreateSlackChannelConfiguration(ctx, operations.CreateSlackChannelConfigurationRequest{
         RequestBody: operations.CreateSlackChannelConfigurationRequestBody{
             ChannelID: "corrupti",
-            ChannelName: "provident",
+            ChannelName: sdk.String("provident"),
             ChannelRoleArn: "distinctio",
-            NotifyOnAddCorrespondenceToCase: false,
-            NotifyOnCaseSeverity: "high",
-            NotifyOnCreateOrReopenCase: false,
-            NotifyOnResolveCase: false,
+            NotifyOnAddCorrespondenceToCase: sdk.Bool(false),
+            NotifyOnCaseSeverity: operations.CreateSlackChannelConfigurationRequestBodyNotifyOnCaseSeverityEnumHigh,
+            NotifyOnCreateOrReopenCase: sdk.Bool(false),
+            NotifyOnResolveCase: sdk.Bool(false),
             TeamID: "unde",
         },
-        XAmzAlgorithm: "nulla",
-        XAmzContentSha256: "corrupti",
-        XAmzCredential: "illum",
-        XAmzDate: "vel",
-        XAmzSecurityToken: "error",
-        XAmzSignature: "deserunt",
-        XAmzSignedHeaders: "suscipit",
-    }
-
-    ctx := context.Background()
-    res, err := s.CreateSlackChannelConfiguration(ctx, req)
+        XAmzAlgorithm: sdk.String("nulla"),
+        XAmzContentSha256: sdk.String("corrupti"),
+        XAmzCredential: sdk.String("illum"),
+        XAmzDate: sdk.String("vel"),
+        XAmzSecurityToken: sdk.String("error"),
+        XAmzSignature: sdk.String("deserunt"),
+        XAmzSignedHeaders: sdk.String("suscipit"),
+    })
     if err != nil {
         log.Fatal(err)
     }

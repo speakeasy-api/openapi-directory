@@ -17,12 +17,16 @@ const (
 	VirtualMachineDetailsOsFamilyEnumOsFamilyUnix    VirtualMachineDetailsOsFamilyEnum = "OS_FAMILY_UNIX"
 )
 
+func (e VirtualMachineDetailsOsFamilyEnum) ToPointer() *VirtualMachineDetailsOsFamilyEnum {
+	return &e
+}
+
 func (e *VirtualMachineDetailsOsFamilyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OS_FAMILY_UNKNOWN":
 		fallthrough
 	case "OS_FAMILY_WINDOWS":
@@ -30,10 +34,10 @@ func (e *VirtualMachineDetailsOsFamilyEnum) UnmarshalJSON(data []byte) error {
 	case "OS_FAMILY_LINUX":
 		fallthrough
 	case "OS_FAMILY_UNIX":
-		*e = VirtualMachineDetailsOsFamilyEnum(s)
+		*e = VirtualMachineDetailsOsFamilyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VirtualMachineDetailsOsFamilyEnum: %s", s)
+		return fmt.Errorf("invalid value for VirtualMachineDetailsOsFamilyEnum: %v", v)
 	}
 }
 

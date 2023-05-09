@@ -13,23 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/BalancePlatform
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAccountHoldersIDRequest{
-        ID: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.AccountHolders.GetAccountHoldersID(ctx, req, operations.GetAccountHoldersIDSecurity{
+    res, err := s.AccountHolders.GetAccountHoldersID(ctx, operations.GetAccountHoldersIDRequest{
+        ID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+    }, operations.GetAccountHoldersIDSecurity{
         APIKeyAuth: sdk.String("YOUR_API_KEY_HERE"),
     })
     if err != nil {
@@ -47,69 +45,69 @@ func main() {
 ## Available Resources and Operations
 
 
-### AccountHolders
+### [AccountHolders](docs/accountholders/README.md)
 
-* `GetAccountHoldersID` - Get an account holder
-* `GetAccountHoldersIDBalanceAccounts` - Get all balance accounts of an account holder
-* `PatchAccountHoldersID` - Update an account holder
-* `PostAccountHolders` - Create an account holder
+* [GetAccountHoldersID](docs/accountholders/README.md#getaccountholdersid) - Get an account holder
+* [GetAccountHoldersIDBalanceAccounts](docs/accountholders/README.md#getaccountholdersidbalanceaccounts) - Get all balance accounts of an account holder
+* [PatchAccountHoldersID](docs/accountholders/README.md#patchaccountholdersid) - Update an account holder
+* [PostAccountHolders](docs/accountholders/README.md#postaccountholders) - Create an account holder
 
-### BalanceAccounts
+### [BalanceAccounts](docs/balanceaccounts/README.md)
 
-* `GetBalanceAccountsID` - Get a balance account
-* `GetBalanceAccountsIDPaymentInstruments` - Get all payment instruments for a balance account
-* `PatchBalanceAccountsID` - Update a balance account
-* `PostBalanceAccounts` - Create a balance account
+* [GetBalanceAccountsID](docs/balanceaccounts/README.md#getbalanceaccountsid) - Get a balance account
+* [GetBalanceAccountsIDPaymentInstruments](docs/balanceaccounts/README.md#getbalanceaccountsidpaymentinstruments) - Get all payment instruments for a balance account
+* [PatchBalanceAccountsID](docs/balanceaccounts/README.md#patchbalanceaccountsid) - Update a balance account
+* [PostBalanceAccounts](docs/balanceaccounts/README.md#postbalanceaccounts) - Create a balance account
 
-### BankAccountValidation
+### [BankAccountValidation](docs/bankaccountvalidation/README.md)
 
-* `PostValidateBankAccountIdentification` - Validate a bank account
+* [PostValidateBankAccountIdentification](docs/bankaccountvalidation/README.md#postvalidatebankaccountidentification) - Validate a bank account
 
-### Documents
+### [Documents](docs/documents/README.md)
 
-* `DeleteDocumentsID` - Delete a document
-* `GetDocumentsID` - Get a document
-* `PatchDocumentsID` - Update a document
-* `PostDocuments` - Upload a document for verification checks
+* [DeleteDocumentsID](docs/documents/README.md#deletedocumentsid) - Delete a document
+* [GetDocumentsID](docs/documents/README.md#getdocumentsid) - Get a document
+* [PatchDocumentsID](docs/documents/README.md#patchdocumentsid) - Update a document
+* [PostDocuments](docs/documents/README.md#postdocuments) - Upload a document for verification checks
 
-### LegalEntities
+### [LegalEntities](docs/legalentities/README.md)
 
-* `GetLegalEntitiesID` - Get a legal entity
-* `PatchLegalEntitiesID` - Update a legal entity
-* `PostLegalEntities` - Create a legal entity
+* [GetLegalEntitiesID](docs/legalentities/README.md#getlegalentitiesid) - Get a legal entity
+* [PatchLegalEntitiesID](docs/legalentities/README.md#patchlegalentitiesid) - Update a legal entity
+* [PostLegalEntities](docs/legalentities/README.md#postlegalentities) - Create a legal entity
 
-### PaymentInstrumentGroups
+### [PaymentInstrumentGroups](docs/paymentinstrumentgroups/README.md)
 
-* `GetPaymentInstrumentGroupsID` - Get a payment instrument group
-* `GetPaymentInstrumentGroupsIDTransactionRules` - Get all transaction rules for a payment instrument group
-* `PostPaymentInstrumentGroups` - Create a payment instrument group
+* [GetPaymentInstrumentGroupsID](docs/paymentinstrumentgroups/README.md#getpaymentinstrumentgroupsid) - Get a payment instrument group
+* [GetPaymentInstrumentGroupsIDTransactionRules](docs/paymentinstrumentgroups/README.md#getpaymentinstrumentgroupsidtransactionrules) - Get all transaction rules for a payment instrument group
+* [PostPaymentInstrumentGroups](docs/paymentinstrumentgroups/README.md#postpaymentinstrumentgroups) - Create a payment instrument group
 
-### PaymentInstruments
+### [PaymentInstruments](docs/paymentinstruments/README.md)
 
-* `GetPaymentInstrumentsID` - Get a payment instrument
-* `GetPaymentInstrumentsIDReveal` - Get the reveal information of a payment instrument
-* `GetPaymentInstrumentsIDTransactionRules` - Get all transaction rules for a payment instrument
-* `PatchPaymentInstrumentsID` - Update a payment instrument
-* `PostPaymentInstruments` - Create a payment instrument
+* [GetPaymentInstrumentsID](docs/paymentinstruments/README.md#getpaymentinstrumentsid) - Get a payment instrument
+* [GetPaymentInstrumentsIDReveal](docs/paymentinstruments/README.md#getpaymentinstrumentsidreveal) - Get the PAN of a payment instrument
+* [GetPaymentInstrumentsIDTransactionRules](docs/paymentinstruments/README.md#getpaymentinstrumentsidtransactionrules) - Get all transaction rules for a payment instrument
+* [PatchPaymentInstrumentsID](docs/paymentinstruments/README.md#patchpaymentinstrumentsid) - Update a payment instrument
+* [PostPaymentInstruments](docs/paymentinstruments/README.md#postpaymentinstruments) - Create a payment instrument
 
-### Platform
+### [Platform](docs/platform/README.md)
 
-* `GetBalancePlatformsID` - Get a balance platform
-* `GetBalancePlatformsIDAccountHolders` - Get all account holders under a balance platform
+* [GetBalancePlatformsID](docs/platform/README.md#getbalanceplatformsid) - Get a balance platform
+* [GetBalancePlatformsIDAccountHolders](docs/platform/README.md#getbalanceplatformsidaccountholders) - Get all account holders under a balance platform
 
-### TransactionRules
+### [TransactionRules](docs/transactionrules/README.md)
 
-* `DeleteTransactionRulesTransactionRuleID` - Delete a transaction rule
-* `GetTransactionRulesTransactionRuleID` - Get a transaction rule
-* `PatchTransactionRulesTransactionRuleID` - Update a transaction rule
-* `PostTransactionRules` - Create a transaction rule
+* [DeleteTransactionRulesTransactionRuleID](docs/transactionrules/README.md#deletetransactionrulestransactionruleid) - Delete a transaction rule
+* [GetTransactionRulesTransactionRuleID](docs/transactionrules/README.md#gettransactionrulestransactionruleid) - Get a transaction rule
+* [PatchTransactionRulesTransactionRuleID](docs/transactionrules/README.md#patchtransactionrulestransactionruleid) - Update a transaction rule
+* [PostTransactionRules](docs/transactionrules/README.md#posttransactionrules) - Create a transaction rule
 
-### TransferInstruments
+### [TransferInstruments](docs/transferinstruments/README.md)
 
-* `DeleteTransferInstrumentsID` - Delete a transfer instrument
-* `GetTransferInstrumentsID` - Get a transfer instrument
-* `PatchTransferInstrumentsID` - Update a transfer instrument
-* `PostTransferInstruments` - Create a transfer instrument
+* [DeleteTransferInstrumentsID](docs/transferinstruments/README.md#deletetransferinstrumentsid) - Delete a transfer instrument
+* [GetTransferInstrumentsID](docs/transferinstruments/README.md#gettransferinstrumentsid) - Get a transfer instrument
+* [PatchTransferInstrumentsID](docs/transferinstruments/README.md#patchtransferinstrumentsid) - Update a transfer instrument
+* [PostTransferInstruments](docs/transferinstruments/README.md#posttransferinstruments) - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
 ### Maturity

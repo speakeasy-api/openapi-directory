@@ -16,21 +16,25 @@ const (
 	AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnumAuthorizedSellerStatusAuthorizedAndNonParticipatingPublishers AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum = "AUTHORIZED_SELLER_STATUS_AUTHORIZED_AND_NON_PARTICIPATING_PUBLISHERS"
 )
 
+func (e AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum) ToPointer() *AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum {
+	return &e
+}
+
 func (e *AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AUTHORIZED_SELLER_STATUS_UNSPECIFIED":
 		fallthrough
 	case "AUTHORIZED_SELLER_STATUS_AUTHORIZED_DIRECT_SELLERS_ONLY":
 		fallthrough
 	case "AUTHORIZED_SELLER_STATUS_AUTHORIZED_AND_NON_PARTICIPATING_PUBLISHERS":
-		*e = AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum(s)
+		*e = AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum: %v", v)
 	}
 }
 

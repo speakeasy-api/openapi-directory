@@ -18,12 +18,16 @@ const (
 	GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnumUnknownInfoDenied      GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum = "UNKNOWN_INFO_DENIED"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ACCESS_STATE_UNSPECIFIED":
 		fallthrough
 	case "GRANTED":
@@ -33,10 +37,10 @@ func (e *GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum) UnmarshalJS
 	case "UNKNOWN_CONDITIONAL":
 		fallthrough
 	case "UNKNOWN_INFO_DENIED":
-		*e = GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1ExplainedPolicyAccessEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnumHigh                          GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum = "HIGH"
 )
 
+func (e GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum) ToPointer() *GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum {
+	return &e
+}
+
 func (e *GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HEURISTIC_RELEVANCE_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
 		fallthrough
 	case "HIGH":
-		*e = GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum(s)
+		*e = GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudPolicytroubleshooterV1ExplainedPolicyRelevanceEnum: %v", v)
 	}
 }
 

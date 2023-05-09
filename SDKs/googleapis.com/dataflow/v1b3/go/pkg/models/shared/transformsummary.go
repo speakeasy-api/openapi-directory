@@ -22,12 +22,16 @@ const (
 	TransformSummaryKindEnumShuffleKind    TransformSummaryKindEnum = "SHUFFLE_KIND"
 )
 
+func (e TransformSummaryKindEnum) ToPointer() *TransformSummaryKindEnum {
+	return &e
+}
+
 func (e *TransformSummaryKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UNKNOWN_KIND":
 		fallthrough
 	case "PAR_DO_KIND":
@@ -45,10 +49,10 @@ func (e *TransformSummaryKindEnum) UnmarshalJSON(data []byte) error {
 	case "SINGLETON_KIND":
 		fallthrough
 	case "SHUFFLE_KIND":
-		*e = TransformSummaryKindEnum(s)
+		*e = TransformSummaryKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TransformSummaryKindEnum: %s", s)
+		return fmt.Errorf("invalid value for TransformSummaryKindEnum: %v", v)
 	}
 }
 

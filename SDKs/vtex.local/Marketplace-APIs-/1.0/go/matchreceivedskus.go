@@ -51,7 +51,10 @@ func newMatchReceivedSKUs(defaultClient, securityClient HTTPClient, serverURL, l
 // Note that  if the autoApprove setting is enabled, the SKUs will be approved, regardless of the Score.
 func (s *matchReceivedSKUs) Match(ctx context.Context, request operations.MatchRequest) (*operations.MatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}/matches/{matchid}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggestions/{sellerId}/{sellerskuid}/versions/{version}/matches/{matchid}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "MatchRequest", "json")
 	if err != nil {
@@ -115,7 +118,10 @@ func (s *matchReceivedSKUs) Match(ctx context.Context, request operations.MatchR
 // 4. `deny`: deny the received SKU.
 func (s *matchReceivedSKUs) MatchMultiple(ctx context.Context, request operations.MatchMultipleRequest) (*operations.MatchMultipleResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/suggestions/matches/action/{actionName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/suggestions/matches/action/{actionName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

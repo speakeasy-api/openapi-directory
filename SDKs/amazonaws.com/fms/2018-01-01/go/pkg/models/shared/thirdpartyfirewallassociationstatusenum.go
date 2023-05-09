@@ -17,12 +17,16 @@ const (
 	ThirdPartyFirewallAssociationStatusEnumNotExist         ThirdPartyFirewallAssociationStatusEnum = "NOT_EXIST"
 )
 
+func (e ThirdPartyFirewallAssociationStatusEnum) ToPointer() *ThirdPartyFirewallAssociationStatusEnum {
+	return &e
+}
+
 func (e *ThirdPartyFirewallAssociationStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ONBOARDING":
 		fallthrough
 	case "ONBOARD_COMPLETE":
@@ -32,9 +36,9 @@ func (e *ThirdPartyFirewallAssociationStatusEnum) UnmarshalJSON(data []byte) err
 	case "OFFBOARD_COMPLETE":
 		fallthrough
 	case "NOT_EXIST":
-		*e = ThirdPartyFirewallAssociationStatusEnum(s)
+		*e = ThirdPartyFirewallAssociationStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThirdPartyFirewallAssociationStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ThirdPartyFirewallAssociationStatusEnum: %v", v)
 	}
 }

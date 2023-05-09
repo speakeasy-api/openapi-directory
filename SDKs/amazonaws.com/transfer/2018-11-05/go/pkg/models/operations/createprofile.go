@@ -16,17 +16,21 @@ const (
 	CreateProfileXAmzTargetEnumTransferServiceCreateProfile CreateProfileXAmzTargetEnum = "TransferService.CreateProfile"
 )
 
+func (e CreateProfileXAmzTargetEnum) ToPointer() *CreateProfileXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProfileXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TransferService.CreateProfile":
-		*e = CreateProfileXAmzTargetEnum(s)
+		*e = CreateProfileXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProfileXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProfileXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -15,17 +15,21 @@ const (
 	GETListIdentitiesActionEnumListIdentities GETListIdentitiesActionEnum = "ListIdentities"
 )
 
+func (e GETListIdentitiesActionEnum) ToPointer() *GETListIdentitiesActionEnum {
+	return &e
+}
+
 func (e *GETListIdentitiesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListIdentities":
-		*e = GETListIdentitiesActionEnum(s)
+		*e = GETListIdentitiesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListIdentitiesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListIdentitiesActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETListIdentitiesIdentityTypeEnumDomain       GETListIdentitiesIdentityTypeEnum = "Domain"
 )
 
+func (e GETListIdentitiesIdentityTypeEnum) ToPointer() *GETListIdentitiesIdentityTypeEnum {
+	return &e
+}
+
 func (e *GETListIdentitiesIdentityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EmailAddress":
 		fallthrough
 	case "Domain":
-		*e = GETListIdentitiesIdentityTypeEnum(s)
+		*e = GETListIdentitiesIdentityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListIdentitiesIdentityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListIdentitiesIdentityTypeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETListIdentitiesVersionEnumTwoThousandAndTen1201 GETListIdentitiesVersionEnum = "2010-12-01"
 )
 
+func (e GETListIdentitiesVersionEnum) ToPointer() *GETListIdentitiesVersionEnum {
+	return &e
+}
+
 func (e *GETListIdentitiesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETListIdentitiesVersionEnum(s)
+		*e = GETListIdentitiesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETListIdentitiesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETListIdentitiesVersionEnum: %v", v)
 	}
 }
 

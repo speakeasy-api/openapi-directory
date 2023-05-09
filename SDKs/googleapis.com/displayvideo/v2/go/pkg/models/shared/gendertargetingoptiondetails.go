@@ -17,12 +17,16 @@ const (
 	GenderTargetingOptionDetailsGenderEnumGenderUnknown     GenderTargetingOptionDetailsGenderEnum = "GENDER_UNKNOWN"
 )
 
+func (e GenderTargetingOptionDetailsGenderEnum) ToPointer() *GenderTargetingOptionDetailsGenderEnum {
+	return &e
+}
+
 func (e *GenderTargetingOptionDetailsGenderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENDER_UNSPECIFIED":
 		fallthrough
 	case "GENDER_MALE":
@@ -30,10 +34,10 @@ func (e *GenderTargetingOptionDetailsGenderEnum) UnmarshalJSON(data []byte) erro
 	case "GENDER_FEMALE":
 		fallthrough
 	case "GENDER_UNKNOWN":
-		*e = GenderTargetingOptionDetailsGenderEnum(s)
+		*e = GenderTargetingOptionDetailsGenderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenderTargetingOptionDetailsGenderEnum: %s", s)
+		return fmt.Errorf("invalid value for GenderTargetingOptionDetailsGenderEnum: %v", v)
 	}
 }
 

@@ -16,21 +16,25 @@ const (
 	GoogleDatastoreAdminV1IndexAncestorEnumAllAncestors            GoogleDatastoreAdminV1IndexAncestorEnum = "ALL_ANCESTORS"
 )
 
+func (e GoogleDatastoreAdminV1IndexAncestorEnum) ToPointer() *GoogleDatastoreAdminV1IndexAncestorEnum {
+	return &e
+}
+
 func (e *GoogleDatastoreAdminV1IndexAncestorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ANCESTOR_MODE_UNSPECIFIED":
 		fallthrough
 	case "NONE":
 		fallthrough
 	case "ALL_ANCESTORS":
-		*e = GoogleDatastoreAdminV1IndexAncestorEnum(s)
+		*e = GoogleDatastoreAdminV1IndexAncestorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexAncestorEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexAncestorEnum: %v", v)
 	}
 }
 
@@ -45,12 +49,16 @@ const (
 	GoogleDatastoreAdminV1IndexStateEnumError            GoogleDatastoreAdminV1IndexStateEnum = "ERROR"
 )
 
+func (e GoogleDatastoreAdminV1IndexStateEnum) ToPointer() *GoogleDatastoreAdminV1IndexStateEnum {
+	return &e
+}
+
 func (e *GoogleDatastoreAdminV1IndexStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -60,10 +68,10 @@ func (e *GoogleDatastoreAdminV1IndexStateEnum) UnmarshalJSON(data []byte) error 
 	case "DELETING":
 		fallthrough
 	case "ERROR":
-		*e = GoogleDatastoreAdminV1IndexStateEnum(s)
+		*e = GoogleDatastoreAdminV1IndexStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexStateEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleDatastoreAdminV1IndexStateEnum: %v", v)
 	}
 }
 

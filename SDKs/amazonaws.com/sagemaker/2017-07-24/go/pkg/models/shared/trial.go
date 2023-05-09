@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// Trial - The properties of a trial as returned by the <a>Search</a> API.
+// Trial - The properties of a trial as returned by the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html">Search</a> API.
 type Trial struct {
 	CreatedBy      *UserContext `json:"CreatedBy,omitempty"`
 	CreationTime   *time.Time   `json:"CreationTime,omitempty"`

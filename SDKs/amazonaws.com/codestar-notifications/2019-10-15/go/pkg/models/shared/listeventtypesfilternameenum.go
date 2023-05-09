@@ -14,18 +14,22 @@ const (
 	ListEventTypesFilterNameEnumServiceName  ListEventTypesFilterNameEnum = "SERVICE_NAME"
 )
 
+func (e ListEventTypesFilterNameEnum) ToPointer() *ListEventTypesFilterNameEnum {
+	return &e
+}
+
 func (e *ListEventTypesFilterNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESOURCE_TYPE":
 		fallthrough
 	case "SERVICE_NAME":
-		*e = ListEventTypesFilterNameEnum(s)
+		*e = ListEventTypesFilterNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListEventTypesFilterNameEnum: %s", s)
+		return fmt.Errorf("invalid value for ListEventTypesFilterNameEnum: %v", v)
 	}
 }

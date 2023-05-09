@@ -15,17 +15,21 @@ const (
 	GETApplySecurityGroupsToClientVpnTargetNetworkActionEnumApplySecurityGroupsToClientVpnTargetNetwork GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum = "ApplySecurityGroupsToClientVpnTargetNetwork"
 )
 
+func (e GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum) ToPointer() *GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum {
+	return &e
+}
+
 func (e *GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ApplySecurityGroupsToClientVpnTargetNetwork":
-		*e = GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum(s)
+		*e = GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplySecurityGroupsToClientVpnTargetNetworkActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnumTwoThousandAndSixteen1115 GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum = "2016-11-15"
 )
 
+func (e GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum) ToPointer() *GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum {
+	return &e
+}
+
 func (e *GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum(s)
+		*e = GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETApplySecurityGroupsToClientVpnTargetNetworkVersionEnum: %v", v)
 	}
 }
 

@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/mlb-v3-proj
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.DepthChartsRequest{
-        Format: "JSON",
-    }
-
     ctx := context.Background()
-    res, err := s.DepthCharts(ctx, req)
+    res, err := s.DepthCharts(ctx, operations.DepthChartsRequest{
+        Format: operations.DepthChartsFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,15 +45,15 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `DepthCharts` - Depth Charts
-* `DfsSlatesByDate` - DFS Slates by Date
-* `InjuredPlayers` - Injured Players
-* `ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries` - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
-* `ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries` - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
-* `ProjectedPlayerSeasonStatsWithAdp` - Projected Player Season Stats (with ADP)
-* `StartingLineupsByDate` - Starting Lineups by Date
+* [DepthCharts](docs/sdk/README.md#depthcharts) - Depth Charts
+* [DfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - DFS Slates by Date
+* [InjuredPlayers](docs/sdk/README.md#injuredplayers) - Injured Players
+* [ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbydatewinjuriesdfssalaries) - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
+* [ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries](docs/sdk/README.md#projectedplayergamestatsbyplayerwinjuriesdfssalaries) - Projected Player Game Stats by Player (w/ Injuries, DFS Salaries)
+* [ProjectedPlayerSeasonStatsWithAdp](docs/sdk/README.md#projectedplayerseasonstatswithadp) - Projected Player Season Stats (with ADP)
+* [StartingLineupsByDate](docs/sdk/README.md#startinglineupsbydate) - Starting Lineups by Date
 <!-- End SDK Available Operations -->
 
 ### Maturity

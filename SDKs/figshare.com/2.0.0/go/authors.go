@@ -36,7 +36,10 @@ func newAuthors(defaultClient, securityClient HTTPClient, serverURL, language, s
 // View author details
 func (s *authors) PrivateAuthorDetails(ctx context.Context, request operations.PrivateAuthorDetailsRequest, security operations.PrivateAuthorDetailsSecurity) (*operations.PrivateAuthorDetailsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/account/authors/{author_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/account/authors/{author_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

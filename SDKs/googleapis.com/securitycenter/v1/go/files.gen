@@ -4,6 +4,7 @@ sdk.go
 go.mod
 go.sum
 pkg/types/date.go
+pkg/types/datetime.go
 pkg/utils/contenttype.go
 pkg/utils/form.go
 pkg/utils/headers.go
@@ -28,9 +29,13 @@ pkg/models/operations/securitycenterprojectsfindingsbulkmute.go
 pkg/models/operations/securitycenterprojectsmuteconfigscreate.go
 pkg/models/operations/securitycenterprojectsmuteconfigslist.go
 pkg/models/operations/securitycenterprojectsnotificationconfigscreate.go
-pkg/models/operations/securitycenterprojectsnotificationconfigsdelete.go
-pkg/models/operations/securitycenterprojectsnotificationconfigsget.go
 pkg/models/operations/securitycenterprojectsnotificationconfigslist.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingscustommodulescreate.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingscustommodulesdelete.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingscustommoduleslist.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingscustommoduleslistdescendant.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingseffectivecustommodulesget.go
+pkg/models/operations/securitycenterprojectssecurityhealthanalyticssettingseffectivecustommoduleslist.go
 pkg/models/operations/securitycenterprojectssourcesfindingsexternalsystemspatch.go
 pkg/models/operations/securitycenterprojectssourcesfindingsgroup.go
 pkg/models/operations/securitycenterprojectssourcesfindingslist.go
@@ -51,7 +56,6 @@ pkg/models/shared/securitymarks.go
 pkg/models/shared/process.go
 pkg/models/shared/file.go
 pkg/models/shared/environmentvariable.go
-pkg/models/shared/orgpolicyconstraint.go
 pkg/models/shared/mitreattack.go
 pkg/models/shared/kubernetes.go
 pkg/models/shared/role.go
@@ -110,6 +114,15 @@ pkg/models/shared/listmuteconfigsresponse.go
 pkg/models/shared/notificationconfig.go
 pkg/models/shared/streamingconfig.go
 pkg/models/shared/listnotificationconfigsresponse.go
+pkg/models/shared/googlecloudsecuritycenterv1securityhealthanalyticscustommodule.go
+pkg/models/shared/googlecloudsecuritycenterv1customconfig.go
+pkg/models/shared/googlecloudsecuritycenterv1resourceselector.go
+pkg/models/shared/googlecloudsecuritycenterv1customoutputspec.go
+pkg/models/shared/googlecloudsecuritycenterv1property.go
+pkg/models/shared/listsecurityhealthanalyticscustommodulesresponse.go
+pkg/models/shared/listdescendantsecurityhealthanalyticscustommodulesresponse.go
+pkg/models/shared/googlecloudsecuritycenterv1effectivesecurityhealthanalyticscustommodule.go
+pkg/models/shared/listeffectivesecurityhealthanalyticscustommodulesresponse.go
 pkg/models/shared/groupfindingsresponse.go
 pkg/models/shared/groupfindingsrequest.go
 pkg/models/shared/listfindingsresponse.go
@@ -118,4 +131,7 @@ pkg/models/shared/resource.go
 pkg/models/shared/setmuterequest.go
 pkg/models/shared/setfindingstaterequest.go
 pkg/models/shared/listsourcesresponse.go
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

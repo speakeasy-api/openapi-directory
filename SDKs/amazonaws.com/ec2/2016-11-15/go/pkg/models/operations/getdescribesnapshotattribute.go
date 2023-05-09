@@ -15,17 +15,21 @@ const (
 	GETDescribeSnapshotAttributeActionEnumDescribeSnapshotAttribute GETDescribeSnapshotAttributeActionEnum = "DescribeSnapshotAttribute"
 )
 
+func (e GETDescribeSnapshotAttributeActionEnum) ToPointer() *GETDescribeSnapshotAttributeActionEnum {
+	return &e
+}
+
 func (e *GETDescribeSnapshotAttributeActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DescribeSnapshotAttribute":
-		*e = GETDescribeSnapshotAttributeActionEnum(s)
+		*e = GETDescribeSnapshotAttributeActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETDescribeSnapshotAttributeAttributeEnumCreateVolumePermission GETDescribeSnapshotAttributeAttributeEnum = "createVolumePermission"
 )
 
+func (e GETDescribeSnapshotAttributeAttributeEnum) ToPointer() *GETDescribeSnapshotAttributeAttributeEnum {
+	return &e
+}
+
 func (e *GETDescribeSnapshotAttributeAttributeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "productCodes":
 		fallthrough
 	case "createVolumePermission":
-		*e = GETDescribeSnapshotAttributeAttributeEnum(s)
+		*e = GETDescribeSnapshotAttributeAttributeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeAttributeEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeAttributeEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETDescribeSnapshotAttributeVersionEnumTwoThousandAndSixteen1115 GETDescribeSnapshotAttributeVersionEnum = "2016-11-15"
 )
 
+func (e GETDescribeSnapshotAttributeVersionEnum) ToPointer() *GETDescribeSnapshotAttributeVersionEnum {
+	return &e
+}
+
 func (e *GETDescribeSnapshotAttributeVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDescribeSnapshotAttributeVersionEnum(s)
+		*e = GETDescribeSnapshotAttributeVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDescribeSnapshotAttributeVersionEnum: %v", v)
 	}
 }
 

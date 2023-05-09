@@ -98,12 +98,16 @@ const (
 	StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum) ToPointer() *StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -273,10 +277,10 @@ func (e *StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum) U
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum(s)
+		*e = StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for StartNetworkInsightsAnalysisRequestTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 

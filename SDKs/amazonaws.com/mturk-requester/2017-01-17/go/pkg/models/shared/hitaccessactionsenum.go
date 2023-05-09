@@ -15,20 +15,24 @@ const (
 	HITAccessActionsEnumDiscoverPreviewAndAccept HITAccessActionsEnum = "DiscoverPreviewAndAccept"
 )
 
+func (e HITAccessActionsEnum) ToPointer() *HITAccessActionsEnum {
+	return &e
+}
+
 func (e *HITAccessActionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Accept":
 		fallthrough
 	case "PreviewAndAccept":
 		fallthrough
 	case "DiscoverPreviewAndAccept":
-		*e = HITAccessActionsEnum(s)
+		*e = HITAccessActionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HITAccessActionsEnum: %s", s)
+		return fmt.Errorf("invalid value for HITAccessActionsEnum: %v", v)
 	}
 }

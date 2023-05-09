@@ -16,12 +16,16 @@ const (
 	ExternalMetricsSourceEnumInstana   ExternalMetricsSourceEnum = "Instana"
 )
 
+func (e ExternalMetricsSourceEnum) ToPointer() *ExternalMetricsSourceEnum {
+	return &e
+}
+
 func (e *ExternalMetricsSourceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Datadog":
 		fallthrough
 	case "Dynatrace":
@@ -29,9 +33,9 @@ func (e *ExternalMetricsSourceEnum) UnmarshalJSON(data []byte) error {
 	case "NewRelic":
 		fallthrough
 	case "Instana":
-		*e = ExternalMetricsSourceEnum(s)
+		*e = ExternalMetricsSourceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExternalMetricsSourceEnum: %s", s)
+		return fmt.Errorf("invalid value for ExternalMetricsSourceEnum: %v", v)
 	}
 }

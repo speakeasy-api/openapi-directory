@@ -18,12 +18,12 @@ type UpdateEnvironmentRequestBodyLoggingConfiguration struct {
 	WorkerLogs        *shared.ModuleLoggingConfigurationInput `json:"WorkerLogs,omitempty"`
 }
 
-// UpdateEnvironmentRequestBodyNetworkConfiguration - Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
+// UpdateEnvironmentRequestBodyNetworkConfiguration - Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
 type UpdateEnvironmentRequestBodyNetworkConfiguration struct {
 	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
 }
 
-// UpdateEnvironmentRequestBodyWebserverAccessModeEnum - The Apache Airflow <i>Web server</i> access mode. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
+// UpdateEnvironmentRequestBodyWebserverAccessModeEnum - The Apache Airflow <i>Web server</i> access mode. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
 type UpdateEnvironmentRequestBodyWebserverAccessModeEnum string
 
 const (
@@ -31,32 +31,36 @@ const (
 	UpdateEnvironmentRequestBodyWebserverAccessModeEnumPublicOnly  UpdateEnvironmentRequestBodyWebserverAccessModeEnum = "PUBLIC_ONLY"
 )
 
+func (e UpdateEnvironmentRequestBodyWebserverAccessModeEnum) ToPointer() *UpdateEnvironmentRequestBodyWebserverAccessModeEnum {
+	return &e
+}
+
 func (e *UpdateEnvironmentRequestBodyWebserverAccessModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PRIVATE_ONLY":
 		fallthrough
 	case "PUBLIC_ONLY":
-		*e = UpdateEnvironmentRequestBodyWebserverAccessModeEnum(s)
+		*e = UpdateEnvironmentRequestBodyWebserverAccessModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateEnvironmentRequestBodyWebserverAccessModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateEnvironmentRequestBodyWebserverAccessModeEnum: %v", v)
 	}
 }
 
 type UpdateEnvironmentRequestBody struct {
-	// A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow configuration options</a>.
+	// A list of key-value pairs containing the Apache Airflow configuration options you want to attach to your environment. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html">Apache Airflow configuration options</a>.
 	AirflowConfigurationOptions map[string]string `json:"AirflowConfigurationOptions,omitempty"`
 	// The Apache Airflow version for your environment. If no value is specified, defaults to the latest version. Valid values: <code>1.10.12</code>, <code>2.0.2</code>, <code>2.2.2</code>, and <code>2.4.3</code>.
 	AirflowVersion *string `json:"AirflowVersion,omitempty"`
-	// The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating DAGs</a>.
+	// The relative path to the DAGs folder on your Amazon S3 bucket. For example, <code>dags</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-folder.html">Adding or updating DAGs</a>.
 	DagS3Path *string `json:"DagS3Path,omitempty"`
-	// The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment class</a>.
+	// The environment class type. Valid values: <code>mw1.small</code>, <code>mw1.medium</code>, <code>mw1.large</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/environment-class.html">Amazon MWAA environment class</a>.
 	EnvironmentClass *string `json:"EnvironmentClass,omitempty"`
-	// The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+	// The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
 	ExecutionRoleArn *string `json:"ExecutionRoleArn,omitempty"`
 	// Defines the Apache Airflow log types to send to CloudWatch Logs.
 	LoggingConfiguration *UpdateEnvironmentRequestBodyLoggingConfiguration `json:"LoggingConfiguration,omitempty"`
@@ -64,21 +68,25 @@ type UpdateEnvironmentRequestBody struct {
 	MaxWorkers *int64 `json:"MaxWorkers,omitempty"`
 	// The minimum number of workers that you want to run in your environment. MWAA scales the number of Apache Airflow workers up to the number you specify in the <code>MaxWorkers</code> field. When there are no more tasks running, and no more in the queue, MWAA disposes of the extra workers leaving the worker count you specify in the <code>MinWorkers</code> field. For example, <code>2</code>.
 	MinWorkers *int64 `json:"MinWorkers,omitempty"`
-	// Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
+	// Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services resources for your environment. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
 	NetworkConfiguration *UpdateEnvironmentRequestBodyNetworkConfiguration `json:"NetworkConfiguration,omitempty"`
-	// The version of the plugins.zip file on your Amazon S3 bucket. A version must be specified each time a plugins.zip file is updated. To learn more, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
+	// The version of the plugins.zip file on your Amazon S3 bucket. You must specify a version each time a <code>plugins.zip</code> file is updated. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
 	PluginsS3ObjectVersion *string `json:"PluginsS3ObjectVersion,omitempty"`
-	// The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example, <code>plugins.zip</code>. If specified, then the plugins.zip version is required. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.
+	// The relative path to the <code>plugins.zip</code> file on your Amazon S3 bucket. For example, <code>plugins.zip</code>. If specified, then the plugins.zip version is required. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import-plugins.html">Installing custom plugins</a>.
 	PluginsS3Path *string `json:"PluginsS3Path,omitempty"`
-	// The version of the requirements.txt file on your Amazon S3 bucket. A version must be specified each time a requirements.txt file is updated. To learn more, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
+	// The version of the requirements.txt file on your Amazon S3 bucket. You must specify a version each time a <code>requirements.txt</code> file is updated. For more information, see <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">How S3 Versioning works</a>.
 	RequirementsS3ObjectVersion *string `json:"RequirementsS3ObjectVersion,omitempty"`
-	// The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example, <code>requirements.txt</code>. If specified, then a file version is required. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.
+	// The relative path to the <code>requirements.txt</code> file on your Amazon S3 bucket. For example, <code>requirements.txt</code>. If specified, then a file version is required. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/working-dags-dependencies.html">Installing Python dependencies</a>.
 	RequirementsS3Path *string `json:"RequirementsS3Path,omitempty"`
 	// The number of Apache Airflow schedulers to run in your Amazon MWAA environment.
 	Schedulers *int64 `json:"Schedulers,omitempty"`
-	// The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for Amazon MWAA</a>.
+	// The Amazon Resource Name (ARN) of the Amazon S3 bucket where your DAG code and supporting files are stored. For example, <code>arn:aws:s3:::my-airflow-bucket-unique-name</code>. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html">Create an Amazon S3 bucket for Amazon MWAA</a>.
 	SourceBucketArn *string `json:"SourceBucketArn,omitempty"`
-	// The Apache Airflow <i>Web server</i> access mode. To learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
+	// <p> The version of the startup shell script in your Amazon S3 bucket. You must specify the <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html">version ID</a> that Amazon S3 assigns to the file every time you update the script. </p> <p> Version IDs are Unicode, UTF-8 encoded, URL-ready, opaque strings that are no more than 1,024 bytes long. The following is an example: </p> <p> <code>3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo</code> </p> <p> For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>. </p>
+	StartupScriptS3ObjectVersion *string `json:"StartupScriptS3ObjectVersion,omitempty"`
+	// <p>The relative path to the startup shell script in your Amazon S3 bucket. For example, <code>s3://mwaa-environment/startup.sh</code>.</p> <p> Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process. You can use this script to install dependencies, modify Apache Airflow configuration options, and set environment variables. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html">Using a startup script</a>. </p>
+	StartupScriptS3Path *string `json:"StartupScriptS3Path,omitempty"`
+	// The Apache Airflow <i>Web server</i> access mode. For more information, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-networking.html">Apache Airflow access modes</a>.
 	WebserverAccessMode *UpdateEnvironmentRequestBodyWebserverAccessModeEnum `json:"WebserverAccessMode,omitempty"`
 	// The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
 	WeeklyMaintenanceWindowStart *string `json:"WeeklyMaintenanceWindowStart,omitempty"`

@@ -15,19 +15,23 @@ const (
 	CreateIntegrationResultConnectionTypeEnumVpcLink  CreateIntegrationResultConnectionTypeEnum = "VPC_LINK"
 )
 
+func (e CreateIntegrationResultConnectionTypeEnum) ToPointer() *CreateIntegrationResultConnectionTypeEnum {
+	return &e
+}
+
 func (e *CreateIntegrationResultConnectionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "INTERNET":
 		fallthrough
 	case "VPC_LINK":
-		*e = CreateIntegrationResultConnectionTypeEnum(s)
+		*e = CreateIntegrationResultConnectionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationResultConnectionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationResultConnectionTypeEnum: %v", v)
 	}
 }
 
@@ -39,19 +43,23 @@ const (
 	CreateIntegrationResultContentHandlingStrategyEnumConvertToText   CreateIntegrationResultContentHandlingStrategyEnum = "CONVERT_TO_TEXT"
 )
 
+func (e CreateIntegrationResultContentHandlingStrategyEnum) ToPointer() *CreateIntegrationResultContentHandlingStrategyEnum {
+	return &e
+}
+
 func (e *CreateIntegrationResultContentHandlingStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CONVERT_TO_BINARY":
 		fallthrough
 	case "CONVERT_TO_TEXT":
-		*e = CreateIntegrationResultContentHandlingStrategyEnum(s)
+		*e = CreateIntegrationResultContentHandlingStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationResultContentHandlingStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationResultContentHandlingStrategyEnum: %v", v)
 	}
 }
 
@@ -66,12 +74,16 @@ const (
 	CreateIntegrationResultIntegrationTypeEnumAwsProxy  CreateIntegrationResultIntegrationTypeEnum = "AWS_PROXY"
 )
 
+func (e CreateIntegrationResultIntegrationTypeEnum) ToPointer() *CreateIntegrationResultIntegrationTypeEnum {
+	return &e
+}
+
 func (e *CreateIntegrationResultIntegrationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWS":
 		fallthrough
 	case "HTTP":
@@ -81,10 +93,10 @@ func (e *CreateIntegrationResultIntegrationTypeEnum) UnmarshalJSON(data []byte) 
 	case "HTTP_PROXY":
 		fallthrough
 	case "AWS_PROXY":
-		*e = CreateIntegrationResultIntegrationTypeEnum(s)
+		*e = CreateIntegrationResultIntegrationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationResultIntegrationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationResultIntegrationTypeEnum: %v", v)
 	}
 }
 
@@ -97,21 +109,25 @@ const (
 	CreateIntegrationResultPassthroughBehaviorEnumWhenNoTemplates CreateIntegrationResultPassthroughBehaviorEnum = "WHEN_NO_TEMPLATES"
 )
 
+func (e CreateIntegrationResultPassthroughBehaviorEnum) ToPointer() *CreateIntegrationResultPassthroughBehaviorEnum {
+	return &e
+}
+
 func (e *CreateIntegrationResultPassthroughBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WHEN_NO_MATCH":
 		fallthrough
 	case "NEVER":
 		fallthrough
 	case "WHEN_NO_TEMPLATES":
-		*e = CreateIntegrationResultPassthroughBehaviorEnum(s)
+		*e = CreateIntegrationResultPassthroughBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateIntegrationResultPassthroughBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateIntegrationResultPassthroughBehaviorEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ListResourceComplianceSummariesXAmzTargetEnumAmazonSsmListResourceComplianceSummaries ListResourceComplianceSummariesXAmzTargetEnum = "AmazonSSM.ListResourceComplianceSummaries"
 )
 
+func (e ListResourceComplianceSummariesXAmzTargetEnum) ToPointer() *ListResourceComplianceSummariesXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListResourceComplianceSummariesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.ListResourceComplianceSummaries":
-		*e = ListResourceComplianceSummariesXAmzTargetEnum(s)
+		*e = ListResourceComplianceSummariesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListResourceComplianceSummariesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListResourceComplianceSummariesXAmzTargetEnum: %v", v)
 	}
 }
 

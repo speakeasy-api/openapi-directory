@@ -17,12 +17,16 @@ const (
 	LoggingLevelEnumDebug    LoggingLevelEnum = "DEBUG"
 )
 
+func (e LoggingLevelEnum) ToPointer() *LoggingLevelEnum {
+	return &e
+}
+
 func (e *LoggingLevelEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CRITICAL":
 		fallthrough
 	case "ERROR":
@@ -32,9 +36,9 @@ func (e *LoggingLevelEnum) UnmarshalJSON(data []byte) error {
 	case "INFO":
 		fallthrough
 	case "DEBUG":
-		*e = LoggingLevelEnum(s)
+		*e = LoggingLevelEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for LoggingLevelEnum: %s", s)
+		return fmt.Errorf("invalid value for LoggingLevelEnum: %v", v)
 	}
 }

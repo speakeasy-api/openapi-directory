@@ -15,17 +15,21 @@ const (
 	GETDeleteSubnetActionEnumDeleteSubnet GETDeleteSubnetActionEnum = "DeleteSubnet"
 )
 
+func (e GETDeleteSubnetActionEnum) ToPointer() *GETDeleteSubnetActionEnum {
+	return &e
+}
+
 func (e *GETDeleteSubnetActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteSubnet":
-		*e = GETDeleteSubnetActionEnum(s)
+		*e = GETDeleteSubnetActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSubnetActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSubnetActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETDeleteSubnetVersionEnumTwoThousandAndSixteen1115 GETDeleteSubnetVersionEnum = "2016-11-15"
 )
 
+func (e GETDeleteSubnetVersionEnum) ToPointer() *GETDeleteSubnetVersionEnum {
+	return &e
+}
+
 func (e *GETDeleteSubnetVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETDeleteSubnetVersionEnum(s)
+		*e = GETDeleteSubnetVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDeleteSubnetVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDeleteSubnetVersionEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newImageActions(defaultClient, securityClient HTTPClient, serverURL, langua
 // Returns all Action objects for an Image. You can sort the results by using the `sort` URI parameter, and filter them with the `status` parameter.
 func (s *imageActions) GetImagesIDActions(ctx context.Context, request operations.GetImagesIDActionsRequest) (*operations.GetImagesIDActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -83,7 +86,10 @@ func (s *imageActions) GetImagesIDActions(ctx context.Context, request operation
 // Returns a specific Action for an Image.
 func (s *imageActions) GetImagesIDActionsActionID(ctx context.Context, request operations.GetImagesIDActionsActionIDRequest) (*operations.GetImagesIDActionsActionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions/{action_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions/{action_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *imageActions) GetImagesIDActionsActionID(ctx context.Context, request o
 // Changes the protection configuration of the Image. Can only be used on snapshots.
 func (s *imageActions) PostImagesIDActionsChangeProtection(ctx context.Context, request operations.PostImagesIDActionsChangeProtectionRequest) (*operations.PostImagesIDActionsChangeProtectionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions/change_protection", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/images/{id}/actions/change_protection", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

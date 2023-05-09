@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.ClearUserSessionsRequest{
+    ctx := context.Background()
+    res, err := s.ClearUserSessions(ctx, operations.ClearUserSessionsRequest{
         RequestBody: []byte("corrupti"),
         UserID: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.ClearUserSessions(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

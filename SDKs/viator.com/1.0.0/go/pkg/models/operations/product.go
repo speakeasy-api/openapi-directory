@@ -18,19 +18,23 @@ const (
 	ProductVoucherOptionEnumVoucherE         ProductVoucherOptionEnum = "VOUCHER_E"
 )
 
+func (e ProductVoucherOptionEnum) ToPointer() *ProductVoucherOptionEnum {
+	return &e
+}
+
 func (e *ProductVoucherOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOUCHER_PAPER_ONLY":
 		fallthrough
 	case "VOUCHER_E":
-		*e = ProductVoucherOptionEnum(s)
+		*e = ProductVoucherOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductVoucherOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductVoucherOptionEnum: %v", v)
 	}
 }
 

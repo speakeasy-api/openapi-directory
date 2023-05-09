@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.RetrieveNEOFeedTodayRequest{
-        Detailed: false,
-    }
-
     ctx := context.Background()
-    res, err := s.Feed.RetrieveNEOFeedToday(ctx, req)
+    res, err := s.Feed.RetrieveNEOFeedToday(ctx, operations.RetrieveNEOFeedTodayRequest{
+        Detailed: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }

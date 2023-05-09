@@ -17,12 +17,16 @@ const (
 	VersionKindEnumMaximum                VersionKindEnum = "MAXIMUM"
 )
 
+func (e VersionKindEnum) ToPointer() *VersionKindEnum {
+	return &e
+}
+
 func (e *VersionKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VERSION_KIND_UNSPECIFIED":
 		fallthrough
 	case "NORMAL":
@@ -30,10 +34,10 @@ func (e *VersionKindEnum) UnmarshalJSON(data []byte) error {
 	case "MINIMUM":
 		fallthrough
 	case "MAXIMUM":
-		*e = VersionKindEnum(s)
+		*e = VersionKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VersionKindEnum: %s", s)
+		return fmt.Errorf("invalid value for VersionKindEnum: %v", v)
 	}
 }
 

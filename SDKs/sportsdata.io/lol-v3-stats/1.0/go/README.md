@@ -13,12 +13,11 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/sportsdata.io/lol-v3-stat
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
@@ -28,12 +27,10 @@ func main() {
         }),
     )
 
-    req := operations.AreasCountriesRequest{
-        Format: "json",
-    }
-
     ctx := context.Background()
-    res, err := s.AreasCountries(ctx, req)
+    res, err := s.AreasCountries(ctx, operations.AreasCountriesRequest{
+        Format: operations.AreasCountriesFormatEnumJSON,
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -48,29 +45,29 @@ func main() {
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `AreasCountries` - Areas (Countries)
-* `BoxScore` - Box Score
-* `BoxScoresByDate` - Box Scores by Date
-* `Champions` - Champions
-* `CompetitionFixturesLeagueDetails` - Competition Fixtures (League Details)
-* `CompetitionsLeagues` - Competitions (Leagues)
-* `GamesByDate` - Games by Date
-* `Items` - Items
-* `MembershipsActive` - Memberships (Active)
-* `MembershipsByTeamActive` - Memberships by Team (Active)
-* `MembershipsByTeamHistorical` - Memberships by Team (Historical)
-* `MembershipsHistorical` - Memberships (Historical)
-* `Player` - Player
-* `Players` - Players
-* `PlayersByTeam` - Players by Team
-* `Schedule` - Schedule
-* `SeasonTeams` - Season Teams
-* `Spells` - Spells
-* `Standings` - Standings
-* `Teams` - Teams
-* `Venues` - Venues
+* [AreasCountries](docs/sdk/README.md#areascountries) - Areas (Countries)
+* [BoxScore](docs/sdk/README.md#boxscore) - Box Score
+* [BoxScoresByDate](docs/sdk/README.md#boxscoresbydate) - Box Scores by Date
+* [Champions](docs/sdk/README.md#champions) - Champions
+* [CompetitionFixturesLeagueDetails](docs/sdk/README.md#competitionfixturesleaguedetails) - Competition Fixtures (League Details)
+* [CompetitionsLeagues](docs/sdk/README.md#competitionsleagues) - Competitions (Leagues)
+* [GamesByDate](docs/sdk/README.md#gamesbydate) - Games by Date
+* [Items](docs/sdk/README.md#items) - Items
+* [MembershipsActive](docs/sdk/README.md#membershipsactive) - Memberships (Active)
+* [MembershipsByTeamActive](docs/sdk/README.md#membershipsbyteamactive) - Memberships by Team (Active)
+* [MembershipsByTeamHistorical](docs/sdk/README.md#membershipsbyteamhistorical) - Memberships by Team (Historical)
+* [MembershipsHistorical](docs/sdk/README.md#membershipshistorical) - Memberships (Historical)
+* [Player](docs/sdk/README.md#player) - Player
+* [Players](docs/sdk/README.md#players) - Players
+* [PlayersByTeam](docs/sdk/README.md#playersbyteam) - Players by Team
+* [Schedule](docs/sdk/README.md#schedule) - Schedule
+* [SeasonTeams](docs/sdk/README.md#seasonteams) - Season Teams
+* [Spells](docs/sdk/README.md#spells) - Spells
+* [Standings](docs/sdk/README.md#standings) - Standings
+* [Teams](docs/sdk/README.md#teams) - Teams
+* [Venues](docs/sdk/README.md#venues) - Venues
 <!-- End SDK Available Operations -->
 
 ### Maturity

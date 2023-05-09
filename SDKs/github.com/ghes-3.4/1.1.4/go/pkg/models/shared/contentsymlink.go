@@ -19,17 +19,21 @@ const (
 	ContentSymlinkTypeEnumSymlink ContentSymlinkTypeEnum = "symlink"
 )
 
+func (e ContentSymlinkTypeEnum) ToPointer() *ContentSymlinkTypeEnum {
+	return &e
+}
+
 func (e *ContentSymlinkTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "symlink":
-		*e = ContentSymlinkTypeEnum(s)
+		*e = ContentSymlinkTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ContentSymlinkTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ContentSymlinkTypeEnum: %v", v)
 	}
 }
 

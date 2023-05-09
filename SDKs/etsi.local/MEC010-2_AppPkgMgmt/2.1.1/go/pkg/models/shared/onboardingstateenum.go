@@ -17,12 +17,16 @@ const (
 	OnboardingStateEnumOnboarded  OnboardingStateEnum = "ONBOARDED"
 )
 
+func (e OnboardingStateEnum) ToPointer() *OnboardingStateEnum {
+	return &e
+}
+
 func (e *OnboardingStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CREATED":
 		fallthrough
 	case "UPLOADING":
@@ -30,9 +34,9 @@ func (e *OnboardingStateEnum) UnmarshalJSON(data []byte) error {
 	case "PROCESSING":
 		fallthrough
 	case "ONBOARDED":
-		*e = OnboardingStateEnum(s)
+		*e = OnboardingStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnboardingStateEnum: %s", s)
+		return fmt.Errorf("invalid value for OnboardingStateEnum: %v", v)
 	}
 }

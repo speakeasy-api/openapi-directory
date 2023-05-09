@@ -35,7 +35,10 @@ func newStopScreenshotTest(defaultClient, securityClient HTTPClient, serverURL, 
 // Stop specified screenshot test
 func (s *stopScreenshotTest) StopScreenshotsTest(ctx context.Context, request operations.StopScreenshotsTestRequest, security operations.StopScreenshotsTestSecurity) (*operations.StopScreenshotsTestResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/stop/{test_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/stop/{test_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

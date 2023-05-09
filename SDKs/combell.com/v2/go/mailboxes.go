@@ -36,7 +36,10 @@ func newMailboxes(defaultClient, securityClient HTTPClient, serverURL, language,
 // ChangeMailboxPassword - Change password for mailbox
 func (s *mailboxes) ChangeMailboxPassword(ctx context.Context, request operations.ChangeMailboxPasswordRequest) (*operations.ChangeMailboxPasswordResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/password", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/password", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateMailboxPasswordRequest", "json")
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *mailboxes) ChangeMailboxPassword(ctx context.Context, request operation
 // ConfigureMailboxAutoForward - Configure auto-forward for mailbox
 func (s *mailboxes) ConfigureMailboxAutoForward(ctx context.Context, request operations.ConfigureMailboxAutoForwardRequest) (*operations.ConfigureMailboxAutoForwardResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoforward", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoforward", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoForward", "json")
 	if err != nil {
@@ -128,7 +134,10 @@ func (s *mailboxes) ConfigureMailboxAutoForward(ctx context.Context, request ope
 // ConfigureMailboxAutoReply - Configure auto-reply for mailbox
 func (s *mailboxes) ConfigureMailboxAutoReply(ctx context.Context, request operations.ConfigureMailboxAutoReplyRequest) (*operations.ConfigureMailboxAutoReplyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoreply", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}/autoreply", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AutoReply", "json")
 	if err != nil {
@@ -217,7 +226,10 @@ func (s *mailboxes) CreateMailbox(ctx context.Context, request shared.CreateMail
 // DeleteMailbox - Delete a mailbox
 func (s *mailboxes) DeleteMailbox(ctx context.Context, request operations.DeleteMailboxRequest) (*operations.DeleteMailboxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -258,7 +270,10 @@ func (s *mailboxes) DeleteMailbox(ctx context.Context, request operations.Delete
 // GetMailbox - Get a specific mailbox
 func (s *mailboxes) GetMailbox(ctx context.Context, request operations.GetMailboxRequest) (*operations.GetMailboxResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/mailboxes/{mailboxName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

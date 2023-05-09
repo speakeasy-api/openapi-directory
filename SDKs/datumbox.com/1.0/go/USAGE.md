@@ -2,24 +2,21 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.AdultContentDetectionRequestBody{
-        APIKey: "corrupti",
-        Text: "provident",
-    }
-
     ctx := context.Background()
-    res, err := s.DocumentClassification.AdultContentDetection(ctx, req)
+    res, err := s.DocumentClassification.AdultContentDetection(ctx, operations.AdultContentDetectionRequestBody{
+        APIKey: "corrupti",
+        Text: sdk.String("provident"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -15,19 +15,23 @@ const (
 	InvoiceUpdateAttachmentAPIModelTypeEnumUploaded InvoiceUpdateAttachmentAPIModelTypeEnum = "Uploaded"
 )
 
+func (e InvoiceUpdateAttachmentAPIModelTypeEnum) ToPointer() *InvoiceUpdateAttachmentAPIModelTypeEnum {
+	return &e
+}
+
 func (e *InvoiceUpdateAttachmentAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "External":
 		fallthrough
 	case "Uploaded":
-		*e = InvoiceUpdateAttachmentAPIModelTypeEnum(s)
+		*e = InvoiceUpdateAttachmentAPIModelTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for InvoiceUpdateAttachmentAPIModelTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for InvoiceUpdateAttachmentAPIModelTypeEnum: %v", v)
 	}
 }
 

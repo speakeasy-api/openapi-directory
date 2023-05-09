@@ -15,17 +15,21 @@ const (
 	GETAssociateEnclaveCertificateIamRoleActionEnumAssociateEnclaveCertificateIamRole GETAssociateEnclaveCertificateIamRoleActionEnum = "AssociateEnclaveCertificateIamRole"
 )
 
+func (e GETAssociateEnclaveCertificateIamRoleActionEnum) ToPointer() *GETAssociateEnclaveCertificateIamRoleActionEnum {
+	return &e
+}
+
 func (e *GETAssociateEnclaveCertificateIamRoleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssociateEnclaveCertificateIamRole":
-		*e = GETAssociateEnclaveCertificateIamRoleActionEnum(s)
+		*e = GETAssociateEnclaveCertificateIamRoleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateEnclaveCertificateIamRoleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateEnclaveCertificateIamRoleActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETAssociateEnclaveCertificateIamRoleVersionEnumTwoThousandAndSixteen1115 GETAssociateEnclaveCertificateIamRoleVersionEnum = "2016-11-15"
 )
 
+func (e GETAssociateEnclaveCertificateIamRoleVersionEnum) ToPointer() *GETAssociateEnclaveCertificateIamRoleVersionEnum {
+	return &e
+}
+
 func (e *GETAssociateEnclaveCertificateIamRoleVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETAssociateEnclaveCertificateIamRoleVersionEnum(s)
+		*e = GETAssociateEnclaveCertificateIamRoleVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETAssociateEnclaveCertificateIamRoleVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETAssociateEnclaveCertificateIamRoleVersionEnum: %v", v)
 	}
 }
 

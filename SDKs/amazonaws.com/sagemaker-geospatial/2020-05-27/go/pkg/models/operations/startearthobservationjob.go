@@ -36,7 +36,7 @@ type StartEarthObservationJobRequestBody struct {
 	InputConfig StartEarthObservationJobRequestBodyInputConfig `json:"InputConfig"`
 	// The input structure for the JobConfig in an EarthObservationJob.
 	JobConfig StartEarthObservationJobRequestBodyJobConfig `json:"JobConfig"`
-	// The Amazon Key Management Service (KMS) key ID for server-side encryption.
+	// The Key Management Service key ID for server-side encryption.
 	KmsKeyID *string `json:"KmsKeyId,omitempty"`
 	// The name of the Earth Observation job.
 	Name string `json:"Name"`

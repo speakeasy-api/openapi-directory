@@ -17,12 +17,16 @@ const (
 	CompanyTermsStatusEnumTermsStatusStale       CompanyTermsStatusEnum = "TERMS_STATUS_STALE"
 )
 
+func (e CompanyTermsStatusEnum) ToPointer() *CompanyTermsStatusEnum {
+	return &e
+}
+
 func (e *CompanyTermsStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TERMS_STATUS_UNSPECIFIED":
 		fallthrough
 	case "TERMS_STATUS_NOT_ACCEPTED":
@@ -30,10 +34,10 @@ func (e *CompanyTermsStatusEnum) UnmarshalJSON(data []byte) error {
 	case "TERMS_STATUS_ACCEPTED":
 		fallthrough
 	case "TERMS_STATUS_STALE":
-		*e = CompanyTermsStatusEnum(s)
+		*e = CompanyTermsStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CompanyTermsStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CompanyTermsStatusEnum: %v", v)
 	}
 }
 

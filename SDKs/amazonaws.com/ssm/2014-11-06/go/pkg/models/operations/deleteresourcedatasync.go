@@ -16,17 +16,21 @@ const (
 	DeleteResourceDataSyncXAmzTargetEnumAmazonSsmDeleteResourceDataSync DeleteResourceDataSyncXAmzTargetEnum = "AmazonSSM.DeleteResourceDataSync"
 )
 
+func (e DeleteResourceDataSyncXAmzTargetEnum) ToPointer() *DeleteResourceDataSyncXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteResourceDataSyncXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DeleteResourceDataSync":
-		*e = DeleteResourceDataSyncXAmzTargetEnum(s)
+		*e = DeleteResourceDataSyncXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteResourceDataSyncXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteResourceDataSyncXAmzTargetEnum: %v", v)
 	}
 }
 

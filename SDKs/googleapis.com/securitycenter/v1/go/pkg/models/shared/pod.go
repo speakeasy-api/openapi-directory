@@ -2,7 +2,7 @@
 
 package shared
 
-// Pod - Kubernetes Pod.
+// Pod - A Kubernetes Pod.
 type Pod struct {
 	// Pod containers associated with this finding, if any.
 	Containers []Container `json:"containers,omitempty"`

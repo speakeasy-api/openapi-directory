@@ -14,19 +14,23 @@ const (
 	EndpointWebsocketContentTypeEnumAudioL16RateEqual16000 EndpointWebsocketContentTypeEnum = "audio/l16;rate=16000"
 )
 
+func (e EndpointWebsocketContentTypeEnum) ToPointer() *EndpointWebsocketContentTypeEnum {
+	return &e
+}
+
 func (e *EndpointWebsocketContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio/l16;rate=8000":
 		fallthrough
 	case "audio/l16;rate=16000":
-		*e = EndpointWebsocketContentTypeEnum(s)
+		*e = EndpointWebsocketContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EndpointWebsocketContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EndpointWebsocketContentTypeEnum: %v", v)
 	}
 }
 

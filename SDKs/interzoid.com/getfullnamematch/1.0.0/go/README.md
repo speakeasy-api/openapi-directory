@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/interzoid.com/getfullname
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetfullnamematchRequest{
+    ctx := context.Background()
+    res, err := s.FullNameMatchSimilarityKey.Getfullnamematch(ctx, operations.GetfullnamematchRequest{
         Fullname: "corrupti",
         License: "provident",
-    }
-
-    ctx := context.Background()
-    res, err := s.FullNameMatchSimilarityKey.Getfullnamematch(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -46,9 +43,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### FullNameMatchSimilarityKey
+### [FullNameMatchSimilarityKey](docs/fullnamematchsimilaritykey/README.md)
 
-* `Getfullnamematch` - Gets a similarity key for matching purposes for full name data
+* [Getfullnamematch](docs/fullnamematchsimilaritykey/README.md#getfullnamematch) - Gets a similarity key for matching purposes for full name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

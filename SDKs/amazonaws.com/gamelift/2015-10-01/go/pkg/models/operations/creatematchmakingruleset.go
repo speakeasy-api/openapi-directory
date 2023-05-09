@@ -16,17 +16,21 @@ const (
 	CreateMatchmakingRuleSetXAmzTargetEnumGameLiftCreateMatchmakingRuleSet CreateMatchmakingRuleSetXAmzTargetEnum = "GameLift.CreateMatchmakingRuleSet"
 )
 
+func (e CreateMatchmakingRuleSetXAmzTargetEnum) ToPointer() *CreateMatchmakingRuleSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateMatchmakingRuleSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GameLift.CreateMatchmakingRuleSet":
-		*e = CreateMatchmakingRuleSetXAmzTargetEnum(s)
+		*e = CreateMatchmakingRuleSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateMatchmakingRuleSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateMatchmakingRuleSetXAmzTargetEnum: %v", v)
 	}
 }
 

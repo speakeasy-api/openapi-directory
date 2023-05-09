@@ -16,17 +16,21 @@ const (
 	UpdateGeoMatchSetXAmzTargetEnumAwswaf20150824UpdateGeoMatchSet UpdateGeoMatchSetXAmzTargetEnum = "AWSWAF_20150824.UpdateGeoMatchSet"
 )
 
+func (e UpdateGeoMatchSetXAmzTargetEnum) ToPointer() *UpdateGeoMatchSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateGeoMatchSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSWAF_20150824.UpdateGeoMatchSet":
-		*e = UpdateGeoMatchSetXAmzTargetEnum(s)
+		*e = UpdateGeoMatchSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateGeoMatchSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateGeoMatchSetXAmzTargetEnum: %v", v)
 	}
 }
 

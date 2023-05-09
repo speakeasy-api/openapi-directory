@@ -36,7 +36,10 @@ func newApplicationCharge(defaultClient, securityClient HTTPClient, serverURL, l
 // ※無料お試し期間中のショップに対しては従量課金データを作成できません。
 func (s *applicationCharge) CreateUsageCharge(ctx context.Context, request operations.CreateUsageChargeRequest, security operations.CreateUsageChargeSecurity) (*operations.CreateUsageChargeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/appstore/v1/recurring_application_charges/{recurringApplicationChargeId}/usage_charges.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

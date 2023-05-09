@@ -33,7 +33,10 @@ func newAdditionalData(defaultClient, securityClient HTTPClient, serverURL, lang
 // GetSearchVersionNumberAdditionalDataExt - Additional Data
 func (s *additionalData) GetSearchVersionNumberAdditionalDataExt(ctx context.Context, request operations.GetSearchVersionNumberAdditionalDataExtRequest) (*operations.GetSearchVersionNumberAdditionalDataExtResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/additionalData.{ext}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/search/{versionNumber}/additionalData.{ext}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

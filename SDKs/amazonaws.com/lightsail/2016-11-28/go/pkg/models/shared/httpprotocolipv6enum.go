@@ -14,18 +14,22 @@ const (
 	HTTPProtocolIpv6EnumEnabled  HTTPProtocolIpv6Enum = "enabled"
 )
 
+func (e HTTPProtocolIpv6Enum) ToPointer() *HTTPProtocolIpv6Enum {
+	return &e
+}
+
 func (e *HTTPProtocolIpv6Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "disabled":
 		fallthrough
 	case "enabled":
-		*e = HTTPProtocolIpv6Enum(s)
+		*e = HTTPProtocolIpv6Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for HTTPProtocolIpv6Enum: %s", s)
+		return fmt.Errorf("invalid value for HTTPProtocolIpv6Enum: %v", v)
 	}
 }

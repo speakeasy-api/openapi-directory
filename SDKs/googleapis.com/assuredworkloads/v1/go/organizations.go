@@ -34,7 +34,10 @@ func newOrganizations(defaultClient, securityClient HTTPClient, serverURL, langu
 // AssuredworkloadsOrganizationsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsOperationsList(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsOperationsListRequest, security operations.AssuredworkloadsOrganizationsLocationsOperationsListSecurity) (*operations.AssuredworkloadsOrganizationsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsOperationsList(ctx
 // AssuredworkloadsOrganizationsLocationsWorkloadsCreate - Creates Assured Workload.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsCreate(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssuredworkloadsV1WorkloadInput", "json")
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsCreate(ct
 // AssuredworkloadsOrganizationsLocationsWorkloadsDelete - Deletes the workload. Make sure that workload's direct children are already in a deleted state, otherwise the request will fail with a FAILED_PRECONDITION error.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsDelete(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsDelete(ct
 // AssuredworkloadsOrganizationsLocationsWorkloadsList - Lists Assured Workloads under a CRM Node.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsList(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsListRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsListSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workloads", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workloads", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsList(ctx 
 // AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions - Update the permissions settings for an existing partner workload. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissions(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsMutatePartnerPermissionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:mutatePartnerPermissions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:mutatePartnerPermissions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssuredworkloadsV1MutatePartnerPermissionsRequest", "json")
 	if err != nil {
@@ -288,7 +303,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsMutatePar
 // AssuredworkloadsOrganizationsLocationsWorkloadsPatch - Updates an existing workload. Currently allows updating of workload display_name and labels. For force updates don't set etag field in the Workload. Only one update operation per workload can be in progress.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsPatch(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssuredworkloadsV1WorkloadInput", "json")
 	if err != nil {
@@ -343,7 +361,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsPatch(ctx
 // AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources - Restrict the list of resources allowed in the Workload environment. The current list of allowed products can be found at https://cloud.google.com/assured-workloads/docs/supported-products In addition to assuredworkloads.workload.update permission, the user should also have orgpolicy.policy.set permission on the folder resource to use this functionality.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResources(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsRestrictAllowedResourcesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restrictAllowedResources", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:restrictAllowedResources", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssuredworkloadsV1RestrictAllowedResourcesRequest", "json")
 	if err != nil {
@@ -398,7 +419,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsRestrictA
 // AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge - Acknowledges an existing violation. By acknowledging a violation, users acknowledge the existence of a compliance violation in their workload and decide to ignore it due to a valid business justification. Acknowledgement is a permanent operation and it cannot be reverted.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledge(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsAcknowledgeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:acknowledge", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}:acknowledge", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest", "json")
 	if err != nil {
@@ -453,7 +477,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsViolation
 // AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGet - Retrieves Assured Workload Violation based on ID.
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGet(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -501,7 +528,10 @@ func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsViolation
 // AssuredworkloadsOrganizationsLocationsWorkloadsViolationsList - Lists the Violations in the AssuredWorkload Environment. Callers may also choose to read across multiple Workloads as per [AIP-159](https://google.aip.dev/159) by using '-' (the hyphen or dash character) as a wildcard character instead of workload-id in the parent. Format `organizations/{org_id}/locations/{location}/workloads/-`
 func (s *organizations) AssuredworkloadsOrganizationsLocationsWorkloadsViolationsList(ctx context.Context, request operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListRequest, security operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListSecurity) (*operations.AssuredworkloadsOrganizationsLocationsWorkloadsViolationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/violations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/violations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

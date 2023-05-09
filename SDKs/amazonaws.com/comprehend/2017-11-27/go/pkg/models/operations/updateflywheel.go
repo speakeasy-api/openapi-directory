@@ -16,17 +16,21 @@ const (
 	UpdateFlywheelXAmzTargetEnumComprehend20171127UpdateFlywheel UpdateFlywheelXAmzTargetEnum = "Comprehend_20171127.UpdateFlywheel"
 )
 
+func (e UpdateFlywheelXAmzTargetEnum) ToPointer() *UpdateFlywheelXAmzTargetEnum {
+	return &e
+}
+
 func (e *UpdateFlywheelXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Comprehend_20171127.UpdateFlywheel":
-		*e = UpdateFlywheelXAmzTargetEnum(s)
+		*e = UpdateFlywheelXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateFlywheelXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateFlywheelXAmzTargetEnum: %v", v)
 	}
 }
 

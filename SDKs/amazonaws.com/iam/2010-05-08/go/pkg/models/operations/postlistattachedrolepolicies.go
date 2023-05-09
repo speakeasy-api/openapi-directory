@@ -15,17 +15,21 @@ const (
 	POSTListAttachedRolePoliciesActionEnumListAttachedRolePolicies POSTListAttachedRolePoliciesActionEnum = "ListAttachedRolePolicies"
 )
 
+func (e POSTListAttachedRolePoliciesActionEnum) ToPointer() *POSTListAttachedRolePoliciesActionEnum {
+	return &e
+}
+
 func (e *POSTListAttachedRolePoliciesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ListAttachedRolePolicies":
-		*e = POSTListAttachedRolePoliciesActionEnum(s)
+		*e = POSTListAttachedRolePoliciesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListAttachedRolePoliciesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListAttachedRolePoliciesActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTListAttachedRolePoliciesVersionEnumTwoThousandAndTen0508 POSTListAttachedRolePoliciesVersionEnum = "2010-05-08"
 )
 
+func (e POSTListAttachedRolePoliciesVersionEnum) ToPointer() *POSTListAttachedRolePoliciesVersionEnum {
+	return &e
+}
+
 func (e *POSTListAttachedRolePoliciesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTListAttachedRolePoliciesVersionEnum(s)
+		*e = POSTListAttachedRolePoliciesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTListAttachedRolePoliciesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTListAttachedRolePoliciesVersionEnum: %v", v)
 	}
 }
 

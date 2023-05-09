@@ -16,17 +16,21 @@ const (
 	DescribeTrustedAdvisorCheckSummariesXAmzTargetEnumAwsSupport20130415DescribeTrustedAdvisorCheckSummaries DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum = "AWSSupport_20130415.DescribeTrustedAdvisorCheckSummaries"
 )
 
+func (e DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum) ToPointer() *DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSSupport_20130415.DescribeTrustedAdvisorCheckSummaries":
-		*e = DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum(s)
+		*e = DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeTrustedAdvisorCheckSummariesXAmzTargetEnum: %v", v)
 	}
 }
 

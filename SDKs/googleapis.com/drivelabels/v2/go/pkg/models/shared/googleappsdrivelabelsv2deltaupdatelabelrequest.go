@@ -15,19 +15,23 @@ const (
 	GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnumLabelViewFull  GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum = "LABEL_VIEW_FULL"
 )
 
+func (e GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum) ToPointer() *GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum {
+	return &e
+}
+
 func (e *GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LABEL_VIEW_BASIC":
 		fallthrough
 	case "LABEL_VIEW_FULL":
-		*e = GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum(s)
+		*e = GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestViewEnum: %v", v)
 	}
 }
 

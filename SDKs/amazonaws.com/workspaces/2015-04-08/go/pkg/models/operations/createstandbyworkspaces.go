@@ -16,17 +16,21 @@ const (
 	CreateStandbyWorkspacesXAmzTargetEnumWorkspacesServiceCreateStandbyWorkspaces CreateStandbyWorkspacesXAmzTargetEnum = "WorkspacesService.CreateStandbyWorkspaces"
 )
 
+func (e CreateStandbyWorkspacesXAmzTargetEnum) ToPointer() *CreateStandbyWorkspacesXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateStandbyWorkspacesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.CreateStandbyWorkspaces":
-		*e = CreateStandbyWorkspacesXAmzTargetEnum(s)
+		*e = CreateStandbyWorkspacesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateStandbyWorkspacesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateStandbyWorkspacesXAmzTargetEnum: %v", v)
 	}
 }
 

@@ -57,7 +57,10 @@ func newPotsHoldingsAndTransactions(defaultClient, securityClient HTTPClient, se
 // Update an existing Pot. WealthOS will update only the fields sent in the payload.
 func (s *potsHoldingsAndTransactions) UpdatePot(ctx context.Context, request operations.UpdatePotRequest, security operations.UpdatePotSecurity) (*operations.UpdatePotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -296,7 +299,10 @@ func (s *potsHoldingsAndTransactions) CreatePot(ctx context.Context, request ope
 // GetPot - Retrive existing pot from pot id
 func (s *potsHoldingsAndTransactions) GetPot(ctx context.Context, request operations.GetPotRequest, security operations.GetPotSecurity) (*operations.GetPotResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -393,7 +399,10 @@ func (s *potsHoldingsAndTransactions) GetPot(ctx context.Context, request operat
 // Get a breakdown of all the holdings of a pot (cash and investment product holdings)
 func (s *potsHoldingsAndTransactions) GetPotHoldings(ctx context.Context, request operations.GetPotHoldingsRequest, security operations.GetPotHoldingsSecurity) (*operations.GetPotHoldingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getHoldings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getHoldings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -500,7 +509,10 @@ func (s *potsHoldingsAndTransactions) GetPotHoldings(ctx context.Context, reques
 // Get a list of pending and archived transactions of the pot by date range. Only last 1000 records will be recieved if the result contain more that 1000 transactions. In that case, the pagination should be used.
 func (s *potsHoldingsAndTransactions) GetPotTransactions(ctx context.Context, request operations.GetPotTransactionsRequest, security operations.GetPotTransactionsSecurity) (*operations.GetPotTransactionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getTransactions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getTransactions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -601,7 +613,10 @@ func (s *potsHoldingsAndTransactions) GetPotTransactions(ctx context.Context, re
 // Get the current value of the pot (including cash and investment product holdings)
 func (s *potsHoldingsAndTransactions) GetPotValue(ctx context.Context, request operations.GetPotValueRequest, security operations.GetPotValueSecurity) (*operations.GetPotValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getValue", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/{pot_id}/getValue", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -708,7 +723,10 @@ func (s *potsHoldingsAndTransactions) GetPotValue(ctx context.Context, request o
 // Get all Investment Pots of the investor
 func (s *potsHoldingsAndTransactions) GetPots(ctx context.Context, request operations.GetPotsRequest, security operations.GetPotsSecurity) (*operations.GetPotsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/getInvestorPots/{investor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/getInvestorPots/{investor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -819,7 +837,10 @@ func (s *potsHoldingsAndTransactions) GetPots(ctx context.Context, request opera
 // Get a breakdown of all the holdings(cash and investment product holdings) of an investor organised by the pot they belong to.
 func (s *potsHoldingsAndTransactions) GetTotalPotHoldings(ctx context.Context, request operations.GetTotalPotHoldingsRequest, security operations.GetTotalPotHoldingsSecurity) (*operations.GetTotalPotHoldingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getHoldings/{investor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getHoldings/{investor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -916,7 +937,10 @@ func (s *potsHoldingsAndTransactions) GetTotalPotHoldings(ctx context.Context, r
 // Get the current value of all the investor’s pots broken down by currency (including cash and investment product holdings)
 func (s *potsHoldingsAndTransactions) GetTotalPotValue(ctx context.Context, request operations.GetTotalPotValueRequest, security operations.GetTotalPotValueSecurity) (*operations.GetTotalPotValueResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getValue/{investor_id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tenant/pots/v1/all/getValue/{investor_id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

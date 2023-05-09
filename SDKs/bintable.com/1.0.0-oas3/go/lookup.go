@@ -37,7 +37,10 @@ func newLookup(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // card meta data in bintable.com API
 func (s *lookup) BinLookup(ctx context.Context, request operations.BinLookupRequest) (*operations.BinLookupResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{bin}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{bin}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

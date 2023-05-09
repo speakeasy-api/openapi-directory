@@ -13,24 +13,21 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/1password.local/connect/1
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetAPIActivityRequest{
-        Limit: 10,
-        Offset: 50,
-    }
-
     ctx := context.Background()
-    res, err := s.Activity.GetAPIActivity(ctx, req, operations.GetAPIActivitySecurity{
+    res, err := s.Activity.GetAPIActivity(ctx, operations.GetAPIActivityRequest{
+        Limit: sdk.Int64(10),
+        Offset: sdk.Int64(50),
+    }, operations.GetAPIActivitySecurity{
         ConnectToken: "Bearer YOUR_BEARER_TOKEN_HERE",
     })
     if err != nil {
@@ -48,38 +45,38 @@ func main() {
 ## Available Resources and Operations
 
 
-### Activity
+### [Activity](docs/activity/README.md)
 
-* `GetAPIActivity` - Retrieve a list of API Requests that have been made.
+* [GetAPIActivity](docs/activity/README.md#getapiactivity) - Retrieve a list of API Requests that have been made.
 
-### Files
+### [Files](docs/files/README.md)
 
-* `DownloadFileByID` - Get the content of a File
-* `GetDetailsOfFileByID` - Get the details of a File
-* `GetItemFiles` - Get all the files inside an Item
+* [DownloadFileByID](docs/files/README.md#downloadfilebyid) - Get the content of a File
+* [GetDetailsOfFileByID](docs/files/README.md#getdetailsoffilebyid) - Get the details of a File
+* [GetItemFiles](docs/files/README.md#getitemfiles) - Get all the files inside an Item
 
-### Health
+### [Health](docs/health/README.md)
 
-* `GetHeartbeat` - Ping the server for liveness
-* `GetServerHealth` - Get state of the server and its dependencies.
+* [GetHeartbeat](docs/health/README.md#getheartbeat) - Ping the server for liveness
+* [GetServerHealth](docs/health/README.md#getserverhealth) - Get state of the server and its dependencies.
 
-### Items
+### [Items](docs/items/README.md)
 
-* `CreateVaultItem` - Create a new Item
-* `DeleteVaultItem` - Delete an Item
-* `GetVaultItemByID` - Get the details of an Item
-* `GetVaultItems` - Get all items for inside a Vault
-* `PatchVaultItem` - Update a subset of Item attributes
-* `UpdateVaultItem` - Update an Item
+* [CreateVaultItem](docs/items/README.md#createvaultitem) - Create a new Item
+* [DeleteVaultItem](docs/items/README.md#deletevaultitem) - Delete an Item
+* [GetVaultItemByID](docs/items/README.md#getvaultitembyid) - Get the details of an Item
+* [GetVaultItems](docs/items/README.md#getvaultitems) - Get all items for inside a Vault
+* [PatchVaultItem](docs/items/README.md#patchvaultitem) - Update a subset of Item attributes
+* [UpdateVaultItem](docs/items/README.md#updatevaultitem) - Update an Item
 
-### Metrics
+### [Metrics](docs/metrics/README.md)
 
-* `GetPrometheusMetrics` - Query server for exposed Prometheus metrics
+* [GetPrometheusMetrics](docs/metrics/README.md#getprometheusmetrics) - Query server for exposed Prometheus metrics
 
-### Vaults
+### [Vaults](docs/vaults/README.md)
 
-* `GetVaultByID` - Get Vault details and metadata
-* `GetVaults` - Get all Vaults
+* [GetVaultByID](docs/vaults/README.md#getvaultbyid) - Get Vault details and metadata
+* [GetVaults](docs/vaults/README.md#getvaults) - Get all Vaults
 <!-- End SDK Available Operations -->
 
 ### Maturity

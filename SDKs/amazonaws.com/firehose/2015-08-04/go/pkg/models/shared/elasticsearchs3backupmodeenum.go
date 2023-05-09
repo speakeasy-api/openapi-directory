@@ -14,18 +14,22 @@ const (
 	ElasticsearchS3BackupModeEnumAllDocuments        ElasticsearchS3BackupModeEnum = "AllDocuments"
 )
 
+func (e ElasticsearchS3BackupModeEnum) ToPointer() *ElasticsearchS3BackupModeEnum {
+	return &e
+}
+
 func (e *ElasticsearchS3BackupModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FailedDocumentsOnly":
 		fallthrough
 	case "AllDocuments":
-		*e = ElasticsearchS3BackupModeEnum(s)
+		*e = ElasticsearchS3BackupModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ElasticsearchS3BackupModeEnum: %s", s)
+		return fmt.Errorf("invalid value for ElasticsearchS3BackupModeEnum: %v", v)
 	}
 }

@@ -17,12 +17,16 @@ const (
 	EventTypeEnumExecuteAction EventTypeEnum = "EXECUTE_ACTION"
 )
 
+func (e EventTypeEnum) ToPointer() *EventTypeEnum {
+	return &e
+}
+
 func (e *EventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SYSTEM":
 		fallthrough
 	case "CREATE_ACTION":
@@ -32,9 +36,9 @@ func (e *EventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UPDATE_ACTION":
 		fallthrough
 	case "EXECUTE_ACTION":
-		*e = EventTypeEnum(s)
+		*e = EventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventTypeEnum: %v", v)
 	}
 }

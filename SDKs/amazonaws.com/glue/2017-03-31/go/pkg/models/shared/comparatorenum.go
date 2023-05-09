@@ -17,12 +17,16 @@ const (
 	ComparatorEnumLessThanEquals    ComparatorEnum = "LESS_THAN_EQUALS"
 )
 
+func (e ComparatorEnum) ToPointer() *ComparatorEnum {
+	return &e
+}
+
 func (e *ComparatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EQUALS":
 		fallthrough
 	case "GREATER_THAN":
@@ -32,9 +36,9 @@ func (e *ComparatorEnum) UnmarshalJSON(data []byte) error {
 	case "GREATER_THAN_EQUALS":
 		fallthrough
 	case "LESS_THAN_EQUALS":
-		*e = ComparatorEnum(s)
+		*e = ComparatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ComparatorEnum: %s", s)
+		return fmt.Errorf("invalid value for ComparatorEnum: %v", v)
 	}
 }

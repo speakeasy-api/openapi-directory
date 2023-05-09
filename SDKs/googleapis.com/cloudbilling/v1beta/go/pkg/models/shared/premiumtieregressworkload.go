@@ -26,12 +26,16 @@ const (
 	PremiumTierEgressWorkloadDestinationContinentEnumDestinationContinentSouthAmerica   PremiumTierEgressWorkloadDestinationContinentEnum = "DESTINATION_CONTINENT_SOUTH_AMERICA"
 )
 
+func (e PremiumTierEgressWorkloadDestinationContinentEnum) ToPointer() *PremiumTierEgressWorkloadDestinationContinentEnum {
+	return &e
+}
+
 func (e *PremiumTierEgressWorkloadDestinationContinentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DESTINATION_CONTINENT_UNSPECIFIED":
 		fallthrough
 	case "DESTINATION_CONTINENT_ASIA_PACIFIC":
@@ -57,10 +61,10 @@ func (e *PremiumTierEgressWorkloadDestinationContinentEnum) UnmarshalJSON(data [
 	case "DESTINATION_CONTINENT_MIDDLE_EAST":
 		fallthrough
 	case "DESTINATION_CONTINENT_SOUTH_AMERICA":
-		*e = PremiumTierEgressWorkloadDestinationContinentEnum(s)
+		*e = PremiumTierEgressWorkloadDestinationContinentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PremiumTierEgressWorkloadDestinationContinentEnum: %s", s)
+		return fmt.Errorf("invalid value for PremiumTierEgressWorkloadDestinationContinentEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	ImageFieldImageAnchorEnumS  ImageFieldImageAnchorEnum = "s"
 )
 
+func (e ImageFieldImageAnchorEnum) ToPointer() *ImageFieldImageAnchorEnum {
+	return &e
+}
+
 func (e *ImageFieldImageAnchorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nw":
 		fallthrough
 	case "n":
@@ -42,10 +46,10 @@ func (e *ImageFieldImageAnchorEnum) UnmarshalJSON(data []byte) error {
 	case "sw":
 		fallthrough
 	case "s":
-		*e = ImageFieldImageAnchorEnum(s)
+		*e = ImageFieldImageAnchorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageFieldImageAnchorEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageFieldImageAnchorEnum: %v", v)
 	}
 }
 
@@ -55,17 +59,21 @@ const (
 	ImageFieldTypeEnumImage ImageFieldTypeEnum = "image"
 )
 
+func (e ImageFieldTypeEnum) ToPointer() *ImageFieldTypeEnum {
+	return &e
+}
+
 func (e *ImageFieldTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "image":
-		*e = ImageFieldTypeEnum(s)
+		*e = ImageFieldTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImageFieldTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ImageFieldTypeEnum: %v", v)
 	}
 }
 

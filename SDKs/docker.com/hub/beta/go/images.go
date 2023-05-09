@@ -39,7 +39,10 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 // Gets details on the images in a repository.
 func (s *images) GetNamespacesRepositoriesImages(ctx context.Context, request operations.GetNamespacesRepositoriesImagesRequest) (*operations.GetNamespacesRepositoriesImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -101,7 +104,10 @@ func (s *images) GetNamespacesRepositoriesImages(ctx context.Context, request op
 // counted as active and inactive.
 func (s *images) GetNamespacesRepositoriesImagesSummary(ctx context.Context, request operations.GetNamespacesRepositoriesImagesSummaryRequest) (*operations.GetNamespacesRepositoriesImagesSummaryResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images-summary", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images-summary", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -160,7 +166,10 @@ func (s *images) GetNamespacesRepositoriesImagesSummary(ctx context.Context, req
 // Gets current and historical tags for an image.
 func (s *images) GetNamespacesRepositoriesImagesTags(ctx context.Context, request operations.GetNamespacesRepositoriesImagesTagsRequest) (*operations.GetNamespacesRepositoriesImagesTagsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/repositories/{repository}/images/{digest}/tags", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -229,7 +238,10 @@ func (s *images) GetNamespacesRepositoriesImagesTags(ctx context.Context, reques
 // You cannot ignore errors. It is not possible to directly delete children of multi-arch images.
 func (s *images) PostNamespacesDeleteImages(ctx context.Context, request operations.PostNamespacesDeleteImagesRequest) (*operations.PostNamespacesDeleteImagesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/delete-images", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v2/namespaces/{namespace}/delete-images", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PostNamespacesDeleteImagesRequest", "json")
 	if err != nil {

@@ -16,17 +16,21 @@ const (
 	GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnumSageMakerGetSagemakerServicecatalogPortfolioStatus GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum = "SageMaker.GetSagemakerServicecatalogPortfolioStatus"
 )
 
+func (e GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum) ToPointer() *GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.GetSagemakerServicecatalogPortfolioStatus":
-		*e = GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum(s)
+		*e = GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSagemakerServicecatalogPortfolioStatusXAmzTargetEnum: %v", v)
 	}
 }
 

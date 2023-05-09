@@ -22,12 +22,16 @@ const (
 	PaginationOptionsItemTypeEnumCustomAsset PaginationOptionsItemTypeEnum = "customAsset"
 )
 
+func (e PaginationOptionsItemTypeEnum) ToPointer() *PaginationOptionsItemTypeEnum {
+	return &e
+}
+
 func (e *PaginationOptionsItemTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "movie":
 		fallthrough
 	case "show":
@@ -45,10 +49,10 @@ func (e *PaginationOptionsItemTypeEnum) UnmarshalJSON(data []byte) error {
 	case "channel":
 		fallthrough
 	case "customAsset":
-		*e = PaginationOptionsItemTypeEnum(s)
+		*e = PaginationOptionsItemTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaginationOptionsItemTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PaginationOptionsItemTypeEnum: %v", v)
 	}
 }
 
@@ -60,19 +64,23 @@ const (
 	PaginationOptionsOrderEnumDesc PaginationOptionsOrderEnum = "desc"
 )
 
+func (e PaginationOptionsOrderEnum) ToPointer() *PaginationOptionsOrderEnum {
+	return &e
+}
+
 func (e *PaginationOptionsOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "asc":
 		fallthrough
 	case "desc":
-		*e = PaginationOptionsOrderEnum(s)
+		*e = PaginationOptionsOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaginationOptionsOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PaginationOptionsOrderEnum: %v", v)
 	}
 }
 
@@ -85,21 +93,25 @@ const (
 	PaginationOptionsOrderByEnumDateAdded   PaginationOptionsOrderByEnum = "date-added"
 )
 
+func (e PaginationOptionsOrderByEnum) ToPointer() *PaginationOptionsOrderByEnum {
+	return &e
+}
+
 func (e *PaginationOptionsOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a-z":
 		fallthrough
 	case "release-year":
 		fallthrough
 	case "date-added":
-		*e = PaginationOptionsOrderByEnum(s)
+		*e = PaginationOptionsOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PaginationOptionsOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for PaginationOptionsOrderByEnum: %v", v)
 	}
 }
 

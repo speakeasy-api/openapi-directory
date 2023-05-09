@@ -15,17 +15,21 @@ const (
 	GETSetIdentityMailFromDomainActionEnumSetIdentityMailFromDomain GETSetIdentityMailFromDomainActionEnum = "SetIdentityMailFromDomain"
 )
 
+func (e GETSetIdentityMailFromDomainActionEnum) ToPointer() *GETSetIdentityMailFromDomainActionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityMailFromDomainActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SetIdentityMailFromDomain":
-		*e = GETSetIdentityMailFromDomainActionEnum(s)
+		*e = GETSetIdentityMailFromDomainActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainActionEnum: %v", v)
 	}
 }
 
@@ -37,19 +41,23 @@ const (
 	GETSetIdentityMailFromDomainBehaviorOnMxFailureEnumRejectMessage   GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum = "RejectMessage"
 )
 
+func (e GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum) ToPointer() *GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum {
+	return &e
+}
+
 func (e *GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UseDefaultValue":
 		fallthrough
 	case "RejectMessage":
-		*e = GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum(s)
+		*e = GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum: %v", v)
 	}
 }
 
@@ -60,17 +68,21 @@ const (
 	GETSetIdentityMailFromDomainVersionEnumTwoThousandAndTen1201 GETSetIdentityMailFromDomainVersionEnum = "2010-12-01"
 )
 
+func (e GETSetIdentityMailFromDomainVersionEnum) ToPointer() *GETSetIdentityMailFromDomainVersionEnum {
+	return &e
+}
+
 func (e *GETSetIdentityMailFromDomainVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-12-01":
-		*e = GETSetIdentityMailFromDomainVersionEnum(s)
+		*e = GETSetIdentityMailFromDomainVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETSetIdentityMailFromDomainVersionEnum: %v", v)
 	}
 }
 

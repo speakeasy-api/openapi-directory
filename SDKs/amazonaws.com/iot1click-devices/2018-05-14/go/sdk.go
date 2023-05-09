@@ -33,6 +33,21 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
+// Bool provides a helper function to return a pointer to a bool
+func Bool(b bool) *bool { return &b }
+
+// Int provides a helper function to return a pointer to an int
+func Int(i int) *int { return &i }
+
+// Int64 provides a helper function to return a pointer to an int64
+func Int64(i int64) *int64 { return &i }
+
+// Float32 provides a helper function to return a pointer to a float32
+func Float32(f float32) *float32 { return &f }
+
+// Float64 provides a helper function to return a pointer to a float64
+func Float64(f float64) *float64 { return &f }
+
 // SDK - Describes all of the AWS IoT 1-Click device-related API operations for the service.
 //
 //	Also provides sample requests, responses, and errors for the supported web services
@@ -120,7 +135,10 @@ func New(opts ...SDKOption) *SDK {
 //	received a claim code with the device(s).
 func (s *SDK) ClaimDevicesByClaimCode(ctx context.Context, request operations.ClaimDevicesByClaimCodeRequest) (*operations.ClaimDevicesByClaimCodeResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/claims/{claimCode}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/claims/{claimCode}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -198,7 +216,10 @@ func (s *SDK) ClaimDevicesByClaimCode(ctx context.Context, request operations.Cl
 //	details of the device.
 func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDeviceRequest) (*operations.DescribeDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -279,7 +300,10 @@ func (s *SDK) DescribeDevice(ctx context.Context, request operations.DescribeDev
 //	</note>
 func (s *SDK) FinalizeDeviceClaim(ctx context.Context, request operations.FinalizeDeviceClaimRequest) (*operations.FinalizeDeviceClaimResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/finalize-claim", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/finalize-claim", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -385,7 +409,10 @@ func (s *SDK) FinalizeDeviceClaim(ctx context.Context, request operations.Finali
 // GetDeviceMethods - Given a device ID, returns the invokable methods associated with the device.
 func (s *SDK) GetDeviceMethods(ctx context.Context, request operations.GetDeviceMethodsRequest) (*operations.GetDeviceMethodsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -466,7 +493,10 @@ func (s *SDK) GetDeviceMethods(ctx context.Context, request operations.GetDevice
 //	</note>
 func (s *SDK) InitiateDeviceClaim(ctx context.Context, request operations.InitiateDeviceClaimRequest) (*operations.InitiateDeviceClaimResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/initiate-claim", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/initiate-claim", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -554,7 +584,10 @@ func (s *SDK) InitiateDeviceClaim(ctx context.Context, request operations.Initia
 //	parameters). See the "Example POST" code snippet below.
 func (s *SDK) InvokeDeviceMethod(ctx context.Context, request operations.InvokeDeviceMethodRequest) (*operations.InvokeDeviceMethodResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/methods", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -672,7 +705,10 @@ func (s *SDK) InvokeDeviceMethod(ctx context.Context, request operations.InvokeD
 //	array of events for the device.
 func (s *SDK) ListDeviceEvents(ctx context.Context, request operations.ListDeviceEventsRequest) (*operations.ListDeviceEventsResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/events#fromTimeStamp&toTimeStamp", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/events#fromTimeStamp&toTimeStamp", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -842,7 +878,10 @@ func (s *SDK) ListDevices(ctx context.Context, request operations.ListDevicesReq
 // ListTagsForResource - Lists the tags associated with the specified resource ARN.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -910,7 +949,10 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 //	resource.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -987,7 +1029,10 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 // UnclaimDevice - Disassociates a device from your AWS account using its device ID.
 func (s *SDK) UnclaimDevice(ctx context.Context, request operations.UnclaimDeviceRequest) (*operations.UnclaimDeviceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/unclaim", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/unclaim", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -1065,7 +1110,10 @@ func (s *SDK) UnclaimDevice(ctx context.Context, request operations.UnclaimDevic
 //	resource ARN.
 func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourceRequest) (*operations.UntagResourceResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}#tagKeys", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/tags/{resource-arn}#tagKeys", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -1138,7 +1186,10 @@ func (s *SDK) UntagResource(ctx context.Context, request operations.UntagResourc
 //	enables or disables the device given a device ID.
 func (s *SDK) UpdateDeviceState(ctx context.Context, request operations.UpdateDeviceStateRequest) (*operations.UpdateDeviceStateResponse, error) {
 	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/state", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/devices/{deviceId}/state", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

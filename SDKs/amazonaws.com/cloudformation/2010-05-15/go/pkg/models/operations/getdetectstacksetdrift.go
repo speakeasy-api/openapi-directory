@@ -16,17 +16,21 @@ const (
 	GETDetectStackSetDriftActionEnumDetectStackSetDrift GETDetectStackSetDriftActionEnum = "DetectStackSetDrift"
 )
 
+func (e GETDetectStackSetDriftActionEnum) ToPointer() *GETDetectStackSetDriftActionEnum {
+	return &e
+}
+
 func (e *GETDetectStackSetDriftActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DetectStackSetDrift":
-		*e = GETDetectStackSetDriftActionEnum(s)
+		*e = GETDetectStackSetDriftActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetectStackSetDriftActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetectStackSetDriftActionEnum: %v", v)
 	}
 }
 
@@ -38,19 +42,23 @@ const (
 	GETDetectStackSetDriftCallAsEnumDelegatedAdmin GETDetectStackSetDriftCallAsEnum = "DELEGATED_ADMIN"
 )
 
+func (e GETDetectStackSetDriftCallAsEnum) ToPointer() *GETDetectStackSetDriftCallAsEnum {
+	return &e
+}
+
 func (e *GETDetectStackSetDriftCallAsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SELF":
 		fallthrough
 	case "DELEGATED_ADMIN":
-		*e = GETDetectStackSetDriftCallAsEnum(s)
+		*e = GETDetectStackSetDriftCallAsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetectStackSetDriftCallAsEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetectStackSetDriftCallAsEnum: %v", v)
 	}
 }
 
@@ -71,17 +79,21 @@ const (
 	GETDetectStackSetDriftVersionEnumTwoThousandAndTen0515 GETDetectStackSetDriftVersionEnum = "2010-05-15"
 )
 
+func (e GETDetectStackSetDriftVersionEnum) ToPointer() *GETDetectStackSetDriftVersionEnum {
+	return &e
+}
+
 func (e *GETDetectStackSetDriftVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-15":
-		*e = GETDetectStackSetDriftVersionEnum(s)
+		*e = GETDetectStackSetDriftVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETDetectStackSetDriftVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETDetectStackSetDriftVersionEnum: %v", v)
 	}
 }
 

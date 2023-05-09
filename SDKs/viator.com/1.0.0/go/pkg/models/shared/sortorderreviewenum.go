@@ -22,20 +22,24 @@ const (
 	SortOrderREVIEWEnumReviewRatingSubmissionDateD SortOrderREVIEWEnum = "REVIEW_RATING_SUBMISSION_DATE_D"
 )
 
+func (e SortOrderREVIEWEnum) ToPointer() *SortOrderREVIEWEnum {
+	return &e
+}
+
 func (e *SortOrderREVIEWEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REVIEW_RATING_A":
 		fallthrough
 	case "REVIEW_RATING_D":
 		fallthrough
 	case "REVIEW_RATING_SUBMISSION_DATE_D":
-		*e = SortOrderREVIEWEnum(s)
+		*e = SortOrderREVIEWEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SortOrderREVIEWEnum: %s", s)
+		return fmt.Errorf("invalid value for SortOrderREVIEWEnum: %v", v)
 	}
 }

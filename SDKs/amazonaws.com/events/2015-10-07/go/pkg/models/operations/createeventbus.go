@@ -16,17 +16,21 @@ const (
 	CreateEventBusXAmzTargetEnumAwsEventsCreateEventBus CreateEventBusXAmzTargetEnum = "AWSEvents.CreateEventBus"
 )
 
+func (e CreateEventBusXAmzTargetEnum) ToPointer() *CreateEventBusXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateEventBusXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSEvents.CreateEventBus":
-		*e = CreateEventBusXAmzTargetEnum(s)
+		*e = CreateEventBusXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateEventBusXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateEventBusXAmzTargetEnum: %v", v)
 	}
 }
 

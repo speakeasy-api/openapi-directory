@@ -36,7 +36,10 @@ func newCompanies(defaultClient, securityClient HTTPClient, serverURL, language,
 // <p>Use this endpoint to <b>Delete</b> an OnSchedJs domain from your authorized company. A valid <b>companyDomain id</b> is required.</p>
 func (s *companies) DeleteSetupV1CompaniesDomainsID(ctx context.Context, request operations.DeleteSetupV1CompaniesDomainsIDRequest) (*operations.DeleteSetupV1CompaniesDomainsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -126,7 +129,10 @@ func (s *companies) DeleteSetupV1CompaniesEmailTemplatesMaster(ctx context.Conte
 // <p>Use this endpoint to <b>Delete</b> a region object. A valid <b>region id</b> is required. If the region is related to any business locations it won't be deleted. You must first remove any references to region id from the business locations prior to deleting.</p>
 func (s *companies) DeleteSetupV1CompaniesRegionsID(ctx context.Context, request operations.DeleteSetupV1CompaniesRegionsIDRequest) (*operations.DeleteSetupV1CompaniesRegionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -262,7 +268,10 @@ func (s *companies) GetSetupV1CompaniesDomains(ctx context.Context) (*operations
 // <p>Use this endpoint to return a <b>Company Domain</b> object. A valid <b>companyDomain id</b> is required. </p>
 func (s *companies) GetSetupV1CompaniesDomainsID(ctx context.Context, request operations.GetSetupV1CompaniesDomainsIDRequest) (*operations.GetSetupV1CompaniesDomainsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -398,7 +407,10 @@ func (s *companies) GetSetupV1CompaniesEmailTemplatesMaster(ctx context.Context)
 // <p>To create custom company email templates, go to the <i>POST ​/setup​/v1​/locations​/{id}​/email​/templates</i> endpoint and create a template using the Primary Business Location Id.</p>
 func (s *companies) GetSetupV1CompaniesEmailTemplatesTemplateName(ctx context.Context, request operations.GetSetupV1CompaniesEmailTemplatesTemplateNameRequest) (*operations.GetSetupV1CompaniesEmailTemplatesTemplateNameResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/email/templates/{templateName}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/email/templates/{templateName}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -497,7 +509,10 @@ func (s *companies) GetSetupV1CompaniesRegions(ctx context.Context, request oper
 // <p>Use this endpoint to return a <b>Region</b> object. A valid <b>region id</b> is required.</p>
 func (s *companies) GetSetupV1CompaniesRegionsID(ctx context.Context, request operations.GetSetupV1CompaniesRegionsIDRequest) (*operations.GetSetupV1CompaniesRegionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -542,7 +557,10 @@ func (s *companies) GetSetupV1CompaniesRegionsID(ctx context.Context, request op
 // <p>Use this endpoint to return a <b>List of timezone names, timezoneIana and tzOffset values</b> calculated for the date requested. Daylight Savings may or may not apply depending on the date specified.</p>
 func (s *companies) GetSetupV1CompaniesTimezonesDate(ctx context.Context, request operations.GetSetupV1CompaniesTimezonesDateRequest) (*operations.GetSetupV1CompaniesTimezonesDateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/timezones/{date}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/timezones/{date}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -857,7 +875,10 @@ func (s *companies) PutSetupV1Companies(ctx context.Context, request shared.Comp
 // <p>Use this endpoint to <b>Update</b> an OnSchedJs domain for your authorized company. A valid <b>companyDomain id</b> is required.</p>
 func (s *companies) PutSetupV1CompaniesDomainsID(ctx context.Context, request operations.PutSetupV1CompaniesDomainsIDRequest) (*operations.PutSetupV1CompaniesDomainsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/domains/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CompanyDomainUpdateModel", "json")
 	if err != nil {
@@ -909,7 +930,10 @@ func (s *companies) PutSetupV1CompaniesDomainsID(ctx context.Context, request op
 // <p>Use this endpoint to <b>Update</b> a region object. A valid <b>region id</b> is required.</p>
 func (s *companies) PutSetupV1CompaniesRegionsID(ctx context.Context, request operations.PutSetupV1CompaniesRegionsIDRequest) (*operations.PutSetupV1CompaniesRegionsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/setup/v1/companies/regions/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RegionUpdateModel", "json")
 	if err != nil {

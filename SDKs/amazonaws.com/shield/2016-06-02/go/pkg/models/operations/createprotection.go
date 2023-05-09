@@ -16,17 +16,21 @@ const (
 	CreateProtectionXAmzTargetEnumAwsShield20160616CreateProtection CreateProtectionXAmzTargetEnum = "AWSShield_20160616.CreateProtection"
 )
 
+func (e CreateProtectionXAmzTargetEnum) ToPointer() *CreateProtectionXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateProtectionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSShield_20160616.CreateProtection":
-		*e = CreateProtectionXAmzTargetEnum(s)
+		*e = CreateProtectionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateProtectionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateProtectionXAmzTargetEnum: %v", v)
 	}
 }
 

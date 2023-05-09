@@ -33,7 +33,10 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // DeleteWorkspaceSlugWebhooksID - Delete a webhook
 func (s *webhooks) DeleteWorkspaceSlugWebhooksID(ctx context.Context, request operations.DeleteWorkspaceSlugWebhooksIDRequest, security operations.DeleteWorkspaceSlugWebhooksIDSecurity) (*operations.DeleteWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -70,7 +73,10 @@ func (s *webhooks) DeleteWorkspaceSlugWebhooksID(ctx context.Context, request op
 // GetWorkspaceSlugWebhooks - List webhooks in a workspace
 func (s *webhooks) GetWorkspaceSlugWebhooks(ctx context.Context, request operations.GetWorkspaceSlugWebhooksRequest, security operations.GetWorkspaceSlugWebhooksSecurity) (*operations.GetWorkspaceSlugWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -105,7 +111,10 @@ func (s *webhooks) GetWorkspaceSlugWebhooks(ctx context.Context, request operati
 // GetWorkspaceSlugWebhooksID - Get a webhook
 func (s *webhooks) GetWorkspaceSlugWebhooksID(ctx context.Context, request operations.GetWorkspaceSlugWebhooksIDRequest, security operations.GetWorkspaceSlugWebhooksIDSecurity) (*operations.GetWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -140,7 +149,10 @@ func (s *webhooks) GetWorkspaceSlugWebhooksID(ctx context.Context, request opera
 // PostWorkspaceSlugWebhooks - Create a webhook
 func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operations.PostWorkspaceSlugWebhooksRequest, security operations.PostWorkspaceSlugWebhooksSecurity) (*operations.PostWorkspaceSlugWebhooksResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookSubscription", "json")
 	if err != nil {
@@ -184,7 +196,10 @@ func (s *webhooks) PostWorkspaceSlugWebhooks(ctx context.Context, request operat
 // PutWorkspaceSlugWebhooksID - Update a webhook
 func (s *webhooks) PutWorkspaceSlugWebhooksID(ctx context.Context, request operations.PutWorkspaceSlugWebhooksIDRequest, security operations.PutWorkspaceSlugWebhooksIDSecurity) (*operations.PutWorkspaceSlugWebhooksIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/webhooks/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "WebhookSubscription", "json")
 	if err != nil {

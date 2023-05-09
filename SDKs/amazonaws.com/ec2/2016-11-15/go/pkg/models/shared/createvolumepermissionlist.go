@@ -14,17 +14,21 @@ const (
 	CreateVolumePermissionListGroupEnumAll CreateVolumePermissionListGroupEnum = "all"
 )
 
+func (e CreateVolumePermissionListGroupEnum) ToPointer() *CreateVolumePermissionListGroupEnum {
+	return &e
+}
+
 func (e *CreateVolumePermissionListGroupEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "all":
-		*e = CreateVolumePermissionListGroupEnum(s)
+		*e = CreateVolumePermissionListGroupEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateVolumePermissionListGroupEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateVolumePermissionListGroupEnum: %v", v)
 	}
 }
 

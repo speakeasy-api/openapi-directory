@@ -16,17 +16,21 @@ const (
 	DeleteAlarmXAmzTargetEnumLightsail20161128DeleteAlarm DeleteAlarmXAmzTargetEnum = "Lightsail_20161128.DeleteAlarm"
 )
 
+func (e DeleteAlarmXAmzTargetEnum) ToPointer() *DeleteAlarmXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteAlarmXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.DeleteAlarm":
-		*e = DeleteAlarmXAmzTargetEnum(s)
+		*e = DeleteAlarmXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteAlarmXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteAlarmXAmzTargetEnum: %v", v)
 	}
 }
 

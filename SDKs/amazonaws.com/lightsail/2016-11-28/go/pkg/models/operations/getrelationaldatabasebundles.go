@@ -16,17 +16,21 @@ const (
 	GetRelationalDatabaseBundlesXAmzTargetEnumLightsail20161128GetRelationalDatabaseBundles GetRelationalDatabaseBundlesXAmzTargetEnum = "Lightsail_20161128.GetRelationalDatabaseBundles"
 )
 
+func (e GetRelationalDatabaseBundlesXAmzTargetEnum) ToPointer() *GetRelationalDatabaseBundlesXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetRelationalDatabaseBundlesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Lightsail_20161128.GetRelationalDatabaseBundles":
-		*e = GetRelationalDatabaseBundlesXAmzTargetEnum(s)
+		*e = GetRelationalDatabaseBundlesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetRelationalDatabaseBundlesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetRelationalDatabaseBundlesXAmzTargetEnum: %v", v)
 	}
 }
 

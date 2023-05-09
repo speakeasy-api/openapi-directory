@@ -853,7 +853,10 @@ func (s *bookingServices) CancelBooking(ctx context.Context, request operations.
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{booking-reference}/cancel", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bookings/{booking-reference}/cancel", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "CancellationRequest", "json")
 	if err != nil {
@@ -988,7 +991,10 @@ func (s *bookingServices) CancelBookingQuote(ctx context.Context, request operat
 		baseURL = *o.ServerURL
 	}
 
-	url := utils.GenerateURL(ctx, baseURL, "/bookings/{booking-reference}/cancel-quote", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/bookings/{booking-reference}/cancel-quote", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -14,19 +14,23 @@ const (
 	ThreeContentTypeEnumAudioL16RateEqual16000 ThreeContentTypeEnum = "audio/l16;rate=16000"
 )
 
+func (e ThreeContentTypeEnum) ToPointer() *ThreeContentTypeEnum {
+	return &e
+}
+
 func (e *ThreeContentTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "audio/l16;rate=8000":
 		fallthrough
 	case "audio/l16;rate=16000":
-		*e = ThreeContentTypeEnum(s)
+		*e = ThreeContentTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ThreeContentTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ThreeContentTypeEnum: %v", v)
 	}
 }
 

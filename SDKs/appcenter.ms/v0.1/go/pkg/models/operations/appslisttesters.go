@@ -31,12 +31,16 @@ const (
 	AppsListTestersDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsListTestersDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsListTestersDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsListTestersDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsListTestersDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppsListTestersDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data 
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsListTestersDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsListTestersDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListTestersDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListTestersDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -76,21 +80,25 @@ const (
 	AppsListTesters200ApplicationJSONOriginEnumCodepush  AppsListTesters200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsListTesters200ApplicationJSONOriginEnum) ToPointer() *AppsListTesters200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsListTesters200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsListTesters200ApplicationJSONOriginEnum(s)
+		*e = AppsListTesters200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListTesters200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListTesters200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -103,12 +111,16 @@ const (
 	AppsListTesters200ApplicationJSONPermissionsEnumTester    AppsListTesters200ApplicationJSONPermissionsEnum = "tester"
 )
 
+func (e AppsListTesters200ApplicationJSONPermissionsEnum) ToPointer() *AppsListTesters200ApplicationJSONPermissionsEnum {
+	return &e
+}
+
 func (e *AppsListTesters200ApplicationJSONPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -116,10 +128,10 @@ func (e *AppsListTesters200ApplicationJSONPermissionsEnum) UnmarshalJSON(data []
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsListTesters200ApplicationJSONPermissionsEnum(s)
+		*e = AppsListTesters200ApplicationJSONPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsListTesters200ApplicationJSONPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsListTesters200ApplicationJSONPermissionsEnum: %v", v)
 	}
 }
 

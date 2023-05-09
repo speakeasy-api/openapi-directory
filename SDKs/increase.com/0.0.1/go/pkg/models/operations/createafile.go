@@ -9,23 +9,27 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type CreateAFileDefaultApplicationJSON13StatusEnum string
+type CreateAFileDefaultApplicationJSON13StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAFileDefaultApplicationJSON13StatusEnum = "429"
+	CreateAFileDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine CreateAFileDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e CreateAFileDefaultApplicationJSON13StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = CreateAFileDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = CreateAFileDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	CreateAFileDefaultApplicationJSON13TypeEnumRateLimitedError CreateAFileDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON13TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = CreateAFileDefaultApplicationJSON13TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -57,23 +65,27 @@ type CreateAFileDefaultApplicationJSON13 struct {
 	Type       CreateAFileDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON12StatusEnum string
+type CreateAFileDefaultApplicationJSON12StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON12StatusEnum = "403"
+	CreateAFileDefaultApplicationJSON12StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e CreateAFileDefaultApplicationJSON12StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAFileDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAFileDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -83,17 +95,21 @@ const (
 	CreateAFileDefaultApplicationJSON12TypeEnumPrivateFeatureError CreateAFileDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON12TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = CreateAFileDefaultApplicationJSON12TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -104,23 +120,27 @@ type CreateAFileDefaultApplicationJSON12 struct {
 	Type   CreateAFileDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON11StatusEnum string
+type CreateAFileDefaultApplicationJSON11StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAFileDefaultApplicationJSON11StatusEnum = "404"
+	CreateAFileDefaultApplicationJSON11StatusEnumFourHundredAndFour CreateAFileDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e CreateAFileDefaultApplicationJSON11StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAFileDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAFileDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -130,17 +150,21 @@ const (
 	CreateAFileDefaultApplicationJSON11TypeEnumObjectNotFoundError CreateAFileDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON11TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = CreateAFileDefaultApplicationJSON11TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -151,23 +175,27 @@ type CreateAFileDefaultApplicationJSON11 struct {
 	Type   CreateAFileDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON10StatusEnum string
+type CreateAFileDefaultApplicationJSON10StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON10StatusEnumFourHundred CreateAFileDefaultApplicationJSON10StatusEnum = "400"
+	CreateAFileDefaultApplicationJSON10StatusEnumFourHundred CreateAFileDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e CreateAFileDefaultApplicationJSON10StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAFileDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAFileDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -177,17 +205,21 @@ const (
 	CreateAFileDefaultApplicationJSON10TypeEnumMalformedRequestError CreateAFileDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON10TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = CreateAFileDefaultApplicationJSON10TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -198,23 +230,27 @@ type CreateAFileDefaultApplicationJSON10 struct {
 	Type   CreateAFileDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON9StatusEnum string
+type CreateAFileDefaultApplicationJSON9StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON9StatusEnumFourHundred CreateAFileDefaultApplicationJSON9StatusEnum = "400"
+	CreateAFileDefaultApplicationJSON9StatusEnumFourHundred CreateAFileDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e CreateAFileDefaultApplicationJSON9StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = CreateAFileDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = CreateAFileDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -224,46 +260,54 @@ const (
 	CreateAFileDefaultApplicationJSON9TypeEnumInvalidParametersError CreateAFileDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON9TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = CreateAFileDefaultApplicationJSON9TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type CreateAFileDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                     `json:"errors,omitempty"`
+	Errors []map[string]interface{}                     `json:"errors"`
 	Status CreateAFileDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                       `json:"title"`
 	Type   CreateAFileDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON8StatusEnum string
+type CreateAFileDefaultApplicationJSON8StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAFileDefaultApplicationJSON8StatusEnum = "409"
+	CreateAFileDefaultApplicationJSON8StatusEnumFourHundredAndNine CreateAFileDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e CreateAFileDefaultApplicationJSON8StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAFileDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAFileDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -273,17 +317,21 @@ const (
 	CreateAFileDefaultApplicationJSON8TypeEnumInvalidOperationError CreateAFileDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON8TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = CreateAFileDefaultApplicationJSON8TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -294,23 +342,27 @@ type CreateAFileDefaultApplicationJSON8 struct {
 	Type   CreateAFileDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON7StatusEnum string
+type CreateAFileDefaultApplicationJSON7StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAFileDefaultApplicationJSON7StatusEnum = "401"
+	CreateAFileDefaultApplicationJSON7StatusEnumFourHundredAndOne CreateAFileDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e CreateAFileDefaultApplicationJSON7StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = CreateAFileDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = CreateAFileDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -320,17 +372,21 @@ const (
 	CreateAFileDefaultApplicationJSON7TypeEnumInvalidAPIKeyError CreateAFileDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON7TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = CreateAFileDefaultApplicationJSON7TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -341,23 +397,27 @@ type CreateAFileDefaultApplicationJSON7 struct {
 	Type   CreateAFileDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON6StatusEnum string
+type CreateAFileDefaultApplicationJSON6StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON6StatusEnumFiveHundred CreateAFileDefaultApplicationJSON6StatusEnum = "500"
+	CreateAFileDefaultApplicationJSON6StatusEnumFiveHundred CreateAFileDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e CreateAFileDefaultApplicationJSON6StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = CreateAFileDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = CreateAFileDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -367,17 +427,21 @@ const (
 	CreateAFileDefaultApplicationJSON6TypeEnumInternalServerError CreateAFileDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON6TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = CreateAFileDefaultApplicationJSON6TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -388,23 +452,27 @@ type CreateAFileDefaultApplicationJSON6 struct {
 	Type   CreateAFileDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON5StatusEnum string
+type CreateAFileDefaultApplicationJSON5StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON5StatusEnum = "403"
+	CreateAFileDefaultApplicationJSON5StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e CreateAFileDefaultApplicationJSON5StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAFileDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAFileDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -414,17 +482,21 @@ const (
 	CreateAFileDefaultApplicationJSON5TypeEnumInsufficientPermissionsError CreateAFileDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON5TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = CreateAFileDefaultApplicationJSON5TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -435,23 +507,27 @@ type CreateAFileDefaultApplicationJSON5 struct {
 	Type   CreateAFileDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON4StatusEnum string
+type CreateAFileDefaultApplicationJSON4StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAFileDefaultApplicationJSON4StatusEnum = "422"
+	CreateAFileDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo CreateAFileDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e CreateAFileDefaultApplicationJSON4StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = CreateAFileDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = CreateAFileDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -461,17 +537,21 @@ const (
 	CreateAFileDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError CreateAFileDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON4TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = CreateAFileDefaultApplicationJSON4TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -482,23 +562,27 @@ type CreateAFileDefaultApplicationJSON4 struct {
 	Type   CreateAFileDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON3StatusEnum string
+type CreateAFileDefaultApplicationJSON3StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAFileDefaultApplicationJSON3StatusEnum = "409"
+	CreateAFileDefaultApplicationJSON3StatusEnumFourHundredAndNine CreateAFileDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e CreateAFileDefaultApplicationJSON3StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = CreateAFileDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = CreateAFileDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -508,17 +592,21 @@ const (
 	CreateAFileDefaultApplicationJSON3TypeEnumIdempotencyConflictError CreateAFileDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON3TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = CreateAFileDefaultApplicationJSON3TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -529,23 +617,27 @@ type CreateAFileDefaultApplicationJSON3 struct {
 	Type   CreateAFileDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON2StatusEnum string
+type CreateAFileDefaultApplicationJSON2StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON2StatusEnum = "403"
+	CreateAFileDefaultApplicationJSON2StatusEnumFourHundredAndThree CreateAFileDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e CreateAFileDefaultApplicationJSON2StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = CreateAFileDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = CreateAFileDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -555,17 +647,21 @@ const (
 	CreateAFileDefaultApplicationJSON2TypeEnumEnvironmentMismatchError CreateAFileDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON2TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = CreateAFileDefaultApplicationJSON2TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -576,23 +672,27 @@ type CreateAFileDefaultApplicationJSON2 struct {
 	Type   CreateAFileDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type CreateAFileDefaultApplicationJSON1StatusEnum string
+type CreateAFileDefaultApplicationJSON1StatusEnum int64
 
 const (
-	CreateAFileDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAFileDefaultApplicationJSON1StatusEnum = "404"
+	CreateAFileDefaultApplicationJSON1StatusEnumFourHundredAndFour CreateAFileDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e CreateAFileDefaultApplicationJSON1StatusEnum) ToPointer() *CreateAFileDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = CreateAFileDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = CreateAFileDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -602,17 +702,21 @@ const (
 	CreateAFileDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError CreateAFileDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e CreateAFileDefaultApplicationJSON1TypeEnum) ToPointer() *CreateAFileDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *CreateAFileDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = CreateAFileDefaultApplicationJSON1TypeEnum(s)
+		*e = CreateAFileDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateAFileDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

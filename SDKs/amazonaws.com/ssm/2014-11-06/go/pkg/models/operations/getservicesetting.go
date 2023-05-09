@@ -16,17 +16,21 @@ const (
 	GetServiceSettingXAmzTargetEnumAmazonSsmGetServiceSetting GetServiceSettingXAmzTargetEnum = "AmazonSSM.GetServiceSetting"
 )
 
+func (e GetServiceSettingXAmzTargetEnum) ToPointer() *GetServiceSettingXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetServiceSettingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.GetServiceSetting":
-		*e = GetServiceSettingXAmzTargetEnum(s)
+		*e = GetServiceSettingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetServiceSettingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetServiceSettingXAmzTargetEnum: %v", v)
 	}
 }
 

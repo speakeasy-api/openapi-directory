@@ -16,17 +16,21 @@ const (
 	AddAssociationXAmzTargetEnumSageMakerAddAssociation AddAssociationXAmzTargetEnum = "SageMaker.AddAssociation"
 )
 
+func (e AddAssociationXAmzTargetEnum) ToPointer() *AddAssociationXAmzTargetEnum {
+	return &e
+}
+
 func (e *AddAssociationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SageMaker.AddAssociation":
-		*e = AddAssociationXAmzTargetEnum(s)
+		*e = AddAssociationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddAssociationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for AddAssociationXAmzTargetEnum: %v", v)
 	}
 }
 

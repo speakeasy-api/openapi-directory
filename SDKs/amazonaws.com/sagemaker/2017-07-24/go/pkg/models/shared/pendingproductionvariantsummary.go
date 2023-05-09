@@ -2,7 +2,7 @@
 
 package shared
 
-// PendingProductionVariantSummary - The production variant summary for a deployment when an endpoint is creating or updating with the <code> <a>CreateEndpoint</a> </code> or <code> <a>UpdateEndpoint</a> </code> operations. Describes the <code>VariantStatus </code>, weight and capacity for a production variant associated with an endpoint.
+// PendingProductionVariantSummary - The production variant summary for a deployment when an endpoint is creating or updating with the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateEndpoint.html">CreateEndpoint</a> or <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateEndpoint.html">UpdateEndpoint</a> operations. Describes the <code>VariantStatus </code>, weight and capacity for a production variant associated with an endpoint.
 type PendingProductionVariantSummary struct {
 	AcceleratorType         *ProductionVariantAcceleratorTypeEnum `json:"AcceleratorType,omitempty"`
 	CurrentInstanceCount    *int64                                `json:"CurrentInstanceCount,omitempty"`

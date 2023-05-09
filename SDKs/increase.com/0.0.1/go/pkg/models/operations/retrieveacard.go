@@ -13,23 +13,27 @@ type RetrieveACardRequest struct {
 	CardID string `pathParam:"style=simple,explode=false,name=card_id"`
 }
 
-type RetrieveACardDefaultApplicationJSON13StatusEnum string
+type RetrieveACardDefaultApplicationJSON13StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveACardDefaultApplicationJSON13StatusEnum = "429"
+	RetrieveACardDefaultApplicationJSON13StatusEnumFourHundredAndTwentyNine RetrieveACardDefaultApplicationJSON13StatusEnum = 429
 )
 
+func (e RetrieveACardDefaultApplicationJSON13StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON13StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON13StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "429":
-		*e = RetrieveACardDefaultApplicationJSON13StatusEnum(s)
+	switch v {
+	case 429:
+		*e = RetrieveACardDefaultApplicationJSON13StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON13StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON13StatusEnum: %v", v)
 	}
 }
 
@@ -39,17 +43,21 @@ const (
 	RetrieveACardDefaultApplicationJSON13TypeEnumRateLimitedError RetrieveACardDefaultApplicationJSON13TypeEnum = "rate_limited_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON13TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON13TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON13TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "rate_limited_error":
-		*e = RetrieveACardDefaultApplicationJSON13TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON13TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON13TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON13TypeEnum: %v", v)
 	}
 }
 
@@ -61,23 +69,27 @@ type RetrieveACardDefaultApplicationJSON13 struct {
 	Type       RetrieveACardDefaultApplicationJSON13TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON12StatusEnum string
+type RetrieveACardDefaultApplicationJSON12StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON12StatusEnum = "403"
+	RetrieveACardDefaultApplicationJSON12StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON12StatusEnum = 403
 )
 
+func (e RetrieveACardDefaultApplicationJSON12StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON12StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON12StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACardDefaultApplicationJSON12StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACardDefaultApplicationJSON12StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON12StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON12StatusEnum: %v", v)
 	}
 }
 
@@ -87,17 +99,21 @@ const (
 	RetrieveACardDefaultApplicationJSON12TypeEnumPrivateFeatureError RetrieveACardDefaultApplicationJSON12TypeEnum = "private_feature_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON12TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON12TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON12TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "private_feature_error":
-		*e = RetrieveACardDefaultApplicationJSON12TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON12TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON12TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON12TypeEnum: %v", v)
 	}
 }
 
@@ -108,23 +124,27 @@ type RetrieveACardDefaultApplicationJSON12 struct {
 	Type   RetrieveACardDefaultApplicationJSON12TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON11StatusEnum string
+type RetrieveACardDefaultApplicationJSON11StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveACardDefaultApplicationJSON11StatusEnum = "404"
+	RetrieveACardDefaultApplicationJSON11StatusEnumFourHundredAndFour RetrieveACardDefaultApplicationJSON11StatusEnum = 404
 )
 
+func (e RetrieveACardDefaultApplicationJSON11StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON11StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON11StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveACardDefaultApplicationJSON11StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveACardDefaultApplicationJSON11StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON11StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON11StatusEnum: %v", v)
 	}
 }
 
@@ -134,17 +154,21 @@ const (
 	RetrieveACardDefaultApplicationJSON11TypeEnumObjectNotFoundError RetrieveACardDefaultApplicationJSON11TypeEnum = "object_not_found_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON11TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON11TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON11TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "object_not_found_error":
-		*e = RetrieveACardDefaultApplicationJSON11TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON11TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON11TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON11TypeEnum: %v", v)
 	}
 }
 
@@ -155,23 +179,27 @@ type RetrieveACardDefaultApplicationJSON11 struct {
 	Type   RetrieveACardDefaultApplicationJSON11TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON10StatusEnum string
+type RetrieveACardDefaultApplicationJSON10StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON10StatusEnumFourHundred RetrieveACardDefaultApplicationJSON10StatusEnum = "400"
+	RetrieveACardDefaultApplicationJSON10StatusEnumFourHundred RetrieveACardDefaultApplicationJSON10StatusEnum = 400
 )
 
+func (e RetrieveACardDefaultApplicationJSON10StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON10StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON10StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveACardDefaultApplicationJSON10StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveACardDefaultApplicationJSON10StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON10StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON10StatusEnum: %v", v)
 	}
 }
 
@@ -181,17 +209,21 @@ const (
 	RetrieveACardDefaultApplicationJSON10TypeEnumMalformedRequestError RetrieveACardDefaultApplicationJSON10TypeEnum = "malformed_request_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON10TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON10TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON10TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "malformed_request_error":
-		*e = RetrieveACardDefaultApplicationJSON10TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON10TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON10TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON10TypeEnum: %v", v)
 	}
 }
 
@@ -202,23 +234,27 @@ type RetrieveACardDefaultApplicationJSON10 struct {
 	Type   RetrieveACardDefaultApplicationJSON10TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON9StatusEnum string
+type RetrieveACardDefaultApplicationJSON9StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON9StatusEnumFourHundred RetrieveACardDefaultApplicationJSON9StatusEnum = "400"
+	RetrieveACardDefaultApplicationJSON9StatusEnumFourHundred RetrieveACardDefaultApplicationJSON9StatusEnum = 400
 )
 
+func (e RetrieveACardDefaultApplicationJSON9StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON9StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON9StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "400":
-		*e = RetrieveACardDefaultApplicationJSON9StatusEnum(s)
+	switch v {
+	case 400:
+		*e = RetrieveACardDefaultApplicationJSON9StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON9StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON9StatusEnum: %v", v)
 	}
 }
 
@@ -228,46 +264,54 @@ const (
 	RetrieveACardDefaultApplicationJSON9TypeEnumInvalidParametersError RetrieveACardDefaultApplicationJSON9TypeEnum = "invalid_parameters_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON9TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON9TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON9TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_parameters_error":
-		*e = RetrieveACardDefaultApplicationJSON9TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON9TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON9TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON9TypeEnum: %v", v)
 	}
 }
 
 type RetrieveACardDefaultApplicationJSON9 struct {
 	Detail string `json:"detail"`
 	// All errors related to parsing the request parameters.
-	Errors []map[string]interface{}                       `json:"errors,omitempty"`
+	Errors []map[string]interface{}                       `json:"errors"`
 	Status RetrieveACardDefaultApplicationJSON9StatusEnum `json:"status"`
 	Title  string                                         `json:"title"`
 	Type   RetrieveACardDefaultApplicationJSON9TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON8StatusEnum string
+type RetrieveACardDefaultApplicationJSON8StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveACardDefaultApplicationJSON8StatusEnum = "409"
+	RetrieveACardDefaultApplicationJSON8StatusEnumFourHundredAndNine RetrieveACardDefaultApplicationJSON8StatusEnum = 409
 )
 
+func (e RetrieveACardDefaultApplicationJSON8StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON8StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON8StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveACardDefaultApplicationJSON8StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveACardDefaultApplicationJSON8StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON8StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON8StatusEnum: %v", v)
 	}
 }
 
@@ -277,17 +321,21 @@ const (
 	RetrieveACardDefaultApplicationJSON8TypeEnumInvalidOperationError RetrieveACardDefaultApplicationJSON8TypeEnum = "invalid_operation_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON8TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON8TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON8TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_operation_error":
-		*e = RetrieveACardDefaultApplicationJSON8TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON8TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON8TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON8TypeEnum: %v", v)
 	}
 }
 
@@ -298,23 +346,27 @@ type RetrieveACardDefaultApplicationJSON8 struct {
 	Type   RetrieveACardDefaultApplicationJSON8TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON7StatusEnum string
+type RetrieveACardDefaultApplicationJSON7StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveACardDefaultApplicationJSON7StatusEnum = "401"
+	RetrieveACardDefaultApplicationJSON7StatusEnumFourHundredAndOne RetrieveACardDefaultApplicationJSON7StatusEnum = 401
 )
 
+func (e RetrieveACardDefaultApplicationJSON7StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON7StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON7StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "401":
-		*e = RetrieveACardDefaultApplicationJSON7StatusEnum(s)
+	switch v {
+	case 401:
+		*e = RetrieveACardDefaultApplicationJSON7StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON7StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON7StatusEnum: %v", v)
 	}
 }
 
@@ -324,17 +376,21 @@ const (
 	RetrieveACardDefaultApplicationJSON7TypeEnumInvalidAPIKeyError RetrieveACardDefaultApplicationJSON7TypeEnum = "invalid_api_key_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON7TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON7TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON7TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invalid_api_key_error":
-		*e = RetrieveACardDefaultApplicationJSON7TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON7TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON7TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON7TypeEnum: %v", v)
 	}
 }
 
@@ -345,23 +401,27 @@ type RetrieveACardDefaultApplicationJSON7 struct {
 	Type   RetrieveACardDefaultApplicationJSON7TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON6StatusEnum string
+type RetrieveACardDefaultApplicationJSON6StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON6StatusEnumFiveHundred RetrieveACardDefaultApplicationJSON6StatusEnum = "500"
+	RetrieveACardDefaultApplicationJSON6StatusEnumFiveHundred RetrieveACardDefaultApplicationJSON6StatusEnum = 500
 )
 
+func (e RetrieveACardDefaultApplicationJSON6StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON6StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON6StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "500":
-		*e = RetrieveACardDefaultApplicationJSON6StatusEnum(s)
+	switch v {
+	case 500:
+		*e = RetrieveACardDefaultApplicationJSON6StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON6StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON6StatusEnum: %v", v)
 	}
 }
 
@@ -371,17 +431,21 @@ const (
 	RetrieveACardDefaultApplicationJSON6TypeEnumInternalServerError RetrieveACardDefaultApplicationJSON6TypeEnum = "internal_server_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON6TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON6TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON6TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "internal_server_error":
-		*e = RetrieveACardDefaultApplicationJSON6TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON6TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON6TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON6TypeEnum: %v", v)
 	}
 }
 
@@ -392,23 +456,27 @@ type RetrieveACardDefaultApplicationJSON6 struct {
 	Type   RetrieveACardDefaultApplicationJSON6TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON5StatusEnum string
+type RetrieveACardDefaultApplicationJSON5StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON5StatusEnum = "403"
+	RetrieveACardDefaultApplicationJSON5StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON5StatusEnum = 403
 )
 
+func (e RetrieveACardDefaultApplicationJSON5StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON5StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON5StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACardDefaultApplicationJSON5StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACardDefaultApplicationJSON5StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON5StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON5StatusEnum: %v", v)
 	}
 }
 
@@ -418,17 +486,21 @@ const (
 	RetrieveACardDefaultApplicationJSON5TypeEnumInsufficientPermissionsError RetrieveACardDefaultApplicationJSON5TypeEnum = "insufficient_permissions_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON5TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON5TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON5TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "insufficient_permissions_error":
-		*e = RetrieveACardDefaultApplicationJSON5TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON5TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON5TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON5TypeEnum: %v", v)
 	}
 }
 
@@ -439,23 +511,27 @@ type RetrieveACardDefaultApplicationJSON5 struct {
 	Type   RetrieveACardDefaultApplicationJSON5TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON4StatusEnum string
+type RetrieveACardDefaultApplicationJSON4StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveACardDefaultApplicationJSON4StatusEnum = "422"
+	RetrieveACardDefaultApplicationJSON4StatusEnumFourHundredAndTwentyTwo RetrieveACardDefaultApplicationJSON4StatusEnum = 422
 )
 
+func (e RetrieveACardDefaultApplicationJSON4StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON4StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON4StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "422":
-		*e = RetrieveACardDefaultApplicationJSON4StatusEnum(s)
+	switch v {
+	case 422:
+		*e = RetrieveACardDefaultApplicationJSON4StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON4StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON4StatusEnum: %v", v)
 	}
 }
 
@@ -465,17 +541,21 @@ const (
 	RetrieveACardDefaultApplicationJSON4TypeEnumIdempotencyUnprocessableError RetrieveACardDefaultApplicationJSON4TypeEnum = "idempotency_unprocessable_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON4TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON4TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON4TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_unprocessable_error":
-		*e = RetrieveACardDefaultApplicationJSON4TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON4TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON4TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON4TypeEnum: %v", v)
 	}
 }
 
@@ -486,23 +566,27 @@ type RetrieveACardDefaultApplicationJSON4 struct {
 	Type   RetrieveACardDefaultApplicationJSON4TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON3StatusEnum string
+type RetrieveACardDefaultApplicationJSON3StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveACardDefaultApplicationJSON3StatusEnum = "409"
+	RetrieveACardDefaultApplicationJSON3StatusEnumFourHundredAndNine RetrieveACardDefaultApplicationJSON3StatusEnum = 409
 )
 
+func (e RetrieveACardDefaultApplicationJSON3StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON3StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON3StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "409":
-		*e = RetrieveACardDefaultApplicationJSON3StatusEnum(s)
+	switch v {
+	case 409:
+		*e = RetrieveACardDefaultApplicationJSON3StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON3StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON3StatusEnum: %v", v)
 	}
 }
 
@@ -512,17 +596,21 @@ const (
 	RetrieveACardDefaultApplicationJSON3TypeEnumIdempotencyConflictError RetrieveACardDefaultApplicationJSON3TypeEnum = "idempotency_conflict_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON3TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON3TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON3TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "idempotency_conflict_error":
-		*e = RetrieveACardDefaultApplicationJSON3TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON3TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON3TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON3TypeEnum: %v", v)
 	}
 }
 
@@ -533,23 +621,27 @@ type RetrieveACardDefaultApplicationJSON3 struct {
 	Type   RetrieveACardDefaultApplicationJSON3TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON2StatusEnum string
+type RetrieveACardDefaultApplicationJSON2StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON2StatusEnum = "403"
+	RetrieveACardDefaultApplicationJSON2StatusEnumFourHundredAndThree RetrieveACardDefaultApplicationJSON2StatusEnum = 403
 )
 
+func (e RetrieveACardDefaultApplicationJSON2StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON2StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON2StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "403":
-		*e = RetrieveACardDefaultApplicationJSON2StatusEnum(s)
+	switch v {
+	case 403:
+		*e = RetrieveACardDefaultApplicationJSON2StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON2StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON2StatusEnum: %v", v)
 	}
 }
 
@@ -559,17 +651,21 @@ const (
 	RetrieveACardDefaultApplicationJSON2TypeEnumEnvironmentMismatchError RetrieveACardDefaultApplicationJSON2TypeEnum = "environment_mismatch_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON2TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON2TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON2TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "environment_mismatch_error":
-		*e = RetrieveACardDefaultApplicationJSON2TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON2TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON2TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON2TypeEnum: %v", v)
 	}
 }
 
@@ -580,23 +676,27 @@ type RetrieveACardDefaultApplicationJSON2 struct {
 	Type   RetrieveACardDefaultApplicationJSON2TypeEnum   `json:"type"`
 }
 
-type RetrieveACardDefaultApplicationJSON1StatusEnum string
+type RetrieveACardDefaultApplicationJSON1StatusEnum int64
 
 const (
-	RetrieveACardDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveACardDefaultApplicationJSON1StatusEnum = "404"
+	RetrieveACardDefaultApplicationJSON1StatusEnumFourHundredAndFour RetrieveACardDefaultApplicationJSON1StatusEnum = 404
 )
 
+func (e RetrieveACardDefaultApplicationJSON1StatusEnum) ToPointer() *RetrieveACardDefaultApplicationJSON1StatusEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON1StatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v int64
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
-	case "404":
-		*e = RetrieveACardDefaultApplicationJSON1StatusEnum(s)
+	switch v {
+	case 404:
+		*e = RetrieveACardDefaultApplicationJSON1StatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON1StatusEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON1StatusEnum: %v", v)
 	}
 }
 
@@ -606,17 +706,21 @@ const (
 	RetrieveACardDefaultApplicationJSON1TypeEnumAPIMethodNotFoundError RetrieveACardDefaultApplicationJSON1TypeEnum = "api_method_not_found_error"
 )
 
+func (e RetrieveACardDefaultApplicationJSON1TypeEnum) ToPointer() *RetrieveACardDefaultApplicationJSON1TypeEnum {
+	return &e
+}
+
 func (e *RetrieveACardDefaultApplicationJSON1TypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "api_method_not_found_error":
-		*e = RetrieveACardDefaultApplicationJSON1TypeEnum(s)
+		*e = RetrieveACardDefaultApplicationJSON1TypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON1TypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RetrieveACardDefaultApplicationJSON1TypeEnum: %v", v)
 	}
 }
 

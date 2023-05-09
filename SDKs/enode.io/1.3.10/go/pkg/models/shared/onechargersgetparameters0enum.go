@@ -14,18 +14,22 @@ const (
 	OnechargersGetParameters0EnumLocation    OnechargersGetParameters0Enum = "location"
 )
 
+func (e OnechargersGetParameters0Enum) ToPointer() *OnechargersGetParameters0Enum {
+	return &e
+}
+
 func (e *OnechargersGetParameters0Enum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "chargeState":
 		fallthrough
 	case "location":
-		*e = OnechargersGetParameters0Enum(s)
+		*e = OnechargersGetParameters0Enum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OnechargersGetParameters0Enum: %s", s)
+		return fmt.Errorf("invalid value for OnechargersGetParameters0Enum: %v", v)
 	}
 }

@@ -34,7 +34,10 @@ func newPlatforms(defaultClient, securityClient HTTPClient, serverURL, language,
 // IdeahubPlatformsPropertiesIdeaActivitiesCreate - Creates an idea activity entry.
 func (s *platforms) IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx context.Context, request operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest) (*operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/ideaActivities", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/ideaActivities", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleSearchIdeahubV1alphaIdeaActivity", "json")
 	if err != nil {
@@ -89,7 +92,10 @@ func (s *platforms) IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx context.C
 // IdeahubPlatformsPropertiesIdeasList - List ideas for a given Creator and filter and sort options.
 func (s *platforms) IdeahubPlatformsPropertiesIdeasList(ctx context.Context, request operations.IdeahubPlatformsPropertiesIdeasListRequest) (*operations.IdeahubPlatformsPropertiesIdeasListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/ideas", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/ideas", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -137,7 +143,10 @@ func (s *platforms) IdeahubPlatformsPropertiesIdeasList(ctx context.Context, req
 // IdeahubPlatformsPropertiesLocalesList - Returns which locales ideas are available in for a given Creator.
 func (s *platforms) IdeahubPlatformsPropertiesLocalesList(ctx context.Context, request operations.IdeahubPlatformsPropertiesLocalesListRequest) (*operations.IdeahubPlatformsPropertiesLocalesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/locales", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}/locales", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -185,7 +194,10 @@ func (s *platforms) IdeahubPlatformsPropertiesLocalesList(ctx context.Context, r
 // IdeahubPlatformsPropertiesTopicStatesPatch - Update a topic state resource.
 func (s *platforms) IdeahubPlatformsPropertiesTopicStatesPatch(ctx context.Context, request operations.IdeahubPlatformsPropertiesTopicStatesPatchRequest) (*operations.IdeahubPlatformsPropertiesTopicStatesPatchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1alpha/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "GoogleSearchIdeahubV1alphaTopicState", "json")
 	if err != nil {

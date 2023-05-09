@@ -15,20 +15,24 @@ const (
 	MarketplaceSubscriptionOnboardingStatusEnumComplete       MarketplaceSubscriptionOnboardingStatusEnum = "COMPLETE"
 )
 
+func (e MarketplaceSubscriptionOnboardingStatusEnum) ToPointer() *MarketplaceSubscriptionOnboardingStatusEnum {
+	return &e
+}
+
 func (e *MarketplaceSubscriptionOnboardingStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NO_SUBSCRIPTION":
 		fallthrough
 	case "NOT_COMPLETE":
 		fallthrough
 	case "COMPLETE":
-		*e = MarketplaceSubscriptionOnboardingStatusEnum(s)
+		*e = MarketplaceSubscriptionOnboardingStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MarketplaceSubscriptionOnboardingStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for MarketplaceSubscriptionOnboardingStatusEnum: %v", v)
 	}
 }

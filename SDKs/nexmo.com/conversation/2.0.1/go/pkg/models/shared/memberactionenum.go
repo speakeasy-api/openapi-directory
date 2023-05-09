@@ -15,18 +15,22 @@ const (
 	MemberActionEnumJoin   MemberActionEnum = "join"
 )
 
+func (e MemberActionEnum) ToPointer() *MemberActionEnum {
+	return &e
+}
+
 func (e *MemberActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "invite":
 		fallthrough
 	case "join":
-		*e = MemberActionEnum(s)
+		*e = MemberActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MemberActionEnum: %s", s)
+		return fmt.Errorf("invalid value for MemberActionEnum: %v", v)
 	}
 }

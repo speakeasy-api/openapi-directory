@@ -23,12 +23,16 @@ const (
 	EventAdditionalEventTypesEnumUpload           EventAdditionalEventTypesEnum = "upload"
 )
 
+func (e EventAdditionalEventTypesEnum) ToPointer() *EventAdditionalEventTypesEnum {
+	return &e
+}
+
 func (e *EventAdditionalEventTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "comment":
 		fallthrough
 	case "create":
@@ -50,10 +54,10 @@ func (e *EventAdditionalEventTypesEnum) UnmarshalJSON(data []byte) error {
 	case "untrash":
 		fallthrough
 	case "upload":
-		*e = EventAdditionalEventTypesEnum(s)
+		*e = EventAdditionalEventTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventAdditionalEventTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for EventAdditionalEventTypesEnum: %v", v)
 	}
 }
 
@@ -74,12 +78,16 @@ const (
 	EventPrimaryEventTypeEnumUpload           EventPrimaryEventTypeEnum = "upload"
 )
 
+func (e EventPrimaryEventTypeEnum) ToPointer() *EventPrimaryEventTypeEnum {
+	return &e
+}
+
 func (e *EventPrimaryEventTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "comment":
 		fallthrough
 	case "create":
@@ -101,10 +109,10 @@ func (e *EventPrimaryEventTypeEnum) UnmarshalJSON(data []byte) error {
 	case "untrash":
 		fallthrough
 	case "upload":
-		*e = EventPrimaryEventTypeEnum(s)
+		*e = EventPrimaryEventTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EventPrimaryEventTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EventPrimaryEventTypeEnum: %v", v)
 	}
 }
 

@@ -34,7 +34,10 @@ func newAuthenticationManagement(defaultClient, securityClient HTTPClient, serve
 // DeleteRealmAuthenticationConfigID - Delete authenticator configuration
 func (s *authenticationManagement) DeleteRealmAuthenticationConfigID(ctx context.Context, request operations.DeleteRealmAuthenticationConfigIDRequest) (*operations.DeleteRealmAuthenticationConfigIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -69,7 +72,10 @@ func (s *authenticationManagement) DeleteRealmAuthenticationConfigID(ctx context
 // DeleteRealmAuthenticationExecutionsExecutionID - Delete execution
 func (s *authenticationManagement) DeleteRealmAuthenticationExecutionsExecutionID(ctx context.Context, request operations.DeleteRealmAuthenticationExecutionsExecutionIDRequest) (*operations.DeleteRealmAuthenticationExecutionsExecutionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -104,7 +110,10 @@ func (s *authenticationManagement) DeleteRealmAuthenticationExecutionsExecutionI
 // DeleteRealmAuthenticationFlowsID - Delete an authentication flow
 func (s *authenticationManagement) DeleteRealmAuthenticationFlowsID(ctx context.Context, request operations.DeleteRealmAuthenticationFlowsIDRequest) (*operations.DeleteRealmAuthenticationFlowsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -139,7 +148,10 @@ func (s *authenticationManagement) DeleteRealmAuthenticationFlowsID(ctx context.
 // DeleteRealmAuthenticationRequiredActionsAlias - Delete required action
 func (s *authenticationManagement) DeleteRealmAuthenticationRequiredActionsAlias(ctx context.Context, request operations.DeleteRealmAuthenticationRequiredActionsAliasRequest) (*operations.DeleteRealmAuthenticationRequiredActionsAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -174,7 +186,10 @@ func (s *authenticationManagement) DeleteRealmAuthenticationRequiredActionsAlias
 // GetRealmAuthenticationAuthenticatorProviders - Get authenticator providers   Returns a list of authenticator providers.
 func (s *authenticationManagement) GetRealmAuthenticationAuthenticatorProviders(ctx context.Context, request operations.GetRealmAuthenticationAuthenticatorProvidersRequest) (*operations.GetRealmAuthenticationAuthenticatorProvidersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/authenticator-providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/authenticator-providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -218,7 +233,10 @@ func (s *authenticationManagement) GetRealmAuthenticationAuthenticatorProviders(
 // GetRealmAuthenticationClientAuthenticatorProviders - Get client authenticator providers   Returns a list of client authenticator providers.
 func (s *authenticationManagement) GetRealmAuthenticationClientAuthenticatorProviders(ctx context.Context, request operations.GetRealmAuthenticationClientAuthenticatorProvidersRequest) (*operations.GetRealmAuthenticationClientAuthenticatorProvidersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/client-authenticator-providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/client-authenticator-providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -262,7 +280,10 @@ func (s *authenticationManagement) GetRealmAuthenticationClientAuthenticatorProv
 // GetRealmAuthenticationConfigDescriptionProviderID - Get authenticator provider’s configuration description
 func (s *authenticationManagement) GetRealmAuthenticationConfigDescriptionProviderID(ctx context.Context, request operations.GetRealmAuthenticationConfigDescriptionProviderIDRequest) (*operations.GetRealmAuthenticationConfigDescriptionProviderIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config-description/{providerId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config-description/{providerId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -306,7 +327,10 @@ func (s *authenticationManagement) GetRealmAuthenticationConfigDescriptionProvid
 // GetRealmAuthenticationConfigID - Get authenticator configuration
 func (s *authenticationManagement) GetRealmAuthenticationConfigID(ctx context.Context, request operations.GetRealmAuthenticationConfigIDRequest) (*operations.GetRealmAuthenticationConfigIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -350,7 +374,10 @@ func (s *authenticationManagement) GetRealmAuthenticationConfigID(ctx context.Co
 // GetRealmAuthenticationExecutionsExecutionID - Get Single Execution
 func (s *authenticationManagement) GetRealmAuthenticationExecutionsExecutionID(ctx context.Context, request operations.GetRealmAuthenticationExecutionsExecutionIDRequest) (*operations.GetRealmAuthenticationExecutionsExecutionIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -385,7 +412,10 @@ func (s *authenticationManagement) GetRealmAuthenticationExecutionsExecutionID(c
 // GetRealmAuthenticationFlows - Get authentication flows   Returns a list of authentication flows.
 func (s *authenticationManagement) GetRealmAuthenticationFlows(ctx context.Context, request operations.GetRealmAuthenticationFlowsRequest) (*operations.GetRealmAuthenticationFlowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -429,7 +459,10 @@ func (s *authenticationManagement) GetRealmAuthenticationFlows(ctx context.Conte
 // GetRealmAuthenticationFlowsFlowAliasExecutions - Get authentication executions for a flow
 func (s *authenticationManagement) GetRealmAuthenticationFlowsFlowAliasExecutions(ctx context.Context, request operations.GetRealmAuthenticationFlowsFlowAliasExecutionsRequest) (*operations.GetRealmAuthenticationFlowsFlowAliasExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -464,7 +497,10 @@ func (s *authenticationManagement) GetRealmAuthenticationFlowsFlowAliasExecution
 // GetRealmAuthenticationFlowsID - Get authentication flow for id
 func (s *authenticationManagement) GetRealmAuthenticationFlowsID(ctx context.Context, request operations.GetRealmAuthenticationFlowsIDRequest) (*operations.GetRealmAuthenticationFlowsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -508,7 +544,10 @@ func (s *authenticationManagement) GetRealmAuthenticationFlowsID(ctx context.Con
 // GetRealmAuthenticationFormActionProviders - Get form action providers   Returns a list of form action providers.
 func (s *authenticationManagement) GetRealmAuthenticationFormActionProviders(ctx context.Context, request operations.GetRealmAuthenticationFormActionProvidersRequest) (*operations.GetRealmAuthenticationFormActionProvidersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/form-action-providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/form-action-providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -552,7 +591,10 @@ func (s *authenticationManagement) GetRealmAuthenticationFormActionProviders(ctx
 // GetRealmAuthenticationFormProviders - Get form providers   Returns a list of form providers.
 func (s *authenticationManagement) GetRealmAuthenticationFormProviders(ctx context.Context, request operations.GetRealmAuthenticationFormProvidersRequest) (*operations.GetRealmAuthenticationFormProvidersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/form-providers", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/form-providers", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -596,7 +638,10 @@ func (s *authenticationManagement) GetRealmAuthenticationFormProviders(ctx conte
 // GetRealmAuthenticationPerClientConfigDescription - Get configuration descriptions for all clients
 func (s *authenticationManagement) GetRealmAuthenticationPerClientConfigDescription(ctx context.Context, request operations.GetRealmAuthenticationPerClientConfigDescriptionRequest) (*operations.GetRealmAuthenticationPerClientConfigDescriptionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/per-client-config-description", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/per-client-config-description", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -640,7 +685,10 @@ func (s *authenticationManagement) GetRealmAuthenticationPerClientConfigDescript
 // GetRealmAuthenticationRequiredActions - Get required actions   Returns a list of required actions.
 func (s *authenticationManagement) GetRealmAuthenticationRequiredActions(ctx context.Context, request operations.GetRealmAuthenticationRequiredActionsRequest) (*operations.GetRealmAuthenticationRequiredActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -684,7 +732,10 @@ func (s *authenticationManagement) GetRealmAuthenticationRequiredActions(ctx con
 // GetRealmAuthenticationRequiredActionsAlias - Get required action for alias
 func (s *authenticationManagement) GetRealmAuthenticationRequiredActionsAlias(ctx context.Context, request operations.GetRealmAuthenticationRequiredActionsAliasRequest) (*operations.GetRealmAuthenticationRequiredActionsAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -728,7 +779,10 @@ func (s *authenticationManagement) GetRealmAuthenticationRequiredActionsAlias(ct
 // GetRealmAuthenticationUnregisteredRequiredActions - Get unregistered required actions   Returns a list of unregistered required actions.
 func (s *authenticationManagement) GetRealmAuthenticationUnregisteredRequiredActions(ctx context.Context, request operations.GetRealmAuthenticationUnregisteredRequiredActionsRequest) (*operations.GetRealmAuthenticationUnregisteredRequiredActionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/unregistered-required-actions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/unregistered-required-actions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -772,7 +826,10 @@ func (s *authenticationManagement) GetRealmAuthenticationUnregisteredRequiredAct
 // PostRealmAuthenticationExecutions - Add new authentication execution
 func (s *authenticationManagement) PostRealmAuthenticationExecutions(ctx context.Context, request operations.PostRealmAuthenticationExecutionsRequest) (*operations.PostRealmAuthenticationExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticationExecutionRepresentation", "json")
 	if err != nil {
@@ -817,7 +874,10 @@ func (s *authenticationManagement) PostRealmAuthenticationExecutions(ctx context
 // PostRealmAuthenticationExecutionsExecutionIDConfig - Update execution with new configuration
 func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDConfig(ctx context.Context, request operations.PostRealmAuthenticationExecutionsExecutionIDConfigRequest) (*operations.PostRealmAuthenticationExecutionsExecutionIDConfigResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/config", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/config", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticatorConfigRepresentation", "json")
 	if err != nil {
@@ -862,7 +922,10 @@ func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDC
 // PostRealmAuthenticationExecutionsExecutionIDLowerPriority - Lower execution’s priority
 func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDLowerPriority(ctx context.Context, request operations.PostRealmAuthenticationExecutionsExecutionIDLowerPriorityRequest) (*operations.PostRealmAuthenticationExecutionsExecutionIDLowerPriorityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/lower-priority", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/lower-priority", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -897,7 +960,10 @@ func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDL
 // PostRealmAuthenticationExecutionsExecutionIDRaisePriority - Raise execution’s priority
 func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDRaisePriority(ctx context.Context, request operations.PostRealmAuthenticationExecutionsExecutionIDRaisePriorityRequest) (*operations.PostRealmAuthenticationExecutionsExecutionIDRaisePriorityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/raise-priority", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/executions/{executionId}/raise-priority", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -932,7 +998,10 @@ func (s *authenticationManagement) PostRealmAuthenticationExecutionsExecutionIDR
 // PostRealmAuthenticationFlows - Create a new authentication flow
 func (s *authenticationManagement) PostRealmAuthenticationFlows(ctx context.Context, request operations.PostRealmAuthenticationFlowsRequest) (*operations.PostRealmAuthenticationFlowsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticationFlowRepresentation", "json")
 	if err != nil {
@@ -977,7 +1046,10 @@ func (s *authenticationManagement) PostRealmAuthenticationFlows(ctx context.Cont
 // PostRealmAuthenticationFlowsFlowAliasCopy - Copy existing authentication flow under a new name   The new name is given as 'newName' attribute of the passed JSON object
 func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasCopy(ctx context.Context, request operations.PostRealmAuthenticationFlowsFlowAliasCopyRequest) (*operations.PostRealmAuthenticationFlowsFlowAliasCopyResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/copy", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/copy", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1022,7 +1094,10 @@ func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasCopy(ctx
 // PostRealmAuthenticationFlowsFlowAliasExecutionsExecution - Add new authentication execution to a flow
 func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasExecutionsExecution(ctx context.Context, request operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionRequest) (*operations.PostRealmAuthenticationFlowsFlowAliasExecutionsExecutionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions/execution", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions/execution", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1067,7 +1142,10 @@ func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasExecutio
 // PostRealmAuthenticationFlowsFlowAliasExecutionsFlow - Add new flow with new execution to existing flow
 func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasExecutionsFlow(ctx context.Context, request operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowRequest) (*operations.PostRealmAuthenticationFlowsFlowAliasExecutionsFlowResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions/flow", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions/flow", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1112,7 +1190,10 @@ func (s *authenticationManagement) PostRealmAuthenticationFlowsFlowAliasExecutio
 // PostRealmAuthenticationRegisterRequiredAction - Register a new required actions
 func (s *authenticationManagement) PostRealmAuthenticationRegisterRequiredAction(ctx context.Context, request operations.PostRealmAuthenticationRegisterRequiredActionRequest) (*operations.PostRealmAuthenticationRegisterRequiredActionResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/register-required-action", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/register-required-action", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {
@@ -1157,7 +1238,10 @@ func (s *authenticationManagement) PostRealmAuthenticationRegisterRequiredAction
 // PostRealmAuthenticationRequiredActionsAliasLowerPriority - Lower required action’s priority
 func (s *authenticationManagement) PostRealmAuthenticationRequiredActionsAliasLowerPriority(ctx context.Context, request operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityRequest) (*operations.PostRealmAuthenticationRequiredActionsAliasLowerPriorityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}/lower-priority", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}/lower-priority", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1192,7 +1276,10 @@ func (s *authenticationManagement) PostRealmAuthenticationRequiredActionsAliasLo
 // PostRealmAuthenticationRequiredActionsAliasRaisePriority - Raise required action’s priority
 func (s *authenticationManagement) PostRealmAuthenticationRequiredActionsAliasRaisePriority(ctx context.Context, request operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityRequest) (*operations.PostRealmAuthenticationRequiredActionsAliasRaisePriorityResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}/raise-priority", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}/raise-priority", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
@@ -1227,7 +1314,10 @@ func (s *authenticationManagement) PostRealmAuthenticationRequiredActionsAliasRa
 // PutRealmAuthenticationConfigID - Update authenticator configuration
 func (s *authenticationManagement) PutRealmAuthenticationConfigID(ctx context.Context, request operations.PutRealmAuthenticationConfigIDRequest) (*operations.PutRealmAuthenticationConfigIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/config/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticatorConfigRepresentation", "json")
 	if err != nil {
@@ -1272,7 +1362,10 @@ func (s *authenticationManagement) PutRealmAuthenticationConfigID(ctx context.Co
 // PutRealmAuthenticationFlowsFlowAliasExecutions - Update authentication executions of a flow
 func (s *authenticationManagement) PutRealmAuthenticationFlowsFlowAliasExecutions(ctx context.Context, request operations.PutRealmAuthenticationFlowsFlowAliasExecutionsRequest) (*operations.PutRealmAuthenticationFlowsFlowAliasExecutionsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{flowAlias}/executions", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticationExecutionInfoRepresentation", "json")
 	if err != nil {
@@ -1317,7 +1410,10 @@ func (s *authenticationManagement) PutRealmAuthenticationFlowsFlowAliasExecution
 // PutRealmAuthenticationFlowsID - Update an authentication flow
 func (s *authenticationManagement) PutRealmAuthenticationFlowsID(ctx context.Context, request operations.PutRealmAuthenticationFlowsIDRequest) (*operations.PutRealmAuthenticationFlowsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/flows/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "AuthenticationFlowRepresentation", "json")
 	if err != nil {
@@ -1362,7 +1458,10 @@ func (s *authenticationManagement) PutRealmAuthenticationFlowsID(ctx context.Con
 // PutRealmAuthenticationRequiredActionsAlias - Update required action
 func (s *authenticationManagement) PutRealmAuthenticationRequiredActionsAlias(ctx context.Context, request operations.PutRealmAuthenticationRequiredActionsAliasRequest) (*operations.PutRealmAuthenticationRequiredActionsAliasResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/{realm}/authentication/required-actions/{alias}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequiredActionProviderRepresentation", "json")
 	if err != nil {

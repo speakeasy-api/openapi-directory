@@ -16,17 +16,21 @@ const (
 	GenerateDataSetXAmzTargetEnumMarketplaceCommerceAnalytics20150701GenerateDataSet GenerateDataSetXAmzTargetEnum = "MarketplaceCommerceAnalytics20150701.GenerateDataSet"
 )
 
+func (e GenerateDataSetXAmzTargetEnum) ToPointer() *GenerateDataSetXAmzTargetEnum {
+	return &e
+}
+
 func (e *GenerateDataSetXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "MarketplaceCommerceAnalytics20150701.GenerateDataSet":
-		*e = GenerateDataSetXAmzTargetEnum(s)
+		*e = GenerateDataSetXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GenerateDataSetXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GenerateDataSetXAmzTargetEnum: %v", v)
 	}
 }
 

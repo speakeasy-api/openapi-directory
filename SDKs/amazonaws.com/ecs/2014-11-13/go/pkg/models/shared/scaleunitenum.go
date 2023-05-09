@@ -13,16 +13,20 @@ const (
 	ScaleUnitEnumPercent ScaleUnitEnum = "PERCENT"
 )
 
+func (e ScaleUnitEnum) ToPointer() *ScaleUnitEnum {
+	return &e
+}
+
 func (e *ScaleUnitEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERCENT":
-		*e = ScaleUnitEnum(s)
+		*e = ScaleUnitEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScaleUnitEnum: %s", s)
+		return fmt.Errorf("invalid value for ScaleUnitEnum: %v", v)
 	}
 }

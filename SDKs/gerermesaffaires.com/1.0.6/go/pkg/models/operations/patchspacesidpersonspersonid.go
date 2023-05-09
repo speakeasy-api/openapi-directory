@@ -28,19 +28,23 @@ const (
 	PatchSpacesIDPersonsPersonIDRequestBodySexEnumFemale PatchSpacesIDPersonsPersonIDRequestBodySexEnum = "female"
 )
 
+func (e PatchSpacesIDPersonsPersonIDRequestBodySexEnum) ToPointer() *PatchSpacesIDPersonsPersonIDRequestBodySexEnum {
+	return &e
+}
+
 func (e *PatchSpacesIDPersonsPersonIDRequestBodySexEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "male":
 		fallthrough
 	case "female":
-		*e = PatchSpacesIDPersonsPersonIDRequestBodySexEnum(s)
+		*e = PatchSpacesIDPersonsPersonIDRequestBodySexEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesIDPersonsPersonIDRequestBodySexEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesIDPersonsPersonIDRequestBodySexEnum: %v", v)
 	}
 }
 

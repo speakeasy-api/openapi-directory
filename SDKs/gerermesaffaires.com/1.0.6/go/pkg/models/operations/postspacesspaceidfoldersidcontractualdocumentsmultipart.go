@@ -26,12 +26,16 @@ const (
 	PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnumPermanent   PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum = "permanent"
 )
 
+func (e PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum) ToPointer() *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "customer":
 		fallthrough
 	case "provider":
@@ -49,10 +53,10 @@ func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccounti
 	case "other":
 		fallthrough
 	case "permanent":
-		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataAccountingWorkbookEnum: %v", v)
 	}
 }
 
@@ -79,12 +83,16 @@ const (
 	PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnumOther            PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum = "other"
 )
 
+func (e PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum) ToPointer() *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum {
+	return &e
+}
+
 func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "contract":
 		fallthrough
 	case "engagement-letter":
@@ -98,10 +106,10 @@ func (e *PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum
 	case "quotation":
 		fallthrough
 	case "other":
-		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum(s)
+		*e = PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for PostSpacesSpaceIDFoldersIDContractualDocumentsMultipartFormDataTypeEnum: %v", v)
 	}
 }
 

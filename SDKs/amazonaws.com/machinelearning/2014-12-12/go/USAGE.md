@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,37 +17,35 @@ func main() {
         }),
     )
 
-    req := operations.AddTagsRequest{
+    ctx := context.Background()
+    res, err := s.AddTags(ctx, operations.AddTagsRequest{
         AddTagsInput: shared.AddTagsInput{
             ResourceID: "corrupti",
-            ResourceType: "Evaluation",
+            ResourceType: shared.TaggableResourceTypeEnumEvaluation,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "quibusdam",
-                    Value: "unde",
+                    Key: sdk.String("quibusdam"),
+                    Value: sdk.String("unde"),
                 },
                 shared.Tag{
-                    Key: "nulla",
-                    Value: "corrupti",
+                    Key: sdk.String("nulla"),
+                    Value: sdk.String("corrupti"),
                 },
                 shared.Tag{
-                    Key: "illum",
-                    Value: "vel",
+                    Key: sdk.String("illum"),
+                    Value: sdk.String("vel"),
                 },
             },
         },
-        XAmzAlgorithm: "error",
-        XAmzContentSha256: "deserunt",
-        XAmzCredential: "suscipit",
-        XAmzDate: "iure",
-        XAmzSecurityToken: "magnam",
-        XAmzSignature: "debitis",
-        XAmzSignedHeaders: "ipsa",
-        XAmzTarget: "AmazonML_20141212.AddTags",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddTags(ctx, req)
+        XAmzAlgorithm: sdk.String("error"),
+        XAmzContentSha256: sdk.String("deserunt"),
+        XAmzCredential: sdk.String("suscipit"),
+        XAmzDate: sdk.String("iure"),
+        XAmzSecurityToken: sdk.String("magnam"),
+        XAmzSignature: sdk.String("debitis"),
+        XAmzSignedHeaders: sdk.String("ipsa"),
+        XAmzTarget: operations.AddTagsXAmzTargetEnumAmazonMl20141212AddTags,
+    })
     if err != nil {
         log.Fatal(err)
     }

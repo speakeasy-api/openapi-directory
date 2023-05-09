@@ -16,17 +16,21 @@ const (
 	GetLifecyclePolicyPreviewXAmzTargetEnumAmazonEc2ContainerRegistryV20150921GetLifecyclePolicyPreview GetLifecyclePolicyPreviewXAmzTargetEnum = "AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview"
 )
 
+func (e GetLifecyclePolicyPreviewXAmzTargetEnum) ToPointer() *GetLifecyclePolicyPreviewXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetLifecyclePolicyPreviewXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonEC2ContainerRegistry_V20150921.GetLifecyclePolicyPreview":
-		*e = GetLifecyclePolicyPreviewXAmzTargetEnum(s)
+		*e = GetLifecyclePolicyPreviewXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetLifecyclePolicyPreviewXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetLifecyclePolicyPreviewXAmzTargetEnum: %v", v)
 	}
 }
 

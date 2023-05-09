@@ -22,12 +22,16 @@ const (
 	TypeaheadForWorkspaceResourceTypeEnumUser            TypeaheadForWorkspaceResourceTypeEnum = "user"
 )
 
+func (e TypeaheadForWorkspaceResourceTypeEnum) ToPointer() *TypeaheadForWorkspaceResourceTypeEnum {
+	return &e
+}
+
 func (e *TypeaheadForWorkspaceResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "custom_field":
 		fallthrough
 	case "project":
@@ -41,10 +45,10 @@ func (e *TypeaheadForWorkspaceResourceTypeEnum) UnmarshalJSON(data []byte) error
 	case "task":
 		fallthrough
 	case "user":
-		*e = TypeaheadForWorkspaceResourceTypeEnum(s)
+		*e = TypeaheadForWorkspaceResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeaheadForWorkspaceResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeaheadForWorkspaceResourceTypeEnum: %v", v)
 	}
 }
 
@@ -60,12 +64,16 @@ const (
 	TypeaheadForWorkspaceTypeEnumUser        TypeaheadForWorkspaceTypeEnum = "user"
 )
 
+func (e TypeaheadForWorkspaceTypeEnum) ToPointer() *TypeaheadForWorkspaceTypeEnum {
+	return &e
+}
+
 func (e *TypeaheadForWorkspaceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "custom_field":
 		fallthrough
 	case "portfolio":
@@ -77,10 +85,10 @@ func (e *TypeaheadForWorkspaceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "task":
 		fallthrough
 	case "user":
-		*e = TypeaheadForWorkspaceTypeEnum(s)
+		*e = TypeaheadForWorkspaceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TypeaheadForWorkspaceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for TypeaheadForWorkspaceTypeEnum: %v", v)
 	}
 }
 

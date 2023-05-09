@@ -21,19 +21,23 @@ const (
 	CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnumReject CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum = "reject"
 )
 
+func (e CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum) ToPointer() *CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum(s)
+		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesRuleActionEnum: %v", v)
 	}
 }
 
@@ -51,19 +55,23 @@ const (
 	CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnumEgress  CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum = "egress"
 )
 
+func (e CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum) ToPointer() *CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum(s)
+		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterEgressFilterRulesTrafficDirectionEnum: %v", v)
 	}
 }
 
@@ -96,19 +104,23 @@ const (
 	CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnumReject CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum = "reject"
 )
 
+func (e CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum) ToPointer() *CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "accept":
 		fallthrough
 	case "reject":
-		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum(s)
+		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesRuleActionEnum: %v", v)
 	}
 }
 
@@ -126,19 +138,23 @@ const (
 	CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnumEgress  CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum = "egress"
 )
 
+func (e CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum) ToPointer() *CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ingress":
 		fallthrough
 	case "egress":
-		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum(s)
+		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterIngressFilterRulesTrafficDirectionEnum: %v", v)
 	}
 }
 
@@ -163,17 +179,21 @@ const (
 	CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnumAmazonDNS CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum = "amazon-dns"
 )
 
+func (e CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum) ToPointer() *CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum {
+	return &e
+}
+
 func (e *CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum(s)
+		*e = CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTrafficMirrorFilterResultTrafficMirrorFilterNetworkServicesEnum: %v", v)
 	}
 }
 

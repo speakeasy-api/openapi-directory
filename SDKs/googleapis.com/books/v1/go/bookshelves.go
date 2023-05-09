@@ -34,7 +34,10 @@ func newBookshelves(defaultClient, securityClient HTTPClient, serverURL, languag
 // BooksBookshelvesGet - Retrieves metadata for a specific bookshelf for the specified user.
 func (s *bookshelves) BooksBookshelvesGet(ctx context.Context, request operations.BooksBookshelvesGetRequest, security operations.BooksBookshelvesGetSecurity) (*operations.BooksBookshelvesGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *bookshelves) BooksBookshelvesGet(ctx context.Context, request operation
 // BooksBookshelvesList - Retrieves a list of public bookshelves for the specified user.
 func (s *bookshelves) BooksBookshelvesList(ctx context.Context, request operations.BooksBookshelvesListRequest, security operations.BooksBookshelvesListSecurity) (*operations.BooksBookshelvesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *bookshelves) BooksBookshelvesList(ctx context.Context, request operatio
 // BooksBookshelvesVolumesList - Retrieves volumes in a specific bookshelf for the specified user.
 func (s *bookshelves) BooksBookshelvesVolumesList(ctx context.Context, request operations.BooksBookshelvesVolumesListRequest, security operations.BooksBookshelvesVolumesListSecurity) (*operations.BooksBookshelvesVolumesListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}/volumes", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/books/v1/users/{userId}/bookshelves/{shelf}/volumes", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

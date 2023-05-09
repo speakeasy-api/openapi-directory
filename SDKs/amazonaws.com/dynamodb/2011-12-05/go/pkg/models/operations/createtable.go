@@ -16,17 +16,21 @@ const (
 	CreateTableXAmzTargetEnumDynamoDb20111205CreateTable CreateTableXAmzTargetEnum = "DynamoDB_20111205.CreateTable"
 )
 
+func (e CreateTableXAmzTargetEnum) ToPointer() *CreateTableXAmzTargetEnum {
+	return &e
+}
+
 func (e *CreateTableXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DynamoDB_20111205.CreateTable":
-		*e = CreateTableXAmzTargetEnum(s)
+		*e = CreateTableXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CreateTableXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for CreateTableXAmzTargetEnum: %v", v)
 	}
 }
 

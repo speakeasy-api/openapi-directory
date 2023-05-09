@@ -19,12 +19,16 @@ const (
 	AddonsListAddonAttributesCategoriesEnumCitations     AddonsListAddonAttributesCategoriesEnum = "citations"
 )
 
+func (e AddonsListAddonAttributesCategoriesEnum) ToPointer() *AddonsListAddonAttributesCategoriesEnum {
+	return &e
+}
+
 func (e *AddonsListAddonAttributesCategoriesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "documentation":
 		fallthrough
 	case "storage":
@@ -36,10 +40,10 @@ func (e *AddonsListAddonAttributesCategoriesEnum) UnmarshalJSON(data []byte) err
 	case "security":
 		fallthrough
 	case "citations":
-		*e = AddonsListAddonAttributesCategoriesEnum(s)
+		*e = AddonsListAddonAttributesCategoriesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AddonsListAddonAttributesCategoriesEnum: %s", s)
+		return fmt.Errorf("invalid value for AddonsListAddonAttributesCategoriesEnum: %v", v)
 	}
 }
 

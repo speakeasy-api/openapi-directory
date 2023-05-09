@@ -16,21 +16,25 @@ const (
 	MatterPermissionRoleEnumOwner           MatterPermissionRoleEnum = "OWNER"
 )
 
+func (e MatterPermissionRoleEnum) ToPointer() *MatterPermissionRoleEnum {
+	return &e
+}
+
 func (e *MatterPermissionRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ROLE_UNSPECIFIED":
 		fallthrough
 	case "COLLABORATOR":
 		fallthrough
 	case "OWNER":
-		*e = MatterPermissionRoleEnum(s)
+		*e = MatterPermissionRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for MatterPermissionRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for MatterPermissionRoleEnum: %v", v)
 	}
 }
 

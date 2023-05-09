@@ -15,20 +15,24 @@ const (
 	AlignmentEnumRight  AlignmentEnum = "RIGHT"
 )
 
+func (e AlignmentEnum) ToPointer() *AlignmentEnum {
+	return &e
+}
+
 func (e *AlignmentEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LEFT":
 		fallthrough
 	case "CENTER":
 		fallthrough
 	case "RIGHT":
-		*e = AlignmentEnum(s)
+		*e = AlignmentEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AlignmentEnum: %s", s)
+		return fmt.Errorf("invalid value for AlignmentEnum: %v", v)
 	}
 }

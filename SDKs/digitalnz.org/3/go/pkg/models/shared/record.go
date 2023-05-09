@@ -30,12 +30,16 @@ const (
 	RecordCategoryEnumSets             RecordCategoryEnum = "Sets"
 )
 
+func (e RecordCategoryEnum) ToPointer() *RecordCategoryEnum {
+	return &e
+}
+
 func (e *RecordCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Newspapers":
 		fallthrough
 	case "Images":
@@ -69,10 +73,10 @@ func (e *RecordCategoryEnum) UnmarshalJSON(data []byte) error {
 	case "Websites":
 		fallthrough
 	case "Sets":
-		*e = RecordCategoryEnum(s)
+		*e = RecordCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordCategoryEnum: %v", v)
 	}
 }
 
@@ -85,12 +89,16 @@ const (
 	RecordCopyrightEnumUnknown                      RecordCopyrightEnum = "Unknown"
 )
 
+func (e RecordCopyrightEnum) ToPointer() *RecordCopyrightEnum {
+	return &e
+}
+
 func (e *RecordCopyrightEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All rights reserved":
 		fallthrough
 	case "Some rights reserved":
@@ -98,10 +106,10 @@ func (e *RecordCopyrightEnum) UnmarshalJSON(data []byte) error {
 	case "No known copyright restrictions":
 		fallthrough
 	case "Unknown":
-		*e = RecordCopyrightEnum(s)
+		*e = RecordCopyrightEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordCopyrightEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordCopyrightEnum: %v", v)
 	}
 }
 
@@ -123,12 +131,16 @@ const (
 	RecordUsageEnumUnknown           RecordUsageEnum = "Unknown"
 )
 
+func (e RecordUsageEnum) ToPointer() *RecordUsageEnum {
+	return &e
+}
+
 func (e *RecordUsageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "All rights reserved":
 		fallthrough
 	case "Share":
@@ -138,10 +150,10 @@ func (e *RecordUsageEnum) UnmarshalJSON(data []byte) error {
 	case "Use commercially":
 		fallthrough
 	case "Unknown":
-		*e = RecordUsageEnum(s)
+		*e = RecordUsageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RecordUsageEnum: %s", s)
+		return fmt.Errorf("invalid value for RecordUsageEnum: %v", v)
 	}
 }
 

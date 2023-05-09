@@ -15,17 +15,21 @@ const (
 	POSTDeleteTransitGatewayPeeringAttachmentActionEnumDeleteTransitGatewayPeeringAttachment POSTDeleteTransitGatewayPeeringAttachmentActionEnum = "DeleteTransitGatewayPeeringAttachment"
 )
 
+func (e POSTDeleteTransitGatewayPeeringAttachmentActionEnum) ToPointer() *POSTDeleteTransitGatewayPeeringAttachmentActionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayPeeringAttachmentActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DeleteTransitGatewayPeeringAttachment":
-		*e = POSTDeleteTransitGatewayPeeringAttachmentActionEnum(s)
+		*e = POSTDeleteTransitGatewayPeeringAttachmentActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayPeeringAttachmentActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayPeeringAttachmentActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTDeleteTransitGatewayPeeringAttachmentVersionEnumTwoThousandAndSixteen1115 POSTDeleteTransitGatewayPeeringAttachmentVersionEnum = "2016-11-15"
 )
 
+func (e POSTDeleteTransitGatewayPeeringAttachmentVersionEnum) ToPointer() *POSTDeleteTransitGatewayPeeringAttachmentVersionEnum {
+	return &e
+}
+
 func (e *POSTDeleteTransitGatewayPeeringAttachmentVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = POSTDeleteTransitGatewayPeeringAttachmentVersionEnum(s)
+		*e = POSTDeleteTransitGatewayPeeringAttachmentVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayPeeringAttachmentVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTDeleteTransitGatewayPeeringAttachmentVersionEnum: %v", v)
 	}
 }
 

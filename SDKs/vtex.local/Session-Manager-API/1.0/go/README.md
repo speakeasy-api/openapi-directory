@@ -13,12 +13,10 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/vtex.local/Session-Manage
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
 )
 
 func main() {
@@ -41,15 +39,15 @@ func main() {
 ## Available Resources and Operations
 
 
-### Segment
+### [Segment](docs/segment/README.md)
 
-* `GetSegment` - Get Segment
+* [GetSegment](docs/segment/README.md#getsegment) - Get Segment
 
-### Sessions
+### [Sessions](docs/sessions/README.md)
 
-* `Createnewsession` - Create new session
-* `Editsession` - Edit session
-* `GetSession` - Get Session
+* [Createnewsession](docs/sessions/README.md#createnewsession) - Create new session
+* [Editsession](docs/sessions/README.md#editsession) - Edit session
+* [GetSession](docs/sessions/README.md#getsession) - Get Session
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -19,12 +19,16 @@ const (
 	BestSellersPreviousRelativeDemandEnumVeryHigh                  BestSellersPreviousRelativeDemandEnum = "VERY_HIGH"
 )
 
+func (e BestSellersPreviousRelativeDemandEnum) ToPointer() *BestSellersPreviousRelativeDemandEnum {
+	return &e
+}
+
 func (e *BestSellersPreviousRelativeDemandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIVE_DEMAND_UNSPECIFIED":
 		fallthrough
 	case "VERY_LOW":
@@ -36,10 +40,10 @@ func (e *BestSellersPreviousRelativeDemandEnum) UnmarshalJSON(data []byte) error
 	case "HIGH":
 		fallthrough
 	case "VERY_HIGH":
-		*e = BestSellersPreviousRelativeDemandEnum(s)
+		*e = BestSellersPreviousRelativeDemandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BestSellersPreviousRelativeDemandEnum: %s", s)
+		return fmt.Errorf("invalid value for BestSellersPreviousRelativeDemandEnum: %v", v)
 	}
 }
 
@@ -55,12 +59,16 @@ const (
 	BestSellersRelativeDemandEnumVeryHigh                  BestSellersRelativeDemandEnum = "VERY_HIGH"
 )
 
+func (e BestSellersRelativeDemandEnum) ToPointer() *BestSellersRelativeDemandEnum {
+	return &e
+}
+
 func (e *BestSellersRelativeDemandEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIVE_DEMAND_UNSPECIFIED":
 		fallthrough
 	case "VERY_LOW":
@@ -72,10 +80,10 @@ func (e *BestSellersRelativeDemandEnum) UnmarshalJSON(data []byte) error {
 	case "HIGH":
 		fallthrough
 	case "VERY_HIGH":
-		*e = BestSellersRelativeDemandEnum(s)
+		*e = BestSellersRelativeDemandEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BestSellersRelativeDemandEnum: %s", s)
+		return fmt.Errorf("invalid value for BestSellersRelativeDemandEnum: %v", v)
 	}
 }
 
@@ -89,12 +97,16 @@ const (
 	BestSellersRelativeDemandChangeEnumRiser                               BestSellersRelativeDemandChangeEnum = "RISER"
 )
 
+func (e BestSellersRelativeDemandChangeEnum) ToPointer() *BestSellersRelativeDemandChangeEnum {
+	return &e
+}
+
 func (e *BestSellersRelativeDemandChangeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RELATIVE_DEMAND_CHANGE_TYPE_UNSPECIFIED":
 		fallthrough
 	case "SINKER":
@@ -102,10 +114,10 @@ func (e *BestSellersRelativeDemandChangeEnum) UnmarshalJSON(data []byte) error {
 	case "FLAT":
 		fallthrough
 	case "RISER":
-		*e = BestSellersRelativeDemandChangeEnum(s)
+		*e = BestSellersRelativeDemandChangeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BestSellersRelativeDemandChangeEnum: %s", s)
+		return fmt.Errorf("invalid value for BestSellersRelativeDemandChangeEnum: %v", v)
 	}
 }
 
@@ -118,21 +130,25 @@ const (
 	BestSellersReportGranularityEnumMonthly                      BestSellersReportGranularityEnum = "MONTHLY"
 )
 
+func (e BestSellersReportGranularityEnum) ToPointer() *BestSellersReportGranularityEnum {
+	return &e
+}
+
 func (e *BestSellersReportGranularityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "REPORT_GRANULARITY_UNSPECIFIED":
 		fallthrough
 	case "WEEKLY":
 		fallthrough
 	case "MONTHLY":
-		*e = BestSellersReportGranularityEnum(s)
+		*e = BestSellersReportGranularityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BestSellersReportGranularityEnum: %s", s)
+		return fmt.Errorf("invalid value for BestSellersReportGranularityEnum: %v", v)
 	}
 }
 

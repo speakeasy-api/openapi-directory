@@ -19,12 +19,16 @@ const (
 	AnnotationTypeEnumChrStartEndRefAltZeroBase AnnotationTypeEnum = "CHR_START_END_REF_ALT_ZERO_BASE"
 )
 
+func (e AnnotationTypeEnum) ToPointer() *AnnotationTypeEnum {
+	return &e
+}
+
 func (e *AnnotationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GENERIC":
 		fallthrough
 	case "CHR_POS":
@@ -38,9 +42,9 @@ func (e *AnnotationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "CHR_START_END_ZERO_BASE":
 		fallthrough
 	case "CHR_START_END_REF_ALT_ZERO_BASE":
-		*e = AnnotationTypeEnum(s)
+		*e = AnnotationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AnnotationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AnnotationTypeEnum: %v", v)
 	}
 }

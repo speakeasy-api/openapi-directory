@@ -18,12 +18,16 @@ const (
 	ReauthSettingsMethodEnumEnrolledSecondFactors ReauthSettingsMethodEnum = "ENROLLED_SECOND_FACTORS"
 )
 
+func (e ReauthSettingsMethodEnum) ToPointer() *ReauthSettingsMethodEnum {
+	return &e
+}
+
 func (e *ReauthSettingsMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "METHOD_UNSPECIFIED":
 		fallthrough
 	case "LOGIN":
@@ -33,10 +37,10 @@ func (e *ReauthSettingsMethodEnum) UnmarshalJSON(data []byte) error {
 	case "SECURE_KEY":
 		fallthrough
 	case "ENROLLED_SECOND_FACTORS":
-		*e = ReauthSettingsMethodEnum(s)
+		*e = ReauthSettingsMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReauthSettingsMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for ReauthSettingsMethodEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	ReauthSettingsPolicyTypeEnumDefault               ReauthSettingsPolicyTypeEnum = "DEFAULT"
 )
 
+func (e ReauthSettingsPolicyTypeEnum) ToPointer() *ReauthSettingsPolicyTypeEnum {
+	return &e
+}
+
 func (e *ReauthSettingsPolicyTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "POLICY_TYPE_UNSPECIFIED":
 		fallthrough
 	case "MINIMUM":
 		fallthrough
 	case "DEFAULT":
-		*e = ReauthSettingsPolicyTypeEnum(s)
+		*e = ReauthSettingsPolicyTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ReauthSettingsPolicyTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ReauthSettingsPolicyTypeEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DeleteVirtualInterfaceXAmzTargetEnumOvertureServiceDeleteVirtualInterface DeleteVirtualInterfaceXAmzTargetEnum = "OvertureService.DeleteVirtualInterface"
 )
 
+func (e DeleteVirtualInterfaceXAmzTargetEnum) ToPointer() *DeleteVirtualInterfaceXAmzTargetEnum {
+	return &e
+}
+
 func (e *DeleteVirtualInterfaceXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OvertureService.DeleteVirtualInterface":
-		*e = DeleteVirtualInterfaceXAmzTargetEnum(s)
+		*e = DeleteVirtualInterfaceXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DeleteVirtualInterfaceXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DeleteVirtualInterfaceXAmzTargetEnum: %v", v)
 	}
 }
 

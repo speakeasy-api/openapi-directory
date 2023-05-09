@@ -13,1087 +13,1085 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/drivelabel
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.DrivelabelsLabelsCreateRequest{
-        DollarXgafv: "2",
+    ctx := context.Background()
+    res, err := s.Labels.DrivelabelsLabelsCreate(ctx, operations.DrivelabelsLabelsCreateRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
         GoogleAppsDriveLabelsV2betaLabelInput: &shared.GoogleAppsDriveLabelsV2betaLabelInput{
             AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaLabelAppliedCapabilities{
-                CanApply: false,
-                CanRead: false,
-                CanRemove: false,
+                CanApply: sdk.Bool(false),
+                CanRead: sdk.Bool(false),
+                CanRemove: sdk.Bool(false),
             },
             AppliedLabelPolicy: &shared.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicy{
-                CopyMode: "ALWAYS_COPY",
+                CopyMode: shared.GoogleAppsDriveLabelsV2betaLabelAppliedLabelPolicyCopyModeEnumAlwaysCopy.ToPointer(),
             },
             Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                Person: "distinctio",
+                Person: sdk.String("distinctio"),
             },
             Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                Person: "quibusdam",
+                Person: sdk.String("quibusdam"),
             },
             DisplayHints: &shared.GoogleAppsDriveLabelsV2betaLabelDisplayHints{
-                Disabled: false,
-                HiddenInSearch: false,
-                Priority: "unde",
-                ShownInApply: false,
+                Disabled: sdk.Bool(false),
+                HiddenInSearch: sdk.Bool(false),
+                Priority: sdk.String("unde"),
+                ShownInApply: sdk.Bool(false),
             },
             Fields: []shared.GoogleAppsDriveLabelsV2betaFieldInput{
                 shared.GoogleAppsDriveLabelsV2betaFieldInput{
                     AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities{
-                        CanRead: false,
-                        CanSearch: false,
-                        CanWrite: false,
+                        CanRead: sdk.Bool(false),
+                        CanSearch: sdk.Bool(false),
+                        CanWrite: sdk.Bool(false),
                     },
                     Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "corrupti",
+                        Person: sdk.String("corrupti"),
                     },
                     DateOptions: &shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput{
-                        DateFormatType: "SHORT_DATE",
+                        DateFormatType: shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnumShortDate.ToPointer(),
                         MaxValue: &shared.GoogleTypeDate{
-                            Day: 423655,
-                            Month: 623564,
-                            Year: 645894,
+                            Day: sdk.Int(423655),
+                            Month: sdk.Int(623564),
+                            Year: sdk.Int(645894),
                         },
                         MinValue: &shared.GoogleTypeDate{
-                            Day: 384382,
-                            Month: 437587,
-                            Year: 297534,
+                            Day: sdk.Int(384382),
+                            Month: sdk.Int(437587),
+                            Year: sdk.Int(297534),
                         },
                     },
                     Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "debitis",
+                        Person: sdk.String("debitis"),
                     },
                     DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints{
-                        Disabled: false,
-                        HiddenInSearch: false,
-                        Required: false,
-                        ShownInApply: false,
+                        Disabled: sdk.Bool(false),
+                        HiddenInSearch: sdk.Bool(false),
+                        Required: sdk.Bool(false),
+                        ShownInApply: sdk.Bool(false),
                     },
                     Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                         DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                            HideInSearch: false,
-                            ShowInApply: false,
+                            HideInSearch: sdk.Bool(false),
+                            ShowInApply: sdk.Bool(false),
                         },
                     },
                     Properties: &shared.GoogleAppsDriveLabelsV2betaFieldProperties{
-                        DisplayName: "ipsa",
-                        InsertBeforeField: "delectus",
-                        Required: false,
+                        DisplayName: sdk.String("ipsa"),
+                        InsertBeforeField: sdk.String("delectus"),
+                        Required: sdk.Bool(false),
                     },
                     Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "tempora",
+                        Person: sdk.String("tempora"),
                     },
                     SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities{
-                        CanDelete: false,
-                        CanDisable: false,
-                        CanEnable: false,
-                        CanUpdate: false,
+                        CanDelete: sdk.Bool(false),
+                        CanDisable: sdk.Bool(false),
+                        CanEnable: sdk.Bool(false),
+                        CanUpdate: sdk.Bool(false),
                     },
                     SelectionOptions: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput{
                         Choices: []shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "molestiae",
+                                    Person: sdk.String("molestiae"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "minus",
+                                    Person: sdk.String("minus"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 8121.69,
-                                            Blue: 5288.95,
-                                            Green: 4799.77,
-                                            Red: 5680.45,
+                                            Alpha: sdk.Float32(8121.69),
+                                            Blue: sdk.Float32(5288.95),
+                                            Green: sdk.Float32(4799.77),
+                                            Red: sdk.Float32(5680.45),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3927.85,
-                                            Blue: 9255.97,
-                                            Green: 8360.79,
-                                            Red: 710.36,
+                                            Alpha: sdk.Float32(3927.85),
+                                            Blue: sdk.Float32(9255.97),
+                                            Green: sdk.Float32(8360.79),
+                                            Red: sdk.Float32(710.36),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 3373.96,
-                                            Blue: 871.29,
-                                            Green: 6481.72,
-                                            Red: 202.18,
+                                            Alpha: sdk.Float32(3373.96),
+                                            Blue: sdk.Float32(871.29),
+                                            Green: sdk.Float32(6481.72),
+                                            Red: sdk.Float32(202.18),
                                         },
                                     },
-                                    BadgePriority: "ipsam",
+                                    BadgePriority: sdk.String("ipsam"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 8326.2,
-                                            Blue: 9571.56,
-                                            Green: 7781.57,
-                                            Red: 1403.5,
+                                            Alpha: sdk.Float32(8326.2),
+                                            Blue: sdk.Float32(9571.56),
+                                            Green: sdk.Float32(7781.57),
+                                            Red: sdk.Float32(1403.5),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 8700.13,
-                                            Blue: 8700.88,
-                                            Green: 9786.19,
-                                            Red: 4736.08,
+                                            Alpha: sdk.Float32(8700.13),
+                                            Blue: sdk.Float32(8700.88),
+                                            Green: sdk.Float32(9786.19),
+                                            Red: sdk.Float32(4736.08),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 7991.59,
-                                            Blue: 8009.11,
-                                            Green: 4614.79,
-                                            Red: 5204.78,
+                                            Alpha: sdk.Float32(7991.59),
+                                            Blue: sdk.Float32(8009.11),
+                                            Green: sdk.Float32(4614.79),
+                                            Red: sdk.Float32(5204.78),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "porro",
+                                ID: sdk.String("ca1ba928-fc81-4674-acb7-39205929396f"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 6788.8,
-                                            Blue: 1182.74,
-                                            Green: 7206.33,
-                                            Red: 6399.21,
+                                            Alpha: sdk.Float32(9025.99),
+                                            Blue: sdk.Float32(6818.2),
+                                            Green: sdk.Float32(4499.5),
+                                            Red: sdk.Float32(3595.08),
                                         },
-                                        PriorityOverride: "occaecati",
+                                        PriorityOverride: sdk.String("iste"),
                                     },
-                                    Description: "fugit",
-                                    DisplayName: "deleniti",
-                                    InsertBeforeChoice: "hic",
+                                    Description: sdk.String("iure"),
+                                    DisplayName: sdk.String("saepe"),
+                                    InsertBeforeChoice: sdk.String("quidem"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "optio",
+                                    Person: sdk.String("architecto"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "totam",
+                                    Person: sdk.String("ipsa"),
                                 },
                             },
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "beatae",
+                                    Person: sdk.String("reiciendis"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "commodi",
+                                    Person: sdk.String("est"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 4736,
-                                            Blue: 2645.55,
-                                            Green: 1863.32,
-                                            Red: 7742.34,
+                                            Alpha: sdk.Float32(6531.4),
+                                            Blue: sdk.Float32(6706.38),
+                                            Green: sdk.Float32(1709.09),
+                                            Red: sdk.Float32(2103.82),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 7369.18,
-                                            Blue: 4561.5,
-                                            Green: 2165.5,
-                                            Red: 5684.34,
+                                            Alpha: sdk.Float32(3581.52),
+                                            Blue: sdk.Float32(1289.26),
+                                            Green: sdk.Float32(7506.86),
+                                            Red: sdk.Float32(3154.28),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 1352.18,
-                                            Blue: 187.89,
-                                            Green: 3241.41,
-                                            Red: 6176.36,
+                                            Alpha: sdk.Float32(6078.31),
+                                            Blue: sdk.Float32(3637.11),
+                                            Green: sdk.Float32(3250.47),
+                                            Red: sdk.Float32(5701.97),
                                         },
                                     },
-                                    BadgePriority: "sed",
+                                    BadgePriority: sdk.String("accusantium"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 6120.96,
-                                            Blue: 2223.21,
-                                            Green: 6169.34,
-                                            Red: 3864.89,
+                                            Alpha: sdk.Float32(4386.01),
+                                            Blue: sdk.Float32(6342.74),
+                                            Green: sdk.Float32(9883.74),
+                                            Red: sdk.Float32(9589.5),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 9437.49,
-                                            Blue: 9025.99,
-                                            Green: 6818.2,
-                                            Red: 4499.5,
+                                            Alpha: sdk.Float32(1020.44),
+                                            Blue: sdk.Float32(6527.9),
+                                            Green: sdk.Float32(2088.76),
+                                            Red: sdk.Float32(6350.59),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 3595.08,
-                                            Blue: 6130.64,
-                                            Green: 4370.32,
-                                            Red: 9023.49,
+                                            Alpha: sdk.Float32(1613.09),
+                                            Blue: sdk.Float32(9953),
+                                            Green: sdk.Float32(6531.08),
+                                            Red: sdk.Float32(5818.5),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "quidem",
+                                ID: sdk.String("46773925-1aa5-42c3-b5ad-019da1ffe78f"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 992.8,
-                                            Blue: 602.25,
-                                            Green: 9698.1,
-                                            Red: 6667.67,
+                                            Alpha: sdk.Float32(557.14),
+                                            Blue: sdk.Float32(6048.46),
+                                            Green: sdk.Float32(4511.59),
+                                            Red: sdk.Float32(7392.64),
                                         },
-                                        PriorityOverride: "mollitia",
+                                        PriorityOverride: sdk.String("perferendis"),
                                     },
-                                    Description: "laborum",
-                                    DisplayName: "dolores",
-                                    InsertBeforeChoice: "dolorem",
+                                    Description: sdk.String("doloremque"),
+                                    DisplayName: sdk.String("reprehenderit"),
+                                    InsertBeforeChoice: sdk.String("ut"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "corporis",
+                                    Person: sdk.String("maiores"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "explicabo",
+                                    Person: sdk.String("dicta"),
                                 },
                             },
                         },
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 750686,
+                            MaxEntries: sdk.Int(359444),
                         },
                     },
                     Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "enim",
+                        Person: sdk.String("dolore"),
                     },
                     UserOptions: &shared.GoogleAppsDriveLabelsV2betaFieldUserOptions{
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 607831,
+                            MaxEntries: sdk.Int(480894),
                         },
                     },
                 },
                 shared.GoogleAppsDriveLabelsV2betaFieldInput{
                     AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities{
-                        CanRead: false,
-                        CanSearch: false,
-                        CanWrite: false,
+                        CanRead: sdk.Bool(false),
+                        CanSearch: sdk.Bool(false),
+                        CanWrite: sdk.Bool(false),
                     },
                     Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "nemo",
+                        Person: sdk.String("dicta"),
                     },
                     DateOptions: &shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput{
-                        DateFormatType: "DATE_FORMAT_UNSPECIFIED",
+                        DateFormatType: shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnumShortDate.ToPointer(),
                         MaxValue: &shared.GoogleTypeDate{
-                            Day: 570197,
-                            Month: 38425,
-                            Year: 438601,
+                            Day: sdk.Int(317983),
+                            Month: sdk.Int(880476),
+                            Year: sdk.Int(414263),
                         },
                         MinValue: &shared.GoogleTypeDate{
-                            Day: 634274,
-                            Month: 988374,
-                            Year: 958950,
+                            Day: sdk.Int(918236),
+                            Month: sdk.Int(64147),
+                            Year: sdk.Int(216822),
                         },
                     },
                     Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "architecto",
+                        Person: sdk.String("quidem"),
                     },
                     DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints{
-                        Disabled: false,
-                        HiddenInSearch: false,
-                        Required: false,
-                        ShownInApply: false,
+                        Disabled: sdk.Bool(false),
+                        HiddenInSearch: sdk.Bool(false),
+                        Required: sdk.Bool(false),
+                        ShownInApply: sdk.Bool(false),
                     },
                     Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                         DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                            HideInSearch: false,
-                            ShowInApply: false,
+                            HideInSearch: sdk.Bool(false),
+                            ShowInApply: sdk.Bool(false),
                         },
                     },
                     Properties: &shared.GoogleAppsDriveLabelsV2betaFieldProperties{
-                        DisplayName: "mollitia",
-                        InsertBeforeField: "dolorem",
-                        Required: false,
+                        DisplayName: sdk.String("molestias"),
+                        InsertBeforeField: sdk.String("excepturi"),
+                        Required: sdk.Bool(false),
                     },
                     Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "culpa",
+                        Person: sdk.String("pariatur"),
                     },
                     SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities{
-                        CanDelete: false,
-                        CanDisable: false,
-                        CanEnable: false,
-                        CanUpdate: false,
+                        CanDelete: sdk.Bool(false),
+                        CanDisable: sdk.Bool(false),
+                        CanEnable: sdk.Bool(false),
+                        CanUpdate: sdk.Bool(false),
                     },
                     SelectionOptions: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput{
                         Choices: []shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "repellat",
+                                    Person: sdk.String("praesentium"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "mollitia",
+                                    Person: sdk.String("rem"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5818.5,
-                                            Blue: 2532.91,
-                                            Green: 4143.69,
-                                            Red: 4663.11,
+                                            Alpha: sdk.Float32(9167.23),
+                                            Blue: sdk.Float32(939.4),
+                                            Green: sdk.Float32(9211.58),
+                                            Red: sdk.Float32(5759.47),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 4746.97,
-                                            Blue: 2444.25,
-                                            Green: 6235.1,
-                                            Red: 1589.69,
+                                            Alpha: sdk.Float32(831.12),
+                                            Blue: sdk.Float32(9292.97),
+                                            Green: sdk.Float32(2777.18),
+                                            Red: sdk.Float32(3185.69),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 3380.07,
-                                            Blue: 1103.75,
-                                            Green: 6747.52,
-                                            Red: 6563.3,
+                                            Alpha: sdk.Float32(93.56),
+                                            Blue: sdk.Float32(6674.11),
+                                            Green: sdk.Float32(8423.42),
+                                            Red: sdk.Float32(1317.97),
                                         },
                                     },
-                                    BadgePriority: "enim",
+                                    BadgePriority: sdk.String("deserunt"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 1381.83,
-                                            Blue: 7783.46,
-                                            Green: 1965.82,
-                                            Red: 9495.72,
+                                            Alpha: sdk.Float32(7163.27),
+                                            Blue: sdk.Float32(8413.86),
+                                            Green: sdk.Float32(2894.06),
+                                            Red: sdk.Float32(2647.3),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3687.25,
-                                            Blue: 6625.27,
-                                            Green: 8209.94,
-                                            Red: 135.71,
+                                            Alpha: sdk.Float32(1831.91),
+                                            Blue: sdk.Float32(3978.21),
+                                            Green: sdk.Float32(5865.13),
+                                            Red: sdk.Float32(5528.22),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 971.01,
-                                            Blue: 6228.46,
-                                            Green: 8379.45,
-                                            Red: 6736.6,
+                                            Alpha: sdk.Float32(201.07),
+                                            Blue: sdk.Float32(1649.4),
+                                            Green: sdk.Float32(8289.4),
+                                            Red: sdk.Float32(3698.08),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "quasi",
+                                ID: sdk.String("02a94bb4-f63c-4969-a9a3-efa77dfb14cd"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 9719.45,
-                                            Blue: 9764.6,
-                                            Green: 8781.94,
-                                            Red: 4686.51,
+                                            Alpha: sdk.Float32(4118.2),
+                                            Blue: sdk.Float32(3965.06),
+                                            Green: sdk.Float32(6754.39),
+                                            Red: sdk.Float32(8811.04),
                                         },
-                                        PriorityOverride: "praesentium",
+                                        PriorityOverride: sdk.String("non"),
                                     },
-                                    Description: "voluptatibus",
-                                    DisplayName: "ipsa",
-                                    InsertBeforeChoice: "omnis",
+                                    Description: sdk.String("occaecati"),
+                                    DisplayName: sdk.String("enim"),
+                                    InsertBeforeChoice: sdk.String("accusamus"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "voluptate",
+                                    Person: sdk.String("delectus"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "cum",
+                                    Person: sdk.String("quidem"),
+                                },
+                            },
+                            shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
+                                AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
+                                },
+                                Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("provident"),
+                                },
+                                Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("nam"),
+                                },
+                                DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
+                                    BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
+                                        BackgroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(6596.69),
+                                            Blue: sdk.Float32(5013.24),
+                                            Green: sdk.Float32(5332.06),
+                                            Red: sdk.Float32(9560.84),
+                                        },
+                                        ForegroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(2305.33),
+                                            Blue: sdk.Float32(6439.9),
+                                            Green: sdk.Float32(3948.69),
+                                            Red: sdk.Float32(4238.55),
+                                        },
+                                        SoloColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(6188.09),
+                                            Blue: sdk.Float32(6063.93),
+                                            Green: sdk.Float32(4748.67),
+                                            Red: sdk.Float32(191.93),
+                                        },
+                                    },
+                                    BadgePriority: sdk.String("nihil"),
+                                    DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
+                                        BackgroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(3015.75),
+                                            Blue: sdk.Float32(7160.75),
+                                            Green: sdk.Float32(6601.74),
+                                            Red: sdk.Float32(2879.91),
+                                        },
+                                        ForegroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(2900.77),
+                                            Blue: sdk.Float32(3834.62),
+                                            Green: sdk.Float32(6180.16),
+                                            Red: sdk.Float32(7491.7),
+                                        },
+                                        SoloColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(4287.69),
+                                            Blue: sdk.Float32(8784.53),
+                                            Green: sdk.Float32(1354.74),
+                                            Red: sdk.Float32(1028.63),
+                                        },
+                                    },
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
+                                },
+                                ID: sdk.String("41959890-afa5-463e-a516-fe4c8b711e5b"),
+                                Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
+                                    DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
+                                    },
+                                },
+                                Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
+                                    BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
+                                        Color: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(4692.49),
+                                            Blue: sdk.Float32(9988.48),
+                                            Green: sdk.Float32(8411.4),
+                                            Red: sdk.Float32(1494.48),
+                                        },
+                                        PriorityOverride: sdk.String("saepe"),
+                                    },
+                                    Description: sdk.String("pariatur"),
+                                    DisplayName: sdk.String("accusantium"),
+                                    InsertBeforeChoice: sdk.String("consequuntur"),
+                                },
+                                Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("praesentium"),
+                                },
+                                SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
+                                },
+                                Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("natus"),
                                 },
                             },
                         },
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 19987,
+                            MaxEntries: sdk.Int(166847),
                         },
                     },
                     Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "doloremque",
+                        Person: sdk.String("sunt"),
                     },
                     UserOptions: &shared.GoogleAppsDriveLabelsV2betaFieldUserOptions{
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 441711,
+                            MaxEntries: sdk.Int(779051),
                         },
                     },
                 },
                 shared.GoogleAppsDriveLabelsV2betaFieldInput{
                     AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities{
-                        CanRead: false,
-                        CanSearch: false,
-                        CanWrite: false,
+                        CanRead: sdk.Bool(false),
+                        CanSearch: sdk.Bool(false),
+                        CanWrite: sdk.Bool(false),
                     },
                     Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "ut",
+                        Person: sdk.String("illum"),
                     },
                     DateOptions: &shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput{
-                        DateFormatType: "SHORT_DATE",
+                        DateFormatType: shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnumShortDate.ToPointer(),
                         MaxValue: &shared.GoogleTypeDate{
-                            Day: 120196,
-                            Month: 359444,
-                            Year: 296140,
+                            Day: sdk.Int(807319),
+                            Month: sdk.Int(411397),
+                            Year: sdk.Int(569101),
                         },
                         MinValue: &shared.GoogleTypeDate{
-                            Day: 480894,
-                            Month: 118727,
-                            Year: 688661,
+                            Day: sdk.Int(139972),
+                            Month: sdk.Int(407183),
+                            Year: sdk.Int(33222),
                         },
                     },
                     Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "enim",
+                        Person: sdk.String("ab"),
                     },
                     DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints{
-                        Disabled: false,
-                        HiddenInSearch: false,
-                        Required: false,
-                        ShownInApply: false,
+                        Disabled: sdk.Bool(false),
+                        HiddenInSearch: sdk.Bool(false),
+                        Required: sdk.Bool(false),
+                        ShownInApply: sdk.Bool(false),
                     },
                     Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                         DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                            HideInSearch: false,
-                            ShowInApply: false,
+                            HideInSearch: sdk.Bool(false),
+                            ShowInApply: sdk.Bool(false),
                         },
                     },
                     Properties: &shared.GoogleAppsDriveLabelsV2betaFieldProperties{
-                        DisplayName: "accusamus",
-                        InsertBeforeField: "commodi",
-                        Required: false,
+                        DisplayName: sdk.String("maiores"),
+                        InsertBeforeField: sdk.String("quidem"),
+                        Required: sdk.Bool(false),
                     },
                     Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "repudiandae",
+                        Person: sdk.String("ipsam"),
                     },
                     SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities{
-                        CanDelete: false,
-                        CanDisable: false,
-                        CanEnable: false,
-                        CanUpdate: false,
+                        CanDelete: sdk.Bool(false),
+                        CanDisable: sdk.Bool(false),
+                        CanEnable: sdk.Bool(false),
+                        CanUpdate: sdk.Bool(false),
                     },
                     SelectionOptions: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput{
                         Choices: []shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "ipsum",
+                                    Person: sdk.String("autem"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "quidem",
+                                    Person: sdk.String("nam"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5651.89,
-                                            Blue: 5666.02,
-                                            Green: 8651.03,
-                                            Red: 2653.89,
+                                            Alpha: sdk.Float32(505.88),
+                                            Blue: sdk.Float32(8663.83),
+                                            Green: sdk.Float32(3654.96),
+                                            Red: sdk.Float32(9755.22),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5089.69,
-                                            Blue: 5232.48,
-                                            Green: 9167.23,
-                                            Red: 939.4,
+                                            Alpha: sdk.Float32(166.27),
+                                            Blue: sdk.Float32(8558.04),
+                                            Green: sdk.Float32(2307.42),
+                                            Red: sdk.Float32(117.14),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 9211.58,
-                                            Blue: 5759.47,
-                                            Green: 831.12,
-                                            Red: 9292.97,
+                                            Alpha: sdk.Float32(7649.12),
+                                            Blue: sdk.Float32(3599.78),
+                                            Green: sdk.Float32(9441.24),
+                                            Red: sdk.Float32(7299.91),
                                         },
                                     },
-                                    BadgePriority: "incidunt",
+                                    BadgePriority: sdk.String("nobis"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3185.69,
-                                            Blue: 93.56,
-                                            Green: 6674.11,
-                                            Red: 8423.42,
+                                            Alpha: sdk.Float32(1716.29),
+                                            Blue: sdk.Float32(3394.04),
+                                            Green: sdk.Float32(5210.37),
+                                            Red: sdk.Float32(4895.49),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 1317.97,
-                                            Blue: 6471.74,
-                                            Green: 7163.27,
-                                            Red: 8413.86,
+                                            Alpha: sdk.Float32(543.38),
+                                            Blue: sdk.Float32(3389.85),
+                                            Green: sdk.Float32(1999.96),
+                                            Red: sdk.Float32(1794.9),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 2894.06,
-                                            Blue: 2647.3,
-                                            Green: 1831.91,
-                                            Red: 3978.21,
+                                            Alpha: sdk.Float32(185.21),
+                                            Blue: sdk.Float32(1709.86),
+                                            Green: sdk.Float32(7936.98),
+                                            Red: sdk.Float32(4634.51),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "cupiditate",
+                                ID: sdk.String("3d5fe9b9-0c28-4909-b3fe-49a8d9cbf486"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 5528.22,
-                                            Blue: 201.07,
-                                            Green: 1649.4,
-                                            Red: 8289.4,
+                                            Alpha: sdk.Float32(2123.9),
+                                            Blue: sdk.Float32(2098.43),
+                                            Green: sdk.Float32(2224.43),
+                                            Red: sdk.Float32(1861.93),
                                         },
-                                        PriorityOverride: "ipsam",
+                                        PriorityOverride: sdk.String("ipsum"),
                                     },
-                                    Description: "alias",
-                                    DisplayName: "fugit",
-                                    InsertBeforeChoice: "dolorum",
+                                    Description: sdk.String("hic"),
+                                    DisplayName: sdk.String("excepturi"),
+                                    InsertBeforeChoice: sdk.String("cum"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "excepturi",
+                                    Person: sdk.String("voluptate"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "tempora",
+                                    Person: sdk.String("dignissimos"),
+                                },
+                            },
+                            shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
+                                AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
+                                },
+                                Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("reiciendis"),
+                                },
+                                Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("amet"),
+                                },
+                                DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
+                                    BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
+                                        BackgroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(6805.45),
+                                            Blue: sdk.Float32(2543.56),
+                                            Green: sdk.Float32(852.95),
+                                            Red: sdk.Float32(580.29),
+                                        },
+                                        ForegroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(564.18),
+                                            Blue: sdk.Float32(4344.17),
+                                            Green: sdk.Float32(4878.38),
+                                            Red: sdk.Float32(3117.96),
+                                        },
+                                        SoloColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(8810.05),
+                                            Blue: sdk.Float32(6963.44),
+                                            Green: sdk.Float32(9764.05),
+                                            Red: sdk.Float32(3777.52),
+                                        },
+                                    },
+                                    BadgePriority: sdk.String("natus"),
+                                    DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
+                                        BackgroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(1796.03),
+                                            Blue: sdk.Float32(5424.99),
+                                            Green: sdk.Float32(246.78),
+                                            Red: sdk.Float32(8546.14),
+                                        },
+                                        ForegroundColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(672.49),
+                                            Blue: sdk.Float32(7438.35),
+                                            Green: sdk.Float32(6793.93),
+                                            Red: sdk.Float32(4785.96),
+                                        },
+                                        SoloColor: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(4536.97),
+                                            Blue: sdk.Float32(6770.82),
+                                            Green: sdk.Float32(5365.79),
+                                            Red: sdk.Float32(6070.45),
+                                        },
+                                    },
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
+                                },
+                                ID: sdk.String("ebf737ae-4203-4ce5-a6a9-5d8a0d446ce2"),
+                                Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
+                                    DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
+                                    },
+                                },
+                                Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
+                                    BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
+                                        Color: &shared.GoogleTypeColor{
+                                            Alpha: sdk.Float32(6798.8),
+                                            Blue: sdk.Float32(9527.92),
+                                            Green: sdk.Float32(4561.3),
+                                            Red: sdk.Float32(6874.88),
+                                        },
+                                        PriorityOverride: sdk.String("iusto"),
+                                    },
+                                    Description: sdk.String("ipsum"),
+                                    DisplayName: sdk.String("quisquam"),
+                                    InsertBeforeChoice: sdk.String("tenetur"),
+                                },
+                                Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("amet"),
+                                },
+                                SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
+                                },
+                                Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
+                                    Person: sdk.String("tempore"),
                                 },
                             },
                         },
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 703737,
+                            MaxEntries: sdk.Int(880298),
                         },
                     },
                     Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "tempore",
+                        Person: sdk.String("numquam"),
                     },
                     UserOptions: &shared.GoogleAppsDriveLabelsV2betaFieldUserOptions{
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 288476,
+                            MaxEntries: sdk.Int(313692),
                         },
                     },
                 },
                 shared.GoogleAppsDriveLabelsV2betaFieldInput{
                     AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldAppliedCapabilities{
-                        CanRead: false,
-                        CanSearch: false,
-                        CanWrite: false,
+                        CanRead: sdk.Bool(false),
+                        CanSearch: sdk.Bool(false),
+                        CanWrite: sdk.Bool(false),
                     },
                     Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "delectus",
+                        Person: sdk.String("dolorem"),
                     },
                     DateOptions: &shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsInput{
-                        DateFormatType: "LONG_DATE",
+                        DateFormatType: shared.GoogleAppsDriveLabelsV2betaFieldDateOptionsDateFormatTypeEnumShortDate.ToPointer(),
                         MaxValue: &shared.GoogleTypeDate{
-                            Day: 248753,
-                            Month: 756107,
-                            Year: 576157,
+                            Day: sdk.Int(518201),
+                            Month: sdk.Int(471752),
+                            Year: sdk.Int(25662),
                         },
                         MinValue: &shared.GoogleTypeDate{
-                            Day: 396098,
-                            Month: 592042,
-                            Year: 896039,
+                            Day: sdk.Int(711584),
+                            Month: sdk.Int(207470),
+                            Year: sdk.Int(153694),
                         },
                     },
                     Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "sint",
+                        Person: sdk.String("vel"),
                     },
                     DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldDisplayHints{
-                        Disabled: false,
-                        HiddenInSearch: false,
-                        Required: false,
-                        ShownInApply: false,
+                        Disabled: sdk.Bool(false),
+                        HiddenInSearch: sdk.Bool(false),
+                        Required: sdk.Bool(false),
+                        ShownInApply: sdk.Bool(false),
                     },
                     Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                         DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                            HideInSearch: false,
-                            ShowInApply: false,
+                            HideInSearch: sdk.Bool(false),
+                            ShowInApply: sdk.Bool(false),
                         },
                     },
                     Properties: &shared.GoogleAppsDriveLabelsV2betaFieldProperties{
-                        DisplayName: "officia",
-                        InsertBeforeField: "dolor",
-                        Required: false,
+                        DisplayName: sdk.String("libero"),
+                        InsertBeforeField: sdk.String("voluptas"),
+                        Required: sdk.Bool(false),
                     },
                     Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "debitis",
+                        Person: sdk.String("deserunt"),
                     },
                     SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSchemaCapabilities{
-                        CanDelete: false,
-                        CanDisable: false,
-                        CanEnable: false,
-                        CanUpdate: false,
+                        CanDelete: sdk.Bool(false),
+                        CanDisable: sdk.Bool(false),
+                        CanEnable: sdk.Bool(false),
+                        CanUpdate: sdk.Bool(false),
                     },
                     SelectionOptions: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsInput{
                         Choices: []shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "dolorum",
+                                    Person: sdk.String("ipsum"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "in",
+                                    Person: sdk.String("incidunt"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 4491.98,
-                                            Blue: 8464.09,
-                                            Green: 9785.71,
-                                            Red: 6994.79,
+                                            Alpha: sdk.Float32(1864.58),
+                                            Blue: sdk.Float32(5867.84),
+                                            Green: sdk.Float32(8075.81),
+                                            Red: sdk.Float32(8638.56),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 1162.02,
-                                            Blue: 2974.37,
-                                            Green: 7670.24,
-                                            Red: 8137.98,
+                                            Alpha: sdk.Float32(7470.8),
+                                            Blue: sdk.Float32(1175.31),
+                                            Green: sdk.Float32(6748.48),
+                                            Red: sdk.Float32(5173.79),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 4118.2,
-                                            Blue: 3965.06,
-                                            Green: 6754.39,
-                                            Red: 8811.04,
+                                            Alpha: sdk.Float32(2768.94),
+                                            Blue: sdk.Float32(1320.68),
+                                            Green: sdk.Float32(1749.09),
+                                            Red: sdk.Float32(7168.6),
                                         },
                                     },
-                                    BadgePriority: "non",
+                                    BadgePriority: sdk.String("facilis"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5812.73,
-                                            Blue: 3132.18,
-                                            Green: 8817.36,
-                                            Red: 9654.17,
+                                            Alpha: sdk.Float32(3960.6),
+                                            Blue: sdk.Float32(4631.5),
+                                            Green: sdk.Float32(5654.21),
+                                            Red: sdk.Float32(8404.29),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 6925.32,
-                                            Blue: 5884.65,
-                                            Green: 7252.55,
-                                            Red: 6596.69,
+                                            Alpha: sdk.Float32(1832.8),
+                                            Blue: sdk.Float32(2048.65),
+                                            Green: sdk.Float32(1448.47),
+                                            Red: sdk.Float32(1649.59),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 5013.24,
-                                            Blue: 5332.06,
-                                            Green: 9560.84,
-                                            Red: 2305.33,
+                                            Alpha: sdk.Float32(4880.56),
+                                            Blue: sdk.Float32(1248.33),
+                                            Green: sdk.Float32(3556.13),
+                                            Red: sdk.Float32(7220.81),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "deserunt",
+                                ID: sdk.String("f0cbb1e3-1b8b-490f-b443-a1108e0adcf4"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 3948.69,
-                                            Blue: 4238.55,
-                                            Green: 6188.09,
-                                            Red: 6063.93,
+                                            Alpha: sdk.Float32(7034.95),
+                                            Blue: sdk.Float32(5864.1),
+                                            Green: sdk.Float32(1816.31),
+                                            Red: sdk.Float32(639.55),
                                         },
-                                        PriorityOverride: "molestiae",
+                                        PriorityOverride: sdk.String("laudantium"),
                                     },
-                                    Description: "perferendis",
-                                    DisplayName: "nihil",
-                                    InsertBeforeChoice: "magnam",
+                                    Description: sdk.String("odio"),
+                                    DisplayName: sdk.String("occaecati"),
+                                    InsertBeforeChoice: sdk.String("voluptatibus"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "distinctio",
+                                    Person: sdk.String("quisquam"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "id",
+                                    Person: sdk.String("vero"),
                                 },
                             },
                             shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
                                 AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
+                                    CanRead: sdk.Bool(false),
+                                    CanSearch: sdk.Bool(false),
+                                    CanSelect: sdk.Bool(false),
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "labore",
+                                    Person: sdk.String("omnis"),
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "labore",
+                                    Person: sdk.String("quis"),
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3834.62,
-                                            Blue: 6180.16,
-                                            Green: 7491.7,
-                                            Red: 4287.69,
+                                            Alpha: sdk.Float32(2184.03),
+                                            Blue: sdk.Float32(9615.71),
+                                            Green: sdk.Float32(4551.69),
+                                            Red: sdk.Float32(2317.01),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 8784.53,
-                                            Blue: 1354.74,
-                                            Green: 1028.63,
-                                            Red: 2982.82,
+                                            Alpha: sdk.Float32(8788.7),
+                                            Blue: sdk.Float32(9493.19),
+                                            Green: sdk.Float32(4922.68),
+                                            Red: sdk.Float32(9413.78),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 923.73,
-                                            Blue: 5699.65,
-                                            Green: 3540.47,
-                                            Red: 5908.73,
+                                            Alpha: sdk.Float32(7155.61),
+                                            Blue: sdk.Float32(7992.03),
+                                            Green: sdk.Float32(4861.6),
+                                            Red: sdk.Float32(6304.48),
                                         },
                                     },
-                                    BadgePriority: "quos",
+                                    BadgePriority: sdk.String("facilis"),
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5743.25,
-                                            Blue: 336.25,
-                                            Green: 6532.01,
-                                            Red: 9689.62,
+                                            Alpha: sdk.Float32(8742.88),
+                                            Blue: sdk.Float32(4981.4),
+                                            Green: sdk.Float32(2930.2),
+                                            Red: sdk.Float32(8445.5),
                                         },
                                         ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 6521.03,
-                                            Blue: 3209.97,
-                                            Green: 4314.18,
-                                            Red: 2212.62,
+                                            Alpha: sdk.Float32(8489.44),
+                                            Blue: sdk.Float32(1943.42),
+                                            Green: sdk.Float32(6178.77),
+                                            Red: sdk.Float32(7733.26),
                                         },
                                         SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 8965.47,
-                                            Blue: 1412.64,
-                                            Green: 3675.62,
-                                            Red: 972.6,
+                                            Alpha: sdk.Float32(132.36),
+                                            Blue: sdk.Float32(9742.59),
+                                            Green: sdk.Float32(3472.33),
+                                            Red: sdk.Float32(8623.1),
                                         },
                                     },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
+                                    Disabled: sdk.Bool(false),
+                                    HiddenInSearch: sdk.Bool(false),
+                                    ShownInApply: sdk.Bool(false),
                                 },
-                                ID: "iure",
+                                ID: sdk.String("2cff7c70-a456-426d-8368-13f16d9f5fce"),
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
+                                        HideInSearch: sdk.Bool(false),
+                                        ShowInApply: sdk.Bool(false),
                                     },
                                 },
                                 Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
                                     BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
                                         Color: &shared.GoogleTypeColor{
-                                            Alpha: 9840.43,
-                                            Blue: 8919.24,
-                                            Green: 2603.41,
-                                            Red: 8061.94,
+                                            Alpha: sdk.Float32(4113.72),
+                                            Blue: sdk.Float32(7740.48),
+                                            Green: sdk.Float32(3592.71),
+                                            Red: sdk.Float32(3331.45),
                                         },
-                                        PriorityOverride: "deleniti",
+                                        PriorityOverride: sdk.String("aliquid"),
                                     },
-                                    Description: "facilis",
-                                    DisplayName: "in",
-                                    InsertBeforeChoice: "architecto",
+                                    Description: sdk.String("inventore"),
+                                    DisplayName: sdk.String("magnam"),
+                                    InsertBeforeChoice: sdk.String("ea"),
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "architecto",
+                                    Person: sdk.String("quo"),
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
+                                    CanDelete: sdk.Bool(false),
+                                    CanDisable: sdk.Bool(false),
+                                    CanEnable: sdk.Bool(false),
+                                    CanUpdate: sdk.Bool(false),
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "repudiandae",
-                                },
-                            },
-                            shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
-                                AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
-                                },
-                                Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "ullam",
-                                },
-                                Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "expedita",
-                                },
-                                DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
-                                    BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
-                                        BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 4692.49,
-                                            Blue: 9988.48,
-                                            Green: 8411.4,
-                                            Red: 1494.48,
-                                        },
-                                        ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 9046.48,
-                                            Blue: 8681.26,
-                                            Green: 375.59,
-                                            Red: 1624.93,
-                                        },
-                                        SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 5083.15,
-                                            Blue: 6155.6,
-                                            Green: 1668.47,
-                                            Red: 1238.2,
-                                        },
-                                    },
-                                    BadgePriority: "quo",
-                                    DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
-                                        BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 8480.09,
-                                            Blue: 8649.34,
-                                            Green: 8073.19,
-                                            Red: 4113.97,
-                                        },
-                                        ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 5691.01,
-                                            Blue: 1399.72,
-                                            Green: 4071.83,
-                                            Red: 332.22,
-                                        },
-                                        SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 691.67,
-                                            Blue: 9825.75,
-                                            Green: 6974.29,
-                                            Red: 3732.91,
-                                        },
-                                    },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
-                                },
-                                ID: "voluptate",
-                                Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
-                                    DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
-                                    },
-                                },
-                                Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
-                                    BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
-                                        Color: &shared.GoogleTypeColor{
-                                            Alpha: 4200.75,
-                                            Blue: 7220.56,
-                                            Green: 505.88,
-                                            Red: 8663.83,
-                                        },
-                                        PriorityOverride: "nemo",
-                                    },
-                                    Description: "voluptatibus",
-                                    DisplayName: "perferendis",
-                                    InsertBeforeChoice: "fugiat",
-                                },
-                                Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "amet",
-                                },
-                                SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
-                                },
-                                Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "aut",
-                                },
-                            },
-                            shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput{
-                                AppliedCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceAppliedCapabilities{
-                                    CanRead: false,
-                                    CanSearch: false,
-                                    CanSelect: false,
-                                },
-                                Creator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "cumque",
-                                },
-                                Disabler: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "corporis",
-                                },
-                                DisplayHints: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceDisplayHints{
-                                    BadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
-                                        BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 9441.24,
-                                            Blue: 7299.91,
-                                            Green: 7499.99,
-                                            Red: 1716.29,
-                                        },
-                                        ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3394.04,
-                                            Blue: 5210.37,
-                                            Green: 4895.49,
-                                            Red: 543.38,
-                                        },
-                                        SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 3389.85,
-                                            Blue: 1999.96,
-                                            Green: 1794.9,
-                                            Red: 185.21,
-                                        },
-                                    },
-                                    BadgePriority: "dolores",
-                                    DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2betaBadgeColors{
-                                        BackgroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 7936.98,
-                                            Blue: 4634.51,
-                                            Green: 2239.24,
-                                            Red: 8745.73,
-                                        },
-                                        ForegroundColor: &shared.GoogleTypeColor{
-                                            Alpha: 3453.52,
-                                            Blue: 9441.2,
-                                            Green: 9280.82,
-                                            Red: 6082.53,
-                                        },
-                                        SoloColor: &shared.GoogleTypeColor{
-                                            Alpha: 7044.15,
-                                            Blue: 5966.56,
-                                            Green: 318.38,
-                                            Red: 7836.45,
-                                        },
-                                    },
-                                    Disabled: false,
-                                    HiddenInSearch: false,
-                                    ShownInApply: false,
-                                },
-                                ID: "consequuntur",
-                                Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
-                                    DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                                        HideInSearch: false,
-                                        ShowInApply: false,
-                                    },
-                                },
-                                Properties: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceProperties{
-                                    BadgeConfig: &shared.GoogleAppsDriveLabelsV2betaBadgeConfig{
-                                        Color: &shared.GoogleTypeColor{
-                                            Alpha: 5000.26,
-                                            Blue: 6214.79,
-                                            Green: 503.7,
-                                            Red: 5772.29,
-                                        },
-                                        PriorityOverride: "rerum",
-                                    },
-                                    Description: "adipisci",
-                                    DisplayName: "asperiores",
-                                    InsertBeforeChoice: "earum",
-                                },
-                                Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "modi",
-                                },
-                                SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceSchemaCapabilities{
-                                    CanDelete: false,
-                                    CanDisable: false,
-                                    CanEnable: false,
-                                    CanUpdate: false,
-                                },
-                                Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                                    Person: "iste",
+                                    Person: sdk.String("consectetur"),
                                 },
                             },
                         },
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 679091,
+                            MaxEntries: sdk.Int(926213),
                         },
                     },
                     Updater: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                        Person: "deleniti",
+                        Person: sdk.String("aspernatur"),
                     },
                     UserOptions: &shared.GoogleAppsDriveLabelsV2betaFieldUserOptions{
                         ListOptions: &shared.GoogleAppsDriveLabelsV2betaFieldListOptions{
-                            MaxEntries: 864282,
+                            MaxEntries: sdk.Int(325310),
                         },
                     },
                 },
             },
-            LabelType: "SHARED",
-            LearnMoreURI: "nobis",
+            LabelType: shared.GoogleAppsDriveLabelsV2betaLabelLabelTypeEnumLabelTypeUnspecified.ToPointer(),
+            LearnMoreURI: sdk.String("a"),
             Lifecycle: &shared.GoogleAppsDriveLabelsV2betaLifecycleInput{
                 DisabledPolicy: &shared.GoogleAppsDriveLabelsV2betaLifecycleDisabledPolicy{
-                    HideInSearch: false,
-                    ShowInApply: false,
+                    HideInSearch: sdk.Bool(false),
+                    ShowInApply: sdk.Bool(false),
                 },
             },
             Properties: &shared.GoogleAppsDriveLabelsV2betaLabelProperties{
-                Description: "libero",
-                Title: "Dr.",
+                Description: sdk.String("libero"),
+                Title: sdk.String("Mr."),
             },
             Publisher: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                Person: "quaerat",
+                Person: sdk.String("aut"),
             },
             RevisionCreator: &shared.GoogleAppsDriveLabelsV2betaUserInfo{
-                Person: "quos",
+                Person: sdk.String("deleniti"),
             },
             SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2betaLabelSchemaCapabilities{
-                CanDelete: false,
-                CanDisable: false,
-                CanEnable: false,
-                CanUpdate: false,
+                CanDelete: sdk.Bool(false),
+                CanDisable: sdk.Bool(false),
+                CanEnable: sdk.Bool(false),
+                CanUpdate: sdk.Bool(false),
             },
         },
-        AccessToken: "aliquid",
-        Alt: "json",
-        Callback: "dolorem",
-        Fields: "dolor",
-        Key: "qui",
-        LanguageCode: "ipsum",
-        OauthToken: "hic",
-        PrettyPrint: false,
-        QuotaUser: "excepturi",
-        UploadType: "cum",
-        UploadProtocol: "voluptate",
-        UseAdminAccess: false,
-    }
-
-    ctx := context.Background()
-    res, err := s.Labels.DrivelabelsLabelsCreate(ctx, req)
+        AccessToken: sdk.String("impedit"),
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Callback: sdk.String("fugit"),
+        Fields: sdk.String("accusamus"),
+        Key: sdk.String("inventore"),
+        LanguageCode: sdk.String("non"),
+        OauthToken: sdk.String("et"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("dolorum"),
+        UploadType: sdk.String("laborum"),
+        UploadProtocol: sdk.String("placeat"),
+        UseAdminAccess: sdk.Bool(false),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -1109,30 +1107,30 @@ func main() {
 ## Available Resources and Operations
 
 
-### Labels
+### [Labels](docs/labels/README.md)
 
-* `DrivelabelsLabelsCreate` - Creates a new Label.
-* `DrivelabelsLabelsDelta` - Updates a single Label by applying a set of update requests resulting in a new draft revision. The batch update is all-or-nothing: If any of the update requests are invalid, no changes are applied. The resulting draft revision must be published before the changes may be used with Drive Items.
-* `DrivelabelsLabelsDisable` - Disable a published Label. Disabling a Label will result in a new disabled published revision based on the current published revision. If there is a draft revision, a new disabled draft revision will be created based on the latest draft revision. Older draft revisions will be deleted. Once disabled, a label may be deleted with `DeleteLabel`.
-* `DrivelabelsLabelsEnable` - Enable a disabled Label and restore it to its published state. This will result in a new published revision based on the current disabled published revision. If there is an existing disabled draft revision, a new revision will be created based on that draft and will be enabled.
-* `DrivelabelsLabelsList` - List labels.
-* `DrivelabelsLabelsPublish` - Publish all draft changes to the Label. Once published, the Label may not return to its draft state. See `google.apps.drive.labels.v2.Lifecycle` for more information. Publishing a Label will result in a new published revision. All previous draft revisions will be deleted. Previous published revisions will be kept but are subject to automated deletion as needed. Once published, some changes are no longer permitted. Generally, any change that would invalidate or cause new restrictions on existing metadata related to the Label will be rejected. For example, the following changes to a Label will be rejected after the Label is published: * The label cannot be directly deleted. It must be disabled first, then deleted. * Field.FieldType cannot be changed. * Changes to Field validation options cannot reject something that was previously accepted. * Reducing the max entries.
-* `DrivelabelsLabelsRevisionsLocksList` - Lists the LabelLocks on a Label.
-* `DrivelabelsLabelsRevisionsPermissionsBatchDelete` - Deletes Label permissions. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
-* `DrivelabelsLabelsRevisionsPermissionsBatchUpdate` - Updates Label permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
-* `DrivelabelsLabelsRevisionsPermissionsCreate` - Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
-* `DrivelabelsLabelsRevisionsPermissionsDelete` - Deletes a Label's permission. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
-* `DrivelabelsLabelsRevisionsPermissionsList` - Lists a Label's permissions.
-* `DrivelabelsLabelsRevisionsUpdatePermissions` - Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
-* `DrivelabelsLabelsUpdateLabelCopyMode` - Updates a Label's `CopyMode`. Changes to this policy are not revisioned, do not require publishing, and take effect immediately.
+* [DrivelabelsLabelsCreate](docs/labels/README.md#drivelabelslabelscreate) - Creates a new Label.
+* [DrivelabelsLabelsDelta](docs/labels/README.md#drivelabelslabelsdelta) - Updates a single Label by applying a set of update requests resulting in a new draft revision. The batch update is all-or-nothing: If any of the update requests are invalid, no changes are applied. The resulting draft revision must be published before the changes may be used with Drive Items.
+* [DrivelabelsLabelsDisable](docs/labels/README.md#drivelabelslabelsdisable) - Disable a published Label. Disabling a Label will result in a new disabled published revision based on the current published revision. If there is a draft revision, a new disabled draft revision will be created based on the latest draft revision. Older draft revisions will be deleted. Once disabled, a label may be deleted with `DeleteLabel`.
+* [DrivelabelsLabelsEnable](docs/labels/README.md#drivelabelslabelsenable) - Enable a disabled Label and restore it to its published state. This will result in a new published revision based on the current disabled published revision. If there is an existing disabled draft revision, a new revision will be created based on that draft and will be enabled.
+* [DrivelabelsLabelsList](docs/labels/README.md#drivelabelslabelslist) - List labels.
+* [DrivelabelsLabelsPublish](docs/labels/README.md#drivelabelslabelspublish) - Publish all draft changes to the Label. Once published, the Label may not return to its draft state. See `google.apps.drive.labels.v2.Lifecycle` for more information. Publishing a Label will result in a new published revision. All previous draft revisions will be deleted. Previous published revisions will be kept but are subject to automated deletion as needed. Once published, some changes are no longer permitted. Generally, any change that would invalidate or cause new restrictions on existing metadata related to the Label will be rejected. For example, the following changes to a Label will be rejected after the Label is published: * The label cannot be directly deleted. It must be disabled first, then deleted. * Field.FieldType cannot be changed. * Changes to Field validation options cannot reject something that was previously accepted. * Reducing the max entries.
+* [DrivelabelsLabelsRevisionsLocksList](docs/labels/README.md#drivelabelslabelsrevisionslockslist) - Lists the LabelLocks on a Label.
+* [DrivelabelsLabelsRevisionsPermissionsBatchDelete](docs/labels/README.md#drivelabelslabelsrevisionspermissionsbatchdelete) - Deletes Label permissions. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
+* [DrivelabelsLabelsRevisionsPermissionsBatchUpdate](docs/labels/README.md#drivelabelslabelsrevisionspermissionsbatchupdate) - Updates Label permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
+* [DrivelabelsLabelsRevisionsPermissionsCreate](docs/labels/README.md#drivelabelslabelsrevisionspermissionscreate) - Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
+* [DrivelabelsLabelsRevisionsPermissionsDelete](docs/labels/README.md#drivelabelslabelsrevisionspermissionsdelete) - Deletes a Label's permission. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
+* [DrivelabelsLabelsRevisionsPermissionsList](docs/labels/README.md#drivelabelslabelsrevisionspermissionslist) - Lists a Label's permissions.
+* [DrivelabelsLabelsRevisionsUpdatePermissions](docs/labels/README.md#drivelabelslabelsrevisionsupdatepermissions) - Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new Label Permission is created, otherwise the existing permission is updated. Permissions affect the Label resource as a whole, are not revisioned, and do not require publishing.
+* [DrivelabelsLabelsUpdateLabelCopyMode](docs/labels/README.md#drivelabelslabelsupdatelabelcopymode) - Updates a Label's `CopyMode`. Changes to this policy are not revisioned, do not require publishing, and take effect immediately.
 
-### Limits
+### [Limits](docs/limits/README.md)
 
-* `DrivelabelsLimitsGetLabel` - Get the constraints on the structure of a Label; such as, the maximum number of Fields allowed and maximum length of the label title.
+* [DrivelabelsLimitsGetLabel](docs/limits/README.md#drivelabelslimitsgetlabel) - Get the constraints on the structure of a Label; such as, the maximum number of Fields allowed and maximum length of the label title.
 
-### Users
+### [Users](docs/users/README.md)
 
-* `DrivelabelsUsersGetCapabilities` - Gets the user capabilities.
+* [DrivelabelsUsersGetCapabilities](docs/users/README.md#drivelabelsusersgetcapabilities) - Gets the user capabilities.
 <!-- End SDK Available Operations -->
 
 ### Maturity

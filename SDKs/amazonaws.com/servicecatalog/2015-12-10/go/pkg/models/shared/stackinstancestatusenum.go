@@ -15,20 +15,24 @@ const (
 	StackInstanceStatusEnumInoperable StackInstanceStatusEnum = "INOPERABLE"
 )
 
+func (e StackInstanceStatusEnum) ToPointer() *StackInstanceStatusEnum {
+	return &e
+}
+
 func (e *StackInstanceStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "CURRENT":
 		fallthrough
 	case "OUTDATED":
 		fallthrough
 	case "INOPERABLE":
-		*e = StackInstanceStatusEnum(s)
+		*e = StackInstanceStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for StackInstanceStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for StackInstanceStatusEnum: %v", v)
 	}
 }

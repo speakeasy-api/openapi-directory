@@ -18,12 +18,16 @@ const (
 	GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnumBlurredBackground              GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum = "BLURRED_BACKGROUND"
 )
 
+func (e GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum) ToPointer() *GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum {
+	return &e
+}
+
 func (e *GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "IMAGE_DISPLAY_OPTIONS_UNSPECIFIED":
 		fallthrough
 	case "GRAY":
@@ -33,10 +37,10 @@ func (e *GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptio
 	case "CROPPED":
 		fallthrough
 	case "BLURRED_BACKGROUND":
-		*e = GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum(s)
+		*e = GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum: %s", s)
+		return fmt.Errorf("invalid value for GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptionsEnum: %v", v)
 	}
 }
 

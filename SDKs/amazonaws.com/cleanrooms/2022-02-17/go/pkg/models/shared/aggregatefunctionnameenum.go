@@ -17,12 +17,16 @@ const (
 	AggregateFunctionNameEnumAvg           AggregateFunctionNameEnum = "AVG"
 )
 
+func (e AggregateFunctionNameEnum) ToPointer() *AggregateFunctionNameEnum {
+	return &e
+}
+
 func (e *AggregateFunctionNameEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUM":
 		fallthrough
 	case "SUM_DISTINCT":
@@ -32,9 +36,9 @@ func (e *AggregateFunctionNameEnum) UnmarshalJSON(data []byte) error {
 	case "COUNT_DISTINCT":
 		fallthrough
 	case "AVG":
-		*e = AggregateFunctionNameEnum(s)
+		*e = AggregateFunctionNameEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AggregateFunctionNameEnum: %s", s)
+		return fmt.Errorf("invalid value for AggregateFunctionNameEnum: %v", v)
 	}
 }

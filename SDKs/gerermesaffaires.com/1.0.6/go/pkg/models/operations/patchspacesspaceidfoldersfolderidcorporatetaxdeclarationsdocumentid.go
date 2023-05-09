@@ -18,12 +18,16 @@ const (
 	PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnumRegularization PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum = "regularization"
 )
 
+func (e PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum) ToPointer() *PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum {
+	return &e
+}
+
 func (e *PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "1st advance":
 		fallthrough
 	case "2nd advance":
@@ -33,10 +37,10 @@ func (e *PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequ
 	case "4th advance":
 		fallthrough
 	case "regularization":
-		*e = PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum(s)
+		*e = PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for PatchSpacesSpaceIDFoldersFolderIDCorporateTaxDeclarationsDocumentIDRequestBodyOrderEnum: %v", v)
 	}
 }
 

@@ -31,12 +31,16 @@ const (
 	AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnumTooManyRequests     AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum = "TooManyRequests"
 )
 
+func (e AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum) ToPointer() *AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BadRequest":
 		fallthrough
 	case "Conflict":
@@ -50,10 +54,10 @@ func (e *AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum) UnmarshalJSON(data
 	case "Unauthorized":
 		fallthrough
 	case "TooManyRequests":
-		*e = AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum(s)
+		*e = AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatarDefaultApplicationJSONErrorCodeEnum: %v", v)
 	}
 }
 
@@ -91,12 +95,16 @@ const (
 	AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnumTester    AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum = "tester"
 )
 
+func (e AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum) ToPointer() *AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "manager":
 		fallthrough
 	case "developer":
@@ -104,10 +112,10 @@ func (e *AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum) UnmarshalJSON(
 	case "viewer":
 		fallthrough
 	case "tester":
-		*e = AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum(s)
+		*e = AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONMemberPermissionsEnum: %v", v)
 	}
 }
 
@@ -120,21 +128,25 @@ const (
 	AppsDeleteAvatar200ApplicationJSONOriginEnumCodepush  AppsDeleteAvatar200ApplicationJSONOriginEnum = "codepush"
 )
 
+func (e AppsDeleteAvatar200ApplicationJSONOriginEnum) ToPointer() *AppsDeleteAvatar200ApplicationJSONOriginEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatar200ApplicationJSONOriginEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "appcenter":
 		fallthrough
 	case "hockeyapp":
 		fallthrough
 	case "codepush":
-		*e = AppsDeleteAvatar200ApplicationJSONOriginEnum(s)
+		*e = AppsDeleteAvatar200ApplicationJSONOriginEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOriginEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOriginEnum: %v", v)
 	}
 }
 
@@ -152,12 +164,16 @@ const (
 	AppsDeleteAvatar200ApplicationJSONOsEnumCustom  AppsDeleteAvatar200ApplicationJSONOsEnum = "Custom"
 )
 
+func (e AppsDeleteAvatar200ApplicationJSONOsEnum) ToPointer() *AppsDeleteAvatar200ApplicationJSONOsEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatar200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Android":
 		fallthrough
 	case "iOS":
@@ -173,10 +189,10 @@ func (e *AppsDeleteAvatar200ApplicationJSONOsEnum) UnmarshalJSON(data []byte) er
 	case "Linux":
 		fallthrough
 	case "Custom":
-		*e = AppsDeleteAvatar200ApplicationJSONOsEnum(s)
+		*e = AppsDeleteAvatar200ApplicationJSONOsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOsEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOsEnum: %v", v)
 	}
 }
 
@@ -188,19 +204,23 @@ const (
 	AppsDeleteAvatar200ApplicationJSONOwnerTypeEnumUser AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum = "user"
 )
 
+func (e AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum) ToPointer() *AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "org":
 		fallthrough
 	case "user":
-		*e = AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum(s)
+		*e = AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONOwnerTypeEnum: %v", v)
 	}
 }
 
@@ -238,12 +258,16 @@ const (
 	AppsDeleteAvatar200ApplicationJSONPlatformEnumCustom          AppsDeleteAvatar200ApplicationJSONPlatformEnum = "Custom"
 )
 
+func (e AppsDeleteAvatar200ApplicationJSONPlatformEnum) ToPointer() *AppsDeleteAvatar200ApplicationJSONPlatformEnum {
+	return &e
+}
+
 func (e *AppsDeleteAvatar200ApplicationJSONPlatformEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Java":
 		fallthrough
 	case "Objective-C-Swift":
@@ -267,10 +291,10 @@ func (e *AppsDeleteAvatar200ApplicationJSONPlatformEnum) UnmarshalJSON(data []by
 	case "Unknown":
 		fallthrough
 	case "Custom":
-		*e = AppsDeleteAvatar200ApplicationJSONPlatformEnum(s)
+		*e = AppsDeleteAvatar200ApplicationJSONPlatformEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONPlatformEnum: %s", s)
+		return fmt.Errorf("invalid value for AppsDeleteAvatar200ApplicationJSONPlatformEnum: %v", v)
 	}
 }
 

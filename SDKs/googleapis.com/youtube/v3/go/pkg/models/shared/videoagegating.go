@@ -17,12 +17,16 @@ const (
 	VideoAgeGatingVideoGameRatingEnumM17Plus VideoAgeGatingVideoGameRatingEnum = "m17Plus"
 )
 
+func (e VideoAgeGatingVideoGameRatingEnum) ToPointer() *VideoAgeGatingVideoGameRatingEnum {
+	return &e
+}
+
 func (e *VideoAgeGatingVideoGameRatingEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "anyone":
 		fallthrough
 	case "m15Plus":
@@ -30,10 +34,10 @@ func (e *VideoAgeGatingVideoGameRatingEnum) UnmarshalJSON(data []byte) error {
 	case "m16Plus":
 		fallthrough
 	case "m17Plus":
-		*e = VideoAgeGatingVideoGameRatingEnum(s)
+		*e = VideoAgeGatingVideoGameRatingEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VideoAgeGatingVideoGameRatingEnum: %s", s)
+		return fmt.Errorf("invalid value for VideoAgeGatingVideoGameRatingEnum: %v", v)
 	}
 }
 

@@ -21,12 +21,16 @@ const (
 	VisualFeaturesEnumBrands      VisualFeaturesEnum = "Brands"
 )
 
+func (e VisualFeaturesEnum) ToPointer() *VisualFeaturesEnum {
+	return &e
+}
+
 func (e *VisualFeaturesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImageType":
 		fallthrough
 	case "Faces":
@@ -44,9 +48,9 @@ func (e *VisualFeaturesEnum) UnmarshalJSON(data []byte) error {
 	case "Objects":
 		fallthrough
 	case "Brands":
-		*e = VisualFeaturesEnum(s)
+		*e = VisualFeaturesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VisualFeaturesEnum: %s", s)
+		return fmt.Errorf("invalid value for VisualFeaturesEnum: %v", v)
 	}
 }

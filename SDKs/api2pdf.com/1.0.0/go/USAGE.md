@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,18 +16,16 @@ func main() {
         }),
     )
 
-    req := shared.ChromeHTMLToPdfRequest{
-        FileName: "test.pdf",
-        HTML: "<p>Hello World</p>",
-        InlinePdf: true,
-        Options: &shared.ChromeAdvancedOptions{
-            Landscape: "true",
-            PrintBackground: false,
-        },
-    }
-
     ctx := context.Background()
-    res, err := s.HeadlessChrome.ChromeFromHTMLPost(ctx, req)
+    res, err := s.HeadlessChrome.ChromeFromHTMLPost(ctx, shared.ChromeHTMLToPdfRequest{
+        FileName: sdk.String("test.pdf"),
+        HTML: "<p>Hello World</p>",
+        InlinePdf: sdk.Bool(true),
+        Options: &shared.ChromeAdvancedOptions{
+            Landscape: sdk.String("true"),
+            PrintBackground: sdk.Bool(false),
+        },
+    })
     if err != nil {
         log.Fatal(err)
     }

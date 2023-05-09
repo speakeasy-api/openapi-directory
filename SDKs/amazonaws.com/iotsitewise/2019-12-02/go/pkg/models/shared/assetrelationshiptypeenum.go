@@ -13,16 +13,20 @@ const (
 	AssetRelationshipTypeEnumHierarchy AssetRelationshipTypeEnum = "HIERARCHY"
 )
 
+func (e AssetRelationshipTypeEnum) ToPointer() *AssetRelationshipTypeEnum {
+	return &e
+}
+
 func (e *AssetRelationshipTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HIERARCHY":
-		*e = AssetRelationshipTypeEnum(s)
+		*e = AssetRelationshipTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for AssetRelationshipTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for AssetRelationshipTypeEnum: %v", v)
 	}
 }

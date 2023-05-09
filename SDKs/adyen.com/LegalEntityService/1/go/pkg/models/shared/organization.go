@@ -17,19 +17,23 @@ const (
 	OrganizationTaxIDAbsenceReasonEnumBelowTaxThreshold OrganizationTaxIDAbsenceReasonEnum = "belowTaxThreshold"
 )
 
+func (e OrganizationTaxIDAbsenceReasonEnum) ToPointer() *OrganizationTaxIDAbsenceReasonEnum {
+	return &e
+}
+
 func (e *OrganizationTaxIDAbsenceReasonEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "industryExemption":
 		fallthrough
 	case "belowTaxThreshold":
-		*e = OrganizationTaxIDAbsenceReasonEnum(s)
+		*e = OrganizationTaxIDAbsenceReasonEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationTaxIDAbsenceReasonEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationTaxIDAbsenceReasonEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	OrganizationTypeEnumPrivateCompany           OrganizationTypeEnum = "privateCompany"
 )
 
+func (e OrganizationTypeEnum) ToPointer() *OrganizationTypeEnum {
+	return &e
+}
+
 func (e *OrganizationTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "associationIncorporated":
 		fallthrough
 	case "governmentalOrganization":
@@ -64,10 +72,10 @@ func (e *OrganizationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "partnershipIncorporated":
 		fallthrough
 	case "privateCompany":
-		*e = OrganizationTypeEnum(s)
+		*e = OrganizationTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OrganizationTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OrganizationTypeEnum: %v", v)
 	}
 }
 

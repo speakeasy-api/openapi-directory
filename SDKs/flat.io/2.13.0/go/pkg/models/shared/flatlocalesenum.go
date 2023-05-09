@@ -30,12 +30,16 @@ const (
 	FlatLocalesEnumZhHans FlatLocalesEnum = "zh-Hans"
 )
 
+func (e FlatLocalesEnum) ToPointer() *FlatLocalesEnum {
+	return &e
+}
+
 func (e *FlatLocalesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "en":
 		fallthrough
 	case "en-GB":
@@ -69,9 +73,9 @@ func (e *FlatLocalesEnum) UnmarshalJSON(data []byte) error {
 	case "tr":
 		fallthrough
 	case "zh-Hans":
-		*e = FlatLocalesEnum(s)
+		*e = FlatLocalesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for FlatLocalesEnum: %s", s)
+		return fmt.Errorf("invalid value for FlatLocalesEnum: %v", v)
 	}
 }

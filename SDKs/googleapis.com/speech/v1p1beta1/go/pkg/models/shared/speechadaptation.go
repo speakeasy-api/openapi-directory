@@ -2,13 +2,13 @@
 
 package shared
 
-// SpeechAdaptation - Speech adaptation configuration.
-type SpeechAdaptation struct {
+// SpeechAdaptationInput - Speech adaptation configuration.
+type SpeechAdaptationInput struct {
 	AbnfGrammar *ABNFGrammar `json:"abnfGrammar,omitempty"`
 	// A collection of custom classes. To specify the classes inline, leave the class' `name` blank and fill in the rest of its fields, giving it a unique `custom_class_id`. Refer to the inline defined class in phrase hints by its `custom_class_id`.
-	CustomClasses []CustomClass `json:"customClasses,omitempty"`
+	CustomClasses []CustomClassInput `json:"customClasses,omitempty"`
 	// A collection of phrase set resource names to use.
 	PhraseSetReferences []string `json:"phraseSetReferences,omitempty"`
 	// A collection of phrase sets. To specify the hints inline, leave the phrase set's `name` blank and fill in the rest of its fields. Any phrase set can use any custom class.
-	PhraseSets []PhraseSet `json:"phraseSets,omitempty"`
+	PhraseSets []PhraseSetInput `json:"phraseSets,omitempty"`
 }

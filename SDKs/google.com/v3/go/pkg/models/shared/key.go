@@ -18,12 +18,16 @@ const (
 	KeyDeviceTypeEnumTablet            KeyDeviceTypeEnum = "TABLET"
 )
 
+func (e KeyDeviceTypeEnum) ToPointer() *KeyDeviceTypeEnum {
+	return &e
+}
+
 func (e *KeyDeviceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEVICE_UNSPECIFIED":
 		fallthrough
 	case "DEVICE_UNKNOWN":
@@ -33,10 +37,10 @@ func (e *KeyDeviceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MOBILE":
 		fallthrough
 	case "TABLET":
-		*e = KeyDeviceTypeEnum(s)
+		*e = KeyDeviceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for KeyDeviceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for KeyDeviceTypeEnum: %v", v)
 	}
 }
 

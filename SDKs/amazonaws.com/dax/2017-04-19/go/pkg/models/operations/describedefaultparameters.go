@@ -16,17 +16,21 @@ const (
 	DescribeDefaultParametersXAmzTargetEnumAmazonDaxv3DescribeDefaultParameters DescribeDefaultParametersXAmzTargetEnum = "AmazonDAXV3.DescribeDefaultParameters"
 )
 
+func (e DescribeDefaultParametersXAmzTargetEnum) ToPointer() *DescribeDefaultParametersXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeDefaultParametersXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonDAXV3.DescribeDefaultParameters":
-		*e = DescribeDefaultParametersXAmzTargetEnum(s)
+		*e = DescribeDefaultParametersXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeDefaultParametersXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeDefaultParametersXAmzTargetEnum: %v", v)
 	}
 }
 

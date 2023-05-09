@@ -15,17 +15,21 @@ const (
 	POSTAssumeRoleWithWebIdentityActionEnumAssumeRoleWithWebIdentity POSTAssumeRoleWithWebIdentityActionEnum = "AssumeRoleWithWebIdentity"
 )
 
+func (e POSTAssumeRoleWithWebIdentityActionEnum) ToPointer() *POSTAssumeRoleWithWebIdentityActionEnum {
+	return &e
+}
+
 func (e *POSTAssumeRoleWithWebIdentityActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AssumeRoleWithWebIdentity":
-		*e = POSTAssumeRoleWithWebIdentityActionEnum(s)
+		*e = POSTAssumeRoleWithWebIdentityActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssumeRoleWithWebIdentityActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssumeRoleWithWebIdentityActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTAssumeRoleWithWebIdentityVersionEnumTwoThousandAndEleven0615 POSTAssumeRoleWithWebIdentityVersionEnum = "2011-06-15"
 )
 
+func (e POSTAssumeRoleWithWebIdentityVersionEnum) ToPointer() *POSTAssumeRoleWithWebIdentityVersionEnum {
+	return &e
+}
+
 func (e *POSTAssumeRoleWithWebIdentityVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-06-15":
-		*e = POSTAssumeRoleWithWebIdentityVersionEnum(s)
+		*e = POSTAssumeRoleWithWebIdentityVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTAssumeRoleWithWebIdentityVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTAssumeRoleWithWebIdentityVersionEnum: %v", v)
 	}
 }
 

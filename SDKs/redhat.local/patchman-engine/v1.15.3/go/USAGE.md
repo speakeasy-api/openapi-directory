@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.LatestPackageRequest{
-        PackageName: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.LatestPackage(ctx, req, operations.LatestPackageSecurity{
+    res, err := s.LatestPackage(ctx, operations.LatestPackageRequest{
+        PackageName: "corrupti",
+    }, operations.LatestPackageSecurity{
         RhIdentity: "YOUR_API_KEY_HERE",
     })
     if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETTerminateInstanceInAutoScalingGroupActionEnumTerminateInstanceInAutoScalingGroup GETTerminateInstanceInAutoScalingGroupActionEnum = "TerminateInstanceInAutoScalingGroup"
 )
 
+func (e GETTerminateInstanceInAutoScalingGroupActionEnum) ToPointer() *GETTerminateInstanceInAutoScalingGroupActionEnum {
+	return &e
+}
+
 func (e *GETTerminateInstanceInAutoScalingGroupActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TerminateInstanceInAutoScalingGroup":
-		*e = GETTerminateInstanceInAutoScalingGroupActionEnum(s)
+		*e = GETTerminateInstanceInAutoScalingGroupActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateInstanceInAutoScalingGroupActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateInstanceInAutoScalingGroupActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	GETTerminateInstanceInAutoScalingGroupVersionEnumTwoThousandAndEleven0101 GETTerminateInstanceInAutoScalingGroupVersionEnum = "2011-01-01"
 )
 
+func (e GETTerminateInstanceInAutoScalingGroupVersionEnum) ToPointer() *GETTerminateInstanceInAutoScalingGroupVersionEnum {
+	return &e
+}
+
 func (e *GETTerminateInstanceInAutoScalingGroupVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2011-01-01":
-		*e = GETTerminateInstanceInAutoScalingGroupVersionEnum(s)
+		*e = GETTerminateInstanceInAutoScalingGroupVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETTerminateInstanceInAutoScalingGroupVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETTerminateInstanceInAutoScalingGroupVersionEnum: %v", v)
 	}
 }
 

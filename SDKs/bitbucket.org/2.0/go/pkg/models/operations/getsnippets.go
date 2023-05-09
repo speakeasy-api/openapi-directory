@@ -24,21 +24,25 @@ const (
 	GetSnippetsRoleEnumMember      GetSnippetsRoleEnum = "member"
 )
 
+func (e GetSnippetsRoleEnum) ToPointer() *GetSnippetsRoleEnum {
+	return &e
+}
+
 func (e *GetSnippetsRoleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "owner":
 		fallthrough
 	case "contributor":
 		fallthrough
 	case "member":
-		*e = GetSnippetsRoleEnum(s)
+		*e = GetSnippetsRoleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetSnippetsRoleEnum: %s", s)
+		return fmt.Errorf("invalid value for GetSnippetsRoleEnum: %v", v)
 	}
 }
 

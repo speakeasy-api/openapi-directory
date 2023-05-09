@@ -16,17 +16,21 @@ const (
 	DisassociateKmsKeyXAmzTargetEnumLogs20140328DisassociateKmsKey DisassociateKmsKeyXAmzTargetEnum = "Logs_20140328.DisassociateKmsKey"
 )
 
+func (e DisassociateKmsKeyXAmzTargetEnum) ToPointer() *DisassociateKmsKeyXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisassociateKmsKeyXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Logs_20140328.DisassociateKmsKey":
-		*e = DisassociateKmsKeyXAmzTargetEnum(s)
+		*e = DisassociateKmsKeyXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisassociateKmsKeyXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisassociateKmsKeyXAmzTargetEnum: %v", v)
 	}
 }
 

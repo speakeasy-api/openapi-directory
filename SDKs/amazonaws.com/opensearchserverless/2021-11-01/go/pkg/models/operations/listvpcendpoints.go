@@ -16,17 +16,21 @@ const (
 	ListVpcEndpointsXAmzTargetEnumOpenSearchServerlessListVpcEndpoints ListVpcEndpointsXAmzTargetEnum = "OpenSearchServerless.ListVpcEndpoints"
 )
 
+func (e ListVpcEndpointsXAmzTargetEnum) ToPointer() *ListVpcEndpointsXAmzTargetEnum {
+	return &e
+}
+
 func (e *ListVpcEndpointsXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OpenSearchServerless.ListVpcEndpoints":
-		*e = ListVpcEndpointsXAmzTargetEnum(s)
+		*e = ListVpcEndpointsXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListVpcEndpointsXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ListVpcEndpointsXAmzTargetEnum: %v", v)
 	}
 }
 

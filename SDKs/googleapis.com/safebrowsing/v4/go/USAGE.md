@@ -2,36 +2,34 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.SafebrowsingEncodedFullHashesGetRequest{
-        DollarXgafv: "2",
-        AccessToken: "provident",
-        Alt: "proto",
-        Callback: "quibusdam",
-        ClientID: "unde",
-        ClientVersion: "nulla",
-        EncodedRequest: "corrupti",
-        Fields: "illum",
-        Key: "vel",
-        OauthToken: "error",
-        PrettyPrint: false,
-        QuotaUser: "deserunt",
-        UploadType: "suscipit",
-        UploadProtocol: "iure",
-    }
-
     ctx := context.Background()
-    res, err := s.EncodedFullHashes.SafebrowsingEncodedFullHashesGet(ctx, req)
+    res, err := s.EncodedFullHashes.SafebrowsingEncodedFullHashesGet(ctx, operations.SafebrowsingEncodedFullHashesGetRequest{
+        DollarXgafv: shared.XgafvEnumTwo.ToPointer(),
+        AccessToken: sdk.String("provident"),
+        Alt: shared.AltEnumProto.ToPointer(),
+        Callback: sdk.String("quibusdam"),
+        ClientID: sdk.String("unde"),
+        ClientVersion: sdk.String("nulla"),
+        EncodedRequest: "corrupti",
+        Fields: sdk.String("illum"),
+        Key: sdk.String("vel"),
+        OauthToken: sdk.String("error"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("deserunt"),
+        UploadType: sdk.String("suscipit"),
+        UploadProtocol: sdk.String("iure"),
+    })
     if err != nil {
         log.Fatal(err)
     }

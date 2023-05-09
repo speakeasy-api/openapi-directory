@@ -17,19 +17,23 @@ const (
 	ListPermissionsUserTypeEnumSsoGroup ListPermissionsUserTypeEnum = "SSO_GROUP"
 )
 
+func (e ListPermissionsUserTypeEnum) ToPointer() *ListPermissionsUserTypeEnum {
+	return &e
+}
+
 func (e *ListPermissionsUserTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SSO_USER":
 		fallthrough
 	case "SSO_GROUP":
-		*e = ListPermissionsUserTypeEnum(s)
+		*e = ListPermissionsUserTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ListPermissionsUserTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ListPermissionsUserTypeEnum: %v", v)
 	}
 }
 

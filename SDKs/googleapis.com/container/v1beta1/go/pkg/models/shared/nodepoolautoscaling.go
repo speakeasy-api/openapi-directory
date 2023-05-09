@@ -16,21 +16,25 @@ const (
 	NodePoolAutoscalingLocationPolicyEnumAny                       NodePoolAutoscalingLocationPolicyEnum = "ANY"
 )
 
+func (e NodePoolAutoscalingLocationPolicyEnum) ToPointer() *NodePoolAutoscalingLocationPolicyEnum {
+	return &e
+}
+
 func (e *NodePoolAutoscalingLocationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "LOCATION_POLICY_UNSPECIFIED":
 		fallthrough
 	case "BALANCED":
 		fallthrough
 	case "ANY":
-		*e = NodePoolAutoscalingLocationPolicyEnum(s)
+		*e = NodePoolAutoscalingLocationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for NodePoolAutoscalingLocationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for NodePoolAutoscalingLocationPolicyEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	DisableKeyRotationXAmzTargetEnumTrentServiceDisableKeyRotation DisableKeyRotationXAmzTargetEnum = "TrentService.DisableKeyRotation"
 )
 
+func (e DisableKeyRotationXAmzTargetEnum) ToPointer() *DisableKeyRotationXAmzTargetEnum {
+	return &e
+}
+
 func (e *DisableKeyRotationXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.DisableKeyRotation":
-		*e = DisableKeyRotationXAmzTargetEnum(s)
+		*e = DisableKeyRotationXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DisableKeyRotationXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DisableKeyRotationXAmzTargetEnum: %v", v)
 	}
 }
 

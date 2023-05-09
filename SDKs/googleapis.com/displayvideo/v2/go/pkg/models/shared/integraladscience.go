@@ -18,12 +18,16 @@ const (
 	IntegralAdScienceDisplayViewabilityEnumPerformanceViewability70          IntegralAdScienceDisplayViewabilityEnum = "PERFORMANCE_VIEWABILITY_70"
 )
 
+func (e IntegralAdScienceDisplayViewabilityEnum) ToPointer() *IntegralAdScienceDisplayViewabilityEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceDisplayViewabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PERFORMANCE_VIEWABILITY_UNSPECIFIED":
 		fallthrough
 	case "PERFORMANCE_VIEWABILITY_40":
@@ -33,10 +37,10 @@ func (e *IntegralAdScienceDisplayViewabilityEnum) UnmarshalJSON(data []byte) err
 	case "PERFORMANCE_VIEWABILITY_60":
 		fallthrough
 	case "PERFORMANCE_VIEWABILITY_70":
-		*e = IntegralAdScienceDisplayViewabilityEnum(s)
+		*e = IntegralAdScienceDisplayViewabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceDisplayViewabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceDisplayViewabilityEnum: %v", v)
 	}
 }
 
@@ -49,21 +53,25 @@ const (
 	IntegralAdScienceExcludedAdFraudRiskEnumSuspiciousActivityHmr         IntegralAdScienceExcludedAdFraudRiskEnum = "SUSPICIOUS_ACTIVITY_HMR"
 )
 
+func (e IntegralAdScienceExcludedAdFraudRiskEnum) ToPointer() *IntegralAdScienceExcludedAdFraudRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedAdFraudRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "SUSPICIOUS_ACTIVITY_UNSPECIFIED":
 		fallthrough
 	case "SUSPICIOUS_ACTIVITY_HR":
 		fallthrough
 	case "SUSPICIOUS_ACTIVITY_HMR":
-		*e = IntegralAdScienceExcludedAdFraudRiskEnum(s)
+		*e = IntegralAdScienceExcludedAdFraudRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAdFraudRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAdFraudRiskEnum: %v", v)
 	}
 }
 
@@ -76,21 +84,25 @@ const (
 	IntegralAdScienceExcludedAdultRiskEnumAdultHmr         IntegralAdScienceExcludedAdultRiskEnum = "ADULT_HMR"
 )
 
+func (e IntegralAdScienceExcludedAdultRiskEnum) ToPointer() *IntegralAdScienceExcludedAdultRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedAdultRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ADULT_UNSPECIFIED":
 		fallthrough
 	case "ADULT_HR":
 		fallthrough
 	case "ADULT_HMR":
-		*e = IntegralAdScienceExcludedAdultRiskEnum(s)
+		*e = IntegralAdScienceExcludedAdultRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAdultRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAdultRiskEnum: %v", v)
 	}
 }
 
@@ -103,21 +115,25 @@ const (
 	IntegralAdScienceExcludedAlcoholRiskEnumAlcoholHmr         IntegralAdScienceExcludedAlcoholRiskEnum = "ALCOHOL_HMR"
 )
 
+func (e IntegralAdScienceExcludedAlcoholRiskEnum) ToPointer() *IntegralAdScienceExcludedAlcoholRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedAlcoholRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ALCOHOL_UNSPECIFIED":
 		fallthrough
 	case "ALCOHOL_HR":
 		fallthrough
 	case "ALCOHOL_HMR":
-		*e = IntegralAdScienceExcludedAlcoholRiskEnum(s)
+		*e = IntegralAdScienceExcludedAlcoholRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAlcoholRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedAlcoholRiskEnum: %v", v)
 	}
 }
 
@@ -130,21 +146,25 @@ const (
 	IntegralAdScienceExcludedDrugsRiskEnumDrugsHmr         IntegralAdScienceExcludedDrugsRiskEnum = "DRUGS_HMR"
 )
 
+func (e IntegralAdScienceExcludedDrugsRiskEnum) ToPointer() *IntegralAdScienceExcludedDrugsRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedDrugsRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DRUGS_UNSPECIFIED":
 		fallthrough
 	case "DRUGS_HR":
 		fallthrough
 	case "DRUGS_HMR":
-		*e = IntegralAdScienceExcludedDrugsRiskEnum(s)
+		*e = IntegralAdScienceExcludedDrugsRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedDrugsRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedDrugsRiskEnum: %v", v)
 	}
 }
 
@@ -157,21 +177,25 @@ const (
 	IntegralAdScienceExcludedGamblingRiskEnumGamblingHmr         IntegralAdScienceExcludedGamblingRiskEnum = "GAMBLING_HMR"
 )
 
+func (e IntegralAdScienceExcludedGamblingRiskEnum) ToPointer() *IntegralAdScienceExcludedGamblingRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedGamblingRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GAMBLING_UNSPECIFIED":
 		fallthrough
 	case "GAMBLING_HR":
 		fallthrough
 	case "GAMBLING_HMR":
-		*e = IntegralAdScienceExcludedGamblingRiskEnum(s)
+		*e = IntegralAdScienceExcludedGamblingRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedGamblingRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedGamblingRiskEnum: %v", v)
 	}
 }
 
@@ -184,21 +208,25 @@ const (
 	IntegralAdScienceExcludedHateSpeechRiskEnumHateSpeechHmr         IntegralAdScienceExcludedHateSpeechRiskEnum = "HATE_SPEECH_HMR"
 )
 
+func (e IntegralAdScienceExcludedHateSpeechRiskEnum) ToPointer() *IntegralAdScienceExcludedHateSpeechRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedHateSpeechRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "HATE_SPEECH_UNSPECIFIED":
 		fallthrough
 	case "HATE_SPEECH_HR":
 		fallthrough
 	case "HATE_SPEECH_HMR":
-		*e = IntegralAdScienceExcludedHateSpeechRiskEnum(s)
+		*e = IntegralAdScienceExcludedHateSpeechRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedHateSpeechRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedHateSpeechRiskEnum: %v", v)
 	}
 }
 
@@ -211,21 +239,25 @@ const (
 	IntegralAdScienceExcludedIllegalDownloadsRiskEnumIllegalDownloadsHmr         IntegralAdScienceExcludedIllegalDownloadsRiskEnum = "ILLEGAL_DOWNLOADS_HMR"
 )
 
+func (e IntegralAdScienceExcludedIllegalDownloadsRiskEnum) ToPointer() *IntegralAdScienceExcludedIllegalDownloadsRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedIllegalDownloadsRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ILLEGAL_DOWNLOADS_UNSPECIFIED":
 		fallthrough
 	case "ILLEGAL_DOWNLOADS_HR":
 		fallthrough
 	case "ILLEGAL_DOWNLOADS_HMR":
-		*e = IntegralAdScienceExcludedIllegalDownloadsRiskEnum(s)
+		*e = IntegralAdScienceExcludedIllegalDownloadsRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedIllegalDownloadsRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedIllegalDownloadsRiskEnum: %v", v)
 	}
 }
 
@@ -238,21 +270,25 @@ const (
 	IntegralAdScienceExcludedOffensiveLanguageRiskEnumOffensiveLanguageHmr         IntegralAdScienceExcludedOffensiveLanguageRiskEnum = "OFFENSIVE_LANGUAGE_HMR"
 )
 
+func (e IntegralAdScienceExcludedOffensiveLanguageRiskEnum) ToPointer() *IntegralAdScienceExcludedOffensiveLanguageRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedOffensiveLanguageRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "OFFENSIVE_LANGUAGE_UNSPECIFIED":
 		fallthrough
 	case "OFFENSIVE_LANGUAGE_HR":
 		fallthrough
 	case "OFFENSIVE_LANGUAGE_HMR":
-		*e = IntegralAdScienceExcludedOffensiveLanguageRiskEnum(s)
+		*e = IntegralAdScienceExcludedOffensiveLanguageRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedOffensiveLanguageRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedOffensiveLanguageRiskEnum: %v", v)
 	}
 }
 
@@ -265,21 +301,25 @@ const (
 	IntegralAdScienceExcludedViolenceRiskEnumViolenceHmr         IntegralAdScienceExcludedViolenceRiskEnum = "VIOLENCE_HMR"
 )
 
+func (e IntegralAdScienceExcludedViolenceRiskEnum) ToPointer() *IntegralAdScienceExcludedViolenceRiskEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceExcludedViolenceRiskEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIOLENCE_UNSPECIFIED":
 		fallthrough
 	case "VIOLENCE_HR":
 		fallthrough
 	case "VIOLENCE_HMR":
-		*e = IntegralAdScienceExcludedViolenceRiskEnum(s)
+		*e = IntegralAdScienceExcludedViolenceRiskEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceExcludedViolenceRiskEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceExcludedViolenceRiskEnum: %v", v)
 	}
 }
 
@@ -297,12 +337,16 @@ const (
 	IntegralAdScienceTraqScoreOptionEnumTraq1000        IntegralAdScienceTraqScoreOptionEnum = "TRAQ_1000"
 )
 
+func (e IntegralAdScienceTraqScoreOptionEnum) ToPointer() *IntegralAdScienceTraqScoreOptionEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceTraqScoreOptionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TRAQ_UNSPECIFIED":
 		fallthrough
 	case "TRAQ_250":
@@ -318,10 +362,10 @@ func (e *IntegralAdScienceTraqScoreOptionEnum) UnmarshalJSON(data []byte) error 
 	case "TRAQ_875":
 		fallthrough
 	case "TRAQ_1000":
-		*e = IntegralAdScienceTraqScoreOptionEnum(s)
+		*e = IntegralAdScienceTraqScoreOptionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceTraqScoreOptionEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceTraqScoreOptionEnum: %v", v)
 	}
 }
 
@@ -336,12 +380,16 @@ const (
 	IntegralAdScienceVideoViewabilityEnumVideoViewability70          IntegralAdScienceVideoViewabilityEnum = "VIDEO_VIEWABILITY_70"
 )
 
+func (e IntegralAdScienceVideoViewabilityEnum) ToPointer() *IntegralAdScienceVideoViewabilityEnum {
+	return &e
+}
+
 func (e *IntegralAdScienceVideoViewabilityEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VIDEO_VIEWABILITY_UNSPECIFIED":
 		fallthrough
 	case "VIDEO_VIEWABILITY_40":
@@ -351,10 +399,10 @@ func (e *IntegralAdScienceVideoViewabilityEnum) UnmarshalJSON(data []byte) error
 	case "VIDEO_VIEWABILITY_60":
 		fallthrough
 	case "VIDEO_VIEWABILITY_70":
-		*e = IntegralAdScienceVideoViewabilityEnum(s)
+		*e = IntegralAdScienceVideoViewabilityEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IntegralAdScienceVideoViewabilityEnum: %s", s)
+		return fmt.Errorf("invalid value for IntegralAdScienceVideoViewabilityEnum: %v", v)
 	}
 }
 

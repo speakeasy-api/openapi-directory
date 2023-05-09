@@ -17,12 +17,16 @@ const (
 	ProductOptionFieldsOptionTypeEnumFile   ProductOptionFieldsOptionTypeEnum = "file"
 )
 
+func (e ProductOptionFieldsOptionTypeEnum) ToPointer() *ProductOptionFieldsOptionTypeEnum {
+	return &e
+}
+
 func (e *ProductOptionFieldsOptionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "option":
 		fallthrough
 	case "input":
@@ -30,10 +34,10 @@ func (e *ProductOptionFieldsOptionTypeEnum) UnmarshalJSON(data []byte) error {
 	case "text":
 		fallthrough
 	case "file":
-		*e = ProductOptionFieldsOptionTypeEnum(s)
+		*e = ProductOptionFieldsOptionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ProductOptionFieldsOptionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for ProductOptionFieldsOptionTypeEnum: %v", v)
 	}
 }
 

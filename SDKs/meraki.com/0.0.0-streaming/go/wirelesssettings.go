@@ -34,7 +34,10 @@ func newWirelessSettings(defaultClient, securityClient HTTPClient, serverURL, la
 // Return the wireless settings for a network
 func (s *wirelessSettings) GetNetworkWirelessSettings(ctx context.Context, request operations.GetNetworkWirelessSettingsRequest) (*operations.GetNetworkWirelessSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -79,7 +82,10 @@ func (s *wirelessSettings) GetNetworkWirelessSettings(ctx context.Context, reque
 // Update the wireless settings for a network
 func (s *wirelessSettings) UpdateNetworkWirelessSettings(ctx context.Context, request operations.UpdateNetworkWirelessSettingsRequest) (*operations.UpdateNetworkWirelessSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/wireless/settings", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

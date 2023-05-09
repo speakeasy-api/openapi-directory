@@ -24,21 +24,25 @@ const (
 	UpdateNetworkSiteToSiteVpnRequestBodyModeEnumSpoke UpdateNetworkSiteToSiteVpnRequestBodyModeEnum = "spoke"
 )
 
+func (e UpdateNetworkSiteToSiteVpnRequestBodyModeEnum) ToPointer() *UpdateNetworkSiteToSiteVpnRequestBodyModeEnum {
+	return &e
+}
+
 func (e *UpdateNetworkSiteToSiteVpnRequestBodyModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hub":
 		fallthrough
 	case "none":
 		fallthrough
 	case "spoke":
-		*e = UpdateNetworkSiteToSiteVpnRequestBodyModeEnum(s)
+		*e = UpdateNetworkSiteToSiteVpnRequestBodyModeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for UpdateNetworkSiteToSiteVpnRequestBodyModeEnum: %s", s)
+		return fmt.Errorf("invalid value for UpdateNetworkSiteToSiteVpnRequestBodyModeEnum: %v", v)
 	}
 }
 

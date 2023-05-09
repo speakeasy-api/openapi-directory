@@ -38,12 +38,16 @@ const (
 	ExportableLambdaFunctionFieldEnumRecommendationOptionsEstimatedMonthlySavingsValue                  ExportableLambdaFunctionFieldEnum = "RecommendationOptionsEstimatedMonthlySavingsValue"
 )
 
+func (e ExportableLambdaFunctionFieldEnum) ToPointer() *ExportableLambdaFunctionFieldEnum {
+	return &e
+}
+
 func (e *ExportableLambdaFunctionFieldEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AccountId":
 		fallthrough
 	case "FunctionArn":
@@ -95,9 +99,9 @@ func (e *ExportableLambdaFunctionFieldEnum) UnmarshalJSON(data []byte) error {
 	case "RecommendationOptionsEstimatedMonthlySavingsCurrency":
 		fallthrough
 	case "RecommendationOptionsEstimatedMonthlySavingsValue":
-		*e = ExportableLambdaFunctionFieldEnum(s)
+		*e = ExportableLambdaFunctionFieldEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportableLambdaFunctionFieldEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportableLambdaFunctionFieldEnum: %v", v)
 	}
 }

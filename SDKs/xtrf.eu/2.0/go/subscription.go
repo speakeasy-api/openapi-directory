@@ -195,7 +195,10 @@ func (s *subscription) Subscribe(ctx context.Context, request shared.Subscriptio
 // Unsubscribe from job status changed event
 func (s *subscription) Unsubscribe(ctx context.Context, request operations.UnsubscribeRequest) (*operations.UnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/subscription/{subscriptionId}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/subscription/{subscriptionId}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

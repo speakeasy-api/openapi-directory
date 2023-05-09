@@ -27,12 +27,16 @@ const (
 	DatadogConnectorOperatorEnumNoOp                DatadogConnectorOperatorEnum = "NO_OP"
 )
 
+func (e DatadogConnectorOperatorEnum) ToPointer() *DatadogConnectorOperatorEnum {
+	return &e
+}
+
 func (e *DatadogConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PROJECTION":
 		fallthrough
 	case "BETWEEN":
@@ -62,9 +66,9 @@ func (e *DatadogConnectorOperatorEnum) UnmarshalJSON(data []byte) error {
 	case "VALIDATE_NUMERIC":
 		fallthrough
 	case "NO_OP":
-		*e = DatadogConnectorOperatorEnum(s)
+		*e = DatadogConnectorOperatorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DatadogConnectorOperatorEnum: %s", s)
+		return fmt.Errorf("invalid value for DatadogConnectorOperatorEnum: %v", v)
 	}
 }

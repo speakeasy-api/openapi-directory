@@ -24,20 +24,24 @@ const (
 	WebhookDeliveryStatusEnumEnumBadResponseCode WebhookDeliveryStatusEnumEnum = "BAD_RESPONSE_CODE"
 )
 
+func (e WebhookDeliveryStatusEnumEnum) ToPointer() *WebhookDeliveryStatusEnumEnum {
+	return &e
+}
+
 func (e *WebhookDeliveryStatusEnumEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DELIVERED":
 		fallthrough
 	case "UNDELIVERABLE":
 		fallthrough
 	case "BAD_RESPONSE_CODE":
-		*e = WebhookDeliveryStatusEnumEnum(s)
+		*e = WebhookDeliveryStatusEnumEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for WebhookDeliveryStatusEnumEnum: %s", s)
+		return fmt.Errorf("invalid value for WebhookDeliveryStatusEnumEnum: %v", v)
 	}
 }

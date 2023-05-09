@@ -23,21 +23,25 @@ const (
 	GetAllAccountsProviderEnumWhatsapp        GetAllAccountsProviderEnum = "whatsapp"
 )
 
+func (e GetAllAccountsProviderEnum) ToPointer() *GetAllAccountsProviderEnum {
+	return &e
+}
+
 func (e *GetAllAccountsProviderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "messenger":
 		fallthrough
 	case "viber_service_msg":
 		fallthrough
 	case "whatsapp":
-		*e = GetAllAccountsProviderEnum(s)
+		*e = GetAllAccountsProviderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetAllAccountsProviderEnum: %s", s)
+		return fmt.Errorf("invalid value for GetAllAccountsProviderEnum: %v", v)
 	}
 }
 

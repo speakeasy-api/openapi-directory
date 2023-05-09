@@ -22,15 +22,24 @@ const (
 	PayoutScheduleResponseScheduleEnumHold                           PayoutScheduleResponseScheduleEnum = "HOLD"
 	PayoutScheduleResponseScheduleEnumMonthly                        PayoutScheduleResponseScheduleEnum = "MONTHLY"
 	PayoutScheduleResponseScheduleEnumWeekly                         PayoutScheduleResponseScheduleEnum = "WEEKLY"
+	PayoutScheduleResponseScheduleEnumWeeklyMonToFriAu               PayoutScheduleResponseScheduleEnum = "WEEKLY_MON_TO_FRI_AU"
+	PayoutScheduleResponseScheduleEnumWeeklyMonToFriEu               PayoutScheduleResponseScheduleEnum = "WEEKLY_MON_TO_FRI_EU"
+	PayoutScheduleResponseScheduleEnumWeeklyMonToFriUs               PayoutScheduleResponseScheduleEnum = "WEEKLY_MON_TO_FRI_US"
 	PayoutScheduleResponseScheduleEnumWeeklyOnTueFriMidnight         PayoutScheduleResponseScheduleEnum = "WEEKLY_ON_TUE_FRI_MIDNIGHT"
+	PayoutScheduleResponseScheduleEnumWeeklySunToThuAu               PayoutScheduleResponseScheduleEnum = "WEEKLY_SUN_TO_THU_AU"
+	PayoutScheduleResponseScheduleEnumWeeklySunToThuUs               PayoutScheduleResponseScheduleEnum = "WEEKLY_SUN_TO_THU_US"
 )
 
+func (e PayoutScheduleResponseScheduleEnum) ToPointer() *PayoutScheduleResponseScheduleEnum {
+	return &e
+}
+
 func (e *PayoutScheduleResponseScheduleEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT":
 		fallthrough
 	case "DAILY":
@@ -49,11 +58,21 @@ func (e *PayoutScheduleResponseScheduleEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "WEEKLY":
 		fallthrough
+	case "WEEKLY_MON_TO_FRI_AU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_EU":
+		fallthrough
+	case "WEEKLY_MON_TO_FRI_US":
+		fallthrough
 	case "WEEKLY_ON_TUE_FRI_MIDNIGHT":
-		*e = PayoutScheduleResponseScheduleEnum(s)
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_AU":
+		fallthrough
+	case "WEEKLY_SUN_TO_THU_US":
+		*e = PayoutScheduleResponseScheduleEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PayoutScheduleResponseScheduleEnum: %s", s)
+		return fmt.Errorf("invalid value for PayoutScheduleResponseScheduleEnum: %v", v)
 	}
 }
 

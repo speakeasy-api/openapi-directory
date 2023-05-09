@@ -17,12 +17,16 @@ const (
 	OutputConfigurationContainerDigitalOutputNoConnectionActionEnumSetPwmValue OutputConfigurationContainerDigitalOutputNoConnectionActionEnum = "SetPwmValue"
 )
 
+func (e OutputConfigurationContainerDigitalOutputNoConnectionActionEnum) ToPointer() *OutputConfigurationContainerDigitalOutputNoConnectionActionEnum {
+	return &e
+}
+
 func (e *OutputConfigurationContainerDigitalOutputNoConnectionActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Nothing":
 		fallthrough
 	case "TurnOff":
@@ -30,10 +34,10 @@ func (e *OutputConfigurationContainerDigitalOutputNoConnectionActionEnum) Unmars
 	case "TurnOn":
 		fallthrough
 	case "SetPwmValue":
-		*e = OutputConfigurationContainerDigitalOutputNoConnectionActionEnum(s)
+		*e = OutputConfigurationContainerDigitalOutputNoConnectionActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputConfigurationContainerDigitalOutputNoConnectionActionEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputConfigurationContainerDigitalOutputNoConnectionActionEnum: %v", v)
 	}
 }
 
@@ -45,19 +49,23 @@ const (
 	OutputConfigurationContainerS0PulseValueEnumPulseValue10000Kwh OutputConfigurationContainerS0PulseValueEnum = "PulseValue10000Kwh"
 )
 
+func (e OutputConfigurationContainerS0PulseValueEnum) ToPointer() *OutputConfigurationContainerS0PulseValueEnum {
+	return &e
+}
+
 func (e *OutputConfigurationContainerS0PulseValueEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PulseValue1000Kwh":
 		fallthrough
 	case "PulseValue10000Kwh":
-		*e = OutputConfigurationContainerS0PulseValueEnum(s)
+		*e = OutputConfigurationContainerS0PulseValueEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputConfigurationContainerS0PulseValueEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputConfigurationContainerS0PulseValueEnum: %v", v)
 	}
 }
 
@@ -74,12 +82,16 @@ const (
 	OutputConfigurationContainerTypeEnumDisabled                        OutputConfigurationContainerTypeEnum = "Disabled"
 )
 
+func (e OutputConfigurationContainerTypeEnum) ToPointer() *OutputConfigurationContainerTypeEnum {
+	return &e
+}
+
 func (e *OutputConfigurationContainerTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ImpulseOutputActiveEnergy":
 		fallthrough
 	case "ImpulseOutputActiveEnergyImport":
@@ -93,10 +105,10 @@ func (e *OutputConfigurationContainerTypeEnum) UnmarshalJSON(data []byte) error 
 	case "AnalogPwmSignalOutput":
 		fallthrough
 	case "Disabled":
-		*e = OutputConfigurationContainerTypeEnum(s)
+		*e = OutputConfigurationContainerTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OutputConfigurationContainerTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for OutputConfigurationContainerTypeEnum: %v", v)
 	}
 }
 

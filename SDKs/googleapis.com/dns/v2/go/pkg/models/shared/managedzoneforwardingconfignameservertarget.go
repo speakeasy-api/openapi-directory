@@ -15,19 +15,23 @@ const (
 	ManagedZoneForwardingConfigNameServerTargetForwardingPathEnumPrivate ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum = "PRIVATE"
 )
 
+func (e ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum) ToPointer() *ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum {
+	return &e
+}
+
 func (e *ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "PRIVATE":
-		*e = ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum(s)
+		*e = ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum: %s", s)
+		return fmt.Errorf("invalid value for ManagedZoneForwardingConfigNameServerTargetForwardingPathEnum: %v", v)
 	}
 }
 

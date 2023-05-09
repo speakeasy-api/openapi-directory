@@ -59,12 +59,16 @@ const (
 	APIResponseObjectStatusCodeEnumHTTPVersionNotSupported      APIResponseObjectStatusCodeEnum = "HttpVersionNotSupported"
 )
 
+func (e APIResponseObjectStatusCodeEnum) ToPointer() *APIResponseObjectStatusCodeEnum {
+	return &e
+}
+
 func (e *APIResponseObjectStatusCodeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "Continue":
 		fallthrough
 	case "SwitchingProtocols":
@@ -158,10 +162,10 @@ func (e *APIResponseObjectStatusCodeEnum) UnmarshalJSON(data []byte) error {
 	case "GatewayTimeout":
 		fallthrough
 	case "HttpVersionNotSupported":
-		*e = APIResponseObjectStatusCodeEnum(s)
+		*e = APIResponseObjectStatusCodeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for APIResponseObjectStatusCodeEnum: %s", s)
+		return fmt.Errorf("invalid value for APIResponseObjectStatusCodeEnum: %v", v)
 	}
 }
 

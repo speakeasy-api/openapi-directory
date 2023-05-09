@@ -20,12 +20,16 @@ const (
 	DevEnvironmentStatusEnumDeleted  DevEnvironmentStatusEnum = "DELETED"
 )
 
+func (e DevEnvironmentStatusEnum) ToPointer() *DevEnvironmentStatusEnum {
+	return &e
+}
+
 func (e *DevEnvironmentStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PENDING":
 		fallthrough
 	case "RUNNING":
@@ -41,9 +45,9 @@ func (e *DevEnvironmentStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETED":
-		*e = DevEnvironmentStatusEnum(s)
+		*e = DevEnvironmentStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DevEnvironmentStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for DevEnvironmentStatusEnum: %v", v)
 	}
 }

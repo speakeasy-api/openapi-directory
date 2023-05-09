@@ -19,12 +19,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnumPriceCapacityOptimized       RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum = "priceCapacityOptimized"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lowestPrice":
 		fallthrough
 	case "diversified":
@@ -34,10 +38,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum) Un
 	case "capacityOptimizedPrioritized":
 		fallthrough
 	case "priceCapacityOptimized":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigAllocationStrategyEnum: %v", v)
 	}
 }
 
@@ -49,19 +53,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnumDefault       RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum = "default"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "noTermination":
 		fallthrough
 	case "default":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigExcessCapacityTerminationPolicyEnum: %v", v)
 	}
 }
 
@@ -74,21 +82,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnumTerminate RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum = "terminate"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hibernate":
 		fallthrough
 	case "stop":
 		fallthrough
 	case "terminate":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigInstanceInterruptionBehaviorEnum: %v", v)
 	}
 }
 
@@ -105,12 +117,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnumGp3      RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum = "gp3"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "standard":
 		fallthrough
 	case "io1":
@@ -124,10 +140,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockD
 	case "st1":
 		fallthrough
 	case "gp3":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsBlockDeviceMappingsEbsVolumeTypeEnum: %v", v)
 	}
 }
 
@@ -173,12 +189,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnumXilinx            RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -186,10 +206,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstan
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -207,12 +227,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnumK520          RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -230,10 +254,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstan
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -251,21 +275,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnumInference RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -278,21 +306,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -311,21 +343,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -337,21 +373,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnumAmazonWebServices RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -362,19 +402,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnumPrevious RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -387,21 +431,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -412,19 +460,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnumSsd RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -1133,14 +1185,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumR7g12xlarge     RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "r7g.12xlarge"
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumR7g16xlarge     RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "r7g.16xlarge"
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumR7gMetal        RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "r7g.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumC6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "c6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumM6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "m6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumM6idnMetal      RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "m6idn.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumR6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "r6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnumR6idnMetal      RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -2416,10 +2477,20 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstan
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -2481,21 +2552,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnumHost      RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum = "host"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "default":
 		fallthrough
 	case "dedicated":
 		fallthrough
 	case "host":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum: %v", v)
 	}
 }
 
@@ -2603,12 +2678,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -2778,10 +2857,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpe
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -2842,12 +2921,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnumXilinx            RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum = "xilinx"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "nvidia":
 		fallthrough
 	case "amd":
@@ -2855,10 +2938,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverr
 	case "amazon-web-services":
 		fallthrough
 	case "xilinx":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorManufacturersEnum: %v", v)
 	}
 }
 
@@ -2876,12 +2959,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnumK520          RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum = "k520"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a100":
 		fallthrough
 	case "v100":
@@ -2899,10 +2986,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverr
 	case "inferentia":
 		fallthrough
 	case "k520":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorNamesEnum: %v", v)
 	}
 }
 
@@ -2920,21 +3007,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnumInference RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum = "inference"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "gpu":
 		fallthrough
 	case "fpga":
 		fallthrough
 	case "inference":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsAcceleratorTypesEnum: %v", v)
 	}
 }
 
@@ -2947,21 +3038,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBareMetalEnum: %v", v)
 	}
 }
 
@@ -2980,21 +3075,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsBurstablePerformanceEnum: %v", v)
 	}
 }
 
@@ -3006,21 +3105,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnumAmazonWebServices RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum = "amazon-web-services"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "intel":
 		fallthrough
 	case "amd":
 		fallthrough
 	case "amazon-web-services":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsCPUManufacturersEnum: %v", v)
 	}
 }
 
@@ -3031,19 +3134,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnumPrevious RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum = "previous"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "current":
 		fallthrough
 	case "previous":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsInstanceGenerationsEnum: %v", v)
 	}
 }
 
@@ -3056,21 +3163,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnumExcluded RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum = "excluded"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "included":
 		fallthrough
 	case "required":
 		fallthrough
 	case "excluded":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageEnum: %v", v)
 	}
 }
 
@@ -3081,19 +3192,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnumSsd RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum = "ssd"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "hdd":
 		fallthrough
 	case "ssd":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceRequirementsLocalStorageTypesEnum: %v", v)
 	}
 }
 
@@ -3802,14 +3917,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumR7g12xlarge     RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.12xlarge"
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumR7g16xlarge     RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.16xlarge"
 	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMetal        RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumC6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "c6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumM6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "m6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumM6idnMetal      RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "m6idn.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumR6inMetal       RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6in.metal"
+	RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnumR6idnMetal      RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.metal"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "a1.medium":
 		fallthrough
 	case "a1.large":
@@ -5085,10 +5209,20 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverr
 	case "r7g.16xlarge":
 		fallthrough
 	case "r7g.metal":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum(s)
+		fallthrough
+	case "c6in.metal":
+		fallthrough
+	case "m6in.metal":
+		fallthrough
+	case "m6idn.metal":
+		fallthrough
+	case "r6in.metal":
+		fallthrough
+	case "r6idn.metal":
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigLaunchTemplateConfigsOverridesInstanceTypeEnum: %v", v)
 	}
 }
 
@@ -5143,19 +5277,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnumPrioritized RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum = "prioritized"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "lowestPrice":
 		fallthrough
 	case "prioritized":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigOnDemandAllocationStrategyEnum: %v", v)
 	}
 }
 
@@ -5167,19 +5305,23 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnumLaunchBeforeTerminate RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum = "launch-before-terminate"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "launch":
 		fallthrough
 	case "launch-before-terminate":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum: %v", v)
 	}
 }
 
@@ -5285,12 +5427,16 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnumIpamResourceDiscoveryAssociation                       RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum = "ipam-resource-discovery-association"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-reservation":
 		fallthrough
 	case "client-vpn-endpoint":
@@ -5460,10 +5606,10 @@ func (e *RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceT
 	case "ipam-resource-discovery":
 		fallthrough
 	case "ipam-resource-discovery-association":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTagSpecificationsResourceTypeEnum: %v", v)
 	}
 }
 
@@ -5488,21 +5634,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnumUnits     RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum = "units"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "vcpu":
 		fallthrough
 	case "memory-mib":
 		fallthrough
 	case "units":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTargetCapacityUnitTypeEnum: %v", v)
 	}
 }
 
@@ -5515,21 +5665,25 @@ const (
 	RequestSpotFleetRequestSpotFleetRequestConfigTypeEnumInstant  RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum = "instant"
 )
 
+func (e RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum) ToPointer() *RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum {
+	return &e
+}
+
 func (e *RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "request":
 		fallthrough
 	case "maintain":
 		fallthrough
 	case "instant":
-		*e = RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum(s)
+		*e = RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RequestSpotFleetRequestSpotFleetRequestConfigTypeEnum: %v", v)
 	}
 }
 

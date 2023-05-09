@@ -34,7 +34,10 @@ func newIndexing(defaultClient, securityClient HTTPClient, serverURL, language, 
 // CloudsearchIndexingDatasourcesDeleteSchema - Deletes the schema of a data source. **Note:** This API requires an admin or service account to execute.
 func (s *indexing) CloudsearchIndexingDatasourcesDeleteSchema(ctx context.Context, request operations.CloudsearchIndexingDatasourcesDeleteSchemaRequest, security operations.CloudsearchIndexingDatasourcesDeleteSchemaSecurity) (*operations.CloudsearchIndexingDatasourcesDeleteSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesDeleteSchema(ctx context.Contex
 // CloudsearchIndexingDatasourcesGetSchema - Gets the schema of a data source. **Note:** This API requires an admin or service account to execute.
 func (s *indexing) CloudsearchIndexingDatasourcesGetSchema(ctx context.Context, request operations.CloudsearchIndexingDatasourcesGetSchemaRequest, security operations.CloudsearchIndexingDatasourcesGetSchemaSecurity) (*operations.CloudsearchIndexingDatasourcesGetSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +136,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesGetSchema(ctx context.Context, 
 // CloudsearchIndexingDatasourcesItemsDelete - Deletes Item resource for the specified resource name. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsDelete(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsDeleteRequest, security operations.CloudsearchIndexingDatasourcesItemsDeleteSecurity) (*operations.CloudsearchIndexingDatasourcesItemsDeleteResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -178,7 +187,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsDelete(ctx context.Context
 // CloudsearchIndexingDatasourcesItemsDeleteQueueItems - Deletes all items in a queue. This method is useful for deleting stale items. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsDeleteQueueItems(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsRequest, security operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsSecurity) (*operations.CloudsearchIndexingDatasourcesItemsDeleteQueueItemsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:deleteQueueItems", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:deleteQueueItems", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "DeleteQueueItemsRequest", "json")
 	if err != nil {
@@ -233,7 +245,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsDeleteQueueItems(ctx conte
 // CloudsearchIndexingDatasourcesItemsGet - Gets Item resource by item name. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsGet(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsGetRequest, security operations.CloudsearchIndexingDatasourcesItemsGetSecurity) (*operations.CloudsearchIndexingDatasourcesItemsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +296,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsGet(ctx context.Context, r
 // CloudsearchIndexingDatasourcesItemsIndex - Updates Item ACL, metadata, and content. It will insert the Item if it does not exist. This method does not support partial updates. Fields with no provided values are cleared out in the Cloud Search index. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsIndex(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsIndexRequest, security operations.CloudsearchIndexingDatasourcesItemsIndexSecurity) (*operations.CloudsearchIndexingDatasourcesItemsIndexResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:index", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:index", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "IndexItemRequest", "json")
 	if err != nil {
@@ -336,7 +354,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsIndex(ctx context.Context,
 // CloudsearchIndexingDatasourcesItemsList - Lists all or a subset of Item resources. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsList(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsListRequest, security operations.CloudsearchIndexingDatasourcesItemsListSecurity) (*operations.CloudsearchIndexingDatasourcesItemsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -384,7 +405,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsList(ctx context.Context, 
 // CloudsearchIndexingDatasourcesItemsPoll - Polls for unreserved items from the indexing queue and marks a set as reserved, starting with items that have the oldest timestamp from the highest priority ItemStatus. The priority order is as follows: ERROR MODIFIED NEW_ITEM ACCEPTED Reserving items ensures that polling from other threads cannot create overlapping sets. After handling the reserved items, the client should put items back into the unreserved state, either by calling index, or by calling push with the type REQUEUE. Items automatically become available (unreserved) after 4 hours even if no update or push method is called. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsPoll(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsPollRequest, security operations.CloudsearchIndexingDatasourcesItemsPollSecurity) (*operations.CloudsearchIndexingDatasourcesItemsPollResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:poll", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:poll", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PollItemsRequest", "json")
 	if err != nil {
@@ -439,7 +463,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsPoll(ctx context.Context, 
 // CloudsearchIndexingDatasourcesItemsPush - Pushes an item onto a queue for later polling and updating. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsPush(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsPushRequest, security operations.CloudsearchIndexingDatasourcesItemsPushSecurity) (*operations.CloudsearchIndexingDatasourcesItemsPushResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:push", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:push", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "PushItemRequest", "json")
 	if err != nil {
@@ -494,7 +521,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsPush(ctx context.Context, 
 // CloudsearchIndexingDatasourcesItemsUnreserve - Unreserves all items from a queue, making them all eligible to be polled. This method is useful for resetting the indexing queue after a connector has been restarted. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsUnreserve(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsUnreserveRequest, security operations.CloudsearchIndexingDatasourcesItemsUnreserveSecurity) (*operations.CloudsearchIndexingDatasourcesItemsUnreserveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:unreserve", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/items:unreserve", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UnreserveItemsRequest", "json")
 	if err != nil {
@@ -549,7 +579,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsUnreserve(ctx context.Cont
 // CloudsearchIndexingDatasourcesItemsUpload - Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier to embed the content inline within an index request. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 func (s *indexing) CloudsearchIndexingDatasourcesItemsUpload(ctx context.Context, request operations.CloudsearchIndexingDatasourcesItemsUploadRequest, security operations.CloudsearchIndexingDatasourcesItemsUploadSecurity) (*operations.CloudsearchIndexingDatasourcesItemsUploadResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:upload", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}:upload", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "StartUploadItemRequest", "json")
 	if err != nil {
@@ -604,7 +637,10 @@ func (s *indexing) CloudsearchIndexingDatasourcesItemsUpload(ctx context.Context
 // CloudsearchIndexingDatasourcesUpdateSchema - Updates the schema of a data source. This method does not perform incremental updates to the schema. Instead, this method updates the schema by overwriting the entire schema. **Note:** This API requires an admin or service account to execute.
 func (s *indexing) CloudsearchIndexingDatasourcesUpdateSchema(ctx context.Context, request operations.CloudsearchIndexingDatasourcesUpdateSchemaRequest, security operations.CloudsearchIndexingDatasourcesUpdateSchemaSecurity) (*operations.CloudsearchIndexingDatasourcesUpdateSchemaResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/indexing/{name}/schema", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "UpdateSchemaRequest", "json")
 	if err != nil {

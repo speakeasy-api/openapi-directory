@@ -13,43 +13,41 @@ go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/pagespeedo
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
-        Alt: "json",
-        Fields: "corrupti",
-        FilterThirdPartyResources: false,
-        Key: "provident",
-        Locale: "distinctio",
-        OauthToken: "quibusdam",
-        PrettyPrint: false,
-        QuotaUser: "unde",
+    ctx := context.Background()
+    res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
+        Alt: shared.AltEnumJSON.ToPointer(),
+        Fields: sdk.String("corrupti"),
+        FilterThirdPartyResources: sdk.Bool(false),
+        Key: sdk.String("provident"),
+        Locale: sdk.String("distinctio"),
+        OauthToken: sdk.String("quibusdam"),
+        PrettyPrint: sdk.Bool(false),
+        QuotaUser: sdk.String("unde"),
         Rule: []string{
             "corrupti",
             "illum",
             "vel",
             "error",
         },
-        Screenshot: false,
-        Snapshots: false,
-        Strategy: "mobile",
+        Screenshot: sdk.Bool(false),
+        Snapshots: sdk.Bool(false),
+        Strategy: operations.PagespeedonlinePagespeedapiRunpagespeedStrategyEnumMobile.ToPointer(),
         URL: "suscipit",
-        UserIP: "iure",
-        UtmCampaign: "magnam",
-        UtmSource: "debitis",
-    }
-
-    ctx := context.Background()
-    res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, req)
+        UserIP: sdk.String("iure"),
+        UtmCampaign: sdk.String("magnam"),
+        UtmSource: sdk.String("debitis"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -65,9 +63,9 @@ func main() {
 ## Available Resources and Operations
 
 
-### Pagespeedapi
+### [Pagespeedapi](docs/pagespeedapi/README.md)
 
-* `PagespeedonlinePagespeedapiRunpagespeed` - Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to make that page faster, and other information.
+* [PagespeedonlinePagespeedapiRunpagespeed](docs/pagespeedapi/README.md#pagespeedonlinepagespeedapirunpagespeed) - Runs PageSpeed analysis on the page at the specified URL, and returns PageSpeed scores, a list of suggestions to make that page faster, and other information.
 <!-- End SDK Available Operations -->
 
 ### Maturity

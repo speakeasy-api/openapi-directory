@@ -47,12 +47,16 @@ const (
 	EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnumOther                                  EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum = "other"
 )
 
+func (e EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum) ToPointer() *EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum {
+	return &e
+}
+
 func (e *EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "social_security_number":
 		fallthrough
 	case "individual_taxpayer_identification_number":
@@ -62,10 +66,10 @@ func (e *EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodE
 	case "drivers_license":
 		fallthrough
 	case "other":
-		*e = EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum(s)
+		*e = EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityCorporationBeneficialOwnersElementIndividualIdentificationMethodEnum: %v", v)
 	}
 }
 
@@ -97,19 +101,23 @@ const (
 	EntityCorporationBeneficialOwnersElementProngEnumControl   EntityCorporationBeneficialOwnersElementProngEnum = "control"
 )
 
+func (e EntityCorporationBeneficialOwnersElementProngEnum) ToPointer() *EntityCorporationBeneficialOwnersElementProngEnum {
+	return &e
+}
+
 func (e *EntityCorporationBeneficialOwnersElementProngEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ownership":
 		fallthrough
 	case "control":
-		*e = EntityCorporationBeneficialOwnersElementProngEnum(s)
+		*e = EntityCorporationBeneficialOwnersElementProngEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityCorporationBeneficialOwnersElementProngEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityCorporationBeneficialOwnersElementProngEnum: %v", v)
 	}
 }
 
@@ -163,12 +171,16 @@ const (
 	EntityJointIndividualIdentificationMethodEnumOther                                  EntityJointIndividualIdentificationMethodEnum = "other"
 )
 
+func (e EntityJointIndividualIdentificationMethodEnum) ToPointer() *EntityJointIndividualIdentificationMethodEnum {
+	return &e
+}
+
 func (e *EntityJointIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "social_security_number":
 		fallthrough
 	case "individual_taxpayer_identification_number":
@@ -178,10 +190,10 @@ func (e *EntityJointIndividualIdentificationMethodEnum) UnmarshalJSON(data []byt
 	case "drivers_license":
 		fallthrough
 	case "other":
-		*e = EntityJointIndividualIdentificationMethodEnum(s)
+		*e = EntityJointIndividualIdentificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityJointIndividualIdentificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityJointIndividualIdentificationMethodEnum: %v", v)
 	}
 }
 
@@ -237,12 +249,16 @@ const (
 	EntityIndividualIdentificationMethodEnumOther                                  EntityIndividualIdentificationMethodEnum = "other"
 )
 
+func (e EntityIndividualIdentificationMethodEnum) ToPointer() *EntityIndividualIdentificationMethodEnum {
+	return &e
+}
+
 func (e *EntityIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "social_security_number":
 		fallthrough
 	case "individual_taxpayer_identification_number":
@@ -252,10 +268,10 @@ func (e *EntityIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) er
 	case "drivers_license":
 		fallthrough
 	case "other":
-		*e = EntityIndividualIdentificationMethodEnum(s)
+		*e = EntityIndividualIdentificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityIndividualIdentificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityIndividualIdentificationMethodEnum: %v", v)
 	}
 }
 
@@ -288,21 +304,25 @@ const (
 	EntityRelationshipEnumUnaffiliated  EntityRelationshipEnum = "unaffiliated"
 )
 
+func (e EntityRelationshipEnum) ToPointer() *EntityRelationshipEnum {
+	return &e
+}
+
 func (e *EntityRelationshipEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "affiliated":
 		fallthrough
 	case "informational":
 		fallthrough
 	case "unaffiliated":
-		*e = EntityRelationshipEnum(s)
+		*e = EntityRelationshipEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityRelationshipEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityRelationshipEnum: %v", v)
 	}
 }
 
@@ -316,12 +336,16 @@ const (
 	EntityStructureEnumTrust         EntityStructureEnum = "trust"
 )
 
+func (e EntityStructureEnum) ToPointer() *EntityStructureEnum {
+	return &e
+}
+
 func (e *EntityStructureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "corporation":
 		fallthrough
 	case "natural_person":
@@ -329,10 +353,10 @@ func (e *EntityStructureEnum) UnmarshalJSON(data []byte) error {
 	case "joint":
 		fallthrough
 	case "trust":
-		*e = EntityStructureEnum(s)
+		*e = EntityStructureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityStructureEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityStructureEnum: %v", v)
 	}
 }
 
@@ -363,19 +387,23 @@ const (
 	EntityTrustCategoryEnumIrrevocable EntityTrustCategoryEnum = "irrevocable"
 )
 
+func (e EntityTrustCategoryEnum) ToPointer() *EntityTrustCategoryEnum {
+	return &e
+}
+
 func (e *EntityTrustCategoryEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "revocable":
 		fallthrough
 	case "irrevocable":
-		*e = EntityTrustCategoryEnum(s)
+		*e = EntityTrustCategoryEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTrustCategoryEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTrustCategoryEnum: %v", v)
 	}
 }
 
@@ -404,12 +432,16 @@ const (
 	EntityTrustIndividualIdentificationMethodEnumOther                                  EntityTrustIndividualIdentificationMethodEnum = "other"
 )
 
+func (e EntityTrustIndividualIdentificationMethodEnum) ToPointer() *EntityTrustIndividualIdentificationMethodEnum {
+	return &e
+}
+
 func (e *EntityTrustIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "social_security_number":
 		fallthrough
 	case "individual_taxpayer_identification_number":
@@ -419,10 +451,10 @@ func (e *EntityTrustIndividualIdentificationMethodEnum) UnmarshalJSON(data []byt
 	case "drivers_license":
 		fallthrough
 	case "other":
-		*e = EntityTrustIndividualIdentificationMethodEnum(s)
+		*e = EntityTrustIndividualIdentificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTrustIndividualIdentificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTrustIndividualIdentificationMethodEnum: %v", v)
 	}
 }
 
@@ -471,12 +503,16 @@ const (
 	EntityTrustTrusteesElementIndividualIdentificationMethodEnumOther                                  EntityTrustTrusteesElementIndividualIdentificationMethodEnum = "other"
 )
 
+func (e EntityTrustTrusteesElementIndividualIdentificationMethodEnum) ToPointer() *EntityTrustTrusteesElementIndividualIdentificationMethodEnum {
+	return &e
+}
+
 func (e *EntityTrustTrusteesElementIndividualIdentificationMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "social_security_number":
 		fallthrough
 	case "individual_taxpayer_identification_number":
@@ -486,10 +522,10 @@ func (e *EntityTrustTrusteesElementIndividualIdentificationMethodEnum) Unmarshal
 	case "drivers_license":
 		fallthrough
 	case "other":
-		*e = EntityTrustTrusteesElementIndividualIdentificationMethodEnum(s)
+		*e = EntityTrustTrusteesElementIndividualIdentificationMethodEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTrustTrusteesElementIndividualIdentificationMethodEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTrustTrusteesElementIndividualIdentificationMethodEnum: %v", v)
 	}
 }
 
@@ -520,17 +556,21 @@ const (
 	EntityTrustTrusteesElementStructureEnumIndividual EntityTrustTrusteesElementStructureEnum = "individual"
 )
 
+func (e EntityTrustTrusteesElementStructureEnum) ToPointer() *EntityTrustTrusteesElementStructureEnum {
+	return &e
+}
+
 func (e *EntityTrustTrusteesElementStructureEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "individual":
-		*e = EntityTrustTrusteesElementStructureEnum(s)
+		*e = EntityTrustTrusteesElementStructureEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTrustTrusteesElementStructureEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTrustTrusteesElementStructureEnum: %v", v)
 	}
 }
 
@@ -568,17 +608,21 @@ const (
 	EntityTypeEnumEntity EntityTypeEnum = "entity"
 )
 
+func (e EntityTypeEnum) ToPointer() *EntityTypeEnum {
+	return &e
+}
+
 func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "entity":
-		*e = EntityTypeEnum(s)
+		*e = EntityTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for EntityTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for EntityTypeEnum: %v", v)
 	}
 }
 

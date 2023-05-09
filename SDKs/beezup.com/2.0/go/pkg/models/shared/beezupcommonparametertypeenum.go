@@ -21,12 +21,16 @@ const (
 	BeezUPCommonParameterTypeEnumDateTime BeezUPCommonParameterTypeEnum = "date-time"
 )
 
+func (e BeezUPCommonParameterTypeEnum) ToPointer() *BeezUPCommonParameterTypeEnum {
+	return &e
+}
+
 func (e *BeezUPCommonParameterTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "string":
 		fallthrough
 	case "integer":
@@ -42,9 +46,9 @@ func (e *BeezUPCommonParameterTypeEnum) UnmarshalJSON(data []byte) error {
 	case "date":
 		fallthrough
 	case "date-time":
-		*e = BeezUPCommonParameterTypeEnum(s)
+		*e = BeezUPCommonParameterTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for BeezUPCommonParameterTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for BeezUPCommonParameterTypeEnum: %v", v)
 	}
 }

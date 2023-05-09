@@ -36,7 +36,10 @@ func newProjectCategory(defaultClient, securityClient HTTPClient, serverURL, lan
 // List the project categories
 func (s *projectCategory) GetProjectCategoryList(ctx context.Context, request operations.GetProjectCategoryListRequest) (*operations.GetProjectCategoryListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectCategory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/projectCategory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -191,7 +194,10 @@ func (s *projectCategory) GetProjectCategoryList(ctx context.Context, request op
 // List the project categories of client side
 func (s *projectCategory) GetProjectCategoryListOfClient(ctx context.Context, request operations.GetProjectCategoryListOfClientRequest) (*operations.GetProjectCategoryListOfClientResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectCategory", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectCategory", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

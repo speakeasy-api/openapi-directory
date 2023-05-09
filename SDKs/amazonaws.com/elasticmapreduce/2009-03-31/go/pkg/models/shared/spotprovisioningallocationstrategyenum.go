@@ -13,16 +13,20 @@ const (
 	SpotProvisioningAllocationStrategyEnumCapacityOptimized SpotProvisioningAllocationStrategyEnum = "capacity-optimized"
 )
 
+func (e SpotProvisioningAllocationStrategyEnum) ToPointer() *SpotProvisioningAllocationStrategyEnum {
+	return &e
+}
+
 func (e *SpotProvisioningAllocationStrategyEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "capacity-optimized":
-		*e = SpotProvisioningAllocationStrategyEnum(s)
+		*e = SpotProvisioningAllocationStrategyEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SpotProvisioningAllocationStrategyEnum: %s", s)
+		return fmt.Errorf("invalid value for SpotProvisioningAllocationStrategyEnum: %v", v)
 	}
 }

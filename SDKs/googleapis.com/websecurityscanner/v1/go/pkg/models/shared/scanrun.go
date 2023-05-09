@@ -17,12 +17,16 @@ const (
 	ScanRunExecutionStateEnumFinished                  ScanRunExecutionStateEnum = "FINISHED"
 )
 
+func (e ScanRunExecutionStateEnum) ToPointer() *ScanRunExecutionStateEnum {
+	return &e
+}
+
 func (e *ScanRunExecutionStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "EXECUTION_STATE_UNSPECIFIED":
 		fallthrough
 	case "QUEUED":
@@ -30,10 +34,10 @@ func (e *ScanRunExecutionStateEnum) UnmarshalJSON(data []byte) error {
 	case "SCANNING":
 		fallthrough
 	case "FINISHED":
-		*e = ScanRunExecutionStateEnum(s)
+		*e = ScanRunExecutionStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanRunExecutionStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanRunExecutionStateEnum: %v", v)
 	}
 }
 
@@ -47,12 +51,16 @@ const (
 	ScanRunResultStateEnumKilled                 ScanRunResultStateEnum = "KILLED"
 )
 
+func (e ScanRunResultStateEnum) ToPointer() *ScanRunResultStateEnum {
+	return &e
+}
+
 func (e *ScanRunResultStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "RESULT_STATE_UNSPECIFIED":
 		fallthrough
 	case "SUCCESS":
@@ -60,10 +68,10 @@ func (e *ScanRunResultStateEnum) UnmarshalJSON(data []byte) error {
 	case "ERROR":
 		fallthrough
 	case "KILLED":
-		*e = ScanRunResultStateEnum(s)
+		*e = ScanRunResultStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScanRunResultStateEnum: %s", s)
+		return fmt.Errorf("invalid value for ScanRunResultStateEnum: %v", v)
 	}
 }
 

@@ -16,17 +16,21 @@ const (
 	ScheduleKeyDeletionXAmzTargetEnumTrentServiceScheduleKeyDeletion ScheduleKeyDeletionXAmzTargetEnum = "TrentService.ScheduleKeyDeletion"
 )
 
+func (e ScheduleKeyDeletionXAmzTargetEnum) ToPointer() *ScheduleKeyDeletionXAmzTargetEnum {
+	return &e
+}
+
 func (e *ScheduleKeyDeletionXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "TrentService.ScheduleKeyDeletion":
-		*e = ScheduleKeyDeletionXAmzTargetEnum(s)
+		*e = ScheduleKeyDeletionXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ScheduleKeyDeletionXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for ScheduleKeyDeletionXAmzTargetEnum: %v", v)
 	}
 }
 

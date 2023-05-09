@@ -23,14 +23,19 @@ const (
 	OccurrenceKindEnumCompliance              OccurrenceKindEnum = "COMPLIANCE"
 	OccurrenceKindEnumDsseAttestation         OccurrenceKindEnum = "DSSE_ATTESTATION"
 	OccurrenceKindEnumVulnerabilityAssessment OccurrenceKindEnum = "VULNERABILITY_ASSESSMENT"
+	OccurrenceKindEnumSbomReference           OccurrenceKindEnum = "SBOM_REFERENCE"
 )
 
+func (e OccurrenceKindEnum) ToPointer() *OccurrenceKindEnum {
+	return &e
+}
+
 func (e *OccurrenceKindEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "NOTE_KIND_UNSPECIFIED":
 		fallthrough
 	case "VULNERABILITY":
@@ -54,10 +59,12 @@ func (e *OccurrenceKindEnum) UnmarshalJSON(data []byte) error {
 	case "DSSE_ATTESTATION":
 		fallthrough
 	case "VULNERABILITY_ASSESSMENT":
-		*e = OccurrenceKindEnum(s)
+		fallthrough
+	case "SBOM_REFERENCE":
+		*e = OccurrenceKindEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for OccurrenceKindEnum: %s", s)
+		return fmt.Errorf("invalid value for OccurrenceKindEnum: %v", v)
 	}
 }
 
@@ -93,6 +100,8 @@ type Occurrence struct {
 	Remediation *string `json:"remediation,omitempty"`
 	// Required. Immutable. A URI that represents the resource for which the occurrence applies. For example, `https://gcr.io/project/image@sha256:123abc` for a Docker image.
 	ResourceURI *string `json:"resourceUri,omitempty"`
+	// The occurrence representing an SBOM reference as applied to a specific resource. The occurrence follows the DSSE specification. See https://github.com/secure-systems-lab/dsse/blob/master/envelope.md for more details.
+	SbomReference *SBOMReferenceOccurrence `json:"sbomReference,omitempty"`
 	// Output only. The time this occurrence was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 	// An Upgrade Occurrence represents that a specific resource_url could install a specific upgrade. This presence is supplied via local sources (i.e. it is present in the mirror and the running system has noticed its availability). For Windows, both distribution and windows_update contain information for the Windows update.

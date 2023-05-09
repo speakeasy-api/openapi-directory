@@ -87,7 +87,10 @@ func (s *invites) CreateInvite(ctx context.Context, request operations.CreateInv
 // InviteToTopic - Invite to topic
 func (s *invites) InviteToTopic(ctx context.Context, request operations.InviteToTopicRequest) (*operations.InviteToTopicResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/t/{id}/invite.json", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

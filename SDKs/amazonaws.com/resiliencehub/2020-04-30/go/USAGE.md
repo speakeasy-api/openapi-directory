@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,68 +17,66 @@ func main() {
         }),
     )
 
-    req := operations.AddDraftAppVersionResourceMappingsRequest{
+    ctx := context.Background()
+    res, err := s.AddDraftAppVersionResourceMappings(ctx, operations.AddDraftAppVersionResourceMappingsRequest{
         RequestBody: operations.AddDraftAppVersionResourceMappingsRequestBody{
             AppArn: "corrupti",
             ResourceMappings: []shared.ResourceMapping{
                 shared.ResourceMapping{
-                    AppRegistryAppName: "distinctio",
-                    EksSourceName: "quibusdam",
-                    LogicalStackName: "unde",
-                    MappingType: "EKS",
+                    AppRegistryAppName: sdk.String("distinctio"),
+                    EksSourceName: sdk.String("quibusdam"),
+                    LogicalStackName: sdk.String("unde"),
+                    MappingType: shared.ResourceMappingTypeEnumEks,
                     PhysicalResourceID: shared.PhysicalResourceID{
-                        AwsAccountID: "corrupti",
-                        AwsRegion: "illum",
+                        AwsAccountID: sdk.String("corrupti"),
+                        AwsRegion: sdk.String("illum"),
                         Identifier: "vel",
-                        Type: "Native",
+                        Type: shared.PhysicalIdentifierTypeEnumNative,
                     },
-                    ResourceGroupName: "deserunt",
-                    ResourceName: "suscipit",
-                    TerraformSourceName: "iure",
+                    ResourceGroupName: sdk.String("deserunt"),
+                    ResourceName: sdk.String("suscipit"),
+                    TerraformSourceName: sdk.String("iure"),
                 },
                 shared.ResourceMapping{
-                    AppRegistryAppName: "magnam",
-                    EksSourceName: "debitis",
-                    LogicalStackName: "ipsa",
-                    MappingType: "EKS",
+                    AppRegistryAppName: sdk.String("magnam"),
+                    EksSourceName: sdk.String("debitis"),
+                    LogicalStackName: sdk.String("ipsa"),
+                    MappingType: shared.ResourceMappingTypeEnumEks,
                     PhysicalResourceID: shared.PhysicalResourceID{
-                        AwsAccountID: "tempora",
-                        AwsRegion: "suscipit",
+                        AwsAccountID: sdk.String("tempora"),
+                        AwsRegion: sdk.String("suscipit"),
                         Identifier: "molestiae",
-                        Type: "Native",
+                        Type: shared.PhysicalIdentifierTypeEnumNative,
                     },
-                    ResourceGroupName: "placeat",
-                    ResourceName: "voluptatum",
-                    TerraformSourceName: "iusto",
+                    ResourceGroupName: sdk.String("placeat"),
+                    ResourceName: sdk.String("voluptatum"),
+                    TerraformSourceName: sdk.String("iusto"),
                 },
                 shared.ResourceMapping{
-                    AppRegistryAppName: "excepturi",
-                    EksSourceName: "nisi",
-                    LogicalStackName: "recusandae",
-                    MappingType: "EKS",
+                    AppRegistryAppName: sdk.String("excepturi"),
+                    EksSourceName: sdk.String("nisi"),
+                    LogicalStackName: sdk.String("recusandae"),
+                    MappingType: shared.ResourceMappingTypeEnumEks,
                     PhysicalResourceID: shared.PhysicalResourceID{
-                        AwsAccountID: "ab",
-                        AwsRegion: "quis",
+                        AwsAccountID: sdk.String("ab"),
+                        AwsRegion: sdk.String("quis"),
                         Identifier: "veritatis",
-                        Type: "Native",
+                        Type: shared.PhysicalIdentifierTypeEnumNative,
                     },
-                    ResourceGroupName: "perferendis",
-                    ResourceName: "ipsam",
-                    TerraformSourceName: "repellendus",
+                    ResourceGroupName: sdk.String("perferendis"),
+                    ResourceName: sdk.String("ipsam"),
+                    TerraformSourceName: sdk.String("repellendus"),
                 },
             },
         },
-        XAmzAlgorithm: "sapiente",
-        XAmzContentSha256: "quo",
-        XAmzCredential: "odit",
-        XAmzDate: "at",
-        XAmzSecurityToken: "at",
-        XAmzSignature: "maiores",
-        XAmzSignedHeaders: "molestiae",
-    }
-
-    ctx := context.Background()
-    res, err := s.AddDraftAppVersionResourceMappings(ctx, req)
+        XAmzAlgorithm: sdk.String("sapiente"),
+        XAmzContentSha256: sdk.String("quo"),
+        XAmzCredential: sdk.String("odit"),
+        XAmzDate: sdk.String("at"),
+        XAmzSecurityToken: sdk.String("at"),
+        XAmzSignature: sdk.String("maiores"),
+        XAmzSignedHeaders: sdk.String("molestiae"),
+    })
     if err != nil {
         log.Fatal(err)
     }

@@ -42,12 +42,16 @@ const (
 	GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnumGeoRegionTypeDistrict              GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum = "GEO_REGION_TYPE_DISTRICT"
 )
 
+func (e GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum) ToPointer() *GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum {
+	return &e
+}
+
 func (e *GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "GEO_REGION_TYPE_UNKNOWN":
 		fallthrough
 	case "GEO_REGION_TYPE_OTHER":
@@ -105,10 +109,10 @@ func (e *GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum) UnmarshalJSON
 	case "GEO_REGION_TYPE_UNIVERSITY":
 		fallthrough
 	case "GEO_REGION_TYPE_DISTRICT":
-		*e = GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum(s)
+		*e = GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GeoRegionAssignedTargetingOptionDetailsGeoRegionTypeEnum: %v", v)
 	}
 }
 

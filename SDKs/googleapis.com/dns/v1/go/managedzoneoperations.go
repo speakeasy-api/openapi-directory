@@ -34,7 +34,10 @@ func newManagedZoneOperations(defaultClient, securityClient HTTPClient, serverUR
 // DNSManagedZoneOperationsGet - Fetches the representation of an existing Operation.
 func (s *managedZoneOperations) DNSManagedZoneOperationsGet(ctx context.Context, request operations.DNSManagedZoneOperationsGetRequest, security operations.DNSManagedZoneOperationsGetSecurity) (*operations.DNSManagedZoneOperationsGetResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations/{operation}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -82,7 +85,10 @@ func (s *managedZoneOperations) DNSManagedZoneOperationsGet(ctx context.Context,
 // DNSManagedZoneOperationsList - Enumerates Operations for the given ManagedZone.
 func (s *managedZoneOperations) DNSManagedZoneOperationsList(ctx context.Context, request operations.DNSManagedZoneOperationsListRequest, security operations.DNSManagedZoneOperationsListSecurity) (*operations.DNSManagedZoneOperationsListResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/dns/v1/projects/{project}/managedZones/{managedZone}/operations", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

@@ -15,17 +15,21 @@ const (
 	GETModifyTrafficMirrorFilterNetworkServicesActionEnumModifyTrafficMirrorFilterNetworkServices GETModifyTrafficMirrorFilterNetworkServicesActionEnum = "ModifyTrafficMirrorFilterNetworkServices"
 )
 
+func (e GETModifyTrafficMirrorFilterNetworkServicesActionEnum) ToPointer() *GETModifyTrafficMirrorFilterNetworkServicesActionEnum {
+	return &e
+}
+
 func (e *GETModifyTrafficMirrorFilterNetworkServicesActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ModifyTrafficMirrorFilterNetworkServices":
-		*e = GETModifyTrafficMirrorFilterNetworkServicesActionEnum(s)
+		*e = GETModifyTrafficMirrorFilterNetworkServicesActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesActionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesActionEnum: %v", v)
 	}
 }
 
@@ -35,17 +39,21 @@ const (
 	GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnumAmazonDNS GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum = "amazon-dns"
 )
 
+func (e GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum) ToPointer() *GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum {
+	return &e
+}
+
 func (e *GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum(s)
+		*e = GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesAddNetworkServiceEnum: %v", v)
 	}
 }
 
@@ -55,17 +63,21 @@ const (
 	GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnumAmazonDNS GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum = "amazon-dns"
 )
 
+func (e GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum) ToPointer() *GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum {
+	return &e
+}
+
 func (e *GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "amazon-dns":
-		*e = GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum(s)
+		*e = GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesRemoveNetworkServiceEnum: %v", v)
 	}
 }
 
@@ -76,17 +88,21 @@ const (
 	GETModifyTrafficMirrorFilterNetworkServicesVersionEnumTwoThousandAndSixteen1115 GETModifyTrafficMirrorFilterNetworkServicesVersionEnum = "2016-11-15"
 )
 
+func (e GETModifyTrafficMirrorFilterNetworkServicesVersionEnum) ToPointer() *GETModifyTrafficMirrorFilterNetworkServicesVersionEnum {
+	return &e
+}
+
 func (e *GETModifyTrafficMirrorFilterNetworkServicesVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2016-11-15":
-		*e = GETModifyTrafficMirrorFilterNetworkServicesVersionEnum(s)
+		*e = GETModifyTrafficMirrorFilterNetworkServicesVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for GETModifyTrafficMirrorFilterNetworkServicesVersionEnum: %v", v)
 	}
 }
 

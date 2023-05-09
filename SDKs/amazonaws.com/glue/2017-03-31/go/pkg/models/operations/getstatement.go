@@ -16,17 +16,21 @@ const (
 	GetStatementXAmzTargetEnumAwsGlueGetStatement GetStatementXAmzTargetEnum = "AWSGlue.GetStatement"
 )
 
+func (e GetStatementXAmzTargetEnum) ToPointer() *GetStatementXAmzTargetEnum {
+	return &e
+}
+
 func (e *GetStatementXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AWSGlue.GetStatement":
-		*e = GetStatementXAmzTargetEnum(s)
+		*e = GetStatementXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetStatementXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for GetStatementXAmzTargetEnum: %v", v)
 	}
 }
 

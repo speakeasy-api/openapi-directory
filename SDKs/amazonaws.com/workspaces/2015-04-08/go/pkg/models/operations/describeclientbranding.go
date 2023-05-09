@@ -16,17 +16,21 @@ const (
 	DescribeClientBrandingXAmzTargetEnumWorkspacesServiceDescribeClientBranding DescribeClientBrandingXAmzTargetEnum = "WorkspacesService.DescribeClientBranding"
 )
 
+func (e DescribeClientBrandingXAmzTargetEnum) ToPointer() *DescribeClientBrandingXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeClientBrandingXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "WorkspacesService.DescribeClientBranding":
-		*e = DescribeClientBrandingXAmzTargetEnum(s)
+		*e = DescribeClientBrandingXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeClientBrandingXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeClientBrandingXAmzTargetEnum: %v", v)
 	}
 }
 

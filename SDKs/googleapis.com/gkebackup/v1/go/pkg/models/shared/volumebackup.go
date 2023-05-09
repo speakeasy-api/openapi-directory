@@ -15,19 +15,23 @@ const (
 	VolumeBackupFormatEnumGcePersistentDisk             VolumeBackupFormatEnum = "GCE_PERSISTENT_DISK"
 )
 
+func (e VolumeBackupFormatEnum) ToPointer() *VolumeBackupFormatEnum {
+	return &e
+}
+
 func (e *VolumeBackupFormatEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "VOLUME_BACKUP_FORMAT_UNSPECIFIED":
 		fallthrough
 	case "GCE_PERSISTENT_DISK":
-		*e = VolumeBackupFormatEnum(s)
+		*e = VolumeBackupFormatEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeBackupFormatEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeBackupFormatEnum: %v", v)
 	}
 }
 
@@ -44,12 +48,16 @@ const (
 	VolumeBackupStateEnumDeleting         VolumeBackupStateEnum = "DELETING"
 )
 
+func (e VolumeBackupStateEnum) ToPointer() *VolumeBackupStateEnum {
+	return &e
+}
+
 func (e *VolumeBackupStateEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "STATE_UNSPECIFIED":
 		fallthrough
 	case "CREATING":
@@ -63,10 +71,10 @@ func (e *VolumeBackupStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "DELETING":
-		*e = VolumeBackupStateEnum(s)
+		*e = VolumeBackupStateEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for VolumeBackupStateEnum: %s", s)
+		return fmt.Errorf("invalid value for VolumeBackupStateEnum: %v", v)
 	}
 }
 

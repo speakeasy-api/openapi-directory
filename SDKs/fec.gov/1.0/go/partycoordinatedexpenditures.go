@@ -93,7 +93,10 @@ func (s *partyCoordinatedExpenditures) GetSchedulesScheduleF(ctx context.Context
 // these limits are detailed in Chapter 7 of the FEC Campaign Guide for Political Party Committees.
 func (s *partyCoordinatedExpenditures) GetSchedulesScheduleFSubID(ctx context.Context, request operations.GetSchedulesScheduleFSubIDRequest) (*operations.GetSchedulesScheduleFSubIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_f/{sub_id}/", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/schedules/schedule_f/{sub_id}/", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

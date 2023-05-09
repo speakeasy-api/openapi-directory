@@ -38,7 +38,10 @@ func newPlacementGroups(defaultClient, securityClient HTTPClient, serverURL, lan
 // Deletes a PlacementGroup.
 func (s *placementGroups) DeletePlacementGroupsID(ctx context.Context, request operations.DeletePlacementGroupsIDRequest) (*operations.DeletePlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -123,7 +126,10 @@ func (s *placementGroups) GetPlacementGroups(ctx context.Context, request operat
 // Gets a specific PlacementGroup object.
 func (s *placementGroups) GetPlacementGroupsID(ctx context.Context, request operations.GetPlacementGroupsIDRequest) (*operations.GetPlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -224,7 +230,10 @@ func (s *placementGroups) PostPlacementGroups(ctx context.Context, request opera
 // Note: if the PlacementGroup object changes during the request, the response will be a “conflict” error.
 func (s *placementGroups) PutPlacementGroupsID(ctx context.Context, request operations.PutPlacementGroupsIDRequest) (*operations.PutPlacementGroupsIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	url, err := utils.GenerateURL(ctx, baseURL, "/placement_groups/{id}", request, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error generating URL: %w", err)
+	}
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "RequestBody", "json")
 	if err != nil {

@@ -15,19 +15,23 @@ const (
 	CertificateScopeEnumEdgeCache CertificateScopeEnum = "EDGE_CACHE"
 )
 
+func (e CertificateScopeEnum) ToPointer() *CertificateScopeEnum {
+	return &e
+}
+
 func (e *CertificateScopeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DEFAULT":
 		fallthrough
 	case "EDGE_CACHE":
-		*e = CertificateScopeEnum(s)
+		*e = CertificateScopeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CertificateScopeEnum: %s", s)
+		return fmt.Errorf("invalid value for CertificateScopeEnum: %v", v)
 	}
 }
 

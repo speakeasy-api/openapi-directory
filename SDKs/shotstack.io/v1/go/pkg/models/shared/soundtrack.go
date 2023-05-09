@@ -22,21 +22,25 @@ const (
 	SoundtrackEffectEnumFadeInFadeOut SoundtrackEffectEnum = "fadeInFadeOut"
 )
 
+func (e SoundtrackEffectEnum) ToPointer() *SoundtrackEffectEnum {
+	return &e
+}
+
 func (e *SoundtrackEffectEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "fadeIn":
 		fallthrough
 	case "fadeOut":
 		fallthrough
 	case "fadeInFadeOut":
-		*e = SoundtrackEffectEnum(s)
+		*e = SoundtrackEffectEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for SoundtrackEffectEnum: %s", s)
+		return fmt.Errorf("invalid value for SoundtrackEffectEnum: %v", v)
 	}
 }
 

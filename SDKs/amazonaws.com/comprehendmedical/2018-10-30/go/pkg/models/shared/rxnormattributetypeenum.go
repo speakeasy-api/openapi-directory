@@ -19,12 +19,16 @@ const (
 	RxNormAttributeTypeEnumStrength    RxNormAttributeTypeEnum = "STRENGTH"
 )
 
+func (e RxNormAttributeTypeEnum) ToPointer() *RxNormAttributeTypeEnum {
+	return &e
+}
+
 func (e *RxNormAttributeTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "DOSAGE":
 		fallthrough
 	case "DURATION":
@@ -38,9 +42,9 @@ func (e *RxNormAttributeTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ROUTE_OR_MODE":
 		fallthrough
 	case "STRENGTH":
-		*e = RxNormAttributeTypeEnum(s)
+		*e = RxNormAttributeTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for RxNormAttributeTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for RxNormAttributeTypeEnum: %v", v)
 	}
 }

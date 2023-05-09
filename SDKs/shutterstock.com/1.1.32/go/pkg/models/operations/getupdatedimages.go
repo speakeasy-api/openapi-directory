@@ -23,19 +23,23 @@ const (
 	GetUpdatedImagesSortEnumOldest GetUpdatedImagesSortEnum = "oldest"
 )
 
+func (e GetUpdatedImagesSortEnum) ToPointer() *GetUpdatedImagesSortEnum {
+	return &e
+}
+
 func (e *GetUpdatedImagesSortEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "newest":
 		fallthrough
 	case "oldest":
-		*e = GetUpdatedImagesSortEnum(s)
+		*e = GetUpdatedImagesSortEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUpdatedImagesSortEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUpdatedImagesSortEnum: %v", v)
 	}
 }
 
@@ -47,21 +51,25 @@ const (
 	GetUpdatedImagesTypeEnumEdit     GetUpdatedImagesTypeEnum = "edit"
 )
 
+func (e GetUpdatedImagesTypeEnum) ToPointer() *GetUpdatedImagesTypeEnum {
+	return &e
+}
+
 func (e *GetUpdatedImagesTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "addition":
 		fallthrough
 	case "deletion":
 		fallthrough
 	case "edit":
-		*e = GetUpdatedImagesTypeEnum(s)
+		*e = GetUpdatedImagesTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetUpdatedImagesTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetUpdatedImagesTypeEnum: %v", v)
 	}
 }
 

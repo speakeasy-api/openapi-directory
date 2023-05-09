@@ -23,21 +23,25 @@ const (
 	TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnumAdmin TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum = "admin"
 )
 
+func (e TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum) ToPointer() *TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum {
+	return &e
+}
+
 func (e *TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "pull":
 		fallthrough
 	case "push":
 		fallthrough
 	case "admin":
-		*e = TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum(s)
+		*e = TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum: %s", s)
+		return fmt.Errorf("invalid value for TeamsAddOrUpdateRepoPermissionsLegacyRequestBodyPermissionEnum: %v", v)
 	}
 }
 

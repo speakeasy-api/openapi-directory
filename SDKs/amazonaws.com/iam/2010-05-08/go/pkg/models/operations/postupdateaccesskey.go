@@ -15,17 +15,21 @@ const (
 	POSTUpdateAccessKeyActionEnumUpdateAccessKey POSTUpdateAccessKeyActionEnum = "UpdateAccessKey"
 )
 
+func (e POSTUpdateAccessKeyActionEnum) ToPointer() *POSTUpdateAccessKeyActionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAccessKeyActionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "UpdateAccessKey":
-		*e = POSTUpdateAccessKeyActionEnum(s)
+		*e = POSTUpdateAccessKeyActionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAccessKeyActionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAccessKeyActionEnum: %v", v)
 	}
 }
 
@@ -36,17 +40,21 @@ const (
 	POSTUpdateAccessKeyVersionEnumTwoThousandAndTen0508 POSTUpdateAccessKeyVersionEnum = "2010-05-08"
 )
 
+func (e POSTUpdateAccessKeyVersionEnum) ToPointer() *POSTUpdateAccessKeyVersionEnum {
+	return &e
+}
+
 func (e *POSTUpdateAccessKeyVersionEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "2010-05-08":
-		*e = POSTUpdateAccessKeyVersionEnum(s)
+		*e = POSTUpdateAccessKeyVersionEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for POSTUpdateAccessKeyVersionEnum: %s", s)
+		return fmt.Errorf("invalid value for POSTUpdateAccessKeyVersionEnum: %v", v)
 	}
 }
 

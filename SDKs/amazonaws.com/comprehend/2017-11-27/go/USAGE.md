@@ -2,12 +2,12 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
+	"openapi/pkg/models/shared"
 )
 
 func main() {
@@ -17,7 +17,8 @@ func main() {
         }),
     )
 
-    req := operations.BatchDetectDominantLanguageRequest{
+    ctx := context.Background()
+    res, err := s.BatchDetectDominantLanguage(ctx, operations.BatchDetectDominantLanguageRequest{
         BatchDetectDominantLanguageRequest: shared.BatchDetectDominantLanguageRequest{
             TextList: []string{
                 "provident",
@@ -25,18 +26,15 @@ func main() {
                 "quibusdam",
             },
         },
-        XAmzAlgorithm: "unde",
-        XAmzContentSha256: "nulla",
-        XAmzCredential: "corrupti",
-        XAmzDate: "illum",
-        XAmzSecurityToken: "vel",
-        XAmzSignature: "error",
-        XAmzSignedHeaders: "deserunt",
-        XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
-    }
-
-    ctx := context.Background()
-    res, err := s.BatchDetectDominantLanguage(ctx, req)
+        XAmzAlgorithm: sdk.String("unde"),
+        XAmzContentSha256: sdk.String("nulla"),
+        XAmzCredential: sdk.String("corrupti"),
+        XAmzDate: sdk.String("illum"),
+        XAmzSecurityToken: sdk.String("vel"),
+        XAmzSignature: sdk.String("error"),
+        XAmzSignedHeaders: sdk.String("deserunt"),
+        XAmzTarget: operations.BatchDetectDominantLanguageXAmzTargetEnumComprehend20171127BatchDetectDominantLanguage,
+    })
     if err != nil {
         log.Fatal(err)
     }

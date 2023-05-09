@@ -20,12 +20,16 @@ const (
 	CutPasteRequestPasteTypeEnumPasteConditionalFormatting CutPasteRequestPasteTypeEnum = "PASTE_CONDITIONAL_FORMATTING"
 )
 
+func (e CutPasteRequestPasteTypeEnum) ToPointer() *CutPasteRequestPasteTypeEnum {
+	return &e
+}
+
 func (e *CutPasteRequestPasteTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "PASTE_NORMAL":
 		fallthrough
 	case "PASTE_VALUES":
@@ -39,10 +43,10 @@ func (e *CutPasteRequestPasteTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PASTE_DATA_VALIDATION":
 		fallthrough
 	case "PASTE_CONDITIONAL_FORMATTING":
-		*e = CutPasteRequestPasteTypeEnum(s)
+		*e = CutPasteRequestPasteTypeEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for CutPasteRequestPasteTypeEnum: %s", s)
+		return fmt.Errorf("invalid value for CutPasteRequestPasteTypeEnum: %v", v)
 	}
 }
 

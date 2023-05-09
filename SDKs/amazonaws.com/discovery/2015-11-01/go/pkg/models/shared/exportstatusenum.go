@@ -15,20 +15,24 @@ const (
 	ExportStatusEnumInProgress ExportStatusEnum = "IN_PROGRESS"
 )
 
+func (e ExportStatusEnum) ToPointer() *ExportStatusEnum {
+	return &e
+}
+
 func (e *ExportStatusEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "FAILED":
 		fallthrough
 	case "SUCCEEDED":
 		fallthrough
 	case "IN_PROGRESS":
-		*e = ExportStatusEnum(s)
+		*e = ExportStatusEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ExportStatusEnum: %s", s)
+		return fmt.Errorf("invalid value for ExportStatusEnum: %v", v)
 	}
 }

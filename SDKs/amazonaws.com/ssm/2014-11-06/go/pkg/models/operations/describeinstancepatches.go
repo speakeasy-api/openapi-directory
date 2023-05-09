@@ -16,17 +16,21 @@ const (
 	DescribeInstancePatchesXAmzTargetEnumAmazonSsmDescribeInstancePatches DescribeInstancePatchesXAmzTargetEnum = "AmazonSSM.DescribeInstancePatches"
 )
 
+func (e DescribeInstancePatchesXAmzTargetEnum) ToPointer() *DescribeInstancePatchesXAmzTargetEnum {
+	return &e
+}
+
 func (e *DescribeInstancePatchesXAmzTargetEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "AmazonSSM.DescribeInstancePatches":
-		*e = DescribeInstancePatchesXAmzTargetEnum(s)
+		*e = DescribeInstancePatchesXAmzTargetEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DescribeInstancePatchesXAmzTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for DescribeInstancePatchesXAmzTargetEnum: %v", v)
 	}
 }
 

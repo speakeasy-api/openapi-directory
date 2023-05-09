@@ -31,17 +31,21 @@ const (
 	DirectoryGroupsListOrderByEnumEmail DirectoryGroupsListOrderByEnum = "email"
 )
 
+func (e DirectoryGroupsListOrderByEnum) ToPointer() *DirectoryGroupsListOrderByEnum {
+	return &e
+}
+
 func (e *DirectoryGroupsListOrderByEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "email":
-		*e = DirectoryGroupsListOrderByEnum(s)
+		*e = DirectoryGroupsListOrderByEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryGroupsListOrderByEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryGroupsListOrderByEnum: %v", v)
 	}
 }
 
@@ -53,19 +57,23 @@ const (
 	DirectoryGroupsListSortOrderEnumDescending DirectoryGroupsListSortOrderEnum = "DESCENDING"
 )
 
+func (e DirectoryGroupsListSortOrderEnum) ToPointer() *DirectoryGroupsListSortOrderEnum {
+	return &e
+}
+
 func (e *DirectoryGroupsListSortOrderEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
-	switch s {
+	switch v {
 	case "ASCENDING":
 		fallthrough
 	case "DESCENDING":
-		*e = DirectoryGroupsListSortOrderEnum(s)
+		*e = DirectoryGroupsListSortOrderEnum(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for DirectoryGroupsListSortOrderEnum: %s", s)
+		return fmt.Errorf("invalid value for DirectoryGroupsListSortOrderEnum: %v", v)
 	}
 }
 

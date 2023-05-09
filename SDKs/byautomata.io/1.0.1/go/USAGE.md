@@ -2,23 +2,20 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "openapi"
-    "openapi/pkg/models/shared"
-    "openapi/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"openapi"
+	"openapi/pkg/models/operations"
 )
 
 func main() {
     s := sdk.New()
 
-    req := operations.GetContentproSearchRequest{
-        Terms: "corrupti",
-    }
-
     ctx := context.Background()
-    res, err := s.ContentproSearch.GetContentproSearch(ctx, req)
+    res, err := s.ContentproSearch.GetContentproSearch(ctx, operations.GetContentproSearchRequest{
+        Terms: "corrupti",
+    })
     if err != nil {
         log.Fatal(err)
     }
